@@ -49,14 +49,14 @@ $('#cups').innerHTML = CUPS.map(([x, y], i) => `<g id="cup${i}" transform="trans
 // the team: six people
 const CREW = [['A', 0], ['K', 0], ['M', 0], ['', 1], ['', 1], ['', 1]];
 $('#crewRow').innerHTML = CREW.map(([l, nw], i) => `<div class="avc" id="cr${i}" style="left:${248 + i * 106}px">${nw ? '<span class="ico"></span>' : l}</div>`).join('');
-$('#pPayI').innerHTML = M.icon('coin', 24, C.gold, 2.2);
+$('#pPayI').innerHTML = M.icon('coin', 24, C.gold, 2.2); $('#pMoodI').innerHTML = M.icon('meh', 24, C.muted, 2.2); $('#pChaiI').innerHTML = M.icon('timer', 24, C.red, 2.2);
 // what Ravi tries
 const ASK = [['More money', 'coin', 'x', 'NO CHANGE'], ['Just listen', 'users', 'check', 'IT WORKS']];
 $('#askRow').innerHTML = ASK.map(([t, ic, b, r], i) => `<div class="job" id="ak${i}" style="left:${36 + i * 436}px"><div class="ji">${M.icon(ic, 28, C.ink, 2.2)}</div><div class="jt">${t}</div><div class="av" style="background:${i ? C.gold : C.red}">${M.icon(b, 26, '#fff', 3)}</div><div class="jr" style="color:${i ? C.gold : C.red}">${r}</div></div>`).join('');
 // definition + people
 $('#defI').innerHTML = M.icon('book', 36, C.gold, 2.2);
-const DC = [['EM', 'Elton Mayo', 'Professor at Harvard'], ['FR', 'Fritz Roethlisberger', 'His colleague at Harvard']];
-$('#dRow').innerHTML = DC.map(([l, t, s], i) => `<div class="card dc" id="dc${i}" style="left:${160 + i * 816}px">${l ? `<div class="avc" style="font-size:24px">${l}</div>` : `<div class="di">${M.icon('factory', 36, C.gold, 2.2)}</div>`}<div class="dn">0${i + 1}</div><div class="serif dt">${t}</div><div class="ds">${s}</div></div>`).join('');
+const DC = [['EM', 'Elton Mayo', 'Professor at Harvard', [['BORN', 'Adelaide, Australia, 1880'], ['KNOWN AS', 'Father of human relations']]], ['FR', 'Fritz Roethlisberger', 'His colleague at Harvard', [['ROLE', 'Led much of the factory research'], ['BOOK', 'Management and the Worker, 1939']]]];
+$('#dRow').innerHTML = DC.map(([l, t, s, fx], i) => `<div class="card dc" id="dc${i}" style="left:${160 + i * 816}px">${l ? `<div class="avc" style="font-size:24px">${l}</div>` : `<div class="di">${M.icon('factory', 36, C.gold, 2.2)}</div>`}<div class="dn">0${i + 1}</div><div class="serif dt">${t}</div><div class="ds">${s}</div><div class="hr"></div>${fx.map(([a, b], k) => `<div class="fx" style="top:${294 + k * 88}px">${a}</div><div class="fv" style="top:${324 + k * 88}px">${b}</div>`).join('')}</div>`).join('');
 // rail: four stages
 const STG = ['Lighting tests', 'Relay test room', 'Interviews', 'Bank wiring room'];
 $('#rsRow').innerHTML = STG.map((s, i) => `<div class="rs" id="rs${i}" style="left:${i * 400}px"><div class="rc">${i + 1}</div><div class="rt">${s}</div>${i < 3 ? `<div class="rv">${M.icon('arrowR', 24, C.dim, 2.2)}</div>` : ''}</div>`).join('');
@@ -70,7 +70,7 @@ $('#p0cI').innerHTML = M.icon('factory', 24, C.gold, 2.2);
 // stage 1
 $('#lrLi').innerHTML = M.icon('bulb', 30, C.gold, 2.2); $('#lrOi').innerHTML = M.icon('chart', 30, C.ink, 2.2);
 // stage 2
-$('#grpP').innerHTML = Array.from({ length: 6 }, (_, k) => `<div class="pp" id="gp${k}" style="left:${40 + k * 58}px;top:232px">${PERSON}</div>`).join('');
+$('#grpP').innerHTML = Array.from({ length: 6 }, (_, k) => `<div class="pp" id="gp${k}" style="left:${40 + k * 58}px;top:276px">${PERSON}</div>`).join('');
 $('#telI').innerHTML = M.icon('phone', 22, C.gold, 2.2);
 const CP = [['cup', 'Breaks'], ['apple', 'Snacks'], ['clock', 'Hours'], ['msg', 'Their views']];
 $('#cpRow').innerHTML = CP.map(([ic, n], i) => `<div class="pill cp" id="cp${i}">${M.icon(ic, 22, C.gold, 2.2)}<span>${n}</span></div>`).join('');
@@ -88,11 +88,11 @@ const FD = [['users', 'Social beings', 'People want to belong'], ['eye', 'Attent
 $('#fGrid').innerHTML = FD.map(([ic, t, s], i) => `<div class="fc" id="fc${i}" style="left:${160 + (i % 2) * 816}px;top:${270 + Math.floor(i / 2) * 311}px"><div class="bg"></div><div class="fi"><span class="ico"></span></div><div class="fn">0${i + 1}</div><div class="serif ft">${t}</div><div class="fs">${s}</div>${i === 1 ? '<div class="fh">HAWTHORNE EFFECT</div>' : ''}</div>`).join('');
 // back at Chai Corner
 const KR = [['users', 'Five minute team chat', 'Every morning, everyone speaks'], ['star', 'Thanks Asha by name', 'For her new ginger chai']];
-$('#kRows').innerHTML = KR.map(([ic, t, s], i) => `<div class="kr" id="kr${i}" style="top:${104 + i * 112}px"><div class="ki">${M.icon(ic, 34, C.gold, 2.2)}</div><div class="serif kt">${t}</div><div class="ks">${s}</div></div>`).join('');
-$('#kTeam').innerHTML = CREW.map(([l, nw], i) => `<div class="avc" id="kt${i}" style="left:${48 + i * 84}px;background:${nw ? C.gold2 : C.gold}">${nw ? M.icon('user', 30, C.gold, 2.2) : l}</div>`).join('') + `<div class="pill" id="kHappy" style="top:336px"><span id="kHappyI"></span><span>Happy team</span></div>`;
-$('#kHappyI').innerHTML = M.icon('smile', 24, C.gold, 2.2);
+$('#kRows').innerHTML = KR.map(([ic, t, s], i) => `<div class="kr" id="kr${i}" style="top:${108 + i * 120}px"><div class="ki">${M.icon(ic, 34, C.gold, 2.2)}</div><div class="serif kt">${t}</div><div class="ks">${s}</div></div>`).join('');
+$('#kTeam').innerHTML = CREW.map(([l, nw], i) => `<div class="avc" id="kt${i}" style="left:${48 + i * 84}px;background:${nw ? C.gold2 : C.gold}">${nw ? M.icon('user', 30, C.gold, 2.2) : l}</div>`).join('') + `<div class="pill" id="kHappy" style="top:448px"><span id="kHappyI"></span><span>Happy team</span></div>`;
+$('#kMoreI').innerHTML = M.icon('cup', 24, C.gold, 2.2); $('#kHappyI').innerHTML = M.icon('smile', 24, C.gold, 2.2);
 const BARS = [['Before', 400, 40], ['After', 600, 60]];
-$('#kBars').innerHTML = BARS.map(([n], k) => `<div class="bar" id="kb${k}" style="top:${150 + k * 140}px"><div class="bl">${n}</div><div class="bt"></div><div class="serif bv"></div></div>`).join('');
+$('#kBars').innerHTML = BARS.map(([n], k) => `<div class="bar" id="kb${k}" style="top:${130 + k * 160}px"><div class="bl">${n}</div><div class="bt"></div><div class="serif bv"></div></div>`).join('');
 // quiz
 const OPTS = [['Scalar', 'chain'], ['Hawthorne', 'effect'], ['Red', 'tape'], ['Time', 'study']], RIGHT = 1;
 $('#opts').innerHTML = OPTS.map((o, i) => `<div class="opt" id="o${i}" style="left:${160 + i * 408}px"><div class="bg"></div><div class="lt">${'ABCD'[i]}</div><div class="ot serif" style="top:104px">${o[0]}</div><div class="ot serif" style="top:152px">${o[1]}</div><div class="ok">${M.icon('check', 30, '#fff', 3)}</div></div>`).join('');
@@ -112,7 +112,6 @@ const setIco = (el, ic, col, s = 32, w = 2.2) => { const k = ic + col; if (el._k
 const on01 = (t, a, b, d = 0.32) => M.io((t - a) / d) * (1 - M.io((t - b) / 0.4));
 const light = M.track(0.62, [[tBri, 0.94], [tDim, 0.16], [tE[1], 0.62]], M.SOFT);
 const outp = M.track(0.4, [[tUp1, 0.64], [tUp2, 0.86]], M.SOFT);
-const snap = v => (Math.abs(v) < 0.02 ? 0 : v);
 let geo = null;
 function measure() {
   const ti = $('#title'); ti.style.fontSize = '120px';
@@ -122,7 +121,7 @@ function measure() {
   const ex = $('#exChip'); ex.style.left = (1760 - ex.offsetWidth) + 'px'; ex.style.top = '170px';
   // team pills: fixed widths so nothing shifts when the text changes
   const pm = $('#pMood'), pc = $('#pChai');
-  M.setT($('#pMoodT'), 'Team: lively'); pm.style.width = (pm.offsetWidth - 40) + 'px'; M.setT($('#pMoodT'), 'Team: quiet');
+  M.setT($('#pMoodT'), 'Team: lively'); pm.style.boxSizing = 'border-box'; pm.style.width = pm.offsetWidth + 'px'; M.setT($('#pMoodT'), 'Team: quiet');
   pm.style.left = (36 + $('#pPay').offsetWidth + 16) + 'px';
   pc.style.left = (pm.offsetLeft + pm.offsetWidth + 16) + 'px';
   let x = 40; for (let i = 0; i < 4; i++) { const p = $('#cp' + i); p.style.left = x + 'px'; x += p.offsetWidth + 16; }
@@ -159,7 +158,7 @@ M.on(t => {
     M.rise($('#hname'), t, tMorph + 0.6, { st: 0.06 }); M.vis($('#htag'), t, tMorph + 0.8, 1e9, { dy: 10 });
     CUPS.forEach((c, i) => { const ti0 = tMorph + 0.9 + i * 0.06; const p = M.spring(t - ti0, M.POP); const g = $('#cup' + i); M.hide(g, t < ti0); g.setAttribute('transform', `translate(${c[0]} ${(c[1] - (1 - p) * 24).toFixed(2)})`); g.style.opacity = M.clamp((t - ti0) / 0.1); });
     // team card: six people, quiet until Ravi listens
-    M.vis($('#crew'), t, Math.min(tMorph + 0.3, tSix), 1e9, { dy: 36 });
+    M.vis($('#crew'), t, tMorph + 0.3, 1e9, { dy: 36 });
     const sixT = Math.max(tSix, tMorph + 0.45);
     M.setT($('#cN'), String(Math.round(6 * M.o5((t - sixT) / 0.9))));
     CREW.forEach(([, nw], i) => {
@@ -207,6 +206,7 @@ M.on(t => {
     M.vis($('#defbar'), t, tD3 + 0.08, tDout, { dy: 24, ...o });
     DC.forEach((d, i) => {
       const el = $('#dc' + i); M.vis(el, t, tDc[i] - 0.08, tDout, { dy: 30, ...o });
+      el.querySelectorAll('.hr,.fx,.fv').forEach((c, j) => M.vis(c, t, tDc[i] + 0.5 + j * 0.12, 1e9, { dy: 12 }));
       const av = el.querySelector('.avc'); if (av) av.style.background = mix(C.ink, C.gold, on01(t, tDc[i], tDc[i + 1]));
     });
   }
@@ -217,8 +217,11 @@ M.on(t => {
     const wo = { outDur: 0.3, ody: -16 };
     // factory: centred first, then slides to the left column when the stages begin
     const fac = $('#fac'); M.vis(fac, t, tW1 + 0.05, tWout, { dy: 36, ...wo });
-    const s = M.spring(t - (tW2 - 0.05), M.HEAVY), fx = snap(492 * (1 - s)), fy = snap(-64 * (1 - s));
-    if (t < tWout) fac.style.transform = (fx || fy) ? `translate(${fx.toFixed(2)}px,${fy.toFixed(2)}px)` : 'none';
+    // a lone full-width card first, then it shrinks into the left column when the stages arrive
+    const s0 = M.spring(t - (tW2 - 0.05), M.HEAVY), s = s0 > 0.999 ? 1 : s0;
+    const fw = M.lerp(1600, 616, s), fh = M.lerp(580, 452, s), ft = M.lerp(270, 398, s);
+    fac.style.width = fw.toFixed(1) + 'px'; fac.style.height = fh.toFixed(1) + 'px'; fac.style.top = ft.toFixed(1) + 'px';
+    $('#facIn').style.transform = s === 1 ? 'none' : `translate(${((fw - 616) / 2).toFixed(2)}px,${((fh - 452) / 2).toFixed(2)}px) scale(${M.lerp(1.2, 1, s).toFixed(4)})`;
     M.draw($('#k1'), t, tW1 + 0.6, 0.5, M.o3); M.draw($('#k2'), t, tW1 + 0.72, 0.5, M.o3);
     $('#smoke').setAttribute('transform', `translate(0 ${(-4 * Math.sin(t * 2.4)).toFixed(2)})`);
     const lv = light(t);
@@ -329,6 +332,8 @@ M.on(t => {
     KR.forEach((_, i) => { M.vis($('#kr' + i), t, (i ? tK3 : tK2) - 0.05, 1e9, { dy: 20 }); });
     CREW.forEach((_, i) => M.vis($('#kt' + i), t, tK4 + i * 0.07, 1e9, { dy: 14, sc: 0.7, sp: M.POP, fade: 0.1 }));
     M.vis($('#kHappy'), t, tK4 + 0.6, 1e9, { dy: 16 });
+    M.vis($('#kAct .hr'), t, tK1 + 0.4, 1e9, { dy: 0 }); M.vis($('#kTL'), t, tK1 + 0.5, 1e9, { dy: 10 });
+    M.vis($('#kMore'), t, tSixty + 0.9, 1e9, { dy: 16 });
     M.vis($('#kBig'), t, tSixty + 0.3, 1e9, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.1 });
     BARS.forEach(([n, w, v], k) => {
       const el = $('#kb' + k), bt = el.querySelector('.bt'), bv = el.querySelector('.bv');

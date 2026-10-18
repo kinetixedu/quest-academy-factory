@@ -44,7 +44,10 @@
 #qby{position:absolute;left:0;width:1920px;top:640px;text-align:center}
 #defbar{left:160px;top:270px;width:1600px;height:84px;border-radius:24px;display:flex;align-items:center;gap:20px;padding:0 32px;box-sizing:border-box}
 #defbar .tx{font:600 32px Poppins;white-space:nowrap}
-.dc{position:absolute;top:418px;width:784px;height:264px}
+.dc{position:absolute;top:386px;width:784px;height:474px}
+.dc .hr{position:absolute;left:32px;right:32px;top:262px;height:2px;background:var(--line)}
+.dc .fx{position:absolute;left:32px;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.dc .fv{position:absolute;left:32px;font:600 30px Poppins;white-space:nowrap}
 .dc .di{position:absolute;left:32px;top:32px;width:72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
 .dc .avc{left:36px;top:36px}
 .dc .dn{position:absolute;right:32px;top:40px;font:700 26px Poppins;color:var(--line);letter-spacing:.04em}
@@ -57,6 +60,7 @@
 .rs .rt{position:absolute;left:96px;top:0;height:96px;display:flex;align-items:center;font:600 26px Poppins;white-space:nowrap;color:var(--muted)}
 .rs .rv{position:absolute;right:28px;top:36px;width:24px;height:24px}
 #fac{left:160px;top:398px;width:616px;height:452px;overflow:hidden}
+#facIn{position:absolute;left:0;top:0;width:616px;height:452px;transform-origin:308px 226px}
 #facY{left:32px;top:32px;background:var(--paper)}
 #facN{position:absolute;left:0;width:616px;top:332px;text-align:center;font-size:40px;white-space:nowrap}
 #facT{position:absolute;left:0;width:616px;top:392px;text-align:center;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
@@ -75,7 +79,7 @@
 .lr .la{position:absolute;right:0;top:12px;width:56px;height:56px;border-radius:28px;display:flex;align-items:center;justify-content:center}
 #s1t{position:absolute;left:40px;top:378px;font:600 30px Poppins;white-space:nowrap}
 /* stage 2 */
-#grp .lbl{left:40px;top:196px;font-size:16px}
+#grp .lbl{left:40px;top:236px;font-size:16px}
 #chart{position:absolute;left:40px;top:252px}
 .cp{position:absolute;top:192px}
 #oldP{position:absolute;height:40px;padding:0 16px;border-radius:20px;background:var(--paper);display:flex;align-items:center;font:600 18px Poppins;color:var(--ink2);white-space:nowrap}
@@ -102,13 +106,14 @@
 .fc .fs{position:absolute;left:40px;top:208px;font:500 28px Poppins;white-space:nowrap}
 .fc .fh{position:absolute;right:40px;top:44px;height:40px;padding:0 16px;border-radius:20px;background:var(--gold);display:flex;align-items:center;font:700 16px Poppins;letter-spacing:.14em;color:#fff;white-space:nowrap}
 /* scene K: back at Chai Corner */
-.kc{position:absolute;top:300px;width:784px;height:440px}
+.kc{position:absolute;top:270px;width:784px;height:580px}
+.kc .hr{position:absolute;left:48px;right:48px;top:352px;height:2px;background:var(--line)}
 .kc>.lbl{left:48px;top:48px}
 .kr{position:absolute;left:48px;width:688px;height:96px}
 .kr .ki{position:absolute;left:0;top:12px;width:72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
 .kr .kt{position:absolute;left:104px;top:8px;font-size:34px;white-space:nowrap}
 .kr .ks{position:absolute;left:104px;top:56px;font:500 26px Poppins;color:var(--ink2);white-space:nowrap}
-#kTeam .avc{top:328px}
+#kTeam .avc{top:440px}
 .kc .big{position:absolute;right:48px;top:30px;font-size:64px;color:var(--gold);white-space:nowrap}
 .bar{position:absolute;left:48px;width:688px;height:120px}
 .bar .bl{position:absolute;left:0;top:0;font:600 22px Poppins;color:var(--muted);white-space:nowrap}
@@ -194,7 +199,7 @@
     <!-- Hawthorne studies: rail + factory + stage panel -->
     <div id="sW">
       <div class="card" id="rail"><div id="rsRow"></div></div>
-      <div class="card" id="fac">
+      <div class="card" id="fac"><div id="facIn">
         <div class="pill" id="facY"><span id="facYI"></span><span>1924-1932</span></div>
         <svg id="facS" width="616" height="270" style="position:absolute;left:0;top:56px">
           <g id="smoke" fill="none" stroke="#C9BFAE" stroke-width="5" stroke-linecap="round"><path id="k1" d="M478 44 c-12 -14 12 -22 0 -38"/><path id="k2" d="M502 40 c-12 -14 12 -22 0 -36"/></g>
@@ -207,7 +212,7 @@
         </svg>
         <div class="serif" id="facN">Hawthorne Works</div>
         <div id="facT">WESTERN ELECTRIC · NEAR CHICAGO</div>
-      </div>
+      </div></div>
       <div class="card" id="stp">
         <!-- pane 0: overview -->
         <div class="sp" id="sp0"><div class="ps">THE HAWTHORNE STUDIES</div><div class="serif pt">Eight years, <span class="acc">four stages</span></div><div class="hr"></div>
@@ -220,7 +225,7 @@
           <div id="s1t">Not the light. Someone was <span class="acc">watching.</span></div></div>
         <!-- pane 2: relay assembly test room -->
         <div class="sp" id="sp2"><div class="ps">STAGE 02 / 04</div><div class="serif pt">Relay assembly test room</div><div class="hr"></div>
-          <div id="grp"><div class="lbl">A SMALL TEST GROUP</div><div id="grpP"></div><div class="pill" id="telP" style="left:452px;top:232px"><span id="telI"></span><span>Putting together telephone parts</span></div></div>
+          <div id="grp"><div class="lbl">A SMALL TEST GROUP</div><div id="grpP"></div><div class="pill" id="telP" style="left:452px;top:276px"><span id="telI"></span><span>Putting together telephone parts</span></div></div>
           <div id="cpRow"></div>
           <svg id="chart" width="872" height="160"><line x1="0" y1="152" x2="872" y2="152" stroke="#E2DACB" stroke-width="4" stroke-linecap="round"/><line id="oldL" x1="600" y1="20" x2="600" y2="148" stroke="#D9CFBC" stroke-width="3" stroke-dasharray="8 10" stroke-linecap="round"/><path id="cLine" fill="none" stroke="#B8862F" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><circle id="cDot" r="9" fill="#B8862F" stroke="#fff" stroke-width="4"/></svg>
           <div id="oldP" style="left:656px;top:350px">Old conditions back</div>
@@ -249,8 +254,8 @@
 
     <!-- scene K: back at Chai Corner -->
     <div id="sK">
-      <div class="card kc" id="kAct" style="left:160px"><div class="lbl">WHAT RAVI DOES NOW</div><div id="kRows"></div><div id="kTeam"></div></div>
-      <div class="card kc" id="kRes" style="left:976px"><div class="lbl">CUPS SERVED PER HOUR</div><div class="serif big" id="kBig">+50%</div><div id="kBars"></div></div>
+      <div class="card kc" id="kAct" style="left:160px"><div class="lbl">WHAT RAVI DOES NOW</div><div id="kRows"></div><div class="hr"></div><div class="lbl" id="kTL" style="left:48px;top:384px">THE TEAM</div><div id="kTeam"></div></div>
+      <div class="card kc" id="kRes" style="left:976px"><div class="lbl">CUPS SERVED PER HOUR</div><div class="serif big" id="kBig">+50%</div><div id="kBars"></div><div class="pill" id="kMore" style="left:48px;top:484px"><span id="kMoreI"></span><span>20 more cups every hour</span></div></div>
     </div>
 
     <!-- quick check -->
