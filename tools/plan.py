@@ -31,6 +31,7 @@ now = dt.datetime.now(IST) + dt.timedelta(hours=cfg.get('min_lead_hours', 3))
 gen = slots(now, taken())
 inc = []
 for v in ready:
-    pa = next(gen) if cfg['mode'] == 'schedule' else ''
+    test = json.loads((v / 'meta.json').read_text()).get('test')   # test videos upload as private, never scheduled
+    pa = next(gen) if cfg['mode'] == 'schedule' and not test else ''
     inc.append({'slug': v.name, 'publish_at': pa})
 print(json.dumps({'include': inc}))
