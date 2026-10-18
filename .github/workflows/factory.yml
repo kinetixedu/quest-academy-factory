@@ -48,6 +48,12 @@ jobs:
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
         run: |
           mkdir -p registry; [ -f registry/playlists.json ] || echo '{}' > registry/playlists.json
+          python3 - <<'PY'
+          import os
+          c=os.environ.get('YT_CLIENT_ID',''); s=os.environ.get('YT_CLIENT_SECRET',''); t=os.environ.get('YT_REFRESH_TOKEN','')
+          ws=lambda v: 'HAS-SPACES' if v!=v.strip() else 'clean'
+          print(f"::notice title=Key check::client_id {c[:6]}...{c[-27:]} len {len(c)} {ws(c)} | secret starts {s[:7]} len {len(s)} {ws(s)} | token starts {t[:4]} len {len(t)} {ws(t)}")
+          PY
           if [ -z "$YT_REFRESH_TOKEN" ]; then echo "::warning::YouTube secrets not set yet - videos will be built but not uploaded"; exit 0; fi
           python3 tools/upload.py --ensure-playlists
       - uses: actions/upload-artifact@v4
