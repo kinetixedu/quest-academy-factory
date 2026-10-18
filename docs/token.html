@@ -1,0 +1,43 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quest Academy - YouTube key helper</title>
+<style>
+body{margin:0;font-family:system-ui,Segoe UI,Roboto,sans-serif;background:#13213f;color:#f5efe4;padding:32px 16px}
+main{max-width:620px;margin:auto}h1{font-family:Georgia,serif;font-size:30px;margin:0 0 6px}p{color:#d9cfbd;line-height:1.55}
+label{display:block;margin:18px 0 6px;font-weight:600}input,textarea{width:100%;box-sizing:border-box;padding:12px;border-radius:8px;border:1px solid #3a4a70;background:#0d1730;color:#fff;font:14px ui-monospace,monospace}
+button{margin-top:20px;padding:13px 22px;border:0;border-radius:8px;background:#c8933a;color:#13213f;font-weight:700;font-size:15px;cursor:pointer}
+.box{background:#0d1730;border:1px solid #3a4a70;border-radius:10px;padding:16px;margin-top:20px}.err{color:#ff9b8a}.ok{color:#9be3a6}code{color:#e8c27a}
+</style></head><body><main>
+<h1>YouTube key helper</h1>
+<p>Gets the refresh token for the Quest Academy factory. Everything happens in your browser - nothing is sent anywhere except Google.</p>
+<div id="start">
+<label>Client ID</label><input id="cid" placeholder="....apps.googleusercontent.com">
+<label>Client secret</label><input id="sec" placeholder="GOCSPX-...">
+<button id="go">Sign in with Google</button>
+<p style="margin-top:14px;font-size:13px">Redirect URI this page uses (must be in your OAuth client): <code id="ru"></code></p>
+</div>
+<div id="out"></div>
+</main><script>
+const RU = location.origin + location.pathname; document.getElementById('ru').textContent = RU;
+const SC = 'https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube.force-ssl';
+const out = document.getElementById('out');
+const ss = { get(k){try{return sessionStorage.getItem(k)}catch(e){return null}}, set(k,v){try{sessionStorage.setItem(k,v)}catch(e){}}, del(k){try{sessionStorage.removeItem(k)}catch(e){}} };
+document.getElementById('go').onclick = () => {
+  const c = document.getElementById('cid').value.trim(), s = document.getElementById('sec').value.trim();
+  if (!c || !s) { out.innerHTML = '<p class="err">Paste both values first.</p>'; return; }
+  ss.set('cid', c); ss.set('sec', s);
+  location.href = 'https://accounts.google.com/o/oauth2/v2/auth?' + new URLSearchParams({client_id:c, redirect_uri:RU, response_type:'code', scope:SC, access_type:'offline', prompt:'consent', include_granted_scopes:'true'});
+};
+const q = new URLSearchParams(location.search);
+if (q.get('error')) out.innerHTML = '<div class="box err">Google said: ' + q.get('error') + '</div>';
+if (q.get('code')) {
+  document.getElementById('start').style.display = 'none';
+  out.innerHTML = '<div class="box">Getting your token...</div>';
+  fetch('https://oauth2.googleapis.com/token', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'},
+    body: new URLSearchParams({code:q.get('code'), client_id:ss.get('cid')||'', client_secret:ss.get('sec')||'', redirect_uri:RU, grant_type:'authorization_code'})})
+  .then(r => r.json()).then(j => {
+    ss.del('sec'); history.replaceState(null, '', RU);
+    if (j.refresh_token) out.innerHTML = '<div class="box"><p class="ok"><b>Done.</b> Copy this into the GitHub secret <code>YT_REFRESH_TOKEN</code>:</p><textarea rows="4" readonly onclick="this.select()">' + j.refresh_token + '</textarea><p>Use the same Client ID and secret for <code>YT_CLIENT_ID</code> and <code>YT_CLIENT_SECRET</code>. Then close this tab.</p></div>';
+    else out.innerHTML = '<div class="box err">No refresh token returned: ' + (j.error_description || j.error || JSON.stringify(j)) + '</div>';
+  }).catch(e => out.innerHTML = '<div class="box err">Request failed: ' + e + '</div>');
+}
+</script></body></html>
