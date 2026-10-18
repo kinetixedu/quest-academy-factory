@@ -22,8 +22,8 @@ const tTitle = 0.25, tMorph = T0('H2') + 0.02, tSix = wt('H1', 'six');
 const tAsk = T0('H2') + 0.3, tTile = [wt('C1', 'time'), wt('C1', 'strict'), wt('C1', 'listen')], tArg = wt('C2', 'argued'), tHund = wt('C2', 'hundred');
 const tT = T0('T1'), tSt2 = wt('T1', 'grew'), tTu = T0('D1') - 0.32;
 const tD1 = T0('D1'), tD2 = T0('D2'), tChg = wt('D2', 'changed'), tD3 = T0('D3');
-const tDc = [tD3 + 0.2, wt('D3', 'gap'), wt('D3', 'old')], tD4 = T0('D4'), tDout = tD4 - 0.05;
-const tRoad = tD4 + 0.3, tCart = wt('D4', 'road'), tThree = wt('D4', 'three');
+const tDc = [tD3 + 0.15, wt('D3', 'fixed')], tBoth = wt('D3', 'gap') + 0.15, tD4 = T0('D4'), tDout = wt('D4', 'road') - 0.45;
+const tRoad = tDout + 0.3, tCart = wt('D4', 'road'), tThree = wt('D4', 'three');
 const tK1 = T0('K1'), tK2 = T0('K2'), tTh = [wt('K3', 'Frederick'), wt('K4', 'Henri'), wt('K5', 'Max')], tBur = wt('K5', 'bureaucracy');
 const tK6 = T0('K6'), tK7g = wt('K7', 'gap'), tP1 = T0('P1'), tKout = tP1 - 0.3;
 const tP2 = T0('P2'), tTl = [wt('P3', 'lights'), wt('P3', 'breaks'), wt('P3', 'hours')], tP4 = T0('P4'), tUp = wt('P4', 'up');
@@ -50,12 +50,13 @@ const ASK = [['Time tasks', 'timer'], ['Strict rules', 'clipboard'], ['Listen mo
 $('#askRow').innerHTML = ASK.map(([t, ic], i) => `<div class="job" id="ak${i}" style="left:${36 + i * 291}px"><div class="ji">${M.icon(ic, 28, C.ink, 2.2)}</div><div class="jt">${t}</div><div class="av">?</div></div>`).join('');
 // definition
 $('#defI').innerHTML = M.icon('book', 36, C.gold, 2.2);
-const DC = [['bulb', 'Old idea', 'Works for a while', C.dim], ['alert', 'A gap', 'Something is missing', C.red], ['bulb', 'New idea', 'Fixes the gap', C.gold]];
-$('#dRow').innerHTML = DC.map(([ic, t, s, col], i) => `<div class="card dc" id="dc${i}" style="left:${160 + i * 544}px"><div class="di">${M.icon(ic, 36, col, 2.2)}</div><div class="dn">0${i + 1}</div><div class="serif dt">${t}</div><div class="ds">${s}</div></div>`).join('');
+const DC = [['bulb', 'Old idea', 'Works for a while', C.gold, 'Ravi gives every order himself'], ['alert', 'A gap', 'Something is missing', C.red, 'The team stops sharing ideas']];
+$('#dRow').innerHTML = DC.map(([ic, t, s, col, v], i) => `<div class="ee" id="dc${i}" style="left:${160 + i * 816}px"><div class="bg"></div><div class="eic">${M.icon(ic, 48, col, 2)}</div><div class="serif et">${t}</div><div class="em" style="color:${col}">${s}</div><div class="hr"></div><div class="ex">AT CHAI CORNER</div><div class="ev">${v}</div></div>`).join('');
+$('#bothI').innerHTML = M.icon('bulb', 36, C.gold2, 2.4);
 // road: stops, eras, cart
 const SX = [416, 960, 1504];
 const ERA = [['Classical', 'EARLY 1900s'], ['Neo-classical', '1920s-1930s'], ['Modern', '1950s-1970s']];
-$('#stops').innerHTML = ERA.map(([e, y], i) => `<div class="stop" id="sp${i}" style="left:${SX[i] - 30}px">${i + 1}</div><div class="serif era" id="er${i}" style="left:${SX[i] - 240}px">${e}</div><div class="yr" id="yr${i}" style="left:${SX[i] - 240}px"><span class="lbl">${y}</span></div>`).join('');
+$('#stops').innerHTML = ERA.map(([e, y], i) => `<div class="stop" id="sp${i}" style="left:${SX[i] - 34}px">${i + 1}</div><div class="serif era" id="er${i}" style="left:${SX[i] - 240}px">${e}</div><div class="yr" id="yr${i}" style="left:${SX[i] - 240}px"><span class="lbl">${y}</span></div>`).join('');
 let cg = ''; for (let i = 0; i < 4; i++) cg += `<path d="M${4 + i * 26} 2 h26 v14 a13 9 0 0 1 -26 0 z" fill="${i % 2 ? '#B8862F' : '#14213D'}"/>`;
 $('#cartG').innerHTML = cg + `<rect x="12" y="20" width="6" height="26" fill="#14213D"/><rect x="94" y="20" width="6" height="26" fill="#14213D"/><rect x="44" y="30" width="14" height="16" rx="3" fill="#FFFFFF" stroke="#3A4560" stroke-width="2.5"/><rect x="62" y="30" width="14" height="16" rx="3" fill="#FFFFFF" stroke="#3A4560" stroke-width="2.5"/><rect x="4" y="44" width="104" height="18" rx="5" fill="#3A4560"/><rect x="4" y="44" width="104" height="5" rx="2.5" fill="#B8862F"/><circle cx="28" cy="64" r="8" fill="#14213D"/><circle cx="84" cy="64" r="8" fill="#14213D"/><circle cx="28" cy="64" r="3" fill="#E9D9B5"/><circle cx="84" cy="64" r="3" fill="#E9D9B5"/>`;
 // banner states [in, out, icon, tag, tone, text]
@@ -109,7 +110,21 @@ const goldW = M.track(0, [[tK1, SX[0] - 160], [tP1, SX[1] - 160], [tM1, SX[2] - 
 const tReach = [tK1, tP1, tM1];
 const setIco = (el, ic, col, s = 32, w = 2.2) => { const k = ic + col; if (el._k !== k) { el._k = k; el.innerHTML = M.icon(ic, s, col, w); } };
 const on01 = (t, a, b, d = 0.32) => M.io((t - a) / d) * (1 - M.io((t - b) / 0.4));
-const slideL = (el, t, ts) => { const s = M.spring(t - ts, M.HEAVY); el.style.left = (s >= 0.999 ? 160 : 160 + 408 * (1 - s)).toFixed(1) + 'px'; };
+// a lone card starts full width, then shrinks to its half when the second card arrives
+const cardW = (t, ts) => { const s = M.spring(t - ts, M.HEAVY); return s >= 0.999 ? 784 : Math.round(1600 - 816 * s); };
+const layHaw = W => {
+  const h = $('#haw'); if (h._w === W) return; h._w = W; h.style.width = W + 'px'; $('#hawIn').style.width = (W - 64) + 'px';
+  const w = (W - 64 - 48) / 3; TL.forEach((_, i) => { const e = $('#tl' + i); e.style.width = w.toFixed(1) + 'px'; e.style.left = (32 + i * (w + 24)).toFixed(1) + 'px'; });
+};
+const laySys = W => {
+  const h = $('#sys'); if (h._w === W) return; h._w = W; h.style.width = W + 'px'; $('#sysIn').style.width = (W - 64) + 'px';
+  const w = (W - 64 - 120) / 3, cx = i => 32 + i * (w + 60) + w / 2;
+  FB.forEach((_, i) => { const e = $('#fb' + i); e.style.width = w.toFixed(1) + 'px'; e.style.left = (32 + i * (w + 60)).toFixed(1) + 'px'; });
+  [0, 1].forEach(i => { $('#fa' + i).style.left = (32 + (i + 1) * w + i * 60 + 12).toFixed(1) + 'px'; });
+  $('#fbk').setAttribute('width', W); $('#fbkL').style.width = W + 'px';
+  const p = $('#fbkP'); p.setAttribute('d', `M${cx(2).toFixed(1)} 196 V230 H${cx(0).toFixed(1)} V204`); p._L = null;
+  $('#fbkA').setAttribute('d', `M${(cx(0) - 10).toFixed(1)} 214 L${cx(0).toFixed(1)} 202 L${(cx(0) + 10).toFixed(1)} 214`);
+};
 let geo = null;
 function measure() {
   const ti = $('#title'); ti.style.fontSize = '120px';
@@ -183,14 +198,19 @@ M.on(t => {
     M.vis($('#qby'), t, tChg + 0.4, tD3 - 0.12, { dy: 12, outDur: 0.25 });
     const o = { outDur: 0.3, ody: -16 };
     M.vis($('#defbar'), t, tD3 + 0.08, tDout, { dy: 24, ...o });
-    DC.forEach((_, i) => M.vis($('#dc' + i), t, tDc[i] - 0.05, tDout, { dy: 30, ...o }));
+    DC.forEach((_, i) => {
+      const el = $('#dc' + i); M.vis(el, t, tDc[i] - 0.05, tDout, { dy: 36, ...o });
+      M.vis(el.querySelector('.ex'), t, tDc[i] + 0.35, 1e9, { dy: 10 });
+      M.rise(el.querySelector('.ev'), t, tDc[i] + 0.45, { st: 0.04 });
+    });
+    M.vis($('#both'), t, tBoth, tDout, { dy: 40, ...o });
   }
 
   /* ===== the road ===== */
   const rOn = t >= tD4 && t < tQ + 0.05; M.hide($('#sRoad'), !rOn);
   if (rOn) {
     const ro = { outDur: 0.3, ody: -16 };
-    const lift = M.spring(t - (tK2 - 0.45), M.HEAVY), rdy = 210 * (1 - lift);
+    const lift = M.spring(t - (tK2 - 0.45), M.HEAVY), rdy = 200 * (1 - lift);
     $('#roadG').style.transform = rdy < 0.02 ? 'none' : `translateY(${rdy.toFixed(2)}px)`;
     const rb = M.o3((t - tRoad) / 1.0); $('#roadBase').style.width = (1600 * rb).toFixed(1) + 'px'; M.hide($('#roadBase'), rb <= 0);
     M.draw($('#dashL'), t, tRoad + 0.3, 1.0, M.io);
@@ -233,7 +253,7 @@ M.on(t => {
     const haw = $('#haw'), fnd = $('#fnd');
     if (!pOn) { M.hide(haw, true); M.hide(fnd, true); }
     else {
-      M.vis(haw, t, tP2 + 0.05, tPout, { dy: 30, ...ro }); slideL(haw, t, tP4 - 0.1);
+      M.vis(haw, t, tP2 + 0.05, tPout, { dy: 30, ...ro }); layHaw(cardW(t, tP4 - 0.1));
       M.vis($('#hawIn'), t, tP2 + 0.5, tTl[0] - 0.3, { dy: 20, outDur: 0.22, ody: -12 });
       TL.forEach((_, i) => {
         const el = $('#tl' + i); M.vis(el, t, tTl[i] - 0.05, 1e9, { dy: 20 });
@@ -256,7 +276,7 @@ M.on(t => {
     const sys = $('#sys'), con = $('#con');
     if (!mOn) { M.hide(sys, true); M.hide(con, true); }
     else {
-      M.vis(sys, t, tM2 + 0.05, tMout, { dy: 30, ...ro }); slideL(sys, t, tM5 - 0.1);
+      M.vis(sys, t, tM2 + 0.05, tMout, { dy: 30, ...ro }); laySys(cardW(t, tM5 - 0.1));
       M.vis($('#sysIn'), t, tM2 + 0.5, tFb[0] - 0.3, { dy: 20, outDur: 0.22, ody: -12 });
       FB.forEach((_, i) => {
         const el = $('#fb' + i); M.vis(el, t, tFb[i] - 0.05, 1e9, { dy: 20 });
