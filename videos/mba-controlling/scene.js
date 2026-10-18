@@ -101,7 +101,6 @@ $('#eRow').innerHTML = EE.map(([t, m, ic, v, w], i) => `<div class="ee" id="ee${
 // exception report
 const XR = [['cup', 'Cup 5 ml short', 0], ['timer', 'Wait of 95 seconds', 0], ['trendDown', 'Sales down 20%', 1], ['droplet', 'Milk bill up 2%', 0]];
 $('#xRows').innerHTML = XR.map(([ic, tx, big], i) => `<div class="xr" id="xr${i}" style="top:${84 + i * 120}px"><i></i><div class="xt">${tx}</div><div class="xg"><span class="xgi"></span><span>${big ? 'TO RAVI' : 'TEAM FIXES'}</span></div></div>`).join('');
-$('#dkBI').innerHTML = M.icon('alert', 32, C.red, 2.2); $('#tayI').innerHTML = M.icon('bookOpen', 32, C.gold2, 2.2);
 // quiz
 const OPTS = ['Planning', 'Measuring', 'Coordinating', 'By exception'], RIGHT = 3;
 $('#opts').innerHTML = OPTS.map((o, i) => `<div class="opt" id="o${i}" style="left:${160 + i * 408}px"><div class="bg"></div><div class="lt">${'ABCD'[i]}</div><div class="ot serif">${o}</div><div class="ok">${M.icon('check', 30, '#fff', 3)}</div></div>`).join('');
@@ -129,6 +128,7 @@ function measure() {
   const ex = $('#exChip'); ex.style.left = (1760 - ex.offsetWidth) + 'px'; ex.style.top = '170px';
   $('#pQ').style.left = (36 + $('#pT').offsetWidth + 28) + 'px';
   document.querySelectorAll('#fPans .pt').forEach(p => { if (p.offsetWidth > 848) p.style.fontSize = Math.floor(84 * 848 / p.offsetWidth) + 'px'; });
+  { const p = $('#lpn .pt'); if (p.offsetWidth > 688) p.style.fontSize = Math.floor(84 * 688 / p.offsetWidth) + 'px'; }
   let x = 0; for (let k = 0; k < 2; k++) { const s = $('#an' + k); s.style.left = x + 'px'; x += s.offsetWidth + 24; }
   OPTS.forEach((_, i) => { const o = $('#o' + i + ' .ot'); if (o.offsetWidth > 312) o.style.fontSize = Math.floor(40 * 312 / o.offsetWidth) + 'px'; });
   ROWS.forEach(([, , ps], i) => { let px = 216 + $('#rw' + i + ' .rt').offsetWidth + 40; ps.forEach((_, k) => { const p = $('#fp' + i + k); p.style.left = px + 'px'; px += p.offsetWidth + 16; }); });
@@ -339,7 +339,9 @@ M.on(t => {
       const lift = M.spring(t - ta, M.POP) - M.spring(t - td, M.SOFT);
       if (t > tP1 + 1 && t < tPout) el.style.transform = Math.abs(lift) > 0.001 ? `scale(${(1 + 0.02 * lift).toFixed(4)})` : 'none';
     });
-    M.vis($('#both'), t, tP4 + 0.05, tPout, { dy: 40, outDur: 0.3, ody: -16 });
+    M.vis($('#both'), t, tP1 + 0.5, tPout, { dy: 40, outDur: 0.3, ody: -16 });
+    M.rise($('#bothA'), t, tP1 + 0.7, { st: 0.05, out: tP4 - 0.05, outDur: 0.25 });
+    M.rise($('#bothB'), t, tP4 + 0.15, { st: 0.06, sp: M.HEAVY });
   }
 
   /* ===== X: management by exception ===== */
@@ -359,17 +361,17 @@ M.on(t => {
     M.vis($('#desk'), t, tX2 + 0.05, 1e9, { dx: 60, dy: 0 });
     M.vis($('#dkAv'), t, tX2 + 0.3, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 });
     M.rise($('#dkT'), t, tMbe + 0.1, { st: 0.07, sp: M.HEAVY });
-    M.rise($('#dkS'), t, tMbe + 0.5, { st: 0.04 });
     M.vis($('#desk .hr'), t, tMbe + 0.6, 1e9, { dy: 0 });
-    M.vis($('#dkL'), t, tMbe + 0.7, 1e9, { dy: 10 });
-    const db = $('#dkBig'); M.vis(db, t, tMbe + 0.8, 1e9, { dy: 16 });
-    const r = M.io((t - tReach) / 0.35);
-    db.style.background = mix(C.paper, C.redBg, r);
-    $('#bt0').style.color = C.dim; M.hide($('#bt0'), t >= tReach);
-    setIco($('#dkBI'), t < tReach ? 'check' : 'alert', t < tReach ? C.dim : C.red, 32, 2.2);
-    if (t >= tReach && t < tReach + 0.45) db.style.transform = `scale(${(1 + 0.04 * Math.sin(Math.PI * (t - tReach) / 0.45)).toFixed(4)})`; else if (db.style.transform !== 'none' && t > tReach) db.style.transform = 'none';
-    M.rise($('#bt1'), t, tReach + 0.02, { st: 0.05 });
-    M.vis($('#tay'), t, tTaylor - 0.05, 1e9, { dy: 24 });
+    M.rise($('#dkS'), t, tMbe + 0.5, { st: 0.04, out: tTaylor - 0.1, outDur: 0.25 });
+    M.rise($('#dkS2'), t, tTaylor + 0.1, { st: 0.05 });
+    [['dtA', 'a', tTeam, 'users', C.gold3, C.ink], ['dtB', 'b', tReach, 'alert', C.redBg, C.red]].forEach(([id, p, tf, ic, bgc, fc], j) => {
+      const el = $('#' + id); M.vis(el, t, tMbe + 0.7 + j * 0.1, 1e9, { dy: 16 });
+      const r = M.io((t - tf) / 0.35); el.style.background = mix(C.paper, bgc, r);
+      $('#' + p + '0').style.color = C.dim; M.hide($('#' + p + '0'), t >= tf);
+      M.rise($('#' + p + '1'), t, tf + 0.02, { st: 0.05 }); $('#' + p + '1').style.color = fc;
+      setIco(el.querySelector('i'), t < tf ? 'clock' : ic, t < tf ? C.dim : (j ? C.red : C.gold), 32, 2.2);
+      if (t >= tf && t < tf + 0.45) el.style.transform = `scale(${(1 + 0.03 * Math.sin(Math.PI * (t - tf) / 0.45)).toFixed(4)})`; else if (el.style.transform !== 'none' && t > tf) el.style.transform = 'none';
+    });
   }
 
   /* ===== quick check ===== */

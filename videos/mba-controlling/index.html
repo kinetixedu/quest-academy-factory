@@ -108,7 +108,9 @@
 .ee .ex{position:absolute;left:44px;top:236px;font:600 17px Poppins;letter-spacing:.16em;white-space:nowrap}
 .ee .ev{position:absolute;left:44px;top:276px;font:600 34px Poppins;white-space:nowrap}
 .ee .pill{left:44px;top:340px;background:#F6E3DC;color:#B5482F}
-#both{position:absolute;left:160px;top:722px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;gap:22px}
+#both{position:absolute;left:160px;top:722px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:22px;padding:0 40px}
+#bothW{position:relative;flex:1;height:56px}
+#bothW .tx{position:absolute;left:0;top:0;line-height:56px;color:#E9D9B5}
 #both .tx{font-size:40px;white-space:nowrap}
 /* scene X: management by exception */
 #rep{left:160px;top:270px;width:784px;height:580px}
@@ -121,13 +123,11 @@
 #dkS{position:absolute;left:42px;top:162px;font:500 30px Poppins;color:var(--ink2);white-space:nowrap}
 #desk .hr{position:absolute;left:40px;right:40px;top:226px;height:2px;background:var(--line)}
 #dkAv{right:40px;top:40px;background:var(--gold)}
-#dkBig{position:absolute;left:40px;top:300px;width:704px;height:112px;border-radius:22px;background:#F6E3DC}
-#dkBig i{position:absolute;left:24px;top:24px;width:64px;height:64px;border-radius:32px;background:#fff;display:flex;align-items:center;justify-content:center}
-#dkBig .bt{position:absolute;left:112px;top:30px;font-size:44px;line-height:52px;color:#B5482F;white-space:nowrap}
-#tay{position:absolute;left:40px;top:436px;width:704px;height:112px;border-radius:22px;background:var(--ink)}
-#tay i{position:absolute;left:24px;top:24px;width:64px;height:64px;border-radius:32px;background:#24345A;display:flex;align-items:center;justify-content:center}
-#tay .tl{position:absolute;left:112px;top:22px;font:600 16px Poppins;letter-spacing:.16em;color:var(--gold2);white-space:nowrap}
-#tay .tn{position:absolute;left:112px;top:50px;font:600 32px Poppins;color:#fff;white-space:nowrap}
+.dt{position:absolute;left:40px;width:704px;height:130px;border-radius:22px;background:var(--paper)}
+.dt i{position:absolute;left:24px;top:33px;width:64px;height:64px;border-radius:32px;background:#fff;display:flex;align-items:center;justify-content:center}
+.dt .dl{position:absolute;left:112px;top:28px;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.dt .bt{position:absolute;left:112px;top:54px;font-size:40px;line-height:52px;white-space:nowrap}
+#dkS2{position:absolute;left:42px;top:162px;font:500 30px Poppins;color:var(--ink2);white-space:nowrap}
 #sweep{position:absolute;left:0;top:0;width:1920px;height:1080px;background:var(--ink);z-index:40}
 #sweep b{position:absolute;left:0;top:0;width:10px;height:1080px;background:var(--gold)}
 /* quiz */
@@ -222,7 +222,7 @@
     </div>
 
     <!-- scene P: planning and controlling are twins -->
-    <div id="sP"><div id="eRow"></div><div id="both"><span class="serif tx">Planning</span><span class="serif tx" style="color:#B8862F">+</span><span class="serif tx">Controlling</span><span class="serif tx" style="color:#B8862F">=</span><span class="serif tx" style="color:#E9D9B5">The Siamese twins of management</span></div></div>
+    <div id="sP"><div id="eRow"></div><div id="both"><span class="serif tx">Planning</span><span class="serif tx" style="color:#B8862F">+</span><span class="serif tx">Controlling</span><span class="serif tx" style="color:#B8862F">=</span><span id="bothW"><span class="serif tx" id="bothA">Always together</span><span class="serif tx" id="bothB">The Siamese twins of management</span></span></div></div>
 
     <!-- scene X: management by exception -->
     <div id="sX">
@@ -233,9 +233,9 @@
         <div class="serif" id="dkT">By <span class="acc">exception</span></div>
         <div id="dkS">Only big deviations reach Ravi</div>
         <div class="hr"></div>
-        <div class="lbl" id="dkL" style="left:40px;top:258px">NEEDS RAVI</div>
-        <div id="dkBig"><i id="dkBI"></i><span class="serif bt" id="bt0">Nothing yet</span><span class="serif bt" id="bt1">Sales down 20%</span></div>
-        <div id="tay"><i id="tayI"></i><div class="tl">FREDERICK TAYLOR</div><div class="tn">The exception principle</div></div>
+        <div id="dkS2">Taylor called it the <span class="acc">exception principle</span></div>
+        <div class="dt" id="dtA" style="top:258px"><i></i><div class="dl">TEAM FIXES</div><span class="serif bt" id="a0">Nothing yet</span><span class="serif bt" id="a1">3 small slips</span></div>
+        <div class="dt" id="dtB" style="top:412px"><i></i><div class="dl">NEEDS RAVI</div><span class="serif bt" id="b0">Nothing yet</span><span class="serif bt" id="b1">Sales down 20%</span></div>
       </div>
     </div>
 
