@@ -23,7 +23,7 @@ Object.assign(M.IC, {
 });
 
 /* ---------- beats (all from the voice) ---------- */
-const tTitle = 0.25, tSix = wt('H1', 'six'), tMorph = Math.max(2.3, tSix - 0.3), tBusy = wt('H1', 'busier');
+const tTitle = 0.25, tSix = wt('H1', 'six'), tMorph = T0('H2') - 0.35, tBusy = wt('H1', 'busier');
 const tBreak = wt('H2', 'breaks'), tKab = wt('H2', 'Kabir'), tStop = wt('C1', 'stops'), tPay = wt('C1', 'pay');
 const tCold = wt('C2', 'cold'), tClean = wt('C2', 'clean'), tWhole = wt('C3', 'whole'), tSmall = wt('C3', 'small');
 const tT = T0('T1'), tSt2 = wt('T1', 'It'), tTu = T0('D1') - 0.32;          // statement sweep: cover, line 2, uncover
@@ -61,10 +61,10 @@ const tJobBad = [tCold, tBreak, tClean];
 $('#jobRow').innerHTML = JOBS.map(([t, ic, l], i) => `<div class="job" id="job${i}" style="left:${36 + i * 291}px"><div class="ji"></div><div class="jt">${t}</div><div class="av">${l}</div></div>`).join('');
 // D: thinker + body/business
 $('#gstI').innerHTML = M.icon('network', 24, C.gold, 2.2);
-const lp = (i, x, y) => i ? `left:${x - 120}px;top:${y + 66}px` : `left:${x + 76}px;top:${y - 21}px;text-align:left`;
-const BN = [[392, 170, 'heart', 'Heart', 'cup', 'Kitchen'], [232, 370, 'wind', 'Lungs', 'coin', 'Cash'], [552, 370, 'brain', 'Brain', 'droplet', 'Cleaning']];
-$('#bN').innerHTML = BN.map(([x, y, , a, , b], i) => `<div class="on3" id="bn${i}" style="left:${x - 56}px;top:${y - 56}px"><div class="bg"></div><div class="oi"></div></div><div class="serif onl" id="bla${i}" style="${lp(i, x, y)}">${a}</div><div class="serif onl" id="blb${i}" style="${lp(i, x, y)}">${b}</div>`).join('');
-const seg = (a, b, r = 68) => { const dx = b[0] - a[0], dy = b[1] - a[1], L = Math.hypot(dx, dy), ux = dx / L, uy = dy / L; return `M${(a[0] + ux * r).toFixed(1)} ${(a[1] + uy * r).toFixed(1)} L${(b[0] - ux * r).toFixed(1)} ${(b[1] - uy * r).toFixed(1)}`; };
+const lp = (i, x, y) => i ? `left:${x - 120}px;top:${y + 78}px` : `left:${x + 88}px;top:${y - 24}px;text-align:left`;
+const BN = [[392, 190, 'heart', 'Heart', 'cup', 'Kitchen'], [232, 420, 'wind', 'Lungs', 'coin', 'Cash'], [552, 420, 'brain', 'Brain', 'droplet', 'Cleaning']];
+$('#bN').innerHTML = BN.map(([x, y, , a, , b], i) => `<div class="on3" id="bn${i}" style="left:${x - 64}px;top:${y - 64}px"><div class="bg"></div><div class="oi"></div></div><div class="serif onl" id="bla${i}" style="${lp(i, x, y)}">${a}</div><div class="serif onl" id="blb${i}" style="${lp(i, x, y)}">${b}</div>`).join('');
+const seg = (a, b, r = 82) => { const dx = b[0] - a[0], dy = b[1] - a[1], L = Math.hypot(dx, dy), ux = dx / L, uy = dy / L; return `M${(a[0] + ux * r).toFixed(1)} ${(a[1] + uy * r).toFixed(1)} L${(b[0] - ux * r).toFixed(1)} ${(b[1] - uy * r).toFixed(1)}`; };
 $('#bL').innerHTML = [[0, 1], [0, 2], [1, 2]].map(([a, b], i) => `<path id="bk${i}" d="${seg(BN[a], BN[b])}" stroke="${C.link}" stroke-width="4"/>`).join('');
 $('#dgI').innerHTML = M.icon('smile', 28, '#fff', 2.4);
 // P: subsystems
@@ -74,14 +74,14 @@ const STX = [48, 584, 1120];
 $('#sts').innerHTML = STS.map(([n, ic, pp], i) => `<div class="st" id="ss${i}" style="left:${STX[i]}px"><div class="bg"></div><div class="si"></div><div class="serif sn">${n}</div><div class="lbl sl">SUBSYSTEM 0${i + 1}</div>`
   + pp.map(([l, nm], k) => `<div class="pa" id="pa${i}_${k}" style="left:${28 + k * 196}px">${l || M.icon('user', 26, '#fff', 2.2)}</div><div class="pn2" id="pn${i}_${k}" style="left:${100 + k * 196}px">${nm}</div>`).join('') + `</div>`).join('');
 const ARH = (x, y, d) => `M${x - 9 * d} ${y - 10} L${x} ${y} L${x - 9 * d} ${y + 10}`;
-$('#sysL').innerHTML = [0, 1].map(i => { const x0 = STX[i] + 432 + 14, x1 = STX[i + 1] - 14, y = 196; return `<g id="sk${i}"><path id="skl${i}" d="M${x0} ${y} H${x1}" stroke-width="4"/><path id="ska${i}" d="${ARH(x1, y, 1)} M${x0 + 9} ${y - 10} L${x0} ${y} L${x0 + 9} ${y + 10}" stroke-width="4"/></g>`; }).join('');
+$('#sysL').innerHTML = [0, 1].map(i => { const x0 = STX[i] + 432 + 14, x1 = STX[i + 1] - 14, y = 208; return `<g id="sk${i}"><path id="skl${i}" d="M${x0} ${y} H${x1}" stroke-width="4"/><path id="ska${i}" d="${ARH(x1, y, 1)} M${x0 + 9} ${y - 10} L${x0} ${y} L${x0 + 9} ${y + 10}" stroke-width="4"/></g>`; }).join('');
 // I: the loop
 const IOX = [160, 728, 1296];
 const IO = [['Inputs', 'package', 'What goes in', ['Milk', 'Tea leaves', 'People']], ['Process', 'flame', 'Transformation', ['Asha', 'Boil and brew']], ['Outputs', 'cup', 'What comes out', ['Hot chai', 'Happy customers']]];
 $('#ios').innerHTML = IO.map(([t, ic, s, ps], i) => `<div class="io" id="io${i}" style="left:${IOX[i]}px"><div class="bg"></div><div class="ii"></div><div class="serif it">${t}</div><div class="is">${s}</div><div class="hr"></div>${ps.map((p, k) => `<div class="ip" id="ip${i}_${k}">${p}</div>`).join('')}</div>`).join('');
-const LY = 414;
+const LY = 435;
 let ll = [0, 1].map(i => { const x0 = IOX[i] + 464 + 18, x1 = IOX[i + 1] - 18; return `<path id="la${i}" d="M${x0} ${LY} H${x1}" stroke="${C.gold}" stroke-width="5"/><path id="lh${i}" d="${ARH(x1, LY, 1)}" stroke="${C.gold}" stroke-width="5"/>`; }).join('');
-ll += `<path id="fbl" d="M1528 574 V650 H392 V574" stroke="${C.gold}" stroke-width="5"/><path id="fbh" d="M382 586 L392 574 L402 586" stroke="${C.gold}" stroke-width="5"/>`;
+ll += `<path id="fbl" d="M1528 616 V690 H392 V616" stroke="${C.gold}" stroke-width="5"/><path id="fbh" d="M382 628 L392 616 L402 628" stroke="${C.gold}" stroke-width="5"/>`;
 $('#loopL').innerHTML = ll;
 $('#fbI').innerHTML = M.icon('refresh', 24, '#fff', 2.4); $('#fbsI').innerHTML = M.icon('refresh', 44, C.gold2, 2.4);
 // O: open system
@@ -96,6 +96,8 @@ $('#envL').innerHTML = ENV.map(([, , x, y], i) => { const cy = y + 107, a = x < 
 $('#op0I').innerHTML = M.icon('trendUp', 26, C.gold2, 2.4); $('#op1I').innerHTML = M.icon('store', 26, C.gold2, 2.2); $('#opA').innerHTML = M.icon('arrowR', 40, C.gold, 2.4);
 // Y: synergy
 $('#yic').innerHTML = M.icon('zap', 48, C.gold, 2);
+const YA = ['R', 'A', 'K', 'M', '', ''];
+$('#yas').innerHTML = YA.map((l, k) => `<div class="ya" id="ya${k}" style="left:${48 + k * 112}px;background:${k === 0 ? C.gold : (l ? C.ink : C.ink2)}">${l || M.icon('user', 32, '#fff', 2.2)}</div>`).join('');
 // quiz
 const OPTS = ['Input', 'Process', 'Output', 'Feedback'], RIGHT = 3;
 $('#opts').innerHTML = OPTS.map((o, i) => `<div class="opt" id="o${i}" style="left:${160 + i * 408}px"><div class="bg"></div><div class="lt">${'ABCD'[i]}</div><div class="ot serif">${o}</div><div class="ok">${M.icon('check', 30, '#fff', 3)}</div></div>`).join('');
@@ -163,16 +165,16 @@ M.on(t => {
     M.vis($('#crew'), t, tMorph + 0.3, 1e9, { dy: 36 });
     const hurt = M.io((t - tWhole) / 0.5);
     CREW.forEach((_, i) => {
-      const a = $('#cw' + i), tin = tSix + 0.05 + i * 0.08;
+      const a = $('#cw' + i), tin = tMorph + 0.55 + i * 0.08;
       M.vis(a, t, tin, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.08 }); M.vis($('#cn' + i), t, tin + 0.08, 1e9, { dy: 8 });
       const base = i === 0 ? C.gold : (i >= 4 ? C.ink2 : C.ink);
       const bad = i === 2 ? M.io((t - tBreak) / 0.3) : hurt;
       a.style.background = mix(base, C.red, bad);
       if (i === 2) pulse(a, t, tBreak, 0.12, 0.5);
     });
-    M.vis($('#wLine'), t, tBusy, 1e9, { dy: 16 });
+    M.vis($('#wLine'), t, tMorph + 1.0, 1e9, { dy: 16 });
     const stop = M.io((t - tPay) / 0.4);
-    const n = 6 * M.o3((t - tBusy) / 0.8) + 20 * M.o3((t - tStop) / 2.2);
+    const n = 6 * M.o3((t - tMorph - 1.0) / 0.8) + 20 * M.o3((t - tStop) / 2.2);
     M.setT($('#wLt'), stop < 0.5 ? `${Math.round(n)} waiting` : `${Math.round(n)} waiting · line stopped`);
     const wl = $('#wLine'); wl.style.background = mix(C.paper, C.redBg, stop); wl.style.color = mix(C.ink, C.red, stop);
     setIco($('#wLi'), stop > 0.5 ? 'timer' : 'users', stop > 0.5 ? C.red : C.ink, 24);
@@ -205,6 +207,7 @@ M.on(t => {
     const o = { outDur: 0.3, ody: -16 };
     M.rise($('#dq'), t, tD1 + 0.05, { st: 0.07, sp: M.HEAVY, out: t50 - 0.45, outDur: 0.3 });
     M.vis($('#thinker'), t, t50 - 0.3, tDout, { dy: 36, ...o });
+    { const sh = M.spring(t - (tD3 - 0.3), M.HEAVY); $('#thinker').style.width = sh >= 1 ? '784px' : (784 + 816 * (1 - sh)).toFixed(2) + 'px'; $('#thIn').style.transform = sh >= 1 ? 'none' : `translateX(${(408 * (1 - sh)).toFixed(2)}px)`; }
     M.vis($('#y50'), t, t50 - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.08 });
     M.vis($('#y60'), t, t60 - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.08 });
     const yr = on01(t, t50 - 0.05, tLud - 0.2); ['#y50', '#y60'].forEach(s => { $(s).style.background = mix(C.paper, C.gold, yr); $(s).style.color = mix(C.ink, '#fff', yr); });
@@ -214,19 +217,19 @@ M.on(t => {
     M.vis($('#ltag'), t, tAus - 0.1, 1e9, { dy: 10 });
     M.vis($('#lidea'), t, tBio + 0.45, 1e9, { dy: 10 });
     M.vis($('#gst'), t, tBio + 0.6, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.08 });
-    M.vis($('#bodyc'), t, tD3 - 0.1, tDout, { dy: 36, ...o });
+    M.vis($('#bodyc'), t, tD3 - 0.05, tDout, { dx: 60, dy: 0, ...o });
     const biz = M.io((t - tBiz) / 0.3);
     M.vis($('#bl0'), t, tD3 + 0.1, tBiz - 0.1, { dy: 10, outDur: 0.2, ody: -10 });
     M.vis($('#bl1'), t, tBiz + 0.1, 1e9, { dy: 10 });
     M.vis($('#blr'), t, tNeeds - 0.05, 1e9, { dy: 10 });
     BN.forEach(([, , ia, , ib], i) => {
-      const el = $('#bn' + i), tin = tLiv + i * 0.14;
+      const el = $('#bn' + i), tin = tLiv - 0.3 + i * 0.14;
       M.vis(el, t, tin, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.08 });
       M.vis($('#bla' + i), t, tin + 0.1, tBiz - 0.1 + i * 0.06, { dy: 10, outDur: 0.2, ody: -10 });
       M.vis($('#blb' + i), t, tBiz + 0.12 + i * 0.06, 1e9, { dy: 10 });
       const act = Math.max(on01(t, tNeeds, tD4 - 0.1), on01(t, tBiz + i * 0.06, tD5));
       const bg = el.querySelector('.bg'); bg.style.background = mix(C.paper, C.gold, act); bg.style.borderColor = mix(C.line, C.gold, act);
-      setIco(el.querySelector('.oi'), t < tBiz + i * 0.06 ? ia : ib, act > 0.5 ? '#fff' : C.gold, 48, 2);
+      setIco(el.querySelector('.oi'), t < tBiz + i * 0.06 ? ia : ib, act > 0.5 ? '#fff' : C.gold, 56, 2);
       pulse(el, t, tBiz + i * 0.06, 0.1, 0.4);
     });
     [0, 1, 2].forEach(i => { const k = $('#bk' + i); M.draw(k, t, tSys3 + i * 0.1, 0.5, M.o3); k.setAttribute('stroke', mix(C.link, C.gold, Math.max(on01(t, tNeeds, tD4 - 0.1), on01(t, tBiz, tD5)))); });
@@ -257,7 +260,7 @@ M.on(t => {
       M.vis(el.querySelector('.sl'), t, tSub + i * 0.08, 1e9, { dy: 8 });
       el.querySelector('.sl').style.color = bad > 0.5 ? C.red : (seen ? C.gold : C.muted);
       el.querySelector('.si').style.background = mix(mix(C.card, C.paper, seen ? 1 : 0), C.card, bad);
-      setIco(el.querySelector('.si'), ic, bad > 0.5 ? C.red : (seen ? C.gold : C.dim), 30, 2.2);
+      setIco(el.querySelector('.si'), ic, bad > 0.5 ? C.red : (seen ? C.gold : C.dim), 34, 2.2);
       pp.forEach((_, k) => {
         M.vis($(`#pa${i}_${k}`), t, ta + 0.1 + k * 0.1, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.08 });
         M.vis($(`#pn${i}_${k}`), t, ta + 0.18 + k * 0.1, 1e9, { dy: 8 });
@@ -288,7 +291,7 @@ M.on(t => {
       const bg = el.querySelector('.bg'); bg.style.background = mix(C.card, C.ink, act); bg.style.borderColor = mix(C.line, C.ink, act);
       el.querySelector('.it').style.color = mix(mix(C.dim, '#fff', on), C.ink, off);
       el.querySelector('.ii').style.background = mix(C.paper, '#24345A', act);
-      setIco(el.querySelector('.ii'), ic, t < ta ? C.dim : (t < td ? C.gold2 : C.gold), 40, 2.2);
+      setIco(el.querySelector('.ii'), ic, t < ta ? C.dim : (t < td ? C.gold2 : C.gold), 44, 2.2);
       const is = el.querySelector('.is'); M.rise(is, t, (i === 1 ? tTrans : ta) + 0.1, { st: 0.04 }); is.style.color = mix(C.gold2, C.gold, off);
       el.querySelector('.hr').style.background = mix(C.line, '#2C3B5E', act);
       ps.forEach((_, k) => { const p = $(`#ip${i}_${k}`); M.vis(p, t, tIP[i][k] - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.08 }); p.style.background = mix(C.paper, '#24345A', act); p.style.color = mix(C.ink, '#fff', act); });
@@ -339,13 +342,17 @@ M.on(t => {
   const yOn = t >= tY1 - 0.1 && t < tQ + 0.05; M.hide($('#sY'), !yOn);
   if (yOn) {
     M.vis($('#syn'), t, tSyn - 0.6, 1e9, { dy: 36 });
+    { const sh = M.spring(t - (tY3 - 0.35), M.HEAVY); $('#syn').style.width = sh >= 1 ? '784px' : (784 + 816 * (1 - sh)).toFixed(2) + 'px'; $('#synIn').style.transform = sh >= 1 ? 'none' : `translateX(${(408 * (1 - sh)).toFixed(2)}px)`; }
+    { const tA = wt('Y3', 'alone'), g = M.lerp(40, 8, M.spring(t - tTeam, M.SOFT)), tog = M.io((t - tTeam) / 0.4);
+      YA.forEach((_, k) => { const el = $('#ya' + k); M.vis(el, t, tA - 0.3 + k * 0.07, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.08 }); el.style.left = (48 + k * (72 + g)).toFixed(2) + 'px'; });
+      const yl = $('#yline'); M.vis(yl, t, tA + 0.2, 1e9, { dy: 0, fade: 0.2 }); yl.style.width = (5 * (72 + g)).toFixed(2) + 'px'; yl.style.background = mix(C.line, C.gold, tog); }
     M.vis($('#yic'), t, tSyn - 0.4, 1e9, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.08 });
     M.rise($('#yT'), t, tSyn - 0.05, { st: 0.06, sp: M.HEAVY });
     M.rise($('#yM'), t, tWh - 0.1, { st: 0.05 });
     M.vis($('#yhr'), t, tSum - 0.1, 1e9, { dy: 0 });
     M.vis($('#ylb'), t, tSum, 1e9, { dy: 10 });
     M.rise($('#yF'), t, tParts - 0.2, { st: 0.08, sp: M.HEAVY });
-    M.vis($('#yR'), t, tY3 - 0.15, 1e9, { dy: 36 });
+    M.vis($('#yR'), t, tY3 - 0.1, 1e9, { dx: 60, dy: 0 });
     M.vis($('#yBig'), t, tHund - 0.1, 1e9, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.1 });
     [[tSixty - 0.35, 312, 60, C.muted, '#E7E0D2'], [tTeam - 0.1, 520, 100, C.ink, C.gold]].forEach(([ta, w, v, vc, bc], k) => {
       const el = $('#yb' + k), bt = el.querySelector('.bt'), bv = el.querySelector('.bv');
