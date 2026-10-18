@@ -28,8 +28,15 @@ def slots(start, used):
 import os
 if os.environ.get('PREVIEW'):   # build one video for review only (never uploaded)
     print(json.dumps({'include': [{'slug': os.environ['PREVIEW'], 'publish_at': '', 'preview': True}]})); sys.exit()
-ready = sorted(p.parent for p in R.glob('videos/*/READY') if not (p.parent / 'upload.json').exists())
-ready = ready[:cfg['max_uploads_per_run']]
+# publish in queue order (keeps series episodes in sequence), then by name
+import csv
+order = {r['slug']: i for i, r in enumerate(csv.DictReader(open(R / 'queue' / 'topics.csv')))} if (R / 'queue' / 'topics.csv').exists() else {}
+ready = sorted((p.parent for p in R.glob('videos/*/READY') if not (p.parent / 'upload.json').exists()), key=lambda v: (order.get(v.name, 1e9), v.name))
+# YouTube quota resets daily: never upload more than max_uploads_per_day in any rolling 24 h
+since = dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=24)
+done24 = sum(1 for u in R.glob('videos/*/upload.json') if dt.datetime.strptime(json.loads(u.read_text())['uploaded'], '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=dt.timezone.utc) > since)
+room = max(0, cfg.get('max_uploads_per_day', 4) - done24)
+ready = ready[:min(cfg['max_uploads_per_run'], room)]
 now = dt.datetime.now(IST) + dt.timedelta(hours=cfg.get('min_lead_hours', 3))
 gen = slots(now, taken())
 inc = []

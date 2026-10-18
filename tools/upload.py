@@ -33,6 +33,9 @@ def playlist_id(y, title, desc):
     cache.parent.mkdir(exist_ok=True); cache.write_text(json.dumps(m, indent=1))
     return m[title]
 
+def series_title(meta, cat):
+    return f"{meta['series']['name']} | {cat['category']} | Quest Academy"
+
 def retry(fn, tries=5):
     for i in range(tries):
         try: return fn()
@@ -86,6 +89,11 @@ def finish(y, F, cat, out):
         'playlist': lambda: y.playlistItems().insert(part='snippet', body={'snippet': {'playlistId': playlist_id(y, cat['playlist'],
                         f"{cat['category']} concepts explained simply, with animated lessons by Quest Academy."), 'resourceId': {'kind': 'youtube#video', 'videoId': vid}}}).execute(),
     }
+    meta = json.loads((F / 'meta.json').read_text())
+    if meta.get('series') and 'series' not in todo and not out.get('series_done'): todo = list(todo) + ['series']
+    steps['series'] = lambda: y.playlistItems().insert(part='snippet', body={'snippet': {'playlistId': playlist_id(y, series_title(meta, cat),
+                        f"{meta['series']['name']} - the full {cat['category']} course, episode by episode, explained simply by Quest Academy." if meta.get('series') else ''),
+                        'resourceId': {'kind': 'youtube#video', 'videoId': vid}}}).execute()
     left = []
     for k in todo:
         try: retry(steps[k]); print('ok', k)
@@ -93,6 +101,7 @@ def finish(y, F, cat, out):
             left.append(k); msg = (getattr(e, 'content', b'') or b'').decode('utf-8', 'ignore')[:300] or repr(e)[:300]
             print(f"::warning title={k} not set yet for {vid}::{msg}".replace('\n', ' '))
     out['pending'] = left
+    if 'series' in todo and 'series' not in left: out['series_done'] = True
     if not left: out['done'] = True
 
 def fix_pending():

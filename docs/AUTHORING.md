@@ -17,6 +17,7 @@ Read docs/STYLE-BIBLE.md fully (locked rules, sound policy, outro). It is the la
 Spawn one subagent per topic (up to 4 at once; more queue behind). Each subagent gets this brief:
 
 > Make the Quest Academy video for "<topic>" in world `<world>`. Folder: videos/<slug>/.
+> 0. If the topic belongs to a series (queue `next` prints series/ep/next_topic), read docs/series/<series-slug>.md first - it names the reference episode to copy and the running story canon. Series episodes follow that reference episode instead of worlds/<world>/ for structure (same world styling).
 > 1. Read docs/STYLE-BIBLE.md and the approved reference worlds/<world>/ (index.html, scene.js, script.txt) completely. Copy the reference index.html structure, CSS tokens, fonts, components, transition, quiz and outro exactly. Only content changes.
 > 2. Research facts if the topic has numbers, dates, names (web search; cite source + date on screen for case studies). Never invent statistics; label illustrative numbers "Example".
 > 3. Write videos/<slug>/script.txt (format ID|pause|text, 2-3 min, 12-year-old level, hook -> one example carried through -> steps -> quick check Q1 (pause 1.7) / A1 -> recap). Run `python3 tools/tts.py videos/<slug>`.

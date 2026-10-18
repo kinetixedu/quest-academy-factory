@@ -1,13 +1,14 @@
 """Topic queue. queue/topics.csv columns: category,topic,status,slug,youtube
 status: pending -> authoring -> ready -> uploaded (or failed)
   python3 tools/queue.py add "MBA" "SWOT Analysis" ["BBA" "Break-even point" ...]   add topics
+  python3 tools/queue.py add-series "MBA" "Principles of Management" "Topic 1" "Topic 2" ...   numbered episodes, published in order
   python3 tools/queue.py next N                       claim N pending topics (spread across categories) -> prints JSON, marks authoring
   python3 tools/queue.py ready <slug>                 mark authored (also writes videos/<slug>/READY)
   python3 tools/queue.py sync                         pull upload results into the CSV
   python3 tools/queue.py status                       summary per category"""
 import csv, sys, json, pathlib, re, collections
 R = pathlib.Path(__file__).resolve().parent.parent
-Q = R / 'queue' / 'topics.csv'; F = ['category', 'topic', 'status', 'slug', 'youtube']
+Q = R / 'queue' / 'topics.csv'; F = ['category', 'topic', 'status', 'slug', 'youtube', 'series', 'ep']
 CATS = json.loads((R / 'config' / 'categories.json').read_text())
 ALIAS = {}
 for wid, c in CATS.items():
@@ -17,7 +18,7 @@ ALIAS.update({'case study': 'case', 'case studies': 'case', 'eee': 'engg-electri
 def load(): return list(csv.DictReader(open(Q))) if Q.exists() else []
 def save(rows):
     Q.parent.mkdir(exist_ok=True)
-    with open(Q, 'w', newline='') as f: w = csv.DictWriter(f, F); w.writeheader(); w.writerows(rows)
+    with open(Q, 'w', newline='') as f: w = csv.DictWriter(f, F, restval='', extrasaction='ignore'); w.writeheader(); w.writerows([{k: (v or '') for k, v in r.items()} for r in rows])
 def world(cat):
     k = cat.strip().lower()
     if k not in ALIAS: sys.exit(f'Unknown category "{cat}". Known: ' + ', '.join(sorted(c['category'] for c in CATS.values())))
@@ -32,6 +33,13 @@ if cmd == 'add':
         if s in have: continue
         rows.append({'category': wid, 'topic': topic, 'status': 'pending', 'slug': s, 'youtube': ''}); have.add(s)
     save(rows); print(len(rows), 'topics in queue')
+elif cmd == 'add-series':
+    cat, series, topics = sys.argv[2], sys.argv[3], sys.argv[4:]; wid = world(cat); have = {r['slug'] for r in rows}
+    for i, topic in enumerate(topics, 1):
+        s = slugify(wid, topic)
+        if s in have: continue
+        rows.append({'category': wid, 'topic': topic, 'status': 'pending', 'slug': s, 'youtube': '', 'series': series, 'ep': str(i)}); have.add(s)
+    save(rows); print(len(topics), 'episodes of', series, '->', len(rows), 'topics in queue')
 elif cmd == 'next':
     n = int(sys.argv[2]); pend = [r for r in rows if r['status'] == 'pending']
     by = collections.defaultdict(list)
@@ -41,7 +49,15 @@ elif cmd == 'next':
         for c in list(by):
             if by[c] and len(pick) < n: pick.append(by[c].pop(0))
     for r in pick: r['status'] = 'authoring'
-    save(rows); print(json.dumps([{'slug': r['slug'], 'world': r['category'], 'topic': r['topic']} for r in pick], indent=1))
+    save(rows)
+    def info(r):
+        d = {'slug': r['slug'], 'world': r['category'], 'topic': r['topic']}
+        if r.get('series'):
+            eps = [x for x in rows if x.get('series') == r['series']]; ep = int(r['ep'])
+            nx = next((x for x in eps if x.get('ep') == str(ep + 1)), None)
+            d.update(series=r['series'], ep=ep, of=len(eps), next_topic=nx['topic'] if nx else None)
+        return d
+    print(json.dumps([info(r) for r in pick], indent=1))
 elif cmd == 'ready':
     s = sys.argv[2]
     for r in rows:

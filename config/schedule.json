@@ -1,8 +1,14 @@
 {
   "mode": "schedule",
-  "daily_slots_ist": ["10:00", "13:00", "17:30", "20:00"],
+  "daily_slots_ist": [
+    "10:00",
+    "13:00",
+    "17:30",
+    "20:00"
+  ],
   "max_uploads_per_run": 4,
   "min_lead_hours": 3,
   "privacy_if_not_scheduled": "private",
-  "_notes": "Default YouTube API quota (10,000 units/day) allows ~4 uploads/day with thumbnail + captions + playlist. Raise max_uploads_per_run and add slots after Google grants a quota increase. Until the Google Cloud project passes YouTube's API audit, YouTube forces API uploads to private even when publishAt is set."
+  "_notes": "Default YouTube API quota (10,000 units/day) allows ~4 uploads/day with thumbnail + captions + playlist. Raise max_uploads_per_run and add slots after Google grants a quota increase. Until the Google Cloud project passes YouTube's API audit, YouTube forces API uploads to private even when publishAt is set. max_uploads_per_day caps uploads in any rolling 24 h so the 3-hourly runs never exceed the daily quota.",
+  "max_uploads_per_day": 4
 }

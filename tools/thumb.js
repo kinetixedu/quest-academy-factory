@@ -12,7 +12,7 @@ const { chromium } = require('playwright'); const path = require('path'); const 
   await pg.evaluate(t => { window.seek(t); for (const id of ['cap', 'qaBug']) { const c = document.getElementById(id); if (c) c.style.display = 'none'; } return new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r))); }, ft);
   await pg.screenshot({ path: D + '/thumb_frame.jpg', type: 'jpeg', quality: 92 });
   const tp = await br.newPage({ viewport: { width: 1280, height: 720 } });
-  const data = { bg: o.bg, ink: o.ink, accent: o.accent, font: o.font, kicker: cat.category, title: meta.thumb.title, accent_word: meta.thumb.accent_word || '', frame: 'file://' + D + '/thumb_frame.jpg' };
+  const data = { bg: o.bg, ink: o.ink, accent: o.accent, font: o.font, kicker: meta.series ? `${cat.category} · EP ${String(meta.series.ep).padStart(2, '0')}` : cat.category, title: meta.thumb.title, accent_word: meta.thumb.accent_word || '', frame: 'file://' + D + '/thumb_frame.jpg' };
   await tp.addInitScript(d => { window.THUMB = d; }, data);
   await tp.goto('file://' + R + '/tools/thumb.html'); await tp.waitForFunction(() => window.ready === true, null, { timeout: 30000 });
   await tp.screenshot({ path: D + '/thumbnail.jpg', type: 'jpeg', quality: 90 });
