@@ -87,7 +87,7 @@ $('#rl0I').innerHTML = M.icon('zap', 22, C.gold, 2.2); $('#rl1I').innerHTML = M.
 const FD = [['users', 'Social beings', 'People want to belong'], ['eye', 'Attention lifts output', 'Being noticed makes people try harder'], ['network', 'Informal groups', 'They shape how hard people work'], ['coin', 'Money is not everything', 'It matters, but it is not the only motivator']];
 $('#fGrid').innerHTML = FD.map(([ic, t, s], i) => `<div class="fc" id="fc${i}" style="left:${160 + (i % 2) * 816}px;top:${270 + Math.floor(i / 2) * 311}px"><div class="bg"></div><div class="fi"><span class="ico"></span></div><div class="fn">0${i + 1}</div><div class="serif ft">${t}</div><div class="fs">${s}</div>${i === 1 ? '<div class="fh">HAWTHORNE EFFECT</div>' : ''}</div>`).join('');
 // back at Chai Corner
-const KR = [['users', 'Five minute team chat', 'Every morning, everyone speaks'], ['star', 'Thanks Asha by name', 'For her new ginger chai']];
+const KR = [['users', 'Five minute team chat', 'Every morning, everyone speaks'], ['star', 'Thanks Asha by name', 'For her ginger chai']];
 $('#kRows').innerHTML = KR.map(([ic, t, s], i) => `<div class="kr" id="kr${i}" style="top:${108 + i * 120}px"><div class="ki">${M.icon(ic, 34, C.gold, 2.2)}</div><div class="serif kt">${t}</div><div class="ks">${s}</div></div>`).join('');
 $('#kTeam').innerHTML = CREW.map(([l, nw], i) => `<div class="avc" id="kt${i}" style="left:${48 + i * 84}px;background:${nw ? C.gold2 : C.gold}">${nw ? M.icon('user', 30, C.gold, 2.2) : l}</div>`).join('') + `<div class="pill" id="kHappy" style="top:448px"><span id="kHappyI"></span><span>Happy team</span></div>`;
 $('#kMoreI').innerHTML = M.icon('cup', 24, C.gold, 2.2); $('#kHappyI').innerHTML = M.icon('smile', 24, C.gold, 2.2);
@@ -329,7 +329,7 @@ M.on(t => {
   if (kOn) {
     M.vis($('#kAct'), t, tK1 + 0.1, 1e9, { dy: 36 });
     M.vis($('#kRes'), t, tK1 + 0.22, 1e9, { dy: 36 });
-    KR.forEach((_, i) => { M.vis($('#kr' + i), t, (i ? tK3 : tK2) - 0.05, 1e9, { dy: 20 }); });
+    KR.forEach((_, i) => { M.vis($('#kr' + i), t, i ? tK3 - 0.05 : Math.min(tK2 - 0.05, tK1 + 0.45), 1e9, { dy: 20 }); });
     CREW.forEach((_, i) => M.vis($('#kt' + i), t, tK4 + i * 0.07, 1e9, { dy: 14, sc: 0.7, sp: M.POP, fade: 0.1 }));
     M.vis($('#kHappy'), t, tK4 + 0.6, 1e9, { dy: 16 });
     M.vis($('#kAct .hr'), t, tK1 + 0.4, 1e9, { dy: 0 }); M.vis($('#kTL'), t, tK1 + 0.5, 1e9, { dy: 10 });
