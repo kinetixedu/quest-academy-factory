@@ -49,7 +49,12 @@ done24 = sum(1 for u in R.glob('videos/*/upload.json') if dt.datetime.strptime(j
 room = max(0, cfg.get('max_uploads_per_day', 4) - done24)
 ready = ready[:min(cfg['max_uploads_per_run'], room)]
 now = dt.datetime.now(IST) + dt.timedelta(hours=cfg.get('min_lead_hours', 3))
-gen = slots(now, taken())
+used = taken()
+# never publish before an already-scheduled video (keeps series order across runs)
+if used:
+    last = max(dt.datetime.strptime(u, '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=dt.timezone.utc) for u in used)
+    now = max(now, last.astimezone(IST))
+gen = slots(now, used)
 inc = []
 for v in ready:
     test = json.loads((v / 'meta.json').read_text()).get('test')   # test videos upload as private, never scheduled

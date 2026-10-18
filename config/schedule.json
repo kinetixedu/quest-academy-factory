@@ -1,14 +1,25 @@
 {
   "mode": "schedule",
   "daily_slots_ist": [
+    "08:00",
+    "09:00",
     "10:00",
+    "11:00",
+    "12:00",
     "13:00",
-    "17:30",
-    "20:00"
+    "14:00",
+    "15:00",
+    "16:00",
+    "17:00",
+    "18:00",
+    "19:00",
+    "20:00",
+    "21:00",
+    "22:00"
   ],
-  "max_uploads_per_run": 4,
-  "min_lead_hours": 3,
+  "max_uploads_per_run": 30,
+  "min_lead_hours": 1,
   "privacy_if_not_scheduled": "private",
-  "_notes": "Default YouTube API quota (10,000 units/day) allows ~4 uploads/day with thumbnail + captions + playlist. Raise max_uploads_per_run and add slots after Google grants a quota increase. Until the Google Cloud project passes YouTube's API audit, YouTube forces API uploads to private even when publishAt is set. max_uploads_per_day caps uploads in any rolling 24 h so the 3-hourly runs never exceed the daily quota.",
-  "max_uploads_per_day": 4
+  "_notes": "Channel is phone-verified (custom thumbnails, 100 uploads/day channel limit). The API quota (10,000 units/day by default) is the real limit: the upload job uploads in episode order and stops cleanly at the first quotaExceeded, leaving the rest READY for the next 3-hourly run. Publish slots: hourly 08:00-22:00 IST, one video per slot, in queue order. Until the Google Cloud project passes YouTube's API audit, YouTube may keep API uploads private even when publishAt is set.",
+  "max_uploads_per_day": 100
 }

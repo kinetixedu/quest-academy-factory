@@ -53,11 +53,38 @@ def ensure_playlists():
     for w in sorted(worlds):
         c = cats[w]; print(c['playlist'], playlist_id(y, c['playlist'], f"{c['category']} concepts explained simply, with animated lessons by Quest Academy."))
 
+class QuotaHit(Exception): pass
+
+def is_quota(e):
+    txt = (getattr(e, 'content', b'') or b'').decode('utf-8', 'ignore')
+    return isinstance(e, HttpError) and e.resp.status in (403, 429) and any(k in txt for k in ('quotaExceeded', 'uploadLimitExceeded', 'dailyLimitExceeded', 'rateLimitExceeded'))
+
+def batch():
+    """Upload every built video of this run in matrix (episode) order; stop at the first quota hit so order is preserved."""
+    inc = json.loads(os.environ['MATRIX'])['include']; done = 0
+    for v in inc:
+        if v.get('preview'): continue
+        F = R / 'videos' / v['slug']
+        if (F / 'upload.json').exists(): continue
+        if not (F / 'final.mp4').exists():
+            print(f"::warning title=Not built::{v['slug']} did not build - stopping here so episodes stay in order"); break
+        args = [str(F)] + (['--publish-at', v['publish_at']] if v.get('publish_at') else [])
+        try: upload_one(args); done += 1
+        except Exception as e:
+            if is_quota(e):
+                print(f"::notice title=Daily API quota reached::uploaded {done} this run; {v['slug']} and later wait for the next run"); break
+            raise
+    print('uploaded', done)
+
 def main():
     if '--ensure-playlists' in sys.argv: return ensure_playlists()
+    if '--batch' in sys.argv: return batch()
     if '--fix-pending' in sys.argv: return fix_pending()
+    upload_one(sys.argv[1:])
+
+def upload_one(argv):
     ap = argparse.ArgumentParser(); ap.add_argument('folder'); ap.add_argument('--publish-at', default=None); ap.add_argument('--privacy', default=None)
-    a = ap.parse_args(); F = pathlib.Path(a.folder)
+    a = ap.parse_args(argv); F = pathlib.Path(a.folder)
     meta = json.loads((F / 'meta.json').read_text()); cats = json.loads((R / 'config' / 'categories.json').read_text())
     cfg = json.loads((R / 'config' / 'schedule.json').read_text()); cat = cats[meta['world']]
     y = yt()

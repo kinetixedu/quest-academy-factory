@@ -114,38 +114,19 @@ jobs:
         run: tools/build.sh videos/${{ matrix.slug }}
       - name: Review pack (contact sheet + facts)
         run: tools/review.sh videos/${{ matrix.slug }}
-      - name: Upload to YouTube
-        env:
-          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
-          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
-          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
-        run: |
-          if [ "${{ matrix.preview }}" = "true" ]; then echo "Preview build - not uploading"; exit 0; fi
-          if [ -z "$YT_REFRESH_TOKEN" ]; then echo "::warning::No YouTube secrets - skipping upload (video stays READY for the next run)"; exit 0; fi
-          if [ -n "${{ matrix.publish_at }}" ]; then
-            python3 tools/upload.py videos/${{ matrix.slug }} --publish-at "${{ matrix.publish_at }}"
-          else
-            python3 tools/upload.py videos/${{ matrix.slug }}
-          fi
-      - name: Keep result
+      - name: Keep build (video, thumbnail, captions, review; 7 days)
         uses: actions/upload-artifact@v4
         with:
-          name: result-${{ matrix.slug }}
+          name: built-${{ matrix.slug }}
           path: |
-            videos/${{ matrix.slug }}/upload.json
+            videos/${{ matrix.slug }}/final.mp4
             videos/${{ matrix.slug }}/captions.srt
             videos/${{ matrix.slug }}/thumbnail.jpg
             videos/${{ matrix.slug }}/review/
-            registry/playlists.json
-          if-no-files-found: ignore
-      - name: Keep video (7 days, for review)
-        uses: actions/upload-artifact@v4
-        with:
-          name: video-${{ matrix.slug }}
-          path: videos/${{ matrix.slug }}/final.mp4
           retention-days: 7
 
   record:
+    # uploads in episode order (one job, so a quota stop never leaves gaps), then commits the records
     needs: [plan, playlists, build]
     if: always()
     runs-on: ubuntu-latest
@@ -155,20 +136,23 @@ jobs:
         with: { python-version: '3.11' }
       - run: pip install -q google-api-python-client google-auth
       - uses: actions/download-artifact@v4
-        with: { pattern: 'result-*', path: _results }
-      - name: Commit upload records (and retry any pending thumbnail/captions/playlist)
+        with: { pattern: 'built-*', path: _built }
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with: { name: playlists, path: registry }
+      - name: Upload to YouTube in order, retry pending thumbnails/captions/playlists, commit records
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          MATRIX: ${{ needs.plan.outputs.matrix }}
         run: |
           shopt -s nullglob
-          for d in _results/result-*; do
-            slug="${d#_results/result-}"
-            [ -d "$d/videos/$slug/review" ] && mkdir -p "videos/$slug/review" && cp "$d/videos/$slug/review/"* "videos/$slug/review/"
-            [ -f "$d/videos/$slug/upload.json" ] && cp "$d/videos/$slug/"{upload.json,captions.srt,thumbnail.jpg} "videos/$slug/" 2>/dev/null || true
-            [ -f "$d/registry/playlists.json" ] && mkdir -p registry && cp "$d/registry/playlists.json" registry/
+          for d in _built/built-*; do
+            slug="${d#_built/built-}"; mkdir -p "videos/$slug"
+            cp -r "$d/videos/$slug/"* "videos/$slug/" 2>/dev/null || cp -r "$d/"* "videos/$slug/"
           done
+          if [ -n "$YT_REFRESH_TOKEN" ] && [ -n "$MATRIX" ]; then python3 tools/upload.py --batch || echo "::error::batch upload failed"; fi
           if [ -n "$YT_REFRESH_TOKEN" ]; then python3 tools/upload.py --fix-pending || true; fi
           python3 tools/queue.py sync
           git config user.name "quest-factory-bot"; git config user.email "factory@users.noreply.github.com"
