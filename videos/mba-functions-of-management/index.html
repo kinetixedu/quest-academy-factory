@@ -84,11 +84,11 @@
 .xp .xl{position:absolute;left:40px;top:36px;font:600 18px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
 .xp .xi{position:absolute;left:40px;top:92px;width:80px;height:80px;border-radius:40px;background:var(--paper);display:flex;align-items:center;justify-content:center}
 .xp .xs{position:absolute;left:152px;top:110px;font:600 32px Poppins;white-space:nowrap}
-.xv{position:absolute;right:40px;top:0;height:228px;display:flex;align-items:center;gap:16px}
+.xv{position:absolute;right:40px;top:18px;height:228px;display:flex;align-items:center;gap:16px}
 .xv .big{font-size:84px;line-height:1;color:var(--gold);white-space:nowrap}
 .xv .unit{font:600 28px Poppins;color:var(--ink2);white-space:nowrap}
 .xv .pl{position:static}
-.xv .avc{position:relative}
+.xv .avc{position:relative;width:72px;height:72px;border-radius:36px;font-size:30px}
 #round{position:absolute;right:40px;top:24px;height:44px;padding:0 18px;border-radius:22px;background:var(--ink);color:#F5E7C6;display:flex;align-items:center;font:600 17px Poppins;letter-spacing:.16em;white-space:nowrap}
 #cbar{position:relative;width:360px;height:120px}
 #cbar .tk{position:absolute;left:0;top:44px;width:360px;height:32px;border-radius:16px;background:#E7E0D2}
@@ -97,33 +97,42 @@
 #cbar .gt{position:absolute;left:236px;top:0;font:600 17px Poppins;letter-spacing:.12em;color:var(--ink);white-space:nowrap}
 #cbar .cv{position:absolute;left:0;top:88px;font:600 24px Poppins;color:var(--red);white-space:nowrap}
 /* scene K: coordination */
-#tl{left:160px;top:386px;width:1600px;height:354px}
-.ax{position:absolute;top:76px;font:600 17px Poppins;letter-spacing:.12em;color:var(--muted);white-space:nowrap}
-.trow{position:absolute;left:40px;width:1520px;height:52px}
-.trow .tn{position:absolute;left:0;top:6px;font:600 28px Poppins;white-space:nowrap}
-.trow .tt{position:absolute;left:360px;top:0;width:1160px;height:52px;border-radius:14px;background:var(--paper)}
-.trow .tb{position:absolute;top:0;height:52px;border-radius:14px;background:var(--gold)}
-.trow .tr{position:absolute;top:0;height:52px;border-radius:14px;background:#F6E3DC;display:flex;align-items:center;justify-content:center;font:600 22px Poppins;color:var(--red);white-space:nowrap;overflow:hidden}
+#tl{left:160px;top:386px;width:1600px;height:474px}
+.ax{position:absolute;top:84px;font:600 17px Poppins;letter-spacing:.12em;color:var(--muted);white-space:nowrap}
+.trow{position:absolute;left:40px;width:1520px;height:72px}
+.trow .tn{position:absolute;left:0;top:16px;font:600 30px Poppins;white-space:nowrap}
+.trow .tt{position:absolute;left:360px;top:0;width:1160px;height:72px;border-radius:18px;background:var(--paper)}
+.trow .tb{position:absolute;top:0;height:72px;border-radius:18px;background:var(--gold)}
+.trow .tr{position:absolute;top:0;height:72px;border-radius:18px;background:#F6E3DC;display:flex;align-items:center;justify-content:center;font:600 24px Poppins;color:var(--red);white-space:nowrap;overflow:hidden}
 #sync{position:absolute;left:auto;right:40px;top:24px;background:var(--ink);color:#fff}
-#vline{position:absolute;top:96px;width:4px;height:236px;border-radius:2px;background:var(--ink)}
-#ess{position:absolute;left:160px;top:772px;width:1600px;height:88px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:22px;padding:0 36px}
-#ess .tx{font-size:40px;white-space:nowrap}
-/* scene R: results + coming up */
-#res{left:160px;top:270px;width:1600px;height:220px}
-#rtk{position:absolute;left:40px;top:92px;width:1160px;height:56px;border-radius:16px;background:#E7E0D2}
-#rfl{position:absolute;left:40px;top:92px;height:56px;border-radius:16px;background:var(--gold);width:0}
-#rgl{position:absolute;top:80px;width:4px;height:80px;border-radius:2px;background:var(--ink)}
-#rgt{position:absolute;top:170px;font:600 17px Poppins;letter-spacing:.12em;color:var(--ink);white-space:nowrap}
-#rN{position:absolute;left:1240px;top:62px;font-size:84px;line-height:1;white-space:nowrap}
-#rU{position:absolute;left:1240px;top:156px;font:600 22px Poppins;color:var(--ink2);white-space:nowrap}
-#beat{position:absolute;left:auto;right:40px;top:24px;background:var(--gold);color:#fff}
-.ep{position:absolute;top:522px;width:294.4px;height:338px}
+#vline{position:absolute;top:112px;width:4px;height:328px;border-radius:2px;background:var(--ink)}
+#ess{position:absolute;left:160px;top:270px;width:1600px;height:84px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:20px;padding:0 32px}
+#ess .tx{font-size:36px;white-space:nowrap}
+/* scene R: results + what comes next */
+.rc{position:absolute;top:270px;width:784px;height:590px}
+.rc .lbl{left:40px;top:40px}
+#rN{position:absolute;left:40px;top:92px;font-size:96px;line-height:1;white-space:nowrap}
+#rU{position:absolute;left:40px;top:204px;font:600 26px Poppins;color:var(--ink2);white-space:nowrap}
+#beat{position:absolute;left:auto;right:40px;top:28px;background:var(--gold);color:#fff}
+.bar{position:absolute;left:40px;width:704px;height:110px}
+.bar .bl{position:absolute;left:0;top:0;font:600 22px Poppins;color:var(--muted);white-space:nowrap}
+.bar .bt{position:absolute;left:0;top:38px;height:64px;border-radius:16px;background:#E7E0D2}
+.bar .bv{position:absolute;top:42px;font-size:44px;white-space:nowrap}
+#rgl{position:absolute;top:282px;width:4px;height:236px;border-radius:2px;background:var(--ink)}
+#rgt{position:absolute;top:532px;font:600 17px Poppins;letter-spacing:.12em;color:var(--ink);white-space:nowrap}
+.cr{position:absolute;left:40px;width:704px;height:76px;border-radius:20px;background:var(--paper)}
+.cr b{position:absolute;left:16px;top:16px;width:44px;height:44px;border-radius:22px;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font:700 20px Poppins}
+.cr .cn{position:absolute;left:80px;top:18px;font-size:30px;line-height:1.3;white-space:nowrap}
+.cr .cd{position:absolute;left:264px;top:21px;font:500 26px Poppins;color:var(--ink2);white-space:nowrap}
+.cr .ck{position:absolute;right:16px;top:16px;width:44px;height:44px;border-radius:22px;background:var(--ink);display:flex;align-items:center;justify-content:center}
+#eh{position:absolute;left:0;width:1920px;top:288px;text-align:center;font-size:60px;white-space:nowrap}
+.ep{position:absolute;top:410px;width:294.4px;height:450px}
 .ep .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line);box-shadow:0 18px 40px -16px rgba(20,33,61,.14)}
 .ep .en{position:absolute;left:32px;top:34px;font:700 20px Poppins;letter-spacing:.12em;color:var(--gold);white-space:nowrap}
-.ep .ei{position:absolute;left:32px;top:84px;width:96px;height:96px;border-radius:48px;background:var(--paper);display:flex;align-items:center;justify-content:center}
-.ep .et{position:absolute;left:32px;top:204px;font-size:44px;white-space:nowrap}
-.ep .hr{position:absolute;left:32px;right:32px;top:276px;height:2px;background:var(--line)}
-.ep .ex2{position:absolute;left:32px;top:294px;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.ep .ei{position:absolute;left:99.2px;top:104px;width:96px;height:96px;border-radius:48px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.ep .et{position:absolute;left:0;width:294.4px;text-align:center;top:232px;font-size:44px;white-space:nowrap}
+.ep .hr{position:absolute;left:32px;right:32px;top:316px;height:2px;background:var(--line)}
+.ep .ex2{position:absolute;left:0;width:294.4px;text-align:center;top:342px;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
 #sweep{position:absolute;left:0;top:0;width:1920px;height:1080px;background:var(--ink);z-index:40}
 #sweep b{position:absolute;left:0;top:0;width:10px;height:1080px;background:var(--gold)}
 /* quiz */
@@ -231,6 +240,7 @@
     <div id="sK">
       <div class="serif" id="kq" style="position:absolute;left:0;width:1920px;top:470px;text-align:center;font-size:96px;white-space:nowrap">What holds it <span class="acc">together?</span></div>
       <div class="card" id="kdef"><span id="kdI"></span><span class="tx">Coordination = every part working together, <span class="acc">at the right time</span></span></div>
+      <div id="ess"><span id="essI"></span><span class="serif tx" id="essT">Coordination = the <span style="color:#E9D9B5">essence</span> of management</span></div>
       <div class="card" id="tl">
         <div class="lbl" style="left:40px;top:36px">OUTLET 2 · OPENING PLAN</div>
         <div class="pill" id="sync"><span id="syI"></span>In sync</div>
@@ -238,17 +248,23 @@
         <div id="trows"></div>
         <div id="vline"></div>
       </div>
-      <div id="ess"><span id="essI"></span><span class="serif tx" id="essT">Coordination = the <span style="color:#E9D9B5">essence</span> of management</span></div>
-    </div>
+          </div>
 
     <!-- scene R: results + what comes next -->
     <div id="sR">
-      <div class="card" id="res">
-        <div class="lbl" style="left:40px;top:36px">OUTLET 2 · CUPS PER DAY · WEEK 4</div>
+      <div class="card rc" id="res" style="left:160px">
+        <div class="lbl">OUTLET 2 · CUPS PER DAY</div>
         <div class="pill" id="beat"><span id="beatI"></span>Goal beaten</div>
-        <div id="rtk"></div><div id="rfl"></div><div id="rgl"></div><div id="rgt">GOAL 200</div>
         <div class="serif" id="rN">150</div><div id="rU">cups a day</div>
+        <div class="bar" id="br0" style="top:296px"><div class="bl">Week 1</div><div class="bt"></div><div class="serif bv"></div></div>
+        <div class="bar" id="br1" style="top:406px"><div class="bl">Week 4</div><div class="bt"></div><div class="serif bv"></div></div>
+        <div id="rgl"></div><div id="rgt">GOAL 200</div>
       </div>
+      <div class="card rc" id="cyc5" style="left:976px">
+        <div class="lbl">ONE FULL CYCLE</div>
+        <div id="crows"></div>
+      </div>
+      <div class="serif" id="eh">One function per <span class="acc">episode</span></div>
       <div id="epRow"></div>
     </div>
 
