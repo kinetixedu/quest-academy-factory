@@ -90,6 +90,7 @@
 .pn .pe span{font:600 32px/1.25 Poppins;white-space:nowrap}
 .pv{position:absolute;left:48px;top:372px;width:848px;height:176px}
 .av{position:absolute;width:72px;height:72px;border-radius:36px;display:flex;align-items:center;justify-content:center;font:700 30px Poppins;color:#fff;background:var(--ink)}
+.av.face{color:transparent;background-size:cover!important;background-position:center!important;box-shadow:0 0 0 4px var(--ink)}
 .avn{position:absolute;width:160px;text-align:center;font:600 24px Poppins;white-space:nowrap}
 .stair{position:absolute;width:150px;border-radius:16px 16px 0 0;background:var(--paper)}
 .stair span{position:absolute;left:0;width:150px;bottom:14px;text-align:center;font:600 24px Poppins;white-space:nowrap}
@@ -162,7 +163,7 @@
           <g id="steam" fill="none" stroke="#C9BFAE" stroke-width="5" stroke-linecap="round">
             <path id="s1" d="M128 116 c-12 -14 12 -24 0 -40"/><path id="s2" d="M152 110 c-12 -14 12 -24 0 -44"/><path id="s3" d="M176 116 c-12 -14 12 -24 0 -40"/>
           </g>
-          <g id="ravi"><circle cx="308" cy="98" r="44" fill="#14213D"/><path d="M220 210 c0 -48 40 -74 88 -74 s88 26 88 74 z" fill="#14213D"/><path d="M286 140 l22 26 l22 -26" fill="none" stroke="#B8862F" stroke-width="6" stroke-linejoin="round"/></g>
+          <clipPath id="rclip"><rect x="0" y="-20" width="616" height="300"/></clipPath><image id="ravi" clip-path="url(#rclip)" href="../../assets/illustrations/mba/ravi.png" x="180" y="-6" width="256" height="317" preserveAspectRatio="xMidYMin meet"/>
           <rect x="60" y="196" width="496" height="92" rx="16" fill="#EEE8DB"/>
           <rect x="60" y="196" width="496" height="10" rx="5" fill="#B8862F"/>
           <g id="kettle" transform="translate(152 196)"><path d="M-40 0 v-54 a22 22 0 0 1 22 -22 h36 a22 22 0 0 1 22 22 v54 z" fill="#3A4560"/><path d="M40 -46 q26 0 26 -26" fill="none" stroke="#3A4560" stroke-width="8" stroke-linecap="round"/><rect x="-14" y="-88" width="28" height="12" rx="6" fill="#3A4560"/></g>
@@ -182,13 +183,7 @@
         <svg id="port" width="616" height="320" style="position:absolute;left:0;top:28px">
           <defs><clipPath id="pc"><circle cx="308" cy="170" r="140"/></clipPath></defs>
           <circle id="pbg" cx="308" cy="170" r="140" fill="#EEE8DB"/>
-          <g id="tbody" clip-path="url(#pc)">
-            <path d="M188 330 c0 -78 54 -118 120 -118 s120 40 120 118 z" fill="#14213D"/>
-            <circle cx="308" cy="134" r="52" fill="#14213D"/>
-            <path d="M258 128 q2 -58 54 -60 q46 0 50 44 q-22 -26 -62 -22 q-26 4 -42 38z" fill="#14213D"/>
-            <path d="M284 212 l24 26 l-34 8z" fill="#FFFFFF"/><path d="M332 212 l-24 26 l34 8z" fill="#FFFFFF"/>
-            <path d="M302 240 h12 l7 54 l-13 14 l-13 -14z" fill="#B8862F"/>
-          </g>
+          <g id="tbody" clip-path="url(#pc)"><image href="../../assets/illustrations/mba/taylor-src.png" x="75" y="-7" width="452" height="560"/></g><circle cx="308" cy="170" r="140" fill="none" stroke="#B8862F" stroke-width="6"/>
         </svg>
         <div class="serif" id="tname">F.W. Taylor</div>
         <div id="ttag">AMERICAN ENGINEER · 1856-1915</div>

@@ -85,13 +85,13 @@ const PV = [
    <div class="stp" id="g1" style="top:0;background:#14213D;color:#fff">${M.icon('timer', 26, C.gold2, 2.2)}Measure</div>
    <div class="abs" id="g2" style="left:0;top:104px;font:600 30px Poppins;white-space:nowrap">Rule of thumb = <span class="acc">guesswork</span></div>`,
   `<svg class="abs" style="left:0;top:0" width="848" height="80" fill="none" stroke-linecap="round" stroke-linejoin="round"><path id="hz" d="M80 36 l40 -18 l40 36 l40 -36 l40 36 l40 -36 l40 36 l40 -36 l40 36 l40 -18" stroke="#B5482F" stroke-width="4"/><path id="hs" d="M80 36 H512" stroke="#B8862F" stroke-width="6"/></svg>
-   <div class="av" id="hav0" style="left:0;top:0;background:#B8862F">R</div><div class="avn" id="han0" style="left:-44px;top:92px">Manager</div>
-   <div class="av" id="hav1" style="left:520px;top:0">A</div><div class="avn" id="han1" style="left:476px;top:92px">Worker</div>
+   <div class="av face" id="hav0" style="left:0;top:0;background-image:url(../../assets/illustrations/mba/ravi-face.jpg);box-shadow:0 0 0 4px #B8862F">R</div><div class="avn" id="han0" style="left:-44px;top:92px">Manager</div>
+   <div class="av face" id="hav1" style="left:520px;top:0;background-image:url(../../assets/illustrations/mba/asha-face.jpg)">A</div><div class="avn" id="han1" style="left:476px;top:92px">Worker</div>
    <div class="stp" id="htr" style="top:4px;background:#B8862F;color:#fff">${M.icon('smile', 26, '#fff', 2.2)}Trust</div>`,
   `<svg class="abs" style="left:0;top:0" width="848" height="80"><line id="cline" x1="36" y1="36" x2="624" y2="36" stroke="#B8862F" stroke-width="5" stroke-linecap="round"/></svg>` +
-   [['R', 'Ravi'], ['A', 'Asha'], ['K', 'Kabir'], ['M', 'Meena']].map(([l, n], i) => `<div class="av" id="cav${i}" style="left:${i * 196}px;top:0">${l}</div><div class="avn" id="can${i}" style="left:${i * 196 - 44}px;top:92px">${n}</div>`).join(''),
+   [['R', 'Ravi'], ['A', 'Asha'], ['K', 'Kabir'], ['M', 'Meena']].map(([l, n], i) => `<div class="av face" id="cav${i}" style="left:${i * 196}px;top:0;background-image:url(../../assets/illustrations/mba/${n.toLowerCase()}-face.jpg)">${l}</div><div class="avn" id="can${i}" style="left:${i * 196 - 44}px;top:92px">${n}</div>`).join(''),
   [['Learn', 40], ['Practise', 80], ['Best', 120]].map(([n, h], i) => `<div class="stair" id="sti${i}" style="left:${i * 170}px;top:${176 - h}px;height:${h}px"><span>${n}</span></div>`).join('') +
-   `<div class="av" id="dav" style="left:39px;top:56px;background:#B8862F">A</div>`,
+   `<div class="av face" id="dav" style="left:39px;top:56px;background-image:url(../../assets/illustrations/mba/asha-face.jpg);box-shadow:0 0 0 4px #B8862F">A</div>`,
 ];
 const PP = [['THE FOUNDATION', '4 Principles', 'The base of scientific management', 'IN SHORT', null]].concat([
   ['PRINCIPLE 01 / 04', 'Science', 'not rule of thumb'], ['PRINCIPLE 02 / 04', 'Harmony', 'not discord'],
@@ -340,7 +340,7 @@ M.on(t => {
       } else if (k === 3) {
         for (let i = 0; i < 4; i++) {
           const av = $('#cav' + i); M.vis(av, t, tin + 0.6 + i * 0.1, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.08 }); M.vis($('#can' + i), t, tin + 0.7 + i * 0.1, 1e9, { dy: 10 });
-          av.style.background = mix(C.ink, C.gold, M.io((t - tTog - i * 0.08) / 0.25));
+          av.style.boxShadow = '0 0 0 4px ' + mix(C.ink, C.gold, M.io((t - tTog - i * 0.08) / 0.25));
         }
         M.draw($('#cline'), t, tTog - 0.15, 0.7, M.o3);
       } else if (k === 4) {
