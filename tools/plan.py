@@ -44,7 +44,10 @@ def blocked(slug):
     return False
 ready = [v for v in ready if not blocked(v.name)]
 # YouTube quota resets daily: never upload more than max_uploads_per_day in any rolling 24 h
-since = dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=24)
+# YouTube API quota resets at midnight Pacific time: count uploads since the last reset
+from zoneinfo import ZoneInfo
+pt = dt.datetime.now(ZoneInfo('America/Los_Angeles'))
+since = pt.replace(hour=0, minute=0, second=0, microsecond=0).astimezone(dt.timezone.utc)
 done24 = sum(1 for u in R.glob('videos/*/upload.json') if dt.datetime.strptime(json.loads(u.read_text())['uploaded'], '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=dt.timezone.utc) > since)
 room = max(0, cfg.get('max_uploads_per_day', 4) - done24)
 ready = ready[:min(cfg['max_uploads_per_run'], room)]
