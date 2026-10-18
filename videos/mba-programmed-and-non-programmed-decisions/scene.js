@@ -66,16 +66,16 @@ const rowsHTML = (R, p) => R.map(([ic, tx], i) => `<div class="kr" id="${p}${i}"
 $('#pRows').innerHTML = rowsHTML(PR, 'pr'); $('#xRows').innerHTML = rowsHTML(XR, 'xw');
 // non-programmed: rulebook check, city, the shop next door
 $('#xr1I').innerHTML = M.icon('book', 22, C.dim, 2.2); $('#xr2I').innerHTML = M.icon('book', 22, C.dim, 2.2); $('#xnoI').innerHTML = M.icon('x', 22, '#fff', 2.6);
-$('#xc1I').innerHTML = M.icon('store', 26, C.gold, 2.2); $('#xc2I').innerHTML = M.icon('pin', 26, C.gold, 2.2);
+$('#xc1I').innerHTML = M.icon('store', 24, C.gold, 2.2); $('#xc2I').innerHTML = M.icon('pin', 24, C.gold, 2.2);
 $('#xs1I').innerHTML = M.icon('cup', 26, C.gold, 2.2); $('#xs2I').innerHTML = M.icon('store', 26, C.red, 2.2);
-const IDEAS = [['Lower prices?', tCreat], ['New flavour?', tFresh], ['Faster service?', tIdeas]];
+const IDEAS = [['Lower prices?', tCreat], ['New flavour?', tFresh], ['Combo deal?', tIdeas]];
 $('#xB2').innerHTML = IDEAS.map(([s], i) => `<div class="mp" id="id${i}" style="top:120px;font-size:22px">${M.icon('bulb', 22, C.gold, 2.2)}${s}</div>`).join('');
 // sorting game
 $('#dkTI').innerHTML = M.icon('help', 32, C.dim, 2.2);
 const BINS = [['repeat', 'Programmed', 'ROUTINE · RULES · LOWER LEVELS', 'M', 'Decided by outlet managers', 36], ['sparkles', 'Non-programmed', 'NEW · JUDGMENT · THE TOP', 'R', 'Decided by Ravi', 4]];
 $('#bins').innerHTML = BINS.map(([ic, t, s, a, f, n], b) => `<div class="bin" id="bin${b}" style="left:${160 + b * 816}px"><div class="bg"></div><div class="bi">${M.icon(ic, 34, C.gold, 2.2)}</div><div class="serif bt">${t}</div><div class="bs">${s}</div><div class="serif bn">0</div><div class="sl" style="left:40px"></div><div class="sl" style="left:408px"></div><div class="tl">${Array.from({ length: n }, (_, j) => `<div class="tile" id="ti${b}_${j}" style="left:${15 + (j % 14) * 50}px;top:${10 + Math.floor(j / 14) * 38}px"></div>`).join('')}</div><div class="bf"><b>${a}</b><span>${f}</span></div></div>`).join('');
 const CARDS = [['cup', 'Reorder milk', 0, 0], ['coin', 'Customer refund', 0, 1], ['pin', 'Open in a new city', 1, 0], ['store', 'New shop next door', 1, 1]];
-$('#flys').innerHTML = CARDS.map(([ic, tx], k) => `<div class="dk fly" id="fc${k}"><div class="bg"></div><div class="ci">${M.icon(ic, 32, C.gold, 2.2)}</div><div class="ct">${tx}</div></div>`).join('');
+$('#flys').innerHTML = CARDS.map(([ic, tx], k) => `<div class="dk fly" id="fc${k}" style="transform-origin:0 0"><div class="bg"></div><div class="ci">${M.icon(ic, 32, C.gold, 2.2)}</div><div class="ct">${tx}</div></div>`).join('');
 // comparison table
 const TR = [['NATURE', 'help'], ['MADE WITH', 'book'], ['WHO DECIDES', 'users']];
 const TC = [[['Routine, repeats', 'Reorder milk'], ['Rules and procedures', 'Fixed steps'], ['Lower levels', 'Meena, outlet 2']],
@@ -257,8 +257,8 @@ M.on(t => {
       const lv = 45 - 27 * drain + 32 * refill;
       const gf = $('#gF'); M.vis(gf, t, tP2 + 0.15, 1e9, { dy: 0, fade: 0.2 });
       gf.style.width = (664 * lv / 60).toFixed(1) + 'px';
-      const low = lv < 20 ? 1 : 0; gf.style.background = mix(C.ink2, C.red, M.io((t - tReorder + 0.4) / 0.3) * (1 - refill));
-      M.setT($('#mL'), Math.round(lv) + ' L'); $('#mL').style.color = mix(C.ink, C.red, M.io((t - tReorder + 0.4) / 0.3) * (1 - refill));
+      const low = lv < 20 ? 1 : 0; const redU = M.io((t - tReorder + 0.4) / 0.3) * (1 - M.io((t - tReorder - 0.7) / 0.3)); gf.style.background = mix(C.ink2, C.red, redU);
+      M.setT($('#mL'), Math.round(lv) + ' L'); $('#mL').style.color = mix(C.ink, C.red, redU);
       M.vis($('#mL'), t, tP2 + 0.25, 1e9, { dy: 10 });
       M.vis($('#gL'), t, wt('P2', 'twenty') - 0.1, 1e9, { dy: 0, fade: 0.15 }); M.vis($('#gLl'), t, wt('P2', 'twenty'), 1e9, { dy: 8 });
       M.vis($('#reo'), t, tReorder, 1e9, POPV);
