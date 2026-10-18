@@ -71,4 +71,9 @@ def main():
     (F / 'upload.json').write_text(json.dumps(out, indent=1)); print(json.dumps(out))
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except Exception as e:       # surface the reason as a GitHub annotation (readable without full logs)
+        msg = (getattr(e, 'content', b'') or b'').decode('utf-8', 'ignore')[:600] or repr(e)[:600]
+        print(f"::error title=YouTube upload failed::{type(e).__name__}: {msg}".replace('\n', ' '))
+        raise
