@@ -141,3 +141,156 @@
 .cap{font:600 38px Poppins;color:var(--ink);background:rgba(255,255,255,.96);padding:12px 30px;border-radius:40px;box-shadow:0 10px 30px -10px rgba(20,33,61,.25)}
 .cap .cw{color:#5B647A}.cap .cw.on{color:var(--ink)}.cap .cw.act{color:var(--gold)}
 </style></head><body>
+<div id="stage">
+  <div id="bgv"></div>
+  <div id="cam">
+    <!-- title + header (shared elements) -->
+    <div class="chip" id="eyebrow"><i></i>EP 22 · PRINCIPLES OF MANAGEMENT</div>
+    <div class="serif" id="title">Programmed and <span class="acc">Non-Programmed</span> Decisions</div>
+    <div id="sub">Explained with one chai chain</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#B8862F" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="chip ghost" id="exChip">EXAMPLE FIGURES</div>
+
+    <!-- scene A: forty questions, all for Ravi -->
+    <div id="sA">
+      <div class="card" id="hero">
+        <svg id="awn" width="616" height="90" style="position:absolute;left:0;top:0"><g id="awnG"></g></svg>
+        <div id="sign" style="position:absolute;left:0;width:616px;top:104px;text-align:center;font:600 18px Poppins;letter-spacing:.2em;color:var(--muted)">CHAI CORNER</div>
+        <svg id="stall" width="616" height="320" style="position:absolute;left:0;top:130px">
+          <g id="steam" fill="none" stroke="#C9BFAE" stroke-width="5" stroke-linecap="round">
+            <path id="s1" d="M128 116 c-12 -14 12 -24 0 -40"/><path id="s2" d="M152 110 c-12 -14 12 -24 0 -44"/><path id="s3" d="M176 116 c-12 -14 12 -24 0 -40"/>
+          </g>
+          <g id="ravi"><circle cx="308" cy="98" r="44" fill="#14213D"/><path d="M220 210 c0 -48 40 -74 88 -74 s88 26 88 74 z" fill="#14213D"/><path d="M286 140 l22 26 l22 -26" fill="none" stroke="#B8862F" stroke-width="6" stroke-linejoin="round"/></g>
+          <rect x="60" y="196" width="496" height="92" rx="16" fill="#EEE8DB"/>
+          <rect x="60" y="196" width="496" height="10" rx="5" fill="#B8862F"/>
+          <g id="kettle" transform="translate(152 196)"><path d="M-40 0 v-54 a22 22 0 0 1 22 -22 h36 a22 22 0 0 1 22 22 v54 z" fill="#3A4560"/><path d="M40 -46 q26 0 26 -26" fill="none" stroke="#3A4560" stroke-width="8" stroke-linecap="round"/><rect x="-14" y="-88" width="28" height="12" rx="6" fill="#3A4560"/></g>
+          <g id="cups"></g>
+        </svg>
+        <div class="serif" id="hname">Ravi</div>
+        <div id="htag">OWNER · 5 OUTLETS · HEAD OFFICE</div>
+      </div>
+      <div class="card" id="ask">
+        <div class="lbl" style="left:36px;top:34px">QUESTIONS FOR RAVI · TODAY</div>
+        <div class="serif" id="qN">0</div>
+        <div id="qps"></div>
+        <div class="pill" id="allR" style="left:36px;top:196px"><span id="allRI"></span>Every question goes to Ravi</div>
+      </div>
+      <div class="card" id="day">
+        <div class="lbl" style="left:36px;top:34px">RAVI'S DAY</div>
+        <div class="pill" id="noT" style="top:22px;background:#F6E3DC;color:#B5482F"><span id="noTI"></span>No time left for the big one</div>
+        <div id="track"><div id="blks"></div></div>
+        <div class="hrl" id="h0" style="left:36px">9 AM</div><div class="hrl" id="h1">3 PM</div><div class="hrl" id="h2">9 PM</div>
+      </div>
+    </div>
+
+    <!-- scene D: two types -->
+    <div id="sD">
+      <div class="serif" id="dq">How do we sort <span class="acc">decisions?</span></div>
+      <div class="card" id="defbar"><span id="defI"></span><span class="tx">Herbert Simon split decisions into <span id="dwT">two types</span></span><span id="yr">1960</span></div>
+      <div id="eRow"></div>
+    </div>
+
+    <!-- scene P: programmed -->
+    <div id="sP">
+      <div class="card lv" id="pv">
+        <div class="lbl" id="pvL">THE RULEBOOK · CHAI CORNER</div>
+        <div class="pa" id="pa0" style="top:88px;height:222px">
+          <div id="pA1"><div class="lbl">SAME QUESTION, EVERY DAY</div><div class="ttl">Is the milk running low?</div><div id="days"></div></div>
+          <div id="pA2"><div class="lbl" style="color:var(--gold)">RULE 01</div><div class="ttl">Milk below 20 L? <b>Reorder it.</b></div><div class="serif ctr" id="mL">45 L</div>
+            <div id="gT"></div><div id="gF"></div><div id="gL"></div><div id="gLl">REORDER AT 20 L</div>
+            <div class="mp" id="reo" style="top:166px;background:#B8862F;color:#fff"><span id="reoI"></span>Reorder sent</div></div>
+          <div class="bd"></div>
+        </div>
+        <div class="pa" id="pa1" style="top:342px;height:206px">
+          <div class="lbl" id="r2L">RULE 02</div><div class="ttl" id="r2T">Wrong order? <b>Full refund.</b></div>
+          <div class="stp" id="r2a" style="left:28px;top:114px;background:#F6E3DC;color:#B5482F"><span id="r2aI"></span>Wrong order</div>
+          <svg class="abs" id="r2v" width="60" height="24" style="top:134px"><path d="M4 12h48 M42 4l10 8-10 8" fill="none" stroke="#B8862F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="stp" id="r2b" style="top:114px;background:#14213D;color:#fff"><span id="r2bI"></span>Full refund</div>
+          <div class="bd"></div>
+        </div>
+      </div>
+      <div class="card pk" id="pk">
+        <div class="ps">TYPE 01 · ROUTINE</div><div class="serif pt">Programmed</div>
+        <div class="tp" id="pq">Quick</div><div class="tp" id="pc">Cheap</div>
+        <div class="hr"></div><div id="pRows"></div>
+      </div>
+    </div>
+
+    <!-- scene X: non-programmed -->
+    <div id="sX">
+      <div class="card lv" id="xv">
+        <div class="lbl">NEW QUESTIONS · CHAI CORNER</div>
+        <div class="pa" id="xa0" style="top:88px;height:222px">
+          <div id="xA1"><div class="lbl">CHECK THE RULEBOOK</div><div class="ttl">Is there a rule for this?</div>
+            <div class="mp" id="xr1" style="left:28px;top:132px;color:#B9B1A3"><span id="xr1I"></span>Rule 01 · Milk</div>
+            <div class="mp" id="xr2" style="top:132px;color:#B9B1A3"><span id="xr2I"></span>Rule 02 · Refund</div>
+            <div class="mp" id="xno" style="top:132px;background:#B5482F;color:#fff"><span id="xnoI"></span>No match</div></div>
+          <div id="xA2"><div class="lbl" style="color:var(--gold)">NEW QUESTION 01</div><div class="ttl">Open an outlet in <b>a new city?</b></div>
+            <svg class="abs" width="720" height="222" style="left:0;top:0"><path id="xmap" d="M0 0" fill="none" stroke="#B8862F" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 12"/></svg>
+            <div class="stp" id="xc1" style="left:28px;top:124px"><span id="xc1I"></span>Home city · 5 outlets</div>
+            <div class="stp" id="xc2" style="top:124px;border:3px dashed #B8862F;background:#fff"><span id="xc2I"></span>New city?</div></div>
+          <div class="bd"></div>
+        </div>
+        <div class="pa" id="xa1" style="top:342px;height:206px">
+          <div class="lbl" id="q2L">NEW QUESTION 02</div><div class="ttl" id="q2T">Answer the <b>new shop next door?</b></div>
+          <div id="xB1"><div class="stp" id="xs1" style="left:28px;top:114px"><span id="xs1I"></span>Chai Corner</div><div class="lbl" id="xvs" style="top:136px;color:var(--gold)">VS</div><div class="stp" id="xs2" style="top:114px;background:#F6E3DC;color:#B5482F"><span id="xs2I"></span>New shop</div></div>
+          <div id="xB2"></div>
+          <div class="bd"></div>
+        </div>
+      </div>
+      <div class="card pk" id="xk">
+        <div class="ps">TYPE 02 · NEW</div><div class="serif pt">Non-programmed</div>
+        <div class="tp" id="xm">Matters a lot</div>
+        <div class="hr"></div><div id="xRows"></div>
+      </div>
+    </div>
+
+    <!-- scene G: the sorting game -->
+    <div id="sG">
+      <div class="lbl" id="dLbl">TODAY'S QUESTIONS</div><div class="serif" id="dN">40</div>
+      <div class="back" id="bk2" style="left:712px;top:298px;width:496px;height:120px"></div>
+      <div class="back" id="bk1" style="left:696px;top:284px;width:528px;height:120px"></div>
+      <div class="dk" id="dkTop" style="left:680px;top:270px"><div class="bg"></div><div class="ci" id="dkTI"></div><div class="ct" style="color:#B9B1A3">Next question</div></div>
+      <div id="bins"></div>
+      <div id="flys"></div>
+    </div>
+
+    <!-- scene K: side by side -->
+    <div id="sK">
+      <div class="card" id="tbl">
+        <div class="colh" id="ch0" style="left:400px"></div><div class="colh" id="ch1" style="left:1000px;background:#14213D"></div>
+        <div class="tvs" style="left:400px"></div><div class="tvs" style="left:1000px"></div>
+        <div id="tIn"></div>
+      </div>
+      <div id="kst"><span id="kstI"></span><span class="serif tx">Rules handle the <span style="color:#E9D9B5">routine</span>. The boss handles what is <span style="color:#E9B95C">new</span>.</span></div>
+    </div>
+
+    <!-- quick check -->
+    <div id="quiz">
+      <div class="chip" id="qchip" style="left:160px;top:120px"><i></i>QUICK CHECK</div>
+      <div class="serif qq" id="qq1" style="top:224px">A storm shuts the dairy for a week.</div><div class="serif qq acc" id="qq2" style="top:304px">First time ever. Which type is it?</div>
+      <svg id="ring" viewBox="0 0 150 150"><circle cx="75" cy="75" r="66" fill="#fff" stroke="#E2DACB" stroke-width="8"/><circle id="ringA" cx="75" cy="75" r="66" fill="none" stroke="#B8862F" stroke-width="8" stroke-linecap="round" transform="rotate(-90 75 75)"/></svg>
+      <div class="serif" id="ringN" style="left:1610px;top:236px;position:absolute"></div>
+      <div id="opts"></div>
+      <div id="take"><span id="takeI"></span><span class="serif tx" id="takeT">New, no rule, needs judgment = Non-programmed</span></div>
+    </div>
+
+    <!-- recap -->
+    <div id="recap">
+      <div class="chip" id="rchip" style="left:160px;top:84px"><i></i>RECAP</div>
+      <div class="serif" id="rh">Remember these <span class="acc">three things</span></div>
+      <div id="rRows"></div>
+      <div id="next"><span class="nc">NEXT · EP 23</span><span class="nt">Rational Decision-Making</span><span id="nextI"></span></div>
+    </div>
+  </div>
+  <div id="stmt"><div id="st1">Not every decision needs the boss.</div><div class="serif" id="st2">He needs to <span style="color:#E9B95C">sort them.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
