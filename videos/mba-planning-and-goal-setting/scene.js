@@ -20,19 +20,19 @@ Object.assign(M.IC, {
 
 /* ---------- beats (all from the voice) ---------- */
 const tTitle = 0.25, tMorph = T0('H2') + 0.02, tSecond = wt('H1', 'second'), tMonth = wt('H1', 'month'), tNo = wt('H2', 'no'), tSell = wt('H2', 'sell');
-const tBad = [wt('C1', 'milk'), wt('C2', 'Nobody'), wt('C3', 'night')], tMore = wt('C3', 'more');
+const tBad = [wt('C1', 'milk'), wt('C2', 'Nobody'), wt('C3', 'night')], tMore = wt('C3', 'sales');
 const tT = T0('T1'), tSt2 = wt('T1', 'Ravi'), tTu = T0('D1') - 0.32;
 const tD1 = T0('D1'), tD2 = T0('D2'), tAdv = wt('D2', 'advance'), tQw = [wt('D2', 'what'), wt('D2', 'how'), wt('D2', 'when'), wt('D2', 'who')];
 const tD3 = T0('D3'), tAns = [wt('D3', 'Serve'), wt('D3', 'recipe'), wt('D3', 'seven'), wt('D3', 'Meena')], tDout = T0('F0') - 0.32;
 const tF0 = T0('F0'), tF = [1, 2, 3, 4, 5, 6, 7].map(i => T0('F' + i)), tFout = T0('K0') - 0.32;
-const tAch = wt('F1', 'achieve'), tPrem = [wt('F2', 'forecasts'), wt('F2', 'guesses'), wt('F2', 'walk')], tAlt = [wt('F3', 'college'), wt('F3', 'bus'), wt('F3', 'market')];
+const tAch = wt('F1', 'achieve'), tPrem = [wt('F2', 'forecasts'), wt('F2', 'people'), wt('F2', 'walk')], tAlt = [wt('F3', 'college'), wt('F3', 'bus'), wt('F3', 'market')];
 const tEv = [wt('F4', 'rent'), wt('F4', 'crowd'), wt('F4', 'stalls')], tBus = wt('F5', 'bus'), tWins = wt('F5', 'wins');
-const tSup = [wt('F6', 'hiring'), wt('F6', 'ordering')], tOpen = wt('F7', 'Open'), tWeek = wt('F7', 'week'), tWork = wt('F7', 'working');
+const tSup = [wt('F6', 'hiring'), wt('F6', 'ordering')], tOpen = wt('F7', 'Open'), tWeek = wt('F7', 'week'), tWork = wt('F7', 'works');
 const tK0 = T0('K0'), tK = [T0('K1'), T0('K2'), T0('K3')], tKout = T0('G0') - 0.32;
 const tG0 = T0('G0'), tVague = wt('G0', 'vague'), tG1 = T0('G1'), tDoran = wt('G1', 'George'), tMagz = wt('G1', 'Management'), tSmart = wt('G1', 'SMART');
 const tG2 = T0('G2'), tLet = wt('G2', 'letters'), tL = [wt('G2', 'Specific'), T0('G3'), T0('G4'), T0('G5'), wt('G6', 'time')], tG7 = T0('G7'), tBecomes = wt('G7', 'becomes');
 const tSeg = [0, wt('G3', 'Five'), wt('G2', 'Cups'), wt('G3', 'day'), wt('G2', 'outlet'), wt('G6', 'March')];
-const tQ = T0('Q1'), tCount = T1('Q1') + 0.05, tAnsQ = T0('A1') - 0.02, tTakeQ = wt('A1', 'There');
+const tQ = T0('Q1'), tCount = T1('Q1') + 0.05, tAnsQ = T0('A1') - 0.02, tTakeQ = wt('A1', 'It');
 const tS = T0('S1'), tRow = [T0('S2'), T0('S3'), T0('S4')], tN = T0('N1');
 const tPill = [['what', 'how', 'when', 'who'].map(w => wt('S2', w)), ['objectives', 'premises', 'alternatives', 'choice', 'follow'].map(w => wt('S3', w)), ['specific', 'measurable', 'achievable', 'relevant', 'time'].map(w => wt('S4', w))];
 const SW = [[tT - 0.42, tTu], [tQ - 0.42, tQ + 0.06], [tS - 0.42, tS + 0.06]];   // navy page-turn sweeps [cover start, uncover start]
@@ -55,8 +55,8 @@ const SX = i => 38 + i * 78, SH = i => (i + 1) * 48, BASE = 548, STOP = i => BAS
 $('#coverI').innerHTML = M.icon('flag', 30, C.gold2, 2.2);
 $('#stG').innerHTML = `<line x1="24" y1="${BASE}" x2="600" y2="${BASE}" stroke="#E2DACB" stroke-width="4" stroke-linecap="round"/>` +
   Array.from({ length: 7 }, (_, i) => `<g id="sc${i}"><rect x="${SX(i) + 3}" y="${STOP(i)}" width="72" height="${SH(i)}" rx="10" fill="#EEE8DB"/><text x="${SX(i) + 39}" y="${STOP(i) + 32}" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="20" letter-spacing=".04em" fill="#B9B1A3">0${i + 1}</text></g>`).join('') +
-  `<line id="pole" x1="${SX(6) + 39}" y1="${STOP(6)}" x2="${SX(6) + 39}" y2="112" stroke="#3A4560" stroke-width="4" stroke-linecap="round"/>` +
-  `<g id="flagG"><path d="M${SX(6) + 41} 0 h-0 l-112 0 l18 20 l-18 20 h112 z" fill="#B8862F"/><text x="${SX(6) - 20}" y="26" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="15" letter-spacing=".14em" fill="#fff">OPEN</text></g>` +
+  `<line id="pole" x1="${SX(6) + 68}" y1="${STOP(6)}" x2="${SX(6) + 68}" y2="112" stroke="#3A4560" stroke-width="4" stroke-linecap="round"/>` +
+  `<g id="flagG"><path d="M${SX(6) + 70} 0 l-76 0 l14 20 l-14 20 h76 z" fill="#B8862F"/><text id="flagT" x="${SX(6) + 37}" y="26" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="15" letter-spacing=".14em" fill="#fff">OPEN</text></g>` +
   `<g id="rv"><circle r="26" fill="#B8862F"/><text y="9" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="24" fill="#fff">R</text></g>`;
 // step panels
 const tile3 = (pre, rows, body) => rows.map((r, i) => `<div class="tl3" id="${pre}${i}" style="left:${i * 292}px"><div class="bg"></div>${body(r, i)}</div>`).join('');
@@ -67,7 +67,7 @@ const VIS = [
   tile3('al', LOCS, (n, i) => `<i>${M.icon('pin', 26, C.gold, 2.2)}</i><div class="tn">${n}</div><div class="tv" style="color:#8A8274;font-size:24px;top:100px">Option ${'ABC'[i]}</div>`),
   tile3('ev', LOCS, (n) => `<i>${M.icon('pin', 26, C.gold, 2.2)}</i><div class="tn">${n}</div><div class="sb"></div><div class="sf"></div><div class="serif sv"></div>`),
   tile3('ch', LOCS, (n, i) => `<i>${M.icon('pin', 26, C.gold, 2.2)}</i><div class="tn">${n}</div><div class="serif sv" style="top:92px">${SCORE[i]}/10</div>${i === 1 ? `<div class="ck">${M.icon('check', 24, '#fff', 3)}</div>` : ''}`),
-  ['Hire 2 helpers', 'Order milk', 'Buy a stove'].map((s, k) => `<div class="stp" id="sp${k}"><span class="spi"></span>${s}</div>`).join('') +
+  ['Hire 2 helpers', 'Order milk', 'Buy a stove'].map((s, k) => `<div class="stp" id="sp${k}"><span class="spi">${M.icon(['users', 'droplet', 'zap'][k], 26, '#B8862F', 2.2)}</span>${s}</div>`).join('') +
     `<div class="stp" id="spS" style="top:92px;background:#14213D;color:#fff"><span id="spSI"></span>Small plans that support the big one</div>`,
   `<div class="stp" id="opn" style="background:#B8862F;color:#fff"><span id="opnI"></span>Open the shop</div>` +
     [1, 2, 3, 4].map(k => `<div class="wk" id="wk${k - 1}" style="left:${(k - 1) * 218}px"><b></b>Week ${k}</div>`).join(''),
@@ -231,7 +231,7 @@ M.on(t => {
     M.vis($('#pole'), t, tF0 + 0.9, 1e9, { dy: 0, fade: 0.2 });
     const fr = M.spring(t - tWork, M.SOFT), fy = M.lerp(STOP(6) - 44, 112, fr);
     $('#flagG').setAttribute('transform', `translate(0 ${fy.toFixed(2)})`); M.hide($('#flagG'), t < tF0 + 0.9);
-    $('#flagG').style.opacity = M.clamp((t - tF0 - 0.9) / 0.2).toFixed(3);
+    $('#flagG').style.opacity = M.clamp((t - tF0 - 0.9) / 0.2).toFixed(3); $('#flagT').style.opacity = M.clamp((t - tWork - 0.25) / 0.25).toFixed(3);
     // Ravi climbs one step per line
     const rv = $('#rv'), k = rvTrack(t), kf = Math.floor(k), u = k - kf;
     const xa = SX(kf) + 39, ya = STOP(kf) - 30, xb = SX(Math.min(6, kf + 1)) + 39, yb = STOP(Math.min(6, kf + 1)) - 30;
@@ -274,7 +274,7 @@ M.on(t => {
         }
       } else if (k2 === 6) {
         const ts = [tSup[0] - 0.05, tSup[1] - 0.05, tSup[1] + 0.5];
-        for (let s = 0; s < 3; s++) { const el = $('#sp' + s); M.vis(el, t, ts[s], 1e9, { dy: 12 }); setIco(el.querySelector('.spi'), ['users', 'droplet', 'zap'][s], C.gold, 26, 2.2); }
+        for (let s = 0; s < 3; s++) { const el = $('#sp' + s); M.vis(el, t, ts[s], 1e9, { dy: 12 }); }
         M.vis($('#spS'), t, tin + 0.7, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
       } else if (k2 === 7) {
         M.vis($('#opn'), t, tOpen - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });

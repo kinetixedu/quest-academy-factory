@@ -1,0 +1,255 @@
+<!doctype html><html><head><meta charset="utf-8"><title>MBA - Contingency Approach (Ep 13)</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<style>
+/* ===== MBA world: Boardroom ===== */
+:root{--paper:#F5F1E8;--paper2:#EEE8DB;--ink:#14213D;--ink2:#3A4560;--muted:#8A8274;--line:#E2DACB;--gold:#B8862F;--gold2:#E9D9B5;--card:#FFFFFF;--red:#B5482F}
+#stage{background:var(--paper);font-family:Poppins;color:var(--ink)}
+#bgv{position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 40%,rgba(255,255,255,.55),rgba(255,255,255,0) 60%),radial-gradient(140% 120% at 50% 50%,rgba(0,0,0,0) 62%,rgba(90,70,40,.08))}
+#prog{position:absolute;left:0;top:0;height:6px;width:1920px;background:var(--line);z-index:60}
+#prog i{display:block;height:6px;background:var(--gold);width:0}
+#cam{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.serif{font-family:Poppins;font-weight:700;letter-spacing:-.025em}
+.chip{position:absolute;display:inline-flex;align-items:center;gap:14px;height:44px;padding:0 20px;border-radius:22px;background:var(--ink);color:#F5E7C6;font:600 18px Poppins;letter-spacing:.16em;white-space:nowrap}
+.chip i{width:8px;height:8px;border-radius:4px;background:var(--gold)}
+.chip.ghost{background:transparent;color:var(--muted);border:2px solid var(--line);height:40px;font-size:16px}
+#title{position:absolute;left:0;top:0;line-height:1.05;white-space:nowrap;transform-origin:0 0;color:var(--ink)}
+#title .acc,.acc{color:var(--gold)}
+#sub{position:absolute;left:0;top:640px;width:1920px;text-align:center;font:500 32px Poppins;color:var(--muted)}
+#rule{position:absolute;left:840px;top:612px}
+.card{position:absolute;background:var(--card);border-radius:28px;box-shadow:0 1px 0 rgba(20,33,61,.04),0 18px 40px -12px rgba(20,33,61,.14)}
+.lbl{position:absolute;font:600 18px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.abs{position:absolute}
+.pill{position:absolute;height:48px;padding:0 20px;border-radius:24px;display:flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+.avc{position:absolute;width:64px;height:64px;border-radius:32px;display:flex;align-items:center;justify-content:center;font:700 28px Poppins;color:#fff;background:var(--ink)}
+.ic64{position:absolute;width:64px;height:64px;border-radius:32px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.ic72{position:absolute;width:72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.vr{position:absolute;width:2px;background:var(--line)}
+.hrl{position:absolute;height:2px;background:var(--line)}
+/* scene A: one style, two times of day */
+#hero{left:160px;top:270px;width:616px;height:580px;overflow:hidden}
+#hname{position:absolute;left:0;width:616px;top:452px;text-align:center;font-size:44px}
+#htag{position:absolute;left:0;width:616px;text-align:center;top:516px;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+#tc{left:840px;top:270px;width:920px;height:274px}
+#rc{left:840px;top:576px;width:920px;height:274px}
+.tbig{position:absolute;left:36px;top:62px;font-size:88px;line-height:1.1;white-space:nowrap}
+#stName{position:absolute;left:572px;top:80px;font-size:48px;white-space:nowrap}
+#r1t{position:absolute;left:36px;top:66px;font-size:72px;line-height:1.1;white-space:nowrap}
+#team6{position:absolute;left:480px;top:56px;width:404px;height:120px}
+#team6 .tp{position:absolute;top:48px;width:40px;height:48px;color:var(--ink2)}
+#team6 .bb{position:absolute;top:0;width:40px;height:36px}
+#wN{position:absolute;left:36px;top:60px;font-size:104px;line-height:1;width:220px;color:var(--red)}
+#ppl{position:absolute;left:300px;top:58px;width:584px;height:120px}
+#ppl .pp{position:absolute;width:40px;height:48px;color:var(--red)}
+/* statement on navy */
+#stmt{position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:41}
+#st1{position:absolute;left:0;width:1920px;top:400px;text-align:center;font:500 52px Poppins;color:#E9D9B5;white-space:nowrap}
+#st2{position:absolute;left:0;width:1920px;top:492px;text-align:center;font-size:112px;color:#fff;white-space:nowrap}
+/* scene D: definition */
+#dq{position:absolute;left:0;width:1920px;top:372px;text-align:center;font-size:96px;white-space:nowrap}
+#dl{position:absolute;left:0;width:1920px;top:520px;text-align:center;font-size:64px;white-space:nowrap}
+#dlb{position:absolute;left:0;width:1920px;top:628px;text-align:center}
+.bar84{left:160px;top:270px;width:1600px;height:84px;border-radius:24px;display:flex;align-items:center;gap:20px;padding:0 32px}
+.bar84 .tx{font:600 32px Poppins;white-space:nowrap}
+.cv{position:absolute;top:386px;width:784px;height:456px;border-radius:28px}
+.cv .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);box-shadow:0 1px 0 rgba(20,33,61,.04),0 18px 40px -12px rgba(20,33,61,.14)}
+.cv .lbl{left:40px;top:44px}
+.cv .ct{position:absolute;left:40px;top:76px;font-size:56px;line-height:1.2;white-space:nowrap}
+.cv .hrl{left:40px;right:40px;top:176px}
+.cv .row{position:absolute;left:40px;height:56px;display:flex;align-items:center;gap:24px}
+.cv .row i{flex:0 0 56px;height:56px;border-radius:28px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.cv .row span{font:600 28px Poppins;white-space:nowrap}
+.cv .bx{position:absolute;right:40px;top:36px;width:52px;height:52px;border-radius:26px;display:flex;align-items:center;justify-content:center}
+/* scene W: thinkers */
+.tk{position:absolute;top:386px;width:376px;height:456px;border-radius:28px}
+.tk .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);box-shadow:0 1px 0 rgba(20,33,61,.04),0 18px 40px -12px rgba(20,33,61,.14)}
+.tk .yr{position:absolute;left:32px;top:32px;height:48px;padding:0 20px;border-radius:24px;background:var(--gold);color:#fff;display:flex;align-items:center;font:700 24px Poppins;letter-spacing:.04em}
+.tk .ic64{left:280px;top:24px}
+.tk .nm{position:absolute;left:32px;font-size:40px;line-height:1.2;white-space:nowrap}
+.tk .hrl{left:32px;right:32px;top:224px}
+.tk .lbl{left:32px;top:250px}
+.tk .bd{position:absolute;left:32px;font:500 26px Poppins;white-space:nowrap}
+.tk .fp2{position:absolute;left:32px;top:372px;height:48px;padding:0 18px;border-radius:24px;display:flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+/* scene I: if / then */
+.it{position:absolute;top:270px;width:784px;height:572px;border-radius:28px}
+.it .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);box-shadow:0 1px 0 rgba(20,33,61,.04),0 18px 40px -12px rgba(20,33,61,.14)}
+.it .bw{position:absolute;left:48px;top:36px;font-size:120px;line-height:1.1;white-space:nowrap}
+.it .ln{position:absolute;left:48px;font-size:44px;white-space:nowrap}
+.it .hrl{left:48px;right:48px;top:344px}
+.it .lbl{left:48px;top:372px}
+.it .pl{position:absolute;height:52px;padding:0 22px;border-radius:26px;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+.it .ic72{right:48px;top:48px;left:auto}
+/* scene F: factors */
+.fc{position:absolute;top:386px;width:376px;height:456px;border-radius:28px}
+.fc .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);box-shadow:0 1px 0 rgba(20,33,61,.04),0 18px 40px -12px rgba(20,33,61,.14)}
+.fc .ic72{left:32px;top:32px}
+.fc .no{position:absolute;right:32px;top:40px;font:700 26px Poppins;color:var(--gold)}
+.fc .ft{position:absolute;left:32px;top:124px;font-size:48px;line-height:1.2;white-space:nowrap}
+.fc .fm{position:absolute;left:32px;top:192px;font:500 26px Poppins;white-space:nowrap}
+.fc .hrl{left:32px;right:32px;top:252px}
+.fc .lbl{left:32px;top:278px}
+.fc .fr{position:absolute;left:32px;display:flex;align-items:center;gap:14px;font:600 26px Poppins;white-space:nowrap}
+.fc .fr b{width:12px;height:12px;border-radius:6px;background:var(--gold);flex:0 0 12px}
+/* scene K: if-then at chai corner */
+.kr{position:absolute;left:160px;width:1600px;height:272px}
+.kr .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);box-shadow:0 1px 0 rgba(20,33,61,.04),0 18px 40px -12px rgba(20,33,61,.14)}
+.kc{position:absolute;top:40px;height:40px;padding:0 16px;border-radius:20px;display:flex;align-items:center;font:700 18px Poppins;letter-spacing:.14em;white-space:nowrap}
+.kr .kt{position:absolute;top:98px;font-size:48px;line-height:1.2;white-space:nowrap}
+.kr .ks{position:absolute;left:40px;top:172px;font:500 26px Poppins;color:var(--ink2);white-space:nowrap}
+.kr .ic72{left:456px;top:32px}
+.kr .arr{position:absolute;left:596px;top:100px;width:72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.kr .kp{position:absolute;top:184px;height:52px;padding:0 20px 0 8px;border-radius:26px;display:flex;align-items:center;gap:12px;font:600 24px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+.kr .kp .av{width:36px;height:36px;border-radius:18px;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font:700 17px Poppins}
+.kr .kp .ii{width:36px;height:36px;display:flex;align-items:center;justify-content:center}
+.kr .ok2{position:absolute;right:40px;top:40px;height:48px;padding:0 20px 0 14px;border-radius:24px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap}
+/* scene O: two outlets */
+.oc{position:absolute;top:270px;width:784px;height:440px;overflow:hidden}
+.oc .sg{position:absolute;left:0;width:784px;top:102px;text-align:center;font:600 17px Poppins;letter-spacing:.2em;color:var(--muted);white-space:nowrap}
+.oc .ic72{left:40px;top:152px}
+.oc .ot2{position:absolute;left:136px;top:146px;font-size:44px;line-height:1.2;white-space:nowrap}
+.oc .os{position:absolute;left:136px;top:206px;font:500 26px Poppins;color:var(--ink2);white-space:nowrap}
+.oc .hrl{left:40px;right:40px;top:270px}
+.oc .lbl{left:40px;top:294px}
+.oc .op{position:absolute;top:336px;height:56px;padding:0 22px 0 14px;border-radius:28px;display:flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+#both{position:absolute;left:160px;top:742px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;gap:22px}
+#both .tx{font-size:40px;white-space:nowrap}
+#sweep{position:absolute;left:0;top:0;width:1920px;height:1080px;background:var(--ink);z-index:40}
+#sweep b{position:absolute;left:0;top:0;width:10px;height:1080px;background:var(--gold)}
+/* quiz */
+.opt{position:absolute;top:460px;width:376px;height:256px;border-radius:28px}
+.opt .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line)}
+.opt .lt{position:absolute;left:32px;top:30px;width:52px;height:52px;border-radius:26px;background:var(--paper);display:flex;align-items:center;justify-content:center;font:700 22px Poppins;color:var(--ink)}
+.opt .ot{position:absolute;left:32px;font-size:40px;line-height:1.2;white-space:nowrap}
+.opt .ok{position:absolute;right:30px;top:30px;width:52px;height:52px;border-radius:26px;background:var(--gold);display:flex;align-items:center;justify-content:center}
+.qq{position:absolute;left:160px;font-size:68px;line-height:1.18;white-space:nowrap}
+#ring{position:absolute;left:1610px;top:236px;width:150px;height:150px}
+#ringN{position:absolute;left:0;top:0;width:150px;height:150px;display:flex;align-items:center;justify-content:center;font-size:64px}
+#take{position:absolute;left:160px;top:748px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:22px;padding:0 36px}
+#take .tx{font-size:40px;white-space:nowrap}
+/* recap */
+#rh{position:absolute;left:160px;top:142px;font-size:64px;white-space:nowrap}
+.rw{position:absolute;left:160px;width:1600px;height:128px}
+.rw .rn{position:absolute;left:40px;top:42px;font:700 30px Poppins;color:var(--gold);letter-spacing:.04em}
+.rw .ri{position:absolute;left:112px;top:28px;width:72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.rw .rt{position:absolute;left:216px;top:36px;font:600 38px Poppins;white-space:nowrap}
+.fp{position:absolute;top:36px;height:56px;padding:0 22px;border-radius:28px;display:flex;align-items:center;font:600 24px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+#next{position:absolute;left:160px;top:762px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:24px;padding:0 32px}
+#next .nc{height:44px;padding:0 18px;border-radius:22px;background:var(--gold);display:flex;align-items:center;font:700 18px Poppins;letter-spacing:.14em;color:#fff;white-space:nowrap}
+#next .nt{font:600 34px Poppins;white-space:nowrap;flex:1}
+.cap{font:600 38px Poppins;color:var(--ink);background:rgba(255,255,255,.96);padding:12px 30px;border-radius:40px;box-shadow:0 10px 30px -10px rgba(20,33,61,.25)}
+.cap .cw{color:#5B647A}.cap .cw.on{color:var(--ink)}.cap .cw.act{color:var(--gold)}
+</style></head><body>
+<div id="stage">
+  <div id="bgv"></div>
+  <div id="cam">
+    <!-- title + header (shared elements) -->
+    <div class="chip" id="eyebrow"><i></i>EP 13 · PRINCIPLES OF MANAGEMENT</div>
+    <div class="serif" id="title"><span class="acc">Contingency</span> Approach</div>
+    <div id="sub">Explained with one chai stall</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#B8862F" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="chip ghost" id="exChip">EXAMPLE FIGURES</div>
+
+    <!-- scene A: one favourite style -->
+    <div id="sA">
+      <div class="card" id="hero">
+        <svg id="awn" width="616" height="90" style="position:absolute;left:0;top:0"><g id="awnG"></g></svg>
+        <div id="sign" style="position:absolute;left:0;width:616px;top:104px;text-align:center;font:600 18px Poppins;letter-spacing:.2em;color:var(--muted)">CHAI CORNER</div>
+        <svg id="stall" width="616" height="320" style="position:absolute;left:0;top:130px">
+          <g id="steam" fill="none" stroke="#C9BFAE" stroke-width="5" stroke-linecap="round">
+            <path id="s1" d="M128 116 c-12 -14 12 -24 0 -40"/><path id="s2" d="M152 110 c-12 -14 12 -24 0 -44"/><path id="s3" d="M176 116 c-12 -14 12 -24 0 -40"/>
+          </g>
+          <g id="ravi"><circle cx="308" cy="98" r="44" fill="#14213D"/><path d="M220 210 c0 -48 40 -74 88 -74 s88 26 88 74 z" fill="#14213D"/><path d="M286 140 l22 26 l22 -26" fill="none" stroke="#B8862F" stroke-width="6" stroke-linejoin="round"/></g>
+          <rect x="60" y="196" width="496" height="92" rx="16" fill="#EEE8DB"/>
+          <rect x="60" y="196" width="496" height="10" rx="5" fill="#B8862F"/>
+          <g id="kettle" transform="translate(152 196)"><path d="M-40 0 v-54 a22 22 0 0 1 22 -22 h36 a22 22 0 0 1 22 22 v54 z" fill="#3A4560"/><path d="M40 -46 q26 0 26 -26" fill="none" stroke="#3A4560" stroke-width="8" stroke-linecap="round"/><rect x="-14" y="-88" width="28" height="12" rx="6" fill="#3A4560"/></g>
+          <g id="cups"></g>
+        </svg>
+        <div class="serif" id="hname">Ravi</div>
+        <div id="htag">OWNER · SIX STAFF</div>
+      </div>
+      <div class="card" id="tc">
+        <div class="lbl" style="left:36px;top:34px">TIME OF DAY</div>
+        <div class="serif tbig" id="tA">4:00 PM</div><div class="serif tbig" id="tB">8:00 AM</div>
+        <div class="pill" id="pA" style="left:36px;top:196px"><span id="pAi"></span>Slow afternoon</div>
+        <div class="pill" id="pB" style="left:36px;top:196px;background:#F6E3DC;color:#B5482F"><span id="pBi"></span>Morning rush</div>
+        <div class="vr" style="left:452px;top:34px;height:206px"></div>
+        <div class="lbl" style="left:488px;top:34px">RAVI'S STYLE</div>
+        <div class="ic64" id="stI" style="left:488px;top:74px"></div>
+        <div class="serif" id="stName">Team chat</div>
+        <div class="pill" id="sP1" style="left:488px;top:196px"><span id="sP1i"></span>Everyone shares ideas</div>
+        <div class="pill" id="sP2" style="left:488px;top:196px;background:#F6E3DC;color:#B5482F"><span id="sP2i"></span>Too slow for a rush</div>
+      </div>
+      <div class="card" id="rc">
+        <div class="lbl" id="rcL1" style="left:36px;top:34px">RESULT</div>
+        <div id="r1">
+          <div class="serif" id="r1t">It works</div>
+          <div class="pill" id="r1p" style="left:36px;top:196px"><span id="r1pi"></span>New ideas, happy team</div>
+          <div id="team6"></div>
+        </div>
+        <div id="r2">
+          <div class="lbl" style="left:300px;top:34px">CUSTOMERS WAITING</div>
+          <div class="serif" id="wN">0</div>
+          <div id="ppl"></div>
+          <div class="pill" id="r2p" style="left:36px;top:196px;background:#F6E3DC;color:#B5482F"><span id="r2pi"></span>Chai goes cold</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- scene D: definition -->
+    <div id="sD">
+      <div class="serif" id="dq">The <span class="acc">contingency</span> approach</div>
+      <div class="serif" id="dl">Contingent means <span class="acc">depending on something</span></div>
+      <div id="dlb"><span class="lbl" style="position:static">SCHOOL OF MANAGEMENT THOUGHT · 1960s AND 1970s</span></div>
+      <div class="card bar84" id="defbar"><span id="defI"></span><span class="tx">Contingency approach = the right way to manage <span class="acc">depends on the situation</span></span></div>
+      <div id="cvRow"></div>
+    </div>
+
+    <!-- scene W: the thinkers -->
+    <div id="sW">
+      <div class="card bar84" id="wbar"><span id="wbarI"></span><span class="tx">The idea grew in the <span class="acc">1960s and 1970s</span></span></div>
+      <div id="tkRow"></div>
+    </div>
+
+    <!-- scene I: if, then -->
+    <div id="sI"><div id="itRow"></div></div>
+
+    <!-- scene F: four factors -->
+    <div id="sF">
+      <div class="card bar84" id="fbar"><span id="fbarI"></span><span class="tx">Four things shape the <span class="acc">situation</span></span></div>
+      <div id="fcRow"></div>
+    </div>
+
+    <!-- scene K: if-then at chai corner -->
+    <div id="sK"><div id="krRows"></div></div>
+
+    <!-- scene O: two outlets -->
+    <div id="sO"><div id="ocRow"></div><div id="both"><span class="serif tx">One brand</span><span class="serif tx" style="color:#B8862F">+</span><span class="serif tx">two places</span><span class="serif tx" style="color:#B8862F">=</span><span class="serif tx" style="color:#E9D9B5">two approaches</span></div></div>
+
+    <!-- quick check -->
+    <div id="quiz">
+      <div class="chip" id="qchip" style="left:160px;top:120px"><i></i>QUICK CHECK</div>
+      <div class="serif qq" id="qq1" style="top:224px">The morning rush hits Chai Corner.</div><div class="serif qq acc" id="qq2" style="top:304px">Which style fits best?</div>
+      <svg id="ring" viewBox="0 0 150 150"><circle cx="75" cy="75" r="66" fill="#fff" stroke="#E2DACB" stroke-width="8"/><circle id="ringA" cx="75" cy="75" r="66" fill="none" stroke="#B8862F" stroke-width="8" stroke-linecap="round" transform="rotate(-90 75 75)"/></svg>
+      <div class="serif" id="ringN" style="left:1610px;top:236px;position:absolute"></div>
+      <div id="opts"></div>
+      <div id="take"><span id="takeI"></span><span class="serif tx" id="takeT">Rush hour = quick, firm instructions</span></div>
+    </div>
+
+    <!-- recap -->
+    <div id="recap">
+      <div class="chip" id="rchip" style="left:160px;top:84px"><i></i>RECAP</div>
+      <div class="serif" id="rh">Remember these <span class="acc">three things</span></div>
+      <div id="rRows"></div>
+      <div id="next"><span class="nc">NEXT · EP 14</span><span class="nt">Functions of Management</span><span id="nextI"></span></div>
+    </div>
+  </div>
+  <div id="stmt"><div id="st1">There is no one best way.</div><div class="serif" id="st2">It all <span style="color:#E9B95C">depends.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

@@ -1,0 +1,283 @@
+<!doctype html><html><head><meta charset="utf-8"><title>MBA - Functions of Management (Ep 14)</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<style>
+/* ===== MBA world: Boardroom ===== */
+:root{--paper:#F5F1E8;--paper2:#EEE8DB;--ink:#14213D;--ink2:#3A4560;--muted:#8A8274;--line:#E2DACB;--gold:#B8862F;--gold2:#E9D9B5;--card:#FFFFFF;--red:#B5482F}
+#stage{background:var(--paper);font-family:Poppins;color:var(--ink)}
+#bgv{position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 40%,rgba(255,255,255,.55),rgba(255,255,255,0) 60%),radial-gradient(140% 120% at 50% 50%,rgba(0,0,0,0) 62%,rgba(90,70,40,.08))}
+#prog{position:absolute;left:0;top:0;height:6px;width:1920px;background:var(--line);z-index:60}
+#prog i{display:block;height:6px;background:var(--gold);width:0}
+#cam{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.serif{font-family:Poppins;font-weight:700;letter-spacing:-.025em}
+.chip{position:absolute;display:inline-flex;align-items:center;gap:14px;height:44px;padding:0 20px;border-radius:22px;background:var(--ink);color:#F5E7C6;font:600 18px Poppins;letter-spacing:.16em;white-space:nowrap}
+.chip i{width:8px;height:8px;border-radius:4px;background:var(--gold)}
+.chip.ghost{background:transparent;color:var(--muted);border:2px solid var(--line);height:40px;font-size:16px}
+#title{position:absolute;left:0;top:0;line-height:1.05;white-space:nowrap;transform-origin:0 0;color:var(--ink)}
+#title .acc,.acc{color:var(--gold)}
+#sub{position:absolute;left:0;top:640px;width:1920px;text-align:center;font:500 32px Poppins;color:var(--muted)}
+#rule{position:absolute;left:840px;top:612px}
+.card{position:absolute;background:var(--card);border-radius:28px;box-shadow:0 1px 0 rgba(20,33,61,.04),0 18px 40px -12px rgba(20,33,61,.14)}
+.lbl{position:absolute;font:600 18px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.abs{position:absolute}
+.pill{position:absolute;height:48px;padding:0 20px;border-radius:24px;display:flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+.avc{position:absolute;width:64px;height:64px;border-radius:32px;display:flex;align-items:center;justify-content:center;font:700 28px Poppins;color:#fff;background:var(--ink)}
+/* scene A: the new outlet */
+#hero{left:160px;top:270px;width:616px;height:580px;overflow:hidden}
+#hname{position:absolute;left:0;width:616px;top:452px;text-align:center;font-size:44px}
+#htag{position:absolute;left:0;width:616px;text-align:center;top:516px;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+#badge{position:absolute;right:32px;top:116px;width:72px;height:72px;border-radius:36px;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font:700 34px Poppins}
+#outc{left:840px;top:270px;width:920px;height:274px}
+#oN,#dN{position:absolute;top:66px;font-size:104px;line-height:1;white-space:nowrap}
+#oN{left:36px}
+.ost{position:absolute;top:76px;width:96px;height:96px;border-radius:24px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+#odiv{position:absolute;left:460px;top:34px;width:2px;height:206px;background:var(--line)}
+#dN{left:496px}
+#dU{position:absolute;left:680px;top:120px;font:600 28px Poppins;color:var(--ink2);white-space:nowrap}
+#todo{left:840px;top:576px;width:920px;height:274px}
+.job{position:absolute;top:84px;width:266px;height:154px;border-radius:22px;background:var(--paper);overflow:hidden}
+.job .ji{position:absolute;left:24px;top:22px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
+.job .jt{position:absolute;left:96px;top:30px;font:600 28px Poppins;white-space:nowrap}
+.job .jb{position:absolute;left:24px;top:104px;width:218px;height:14px;border-radius:7px;background:#E7E0D2;overflow:hidden}
+.job .jb i{position:absolute;left:0;top:0;height:14px;border-radius:7px;background:var(--gold);width:0}
+/* statement on navy */
+#stmt{position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:41}
+#st1{position:absolute;left:0;width:1920px;top:400px;text-align:center;font:500 52px Poppins;color:#E9D9B5;white-space:nowrap}
+#st2{position:absolute;left:0;width:1920px;top:492px;text-align:center;font-size:112px;color:#fff;white-space:nowrap}
+/* scene D: definition */
+#dq{position:absolute;left:0;width:1920px;top:470px;text-align:center;font-size:96px;white-space:nowrap}
+#defbar,#kdef{left:160px;top:270px;width:1600px;height:84px;border-radius:24px;display:flex;align-items:center;gap:20px;padding:0 32px}
+#defbar .tx,#kdef .tx{font:600 32px Poppins;white-space:nowrap}
+.dc{position:absolute;top:386px;width:512px;height:474px}
+.dc .di{position:absolute;left:196px;top:48px;width:120px;height:120px;border-radius:60px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.dc .dt{position:absolute;left:0;width:512px;top:198px;text-align:center;font-size:48px;white-space:nowrap}
+.dc .ds{position:absolute;left:0;width:512px;top:268px;text-align:center;font:500 26px Poppins;color:var(--ink2);white-space:nowrap}
+.dc .hr{position:absolute;left:40px;right:40px;top:336px;height:2px;background:var(--line)}
+.dc .dx{position:absolute;left:0;width:512px;top:362px;text-align:center;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.dc .de{position:absolute;left:0;width:512px;top:396px;text-align:center;font:600 30px Poppins;white-space:nowrap}
+/* scene G: Gulick's seven -> today's five */
+#gk{left:160px;top:270px;width:1600px;height:280px}
+#gk2{right:40px;left:auto}
+.lt7{position:absolute;top:80px;width:196px;height:168px;border-radius:22px;background:var(--paper)}
+.lt7 .lg{position:absolute;left:0;width:196px;top:14px;text-align:center;font-size:88px;line-height:1.1;white-space:nowrap}
+.lt7 .lw{position:absolute;left:0;width:196px;top:124px;text-align:center;font:600 17px Poppins;letter-spacing:.1em;white-space:nowrap}
+#gb{left:160px;top:582px;width:1600px;height:278px}
+.gp{position:absolute;inset:0}
+#gav{position:absolute;left:40px;top:62px;width:120px;height:120px;border-radius:60px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+#gnm{position:absolute;left:196px;top:48px;font-size:56px;white-space:nowrap}
+#gds{position:absolute;left:196px;top:128px;font:500 28px Poppins;color:var(--ink2);white-space:nowrap}
+#gword{position:absolute;left:0;width:1600px;top:70px;text-align:center;font-size:140px;line-height:1.1;letter-spacing:.06em;white-space:nowrap}
+.f5{position:absolute;top:84px;width:288px;height:64px;border-radius:32px;background:var(--paper);display:flex;align-items:center;gap:14px;padding:0 20px;font:600 28px Poppins;white-space:nowrap}
+.f5 b{flex:0 0 44px;height:44px;border-radius:22px;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font:700 20px Poppins}
+#gstrip{position:absolute;left:40px;top:178px;width:1520px;height:60px;border-radius:18px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;gap:16px;font:600 28px Poppins;white-space:nowrap}
+/* scene F: the cycle of questions */
+.fc{position:absolute;top:270px;width:294.4px;height:300px}
+.fc .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line);box-shadow:0 18px 40px -16px rgba(20,33,61,.14)}
+.fc .fn{position:absolute;left:32px;top:34px;font:700 22px Poppins;letter-spacing:.04em}
+.fc .fi{position:absolute;right:28px;top:24px;width:64px;height:64px;border-radius:32px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.fc .ft{position:absolute;left:32px;top:110px;font-size:44px;white-space:nowrap}
+.fc .hr{position:absolute;left:32px;right:32px;top:188px;height:2px;background:var(--line)}
+.fc .fa{position:absolute;left:32px;top:208px;font:600 17px Poppins;letter-spacing:.16em;white-space:nowrap}
+.fc .fq{position:absolute;left:32px;top:236px;font:600 28px Poppins;white-space:nowrap}
+#flow{position:absolute;left:0;top:0;width:1920px;height:1080px}
+#ex{left:160px;top:632px;width:1600px;height:228px}
+.xp{position:absolute;inset:0}
+.xp .xl{position:absolute;left:40px;top:36px;font:600 18px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.xp .xi{position:absolute;left:40px;top:92px;width:80px;height:80px;border-radius:40px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.xp .xs{position:absolute;left:152px;top:110px;font:600 32px Poppins;white-space:nowrap}
+.xv{position:absolute;right:40px;top:0;height:228px;display:flex;align-items:center;gap:16px}
+.xv .big{font-size:84px;line-height:1;color:var(--gold);white-space:nowrap}
+.xv .unit{font:600 28px Poppins;color:var(--ink2);white-space:nowrap}
+.xv .pl{position:static}
+.xv .avc{position:relative}
+#round{position:absolute;right:40px;top:24px;height:44px;padding:0 18px;border-radius:22px;background:var(--ink);color:#F5E7C6;display:flex;align-items:center;font:600 17px Poppins;letter-spacing:.16em;white-space:nowrap}
+#cbar{position:relative;width:360px;height:120px}
+#cbar .tk{position:absolute;left:0;top:44px;width:360px;height:32px;border-radius:16px;background:#E7E0D2}
+#cbar .fl{position:absolute;left:0;top:44px;height:32px;border-radius:16px;background:var(--red);width:0}
+#cbar .gl{position:absolute;left:286px;top:30px;width:4px;height:60px;border-radius:2px;background:var(--ink)}
+#cbar .gt{position:absolute;left:236px;top:0;font:600 17px Poppins;letter-spacing:.12em;color:var(--ink);white-space:nowrap}
+#cbar .cv{position:absolute;left:0;top:88px;font:600 24px Poppins;color:var(--red);white-space:nowrap}
+/* scene K: coordination */
+#tl{left:160px;top:386px;width:1600px;height:354px}
+.ax{position:absolute;top:76px;font:600 17px Poppins;letter-spacing:.12em;color:var(--muted);white-space:nowrap}
+.trow{position:absolute;left:40px;width:1520px;height:52px}
+.trow .tn{position:absolute;left:0;top:6px;font:600 28px Poppins;white-space:nowrap}
+.trow .tt{position:absolute;left:360px;top:0;width:1160px;height:52px;border-radius:14px;background:var(--paper)}
+.trow .tb{position:absolute;top:0;height:52px;border-radius:14px;background:var(--gold)}
+.trow .tr{position:absolute;top:0;height:52px;border-radius:14px;background:#F6E3DC;display:flex;align-items:center;justify-content:center;font:600 22px Poppins;color:var(--red);white-space:nowrap;overflow:hidden}
+#sync{position:absolute;left:auto;right:40px;top:24px;background:var(--ink);color:#fff}
+#vline{position:absolute;top:96px;width:4px;height:236px;border-radius:2px;background:var(--ink)}
+#ess{position:absolute;left:160px;top:772px;width:1600px;height:88px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:22px;padding:0 36px}
+#ess .tx{font-size:40px;white-space:nowrap}
+/* scene R: results + coming up */
+#res{left:160px;top:270px;width:1600px;height:220px}
+#rtk{position:absolute;left:40px;top:92px;width:1160px;height:56px;border-radius:16px;background:#E7E0D2}
+#rfl{position:absolute;left:40px;top:92px;height:56px;border-radius:16px;background:var(--gold);width:0}
+#rgl{position:absolute;top:80px;width:4px;height:80px;border-radius:2px;background:var(--ink)}
+#rgt{position:absolute;top:170px;font:600 17px Poppins;letter-spacing:.12em;color:var(--ink);white-space:nowrap}
+#rN{position:absolute;left:1240px;top:62px;font-size:84px;line-height:1;white-space:nowrap}
+#rU{position:absolute;left:1240px;top:156px;font:600 22px Poppins;color:var(--ink2);white-space:nowrap}
+#beat{position:absolute;left:auto;right:40px;top:24px;background:var(--gold);color:#fff}
+.ep{position:absolute;top:522px;width:294.4px;height:338px}
+.ep .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line);box-shadow:0 18px 40px -16px rgba(20,33,61,.14)}
+.ep .en{position:absolute;left:32px;top:34px;font:700 20px Poppins;letter-spacing:.12em;color:var(--gold);white-space:nowrap}
+.ep .ei{position:absolute;left:32px;top:84px;width:96px;height:96px;border-radius:48px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.ep .et{position:absolute;left:32px;top:204px;font-size:44px;white-space:nowrap}
+.ep .hr{position:absolute;left:32px;right:32px;top:276px;height:2px;background:var(--line)}
+.ep .ex2{position:absolute;left:32px;top:294px;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+#sweep{position:absolute;left:0;top:0;width:1920px;height:1080px;background:var(--ink);z-index:40}
+#sweep b{position:absolute;left:0;top:0;width:10px;height:1080px;background:var(--gold)}
+/* quiz */
+.opt{position:absolute;top:470px;width:376px;height:230px;border-radius:28px}
+.opt .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line)}
+.opt .lt{position:absolute;left:32px;top:30px;width:52px;height:52px;border-radius:26px;background:var(--paper);display:flex;align-items:center;justify-content:center;font:700 22px Poppins;color:var(--ink)}
+.opt .ot{position:absolute;left:32px;top:136px;font-size:44px;white-space:nowrap}
+.opt .ok{position:absolute;right:30px;top:30px;width:52px;height:52px;border-radius:26px;background:var(--gold);display:flex;align-items:center;justify-content:center}
+.qq{position:absolute;left:160px;font-size:68px;line-height:1.18;white-space:nowrap}
+#ring{position:absolute;left:1610px;top:236px;width:150px;height:150px}
+#ringN{position:absolute;left:0;top:0;width:150px;height:150px;display:flex;align-items:center;justify-content:center;font-size:64px}
+#take{position:absolute;left:160px;top:748px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:22px;padding:0 36px}
+#take .tx{font-size:40px;white-space:nowrap}
+/* recap */
+#rh{position:absolute;left:160px;top:142px;font-size:64px;white-space:nowrap}
+.rw{position:absolute;left:160px;width:1600px;height:128px}
+.rw .rn{position:absolute;left:40px;top:42px;font:700 30px Poppins;color:var(--gold);letter-spacing:.04em}
+.rw .ri{position:absolute;left:112px;top:28px;width:72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.rw .rt{position:absolute;left:216px;top:36px;font:600 38px Poppins;white-space:nowrap}
+.fp{position:absolute;top:36px;height:56px;padding:0 22px;border-radius:28px;display:flex;align-items:center;font:600 24px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+#next{position:absolute;left:160px;top:762px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:24px;padding:0 32px}
+#next .nc{height:44px;padding:0 18px;border-radius:22px;background:var(--gold);display:flex;align-items:center;font:700 18px Poppins;letter-spacing:.14em;color:#fff;white-space:nowrap}
+#next .nt{font:600 34px Poppins;white-space:nowrap;flex:1}
+.cap{font:600 38px Poppins;color:var(--ink);background:rgba(255,255,255,.96);padding:12px 30px;border-radius:40px;box-shadow:0 10px 30px -10px rgba(20,33,61,.25)}
+.cap .cw{color:#5B647A}.cap .cw.on{color:var(--ink)}.cap .cw.act{color:var(--gold)}
+</style></head><body>
+<div id="stage">
+  <div id="bgv"></div>
+  <div id="cam">
+    <!-- title + header (shared elements) -->
+    <div class="chip" id="eyebrow"><i></i>EP 14 · PRINCIPLES OF MANAGEMENT</div>
+    <div class="serif" id="title">Functions of <span class="acc">Management</span></div>
+    <div id="sub">Explained with one chai stall</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#B8862F" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="chip ghost" id="exChip">EXAMPLE FIGURES</div>
+
+    <!-- scene A: a second outlet, one messy list -->
+    <div id="sA">
+      <div class="card" id="hero">
+        <svg id="awn" width="616" height="90" style="position:absolute;left:0;top:0"><g id="awnG"></g></svg>
+        <div id="sign" style="position:absolute;left:0;width:616px;top:104px;text-align:center;font:600 18px Poppins;letter-spacing:.2em;color:var(--muted)">CHAI CORNER</div>
+        <svg id="stall" width="616" height="320" style="position:absolute;left:0;top:130px">
+          <g id="steam" fill="none" stroke="#C9BFAE" stroke-width="5" stroke-linecap="round">
+            <path id="s1" d="M128 116 c-12 -14 12 -24 0 -40"/><path id="s2" d="M152 110 c-12 -14 12 -24 0 -44"/><path id="s3" d="M176 116 c-12 -14 12 -24 0 -40"/>
+          </g>
+          <g id="ravi"><circle cx="308" cy="98" r="44" fill="#14213D"/><path d="M220 210 c0 -48 40 -74 88 -74 s88 26 88 74 z" fill="#14213D"/><path d="M286 140 l22 26 l22 -26" fill="none" stroke="#B8862F" stroke-width="6" stroke-linejoin="round"/></g>
+          <rect x="60" y="196" width="496" height="92" rx="16" fill="#EEE8DB"/>
+          <rect x="60" y="196" width="496" height="10" rx="5" fill="#B8862F"/>
+          <g id="kettle" transform="translate(152 196)"><path d="M-40 0 v-54 a22 22 0 0 1 22 -22 h36 a22 22 0 0 1 22 22 v54 z" fill="#3A4560"/><path d="M40 -46 q26 0 26 -26" fill="none" stroke="#3A4560" stroke-width="8" stroke-linecap="round"/><rect x="-14" y="-88" width="28" height="12" rx="6" fill="#3A4560"/></g>
+          <g id="cups"></g>
+        </svg>
+        <div id="badge">2</div>
+        <div class="serif" id="hname">Outlet 2</div>
+        <div id="htag">CHAI CORNER · NEAR THE COLLEGE</div>
+      </div>
+      <div class="card" id="outc">
+        <div class="lbl" style="left:36px;top:34px">OUTLETS</div>
+        <div class="serif" id="oN">1</div>
+        <div class="ost" id="os0" style="left:140px"></div><div class="ost" id="os1" style="left:256px"></div>
+        <div class="pill" id="oP" style="left:36px;top:196px;background:#F6E3DC;color:#B5482F"><span id="oPi"></span><span>One stall nearly broke him</span></div>
+        <div id="odiv"></div>
+        <div class="lbl" style="left:496px;top:34px">OPENING DAY</div>
+        <div class="serif" id="dN">Soon</div><div id="dU">days left</div>
+        <div class="pill" id="dP" style="left:496px;top:196px"><span id="dPi"></span><span id="dPt">Date fixed</span></div>
+      </div>
+      <div class="card" id="todo">
+        <div class="lbl" style="left:36px;top:34px">RAVI'S TO-DO LIST</div>
+        <div class="pill" id="fin" style="right:36px;top:22px;background:#F6E3DC;color:#B5482F"><span id="finI"></span>0 finished</div>
+        <div id="jobRow"></div>
+      </div>
+    </div>
+
+    <!-- scene D: definition -->
+    <div id="sD">
+      <div class="serif" id="dq">What are the <span class="acc">functions?</span></div>
+      <div class="card" id="defbar"><span id="defI"></span><span class="tx">Functions of management = the <span class="acc">core jobs</span> every manager does</span></div>
+      <div id="dRow"></div>
+    </div>
+
+    <!-- scene G: Gulick's seven, today's five -->
+    <div id="sG">
+      <div class="card" id="gk">
+        <div class="lbl" style="left:40px;top:34px">LUTHER GULICK · 1937</div>
+        <div class="lbl" id="gk2" style="top:34px">7 FUNCTIONS</div>
+        <div id="tiles"></div>
+      </div>
+      <div class="card" id="gb">
+        <div class="gp" id="gp0"><div id="gav"></div><div class="serif" id="gnm">Luther Gulick</div><div id="gds">American expert on how governments are run</div>
+          <div class="pill" id="gpa" style="left:196px;top:190px"><span id="gpaI"></span>1937</div><div class="pill" id="gpb" style="left:340px;top:190px"><span id="gpbI"></span>A list of 7 jobs</div></div>
+        <div class="gp" id="gp1"><div class="lbl" style="left:40px;top:34px">HIS LIST, BY ITS FIRST LETTERS</div><div class="serif" id="gword"></div></div>
+        <div class="gp" id="gp2"><div class="lbl" style="left:40px;top:34px">TODAY · 5 FUNCTIONS</div><div id="f5row"></div>
+          <div id="gstrip"><span id="gsI"></span>Coordinating runs through all five</div></div>
+      </div>
+    </div>
+
+    <!-- scene F: five questions, one cycle -->
+    <div id="sF">
+      <svg id="flow" width="1920" height="1080" fill="none" stroke-linecap="round" stroke-linejoin="round"><g id="chev"></g>
+        <path id="ret" d="M1612.6 572 V601 H307.2 V584" stroke="#D9CFBC" stroke-width="4"/><path id="retH" d="M297.2 590 L307.2 578 L317.2 590" stroke="#D9CFBC" stroke-width="4"/></svg>
+      <div id="fRow"></div>
+      <div class="card" id="ex"><div id="round">ROUND 1</div><div id="xps"></div></div>
+    </div>
+
+    <!-- scene K: coordination -->
+    <div id="sK">
+      <div class="serif" id="kq" style="position:absolute;left:0;width:1920px;top:470px;text-align:center;font-size:96px;white-space:nowrap">What holds it <span class="acc">together?</span></div>
+      <div class="card" id="kdef"><span id="kdI"></span><span class="tx">Coordination = every part working together, <span class="acc">at the right time</span></span></div>
+      <div class="card" id="tl">
+        <div class="lbl" style="left:40px;top:36px">OUTLET 2 · OPENING PLAN</div>
+        <div class="pill" id="sync"><span id="syI"></span>In sync</div>
+        <div id="axis"></div>
+        <div id="trows"></div>
+        <div id="vline"></div>
+      </div>
+      <div id="ess"><span id="essI"></span><span class="serif tx" id="essT">Coordination = the <span style="color:#E9D9B5">essence</span> of management</span></div>
+    </div>
+
+    <!-- scene R: results + what comes next -->
+    <div id="sR">
+      <div class="card" id="res">
+        <div class="lbl" style="left:40px;top:36px">OUTLET 2 · CUPS PER DAY · WEEK 4</div>
+        <div class="pill" id="beat"><span id="beatI"></span>Goal beaten</div>
+        <div id="rtk"></div><div id="rfl"></div><div id="rgl"></div><div id="rgt">GOAL 200</div>
+        <div class="serif" id="rN">150</div><div id="rU">cups a day</div>
+      </div>
+      <div id="epRow"></div>
+    </div>
+
+    <!-- quick check -->
+    <div id="quiz">
+      <div class="chip" id="qchip" style="left:160px;top:120px"><i></i>QUICK CHECK</div>
+      <div class="serif qq" id="qq1" style="top:224px">Meena runs it. Two helpers join.</div><div class="serif qq acc" id="qq2" style="top:304px">Which function is this?</div>
+      <svg id="ring" viewBox="0 0 150 150"><circle cx="75" cy="75" r="66" fill="#fff" stroke="#E2DACB" stroke-width="8"/><circle id="ringA" cx="75" cy="75" r="66" fill="none" stroke="#B8862F" stroke-width="8" stroke-linecap="round" transform="rotate(-90 75 75)"/></svg>
+      <div class="serif" id="ringN" style="left:1610px;top:236px;position:absolute"></div>
+      <div id="opts"></div>
+      <div id="take"><span id="takeI"></span><span class="serif tx" id="takeT">Who exactly fills each job = Staffing</span></div>
+    </div>
+
+    <!-- recap -->
+    <div id="recap">
+      <div class="chip" id="rchip" style="left:160px;top:84px"><i></i>RECAP</div>
+      <div class="serif" id="rh">Remember these <span class="acc">three things</span></div>
+      <div id="rRows"></div>
+      <div id="next"><span class="nc">NEXT · EP 15</span><span class="nt">Planning and Goal Setting</span><span id="nextI"></span></div>
+    </div>
+  </div>
+  <div id="stmt"><div id="st1">Ravi doesn't need more jobs.</div><div class="serif" id="st2">He needs the right <span style="color:#E9B95C">order.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
