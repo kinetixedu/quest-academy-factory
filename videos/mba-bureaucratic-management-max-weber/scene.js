@@ -101,8 +101,8 @@ $('#kI').innerHTML = M.icon('scale', 40, C.gold2, 2.2);
 // good and bad
 const GB = [['check', 'The good', C.gold, [['Fair', 'Same rules for all'], ['Orderly', 'Everyone knows their job'], ['Predictable', 'Same chai at every outlet']]],
   ['x', 'The bad', C.red, [['Red tape', 'Too much paperwork'], ['Rigid', 'Rules never bend'], ['Slow', 'Every step needs a form']]]];
-$('#gbRow').innerHTML = GB.map(([ic, t, col, rows], i) => `<div class="card gb" id="gb${i}" style="left:${160 + i * 816}px"><div class="gi" style="background:${col}">${M.icon(ic, 40, '#fff', 2.8)}</div><div class="serif gt">${t}</div><div class="hr"></div>` +
-  rows.map(([a, b], k) => `<div class="gr" id="gr${i}${k}" style="top:${180 + k * 80}px"><i>${M.icon(ic, 26, col, 2.6)}</i><span>${a}</span><em>${b}</em></div>`).join('') + `</div>`).join('');
+$('#gbRow').innerHTML = GB.map(([ic, t, col, rows], i) => `<div class="card gb" id="gb${i}" style="left:${160 + i * 816}px"><div class="gi" style="background:${col}">${M.icon(ic, 48, '#fff', 2.8)}</div><div class="serif gt">${t}</div><div class="hr"></div>` +
+  rows.map(([a, b], k) => `<div class="gr" id="gr${i}${k}" style="top:${216 + k * 120}px"><i>${M.icon(ic, 32, col, 2.6)}</i><span>${a}</span><em>${b}</em></div>`).join('') + `</div>`).join('');
 const BK = `<svg class="bk" width="40" height="20"><path d="M0 20 L20 0 L40 20 Z" fill="currentColor"/></svg>`;
 $('#spRow').innerHTML = [['smile', 'Customer', 'ASKS', 'Less sugar, please?', C.gold], ['user', 'Helper', 'REPLIES', 'Sorry, not in the rules.', C.ink2]].map(([ic, n, l, b, col], i) =>
   `<div class="card sp" id="sp${i}" style="left:${160 + i * 816}px"><div class="avc" style="background:${col}">${M.icon(ic, 44, '#fff', 2.2)}</div><div class="serif sn">${n}</div><div class="lbl">${l}</div><div class="bub" id="bub${i}" style="color:#F5F1E8">${BK}<div class="bt" id="bt${i}" style="color:#14213D">${b}</div>${i ? '<div class="bt" id="bt2" style="color:#B8862F">Sure, less sugar!</div>' : ''}</div></div>`).join('');
@@ -121,7 +121,6 @@ const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5,
 const caps = M.captions($('#cap'), M.CUES.order);
 const sweepX = t => { for (const [a, b] of SW) { const a1 = M.io((t - a) / 0.42), a2 = M.io((t - b) / 0.46); if (a1 > 0 && a2 < 1) return 1940 * (1 - a1) - 1960 * a2; } return null; };
 const setIco = (el, ic, col, s = 32, w = 2.2) => { const k = ic + col + s; if (el._k !== k) { el._k = k; el.innerHTML = M.icon(ic, s, col, w); } };
-const wbX = M.track(492, [[tD3 - 0.15, 0]], M.SOFT);
 const pillRow = (ids, gap, arrowsG) => {   // lay out pills in a row with arrows between them
   let x = 0; const cx = [];
   ids.forEach(id => { const s = $(id); s.style.left = x + 'px'; cx.push([x, x + s.offsetWidth]); x += s.offsetWidth + gap; });
@@ -226,7 +225,6 @@ M.on(t => {
   if (dOn) {
     const o = { outDur: 0.3, ody: -16 };
     const wb = $('#wb'), pw = M.vis(wb, t, tD1 + 0.1, tDout, { dy: 36, ...o });
-    const x = wbX(t); if (pw > 0) { const tr = wb.style.transform === 'none' || !wb.style.transform ? '' : wb.style.transform; wb.style.transform = (Math.abs(x) > 0.01 ? `translateX(${x.toFixed(2)}px) ` : '') + tr || 'none'; }
     const disc = M.spring(t - tD1 - 0.3, M.SOFT); $('#pDisc').setAttribute('r', (118 * disc).toFixed(2));
     M.vis($('#pBust'), t, tD1 + 0.45, 1e9, { dy: 30, fade: 0.2 });
     M.rise($('#wn'), t, tMax - 0.05, { st: 0.07, sp: M.HEAVY });
@@ -236,11 +234,11 @@ M.on(t => {
     M.draw($('#tlL'), t, tY1 + 0.2, Math.max(0.4, tY2 - tY1 - 0.2), M.io);
     M.vis($('#tlB'), t, tY2 - 0.05, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 });
     M.rise($('#yB'), t, tY2, { st: 0.04 });
-    M.vis($('#dp'), t, tD3 + 0.05, tDout, { dx: 60, dy: 0, ...o });
-    if (swap($('#dn0'), t, tD3 + 0.2, tD4 - 0.14)) {
-      M.vis($('#dv0'), t, tD3 + 0.75, tD4 - 0.14, { dy: 18, outDur: 0.18, ody: -12 });
+    M.vis($('#dp'), t, tD1 + 0.25, tDout, { dx: 60, dy: 0, ...o });
+    if (swap($('#dn0'), t, tD1 + 0.45, tD4 - 0.14)) {
+      M.vis($('#dv0'), t, tD1 + 1.0, tD4 - 0.14, { dy: 18, outDur: 0.18, ody: -12 });
       for (let i = 0; i < 3; i++) {
-        const u = $('#ut' + i); M.vis(u, t, tD3 + 0.85 + i * 0.08, 1e9, { dy: 14 });
+        const u = $('#ut' + i); M.vis(u, t, tD1 + 1.1 + i * 0.08, 1e9, { dy: 14 });
         const g = M.io((t - tLike[i]) / 0.25); u.style.background = mix(C.paper, C.ink, g); u.querySelector('span').style.color = mix(C.ink, '#fff', g);
         u.querySelector('i').style.background = mix('#fff', C.navy2, g);
         setIco(u.querySelector('i'), ['home', 'briefcase', 'landmark'][i], g > 0.5 ? C.gold2 : C.gold, 32, 2.2);
