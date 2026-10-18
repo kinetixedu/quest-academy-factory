@@ -27,7 +27,8 @@ def playlist_id(y, title, desc):
         tok = r.get('nextPageToken')
         if title in m or not tok: break
     if title not in m:
-        p = y.playlists().insert(part='snippet,status', body={'snippet': {'title': title, 'description': desc, 'defaultLanguage': 'en'}, 'status': {'privacyStatus': 'public'}}).execute()
+        time.sleep(4)   # YouTube rate-limits rapid playlist creation
+        p = retry(lambda: y.playlists().insert(part='snippet,status', body={'snippet': {'title': title, 'description': desc, 'defaultLanguage': 'en'}, 'status': {'privacyStatus': 'public'}}).execute())
         m[title] = p['id']
     cache.parent.mkdir(exist_ok=True); cache.write_text(json.dumps(m, indent=1))
     return m[title]
@@ -37,11 +38,17 @@ def retry(fn, tries=5):
         try: return fn()
         except HttpError as e:
             if e.resp.status in (500, 502, 503, 504) and i < tries - 1: time.sleep(2 ** i * 3); continue
+            if e.resp.status == 429 and i < tries - 1: time.sleep(30 * (i + 1)); continue
             raise
 
 def ensure_playlists():
+    # only the categories in this run (MATRIX env from the plan job) - playlists appear as each category gets its first video
     y = yt(); cats = json.loads((R / 'config' / 'categories.json').read_text())
-    for c in cats.values(): print(c['playlist'], playlist_id(y, c['playlist'], f"{c['category']} concepts explained simply, with animated lessons by Quest Academy."))
+    worlds = set()
+    for v in json.loads(os.environ.get('MATRIX', '{"include":[]}'))['include']:
+        worlds.add(json.loads((R / 'videos' / v['slug'] / 'meta.json').read_text())['world'])
+    for w in sorted(worlds):
+        c = cats[w]; print(c['playlist'], playlist_id(y, c['playlist'], f"{c['category']} concepts explained simply, with animated lessons by Quest Academy."))
 
 def main():
     if '--ensure-playlists' in sys.argv: return ensure_playlists()
