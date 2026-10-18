@@ -57,7 +57,7 @@ class QuotaHit(Exception): pass
 
 def is_quota(e):
     txt = (getattr(e, 'content', b'') or b'').decode('utf-8', 'ignore')
-    return isinstance(e, HttpError) and e.resp.status in (403, 429) and any(k in txt for k in ('quotaExceeded', 'uploadLimitExceeded', 'dailyLimitExceeded', 'rateLimitExceeded'))
+    return isinstance(e, HttpError) and e.resp.status in (400, 403, 429) and any(k in txt for k in ('quotaExceeded', 'uploadLimitExceeded', 'dailyLimitExceeded', 'rateLimitExceeded'))
 
 def batch():
     """Upload every built video of this run in matrix (episode) order; stop at the first quota hit so order is preserved."""
