@@ -43,40 +43,41 @@
 .quote{position:absolute;left:0;width:1920px;text-align:center;font-size:76px;line-height:1.2;white-space:nowrap}
 #dlab{position:absolute;left:0;width:1920px;top:330px;text-align:center}
 #dgoal{position:absolute;left:740px;top:640px;width:440px;height:60px;border-radius:30px;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;gap:14px;font:600 26px Poppins;white-space:nowrap}
-#thinker{left:160px;top:270px;width:784px;height:520px}
-#bodyc{left:976px;top:270px;width:784px;height:520px}
-#lav{position:absolute;left:48px;top:224px;width:96px;height:96px;border-radius:48px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font:700 44px Poppins}
-#lname{position:absolute;left:172px;top:226px;font-size:44px;white-space:nowrap}
-#ltag{position:absolute;left:174px;top:290px;font-size:16px}
-.on3{position:absolute;width:112px;height:112px;border-radius:56px}
-.on3 .bg{position:absolute;inset:0;border-radius:56px;background:var(--paper);border:2px solid var(--line)}
-.on3 .oi{position:absolute;left:32px;top:32px;width:48px;height:48px}
-.onl{position:absolute;width:240px;text-align:center;font-size:28px;white-space:nowrap}
+#thinker{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+#thIn{position:absolute;left:0;top:0;width:784px;height:580px}
+#bodyc{left:976px;top:270px;width:784px;height:580px}
+#lav{position:absolute;left:48px;top:240px;width:104px;height:104px;border-radius:52px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font:700 44px Poppins}
+#lname{position:absolute;left:180px;top:236px;font-size:48px;white-space:nowrap}
+#ltag{position:absolute;left:182px;top:306px;font-size:17px}
+.on3{position:absolute;width:128px;height:128px;border-radius:64px}
+.on3 .bg{position:absolute;inset:0;border-radius:64px;background:var(--paper);border:2px solid var(--line)}
+.on3 .oi{position:absolute;left:36px;top:36px;width:56px;height:56px}
+.onl{position:absolute;width:240px;text-align:center;font-size:32px;white-space:nowrap}
 /* scene P: subsystems */
 #defbar{left:160px;top:270px;width:1600px;height:84px;border-radius:24px;display:flex;align-items:center;gap:20px;padding:0 32px}
 #defbar .tx{font:600 32px Poppins;white-space:nowrap}
 #sys{left:160px;top:386px;width:1600px;height:464px}
-.st{position:absolute;top:88px;width:432px;height:216px;border-radius:22px}
+.st{position:absolute;top:88px;width:432px;height:240px;border-radius:22px}
 .st .bg{position:absolute;inset:0;border-radius:22px;background:var(--paper);border:2px solid var(--paper)}
-.st .si{position:absolute;left:28px;top:28px;width:64px;height:64px;border-radius:32px;background:#fff;display:flex;align-items:center;justify-content:center}
-.st .sn{position:absolute;left:112px;top:24px;font-size:36px;white-space:nowrap}
-.st .sl{position:absolute;left:114px;top:74px;font-size:15px}
-.st .pa{position:absolute;top:132px;width:56px;height:56px;border-radius:28px;display:flex;align-items:center;justify-content:center;font:700 24px Poppins;color:#fff;background:var(--ink)}
-.st .pn2{position:absolute;top:144px;font:600 24px Poppins;color:var(--ink2);white-space:nowrap}
+.st .si{position:absolute;left:28px;top:28px;width:72px;height:72px;border-radius:36px;background:#fff;display:flex;align-items:center;justify-content:center}
+.st .sn{position:absolute;left:120px;top:24px;font-size:40px;white-space:nowrap}
+.st .sl{position:absolute;left:122px;top:80px;font-size:17px}
+.st .pa{position:absolute;top:144px;width:64px;height:64px;border-radius:32px;display:flex;align-items:center;justify-content:center;font:700 24px Poppins;color:#fff;background:var(--ink)}
+.st .pn2{position:absolute;top:158px;font:600 26px Poppins;color:var(--ink2);white-space:nowrap}
 #sysS{position:absolute;left:0;top:0}
-#ravRow{position:absolute;left:48px;top:356px;height:56px;width:900px}
+#ravRow{position:absolute;left:48px;top:368px;height:56px;width:900px}
 #ravRow .tx{position:absolute;left:76px;top:10px;font:600 26px Poppins;color:var(--ink2);white-space:nowrap}
-#sgoal{position:absolute;top:360px;height:48px;padding:0 22px;border-radius:24px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:12px;font:600 22px Poppins;white-space:nowrap}
+#sgoal{position:absolute;top:372px;height:48px;padding:0 22px;border-radius:24px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:12px;font:600 22px Poppins;white-space:nowrap}
 /* scene I: the loop */
 #loopS{position:absolute;left:0;top:0}
-.io{position:absolute;top:270px;width:464px;height:288px;border-radius:28px}
+.io{position:absolute;top:270px;width:464px;height:330px;border-radius:28px}
 .io .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line);box-shadow:0 18px 40px -12px rgba(20,33,61,.14)}
-.io .ii{position:absolute;left:40px;top:40px;width:80px;height:80px;border-radius:40px;background:var(--paper);display:flex;align-items:center;justify-content:center}
-.io .it{position:absolute;left:144px;top:36px;font-size:52px;white-space:nowrap}
-.io .is{position:absolute;left:146px;top:102px;font:600 24px Poppins;white-space:nowrap}
-.io .hr{left:40px;right:40px;top:168px}
-.io .ip{position:absolute;top:200px;height:48px;padding:0 20px;border-radius:24px;display:flex;align-items:center;font:600 22px Poppins;white-space:nowrap}
-#fbp{position:absolute;top:626px;height:48px;padding:0 22px;border-radius:24px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:12px;font:600 22px Poppins;white-space:nowrap}
+.io .ii{position:absolute;left:40px;top:44px;width:88px;height:88px;border-radius:44px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.io .it{position:absolute;left:152px;top:38px;font-size:56px;white-space:nowrap}
+.io .is{position:absolute;left:154px;top:110px;font:600 26px Poppins;white-space:nowrap}
+.io .hr{left:40px;right:40px;top:186px}
+.io .ip{position:absolute;top:226px;height:56px;padding:0 20px;border-radius:24px;display:flex;align-items:center;font:600 22px Poppins;white-space:nowrap}
+#fbp{position:absolute;top:666px;height:48px;padding:0 22px;border-radius:24px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:12px;font:600 22px Poppins;white-space:nowrap}
 .strip{position:absolute;left:160px;top:762px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:22px;padding:0 36px}
 .strip .tx{font-size:38px;white-space:nowrap}
 /* scene O: open system */
@@ -94,18 +95,21 @@
 #envS{position:absolute;left:0;top:0}
 .op{height:52px;padding:0 22px;border-radius:26px;background:#24345A;color:#fff;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
 /* scene Y: synergy */
-#syn{left:160px;top:270px;width:784px;height:460px}
+#syn{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+#synIn{position:absolute;left:0;top:0;width:784px;height:580px}
+.ya{position:absolute;top:452px;width:72px;height:72px;border-radius:36px;display:flex;align-items:center;justify-content:center;font:700 30px Poppins;color:#fff;background:var(--ink)}
+#yline{position:absolute;left:84px;top:486px;height:4px;border-radius:2px;background:var(--line)}
 #yic{position:absolute;left:48px;top:48px;width:96px;height:96px;border-radius:48px;background:var(--paper);display:flex;align-items:center;justify-content:center}
 #yT{position:absolute;left:172px;top:44px;font-size:68px;white-space:nowrap}
 #yM{position:absolute;left:174px;top:128px;font:600 30px Poppins;color:var(--gold);white-space:nowrap}
 #yF{position:absolute;left:48px;top:290px;font-size:104px;line-height:1;white-space:nowrap}
-.rc{position:absolute;top:270px;width:784px;height:460px}
+.rc{position:absolute;top:270px;width:784px;height:580px}
 .rc .lbl{left:48px;top:48px}
 .rc .big{position:absolute;right:48px;top:30px;font-size:64px;color:var(--gold);white-space:nowrap}
-.bar{position:absolute;left:48px;width:688px;height:120px}
-.bar .bl{position:absolute;left:0;top:0;font:600 22px Poppins;color:var(--muted);white-space:nowrap}
-.bar .bt{position:absolute;left:0;top:40px;height:64px;border-radius:16px;background:#E7E0D2}
-.bar .bv{position:absolute;top:44px;font-size:44px;white-space:nowrap}
+.bar{position:absolute;left:48px;width:688px;height:140px}
+.bar .bl{position:absolute;left:0;top:0;font:600 26px Poppins;color:var(--muted);white-space:nowrap}
+.bar .bt{position:absolute;left:0;top:48px;height:80px;border-radius:16px;background:#E7E0D2}
+.bar .bv{position:absolute;top:58px;font-size:48px;white-space:nowrap}
 #sweep{position:absolute;left:0;top:0;width:1920px;height:1080px;background:var(--ink);z-index:40}
 #sweep b{position:absolute;left:0;top:0;width:10px;height:1080px;background:var(--gold)}
 /* quiz */
@@ -174,21 +178,21 @@
     <!-- scene D: where it came from, definition -->
     <div id="sD">
       <div class="serif" id="dq">What is the <span class="acc">systems approach?</span></div>
-      <div class="card" id="thinker">
-        <div class="lbl" style="left:48px;top:48px">WHEN IT REACHED MANAGEMENT</div>
-        <div class="pill" id="y50" style="left:48px;top:86px">1950s</div><div class="pill" id="y60" style="left:162px;top:86px">1960s</div>
-        <div class="hr" id="thr" style="left:48px;right:48px;top:182px"></div>
+      <div class="card" id="thinker"><div id="thIn">
+        <div class="lbl" style="left:48px;top:52px">WHEN IT REACHED MANAGEMENT</div>
+        <div class="pill" id="y50" style="left:48px;top:94px;height:56px;font-size:26px;border-radius:28px">1950s</div><div class="pill" id="y60" style="left:162px;top:94px;height:56px;font-size:26px;border-radius:28px">1960s</div>
+        <div class="hr" id="thr" style="left:48px;right:48px;top:200px"></div>
         <div id="lav">L</div>
         <div class="serif" id="lname">Ludwig von Bertalanffy</div>
         <div class="lbl" id="ltag">AUSTRIAN BIOLOGIST · 1901 TO 1972</div>
-        <div class="lbl" id="lidea" style="left:48px;top:362px">HIS BIG IDEA</div>
-        <div class="pill" id="gst" style="left:48px;top:400px"><span id="gstI"></span>General systems theory</div>
-      </div>
+        <div class="lbl" id="lidea" style="left:48px;top:420px">HIS BIG IDEA</div>
+        <div class="pill" id="gst" style="left:48px;top:462px;height:64px;font-size:28px;border-radius:32px;padding:0 26px;gap:14px"><span id="gstI"></span>General systems theory</div>
+      </div></div>
       <div class="card" id="bodyc">
         <div class="lbl" id="bl0" style="left:48px;top:48px">A LIVING BODY</div>
         <div class="lbl" id="bl1" style="left:48px;top:48px">A BUSINESS</div>
         <div class="lbl" id="blr" style="right:48px;top:48px;color:#B8862F">EVERY PART NEEDS THE OTHERS</div>
-        <svg id="bS" width="784" height="520" style="position:absolute;left:0;top:0" fill="none" stroke-linecap="round"><g id="bL"></g></svg>
+        <svg id="bS" width="784" height="580" style="position:absolute;left:0;top:0" fill="none" stroke-linecap="round"><g id="bL"></g></svg>
         <div id="bN"></div>
       </div>
       <div id="dlab"><span class="lbl" style="position:static">THE SYSTEMS APPROACH</span></div>
@@ -235,19 +239,20 @@
 
     <!-- scene Y: synergy -->
     <div id="sY">
-      <div class="card" id="syn">
+      <div class="card" id="syn"><div id="synIn">
         <div id="yic"></div>
         <div class="serif" id="yT">Synergy</div>
         <div id="yM">Whole &gt; sum of its parts</div>
         <div class="hr" id="yhr" style="left:48px;right:48px;top:204px"></div>
         <div class="lbl" id="ylb" style="left:48px;top:236px">THE IDEA IN ONE LINE</div>
         <div class="serif" id="yF">1 + 1 = <span class="acc">3</span></div>
-      </div>
+        <div id="yline"></div><div id="yas"></div>
+      </div></div>
       <div class="card rc" id="yR" style="left:976px">
         <div class="lbl">CUPS SERVED PER HOUR</div>
         <div class="serif big" id="yBig">+40 cups</div>
         <div class="bar" id="yb0" style="top:150px"><div class="bl">Six people, each working alone</div><div class="bt"></div><div class="serif bv"></div></div>
-        <div class="bar" id="yb1" style="top:290px"><div class="bl">The same six, as one system</div><div class="bt"></div><div class="serif bv"></div></div>
+        <div class="bar" id="yb1" style="top:340px"><div class="bl">The same six, as one system</div><div class="bt"></div><div class="serif bv"></div></div>
       </div>
     </div>
 
