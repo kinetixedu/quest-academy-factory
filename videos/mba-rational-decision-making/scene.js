@@ -26,7 +26,7 @@ const tVote = [wt('C1', 'Kabir'), wt('C2', 'Asha'), wt('C2', 'Meena')], tWant = 
 const tNobody = wt('C3', 'nobody');
 const tT = T0('T1'), tSt2 = wt('T1', 'Just'), tTu = T0('D1') - 0.32;
 const tD1 = T0('D1'), tD2 = T0('D2'), tUsing = wt('D2', 'using'), tThat = wt('D2', 'that'), tD3 = T0('D3');
-const tP = [wt('D3', 'logical'), wt('D3', 'complete'), wt('D3', 'knows')], tD4 = T0('D4'), tVery = wt('D4', 'very'), tOpt = wt('D4', 'optimising');
+const tP = [wt('D3', 'logical'), wt('D3', 'facts'), wt('D3', 'knows')], tD4 = T0('D4'), tVery = wt('D4', 'very'), tOpt = wt('D4', 'optimising');
 const tF0 = T0('F0'), tDout = tF0 - 0.32;
 const tStep = [T0('F1'), T0('F2'), T0('F3'), T0('F4'), T0('F5'), T0('F7')];
 const tProb = wt('F1', 'Chai');
