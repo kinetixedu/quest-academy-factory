@@ -31,6 +31,8 @@ if os.environ.get('PREVIEW'):   # build one video for review only (never uploade
 # publish in queue order (keeps series episodes in sequence), then by name
 import csv
 order = {r['slug']: i for i, r in enumerate(csv.DictReader(open(R / 'queue' / 'topics.csv')))} if (R / 'queue' / 'topics.csv').exists() else {}
+if cfg.get('paused') and not os.environ.get('PREVIEW'):
+    print(json.dumps({'include': []})); sys.exit()
 ready = sorted((p.parent for p in R.glob('videos/*/READY') if not (p.parent / 'upload.json').exists()), key=lambda v: (order.get(v.name, 1e9), v.name))
 # series: never publish episode N before every earlier episode is ready or uploaded
 qrows = list(csv.DictReader(open(R / 'queue' / 'topics.csv'))) if (R / 'queue' / 'topics.csv').exists() else []
