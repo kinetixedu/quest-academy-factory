@@ -52,6 +52,7 @@ def ensure_playlists():
 
 def main():
     if '--ensure-playlists' in sys.argv: return ensure_playlists()
+    if '--fix-pending' in sys.argv: return fix_pending()
     ap = argparse.ArgumentParser(); ap.add_argument('folder'); ap.add_argument('--publish-at', default=None); ap.add_argument('--privacy', default=None)
     a = ap.parse_args(); F = pathlib.Path(a.folder)
     meta = json.loads((F / 'meta.json').read_text()); cats = json.loads((R / 'config' / 'categories.json').read_text())
@@ -69,13 +70,40 @@ def main():
         st, resp = req.next_chunk()
         if st: print(f'upload {int(st.progress() * 100)}%', flush=True)
     vid = resp['id']; print('video id', vid)
-    retry(lambda: y.thumbnails().set(videoId=vid, media_body=MediaFileUpload(str(F / 'thumbnail.jpg'), mimetype='image/jpeg')).execute())
-    retry(lambda: y.captions().insert(part='snippet', body={'snippet': {'videoId': vid, 'language': 'en', 'name': 'English', 'isDraft': False}},
-                                      media_body=MediaFileUpload(str(F / 'captions.srt'), mimetype='application/octet-stream')).execute())
-    pl = playlist_id(y, cat['playlist'], f"{cat['category']} concepts explained simply, with animated lessons by Quest Academy.")
-    retry(lambda: y.playlistItems().insert(part='snippet', body={'snippet': {'playlistId': pl, 'resourceId': {'kind': 'youtube#video', 'videoId': vid}}}).execute())
-    out = {'video_id': vid, 'url': f'https://youtu.be/{vid}', 'playlist': cat['playlist'], 'publish_at': a.publish_at, 'uploaded': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())}
-    (F / 'upload.json').write_text(json.dumps(out, indent=1)); print(json.dumps(out))
+    out = {'video_id': vid, 'url': f'https://youtu.be/{vid}', 'playlist': cat['playlist'], 'publish_at': a.publish_at,
+           'uploaded': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), 'pending': []}
+    save = lambda: (F / 'upload.json').write_text(json.dumps(out, indent=1))
+    save()   # record the video id first, so a later failure never causes a duplicate upload
+    finish(y, F, cat, out); save(); print(json.dumps(out))
+
+def finish(y, F, cat, out):
+    """Thumbnail, captions, playlist. Each step is retried on later runs if it fails (listed in out['pending'])."""
+    vid = out['video_id']; todo = out.get('pending') or ['thumbnail', 'captions', 'playlist']
+    steps = {
+        'thumbnail': lambda: y.thumbnails().set(videoId=vid, media_body=MediaFileUpload(str(F / 'thumbnail.jpg'), mimetype='image/jpeg')).execute(),
+        'captions': lambda: y.captions().insert(part='snippet', body={'snippet': {'videoId': vid, 'language': 'en', 'name': 'English', 'isDraft': False}},
+                                                media_body=MediaFileUpload(str(F / 'captions.srt'), mimetype='application/octet-stream')).execute(),
+        'playlist': lambda: y.playlistItems().insert(part='snippet', body={'snippet': {'playlistId': playlist_id(y, cat['playlist'],
+                        f"{cat['category']} concepts explained simply, with animated lessons by Quest Academy."), 'resourceId': {'kind': 'youtube#video', 'videoId': vid}}}).execute(),
+    }
+    left = []
+    for k in todo:
+        try: retry(steps[k]); print('ok', k)
+        except Exception as e:
+            left.append(k); msg = (getattr(e, 'content', b'') or b'').decode('utf-8', 'ignore')[:300] or repr(e)[:300]
+            print(f"::warning title={k} not set yet for {vid}::{msg}".replace('\n', ' '))
+    out['pending'] = left
+    if not left: out['done'] = True
+
+def fix_pending():
+    """Retry thumbnail/captions/playlist for already-uploaded videos (e.g. thumbnail before channel verification)."""
+    cats = json.loads((R / 'config' / 'categories.json').read_text()); y = None
+    for u in sorted(R.glob('videos/*/upload.json')):
+        out = json.loads(u.read_text())
+        if not out.get('pending'): continue
+        F = u.parent; meta = json.loads((F / 'meta.json').read_text())
+        if not (F / 'thumbnail.jpg').exists() and 'thumbnail' in out['pending']: continue
+        y = y or yt(); finish(y, F, cats[meta['world']], out); u.write_text(json.dumps(out, indent=1))
 
 if __name__ == '__main__':
     try:
