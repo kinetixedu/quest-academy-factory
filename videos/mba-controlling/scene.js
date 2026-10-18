@@ -160,7 +160,7 @@ M.on(t => {
   M.draw($('#ruleL'), t, 0.95, 0.7, M.o3);
   M.vis($('#rule'), t, 0.9, tMorph - 0.1, { dy: 0, outDur: 0.25, ody: 0 });
   M.rise($('#sub'), t, 1.15, { st: 0.04, out: tMorph - 0.1, outDur: 0.3 });
-  const exOn = t < tL1 ? [tF[1] + 0.6, tFout] : [tEvery + 0.3, tX5 - 0.1];
+  const exOn = t < tL1 ? [tF[1] + 0.6, tFout] : [tEvery + 0.3, tQ - 0.45];
   M.vis($('#exChip'), t, exOn[0], exOn[1], { dy: 10, outDur: 0.3 });
 
   /* ===== A: a plan nobody checks ===== */
