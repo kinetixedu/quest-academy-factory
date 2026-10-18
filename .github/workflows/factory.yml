@@ -98,6 +98,8 @@ jobs:
         with: { name: playlists, path: registry }
       - name: Build video
         run: tools/build.sh videos/${{ matrix.slug }}
+      - name: Review pack (contact sheet + facts)
+        run: tools/review.sh videos/${{ matrix.slug }}
       - name: Upload to YouTube
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
@@ -118,6 +120,7 @@ jobs:
             videos/${{ matrix.slug }}/upload.json
             videos/${{ matrix.slug }}/captions.srt
             videos/${{ matrix.slug }}/thumbnail.jpg
+            videos/${{ matrix.slug }}/review/
             registry/playlists.json
           if-no-files-found: ignore
       - name: Keep video (7 days, for review)
@@ -140,6 +143,7 @@ jobs:
           shopt -s nullglob
           for d in _results/result-*; do
             slug="${d#_results/result-}"
+            [ -d "$d/videos/$slug/review" ] && mkdir -p "videos/$slug/review" && cp "$d/videos/$slug/review/"* "videos/$slug/review/"
             [ -f "$d/videos/$slug/upload.json" ] && cp "$d/videos/$slug/"{upload.json,captions.srt,thumbnail.jpg} "videos/$slug/" 2>/dev/null || true
             [ -f "$d/registry/playlists.json" ] && mkdir -p registry && cp "$d/registry/playlists.json" registry/
           done
