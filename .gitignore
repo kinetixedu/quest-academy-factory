@@ -8,3 +8,5 @@ videos/*/thumb_frame.jpg
 videos/*/part_*.mp4
 worlds/*/voice.wav
 *.log
+!assets/*.mp4
+__pycache__/

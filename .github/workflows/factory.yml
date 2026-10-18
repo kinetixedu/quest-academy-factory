@@ -9,6 +9,11 @@ on:
   schedule:
     - cron: '17 */3 * * *'      # every 3 hours, picks up anything still waiting (quota-limited runs)
   workflow_dispatch:
+    inputs:
+      preview:
+        description: 'Build this video slug for review only (no upload)'
+        required: false
+        default: ''
 
 concurrency:
   group: factory
@@ -26,6 +31,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: p
+        env:
+          PREVIEW: ${{ github.event.inputs.preview }}
         run: |
           M=$(python3 tools/plan.py)
           echo "matrix=$M" >> "$GITHUB_OUTPUT"
@@ -113,6 +120,7 @@ jobs:
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
         run: |
+          if [ "${{ matrix.preview }}" = "true" ]; then echo "Preview build - not uploading"; exit 0; fi
           if [ -z "$YT_REFRESH_TOKEN" ]; then echo "::warning::No YouTube secrets - skipping upload (video stays READY for the next run)"; exit 0; fi
           if [ -n "${{ matrix.publish_at }}" ]; then
             python3 tools/upload.py videos/${{ matrix.slug }} --publish-at "${{ matrix.publish_at }}"

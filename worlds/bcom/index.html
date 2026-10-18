@@ -3,7 +3,7 @@
 <style>
 /* ===== BCom world: Ledger book ===== */
 :root{--paper:#FBF8F1;--rule:#DCE5F0;--rule2:#C5D3E4;--margin:#D9534F;--ink:#1D2B3A;--ink2:#4A5868;--muted:#8592A0;--green:#2F6B4F;--greenT:#E3EEE7;--red:#D9534F;--card:#FFFFFF}
-#stage{background:var(--paper);font-family:Inter;color:var(--ink)}
+#stage{background:var(--paper);font-family:Poppins;color:var(--ink)}
 #prog{position:absolute;left:0;top:0;height:6px;width:1920px;background:var(--rule);z-index:60}
 #prog i{display:block;height:6px;background:var(--green);width:0}
 #cam{position:absolute;left:0;top:0;width:1920px;height:1080px}
@@ -13,28 +13,28 @@
 .band::after{content:'';position:absolute;left:0;right:0;bottom:4px;height:2px;background:var(--rule2)}
 #marg{position:absolute;left:128px;top:0;width:2px;height:2176px;background:var(--margin);opacity:.85;z-index:3}
 #seam{position:absolute;left:0;top:1088px;width:1920px;height:28px;margin-top:-28px;background:linear-gradient(rgba(29,43,58,0),rgba(29,43,58,.10));z-index:2}
-.serif{font-family:'Source Serif 4';font-weight:600;letter-spacing:-.01em}
+.serif{font-family:Poppins;font-weight:600;letter-spacing:-.01em}
 .mono{font-family:'IBM Plex Mono';font-weight:600}
-.chip{position:absolute;display:inline-flex;align-items:center;gap:14px;height:44px;padding:0 20px;border-radius:6px;background:var(--ink);color:var(--paper);font:600 18px Inter;letter-spacing:.16em;white-space:nowrap;z-index:5}
+.chip{position:absolute;display:inline-flex;align-items:center;gap:14px;height:44px;padding:0 20px;border-radius:6px;background:var(--ink);color:var(--paper);font:600 18px Poppins;letter-spacing:.16em;white-space:nowrap;z-index:5}
 .chip i{width:8px;height:8px;border-radius:1px;background:var(--green);outline:2px solid #6FA88A}
 #title{position:absolute;left:0;top:0;font-size:128px;line-height:1;white-space:nowrap;transform-origin:0 0;z-index:5}
 #title .acc{color:var(--green)}
-#sub{position:absolute;left:0;top:640px;width:1920px;text-align:center;font:500 32px Inter;color:var(--ink2);z-index:5}
+#sub{position:absolute;left:0;top:640px;width:1920px;text-align:center;font:500 32px Poppins;color:var(--ink2);z-index:5}
 #exf{position:absolute;right:160px;top:160px;height:40px;padding:0 16px;border:2px solid var(--rule2);border-radius:6px;display:flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--muted);background:var(--paper);white-space:nowrap;z-index:5}
 /* T-account */
 #tacc{position:absolute;left:160px;top:256px;width:1024px;height:448px;z-index:4}
 #tacc svg{position:absolute;left:0;top:0}
 .th{position:absolute;top:0;height:64px;display:flex;align-items:flex-end;padding-bottom:12px;font-size:40px;white-space:nowrap}
 .row{position:absolute;height:64px;width:496px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 24px 13px}
-.row .lb{font:500 30px Inter;white-space:nowrap}
+.row .lb{font:500 30px Poppins;white-space:nowrap}
 .row .lb small{font:600 18px 'IBM Plex Mono';letter-spacing:.08em;margin-left:12px;vertical-align:4px}
 .row .am{font:600 32px 'IBM Plex Mono';white-space:pre;letter-spacing:-.01em}
-.tot .lb{font:600 22px Inter;letter-spacing:.14em;color:var(--muted)}
+.tot .lb{font:600 22px Poppins;letter-spacing:.14em;color:var(--muted)}
 .car{display:inline-block;width:3px;height:30px;background:var(--ink);margin-left:2px;vertical-align:-4px}
 /* scale card */
 #scard{position:absolute;left:1248px;top:256px;width:512px;height:448px;background:var(--card);border:2px solid var(--rule2);border-radius:8px;z-index:4}
 #scard .k{position:absolute;left:32px;top:28px;font:600 18px 'IBM Plex Mono';letter-spacing:.12em;color:var(--muted)}
-#stat{position:absolute;left:32px;bottom:32px;height:52px;padding:0 20px;border-radius:6px;display:flex;align-items:center;gap:12px;font:600 22px Inter;letter-spacing:.06em;white-space:nowrap}
+#stat{position:absolute;left:32px;bottom:32px;height:52px;padding:0 20px;border-radius:6px;display:flex;align-items:center;gap:12px;font:600 22px Poppins;letter-spacing:.06em;white-space:nowrap}
 #stamp{position:absolute;left:156px;width:200px;justify-content:center;bottom:32px;height:64px;padding:0 18px;border:4px solid var(--green);border-radius:6px;color:var(--green);display:flex;align-items:center;font:700 26px 'IBM Plex Mono';letter-spacing:.12em;transform-origin:50% 50%}
 /* equation */
 #eq{position:absolute;left:160px;top:768px;height:64px;display:flex;align-items:flex-end;gap:22px;padding-bottom:10px;font-size:52px;white-space:nowrap;z-index:4}
@@ -51,7 +51,7 @@
 #take{position:absolute;left:160px;top:1088px;margin-top:768px;width:1600px;height:96px;border-radius:8px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:22px;padding:0 36px}
 #take .tx{font-size:40px;white-space:nowrap}
 #takeI{width:52px;height:52px;border-radius:6px;background:var(--green);display:flex;align-items:center;justify-content:center}
-.cap{font:600 38px Inter;color:var(--ink);background:rgba(255,255,255,.97);padding:12px 30px;border-radius:10px;border:2px solid var(--rule);box-shadow:0 10px 30px -14px rgba(29,43,58,.28)}
+.cap{font:600 38px Poppins;color:var(--ink);background:rgba(255,255,255,.97);padding:12px 30px;border-radius:10px;border:2px solid var(--rule);box-shadow:0 10px 30px -14px rgba(29,43,58,.28)}
 .cap .cw{color:#7C8896}.cap .cw.on{color:var(--ink)}.cap .cw.act{color:var(--green)}
 </style></head><body>
 <div id="stage">

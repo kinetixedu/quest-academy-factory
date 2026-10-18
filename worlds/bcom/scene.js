@@ -39,9 +39,9 @@ $('#scl').innerHTML = `
   <g id="sbase"><rect x="196" y="312" width="120" height="12" rx="2" fill="#1D2B3A"/><rect x="250" y="116" width="12" height="200" fill="#1D2B3A"/><circle cx="256" cy="116" r="12" fill="#1D2B3A"/></g>
   <g id="beam"><rect x="-160" y="-5" width="320" height="10" rx="3" fill="#1D2B3A"/></g>
   <g id="panL"><line x1="0" y1="0" x2="-56" y2="92" stroke="#1D2B3A" stroke-width="2"/><line x1="0" y1="0" x2="56" y2="92" stroke="#1D2B3A" stroke-width="2"/><path d="M-72 92 H72 A72 30 0 0 1 -72 92Z" fill="#1D2B3A"/>
-    <text id="pLt" x="0" y="164" text-anchor="middle" font-family="IBM Plex Mono" font-weight="600" font-size="24" fill="#1D2B3A"></text><text x="0" y="198" text-anchor="middle" font-family="Inter" font-weight="600" font-size="18" letter-spacing="2.5" fill="#8592A0">ASSETS</text></g>
+    <text id="pLt" x="0" y="164" text-anchor="middle" font-family="IBM Plex Mono" font-weight="600" font-size="24" fill="#1D2B3A"></text><text x="0" y="198" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="18" letter-spacing="2.5" fill="#8592A0">ASSETS</text></g>
   <g id="panR"><line x1="0" y1="0" x2="-56" y2="92" stroke="#1D2B3A" stroke-width="2"/><line x1="0" y1="0" x2="56" y2="92" stroke="#1D2B3A" stroke-width="2"/><path d="M-72 92 H72 A72 30 0 0 1 -72 92Z" fill="#1D2B3A"/>
-    <text id="pRt" x="0" y="164" text-anchor="middle" font-family="IBM Plex Mono" font-weight="600" font-size="24" fill="#1D2B3A"></text><text x="0" y="198" text-anchor="middle" font-family="Inter" font-weight="600" font-size="18" letter-spacing="2.5" fill="#8592A0">L + C</text></g>`;
+    <text id="pRt" x="0" y="164" text-anchor="middle" font-family="IBM Plex Mono" font-weight="600" font-size="24" fill="#1D2B3A"></text><text x="0" y="198" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="18" letter-spacing="2.5" fill="#8592A0">L + C</text></g>`;
 $('#scl').setAttribute('viewBox', '0 0 512 448');
 
 /* ---------- quiz options ---------- */
@@ -169,5 +169,5 @@ M.sfx(tTurn, 'paper', 0.6);
 keys(tQa, '₹1,00,000', -0.3); keys(tQl, '₹40,000', 0.3);
 [0, 1, 2].forEach(k => M.sfx(tCount + k * (tAns - tCount) / 3, 'tick', 0.5));
 M.sfx(tAns + 0.05, 'correct', 0.6); keys(tAns + 0.05, '₹60,000', 0.3); M.sfx(tTake, 'paper', 0.3);
-M.outro({ bg: '#1D2B3A', ink: '#FBF8F1', accent: '#7FB89A', sub: 'rgba(251,248,241,.65)', font: 'Source Serif 4' });
+M.outro({ bg: '#1D2B3A', ink: '#FBF8F1', accent: '#7FB89A', sub: 'rgba(251,248,241,.65)', font: 'Poppins' });
 })();

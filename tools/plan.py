@@ -25,6 +25,9 @@ def slots(start, used):
             if t > start and iso not in used: yield iso
         d += dt.timedelta(days=1)
 
+import os
+if os.environ.get('PREVIEW'):   # build one video for review only (never uploaded)
+    print(json.dumps({'include': [{'slug': os.environ['PREVIEW'], 'publish_at': '', 'preview': True}]})); sys.exit()
 ready = sorted(p.parent for p in R.glob('videos/*/READY') if not (p.parent / 'upload.json').exists())
 ready = ready[:cfg['max_uploads_per_run']]
 now = dt.datetime.now(IST) + dt.timedelta(hours=cfg.get('min_lead_hours', 3))

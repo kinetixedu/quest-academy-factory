@@ -151,5 +151,5 @@ M.sfx(TA[0] + 0.05, 'pop', 0.45); M.sfx(TA[1] + 0.12, 'tick', 0.45); M.sfx(TA[2]
 M.sfx(tCover, 'whoosh', 0.6);
 [0, 1, 2].forEach(k => M.sfx(tCount + k * (tAns - tCount) / 3, 'tick', 0.55));
 M.sfx(tAns + 0.05, 'correct', 0.6); M.sfx(tTake, 'swish', 0.35);
-M.outro({ bg: '#14213D', ink: '#FFFFFF', accent: '#B8862F', sub: 'rgba(233,217,181,.75)', font: 'Fraunces' });
+M.outro({ bg: '#14213D', ink: '#FFFFFF', accent: '#B8862F', sub: 'rgba(233,217,181,.75)', font: 'Poppins' });
 })();

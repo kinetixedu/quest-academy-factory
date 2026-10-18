@@ -203,5 +203,5 @@ M.sfx(tIris, 'swish', 0.55); M.sfx(tCover + 0.04, 'swish', 0.4);
 M.sfx(tCover + 0.42, 'pop', 0.35, -0.4);
 [0, 1, 2].forEach(k => M.sfx(tCount + k * (tAns - tCount) / 3, 'blip', 0.45));
 M.sfx(tAns + 0.05, 'correct', 0.6); M.sfx(tAns + 0.2, 'pop', 0.4, -0.4); M.sfx(tTake, 'swish', 0.3);
-M.outro({ bg: '#2A1B3D', ink: '#FFF7EE', accent: '#FF6B4A', sub: 'rgba(255,247,238,.7)', font: 'Plus Jakarta Sans' });
+M.outro({ bg: '#2A1B3D', ink: '#FFF7EE', accent: '#FF6B4A', sub: 'rgba(255,247,238,.7)', font: 'Poppins' });
 })();

@@ -16,17 +16,21 @@ If a category is not listed, ask before inventing a new world.
 ## Every video (non-negotiable)
 - 1920x1080, 30 fps, 2-3 min (case studies may run 3-5 min), explained so a 12-year-old follows. English, Kokoro Michael (sid 16, speed 0.9).
 - Structure: hook in first 5 s -> one real example carried through -> concept step by step -> quick check (question, options, 3-2-1 countdown during the pause, answer reveal, takeaway strip) -> 10-15 s recap -> OUTRO.
-- OUTRO (every video, every world): last ~4 s, "Video by Quest Academy" card, styled in that world's palette/type (engine/outro.js, M.outro). Nothing after it.
+- OUTRO (every video, every world): the official Quest Academy brand outro (assets/outro.mp4, 6 s: logo builds, "- VIDEO BY -" label above the logo, tagline "Every subject, every level.") is appended by tools/append_outro.sh with a 0.5 s crossfade from the last scene. Its own sound plays, level-matched to -14 LUFS. scene.js still ends with `M.outro({...})` - it now only holds the last scene ~1.6 s (3.4 s with photo credits). Never draw another end card. Rebuild the outro asset with tools/make_outro.sh.
+- BRAND: logo files in assets/ (qa-mark.svg, qa-logo-on-dark.svg, qa-logo-on-light.svg). Brand colours: royal blue #10069F, sky #0085D5, deep navy #08034F, light sky #4FB8FF. A small corner logo (qa-mark, top-right, 50 px, 0.55 opacity on light worlds / 0.9 on dark) shows through every lesson - engine/outro.js adds it automatically; keep the top-right 140x110 px clear of important content. Thumbnails carry the real logo bottom-left.
 - Layout: 12-col grid, safe area x 160-1760, content y 260-860, captions clear of the bottom, equal gutters, solid (never see-through) inactive elements, nothing touching edges, no em/en dashes on screen, Indian number format, facts sourced (case studies cite source + date on screen).
 - Motion: springs damping >= 0.72, one thing moves at a time, no frozen frames except the final outro hold, no sub-pixel drift on still text (no slow camera drifts).
-- Photos: real, freely licensed (Wikimedia Commons via browser pane), credited on the outro; full colour in Case Study mode.
+- Photos: real, freely licensed (Wikimedia Commons via browser pane), credited in a small line during the final hold (M.outro credits) and in the description; full colour in Case Study mode.
+
+## Business worlds type (MBA, BBA, BCom)
+Poppins everywhere (headings 700-800 with -0.025em tracking, body 500); only BCom keeps IBM Plex Mono for figures. MBA titles were Fraunces serif - now Poppins 700 (Amjad, Oct 2026).
 
 ## SOUND POLICY (professional, replaces earlier per-world SFX lists)
 No music. No pops, clicks, blips, stamps, bubbles, zaps, keys or decorative hits. Allowed ONLY:
 1. soft "whoosh" on a major scene change (max ~1 per 15 s, gain <= 0.25)
 2. soft "tick" x3 for the quiz countdown (gain <= 0.3)
 3. one gentle "correct" chime on the answer reveal (gain <= 0.35)
-4. one soft "chime" under the outro logo (gain <= 0.25)
+(The brand outro's own sound plays at the very end - that is the only other audio.)
 audio.py enforces this whitelist (anything else is dropped) and mixes SFX ~16 dB under the voice, -14 LUFS.
 
 ## Factory (bulk production)
@@ -53,7 +57,7 @@ motion design, NOT template-looking. The reference sample is `samples/mba/` (rea
 - `M.captions(box, M.CUES.order)` karaoke captions; style `.cap .cw / .cw.on / .cw.act` per world. Caption box sits at top 944 (keep content above y=880).
 - `M.icon(name,size,colour,stroke)` line icons (see `M.IC`), add your own 24-unit paths if needed (keep one stroke width per world).
 - `M.sfx(t, name, gain, pan)` - sounds available in `tools/audio.py`: whoosh swish pop tick click key key:N ding chime correct wrong thud paper stamp zap hum bubble bubble:N clunk ratchet riser sparkle blip drip. Use a small, clean set that fits the world (memory: the user hated random/loud background sounds; no music). Typical gains 0.25-0.6.
-- Fonts available by family name (see `engine/base.css`): Fraunces, Inter, JetBrains Mono, Space Grotesk, Manrope, Instrument Serif (+italic), Lexend, Space Mono, IBM Plex Mono, IBM Plex Sans, Barlow, Barlow Condensed, Chakra Petch, Archivo (wdth 62-125), Sora, Caveat, Outfit, Source Serif 4, Architects Daughter, Plus Jakarta Sans, Poppins.
+- Fonts available by family name (see `engine/base.css`, all bundled in fonts/ so cloud renders match): Poppins (400-800), Inter, Fraunces, JetBrains Mono, Space Grotesk, Manrope, Instrument Serif (+italic), Lexend, Space Mono, IBM Plex Mono, IBM Plex Sans, Barlow, Barlow Condensed, Chakra Petch, Archivo (wdth 62-125), Sora, Caveat, Outfit, Source Serif 4, Architects Daughter, Plus Jakarta Sans, Poppins.
 
 ## Sample structure (same for every world, so worlds compare fairly)
 1. Title card (H1 hook voiced over it): category chip + topic title + one detail line, in the world's typographic style. The title then TRAVELS into the header (shared element, never cut), as in MBA.
@@ -85,7 +89,7 @@ Scratch dir for your sheets: /tmp/claude-0/-home-claude/3dfeb631-c985-51bc-bbf4-
 # The worlds (spec per id)
 
 ## bba - "Campus startup" (BBA)
-Vibe: young, bright, energetic, friendly but still clean. Look: warm cream #FFF7EE, deep plum ink #2A1B3D, coral accent #FF6B4A, mint #7FD8C4 secondary only for "good" states. Type: Plus Jakarta Sans 800 headings (tight tracking), 500 body. Shapes: chunky rounded cards (radius 32), sticker-like labels with a 2-3 deg tilt that settles to a small fixed tilt, a corkboard-free "sticky note" device for examples. Motion: snappy (M.SNAP / M.POP), items pop and settle, slight tilt springs. Signature visual: two sorting bins/columns where items (drawn with simple SVG icons) get sorted. Transition: coral circle iris that grows from the active element to cover, then shrinks into the quiz. SFX: pop, blip, swish, correct.
+Vibe: young, bright, energetic, friendly but still clean. Look: warm cream #FFF7EE, deep plum ink #2A1B3D, coral accent #FF6B4A, mint #7FD8C4 secondary only for "good" states. Type: Poppins 800 headings (tight tracking), 500 body (changed from Plus Jakarta Sans, Oct 2026). Shapes: chunky rounded cards (radius 32), sticker-like labels with a 2-3 deg tilt that settles to a small fixed tilt, a corkboard-free "sticky note" device for examples. Motion: snappy (M.SNAP / M.POP), items pop and settle, slight tilt springs. Signature visual: two sorting bins/columns where items (drawn with simple SVG icons) get sorted. Transition: coral circle iris that grows from the active element to cover, then shrinks into the quiz. SFX: pop, blip, swish, correct.
 Topic: Needs vs Wants.
 ```
 H1|0.35|Why do you buy some things and skip others?
@@ -98,7 +102,7 @@ A1|0.2|A need! You use it every single day.
 ```
 
 ## bcom - "Ledger book" (BCom)
-Vibe: precise, trustworthy, classic accounting book. Look: ledger paper #FBF8F1 with faint blue ruled lines (#DCE5F0) and a thin red margin line (#D9534F), ink #1D2B3A, ledger green #2F6B4F accent, red only for "owes". Type: Source Serif 4 600 headings, IBM Plex Mono for every number, Inter body. Motion: numbers type in digit by digit, rows slide into ruled lines and settle exactly on them, totals get a double underline that draws on. Signature visual: a balance scale / two-sided T-account that stays level (Assets on one side, Liabilities + Capital on the other) with figures written in. Transition: the ledger page slides up like turning to the next page (horizontal ruled lines carry over). SFX: paper, key (typing digits), tick, stamp, correct.
+Vibe: precise, trustworthy, classic accounting book. Look: ledger paper #FBF8F1 with faint blue ruled lines (#DCE5F0) and a thin red margin line (#D9534F), ink #1D2B3A, ledger green #2F6B4F accent, red only for "owes". Type: Poppins 600 headings, IBM Plex Mono for every number, Poppins body (changed from Source Serif 4 / Inter, Oct 2026). Motion: numbers type in digit by digit, rows slide into ruled lines and settle exactly on them, totals get a double underline that draws on. Signature visual: a balance scale / two-sided T-account that stays level (Assets on one side, Liabilities + Capital on the other) with figures written in. Transition: the ledger page slides up like turning to the next page (horizontal ruled lines carry over). SFX: paper, key (typing digits), tick, stamp, correct.
 Topic: The accounting equation (Example figures).
 ```
 H1|0.35|How does a business know what it really owns?
