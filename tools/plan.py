@@ -32,6 +32,17 @@ if os.environ.get('PREVIEW'):   # build one video for review only (never uploade
 import csv
 order = {r['slug']: i for i, r in enumerate(csv.DictReader(open(R / 'queue' / 'topics.csv')))} if (R / 'queue' / 'topics.csv').exists() else {}
 ready = sorted((p.parent for p in R.glob('videos/*/READY') if not (p.parent / 'upload.json').exists()), key=lambda v: (order.get(v.name, 1e9), v.name))
+# series: never publish episode N before every earlier episode is ready or uploaded
+qrows = list(csv.DictReader(open(R / 'queue' / 'topics.csv'))) if (R / 'queue' / 'topics.csv').exists() else []
+def blocked(slug):
+    me = next((r for r in qrows if r['slug'] == slug), None)
+    if not me or not me.get('series'): return False
+    for r in qrows:
+        if r.get('series') == me['series'] and int(r['ep'] or 0) < int(me['ep']):
+            v = R / 'videos' / r['slug']
+            if not ((v / 'READY').exists() or (v / 'upload.json').exists()): return True
+    return False
+ready = [v for v in ready if not blocked(v.name)]
 # YouTube quota resets daily: never upload more than max_uploads_per_day in any rolling 24 h
 since = dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=24)
 done24 = sum(1 for u in R.glob('videos/*/upload.json') if dt.datetime.strptime(json.loads(u.read_text())['uploaded'], '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=dt.timezone.utc) > since)

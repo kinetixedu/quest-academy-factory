@@ -59,7 +59,7 @@ $('#gps').innerHTML = GROUPS.map(([ic, n], i) => `<div class="gp" id="gp${i}"><i
 // role board
 const ROLES = [['Figurehead', 'crown', 'Ravi greets the principal as the face of Chai Corner', 1], ['Leader', 'compass', 'He guides and motivates Asha, Kabir and Meena'], ['Liaison', 'link', 'He builds links outside, like the bakery next door'],
   ['Monitor', 'eye', 'He hears that milk prices will rise', 1], ['Disseminator', 'share', 'He passes that news to his team'], ['Spokesperson', 'megaphone', 'He speaks for Chai Corner to people outside'],
-  ['Entrepreneur', 'bulb', 'He tries something new, like ginger chai'], ['Disturbance handler', 'shield', 'He calms the customer with cold tea', 1], ['Resource allocator', 'pie', 'He decides shifts and where the money goes'], ['Negotiator', 'scale', 'He bargains with the milk seller', 1]];
+  ['Entrepreneur', 'bulb', 'He tries something new, like ginger chai'], ['Disturbance handler', 'shield', 'He calms the customer with cold tea', 1], ['Resource allocator', 'pie', 'He decides how to use people, time and money'], ['Negotiator', 'scale', 'He bargains with the milk seller', 1]];
 const GOF = [0, 3, 6, 10];   // role index ranges per group
 $('#cols').innerHTML = GROUPS.map(([ic, n, s], g) => `<div class="gc" id="gc${g}" style="left:${160 + g * 544}px"><div class="bg"></div><div class="gi"></div><div class="serif gn">${n}</div><div class="gs">${s}</div>` +
   ROLES.slice(GOF[g], GOF[g + 1]).map(([r], k) => `<div class="rt2" id="rt${GOF[g] + k}" style="top:${136 + k * 74}px"><div class="n">${String(GOF[g] + k + 1).padStart(2, '0')}</div><div class="t">${r}</div></div>`).join('') + `</div>`).join('');
@@ -158,7 +158,7 @@ M.on(t => {
     const hot = M.io((t - tC[3]) / 0.4); $('#jobsP').style.background = mix(C.paper, C.gold, hot); $('#jobsP').style.color = hot > 0.5 ? '#fff' : C.ink;
     setIco($('#jobsI'), 'list', hot > 0.5 ? '#fff' : C.ink, 22);
     // the day
-    M.vis($('#day'), t, tMorph + 0.42, 1e9, { dy: 36 });
+    M.vis($('#day'), t, tC[0] - 0.35, 1e9, { dy: 36 });
     DAY.forEach((_, i) => {
       const el = $('#dr' + i); M.vis(el, t, tC[i] - 0.06, 1e9, { dy: 22, sp: M.SOFT });
       const act = M.io((t - tC[i]) / 0.3) * (1 - M.io((t - (i < 3 ? tC[i + 1] : tStrike)) / 0.35));

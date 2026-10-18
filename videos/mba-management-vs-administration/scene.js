@@ -18,17 +18,17 @@ Object.assign(M.IC, {
 });
 
 /* ---------- beats (all from the voice) ---------- */
-const tTitle = 0.25, tMorph = T0('H2') + 0.02, tCannot = wt('H2', 'cannot'), tWho = wt('H2', 'who');
+const tTitle = 0.25, tMorph = Math.max(2.4, wt('H1', 'six') - 0.15), tCannot = wt('H2', 'cannot'), tWho = wt('H2', 'who');
 const tC1 = T0('C1'), tAsha = wt('C1', 'Asha'), tUp = wt('C1', 'price'), tKabir = wt('C2', 'Kabir'), tBack = wt('C2', 'back');
 const tConf = wt('C3', 'confused'), tNobody = wt('C3', 'nobody');
 const tT = T0('T1'), tSt2 = wt('T1', 'Someone', 1), tTu = T0('D1') - 0.32;    // statement sweep: cover, line 2, uncover
 const tD1 = T0('D1'), tD2 = T0('D2'), tAdm = wt('D2', 'Administration'), tThink = wt('D2', 'thinking'), tD3 = T0('D3'), tDoing = wt('D3', 'doing'), tD4 = T0('D4'), tDout = T0('P1') - 0.32;
-const tP1 = T0('P1'), tPol = [wt('P2', 'cup'), wt('P2', 'stall')], tPout = T0('R1') - 0.32;
+const tP1 = T0('P1'), tPin = wt('P1', 'rule') - 0.1, tPol = [wt('P2', 'cup'), wt('P2', 'and')], tPout = T0('R1') - 0.32;
 const tR1 = T0('R1'), tR2 = T0('R2'), tAdmr = wt('R2', 'administrator'), tRi = [wt('R2', 'prices'), wt('R2', 'timings'), wt('R2', 'goals')];
-const tR3 = T0('R3'), tShift = wt('R3', 'shift'), tMi = [wt('R3', 'runs'), wt('R3', 'every'), wt('R3', 'rules')], tRout = T0('K0') - 0.32;
+const tR3 = T0('R3'), tShift = wt('R3', 'shift'), tMi = [wt('R3', 'runs'), wt('R3', 'every'), wt('R3', 'by')], tRout = T0('K0') - 0.32;
 const tK0 = T0('K0'), tK = [1, 2, 3, 4, 5].map(i => T0('K' + i)), tKout = T0('V0') - 0.32;
 const tKa = tK.map((_, i) => wt('K' + (i + 1), i === 4 ? 'Owners' : 'Administration')), tKm = tK.map((_, i) => wt('K' + (i + 1), i === 4 ? 'Managers' : 'Management'));
-const tV0 = T0('V0'), tV = [T0('V1'), T0('V2'), T0('V3')];
+const tV0 = T0('V0'), tVin = wt('V0', 'three') - 0.1, tV = [T0('V1'), T0('V2'), T0('V3')];
 const tQ = T0('Q1'), tCount = T1('Q1') + 0.05, tAns = T0('A1') - 0.02, tTakeQ = wt('A1', 'It');
 const tS = T0('S1'), tRow = [T0('S2'), T0('S3'), T0('S4')], tPill = ['above', 'inside', 'same'].map(w => wt('S4', w)), tN = T0('N1');
 const SW = [[tT - 0.42, tTu], [tQ - 0.42, tQ + 0.06], [tS - 0.42, tS + 0.06]];   // navy page-turn sweeps [cover start, uncover start]
@@ -60,7 +60,7 @@ $('#flowI').innerHTML = M.icon('arrowD', 24, '#fff', 2.6);
 // comparison table
 const ROWS_K = [['layers', 'LEVEL', 'Top level', 'Middle and lower levels'], ['bulb', 'FUNCTION', 'Thinking', 'Doing'], ['target', 'FOCUS', 'Sets the goals', 'Reaches the goals'],
   ['scale', 'DECISIONS', 'Big, long-term ones', 'Daily, routine ones'], ['users', 'WHO', 'Owners, directors', 'Managers, supervisors']];
-$('#trows').innerHTML = ROWS_K.map(([ic, a, x, y], i) => `<div class="trw" id="tr${i}" style="top:${132 + i * 86}px"><div class="tb"></div><div class="ta"><span class="tic"></span><span class="tal">${a}</span></div><div class="tv tva" style="left:400px">${x}</div><div class="tv tvm" style="left:976px">${y}</div></div>`).join('');
+$('#trows').innerHTML = ROWS_K.map(([ic, a, x, y], i) => `<div class="trw" id="tr${i}" style="top:${132 + i * 88}px"><div class="tb"></div><div class="ta"><span class="tic"></span><span class="tal">${a}</span></div><div class="tv tva" style="left:400px">${x}</div><div class="tv tvm" style="left:976px">${y}</div></div>`).join('');
 // three views: small diagrams in the stall style
 const box = (y, fill, txt, tc, stroke) => `<rect x="116" y="${y}" width="280" height="64" rx="18" fill="${fill}" ${stroke ? `stroke="${stroke}" stroke-width="3"` : ''}/><text x="256" y="${y + 33}" text-anchor="middle" dominant-baseline="central" font-family="Poppins" font-weight="600" font-size="17" letter-spacing="2.6" fill="${tc}">${txt}</text>`;
 const VIEWS = [
@@ -204,9 +204,17 @@ M.on(t => {
     const o = { outDur: 0.3, ody: -16 };
     M.vis($('#defbar'), t, tP1 + 0.12, tPout, { dy: 24, ...o });
     POL.forEach((_, i) => {
-      const el = $('#pol' + i); M.vis(el, t, tPol[i] - 0.1, tPout, { dy: 36, ...o });
-      M.rise(el.querySelector('.pt'), t, tPol[i] + 0.05, { st: 0.06, sp: M.HEAVY });
-      M.vis(el.querySelector('.pm'), t, tPol[i] + 0.35, 1e9, { dy: 12 });
+      const el = $('#pol' + i), tin = tPin + i * 0.14; M.vis(el, t, tin, tPout, { dy: 36, ...o });
+      M.rise(el.querySelector('.pt'), t, tin + 0.12, { st: 0.06, sp: M.HEAVY });
+      M.vis(el.querySelector('.pm'), t, tin + 0.4, 1e9, { dy: 12 });
+      // each policy lights up (navy) as the voice names it
+      const act = M.io((t - tPol[i]) / 0.3) * (1 - M.io((t - (i ? tPout - 0.1 : tPol[1]) ) / 0.35));
+      el.style.background = mix(C.card, C.ink, act);
+      el.querySelector('.pt').style.color = mix(C.ink, '#fff', act);
+      el.querySelector('.pm').style.color = mix(C.ink2, C.gold2, act);
+      el.querySelector('.hr').style.background = mix(C.line, '#2C3B5E', act);
+      el.querySelector('.pi').style.background = mix(C.paper, '#24345A', act);
+      setIco(el.querySelector('.pi'), POL[i][0], act > 0.5 ? C.gold2 : C.gold, 34);
     });
   }
 
@@ -260,9 +268,16 @@ M.on(t => {
   if (vOn) {
     M.rise($('#uh'), t, tV0 + 0.08, { st: 0.06, sp: M.HEAVY });
     VIEWS.forEach((_, i) => {
-      const el = $('#vc' + i); M.vis(el, t, tV[i] - 0.06, 1e9, { dy: 30, sc: 0.92, sp: M.POP });
-      [0, 1, 2].forEach(k => { const g = el.querySelector('.v' + k); const p = M.vis(g, t, tV[i] + 0.25 + k * 0.22, 1e9, { dy: 0, fade: 0.15 }); void p; });
-      M.vis(el.querySelector('.ub'), t, tV[i] + 0.3, 1e9, { dy: 10 });
+      // all three cards arrive on "three views" as grey diagrams; each one comes alive when its writer is named
+      const el = $('#vc' + i); M.vis(el, t, tVin + i * 0.12, 1e9, { dy: 30, sc: 0.92, sp: M.POP });
+      [0, 1, 2].forEach(k => M.vis(el.querySelector('.v' + k), t, tVin + 0.2 + i * 0.12 + k * 0.12, 1e9, { dy: 0, fade: 0.15 }));
+      const g = 1 - M.io((t - tV[i]) / 0.35), sv = el.querySelector('svg');
+      sv.style.filter = g > 0.001 ? `grayscale(${g.toFixed(3)}) contrast(${(1 - 0.55 * g).toFixed(3)}) brightness(${(1 + 0.12 * g).toFixed(3)})` : '';
+      el.querySelector('.ut').style.color = mix(C.dim, C.ink, M.io((t - tV[i]) / 0.3));
+      M.rise(el.querySelector('.us'), t, tV[i] + 0.3, { st: 0.04 });
+      M.vis(el.querySelector('.ub'), t, tV[i] + 0.5, 1e9, { dy: 10 });
+      const lift = M.spring(t - tV[i], M.POP) - M.spring(t - Math.min(tV[i + 1] ?? 1e9, tV[i] + 2.4), M.SOFT);
+      if (Math.abs(lift) > 0.001 && t > tV[i]) el.style.transform = `scale(${(1 + 0.02 * lift).toFixed(4)})`;
     });
   }
 
