@@ -62,7 +62,7 @@ const qm = `<div class="qm" style="position:absolute;right:20px;top:22px;width:4
 const VOTE = [['K', 'Cheapest', 'coin', 0], ['A', 'Best milk', 'star', 2], ['M', 'Closest', 'pin', 1]];   // [letter, wish, icon, dairy index]
 const pickBy = d => VOTE.find(v => v[3] === d)[0];
 $('#dRow').innerHTML = SUP.map((s, i) => `<div class="job" id="dj${i}" style="left:${36 + i * 291}px"><div class="ji">${M.icon('milk', 28, C.ink, 2.2)}</div><div class="jt">${s}</div>${qm}<div class="av">${pickBy(i)}</div></div>`).join('');
-$('#vRow').innerHTML = VOTE.map(([l, w, ic], i) => `<div class="job" id="vj${i}" style="left:${36 + i * 291}px"><div class="avc" style="left:24px;top:22px;width:56px;height:56px;border-radius:28px;font-size:24px">${l}</div><div class="vi">${M.icon(ic, 32, C.gold, 2.2)}</div><div class="jt">${w}</div></div>`).join('');
+$('#vRow').innerHTML = VOTE.map(([l, w, ic], i) => `<div class="job" id="vj${i}" style="left:${36 + i * 291}px"><div class="avc" style="left:24px;top:22px;width:56px;height:56px;border-radius:28px;font-size:24px">${l}</div><div class="vi">${M.icon(ic, 32, C.gold, 2.2)}</div><div class="jt jn">${['Kabir', 'Asha', 'Meena'][i]}</div><div class="jt jw">${w}</div></div>`).join('');
 $('#vNi').innerHTML = M.icon('alert', 24, C.red, 2.2);
 // definition
 $('#defI').innerHTML = M.icon('book', 36, C.gold, 2.2);
@@ -74,8 +74,8 @@ $('#sRows').innerHTML = STEPS.map((s, k) => `<div class="sr" id="sr${k}" style="
 // scoring table geometry (inside #tbl)
 const CX = [488, 672, 856], RY = [172, 242, 312, 382];
 $('#probI').innerHTML = M.icon('target', 26, C.gold2, 2.2);
-$('#prob').insertAdjacentHTML('beforeend', `<span id="decI" class="abs" style="left:24px;top:15px"></span><b id="decB" class="abs" style="left:64px;top:18px">DECISION</b><span id="decT" class="abs" style="left:212px;top:12px">City Dairy, the most value overall</span>`);
-$('#decI').innerHTML = M.icon('trophy', 26, C.gold2, 2.2);
+$('#prob').insertAdjacentHTML('beforeend', `<span id="decI" class="abs" style="left:24px;top:15px"></span><b id="decB" class="abs" style="left:64px;top:18px;color:#fff">DECISION</b><span id="decT" class="abs" style="left:212px;top:12px">City Dairy, the most value overall</span>`);
+$('#decI').innerHTML = M.icon('trophy', 26, '#fff', 2.2);
 $('#cols').innerHTML = CX.map((x, i) => `<div class="col" id="col${i}" style="left:${x}px"></div>`).join('');
 $('#ths').innerHTML = SUP.map((s, i) => `<div class="th" id="th${i}" style="left:${CX[i]}px;width:176px">${s}</div>`).join('');
 $('#lines').innerHTML = [164, 234, 304, 374, 452].map((y, k) => `<div class="hl" id="hl${k}" style="top:${y}px${k === 4 ? ';background:#CFC5B3' : ''}"></div>`).join('');
@@ -83,7 +83,7 @@ $('#crs').innerHTML = CRIT.map(([n, ic], k) => `<div class="cr" id="cr${k}" styl
 $('#cells').innerHTML = R.map((r, i) => r.map((v, k) => `<div class="cl" id="c${i}${k}" style="left:${CX[i]}px;top:${RY[k]}px"><div class="rg"></div><div class="cv">${v}</div><div class="cm">${v * W[k]}</div></div>`).join('')).join('');
 $('#tts').innerHTML = CX.map((x, i) => `<div class="tt serif" id="tt${i}" style="left:${x}px">0</div>`).join('');
 // assumptions
-const AS = [['target', 'Clear', 'problem'], ['list', 'Known', 'options and results'], ['sliders', 'Fixed', 'preferences'], ['infinity', 'Unlimited', 'time and money']];
+const AS = [['target', 'Clear', 'problem'], ['list', 'Known', 'every option'], ['sliders', 'Fixed', 'preferences'], ['infinity', 'Unlimited', 'time and money']];
 $('#aRow').innerHTML = AS.map(([ic, t, m], i) => `<div class="as" id="as${i}" style="left:${160 + i * 408}px"><div class="bg"></div><div class="an">0${i + 1}</div><div class="ai"><span class="ico"></span></div><div class="serif at">${t}</div><div class="am">${m}</div><div class="hr"></div><div class="ap ok">${M.icon('check', 22, C.gold, 2.6)}Assumed true</div><div class="ap no">${M.icon('x', 22, C.red, 2.6)}Rarely true</div></div>`).join('');
 $('#whatI').innerHTML = M.icon('help', 44, C.gold2, 2.4);
 // quiz
@@ -153,7 +153,10 @@ M.on(t => {
     // votes
     M.vis($('#votes'), t, tMorph + 0.42, 1e9, { dy: 36 });
     VOTE.forEach((_, i) => {
-      const el = $('#vj' + i); M.vis(el, t, tVote[i] - 0.08, 1e9, { dy: 24, sp: M.SOFT });
+      const el = $('#vj' + i); M.vis(el, t, tMorph + 0.7 + i * 0.12, 1e9, { dy: 24, sp: M.SOFT });
+      M.vis(el.querySelector('.vi'), t, tWant[i] - 0.05, 1e9, { dy: 0, sc: 0.4, sp: M.POP, fade: 0.08 });
+      M.rise(el.querySelector('.jn'), t, tMorph + 0.8 + i * 0.12, { st: 0.04, out: tWant[i] - 0.3, outDur: 0.2 });
+      M.rise(el.querySelector('.jw'), t, tWant[i] - 0.05, { st: 0.05 });
       el.querySelector('.avc').style.background = mix(C.ink, C.gold, on01(t, tVote[i], i < 2 ? tVote[i + 1] : tNobody));
     });
     M.vis($('#vN'), t, tNobody + 0.1, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.08 });
