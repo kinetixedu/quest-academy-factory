@@ -13,6 +13,7 @@ Object.assign(M.IC, {
   compass: ['M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z', 'm16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z'],
   alert: ['m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3', 'M12 9v4', 'M12 17h.01'],
   sun: ['M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z', 'M12 2v2', 'M12 20v2', 'm4.93 4.93 1.41 1.41', 'm17.66 17.66 1.41 1.41', 'M2 12h2', 'M20 12h2', 'm6.34 17.66-1.41 1.41', 'm19.07 4.93-1.41 1.41'],
+  factory: ['M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z', 'M17 18h1', 'M12 18h1', 'M7 18h1'],
   route: ['M6 19a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z', 'M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15', 'M18 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z'],
 });
 
@@ -77,13 +78,14 @@ const TL = [['bulb', 'Lights'], ['cup', 'Breaks'], ['clock', 'Hours']];
 $('#tlRow').innerHTML = TL.map(([ic, n], i) => `<div class="tl" id="tl${i}" style="left:${32 + i * 248}px"><div class="ti">${M.icon(ic, 28, C.ink, 2.2)}</div><div class="tu">${M.icon('arrowU', 26, '#fff', 2.6)}</div><div class="serif tn">${n}</div></div>`).join('');
 $('#fndP').innerHTML = `<div class="pn" id="fn0"><div class="lbl" style="left:32px;top:36px">WHAT THEY FOUND</div><div class="bigU">${M.icon('arrowU', 38, '#fff', 2.6)}</div><div class="serif pq" style="left:128px;top:92px">Output went <span class="acc">up</span></div><div class="pl" style="top:186px">Workers felt noticed and valued</div></div>`
   + `<div class="pn" id="fn1"><div class="avc" style="left:32px;top:30px;font-size:24px">EM</div><div class="serif nm">Elton Mayo</div><div class="lbl" style="left:122px;top:82px;font-size:15px">HUMAN RELATIONS</div><div class="hr"></div><div class="serif pq" id="my1" style="top:142px;font-size:36px">People work better</div><div class="serif pq" id="my2" style="top:190px;font-size:36px">when they feel <span class="acc">heard.</span></div></div>`;
+$('#hawI').innerHTML = M.icon('factory', 28, C.gold, 2.2); $('#sysI').innerHTML = M.icon('network', 28, C.gold, 2.2);
 // systems flow
 const FB = [['INPUT', 'Milk + tea'], ['PROCESS', 'Brewing'], ['OUTPUT', 'Chai']];
 $('#fbRow').innerHTML = FB.map(([l, t], i) => `<div class="fb" id="fb${i}" style="left:${32 + i * 260}px"><div class="fl">${l}</div><div class="serif ft">${t}</div></div>`).join('')
   + [0, 1].map(i => `<div class="fa" id="fa${i}" style="left:${244 + i * 260}px">${M.icon('arrowR', 36, C.gold, 2.4)}</div>`).join('');
 // contingency situations
 const STN = [['sun', 'Calm Sunday', 'Fewer hands'], ['zap', 'Festival rush', 'Everyone on shift']];
-$('#stRow').innerHTML = STN.map(([ic, n, p], i) => `<div class="st" id="st${i}" style="left:${32 + i * 376}px"><div class="ti">${M.icon(ic, 28, C.gold, 2.2)}</div><div class="serif sn">${n}</div><div class="sp">${p}</div></div>`).join('');
+$('#stRow').innerHTML = STN.map(([ic, n, p], i) => `<div class="st" id="cs${i}" style="left:${32 + i * 376}px"><div class="ti">${M.icon(ic, 28, C.gold, 2.2)}</div><div class="serif sn">${n}</div><div class="sp">${p}</div></div>`).join('');
 // summary under the three stops
 const SM = [['gear', 'Machines', 'Find the one best way'], ['users', 'People', 'Feelings matter'], ['network', 'Systems', 'See the whole, it depends']];
 $('#smRow').innerHTML = SM.map(([ic, t, s], i) => `<div class="card sm" id="sm${i}" style="left:${160 + i * 544}px"><div class="si"><span class="ico"></span></div><div class="lbl sl">STOP 0${i + 1}</div><div class="serif st2">${t}</div><div class="ss">${s}</div></div>`).join('');
@@ -232,6 +234,7 @@ M.on(t => {
     if (!pOn) { M.hide(haw, true); M.hide(fnd, true); }
     else {
       M.vis(haw, t, tP2 + 0.05, tPout, { dy: 30, ...ro }); slideL(haw, t, tP4 - 0.1);
+      M.vis($('#hawIn'), t, tP2 + 0.5, tTl[0] - 0.3, { dy: 20, outDur: 0.22, ody: -12 });
       TL.forEach((_, i) => {
         const el = $('#tl' + i); M.vis(el, t, tTl[i] - 0.05, 1e9, { dy: 20 });
         M.vis(el.querySelector('.tu'), t, tUp + i * 0.12, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 });
@@ -254,6 +257,7 @@ M.on(t => {
     if (!mOn) { M.hide(sys, true); M.hide(con, true); }
     else {
       M.vis(sys, t, tM2 + 0.05, tMout, { dy: 30, ...ro }); slideL(sys, t, tM5 - 0.1);
+      M.vis($('#sysIn'), t, tM2 + 0.5, tFb[0] - 0.3, { dy: 20, outDur: 0.22, ody: -12 });
       FB.forEach((_, i) => {
         const el = $('#fb' + i); M.vis(el, t, tFb[i] - 0.05, 1e9, { dy: 20 });
         if (i) M.vis($('#fa' + (i - 1)), t, tFb[i] - 0.2, 1e9, { dx: -16, dy: 0 });
@@ -271,7 +275,7 @@ M.on(t => {
       M.draw($('#strikeL'), t, tNo, 0.45, M.o3); $('#strike').style.opacity = (1 - M.io((t - aOut) / 0.2)).toFixed(3);
       $('#obw').style.color = mix(C.ink, C.dim, M.io((t - tNo - 0.3) / 0.3));
       M.rise($('#dep'), t, tDep - 0.05, { st: 0.04, out: aOut, outDur: 0.2 });
-      STN.forEach((_, i) => M.vis($('#st' + i), t, tSt[i] - 0.05, 1e9, { dy: 20 }));
+      STN.forEach((_, i) => M.vis($('#cs' + i), t, tSt[i] - 0.05, 1e9, { dy: 20 }));
     }
 
     /* summary */

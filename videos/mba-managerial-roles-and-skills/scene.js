@@ -80,7 +80,7 @@ const TIER_Y = [80, 244, 408], TH = 150, hw = y => 60 + 210 * (y - 80) / 478;   
 const TIER_C = [C.ink, C.ink2, C.sand], TIER_N = [['Top', 'OWNERS, CEOS'], ['Middle', 'DEPARTMENT HEADS'], ['Lower', 'SUPERVISORS']];
 $('#tiers').innerHTML = TIER_Y.map((y, i) => { const a = hw(y), b = hw(y + TH); return `<path id="tr${i}" d="M${(270 - a).toFixed(1)} ${y} H${(270 + a).toFixed(1)} L${(270 + b).toFixed(1)} ${y + TH} H${(270 - b).toFixed(1)} Z" fill="${TIER_C[i]}" stroke="${TIER_C[i]}" stroke-width="10" stroke-linejoin="round"/>`; }).join('');
 $('#tls').innerHTML = TIER_N.map(([n, s], i) => `<div class="tl" id="tl${i}" style="top:${270 + TIER_Y[i] + (i ? 44 : 70)}px;color:${i < 2 ? '#fff' : C.ink}"><b>${n}</b><span style="color:${i < 2 ? C.gold2 : C.ink2}">${s}</span></div>`).join('');
-const SEGC = [C.sand, C.gold, C.ink], SEGN = ['Technical', 'Human', 'Conceptual'];
+const SEGC = ['#8C96AE', C.gold, C.ink], SEGN = ['Technical', 'Human', 'Conceptual'];
 $('#lgs').innerHTML = SEGN.map((n, i) => `<div class="lg" id="lg${i}"><i style="background:${SEGC[i]}"></i>${n}</div>`).join('');
 const MIX = [[16, 40, 44], [30, 40, 30], [46, 40, 14]], ROWN = ['TOP MANAGERS', 'MIDDLE MANAGERS', 'LOWER LEVEL MANAGERS'], TAGS = ['MOST CONCEPTUAL', 'HUMAN AT EVERY LEVEL', 'MOST TECHNICAL'];
 $('#mrs').innerHTML = MIX.map((mx, i) => `<div class="mr" id="mr${i}" style="top:${270 + TIER_Y[i] - 4}px"><div class="ml">${ROWN[i]}</div><div class="mt">${TAGS[i]}</div><div class="mb">${mx.map((_, k) => `<div class="sg" id="sg${i}${k}"></div>`).join('')}</div></div>`).join('');
@@ -191,7 +191,8 @@ M.on(t => {
     M.vis($('#mz'), t, tD3 + 0.42, tDout, { dy: 36, ...o });
     M.vis($('#mzL'), t, tD3 + 0.6, 1e9, { dy: 10 });
     M.rise($('#mzW'), t, tWatch, { st: 0.04 });
-    M.rise($('#mzBig'), t, tTen - 0.08, { st: 0.07, sp: M.HEAVY });
+    M.rise($('#mzBig'), t, T0('D4') + 0.1, { st: 0.07, sp: M.HEAVY });
+    M.setT($('#mzBig .acc'), `${Math.max(1, Math.round(1 + 9 * M.o3((t - T0('D4') - 0.2) / (tTen + 0.25 - T0('D4') - 0.2))))} roles`);
     M.vis($('#mzHr'), t, tD5 - 0.1, 1e9, { dy: 0 });
     M.vis($('#mzL2'), t, tD5, 1e9, { dy: 10 });
     for (let i = 0; i < 3; i++) M.vis($('#gp' + i), t, tThreeG + i * 0.12, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
@@ -262,9 +263,9 @@ M.on(t => {
   const lOn = t >= tL0 - 0.1 && t < tQ + 0.05; M.hide($('#sL'), !lOn);
   if (lOn) {
     // focus: which segments stay strong
-    const foc = (i, k) => t < tL1 ? 1 : t < tL2 ? (i === 2 && k === 0) : t < tL3 ? (i === 0 && k === 2) : k === 1;
+    const foc = (i, k) => t < tL1 || (i === 2 && k === 0) || (t >= tL2 && i === 0 && k === 2) || (t >= tL3 && k === 1);
     const fAmt = t < tL1 ? 0 : M.io((t - tL1 - 0.1) / 0.35);
-    const tFoc = [t >= tL2 && t < tL3 ? 1 : 0, t >= tL3 ? 1 : 0, t >= tL1 && t < tL2 ? 1 : 0];   // tier focus
+    const tFoc = [t >= tL2 ? 1 : 0, t >= tL3 ? 1 : 0, 1];   // tier focus (cumulative)
     TIER_Y.forEach((_, i) => {
       const tin = tL0 + 0.05 + i * 0.12, el = $('#tr' + i);
       const p = M.spring(t - tin, M.SOFT); M.hide(el, t < tin);
@@ -277,8 +278,9 @@ M.on(t => {
         const sg = $('#sg' + i + k), [x0, w0] = geo['s' + i + k], g = M.o3((t - tMix - i * 0.12 - k * 0.14) / 0.55);
         sg.style.left = x0.toFixed(1) + 'px'; sg.style.width = (w0 * g).toFixed(1) + 'px'; M.hide(sg, g <= 0);
         sg.style.background = mix(SEGC[k], C.mute, foc(i, k) ? 0 : fAmt * 0.8);
-        const pk = foc(i, k) && t >= tL1 ? M.spring(t - (t < tL2 ? tTech : t < tL3 ? tConc : tHum), M.POP) - 1 : 0;
-        sg.style.transform = Math.abs(pk) > 0.002 ? `scaleY(${(1 - 0.12 * pk).toFixed(4)})` : 'none';
+        const pT = (i === 2 && k === 0) ? tTech : (i === 0 && k === 2) ? tConc : k === 1 ? tHum : -1;
+        const pk = pT > 0 && t > pT && t < pT + 0.45 ? Math.sin(Math.PI * (t - pT) / 0.45) : 0;
+        sg.style.transform = pk > 0.002 ? `scaleY(${(1 + 0.1 * pk).toFixed(4)})` : 'none';
       });
       const tagT = [tConc, tHum, tTech][i];
       M.vis(mr.querySelector('.mt'), t, tagT, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });

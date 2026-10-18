@@ -56,13 +56,13 @@ $('#cups').innerHTML = CUPS.map(([x, y], i) => `<g id="cup${i}" transform="trans
 const OPS = [['A', 'Asha', 'It\'s a gift. Books can\'t teach it.', 'palette', 'ART'], ['K', 'Kabir', 'It has rules, just like science.', 'flask', 'SCIENCE'], ['M', 'Meena', 'Then why no licence, like doctors?', 'briefcase', 'PROFESSION']];
 $('#opRow').innerHTML = OPS.map(([l, n, q, ic, tg], i) => `<div class="card op" id="op${i}" style="top:${270 + i * 204}px"><div class="avc">${l}</div><div class="serif nm">${n}</div><div class="qt">"${q}"</div><div class="tg">${M.icon(ic, 22, C.gold, 2.2)}${tg}</div></div>`).join('');
 // definition bars
-['book', 'flask', 'briefcase'].forEach((ic, i) => { $('#db' + i + ' .di').innerHTML = M.icon(ic, 36, C.gold, 2.2); });
+['palette', 'flask', 'briefcase'].forEach((ic, i) => { $('#db' + i + ' .di').innerHTML = M.icon(ic, 36, C.gold, 2.2); });
 const VD = [['check', 'It\'s an art'], ['check', 'An inexact science'], ['minus', 'Only partly']];
 VD.forEach(([ic, tx], i) => { $('#db' + i + ' .vd').innerHTML = M.icon(ic, 24, '#fff', 3) + tx; });
 $('#sp0').innerHTML = M.icon('check', 22, C.gold, 2.6) + 'Tested'; $('#sp1').innerHTML = M.icon('listCheck', 22, C.gold, 2.4) + 'Sorted';
 // test 1: two cups
 const PERSON = `<svg width="32" height="40" viewBox="0 0 40 48" fill="currentColor"><circle cx="20" cy="11" r="10"/><path d="M2 47c0-11 8-19 18-19s18 8 18 19z"/></svg>`;
-const cupSvg = (i, tea) => `<svg class="cupv" width="184" height="184" viewBox="0 0 184 184"><g fill="none" stroke="#C9BFAE" stroke-width="5" stroke-linecap="round"><path id="cs${i}0" d="M72 46 c-10 -12 10 -20 0 -34"/><path id="cs${i}1" d="M92 42 c-10 -12 10 -22 0 -38"/><path id="cs${i}2" d="M112 46 c-10 -12 10 -20 0 -34"/></g><ellipse cx="92" cy="168" rx="78" ry="11" fill="#EEE8DB"/><path d="M42 60 h100 l-13 104 h-74 z" fill="#fff" stroke="#3A4560" stroke-width="5" stroke-linejoin="round"/><path d="M49 84 h86 l-9 74 h-68 z" fill="${tea}"/><path d="M42 60 h100" stroke="#B8862F" stroke-width="6" stroke-linecap="round"/>${i ? '<g id="gin"><ellipse cx="112" cy="86" rx="15" ry="6" fill="#E9D9B5" stroke="#8A6420" stroke-width="3"/><ellipse cx="78" cy="88" rx="11" ry="5" fill="#E9D9B5" stroke="#8A6420" stroke-width="3"/></g>' : ''}</svg>`;
+const cupSvg = (i, tea) => `<svg class="cupv" width="184" height="184" viewBox="0 0 184 184"><g fill="none" stroke="#C9BFAE" stroke-width="5" stroke-linecap="round"><path id="cs${i}0" d="M72 46 c-10 -12 10 -20 0 -34"/><path id="cs${i}1" d="M92 42 c-10 -12 10 -22 0 -38"/><path id="cs${i}2" d="M112 46 c-10 -12 10 -20 0 -34"/></g><ellipse cx="92" cy="168" rx="78" ry="11" fill="#EEE8DB"/><path d="M42 60 h100 l-13 104 h-74 z" fill="#fff" stroke="#3A4560" stroke-width="5" stroke-linejoin="round"/><path d="M49 84 h86 l-9 74 h-68 z" fill="${tea}"/><path d="M42 60 h100" stroke="#B8862F" stroke-width="6" stroke-linecap="round"/>${i ? '<g id="gin"><path d="M98 86 q6 -9 14 -4 q8 -6 14 2 q-4 8 -14 6 q-9 4 -14 -4 z" fill="#E9D9B5" stroke="#8A6420" stroke-width="3" stroke-linejoin="round"/></g>' : ''}</svg>`;
 const CK = [['K', 'KABIR\'S CHAI', '#D9C7A0', 3], ['A', 'ASHA\'S CHAI', '#B8862F', 9]];
 $('#ckRow').innerHTML = CK.map(([l, n, tea], i) => `<div class="card ck" id="ck${i}" style="left:${160 + i * 816}px"><div class="lbl" style="left:40px;top:40px">${n}</div><div class="avc">${l}</div>${cupSvg(i, tea)}`
   + ['Tea', 'Milk', 'Sugar'].map((p, k) => `<div class="pill" id="ig${i}${k}" style="top:100px">${p}</div>`).join('')
@@ -283,10 +283,10 @@ M.on(t => {
     const po = { outDur: 0.3, ody: -16 };
     opener(2, t, tP1, tP2 - 0.12);
     defbar(2, t, tP2 + 0.08, tVd2, tPrOut);
-    M.vis($('#pc0'), t, tFive - 0.3, tPrOut, { dy: 36, ...po });
+    M.vis($('#pc0'), t, tP2 + 0.6, tPrOut, { dy: 36, ...po });
     PRR.forEach((_, i) => {
       const el = $('#pr_' + i), ta = tPr[i], td = i < 4 ? tPr[i + 1] : tP8;
-      M.vis(el, t, tFive + i * 0.07, 1e9, { dy: 14 });
+      M.vis(el, t, tP2 + 0.85 + i * 0.07, 1e9, { dy: 14 });
       const on = M.io((t - ta) / 0.3), act = on * (1 - M.io((t - td) / 0.4));
       el.style.background = mix(C.card, C.paper, act);
       el.querySelector('.rt').style.color = mix(C.dim, C.ink, on);

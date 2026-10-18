@@ -86,6 +86,10 @@
 .pn .pl{position:absolute;left:32px;font:500 28px Poppins;color:var(--ink2);white-space:nowrap}
 .pn .nm{position:absolute;left:120px;top:34px;font-size:36px;white-space:nowrap}
 .pn .bigU{position:absolute;left:32px;top:84px;width:72px;height:72px;border-radius:36px;background:var(--gold);display:flex;align-items:center;justify-content:center}
+.in{position:absolute;left:32px;top:84px;width:720px;height:148px;border-radius:22px;background:var(--paper)}
+.in .ti{position:absolute;left:22px;top:20px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
+.in .it{position:absolute;left:98px;top:28px;font-size:32px;white-space:nowrap}
+.in .is{position:absolute;left:22px;top:94px;font:500 26px Poppins;color:var(--ink2);white-space:nowrap}
 /* modern */
 .fb{position:absolute;top:84px;width:200px;height:112px;border-radius:22px;background:var(--paper)}
 .fb .fl{position:absolute;left:0;width:200px;top:20px;text-align:center;font:600 15px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
@@ -193,10 +197,11 @@
       <!-- stop 1: classical thinkers -->
       <div id="thRow"></div>
       <!-- stop 2: human relations -->
-      <div class="card hc" id="haw"><div class="lbl">HAWTHORNE STUDIES</div><div class="yp">1924-1932</div><div id="tlRow"></div></div>
+      <div class="card hc" id="haw"><div class="lbl">HAWTHORNE STUDIES</div><div class="yp">1924-1932</div><div class="in" id="hawIn"><div class="ti" id="hawI"></div><div class="serif it">Watching real workers</div><div class="is">In one factory, for eight years</div></div><div id="tlRow"></div></div>
       <div class="card hc" id="fnd" style="left:976px"><div id="fndP"></div></div>
       <!-- stop 3: modern -->
       <div class="card hc" id="sys"><div class="lbl">SYSTEMS APPROACH</div><div class="yp">1950s-1960s</div>
+        <div class="in" id="sysIn"><div class="ti" id="sysI"></div><div class="serif it">Every part is connected</div><div class="is">Change one part, and the rest feel it</div></div>
         <svg id="fbk" width="784" height="264"><path id="fbkP" d="M632 196 V226 H132 V204" fill="none" stroke="#D9CFBC" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path id="fbkA" d="M122 214 L132 202 L142 214" fill="none" stroke="#D9CFBC" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <div id="fbRow"></div><div id="fbkL"><span>FEEDBACK</span></div>
       </div>
