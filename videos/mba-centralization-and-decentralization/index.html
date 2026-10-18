@@ -1,0 +1,261 @@
+<!doctype html><html><head><meta charset="utf-8"><title>MBA - Centralization and Decentralization (Ep 26)</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<style>
+/* ===== MBA world: Boardroom ===== */
+:root{--paper:#F5F1E8;--paper2:#EEE8DB;--ink:#14213D;--ink2:#3A4560;--muted:#8A8274;--line:#E2DACB;--gold:#B8862F;--gold2:#E9D9B5;--card:#FFFFFF;--red:#B5482F}
+#stage{background:var(--paper);font-family:Poppins;color:var(--ink)}
+#bgv{position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 40%,rgba(255,255,255,.55),rgba(255,255,255,0) 60%),radial-gradient(140% 120% at 50% 50%,rgba(0,0,0,0) 62%,rgba(90,70,40,.08))}
+#prog{position:absolute;left:0;top:0;height:6px;width:1920px;background:var(--line);z-index:60}
+#prog i{display:block;height:6px;background:var(--gold);width:0}
+#cam{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.serif{font-family:Poppins;font-weight:700;letter-spacing:-.025em}
+.chip{position:absolute;display:inline-flex;align-items:center;gap:14px;height:44px;padding:0 20px;border-radius:22px;background:var(--ink);color:#F5E7C6;font:600 18px Poppins;letter-spacing:.16em;white-space:nowrap}
+.chip i{width:8px;height:8px;border-radius:4px;background:var(--gold)}
+.chip.ghost{background:transparent;color:var(--muted);border:2px solid var(--line);height:40px;font-size:16px}
+#title{position:absolute;left:0;top:0;line-height:1.05;white-space:nowrap;transform-origin:0 0;color:var(--ink)}
+#title .acc,.acc{color:var(--gold)}
+#sub{position:absolute;left:0;top:640px;width:1920px;text-align:center;font:500 32px Poppins;color:var(--muted)}
+#rule{position:absolute;left:840px;top:612px}
+.card{position:absolute;background:var(--card);border-radius:28px;box-shadow:0 1px 0 rgba(20,33,61,.04),0 18px 40px -12px rgba(20,33,61,.14)}
+.lbl{position:absolute;font:600 18px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.abs{position:absolute}
+.pill{position:absolute;height:48px;padding:0 20px;border-radius:24px;display:flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+.avc{position:absolute;width:64px;height:64px;border-radius:32px;display:flex;align-items:center;justify-content:center;font:700 28px Poppins;color:#fff;background:var(--ink)}
+/* scene A: every decision waits for Ravi */
+#hero{left:160px;top:270px;width:616px;height:580px;overflow:hidden}
+#hname{position:absolute;left:0;width:616px;top:452px;text-align:center;font-size:44px}
+#htag{position:absolute;left:0;width:616px;text-align:center;top:516px;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+#req{left:840px;top:270px;width:920px;height:274px}
+#ans{left:840px;top:576px;width:920px;height:274px}
+#rN{position:absolute;left:36px;top:66px;font-size:104px;line-height:1;width:240px}
+.crow{position:absolute;left:300px;width:584px;height:64px;border-radius:20px;background:var(--paper)}
+.crow .ci{position:absolute;left:12px;top:10px;width:44px;height:44px;border-radius:22px;background:#fff;display:flex;align-items:center;justify-content:center}
+.crow .ct{position:absolute;left:72px;top:15px;font:600 25px Poppins;white-space:nowrap}
+.crow .cw2{position:absolute;right:12px;top:12px;height:40px;padding:0 16px;border-radius:20px;display:flex;align-items:center;font:600 18px Poppins;letter-spacing:.06em;white-space:nowrap;background:#F6E3DC;color:#B5482F}
+#aV{position:absolute;left:36px;top:70px;font-size:88px;line-height:1;width:250px;white-space:nowrap}
+#aBar{position:absolute;left:300px;top:104px;width:584px;height:24px;border-radius:12px;background:var(--paper2)}
+#aFill{position:absolute;left:0;top:0;height:24px;border-radius:12px;background:var(--gold)}
+#aL0,#aL1{position:absolute;top:66px;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+#aL0{left:300px}#aL1{right:36px}
+#pDesk{left:36px;top:196px}
+#pLost{top:196px;background:#F6E3DC;color:#B5482F}
+/* statement on navy */
+#stmt{position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:41}
+#st1{position:absolute;left:0;width:1920px;top:400px;text-align:center;font:500 52px Poppins;color:#E9D9B5;white-space:nowrap}
+#st2{position:absolute;left:0;width:1920px;top:492px;text-align:center;font-size:112px;color:#fff;white-space:nowrap}
+/* scene D: two definitions */
+#dq{position:absolute;left:0;width:1920px;top:470px;text-align:center;font-size:96px;white-space:nowrap}
+.dc{position:absolute;top:270px;width:784px;height:580px;border-radius:28px}
+.dc .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line);box-shadow:0 18px 40px -12px rgba(20,33,61,.14)}
+.dp{position:absolute;inset:0}
+.dp .di{position:absolute;left:40px;top:40px;width:96px;height:96px;border-radius:48px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.dp .dt{position:absolute;left:168px;top:34px;font-size:60px;white-space:nowrap}
+.dp .dm{position:absolute;left:170px;top:116px;font:600 30px Poppins;white-space:nowrap}
+.dp .hr{position:absolute;left:40px;right:40px;top:186px;height:2px;background:var(--line)}
+.dp svg{position:absolute;left:0;top:0}
+.tn{position:absolute;width:64px;height:64px;border-radius:32px;background:var(--paper2);display:flex;align-items:center;justify-content:center}
+.tn.hq{width:72px;height:72px;border-radius:36px;background:var(--ink);color:#fff;font:700 30px Poppins}
+.dp .dpill{position:absolute;top:492px;height:56px;padding:0 24px;border-radius:28px;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+/* scene K: the slider (hero 1) */
+#sl{left:160px;top:270px;width:1600px;height:580px}
+#sl .lbl{left:40px;top:40px}
+#slLinks{position:absolute;left:0;top:0}
+#hq{position:absolute;left:660px;top:32px;width:280px;height:72px;border-radius:36px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;gap:14px;font:600 28px Poppins;white-space:nowrap}
+.on{position:absolute;top:168px;width:200px;height:64px;border-radius:32px;background:var(--paper2);display:flex;align-items:center;justify-content:center;gap:12px;font:600 24px Poppins;white-space:nowrap;color:var(--ink)}
+.tok{position:absolute;width:34px;height:34px;border-radius:17px;background:var(--gold);border:3px solid #fff;box-shadow:0 4px 10px -4px rgba(20,33,61,.35)}
+#trk{position:absolute;left:120px;top:322px;width:1360px;height:12px;border-radius:6px;background:var(--paper2)}
+.zone{position:absolute;top:0;height:12px;width:96px;background:#E9B9AB}
+#zL{left:0;border-radius:6px 0 0 6px}#zR{right:0;border-radius:0 6px 6px 0}
+.tick{position:absolute;top:-8px;width:4px;height:28px;border-radius:2px;background:var(--line)}
+#knob{position:absolute;left:0;top:300px;width:56px;height:56px;border-radius:28px;background:var(--ink);border:6px solid var(--gold);box-sizing:border-box;box-shadow:0 8px 18px -8px rgba(20,33,61,.45)}
+.zp{position:absolute;top:246px;height:44px;padding:0 18px;border-radius:22px;display:flex;align-items:center;gap:8px;font:600 20px Poppins;white-space:nowrap;background:#F6E3DC;color:#B5482F}
+#zpL{left:120px}#zpR{right:120px}
+.el{position:absolute;top:376px;font:600 18px Poppins;letter-spacing:.16em;white-space:nowrap}
+.et2{position:absolute;top:408px;font:600 30px Poppins;white-space:nowrap}
+#elL,#etL{left:120px}#elR,#etR{right:120px;text-align:right}
+#fq{position:absolute;left:40px;top:468px;width:1520px;height:80px;border-radius:22px;background:var(--paper);display:flex;align-items:center;gap:20px;padding:0 28px;box-sizing:border-box}
+#fq .fqt{font-size:34px;white-space:nowrap;flex:1}
+#fq .lbl{position:static}
+.wc{position:absolute;top:476px;height:64px;padding:0 24px;border-radius:32px;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+/* scene M: the map (hero 2) */
+#map{left:160px;top:270px;width:1024px;height:580px;overflow:hidden}
+#map .lbl{left:40px;top:36px}
+#mapBg{position:absolute;left:24px;top:84px;width:976px;height:472px;border-radius:20px;background:var(--paper)}
+#mapSvg{position:absolute;left:0;top:0}
+.mo{position:absolute;width:72px;height:72px;border-radius:36px;background:#fff;border:3px solid var(--line);box-sizing:border-box;display:flex;align-items:center;justify-content:center}
+.mol{position:absolute;width:240px;text-align:center;font:600 22px Poppins;white-space:nowrap}
+#mHQ{position:absolute;width:104px;height:104px;border-radius:52px;background:var(--ink);display:flex;align-items:center;justify-content:center}
+#mHQl{position:absolute;width:300px;text-align:center;font:600 18px Poppins;letter-spacing:.16em;color:var(--ink);white-space:nowrap}
+.mt{position:absolute;width:44px;height:44px;border-radius:22px;background:var(--gold);border:3px solid #fff;box-sizing:border-box;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px -4px rgba(20,33,61,.35)}
+.mt.ink{background:var(--ink)}
+.mp{position:absolute;height:48px;padding:0 18px 0 8px;border-radius:24px;display:flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap;background:var(--ink);color:#fff}
+.mp b{width:34px;height:34px;border-radius:17px;background:var(--gold);display:flex;align-items:center;justify-content:center;font:700 17px Poppins;color:#fff}
+#who{left:1216px;top:270px;width:544px;height:580px}
+#who>.lbl{left:40px;top:40px}
+.wg{position:absolute;left:40px;font:600 18px Poppins;letter-spacing:.16em;white-space:nowrap;display:flex;align-items:center;gap:10px}
+.wr{position:absolute;left:40px;width:464px;height:72px;border-radius:20px;background:var(--paper2)}
+.wr .wi{position:absolute;left:12px;top:12px;width:48px;height:48px;border-radius:24px;background:#fff;display:flex;align-items:center;justify-content:center}
+.wr .wt{position:absolute;left:80px;top:17px;font:600 28px Poppins;white-space:nowrap}
+/* scene P: pros and cons */
+.pc{position:absolute;top:270px;width:784px;height:580px}
+.pc .pt2{position:absolute;left:40px;top:36px;font-size:52px;white-space:nowrap}
+.pc .cp{position:absolute;right:40px;top:44px;height:48px;padding:0 20px;border-radius:24px;display:flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+.pr{position:absolute;left:40px;width:704px;height:84px;border-radius:22px;background:var(--paper2)}
+.pr .pb{position:absolute;left:16px;top:16px;width:52px;height:52px;border-radius:26px;display:flex;align-items:center;justify-content:center}
+.pr .ptx{position:absolute;left:92px;top:22px;font:600 30px Poppins;white-space:nowrap}
+#sweep{position:absolute;left:0;top:0;width:1920px;height:1080px;background:var(--ink);z-index:40}
+#sweep b{position:absolute;left:0;top:0;width:10px;height:1080px;background:var(--gold)}
+/* quiz */
+.opt{position:absolute;top:470px;width:376px;height:230px;border-radius:28px}
+.opt .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line)}
+.opt .lt{position:absolute;left:32px;top:30px;width:52px;height:52px;border-radius:26px;background:var(--paper);display:flex;align-items:center;justify-content:center;font:700 22px Poppins;color:var(--ink)}
+.opt .ot{position:absolute;left:32px;top:140px;font-size:38px;white-space:nowrap}
+.opt .ok{position:absolute;right:30px;top:30px;width:52px;height:52px;border-radius:26px;background:var(--gold);display:flex;align-items:center;justify-content:center}
+.qq{position:absolute;left:160px;font-size:68px;line-height:1.18;white-space:nowrap}
+#ring{position:absolute;left:1610px;top:236px;width:150px;height:150px}
+#ringN{position:absolute;left:0;top:0;width:150px;height:150px;display:flex;align-items:center;justify-content:center;font-size:64px}
+#take{position:absolute;left:160px;top:748px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:22px;padding:0 36px}
+#take .tx{font-size:40px;white-space:nowrap}
+/* recap */
+#rh{position:absolute;left:160px;top:142px;font-size:64px;white-space:nowrap}
+.rw{position:absolute;left:160px;width:1600px;height:128px}
+.rw .rn{position:absolute;left:40px;top:42px;font:700 30px Poppins;color:var(--gold);letter-spacing:.04em}
+.rw .ri{position:absolute;left:112px;top:28px;width:72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.rw .rt{position:absolute;left:216px;top:36px;font:600 38px Poppins;white-space:nowrap}
+.fp{position:absolute;top:36px;height:56px;padding:0 22px;border-radius:28px;display:flex;align-items:center;font:600 24px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+#next{position:absolute;left:160px;top:762px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:24px;padding:0 32px}
+#next .nc{height:44px;padding:0 18px;border-radius:22px;background:var(--gold);display:flex;align-items:center;font:700 18px Poppins;letter-spacing:.14em;color:#fff;white-space:nowrap}
+#next .nt{font:600 34px Poppins;white-space:nowrap;flex:1}
+.cap{font:600 38px Poppins;color:var(--ink);background:rgba(255,255,255,.96);padding:12px 30px;border-radius:40px;box-shadow:0 10px 30px -10px rgba(20,33,61,.25)}
+.cap .cw{color:#5B647A}.cap .cw.on{color:var(--ink)}.cap .cw.act{color:var(--gold)}
+</style></head><body>
+<div id="stage">
+  <div id="bgv"></div>
+  <div id="cam">
+    <!-- title + header (shared elements) -->
+    <div class="chip" id="eyebrow"><i></i>EP 26 · PRINCIPLES OF MANAGEMENT</div>
+    <div class="serif" id="title">Centralization and <span class="acc">Decentralization</span></div>
+    <div id="sub">Explained with five chai outlets</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#B8862F" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="chip ghost" id="exChip">EXAMPLE FIGURES</div>
+
+    <!-- scene A: every decision waits for Ravi -->
+    <div id="sA">
+      <div class="card" id="hero">
+        <svg id="awn" width="616" height="90" style="position:absolute;left:0;top:0"><g id="awnG"></g></svg>
+        <div id="sign" style="position:absolute;left:0;width:616px;top:104px;text-align:center;font:600 18px Poppins;letter-spacing:.2em;color:var(--muted)">CHAI CORNER · HEAD OFFICE</div>
+        <svg id="stall" width="616" height="320" style="position:absolute;left:0;top:130px">
+          <g id="steam" fill="none" stroke="#C9BFAE" stroke-width="5" stroke-linecap="round">
+            <path id="s1" d="M128 116 c-12 -14 12 -24 0 -40"/><path id="s2" d="M152 110 c-12 -14 12 -24 0 -44"/><path id="s3" d="M176 116 c-12 -14 12 -24 0 -40"/>
+          </g>
+          <g id="ravi"><circle cx="308" cy="98" r="44" fill="#14213D"/><path d="M220 210 c0 -48 40 -74 88 -74 s88 26 88 74 z" fill="#14213D"/><path d="M286 140 l22 26 l22 -26" fill="none" stroke="#B8862F" stroke-width="6" stroke-linejoin="round"/></g>
+          <rect x="60" y="196" width="496" height="92" rx="16" fill="#EEE8DB"/>
+          <rect x="60" y="196" width="496" height="10" rx="5" fill="#B8862F"/>
+          <g id="kettle" transform="translate(152 196)"><path d="M-40 0 v-54 a22 22 0 0 1 22 -22 h36 a22 22 0 0 1 22 22 v54 z" fill="#3A4560"/><path d="M40 -46 q26 0 26 -26" fill="none" stroke="#3A4560" stroke-width="8" stroke-linecap="round"/><rect x="-14" y="-88" width="28" height="12" rx="6" fill="#3A4560"/></g>
+          <g id="phone" transform="translate(470 196)"><rect x="-30" y="-34" width="60" height="34" rx="10" fill="#3A4560"/><path d="M-36 -40 q36 -26 72 0" fill="none" stroke="#3A4560" stroke-width="10" stroke-linecap="round"/>
+            <g id="ringW" fill="none" stroke="#B5482F" stroke-width="5" stroke-linecap="round"><path id="rw1" d="M-52 -62 q-10 -12 -4 -26"/><path id="rw2" d="M52 -62 q10 -12 4 -26"/></g></g>
+        </svg>
+        <div class="serif" id="hname">Ravi</div>
+        <div id="htag">OWNER · 5 OUTLETS</div>
+      </div>
+      <div class="card" id="req">
+        <div class="lbl" style="left:36px;top:34px">CALLS WAITING FOR RAVI</div>
+        <div class="serif" id="rN">0</div>
+        <div class="crow" id="cr0" style="top:82px"><div class="ci"></div><div class="ct">Outlet 3: out of cups</div><div class="cw2">WAITING</div></div>
+        <div class="crow" id="cr1" style="top:166px"><div class="ci"></div><div class="ct">College: student offer?</div><div class="cw2">WAITING</div></div>
+      </div>
+      <div class="card" id="ans">
+        <div class="lbl" style="left:36px;top:34px">TIME TO GET AN ANSWER</div>
+        <div class="serif" id="aV">5 min</div>
+        <div id="aL0">0</div><div id="aL1">3 HOURS</div>
+        <div id="aBar"><div id="aFill"></div></div>
+        <div class="pill" id="pDesk"><span id="pDi"></span>One desk, five outlets</div>
+        <div class="pill" id="pLost"><span id="pLi"></span><span id="pLt">Customers walked away</span></div>
+      </div>
+    </div>
+
+    <!-- scene D: two definitions -->
+    <div id="sD">
+      <div class="serif" id="dq">Where are <span class="acc">decisions</span> made?</div>
+      <div class="dc" id="dc0" style="left:160px"><div class="bg"></div>
+        <div class="dp" id="dp0"><div class="di"></div><div class="serif dt">Centralization</div><div class="dm">Power kept at the top</div><div class="hr"></div><svg width="784" height="580"></svg><div class="tree"></div><div class="dpill"></div></div>
+        <div class="dp" id="dp1"><div class="di"></div><div class="serif dt">Delegation</div><div class="dm">Last episode, one task</div><div class="hr"></div><svg width="784" height="580"></svg><div class="tree"></div><div class="dpill"></div></div>
+      </div>
+      <div class="dc" id="dc1" style="left:976px"><div class="bg"></div>
+        <div class="dp" id="dp2"><div class="di"></div><div class="serif dt">Decentralization</div><div class="dm">Power spread to lower levels</div><div class="hr"></div><svg width="784" height="580"></svg><div class="tree"></div><div class="dpill"></div><div class="dpill" id="dpill2b"></div></div>
+      </div>
+    </div>
+
+    <!-- scene K: the slider -->
+    <div id="sK">
+      <div class="card" id="sl">
+        <div class="lbl" id="slL">WHO DECIDES?</div>
+        <svg id="slLinks" width="1600" height="580"></svg>
+        <div id="hq"><span id="hqI"></span>Head office</div>
+        <div id="ons"></div>
+        <div id="toks"></div>
+        <div id="trk"><div class="zone" id="zL"></div><div class="zone" id="zR"></div><div class="tick" style="left:678px"></div></div>
+        <div id="knob"></div>
+        <div class="zp" id="zpL"><span class="zi"></span>No real firm</div>
+        <div class="zp" id="zpR"><span class="zi"></span>No real firm</div>
+        <div class="el" id="elL" style="color:#B8862F">CENTRALIZED</div>
+        <div class="el" id="elR" style="color:#B8862F">DECENTRALIZED</div>
+        <div class="et2" id="etL">The boss decides everything</div>
+        <div class="et2" id="etR">Each unit decides for itself</div>
+        <div id="fq"><span id="fqI"></span><span class="serif fqt" id="fqT">“A question of <span class="acc">proportion.</span>”</span><span class="lbl">HENRI FAYOL · 1916</span></div>
+        <div id="wcs"></div>
+      </div>
+    </div>
+
+    <!-- scene M: the map -->
+    <div id="sM">
+      <div class="card" id="map">
+        <div class="lbl">CHAI CORNER · 5 OUTLETS</div>
+        <div id="mapBg"></div>
+        <svg id="mapSvg" width="1024" height="580"></svg>
+        <div id="mNodes"></div>
+        <div id="mHQ"></div><div id="mHQl">HEAD OFFICE</div>
+        <div id="mToks"></div>
+        <div class="mp" id="mpM"><b>M</b>Plans her own shifts</div>
+        <div class="mp" id="mpC"><b id="mpCi"></b>Student offer, same day</div>
+      </div>
+      <div class="card" id="who">
+        <div class="lbl">WHO DECIDES WHAT</div>
+        <div class="wg" id="wg0" style="top:96px;color:#14213D"><span id="wg0i"></span>HEAD OFFICE</div>
+        <div class="wg" id="wg1" style="top:320px;color:#B8862F"><span id="wg1i"></span>EACH OUTLET MANAGER</div>
+        <div id="wRows"></div>
+      </div>
+    </div>
+
+    <!-- scene P: pros and cons -->
+    <div id="sP"><div id="pRow"></div></div>
+
+    <!-- quick check -->
+    <div id="quiz">
+      <div class="chip" id="qchip" style="left:160px;top:120px"><i></i>QUICK CHECK</div>
+      <div class="serif qq" id="qq1" style="top:224px">Bus stand adds a helper, without asking.</div><div class="serif qq acc" id="qq2" style="top:304px">Which is this?</div>
+      <svg id="ring" viewBox="0 0 150 150"><circle cx="75" cy="75" r="66" fill="#fff" stroke="#E2DACB" stroke-width="8"/><circle id="ringA" cx="75" cy="75" r="66" fill="none" stroke="#B8862F" stroke-width="8" stroke-linecap="round" transform="rotate(-90 75 75)"/></svg>
+      <div class="serif" id="ringN" style="left:1610px;top:236px;position:absolute"></div>
+      <div id="opts"></div>
+      <div id="take"><span id="takeI"></span><span class="serif tx" id="takeT">Decided at the outlet, not the top = Decentralized</span></div>
+    </div>
+
+    <!-- recap -->
+    <div id="recap">
+      <div class="chip" id="rchip" style="left:160px;top:84px"><i></i>RECAP</div>
+      <div class="serif" id="rh">Remember these <span class="acc">three things</span></div>
+      <div id="rRows"></div>
+      <div id="next"><span class="nc">NEXT · EP 27</span><span class="nt">Span of Control</span><span id="nextI"></span></div>
+    </div>
+  </div>
+  <div id="stmt"><div id="st1">One desk cannot run five outlets.</div><div class="serif" id="st2">Decide who <span style="color:#E9B95C">decides.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

@@ -63,11 +63,11 @@
 .pa .ttl{position:absolute;left:28px;top:54px;font:600 32px Poppins;white-space:nowrap}
 .pa .ttl b{font-weight:600;color:var(--gold)}
 .pa .ctr{position:absolute;right:28px;top:40px;font-size:44px;white-space:nowrap}
-#gT{position:absolute;left:28px;top:118px;width:664px;height:56px;border-radius:14px;background:#fff}
-#gF{position:absolute;left:28px;top:118px;height:56px;border-radius:14px;background:var(--ink2)}
-#gL{position:absolute;top:108px;width:0;height:76px;border-left:4px dashed var(--gold)}
-#gLl{position:absolute;top:188px;font:700 17px Poppins;letter-spacing:.12em;color:var(--gold);white-space:nowrap}
-.dy{position:absolute;top:118px;width:88px;height:72px;border-radius:16px;background:#fff}
+#gT{position:absolute;left:28px;top:118px;width:664px;height:52px;border-radius:14px;background:#fff}
+#gF{position:absolute;left:28px;top:118px;height:52px;border-radius:14px;background:var(--ink2)}
+#gL{position:absolute;top:108px;width:0;height:72px;border-left:4px dashed var(--gold)}
+#gLl{position:absolute;top:190px;font:700 17px Poppins;letter-spacing:.12em;color:var(--gold);white-space:nowrap}
+.dy{position:absolute;top:128px;width:88px;height:72px;border-radius:16px;background:#fff}
 .dy .dn{position:absolute;left:0;width:88px;top:10px;text-align:center;font:600 17px Poppins;letter-spacing:.12em;color:var(--muted)}
 .dy .di{position:absolute;left:32px;top:36px}
 .pk{left:976px;top:270px;width:784px;height:580px}
@@ -89,7 +89,7 @@
 .dk .bg{position:absolute;inset:0;border-radius:24px;background:var(--card);border:2px solid var(--line);box-shadow:0 18px 40px -12px rgba(20,33,61,.18)}
 .dk .ci{position:absolute;left:28px;top:28px;width:64px;height:64px;border-radius:32px;background:var(--paper);display:flex;align-items:center;justify-content:center}
 .dk .ct{position:absolute;left:116px;top:36px;font:600 36px Poppins;white-space:nowrap}
-.fly{transform-origin:0 0;z-index:5}
+.fly{left:0;top:0;transform-origin:0 0;z-index:5}
 .back{position:absolute;border-radius:24px;background:var(--paper2);border:2px solid var(--line)}
 .bin{position:absolute;top:442px;width:784px;height:418px;border-radius:28px}
 .bin .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:3px solid var(--card);box-shadow:0 18px 40px -12px rgba(20,33,61,.14)}
@@ -194,18 +194,18 @@
     <div id="sP">
       <div class="card lv" id="pv">
         <div class="lbl" id="pvL">THE RULEBOOK · CHAI CORNER</div>
-        <div class="pa" id="pa0" style="top:88px;height:222px">
+        <div class="pa" id="pa0" style="top:80px;height:244px">
           <div id="pA1"><div class="lbl">SAME QUESTION, EVERY DAY</div><div class="ttl">Is the milk running low?</div><div id="days"></div></div>
           <div id="pA2"><div class="lbl" style="color:var(--gold)">RULE 01</div><div class="ttl">Milk below 20 L? <b>Reorder it.</b></div><div class="serif ctr" id="mL">45 L</div>
             <div id="gT"></div><div id="gF"></div><div id="gL"></div><div id="gLl">REORDER AT 20 L</div>
-            <div class="mp" id="reo" style="top:166px;background:#B8862F;color:#fff"><span id="reoI"></span>Reorder sent</div></div>
+            <div class="mp" id="reo" style="top:176px;background:#B8862F;color:#fff"><span id="reoI"></span>Reorder sent</div></div>
           <div class="bd"></div>
         </div>
-        <div class="pa" id="pa1" style="top:342px;height:206px">
+        <div class="pa" id="pa1" style="top:348px;height:200px">
           <div class="lbl" id="r2L">RULE 02</div><div class="ttl" id="r2T">Wrong order? <b>Full refund.</b></div>
-          <div class="stp" id="r2a" style="left:28px;top:114px;background:#F6E3DC;color:#B5482F"><span id="r2aI"></span>Wrong order</div>
-          <svg class="abs" id="r2v" width="60" height="24" style="top:134px"><path d="M4 12h48 M42 4l10 8-10 8" fill="none" stroke="#B8862F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <div class="stp" id="r2b" style="top:114px;background:#14213D;color:#fff"><span id="r2bI"></span>Full refund</div>
+          <div class="stp" id="r2a" style="left:28px;top:112px;background:#F6E3DC;color:#B5482F"><span id="r2aI"></span>Wrong order</div>
+          <svg class="abs" id="r2v" width="60" height="24" style="top:132px"><path d="M4 12h48 M42 4l10 8-10 8" fill="none" stroke="#B8862F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="stp" id="r2b" style="top:112px;background:#14213D;color:#fff"><span id="r2bI"></span>Full refund</div>
           <div class="bd"></div>
         </div>
       </div>
@@ -220,20 +220,20 @@
     <div id="sX">
       <div class="card lv" id="xv">
         <div class="lbl">NEW QUESTIONS · CHAI CORNER</div>
-        <div class="pa" id="xa0" style="top:88px;height:222px">
+        <div class="pa" id="xa0" style="top:80px;height:244px">
           <div id="xA1"><div class="lbl">CHECK THE RULEBOOK</div><div class="ttl">Is there a rule for this?</div>
-            <div class="mp" id="xr1" style="left:28px;top:132px;color:#B9B1A3"><span id="xr1I"></span>Rule 01 · Milk</div>
-            <div class="mp" id="xr2" style="top:132px;color:#B9B1A3"><span id="xr2I"></span>Rule 02 · Refund</div>
-            <div class="mp" id="xno" style="top:132px;background:#B5482F;color:#fff"><span id="xnoI"></span>No match</div></div>
+            <div class="mp" id="xr1" style="left:28px;top:140px;color:#B9B1A3"><span id="xr1I"></span>Rule 01 · Milk</div>
+            <div class="mp" id="xr2" style="top:140px;color:#B9B1A3"><span id="xr2I"></span>Rule 02 · Refund</div>
+            <div class="mp" id="xno" style="top:140px;background:#B5482F;color:#fff"><span id="xnoI"></span>No match</div></div>
           <div id="xA2"><div class="lbl" style="color:var(--gold)">NEW QUESTION 01</div><div class="ttl">Open an outlet in <b>a new city?</b></div>
             <svg class="abs" width="720" height="222" style="left:0;top:0"><path id="xmap" d="M0 0" fill="none" stroke="#B8862F" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 12"/></svg>
-            <div class="stp" id="xc1" style="left:28px;top:124px"><span id="xc1I"></span>Home city · 5 outlets</div>
-            <div class="stp" id="xc2" style="top:124px;border:3px dashed #B8862F;background:#fff"><span id="xc2I"></span>New city?</div></div>
+            <div class="stp" id="xc1" style="left:28px;top:136px"><span id="xc1I"></span>Home city · 5 outlets</div>
+            <div class="stp" id="xc2" style="top:136px;border:3px dashed #B8862F;background:#fff"><span id="xc2I"></span>New city?</div></div>
           <div class="bd"></div>
         </div>
-        <div class="pa" id="xa1" style="top:342px;height:206px">
+        <div class="pa" id="xa1" style="top:348px;height:200px">
           <div class="lbl" id="q2L">NEW QUESTION 02</div><div class="ttl" id="q2T">Answer the <b>new shop next door?</b></div>
-          <div id="xB1"><div class="stp" id="xs1" style="left:28px;top:114px"><span id="xs1I"></span>Chai Corner</div><div class="lbl" id="xvs" style="top:136px;color:var(--gold)">VS</div><div class="stp" id="xs2" style="top:114px;background:#F6E3DC;color:#B5482F"><span id="xs2I"></span>New shop</div></div>
+          <div id="xB1"><div class="stp" id="xs1" style="left:28px;top:112px"><span id="xs1I"></span>Chai Corner</div><div class="lbl" id="xvs" style="top:134px;color:var(--gold)">VS</div><div class="stp" id="xs2" style="top:112px;background:#F6E3DC;color:#B5482F"><span id="xs2I"></span>New shop</div></div>
           <div id="xB2"></div>
           <div class="bd"></div>
         </div>
