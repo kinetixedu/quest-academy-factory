@@ -1,0 +1,282 @@
+<!doctype html><html><head><meta charset="utf-8"><title>MBA - Systems Approach (Ep 12)</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<style>
+/* ===== MBA world: Boardroom ===== */
+:root{--paper:#F5F1E8;--paper2:#EEE8DB;--ink:#14213D;--ink2:#3A4560;--muted:#8A8274;--line:#E2DACB;--gold:#B8862F;--gold2:#E9D9B5;--card:#FFFFFF;--red:#B5482F}
+#stage{background:var(--paper);font-family:Poppins;color:var(--ink)}
+#bgv{position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 40%,rgba(255,255,255,.55),rgba(255,255,255,0) 60%),radial-gradient(140% 120% at 50% 50%,rgba(0,0,0,0) 62%,rgba(90,70,40,.08))}
+#prog{position:absolute;left:0;top:0;height:6px;width:1920px;background:var(--line);z-index:60}
+#prog i{display:block;height:6px;background:var(--gold);width:0}
+#cam{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.serif{font-family:Poppins;font-weight:700;letter-spacing:-.025em}
+.chip{position:absolute;display:inline-flex;align-items:center;gap:14px;height:44px;padding:0 20px;border-radius:22px;background:var(--ink);color:#F5E7C6;font:600 18px Poppins;letter-spacing:.16em;white-space:nowrap}
+.chip i{width:8px;height:8px;border-radius:4px;background:var(--gold)}
+.chip.ghost{background:transparent;color:var(--muted);border:2px solid var(--line);height:40px;font-size:16px}
+#title{position:absolute;left:0;top:0;line-height:1.05;white-space:nowrap;transform-origin:0 0;color:var(--ink)}
+#title .acc,.acc{color:var(--gold)}
+#sub{position:absolute;left:0;top:640px;width:1920px;text-align:center;font:500 32px Poppins;color:var(--muted)}
+#rule{position:absolute;left:840px;top:612px}
+.card{position:absolute;background:var(--card);border-radius:28px;box-shadow:0 1px 0 rgba(20,33,61,.04),0 18px 40px -12px rgba(20,33,61,.14)}
+.lbl{position:absolute;font:600 18px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.abs{position:absolute}
+.pill{position:absolute;height:48px;padding:0 20px;border-radius:24px;display:flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+.avc{position:absolute;width:64px;height:64px;border-radius:32px;display:flex;align-items:center;justify-content:center;font:700 28px Poppins;color:#fff;background:var(--ink)}
+.hr{position:absolute;height:2px;background:var(--line)}
+/* scene A: the stall breaks down */
+#hero{left:160px;top:270px;width:616px;height:580px;overflow:hidden}
+#hname{position:absolute;left:0;width:616px;top:452px;text-align:center;font-size:44px}
+#htag{position:absolute;left:0;width:616px;text-align:center;top:516px;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+#crew{left:840px;top:270px;width:920px;height:274px}
+#jobs{left:840px;top:576px;width:920px;height:274px}
+.cw6{position:absolute;top:78px;width:64px;height:64px;border-radius:32px;display:flex;align-items:center;justify-content:center;font:700 28px Poppins;color:#fff;background:var(--ink)}
+.cn6{position:absolute;top:152px;width:120px;text-align:center;font:600 20px Poppins;color:var(--ink2);white-space:nowrap}
+.job{position:absolute;top:84px;width:266px;height:154px;border-radius:22px;background:var(--paper);overflow:hidden}
+.job .ji{position:absolute;left:24px;top:22px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
+.job .jt{position:absolute;left:24px;top:96px;font:600 28px Poppins;white-space:nowrap}
+.job .av{position:absolute;right:20px;top:22px;width:48px;height:48px;border-radius:24px;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font:700 22px Poppins}
+/* statement on navy */
+#stmt{position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:41}
+#st1{position:absolute;left:0;width:1920px;top:400px;text-align:center;font:500 52px Poppins;color:#E9D9B5;white-space:nowrap}
+#st2{position:absolute;left:0;width:1920px;top:492px;text-align:center;font-size:112px;color:#fff;white-space:nowrap}
+/* scene D: where it came from + definition */
+#dq{position:absolute;left:0;width:1920px;top:470px;text-align:center;font-size:96px;white-space:nowrap}
+.quote{position:absolute;left:0;width:1920px;text-align:center;font-size:76px;line-height:1.2;white-space:nowrap}
+#dlab{position:absolute;left:0;width:1920px;top:330px;text-align:center}
+#dgoal{position:absolute;left:740px;top:640px;width:440px;height:60px;border-radius:30px;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;gap:14px;font:600 26px Poppins;white-space:nowrap}
+#thinker{left:160px;top:270px;width:784px;height:520px}
+#bodyc{left:976px;top:270px;width:784px;height:520px}
+#lav{position:absolute;left:48px;top:224px;width:96px;height:96px;border-radius:48px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font:700 44px Poppins}
+#lname{position:absolute;left:172px;top:226px;font-size:44px;white-space:nowrap}
+#ltag{position:absolute;left:174px;top:290px;font-size:16px}
+.on3{position:absolute;width:112px;height:112px;border-radius:56px}
+.on3 .bg{position:absolute;inset:0;border-radius:56px;background:var(--paper);border:2px solid var(--line)}
+.on3 .oi{position:absolute;left:32px;top:32px;width:48px;height:48px}
+.onl{position:absolute;width:240px;text-align:center;font-size:28px;white-space:nowrap}
+/* scene P: subsystems */
+#defbar{left:160px;top:270px;width:1600px;height:84px;border-radius:24px;display:flex;align-items:center;gap:20px;padding:0 32px}
+#defbar .tx{font:600 32px Poppins;white-space:nowrap}
+#sys{left:160px;top:386px;width:1600px;height:464px}
+.st{position:absolute;top:88px;width:432px;height:216px;border-radius:22px}
+.st .bg{position:absolute;inset:0;border-radius:22px;background:var(--paper);border:2px solid var(--paper)}
+.st .si{position:absolute;left:28px;top:28px;width:64px;height:64px;border-radius:32px;background:#fff;display:flex;align-items:center;justify-content:center}
+.st .sn{position:absolute;left:112px;top:24px;font-size:36px;white-space:nowrap}
+.st .sl{position:absolute;left:114px;top:74px;font-size:15px}
+.st .pa{position:absolute;top:132px;width:56px;height:56px;border-radius:28px;display:flex;align-items:center;justify-content:center;font:700 24px Poppins;color:#fff;background:var(--ink)}
+.st .pn2{position:absolute;top:144px;font:600 24px Poppins;color:var(--ink2);white-space:nowrap}
+#sysS{position:absolute;left:0;top:0}
+#ravRow{position:absolute;left:48px;top:356px;height:56px;width:900px}
+#ravRow .tx{position:absolute;left:76px;top:10px;font:600 26px Poppins;color:var(--ink2);white-space:nowrap}
+#sgoal{position:absolute;top:360px;height:48px;padding:0 22px;border-radius:24px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:12px;font:600 22px Poppins;white-space:nowrap}
+/* scene I: the loop */
+#loopS{position:absolute;left:0;top:0}
+.io{position:absolute;top:270px;width:464px;height:288px;border-radius:28px}
+.io .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line);box-shadow:0 18px 40px -12px rgba(20,33,61,.14)}
+.io .ii{position:absolute;left:40px;top:40px;width:80px;height:80px;border-radius:40px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.io .it{position:absolute;left:144px;top:36px;font-size:52px;white-space:nowrap}
+.io .is{position:absolute;left:146px;top:102px;font:600 24px Poppins;white-space:nowrap}
+.io .hr{left:40px;right:40px;top:168px}
+.io .ip{position:absolute;top:200px;height:48px;padding:0 20px;border-radius:24px;display:flex;align-items:center;font:600 22px Poppins;white-space:nowrap}
+#fbp{position:absolute;top:626px;height:48px;padding:0 22px;border-radius:24px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:12px;font:600 22px Poppins;white-space:nowrap}
+.strip{position:absolute;left:160px;top:762px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:22px;padding:0 36px}
+.strip .tx{font-size:38px;white-space:nowrap}
+/* scene O: open system */
+#osys{left:488px;top:270px;width:944px;height:460px}
+#odash{position:absolute;left:0;top:0}
+.mc{position:absolute;top:150px;width:200px;height:72px;border-radius:20px;background:var(--paper);display:flex;align-items:center;justify-content:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+#oS{position:absolute;left:0;top:0}
+#ofb{position:absolute;left:402px;top:284px;width:140px;height:32px;border-radius:16px;background:#fff;display:flex;align-items:center;justify-content:center;font:600 15px Poppins;letter-spacing:.16em;color:var(--gold)}
+#odef{position:absolute;left:0;width:944px;top:368px;text-align:center;font-size:32px;white-space:nowrap}
+#ochip{position:absolute;top:36px}
+.env{position:absolute;width:232px;height:214px;border-radius:28px}
+.env .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--card);box-shadow:0 18px 40px -12px rgba(20,33,61,.14)}
+.env .ei{position:absolute;left:80px;top:36px;width:72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.env .en{position:absolute;left:0;width:232px;top:128px;text-align:center;font-size:28px;white-space:nowrap}
+#envS{position:absolute;left:0;top:0}
+.op{height:52px;padding:0 22px;border-radius:26px;background:#24345A;color:#fff;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+/* scene Y: synergy */
+#syn{left:160px;top:270px;width:784px;height:460px}
+#yic{position:absolute;left:48px;top:48px;width:96px;height:96px;border-radius:48px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+#yT{position:absolute;left:172px;top:44px;font-size:68px;white-space:nowrap}
+#yM{position:absolute;left:174px;top:128px;font:600 30px Poppins;color:var(--gold);white-space:nowrap}
+#yF{position:absolute;left:48px;top:290px;font-size:104px;line-height:1;white-space:nowrap}
+.rc{position:absolute;top:270px;width:784px;height:460px}
+.rc .lbl{left:48px;top:48px}
+.rc .big{position:absolute;right:48px;top:30px;font-size:64px;color:var(--gold);white-space:nowrap}
+.bar{position:absolute;left:48px;width:688px;height:120px}
+.bar .bl{position:absolute;left:0;top:0;font:600 22px Poppins;color:var(--muted);white-space:nowrap}
+.bar .bt{position:absolute;left:0;top:40px;height:64px;border-radius:16px;background:#E7E0D2}
+.bar .bv{position:absolute;top:44px;font-size:44px;white-space:nowrap}
+#sweep{position:absolute;left:0;top:0;width:1920px;height:1080px;background:var(--ink);z-index:40}
+#sweep b{position:absolute;left:0;top:0;width:10px;height:1080px;background:var(--gold)}
+/* quiz */
+.opt{position:absolute;top:470px;width:376px;height:230px;border-radius:28px}
+.opt .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line)}
+.opt .lt{position:absolute;left:32px;top:30px;width:52px;height:52px;border-radius:26px;background:var(--paper);display:flex;align-items:center;justify-content:center;font:700 22px Poppins;color:var(--ink)}
+.opt .ot{position:absolute;left:32px;top:136px;font-size:44px;white-space:nowrap}
+.opt .ok{position:absolute;right:30px;top:30px;width:52px;height:52px;border-radius:26px;background:var(--gold);display:flex;align-items:center;justify-content:center}
+.qq{position:absolute;left:160px;font-size:68px;line-height:1.18;white-space:nowrap}
+#ring{position:absolute;left:1610px;top:236px;width:150px;height:150px}
+#ringN{position:absolute;left:0;top:0;width:150px;height:150px;display:flex;align-items:center;justify-content:center;font-size:64px}
+#take{position:absolute;left:160px;top:748px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:22px;padding:0 36px}
+#take .tx{font-size:40px;white-space:nowrap}
+/* recap */
+#rh{position:absolute;left:160px;top:142px;font-size:64px;white-space:nowrap}
+.rw{position:absolute;left:160px;width:1600px;height:128px}
+.rw .rn{position:absolute;left:40px;top:42px;font:700 30px Poppins;color:var(--gold);letter-spacing:.04em}
+.rw .ri{position:absolute;left:112px;top:28px;width:72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.rw .rt{position:absolute;left:216px;top:36px;font:600 38px Poppins;white-space:nowrap}
+.fp{position:absolute;top:36px;height:56px;padding:0 22px;border-radius:28px;display:flex;align-items:center;font:600 24px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+#next{position:absolute;left:160px;top:762px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:24px;padding:0 32px}
+#next .nc{height:44px;padding:0 18px;border-radius:22px;background:var(--gold);display:flex;align-items:center;font:700 18px Poppins;letter-spacing:.14em;color:#fff;white-space:nowrap}
+#next .nt{font:600 34px Poppins;white-space:nowrap;flex:1}
+.cap{font:600 38px Poppins;color:var(--ink);background:rgba(255,255,255,.96);padding:12px 30px;border-radius:40px;box-shadow:0 10px 30px -10px rgba(20,33,61,.25)}
+.cap .cw{color:#5B647A}.cap .cw.on{color:var(--ink)}.cap .cw.act{color:var(--gold)}
+</style></head><body>
+<div id="stage">
+  <div id="bgv"></div>
+  <div id="cam">
+    <!-- title + header (shared elements) -->
+    <div class="chip" id="eyebrow"><i></i>EP 12 · PRINCIPLES OF MANAGEMENT</div>
+    <div class="serif" id="title"><span class="acc">Systems</span> Approach</div>
+    <div id="sub">Explained with one chai stall</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#B8862F" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="chip ghost" id="exChip">EXAMPLE FIGURES</div>
+
+    <!-- scene A: one part breaks, the whole stall suffers -->
+    <div id="sA">
+      <div class="card" id="hero">
+        <svg id="awn" width="616" height="90" style="position:absolute;left:0;top:0"><g id="awnG"></g></svg>
+        <div id="sign" style="position:absolute;left:0;width:616px;top:104px;text-align:center;font:600 18px Poppins;letter-spacing:.2em;color:var(--muted)">CHAI CORNER</div>
+        <svg id="stall" width="616" height="320" style="position:absolute;left:0;top:130px">
+          <g id="steam" fill="none" stroke="#C9BFAE" stroke-width="5" stroke-linecap="round">
+            <path id="s1" d="M128 116 c-12 -14 12 -24 0 -40"/><path id="s2" d="M152 110 c-12 -14 12 -24 0 -44"/><path id="s3" d="M176 116 c-12 -14 12 -24 0 -40"/>
+          </g>
+          <g id="ravi"><circle cx="308" cy="98" r="44" fill="#14213D"/><path d="M220 210 c0 -48 40 -74 88 -74 s88 26 88 74 z" fill="#14213D"/><path d="M286 140 l22 26 l22 -26" fill="none" stroke="#B8862F" stroke-width="6" stroke-linejoin="round"/></g>
+          <rect x="60" y="196" width="496" height="92" rx="16" fill="#EEE8DB"/>
+          <rect x="60" y="196" width="496" height="10" rx="5" fill="#B8862F"/>
+          <g id="kettle" transform="translate(152 196)"><path d="M-40 0 v-54 a22 22 0 0 1 22 -22 h36 a22 22 0 0 1 22 22 v54 z" fill="#3A4560"/><path d="M40 -46 q26 0 26 -26" fill="none" stroke="#3A4560" stroke-width="8" stroke-linecap="round"/><rect x="-14" y="-88" width="28" height="12" rx="6" fill="#3A4560"/></g>
+          <g id="cups"></g>
+        </svg>
+        <div class="serif" id="hname">Ravi</div>
+        <div id="htag">OWNER · CHAI CORNER</div>
+      </div>
+      <div class="card" id="crew">
+        <div class="lbl" style="left:36px;top:34px">CHAI CORNER · SIX PEOPLE</div>
+        <div id="crewRow"></div>
+        <div class="pill" id="wLine" style="left:36px;top:200px"><span id="wLi"></span><span id="wLt">Line moving</span></div>
+      </div>
+      <div class="card" id="jobs">
+        <div class="lbl" style="left:36px;top:34px">THE PARTS OF THE STALL</div>
+        <div id="jobRow"></div>
+      </div>
+    </div>
+
+    <!-- scene D: where it came from, definition -->
+    <div id="sD">
+      <div class="serif" id="dq">What is the <span class="acc">systems approach?</span></div>
+      <div class="card" id="thinker">
+        <div class="lbl" style="left:48px;top:48px">WHEN IT REACHED MANAGEMENT</div>
+        <div class="pill" id="y50" style="left:48px;top:86px">1950s</div><div class="pill" id="y60" style="left:162px;top:86px">1960s</div>
+        <div class="hr" id="thr" style="left:48px;right:48px;top:182px"></div>
+        <div id="lav">L</div>
+        <div class="serif" id="lname">Ludwig von Bertalanffy</div>
+        <div class="lbl" id="ltag">AUSTRIAN BIOLOGIST · 1901 TO 1972</div>
+        <div class="lbl" id="lidea" style="left:48px;top:362px">HIS BIG IDEA</div>
+        <div class="pill" id="gst" style="left:48px;top:400px"><span id="gstI"></span>General systems theory</div>
+      </div>
+      <div class="card" id="bodyc">
+        <div class="lbl" id="bl0" style="left:48px;top:48px">A LIVING BODY</div>
+        <div class="lbl" id="bl1" style="left:48px;top:48px">A BUSINESS</div>
+        <div class="lbl" id="blr" style="right:48px;top:48px;color:#B8862F">EVERY PART NEEDS THE OTHERS</div>
+        <svg id="bS" width="784" height="520" style="position:absolute;left:0;top:0" fill="none" stroke-linecap="round"><g id="bL"></g></svg>
+        <div id="bN"></div>
+      </div>
+      <div id="dlab"><span class="lbl" style="position:static">THE SYSTEMS APPROACH</span></div>
+      <div class="serif quote" id="quote1" style="top:400px">An organization is one system</div><div class="serif quote" id="quote2" style="top:492px">of <span class="acc">connected parts,</span> with one goal.</div>
+      <div id="dgoal"><span id="dgI"></span>One goal: happy customers</div>
+    </div>
+
+    <!-- scene P: subsystems -->
+    <div id="sP">
+      <div class="card" id="defbar"><span id="defI"></span><span class="tx">Systems approach = one system of <span class="acc">connected parts</span></span></div>
+      <div class="card" id="sys">
+        <div class="lbl" style="left:48px;top:36px">CHAI CORNER · ONE SYSTEM</div>
+        <div class="lbl" id="sysR" style="right:48px;top:36px">3 SUBSYSTEMS</div>
+        <svg id="sysS" width="1600" height="464" fill="none" stroke-linecap="round" stroke-linejoin="round"><g id="sysL"></g></svg>
+        <div id="sts"></div>
+        <div id="ravRow"><div class="avc" style="left:0;top:0;width:56px;height:56px;border-radius:28px;background:#B8862F;font-size:24px">R</div><div class="tx">Ravi, the manager, keeps all three parts working together</div></div>
+        <div id="sgoal"><span id="sgI"></span>Goal: happy customers</div>
+      </div>
+    </div>
+
+    <!-- scene I: input, process, output, feedback -->
+    <div id="sI">
+      <svg id="loopS" width="1920" height="1080" fill="none" stroke-linecap="round" stroke-linejoin="round"><g id="loopL"></g></svg>
+      <div id="ios"></div>
+      <div id="fbp"><span id="fbI"></span>Feedback</div>
+      <div class="strip" id="fbs"><span id="fbsI"></span><span class="serif tx" id="fbsT">Too sweet? Tomorrow Asha adds <span style="color:#E9D9B5">less sugar.</span></span></div>
+    </div>
+
+    <!-- scene O: open system -->
+    <div id="sO">
+      <svg id="envS" width="1920" height="1080" fill="none" stroke-linecap="round" stroke-linejoin="round"><g id="envL"></g></svg>
+      <div class="card" id="osys">
+        <svg id="odash" width="944" height="460" fill="none"><rect id="odr" x="10" y="10" width="924" height="440" rx="22" stroke="#B8862F" stroke-width="4" stroke-dasharray="14 12"/></svg>
+        <div class="lbl" id="olab" style="left:48px;top:48px">CHAI CORNER</div>
+        <div class="chip" id="ochip"><i></i>OPEN SYSTEM</div>
+        <svg id="oS" width="944" height="460" fill="none" stroke-linecap="round" stroke-linejoin="round"><g id="oL"></g></svg>
+        <div id="mcs"></div>
+        <div id="ofb">FEEDBACK</div>
+        <div class="serif" id="odef">Open system = linked to the <span class="acc">world around it</span></div>
+      </div>
+      <div id="envs"></div>
+      <div class="strip" id="ostrip"><span class="op" id="op0"><span id="op0I"></span>Milk prices go up</span><span class="op" id="op1"><span id="op1I"></span>A new stall opens next door</span><span id="opA"></span><span class="serif tx" id="opT" style="color:#E9D9B5">Ravi adapts</span></div>
+    </div>
+
+    <!-- scene Y: synergy -->
+    <div id="sY">
+      <div class="card" id="syn">
+        <div id="yic"></div>
+        <div class="serif" id="yT">Synergy</div>
+        <div id="yM">Whole &gt; sum of its parts</div>
+        <div class="hr" id="yhr" style="left:48px;right:48px;top:204px"></div>
+        <div class="lbl" id="ylb" style="left:48px;top:236px">THE IDEA IN ONE LINE</div>
+        <div class="serif" id="yF">1 + 1 = <span class="acc">3</span></div>
+      </div>
+      <div class="card rc" id="yR" style="left:976px">
+        <div class="lbl">CUPS SERVED PER HOUR</div>
+        <div class="serif big" id="yBig">+40 cups</div>
+        <div class="bar" id="yb0" style="top:150px"><div class="bl">Six people, each working alone</div><div class="bt"></div><div class="serif bv"></div></div>
+        <div class="bar" id="yb1" style="top:290px"><div class="bl">The same six, as one system</div><div class="bt"></div><div class="serif bv"></div></div>
+      </div>
+    </div>
+
+    <!-- quick check -->
+    <div id="quiz">
+      <div class="chip" id="qchip" style="left:160px;top:120px"><i></i>QUICK CHECK</div>
+      <div class="serif qq" id="qq1" style="top:224px">Ravi listens, then changes the menu.</div><div class="serif qq acc" id="qq2" style="top:304px">Which part of the system is this?</div>
+      <svg id="ring" viewBox="0 0 150 150"><circle cx="75" cy="75" r="66" fill="#fff" stroke="#E2DACB" stroke-width="8"/><circle id="ringA" cx="75" cy="75" r="66" fill="none" stroke="#B8862F" stroke-width="8" stroke-linecap="round" transform="rotate(-90 75 75)"/></svg>
+      <div class="serif" id="ringN" style="left:1610px;top:236px;position:absolute"></div>
+      <div id="opts"></div>
+      <div id="take"><span id="takeI"></span><span class="serif tx" id="takeT">Output comes back to improve the system = Feedback</span></div>
+    </div>
+
+    <!-- recap -->
+    <div id="recap">
+      <div class="chip" id="rchip" style="left:160px;top:84px"><i></i>RECAP</div>
+      <div class="serif" id="rh">Remember these <span class="acc">three things</span></div>
+      <div id="rRows"></div>
+      <div id="next"><span class="nc">NEXT · EP 13</span><span class="nt">Contingency Approach</span><span id="nextI"></span></div>
+    </div>
+  </div>
+  <div id="stmt"><div id="st1">Not six separate jobs.</div><div class="serif" id="st2">It is one <span style="color:#E9B95C">system.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

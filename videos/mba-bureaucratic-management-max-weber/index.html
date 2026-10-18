@@ -62,7 +62,7 @@
 .ut4 span{position:absolute;left:0;width:264px;top:100px;text-align:center;font:600 26px Poppins;white-space:nowrap}
 .dr{position:absolute;left:48px;width:856px;height:64px;border-radius:20px;background:var(--paper)}
 .dr i{position:absolute;left:12px;top:8px;width:48px;height:48px;border-radius:24px;background:#fff;display:flex;align-items:center;justify-content:center}
-.dr span{position:absolute;left:80px;top:12px;font:600 30px Poppins;white-space:nowrap}
+.dr>span{position:absolute;left:80px;top:12px;font:600 30px Poppins;white-space:nowrap}
 /* scene F: the rulebook */
 #book{left:160px;top:270px;width:624px;height:580px;overflow:hidden}
 #cover{position:absolute;left:0;top:0;width:624px;height:88px;background:var(--ink)}
@@ -83,6 +83,7 @@
 .dt .dd{position:absolute;left:24px;top:100px;font:600 26px Poppins;color:var(--ink2);white-space:nowrap}
 .stair{position:absolute;width:268px;border-radius:20px 20px 0 0;background:var(--paper2)}
 .stair .sl{position:absolute;right:20px;top:14px;font:600 15px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.stair .snm{position:absolute;left:18px;font:600 26px Poppins;white-space:nowrap}
 .sa{position:absolute;top:8px;width:36px;height:36px;border-radius:18px;display:flex;align-items:center;justify-content:center;font:700 17px Poppins;color:#fff;background:var(--ink)}
 .stp{position:absolute;top:0;height:64px;padding:0 28px;border-radius:32px;display:flex;align-items:center;gap:12px;font:600 28px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
 .cu{position:absolute;top:0;width:360px;height:156px;border-radius:22px;background:var(--paper)}
@@ -189,8 +190,8 @@
       </div>
       <div class="card" id="rules">
         <div class="lbl" style="left:36px;top:34px">RULES WRITTEN DOWN</div>
-        <div class="lbl" style="left:300px;top:34px">SIX PEOPLE, SIX WAYS</div>
-        <div class="serif" id="rN">0</div>
+        <div class="lbl" style="right:36px;top:34px">SIX PEOPLE, SIX WAYS</div>
+                <div class="serif" id="rN">0</div>
         <div id="twRow"></div>
       </div>
       <div class="card" id="wrong">
@@ -207,9 +208,9 @@
           <g id="pBust">
             <path d="M196 288 c0 -62 50 -92 112 -92 s112 30 112 92 z" fill="#14213D"/>
             <path d="M288 198 l20 30 l20 -30" fill="none" stroke="#B8862F" stroke-width="6" stroke-linejoin="round"/>
-            <circle cx="308" cy="132" r="50" fill="#3A4560"/>
-            <path d="M262 140 q2 58 46 64 q44 -6 46 -64 q-12 18 -46 18 q-34 0 -46 -18 z" fill="#14213D"/>
-            <path d="M262 118 q4 -40 46 -42 q42 2 46 42 q-16 -22 -46 -22 q-30 0 -46 22 z" fill="#14213D"/>
+            <circle cx="308" cy="128" r="50" fill="#14213D"/>
+            <path d="M260 128 h10 q2 34 38 36 q36 -2 38 -36 h10 q4 66 -48 82 q-52 -16 -48 -82 z" fill="#3A4560"/>
+            <path d="M290 154 q18 -10 36 0 q-18 6 -36 0 z" fill="#3A4560"/>
           </g>
         </svg>
         <div class="serif" id="wn">Max <span class="acc">Weber</span></div>
@@ -220,7 +221,7 @@
       <div class="card" id="dp">
         <div class="pn" id="dn0"><div class="ps">WHAT HE STUDIED</div><div class="serif pt">Sociologist</div><div class="pm">Someone who studies people in groups</div><div class="hr"></div><div class="px">HOW PEOPLE LIVE AND WORK</div>
           <div class="pv" id="dv0"></div></div>
-        <div class="pn" id="dn1"><div class="ps">HIS BIG IDEA</div><div class="serif pt">Bureau<span class="acc">cracy</span></div><div class="pm">Running an organization with</div><div class="hr"></div><div class="px">TWO THINGS</div>
+        <div class="pn" id="dn1"><div class="ps">HIS BIG IDEA</div><div class="serif pt">Bureau<span class="acc">cracy</span></div><div class="pm">An organization run with</div><div class="hr"></div><div class="px">TWO THINGS</div>
           <div class="dr" id="dr0" style="top:372px"><i></i><span>Clear <span class="acc">written rules</span></span></div>
           <div class="dr" id="dr1" style="top:452px"><i></i><span>A clear <span class="acc">chain of command</span></span></div></div>
       </div>
@@ -241,7 +242,6 @@
 
     <!-- scene P: good and bad -->
     <div id="sP">
-      <div class="serif" id="pq">Good or <span class="acc">bad?</span></div>
       <div id="gbRow"></div>
       <div id="spRow"></div>
       <div id="pstrip"><span id="pI"></span><span class="serif tx">A short rulebook <span style="color:#E9B95C">+</span> common sense</span></div>
