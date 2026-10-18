@@ -35,7 +35,7 @@ const tF0 = T0('F0'), tF = [1, 2, 3, 4, 5].map(i => T0('F' + i)), tFout = T0('L1
 const tStd = wt('F1', 'standards'), tStdV = [wt('F1', 'hundred'), wt('F1', 'ninety'), wt('F1', 'taste')];
 const tKabir = wt('F2', 'Kabir'), tCounts = wt('F2', 'counts'), tFour = wt('F2', 'four');
 const tGoal = wt('F3', 'goal'), tShort = wt('F3', 'short');
-const tTwenty = wt('F4', 'Twenty'), tWhy = wt('F4', 'Why'), tRush = wt('F4', 'morning');
+const tGap = wt('F4', 'gap'), tTwenty = wt('F4', 'Twenty'), tWhy = wt('F4', 'Why'), tRush = wt('F4', 'morning');
 const tAdds = wt('F5', 'adds'), tClimb = wt('F5', 'climb');
 const tL1 = T0('L1'), tL2 = T0('L2'), tLk = [tL2 + 0.3, wt('L2', 'feedback'), wt('L2', 'check'), wt('L2', 'fix'), wt('L2', 'again', 1)], tLout = T0('P1') - 0.32;
 const tP1 = T0('P1'), tP2 = T0('P2'), tPa = [wt('P2', 'Planning'), wt('P2', 'Controlling')], tP3 = T0('P3'), tWo = [wt('P3', 'Without'), wt('P3', 'Without', 1)], tP4 = T0('P4'), tPout = T0('X1') - 0.32;
@@ -81,8 +81,8 @@ const VIS = [
   tile3('sd', [['cup', 'PER CUP', '150 ml'], ['timer', 'WAIT', 'Under 90 sec'], ['smile', 'TASTE', 'Always same']], ([ic, k, v]) => `<i>${M.icon(ic, 26, C.gold, 2.2)}</i><div class="tk">${k}</div><div class="tv">${v}</div>`),
   `<div class="ob" id="ob2"><div class="av">K</div><div class="ol">KABIR COUNTS EVERY EVENING</div><div class="ot2">Outlet 2 sells <span class="acc">400 cups</span> a day</div></div>`,
   [['PLAN', 560, '500'], ['ACTUAL', 448, '400']].map(([l, w, v], k) => `<div class="cb" id="cb${k}" style="top:${8 + k * 84}px"><div class="cl">${l}</div><div class="ct" data-w="${w}"></div>${k ? '<div class="cg"></div>' : ''}<div class="serif cv" style="left:736px">${v}</div></div>`).join(''),
-  `<div class="stp" id="an0" style="background:#F6E3DC;color:#B5482F"><span>${M.icon('trendDown', 26, C.red, 2.2)}</span>20% fewer cups</div><div class="stp" id="an1"><span>${M.icon('help', 26, C.gold, 2.2)}</span>Why?</div>` +
-    `<div class="stp" id="an2" style="top:92px;background:#14213D;color:#fff"><span>${M.icon('flame', 26, C.gold2, 2.2)}</span>Morning rush: one stove is not enough</div>`,
+  `<div class="stp" id="an0" style="background:#F6E3DC;color:#B5482F"><span>${M.icon('minus', 26, C.red, 2.4)}</span>Gap: 100 cups</div><div class="stp" id="an1" style="background:#F6E3DC;color:#B5482F"><span>${M.icon('trendDown', 26, C.red, 2.2)}</span>20% fewer</div><div class="stp" id="an2"><span>${M.icon('help', 26, C.gold, 2.2)}</span>Why?</div>` +
+    `<div class="stp" id="an3" style="top:92px;background:#14213D;color:#fff"><span>${M.icon('flame', 26, C.gold2, 2.2)}</span>Morning rush: one stove is not enough</div>`,
   `<div class="stp" id="co0" style="background:#B8862F;color:#fff"><span>${M.icon('plus', 26, '#fff', 2.6)}</span>Add a second stove</div>` +
     `<div class="stp" id="co1" style="top:92px;background:#14213D;color:#fff"><span>${M.icon('trendUp', 26, C.gold2, 2.2)}</span>Back to 500 cups a day</div>`,
 ];
@@ -129,7 +129,7 @@ function measure() {
   $('#pQ').style.left = (36 + $('#pT').offsetWidth + 28) + 'px';
   document.querySelectorAll('#fPans .pt').forEach(p => { if (p.offsetWidth > 848) p.style.fontSize = Math.floor(84 * 848 / p.offsetWidth) + 'px'; });
   { const p = $('#lpn .pt'); if (p.offsetWidth > 688) p.style.fontSize = Math.floor(84 * 688 / p.offsetWidth) + 'px'; }
-  let x = 0; for (let k = 0; k < 2; k++) { const s = $('#an' + k); s.style.left = x + 'px'; x += s.offsetWidth + 24; }
+  let x = 0; for (let k = 0; k < 3; k++) { const s = $('#an' + k); s.style.left = x + 'px'; x += s.offsetWidth + 24; }
   OPTS.forEach((_, i) => { const o = $('#o' + i + ' .ot'); if (o.offsetWidth > 312) o.style.fontSize = Math.floor(40 * 312 / o.offsetWidth) + 'px'; });
   ROWS.forEach(([, , ps], i) => { let px = 216 + $('#rw' + i + ' .rt').offsetWidth + 40; ps.forEach((_, k) => { const p = $('#fp' + i + k); p.style.left = px + 'px'; px += p.offsetWidth + 16; }); });
 }
@@ -260,18 +260,18 @@ M.on(t => {
       M.vis(pn.querySelector('.pv'), t, tin + 0.55, tout, { dy: 18, ...oo });
       if (k === 1) {
         for (let i = 0; i < 3; i++) {
-          const el = $('#sd' + i); M.vis(el, t, tStdV[i] - 0.1, 1e9, { dy: 14, sc: 0.94, sp: M.POP });
+          const el = $('#sd' + i); M.vis(el, t, tF[0] + 0.65 + i * 0.08, 1e9, { dy: 14 });
           const fl = on01(t, tStdV[i], i < 2 ? tStdV[i + 1] : tF[1] - 0.3);
           el.querySelector('.bg').style.background = mix(C.paper, C.ink, fl);
-          el.querySelector('.tv').style.color = mix(C.ink, '#fff', fl);
+          const tv = el.querySelector('.tv'); tv.style.color = t < tStdV[i] ? C.dim : mix(C.ink, '#fff', fl);
           el.querySelector('.tk').style.color = mix(C.muted, C.gold2, fl);
           el.querySelector('i').style.background = mix('#fff', C.navy2, fl);
           setIco(el.querySelector('i'), ['cup', 'timer', 'smile'][i], fl > 0.5 ? C.gold2 : C.gold, 26, 2.2);
         }
       } else if (k === 2) {
-        const ob = $('#ob2'); M.vis(ob, t, tKabir - 0.1, 1e9, { dy: 14 });
+        const ob = $('#ob2'); M.vis(ob, t, tF[1] + 0.65, 1e9, { dy: 14 });
         M.vis(ob.querySelector('.av'), t, tKabir, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 });
-        M.vis(ob.querySelector('.ol'), t, tKabir + 0.1, 1e9, { dy: 10 });
+        M.vis(ob.querySelector('.ol'), t, tF[1] + 0.8, 1e9, { dy: 10 });
         M.rise(ob.querySelector('.ot2'), t, tFour - 0.5, { st: 0.05 });
       } else if (k === 3) {
         [0, 1].forEach(r => {
@@ -285,9 +285,10 @@ M.on(t => {
           }
         });
       } else if (k === 4) {
-        M.vis($('#an0'), t, tTwenty - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
-        M.vis($('#an1'), t, tWhy - 0.05, 1e9, { dy: 12 });
-        M.vis($('#an2'), t, tRush - 0.05, 1e9, { dy: 12 });
+        M.vis($('#an0'), t, tGap - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
+        M.vis($('#an1'), t, tTwenty - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
+        M.vis($('#an2'), t, tWhy - 0.05, 1e9, { dy: 12 });
+        M.vis($('#an3'), t, tRush - 0.05, 1e9, { dy: 12 });
       } else if (k === 5) {
         M.vis($('#co0'), t, tAdds - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
         M.vis($('#co1'), t, tClimb - 0.05, 1e9, { dy: 12 });
