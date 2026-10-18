@@ -206,6 +206,7 @@ M.on(t => {
     M.vis($('#defbar'), t, tD3 + 0.08, tDout, { dy: 24, ...o });
     DC.forEach((d, i) => {
       const el = $('#dc' + i); M.vis(el, t, tDc[i] - 0.08, tDout, { dy: 30, ...o });
+      if (i === 0) { const sh = M.spring(t - (tDc[1] - 0.3), M.HEAVY); el.style.width = (sh > 0.999 ? 784 : M.lerp(1600, 784, sh)).toFixed(1) + 'px'; }
       el.querySelectorAll('.hr,.fx,.fv').forEach((c, j) => M.vis(c, t, tDc[i] + 0.5 + j * 0.12, 1e9, { dy: 12 }));
       const av = el.querySelector('.avc'); if (av) av.style.background = mix(C.ink, C.gold, on01(t, tDc[i], tDc[i + 1]));
     });
@@ -239,8 +240,8 @@ M.on(t => {
       if (t > tE[i] && t < tE[i] + 0.45) rc.style.transform = `scale(${(1 + 0.12 * Math.sin(Math.PI * (t - tE[i]) / 0.45)).toFixed(4)})`; else if (rc.style.transform !== 'none') rc.style.transform = 'none';
     });
     // stage panel
-    M.vis($('#stp'), t, tW2 + 0.15, tWout, { dx: 60, dy: 0, ...wo });
-    const PIN = [tW2 + 0.3, tE[0] + 0.05, tE[1] + 0.05, tE[2] + 0.05, tE[3] + 0.05];
+    M.vis($('#stp'), t, tW2 + 0.6, tWout, { dx: 60, dy: 0, ...wo });
+    const PIN = [tW2 + 0.75, tE[0] + 0.05, tE[1] + 0.05, tE[2] + 0.05, tE[3] + 0.05];
     for (let k = 0; k < 5; k++) {
       const tin = PIN[k], tout = k < 4 ? PIN[k + 1] - 0.19 : 1e9;
       const pn = $('#sp' + k), on = t >= tin - 0.01 && t <= tout + 0.3; M.hide(pn, !on); if (!on) continue;
