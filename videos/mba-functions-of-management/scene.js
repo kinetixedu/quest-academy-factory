@@ -89,7 +89,7 @@ const XP = [
   ['STEP 03 · STAFF', 'userPlus', 'Meena runs it, and two helpers join', `<div class="avc" id="xv3m" style="background:${C.gold}">M</div><span class="unit" id="xv3t">+</span>${helper('xv3a')}${helper('xv3b')}`],
   ['STEP 04 · DIRECT', 'compass', 'Asha trains the helpers on her recipe', `<div class="avc" id="xv4a" style="background:${C.gold}">A</div><span id="xv4r">${M.icon('arrowR', 36, C.gold, 2.4)}</span>${helper('xv4b')}${helper('xv4c')}`],
   ['STEP 05 · CONTROL', 'gauge', 'Kabir counts the cups every evening', `<div id="cbar"><div class="tk"></div><div class="fl"></div><div class="gl"></div><div class="gt">GOAL 200</div><div class="cv">150 cups</div></div><span class="pill pl" id="xv5p" style="background:${C.redBg};color:${C.red}">Not yet</span>`],
-  ['STEP 01 AGAIN · PLAN', 'target', 'New plan: open early for the college rush', `<span id="xv6i">${M.icon('clock', 64, C.gold, 2)}</span><span class="serif big" id="xv6a">7:00 AM</span>`],
+  ['STEP 01 AGAIN · PLAN', 'target', 'New plan: open early for morning commuters', `<span id="xv6i">${M.icon('clock', 64, C.gold, 2)}</span><span class="serif big" id="xv6a">7:00 AM</span>`],
   ['THE BIG IDEA', 'refresh', 'Controlling feeds the next plan', ['Round 1', 'Round 2', 'Round 3'].map((p, k) => `<span class="pill pl" id="xv7${k}">${p}</span>`).join('')],
 ];
 $('#xps').innerHTML = XP.map(([l, ic, s, v], i) => `<div class="xp" id="xp${i}"><div class="xl">${l}</div><div class="xi">${M.icon(ic, 36, C.gold, 2.2)}</div><div class="xs">${s}</div><div class="xv" id="xv${i}">${v}</div></div>`).join('');

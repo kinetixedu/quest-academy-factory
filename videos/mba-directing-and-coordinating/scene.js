@@ -30,7 +30,7 @@ Object.assign(M.IC, {
 });
 
 /* ---------- beats (all from the voice) ---------- */
-const tTitle = 0.25, tMorph = T0('H2') + 0.02, tTeam = Math.max(wt('H1', 'team'), tMorph + 0.45), tNobody = wt('H2', 'nobody');
+const tTitle = 0.25, tMorph = T0('H2') + 0.02, tTeam = tMorph + 0.45, tNobody = wt('H2', 'nobody');
 const tWaits = wt('C1', 'waits'), tOrders = wt('C1', 'orders'), tReady = wt('C2', 'ready'), tLate = wt('C2', 'late'), tCold = wt('C3', 'Cold'), tWalk = wt('C3', 'walk');
 const tT = T0('T1'), tSt2 = wt('T1', 'direction'), tTu = T0('D1') - 0.32;
 const tD1 = T0('D1'), tD2 = T0('D2'), tMot = wt('D2', 'motivating'), tD3 = T0('D3'), tDc = [wt('D3', 'Planning'), wt('D3', 'Directing')], tE0 = T0('E0'), tDout = tE0 - 0.32;
@@ -51,10 +51,10 @@ let aw = ''; for (let i = 0; i < 8; i++) aw += `<path d="M${i * 77} 0 h77 v58 a3
 $('#awnG').innerHTML = aw;
 const CUPS = []; [[4, 0], [3, 1]].forEach(([n, r]) => { for (let k = 0; k < n; k++) CUPS.push([430 + r * 18 + k * 36, 196 - r * 38]); });
 $('#cups').innerHTML = CUPS.map(([x, y], i) => `<g id="cup${i}" transform="translate(${x} ${y})"><path d="M-15 -34 h30 l-4 34 h-22 z" fill="#fff" stroke="#3A4560" stroke-width="3" stroke-linejoin="round"/><path d="M-15 -34 h30" stroke="#B8862F" stroke-width="4"/></g>`).join('');
-// the new team: Ravi, Meena and two new helpers
+// the outlet team: Ravi (owner), Meena (runs the outlet) and two new helpers
 const CREW = [['R', 0], ['M', 0], ['', 1], ['', 1]];
 $('#crewRow').innerHTML = CREW.map(([l, nw], i) => `<div class="avc" id="cr${i}" style="left:${248 + i * 106}px;background:${nw ? C.gold2 : C.gold}">${nw ? '<span class="ico"></span>' : l}</div>`).join('');
-$('#pDayI').innerHTML = M.icon('calendar', 24, C.gold, 2.2); $('#pWhoI').innerHTML = M.icon('help', 24, C.red, 2.2); $('#pLostI').innerHTML = M.icon('userX', 24, C.red, 2.2);
+$('#pDayI').innerHTML = M.icon('users', 24, C.gold, 2.2); $('#pWhoI').innerHTML = M.icon('help', 24, C.red, 2.2); $('#pLostI').innerHTML = M.icon('userX', 24, C.red, 2.2);
 // order 01: chai and samosa
 const SRV = [['Chai', 'cup'], ['Samosa', 'flame']];
 $('#srvRow').innerHTML = SRV.map(([t, ic], i) => `<div class="job" id="sv${i}" style="left:${36 + i * 436}px"><div class="ji">${M.icon(ic, 28, C.ink, 2.2)}</div><div class="jt">${t}</div><div class="av"></div><div class="jr"></div></div>`).join('');
