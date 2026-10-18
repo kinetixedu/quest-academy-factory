@@ -33,11 +33,11 @@ const tA7 = T0('AR7'), tKc = [wt('AR7', 'Personal'), wt('AR7', 'practice'), wt('
 // test 2: science
 const tS1 = T0('SC1'), tS2 = T0('SC2'), tTest = wt('SC2', 'Tested'), tSort = wt('SC2', 'sorted'), tS3 = T0('SC3'), tDo = wt('SC3', 'Do');
 const tS4 = T0('SC4'), tGive = wt('SC4', 'Give'), tJobW = [wt('SC4', 'each'), wt('SC4', 'one'), wt('SC4', 'clear')], tWork = wt('SC4', 'work');
-const tS5 = T0('SC5'), tEvery = wt('SC5', 'Every'), tS6 = T0('SC6'), tPpl = wt('SC6', 'people'), tWk = wt('SC6', 'work'), tFail = wt('SC6', 'fail'), tAnother = wt('SC6', 'another');
+const tS5 = T0('SC5'), tEvery = wt('SC5', 'Every'), tS6 = T0('SC6'), tPpl = wt('SC6', 'people'), tWk = wt('SC6', 'work'), tFail = wt('SC6', 'fail'), tAnother = wt('SC6', 'Meena');
 const tVd1 = wt('SC7', 'inexact'), tSocial = wt('SC7', 'social'), tScOut = T0('PR1') - 0.32;
 // test 3: profession
 const tP1 = T0('PR1'), tP2 = T0('PR2'), tFive = wt('PR2', 'five'), tPr = [3, 4, 5, 6, 7].map(i => T0('PR' + i));
-const tPs = [wt('PR3', 'have'), wt('PR4', 'BBA'), wt('PR5', 'All'), wt('PR6', 'forced'), wt('PR7', 'still')];
+const tPs = [wt('PR3', 'have'), wt('PR4', 'BBA'), wt('PR5', 'All'), wt('PR6', 'compulsory'), wt('PR7', 'Still')];
 const tP8 = T0('PR8'), tLr = [wt('PR8', 'Doctors'), wt('PR8', 'lawyers'), wt('PR9', 'manager')], tLs = [wt('PR8', 'licence'), wt('PR8', 'licence'), wt('PR9', 'none')], tRavi = wt('PR9', 'Ravi');
 const tVd2 = wt('PR10', 'partly'), tPrOut = T0('V1') - 0.32;
 // verdict
