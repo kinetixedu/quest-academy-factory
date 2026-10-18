@@ -188,6 +188,8 @@ M.on(t => {
   const rOn = t >= tD4 && t < tQ + 0.05; M.hide($('#sRoad'), !rOn);
   if (rOn) {
     const ro = { outDur: 0.3, ody: -16 };
+    const lift = M.spring(t - (tK2 - 0.45), M.HEAVY), rdy = 210 * (1 - lift);
+    $('#roadG').style.transform = rdy < 0.02 ? 'none' : `translateY(${rdy.toFixed(2)}px)`;
     const rb = M.o3((t - tRoad) / 1.0); $('#roadBase').style.width = (1600 * rb).toFixed(1) + 'px'; M.hide($('#roadBase'), rb <= 0);
     M.draw($('#dashL'), t, tRoad + 0.3, 1.0, M.io);
     const gw = goldW(t); $('#roadGold').style.width = Math.max(0, gw).toFixed(1) + 'px'; M.hide($('#roadGold'), gw < 1);
