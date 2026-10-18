@@ -5,7 +5,7 @@ name: Quest Academy factory
 on:
   push:
     branches: [main]
-    paths: ['videos/**/READY']
+    paths: ['videos/**/READY', '.github/workflows/**', 'tools/**']
   schedule:
     - cron: '17 */3 * * *'      # every 3 hours, picks up anything still waiting (quota-limited runs)
   workflow_dispatch:
@@ -46,7 +46,10 @@ jobs:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
-        run: python3 tools/upload.py --ensure-playlists
+        run: |
+          mkdir -p registry; [ -f registry/playlists.json ] || echo '{}' > registry/playlists.json
+          if [ -z "$YT_REFRESH_TOKEN" ]; then echo "::warning::YouTube secrets not set yet - videos will be built but not uploaded"; exit 0; fi
+          python3 tools/upload.py --ensure-playlists
       - uses: actions/upload-artifact@v4
         with: { name: playlists, path: registry/playlists.json }
 
@@ -101,6 +104,7 @@ jobs:
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
         run: |
+          if [ -z "$YT_REFRESH_TOKEN" ]; then echo "::warning::No YouTube secrets - skipping upload (video stays READY for the next run)"; exit 0; fi
           if [ -n "${{ matrix.publish_at }}" ]; then
             python3 tools/upload.py videos/${{ matrix.slug }} --publish-at "${{ matrix.publish_at }}"
           else
