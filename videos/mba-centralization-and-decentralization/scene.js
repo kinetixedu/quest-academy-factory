@@ -75,7 +75,7 @@ $('#toks').innerHTML = [0, 1, 2, 3, 4].map(k => `<div class="tok" id="tk${k}"></
 $('#zpL .zi').innerHTML = M.icon('x', 20, C.red, 2.6); $('#zpR .zi').innerHTML = M.icon('x', 20, C.red, 2.6);
 $('#roAi').innerHTML = M.icon('building', 30, C.ink, 2.2); $('#roBi').innerHTML = M.icon('store', 30, C.gold, 2.2);
 $('#fqI').innerHTML = M.icon('quote', 36, C.gold, 2);
-const TH_ORDER = [2, 0, 4, 1, 3], TH = [0.05, 0.25, 0.45, 0.65, 0.85];   // outlet TH_ORDER[i] takes its decisions once the slider passes TH[i]
+const TH_ORDER = [2, 0, 4, 1, 3], TH = [0.05, 0.24, 0.42, 0.6, 0.8];   // outlet TH_ORDER[i] takes its decisions once the slider passes TH[i]
 const WCL = [['Small firm', 'store'], ['Uniform rules', 'equal'], ['Crisis', 'alert']];
 const WCR = [['Large firm', 'building'], ['Many places', 'pin'], ['Fast change', 'refresh']];
 $('#wcs').innerHTML = WCL.map(([tx, ic], i) => `<div class="wc" id="wcl${i}"><span class="ico">${M.icon(ic, 24, C.gold, 2.2)}</span>${tx}</div>`).join('') + WCR.map(([tx, ic], i) => `<div class="wc" id="wcr${i}"><span class="ico">${M.icon(ic, 24, C.gold, 2.2)}</span>${tx}</div>`).join('');
@@ -136,7 +136,7 @@ function measure() {
   let x = 40; for (let i = 0; i < 3; i++) { const e = $('#wcl' + i); e.style.left = x + 'px'; x += e.offsetWidth + 16; }
   x = 1560; for (let i = 2; i >= 0; i--) { const e = $('#wcr' + i); x -= e.offsetWidth; e.style.left = x + 'px'; x -= 16; }
   const mm = $('#mpM'); mm.style.left = (984 - mm.offsetWidth) + 'px'; mm.style.top = '284px';
-  const mc = $('#mpC'); mc.style.left = '48px'; mc.style.top = '336px';
+  const mc = $('#mpC'); mc.style.left = '48px'; mc.style.top = '320px';
   for (let i = 0; i < 3; i++) { let px = 216 + $('#rw' + i + ' .rt').offsetWidth + 32; for (let k = 0; k < 2; k++) { const p = $('#fp' + i + k); p.style.left = px + 'px'; px += p.offsetWidth + 16; } }
   // road geometry for the map tokens
   geo.rd = ROAD.map((_, k) => { const p = $('#rd' + k); return { p, L: p.getTotalLength() }; });
