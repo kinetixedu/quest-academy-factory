@@ -307,7 +307,12 @@ M.on(t => {
       } else if (k2 === 2) {
         for (let i = 0; i < 3; i++) { const el = $('#pi' + i); M.vis(el, t, tInfo[i] - 0.05, 1e9, { dy: 14 }); M.rise(el.querySelector('.tv'), t, tInfo[i] + 0.1, { st: 0.04 }); }
       } else if (k2 === 3) {
-        for (let i = 0; i < 3; i++) { const el = $('#pl' + i); M.vis(el, t, tAlt[i] - 0.08, 1e9, { dy: 14, sc: 0.94, sp: M.POP }); }
+        for (let i = 0; i < 3; i++) {
+          const el = $('#pl' + i), on = M.io((t - tAlt[i] + 0.08) / 0.3); M.vis(el, t, tin + 0.6 + i * 0.08, 1e9, { dy: 14 });
+          el.querySelector('.av').style.background = mix(C.paper2, C.gold, on); el.querySelector('.av').style.color = on > 0.5 ? '#fff' : C.dim;
+          el.querySelector('.tv').style.color = mix(C.dim, C.ink, on); el.querySelector('.tk').style.color = mix(C.dim, C.muted, on);
+          el.querySelector('.bg').style.background = mix(C.paper, C.gold3, on01(t, tAlt[i] - 0.08, tAlt[i] + 0.8));
+        }
       } else if (k2 === 4 || k2 === 5) {
         const pre = k2 === 4 ? 'pe' : 'pc';
         for (let i = 0; i < 3; i++) {
