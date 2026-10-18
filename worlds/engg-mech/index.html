@@ -1,0 +1,115 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Engineering Mechanical - Gears and Gear Ratio</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<style>
+/* ===== engg-mech world: Workshop CAD ===== */
+:root{--bg:#E9ECEF;--dot:#CDD3DA;--steel:#2E3742;--mid:#6C7886;--line:#CBD2DA;--card:#F7F8FA;--orange:#FF6A13;--track:#DDE2E7}
+#stage{background:var(--bg);font-family:Barlow;font-weight:500;color:var(--steel)}
+#grid{position:absolute;left:0;top:0}
+#prog{position:absolute;left:0;top:0;height:6px;width:1920px;background:var(--line);z-index:60}
+#prog i{display:block;height:6px;background:var(--orange);width:0}
+#cam{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.cond{font-family:'Barlow Condensed';font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.mono{font-family:'IBM Plex Mono'}
+.chip{position:absolute;display:inline-flex;align-items:center;gap:14px;height:44px;padding:0 18px;border-radius:4px;background:var(--steel);color:#fff;font:600 20px 'Barlow Condensed';letter-spacing:.2em;white-space:nowrap}
+.chip i{width:10px;height:10px;background:var(--orange)}
+#title{position:absolute;left:0;top:0;font-size:150px;line-height:1;white-space:nowrap;transform-origin:0 0;color:var(--steel)}
+#title .acc{color:var(--orange)}
+#sub{position:absolute;left:0;top:666px;width:1920px;text-align:center;font:500 34px Barlow;color:var(--mid)}
+#tdim{position:absolute;left:0;top:0}
+#gsv{position:absolute;left:0;top:0}
+.card{position:absolute;background:var(--card);border:2px solid var(--line);border-radius:8px}
+.bal{position:absolute;width:44px;height:44px;border-radius:22px;border:2.5px solid var(--steel);background:var(--card);display:flex;align-items:center;justify-content:center;font:600 22px 'IBM Plex Mono';color:var(--steel)}
+.gc .bal{left:28px;top:26px}
+.gc .lb{position:absolute;left:88px;top:24px;font-size:30px;line-height:1}
+.gc .tt{position:absolute;left:88px;top:56px;font:400 19px 'IBM Plex Mono';color:var(--mid);letter-spacing:.04em}
+.gc .n{position:absolute;left:28px;top:98px;font:600 76px 'IBM Plex Mono';line-height:76px;letter-spacing:-.04em}
+.gc .rv{position:absolute;right:28px;top:142px;font:400 20px 'IBM Plex Mono';color:var(--mid);letter-spacing:.06em}
+.gc .bar{position:absolute;left:28px;top:186px;width:248px;height:8px;background:var(--track)}
+.gc .bar i{position:absolute;left:0;top:0;height:8px;width:0;background:var(--steel)}
+#rc .lb{position:absolute;left:28px;top:26px;font-size:30px;line-height:1}
+#rc .sb{position:absolute;left:28px;top:66px;font:400 22px 'IBM Plex Mono';color:var(--mid)}
+#rc .big{position:absolute;right:28px;top:22px;font:600 68px 'IBM Plex Mono';line-height:1}
+#tc .hd{position:absolute;left:28px;top:24px;font-size:24px;color:var(--mid);letter-spacing:.12em}
+.row{position:absolute;left:28px;width:588px;height:36px}
+.row .lb{position:absolute;left:0;top:2px;font-size:30px;line-height:1}
+.row .tk{position:absolute;left:150px;top:10px;width:330px;height:16px;background:var(--track)}
+.row .tk i{position:absolute;left:0;top:0;height:16px;background:var(--steel)}
+.row .tk b{position:absolute;left:108px;top:-8px;width:2px;height:32px;background:var(--mid)}
+.row .vl{position:absolute;right:0;top:0;font:600 30px 'IBM Plex Mono';line-height:36px}
+#wipe{position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:40}
+#qq{position:absolute;left:160px;top:150px;font-size:64px;line-height:1;white-space:nowrap}
+#qd{left:160px;top:260px;width:784px;height:420px}
+.opt{position:absolute;left:976px;width:784px;height:194px}
+.opt .lt{position:absolute;left:32px;top:61px;width:72px;height:72px;border:2.5px solid var(--steel);border-radius:4px;display:flex;align-items:center;justify-content:center;font:600 34px 'IBM Plex Mono'}
+.opt .ot{position:absolute;left:136px;top:62px;font-size:72px;line-height:1}
+.opt .ok{position:absolute;right:32px;top:61px;width:72px;height:72px;border-radius:4px;background:var(--orange);display:flex;align-items:center;justify-content:center}
+#ring{position:absolute;left:1630px;top:84px;width:130px;height:130px}
+#ringN{position:absolute;left:1630px;top:84px;width:130px;height:130px;display:flex;align-items:center;justify-content:center;font:600 56px 'IBM Plex Mono'}
+#take{position:absolute;left:160px;top:712px;width:1600px;height:104px;border-radius:8px;background:var(--steel);color:#fff;display:flex;align-items:center;gap:24px;padding:0 36px}
+#take .tx{font-size:44px;white-space:nowrap;line-height:1}
+#take .tx b{color:var(--orange);font-weight:700}
+.cap{font:600 38px Barlow;color:#fff;background:var(--steel);padding:12px 30px;border-radius:6px}
+.cap .cw{color:#8D98A6}.cap .cw.on{color:#fff}.cap .cw.act{color:var(--orange)}
+</style></head><body>
+<div id="stage">
+  <svg id="grid" width="1920" height="1080"><defs><pattern id="iso" width="32" height="55.4256" patternUnits="userSpaceOnUse"><g fill="#CDD3DA"><circle cx="0" cy="0" r="1.7"/><circle cx="32" cy="0" r="1.7"/><circle cx="16" cy="27.7128" r="1.7"/><circle cx="0" cy="55.4256" r="1.7"/><circle cx="32" cy="55.4256" r="1.7"/></g></pattern></defs><rect width="1920" height="1080" fill="url(#iso)"/></svg>
+  <div id="cam">
+    <div class="chip" id="eyebrow"><i></i>ENGINEERING · MECHANICAL</div>
+    <div class="cond" id="title">Gears &amp; <span class="acc">Gear Ratio</span></div>
+    <svg id="tdim" width="1920" height="1080"><g id="tdimG" stroke="#6C7886" stroke-width="2" fill="none"></g></svg>
+    <div id="sub">Why a small gear can turn a big one with ease</div>
+
+    <!-- concept scene -->
+    <svg id="gsv" width="1920" height="1080">
+      <g id="cl" stroke="#6C7886" stroke-width="1.5" fill="none" stroke-dasharray="22 6 4 6"></g>
+      <g id="gB"></g>
+      <g id="gA"></g>
+      <g id="lead" stroke="#2E3742" stroke-width="2" fill="none"></g>
+      <g id="tq"></g>
+    </svg>
+    <div class="bal" id="balA" style="left:160px;top:330px">A</div>
+    <div class="bal" id="balB" style="left:988px;top:270px">B</div>
+    <div class="card gc" id="cA" style="left:1112px;top:260px;width:308px;height:220px"><div class="bal">A</div><div class="lb cond">Driver</div><div class="tt">12 TEETH</div><div class="n">0</div><div class="rv">TURNS</div><div class="bar"><i></i></div></div>
+    <div class="card gc" id="cB" style="left:1452px;top:260px;width:308px;height:220px"><div class="bal">B</div><div class="lb cond">Driven</div><div class="tt">36 TEETH</div><div class="n">0</div><div class="rv">TURNS</div><div class="bar"><i></i></div></div>
+    <div class="card" id="rc" style="left:1112px;top:512px;width:648px;height:120px"><div class="lb cond">Gear ratio</div><div class="sb">36 T ÷ 12 T</div><div class="big">3 : 1</div></div>
+    <div class="card" id="tc" style="left:1112px;top:664px;width:648px;height:196px"><div class="hd cond">Gear B compared to gear A</div>
+      <div class="row" id="rS" style="top:76px"><div class="lb cond">Speed</div><div class="tk"><i></i><b></b></div><div class="vl">÷ 3</div></div>
+      <div class="row" id="rT" style="top:134px"><div class="lb cond">Torque</div><div class="tk"><i></i><b></b></div><div class="vl">× 3</div></div>
+    </div>
+
+    <!-- quick check -->
+    <div id="quiz">
+      <div class="chip" id="qchip" style="left:160px;top:96px"><i></i>QUICK CHECK</div>
+      <div class="cond" id="qq">A big gear drives a small gear. Faster or slower?</div>
+      <div class="card" id="qd"><svg id="qsv" width="784" height="420" style="position:absolute;left:-2px;top:-2px">
+        <g id="qcl" stroke="#6C7886" stroke-width="1.5" fill="none" stroke-dasharray="22 6 4 6"></g>
+        <g id="qB"></g><g id="qA"></g>
+        <text id="qlB" font-family="Barlow Condensed" font-weight="700" font-size="26" letter-spacing="2" fill="#2E3742">DRIVER  36 T</text>
+        <text id="qlA" font-family="Barlow Condensed" font-weight="700" font-size="26" letter-spacing="2" fill="#2E3742">DRIVEN  12 T</text>
+        <text id="qlX" font-family="IBM Plex Mono" font-weight="600" font-size="26" fill="#FF6A13"></text>
+      </svg></div>
+      <div class="card opt" id="o0" style="top:260px"><div class="lt">A</div><div class="ot cond">Faster</div><div class="ok"></div></div>
+      <div class="card opt" id="o1" style="top:486px"><div class="lt">B</div><div class="ot cond">Slower</div><div class="ok"></div></div>
+      <svg id="ring" viewBox="0 0 130 130"><circle cx="65" cy="65" r="58" fill="#F7F8FA" stroke="#CBD2DA" stroke-width="6"/><g id="ringT" stroke="#6C7886" stroke-width="2"></g><circle id="ringA" cx="65" cy="65" r="58" fill="none" stroke="#FF6A13" stroke-width="6" transform="rotate(-90 65 65)"/></svg>
+      <div id="ringN"></div>
+      <div id="take"><span id="takeI"></span><span class="cond tx" id="takeT">Big drives small: <b>more speed</b>, less torque</span></div>
+    </div>
+  </div>
+  <svg id="wipe" width="1920" height="1080"><defs><pattern id="hatch" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="28" height="28" fill="#2E3742"/><rect x="0" y="0" width="4" height="28" fill="#465261"/></pattern></defs>
+    <g id="wipeG"><rect x="-1960" y="0" width="1960" height="1080" fill="url(#hatch)"/>
+      <line x1="-4" y1="70" x2="-4" y2="1010" stroke="#FF6A13" stroke-width="6" stroke-dasharray="64 14 10 14"/>
+      <path d="M-4 70 h44 M-4 1010 h44" stroke="#FF6A13" stroke-width="6" fill="none"/>
+      <path d="M40 54 l28 16 l-28 16z M40 994 l28 16 l-28 16z" fill="#FF6A13"/>
+      <text x="58" y="122" font-family="IBM Plex Mono" font-weight="600" font-size="34" fill="#2E3742">A</text>
+      <text x="58" y="976" font-family="IBM Plex Mono" font-weight="600" font-size="34" fill="#2E3742">A</text>
+      <text x="-60" y="548" text-anchor="end" font-family="Barlow Condensed" font-weight="700" font-size="40" letter-spacing="8" fill="#E9ECEF">SECTION A-A</text>
+    </g></svg>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

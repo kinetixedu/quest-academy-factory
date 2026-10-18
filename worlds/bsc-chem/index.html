@@ -1,0 +1,87 @@
+<!doctype html><html><head><meta charset="utf-8"><title>BSc Chemistry - The pH Scale</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<style>
+/* ===== BSc Chemistry world: Bench lab ===== */
+:root{--lab:#F7FAFB;--ink:#10252B;--ink2:#3C5459;--muted:#7D9196;--glass:#9FB3B8;--teal:#0FA3A3;--teal2:#D5EFEF;--line:#E1EAEC;--bench:#DCE6E9;--card:#FFFFFF}
+#stage{background:var(--lab);font-family:Manrope;font-weight:500;color:var(--ink)}
+#prog{position:absolute;left:0;top:0;height:6px;width:1920px;background:var(--line);z-index:60}
+#prog i{display:block;height:6px;background:var(--teal);width:0}
+#cam{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.h{font-family:Manrope;font-weight:800;letter-spacing:-.03em}
+.mono{font-family:IBM Plex Mono;font-weight:600}
+.chip{position:absolute;display:inline-flex;align-items:center;gap:12px;height:44px;padding:0 20px;border-radius:12px;background:var(--teal2);color:#0A6F6F;font:800 18px Manrope;letter-spacing:.16em;white-space:nowrap}
+.chip i{width:10px;height:10px;border-radius:5px;background:var(--teal)}
+#title{position:absolute;left:0;top:0;font-size:132px;line-height:1.05;white-space:nowrap;transform-origin:0 0}
+#title .acc{color:var(--teal)}
+#sub{position:absolute;left:0;top:648px;width:1920px;text-align:center;font:500 32px Manrope;color:var(--muted)}
+#orn{position:absolute;left:842px;top:604px}
+#bench{position:absolute;left:160px;top:458px;width:1600px;height:12px;border-radius:6px;background:var(--bench)}
+.bk{position:absolute;top:0;left:0}
+.bname{position:absolute;top:534px;width:512px;text-align:center;font:700 32px Manrope;white-space:nowrap}
+.bread{position:absolute;top:584px;height:44px;padding:0 18px 0 14px;border-radius:22px;background:#EDF2F3;display:flex;align-items:center;gap:10px;font:600 22px IBM Plex Mono;color:var(--muted);white-space:nowrap}
+.bread b{width:16px;height:16px;border-radius:8px;background:#C9D5D8}
+#scale{position:absolute;left:0;top:0}
+.sn{position:absolute;top:754px;width:102px;text-align:center;font:600 22px IBM Plex Mono;color:var(--muted)}
+.zl{position:absolute;top:840px;font:800 19px Manrope;letter-spacing:.16em;white-space:nowrap;text-align:center}
+#mk{position:absolute;left:0;top:616px;width:72px;height:60px}
+#mkB{position:absolute;left:0;top:0;width:72px;height:46px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font:600 26px IBM Plex Mono}
+#mkT{position:absolute;left:26px;top:44px;width:0;height:0;border-left:10px solid transparent;border-right:10px solid transparent;border-top:12px solid var(--ink)}
+#wipe{position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:40}
+/* quiz */
+#qq{position:absolute;left:160px;top:150px;font-size:66px;line-height:1.1;white-space:nowrap}
+#qq .acc{color:var(--teal);font-family:IBM Plex Mono;font-weight:600;letter-spacing:0}
+#samp{position:absolute;left:160px;top:288px;width:512px;height:400px;border-radius:28px;background:var(--card);border:2px solid var(--line)}
+#sampL{position:absolute;left:40px;top:32px;font:800 18px Manrope;letter-spacing:.16em;color:var(--muted)}
+#sampT{position:absolute;right:36px;top:24px;height:44px;padding:0 16px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;font:600 24px IBM Plex Mono}
+#sampR{position:absolute;left:0;width:512px;top:330px;text-align:center;font:800 19px Manrope;letter-spacing:.16em;color:#4B4A9E}
+.opt{position:absolute;left:704px;width:1056px;height:112px;border-radius:24px}
+.opt .bg{position:absolute;inset:0;border-radius:24px;background:var(--card);border:2px solid var(--line)}
+.opt .lt{position:absolute;left:32px;top:30px;width:52px;height:52px;border-radius:14px;background:#EDF2F3;display:flex;align-items:center;justify-content:center;font:800 22px Manrope}
+.opt .ot{position:absolute;left:116px;top:26px;font-size:50px;line-height:60px;white-space:nowrap}
+.opt .ok{position:absolute;right:32px;top:30px;width:52px;height:52px;border-radius:26px;background:#fff;display:flex;align-items:center;justify-content:center}
+#ring{position:absolute;left:1616px;top:112px;width:144px;height:144px}
+#ringN{position:absolute;left:1616px;top:112px;width:144px;height:144px;display:flex;align-items:center;justify-content:center;font:600 60px IBM Plex Mono}
+#take{position:absolute;left:160px;top:736px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:32px;padding:0 40px}
+#take .tx{font:700 38px Manrope;white-space:nowrap;letter-spacing:-.01em}
+#take .tx em{font-style:normal;color:#7FD6D6}
+.cap{font:700 38px Manrope;color:var(--ink);background:#FFFFFF;padding:12px 30px;border-radius:16px;box-shadow:0 10px 30px -12px rgba(16,37,43,.28)}
+.cap .cw{color:#8A9DA2}.cap .cw.on{color:var(--ink)}.cap .cw.act{color:var(--teal)}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="chip" id="eyebrow"><i></i>BSC · CHEMISTRY</div>
+    <div class="h" id="title">The <span class="acc">pH</span> Scale</div>
+    <svg id="orn" width="236" height="16"></svg>
+    <div id="sub">Read with three everyday liquids</div>
+
+    <!-- scene: bench + scale -->
+    <div id="bench"></div>
+    <svg id="bks" class="bk" width="1920" height="1080"></svg>
+    <div id="labels"></div>
+    <svg id="scale" width="1920" height="1080"></svg>
+    <div id="nums"></div>
+    <div id="mk"><div id="mkB"></div><div id="mkT"></div></div>
+
+    <!-- quiz -->
+    <div id="quiz">
+      <div class="chip" id="qchip" style="left:160px;top:96px"><i></i>QUICK CHECK</div>
+      <div class="h" id="qq">A liquid has a pH of <span class="acc">12</span>. Acid or base?</div>
+      <div id="samp"><div id="sampL">MYSTERY LIQUID</div><div id="sampT">pH 12</div>
+        <svg id="sampS" width="512" height="400" style="position:absolute;left:0;top:0"></svg>
+        <div id="sampR">BASIC</div></div>
+      <div id="opts"></div>
+      <svg id="ring" viewBox="0 0 144 144"><circle cx="72" cy="72" r="64" fill="#fff" stroke="#E1EAEC" stroke-width="8"/><circle id="ringA" cx="72" cy="72" r="64" fill="none" stroke="#0FA3A3" stroke-width="8" stroke-linecap="round" transform="rotate(-90 72 72)"/></svg>
+      <div id="ringN"></div>
+      <div id="take"><svg id="tscale" width="252" height="40"></svg><span class="tx" id="takeT">Above 7 is <em>basic.</em> Below 7 is <em>acidic.</em></span></div>
+    </div>
+  </div>
+  <svg id="wipe" width="1920" height="1080"><path id="wv2" fill="#0B8A8A"/><path id="wv1" fill="#0FA3A3"/></svg>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

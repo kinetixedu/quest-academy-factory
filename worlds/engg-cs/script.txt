@@ -1,0 +1,7 @@
+H1|0.35|How does a computer run a program, billions of times a second?
+H2|0.5|The CPU repeats three steps.
+X1|0.3|Fetch: it grabs the next instruction from memory.
+X2|0.3|Decode: it works out what the instruction means.
+X3|0.6|Execute: it does the work, then starts again.
+Q1|1.7|Quick check. Which step reads the instruction from memory?
+A1|0.2|Fetch! Then decode, then execute.

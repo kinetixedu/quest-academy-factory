@@ -1,0 +1,145 @@
+name: Quest Academy factory
+
+# Renders every video marked READY (videos/<slug>/READY), then uploads it to YouTube
+# with thumbnail, English captions, playlist and a scheduled publish slot.
+on:
+  push:
+    branches: [main]
+    paths: ['videos/**/READY']
+  schedule:
+    - cron: '17 */3 * * *'      # every 3 hours, picks up anything still waiting (quota-limited runs)
+  workflow_dispatch:
+
+concurrency:
+  group: factory
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.p.outputs.matrix }}
+      count: ${{ steps.p.outputs.count }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: p
+        run: |
+          M=$(python3 tools/plan.py)
+          echo "matrix=$M" >> "$GITHUB_OUTPUT"
+          echo "count=$(echo "$M" | python3 -c 'import json,sys;print(len(json.load(sys.stdin)["include"]))')" >> "$GITHUB_OUTPUT"
+          echo "$M"
+
+  playlists:
+    needs: plan
+    if: needs.plan.outputs.count != '0'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: pip install -q google-api-python-client google-auth
+      - name: Make sure every category playlist exists (once, before parallel uploads)
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python3 tools/upload.py --ensure-playlists
+      - uses: actions/upload-artifact@v4
+        with: { name: playlists, path: registry/playlists.json }
+
+  build:
+    needs: [plan, playlists]
+    if: needs.plan.outputs.count != '0'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: ${{ fromJson(needs.plan.outputs.matrix) }}
+    env:
+      KOKORO_DIR: ${{ github.workspace }}/.kokoro/kokoro-multi-lang-v1_0
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - name: System packages
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: Cache voice model
+        uses: actions/cache@v4
+        with:
+          path: .kokoro
+          key: kokoro-multi-lang-v1_0
+      - name: Download voice model
+        run: |
+          if [ ! -d "$KOKORO_DIR" ]; then
+            mkdir -p .kokoro && cd .kokoro
+            curl -sSL -o k.tar.bz2 https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/kokoro-multi-lang-v1_0.tar.bz2
+            tar xjf k.tar.bz2 && rm k.tar.bz2
+          fi
+      - name: Cache browser
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: pw-1.56.1
+      - name: Install tools
+        run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+          pip install -q sherpa-onnx numpy scipy google-api-python-client google-auth
+      - uses: actions/download-artifact@v4
+        with: { name: playlists, path: registry }
+      - name: Build video
+        run: tools/build.sh videos/${{ matrix.slug }}
+      - name: Upload to YouTube
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          if [ -n "${{ matrix.publish_at }}" ]; then
+            python3 tools/upload.py videos/${{ matrix.slug }} --publish-at "${{ matrix.publish_at }}"
+          else
+            python3 tools/upload.py videos/${{ matrix.slug }}
+          fi
+      - name: Keep result
+        uses: actions/upload-artifact@v4
+        with:
+          name: result-${{ matrix.slug }}
+          path: |
+            videos/${{ matrix.slug }}/upload.json
+            videos/${{ matrix.slug }}/captions.srt
+            videos/${{ matrix.slug }}/thumbnail.jpg
+            registry/playlists.json
+          if-no-files-found: ignore
+      - name: Keep video (7 days, for review)
+        uses: actions/upload-artifact@v4
+        with:
+          name: video-${{ matrix.slug }}
+          path: videos/${{ matrix.slug }}/final.mp4
+          retention-days: 7
+
+  record:
+    needs: [plan, playlists, build]
+    if: always() && needs.plan.outputs.count != '0'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { pattern: 'result-*', path: _results }
+      - name: Commit upload records
+        run: |
+          shopt -s nullglob
+          for d in _results/result-*; do
+            slug="${d#_results/result-}"
+            [ -f "$d/videos/$slug/upload.json" ] && cp "$d/videos/$slug/"{upload.json,captions.srt,thumbnail.jpg} "videos/$slug/" 2>/dev/null || true
+            [ -f "$d/registry/playlists.json" ] && mkdir -p registry && cp "$d/registry/playlists.json" registry/
+          done
+          python3 tools/queue.py sync
+          git config user.name "quest-factory-bot"; git config user.email "factory@users.noreply.github.com"
+          git add -A videos registry queue
+          git diff --cached --quiet || (git commit -m "Record uploads [skip ci]" && git push)

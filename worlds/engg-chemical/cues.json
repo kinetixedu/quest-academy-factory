@@ -1,0 +1,291 @@
+{
+ "lines": {
+  "H1": {
+   "t0": 0.45,
+   "t1": 3.255,
+   "text": "How do we get pure water from salty sea water?",
+   "words": [
+    {
+     "w": "How",
+     "t": 0.45
+    },
+    {
+     "w": "do",
+     "t": 0.682
+    },
+    {
+     "w": "we",
+     "t": 0.869
+    },
+    {
+     "w": "get",
+     "t": 1.056
+    },
+    {
+     "w": "pure",
+     "t": 1.287
+    },
+    {
+     "w": "water",
+     "t": 1.563
+    },
+    {
+     "w": "from",
+     "t": 1.884
+    },
+    {
+     "w": "salty",
+     "t": 2.16
+    },
+    {
+     "w": "sea",
+     "t": 2.481
+    },
+    {
+     "w": "water?",
+     "t": 2.712
+    }
+   ]
+  },
+  "H2": {
+   "t0": 3.605,
+   "t1": 5.727,
+   "text": "Engineers use distillation.",
+   "words": [
+    {
+     "w": "Engineers",
+     "t": 3.605
+    },
+    {
+     "w": "use",
+     "t": 4.273
+    },
+    {
+     "w": "distillation.",
+     "t": 4.583
+    }
+   ]
+  },
+  "S1": {
+   "t0": 6.227,
+   "t1": 9.69,
+   "text": "First, heat the mixture. The water boils into steam.",
+   "words": [
+    {
+     "w": "First,",
+     "t": 6.227
+    },
+    {
+     "w": "heat",
+     "t": 6.706
+    },
+    {
+     "w": "the",
+     "t": 6.997
+    },
+    {
+     "w": "mixture.",
+     "t": 7.241
+    },
+    {
+     "w": "The",
+     "t": 7.907
+    },
+    {
+     "w": "water",
+     "t": 8.151
+    },
+    {
+     "w": "boils",
+     "t": 8.489
+    },
+    {
+     "w": "into",
+     "t": 8.827
+    },
+    {
+     "w": "steam.",
+     "t": 9.118
+    }
+   ]
+  },
+  "S2": {
+   "t0": 9.99,
+   "t1": 12.833,
+   "text": "The steam rises and leaves the salt behind.",
+   "words": [
+    {
+     "w": "The",
+     "t": 9.99
+    },
+    {
+     "w": "steam",
+     "t": 10.247
+    },
+    {
+     "w": "rises",
+     "t": 10.602
+    },
+    {
+     "w": "and",
+     "t": 10.957
+    },
+    {
+     "w": "leaves",
+     "t": 11.214
+    },
+    {
+     "w": "the",
+     "t": 11.619
+    },
+    {
+     "w": "salt",
+     "t": 11.875
+    },
+    {
+     "w": "behind.",
+     "t": 12.181
+    }
+   ]
+  },
+  "S3": {
+   "t0": 13.133,
+   "t1": 16.819,
+   "text": "Then it cools in a condenser, and turns back into pure water.",
+   "words": [
+    {
+     "w": "Then",
+     "t": 13.133
+    },
+    {
+     "w": "it",
+     "t": 13.41
+    },
+    {
+     "w": "cools",
+     "t": 13.598
+    },
+    {
+     "w": "in",
+     "t": 13.92
+    },
+    {
+     "w": "a",
+     "t": 14.108
+    },
+    {
+     "w": "condenser,",
+     "t": 14.251
+    },
+    {
+     "w": "and",
+     "t": 14.886
+    },
+    {
+     "w": "turns",
+     "t": 15.119
+    },
+    {
+     "w": "back",
+     "t": 15.441
+    },
+    {
+     "w": "into",
+     "t": 15.719
+    },
+    {
+     "w": "pure",
+     "t": 15.996
+    },
+    {
+     "w": "water.",
+     "t": 16.273
+    }
+   ]
+  },
+  "Q1": {
+   "t0": 17.419,
+   "t1": 20.598,
+   "text": "Quick check. What turns the steam back into water?",
+   "words": [
+    {
+     "w": "Quick",
+     "t": 17.419
+    },
+    {
+     "w": "check.",
+     "t": 17.747
+    },
+    {
+     "w": "What",
+     "t": 18.303
+    },
+    {
+     "w": "turns",
+     "t": 18.585
+    },
+    {
+     "w": "the",
+     "t": 18.913
+    },
+    {
+     "w": "steam",
+     "t": 19.15
+    },
+    {
+     "w": "back",
+     "t": 19.477
+    },
+    {
+     "w": "into",
+     "t": 19.76
+    },
+    {
+     "w": "water?",
+     "t": 20.042
+    }
+   ]
+  },
+  "A1": {
+   "t0": 22.298,
+   "t1": 24.85,
+   "text": "The condenser! It cools the steam.",
+   "words": [
+    {
+     "w": "The",
+     "t": 22.298
+    },
+    {
+     "w": "condenser!",
+     "t": 22.562
+    },
+    {
+     "w": "It",
+     "t": 23.386
+    },
+    {
+     "w": "cools",
+     "t": 23.599
+    },
+    {
+     "w": "the",
+     "t": 23.965
+    },
+    {
+     "w": "steam.",
+     "t": 24.23
+    }
+   ]
+  }
+ },
+ "order": [
+  "H1",
+  "H2",
+  "S1",
+  "S2",
+  "S3",
+  "Q1",
+  "A1"
+ ],
+ "dur": 25.05
+}

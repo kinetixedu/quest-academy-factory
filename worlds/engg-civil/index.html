@@ -1,0 +1,95 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Engineering Civil - Compression and Tension</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<style>
+/* ===== engg-civil world: Blueprint to site ===== */
+:root{--bp:#0F3B6E;--grid:#1D4E85;--grid2:#174578;--white:#FFFFFF;--soft:#B9CCE3;--yel:#FFD400;--con:#C9CED6;--panel:#134577;--line:#2C5F96}
+#stage{background:var(--bp);font-family:Archivo;font-stretch:100%;color:var(--white)}
+#grid{position:absolute;left:0;top:0}
+#prog{position:absolute;left:0;top:0;height:6px;width:1920px;background:var(--grid);z-index:60}
+#prog i{display:block;height:6px;background:var(--yel);width:0}
+#cam{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.hd{font-family:Archivo;font-stretch:100%;font-weight:700;letter-spacing:-.01em}
+.hand{font-family:'Architects Daughter'}
+.mono{font-family:'IBM Plex Mono'}
+.chip{position:absolute;display:inline-flex;align-items:center;gap:14px;height:44px;padding:0 18px;border:2px solid var(--white);color:var(--white);font:600 19px 'IBM Plex Mono';letter-spacing:.14em;white-space:nowrap;background:var(--bp)}
+.chip i{width:10px;height:10px;background:var(--yel)}
+#title{position:absolute;left:0;top:0;font-size:120px;line-height:1.05;white-space:nowrap;transform-origin:0 0}
+#title .acc{color:var(--yel)}
+#sub{position:absolute;left:0;top:650px;width:1920px;text-align:center;font:400 36px 'Architects Daughter';color:var(--soft)}
+#tline{position:absolute;left:0;top:0}
+#bsv{position:absolute;left:0;top:0}
+.note{position:absolute;font:400 30px 'Architects Daughter';white-space:nowrap;line-height:1}
+.tag{position:absolute;display:flex;align-items:center;gap:14px;height:56px;padding:0 22px;font:700 30px Archivo;letter-spacing:.06em;white-space:nowrap}
+#sheet{position:absolute;left:0;top:0;width:1920px;height:1080px}
+#qq{position:absolute;left:160px;top:150px;font-size:64px;line-height:1;white-space:nowrap}
+#qd{position:absolute;left:160px;top:260px;width:1056px;height:420px;border:2px solid var(--soft);background:var(--bp)}
+.opt{position:absolute;left:1248px;width:512px;height:194px;border:2px solid var(--soft);background:var(--bp)}
+.opt .lt{position:absolute;left:32px;top:61px;width:72px;height:72px;border:2px solid var(--white);display:flex;align-items:center;justify-content:center;font:600 34px 'IBM Plex Mono'}
+.opt .ot{position:absolute;left:136px;top:64px;font-size:64px;line-height:1}
+.opt .ok{position:absolute;right:32px;top:61px;width:72px;height:72px;background:var(--yel);display:flex;align-items:center;justify-content:center}
+#ring{position:absolute;left:1630px;top:84px;width:130px;height:130px}
+#ringN{position:absolute;left:1630px;top:84px;width:130px;height:130px;display:flex;align-items:center;justify-content:center;font:600 56px 'IBM Plex Mono'}
+#take{position:absolute;left:160px;top:712px;width:1600px;height:104px;background:var(--yel);color:var(--bp);display:flex;align-items:center;gap:24px;padding:0 36px}
+#take .tx{font-size:42px;white-space:nowrap;line-height:1}
+.cap{font:600 38px Archivo;color:var(--bp);background:var(--white);padding:12px 30px}
+.cap .cw{color:#7C93B0}.cap .cw.on{color:var(--bp)}.cap .cw.act{color:#C79A00}
+</style></head><body>
+<div id="stage">
+  <svg id="grid" width="1920" height="1080"><defs>
+    <pattern id="g8" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0V32H0" fill="none" stroke="#174578" stroke-width="1"/></pattern>
+    <pattern id="g40" width="160" height="160" patternUnits="userSpaceOnUse"><rect width="160" height="160" fill="url(#g8)"/><path d="M160 0V160H0" fill="none" stroke="#1D4E85" stroke-width="1.5"/></pattern>
+  </defs><rect width="1920" height="1080" fill="url(#g40)"/></svg>
+  <div id="cam">
+    <div class="chip" id="eyebrow"><i></i>ENGINEERING · CIVIL</div>
+    <div class="hd" id="title">Compression &amp; <span class="acc">Tension</span></div>
+    <svg id="tline" width="1920" height="1080"><g id="tlG" fill="none" stroke="#FFD400" stroke-width="3"></g></svg>
+    <div id="sub">what really happens inside a beam</div>
+
+    <svg id="bsv" width="1920" height="1080">
+      <g id="dims" stroke="#B9CCE3" stroke-width="2" fill="none"></g>
+      <g id="bridge"></g>
+      <g id="beam"></g>
+      <g id="sup"></g>
+      <g id="arrows"></g>
+      <g id="load"></g>
+    </svg>
+    <div class="note" id="nSpan">span 6 m (example)</div>
+    <div class="note" id="nBend">bends a little</div>
+    <div class="tag" id="tC" style="background:#FFD400;color:#0F3B6E"><span id="tCi"></span>COMPRESSION</div>
+    <div class="note" id="nC">top fibre: squeezed</div>
+    <div class="tag" id="tT" style="background:#FFFFFF;color:#0F3B6E"><span id="tTi"></span>TENSION</div>
+    <div class="note" id="nT">bottom fibre: stretched</div>
+
+    <svg id="sheet" width="1920" height="1080"><g id="sheetG">
+    <rect x="0" y="0" width="1920" height="1080" fill="#0F3B6E"/><rect x="0" y="0" width="1920" height="1080" fill="url(#g40)"/>
+    <rect id="shB" x="40" y="40" width="1840" height="1000" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+    <rect x="56" y="56" width="1808" height="968" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+    <g id="tblock" stroke="#FFFFFF" stroke-width="2" fill="none">
+      <rect x="1504" y="880" width="360" height="144" fill="#123F73"/><line x1="1504" y1="932" x2="1864" y2="932"/><line x1="1504" y1="978" x2="1864" y2="978"/><line x1="1684" y1="932" x2="1684" y2="1024"/>
+    </g>
+    <text x="1522" y="916" font-family="Archivo" font-weight="700" font-size="26" fill="#FFFFFF" letter-spacing="1">QUICK CHECK</text>
+    <text x="1522" y="962" font-family="IBM Plex Mono" font-size="18" fill="#B9CCE3">DWG CE-01</text>
+    <text x="1702" y="962" font-family="IBM Plex Mono" font-size="18" fill="#B9CCE3">SHEET 2/2</text>
+    <text x="1522" y="1008" font-family="IBM Plex Mono" font-size="18" fill="#B9CCE3">BEAM STUDY</text>
+    <text x="1702" y="1008" font-family="Architects Daughter" font-size="22" fill="#FFD400">checked</text>
+  </g></svg>
+    <div id="quiz">
+      <div class="chip" id="qchip" style="left:160px;top:96px"><i></i>QUICK CHECK</div>
+      <div class="hd" id="qq">Which side of the beam gets stretched?</div>
+      <div id="qd"><svg id="qsv" width="1056" height="420" style="position:absolute;left:-2px;top:-2px"><g id="qG"></g></svg></div>
+      <div class="opt" id="o0" style="top:260px"><div class="lt">A</div><div class="ot hd">Top</div><div class="ok"></div></div>
+      <div class="opt" id="o1" style="top:486px"><div class="lt">B</div><div class="ot hd">Bottom</div><div class="ok"></div></div>
+      <svg id="ring" viewBox="0 0 130 130"><circle cx="65" cy="65" r="58" fill="#0F3B6E" stroke="#2C5F96" stroke-width="6"/><circle id="ringA" cx="65" cy="65" r="58" fill="none" stroke="#FFD400" stroke-width="6" transform="rotate(-90 65 65)"/></svg>
+      <div id="ringN"></div>
+      <div id="take"><span id="takeI"></span><span class="hd tx" id="takeT">Top squeezed, bottom stretched: good beams handle both</span></div>
+    </div>
+  </div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

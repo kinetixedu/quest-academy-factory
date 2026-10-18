@@ -1,0 +1,76 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Engineering Chemical - Distillation</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<style>
+/* ===== Engineering Chemical world: Process plant (P&ID) ===== */
+:root{--bg:#EEF2F5;--dot:#D6DEE5;--slate:#2C3A47;--slate2:#56677A;--muted:#7F8FA0;--line:#D3DCE4;--cyan:#19B5C9;--cyan2:#D2F0F4;--heat:#FF7A1A;--card:#FFFFFF}
+#stage{background:var(--bg);font-family:Sora;font-weight:400;color:var(--slate)}
+#grid{position:absolute;inset:0;background-image:radial-gradient(circle,#D3DBE3 1.6px,transparent 1.8px);background-size:40px 40px;background-position:20px 20px}
+#prog{position:absolute;left:0;top:0;height:6px;width:1920px;background:var(--line);z-index:60}
+#prog i{display:block;height:6px;background:var(--slate);width:0}
+#cam{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.h{font-family:Sora;font-weight:700;letter-spacing:-.03em}
+.mono{font-family:IBM Plex Mono;font-weight:600}
+.chip{position:absolute;display:inline-flex;align-items:center;gap:12px;height:44px;padding:0 18px;border-radius:8px;background:var(--slate);color:#fff;font:600 18px IBM Plex Mono;letter-spacing:.14em;white-space:nowrap}
+.chip i{width:10px;height:10px;border-radius:2px;background:var(--cyan)}
+#title{position:absolute;left:0;top:0;font-size:140px;line-height:1.05;white-space:nowrap;transform-origin:0 0}
+#title .acc{color:var(--cyan)}
+#sub{position:absolute;left:0;top:660px;width:1920px;text-align:center;font:400 32px Sora;color:var(--muted)}
+#orn{position:absolute;left:800px;top:612px}
+#plant{position:absolute;left:0;top:0}
+.tag{position:absolute;display:flex;align-items:center;gap:12px;white-space:nowrap}
+.tag b{height:36px;padding:0 12px;border-radius:6px;background:var(--slate);color:#fff;display:flex;align-items:center;font:600 20px IBM Plex Mono;letter-spacing:.04em}
+.tag span{font:600 24px Sora;color:var(--slate2);letter-spacing:-.01em}
+.lbl{position:absolute;font:600 18px IBM Plex Mono;letter-spacing:.12em;white-space:nowrap}
+.step{position:absolute;top:764px;height:96px;border-radius:12px;display:flex;align-items:center;gap:20px;padding:0 32px;white-space:nowrap}
+.step .bg{position:absolute;inset:0;border-radius:12px;background:var(--card);border:2px solid var(--line)}
+.step .n{position:relative;font:600 22px IBM Plex Mono;color:var(--muted)}
+.step .t{position:relative;font:700 30px Sora;letter-spacing:-.02em}
+.step .d{position:relative;font:400 26px Sora;color:var(--slate2)}
+#wipe{position:absolute;left:0;top:0;z-index:40}
+/* quiz */
+#qq{position:absolute;left:160px;top:150px;font-size:64px;line-height:1.1;white-space:nowrap}
+.opt{position:absolute;top:300px;width:501px;height:388px;border-radius:12px}
+.opt .bg{position:absolute;inset:0;border-radius:12px;background:var(--card);border:2px solid var(--line)}
+.opt .lt{position:absolute;left:32px;top:32px;width:48px;height:48px;border-radius:8px;background:var(--bg);display:flex;align-items:center;justify-content:center;font:600 22px IBM Plex Mono}
+.opt .ok{position:absolute;right:32px;top:32px;width:48px;height:48px;border-radius:24px;background:#fff;display:flex;align-items:center;justify-content:center}
+.opt svg.art{position:absolute;left:150px;top:72px}
+.opt .tg{position:absolute;left:0;width:501px;top:256px;display:flex;justify-content:center}
+.opt .tg b{height:32px;padding:0 10px;border-radius:6px;background:var(--bg);display:flex;align-items:center;font:600 18px IBM Plex Mono;letter-spacing:.04em}
+.opt .ot{position:absolute;left:0;width:501px;top:304px;text-align:center;font-size:40px;white-space:nowrap}
+#gauge{position:absolute;left:1616px;top:112px}
+#take{position:absolute;left:160px;top:732px;width:1600px;height:96px;border-radius:12px;background:var(--slate);color:#fff;display:flex;align-items:center;gap:28px;padding:0 40px}
+#take .tx{font:600 36px Sora;white-space:nowrap;letter-spacing:-.015em}
+#take .tx em{font-style:normal;color:#6FD7E4}
+.cap{font:600 36px Sora;color:var(--slate);background:#FFFFFF;padding:12px 30px;border-radius:10px;box-shadow:0 10px 30px -12px rgba(44,58,71,.3)}
+.cap .cw{color:#8D9AA8}.cap .cw.on{color:var(--slate)}.cap .cw.act{color:#0E97A9}
+</style></head><body>
+<div id="stage">
+  <div id="grid"></div>
+  <div id="cam">
+    <div class="chip" id="eyebrow"><i></i>ENGG · CHEMICAL</div>
+    <div class="h" id="title"><span class="acc">Distillation</span></div>
+    <svg id="orn" width="320" height="28"><line id="ornO" x1="14" y1="14" x2="306" y2="14" stroke="#2C3A47" stroke-width="24" stroke-linecap="round"/><line id="ornI" x1="14" y1="14" x2="306" y2="14" stroke="#19B5C9" stroke-width="10" stroke-linecap="round"/></svg>
+    <div id="sub">From sea water to pure water, in one still</div>
+
+    <svg id="plant" width="1920" height="1080"></svg>
+    <div id="tags"></div>
+    <div id="steps"></div>
+
+    <div id="quiz">
+      <div class="chip" id="qchip" style="left:160px;top:96px"><i></i>QUICK CHECK</div>
+      <div class="h" id="qq">What turns the steam back into water?</div>
+      <div id="opts"></div>
+      <svg id="gauge" width="144" height="144" viewBox="0 0 144 144"></svg>
+      <div id="take"><svg id="takeI" width="72" height="28"></svg><span class="tx" id="takeT">Heat makes steam. <em>Cooling</em> turns it back to water.</span></div>
+    </div>
+  </div>
+  <svg id="wipe" width="1920" height="1080"></svg>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

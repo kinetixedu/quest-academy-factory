@@ -1,0 +1,113 @@
+<!doctype html><html><head><meta charset="utf-8"><title>BSc Physics - Newton's First Law</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<style>
+/* ===== BSc Physics world: Motion lab ===== */
+:root{--bg:#0B1220;--grid:#16213A;--panel:#0F1A2E;--edge:#1F2C4A;--chalk:#EAF0FF;--muted:#7C8BAA;--dim:#3A4866;--orange:#FF8A3D;--cyan:#5CC8FF}
+#stage{background:var(--bg);font-family:'Space Grotesk';color:var(--chalk)}
+#bgv{position:absolute;inset:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:40px 40px;background-position:0 0}
+#vig{position:absolute;inset:0;background:radial-gradient(130% 110% at 50% 45%,rgba(11,18,32,0) 55%,rgba(5,9,18,.55))}
+#prog{position:absolute;left:0;top:0;height:6px;width:1920px;background:#16213A;z-index:60}
+#prog i{display:block;height:6px;background:var(--cyan);width:0}
+#cam{position:absolute;left:0;top:0;width:1920px;height:1080px}
+#sceneA,#quiz{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.mono{font-family:'IBM Plex Mono'}
+.chip{position:absolute;display:inline-flex;align-items:center;gap:14px;height:44px;padding:0 20px;border-radius:8px;background:#16213A;border:1px solid #2A3A5E;color:var(--chalk);font:600 18px 'IBM Plex Mono';letter-spacing:.14em;white-space:nowrap}
+.chip i{width:10px;height:10px;border-radius:5px;background:var(--orange)}
+.hd{font-weight:600;letter-spacing:-.025em}
+#title{position:absolute;left:0;top:0;font-size:128px;line-height:1.05;white-space:nowrap;transform-origin:0 0}
+#title .acc{color:var(--orange)}
+#tvec{position:absolute;left:760px;top:584px}
+#sub{position:absolute;left:0;top:650px;width:1920px;text-align:center;font:400 32px 'Space Grotesk';color:var(--muted)}
+/* lab panel */
+#lab{position:absolute;left:160px;top:276px;width:1600px;height:344px;border-radius:20px;background:var(--panel);border:2px solid var(--edge);overflow:hidden}
+#labSvg{position:absolute;left:0;top:0}
+.ro{position:absolute;top:26px}
+.ro .k{font:600 18px 'IBM Plex Mono';letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+.ro .v{font:600 36px 'IBM Plex Mono';margin-top:4px;white-space:nowrap}
+#roV{left:40px}#roF{left:340px}#roX{left:640px}
+#roX .v{font:400 26px 'Space Grotesk';color:var(--muted);margin-top:10px}
+#callout{position:absolute;height:52px;padding:0 22px;border-radius:26px;background:var(--chalk);color:var(--bg);display:flex;align-items:center;gap:12px;font:600 26px 'Space Grotesk';white-space:nowrap;top:22px}
+#callout b{font-weight:600;color:#C85A12}
+/* law cards */
+.lc{position:absolute;top:652px;width:512px;height:208px;border-radius:20px}
+.lc .bg{position:absolute;inset:0;border-radius:20px;background:var(--panel);border:2px solid var(--edge)}
+.lc .n{position:absolute;left:36px;top:32px;font:600 18px 'IBM Plex Mono';letter-spacing:.14em;color:var(--muted)}
+.lc .fx{position:absolute;right:32px;top:24px;height:40px;padding:0 16px;border-radius:8px;display:flex;align-items:center;font:600 22px 'IBM Plex Mono';white-space:nowrap;border:2px solid var(--edge)}
+.lc .tt{position:absolute;left:36px;top:82px;font-size:46px;white-space:nowrap}
+.lc .ds{position:absolute;left:36px;top:146px;font:400 26px 'Space Grotesk';white-space:nowrap}
+/* quiz */
+#qq{position:absolute;left:160px;top:160px;font-size:64px;line-height:1.18;white-space:nowrap}
+#qq2{color:var(--orange)}
+#ring{position:absolute;left:1610px;top:150px;width:150px;height:150px}
+#ringN{position:absolute;left:1610px;top:150px;width:150px;height:150px;display:flex;align-items:center;justify-content:center;font:600 60px 'IBM Plex Mono'}
+.opt{position:absolute;top:388px;width:512px;height:280px;border-radius:20px}
+.opt .bg{position:absolute;inset:0;border-radius:20px;background:var(--panel);border:2px solid var(--edge)}
+.opt .lt{position:absolute;left:32px;top:32px;width:52px;height:52px;border-radius:26px;background:#16213A;display:flex;align-items:center;justify-content:center;font:600 22px 'IBM Plex Mono'}
+.opt .ot{position:absolute;left:32px;top:110px;font-size:44px;white-space:nowrap}
+.opt .ok{position:absolute;right:32px;top:32px;width:52px;height:52px;border-radius:26px;background:var(--cyan);display:flex;align-items:center;justify-content:center}
+.opt svg.dg{position:absolute;left:32px;top:184px}
+#take{position:absolute;left:160px;top:716px;width:1600px;height:96px;border-radius:20px;background:var(--chalk);color:var(--bg);display:flex;align-items:center;gap:22px;padding:0 36px}
+#take .tx{font-size:38px;white-space:nowrap}
+.cap{font:500 38px 'Space Grotesk';color:var(--chalk);background:#131D33;border:1px solid #26355A;padding:12px 30px;border-radius:14px}
+.cap .cw{color:#6C7A99}.cap .cw.on{color:var(--chalk)}.cap .cw.act{color:var(--cyan)}
+</style></head><body>
+<div id="stage">
+  <div id="bgv"></div><div id="vig"></div>
+  <div id="cam">
+    <div id="sceneA">
+      <div class="chip" id="eyebrow"><i></i>BSC · PHYSICS</div>
+      <div class="hd" id="title">Newton's <span class="acc">First Law</span></div>
+      <svg id="tvec" width="400" height="40"><path id="tvecL" d="M0 20 H384" stroke="#5CC8FF" stroke-width="4" stroke-linecap="round" fill="none"/><path id="tvecH" d="M370 10 L386 20 L370 30" stroke="#5CC8FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      <div id="sub">Why you lurch forward when the bus stops</div>
+
+      <div id="lab">
+        <svg id="labSvg" width="1600" height="344" viewBox="0 0 1600 344">
+          <defs><clipPath id="winClip"><rect x="214" y="140" width="84" height="72" rx="8"/></clipPath></defs>
+          <g id="ticks"></g>
+          <line id="ground" x1="40" y1="292" x2="1560" y2="292" stroke="#3A4866" stroke-width="3" stroke-linecap="round"/>
+          <g id="ghosts"></g>
+          <g id="bus">
+            <rect x="0" y="120" width="320" height="136" rx="20" fill="#16213A" stroke="#EAF0FF" stroke-width="3"/>
+            <rect x="24" y="140" width="52" height="56" rx="8" fill="#0B1220" stroke="#7C8BAA" stroke-width="2"/>
+            <rect x="90" y="140" width="52" height="56" rx="8" fill="#0B1220" stroke="#7C8BAA" stroke-width="2"/>
+            <rect x="156" y="140" width="44" height="56" rx="8" fill="#0B1220" stroke="#7C8BAA" stroke-width="2"/>
+            <rect x="214" y="140" width="84" height="72" rx="8" fill="#0B1220"/>
+            <g clip-path="url(#winClip)"><g id="pax"><circle cx="246" cy="164" r="12" fill="#EAF0FF"/><line x1="246" y1="184" x2="246" y2="250" stroke="#EAF0FF" stroke-width="14" stroke-linecap="round"/></g></g>
+            <rect x="214" y="140" width="84" height="72" rx="8" fill="none" stroke="#7C8BAA" stroke-width="2"/>
+            <line x1="20" y1="226" x2="300" y2="226" stroke="#2A3A5E" stroke-width="3"/>
+            <rect x="302" y="230" width="10" height="12" rx="3" fill="#EAF0FF"/>
+            <g id="wh1" class="wh"></g><g id="wh2" class="wh"></g>
+          </g>
+          <g id="vArr" fill="none" stroke="#5CC8FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path class="p"/></g>
+          <text id="vLab" font-family="IBM Plex Mono" font-weight="600" font-size="24" fill="#5CC8FF">v</text>
+          <g id="fArr" fill="none" stroke="#FF8A3D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path class="p"/></g>
+          <text id="fLab" font-family="IBM Plex Mono" font-weight="600" font-size="24" fill="#FF8A3D">F</text>
+          <path id="lead" d="" stroke="#EAF0FF" stroke-width="2" fill="none"/>
+          <g id="restTag"><line id="restL" x1="0" y1="0" x2="0" y2="0" stroke="#7C8BAA" stroke-width="2"/></g>
+        </svg>
+        <div class="ro" id="roV"><div class="k">SPEED</div><div class="v" id="roVv" style="color:#5CC8FF">0.0 m/s</div></div>
+        <div class="ro" id="roF"><div class="k">FORCE</div><div class="v" id="roFv">none</div></div>
+        <div class="ro" id="roX"><div class="k">LAB TRACK</div><div class="v">example values</div></div>
+        <div id="callout"><b>Inertia</b>your body keeps moving</div>
+      </div>
+      <div id="cards"></div>
+    </div>
+
+    <div id="quiz">
+      <div class="chip" id="qchip" style="left:160px;top:96px"><i></i>QUICK CHECK</div>
+      <div class="hd" id="qq"><div id="qq1">A ball rolls on perfectly smooth ice.</div><div id="qq2">What happens?</div></div>
+      <svg id="ring" viewBox="0 0 150 150"><circle cx="75" cy="75" r="66" fill="#0F1A2E" stroke="#1F2C4A" stroke-width="8"/><circle id="ringA" cx="75" cy="75" r="66" fill="none" stroke="#5CC8FF" stroke-width="8" stroke-linecap="round" transform="rotate(-90 75 75)"/></svg>
+      <div id="ringN"></div>
+      <div id="opts"></div>
+      <div id="take"><span id="takeI"></span><span class="hd tx" id="takeT">No force, no change in motion. That is inertia.</span></div>
+    </div>
+  </div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

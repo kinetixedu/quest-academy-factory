@@ -1,0 +1,283 @@
+{
+ "lines": {
+  "H1": {
+   "t0": 0.45,
+   "t1": 2.871,
+   "text": "How does a bridge hold up heavy trucks?",
+   "words": [
+    {
+     "w": "How",
+     "t": 0.45
+    },
+    {
+     "w": "does",
+     "t": 0.685
+    },
+    {
+     "w": "a",
+     "t": 0.965
+    },
+    {
+     "w": "bridge",
+     "t": 1.109
+    },
+    {
+     "w": "hold",
+     "t": 1.48
+    },
+    {
+     "w": "up",
+     "t": 1.76
+    },
+    {
+     "w": "heavy",
+     "t": 1.95
+    },
+    {
+     "w": "trucks?",
+     "t": 2.275
+    }
+   ]
+  },
+  "H2": {
+   "t0": 3.221,
+   "t1": 4.713,
+   "text": "Let's look at one beam.",
+   "words": [
+    {
+     "w": "Let's",
+     "t": 3.221
+    },
+    {
+     "w": "look",
+     "t": 3.501
+    },
+    {
+     "w": "at",
+     "t": 3.782
+    },
+    {
+     "w": "one",
+     "t": 3.972
+    },
+    {
+     "w": "beam.",
+     "t": 4.207
+    }
+   ]
+  },
+  "B1": {
+   "t0": 5.213,
+   "t1": 8.088,
+   "text": "When a load presses down, the beam bends a little.",
+   "words": [
+    {
+     "w": "When",
+     "t": 5.213
+    },
+    {
+     "w": "a",
+     "t": 5.471
+    },
+    {
+     "w": "load",
+     "t": 5.605
+    },
+    {
+     "w": "presses",
+     "t": 5.863
+    },
+    {
+     "w": "down,",
+     "t": 6.246
+    },
+    {
+     "w": "the",
+     "t": 6.63
+    },
+    {
+     "w": "beam",
+     "t": 6.846
+    },
+    {
+     "w": "bends",
+     "t": 7.104
+    },
+    {
+     "w": "a",
+     "t": 7.404
+    },
+    {
+     "w": "little.",
+     "t": 7.538
+    }
+   ]
+  },
+  "B2": {
+   "t0": 8.388,
+   "t1": 11.297,
+   "text": "The top gets squeezed. That is compression.",
+   "words": [
+    {
+     "w": "The",
+     "t": 8.388
+    },
+    {
+     "w": "top",
+     "t": 8.638
+    },
+    {
+     "w": "gets",
+     "t": 8.889
+    },
+    {
+     "w": "squeezed.",
+     "t": 9.187
+    },
+    {
+     "w": "That",
+     "t": 9.919
+    },
+    {
+     "w": "is",
+     "t": 10.218
+    },
+    {
+     "w": "compression.",
+     "t": 10.42
+    }
+   ]
+  },
+  "B3": {
+   "t0": 11.597,
+   "t1": 16.218,
+   "text": "The bottom gets stretched. That is tension. Good beams handle both.",
+   "words": [
+    {
+     "w": "The",
+     "t": 11.597
+    },
+    {
+     "w": "bottom",
+     "t": 11.855
+    },
+    {
+     "w": "gets",
+     "t": 12.261
+    },
+    {
+     "w": "stretched.",
+     "t": 12.569
+    },
+    {
+     "w": "That",
+     "t": 13.372
+    },
+    {
+     "w": "is",
+     "t": 13.679
+    },
+    {
+     "w": "tension.",
+     "t": 13.888
+    },
+    {
+     "w": "Good",
+     "t": 14.592
+    },
+    {
+     "w": "beams",
+     "t": 14.899
+    },
+    {
+     "w": "handle",
+     "t": 15.256
+    },
+    {
+     "w": "both.",
+     "t": 15.663
+    }
+   ]
+  },
+  "Q1": {
+   "t0": 16.818,
+   "t1": 19.769,
+   "text": "Quick check. Which side of the beam gets stretched?",
+   "words": [
+    {
+     "w": "Quick",
+     "t": 16.818
+    },
+    {
+     "w": "check.",
+     "t": 17.118
+    },
+    {
+     "w": "Which",
+     "t": 17.627
+    },
+    {
+     "w": "side",
+     "t": 17.927
+    },
+    {
+     "w": "of",
+     "t": 18.185
+    },
+    {
+     "w": "the",
+     "t": 18.36
+    },
+    {
+     "w": "beam",
+     "t": 18.577
+    },
+    {
+     "w": "gets",
+     "t": 18.835
+    },
+    {
+     "w": "stretched?",
+     "t": 19.094
+    }
+   ]
+  },
+  "A1": {
+   "t0": 21.469,
+   "t1": 23.648,
+   "text": "The bottom! That is tension.",
+   "words": [
+    {
+     "w": "The",
+     "t": 21.469
+    },
+    {
+     "w": "bottom!",
+     "t": 21.732
+    },
+    {
+     "w": "That",
+     "t": 22.401
+    },
+    {
+     "w": "is",
+     "t": 22.716
+    },
+    {
+     "w": "tension.",
+     "t": 22.929
+    }
+   ]
+  }
+ },
+ "order": [
+  "H1",
+  "H2",
+  "B1",
+  "B2",
+  "B3",
+  "Q1",
+  "A1"
+ ],
+ "dur": 23.848
+}

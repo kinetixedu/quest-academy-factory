@@ -1,0 +1,106 @@
+<!doctype html><html><head><meta charset="utf-8"><title>BBA - Needs vs Wants</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<style>
+/* ===== BBA world: Campus startup ===== */
+:root{--cream:#FFF7EE;--cream2:#F7EDE1;--slot:#F4E9DC;--plum:#2A1B3D;--plum2:#5B4A70;--muted:#8E7F96;--line:#EADCCB;--coral:#FF6B4A;--coralT:#FFE1D6;--mint:#7FD8C4;--mintT:#DDF4EE;--card:#FFFFFF}
+#stage{background:var(--cream);font-family:'Plus Jakarta Sans';color:var(--plum)}
+#bgv{position:absolute;inset:0;background:radial-gradient(110% 80% at 50% 35%,rgba(255,255,255,.6),rgba(255,255,255,0) 62%)}
+#prog{position:absolute;left:0;top:0;height:6px;width:1920px;background:var(--line);z-index:60}
+#prog i{display:block;height:6px;background:var(--coral);width:0}
+#cam{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.hd{font-family:'Plus Jakarta Sans';font-weight:800;letter-spacing:-.035em}
+.chip{position:absolute;display:inline-flex;align-items:center;gap:14px;height:44px;padding:0 20px;border-radius:22px;background:var(--plum);color:var(--cream);font:700 18px 'Plus Jakarta Sans';letter-spacing:.14em;white-space:nowrap}
+.chip i{width:10px;height:10px;border-radius:5px;background:var(--coral)}
+#title{position:absolute;left:0;top:0;font-size:150px;line-height:1.05;white-space:nowrap;transform-origin:0 0}
+#title .acc{color:var(--coral)}
+#sub{position:absolute;left:0;top:0;height:64px;padding:0 30px;border-radius:18px;background:var(--coral);color:#fff;display:flex;align-items:center;font:700 30px 'Plus Jakarta Sans';letter-spacing:-.01em;white-space:nowrap;box-shadow:0 10px 24px -12px rgba(42,27,61,.35)}
+.card{position:absolute;top:270px;width:512px;height:580px;border-radius:32px}
+.card .bg{position:absolute;inset:0;border-radius:32px;background:var(--card);border:3px solid var(--line);box-shadow:0 22px 44px -22px rgba(42,27,61,.22)}
+.stk{position:absolute;left:32px;top:32px;height:52px;padding:0 22px;border-radius:14px;display:flex;align-items:center;gap:12px;font:800 22px 'Plus Jakarta Sans';letter-spacing:.08em;white-space:nowrap;transform-origin:0 50%}
+.cnt{position:absolute;right:32px;top:32px;width:52px;height:52px;border-radius:26px;background:var(--cream2);display:flex;align-items:center;justify-content:center;font:800 24px 'Plus Jakarta Sans';color:var(--plum)}
+.slot{position:absolute;width:208px;height:200px;border-radius:16px;background:var(--slot)}
+.panel{position:absolute;left:32px;top:348px;width:448px;height:200px;border-radius:20px;background:var(--cream2);overflow:hidden}
+.panel .pk{position:absolute;left:32px;top:32px;font:700 20px 'Plus Jakarta Sans';letter-spacing:.12em;color:var(--muted);white-space:nowrap}
+.panel .pt{position:absolute;left:32px;top:88px;font-size:52px;white-space:nowrap}
+.panel .pt2{position:absolute;left:32px;top:88px;font-size:52px;white-space:nowrap}
+.note{position:absolute;left:0;top:0;width:208px;height:200px;z-index:8}
+.note .nb{position:absolute;inset:0;border-radius:12px;background:var(--coralT);box-shadow:0 2px 0 rgba(42,27,61,.05),0 12px 22px -12px rgba(42,27,61,.35)}
+.note .fold{position:absolute;right:0;bottom:0;width:0;height:0;border-left:30px solid rgba(42,27,61,.10);border-top:30px solid transparent;border-bottom-right-radius:12px}
+.note .ni{position:absolute;left:32px;top:30px}
+.note .nl{position:absolute;left:32px;bottom:28px;width:150px;font:800 28px 'Plus Jakarta Sans';line-height:1.1;letter-spacing:-.02em}
+#shop{position:absolute;left:32px;top:116px;width:448px;height:432px;border-radius:20px;background:var(--plum);color:var(--cream)}
+#shopI{position:absolute;left:40px;top:40px}
+#shopT{position:absolute;left:40px;top:216px;font-size:52px;line-height:1.1;white-space:nowrap}
+#shopS{position:absolute;left:40px;top:356px;font:600 24px 'Plus Jakarta Sans';color:#CDBFDA;white-space:nowrap}
+#first{position:absolute;left:0;top:0;height:52px;padding:0 20px;border-radius:14px;background:var(--coral);color:#fff;display:flex;align-items:center;font:800 22px 'Plus Jakarta Sans';letter-spacing:.08em;white-space:nowrap;z-index:12;box-shadow:0 10px 20px -12px rgba(42,27,61,.5)}
+#iris{position:absolute;left:0;top:0;width:200px;height:200px;margin:-100px 0 0 -100px;border-radius:50%;background:var(--coral);z-index:40}
+#qq{position:absolute;left:160px;top:250px;font-size:72px;white-space:nowrap}
+.qc{position:absolute;top:400px;width:512px;height:340px;border-radius:32px}
+.qc .bg{position:absolute;inset:0;border-radius:32px;background:var(--card);border:3px solid var(--line);box-shadow:0 22px 44px -22px rgba(42,27,61,.22)}
+.qc .lt{position:absolute;left:32px;top:32px;width:56px;height:56px;border-radius:28px;background:var(--cream2);display:flex;align-items:center;justify-content:center;font:800 24px 'Plus Jakarta Sans'}
+.qc .ot{position:absolute;left:32px;top:150px;font-size:76px;line-height:1.1;white-space:nowrap}
+.qc .ds{position:absolute;left:32px;top:262px;font:600 28px 'Plus Jakarta Sans';color:var(--muted);white-space:nowrap}
+.qc .ok{position:absolute;right:32px;top:32px;width:56px;height:56px;border-radius:28px;background:var(--mint);display:flex;align-items:center;justify-content:center}
+#qnote{position:absolute;left:32px;top:32px;width:448px;height:276px}
+#qnote .nb{position:absolute;inset:0;border-radius:16px;background:var(--coralT);box-shadow:0 14px 26px -14px rgba(42,27,61,.35)}
+#qnote .ni{position:absolute;left:40px;top:40px}
+#qnote .nl{position:absolute;left:40px;bottom:36px;font-size:52px;white-space:nowrap}
+#qnote .nk{position:absolute;left:40px;bottom:104px;font:700 20px 'Plus Jakarta Sans';letter-spacing:.12em;color:#B4644F;white-space:nowrap}
+#stamp{position:absolute;right:40px;top:40px;height:52px;padding:0 20px;border-radius:14px;background:var(--mint);color:var(--plum);display:flex;align-items:center;font:800 22px 'Plus Jakarta Sans';letter-spacing:.08em;transform-origin:100% 50%}
+#ring{position:absolute;left:1610px;top:228px;width:150px;height:150px}
+#ringN{position:absolute;left:1610px;top:228px;width:150px;height:150px;display:flex;align-items:center;justify-content:center;font-size:64px}
+#take{position:absolute;left:160px;top:772px;width:1600px;height:88px;border-radius:28px;background:var(--plum);color:#fff;display:flex;align-items:center;gap:22px;padding:0 36px}
+#take .tx{font-size:40px;white-space:nowrap}
+#takeI{width:52px;height:52px;border-radius:26px;background:var(--mint);display:flex;align-items:center;justify-content:center}
+.cap{font:700 38px 'Plus Jakarta Sans';color:var(--plum);background:rgba(255,255,255,.97);padding:12px 30px;border-radius:40px;box-shadow:0 10px 30px -12px rgba(42,27,61,.28);letter-spacing:-.01em}
+.cap .cw{color:#8E7F96}.cap .cw.on{color:var(--plum)}.cap .cw.act{color:var(--coral)}
+</style></head><body>
+<div id="stage">
+  <div id="bgv"></div>
+  <div id="cam">
+    <div class="chip" id="eyebrow"><i></i>BBA · BUSINESS BASICS</div>
+    <div class="hd" id="title">Needs <span class="acc">vs</span> Wants</div>
+    <div id="sub">Why we buy what we buy</div>
+
+    <!-- scene B: inbox + two sorting bins -->
+    <div class="card" id="inbox" style="left:160px"><div class="bg"></div>
+      <div class="stk" id="sk0" style="background:#F1E4D6;color:var(--plum)">TO SORT</div><div class="cnt" id="cn0">4</div>
+      <div class="slot" style="left:32px;top:116px"></div><div class="slot" style="left:272px;top:116px"></div>
+      <div class="slot" style="left:32px;top:348px"></div><div class="slot" style="left:272px;top:348px"></div>
+      <div id="shop"><div id="shopI"></div><div class="hd" id="shopT"><div id="shopT1">Shops sell</div><div id="shopT2">both</div></div><div id="shopS">Needs and wants, side by side</div></div>
+    </div>
+    <div class="card" id="binN" style="left:704px"><div class="bg"></div>
+      <div class="stk" id="sk1" style="background:var(--plum);color:var(--cream)">NEEDS</div><div class="cnt" id="cn1">0</div>
+      <div class="slot" style="left:32px;top:116px"></div><div class="slot" style="left:272px;top:116px"></div>
+      <div class="panel" id="pn1"><div class="pk" id="pk1">RULE</div><div class="pt hd" id="pt1">Must have</div><div class="pt2 hd" id="pq1">Comes first</div></div>
+    </div>
+    <div class="card" id="binW" style="left:1248px"><div class="bg"></div>
+      <div class="stk" id="sk2" style="background:var(--coral);color:#fff">WANTS</div><div class="cnt" id="cn2">0</div>
+      <div class="slot" style="left:32px;top:116px"></div><div class="slot" style="left:272px;top:116px"></div>
+      <div class="panel" id="pn2"><div class="pk" id="pk2">RULE</div><div class="pt hd" id="pt2">Nice extras</div><div class="pt2 hd" id="pq2">Can wait</div></div>
+    </div>
+    <div id="notes"></div>
+    <div id="first">1ST ALWAYS</div>
+
+    <!-- scene C: quick check -->
+    <div id="quiz">
+      <div class="chip" id="qchip" style="left:160px;top:120px"><i></i>QUICK CHECK</div>
+      <div class="hd" id="qq">Is a school bag a need or a want?</div>
+      <svg id="ring" viewBox="0 0 150 150"><circle cx="75" cy="75" r="66" fill="#fff" stroke="#F1E4D6" stroke-width="10"/><circle id="ringA" cx="75" cy="75" r="66" fill="none" stroke="#FF6B4A" stroke-width="10" stroke-linecap="round" transform="rotate(-90 75 75)"/></svg>
+      <div class="hd" id="ringN"></div>
+      <div class="qc" id="qL" style="left:160px"><div class="bg"></div><div id="qnote"><div class="nb"></div><div class="ni"></div><div class="nk">SORT THIS</div><div class="nl hd">School bag</div><div id="stamp">NEED</div></div></div>
+      <div class="qc" id="qA" style="left:704px"><div class="bg"></div><div class="lt">A</div><div class="ok"></div><div class="ot hd">Need</div><div class="ds">Must have</div></div>
+      <div class="qc" id="qB" style="left:1248px"><div class="bg"></div><div class="lt">B</div><div class="ot hd">Want</div><div class="ds">Nice extra</div></div>
+      <div id="take"><span id="takeI"></span><span class="hd tx" id="takeT">Use it every day? It's a need.</span></div>
+    </div>
+  </div>
+  <div id="iris"></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

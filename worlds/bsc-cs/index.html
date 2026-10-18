@@ -1,0 +1,112 @@
+<!doctype html><html><head><meta charset="utf-8"><title>BSc CS - Binary numbers</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<style>
+/* ===== BSc CS world: Bits and logic (Swiss minimal) ===== */
+:root{--w:#FFFFFF;--k:#111111;--g:#E8E8E8;--g2:#F4F4F4;--mut:#8C8C8C;--y:#FFD23F}
+#stage{background:var(--w);font-family:Inter;color:var(--k)}
+#prog{position:absolute;left:0;top:0;height:6px;width:1920px;background:var(--g);z-index:60}
+#prog i{display:block;height:6px;background:var(--k);width:0}
+#cam{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.mono{font-family:'Space Mono';font-weight:700}
+.h{font-family:Inter;font-weight:700;letter-spacing:-.045em}
+.chip{position:absolute;display:inline-flex;align-items:center;gap:14px;height:44px;padding:0 18px;border-radius:2px;background:var(--k);color:#fff;font:600 18px Inter;letter-spacing:.16em;white-space:nowrap}
+.chip i{width:10px;height:10px;background:var(--y)}
+#title{position:absolute;left:0;top:0;font-size:168px;line-height:1;white-space:nowrap;transform-origin:0 0}
+#title .dot{display:inline-block;width:.16em;height:.16em;background:var(--y);margin-left:.04em}
+#sub{position:absolute;left:160px;top:628px;font:500 34px Inter;color:var(--mut);white-space:nowrap}
+#tidx{position:absolute;right:160px;top:636px;font-size:26px;color:var(--k);letter-spacing:.3em;white-space:nowrap}
+#trule{position:absolute;left:160px;top:704px;width:1600px;height:2px;background:var(--k);transform-origin:0 0}
+#hrule{position:absolute;left:160px;top:250px;width:1600px;height:2px;background:var(--g);transform-origin:0 0}
+.tile{position:absolute;top:300px;width:240px;height:240px}
+.tile .bg{position:absolute;inset:0;border:3px solid var(--k);border-radius:4px;background:var(--w)}
+.tile .st{position:absolute;left:24px;top:22px;font:600 18px Inter;letter-spacing:.16em}
+.tile .bit{position:absolute;left:0;top:0;width:240px;height:240px;display:flex;align-items:center;justify-content:center;font-size:150px;line-height:1;padding-top:18px}
+.val{position:absolute;top:572px;width:240px;height:68px}
+.val .ln{position:absolute;left:0;top:0;width:240px;height:2px;background:var(--k);transform-origin:0 0}
+.val .n{position:absolute;left:0;top:14px;font-size:52px;line-height:1}
+.val .lb{position:absolute;right:0;top:20px;font:600 18px Inter;letter-spacing:.16em;color:var(--mut)}
+#mark{position:absolute;left:0;top:272px;width:240px;height:10px;background:var(--y)}
+#sumL{position:absolute;left:160px;top:688px;font:600 18px Inter;letter-spacing:.16em;color:var(--mut);white-space:nowrap}
+#sumR{position:absolute;left:1066px;top:688px;width:150px;text-align:right;font:700 18px 'Space Mono';color:var(--mut);white-space:nowrap}
+#bar{position:absolute;left:160px;top:720px;width:1056px;height:80px}
+#bar b{position:absolute;top:0;width:62px;height:80px;border-radius:2px;background:var(--g)}
+#panel{position:absolute;left:1248px;top:300px;width:512px;height:500px;background:var(--k);border-radius:4px;overflow:hidden;color:#fff}
+#plab{position:absolute;left:36px;top:32px;font:600 18px Inter;letter-spacing:.16em;color:#9A9A9A;white-space:nowrap}
+.lg{position:absolute;left:36px;width:440px;height:112px}
+.lg .sq{position:absolute;left:0;top:0;width:112px;height:112px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:72px;padding-top:8px}
+.lg .tx{position:absolute;left:144px;top:22px;font-size:56px;line-height:1.1}
+.lg .ds{position:absolute;left:146px;top:84px;font:500 22px Inter;color:#9A9A9A;white-space:nowrap}
+#num{position:absolute;left:28px;top:84px;font-size:280px;line-height:1;color:#fff}
+#expr{position:absolute;left:36px;top:424px;font-size:44px;line-height:1;color:var(--y);white-space:nowrap}
+#bars{position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:40;pointer-events:none}
+#bars b{position:absolute;top:0;width:241px;height:1080px;background:var(--k)}
+/* quiz */
+#qq{position:absolute;left:160px;top:150px;font-size:72px;line-height:1;white-space:nowrap}
+.qt{position:absolute;top:300px;width:160px;height:160px}
+.qt .bg{position:absolute;inset:0;border:3px solid var(--k);border-radius:4px;background:var(--w)}
+.qt .bit{position:absolute;left:0;top:0;width:160px;height:160px;display:flex;align-items:center;justify-content:center;font-size:96px;line-height:1;padding-top:12px}
+.qv{position:absolute;top:476px;width:160px;height:48px}
+.qv .ln{position:absolute;left:0;top:0;width:160px;height:2px;background:var(--k)}
+.qv .n{position:absolute;left:0;top:12px;font-size:32px;line-height:1}
+#qeq{position:absolute;left:968px;top:316px;font-size:120px;line-height:1;white-space:nowrap}
+#qsum{position:absolute;left:976px;top:490px;font-size:32px;line-height:1;white-space:nowrap;color:var(--mut)}
+#cd{position:absolute;left:1588px;top:290px;width:172px;height:172px;border:3px solid var(--k);border-radius:4px;overflow:hidden;background:var(--w)}
+#cdf{position:absolute;left:0;bottom:0;width:166px;height:166px;background:var(--y);transform-origin:50% 100%}
+#cdn{position:absolute;left:0;top:0;width:166px;height:166px;display:flex;align-items:center;justify-content:center;font-size:96px;padding-top:10px}
+.opt{position:absolute;top:580px;width:376px;height:160px}
+.opt .bg{position:absolute;inset:0;border:3px solid var(--k);border-radius:4px;background:var(--w)}
+.opt .lt{position:absolute;left:28px;top:28px;width:44px;height:44px;border-radius:2px;background:var(--g);display:flex;align-items:center;justify-content:center;font:700 22px Inter}
+.opt .ot{position:absolute;right:32px;top:30px;font-size:96px;line-height:1;padding-top:6px}
+.opt .ok{position:absolute;left:28px;bottom:28px;width:44px;height:44px;border-radius:2px;background:var(--k);display:flex;align-items:center;justify-content:center}
+#take{position:absolute;left:160px;top:772px;width:1600px;height:88px;border-radius:4px;background:var(--k);color:#fff;display:flex;align-items:center;gap:24px;padding:0 36px}
+#take .sqi{width:20px;height:20px;background:var(--y);flex:none}
+#take .tx{font:600 36px Inter;letter-spacing:-.01em;white-space:nowrap}
+.cap{font:600 38px Inter;color:#fff;background:var(--k);padding:12px 28px;border-radius:4px;letter-spacing:-.01em}
+.cap .cw{color:#7A7A7A}.cap .cw.on{color:#FFFFFF}.cap .cw.act{color:var(--y)}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="chip" id="eyebrow"><i></i>BSC · COMPUTER SCIENCE</div>
+    <div class="h" id="title">Binary numbers<span class="dot"></span></div>
+    <div id="sub">Counting with only two digits: 0 and 1</div>
+    <div class="mono" id="tidx">0 1 0 1</div>
+    <div id="trule"></div>
+    <div id="hrule"></div>
+
+    <div id="scene">
+      <div id="mark"></div>
+      <div id="tiles"></div>
+      <div id="vals"></div>
+      <div id="sumL">TOTAL</div>
+      <div id="sumR">0 OF 15</div>
+      <div id="bar"></div>
+      <div id="panel">
+        <div id="plab">BINARY DIGITS</div>
+        <div class="lg" id="lg0" style="top:100px"><div class="sq mono" style="background:#fff;color:#111">0</div><div class="tx h">Off</div><div class="ds">adds nothing</div></div>
+        <div class="lg" id="lg1" style="top:250px"><div class="sq mono" style="background:#FFD23F;color:#111">1</div><div class="tx h">On</div><div class="ds">adds its value</div></div>
+        <div class="mono" id="num">0</div>
+        <div class="mono" id="expr"></div>
+      </div>
+    </div>
+
+    <div id="quiz">
+      <div class="chip" id="qchip" style="left:160px;top:96px"><i></i>QUICK CHECK</div>
+      <div class="h" id="qq">What number is 0110?</div>
+      <div id="qtiles"></div>
+      <div class="mono" id="qeq">= ?</div>
+      <div class="mono" id="qsum">4 + 2</div>
+      <div id="cd"><div id="cdf"></div><div class="mono" id="cdn">3</div></div>
+      <div id="opts"></div>
+      <div id="take"><span class="sqi"></span><span class="tx" id="takeT">Binary: add the values of the switches that are on.</span></div>
+    </div>
+  </div>
+  <div id="bars"></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

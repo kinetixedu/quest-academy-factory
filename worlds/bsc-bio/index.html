@@ -1,0 +1,71 @@
+<!doctype html><html><head><meta charset="utf-8"><title>BSc Biology - Parts of a Cell</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<style>
+/* ===== BSc Biology world: Living cell ===== */
+:root{--sage:#EEF3EA;--sage2:#E2EADD;--ink:#173A2C;--ink2:#46614F;--muted:#7F9585;--leaf:#4FA36A;--leaf2:#D6E8D2;--cyto:#FBE6D4;--plum:#7B4B94;--card:#FBFDF9}
+#stage{background:var(--sage);font-family:Lexend;font-weight:400;color:var(--ink)}
+#prog{position:absolute;left:0;top:0;height:6px;width:1920px;background:var(--sage2);z-index:60}
+#prog i{display:block;height:6px;background:var(--leaf);width:0}
+#cam{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.h{font-family:Lexend;font-weight:600;letter-spacing:-.025em}
+.chip{position:absolute;display:inline-flex;align-items:center;gap:12px;height:44px;padding:0 22px;border-radius:22px;background:var(--leaf2);color:#2E6B43;font:600 18px Lexend;letter-spacing:.16em;white-space:nowrap}
+.chip i{width:10px;height:10px;border-radius:5px;background:var(--leaf)}
+#title{position:absolute;left:0;top:0;font-size:128px;line-height:1.05;white-space:nowrap;transform-origin:0 0}
+#title .acc{color:var(--leaf)}
+#sub{position:absolute;left:0;top:676px;width:1920px;text-align:center;font:400 32px Lexend;color:var(--muted)}
+#zoom{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:hidden}
+#zoom svg{position:absolute;left:0;top:0}
+.lb{position:absolute;left:1112px;width:648px}
+.lb .nm{font:600 44px Lexend;letter-spacing:-.02em;line-height:56px;white-space:nowrap;display:flex;align-items:center;gap:16px}
+.lb .nm s{display:inline-block;width:14px;height:14px;border-radius:7px;text-decoration:none}
+.lb .ds{margin-top:8px;font:400 28px Lexend;line-height:38px;color:var(--ink2);padding-left:30px}
+#iris{position:absolute;left:0;top:0;z-index:40}
+/* quiz */
+#qq{position:absolute;left:160px;top:150px;font-size:66px;line-height:1.1;white-space:nowrap}
+.opt{position:absolute;top:300px;width:512px;height:384px;border-radius:40px}
+.opt .bg{position:absolute;inset:0;border-radius:40px;background:var(--card);border:2px solid #DCE5D7}
+.opt .lt{position:absolute;left:36px;top:36px;width:52px;height:52px;border-radius:26px;background:var(--sage);display:flex;align-items:center;justify-content:center;font:600 22px Lexend}
+.opt .ok{position:absolute;right:36px;top:36px;width:52px;height:52px;border-radius:26px;background:#fff;display:flex;align-items:center;justify-content:center}
+.opt svg.art{position:absolute;left:156px;top:64px}
+.opt .ot{position:absolute;left:0;width:512px;top:276px;text-align:center;font-size:44px;white-space:nowrap}
+#ring{position:absolute;left:1616px;top:112px;width:144px;height:144px}
+#ringN{position:absolute;left:1616px;top:112px;width:144px;height:144px;display:flex;align-items:center;justify-content:center;font:600 60px Lexend}
+#take{position:absolute;left:160px;top:732px;width:1600px;height:96px;border-radius:48px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:24px;padding:0 40px}
+#take .tx{font:500 38px Lexend;white-space:nowrap;letter-spacing:-.01em}
+#take .tx em{font-style:normal;color:#9AD6A9}
+.cap{font:600 36px Lexend;color:var(--ink);background:#FBFDF9;padding:12px 32px;border-radius:40px;box-shadow:0 10px 30px -12px rgba(23,58,44,.28)}
+.cap .cw{color:#8DA393}.cap .cw.on{color:var(--ink)}.cap .cw.act{color:var(--leaf)}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div id="zoom">
+
+      <svg id="leafS" width="1920" height="1080"><g id="leafG"></g></svg>
+      <svg id="tissue" width="1920" height="1080"><defs><clipPath id="lclip"><circle id="lcp"/></clipPath></defs><g id="tisC"><g id="tisG"><g id="tisN"></g><g id="tisM"></g></g></g></svg>
+      <svg id="lensS" width="1920" height="1080"><circle id="lens" r="54" fill="none" stroke="#173A2C" stroke-width="5"/></svg>
+      <svg id="cell" width="1920" height="1080"></svg>
+    </div>
+    <div class="chip" id="eyebrow"><i></i>BSC · BIOLOGY</div>
+    <div class="h" id="title">Parts of a <span class="acc">Cell</span></div>
+    <div id="sub">One zoom, from a leaf to a single cell</div>
+    <div id="labels"></div>
+
+    <div id="quiz">
+      <div class="chip" id="qchip" style="left:160px;top:96px"><i></i>QUICK CHECK</div>
+      <div class="h" id="qq">Which part makes energy?</div>
+      <div id="opts"></div>
+      <svg id="ring" viewBox="0 0 144 144"><circle cx="72" cy="72" r="64" fill="#FBFDF9" stroke="#DCE5D7" stroke-width="8"/><circle id="ringA" cx="72" cy="72" r="64" fill="none" stroke="#4FA36A" stroke-width="8" stroke-linecap="round" transform="rotate(-90 72 72)"/></svg>
+      <div id="ringN"></div>
+      <div id="take"><svg id="takeI" width="64" height="40"></svg><span class="tx" id="takeT">Mitochondria are the cell's <em>power stations.</em></span></div>
+    </div>
+  </div>
+  <svg id="iris" width="1920" height="1080"><path id="irisP" fill="#10241A" fill-rule="evenodd"/><circle id="irisR" fill="none" stroke="#2B4A38" stroke-width="16"/></svg>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

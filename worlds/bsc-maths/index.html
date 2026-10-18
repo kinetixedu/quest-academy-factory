@@ -1,0 +1,117 @@
+<!doctype html><html><head><meta charset="utf-8"><title>BSc Maths - What is a Function?</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<style>
+/* ===== BSc Maths world: Ink notebook ===== */
+:root{--paper:#FAFAF6;--grid:#ECECE4;--ink:#1B1B2F;--ink2:#4A4A60;--muted:#8C8C98;--dim:#C9C9CF;--blue:#2F5BEA;--blue2:#E6ECFD;--red:#E0533D;--card:#FFFFFF;--line:#E2E2D8}
+#stage{background:var(--paper);font-family:Inter;color:var(--ink)}
+#strip{position:absolute;left:0;top:0;width:3840px;height:1080px;background-image:linear-gradient(var(--grid) 1.5px,transparent 1.5px),linear-gradient(90deg,var(--grid) 1.5px,transparent 1.5px);background-size:32px 32px;background-position:0 -4px}
+#book{position:absolute;left:0;top:0;width:3840px;height:1080px}
+#prog{position:absolute;left:0;top:0;height:6px;width:1920px;background:var(--line);z-index:60}
+#prog i{display:block;height:6px;background:var(--blue);width:0}
+#cam{position:absolute;left:0;top:0;width:1920px;height:1080px}
+#pageA,#pageB{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.ser{font-family:'Instrument Serif';font-weight:400;letter-spacing:-.005em}
+.it{font-style:italic}
+.chip{position:absolute;display:inline-flex;align-items:center;gap:14px;height:44px;padding:0 20px;border-radius:22px;background:var(--card);border:1.5px solid var(--line);color:var(--ink);font:600 18px Inter;letter-spacing:.16em;white-space:nowrap}
+.chip i{width:8px;height:8px;border-radius:4px;background:var(--blue)}
+#title{position:absolute;left:0;top:0;font-size:150px;line-height:1.05;white-space:nowrap;transform-origin:0 0}
+#title .acc{color:var(--blue)}
+#tul{position:absolute;left:0;top:0}
+#sub{position:absolute;left:0;top:650px;width:1920px;text-align:center;font:500 32px Inter;color:var(--muted)}
+#mach{position:absolute;left:160px;top:270px}
+.lbl{position:absolute;font:600 18px Inter;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+#rule{position:absolute;left:380px;top:344px;width:616px;text-align:center;font-size:84px;line-height:1;white-space:nowrap}
+#rule .tm{display:inline-block;position:relative}
+#disp{overflow:hidden;position:absolute;left:478px;top:682px;width:420px;height:76px;border-radius:14px;background:#F2F4FB;border:1.5px solid #DDE3F5;display:flex;align-items:center;justify-content:center;font-size:48px;white-space:nowrap}
+#disp span{position:absolute}
+.tok{position:absolute;width:88px;height:88px;border-radius:44px;display:flex;align-items:center;justify-content:center;font-size:58px;line-height:1}
+.st{position:absolute;top:606px;width:88px;text-align:center;font-size:34px;line-height:1;color:#C9C9CF}
+#tin{background:var(--card);border:3px solid var(--blue);color:var(--blue)}
+#tout{background:var(--blue);color:#fff}
+#work{position:absolute;left:1248px;top:270px;width:512px;height:520px;border-radius:20px;background:var(--card);border:1.5px solid var(--line);box-shadow:0 14px 34px -18px rgba(27,27,47,.18)}
+#work .lbl{left:40px;top:38px}
+.ln{position:absolute;left:40px;font-size:56px;white-space:nowrap;line-height:1}
+#res{position:absolute;left:40px;top:324px;height:92px;padding:0 26px;border-radius:14px;border:3px solid var(--blue);display:flex;align-items:center;font-size:64px;white-space:nowrap;color:var(--ink)}
+#hr{position:absolute;left:40px;top:300px;width:432px;height:1.5px;background:var(--line)}
+#note{position:absolute;left:40px;top:440px;font:600 38px Caveat;color:var(--red);white-space:nowrap}
+#ticks{position:absolute;left:322px;top:446px}
+/* quiz */
+#qq{position:absolute;left:160px;top:250px;font-size:84px;white-space:nowrap}
+#qrule{position:absolute;left:160px;top:372px;font-size:40px;color:var(--ink2);white-space:nowrap}
+#ring{position:absolute;left:1610px;top:250px;width:150px;height:150px}
+#ringN{position:absolute;left:1610px;top:250px;width:150px;height:150px;display:flex;align-items:center;justify-content:center;font-size:76px}
+.opt{position:absolute;top:470px;width:376px;height:220px;border-radius:20px}
+.opt .bg{position:absolute;inset:0;border-radius:20px;background:var(--card);border:1.5px solid var(--line)}
+.opt .lt{position:absolute;left:32px;top:32px;width:52px;height:52px;border-radius:26px;background:var(--paper);border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;font:700 22px Inter}
+.opt .ot{position:absolute;left:32px;top:96px;font-size:96px;line-height:1;white-space:nowrap}
+.opt .ok{position:absolute;right:32px;top:32px;width:52px;height:52px;border-radius:26px;background:var(--blue);display:flex;align-items:center;justify-content:center}
+#take{position:absolute;left:160px;top:730px;width:1600px;height:100px;border-radius:20px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:24px;padding:0 36px}
+#take .tx{font-size:50px;white-space:nowrap}
+#takeN{font:600 36px Caveat;color:#FFB4A6;margin-left:auto;white-space:nowrap}
+.cap{font:600 38px Inter;color:var(--ink);background:rgba(255,255,255,.97);border:1.5px solid var(--line);padding:12px 30px;border-radius:40px}
+.cap .cw{color:#8C8C98}.cap .cw.on{color:var(--ink)}.cap .cw.act{color:var(--blue)}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div id="book"><div id="strip"></div>
+    <div id="pageA">
+      <div class="chip" id="eyebrow"><i></i>BSC · MATHS</div>
+      <div class="ser" id="title">What is a <span class="acc it">function</span>?</div>
+      <svg id="tul" width="520" height="40"><path id="tulP" d="M4 22 C 120 12, 300 10, 516 18" stroke="#E0533D" stroke-width="5" stroke-linecap="round" fill="none"/></svg>
+      <div id="sub">A number machine that never changes its mind</div>
+
+      <svg id="mach" width="1056" height="590" viewBox="0 0 1056 590">
+        <g fill="none" stroke="#1B1B2F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <path id="mIn" d="M24 232 H220 M24 328 H220"/>
+          <path id="mOut" d="M836 232 H1032 M836 328 H1032"/>
+          <rect id="mBox" x="220" y="0" width="616" height="520" rx="28" fill="#FFFFFF"/>
+          <path id="mMouthL" d="M220 232 V328" stroke="#FFFFFF" stroke-width="8"/>
+          <path id="mMouthR" d="M836 232 V328" stroke="#FFFFFF" stroke-width="8"/>
+          <path id="track" d="M230 280 H826" stroke="#E2E2D8" stroke-width="3" stroke-dasharray="2 12"/>
+          <path id="mInA" d="M90 280 H150 M136 266 L150 280 L136 294" stroke="#C9C9CF" stroke-width="3"/>
+          <path id="mOutA" d="M906 280 H966 M952 266 L966 280 L952 294" stroke="#C9C9CF" stroke-width="3"/>
+        </g>
+        <rect id="lamp" x="772" y="28" width="40" height="12" rx="6" fill="#ECECE4"/>
+        <line id="u2x" x1="0" y1="0" x2="0" y2="0" stroke="#2F5BEA" stroke-width="5" stroke-linecap="round"/>
+        <line id="u1" x1="0" y1="0" x2="0" y2="0" stroke="#2F5BEA" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <div class="lbl" id="lRule" style="left:380px;top:306px;width:616px;text-align:center">THE RULE</div>
+      <div class="ser" id="rule"><span class="it">f</span>(<span class="it">x</span>) = <span class="tm" id="r2x">2<span class="it">x</span></span> <span class="tm" id="r1">+ 1</span></div>
+      <div class="ser" id="disp"><span id="d1">3 × 2 = 6</span><span id="d2">6 + 1 = 7</span><span id="d0" style="color:#8C8C98;font:600 18px Inter;letter-spacing:.16em">READY</span></div>
+      <div class="lbl" id="lIn" style="left:184px;top:616px">INPUT</div>
+      <div class="lbl" id="lOut" style="left:1000px;top:616px">OUTPUT</div>
+      <div class="ser st" id="st0" style="left:644px">× 2</div><div class="ser st" id="st1" style="left:868px">+ 1</div>
+      <div class="ser tok" id="tin">3</div>
+      
+
+      <div id="work">
+        <div class="lbl">WORKING</div>
+        <div class="ser ln" id="w1" style="top:88px"><span class="it">x</span> = 3</div>
+        <div class="ser ln" id="w2" style="top:156px">2 × 3 = 6</div>
+        <div class="ser ln" id="w3" style="top:224px">6 + 1 = 7</div>
+        <div id="hr"></div>
+        <div class="ser" id="res"><span><span class="it">f</span>(3) = 7</span></div>
+        <div id="note">same in, same out</div>
+        <svg id="ticks" width="150" height="44"><g fill="none" stroke="#E0533D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path id="k0" d="M4 22 L16 34 L38 8"/><path id="k1" d="M54 22 L66 34 L88 8"/><path id="k2" d="M104 22 L116 34 L138 8"/></g></svg>
+      </div>
+    </div>
+
+    <div id="pageB" style="left:1920px">
+      <div class="chip" id="qchip" style="left:160px;top:120px"><i></i>QUICK CHECK</div>
+      <div class="ser" id="qq">Put in 5. What comes out?</div>
+      <div class="ser" id="qrule">Rule: <span class="it">f</span>(<span class="it">x</span>) = 2<span class="it">x</span> + 1</div>
+      <svg id="ring" viewBox="0 0 150 150"><circle cx="75" cy="75" r="66" fill="#fff" stroke="#E2E2D8" stroke-width="6"/><circle id="ringA" cx="75" cy="75" r="66" fill="none" stroke="#2F5BEA" stroke-width="6" stroke-linecap="round" transform="rotate(-90 75 75)"/></svg>
+      <div class="ser" id="ringN"></div>
+      <div id="opts"></div>
+      <div id="take"><span id="takeI"></span><span class="ser tx" id="takeT"><span class="it">f</span>(5) = 2 × 5 + 1 = 11</span><span id="takeN">ten, plus one</span></div>
+    </div></div>
+  </div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

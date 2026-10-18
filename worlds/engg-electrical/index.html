@@ -1,0 +1,138 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Engg Electrical - Ohm's Law</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<style>
+/* ===== Engineering Electrical world: Power grid ===== */
+:root{--bg:#121417;--panel:#1B1F24;--panel2:#22272E;--line:#39404A;--line2:#2A3038;--white:#F4F5F7;--muted:#8B939E;--dim:#4A525D;--yel:#FFC93C;--blue:#6EA8FF}
+#stage{background:var(--bg);font-family:Archivo;font-stretch:100%;color:var(--white)}
+#bgv{position:absolute;inset:0;background:radial-gradient(120% 100% at 50% 40%,#16191D 0%,#121417 60%,#0D0F11 100%)}
+#prog{position:absolute;left:0;top:0;height:6px;width:1920px;background:#1F2328;z-index:60}
+#prog i{display:block;height:6px;background:var(--yel);width:0}
+#cam{position:absolute;left:0;top:0;width:1920px;height:1080px}
+#sceneA,#quiz{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.wide{font-family:Archivo;font-weight:800;font-stretch:122%;font-variation-settings:"wdth" 122;letter-spacing:-.01em}
+.mono{font-family:'IBM Plex Mono'}
+.chip{position:absolute;display:inline-flex;align-items:center;gap:14px;height:44px;padding:0 20px 0 0;border-radius:6px;background:var(--panel);border:1.5px solid var(--line);color:var(--white);font:600 18px 'IBM Plex Mono';letter-spacing:.14em;white-space:nowrap;overflow:hidden}
+.chip i{width:30px;height:44px;background:repeating-linear-gradient(-45deg,#FFC93C 0 7px,#121417 7px 14px)}
+#title{position:absolute;left:0;top:0;font-size:132px;line-height:1.05;white-space:nowrap;transform-origin:0 0}
+#title .acc{color:var(--yel)}
+#tbar{position:absolute;left:0;top:0;width:200px;height:10px;background:var(--yel)}
+#sub{position:absolute;left:0;top:650px;width:1920px;text-align:center;font:500 32px Archivo;color:var(--muted)}
+.pn{position:absolute;top:270px;width:784px;height:340px;border-radius:12px;background:var(--panel);border:1.5px solid var(--line2);overflow:hidden}
+.pn .k{position:absolute;left:32px;top:28px;font:600 18px 'IBM Plex Mono';letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+.pn .st{position:absolute;right:32px;top:28px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap;text-align:right}
+.pn svg{position:absolute;left:0;top:0}
+#pW{left:160px}#pC{left:976px}
+.tag{position:absolute;height:40px;padding:0 14px;border-radius:6px;display:flex;align-items:center;gap:10px;font:600 20px 'IBM Plex Mono';white-space:nowrap;background:var(--panel2);border:1.5px solid var(--line);color:var(--white)}
+.tag b{color:var(--yel);font-weight:600}
+.cd{position:absolute;top:642px;width:512px;height:218px;border-radius:12px}
+.cd .bg{position:absolute;inset:0;border-radius:12px;background:var(--panel);border:1.5px solid var(--line2)}
+.cd .n{position:absolute;left:180px;top:36px;font:600 18px 'IBM Plex Mono';letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+.cd .tt{position:absolute;left:180px;top:76px;font-size:40px;white-space:nowrap}
+.cd .u{position:absolute;left:180px;top:142px;font:400 24px 'IBM Plex Mono';white-space:nowrap}
+.cd .lb{position:absolute;left:36px;top:49px;width:120px;height:120px;border-radius:10px;background:var(--panel2)}
+#strip{position:absolute;left:160px;top:642px;width:1600px;height:218px;border-radius:12px;background:var(--panel);border:1.5px solid var(--line2)}
+.sym{position:absolute;left:0;top:0;color:var(--dim);width:120px;height:120px;display:flex;align-items:center;justify-content:center;font-size:96px;line-height:1;z-index:5}
+.op{position:absolute;top:670px;width:120px;text-align:center;font-size:96px;line-height:1;color:var(--muted)}
+.un{position:absolute;top:800px;width:200px;text-align:center;font:400 22px 'IBM Plex Mono';color:var(--muted);letter-spacing:.06em}
+#hz{position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:40;background:var(--yel)}
+#hz i{position:absolute;top:0;width:64px;height:1080px;background:repeating-linear-gradient(-45deg,#121417 0 22px,#FFC93C 22px 44px)}
+#hz .l{left:0}#hz .r{right:0}
+#hzT{position:absolute;left:0;top:500px;width:1920px;text-align:center;font-size:64px;color:#121417}
+/* quiz */
+#qq{position:absolute;left:160px;top:196px;font-size:60px;line-height:1.2;white-space:nowrap}
+#qq2{color:var(--yel)}
+#giv{position:absolute;left:160px;top:372px;display:flex;gap:16px}
+#giv .tag{position:relative}
+#ring{position:absolute;left:1610px;top:196px;width:150px;height:150px}
+#ringN{position:absolute;left:1610px;top:196px;width:150px;height:150px;display:flex;align-items:center;justify-content:center;font:600 60px 'IBM Plex Mono'}
+.opt{position:absolute;top:460px;width:376px;height:200px;border-radius:12px}
+.opt .bg{position:absolute;inset:0;border-radius:12px;background:var(--panel);border:1.5px solid var(--line2)}
+.opt .lt{position:absolute;left:32px;top:32px;width:48px;height:48px;border-radius:6px;background:var(--panel2);display:flex;align-items:center;justify-content:center;font:600 22px 'IBM Plex Mono'}
+.opt .ot{position:absolute;left:32px;top:116px;font:600 52px 'IBM Plex Mono';line-height:1;white-space:nowrap}
+.opt .ok{position:absolute;right:32px;top:32px;width:48px;height:48px;border-radius:6px;background:#121417;display:flex;align-items:center;justify-content:center}
+#take{position:absolute;left:160px;top:708px;width:1600px;height:100px;border-radius:12px;background:var(--yel);color:#121417;display:flex;align-items:center;gap:24px;padding:0 36px}
+#take .tx{font-size:40px;white-space:nowrap}
+#take .mx{margin-left:auto;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+.cap{font:600 38px Archivo;color:var(--white);background:#1E2227;border:1.5px solid #333A43;padding:12px 30px;border-radius:10px}
+.cap .cw{color:#7A828D}.cap .cw.on{color:var(--white)}.cap .cw.act{color:var(--yel)}
+</style></head><body>
+<div id="stage">
+  <div id="bgv"></div>
+  <div id="cam">
+    <div id="sceneA">
+      <div class="chip" id="eyebrow"><i></i>ENGG · ELECTRICAL</div>
+      <div class="wide" id="title">Ohm's <span class="acc">Law</span></div>
+      <div id="tbar"></div>
+      <div id="sub">Think of electricity as water in a pipe</div>
+
+      <div class="pn" id="pW">
+        <svg width="784" height="340" viewBox="0 0 784 340">
+          <path id="pipeW" fill="#2A3038"/>
+          <path id="pipeFill" fill="#6EA8FF"/>
+          <path id="flowW" fill="none" stroke="#DCE9FF" stroke-width="5" stroke-linecap="round" stroke-dasharray="18 22"/>
+          <path id="pipeO" fill="none" stroke="#8B939E" stroke-width="3" stroke-linejoin="round"/>
+          <rect x="64" y="80" width="168" height="220" rx="8" fill="#22272E"/>
+          <rect id="water" x="64" y="300" width="168" height="0" fill="#6EA8FF"/>
+          <path d="M64 80 V292 a8 8 0 0 0 8 8 H224 a8 8 0 0 0 8 -8 V80" fill="none" stroke="#8B939E" stroke-width="3" stroke-linejoin="round"/>
+          <g id="push" fill="none" stroke="#FFC93C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M148 0 V44 M134 30 L148 44 L162 30"/></g>
+          <line id="lvl" x1="240" y1="0" x2="256" y2="0" stroke="#8B939E" stroke-width="3"/>
+        </svg>
+        <div class="k">WATER PIPE</div><div class="st" id="stW">PRESSURE · LOW</div>
+        <div class="tag" id="tgP" style="left:264px;top:96px"><b>V</b>pressure</div>
+        <div class="tag" id="tgF" style="left:600px;top:156px"><b>I</b>flow</div>
+        <div class="tag" id="tgN" style="left:404px;top:284px"><b>R</b>narrow pipe</div>
+      </div>
+
+      <div class="pn" id="pC">
+        <svg width="784" height="340" viewBox="0 0 784 340">
+          <path id="wire" d="M120 100 H664 V300 H120 Z" fill="none" stroke="#39404A" stroke-width="6" stroke-linejoin="round"/>
+          <path id="flowC" d="M120 140 V100 H664 V300 H120 V140" fill="none" stroke="#FFC93C" stroke-width="6" stroke-linecap="round" stroke-dasharray="14 26"/>
+          <rect x="300" y="80" width="184" height="40" fill="#1B1F24"/>
+          <path id="res" d="M300 100 H318 L330 78 L354 122 L378 78 L402 122 L426 78 L450 122 L466 100 H484" fill="none" stroke="#8B939E" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+          <rect x="84" y="164" width="72" height="72" fill="#1B1F24"/>
+          <g id="bat" stroke-linecap="round">
+            <line id="bp1" x1="88" y1="182" x2="152" y2="182" stroke="#8B939E" stroke-width="6"/>
+            <line id="bn1" x1="102" y1="198" x2="138" y2="198" stroke="#8B939E" stroke-width="10"/>
+            <g id="cell2"><line id="bp2" x1="88" y1="214" x2="152" y2="214" stroke="#FFC93C" stroke-width="6"/><line id="bn2" x1="102" y1="230" x2="138" y2="230" stroke="#FFC93C" stroke-width="10"/></g>
+          </g>
+          <circle id="halo2" cx="664" cy="200" r="70" fill="#FFC93C" opacity="0"/>
+          <circle id="halo" cx="664" cy="200" r="54" fill="#FFC93C" opacity="0"/>
+          <circle id="bulb" cx="664" cy="200" r="36" fill="#22272E" stroke="#8B939E" stroke-width="5"/>
+          <path id="fil" d="M646 210 L654 190 L662 210 L670 190 L678 210" fill="none" stroke="#8B939E" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+        </svg>
+        <div class="k">CIRCUIT</div><div class="st" id="stC">CURRENT · 0</div>
+        <div class="tag" id="tgB" style="left:184px;top:180px"><b>V</b>battery</div>
+        <div class="tag" id="tgI" style="left:470px;top:236px"><b>I</b>current</div>
+        <div class="tag" id="tgR" style="left:316px;top:140px"><b>R</b>resistor</div>
+      </div>
+
+      <div id="strip"></div>
+      <div id="cards"></div>
+      <div class="wide op" id="opE" style="left:700px">=</div>
+      <div class="wide op" id="opX" style="left:1100px">×</div>
+      <div class="un" id="uV" style="left:460px">VOLTS</div>
+      <div class="un" id="uI" style="left:860px">AMPS</div>
+      <div class="un" id="uR" style="left:1260px">OHMS</div>
+      <div class="wide sym" id="sV">V</div><div class="wide sym" id="sI">I</div><div class="wide sym" id="sR">R</div>
+    </div>
+
+    <div id="quiz">
+      <div class="chip" id="qchip" style="left:160px;top:120px"><i></i>QUICK CHECK</div>
+      <div class="wide" id="qq"><div id="qq1">2 amps flow through 5 ohms.</div><div id="qq2">What is the voltage?</div></div>
+      <div id="giv"><div class="tag" id="g1"><b>I</b>2 A</div><div class="tag" id="g2"><b>R</b>5 Ω</div><div class="tag" id="g3"><b>V</b>?</div></div>
+      <svg id="ring" viewBox="0 0 150 150"><circle cx="75" cy="75" r="66" fill="#1B1F24" stroke="#2A3038" stroke-width="8"/><circle id="ringA" cx="75" cy="75" r="66" fill="none" stroke="#FFC93C" stroke-width="8" stroke-linecap="butt" transform="rotate(-90 75 75)"/></svg>
+      <div id="ringN"></div>
+      <div id="opts"></div>
+      <div id="take"><span id="takeI"></span><span class="wide tx" id="takeT">More push, more flow.</span><span class="mx" id="takeM">V = 2 × 5 = 10 V</span></div>
+    </div>
+  </div>
+  <div id="hz"><i class="l"></i><i class="r"></i><div class="wide" id="hzT">QUICK CHECK</div></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

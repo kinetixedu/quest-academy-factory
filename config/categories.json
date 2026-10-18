@@ -1,0 +1,291 @@
+{
+ "mba": {
+  "category": "MBA",
+  "look": "Boardroom",
+  "playlist": "MBA | Quest Academy",
+  "tags": [
+   "MBA",
+   "Quest Academy",
+   "explained simply",
+   "animated explainer"
+  ],
+  "outro": {
+   "bg": "#14213D",
+   "ink": "#FFFFFF",
+   "accent": "#B8862F",
+   "sub": "rgba(233,217,181,.75)",
+   "font": "Fraunces"
+  }
+ },
+ "bba": {
+  "category": "BBA",
+  "look": "Campus startup",
+  "playlist": "BBA | Quest Academy",
+  "tags": [
+   "BBA",
+   "Quest Academy",
+   "explained simply",
+   "animated explainer"
+  ],
+  "outro": {
+   "bg": "#2A1B3D",
+   "ink": "#FFF7EE",
+   "accent": "#FF6B4A",
+   "sub": "rgba(255,247,238,.7)",
+   "font": "Plus Jakarta Sans"
+  }
+ },
+ "bcom": {
+  "category": "BCom",
+  "look": "Ledger book",
+  "playlist": "BCom | Quest Academy",
+  "tags": [
+   "BCom",
+   "Quest Academy",
+   "explained simply",
+   "animated explainer"
+  ],
+  "outro": {
+   "bg": "#1D2B3A",
+   "ink": "#FBF8F1",
+   "accent": "#7FB89A",
+   "sub": "rgba(251,248,241,.65)",
+   "font": "Source Serif 4"
+  }
+ },
+ "bca": {
+  "category": "BCA",
+  "look": "Code studio",
+  "playlist": "BCA | Quest Academy",
+  "tags": [
+   "BCA",
+   "Quest Academy",
+   "explained simply",
+   "animated explainer"
+  ],
+  "outro": {
+   "bg": "#0E1116",
+   "ink": "#E6EAF2",
+   "accent": "#B7F34A",
+   "sub": "rgba(230,234,242,.6)",
+   "font": "JetBrains Mono"
+  }
+ },
+ "bsc-physics": {
+  "category": "BSc Physics",
+  "look": "Motion lab",
+  "playlist": "BSc Physics | Quest Academy",
+  "tags": [
+   "BSc Physics",
+   "Quest Academy",
+   "explained simply",
+   "animated explainer"
+  ],
+  "outro": {
+   "bg": "#0B1220",
+   "ink": "#EAF0FF",
+   "accent": "#FF8A3D",
+   "sub": "rgba(234,240,255,.6)",
+   "font": "Space Grotesk"
+  }
+ },
+ "bsc-chem": {
+  "category": "BSc Chemistry",
+  "look": "Bench lab",
+  "playlist": "BSc Chemistry | Quest Academy",
+  "tags": [
+   "BSc Chemistry",
+   "Quest Academy",
+   "explained simply",
+   "animated explainer"
+  ],
+  "outro": {
+   "bg": "#10252B",
+   "ink": "#F7FAFB",
+   "accent": "#0FA3A3",
+   "sub": "rgba(247,250,251,.62)",
+   "font": "Manrope"
+  }
+ },
+ "bsc-maths": {
+  "category": "BSc Maths",
+  "look": "Ink notebook",
+  "playlist": "BSc Maths | Quest Academy",
+  "tags": [
+   "BSc Maths",
+   "Quest Academy",
+   "explained simply",
+   "animated explainer"
+  ],
+  "outro": {
+   "bg": "#1B1B2F",
+   "ink": "#FAFAF6",
+   "accent": "#6E8BFF",
+   "sub": "rgba(250,250,246,.62)",
+   "font": "Instrument Serif"
+  }
+ },
+ "bsc-bio": {
+  "category": "BSc Biology",
+  "look": "Living cell",
+  "playlist": "BSc Biology | Quest Academy",
+  "tags": [
+   "BSc Biology",
+   "Quest Academy",
+   "explained simply",
+   "animated explainer"
+  ],
+  "outro": {
+   "bg": "#173A2C",
+   "ink": "#EEF3EA",
+   "accent": "#4FA36A",
+   "sub": "rgba(238,243,234,.65)",
+   "font": "Lexend"
+  }
+ },
+ "bsc-cs": {
+  "category": "BSc Computer Science",
+  "look": "Bits and logic",
+  "playlist": "BSc Computer Science | Quest Academy",
+  "tags": [
+   "BSc Computer Science",
+   "Quest Academy",
+   "explained simply",
+   "animated explainer"
+  ],
+  "outro": {
+   "bg": "#111111",
+   "ink": "#FFFFFF",
+   "accent": "#FFD23F",
+   "sub": "rgba(255,255,255,.6)",
+   "font": "Inter"
+  }
+ },
+ "engg-cs": {
+  "category": "Engineering CS",
+  "look": "Under the hood",
+  "playlist": "Engineering CS | Quest Academy",
+  "tags": [
+   "Engineering CS",
+   "Quest Academy",
+   "explained simply",
+   "animated explainer"
+  ],
+  "outro": {
+   "bg": "#0A1022",
+   "ink": "#FFFFFF",
+   "accent": "#38D9F5",
+   "sub": "rgba(255,255,255,.6)",
+   "font": "IBM Plex Sans"
+  }
+ },
+ "engg-mech": {
+  "category": "Engineering Mechanical",
+  "look": "Workshop CAD",
+  "playlist": "Engineering Mechanical | Quest Academy",
+  "tags": [
+   "Engineering Mechanical",
+   "Quest Academy",
+   "explained simply",
+   "animated explainer"
+  ],
+  "outro": {
+   "bg": "#2E3742",
+   "ink": "#E9ECEF",
+   "accent": "#FF6A13",
+   "sub": "rgba(233,236,239,.62)",
+   "font": "Barlow Condensed"
+  }
+ },
+ "engg-electronics": {
+  "category": "Engineering Electronics",
+  "look": "Circuit board",
+  "playlist": "Engineering Electronics | Quest Academy",
+  "tags": [
+   "Engineering Electronics",
+   "Quest Academy",
+   "explained simply",
+   "animated explainer"
+  ],
+  "outro": {
+   "bg": "#0B2A20",
+   "ink": "#E9F2EC",
+   "accent": "#D9A35B",
+   "sub": "rgba(233,242,236,.62)",
+   "font": "Chakra Petch"
+  }
+ },
+ "engg-electrical": {
+  "category": "Engineering Electrical",
+  "look": "Power grid",
+  "playlist": "Engineering Electrical | Quest Academy",
+  "tags": [
+   "Engineering Electrical",
+   "Quest Academy",
+   "explained simply",
+   "animated explainer"
+  ],
+  "outro": {
+   "bg": "#121417",
+   "ink": "#FFFFFF",
+   "accent": "#FFC93C",
+   "sub": "rgba(255,255,255,.6)",
+   "font": "Archivo"
+  }
+ },
+ "engg-civil": {
+  "category": "Engineering Civil",
+  "look": "Blueprint to site",
+  "playlist": "Engineering Civil | Quest Academy",
+  "tags": [
+   "Engineering Civil",
+   "Quest Academy",
+   "explained simply",
+   "animated explainer"
+  ],
+  "outro": {
+   "bg": "#0F3B6E",
+   "ink": "#FFFFFF",
+   "accent": "#FFD400",
+   "sub": "rgba(255,255,255,.66)",
+   "font": "Archivo"
+  }
+ },
+ "engg-chemical": {
+  "category": "Engineering Chemical",
+  "look": "Process plant",
+  "playlist": "Engineering Chemical | Quest Academy",
+  "tags": [
+   "Engineering Chemical",
+   "Quest Academy",
+   "explained simply",
+   "animated explainer"
+  ],
+  "outro": {
+   "bg": "#2C3A47",
+   "ink": "#EEF2F5",
+   "accent": "#19B5C9",
+   "sub": "rgba(238,242,245,.62)",
+   "font": "Sora"
+  }
+ },
+ "case": {
+  "category": "Case Studies",
+  "look": "Case Study mode",
+  "playlist": "Case Studies | Quest Academy",
+  "tags": [
+   "case study",
+   "business case study",
+   "Quest Academy",
+   "MBA",
+   "startup story"
+  ],
+  "outro": {
+   "bg": "#1B1A17",
+   "ink": "#FFF8E8",
+   "accent": "#D62828",
+   "sub": "rgba(255,248,232,.62)",
+   "font": "Archivo"
+  }
+ }
+}

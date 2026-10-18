@@ -1,0 +1,121 @@
+<!doctype html><html><head><meta charset="utf-8"><title>BCA - What is a Variable</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<style>
+/* ===== BCA world: Code studio ===== */
+:root{--bg:#0E1116;--panel:#161A22;--panel2:#1C212B;--border:#252B36;--text:#E6EAF2;--muted:#7D8590;--lime:#B7F34A;--violet:#C4A7FF;--sky:#7CC7FF}
+#stage{background:var(--bg);font-family:Inter;color:var(--text)}
+#bgv{position:absolute;inset:0;background-image:radial-gradient(#1A1F28 1.5px,transparent 1.5px);background-size:32px 32px;background-position:16px 16px}
+#prog{position:absolute;left:0;top:0;height:6px;width:1920px;background:var(--border);z-index:60}
+#prog i{display:block;height:6px;background:var(--lime);width:0}
+#cam{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.mono{font-family:'JetBrains Mono'}
+.chip{position:absolute;display:inline-flex;align-items:center;gap:12px;height:44px;padding:0 18px;border-radius:10px;background:var(--panel);border:1px solid var(--border);color:var(--text);font:600 18px 'JetBrains Mono';letter-spacing:.08em;white-space:nowrap}
+.chip i{width:8px;height:8px;border-radius:4px;background:var(--lime)}
+#title{position:absolute;left:0;top:0;font:700 128px Inter;letter-spacing:-.04em;line-height:1.05;white-space:nowrap;transform-origin:0 0}
+#title .acc{color:var(--lime);font-family:'JetBrains Mono';font-weight:700;letter-spacing:-.04em}
+#sub{position:absolute;left:0;top:0;font:500 30px 'JetBrains Mono';color:var(--muted);white-space:nowrap}
+#sub b{color:var(--violet);font-weight:500}#sub em{color:var(--sky);font-style:normal}
+.win{position:absolute;background:var(--panel);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.bar{position:absolute;left:0;top:0;right:0;height:56px;background:#12161D;border-bottom:1px solid var(--border)}
+.dots{position:absolute;left:24px;top:22px;display:flex;gap:10px}
+.dots i{width:12px;height:12px;border-radius:6px;background:#2C323D}
+.tab{position:absolute;left:112px;top:12px;height:44px;padding:0 20px;border-radius:10px 10px 0 0;background:var(--panel);border:1px solid var(--border);border-bottom:none;display:flex;align-items:center;gap:10px;font:500 20px 'JetBrains Mono';color:var(--text)}
+.tab i{width:8px;height:8px;border-radius:4px;background:var(--lime)}
+#ed{left:160px;top:256px;width:1056px;height:600px}
+.ln{position:absolute;left:0;width:72px;text-align:right;font:400 26px 'JetBrains Mono';color:#454C59}
+.code{position:absolute;left:104px;font:400 30px 'JetBrains Mono';white-space:pre;color:var(--text)}
+.code .k{color:var(--violet)}.code .s{color:var(--sky)}.code .c{color:var(--muted)}.code .v{color:var(--text)}
+.curl{position:absolute;left:84px;height:52px;width:940px;border-radius:8px;background:#1C222C}
+.caret{position:absolute;width:3px;height:36px;background:var(--lime);border-radius:1px}
+/* variable box */
+#vbox{position:absolute;left:104px;top:344px;width:920px;height:208px}
+#vbox .lab{position:absolute;left:0;top:0;height:44px;padding:0 16px;border-radius:8px 8px 0 0;background:var(--lime);color:#0E1116;display:flex;align-items:center;gap:10px;font:700 22px 'JetBrains Mono';white-space:nowrap}
+#vbox .bx{position:absolute;left:0;top:44px;width:784px;height:164px}
+#vbox svg{position:absolute;left:0;top:0}
+#vbox .vk{position:absolute;left:32px;top:32px;font:600 18px Inter;letter-spacing:.14em;color:#8FA65F;white-space:nowrap}
+#vbox .vv{position:absolute;left:32px;top:72px;height:64px;display:flex;align-items:center;font:500 48px 'JetBrains Mono';color:var(--sky);white-space:nowrap}
+#vbox .vt{position:absolute;right:32px;top:32px;font:500 18px 'JetBrains Mono';color:#8FA65F;white-space:nowrap}
+/* phone */
+#ph{position:absolute;left:1408px;top:256px;width:352px;height:600px;border-radius:52px;background:#05070A;border:2px solid #2A303B;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+#phS{position:absolute;left:14px;top:14px;width:320px;height:568px;border-radius:40px;background:#F4F6FA;overflow:hidden;color:#0E1116}
+#notch{position:absolute;left:122px;top:12px;width:76px;height:22px;border-radius:11px;background:#05070A}
+#phT{position:absolute;left:28px;top:56px;font:600 16px Inter;color:#5C6573;white-space:nowrap}
+#ava{position:absolute;left:28px;top:112px;width:72px;height:72px;border-radius:36px;background:#0E1116;color:var(--lime);display:flex;align-items:center;justify-content:center;font:700 32px Inter}
+#hi{position:absolute;left:28px;top:212px;font:700 34px Inter;letter-spacing:-.02em;white-space:nowrap;line-height:1.15}
+#hiN{display:inline-block}
+#hiP{display:inline-block;width:110px;height:26px;border-radius:8px;background:#DCE1E9;vertical-align:-2px}
+#vvO{position:absolute;left:32px;top:72px;height:64px;display:flex;align-items:center;font:500 48px 'JetBrains Mono';color:var(--sky);white-space:nowrap}
+#hs{position:absolute;left:28px;top:262px;font:500 20px Inter;color:#5C6573;white-space:nowrap}
+.pc{position:absolute;left:28px;width:264px;height:84px;border-radius:18px;background:#FFFFFF;border:1px solid #E3E7EE}
+.pc b{position:absolute;left:20px;top:18px;width:48px;height:48px;border-radius:12px;background:#EEF1F6}
+.pc i{position:absolute;left:84px;top:24px;width:120px;height:12px;border-radius:6px;background:#DCE1E9}
+.pc u{position:absolute;left:84px;top:46px;width:80px;height:12px;border-radius:6px;background:#EBEEF3}
+#phL{position:absolute;left:1312px;top:892px;display:none;width:344px;text-align:center;font:500 18px 'JetBrains Mono';color:var(--muted);letter-spacing:.06em}
+#live{position:absolute;left:1700px;top:256px}
+/* dock */
+#dock{position:absolute;left:1456px;top:96px;width:304px;height:72px;border-radius:18px;background:var(--panel);border:1px solid var(--border);z-index:20}
+.di{position:absolute;top:12px;width:136px;height:48px;border-radius:12px;background:var(--panel2);display:flex;align-items:center;gap:10px;padding:0 14px;font:500 18px 'JetBrains Mono';color:var(--muted);white-space:nowrap}
+.di s{position:absolute;left:50%;bottom:-8px;width:16px;height:3px;margin-left:-8px;border-radius:2px;background:var(--lime);text-decoration:none}
+/* quiz window */
+#qw{left:160px;top:256px;width:1600px;height:600px}
+#qq{position:absolute;left:48px;top:96px;font:700 52px Inter;letter-spacing:-.03em;white-space:nowrap}
+#qcode{position:absolute;left:48px;top:184px;width:480px;height:112px;border-radius:12px;background:#0E1116;border:1px solid var(--border)}
+#qcode .code{left:32px;top:30px;font-size:40px}
+#qhl{position:absolute;left:20px;top:22px;width:144px;height:68px;border-radius:10px;border:3px solid var(--lime)}
+.opt{position:absolute;top:328px;width:480px;height:152px;border-radius:14px;background:var(--panel2);border:2px solid var(--border)}
+.opt .lt{position:absolute;left:32px;top:32px;width:44px;height:44px;border-radius:10px;background:var(--bg);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font:600 20px 'JetBrains Mono';color:var(--muted)}
+.opt .ot{position:absolute;left:32px;top:84px;font:500 40px 'JetBrains Mono';white-space:nowrap}
+.opt .ok{position:absolute;right:32px;top:32px;width:44px;height:44px;border-radius:22px;background:var(--lime);display:flex;align-items:center;justify-content:center}
+#ring{position:absolute;left:1404px;top:88px;width:140px;height:140px}
+#ringN{position:absolute;left:1404px;top:88px;width:140px;height:140px;display:flex;align-items:center;justify-content:center;font:700 56px 'JetBrains Mono'}
+#take{position:absolute;left:48px;top:512px;width:1504px;height:56px;border-radius:10px;background:#141A12;border:1px solid #3F5A1E;display:flex;align-items:center;gap:16px;padding:0 24px;font:500 26px 'JetBrains Mono';color:var(--text);white-space:nowrap}
+#take .pr{color:var(--lime)}#take b{color:var(--lime);font-weight:600}
+.cap{font:600 36px Inter;color:var(--text);background:rgba(22,26,34,.97);border:1px solid var(--border);padding:12px 30px;border-radius:14px;box-shadow:0 10px 30px -10px rgba(0,0,0,.6)}
+.cap .cw{color:#6B7380}.cap .cw.on{color:var(--text)}.cap .cw.act{color:var(--lime)}
+</style></head><body>
+<div id="stage">
+  <div id="bgv"></div>
+  <div id="cam">
+    <div class="chip" id="eyebrow"><i></i>BCA · PROGRAMMING</div>
+    <div id="title">What is a <span class="acc">variable</span>?</div>
+    <div id="sub"><b>let</b> name = <em>"you"</em></div>
+
+    <!-- scene B: editor + phone -->
+    <div class="win" id="ed"><div class="bar"><div class="dots"><i></i><i></i><i></i></div><div class="tab"><i></i>app.js</div></div>
+      <div class="curl" id="curl"></div><div id="sel" style="position:absolute;height:44px;border-radius:6px;background:#2A3A52"></div>
+      <div id="lns"></div>
+      <div class="code" id="L1" style="top:92px"></div>
+      <div class="code" id="L2" style="top:156px"></div>
+      <div class="code" id="L3" style="top:220px"></div>
+      <div class="caret" id="caret"></div>
+      <div id="vbox"><div class="lab" id="vlab"><span id="vlabI"></span><span id="vlabT">name</span></div><svg width="920" height="164" style="position:absolute;left:0;top:44px"><path id="bxF" d="M0 0 H908 A12 12 0 0 1 920 12 V152 A12 12 0 0 1 908 164 H12 A12 12 0 0 1 0 152 Z" fill="#141A12"/><path id="bxS" d="M0 0 H908 A12 12 0 0 1 920 12 V152 A12 12 0 0 1 908 164 H12 A12 12 0 0 1 0 152 Z" fill="none" stroke="#B7F34A" stroke-width="3"/></svg><div class="bx"><div class="vk">VALUE</div><div class="vt">string</div><div class="vv" id="vv"></div><div id="vvO"></div></div></div>
+    </div>
+    <div id="ph"><div id="phS"><div id="notch"></div>
+      <div id="phT">9:41</div><div id="ava">R</div>
+      <div id="hi">Hi, <span id="hiN"></span><span id="hiP"></span></div><div id="hs">Welcome back</div>
+      <div class="pc" style="top:328px"><b></b><i></i><u></u></div>
+      <div class="pc" style="top:428px"><b></b><i></i><u></u></div>
+    </div></div>
+    <div id="phL">LIVE PREVIEW</div>
+
+    <div id="dock"><div class="di" id="d0" style="left:12px"><span id="d0i"></span>app.js<s id="d0s"></s></div><div class="di" id="d1" style="left:156px"><span id="d1i"></span>quiz<s id="d1s"></s></div></div>
+
+    <!-- scene C: quiz window -->
+    <div class="win" id="qw"><div class="bar"><div class="dots"><i></i><i></i><i></i></div><div class="tab"><i></i>quick_check.js</div></div>
+      <div id="qq">Which one is the variable?</div>
+      <div id="qcode"><div id="qhl"></div><div class="code"><span class="v" id="qs">score</span> = <span class="s" id="q10">10</span></div></div>
+      <svg id="ring" viewBox="0 0 140 140"><circle cx="70" cy="70" r="62" fill="#0E1116" stroke="#252B36" stroke-width="8"/><circle id="ringA" cx="70" cy="70" r="62" fill="none" stroke="#B7F34A" stroke-width="8" stroke-linecap="round" transform="rotate(-90 70 70)"/></svg>
+      <div id="ringN"></div>
+      <div id="opts"></div>
+      <div id="take"><span class="pr">&gt;</span><span id="takeT"><b>score</b> is the box. 10 is the value inside it.</span></div>
+    </div>
+  </div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

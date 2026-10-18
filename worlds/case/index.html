@@ -1,0 +1,170 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Case Study - Amul</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<style>
+/* ===== Case Study mode: documentary collage ===== */
+:root{--paper:#EFE8DC;--paper2:#E6DDCD;--ink:#1B1A17;--ink2:#4A463F;--muted:#857D70;--red:#D62828;--red2:#F3C9C4;--yel:#F2B705;--cream:#FFFDF8;--night:#121110}
+#stage{background:var(--paper);font-family:Inter;color:var(--ink)}
+#paperTex{position:absolute;inset:0;z-index:0}
+#light{position:absolute;inset:0;z-index:1;background:radial-gradient(90% 80% at 50% 42%,rgba(255,255,255,.5),rgba(255,255,255,0) 62%),radial-gradient(130% 110% at 50% 50%,rgba(0,0,0,0) 60%,rgba(60,40,10,.14))}
+.scene{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:hidden;z-index:5}
+#world{position:absolute;left:0;top:0;width:1920px;height:4600px}
+.cond{font-family:Archivo;font-stretch:66%;font-weight:900;text-transform:uppercase;letter-spacing:.005em;line-height:.9}
+.condm{font-family:Archivo;font-stretch:75%;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+.torn{position:absolute;filter:drop-shadow(0 14px 22px rgba(40,25,5,.28))}
+.torn .pb{position:absolute;inset:0;background:var(--cream)}
+.torn .im{position:absolute;inset:14px;overflow:hidden;background:#cfc6b6}
+.torn .im img{width:100%;height:100%;object-fit:cover;display:block}
+.cutimg{position:absolute;filter:drop-shadow(0 16px 20px rgba(40,25,5,.3))}
+.big{position:absolute;white-space:nowrap;color:var(--ink)}
+.lbl{position:absolute;white-space:nowrap;color:var(--ink2);font-size:30px}
+.redtag{position:absolute;display:inline-flex;align-items:center;height:46px;padding:0 18px;background:var(--red);color:#fff;font:800 22px Archivo;font-stretch:75%;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;transform-origin:left center}
+.ytag{position:absolute;display:inline-flex;align-items:center;height:46px;padding:0 18px;background:var(--yel);color:var(--ink);font:800 22px Archivo;font-stretch:75%;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.icn{position:absolute;width:96px;height:96px;border-radius:48px;background:var(--cream);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 20px -8px rgba(40,25,5,.3)}
+.badge{position:absolute;border-radius:50%;background:#f3e3b0;border:10px solid var(--yel);overflow:hidden;box-shadow:0 18px 30px -10px rgba(0,0,0,.45)}
+.badge img{position:absolute;left:50%;bottom:0;transform:translateX(-50%);filter:grayscale(1) contrast(1.05)}
+.plate{position:absolute;background:var(--cream);padding:14px 22px;box-shadow:0 10px 20px -8px rgba(40,25,5,.3);white-space:nowrap}
+.plate b{display:block;font:800 30px Archivo;}
+#pTri b,#pKur b{font-size:24px}
+.plate b{font-stretch:75%;text-transform:uppercase;letter-spacing:.03em}
+.plate span{display:block;font:500 20px Inter;color:var(--muted);margin-top:4px}
+#chip{position:absolute;left:160px;top:72px;z-index:30;display:flex;align-items:center;gap:12px;height:44px;padding:0 18px;background:var(--ink);color:#fff;font:800 20px Archivo;font-stretch:75%;letter-spacing:.14em}
+#chip i{width:10px;height:10px;background:var(--red);border-radius:5px}
+#prog{position:absolute;left:0;top:0;height:6px;width:1920px;background:rgba(0,0,0,.08);z-index:60}
+#prog i{display:block;height:6px;background:var(--red);width:0}
+#rip{position:absolute;left:0;top:0;width:2400px;height:1080px;z-index:45}
+#grainT{position:absolute;inset:0;z-index:44;pointer-events:none}
+.cap{font:600 36px Inter;color:#fff;background:rgba(20,18,16,.9);padding:12px 28px;border-radius:12px}
+.cap .cw{color:#9C978E}.cap .cw.on{color:#fff}.cap .cw.act{color:#FFC93C}
+/* quiz */
+.opt{position:absolute;top:470px;width:512px;height:250px}
+.opt .bg{position:absolute;inset:0;background:var(--cream);box-shadow:0 14px 26px -12px rgba(40,25,5,.35)}
+.opt .lt{position:absolute;left:32px;top:30px;width:56px;height:56px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font:800 26px Archivo}
+.opt .ot{position:absolute;left:32px;top:150px;font-size:56px}
+.opt .ic2{position:absolute;right:32px;top:30px}
+.opt .ok{position:absolute;right:28px;top:28px;width:60px;height:60px;border-radius:30px;background:var(--red);display:flex;align-items:center;justify-content:center}
+</style></head><body>
+<div id="stage">
+  <canvas id="paperTex" width="960" height="540"></canvas>
+  <div id="light"></div>
+
+  <!-- ===== A: the journey ===== -->
+  <div class="scene" id="A">
+    <div id="world">
+      <svg id="path" width="1920" height="4600" style="position:absolute;left:0;top:0">
+        <defs><mask id="pm" maskUnits="userSpaceOnUse" x="0" y="0" width="1920" height="4600"><path id="pmask" fill="none" stroke="#fff" stroke-width="30" stroke-linecap="round"/></mask></defs>
+        <path id="pdash" fill="none" stroke="#D62828" stroke-width="9" stroke-dasharray="26 22" stroke-linecap="round" mask="url(#pm)"/>
+      </svg>
+      <div id="stops"></div>
+    </div>
+    <div id="logoCard" style="position:absolute;left:1020px;top:330px;width:740px;height:420px">
+      <div style="position:absolute;inset:0;background:var(--cream);box-shadow:0 20px 40px -14px rgba(40,25,5,.35)"></div>
+      <div style="position:absolute;inset:18px;border:3px dashed #D62828"></div>
+      <img id="logoImg" src="img/logo.jpg" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);height:240px">
+    </div>
+  </div>
+
+  <!-- ===== B: 1946 ===== -->
+  <div class="scene" id="B" style="background:#2a241c">
+    <div id="Bbg" style="position:absolute;left:-60px;top:-40px;width:2040px;height:1160px">
+      <img id="bombay" src="img/bombay.jpg" style="width:100%;height:100%;object-fit:cover;filter:sepia(.55) contrast(1.05) brightness(.62)">
+    </div>
+    <div style="position:absolute;inset:0;background:radial-gradient(110% 90% at 50% 50%,rgba(0,0,0,0) 40%,rgba(0,0,0,.55))"></div>
+    <div class="cond" id="y46" style="position:absolute;left:160px;top:130px;font-size:260px;color:rgba(255,248,232,.92)">1946</div>
+    <div class="condm" id="Bloc" style="position:absolute;left:168px;top:372px;font-size:30px;color:#F2B705">Kaira, Gujarat</div>
+    <svg id="Barr" width="1920" height="1080" style="position:absolute;left:0;top:0">
+      <path id="ba1" d="M705 630 C 860 550, 1060 550, 1215 630" fill="none" stroke="#fff" stroke-width="8" stroke-dasharray="22 18" stroke-linecap="round"/>
+      <path id="ba1h" d="M1188 604 L1218 632 L1180 644" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="condm" id="BmilkL" style="position:absolute;left:910px;top:514px;font-size:28px;color:#fff">Milk</div>
+    <div class="badge" id="bFarm" style="left:380px;top:500px;width:300px;height:300px"><img src="cut/canman.png" style="height:330px"></div>
+    <div class="plate" id="pFarm" style="left:400px;top:818px"><b>Kaira farmers</b><span>Thousands of small dairy farmers</span></div>
+    <div class="badge" id="bPol" style="left:1240px;top:500px;width:300px;height:300px;background:#26221c;display:flex;align-items:center;justify-content:center"><span id="bPolI"></span></div>
+    <div class="plate" id="pPol" style="left:1262px;top:818px"><b>Polson</b><span>The one big buyer</span></div>
+    <div class="ytag" id="tSets" style="left:1290px;top:450px">Sets the price</div>
+    <div class="redtag" id="tLow" style="left:420px;top:450px">Earned very little</div>
+  </div>
+
+  <!-- ===== C: the fight back ===== -->
+  <div class="scene" id="C">
+    <div class="badge" id="bSar" style="left:160px;top:250px;width:380px;height:380px"><img id="sarImg" src="img/patel_cut.png" style="height:400px"></div>
+    <div class="plate" id="pSar" style="left:186px;top:660px"><b>Sardar Vallabhbhai Patel</b><span>Freedom fighter, Gujarat</span></div>
+    <div id="quote" style="position:absolute;left:640px;top:270px;width:1120px;height:340px">
+      <div style="position:absolute;inset:0;background:var(--cream);box-shadow:0 20px 40px -14px rgba(40,25,5,.3)"></div>
+      <div style="position:absolute;left:44px;top:10px;font:900 160px/1 Georgia;color:#D62828">&ldquo;</div>
+      <div id="q1" class="cond" style="position:absolute;left:150px;top:64px;font-size:82px;white-space:nowrap">Don't sell to a middleman.</div>
+      <div id="q2" class="cond" style="position:absolute;left:150px;top:164px;font-size:82px;white-space:nowrap;color:#D62828">Start your own union.</div>
+      <div class="condm" style="position:absolute;left:152px;top:270px;font-size:22px;color:#857D70">His advice, in short</div>
+    </div>
+    <div class="torn" id="tTri" style="left:640px;top:280px;width:520px;height:600px"><div class="pb"></div><div class="im"><img src="cut/trinity_full.jpg" style="object-position:50% 20%"></div></div>
+    <div id="stamp" style="position:absolute;left:760px;top:250px;transform-origin:50% 50%">
+      <div class="cond" style="border:8px solid #D62828;color:#D62828;padding:18px 30px 12px;font-size:84px;background:rgba(255,253,248,.85);white-space:nowrap">14 Dec 1946</div>
+      <div class="condm" style="text-align:center;color:#D62828;font-size:24px;margin-top:10px">Union registered</div>
+    </div>
+    <div class="badge" id="bTri" style="left:1230px;top:430px;width:220px;height:220px;border-width:8px"><img src="cut/patel_t.png" style="height:240px"></div>
+    <div class="plate" id="pTri" style="left:1196px;top:672px"><b>Tribhuvandas Patel</b><span>Led the farmers</span></div>
+    <div class="badge" id="bKur" style="left:1540px;top:430px;width:220px;height:220px;border-width:8px"><img src="cut/kurien_bust.png" style="height:236px"></div>
+    <div class="plate" id="pKur" style="left:1506px;top:672px"><b>Verghese Kurien</b><span>Engineer, built the brand</span></div>
+  </div>
+
+  <!-- ===== D: the model ===== -->
+  <div class="scene" id="D">
+    <div class="cond" id="Dh" style="position:absolute;left:160px;top:180px;font-size:110px;white-space:nowrap">Farmers own <span style="color:#D62828">every level</span></div>
+    <div id="tiers"></div>
+    <svg id="brk" width="1920" height="1080" style="position:absolute;left:0;top:0"><path id="brkP" d="M1190 500 H1220 V870 H1190" fill="none" stroke="#D62828" stroke-width="6"/></svg>
+    <div id="own" style="position:absolute;left:1270px;top:600px">
+      <div class="cond" style="font-size:88px;color:#D62828">36 lakh</div>
+      <div class="condm" style="font-size:30px;margin-top:8px">farmer owners</div>
+    </div>
+    <div id="rupee" style="position:absolute;left:1260px;top:330px;width:580px;height:560px">
+      <svg width="580" height="560" style="position:absolute;left:0;top:0">
+        <circle cx="230" cy="250" r="200" fill="#FFFDF8" stroke="#E6DDCD" stroke-width="2"/>
+        <circle id="rArc" cx="230" cy="250" r="150" fill="none" stroke="#D62828" stroke-width="80" transform="rotate(-90 230 250)"/>
+        <circle id="rRest" cx="230" cy="250" r="150" fill="none" stroke="#E6DDCD" stroke-width="80" transform="rotate(-90 230 250)"/>
+      </svg>
+      <div class="cond" id="rN" style="position:absolute;left:0;width:460px;text-align:center;top:196px;font-size:110px">80p</div>
+      <div class="condm" style="position:absolute;left:0;width:460px;text-align:center;top:300px;font-size:22px;color:#857D70">of every ₹1</div>
+      <div class="redtag" id="rTag" style="left:250px;top:470px">Back to farmers</div>
+      <div id="rSrc" style="position:absolute;left:252px;top:528px;font:500 18px Inter;color:#857D70;white-space:nowrap">Amul's own figure (not independently audited)</div>
+    </div>
+  </div>
+
+  <!-- ===== E: today ===== -->
+  <div class="scene" id="E">
+    <svg id="map" width="1920" height="1080" style="position:absolute;left:0;top:0"></svg>
+    <div class="condm" id="Elab" style="position:absolute;left:160px;top:330px;font-size:30px;color:#D62828">Amul brand sales, FY 2025-26</div>
+    <div class="cond" id="En" style="position:absolute;left:156px;top:380px;font-size:200px;white-space:nowrap">₹0</div>
+    <div class="cond" id="Eu" style="position:absolute;left:160px;top:570px;font-size:110px;white-space:nowrap">Crore +</div>
+    <div id="Esrc" style="position:absolute;left:162px;top:700px;font:500 20px Inter;color:#857D70;white-space:nowrap">Source: YourStory, July 2026</div>
+  </div>
+
+  <!-- ===== F: punch ===== -->
+  <div class="scene" id="F" style="background:var(--night)">
+    <div class="cond" id="Fl1" style="position:absolute;left:0;width:1920px;text-align:center;top:380px;font-size:120px;color:#FFF8E8;white-space:nowrap">That is the power of</div>
+    <div class="cond" id="Fl2" style="position:absolute;left:0;width:1920px;text-align:center;top:500px;font-size:170px;color:#D62828;white-space:nowrap">a cooperative.</div>
+  </div>
+
+  <!-- ===== Q: quick check ===== -->
+  <div class="scene" id="Q">
+    <div class="cond" id="qq" style="position:absolute;left:160px;top:250px;font-size:120px;white-space:nowrap">Who owns Amul?</div>
+    <div class="ytag" id="qtag" style="left:160px;top:180px">Quick check</div>
+    <svg id="ring" viewBox="0 0 150 150" style="position:absolute;left:1610px;top:236px;width:150px;height:150px"><circle cx="75" cy="75" r="66" fill="#FFFDF8" stroke="#E6DDCD" stroke-width="8"/><circle id="ringA" cx="75" cy="75" r="66" fill="none" stroke="#D62828" stroke-width="8" transform="rotate(-90 75 75)"/></svg>
+    <div class="cond" id="ringN" style="position:absolute;left:1610px;top:236px;width:150px;height:150px;display:flex;align-items:center;justify-content:center;font-size:76px"></div>
+    <div id="opts"></div>
+    <div id="cred" style="position:absolute;left:160px;width:1600px;top:890px;font:500 14px/1.35 Inter;color:#857D70"></div>
+    <div id="take" style="position:absolute;left:160px;top:760px;width:1600px;height:100px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:22px;padding:0 36px">
+      <span id="takeI"></span><span class="condm" id="takeT" style="font-size:38px;white-space:nowrap">A cooperative is owned by the people who make the product</span>
+    </div>
+  </div>
+
+  <div id="chip"><i></i>CASE STUDY · AMUL</div>
+  <svg id="rip" width="2400" height="1080"><path id="ripP" fill="#1B1A17"/><path id="ripE" fill="none" stroke="#FFFDF8" stroke-width="10"/></svg>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="assets.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
