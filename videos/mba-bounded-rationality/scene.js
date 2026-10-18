@@ -62,7 +62,7 @@ $('#sNI').innerHTML = M.icon('award', 22, '#fff', 2.4);
 const MS = [['1947', 'THE BOOK', 'Administrative', 'Behavior'], ['1950s', 'THE NAME', 'Bounded', 'rationality'], ['1978', 'THE PRIZE', 'Nobel Prize', 'in Economics']];
 const MX = [176, 528, 880];
 $('#msRow').innerHTML = MS.map(([y, l, a, b], i) => `<div class="ms" id="ms${i}" style="left:${MX[i] - 160}px"><div class="serif yr">${y}</div><div class="ml">${l}</div><div class="m1">${a}</div><div class="m2">${b}</div></div>`).join('');
-$('#tlDots').innerHTML = MX.map((x, i) => `<g id="dot${i}" transform="translate(${x} 232)"><circle r="16" fill="#fff" stroke="#E2DACB" stroke-width="6"/></g>`).join('');
+$('#tlDots').innerHTML = MX.map((x, i) => `<circle id="dot${i}" cx="${x}" cy="232" r="16" fill="#fff" stroke="#E2DACB" stroke-width="6"/>`).join('');
 // three bounds
 $('#bbI').innerHTML = M.icon('bounds', 36, C.gold, 2.2);
 const BW = [['eyeOff', 'Information', 'Never complete', "Can't know every street"], ['timer', 'Time', 'Always limited', 'Good shops go in days'], ['brain', 'Brain power', 'Only so much', "Can't compare 4,000"]];
@@ -223,7 +223,7 @@ M.on(t => {
       litCard(el, t, tLit[i], i ? tSw + 1 : tLit[1], ic, { t0: tD2, tout: tSw });
     });
     // Herbert Simon + timeline
-    M.vis($('#simon'), t, tD3 + 0.05, tDout, { dx: -60, dy: 0, ...o });
+    M.vis($('#simon'), t, tD3 - 0.12, tDout, { dx: -60, dy: 0, ...o });
     M.vis($('#sAv'), t, tSimon - 0.1, 1e9, { dy: 0, sc: 0.4, sp: M.POP, fade: 0.08 });
     M.rise($('#sNm'), t, tSimon, { st: 0.07, sp: M.HEAVY });
     M.vis($('#sYr'), t, tSimon + 0.4, 1e9, { dy: 10 });
@@ -232,7 +232,7 @@ M.on(t => {
     M.rise($('#sBt'), t, tSimon + 0.7, { st: 0.05 });
     M.vis($('#sNob'), t, tNobel - 0.05, 1e9, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.08 });
     pulse($('#sNob'), t, tNobel + 0.3, 0.06);
-    M.vis($('#tl'), t, tD3 + 0.17, tDout, { dx: 60, dy: 0, ...o });
+    M.vis($('#tl'), t, tD3, tDout, { dx: 60, dy: 0, ...o });
     M.draw($('#tlBase'), t, tD3 + 0.5, 0.7, M.io);
     const u = tlU(t), tg = $('#tlGold'); M.hide(tg, u < 0.003); tg.setAttribute('x2', (176 + 704 * Math.min(1, u)).toFixed(2));
     MS.forEach((_, i) => {
@@ -242,7 +242,7 @@ M.on(t => {
       M.vis(el.querySelector('.ml'), t, tm + 0.05, 1e9, { dy: 10 });
       M.rise(el.querySelector('.m1'), t, tm + 0.12, { st: 0.05 });
       M.rise(el.querySelector('.m2'), t, tm + 0.22, { st: 0.05 });
-      const d = $('#dot' + i), c = d.querySelector('circle'), p = M.spring(t - tm, M.POP);
+      const d = $('#dot' + i), c = d, p = M.spring(t - tm, M.POP);
       M.vis(d, t, tD3 + 0.7 + i * 0.08, 1e9, { dy: 0, fade: 0.12 });
       c.setAttribute('fill', t >= tm ? C.gold : '#fff'); c.setAttribute('stroke', t >= tm ? C.gold : C.line);
       c.setAttribute('r', (16 + (t >= tm && p < 1 ? 6 * Math.sin(Math.PI * Math.min(1, (t - tm) / 0.45)) : 0)).toFixed(2));
@@ -264,6 +264,7 @@ M.on(t => {
   const kOn = t >= tK0 - 0.1 && t < tG0 + 0.2; M.hide($('#sK'), !kOn);
   if (kOn) {
     const o = { outDur: 0.3, ody: -16 };
+    M.rise($('#kq'), t, tK0 + 0.05, { st: 0.05, out: tK1 - 0.12, outDur: 0.3 });
     M.rise($('#kw'), t, tThey - 0.05, { st: 0.08, sp: M.HEAVY, out: tK1 - 0.12, outDur: 0.3 });
     KW.forEach(([ic], i) => {
       const el = $('#ke' + i), ta = tKw[i], td = i ? tK2 : tKw[1];

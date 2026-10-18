@@ -60,7 +60,7 @@ M.IC.network = ['M16 16h6v6h-6z', 'M2 16h6v6H2z', 'M9 2h6v6H9z', 'M5 16v-3a1 1 0
 DP.forEach(([id, ic, nic, pill, pic]) => {
   const p = $('#' + id);
   p.querySelector('.di').innerHTML = M.icon(ic, 44, C.gold, 2.2);
-  p.querySelector('svg').innerHTML = treeSvg();
+  p.querySelector('.tsv').innerHTML = treeSvg();
   p.querySelector('.tree').innerHTML = `<div class="tn hq" style="left:${HX - 36}px;top:${HY - 36}px">R</div>` + [0, 1, 2, 3, 4].map(k => `<div class="tn nd" style="left:${TX(k) - 32}px;top:${TY - 32}px"><span class="ico"></span></div>`).join('');
   p.querySelector('.dpill').innerHTML = `<span class="pi"></span><span>${pill}</span>`;
 });
