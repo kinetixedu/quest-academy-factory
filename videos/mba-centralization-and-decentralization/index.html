@@ -32,11 +32,11 @@
 .crow .ci{position:absolute;left:12px;top:10px;width:44px;height:44px;border-radius:22px;background:#fff;display:flex;align-items:center;justify-content:center}
 .crow .ct{position:absolute;left:72px;top:15px;font:600 25px Poppins;white-space:nowrap}
 .crow .cw2{position:absolute;right:12px;top:12px;height:40px;padding:0 16px;border-radius:20px;display:flex;align-items:center;font:600 18px Poppins;letter-spacing:.06em;white-space:nowrap;background:#F6E3DC;color:#B5482F}
-#aV{position:absolute;left:36px;top:70px;font-size:88px;line-height:1;width:250px;white-space:nowrap}
-#aBar{position:absolute;left:300px;top:104px;width:584px;height:24px;border-radius:12px;background:var(--paper2)}
+#aV{position:absolute;left:36px;top:74px;font-size:80px;line-height:1;width:250px;white-space:nowrap}
+#aBar{position:absolute;left:340px;top:104px;width:544px;height:24px;border-radius:12px;background:var(--paper2)}
 #aFill{position:absolute;left:0;top:0;height:24px;border-radius:12px;background:var(--gold)}
 #aL0,#aL1{position:absolute;top:66px;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
-#aL0{left:300px}#aL1{right:36px}
+#aL0{left:340px}#aL1{right:36px}
 #pDesk{left:36px;top:196px}
 #pLost{top:196px;background:#F6E3DC;color:#B5482F}
 /* statement on navy */
@@ -74,6 +74,11 @@
 .et2{position:absolute;top:408px;font:600 30px Poppins;white-space:nowrap}
 #elL,#etL{left:120px}#elR,#etR{right:120px;text-align:right}
 #fq{position:absolute;left:40px;top:468px;width:1520px;height:80px;border-radius:22px;background:var(--paper);display:flex;align-items:center;gap:20px;padding:0 28px;box-sizing:border-box}
+#ro{position:absolute;left:40px;top:468px;width:1520px;height:80px;border-radius:22px;background:var(--paper);display:flex;align-items:center}
+#ro .rh2{flex:1;display:flex;align-items:center;gap:16px;padding:0 28px}
+#ro .rl{font:600 18px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap;flex:1}
+#ro .rv{font-size:44px;line-height:1;white-space:nowrap}
+#ro .rsep{width:2px;height:44px;background:var(--line)}
 #fq .fqt{font-size:34px;white-space:nowrap;flex:1}
 #fq .lbl{position:static}
 .wc{position:absolute;top:476px;height:64px;padding:0 24px;border-radius:32px;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
@@ -94,7 +99,7 @@
 #who>.lbl{left:40px;top:40px}
 .wg{position:absolute;left:40px;font:600 18px Poppins;letter-spacing:.16em;white-space:nowrap;display:flex;align-items:center;gap:10px}
 .wr{position:absolute;left:40px;width:464px;height:72px;border-radius:20px;background:var(--paper2)}
-.wr .wi{position:absolute;left:12px;top:12px;width:48px;height:48px;border-radius:24px;background:#fff;display:flex;align-items:center;justify-content:center}
+.wr .wic{position:absolute;left:12px;top:12px;width:48px;height:48px;border-radius:24px;background:#fff;display:flex;align-items:center;justify-content:center}
 .wr .wt{position:absolute;left:80px;top:17px;font:600 28px Poppins;white-space:nowrap}
 /* scene P: pros and cons */
 .pc{position:absolute;top:270px;width:784px;height:580px}
@@ -202,6 +207,7 @@
         <div class="el" id="elR" style="color:#B8862F">DECENTRALIZED</div>
         <div class="et2" id="etL">The boss decides everything</div>
         <div class="et2" id="etR">Each unit decides for itself</div>
+        <div id="ro"><div class="rh2"><span id="roAi"></span><span class="rl">HEAD OFFICE DECIDES</span><span class="serif rv" id="roA">5</span></div><div class="rsep"></div><div class="rh2"><span id="roBi"></span><span class="rl">OUTLETS DECIDE</span><span class="serif rv" id="roB">0</span></div></div>
         <div id="fq"><span id="fqI"></span><span class="serif fqt" id="fqT">“A question of <span class="acc">proportion.</span>”</span><span class="lbl">HENRI FAYOL · 1916</span></div>
         <div id="wcs"></div>
       </div>

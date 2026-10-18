@@ -21,6 +21,7 @@ Object.assign(M.IC, {
   timer: ['M10 2h4', 'm12 14 3-3', 'M12 22a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z'],
   userX: ['M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2', 'M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z', 'm17 8 5 5', 'm22 8-5 5'],
   gauge: ['m12 14 4-4', 'M3.34 19a10 10 0 1 1 17.32 0'],
+  network: ['M16 16h6v6h-6z', 'M2 16h6v6H2z', 'M9 2h6v6H9z', 'M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3', 'M12 12V8'],
 });
 
 /* ---------- beats (all from the voice) ---------- */
@@ -56,15 +57,14 @@ const DP = [
   ['dp1', 'arrowD', 'user', 'One task, one person', 'check'],
   ['dp2', 'network', 'store', 'Each outlet decides', 'store'],
 ];
-M.IC.network = ['M16 16h6v6h-6z', 'M2 16h6v6H2z', 'M9 2h6v6H9z', 'M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3', 'M12 12V8'];
 DP.forEach(([id, ic, nic, pill, pic]) => {
   const p = $('#' + id);
   p.querySelector('.di').innerHTML = M.icon(ic, 44, C.gold, 2.2);
   p.querySelector('.tsv').innerHTML = treeSvg();
   p.querySelector('.tree').innerHTML = `<div class="tn hq" style="left:${HX - 36}px;top:${HY - 36}px">R</div>` + [0, 1, 2, 3, 4].map(k => `<div class="tn nd" style="left:${TX(k) - 32}px;top:${TY - 32}px"><span class="ico"></span></div>`).join('');
-  p.querySelector('.dpill').innerHTML = `<span class="pi"></span><span>${pill}</span>`;
+  p.querySelector('.dpill').innerHTML = `<span class="pi">${M.icon(pic, 24, C.gold, 2.4)}</span><span>${pill}</span>`;
 });
-$('#dpill2b').innerHTML = `<span class="pi"></span><span>Across the whole firm, by plan</span>`;
+$('#dpill2b').innerHTML = `<span class="pi">${M.icon('network', 24, C.gold2, 2.4)}</span><span>Across the whole firm, by plan</span>`;
 
 // scene K: slider hero
 const OX = k => 800 + (k - 2) * 290, OY = 168, HQX = k => 800 + (k - 2) * 40, HQY = 104;
@@ -73,11 +73,12 @@ $('#ons').innerHTML = [0, 1, 2, 3, 4].map(k => `<div class="on" id="on${k}" styl
 $('#slLinks').innerHTML = [0, 1, 2, 3, 4].map(k => `<line id="sk${k}" x1="${HQX(k)}" y1="${HQY}" x2="${OX(k)}" y2="${OY}" stroke="${C.link}" stroke-width="4" stroke-linecap="round"/>`).join('');
 $('#toks').innerHTML = [0, 1, 2, 3, 4].map(k => `<div class="tok" id="tk${k}"></div>`).join('');
 $('#zpL .zi').innerHTML = M.icon('x', 20, C.red, 2.6); $('#zpR .zi').innerHTML = M.icon('x', 20, C.red, 2.6);
+$('#roAi').innerHTML = M.icon('building', 30, C.ink, 2.2); $('#roBi').innerHTML = M.icon('store', 30, C.gold, 2.2);
 $('#fqI').innerHTML = M.icon('quote', 36, C.gold, 2);
 const TH_ORDER = [2, 0, 4, 1, 3], TH = [0.05, 0.25, 0.45, 0.65, 0.85];   // outlet TH_ORDER[i] takes its decisions once the slider passes TH[i]
-const WCL = [['Small firm', 'store'], ['Same rules everywhere', 'equal'], ['Crisis', 'alert']];
+const WCL = [['Small firm', 'store'], ['Uniform rules', 'equal'], ['Crisis', 'alert']];
 const WCR = [['Large firm', 'building'], ['Many places', 'pin'], ['Fast change', 'refresh']];
-$('#wcs').innerHTML = WCL.map(([tx], i) => `<div class="wc" id="wl${i}"><span class="ico"></span>${tx}</div>`).join('') + WCR.map(([tx], i) => `<div class="wc" id="wr${i}"><span class="ico"></span>${tx}</div>`).join('');
+$('#wcs').innerHTML = WCL.map(([tx, ic], i) => `<div class="wc" id="wcl${i}"><span class="ico">${M.icon(ic, 24, C.gold, 2.2)}</span>${tx}</div>`).join('') + WCR.map(([tx, ic], i) => `<div class="wc" id="wcr${i}"><span class="ico">${M.icon(ic, 24, C.gold, 2.2)}</span>${tx}</div>`).join('');
 
 // scene M: map hero
 const MHQ = [512, 340];
@@ -97,7 +98,7 @@ $('#mToks').innerHTML = MT.map(o => `<div class="mt${o.dir < 0 ? ' ink' : ''}" i
 $('#mpCi').innerHTML = M.icon('megaphone', 18, '#fff', 2.4);
 $('#wg0i').innerHTML = M.icon('building', 22, C.ink, 2.2); $('#wg1i').innerHTML = M.icon('store', 22, C.gold, 2.2);
 const WR = [['book', 'Menu', 132, C.ink, tMenu], ['tag', 'Prices', 216, C.ink, tPrice], ['users', 'Daily staffing', 356, C.gold, tStaff], ['megaphone', 'Local offers', 440, C.gold, tOffer]];
-$('#wRows').innerHTML = WR.map(([ic, tx, y, c], i) => `<div class="wr" id="wr${i}" style="top:${y}px"><div class="wi">${M.icon(ic, 24, c, 2.2)}</div><div class="wt">${tx}</div></div>`).join('');
+$('#wRows').innerHTML = WR.map(([ic, tx, y, c], i) => `<div class="wr" id="wr${i}" style="top:${y}px"><div class="wic">${M.icon(ic, 24, c, 2.2)}</div><div class="wt">${tx}</div></div>`).join('');
 
 // scene P: pros and cons
 const PC = [['Centralization', 'arrowU', 'At the top', [['+', 'lock', 'Tight control'], ['+', 'equal', 'One standard everywhere'], ['-', 'layers', 'The top gets overloaded'], ['-', 'clock', 'Decisions slow down']]],
@@ -118,11 +119,11 @@ $('#nextI').innerHTML = M.icon('arrowR', 40, C.gold2, 2.4);
 const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]]]);
 const caps = M.captions($('#cap'), M.CUES.order);
 const sweepX = t => { for (const [a, b] of SW) { const a1 = M.io((t - a) / 0.42), a2 = M.io((t - b) / 0.46); if (a1 > 0 && a2 < 1) return 1940 * (1 - a1) - 1960 * a2; } return null; };
-const raviX = M.track(0, [[tC1, 70], [tTime, 0]], M.SOFT);
+const raviX = M.track(0, [[tC1, 30], [tTime, 0]], M.SOFT);
 const sV = M.track(0.5, [[tLeft, 0], [tRight, 1], [tK3, 0.5], [tWL[0], 0.14], [tWR[0], 0.9]], [7, 0.9]);
 const setIco = (el, ic, col, s = 32, w = 2.2) => { const k = ic + col + s; if (el._k !== k) { el._k = k; el.innerHTML = M.icon(ic, s, col, w); } };
 const on01 = (t, a, b, d = 0.32) => M.io((t - a) / d) * (1 - M.io((t - b) / 0.4));
-const pos = (el, x, y) => { const s = `translate(${x.toFixed(1)}px,${y.toFixed(1)}px)`; if (el._p !== s) { el._p = s; el.style.transform = s; } };
+const pos = (el, x, y) => { const l = x.toFixed(1) + 'px', tp = y.toFixed(1) + 'px'; if (el.style.left !== l) el.style.left = l; if (el.style.top !== tp) el.style.top = tp; };
 let geo = null;
 function measure() {
   const ti = $('#title'); ti.style.fontSize = '120px';
@@ -132,8 +133,8 @@ function measure() {
   const ex = $('#exChip'); ex.style.left = (1760 - ex.offsetWidth) + 'px'; ex.style.top = '170px';
   $('#pLost').style.left = (36 + $('#pDesk').offsetWidth + 16) + 'px';
   M.$$('.dpill').forEach(p => { p.style.left = ((784 - p.offsetWidth) / 2) + 'px'; });
-  let x = 40; for (let i = 0; i < 3; i++) { const e = $('#wl' + i); e.style.left = x + 'px'; x += e.offsetWidth + 16; }
-  x = 1560; for (let i = 2; i >= 0; i--) { const e = $('#wr' + i); x -= e.offsetWidth; e.style.left = x + 'px'; x -= 16; }
+  let x = 40; for (let i = 0; i < 3; i++) { const e = $('#wcl' + i); e.style.left = x + 'px'; x += e.offsetWidth + 16; }
+  x = 1560; for (let i = 2; i >= 0; i--) { const e = $('#wcr' + i); x -= e.offsetWidth; e.style.left = x + 'px'; x -= 16; }
   const mm = $('#mpM'); mm.style.left = (984 - mm.offsetWidth) + 'px'; mm.style.top = '284px';
   const mc = $('#mpC'); mc.style.left = '48px'; mc.style.top = '336px';
   for (let i = 0; i < 3; i++) { let px = 216 + $('#rw' + i + ' .rt').offsetWidth + 32; for (let k = 0; k < 2; k++) { const p = $('#fp' + i + k); p.style.left = px + 'px'; px += p.offsetWidth + 16; } }
@@ -180,7 +181,9 @@ M.on(t => {
     M.setT($('#rN'), String(Math.round(24 * M.o5((t - tDec) / 1.4))));
     $('#rN').style.color = mix(C.ink, C.red, M.io((t - tGone) / 0.4));
     [tC1, tC2].forEach((c, i) => {
-      const el = $('#cr' + i); M.vis(el, t, c - 0.05, 1e9, { dy: 24, sp: M.SOFT });
+      const el = $('#cr' + i); M.vis(el, t, tMorph + 0.6 + i * 0.08, 1e9, { dy: 24, sp: M.SOFT });
+      M.vis(el.querySelector('.ci'), t, c - 0.05, 1e9, { dy: 0, sc: 0.4, sp: M.POP, fade: 0.08 });
+      M.rise(el.querySelector('.ct'), t, c + 0.02, { st: 0.05 });
       M.vis(el.querySelector('.cw2'), t, tCall[i] + 0.05, 1e9, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.08 });
     });
     // answer-time card
@@ -188,7 +191,7 @@ M.on(t => {
     const u = M.io((t - tC1 - 0.2) / (tTime - tC1 + 0.4)), mins = 5 + 175 * u;
     M.setT($('#aV'), mins < 60 ? `${Math.round(mins / 5) * 5} min` : `${Math.round(mins / 30) / 2} hrs`);
     const hot = M.io((mins - 60) / 60); $('#aV').style.color = mix(C.ink, C.red, hot);
-    $('#aFill').style.width = (584 * mins / 180).toFixed(1) + 'px'; $('#aFill').style.background = mix(C.gold, C.red, hot);
+    $('#aFill').style.width = (544 * mins / 180).toFixed(1) + 'px'; $('#aFill').style.background = mix(C.gold, C.red, hot);
     M.vis($('#pDesk'), t, tMorph + 0.9, 1e9, { dy: 16 });
     M.vis($('#pLost'), t, tGone - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
   }
@@ -263,9 +266,10 @@ M.on(t => {
       const i = TH_ORDER.indexOf(k), uk = M.io((s - TH[i]) / 0.07);
       const tk = $('#tk' + k); M.vis(tk, t, tSlider + 0.25 + k * 0.05, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 });
       pos(tk, M.lerp(HQX(k), OX(k), uk) - 17, M.lerp(HQY, OY, uk) - 17);
-      on.style.background = mix(C.paper2, C.gold2, uk);
-      setIco(on.querySelector('.ico'), 'store', uk > 0.5 ? C.gold : C.ink2, 24, 2.2);
-      $('#sk' + k).setAttribute('stroke', mix(C.link, C.gold, uk));
+      const vk = uk * M.clamp((t - tSlider - 0.25 - k * 0.05) / 0.2);
+      on.style.background = mix(C.paper2, C.gold2, vk);
+      setIco(on.querySelector('.ico'), 'store', vk > 0.5 ? C.gold : C.ink2, 24, 2.2);
+      $('#sk' + k).setAttribute('stroke', mix(C.link, C.gold, vk));
     }
     M.vis($('#trk'), t, tSlider - 0.1, 1e9, { dy: 0, fade: 0.2 });
     const kn = $('#knob'); M.vis(kn, t, tSlider + 0.05, 1e9, { dy: 0, sc: 0.4, sp: M.POP, fade: 0.08 });
@@ -277,12 +281,15 @@ M.on(t => {
     $('#zL').style.opacity = z.toFixed(3); $('#zR').style.opacity = z.toFixed(3);
     M.vis($('#zpL'), t, tEither - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
     M.vis($('#zpR'), t, tEither + 0.1, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
+    const nOut = TH.filter(th => s > th + 0.035).length;
+    M.vis($('#ro'), t, tSlider + 0.35, tFayol - 0.35, { dy: 24, outDur: 0.25, ody: -10 });
+    M.setT($('#roA'), String(5 - nOut)); M.setT($('#roB'), String(nOut));
     M.vis($('#fq'), t, tFayol - 0.05, tWL[0] - 0.35, { dy: 24, outDur: 0.25, ody: -10 });
     M.rise($('#fqT'), t, tFayol + 0.15, { st: 0.06, out: tWL[0] - 0.35, outDur: 0.2 });
     // when to lean which way
     const leftAct = on01(t, tWL[0], tWR[0] - 0.1), rightAct = M.io((t - tWR[0]) / 0.32);
-    WCL.forEach(([, ic], i) => { const e = $('#wl' + i); M.vis(e, t, tWL[i] - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 }); e.style.background = mix(C.paper, C.ink, leftAct); e.style.color = mix(C.ink, '#fff', leftAct); setIco(e.querySelector('.ico'), ic, leftAct > 0.5 ? C.gold2 : C.gold, 24, 2.2); });
-    WCR.forEach(([, ic], i) => { const e = $('#wr' + i); M.vis(e, t, tWR[i] - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 }); e.style.background = mix(C.paper, C.ink, rightAct); e.style.color = mix(C.ink, '#fff', rightAct); setIco(e.querySelector('.ico'), ic, rightAct > 0.5 ? C.gold2 : C.gold, 24, 2.2); });
+    WCL.forEach(([, ic], i) => { const e = $('#wcl' + i); M.vis(e, t, tWL[i] - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 }); e.style.background = mix(C.paper, C.ink, leftAct); e.style.color = mix(C.ink, '#fff', leftAct); setIco(e.querySelector('.ico'), ic, leftAct > 0.5 ? C.gold2 : C.gold, 24, 2.2); });
+    WCR.forEach(([, ic], i) => { const e = $('#wcr' + i); M.vis(e, t, tWR[i] - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 }); e.style.background = mix(C.paper, C.ink, rightAct); e.style.color = mix(C.ink, '#fff', rightAct); setIco(e.querySelector('.ico'), ic, rightAct > 0.5 ? C.gold2 : C.gold, 24, 2.2); });
   }
 
   /* ===== M: the map (hero 2) ===== */
@@ -325,7 +332,7 @@ M.on(t => {
     M.vis($('#wg0'), t, tM0 + 0.45, 1e9, { dy: 10 }); M.vis($('#wg1'), t, tM0 + 0.55, 1e9, { dy: 10 });
     WR.forEach(([, , , , tw], i) => {
       const r = $('#wr' + i); M.vis(r, t, tM0 + 0.5 + i * 0.07, 1e9, { dy: 16 });
-      M.vis(r.querySelector('.wi'), t, tw, 1e9, { dy: 0, sc: 0.4, sp: M.POP, fade: 0.08 });
+      M.vis(r.querySelector('.wic'), t, tw, 1e9, { dy: 0, sc: 0.4, sp: M.POP, fade: 0.08 });
       M.rise(r.querySelector('.wt'), t, tw + 0.08, { st: 0.05 });
       const lift = M.spring(t - tw, M.POP) - M.spring(t - tw - 0.4, M.SOFT);
       if (t > tw - 0.05 && t < tw + 2) r.style.transform = Math.abs(lift) > 0.001 ? `scale(${(1 + 0.03 * lift).toFixed(4)})` : 'none';

@@ -19,6 +19,7 @@ Object.assign(M.IC, {
   bounds: ['M5 3a2 2 0 0 0-2 2', 'M19 3a2 2 0 0 1 2 2', 'M21 19a2 2 0 0 1-2 2', 'M5 21a2 2 0 0 1-2-2', 'M9 3h1', 'M9 21h1', 'M14 3h1', 'M14 21h1', 'M3 9v1', 'M21 9v1', 'M3 14v1', 'M21 14v1'],
   map: ['M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z', 'M15 5.764v15', 'M9 3.236v15'],
   pen: ['M12 20h9', 'M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z'],
+  rupee: ['M6 3h12', 'M6 8h12', 'm6 13 8.5 8', 'M6 13h3', 'M9 13c6.667 0 6.667-10 0-10'],
   thumbUp: ['M7 10v12', 'M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z'],
 });
 
@@ -86,7 +87,7 @@ $('#mapSvg').innerHTML = `<defs><clipPath id="mClip"><rect x="${MX0}" y="${MY0}"
   PIN.map(([x, y], i) => `<g id="pin${i}" transform="translate(${x.toFixed(2)} ${y.toFixed(2)})"><g class="pb"><ellipse cx="0" cy="0" rx="12" ry="5" fill="#14213D" opacity=".18"/><path d="M0 0 C-6 -12 -22 -22 -22 -38 A22 22 0 1 1 22 -38 C22 -22 6 -12 0 0 Z" fill="#14213D"/><text class="pn" x="0" y="-30.5" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="22" fill="#fff">${i + 1}</text><g class="pk" transform="translate(-11 -49)"></g></g></g>`).join('') + `</g>`;
 $('#mCI').innerHTML = M.icon('map', 22, C.gold, 2.2); $('#mNI').innerHTML = M.icon('search', 24, C.gold, 2.4);
 // must haves
-const MUST = [['users', 'Lots of people walking by'], ['coin', 'Rent under ₹50,000'], ['store', 'No chai stall nearby']];
+const MUST = [['users', 'Lots of people walking by'], ['rupee', 'Rent under ₹50,000'], ['store', 'No chai stall nearby']];
 const CX3 = [552, 628, 704];
 $('#chs').innerHTML = CX3.map((x, k) => `<div class="ch" id="ch${k}" style="left:${x - 24}px">${k + 1}</div>`).join('');
 $('#mRows').innerHTML = MUST.map(([ic, tx], i) => `<div class="mr" id="mr${i}" style="top:${100 + i * 124}px"><i>${M.icon(ic, 28, C.gold, 2.2)}</i><div class="mt">${tx}</div>${CX3.map((x, k) => `<div class="cl" id="cl${i}${k}" style="left:${x - 32 - 24}px"></div>`).join('')}</div>`).join('');
@@ -270,7 +271,7 @@ M.on(t => {
       const el = $('#ke' + i), ta = tKw[i], td = i ? tK2 : tKw[1];
       M.vis(el, t, tK1 + 0.1 + i * 0.1, tKout, { dy: 36, ...o });
       litEE(el, t, ta, td, ic);
-      const kv = el.querySelector('.kv'); M.rise(kv, t, ta + 0.5, { st: 0.04 });
+      const kv = el.querySelector('.kv'); M.rise(kv, t, tK1 + 0.5 + i * 0.1, { st: 0.04 });
       const on = M.io((t - ta) / 0.32), off = M.io((t - td) / 0.4), act = on * (1 - off);
       el.querySelector('.kd').style.color = mix(C.dim, '#5E6A85', act);
       el.querySelector('.kv .acc').style.color = mix(C.gold, '#E9B95C', act);
