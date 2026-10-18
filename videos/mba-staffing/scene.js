@@ -84,7 +84,7 @@ const PANES = [
   ['STEP 03 / 08', 'Selection', 'Choosing the best people', [['cup', 'A test'], ['chat', 'An interview']],
     tile('b3a', 32, 240, M.icon('cup', 30, C.gold, 2.2), 'Test', 'Make one cup') + tile('b3b', 296, 240, M.icon('chat', 30, C.gold, 2.2), 'Interview', 'Talk with Ravi') + note('b3n', 'check', 'Pick the best')],
   ['STEP 04 / 08', 'Placement and orientation', 'The right job, and a proper welcome', [['pin', 'Right job'], ['smile', 'Day 1 welcome']],
-    [['flame', 'Stove'], ['coin', 'Cash box']].map(([ic, s], k) => `<div class="mt" id="b4${k}" style="left:32px;top:${70 + k * 90}px;width:504px;height:74px"><div class="abs" style="left:24px;top:9px">${avU}</div>${arrow(108, 21)}<div class="abs" style="left:168px;top:9px;width:56px;height:56px;border-radius:28px;background:var(--paper);display:flex;align-items:center;justify-content:center">${M.icon(ic, 28, C.gold, 2.2)}</div><div class="mtl" style="left:244px;top:22px">${k ? 'New cashier' : 'New tea maker'} · ${s}</div></div>`).join('') + note('b4n', 'smile', 'Ravi shows them around')],
+    [['flame', 'Stove'], ['coin', 'Cash box']].map(([ic, s], k) => `<div class="mt" id="b4${k}" style="left:32px;top:${70 + k * 90}px;width:504px;height:74px"><div class="abs" style="left:24px;top:9px">${avU}</div>${arrow(108, 21)}<div class="abs" style="left:168px;top:9px;width:56px;height:56px;border-radius:28px;background:var(--paper);display:flex;align-items:center;justify-content:center">${M.icon(ic, 28, C.gold, 2.2)}</div><div class="mtl" style="left:244px;top:22px">${k ? 'Cashier' : 'Tea maker'} · ${s}</div></div>`).join('') + note('b4n', 'smile', 'Ravi shows them around')],
   ['STEP 05 / 08', 'Training and development', 'Building skills that grow over time', [['cap', 'Skills'], ['trendUp', 'Growth']],
     `<div class="mt" id="b5a" style="left:32px;top:70px;width:504px;height:164px"><div class="abs" style="left:56px;top:28px">${avc('A', C.gold)}</div><div class="mtl" style="left:0;width:168px;text-align:center;top:100px">Asha</div><div class="abs" id="b5r" style="left:168px;top:34px;width:168px;height:44px;border-radius:22px;background:var(--paper);display:flex;align-items:center;justify-content:center;gap:8px;font:600 22px Poppins">${M.icon('book', 22, C.gold, 2.2)}Recipe</div><div class="abs" style="left:392px;top:28px">${avU}</div><div class="mtl" style="left:336px;width:168px;text-align:center;top:100px">New hire</div></div>` + note('b5n', 'cup', 'Every cup tastes the same')],
   ['STEP 06 / 08', 'Performance appraisal', 'A regular review of how well each person works', [['clipboard', 'Regular review'], ['star', 'How well?']],
@@ -92,7 +92,7 @@ const PANES = [
   ['STEP 07 / 08', 'Promotion and transfer', 'Moving people up, or across', [['arrowU', 'Move up'], ['arrowR', 'Move across']],
     tile('b7a', 32, 240, M.icon('arrowU', 30, C.gold, 2.4), 'Promotion', 'A bigger job') + tile('b7b', 296, 240, M.icon('arrowR', 30, C.gold, 2.4), 'Transfer', 'A busier outlet') + note('b7n', 'star', 'A star grows with Chai Corner')],
   ['STEP 08 / 08', 'Compensation', 'Fair pay and rewards', [['coin', 'Fair pay'], ['trophy', 'Rewards']],
-    tile('b8a', 32, 240, M.icon('coin', 30, C.gold, 2.2), 'Fair pay', 'On time, every month') + tile('b8b', 296, 240, M.icon('trophy', 30, C.gold, 2.2), 'Rewards', 'For great work') + note('b8n', 'smile', 'So good people stay')],
+    tile('b8a', 32, 240, M.icon('coin', 30, C.gold, 2.2), 'Fair pay', 'Paid on time') + tile('b8b', 296, 240, M.icon('trophy', 30, C.gold, 2.2), 'Rewards', 'For great work') + note('b8n', 'smile', 'So good people stay')],
 ];
 $('#sps').innerHTML = PANES.map(([s, t, m, kw, bx], i) => `<div class="sp" id="sp${i}"><div class="ps">${s}</div><div class="serif pt">${t}</div><div class="pm">${m}</div><div class="hr"></div>${kw.map(([ic, k], j) => `<div class="kw" id="kw${i}${j}">${M.icon(ic, 24, C.gold, 2.2)}${k}</div>`).join('')}<div class="bx"><div class="lbl">AT CHAI CORNER</div>${bx}</div></div>`).join('');
 // internal vs external
@@ -286,11 +286,11 @@ M.on(t => {
       if (k === 1) { [wt('P1', 'manager'), wt('P1', 'tea'), wt('P1', 'cashier')].forEach((tt, j) => { pop('#b1' + j, tin + 0.6 + j * 0.12); const e = $('#b1' + j), g = M.io((t - tt + 0.05) / 0.25); e.style.boxShadow = g > 0.001 ? `inset 0 0 0 3px ${M.rgba(C.gold, g)}` : ''; const q = e.querySelector('.qm'); q.style.borderColor = mix('#CFC5B3', C.gold, g); q.style.color = mix(C.muted, C.gold, g); }); nt('#b1n', wt('P1', 'cashier') + 0.35); }
       if (k === 2) { pop('#b2a', tin + 0.4); for (let j = 0; j < 8; j++) M.vis($('#b2p' + j), t, wt('P2', 'getting') + j * 0.09, tout, { dy: 10, sc: 0.7, sp: M.POP, fade: 0.1, ...oo }); nt('#b2n', wt('P2', 'apply')); }
       if (k === 3) { pop('#b3a', tin + 0.5); pop('#b3b', tin + 0.62); hl('#b3a', wt('P3', 'test')); hl('#b3b', wt('P3', 'interview')); nt('#b3n', wt('P3', 'interview') + 0.4); }
-      if (k === 4) { pop('#b40', wt('P4', 'Each')); pop('#b41', wt('P4', 'person') + 0.2); nt('#b4n', wt('P4', 'welcome')); }
-      if (k === 5) { pop('#b5a', wt('P5', 'Asha') - 0.1); M.vis($('#b5r'), t, wt('P5', 'recipe') - 0.05, tout, { dx: -20, dy: 0, ...oo }); nt('#b5n', wt('P5', 'same') - 0.2); }
+      if (k === 4) { pop('#b40', tin + 0.5); pop('#b41', tin + 0.62); hl('#b40', wt('P4', 'right')); hl('#b41', wt('P4', 'job')); nt('#b4n', wt('P4', 'welcome')); }
+      if (k === 5) { pop('#b5a', tin + 0.5); hl('#b5a', wt('P5', 'Asha')); M.vis($('#b5r'), t, wt('P5', 'recipe') - 0.05, tout, { dx: -20, dy: 0, ...oo }); nt('#b5n', wt('P5', 'same') - 0.2); }
       if (k === 6) {
         ['regular', 'how', 'well'].forEach((w, j) => {
-          const tt = wt('P6', w) - 0.05; pop('#b6' + j, tt);
+          const tt = wt('P6', w) - 0.05; pop('#b6' + j, tin + 0.5 + j * 0.12);
           $('#b6' + j + ' .sf').style.width = (354 * [0.78, 0.94, 0.66][j] * M.o3((t - tt - 0.15) / 0.7)).toFixed(1) + 'px';
         });
         nt('#b6n', wt('P6', 'works'));

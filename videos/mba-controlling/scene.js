@@ -60,7 +60,7 @@ $('#defI').innerHTML = M.icon('gauge', 36, C.gold, 2.2);
 const QW = [['clipboard', 'Plan', 'What should happen', '500 cups a day'], ['chart', 'Actual', 'What really happened', 'Count the cups'], ['wrench', 'Fix', 'Close the gap', 'Change what is wrong']];
 $('#qRow').innerHTML = QW.map(([ic, q, s, a], i) => `<div class="qw" id="qw${i}" style="left:${160 + i * 544}px"><div class="bg"></div><div class="qi"></div><div class="qn">0${i + 1}</div><div class="serif qt">${q}</div><div class="qs">${s}</div><div class="hr"></div><div class="qx">AT OUTLET 2</div><div class="qa">${a}</div></div>`).join('');
 // gauge (svg 624 x 580): dial 0..600 cups, target 500
-const GX = 312, GY = 368, GR = 196, GMAX = 600;
+const GX = 312, GY = 352, GR = 200, GMAX = 600;
 const gp = (v, r = GR) => { const a = Math.PI + Math.PI * v / GMAX; return [GX + r * Math.cos(a), GY + r * Math.sin(a)]; };
 const garc = (v0, v1, r = GR) => { const [x0, y0] = gp(v0, r), [x1, y1] = gp(v1, r); return `M${x0.toFixed(2)} ${y0.toFixed(2)} A${r} ${r} 0 0 1 ${x1.toFixed(2)} ${y1.toFixed(2)}`; };
 let ticks = ''; for (let v = 100; v < 600; v += 100) { if (v === 500) continue; const [a, b] = gp(v, GR - 30), [c, d] = gp(v, GR - 44); ticks += `<line x1="${a.toFixed(1)}" y1="${b.toFixed(1)}" x2="${c.toFixed(1)}" y2="${d.toFixed(1)}" stroke="#D9CFBC" stroke-width="4" stroke-linecap="round"/>`; }
@@ -242,7 +242,7 @@ M.on(t => {
     gap.style.opacity = (1 - M.io((t - tClimb) / 0.4)).toFixed(3);
     const gv = $('#gVal'); M.setT(gv, t < tCounts + 0.1 ? '?' : String(Math.round(v)));
     gv.style.color = t < tCounts + 0.1 ? C.dim : mix(mix(C.ink, C.red, on01(t, tShort, tClimb, 0.35)), C.gold, fixed);
-    M.vis($('#gVal'), t, tF0 + 0.7, 1e9, { dy: 14 }); M.vis($('#gUnit'), t, tF0 + 0.8, 1e9, { dy: 10 });
+    M.vis($('#gVal'), t, tF0 + 0.7, 1e9, { dy: 14 });
     // status pill under the dial
     const st = t < tStd ? ['help', 'Not measured yet', 0] : t < tCounts + 0.1 ? ['target', 'Target set: 500', 0] : t < tShort ? ['chart', 'Measured: 400', 0] : t < tTwenty ? ['minus', '100 short', 1] : t < tClimb + 0.3 ? ['trendDown', '20% fewer cups', 1] : ['check', 'On target', 2];
     const gpl = $('#gPill'); M.vis(gpl, t, tF0 + 0.9, 1e9, { dy: 12 });
