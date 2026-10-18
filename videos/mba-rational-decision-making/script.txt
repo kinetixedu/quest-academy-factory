@@ -1,0 +1,34 @@
+H1|0.3|All five Chai Corner outlets need fresh milk every morning.
+H2|0.55|Three dairies want the deal. Ravi must pick just one.
+C1|0.3|Kabir says, take the cheapest.
+C2|0.3|Asha says, take the best milk. Meena says, take the closest.
+C3|0.65|Everyone has a reason, and nobody agrees.
+T1|0.7|No guessing. No loudest voice. Just pure logic.
+D1|0.3|So, what is rational decision making?
+D2|0.6|Rational decision making means using pure logic to choose the option that gives the most value.
+D3|0.35|It pictures a perfect decision maker. Fully logical. With complete information. Who knows every option, and where each one leads.
+D4|0.65|And it always picks the very best, not just a good one. This is called optimising.
+F0|0.45|The rational model follows six steps.
+F1|0.35|One. Define the problem. Chai Corner needs one milk supplier for all five outlets.
+F2|0.35|Two. Identify the decision criteria, the things that matter. Price, quality, reliability, and distance.
+F3|0.35|Three. Weight the criteria. Quality matters most, so it gets four points. Reliability gets three, price two, and distance one.
+F4|0.35|Four. Generate alternatives. Green Farm, City Dairy, and Hill Farm.
+F5|0.35|Five. Rate each alternative on each criterion, from one to ten.
+F6|0.35|Green Farm is the cheapest. Hill Farm has the best milk. City Dairy is never late, and it is close by.
+F7|0.35|Six. Compute and choose. Multiply each rating by its weight, then add them up.
+F8|0.35|Green Farm scores sixty. Hill Farm, sixty seven. And City Dairy, seventy six.
+F9|0.65|City Dairy wins. Not the cheapest, not the best milk, but the most value overall.
+U0|0.35|But the rational model makes four big assumptions.
+U1|0.3|One. The problem is clear.
+U2|0.3|Two. Every option, and its result, is known.
+U3|0.3|Three. Preferences are clear, and they don't change.
+U4|0.35|And four. There are no limits on time or money.
+U5|0.35|In real life, these are rarely true.
+U6|0.65|What if there is a fourth dairy Ravi never heard of? Or milk prices jump next month?
+Q1|1.9|Quick check. Ravi has listed what matters: price, quality, reliability, and distance. What is the next step?
+A1|0.6|Weight the criteria! Decide how much each one matters, before you rate any option.
+S1|0.3|So, remember.
+S2|0.35|Rational decision making uses pure logic to pick the option with the most value.
+S3|0.35|It has six steps: define, set criteria, weight them, list options, rate them, and compute.
+S4|0.6|But it assumes full information and no limits, and that is rarely true.
+N1|0.2|Next time, we'll see how real managers decide when they cannot know everything.

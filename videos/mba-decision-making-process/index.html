@@ -1,0 +1,243 @@
+<!doctype html><html><head><meta charset="utf-8"><title>MBA - Decision-Making Process (Ep 21)</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<style>
+/* ===== MBA world: Boardroom ===== */
+:root{--paper:#F5F1E8;--paper2:#EEE8DB;--ink:#14213D;--ink2:#3A4560;--muted:#8A8274;--line:#E2DACB;--gold:#B8862F;--gold2:#E9D9B5;--card:#FFFFFF;--red:#B5482F}
+#stage{background:var(--paper);font-family:Poppins;color:var(--ink)}
+#bgv{position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 40%,rgba(255,255,255,.55),rgba(255,255,255,0) 60%),radial-gradient(140% 120% at 50% 50%,rgba(0,0,0,0) 62%,rgba(90,70,40,.08))}
+#prog{position:absolute;left:0;top:0;height:6px;width:1920px;background:var(--line);z-index:60}
+#prog i{display:block;height:6px;background:var(--gold);width:0}
+#cam{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.serif{font-family:Poppins;font-weight:700;letter-spacing:-.025em}
+.chip{position:absolute;display:inline-flex;align-items:center;gap:14px;height:44px;padding:0 20px;border-radius:22px;background:var(--ink);color:#F5E7C6;font:600 18px Poppins;letter-spacing:.16em;white-space:nowrap}
+.chip i{width:8px;height:8px;border-radius:4px;background:var(--gold)}
+.chip.ghost{background:transparent;color:var(--muted);border:2px solid var(--line);height:40px;font-size:16px}
+#title{position:absolute;left:0;top:0;line-height:1.05;white-space:nowrap;transform-origin:0 0;color:var(--ink)}
+#title .acc,.acc{color:var(--gold)}
+#sub{position:absolute;left:0;top:640px;width:1920px;text-align:center;font:500 32px Poppins;color:var(--muted)}
+#rule{position:absolute;left:840px;top:612px}
+.card{position:absolute;background:var(--card);border-radius:28px;box-shadow:0 1px 0 rgba(20,33,61,.04),0 18px 40px -12px rgba(20,33,61,.14)}
+.lbl{position:absolute;font:600 18px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.abs{position:absolute}
+.pill{position:absolute;height:48px;padding:0 20px;border-radius:24px;display:flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+/* scene A: five outlets, one problem */
+#hero{left:160px;top:270px;width:616px;height:580px;overflow:hidden}
+#hname{position:absolute;left:0;width:616px;top:452px;text-align:center;font-size:44px}
+#htag{position:absolute;left:0;width:616px;text-align:center;top:516px;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+#sales{left:840px;top:270px;width:920px;height:274px}
+#ideas{left:840px;top:576px;width:920px;height:274px}
+.sb5{position:absolute;top:0;width:144px;height:274px}
+.sb5 .tr{position:absolute;left:24px;top:84px;width:96px;height:112px;border-radius:14px;background:var(--paper)}
+.sb5 .fl{position:absolute;left:24px;width:96px;border-radius:14px;background:var(--gold)}
+.sb5 .nm{position:absolute;left:0;width:144px;top:212px;text-align:center;font:600 22px Poppins;color:var(--muted);white-space:nowrap}
+#sDrop{position:absolute;right:36px;top:22px;background:#F6E3DC;color:#B5482F}
+#iWhich{position:absolute;right:36px;top:22px;background:#F6E3DC;color:#B5482F}
+.job{position:absolute;top:84px;width:266px;height:154px;border-radius:22px;background:var(--paper);overflow:hidden}
+.job .ji{position:absolute;left:24px;top:22px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
+.job .jt{position:absolute;left:24px;top:96px;font:600 28px Poppins;white-space:nowrap}
+.job .av{position:absolute;right:20px;top:22px;width:48px;height:48px;border-radius:24px;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font:700 22px Poppins}
+/* statement on navy */
+#stmt{position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:41}
+#st1{position:absolute;left:0;width:1920px;top:400px;text-align:center;font:500 52px Poppins;color:#E9D9B5;white-space:nowrap}
+#st2{position:absolute;left:0;width:1920px;top:492px;text-align:center;font-size:112px;color:#fff;white-space:nowrap}
+/* scene D: what is decision making */
+#dq{position:absolute;left:0;width:1920px;top:470px;text-align:center;font-size:96px;white-space:nowrap}
+#defbar{left:160px;top:270px;width:1600px;height:84px;border-radius:24px;display:flex;align-items:center;gap:20px;padding:0 32px}
+#defbar .tx{font:600 32px Poppins;white-space:nowrap}
+.avc{position:absolute;width:64px;height:64px;border-radius:32px;display:flex;align-items:center;justify-content:center;font:700 28px Poppins;color:#fff;background:var(--ink)}
+.way{position:absolute;top:386px;width:784px;height:464px;border-radius:28px}
+.way .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line);box-shadow:0 18px 40px -12px rgba(20,33,61,.14)}
+.way svg{position:absolute;left:0;top:0}
+.way .lbl{left:40px;top:40px}
+.way .hr{position:absolute;left:40px;right:40px;top:300px;height:2px;background:var(--line)}
+.way .wt{position:absolute;left:40px;top:326px;font-size:48px;white-space:nowrap}
+.way .ws{position:absolute;left:42px;top:396px;font:500 28px Poppins;color:var(--ink2);white-space:nowrap}
+.way .wk{position:absolute;right:40px;top:30px;width:52px;height:52px;border-radius:26px;display:flex;align-items:center;justify-content:center}
+.uc{position:absolute;top:386px;width:512px;height:464px}
+.uc .lbl{left:40px;top:40px}
+.uc .ui{position:absolute;left:40px;top:96px;width:112px;height:112px;border-radius:56px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.uc .hr{position:absolute;left:40px;right:40px;top:248px;height:2px;background:var(--line)}
+.uc .ut{position:absolute;left:40px;top:278px;font-size:48px;white-space:nowrap}
+.uc .us{position:absolute;left:42px;top:350px;font:500 28px Poppins;color:var(--ink2);white-space:nowrap}
+/* scene F: the decision path */
+#path{left:160px;top:270px;width:1600px;height:300px}
+#pSvg{position:absolute;left:0;top:0}
+.nd{position:absolute;width:72px;height:72px;border-radius:36px;display:flex;align-items:center;justify-content:center}
+.nd .bg{position:absolute;inset:0;border-radius:36px;background:var(--paper2)}
+.nd .ni{position:relative}
+.opl{position:absolute;width:280px;height:52px;border-radius:26px}
+.opl .bg{position:absolute;inset:0;border-radius:26px;background:var(--paper2)}
+.opl .oi{position:absolute;left:8px;top:8px;width:36px;height:36px;border-radius:18px;background:#fff;display:flex;align-items:center;justify-content:center}
+.opl .on{position:absolute;left:60px;top:9px;font:600 22px Poppins;white-space:nowrap}
+.opl .oc{position:absolute;right:8px;top:8px;width:36px;height:36px;border-radius:18px;background:var(--gold);display:flex;align-items:center;justify-content:center}
+.sl{position:absolute;top:244px;font:600 17px Poppins;letter-spacing:.16em;white-space:nowrap;color:#B9B1A3}
+#fp{left:160px;top:602px;width:1600px;height:248px}
+.pn{position:absolute;inset:0}
+.pn .ps{position:absolute;left:48px;top:40px;font:600 20px Poppins;letter-spacing:.16em;color:var(--gold);white-space:nowrap}
+.pn .pt{position:absolute;left:48px;top:72px;font-size:56px;line-height:1.1;white-space:nowrap}
+.pn .pm{position:absolute;left:48px;top:150px;font:500 30px Poppins;color:var(--ink2);white-space:nowrap}
+.pn .vr{position:absolute;left:720px;top:40px;width:2px;height:168px;background:var(--line)}
+.pn .px{position:absolute;left:768px;top:40px;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.pv{position:absolute;left:768px;top:76px;width:784px;height:136px}
+.ot5{position:absolute;top:0;width:144px;height:136px;border-radius:22px}
+.ot5 .bg{position:absolute;inset:0;border-radius:22px;background:var(--paper)}
+.ot5 i{position:absolute;left:20px;top:20px;width:48px;height:48px;border-radius:24px;background:#fff;display:flex;align-items:center;justify-content:center}
+.ot5 .tv{position:absolute;left:20px;top:84px;font:600 22px Poppins;white-space:nowrap}
+.ot5 .td{position:absolute;right:18px;top:30px;font:700 22px Poppins;white-space:nowrap;color:var(--red)}
+.tl3{position:absolute;top:0;width:248px;height:136px;border-radius:22px}
+.tl3 .bg{position:absolute;inset:0;border-radius:22px;background:var(--paper)}
+.tl3 i{position:absolute;left:24px;top:20px;width:52px;height:52px;border-radius:26px;background:#fff;display:flex;align-items:center;justify-content:center}
+.tl3 .av{position:absolute;left:24px;top:20px;width:52px;height:52px;border-radius:26px;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font:700 24px Poppins}
+.tl3 .tk{position:absolute;left:92px;top:36px;font:600 15px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+.tl3 .tv{position:absolute;left:24px;top:84px;font:600 26px Poppins;white-space:nowrap}
+.tl3 .tn{position:absolute;left:24px;top:18px;font:600 26px Poppins;white-space:nowrap}
+.tl3 .rl{position:absolute;left:24px;font:600 15px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+.tl3 .rb{position:absolute;left:96px;width:128px;height:14px;border-radius:7px;background:#E4DCCD}
+.tl3 .rf{position:absolute;left:0;top:0;height:14px;border-radius:7px;width:0}
+.tl3 .ck{position:absolute;right:20px;top:20px;width:40px;height:40px;border-radius:20px;background:var(--gold);display:flex;align-items:center;justify-content:center}
+.ob{position:absolute;left:0;top:0;width:784px;height:136px;border-radius:22px;background:var(--paper)}
+.ob i{position:absolute;left:28px;top:28px;width:80px;height:80px;border-radius:40px;background:#fff;display:flex;align-items:center;justify-content:center}
+.ob .ol{position:absolute;left:136px;top:32px;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.ob .ot2{position:absolute;left:136px;top:64px;font:600 32px Poppins;white-space:nowrap}
+.pe{position:absolute;left:768px;top:96px;width:784px;display:flex;align-items:center;gap:24px}
+.pe i{flex:0 0 72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.pe span{font:600 32px/1.25 Poppins;white-space:nowrap}
+/* scene R: one month later */
+#rv{left:160px;top:270px;width:784px;height:580px}
+#rv .lbl{left:40px;top:40px}
+.ro{position:absolute;left:40px;width:704px;height:76px;border-radius:18px;background:var(--paper)}
+.ro i{position:absolute;left:14px;top:14px;width:48px;height:48px;border-radius:24px;background:#fff;display:flex;align-items:center;justify-content:center}
+.ro .rn2{position:absolute;left:80px;top:20px;font:600 26px Poppins;white-space:nowrap}
+.ro .bt{position:absolute;left:240px;top:31px;width:340px;height:14px;border-radius:7px;background:#E4DCCD}
+.ro .bf{position:absolute;left:0;top:0;height:14px;border-radius:7px}
+.ro .rk{position:absolute;right:14px;top:14px;width:48px;height:48px;border-radius:24px;display:flex;align-items:center;justify-content:center}
+#loop{left:976px;top:270px;width:784px;height:580px}
+#loop .lbl{left:40px;top:40px}
+#lSvg{position:absolute;left:0;top:0}
+.ln{position:absolute;width:68px;height:68px;border-radius:34px;display:flex;align-items:center;justify-content:center}
+.ln .bg{position:absolute;inset:0;border-radius:34px;background:var(--paper2)}
+.ln .ni{position:relative}
+#lc1{position:absolute;left:0;width:784px;top:268px;text-align:center;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+#lc2{position:absolute;left:0;width:784px;top:300px;text-align:center;font-size:40px;white-space:nowrap}
+#sweep{position:absolute;left:0;top:0;width:1920px;height:1080px;background:var(--ink);z-index:40}
+#sweep b{position:absolute;left:0;top:0;width:10px;height:1080px;background:var(--gold)}
+/* quiz */
+.opt{position:absolute;top:470px;width:376px;height:230px;border-radius:28px}
+.opt .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line)}
+.opt .lt{position:absolute;left:32px;top:30px;width:52px;height:52px;border-radius:26px;background:var(--paper);display:flex;align-items:center;justify-content:center;font:700 22px Poppins;color:var(--ink)}
+.opt .ot{position:absolute;left:32px;top:136px;font-size:44px;white-space:nowrap}
+.opt .ok{position:absolute;right:30px;top:30px;width:52px;height:52px;border-radius:26px;background:var(--gold);display:flex;align-items:center;justify-content:center}
+.qq{position:absolute;left:160px;font-size:68px;line-height:1.18;white-space:nowrap}
+#ring{position:absolute;left:1610px;top:236px;width:150px;height:150px}
+#ringN{position:absolute;left:0;top:0;width:150px;height:150px;display:flex;align-items:center;justify-content:center;font-size:64px}
+#take{position:absolute;left:160px;top:748px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:22px;padding:0 36px}
+#take .tx{font-size:40px;white-space:nowrap}
+/* recap */
+#rh{position:absolute;left:160px;top:142px;font-size:64px;white-space:nowrap}
+.rw{position:absolute;left:160px;width:1600px;height:128px}
+.rw .rn{position:absolute;left:40px;top:42px;font:700 30px Poppins;color:var(--gold);letter-spacing:.04em}
+.rw .ri{position:absolute;left:112px;top:28px;width:72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.rw .rt{position:absolute;left:216px;top:36px;font:600 38px Poppins;white-space:nowrap}
+.fp{position:absolute;top:36px;height:56px;padding:0 22px;border-radius:28px;display:flex;align-items:center;font:600 24px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+#next{position:absolute;left:160px;top:762px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:24px;padding:0 32px}
+#next .nc{height:44px;padding:0 18px;border-radius:22px;background:var(--gold);display:flex;align-items:center;font:700 18px Poppins;letter-spacing:.14em;color:#fff;white-space:nowrap}
+#next .nt{font:600 34px Poppins;white-space:nowrap;flex:1}
+.cap{font:600 38px Poppins;color:var(--ink);background:rgba(255,255,255,.96);padding:12px 30px;border-radius:40px;box-shadow:0 10px 30px -10px rgba(20,33,61,.25)}
+.cap .cw{color:#5B647A}.cap .cw.on{color:var(--ink)}.cap .cw.act{color:var(--gold)}
+</style></head><body>
+<div id="stage">
+  <div id="bgv"></div>
+  <div id="cam">
+    <!-- title + header (shared elements) -->
+    <div class="chip" id="eyebrow"><i></i>EP 21 · PRINCIPLES OF MANAGEMENT</div>
+    <div class="serif" id="title"><span class="acc">Decision-Making</span> Process</div>
+    <div id="sub">Explained with one chai stall</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#B8862F" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="chip ghost" id="exChip">EXAMPLE FIGURES</div>
+
+    <!-- scene A: five outlets, one problem -->
+    <div id="sA">
+      <div class="card" id="hero">
+        <svg id="awn" width="616" height="90" style="position:absolute;left:0;top:0"><g id="awnG"></g></svg>
+        <div id="sign" style="position:absolute;left:0;width:616px;top:104px;text-align:center;font:600 18px Poppins;letter-spacing:.2em;color:var(--gold)">CHAI CORNER · 5 OUTLETS</div>
+        <svg id="stall" width="616" height="320" style="position:absolute;left:0;top:130px">
+          <g id="steam" fill="none" stroke="#C9BFAE" stroke-width="5" stroke-linecap="round">
+            <path id="s1" d="M128 116 c-12 -14 12 -24 0 -40"/><path id="s2" d="M152 110 c-12 -14 12 -24 0 -44"/><path id="s3" d="M176 116 c-12 -14 12 -24 0 -40"/>
+          </g>
+          <g id="ravi"><circle cx="308" cy="98" r="44" fill="#14213D"/><path d="M220 210 c0 -48 40 -74 88 -74 s88 26 88 74 z" fill="#14213D"/><path d="M286 140 l22 26 l22 -26" fill="none" stroke="#B8862F" stroke-width="6" stroke-linejoin="round"/></g>
+          <rect x="60" y="196" width="496" height="92" rx="16" fill="#EEE8DB"/>
+          <rect x="60" y="196" width="496" height="10" rx="5" fill="#B8862F"/>
+          <g id="kettle" transform="translate(152 196)"><path d="M-40 0 v-54 a22 22 0 0 1 22 -22 h36 a22 22 0 0 1 22 22 v54 z" fill="#3A4560"/><path d="M40 -46 q26 0 26 -26" fill="none" stroke="#3A4560" stroke-width="8" stroke-linecap="round"/><rect x="-14" y="-88" width="28" height="12" rx="6" fill="#3A4560"/></g>
+          <g id="cups"></g>
+        </svg>
+        <div class="serif" id="hname">Ravi</div>
+        <div id="htag">OWNER · HEAD OFFICE</div>
+      </div>
+      <div class="card" id="sales">
+        <div class="lbl" style="left:36px;top:34px">EVENING SALES · WINTER</div>
+        <div class="pill" id="sDrop"><span id="sDI"></span><span>Down at all five</span></div>
+        <div id="sBars"></div>
+      </div>
+      <div class="card" id="ideas">
+        <div class="lbl" style="left:36px;top:34px">THREE IDEAS</div>
+        <div class="pill" id="iWhich"><span id="iWI"></span><span>Which one?</span></div>
+        <div id="jobRow"></div>
+      </div>
+    </div>
+
+    <!-- scene D: what is decision making -->
+    <div id="sD">
+      <div class="serif" id="dq">What is <span class="acc">decision making?</span></div>
+      <div class="card" id="defbar"><span id="defI"></span><span class="tx">Decision making = choosing the <span class="acc">best option</span> from alternatives</span></div>
+      <div id="wRow"></div>
+      <div id="uRow"></div>
+    </div>
+
+    <!-- scene F: the decision path -->
+    <div id="sF">
+      <div class="card" id="path">
+        <svg id="pSvg" width="1600" height="280"><g id="pBase" fill="none" stroke="#E2DACB" stroke-width="4" stroke-linecap="round"></g><g id="pGold" fill="none" stroke="#B8862F" stroke-width="6" stroke-linecap="round"></g></svg>
+        <div id="pNodes"></div>
+      </div>
+      <div class="card" id="fp"><div id="fPans"></div></div>
+    </div>
+
+    <!-- scene R: one month later -->
+    <div id="sR">
+      <div class="card" id="rv"><div class="lbl">EVENING SALES · ONE MONTH LATER</div><div id="roRows"></div></div>
+      <div class="card" id="loop"><div class="lbl">THE DECISION LOOP</div>
+        <svg id="lSvg" width="784" height="580"><circle id="lRing" cx="392" cy="326" r="190" fill="none" stroke="#E2DACB" stroke-width="4"/><path id="lArc" fill="none" stroke="#B8862F" stroke-width="6" stroke-linecap="round"/><path id="lBack" fill="none" stroke="#14213D" stroke-width="6" stroke-linecap="round"/></svg>
+        <div id="lNodes"></div>
+        <div id="lc1">ROUND 1</div><div class="serif" id="lc2">Winter evenings</div>
+      </div>
+    </div>
+
+    <!-- quick check -->
+    <div id="quiz">
+      <div class="chip" id="qchip" style="left:160px;top:120px"><i></i>QUICK CHECK</div>
+      <div class="serif qq" id="qq1" style="top:224px">Hot snacks are now on every menu.</div><div class="serif qq acc" id="qq2" style="top:304px">What is the next step?</div>
+      <svg id="ring" viewBox="0 0 150 150"><circle cx="75" cy="75" r="66" fill="#fff" stroke="#E2DACB" stroke-width="8"/><circle id="ringA" cx="75" cy="75" r="66" fill="none" stroke="#B8862F" stroke-width="8" stroke-linecap="round" transform="rotate(-90 75 75)"/></svg>
+      <div class="serif" id="ringN" style="left:1610px;top:236px;position:absolute"></div>
+      <div id="opts"></div>
+      <div id="take"><span id="takeI"></span><span class="serif tx" id="takeT">Act, then check if it worked = Follow up</span></div>
+    </div>
+
+    <!-- recap -->
+    <div id="recap">
+      <div class="chip" id="rchip" style="left:160px;top:84px"><i></i>RECAP</div>
+      <div class="serif" id="rh">Remember these <span class="acc">three things</span></div>
+      <div id="rRows"></div>
+      <div id="next"><span class="nc">NEXT · EP 22</span><span class="nt">Programmed and Non-Programmed Decisions</span><span id="nextI"></span></div>
+    </div>
+  </div>
+  <div id="stmt"><div id="st1">Picking by guesswork is risky.</div><div class="serif" id="st2">He needs <span style="color:#E9B95C">a process.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
