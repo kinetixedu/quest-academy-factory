@@ -21,103 +21,110 @@
 .abs{position:absolute}
 .pill{position:absolute;height:48px;padding:0 20px;border-radius:24px;display:flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
 .pill.bad{background:#F6E3DC;color:#B5482F}
-.avc{position:absolute;width:64px;height:64px;border-radius:32px;display:flex;align-items:center;justify-content:center;font:700 28px Poppins;color:#fff;background:var(--ink)}
-.qm{position:absolute;border-radius:50%;border:3px dashed #CFC5B3;background:#fff;display:flex;align-items:center;justify-content:center;font:700 22px Poppins;color:var(--muted)}
-/* scene A: the stall + outlet 2 */
+/* scene A: the stall */
 #hero{left:160px;top:270px;width:616px;height:580px;overflow:hidden}
 #hname{position:absolute;left:0;width:616px;top:452px;text-align:center;font-size:44px}
 #htag{position:absolute;left:0;width:616px;text-align:center;top:516px;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
-#ready{left:840px;top:270px;width:920px;height:274px}
-#roles{left:840px;top:576px;width:920px;height:274px}
-.job{position:absolute;top:84px;width:266px;height:154px;border-radius:22px;background:var(--paper);overflow:hidden}
-.job .ji{position:absolute;left:24px;top:22px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
-.job .jt{position:absolute;left:24px;top:96px;font:600 28px Poppins;white-space:nowrap}
-.job .av{position:absolute;right:20px;top:22px;width:48px;height:48px;border-radius:24px;background:var(--gold);display:flex;align-items:center;justify-content:center}
-.job .qm{right:20px;top:22px;width:48px;height:48px}
-.job .ring{position:absolute;inset:0;border-radius:22px;border:3px solid var(--gold)}
-#hireAv{position:absolute;left:36px;top:80px;width:88px;height:88px;border-radius:44px;background:var(--paper);display:flex;align-items:center;justify-content:center}
-#hireT{position:absolute;left:152px;top:100px;font-size:40px;white-space:nowrap}
-#jobsN{right:36px;top:22px}
+#sweep{position:absolute;left:0;top:0;width:1920px;height:1080px;background:var(--ink);z-index:40}
+/* scene A: six ways */
+#ways{left:840px;top:270px;width:920px;height:274px}
+#ask{left:840px;top:576px;width:920px;height:274px}
+.cupt{position:absolute;top:76px;width:128px;height:150px;border-radius:18px;background:var(--paper)}
+.cupt .cn{position:absolute;left:0;width:128px;top:16px;text-align:center;font:600 16px Poppins;letter-spacing:.14em;white-space:nowrap;color:var(--muted)}
+.cupt .ci{position:absolute;left:44px;top:48px;width:40px;height:40px}
+.cupt .ct{position:absolute;left:0;width:128px;top:98px;text-align:center;font:600 28px Poppins;white-space:nowrap}
+#askT{position:absolute;left:36px;top:150px;font-size:64px;white-space:nowrap}
+/* scene D: Taylor + the book */
+#dq{position:absolute;left:0;width:1920px;top:470px;text-align:center;font-size:88px;white-space:nowrap}
+#tay{left:160px;top:270px;width:616px;height:580px;overflow:hidden}
+#tname{position:absolute;left:0;width:616px;top:352px;text-align:center;font-size:52px;white-space:nowrap}
+#ttag{position:absolute;left:0;width:616px;top:428px;text-align:center;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+#father{position:absolute;top:484px;height:56px;padding:0 24px;border-radius:28px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:12px;font:600 24px Poppins;white-space:nowrap}
+#book{left:840px;top:270px;width:920px;height:274px}
+#idea{left:840px;top:576px;width:920px;height:274px}
+.bk{position:absolute;left:236px;font-size:44px;white-space:nowrap}
+.stp{position:absolute;top:18px;height:64px;padding:0 28px;border-radius:32px;display:flex;align-items:center;gap:12px;font:600 28px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+/* scene B: the shovel test */
+#shv{left:160px;top:270px;width:784px;height:580px}
+#ton{left:976px;top:270px;width:784px;height:580px}
+#best{position:absolute;top:92px;height:56px;padding:0 24px;border-radius:28px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+.mat{position:absolute;width:336px;text-align:center;top:432px;font:600 18px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.ld{position:absolute;top:472px;height:52px;padding:0 22px;border-radius:26px;display:flex;align-items:center;font:600 26px Poppins;white-space:nowrap}
+.rc .lbl{left:48px;top:48px}
+.rc .big{position:absolute;right:48px;top:30px;font-size:64px;color:var(--gold);white-space:nowrap}
+.bar{position:absolute;left:48px;width:688px;height:120px}
+.bar .bl{position:absolute;left:0;top:0;font:600 22px Poppins;color:var(--muted);white-space:nowrap}
+.bar .bt{position:absolute;left:0;top:40px;height:64px;border-radius:16px;background:#E7E0D2}
+.bar .bv{position:absolute;top:44px;font-size:44px;white-space:nowrap}
+#tonHr{position:absolute;left:48px;right:48px;top:462px;height:2px;background:var(--line)}
+#tonSrc{left:48px;top:494px;font-size:17px}
+/* scene M: time and motion study */
+#watch{left:160px;top:270px;width:616px;height:580px}
+#swv{position:absolute;left:168px;top:84px}
+#rd{position:absolute;left:0;width:616px;top:396px;text-align:center;font-size:84px;line-height:1;white-space:nowrap}
+#saved{position:absolute;top:498px;height:52px;padding:0 22px;border-radius:26px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#steps{left:840px;top:270px;width:920px;height:580px}
+.sr{position:absolute;left:24px;width:872px;height:80px;border-radius:20px}
+.sr .bg{position:absolute;inset:0;border-radius:20px;background:var(--paper)}
+.sr .rn{position:absolute;left:24px;top:26px;font:700 22px Poppins;letter-spacing:.04em}
+.sr .ri{position:absolute;left:76px;top:12px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
+.sr .rt{position:absolute;left:156px;top:20px;font:600 30px Poppins;white-space:nowrap}
+.sr .st{position:absolute;right:28px;top:20px;font:600 30px Poppins;white-space:nowrap;text-align:right}
+.sr .sx{position:absolute;left:150px;top:39px;height:3px;border-radius:2px;background:#B5482F}
+/* scene P: four principles */
+#pl{left:160px;top:270px;width:624px;height:580px}
+.pr{position:absolute;left:24px;width:576px;height:100px;border-radius:20px}
+.pr .bg{position:absolute;inset:0;border-radius:20px;background:var(--paper)}
+.pr .rn{position:absolute;left:24px;top:36px;font:700 22px Poppins;letter-spacing:.04em}
+.pr .ri{position:absolute;left:76px;top:22px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
+.pr .rt{position:absolute;left:156px;top:30px;font:600 30px Poppins;white-space:nowrap}
+#pp{left:816px;top:270px;width:944px;height:580px}
+.pn{position:absolute;inset:0}
+.pn .ps{position:absolute;left:48px;top:48px;font:600 20px Poppins;letter-spacing:.16em;color:var(--gold);white-space:nowrap}
+.pn .pt{position:absolute;left:48px;top:88px;font-size:84px;line-height:1.1;white-space:nowrap}
+.pn .pm{position:absolute;left:48px;top:204px;font:500 36px Poppins;color:var(--ink2);white-space:nowrap}
+.pn .hr{position:absolute;left:48px;right:48px;top:290px;height:2px;background:var(--line)}
+.pn .px{position:absolute;left:48px;top:326px;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.pn .pe{position:absolute;left:48px;top:372px;width:848px;display:flex;align-items:center;gap:24px}
+.pn .pe i{flex:0 0 72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.pn .pe span{font:600 32px/1.25 Poppins;white-space:nowrap}
+.pv{position:absolute;left:48px;top:372px;width:848px;height:176px}
+.av{position:absolute;width:72px;height:72px;border-radius:36px;display:flex;align-items:center;justify-content:center;font:700 30px Poppins;color:#fff;background:var(--ink)}
+.av.face{color:transparent;background-size:cover!important;background-position:center!important;box-shadow:0 0 0 4px var(--ink)}
+.avn{position:absolute;width:160px;text-align:center;font:600 24px Poppins;white-space:nowrap}
+.stair{position:absolute;width:150px;border-radius:16px 16px 0 0;background:var(--paper)}
+.stair span{position:absolute;left:0;width:150px;bottom:14px;text-align:center;font:600 24px Poppins;white-space:nowrap}
+/* scene K: more tools (2 x 2) */
+.tc{position:absolute;width:784px;height:270px}
+.tc .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line);box-shadow:0 18px 40px -12px rgba(20,33,61,.14)}
+.tc .ti{position:absolute;left:36px;top:36px;width:72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.tc .tt{position:absolute;left:132px;top:30px;font-size:44px;white-space:nowrap}
+.tc .ts{position:absolute;left:132px;top:88px;font:500 26px Poppins;white-space:nowrap}
+.tc .th{position:absolute;left:36px;right:36px;top:146px;height:2px}
+.tc .tx2{position:absolute;left:36px;top:170px;font:600 17px Poppins;letter-spacing:.16em;white-space:nowrap}
+.tc .te{position:absolute;left:36px;top:204px;font:600 28px Poppins;white-space:nowrap}
+.fm{position:absolute;top:198px;width:44px;height:44px;border-radius:22px;display:flex;align-items:center;justify-content:center;font:700 18px Poppins;color:#fff}
+/* scene X: the criticism */
+.ee{position:absolute;top:280px;width:784px;height:392px;border-radius:28px}
+.ee .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line)}
+.ee .eic{position:absolute;left:44px;top:44px;width:96px;height:96px;border-radius:48px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.ee .et{position:absolute;left:172px;top:40px;font-size:64px;white-space:nowrap}
+.ee .em{position:absolute;left:174px;top:124px;font:600 30px Poppins;white-space:nowrap}
+.ee .hr{position:absolute;left:44px;right:44px;top:208px;height:2px;background:var(--line)}
+.ee .ex{position:absolute;left:44px;top:244px;font:600 17px Poppins;letter-spacing:.16em;white-space:nowrap}
+.ee .ev{position:absolute;left:44px;top:288px;font:600 34px Poppins;white-space:nowrap}
+#both{position:absolute;left:160px;top:704px;width:1600px;height:112px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;gap:22px}
+#both .tx{font-size:40px;white-space:nowrap}
 /* statement on navy */
 #stmt{position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:41}
 #st1{position:absolute;left:0;width:1920px;top:400px;text-align:center;font:500 52px Poppins;color:#E9D9B5;white-space:nowrap}
 #st2{position:absolute;left:0;width:1920px;top:492px;text-align:center;font-size:112px;color:#fff;white-space:nowrap}
-/* scene D: definition */
-#dq{position:absolute;left:0;width:1920px;top:470px;text-align:center;font-size:96px;white-space:nowrap}
-#mdl{position:absolute;left:0;width:1920px;top:330px;text-align:center}
-.quote{position:absolute;left:0;width:1920px;text-align:center;font-size:72px;line-height:1.2;white-space:nowrap}
-#defbar{left:160px;top:270px;width:1600px;height:84px;border-radius:24px;display:flex;align-items:center;gap:20px;padding:0 32px}
-#defbar .tx{font:600 32px Poppins;white-space:nowrap}
-.ee{position:absolute;top:386px;width:784px;height:474px;border-radius:28px}
-.ee .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line)}
-.ee .eic{position:absolute;left:44px;top:44px;width:96px;height:96px;border-radius:48px;background:var(--paper);display:flex;align-items:center;justify-content:center}
-.ee .et{position:absolute;left:172px;top:40px;font-size:68px;white-space:nowrap}
-.ee .em{position:absolute;left:174px;top:124px;font:600 30px Poppins;white-space:nowrap}
-.ee .hr{position:absolute;left:44px;right:44px;top:204px;height:2px;background:var(--line)}
-.ee .ex{position:absolute;left:44px;top:244px;font:600 17px Poppins;letter-spacing:.16em;white-space:nowrap}
-.ee .ev{position:absolute;left:44px;top:286px;font:600 34px Poppins;white-space:nowrap}
-.ee .ec{position:absolute;top:372px;height:56px;padding:0 24px;border-radius:28px;display:flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap}
-/* scene P: staffing process track + step panel */
-#trk{left:160px;top:270px;width:1600px;height:164px}
-.tn{position:absolute;top:24px;width:200px;height:120px}
-.tn .c{position:absolute;left:68px;top:0;width:64px;height:64px;border-radius:32px;background:#fff;border:2px solid var(--line);display:flex;align-items:center;justify-content:center}
-.tn .l{position:absolute;left:0;width:200px;top:82px;text-align:center;font:600 17px Poppins;letter-spacing:.12em;white-space:nowrap}
-#pnl{left:160px;top:466px;width:1600px;height:394px}
-.sp{position:absolute;inset:0}
-.sp .ps{position:absolute;left:48px;top:44px;font:600 20px Poppins;letter-spacing:.16em;color:var(--gold);white-space:nowrap}
-.sp .pt{position:absolute;left:48px;top:80px;font-size:60px;line-height:1.1;white-space:nowrap;transform-origin:0 50%}
-.sp .pm{position:absolute;left:48px;top:170px;font:500 32px Poppins;color:var(--ink2);white-space:nowrap}
-.sp .hr{position:absolute;left:48px;width:880px;top:244px;height:2px;background:var(--line)}
-.sp .kw{position:absolute;top:282px;height:56px;padding:0 24px;border-radius:28px;display:flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
-.sp .bx{position:absolute;left:992px;top:40px;width:568px;height:314px;border-radius:22px;background:var(--paper)}
-.sp .bx>.lbl{left:32px;top:28px}
-.mt{position:absolute;border-radius:18px;background:#fff}
-.mt .mi{position:absolute;display:flex;align-items:center;justify-content:center}
-.mt .mx{position:absolute;left:0;right:0;text-align:center;font:600 24px Poppins;white-space:nowrap}
-.mtl{position:absolute;font:600 24px Poppins;white-space:nowrap}
-.cnote{position:absolute;left:32px;right:32px;top:250px;height:44px;border-radius:22px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;gap:10px;font:600 22px Poppins;white-space:nowrap}
-.sbar{position:absolute;left:32px;width:504px;height:52px}
-.sbar .sl{position:absolute;left:0;top:12px;font:600 24px Poppins;white-space:nowrap}
-.sbar .st{position:absolute;left:150px;top:14px;width:354px;height:24px;border-radius:12px;background:#E7E0D2}
-.sbar .sf{position:absolute;left:0;top:0;height:24px;border-radius:12px;background:var(--gold);width:0}
-/* scene R: internal vs external */
-.src{position:absolute;top:466px;width:784px;height:394px;border-radius:28px}
-.src .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line)}
-.src .eic{position:absolute;left:40px;top:40px;width:96px;height:96px;border-radius:48px;background:var(--paper);display:flex;align-items:center;justify-content:center}
-.src .et{position:absolute;left:164px;top:36px;font-size:60px;white-space:nowrap}
-.src .em{position:absolute;left:166px;top:112px;font:600 28px Poppins;white-space:nowrap}
-.src .hr{position:absolute;left:40px;right:40px;top:176px;height:2px;background:var(--line)}
-.src .ex{position:absolute;left:40px;top:204px;font:600 17px Poppins;letter-spacing:.16em;white-space:nowrap}
-.src .erow{position:absolute;left:40px;top:238px;height:56px;display:flex;align-items:center;gap:16px}
-.src .erow .avc{position:static;width:56px;height:56px;border-radius:28px;font-size:24px}
-.src .erow .tx{font:600 30px Poppins;white-space:nowrap}
-.src .ep{height:56px;padding:0 22px;border-radius:28px;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
-.src .ec{position:absolute;left:40px;top:310px;height:52px;padding:0 22px;border-radius:26px;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
-/* scene F: the hiring funnel */
-#fun{left:160px;top:270px;width:784px;height:590px}
-#fun>.lbl{left:40px;top:36px}
-#funSvg{position:absolute;left:0;top:0}
-.fp2{position:absolute;width:34px;height:40px}
-#stg{left:976px;top:270px;width:784px;height:590px}
-.sr{position:absolute;left:32px;width:720px;height:164px;border-radius:22px}
-.sr .bg{position:absolute;inset:0;border-radius:22px;background:var(--paper)}
-.sr .sn{position:absolute;left:32px;top:30px;width:120px;font-size:88px;line-height:1;color:var(--gold);white-space:nowrap}
-.sr .stt{position:absolute;left:176px;top:36px;font-size:40px;white-space:nowrap}
-.sr .sst{position:absolute;left:176px;top:96px;font:500 26px Poppins;color:var(--ink2);white-space:nowrap}
-.sr .tg{position:absolute;right:32px;top:56px;height:48px;padding:0 20px;border-radius:24px;display:flex;align-items:center;font:600 18px Poppins;letter-spacing:.14em;white-space:nowrap;background:var(--ink);color:#F5E7C6}
-.cv{position:absolute;left:32px;width:720px;height:255px;border-radius:22px}
-.cv .bg{position:absolute;inset:0;border-radius:22px;background:var(--paper)}
-.cv .ci{position:absolute;left:36px;top:40px;width:88px;height:88px;border-radius:44px;background:#fff;display:flex;align-items:center;justify-content:center}
-.cv .ck{position:absolute;left:156px;top:40px;font:600 18px Poppins;letter-spacing:.16em;white-space:nowrap}
-.cv .ct{position:absolute;left:156px;top:68px;font-size:56px;white-space:nowrap}
-.cv .cs{position:absolute;left:36px;top:168px;font:600 34px Poppins;white-space:nowrap}
-#sweep{position:absolute;left:0;top:0;width:1920px;height:1080px;background:var(--ink);z-index:40}
 #sweep b{position:absolute;left:0;top:0;width:10px;height:1080px;background:var(--gold)}
 /* quiz */
 .opt{position:absolute;top:470px;width:376px;height:230px;border-radius:28px}
 .opt .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line)}
 .opt .lt{position:absolute;left:32px;top:30px;width:52px;height:52px;border-radius:26px;background:var(--paper);display:flex;align-items:center;justify-content:center;font:700 22px Poppins;color:var(--ink)}
-.opt .ot{position:absolute;left:32px;top:136px;font-size:44px;white-space:nowrap}
+.opt .ot{position:absolute;left:32px;top:138px;font-size:40px;white-space:nowrap}
 .opt .ok{position:absolute;right:30px;top:30px;width:52px;height:52px;border-radius:26px;background:var(--gold);display:flex;align-items:center;justify-content:center}
 .qq{position:absolute;left:160px;font-size:68px;line-height:1.18;white-space:nowrap}
 #ring{position:absolute;left:1610px;top:236px;width:150px;height:150px}
@@ -134,80 +141,233 @@
 #next{position:absolute;left:160px;top:762px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:24px;padding:0 32px}
 #next .nc{height:44px;padding:0 18px;border-radius:22px;background:var(--gold);display:flex;align-items:center;font:700 18px Poppins;letter-spacing:.14em;color:#fff;white-space:nowrap}
 #next .nt{font:600 34px Poppins;white-space:nowrap;flex:1}
+/* ===== v2: illustrated steel works, motion study, standard, at work today, human side ===== */
+#ill{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+.tagp{position:absolute;top:212px;height:52px;padding:0 22px;border-radius:26px;background:var(--ink);color:#fff;display:flex;align-items:center;font:600 24px Poppins;white-space:nowrap}
+#mL,#mR{top:270px;height:580px;overflow:hidden}
+#mL{left:160px;width:784px}#mR{left:976px;width:784px}
+.mIn{left:0;top:0;width:784px;height:580px}
+.mav{position:absolute;left:48px;top:30px;width:56px;height:56px;border-radius:28px;background-size:cover;background-position:center;box-shadow:0 0 0 3px #14213D}
+.mlb{left:124px;top:49px}
+.mrd{position:absolute;right:48px;top:22px;font-size:56px;line-height:1;white-space:nowrap}
+.mplan{position:absolute;left:48px;top:108px}
+.mbar{position:absolute;left:48px;top:384px;width:688px;height:36px;border-radius:12px;background:#EEE8DB;overflow:hidden}
+.mbar i{position:absolute;top:0;height:36px}
+.mtk{position:absolute;top:432px;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+.mst{position:absolute;left:48px;top:470px;height:64px;padding:0 26px;border-radius:32px;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+.mst .tm{margin-left:6px;opacity:.75}
+#zA{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+#zR{left:976px;top:270px;width:784px;height:274px}
+#zC{left:976px;top:576px;width:784px;height:274px}
+.zs{position:absolute;top:76px;width:160px;height:150px;border-radius:18px;background:var(--paper)}
+.zs .zn{position:absolute;left:0;width:160px;top:16px;text-align:center;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+.zs .zi{position:absolute;left:60px;top:46px;width:40px;height:40px}
+.zs .zt{position:absolute;left:0;width:160px;top:98px;text-align:center;font:600 26px Poppins;white-space:nowrap}
+.zc{position:absolute;top:76px;width:104px;height:150px;border-radius:18px;background:var(--paper)}
+.zc .cn{position:absolute;left:0;width:104px;top:16px;text-align:center;font:600 15px Poppins;letter-spacing:.12em;white-space:nowrap;color:var(--muted)}
+.zc .ci{position:absolute;left:32px;top:48px;width:40px;height:40px}
+.zc .ct{position:absolute;left:0;width:104px;top:98px;text-align:center;font:600 28px Poppins;white-space:nowrap}
+#zPill{position:absolute;right:36px;top:20px;height:44px;padding:0 18px;border-radius:22px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:10px;font:600 20px Poppins;white-space:nowrap}
+#kl{left:160px;top:270px;width:624px;height:580px}
+#kp{left:816px;top:270px;width:944px;height:580px}
+.kr{position:absolute;left:24px;width:576px;height:80px;border-radius:20px}
+.kr .bg{position:absolute;inset:0;border-radius:20px;background:var(--paper)}
+.kr .rn{position:absolute;left:24px;top:27px;font:700 22px Poppins;letter-spacing:.04em}
+.kr .ri{position:absolute;left:76px;top:12px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
+.kr .rt{position:absolute;left:156px;top:21px;font:600 28px Poppins;white-space:nowrap}
+.ka{position:absolute;left:48px;width:848px;height:96px}
+.ka i{position:absolute;left:0;top:12px;width:72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.ka .kl{position:absolute;left:100px;top:12px;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.ka .kt{position:absolute;left:100px;top:42px;font:600 30px Poppins;white-space:nowrap}
+#xs{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+#xw{left:976px;top:270px;width:784px;height:580px}
+.xc{position:absolute;height:48px;padding:0 20px;border-radius:24px;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#xban{position:absolute;top:496px;height:52px;padding:0 22px;border-radius:26px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#both{top:470px;height:140px}
+#both .tx{font-size:52px}
 .cap{font:600 38px Poppins;color:var(--ink);background:rgba(255,255,255,.96);padding:12px 30px;border-radius:40px;box-shadow:0 10px 30px -10px rgba(20,33,61,.25)}
 .cap .cw{color:#5B647A}.cap .cw.on{color:var(--ink)}.cap .cw.act{color:var(--gold)}
+/* ===== Ep 17: staffing ===== */
+#qcard{left:840px;top:270px;width:920px;height:274px}
+#tcard{left:840px;top:576px;width:920px;height:274px}
+.qp{position:absolute;top:96px;width:64px;height:64px;border-radius:32px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+#qPill{position:absolute;left:36px;top:190px;height:52px;padding:0 22px;border-radius:26px;background:#F6E3DC;color:#B5482F;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+.slot{position:absolute;top:84px;width:72px;height:72px;border-radius:36px;border:3px dashed #C9BFAE;display:flex;align-items:center;justify-content:center;font:700 30px Poppins;color:#B9B1A3;box-sizing:border-box}
+.sln{position:absolute;top:172px;width:160px;text-align:center;font:600 20px Poppins;white-space:nowrap}
+.bc{position:absolute;left:400px;height:48px;padding:0 20px;border-radius:24px;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap;background:#F6E3DC;color:#B5482F}
+#noW,#noW2{position:absolute;left:400px;top:80px;font-size:52px;line-height:1.12;white-space:nowrap}#noW2{top:142px}
+#def{left:976px;top:270px;width:784px;height:274px}
+#keep{left:976px;top:576px;width:784px;height:274px}
+.dfl{position:absolute;left:36px;font-size:46px;white-space:nowrap}
+#ov{left:160px;top:270px;width:1600px;height:580px}
+.ot8{position:absolute;width:352px;height:200px;border-radius:22px}
+.ot8 .bg{position:absolute;inset:0;border-radius:22px;background:var(--paper)}
+.ot8 .rn{position:absolute;left:28px;top:26px;font:700 22px Poppins;letter-spacing:.04em}
+.ot8 .ri{position:absolute;right:24px;top:20px;width:64px;height:64px;border-radius:32px;background:#fff;display:flex;align-items:center;justify-content:center}
+.ot8 .rt{position:absolute;left:28px;top:100px;font-size:38px;white-space:nowrap}
+.ot8 .rs{position:absolute;left:28px;top:150px;font:500 22px Poppins;white-space:nowrap}
+#fu{left:160px;top:270px;width:784px;height:580px}
+#fpn{left:976px;top:270px;width:784px;height:580px}
+#fpn .pn .pt{font-size:72px}
+#fpn .pn .pm{font-size:32px}
+.zn8{position:absolute;top:84px;height:352px;border-radius:20px;background:var(--paper)}
+.zn8 .zl{position:absolute;left:0;right:0;top:22px;text-align:center;font:600 16px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.zn8 .zcn{position:absolute;left:0;right:0;top:282px;text-align:center;font-size:56px;line-height:1;white-space:nowrap}
+.srcp{position:absolute;top:470px;height:56px;padding:0 22px;border-radius:28px;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+.rolep{position:absolute;height:36px;padding:0 14px;border-radius:18px;display:flex;align-items:center;font:600 17px Poppins;white-space:nowrap;background:var(--ink);color:#fff}
+.fv{position:absolute;left:48px;top:372px;width:688px;height:176px}
+.chk{position:absolute;width:328px;height:64px;border-radius:18px;background:var(--paper);display:flex;align-items:center;gap:14px;padding:0 20px;box-sizing:border-box;font:600 24px Poppins;white-space:nowrap}
+.chk i{flex:0 0 36px;height:36px;border-radius:18px;background:#fff;display:flex;align-items:center;justify-content:center}
+#rI,#rE{top:270px;width:784px;height:580px}
+#rI{left:160px}#rE{left:976px}
+.rsT{position:absolute;left:48px;top:84px;font-size:64px;white-space:nowrap}
+.rsM{position:absolute;left:50px;top:166px;font:500 28px Poppins;color:var(--ink2);white-space:nowrap}
+.rsH{position:absolute;left:48px;right:48px;top:420px;height:2px;background:var(--line)}
+.rsP{position:absolute;top:452px;height:52px;padding:0 20px;border-radius:26px;display:flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+.lad{position:absolute;height:80px;border-radius:16px;background:var(--paper);font:600 24px Poppins;white-space:nowrap;display:flex;align-items:center;padding-left:24px;box-sizing:border-box}
+.srcI{position:absolute;top:236px;width:208px;height:156px;border-radius:20px;background:var(--paper)}
+.srcI i{position:absolute;left:72px;top:22px;width:64px;height:64px;border-radius:32px;background:#fff;display:flex;align-items:center;justify-content:center}
+.srcI span{position:absolute;left:0;width:208px;top:104px;text-align:center;font:600 22px Poppins;white-space:nowrap}
+.stR{position:absolute;left:0;width:688px;height:44px}
+.stR .sl{position:absolute;left:0;top:6px;font:600 24px Poppins;white-space:nowrap}
+.stR .dt{position:absolute;top:6px;width:32px;height:32px;border-radius:16px;background:var(--paper)}
+.pp2{position:absolute;height:56px;padding:0 22px;border-radius:28px;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+.coin{position:absolute;width:56px;border-radius:12px 12px 0 0;background:var(--gold2)}
+.sq{position:absolute;width:56px;height:56px;border-radius:16px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.sqh{position:absolute;width:56px;text-align:center;font:600 16px Poppins;letter-spacing:.12em;color:var(--muted);white-space:nowrap}
+#xpill{position:absolute;left:48px;top:430px;height:52px;padding:0 22px;border-radius:26px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#xsrc{left:48px;top:516px;font-size:16px}
 </style></head><body>
 <div id="stage">
   <div id="bgv"></div>
   <div id="cam">
     <div class="chip" id="eyebrow"><i></i>EP 17 · PRINCIPLES OF MANAGEMENT</div>
     <div class="serif" id="title"><span class="acc">Staffing</span></div>
-    <div id="sub">Explained with one chai stall</div>
+    <div id="sub">The right people, explained with one chai stall</div>
     <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#B8862F" stroke-width="4" stroke-linecap="round"/></svg>
     <div class="chip ghost" id="exChip">EXAMPLE FIGURES</div>
 
-    <!-- scene A: outlet 2 has no people -->
+    <!-- A: the bus stand needs people -->
     <div id="sA">
       <div class="card" id="hero">
         <svg id="awn" width="616" height="90" style="position:absolute;left:0;top:0"><g id="awnG"></g></svg>
-        <div id="sign" style="position:absolute;left:0;width:616px;top:104px;text-align:center;font:600 18px Poppins;letter-spacing:.2em;color:var(--muted)">CHAI CORNER · OUTLET 2</div>
+        <div id="sign" style="position:absolute;left:0;width:616px;top:104px;text-align:center;font:600 18px Poppins;letter-spacing:.2em;color:var(--muted)">CHAI CORNER · BUS STAND</div>
         <svg id="stall" width="616" height="320" style="position:absolute;left:0;top:130px">
           <g id="steam" fill="none" stroke="#C9BFAE" stroke-width="5" stroke-linecap="round">
             <path id="s1" d="M128 116 c-12 -14 12 -24 0 -40"/><path id="s2" d="M152 110 c-12 -14 12 -24 0 -44"/><path id="s3" d="M176 116 c-12 -14 12 -24 0 -40"/>
           </g>
-          <g id="ravi"><circle cx="308" cy="98" r="44" fill="#14213D"/><path d="M220 210 c0 -48 40 -74 88 -74 s88 26 88 74 z" fill="#14213D"/><path d="M286 140 l22 26 l22 -26" fill="none" stroke="#B8862F" stroke-width="6" stroke-linejoin="round"/></g>
+          <clipPath id="rclip"><rect x="0" y="-20" width="616" height="300"/></clipPath><image id="ravi" clip-path="url(#rclip)" href="../../assets/illustrations/mba/meena.png" x="180" y="-6" width="256" height="317" preserveAspectRatio="xMidYMin meet"/>
           <rect x="60" y="196" width="496" height="92" rx="16" fill="#EEE8DB"/>
           <rect x="60" y="196" width="496" height="10" rx="5" fill="#B8862F"/>
           <g id="kettle" transform="translate(152 196)"><path d="M-40 0 v-54 a22 22 0 0 1 22 -22 h36 a22 22 0 0 1 22 22 v54 z" fill="#3A4560"/><path d="M40 -46 q26 0 26 -26" fill="none" stroke="#3A4560" stroke-width="8" stroke-linecap="round"/><rect x="-14" y="-88" width="28" height="12" rx="6" fill="#3A4560"/></g>
           <g id="cups"></g>
         </svg>
-        <div class="serif" id="hname">Ravi</div>
-        <div id="htag">OWNER · OPENING OUTLET 2</div>
+        <div class="serif" id="hname">Meena</div>
+        <div id="htag">RUNS OUTLET 2 · MORNING RUSH</div>
       </div>
-      <div class="card" id="ready">
-        <div id="rdy1"><div class="lbl" style="left:36px;top:34px">OUTLET 2 · OPENS IN 14 DAYS</div><div id="rdyRow"></div></div>
-        <div id="rdy2"><div class="lbl" style="left:36px;top:34px">LAST YEAR'S HIRE</div><div id="hireAv"></div><div class="serif" id="hireT">The first person who asked</div><div id="hirePills"></div></div>
-      </div>
-      <div class="card" id="roles">
-        <div class="lbl" style="left:36px;top:34px">WHO WILL RUN IT?</div>
-        <div class="pill bad" id="jobsN"><span id="jobsNi"></span>3 jobs to fill</div>
-        <div id="roleRow"></div>
+      <div class="card" id="qcard"><div class="lbl" style="left:36px;top:34px">THE MORNING QUEUE</div><div id="qRow"></div><div id="qPill"><span id="qPillI"></span>Too few hands</div></div>
+      <div class="card" id="tcard"><div class="lbl" style="left:36px;top:34px">THE MORNING TEAM</div>
+        <div class="av face" id="tMe" style="left:36px;top:84px;background-image:url(../../assets/illustrations/mba/meena-face.jpg)">M</div><div class="sln" id="tMeN" style="left:-8px">Meena</div>
+        <div class="slot" id="sl0" style="left:156px">?</div><div class="sln" id="sl0N" style="left:112px">Helper 1</div>
+        <div class="av" id="bad" style="left:156px;top:84px;background:#B9B1A3"></div>
+        <div class="slot" id="sl1" style="left:276px">?</div><div class="sln" id="sl1N" style="left:232px">Helper 2</div>
+        <div class="bc" id="bc0" style="top:44px"></div><div class="bc" id="bc1" style="top:108px"></div><div class="bc" id="bc2" style="top:172px"></div>
+        <div class="serif" id="noW">No room for a</div><div class="serif" id="noW2"><span class="acc">wrong pick</span></div><div class="pp2" id="open" style="left:400px;top:92px;background:#14213D;color:#fff"><span id="openI"></span>2 jobs open</div>
       </div>
     </div>
 
-    <!-- scene D: definition -->
+    <!-- D: what staffing is -->
     <div id="sD">
-      <div class="serif" id="dq">What is <span class="acc">staffing?</span></div>
-      <div id="mdl"><span class="lbl" style="position:static">STAFFING · IN PLAIN WORDS</span></div>
-      <div class="serif quote" id="quote1" style="top:400px">Filling every job with the right person,</div><div class="serif quote" id="quote2" style="top:492px">and <span class="acc">keeping it filled.</span></div>
-      <div class="card" id="defbar"><span id="defI"></span><span class="tx">Staffing = the right person in every job, <span class="acc">and keeping it that way</span></span></div>
-      <div id="dRow"></div>
+      <div class="serif" id="dq">This is <span class="acc">staffing</span></div>
+      <div class="card" id="ill"><div class="abs" id="illIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:48px;top:40px">AT CHAI CORNER · ASHA TRAINS NEW STAFF</div>
+        <img id="illImg" src="../../assets/illustrations/mba/scene-asha-training-cut.png" style="position:absolute;left:92px;top:100px;width:600px;height:450px">
+      </div><div class="tagp" id="tgT">Asha</div><div class="tagp" id="tgW">New helper</div></div>
+      <div class="card" id="def"><div class="lbl" style="left:36px;top:34px">STAFFING MEANS</div>
+        <div class="serif dfl" id="df1" style="top:84px">Filling every job with</div><div class="serif dfl" id="df2" style="top:146px"><span class="acc">the right person</span></div></div>
+      <div class="card" id="keep"><div class="lbl" style="left:36px;top:34px">AND KEEPING IT FILLED</div>
+        <div class="stp" id="kp0" style="top:84px"></div><div class="stp" id="kp1" style="top:84px"></div><div class="stp" id="kp2" style="top:84px"></div>
+        <div class="abs" id="kpT" style="left:36px;top:180px;font:600 30px Poppins;white-space:nowrap">So staffing <span class="acc">never really stops</span></div></div>
     </div>
 
-    <!-- scene P: the staffing process -->
+    <!-- E: eight steps -->
+    <div id="sE">
+      <div class="card" id="ov"><div class="lbl" style="left:48px;top:40px">THE STAFFING PROCESS · 8 STEPS</div><div id="ovT"></div></div>
+    </div>
+
+    <!-- M: the hiring funnel -->
+    <div id="sM">
+      <div class="card" id="fu"><div class="lbl" style="left:48px;top:40px">THE HIRING FUNNEL</div>
+        <div class="zn8" id="zA8" style="left:48px;width:288px"><div class="zl">APPLIED</div><div class="serif zcn" id="zcA">0</div></div>
+        <div class="zn8" id="zI8" style="left:368px;width:192px"><div class="zl">INTERVIEW</div><div class="serif zcn" id="zcI">0</div></div>
+        <div class="zn8" id="zH8" style="left:592px;width:144px"><div class="zl">HIRED</div><div class="serif zcn" id="zcH">0</div></div>
+        <svg class="abs" id="tok" style="left:0;top:0" width="784" height="580"><g id="tokG"></g></svg>
+        <div class="srcp" id="sp0" style="left:48px"><span id="sp0I"></span>Notice on the stall</div>
+        <div class="srcp" id="sp1"><span id="sp1I"></span>Tips from regulars</div>
+        <div class="srcp" id="plc" style="left:48px;background:#14213D;color:#fff"><span id="plcI"></span>2 helpers placed at the bus stand</div><div class="rolep" id="rp0">Tea</div><div class="rolep" id="rp1">Counter</div>
+      </div>
+      <div class="card" id="fpn"><div id="fPans"></div></div>
+    </div>
+
+    <!-- R: internal vs external -->
+    <div id="sR">
+      <div class="card" id="rI"><div class="lbl" style="left:48px;top:40px">INTERNAL SOURCES</div>
+        <div class="serif rsT" id="rIT">From <span class="acc">inside</span></div><div class="rsM" id="rIM">People who already work here</div>
+        <div class="lad" id="ld0" style="left:48px;top:316px;width:300px">Helper</div>
+        <div class="lad" id="ld1" style="left:388px;top:228px;width:348px;background:#14213D;color:#fff">Runs outlet 2</div>
+        <svg class="abs" id="ldA" style="left:296px;top:238px" width="120" height="80"><path id="ldAP" d="M8 70 C 40 70 70 50 96 22 M80 18 L98 20 L96 38" fill="none" stroke="#B8862F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="av face" id="ldM" style="left:268px;top:320px;width:72px;height:72px;background-image:url(../../assets/illustrations/mba/meena-face.jpg)">M</div>
+        <div class="rsH" id="rIH"></div>
+        <div class="rsP" id="rIp0"></div><div class="rsP" id="rIp1"></div><div class="rsP" id="rIp2"></div>
+      </div>
+      <div class="card" id="rE"><div class="lbl" style="left:48px;top:40px">EXTERNAL SOURCES</div>
+        <div class="serif rsT" id="rET">From <span class="acc">outside</span></div><div class="rsM" id="rEM">New people, new skills</div>
+        <div id="srcs"></div>
+        <div class="rsH" id="rEH"></div>
+        <div class="rsP" id="rEp0"></div><div class="rsP" id="rEp1"></div><div class="rsP" id="rEp2"></div>
+      </div>
+    </div>
+
+    <!-- P: the four steps that keep people -->
     <div id="sP">
-      <div class="card" id="trk">
-        <svg id="trkSvg" width="1600" height="164" style="position:absolute;left:0;top:0"><line id="trkL" x1="100" y1="58" x2="1500" y2="58" stroke="#E2DACB" stroke-width="4" stroke-linecap="round"/><line id="trkG" x1="100" y1="58" x2="100" y2="58" stroke="#B8862F" stroke-width="6" stroke-linecap="round"/></svg>
-        <div id="trkN"></div>
-      </div>
-      <div class="card" id="pnl"><div id="sps"></div></div>
-      <div id="srcRow"></div>
+      <div class="card" id="pl"><div class="lbl" style="left:48px;top:40px">KEEPING GOOD PEOPLE</div><div id="pRows"></div></div>
+      <div class="card" id="pp"><div id="pPans"></div></div>
     </div>
 
-    <!-- scene F: the hiring funnel -->
-    <div id="sF">
-      <div class="card" id="fun">
-        <div class="lbl">THE HIRING FUNNEL</div>
-        <svg id="funSvg" width="784" height="590"><path id="band0" fill="#F5F1E8"/><path id="band1" fill="#F5F1E8"/><path id="band2" fill="#F5F1E8"/></svg>
-        <div id="fpp"></div>
+    <!-- K: at work today -->
+    <div id="sK">
+      <div class="card" id="kl"><div class="lbl" style="left:48px;top:40px">AT WORK TODAY</div><div id="kRows"></div></div>
+      <div class="card" id="kp"><div id="kPans"></div></div>
+    </div>
+
+    <!-- X: the human side -->
+    <div id="sX">
+      <div class="card" id="xs"><div class="abs" id="xsIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:48px;top:40px">DOES CAREFUL STAFFING WORK?</div>
+        <svg id="scl" width="688" height="250" style="position:absolute;left:48px;top:84px">
+          <rect x="254" y="226" width="180" height="20" rx="10" fill="#14213D"/>
+          <rect x="338" y="40" width="12" height="190" fill="#14213D"/>
+          <g id="panL"></g><g id="panR"></g>
+          <g id="beam"><rect x="64" y="34" width="560" height="12" rx="6" fill="#14213D"/></g>
+          <circle cx="344" cy="40" r="14" fill="#B8862F"/>
+        </svg>
+        <div class="lbl" id="xgL" style="left:48px;top:352px;color:#B8862F">THE GOOD SIDE</div>
+        <div class="lbl" id="xhL" style="left:408px;top:352px;color:#B5482F">THE HARD SIDE</div>
+        <div id="xChips"></div>
+      </div></div>
+      <div class="card" id="xw">
+        <div class="lbl" style="left:48px;top:40px">ONE FIX · THE STRUCTURED INTERVIEW</div>
+        <div id="sqG"></div>
+        <div id="xpill"><span id="xpillI"></span>Best predictor in a 2022 review</div>
+        <div class="lbl" id="xsrc">SOURCE · SACKETT ET AL., 2022</div>
       </div>
-      <div class="card" id="stg"><div id="srRows"></div><div id="cvRows"></div></div>
+      <div class="chip ghost" id="lesson" style="left:160px;top:390px">THE LESSON</div><div id="both"><span id="bothI"></span><span class="serif tx">Hire with care</span><span class="serif tx" style="color:#B8862F">+</span><span class="serif tx" style="color:#E9D9B5">help people grow</span></div>
     </div>
 
     <!-- quick check -->
     <div id="quiz">
       <div class="chip" id="qchip" style="left:160px;top:120px"><i></i>QUICK CHECK</div>
-      <div class="serif qq" id="qq1" style="top:224px">Ravi tests 20 people and turns away 18.</div><div class="serif qq acc" id="qq2" style="top:304px">Which step is this?</div>
+      <div class="serif qq" id="qq1" style="top:224px">40 apply. Ravi turns away 38.</div><div class="serif qq acc" id="qq2" style="top:304px">Which step turned them away?</div>
       <svg id="ring" viewBox="0 0 150 150"><circle cx="75" cy="75" r="66" fill="#fff" stroke="#E2DACB" stroke-width="8"/><circle id="ringA" cx="75" cy="75" r="66" fill="none" stroke="#B8862F" stroke-width="8" stroke-linecap="round" transform="rotate(-90 75 75)"/></svg>
       <div class="serif" id="ringN" style="left:1610px;top:236px;position:absolute"></div>
       <div id="opts"></div>

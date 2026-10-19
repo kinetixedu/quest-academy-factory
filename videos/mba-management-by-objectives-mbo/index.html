@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset="utf-8"><title>MBA - Management by Objectives (Ep 20)</title>
+<!doctype html><html><head><meta charset="utf-8"><title>MBA - Management by Objectives (MBO) (Ep 20)</title>
 <link rel="stylesheet" href="../../engine/base.css">
 <style>
 /* ===== MBA world: Boardroom ===== */
@@ -20,76 +20,65 @@
 .lbl{position:absolute;font:600 18px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
 .abs{position:absolute}
 .pill{position:absolute;height:48px;padding:0 20px;border-radius:24px;display:flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
-.avc{position:absolute;width:64px;height:64px;border-radius:32px;display:flex;align-items:center;justify-content:center;font:700 28px Poppins;color:#fff;background:var(--ink)}
-/* scene A: orders, not goals */
+.pill.bad{background:#F6E3DC;color:#B5482F}
+/* scene A: the stall */
 #hero{left:160px;top:270px;width:616px;height:580px;overflow:hidden}
 #hname{position:absolute;left:0;width:616px;top:452px;text-align:center;font-size:44px}
 #htag{position:absolute;left:0;width:616px;text-align:center;top:516px;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
-#ord{left:840px;top:270px;width:920px;height:274px}
-#say{left:840px;top:576px;width:920px;height:274px}
-.job{position:absolute;top:76px;width:266px;height:170px;border-radius:22px;background:var(--paper);overflow:hidden}
-.job .jd{position:absolute;left:24px;top:30px;font:600 15px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
-.job .jt{position:absolute;left:24px;top:96px;font:600 30px Poppins;white-space:nowrap}
-.job .av{position:absolute;right:20px;top:20px;width:44px;height:44px;border-radius:22px;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font:700 20px Poppins}
-#mAv{left:36px;top:80px}
-#mtl{position:absolute;left:124px;top:78px;font:600 26px Poppins;white-space:nowrap}
-#mbar{position:absolute;left:124px;top:120px;width:600px;height:20px;border-radius:10px;background:var(--paper2)}
-#mfill{position:absolute;left:0;top:0;height:20px;border-radius:10px;background:var(--gold)}
-#mval{position:absolute;right:36px;top:82px;font-size:52px;line-height:1;white-space:nowrap}
-#pNo,#pIdk{top:192px;background:#F6E3DC;color:#B5482F}
-#pNo{left:36px}
-/* statement on navy */
-#stmt{position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:41}
-#st1{position:absolute;left:0;width:1920px;top:400px;text-align:center;font:500 52px Poppins;color:#E9D9B5;white-space:nowrap}
-#st2{position:absolute;left:0;width:1920px;top:492px;text-align:center;font-size:112px;color:#fff;white-space:nowrap}
-/* scene D: what is MBO */
-#dq{position:absolute;left:0;width:1920px;top:440px;text-align:center;font-size:96px;white-space:nowrap}
-#dqs{position:absolute;left:0;width:1920px;top:576px;text-align:center;font:600 22px Poppins;letter-spacing:.2em;color:var(--muted);white-space:nowrap}
-#src{left:160px;top:270px;width:1600px;height:580px}
-#book{position:absolute;left:64px;top:96px;width:260px;height:388px;border-radius:16px;background:var(--ink);overflow:hidden}
-#book .bs{position:absolute;left:0;top:0;width:18px;height:388px;background:#0E1830}
-#book .bg{position:absolute;left:0;top:0;width:260px;height:10px;background:var(--gold)}
-#book .bt{position:absolute;left:44px;font:700 22px Poppins;letter-spacing:.1em;color:var(--gold2);white-space:nowrap}
-#book .bb{position:absolute;left:44px;height:8px;border-radius:4px;background:#2C3B5E}
-#book .ba{position:absolute;left:44px;top:276px;font:600 16px Poppins;letter-spacing:.16em;color:#8C96AE;white-space:nowrap}
-#book .by{position:absolute;left:44px;top:306px;font:700 48px Poppins;color:#fff;white-space:nowrap}
-#srcL{left:388px;top:104px}
-#srcN{position:absolute;left:388px;top:142px;font-size:96px;line-height:1.1;white-space:nowrap}
-#srcM{position:absolute;left:390px;top:262px;font:500 36px Poppins;color:var(--ink2);white-space:nowrap}
-#srcHr{position:absolute;left:388px;right:64px;top:340px;height:2px;background:var(--line)}
-#srcL2{left:388px;top:374px}
-#srcF{position:absolute;left:388px;top:412px;font-size:46px;line-height:1.15;white-space:nowrap}
-#defbar{left:160px;top:270px;width:1600px;height:84px;border-radius:24px;display:flex;align-items:center;gap:20px;padding:0 32px}
-#defbar .tx{font:600 32px Poppins;white-space:nowrap}
-.qw{position:absolute;top:386px;width:512px;height:464px;border-radius:28px}
-.qw .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line);box-shadow:0 18px 40px -12px rgba(20,33,61,.14)}
-.qw .qi{position:absolute;left:40px;top:40px;width:88px;height:88px;border-radius:44px;background:var(--paper);display:flex;align-items:center;justify-content:center}
-.qw .qt{position:absolute;left:40px;top:152px;font-size:60px;white-space:nowrap}
-.qw .qs{position:absolute;left:42px;top:234px;font:500 28px Poppins;white-space:nowrap}
-.qw .hr{position:absolute;left:40px;right:40px;top:300px;height:2px;background:var(--line)}
-.qw .qx{position:absolute;left:40px;top:330px;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
-.qw .qa{position:absolute;left:40px;top:370px;font:600 32px Poppins;white-space:nowrap}
-.ow{position:absolute;top:270px;width:784px;height:580px;border-radius:28px}
-.ow .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line);box-shadow:0 18px 40px -12px rgba(20,33,61,.14)}
-.ow .lbl{left:40px;top:40px}
-.ow .ot{position:absolute;left:40px;top:76px;font-size:52px;white-space:nowrap}
-.ow>svg{position:absolute;left:0;top:0}
-.ow .bav{position:absolute;width:96px;height:96px;border-radius:48px;display:flex;align-items:center;justify-content:center;font:700 40px Poppins;color:#fff;background:var(--gold)}
-.ow .an{position:absolute;width:160px;text-align:center;font:600 24px Poppins;white-space:nowrap}
-.ow .pill{top:488px}
-/* scene F: five steps */
-#casc{left:160px;top:270px;width:624px;height:580px;overflow:hidden}
-#cover{position:absolute;left:0;top:0;width:624px;height:88px;background:var(--ink)}
-#cover b{position:absolute;left:0;bottom:0;width:624px;height:6px;background:var(--gold)}
-#coverI{position:absolute;left:32px;top:24px}
-#coverT{position:absolute;left:80px;top:30px;font:600 18px Poppins;letter-spacing:.18em;color:var(--gold2);white-space:nowrap}
-#cLinks{position:absolute;left:0;top:0}
-.cr{position:absolute;left:32px;width:560px;height:72px;border-radius:20px}
-.cr .bg{position:absolute;inset:0;border-radius:20px;background:var(--paper2)}
-.cr .cn{position:absolute;left:14px;top:14px;width:44px;height:44px;border-radius:22px;background:#fff;display:flex;align-items:center;justify-content:center;font:700 18px Poppins;letter-spacing:.02em}
-.cr .ct{position:absolute;left:76px;top:16px;font:600 26px Poppins;white-space:nowrap}
-.cr .ca{position:absolute;top:16px;width:40px;height:40px;border-radius:20px;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font:700 18px Poppins}
-#fp{left:816px;top:270px;width:944px;height:580px}
+#sweep{position:absolute;left:0;top:0;width:1920px;height:1080px;background:var(--ink);z-index:40}
+/* scene A: six ways */
+#ways{left:840px;top:270px;width:920px;height:274px}
+#ask{left:840px;top:576px;width:920px;height:274px}
+.cupt{position:absolute;top:76px;width:128px;height:150px;border-radius:18px;background:var(--paper)}
+.cupt .cn{position:absolute;left:0;width:128px;top:16px;text-align:center;font:600 16px Poppins;letter-spacing:.14em;white-space:nowrap;color:var(--muted)}
+.cupt .ci{position:absolute;left:44px;top:48px;width:40px;height:40px}
+.cupt .ct{position:absolute;left:0;width:128px;top:98px;text-align:center;font:600 28px Poppins;white-space:nowrap}
+#askT{position:absolute;left:36px;top:150px;font-size:64px;white-space:nowrap}
+/* scene D: Taylor + the book */
+#dq{position:absolute;left:0;width:1920px;top:470px;text-align:center;font-size:88px;white-space:nowrap}
+#tay{left:160px;top:270px;width:616px;height:580px;overflow:hidden}
+#tname{position:absolute;left:0;width:616px;top:352px;text-align:center;font-size:52px;white-space:nowrap}
+#ttag{position:absolute;left:0;width:616px;top:428px;text-align:center;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+#father{position:absolute;top:484px;height:56px;padding:0 24px;border-radius:28px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:12px;font:600 24px Poppins;white-space:nowrap}
+#book{left:840px;top:270px;width:920px;height:274px}
+#idea{left:840px;top:576px;width:920px;height:274px}
+.bk{position:absolute;left:236px;font-size:44px;white-space:nowrap}
+.stp{position:absolute;top:18px;height:64px;padding:0 28px;border-radius:32px;display:flex;align-items:center;gap:12px;font:600 28px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+/* scene B: the shovel test */
+#shv{left:160px;top:270px;width:784px;height:580px}
+#ton{left:976px;top:270px;width:784px;height:580px}
+#best{position:absolute;top:92px;height:56px;padding:0 24px;border-radius:28px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+.mat{position:absolute;width:336px;text-align:center;top:432px;font:600 18px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.ld{position:absolute;top:472px;height:52px;padding:0 22px;border-radius:26px;display:flex;align-items:center;font:600 26px Poppins;white-space:nowrap}
+.rc .lbl{left:48px;top:48px}
+.rc .big{position:absolute;right:48px;top:30px;font-size:64px;color:var(--gold);white-space:nowrap}
+.bar{position:absolute;left:48px;width:688px;height:120px}
+.bar .bl{position:absolute;left:0;top:0;font:600 22px Poppins;color:var(--muted);white-space:nowrap}
+.bar .bt{position:absolute;left:0;top:40px;height:64px;border-radius:16px;background:#E7E0D2}
+.bar .bv{position:absolute;top:44px;font-size:44px;white-space:nowrap}
+#tonHr{position:absolute;left:48px;right:48px;top:462px;height:2px;background:var(--line)}
+#tonSrc{left:48px;top:494px;font-size:17px}
+/* scene M: time and motion study */
+#watch{left:160px;top:270px;width:616px;height:580px}
+#swv{position:absolute;left:168px;top:84px}
+#rd{position:absolute;left:0;width:616px;top:396px;text-align:center;font-size:84px;line-height:1;white-space:nowrap}
+#saved{position:absolute;top:498px;height:52px;padding:0 22px;border-radius:26px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#steps{left:840px;top:270px;width:920px;height:580px}
+.sr{position:absolute;left:24px;width:872px;height:80px;border-radius:20px}
+.sr .bg{position:absolute;inset:0;border-radius:20px;background:var(--paper)}
+.sr .rn{position:absolute;left:24px;top:26px;font:700 22px Poppins;letter-spacing:.04em}
+.sr .ri{position:absolute;left:76px;top:12px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
+.sr .rt{position:absolute;left:156px;top:20px;font:600 30px Poppins;white-space:nowrap}
+.sr .st{position:absolute;right:28px;top:20px;font:600 30px Poppins;white-space:nowrap;text-align:right}
+.sr .sx{position:absolute;left:150px;top:39px;height:3px;border-radius:2px;background:#B5482F}
+/* scene P: four principles */
+#pl{left:160px;top:270px;width:624px;height:580px}
+.pr{position:absolute;left:24px;width:576px;height:100px;border-radius:20px}
+.pr .bg{position:absolute;inset:0;border-radius:20px;background:var(--paper)}
+.pr .rn{position:absolute;left:24px;top:36px;font:700 22px Poppins;letter-spacing:.04em}
+.pr .ri{position:absolute;left:76px;top:22px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
+.pr .rt{position:absolute;left:156px;top:30px;font:600 30px Poppins;white-space:nowrap}
+#pp{left:816px;top:270px;width:944px;height:580px}
 .pn{position:absolute;inset:0}
 .pn .ps{position:absolute;left:48px;top:48px;font:600 20px Poppins;letter-spacing:.16em;color:var(--gold);white-space:nowrap}
 .pn .pt{position:absolute;left:48px;top:88px;font-size:84px;line-height:1.1;white-space:nowrap}
@@ -99,36 +88,37 @@
 .pn .pe{position:absolute;left:48px;top:372px;width:848px;display:flex;align-items:center;gap:24px}
 .pn .pe i{flex:0 0 72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
 .pn .pe span{font:600 32px/1.25 Poppins;white-space:nowrap}
-.pv{position:absolute;left:48px;top:376px;width:848px;height:156px}
-.ob{position:absolute;left:0;top:0;width:848px;height:156px;border-radius:22px;background:var(--paper)}
-.ob i{position:absolute;left:28px;top:38px;width:80px;height:80px;border-radius:40px;background:#fff;display:flex;align-items:center;justify-content:center}
-.ob .ol{position:absolute;left:136px;top:40px;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
-.ob .ot2{position:absolute;left:136px;top:74px;font:600 34px Poppins;white-space:nowrap}
-.ob .obp{position:absolute;right:28px;top:54px;height:48px;padding:0 20px;border-radius:24px;display:flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap;background:var(--gold);color:#fff}
-.t2{position:absolute;top:0;width:412px;height:156px;border-radius:22px}
-.t2 .bg{position:absolute;inset:0;border-radius:22px;background:var(--paper)}
-.t2 .tav{position:absolute;left:24px;top:24px;width:52px;height:52px;border-radius:26px;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font:700 22px Poppins}
-.t2 .tk{position:absolute;left:96px;top:40px;font:600 15px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
-.t2 .tv{position:absolute;left:24px;top:98px;font:600 30px Poppins;white-space:nowrap}
-.t2 .ck{position:absolute;right:24px;top:24px;width:44px;height:44px;border-radius:22px;background:var(--gold);display:flex;align-items:center;justify-content:center}
-.stp{position:absolute;top:0;height:64px;padding:0 28px;border-radius:32px;display:flex;align-items:center;gap:12px;font:600 28px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
-.wk{position:absolute;top:0;width:194px;height:156px;border-radius:22px;background:var(--paper)}
-.wk .wl{position:absolute;left:22px;top:22px;font:600 15px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
-.wk .wv{position:absolute;left:22px;top:50px;font-size:44px;line-height:1.1;white-space:nowrap}
-.wk .wb{position:absolute;left:22px;top:118px;width:150px;height:14px;border-radius:7px;background:#E4DCCD}
-.wk .wf{position:absolute;left:0;top:0;height:14px;border-radius:7px;background:var(--gold)}
-.wk .ck{position:absolute;right:20px;top:20px;width:40px;height:40px;border-radius:20px;background:var(--gold);display:flex;align-items:center;justify-content:center}
-/* scene B: benefits and limits */
-.bl{position:absolute;top:270px;height:580px;border-radius:28px}
-.bl .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line);box-shadow:0 18px 40px -12px rgba(20,33,61,.14)}
-.bl .lbl{left:40px;top:38px}
-.br{position:absolute;left:40px;right:40px;height:140px;border-radius:22px}
-.br .bg{position:absolute;inset:0;border-radius:22px;background:var(--paper2);border:none;box-shadow:none}
-.br .bi{position:absolute;left:28px;top:32px;width:76px;height:76px;border-radius:38px;background:#fff;display:flex;align-items:center;justify-content:center}
-.br .bt{position:absolute;left:132px;top:22px;font-size:42px;line-height:1.15;white-space:nowrap}
-.br .bs{position:absolute;left:134px;top:82px;font:500 28px Poppins;white-space:nowrap}
-.cp{position:absolute;top:46px;height:48px;padding:0 20px;border-radius:24px;display:flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap}
-#sweep{position:absolute;left:0;top:0;width:1920px;height:1080px;background:var(--ink);z-index:40}
+.pv{position:absolute;left:48px;top:372px;width:848px;height:176px}
+.av{position:absolute;width:72px;height:72px;border-radius:36px;display:flex;align-items:center;justify-content:center;font:700 30px Poppins;color:#fff;background:var(--ink)}
+.av.face{color:transparent;background-size:cover!important;background-position:center!important;box-shadow:0 0 0 4px var(--ink)}
+.avn{position:absolute;width:160px;text-align:center;font:600 24px Poppins;white-space:nowrap}
+.stair{position:absolute;width:150px;border-radius:16px 16px 0 0;background:var(--paper)}
+.stair span{position:absolute;left:0;width:150px;bottom:14px;text-align:center;font:600 24px Poppins;white-space:nowrap}
+/* scene K: more tools (2 x 2) */
+.tc{position:absolute;width:784px;height:270px}
+.tc .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line);box-shadow:0 18px 40px -12px rgba(20,33,61,.14)}
+.tc .ti{position:absolute;left:36px;top:36px;width:72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.tc .tt{position:absolute;left:132px;top:30px;font-size:44px;white-space:nowrap}
+.tc .ts{position:absolute;left:132px;top:88px;font:500 26px Poppins;white-space:nowrap}
+.tc .th{position:absolute;left:36px;right:36px;top:146px;height:2px}
+.tc .tx2{position:absolute;left:36px;top:170px;font:600 17px Poppins;letter-spacing:.16em;white-space:nowrap}
+.tc .te{position:absolute;left:36px;top:204px;font:600 28px Poppins;white-space:nowrap}
+.fm{position:absolute;top:198px;width:44px;height:44px;border-radius:22px;display:flex;align-items:center;justify-content:center;font:700 18px Poppins;color:#fff}
+/* scene X: the criticism */
+.ee{position:absolute;top:280px;width:784px;height:392px;border-radius:28px}
+.ee .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line)}
+.ee .eic{position:absolute;left:44px;top:44px;width:96px;height:96px;border-radius:48px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.ee .et{position:absolute;left:172px;top:40px;font-size:64px;white-space:nowrap}
+.ee .em{position:absolute;left:174px;top:124px;font:600 30px Poppins;white-space:nowrap}
+.ee .hr{position:absolute;left:44px;right:44px;top:208px;height:2px;background:var(--line)}
+.ee .ex{position:absolute;left:44px;top:244px;font:600 17px Poppins;letter-spacing:.16em;white-space:nowrap}
+.ee .ev{position:absolute;left:44px;top:288px;font:600 34px Poppins;white-space:nowrap}
+#both{position:absolute;left:160px;top:704px;width:1600px;height:112px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;gap:22px}
+#both .tx{font-size:40px;white-space:nowrap}
+/* statement on navy */
+#stmt{position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:41}
+#st1{position:absolute;left:0;width:1920px;top:400px;text-align:center;font:500 52px Poppins;color:#E9D9B5;white-space:nowrap}
+#st2{position:absolute;left:0;width:1920px;top:492px;text-align:center;font-size:112px;color:#fff;white-space:nowrap}
 #sweep b{position:absolute;left:0;top:0;width:10px;height:1080px;background:var(--gold)}
 /* quiz */
 .opt{position:absolute;top:470px;width:376px;height:230px;border-radius:28px}
@@ -151,94 +141,240 @@
 #next{position:absolute;left:160px;top:762px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:24px;padding:0 32px}
 #next .nc{height:44px;padding:0 18px;border-radius:22px;background:var(--gold);display:flex;align-items:center;font:700 18px Poppins;letter-spacing:.14em;color:#fff;white-space:nowrap}
 #next .nt{font:600 34px Poppins;white-space:nowrap;flex:1}
+/* ===== v2: illustrated steel works, motion study, standard, at work today, human side ===== */
+#ill{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+.tagp{position:absolute;top:212px;height:52px;padding:0 22px;border-radius:26px;background:var(--ink);color:#fff;display:flex;align-items:center;font:600 24px Poppins;white-space:nowrap}
+#mL,#mR{top:270px;height:580px;overflow:hidden}
+#mL{left:160px;width:784px}#mR{left:976px;width:784px}
+.mIn{left:0;top:0;width:784px;height:580px}
+.mav{position:absolute;left:48px;top:30px;width:56px;height:56px;border-radius:28px;background-size:cover;background-position:center;box-shadow:0 0 0 3px #14213D}
+.mlb{left:124px;top:49px}
+.mrd{position:absolute;right:48px;top:22px;font-size:56px;line-height:1;white-space:nowrap}
+.mplan{position:absolute;left:48px;top:108px}
+.mbar{position:absolute;left:48px;top:384px;width:688px;height:36px;border-radius:12px;background:#EEE8DB;overflow:hidden}
+.mbar i{position:absolute;top:0;height:36px}
+.mtk{position:absolute;top:432px;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+.mst{position:absolute;left:48px;top:470px;height:64px;padding:0 26px;border-radius:32px;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+.mst .tm{margin-left:6px;opacity:.75}
+#zA{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+#zR{left:976px;top:270px;width:784px;height:274px}
+#zC{left:976px;top:576px;width:784px;height:274px}
+.zs{position:absolute;top:76px;width:160px;height:150px;border-radius:18px;background:var(--paper)}
+.zs .zn{position:absolute;left:0;width:160px;top:16px;text-align:center;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+.zs .zi{position:absolute;left:60px;top:46px;width:40px;height:40px}
+.zs .zt{position:absolute;left:0;width:160px;top:98px;text-align:center;font:600 26px Poppins;white-space:nowrap}
+.zc{position:absolute;top:76px;width:104px;height:150px;border-radius:18px;background:var(--paper)}
+.zc .cn{position:absolute;left:0;width:104px;top:16px;text-align:center;font:600 15px Poppins;letter-spacing:.12em;white-space:nowrap;color:var(--muted)}
+.zc .ci{position:absolute;left:32px;top:48px;width:40px;height:40px}
+.zc .ct{position:absolute;left:0;width:104px;top:98px;text-align:center;font:600 28px Poppins;white-space:nowrap}
+#zPill{position:absolute;right:36px;top:20px;height:44px;padding:0 18px;border-radius:22px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:10px;font:600 20px Poppins;white-space:nowrap}
+#kl{left:160px;top:270px;width:624px;height:580px}
+#kp{left:816px;top:270px;width:944px;height:580px}
+.kr{position:absolute;left:24px;width:576px;height:80px;border-radius:20px}
+.kr .bg{position:absolute;inset:0;border-radius:20px;background:var(--paper)}
+.kr .rn{position:absolute;left:24px;top:27px;font:700 22px Poppins;letter-spacing:.04em}
+.kr .ri{position:absolute;left:76px;top:12px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
+.kr .rt{position:absolute;left:156px;top:21px;font:600 28px Poppins;white-space:nowrap}
+.ka{position:absolute;left:48px;width:848px;height:96px}
+.ka i{position:absolute;left:0;top:12px;width:72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.ka .kl{position:absolute;left:100px;top:12px;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.ka .kt{position:absolute;left:100px;top:42px;font:600 30px Poppins;white-space:nowrap}
+#xs{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+#xw{left:976px;top:270px;width:784px;height:580px}
+.xc{position:absolute;height:48px;padding:0 20px;border-radius:24px;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#xban{position:absolute;top:496px;height:52px;padding:0 22px;border-radius:26px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#both{top:470px;height:140px}
+#both .tx{font-size:52px}
 .cap{font:600 38px Poppins;color:var(--ink);background:rgba(255,255,255,.96);padding:12px 30px;border-radius:40px;box-shadow:0 10px 30px -10px rgba(20,33,61,.25)}
 .cap .cw{color:#5B647A}.cap .cw.on{color:var(--ink)}.cap .cw.act{color:var(--gold)}
+/* ===== Ep 20: management by objectives ===== */
+#ocard{left:840px;top:270px;width:920px;height:274px}
+#ncard{left:840px;top:576px;width:920px;height:274px}
+.slip{position:absolute;top:76px;width:264px;height:160px;border-radius:20px;background:var(--paper)}
+.slip .sd{position:absolute;left:24px;top:20px;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+.slip .si{position:absolute;left:24px;top:56px;width:48px;height:48px;border-radius:24px;background:#fff;display:flex;align-items:center;justify-content:center}
+.slip .st{position:absolute;left:24px;top:114px;font:600 26px Poppins;white-space:nowrap}
+.ncol{position:absolute;top:76px;width:264px;height:170px;border-radius:20px;background:var(--paper)}
+.ncol .nl{position:absolute;left:24px;top:20px;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+#effT{position:absolute;left:24px;top:76px;width:216px;height:36px;border-radius:12px;background:#fff;overflow:hidden}
+#effB{position:absolute;left:0;top:0;height:36px;border-radius:12px}
+#effL{position:absolute;left:24px;top:124px;font:600 22px Poppins;white-space:nowrap}
+#qBig{position:absolute;left:24px;top:52px;font-size:84px;line-height:1;color:#B5482F;white-space:nowrap}
+#qLbl{position:absolute;left:24px;top:134px;font:600 22px Poppins;color:#B5482F;white-space:nowrap}
+.sayC{position:absolute;left:112px;top:72px;height:48px;padding:0 18px;border-radius:24px;display:flex;align-items:center;gap:8px;font:600 22px Poppins;white-space:nowrap;background:#F6E3DC;color:#B5482F}
+.tagi{position:absolute;height:44px;padding:0 18px;border-radius:22px;background:var(--ink);color:#fff;display:flex;align-items:center;font:600 20px Poppins;white-space:nowrap}
+#goal{left:976px;top:270px;width:784px;height:580px}
+#gT1{position:absolute;left:48px;top:84px;font-size:76px;white-space:nowrap;line-height:1.1}
+#gT2{position:absolute;left:48px;top:172px;font-size:76px;white-space:nowrap;line-height:1.1}
+.gh{position:absolute;left:48px;right:48px;top:292px;height:2px;background:var(--line)}
+.gwho{position:absolute;top:376px;width:300px;height:96px}
+.gwho .av{left:0;top:12px}
+.gwho .gn{position:absolute;left:96px;top:20px;font:600 28px Poppins;white-space:nowrap}
+.gwho .gs{position:absolute;left:96px;top:58px;font:600 17px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+#gok{position:absolute;left:48px;top:490px;height:56px;padding:0 24px;border-radius:28px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:12px;font:600 24px Poppins;white-space:nowrap}
+#cas{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+#rev{left:976px;top:270px;width:784px;height:580px}
+.cb{position:absolute;left:48px;width:688px;height:100px;border-radius:20px;background:var(--paper)}
+.cb .cl{position:absolute;left:104px;top:18px;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+.cb .ct{position:absolute;left:104px;top:44px;font:600 30px Poppins;white-space:nowrap}
+.cb .ci{position:absolute;left:24px;top:18px;width:64px;height:64px;border-radius:32px;background:#fff;display:flex;align-items:center;justify-content:center;background-size:cover;background-position:center}
+.cch{position:absolute;top:46px;height:40px;padding:0 16px;border-radius:20px;display:flex;align-items:center;gap:8px;font:600 20px Poppins;white-space:nowrap;background:#fff;color:var(--ink)}
+.carr{position:absolute;left:376px;width:32px;height:28px}
+#revS{position:absolute;left:48px;top:84px}
+.rvp{position:absolute;top:470px;height:56px;padding:0 22px;border-radius:28px;display:flex;align-items:center;gap:12px;font:600 24px Poppins;white-space:nowrap}
+.pp2{position:absolute;height:56px;padding:0 22px;border-radius:28px;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+#dotS{position:absolute;left:48px;top:96px}
+#dotN{position:absolute;left:48px;top:330px;font-size:64px;line-height:1;white-space:nowrap}
+#dotL{position:absolute;left:52px;top:402px;font:600 24px Poppins;color:var(--ink2);white-space:nowrap}
+#dpill{position:absolute;left:48px;top:452px;height:52px;padding:0 22px;border-radius:26px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap}
+#dsrc{left:48px;top:524px;font-size:16px}
 </style></head><body>
 <div id="stage">
   <div id="bgv"></div>
   <div id="cam">
-    <!-- title + header (shared elements) -->
     <div class="chip" id="eyebrow"><i></i>EP 20 · PRINCIPLES OF MANAGEMENT</div>
     <div class="serif" id="title">Management by <span class="acc">Objectives</span></div>
-    <div id="sub">MBO, explained with one chai stall</div>
+    <div id="sub">Goals set together, explained with one chai stall</div>
     <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#B8862F" stroke-width="4" stroke-linecap="round"/></svg>
     <div class="chip ghost" id="exChip">EXAMPLE FIGURES</div>
 
-    <!-- scene A: orders, not goals -->
+    <!-- A: orders, not goals -->
     <div id="sA">
       <div class="card" id="hero">
         <svg id="awn" width="616" height="90" style="position:absolute;left:0;top:0"><g id="awnG"></g></svg>
-        <div id="sign" style="position:absolute;left:0;width:616px;top:104px;text-align:center;font:600 18px Poppins;letter-spacing:.2em;color:var(--muted)">CHAI CORNER</div>
+        <div id="sign" style="position:absolute;left:0;width:616px;top:104px;text-align:center;font:600 18px Poppins;letter-spacing:.2em;color:var(--muted)">CHAI CORNER · BUS STAND</div>
         <svg id="stall" width="616" height="320" style="position:absolute;left:0;top:130px">
           <g id="steam" fill="none" stroke="#C9BFAE" stroke-width="5" stroke-linecap="round">
             <path id="s1" d="M128 116 c-12 -14 12 -24 0 -40"/><path id="s2" d="M152 110 c-12 -14 12 -24 0 -44"/><path id="s3" d="M176 116 c-12 -14 12 -24 0 -40"/>
           </g>
-          <g id="ravi"><circle cx="308" cy="98" r="44" fill="#14213D"/><path d="M220 210 c0 -48 40 -74 88 -74 s88 26 88 74 z" fill="#14213D"/><path d="M286 140 l22 26 l22 -26" fill="none" stroke="#B8862F" stroke-width="6" stroke-linejoin="round"/></g>
+          <clipPath id="rclip"><rect x="0" y="-20" width="616" height="300"/></clipPath><image id="ravi" clip-path="url(#rclip)" href="../../assets/illustrations/mba/meena.png" x="180" y="-6" width="256" height="317" preserveAspectRatio="xMidYMin meet"/>
           <rect x="60" y="196" width="496" height="92" rx="16" fill="#EEE8DB"/>
           <rect x="60" y="196" width="496" height="10" rx="5" fill="#B8862F"/>
           <g id="kettle" transform="translate(152 196)"><path d="M-40 0 v-54 a22 22 0 0 1 22 -22 h36 a22 22 0 0 1 22 22 v54 z" fill="#3A4560"/><path d="M40 -46 q26 0 26 -26" fill="none" stroke="#3A4560" stroke-width="8" stroke-linecap="round"/><rect x="-14" y="-88" width="28" height="12" rx="6" fill="#3A4560"/></g>
           <g id="cups"></g>
         </svg>
-        <div class="serif" id="hname">Ravi</div>
-        <div id="htag">OWNER · TWO OUTLETS</div>
+        <div class="serif" id="hname">Meena</div>
+        <div id="htag">RUNS OUTLET 2 · BUS STAND</div>
       </div>
-      <div class="card" id="ord">
-        <div class="lbl" style="left:36px;top:34px">RAVI'S ORDERS TO MEENA</div>
-        <div id="jobRow"></div>
-      </div>
-      <div class="card" id="say">
-        <div class="lbl" style="left:36px;top:34px">MEENA · RUNS OUTLET 2</div>
-        <div class="avc" id="mAv" style="background:var(--gold)">M</div>
-        <div id="mtl">Motivation</div>
-        <div id="mbar"><div id="mfill"></div></div>
-        <div class="serif" id="mval">80%</div>
-        <div class="pill" id="pNo"><span id="pNoI"></span><span>No say in her work</span></div>
-        <div class="pill" id="pIdk"><span id="pIdkI"></span><span>Did she do well? No idea</span></div>
+      <div class="card" id="ocard"><div class="lbl" style="left:36px;top:34px">A NEW ORDER EVERY MORNING</div><div class="av face" id="oRavi" style="right:36px;top:20px;left:auto;width:48px;height:48px;font-size:20px">R</div><div id="slips"></div></div>
+      <div class="card" id="ncard"><div class="lbl" style="left:36px;top:34px">WHAT ORDERS DO TO MEENA</div>
+        <div class="ncol" id="nc0" style="left:36px"><div class="nl">HER SAY</div><div class="av face" id="nMe" style="left:24px;top:64px">M</div><div class="sayC" id="say"></div></div>
+        <div class="ncol" id="nc1" style="left:328px"><div class="nl">HER EFFORT</div><div id="effT"><div id="effB"></div></div><div id="effL">Full</div></div>
+        <div class="ncol" id="nc2" style="left:620px"><div class="nl">DID SHE DO WELL?</div><div class="serif" id="qBig">?</div><div id="qLbl">Nobody knows</div></div>
       </div>
     </div>
 
-    <!-- scene D: what is MBO -->
+    <!-- D: Peter Drucker -->
     <div id="sD">
-      <div class="serif" id="dq">What is <span class="acc">MBO?</span></div>
-      <div id="dqs">MANAGEMENT BY OBJECTIVES</div>
-      <div class="card" id="src">
-        <div id="book"><div class="bs"></div><div class="bg"></div>
-          <div class="bt" style="top:56px">THE</div><div class="bt" style="top:88px">PRACTICE OF</div><div class="bt" style="top:120px">MANAGEMENT</div>
-          <div class="bb" style="top:176px;width:150px"></div><div class="bb" style="top:198px;width:118px"></div><div class="bb" style="top:220px;width:136px"></div>
-          <div class="ba">PETER F. DRUCKER</div><div class="by">1954</div></div>
-        <div class="lbl" id="srcL">WHO MADE IT FAMOUS</div>
-        <div class="serif" id="srcN">Peter Drucker</div>
-        <div id="srcM">The Practice of Management, 1954</div>
-        <div id="srcHr"></div>
-        <div class="lbl" id="srcL2">HIS FULL NAME FOR THE IDEA</div>
-        <div class="serif" id="srcF">Management by objectives <span class="acc">and self-control</span></div>
+      <div class="serif" id="dq">The idea: <span class="acc">management by objectives</span></div>
+      <div class="card" id="tay">
+        <svg id="port" width="616" height="320" style="position:absolute;left:0;top:28px">
+          <defs><clipPath id="pc"><circle cx="308" cy="170" r="140"/></clipPath></defs>
+          <circle cx="308" cy="170" r="140" fill="#EEE8DB"/>
+          <g clip-path="url(#pc)"><image href="../../assets/illustrations/mba/drucker-src.png" x="75" y="-7" width="452" height="560"/></g><circle cx="308" cy="170" r="140" fill="none" stroke="#B8862F" stroke-width="6"/>
+        </svg>
+        <div class="serif" id="tname">Peter Drucker</div>
+        <div id="ttag">AUSTRIAN-BORN AMERICAN · 1909-2005</div>
+        <div id="father"><span id="fatherI"></span>Management by objectives</div>
       </div>
-      <div class="card" id="defbar"><span id="defI"></span><span class="tx">MBO = clear goals, agreed <span class="acc">together</span>, judged by <span class="acc">results</span></span></div>
-      <div id="qRow"></div>
-      <div id="oRow"></div>
+      <div class="card" id="book">
+        <svg id="bookS" width="160" height="200" style="position:absolute;left:48px;top:38px">
+          <rect x="10" y="8" width="140" height="190" rx="10" fill="#E2DACB"/>
+          <rect x="0" y="0" width="140" height="190" rx="10" fill="#14213D"/>
+          <rect x="0" y="0" width="16" height="190" rx="6" fill="#B8862F"/>
+          <rect id="bl1" x="36" y="44" width="80" height="8" rx="4" fill="#E9D9B5"/><rect id="bl2" x="36" y="64" width="62" height="8" rx="4" fill="#E9D9B5"/><rect id="bl3" x="36" y="84" width="72" height="8" rx="4" fill="#E9D9B5"/>
+          <text x="36" y="166" font-family="Poppins" font-weight="700" font-size="26" fill="#B8862F">1954</text>
+        </svg>
+        <div class="lbl" id="bookL" style="left:236px;top:52px">THE BOOK · 1954</div>
+        <div class="serif bk" id="bk1" style="top:90px">The Practice of</div>
+        <div class="serif bk" id="bk2" style="top:148px"><span class="acc">Management</span></div>
+      </div>
+      <div class="card" id="idea">
+        <div class="lbl" style="left:36px;top:34px">THE BIG IDEA</div>
+        <div class="stp" id="id0" style="top:112px"><span id="id0I"></span>Agree goals together</div>
+        <svg id="idA" width="60" height="30" style="position:absolute;top:129px"><path d="M4 15 H48 M38 5 L50 15 L38 25" fill="none" stroke="#B9B1A3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="stp" id="id1" style="top:112px;background:#14213D;color:#fff"><span id="id1I"></span>Judge by results</div>
+      </div>
     </div>
 
-    <!-- scene F: five steps -->
+    <!-- G: the team sits down -->
+    <div id="sG">
+      <div class="card" id="ill"><div class="abs" id="illIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:48px;top:40px">CHAI CORNER · THE TEAM SITS DOWN</div>
+        <img id="illImg" src="../../assets/illustrations/mba/scene-team-meeting-cut.png" style="position:absolute;left:92px;top:100px;width:600px;height:450px">
+        <div class="tagi" id="tgA">Asha</div><div class="tagi" id="tgR">Ravi</div><div class="tagi" id="tgK">Kabir</div><div class="tagi" id="tgM">Meena</div>
+      </div></div>
+      <div class="card" id="goal"><div class="lbl" style="left:48px;top:40px">THE AGREED GOAL · OUTLET 2</div>
+        <div class="serif" id="gT1"><span class="acc">500 cups</span> a day</div><div class="serif" id="gT2">by March</div>
+        <div class="gh"></div><div class="lbl" id="gBy" style="left:48px;top:326px">AGREED BY</div>
+        <div class="gwho" id="gw0" style="left:48px"><div class="av face" id="ga0" style="background-image:url(../../assets/illustrations/mba/ravi-face.jpg)">R</div><div class="gn">Ravi</div><div class="gs">OWNER</div></div>
+        <div class="gwho" id="gw1" style="left:392px"><div class="av face" id="ga1" style="background-image:url(../../assets/illustrations/mba/meena-face.jpg)">M</div><div class="gn">Meena</div><div class="gs">RUNS OUTLET 2</div></div>
+        <div id="gok"><span id="gokI"></span>Both said yes</div>
+      </div>
+    </div>
+
+    <!-- F: MBO in five steps -->
     <div id="sF">
-      <div class="card" id="casc">
-        <svg id="cLinks" width="624" height="580"><g id="cLG"></g></svg>
-        <div id="cRows"></div>
-        <div id="cover"><span id="coverI"></span><span id="coverT">MBO AT OUTLET 2</span><b></b></div>
+      <div class="card" id="cas"><div class="abs" id="casIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:48px;top:40px">MBO · FROM BIG GOAL TO ACTION</div>
+        <div class="cb" id="cb0" style="top:84px"><div class="ci" id="ci0"></div><div class="cl">STEP 1 · BUSINESS GOAL</div><div class="ct">500 cups a day at outlet 2</div></div>
+        <svg class="carr" id="ca0" style="top:192px"><path d="M16 2 V22 M6 14 L16 24 L26 14" fill="none" stroke="#B9B1A3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="cb" id="cb1" style="top:228px"><div class="ci" id="ci1" style="background-image:url(../../assets/illustrations/mba/meena-face.jpg)"></div><div class="cl">STEP 2 · MEENA'S GOAL, SET TOGETHER</div><div class="ct">200 cups before 10 am</div></div>
+        <svg class="carr" id="ca1" style="top:336px"><path d="M16 2 V22 M6 14 L16 24 L26 14" fill="none" stroke="#B9B1A3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="cb" id="cb2" style="top:372px;height:116px"><div class="ci" id="ci2"></div><div class="cl">STEP 3 · ACTION PLAN</div><div class="cch" id="ch0" style="left:104px;top:50px"></div><div class="cch" id="ch1" style="top:50px"></div></div>
+        <div class="mst" id="cst" style="left:48px;top:504px;height:52px;font-size:22px"><span class="msi"></span><span class="mtx"></span></div>
+      </div></div>
+      <div class="card" id="rev"><div class="lbl" style="left:48px;top:40px">WEEKLY REVIEW · CUPS BEFORE 10 AM</div>
+        <svg id="revS" width="688" height="370"><g id="revG"></g></svg>
+        <div class="rvp" id="rv0" style="left:48px;background:#F6E3DC;color:#B5482F"></div><div class="rvp" id="rv1" style="left:48px;background:#B8862F;color:#fff"></div>
       </div>
-      <div class="card" id="fp"><div id="fPans"></div></div>
     </div>
 
-    <!-- scene B: benefits and limits -->
-    <div id="sB"><div id="bRow"></div></div>
+    <!-- B: why it works -->
+    <div id="sP">
+      <div class="card" id="pl"><div class="lbl" style="left:48px;top:40px">WHY MBO WORKS</div><div id="pRows"></div></div>
+      <div class="card" id="pp"><div id="pPans"></div></div>
+    </div>
+
+    <!-- K: at work today -->
+    <div id="sK">
+      <div class="card" id="kl"><div class="lbl" style="left:48px;top:40px">AT WORK TODAY</div><div id="kRows"></div></div>
+      <div class="card" id="kp"><div id="kPans"></div></div>
+    </div>
+
+    <!-- X: the human side -->
+    <div id="sX">
+      <div class="card" id="xs"><div class="abs" id="xsIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:48px;top:40px">DOES MBO ALWAYS WORK?</div>
+        <svg id="scl" width="688" height="250" style="position:absolute;left:48px;top:84px">
+          <rect x="254" y="226" width="180" height="20" rx="10" fill="#14213D"/>
+          <rect x="338" y="40" width="12" height="190" fill="#14213D"/>
+          <g id="panL"></g><g id="panR"></g>
+          <g id="beam"><rect x="64" y="34" width="560" height="12" rx="6" fill="#14213D"/></g>
+          <circle cx="344" cy="40" r="14" fill="#B8862F"/>
+        </svg>
+        <div class="lbl" id="xgL" style="left:48px;top:352px;color:#B8862F">THE GOOD SIDE</div>
+        <div class="lbl" id="xhL" style="left:408px;top:352px;color:#B5482F">THE HARD SIDE</div>
+        <div id="xChips"></div>
+      </div></div>
+      <div class="card" id="xw">
+        <div class="lbl" style="left:48px;top:40px">A 1991 REVIEW · 70 STUDIES OF MBO</div>
+        <svg id="dotS" width="688" height="220"><g id="dotG"></g></svg>
+        <div class="serif" id="dotN">0 <span class="acc">of 70</span></div><div id="dotL">studies found productivity rose</div>
+        <div id="dpill"><span id="dpillI"></span>Biggest gains when top managers backed it</div>
+        <div class="lbl" id="dsrc">SOURCE · RODGERS AND HUNTER, 1991</div>
+      </div>
+      <div class="chip ghost" id="lesson" style="left:160px;top:390px">THE LESSON</div><div id="both"><span id="bothI"></span><span class="serif tx">Agree the goal</span><span class="serif tx" style="color:#B8862F">+</span><span class="serif tx" style="color:#E9D9B5">keep the purpose in view</span></div>
+    </div>
 
     <!-- quick check -->
     <div id="quiz">
       <div class="chip" id="qchip" style="left:160px;top:120px"><i></i>QUICK CHECK</div>
-      <div class="serif qq" id="qq1" style="top:224px">Ravi sets Meena's targets alone.</div><div class="serif qq acc" id="qq2" style="top:304px">Which part of MBO is missing?</div>
+      <div class="serif qq" id="qq1" style="top:224px">Ravi writes the targets alone.</div><div class="serif qq acc" id="qq2" style="top:304px">Which part of MBO is missing?</div>
       <svg id="ring" viewBox="0 0 150 150"><circle cx="75" cy="75" r="66" fill="#fff" stroke="#E2DACB" stroke-width="8"/><circle id="ringA" cx="75" cy="75" r="66" fill="none" stroke="#B8862F" stroke-width="8" stroke-linecap="round" transform="rotate(-90 75 75)"/></svg>
       <div class="serif" id="ringN" style="left:1610px;top:236px;position:absolute"></div>
       <div id="opts"></div>
-      <div id="take"><span id="takeI"></span><span class="serif tx" id="takeT">No say, no MBO: set the goals together</span></div>
+      <div id="take"><span id="takeI"></span><span class="serif tx" id="takeT">Goals set together = Participation</span></div>
     </div>
 
     <!-- recap -->

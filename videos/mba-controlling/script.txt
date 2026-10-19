@@ -1,33 +1,47 @@
-H1|0.3|Ravi's second Chai Corner has been open for one month.
+H1|0.3|The bus stand Chai Corner has been open for one month.
 H2|0.55|The plan was five hundred cups a day. But is it working?
 C1|0.3|Some cups are full, and some are half empty.
 C2|0.3|Some customers wait one minute, and some wait five.
 C3|0.65|And nobody has counted the cups even once.
 T1|0.7|A plan nobody checks is just a guess. Ravi needs controlling.
-D1|0.3|So, what is controlling?
-D2|0.6|Controlling means checking that the actual work matches the plan, and fixing it when it doesn't.
-D3|0.65|First, compare the plan with what really happened. Then, close the gap.
-F0|0.45|Controlling follows five steps.
-F1|0.35|One. Set standards: clear targets. Every cup holds a hundred and fifty millilitres, the wait stays under ninety seconds, and the taste stays the same.
-F2|0.35|Two. Measure actual performance. Every evening, Kabir counts the cups. Outlet two sells four hundred a day.
-F3|0.35|Three. Compare with the standard. The goal was five hundred, so it is one hundred short.
-F4|0.35|Four. Analyse the deviation, the gap between plan and actual. Twenty percent fewer cups. Why? At the morning rush, one stove is not enough, and people leave.
-F5|0.65|Five. Take corrective action. Ravi adds a second stove, and sales climb back to five hundred.
-L1|0.35|Then the loop starts again.
-L2|0.65|Next month, Kabir counts again. This is a feedback loop: check, fix, and check again.
-P1|0.35|Planning and controlling always go together.
-P2|0.35|Planning sets the target. Controlling checks if you hit it.
-P3|0.35|Without a plan, there is nothing to check. Without checking, a plan is just a wish.
-P4|0.65|That's why they are called the Siamese twins of management.
-X1|0.35|But Ravi cannot check every small thing himself.
-X2|0.35|So he uses management by exception.
-X3|0.35|Small slips, like a cup that is a little short, are fixed by the team.
-X4|0.35|Only big deviations, like sales falling twenty percent, reach Ravi.
-X5|0.65|Frederick Taylor called this the exception principle.
-Q1|1.9|Quick check. Kabir only calls Ravi when sales drop by more than ten percent. Which idea is this?
-A1|0.6|Management by exception! Only the big problems reach the manager.
+D1|0.35|This is controlling.
+D2|0.35|Every evening, Kabir sits with the cash box and the ledger, and checks the numbers.
+D3|0.35|Controlling means checking that the real work matches the plan.
+D4|0.65|And when it does not, finding out why, and fixing it.
+F0|0.35|Controlling runs as a loop of five steps.
+F1|0.35|One. Set the standard. The target is five hundred cups a day.
+F2|0.35|Two. Measure the real work. Kabir counts the cups every evening.
+F3|0.35|Three. Compare. Outlet two sells only four hundred. That is one hundred short.
+F4|0.35|Four. Find the cause. At the morning rush, one stove is not enough, and people walk away.
+F5|0.35|Five. Correct it. Ravi adds a second stove, and sales climb back to five hundred.
+F6|0.65|Then the loop starts again. Measure, compare, and correct, every month.
+W1|0.35|Planning and controlling always go together.
+W2|0.35|Planning sets the target. Controlling checks if you hit it.
+W3|0.65|That is why they are called the twins of management.
+B0|0.35|Good managers control at three moments.
+B1|0.35|Before the work. Meena checks that the milk is fresh before brewing. This is feedforward control.
+B2|0.35|During the work. Asha tastes the chai while it boils. This is concurrent control.
+B3|0.65|After the work. Kabir counts the day's sales. This is feedback control.
+E1|0.35|But Ravi cannot check every small thing himself.
+E2|0.35|So small slips are fixed by the team, and only big gaps reach him.
+E3|0.65|F.W. Taylor wrote about this in 1903. He called it the exception principle.
+K0|0.35|So what does controlling look like at work today?
+K1|0.35|Standards. A delivery company promises a time, and tracks every order against it.
+K2|0.35|Measuring. A factory counts faulty parts at the end of every shift.
+K3|0.35|Comparing. Each month, a manager puts the budget next to the real spending.
+K4|0.35|Feedforward. Before every flight, pilots work through a checklist.
+K5|0.65|Exception. A bank flags only the unusual payments for a person to check.
+X1|0.35|But can control go too far? Yes.
+X2|0.35|The good side. Problems are caught early, less is wasted, and everyone knows the target.
+X3|0.35|The hard side. Too much checking feels like being watched, and trust drops.
+X4|0.35|And people start chasing the number, instead of the goal.
+X5|0.35|If Ravi only counts cups, a helper might fill cups half way, just to sell more.
+X6|0.35|The British economist Charles Goodhart warned about this in 1975. It is now called Goodhart's law.
+X7|0.65|So the lesson is balance. Measure what matters, and trust your people.
+Q1|1.9|Quick check. Asha tastes the chai while it boils, before anyone drinks it. Which type of control is this?
+A1|0.6|Concurrent control! It checks the work while it is happening.
 S1|0.3|So, remember.
-S2|0.35|Controlling checks that actual work matches the plan, and fixes the gap.
-S3|0.35|It has five steps: set standards, measure, compare, analyse, and correct.
-S4|0.6|Planning and controlling are twins, and managers focus on the big exceptions.
-N1|0.2|Next time, Ravi and his team set goals together, with management by objectives.
+S2|0.35|Controlling checks the real work against the plan, and fixes the gap.
+S3|0.35|Set the standard, measure, compare, find the cause, and correct.
+S4|0.6|Control before, during, and after the work, and focus on the big exceptions.
+N1|0.2|Next time, Ravi and his team set goals together. That's management by objectives.

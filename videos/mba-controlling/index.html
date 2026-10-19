@@ -20,49 +20,65 @@
 .lbl{position:absolute;font:600 18px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
 .abs{position:absolute}
 .pill{position:absolute;height:48px;padding:0 20px;border-radius:24px;display:flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
-.avc{position:absolute;width:64px;height:64px;border-radius:32px;display:flex;align-items:center;justify-content:center;font:700 28px Poppins;color:#fff;background:var(--ink)}
-/* scene A: a plan nobody checks */
+.pill.bad{background:#F6E3DC;color:#B5482F}
+/* scene A: the stall */
 #hero{left:160px;top:270px;width:616px;height:580px;overflow:hidden}
 #hname{position:absolute;left:0;width:616px;top:452px;text-align:center;font-size:44px}
 #htag{position:absolute;left:0;width:616px;text-align:center;top:516px;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
-#plan{left:840px;top:270px;width:920px;height:274px}
-#pT{position:absolute;left:36px;top:70px;font-size:88px;line-height:1;white-space:nowrap}
-#pQ{position:absolute;left:600px;top:84px;width:64px;height:64px;border-radius:32px;background:var(--paper);display:flex;align-items:center;justify-content:center}
-#pDay{left:36px;top:196px}
-#pNo{left:316px;top:196px;background:#F6E3DC;color:#B5482F}
-#wrong{left:840px;top:576px;width:920px;height:274px}
-.job{position:absolute;top:76px;width:266px;height:170px;border-radius:22px;background:var(--paper);overflow:hidden}
-.job .ji{position:absolute;left:24px;top:22px;width:52px;height:52px;border-radius:26px;background:#fff;display:flex;align-items:center;justify-content:center}
-.job .jt{position:absolute;left:24px;font:600 26px Poppins;white-space:nowrap}
-/* statement on navy */
-#stmt{position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:41}
-#st1{position:absolute;left:0;width:1920px;top:400px;text-align:center;font:500 52px Poppins;color:#E9D9B5;white-space:nowrap}
-#st2{position:absolute;left:0;width:1920px;top:492px;text-align:center;font-size:112px;color:#fff;white-space:nowrap}
-/* scene D: what is controlling */
-#dq{position:absolute;left:0;width:1920px;top:470px;text-align:center;font-size:96px;white-space:nowrap}
-#defbar{left:160px;top:270px;width:1600px;height:84px;border-radius:24px;display:flex;align-items:center;gap:20px;padding:0 32px}
-#defbar .tx{font:600 32px Poppins;white-space:nowrap}
-.qw{position:absolute;top:386px;width:512px;height:464px;border-radius:28px}
-.qw .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line);box-shadow:0 18px 40px -12px rgba(20,33,61,.14)}
-.qw .qi{position:absolute;left:40px;top:40px;width:88px;height:88px;border-radius:44px;background:var(--paper);display:flex;align-items:center;justify-content:center}
-.qw .qn{position:absolute;right:40px;top:60px;font:700 30px Poppins;color:var(--gold);letter-spacing:.04em}
-.qw .qt{position:absolute;left:40px;top:152px;font-size:60px;white-space:nowrap}
-.qw .qs{position:absolute;left:42px;top:234px;font:500 28px Poppins;white-space:nowrap}
-.qw .hr{position:absolute;left:40px;right:40px;top:300px;height:2px;background:var(--line)}
-.qw .qx{position:absolute;left:40px;top:330px;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
-.qw .qa{position:absolute;left:40px;top:370px;font:600 32px Poppins;white-space:nowrap}
-/* scene F: five steps + gauge */
-#gcard{left:160px;top:270px;width:624px;height:580px;overflow:hidden}
-#cover{position:absolute;left:0;top:0;width:624px;height:88px;background:var(--ink)}
-#cover b{position:absolute;left:0;bottom:0;width:624px;height:6px;background:var(--gold)}
-#coverI{position:absolute;left:32px;top:24px}
-#coverT{position:absolute;left:80px;top:30px;font:600 18px Poppins;letter-spacing:.18em;color:var(--gold2);white-space:nowrap}
-#gSvg{position:absolute;left:0;top:0}
-#gVal{position:absolute;left:0;width:624px;top:394px;text-align:center;font-size:84px;line-height:1;white-space:nowrap}
-#gUnit{position:absolute;left:0;width:624px;top:478px;text-align:center;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
-#gStat{position:absolute;left:32px;right:32px;top:500px;height:48px;display:flex;justify-content:center}
-#gStat .pill{position:static}
-#fp{left:816px;top:270px;width:944px;height:580px}
+#sweep{position:absolute;left:0;top:0;width:1920px;height:1080px;background:var(--ink);z-index:40}
+/* scene A: six ways */
+#ways{left:840px;top:270px;width:920px;height:274px}
+#ask{left:840px;top:576px;width:920px;height:274px}
+.cupt{position:absolute;top:76px;width:128px;height:150px;border-radius:18px;background:var(--paper)}
+.cupt .cn{position:absolute;left:0;width:128px;top:16px;text-align:center;font:600 16px Poppins;letter-spacing:.14em;white-space:nowrap;color:var(--muted)}
+.cupt .ci{position:absolute;left:44px;top:48px;width:40px;height:40px}
+.cupt .ct{position:absolute;left:0;width:128px;top:98px;text-align:center;font:600 28px Poppins;white-space:nowrap}
+#askT{position:absolute;left:36px;top:150px;font-size:64px;white-space:nowrap}
+/* scene D: Taylor + the book */
+#dq{position:absolute;left:0;width:1920px;top:470px;text-align:center;font-size:88px;white-space:nowrap}
+#tay{left:160px;top:270px;width:616px;height:580px;overflow:hidden}
+#tname{position:absolute;left:0;width:616px;top:352px;text-align:center;font-size:52px;white-space:nowrap}
+#ttag{position:absolute;left:0;width:616px;top:428px;text-align:center;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+#father{position:absolute;top:484px;height:56px;padding:0 24px;border-radius:28px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:12px;font:600 24px Poppins;white-space:nowrap}
+#book{left:840px;top:270px;width:920px;height:274px}
+#idea{left:840px;top:576px;width:920px;height:274px}
+.bk{position:absolute;left:236px;font-size:44px;white-space:nowrap}
+.stp{position:absolute;top:18px;height:64px;padding:0 28px;border-radius:32px;display:flex;align-items:center;gap:12px;font:600 28px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+/* scene B: the shovel test */
+#shv{left:160px;top:270px;width:784px;height:580px}
+#ton{left:976px;top:270px;width:784px;height:580px}
+#best{position:absolute;top:92px;height:56px;padding:0 24px;border-radius:28px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+.mat{position:absolute;width:336px;text-align:center;top:432px;font:600 18px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.ld{position:absolute;top:472px;height:52px;padding:0 22px;border-radius:26px;display:flex;align-items:center;font:600 26px Poppins;white-space:nowrap}
+.rc .lbl{left:48px;top:48px}
+.rc .big{position:absolute;right:48px;top:30px;font-size:64px;color:var(--gold);white-space:nowrap}
+.bar{position:absolute;left:48px;width:688px;height:120px}
+.bar .bl{position:absolute;left:0;top:0;font:600 22px Poppins;color:var(--muted);white-space:nowrap}
+.bar .bt{position:absolute;left:0;top:40px;height:64px;border-radius:16px;background:#E7E0D2}
+.bar .bv{position:absolute;top:44px;font-size:44px;white-space:nowrap}
+#tonHr{position:absolute;left:48px;right:48px;top:462px;height:2px;background:var(--line)}
+#tonSrc{left:48px;top:494px;font-size:17px}
+/* scene M: time and motion study */
+#watch{left:160px;top:270px;width:616px;height:580px}
+#swv{position:absolute;left:168px;top:84px}
+#rd{position:absolute;left:0;width:616px;top:396px;text-align:center;font-size:84px;line-height:1;white-space:nowrap}
+#saved{position:absolute;top:498px;height:52px;padding:0 22px;border-radius:26px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#steps{left:840px;top:270px;width:920px;height:580px}
+.sr{position:absolute;left:24px;width:872px;height:80px;border-radius:20px}
+.sr .bg{position:absolute;inset:0;border-radius:20px;background:var(--paper)}
+.sr .rn{position:absolute;left:24px;top:26px;font:700 22px Poppins;letter-spacing:.04em}
+.sr .ri{position:absolute;left:76px;top:12px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
+.sr .rt{position:absolute;left:156px;top:20px;font:600 30px Poppins;white-space:nowrap}
+.sr .st{position:absolute;right:28px;top:20px;font:600 30px Poppins;white-space:nowrap;text-align:right}
+.sr .sx{position:absolute;left:150px;top:39px;height:3px;border-radius:2px;background:#B5482F}
+/* scene P: four principles */
+#pl{left:160px;top:270px;width:624px;height:580px}
+.pr{position:absolute;left:24px;width:576px;height:100px;border-radius:20px}
+.pr .bg{position:absolute;inset:0;border-radius:20px;background:var(--paper)}
+.pr .rn{position:absolute;left:24px;top:36px;font:700 22px Poppins;letter-spacing:.04em}
+.pr .ri{position:absolute;left:76px;top:22px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
+.pr .rt{position:absolute;left:156px;top:30px;font:600 30px Poppins;white-space:nowrap}
+#pp{left:816px;top:270px;width:944px;height:580px}
 .pn{position:absolute;inset:0}
 .pn .ps{position:absolute;left:48px;top:48px;font:600 20px Poppins;letter-spacing:.16em;color:var(--gold);white-space:nowrap}
 .pn .pt{position:absolute;left:48px;top:88px;font-size:84px;line-height:1.1;white-space:nowrap}
@@ -72,63 +88,37 @@
 .pn .pe{position:absolute;left:48px;top:372px;width:848px;display:flex;align-items:center;gap:24px}
 .pn .pe i{flex:0 0 72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
 .pn .pe span{font:600 32px/1.25 Poppins;white-space:nowrap}
-.pv{position:absolute;left:48px;top:376px;width:848px;height:156px}
-.ob{position:absolute;left:0;top:0;width:848px;height:156px;border-radius:22px;background:var(--paper)}
-.ob .av{position:absolute;left:28px;top:38px;width:80px;height:80px;border-radius:40px;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font:700 34px Poppins}
-.ob .ol{position:absolute;left:136px;top:40px;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
-.ob .ot2{position:absolute;left:136px;top:74px;font:600 34px Poppins;white-space:nowrap}
-.tl3{position:absolute;top:0;width:264px;height:156px;border-radius:22px}
-.tl3 .bg{position:absolute;inset:0;border-radius:22px;background:var(--paper)}
-.tl3 i{position:absolute;left:24px;top:24px;width:52px;height:52px;border-radius:26px;background:#fff;display:flex;align-items:center;justify-content:center}
-.tl3 .tk{position:absolute;left:92px;top:40px;font:600 15px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
-.tl3 .tv{position:absolute;left:24px;top:96px;font:600 30px Poppins;white-space:nowrap}
-.cb{position:absolute;left:0;width:848px;height:64px}
-.cb .cl{position:absolute;left:0;top:18px;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
-.cb .ct{position:absolute;left:150px;top:6px;height:52px;border-radius:14px;background:#E7E0D2}
-.cb .cg{position:absolute;top:6px;height:52px;border-radius:0 14px 14px 0;background:#F6E3DC;border:3px dashed #B5482F;box-sizing:border-box}
-.cb .cv{position:absolute;top:6px;font-size:40px;line-height:52px;white-space:nowrap}
-.stp{position:absolute;top:0;height:64px;padding:0 28px;border-radius:32px;display:flex;align-items:center;gap:12px;font:600 28px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
-/* scene L: feedback loop */
-#cyc{position:absolute;left:0;top:0;width:1000px;height:1080px}
-.nd{position:absolute;width:136px;height:136px;border-radius:68px}
-.nd .bg{position:absolute;inset:0;border-radius:68px;background:var(--card);border:2px solid var(--line);box-shadow:0 14px 30px -14px rgba(20,33,61,.25)}
-.nd .ni{position:absolute;left:46px;top:30px;width:44px;height:44px}
-.nd .nl{position:absolute;left:0;width:136px;top:84px;text-align:center;font:600 15px Poppins;letter-spacing:.06em}
-#hub{position:absolute;left:446px;top:475px;width:180px;height:180px;border-radius:90px;background:var(--paper2);display:flex;flex-direction:column;align-items:center;justify-content:center}
-#hub span{font:600 16px Poppins;letter-spacing:.16em;color:var(--muted);margin-top:10px}
-#panel{left:976px;top:290px;width:784px;height:520px}
-#panel .pe{width:688px}
-/* scene P: twins */
-.ee{position:absolute;top:270px;width:784px;height:420px;border-radius:28px}
-.ee .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line);box-shadow:0 18px 40px -12px rgba(20,33,61,.14)}
+.pv{position:absolute;left:48px;top:372px;width:848px;height:176px}
+.av{position:absolute;width:72px;height:72px;border-radius:36px;display:flex;align-items:center;justify-content:center;font:700 30px Poppins;color:#fff;background:var(--ink)}
+.av.face{color:transparent;background-size:cover!important;background-position:center!important;box-shadow:0 0 0 4px var(--ink)}
+.avn{position:absolute;width:160px;text-align:center;font:600 24px Poppins;white-space:nowrap}
+.stair{position:absolute;width:150px;border-radius:16px 16px 0 0;background:var(--paper)}
+.stair span{position:absolute;left:0;width:150px;bottom:14px;text-align:center;font:600 24px Poppins;white-space:nowrap}
+/* scene K: more tools (2 x 2) */
+.tc{position:absolute;width:784px;height:270px}
+.tc .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line);box-shadow:0 18px 40px -12px rgba(20,33,61,.14)}
+.tc .ti{position:absolute;left:36px;top:36px;width:72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.tc .tt{position:absolute;left:132px;top:30px;font-size:44px;white-space:nowrap}
+.tc .ts{position:absolute;left:132px;top:88px;font:500 26px Poppins;white-space:nowrap}
+.tc .th{position:absolute;left:36px;right:36px;top:146px;height:2px}
+.tc .tx2{position:absolute;left:36px;top:170px;font:600 17px Poppins;letter-spacing:.16em;white-space:nowrap}
+.tc .te{position:absolute;left:36px;top:204px;font:600 28px Poppins;white-space:nowrap}
+.fm{position:absolute;top:198px;width:44px;height:44px;border-radius:22px;display:flex;align-items:center;justify-content:center;font:700 18px Poppins;color:#fff}
+/* scene X: the criticism */
+.ee{position:absolute;top:280px;width:784px;height:392px;border-radius:28px}
+.ee .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line)}
 .ee .eic{position:absolute;left:44px;top:44px;width:96px;height:96px;border-radius:48px;background:var(--paper);display:flex;align-items:center;justify-content:center}
 .ee .et{position:absolute;left:172px;top:40px;font-size:64px;white-space:nowrap}
 .ee .em{position:absolute;left:174px;top:124px;font:600 30px Poppins;white-space:nowrap}
-.ee .hr{position:absolute;left:44px;right:44px;top:200px;height:2px;background:var(--line)}
-.ee .ex{position:absolute;left:44px;top:236px;font:600 17px Poppins;letter-spacing:.16em;white-space:nowrap}
-.ee .ev{position:absolute;left:44px;top:276px;font:600 34px Poppins;white-space:nowrap}
-.ee .pill{left:44px;top:340px;background:#F6E3DC;color:#B5482F}
-#both{position:absolute;left:160px;top:722px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:22px;padding:0 40px}
-#bothW{position:relative;flex:1;height:56px}
-#bothW .tx{position:absolute;left:0;top:0;line-height:56px;color:#E9D9B5}
+.ee .hr{position:absolute;left:44px;right:44px;top:208px;height:2px;background:var(--line)}
+.ee .ex{position:absolute;left:44px;top:244px;font:600 17px Poppins;letter-spacing:.16em;white-space:nowrap}
+.ee .ev{position:absolute;left:44px;top:288px;font:600 34px Poppins;white-space:nowrap}
+#both{position:absolute;left:160px;top:704px;width:1600px;height:112px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;gap:22px}
 #both .tx{font-size:40px;white-space:nowrap}
-/* scene X: management by exception */
-#rep{left:160px;top:270px;width:784px;height:580px}
-.xr{position:absolute;left:32px;width:720px;height:96px;border-radius:20px;background:var(--paper)}
-.xr i{position:absolute;left:20px;top:20px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
-.xr .xt{position:absolute;left:100px;top:26px;font:600 30px Poppins;white-space:nowrap}
-.xr .xg{position:absolute;right:20px;top:24px;height:48px;padding:0 18px;border-radius:24px;display:flex;align-items:center;gap:8px;font:600 20px Poppins;letter-spacing:.06em;white-space:nowrap;background:#fff;color:var(--muted)}
-#desk{left:976px;top:270px;width:784px;height:580px}
-#dkT{position:absolute;left:40px;top:76px;font-size:64px;line-height:1.1;white-space:nowrap}
-#dkS{position:absolute;left:42px;top:162px;font:500 30px Poppins;color:var(--ink2);white-space:nowrap}
-#desk .hr{position:absolute;left:40px;right:40px;top:226px;height:2px;background:var(--line)}
-#dkAv{right:40px;top:40px;background:var(--gold)}
-.dt{position:absolute;left:40px;width:704px;height:130px;border-radius:22px;background:var(--paper)}
-.dt i{position:absolute;left:24px;top:33px;width:64px;height:64px;border-radius:32px;background:#fff;display:flex;align-items:center;justify-content:center}
-.dt .dl{position:absolute;left:112px;top:28px;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
-.dt .bt{position:absolute;left:112px;top:54px;font-size:40px;line-height:52px;white-space:nowrap}
-#dkS2{position:absolute;left:42px;top:162px;font:500 30px Poppins;color:var(--ink2);white-space:nowrap}
-#sweep{position:absolute;left:0;top:0;width:1920px;height:1080px;background:var(--ink);z-index:40}
+/* statement on navy */
+#stmt{position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:41}
+#st1{position:absolute;left:0;width:1920px;top:400px;text-align:center;font:500 52px Poppins;color:#E9D9B5;white-space:nowrap}
+#st2{position:absolute;left:0;width:1920px;top:492px;text-align:center;font-size:112px;color:#fff;white-space:nowrap}
 #sweep b{position:absolute;left:0;top:0;width:10px;height:1080px;background:var(--gold)}
 /* quiz */
 .opt{position:absolute;top:470px;width:376px;height:230px;border-radius:28px}
@@ -151,102 +141,248 @@
 #next{position:absolute;left:160px;top:762px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:24px;padding:0 32px}
 #next .nc{height:44px;padding:0 18px;border-radius:22px;background:var(--gold);display:flex;align-items:center;font:700 18px Poppins;letter-spacing:.14em;color:#fff;white-space:nowrap}
 #next .nt{font:600 34px Poppins;white-space:nowrap;flex:1}
+/* ===== v2: illustrated steel works, motion study, standard, at work today, human side ===== */
+#ill{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+.tagp{position:absolute;top:212px;height:52px;padding:0 22px;border-radius:26px;background:var(--ink);color:#fff;display:flex;align-items:center;font:600 24px Poppins;white-space:nowrap}
+#mL,#mR{top:270px;height:580px;overflow:hidden}
+#mL{left:160px;width:784px}#mR{left:976px;width:784px}
+.mIn{left:0;top:0;width:784px;height:580px}
+.mav{position:absolute;left:48px;top:30px;width:56px;height:56px;border-radius:28px;background-size:cover;background-position:center;box-shadow:0 0 0 3px #14213D}
+.mlb{left:124px;top:49px}
+.mrd{position:absolute;right:48px;top:22px;font-size:56px;line-height:1;white-space:nowrap}
+.mplan{position:absolute;left:48px;top:108px}
+.mbar{position:absolute;left:48px;top:384px;width:688px;height:36px;border-radius:12px;background:#EEE8DB;overflow:hidden}
+.mbar i{position:absolute;top:0;height:36px}
+.mtk{position:absolute;top:432px;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+.mst{position:absolute;left:48px;top:470px;height:64px;padding:0 26px;border-radius:32px;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+.mst .tm{margin-left:6px;opacity:.75}
+#zA{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+#zR{left:976px;top:270px;width:784px;height:274px}
+#zC{left:976px;top:576px;width:784px;height:274px}
+.zs{position:absolute;top:76px;width:160px;height:150px;border-radius:18px;background:var(--paper)}
+.zs .zn{position:absolute;left:0;width:160px;top:16px;text-align:center;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+.zs .zi{position:absolute;left:60px;top:46px;width:40px;height:40px}
+.zs .zt{position:absolute;left:0;width:160px;top:98px;text-align:center;font:600 26px Poppins;white-space:nowrap}
+.zc{position:absolute;top:76px;width:104px;height:150px;border-radius:18px;background:var(--paper)}
+.zc .cn{position:absolute;left:0;width:104px;top:16px;text-align:center;font:600 15px Poppins;letter-spacing:.12em;white-space:nowrap;color:var(--muted)}
+.zc .ci{position:absolute;left:32px;top:48px;width:40px;height:40px}
+.zc .ct{position:absolute;left:0;width:104px;top:98px;text-align:center;font:600 28px Poppins;white-space:nowrap}
+#zPill{position:absolute;right:36px;top:20px;height:44px;padding:0 18px;border-radius:22px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:10px;font:600 20px Poppins;white-space:nowrap}
+#kl{left:160px;top:270px;width:624px;height:580px}
+#kp{left:816px;top:270px;width:944px;height:580px}
+.kr{position:absolute;left:24px;width:576px;height:80px;border-radius:20px}
+.kr .bg{position:absolute;inset:0;border-radius:20px;background:var(--paper)}
+.kr .rn{position:absolute;left:24px;top:27px;font:700 22px Poppins;letter-spacing:.04em}
+.kr .ri{position:absolute;left:76px;top:12px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
+.kr .rt{position:absolute;left:156px;top:21px;font:600 28px Poppins;white-space:nowrap}
+.ka{position:absolute;left:48px;width:848px;height:96px}
+.ka i{position:absolute;left:0;top:12px;width:72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.ka .kl{position:absolute;left:100px;top:12px;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.ka .kt{position:absolute;left:100px;top:42px;font:600 30px Poppins;white-space:nowrap}
+#xs{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+#xw{left:976px;top:270px;width:784px;height:580px}
+.xc{position:absolute;height:48px;padding:0 20px;border-radius:24px;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#xban{position:absolute;top:496px;height:52px;padding:0 22px;border-radius:26px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#both{top:470px;height:140px}
+#both .tx{font-size:52px}
 .cap{font:600 38px Poppins;color:var(--ink);background:rgba(255,255,255,.96);padding:12px 30px;border-radius:40px;box-shadow:0 10px 30px -10px rgba(20,33,61,.25)}
 .cap .cw{color:#5B647A}.cap .cw.on{color:var(--ink)}.cap .cw.act{color:var(--gold)}
+/* ===== Ep 19: controlling ===== */
+#qcard{left:840px;top:270px;width:920px;height:274px}
+#ncard{left:840px;top:576px;width:920px;height:274px}
+#planBig{position:absolute;left:36px;top:76px;font-size:84px;line-height:1;white-space:nowrap}
+#planSub{position:absolute;left:40px;top:172px;font:500 28px Poppins;color:var(--ink2);white-space:nowrap}
+#qAsk{position:absolute;right:36px;top:164px;height:56px;padding:0 24px;border-radius:28px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+.ncol{position:absolute;top:76px;width:264px;height:170px;border-radius:20px;background:var(--paper)}
+.ncol .nl{position:absolute;left:24px;top:20px;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+.wch{position:absolute;top:84px;height:48px;padding:0 18px;border-radius:24px;display:flex;align-items:center;font:600 24px Poppins;white-space:nowrap;background:#fff}
+#cnt0{position:absolute;left:24px;top:56px;font-size:84px;line-height:1;color:#B5482F;white-space:nowrap}
+#def{left:976px;top:270px;width:784px;height:274px}
+#fix{left:976px;top:576px;width:784px;height:274px}
+#fix .stp{font-size:24px;padding:0 22px}
+.dfl{position:absolute;left:36px;font-size:46px;white-space:nowrap}
+#loop{left:160px;top:270px;width:784px;height:580px}
+#chart{left:976px;top:270px;width:784px;height:580px}
+#lpS{position:absolute;left:48px;top:84px;overflow:visible}
+#lpN{position:absolute;left:0;width:784px;top:300px;text-align:center;font:600 18px Poppins;letter-spacing:.16em;color:var(--gold);white-space:nowrap}
+#lpT{position:absolute;left:0;width:784px;top:326px;text-align:center;font-size:36px;white-space:nowrap}
+#chS{position:absolute;left:48px;top:84px}
+.chp{position:absolute;left:48px;top:470px;height:56px;padding:0 22px;border-radius:28px;display:flex;align-items:center;gap:12px;font:600 24px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+#tw0,#tw1{top:270px;width:784px;height:400px}
+#tw0{left:160px}#tw1{left:976px}
+.twi{position:absolute;left:48px;top:48px;width:96px;height:96px;border-radius:48px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.twt{position:absolute;left:172px;top:44px;font-size:64px;white-space:nowrap}
+.tws{position:absolute;left:174px;top:126px;font:600 30px Poppins;white-space:nowrap}
+.twh{position:absolute;left:48px;right:48px;top:208px;height:2px;background:var(--line)}
+.twx{position:absolute;left:48px;top:240px;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.pp2{position:absolute;height:56px;padding:0 22px;border-radius:28px;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+#twLink{position:absolute;left:912px;top:422px;width:96px;height:96px;border-radius:48px;background:var(--gold);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 10px #F5F1E8}
+#twin{position:absolute;left:160px;top:702px;width:1600px;height:112px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;gap:22px}
+#twin .tx{font-size:44px;white-space:nowrap}
+#tm{left:160px;top:270px;width:1600px;height:580px}
+#tmS{position:absolute;left:48px;top:84px}
+.tmc{position:absolute;top:196px;width:480px;height:336px}
+.tmc .av{left:0;top:0}
+.tmc .tl{position:absolute;left:96px;top:4px;font:600 17px Poppins;letter-spacing:.16em;white-space:nowrap}
+.tmc .tt{position:absolute;left:96px;top:30px;font-size:40px;white-space:nowrap}
+.tmc .ts{position:absolute;left:0;top:112px;font:500 26px Poppins;color:var(--ink2);white-space:nowrap}
+.tmc .te{position:absolute;left:0;top:168px;width:448px;height:120px;border-radius:20px;background:var(--paper)}
+.tmc .te i{position:absolute;left:24px;top:28px;width:64px;height:64px;border-radius:32px;background:#fff;display:flex;align-items:center;justify-content:center}
+.tmc .te span{position:absolute;left:108px;top:22px;font:600 26px/1.3 Poppins;width:320px}
+#exc{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+#tay{left:976px;top:270px;width:784px;height:580px}
+#exS{position:absolute;left:48px;top:84px}
+.exn{position:absolute;top:470px;height:56px;padding:0 22px;border-radius:28px;display:flex;align-items:center;gap:12px;font:600 24px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+.exn b{font-size:28px}
+#tname{position:absolute;left:0;width:784px;top:352px;text-align:center;font-size:52px;white-space:nowrap}
+#ttag{position:absolute;left:0;width:784px;top:428px;text-align:center;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+#tpill{position:absolute;top:484px;height:56px;padding:0 24px;border-radius:28px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:12px;font:600 24px Poppins;white-space:nowrap}
+.gbar{position:absolute;left:48px;width:688px;height:110px}
+.gbar .bl{position:absolute;left:0;top:0;font:600 22px Poppins;color:var(--muted);white-space:nowrap}
+.gbar .bt{position:absolute;left:0;top:38px;height:56px;border-radius:14px}
+.gbar .bv{position:absolute;top:44px;font-size:36px;white-space:nowrap}
+#gcup{position:absolute;left:48px;top:340px}
+#gpill{position:absolute;left:48px;top:430px;height:52px;padding:0 22px;border-radius:26px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#gsrc{left:48px;top:516px;font-size:16px}
 </style></head><body>
 <div id="stage">
   <div id="bgv"></div>
   <div id="cam">
-    <!-- title + header (shared elements) -->
     <div class="chip" id="eyebrow"><i></i>EP 19 · PRINCIPLES OF MANAGEMENT</div>
     <div class="serif" id="title"><span class="acc">Controlling</span></div>
-    <div id="sub">Explained with one chai stall</div>
+    <div id="sub">Checking the plan, explained with one chai stall</div>
     <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#B8862F" stroke-width="4" stroke-linecap="round"/></svg>
     <div class="chip ghost" id="exChip">EXAMPLE FIGURES</div>
 
-    <!-- scene A: a plan nobody checks -->
+    <!-- A: is the plan working? -->
     <div id="sA">
       <div class="card" id="hero">
         <svg id="awn" width="616" height="90" style="position:absolute;left:0;top:0"><g id="awnG"></g></svg>
-        <div id="sign" style="position:absolute;left:0;width:616px;top:104px;text-align:center;font:600 18px Poppins;letter-spacing:.2em;color:var(--gold)">CHAI CORNER · OUTLET 2</div>
+        <div id="sign" style="position:absolute;left:0;width:616px;top:104px;text-align:center;font:600 18px Poppins;letter-spacing:.2em;color:var(--muted)">CHAI CORNER · BUS STAND</div>
         <svg id="stall" width="616" height="320" style="position:absolute;left:0;top:130px">
           <g id="steam" fill="none" stroke="#C9BFAE" stroke-width="5" stroke-linecap="round">
             <path id="s1" d="M128 116 c-12 -14 12 -24 0 -40"/><path id="s2" d="M152 110 c-12 -14 12 -24 0 -44"/><path id="s3" d="M176 116 c-12 -14 12 -24 0 -40"/>
           </g>
-          <g id="ravi"><circle cx="308" cy="98" r="44" fill="#14213D"/><path d="M220 210 c0 -48 40 -74 88 -74 s88 26 88 74 z" fill="#14213D"/><path d="M286 140 l22 26 l22 -26" fill="none" stroke="#B8862F" stroke-width="6" stroke-linejoin="round"/></g>
+          <clipPath id="rclip"><rect x="0" y="-20" width="616" height="300"/></clipPath><image id="ravi" clip-path="url(#rclip)" href="../../assets/illustrations/mba/meena.png" x="180" y="-6" width="256" height="317" preserveAspectRatio="xMidYMin meet"/>
           <rect x="60" y="196" width="496" height="92" rx="16" fill="#EEE8DB"/>
           <rect x="60" y="196" width="496" height="10" rx="5" fill="#B8862F"/>
           <g id="kettle" transform="translate(152 196)"><path d="M-40 0 v-54 a22 22 0 0 1 22 -22 h36 a22 22 0 0 1 22 22 v54 z" fill="#3A4560"/><path d="M40 -46 q26 0 26 -26" fill="none" stroke="#3A4560" stroke-width="8" stroke-linecap="round"/><rect x="-14" y="-88" width="28" height="12" rx="6" fill="#3A4560"/></g>
           <g id="cups"></g>
         </svg>
-        <div class="serif" id="hname">Ravi</div>
-        <div id="htag">OWNER · CHAI CORNER</div>
+        <div class="serif" id="hname">Meena</div>
+        <div id="htag">RUNS OUTLET 2 · MONTH ONE</div>
       </div>
-      <div class="card" id="plan">
-        <div class="lbl" style="left:36px;top:34px">THE PLAN FOR OUTLET 2</div>
-        <div class="serif" id="pT">500 cups a day</div>
-        <div id="pQ"></div>
-        <div class="pill" id="pDay"><span id="pDI"></span><span>Open for 1 month</span></div>
-        <div class="pill" id="pNo"><span id="pNI"></span><span>Never checked</span></div>
-      </div>
-      <div class="card" id="wrong">
-        <div class="lbl" style="left:36px;top:34px">WHAT REALLY HAPPENS</div>
-        <div id="jobRow"></div>
+      <div class="card" id="qcard"><div class="lbl" style="left:36px;top:34px">THE PLAN</div>
+        <div class="serif" id="planBig">500 <span class="acc">cups a day</span></div><div id="planSub">Set by Ravi on day one</div>
+        <div id="qAsk"><span id="qAskI"></span>Is it working?</div></div>
+      <div class="card" id="ncard"><div class="lbl" style="left:36px;top:34px">WHAT NOBODY CHECKED</div>
+        <div class="ncol" id="nc0" style="left:36px"><div class="nl">CUP FILL</div><svg class="abs" id="fillS" style="left:20px;top:56px" width="224" height="100"></svg></div>
+        <div class="ncol" id="nc1" style="left:328px"><div class="nl">WAITING TIME</div><div class="wch" id="wc0" style="left:24px">1 min</div><div class="wch" id="wc1" style="left:136px;color:#B5482F">5 min</div></div>
+        <div class="ncol" id="nc2" style="left:620px"><div class="nl">CUPS COUNTED</div><div class="serif" id="cnt0">0</div></div>
       </div>
     </div>
 
-    <!-- scene D: what is controlling -->
+    <!-- D: what controlling is -->
     <div id="sD">
-      <div class="serif" id="dq">What is <span class="acc">controlling?</span></div>
-      <div class="card" id="defbar"><span id="defI"></span><span class="tx">Controlling = check <span class="acc">actual</span> against <span class="acc">the plan</span>, then fix the gap</span></div>
-      <div id="qRow"></div>
+      <div class="serif" id="dq">This is <span class="acc">controlling</span></div>
+      <div class="card" id="ill"><div class="abs" id="illIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:48px;top:40px">EVERY EVENING · KABIR CHECKS THE NUMBERS</div>
+        <img id="illImg" src="../../assets/illustrations/mba/scene-kabir-accounts-cut.png" style="position:absolute;left:92px;top:100px;width:600px;height:450px">
+      </div><div class="tagp" id="tgK">Kabir</div><div class="tagp" id="tgC">Cash box</div><div class="tagp" id="tgL">Ledger</div></div>
+      <div class="card" id="def"><div class="lbl" style="left:36px;top:34px">CONTROLLING MEANS</div>
+        <div class="serif dfl" id="df1" style="top:84px">Checking the real work</div><div class="serif dfl" id="df2" style="top:146px"><span class="acc">against the plan</span></div></div>
+      <div class="card" id="fix"><div class="lbl" style="left:36px;top:34px">AND CLOSING THE GAP</div>
+        <div class="stp" id="fx0" style="top:84px"></div><div class="stp" id="fx1" style="top:84px"></div><div class="stp" id="fx2" style="top:84px"></div>
+        <div class="abs" id="fxT" style="left:36px;top:180px;font:600 30px Poppins;white-space:nowrap">Plan, check, <span class="acc">fix, and check again</span></div></div>
     </div>
 
-    <!-- scene F: five steps with the gauge -->
+    <!-- F: the control loop + the chart -->
     <div id="sF">
-      <div class="card" id="gcard">
-        <svg id="gSvg" width="624" height="580"><g id="gG"></g></svg>
-        <div class="serif" id="gVal">?</div>
-                <div id="gStat"><div class="pill" id="gPill"><span id="gPI"></span><span id="gPT">Not measured</span></div></div>
-        <div id="cover"><span id="coverI"></span><span id="coverT">OUTLET 2 · DAILY CUPS</span><b></b></div>
+      <div class="card" id="loop"><div class="lbl" style="left:48px;top:40px">THE CONTROL LOOP</div>
+        <svg id="lpS" width="688" height="470"><g id="lpG"></g></svg>
+        <div id="lpN">STEP 1 OF 5</div><div class="serif" id="lpT">Set the standard</div>
       </div>
-      <div class="card" id="fp"><div id="fPans"></div></div>
+      <div class="card" id="chart"><div class="lbl" style="left:48px;top:40px">OUTLET 2 · CUPS SOLD PER DAY</div>
+        <svg id="chS" width="688" height="370"><g id="chG"></g></svg>
+        <div class="chp" id="cp0"></div><div class="chp" id="cp1" style="background:#B8862F;color:#fff"></div><div class="chp" id="cp2" style="background:#14213D;color:#fff"></div>
+      </div>
     </div>
 
-    <!-- scene L: feedback loop -->
-    <div id="sL">
-      <svg id="cyc" width="1000" height="1080"><circle id="ringC" cx="536" cy="565" r="220" fill="none" stroke="#E2DACB" stroke-width="4"/><path id="ringG" fill="none" stroke="#B8862F" stroke-width="6" stroke-linecap="round"/><g id="arrows"></g></svg>
-      <div id="hub"><b id="hubI"></b><span>LOOP</span></div>
-      <div id="nodes"></div>
-      <div class="card" id="panel"><div class="pn" id="lpn"><div class="ps">THE FEEDBACK LOOP</div><div class="serif pt">Check, fix, repeat</div><div class="pm">Controlling never stops</div><div class="hr"></div><div class="px">AT CHAI CORNER</div><div class="pe"><i id="lpI"></i><span>Next month, Kabir counts again</span></div></div></div>
+    <!-- W: the twins -->
+    <div id="sW">
+      <div class="card" id="tw0"><div class="twi" id="tw0i"></div><div class="serif twt">Planning</div><div class="tws">Sets the target</div><div class="twh"></div><div class="twx">AT CHAI CORNER</div><div class="pp2" id="tw0p" style="left:48px;top:284px"></div></div>
+      <div class="card" id="tw1"><div class="twi" id="tw1i"></div><div class="serif twt">Controlling</div><div class="tws">Checks if you hit it</div><div class="twh"></div><div class="twx">AT CHAI CORNER</div><div class="pp2" id="tw1p" style="left:48px;top:284px"></div></div>
+      <div id="twLink"></div>
+      <div id="twin"><span id="twinI"></span><span class="serif tx">The twins of <span style="color:#E9B95C">management</span></span></div>
     </div>
 
-    <!-- scene P: planning and controlling are twins -->
-    <div id="sP"><div id="eRow"></div><div id="both"><span class="serif tx">Planning</span><span class="serif tx" style="color:#B8862F">+</span><span class="serif tx">Controlling</span><span class="serif tx" style="color:#B8862F">=</span><span id="bothW"><span class="serif tx" id="bothA">Always together</span><span class="serif tx" id="bothB">The Siamese twins of management</span></span></div></div>
+    <!-- B: three moments -->
+    <div id="sB">
+      <div class="card" id="tm"><div class="lbl" style="left:48px;top:40px">CONTROL AT THREE MOMENTS</div>
+        <svg id="tmS" width="1504" height="90"><g id="tmG"></g></svg>
+        <div id="tmCols"></div>
+      </div>
+    </div>
 
-    <!-- scene X: management by exception -->
+    <!-- E: management by exception -->
+    <div id="sE">
+      <div class="card" id="exc"><div class="abs" id="excIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:48px;top:40px">ONLY THE BIG GAPS REACH RAVI</div>
+        <svg id="exS" width="688" height="370"><g id="exG"></g></svg>
+        <div class="exn" id="en0" style="left:48px"></div><div class="exn" id="en1"></div>
+      </div></div>
+      <div class="card" id="tay">
+        <svg id="port" width="784" height="320" style="position:absolute;left:0;top:28px">
+          <defs><clipPath id="pc"><circle cx="392" cy="170" r="140"/></clipPath></defs>
+          <circle cx="392" cy="170" r="140" fill="#EEE8DB"/>
+          <g clip-path="url(#pc)"><image href="../../assets/illustrations/mba/taylor-src.png" x="159" y="-7" width="452" height="560"/></g><circle cx="392" cy="170" r="140" fill="none" stroke="#B8862F" stroke-width="6"/>
+        </svg>
+        <div class="serif" id="tname">F.W. Taylor</div>
+        <div id="ttag">SHOP MANAGEMENT · 1903</div>
+        <div id="tpill"><span id="tpillI"></span>The exception principle</div>
+      </div>
+    </div>
+
+    <!-- K: at work today -->
+    <div id="sK">
+      <div class="card" id="kl"><div class="lbl" style="left:48px;top:40px">AT WORK TODAY</div><div id="kRows"></div></div>
+      <div class="card" id="kp"><div id="kPans"></div></div>
+    </div>
+
+    <!-- X: the human side -->
     <div id="sX">
-      <div class="card" id="rep"><div class="lbl" style="left:36px;top:36px">TODAY'S REPORT · OUTLET 2</div><div id="xRows"></div></div>
-      <div class="card" id="desk">
-        <div class="lbl" style="left:40px;top:40px">RAVI'S DESK</div>
-        <div class="avc" id="dkAv">R</div>
-        <div class="serif" id="dkT">By <span class="acc">exception</span></div>
-        <div id="dkS">Only big deviations reach Ravi</div>
-        <div class="hr"></div>
-        <div id="dkS2">Taylor called it the <span class="acc">exception principle</span></div>
-        <div class="dt" id="dtA" style="top:258px"><i></i><div class="dl">TEAM FIXES</div><span class="serif bt" id="a0">Nothing yet</span><span class="serif bt" id="a1">3 small slips</span></div>
-        <div class="dt" id="dtB" style="top:412px"><i></i><div class="dl">NEEDS RAVI</div><span class="serif bt" id="b0">Nothing yet</span><span class="serif bt" id="b1">Sales down 20%</span></div>
+      <div class="card" id="xs"><div class="abs" id="xsIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:48px;top:40px">CAN CONTROL GO TOO FAR?</div>
+        <svg id="scl" width="688" height="250" style="position:absolute;left:48px;top:84px">
+          <rect x="254" y="226" width="180" height="20" rx="10" fill="#14213D"/>
+          <rect x="338" y="40" width="12" height="190" fill="#14213D"/>
+          <g id="panL"></g><g id="panR"></g>
+          <g id="beam"><rect x="64" y="34" width="560" height="12" rx="6" fill="#14213D"/></g>
+          <circle cx="344" cy="40" r="14" fill="#B8862F"/>
+        </svg>
+        <div class="lbl" id="xgL" style="left:48px;top:352px;color:#B8862F">THE GOOD SIDE</div>
+        <div class="lbl" id="xhL" style="left:408px;top:352px;color:#B5482F">THE HARD SIDE</div>
+        <div id="xChips"></div>
+      </div></div>
+      <div class="card" id="xw">
+        <div class="lbl" style="left:48px;top:40px">CHASING THE NUMBER</div>
+        <div class="gbar" id="gb0" style="top:96px"><div class="bl">Cups sold (the number)</div><div class="bt"></div><div class="serif bv"></div></div>
+        <div class="gbar" id="gb1" style="top:216px"><div class="bl">Full cups (the real goal)</div><div class="bt"></div><div class="serif bv"></div></div>
+        <svg id="gcup" width="688" height="70"></svg>
+        <div id="gpill"><span id="gpillI"></span>Goodhart's law</div>
+        <div class="lbl" id="gsrc">CHARLES GOODHART · BRITISH ECONOMIST · 1975</div>
       </div>
+      <div class="chip ghost" id="lesson" style="left:160px;top:390px">THE LESSON</div><div id="both"><span id="bothI"></span><span class="serif tx">Measure what matters</span><span class="serif tx" style="color:#B8862F">+</span><span class="serif tx" style="color:#E9D9B5">trust your people</span></div>
     </div>
 
     <!-- quick check -->
     <div id="quiz">
       <div class="chip" id="qchip" style="left:160px;top:120px"><i></i>QUICK CHECK</div>
-      <div class="serif qq" id="qq1" style="top:224px">Kabir calls Ravi only if sales drop over 10%.</div><div class="serif qq acc" id="qq2" style="top:304px">Which idea is this?</div>
+      <div class="serif qq" id="qq1" style="top:224px">Asha tastes the chai while it boils.</div><div class="serif qq acc" id="qq2" style="top:304px">Which type of control is this?</div>
       <svg id="ring" viewBox="0 0 150 150"><circle cx="75" cy="75" r="66" fill="#fff" stroke="#E2DACB" stroke-width="8"/><circle id="ringA" cx="75" cy="75" r="66" fill="none" stroke="#B8862F" stroke-width="8" stroke-linecap="round" transform="rotate(-90 75 75)"/></svg>
       <div class="serif" id="ringN" style="left:1610px;top:236px;position:absolute"></div>
       <div id="opts"></div>
-      <div id="take"><span id="takeI"></span><span class="serif tx" id="takeT">Only big problems reach the manager</span></div>
+      <div id="take"><span id="takeI"></span><span class="serif tx" id="takeT">Checks the work while it happens = Concurrent</span></div>
     </div>
 
     <!-- recap -->
@@ -257,7 +393,7 @@
       <div id="next"><span class="nc">NEXT · EP 20</span><span class="nt">Management by Objectives (MBO)</span><span id="nextI"></span></div>
     </div>
   </div>
-  <div id="stmt"><div id="st1">A plan nobody checks is just a guess.</div><div class="serif" id="st2">He needs <span style="color:#E9B95C">controlling.</span></div></div>
+  <div id="stmt"><div id="st1">A plan nobody checks</div><div class="serif" id="st2">is just a <span style="color:#E9B95C">guess.</span></div></div>
   <div id="sweep"><b></b></div>
   <div id="prog"><i></i></div>
   <div class="cap" id="cap"></div>
