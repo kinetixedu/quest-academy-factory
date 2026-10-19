@@ -20,108 +20,111 @@
 .lbl{position:absolute;font:600 18px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
 .abs{position:absolute}
 .pill{position:absolute;height:48px;padding:0 20px;border-radius:24px;display:flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
-.avc{position:absolute;width:64px;height:64px;border-radius:32px;display:flex;align-items:center;justify-content:center;font:700 28px Poppins;color:#fff;background:var(--ink)}
-.ic64{position:absolute;width:64px;height:64px;border-radius:32px;background:var(--paper);display:flex;align-items:center;justify-content:center}
-.ic72{position:absolute;width:72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
-.vr{position:absolute;width:2px;background:var(--line)}
-.hrl{position:absolute;height:2px;background:var(--line)}
-/* scene A: one style, two times of day */
+.pill.bad{background:#F6E3DC;color:#B5482F}
+/* scene A: the stall */
 #hero{left:160px;top:270px;width:616px;height:580px;overflow:hidden}
 #hname{position:absolute;left:0;width:616px;top:452px;text-align:center;font-size:44px}
 #htag{position:absolute;left:0;width:616px;text-align:center;top:516px;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
-#tc{left:840px;top:270px;width:920px;height:274px}
-#rc{left:840px;top:576px;width:920px;height:274px}
-.tbig{position:absolute;left:36px;top:62px;font-size:88px;line-height:1.1;white-space:nowrap}
-#stName{position:absolute;left:572px;top:80px;font-size:48px;white-space:nowrap}
-#r1t{position:absolute;left:36px;top:66px;font-size:72px;line-height:1.1;white-space:nowrap}
-#team6{position:absolute;left:480px;top:56px;width:404px;height:120px}
-#team6 .tp{position:absolute;top:48px;width:40px;height:48px;color:var(--ink2)}
-#team6 .bb{position:absolute;top:0;width:40px;height:36px}
-#wN{position:absolute;left:36px;top:60px;font-size:104px;line-height:1;width:220px;color:var(--red)}
-#ppl{position:absolute;left:300px;top:58px;width:584px;height:120px}
-#ppl .pp{position:absolute;width:40px;height:48px;color:var(--red)}
+#sweep{position:absolute;left:0;top:0;width:1920px;height:1080px;background:var(--ink);z-index:40}
+/* scene A: six ways */
+#ways{left:840px;top:270px;width:920px;height:274px}
+#ask{left:840px;top:576px;width:920px;height:274px}
+.cupt{position:absolute;top:76px;width:128px;height:150px;border-radius:18px;background:var(--paper)}
+.cupt .cn{position:absolute;left:0;width:128px;top:16px;text-align:center;font:600 16px Poppins;letter-spacing:.14em;white-space:nowrap;color:var(--muted)}
+.cupt .ci{position:absolute;left:44px;top:48px;width:40px;height:40px}
+.cupt .ct{position:absolute;left:0;width:128px;top:98px;text-align:center;font:600 28px Poppins;white-space:nowrap}
+#askT{position:absolute;left:36px;top:150px;font-size:64px;white-space:nowrap}
+/* scene D: Taylor + the book */
+#dq{position:absolute;left:0;width:1920px;top:470px;text-align:center;font-size:88px;white-space:nowrap}
+#tay{left:160px;top:270px;width:616px;height:580px;overflow:hidden}
+#tname{position:absolute;left:0;width:616px;top:352px;text-align:center;font-size:52px;white-space:nowrap}
+#ttag{position:absolute;left:0;width:616px;top:428px;text-align:center;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+#father{position:absolute;top:484px;height:56px;padding:0 24px;border-radius:28px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:12px;font:600 24px Poppins;white-space:nowrap}
+#book{left:840px;top:270px;width:920px;height:274px}
+#idea{left:840px;top:576px;width:920px;height:274px}
+.bk{position:absolute;left:236px;font-size:44px;white-space:nowrap}
+.stp{position:absolute;top:18px;height:64px;padding:0 28px;border-radius:32px;display:flex;align-items:center;gap:12px;font:600 28px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+/* scene B: the shovel test */
+#shv{left:160px;top:270px;width:784px;height:580px}
+#ton{left:976px;top:270px;width:784px;height:580px}
+#best{position:absolute;top:92px;height:56px;padding:0 24px;border-radius:28px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+.mat{position:absolute;width:336px;text-align:center;top:432px;font:600 18px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.ld{position:absolute;top:472px;height:52px;padding:0 22px;border-radius:26px;display:flex;align-items:center;font:600 26px Poppins;white-space:nowrap}
+.rc .lbl{left:48px;top:48px}
+.rc .big{position:absolute;right:48px;top:30px;font-size:64px;color:var(--gold);white-space:nowrap}
+.bar{position:absolute;left:48px;width:688px;height:120px}
+.bar .bl{position:absolute;left:0;top:0;font:600 22px Poppins;color:var(--muted);white-space:nowrap}
+.bar .bt{position:absolute;left:0;top:40px;height:64px;border-radius:16px;background:#E7E0D2}
+.bar .bv{position:absolute;top:44px;font-size:44px;white-space:nowrap}
+#tonHr{position:absolute;left:48px;right:48px;top:462px;height:2px;background:var(--line)}
+#tonSrc{left:48px;top:494px;font-size:17px}
+/* scene M: time and motion study */
+#watch{left:160px;top:270px;width:616px;height:580px}
+#swv{position:absolute;left:168px;top:84px}
+#rd{position:absolute;left:0;width:616px;top:396px;text-align:center;font-size:84px;line-height:1;white-space:nowrap}
+#saved{position:absolute;top:498px;height:52px;padding:0 22px;border-radius:26px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#steps{left:840px;top:270px;width:920px;height:580px}
+.sr{position:absolute;left:24px;width:872px;height:80px;border-radius:20px}
+.sr .bg{position:absolute;inset:0;border-radius:20px;background:var(--paper)}
+.sr .rn{position:absolute;left:24px;top:26px;font:700 22px Poppins;letter-spacing:.04em}
+.sr .ri{position:absolute;left:76px;top:12px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
+.sr .rt{position:absolute;left:156px;top:20px;font:600 30px Poppins;white-space:nowrap}
+.sr .st{position:absolute;right:28px;top:20px;font:600 30px Poppins;white-space:nowrap;text-align:right}
+.sr .sx{position:absolute;left:150px;top:39px;height:3px;border-radius:2px;background:#B5482F}
+/* scene P: four principles */
+#pl{left:160px;top:270px;width:624px;height:580px}
+.pr{position:absolute;left:24px;width:576px;height:100px;border-radius:20px}
+.pr .bg{position:absolute;inset:0;border-radius:20px;background:var(--paper)}
+.pr .rn{position:absolute;left:24px;top:36px;font:700 22px Poppins;letter-spacing:.04em}
+.pr .ri{position:absolute;left:76px;top:22px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
+.pr .rt{position:absolute;left:156px;top:30px;font:600 30px Poppins;white-space:nowrap}
+#pp{left:816px;top:270px;width:944px;height:580px}
+.pn{position:absolute;inset:0}
+.pn .ps{position:absolute;left:48px;top:48px;font:600 20px Poppins;letter-spacing:.16em;color:var(--gold);white-space:nowrap}
+.pn .pt{position:absolute;left:48px;top:88px;font-size:84px;line-height:1.1;white-space:nowrap}
+.pn .pm{position:absolute;left:48px;top:204px;font:500 36px Poppins;color:var(--ink2);white-space:nowrap}
+.pn .hr{position:absolute;left:48px;right:48px;top:290px;height:2px;background:var(--line)}
+.pn .px{position:absolute;left:48px;top:326px;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.pn .pe{position:absolute;left:48px;top:372px;width:848px;display:flex;align-items:center;gap:24px}
+.pn .pe i{flex:0 0 72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.pn .pe span{font:600 32px/1.25 Poppins;white-space:nowrap}
+.pv{position:absolute;left:48px;top:372px;width:848px;height:176px}
+.av{position:absolute;width:72px;height:72px;border-radius:36px;display:flex;align-items:center;justify-content:center;font:700 30px Poppins;color:#fff;background:var(--ink)}
+.av.face{color:transparent;background-size:cover!important;background-position:center!important;box-shadow:0 0 0 4px var(--ink)}
+.avn{position:absolute;width:160px;text-align:center;font:600 24px Poppins;white-space:nowrap}
+.stair{position:absolute;width:150px;border-radius:16px 16px 0 0;background:var(--paper)}
+.stair span{position:absolute;left:0;width:150px;bottom:14px;text-align:center;font:600 24px Poppins;white-space:nowrap}
+/* scene K: more tools (2 x 2) */
+.tc{position:absolute;width:784px;height:270px}
+.tc .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line);box-shadow:0 18px 40px -12px rgba(20,33,61,.14)}
+.tc .ti{position:absolute;left:36px;top:36px;width:72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.tc .tt{position:absolute;left:132px;top:30px;font-size:44px;white-space:nowrap}
+.tc .ts{position:absolute;left:132px;top:88px;font:500 26px Poppins;white-space:nowrap}
+.tc .th{position:absolute;left:36px;right:36px;top:146px;height:2px}
+.tc .tx2{position:absolute;left:36px;top:170px;font:600 17px Poppins;letter-spacing:.16em;white-space:nowrap}
+.tc .te{position:absolute;left:36px;top:204px;font:600 28px Poppins;white-space:nowrap}
+.fm{position:absolute;top:198px;width:44px;height:44px;border-radius:22px;display:flex;align-items:center;justify-content:center;font:700 18px Poppins;color:#fff}
+/* scene X: the criticism */
+.ee{position:absolute;top:280px;width:784px;height:392px;border-radius:28px}
+.ee .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line)}
+.ee .eic{position:absolute;left:44px;top:44px;width:96px;height:96px;border-radius:48px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.ee .et{position:absolute;left:172px;top:40px;font-size:64px;white-space:nowrap}
+.ee .em{position:absolute;left:174px;top:124px;font:600 30px Poppins;white-space:nowrap}
+.ee .hr{position:absolute;left:44px;right:44px;top:208px;height:2px;background:var(--line)}
+.ee .ex{position:absolute;left:44px;top:244px;font:600 17px Poppins;letter-spacing:.16em;white-space:nowrap}
+.ee .ev{position:absolute;left:44px;top:288px;font:600 34px Poppins;white-space:nowrap}
+#both{position:absolute;left:160px;top:704px;width:1600px;height:112px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;gap:22px}
+#both .tx{font-size:40px;white-space:nowrap}
 /* statement on navy */
 #stmt{position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:41}
 #st1{position:absolute;left:0;width:1920px;top:400px;text-align:center;font:500 52px Poppins;color:#E9D9B5;white-space:nowrap}
 #st2{position:absolute;left:0;width:1920px;top:492px;text-align:center;font-size:112px;color:#fff;white-space:nowrap}
-/* scene D: definition */
-#dq{position:absolute;left:0;width:1920px;top:372px;text-align:center;font-size:96px;white-space:nowrap}
-#dl{position:absolute;left:0;width:1920px;top:520px;text-align:center;font-size:64px;white-space:nowrap}
-#dlb{position:absolute;left:0;width:1920px;top:628px;text-align:center}
-.bar84{left:160px;top:270px;width:1600px;height:84px;border-radius:24px;display:flex;align-items:center;gap:20px;padding:0 32px}
-.bar84 .tx{font:600 32px Poppins;white-space:nowrap}
-.cv{position:absolute;top:386px;width:784px;height:456px;border-radius:28px}
-.cv .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);box-shadow:0 1px 0 rgba(20,33,61,.04),0 18px 40px -12px rgba(20,33,61,.14)}
-.cv .lbl{left:40px;top:44px}
-.cv .ct{position:absolute;left:40px;top:76px;font-size:56px;line-height:1.2;white-space:nowrap}
-.cv .hrl{left:40px;right:40px;top:176px}
-.cv .row{position:absolute;left:40px;height:56px;display:flex;align-items:center;gap:24px}
-.cv .row i{flex:0 0 56px;height:56px;border-radius:28px;background:var(--paper);display:flex;align-items:center;justify-content:center}
-.cv .row span{font:600 28px Poppins;white-space:nowrap}
-.cv .bx{position:absolute;right:40px;top:36px;width:52px;height:52px;border-radius:26px;display:flex;align-items:center;justify-content:center}
-/* scene W: thinkers */
-.tk{position:absolute;top:386px;width:376px;height:456px;border-radius:28px}
-.tk .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);box-shadow:0 1px 0 rgba(20,33,61,.04),0 18px 40px -12px rgba(20,33,61,.14)}
-.tk .yr{position:absolute;left:32px;top:32px;height:48px;padding:0 20px;border-radius:24px;background:var(--gold);color:#fff;display:flex;align-items:center;font:700 24px Poppins;letter-spacing:.04em}
-.tk .ic64{left:280px;top:24px}
-.tk .nm{position:absolute;left:32px;font-size:40px;line-height:1.2;white-space:nowrap}
-.tk .hrl{left:32px;right:32px;top:224px}
-.tk .lbl{left:32px;top:250px}
-.tk .bd{position:absolute;left:32px;font:500 26px Poppins;white-space:nowrap}
-.tk .fp2{position:absolute;left:32px;top:372px;height:48px;padding:0 18px;border-radius:24px;display:flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
-/* scene I: if / then */
-#iq{position:absolute;left:0;width:1920px;top:430px;text-align:center;font-size:96px;white-space:nowrap}
-#iqb{position:absolute;left:0;width:1920px;top:574px;text-align:center}
-.it{position:absolute;top:270px;width:784px;height:572px;border-radius:28px}
-.it .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);box-shadow:0 1px 0 rgba(20,33,61,.04),0 18px 40px -12px rgba(20,33,61,.14)}
-.it .bw{position:absolute;left:48px;top:36px;font-size:120px;line-height:1.1;white-space:nowrap}
-.it .ln{position:absolute;left:48px;font-size:44px;white-space:nowrap}
-.it .hrl{left:48px;right:48px;top:344px}
-.it .lbl{left:48px;top:372px}
-.it .pl{position:absolute;height:52px;padding:0 22px;border-radius:26px;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
-.it .ic72{right:48px;top:48px;left:auto}
-/* scene F: factors */
-.fc{position:absolute;top:386px;width:376px;height:456px;border-radius:28px}
-.fc .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);box-shadow:0 1px 0 rgba(20,33,61,.04),0 18px 40px -12px rgba(20,33,61,.14)}
-.fc .ic72{left:32px;top:32px}
-.fc .no{position:absolute;right:32px;top:40px;font:700 26px Poppins;color:var(--gold)}
-.fc .ft{position:absolute;left:32px;top:124px;font-size:48px;line-height:1.2;white-space:nowrap}
-.fc .fm{position:absolute;left:32px;top:192px;font:500 26px Poppins;white-space:nowrap}
-.fc .hrl{left:32px;right:32px;top:252px}
-.fc .lbl{left:32px;top:278px}
-.fc .fr{position:absolute;left:32px;display:flex;align-items:center;gap:14px;font:600 26px Poppins;white-space:nowrap}
-.fc .fr b{width:12px;height:12px;border-radius:6px;background:var(--gold);flex:0 0 12px}
-/* scene K: if-then at chai corner */
-.kr{position:absolute;left:160px;width:1600px;height:272px}
-.kr .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);box-shadow:0 1px 0 rgba(20,33,61,.04),0 18px 40px -12px rgba(20,33,61,.14)}
-.kc{position:absolute;top:40px;height:40px;padding:0 16px;border-radius:20px;display:flex;align-items:center;font:700 18px Poppins;letter-spacing:.14em;white-space:nowrap}
-.kr .kt{position:absolute;top:98px;font-size:48px;line-height:1.2;white-space:nowrap}
-.kr .ks{position:absolute;left:40px;top:172px;font:500 26px Poppins;color:var(--ink2);white-space:nowrap}
-.kr .ic72{left:456px;top:32px}
-.kr .arr{position:absolute;left:596px;top:100px;width:72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
-.kr .kp{position:absolute;top:184px;height:52px;padding:0 20px 0 8px;border-radius:26px;display:flex;align-items:center;gap:12px;font:600 24px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
-.kr .kp .av{width:36px;height:36px;border-radius:18px;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font:700 17px Poppins}
-.kr .kp .ii{width:36px;height:36px;display:flex;align-items:center;justify-content:center}
-.kr .ok2{position:absolute;right:40px;top:40px;height:48px;padding:0 20px 0 14px;border-radius:24px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap}
-/* scene O: two outlets */
-.oc{position:absolute;top:270px;width:784px;height:440px;overflow:hidden}
-.oc .sg{position:absolute;left:0;width:784px;top:102px;text-align:center;font:600 17px Poppins;letter-spacing:.2em;color:var(--muted);white-space:nowrap}
-.oc .ic72{left:40px;top:152px}
-.oc .ot2{position:absolute;left:136px;top:146px;font-size:44px;line-height:1.2;white-space:nowrap}
-.oc .os{position:absolute;left:136px;top:206px;font:500 26px Poppins;color:var(--ink2);white-space:nowrap}
-.oc .hrl{left:40px;right:40px;top:270px}
-.oc .lbl{left:40px;top:294px}
-.oc .op{position:absolute;top:336px;height:56px;padding:0 22px 0 14px;border-radius:28px;display:flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
-#both{position:absolute;left:160px;top:742px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;gap:22px}
-#both .tx{font-size:40px;white-space:nowrap}
-#both .bi{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:22px}
-#sweep{position:absolute;left:0;top:0;width:1920px;height:1080px;background:var(--ink);z-index:40}
 #sweep b{position:absolute;left:0;top:0;width:10px;height:1080px;background:var(--gold)}
 /* quiz */
-.opt{position:absolute;top:460px;width:376px;height:256px;border-radius:28px}
+.opt{position:absolute;top:470px;width:376px;height:230px;border-radius:28px}
 .opt .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line)}
 .opt .lt{position:absolute;left:32px;top:30px;width:52px;height:52px;border-radius:26px;background:var(--paper);display:flex;align-items:center;justify-content:center;font:700 22px Poppins;color:var(--ink)}
-.opt .ot{position:absolute;left:32px;font-size:40px;line-height:1.2;white-space:nowrap}
+.opt .ot{position:absolute;left:32px;top:138px;font-size:40px;white-space:nowrap}
 .opt .ok{position:absolute;right:30px;top:30px;width:52px;height:52px;border-radius:26px;background:var(--gold);display:flex;align-items:center;justify-content:center}
 .qq{position:absolute;left:160px;font-size:68px;line-height:1.18;white-space:nowrap}
 #ring{position:absolute;left:1610px;top:236px;width:150px;height:150px}
@@ -138,20 +141,132 @@
 #next{position:absolute;left:160px;top:762px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:24px;padding:0 32px}
 #next .nc{height:44px;padding:0 18px;border-radius:22px;background:var(--gold);display:flex;align-items:center;font:700 18px Poppins;letter-spacing:.14em;color:#fff;white-space:nowrap}
 #next .nt{font:600 34px Poppins;white-space:nowrap;flex:1}
+/* ===== v2: illustrated steel works, motion study, standard, at work today, human side ===== */
+#ill{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+.tagp{position:absolute;top:212px;height:52px;padding:0 22px;border-radius:26px;background:var(--ink);color:#fff;display:flex;align-items:center;font:600 24px Poppins;white-space:nowrap}
+#mL,#mR{top:270px;height:580px;overflow:hidden}
+#mL{left:160px;width:784px}#mR{left:976px;width:784px}
+.mIn{left:0;top:0;width:784px;height:580px}
+.mav{position:absolute;left:48px;top:30px;width:56px;height:56px;border-radius:28px;background-size:cover;background-position:center;box-shadow:0 0 0 3px #14213D}
+.mlb{left:124px;top:49px}
+.mrd{position:absolute;right:48px;top:22px;font-size:56px;line-height:1;white-space:nowrap}
+.mplan{position:absolute;left:48px;top:108px}
+.mbar{position:absolute;left:48px;top:384px;width:688px;height:36px;border-radius:12px;background:#EEE8DB;overflow:hidden}
+.mbar i{position:absolute;top:0;height:36px}
+.mtk{position:absolute;top:432px;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+.mst{position:absolute;left:48px;top:470px;height:64px;padding:0 26px;border-radius:32px;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+.mst .tm{margin-left:6px;opacity:.75}
+#zA{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+#zR{left:976px;top:270px;width:784px;height:274px}
+#zC{left:976px;top:576px;width:784px;height:274px}
+.zs{position:absolute;top:76px;width:160px;height:150px;border-radius:18px;background:var(--paper)}
+.zs .zn{position:absolute;left:0;width:160px;top:16px;text-align:center;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+.zs .zi{position:absolute;left:60px;top:46px;width:40px;height:40px}
+.zs .zt{position:absolute;left:0;width:160px;top:98px;text-align:center;font:600 26px Poppins;white-space:nowrap}
+.zc{position:absolute;top:76px;width:104px;height:150px;border-radius:18px;background:var(--paper)}
+.zc .cn{position:absolute;left:0;width:104px;top:16px;text-align:center;font:600 15px Poppins;letter-spacing:.12em;white-space:nowrap;color:var(--muted)}
+.zc .ci{position:absolute;left:32px;top:48px;width:40px;height:40px}
+.zc .ct{position:absolute;left:0;width:104px;top:98px;text-align:center;font:600 28px Poppins;white-space:nowrap}
+#zPill{position:absolute;right:36px;top:20px;height:44px;padding:0 18px;border-radius:22px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:10px;font:600 20px Poppins;white-space:nowrap}
+#kl{left:160px;top:270px;width:624px;height:580px}
+#kp{left:816px;top:270px;width:944px;height:580px}
+.kr{position:absolute;left:24px;width:576px;height:80px;border-radius:20px}
+.kr .bg{position:absolute;inset:0;border-radius:20px;background:var(--paper)}
+.kr .rn{position:absolute;left:24px;top:27px;font:700 22px Poppins;letter-spacing:.04em}
+.kr .ri{position:absolute;left:76px;top:12px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
+.kr .rt{position:absolute;left:156px;top:21px;font:600 28px Poppins;white-space:nowrap}
+.ka{position:absolute;left:48px;width:848px;height:96px}
+.ka i{position:absolute;left:0;top:12px;width:72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.ka .kl{position:absolute;left:100px;top:12px;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.ka .kt{position:absolute;left:100px;top:42px;font:600 30px Poppins;white-space:nowrap}
+#xs{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+#xw{left:976px;top:270px;width:784px;height:580px}
+.xc{position:absolute;height:48px;padding:0 20px;border-radius:24px;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#xban{position:absolute;top:496px;height:52px;padding:0 22px;border-radius:26px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#both{top:470px;height:140px}
+#both .tx{font-size:52px}
 .cap{font:600 38px Poppins;color:var(--ink);background:rgba(255,255,255,.96);padding:12px 30px;border-radius:40px;box-shadow:0 10px 30px -10px rgba(20,33,61,.25)}
 .cap .cw{color:#5B647A}.cap .cw.on{color:var(--ink)}.cap .cw.act{color:var(--gold)}
+/* ===== Ep 13: contingency approach ===== */
+.av.sm{width:64px;height:64px;border-radius:32px;font-size:24px}
+.av.ic{background:var(--paper);box-shadow:0 0 0 4px var(--line)}
+.bub{position:absolute;top:180px;height:52px;padding:0 22px;border-radius:26px;background:var(--paper);display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap;color:var(--ink)}
+.tr{position:absolute;left:24px;width:872px;height:76px;border-radius:20px}
+.tr .bg{position:absolute;inset:0;border-radius:20px;background:var(--paper)}
+.tr .ri{position:absolute;left:14px;top:10px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
+.tr .rt{position:absolute;left:92px;top:19px;font:600 28px Poppins;white-space:nowrap}
+.tr .rq{position:absolute;top:19px;font:600 28px Poppins;white-space:nowrap;color:var(--red)}
+.rs{position:absolute;right:14px;top:12px;height:52px;padding:0 20px;border-radius:26px;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+.ftag{position:absolute;height:56px;padding:0 22px 0 8px;border-radius:28px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 24px Poppins;white-space:nowrap}
+.ftag i{width:40px;height:40px;border-radius:20px;background-size:cover;background-position:center}
+.ftag.q{padding:0 22px}
+.jr{position:absolute;left:48px;width:688px;height:96px;border-radius:20px}
+.jr .bg{position:absolute;inset:0;border-radius:20px;background:var(--paper)}
+.jr .av{left:16px;top:16px;width:64px;height:64px}
+.jr .jn{position:absolute;left:104px;top:13px;font:600 30px Poppins;white-space:nowrap}
+.jr .jl{position:absolute;left:104px;top:56px;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+.jr .jc{position:absolute;right:20px;top:22px;height:52px;padding:0 20px;border-radius:26px;background:#fff;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+.qd{position:absolute;width:28px;height:28px;border-radius:14px;background:var(--ink)}
+#smile{position:absolute;right:48px;top:462px;height:56px;padding:0 24px;border-radius:28px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#word,#rcard,#sit,#jobs{top:270px;height:580px;overflow:hidden}
+#word{left:160px;width:784px}
+#wBig{position:absolute;left:48px;top:84px;font-size:96px;white-space:nowrap}
+#wMean{position:absolute;left:48px;top:212px;font:500 36px Poppins;color:var(--ink2);white-space:nowrap}
+.hr2{position:absolute;left:48px;right:48px;height:2px;background:var(--line)}
+.vc{position:absolute;height:52px;padding:0 22px;border-radius:26px;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+.vc.nv{background:var(--ink);color:#fff}.vc.gd{background:var(--gold);color:#fff}.vc.rd{background:#F6E3DC;color:#B5482F}
+#old{left:976px;top:270px;width:784px;height:274px}
+#new{left:976px;top:576px;width:784px;height:274px}
+.bt1{position:absolute;left:140px;font-size:48px;white-space:nowrap}
+.bt2{position:absolute;left:140px;font:500 26px Poppins;color:var(--ink2);white-space:nowrap}
+.yr{position:absolute;left:24px;width:576px;height:100px;border-radius:20px}
+.yr .bg{position:absolute;inset:0;border-radius:20px;background:var(--paper)}
+.yr .rn{position:absolute;left:24px;top:36px;font:700 22px Poppins;letter-spacing:.04em}
+.yr .ri{position:absolute;left:104px;top:22px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
+.yr .rt{position:absolute;left:184px;top:30px;font:600 28px Poppins;white-space:nowrap}
+.ct2{position:absolute;left:84px;top:4px;font:600 28px Poppins;white-space:nowrap}
+.tb{position:absolute;top:72px;width:264px;height:104px;border-radius:20px;background:var(--paper)}
+.tb .lbl{left:24px;top:18px;font-size:16px}
+.tb .tx{position:absolute;left:24px;top:48px;font:600 26px Poppins;white-space:nowrap}
+#lbar{position:absolute;left:0;top:116px;width:848px;height:60px;border-radius:18px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font:600 26px Poppins;white-space:nowrap}
+.fs{position:absolute;top:0;width:272px;height:56px;border-radius:16px;background:var(--paper);display:flex;align-items:center;justify-content:center;font:600 22px Poppins;white-space:nowrap;color:var(--ink)}
+.rb{position:absolute;left:48px;width:688px;height:160px;border-radius:20px}
+.rb .bg{position:absolute;inset:0;border-radius:20px;background:var(--paper)}
+.rb .bd{position:absolute;left:24px;height:48px;padding:0 16px;border-radius:24px;display:flex;align-items:center;font:700 18px Poppins;letter-spacing:.14em;white-space:nowrap}
+.rb .rx{position:absolute;left:136px;font:600 30px Poppins;white-space:nowrap;display:flex;align-items:center;gap:12px}
+#rT{position:absolute;left:48px;top:84px;font-size:64px;white-space:nowrap}
+#sit{left:976px;width:784px}
+#rcard{left:160px;width:784px}
+#wl{left:160px;top:270px;width:624px;height:580px}
+#wp{left:816px;top:270px;width:944px;height:580px}
+#clk{position:absolute;left:48px;top:92px}
+#sTime{position:absolute;left:340px;top:116px;font-size:72px;line-height:1;white-space:nowrap}
+#sStat{position:absolute;left:340px;top:220px;height:56px;padding:0 24px;border-radius:28px;display:flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap}
+#sQn{position:absolute;right:48px;top:368px;font:600 24px Poppins;white-space:nowrap}
+#sDots{position:absolute;left:48px;top:412px;width:688px;height:40px}
+#sDots .qd{top:6px}
+#sAB{position:absolute;left:48px;top:484px}
+.mrd .mu{color:var(--muted);font-size:28px;font-weight:600;margin-right:10px}
+.mst.lg{font-size:24px}
+#jobs{left:976px;width:784px}
+#xw2{left:976px;top:270px;width:784px;height:580px}
+#xNode{position:absolute;top:92px;height:60px;padding:0 26px;border-radius:30px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+#xFork{position:absolute;left:48px;top:152px}
+.xr{position:absolute;top:300px;height:56px;padding:0 22px;border-radius:28px;background:#F6E3DC;color:#B5482F;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#xcrit{position:absolute;left:48px;top:420px;width:688px;height:112px;border-radius:20px;background:var(--paper)}
+#xcrit .lbl{left:28px;top:22px;color:var(--red)}
+#xcrit .tx{position:absolute;left:28px;top:54px;font:600 28px Poppins;white-space:nowrap}
 </style></head><body>
 <div id="stage">
   <div id="bgv"></div>
   <div id="cam">
-    <!-- title + header (shared elements) -->
     <div class="chip" id="eyebrow"><i></i>EP 13 · PRINCIPLES OF MANAGEMENT</div>
-    <div class="serif" id="title"><span class="acc">Contingency</span> Approach</div>
-    <div id="sub">Explained with one chai stall</div>
+    <div class="serif" id="title">Contingency <span class="acc">Approach</span></div>
+    <div id="sub">No one best way, explained with one chai stall</div>
     <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#B8862F" stroke-width="4" stroke-linecap="round"/></svg>
     <div class="chip ghost" id="exChip">EXAMPLE FIGURES</div>
 
-    <!-- scene A: one favourite style -->
+    <!-- A: one style, two times of day -->
     <div id="sA">
       <div class="card" id="hero">
         <svg id="awn" width="616" height="90" style="position:absolute;left:0;top:0"><g id="awnG"></g></svg>
@@ -160,81 +275,132 @@
           <g id="steam" fill="none" stroke="#C9BFAE" stroke-width="5" stroke-linecap="round">
             <path id="s1" d="M128 116 c-12 -14 12 -24 0 -40"/><path id="s2" d="M152 110 c-12 -14 12 -24 0 -44"/><path id="s3" d="M176 116 c-12 -14 12 -24 0 -40"/>
           </g>
-          <g id="ravi"><circle cx="308" cy="98" r="44" fill="#14213D"/><path d="M220 210 c0 -48 40 -74 88 -74 s88 26 88 74 z" fill="#14213D"/><path d="M286 140 l22 26 l22 -26" fill="none" stroke="#B8862F" stroke-width="6" stroke-linejoin="round"/></g>
+          <clipPath id="rclip"><rect x="0" y="-20" width="616" height="300"/></clipPath><image id="ravi" clip-path="url(#rclip)" href="../../assets/illustrations/mba/ravi.png" x="180" y="-6" width="256" height="317" preserveAspectRatio="xMidYMin meet"/>
           <rect x="60" y="196" width="496" height="92" rx="16" fill="#EEE8DB"/>
           <rect x="60" y="196" width="496" height="10" rx="5" fill="#B8862F"/>
           <g id="kettle" transform="translate(152 196)"><path d="M-40 0 v-54 a22 22 0 0 1 22 -22 h36 a22 22 0 0 1 22 22 v54 z" fill="#3A4560"/><path d="M40 -46 q26 0 26 -26" fill="none" stroke="#3A4560" stroke-width="8" stroke-linecap="round"/><rect x="-14" y="-88" width="28" height="12" rx="6" fill="#3A4560"/></g>
           <g id="cups"></g>
         </svg>
         <div class="serif" id="hname">Ravi</div>
-        <div id="htag">OWNER · SIX STAFF</div>
+        <div id="htag">OWNER · TEAM OF SIX</div>
       </div>
-      <div class="card" id="tc">
-        <div class="lbl" style="left:36px;top:34px">TIME OF DAY</div>
-        <div class="serif tbig" id="tA">4:00 PM</div><div class="serif tbig" id="tB">8:00 AM</div>
-        <div class="pill" id="pA" style="left:36px;top:196px"><span id="pAi"></span>Slow afternoon</div>
-        <div class="pill" id="pB" style="left:36px;top:196px;background:#F6E3DC;color:#B5482F"><span id="pBi"></span>Morning rush</div>
-        <div class="vr" style="left:452px;top:34px;height:206px"></div>
-        <div class="lbl" style="left:488px;top:34px">RAVI'S STYLE</div>
-        <div class="ic64" id="stI" style="left:488px;top:74px"></div>
-        <div class="serif" id="stName">Team chat</div>
-        <div class="pill" id="sP1" style="left:488px;top:196px"><span id="sP1i"></span>Everyone shares ideas</div>
-        <div class="pill" id="sP2" style="left:488px;top:196px;background:#F6E3DC;color:#B5482F"><span id="sP2i"></span>Too slow for a rush</div>
-      </div>
-      <div class="card" id="rc">
-        <div class="lbl" id="rcL1" style="left:36px;top:34px">RESULT</div>
-        <div id="r1">
-          <div class="serif" id="r1t">It works</div>
-          <div class="pill" id="r1p" style="left:36px;top:196px"><span id="r1pi"></span>New ideas, happy team</div>
-          <div id="team6"></div>
-        </div>
-        <div id="r2">
-          <div class="lbl" style="left:300px;top:34px">CUSTOMERS WAITING</div>
-          <div class="serif" id="wN">0</div>
-          <div id="ppl"></div>
-          <div class="pill" id="r2p" style="left:36px;top:196px;background:#F6E3DC;color:#B5482F"><span id="r2pi"></span>Chai goes cold</div>
-        </div>
+      <div class="card" id="ways"><div class="lbl" style="left:36px;top:34px">RAVI'S FAVOURITE WAY</div><div id="wAv"></div><div class="vc nv" id="chatP" style="top:92px"><span id="chatPI"></span>Long team chats</div><div id="bubs"></div></div>
+      <div class="card" id="ask"><div class="lbl" style="left:36px;top:34px">SAME STYLE · TWO TIMES OF DAY</div><div id="tRows"></div></div>
+    </div>
+
+    <!-- B: festival day (illustration + one job each) -->
+    <div id="sB">
+      <div class="card" id="ill"><div class="abs" id="illIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:48px;top:40px">FESTIVAL DAY · 8 AM</div>
+        <img id="illImg" src="../../assets/illustrations/mba/scene-festival-rush-cut.png" style="position:absolute;left:92px;top:100px;width:600px;height:450px">
+      </div><div class="ftag q" id="tgQ">The festival queue</div><div class="ftag" id="tgR"><i style="background-image:url(../../assets/illustrations/mba/ravi-face.jpg)"></i>Ravi</div><div class="ftag" id="tgA"><i style="background-image:url(../../assets/illustrations/mba/asha-face.jpg)"></i>Asha</div><div class="ftag" id="tgK"><i style="background-image:url(../../assets/illustrations/mba/kabir-face.jpg)"></i>Kabir</div></div>
+      <div class="card" id="jobs"><div class="lbl" style="left:48px;top:40px">QUICK ORDERS · ONE JOB EACH</div><div id="jRows"></div>
+        <div class="lbl" id="qL" style="left:48px;top:440px">THE QUEUE</div><div id="qDots"></div>
+        <div id="smile"><span id="smileI"></span>Every customer smiling</div>
       </div>
     </div>
 
-    <!-- scene D: definition -->
+    <!-- D: the big idea -->
     <div id="sD">
-      <div class="serif" id="dq">The <span class="acc">contingency</span> approach</div>
-      <div class="serif" id="dl">Contingent means <span class="acc">depending on something</span></div>
-      <div id="dlb"><span class="lbl" style="position:static">SCHOOL OF MANAGEMENT THOUGHT · 1960s AND 1970s</span></div>
-      <div class="card bar84" id="defbar"><span id="defI"></span><span class="tx">Contingency approach = the right way to manage <span class="acc">depends on the situation</span></span></div>
-      <div id="cvRow"></div>
+      <div class="serif" id="dq">The big idea: <span class="acc">it depends</span></div>
+      <div class="card" id="word"><div class="abs" id="wordIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:48px;top:40px">THE WORD</div>
+        <div class="serif" id="wBig">Contingent</div>
+        <div id="wMean">means <span style="color:#B8862F;font-weight:600">depending on something</span></div>
+        <div class="hr2" id="wHr" style="top:296px"></div>
+        <div class="lbl" id="wEx" style="left:48px;top:328px">AN EVERYDAY EXAMPLE</div>
+        <div class="vc" id="wc0" style="left:48px;top:376px"><span id="wc0I"></span>Rain today?</div>
+        <svg id="wA" width="60" height="30" style="position:absolute;top:387px"><path d="M4 15 H48 M38 5 L50 15 L38 25" fill="none" stroke="#B9B1A3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="vc nv" id="wc1" style="top:376px"><span id="wc1I"></span>Take an umbrella</div>
+        <div id="wNote" style="position:absolute;left:48px;top:466px;font:500 28px Poppins;color:var(--ink2);white-space:nowrap">What you do depends on the weather.</div>
+      </div></div>
+      <div class="card" id="old"><div class="lbl" style="left:36px;top:34px">EARLIER THINKERS · EP 08</div>
+        <div class="av face" id="oAv" style="left:36px;top:92px;width:80px;height:80px;border-radius:40px;background-image:url(../../assets/illustrations/mba/taylor-face.jpg)">T</div>
+        <div class="serif bt1" id="oT" style="top:84px">One best way</div><svg id="oX" width="340" height="12" style="position:absolute;left:140px;top:120px"><line id="oXL" x1="4" y1="6" x2="336" y2="6" stroke="#B5482F" stroke-width="6" stroke-linecap="round"/></svg>
+        <div class="bt2" id="oS" style="top:156px">for every job, said F.W. Taylor</div>
+      </div>
+      <div class="card" id="new"><div class="lbl" style="left:36px;top:34px">THE CONTINGENCY APPROACH</div>
+        <div class="av" id="nAv" style="left:36px;top:92px;width:80px;height:80px;border-radius:40px;background:#14213D"></div>
+        <div class="serif bt1" id="nT1" style="top:80px;font-size:44px">The right way to manage</div>
+        <div class="serif bt1 acc" id="nT2" style="top:140px;font-size:44px">depends on the situation</div>
+      </div>
     </div>
 
-    <!-- scene W: the thinkers -->
+    <!-- W: the research (list + panes) -->
     <div id="sW">
-      <div class="card bar84" id="wbar"><span id="wbarI"></span><span class="tx">The idea grew in the <span class="acc">1960s and 1970s</span></span></div>
-      <div id="tkRow"></div>
+      <div class="card" id="wl"><div class="lbl" style="left:48px;top:40px">THE RESEARCH · 1960s</div><div id="wRows"></div></div>
+      <div class="card" id="wp"><div id="wPans"></div></div>
     </div>
 
-    <!-- scene I: if, then -->
-    <div id="sI"><div class="serif" id="iq">One simple <span class="acc">tool</span></div><div id="iqb"><span class="lbl" style="position:static">CONTINGENCY THINKING</span></div><div id="itRow"></div></div>
-
-    <!-- scene F: four factors -->
-    <div id="sF">
-      <div class="card bar84" id="fbar"><span id="fbarI"></span><span class="tx">Four things shape the <span class="acc">situation</span></span></div>
-      <div id="fcRow"></div>
+    <!-- M: if-then rule, then the same rush run two ways -->
+    <div id="sM">
+      <div class="card" id="rcard"><div class="abs" id="ruleIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:48px;top:40px">RAVI'S RULE</div>
+        <div class="serif" id="rT">If this, <span class="acc">then that.</span></div>
+        <div id="rRb"></div>
+      </div></div>
+      <div class="card" id="sit">
+        <div class="lbl" style="left:48px;top:40px">THE SITUATION</div>
+        <svg id="clk" width="240" height="240"><circle cx="120" cy="120" r="108" fill="#fff" stroke="#14213D" stroke-width="10"/><g id="clkT"></g>
+          <g id="hrH"><line x1="120" y1="120" x2="120" y2="66" stroke="#14213D" stroke-width="10" stroke-linecap="round"/></g>
+          <g id="mnH"><line x1="120" y1="120" x2="120" y2="40" stroke="#B8862F" stroke-width="6" stroke-linecap="round"/></g>
+          <circle cx="120" cy="120" r="10" fill="#14213D"/></svg>
+        <div class="serif" id="sTime">3:00 PM</div>
+        <div id="sStat"><span id="sStatI"></span><span id="sStatT">Quiet</span></div>
+        <div class="lbl" style="left:48px;top:372px">IN THE QUEUE</div><div id="sQn">2 waiting</div>
+        <div id="sDots"></div>
+        <div id="sAB"><div class="vc" id="ab0" style="left:0;top:0">A · Team chat</div><div class="vc" id="ab1" style="top:0">B · Firm orders</div></div>
+      </div>
+      <div class="card" id="mL"><div class="abs mIn" id="mLIn"></div></div>
+      <div class="card" id="mR"><div class="abs mIn" id="mRIn"></div></div>
     </div>
 
-    <!-- scene K: if-then at chai corner -->
-    <div id="sK"><div id="krRows"></div></div>
+    <!-- P: four factors -->
+    <div id="sP">
+      <div class="card" id="pl"><div class="lbl" style="left:48px;top:40px">IT DEPENDS ON</div><div id="pRows"></div></div>
+      <div class="card" id="pp"><div id="pPans"></div></div>
+    </div>
 
-    <!-- scene O: two outlets -->
-    <div id="sO"><div id="ocRow"></div><div id="both"><div class="bi" id="bothA"><span class="serif tx">One brand, two places.</span><span class="serif tx" style="color:#E9D9B5">One approach?</span></div><div class="bi" id="bothB"><span class="serif tx">One brand</span><span class="serif tx" style="color:#B8862F">+</span><span class="serif tx">two places</span><span class="serif tx" style="color:#B8862F">=</span><span class="serif tx" style="color:#E9D9B5">two approaches</span></div></div></div>
+    <!-- K: at work today -->
+    <div id="sK">
+      <div class="card" id="kl"><div class="lbl" style="left:48px;top:40px">AT WORK TODAY</div><div id="kRows"></div></div>
+      <div class="card" id="kp"><div id="kPans"></div></div>
+    </div>
+
+    <!-- X: the human side -->
+    <div id="sX">
+      <div class="card" id="xs"><div class="abs" id="xsIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:48px;top:40px">IS "IT DEPENDS" A GOOD ANSWER?</div>
+        <svg id="scl" width="688" height="250" style="position:absolute;left:48px;top:84px">
+          <rect x="254" y="226" width="180" height="20" rx="10" fill="#14213D"/>
+          <rect x="338" y="40" width="12" height="190" fill="#14213D"/>
+          <g id="panL"></g><g id="panR"></g>
+          <g id="beam"><rect x="64" y="34" width="560" height="12" rx="6" fill="#14213D"/></g>
+          <circle cx="344" cy="40" r="14" fill="#B8862F"/>
+        </svg>
+        <div class="lbl" id="xgL" style="left:48px;top:352px;color:#B8862F">THE GOOD SIDE</div>
+        <div class="lbl" id="xhL" style="left:408px;top:352px;color:#B5482F">THE HARD SIDE</div>
+        <div id="xChips"></div>
+      </div></div>
+      <div class="card" id="xw2">
+        <div class="lbl" style="left:48px;top:40px">THE CATCH</div>
+        <div id="xNode"><span id="xNodeI"></span>A new situation</div>
+        <svg id="xFork" width="688" height="150"><path id="xf0" d="M344 0 V50 Q344 74 320 74 H196 Q172 74 172 98 V148" fill="none" stroke="#B9B1A3" stroke-width="4" stroke-linecap="round"/><path id="xf1" d="M344 0 V50 Q344 74 368 74 H492 Q516 74 516 98 V148" fill="none" stroke="#B9B1A3" stroke-width="4" stroke-linecap="round"/></svg>
+        <div class="xr" id="xr0"><span id="xr0I"></span>Read it wrong</div>
+        <div class="xr" id="xr1"><span id="xr1I"></span>Decide too slowly</div>
+        <div id="xcrit"><div class="lbl">WHAT CRITICS SAY</div><div class="tx">Shows what works, rarely <span style="color:#B5482F">why</span></div></div>
+      </div>
+      <div class="chip ghost" id="lesson" style="left:160px;top:390px">THE LESSON</div><div id="both"><span id="bothI"></span><span class="serif tx">Learn the tools</span><span class="serif tx" style="color:#B8862F">+</span><span class="serif tx" style="color:#E9D9B5">read the situation</span></div>
+    </div>
 
     <!-- quick check -->
     <div id="quiz">
       <div class="chip" id="qchip" style="left:160px;top:120px"><i></i>QUICK CHECK</div>
-      <div class="serif qq" id="qq1" style="top:224px">The morning rush hits Chai Corner.</div><div class="serif qq acc" id="qq2" style="top:304px">Which style fits best?</div>
+      <div class="serif qq" id="qq1" style="top:224px">Festival day, thirty in the queue.</div><div class="serif qq acc" id="qq2" style="top:304px">Which style fits best right now?</div>
       <svg id="ring" viewBox="0 0 150 150"><circle cx="75" cy="75" r="66" fill="#fff" stroke="#E2DACB" stroke-width="8"/><circle id="ringA" cx="75" cy="75" r="66" fill="none" stroke="#B8862F" stroke-width="8" stroke-linecap="round" transform="rotate(-90 75 75)"/></svg>
       <div class="serif" id="ringN" style="left:1610px;top:236px;position:absolute"></div>
       <div id="opts"></div>
-      <div id="take"><span id="takeI"></span><span class="serif tx" id="takeT">Rush hour = quick, firm instructions</span></div>
+      <div id="take"><span id="takeI"></span><span class="serif tx" id="takeT">A rush needs speed = quick, firm orders</span></div>
     </div>
 
     <!-- recap -->

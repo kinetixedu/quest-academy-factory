@@ -1,33 +1,44 @@
 H1|0.3|Chai Corner now has five outlets and thirty people.
 H2|0.55|And all thirty still report straight to Ravi.
-C1|0.3|A new helper at outlet four waits two days for an answer.
-C2|0.3|A cash mistake at outlet two goes unnoticed for a week.
+C1|0.3|A new helper waits two days for an answer.
+C2|0.3|A cash mistake at the bus stand goes unseen for a week.
 C3|0.65|Ravi works late every night, and still falls behind.
-T1|0.7|Nobody can watch thirty people. His span is too wide.
-D1|0.3|So, what is span of control?
-D2|0.35|Span of control, or span of management, is how many people one manager can supervise well.
-D4|0.65|Right now, Ravi's span is thirty, with only two levels.
-O0|0.35|So Ravi gives every outlet a manager, like Meena at the bus stand.
-O1|0.35|Now Ravi guides five outlet managers, and each one guides five people.
-O2|0.65|Same thirty people, but now everyone has a boss close by.
+I1|0.35|At the last festival rush, Ravi tried to direct everyone himself.
+I2|0.35|Tea here. Cash there. Watch the queue. One man, pointing in every direction.
+I3|0.65|So he calls his core team together. Something has to change.
+D1|0.3|The problem has a name. Span of control.
+D2|0.35|Span of control, or span of management, is the number of people one manager can supervise well.
+D3|0.65|Right now, Ravi's span is thirty. Far too wide.
+G1|0.35|Why is thirty too many? In 1933, a management consultant, V. A. Graicunas, did the maths.
+G2|0.35|A manager handles each person, every small group, and the links between people.
+G3|0.35|With two people, that is six relationships. With five people, one hundred.
+G4|0.65|With six, it jumps to two hundred and twenty two. One more person, and the load more than doubles.
+O1|0.35|So Ravi gives every outlet a manager, like Meena at the bus stand.
+O2|0.35|Now Ravi guides five outlet managers, and each one guides five people.
+O3|0.65|Same thirty people. But now everyone has a boss close by.
 W1|0.35|Now try a narrow span. Each manager guides just two people.
 W2|0.35|That needs fifteen managers, and five levels. The chart grows tall.
-W3|0.35|Wide span. Each manager guides five people.
-W4|0.65|Now just six managers, and three levels. The chart is flat.
-P1|0.35|A tall structure gives close supervision. But messages pass slowly through every level, and more managers cost more.
-P2|0.65|A flat structure gives freedom and fast messages. But staff must be skilled, since each boss has less time per person.
-F0|0.45|The right span depends on five things.
-F1|0.35|One. The nature of the work. Routine work allows a wide span. Complex work needs a narrow one.
-F2|0.35|Two. The skill of the manager and the staff. Skilled people need less help.
-F3|0.35|Three. The need for supervision. New staff need more guidance.
-F4|0.35|Four. Communication technology. A phone group lets one manager reach many people.
-F5|0.65|And five. Geographic spread. People in faraway places are harder to supervise.
-R1|0.35|Chai work is routine, and his managers are trained. So Ravi keeps the flat chart.
-R2|0.65|Now a new helper gets an answer in one hour, not two days. And Ravi talks to five, not thirty.
+W3|0.35|Now a wide span. Each manager guides five people.
+W4|0.65|Just six managers, and three levels. The chart is flat.
+T1|0.7|Narrow span, tall chart. Wide span, flat chart.
+P1|0.35|A tall chart gives close supervision. But messages crawl through every level, and more managers cost more.
+P2|0.65|A flat chart gives freedom and fast messages. But each boss has less time for each person, so staff must be skilled.
+K0|0.35|So what sets the right span at work today? Five things.
+K1|0.35|The work. Simple, repeated work allows a wide span. One supervisor can guide a big team of packers.
+K2|0.35|Skill. Skilled people need less help. A team of senior engineers needs little checking.
+K3|0.35|Guidance. New staff need more. A hospital pairs each new nurse with a mentor.
+K4|0.35|Technology. A team chat lets one manager reach many people at once.
+K5|0.65|Distance. Teams far apart are harder to watch. A regional manager has to travel to each branch.
+X1|0.35|Span also changes how work feels.
+X2|0.35|Too narrow, and the boss is always watching. People feel they are not trusted.
+X3|0.35|Too wide, and nobody notices you. Problems wait, and the manager burns out.
+X4|0.35|Chai work is simple, and Ravi's managers are trained. So he keeps the flat chart.
+X5|0.35|Now a new helper gets an answer in one hour, not two days.
+X6|0.65|The lesson. Wide enough to trust people, narrow enough to help them.
 Q1|1.9|Quick check. Ravi wants faster messages and fewer managers. Which should he choose?
 A1|0.6|A wide span! Fewer levels, faster messages, and fewer managers to pay.
 S1|0.3|So, remember.
 S2|0.35|Span of control is how many people one manager can supervise well.
-S3|0.35|A narrow span makes a tall structure. A wide span makes a flat one.
-S4|0.6|The right span depends on the work, the people, supervision, technology, and distance.
+S3|0.35|A narrow span makes a tall chart. A wide span makes a flat one.
+S4|0.6|The right span depends on the work, skill, guidance, technology and distance.
 N1|0.2|Next time, the series finale. What makes an organization effective?

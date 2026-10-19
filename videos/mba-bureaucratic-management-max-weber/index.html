@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset="utf-8"><title>MBA - Bureaucratic Management, Max Weber (Ep 10)</title>
+<!doctype html><html><head><meta charset="utf-8"><title>MBA - Bureaucratic Management - Max Weber (Ep 10)</title>
 <link rel="stylesheet" href="../../engine/base.css">
 <style>
 /* ===== MBA world: Boardroom ===== */
@@ -20,120 +20,105 @@
 .lbl{position:absolute;font:600 18px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
 .abs{position:absolute}
 .pill{position:absolute;height:48px;padding:0 20px;border-radius:24px;display:flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
-.avc{position:absolute;width:64px;height:64px;border-radius:32px;display:flex;align-items:center;justify-content:center;font:700 28px Poppins;color:#fff;background:var(--ink)}
-/* scene A: everyone does it their own way */
+.pill.bad{background:#F6E3DC;color:#B5482F}
+/* scene A: the stall */
 #hero{left:160px;top:270px;width:616px;height:580px;overflow:hidden}
 #hname{position:absolute;left:0;width:616px;top:452px;text-align:center;font-size:44px}
 #htag{position:absolute;left:0;width:616px;text-align:center;top:516px;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
-#away{top:200px;background:var(--ink);color:#fff}
-#rules{left:840px;top:270px;width:920px;height:274px}
-#rN{position:absolute;left:36px;top:66px;font-size:104px;line-height:1;width:200px}
-#rNo{left:36px;top:196px}
-.tw{position:absolute;top:84px;width:64px;height:64px;border-radius:32px;display:flex;align-items:center;justify-content:center;font:700 26px Poppins;color:#fff;background:var(--gold)}
-.tw.h{background:var(--ink2)}
-.ta{position:absolute;top:176px;width:64px;height:64px;display:flex;align-items:center;justify-content:center}
-#wrong{left:840px;top:576px;width:920px;height:274px}
-.job{position:absolute;top:76px;width:266px;height:170px;border-radius:22px;background:var(--paper);overflow:hidden}
-.job .ji{position:absolute;left:24px;top:22px;width:52px;height:52px;border-radius:26px;background:#fff;display:flex;align-items:center;justify-content:center}
-.job .jt{position:absolute;left:24px;font:600 26px Poppins;white-space:nowrap}
-/* statement on navy */
-#stmt{position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:41}
-#st1{position:absolute;left:0;width:1920px;top:400px;text-align:center;font:500 52px Poppins;color:#E9D9B5;white-space:nowrap}
-#st2{position:absolute;left:0;width:1920px;top:492px;text-align:center;font-size:112px;color:#fff;white-space:nowrap}
-/* scene D: Max Weber */
-#wb{left:160px;top:270px;width:616px;height:580px}
-#wn{position:absolute;left:0;width:616px;top:318px;text-align:center;font-size:48px;white-space:nowrap}
-#wtag{position:absolute;left:0;width:616px;text-align:center;top:388px;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
-#tl{position:absolute;left:0;top:430px}
-.yr{position:absolute;top:478px;font-size:36px;white-space:nowrap}
-#dp{left:808px;top:270px;width:952px;height:580px}
+#sweep{position:absolute;left:0;top:0;width:1920px;height:1080px;background:var(--ink);z-index:40}
+/* scene A: six ways */
+#ways{left:840px;top:270px;width:920px;height:274px}
+#ask{left:840px;top:576px;width:920px;height:274px}
+.cupt{position:absolute;top:76px;width:128px;height:150px;border-radius:18px;background:var(--paper)}
+.cupt .cn{position:absolute;left:0;width:128px;top:16px;text-align:center;font:600 16px Poppins;letter-spacing:.14em;white-space:nowrap;color:var(--muted)}
+.cupt .ci{position:absolute;left:44px;top:48px;width:40px;height:40px}
+.cupt .ct{position:absolute;left:0;width:128px;top:98px;text-align:center;font:600 28px Poppins;white-space:nowrap}
+#askT{position:absolute;left:36px;top:150px;font-size:64px;white-space:nowrap}
+/* scene D: Taylor + the book */
+#dq{position:absolute;left:0;width:1920px;top:470px;text-align:center;font-size:88px;white-space:nowrap}
+#tay{left:160px;top:270px;width:616px;height:580px;overflow:hidden}
+#tname{position:absolute;left:0;width:616px;top:352px;text-align:center;font-size:52px;white-space:nowrap}
+#ttag{position:absolute;left:0;width:616px;top:428px;text-align:center;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+#father{position:absolute;top:484px;height:56px;padding:0 24px;border-radius:28px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:12px;font:600 24px Poppins;white-space:nowrap}
+#book{left:840px;top:270px;width:920px;height:274px}
+#idea{left:840px;top:576px;width:920px;height:274px}
+.bk{position:absolute;left:236px;font-size:44px;white-space:nowrap}
+.stp{position:absolute;top:18px;height:64px;padding:0 28px;border-radius:32px;display:flex;align-items:center;gap:12px;font:600 28px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+/* scene B: the shovel test */
+#shv{left:160px;top:270px;width:784px;height:580px}
+#ton{left:976px;top:270px;width:784px;height:580px}
+#best{position:absolute;top:92px;height:56px;padding:0 24px;border-radius:28px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+.mat{position:absolute;width:336px;text-align:center;top:432px;font:600 18px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.ld{position:absolute;top:472px;height:52px;padding:0 22px;border-radius:26px;display:flex;align-items:center;font:600 26px Poppins;white-space:nowrap}
+.rc .lbl{left:48px;top:48px}
+.rc .big{position:absolute;right:48px;top:30px;font-size:64px;color:var(--gold);white-space:nowrap}
+.bar{position:absolute;left:48px;width:688px;height:120px}
+.bar .bl{position:absolute;left:0;top:0;font:600 22px Poppins;color:var(--muted);white-space:nowrap}
+.bar .bt{position:absolute;left:0;top:40px;height:64px;border-radius:16px;background:#E7E0D2}
+.bar .bv{position:absolute;top:44px;font-size:44px;white-space:nowrap}
+#tonHr{position:absolute;left:48px;right:48px;top:462px;height:2px;background:var(--line)}
+#tonSrc{left:48px;top:494px;font-size:17px}
+/* scene M: time and motion study */
+#watch{left:160px;top:270px;width:616px;height:580px}
+#swv{position:absolute;left:168px;top:84px}
+#rd{position:absolute;left:0;width:616px;top:396px;text-align:center;font-size:84px;line-height:1;white-space:nowrap}
+#saved{position:absolute;top:498px;height:52px;padding:0 22px;border-radius:26px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#steps{left:840px;top:270px;width:920px;height:580px}
+.sr{position:absolute;left:24px;width:872px;height:80px;border-radius:20px}
+.sr .bg{position:absolute;inset:0;border-radius:20px;background:var(--paper)}
+.sr .rn{position:absolute;left:24px;top:26px;font:700 22px Poppins;letter-spacing:.04em}
+.sr .ri{position:absolute;left:76px;top:12px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
+.sr .rt{position:absolute;left:156px;top:20px;font:600 30px Poppins;white-space:nowrap}
+.sr .st{position:absolute;right:28px;top:20px;font:600 30px Poppins;white-space:nowrap;text-align:right}
+.sr .sx{position:absolute;left:150px;top:39px;height:3px;border-radius:2px;background:#B5482F}
+/* scene P: four principles */
+#pl{left:160px;top:270px;width:624px;height:580px}
+.pr{position:absolute;left:24px;width:576px;height:100px;border-radius:20px}
+.pr .bg{position:absolute;inset:0;border-radius:20px;background:var(--paper)}
+.pr .rn{position:absolute;left:24px;top:36px;font:700 22px Poppins;letter-spacing:.04em}
+.pr .ri{position:absolute;left:76px;top:22px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
+.pr .rt{position:absolute;left:156px;top:30px;font:600 30px Poppins;white-space:nowrap}
+#pp{left:816px;top:270px;width:944px;height:580px}
 .pn{position:absolute;inset:0}
 .pn .ps{position:absolute;left:48px;top:48px;font:600 20px Poppins;letter-spacing:.16em;color:var(--gold);white-space:nowrap}
 .pn .pt{position:absolute;left:48px;top:88px;font-size:84px;line-height:1.1;white-space:nowrap}
 .pn .pm{position:absolute;left:48px;top:204px;font:500 36px Poppins;color:var(--ink2);white-space:nowrap}
 .pn .hr{position:absolute;left:48px;right:48px;top:290px;height:2px;background:var(--line)}
 .pn .px{position:absolute;left:48px;top:326px;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
-.pn .pe{position:absolute;left:48px;top:372px;width:760px;display:flex;align-items:center;gap:24px}
+.pn .pe{position:absolute;left:48px;top:372px;width:848px;display:flex;align-items:center;gap:24px}
 .pn .pe i{flex:0 0 72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
 .pn .pe span{font:600 32px/1.25 Poppins;white-space:nowrap}
-.pv{position:absolute;left:48px;top:376px;width:848px;height:156px}
-.ut4{position:absolute;top:0;width:264px;height:156px;border-radius:22px;background:var(--paper)}
-.ut4 i{position:absolute;left:100px;top:20px;width:64px;height:64px;border-radius:32px;background:#fff;display:flex;align-items:center;justify-content:center}
-.ut4 span{position:absolute;left:0;width:264px;top:100px;text-align:center;font:600 26px Poppins;white-space:nowrap}
-.dr{position:absolute;left:48px;width:856px;height:64px;border-radius:20px;background:var(--paper)}
-.dr i{position:absolute;left:12px;top:8px;width:48px;height:48px;border-radius:24px;background:#fff;display:flex;align-items:center;justify-content:center}
-.dr>span{position:absolute;left:80px;top:12px;font:600 30px Poppins;white-space:nowrap}
-/* scene F: the rulebook */
-#book{left:160px;top:270px;width:624px;height:580px;overflow:hidden}
-#cover{position:absolute;left:0;top:0;width:624px;height:88px;background:var(--ink)}
-#cover b{position:absolute;left:0;bottom:0;width:624px;height:6px;background:var(--gold)}
-#coverI{position:absolute;left:32px;top:24px}
-#coverT{position:absolute;left:80px;top:30px;font:600 18px Poppins;letter-spacing:.18em;color:var(--gold2);white-space:nowrap}
-.vr{position:absolute;left:24px;width:576px;height:56px;border-radius:18px}
-.vr .bg{position:absolute;inset:0;border-radius:18px;background:var(--paper)}
-.vr .rn{position:absolute;left:20px;top:15px;font:700 20px Poppins;letter-spacing:.04em}
-.vr .ri{position:absolute;left:64px;top:8px;width:40px;height:40px;border-radius:20px;background:#fff;display:flex;align-items:center;justify-content:center}
-.vr .ph{position:absolute;left:124px;top:24px;height:8px;border-radius:4px;background:#E4DCCD}
-.vr .rt{position:absolute;left:124px;top:10px;font:600 26px Poppins;white-space:nowrap}
-.vr .rk{position:absolute;right:16px;top:14px;width:28px;height:28px}
-#fp{left:816px;top:270px;width:944px;height:580px}
-.dt{position:absolute;top:0;width:261px;height:156px;border-radius:22px;background:var(--paper)}
-.dt .avc{left:24px;top:24px;width:56px;height:56px;border-radius:28px;font-size:24px;background:var(--gold)}
-.dt .dn{position:absolute;left:96px;top:36px;font:700 28px Poppins;white-space:nowrap}
-.dt .dd{position:absolute;left:24px;top:100px;font:600 26px Poppins;color:var(--ink2);white-space:nowrap}
-.stair{position:absolute;width:268px;border-radius:20px 20px 0 0;background:var(--paper2)}
-.stair .sl{position:absolute;right:20px;top:14px;font:600 15px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
-.stair .snm{position:absolute;left:18px;font:600 26px Poppins;white-space:nowrap}
-.sa{position:absolute;top:8px;width:36px;height:36px;border-radius:18px;display:flex;align-items:center;justify-content:center;font:700 17px Poppins;color:#fff;background:var(--ink)}
-.stp{position:absolute;top:0;height:64px;padding:0 28px;border-radius:32px;display:flex;align-items:center;gap:12px;font:600 28px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
-.cu{position:absolute;top:0;width:360px;height:156px;border-radius:22px;background:var(--paper)}
-.cu i{position:absolute;left:24px;top:24px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
-.cu .cn{position:absolute;left:24px;top:100px;font:600 28px Poppins;white-space:nowrap}
-.cu .cp{position:absolute;right:28px;top:52px;font-size:52px;white-space:nowrap}
-#eqC{position:absolute;left:392px;top:46px;width:64px;height:64px;border-radius:32px;background:var(--gold);display:flex;align-items:center;justify-content:center}
-.mt{position:absolute;top:0;width:408px;height:156px;border-radius:22px}
-.mt .bg{position:absolute;inset:0;border-radius:22px;background:var(--paper)}
-.mt i{position:absolute;left:24px;top:24px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
-.mt .mn{position:absolute;left:100px;top:34px;font:600 28px Poppins;white-space:nowrap}
-.mt .ml{position:absolute;left:24px;top:108px;font:600 15px Poppins;letter-spacing:.16em;color:var(--muted)}
-.mt .mb{position:absolute;left:100px;top:110px;width:280px;height:14px;border-radius:7px;background:#E4DCCD}
-.mt .mf{position:absolute;left:100px;top:110px;height:14px;border-radius:7px;background:var(--gold)}
-.mt .mk{position:absolute;right:24px;top:28px;height:44px;padding:0 16px;border-radius:22px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:8px;font:600 20px Poppins;white-space:nowrap}
-.lg{position:absolute;left:0;top:0;width:848px;height:156px;border-radius:22px;background:var(--paper)}
-.lr{position:absolute;left:24px;width:800px;height:44px}
-.lr span{position:absolute;top:4px;font:600 26px Poppins;white-space:nowrap}
-.lr .lv{right:0}
-.lr .ls{position:absolute;left:0;right:0;bottom:-3px;height:2px;background:#E4DCCD}
-/* scene K: three kinds of authority */
-#kh{position:absolute;left:0;width:1920px;top:272px;text-align:center;font-size:60px;white-space:nowrap}
-.ak{position:absolute;top:392px;width:512px;height:320px;border-radius:28px}
-.ak .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line);box-shadow:0 18px 40px -12px rgba(20,33,61,.14)}
-.ak .lbl{left:36px;top:36px}
-.ak .ui{position:absolute;left:200px;top:52px;width:112px;height:112px;border-radius:56px;background:var(--paper);display:flex;align-items:center;justify-content:center}
-.ak .ut{position:absolute;left:0;width:512px;top:184px;text-align:center;font-size:48px;white-space:nowrap}
-.ak .us{position:absolute;left:0;width:512px;top:252px;text-align:center;font:500 28px Poppins;white-space:nowrap}
-#kstrip{position:absolute;left:160px;top:744px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;gap:22px}
-#kstrip .tx{font-size:38px;white-space:nowrap}
-/* scene P: good and bad */
-#pq{position:absolute;left:0;width:1920px;top:470px;text-align:center;font-size:96px;white-space:nowrap}
-.gb{position:absolute;top:270px;width:784px;height:580px}
-.gb .gi{position:absolute;left:48px;top:48px;width:96px;height:96px;border-radius:48px;display:flex;align-items:center;justify-content:center}
-.gb .gt{position:absolute;left:176px;top:58px;font-size:60px;white-space:nowrap}
-.gb .hr{position:absolute;left:48px;right:48px;top:184px;height:2px;background:var(--line)}
-.gr{position:absolute;left:48px;width:688px;height:104px;border-radius:24px;background:var(--paper)}
-.gr i{position:absolute;left:20px;top:20px;width:64px;height:64px;border-radius:32px;background:#fff;display:flex;align-items:center;justify-content:center}
-.gr span{position:absolute;left:108px;top:10px;font:700 36px Poppins;letter-spacing:-.02em;white-space:nowrap}
-.gr em{position:absolute;left:108px;top:58px;font:500 26px Poppins;font-style:normal;color:var(--ink2);white-space:nowrap}
-#pstrip{position:absolute;left:160px;top:742px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;gap:22px}
-#pstrip .tx{font-size:38px;white-space:nowrap}
-.sp{position:absolute;top:270px;width:784px;height:440px}
-.sp .avc{left:40px;top:40px;width:96px;height:96px;border-radius:48px}
-.sp .sn{position:absolute;left:164px;top:48px;font-size:44px;white-space:nowrap}
-.sp .lbl{left:166px;top:108px}
-.bub{position:absolute;left:40px;top:184px;width:704px;height:196px;border-radius:28px;background:var(--paper)}
-.bub .bt{position:absolute;left:40px;top:66px;font:600 44px Poppins;white-space:nowrap}
-.bub .bk{position:absolute;left:56px;top:-18px}
-#sweep{position:absolute;left:0;top:0;width:1920px;height:1080px;background:var(--ink);z-index:40}
+.pv{position:absolute;left:48px;top:372px;width:848px;height:176px}
+.av{position:absolute;width:72px;height:72px;border-radius:36px;display:flex;align-items:center;justify-content:center;font:700 30px Poppins;color:#fff;background:var(--ink)}
+.av.face{color:transparent;background-size:cover!important;background-position:center!important;box-shadow:0 0 0 4px var(--ink)}
+.avn{position:absolute;width:160px;text-align:center;font:600 24px Poppins;white-space:nowrap}
+.stair{position:absolute;width:150px;border-radius:16px 16px 0 0;background:var(--paper)}
+.stair span{position:absolute;left:0;width:150px;bottom:14px;text-align:center;font:600 24px Poppins;white-space:nowrap}
+/* scene K: more tools (2 x 2) */
+.tc{position:absolute;width:784px;height:270px}
+.tc .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line);box-shadow:0 18px 40px -12px rgba(20,33,61,.14)}
+.tc .ti{position:absolute;left:36px;top:36px;width:72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.tc .tt{position:absolute;left:132px;top:30px;font-size:44px;white-space:nowrap}
+.tc .ts{position:absolute;left:132px;top:88px;font:500 26px Poppins;white-space:nowrap}
+.tc .th{position:absolute;left:36px;right:36px;top:146px;height:2px}
+.tc .tx2{position:absolute;left:36px;top:170px;font:600 17px Poppins;letter-spacing:.16em;white-space:nowrap}
+.tc .te{position:absolute;left:36px;top:204px;font:600 28px Poppins;white-space:nowrap}
+.fm{position:absolute;top:198px;width:44px;height:44px;border-radius:22px;display:flex;align-items:center;justify-content:center;font:700 18px Poppins;color:#fff}
+/* scene X: the criticism */
+.ee{position:absolute;top:280px;width:784px;height:392px;border-radius:28px}
+.ee .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line)}
+.ee .eic{position:absolute;left:44px;top:44px;width:96px;height:96px;border-radius:48px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.ee .et{position:absolute;left:172px;top:40px;font-size:64px;white-space:nowrap}
+.ee .em{position:absolute;left:174px;top:124px;font:600 30px Poppins;white-space:nowrap}
+.ee .hr{position:absolute;left:44px;right:44px;top:208px;height:2px;background:var(--line)}
+.ee .ex{position:absolute;left:44px;top:244px;font:600 17px Poppins;letter-spacing:.16em;white-space:nowrap}
+.ee .ev{position:absolute;left:44px;top:288px;font:600 34px Poppins;white-space:nowrap}
+#both{position:absolute;left:160px;top:704px;width:1600px;height:112px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;gap:22px}
+#both .tx{font-size:40px;white-space:nowrap}
+/* statement on navy */
+#stmt{position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:41}
+#st1{position:absolute;left:0;width:1920px;top:400px;text-align:center;font:500 52px Poppins;color:#E9D9B5;white-space:nowrap}
+#st2{position:absolute;left:0;width:1920px;top:492px;text-align:center;font-size:112px;color:#fff;white-space:nowrap}
 #sweep b{position:absolute;left:0;top:0;width:10px;height:1080px;background:var(--gold)}
 /* quiz */
 .opt{position:absolute;top:470px;width:376px;height:230px;border-radius:28px}
@@ -156,20 +141,108 @@
 #next{position:absolute;left:160px;top:762px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:24px;padding:0 32px}
 #next .nc{height:44px;padding:0 18px;border-radius:22px;background:var(--gold);display:flex;align-items:center;font:700 18px Poppins;letter-spacing:.14em;color:#fff;white-space:nowrap}
 #next .nt{font:600 34px Poppins;white-space:nowrap;flex:1}
+/* ===== v2: illustrated steel works, motion study, standard, at work today, human side ===== */
+#ill{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+.tagp{position:absolute;top:212px;height:52px;padding:0 22px;border-radius:26px;background:var(--ink);color:#fff;display:flex;align-items:center;font:600 24px Poppins;white-space:nowrap}
+#mL,#mR{top:270px;height:580px;overflow:hidden}
+#mL{left:160px;width:784px}#mR{left:976px;width:784px}
+.mIn{left:0;top:0;width:784px;height:580px}
+.mav{position:absolute;left:48px;top:30px;width:56px;height:56px;border-radius:28px;background-size:cover;background-position:center;box-shadow:0 0 0 3px #14213D}
+.mlb{left:124px;top:49px}
+.mrd{position:absolute;right:48px;top:22px;font-size:56px;line-height:1;white-space:nowrap}
+.mplan{position:absolute;left:48px;top:108px}
+.mbar{position:absolute;left:48px;top:384px;width:688px;height:36px;border-radius:12px;background:#EEE8DB;overflow:hidden}
+.mbar i{position:absolute;top:0;height:36px}
+.mtk{position:absolute;top:432px;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+.mst{position:absolute;left:48px;top:470px;height:64px;padding:0 26px;border-radius:32px;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+.mst .tm{margin-left:6px;opacity:.75}
+#zA{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+#zR{left:976px;top:270px;width:784px;height:274px}
+#zC{left:976px;top:576px;width:784px;height:274px}
+.zs{position:absolute;top:76px;width:160px;height:150px;border-radius:18px;background:var(--paper)}
+.zs .zn{position:absolute;left:0;width:160px;top:16px;text-align:center;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+.zs .zi{position:absolute;left:60px;top:46px;width:40px;height:40px}
+.zs .zt{position:absolute;left:0;width:160px;top:98px;text-align:center;font:600 26px Poppins;white-space:nowrap}
+.zc{position:absolute;top:76px;width:104px;height:150px;border-radius:18px;background:var(--paper)}
+.zc .cn{position:absolute;left:0;width:104px;top:16px;text-align:center;font:600 15px Poppins;letter-spacing:.12em;white-space:nowrap;color:var(--muted)}
+.zc .ci{position:absolute;left:32px;top:48px;width:40px;height:40px}
+.zc .ct{position:absolute;left:0;width:104px;top:98px;text-align:center;font:600 28px Poppins;white-space:nowrap}
+#zPill{position:absolute;right:36px;top:20px;height:44px;padding:0 18px;border-radius:22px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:10px;font:600 20px Poppins;white-space:nowrap}
+#kl{left:160px;top:270px;width:624px;height:580px}
+#kp{left:816px;top:270px;width:944px;height:580px}
+.kr{position:absolute;left:24px;width:576px;height:80px;border-radius:20px}
+.kr .bg{position:absolute;inset:0;border-radius:20px;background:var(--paper)}
+.kr .rn{position:absolute;left:24px;top:27px;font:700 22px Poppins;letter-spacing:.04em}
+.kr .ri{position:absolute;left:76px;top:12px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
+.kr .rt{position:absolute;left:156px;top:21px;font:600 28px Poppins;white-space:nowrap}
+.ka{position:absolute;left:48px;width:848px;height:96px}
+.ka i{position:absolute;left:0;top:12px;width:72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.ka .kl{position:absolute;left:100px;top:12px;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.ka .kt{position:absolute;left:100px;top:42px;font:600 30px Poppins;white-space:nowrap}
+#xs{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+#xw{left:976px;top:270px;width:784px;height:580px}
+.xc{position:absolute;height:48px;padding:0 20px;border-radius:24px;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#xban{position:absolute;top:496px;height:52px;padding:0 22px;border-radius:26px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#both{top:470px;height:140px}
+#both .tx{font-size:52px}
 .cap{font:600 38px Poppins;color:var(--ink);background:rgba(255,255,255,.96);padding:12px 30px;border-radius:40px;box-shadow:0 10px 30px -10px rgba(20,33,61,.25)}
 .cap .cw{color:#5B647A}.cap .cw.on{color:var(--ink)}.cap .cw.act{color:var(--gold)}
+/* ===== Ep 10: Weber ===== */
+.wt{position:absolute;top:76px;width:270px;height:150px;border-radius:18px;background:var(--paper)}
+.wt .wn{position:absolute;left:0;width:270px;top:16px;text-align:center;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+.wt .wi{position:absolute;left:115px;top:46px;width:40px;height:40px}
+.wt .wv{position:absolute;left:0;width:270px;top:96px;text-align:center;font:600 28px Poppins;white-space:nowrap}
+#out{position:absolute;left:44px;top:226px;height:30px;padding:0 12px;border-radius:15px;background:#B5482F;color:#fff;display:flex;align-items:center;font:700 14px Poppins;letter-spacing:.12em;white-space:nowrap}
+#soc{left:840px;top:270px;width:920px;height:580px}
+#bk{left:840px;top:576px;width:920px;height:274px}
+.dl{position:absolute;left:48px;font-size:56px;line-height:1.1;white-space:nowrap}
+#def{left:160px;top:270px;width:1600px;height:580px}
+#idl,#idr{top:576px;width:784px;height:274px}
+#idl{left:160px}#idr{left:976px}
+.ct2{position:absolute;left:36px;top:110px;font-size:48px;white-space:nowrap}
+#hw{left:976px;top:270px;width:784px;height:580px}
+.br3{position:absolute;left:48px;width:688px;height:96px;border-radius:20px;background:var(--paper)}
+.br3 .bi{position:absolute;left:20px;top:16px;width:64px;height:64px;border-radius:32px;background:#fff;display:flex;align-items:center;justify-content:center}
+.br3 .bt{position:absolute;left:108px;top:14px;font:600 30px Poppins;white-space:nowrap}
+.br3 .bs{position:absolute;left:108px;top:56px;font:500 20px Poppins;color:var(--muted);white-space:nowrap}
+#same{position:absolute;left:48px;top:452px;height:64px;padding:0 26px;border-radius:32px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+#rL,#rS{top:270px;width:784px;height:580px}
+#rL{left:160px}#rS{left:976px}
+.rr{position:absolute;left:24px;width:736px;height:68px;border-radius:18px}
+.rr .bg{position:absolute;inset:0;border-radius:18px;background:var(--paper)}
+.rr .rn{position:absolute;left:22px;top:23px;font:700 20px Poppins;letter-spacing:.04em}
+.rr .ri{position:absolute;left:68px;top:10px;width:48px;height:48px;border-radius:24px;background:#fff;display:flex;align-items:center;justify-content:center}
+.rr .rt{position:absolute;left:136px;top:17px;font:600 26px Poppins;white-space:nowrap}
+.rr .rm{position:absolute;right:24px;top:21px;font:600 20px Poppins;white-space:nowrap}
+.uc{position:absolute;top:270px;width:512px;height:580px}
+.uc .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);box-shadow:0 1px 0 rgba(20,33,61,.04),0 18px 40px -12px rgba(20,33,61,.14)}
+.uc .un{position:absolute;left:40px;top:40px;font:600 18px Poppins;letter-spacing:.16em;white-space:nowrap}
+.uc .ui{position:absolute;left:40px;top:84px;width:96px;height:96px;border-radius:48px;display:flex;align-items:center;justify-content:center}
+.uc .ut{position:absolute;left:40px;top:204px;font-size:48px;white-space:nowrap}
+.uc .ul{position:absolute;left:40px;font:600 17px Poppins;letter-spacing:.16em;white-space:nowrap}
+.uc .ux{position:absolute;left:40px;font:600 30px Poppins;white-space:nowrap}
+.uc .ue{position:absolute;left:40px;font:500 24px Poppins;white-space:nowrap}
+.uc .uh{position:absolute;left:40px;right:40px;top:404px;height:2px}
+#ubc{position:absolute;right:40px;top:96px;height:40px;padding:0 16px;border-radius:20px;background:var(--gold);color:#fff;display:flex;align-items:center;font:700 16px Poppins;letter-spacing:.12em;white-space:nowrap}
+#uq{position:absolute;left:0;width:1920px;top:470px;text-align:center;font-size:88px;white-space:nowrap}
+.kr{height:68px}.kr .bg{border-radius:18px}.kr .rn{top:21px}.kr .ri{top:6px}.kr .rt{top:15px}
+.xp{position:absolute;height:56px;padding:0 22px;border-radius:28px;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+#xfv{position:absolute;left:48px;top:412px;width:688px;height:120px;border-radius:20px;background:var(--paper)}
+#xfv .cav{position:absolute;left:24px;top:28px;width:64px;height:64px;border-radius:32px;background-size:cover;background-position:center;box-shadow:0 0 0 4px #B8862F}
+#xfv .t1{position:absolute;left:116px;top:22px;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+#xfv .t2{position:absolute;left:116px;top:52px;font:600 32px Poppins;white-space:nowrap}
+.xt{position:absolute;left:264px;font-size:34px;line-height:1.15;white-space:nowrap}
 </style></head><body>
 <div id="stage">
   <div id="bgv"></div>
   <div id="cam">
-    <!-- title + header (shared elements) -->
     <div class="chip" id="eyebrow"><i></i>EP 10 · PRINCIPLES OF MANAGEMENT</div>
     <div class="serif" id="title">Bureaucratic <span class="acc">Management</span></div>
-    <div id="sub">Max Weber's big idea, explained with one chai stall</div>
+    <div id="sub">Max Weber, explained with one chai stall</div>
     <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#B8862F" stroke-width="4" stroke-linecap="round"/></svg>
     <div class="chip ghost" id="exChip">EXAMPLE FIGURES</div>
 
-    <!-- scene A: six people, six ways -->
+    <!-- scene A: everyone does it their own way -->
     <div id="sA">
       <div class="card" id="hero">
         <svg id="awn" width="616" height="90" style="position:absolute;left:0;top:0"><g id="awnG"></g></svg>
@@ -178,79 +251,129 @@
           <g id="steam" fill="none" stroke="#C9BFAE" stroke-width="5" stroke-linecap="round">
             <path id="s1" d="M128 116 c-12 -14 12 -24 0 -40"/><path id="s2" d="M152 110 c-12 -14 12 -24 0 -44"/><path id="s3" d="M176 116 c-12 -14 12 -24 0 -40"/>
           </g>
-          <g id="ravi"><circle cx="308" cy="98" r="44" fill="#14213D"/><path d="M220 210 c0 -48 40 -74 88 -74 s88 26 88 74 z" fill="#14213D"/><path d="M286 140 l22 26 l22 -26" fill="none" stroke="#B8862F" stroke-width="6" stroke-linejoin="round"/></g>
+          <clipPath id="rclip"><rect x="0" y="-20" width="616" height="300"/></clipPath><image id="ravi" clip-path="url(#rclip)" href="../../assets/illustrations/mba/ravi.png" x="180" y="-6" width="256" height="317" preserveAspectRatio="xMidYMin meet"/>
           <rect x="60" y="196" width="496" height="92" rx="16" fill="#EEE8DB"/>
           <rect x="60" y="196" width="496" height="10" rx="5" fill="#B8862F"/>
           <g id="kettle" transform="translate(152 196)"><path d="M-40 0 v-54 a22 22 0 0 1 22 -22 h36 a22 22 0 0 1 22 22 v54 z" fill="#3A4560"/><path d="M40 -46 q26 0 26 -26" fill="none" stroke="#3A4560" stroke-width="8" stroke-linecap="round"/><rect x="-14" y="-88" width="28" height="12" rx="6" fill="#3A4560"/></g>
           <g id="cups"></g>
         </svg>
-        <div class="pill" id="away"><span id="awayI"></span><span>Ravi stepped out</span></div>
         <div class="serif" id="hname">Ravi</div>
-        <div id="htag">OWNER · CHAI CORNER</div>
+        <div id="htag">OWNER · TEAM OF SIX</div>
       </div>
-      <div class="card" id="rules">
-        <div class="lbl" style="left:36px;top:34px">RULES WRITTEN DOWN</div>
-        <div class="lbl" style="right:36px;top:34px">SIX PEOPLE, SIX WAYS</div>
-                <div class="serif" id="rN">0</div>
-        <div id="twRow"></div>
+      <div class="card" id="ways"><div class="lbl" style="left:36px;top:34px">WHEN RAVI STEPS OUT</div>
+        <div class="av face" id="oaR" style="left:36px;top:104px">R</div><div class="avn" id="onR" style="left:-8px;top:186px">Ravi</div><div id="out">OUT</div>
+        <div id="meth"></div>
       </div>
-      <div class="card" id="wrong">
-        <div class="lbl" style="left:36px;top:34px">WHAT GOES WRONG</div>
-        <div id="jobRow"></div>
-      </div>
+      <div class="card" id="ask"><div class="lbl" style="left:36px;top:34px">WHAT GOES WRONG</div><div id="wrong"></div></div>
     </div>
 
     <!-- scene D: Max Weber -->
     <div id="sD">
-      <div class="card" id="wb">
-        <svg id="port" width="616" height="300" style="position:absolute;left:0;top:0">
-          <circle id="pDisc" cx="308" cy="170" r="118" fill="#F5F1E8"/>
-          <g id="pBust">
-            <path d="M196 288 c0 -62 50 -92 112 -92 s112 30 112 92 z" fill="#14213D"/>
-            <path d="M288 198 l20 30 l20 -30" fill="none" stroke="#B8862F" stroke-width="6" stroke-linejoin="round"/>
-            <circle cx="308" cy="128" r="50" fill="#14213D"/>
-            <path d="M260 128 h10 q2 34 38 36 q36 -2 38 -36 h10 q4 66 -48 82 q-52 -16 -48 -82 z" fill="#3A4560"/>
-            <path d="M290 154 q18 -10 36 0 q-18 6 -36 0 z" fill="#3A4560"/>
-          </g>
+      <div class="card" id="tay">
+        <svg id="port" width="616" height="320" style="position:absolute;left:0;top:28px">
+          <defs><clipPath id="pc"><circle cx="308" cy="170" r="140"/></clipPath></defs>
+          <circle cx="308" cy="170" r="140" fill="#EEE8DB"/>
+          <g clip-path="url(#pc)"><image href="../../assets/illustrations/mba/weber-src.png" x="75" y="12" width="452" height="560"/></g><circle cx="308" cy="170" r="140" fill="none" stroke="#B8862F" stroke-width="6"/>
         </svg>
-        <div class="serif" id="wn">Max <span class="acc">Weber</span></div>
-        <div id="wtag">GERMAN SOCIOLOGIST</div>
-        <svg id="tl" width="616" height="40"><line id="tlL" x1="96" y1="20" x2="520" y2="20" stroke="#B8862F" stroke-width="4" stroke-linecap="round"/><circle id="tlA" cx="96" cy="20" r="10" fill="#B8862F"/><circle id="tlB" cx="520" cy="20" r="10" fill="#B8862F"/></svg>
-        <div class="serif yr" id="yA">1864</div><div class="serif yr" id="yB">1920</div>
+        <div class="serif" id="tname">Max Weber</div>
+        <div id="ttag">GERMAN THINKER · 1864-1920</div>
+        <div id="father"><span id="fatherI"></span>Sociologist and economist</div>
       </div>
-      <div class="card" id="dp">
-        <div class="pn" id="dn0"><div class="ps">WHAT HE STUDIED</div><div class="serif pt">Sociologist</div><div class="pm">Someone who studies people in groups</div><div class="hr"></div><div class="px">HOW PEOPLE LIVE AND WORK</div>
-          <div class="pv" id="dv0"></div></div>
-        <div class="pn" id="dn1"><div class="ps">HIS BIG IDEA</div><div class="serif pt">Bureau<span class="acc">cracy</span></div><div class="pm">An organization run with</div><div class="hr"></div><div class="px">TWO THINGS</div>
-          <div class="dr" id="dr0" style="top:372px"><i></i><span>Clear <span class="acc">written rules</span></span></div>
-          <div class="dr" id="dr1" style="top:452px"><i></i><span>A clear <span class="acc">chain of command</span></span></div></div>
+      <div class="card" id="soc">
+        <div class="lbl" style="left:36px;top:34px">A SOCIOLOGIST STUDIES</div>
+        <svg id="grp" class="abs" style="left:36px;top:72px" width="220" height="170"></svg>
+        <div class="serif" id="sc1" style="position:absolute;left:300px;top:92px;font-size:44px;white-space:nowrap">How people live</div>
+        <div class="serif" id="sc2" style="position:absolute;left:300px;top:148px;font-size:44px;white-space:nowrap">and work in <span class="acc">groups</span></div>
+      </div>
+      <div class="card" id="bk">
+        <svg id="bookS" width="160" height="200" style="position:absolute;left:48px;top:38px">
+          <rect x="10" y="8" width="140" height="190" rx="10" fill="#E2DACB"/>
+          <rect x="0" y="0" width="140" height="190" rx="10" fill="#14213D"/>
+          <rect x="0" y="0" width="16" height="190" rx="6" fill="#B8862F"/>
+          <rect id="bl1" x="36" y="44" width="80" height="8" rx="4" fill="#E9D9B5"/><rect id="bl2" x="36" y="64" width="62" height="8" rx="4" fill="#E9D9B5"/><rect id="bl3" x="36" y="84" width="72" height="8" rx="4" fill="#E9D9B5"/>
+        </svg>
+        <div class="lbl" id="bookL" style="left:236px;top:52px">HIS BIG BOOK · PUBLISHED AFTER HIS DEATH</div>
+        <div class="serif bk" id="bk1" style="top:90px;font-size:52px">Economy and <span class="acc">Society</span></div>
+        <div class="lbl" id="bkE" style="left:236px;top:176px">IN GERMAN: WIRTSCHAFT UND GESELLSCHAFT</div>
       </div>
     </div>
 
-    <!-- scene F: the rulebook -->
-    <div id="sF">
-      <div class="card" id="book"><div id="cover"><b></b><span id="coverI"></span><span id="coverT">CHAI CORNER RULEBOOK</span></div><div id="vRows"></div></div>
-      <div class="card" id="fp"><div id="fPans"></div></div>
+    <!-- scene B: the office -->
+    <div id="sB">
+      <div class="card" id="ill"><div class="abs" id="illIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:48px;top:40px">AN OFFICE IN WEBER'S GERMANY</div>
+        <img id="illImg" src="../../assets/illustrations/mba/scene-bureaucracy-office-cut.png" style="position:absolute;left:92px;top:100px;width:600px;height:450px">
+      </div><div class="tagp" id="tgT">Clerk</div><div class="tagp" id="tgW">Official with the rule book</div></div>
+      <div class="card" id="hw"><div class="lbl" style="left:48px;top:40px">HOW THE OFFICE RAN</div><div id="hwR"></div><div id="same"><span id="sameI"></span>Same way, whoever is in charge</div></div>
     </div>
 
-    <!-- scene K: three kinds of authority -->
+    <!-- scene M: definition + ideal type -->
+    <div id="sM">
+      <div class="serif" id="dq" style="position:absolute;left:0;width:1920px;top:470px;text-align:center;font-size:88px;white-space:nowrap">He called this <span class="acc">bureaucracy</span></div>
+      <div class="card" id="def"><div class="abs" id="defIn" style="left:0;top:0;width:1600px;height:274px">
+        <div class="lbl" style="left:48px;top:40px">BUREAUCRACY · DEFINITION</div>
+        <div class="serif dl" id="dl1" style="top:92px">Running an organisation by <span class="acc">clear written rules,</span></div>
+        <div class="serif dl" id="dl2" style="top:160px">with a clear chain of command.</div>
+        <svg id="defS" class="abs" style="left:1376px;top:48px" width="176" height="186"></svg>
+      </div></div>
+      <div class="card" id="idl"><div class="lbl" style="left:36px;top:34px">AN IDEAL TYPE</div><div class="serif ct2">A pure <span class="acc">model</span></div><div class="lbl" style="left:36px;top:190px">A CLEAN PICTURE TO COMPARE WITH</div><svg id="idlS" class="abs" style="left:540px;top:40px" width="208" height="192"></svg></div>
+      <div class="card" id="idr"><div class="lbl" style="left:36px;top:34px">NOT THE SAME AS</div><div class="serif ct2">A perfect <span style="color:#B5482F">one</span></div><div class="lbl" style="left:36px;top:190px">REAL OFFICES ARE MESSIER</div><svg id="idrS" class="abs" style="left:540px;top:40px" width="208" height="192"></svg></div>
+    </div>
+
+    <!-- scene R: one leave request, through the chain -->
+    <div id="sR">
+      <div class="card" id="rL"><div class="abs" id="rLIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:48px;top:40px">MEENA'S LEAVE REQUEST</div><div class="serif mrd" id="rClk" style="top:22px">Mon 9 AM</div>
+        <svg id="rPlan" class="abs" style="left:48px;top:96px" width="688" height="440"></svg>
+      </div></div>
+      <div class="card" id="rS"><div class="lbl" style="left:48px;top:40px">THE PAPER TRAIL</div><div id="rRowsR"></div></div>
+    </div>
+
+    <!-- scene U: three kinds of authority -->
+    <div id="sU">
+      <div class="serif" id="uq">Why do people <span class="acc">obey?</span></div>
+      <div id="uCards"></div>
+    </div>
+
+    <!-- scene K: at work today -->
     <div id="sK">
-      <div class="serif" id="kh">Why do people obey a <span class="acc">boss?</span></div>
-      <div id="kRow"></div>
-      <div id="kstrip"><span id="kI"></span><span class="serif tx">Bureaucracy runs on <span style="color:#E9B95C">rational-legal</span> authority</span></div>
+      <div class="card" id="kl"><div class="lbl" style="left:48px;top:40px">AT WORK TODAY</div><div id="kRows"></div></div>
+      <div class="card" id="kp"><div id="kPans"></div></div>
     </div>
 
-    <!-- scene P: good and bad -->
-    <div id="sP">
-      <div id="gbRow"></div>
-      <div id="spRow"></div>
-      <div id="pstrip"><span id="pI"></span><span class="serif tx">A short rulebook <span style="color:#E9B95C">+</span> common sense</span></div>
+    <!-- scene X: the limits -->
+    <div id="sX">
+      <div class="card" id="xs"><div class="abs" id="xsIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:48px;top:40px">IS BUREAUCRACY GOOD?</div>
+        <svg id="scl" width="688" height="250" style="position:absolute;left:48px;top:84px">
+          <rect x="254" y="226" width="180" height="20" rx="10" fill="#14213D"/>
+          <rect x="338" y="40" width="12" height="190" fill="#14213D"/>
+          <g id="panL"></g><g id="panR"></g>
+          <g id="beam"><rect x="64" y="34" width="560" height="12" rx="6" fill="#14213D"/></g>
+          <circle cx="344" cy="40" r="14" fill="#B8862F"/>
+        </svg>
+        <div class="lbl" id="xgL" style="left:48px;top:352px;color:#B8862F">THE GOOD SIDE</div>
+        <div class="lbl" id="xhL" style="left:408px;top:352px;color:#B5482F">THE HARD SIDE</div>
+        <div id="xChips"></div>
+      </div></div>
+      <div class="card" id="xw">
+        <div class="lbl" style="left:48px;top:40px">WHY "RED TAPE"?</div>
+        <svg id="tape" class="abs" style="left:48px;top:84px" width="192" height="140"></svg>
+        <div class="serif xt" id="xt1" style="top:96px">Named after the <span style="color:#B5482F">red ribbon</span></div>
+        <div class="serif xt" id="xt2" style="top:142px">tied round official papers</div>
+        <div class="hr" style="position:absolute;left:48px;right:48px;top:250px;height:2px;background:var(--line)"></div>
+        <div class="lbl" id="xcL" style="left:48px;top:274px">AT CHAI CORNER</div>
+        <div class="xp" id="xp0" style="top:310px"><span id="xp0I"></span>Less sugar, please?</div>
+        <div class="xp" id="xp1" style="top:310px;background:#F6E3DC;color:#B5482F"><span id="xp1I"></span>Not in the rules</div>
+        <div id="xfv"><div class="cav" style="background-image:url(../../assets/illustrations/mba/weber-face.jpg)"></div><div class="t1">WEBER HIMSELF WARNED</div><div class="t2">Too many rules: an <span class="acc">iron cage</span></div></div>
+      </div>
+      <div class="chip ghost" id="lesson" style="left:160px;top:390px">THE LESSON</div><div id="both"><span id="bothI"></span><span class="serif tx">Rules to be fair</span><span class="serif tx" style="color:#B8862F">+</span><span class="serif tx" style="color:#E9D9B5">never stop thinking</span></div>
     </div>
 
     <!-- quick check -->
     <div id="quiz">
       <div class="chip" id="qchip" style="left:160px;top:120px"><i></i>QUICK CHECK</div>
-      <div class="serif qq" id="qq1" style="top:224px">Kabir's friend pays the usual price.</div><div class="serif qq acc" id="qq2" style="top:304px">Which feature is this?</div>
+      <div class="serif qq" id="qq1" style="top:224px">Kabir's friend pays the same price as everyone.</div><div class="serif qq acc" id="qq2" style="top:304px">Which feature is this?</div>
       <svg id="ring" viewBox="0 0 150 150"><circle cx="75" cy="75" r="66" fill="#fff" stroke="#E2DACB" stroke-width="8"/><circle id="ringA" cx="75" cy="75" r="66" fill="none" stroke="#B8862F" stroke-width="8" stroke-linecap="round" transform="rotate(-90 75 75)"/></svg>
       <div class="serif" id="ringN" style="left:1610px;top:236px;position:absolute"></div>
       <div id="opts"></div>
@@ -262,10 +385,10 @@
       <div class="chip" id="rchip" style="left:160px;top:84px"><i></i>RECAP</div>
       <div class="serif" id="rh">Remember these <span class="acc">three things</span></div>
       <div id="rRows"></div>
-      <div id="next"><span class="nc">NEXT · EP 11</span><span class="nt">Human Relations Approach · Elton Mayo</span><span id="nextI"></span></div>
+      <div id="next"><span class="nc">NEXT · EP 11</span><span class="nt">Human Relations Approach - Elton Mayo</span><span id="nextI"></span></div>
     </div>
   </div>
-  <div id="stmt"><div id="st1">More outlets won't need more Ravi.</div><div class="serif" id="st2">They need a <span style="color:#E9B95C">rulebook.</span></div></div>
+  <div id="stmt"><div id="st1">To grow, Ravi cannot be everywhere.</div><div class="serif" id="st2">He needs a <span style="color:#E9B95C">rulebook.</span></div></div>
   <div id="sweep"><b></b></div>
   <div id="prog"><i></i></div>
   <div class="cap" id="cap"></div>
