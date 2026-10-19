@@ -272,3 +272,6 @@ S3|0.6|Then it cools in a condenser, and turns back into pure water.
 Q1|1.7|Quick check. What turns the steam back into water?
 A1|0.2|The condenser! It cools the steam.
 ```
+
+## Illustrations (approved Oct 2026)
+Vintage hand-drawn educational cartoon illustrations for people and storytelling (thinkers, historical scenes, the running cast, real workplaces), generated in Canva from text prompts in the world's palette and cut out onto cards. Diagrams stay hand-built for precision. Name labels always in-video. Full rules, per-world palette lines and the generation workflow: docs/ILLUSTRATIONS.md. Libraries: assets/illustrations/<world>/.
