@@ -78,7 +78,7 @@ $('#gBars').innerHTML = GV.map((v, i) => `<div class="gb" id="gb${i}" style="lef
 $('#gLbls').innerHTML = GV.map((_, i) => `<div class="gbl" style="left:${(GX(i) - 24).toFixed(1)}px;top:494px">${i + 1} ${i ? 'PEOPLE' : 'PERSON'}</div>`).join('');
 const b5 = GX(4) + 36, b6 = GX(5) + 36, y5 = 96 + 380 - GH(100) - 52, y6 = 96 + 380 - GH(222) - 52;
 $('#gBr').innerHTML = `<path id="gArc" d="M${b5} ${y5} Q${(b5 + b6) / 2 - 60} ${y6 - 30} ${b6 - 30} ${y6 + 6}" fill="none" stroke="#B5482F" stroke-width="4" stroke-linecap="round"/><path id="gArh" d="M${b6 - 46} ${y6 - 4} L${b6 - 28} ${y6 + 8} L${b6 - 44} ${y6 + 20}" fill="none" stroke="#B5482F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>` +
-  `<g id="gDb"><rect x="${b5 - 190}" y="${y6 - 40}" width="168" height="44" rx="22" fill="#B5482F"/><text x="${b5 - 106}" y="${y6 - 11}" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="20" fill="#fff">More than 2x</text></g>`;
+  `<g id="gDb"><rect x="${b5 - 236}" y="${y5 - 64}" width="168" height="44" rx="22" fill="#B5482F"/><text x="${b5 - 152}" y="${y5 - 35}" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="20" fill="#fff">More than 2x</text></g>`;
 const GC = [['user', 'Each person'], ['users', 'Each group'], ['link', 'Each pair']];
 $('#gChips').innerHTML = GC.map(([ic, t], i) => `<div class="gch" id="gc${i}">${M.icon(ic, 22, C.gold, 2.4)}${t}</div>`).join('');
 const GW = [[tG2p, '2 people: 2 × (2 + 1) = 6'], [tG5p, '5 people: 5 × (16 + 4) = 100'], [tG6p, '6 people: 6 × (32 + 5) = 222']];
@@ -108,9 +108,9 @@ const posOf = (i, t) => {
 };
 const stepAt = t => { let s = 0; for (let k = 1; k < STEPS.length; k++) if (t >= STEPS[k][1]) s = k; return s; };
 const statT = [
-  [[tFlat1 + 0.3, 5], [tTall, 2], [tFlat2, 5]],
-  [[wt('O2', 'managers'), 6], [wt('W2', 'fifteen'), 15], [wt('W4', 'six'), 6]],
-  [[tO3, 3], [wt('W2', 'levels'), 5], [wt('W4', 'levels'), 3]],
+  [[tFlat1 + 0.3, 5], [tTall + 0.3, 2], [tFlat2 + 0.3, 5]],
+  [[tFlat1 + 0.5, 6], [tTall + 0.5, 15], [tFlat2 + 0.5, 6]],
+  [[tFlat1 + 0.7, 3], [tTall + 0.7, 5], [tFlat2 + 0.7, 3]],
 ];
 const statV = (k, t) => { let v = STAT.fan[k], from = v, ta = -9; for (const [tt, nv] of statT[k]) if (t >= tt) { from = v; v = nv; ta = tt; } return Math.round(from + (v - from) * M.o3((t - ta) / 0.6)); };
 
@@ -245,7 +245,7 @@ M.on(t => {
     $('#frR').setAttribute('fill', mix(C.ink, C.red, M.io((t - tBehind) / 0.3)));
     M.vis($('#ask'), t, tTwo - 0.35, tAout, { dy: 36, ...o });
     METH.forEach(([, tm], i) => M.vis($('#mt' + i), t, tm - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 }));
-    M.rise($('#askT'), t, tBehind + 0.2, { st: 0.07, sp: M.HEAVY });
+    M.rise($('#askT'), t, tC3 + 0.1, { st: 0.07, sp: M.HEAVY });
   }
 
   /* ===== I: the festival rush and the team ===== */
@@ -328,7 +328,8 @@ M.on(t => {
     }
     M.vis($('#onM'), t, tMeena - 0.1, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.1 });
     Object.entries(LV).forEach(([k, ys]) => ys.forEach((_, j) => { const on = lay === k && !(k === 'flat' && false); const el = $('#lv' + k + j); const a = on ? M.clamp((t - ts - 0.5) / 0.3) * (1 - M.clamp((t - (tnext - 0.25)) / 0.2)) : 0; el.style.opacity = a.toFixed(3); M.hide(el, a < 0.01); }));
-    for (let k = 0; k < 3; k++) { M.vis($('#os' + k), t, tO1 + 0.45 + k * 0.08, 1e9, { dy: 14 }); M.setT($('#osv' + k), String(statV(k, t))); }
+    const HLW = [[wt('O2', 'five'), wt('W1', 'two'), wt('W3', 'five')], [wt('O2', 'managers'), wt('W2', 'fifteen'), wt('W4', 'six')], [tO3, wt('W2', 'levels'), wt('W4', 'levels')]];
+    for (let k = 0; k < 3; k++) { M.vis($('#os' + k), t, tO1 + 0.45 + k * 0.08, 1e9, { dy: 14 }); M.setT($('#osv' + k), String(statV(k, t))); const hp = Math.max(...HLW[k].map(a => pulse(t, a - 0.1, 0.8))); $('#osv' + k).style.color = mix(C.ink, C.gold, hp); }
     const sh = SHAPE[lay]; M.setT($('#oShT'), sh[1]); setIco($('#oShI'), sh[0], C.gold2, 26, 2.4);
     M.vis($('#oShape'), t, tO1 + 0.7, 1e9, { dy: 0, sc: 0.8, sp: M.POP, fade: 0.1 });
     const pp = pulse(t, ts + 0.3, 0.5); if (s && pp > 0.001) $('#oShape').style.transform = `scale(${(1 + 0.06 * pp).toFixed(4)})`;

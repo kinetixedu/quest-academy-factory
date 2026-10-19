@@ -1,7 +1,7 @@
-// MBA - Principles of Management, Ep 28 (finale): Organizational Effectiveness
+// MBA - Principles of Management, Ep 28: Organizational Effectiveness (series finale)
 (() => {
 const { $ } = M;
-const C = { ink: '#14213D', ink2: '#3A4560', muted: '#8A8274', dim: '#B9B1A3', gold: '#B8862F', gold2: '#E9D9B5', gold3: '#F3EAD6', paper: '#F5F1E8', paper2: '#EEE8DB', card: '#FFFFFF', line: '#E2DACB', red: '#B5482F', redBg: '#F6E3DC', navy2: '#24345A', navy3: '#2C3B5E', off: '#F0EBE1' };
+const C = { ink: '#14213D', ink2: '#3A4560', muted: '#8A8274', dim: '#B9B1A3', gold: '#B8862F', gold2: '#E9D9B5', gold3: '#F3EAD6', paper: '#F5F1E8', paper2: '#EEE8DB', card: '#FFFFFF', line: '#E2DACB', red: '#B5482F', redBg: '#F6E3DC', navy2: '#24345A', navy3: '#2C3B5E' };
 const wt = M.wt, T0 = M.t0, T1 = M.t1, mix = M.mix;
 
 /* extra line icons (24-unit, lucide style) */
@@ -9,117 +9,166 @@ Object.assign(M.IC, {
   cup: ['M10 2v2', 'M14 2v2', 'M6 2v2', 'M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1'],
   target: ['M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z', 'M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z', 'M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z'],
   gauge: ['m12 14 4-4', 'M3.34 19a10 10 0 1 1 17.32 0'],
-  clipboard: ['M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2', 'M15 2H9a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1Z', 'M12 11h4', 'M12 16h4', 'M8 11h.01', 'M8 16h.01'],
   network: ['M16 16h6v6h-6z', 'M2 16h6v6H2z', 'M9 2h6v6H9z', 'M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3', 'M12 12V8'],
   smile: ['M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z', 'M8 14s1.5 2 4 2 4-2 4-2', 'M9 9h.01', 'M15 9h.01'],
-  timer: ['M10 2h4', 'm12 14 3-3', 'M12 22a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z'],
-  trophy: ['M6 9H4.5a2.5 2.5 0 0 1 0-5H6', 'M18 9h1.5a2.5 2.5 0 0 0 0-5H18', 'M4 22h16', 'M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22', 'M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22', 'M18 2H6v7a6 6 0 0 0 12 0V2Z'],
-  trendUp: ['M22 7 13.5 15.5 8.5 10.5 2 17', 'M16 7h6v6'],
-  refresh: ['M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8', 'M21 3v5h-5', 'M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16', 'M8 16H3v5'],
   heart: ['M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z'],
-  owner: ['M2 20h20', 'm4 17-2-11 6 4 4-7 4 7 6-4-2 11Z'],
+  milk: ['M8 2h8', 'M9 2v2.789a4 4 0 0 1-.672 2.219l-.656.984A4 4 0 0 0 7 10.212V20a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-9.789a4 4 0 0 0-.672-2.219l-.656-.984A4 4 0 0 1 15 4.788V2', 'M7 15a6.472 6.472 0 0 1 5 0 6.47 6.47 0 0 0 5 0'],
+  clipboard: ['M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2', 'M15 2H9a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1Z', 'M12 11h4', 'M12 16h4', 'M8 11h.01', 'M8 16h.01'],
+  grid: ['M3 3h7v7H3z', 'M14 3h7v7h-7z', 'M14 14h7v7h-7z', 'M3 14h7v7H3z'],
+  refresh: ['M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8', 'M21 3v5h-5', 'M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16', 'M8 16H3v5'],
+  cart: ['M8 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z', 'M19 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z', 'M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12'],
+  bed: ['M2 4v16', 'M2 8h18a2 2 0 0 1 2 2v10', 'M2 17h20', 'M6 8v9'],
+  scale: ['m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z', 'm2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z', 'M7 21h10', 'M12 3v18', 'M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2'],
+  award: ['m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526', 'M12 14a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z'],
+  key: ['m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4', 'm21 2-9.6 9.6', 'M7.5 21a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z'],
+  play: ['M6 3l14 9-14 9z'],
+  trendUp: ['M16 7h6v6', 'm22 7-8.5 8.5-5-5L2 17'],
+  trendDown: ['M16 17h6v-6', 'm22 17-8.5-8.5-5 5L2 7'],
+  alert: ['m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3', 'M12 9v4', 'M12 17h.01'],
+  flag: ['M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z', 'M4 22v-7'],
 });
+const IMG = '../../assets/illustrations/mba/';
+const FACE = n => `background-image:url(${IMG}${n}-face.jpg)`;
 
 /* ---------- beats (all from the voice) ---------- */
-const tTitle = 0.25, tMorph = T0('H2') + 0.02, tFive = wt('H2', 'five'), tWell = wt('H2', 'doing');
-const tK = T0('C1'), tGreat = wt('C1', 'great'), tA = T0('C2'), tMe = wt('C2', 'Meena'), tDiff = wt('C3', 'different'), tRight = wt('C3', 'right');
-const tT = T0('T1'), tSt2 = wt('T1', 'Ravi'), tTu = T0('D1') - 0.32;
-const tD1 = T0('D1'), tD2 = T0('D2'), tHow = wt('D2', 'how'), tAch = wt('D2', 'achieves'), tD3 = T0('D3'), tCard = wt('D3', 'card'), tDout = T0('E1') - 0.32;
-const tE1 = T0('E1'), tEp = wt('E1', 'episode'), tEff = wt('E1', 'Effective'), tE2 = T0('E2'), tE3 = T0('E3'), tWrong = wt('E3', 'wrong'), tEout = T0('F0') - 0.32;
-const tF0 = T0('F0'), tF = [1, 2, 3, 4].map(i => T0('F' + i)), tFout = T0('I0') - 0.32;
-const tFq = [wt('F1', 'Did'), wt('F2', 'Can'), wt('F3', 'Does'), wt('F4', 'Is')];
-const tFe = [wt('F1', 'Ravi'), wt('F2', 'like'), wt('F3', 'smoothly'), wt('F4', 'customers')];
-const tSh = ['customers', 'staff', 'owners', 'suppliers', 'society'].map(w => wt('F4', w));
-const tI0 = T0('I0'), tG = [wt('I1', 'Profit'), wt('I1', 'productivity'), wt('I1', 'customer'), wt('I1', 'employee'), wt('I1', 'growth'), wt('I1', 'adaptability')], tIout = T0('J0') - 0.32;
-const tJ0 = T0('J0'), tMs = [wt('J1', 'started'), wt('J2', 'team'), wt('J3', 'second'), wt('J3', 'five')];
-const tLp = [wt('J2', 'plan'), wt('J2', 'organize'), wt('J2', 'control'), wt('J4', 'decide'), wt('J4', 'delegate'), wt('J4', 'span')], tJout = T0('J5') - 0.32;
-const tJ5 = T0('J5'), tSc = [wt('J5', 'Goals'), wt('J5', 'Resources'), wt('J5', 'Smooth'), wt('J5', 'Stakeholders')], tJ6 = T0('J6'), tBig = wt('J6', 'bigger'), tEffv = wt('J6', 'effective');
-const tQ = T0('Q1'), tQw = wt('Q1', 'Which'), tCount = T1('Q1') + 0.05, tAnsQ = T0('A1') - 0.02, tTakeQ = wt('A1', 'He');
+const tTitle = 0.25, tMorph = T0('H2') + 0.02, tFive = wt('H2', 'five'), tWell = wt('H2', 'well');
+const tC1 = T0('C1'), tSales = wt('C1', 'sales'), tAsha = wt('C2', 'Asha'), tMeena = wt('C2', 'Meena'), tC3 = T0('C3'), tAout = T0('I1') - 0.32;
+// I
+const tI1 = T0('I1'), tI2 = T0('I2'), tFair = wt('I2', 'fair'), tWhole = wt('I2', 'whole'), tIout = T0('D1') - 0.32;
+// D
+const tD1 = T0('D1'), tD2 = T0('D2'), tHow = wt('D2', 'how'), tGoals = wt('D2', 'goals'), tD3 = T0('D3'), tRep = wt('D3', 'report'), tNot = wt('D3', 'not'), tDout = T0('E1') - 0.32;
+// E
+const tE1 = T0('E1'), tEff = wt('E1', 'Effective'), tRight = wt('E1', 'right'), tE2 = T0('E2'), tEffi = wt('E2', 'Efficient'), tWaste = wt('E2', 'waste'), tE3 = T0('E3'), tBoth = wt('E3', 'both'), tWrong = wt('E3', 'wrong'), tEout = T0('F0') - 0.32;
+// F: the four checks
+const tF0 = T0('F0'), tF = [1, 2, 3, 4].map(i => T0('F' + i)), tFout = T0('T1') - 0.32;
+const tPass = [wt('F1', 'there'), wt('F2', 'staff'), wt('F3', 'conflict'), wt('F4', 'town')];
+const tGoalW = [wt('F1', 'aimed'), wt('F1', 'five')], tRes = [wt('F2', 'milk'), wt('F2', 'money'), wt('F2', 'skilled')];
+const tSmooth = wt('F3', 'smoothly'), tConf = wt('F3', 'conflict'), tStk = ['Customers', 'staff', 'owners', 'suppliers', 'town'].map(w => wt('F4', w));
+const tT = T0('T1'), tSt2 = wt('T1', 'better'), tTu = T0('J0') - 0.32;
+// J: the journey
+const tJ0 = T0('J0'), tJn = [wt('J1', 'alone'), wt('J2', 'team'), wt('J3', 'bus'), wt('J3', 'five'), wt('J4', 'decide')], tSpan = wt('J4', 'span'), tJout = T0('K0') - 0.32;
+// K
+const tK0 = T0('K0'), tK = [1, 2, 3, 4, 5].map(i => T0('K' + i)), tKout = T0('X1') - 0.32;
+const tKw = [wt('K1', 'bakery'), wt('K2', 'factory'), wt('K3', 'hotel'), wt('K4', 'company'), wt('K5', 'shop')];
+// X
+const tX1 = T0('X1'), tX2 = T0('X2'), tCups = wt('X2', 'cups'), tRush = wt('X2', 'rush'), tWorse = wt('X2', 'worse'), tX3 = T0('X3'), tGood = wt('X3', 'Goodhart'), tOnce = wt('X3', 'Once'), tStops = wt('X3', 'stops');
+const tX4 = T0('X4'), tLow = wt('X4', 'low'), tPay = wt('X4', 'pay'), tX5 = T0('X5'), tXout = tX5 - 0.15;
+const tQ = T0('Q1'), tCount = T1('Q1') + 0.05, tAns = T0('A1') - 0.02, tTakeQ = wt('A1', 'He');
 const tS = T0('S1'), tRow = [T0('S2'), T0('S3'), T0('S4')], tN = T0('N1');
-const tPill = [[wt('S2', 'achieves')], ['goals', 'resources', 'internal', 'stakeholders'].map(w => wt('S3', w)), [wt('S4', 'right'), wt('S4', 'right', 1)]];
-const SW = [[tT - 0.42, tTu], [tQ - 0.42, tQ + 0.06], [tS - 0.42, tS + 0.06]];   // navy page-turn sweeps [cover start, uncover start]
+const tPill = [[wt('S2', 'goals')], ['Goals', 'resources', 'internal', 'stakeholders'].map(w => wt('S3', w)), [wt('S4', 'right'), wt('S4', 'right', 1)]];
+const SW = [[tT - 0.42, tTu], [tQ - 0.42, tQ + 0.06], [tS - 0.42, tS + 0.06]];
 
 /* ---------- build ---------- */
-// stall
+const wrap = (card, id, w, h) => { const d = document.createElement('div'); d.id = id; d.className = 'abs'; d.style.cssText = `left:0;top:0;width:${w}px;height:${h}px`; while (card.firstChild) d.appendChild(card.firstChild); card.appendChild(d); };
+// A
 let aw = ''; for (let i = 0; i < 8; i++) aw += `<path d="M${i * 77} 0 h77 v58 a38.5 26 0 0 1 -77 0 z" fill="${i % 2 ? '#F5F1E8' : '#14213D'}"/>`;
 $('#awnG').innerHTML = aw;
-const CUPS = [[430, 196], [466, 196], [502, 196], [448, 158], [484, 158]];
-$('#cups').innerHTML = CUPS.map(([x, y], i) => `<g id="cup${i}" transform="translate(${x} ${y})"><path d="M-15 -34 h30 l-4 34 h-22 z" fill="#fff" stroke="#3A4560" stroke-width="3" stroke-linejoin="round"/><path d="M-15 -34 h30" stroke="#B8862F" stroke-width="4"/></g>`).join('');
-// five outlets
-$('#outs').innerHTML = [0, 1, 2, 3, 4].map(k => `<div class="ol" id="ol${k}" style="left:${300 + k * 116}px"></div>`).join('');
-$('#pPI').innerHTML = M.icon('users', 24, C.ink, 2.2); $('#pHI').innerHTML = M.icon('home', 24, C.ink, 2.2);
-// three opinions
-const ASK = [['K', 'KABIR SAYS', 'Sales are up', 'Doing great', 'check', C.gold, '#fff'], ['A', 'ASHA ASKS', 'Staff happy?', 'Not sure', 'help', C.redBg, C.red], ['M', 'MEENA ASKS', 'Customers?', 'Not sure', 'help', C.redBg, C.red]];
-$('#jobRow').innerHTML = ASK.map(([l, d, o, p, ic, bg, fg], i) => `<div class="job" id="job${i}" style="left:${36 + i * 291}px"><div class="jd">${d}</div><div class="av">${l}</div><div class="jt">${o}</div><div class="jp" style="background:${bg};color:${fg}"><span>${M.icon(ic, 20, fg, 2.6)}</span><span>${p}</span></div></div>`).join('');
-// definition + report card
-$('#defI').innerHTML = M.icon('target', 36, C.gold, 2.2);
-$('#rcard').innerHTML = `<rect x="0" y="0" width="272" height="320" rx="24" fill="#F5F1E8"/><path d="M24 0 h224 a24 24 0 0 1 24 24 v40 h-272 v-40 a24 24 0 0 1 24 -24 z" fill="#14213D"/><circle cx="40" cy="32" r="10" fill="#B8862F"/><rect x="64" y="27" width="120" height="10" rx="5" fill="#3A4560"/>` +
-  [0, 1, 2, 3].map(k => `<rect id="rl${k}" x="32" y="${100 + k * 48}" width="140" height="12" rx="6" fill="#E2DACB"/><rect id="rb${k}" x="200" y="${92 + k * 48}" width="40" height="28" rx="8" fill="#fff" stroke="#D9CFBC" stroke-width="2.5" stroke-dasharray="5 5"/>`).join('') +
-  `<rect x="32" y="288" width="208" height="8" rx="4" fill="#E9D9B5"/>`;
-const SUBJ = [['target', 'Goals'], ['package', 'Resources'], ['gear', 'Inside work'], ['users', 'Stakeholders']];
-$('#subj').innerHTML = SUBJ.map(([ic, n], k) => `<div class="sj" id="sj${k}" style="top:${104 + k * 80}px"><div class="si">${M.icon(ic, 26, C.gold, 2.2)}</div><div class="sn">${n}</div><div class="sg">?</div></div>`).join('');
-// effective / efficient (Ep 01 cards)
-const EE = [['Effective', 'Doing the right things', 'target', 'Sell the chai people love'], ['Efficient', 'Doing things right', 'gauge', 'No wasted milk, no wasted time']];
-$('#eRow').innerHTML = EE.map(([t, m, ic, v], i) => `<div class="ee" id="ee${i}" style="left:${160 + i * 816}px"><div class="bg"></div><div class="eic"><span class="ico"></span></div><div class="serif et">${t}</div><div class="em">${m}</div><div class="hr"></div><div class="ex">AT CHAI CORNER</div><div class="ev">${v}</div></div>`).join('');
-// system diagram: inputs -> process -> outputs, stakeholders below
-const NY = 200, NX = [128, 392, 656];
-const SN = [['package', 'INPUTS', 'Resources'], ['gear', 'PROCESS', 'Inside work'], ['target', 'OUTPUTS', 'Goals']];
-$('#sNodes').innerHTML = SN.map(([, k, l], i) => `<div class="nd" id="nd${i}" style="left:${NX[i] - 64}px;top:${NY - 64}px"><div class="bg"></div><div class="ni"></div></div><div class="ndk" id="ndk${i}" style="left:${NX[i] - 120}px;top:${NY + 82}px">${k}</div><div class="serif ndl" id="ndl${i}" style="left:${NX[i] - 120}px;top:${NY + 106}px">${l}</div>`).join('');
-const SH = [['smile', 'CUSTOMERS'], ['users', 'STAFF'], ['owner', 'OWNERS'], ['package', 'SUPPLIERS'], ['home', 'SOCIETY']], SHX = k => 392 + (k - 2) * 136;
-$('#sHold').innerHTML = SH.map(([, l], k) => `<div class="sh" id="sh${k}" style="left:${SHX(k) - 36}px"><div class="bg"></div><div class="ni"></div></div><div class="shl" id="shl${k}" style="left:${SHX(k) - 68}px">${l}</div>`).join('');
-const head = (x, y, id) => `<path id="${id}" d="M-9 -11 L3 0 L-9 11" transform="translate(${x} ${y})"/>`;
-$('#sysG').innerHTML = `<path id="sl0" d="M48 394 H300" stroke="#E2DACB" stroke-width="2"/><path id="sl1" d="M484 394 H736" stroke="#E2DACB" stroke-width="2"/>` +
-  [0, 1].map(k => { const x0 = NX[k] + 76, x1 = NX[k + 1] - 80; return `<g id="ag${k}" stroke="#D9CFBC"><path id="ar${k}" d="M${x0} ${NY} H${x1}"/>${head(x1 + 2, NY, 'ah' + k)}</g>`; }).join('');
-$('#sHold').insertAdjacentHTML('beforeend', `<div class="ndk" id="shT" style="left:272px;top:384px">STAKEHOLDERS</div>`);
-const PANES = [['THE BIG IDEA', 'Four approaches', 'Four ways to judge one firm', 'clipboard', 'Each one checks a different', 'part of Chai Corner'],
-  ['01 / 04 · OUTPUTS', 'Goal attainment', 'Did we reach our goals?', 'target', 'Ravi aimed for five outlets,', 'and he got there'],
-  ['02 / 04 · INPUTS', 'System resource', 'Can we get what we need?', 'package', 'Good milk, money and skilled', 'staff, from outside'],
-  ['03 / 04 · PROCESS', 'Internal process', 'Does work run smoothly?', 'gear', 'Clear roles, quick decisions,', 'and little conflict'],
-  ['04 / 04 · STRATEGIC CONSTITUENCIES', 'Stakeholder', 'Is every group happy?', 'users', 'Customers, staff, owners,', 'suppliers and society']];
-$('#pans').innerHTML = PANES.map(([s, t, m, ic, e1, e2], i) => `<div class="pn" id="pn${i}"><div class="ps">${s}</div><div class="serif pt">${t}</div><div class="pm">${m}</div><div class="hr"></div><div class="px">AT CHAI CORNER</div><div class="pe"><i>${M.icon(ic, 34, C.gold, 2.2)}</i><span><b>${e1}</b><b>${e2}</b></span></div></div>`).join('');
-// six signs
-const SIG = [['coin', 'Profit', 'Money left after costs'], ['gauge', 'Productivity', 'Cups served per worker'], ['smile', 'Customer satisfaction', 'Do customers come back?'],
-  ['heart', 'Employee satisfaction', 'Does the team enjoy work?'], ['trendUp', 'Growth', 'More outlets, more sales'], ['refresh', 'Adaptability', 'Changing with the times']];
-$('#gRow').innerHTML = SIG.map(([, t, s], i) => `<div class="sg6" id="sg${i}" style="left:${160 + (i % 3) * 544}px;top:${270 + Math.floor(i / 3) * 306}px;height:274px"><div class="bg"></div><div class="gi"></div><div class="gk">SIGN 0${i + 1}</div><div class="serif gt">${t}</div><div class="gs">${s}</div></div>`).join('');
-// journey
-const MS = [['user', 'THE START', 'One stall', 'Ravi alone, 100 customers'], ['users', 'THE TEAM', 'A real team', 'Asha, Kabir and Meena'], ['store', 'THE BUS STAND', 'Second outlet', 'Run by Meena'], ['network', 'TODAY', 'Five outlets', 'Plus a head office']];
-$('#mss').innerHTML = MS.map(([, k, t, m], i) => `<div class="ms" id="ms${i}" style="left:${i * 400}px"><div class="mc"><div class="bg"></div><div class="ni"></div></div><div class="mk">${k}</div><div class="serif mt">${t}</div><div class="mm">${m}</div></div>`).join('');
-const LP = ['Plan', 'Organize', 'Control', 'Decide', 'Delegate', 'Right span'];
-$('#lps').innerHTML = LP.map((p, k) => `<div class="lp" id="lp${k}">${p}</div>`).join('');
-// scorecard
-const SC = [['target', 'Goal attainment', 'Reached'], ['package', 'System resource', 'Secured'], ['gear', 'Internal process', 'Smooth'], ['users', 'Stakeholder', 'Happy']];
-$('#srs').innerHTML = SC.map(([ic, n, p], k) => `<div class="sr" id="sr${k}" style="top:${104 + k * 112}px"><div class="ri2">${M.icon(ic, 28, C.gold, 2.2)}</div><div class="rn2">${n}</div><div class="rs"></div><div class="rp"><span>${p}</span><i>${M.icon('check', 22, '#fff', 3)}</i></div></div>`).join('');
-const TN = [['THEN · EPISODE 01', C.muted, [['store', '1 stall'], ['user', '1 person'], ['timer', '15 min wait']]], ['NOW · EPISODE 28', C.gold, [['store', '5 outlets'], ['users', '30 people'], ['home', 'Head office']]]];
-$('#tcs').innerHTML = TN.map(([h, col, rows], c) => `<div class="tc" id="tc${c}" style="left:${c ? 432 : 48}px"><div class="th" style="color:${col}">${h}</div>${rows.map(([ic, tx], k) => `<div class="tr" id="tr${c}${k}" style="top:${40 + k * 84}px"><i>${M.icon(ic, 28, c ? C.gold : C.dim, 2.2)}</i><span style="color:${c ? C.ink : C.muted}">${tx}</span></div>`).join('')}</div>`).join('');
+const TL = ['MAIN', 'BUS STAND', 'COLLEGE', 'MARKET', 'STATION'];
+$('#tileRow').innerHTML = TL.map((n, i) => `<div class="tile" id="tl${i}" style="left:${36 + i * 172}px"><div class="cn">${n}</div><div class="ci"></div><div class="ct">Open</div></div>`).join('');
+const OPN = [['kabir', 'Sales are up', tSales], ['asha', 'Staff happy?', tAsha], ['meena', 'Customers happy?', tMeena]];
+$('#meth').innerHTML = OPN.map(([f, m], i) => `<div class="op" id="mt${i}"><div class="fa" style="${FACE(f)}"></div><span>${m}</span></div>`).join('');
+// I
+const S3 = [['kabir', "KABIR'S SCORECARD", 'Sales'], ['asha', "ASHA'S SCORECARD", 'Happy staff'], ['meena', "MEENA'S SCORECARD", 'Happy customers']];
+$('#sc3r').innerHTML = S3.map(([f, a, b], i) => `<div class="s3r" id="s3${i}" style="top:${96 + i * 120}px"><div class="fa" style="${FACE(f)}"></div><div class="t">${a}</div><div class="v">${b}</div></div>`).join('');
+$('#sc3pI').innerHTML = M.icon('clipboard', 28, C.gold2, 2.2);
+wrap($('#ill'), 'illOut', 784, 580);
+// D
+$('#dAkaI').innerHTML = M.icon('clipboard', 24, C.gold, 2.4); $('#dAcI').innerHTML = M.icon('x', 24, C.red, 2.6);
+const DB = [['target', 'Goals'], ['milk', 'Resources'], ['gauge', 'Process'], ['users', 'People']];
+$('#dBc').innerHTML = DB.map(([ic, t], i) => `<div class="dch" id="db${i}" style="background:#F3EAD6;color:#14213D">${M.icon(ic, 22, C.gold, 2.4)}${t}</div>`).join('');
+// E: the matrix
+const QD = [[0, 0, 'EFFICIENT ONLY', 'Wrong drink,<br>made fast', 'r'], [0, 1, 'EFFECTIVE AND EFFICIENT', 'Right chai,<br>no waste', 'g'], [1, 0, 'NEITHER', 'Wrong drink,<br>milk wasted', 'n'], [1, 1, 'EFFECTIVE ONLY', 'Right chai,<br>milk wasted', 'n']];
+$('#qds').innerHTML = QD.map(([r, c, a, b], i) => `<div class="qd" id="qd${i}" style="left:${136 + c * 316}px;top:${120 + r * 200}px"><div class="qt">${a}</div><div class="qs">${b}</div></div>`).join('');
+$('#mdEi').innerHTML = M.icon('target', 36, C.gold, 2.2); $('#mdFi').innerHTML = M.icon('gauge', 36, C.ink, 2.2); $('#b2I').innerHTML = M.icon('check', 30, C.gold, 2.8);
+// F: report card + panes
+const FR = [['target', 'Goals'], ['milk', 'Resources'], ['gauge', 'Internal process'], ['users', 'Stakeholders']];
+$('#fRows').innerHTML = FR.map(([ic, t], i) => `<div class="fr" id="fr${i}" style="top:${96 + i * 112}px"><div class="bg"></div><div class="rn">0${i + 1}</div><div class="ri"></div><div class="rt">${t}</div><div class="gr"><span class="gi"></span><span class="gt"></span></div></div>`).join('');
+$('#fFoot').remove();
+const RES = [['milk', 'Milk'], ['coin', 'Money'], ['users', 'Skilled staff']];
+const STK = ['Customers', 'Staff', 'Owners', 'Suppliers', 'The town'];
+const PV = [
+  TL.map((n, i) => `<div class="abs" id="gs${i}" style="left:${i * 96}px;top:0;width:72px;height:72px;border-radius:36px;background:#F5F1E8;display:flex;align-items:center;justify-content:center"></div><div class="abs" style="left:${i * 96 - 14}px;top:84px;width:100px;text-align:center;font:600 13px Poppins;letter-spacing:.1em;color:#8A8274;white-space:nowrap">${n}</div>`).join('') +
+   `<div class="stp" id="gok" style="left:510px;top:4px;background:#B8862F;color:#fff">${M.icon('check', 26, '#fff', 2.8)}Goal reached</div>`,
+  RES.map(([ic, t], i) => `<div class="stp" id="rs${i}" style="left:0;top:${i * 60}px;height:48px;font-size:22px;padding:0 18px">${M.icon(ic, 22, C.gold, 2.4)}${t}</div>`).join('') +
+   `<svg class="abs" style="left:0;top:0" width="848" height="176">${RES.map((_, i) => `<path id="rp${i}" d="M250 ${24 + i * 60} C420 ${24 + i * 60} 440 72 560 72" fill="none" stroke="#B8862F" stroke-width="4" stroke-dasharray="4 14" stroke-linecap="round"/>`).join('')}</svg>
+   <div class="abs" id="rbox" style="left:560px;top:24px;width:288px;height:96px;border-radius:20px;background:#14213D;color:#fff;display:flex;align-items:center;justify-content:center;gap:12px;font:600 26px Poppins;white-space:nowrap">${M.icon('store', 30, C.gold2, 2.2)}Chai Corner</div>`,
+  ['Order', 'Brew', 'Serve', 'Pay'].map((n, i) => `<div class="abs" id="ps${i}" style="left:${i * 196}px;top:0;width:160px;height:72px;border-radius:18px;background:#F5F1E8;display:flex;align-items:center;justify-content:center;font:600 24px Poppins">${n}</div>`).join('') +
+   `<svg class="abs" style="left:0;top:0" width="848" height="176"><line x1="80" y1="96" x2="668" y2="96" stroke="#E2DACB" stroke-width="4" stroke-dasharray="2 12" stroke-linecap="round"/><g id="pcup"><circle r="18" fill="#B8862F"/><g transform="translate(-11 -11)">${M.icon('cup', 22, '#fff', 2.4)}</g></g></svg>
+   <div class="stp" id="pk0" style="left:0;top:116px;height:52px;font-size:24px;background:#F3EAD6">${M.icon('check', 24, C.gold, 2.6)}No jams</div><div class="stp" id="pk1" style="top:116px;height:52px;font-size:24px;background:#F3EAD6">${M.icon('check', 24, C.gold, 2.6)}Little conflict</div>`,
+  STK.map((n, i) => `<div class="abs" id="sk${i}" style="left:${i * 168}px;top:0;width:152px;height:120px;border-radius:18px;background:#F5F1E8"><div class="abs sic" style="left:56px;top:16px"></div><div class="abs" style="left:0;width:152px;top:58px;text-align:center;font:600 20px Poppins;white-space:nowrap">${n}</div><div class="abs" style="left:20px;top:96px;width:112px;height:10px;border-radius:5px;background:#E2DACB;overflow:hidden"><i id="skb${i}" style="position:absolute;left:0;top:0;height:10px;background:#B8862F"></i></div></div>`).join(''),
+];
+const PP = [['THE CHECK', '4 Approaches', 'Four ways to judge one business', 'IN SHORT', null]].concat([
+  ['APPROACH 01 / 04', 'Goal approach', 'Did we reach our goals?'], ['APPROACH 02 / 04', 'Resource approach', 'Can we get what we need from outside?'],
+  ['APPROACH 03 / 04', 'Internal process', 'Does work inside run smoothly?'], ['APPROACH 04 / 04', 'Stakeholder approach', 'Are the groups we affect happy?']].map((p, i) => [...p, 'AT CHAI CORNER', PV[i]]));
+$('#fPans').innerHTML = PP.map(([s, t, m, x, v], i) => `<div class="pn" id="pn${i}"><div class="ps">${s}</div><div class="serif pt">${t}</div><div class="pm">${m}</div><div class="hr"></div><div class="px">${x}</div>${v ? `<div class="pv" id="pv${i}">${v}</div>` : `<div class="pe"><i>${M.icon('clipboard', 34, C.gold, 2.2)}</i><span>Ravi runs every check, one by one</span></div>`}</div>`).join('');
+// J: the journey
+const JX = i => 110 + i * 270;
+const JN = [['store', 'THE START', 'One stall', 'Ravi does it all'], ['users', 'THE TEAM', 'A real team', 'Plan, organize, staff, direct, control'], ['pin', 'GROWTH', 'Outlet two', 'Meena runs the bus stand'], ['network', 'SCALE', 'Five outlets', 'A small head office'], ['key', 'LEADING', 'A leader', 'Decide, delegate, the right span']];
+$('#jNodes').innerHTML = JN.map(([ic], i) => `<g id="jn${i}"><circle cx="${JX(i)}" cy="300" r="32" fill="#F5F1E8" stroke="#E2DACB" stroke-width="4"/><g transform="translate(${JX(i) - 15} 285)" class="ji"></g></g>`).join('');
+$('#jTxt').innerHTML = JN.map(([, l, t, s], i) => `<div class="jn" id="jt${i}" style="left:${JX(i) - 130}px;top:362px;width:260px"><div class="l">${l}</div><div class="t">${t}</div><div class="s">${s}</div></div>`).join('');
+$('#jRavi').style.cssText += ';' + FACE('ravi');
+$('#jEndI').innerHTML = M.icon('flag', 28, '#fff', 2.4);
+// K
+const KA = [
+  ['coin', 'Profit', 'The money left after costs', 'Kabir checks each outlet\'s profit', 'store', 'A bakery checks its profit every month'],
+  ['gauge', 'Productivity', 'Output for each hour of work', 'Cups served per hour, per outlet', 'gear', 'A factory counts units per shift'],
+  ['smile', 'Customer satisfaction', 'Do customers come back?', 'A rating card at every counter', 'bed', 'A hotel asks every guest to rate their stay'],
+  ['heart', 'Employee satisfaction', 'Do staff want to stay?', 'Asha asks the team how they feel', 'clipboard', 'A company runs a yearly staff survey'],
+  ['refresh', 'Adaptability', 'Changing with the times', 'Hot snacks added when evenings slowed', 'cart', 'A shop starts selling online'],
+];
+$('#kRows').innerHTML = KA.map(([ic, t], i) => `<div class="kr" id="kr${i}" style="top:${92 + i * 94}px"><div class="bg"></div><div class="rn">0${i + 1}</div><div class="ri"></div><div class="rt">${t}</div></div>`).join('');
+const KP = [['KEEPING SCORE', 'Five signs', 'Managers watch more than one number', null]].concat(KA.map((a, i) => [`IN PRACTICE 0${i + 1} / 05`, a[1], a[2], a]));
+$('#kPans').innerHTML = KP.map(([s, t, m, a], i) => `<div class="pn" id="kn${i}"><div class="ps">${s}</div><div class="serif pt">${t}</div><div class="pm">${m}</div><div class="hr"></div>` +
+  (a ? `<div class="ka" id="ka${i}0" style="top:322px"><i>${M.icon('cup', 34, C.gold, 2.2)}</i><div class="kl">AT CHAI CORNER</div><div class="kt">${a[3]}</div></div>
+        <div class="ka" id="ka${i}1" style="top:442px"><i>${M.icon(a[4], 34, C.ink, 2.2)}</i><div class="kl">AT WORK TODAY</div><div class="kt">${a[5]}</div></div>`
+     : `<div class="px">FROM A CHAI STALL TO A HOTEL</div><div class="pe"><i>${M.icon('grid', 34, C.gold, 2.2)}</i><span>A full report card, not one grade</span></div>`) + `</div>`).join('');
+// X
+$('#tgCi').innerHTML = M.icon('users', 36, C.gold, 2.2); $('#tgSi').innerHTML = M.icon('users', 36, C.ink, 2.2);
+$('#bothI').innerHTML = M.icon('grid', 48, C.gold, 2.2);
+wrap($('#xs'), 'xsOut', 784, 580);
 // quiz
-const OPTS = ['Goal attainment', 'System resource', 'Internal process', 'Stakeholder'], RIGHT = 3;
+const OPTS = ['Goal approach', 'Resource approach', 'Process approach', 'Stakeholder approach'], RIGHT = 3;
 $('#opts').innerHTML = OPTS.map((o, i) => `<div class="opt" id="o${i}" style="left:${160 + i * 408}px"><div class="bg"></div><div class="lt">${'ABCD'[i]}</div><div class="ot serif">${o}</div><div class="ok">${M.icon('check', 30, '#fff', 3)}</div></div>`).join('');
 $('#takeI').innerHTML = M.icon('users', 44, C.gold2, 2.4);
 // recap
-const ROWS = [['target', 'Effectiveness', ['Achieving its goals']], ['clipboard', 'Four approaches', ['Goals', 'Resources', 'Internal process', 'Stakeholders']], ['gauge', 'Effective and efficient', ['Right things', 'Done right']]];
+const ROWS = [['target', 'Effectiveness = reaching goals', ['A report card']], ['grid', 'Judge it four ways', ['Goals', 'Resources', 'Process', 'Stakeholders']], ['scale', 'Effective and efficient', ['Right things', 'Done right']]];
 $('#rRows').innerHTML = ROWS.map(([ic, tx, ps], i) => `<div class="card rw" id="rw${i}" style="top:${280 + i * 152}px"><div class="rn">0${i + 1}</div><div class="ri">${M.icon(ic, 34, C.gold, 2.2)}</div><div class="rt">${tx}</div>${ps.map((p, k) => `<div class="fp" id="fp${i}${k}">${p}</div>`).join('')}</div>`).join('');
-$('#nextI').innerHTML = M.icon('trophy', 40, C.gold2, 2.2);
+$('#nextI').innerHTML = M.icon('play', 34, C.gold2, 2.4);
 
 /* ---------- helpers ---------- */
 const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]]]);
 const caps = M.captions($('#cap'), M.CUES.order);
 const sweepX = t => { for (const [a, b] of SW) { const a1 = M.io((t - a) / 0.42), a2 = M.io((t - b) / 0.46); if (a1 > 0 && a2 < 1) return 1940 * (1 - a1) - 1960 * a2; } return null; };
 const setIco = (el, ic, col, s = 32, w = 2.2) => { const k = ic + col + s; if (el._k !== k) { el._k = k; el.innerHTML = M.icon(ic, s, col, w); } };
-const lift = (el, t, ta, td, amt, from, to) => { const l = M.spring(t - ta, M.POP) - M.spring(t - td, M.SOFT); if (t > from && t < to) el.style.transform = Math.abs(l) > 0.001 ? `scale(${(1 + amt * l).toFixed(4)})` : 'none'; };
-const pulse = (el, t, tw, amt = 0.05) => { if (t > tw && t < tw + 0.45) el.style.transform = `scale(${(1 + amt * Math.sin(Math.PI * (t - tw) / 0.45)).toFixed(4)})`; else if (t >= tw + 0.45 && el.style.transform !== 'none') el.style.transform = 'none'; };
-const jline = M.track(0, [[tMs[1], 400], [tMs[2], 800], [tMs[3], 1200]], M.SOFT);
+const snap = (el, v, prop = 'transform') => { if (el.style[prop] !== v) el.style[prop] = v; };
+const grow = (card, inner, t, tShrink) => {
+  const sh = M.spring(t - tShrink + 0.1, M.HEAVY), w = M.lerp(1600, 784, sh);
+  snap(card, (sh >= 1 ? 784 : w.toFixed(1)) + 'px', 'width');
+  snap(inner, (sh >= 1 ? 0 : ((w - 784) / 2).toFixed(1)) + 'px', 'left');
+  return sh;
+};
+const pulse = (t, a, d = 0.9) => (t > a && t < a + d) ? Math.sin(Math.PI * (t - a) / d) : 0;
 let geo = null;
 function measure() {
   const ti = $('#title'); ti.style.fontSize = '120px';
   let fs = 120; if (ti.offsetWidth > 1560) fs = Math.floor(120 * 1560 / ti.offsetWidth); ti.style.fontSize = fs + 'px';
   const w = ti.offsetWidth, h = ti.offsetHeight;
   geo = { sx: 960 - w / 2, sy: 540 - h / 2 - 20, ex: 160, ey: 156, es: 56 / fs, cw: $('#eyebrow').offsetWidth, cy: 540 - h / 2 - 112 };
-  ['#exChip', '#fromChip'].forEach(s => { const ex = $(s); ex.style.left = (1760 - ex.offsetWidth) + 'px'; ex.style.top = '170px'; });
-  document.querySelectorAll('#pans .pt').forEach(p => { if (p.offsetWidth > 688) p.style.fontSize = Math.floor(76 * 688 / p.offsetWidth) + 'px'; });
-  document.querySelectorAll('.sg6 .gt').forEach(p => { if (p.offsetWidth > 440) p.style.fontSize = Math.floor(38 * 440 / p.offsetWidth) + 'px'; });
+  const ex = $('#exChip'); ex.style.left = (1760 - ex.offsetWidth) + 'px'; ex.style.top = '170px';
+  let x = 36; OPN.forEach((_, i) => { const p = $('#mt' + i); p.style.left = x + 'px'; x += p.offsetWidth + 16; });
+  x = 48; DB.forEach((_, i) => { const c = $('#db' + i); c.style.left = x + 'px'; x += c.offsetWidth + 14; });
+  const tg = $('#xsTag'); tg.style.left = '712px'; tg.style.top = '212px';
+  const p0 = $('#pk0'); $('#pk1').style.left = (p0.offsetWidth + 16) + 'px';
+  for (const s of ['#dq']) { const dq = $(s); dq.style.width = 'auto'; dq.style.display = 'inline-block'; const dqw = dq.offsetWidth; dq.style.display = ''; dq.style.width = '1920px'; if (dqw > 1600) dq.style.fontSize = Math.floor(88 * 1600 / dqw) + 'px'; }
+  document.querySelectorAll('#fPans .pt, #kPans .pt').forEach(el => { if (el.offsetWidth > 848) el.style.fontSize = Math.floor(84 * 848 / el.offsetWidth) + 'px'; });
+  document.querySelectorAll('#kPans .kt').forEach(el => { if (el.offsetWidth > 748) el.style.fontSize = Math.floor(30 * 748 / el.offsetWidth) + 'px'; });
+  document.querySelectorAll('.fr .rt').forEach(el => { if (el.offsetWidth > 270) el.style.fontSize = Math.floor(30 * 270 / el.offsetWidth) + 'px'; });
+  const bo = $('#both'); let bw = 0; [...bo.children].forEach(c => bw += c.offsetWidth + 22); if (bw > 1520) bo.querySelectorAll('.tx').forEach(c => c.style.fontSize = Math.floor(52 * 1520 / bw) + 'px');
   OPTS.forEach((_, i) => { const o = $('#o' + i + ' .ot'); if (o.offsetWidth > 312) o.style.fontSize = Math.floor(40 * 312 / o.offsetWidth) + 'px'; });
-  let lx = 48; LP.forEach((_, k) => { const p = $('#lp' + k); p.style.left = lx + 'px'; lx += p.offsetWidth + 16; });
-  ROWS.forEach(([, , ps], i) => { let px = 216 + $('#rw' + i + ' .rt').offsetWidth + 40; ps.forEach((_, k) => { const p = $('#fp' + i + k); p.style.left = px + 'px'; px += p.offsetWidth + 16; }); });
+  const q1 = $('#qq1'); if (q1.offsetWidth > 1400) q1.style.fontSize = Math.floor(68 * 1400 / q1.offsetWidth) + 'px';
+  const je = $('#jEnd'); je.style.left = (JX(4) + 60) + 'px'; je.style.top = '268px';
+  const nt = $('#next .nt'); if (nt.scrollWidth > nt.offsetWidth) nt.style.fontSize = Math.floor(34 * nt.offsetWidth / nt.scrollWidth) + 'px';
+  ROWS.forEach(([, , ps], i) => { let x = 216 + $('#rw' + i + ' .rt').offsetWidth + 40; ps.forEach((_, k) => { const p = $('#fp' + i + k); p.style.left = x + 'px'; x += p.offsetWidth + 16; }); });
 }
 
 /* ---------- frame ---------- */
@@ -128,7 +177,7 @@ M.on(t => {
   camF(t);
   $('#prog i').style.width = (1920 * M.clamp(t / window.DUR)).toFixed(1) + 'px';
 
-  /* title card -> header (one element travels, never cut) */
+  /* title card -> header */
   const m = M.spring(t - tMorph, M.HEAVY), ti = $('#title');
   ti.style.transform = `translate(${M.lerp(geo.sx, geo.ex, m).toFixed(2)}px,${M.lerp(geo.sy, geo.ey, m).toFixed(2)}px) scale(${M.lerp(1, geo.es, m).toFixed(4)})`;
   M.rise(ti, t, tTitle, { st: 0.07, sp: M.HEAVY, out: tQ - 0.05, outDur: 0.01 });
@@ -138,43 +187,128 @@ M.on(t => {
   M.draw($('#ruleL'), t, 0.95, 0.7, M.o3);
   M.vis($('#rule'), t, 0.9, tMorph - 0.1, { dy: 0, outDur: 0.25, ody: 0 });
   M.rise($('#sub'), t, 1.15, { st: 0.04, out: tMorph - 0.1, outDur: 0.3 });
-  if (t < tJ0 - 1) M.vis($('#exChip'), t, tFive + 0.4, tT - 0.1, { dy: 10, outDur: 0.3 });
-  else M.vis($('#exChip'), t, tMs[0] + 0.3, tQ - 0.3, { dy: 10, outDur: 0.3 });
-  M.vis($('#fromChip'), t, tEp, tEout, { dy: 10, outDur: 0.3 });
+  M.hide($('#exChip'), true);
 
-  /* ===== A: five outlets, but is it doing well? ===== */
-  const aOn = t < tT + 0.1; M.hide($('#sA'), !aOn);
+  /* ===== A: is it doing well? ===== */
+  const aOn = t < tAout + 0.45; M.hide($('#sA'), !aOn);
   if (aOn) {
-    M.vis($('#hero'), t, tMorph + 0.18, 1e9, { dx: -60, dy: 0 });
+    const o = { outDur: 0.3, ody: -16 };
+    M.vis($('#hero'), t, tMorph + 0.18, tAout, { dx: -60, dy: 0, ...o });
     M.draw($('#s1'), t, tMorph + 0.7, 0.5, M.o3); M.draw($('#s2'), t, tMorph + 0.82, 0.5, M.o3); M.draw($('#s3'), t, tMorph + 0.94, 0.5, M.o3);
     $('#steam').setAttribute('transform', `translate(0 ${(-4 * Math.sin(t * 2.4)).toFixed(2)})`);
     M.vis($('#awn'), t, tMorph + 0.4, 1e9, { dy: -90, sp: [12, 0.62], fade: 0.05 });
     M.vis($('#sign'), t, tMorph + 0.7, 1e9, { dy: 10 });
+    M.vis($('#ravi'), t, tMorph + 0.55, 1e9, { dy: 40, sp: M.SOFT }); M.vis($('#kettleV'), t, tMorph + 0.75, 1e9, { dy: 16, sp: M.SOFT });
     M.rise($('#hname'), t, tMorph + 0.6, { st: 0.06 }); M.vis($('#htag'), t, tMorph + 0.8, 1e9, { dy: 10 });
-    CUPS.forEach((c, i) => { const ti0 = tMorph + 0.9 + i * 0.06; const p = M.spring(t - ti0, M.POP); const g = $('#cup' + i); M.hide(g, t < ti0); g.setAttribute('transform', `translate(${c[0]} ${(c[1] - (1 - p) * 24).toFixed(2)})`); g.style.opacity = M.clamp((t - ti0) / 0.1); });
-    // question bubble over Ravi when nobody agrees
-    const qp = M.spring(t - tRight + 0.1, M.POP); const qb = $('#qb'); M.hide(qb, t < tRight - 0.1);
-    qb.setAttribute('transform', `translate(392 70) scale(${Math.max(0.001, qp).toFixed(4)})`);
-    // today card
-    M.vis($('#now'), t, tMorph + 0.3, 1e9, { dy: 36 });
-    const n = 1 + Math.round(4 * M.o3((t - tFive) / 0.7)); M.setT($('#nN'), String(n));
-    M.vis($('#nU'), t, tMorph + 0.6, 1e9, { dy: 10 });
-    for (let k = 0; k < 5; k++) {
-      const el = $('#ol' + k), tin = k ? tFive + (k - 1) * 0.14 : tMorph + 0.55;
-      M.vis(el, t, tin, 1e9, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.1 });
-      setIco(el, 'store', C.gold, 40, 2);
-    }
-    M.vis($('#pPpl'), t, tWell - 0.2, 1e9, { dy: 16 }); M.vis($('#pHo'), t, tWell, 1e9, { dy: 16 });
-    // opinions card
-    M.vis($('#ask'), t, tMorph + 0.42, 1e9, { dy: 36 });
-    const tJob = [tK, tA, tMe], tJp = [tGreat, tDiff, tDiff + 0.15];
-    ASK.forEach((_, i) => {
-      const el = $('#job' + i); M.vis(el, t, tJob[i] - 0.05, 1e9, { dy: 24, sp: M.SOFT });
-      M.vis(el.querySelector('.av'), t, tJob[i] + 0.25, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 });
-      M.vis(el.querySelector('.jp'), t, tJp[i], 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
-      el.querySelector('.av').style.background = mix(C.ink2, C.gold, M.io((t - tJob[i] - 0.2) / 0.3) * (1 - M.io((t - (i < 2 ? tJob[i + 1] : tDiff + 0.4)) / 0.3)));
+    M.vis($('#ways'), t, tFive - 0.3, tAout, { dy: 36, ...o });
+    TL.forEach((_, i) => {
+      const el = $('#tl' + i); M.vis(el, t, tFive - 0.1 + i * 0.08, 1e9, { dy: 16 });
+      const g = M.io((t - tWell - i * 0.08) / 0.3), ct = el.querySelector('.ct');
+      M.setT(ct, g > 0.5 ? '?' : 'Open'); ct.style.color = g > 0.5 ? C.gold : C.muted;
+      el.style.background = mix(C.paper, C.gold3, g);
+      setIco(el.querySelector('.ci'), 'store', g > 0.5 ? C.gold : C.ink, 40, 2.2);
     });
-    $('#askL').style.color = mix(C.muted, C.red, M.io((t - tRight) / 0.3));
+    M.vis($('#ask'), t, tSales - 0.35, tAout, { dy: 36, ...o });
+    OPN.forEach(([, , tm], i) => M.vis($('#mt' + i), t, tm - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 }));
+    M.rise($('#askT'), t, tC3 + 0.1, { st: 0.07, sp: M.HEAVY });
+  }
+
+  /* ===== I: the team at one table ===== */
+  const iOn = t >= tI1 - 0.1 && t < tD1 + 0.2; M.hide($('#sI'), !iOn);
+  if (iOn) {
+    const o = { outDur: 0.3, ody: -16 };
+    const ill = $('#ill'); M.vis(ill, t, tI1 + 0.1, tIout, { dy: 36, ...o }); grow(ill, $('#illOut'), t, tI1 + 1.4);
+    M.vis($('#illImg'), t, tI1 + 0.3, 1e9, { dy: 24, sp: M.SOFT });
+    M.vis($('#sc3'), t, tI1 + 1.5, tIout, { dx: 60, dy: 0, ...o });
+    S3.forEach((_, i) => M.vis($('#s3' + i), t, tI1 + 1.75 + i * 0.3, 1e9, { dy: 14 }));
+    M.vis($('#sc3p'), t, tFair - 0.1, 1e9, { dy: 0, sc: 0.8, sp: M.POP, fade: 0.1 });
+  }
+
+  /* ===== D: definition ===== */
+  const dOn = t >= tD1 - 0.05 && t < tE1 + 0.2; M.hide($('#sD'), !dOn);
+  if (dOn) {
+    const o = { outDur: 0.3, ody: -16 };
+    M.rise($('#dq'), t, tD1 + 0.05, { st: 0.07, sp: M.HEAVY, out: tD2 - 0.1, outDur: 0.3 });
+    M.vis($('#def'), t, tD2 + 0.1, tDout, { dy: 36, ...o });
+    M.rise($('#dl1'), t, tHow - 0.05, { st: 0.05 }); M.rise($('#dl2'), t, tGoals - 0.45, { st: 0.06 });
+    M.vis($('#dAka'), t, tRep - 0.1, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
+    M.vis($('#dA'), t, tNot - 0.2, tDout, { dy: 36, ...o }); M.vis($('#dAc'), t, tNot, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
+    M.vis($('#dB'), t, tNot + 0.1, tDout, { dy: 36, ...o });
+    DB.forEach((_, i) => M.vis($('#db' + i), t, tNot + 0.35 + i * 0.12, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 }));
+  }
+
+  /* ===== E: effective vs efficient ===== */
+  const eOn = t >= tE1 - 0.1 && t < tF0 + 0.2; M.hide($('#sE'), !eOn);
+  if (eOn) {
+    const o = { outDur: 0.3, ody: -16 };
+    M.vis($('#mx'), t, tE1 + 0.1, tEout, { dx: -60, dy: 0, ...o });
+    M.vis($('#md'), t, tE1 + 0.25, tEout, { dx: 60, dy: 0, ...o });
+    ['axW', 'axR', 'axG', 'axB'].forEach((id, i) => { const el = $('#' + id), a = M.clamp((t - tE1 - 0.5 - i * 0.06) / 0.2); el.style.opacity = a.toFixed(3); M.hide(el, a < 0.01); });
+    const colOn = M.io((t - tRight + 0.1) / 0.3), rowOn = M.io((t - wt('E2', 'right') + 0.1) / 0.3);
+    QD.forEach(([r, c, , , k], i) => {
+      const el = $('#qd' + i); M.vis(el, t, tE1 + 0.6 + i * 0.07, 1e9, { dy: 14 });
+      const inCol = c === 1 ? colOn : 0, inRow = r === 0 ? rowOn : 0;
+      let bg = mix(C.paper, C.gold3, Math.max(inCol, inRow) * (t < tE3 ? 1 : 0));
+      const fin = M.io((t - (k === 'g' ? tBoth : tWrong) + 0.1) / 0.3);
+      if (t >= tE3 - 0.1) bg = k === 'g' ? mix(C.gold3, C.gold, M.io((t - tBoth + 0.1) / 0.3)) : k === 'r' ? mix(C.paper, C.redBg, M.io((t - tWrong + 0.1) / 0.3)) : C.paper;
+      el.style.background = bg;
+      const gold = k === 'g' && t > tBoth;
+      el.querySelector('.qt').style.color = gold ? '#fff' : (k === 'r' && t > tWrong ? C.red : C.muted);
+      el.querySelector('.qs').style.color = gold ? '#fff' : C.ink;
+    });
+    M.vis($('#mdE'), t, tEff - 0.1, 1e9, { dy: 16 }); M.vis($('#mdF'), t, tEffi - 0.1, 1e9, { dy: 16 });
+    M.vis($('#both2'), t, tBoth - 0.1, 1e9, { dy: 0, sc: 0.8, sp: M.POP, fade: 0.1 });
+  }
+
+  /* ===== F: the four checks ===== */
+  const fOn = t >= tF0 - 0.1 && t < tT + 0.1; M.hide($('#sF'), !fOn);
+  if (fOn) {
+    M.vis($('#fl'), t, tF0 + 0.1, 1e9, { dx: -60, dy: 0 });
+    M.vis($('#fp'), t, tF0 + 0.25, 1e9, { dx: 60, dy: 0 });
+    FR.forEach(([ic], i) => {
+      const el = $('#fr' + i), ta = tF[i], td = i < 3 ? tF[i + 1] : 1e9;
+      M.vis(el, t, tF0 + 0.4 + i * 0.07, 1e9, { dy: 14 });
+      const on = M.io((t - ta) / 0.3), off = M.io((t - td) / 0.35), act = on * (1 - off);
+      el.querySelector('.bg').style.background = mix(C.paper, C.ink, act);
+      el.querySelector('.rt').style.color = t < ta ? C.dim : mix('#fff', C.ink, off);
+      el.querySelector('.rn').style.color = t < ta ? C.dim : mix(C.gold2, C.gold, off);
+      el.querySelector('.ri').style.background = mix('#fff', C.navy2, act);
+      setIco(el.querySelector('.ri'), ic, t < ta ? C.dim : (act > 0.5 ? C.gold2 : C.gold), 28, 2.2);
+      const gr = el.querySelector('.gr'), pass = t >= tPass[i];
+      M.vis(gr, t, ta + 0.2, 1e9, { dy: 0, sc: 0.8, sp: M.POP, fade: 0.1 });
+      M.setT(gr.querySelector('.gt'), pass ? 'Pass' : 'Now');
+      setIco(gr.querySelector('.gi'), pass ? 'check' : 'clock', pass ? '#fff' : (act > 0.5 ? C.gold2 : C.muted), 20, 2.6);
+      const gb = pass ? C.gold : (act > 0.5 ? C.navy3 : C.paper2); if (gr._b !== gb) { gr._b = gb; gr.style.background = gb; gr.style.color = pass ? '#fff' : (act > 0.5 ? C.gold2 : C.muted); }
+      if (!pass && gr._c2 !== act > 0.5) { gr._c2 = act > 0.5; gr.style.color = act > 0.5 ? C.gold2 : C.muted; }
+      const pp = pulse(t, tPass[i], 0.45); if (pp > 0.001) gr.style.transform = `scale(${(1 + 0.08 * pp).toFixed(4)})`;
+    });
+    PP.forEach((_, k) => {
+      const tin = k ? tF[k - 1] : tF0 + 0.5, tout = k < 4 ? tF[k] - 0.14 : 1e9;
+      const pn = $('#pn' + k); const off = t < tin - 0.01 || t > tout + 0.3; M.hide(pn, off); if (off) return;
+      const oo = { outDur: 0.18, ody: -12 };
+      M.vis(pn.querySelector('.ps'), t, tin, tout, { dy: 12, ...oo });
+      M.rise(pn.querySelector('.pt'), t, tin + 0.06, { st: 0.06, sp: M.HEAVY, out: tout, outDur: 0.2 });
+      M.rise(pn.querySelector('.pm'), t, tin + 0.3, { st: 0.04, out: tout, outDur: 0.2 });
+      M.vis(pn.querySelector('.hr'), t, tin + 0.4, tout, { dy: 0, ...oo });
+      M.vis(pn.querySelector('.px'), t, tin + 0.5, tout, { dy: 10, ...oo });
+      if (k === 0) { M.vis(pn.querySelector('.pe'), t, tin + 0.62, tout, { dy: 18, ...oo }); return; }
+      M.vis(pn.querySelector('.pv'), t, tin + 0.55, tout, { dy: 18, ...oo });
+      if (k === 1) {
+        TL.forEach((_, i) => { const g = $('#gs' + i), ta = tGoalW[0] + i * ((tGoalW[1] - tGoalW[0] + 0.6) / 4); const f = M.io((t - ta) / 0.25); g.style.background = mix(C.paper, C.gold, f); setIco(g, 'store', f > 0.5 ? '#fff' : C.ink, 32, 2.2); });
+        M.vis($('#gok'), t, tPass[0] - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
+      } else if (k === 2) {
+        RES.forEach((_, i) => { M.vis($('#rs' + i), t, tRes[i] - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 }); const p = $('#rp' + i); const on = t > tRes[i]; M.hide(p, !on); p.style.strokeDashoffset = (-(t - tRes[i]) * 60).toFixed(1); });
+        M.vis($('#rbox'), t, tin + 0.7, 1e9, { dy: 0, sc: 0.8, sp: M.POP, fade: 0.1 });
+      } else if (k === 3) {
+        ['0', '1', '2', '3'].forEach((_, i) => M.vis($('#ps' + i), t, tin + 0.6 + i * 0.08, 1e9, { dy: 12 }));
+        const u = ((t - tin - 0.9) / 2.4) % 1, uu = t < tin + 0.9 ? 0 : u, x = 80 + 588 * M.io(uu);
+        $('#pcup').setAttribute('transform', `translate(${x.toFixed(1)} 96)`); M.hide($('#pcup'), t < tin + 0.9);
+        const st = Math.min(3, Math.floor((x - 40) / 196)); ['0', '1', '2', '3'].forEach((_, i) => { const e = $('#ps' + i); const c = i === st && t > tin + 0.9 ? C.gold3 : C.paper; if (e._c !== c) { e._c = c; e.style.background = c; } });
+        M.vis($('#pk0'), t, tSmooth - 0.1, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 }); M.vis($('#pk1'), t, tConf - 0.1, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
+      } else if (k === 4) {
+        STK.forEach((_, i) => { M.vis($('#sk' + i), t, tStk[i] - 0.1, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 }); setIco($('#sk' + i).querySelector('.sic'), 'smile', C.gold, 40, 2.2); $('#skb' + i).style.width = (112 * M.o3((t - tStk[i]) / 0.8) * (0.75 + 0.05 * i)).toFixed(1) + 'px'; });
+      }
+    });
   }
 
   /* ===== statement on navy ===== */
@@ -187,158 +321,74 @@ M.on(t => {
     M.rise($('#st2'), t, tSt2 - 0.05, { st: 0.08, sp: M.HEAVY });
   }
 
-  /* ===== D: definition + report card ===== */
-  const dOn = t >= tTu - 0.05 && t < tE1 + 0.2; M.hide($('#sD'), !dOn);
-  if (dOn) {
-    M.rise($('#dq'), t, tD1 + 0.05, { st: 0.07, sp: M.HEAVY, out: tD2 - 0.1, outDur: 0.3 });
-    M.vis($('#dqs'), t, tD1 + 0.5, tD2 - 0.1, { dy: 12, outDur: 0.25 });
-    M.vis($('#dlbl'), t, tD2 + 0.05, tD3 - 0.12, { dy: 12, outDur: 0.25 });
-    M.rise($('#quote1'), t, tHow - 0.05, { st: 0.05, out: tD3 - 0.12, outDur: 0.3 });
-    M.rise($('#quote2'), t, tAch - 0.05, { st: 0.06, out: tD3 - 0.1, outDur: 0.3 });
+  /* ===== J: the journey ===== */
+  const jOn = t >= tTu - 0.05 && t < tK0 + 0.2; M.hide($('#sJ'), !jOn);
+  if (jOn) {
+    M.vis($('#jr'), t, tJ0 + 0.05, tJout, { dy: 36, outDur: 0.3, ody: -16 });
+    let reach = -1; tJn.forEach((tj, i) => { if (t >= tj - 0.1) reach = i; });
+    const xr = M.track(110, tJn.map((tj, i) => [tj - 0.1, JX(i)]), M.HEAVY)(t);
+    const xs = Math.abs(xr - Math.round(xr)) < 0.05 ? Math.round(xr) : xr;
+    $('#jLine').setAttribute('x2', xs.toFixed(1)); M.hide($('#jLine'), t < tJn[0]);
+    snap($('#jRavi'), (xs - 36).toFixed(1) + 'px', 'left'); M.vis($('#jRavi'), t, tJ0 + 0.4, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.1 });
+    JN.forEach(([ic], i) => {
+      const g = $('#jn' + i), on = M.io((t - tJn[i] + 0.1) / 0.3);
+      M.vis(g, t, tJ0 + 0.5 + i * 0.08, 1e9, { dy: 0, fade: 0.15 });
+      const c = g.querySelector('circle'); c.setAttribute('fill', mix(C.paper, i === 4 ? C.ink : C.gold, on)); c.setAttribute('stroke', on > 0.5 ? (i === 4 ? C.ink : C.gold) : C.line);
+      setIco(g.querySelector('.ji'), ic, on > 0.5 ? '#fff' : C.dim, 30, 2.2);
+      M.vis($('#jt' + i), t, tJn[i] + 0.05, 1e9, { dy: 16 });
+    });
+    M.vis($('#jEnd'), t, tSpan + 0.2, 1e9, { dx: -20, dy: 0, sc: 0.8, sp: M.POP, fade: 0.1 });
+  }
+
+  /* ===== K: at work today ===== */
+  const kOn = t >= tK0 - 0.1 && t < tX1 + 0.2; M.hide($('#sK'), !kOn);
+  if (kOn) {
     const o = { outDur: 0.3, ody: -16 };
-    M.vis($('#defbar'), t, tD3 + 0.12, tDout, { dy: 24, ...o });
-    M.vis($('#rep'), t, tD3 + 0.3, tDout, { dy: 36, ...o });
-    M.vis($('#repS'), t, tD3 + 0.5, tDout, { dy: 0, sc: 0.9, sp: M.POP, ...o });
-    SUBJ.forEach((_, k) => {
-      M.vis($('#sj' + k), t, tCard - 0.1 + k * 0.22, tDout, { dy: 20, ...o });
-      $('#rl' + k).setAttribute('fill', t > tCard - 0.1 + k * 0.22 ? '#D9CFBC' : '#E2DACB');
-    });
-  }
-
-  /* ===== E: effective vs efficient (Ep 01 callback) ===== */
-  const eOn = t >= tE1 - 0.1 && t < tF0 + 0.2; M.hide($('#sE'), !eOn);
-  if (eOn) {
-    EE.forEach((_, i) => {
-      const el = $('#ee' + i), ta = i ? tE2 : tEff, td = i ? tE3 : tE2;
-      M.vis(el, t, tE1 + 0.15 + i * 0.1, tEout, { dy: 36, outDur: 0.3, ody: -16 });
-      const on = M.io((t - ta) / 0.32), off = M.io((t - td) / 0.4), act = on * (1 - off);
-      const bg = el.querySelector('.bg'); bg.style.background = mix(C.card, C.ink, act); bg.style.borderColor = mix(C.line, C.ink, act);
-      el.querySelector('.et').style.color = mix(mix(C.dim, '#fff', on), C.ink, off);
-      const em = el.querySelector('.em'); M.rise(em, t, ta + 0.1, { st: 0.04 }); em.style.color = mix(C.gold2, C.gold, off);
-      el.querySelector('.eic').style.background = mix(C.paper, C.navy2, act);
-      setIco(el.querySelector('.ico'), EE[i][2], t < ta ? C.dim : (t < td ? C.gold2 : C.gold), 48, 2);
-      el.querySelector('.hr').style.background = mix(C.line, C.navy3, act);
-      const ex = el.querySelector('.ex'); M.vis(ex, t, ta + 0.45, 1e9, { dy: 10 }); ex.style.color = mix('#8C96AE', C.muted, off);
-      const ev = el.querySelector('.ev'); M.rise(ev, t, ta + 0.55, { st: 0.04 }); ev.style.color = mix('#fff', C.ink, off);
-      lift(el, t, ta, td, 0.02, tE1 + 0.8, tEout);
-    });
-    M.vis($('#both'), t, tE3 - 0.05, tEout, { dy: 40, outDur: 0.3, ody: -16 });
-    pulse($('#both'), t, tWrong, 0.03);
-  }
-
-  /* ===== F: four approaches ===== */
-  const fOn = t >= tF0 - 0.1 && t < tI0 + 0.2; M.hide($('#sF'), !fOn);
-  if (fOn) {
-    const fo = { outDur: 0.3, ody: -16 };
-    M.vis($('#sys'), t, tF0 + 0.1, tFout, { dx: -60, dy: 0, ...fo });
-    M.vis($('#panel'), t, tF0 + 0.3, tFout, { dx: 60, dy: 0, ...fo });
-    // nodes: [active from, active until]; goals first, then resources, then the process
-    const WIN = [[tF[1], tF[2]], [tF[2], tF[3]], [tF[0], tF[1]]];
-    SN.forEach((s, i) => {
-      const el = $('#nd' + i), [ta, td] = WIN[i];
-      M.vis(el, t, tF0 + 0.4 + i * 0.12, 1e9, { dy: 0, sc: 0.6, sp: M.POP });
-      M.vis($('#ndk' + i), t, tF0 + 0.55 + i * 0.12, 1e9, { dy: 10 });
-      M.vis($('#ndl' + i), t, tF0 + 0.6 + i * 0.12, 1e9, { dy: 10 });
+    M.vis($('#kl'), t, tK0 + 0.1, tKout, { dx: -60, dy: 0, ...o });
+    M.vis($('#kp'), t, tK0 + 0.25, tKout, { dx: 60, dy: 0, ...o });
+    KA.forEach(([ic], i) => {
+      const el = $('#kr' + i), ta = tK[i], td = i < 4 ? tK[i + 1] : tKout + 1;
+      M.vis(el, t, tK0 + 0.4 + i * 0.07, 1e9, { dy: 14 });
       const on = M.io((t - ta) / 0.3), off = M.io((t - td) / 0.35), act = on * (1 - off);
-      const bg = el.querySelector('.bg'); bg.style.background = mix(C.card, C.gold, act); bg.style.borderColor = mix(t >= ta ? C.gold : C.line, C.gold, act);
-      setIco(el.querySelector('.ni'), s[0], act > 0.5 ? '#fff' : (t >= ta ? C.gold : C.dim), 52, 2);
-      $('#ndl' + i).style.color = t >= ta ? C.ink : C.dim;
-      lift(el, t, ta, td, 0.08, tF0 + 2, tFout);
+      el.querySelector('.bg').style.background = mix(C.paper, C.ink, act);
+      el.querySelector('.rt').style.color = t < ta ? C.dim : mix('#fff', C.ink, off);
+      el.querySelector('.rn').style.color = t < ta ? C.dim : mix(C.gold2, C.gold, off);
+      el.querySelector('.ri').style.background = mix('#fff', C.navy2, act);
+      setIco(el.querySelector('.ri'), ic, t < ta ? C.dim : (act > 0.5 ? C.gold2 : C.gold), 28, 2.2);
     });
-    [0, 1].forEach(k => {
-      M.vis($('#ag' + k), t, tF0 + 0.8 + k * 0.1, 1e9, { dy: 0, fade: 0.15 });
-      const ta = k ? tF[0] : tF[1]; $('#ag' + k).setAttribute('stroke', t >= ta ? C.gold : '#D9CFBC');
-    });
-    M.vis($('#sl0'), t, tF0 + 1.0, 1e9, { dy: 0 }); M.vis($('#sl1'), t, tF0 + 1.0, 1e9, { dy: 0 }); M.vis($('#shT'), t, tF0 + 1.0, 1e9, { dy: 8 });
-    $('#shT').style.color = t >= tF[3] ? C.gold : C.muted;
-    SH.forEach((s, k) => {
-      const el = $('#sh' + k); M.vis(el, t, tF0 + 1.1 + k * 0.08, 1e9, { dy: 0, sc: 0.6, sp: M.POP });
-      M.vis($('#shl' + k), t, tF0 + 1.2 + k * 0.08, 1e9, { dy: 8 });
-      const g = M.io((t - tSh[k] + 0.05) / 0.25), bg = el.querySelector('.bg');
-      bg.style.background = mix(C.paper, C.gold, g); bg.style.borderColor = mix(C.paper, C.gold, g);
-      setIco(el.querySelector('.ni'), s[0], g > 0.5 ? '#fff' : C.dim, 28, 2.2);
-      $('#shl' + k).style.color = g > 0.5 ? C.ink : C.muted;
-      pulse(el, t, tSh[k], 0.12);
-    });
-    PANES.forEach((_, k) => {
-      const tin = k ? tF[k - 1] : tF0 + 0.5, tout = k < 4 ? (k ? tF[k] : tF[0]) - 0.14 : 1e9;
-      const pn = $('#pn' + k); M.hide(pn, t < tin - 0.01 || t > tout + 0.3);
-      if (t < tin - 0.01 || t > tout + 0.3) return;
-      const oo = { outDur: 0.18, ody: -12 }, tq = k ? tFq[k - 1] : tin + 0.3, te = k ? tFe[k - 1] : tin + 0.62;
+    KP.forEach((_, k) => {
+      const tin = k ? tK[k - 1] : tK0 + 0.5, tout = k < 5 ? tK[k] - 0.14 : 1e9;
+      const pn = $('#kn' + k); const off = t < tin - 0.01 || t > tout + 0.3; M.hide(pn, off); if (off) return;
+      const oo = { outDur: 0.18, ody: -12 };
       M.vis(pn.querySelector('.ps'), t, tin, tout, { dy: 12, ...oo });
       M.rise(pn.querySelector('.pt'), t, tin + 0.06, { st: 0.06, sp: M.HEAVY, out: tout, outDur: 0.2 });
-      M.rise(pn.querySelector('.pm'), t, tq, { st: 0.04, out: tout, outDur: 0.2 });
-      M.vis(pn.querySelector('.hr'), t, tq + 0.1, tout, { dy: 0, ...oo });
-      M.vis(pn.querySelector('.px'), t, tq + 0.2, tout, { dy: 10, ...oo });
-      M.vis(pn.querySelector('.pe'), t, te - 0.05, tout, { dy: 18, ...oo });
+      M.rise(pn.querySelector('.pm'), t, tin + 0.3, { st: 0.04, out: tout, outDur: 0.2 });
+      M.vis(pn.querySelector('.hr'), t, tin + 0.4, tout, { dy: 0, ...oo });
+      if (k === 0) { M.vis(pn.querySelector('.px'), t, tin + 0.5, tout, { dy: 10, ...oo }); M.vis(pn.querySelector('.pe'), t, tin + 0.62, tout, { dy: 18, ...oo }); return; }
+      M.vis($('#ka' + k + '0'), t, tin + 0.6, tout, { dy: 18, ...oo });
+      M.vis($('#ka' + k + '1'), t, tKw[k - 1] - 0.1, tout, { dy: 18, ...oo });
     });
   }
 
-  /* ===== I: six signs ===== */
-  const iOn = t >= tI0 - 0.1 && t < tJ0 + 0.2; M.hide($('#sI'), !iOn);
-  if (iOn) {
-    SIG.forEach((s, i) => {
-      const el = $('#sg' + i), ta = tG[i];
-      M.vis(el, t, tI0 + 0.1 + i * 0.07, tIout, { dy: 30, outDur: 0.3, ody: -16 });
-      const g = M.io((t - ta) / 0.3);
-      const gi = el.querySelector('.gi'); gi.style.background = mix(C.paper, C.gold, g);
-      setIco(gi, s[0], g > 0.5 ? '#fff' : C.dim, 40, 2);
-      el.querySelector('.bg').style.borderColor = mix(C.line, C.gold, g);
-      el.querySelector('.gt').style.color = mix(C.dim, C.ink, g);
-      el.querySelector('.gk').style.color = mix(C.dim, C.gold, g);
-      const gs = el.querySelector('.gs'); M.rise(gs, t, ta + 0.1, { st: 0.04 }); gs.style.color = C.ink2;
-      pulse(el, t, ta, 0.03);
-    });
-  }
-
-  /* ===== J: the journey ===== */
-  const jOn = t >= tJ0 - 0.1 && t < tJ5 + 0.2; M.hide($('#sJ'), !jOn);
-  if (jOn) {
-    const jo = { outDur: 0.3, ody: -16 };
-    M.vis($('#jour'), t, tJ0 + 0.1, tJout, { dy: 36, ...jo });
-    M.draw($('#jL0'), t, tJ0 + 0.4, 0.9, M.io);
-    const L = jline(t); M.hide($('#jL1'), t < tMs[1] || L < 1); $('#jL1').setAttribute('x2', (200 + L).toFixed(1));
-    MS.forEach((s, i) => {
-      const el = $('#ms' + i), ta = tMs[i];
-      const mc = el.querySelector('.mc'); M.vis(mc, t, tJ0 + 0.6 + i * 0.12, 1e9, { dy: 0, sc: 0.6, sp: M.POP });
-      const g = M.io((t - ta) / 0.3), bg = mc.querySelector('.bg');
-      bg.style.background = mix(C.paper2, i === 3 ? C.gold : C.ink, g); bg.style.borderColor = mix(C.paper2, i === 3 ? C.gold : C.ink, g);
-      setIco(mc.querySelector('.ni'), s[0], g > 0.5 ? '#fff' : C.dim, 44, 2);
-      M.vis(el.querySelector('.mk'), t, ta + 0.1, 1e9, { dy: 10 });
-      M.rise(el.querySelector('.mt'), t, ta + 0.15, { st: 0.05, sp: M.HEAVY });
-      M.rise(el.querySelector('.mm'), t, ta + 0.35, { st: 0.04 });
-      pulse(mc, t, ta, 0.1);
-    });
-    M.vis($('#jHr'), t, tJ0 + 0.5, 1e9, { dy: 0 });
-    M.vis($('#jLl'), t, tJ0 + 0.6, 1e9, { dy: 10 });
-    LP.forEach((_, k) => {
-      const el = $('#lp' + k), tp = tLp[k]; M.vis(el, t, tp - 0.05, 1e9, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.08 });
-      const nx = k === 2 || k === 5 ? tp + 1.2 : tLp[k + 1];
-      const g = M.io((t - tp + 0.05) / 0.2), d = M.io((t - nx + 0.05) / 0.3);
-      el.style.background = mix(mix(C.paper, C.gold, g), C.ink, d); el.style.color = g > 0.5 ? '#fff' : C.ink;
-    });
-  }
-
-  /* ===== K: scorecard + then and now ===== */
-  const kOn = t >= tJ5 - 0.1 && t < tQ + 0.05; M.hide($('#sK'), !kOn);
-  if (kOn) {
-    M.vis($('#score'), t, tJ5 + 0.1, 1e9, { dx: -60, dy: 0 });
-    M.vis($('#tn'), t, tJ5 + 0.3, 1e9, { dx: 60, dy: 0 });
-    SC.forEach((_, k) => {
-      const el = $('#sr' + k); M.vis(el, t, tJ5 + 0.4 + k * 0.1, 1e9, { dy: 20 });
-      const tc = tSc[k];
-      M.vis(el.querySelector('.rs'), t, tJ5 + 0.5, tc, { dy: 0, outDur: 0.15, osc: 0.6, ody: 0 });
-      M.vis(el.querySelector('.rp'), t, tc - 0.02, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.08 });
-      el.style.background = mix(C.paper, C.gold3, M.io((t - tc) / 0.3));
-    });
-    TN.forEach(([, , rows], c) => {
-      M.vis($('#tc' + c + ' .th'), t, tJ5 + 0.6 + c * 0.5, 1e9, { dy: 10 });
-      rows.forEach((_, k) => M.vis($('#tr' + c + k), t, tJ5 + 0.7 + c * 0.5 + k * 0.1, 1e9, { dy: 16 }));
-    });
-    M.vis($('#tnV'), t, tJ5 + 0.9, 1e9, { dy: 0 });
-    M.vis($('#verd'), t, tBig - 0.1, 1e9, { dy: 30 });
-    const vs = $('#verd').children; M.hide(vs[1], t < tEffv - 0.05);
-    if (t >= tEffv - 0.05) { const p = M.spring(t - tEffv + 0.05, M.POP); vs[1].style.transform = p > 0.999 ? 'none' : `scale(${(0.6 + 0.4 * p).toFixed(4)})`; vs[1].style.opacity = M.clamp((t - tEffv + 0.05) / 0.1); }
+  /* ===== X: the human side ===== */
+  const xOn = t >= tX1 - 0.1 && t < tQ + 0.05; M.hide($('#sX'), !xOn);
+  if (xOn) {
+    const o = { outDur: 0.3, ody: -16 };
+    const xs = $('#xs'); M.vis(xs, t, tX1 + 0.1, tX4 - 0.1, { dy: 36, ...o }); grow(xs, $('#xsOut'), t, tCups - 0.1);
+    M.vis($('#xsImg'), t, tX1 + 0.3, 1e9, { dy: 24, sp: M.SOFT });
+    M.vis($('#xsTag'), t, tX1 + 0.6, tCups - 0.4, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1, outDur: 0.2, osc: 0.9, ody: 0 });
+    M.vis($('#xm'), t, tCups, tXout, { dx: 60, dy: 0, ...o });
+    const up = M.o3((t - tRush + 0.2) / 1.0), dn = M.o3((t - tWorse + 0.2) / 1.0);
+    $('#mb0').style.width = (420 * (0.45 + 0.47 * up)).toFixed(1) + 'px'; $('#mb1').style.width = (420 * (0.8 - 0.58 * dn)).toFixed(1) + 'px';
+    M.vis($('#mv0'), t, tRush, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 }); M.vis($('#mv1'), t, tWorse, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
+    M.vis($('#xgd'), t, tX3 + 0.1, tXout, { dy: 36, ...o });
+    M.vis($('#xgdS'), t, tGood - 0.1, 1e9, { dy: 8 });
+    M.rise($('#xgd1'), t, tOnce - 0.05, { st: 0.05 }); M.rise($('#xgd2'), t, tStops - 0.1, { st: 0.06 });
+    M.vis($('#xt'), t, tX4 + 0.05, tXout, { dx: -60, dy: 0, ...o });
+    M.vis($('#tgC'), t, tLow - 0.4, 1e9, { dy: 0, sc: 0.8, sp: M.POP, fade: 0.1 }); M.vis($('#tgS'), t, tPay - 0.4, 1e9, { dy: 0, sc: 0.8, sp: M.POP, fade: 0.1 });
+    M.vis($('#tgA'), t, tPay, 1e9, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.1 }); M.vis($('#tgL'), t, tPay + 0.3, 1e9, { dy: 10 });
+    M.vis($('#lesson'), t, tX5 + 0.05, 1e9, { dy: 16 });
+    M.vis($('#both'), t, tX5 + 0.15, 1e9, { dy: 40 });
   }
 
   /* ===== quick check ===== */
@@ -346,22 +396,23 @@ M.on(t => {
   if (qOn) {
     const tq = tQ + 0.12;
     M.vis($('#qchip'), t, tq + 0.05, 1e9, { dy: 16 });
-    M.rise($('#qq1'), t, wt('Q1', 'Ravi') - 0.05, { st: 0.05, sp: M.HEAVY });
-    M.rise($('#qq2'), t, tQw - 0.05, { st: 0.06, sp: M.HEAVY });
+    M.rise($('#qq1'), t, tq + 0.12, { st: 0.05, sp: M.HEAVY });
+    M.rise($('#qq2'), t, wt('Q1', 'Which') - 0.05, { st: 0.06, sp: M.HEAVY });
     OPTS.forEach((o, i) => {
-      const el = $('#o' + i); M.vis(el, t, tQw + 0.2 + i * 0.08, 1e9, { dy: 40 });
-      const right = i === RIGHT, r = M.io((t - tAnsQ) / 0.3), bg = el.querySelector('.bg');
-      bg.style.background = right ? mix(C.card, C.ink, r) : mix(C.card, C.off, r);
+      const el = $('#o' + i); M.vis(el, t, tQ + 1.5 + i * 0.08, 1e9, { dy: 40 });
+      const right = i === RIGHT, r = M.io((t - tAns) / 0.3), bg = el.querySelector('.bg');
+      bg.style.background = right ? mix(C.card, C.ink, r) : mix(C.card, '#F0EBE1', r);
       bg.style.borderColor = right ? mix(C.line, C.ink, r) : mix(C.line, '#EAE3D6', r);
       el.querySelector('.ot').style.color = right ? mix(C.ink, '#fff', r) : mix(C.ink, C.dim, r);
       const lt = el.querySelector('.lt'); lt.style.background = right ? mix(C.paper, C.gold, r) : C.paper; lt.style.color = right ? mix(C.ink, '#fff', r) : mix(C.ink, C.dim, r);
-      const ok = el.querySelector('.ok'); if (right) M.vis(ok, t, tAnsQ + 0.1, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 }); else M.hide(ok, true);
-      if (right) pulse(el, t, tAnsQ, 0.05);
+      const ok = el.querySelector('.ok'); if (right) M.vis(ok, t, tAns + 0.1, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 }); else M.hide(ok, true);
+      if (right && t > tAns && t < tAns + 0.45) el.style.transform = `scale(${(1 + 0.05 * Math.sin(Math.PI * (t - tAns) / 0.45)).toFixed(4)})`;
+      else if (right && t >= tAns + 0.45 && el.style.transform !== 'none') el.style.transform = 'none';
     });
-    const cd = tAnsQ - tCount, u = M.clamp((t - tCount) / cd);
-    M.vis($('#ring'), t, tCount - 0.15, tAnsQ, { dy: 0, sc: 0.7, sp: M.POP, outDur: 0.25, osc: 0.8, ody: 0 });
-    M.vis($('#ringN'), t, tCount - 0.15, tAnsQ, { dy: 0, sc: 0.7, sp: M.POP, outDur: 0.25, osc: 0.8, ody: 0 });
-    M.drawU($('#ringA'), 1 - u); M.hide($('#ringA'), t < tCount - 0.15 || t > tAnsQ + 0.3);
+    const cd = tAns - tCount, u = M.clamp((t - tCount) / cd);
+    M.vis($('#ring'), t, tCount - 0.15, tAns, { dy: 0, sc: 0.7, sp: M.POP, outDur: 0.25, osc: 0.8, ody: 0 });
+    M.vis($('#ringN'), t, tCount - 0.15, tAns, { dy: 0, sc: 0.7, sp: M.POP, outDur: 0.25, osc: 0.8, ody: 0 });
+    M.drawU($('#ringA'), 1 - u); M.hide($('#ringA'), t < tCount - 0.15 || t > tAns + 0.3);
     M.setT($('#ringN'), String(Math.max(1, 3 - Math.floor(u * 3))));
     M.vis($('#take'), t, tTakeQ, 1e9, { dy: 40 });
     M.rise($('#takeT'), t, tTakeQ + 0.1, { st: 0.045 });
@@ -378,7 +429,7 @@ M.on(t => {
       ps.forEach((_, k) => {
         const el = $('#fp' + i + k), tp = tPill[i][k]; M.vis(el, t, tp - 0.05, 1e9, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.08 });
         const a = tp - 0.05, b = k < ps.length - 1 ? tPill[i][k + 1] - 0.05 : (i < 2 ? tRow[i + 1] - 0.2 : tN - 0.4);
-        const g = M.io((t - a) / 0.2), d = M.io((t - b) / 0.3);
+        const g = M.io((t - a) / 0.2), d = M.io((t - Math.max(b, a + 0.4)) / 0.3);
         el.style.background = mix(mix(C.paper, C.gold, g), C.ink, d);
         el.style.color = g > 0.5 ? '#fff' : C.ink;
       });
@@ -390,7 +441,7 @@ M.on(t => {
 
 /* ---------- sound (whitelist: whoosh on the three sweeps, ticks, correct) ---------- */
 M.sfx(tT - 0.38, 'whoosh', 0.22); M.sfx(tQ - 0.38, 'whoosh', 0.22); M.sfx(tS - 0.38, 'whoosh', 0.22);
-[0, 1, 2].forEach(k => M.sfx(tCount + k * (tAnsQ - tCount) / 3, 'tick', 0.28));
-M.sfx(tAnsQ + 0.05, 'correct', 0.32);
+[0, 1, 2].forEach(k => M.sfx(tCount + k * (tAns - tCount) / 3, 'tick', 0.28));
+M.sfx(tAns + 0.05, 'correct', 0.32);
 M.outro({ bg: '#14213D', ink: '#FFFFFF', accent: '#B8862F', sub: 'rgba(233,217,181,.75)', font: 'Poppins' });
 })();

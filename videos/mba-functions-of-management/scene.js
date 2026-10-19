@@ -43,7 +43,7 @@ const tB1 = T0('B1'), tAout = tB1 - 0.32, tT = T0('T1'), tSt2 = wt('T1', 'He'), 
 const tB2 = T0('B2'), tSort = wt('B2', 'sort'), tFive = wt('B2', 'five'), tB3 = T0('B3'), tBout = T0('D1') - 0.32;
 const tD1 = T0('D1'), tD2 = T0('D2'), tEvery = wt('D2', 'every'), tBus = wt('D2', 'business'), tSize = wt('D2', 'size');
 const tG1 = T0('G1'), tFayol = wt('G1', 'Fayol'), tFw = ['Plan', 'organize', 'command', 'coordinate', 'control'].map(w => wt('G1', w));
-const tG2 = T0('G2'), tGulick = wt('G2', 'Gulick'), tSeven = wt('G2', 'seven'), tLetters = wt('G2', 'letters'), tPosd = wt('G2', 'POSDCORB');
+const tG2 = T0('G2'), tGulick = wt('G2', 'Gulick'), tSeven = wt('G2', 'seven'), tLetters = wt('G2', 'letters'), tPosd = wt('G2', 'P', 0);
 const tG3 = T0('G3'), tMw = ['Planning', 'organizing', 'staffing', 'directing', 'controlling'].map(w => wt('G3', w)), tDout = T0('F0') - 0.32;
 // F: five questions
 const tF0 = T0('F0'), tF = [1, 2, 3, 4, 5].map(i => T0('F' + i)), tFout = T0('Y1') - 0.32;

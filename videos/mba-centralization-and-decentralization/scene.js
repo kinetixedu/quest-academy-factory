@@ -59,7 +59,7 @@ const EXW = [[tOffer - 0.2, tAout], [tM4 - 0.3, tMout]];
 /* ---------- build ---------- */
 const wrap = (card, id, w, h) => { const d = document.createElement('div'); d.id = id; d.className = 'abs'; d.style.cssText = `left:0;top:0;width:${w}px;height:${h}px`; while (card.firstChild) d.appendChild(card.firstChild); card.appendChild(d); };
 // A
-const TL = ['OUTLET 1', 'BUS STAND', 'COLLEGE', 'OUTLET 4', 'OUTLET 5'];
+const TL = ['MAIN', 'BUS STAND', 'COLLEGE', 'MARKET', 'STATION'];
 $('#tileRow').innerHTML = TL.map((n, i) => `<div class="tile" id="tl${i}" style="left:${36 + i * 172}px"><div class="cn">${n}</div><div class="ci"></div><div class="ct">Open</div></div>`).join('');
 const METH = [['Student offer?', tOffer], ['Extra helper?', tHelp]];
 $('#meth').innerHTML = METH.map(([m], i) => `<div class="stp" id="mt${i}" style="top:76px">${M.icon('help', 26, C.muted, 2.2)}<span>${m}</span></div>`).join('');

@@ -73,7 +73,7 @@ const EXW = [[tRef - 0.2, tAout], [tM1 + 0.4, tMout], [tP2 - 0.1, tPout], [tK0 +
 const mmss = s => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
 const wrap = (card, id, w, h) => { const d = document.createElement('div'); d.id = id; d.className = 'abs'; d.style.cssText = `left:0;top:0;width:${w}px;height:${h}px`; while (card.firstChild) d.appendChild(card.firstChild); card.appendChild(d); };
 // A: outlets on the phone
-const TL = ['OUTLET 1', 'BUS STAND', 'OUTLET 3', 'OUTLET 4', 'OUTLET 5'];
+const TL = ['MAIN', 'BUS STAND', 'COLLEGE', 'MARKET', 'STATION'];
 $('#tileRow').innerHTML = TL.map((n, i) => `<div class="tile" id="tl${i}" style="left:${36 + i * 172}px"><div class="cn">${n}</div><div class="ci"></div><div class="ct">Open</div></div>`).join('');
 const METH = [['Refund?', tRef], ['Milk order?', tMilk], ['Extra helper?', tForty]];
 $('#meth').innerHTML = METH.map(([m], i) => `<div class="stp" id="mt${i}" style="top:76px">${M.icon('help', 26, C.muted, 2.2)}<span>${m}</span></div>`).join('');
@@ -108,7 +108,7 @@ for (const k of ['L', 'R']) {
     const lab = n === 'cust' ? 'CUSTOMER' : n === 'meena' ? 'MEENA' : (off ? 'NOT CALLED' : 'HEAD OFFICE');
     return `<g id="sb${k}${n}" transform="translate(${x} ${y})"><rect width="130" height="84" rx="16" fill="${fill}" stroke="#E2DACB" stroke-width="2"/>${inner}<text x="65" y="72" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="13" letter-spacing="1.5" fill="#8A8274">${lab}</text></g>`;
   };
-  const queue = k === 'L' ? `<text id="qlab" x="372" y="18" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="13" letter-spacing="1.5" fill="#8A8274">OTHER OUTLETS CALLING</text>` + [1, 3, 4, 5].map((o, i) => `<g id="qc${i}" transform="translate(${QX(i + 1)} 64)"><circle r="20" fill="#3A4560"/><g transform="translate(-10 -10)">${M.icon('phone', 20, '#fff', 2.2)}</g><text y="-30" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="14" fill="#8A8274">${o}</text></g>`).join('') : '';
+  const queue = k === 'L' ? `<text id="qlab" x="372" y="18" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="13" letter-spacing="1.5" fill="#8A8274">OTHER OUTLETS CALLING</text>` + ['MAIN', 'COLLEGE', 'MARKET', 'STATION'].map((o, i) => `<g id="qc${i}" transform="translate(${QX(i + 1)} 64)"><circle r="20" fill="#3A4560"/><g transform="translate(-10 -10)">${M.icon('phone', 20, '#fff', 2.2)}</g></g>`).join('') : '';
   const [sx, sy] = STAND.cust;
   $('#m' + k + 'In').innerHTML = `<div class="mav" style="${FACE(W.who)}"></div><div class="lbl mlb">${W.name}</div><div class="serif mrd" id="rd${k}">0:00</div>
     <svg class="mplan" id="plan${k}" width="688" height="250">
@@ -159,7 +159,7 @@ $('#rRow1').innerHTML = `<div class="av face" id="w1M" style="left:0;top:20px;${
   <div class="av face" id="w1R" style="left:312px;top:20px;${FACE('ravi')}">R</div>
   <div class="abs" id="w1T" style="left:412px;top:36px;font:600 28px Poppins;white-space:nowrap">for the bus stand</div>`;
 $('#rRow2').innerHTML = `<div class="av face" id="w2R" style="left:0;top:16px;${FACE('ravi')};box-shadow:0 0 0 4px #B8862F">R</div>` +
-  TL.map((n, i) => `<div class="ot5" id="o5${i}" style="left:${112 + i * 116}px"><div class="oi">${M.icon('store', 36, C.ink, 2.2)}</div><div class="on">${i === 1 ? 'BUS STAND' : 'OUTLET ' + (i + 1)}</div></div>`).join('') +
+  TL.map((n, i) => `<div class="ot5" id="o5${i}" style="left:${112 + i * 116}px"><div class="oi">${M.icon('store', 36, C.ink, 2.2)}</div><div class="on">${n}</div></div>`).join('') +
   `<svg class="abs" id="w2B" style="left:112px;top:118px" width="568" height="30"><path d="M2 2 V14 H566 V2" fill="none" stroke="#B8862F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
    <div class="lbl" id="w2L" style="left:112px;width:568px;text-align:center;top:156px;color:#B8862F">RAVI ANSWERS FOR ALL OF CHAI CORNER</div>`;
 wrap($('#rL'), 'rLOut', 784, 580);
