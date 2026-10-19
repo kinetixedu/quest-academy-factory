@@ -59,6 +59,20 @@ def is_quota(e):
     txt = (getattr(e, 'content', b'') or b'').decode('utf-8', 'ignore')
     return isinstance(e, HttpError) and e.resp.status in (400, 403, 429) and any(k in txt for k in ('quotaExceeded', 'uploadLimitExceeded', 'dailyLimitExceeded', 'rateLimitExceeded'))
 
+QB = R / 'registry' / 'quota.json'
+def quota_block():
+    """Remember that today's API quota is spent, until the next midnight Pacific (when YouTube resets it)."""
+    from datetime import datetime, timedelta
+    from zoneinfo import ZoneInfo
+    pt = datetime.now(ZoneInfo('America/Los_Angeles'))
+    nxt = (pt + timedelta(days=1)).replace(hour=0, minute=5, second=0, microsecond=0)
+    QB.parent.mkdir(exist_ok=True); QB.write_text(json.dumps({'blocked_until': nxt.astimezone(ZoneInfo('UTC')).isoformat()}, indent=1))
+
+def quota_blocked():
+    from datetime import datetime, timezone
+    try: return datetime.now(timezone.utc) < datetime.fromisoformat(json.loads(QB.read_text())['blocked_until'])
+    except Exception: return False
+
 def batch():
     """Upload every built video of this run in matrix (episode) order; stop at the first quota hit so order is preserved."""
     inc = json.loads(os.environ['MATRIX'])['include']; done = 0
@@ -72,7 +86,8 @@ def batch():
         try: upload_one(args); done += 1
         except Exception as e:
             if is_quota(e):
-                print(f"::notice title=Daily API quota reached::uploaded {done} this run; {v['slug']} and later wait for the next run"); break
+                quota_block()
+                print(f"::notice title=Daily API quota reached::uploaded {done} this run; {v['slug']} and later wait until the quota resets (midnight Pacific)"); break
             raise
     print('uploaded', done)
 
@@ -133,13 +148,23 @@ def finish(y, F, cat, out):
 
 def fix_pending():
     """Retry thumbnail/captions/playlist for already-uploaded videos (e.g. thumbnail before channel verification)."""
+    if quota_blocked(): print('quota spent today - pending steps wait'); return
     cats = json.loads((R / 'config' / 'categories.json').read_text()); y = None
     for u in sorted(R.glob('videos/*/upload.json')):
         out = json.loads(u.read_text())
-        if not out.get('pending'): continue
+        if not out.get('pending') or out.get('missing'): continue
         F = u.parent; meta = json.loads((F / 'meta.json').read_text())
         if not (F / 'thumbnail.jpg').exists() and 'thumbnail' in out['pending']: continue
-        y = y or yt(); finish(y, F, cats[meta['world']], out); u.write_text(json.dumps(out, indent=1))
+        y = y or yt()
+        try:
+            if not y.videos().list(part='id', id=out['video_id']).execute().get('items'):   # 1 unit: is it still on YouTube?
+                out['missing'] = True; out['pending'] = []; u.write_text(json.dumps(out, indent=1))
+                print(f"::warning title=Video missing on YouTube::{F.name} ({out['video_id']}) no longer exists - re-upload needed"); continue
+            finish(y, F, cats[meta['world']], out)
+        except Exception as e:
+            if is_quota(e): quota_block(); print('::notice title=Daily API quota reached::pending steps wait'); return
+            raise
+        u.write_text(json.dumps(out, indent=1))
 
 if __name__ == '__main__':
     try:

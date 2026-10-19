@@ -33,6 +33,13 @@ import csv
 order = {r['slug']: i for i, r in enumerate(csv.DictReader(open(R / 'queue' / 'topics.csv')))} if (R / 'queue' / 'topics.csv').exists() else {}
 if cfg.get('paused') and not os.environ.get('PREVIEW'):
     print(json.dumps({'include': []})); sys.exit()
+# today's YouTube API quota already spent: do not render videos that cannot be uploaded until it resets
+try:
+    from datetime import datetime as _dt, timezone as _tz
+    _qb = json.loads((R / 'registry' / 'quota.json').read_text())['blocked_until']
+    if _dt.now(_tz.utc) < _dt.fromisoformat(_qb) and not os.environ.get('PREVIEW'):
+        print(json.dumps({'include': []})); sys.exit()
+except (FileNotFoundError, KeyError, ValueError): pass
 ready = sorted((p.parent for p in R.glob('videos/*/READY') if not (p.parent / 'upload.json').exists()), key=lambda v: (order.get(v.name, 1e9), v.name))
 # series: never publish episode N before every earlier episode is ready or uploaded
 qrows = list(csv.DictReader(open(R / 'queue' / 'topics.csv'))) if (R / 'queue' / 'topics.csv').exists() else []
