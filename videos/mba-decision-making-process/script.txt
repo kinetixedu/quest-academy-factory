@@ -3,15 +3,20 @@ H2|0.55|But on winter evenings, sales drop at all five.
 C1|0.3|Kabir says, sell hot snacks. Asha says, stay open later.
 C2|0.3|And Meena wants a new ginger flavour.
 C3|0.65|Three ideas, and nobody knows which one to pick.
-T1|0.7|Picking by guesswork is risky. Ravi needs a process.
+T1|0.7|Ravi stops guessing. He follows a process.
+I1|0.35|Ravi now works from a small head office.
+I2|0.35|Five pins on his map, one for each outlet.
+I3|0.35|Every week, the outlets send him questions, and he must choose.
+I4|0.65|And one wrong choice now hits all five outlets at once.
 D1|0.3|So, what is decision making?
-D2|0.6|Decision making means choosing the best option from two or more alternatives.
-D3|0.35|If there is only one way, there is nothing to decide.
-D4|0.65|And managers decide all day: what to buy, who to hire, and when to open.
-F0|0.45|Good decisions follow seven steps.
+D2|0.5|Decision making means choosing the best option from two or more alternatives.
+D3|0.35|Alternatives just means the different options you could pick.
+D4|0.35|If there is only one way, there is nothing to decide.
+D5|0.65|And managers decide all day: what to buy, who to hire, and when to open.
+F0|0.45|Good decisions follow seven steps. Watch Ravi use them.
 F1|0.35|One. Identify the problem. Evening sales are down by a third, at every outlet.
 F2|0.35|Two. Gather information. Kabir checks the sales, and the team asks customers why.
-F3|0.35|Three. Identify alternatives: hot snacks, longer hours, or a new flavour.
+F3|0.35|Three. List the alternatives: hot snacks, longer hours, or a new flavour.
 F4|0.35|Four. Evaluate each one. Snacks are cheap to add. Longer hours mean paying staff at night. A new flavour takes time to catch on.
 F5|0.35|Five. Choose the best. Hot snacks cost little and bring the most.
 F6|0.35|Six. Implement. Hot snacks go on the menu at all five outlets.
@@ -19,11 +24,27 @@ F7|0.65|And seven. Follow up. After one month, check the results.
 R1|0.3|One month later, Kabir brings the numbers.
 R2|0.35|Evening sales are back up at four outlets.
 R3|0.35|But at the college outlet, students say they want it open later.
-R4|0.65|So Ravi starts the steps again, for that one outlet. Follow up feeds the next decision.
+R4|0.65|So Ravi runs the steps again, for that one outlet. Follow up feeds the next decision.
+G0|0.35|The thinker Herbert Simon grouped these steps into three phases.
+G1|0.35|Intelligence, which here means finding things out. Spot the problem, and get the facts.
+G2|0.35|Design. Find the options, and think each one through.
+G3|0.65|Choice. Pick one. Then act on it, and review it.
+K0|0.35|So what do these steps look like at work today?
+K1|0.35|Define the problem. A hospital first measures how long patients really wait.
+K2|0.35|Gather facts. An online shop reads reviews and return reasons before it changes a product.
+K3|0.35|Weigh the options. A school compares bus companies on cost and safety.
+K4|0.35|Implement with care. A bank trains staff at every branch before a new system goes live.
+K5|0.65|Follow up. A factory checks its error rate every week after a change.
+X1|0.35|But is following every step always wise? The honest answer is, yes and no.
+X2|0.35|The good side. Fewer blind guesses, clear reasons, and everyone can see why.
+X3|0.35|The hard side. The steps take time, and good facts cost money.
+X4|0.35|And people bring bias. Bias means leaning one way before you look at the facts.
+X5|0.35|Also, not every choice deserves seven steps. Nobody needs a meeting to reorder sugar.
+X6|0.65|So the lesson is balance. Big choices get the full process. Small ones get a quick rule.
 Q1|1.9|Quick check. Hot snacks are now on the menu everywhere. What is the next step?
 A1|0.6|Follow up! Check the results, to see if the decision really worked.
 S1|0.3|So, remember.
 S2|0.35|Decision making means choosing the best option among alternatives.
-S3|0.35|First, define the problem, gather facts, list the options, and evaluate them.
-S4|0.6|Then choose, implement, and always follow up.
+S3|0.35|Define the problem, gather facts, list and weigh the options, then choose.
+S4|0.6|Then implement, and always follow up.
 N1|0.2|Next time, we'll see why some decisions are routine, and others are brand new.

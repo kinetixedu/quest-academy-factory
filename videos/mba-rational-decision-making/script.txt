@@ -3,32 +3,46 @@ H2|0.55|Three dairies want the deal. Ravi must pick just one.
 C1|0.3|Kabir says, take the cheapest.
 C2|0.3|Asha says, take the best milk. Meena says, take the closest.
 C3|0.65|Everyone has a reason, and nobody agrees.
-T1|0.7|No guessing. No loudest voice. Just pure logic.
+T1|0.7|No guessing, and no loudest voice. Ravi uses pure logic.
+I1|0.35|Ravi sits down at the head office with every fact he can find.
+I2|0.35|Prices, delivery records, and a taste test of each milk.
+I3|0.65|This time, he will score every option, one by one.
 D1|0.3|So, what is rational decision making?
-D2|0.6|Rational decision making means using pure logic to choose the option that gives the most value.
-D3|0.35|It pictures a perfect decision maker. Fully logical. With all the facts. Who knows every option, and where each one leads.
-D4|0.65|And it always picks the very best, not just a good one. That is optimising.
-F0|0.45|The rational model follows six steps.
-F1|0.35|One. Define the problem. Chai Corner needs one milk supplier for five outlets.
-F2|0.35|Two. Identify the decision criteria: price, quality, reliability, and distance.
+D2|0.5|Rational decision making means using logic to choose the option that gives the most value.
+D3|0.35|It pictures a perfect decision maker. Economists call this person, economic man.
+D4|0.35|Fully logical, with all the facts, who knows every option and where each one leads.
+D5|0.65|And it always picks the very best, not just a good one. That is called optimising.
+F0|0.4|The rational model follows six steps.
+F1|0.35|One. Define the problem. Five outlets need one milk supplier.
+F2|0.35|Two. Pick the criteria, the things that matter: quality, reliability, price, and distance.
 F3|0.35|Three. Weight them. Quality matters most, so it gets four. Reliability three, price two, distance one.
-F4|0.35|Four. Generate alternatives. Green Farm, City Dairy, and Hill Farm.
-F5|0.35|Five. Rate each alternative on each criterion, from one to ten.
-F6|0.35|Green Farm is cheapest. Hill Farm has the best milk. City Dairy is never late, and close by.
-F7|0.35|Six. Compute and choose. Multiply each rating by its weight, then add them up.
-F8|0.35|Green Farm scores sixty. Hill Farm, sixty seven. And City Dairy, seventy six.
-F9|0.65|City Dairy wins. Not the cheapest, not the best milk, but the most value overall.
-U0|0.35|But the rational model makes four big assumptions.
+F4|0.35|Four. List the alternatives: Green Farm, Hill Farm, and River Dairy.
+F5|0.35|Five. Rate each one on each criterion, from one to ten.
+F6|0.35|Green Farm is cheapest. Hill Farm has the best milk. River Dairy is never late, and close by.
+F7|0.35|Six. Compute and choose. Multiply each rating by its weight, then add it all up.
+F8|0.35|Green Farm scores sixty. Hill Farm, sixty seven. And River Dairy, seventy six.
+F9|0.65|River Dairy wins. Not the cheapest, not the best milk, but the most value overall.
+U0|0.35|But the rational model rests on four big assumptions.
 U1|0.3|One. The problem is clear.
 U2|0.3|Two. Every option is known.
-U3|0.3|Three. Preferences are clear, and they don't change.
-U4|0.35|And four. There are no limits on time or money.
-U5|0.35|In real life, these are rarely true.
-U6|0.65|What about a fourth dairy nobody knew? Or a price jump next month?
-Q1|1.9|Quick check. Ravi has listed price, quality, reliability, and distance. What is the next step?
+U3|0.3|Three. What you want is clear, and it does not change.
+U4|0.65|And four. There are no limits on time or money.
+K0|0.35|So where is this used at work today?
+K1|0.35|Clear criteria. A hospital buying a scanner lists what matters: safety, cost, and service.
+K2|0.35|Weights. A team hiring a manager decides that skills count more than years.
+K3|0.35|All the options. A city building a bridge invites bids from every builder.
+K4|0.35|Scoring. Each bid gets points for price and quality, so the choice is fair.
+K5|0.65|Optimising. An airline uses software to find the cheapest way to plan its flights.
+X1|0.35|So is pure logic always the answer? The honest answer is, yes and no.
+X2|0.35|The good side. It is clear, fair, and easy to explain. Anyone can check the sums.
+X3|0.35|The hard side. Getting every fact takes time and money.
+X4|0.35|And the four assumptions are rarely true. What about a fourth dairy nobody knew? Or a price jump next month?
+X5|0.35|Even the weights are a judgment call. Make price count most, and Green Farm wins instead.
+X6|0.65|So the lesson is balance. Use the logic, but know its limits.
+Q1|1.9|Quick check. Ravi has listed quality, reliability, price, and distance. What is the next step?
 A1|0.6|Weight the criteria! Decide how much each one matters, before you rate any option.
 S1|0.3|So, remember.
-S2|0.35|Rational decision making uses pure logic to pick the option with the most value.
+S2|0.35|Rational decision making uses logic to pick the option with the most value.
 S3|0.35|Six steps: define, set criteria, weight them, list options, rate them, and compute.
-S4|0.6|But it assumes full information and no limits, and that is rarely true.
-N1|0.2|Next time, we'll see how real managers decide when they cannot know everything.
+S4|0.6|But it assumes full facts and no limits, and that is rarely true.
+N1|0.2|Next time, bounded rationality. How real managers decide when they cannot know everything.

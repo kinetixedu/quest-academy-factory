@@ -10,7 +10,7 @@ Every episode is told through **Chai Corner**, a chai stall run by **Ravi** that
 - **Kabir** - handles money and the cash box (coin icon). Later runs accounts.
 - **Meena** - washes cups, keeps the stall clean (droplet icon). Later runs operations at the second outlet.
 - Growth arc you may use, in order: one stall (Ep 1-6) -> a busier stall with 6 staff (Ep 7-13, the history episodes compare how Taylor, Fayol, Weber, Mayo would run Chai Corner) -> a second outlet (Ep 14-20) -> Chai Corner with 5 outlets and a small head office (Ep 21-28: decisions, delegation, centralization, span of control, effectiveness).
-- Settled canon so far: the second outlet is at the BUS STAND (chosen in Ep 15) and opened in Ep 14; Meena runs it with two new helpers; Asha trains new staff; Ravi stays the owner. Two unnamed helpers joined the first stall around Ep 7 (show as plain user icons, no names). From Ep 21 there are 5 outlets and a small head office.
+- Settled canon so far: the second outlet is at the BUS STAND (chosen in Ep 15) and opened in Ep 14; Meena runs it with two new helpers; Asha trains new staff; Ravi stays the owner. Two unnamed helpers joined the first stall around Ep 7 (show as plain user icons, no names). From Ep 21 there are 5 outlets and a small head office: MAIN (the first stall), BUS STAND (Meena), COLLEGE, MARKET, STATION. In Ep 24 Ravi signs a shop for a sixth outlet; it has not opened by Ep 28, so later episodes still say 5 outlets.
 - Never introduce real brands into the story. Real thinkers (Taylor, Fayol, Weber, Mayo, Drucker, Simon, Follett) are fine, with correct facts and dates.
 - Illustrative numbers are labelled with the ghost chip "EXAMPLE FIGURES" in the header row.
 

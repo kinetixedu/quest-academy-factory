@@ -1,39 +1,50 @@
-H1|0.3|Chai Corner now has five outlets and a small head office.
-H2|0.55|And every day, forty questions land on Ravi's desk.
-C1|0.3|Milk is running low at outlet three. Ask Ravi.
-C2|0.3|A customer wants a refund. Ask Ravi.
-C3|0.65|And a big new chai shop just opened next door. Ravi has no time left for that one.
-T1|0.7|Not every decision needs the boss. He needs to sort them.
+H1|0.3|Chai Corner now has five outlets, and Ravi's phone never stops.
+H2|0.3|Milk is low at the market outlet. Ask Ravi.
+C1|0.3|A customer wants a refund. Ask Ravi.
+C2|0.3|And a big new tea shop opens near the college.
+C3|0.65|Forty questions a day, and no time left for the big one.
+T1|0.7|Not every decision is the same. Ravi starts sorting them.
+I1|0.35|Picture the festival rush at the main outlet.
+I2|0.35|The queue is long. Asha pours the chai, and Kabir takes the money.
+I3|0.35|Every few minutes, someone asks Ravi the same small things. More cups? Change for a big note?
+I4|0.65|Ravi answers them again and again, while the big questions wait.
 D1|0.3|So, how do we sort decisions?
-D2|0.4|In 1960, the thinker Herbert Simon split them into two types.
-D3|0.35|Programmed decisions are repetitive and routine.
-D4|0.65|Non-programmed decisions are new, and unstructured.
-P0|0.4|Let's start with programmed decisions.
-P1|0.35|They come up again and again, so you can write a rule once.
-P2|0.35|Rule one. When milk falls below twenty litres, reorder it.
-P3|0.35|Rule two. A wrong order gets a full refund.
-P4|0.35|This is called a procedure. Fixed steps anyone can follow.
-P5|0.65|So these go to lower levels, like Meena at outlet two. Quick, and cheap.
-X0|0.4|Now, non-programmed decisions.
-X1|0.35|These are new, and they come up rarely. No rule fits.
-X2|0.35|Should Chai Corner open an outlet in another city?
-X3|0.35|How should it answer the new shop next door?
-X4|0.35|They need judgment, that means weighing the facts. And creativity, fresh ideas.
-X5|0.65|So these go to the top, to Ravi. They matter a lot.
-G0|0.4|Now Ravi plays a sorting game with today's questions.
-G1|0.3|Reorder milk. Programmed.
-G2|0.3|A refund. Programmed.
-G3|0.3|A new city. Non-programmed.
-G4|0.35|The new shop next door. Non-programmed.
-G5|0.65|Thirty-six of forty land in the routine bin. Ravi keeps just four.
-K0|0.35|Side by side, the difference is clear.
-K1|0.35|Programmed decisions are routine, made with rules, at lower levels.
-K2|0.35|Non-programmed decisions are new, made with judgment, at the top.
-K3|0.65|Rules handle the routine, so the boss has time for what is new.
-Q1|1.9|Quick check. A storm shuts the dairy for a week, and nothing like this has happened before. Which type of decision is this?
-A1|0.6|Non-programmed! It is new, there is no rule, so it needs judgment.
+D2|0.35|In 1960, Herbert Simon named two kinds, in his book, The New Science of Management Decision.
+D3|0.35|Programmed decisions are routine and repetitive. You can write a rule for them once.
+D4|0.35|Non-programmed decisions are new and unstructured. That means there is no ready rule, and no clear path.
+D5|0.65|So they need judgment: weighing the facts, and thinking it through.
+G0|0.35|Watch Ravi sort one day's questions.
+G1|0.3|Milk below twenty litres? There is a rule. Reorder. Programmed.
+G2|0.3|A wrong order? There is a rule. Full refund. Programmed.
+G3|0.3|A helper is sick? Call the standby list. Programmed.
+G4|0.35|A new tea shop near the college? No rule fits. Non-programmed.
+G5|0.35|An outlet in another city? No rule fits. Non-programmed.
+G6|0.65|Thirty six of forty questions are routine. Ravi keeps just four.
+P0|0.35|Programmed decisions run on three tools.
+P1|0.35|A rule says exactly what to do. Milk below twenty litres, reorder.
+P2|0.35|A procedure is a set of steps, in order. Check the bill, say sorry, pay back.
+P3|0.35|A policy is a broad guide for many cases. Customers always come first.
+P4|0.65|Write it once, and anyone at any outlet can decide in seconds.
+U0|0.35|Non-programmed decisions are different.
+U1|0.35|They are rare, the stakes are high, and the facts are unclear.
+U2|0.35|So Ravi uses the full decision process from last time, step by step.
+U3|0.65|And they go to the top, because a mistake here costs a lot.
+K0|0.35|So where do you see this at work today?
+K1|0.35|Rules. A bank lends a small sum only when the customer's score passes a set mark.
+K2|0.35|Procedures. Pilots run the same checklist before every take off.
+K3|0.35|Policies. A shop takes back any item within thirty days.
+K4|0.35|Judgment. A hospital plans how to handle a brand new disease.
+K5|0.65|And computers. Simon saw that routine decisions can be handed to machines. A bank's computer flags odd card payments.
+X1|0.35|So are rules always good? The honest answer is, yes and no.
+X2|0.35|The good side. Rules are fast, cheap and fair. Everyone gets the same answer.
+X3|0.35|The hard side. Rules go stale when the world changes.
+X4|0.35|And a rule followed blindly can be silly. A regular customer lost his bill, so the rule says, no refund.
+X5|0.35|Simon himself saw the two types as two ends of one line, not two boxes. Most choices sit in between.
+X6|0.65|So the lesson is balance. Turn the routine into rules, and save your judgment for what is new.
+Q1|1.9|Quick check. A storm shuts the dairy for a week. It has never happened before. Which type of decision is this?
+A1|0.6|Non-programmed! It is new, no rule fits, so it needs judgment.
 S1|0.3|So, remember.
-S2|0.35|Programmed decisions are routine, and made with rules.
-S3|0.35|Non-programmed decisions are new, and need judgment and creativity.
-S4|0.6|Routine goes to lower levels. New and big goes to the top.
-N1|0.2|Next time, rational decision making. How to pick the very best option.
+S2|0.35|Programmed decisions are routine, and handled with rules.
+S3|0.35|Non-programmed decisions are new, and need judgment at the top.
+S4|0.6|Turn the routine into rules, and save time for what is new.
+N1|0.2|Next time, rational decision making, and how to pick the very best option.
