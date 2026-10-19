@@ -1,10 +1,56 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Privacy Policy</title>
-<style>body{margin:0;font-family:Georgia,serif;background:#faf6ef;color:#1b2540;padding:40px 16px;line-height:1.65}main{max-width:720px;margin:auto}h1{font-size:34px}h2{font-size:20px;margin-top:1.6em}a{color:#a8742a}</style></head>
-<body><main><h1>Privacy Policy - Quest Academy Factory</h1><p>Last updated: 18 October 2026</p>
-<p>Quest Academy Factory is an internal tool operated by MR Quest Technologies (Bengaluru, India) to upload Quest Academy's own educational videos to its own YouTube channel.</p>
-<h2>What data the app accesses</h2><p>The app uses the YouTube Data API to upload videos, thumbnails and captions, and to create and manage playlists on the Quest Academy channel only. It is authorized solely by the channel owner.</p>
-<h2>What we store</h2><p>We store only an OAuth refresh token, kept as an encrypted secret in our build system, and the IDs of the videos and playlists we create. We do not collect, store, sell or share data about any other users.</p>
-<h2>Third parties</h2><p>Data is sent only to Google/YouTube through the YouTube API Services. Use of this app is also subject to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
-<h2>Revoking access</h2><p>The channel owner can revoke access at any time from <a href="https://myaccount.google.com/permissions">Google account permissions</a>.</p>
-<h2>Contact</h2><p><a href="mailto:info@mrts.solutions">info@mrts.solutions</a></p></main></body></html>
+<title>Privacy Policy - Quest Academy Factory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css"></head><body>
+<header><div class="bar"><a href="index.html"><img src="logo.svg" alt="Quest Academy"></a><nav><a href="index.html">Home</a><a href="dashboard.html">Factory dashboard</a><a href="privacy.html" class=on>Privacy Policy</a><a href="terms.html">Terms of Service</a></nav></div></header>
+<main><div class="doc">
+<h1>Privacy Policy</h1><p class="muted">Quest Academy Factory &middot; Last updated: 19 October 2026</p>
+<p>Quest Academy Factory ("the app", "we") is an internal tool operated by MR Quest Technologies, Marathahalli, Bengaluru, Karnataka, India. It publishes Quest Academy's own educational videos to Quest Academy's own YouTube channel. This policy explains what data the app accesses through YouTube API Services, how it is used, stored, shared and deleted.</p>
+
+<h2>1. YouTube API Services</h2>
+<p>The app uses <b>YouTube API Services</b> (the YouTube Data API v3). By using the app you agree to be bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's handling of data is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> (<a href="http://www.google.com/policies/privacy">www.google.com/policies/privacy</a>).</p>
+
+<h2>2. Who uses the app</h2>
+<p>Only MR Quest Technologies staff, acting for the Quest Academy channel. The app has no public sign-up. The only Google account that authorises it is the owner of the Quest Academy channel, through Google OAuth 2.0.</p>
+
+<h2>3. Information the app accesses</h2>
+<p>With the scopes <code>youtube.upload</code> and <code>youtube.force-ssl</code>, the app uploads our videos, sets their thumbnails, uploads English captions, lists and creates playlists on our channel, adds our videos to those playlists, and checks that a video we uploaded still exists. It does not read comments, subscribers, analytics, watch history, or any other user's channel or data.</p>
+
+<h2>4. Information we store</h2>
+<ul>
+<li>An OAuth refresh token for the Quest Academy channel, kept as an encrypted secret in our build system and never shown in logs or shared.</li>
+<li>For each video we upload: its YouTube video ID, URL, playlist name, upload time and scheduled publish time, so the app never uploads the same lesson twice.</li>
+</ul>
+<p>We do not store personal information about viewers or any other users. The app sets no cookies and uses no tracking.</p>
+
+<h2>5. How we use the information</h2>
+<p>Only to publish and organise Quest Academy's own videos on Quest Academy's own channel. We do not use API data for advertising, profiling, analytics or any other purpose.</p>
+
+<h2>6. Sharing</h2>
+<p>We do not sell, rent or share API data with anyone. Data is sent only to Google/YouTube through YouTube API Services when the app uploads or updates our own videos.</p>
+
+<h2>7. Retention and deletion</h2>
+<ul>
+<li>Video records (IDs, URLs, schedules) are kept while the video is on our channel and deleted within 30 days after the video is removed from YouTube.</li>
+<li>If authorisation is revoked, we delete the stored refresh token and all data obtained from YouTube API Services within 7 days.</li>
+<li>To request deletion of any stored data, email <a href="mailto:info@mrts.solutions">info@mrts.solutions</a>; we complete deletion within 7 days and confirm by email.</li>
+</ul>
+
+<h2>8. Revoking access</h2>
+<p>The channel owner can revoke the app's access at any time from the Google security settings page: <a href="https://security.google.com/settings/security/permissions">https://security.google.com/settings/security/permissions</a>. After revocation the app can no longer access the channel.</p>
+
+<h2>9. Security</h2>
+<p>Credentials are stored only as encrypted secrets, all API traffic uses HTTPS, and access to the build system is limited to authorised staff.</p>
+
+<h2>10. Children</h2>
+<p>The app is an internal tool and does not collect data from children. Our videos are published as "not made for kids" educational content for college students.</p>
+
+<h2>11. Changes</h2>
+<p>We will post any changes on this page and update the date above.</p>
+
+<h2>12. Contact</h2>
+<p>MR Quest Technologies, Marathahalli, Bengaluru, Karnataka, India &middot; <a href="mailto:info@mrts.solutions">info@mrts.solutions</a></p>
+</div></main>
+<footer><span>&copy; 2026 MR Quest Technologies, Bengaluru, India &middot; Quest Academy Factory uses YouTube API Services</span>
+<span><a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Service</a> &middot; <a href="mailto:info@mrts.solutions">info@mrts.solutions</a></span></footer>
+</body></html>

@@ -1,7 +1,28 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Quest Academy</title>
-<style>body{margin:0;font-family:Georgia,serif;background:#13213f;color:#f5efe4;display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center;padding:24px}
-h1{font-size:44px;margin:.2em 0}p{max-width:560px;line-height:1.6;color:#d9cfbd}a{color:#c8933a}.q{width:64px;height:64px;border:3px solid #c8933a;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:32px;color:#c8933a}</style></head>
-<body><main><div class="q">Q</div><h1>Quest Academy</h1>
-<p>Short animated lessons that explain MBA, BBA, BCom, BCA, BSc and Engineering concepts simply, published on the Quest Academy YouTube channel. Quest Academy is a brand of MR Quest Technologies, Bengaluru.</p>
-<p>Contact: <a href="mailto:info@mrts.solutions">info@mrts.solutions</a> &middot; <a href="privacy.html">Privacy policy</a></p></main></body></html>
+<title>Home - Quest Academy Factory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css"></head><body>
+<header><div class="bar"><a href="index.html"><img src="logo.svg" alt="Quest Academy"></a><nav><a href="index.html" class=on>Home</a><a href="dashboard.html">Factory dashboard</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></nav></div></header>
+<main>
+<h1>Quest Academy Factory</h1>
+<p class="lead">The internal publishing tool of <b>Quest Academy</b>, the education brand of MR Quest Technologies (Bengaluru, India). It produces short animated lessons for college students (MBA, BBA, BCom, BCA, BSc and Engineering) and publishes them to our own YouTube channel.</p>
+<p><a class="yt" href="https://youtu.be/rj9gNt_7IzI">Watch Quest Academy on <b>YouTube</b></a></p>
+<div class="grid">
+ <div class="card"><h3>Our own content only</h3><p>Every video is created by our team. The tool uploads only to the Quest Academy channel, authorised by the channel owner.</p></div>
+ <div class="card"><h3>Uses YouTube API Services</h3><p>Uploads, thumbnails, English captions, playlists and publish schedules are handled through the YouTube Data API v3.</p></div>
+ <div class="card"><h3>Internal tool</h3><p>Not a public service: there is no sign-up and no third-party users. Used only by MR Quest Technologies staff.</p></div>
+</div>
+<h2>How a video is published</h2>
+<ol class="steps">
+ <li>Our team writes, voices and animates the lesson; the factory renders <code>final.mp4</code>, the thumbnail and English captions.</li>
+ <li>The video is uploaded to our channel as private with a scheduled publish time (<code>videos.insert</code>).</li>
+ <li>The custom thumbnail and captions are attached (<code>thumbnails.set</code>, <code>captions.insert</code>).</li>
+ <li>The video is added to its subject playlist and series playlist (<code>playlistItems.insert</code>).</li>
+ <li>The video ID and publish time are recorded so nothing is uploaded twice. See the <a href="dashboard.html">factory dashboard</a>.</li>
+</ol>
+<h2>Policies</h2>
+<p>Read our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>. Use of this tool is also subject to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+</main>
+<footer><span>&copy; 2026 MR Quest Technologies, Bengaluru, India &middot; Quest Academy Factory uses YouTube API Services</span>
+<span><a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Service</a> &middot; <a href="mailto:info@mrts.solutions">info@mrts.solutions</a></span></footer>
+</body></html>
