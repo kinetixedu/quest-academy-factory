@@ -22,5 +22,5 @@
   "privacy_if_not_scheduled": "private",
   "_notes": "Channel is phone-verified (custom thumbnails, 100 uploads/day channel limit). The API quota (10,000 units/day by default) is the real limit: the upload job uploads in episode order and stops cleanly at the first quotaExceeded, leaving the rest READY for the next 3-hourly run. Publish slots: hourly 08:00-22:00 IST, one video per slot, in queue order. Until the Google Cloud project passes YouTube's API audit, YouTube may keep API uploads private even when publishAt is set. Measured 19 Oct: the default API quota allows 4 full uploads a day (insert 1600 + captions 400 + thumbnail 50 + 2 playlists 100 units). max_uploads_per_day is 5 so runs don't build videos that can't be uploaded; raise it to 100 once Google grants the quota increase.",
   "max_uploads_per_day": 5,
-  "paused": true
+  "paused": false
 }
