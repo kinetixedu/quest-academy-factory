@@ -105,7 +105,7 @@ txt($('#kbS'), 536, 86, 'same length', { 'font-size': 18, 'text-anchor': 'end' }
 const th1 = PUC.think($('#th1'), { q: 'A car moves at 72 km/h. In m/s, is the number bigger or smaller than 72?', opts: ['Bigger', 'Smaller'], right: 1, why: '72 × 5/18 = 20 m/s. The m/s is the bigger unit, so the number gets smaller.' });
 
 /* ---------- A: powers ---------- */
-const aS = $('#aS'), SQX = 196, SQY = 92, SQ = 380;
+const aS = $('#aS'), SQX = 216, SQY = 84, SQ = 340;
 const sqR = mk(aS, 'rect', { x: SQX, y: SQY, width: SQ, height: SQ, fill: C.ac2, stroke: C.ac, 'stroke-width': 3 });
 const gridL = []; for (let i = 1; i < 10; i++) { gridL.push(mk(aS, 'line', { x1: SQX + i * SQ / 10, y1: SQY, x2: SQX + i * SQ / 10, y2: SQY + SQ, stroke: C.ac, 'stroke-width': 1.2, opacity: 0.6 })); gridL.push(mk(aS, 'line', { x1: SQX, y1: SQY + i * SQ / 10, x2: SQX + SQ, y2: SQY + i * SQ / 10, stroke: C.ac, 'stroke-width': 1.2, opacity: 0.6 })); }
 const cell = mk(aS, 'rect', { x: SQX, y: SQY, width: SQ / 10, height: SQ / 10, fill: C.ac, opacity: 0.9 });
@@ -113,7 +113,7 @@ const sB = txt(aS, SQX + SQ / 2, SQY + SQ + 42, '1 m', { 'text-anchor': 'middle'
 const sL = txt(aS, SQX - 22, SQY + SQ / 2 + 8, '1 m', { 'text-anchor': 'end', 'font-size': 26, fill: UC, 'font-weight': 600 });
 const cellT = txt(aS, SQX + SQ + 24, SQY + 26, '10 cm × 10 cm', { 'font-size': 18, fill: C.ink, 'font-weight': 600 });
 const cellT2 = txt(aS, SQX + SQ + 24, SQY + 50, '= 100 cm²', { 'font-size': 18, fill: C.ink, 'font-weight': 600 });
-const aChip = document.createElement('div'); aChip.className = 'pillp ink'; aChip.style.cssText = 'left:36px;top:510px'; aChip.innerHTML = '100 squares × 100 cm² = <b class="mono">10,000 cm²</b>'; $('#al').appendChild(aChip);
+const aChip = document.createElement('div'); aChip.className = 'pillp ink'; aChip.style.cssText = 'left:36px;top:496px'; aChip.innerHTML = '100 squares × 100 cm² = <b class="mono">10,000 cm²</b>'; $('#al').appendChild(aChip);
 const PW = [['LENGTH', `1\\,${u('m')} = 100\\,${u('cm')}`, '× 100', null], ['AREA', `1\\,${u('m}^2\\text{')} = 10^4\\,${u('cm}^2\\text{')}`, '× 100²', `1\\,${u('m}^2\\text{')} = \\;?\\;${u('cm}^2\\text{')}`], ['VOLUME', `1\\,${u('m}^3\\text{')} = 10^6\\,${u('cm}^3\\text{')}`, '× 100³', null]];
 $('#pws').innerHTML = PW.map(([h, f, op, f0], i) => `<div class="pw" id="pw${i}" style="top:${84 + i * 136}px"><div class="h">${h}</div><div class="f" id="pwf${i}">${K(f)}</div>${f0 ? `<div class="f" id="pwq${i}">${K(f0)}</div>` : ''}<div class="op" id="pwo${i}">${op}</div></div>`).join('');
 const th2 = PUC.think($('#th2'), { q: 'How many square centimetres make one square metre?', opts: ['100 cm²', '10,000 cm²'], right: 1, why: '100 cm × 100 cm = 10,000 cm². The unit is squared, so the factor is squared too.' });
@@ -131,9 +131,9 @@ const cube = (cx, cy, a, fill, sw) => { const dx = a * 0.5, dy = a * 0.3, g = mk
   mk(g, 'path', { d: `M${cx},${cy} l${dx},${-dy} h${a} l${-dx},${dy} Z`, fill: M.mix(fill, '#FFFFFF', 0.4), stroke: C.ink, 'stroke-width': sw, 'stroke-linejoin': 'round' });
   mk(g, 'path', { d: `M${cx + a},${cy} l${dx},${-dy} v${a} l${-dx},${dy} Z`, fill: M.mix(fill, C.ink, 0.12), stroke: C.ink, 'stroke-width': sw, 'stroke-linejoin': 'round' });
   return g; };
-const cBig = cube(250, 150, 250, '#CFE3F7', 3), cSm = cube(110, 330, 40, '#9CC4EE', 2.5);
-const cSmT = txt(wr, 92, 420, '1 cm³ · about 1 g', { 'font-size': 20, fill: C.ink, 'font-weight': 600 });
-const cBigT = txt(wr, 375, 434, '1 m³ = 10⁶ cm³ · about 1000 kg', { 'font-size': 20, fill: C.ink, 'font-weight': 600, 'text-anchor': 'middle' });
+const cBig = cube(320, 160, 220, '#CFE3F7', 3), cSm = cube(90, 340, 40, '#9CC4EE', 2.5);
+const cSmT = mk(wr, 'g', {}); txt(cSmT, 112, 420, '1 cm³', { 'text-anchor': 'middle', 'font-size': 20, fill: C.ink, 'font-weight': 600 }); txt(cSmT, 112, 446, 'about 1 g', { 'text-anchor': 'middle', 'font-size': 20, fill: C.ink, 'font-weight': 600 });
+const cBigT = mk(wr, 'g', {}); txt(cBigT, 430, 420, '1 m³ = 10⁶ cm³', { 'font-size': 20, fill: C.ink, 'font-weight': 600, 'text-anchor': 'middle' }); txt(cBigT, 430, 446, 'about 1000 kg', { 'font-size': 20, fill: C.ink, 'font-weight': 600, 'text-anchor': 'middle' });
 const nts = txt(wr, 748, 556, 'NOT TO SCALE', { 'font-size': 15, 'text-anchor': 'end', 'letter-spacing': 2 });
 const tW = [wt('W3', 'Step'), wt('W4', 'Step'), wt('W5', 'Step'), wt('W6', 'So')];
 
@@ -148,9 +148,9 @@ const where = PUC.where($('#wa'), { on: [], type: 'First step inside numericals:
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', q: `The acceleration due to gravity is ${K('\\textcolor{' + C.red + '}{g} = 9.8\\ \\text{m s}^{-2}')}. What is it in ${K('\\text{km h}^{-2}')}?`, qW: 780,
   opts: [K('35.3\\ \\text{km h}^{-2}'), K('1.27 \\times 10^{5}\\ \\text{km h}^{-2}'), K('1.27 \\times 10^{8}\\ \\text{km h}^{-2}'), K('7.56 \\times 10^{-4}\\ \\text{km h}^{-2}')], right: 1, optW: 474, optY: 330 });
 const so = PUC.solution($('#so'), [[K(`1\\,${u('m')} = 10^{-3}\\,${u('km')}`)], [K(`1\\,${u('s')} = \\tfrac{1}{3600}\\,${u('h')}`)], [K(`\\textcolor{${C.red}}{g} = 9.8 \\times \\dfrac{10^{-3}}{(1/3600)^2}`)], [K(`\\textcolor{${C.red}}{g} \\approx 1.27 \\times 10^{5}\\ \\text{km h}^{-2}`)], ['<span style="font:500 22px Poppins">A: no square · C: no 1000 · D: flipped</span>']], { y0: 96, dy: 100 });
-const tSo = [wt('A9', 'Metres'), wt('A9', 'second'), wt('A9', 'times'), wt('A9', 'squared') + 0.5, T0('A10')];
+const tSo = [wt('A9', 'Metres'), wt('A9', 'second'), wt('A9', 'times'), wt('A9', 'squared', 2) + 0.3, T0('A10')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 262, w: 1200, h: 470, title: 'Recap · unit conversions', y0: 100, dy: 90, txt: [0, 1, 1, 1],
-  lines: [K(`\\textcolor{${NC}}{n_1}\\textcolor{${UC}}{u_1} = \\textcolor{${NC}}{n_2}\\textcolor{${UC}}{u_2} \\qquad \\dfrac{1\\,\\text{km}}{1000\\,\\text{m}} = 1`),
+  lines: [K(`\\textcolor{${NC}}{n_1}\\textcolor{${UC}}{u_1} = \\textcolor{${NC}}{n_2}\\textcolor{${UC}}{u_2} \\qquad \\tfrac{1\\,\\text{km}}{1000\\,\\text{m}} = 1`),
     '<b>km/h → m/s</b>: × 5/18 &nbsp;·&nbsp; <b>m/s → km/h</b>: × 18/5',
     '<b>Powers</b>: 1 m² = 10⁴ cm² &nbsp;·&nbsp; 1 m³ = 10⁶ cm³',
     '<b>Check</b>: bigger unit, smaller number'] });
@@ -250,6 +250,7 @@ M.on(t => {
   const dOn = t >= tD1 - 0.1 && t < tR1 + 0.1; M.hide($('#sD'), !dOn);
   if (dOn) {
     M.vis($('#dl'), t, tD1 + 0.05, OUT('R1'), { dy: 36, ...o });
+    M.vis($('#dGoal'), t, tD1 + 0.4, 1e9, POP); M.setT($('#dGoal'), t >= tDr[4] ? '18 km/h = 5 m/s' : '18 km/h = ? m/s');
     DR.forEach((_, i) => { const el = $('#dr' + i); M.vis(el.querySelector('.n'), t, tDr[i] - 0.2, 1e9, { ...POP, sc: 0.4 }); PUC.write(el.querySelector('.sx'), t, tDr[i], 0.8); M.vis(el.querySelector('.why'), t, tDr[i] + 0.7, 1e9, { dx: -12, dy: 0 }); });
     const hiY = M.track(80, tDr.slice(1).map((tt, i) => [tt - 0.1, 80 + (i + 1) * 96]), M.SOFT)(t);
     const hb = $('#hiB'); M.vis(hb, t, tDr[0] - 0.1, 1e9, { dy: 0, fade: 0.2 }); hb.style.top = (hiY - 4).toFixed(1) + 'px';
