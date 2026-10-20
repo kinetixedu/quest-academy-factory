@@ -62,6 +62,11 @@ const tSy = [[wt('C2', 'centimetre'), wt('C2', 'gram'), wt('C2', 'second')], [wt
 const s = $('#simS'), X0 = 110, PX = 32, FY = 380;         // 32 px per metre, track 0 - 18 m
 mk(s, 'line', { x1: 30, y1: FY, x2: 754, y2: FY, stroke: C.ink, 'stroke-width': 3 });
 for (let x = 42; x < 754; x += 28) mk(s, 'line', { x1: x, y1: FY + 4, x2: x - 14, y2: FY + 18, stroke: C.dim, 'stroke-width': 2 });
+const tapeG = mk(s, 'g', {});
+mk(tapeG, 'rect', { x: X0 - 16, y: FY + 40, width: 18 * PX + 32, height: 64, rx: 8, fill: '#FFE9A8', stroke: C.ink, 'stroke-width': 2.5 });
+for (let m = 0; m <= 18; m++) mk(tapeG, 'line', { x1: X0 + m * PX, y1: FY + 40, x2: X0 + m * PX, y2: FY + 40 + (m % 2 ? 12 : 24), stroke: C.ink, 'stroke-width': m % 2 ? 1.5 : 2.5 });
+const tapeL = [0, 4, 8, 12, 16].map(m => txt(tapeG, X0 + m * PX, FY + 92, '', { 'text-anchor': 'middle', 'font-size': 17, fill: C.ink, 'font-weight': 600 }));
+const tapeU = txt(tapeG, X0 + 18 * PX + 10, FY + 130, 'm', { 'text-anchor': 'end', 'font-size': 18, fill: UC, 'font-weight': 600 });
 const mkTrolley = op => { const g = mk(s, 'g', { opacity: op }); mk(g, 'rect', { x: -60, y: -76, width: 120, height: 56, rx: 8, fill: C.ink }); [-34, 34].forEach(x => mk(g, 'circle', { cx: x, cy: -12, r: 12, fill: '#fff', stroke: C.ink, 'stroke-width': 4 })); txt(g, 0, -40, '2 kg', { 'text-anchor': 'middle', 'font-size': 20, fill: '#fff', 'font-weight': 600 }); return g; };
 const gTr = [0, 1, 2].map(() => mkTrolley(0)), troP = mk(s, 'g', {}), tro = mkTrolley(1); troP.appendChild(tro);
 const fA = PUC.arrow(s, FC, 7, 20), vA = PUC.arrow(s, VC, 6, 18);
@@ -184,7 +189,7 @@ M.on(t => {
     M.vis($('#pa'), t, tP1 + 0.1, out, { dx: -60, dy: 0, ...o });
     [wt('P2', 'length'), wt('P2', 'mass'), wt('P2', 'time')].forEach((tt, i) => M.vis(pbEl[i], t, tt - 0.1, 1e9, POP));
     paL.forEach(p => M.draw(p, t, wt('P2', 'Everything') - 0.1, 0.5)); M.vis(paD, t, wt('P2', 'built') - 0.1, 1e9, POP);
-    M.vis($('#paP'), t, wt('P3', 'new') - 0.1, 1e9, POP);
+    M.vis($('#paP'), t, wt('P3', 'system') - 0.3, 1e9, POP);
     M.vis($('#pb'), t, tP4 - 0.1, out, { dx: 60, dy: 0, ...o });
     PQ.forEach((_, i) => M.vis($('#pq' + i), t, tPq[i] - 0.15, 1e9, { dx: -20, dy: 0 }));
   }
@@ -222,6 +227,7 @@ M.on(t => {
     M.vis($('#roG'), t, tS1 + 0.5, 1e9, { dy: 10 });
     $('#dial').querySelectorAll('span').forEach((sp, i) => { const on = i === sy ? 1 : 0; sp.style.background = on ? UC : '#fff'; sp.style.color = on ? '#fff' : C.mute; sp.style.borderColor = on ? UC : C.line; });
     M.vis($('#dial'), t, tS1 + 0.6, 1e9, { dy: 10 });
+    M.vis(tapeG, t, tS1 + 0.5, 1e9, { dy: 16 }); tapeL.forEach((e, i) => { const m = [0, 4, 8, 12, 16][i]; M.setT(e, sy === 1 ? String(m * 100) : sy === 2 ? (m / 0.3048).toFixed(1).replace('.0', '') : String(m)); }); M.setT(tapeU, ['m', 'cm', 'ft'][sy]);
     // graph y-axis label follows the system; curve keeps its shape (number and unit change together)
     M.setT(G.ylab, 'v (' + vu + ')');
     [...$('#grS').querySelectorAll('text')].forEach(e => { if (e._y0 === undefined && /^[048]$/.test(e.textContent) && +e.getAttribute('x') < 110) e._y0 = +e.textContent; if (e._y0 !== undefined) M.setT(e, sy === 1 ? String(e._y0 * 100) : sy === 2 ? (e._y0 / 0.3048).toFixed(1).replace('.0', '') : String(e._y0)); });
@@ -244,7 +250,7 @@ M.on(t => {
   const stOn = t >= tT && t < tK1 + 0.5; const stmt = $('#stmt'); M.hide(stmt, !stOn);
   if (stOn) {
     const sx = PUC.sweep(SW)(t); stmt.style.transform = t > tK1 ? `translateX(${(sx ?? -1980).toFixed(1)}px)` : 'none';
-    M.rise($('#st1'), t, tT + 0.08, { st: 0.05 }); M.rise($('#st2'), t, wt('T1', 'Change') - 0.05, { st: 0.07, sp: M.HEAVY });
+    M.rise($('#st1'), t, tT + 0.08, { st: 0.05 }); M.rise($('#st2'), t, wt('T1', 'system') - 0.05, { st: 0.07, sp: M.HEAVY });
     PUC.write($('#stF'), t, wt('T1', 'every'), 0.8);
   }
 
