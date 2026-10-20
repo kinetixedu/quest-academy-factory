@@ -1,0 +1,118 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 26 - Unit Circle and Angle Measurement</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 26: unit circle and angle measurement (Proof board) ===== */
+:root{--th:#7A4FE0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.th{color:var(--th)}
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:50px;font:600 40px 'IBM Plex Mono';white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.rd{position:absolute;font:600 28px 'IBM Plex Mono';white-space:nowrap}
+.rd small{font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);display:block;margin-bottom:2px}
+.an{position:absolute;left:36px;height:60px;width:712px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:14px;font:600 26px Poppins;white-space:nowrap}
+.an b{font:600 18px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);width:150px;flex:none}
+.big{position:absolute;font:600 64px 'IBM Plex Mono';white-space:nowrap}
+.pf{position:absolute;left:36px;width:712px;height:110px}
+.pf .n{position:absolute;left:0;top:8px;width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 21px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.pf .sx{position:absolute;left:66px;top:0;font-size:40px;white-space:nowrap}
+.pf .why{position:absolute;left:66px;top:62px;font:500 21px Poppins;color:var(--mute);white-space:nowrap}
+#wq{position:absolute;left:36px;top:64px;font:600 28px/1.4 Poppins;width:712px}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+#so .sol .sx .katex{font-size:1.15em}
+#mq .mq{font-size:32px}
+#mq .mq .katex{font-size:1.1em}
+#wl .sol .sx{font-size:27px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:30px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 3 TRIGONOMETRIC FUNCTIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Angles on the <span class="acc">Unit Circle</span></div>
+    <div id="sub">Positive, negative, and more than one turn</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">THE VALVE · TWO DIRECTIONS</div>
+        <svg id="hS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="rd th" id="hRd" style="left:36px;top:76px"><small>TURNED</small><span></span></div>
+        <div class="pillp ac" id="hP" style="left:36px;top:500px">Which way? One number must say.</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · THE COLLEGE BICYCLE STAND</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg">
+        <div class="pillp" id="hkP" style="left:36px;top:500px">Forward or backward: same turn?</div></div>
+    </div>
+
+    <div id="sU">
+      <div class="card full" id="ul"><div class="lbl" style="left:36px;top:30px">THE UNIT CIRCLE · NCERT</div><div id="uRows"></div></div>
+      <div class="card rf" id="ur"><div class="lbl" style="left:36px;top:30px">DRAW IT</div><svg id="uS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sS">
+      <div class="card full" id="sp"><div class="lbl" style="left:36px;top:30px;color:var(--ok)">ANTICLOCKWISE · POSITIVE</div>
+        <svg id="spS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="big th" id="spB" style="left:36px;top:470px">+90°</div></div>
+      <div class="card rf" id="sn"><div class="lbl" style="left:36px;top:30px;color:var(--red)">CLOCKWISE · NEGATIVE</div>
+        <svg id="snS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="big th" id="snB" style="left:36px;top:470px">-90°</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sG">
+      <div class="card full" id="gq"><div class="lbl" style="left:36px;top:30px">FOUR QUADRANTS</div><svg id="gqS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="gm"><div class="lbl" style="left:36px;top:30px">LIVE · MORE THAN ONE TURN</div><svg id="gmS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="rd th" id="gRd" style="left:36px;top:470px"><small>ANGLE</small><span></span></div>
+        <div class="pillp" id="gP" style="right:36px;top:500px">420° ends where 60° ends</div></div>
+    </div>
+
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">REAL NUMBERS AS ANGLES · NCERT</div><div id="rRows"></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">LIVE · WRAP THE NUMBER LINE</div><svg id="rS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="rd th" id="rRd" style="right:36px;top:470px;text-align:right"><small>WRAPPED SO FAR</small><span></span></div></div>
+    </div>
+
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">PROOF · 3 STEPS</div><div class="hiBox" id="dHi" style="left:20px;width:744px;height:110px"></div><div id="dSt"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">SAME END POINT, ANY NUMBER OF TURNS</div><svg id="dS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="rd th" id="dRd" style="left:36px;top:470px"><small>ANGLE</small><span></span></div></div>
+    </div>
+
+    <div id="sZ"><div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div></div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">LIVE · TURN -1000°</div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="rd th" id="wRd" style="left:36px;top:470px"><small>TURNED</small><span></span></div>
+        <div class="rd" id="wLap" style="right:36px;top:470px;text-align:right"><small>FULL TURNS BACK</small><span></span></div></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="520" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Anticlockwise <span class="acc">plus</span>, clockwise minus.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

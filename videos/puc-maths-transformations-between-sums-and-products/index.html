@@ -1,0 +1,154 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 35 - Transformations between Sums and Products</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 35: transformations between sums and products (Proof board) ===== */
+:root{--cb:#2F6FEB;--hs:#7A4FE0;--hd:#B7791F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+/* title card: three tone cards */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:18px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst svg{position:absolute;left:20px;top:46px}
+/* hook */
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.wl{position:absolute;left:36px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* proof rows */
+.st{position:absolute;left:36px;width:712px;height:96px}
+.st .n{position:absolute;left:0;top:4px;width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 21px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:64px;top:0;font-size:31px;white-space:nowrap}
+.st .why{position:absolute;left:64px;top:52px;font:500 21px Poppins;color:var(--mute);white-space:nowrap}
+.st.big .why{top:62px}
+/* live readouts */
+.rdL{position:absolute;left:36px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.rdV{position:absolute;right:36px;font:600 40px 'IBM Plex Mono';white-space:nowrap;text-align:right}
+.rdF{position:absolute;left:36px;font-size:32px;white-space:nowrap}
+.bigv{position:absolute;left:36px;top:76px;font:600 64px/1 'IBM Plex Mono';white-space:nowrap}
+.eqc{position:absolute;height:52px;padding:0 18px;border-radius:10px;background:var(--ok);color:#fff;display:inline-flex;align-items:center;gap:8px;font:700 24px Poppins;white-space:nowrap}
+/* cancel chips */
+.cc{position:absolute;top:96px;height:60px;padding:0 20px;border-radius:12px;display:inline-flex;align-items:center;font-size:30px;white-space:nowrap;background:var(--soft)}
+/* all four */
+.f4{position:absolute;left:48px;width:1504px;height:100px;border-radius:14px;background:var(--soft)}
+.f4 .n{position:absolute;left:24px;top:28px;width:44px;height:44px;border-radius:50%;background:var(--ac);color:#fff;font:700 21px Poppins;display:flex;align-items:center;justify-content:center}
+.f4 .fx{position:absolute;left:96px;top:18px;font-size:40px;white-space:nowrap}
+.f4 .tg{position:absolute;right:24px;top:28px;height:44px;padding:0 16px;border-radius:9px;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap;background:#fff;color:var(--ink2)}
+.f4 .tg.bad{background:var(--red);color:#fff}
+.lg{position:absolute;top:24px;height:40px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;gap:8px;font:600 17px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap;background:var(--soft)}
+.lg i{width:14px;height:14px;border-radius:50%;display:inline-block}
+/* side by side */
+.bf{position:absolute;left:36px;font-size:44px;white-space:nowrap}
+.pr{position:absolute;left:36px;font-size:29px;white-space:nowrap}
+.use{position:absolute;height:48px;padding:0 18px;border-radius:10px;background:var(--soft);display:inline-flex;align-items:center;gap:10px;font:600 23px Poppins;white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:70px;font:600 30px/1.4 Poppins;width:712px;white-space:nowrap}
+#wq .katex{font-size:1.15em}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 26px Poppins}
+#so .sol .sx .katex{font-size:1.1em}
+#mq .mq .katex{font-size:1.08em}
+#wl .sol .sx{font-size:29px}
+.trapL .tx .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+.yr .q .katex{font-size:1.05em}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:30px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 3 TRIGONOMETRIC FUNCTIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Sums Into <span class="acc">Products</span></div>
+    <div id="sub">Explained with two tones and one circle</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: two tones + Diya -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">TWO TONES · ADD THE WAVES</div>
+        <svg id="hS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="hP1" style="left:36px;top:500px">Loud, soft, loud, soft</div>
+        <div class="pillp ac" id="hP2" style="left:322px;top:500px">A product inside a sum?</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA · HER STUDY TABLE</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">Where does the wobble come from?</div></div>
+    </div>
+
+    <!-- I + L: the picture on the unit circle, then live slide -->
+    <div id="sI">
+      <div class="card full" id="ic"><div class="lbl" style="left:36px;top:30px">UNIT CIRCLE · ADD P AND Q</div><svg id="iS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="ir"><div class="lbl" style="left:36px;top:30px">WHAT THE PICTURE SAYS</div><div class="hiBox" id="iHi" style="left:20px;width:744px;height:92px"></div><div id="iSt"></div></div>
+      <div class="card rf" id="lr"><div class="lbl" style="left:36px;top:30px">LIVE · SLIDE y, KEEP x = 70°</div>
+        <div class="bigv" id="lY"></div>
+        <div class="rdL" style="top:206px">LEFT SIDE · A SUM</div><div class="rdF" id="lF1" style="top:240px"></div><div class="rdV" id="lV1" style="top:236px"></div>
+        <div class="rdL" style="top:330px">RIGHT SIDE · A PRODUCT</div><div class="rdF" id="lF2" style="top:364px"></div><div class="rdV" id="lV2" style="top:360px"></div>
+        <div class="eqc" id="lEq" style="left:36px;top:478px"></div></div>
+    </div>
+
+    <!-- D: algebra proof + rename with numbers, then all four -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">PROOF · 5 STEPS</div><div class="hiBox" id="dHi" style="left:20px;width:744px;height:92px"></div><div id="dSt"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">WHY THE SINE PARTS CANCEL</div>
+        <div class="cc" id="cc0"></div><div class="cc" id="cc1"></div><div class="pillp good" id="cc2" style="left:36px;top:186px">They add up to 0</div>
+        <div class="lbl" id="dRl" style="left:36px;top:290px">THE RENAME · x = 70°, y = 10°</div><div id="dRn"></div></div>
+      <div class="card" id="d4" style="left:160px;top:270px;width:1600px;height:580px"><div class="lbl" style="left:48px;top:30px">ALL FOUR · SUM TO PRODUCT</div>
+        <div class="lg" id="lg0" style="right:300px"><i style="background:var(--hs)"></i>HALF SUM</div><div class="lg" id="lg1" style="right:48px"><i style="background:var(--hd)"></i>HALF DIFFERENCE</div><div id="d4R"></div></div>
+    </div>
+
+    <!-- B: live beat graph -->
+    <div id="sB">
+      <div class="card" id="bg" style="left:160px;top:270px;width:1040px;height:580px"><div class="lbl" style="left:36px;top:30px">LIVE · TWO TONES ADDED</div><svg id="bS" width="1040" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="br" style="left:1232px;top:270px;width:528px;height:580px"><div class="lbl" style="left:36px;top:30px">PULL TONE 2 AWAY</div>
+        <div class="rdL" style="top:88px">TONE 1</div><div class="rdF" id="bT1" style="top:116px;left:36px"></div>
+        <div class="rdL" style="top:186px">TONE 2</div><div class="rdF" id="bT2" style="top:214px;left:36px"></div>
+        <div class="rdL" style="top:284px">GAP</div><div class="rdV" id="bGap" style="top:272px"></div>
+        <div class="rdL" style="top:352px">THE SUM AS A PRODUCT</div><div class="rdF" id="bF" style="top:384px;font-size:30px"></div>
+        <div class="pillp ac" id="bP" style="left:36px;top:484px">Bigger gap, faster wobble</div></div>
+    </div>
+
+    <!-- S: sum to product vs product to sum -->
+    <div id="sS">
+      <div class="card full" id="sl"><div class="lbl" style="left:36px;top:30px">SUM TO PRODUCT · PLUS INTO TIMES</div>
+        <div class="bf" id="slA" style="top:96px"></div><div class="bf" id="slB" style="top:180px"></div>
+        <div class="lbl" id="slU" style="left:36px;top:318px">USE IT TO</div>
+        <div class="use" id="su0" style="left:36px;top:356px">Factorise</div><div class="use" id="su1" style="left:218px;top:356px">Simplify a fraction</div>
+        <div class="pillp ac" id="slP" style="left:36px;top:470px">+ becomes ×</div></div>
+      <div class="card rf" id="sr"><div class="lbl" style="left:36px;top:30px">PRODUCT TO SUM · TIMES INTO PLUS</div><div id="srR"></div>
+        <div class="pillp ink" id="srP" style="left:36px;top:470px">× becomes +</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">ON THE CIRCLE · x = 75°, y = 15°</div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Half <span class="acc">sum</span>, half difference.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

@@ -1,0 +1,55 @@
+H1|0.4|Two cyclists leave the same gate. Both end up five kilometres away. Are they in the same place?
+H2|0.45|Not always. One went north east, the other south west. Distance alone is not enough. You also need a direction.
+H3|0.35|Aarav thought about this on his ride today.
+H4|0.4|He rode four kilometres east, then three kilometres north. How far is he from home, and in which direction?
+H5|0.65|A complex number answers both. How far is the modulus. Which way is the argument.
+P1|0.35|First, the picture.
+P2|0.4|Think of z equals a plus i b as a trip from the origin, O. Go a steps along the real axis, then b steps up. You land at the point P.
+P3|0.6|Episode forty three builds this map in full. Today, we measure the trip.
+M1|0.35|How far? That is the modulus of z, written with two straight bars around z.
+M2|0.75|Step one. The trip makes a right angled triangle. The base is a, the height is b.
+M3|0.75|Step two. Pythagoras says O P squared equals a squared plus b squared.
+M4|0.75|Step three. Take the square root. The modulus of z is the square root of a squared plus b squared.
+M5|0.65|For Aarav: four squared plus three squared is twenty five. Its square root is five. He is five kilometres from home.
+M6|0.6|And recall the last episode: z times z bar is a squared plus b squared. So z times z bar is the modulus, squared.
+G1|0.35|Now, which way? That is the argument of z.
+G2|0.4|The argument is the angle from the positive real axis to the line O P. Anticlockwise counts as positive.
+G3|0.4|Clockwise counts as negative. We pick the one angle above minus pi, up to pi. That is the principal argument.
+G4|0.4|Watch a trip run. z moves around the origin. Its distance and its angle update live.
+G5|0.4|Below the real axis, the angle turns negative. And z bar, the mirror, keeps the same modulus but the opposite argument.
+G6|0.65|Zero is the only number with no argument. It has no direction at all.
+K1|3.2|Quick one. One plus i, and minus one minus i: same argument, or different? Pause and think.
+K2|0.65|Different! b over a is one for both, but they point opposite ways. Pi by four, and minus three pi by four.
+R1|0.35|So how do we find the argument without a protractor?
+R2|0.75|Step one. Find the reference angle, alpha: the sharp angle whose tangent is the size of b over a.
+R3|0.75|Step two. Use the signs of a and b to find the quadrant.
+R4|0.75|Step three. First quadrant, theta is alpha. Second quadrant, pi minus alpha.
+R5|0.75|Third quadrant, minus pi plus alpha. Fourth quadrant, minus alpha.
+R6|0.6|For Aarav, tan alpha is three over four. Alpha is about thirty seven degrees, north of east.
+S1|0.4|Side by side. Three plus four i, and three minus four i, are mirror images. Same modulus, five. Opposite arguments.
+S2|0.6|Three plus four i, and minus three minus four i, also share the modulus five, but they point opposite ways. Their arguments differ by pi.
+S3|3.2|Now you try. Is the modulus of three minus four i also five? Pause and decide.
+S4|0.65|Yes! Square both parts: nine plus sixteen is twenty five. A minus sign disappears when you square it.
+T1|0.7|Remember this. The modulus tells you how far. The argument tells you which way.
+W1|0.35|Now, one worked example.
+W2|0.5|Find the modulus and the principal argument of minus one, minus root three i.
+W3|0.75|Step one. The modulus is the square root of one plus three, which is two.
+W4|0.75|Step two. tan alpha is root three over one, so alpha is pi by three.
+W5|0.75|Step three. a and b are both negative, so z is in the third quadrant.
+W6|0.75|Step four. Theta is minus pi plus pi by three, which is minus two pi by three.
+W7|0.65|So the modulus is two, and the principal argument is minus two pi by three.
+X1|0.35|Now, the exam trap.
+X2|0.4|Find the argument of minus one minus i. Many students take tan inverse of one, and write pi by four.
+X3|0.65|But pi by four points into the first quadrant. Minus one minus i sits in the third. The right answer is minus three pi by four.
+J1|0.6|Where is this asked? In JEE Main and JEE Advanced, as questions on the modulus and the principal argument. The argument is not in the current NCERT text, but the JEE Main syllabus lists it.
+Q1|5.4|Exam level now. Find the modulus and the principal argument of z. Pause and solve.
+A1|0.5|The answer is A. Root two, and three pi by four.
+A2|0.5|First, one plus i, squared, is two i.
+A3|0.5|Multiply top and bottom by the conjugate, one plus i. The bottom becomes two, and z becomes minus one plus i.
+A4|0.6|The modulus is root two. z is in the second quadrant with alpha pi by four, so the argument is three pi by four.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What is the modulus of minus five plus twelve i?
+Y3|0.9|Two. What is the principal argument of minus one plus i?
+Y4|1.1|Three. Why do z and z bar always have the same modulus?
+N1|0.3|Next time: Diya gives every complex number its own address on a map. That map is the Argand plane.

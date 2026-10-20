@@ -1,0 +1,45 @@
+H1|0.4|Ask a class two questions. Who likes tea? Who likes coffee? Add the two answers, and you can get more students than the class has.
+H2|0.45|Nobody lied. Some students were simply counted twice.
+H3|0.35|Diya ran this survey for the class trip.
+H4|0.5|Twenty five students like tea. Eighteen like coffee. Ten like both. And every student likes at least one. So how many students are there?
+H5|0.65|Not forty three. Sets give the right count in one line.
+G1|0.4|First, a symbol. n of A means the number of elements in a finite set A.
+L1|0.4|Let T be the tea lovers, and C the coffee lovers. Now watch the count.
+L2|0.4|Count every student in T. Twenty five.
+L3|0.4|Now count every student in C, and add. Forty three.
+L4|0.4|But look at the overlap. Those ten students were counted once in T, and again in C.
+L5|0.65|Take them away once. Forty three minus ten is thirty three students.
+D1|0.35|Now let's turn this into a formula.
+D2|0.75|Step one. Adding n of A and n of B counts every element of A union B.
+D3|0.75|Step two. But the elements of A intersection B get counted twice, once in each set.
+D4|0.75|Step three. So subtract them once. n of A union B equals n of A, plus n of B, minus n of A intersection B.
+D5|0.75|Step four. If A and B are disjoint, the overlap is empty. Then n of A union B is simply n of A plus n of B.
+K1|0.4|Side by side. Likes tea means everyone in circle T. That is twenty five.
+K2|0.6|Likes only tea means T minus C, the part outside the overlap. Twenty five minus ten is fifteen.
+K3|3.2|Now you try. How many students like only coffee? Pause and decide.
+K4|0.65|Eight! Eighteen like coffee, but ten of them also like tea. Eighteen minus ten is eight.
+T1|0.7|Remember this. Add the two sets, then subtract the overlap once.
+B1|0.4|Check it with the three pieces. Fifteen like only tea. Ten like both. Eight like only coffee.
+B2|0.65|Fifteen plus ten plus eight is thirty three. The same answer, counted with no student twice.
+W1|0.35|Now, one worked example.
+W2|0.5|In a group of sixty students, thirty five play cricket, twenty eight play football, and ten play both. How many play neither?
+W3|0.75|Step one. Let C be cricket and F be football. n of C is thirty five, n of F is twenty eight, and n of C intersection F is ten.
+W4|0.75|Step two. n of C union F is thirty five, plus twenty eight, minus ten. That is fifty three.
+W5|0.75|Step three. So fifty three students play at least one game.
+W6|0.75|Step four. Neither means the complement of C union F. Sixty minus fifty three is seven.
+W7|0.65|So seven students play neither game.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students just add. Thirty five plus twenty eight is sixty three. That is more than the sixty students in the group!
+X3|0.65|The ten who play both were counted twice. Subtract them once, and the union is fifty three.
+J1|0.6|Where is this asked? In JEE Main, as survey questions with numbers or percentages, where you find the overlap, or its least and greatest possible value.
+Q1|5.4|Exam level now. Between which values must x lie? Pause and solve.
+A1|0.5|The answer is A. From thirty seven to sixty two.
+A2|0.5|The union can be at most one hundred percent. So sixty two, plus seventy five, minus x, is at most one hundred.
+A3|0.5|That gives x at least thirty seven.
+A4|0.6|And the overlap can never be bigger than the smaller set. So x is at most sixty two.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Write the formula for n of A union B.
+Y3|0.9|Two. If A and B are disjoint, what is n of A union B?
+Y4|1.1|Three. If n of A is twelve, n of B is nine, and n of A union B is seventeen, what is n of A intersection B?
+N1|0.3|Next time: the canteen has three snacks and two drinks. How many different combos can you pick? We find out with Cartesian products of sets.

@@ -60,7 +60,7 @@ const tHa = [wt('H2', 'Sixteen'), wt('H2', 'Sixteen', 1), wt('H2', 'Sixteen', 2)
 $('#sgT').innerHTML = K(`${rc('f')}(${X}) = ${rc('\\operatorname{sgn}')}\\, ${X}`);
 const SR = [['1', `\\text{if } ${X} > 0`, 'POSITIVE'], ['0', `\\text{if } ${X} = 0`, 'ZERO'], ['−1', `\\text{if } ${X} < 0`, 'NEGATIVE']];
 $('#sgR').innerHTML = SR.map(([o, c, w], i) => `<div class="sr" id="sr${i}" style="top:${170 + i * 100}px"><div class="o">${o}</div><div class="c">${K(c)}</div><div class="w">${w}</div></div>`).join('');
-const tSr = [wt('S3', 'positive'), wt('S3', 'zero'), wt('S3', 'negative')];
+const tSr = [wt('S3', 'Positive'), wt('S3', 'Zero'), wt('S3', 'Negative')];
 $('#sgDm').innerHTML = 'Domain&nbsp;' + K('\\mathbb{R}');
 $('#sgRg').innerHTML = 'Range&nbsp;' + K('\\{-1,\\ 0,\\ 1\\}');
 const sgs = $('#sgS'), SG = plot(sgs, { x: 52, y: 170, w: 680, h: 360, xmin: -4.3, xmax: 4.3, ymin: -1.7, ymax: 1.7, xt: [-4, -3, -2, -1, 1, 2, 3, 4], yt: [-1, 1], yl: 'sgn x' });
@@ -109,7 +109,7 @@ const gMkP = mk(gs, 'g', {}), gMk = mk(gMkP, 'g', {});
 mk(gMk, 'path', { d: `M0,${GY - 22} l-12,-20 h24 z`, fill: XC }); mk(gMk, 'line', { x1: 0, y1: GY - 20, x2: 0, y2: GY + 6, stroke: XC, 'stroke-width': 3 });
 const gMkT = txt(gMk, 0, GY - 56, 'x = 2.7', { 'text-anchor': 'middle', 'font-size': 22, fill: XC, 'font-weight': 600 });
 const gLeft = txt(gs, GXp(-0.5), GY + 104, '← not bigger than x', { 'text-anchor': 'middle', 'font-size': 20, fill: RC, 'font-weight': 600 });
-const tG4i = wt('G4', 'integers'), tG4l = wt('G4', 'largest'), tG5 = wt('G5', 'take'), tG5i = wt('G5', 'integer');
+const tG4i = wt('G4', 'integers'), tG4l = wt('G4', 'largest'), tG5 = wt('G5', 'take'), tG5i = T1('G5') - 0.6;
 const gxv = t => pw(t, [[tG5 - 0.2, 2.7], [tG5 + 0.6, 3]]);
 const gLit = v => v === 3 ? tG5 + 0.7 : tG4i + 0.15 + (2 - v) * 0.16;
 const avD = PUC.avatar($('#sG'), { x: 976 + 36, y: 270 + 486, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'So my age is just the greatest integer of my exact age.' });
@@ -137,7 +137,7 @@ const steps = []; for (let n = -2; n <= 3; n++) { const s = mk(ds, 'line', { x1:
 const dRings = [mk(ds, 'circle', { cx: DG.X(1), cy: DG.Y(1), r: 24, fill: 'none', stroke: C.ink, 'stroke-width': 3 }), mk(ds, 'circle', { cx: DG.X(2), cy: DG.Y(1), r: 24, fill: 'none', stroke: C.ink, 'stroke-width': 3 })];
 const dV = mk(ds, 'line', { x1: 0, y1: 0, x2: 0, y2: 0, stroke: XC, 'stroke-width': 2.5, 'stroke-dasharray': '6 6' });
 const dXd = mk(ds, 'circle', { r: 11, fill: XC, cx: -99, cy: -99 }), dYd = mk(ds, 'circle', { r: 13, fill: '#fff', stroke: RC, 'stroke-width': 5, cx: -99, cy: -99 });
-const dK = [[wt('D2', 'Start'), -2], [T1('D2'), -1], [wt('D3', 'Between'), 0], [wt('D3', 'Between', 1), 1], [wt('D3', 'jumps'), 2], [T1('D4') - 0.2, 4]];
+const dK = [[wt('D2', 'From'), -2], [T1('D2'), -0.9], [wt('D3', 'zero'), 0.05], [wt('D3', 'one'), 1.05], [wt('D3', 'jumps'), 2], [T1('D4') - 0.2, 4]];
 const DS = [`0 \\le ${X} < 1 \\;\\Rightarrow\\; ${GX} = ${rc('0')}`, `1 \\le ${X} < 2 \\;\\Rightarrow\\; ${GX} = ${rc('1')}`, `${GX} = ${rc('n')} \\iff n \\le ${X} < n + 1`];
 $('#dSt').innerHTML = DS.map((f, i) => `<div class="ps" id="ds${i}" style="top:${232 + i * 84}px"><div class="n">${i + 1}</div><div class="sx">${K(f)}</div></div>`).join('');
 $('#dRg').innerHTML = 'Domain&nbsp;' + K('\\mathbb{R}') + '&nbsp;&nbsp;·&nbsp;&nbsp;Range&nbsp;' + K('\\mathbb{Z}') + '&nbsp;(the integers)';
@@ -181,7 +181,7 @@ const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW
   q: `${K(`f(x) = [x] + [-x] + \\operatorname{sgn} x,\\quad x \\in \\mathbb{R}`)}<br>What is the range of f?`,
   opts: [K('\\{-1,\\ 0,\\ 1\\}'), K('\\{-2,\\ 0\\}'), K('\\{-2,\\ -1,\\ 0,\\ 1\\}'), K('\\{-1,\\ 0\\}')], right: 2, optW: 474, optY: 300 });
 const so = PUC.solution($('#so'), [[K(`x = 0:\\ f = 0`)], [K(`x = n \\ne 0:\\ f = 0 \\pm 1`)], [K(`x \\notin \\mathbb{Z}:\\ [x] + [-x] = -1`)], [K(`f = -1 \\pm 1 = 0 \\text{ or } -2`)], [K(`\\text{Range} = \\{-2, -1, 0, 1\\}`)]], { y0: 100, dy: 96 });
-const tSo = [wt('A2', 'zero'), wt('A3', 'integer'), wt('A4', 'not'), wt('A5', 'Then'), wt('A5', 'range')];
+const tSo = [wt('A2', 'zero'), wt('A3', 'integer'), wt('A4', 'not'), wt('A5', 'positive'), wt('A5', 'Range')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · signum and greatest integer', y0: 96, dy: 80, txt: [1, 0, 0, 0, 1],
   lines: ['<b>Signum</b>: keeps only the sign of x · range {−1, 0, 1}',
     K(`\\operatorname{sgn} ${X} = \\tfrac{|${X}|}{${X}}\\ (${X} \\ne 0), \\qquad \\operatorname{sgn} 0 = 0`),
@@ -267,8 +267,8 @@ M.on(t => {
     PUC.write($('#gT'), t, wt('G1', 'square') - 0.1, 0.6);
     M.rise($('#gD'), t, T0('G2') + 0.1, { st: 0.05, sp: M.HEAVY });
     const wd = $('#gD b'); wd.style.background = mix('#FFFFFF', C.ac2, M.io((t - wt('G2', 'greatest')) / 0.3)); wd.style.borderRadius = '8px';
-    M.vis($('#gw0'), t, wt('G3', 'Look') - 0.1, 1e9, { dx: -16, dy: 0 }); M.vis($('#gw1'), t, wt('G3', 'pick') - 0.1, 1e9, { dx: -16, dy: 0 });
-    M.vis($('#gr0'), t, wt('G4', 'So') - 0.1, 1e9, POP); M.vis($('#gr1'), t, wt('G5', 'so') - 0.1, 1e9, POP);
+    M.vis($('#gw0'), t, wt('G3', 'List') - 0.1, 1e9, { dx: -16, dy: 0 }); M.vis($('#gw1'), t, wt('G3', 'pick') - 0.1, 1e9, { dx: -16, dy: 0 });
+    M.vis($('#gr0'), t, wt('G4', 'largest') + 0.5, 1e9, POP); M.vis($('#gr1'), t, wt('G5', 'so') - 0.1, 1e9, POP);
     M.vis($('#gr'), t, T0('G3') - 0.2, out, { dx: 60, dy: 0, ...o });
     const xv = gxv(t), fx = fl(xv + 1e-9);
     attr(gMkP, 'transform', `translate(${GXp(xv).toFixed(1)},0)`); M.vis(gMk, t, wt('G4', 'Take') - 0.1, 1e9, { dy: -16, fade: 0.12 });
@@ -290,7 +290,7 @@ M.on(t => {
     M.vis($('#kc0'), t, wt('K1', 'two') - 0.1, 1e9, { dy: 16 }); M.vis($('#kc0 .chip'), t, wt('K1', 'both') - 0.05, 1e9, POP);
     M.vis($('#kc1'), t, wt('K2', 'chopping') - 0.1, 1e9, { dy: 16 }); M.vis($('#kc1 .chip'), t, wt('K2', 'bigger') - 0.05, 1e9, POP);
     M.vis($('#kcP'), t, wt('K2', 'right') - 0.1, 1e9, POP);
-    M.vis($('#kd'), t, wt('K1', 'rounding') - 0.1, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#kd'), t, wt('K1', 'Chopping') - 0.1, out, { dx: 60, dy: 0, ...o });
     M.vis($('#kd0'), t, wt('K1', 'two') + 0.1, 1e9, { dy: 16 }); M.vis($('#kd0 .chip'), t, wt('K1', 'both') + 0.1, 1e9, POP);
     M.vis(kM, t, wt('K2', 'minus') - 0.1, 1e9, { dy: -16, fade: 0.12 });
     M.vis(kR2, t, wt('K2', 'bigger') - 0.1, 1e9, { dy: 0, fade: 0.15 });
@@ -313,8 +313,8 @@ M.on(t => {
     const out = OUT('W1');
     M.vis($('#dl'), t, tD1 + 0.3, out, { dx: -60, dy: 0, ...o });
     M.vis($('#dr'), t, tD1 + 0.5, out, { dx: 60, dy: 0, ...o });
-    const live = t >= wt('D2', 'Start') - 0.2, xv = pw(t, dK), n = fl(xv + 1e-9), tEnd = T1('D4') - 0.2;
-    M.vis($('#dX'), t, wt('D2', 'Start') - 0.2, 1e9, { dy: 10 }); M.vis($('#dY'), t, wt('D2', 'Start') - 0.1, 1e9, { dy: 10 });
+    const live = t >= wt('D2', 'From') - 0.2, xv = pw(t, dK), n = fl(xv + 1e-9), tEnd = T1('D4') - 0.2;
+    M.vis($('#dX'), t, wt('D2', 'From') - 0.2, 1e9, { dy: 10 }); M.vis($('#dY'), t, wt('D2', 'From') - 0.1, 1e9, { dy: 10 });
     const key = fmt(xv); if (key !== dLast) { dLast = key; $('#dX').innerHTML = `<span style="color:${XC};font-family:Poppins;font-style:italic">x</span> = ${key}`; $('#dY').innerHTML = `<span style="color:${RC}">[x]</span> = ${mn(Math.min(n, 3))}`; }
     steps.forEach(st => { const on = live && xv >= st.n - 1e-9; M.hide(st.s, !on); M.hide(st.c, !on); if (on) attr(st.s, 'x2', DG.X(Math.min(xv, st.n + 1)).toFixed(1)); M.hide(st.o, !(live && (xv >= st.n + 1 - 1e-6 || (st.n === 3 && t >= tEnd)))); });
     const run = live && t < tEnd + 0.4; M.hide(dXd, !run); M.hide(dYd, !run); M.hide(dV, !run);
@@ -328,7 +328,7 @@ M.on(t => {
     const hb = $('#dHi'); M.vis(hb, t, tDs[0] - 0.1, T0('D9'), { dy: 0, fade: 0.2 }); hb.style.top = (hiY - 4).toFixed(1) + 'px';
     M.vis($('#dRg'), t, wt('D9', 'domain') - 0.1, 1e9, POP);
     M.vis($('#th2'), t, tZ1 + 0.05, OUT('W1'), { dy: 36, ...o });
-    th2(t, { tin: tZ1, tOpts: wt('Z1', 'height') - 0.1, tCount: T1('Z1') + 0.05, dur: 3, tAns: T0('Z2') - 0.02, tWhy: wt('Z2', 'integer') });
+    th2(t, { tin: tZ1, tOpts: wt('Z1', 'height') - 0.1, tCount: T1('Z1') + 0.05, dur: 3, tAns: T0('Z2') - 0.02, tWhy: wt('Z2', 'Square') });
   }
 
   /* W: worked example */

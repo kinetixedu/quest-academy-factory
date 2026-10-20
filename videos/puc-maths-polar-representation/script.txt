@@ -1,0 +1,45 @@
+H1|0.4|A ship radios the harbour: we are five kilometres out, at thirty seven degrees. No east. No north. Just a distance and an angle.
+H2|0.45|And that is enough to find the ship. Two numbers again, but a different pair.
+H3|0.35|Aarav noticed the same thing on his ride today.
+H4|0.4|His map could say four kilometres east and three north. Or it could say five kilometres, at about thirty seven degrees. Same place.
+H5|0.65|Complex numbers can be written both ways too. Today: the polar form.
+G1|0.6|A quick note. The polar form is not in the current NCERT text. But the JEE Main syllabus lists the modulus and the argument, and JEE uses this form all the time.
+B1|0.4|Recall episode forty two. z equals a plus i b has a modulus r, how far, and an argument theta, which way.
+B2|0.75|Step one. Drop a line from P down to the real axis. You get a right angled triangle, with long side r.
+B3|0.75|Step two. The base is a. Cos theta is base over long side, so a equals r cos theta.
+B4|0.75|Step three. The height is b. Sin theta is height over long side, so b equals r sin theta.
+B5|0.75|Step four. Put both back into a plus i b. z equals r cos theta, plus i r sin theta.
+B6|0.65|Take r out. z equals r, times cos theta plus i sin theta. That is the polar form.
+L1|0.4|Now watch it live. Theta counts up, and z swings around O at a fixed distance r.
+L2|0.4|Now r grows, and z slides outward along the same direction. r controls how far. Theta controls which way.
+L3|0.65|And the mirror, z bar, is r, times cos of minus theta plus i sin of minus theta. Same r, opposite angle.
+K1|3.2|Quick one. Add two pi to theta. Does z move? Pause and think.
+K2|0.65|No! A full turn brings z back to the same point. That is why we pick one value, the principal argument, above minus pi, up to pi.
+S1|0.4|Side by side. Cartesian form, a plus i b, says along and up. It is best for adding.
+S2|0.6|Polar form says how far and which way. It is best for multiplying.
+P1|0.4|Here is why. Multiply two numbers in polar form, and the compound angle formulas from episode thirty three do the work. The r's multiply, and the angles add.
+P2|0.6|So multiplying by i, which is one unit at ninety degrees, simply turns z through ninety degrees. Watch.
+S3|3.2|Now you try. Is two, times cos sixty degrees minus i sin sixty degrees, in polar form? Pause and decide.
+S4|0.65|No! Polar form needs a plus sign. Write it as two, times cos of minus sixty, plus i sin of minus sixty. The angle is minus sixty degrees.
+T1|0.7|Remember this. Every non zero z is r, times cos theta plus i sin theta.
+W1|0.35|Now, one worked example.
+W2|0.5|Write one plus root three i in polar form.
+W3|0.75|Step one. r is the root of one plus three, which is two.
+W4|0.75|Step two. cos theta is one half, and sin theta is root three over two.
+W5|0.75|Step three. Both are positive, so theta is in the first quadrant. Theta is pi by three.
+W6|0.65|So z equals two, times cos pi by three plus i sin pi by three.
+X1|0.35|Now, the exam trap.
+X2|0.4|Is minus two, times cos theta plus i sin theta, in polar form? Many students say yes, with r equal to minus two.
+X3|0.65|But r is a distance, so it is never negative. Turn the angle by pi instead: two, times cos of theta plus pi, plus i sin of theta plus pi.
+J1|0.6|Where is this asked? In JEE Main and JEE Advanced, as powers and products of complex numbers that are easy only in polar form.
+Q1|5.4|Exam level now. Which is the polar form of this product? Pause and solve.
+A1|0.5|The answer is A.
+A2|0.5|One plus i has r equal to root two, and angle pi by four.
+A3|0.5|Root three plus i has r equal to two, and angle pi by six.
+A4|0.6|Multiply the r's: two root two. Add the angles: pi by four plus pi by six is five pi by twelve.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Write minus one in polar form.
+Y3|0.9|Two. What are r and theta for three i?
+Y4|1.1|Three. Why can r never be negative?
+N1|0.3|Next time: a ball thrown up reaches some heights twice, and some never. Quadratic equations with real and complex roots.

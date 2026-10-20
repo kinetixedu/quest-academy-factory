@@ -1,0 +1,52 @@
+H1|0.4|Ask who did not ride a bicycle to college today. In your class, the answer is a handful of names. In the whole college, it is hundreds.
+H2|0.45|Same question. Very different answers. It depends on who you count from.
+H3|0.35|Aarav wondered about this as he locked his bicycle this morning.
+H4|0.5|In his group of seven friends, only three rode a bicycle. So who did not?
+H5|0.65|To answer, you need the riders, and the full list you start from. That is the idea of a complement.
+U1|0.35|First, recall the universal set. It is the full set we work inside, and we call it U.
+U2|0.4|Here, U is the seven friends. A is the friends who rode a bicycle: Aarav, Kiran and Ravi.
+C1|0.4|The complement of A is the set of all elements of U that are not in A. We write A with a small dash, and read it as A complement.
+C2|0.4|Watch the test run. Take each friend in U, and ask: is this friend in A?
+C3|0.4|Aarav? In A. Diya? Not in A, so she goes to the complement. Kiran? In A.
+C4|0.4|Joel and Meera did not ride, so they go to the complement. Ravi did. Sana did not.
+C5|0.65|So A complement is Diya, Joel, Meera and Sana. In the picture, it is everything inside the rectangle, but outside the circle.
+C6|0.75|In set builder form, A complement is the set of all x, such that x is in U, and x is not in A.
+V1|0.4|Now change the universal set, and watch the complement change.
+V2|0.4|Let A be the even numbers two, four, six, eight and ten. First, take U as the numbers from one to ten.
+V3|0.4|A complement is the five odd numbers. One, three, five, seven and nine.
+V4|0.4|Now let U grow, all the way up to twenty. A stays exactly the same.
+V5|0.65|But A complement keeps growing. Now it has fifteen elements. The complement always depends on U.
+S1|0.4|Side by side. A complement is the same as U minus A. You start from everything in U, and remove A.
+S2|0.6|B minus A starts only from B. With B as the numbers from one to six, B minus A is just one, three and five.
+S3|3.2|Now you try. U is the numbers from one to ten, and A is one, two and three. How many elements does A complement have? Pause and decide.
+S4|0.65|Seven! The numbers four up to ten. Ten elements in U, take away the three in A.
+T1|0.7|Remember this. The complement is everything in U that is not in A.
+L1|0.35|Now four laws follow, straight from the picture.
+L2|0.75|Step one. Every element of U is either inside A, or outside A. So A union A complement is U.
+L3|0.75|Step two. No element can be inside A and outside A at the same time. So A intersection A complement is the empty set.
+L4|0.75|Step three. Take the complement twice. The outside of the outside is back inside. So the complement of A complement is A.
+L5|0.75|Step four. Nothing in U lies outside U, so U complement is the empty set. And the complement of the empty set is all of U.
+L6|3.2|Quick one. In Aarav's group, who is in the complement of A complement? Pause and think.
+L7|0.65|The riders! Aarav, Kiran and Ravi. Taking the complement twice brings you back to A.
+W1|0.35|Now, one worked example.
+W2|0.5|U is the natural numbers from one to ten. A is the set of prime numbers in U. Find A complement.
+W3|0.75|Step one. U is one, two, three, and so on up to ten. Ten elements.
+W4|0.75|Step two. The primes up to ten are two, three, five and seven.
+W5|0.75|Step three. Remove them from U. A complement is one, four, six, eight, nine and ten.
+W6|0.75|Step four. Check. Four elements in A, plus six in A complement, gives all ten in U.
+W7|0.65|And notice the number one. One is not a prime, so it belongs to A complement.
+X1|0.35|Now, the exam trap.
+X2|0.4|A is one, two and three. Many students write A complement as every other number: four, five, six, and on forever.
+X3|0.65|But a complement only makes sense inside a given U. If U is one to five, A complement is just four and five.
+J1|0.6|Where is this asked? In PUC board exams, as: find A complement for a given U. And in JEE Main, often mixed with intervals and integers.
+Q1|5.4|Exam level now. How many elements are in A complement? Pause and solve.
+A1|0.5|The answer is A. Eighty eight.
+A2|0.5|The perfect squares up to one hundred are one, four, nine, and so on up to one hundred. That is ten numbers.
+A3|0.5|The perfect cubes are one, eight, twenty seven and sixty four. One and sixty four are already squares, so only eight and twenty seven are new.
+A4|0.6|So A has twelve elements, and A complement has one hundred minus twelve. That is eighty eight.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What is A union A complement?
+Y3|0.9|Two. If U is one to six, and A is two and four, what is A complement?
+Y4|1.1|Three. Why must you know U before you find a complement?
+N1|0.3|Next time: Diya sorts her classmates into circles for Biology and Maths. Who goes where? We draw it with Venn diagrams.

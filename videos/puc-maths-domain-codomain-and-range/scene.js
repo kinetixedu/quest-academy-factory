@@ -26,18 +26,18 @@ $('#lists').innerHTML = LS.map(([n, v, col], i) => `<div class="lst" id="ls${i}"
 const tLs = [wt('H1', 'Any'), wt('H2', 'lowest'), wt('H2', 'highest')];
 
 /* ---------- H: marks on a number line ---------- */
-const hs = $('#hS'), HX = v => 72 + v * 6.4, HY = 270;
-const hAl = txt(hs, 72, 132, 'ALLOWED: 0 TO 100', { 'font-size': 20, fill: BC, 'font-weight': 600, 'letter-spacing': 1.5 });
-const hBarA = mk(hs, 'line', { x1: HX(0), y1: 170, x2: HX(100), y2: 170, stroke: BC, 'stroke-width': 12, 'stroke-linecap': 'round' });
+const hs = $('#hS'), HX = v => 72 + v * 6.4, HY = 300;
+const hAl = txt(hs, 72, 150, 'ALLOWED: 0 TO 100', { 'font-size': 20, fill: BC, 'font-weight': 600, 'letter-spacing': 1.5 });
+const hBarA = mk(hs, 'line', { x1: HX(0), y1: 196, x2: HX(100), y2: 196, stroke: BC, 'stroke-width': 12, 'stroke-linecap': 'round' });
 mk(hs, 'line', { x1: 56, y1: HY, x2: 728, y2: HY, stroke: C.ink, 'stroke-width': 3 });
 for (let v = 0; v <= 100; v += 10) { mk(hs, 'line', { x1: HX(v), y1: HY - (v % 50 ? 7 : 12), x2: HX(v), y2: HY + (v % 50 ? 7 : 12), stroke: C.ink, 'stroke-width': 2 }); if (v % 20 === 0 || v === 100) txt(hs, HX(v), HY + 40, v, { 'text-anchor': 'middle', 'font-size': 18, fill: C.ink, 'font-weight': 600 }); }
 const MK = [41, 47, 53, 58, 62, 66, 70, 74, 77, 81, 85, 90, 96];
 const hDots = MK.map((v, i) => mk(hs, 'circle', { cx: HX(v), cy: HY, r: 10, fill: RC, stroke: '#fff', 'stroke-width': 2 }));
-const hBarR = mk(hs, 'line', { x1: HX(41), y1: 350, x2: HX(96), y2: 350, stroke: RC, 'stroke-width': 12, 'stroke-linecap': 'round' });
-const hRl = txt(hs, 72, 410, 'SCORED: 41 TO 96', { 'font-size': 20, fill: RC, 'font-weight': 600, 'letter-spacing': 1.5 });
-const hEnds = [41, 96].map(v => txt(hs, HX(v), 330, v, { 'text-anchor': 'middle', 'font-size': 20, fill: RC, 'font-weight': 600 }));
-const hT1 = txt(hs, 712, 132, 'CODOMAIN', { 'text-anchor': 'end', 'font-size': 22, fill: BC, 'font-weight': 700, 'letter-spacing': 2 });
-const hT2 = txt(hs, 712, 410, 'RANGE', { 'text-anchor': 'end', 'font-size': 22, fill: RC, 'font-weight': 700, 'letter-spacing': 2 });
+const hBarR = mk(hs, 'line', { x1: HX(41), y1: 400, x2: HX(96), y2: 400, stroke: RC, 'stroke-width': 12, 'stroke-linecap': 'round' });
+const hRl = txt(hs, 72, 460, 'SCORED: 41 TO 96', { 'font-size': 20, fill: RC, 'font-weight': 600, 'letter-spacing': 1.5 });
+const hEnds = [41, 96].map(v => txt(hs, HX(v), 380, v, { 'text-anchor': 'middle', 'font-size': 20, fill: RC, 'font-weight': 600 }));
+const hT1 = txt(hs, 712, 150, 'CODOMAIN', { 'text-anchor': 'end', 'font-size': 22, fill: BC, 'font-weight': 700, 'letter-spacing': 2 });
+const hT2 = txt(hs, 712, 460, 'RANGE', { 'text-anchor': 'end', 'font-size': 22, fill: RC, 'font-weight': 700, 'letter-spacing': 2 });
 
 /* ---------- P: three words ---------- */
 $('#pF').innerHTML = K(`f : ${ac('A')} \\to ${bc('B')}`);

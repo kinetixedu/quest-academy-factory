@@ -1,0 +1,129 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 34 - Double-Angle and Triple-Angle Identities</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 34: double-angle and triple-angle identities (Proof board) ===== */
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.th{font-family:KaTeX_Math;font-style:italic}
+.lbl.lc{text-transform:none}
+/* title card */
+.lst{position:absolute;top:724px;width:480px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:50px;font-size:32px;white-space:nowrap}
+/* hook table */
+.hh{position:absolute;top:92px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.hc{position:absolute;height:84px;border-radius:14px;background:var(--soft);display:flex;align-items:center;justify-content:center;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* proof rows */
+.st{position:absolute;left:36px;width:712px;height:92px}
+.st .n{position:absolute;left:0;top:2px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:66px;top:0;font-size:31px;white-space:nowrap}
+.st .why{position:absolute;left:66px;top:50px;font:500 20px Poppins;color:var(--mute);white-space:nowrap}
+.st .why .katex{font-size:1.05em}
+/* readouts */
+.rd{position:absolute;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+.rd .katex{font-size:.95em}
+#lRo{position:absolute;left:36px;top:84px;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+/* side by side */
+.bf{position:absolute;left:36px;top:96px;font-size:44px;white-space:nowrap}
+.ex{position:absolute;left:36px;top:230px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.ex .k{position:absolute;left:22px;top:16px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.ex .f{position:absolute;left:22px;top:48px;font-size:34px;white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:64px;font:600 28px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.15em}
+#wl .sol .sx{font-size:28px}
+#wl .sol .sx .katex{font-size:1.05em}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 26px Poppins}
+#so .sol .sx .katex{font-size:1.08em}
+#mq .mq .katex{font-size:1.1em}
+#mq .opt .ot .katex{font-size:1.15em}
+.trapL .tx .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:24px;font:600 34px Poppins;white-space:nowrap}
+.yr .q .katex{font-size:1.05em}
+#sF .fcard .fl{font-size:38px}
+#sF .fcard .fl.txt{font-size:32px}
+.thk .tq .katex{font-size:1em}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 3 TRIGONOMETRIC FUNCTIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Double and Triple <span class="acc">Angles</span></div>
+    <div id="sub">Explained with one triangle cut in half</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: double the angle + Aarav -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">DOUBLE THE ANGLE</div><div id="hcs"></div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · HOMEWORK AT HIS DESK</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">Double the angle. The sine does not double.</div></div>
+    </div>
+
+    <!-- P + G + L: algebra, area picture, live graph -->
+    <div id="sP">
+      <div class="card full" id="pl"><div class="lbl lc" id="plL0" style="left:36px;top:30px">FROM THE SUM FORMULA · PUT y = x</div><div class="lbl" id="plL1" style="left:36px;top:30px">SAME AREA, TWO WAYS</div><div class="lbl lc" id="plL2" style="left:36px;top:30px">LIVE · x FROM 0° TO 90°</div>
+        <div class="hiBox" id="pHi" style="left:20px;width:744px;height:96px"></div>
+        <div id="pRows"></div><div id="gRows"></div>
+        <svg id="lG" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div id="lRo"></div></div>
+      <div class="card rf" id="pr"><div class="lbl lc" style="left:36px;top:30px">UNIT CIRCLE · ANGLE 2x</div><svg id="pS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- C: cos 2x three forms -->
+    <div id="sC">
+      <div class="card full" id="cl"><div class="lbl lc" style="left:36px;top:30px">COSINE AND TAN OF 2x</div><div class="hiBox" id="cHi" style="left:20px;width:744px;height:96px"></div><div id="cRows"></div></div>
+      <div class="card rf" id="cr"><div class="lbl lc" style="left:36px;top:30px">cos 2x = cos²x - sin²x · AT x = 30°</div><svg id="cS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp good" id="cP" style="left:36px;top:504px">Three forms, one value: 0.500</div></div>
+    </div>
+
+    <!-- K: side by side + pause and think -->
+    <div id="sK">
+      <div class="card full" id="ka"><div class="lbl lc" style="left:36px;top:30px;color:#2F6FEB">YOU KNOW cos x</div><div class="bf" id="kaF"></div><div class="ex"><div class="k">EXAMPLE</div><div class="f" id="kaE"></div></div></div>
+      <div class="card rf" id="kb"><div class="lbl lc" style="left:36px;top:30px;color:var(--ac)">YOU KNOW sin x</div><div class="bf" id="kbF"></div><div class="ex"><div class="k">EXAMPLE</div><div class="f" id="kbE"></div></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- R: triple angle -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl lc" style="left:36px;top:30px">TRIPLE ANGLE · 3x = 2x + x</div><div class="hiBox" id="rHi" style="left:20px;width:744px;height:96px"></div><div id="rRows"></div></div>
+      <div class="card rf" id="rr"><div class="lbl lc" style="left:36px;top:30px">CHECK AT x = 30°</div><svg id="rS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div id="rRo"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">THE 3, 4, 5 TRIANGLE</div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- X / Q / F -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="620" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Double the angle, <span class="acc">not</span> the sine.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

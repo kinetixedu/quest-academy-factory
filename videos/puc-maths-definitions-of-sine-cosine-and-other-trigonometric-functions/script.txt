@@ -1,0 +1,50 @@
+H1|0.4|Turn a bicycle wheel slowly and follow the valve with your finger. It rises, it falls, it swings left and right.
+H2|0.45|At every moment it has a height above the hub, and a distance to the side.
+H3|0.35|Aarav wondered about this as he lifted his bicycle to fix the chain.
+H4|0.5|For any angle the wheel turns, how high is the valve?
+H5|0.65|Those two numbers, the height and the sideways distance, have names. They are sine and cosine.
+D1|0.35|Let's make it exact on the unit circle.
+D2|0.4|Turn an angle x from the point A. The terminal side meets the circle at a point P, with coordinates a and b.
+D3|0.4|NCERT defines cos x as a, the x coordinate of P. And sin x as b, the y coordinate of P.
+D4|0.65|So cosine tells how far P is to the side, and sine tells how high P is. On a wheel of radius one, sine is exactly the valve's height above the hub.
+L1|0.4|Now let x count up, and watch both values change.
+L2|0.4|At zero, P is at A. Cos zero is one, and sin zero is zero.
+L3|0.4|At pi by two, P is at the top. Cos is zero, and sin is one.
+L4|0.4|At pi, P is on the far left. Cos is minus one, and sin is zero.
+L5|0.65|At three pi by two, P is at the bottom. Cos is zero, and sin is minus one. At two pi, P is back at A.
+V1|0.35|So exactly where is sine zero, and where is cosine zero? Three small steps.
+V2|0.75|Step one. Sin x is zero when P has no height. Then P sits on the x axis: at A, or at the far left.
+V3|0.75|Step two. P lands there at zero, pi, two pi, and so on, in both directions. So sin x is zero exactly when x is n pi, for any integer n.
+V4|0.75|Step three. Cos x is zero when P sits on the y axis, at the top or the bottom. That happens at odd multiples of pi by two.
+V5|0.65|We write that as two n plus one, times pi by two.
+S1|0.4|Side by side. Cosine is sideways, the x coordinate. At sixty degrees, P is half a unit to the right, so cos sixty degrees is one half.
+S2|0.6|Sine is height, the y coordinate. At thirty degrees, P is half a unit up, so sin thirty degrees is one half.
+S3|3.2|Now you try. At pi by two, which one is zero: sine, or cosine? Pause and think.
+S4|0.65|Cosine! At pi by two, P is at the very top, with no sideways distance. Its height, sin pi by two, is one.
+O1|0.35|Now the other four trigonometric functions. Each one is built from sine and cosine.
+O2|0.75|Cosecant x is one over sin x. Secant x is one over cos x.
+O3|0.75|Tangent x is sin x over cos x. Cotangent x is cos x over sin x.
+O4|0.65|Division by zero is never allowed. So tan and sec need cos x to be non zero, and cot and cosec need sin x to be non zero.
+T1|0.7|Remember this. On the unit circle, cos x is the x coordinate of P, and sin x is the y coordinate.
+Z1|3.2|Quick one. Is tan of pi by two defined? Pause and think.
+Z2|0.65|No! Tan is sin over cos, and cos pi by two is zero. You cannot divide by zero.
+W1|0.35|Now, one worked example. Find all six functions at pi by four.
+W2|0.75|Step one. Pi by four cuts the right angle in half, so P lies on the line y equals x. So a equals b.
+W3|0.75|Step two. P is on the unit circle, so a squared plus b squared is one. Then two a squared is one, and a is one over root two.
+W4|0.75|Step three. So cos pi by four and sin pi by four are both one over root two.
+W5|0.75|Step four. Tan and cot are both one. Sec and cosec are both root two.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students read cosec x as sine inverse of x.
+X3|0.65|But cosec x is one over sin x, a reciprocal. Sine inverse is a different idea, which you meet in Class 12.
+J1|0.6|Where is this asked? In the PUC board exams: find the trigonometric functions at a given angle, or from a point on the unit circle.
+Q1|5.4|Exam level now. Find cot x plus cosec x. Pause and solve.
+A1|0.5|The answer is A. Minus one half.
+A2|0.5|P is the point minus three fifths, minus four fifths. So cos x is minus three fifths, and sin x is minus four fifths.
+A3|0.5|Cot x is cos over sin. Minus three fifths over minus four fifths is three quarters.
+A4|0.6|Cosec x is one over sin x, which is minus five quarters. Three quarters minus five quarters is minus one half.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What are cos pi and sin pi?
+Y3|0.9|Two. Why is sec of pi by two not defined?
+Y4|1.1|Three. P is the point zero point six, zero point eight. What is tan x?
+N1|0.3|Next time: the valve can be above or below the hub, left or right. Which signs do sine and cosine take in each quadrant?

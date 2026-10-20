@@ -1,0 +1,55 @@
+H1|0.4|Two hall tickets. One says seat three comma five, the other says five comma three. Same two numbers. Same seat?
+H2|0.45|No. They are two different desks. Swap the numbers, and you sit in someone else's seat.
+H3|0.35|Aarav learned this on his first exam day.
+H4|0.5|So when does the order of two numbers matter?
+H5|0.65|The answer is the ordered pair, the building block of this whole chapter.
+O1|0.4|Last time, every element of A cross B was a pair in round brackets. Let us look closely at that pair.
+O2|0.4|An ordered pair is two objects in a fixed order, inside round brackets, with a comma between them.
+O3|0.4|The one on the left is the first element. The one on the right is the second element.
+O4|0.65|For a seat in the hall, the first number is the column. The second number is the row.
+L1|0.4|Watch the seat finder. For three comma five, walk three columns across, then five rows up.
+L2|0.4|For five comma three, walk five columns across, then three rows up. A different desk.
+L3|0.4|Now keep the second number at three, and let the first number, a, count up.
+L4|0.4|The blue dot is a comma three. Its twin, three comma a, is the swapped pair.
+L5|0.65|They land on the same desk only once, when a is three. Swapping changes the seat, unless both numbers are equal.
+S1|0.4|Side by side. Curly brackets make a set, and order does not matter. The set three, five equals the set five, three.
+S2|0.6|Round brackets make an ordered pair, and order is everything. Three comma five is not five comma three.
+K1|3.2|Now you try. Is two comma two a proper ordered pair, even though both entries are the same? Pause and think.
+K2|0.65|Yes! It is the desk in column two, row two. A pair may repeat an entry.
+E1|0.35|So when are two ordered pairs equal?
+E2|0.4|In NCERT words: two ordered pairs are equal if and only if the corresponding first elements are equal, and the second elements are also equal.
+E3|0.75|In symbols: a comma b equals c comma d, exactly when a equals c, and b equals d.
+E4|0.75|Both checks must pass. Three comma five and three comma four share the first element, but they are different pairs.
+T1|0.7|Remember this. In an ordered pair, position is meaning. Swap the entries, and you get a new pair.
+D1|0.35|Now a big result. Is A cross B the same set as B cross A?
+D2|0.75|Step one. Take A as one and two, and take B as just three.
+D3|0.75|Step two. A cross B is one comma three, and two comma three. The first elements come from A.
+D4|0.75|Step three. B cross A is three comma one, and three comma two. Now the first elements come from B.
+D5|0.75|Step four. One comma three is not three comma one. So the two sets differ, though each has two elements.
+D6|0.65|So A cross B and B cross A differ, unless A equals B, or one set is empty.
+R1|0.4|Pairs can grow. Three objects in a fixed order make an ordered triplet.
+R2|0.4|A cross A cross A holds every triplet with entries from A. If A has two elements, that is two times two times two, eight triplets.
+R3|0.65|And R cross R, pairs of real numbers, is every point on a graph sheet. Each point is one ordered pair, x comma y.
+W1|0.35|Now, one worked example.
+W2|0.5|If two x minus one comma y plus three equals five comma one, find x and y.
+W3|0.75|Step one. Equal pairs have equal first elements. Two x minus one equals five.
+W4|0.75|Step two. Add one, then halve. x equals three.
+W5|0.75|Step three. The second elements are equal too. y plus three equals one.
+W6|0.75|Step four. Take away three. y equals minus two.
+W7|0.65|Check. Two times three, minus one, is five. Minus two plus three is one. Both match.
+X1|0.35|Now, the exam trap.
+X2|0.4|If x squared comma y plus one equals nine comma four, many students write x equals three, and stop.
+X3|0.65|But minus three squared is also nine. So x is three or minus three, and y is three. Two answers: three comma three, and minus three comma three.
+J1|0.6|Where is this asked? In PUC exams: equal ordered pairs, find x and y. In JEE Main, inside questions that count ordered pairs.
+Q1|5.4|Exam level now. A is the set of integers whose square is at most four. How many ordered pairs a comma b in A cross A are different from b comma a? Pause and solve.
+A1|0.5|The answer is B. Twenty.
+A2|0.5|A is minus two, minus one, zero, one and two. That is five integers.
+A3|0.5|So A cross A has five times five, which is twenty five ordered pairs.
+A4|0.5|A pair equals its swap only when a equals b. That is five pairs.
+A5|0.6|Twenty five minus five leaves twenty pairs that change when swapped.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. If x plus two comma four equals five comma two y, find x and y.
+Y3|0.9|Two. Is the set one, two equal to the set two, one? Is one comma two equal to two comma one?
+Y4|1.1|Three. If A is p and q, and B is r, are A cross B and B cross A equal?
+N1|0.3|Next time: Diya links classmates to their blood groups. Only some pairs are true, and that chosen set of pairs is a relation.

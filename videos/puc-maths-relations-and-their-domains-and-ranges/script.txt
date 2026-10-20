@@ -1,0 +1,50 @@
+H1|0.4|Five classmates and four blood groups: A, B, A B and O. Pair every student with every group, and you get twenty pairs.
+H2|0.45|But only a few of those pairs are true. Ravi has one blood group, not four. And Joel has not even done his test yet.
+H3|0.35|Diya is making the list for a blood donation camp.
+H4|0.5|How do we keep just the true pairs, and describe them in maths?
+H5|0.65|We pick them out of the Cartesian product. The pairs we keep form a relation.
+R1|0.35|Start with the full Cartesian product. S is the set of five students. G is the set of four blood groups.
+R2|0.4|S cross G has five times four, twenty pairs. Every possible link is in here.
+R3|0.4|Now test each pair with one rule: student x has blood group y. Pairs that fail the rule fade away.
+R4|0.65|Four pairs survive. This chosen set of pairs is a relation from S to G.
+D1|0.4|In NCERT words: a relation R from a non empty set A to a non empty set B is a subset of the Cartesian product A cross B.
+D2|0.4|The subset is picked by a relationship between the first element and the second element of each pair.
+D3|0.65|If x comma y is in R, then y is called the image of x. Ravi's image is O.
+M1|0.35|Every relation comes with three sets. Watch the arrows.
+M2|0.75|The domain is the set of all first elements of the pairs in R. Only students with an arrow leaving them. Joel has no arrow, so he is not in the domain.
+M3|0.75|The range is the set of all second elements. Only the groups an arrow lands on: O, A and B.
+M4|0.75|The codomain is the whole second set, G. All four groups, even A B, which no arrow reached.
+S1|0.4|Side by side. The range is what the arrows actually hit. Here, three groups.
+S2|0.6|The codomain is everything they could hit. Here, four groups. So the range always sits inside the codomain.
+K1|3.2|Now you try. Joel's test comes back, and he is group A B. Does the range change? Pause and think.
+K2|0.65|Yes! A new arrow lands on A B, so the range grows to all four groups. The codomain does not change. It was always G.
+T1|0.7|Remember this. A relation is a chosen set of pairs. Its first elements make the domain. Its second elements make the range.
+C1|0.35|Now, how many different relations can we make from A to B?
+C2|0.75|Step one. A relation is any subset of A cross B.
+C3|0.75|Step two. If A has p elements and B has q elements, A cross B has p times q pairs.
+C4|0.75|Step three. Each pair has two choices: keep it, or leave it out.
+C5|0.75|Step four. Two choices for every pair means two times two times two, once per pair. That is two to the power p q.
+C6|0.65|Watch it with two times two pairs. Four switches, sixteen different relations, from no pairs at all to every pair.
+W1|0.35|Now, one worked example.
+W2|0.5|A is one to six. R is the relation on A, where y equals two x. Write R in roster form, then find its domain, range and codomain.
+W3|0.75|Step one. Test each x. Two times one is two, two times two is four, two times three is six. Two times four is eight, which is not in A.
+W4|0.75|Step two. So R is one comma two, two comma four, and three comma six.
+W5|0.75|Step three. The domain is the first elements: one, two and three.
+W6|0.75|Step four. The range is the second elements: two, four and six.
+W7|0.65|Step five. The codomain is all of A, one to six. A relation from A to itself is called a relation on A.
+X1|0.35|Now, the exam trap.
+X2|0.4|A has three elements and B has two. Many students count the relations as two cubed times two squared, which is thirty two.
+X3|0.65|But relations are subsets of A cross B, which has six pairs. So the count is two to the power six, sixty four.
+J1|0.6|Where is this asked? In PUC exams, as: find the domain and range. In JEE Main, as: count the pairs in a relation, or count the relations.
+Q1|5.4|Exam level now. A is the numbers one to ten. R is the set of pairs x comma y in A cross A with x plus two y equal to twelve. How many elements are in the domain of R, union the range of R? Pause and solve.
+A1|0.5|The answer is B. Eight.
+A2|0.5|x equals twelve minus two y. For y from one to five, x is ten, eight, six, four and two.
+A3|0.5|y equals six would make x zero, which is not in A. So R has five pairs.
+A4|0.5|The domain is two, four, six, eight, ten. The range is one to five. They share two and four.
+A5|0.6|So the union has five plus five minus two, which is eight elements.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. For R equal to one comma three, two comma five, two comma seven, write the domain and the range.
+Y3|0.9|Two. How many relations are there from a set of two elements to a set of three elements?
+Y4|1.1|Three. Why is the range always inside the codomain?
+N1|0.3|Next time: every roll number points to exactly one student. When every element gets exactly one arrow, a relation becomes a function.

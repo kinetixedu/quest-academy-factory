@@ -1,0 +1,136 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 42 - Modulus and Argument</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 42: modulus and argument (Proof board) ===== */
+:root{--re:#2F6FEB;--im:#E4572E;--iv:#7A4FE0;--mo:#0E8F8F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:54px;font:700 30px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:36px;top:84px;width:400px;height:300px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.chip{position:absolute;height:52px;padding:0 18px;border-radius:10px;display:inline-flex;align-items:center;gap:8px;font:700 24px Poppins;color:#fff;white-space:nowrap}
+.ghost{z-index:2}
+/* two parts */
+.tp{position:absolute;left:36px;width:712px;height:112px;border-radius:14px;background:var(--soft)}
+.tp .tf{position:absolute;left:24px;top:22px;font-size:48px;white-space:nowrap}
+.tp .tw{position:absolute;left:250px;top:38px;font:500 28px Poppins;color:var(--ink2);white-space:nowrap}
+/* proof steps */
+.st{position:absolute;left:36px;width:712px;height:92px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:66px;top:0;font-size:38px;white-space:nowrap}
+.st .why{position:absolute;left:66px;top:54px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.st.t .sx{font:600 30px Poppins;top:6px}
+/* argument definition */
+.gf{position:absolute;left:36px;font-size:54px;white-space:nowrap}
+.gt{position:absolute;left:36px;font:500 28px/1.35 Poppins;color:var(--ink2);width:712px}
+.ro2{position:absolute;font:600 28px 'IBM Plex Mono';white-space:nowrap}
+.ro2 .k{font-family:Poppins;font-style:italic}
+.sf{position:absolute;left:36px;top:80px;font-size:46px;white-space:nowrap}
+#wq{position:absolute;left:36px;top:64px;font:600 30px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.2em}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.12em}
+#mq .mq .katex{font-size:1.08em}
+#mq .opt .ot .katex{font-size:1.05em}
+#wl .sol .sx{font-size:30px}
+.trapL .tx .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+.yr .q .katex{font-size:1.1em}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 4 COMPLEX NUMBERS AND QUADRATIC EQUATIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">How Far, and <span class="acc">Which Way</span>?</div>
+    <div id="sub">Modulus and argument, explained with one bicycle trip</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: two trips + Aarav's ride -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">TWO TRIPS · SAME DISTANCE</div><svg id="hlS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp bad" id="hlP" style="left:36px;top:496px">Distance alone is not enough</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · TODAY'S RIDE</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg">
+        <svg id="hkS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">How far? Which way?</div></div>
+    </div>
+
+    <!-- M: the trip picture + modulus proof -->
+    <div id="sM">
+      <div class="card full" id="ml"><div class="lbl" style="left:36px;top:30px">THE TRIP · z = a + ib</div><svg id="mS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="pr"><div class="lbl" style="left:36px;top:30px">TWO PARTS · TWO MOVES</div><div id="tps"></div>
+        <div class="pillp" id="prP" style="left:36px;top:496px">Ep 43 builds the full map</div></div>
+      <div class="card rf" id="mr"><div class="lbl" style="left:36px;top:30px">HOW FAR · THE MODULUS · NCERT</div>
+        <div class="hiBox" id="mHi" style="left:20px;width:744px;height:92px"></div><div id="mSt"></div></div>
+    </div>
+
+    <!-- G: argument + live trip -->
+    <div id="sG">
+      <div class="card full" id="gl"><div class="lbl" style="left:36px;top:30px">WHICH WAY · THE ARGUMENT</div>
+        <div class="ghost" id="gGh" style="left:36px;top:76px">NOT IN CURRENT NCERT TEXT · JEE</div>
+        <div class="gf" id="gf1" style="top:140px"></div>
+        <div class="gt" id="gt1" style="top:226px">the angle from the positive real axis to OP</div>
+        <div class="pillp" id="gP1" style="left:36px;top:290px;background:#EFE9FC;color:var(--iv)">anticlockwise: +</div>
+        <div class="pillp" id="gP2" style="left:286px;top:290px;background:var(--redBg);color:var(--red)">clockwise: -</div>
+        <div class="gf" id="gf2" style="top:368px;font-size:46px"></div><div class="lbl" id="gL2" style="left:36px;top:446px">THE PRINCIPAL ARGUMENT</div>
+        <div class="pillp ink" id="gP3" style="left:36px;top:496px">z = 0 has no argument</div></div>
+      <div class="card rf" id="gr"><div class="lbl" style="left:36px;top:30px">LIVE · A TRIP AROUND O</div>
+        <svg id="gS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="ro2" id="gR1" style="left:36px;top:466px"></div><div class="ro2" id="gR2" style="left:36px;top:516px"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- R: quadrant rule -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">FIND THE ARGUMENT · 3 STEPS</div>
+        <div class="hiBox" id="rHi" style="left:20px;width:744px;height:92px"></div><div id="rSt"></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">FOUR QUADRANTS · ONE RULE</div><svg id="rS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="ro2" id="rRd" style="right:36px;top:24px"></div></div>
+    </div>
+
+    <!-- S: mirror vs opposite -->
+    <div id="sS">
+      <div class="card full" id="sm"><div class="lbl" style="left:36px;top:30px">MIRROR · z AND z BAR</div><div class="sf" id="smF"></div><svg id="smS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="smP" style="left:36px;top:496px;background:#E2F2F2;color:var(--mo)">Same modulus · opposite arguments</div></div>
+      <div class="card rf" id="sn"><div class="lbl" style="left:36px;top:30px">OPPOSITE · z AND -z</div><div class="sf" id="snF"></div><svg id="snS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp bad" id="snP" style="left:36px;top:496px">Same modulus · arguments differ by π</div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">THE PICTURE</div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="520" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">How <span class="acc">far</span>, and which way.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

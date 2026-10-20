@@ -1,0 +1,49 @@
+H1|0.4|Diya is preparing for NEET. Its subjects are Physics, Chemistry and Biology.
+H2|0.45|Her PUC science subjects are Physics, Chemistry, Maths and Biology.
+H3|0.35|She noticed something while filling in her study timetable.
+H4|0.5|Every NEET subject is also a PUC subject. But Maths is a PUC subject, and not a NEET subject. It only works one way.
+H5|0.65|That one way link between two sets has a name. A subset.
+S1|0.35|So what is a subset?
+S2|0.4|A set A is a subset of a set B if every element of A is also an element of B.
+S3|0.4|We write A, then this sideways U symbol, then B. It reads: A is a subset of B.
+S4|0.4|Watch the check run. Take each element of the NEET set, and look for it in the PUC set.
+S5|0.4|Physics? Found. Chemistry? Found. Biology? Found. Every element passed, so NEET is a subset of PUC.
+S6|0.65|Now the other way. Physics, found. Chemistry, found. Maths? Not in the NEET set. One failure is enough. PUC is not a subset of NEET.
+V1|0.4|Two facts follow straight from the definition.
+V2|0.75|First. Every set is a subset of itself. Each element of A is, of course, in A.
+V3|0.75|Second. The empty set is a subset of every set. It has no element that could fail the check.
+E1|0.4|Now, equal sets. Two sets are equal if they have exactly the same elements.
+E2|0.75|Here is a neat test. A equals B exactly when A is a subset of B, and B is a subset of A. Check both directions.
+E3|0.6|The letters of ALLOY and the letters of LOYAL. Both give A, L, O, Y. Order and repeats do not matter, so the sets are equal.
+E4|0.6|If A is a subset of B, but A is not equal to B, A is called a proper subset of B. NEET is a proper subset of PUC.
+Z1|0.4|Our number sets fit inside each other like this.
+Z2|0.6|N is inside Z. Z is inside Q. Q is inside R. And T, the irrational numbers like root two and pi, also sits inside R.
+Z3|0.6|But N is not a subset of T. No natural number is irrational.
+K1|0.4|Side by side. Two symbols that students mix up.
+K2|0.6|Belongs to joins an element to a set. One belongs to the set one, two, three.
+K3|0.6|Subset joins a set to a set. The set containing one is a subset of one, two, three. Curly brackets on both sides.
+K4|3.2|Now you try. Is it correct to write: one is a subset of one, two, three? Pause and decide.
+K5|0.65|No! One is an element, not a set. Write one belongs to the set. Or put one in curly brackets, and then use subset.
+T1|0.7|Remember this. A is a subset of B when every element of A is in B. Equal sets are subsets both ways.
+W1|0.35|Now, one worked example.
+W2|0.5|A is one, three. B is one, five, nine. C is one, three, five, seven, nine. Put subset, or not subset, between each pair.
+W3|0.75|One. The empty set and B. Phi is a subset of every set, so phi is a subset of B.
+W4|0.75|Two. A and B. Three is in A, but three is not in B. So A is not a subset of B.
+W5|0.75|Three. A and C. One and three are both in C. So A is a subset of C.
+W6|0.65|Four. B and C. One, five and nine are all in C. So B is a subset of C.
+X1|0.35|Now, the exam trap.
+X2|0.4|A is the set one, two, three. Many students write: one is a subset of A.
+X3|0.65|But one is an element. Elements belong, and only sets are subsets. Write one belongs to A, or the set containing one is a subset of A.
+J1|0.6|Where is this asked? In PUC board exams, as fill in subset or not subset, and which of these sets are equal.
+Q1|5.4|Exam level now. How many of these six statements are true? Pause and solve.
+A1|0.5|The answer is C. Four.
+A2|0.5|A has three elements: one, the set containing two, and three. Two on its own is not an element, so statement one is false.
+A3|0.5|The set containing two is an element, so statement two is true. Statement three is false, because two is not in A.
+A4|0.5|One and three are in A, so statement four is true. The set holding the set two is a subset too, so statement five is true.
+A5|0.6|And phi is a subset of every set. Four statements are true.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Is the set of vowels a subset of the set a, b, c, d?
+Y3|0.9|Two. Are the letters of LISTEN and the letters of SILENT equal sets?
+Y4|1.1|Three. Why is the empty set a subset of every set?
+N1|0.3|Next time: three snacks for a tiffin box. How many different ways can you pack it, including an empty box? We meet the power set.

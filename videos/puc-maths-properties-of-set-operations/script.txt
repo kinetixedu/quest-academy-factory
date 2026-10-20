@@ -1,0 +1,54 @@
+H1|0.4|In ordinary numbers, two plus three is the same as three plus two. But five minus two is not two minus five. Sometimes order matters.
+H2|0.45|So what about sets? Does the order ever change the answer?
+H3|0.35|Aarav asked this while revising sets after class.
+H4|0.5|Is A union B the same as B union A? And what happens when he mixes union with intersection?
+H5|0.65|Sets follow a short list of laws. Learn them once, and long set expressions become short.
+C1|0.4|First, order. A union B collects everything in A or in B. B union A collects exactly the same elements.
+C2|0.4|So union is commutative. The order of the two sets does not matter. Intersection is commutative too.
+C3|0.4|Now grouping. Take three sets. Join A and B first, then add C. Or join B and C first, then add A.
+C4|0.65|Either way, you collect every element of all three. So union is associative. The brackets can move. Intersection is associative too.
+C5|0.65|But recall episode eight. Difference is not commutative. A minus B and B minus A are different sets.
+I1|0.4|Next, the special sets. The empty set adds nothing, so A union the empty set is A.
+I2|0.4|And A union U is U, because U already holds everything.
+I3|0.4|For intersection, it flips. A intersection the empty set is the empty set. A intersection U is A.
+I4|0.65|And a set with itself. A union A is A, and A intersection A is A. Doing it twice changes nothing. These are called the idempotent laws.
+D1|0.4|Now the big one, where union and intersection mix. The distributive law.
+D2|0.4|It says: A intersection, B union C, equals A intersection B, union A intersection C.
+D3|0.75|Let's test it with shading. Left side first. Shade B union C. Then keep only the part inside A.
+D4|0.75|Now the right side. Shade A intersection B. Then add A intersection C.
+D5|0.65|Both sides shade exactly the same three pieces. The picture works for any A, B and C, so the law always holds.
+D6|0.6|It works the other way round too. A union, B intersection C, equals A union B, intersection A union C.
+K1|0.4|Side by side. In numbers, multiplication spreads over addition. Two times, three plus four, is two times three, plus two times four.
+K2|0.6|But addition does not spread over multiplication. Two plus, three times four, is fourteen. Two plus three, times two plus four, is thirty.
+K3|3.2|Now you try. For sets, does union spread over intersection, the same way intersection spreads over union? Pause and decide.
+K4|0.65|Yes! With sets, both distributive laws are true. That is one way sets are friendlier than numbers.
+T1|0.7|Remember this. For union and intersection, order and brackets never matter, and each one spreads over the other.
+M1|0.4|Last, the laws for complements, named after the mathematician Augustus De Morgan.
+M2|0.75|Step one. The complement of A union B is everything outside both circles.
+M3|0.75|Step two. Outside A is A complement. Outside B is B complement. Outside both is where these two overlap.
+M4|0.75|Step three. So the complement of A union B equals A complement intersection B complement.
+M5|0.65|In the same way, the complement of A intersection B equals A complement union B complement. The complement flips union into intersection.
+M6|3.2|Quick one. Is the complement of A union B the same as A complement union B complement? Pause and think.
+M7|0.65|No! A complement union B complement is the complement of A intersection B. It also covers the parts inside only one circle.
+W1|0.35|Now, one worked example.
+W2|0.5|U is one to eight. A is one, two, three and four. B is three, four, five and six. Check De Morgan's first law.
+W3|0.75|Step one. A union B is the numbers one up to six.
+W4|0.75|Step two. Its complement in U is seven and eight.
+W5|0.75|Step three. A complement is five, six, seven and eight. B complement is one, two, seven and eight.
+W6|0.75|Step four. The numbers in both of them are seven and eight.
+W7|0.65|Step five. Both sides give seven and eight. De Morgan's law checks out.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students move brackets freely, even when union and intersection are mixed. They write A union, B intersection C, as A union B, then intersection C.
+X3|0.65|Test it. A is one, B is two, C is three. The left side is one. The right side is the empty set. Brackets move freely only when the operation is the same.
+J1|0.6|Where is this asked? In PUC board exams, as: verify a law, or prove an identity like De Morgan's. And in JEE Main, as: which set statement is not true.
+Q1|5.4|Exam level now. Simplify this set. Pause and solve.
+A1|0.5|The answer is C. Just B.
+A2|0.5|Both brackets contain union B. So use the distributive law in reverse, and take B outside.
+A3|0.5|That leaves A intersection A complement, union B.
+A4|0.6|A intersection A complement is the empty set. And the empty set union B is just B.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Which law says A union B equals B union A?
+Y3|0.9|Two. What is A intersection the empty set?
+Y4|1.1|Three. Write the complement of A intersection B, using De Morgan's law.
+N1|0.3|Next time: twenty five students like tea, eighteen like coffee, and ten like both. So how many students are there? We count it with sets.

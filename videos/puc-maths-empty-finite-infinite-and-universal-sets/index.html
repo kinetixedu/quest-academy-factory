@@ -1,0 +1,156 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 4 - Empty, Finite, Infinite and Universal Sets</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 04: empty, finite, infinite and universal sets (Proof board) ===== */
+:root{--x:#7A4FE0;--sa:#2F6FEB;--sab:#E7EEFD;--sb:#0E8F8F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.x{color:var(--x)}.a{color:var(--ac)}.sa{color:var(--sa)}
+/* title card */
+#tset{position:absolute;left:510px;top:716px;width:900px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+#tset .ln{position:absolute;left:30px;top:18px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+#tset .lv{position:absolute;left:30px;top:46px;font-size:40px;white-space:nowrap}
+/* hook */
+.hr{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.hr .hx{position:absolute;left:24px;top:14px;font-size:44px;white-space:nowrap}
+.hr .hw{position:absolute;left:300px;top:34px;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.chip{position:absolute;height:52px;padding:0 18px;border-radius:10px;display:inline-flex;align-items:center;gap:8px;font:700 24px Poppins;color:#fff;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+#hEm{position:absolute;left:330px;top:478px;font-size:44px;white-space:nowrap}
+/* definition */
+#dfT{position:absolute;left:36px;top:84px;width:712px;font:700 46px/1.25 Poppins;letter-spacing:-.015em}
+#dfT b{color:var(--ac)}
+#dfSy{position:absolute;left:36px;top:338px;font-size:72px;white-space:nowrap}
+#dfN{position:absolute;left:36px;top:470px;font-size:48px;white-space:nowrap}
+#eCnt,#gCnt{position:absolute;right:36px;top:18px;height:52px;padding:0 18px;border-radius:10px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+.ex{position:absolute;left:36px;font-size:32px;white-space:nowrap}
+/* side by side */
+.bf{position:absolute;left:36px;top:92px;font-size:64px;white-space:nowrap}
+/* steps */
+.st{position:absolute;left:36px;width:712px;height:112px}
+.st .n{position:absolute;left:0;top:8px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:40px;white-space:nowrap}
+.st .sx.tx{font:600 32px/58px Poppins}
+.st .why{position:absolute;left:70px;top:62px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+#gV{position:absolute;left:36px;top:96px;width:712px;font:600 72px/1 'IBM Plex Mono';white-space:nowrap}
+#gL{position:absolute;left:36px;top:190px}
+/* universal */
+#uT{position:absolute;left:36px;top:84px;width:712px;font:700 42px/1.28 Poppins;letter-spacing:-.015em}
+#uT b{color:var(--ink)}
+#uEx{position:absolute;left:36px;top:300px;font-size:32px;white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:64px;font:600 30px/1.4 Poppins;width:712px}
+#wl .sol .sx{font-size:27px}
+.bin{position:absolute;top:92px;width:220px;height:380px;border-radius:14px;background:var(--soft);border:2.5px dashed var(--line)}
+.bin .bl{position:absolute;left:0;width:220px;top:330px;text-align:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.sc{position:absolute;width:180px;height:64px;border-radius:12px;background:#fff;border:2.5px solid var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;font:700 22px Poppins;white-space:nowrap;line-height:1.1}
+.sc small{font:600 15px 'IBM Plex Mono';color:var(--mute);letter-spacing:.04em}
+#wRes{position:absolute;left:36px;top:496px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.08em}
+#mq .mq{line-height:1.55}
+#mq .mq .katex{font-size:1.02em}
+.trapL .tx .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 1 SETS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Empty, Finite, Infinite and Universal <span class="acc">Sets</span></div>
+    <div id="sub">Explained with one empty bag</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="tset"><div class="ln">A STRANGE SET</div><div class="lv" id="tsv"></div></div>
+
+    <!-- H: even numbers after 2 + Aarav -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">EVEN NUMBERS AFTER 2 · PRIME?</div><div id="hrs"></div>
+        <div class="pillp bad" id="hP" style="left:36px;top:478px">None of them pass</div><div id="hEm"></div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · CHECKING A LONG LIST</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">Is this set nothing, or something?</div></div>
+    </div>
+
+    <!-- E: the empty set + live test -->
+    <div id="sE">
+      <div class="card full" id="df"><div class="lbl" style="left:36px;top:30px">DEFINITION · NCERT</div>
+        <div id="dfT">A set with no element at all is the <b>empty set</b>.</div>
+        <div class="pillp" id="dfP1" style="left:36px;top:250px">also: null set</div><div class="pillp" id="dfP2" style="left:252px;top:250px">void set</div>
+        <div id="dfSy"></div><div id="dfN"></div></div>
+      <div class="card rf" id="et"><div class="lbl" style="left:36px;top:30px">LIVE · EVEN PRIMES BIGGER THAN 2</div><div id="eCnt"></div>
+        <svg id="eS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="lbl" id="eAl" style="left:36px;top:420px">ALSO EMPTY</div>
+        <div class="ex" id="ex0" style="top:452px"></div><div class="ex" id="ex1" style="top:508px"></div></div>
+    </div>
+
+    <!-- K: phi vs {0}, think -->
+    <div id="sK">
+      <div class="card full" id="ka"><div class="lbl" style="left:36px;top:30px">THE EMPTY SET · NO ELEMENT</div><div class="bf" id="kaF"></div>
+        <svg id="kaS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="kaP" style="left:36px;top:490px"></div></div>
+      <div class="card rf" id="kb"><div class="lbl" style="left:36px;top:30px">THE SET {0} · ONE ELEMENT</div><div class="bf" id="kbF"></div>
+        <svg id="kbS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="kbP" style="left:36px;top:490px"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- G: finite and infinite + live counter -->
+    <div id="sG">
+      <div class="card full" id="gl"><div class="lbl" style="left:36px;top:30px">FINITE AND INFINITE</div>
+        <div class="hiBox" id="gHi" style="left:20px;width:744px;height:112px"></div><div id="gSt"></div></div>
+      <div class="card rf" id="gr"><div class="lbl" style="left:36px;top:30px">LIVE · COUNT THE NATURAL NUMBERS</div><div id="gCnt"></div>
+        <div id="gV"></div><div class="lbl" id="gL">STILL COUNTING</div>
+        <svg id="gS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="gP" style="left:36px;top:490px">Never ends: infinite</div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- U: universal set -->
+    <div id="sU">
+      <div class="card full" id="ul"><div class="lbl" style="left:36px;top:30px">THE UNIVERSAL SET · U</div>
+        <div id="uT">The <b>universal set U</b> is the basic set that every set in a problem comes from.</div>
+        <div class="lbl" id="uL2" style="left:36px;top:262px">U DEPENDS ON THE PROBLEM</div><div id="uEx"></div></div>
+      <div class="card rf" id="ur"><div class="lbl" style="left:36px;top:30px">U · ALL THE STUDENTS IN THE CLASS</div>
+        <svg id="uS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">SORT THE FOUR SETS</div><div id="bins"></div>
+        <div class="pillp ac" id="wRes">1 empty · 2 finite · 1 infinite</div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Empty, finite, or <span class="acc">endless</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

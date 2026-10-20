@@ -1,0 +1,54 @@
+H1|0.4|Every real number has a home on the number line. Minus two lives here. Three lives there.
+H2|0.45|But where does three plus two i live? Not left of zero, not right of it. The line is already full.
+H3|0.35|Diya found the answer as she walked into college today.
+H4|0.4|In Bengaluru, an address can be fourth main, second cross. Two numbers, one house.
+H5|0.65|Complex numbers get the same kind of address. Today we draw their map: the Argand plane.
+P1|0.35|Here is the idea.
+P2|0.4|Keep the real number line, flat, from left to right. Then add a second line through zero, going straight up.
+P3|0.4|The flat line is the real axis. The upright line is the imaginary axis.
+P4|0.6|Now the complex number x plus i y sits at the point x, y. Go x along, then y up.
+P5|0.6|Every complex number gets exactly one point, and every point gets exactly one complex number. This is the complex plane, or the Argand plane.
+P6|0.6|It is named after Jean Robert Argand, who described it in an essay in eighteen oh six. Caspar Wessel had published the same idea in seventeen ninety nine.
+L1|0.35|Watch the map fill up, with points from the NCERT figure.
+L2|0.4|Two plus four i. Two along, four up.
+L3|0.4|Minus two plus three i. Two to the left, three up.
+L4|0.4|Minus five minus two i. Five left, two down. One minus two i. One right, two down.
+L5|0.4|Two plus zero i lands on the real axis. Zero plus one i lands on the imaginary axis. That point is i itself.
+L6|0.65|So real numbers live on the real axis, and purely imaginary numbers live on the imaginary axis.
+K1|3.2|Quick one. Where does minus four i live? Pause and think.
+K2|0.65|On the imaginary axis, four steps below zero. Its real part is zero, so it never leaves the upright line.
+G1|0.35|The map also shows two old friends for free.
+G2|0.4|The distance from O to the point is the modulus: root of x squared plus y squared.
+G3|0.6|And the conjugate, x minus i y, is the mirror image of the point in the real axis.
+D1|0.35|Now the map's superpower: the distance between two numbers.
+D2|0.75|Step one. Subtract. z one minus z two is x one minus x two, plus i times y one minus y two.
+D3|0.75|Step two. Its modulus is the root of those two differences, squared and added.
+D4|0.75|Step three. That is exactly the distance formula between the two points.
+D5|0.65|So the modulus of z one minus z two is the distance between them on the map.
+V1|0.4|Now watch a rule draw a shape. Fix the real part of z at two, and let z move. It traces a straight upright line.
+V2|0.6|Now fix the modulus of z at two instead. z must stay two away from O. It traces a circle.
+S1|0.4|Side by side. Real part equals two: a line. Modulus equals two: a circle. One small change, a totally different shape.
+S2|3.2|Now you try. The modulus of z minus one equals three. A line, or a circle? Pause and decide.
+S3|0.65|A circle! Every such z is three away from the point one. Centre one, radius three.
+T1|0.7|Remember this. x plus i y lives at the point x, y. And distance on the map is the modulus of a difference.
+W1|0.35|Now, one worked example.
+W2|0.5|Find the distance between z one, one plus two i, and z two, four minus two i.
+W3|0.75|Step one. z one minus z two is minus three plus four i.
+W4|0.75|Step two. Its modulus is the root of nine plus sixteen.
+W5|0.75|Step three. Root twenty five is five.
+W6|0.65|So the two points are five units apart. On the map, that is a three, four, five triangle.
+X1|0.35|Now, the exam trap.
+X2|0.4|The modulus of z plus two i equals three. Many students put the centre at plus two i.
+X3|0.65|But z plus two i is z minus, minus two i. So the centre is minus two i, two steps below O. The radius is three.
+J1|0.6|Where is this asked? In JEE Main, as equations in z that draw a line or a circle. And in PUC board exams, as plotting points and conjugates on the Argand plane.
+Q1|5.4|Exam level now. On which line do all these points lie? Pause and solve.
+A1|0.5|The answer is A. x plus two y plus three equals zero.
+A2|0.5|Let z be x plus i y. The left side, squared, is x minus two, squared, plus y squared.
+A3|0.5|The right side, squared, is x squared, plus y plus four, squared.
+A4|0.6|Expand, and the squares cancel. Minus four x plus four equals eight y plus sixteen. So x plus two y plus three is zero.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Plot minus three plus i. Which quadrant is it in?
+Y3|0.9|Two. Where do the purely imaginary numbers live?
+Y4|1.1|Three. What shape does the modulus of z equals four draw?
+N1|0.3|Next time: what if every address were a distance and an angle, instead of along and up? That is the polar form.

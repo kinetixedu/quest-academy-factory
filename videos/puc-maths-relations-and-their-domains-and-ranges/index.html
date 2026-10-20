@@ -1,0 +1,139 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 15 - Relations and their Domains and Ranges</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 15: relations, domain and range (Proof board) ===== */
+:root{--sa:#2F6FEB;--sb:#0E8F8F;--sab:#E7EEFD;--sbb:#DDF1F1}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.sa{color:var(--sa)}.sb{color:var(--sb)}.a{color:var(--ac)}
+/* title card chips */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:54px;font:700 30px Poppins;white-space:nowrap}
+/* hook */
+.dl{position:absolute;left:36px;width:712px;height:64px;border-radius:12px;background:var(--soft)}
+.dl .nm{position:absolute;left:22px;top:14px;font:600 26px Poppins;white-space:nowrap}
+.dl .gp{position:absolute;right:16px;top:10px;height:44px;min-width:70px;padding:0 14px;border-radius:10px;background:var(--sbb);color:var(--sb);display:flex;align-items:center;justify-content:center;font:700 24px Poppins;white-space:nowrap}
+.dl .gp.no{background:#fff;border:2px dashed var(--dim);color:var(--mute);font:600 18px 'IBM Plex Mono';letter-spacing:.06em}
+#hDi{position:absolute;left:36px;top:84px;width:378px;height:468px;object-fit:contain;object-position:50% 100%}
+#hkQ{position:absolute;left:424px;top:110px;width:330px;font:700 36px/1.3 Poppins}
+#hkP{left:424px;top:340px}
+/* live counters */
+.cnt{position:absolute;height:52px;padding:0 18px;border-radius:10px;display:inline-flex;align-items:center;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+/* definition */
+#dfT{position:absolute;left:36px;top:84px;width:712px;font:700 36px/1.34 Poppins;letter-spacing:-.01em}
+#dfT b{color:var(--ac)}
+#dfF{position:absolute;left:36px;top:440px;font-size:48px;white-space:nowrap}
+#dfL2{left:36px;top:396px}
+.pa{position:absolute;height:48px;padding:0 18px;border-radius:10px;display:inline-flex;align-items:center;font:600 22px Poppins;white-space:nowrap}
+/* three sets */
+.ts{position:absolute;left:36px;width:712px;height:128px;border-radius:14px;background:var(--soft)}
+.ts .k{position:absolute;left:22px;top:16px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.ts .v{position:absolute;left:22px;top:48px;font-size:34px;white-space:nowrap}
+.ts .w{position:absolute;right:22px;top:16px;font:500 20px Poppins;color:var(--mute);white-space:nowrap}
+/* side by side */
+.bf{position:absolute;left:36px;top:420px;font-size:36px;white-space:nowrap}
+/* proof */
+.st{position:absolute;left:36px;width:712px;height:92px}
+.st .n{position:absolute;left:0;top:4px;width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 21px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:66px;top:0;font-size:34px;white-space:nowrap}
+.st .why{position:absolute;left:66px;top:50px;font:500 21px Poppins;color:var(--mute);white-space:nowrap}
+.sw{position:absolute;width:300px;height:76px;border-radius:14px;display:flex;align-items:center;gap:14px;padding:0 18px;font:600 28px 'IBM Plex Mono';white-space:nowrap;border:2.5px solid var(--line)}
+.sw i{flex:none;width:44px;height:26px;border-radius:13px;background:var(--dim);position:relative}
+.sw i b{position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff}
+#cRd{position:absolute;left:36px;top:76px;font:600 44px/1 'IBM Plex Mono';white-space:nowrap}
+#cRo{position:absolute;left:36px;top:420px;font-size:32px;white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:64px;font:600 28px/1.4 Poppins;width:712px}
+#wl .sol .sx{font-size:28px}
+#wl .sol .sx .katex{font-size:1.08em}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+#so .sol .sx .katex{font-size:1.1em}
+#mq .mq{font-size:30px}
+#mq .mq .katex{font-size:1.08em}
+.trapL .tx .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 32px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:42px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 2 RELATIONS AND FUNCTIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Keep Only the <span class="acc">True</span> Pairs</div>
+    <div id="sub">Relations, domain and range, explained with one blood donation list</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">THE DONATION CAMP LIST</div><div id="hRows"></div>
+        <div class="pillp ac" id="hP" style="left:36px;top:500px">20 possible pairs · only 4 are true</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA · BLOOD DONATION CAMP</div>
+        <img id="hDi" src="../../assets/illustrations/puc/diya.png">
+        <div id="hkQ">How do we keep only the <span class="a">true</span> pairs?</div>
+        <div class="pillp ink" id="hkP">Pick pairs from S × G</div></div>
+    </div>
+
+    <div id="sR">
+      <div class="card full" id="ra"><div class="lbl" style="left:36px;top:30px">ARROW DIAGRAM · S TO G</div><svg id="rS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="rg"><div class="lbl" style="left:36px;top:30px">LIVE · TEST ALL 20 PAIRS OF S × G</div><svg id="rG" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="cnt" id="rC1" style="left:36px;top:76px;background:var(--soft)"></div><div class="cnt" id="rC2" style="left:330px;top:76px;background:var(--ac);color:#fff"></div>
+        <div class="pillp ac" id="rP" style="left:36px;top:500px">Kept pairs = a relation R</div></div>
+    </div>
+
+    <div id="sD">
+      <div class="card full" id="df"><div class="lbl" style="left:36px;top:30px">DEFINITION · NCERT</div>
+        <div id="dfT">A <b>relation</b> R from a non-empty set A to a non-empty set B is a subset of the Cartesian product A × B.</div>
+        <div class="lbl" id="dfL2">IN SYMBOLS</div><div id="dfF"></div></div>
+      <div class="card rf" id="di"><div class="lbl" style="left:36px;top:30px">THE IMAGE OF AN ELEMENT</div><svg id="iS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div id="iF" class="fx" style="left:36px;top:400px;font-size:40px"></div></div>
+    </div>
+
+    <div id="sM">
+      <div class="card full" id="ma"><div class="lbl" style="left:36px;top:30px">THE RELATION R · 4 ARROWS</div><svg id="mS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="mt"><div class="lbl" style="left:36px;top:30px">THREE SETS OF EVERY RELATION</div><div id="mRows"></div></div>
+    </div>
+
+    <div id="sS">
+      <div class="card full" id="sr"><div class="lbl" style="left:36px;top:30px">RANGE · WHAT THE ARROWS HIT</div><svg id="srS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="bf" id="srF"></div>
+        <div class="pillp" id="srP" style="left:36px;top:500px;background:var(--sbb);color:var(--sb)">3 groups are hit</div></div>
+      <div class="card rf" id="sc"><div class="lbl" style="left:36px;top:30px">CODOMAIN · WHAT THEY COULD HIT</div><svg id="scS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="bf" id="scF"></div>
+        <div class="pillp ac" id="scP" style="left:36px;top:500px">Range sits inside the codomain</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sC">
+      <div class="card full" id="cp"><div class="lbl" style="left:36px;top:30px">HOW MANY RELATIONS? · 4 STEPS</div><div id="cSt"></div></div>
+      <div class="card rf" id="cl"><div class="lbl" style="left:36px;top:30px">LIVE · A = {1, 2}, B = {x, y}: 4 SWITCHES</div><div id="cRd"></div><div id="cSw"></div><div id="cRo"></div></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">ARROW DIAGRAM · A TO A</div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">A relation is a chosen set of <span class="acc">pairs</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

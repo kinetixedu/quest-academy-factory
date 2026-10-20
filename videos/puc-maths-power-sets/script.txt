@@ -1,0 +1,45 @@
+H1|0.4|Aarav has three snacks: a samosa, a banana and a laddoo. Each morning he packs some of them in his tiffin box.
+H2|0.45|Maybe just the samosa. Maybe the banana and the laddoo. Maybe all three. On a busy day, maybe nothing at all.
+H3|0.35|He wondered about it while packing his tiffin this morning.
+H4|0.5|How many different tiffin boxes can he pack, counting the empty one?
+H5|0.65|Every box is a subset of his three snacks. And the set of all those subsets has a name. The power set.
+P1|0.35|First, a quick recall. A subset of A is a set whose every element is also in A.
+P2|0.4|The power set of A is the set of all the subsets of A. We write it P of A.
+P3|0.6|One note. The current NCERT book no longer has this topic, but the JEE Main syllabus still lists it. So we learn it properly.
+L1|0.4|Now let us build every box, one snack at a time.
+L2|0.4|Start with no snacks. There is only one box: the empty one.
+L3|0.4|Add the samosa. Each box can now go two ways: without it, or with it. One box becomes two.
+L4|0.4|Add the banana. Again, every box splits in two. Two becomes four.
+L5|0.65|Add the laddoo. Four becomes eight. Each snack doubles the count.
+L6|0.65|So three snacks give two times two times two. Eight different tiffin boxes, and one of them is empty.
+D1|0.4|Why does this always work?
+D2|0.75|Step one. Every element faces one yes or no question: is it in this subset, or not?
+D3|0.75|Step two. The choices do not affect each other. So each new element doubles the number of subsets.
+D4|0.75|Step three. With n elements, that is two, multiplied by itself n times.
+D5|0.65|So if A has n elements, P of A has two to the power n elements.
+K1|0.4|Side by side. A has three elements: the samosa, the banana and the laddoo.
+K2|0.6|P of A has eight elements, and every one of them is a set. The empty set, three sets of one snack, three pairs, and the full box.
+K3|3.2|Pause and think. What is the power set of the empty set? Is it empty?
+K4|0.65|Not empty! The empty set has one subset, itself. So P of phi has one element, phi. Two to the power zero is one.
+T1|0.7|Remember this. The power set holds every subset. A set with n elements has two to the power n subsets.
+W1|0.35|Now, one worked example.
+W2|0.5|A is the set one, two. Write down P of A.
+W3|0.75|Step one. Subsets with no element. Just the empty set, phi.
+W4|0.75|Step two. Subsets with one element. The set containing one, and the set containing two.
+W5|0.75|Step three. Subsets with both elements. The set one, two, which is A itself.
+W6|0.65|So P of A is phi, the set one, the set two, and the set one, two. Four elements, and two squared is four.
+X1|0.35|Now, the exam trap.
+X2|0.4|Asked to list P of A, many students forget two subsets: the empty set, and A itself.
+X3|0.65|Both are always subsets. Leave them out and three snacks give only six boxes, not eight. Always check: two to the power n.
+J1|0.6|Where is this asked? In JEE Main, for example in two thousand twenty and two thousand twenty four, as questions where one set has a fixed number of subsets more than another.
+Q1|5.4|Exam level now. A has two elements. How many elements does P of P of A have? Pause and solve.
+A1|0.5|The answer is C. Sixteen.
+A2|0.5|A has two elements, so P of A has two squared, which is four elements.
+A3|0.5|Now P of P of A is the power set of a set with four elements.
+A4|0.6|So it has two to the power four elements. That is sixteen.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. How many subsets does a set with five elements have?
+Y3|0.9|Two. Write the power set of the set containing just a.
+Y4|1.1|Three. Why is the empty set always an element of P of A?
+N1|0.3|Next time: a road sign says speed twenty to forty kilometres per hour. Is forty allowed? We meet intervals on the number line.

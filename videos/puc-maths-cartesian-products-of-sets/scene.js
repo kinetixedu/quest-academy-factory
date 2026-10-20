@@ -22,7 +22,7 @@ const grow = (a, x1, y1, x2, y2, u) => { if (u <= 0.001) { M.hide(a.g, true); re
 
 /* ---------- beats ---------- */
 const tMorph = T0('H2') + 0.02, tH3 = T0('H3'), tH4 = T0('H4'), tH5 = T0('H5');
-const tP1 = T0('P1'), tG1 = T0('G1'), tD1 = T0('D1'), tN1 = T0('N1'), tS1 = T0('S1'), tK1 = T0('K1'), tT = T0('T1');
+const tP1 = T0('P1'), tG1 = T0('G1'), tD1 = T0('D1'), tB1 = T0('B1'), tS1 = T0('S1'), tK1 = T0('K1'), tT = T0('T1');
 const tW1 = T0('W1'), tX1 = T0('X1'), tQ = T0('Q1'), tF = T0('F1'), tY = T0('Y1'), tN = T0('N1');
 const tCount = T1('Q1') + 0.05, tAns = T0('A1') - 0.02;
 const SW = [[tT, tW1], [tQ, tQ + 0.06], [tF, tF + 0.06]];
@@ -85,7 +85,7 @@ const NS = [[`n(${ac('A')}) = ${ac('p')}, \\quad n(${bc('B')}) = ${bc('q')}`, 'c
   [`${bc('q')} + ${bc('q')} + \\cdots + ${bc('q')} \\;(${ac('p')} \\text{ times}) = ${ac('p')}${bc('q')}`, 'adding q again and again is multiplying'],
   [`n(${ac('A')} \\times ${bc('B')}) = n(${ac('A')}) \\cdot n(${bc('B')})`, '3 snacks × 2 drinks = 6 combos']];
 $('#nSt').innerHTML = `<div class="hiBox" id="nHi" style="left:20px;width:744px;height:92px"></div>` + NS.map(([f, w], i) => `<div class="st" id="ns${i}" style="top:${84 + i * 94}px"><div class="n">${i + 1}</div><div class="sx">${K(f)}</div><div class="why">${w}</div></div>`).join('');
-const tNs = [wt('N2', 'Say'), wt('N3', 'Fix'), wt('N4', 'Every'), wt('N5', 'columns'), wt('N6', 'equals') - 0.4];
+const tNs = [wt('B2', 'Say'), wt('B3', 'Fix'), wt('B4', 'Every'), wt('B5', 'columns'), wt('B6', 'equals') - 0.4];
 const ns = $('#nS'), NX = [290, 410, 530, 650], NY = [340, 260, 180], NX0 = 210, NY0 = 400;
 const nCol = NX.map(x => { const g = pin(ns, x, 0); mk(g, 'rect', { x: -44, y: 128, width: 88, height: 252, rx: 14, fill: C.ac2 }); return g; });
 mk(ns, 'line', { x1: NX0, y1: NY0, x2: 724, y2: NY0, stroke: C.ink, 'stroke-width': 3, 'stroke-linecap': 'round' });
@@ -93,7 +93,7 @@ mk(ns, 'line', { x1: NX0, y1: NY0, x2: NX0, y2: 120, stroke: C.ink, 'stroke-widt
 const sub = (p, x, y, b, s, col, anc = 'middle') => { const e = txt(p, x, y, '', { 'text-anchor': anc, 'font-family': 'Poppins', 'font-style': 'italic', 'font-size': 28, 'font-weight': 600, fill: col }); e.textContent = b; const ts = mk(e, 'tspan', { 'font-size': 18, dy: 7, 'font-style': 'normal' }); ts.textContent = s; return e; };
 const nLa = NX.map((x, i) => sub(ns, x, NY0 + 44, 'a', i + 1, AC)), nLb = NY.map((y, j) => sub(ns, NX0 - 22, y + 8, 'b', j + 1, BC, 'end'));
 const nDot = NX.map(x => NY.map(y => { const g = pin(ns, x, y); mk(g, 'circle', { r: 15, fill: PC }); return g; }));
-const tCol = [wt('N3', 'pairs') - 0.2, wt('N4', 'own'), wt('N4', 'own') + 0.5, wt('N4', 'own') + 1.0];
+const tCol = [wt('B3', 'pairs') - 0.2, wt('B4', 'own'), wt('B4', 'own') + 0.5, wt('B4', 'own') + 1.0];
 let nLast = '';
 
 /* ---------- S: union vs product ---------- */
@@ -237,32 +237,32 @@ M.on(t => {
   }
 
   /* D: definition */
-  const dOn = t >= tD1 - 0.1 && t < tN1 + 0.1; M.hide($('#sD'), !dOn);
+  const dOn = t >= tD1 - 0.1 && t < tB1 + 0.1; M.hide($('#sD'), !dOn);
   if (dOn) {
-    const out = OUT('N1');
+    const out = OUT('B1');
     M.vis($('#df'), t, tD1 + 0.1, out, { dx: -60, dy: 0, ...o });
     M.rise($('#dfT'), t, wt('D2', 'the') - 0.05, { st: 0.05, sp: M.HEAVY });
     M.vis($('#dfL2'), t, T0('D4') - 0.1, 1e9, { dy: 10 }); PUC.write($('#dfF'), t, wt('D4', 'cross'), 1.2);
     M.vis($('#dp'), t, T0('D3') - 0.1, out, { dx: 60, dy: 0, ...o });
     PUC.write($('#pB'), t, wt('D3', 'pair'), 0.7);
     M.vis($('#pa0'), t, wt('D3', 'First') - 0.05, 1e9, POP); M.vis($('#pa1'), t, wt('D3', 'then') - 0.05, 1e9, POP);
-    M.vis($('#dc'), t, T0('D5') - 0.05, 1e9, { dy: 20 });
+    M.vis($('#dcP'), t, wt('D3', 'Q', 1) + 0.2, 1e9, POP);
   }
 
   /* N: proof */
-  const nOn = t >= tN1 - 0.1 && t < tS1 + 0.1; M.hide($('#sN'), !nOn);
+  const nOn = t >= tB1 - 0.1 && t < tS1 + 0.1; M.hide($('#sN'), !nOn);
   if (nOn) {
     const out = OUT('S1');
-    M.vis($('#np'), t, tN1 + 0.1, out, { dx: -60, dy: 0, ...o });
+    M.vis($('#np'), t, tB1 + 0.1, out, { dx: -60, dy: 0, ...o });
     NS.forEach((_, i) => { const el = $('#ns' + i); M.vis(el.querySelector('.n'), t, tNs[i] - 0.2, 1e9, { ...POP, sc: 0.4 }); PUC.write(el.querySelector('.sx'), t, tNs[i], 0.8); M.vis(el.querySelector('.why'), t, tNs[i] + 0.7, 1e9, { dx: -12, dy: 0 }); });
     const hiY = M.track(84, tNs.slice(1).map((tt, i) => [tt - 0.1, 84 + (i + 1) * 94]), M.SOFT)(t);
     const hb = $('#nHi'); M.vis(hb, t, tNs[0] - 0.1, 1e9, { dy: 0, fade: 0.2 }); hb.style.top = (hiY - 4).toFixed(1) + 'px';
-    M.vis($('#ng'), t, T0('N2') - 0.1, out, { dx: 60, dy: 0, ...o });
-    nLa.forEach((e, i) => M.vis(e, t, wt('N2', 'p') + i * 0.08, 1e9, { dy: 0 }));
-    nLb.forEach((e, j) => M.vis(e, t, wt('N2', 'q') + j * 0.08, 1e9, { dy: 0 }));
-    nCol.forEach((g, i) => M.vis(g, t, tCol[i] - 0.1, i < 3 ? tCol[i + 1] - 0.1 : wt('N5', 'which'), { dy: 0, fade: 0.15, outDur: 0.25, ody: 0 }));
+    M.vis($('#ng'), t, T0('B2') - 0.1, out, { dx: 60, dy: 0, ...o });
+    nLa.forEach((e, i) => M.vis(e, t, wt('B2', 'p') + i * 0.08, 1e9, { dy: 0 }));
+    nLb.forEach((e, j) => M.vis(e, t, wt('B2', 'q') + j * 0.08, 1e9, { dy: 0 }));
+    nCol.forEach((g, i) => M.vis(g, t, tCol[i] - 0.1, i < 3 ? tCol[i + 1] - 0.1 : wt('B5', 'which'), { dy: 0, fade: 0.15, outDur: 0.25, ody: 0 }));
     nDot.forEach((col, i) => col.forEach((d, j) => M.vis(d, t, tCol[i] + j * 0.1, 1e9, { dy: 0, sc: 0.2, sp: M.POP, fade: 0.08 })));
-    const nc = tCol.reduce((a, tt, i) => t >= tt ? i + 1 : a, 0), fin = t >= wt('N5', 'which');
+    const nc = tCol.reduce((a, tt, i) => t >= tt ? i + 1 : a, 0), fin = t >= wt('B5', 'which');
     const s = nc ? Array(nc).fill(`<span style="color:${BC}">3</span>`).join(' + ') + (fin ? ` = <span style="color:${AC}">4</span> × <span style="color:${BC}">3</span> = <span style="color:${PC}">12</span>` : '') : '';
     if (s !== nLast) { nLast = s; $('#nSum').innerHTML = s; }
     M.vis($('#nSum'), t, tCol[0], 1e9, { dy: 0 });
@@ -309,7 +309,7 @@ M.on(t => {
   const xOn = t >= tX1 - 0.1 && t < tQ + 0.05; M.hide($('#sX'), !xOn);
   if (xOn) {
     M.vis($('#trap'), t, tX1 + 0.05, 1e9, { dy: 36 }); M.vis($('#wa'), t, T0('J1') - 0.1, 1e9, { dy: 36 });
-    trap(t, { tin: tX1, tWrong: wt('X2', 'Many') - 0.1, tStrike: wt('X3', 'every') - 0.1, tRight: wt('X3', 'So') });
+    trap(t, { tin: tX1, tWrong: wt('X2', 'Many') - 0.1, tStrike: wt('X3', 'every') - 0.1, tRight: wt('X3', 'Four') });
     tDz.forEach((d, i) => M.vis(d, t, wt('X2', 'one', 1) + i * 0.5, 1e9, { dy: 0, sc: 0.2, sp: M.POP, fade: 0.08 }));
     tDm.forEach((d, i) => M.vis(d, t, wt('X3', 'One') + 0.3 + i * 0.6, 1e9, { dy: 0, sc: 0.2, sp: M.POP, fade: 0.08 }));
     where(t, { tin: T0('J1'), tLight: [wt('J1', 'JEE'), wt('J1', 'PUC')], tType: wt('J1', 'often') });

@@ -1,0 +1,153 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 41 - Equality and Conjugates</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 41: equality and conjugates (Proof board) ===== */
+:root{--re:#2F6FEB;--im:#E4572E;--iv:#7A4FE0;--mo:#0E8F8F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+/* title card: the two numbers */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:50px;font:700 30px Poppins;white-space:nowrap}
+.lst .lv .katex{font-size:1.25em}
+/* hook */
+.hrow{position:absolute;left:36px;width:712px;height:132px;border-radius:14px;background:var(--soft)}
+.hrow .hl{position:absolute;left:24px;top:18px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.hrow .hf{position:absolute;left:24px;top:52px;font-size:46px;white-space:nowrap}
+.hrow .chip{right:20px;top:40px}
+#hkImg{position:absolute;left:192px;top:84px;width:400px;height:300px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.chip{position:absolute;height:52px;padding:0 18px;border-radius:10px;display:inline-flex;align-items:center;gap:8px;font:700 24px Poppins;color:#fff;white-space:nowrap}
+/* equality */
+.eqf{position:absolute;left:36px;font-size:56px;white-space:nowrap}
+.mrow{position:absolute;left:36px;width:712px;height:104px;border-radius:14px;background:var(--soft)}
+.mrow .mf{position:absolute;left:22px;top:12px;font-size:36px;white-space:nowrap}
+.mrow .mc{position:absolute;top:62px;height:30px;padding:0 10px;border-radius:7px;display:inline-flex;align-items:center;gap:6px;font:600 16px 'IBM Plex Mono';letter-spacing:.06em;color:#fff;white-space:nowrap}
+.mrow .vd{position:absolute;right:18px;top:26px;height:52px;padding:0 16px;border-radius:10px;display:inline-flex;align-items:center;font:700 22px Poppins;color:#fff;white-space:nowrap}
+/* conjugate */
+.cf{position:absolute;left:36px;font-size:56px;white-space:nowrap}
+.ro2{position:absolute;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+.ro2 .k{font-family:Poppins;font-style:italic}
+/* side by side */
+.sf{position:absolute;left:36px;top:84px;font-size:50px;white-space:nowrap}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:100px}
+.st .n{position:absolute;left:0;top:6px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:66px;top:0;font-size:38px;white-space:nowrap}
+.st .why{position:absolute;left:66px;top:58px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:64px;font:600 30px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.2em}
+.pr{position:absolute;left:36px;width:712px;height:112px;border-radius:14px;background:var(--soft)}
+.pr .pl{position:absolute;left:22px;top:14px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.pr .pf{position:absolute;left:22px;top:44px;font-size:38px;white-space:nowrap}
+.pr .pa{position:absolute;right:22px;top:40px;font-size:38px;white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.12em}
+#mq .mq .katex{font-size:1.08em}
+#wl .sol .sx{font-size:30px}
+.trapL .tx .katex{font-size:1em}
+#tpan{position:absolute;right:36px;top:76px;width:500px}
+.tp2{position:absolute;left:0;width:500px;height:56px;border-radius:12px;background:var(--soft);display:flex;align-items:center;padding:0 18px;font-size:30px;white-space:nowrap;box-sizing:border-box}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+.yr .q .katex{font-size:1.1em}
+#sF .fcard .fl{font-size:46px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 4 COMPLEX NUMBERS AND QUADRATIC EQUATIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Equality and <span class="acc">Conjugates</span></div>
+    <div id="sub">Explained with one mirror across the road</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: the vanishing i + Aarav's road -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">THE PUZZLE · WHERE DID i GO?</div><div id="hrs"></div>
+        <div class="pillp ac" id="hlP" style="left:36px;top:496px">Every i vanished. Why?</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · THE RIDE HOME</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg">
+        <svg id="hkS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- E: equality + the match test -->
+    <div id="sE">
+      <div class="card full" id="el"><div class="lbl" style="left:36px;top:30px">EQUALITY · NCERT</div>
+        <div class="eqf" id="eq1" style="top:84px"></div><div class="eqf" id="eq2" style="top:180px"></div>
+        <div class="pillp" id="eP1" style="left:36px;top:300px;background:#E7EEFD;color:var(--re)">Real part with real part</div>
+        <div class="pillp" id="eP2" style="left:36px;top:362px;background:var(--ac2);color:var(--im)">Imaginary part with imaginary part</div>
+        <div class="pillp ink" id="eP3" style="left:36px;top:470px">1 complex equation = 2 real equations</div></div>
+      <div class="card rf" id="em"><div class="lbl" style="left:36px;top:30px">THE MATCH TEST · BOTH PARTS</div><div id="mrs"></div></div>
+    </div>
+
+    <!-- C: the conjugate + live mirror -->
+    <div id="sC">
+      <div class="card full" id="cl"><div class="lbl" style="left:36px;top:30px">THE CONJUGATE · NCERT</div>
+        <div class="hiBox" id="cHi" style="left:20px;width:744px;height:92px;top:172px"></div>
+        <div class="cf" id="cf1" style="top:84px"></div><div class="cf" id="cf2" style="top:180px"></div>
+        <div class="pillp" id="cP1" style="left:36px;top:300px;background:#E7EEFD;color:var(--re)">Keep the real part</div>
+        <div class="pillp" id="cP2" style="left:316px;top:300px;background:var(--ac2);color:var(--im)">Flip the imaginary sign</div>
+        <div class="cf" id="cf3" style="top:410px;font-size:64px"></div><div id="cRd" style="position:absolute;left:140px;top:432px;font:500 28px Poppins;color:var(--ink2);white-space:nowrap">read it as "z bar"</div></div>
+      <div class="card rf" id="cp"><div class="lbl" style="left:36px;top:30px">LIVE · z AND ITS MIRROR</div>
+        <svg id="cS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="ro2" id="cZ" style="left:36px;top:504px"></div><div class="ro2" id="cB" style="left:420px;top:504px"></div>
+        <div class="pillp good" id="cMeet" style="right:36px;top:76px"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- S: conjugate vs negative -->
+    <div id="sS">
+      <div class="card full" id="sc"><div class="lbl" style="left:36px;top:30px">CONJUGATE · FLIPS ONE SIGN</div><div class="sf" id="scF"></div><svg id="scS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="scP" style="left:36px;top:496px;background:#E7EEFD;color:var(--re)">A mirror image across the real axis</div></div>
+      <div class="card rf" id="sn"><div class="lbl" style="left:36px;top:30px">NEGATIVE · FLIPS BOTH SIGNS</div><div class="sf" id="snF"></div><svg id="snS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp bad" id="snP" style="left:36px;top:496px">A turn through the centre</div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- D: why the i vanishes -->
+    <div id="sD">
+      <div class="card full" id="dp"><div class="lbl" style="left:36px;top:30px">WHY THE i VANISHES · 4 STEPS</div>
+        <div class="hiBox" id="dHi" style="left:20px;width:744px;height:104px"></div><div id="dSt"></div>
+        <div class="pillp ac" id="dP" style="left:36px;top:496px">Always real, never negative</div></div>
+      <div class="card rf" id="dg"><div class="lbl" style="left:36px;top:30px">THE PICTURE · z = 3 + 2i</div><svg id="dS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">MATCH THE PARTS</div><div id="prs"></div>
+        <div class="pillp ac" id="wRes" style="left:36px;top:496px"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><div id="tpan"></div></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Keep real, <span class="acc">flip</span> imaginary.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

@@ -1,0 +1,122 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 43 - Geometric Representation on the Argand Plane</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 43: the Argand plane (Proof board) ===== */
+:root{--re:#2F6FEB;--im:#E4572E;--iv:#7A4FE0;--mo:#0E8F8F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:52px;font:700 30px Poppins;white-space:nowrap}
+.lst .lv .katex{font-size:1.2em}
+#hkImg{position:absolute;left:192px;top:84px;width:400px;height:300px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.ghost{z-index:2}
+.st{position:absolute;left:36px;width:712px;height:92px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:66px;top:0;font-size:36px;white-space:nowrap}
+.st .why{position:absolute;left:66px;top:52px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.st.t .sx{font:600 28px Poppins;top:6px}
+.hist{position:absolute;left:36px;width:712px;height:84px;border-radius:14px;background:var(--soft)}
+.hist .hn{position:absolute;left:22px;top:12px;font:700 26px Poppins;white-space:nowrap}
+.hist .hw{position:absolute;left:22px;top:48px;font:500 20px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+.lr{position:absolute;left:36px;width:712px;height:58px;border-radius:12px;background:var(--soft)}
+.lr .lf{position:absolute;left:20px;top:6px;font-size:34px;white-space:nowrap}
+.lr .la{position:absolute;right:20px;top:12px;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+.gfx{position:absolute;left:36px;top:84px;font-size:40px;white-space:nowrap}
+.ro2{position:absolute;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+.ro2 .k{font-family:Poppins;font-style:italic}
+#wq{position:absolute;left:36px;top:64px;font:600 30px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.2em}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.12em}
+#mq .mq .katex{font-size:1.08em}
+#wl .sol .sx{font-size:30px}
+.trapL .tx .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+.yr .q .katex{font-size:1.1em}
+#sF .fcard .fl{font-size:42px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 4 COMPLEX NUMBERS AND QUADRATIC EQUATIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Where Does <span class="acc">3 + 2i</span> Live?</div>
+    <div id="sub">The Argand plane, explained with one city address</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">THE NUMBER LINE IS FULL</div><svg id="hlS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp bad" id="hlP" style="left:36px;top:496px">No room left on the line</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA · WALKING INTO COLLEGE</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-corridor.jpg">
+        <svg id="hkS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- P + L: building the plane, then filling it -->
+    <div id="sP">
+      <div class="card full" id="pa"><div class="lbl" style="left:36px;top:30px">THE ARGAND PLANE · NCERT</div>
+        <div class="hiBox" id="pHi" style="left:20px;width:744px;height:92px"></div><div id="pSt"></div><div id="hs"></div></div>
+      <div class="card full" id="pb"><div class="lbl" style="left:36px;top:30px">EVERY NUMBER · ONE ADDRESS</div><div id="lrs"></div>
+        <div class="pillp ink" id="lP" style="left:36px;top:496px">a + i0: real axis · 0 + ib: imaginary axis</div></div>
+      <div class="card rf" id="pl"><div class="lbl" style="left:36px;top:30px">THE MAP</div><svg id="pS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- G: two old friends -->
+    <div id="sG">
+      <div class="card full" id="gm"><div class="lbl" style="left:36px;top:30px">MODULUS · DISTANCE FROM O</div><div class="gfx" id="gmF"></div><svg id="gmS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="gc"><div class="lbl" style="left:36px;top:30px">CONJUGATE · MIRROR IN THE REAL AXIS</div><div class="gfx" id="gcF"></div><svg id="gcS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- D: distance between two numbers -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">DISTANCE ON THE MAP · 3 STEPS</div>
+        <div class="ghost" id="dGh" style="right:36px;top:20px">BEYOND NCERT · JEE</div>
+        <div class="hiBox" id="dHi" style="left:20px;width:744px;height:92px"></div><div id="dSt"></div>
+        <div class="pillp ac" id="dP" style="left:36px;top:496px">|z₁ - z₂| = the distance between them</div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">TWO POINTS · ONE DISTANCE</div><svg id="dS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- V: a rule draws a shape (live) + S side by side -->
+    <div id="sV">
+      <div class="card full" id="vl"><div class="lbl" style="left:36px;top:30px">LIVE · RE z = 2</div><div class="ghost" id="vGh" style="right:36px;top:20px">BEYOND NCERT · JEE</div><svg id="vlS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="ro2" id="vlR" style="left:36px;top:510px"></div><div class="pillp" id="vlP" style="right:36px;top:500px;background:#E7EEFD;color:var(--re)">A line</div></div>
+      <div class="card rf" id="vr"><div class="lbl" style="left:36px;top:30px">LIVE · |z| = 2</div><svg id="vrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="ro2" id="vrR" style="left:36px;top:510px"></div><div class="pillp" id="vrP" style="right:36px;top:500px;background:#E2F2F2;color:var(--mo)">A circle</div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">THE PICTURE</div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="520" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Every number gets a <span class="acc">place</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

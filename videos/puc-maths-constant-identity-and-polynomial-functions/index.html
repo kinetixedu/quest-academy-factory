@@ -1,0 +1,158 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 19 - Constant, Identity and Polynomial Functions</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 19: constant, identity and polynomial functions (Proof board) ===== */
+:root{--x:#7A4FE0;--sa:#2F6FEB;--sab:#E7EEFD}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.x{color:var(--x)}.a{color:var(--ac)}.sa{color:var(--sa)}
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:52px;font:700 30px Poppins;white-space:nowrap}
+/* hook */
+.er{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.er i{position:absolute;left:20px;top:28px;width:64px;height:64px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.er .en{position:absolute;left:104px;top:20px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.er .ev{position:absolute;left:104px;top:50px;font:600 32px Poppins;white-space:nowrap}
+.er .ef{position:absolute;right:24px;top:36px;font-size:38px;white-space:nowrap}
+#hkImg{position:absolute;left:192px;top:70px;height:500px}
+#hkP{left:36px;top:496px}
+/* definition cards */
+.bf{position:absolute;left:36px;top:84px;font-size:60px;white-space:nowrap}
+.io{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--soft)}
+.io .ii{position:absolute;left:24px;top:16px;font:600 32px 'IBM Plex Mono';color:var(--x);white-space:nowrap}
+.io .ia{position:absolute;left:200px;top:16px;font:600 32px Poppins;color:var(--mute)}
+.io .iv{position:absolute;left:260px;top:16px;font:600 32px 'IBM Plex Mono';color:var(--ac);white-space:nowrap}
+.dd{position:absolute;left:36px;font-size:40px;white-space:nowrap}
+.rd{position:absolute;right:36px;top:84px;height:52px;padding:0 18px;border-radius:10px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+/* polynomial */
+#pF{position:absolute;left:36px;top:96px;font-size:38px;white-space:nowrap}
+.pr{position:absolute;left:36px;width:712px;height:92px;border-radius:14px;background:var(--soft)}
+.pr .pk{position:absolute;left:22px;top:16px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.pr .pv{position:absolute;left:22px;top:42px;font:600 28px Poppins;white-space:nowrap}
+#sqA{position:absolute;left:36px;top:470px;font-size:44px;white-space:nowrap}
+/* live power */
+#nRd{position:absolute;left:36px;top:84px;font:600 72px/1 'IBM Plex Mono';white-space:nowrap}
+#nF{position:absolute;left:300px;top:92px;font-size:56px;white-space:nowrap}
+.nn{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--soft)}
+.nn .nk{position:absolute;left:22px;top:22px;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+.nn .nv{position:absolute;left:170px;top:14px;font-size:36px;white-space:nowrap}
+.nn .nw{position:absolute;right:22px;top:24px;font:600 24px Poppins;color:var(--ink2);white-space:nowrap}
+/* non-examples */
+.ze{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.ze .zf{position:absolute;left:24px;top:22px;font-size:40px;white-space:nowrap}
+.ze .zc{position:absolute;right:20px;top:24px;height:48px;padding:0 16px;border-radius:10px;display:inline-flex;align-items:center;gap:8px;font:700 22px Poppins;color:#fff;white-space:nowrap}
+.pw{position:absolute;height:72px;min-width:72px;padding:0 18px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:38px;border:3px solid var(--line);background:#fff;white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:64px;font:600 28px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.15em}
+#wl .sol .sx{font-size:28px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 26px Poppins}
+#so .sol .sx .katex{font-size:1.08em}
+#mq .mq .katex{font-size:1.06em}
+.trapL .tx .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:31px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 2 RELATIONS AND FUNCTIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Constant, Identity and <span class="acc">Polynomial</span> Functions</div>
+    <div id="sub">Explained with a bus fare, a mirror and a square plot</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">THREE EVERYDAY RULES</div><div id="hRows"></div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · ONE SUNDAY</div>
+        <img id="hkImg" src="../../assets/illustrations/puc/aarav.png">
+        <div class="pillp ac" id="hkP">Three rules. Nothing alike?</div></div>
+    </div>
+
+    <!-- C: constant -->
+    <div id="sC">
+      <div class="card full" id="cl"><div class="lbl" style="left:36px;top:30px">CONSTANT FUNCTION · NCERT</div>
+        <div class="bf" id="cF"></div><div id="cRows"></div><div class="dd" id="cD" style="top:440px"></div></div>
+      <div class="card rf" id="cg"><div class="lbl" style="left:36px;top:30px">LIVE · SLIDE c</div><div class="rd" id="cRd"></div>
+        <svg id="cS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- I: identity -->
+    <div id="sI">
+      <div class="card full" id="il"><div class="lbl" style="left:36px;top:30px">IDENTITY FUNCTION · NCERT</div>
+        <div class="bf" id="iF"></div><div id="iRows"></div><div class="dd" id="iD" style="top:440px"></div></div>
+      <div class="card rf" id="ig"><div class="lbl" style="left:36px;top:30px">LIVE · SLIDE x</div><div class="rd" id="iRd"></div>
+        <svg id="iS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- K: side by side -->
+    <div id="sK">
+      <div class="card full" id="ka"><div class="lbl" style="left:36px;top:30px">CONSTANT · IGNORES x</div><svg id="kaS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="kaP" style="left:36px;top:490px">Flat line</div></div>
+      <div class="card rf" id="kb"><div class="lbl" style="left:36px;top:30px">IDENTITY · COPIES x</div><svg id="kbS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="kbP" style="left:36px;top:490px">One up for every one across</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- P: polynomial -->
+    <div id="sP">
+      <div class="card full" id="pl"><div class="lbl" style="left:36px;top:30px">POLYNOMIAL FUNCTION · NCERT</div>
+        <div id="pF"></div>
+        <div class="pr" id="pr0" style="top:200px"><div class="pk">THE COEFFICIENTS</div><div class="pv"><span class="a">a</span>'s are real numbers</div></div>
+        <div class="pr" id="pr1" style="top:308px"><div class="pk">THE POWERS</div><div class="pv"><i>n</i> = 0, 1, 2, 3, ... a whole number</div></div></div>
+      <div class="card rf" id="pq"><div class="lbl" style="left:36px;top:30px">THE SQUARE PLOT · DOUBLE THE SIDE</div><div class="rd" id="sRd"></div>
+        <svg id="sqS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div id="sqA"></div></div>
+    </div>
+
+    <!-- G: live y = x^n -->
+    <div id="sG">
+      <div class="card full" id="gl"><div class="lbl" style="left:36px;top:30px">LIVE · n COUNTS UP</div>
+        <div id="nRd"><i style="font-family:Poppins" class="a">n</i> = <span id="nV">0</span></div><div id="nF"></div><div id="nRows"></div></div>
+      <div class="card rf" id="gp"><div class="lbl" style="left:36px;top:30px">GRAPH · LIVE CURVE</div>
+        <svg id="gS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- Z: whole-number powers + think -->
+    <div id="sZ">
+      <div class="card full" id="zl"><div class="lbl" style="left:36px;top:30px">POLYNOMIAL OR NOT?</div><div id="zRows"></div></div>
+      <div class="card rf" id="zr"><div class="lbl" style="left:36px;top:30px">TEST EVERY POWER OF x</div><div id="zPw"></div>
+        <div class="pillp" id="zP" style="left:36px;top:470px;background:var(--okBg);color:#1F6B3F">Whole numbers only: 0, 1, 2, 3, ...</div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">THREE POINTS ON THE CURVE</div>
+        <svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Constant <span class="acc">ignores</span> x. Identity copies x.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

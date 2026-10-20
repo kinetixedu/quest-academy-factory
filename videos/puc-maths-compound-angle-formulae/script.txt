@@ -1,0 +1,51 @@
+H1|0.4|Is sine of thirty plus sixty degrees the same as sine thirty plus sine sixty?
+H2|0.45|Thirty plus sixty is ninety, and sine ninety is exactly one.
+H3|0.45|But sine thirty plus sine sixty is one point three six six.
+H4|0.35|Aarav checked it twice on his ride to college.
+H5|0.65|So how do we find the sine of a sum?
+P1|0.4|A compound angle is a sum or difference of two angles, like x plus y, or x minus y.
+P2|0.4|Stack the height for thirty degrees on top of the one for sixty.
+P3|0.6|It pokes out above the circle, higher than the radius. So the sine of a sum is not the sum of the sines.
+P4|3.2|Pause and think. Is cosine of sixty minus thirty equal to cosine sixty minus cosine thirty?
+P5|0.65|No! Cosine thirty is about zero point eight seven, but the difference is negative.
+L1|0.35|We need a real formula. Here is the NCERT proof, on the unit circle.
+L2|0.4|Mark four points. P one at angle x, P two at angle x plus y.
+L3|0.4|P three at angle minus y, and P four at angle zero, the point one comma zero.
+L4|0.4|Now turn the chord from P three to P one, through the angle y.
+L5|0.6|P three lands on P four, P one on P two. Both chords stand on the same angle, x plus y, so they are equal.
+D1|0.35|Now in coordinates, in four steps.
+D2|0.75|Step one. Distance squared is gap across squared, plus gap up squared. Pythagoras.
+D3|0.75|Step two. P one is cos x, sin x. P three is cos y, minus sin y. Expand, use sin squared plus cos squared equals one, and P one P three squared is two minus two, times cos x cos y minus sin x sin y.
+D4|0.75|Step three. P two is cos of x plus y, sin of x plus y, and P four is one, zero. So P two P four squared is two minus two cos of x plus y.
+D5|0.75|Step four. Equal chords, equal answers. Cancel the twos: cos of x plus y equals cos x cos y minus sin x sin y.
+E1|0.75|Put minus y for y. Cos of minus y is cos y, and sin of minus y is minus sin y. So cos of x minus y is cos x cos y plus sin x sin y.
+E2|0.75|For sine, use one fact: sine of an angle is cosine of ninety degrees minus it. Then sin of x plus y is sin x cos y plus cos x sin y, and sin of x minus y follows.
+E3|0.75|And tan of x plus y is sine over cosine. Divide top and bottom by cos x cos y: tan x plus tan y, over one minus tan x tan y.
+E4|0.65|Move x and y anywhere. The formula always matches; the sum of the sines never does.
+K1|0.4|Side by side. Sine mixes: sin cos plus cos sin, keeping the sign.
+K2|0.6|Cosine pairs: cos cos minus sin sin, flipping the sign.
+K3|3.2|Quick check. In cos of x minus y, is the middle sign plus or minus? Pause and think.
+K4|0.65|Plus! Cosine flips it.
+T1|0.7|Remember this. Sine mixes and keeps the sign. Cosine pairs and flips it.
+W1|0.35|One worked example: the exact value of sine fifteen degrees.
+W2|0.75|Step one. Fifteen is forty five minus thirty, two angles we know.
+W3|0.75|Step two. Use sin of x minus y: sin x cos y minus cos x sin y.
+W4|0.75|Step three. Root two over two times root three over two, minus root two over two times a half.
+W5|0.75|Step four. That is root six minus root two, over four.
+W6|0.65|About zero point two five nine. A calculator agrees.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students put a plus sign in the middle of cos of x plus y.
+X3|0.65|But cosine flips the sign. At thirty and sixty, cos ninety is zero, and only the minus sign gives zero.
+J1|0.6|Where is this asked? JEE Main, as in April twenty nineteen, and the PUC boards: exact values, or tan two alpha from alpha plus beta and alpha minus beta.
+Q1|5.4|Exam level now. Alpha plus beta is one hundred and thirty five degrees. Find this product. Pause and solve.
+A1|0.5|The answer is C. Two.
+A2|0.5|Tan one thirty five is minus one.
+A3|0.5|So the sum of the tans, over one minus their product, is minus one.
+A4|0.5|Cross multiply: the sum is minus one, plus the product.
+A5|0.6|Expand: one, minus the sum, plus the product. That leaves one plus one: two.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why is sine of x plus y not sine x plus sine y?
+Y3|0.9|Two. Write the formula for cos of x minus y.
+Y4|1.1|Three. Use forty five and thirty to find cos seventy five.
+N1|0.3|Next time: double the angle, and the sine does not double. Double angle and triple angle identities.

@@ -1,0 +1,153 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 38 - The Imaginary Unit i</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 38: the imaginary unit i (Proof board) ===== */
+:root{--re:#2F6FEB;--reb:#E7EEFD;--im:#7A4FE0;--imb:#EFE9FC}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.re{color:var(--re)}.im{color:var(--im)}.a{color:var(--ac)}
+#title .im{color:var(--im)}
+/* title card */
+.lst{position:absolute;top:724px;width:440px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:50px;font-size:34px;white-space:nowrap}
+/* hook notebook */
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.nb{position:absolute;left:36px;width:560px;height:56px;border-radius:12px;background:var(--soft)}
+.nb .k{position:absolute;left:22px;top:6px;font-size:34px;white-space:nowrap}
+.nb .v{position:absolute;left:250px;top:6px;font-size:34px;white-space:nowrap}
+#hBr{position:absolute;left:612px;width:24px;border:4px solid var(--ac);border-left:none;border-radius:0 12px 12px 0}
+#hBrT{position:absolute;left:650px;font:700 24px Poppins;color:var(--ac);white-space:nowrap}
+.chip{position:absolute;height:52px;padding:0 18px;border-radius:10px;display:inline-flex;align-items:center;gap:8px;font:700 24px Poppins;color:#fff;white-space:nowrap}
+/* definition */
+#pA{position:absolute;left:36px;top:96px;font-size:84px;white-space:nowrap}
+#pB{position:absolute;left:36px;top:250px;font-size:84px;white-space:nowrap}
+.hs{position:absolute;left:36px;width:712px;border-radius:14px;background:var(--soft)}
+.hs .hn{position:absolute;left:24px;top:18px;font:700 30px Poppins;white-space:nowrap}
+.hs .hd{position:absolute;left:24px;top:62px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.hs .hq{position:absolute;left:24px;top:100px;width:660px;font:500 26px/1.4 Poppins}
+/* steps */
+.st{position:absolute;left:36px;width:712px;height:96px}
+.st .n{position:absolute;left:0;top:6px;width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 21px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:66px;top:0;font-size:38px;white-space:nowrap}
+.st .why{position:absolute;left:66px;top:56px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+/* chain */
+.cn{position:absolute;left:250px;width:284px;height:72px;border-radius:14px;background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:40px;white-space:nowrap}
+.cx{position:absolute;left:420px;font:600 20px 'IBM Plex Mono';color:var(--im);white-space:nowrap}
+.cp{position:absolute;left:110px;font:600 22px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+/* live counter */
+.rd{position:absolute;font:600 56px/1 'IBM Plex Mono';white-space:nowrap}
+#lV{position:absolute;left:36px;top:160px;font-size:64px;white-space:nowrap}
+.tc{position:absolute;width:160px;height:118px;border-radius:14px;background:var(--soft)}
+.tc .tn{position:absolute;left:0;width:160px;top:14px;text-align:center;font-size:26px;white-space:nowrap}
+.tc .tv{position:absolute;left:0;width:160px;top:56px;text-align:center;font-size:36px;white-space:nowrap}
+/* rule rows */
+.rr{position:absolute;left:36px;width:712px;height:80px;border-radius:14px;background:var(--soft)}
+.rr .k{position:absolute;left:24px;top:24px;font:600 24px 'IBM Plex Mono';white-space:nowrap;color:var(--ink2)}
+.rr .v{position:absolute;left:400px;top:14px;font-size:42px;white-space:nowrap}
+.fx2{position:absolute;left:36px;font-size:44px;white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 26px Poppins}
+#so .sol .sx .katex{font-size:1.1em}
+#mq .mq .katex{font-size:1.08em}
+#wl .sol .sx{font-size:30px}
+#wq{position:absolute;left:36px;top:64px;font:600 30px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.2em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:46px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 4 COMPLEX NUMBERS AND QUADRATIC EQUATIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">The Imaginary Unit <span class="acc">i</span></div>
+    <div id="sub">Explained with one point that turns in quarters</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: Aarav's notebook -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">AARAV'S NOTEBOOK · POWERS OF i</div><div id="hrs"></div><div id="hBr"></div><div id="hBrT">repeats</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · STUDY TABLE, LAST NIGHT</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">Why does it repeat every four?</div></div>
+    </div>
+
+    <!-- P: definition -->
+    <div id="sP">
+      <div class="card full" id="pl"><div class="lbl" style="left:36px;top:30px">THE IMAGINARY UNIT · NCERT</div><div id="pA"></div><div id="pB"></div>
+        <div class="pillp" id="pP" style="left:36px;top:470px;background:var(--imb);color:var(--im)">i is a number: add it, multiply it, square it</div></div>
+      <div class="card rf" id="pr"><div class="lbl" style="left:36px;top:30px">ABOUT THE NAME</div>
+        <div class="hs" id="pr0" style="top:84px;height:200px"><div class="hn">"Imaginary" is just a name</div><div class="hd">IT DOES NOT MEAN FAKE</div><div class="hq">Like negative numbers once did, i fills a gap the old numbers left open.</div></div>
+        <div class="hs" id="pr1" style="top:308px;height:236px"><div class="hn">Leonhard Euler</div><div class="hd">SWISS MATHEMATICIAN · 1707 TO 1783</div><div class="hq">The first to use the symbol i for the square root of -1 (NCERT historical note).</div></div></div>
+    </div>
+
+    <!-- D: build the powers -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">PROOF · 5 STEPS</div><div class="hiBox" id="dHi" style="left:20px;width:744px;height:94px"></div><div id="dSt"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">MULTIPLY BY i, AGAIN AND AGAIN</div><div id="dCh"></div></div>
+    </div>
+
+    <!-- L: quarter turns on the plane -->
+    <div id="sL">
+      <div class="card full" id="ll"><div class="lbl" style="left:36px;top:30px">LIVE · EACH × i IS A QUARTER TURN</div><svg id="lS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="lr"><div class="lbl" style="left:36px;top:30px">LIVE · COUNT THE POWER n</div>
+        <div class="rd" id="lN" style="left:36px;top:76px"></div><div id="lV"></div><div id="lT"></div></div>
+    </div>
+
+    <!-- R: remainder rule -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">THE SHORTCUT · DIVIDE BY 4</div><div class="hiBox" id="rHi" style="left:20px;width:744px;height:92px"></div><div id="rR"></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">USE IT</div><div class="fx2" id="rF0" style="top:84px"></div><div class="fx2" id="rF1" style="top:164px"></div><div class="fx2" id="rF2" style="top:244px"></div>
+        <div class="lbl" id="rNL" style="left:36px;top:360px">BACKWARDS: A QUARTER TURN CLOCKWISE</div><div class="fx2" id="rF3" style="top:396px"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- S: square roots of negatives -->
+    <div id="sS">
+      <div class="card full" id="sl"><div class="lbl" style="left:36px;top:30px">THE SQUARE ROOTS OF -1 · TWO</div><div class="fx2" id="slF0" style="top:90px"></div><div class="fx2" id="slF1" style="top:180px"></div>
+        <svg id="slS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="slP" style="left:36px;top:490px;background:var(--imb);color:var(--im)">Both square to -1</div></div>
+      <div class="card rf" id="sr"><div class="lbl" style="left:36px;top:30px">THE SYMBOL √-1 · ONE</div><div class="fx2" id="srF0" style="top:90px"></div><div class="fx2" id="srF1" style="top:180px"></div>
+        <div class="lbl" id="srL" style="left:36px;top:300px">FOR ANY POSITIVE a</div><div class="fx2" id="srF2" style="top:336px"></div><div class="fx2" id="srF3" style="top:416px"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">FOUR MOVES · BACK TO THE START</div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="wP" style="left:36px;top:500px">Any four powers in a row add to 0</div></div>
+    </div>
+
+    <!-- X: exam trap + where -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="480" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Powers of i go round in <span class="acc">fours</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

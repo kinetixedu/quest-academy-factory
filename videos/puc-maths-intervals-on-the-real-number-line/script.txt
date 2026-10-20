@@ -1,0 +1,45 @@
+H1|0.4|A road sign says: speed twenty to forty kilometres per hour.
+H2|0.45|Aarav is riding at exactly forty. Is he inside the limit, or just outside it?
+H3|0.35|He saw the sign on his bicycle ride to college.
+H4|0.5|Twenty to forty sounds clear. But it hides a question. Are the two ends allowed?
+H5|0.65|Maths answers it with one tiny detail: a round bracket, or a square bracket. These are intervals.
+I1|0.4|An interval is a set of real numbers on the number line, between two ends, a and b, where a is less than b.
+I2|0.4|It holds every real number in between. Not just whole numbers. Twenty point five, thirty one point two, all of them.
+I3|0.65|So an interval is an infinite set, and it is a subset of R, the real numbers.
+O1|0.4|The open interval, a to b, uses round brackets. It is every x with a less than x, and x less than b. Both ends are left out.
+O2|0.6|On the number line, we draw its ends as hollow circles.
+O3|0.4|The closed interval, a to b, uses square brackets. Now a and b are both included. a is less than or equal to x, and x is less than or equal to b.
+O4|0.6|Its ends are drawn as filled dots.
+O5|0.65|Mix the brackets, and you get half open intervals. Square bracket a, round bracket b includes a, but not b. Round a, square b includes b, but not a.
+L1|0.4|Now watch a point move toward the top end of two intervals.
+L2|0.4|In the closed interval twenty to forty, the point reaches forty, and forty is in.
+L3|0.4|In the open interval, the point can get as close as it likes. Thirty nine point nine. Thirty nine point nine nine. Still in.
+L4|0.65|But forty itself is out. And there is no largest number inside an open interval. Whatever you pick, there is one closer.
+K1|3.2|Pause and think. Is two in the interval, round bracket two, five, square bracket?
+K2|0.65|No! The round bracket at two leaves two out. Five is in, because of the square bracket.
+G1|0.4|Every interval also has a length. b minus a.
+G2|0.6|The open interval two to five and the closed interval two to five both have length three. Leaving out the ends does not change the length.
+Z1|0.4|An interval can also run forever. Zero to infinity, with zero included, is the set of all the non negative real numbers.
+Z2|0.6|Infinity is not a number, so it can never be included. It always gets a round bracket.
+T1|0.7|Remember this. A round bracket leaves the end out. A square bracket keeps it in.
+W1|0.35|Now, one worked example.
+W2|0.5|Write the set of all real x, where minus five is less than x, and x is less than or equal to seven, as an interval.
+W3|0.75|Step one. Minus five comes with less than, so minus five is left out. Round bracket.
+W4|0.75|Step two. Seven comes with less than or equal to, so seven is included. Square bracket.
+W5|0.75|Step three. The interval is round bracket minus five, comma seven, square bracket.
+W6|0.65|Its length is seven minus minus five, which is twelve.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students write the closed interval two to five as the set two, three, four, five.
+X3|0.65|But an interval holds every real number between its ends, like two point five and pi. That list holds only four integers. They are not the same set.
+J1|0.6|Where is this asked? In PUC board exams, as write these sets as intervals. And in JEE Main, for example in two thousand twenty, where one open or closed end decided the answer.
+Q1|5.4|Exam level now. How many integers lie in this interval? Pause and solve.
+A1|0.5|The answer is B. Seven.
+A2|0.5|Root seven is between two and three, about two point six. So the left end is about minus two point six. Minus three is out, and minus two is in.
+A3|0.5|Root twenty is between four and five, about four point five. So four is in, and five is out.
+A4|0.6|The integers are minus two, minus one, zero, one, two, three and four. Seven integers.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Write the set of x with three less than or equal to x, and x less than eight, as an interval.
+Y3|0.9|Two. What is the length of the interval from minus two to six?
+Y4|1.1|Three. Why does infinity always get a round bracket?
+N1|0.3|Next time: two friends list their favourite fruits. All the fruits, the ones they share, and the ones only she likes. We meet union, intersection and difference.

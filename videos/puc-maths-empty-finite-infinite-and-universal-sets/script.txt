@@ -1,0 +1,53 @@
+H1|0.4|Here is a strange set. All the even prime numbers bigger than two.
+H2|0.45|Four? Two times two, so not prime. Six? Two times three. Eight? Two times four. Every even number after two splits by two.
+H3|0.35|Aarav checked a long list at his study table and found none at all.
+H4|0.5|So is this set nothing? Or is it something?
+H5|0.65|It is something. A set with nothing inside. And it opens a whole family: empty, finite, infinite and universal sets.
+E1|0.35|Start with the empty set.
+E2|0.4|A set that has no element at all is called the empty set. It is also called the null set, or the void set.
+E3|0.4|We write it with this symbol, phi. Or as two curly brackets with nothing between them.
+E4|0.4|Watch the test run on even primes bigger than two. Four is out. Six, out. Eight, ten, twelve, all out.
+E5|0.65|The bag stays empty, and the count stays at zero. The number of elements in phi is zero.
+E6|0.6|More empty sets: the natural numbers between one and two. The odd numbers whose square is four. Every test, and nothing passes.
+K1|0.4|Side by side. The empty set is an empty box. Nothing inside.
+K2|0.6|The set containing zero is a box with one thing inside: the number zero. Zero is something, so this set is not empty.
+K3|3.2|Now you try. The set containing phi. Phi inside curly brackets. Is it empty? Pause and decide.
+K4|0.65|Not empty! It is a box holding one thing, an empty box. So it has exactly one element.
+G1|0.35|Next, finite and infinite sets.
+G2|0.4|A set is finite if it is empty, or if you can count its elements and the counting comes to an end.
+G3|0.4|The days of the week. Seven elements, so finite. The letters of SCHOOL. Five elements, finite.
+G4|0.4|We write n of S for the number of different elements in S.
+G5|0.4|Now watch the natural numbers. One, two, three. Keep counting.
+G6|0.4|A thousand. A million. A billion. The counter never reaches an end.
+G7|0.65|A set that is not finite is called infinite. The natural numbers, the integers, and all the points on a line are infinite.
+G8|0.6|In roster form we show the pattern and add three dots. But the real numbers have no pattern to list, so they need set builder form.
+G9|3.2|Quick one. The natural numbers less than one crore. Finite, or infinite? Pause and think.
+GA|0.65|Finite! The set is huge, but the counting stops just before one crore. Big is not the same as endless.
+U1|0.35|Last, the universal set.
+U2|0.4|In any problem, all the sets we talk about come from one big basic set. That basic set is the universal set, written U.
+U3|0.4|If our sets are the students who ride a bicycle and the students who walk, the universal set is all the students in the class.
+U4|0.65|We draw U as a rectangle, and every other set sits inside it.
+U5|0.6|U depends on the problem. For sets of integers, U could be the rational numbers, or the real numbers.
+T1|0.7|Remember this. Empty means nothing inside. Finite means the counting ends. Infinite means it never does.
+W1|0.35|Now, one worked example.
+W2|0.5|Which of these sets are empty, which are finite, and which are infinite? All four use natural numbers.
+W3|0.75|One. Two x minus one equals zero gives x equals one half. That is not a natural number, so this set is empty.
+W4|0.75|Two. x minus one, times x minus two, equals zero. So x is one or two. Finite, with two elements.
+W5|0.75|Three. The factors of twelve are one, two, three, four, six and twelve. Finite, with six elements.
+W6|0.65|Four. The prime numbers never run out, so this set is infinite.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students write that the set containing zero is the empty set.
+X3|0.65|But zero is an element. The set containing zero has one element. Only the empty set has none. The same goes for the set containing phi.
+J1|0.6|Where is this asked? In PUC board exams, as questions like: which of these sets are empty, and which are finite or infinite?
+Q1|5.4|Exam level now. How many of these five sets are empty? Pause and solve.
+A1|0.5|The answer is B. Three.
+A2|0.5|A. No real number squared gives minus one. Empty.
+A3|0.5|B. x squared minus three x plus two is x minus one, times x minus two. So B is one and two. Not empty.
+A4|0.5|C. No integer lies strictly between one and two. Empty. D. The square root of two is not rational. Empty.
+A5|0.6|E holds one element, the empty set itself. Not empty. So three sets are empty: A, C and D.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Give two examples of the empty set.
+Y3|0.9|Two. Is the set of all points on a line finite or infinite?
+Y4|1.1|Three. Why is the set containing zero not empty?
+N1|0.3|Next time: Diya studies three subjects for NEET. Every one of them is a PUC subject, but not the other way round. We meet subsets and equal sets.

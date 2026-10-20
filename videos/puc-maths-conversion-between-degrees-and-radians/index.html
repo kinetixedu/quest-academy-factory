@@ -1,0 +1,131 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 25 - Conversion between Degrees and Radians</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 25: conversion between degrees and radians (Proof board) ===== */
+:root{--th:#7A4FE0;--dg:#B7791F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.th{color:var(--th)}.dg{color:var(--dg)}
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:50px;font:600 40px 'IBM Plex Mono';white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.rd{position:absolute;font:600 28px 'IBM Plex Mono';white-space:nowrap}
+.rd small{font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);display:block;margin-bottom:2px}
+.pf{position:absolute;left:36px;width:712px;height:100px}
+.pf .n{position:absolute;left:0;top:8px;width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 21px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.pf .sx{position:absolute;left:66px;top:0;font-size:38px;white-space:nowrap}
+.pf .why{position:absolute;left:66px;top:62px;font:500 20px Poppins;color:var(--mute);white-space:nowrap}
+.rule{position:absolute;left:36px;width:712px}
+.rule .lb{font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.rule .fx{position:static;margin-top:12px;font-size:44px}
+.tb{position:absolute;left:36px;width:712px;height:58px;border-radius:12px;background:var(--soft)}
+.tb .d{position:absolute;left:24px;top:8px;font:600 30px 'IBM Plex Mono';color:var(--dg);white-space:nowrap}
+.tb .ar{position:absolute;left:200px;top:14px}
+.tb .r{position:absolute;left:280px;top:2px;font-size:36px;white-space:nowrap}
+.tb .k{position:absolute;right:24px;top:16px;font:600 18px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+#wq{position:absolute;left:36px;top:64px;font:600 30px/1.4 Poppins;width:712px}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+#so .sol .sx .katex{font-size:1.15em}
+#mq .mq{font-size:32px}
+#mq .opt .ot .katex{font-size:1.25em}
+#wl .sol .sx{font-size:27px}
+#wl .sol .sx .katex{font-size:1.1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 3 TRIGONOMETRIC FUNCTIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Degrees to <span class="acc">Radians</span> and Back</div>
+    <div id="sub">One fact and two simple rules</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: half a turn, two numbers + Aarav -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">HALF A TURN · TWO NUMBERS</div>
+        <svg id="hS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="rd dg" id="hD" style="left:36px;top:76px"><small>DEGREES</small><span></span></div>
+        <div class="rd th" id="hR" style="right:36px;top:76px;text-align:right"><small>RADIANS</small><span></span></div>
+        <div class="pillp ac" id="hP" style="left:36px;top:500px">App: 3 rad. More or less than half?</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · AFTER HIS RIDE</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg">
+        <div class="pillp" id="hkP" style="left:36px;top:500px">Units do not match. How to switch?</div></div>
+    </div>
+
+    <!-- C: the one fact + live dual dial -->
+    <div id="sC">
+      <div class="card full" id="cl"><div class="lbl" style="left:36px;top:30px">THE ONE FACT · 3 STEPS</div><div class="hiBox" id="cHi" style="left:20px;width:744px;height:96px"></div><div id="cSt"></div></div>
+      <div class="card rf" id="cr"><div class="lbl" style="left:36px;top:30px">LIVE · ONE TURN, TWO RULERS</div>
+        <svg id="cS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="rd dg" id="cD" style="left:36px;top:478px"><small>DEGREES</small><span></span></div>
+        <div class="rd th" id="cR" style="right:36px;top:478px;text-align:right"><small>RADIANS</small><span></span></div></div>
+    </div>
+
+    <!-- V: size of 1 radian and 1 degree -->
+    <div id="sV">
+      <div class="card full" id="vl"><div class="lbl" style="left:36px;top:30px">PROOF · 1 RADIAN AND 1 DEGREE</div><div class="hiBox" id="vHi" style="left:20px;width:744px;height:104px"></div><div id="vSt"></div></div>
+      <div class="card rf" id="vr"><div class="lbl" style="left:36px;top:30px">LIVE · DEGREES THAT FIT IN ONE RADIAN</div>
+        <svg id="vS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="rd dg" id="vC" style="left:36px;top:478px"><small>DEGREE SLICES</small><span></span></div></div>
+    </div>
+
+    <!-- U: two rules + common angles + think -->
+    <div id="sU">
+      <div class="card full" id="ul"><div class="lbl" style="left:36px;top:30px">TWO RULES</div>
+        <div class="rule" id="ru0" style="top:84px"><div class="lb">1 · DEGREES TO RADIANS</div><div class="fx" id="ruF0"></div></div>
+        <div class="rule" id="ru1" style="top:270px"><div class="lb">2 · RADIANS TO DEGREES</div><div class="fx" id="ruF1"></div></div>
+        <div class="pillp ac" id="uP" style="left:36px;top:480px">Going into radians? π goes on top.</div></div>
+      <div class="card rf" id="ur"><div class="lbl" style="left:36px;top:30px">ANGLES YOU WILL MEET MOST</div><div id="tbs"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- S: pi vs pi radians + think -->
+    <div id="sS">
+      <div class="card full" id="sp"><div class="lbl" style="left:36px;top:30px">π ON ITS OWN · A NUMBER</div>
+        <svg id="spS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="spP" style="left:36px;top:400px">π ≈ 3.1416, just a number</div></div>
+      <div class="card rf" id="sq"><div class="lbl" style="left:36px;top:30px">π RADIANS · AN ANGLE</div>
+        <svg id="sqS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="sqP" style="left:36px;top:400px">π radians = 180°, half a turn</div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">ONE TURN · 16 SLICES OF 22.5°</div>
+        <svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="wP" style="left:36px;top:500px">22° 30′ = π/8 rad</div></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="520" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2"><span class="acc">π radians</span> = 180°</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

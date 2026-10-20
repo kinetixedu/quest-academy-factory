@@ -1,0 +1,51 @@
+H1|0.4|Here is a question with a strange answer. When is the tyre valve exactly at half height?
+H2|0.4|Aarav watched it on his bicycle wheel today. Half height means half the radius above the hub.
+H3|0.4|At thirty degrees, yes. At one hundred and fifty degrees, on the way down, yes again.
+H4|0.5|Then the wheel turns on and does it all again. Three ninety, five ten, and on, forever.
+H5|0.65|One equation, endless answers. Today we write all of them in one line. These are trigonometric equations.
+P1|0.35|So what is a trigonometric equation?
+P2|0.4|It is an equation with a trigonometric function of an unknown angle, like sine x equals one half.
+P3|0.4|The solutions from zero up to two pi, one full turn, are called principal solutions.
+P4|0.65|One formula, using an integer n, that gives every solution, is called the general solution.
+G1|0.4|Watch the solutions appear. Draw y equals sine x, and the line y equals one half.
+G2|0.4|Every time the wave crosses the line, we get a solution. Count them.
+G3|0.65|Two in the first turn. Two more in the next. The wave never stops, so neither do the answers.
+G4|0.4|Now raise the line. Let the height k climb from one half towards one.
+G5|0.4|At k equals one, the line only touches each hilltop. One solution per turn.
+G6|0.65|Above one, the line misses the wave completely. Sine x equals one point two has no solution at all.
+D1|0.35|Now let us build the general solution, step by step.
+D2|0.75|Step one. Say sine x equals sine alpha. One answer is easy. x equals alpha.
+D3|0.75|Step two. Sine is the height. The point at pi minus alpha has the same height, so it works too.
+D4|0.75|Step three. Each full turn of two pi brings the same heights back. So x is two n pi plus alpha, or two n pi plus pi minus alpha.
+D5|0.75|Step four. Look closely. Even multiples of pi carry plus alpha. Odd multiples carry minus alpha.
+D6|0.75|So one line holds them all. x equals n pi, plus minus one to the power n, times alpha.
+C1|0.4|The same idea works for the others.
+C2|0.4|cos is the across distance, and alpha and minus alpha have the same across. So cos x equals cos alpha gives two n pi, plus or minus alpha.
+C3|0.4|tan repeats every half turn. So tan x equals tan alpha gives n pi plus alpha.
+C4|0.65|And two special ones. Sine x is zero at every multiple of pi. cos x is zero at every odd multiple of pi over two.
+S1|0.4|Side by side. Principal solutions live inside one turn. For sine x equals one half, they are pi over six and five pi over six.
+S2|0.6|The general solution covers every turn. Put n equals two into the formula, and you get thirteen pi over six.
+S3|3.2|Now you try. Is thirteen pi over six a principal solution? Pause and decide.
+S4|0.65|No! It is a solution, but it is bigger than two pi. It lives in the second turn, so it is not principal.
+T1|0.7|Remember this. Find one answer, then add every turn.
+W1|0.35|Now, one worked example.
+W2|0.5|Solve sine x equals minus root three over two.
+W3|0.75|Step one. Sine of pi over three is root three over two. Sine is negative below the hub, in the third and fourth quadrants.
+W4|0.75|Step two. So sine x equals sine of pi plus pi over three, which is four pi over three.
+W5|0.75|Step three. The general solution is n pi, plus minus one to the power n, times four pi over three.
+W6|0.75|Step four. Inside one turn, that gives four pi over three and five pi over three. These are the principal solutions.
+X1|0.35|Now, the exam trap.
+X2|0.4|Solve cos x equals one half. Many students write n pi, plus or minus pi over three.
+X3|0.65|Try n equals one. Four pi over three has cos minus one half. Wrong! For cos, the turns are two pi. The right answer is two n pi, plus or minus pi over three.
+J1|0.6|Where is this asked? In JEE Main and JEE Advanced, as questions that count the solutions in an interval, or add them up.
+Q1|5.4|Exam level now. How many solutions from zero to four pi? Pause and solve.
+A1|0.5|The answer is C. Six.
+A2|0.5|Treat sine x as one unknown. The equation factorises as two sine x minus one, times sine x minus one.
+A3|0.5|So sine x is one half, or sine x is one.
+A4|0.6|One half gives two solutions per turn, so four. One gives one per turn, so two. Six in all.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Find the principal solutions of cos x equals one half.
+Y3|0.9|Two. Write the general solution of tan x equals one.
+Y4|1.1|Three. How many solutions does sine x equals three over two have?
+N1|0.3|Next time: x squared plus one equals zero. No number on the number line works. So we need a new kind of number. Complex numbers.

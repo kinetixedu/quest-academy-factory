@@ -1,0 +1,133 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 11 - Properties of Set Operations</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 11: properties of set operations (Proof board) ===== */
+:root{--x:#7A4FE0;--sa:#2F6FEB;--sb:#0E8F8F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.x{color:var(--x)}.a{color:var(--ac)}.sa{color:var(--sa)}.sb{color:var(--sb)}
+.lst{position:absolute;top:724px;width:520px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:50px;font-size:36px;white-space:nowrap}
+.qr{position:absolute;left:36px;width:712px;height:84px;border-radius:14px;background:var(--soft)}
+.qr .f{position:absolute;left:24px;top:16px;font-size:36px;white-space:nowrap}
+.chip{position:absolute;height:44px;padding:0 16px;border-radius:9px;display:inline-flex;align-items:center;gap:8px;font:700 21px Poppins;color:#fff;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.st{position:absolute;left:36px;width:712px;height:116px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:36px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:56px;font:500 23px Poppins;color:var(--mute);white-space:nowrap}
+/* collector rows */
+#cSet{position:absolute;left:36px;top:80px;font-size:30px;white-space:nowrap}
+.cr{position:absolute;left:36px;width:712px;height:150px;border-radius:14px;background:var(--soft)}
+.cr .lb{position:absolute;left:20px;top:14px;font-size:30px;white-space:nowrap}
+.tk{position:absolute;top:66px;width:64px;height:64px;border-radius:50%;background:#fff;border:3px solid var(--line);display:flex;align-items:center;justify-content:center;font:600 28px 'IBM Plex Mono'}
+.cr .ok{position:absolute;right:20px;top:14px}
+.cnt{position:absolute;height:52px;padding:0 18px;border-radius:10px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+/* distributive */
+.lawT{position:absolute;left:36px;top:76px;font-size:34px;white-space:nowrap}
+.stg{position:absolute;left:36px;top:132px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* numbers vs sets */
+.cm{position:absolute;left:36px;width:712px;height:150px;border-radius:14px;background:var(--soft)}
+.cm .f{position:absolute;left:24px;top:22px;font-size:34px;white-space:nowrap}
+.cm .v{position:absolute;left:24px;top:86px;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+.cm .chip{right:20px;top:20px}
+/* worked example */
+#wq{position:absolute;left:36px;top:64px;font:600 28px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.1em}
+#wl .sol .sx{font-size:28px}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 26px Poppins}
+#so .sol .sx .katex{font-size:1.1em}
+#mq .mq{font-size:32px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:38px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 1 SETS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Properties of Set <span class="acc">Operations</span></div>
+    <div id="sub">Explained with one question about order</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">DOES ORDER CHANGE THE ANSWER?</div><div id="hcs"></div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · REVISING AFTER CLASS</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">A short list of laws</div></div>
+    </div>
+
+    <!-- C: commutative + associative -->
+    <div id="sC">
+      <div class="card full" id="cl"><div class="lbl" style="left:36px;top:30px">ORDER AND BRACKETS</div><div class="hiBox" id="cHi" style="left:20px;width:744px;height:116px"></div><div id="cSt"></div></div>
+      <div class="card rf" id="cv"><div class="lbl" style="left:36px;top:30px">LIVE · COLLECT THE ELEMENTS</div><div id="cSet"></div>
+        <div class="cr" id="cr0" style="top:140px"><div class="lb"></div><div class="ok"></div></div>
+        <div class="cr" id="cr1" style="top:310px"><div class="lb"></div><div class="ok"></div></div>
+        <div id="cTk"></div>
+        <div class="pillp bad" id="cBad" style="left:36px;top:496px"></div></div>
+    </div>
+
+    <!-- I: special sets -->
+    <div id="sI">
+      <div class="card full" id="il"><div class="lbl" style="left:36px;top:30px">WITH THE SPECIAL SETS</div><div class="hiBox" id="iHi" style="left:20px;width:744px;height:116px"></div><div id="iSt"></div></div>
+      <div class="card rf" id="iv"><div class="lbl" style="left:36px;top:30px">THE RESULT, SHADED</div><svg id="iS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="iTag" style="left:36px;top:496px"></div></div>
+    </div>
+
+    <!-- D: distributive, live shading -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">LEFT SIDE</div><div class="lawT" id="dlT"></div><div class="stg" id="dlS"></div><svg id="dlV" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp good" id="dlP" style="left:36px;top:496px">Same three pieces</div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">RIGHT SIDE</div><div class="lawT" id="drT"></div><div class="stg" id="drS"></div><svg id="drV" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="drP" style="left:36px;top:496px"></div></div>
+    </div>
+
+    <!-- K: numbers vs sets + think -->
+    <div id="sK">
+      <div class="card full" id="kn"><div class="lbl" style="left:36px;top:30px">NUMBERS · ONLY ONE WAY</div><div id="knR"></div></div>
+      <div class="card rf" id="ks"><div class="lbl" style="left:36px;top:30px">SETS · BOTH WAYS</div><div id="ksR"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- M: De Morgan -->
+    <div id="sM">
+      <div class="card full" id="mv"><div class="lbl" style="left:36px;top:30px">LIVE · SHADE THE OUTSIDE</div><svg id="mS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="mTag" style="left:36px;top:496px"></div></div>
+      <div class="card rf" id="mp"><div class="lbl" style="left:36px;top:30px">DE MORGAN'S LAWS · 4 STEPS</div><div class="hiBox" id="mHi" style="left:20px;width:744px;height:116px"></div><div id="mSt"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">U = 1 TO 8</div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="wP" style="left:36px;top:496px"></div></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Order and brackets <span class="acc">never</span> matter.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

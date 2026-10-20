@@ -1,0 +1,151 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 33 - Compound-Angle Formulae</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 33: compound-angle formulae (Proof board) ===== */
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.th{font-family:KaTeX_Math;font-style:italic}
+/* title card */
+.lst{position:absolute;top:724px;width:480px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:50px;font-size:32px;white-space:nowrap}
+/* hook test */
+.ht{position:absolute;left:36px;width:712px;height:150px;border-radius:14px;background:var(--soft)}
+.ht .k{position:absolute;left:22px;top:16px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.ht .f{position:absolute;left:22px;top:46px;font-size:36px;white-space:nowrap}
+.ht .v{position:absolute;left:22px;top:100px;font:600 28px 'IBM Plex Mono';white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* definition */
+#dfT{position:absolute;left:36px;top:84px;width:712px;font:700 42px/1.25 Poppins;letter-spacing:-.01em}
+#dfT b{color:var(--ac)}
+.cg{position:absolute;top:250px;height:72px;padding:0 26px;border-radius:14px;background:var(--soft);display:flex;align-items:center;font-size:40px;white-space:nowrap}
+/* proof */
+.st{position:absolute;left:36px;width:712px;height:100px}
+.st .n{position:absolute;left:0;top:2px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:66px;top:0;font-size:30px;white-space:nowrap}
+.st .why{position:absolute;left:66px;top:52px;font:500 20px Poppins;color:var(--mute);white-space:nowrap}
+.st .why .katex{font-size:1.05em}
+.cr{position:absolute;left:36px;font-size:32px;white-space:nowrap}
+/* live readout */
+.rb{position:absolute;left:420px;width:330px}
+.rb .k{font-size:22px;white-space:nowrap}
+.rb .v{font:600 30px 'IBM Plex Mono';white-space:nowrap;margin-top:2px}
+#rAng{position:absolute;left:420px;top:84px;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+/* side by side */
+.bf{position:absolute;left:36px;top:84px;font-size:34px;white-space:nowrap}
+.tl{position:absolute;top:180px;width:118px;height:64px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:30px;white-space:nowrap}
+.sg{position:absolute;top:180px;width:52px;height:64px;display:flex;align-items:center;justify-content:center;font:700 40px Poppins}
+.sr{position:absolute;left:36px;font-size:30px;white-space:nowrap;display:flex;align-items:center;gap:16px}
+.sr .c{height:40px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;font:600 20px 'IBM Plex Mono';color:#fff}
+/* worked example */
+#wq{position:absolute;left:36px;top:64px;font:600 30px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.1em}
+#wl .sol .sx{font-size:28px}
+#wl .sol .sx .katex{font-size:1.05em}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 26px Poppins}
+#so .sol .sx .katex{font-size:1.08em}
+#mq .mq .katex{font-size:1.1em}
+#mq .opt .ot .katex{font-size:1.1em}
+.trapL .tx .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:24px;font:600 34px Poppins;white-space:nowrap}
+.yr .q .katex{font-size:1.05em}
+#sF .fcard .fl{font-size:42px}
+#sF .fcard .fl.txt{font-size:32px}
+.thk .tq .katex{font-size:1em}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 3 TRIGONOMETRIC FUNCTIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Compound-Angle <span class="acc">Formulae</span></div>
+    <div id="sub">Explained with one turning chord</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: test it + Aarav -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">TEST IT · 30° AND 60°</div>
+        <div class="ht" id="ht0" style="top:84px"><div class="k">SINE OF THE SUM</div><div class="f" id="htf0"></div><div class="v" id="htv0" style="color:var(--ok)">= 1.000</div></div>
+        <div class="ht" id="ht1" style="top:258px"><div class="k">SUM OF THE SINES</div><div class="f" id="htf1"></div><div class="v" id="htv1" style="color:var(--red)">= 0.500 + 0.866 = 1.366</div></div>
+        <div class="pillp bad" id="hP" style="left:36px;top:450px">1.000 and 1.366: not equal</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · RIDING TO COLLEGE</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">Checked twice. Never equal. Why?</div></div>
+    </div>
+
+    <!-- P: compound angle + stacked heights -->
+    <div id="sP">
+      <div class="card full" id="pl"><div class="lbl" style="left:36px;top:30px">DEFINITION</div>
+        <div id="dfT">A <b>compound angle</b> is a sum or difference of two angles.</div>
+        <div class="cg" id="cg0" style="left:36px"></div><div class="cg" id="cg1" style="left:260px"></div>
+        <svg id="pdS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="pr"><div class="lbl" style="left:36px;top:30px">STACK THE HEIGHTS</div><svg id="pS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp bad" id="pP" style="left:36px;top:496px">Higher than the radius: impossible</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- L + D: the turning chord and the 4-step proof -->
+    <div id="sL">
+      <div class="card full" id="lc"><div class="lbl" style="left:36px;top:30px">UNIT CIRCLE · FOUR POINTS</div><svg id="lS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp good" id="lP" style="left:36px;top:504px">Same angle at the centre: equal chords</div></div>
+      <div class="card rf" id="lr"><div class="lbl" id="lrL0" style="left:36px;top:30px">THE FOUR POINTS</div><div class="lbl" id="lrL1" style="left:36px;top:30px">PROOF · 4 STEPS</div>
+        <div id="cRows"></div>
+        <div class="hiBox" id="pHi" style="left:20px;width:744px;height:100px"></div>
+        <div id="pSt"></div></div>
+    </div>
+
+    <!-- E: the family + live x, y -->
+    <div id="sE">
+      <div class="card full" id="el"><div class="lbl" style="left:36px;top:30px">THE WHOLE FAMILY</div><div class="hiBox" id="eHi" style="left:20px;width:744px;height:104px"></div><div id="eSt"></div></div>
+      <div class="card rf" id="er"><div class="lbl" style="left:36px;top:30px">LIVE · MOVE BOTH ANGLES</div><svg id="eS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="rAng"></div>
+        <div class="rb" id="rb0" style="top:150px"><div class="k" id="rk0"></div><div class="v" id="rv0" style="color:var(--ink)"></div></div>
+        <div class="rb" id="rb1" style="top:250px"><div class="k" id="rk1"></div><div class="v" id="rv1" style="color:var(--ok)"></div></div>
+        <div class="rb" id="rb2" style="top:350px"><div class="k" id="rk2"></div><div class="v" id="rv2" style="color:var(--red)"></div></div>
+        <div class="pillp" id="eP" style="left:36px;top:496px;background:var(--okBg);color:#1F6B3F">The formula always matches</div></div>
+    </div>
+
+    <!-- K: side by side + pause and think -->
+    <div id="sK">
+      <div class="card full" id="ka"><div class="lbl" style="left:36px;top:30px">SINE MIXES · KEEPS THE SIGN</div><div class="bf" id="kaF"></div><div id="kaT"></div><div id="kaR"></div></div>
+      <div class="card rf" id="kb"><div class="lbl" style="left:36px;top:30px">COSINE PAIRS · FLIPS THE SIGN</div><div class="bf" id="kbF"></div><div id="kbT"></div><div id="kbR"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">15° = 45° - 30°</div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="620" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Sine <span class="acc">mixes</span>. Cosine pairs and flips.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

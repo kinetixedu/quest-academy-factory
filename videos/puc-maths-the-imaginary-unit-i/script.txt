@@ -1,0 +1,54 @@
+H1|0.4|What is i to the power one hundred and three? It looks like a monster. i times i times i, one hundred and three times.
+H2|0.45|You can answer it in three seconds, without a calculator.
+H3|0.35|Aarav found the secret in his notebook last night. He wrote down the powers of i, one by one.
+H4|0.5|i, minus one, minus i, one. Then i again, minus one again. After four lines, the list started to repeat.
+H5|0.65|Why every four? Let us find out.
+P1|0.35|Last time we met i, the number whose square is minus one.
+P2|0.4|In symbols, i is the square root of minus one, so i squared is minus one. It is called the imaginary unit.
+P3|0.65|Imaginary is only a name. It does not mean fake. The symbol i was first used by the great mathematician Euler.
+D1|0.35|Now build the powers, one step at a time. Each new power is the last one, times i.
+D2|0.75|Step one. i to the power one is just i.
+D3|0.75|Step two. i squared is minus one. That is the definition.
+D4|0.75|Step three. i cubed is i squared times i. Minus one times i is minus i.
+D5|0.75|Step four. i to the four is i squared times i squared. Minus one times minus one is one.
+D6|0.75|Step five. i to the five is i to the four times i. One times i is i. We are back at the start.
+L1|0.35|Now watch the same thing as a picture.
+L2|0.4|Put one on the right and minus one on the left. Put i straight up, and minus i straight down.
+L3|0.4|Multiplying by i turns a point a quarter turn, anticlockwise.
+L4|0.4|Start at one, and let the power n count up. A quarter turn takes one to i. Another takes i to minus one. Then minus i. Then home to one.
+L5|0.65|Four quarter turns make one full turn. That is why the powers repeat every four.
+R1|0.4|So here is the shortcut. Divide the power by four. Only the remainder matters.
+R2|0.6|Remainder zero gives one. Remainder one gives i. Remainder two gives minus one. Remainder three gives minus i.
+R3|0.65|Back to the hook. One hundred and three is four times twenty five, plus three. Remainder three, so i to the one hundred and three is minus i.
+R4|0.65|It even works backwards. i to the minus one is a quarter turn the other way. It is minus i.
+R5|3.2|Your turn. Is i to the power twenty two equal to one, or minus one? Pause and think.
+R6|0.65|Minus one! Twenty two is four times five, plus two. Remainder two gives minus one.
+T1|0.7|Remember this. The powers of i go round in fours: i, minus one, minus i, one.
+S1|0.4|Now, square roots of negative numbers. Minus i squared is also minus one, because minus times minus is plus.
+S2|0.4|So minus one has two square roots, i and minus i.
+S3|0.6|But the symbol, root minus one, means just one of them: i. In the same way, root four means two, not minus two.
+S4|0.6|So for any positive number a, root minus a is root a times i. Root minus nine is three i.
+S5|3.2|Quick check. Root minus sixteen. Is it four i, or minus four i? Pause and think.
+S6|0.65|Four i! The root symbol picks the one root: root sixteen times i.
+W1|0.35|Now, one worked example.
+W2|0.5|Find i to the ten, plus i to the eleven, plus i to the twelve, plus i to the thirteen.
+W3|0.75|Step one. Ten leaves remainder two, so i to the ten is minus one.
+W4|0.75|Step two. Eleven leaves remainder three, so i to the eleven is minus i.
+W5|0.75|Step three. Twelve leaves remainder zero, and thirteen leaves remainder one. They give one, and i.
+W6|0.75|Step four. Add them. Minus one, minus i, plus one, plus i. Everything cancels. The sum is zero.
+W7|0.65|On the picture, the four moves go round a square and end where they began. Any four powers in a row add to zero.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students write root minus four times root minus nine as root thirty six, which is six.
+X3|0.65|But the rule root a times root b equals root a b breaks when both numbers are negative. Root minus four is two i, root minus nine is three i, and two i times three i is six i squared. That is minus six.
+J1|0.6|Where is this asked? In JEE Main, for example in September twenty twenty, a question needed a power of i to equal one. And in PUC boards, from this NCERT section: simplify powers of i.
+Q1|5.4|Exam level now. What is the sum of i to the n, for n from one to two thousand and twenty six? Pause and solve.
+A1|0.5|The answer is C. Minus one plus i.
+A2|0.5|Any four powers in a row add to zero.
+A3|0.5|Two thousand and twenty six is four times five hundred and six, plus two. So the first two thousand and twenty four terms make full cycles. They add to zero.
+A4|0.6|Two terms are left. i to the two thousand and twenty five is i, and i to the two thousand and twenty six is minus one. The sum is minus one plus i.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What is i to the power fifty?
+Y3|0.9|Two. Why is root minus four times root minus nine not equal to six?
+Y4|1.1|Three. What is i to the minus two?
+N1|0.3|Next time: an address with two parts, which street and which floor. Every complex number has a real part and an imaginary part.

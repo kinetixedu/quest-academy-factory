@@ -1,0 +1,150 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 10 - Venn Diagrams</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 10: Venn diagrams (Proof board) ===== */
+:root{--x:#7A4FE0;--sa:#2F6FEB;--sb:#0E8F8F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.c3{top:270px;width:512px;height:580px}
+.x{color:var(--x)}.a{color:var(--ac)}.sa{color:var(--sa)}.sb{color:var(--sb)}
+/* title card */
+.lst{position:absolute;top:724px;width:520px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:54px;font:700 30px Poppins;white-space:nowrap}
+/* hook rows */
+.who{position:absolute;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.nm{height:52px;padding:0 18px;border-radius:10px;background:#fff;border:2.5px solid var(--line);display:inline-flex;align-items:center;font:600 24px Poppins;white-space:nowrap}
+.row{position:absolute;left:36px;display:flex;gap:12px}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* definition card */
+.dfT{position:absolute;left:36px;width:712px;font:700 36px/1.3 Poppins;letter-spacing:-.01em}
+.dfT b{color:var(--ac)}
+.kv{position:absolute;left:36px;width:712px;height:84px;border-radius:14px;background:var(--soft)}
+.kv svg{position:absolute;left:20px;top:12px}
+.kv .t{position:absolute;left:120px;top:14px;font:600 26px Poppins;white-space:nowrap}
+.kv .s{position:absolute;left:120px;top:50px;font:500 18px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+.hc{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:#fff;border:2.5px solid var(--ink)}
+.hc .k{position:absolute;left:24px;top:16px;font:600 16px 'IBM Plex Mono';letter-spacing:.1em;color:var(--mute);white-space:nowrap}
+.hc .n{position:absolute;left:24px;top:42px;font:700 32px Poppins;white-space:nowrap}
+.hc .d{position:absolute;left:24px;top:84px;font:500 18px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+.cnt{position:absolute;height:52px;padding:0 18px;border-radius:10px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+.ro2{position:absolute;left:36px;font-size:30px;white-space:nowrap}
+/* region rows */
+.rg{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.rg .sw{position:absolute;left:20px;top:22px;width:52px;height:52px;border-radius:12px;border:2.5px solid var(--line)}
+.rg .f{position:absolute;left:96px;top:10px;font-size:36px;white-space:nowrap}
+.rg .w{position:absolute;left:96px;top:58px;font:500 20px Poppins;color:var(--mute);white-space:nowrap}
+.rg .p{position:absolute;right:20px;top:26px;font:600 24px Poppins;color:var(--x);white-space:nowrap}
+/* three relationships */
+.c3 .cap2{position:absolute;left:32px;top:404px;font:700 30px Poppins;white-space:nowrap}
+.c3 .sub2{position:absolute;left:32px;top:450px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.c3 .ex{position:absolute;left:32px;top:500px;font-size:26px;white-space:nowrap}
+/* three sets */
+.q3{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--soft)}
+.q3 .n{position:absolute;left:18px;top:16px;width:44px;height:44px;border-radius:50%;background:#fff;border:2.5px solid var(--ac);color:var(--ac);font:700 21px Poppins;display:flex;align-items:center;justify-content:center}
+.q3 .t{position:absolute;left:82px;top:20px;font:600 26px Poppins;white-space:nowrap}
+.q3 .yn{position:absolute;right:18px;top:16px;height:44px;padding:0 14px;border-radius:9px;background:#fff;border:2px solid var(--line);display:inline-flex;align-items:center;font:600 20px 'IBM Plex Mono';white-space:nowrap}
+#zM{position:absolute;left:36px;top:400px;font:600 56px 'IBM Plex Mono';white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:64px;font:600 28px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.1em}
+#wl .sol .sx{font-size:28px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+#so .sol .sx .katex{font-size:1.05em}
+#mq .mq{font-size:32px}
+#mq .opt .ot .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 1 SETS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Venn <span class="acc">Diagrams</span></div>
+    <div id="sub">Explained by sorting one class</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">TWO LISTS · NAMES REPEAT</div><div id="hcs"></div>
+        <div class="pillp bad" id="hlP" style="left:36px;top:496px">Meera is written twice</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA · THE CLASS TIMETABLE</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">Two circles instead of two lists</div></div>
+    </div>
+
+    <!-- V: what a Venn diagram is + live sort -->
+    <div id="sV">
+      <div class="card full" id="vd"><div class="lbl" style="left:36px;top:30px">VENN DIAGRAM · NCERT</div>
+        <div class="dfT" id="vdT" style="top:80px">Sets drawn as <b>shapes</b>.</div>
+        <div class="kv" id="vk0" style="top:160px"><svg width="80" height="60"><rect x="4" y="6" width="72" height="48" rx="6" fill="none" stroke="#16213E" stroke-width="3"/></svg><div class="t">Universal set U: a rectangle</div><div class="s">everything we are talking about</div></div>
+        <div class="kv" id="vk1" style="top:258px"><svg width="80" height="60"><rect x="4" y="6" width="72" height="48" rx="6" fill="none" stroke="#B8BCC6" stroke-width="2"/><circle cx="40" cy="30" r="18" fill="none" stroke="#2F6FEB" stroke-width="3"/></svg><div class="t">Each subset: a circle inside it</div><div class="s">one circle for each set</div></div>
+        <div class="hc" id="vh" style="top:384px"><div class="k">NAMED AFTER</div><div class="n">John Venn</div><div class="d">English logician · 1834-1923</div></div></div>
+      <div class="card rf" id="vv"><div class="lbl" style="left:36px;top:30px">LIVE · SORT THE CLASS</div>
+        <svg id="vS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- R: four regions -->
+    <div id="sR">
+      <div class="card full" id="rv"><div class="lbl" style="left:36px;top:30px">TWO CIRCLES · FOUR REGIONS</div><svg id="rS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="rl"><div class="lbl" style="left:36px;top:30px">EACH REGION HAS A NAME</div><div id="rgs"></div></div>
+    </div>
+
+    <!-- K: three ways circles meet + think -->
+    <div id="sK">
+      <div class="card c3" id="k0" style="left:160px"><div class="lbl" style="left:32px;top:30px">SUBSET</div><svg width="512" height="400" style="position:absolute;left:0;top:0"></svg><div class="cap2">A inside B</div><div class="sub2">every element of A is in B</div><div class="ex"></div></div>
+      <div class="card c3" id="k1" style="left:704px"><div class="lbl" style="left:32px;top:30px">DISJOINT</div><svg width="512" height="400" style="position:absolute;left:0;top:0"></svg><div class="cap2">Apart</div><div class="sub2">no element shared</div><div class="ex"></div></div>
+      <div class="card c3" id="k2" style="left:1248px"><div class="lbl" style="left:32px;top:30px">OVERLAP</div><svg width="512" height="400" style="position:absolute;left:0;top:0"></svg><div class="cap2">Overlapping</div><div class="sub2">some shared, not all</div><div class="ex"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- P: shading -->
+    <div id="sP">
+      <div class="card full" id="pv"><div class="lbl" style="left:36px;top:30px">LIVE · SHADE THE REGION</div><div class="cnt" id="pCur" style="right:36px;top:18px"></div><svg id="pS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="pl"><div class="lbl" style="left:36px;top:30px">OPERATIONS AS SHADED REGIONS</div><div class="hiBox" id="pHi" style="left:20px;width:744px;height:108px"></div><div id="pRs"></div></div>
+    </div>
+
+    <!-- Z: three sets + think -->
+    <div id="sZ">
+      <div class="card full" id="zv"><div class="lbl" style="left:36px;top:30px">THREE SETS</div><div class="cnt" id="zCnt" style="right:36px;top:18px"></div><svg id="zS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="zq"><div class="lbl" style="left:36px;top:30px">EVERY ELEMENT ANSWERS 3 QUESTIONS</div><div id="zRs"></div><div id="zM"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">PLACE EVERY NUMBER</div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="wP" style="left:36px;top:496px">4 + 1 + 2 + 3 = 10 · each number once</div></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"><svg id="mS" width="420" height="400" style="position:absolute;left:600px;top:212px"></svg></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Every element in exactly <span class="acc">one</span> region.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

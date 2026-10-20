@@ -1,0 +1,49 @@
+H1|0.4|Aarav lives on a long, straight road. Ride three kilometres east, and he is three kilometres from home.
+H2|0.45|Ride three kilometres west, and he is still three kilometres from home. Not minus three.
+H3|0.35|Aarav noticed this on his ride to college.
+H4|0.5|Direction can be negative. Distance never is. Which function knows the difference?
+H5|0.65|The modulus function. And with it today, the rational function, which has a gap you can never cross.
+M1|0.4|Put home at zero on a number line. East is positive, west is negative. Call his position x.
+M2|0.4|His distance from home is written as x between two straight bars. We read it as mod x.
+M3|0.75|The rule has two parts. If x is zero or more, mod x is just x. If x is negative, mod x is minus x.
+M4|0.75|Minus x for a negative x? Yes. If x is minus three, then minus x is minus, minus three. That is plus three. The minus sign flips it back.
+M5|0.65|So mod x is never negative. Its domain is R, and its range is zero and every positive number.
+L1|0.4|Now watch the graph draw, as Aarav rides from four kilometres west to four kilometres east.
+L2|0.4|On the west side, his distance falls as he gets closer. At home, it touches zero. On the east side, it rises again.
+L3|0.65|The result is a V, with its corner at the origin. The left arm is y equals minus x. The right arm is y equals x.
+L4|0.65|Now measure from a friend's house at k instead. The distance is mod of x minus k. Watch k slide, and the whole V slides with it.
+K1|0.4|Side by side. The identity, y equals x, keeps the sign. Minus three stays minus three.
+K2|0.6|The modulus, y equals mod x, removes the sign. Minus three becomes three. For positive inputs, the two agree.
+K3|3.2|Now you try. Is mod x equal to x for every real number x? Pause and decide.
+K4|0.65|No! Only when x is zero or more. If x is minus two, mod x is two, but x is minus two.
+T1|0.7|Remember this. Modulus keeps the size, and throws away the sign.
+R1|0.4|Now, rational functions. A rational function is one polynomial divided by another, f of x over g of x, where g of x is not zero.
+R2|0.4|The simplest is one over x. Its domain is every real number except zero, because we can never divide by zero.
+R3|0.4|Watch x come closer to zero from the right. One over one is one. One over a tenth is ten. One over a hundredth is a hundred.
+R4|0.4|The curve shoots upward, but it never touches the y axis. Come in from the left, and it shoots downward.
+R5|0.65|And when x is huge, one over x is tiny. The curve hugs the x axis, but never reaches it.
+R6|3.2|Quick one. Is zero in the range of one over x? Pause and think.
+R7|0.65|No! One divided by any number is never zero. So the range of one over x is R, minus zero.
+W1|0.35|Now, one worked example.
+W2|0.5|Solve mod of x minus two equals five.
+W3|0.75|Step one. Mod of x minus two is the distance of x from two. So we want points five away from two.
+W4|0.75|Step two. If x minus two is zero or more, x minus two equals five. So x is seven.
+W5|0.75|Step three. If x minus two is negative, minus of x minus two equals five. So x is minus three.
+W6|0.75|Step four. Check. Seven minus two is five. Minus three minus two is minus five, and its mod is five.
+W7|0.65|Two answers: seven and minus three. One on each side of two, like the two arms of the V.
+X1|0.35|Now, the exam trap.
+X2|0.4|What is the square root of x squared? Many students cancel the root and the square, and write x.
+X3|0.65|But try x equals minus four. x squared is sixteen, and the square root of sixteen is four, not minus four. The square root of x squared is mod x.
+J1|0.6|Where is this asked? In JEE Main, as equations with mod, where you count the solutions. And in PUC board papers, as find the domain and range of a modulus function.
+Q1|5.4|Exam level now. How many real solutions does this equation have? Pause and solve.
+A1|0.5|The answer is D. Infinitely many.
+A2|0.5|Read it as distances. Mod x minus one is the distance from one. Mod x minus three is the distance from three.
+A3|0.5|The two points, one and three, are exactly two apart.
+A4|0.5|For any x between one and three, the two distances add up to exactly two.
+A5|0.6|Outside that stretch, the sum is more than two. So every x from one to three works. Infinitely many solutions.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What is mod of minus seven?
+Y3|0.9|Two. What is the domain of one over x minus four?
+Y4|1.1|Three. Solve mod of x plus one equals three.
+N1|0.3|Next time: age is counted in completed years. Sixteen point nine years old is still sixteen. Meet the signum and greatest integer functions.

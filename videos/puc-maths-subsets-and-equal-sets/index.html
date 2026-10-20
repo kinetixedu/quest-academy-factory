@@ -1,0 +1,155 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 5 - Subsets and Equal Sets</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 05: subsets and equal sets (Proof board) ===== */
+:root{--x:#7A4FE0;--sa:#2F6FEB;--sab:#E7EEFD;--sb:#0E8F8F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.x{color:var(--x)}.a{color:var(--ac)}.sa{color:var(--sa)}.sb{color:var(--sb)}
+/* title card */
+.lst{position:absolute;top:716px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:52px;font:700 30px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* definition */
+#dfT,#eqT{position:absolute;left:36px;top:84px;width:712px;font:700 42px/1.28 Poppins;letter-spacing:-.015em}
+#dfT b,#eqT b{color:var(--ac)}
+.sy{position:absolute;left:36px;font-size:56px;white-space:nowrap}
+.syw{position:absolute;left:36px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+/* steps */
+.st{position:absolute;left:36px;width:712px;height:112px}
+.st .n{position:absolute;left:0;top:8px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:44px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:66px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+/* equal sets: ALLOY / LOYAL */
+.lt{position:absolute;width:60px;height:60px;border-radius:10px;background:#fff;border:2.5px solid var(--ink);display:flex;align-items:center;justify-content:center;font:700 32px Poppins;color:var(--ink)}
+.eqs{position:absolute;left:420px;font-size:40px;white-space:nowrap}
+.wl{position:absolute;left:36px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+#eChk{position:absolute;left:36px;top:356px;font-size:38px;white-space:nowrap}
+/* number sets */
+.ch{position:absolute;left:36px;font-size:46px;white-space:nowrap}
+.chw{position:absolute;left:36px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+/* side by side */
+.bf{position:absolute;left:36px;top:92px;font-size:60px;white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:64px;font:600 30px/1.4 Poppins;width:712px}
+#wl .sol .sx{font-size:30px}
+#wl .sol .sx .katex{font-size:1.1em}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.1em}
+#mq .mq{line-height:1.5}
+#mq .mq .katex{font-size:1.05em}
+.trapL .tx .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 1 SETS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Subsets and Equal <span class="acc">Sets</span></div>
+    <div id="sub">Explained with two lists of subjects</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="lst" id="ls0" style="left:290px;width:560px"><div class="ln sa">NEET · 3 SUBJECTS</div><div class="lv">Physics, Chemistry, Biology</div></div>
+    <div class="lst" id="ls1" style="left:882px;width:748px"><div class="ln sb">PUC SCIENCE · 4 SUBJECTS</div><div class="lv">Physics, Chemistry, Maths, Biology</div></div>
+
+    <!-- H: nested sets + Diya -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">TWO SETS OF SUBJECTS</div>
+        <svg id="hS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="hP" style="left:36px;top:496px">Inside one way only</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA · HER STUDY TIMETABLE</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">Every NEET subject is a PUC subject</div></div>
+    </div>
+
+    <!-- S: definition + live check -->
+    <div id="sS">
+      <div class="card full" id="df"><div class="lbl" style="left:36px;top:30px">DEFINITION · NCERT</div>
+        <div id="dfT">A is a <b>subset</b> of B if every element of A is also an element of B.</div>
+        <div class="sy" id="sy1" style="top:300px"></div><div class="syw" id="sw1" style="top:380px">A is a subset of B</div>
+        <div class="sy" id="sy2" style="top:430px"></div><div class="syw" id="sw2" style="top:510px">A is not a subset of B</div></div>
+      <div class="card rf" id="ck"><div class="lbl" style="left:36px;top:30px" id="ckL">LIVE · CHECK EVERY ELEMENT</div>
+        <svg id="cS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp good" id="ckP1" style="left:36px;top:496px"></div><div class="pillp bad" id="ckP2" style="left:400px;top:496px"></div></div>
+    </div>
+
+    <!-- V: two facts -->
+    <div id="sV">
+      <div class="card full" id="vl"><div class="lbl" style="left:36px;top:30px">TWO FACTS FROM THE DEFINITION</div>
+        <div class="hiBox" id="vHi" style="left:20px;width:744px;height:112px"></div><div id="vSt"></div>
+        <div class="pillp" id="vP" style="left:36px;top:400px">No element can fail the check</div></div>
+      <div class="card rf" id="vr"><div class="lbl" style="left:36px;top:30px">THE PICTURE</div>
+        <svg id="vS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- E: equal sets -->
+    <div id="sE">
+      <div class="card full" id="el"><div class="lbl" style="left:36px;top:30px">EQUAL SETS · NCERT</div>
+        <div id="eqT">A and B are <b>equal</b> if they have exactly the same elements.</div>
+        <div class="sy" id="eqF" style="top:262px;font-size:40px"></div><div class="syw" id="eqW" style="top:330px">check both directions</div>
+        <div class="lbl" id="prL" style="left:36px;top:394px">PROPER SUBSET</div><div class="sy" id="prF" style="top:428px;font-size:36px"></div></div>
+      <div class="card rf" id="er"><div class="lbl" style="left:36px;top:30px">LIVE · ALLOY AND LOYAL</div><div id="eW"></div>
+        <div id="eChk"></div><div class="pillp good" id="eP" style="left:36px;top:470px">Equal sets</div></div>
+    </div>
+
+    <!-- Z: number sets nested -->
+    <div id="sZ">
+      <div class="card full" id="zl"><div class="lbl" style="left:36px;top:30px">NUMBER SETS, ONE INSIDE ANOTHER</div>
+        <svg id="zS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="zr"><div class="lbl" style="left:36px;top:30px">IN SYMBOLS</div>
+        <div class="ch" id="zc0" style="top:92px"></div><div class="chw" id="zw0" style="top:162px">each set sits inside the next</div>
+        <div class="ch" id="zc1" style="top:226px"></div><div class="chw" id="zw1" style="top:296px">irrationals like √2 and π</div>
+        <div class="ch" id="zc2" style="top:360px"></div><div class="chw" id="zw2" style="top:430px">no natural number is irrational</div></div>
+    </div>
+
+    <!-- K: belongs to vs subset -->
+    <div id="sK">
+      <div class="card full" id="ka"><div class="lbl" style="left:36px;top:30px">BELONGS TO · ELEMENT TO SET</div><div class="bf" id="kaF"></div>
+        <svg id="kaS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="kaP" style="left:36px;top:490px">An element belongs</div></div>
+      <div class="card rf" id="kb"><div class="lbl" style="left:36px;top:30px">SUBSET · SET TO SET</div><div class="bf" id="kbF"></div>
+        <svg id="kbS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="kbP" style="left:36px;top:490px">Curly brackets on both sides</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">THE PICTURE · A AND B INSIDE C</div>
+        <svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Every element of A, <span class="acc">inside</span> B.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

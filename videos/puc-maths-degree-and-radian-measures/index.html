@@ -1,0 +1,158 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 24 - Degree and Radian Measures</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 24: degree and radian measures (Proof board, Chapter 3 opens) ===== */
+:root{--th:#7A4FE0;--arc:#0E8F8F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.th{color:var(--th)}.arc{color:var(--arc)}
+/* title card */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:50px;font:600 40px 'IBM Plex Mono';white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* readouts */
+.rd{position:absolute;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+.rd small{font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);display:block;margin-bottom:2px}
+/* definitions */
+.dfT{position:absolute;left:36px;top:84px;width:712px;font:700 44px/1.25 Poppins;letter-spacing:-.015em}
+.dfT b{color:var(--ac)}
+.an{position:absolute;left:36px;height:52px;padding:0 16px;border-radius:10px;background:var(--soft);display:inline-flex;align-items:center;gap:12px;font:600 22px Poppins;white-space:nowrap}
+.an b{font:600 18px 'IBM Plex Mono';letter-spacing:.06em}
+/* steps */
+.st{position:absolute;left:36px;width:712px;height:136px}
+.st .n{position:absolute;left:0;top:10px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:2px;font-size:46px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:76px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+.pf{position:absolute;left:36px;width:712px;height:92px}
+.pf .n{position:absolute;left:0;top:8px;width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 21px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.pf .sx{position:absolute;left:66px;top:0;font-size:38px;white-space:nowrap}
+.pf .why{position:absolute;left:66px;top:56px;font:500 20px Poppins;color:var(--mute);white-space:nowrap}
+.dv{position:absolute;top:500px;height:48px;padding:0 14px;border-radius:10px;background:var(--soft);display:inline-flex;align-items:center;font:600 22px 'IBM Plex Mono';white-space:nowrap}
+.rl{position:absolute;left:36px;font-size:36px;white-space:nowrap}
+#wq{position:absolute;left:36px;top:64px;font:600 28px/1.4 Poppins;width:712px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.25em}
+#mq .mq{font-size:32px}
+#mq .opt .ot .katex{font-size:1.25em}
+#wl .sol .sx{font-size:26px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 3 TRIGONOMETRIC FUNCTIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Degrees and <span class="acc">Radians</span></div>
+    <div id="sub">Measuring a turn by the arc it rolls</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: the rolling wheel + Aarav -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">THE WHEEL · HOW FAR DID IT TURN?</div>
+        <svg id="hS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="rd" id="hDeg" style="left:36px;top:76px"><small>TURNED</small><span></span></div>
+        <div class="rd arc" id="hRoad" style="left:300px;top:76px"><small>ROAD ROLLED</small>?</div>
+        <div class="pillp ac" id="hP" style="left:36px;top:500px">Can the road measure the turn?</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · RIDING TO COLLEGE</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg">
+        <div class="pillp" id="hkP" style="left:36px;top:500px">New chapter · Ch 3 Trigonometric Functions</div></div>
+    </div>
+
+    <!-- G: what an angle is + a live turning ray -->
+    <div id="sG">
+      <div class="card full" id="gd"><div class="lbl" style="left:36px;top:30px">DEFINITION · NCERT</div>
+        <div class="dfT" id="gT">An angle is a measure of <b>rotation</b> of a ray about its initial point.</div>
+        <div class="an" id="ga0" style="top:330px"><b>INITIAL SIDE</b>where the ray starts</div>
+        <div class="an" id="ga1" style="top:398px"><b class="th">TERMINAL SIDE</b>where the ray stops</div>
+        <div class="an" id="ga2" style="top:466px"><b>VERTEX</b>the point it turns about</div></div>
+      <div class="card rf" id="gr"><div class="lbl" style="left:36px;top:30px">LIVE · A RAY TURNS</div>
+        <svg id="gS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="rd" id="gRd" style="right:36px;top:22px;text-align:right"><small>PART OF A FULL TURN</small><span></span></div></div>
+    </div>
+
+    <!-- D: the degree -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">ONE FULL TURN · 360 EQUAL SLICES</div>
+        <svg id="dS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="rd" id="dRd" style="right:36px;top:22px;text-align:right"><small>SLICES</small><span></span></div>
+        <div id="dvs"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">THE DEGREE · 3 FACTS</div><div id="dSt"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- R: the radian + live wrap -->
+    <div id="sR">
+      <div class="card full" id="rd"><div class="lbl" style="left:36px;top:30px">DEFINITION · NCERT</div>
+        <div class="dfT" id="rT" style="font-size:40px"><b>1 radian</b> is the angle at the centre made by an arc as long as the radius.</div>
+        <div class="lbl" id="rL0" style="left:36px;top:296px">IN A UNIT CIRCLE · RADIUS 1</div><div class="rl" id="rF0" style="top:330px"></div>
+        <div class="lbl" id="rL1" style="left:36px;top:412px">IN ANY CIRCLE · RADIUS r</div><div class="rl" id="rF1" style="top:446px"></div></div>
+      <div class="card rf" id="rw"><div class="lbl" style="left:36px;top:30px">LIVE · LAY THE RADIUS AROUND THE RIM</div>
+        <svg id="rS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="rd th" id="rRd" style="left:36px;top:470px"><small>ANGLE SO FAR</small><span></span></div>
+        <div class="pillp ac" id="rP" style="right:36px;top:500px">Full turn = 2π ≈ 6.28 rad</div></div>
+    </div>
+
+    <!-- V: proof of theta = l / r -->
+    <div id="sV">
+      <div class="card full" id="vl"><div class="lbl" style="left:36px;top:30px">PROOF · 4 STEPS</div><div class="hiBox" id="vHi" style="left:20px;width:744px;height:88px"></div><div id="vSt"></div></div>
+      <div class="card rf" id="vr"><div class="lbl" style="left:36px;top:30px">THE PICTURE · SAME COLOURS</div>
+        <svg id="vS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="rd th" id="vTh" style="left:36px;top:470px"><small>ANGLE θ</small><span></span></div>
+        <div class="rd arc" id="vL" style="left:300px;top:470px"><small>ARC l</small><span></span></div></div>
+    </div>
+
+    <!-- S: degree vs radian + think -->
+    <div id="sS">
+      <div class="card full" id="sd"><div class="lbl" style="left:36px;top:30px">DEGREE · A NUMBER PEOPLE CHOSE</div>
+        <svg id="sdS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="sdP" style="left:36px;top:500px">Full turn = 360 parts</div></div>
+      <div class="card rf" id="sr"><div class="lbl" style="left:36px;top:30px">RADIAN · A NUMBER THE CIRCLE GIVES</div>
+        <svg id="srS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="srP" style="left:36px;top:390px">Full turn = 2π ≈ 6.28</div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">THE WHEEL ROLLS 1 METRE</div>
+        <div class="ghost" style="right:36px;top:22px">EXAMPLE FIGURES</div>
+        <svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="rd arc" id="wRo" style="left:36px;top:76px"><small>ROAD = ARC l</small><span></span></div>
+        <div class="rd th" id="wTh" style="left:330px;top:76px"><small>ANGLE θ</small><span></span></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="520" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Arc = radius: <span class="acc">one radian</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

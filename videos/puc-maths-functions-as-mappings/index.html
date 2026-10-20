@@ -1,0 +1,146 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 16 - Functions as Mappings</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 16: functions as mappings (Proof board) ===== */
+:root{--sa:#2F6FEB;--sb:#0E8F8F;--sab:#E7EEFD;--sbb:#DDF1F1}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.sa{color:var(--sa)}.sb{color:var(--sb)}.a{color:var(--ac)}
+/* title card chips */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:54px;font:700 30px Poppins;white-space:nowrap}
+/* hook */
+.dl{position:absolute;left:36px;width:712px;height:64px;border-radius:12px;background:var(--soft)}
+.dl .nm{position:absolute;left:22px;top:14px;font:600 26px Poppins;white-space:nowrap}
+.dl .gp{position:absolute;right:16px;top:10px;height:44px;min-width:70px;padding:0 14px;border-radius:10px;background:var(--sbb);color:var(--sb);display:flex;align-items:center;justify-content:center;font:700 24px Poppins;white-space:nowrap}
+.dl .gp.no{background:#fff;border:2px dashed var(--dim);color:var(--mute);font:600 18px 'IBM Plex Mono';letter-spacing:.06em}
+#hDi{position:absolute;left:36px;top:84px;width:378px;height:468px;object-fit:contain;object-position:50% 100%}
+#hkQ{position:absolute;left:424px;top:110px;width:330px;font:700 36px/1.3 Poppins}
+#hkP{left:424px;top:340px}
+#hQ{position:absolute;left:36px;top:470px}
+/* checks */
+.ck{position:absolute;left:36px;width:712px;height:236px;border-radius:14px;background:var(--soft)}
+.ck .k{position:absolute;left:22px;top:18px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.ck .v{position:absolute;left:22px;top:52px;font:700 28px Poppins;white-space:nowrap}
+#dfT{position:absolute;left:36px;top:84px;width:712px;font:700 36px/1.34 Poppins;letter-spacing:-.01em}
+#dfT b{color:var(--ac)}
+#dfF{position:absolute;left:36px;top:440px;font-size:48px;white-space:nowrap}
+#dfL2{left:36px;top:396px}
+.pa{position:absolute;height:48px;padding:0 18px;border-radius:10px;display:inline-flex;align-items:center;font:600 22px Poppins;white-space:nowrap}
+.vd{position:absolute;height:52px;padding:0 18px;border-radius:10px;display:inline-flex;align-items:center;gap:10px;font:700 24px Poppins;color:#fff;white-space:nowrap}
+.lg{position:absolute;left:36px;width:712px;height:128px;border-radius:14px;background:var(--soft)}
+.lg .k{position:absolute;left:22px;top:16px;font:600 20px 'IBM Plex Mono';white-space:nowrap}
+.lg .v{position:absolute;left:22px;top:50px;font-size:28px;white-space:nowrap}
+.lg .r{position:absolute;right:18px;top:14px;height:40px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;color:#fff;white-space:nowrap}
+.lg .w{position:absolute;left:22px;top:92px;font:500 20px Poppins;color:var(--mute);white-space:nowrap}
+.bf{position:absolute;left:36px;top:430px;font-size:36px;white-space:nowrap}
+#vF1{position:absolute;left:36px;top:84px;font-size:72px;white-space:nowrap}
+#vF2{position:absolute;left:36px;top:300px;font-size:72px;white-space:nowrap}
+/* proof */
+.st{position:absolute;left:36px;width:712px;height:92px}
+.st .n{position:absolute;left:0;top:4px;width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 21px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:66px;top:0;font-size:34px;white-space:nowrap}
+.st .why{position:absolute;left:66px;top:50px;font:500 21px Poppins;color:var(--mute);white-space:nowrap}
+#cRd{position:absolute;left:36px;top:76px;font:600 40px/1 'IBM Plex Mono';white-space:nowrap}
+#cRo{position:absolute;left:36px;top:470px;font-size:34px;white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:64px;font:600 28px/1.4 Poppins;width:712px}
+#wl .sol .sx{font-size:28px}
+#wl .sol .sx .katex{font-size:1.08em}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+#so .sol .sx .katex{font-size:1.1em}
+#mq .mq{font-size:30px}
+#mq .mq .katex{font-size:1.08em}
+.trapL .tx .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 30px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:42px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 2 RELATIONS AND FUNCTIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Exactly <span class="acc">One</span> Arrow</div>
+    <div id="sub">Functions as mappings, explained with one class register</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">THE CLASS REGISTER · ROLL TO NAME</div><div id="hRows"></div>
+        <div class="pillp bad" id="hQ">Group O: 2 names · Group AB: none</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · ATTENDANCE</div>
+        <img id="hDi" src="../../assets/illustrations/puc/aarav.png">
+        <div id="hkQ">Why does one list always give <span class="a">one</span> answer?</div>
+        <div class="pillp ac" id="hkP">The register is a function</div></div>
+    </div>
+
+    <div id="sD">
+      <div class="card full" id="df"><div class="lbl" style="left:36px;top:30px">DEFINITION · NCERT</div>
+        <div id="dfT">A relation f from a set A to a set B is a <b>function</b> if every element of A has one and only one image in B.</div>
+        <div class="lbl" id="dfL2">IN SHORT</div><div class="pillp ac" id="dfP" style="left:36px;top:440px">Every element of A sends exactly one arrow</div></div>
+      <div class="card rf" id="dk"><div class="lbl" style="left:36px;top:30px">TWO CHECKS · BOTH MUST PASS</div>
+        <div class="ck" id="ck0" style="top:84px"><div class="k" style="color:var(--sa)">CHECK 1 · NO ELEMENT LEFT OUT</div><div class="v">Every element of A has an image</div><svg id="ck0S" width="712" height="236" style="position:absolute;left:0;top:0"></svg></div>
+        <div class="ck" id="ck1" style="top:336px"><div class="k" style="color:var(--sa)">CHECK 2 · NO DOUBLE ARROWS</div><div class="v">Each element has only one image</div><svg id="ck1S" width="712" height="236" style="position:absolute;left:0;top:0"></svg></div></div>
+    </div>
+
+    <div id="sL">
+      <div class="card full" id="la"><div class="lbl" style="left:36px;top:30px" id="lLbl">LIVE · THE FUNCTION TEST</div><svg id="lS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="vd" id="lV0" style="right:36px;top:18px;background:var(--ok)">FUNCTION</div><div class="vd" id="lV1" style="right:36px;top:18px;background:var(--red)">NOT A FUNCTION</div><div class="vd" id="lV2" style="right:36px;top:18px;background:var(--red)">NOT A FUNCTION</div></div>
+      <div class="card rf" id="lt"><div class="lbl" style="left:36px;top:30px">THE TEST LOG</div><div id="lLog"></div></div>
+    </div>
+
+    <div id="sG">
+      <div class="card full" id="gf"><div class="lbl" style="left:36px;top:30px">GRID PICTURE · ONE DOT PER COLUMN</div><svg id="gS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="gb"><div class="lbl" style="left:36px;top:30px">WHEN A COLUMN BREAKS THE RULE</div><svg id="gS2" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sS">
+      <div class="card full" id="so1"><div class="lbl" style="left:36px;top:30px;color:var(--red)">MANY ARROWS OUT OF ONE ELEMENT</div><svg id="soS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp bad" id="soP" style="left:36px;top:500px">Not allowed: two images</div></div>
+      <div class="card rf" id="si1"><div class="lbl" style="left:36px;top:30px;color:var(--ok)">MANY ARROWS INTO ONE ELEMENT</div><svg id="siS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp good" id="siP" style="left:36px;top:500px">Fine: a shared image</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sV">
+      <div class="card full" id="vn"><div class="lbl" style="left:36px;top:30px">HOW WE WRITE IT</div><div id="vF1"></div><div class="pa" id="vR1" style="left:36px;top:200px;background:var(--soft)">reads: f is a function from A to B</div><div id="vF2"></div><div class="pa" id="vR2" style="left:36px;top:416px;background:var(--soft)">reads: f of a equals b</div></div>
+      <div class="card rf" id="vp"><div class="lbl" style="left:36px;top:30px">IMAGE AND PREIMAGE</div><svg id="vS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="fx" id="vEx" style="left:36px;top:440px;font-size:44px"></div></div>
+    </div>
+
+    <div id="sC">
+      <div class="card full" id="cp"><div class="lbl" style="left:36px;top:30px">HOW MANY FUNCTIONS? · 4 STEPS</div><div class="ghost" id="cGh" style="right:28px;top:18px">BEYOND NCERT TEXT · JEE</div><div id="cSt"></div></div>
+      <div class="card rf" id="cl"><div class="lbl" style="left:36px;top:30px">LIVE · A = {1, 2, 3}, B = {4, 5}</div><div id="cRd"></div><svg id="cS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div id="cRo"></div></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">ARROW DIAGRAM · f : A → B</div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Every element of A sends exactly <span class="acc">one</span> arrow.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

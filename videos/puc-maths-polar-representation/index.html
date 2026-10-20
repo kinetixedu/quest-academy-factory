@@ -1,0 +1,116 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 44 - Polar Representation</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 44: polar representation (Proof board) ===== */
+:root{--re:#2F6FEB;--im:#E4572E;--iv:#7A4FE0;--mo:#0E8F8F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:54px;font:700 30px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:36px;top:84px;width:400px;height:300px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.ghost{z-index:2}
+.st{position:absolute;left:36px;width:712px;height:92px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:66px;top:0;font-size:38px;white-space:nowrap}
+.st .why{position:absolute;left:66px;top:54px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.big{position:absolute;left:36px;font:600 60px 'IBM Plex Mono';white-space:nowrap}
+.big .k{font-family:'KaTeX_Math';font-style:italic}
+.blb{position:absolute;left:36px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.pf{position:absolute;left:36px;font-size:40px;white-space:nowrap}
+.sf{position:absolute;left:36px;top:80px;font-size:44px;white-space:nowrap}
+#wq{position:absolute;left:36px;top:64px;font:600 30px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.2em}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.12em}
+#mq .mq .katex{font-size:1.08em}
+#wl .sol .sx{font-size:30px}
+.trapL .tx .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+.yr .q .katex{font-size:1.1em}
+#sF .fcard .fl{font-size:42px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 4 COMPLEX NUMBERS AND QUADRATIC EQUATIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Distance Plus <span class="acc">Angle</span></div>
+    <div id="sub">The polar form, explained with one ship and one bicycle</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">THE HARBOUR · ONE RADIO CALL</div><svg id="hlS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="hlP" style="left:36px;top:496px">5 km at 37°: found</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · TWO WAYS TO SAY IT</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg">
+        <svg id="hkS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="hkP1" style="left:36px;top:496px;background:#E7EEFD;color:var(--re)">4 east, 3 north</div>
+        <div class="pillp" id="hkP2" style="left:300px;top:496px;background:#E2F2F2;color:var(--mo)">5 km at 37°</div></div>
+    </div>
+
+    <!-- B: derivation -->
+    <div id="sB">
+      <div class="card full" id="bl"><div class="lbl" style="left:36px;top:30px">THE POLAR FORM · 4 STEPS</div>
+        <div class="ghost" id="bGh" style="right:36px;top:20px">NOT IN CURRENT NCERT TEXT · JEE</div>
+        <div class="hiBox" id="bHi" style="left:20px;width:744px;height:92px"></div><div id="bSt"></div>
+        <div class="pillp ac" id="bP" style="left:36px;top:496px">r = |z| &gt; 0 · θ = arg z</div></div>
+      <div class="card rf" id="br"><div class="lbl" style="left:36px;top:30px">THE TRIANGLE · z = 4 + 3i</div><svg id="bS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- L: live r and theta -->
+    <div id="sL">
+      <div class="card full" id="ll"><div class="lbl" style="left:36px;top:30px">LIVE · TWO DIALS</div>
+        <div class="blb" style="top:88px">HOW FAR · r</div><div class="big" id="lR" style="top:112px;color:var(--mo)"></div>
+        <div class="blb" style="top:208px">WHICH WAY · θ</div><div class="big" id="lT" style="top:232px;color:var(--iv)"></div>
+        <div class="pf" id="lP" style="top:340px"></div><div class="pf" id="lC" style="top:410px;font-size:36px"></div>
+        <div class="pf" id="lB" style="top:486px;font-size:34px"></div></div>
+      <div class="card rf" id="lr"><div class="lbl" style="left:36px;top:30px">z ON THE ARGAND PLANE</div><svg id="lS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- S + P: cartesian vs polar, then multiplying -->
+    <div id="sS">
+      <div class="card full" id="sc"><div class="lbl" style="left:36px;top:30px">CARTESIAN · ALONG AND UP</div><div class="sf" id="scF"></div><svg id="scS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="scP" style="left:36px;top:496px;background:#E7EEFD;color:var(--re)">Best for adding</div></div>
+      <div class="card rf" id="sp"><div class="lbl" style="left:36px;top:30px">POLAR · HOW FAR, WHICH WAY</div><div class="sf" id="spF"></div><svg id="spS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="spP" style="left:36px;top:496px;background:#E2F2F2;color:var(--mo)">Best for multiplying</div></div>
+      <div class="card full" id="pl"><div class="lbl" style="left:36px;top:30px">MULTIPLY IN POLAR FORM</div><div class="ghost" id="pGh" style="right:36px;top:20px">NOT IN CURRENT NCERT TEXT · JEE</div><div id="pSt"></div>
+        <div class="pillp ac" id="pP" style="left:36px;top:496px">The r's multiply · the angles add</div></div>
+      <div class="card rf" id="pr"><div class="lbl" style="left:36px;top:30px">TIMES i · A QUARTER TURN</div><svg id="pS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">THE PICTURE</div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="460" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Distance plus <span class="acc">angle</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

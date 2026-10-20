@@ -1,0 +1,153 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 36 - Trigonometric Equations</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 36: trigonometric equations (Proof board) ===== */
+:root{--cb:#2F6FEB;--x:#7A4FE0;--lv:#B7791F;--tn:#0E8F8F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+/* title card */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:50px;font-size:38px;white-space:nowrap}
+/* ghost chip */
+#gh{left:1004px;top:100px}
+/* hook */
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.bigv{position:absolute;font:600 60px/1 'IBM Plex Mono';white-space:nowrap}
+.sc{position:absolute;width:150px;height:56px;border-radius:12px;background:var(--soft);display:flex;align-items:center;justify-content:center;font:600 28px 'IBM Plex Mono';color:var(--x);white-space:nowrap}
+.sc i{font-style:normal;font:600 14px 'IBM Plex Mono';color:var(--mute);margin-right:10px;letter-spacing:.06em}
+/* definition */
+#dfT{position:absolute;left:36px;top:84px;width:712px;font:700 40px/1.3 Poppins;letter-spacing:-.01em}
+#dfT b{color:var(--ac)}
+.tm{position:absolute;left:36px;width:712px;height:116px;border-radius:14px;background:var(--soft)}
+.tm .tl{position:absolute;left:24px;top:16px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.tm .td{position:absolute;left:24px;top:52px;font:500 26px Poppins;white-space:nowrap}
+/* proof rows */
+.st{position:absolute;left:36px;width:712px;height:96px}
+.st .n{position:absolute;left:0;top:4px;width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 21px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:64px;top:0;font-size:31px;white-space:nowrap}
+.st .why{position:absolute;left:64px;top:52px;font:500 21px Poppins;color:var(--mute);white-space:nowrap}
+.rdL{position:absolute;left:36px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.rdV{position:absolute;left:36px;font:600 44px 'IBM Plex Mono';white-space:nowrap}
+.nc{position:absolute;width:156px;height:84px;border-radius:12px;background:var(--soft)}
+.nc .a{position:absolute;left:0;width:156px;top:10px;text-align:center;font:600 16px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.nc .b{position:absolute;left:0;width:156px;top:36px;text-align:center;font-size:28px;white-space:nowrap}
+/* rows */
+.f4{position:absolute;left:36px;width:712px;height:104px;border-radius:14px;background:var(--soft)}
+.f4 .fx{position:absolute;left:24px;top:14px;font-size:32px;white-space:nowrap}
+.f4 .tg{position:absolute;left:24px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.bf{position:absolute;left:36px;font-size:40px;white-space:nowrap}
+.tb{position:absolute;left:36px;width:712px;height:58px;border-radius:12px;background:var(--soft)}
+.tb .a{position:absolute;left:24px;top:14px;font:600 22px 'IBM Plex Mono';white-space:nowrap}
+.tb .b{position:absolute;left:200px;top:8px;font-size:30px;white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:62px;font:600 30px/1.4 Poppins;width:712px;white-space:nowrap}
+#wq .katex{font-size:1.15em}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 26px Poppins}
+#so .sol .sx .katex{font-size:1.1em}
+#mq .mq .katex{font-size:1.08em}
+#wl .sol .sx{font-size:29px}
+.trapL .tx .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+.yr .q .katex{font-size:1.05em}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:30px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 3 TRIGONOMETRIC FUNCTIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div class="ghost" id="gh">NOT IN CURRENT NCERT TEXT · JEE</div>
+    <div id="title">Answers That Never <span class="acc">End</span></div>
+    <div id="sub">Explained with one turning wheel</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: the wheel + Aarav -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">THE VALVE · AT HALF HEIGHT?</div>
+        <svg id="hS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="lbl" style="left:440px;top:92px">ANGLE TURNED</div><div class="bigv" id="hX" style="left:440px;top:124px"></div>
+        <div class="lbl" id="hSl" style="left:440px;top:222px">HALF HEIGHT AT</div><div id="hCs"></div>
+        <div class="pillp ac" id="hP" style="left:36px;top:500px">Again and again, forever</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · HIS BICYCLE WHEEL</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">One equation, endless answers</div></div>
+    </div>
+
+    <!-- P: definition + principal vs general on a line -->
+    <div id="sP">
+      <div class="card full" id="df"><div class="lbl" style="left:36px;top:30px">DEFINITION</div>
+        <div id="dfT">An equation with a <b>trigonometric function</b> of an unknown angle</div><div class="fx" id="dfE" style="left:36px;top:212px;font-size:44px"></div>
+        <div class="tm" id="tm0" style="top:300px"><div class="tl" style="color:var(--ac)">PRINCIPAL SOLUTIONS</div><div class="td" id="tm0d"></div></div>
+        <div class="tm" id="tm1" style="top:432px"><div class="tl" style="color:var(--x)">GENERAL SOLUTION</div><div class="td" id="tm1d"></div></div></div>
+      <div class="card rf" id="pl"><div class="lbl" style="left:36px;top:30px">SOLUTIONS OF sin x = 1/2</div><svg id="pS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- G: live graph -->
+    <div id="sG">
+      <div class="card" id="gg" style="left:160px;top:270px;width:1040px;height:580px"><div class="lbl" style="left:36px;top:30px">LIVE · WHERE THE WAVE MEETS THE LINE</div><svg id="gS" width="1040" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="gr" style="left:1232px;top:270px;width:528px;height:580px"><div class="lbl" style="left:36px;top:30px">THE COUNT</div>
+        <div class="rdL" style="top:88px">LINE HEIGHT</div><div class="rdV" id="gK" style="top:116px;color:var(--lv)"></div>
+        <div class="rdL" style="top:200px">SOLUTIONS FROM 0 TO 4π</div><div class="rdV" id="gN" style="top:228px;font-size:72px;color:var(--x)"></div>
+        <div class="rdL" style="top:332px">PER TURN</div><div class="rdV" id="gT" style="top:360px"></div>
+        <div class="pillp bad" id="gP" style="left:36px;top:484px">Sine never goes above 1</div></div>
+    </div>
+
+    <!-- D: derive x = n pi + (-1)^n alpha -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">GENERAL SOLUTION · 5 STEPS</div><div class="hiBox" id="dHi" style="left:20px;width:744px;height:92px"></div><div id="dSt"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">SAME HEIGHT · TWO POINTS PER TURN</div><svg id="dS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div id="dNs"></div></div>
+    </div>
+
+    <!-- C: cos, tan, zeros -->
+    <div id="sC">
+      <div class="card full" id="cl"><div class="lbl" style="left:36px;top:30px">THE OTHERS · SAME IDEA</div><div id="cR"></div></div>
+      <div class="card rf" id="cr"><div class="lbl" id="crL" style="left:36px;top:30px"></div><svg id="cS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- S: principal vs general -->
+    <div id="sS">
+      <div class="card full" id="sl"><div class="lbl" style="left:36px;top:30px;color:var(--ac)">PRINCIPAL · INSIDE ONE TURN</div><div class="bf" id="slF" style="top:96px"></div><svg id="slS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="slP" style="left:36px;top:470px">Only from 0 up to 2π</div></div>
+      <div class="card rf" id="sr"><div class="lbl" style="left:36px;top:30px;color:var(--x)">GENERAL · EVERY TURN</div><div class="bf" id="srF" style="top:96px"></div><div id="srT"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">BELOW THE HUB · SAME DEPTH</div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Find one, then add <span class="acc">every turn</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

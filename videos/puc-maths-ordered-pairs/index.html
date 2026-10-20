@@ -1,0 +1,156 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 14 - Ordered Pairs</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 14: ordered pairs (Proof board) ===== */
+:root{--sa:#2F6FEB;--sb:#0E8F8F;--sab:#E7EEFD;--sbb:#DDF1F1}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.sa{color:var(--sa)}.sb{color:var(--sb)}.a{color:var(--ac)}
+/* title card chips */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:54px;font:700 30px Poppins;white-space:nowrap}
+/* hook */
+#hDi{position:absolute;left:36px;top:84px;width:378px;height:468px;object-fit:contain;object-position:50% 100%}
+#hkQ{position:absolute;left:424px;top:110px;width:330px;font:700 36px/1.3 Poppins}
+#hkP{left:424px;top:330px}
+/* anatomy of a pair */
+#oRc{position:absolute;left:36px;top:76px;font-size:30px;white-space:nowrap;color:var(--mute)}
+#oBig{position:absolute;left:0;width:784px;top:150px;text-align:center;font-size:120px;white-space:nowrap}
+.pa{position:absolute;height:48px;padding:0 18px;border-radius:10px;display:inline-flex;align-items:center;font:600 22px Poppins;white-space:nowrap}
+#oSeat{position:absolute;left:0;width:784px;top:110px;text-align:center;font:600 120px 'IBM Plex Mono';white-space:nowrap}
+/* live */
+#lRd{position:absolute;left:36px;top:76px;font:600 60px/1 'IBM Plex Mono';white-space:nowrap}
+.lr{position:absolute;left:36px;width:712px;height:52px;display:flex;align-items:center;font:600 28px 'IBM Plex Mono';border-bottom:2px solid var(--line);white-space:nowrap}
+.lr span{display:inline-block}
+.lr .c1{width:56px;color:var(--mute)}.lr .c2{width:170px}.lr .c3{width:70px;text-align:center}.lr .c4{width:170px}
+.lr.h{font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.st8{position:absolute;height:40px;padding:0 12px;border-radius:8px;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+/* side by side */
+.bf{position:absolute;left:36px;top:400px;font-size:48px;white-space:nowrap}
+/* definition */
+#dfT{position:absolute;left:36px;top:84px;width:712px;font:700 36px/1.34 Poppins;letter-spacing:-.01em}
+#dfT b{color:var(--ac)}
+#dfF{position:absolute;left:36px;top:430px;font-size:40px;white-space:nowrap}
+#dfL2{left:36px;top:390px}
+/* steps */
+.st{position:absolute;left:36px;width:712px;height:92px}
+.st .n{position:absolute;left:0;top:4px;width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 21px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:66px;top:0;font-size:34px;white-space:nowrap}
+.st .why{position:absolute;left:66px;top:50px;font:500 21px Poppins;color:var(--mute);white-space:nowrap}
+/* triplets */
+#rTr{position:absolute;left:36px;top:84px;font-size:44px;white-space:nowrap}
+.tr3{position:absolute;width:200px;height:52px;border-radius:10px;background:var(--soft);display:flex;align-items:center;justify-content:center;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+#rCt{position:absolute;left:36px;top:480px}
+#rXY{position:absolute;right:36px;top:76px;height:56px;padding:0 18px;border-radius:12px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:64px;font:600 28px/1.4 Poppins;width:712px}
+#wl .sol .sx{font-size:28px}
+#wl .sol .sx .katex{font-size:1.08em}
+.slot{position:absolute;font-size:64px;white-space:nowrap}
+#wRes{position:absolute;left:36px;top:490px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+#so .sol .sx .katex{font-size:1.1em}
+#mq .mq{font-size:30px}
+#mq .mq .katex{font-size:1.08em}
+.trapL .tx .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 32px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:42px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 2 RELATIONS AND FUNCTIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Why <span class="acc">Order</span> Matters</div>
+    <div id="sub">Ordered pairs, explained with one exam hall</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: exam hall + Aarav -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">THE EXAM HALL · SEAT (COLUMN, ROW)</div><svg id="hS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · FIRST EXAM DAY</div>
+        <img id="hDi" src="../../assets/illustrations/puc/aarav.png">
+        <div id="hkQ">When does the <span class="a">order</span> of two numbers matter?</div>
+        <div class="pillp ac" id="hkP">Same numbers, new seat</div></div>
+    </div>
+
+    <!-- O: anatomy of an ordered pair -->
+    <div id="sO">
+      <div class="card full" id="oa"><div class="lbl" style="left:36px;top:30px">AN ORDERED PAIR</div><div id="oRc"></div><div id="oBig"></div><div id="oAn"></div></div>
+      <div class="card rf" id="os"><div class="lbl" style="left:36px;top:30px">ON A HALL TICKET</div><div id="oSeat"></div><div id="oSn"></div></div>
+    </div>
+
+    <!-- L: live seat finder + swap test -->
+    <div id="sL">
+      <div class="card full" id="lg"><div class="lbl" style="left:36px;top:30px">LIVE · SEAT FINDER</div><svg id="lS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="lt"><div class="lbl" style="left:36px;top:30px">LIVE · THE SWAP TEST</div><div id="lRd"></div><div id="lTb"></div></div>
+    </div>
+
+    <!-- S: set vs ordered pair + think -->
+    <div id="sS">
+      <div class="card full" id="ss"><div class="lbl" style="left:36px;top:30px">A SET · CURLY BRACKETS</div><svg id="ssS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="bf" id="ssF"></div>
+        <div class="pillp" id="ssP" style="left:36px;top:500px">Order does not matter</div></div>
+      <div class="card rf" id="sp"><div class="lbl" style="left:36px;top:30px">AN ORDERED PAIR · ROUND BRACKETS</div><svg id="spS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="bf" id="spF"></div>
+        <div class="pillp ac" id="spP" style="left:36px;top:500px">Order is everything</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- E: equality -->
+    <div id="sE">
+      <div class="card full" id="ed"><div class="lbl" style="left:36px;top:30px">EQUAL ORDERED PAIRS · NCERT</div>
+        <div id="dfT">Two ordered pairs are <b>equal</b> if and only if the corresponding first elements are equal and the second elements are also equal.</div>
+        <div class="lbl" id="dfL2">IN SYMBOLS</div><div id="dfF"></div></div>
+      <div class="card rf" id="ec"><div class="lbl" style="left:36px;top:30px">TWO CHECKS · BOTH MUST PASS</div><svg id="eS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp bad" id="eP" style="left:36px;top:490px">One match is not enough: not equal</div></div>
+    </div>
+
+    <!-- D: A x B vs B x A -->
+    <div id="sD">
+      <div class="card full" id="dp"><div class="lbl" style="left:36px;top:30px">IS A × B = B × A? · 5 STEPS</div><div id="dSt"></div></div>
+      <div class="card rf" id="dg"><div class="lbl" style="left:36px;top:30px">THE PICTURE · SWAPPED POINTS</div><svg id="dS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- R: triplets + R x R -->
+    <div id="sR">
+      <div class="card full" id="rt"><div class="lbl" style="left:36px;top:30px">ORDERED TRIPLETS</div><div id="rTr"></div><div id="rTs"></div>
+        <div class="pillp ac" id="rCt">A = {1, 2}: 2 × 2 × 2 = 8 triplets</div></div>
+      <div class="card rf" id="rp"><div class="lbl" style="left:36px;top:30px">R × R · THE GRAPH SHEET</div><div id="rXY"></div><svg id="rS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">MATCH SLOT BY SLOT</div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="slot" id="wTop"></div><div class="slot" id="wBot"></div><div id="wVals"></div>
+        <div class="pillp good" id="wRes">Both slots match</div></div>
+    </div>
+
+    <!-- X / Q / F -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Swap the entries, get a new <span class="acc">pair</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

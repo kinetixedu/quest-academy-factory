@@ -1,0 +1,50 @@
+H1|0.4|Read out roll number twelve from the class register. You get exactly one name. Never two names, and never no name.
+H2|0.45|Now ask the blood group list: who is group O? You might get two names, or none at all.
+H3|0.35|Aarav noticed this while his teacher took attendance.
+H4|0.5|Why does one list always give a single answer, while the other does not?
+H5|0.65|Because the register is a function: a relation with one strict promise.
+D1|0.4|In NCERT words: a relation f from a set A to a set B is a function if every element of A has one and only one image in B.
+D2|0.4|So there are two checks. First, every element of A must have an image. No element is left without an arrow.
+D3|0.65|Second, each element of A has only one image. No element sends out two arrows.
+L1|0.35|Let us run the function test on three relations from A to B.
+L2|0.4|The first one. One goes to four. Two goes to five. Three also goes to five. Each element sends exactly one arrow. It passes. It is a function.
+L3|0.4|The second one. One sends two arrows, to four and to six. One element, two images. It fails.
+L4|0.65|The third one. Two sends no arrow at all. An element with no image. It fails too.
+G1|0.4|There is a grid picture as well. Put A along the bottom, and B up the side. Each pair is a dot.
+G2|0.65|A function puts exactly one dot in every column. Two dots in one column, or an empty column, and it is not a function.
+S1|0.4|Side by side. Many arrows out of one element of A are not allowed. That element would have two images.
+S2|0.6|But many arrows into one element of B are fine. In the first test, one and two point to different numbers, but two and three share the image five. Still a function.
+K1|3.2|Now you try. Every student is linked to their birth month. Two students share a month. Is it still a function? Pause and think.
+K2|0.65|Yes! Each student still has exactly one birth month. Sharing an image is allowed. Only a student with two months, or none, would break it.
+T1|0.7|Remember this. In a function, every element of A sends exactly one arrow.
+V1|0.35|Functions have their own way of writing.
+V2|0.4|We write f colon A arrow B. It reads: f is a function from A to B.
+V3|0.65|If a comma b is in f, we write f of a equals b. Here b is the image of a under f, and a is the preimage of b.
+C1|0.35|Now, how many functions can we make from A to B? This counting is not in the NCERT text, but JEE asks it.
+C2|0.75|Step one. Say A has p elements, and B has q elements.
+C3|0.75|Step two. Each element of A must pick exactly one image. It has q choices.
+C4|0.75|Step three. The choices are made one after another, and each is free. So the counts multiply.
+C5|0.65|Step four. q times q times q, once for each element of A. That is q to the power p functions.
+W1|0.35|Now, one worked example.
+W2|0.5|A is one, two, three. B is four, five, six, seven. Is f, with one to four, two to six, three to six, a function? Find f of two.
+W3|0.75|Step one. List the first elements: one, two and three. Every element of A appears.
+W4|0.75|Step two. Each first element appears only once. So each element has one image.
+W5|0.75|Step three. Two and three share the image six. That is allowed.
+W6|0.75|Step four. So f is a function, and f of two equals six.
+W7|0.65|Step five. Five and seven have no preimage. That is allowed too. B does not need to be used up.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students say f is not a function because five and seven in B get no arrows.
+X3|0.65|But the rule only checks the elements of A. Every element of A has exactly one image, so f is a function.
+J1|0.6|Where is this asked? In PUC exams, as: which of these relations are functions? In JEE Main, as: count the functions that obey a condition.
+Q1|5.4|Exam level now. A is one, two, three. B is one, two, three, four. How many functions f from A to B have f of one not equal to f of two? Pause and solve.
+A1|0.5|The answer is A. Forty eight.
+A2|0.5|With no condition, each of the three elements has four choices. Four cubed is sixty four functions.
+A3|0.5|Now count the ones we do not want, where f of one equals f of two.
+A4|0.5|f of one has four choices, f of two must copy it, and f of three has four choices. That is sixteen.
+A5|0.6|Sixty four minus sixteen leaves forty eight.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Is the relation one comma two, one comma three, two comma four a function from one, two to two, three, four?
+Y3|0.9|Two. How many functions are there from a set of two elements to a set of three elements?
+Y4|1.1|Three. If f of three equals seven, which number is the image, and which is the preimage?
+N1|0.3|Next time: marks can be anything from zero to a hundred, but the class only scored forty one to ninety six. That gap is codomain versus range.

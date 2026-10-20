@@ -1,0 +1,56 @@
+H1|0.4|Try sorting your classmates by subject. Some take Biology, some take Maths, and a few take both. Where do you write the ones who take both?
+H2|0.45|Two lists repeat names. A table gets messy. Two circles solve it at a glance.
+H3|0.35|Diya tried this today, for the class timetable.
+H4|0.4|Diya and Sana take Biology. Aarav and Kiran take Maths. Meera takes both. And Ravi takes neither, because he is in the commerce stream.
+H5|0.65|Where does each name go? A Venn diagram answers it in one picture.
+V1|0.35|A Venn diagram draws sets as shapes.
+V2|0.4|The universal set is drawn as a rectangle. Each of its subsets is drawn as a circle inside it.
+V3|0.4|These diagrams are named after the English logician John Venn, who lived from eighteen thirty four to nineteen twenty three.
+V4|0.4|Now let's sort. Circle B is Biology. Circle M is Maths. Where they overlap means both.
+V5|0.4|Diya and Sana take only Biology. They go in the part of B outside M.
+V6|0.4|Aarav and Kiran take only Maths. They go in the part of M outside B.
+V7|0.4|Meera takes both, so she goes in the overlap.
+V8|0.65|Ravi takes neither. He is still in the class, so he goes inside the rectangle, but outside both circles.
+R1|0.4|So two overlapping circles cut the rectangle into four regions.
+R2|0.75|Only B is B minus M. Only M is M minus B.
+R3|0.75|Both is B intersection M. And neither is the complement of B union M.
+R4|0.65|Every element of U lands in exactly one of these four regions.
+K1|0.4|Side by side. Two circles do not always overlap the same way.
+K2|0.4|If every element of A is also in B, then A is a subset of B. Its circle sits completely inside B.
+K3|0.4|If two sets share nothing, they are disjoint. Their circles do not touch.
+K4|0.6|And if they share some elements, but not all, the circles overlap.
+K5|3.2|Now you try. A is the set of squares, and B is the set of rectangles. How should their circles be drawn? Pause and decide.
+K6|0.65|A inside B! Every square is a rectangle. So the set of squares is a subset of the set of rectangles.
+T1|0.7|Remember this. One rectangle for U, one circle for each set, and every element in exactly one region.
+P1|0.4|Venn diagrams also show set operations, as shaded regions.
+P2|0.4|A union B shades both circles completely.
+P3|0.4|A intersection B shades only the overlap.
+P4|0.4|A minus B shades A, but leaves the overlap empty.
+P5|0.65|And A complement shades everything in the rectangle outside A.
+Z1|0.4|Add a third circle, C, and the picture gets richer.
+Z2|0.4|Each element now answers three questions. In A or not? In B or not? In C or not?
+Z3|3.2|Quick one. How many regions does the rectangle have now, counting the part outside all three circles? Pause and think.
+Z4|0.65|Eight! Each element is in A or not, in B or not, in C or not. Two times two times two is eight.
+W1|0.35|Now, one worked example.
+W2|0.5|U is the numbers from one to ten. A is the even numbers. B is the multiples of three. Place every number in the Venn diagram.
+W3|0.75|Step one. A is two, four, six, eight and ten.
+W4|0.75|Step two. B is three, six and nine.
+W5|0.75|Step three. Six is in both, so it goes in the overlap.
+W6|0.75|Step four. Two, four, eight and ten go in only A. Three and nine go in only B.
+W7|0.75|Step five. One, five and seven are in neither set. They sit inside the rectangle, outside both circles.
+W8|0.65|Count them. Four, plus one, plus two, plus three. All ten numbers, each in exactly one place.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students draw only the circles, and forget the rectangle.
+X3|0.65|But elements that are in neither set still belong to U. Without the rectangle, one, five and seven have nowhere to go.
+J1|0.6|Where is this asked? In PUC board exams, as: draw a Venn diagram, or shade a region. And in JEE Main, as: which Venn diagram fits a statement.
+Q1|5.4|Exam level now. Which set does the shaded region show? Pause and solve.
+A1|0.5|The answer is B.
+A2|0.5|The shaded parts are the three pieces where exactly two circles overlap.
+A3|0.5|Option A also covers the centre, where all three circles overlap. But the centre is not shaded.
+A4|0.6|So take all the overlaps of two circles, and remove the centre, A intersection B intersection C. That is option B.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What does the rectangle in a Venn diagram stand for?
+Y3|0.9|Two. How do you draw A, when A is a subset of B?
+Y4|1.1|Three. Which region shows A minus B?
+N1|0.3|Next time: does the order of union and intersection ever change the answer? We test it, in properties of set operations.

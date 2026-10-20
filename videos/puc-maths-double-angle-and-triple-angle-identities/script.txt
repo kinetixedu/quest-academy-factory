@@ -1,0 +1,52 @@
+H1|0.4|Double an angle, and surely its sine doubles? Sine thirty degrees is one half.
+H2|0.45|So sine sixty should be one. But it is zero point eight six six.
+H3|0.35|Aarav spotted this while doing homework at his desk.
+H4|0.5|Double again, to one twenty degrees, and the sine does not grow at all.
+H5|0.65|So what really happens when you double an angle?
+P1|0.4|Start from the sum formula: sin of x plus y is sin x cos y plus cos x sin y.
+P2|0.75|Put y equal to x. Then x plus y is two x.
+P3|0.75|So sin two x is sin x cos x plus cos x sin x. The same term twice: two sin x cos x.
+G1|0.4|Here is the picture. An angle of two x at the centre, between two radii of length one.
+G2|0.4|Join the ends. With one radius as base, the height is sine two x, so the area is half of sine two x.
+G3|0.4|Now cut it down the middle: two right triangles, each with sides cos x and sin x.
+G4|0.6|Each has area half of sin x cos x. Same triangle, same area. So sine two x is two sin x cos x.
+L1|0.4|Watch it live. The coral curve is sine two x, and the dashed curve is two sine x.
+L2|0.65|They split apart. But two sin x cos x stays on the coral curve every time.
+C1|0.75|Now cosine. Put y equal to x in cos of x plus y: cos two x is cos squared x minus sin squared x.
+C2|0.75|Swap sin squared for one minus cos squared, and cos two x is two cos squared x minus one.
+C3|0.75|Swap the other way: one minus two sin squared x. Three forms, one value.
+C4|0.75|From the tan of a sum, tan two x is two tan x over one minus tan squared x.
+C5|0.65|Divide by cos squared plus sin squared, which is one, and sine two x and cos two x can be written with tan x alone.
+K1|0.4|Side by side. Know only cos x? Use two cos squared x minus one.
+K2|0.6|Know only sin x? Use one minus two sin squared x.
+K3|3.2|Pause and think. Sine x is one third. Which form of cos two x is quickest?
+K4|0.65|One minus two sin squared x: one minus two ninths, which is seven ninths.
+R1|0.4|Now the triple angle. Write three x as two x plus x.
+R2|0.75|Step one. Sin three x is sin two x cos x plus cos two x sin x.
+R3|0.75|Step two. Put in the double angle forms, then change cos squared x into one minus sin squared x.
+R4|0.75|Step three. Collect the terms: sin three x is three sin x minus four sin cubed x.
+R5|0.65|The same way, cos three x is four cos cubed x minus three cos x.
+R6|3.2|Quick check. At thirty degrees, is sine of three x equal to three times sine x? Pause and think.
+R7|0.65|No! Three times sine thirty is one point five, more than one. The formula gives one point five minus zero point five: one, which is sine ninety.
+T1|0.7|Remember this. Doubling the angle never doubles the sine. Sin two x is two sin x cos x.
+W1|0.35|Now a worked example.
+W2|0.5|Tan x is three quarters and x is acute. Find sin two x, cos two x and tan two x.
+W3|0.75|Step one. A three four five triangle: sin x is three fifths, cos x four fifths.
+W4|0.75|Step two. Sin two x is two times three fifths times four fifths: twenty four over twenty five.
+W5|0.75|Step three. Cos two x is sixteen twenty fifths minus nine twenty fifths: seven twenty fifths.
+W6|0.65|Step four. Tan two x is twenty four sevenths, and the tan formula agrees.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students flip the signs, and write cos two x as one minus two cos squared x.
+X3|0.65|Test at x equals zero. Cos zero is one, but that form gives minus one. The right form gives one.
+J1|0.6|Where is this asked? JEE Main, as in January twenty nineteen, where a long product of cosines collapses using sin two x equals two sin x cos x. And the PUC boards.
+Q1|5.4|Exam level now. Tan x is two. Find cos two x plus sin two x. Pause and solve.
+A1|0.5|The answer is A. One fifth.
+A2|0.5|Use the tan forms. Sin two x is two tan x over one plus tan squared: four fifths.
+A3|0.5|Cos two x is one minus tan squared over one plus tan squared: minus three fifths.
+A4|0.6|Add them. Four fifths minus three fifths is one fifth.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why is sine of two x not two sine x?
+Y3|0.9|Two. Write all three forms of cos two x.
+Y4|1.1|Three. If cos x is three fifths, find cos two x.
+N1|0.3|Next time: two notes played together make a beat, a sum hiding a product. Sums and products.
