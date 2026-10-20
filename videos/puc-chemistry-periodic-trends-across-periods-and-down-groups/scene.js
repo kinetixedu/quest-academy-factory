@@ -45,10 +45,10 @@ const tQr = QR.map(q => wt(q[1], q[2]));
 $('#mdef').style.width = 'auto'; $('#mdef').style.right = '36px';
 const ps = $('#pS');
 // across: Li (152 pm) -> F (64 pm); down: Li (152) -> Na (186) -> K (231). Drawn at 0.5 px per pm.
-txt(ps, 36, 96, 'ACROSS PERIOD 2', { fill: C.mute, 'font-weight': 600 }); txt(ps, 36, 330, 'DOWN GROUP 1', { fill: C.mute, 'font-weight': 600 });
+txt(ps, 36, 96, 'ACROSS PERIOD 2', { fill: C.mute, 'font-weight': 600 }); txt(ps, 36, 300, 'DOWN GROUP 1', { fill: C.mute, 'font-weight': 600 });
 const PA = [['Li', 3, 152, 2, 150], ['F', 9, 64, 2, 560]], PD = [['Li', 3, 152, 2, 130], ['Na', 11, 186, 3, 360], ['K', 19, 231, 4, 620]];
-const mini = (s, p, pm, sh, x, y) => { const g = mk(ps, 'g', {}), R = pm * 0.5; for (let i = 0; i < sh; i++) mk(g, 'circle', { cx: x, cy: y, r: (16 + (R - 16) * (i + 1) / sh).toFixed(1), fill: 'none', stroke: C.dim, 'stroke-width': 2 }); mk(g, 'circle', { cx: x, cy: y, r: 16, fill: NC }); txt(g, x, y + 6, s, { 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 16, fill: '#fff', 'text-anchor': 'middle' }); txt(g, x, y + R + 26, `${p} p · ${pm} pm`, { 'text-anchor': 'middle', fill: GC, 'font-weight': 600, 'font-size': 17 }); return g; };
-const pA = PA.map(e => mini(e[0], e[1], e[2], e[3], e[4], 186)), pD = PD.map(e => mini(e[0], e[1], e[2], e[3], e[4], 440));
+const mini = (s, p, pm, sh, x, y) => { const g = mk(ps, 'g', {}), R = pm * 0.45; for (let i = 0; i < sh; i++) mk(g, 'circle', { cx: x, cy: y, r: (16 + (R - 16) * (i + 1) / sh).toFixed(1), fill: 'none', stroke: C.dim, 'stroke-width': 2 }); mk(g, 'circle', { cx: x, cy: y, r: 16, fill: NC }); txt(g, x, y + 6, s, { 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 16, fill: '#fff', 'text-anchor': 'middle' }); txt(g, x, y + R + 26, `${p} p · ${pm} pm`, { 'text-anchor': 'middle', fill: GC, 'font-weight': 600, 'font-size': 17 }); return g; };
+const pA = PA.map(e => mini(e[0], e[1], e[2], e[3], e[4], 186)), pD = PD.map(e => mini(e[0], e[1], e[2], e[3], e[4], 410));
 const pArA = PUC.arrow(ps, NC, 4, 14), pArD = PUC.arrow(ps, NC, 4, 14);
 
 /* ---------- S: the live periodic table ---------- */
@@ -131,7 +131,7 @@ const trap = PUC.trap($('#trap'), { wrong: 'More electrons across a period, so t
 $('#trap').insertAdjacentHTML('beforeend', `<div id="tm0" style="position:absolute;right:36px;top:84px;width:380px;height:72px;border-radius:12px;background:var(--soft);display:flex;align-items:center;justify-content:space-between;padding:0 18px;box-sizing:border-box;font:600 24px 'IBM Plex Mono';color:${GC}">Li 152 pm<span style="color:var(--mute)">→</span>F 64 pm</div>`);
 const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'NEET'], type: 'Order questions on radius, ionization enthalpy and metallic character, and statement pairs' });
 const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', q: `Which of these orders is correct?`, qW: 760,
-  opts: [`Radius: ${K('\\mathrm{F > Cl > Br}')}`, `First IE: ${K('\\mathrm{Na > Mg}')}`, `EN: ${K('\\mathrm{F > O > N > C}')}`, `Metallic: ${K('\\mathrm{Na < Mg < Al}')}`], right: 2, cols: 1, optW: 940, optY: 196, optH: 84, optFs: 32 });
+  opts: [`Radius:&nbsp;${K('\\mathrm{F > Cl > Br}')}`, `First IE:&nbsp;${K('\\mathrm{Na > Mg}')}`, `EN:&nbsp;${K('\\mathrm{F > O > N > C}')}`, `Metallic:&nbsp;${K('\\mathrm{Na < Mg < Al}')}`], right: 2, cols: 1, optW: 780, optY: 196, optH: 84, optFs: 32 });
 const so = PUC.solution($('#so'), [[K(`${G_('4.0')} > ${G_('3.5')} > ${G_('3.0')} > ${G_('2.5')}`)], [K(`\\text{A: } \\mathrm{F < Cl < Br}`)], [K(`\\text{B: } \\mathrm{Na < Mg}`)], [K(`\\text{D: } \\mathrm{Na > Mg > Al}`)]], { y0: 100, dy: 112 });
 const tSo = [T0('A2'), T0('A3'), T0('A4'), wt('A4', 'D')];
 const fc = PUC.fcard($('#sF'), { x: 410, y: 262, w: 1100, h: 470, title: 'Recap · periodic trends', y0: 96, dy: 74, txt: [1, 1, 1, 0, 1],
@@ -145,7 +145,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 37', topic: 'Why does boron b
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('S2', 'caesium') - 0.3, 1.05, 900, 560], [T0('S3') + 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]]]);
 let geo = null;
 function measure() {
   geo = {};
@@ -191,7 +191,7 @@ M.on(t => {
     pD.forEach((g, i) => fade(g, t, wt('P4', i === 0 ? 'Down' : i === 1 ? 'new' : 'grow') - 0.1, 1e9, 0.35));
     const ua = M.io((t - wt('P3', 'pull') + 0.1) / 0.5), ud = M.io((t - wt('P4', 'farther') + 0.1) / 0.5);
     if (ua > 0) pArA.set(260, 186, 260 + 200 * ua, 186); else pArA.set(0, 0, 0, 0);
-    if (ud > 0) pArD.set(240, 440, 240 + 260 * ud, 440); else pArD.set(0, 0, 0, 0);
+    pArD.set(0, 0, 0, 0);
   }
 
   /* S: live table */

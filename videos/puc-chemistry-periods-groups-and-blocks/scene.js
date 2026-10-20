@@ -159,7 +159,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 30', topic: 'An address from 
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [STG[2].tDrop - 0.4, 1.06, 960, 560], [T0('S8') - 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [STG[2].tDrop - 0.4, 1.06, 960, 540], [T0('S8') - 0.2, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};
@@ -242,7 +242,7 @@ M.on(t => {
     M.setT($('#tdC'), inB ? 'He' : S.el); $('#tdC').style.color = inB ? SC : BCOL[S.blk];
     M.setT($('#tdB'), inB ? '1s² · SITS IN GROUP 18' : S.grp);
     $('#tdR').style.opacity = inB ? 1 : M.io((t - S.tDrop - 0.4) / 0.4).toFixed(3);
-    BF.forEach(([k], i) => fade($('#bfk' + k), t, STG[i].tDrop + 0.6, i < 3 ? STG[i + 1].tin - 0.15 : 1e9, 0.25));
+    BF.forEach(([k], i) => { const el = $('#bfk' + k), u1 = M.io((t - STG[i].tDrop - 0.6) / 0.25) * (1 - M.io((t - (i < 3 ? STG[i + 1].tin - 0.15 : tB1 - 0.15)) / 0.25)), u2 = k === 's' ? M.io((t - wt('B1', 'one', 1)) / 0.25) : 0, u = Math.max(u1, u2); el.style.opacity = u.toFixed(3); M.hide(el, u <= 0.002); });
     const bx = $('#bfx'); if (bx) PUC.write(bx, t, wt('S7', 'group', 1) - 0.1, 0.8);
     const TAG = [[STG[0].tin, 'Na · Z = 11'], [STG[0].tDrop, 'THE 11th ELECTRON'], [STG[1].tin, 'Cl · Z = 17'], [STG[2].tin, 'Fe · Z = 26'], [STG[2].tDrop, 'AFTER 4s, INTO 3d'], [STG[3].tin, 'f-BLOCK'], [tB1, 'ONE ODD CASE']];
     let tg = null; for (const [tt, s] of TAG) if (t >= tt) tg = s; if (tg) M.setT(btag, tg); M.vis(btag, t, STG[0].tin - 0.1, 1e9, POP);

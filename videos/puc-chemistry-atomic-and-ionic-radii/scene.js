@@ -36,7 +36,7 @@ const atomV = (svg, cx, cy, o = {}) => {
     let di = 0;
     (st.e || []).forEach(([k, n, orange, a0 = 0, al = 1]) => { const R = st.rr[k]; for (let j = 0; j < n; j++) { const d = dots[di++]; if (!d) return; const a = -Math.PI / 2 + a0 + j * 2 * Math.PI / Math.max(n, 1); attr(d, 'cx', (cx + R * Math.cos(a)).toFixed(1)); attr(d, 'cy', (cy + R * Math.sin(a)).toFixed(1)); attr(d, 'fill', orange && j === n - 1 ? EC : HC); d.style.opacity = al.toFixed(3); M.hide(d, al <= 0.01); } });
     for (; di < dots.length; di++) M.hide(dots[di], true);
-    const R = st.R; attr(rl, 'x2', (cx + R).toFixed(1)); attr(rt, 'x', (cx + R / 2).toFixed(1)); attr(rt, 'y', (cy + 36).toFixed(1)); M.setT(rt, st.pm != null ? `${Math.round(st.pm)} pm` : ''); rl.style.opacity = rt.style.opacity = (st.ral ?? 1).toFixed(3);
+    const R = st.R; attr(rl, 'x2', (cx + R).toFixed(1)); attr(rt, 'x', (cx + R / 2).toFixed(1)); attr(rt, 'y', (cy + (R < 140 ? R + 40 : 36)).toFixed(1)); M.setT(rt, st.pm != null ? `${Math.round(st.pm)} pm` : ''); rl.style.opacity = rt.style.opacity = (st.ral ?? 1).toFixed(3);
     M.setT(sym, st.sym); M.setT(zt, st.z);
   }, dots };
 };
@@ -139,16 +139,16 @@ const tsv = $('#tS');
 const eqC = mk(tsv, 'g', {}); [70, 160, 250].forEach(x => mk(eqC, 'circle', { cx: x, cy: 120, r: 40, fill: C.redBg, stroke: C.red, 'stroke-width': 3 }));
 txt(eqC, 160, 214, 'EQUAL? NO', { 'text-anchor': 'middle', 'font-size': 16, fill: C.red, 'font-weight': 600 });
 const xEq = mk(tsv, 'path', { d: 'M40 80 L280 170 M280 80 L40 170', stroke: C.red, 'stroke-width': 6, 'stroke-linecap': 'round', fill: 'none' });
-const okC = mk(tsv, 'g', {}); [[380, 48], [470, 42], [548, 32], [604, 26]].forEach(([x, r]) => mk(okC, 'circle', { cx: x - 20, cy: 120, r, fill: C.okBg, stroke: C.ok, 'stroke-width': 3 }));
-txt(okC, 470, 214, '8, 9, 11 PROTONS', { 'text-anchor': 'middle', 'font-size': 16, fill: C.ok, 'font-weight': 600 });
+const okC = mk(tsv, 'g', {}); [[380, 48], [470, 42], [548, 32], [604, 26]].forEach(([x, r]) => mk(okC, 'circle', { cx: x - 50, cy: 120, r, fill: C.okBg, stroke: C.ok, 'stroke-width': 3 }));
+txt(okC, 440, 214, '8, 9, 11 PROTONS', { 'text-anchor': 'middle', 'font-size': 16, fill: C.ok, 'font-weight': 600 });
 const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'NEET'], type: 'Order the sizes of atoms, or of isoelectronic ions' });
 const OPT = [`${ion('Ca^{2+}')} > ${ion('K^+')} > ${ion('Cl^-')} > ${ion('S^{2-}')}`, `${ion('S^{2-}')} > ${ion('Cl^-')} > ${ion('K^+')} > ${ion('Ca^{2+}')}`, `${ion('Cl^-')} > ${ion('S^{2-}')} > ${ion('K^+')} > ${ion('Ca^{2+}')}`, `${ion('K^+')} > ${ion('Ca^{2+}')} > ${ion('S^{2-}')} > ${ion('Cl^-')}`];
 const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', q: `Which order of radius is correct for ${K(ion('S^{2-}'))}, ${K(ion('Cl^-'))}, ${K(ion('K^+'))} and ${K(ion('Ca^{2+}'))}?`, qW: 780,
-  opts: OPT.map(s => K(s)), right: 1, optW: 474, optY: 330, optH: 110, optFs: 30 });
+  opts: OPT.map(s => K(s)), right: 1, optW: 474, optY: 330, optH: 110, optFs: 25 });
 const so = PUC.solution($('#so'), [[`All have ${K(tE('18\\,e^-'))}`], [`Protons: ${K(tG('16,\\ 17,\\ 19,\\ 20'))}`], ['More protons: smaller'], [K(`${ion('S^{2-}')} > ${ion('Cl^-')} > ${ion('K^+')} > ${ion('Ca^{2+}')}`)]], { y0: 100, dy: 112 });
 const tSo = [T0('A2'), T0('A3'), T0('A4'), wt('A4', 'largest')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 262, w: 1200, h: 470, title: 'Recap · atomic and ionic radii', y0: 96, dy: 74, txt: [0, 1, 1, 1, 1],
-  lines: [K(`${tN('r_{\\text{covalent}}')} = \\dfrac{d}{2} \\qquad ${tN('r_{\\mathrm{Cl}}')} = 99\\,\\text{pm},\\; ${tN('r_{\\mathrm{Cu}}')} = 128\\,\\text{pm}`), '<b>Across period 2</b>: Li 152 → F 64 pm (more protons, same shell)', '<b>Down group 1</b>: Li 152 → Cs 262 pm (a new shell each step)', '<b>Ions</b>: Na 186 → Na⁺ 95 pm · F 64 → F⁻ 136 pm', '<b>Isoelectronic</b>: more protons, smaller · O²⁻ > F⁻ > Na⁺ > Mg²⁺'] });
+  lines: [K(`${tN('r_{\\text{covalent}}')} = d/2 \\qquad ${tN('r_{\\mathrm{Cl}}')} = 99\\,\\text{pm},\\; ${tN('r_{\\mathrm{Cu}}')} = 128\\,\\text{pm}`), '<b>Across period 2</b>: Li 152 → F 64 pm (more protons, same shell)', '<b>Down group 1</b>: Li 152 → Cs 262 pm (a new shell each step)', '<b>Ions</b>: Na 186 → Na⁺ 95 pm · F 64 → F⁻ 136 pm', '<b>Isoelectronic</b>: more protons, smaller · O²⁻ > F⁻ > Na⁺ > Mg²⁺'] });
 const YQ = ['Why do atoms shrink from lithium to fluorine?', 'Why is the sodium ion so much smaller than the sodium atom?', 'Which is bigger, the oxide ion or the magnesium ion, and why?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="nn">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
@@ -158,7 +158,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 32', topic: 'Why is an electr
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tP2[5] - 0.3, 1.1, 760, 560], [T0('S6') + 0.4, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tP2[5] - 0.3, 1.1, 640, 580], [T0('S6') + 0.4, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};
@@ -238,7 +238,7 @@ M.on(t => {
     const gOn = M.io((t - tG1[0] + 0.3) / 0.3);
     bP.forEach((bb, i) => { const u = M.io((t - tP2[i] + 0.05) / 0.45); attr(bb.r, 'height', (bb.pm * BS * u).toFixed(1)); attr(bb.r, 'y', (BY - bb.pm * BS * u).toFixed(1)); attr(bb.v, 'y', (BY - bb.pm * BS * u - 8).toFixed(1)); attr(bb.r, 'fill', !s.grp && i === s.i ? NC : C.dim); bb.g.style.opacity = (M.clamp((t - tP2[i] + 0.1) / 0.2) * (1 - gOn)).toFixed(3); M.hide(bb.g, t < tP2[i] - 0.1 || gOn >= 1); });
     bG.forEach((bb, i) => { const u = M.io((t - tG1[i] + 0.05) / 0.45); attr(bb.r, 'height', (bb.pm * BS * u).toFixed(1)); attr(bb.r, 'y', (BY - bb.pm * BS * u).toFixed(1)); attr(bb.v, 'y', (BY - bb.pm * BS * u - 8).toFixed(1)); attr(bb.r, 'fill', s.grp && i === s.i ? NC : C.dim); bb.g.style.opacity = M.clamp((t - tG1[i] + 0.1) / 0.2).toFixed(3); M.hide(bb.g, t < tG1[i] - 0.1); });
-    M.setT($('#chL'), s.grp ? 'ATOMIC RADIUS / pm · NCERT TABLE 3.6(b)' : 'ATOMIC RADIUS / pm · NCERT TABLE 3.6(a)');
+    M.setT($('#chL'), s.grp ? 'RADIUS / pm · NCERT 3.6(b)' : 'RADIUS / pm · NCERT 3.6(a)');
     M.setT(arrL, s.grp ? 'NEW SHELL: BIGGER' : 'SAME SHELL: SMALLER'); M.vis(arrL, t, s.grp ? wt('S8', 'shell') - 0.1 : wt('S6', 'shrinks') - 0.1, 1e9, POP);
     avA(t, wt('S6', 'pull') - 0.1, tG1[0] - 0.4); fade(zoomC, t, tG1[0] + 0.3);
   }
@@ -307,11 +307,11 @@ M.on(t => {
     fade(gCl, t, T0('W2') + 0.3, tCu); fade(gCu, t, tCu + 0.1, tCm); fade(gCmp, t, tCm + 0.1);
     M.setT($('#wrL'), t < tCu ? 'CHLORINE MOLECULE · HALF THE DISTANCE' : t < tCm ? 'COPPER METAL · HALF THE DISTANCE' : 'FLUORINE VERSUS CHLORINE');
     const cu = t >= tCu, dd = cu ? 256 * CuS : 198 * WS, rv = dd / 2, dy = WY + (cu ? 128 * CuS : 99 * WS) + 70;
-    attr(dLine, 'd', `M${392 - dd / 2} ${dy} H${392 + dd / 2} M${392 - dd / 2} ${dy - 12} v24 M${392 + dd / 2} ${dy - 12} v24`); attr(dTxt, 'y', (dy + 40).toFixed(1));
+    const dx0 = cu ? 392 - dd : 392 - dd / 2, dx1 = cu ? 392 : 392 + dd / 2; attr(dLine, 'd', `M${dx0} ${dy} H${dx1} M${dx0} ${dy - 12} v24 M${dx1} ${dy - 12} v24`); attr(dTxt, 'x', ((dx0 + dx1) / 2).toFixed(1)); attr(dTxt, 'y', (dy + 40).toFixed(1));
     M.setT(dTxt, cu ? 'd = 256 pm' : 'd = 198 pm'); M.setT(rTxt, cu ? '128 pm' : '99 pm');
     const d0 = cu ? wt('W5', 'neighbouring') : wt('W2', 'nuclei'), r0 = cu ? wt('W5', 'Half') : wt('W4', 'ninety');
     M.draw(dLine, t, d0, 0.5); fade(dTxt, t, d0 + 0.3, tCm);
-    attr(rLine, 'x1', (392 + dd / 2).toFixed(1)); attr(rLine, 'x2', (392 + dd / 2 + rv).toFixed(1)); attr(rTxt, 'x', (392 + dd / 2 + rv / 2).toFixed(1));
+    const rx0 = cu ? 392 : 392 + dd / 2; attr(rLine, 'x1', rx0.toFixed(1)); attr(rLine, 'x2', (rx0 + rv).toFixed(1)); attr(rTxt, 'x', (rx0 + rv / 2).toFixed(1));
     M.draw(rLine, t, r0, 0.4); if (t >= tCm) M.hide(rLine, true); fade(rTxt, t, r0 + 0.3, tCm);
     if (t >= tCm) M.hide(dLine, true);
     M.vis(cmpTag, t, wt('W6', 'shell') - 0.1, 1e9, POP);

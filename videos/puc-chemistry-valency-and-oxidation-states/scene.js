@@ -114,7 +114,7 @@ const nG = NB.map(n => { const g = atomG(ds, 32, HC, 'Na', 24); attr(g, 'transfo
 const naEl = NB.map(() => mk(ds, 'circle', { r: 8, fill: EC }));
 const oxO2 = oxChip($('#dr'), OB[0] + 44, OB[1] - 82, '−2', MC), oxN = NB.map((n, i) => oxChip($('#dr'), n[0] + (i ? 40 : -96), n[1] - 20, '+1', PC));
 const sumTag = [oxChip($('#dr'), 560, 70, 'SUM: +2 − 2 = 0', C.ok), oxChip($('#dr'), 520, 324, 'SUM: 2(+1) − 2 = 0', C.ok)];
-const th2 = PUC.think($('#th2'), { q: `Is oxygen's valency different in ${K('\\mathrm{OF_2}')} and ${K('\\mathrm{Na_2O}')}?`, opts: ['Same', 'Different'], right: 0, why: `Valency 2 in both. Only the oxidation state flips: ${K(P_('+2'))} and ${K(M_('-2'))}.` });
+const th2 = PUC.think($('#th2'), { q: `Is oxygen's valency different in ${K('\\mathrm{OF_2}')} and <span style="white-space:nowrap">${K('\\mathrm{Na_2O}')}?</span>`, opts: ['Same', 'Different'], right: 0, why: `Valency 2 in both. Only the oxidation state flips: ${K(P_('+2'))} and ${K(M_('-2'))}.` });
 
 /* ---------- statement ---------- */
 $('#stF').innerHTML = K(`\\mathrm{OF_2}:\\ ${N_('O')} = ${P_('+2')} \\qquad \\mathrm{Na_2O}:\\ ${N_('O')} = ${M_('-2')}`);

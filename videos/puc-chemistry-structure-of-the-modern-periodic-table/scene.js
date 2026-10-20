@@ -152,7 +152,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 29', topic: 'What makes an el
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('S7') - 0.2, 1.06, 960, 560], [tB1 - 0.3, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('S7') - 0.2, 1.06, 960, 540], [tB1 - 0.3, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};

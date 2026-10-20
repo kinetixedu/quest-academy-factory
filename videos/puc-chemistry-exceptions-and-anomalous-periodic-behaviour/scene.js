@@ -144,7 +144,7 @@ $('#trap').insertAdjacentHTML('beforeend', `<div style="position:absolute;right:
   <div id="tm1" style="height:72px;border-radius:12px;background:var(--okBg);display:flex;align-items:center;justify-content:space-between;padding:0 18px;font:600 16px 'IBM Plex Mono';letter-spacing:.06em;color:#1F6B3F">B LOSES<b style="font:600 24px 'IBM Plex Mono';color:#1F6B3F">2p, SHIELDED</b></div></div>`);
 const where = PUC.where($('#wa'), { on: ['NEET'], type: 'IE order of B, C, N, O, the halogen with the most negative gain enthalpy, diagonal pairs' });
 const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', q: `Which statement is correct?`, qW: 760,
-  opts: ['First ionization enthalpy: O > N', 'Electron gain enthalpy: F is more negative than Cl', 'First ionization enthalpy: Be > B', 'Li forms mainly ionic compounds, like Na'], right: 2, cols: 1, optW: 940, optY: 196, optH: 84, optFs: 28 });
+  opts: ['First ionization enthalpy: O > N', 'Electron gain enthalpy: F is more negative than Cl', 'First ionization enthalpy: Be > B', 'Li forms mainly ionic compounds, like Na'], right: 2, cols: 1, optW: 780, optY: 196, optH: 84, optFs: 28 });
 const so = PUC.solution($('#so'), [[K(`${G_('899')} > ${G_('801')} \\;\\checkmark`)], [K(`\\text{A: N } ${G_('1402')} > \\text{O } ${G_('1314')}`)], [K(`\\text{B: Cl } ${G_('-349')},\\ \\text{F } ${G_('-328')}`)], [K(`\\text{D: Li is covalent, like Mg}`)]], { y0: 100, dy: 112 });
 const tSo = [T0('A2'), T0('A3'), wt('A3', 'B'), T0('A4')];
 const fc = PUC.fcard($('#sF'), { x: 410, y: 262, w: 1100, h: 470, title: 'Recap · exceptions and anomalies', y0: 96, dy: 74, txt: [0, 1, 0, 1, 1],
@@ -158,7 +158,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · CHAPTER 4', topic: 'Why do atoms
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('S6', 'share') - 0.2, 1.05, 1100, 560], [T0('B1') - 0.3, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]]]);
 let geo = null;
 function measure() {
   geo = {};

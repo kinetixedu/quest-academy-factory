@@ -129,7 +129,7 @@ const drawBond = (bd, P, AA, u, eu) => {
   bd.dt.forEach((d, j) => { const i = j >> 1, s = j & 1 ? 1 : -1, k = (i - (bd.n - 1) / 2) * 17; attr(d, 'cx', (mxp + px * k + ux * s * 9).toFixed(1)); attr(d, 'cy', (myp + py * k + uy * s * 9).toFixed(1)); d.style.opacity = eu.toFixed(3); M.hide(d, eu <= 0.01); });
 };
 $('#mSum').innerHTML = K(`${C_('C')}${H_('H')}_4 = 12.011 + 4 \\times 1.008 = 16.043\\,${U}`);
-const AR = (el, c, n, sub) => `<div class="ar2" id="${el}"><div class="el" style="background:${c}">${el.split('_')[1]}</div><div class="cnt">${n} ATOM${n > 1 ? 'S' : ''}</div><div class="dts">${'<b style="background:' + c + '"></b>'.repeat(n)}</div><div class="sv" style="color:${c}">${sub}</div></div>`;
+const AR = (el, c, n, sub) => `<div class="ar2" id="${el}"><div class="el" style="background:${c}">${el.split('_')[1]}</div><div class="cnt">${n} ATOM${n > 1 ? 'S' : ''}</div><div class="dts">${('<b style="background:' + c + '"></b>').repeat(n)}</div><div class="sv" style="color:${c}">${sub}</div></div>`;
 $('#mrows').innerHTML = [AR('m_C', CC, 1, '12.011 u'), AR('m_H', HC, 4, '4.032 u')].join('');
 $('#m_C').style.top = '230px'; $('#m_H').style.top = '370px';
 const tM2 = T0('M2'), tMH = wt('M2', 'four');
@@ -161,9 +161,9 @@ const ctag = document.createElement('div'); ctag.className = 'btag'; ctag.style.
 const xs = $('#xS'), LX0 = 200, LY0 = 112, LS = 64, latt = [];
 for (let r = 0; r < 5; r++) for (let c = 0; c < 7; c++) { const na = (r + c) % 2 === 0, g = mk(xs, 'g', {}); mk(g, 'circle', { cx: LX0 + c * LS, cy: LY0 + r * LS, r: na ? 17 : 26, fill: na ? NAC : CC }); txt(g, LX0 + c * LS, LY0 + r * LS + 6, na ? '+' : '−', { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 20, fill: '#fff' }); latt.push({ g, r, c }); }
 const hiRing = mk(xs, 'circle', { cx: LX0 + 3 * LS, cy: LY0 + 2 * LS, r: 96, fill: 'none', stroke: EC, 'stroke-width': 4, 'stroke-dasharray': '10 8' });
-const fuBox = mk(xs, 'rect', { x: LX0 + 1 * LS - 30, y: LY0 + 3 * LS - 34, width: LS + 64, height: 68, rx: 16, fill: 'none', stroke: GC, 'stroke-width': 4 });
-const xTag = txt(xs, 392, 420, '6 Cl⁻ AROUND EACH Na⁺ · IN 3D', { 'text-anchor': 'middle', 'font-size': 20, fill: EC, 'font-weight': 600 });
-const fuT = txt(xs, LX0 + 1.5 * LS, LY0 + 3 * LS + 64, '1 FORMULA UNIT', { 'text-anchor': 'middle', 'font-size': 18, fill: GC, 'font-weight': 600 });
+const fuBox = mk(xs, 'rect', { x: LX0 + 1 * LS - 30, y: LY0 + 4 * LS - 34, width: LS + 64, height: 68, rx: 16, fill: 'none', stroke: GC, 'stroke-width': 4 });
+const xTag = txt(xs, 392, 446, '6 Cl⁻ AROUND EACH Na⁺ · IN 3D', { 'text-anchor': 'middle', 'font-size': 20, fill: EC, 'font-weight': 600 });
+const fuT = txt(xs, 392, 446, '1 FORMULA UNIT', { 'text-anchor': 'middle', 'font-size': 18, fill: GC, 'font-weight': 600 });
 $('#fmB').innerHTML = K(`\\mathrm{${tc(NAC, 'Na')}${tc(CC, 'Cl')}} = 23.0 + 35.5 = 58.5\\,${U}`);
 
 /* ---------- X / Q / F ---------- */
@@ -188,7 +188,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 09', topic: 'How many molecul
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tObal - 0.3, 1.05, 960, 560], [tD1 - 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]]]);
 let geo = null;
 function measure() {
   geo = {};
@@ -240,9 +240,9 @@ M.on(t => {
   if (sOn) {
     const z = OUT('D1');
     M.vis($('#bn'), t, tS1 + 0.05, z, { dx: -60, dy: 0, ...o });
-    M.vis($('#ul'), t, wt('S1', 'carbon') - 0.1, z, { dx: 60, dy: 0, ...o });
+    M.vis($('#ul'), t, tS1 + 0.6, z, { dx: 60, dy: 0, ...o });
     M.vis($('#uDef'), t, tPart + 0.4, 1e9, { dy: 12 });
-    [wt('S2', 'twelve'), wt('S4', 'about'), tOv].forEach((tt, i) => { const el = $('#ur' + i); M.vis(el, t, tt - 0.15, 1e9, { dx: -16, dy: 0 }); setBg(el, mix(C.soft, C.ac2, M.io((t - tt) / 0.3) * (1 - M.io((t - tt - 1.6) / 0.5)))); });
+    [tS1 + 0.9, wt('S4', 'about'), tOv].forEach((tt, i) => { const el = $('#ur' + i); M.vis(el, t, tt - 0.15, 1e9, { dx: -16, dy: 0 }); setBg(el, mix(C.soft, C.ac2, M.io((t - tt) / 0.3) * (1 - M.io((t - tt - 1.6) / 0.5)))); });
     // the carbon atom, cut into twelve, one part leaves as 1 u
     const cOut = M.io((t - tS4 + 0.1) / 0.3), cIn = M.io((t - tS1 - 0.4) / 0.35);
     cAt.style.opacity = (cIn * (1 - cOut)).toFixed(3); M.hide(cAt, cIn * (1 - cOut) <= 0.002); cLab.style.opacity = cAt.style.opacity; M.hide(cLab, cIn * (1 - cOut) <= 0.002);
@@ -317,7 +317,7 @@ M.on(t => {
     M.vis($('#ml'), t, tM1 + 0.05, out, { dx: -60, dy: 0, ...o }); M.vis($('#mr'), t, tM1 + 0.2, out, { dx: 60, dy: 0, ...o });
     PUC.write($('#mDef'), t, wt('M1', 'Molecular') - 0.1, 1.0);
     const P = { C: [MX, MY] };
-    fade(MA.C.g, t, wt('M2', 'carbon') - 0.2, 1e9, 0.3);
+    fade(MA.C.g, t, tM1 + 0.6, 1e9, 0.3);
     HP.forEach((hp, i) => { const u = M.io((t - tMH - i * 0.15) / 0.7); P['H' + i] = [M.lerp(HS0[i][0], hp[0], u), M.lerp(HS0[i][1], hp[1], u)]; attr(MA['H' + i].g, 'transform', `translate(${P['H' + i][0].toFixed(1)} ${P['H' + i][1].toFixed(1)})`); fade(MA['H' + i].g, t, wt('M2', 'hydrogens') - 0.3 + i * 0.05, 1e9, 0.3);
       const bu = M.io((t - tMH - 0.6 - i * 0.15) / 0.4); drawBond(mBonds[i], P, MA, bu, bu); });
     PUC.write($('#mSum'), t, wt('M2', 'Twelve') - 0.1, 1.2);
@@ -349,7 +349,7 @@ M.on(t => {
     M.vis(ctag, t, gv - 0.1, 1e9, POP);
     M.vis($('#cr'), t, wt('C3', 'pack') - 0.3, out, { dx: 60, dy: 0, ...o });
     latt.forEach(({ g, r, c }) => fade(g, t, wt('C3', 'pack') + (r * 7 + c) * 0.03));
-    M.draw(hiRing, t, wt('C3', 'surrounded') - 0.1, 0.6); fade(xTag, t, wt('C3', 'six'));
+    M.draw(hiRing, t, wt('C3', 'surrounded') - 0.1, 0.6); fade(xTag, t, wt('C3', 'six'), wt('C4', 'formula') - 0.1);
     M.drawU(fuBox, M.io((t - wt('C4', 'formula') + 0.1) / 0.5)); fade(fuT, t, wt('C4', 'formula') + 0.2);
     M.vis($('#fmB'), t, wt('C4', 'mass') - 0.1, 1e9, { dy: 12 });
   }

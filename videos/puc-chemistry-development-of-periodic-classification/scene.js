@@ -96,7 +96,7 @@ const stA = mk(b, 'g', {}), stB = mk(b, 'g', {}), stC = mk(b, 'g', {});
 const tile = (p, x, y, w, h, s, fsz, col) => { const g = mk(p, 'g', { transform: `translate(${x} ${y})` }); const r = mk(g, 'rect', { x: -w / 2, y: -h / 2, width: w, height: h, rx: Math.min(18, w / 6), fill: '#FFFFFF', stroke: col, 'stroke-width': 3 }); const t = txt(g, 0, fsz * 0.36, s, { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-weight': 700, 'font-size': fsz, fill: col }); return { g, r, t }; };
 // stage A: Ca Sr Ba triad
 const TA = [['Ca', 'CALCIUM', 40, HC], ['Sr', 'STRONTIUM', 88, NC], ['Ba', 'BARIUM', 137, HC]];
-const tA = TA.map(([s, n, w, col], i) => { const x = 170 + i * 222, T = tile(stA, x, 200, 150, 150, s, 64, col); txt(T.g, 0, 58, n, { 'text-anchor': 'middle', 'font-size': 15, fill: C.mute, 'font-weight': 600 });
+const tA = TA.map(([s, n, w, col], i) => { const x = 170 + i * 222, T = tile(stA, x, 200, 150, 150, s, 64, col); T.nm = txt(T.g, 0, 58, n, { 'text-anchor': 'middle', 'font-size': 15, fill: C.mute, 'font-weight': 600 });
   const wv = txt(stA, x, 322, String(w), { 'text-anchor': 'middle', 'font-size': 38, fill: col, 'font-weight': 600 }); return { ...T, wv, x }; });
 const arcs = [mk(stA, 'path', { d: 'M170 340 C170 400 300 420 392 420', fill: 'none', stroke: C.ink2, 'stroke-width': 3, 'stroke-dasharray': '2 8', 'stroke-linecap': 'round' }), mk(stA, 'path', { d: 'M614 340 C614 400 484 420 392 420', fill: 'none', stroke: C.ink2, 'stroke-width': 3, 'stroke-dasharray': '2 8', 'stroke-linecap': 'round' })];
 const sumG = mk(stA, 'g', {}); mk(sumG, 'rect', { x: 212, y: 424, width: 360, height: 60, rx: 12, fill: C.soft }); const sumT = txt(sumG, 392, 465, '40 + 137 = 177', { 'text-anchor': 'middle', 'font-size': 30, fill: C.ink, 'font-weight': 600 });
@@ -104,8 +104,7 @@ const cmpG = mk(stA, 'g', {}); mk(cmpG, 'rect', { x: 242, y: 500, width: 300, he
 // stage B: Newlands' octaves
 const OCT = [['Li', 'Be', 'B', 'C', 'N', 'O', 'F'], ['Na', 'Mg', 'Al', 'Si', 'P', 'S', 'Cl'], ['K', 'Ca']];
 const tB = []; OCT.forEach((row, r) => row.forEach((s, c) => { const T = tile(stB, 92 + c * 100, 150 + r * 116, 84, 84, s, 32, HC); const n = r * 7 + c; const bd = mk(T.g, 'g', {}); mk(bd, 'circle', { cx: 0, cy: -58, r: 15, fill: n < 8 ? C.ink : C.soft }); txt(bd, 0, -52, String(n + 1), { 'text-anchor': 'middle', 'font-size': 17, fill: '#FFFFFF', 'font-weight': 600 }); tB.push({ ...T, bd, row: r, col: c, n }); }));
-const brk = mk(stB, 'g', {}); [2, 3, 4].forEach(c => mk(brk, 'rect', { x: 92 + c * 100 - 42, y: 382 - 42, width: 84, height: 84, rx: 14, fill: C.redBg, stroke: C.red, 'stroke-width': 2.5, 'stroke-dasharray': '6 6' }));
-txt(brk, 392, 398, '? ? ?', { 'text-anchor': 'middle', 'font-size': 28, fill: C.red, 'font-weight': 600 });
+const brk = mk(stB, 'g', {}); [2, 3, 4].forEach(c => { mk(brk, 'rect', { x: 92 + c * 100 - 42, y: 382 - 42, width: 84, height: 84, rx: 14, fill: C.redBg, stroke: C.red, 'stroke-width': 2.5, 'stroke-dasharray': '6 6' }); txt(brk, 92 + c * 100, 394, '?', { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-size': 32, fill: C.red, 'font-weight': 700 }); });
 const tOct = ['Lithium', 'beryllium', 'boron', 'carbon', 'nitrogen', 'oxygen', 'fluorine', 'eighth'].map(w => wt('S7', w));
 // stage C: Mendeleev's table (a slice of it)
 const GH = ['III', 'IV', 'V', 'VI', 'VII'], MG = [['B', 'C', 'N', 'O', 'F'], ['Al', 'Si', 'P', 'S', 'Cl'], ['', '', 'As', 'Se', 'Br'], ['In', 'Sn', 'Sb', 'Te', 'I']];
@@ -135,7 +134,7 @@ $('#ctab').innerHTML = `<div class="cth" id="ch1" style="left:300px;color:${GC}"
   CT.map(([a], i) => `<div class="ctr" id="ctr${i}" style="top:${26 + i * 56}px;height:48px"><div class="c0">${a}</div><div class="c1" id="c1_${i}" style="color:${GC}"></div><div class="c2" id="c2_${i}"></div></div>`).join('');
 // today: mini periodic table
 const td = ptable($('#tdS'), { x: 36, y: 66, cell: 24, gap: 4, noF: true, rx: 3 });
-const TD = [[tS1, ['Ca', 'Sr', 'Ba'], 'Ca · Sr · Ba', 'GROUP 2 TODAY'], [tS6, ['Li', 'Na', 'K'], 'Li · Na · K', 'GROUP 1 TODAY'], [wt('M4', 'chlorine'), ['F', 'Cl', 'Br', 'I'], 'F · Cl · Br · I', 'GROUP 17 TODAY'], [wt('M7', 'gallium'), ['Ga'], 'Ga', 'GROUP 13 TODAY'], [tB1, ['Ge'], 'Ge', 'GROUP 14 TODAY']];
+const TD = [[tS1, ['Ca', 'Sr', 'Ba'], 'Ca · Sr · Ba', 'GROUP 2 TODAY'], [tS6, ['Li', 'Na', 'K'], 'Li · Na · K', 'GROUP 1 TODAY'], [tM1, [], '', ''], [wt('M4', 'chlorine'), ['F', 'Cl', 'Br', 'I'], 'F · Cl · Br · I', 'GROUP 17 TODAY'], [wt('M7', 'gallium'), ['Ga'], 'Ga', 'GROUP 13 TODAY'], [tB1, ['Ge'], 'Ge', 'GROUP 14 TODAY']];
 const th1 = PUC.think($('#th1'), { q: `Silicon forms ${K('\\mathrm{SiO_2}')}. Which oxide should eka-silicon form?`, opts: [K('\\mathrm{EO_2}'), K('\\mathrm{E_2O_3}')], right: 0, why: `Same group, same way of combining. Germanium forms ${K(`${tc(NC, '\\mathrm{Ge}')}\\mathrm{O_2}`)}.` });
 // bench beats
 const tS2 = T0('S2'), tAdd = wt('S3', 'Add'), tHalf = wt('S3', 'Half'), tSr = wt('S4', 'strontium'), tFew = wt('S5', 'only');
@@ -186,7 +185,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 27', topic: 'If not atomic we
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tLight - 0.3, 1.06, 960, 600], [tGap - 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tLight - 0.3, 1.06, 960, 540], [tGap - 0.2, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};
@@ -264,7 +263,7 @@ M.on(t => {
     // stage A
     if (sA > 0) {
       tA.forEach((T, i) => { const u = M.spring(t - wt('S2', ['Calcium', 'strontium', 'barium'][i]) + 0.1, M.POP); attr(T.g, 'transform', `translate(${T.x} 200) scale(${Math.max(0.01, Math.min(u, 1.2)).toFixed(3)})`); M.hide(T.g, t < tS1); fade(T.wv, t, wt('S2', ['forty', 'eighty', 'one'][i]) - 0.05); });
-      const lit = M.io((t - tSr) / 0.35); attr(tA[1].r, 'fill', mix('#FFFFFF', NC, lit)); attr(tA[1].t, 'fill', mix(NC, '#FFFFFF', lit));
+      const lit = M.io((t - tSr) / 0.35); attr(tA[1].r, 'fill', mix('#FFFFFF', NC, lit)); attr(tA[1].t, 'fill', mix(NC, '#FFFFFF', lit)); attr(tA[1].nm, 'fill', mix(C.mute, '#FFFFFF', lit));
       arcs.forEach(a => M.draw(a, t, tAdd, 0.6)); fade(sumG, t, tAdd + 0.4); M.setT(sumT, t < tHalf ? '40 + 137 = 177' : '177 ÷ 2 = 88.5'); attr(sumT, 'fill', t < tHalf ? C.ink : GC);
       fade(cmpG, t, tSr + 0.2);
     }
