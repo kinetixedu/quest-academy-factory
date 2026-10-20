@@ -41,3 +41,17 @@ Name labels are added in the video (Poppins pill), never baked into the image.
 | scene-festival-rush-cut.png | festival queue, Ravi directing Asha and Kabir | directing, coordination, contingency, span |
 
 Images are 2x upscales of Canva previews (enough for cards up to ~640 px). When Canva downloads are allowed in a session, replace with full-size exports using the same file names.
+
+## Laddoo Lab cast (Marketing Management series) - `ll-*`
+| file | who / what |
+|---|---|
+| ll-zoya.png, ll-zoya-face.jpg | Zoya, founder (holds a laddoo and notebook) |
+| ll-nani.png, ll-nani-face.jpg | Nani, recipe keeper (bowl of laddoos) |
+| ll-arjun.png, ll-arjun-face.jpg | Arjun, sales (box of packs, thumbs up) |
+| ll-dev.png, ll-dev-face.jpg | Dev, design and social media (tablet) |
+| ll-rao.png, ll-rao-face.jpg | Mrs. Rao, busy working mother, target customer (tiffin, phone) |
+| ll-scene-kitchen-cut.png | Zoya and Nani rolling laddoos at home | Eps 1-6, product, quality |
+| ll-scene-survey-cut.png | Zoya surveying a mother and son at a school gate | research, segmentation, needs |
+| ll-scene-team-cut.png | Zoya, Dev, Arjun, Nani planning packs | planning, branding, NPD, IMC |
+| ll-scene-shop.png | Arjun pitching a shopkeeper (full image, show on a card - no cutout, shelves fill the frame) | distribution, channels, personal selling |
+| ll-scene-tiffin-cut.png | Mrs. Rao packing laddoos in her daughter's tiffin | value, satisfaction, CRM, CLV |
