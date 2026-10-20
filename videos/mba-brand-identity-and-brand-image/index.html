@@ -296,7 +296,9 @@
 .sb .fc{position:absolute;left:32px;top:68px;width:88px;height:88px;border-radius:44px;background-size:cover;background-position:center;box-shadow:0 0 0 4px #14213D}
 .sb .t1{position:absolute;left:144px;top:72px;font-size:36px;white-space:nowrap}
 .sb .t2{position:absolute;left:144px;top:120px;font:500 24px Poppins;color:var(--ink2);white-space:nowrap}
-.sb .tg{position:absolute;left:32px;top:200px;height:48px;padding:0 20px;border-radius:24px;display:flex;align-items:center;gap:10px;font:700 20px Poppins;letter-spacing:.1em;white-space:nowrap}
+.sw2{position:absolute;left:32px;top:180px;display:flex;gap:10px}
+.sw2 .mw{position:relative}
+.sb .tg{position:absolute;left:32px;top:236px;height:48px;padding:0 20px;border-radius:24px;display:flex;align-items:center;gap:10px;font:700 20px Poppins;letter-spacing:.1em;white-space:nowrap}
 .mw{position:absolute;height:44px;padding:0 18px;border-radius:22px;display:flex;align-items:center;gap:8px;font:600 20px Poppins;white-space:nowrap}
 #kel{position:absolute;left:48px;top:416px;width:1504px;height:120px;border-radius:20px;background:var(--paper)}
 #kel i{position:absolute;left:24px;top:24px;width:72px;height:72px;border-radius:36px;background:#fff;display:flex;align-items:center;justify-content:center}
@@ -323,7 +325,7 @@
 .ac .t1{position:absolute;left:28px;top:384px;font:600 22px Poppins;white-space:nowrap}
 /* prism */
 #pz{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
-#pzS{position:absolute;left:48px;top:84px}
+#pzS{position:absolute;left:48px;top:74px}
 #pp{left:976px;top:270px;width:784px;height:580px}
 #pp .pn .pe,#pp .ka{width:688px}
 #mini{position:absolute;left:48px;top:84px}
@@ -340,7 +342,7 @@
     <!-- scene A: what we think vs what they say -->
     <div id="sA">
       <div class="card" id="hero"><div class="lbl" style="left:48px;top:40px">LADDOO LAB THINKS IT IS</div><div id="wRows"></div></div>
-      <div class="card" id="ways"><div class="lbl" style="left:36px;top:34px">PARENTS KEEP SAYING</div><div class="serif" id="bigW">Expensive</div><div id="bigS"><span id="bigSI"></span>Again and again</div></div>
+      <div class="card" id="ways"><div class="lbl" style="left:36px;top:34px">PARENTS KEEP SAYING</div><div class="serif" id="bigQ" style="position:absolute;left:36px;top:96px;font-size:48px;color:#B9B1A3;white-space:nowrap">What do parents say?</div><div class="serif" id="bigW">Expensive</div><div id="bigS"><span id="bigSI"></span>Again and again</div></div>
       <div class="card" id="ask"><div class="lbl" style="left:36px;top:34px">WANTED OR SEEN?</div><div id="meth"></div><div class="serif" id="askT">Not always the <span class="acc">same.</span></div></div>
     </div>
 
@@ -362,10 +364,10 @@
       <div class="serif" id="dq">So what is the <span class="acc">difference?</span></div>
       <div class="card" id="sr">
         <div class="lbl" style="left:48px;top:40px">SENT AND RECEIVED</div>
-        <div class="sb" id="sbL" style="left:48px"><div class="lb2" style="color:#B8862F">BRAND IDENTITY</div><div class="fc" style="background-image:url(../../assets/illustrations/mba/ll-zoya-face.jpg)"></div><div class="serif t1">The company</div><div class="t2">decides what to send</div><div class="tg" id="tgS" style="background:#B8862F;color:#fff"><span id="tgSI"></span>MESSAGE SENT</div></div>
-        <div class="sb" id="sbR" style="left:1072px"><div class="lb2" style="color:#14213D">BRAND IMAGE</div><div class="fc" style="background-image:url(../../assets/illustrations/mba/ll-rao-face.jpg);box-shadow:0 0 0 4px #B8862F"></div><div class="serif t1">The customer</div><div class="t2">holds it in mind</div><div class="tg" id="tgR" style="background:#14213D;color:#fff"><span id="tgRI"></span>MESSAGE RECEIVED</div></div>
+        <div class="sb" id="sbL" style="left:48px"><div class="lb2" style="color:#B8862F">BRAND IDENTITY</div><div class="fc" style="background-image:url(../../assets/illustrations/mba/ll-zoya-face.jpg)"></div><div class="serif t1">The company</div><div class="t2">decides what to send</div><div class="sw2" id="swL"></div><div class="tg" id="tgS" style="background:#B8862F;color:#fff"><span id="tgSI"></span>MESSAGE SENT</div></div>
+        <div class="sb" id="sbR" style="left:1072px"><div class="lb2" style="color:#14213D">BRAND IMAGE</div><div class="fc" style="background-image:url(../../assets/illustrations/mba/ll-rao-face.jpg);box-shadow:0 0 0 4px #B8862F"></div><div class="serif t1">The customer</div><div class="t2">holds it in mind</div><div class="sw2" id="swR"></div><div class="tg" id="tgR" style="background:#14213D;color:#fff"><span id="tgRI"></span>MESSAGE RECEIVED</div></div>
         <svg id="srA" width="1600" height="580" style="position:absolute;left:0;top:0"><path id="srL" d="M548 234 H1052" fill="none" stroke="#B9B1A3" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 12"/><path id="srH" d="M1036 220 L1054 234 L1036 248" fill="none" stroke="#B9B1A3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div id="mws"></div>
+        <svg id="pulse" width="1600" height="580" style="position:absolute;left:0;top:0"><circle id="pl0" r="9" cy="234" fill="#B8862F"/><circle id="pl1" r="9" cy="234" fill="#B8862F"/><circle id="pl2" r="9" cy="234" fill="#B8862F"/><circle id="pl3" r="9" cy="234" fill="#B8862F"/></svg>
         <div id="kel"><i id="kelI"></i><div class="kl">KEVIN LANE KELLER · JOURNAL OF MARKETING, 1993</div><div class="kt">Brand image: <b>perceptions</b> about a brand, as reflected by the <b>associations held in memory</b></div></div>
       </div>
     </div>
@@ -390,7 +392,7 @@
     <div id="sP">
       <div class="card" id="pz"><div class="abs" id="pzIn" style="left:0;top:0;width:784px;height:580px">
         <div class="lbl" style="left:48px;top:40px">KAPFERER'S BRAND IDENTITY PRISM · LADDOO LAB</div>
-        <svg id="pzS" width="688" height="480"></svg>
+        <svg id="pzS" width="688" height="476"></svg>
       </div></div>
       <div class="card" id="pp"><div id="ppPans"></div></div>
     </div>

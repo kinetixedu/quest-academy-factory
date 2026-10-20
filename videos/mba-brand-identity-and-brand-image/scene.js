@@ -67,8 +67,9 @@ $('#pdots').innerHTML = Array.from({ length: 30 }, (_, i) => `<div class="pdot" 
 wrap($('#ill'), 'illOut', 784, 580);
 // D
 $('#tgSI').innerHTML = M.icon('send', 20, '#fff', 2.4); $('#tgRI').innerHTML = M.icon('eye', 20, C.gold2, 2.4); $('#kelI').innerHTML = M.icon('quote', 32, C.gold, 2);
-const MW = [['Healthy', 0], ['Honest', 1], ['Home-made', 0]];
-$('#mws').innerHTML = MW.map(([w], i) => `<div class="mw" id="mw${i}" style="top:${170 + i * 60}px;background:#F3EAD6;color:#14213D">${w}</div>`).join('') + `<div class="mw" id="mwX" style="top:290px;background:#F6E3DC;color:#B5482F">Expensive</div>`;
+const SWL = [['Healthy', 0], ['Honest', 0], ['Home-made', 0]], SWR = [['Healthy', 0], ['Tasty', 0], ['Expensive', 1]];
+$('#swL').innerHTML = SWL.map(([w], i) => `<div class="mw" id="wl${i}" style="background:#F3EAD6;color:#14213D">${w}</div>`).join('');
+$('#swR').innerHTML = SWR.map(([w, b], i) => `<div class="mw" id="wrr${i}" style="${b ? 'background:#F6E3DC;color:#B5482F' : 'background:#FFFFFF;color:#14213D'}">${w}</div>`).join('');
 
 /* M: the survey */
 const CH = [['Healthy', 0], ['Tasty', 3], ['Home-made', 1], ['Healthy', 0], ['Tasty', 3], ['Healthy', 0], ['Home-made', 1], ['Tasty', 3], ['Healthy', 0], ['Home-made', 1],
@@ -88,7 +89,7 @@ $('#acQ').innerHTML = `<g transform="translate(80 0)"><rect x="0" y="0" width="1
   <g id="ins">${['RAGI', 'COCOA', 'JAGGERY'].map((n, i) => `<g transform="translate(22 ${162 + i * 34})"><circle cx="8" cy="8" r="8" fill="#B8862F"/><path d="M4 8 l3 3 l5 -6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/><text x="26" y="13" font-family="Poppins" font-weight="600" font-size="14" letter-spacing="1.5" fill="#14213D">${n}</text></g>`).join('')}</g></g>`;
 
 /* P: the prism (pointy hexagon, centre 344,236, r 176) */
-const HX = 344, HY = 236, HR = 176, V = k => { const a = (-90 + 60 * k) * Math.PI / 180; return [HX + HR * Math.cos(a), HY + HR * Math.sin(a)]; };
+const HX = 344, HY = 238, HR = 196, V = k => { const a = (-90 + 60 * k) * Math.PI / 180; return [HX + HR * Math.cos(a), HY + HR * Math.sin(a)]; };
 const FAC = [ // [triangle index, label, name, meaning, example, icon, side]
   [5, 'PHYSIQUE', 'Physique', 'How it looks', 'The navy pack and the laddoo logo', 'package', 'SENDER'],
   [0, 'PERSONALITY', 'Personality', 'If it were a person', 'Warm and honest, like Nani', 'smile', 'SENDER'],
@@ -97,11 +98,11 @@ const FAC = [ // [triangle index, label, name, meaning, example, icon, side]
   [3, 'REFLECTION', 'Reflection', 'The typical buyer', 'A busy parent who cares', 'users', 'RECEIVER'],
   [2, 'SELF-IMAGE', 'Self-image', 'How buyers see themselves', '"I am a good parent"', 'user', 'RECEIVER'],
 ];
-$('#pzS').innerHTML = FAC.map(([k, l], i) => { const [x1, y1] = V(k), [x2, y2] = V(k + 1), am = (-60 + 60 * k) * Math.PI / 180, lx = HX + 112 * Math.cos(am), ly = HY + 112 * Math.sin(am);
-  return `<path id="tri${i}" d="M${HX} ${HY} L${x1.toFixed(1)} ${y1.toFixed(1)} L${x2.toFixed(1)} ${y2.toFixed(1)} Z" fill="#F5F1E8" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/><text id="ftx${i}" x="${lx.toFixed(1)}" y="${(ly + 5).toFixed(1)}" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="13" letter-spacing="1.6" fill="#B9B1A3">${l}</text>`; }).join('') +
-  `<circle cx="${HX}" cy="${HY}" r="52" fill="#FFFFFF" stroke="#E2DACB" stroke-width="3"/><g transform="translate(${HX - 39} ${HY - 44}) scale(0.68)">${logo()}</g>
-   <text x="${HX}" y="34" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="15" letter-spacing="2.4" fill="#B8862F">SENDER · WHAT WE SHOW</text>
-   <text x="${HX}" y="452" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="15" letter-spacing="2.4" fill="#14213D">RECEIVER · WHAT THEY TAKE IN</text>`;
+$('#pzS').innerHTML = FAC.map(([k, l], i) => { const [x1, y1] = V(k), [x2, y2] = V(k + 1), am = (-60 + 60 * k) * Math.PI / 180, lr = (k === 1 || k === 4) ? 94 : 124, lx = HX + lr * Math.cos(am), ly = HY + lr * Math.sin(am);
+  return `<path id="tri${i}" d="M${HX} ${HY} L${x1.toFixed(1)} ${y1.toFixed(1)} L${x2.toFixed(1)} ${y2.toFixed(1)} Z" fill="#F5F1E8" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/><text id="ftx${i}" x="${lx.toFixed(1)}" y="${(ly + 5).toFixed(1)}" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="14" letter-spacing="1.2" fill="#B9B1A3">${l}</text>`; }).join('') +
+  `<circle cx="${HX}" cy="${HY}" r="58" fill="#FFFFFF" stroke="#E2DACB" stroke-width="3"/><g transform="translate(${HX - 39} ${HY - 44}) scale(0.68)">${logo()}</g>
+   <text x="${HX}" y="24" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="15" letter-spacing="2.4" fill="#B8862F">SENDER · WHAT WE SHOW</text>
+   <text x="${HX}" y="468" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="15" letter-spacing="2.4" fill="#14213D">RECEIVER · WHAT THEY TAKE IN</text>`;
 const PP = [['JEAN-NOËL KAPFERER', 'Six sides', 'of one brand identity', 'TOP: SENT · BOTTOM: RECEIVED', 'repeat', 'Who we are, and who our buyer is']].concat(FAC.map((f, i) => [`FACET 0${i + 1} / 06 · ${f[6]}`, f[2], f[3], 'AT LADDOO LAB', f[5], f[4]]));
 $('#ppPans').innerHTML = PP.map(([s, t, m, x, ic, e], i) => `<div class="pn" id="pq${i}"><div class="ps">${s}</div><div class="serif pt">${t}</div><div class="pm">${m}</div><div class="hr"></div><div class="px">${x}</div><div class="pe"><i>${M.icon(ic, 34, C.gold, 2.2)}</i><span>${e}</span></div></div>`).join('');
 wrap($('#pz'), 'pzOut', 784, 580);
@@ -172,7 +173,7 @@ function measure() {
   const ex = $('#exChip'); ex.style.left = (1760 - ex.offsetWidth) + 'px'; ex.style.top = '170px';
   let x = 36; for (let i = 0; i < 2; i++) { const p = $('#mt' + i); p.style.left = x + 'px'; x += p.offsetWidth + 16; }
   // message chips sit on the lane in the middle of the sender/receiver card
-  geo.mw = MW.map((_, i) => $('#mw' + i).offsetWidth); geo.mwx = $('#mwX').offsetWidth;
+  
   // word cloud: flow layout under the question
   x = 48; let y = 170; geo.wc = CH.map((_, i) => { const el = $('#wc' + i), wd = el.offsetWidth; if (x + wd > 752) { x = 48; y += 62; } const p = [x, y]; x += wd + 12; return p; });
   geo.wc.forEach(([px, py], i) => { const el = $('#wc' + i); el.style.left = px + 'px'; el.style.top = py + 'px'; });
@@ -213,11 +214,12 @@ M.on(t => {
     for (let i = 0; i < 3; i++) M.vis($('#wr' + i), t, tMorph + 0.45 + i * 0.12, 1e9, { dy: 16 });
     M.vis($('#idP'), t, tWants - 0.1, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
     M.vis($('#ways'), t, tMorph + 0.3, tAout, { dy: 36, ...o });
+    M.rise($('#bigQ'), t, tMorph + 0.6, { st: 0.05, out: tExp - 0.4, outDur: 0.2 });
     M.rise($('#bigW'), t, Math.max(tMorph + 0.6, tExp - 0.1), { st: 0.06, sp: M.HEAVY });
     M.vis($('#bigS'), t, Math.max(tMorph + 0.9, tExp + 0.3), 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
     M.vis($('#ask'), t, tMorph + 0.42, tAout, { dy: 36, ...o });
-    M.vis($('#mt0'), t, tWants - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
-    M.vis($('#mt1'), t, tThink - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
+    M.vis($('#mt0'), t, tMorph + 0.8, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
+    M.vis($('#mt1'), t, tExp - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
     M.rise($('#askT'), t, tSame - 0.6, { st: 0.07, sp: M.HEAVY });
   }
 
@@ -247,13 +249,9 @@ M.on(t => {
     M.vis($('#tgS'), t, tSent - 0.1, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
     M.vis($('#tgR'), t, tRecv - 0.1, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
     M.draw($('#srL'), t, tSends - 0.1, 0.6, M.o3); M.vis($('#srH'), t, tSends + 0.4, 1e9, { dy: 0, fade: 0.1 });
-    // words travel from sender to receiver; "honest" fades, "expensive" appears on arrival
-    MW.forEach((_, i) => {
-      const el = $('#mw' + i), ts = tSends + 0.2 + i * 0.35, p = M.io((t - ts) / 1.6), x = M.lerp(560, 1040 - geo.mw[i], p);
-      M.vis(el, t, ts, i === 1 ? tMinds : 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1, outDur: 0.4, ody: 0, osc: 0.6 });
-      snap(el, x.toFixed(1) + 'px', 'left');
-    });
-    { const el = $('#mwX'); M.vis(el, t, tMinds - 0.05, 1e9, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.1 }); el.style.left = (1040 - geo.mwx) + 'px'; }
+    for (let i = 0; i < 3; i++) M.vis($('#wl' + i), t, tSends - 0.3 + i * 0.12, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
+    for (let i = 0; i < 3; i++) M.vis($('#wrr' + i), t, tMinds - 0.6 + i * 0.25, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
+    for (let i = 0; i < 4; i++) { const c = $('#pl' + i), ts = tSends + 0.3; if (t < ts) { M.hide(c, true); continue; } const u = ((t - ts) * 0.45 + i * 0.25) % 1; M.hide(c, false); attr(c, 'cx', (560 + 470 * u).toFixed(1)); c.style.opacity = Math.min(1, u * 6, (1 - u) * 6).toFixed(3); }
     M.vis($('#kel'), t, tKel - 0.1, 1e9, { dy: 20 });
   }
 
@@ -279,10 +277,10 @@ M.on(t => {
     M.vis($('#ins'), t, tInside - 0.2, 1e9, { dy: 0, fade: 0.2 });
     // comparison bars
     M.vis($('#cmpL'), t, tM0 + 0.35, 1e9, { dy: 8 });
-    for (let h = 0; h < 3; h++) M.vis($('#hd' + h), t, tCounts - 0.1 + h * 0.06, 1e9, { dy: 8 });
+    for (let h = 0; h < 3; h++) M.vis($('#hd' + h), t, tMl[0] + 0.3 + h * 0.06, 1e9, { dy: 8 });
     const resurvey = M.io((t - tDrops + 0.3) / 1.0);
     WORDS.forEach((_, i) => {
-      const el = $('#br' + i); M.vis(el, t, tCounts + i * 0.12, 1e9, { dy: 14 });
+      const el = $('#br' + i); M.vis(el, t, tMl[0] + 0.4 + i * 0.1, 1e9, { dy: 14 });
       const grow1 = M.o3((t - tCounts - 0.2 - i * 0.12) / 0.9), v = BEF[i] * grow1 + (AFT[i] - BEF[i]) * resurvey;
       el.querySelector('.bf').style.width = (300 * v / 30).toFixed(1) + 'px';
       el.querySelector('.bf').style.background = i >= 4 ? C.red2 : (i === 2 ? (resurvey > 0.5 ? C.gold : C.dim) : C.gold);

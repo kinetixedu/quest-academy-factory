@@ -89,12 +89,12 @@ const OB = [['bulb', 'Inform', 'Tell people something new', 'NEW THIS DIWALI', '
 $('#obs').innerHTML = OB.map(([ic, t, s, al, a1, a2], i) => `<div class="ob" id="ob${i}" style="left:${160 + i * 544}px"><div class="bg"></div><div class="sn">0${i + 1}</div><div class="si"></div><div class="serif ot">${t}</div><div class="os">${s}</div>
   <div class="ad" id="ad${i}"><div class="al">${al}</div><div class="a1">${a1}</div><div class="a2">${a2}</div><svg width="200" height="48">${[24, 74, 124].map(x => laddoo(x, 24, 20)).join('')}</svg></div></div>`).join('');
 // M: six-week chart. Inside a 1520 x 320 svg; baseline y 270, 1 pack = 1 px.
-const V = [100, 100, 118, 190, 212, 132], CXW = i => 160 + i * 240, BW = 150, BASE = 270, NORM = BASE - 100;
+const V = [100, 100, 118, 190, 212, 132], CXW = i => 160 + i * 240, BW = 150, BASE = 292, NORM = BASE - 100;
 $('#ch6S').innerHTML = `
   <rect id="bandAd" x="${CXW(2) - 112}" y="0" width="${CXW(5) - CXW(2) + 224}" height="${BASE}" rx="18" fill="#E9ECF3"/>
   <text id="bandAdT" x="${CXW(2) - 92}" y="28" font-family="Poppins" font-weight="600" font-size="16" letter-spacing="2.5" fill="#3A4560">THE AD RUNS</text>
-  <rect id="bandOf" x="${CXW(3) - 96}" y="42" width="${CXW(4) - CXW(3) + 192}" height="${BASE - 42}" rx="16" fill="#F3EAD6"/>
-  <text id="bandOfT" x="${CXW(3) - 76}" y="70" font-family="Poppins" font-weight="600" font-size="16" letter-spacing="2.5" fill="#B8862F">FESTIVE OFFER</text>
+  <rect id="bandOf" x="${CXW(3) - 96}" y="0" width="${CXW(4) - CXW(3) + 192}" height="${BASE}" rx="16" fill="#F3EAD6"/>
+  <text id="bandOfT" x="${CXW(3) - 76}" y="28" font-family="Poppins" font-weight="600" font-size="16" letter-spacing="2.5" fill="#B8862F">FESTIVE OFFER</text>
   <path d="M0 ${BASE} H1520" stroke="#E2DACB" stroke-width="3"/>
   ${V.map((v, i) => `<rect id="b6${i}" x="${CXW(i) - BW / 2}" y="${BASE}" width="${BW}" height="0" rx="14" fill="${C.grey}"/><text id="v6${i}" x="${CXW(i)}" y="${BASE - 12}" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="26" fill="#14213D"></text><text x="${CXW(i)}" y="${BASE + 34}" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="16" letter-spacing="2.5" fill="#8A8274">WEEK ${i + 1}</text>`).join('')}
   <path id="norm" d="M20 ${NORM} H1500" stroke="#8A8274" stroke-width="3" stroke-dasharray="4 10" stroke-linecap="round"/>
@@ -104,7 +104,7 @@ $('#ch6S').innerHTML = `
   <g id="newF" transform="translate(${(CXW(3) + CXW(4)) / 2 - 104} ${BASE - 250})"><rect width="208" height="40" rx="20" fill="#14213D"/><text x="104" y="27" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="17" fill="#fff">First-time buyers</text></g>`;
 // P: tools 2x2
 const TC = [['laddoo', 'Samples', 'Free tastes', 'Free tastes at three shops'], ['tag', 'Coupons', 'A discount code', 'A code for the online shop'], ['gift', 'Premiums', 'A free gift with a buy', 'Buy two 6-packs, get a mini pack free'], ['stand', 'Point of purchase', 'A display where people pay', 'A bright stand by the billing counter']];
-$('#tcs').innerHTML = TC.map(([ic, t, s, e], i) => `<div class="tc" id="tc${i}" style="left:${160 + (i % 2) * 816}px;top:${270 + Math.floor(i / 2) * 310}px"><div class="bg"></div><div class="ti"></div><div class="serif tt">${t}</div><div class="ts">${s}</div><div class="th"></div><div class="tx2">AT LADDOO LAB</div><div class="te">${e}</div></div>`).join('');
+$('#tcs').innerHTML = TC.map(([ic, t, s, e], i) => `<div class="tc" id="tc${i}" style="left:${160 + (i % 2) * 816}px;top:${270 + Math.floor(i / 2) * 302}px"><div class="bg"></div><div class="ti"></div><div class="serif tt">${t}</div><div class="ts">${s}</div><div class="th"></div><div class="tx2">AT LADDOO LAB</div><div class="te">${e}</div></div>`).join('');
 // K
 const KA = [
   ['megaphone', 'Inform', 'Tell people something new', 'The festive gift box ad', 'phone', 'A phone maker runs ads to launch a new model'],
@@ -136,7 +136,7 @@ const OPTS = ['Advertising', 'Sales promotion', 'Personal selling', 'Public rela
 $('#opts').innerHTML = OPTS.map((o, i) => `<div class="opt" id="o${i}" style="left:${160 + i * 408}px"><div class="bg"></div><div class="lt">${'ABCD'[i]}</div><div class="ot serif">${o}</div><div class="ok">${M.icon('check', 30, '#fff', 3)}</div></div>`).join('');
 $('#takeI').innerHTML = M.icon('tag', 44, C.gold2, 2.4);
 // recap
-const ROWS = [['megaphone', 'Advertising: paid, for many, known sponsor', ['Inform', 'Persuade', 'Remind']], ['tag', 'Sales promotion: a short-term push', ['Samples', 'Coupons', 'Premiums', 'Displays']], ['trendUp', 'Ads build the reason, offers give the push', ['Reason', 'Push']]];
+const ROWS = [['megaphone', 'Advertising: paid, for many, known sponsor', ['Inform', 'Persuade', 'Remind']], ['tag', 'Promotion: a short-term push', ['Samples', 'Coupons', 'Premiums', 'Displays']], ['trendUp', 'Ads build the reason, offers give the push', ['Reason', 'Push']]];
 $('#rRows').innerHTML = ROWS.map(([ic, tx, ps], i) => `<div class="card rw" id="rw${i}" style="top:${280 + i * 152}px"><div class="rn">0${i + 1}</div><div class="ri">${M.icon(ic, 34, C.gold, 2.2)}</div><div class="rt">${tx}</div>${ps.map((p, k) => `<div class="fp" id="fp${i}${k}">${p}</div>`).join('')}</div>`).join('');
 $('#nextI').innerHTML = M.icon('arrowR', 40, C.gold2, 2.4);
 

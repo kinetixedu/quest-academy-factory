@@ -100,14 +100,14 @@ $('#ioPAI').innerHTML = M.icon('check', 24, '#fff', 3); $('#ioPBI').innerHTML = 
 $('#radC').innerHTML = M.icon('laddoo', 28, C.gold2, 2.2);
 const BL = [[40, 150, 'Jaggery ₹80', 'coin', 1], [160, 180, 'New bakery', 'store', 1], [280, 130, 'Year of Millets', 'wheat', 0]];
 const bxy = (a, r) => [392 + r * Math.cos(a * Math.PI / 180), 316 - r * Math.sin(a * Math.PI / 180)];
-$('#blps').innerHTML = BL.map(([a, r], i) => { const [x, y] = bxy(a, r); return `<g id="bp${i}" transform="translate(${x.toFixed(1)} ${y.toFixed(1)})"><circle class="br" r="18" fill="none" stroke="#B8862F" stroke-width="3"/><circle class="bd" r="10" fill="#B8862F"/></g>`; }).join('');
+$('#blps').innerHTML = BL.map(([a, r], i) => { const [x, y] = bxy(a, r); return `<g transform="translate(${x.toFixed(1)} ${y.toFixed(1)})"><g id="bp${i}"><circle class="br" r="18" fill="none" stroke="#B8862F" stroke-width="3"/><circle class="bd" r="10" fill="#B8862F"/></g></g>`; }).join('');
 $('#bls').innerHTML = BL.map(([, , n, ic], i) => `<div class="bl" id="bl${i}"><span class="bli">${M.icon(ic, 18, C.gold, 2.4)}</span><span>${n}</span></div>`).join('');
 const STEPS = ['01 · SCAN', '02 · SPOT', '03 · JUDGE', '04 · RESPOND'];
 const SPOT = ['Jaggery: ₹60 to ₹80 a kilo', 'New bakery: cheap cookies', '2023: UN Year of Millets'];
 const JUDGE = [['x', 'Threat · costs go up', 1], ['x', 'Threat · a cheap rival', 1], ['check', 'Opportunity · millets are in', 0]];
 const RESP = ['Buy in bulk from a farmer, keep ₹120', 'Show parents why laddoos are healthier', 'Pack now says: made with ragi millet'];
 $('#srs').innerHTML = STEPS.map((s, i) => `<div class="sr4" id="sr${i}" style="top:${96 + i * 116}px"><div class="bg"></div><div class="sl">${s}</div>` +
-  (i === 0 ? `<div class="sx">Watch prices, rivals, rules and trends</div>` : [0, 1, 2].map(k => i === 1 ? `<div class="sx" id="sp${k}">${SPOT[k]}</div>` : i === 2 ? `<div class="sj" id="sj${k}" style="${JUDGE[k][2] ? 'background:#F6E3DC;color:#B5482F' : 'background:#B8862F;color:#fff'}">${M.icon(JUDGE[k][0], 20, JUDGE[k][2] ? C.red : '#fff', 2.8)}<span>${JUDGE[k][1]}</span></div>` : `<div class="sx" id="rs${k}">${RESP[k]}</div>`).join('')) + `</div>`).join('');
+  (i === 0 ? `<div class="sx">Watch prices, rivals, rules and trends</div>` : (i === 2 ? `<div class="sj" id="sjq" style="background:#fff;color:#14213D">${M.icon('help', 20, C.gold, 2.4)}<span>Threat, or opportunity?</span></div>` : '') + [0, 1, 2].map(k => i === 1 ? `<div class="sx" id="sp${k}">${SPOT[k]}</div>` : i === 2 ? `<div class="sj" id="sj${k}" style="${JUDGE[k][2] ? 'background:#F6E3DC;color:#B5482F' : 'background:#B8862F;color:#fff'}">${M.icon(JUDGE[k][0], 20, JUDGE[k][2] ? C.red : '#fff', 2.8)}<span>${JUDGE[k][1]}</span></div>` : `<div class="sx" id="rs${k}">${RESP[k]}</div>`).join('')) + `</div>`).join('');
 // K
 const KA = [
   ['coin', 'Rising costs', 'Protect your price', 'Bulk jaggery, straight from a farmer', 'plane', 'An airline buys fuel in advance to protect fares'],
@@ -297,6 +297,7 @@ M.on(t => {
       r.querySelectorAll('.sx').forEach(x => { x.style.color = mix(C.ink, '#fff', act); });
     });
     M.vis($('#sr0 .sx'), t, tR[0] + 0.6, 1e9, { dy: 10 });
+    { const q = $('#sjq'), on = t >= SIG[k][2] - 0.05 && t < SIG[k][3] - 0.1; M.hide(q, !on); if (on) M.vis(q, t, SIG[k][2] - 0.05, 1e9, POP); }
     for (let j = 0; j < 3; j++) {
       const tout = j < 2 ? SIG[j + 1][0] - 0.1 : 1e9, oo = { outDur: 0.18, ody: -10 };
       M.vis($('#sp' + j), t, SIG[j][1] - 0.05, tout, { dy: 10, ...oo }); M.vis($('#sj' + j), t, SIG[j][3] - 0.1, tout, { ...POP, ...oo }); M.vis($('#rs' + j), t, SIG[j][4] + 0.1, tout, { dy: 10, ...oo });

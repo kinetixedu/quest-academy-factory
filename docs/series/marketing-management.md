@@ -44,3 +44,10 @@ Eyebrow chip: `EP NN · MARKETING MANAGEMENT`. Title format: `<Hook-style title>
 - Survey: 150 people, 50 each at school gates, gyms, offices. Segments: tiffin parents 60, gym-goers 40, office snackers 50. Tiffins packed by mothers ~50%, fathers ~30%, grandparents ~20% (so "tiffin parents", never "mothers").
 - Target: busy parents (concentrated); office snackers kept as a later second group.
 - Positioning statement: "To busy parents who want a healthy tiffin snack, Laddoo Lab is the healthy sweet for tiffin boxes, that is made with ragi and jaggery and has no refined sugar."
+
+## Canon added by Eps 12-16
+- The 6-pack = six small, individually wrapped laddoos. The first try was an 18-laddoo jar at ₹360 sold from Nani's kitchen - a flop.
+- Monday deliveries: Sunday 8 PM reminder; Nani checks each pack at 6:00; Arjun leaves 6:40 with a route card and a Laddoo Lab cap; sealed pack + photo message by 7:20 (school bus 7:30). Every pack carries a card from Nani.
+- Dev's posters and free tastes at school gates.
+- A rival home kitchen sells millet laddoos at ₹120 for six (Ep 16). Future idea: a tiffin plan with a new flavour every month.
+- Laddoo Lab buys ragi and jaggery (materials), a grinder (capital item), tape and gas (supplies).

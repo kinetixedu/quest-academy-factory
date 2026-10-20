@@ -80,10 +80,10 @@ const DF = [['S', 'Segmentation', 'Groups of buyers with similar needs'], ['T', 
 $('#dRows').innerHTML = DF.map(([l, tt, m], i) => `<div class="df" id="df${i}" style="top:${96 + i * 144}px"><div class="bg"></div><div class="bd">${l}</div><div class="serif dt">${tt}</div><div class="dm">${m}</div></div>`).join('');
 wrap($('#kq'), 'kqOut', 784, 580);
 
-/* M: the STP flow. 60 people (EXAMPLE FIGURES): 25 tiffin parents, 20 gym-goers, 15 office snackers. */
-const GN = [25, 20, 15], GC = [C.gold, C.ink, C.muted], CX = [115, 344, 573];
+/* M: the STP flow. 60 people (EXAMPLE FIGURES): 24 tiffin parents, 16 gym-goers, 20 office snackers (same 6:4:5 split as the 150-person survey). */
+const GN = [24, 16, 20], GC = [C.gold, C.ink, C.muted], CX = [115, 344, 573];
 const GT = [['backpack', 'Tiffin parents', 'PARENTS'], ['dumbbell', 'Gym-goers', 'GYM-GOERS'], ['briefcase', 'Office snackers', 'OFFICE']];
-const RATE = [[5, 4, 5], [4, 4, 2], [3, 3, 3]];
+const RATE = [[5, 4, 5], [3, 4, 2], [4, 3, 3]];
 const rnd = M.rng(12);
 const cells = Array.from({ length: 60 }, (_, i) => [34 + (i % 10) * 69 + (rnd() - 0.5) * 30, 36 + Math.floor(i / 10) * 59 + (rnd() - 0.5) * 26]);
 const grpOf = []; GN.forEach((n, k) => { for (let j = 0; j < n; j++) grpOf.push(k); });
@@ -322,9 +322,9 @@ M.on(t => {
     // right card: phase 0 counter
     M.vis($('#rl0'), t, tM1 + 0.4, tStep[1] - 0.05, { dy: 10, outDur: 0.2, ody: -8 });
     M.vis($('#bigN'), t, tM1 + 0.5, tGrp[0] - 0.15, { dy: 16, outDur: 0.25, ody: -12 });
-    M.count($('#bigN'), t, tDot0, 60 * dDot + 0.3, 0, 60);
+    M.count($('#bigN'), t, tDot0, 60 * dDot + 0.3, 0, 150);
     M.vis($('#bigL'), t, tM1 + 0.6, tGrp[0] - 0.15, { dy: 10, outDur: 0.25, ody: -12 });
-    M.vis($('#bigP'), t, wt('M2', 'sixty') + 0.2, tGrp[0] - 0.15, { ...pop, outDur: 0.25, ody: -12 });
+    M.vis($('#bigP'), t, wt('M2', 'fifty') + 0.2, tGrp[0] - 0.15, { ...pop, outDur: 0.25, ody: -12 });
     // phase 1-2: the table
     const tTab = tStep[2] - 0.12, oo = { outDur: 0.25, ody: -12 };
     M.vis($('#rl1'), t, tStep[1] + 0.05, tTab, { dy: 10, ...oo });
@@ -333,7 +333,7 @@ M.on(t => {
       const r = $('#tr' + k); M.vis(r, t, tGrp[k] - 0.05, tTab, { dy: 18, ...oo });
       const n = Math.round(GN[k] * M.clamp((t - tGrp[k] - 0.2) / (GN[k] * 0.014 + 0.4)));
       const gx = k === 1 && t >= tGymX;
-      M.setT($('#rc' + k), gx ? 'NOT A FIT, FOR NOW' : `${n} PEOPLE`);
+      M.setT($('#rc' + k), gx ? 'NOT A FIT, FOR NOW' : `${Math.round(n * 2.5)} PEOPLE`);
       $('#rc' + k).style.color = gx ? C.red : C.muted;
       const win = k === 0 ? winD : 0, lose = k ? winD : 0;
       r.querySelector('.bg').style.background = mix(C.paper, C.gold3, win);
