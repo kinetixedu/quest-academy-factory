@@ -1,0 +1,155 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 13 - Accuracy and Precision</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 13: accuracy and precision (Motion notebook, measuring bench) ===== */
+:root{--u:#7A4FE0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.u{color:var(--u)}.a{color:var(--ac)}.r{color:var(--red)}.g{color:var(--ok)}
+/* title tile */
+.job{position:absolute;top:700px;width:300px;height:170px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+/* hook */
+.sr{position:absolute;left:36px;width:712px;height:150px;border-radius:14px;background:var(--soft)}
+.sr .jn{position:absolute;left:24px;top:18px;font:700 28px Poppins;white-space:nowrap}
+.sr .jw{position:absolute;left:24px;top:58px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.sr .rds{position:absolute;left:24px;top:92px;display:flex;gap:10px}
+.sr .rds span{height:40px;padding:0 12px;border-radius:9px;background:#fff;display:inline-flex;align-items:center;font:600 22px 'IBM Plex Mono';white-space:nowrap}
+#note{position:absolute;left:432px;top:300px;width:270px;height:136px;background:#FFFDF6;border-radius:6px;box-shadow:0 8px 20px rgba(22,33,62,.22);padding:18px 22px}
+#note .nt1{font:600 15px 'IBM Plex Mono';letter-spacing:.1em;color:var(--mute)}
+#note .nt2{font:700 44px Caveat;color:var(--ink);margin-top:6px;white-space:nowrap}
+.wq{position:absolute;top:494px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap}
+/* definitions */
+.df{position:absolute;left:36px;width:712px;height:206px;border-radius:14px;background:var(--soft)}
+.df .h{position:absolute;left:28px;top:22px;font:700 40px Poppins;white-space:nowrap}
+.df .d{position:absolute;left:28px;top:80px;font:500 26px/1.3 Poppins;width:660px}
+.df .q{position:absolute;left:28px;top:174px;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:136px}
+.st .n{position:absolute;left:0;top:6px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:40px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:76px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+/* side by side */
+.vs{position:absolute;left:36px;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+.vtag{position:absolute;left:36px;top:504px}
+/* resolution rows */
+.rr{position:absolute;left:36px;width:712px;height:170px;border-radius:14px;background:var(--soft)}
+.rr .v{position:absolute;left:24px;top:20px;font:600 52px/1 'IBM Plex Mono';white-space:nowrap}
+.rr .s{position:absolute;left:24px;top:88px;font:600 17px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.rr .b{position:absolute;left:24px;top:118px;height:36px;padding:0 12px;border-radius:8px;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+/* targets */
+#tg{left:160px;top:270px;width:1600px;height:580px}
+.tc{position:absolute;top:410px;width:380px;text-align:center;font:600 22px Poppins;white-space:nowrap}
+.tc2{position:absolute;top:446px;width:380px;text-align:center;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 23px Poppins}
+#wl .sol .sx{font-size:30px}
+#wq{position:absolute;left:36px;top:66px;font:600 24px/1.4 Poppins;width:712px}
+#sF .fcard .fl{font-size:42px}
+#sF .fcard .fl.txt{font-size:31px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 1 UNITS AND MEASUREMENT</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Accuracy and <span class="acc">Precision</span></div>
+    <div id="sub">Explained on one measuring bench</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="job" id="jb0" style="left:810px"><svg id="dartS" width="300" height="170" style="position:absolute;left:0;top:0"></svg></div>
+
+    <!-- H: two kitchen scales -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">TWO KITCHEN SCALES · ONE 500 g PACKET</div><div class="ghost" id="exH" style="right:36px;top:18px">EXAMPLE FIGURES</div><div id="srs"></div>
+        <div class="pillp" id="hjP" style="left:36px;top:470px">Which scale is better?</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA'S KITCHEN · THE DAL PACKET</div>
+        <div id="hdF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-kitchen.jpg" style="position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px">
+        <div id="note"><div class="nt1">DAL PACKET</div><div class="nt2">500 g exactly</div></div>
+        <div id="wqs"></div></div>
+    </div>
+
+    <!-- P: two words -->
+    <div id="sP">
+      <div class="card full" id="pd"><div class="lbl" style="left:36px;top:30px">TWO WORDS · TWO IDEAS</div>
+        <div class="df" id="df0" style="top:84px"><div class="h r">Accuracy</div><div class="d">How close a measurement is to the <b>true value</b>.</div><div class="q r" id="dq0">ARE WE NEAR THE TRUTH?</div></div>
+        <div class="df" id="df1" style="top:318px"><div class="h a">Precision</div><div class="d">How close repeated measurements are to <b>each other</b>.</div><div class="q a" id="dq1">DO WE AGREE WITH OURSELVES?</div></div></div>
+      <div class="card rf" id="pn"><div class="lbl" style="left:36px;top:30px">ONE PICTURE · GAP AND SPREAD</div><svg id="pnS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- S: measuring bench (sim + readout + graph) -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" id="simL" style="left:36px;top:30px">MEASURING BENCH · SCALE 1</div><div class="ghost" id="exS" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="tag" id="slow" style="left:36px;top:84px">SLOW-MO REPLAY · 0.25x</div></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro" id="roG" style="left:36px;top:70px;width:712px;row-gap:4px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">READINGS VS TRUE VALUE</div><svg id="grS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- D: the rule -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">IN NUMBERS · 3 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">BOTH SCALES · MEAN, GAP, SPREAD</div><svg id="drS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- K: side by side + think -->
+    <div id="sK">
+      <div class="card full" id="k1"><div class="lbl" style="left:36px;top:30px">SCALE 1</div><svg id="k1S" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="vs" id="k1a" style="top:330px">gap &nbsp; <span class="r">12 g</span></div><div class="vs" id="k1b" style="top:390px">spread <span class="a">2 g</span></div>
+        <div class="pillp" id="k1t" style="left:36px;top:470px;background:var(--ac2);color:var(--ac)">Precise · not accurate</div></div>
+      <div class="card rf" id="k2"><div class="lbl" style="left:36px;top:30px">SCALE 2</div><svg id="k2S" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="vs" id="k2a" style="top:330px">gap &nbsp; <span class="r">0 g</span></div><div class="vs" id="k2b" style="top:390px">spread <span class="a">13 g</span></div>
+        <div class="pillp good" id="k2t" style="left:36px;top:470px">Accurate on average · not precise</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- R: resolution -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">TRUE LENGTH NEAR 3.678 cm</div><svg id="rlS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="rg"><div class="lbl" style="left:36px;top:30px">TWO INSTRUMENTS</div>
+        <div class="rr" id="rr0" style="top:84px"><div class="v">3.5 <span class="u" style="font-size:.6em">cm</span></div><div class="s">READS TO 0.1 cm · GAP 0.178 cm</div><div class="b" id="rb0" style="background:var(--okBg);color:#1F6B3F">MORE ACCURATE</div></div>
+        <div class="rr" id="rr1" style="top:284px"><div class="v">3.38 <span class="u" style="font-size:.6em">cm</span></div><div class="s">READS TO 0.01 cm · GAP 0.298 cm</div><div class="b" id="rb1" style="background:var(--ac2);color:var(--ac)">MORE PRECISE</div></div>
+      </div>
+    </div>
+
+    <!-- B: four targets + think -->
+    <div id="sB">
+      <div class="card" id="tg"><div class="lbl" style="left:36px;top:30px">THE TARGET PICTURE</div><svg id="tgS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg><div id="tcs"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">True length 50.0 cm. <b class="a">P</b>: 50.1, 50.3, 49.9, 50.1 &nbsp; <b class="u">Q</b>: 52.2, 52.1, 52.3, 52.2. Who is more accurate? More precise?</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">MEASURING BENCH · THE ROD</div><div class="ghost" id="exW" style="right:36px;top:18px">EXAMPLE FIGURES</div><svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tpS" width="520" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + questions + NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2"><span style="color:var(--red)">Accuracy</span>: the truth. <span class="acc">Precision</span>: each other.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

@@ -1,0 +1,57 @@
+H1|0.4|A dart player hits the same spot every time, but far from the bullseye. Is that a good player?
+H2|0.45|In physics, the answer depends on two different words.
+H3|0.35|Diya weighs the same packet of dal on two kitchen scales. The packet is exactly five hundred grams.
+H4|0.5|Scale one reads five hundred and twelve, five hundred and eleven, five hundred and twelve. The same every time. Scale two jumps around five hundred.
+H5|0.65|Which scale is better? By the end of this video, you will be able to say exactly why.
+P1|0.35|Two words, two different ideas.
+P2|0.4|Accuracy is how close a measurement is to the true value.
+P3|0.4|Precision is how close repeated measurements are to each other.
+P4|0.65|Accuracy asks: are we near the truth? Precision asks: do we agree with ourselves?
+S1|0.35|Let's test both scales on our measuring bench. Five readings each.
+S2|0.4|Scale one. Five hundred and twelve, five hundred and eleven, five hundred and twelve, five hundred and thirteen, five hundred and twelve.
+S3|0.45|The dots sit in a tight bunch. The spread is only two grams. Very precise.
+S4|0.45|But the bunch sits twelve grams above the true value. Not accurate.
+S5|0.4|Scale two. Four hundred and ninety four, five hundred and seven, four hundred and ninety seven, five hundred and five, four hundred and ninety seven.
+S6|0.45|The dots spread out over thirteen grams. Not precise.
+S7|0.65|But their average is exactly five hundred. On average, accurate.
+D1|0.35|Let's turn this into numbers, one step at a time.
+D2|0.75|Step one. Take the mean. Add the readings and divide by how many there are.
+D3|0.75|Step two. Accuracy. Subtract the true value from the mean. A small gap means accurate.
+D4|0.75|Step three. Precision. Find the spread, the largest reading minus the smallest. A small spread means precise.
+T1|0.7|Remember this. Accuracy is closeness to the truth. Precision is closeness to each other.
+K1|0.4|Side by side. Scale one has a gap of twelve grams, and a spread of two.
+K2|0.6|Scale two has a gap of zero, and a spread of thirteen.
+K3|3.2|Now you try. Scale one is wrong by the same amount every time. Can a single correction fix it? Pause and decide.
+K4|0.65|Yes! Subtract twelve grams from every reading. A steady error like this is a systematic error. It shifts every reading the same way.
+R1|0.35|Precision also depends on the instrument itself.
+R2|0.4|Say a length is truly three point six seven eight centimetres.
+R3|0.4|An instrument that reads to zero point one centimetre gives three point five.
+R4|0.4|A finer instrument reading to zero point zero one, if badly set, could give three point three eight.
+R5|0.65|The finer reading is more precise, but three point five is closer to the truth, so it is more accurate. More digits do not mean more correct.
+B1|0.35|Physicists picture this on a target.
+B2|0.4|Tight bunch on the centre: accurate and precise.
+B3|0.4|Tight bunch, off centre: precise but not accurate.
+B4|0.4|Wide spread around the centre: accurate on average, but not precise.
+B5|0.65|Wide spread, off centre: neither.
+B6|3.2|Your turn. A clock runs exactly two minutes fast, every day. Precise, or accurate? Pause and decide.
+B7|0.65|Precise, but not accurate! Its readings agree day after day, but they are always two minutes off the true time.
+W1|0.35|Now, one worked example.
+W2|0.5|A rod is truly fifty point zero centimetres. Two students measure it four times each. Who is more accurate, and who is more precise?
+W3|0.75|Means first. P's readings add to two hundred point four. Divide by four. Fifty point one.
+W4|0.75|Q's readings add to two hundred and eight point eight. Divide by four. Fifty two point two.
+W5|0.75|Gaps. P is zero point one away from the truth. Q is two point two away. So P is more accurate.
+W6|0.65|Spreads. P's readings spread over zero point four. Q's spread over only zero point two. So Q is more precise.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students think that if readings agree with each other, they must be correct.
+X3|0.65|But agreement only shows precision. A zero error shifts every reading by the same amount, so precise readings can still be wrong.
+E1|0.6|Where is this asked? As concept questions comparing sets of readings, and in vernier and screw gauge experiments.
+Q1|5.4|Exam level now. A true length is ten point zero zero millimetres. Which set of readings is precise but not accurate? Pause and solve.
+A1|0.5|The answer is C.
+A2|0.5|A is close to the truth but spread over zero point four. B is spread out and off. D is both close and tight.
+A3|0.6|C spreads over only zero point zero two, but its mean is ten point four one. That is zero point four one millimetres away. Precise, not accurate.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What is the difference between accuracy and precision?
+Y3|0.9|Two. Can a set of readings be precise but not accurate? Give an example.
+Y4|1.1|Three. Why does an instrument with finer markings give more precise readings?
+N1|0.3|Next time: what is the smallest length Aarav's ruler can read? We find out in least count of measuring instruments.
