@@ -45,17 +45,17 @@ const b1t = txt(b1, 56, 37, '1000 m', { 'font-size': 26, 'font-weight': 600, fil
 const b1s = txt(b1, 748, 76, '10 × 100 m', { 'font-size': 16, 'text-anchor': 'end' });
 
 /* ---------- S: the ride ---------- */
-const s = $('#simS'), X0 = 130, PXM = 40, RY = 300, WR = 26;     // 40 px per metre, road at y 300
+const s = $('#simS'), X0 = 130, PXM = 40, RY = 340, WR = 26;     // 40 px per metre, road at y 300
 mk(s, 'line', { x1: 40, y1: RY, x2: 744, y2: RY, stroke: C.ink, 'stroke-width': 3 });
 for (let m = 0; m <= 15; m++) { const x = X0 + m * PXM, L = m % 5 ? 10 : 22; mk(s, 'line', { x1: x, y1: RY + 3, x2: x, y2: RY + 3 + L, stroke: C.ink, 'stroke-width': m % 5 ? 1.5 : 2.5 }); if (m % 5 === 0) txt(s, x, RY + 52, m + ' m', { 'text-anchor': 'middle', 'font-size': 20, fill: C.ink, 'font-weight': 600 }); }
 txt(s, 744, RY + 52, 'x', { 'text-anchor': 'end', 'font-family': 'Poppins', 'font-style': 'italic', 'font-size': 22 });
 // a bicycle drawn around its front hub (0, 0); wheel radius 26 px
 const bike = () => {
-  const g = mk(s, 'g', {}); const wl = [];
+  const outer = mk(s, 'g', {}), g = mk(outer, 'g', {}); const wl = [];
   [-84, 0].forEach(cx => { const w = mk(g, 'g', {}); mk(w, 'circle', { cx, cy: 0, r: WR, fill: 'none', stroke: C.ink, 'stroke-width': 4 }); [0, 45, 90, 135].forEach(a => { const r = a * Math.PI / 180; mk(w, 'line', { x1: cx - WR * Math.cos(r), y1: -WR * Math.sin(r), x2: cx + WR * Math.cos(r), y2: WR * Math.sin(r), stroke: C.ink, 'stroke-width': 1.5 }); }); mk(w, 'circle', { cx, cy: 0, r: 4, fill: C.ink }); wl.push([w, cx]); });
   mk(g, 'path', { d: 'M-84,0 L-46,0 L-60,-38 Z M-46,0 L-10,-38 L-60,-38 M-10,-38 L0,0 M-60,-38 L-64,-50 M-10,-38 L-6,-54 L6,-56', fill: 'none', stroke: '#2A3F7A', 'stroke-width': 4.5, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' });
   mk(g, 'path', { d: 'M-76,-52 L-54,-52', stroke: C.ink, 'stroke-width': 6, 'stroke-linecap': 'round' });
-  return { g, wl };
+  return { g, wl, outer };
 };
 const ghosts = [0, 1, 2].map(() => bike()); const bk = bike();
 const vA = PUC.arrow(s, VC, 6, 18);
@@ -218,9 +218,9 @@ M.on(t => {
     M.vis($('#ro'), t, tS1 + 0.25, out, { dx: 60, dy: 0, ...o });
     M.vis($('#gr'), t, tS1 + 0.4, out, { dy: 36, ...o });
     const st = simT(t), mv = moving(t), slow = t >= tRep && t < tRep + 4;
-    M.vis(bk.g, t, tS1 + 0.4, 1e9, { dx: -40, dy: 0 });
+    bk.outer.style.opacity = M.clamp((t - tS1 - 0.4) / 0.3).toFixed(3);
     const bx = placeBike(bk, st);
-    ghosts.forEach((gb, k) => { const gs = simT(t - (slow ? 0.6 : 0.15) * (k + 1)); const gx = placeBike(gb, gs); gb.g.style.opacity = (mv && Math.abs(gx - bx) > 6) ? [0.3, 0.2, 0.12][k] : 0; });
+    ghosts.forEach((gb, k) => { const seg = SEG.find(([a, b2]) => t >= a && t < b2 + 0.4); const gs = simT(Math.max(seg ? seg[0] : 0, t - (slow ? 0.6 : 0.15) * (k + 1))); const gx = placeBike(gb, gs); gb.g.style.opacity = (mv && Math.abs(gx - bx) > 6) ? [0.3, 0.2, 0.12][k] : 0; });
     // velocity vector grows from the bike while it moves (and in the replay)
     const vOn = M.io((t - tA) / 0.3) * (st < 3 || mv ? 1 : 1 - M.io((t - tC - 2) / 0.3));
     const vLen = 5 * 24 * (slow ? M.io((t - tRep - 0.3) / 1.2) : vOn);
@@ -237,7 +237,7 @@ M.on(t => {
     M.setT($('#rt'), fmt(st, 2)); M.setT($('#rx'), fmt(VEL * st, 1));
     M.setT($('#rv'), um ? '5' : '18'); M.setT($('#rvu'), um ? 'm/s' : 'km/h');
     M.vis($('#mtr'), t, tA - 0.3, 1e9, POP); M.setT($('#mtrV'), um ? '5' : '18'); M.setT($('#mtrU'), um ? 'm/s' : 'km/h');
-    $('#mtr').style.left = (748 - $('#mtr').offsetWidth) + 'px';
+    $('#mtr').style.left = (748 - $('#mtr').offsetWidth) + 'px'; $('#mtr').style.top = '64px';
     M.vis($('#dial'), t, tS1 + 0.6, 1e9, { dy: 10 });
     $('#dial').querySelectorAll('span').forEach((sp, i) => { const on = i === um ? 1 : 0; sp.style.background = on ? UC : '#FFFFFF'; sp.style.color = on ? '#FFFFFF' : C.mute; sp.style.borderColor = on ? UC : C.line; });
     // graph: x = 5 t, dot linked to the bike
@@ -325,8 +325,8 @@ M.on(t => {
     M.vis($('#wq'), t, T0('W2') - 0.1, 1e9, { dy: 14 });
     wsol(t, tW1, tW);
     M.vis($('#wr'), t, T0('W2') + 0.2, out, { dx: 60, dy: 0, ...o });
-    M.vis(cSm, t, wt('W2', 'gram') - 0.1, 1e9, { dy: 0, sc: 0.6, sp: M.POP }); M.vis(cSmT, t, wt('W2', 'gram') + 0.2, 1e9, { dy: 0 });
-    M.vis(cBig, t, wt('W2', 'kilograms') - 0.1, 1e9, { dy: 0, sc: 0.9, sp: M.SOFT }); M.vis(nts, t, wt('W2', 'kilograms') + 0.3, 1e9, { dy: 0 });
+    M.vis(cSm, t, wt('W2', 'gram') - 0.1, 1e9, { dy: 0 }); M.vis(cSmT, t, wt('W2', 'gram') + 0.2, 1e9, { dy: 0 });
+    M.vis(cBig, t, wt('W2', 'kilograms') - 0.1, 1e9, { dy: 0 }); M.vis(nts, t, wt('W2', 'kilograms') + 0.3, 1e9, { dy: 0 });
     M.vis(cBigT, t, wt('W4', 'six') - 0.1, 1e9, { dy: 0 });
     const wc = $('#wc'); M.vis(wc, t, T0('W2') + 0.6, 1e9, POP);
     const late = t >= wt('W6', 'thousand') - 0.1; M.setT($('#wcN'), late ? '1000' : '1'); M.setT($('#wcU'), late ? 'kg/m³' : 'g/cm³');
@@ -339,9 +339,9 @@ M.on(t => {
     M.vis($('#trap'), t, tX1 + 0.05, 1e9, { dy: 36 }); M.vis($('#wa'), t, T0('E1') - 0.1, 1e9, { dy: 36 });
     trap(t, { tin: tX1, tWrong: wt('X2', 'multiply') - 0.1, tStrike: wt('X3', 'backwards') - 0.1, tRight: wt('X3', 'Thirty') - 0.1 });
     const r0 = wt('X3', 'Thirty');
-    M.vis(tb0, t, r0, 1e9, { dy: 0, sc: 0.8, sp: M.POP });
+    M.vis(tb0, t, r0, 1e9, { dy: 0 });
     const ua = M.io((t - r0 - 0.3) / 0.4); tAr.set(210, 124, 210 + 140 * ua, 124); M.hide(tAr.g, ua <= 0.01); tArT.style.opacity = ua.toFixed(3);
-    M.vis(tb1, t, wt('X3', 'ten') - 0.05, 1e9, { dy: 0, sc: 0.8, sp: M.POP }); M.vis(tDn, t, wt('X3', 'ten') + 0.3, 1e9, { dy: 0 });
+    M.vis(tb1, t, wt('X3', 'ten') - 0.05, 1e9, { dy: 0 }); M.vis(tDn, t, wt('X3', 'ten') + 0.3, 1e9, { dy: 0 });
     where(t, { tin: T0('E1'), tLight: [], tType: wt('E1', 'first') });
   }
 

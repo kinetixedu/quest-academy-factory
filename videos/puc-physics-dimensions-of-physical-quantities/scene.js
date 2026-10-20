@@ -50,11 +50,11 @@ const s = $('#simS'), X0 = 110, PXM = 24, RY = 300, WR = 26;      // 24 px per m
 mk(s, 'line', { x1: 40, y1: RY, x2: 744, y2: RY, stroke: C.ink, 'stroke-width': 3 });
 for (let m = 0; m <= 25; m++) { const x = X0 + m * PXM, L = m % 5 ? 10 : 22; mk(s, 'line', { x1: x, y1: RY + 3, x2: x, y2: RY + 3 + L, stroke: C.ink, 'stroke-width': m % 5 ? 1.5 : 2.5 }); if (m % 5 === 0) txt(s, x, RY + 52, m + ' m', { 'text-anchor': 'middle', 'font-size': 20, fill: C.ink, 'font-weight': 600 }); }
 const bike = () => {
-  const g = mk(s, 'g', {}); const wl = [];
+  const outer = mk(s, 'g', {}), g = mk(outer, 'g', {}); const wl = [];
   [-84, 0].forEach(cx => { const w = mk(g, 'g', {}); mk(w, 'circle', { cx, cy: 0, r: WR, fill: 'none', stroke: C.ink, 'stroke-width': 4 }); [0, 45, 90, 135].forEach(a => { const r = a * Math.PI / 180; mk(w, 'line', { x1: cx - WR * Math.cos(r), y1: -WR * Math.sin(r), x2: cx + WR * Math.cos(r), y2: WR * Math.sin(r), stroke: C.ink, 'stroke-width': 1.5 }); }); mk(w, 'circle', { cx, cy: 0, r: 4, fill: C.ink }); wl.push([w, cx]); });
   mk(g, 'path', { d: 'M-84,0 L-46,0 L-60,-38 Z M-46,0 L-10,-38 L-60,-38 M-10,-38 L0,0 M-60,-38 L-64,-50 M-10,-38 L-6,-54 L6,-56', fill: 'none', stroke: '#2A3F7A', 'stroke-width': 4.5, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' });
   mk(g, 'path', { d: 'M-76,-52 L-54,-52', stroke: C.ink, 'stroke-width': 6, 'stroke-linecap': 'round' });
-  return { g, wl };
+  return { g, wl, outer };
 };
 const ghosts = [0, 1, 2].map(() => bike()); const bk = bike();
 const vA = PUC.arrow(s, VC, 6, 18), aA = PUC.arrow(s, AC, 6, 18);
@@ -234,7 +234,7 @@ M.on(t => {
     M.vis($('#ro'), t, tS1 + 0.25, out, { dx: 60, dy: 0, ...o });
     M.vis($('#gr'), t, tS1 + 0.4, out, { dy: 36, ...o });
     const S = state(t), ph = phase(t), slow = t >= tRep && t < tRun;
-    M.vis(bk.g, t, tS1 + 0.4, 1e9, { dx: -40, dy: 0 });
+    bk.outer.style.opacity = M.clamp((t - tS1 - 0.4) / 0.3).toFixed(3);
     const bx = placeBike(bk, S.x);
     ghosts.forEach((gb, k) => { const g = state(t - (slow ? 0.8 : 0.25) * (k + 1)); const gx = placeBike(gb, phase(t - (slow ? 0.8 : 0.25) * (k + 1)) === ph ? g.x : S.x); gb.g.style.opacity = (moving(t) && Math.abs(gx - bx) > 6) ? [0.3, 0.2, 0.12][k] : 0; });
     const vLen = S.v * 16 * (slow ? M.io((t - tRep - 0.2) / 0.8) : 1);
