@@ -157,7 +157,7 @@ const OPTS = ['Market research', 'Marketing control', 'Positioning', 'Branding']
 $('#opts').innerHTML = OPTS.map((o, i) => `<div class="opt" id="o${i}" style="left:${160 + i * 408}px"><div class="bg"></div><div class="lt">${'ABCD'[i]}</div><div class="ot serif">${o}</div><div class="ok">${M.icon('check', 30, '#fff', 3)}</div></div>`).join('');
 $('#takeI').innerHTML = M.icon('repeat', 44, C.gold2, 2.4);
 // recap
-const ROWS = [['map', 'A marketing plan', ['Where now', 'Where to', 'How']], ['repeat', 'Control', ['Goal', 'Measure', 'Cause', 'Fix']], ['compass', 'Check often', ['Often', 'Ready to change']]];
+const ROWS = [['map', 'A marketing plan', ['Where now', 'Where to', 'How']], ['repeat', 'Control', ['Goal', 'Measure', 'Cause', 'Fix']], ['compass', 'Stay flexible', ['Check often', 'Ready to change']]];
 $('#rRows').innerHTML = ROWS.map(([ic, tx, ps], i) => `<div class="card rw" id="rw${i}" style="top:${280 + i * 152}px"><div class="rn">0${i + 1}</div><div class="ri">${M.icon(ic, 34, C.gold, 2.2)}</div><div class="rt">${tx}</div>${ps.map((p, k) => `<div class="fp" id="fp${i}${k}">${p}</div>`).join('')}</div>`).join('');
 $('#nextI').innerHTML = M.icon('arrowR', 40, C.gold2, 2.4);
 
@@ -390,7 +390,7 @@ M.on(t => {
     });
     const rad = (ang - 90) * Math.PI / 180;
     attr($('#tok'), 'transform', `translate(${(344 + 130 * Math.cos(rad)).toFixed(2)} ${(175 + 130 * Math.sin(rad)).toFixed(2)})`);
-    $('#tok').style.opacity = M.clamp((t - tGoalJ + 0.2) / 0.15).toFixed(3);
+    { const d = Math.abs(ang - Math.round(ang / 90) * 90); $('#tok').style.opacity = (M.clamp((t - tGoalJ + 0.2) / 0.15) * M.clamp((d - 6) / 10)).toFixed(3); }
     M.drawU($('#trail'), ang / 360); M.hide($('#trail'), ang < 0.5);
     const st = loopState(t);
     attr($('#cFaceI'), 'href', `${IMG}ll-${st[0]}-face.jpg`);

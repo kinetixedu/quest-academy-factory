@@ -105,8 +105,8 @@ const NX = NODES.map((_, i) => 72 + i * 182);
 $('#nodes').innerHTML = NODES.map(([ic, n], i) => `<g id="nd${i}" transform="translate(${i * 182} 0)"><rect width="144" height="96" rx="16" fill="#FFFFFF" stroke="#E2DACB" stroke-width="2"/><g class="ni" transform="translate(56 14)"></g><text class="nt" x="72" y="80" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="13" letter-spacing="2" fill="#8A8274">${n}</text></g>`).join('') +
   NODES.slice(0, 4).map((_, i) => `<path d="M${i * 182 + 150} 48 h20 m-7 -7 l7 7 l-7 7" fill="none" stroke="#B9B1A3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>`).join('');
 const MOV = ['arjun', 'nani', 'dev', 'zoya', 'dev'];
-const SELL = [8, 34, 20, 12, 9, 8], MKT = [10, 14, 19, 24, 30, 36], BMAX = 40, BH = 84;
-const bars = (k, data, show) => data.map((v, i) => { const h = BH * v / BMAX, x = i * 155.2; return `<div class="bw" id="bw${k}${i}" style="left:${x.toFixed(1)}px;top:${160 - h}px;height:${h}px"></div><div class="bwl" style="left:${x.toFixed(1)}px;top:168px">WEEK ${i + 1}</div>` + (show.includes(i) ? `<div class="bwv" id="bv${k}${i}" style="left:${x.toFixed(1)}px;top:${160 - h - 32}px">${v}</div>` : ''); }).join('');
+const SELL = [8, 34, 20, 12, 9, 8], MKT = [10, 14, 19, 24, 30, 36], BMAX = 40, BH = 104;
+const bars = (k, data, show) => data.map((v, i) => { const h = BH * v / BMAX, x = i * 155.2; return `<div class="bw" id="bw${k}${i}" style="left:${x.toFixed(1)}px;top:${160 - h}px;height:${h}px"></div><div class="bwl" style="left:${x.toFixed(1)}px;top:168px">WEEK ${i + 1}</div>` + (show.includes(i) ? `<div class="bwv" id="bv${k}${i}" style="left:${x.toFixed(1)}px;top:${h > 44 ? 160 - h + 8 : 160 - h - 32}px;color:${h > 44 ? '#fff' : C.ink}">${v}</div>` : ''); }).join('');
 const star = (x, id) => `<path id="${id}" transform="translate(${x} 2)" d="M24 2 L30.2 15.4 L44.9 17.2 L34.1 27.3 L36.9 41.8 L24 34.6 L11.1 41.8 L13.9 27.3 L3.1 17.2 L17.8 15.4 Z" fill="#E2DACB" stroke-linejoin="round"/>`;
 const ip = (id, ic, tx) => `<div class="ip" id="${id}">${M.icon(ic, 20, C.gold, 2.4)}<span>${tx}</span></div>`;
 const WD = [
@@ -321,6 +321,7 @@ M.on(t => {
       const el = $('#fr' + i); M.vis(el, t, tD3 + 0.3 + i * 0.06, 1e9, { dy: 14 });
       rowHi(el, ic, t, tFr[i] - 0.05, i < 4 ? tFr[i + 1] - 0.05 : tD3e + 0.2);
       M.vis(el.querySelector('.rb'), t, tFr[i] + 0.25, 1e9, { dx: 16, dy: 0 });
+      { const on = M.io((t - tFr[i] + 0.05) / 0.3) * (1 - M.io((t - (i < 4 ? tFr[i + 1] - 0.05 : tD3e + 0.2)) / 0.35)); el.querySelector('.rb').style.color = mix(C.ink2, C.gold2, on); }
     });
   }
 
@@ -389,7 +390,7 @@ M.on(t => {
     });
     { M.vis($('#w2a'), t, wt('G2', 'posters') - 0.05, 1e9, POP); M.vis($('#w2b'), t, wt('G2', 'deals') - 0.05, 1e9, POP); M.vis($('#wl2'), t, tR[2] + 0.8, 1e9, { dy: 8 });
       const tj = wt('G3', 'jump'), tf = wt('G3', 'fall');
-      barRun(2, SELL, [tj - 0.3, tj, tf - 0.25, tf - 0.05, tf + 0.15, tf + 0.35], i => i === 1 ? C.gold : (i > 1 ? C.red2 : C.dim)); }
+      barRun(2, SELL, [tj - 0.3, tj, tf - 0.25, tf - 0.05, tf + 0.15, tf + 0.35], i => i < 2 ? C.gold : C.red2); }
     { M.vis($('#w3a'), t, wt('M2', 'small') - 0.05, 1e9, POP); M.vis($('#w3b'), t, wt('M2', 'six') - 0.05, 1e9, POP); M.vis($('#w3c'), t, wt('M2', 'tiffins') - 0.05, 1e9, POP); M.vis($('#wl3'), t, tR[3] + 0.8, 1e9, { dy: 8 });
       const a = wt('M3', 'Mrs'), b = wt('M3', 'keep');
       barRun(3, MKT, MKT.map((_, i) => a + i * (b - a) / 5), () => C.gold); }

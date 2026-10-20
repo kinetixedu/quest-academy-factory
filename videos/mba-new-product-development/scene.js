@@ -107,7 +107,7 @@ $('#trk').innerHTML = `<line x1="40" y1="30" x2="1464" y2="30" stroke="#E2DACB" 
   STEPS.map((s, i) => `<g id="nd${i}" transform="translate(${NX(i)} 30)"><circle r="22" fill="#FFFFFF" stroke="#E2DACB" stroke-width="3"/><text y="7" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="17" fill="#B9B1A3">${i + 1}</text></g><text id="nl${i}" x="${NX(i)}" y="84" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="14" letter-spacing="2" fill="#B9B1A3">${s}</text>`).join('');
 const IDEAS = [['laddoo', 'Cocoa-ragi'], ['sun', 'Mango laddoo'], ['leaf', 'Coconut-jowar'], ['ban', 'Sugar free'], ['zap', 'Protein bar'], ['flame', 'Spicy masala']];
 const VOTES = { 0: 12, 2: 6, 4: 2 };
-$('#chips').innerHTML = IDEAS.map(([ic, n], i) => `<div class="ic2" id="ic${i}" style="left:${48 + (i % 2) * 368}px;top:${250 + Math.floor(i / 2) * 88}px"><div class="bg"></div><div class="ii"></div><div class="in">${n}</div><div class="xs"></div><div class="vb"></div><div class="vn"></div><div class="sv">SAVED FOR LATER</div></div>`).join('');
+$('#chips').innerHTML = IDEAS.map(([ic, n], i) => `<div class="ic2" id="ic${i}" style="left:${48 + (i % 2) * 408}px;width:${i % 2 ? 296 : 376}px;top:${250 + Math.floor(i / 2) * 88}px"><div class="bg"></div><div class="ii"></div><div class="in">${n}</div><div class="xs"></div><div class="vb"></div><div class="vn"></div><div class="sv">SAVED</div></div>`).join('');
 document.querySelectorAll('.ic2 .in').forEach(el => { el.style.top = '12px'; });
 document.querySelectorAll('.ic2 .vb').forEach(el => { el.style.right = 'auto'; el.style.left = '76px'; el.style.top = '50px'; el.style.height = '8px'; });
 $('#idCI').innerHTML = M.icon('bulb', 20, C.gold, 2.4);
@@ -219,7 +219,7 @@ function measure() {
   document.querySelectorAll('#kPans .kt').forEach(el => { if (el.offsetWidth > 748) el.style.fontSize = Math.floor(30 * 748 / el.offsetWidth) + 'px'; });
   document.querySelectorAll('.xr .bb').forEach(el => { if (el.offsetWidth > 332) el.style.fontSize = Math.floor(22 * 332 / el.offsetWidth) + 'px'; });
   { const k = $('#fact .kt'); if (k.offsetWidth > 560) k.style.fontSize = Math.floor(28 * 560 / k.offsetWidth) + 'px'; }
-  OPTS.forEach((_, i) => { const o = $('#o' + i + ' .ot'); if (o.offsetWidth > 312) o.style.fontSize = Math.floor(40 * 312 / o.offsetWidth) + 'px'; });
+  { let f = 40; OPTS.forEach((_, i) => { const o = $('#o' + i + ' .ot'); if (o.offsetWidth > 312) f = Math.min(f, Math.floor(40 * 312 / o.offsetWidth)); }); OPTS.forEach((_, i) => { $('#o' + i + ' .ot').style.fontSize = f + 'px'; }); }
   ROWS.forEach(([, , ps], i) => { let x = 216 + $('#rw' + i + ' .rt').offsetWidth + 40; ps.forEach((_, k) => { const p = $('#fp' + i + k); p.style.left = x + 'px'; x += p.offsetWidth + 16; }); });
 }
 const tiltT = M.track(0, [[tXg[0] + 0.1, -6], [tXg[1] + 0.1, -12], [tXh[0] + 0.1, -6], [tXh[1] + 0.1, 0]], M.SOFT);
@@ -261,7 +261,7 @@ M.on(t => {
     M.vis($('#cDays'), t, td0, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 }); M.count($('#cDaysN'), t, td0, Math.max(0.5, tGuess - 0.2 - td0), 0, 30);
     M.vis($('#cLost'), t, tGuess + 0.3, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
     M.vis($('#ask'), t, tMorph + 0.42, tAout, { dy: 36, ...o });
-    M.vis($('#mt0'), t, tGuess - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
+    M.vis($('#mt0'), t, Math.min(tGuess - 0.05, tMorph + 0.8), 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
     M.vis($('#mt1'), t, tStepW - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
     M.rise($('#askT'), t, tPath - 0.1, { st: 0.07, sp: M.HEAVY });
   }

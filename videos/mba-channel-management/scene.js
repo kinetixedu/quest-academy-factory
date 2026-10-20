@@ -48,7 +48,7 @@ const tMem = [wt('D4', 'business'), wt('D4', 'shop'), wt('D4', 'wholesaler')], t
 const tSw = [wt('D5', 'pick'), wt('D5', 'help'), wt('D5', 'check')];
 // M: Arjun's round
 const tM = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(i => i ? T0('M' + i) : 0);
-const tVis0 = wt('M2', 'visits'), tCrit = [wt('M3', 'parents'), wt('M3', 'clean'), wt('M3', 'pays')], tPass = wt('M4', 'pass'), tDrop = wt('M4', 'dropped');
+const tVis0 = wt('M2', 'visits'), tCrit = [wt('M3', 'parents'), wt('M3', 'clean'), wt('M3', 'pay')], tPass = wt('M4', 'pass'), tDrop = wt('M4', 'dropped');
 const tMargin = wt('M5', 'margin'), tPart = wt('M6', 'part'), tKeeps = wt('M6', 'keeps'), tStand = wt('M7', 'display'), tMonday = wt('M7', 'Monday');
 const tCounts = wt('M8', 'counts'), tOnly = wt('M9', 'only'), tHidden = wt('M10', 'hidden'), tMoves = wt('M11', 'moves'), tNext = wt('M11', 'next'), tUp = wt('M11', 'up');
 const tMout = T0('T1') - 0.32;
@@ -133,8 +133,8 @@ $('#mRIn').innerHTML = `
   <div class="pq" id="pq2"><div class="ps">STEP 3 OF 3</div><div class="serif pt">Evaluate</div><div class="pm">Count the sales, fix the weak spot</div><div class="hr"></div>
     <div class="lbl" style="left:48px;top:244px">PACKS SOLD THIS WEEK · SHOPS 1 TO 10</div>
     <svg id="bch" width="688" height="236" style="top:272px">
-      <path d="M0 196 H688" stroke="#E2DACB" stroke-width="2"/>
-      ${BARS.map((h, i) => `<rect id="bb${i}x" x="${14 + i * 68}" y="196" width="44" height="0" rx="8" fill="#B8862F"/><text x="${36 + i * 68}" y="222" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="16" fill="#8A8274">${i + 1}</text>`).join('')}
+      <path d="M0 184 H688" stroke="#E2DACB" stroke-width="2"/>
+      ${BARS.map((h, i) => `<rect id="bb${i}x" x="${14 + i * 68}" y="184" width="44" height="0" rx="8" fill="#B8862F"/><text x="${36 + i * 68}" y="206" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="16" fill="#8A8274">${i + 1}</text>`).join('')}
     </svg>
     <div id="evP"><span id="evPI"></span><span id="evPT"></span></div>
   </div>`;
@@ -147,6 +147,7 @@ $('#cn1').innerHTML = M.icon('laptop', 40, C.ink, 2.2); $('#cn1').style.boxShado
 $('#cn4').innerHTML = M.icon('cart', 40, C.ink, 2.2); $('#cn4').style.boxShadow = '0 0 0 4px #14213D';
 $('#cpVI').innerHTML = M.icon('arrowU', 18, '#fff', 2.6); $('#cpHI').innerHTML = M.icon('swap', 18, '#fff', 2.4);
 const GG = [['flag', 'Goals'], ['users', 'Roles'], ['coin', 'Rewards']];
+$('#ty0I').innerHTML = M.icon('arrowU', 34, C.red, 2.4); $('#ty1I').innerHTML = M.icon('swap', 34, C.red, 2.2);
 $('#ggs').innerHTML = GG.map(([ic, t], i) => `<div class="ggr" id="gg${i}">${M.icon(ic, 22, C.red, 2.4)}<span>${t}</span></div>`).join('');
 const FT = [['store', 'LOCAL SHOP'], ['cart', 'SUPERMARKET'], ['laptop', 'ONLINE']];
 $('#ftRow').innerHTML = FT.map(([ic, n], i) => `<div class="ft3" id="ft${i}" style="left:${48 + i * 236}px"><div class="zn">${n}</div><div class="zi"></div><div class="zt">Same price</div></div>`).join('');
@@ -290,11 +291,10 @@ function measure() {
   m0.style.left = '48px'; m1.style.left = (48 + m0.offsetWidth + 16) + 'px'; m2.style.left = '48px'; m2.style.top = '470px';
   // conflict labels
   const l2 = $('#lv2'); l2.style.left = (736 - l2.offsetWidth) + 'px';
-  $('#cpV').style.left = '176px'; $('#cpV').style.top = '292px';
-  const ch = $('#cpH'); ch.style.left = (275 - ch.offsetWidth / 2) + 'px'; ch.style.top = '420px';
+  $('#cpV').style.left = '172px'; $('#cpV').style.top = '282px';
+  const ch = $('#cpH'); ch.style.left = (275 - ch.offsetWidth / 2) + 'px'; ch.style.top = '416px';
   const co = $('#cpO'); co.style.left = (534 + 52) + 'px'; co.style.top = '150px';
-  let tot = 0; const gg = [0, 1, 2].map(i => $('#gg' + i)); gg.forEach(n => tot += n.offsetWidth); tot += 32;
-  x = 392 - tot / 2; gg.forEach(n => { n.style.left = x + 'px'; x += n.offsetWidth + 16; });
+  x = 48; [0, 1, 2].forEach(i => { const n = $('#gg' + i); n.style.left = x + 'px'; x += n.offsetWidth + 16; });
   document.querySelectorAll('#kPans .pt').forEach(el => { if (el.offsetWidth > 848) el.style.fontSize = Math.floor(84 * 848 / el.offsetWidth) + 'px'; });
   document.querySelectorAll('#kPans .kt').forEach(el => { if (el.offsetWidth > 748) el.style.fontSize = Math.floor(30 * 748 / el.offsetWidth) + 'px'; });
   document.querySelectorAll('#kPans .pm').forEach(el => { if (el.offsetWidth > 848) el.style.fontSize = Math.floor(36 * 848 / el.offsetWidth) + 'px'; });
@@ -431,7 +431,8 @@ M.on(t => {
       M.vis(pn.querySelector('.hr'), t, tin + 0.4, tout, { dy: 0, ...oo });
       if (k === 0) {
         for (let i = 0; i < 3; i++) {
-          M.vis($('#cr' + i), t, tCrit[i] - 0.1, tout, { dy: 14, ...oo });
+          M.vis($('#cr' + i), t, tin + 0.6 + i * 0.08, tout, { dy: 14, ...oo });
+          { const on = M.io((t - tCrit[i] + 0.1) / 0.3), cr = $('#cr' + i); cr.querySelector('span').style.color = mix(C.dim, C.ink, on); cr.querySelector('i').style.opacity = (0.4 + 0.6 * on).toFixed(3); cr.style.background = mix(C.paper, C.gold3, on); }
           M.vis($('#crk' + i), t, tCrit[i] + 0.35, tout, { dy: 0, sc: 0.4, sp: M.POP, fade: 0.08, ...oo });
           M.vis($('#tl' + i), t, i === 0 ? tVis0 - 0.1 : tCol[0] + 0.2 + i * 0.1, tout, { dy: 14, ...oo });
           const tl = $('#tl' + i), fin = t >= tPass;
@@ -451,7 +452,7 @@ M.on(t => {
           const el = $('#bb' + i + 'x'), u = M.spring(t - tCounts - i * 0.12, M.SOFT);
           let hh = h * M.clamp(u, 0, 1.04);
           if (i === 6) hh = M.lerp(hh, BAR7, M.clamp(M.spring(t - tNext, M.HEAVY), 0, 1.04));
-          attr(el, 'height', Math.max(0, hh).toFixed(1)); attr(el, 'y', (196 - Math.max(0, hh)).toFixed(1));
+          attr(el, 'height', Math.max(0, hh).toFixed(1)); attr(el, 'y', (184 - Math.max(0, hh)).toFixed(1));
           const red = i === 6 ? M.io((t - tOnly) / 0.25) * (1 - M.io((t - tNext) / 0.3)) : 0;
           attr(el, 'fill', i === 6 ? mix(mix(C.gold, C.red, red), C.gold, 0) : C.gold);
         });
@@ -477,7 +478,7 @@ M.on(t => {
   const fOn = t >= tTu - 0.05 && t < tK0 + 0.2; M.hide($('#sF'), !fOn);
   if (fOn) {
     const o = { outDur: 0.3, ody: -16 };
-    const exc = $('#ex'); M.vis(exc, t, tF1 + 0.02, tFout, { dy: 36, ...o }); grow(exc, $('#exOut'), t, tF[6]);
+    const exc = $('#ex'); M.vis(exc, t, tF1 + 0.02, tFout, { dy: 36, ...o }); grow(exc, $('#exOut'), t, tF[2]);
     M.vis($('#band'), t, tF1 + 0.2, 1e9, { dy: 0, fade: 0.2 }); M.vis($('#lv1'), t, tF1 + 0.3, 1e9, { dy: 10 }); M.vis($('#lv2'), t, tF1 + 0.5, 1e9, { dy: 10 });
     const tn = [tF1 + 0.35, tF1 + 0.45, tF1 + 0.6, tF1 + 0.7, tF1 + 0.8];
     for (let i = 0; i < 5; i++) {
@@ -492,8 +493,14 @@ M.on(t => {
     $('#cn1').style.boxShadow = '0 0 0 4px ' + mix(C.ink, C.red, M.io((t - tOwn) / 0.25));
     $('#cn0').style.boxShadow = '0 0 0 4px ' + mix(C.ink, C.red, M.io((t - tVert) / 0.25) * (1 - M.io((t - tHor) / 0.25)));
     attr($('#band'), 'fill', mix(C.paper2, C.redBg, M.clamp(v) * 0.6));
-    M.vis($('#gg0').parentNode, t, tGg[0] - 0.1, 1e9, { dy: 0, fade: 0.01 });
+    M.vis($('#ty'), t, tF[2] + 0.12, tF[6] - 0.05, { dx: 60, dy: 0, outDur: 0.25, ody: 0 });
+    M.rise($('#tyD'), t, tF[2] + 0.35, { st: 0.04 });
     for (let i = 0; i < 3; i++) M.vis($('#gg' + i), t, tGg[i] - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
+    { const av = M.io((t - tVert) / 0.25) * (1 - M.io((t - tHor) / 0.25)) + M.io((t - tOwn) / 0.25), ah = M.io((t - tHor) / 0.25) * (1 - M.io((t - tOwn) / 0.25));
+      [[0, av, tVert], [1, ah, tHor]].forEach(([k, a, ta]) => { const r = $('#ty' + k); M.vis(r, t, k ? tF[2] + 0.7 : tF[2] + 0.6, 1e9, { dy: 16 });
+        r.style.background = mix(C.paper, C.ink, M.clamp(a)); r.querySelector('.tt').style.color = mix(C.ink, '#fff', M.clamp(a)); r.querySelector('.ts').style.color = mix(C.ink2, C.gold2, M.clamp(a));
+        r.querySelector('i').style.background = mix('#fff', C.navy2, M.clamp(a)); setIco(r.querySelector('i'), k ? 'swap' : 'arrowU', a > 0.5 ? C.gold2 : (t >= ta ? C.red : C.dim), 34, 2.4); });
+      M.vis($('#tyc'), t, tIsV - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 }); }
     M.draw($('#bv'), t, tVert - 0.05, 0.4, M.o3); M.vis($('#cpV'), t, tLevels - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
     $('#bv').style.opacity = (0.35 + 0.65 * M.clamp(v)).toFixed(3); $('#cpV').style.opacity = (0.45 + 0.55 * M.clamp(v + (t < tHor ? 1 : 0))).toFixed(3);
     M.draw($('#bh'), t, tHor - 0.05, 0.4, M.o3); M.vis($('#cpH'), t, tSame - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
@@ -514,7 +521,8 @@ M.on(t => {
     M.vis($('#flow'), t, tF[7] + 0.25, 1e9, { dy: 16 });
     M.draw($('#fl0'), t, tGo - 0.2, 0.5, M.o3); M.draw($('#fl1'), t, tDel - 0.2, 0.5, M.o3);
     const px = t < tDel - 0.1 ? M.lerp(80, 344, M.io((t - tGo + 0.1) / 0.6)) : M.lerp(344, 608, M.io((t - tDel + 0.1) / 0.6));
-    attr($('#fpk'), 'transform', `translate(${px.toFixed(1)} ${t < tGo - 0.1 ? 40 : 4})`); M.hide($('#fpk'), t < tGo - 0.1);
+    attr($('#fpk'), 'transform', `translate(${px.toFixed(1)} 40)`);
+    { const mv = (t > tGo - 0.1 && t < tGo + 0.5) || (t > tDel - 0.1 && t < tDel + 0.5); M.hide($('#fpk'), !mv); }
     const fn1 = $('#fn1').querySelector('circle'); attr(fn1, 'fill', mix(C.paper, C.gold3, M.io((t - tGo - 0.4) / 0.3)));
     M.vis($('#fxP'), t, tKeepM - 0.1, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
   }
@@ -570,8 +578,8 @@ M.on(t => {
     }
     M.vis($('#xw'), t, tX4 + 0.12, tXout, { dx: 60, dy: 0, ...o });
     M.vis($('#pack'), t, tX4 + 0.3, 1e9, { dy: 24, sp: M.SOFT });
-    M.vis($('#clm0'), t, tSup - 0.05, tFresh - 0.1, { dy: 0, fade: 0.15, outDur: 0.2, ody: 0 });
-    M.draw($('#strk'), t, tPres - 0.05, 0.35, M.o3); if (t > tFresh - 0.1) M.hide($('#strk'), true);
+    M.vis($('#clm0'), t, tSup - 0.05, tFresh - 0.4, { dy: 0, fade: 0.15, outDur: 0.2, ody: 0 });
+    M.draw($('#strk'), t, tPres - 0.05, 0.35, M.o3); if (t > tFresh - 0.25) M.hide($('#strk'), true);
     M.vis($('#clm1'), t, tFresh + 0.05, 1e9, { dy: 0, fade: 0.2 });
     { const u = M.clamp((t - tFresh - 0.3) / 0.12); $('#pkOk').style.opacity = u.toFixed(3); M.hide($('#pkOk'), u <= 0); }
     for (let i = 0; i < 3; i++) M.vis($('#xr' + i), t, [tSup, tNaniX, tAgree][i] - 0.1, 1e9, { dx: 24, dy: 0 });

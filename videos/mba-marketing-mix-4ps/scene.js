@@ -1,162 +1,138 @@
-// MBA - Marketing Management, Ep 12: STP Framework (Laddoo Lab)
+// MBA - Marketing Management, Ep 13: Marketing Mix - 4Ps (Laddoo Lab)
 (() => {
 const { $ } = M;
-const C = { ink: '#14213D', ink2: '#3A4560', muted: '#8A8274', dim: '#B9B1A3', gold: '#B8862F', gold2: '#E9D9B5', gold3: '#F3EAD6', paper: '#F5F1E8', paper2: '#EEE8DB', card: '#FFFFFF', line: '#E2DACB', red: '#B5482F', redBg: '#F6E3DC', red2: '#E7B9AB', navy2: '#24345A', navy3: '#2C3B5E', ld: '#A8713A', ldD: '#7E5428', crowd: '#CFC6B6' };
+const C = { ink: '#14213D', ink2: '#3A4560', muted: '#8A8274', dim: '#B9B1A3', gold: '#B8862F', gold2: '#E9D9B5', gold3: '#F3EAD6', paper: '#F5F1E8', paper2: '#EEE8DB', card: '#FFFFFF', line: '#E2DACB', red: '#B5482F', redBg: '#F6E3DC', red2: '#E7B9AB', navy2: '#24345A', navy3: '#2C3B5E', ld: '#A8713A', ldD: '#7E5428' };
 const wt = M.wt, T0 = M.t0, T1 = M.t1, mix = M.mix;
 
 /* extra line icons (24-unit, lucide style) */
 Object.assign(M.IC, {
   laddoo: ['M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z', 'M8.5 9h.01', 'M13 7.5h.01', 'M15.5 12h.01', 'M11 12.5h.01', 'M8 15h.01', 'M13 16.5h.01'],
   phone: ['M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Z', 'M12 18h.01'],
-  bank: ['M3 22h18', 'M6 18v-7', 'M10 18v-7', 'M14 18v-7', 'M18 18v-7', 'M12 2 20 7H4z'],
-  repeat: ['m17 2 4 4-4 4', 'M3 11v-1a4 4 0 0 1 4-4h14', 'm7 22-4-4 4-4', 'M21 13v1a4 4 0 0 1-4 4H3'],
   heart: ['M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z'],
-  search: ['m21 21-4.34-4.34', 'M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z'],
-  cap: ['M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z', 'M22 10v6', 'M6 12.5V16a6 3 0 0 0 12 0v-3.5'],
   target: ['M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z', 'M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z', 'M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z'],
   scale: ['m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z', 'm2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z', 'M7 21h10', 'M12 3v18', 'M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2'],
-  dumbbell: ['M14.4 14.4 9.6 9.6', 'M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z', 'm21.5 21.5-1.4-1.4', 'M3.9 3.9 2.5 2.5', 'M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z'],
-  briefcase: ['M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16', 'M4 6h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z'],
-  backpack: ['M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z', 'M8 10h8', 'M8 18h8', 'M8 22v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6', 'M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2'],
-  pie: ['M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.998.398-.998.95v8a1 1 0 0 0 1 1z', 'M21.21 15.89A10 10 0 1 1 8 2.83'],
-  plane: ['M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z'],
-  bike: ['M5.5 21a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z', 'M18.5 21a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z', 'M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z', 'M12 17.5V14l-3-3 4-3 2 3h2'],
-  ear: ['M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0', 'M15 8.5a2.5 2.5 0 0 0-5 0v1a2 2 0 1 1 0 4'],
+  film: ['M3 3h18v18H3z', 'M7 3v18', 'M3 7.5h4', 'M3 12h18', 'M3 16.5h4', 'M17 3v18', 'M17 7.5h4', 'M17 16.5h4'],
+  hospital: ['M12 6v4', 'M14 14h-4', 'M14 18h-4', 'M14 8h-4', 'M18 12h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2', 'M18 22V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v18'],
+  eye: ['M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0', 'M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z'],
 });
 const IMG = '../../assets/illustrations/mba/';
 const FACE = n => `background-image:url(${IMG}ll-${n}-face.jpg)`;
 
 /* ---------- beats (all from the voice) ---------- */
 const tTitle = 0.25, tMorph = T0('H2') + 0.02;
-const tH = [wt('H2', 'Gym'), wt('H2', 'Office'), wt('H2', 'Parents')], tH3 = T0('H3'), tCant = wt('H3', "can't"), tWhom = wt('H3', 'whom');
-const tL1 = T0('L1'), tL2 = T0('L2'), tL3 = T0('L3'), tL4 = T0('L4');
-const tW = [wt('L2', 'school'), wt('L2', 'gyms'), wt('L2', 'offices')], tB = [wt('L3', 'Split'), wt('L3', 'Pick'), wt('L3', 'Stand')], tLtr = [wt('L4', 5), wt('L4', 6), wt('L4', 7)];
+const tJar = wt('H1', 'jar'), tH2 = T0('H2'), tOnly = wt('H2', 'only'), tH3 = T0('H3'), tNever = wt('H3', 'never'), tFit = wt('H3', 'fit'), tH4 = T0('H4'), tMixH = wt('H4', 'mix');
+const tL1 = T0('L1'), tL2 = T0('L2'), tL3 = T0('L3');
+const tNm = [wt('L3', 'Zoya'), wt('L2', 'Nani'), wt('L2', 'Arjun'), wt('L2', 'Dev')], tFq = [wt('L3', 'What'), wt('L3', 'much'), wt('L3', 'Where'), wt('L3', 'find')];
 const tAout = tL1 - 0.32, tLout = T0('D1') - 0.32;
-// D: what is STP
-const tD1 = T0('D1'), tD2 = T0('D2'), tD6 = T0('D6'), tD7 = T0('D7'), tDout = T0('M1') - 0.32;
-const tTerm = [wt('D2', 'segmentation'), wt('D2', 'targeting'), wt('D2', 'positioning')], tMean = [T0('D3'), T0('D4'), T0('D5')];
-const tQ0 = wt('D6', 'Whom'), tQ1 = wt('D6', 'how'), tWen = wt('D7', 'Wendell'), tRies = wt('D7', 'Ries');
-// M: the STP flow
-const tM1 = T0('M1'), tM3 = T0('M3'), tM5 = T0('M5'), tM6 = T0('M6'), tM8 = T0('M8');
-const tStep = [wt('M2', 'segment'), wt('M4', 'target'), wt('M7', 'position')];
-const tGrp = [wt('M3', 'Tiffin'), wt('M3', 'gym'), wt('M3', 'office')];
-const tCrit = [wt('M4', 'big'), wt('M4', 'grow'), wt('M4', 'serve')], tWin = wt('M5', 'Parents'), tGymX = wt('M6', 'Gym'), tWait = wt('M6', 'wait');
-const tHear = wt('M7', 'hear'), tBl = [wt('M8', 'healthy'), wt('M8', 'tiffin')], tCp = [wt('M8', 'customer'), wt('M8', 'promise')];
+// D: the marketing mix
+const tD1 = T0('D1'), tD2 = T0('D2'), tD3 = T0('D3'), tD4 = T0('D4'), tD5 = T0('D5'), tDout = T0('M1') - 0.32;
+const tHl = [wt('D2', 'tools'), wt('D2', 'blends'), wt('D2', 'response')], tCk = [wt('D3', 'same'), wt('D3', 'well'), wt('D3', 'great')];
+const tBor = wt('D4', 'Borden'), t1960 = wt('D5', '1960'), tP4 = [wt('D5', 'Product'), wt('D5', 'price'), wt('D5', 'place'), wt('D5', 'promotion')];
+// M: two runs
+const tM1 = T0('M1'), tM2 = T0('M2'), tM3 = T0('M3'), tM4 = T0('M4'), tM8 = T0('M8');
+const tPromo = wt('M2', 'Promotion'), tNobody = wt('M2', 'Nobody'), tNoSale = wt('M2', 'sale');
+const tJx = [tNobody, wt('M3', 'hard'), wt('M3', 'costly'), wt('M3', 'big')];
+const tG = [wt('M4', 'Dev'), wt('M5', 'Place'), wt('M6', 'Price'), wt('M7', 'Product')], tBuys = wt('M8', 'buys'), tAgain = wt('M8', 'again');
 const tMout = T0('T1') - 0.32;
-// statement + map
-const tT = T0('T1'), tSt2 = wt('T1', 'and'), tP1 = T0('P1'), tTu = tP1 - 0.32;
-const tDraw = wt('P1', 'Draw'), tMap = wt('P1', 'map'), tAx = [wt('P2', 'treat'), wt('P2', 'healthy'), wt('P2', 'messy'), wt('P2', 'tiffin')];
-const tCo = [wt('P3', 'Chocolate'), wt('P3', 'Sweet'), wt('P4', 'Fruit')], tGap = wt('P5', 'empty'), tLL = wt('P5', 'Laddoo');
-const tP6 = T0('P6'), tSv = [wt('P7', 'busy'), wt('P7', 'healthy'), wt('P7', 'millet'), wt('P7', 'refined')], tPout = T0('K0') - 0.32;
+// statement + the full mix
+const tT = T0('T1'), tSt2 = wt('T1', 'One', 1), tP0 = T0('P0'), tTu = tP0 - 0.32;
+const tP = [1, 2, 3, 4, 5].map(i => T0('P' + i)), tSame = wt('P5', 'same'), tPout = T0('K0') - 0.32;
 // K: at work today
 const tK0 = T0('K0'), tK = [1, 2, 3, 4].map(i => T0('K' + i)), tKout = T0('X1') - 0.32;
-const tKw = [wt('K1', 'bank'), wt('K2', 'airline'), wt('K3', 'food'), wt('K4', 'phone')];
+const tKw = [wt('K1', 'phone'), wt('K2', 'cinema'), wt('K3', 'bakery'), wt('K4', 'hospital')];
 // X: human side
 const tX1 = T0('X1'), tX2 = T0('X2'), tX3 = T0('X3'), tX4 = T0('X4'), tX5 = T0('X5'), tX6 = T0('X6');
-const tXg = [wt('X2', 'Focus'), wt('X2', 'message')], tXh = [wt('X3', 'small'), wt('X3', 'labels')];
-const tArjX = wt('X4', 'Arjun'), tZoyX = wt('X5', 'Zoya'), tDes = wt('X5', 'design');
+const tXg = [wt('X2', 'simple'), wt('X2', 'forgotten')], tXh = [wt('X3', 'seller'), wt('X3', 'services')];
+const tLaut = wt('X4', 'Lauterborn'), tCs = [wt('X5', 'needs'), wt('X5', 'cost'), wt('X5', 'convenience'), wt('X5', 'communication')];
 const tXout = tX6 - 0.15;
-const tQ = T0('Q1'), tCount = T1('Q1') + 0.05, tAns = T0('A1') - 0.02, tTakeQ = wt('A1', 'She');
+const tQ = T0('Q1'), tCount = T1('Q1') + 0.05, tAns = T0('A1') - 0.02, tTakeQ = wt('A1', 'It');
 const tS = T0('S1'), tRow = [T0('S2'), T0('S3'), T0('S4')], tN = T0('N1');
-const tPill = [[wt('S2', 'similar')], [wt('S3', 'best')], [wt('S4', 'minds')]];
+const tPill = [[wt('S2', 'product'), wt('S2', 'price'), wt('S2', 'place'), wt('S2', 'promotion')], [wt('S3', 'what'), wt('S3', 'much'), wt('S3', 'where'), wt('S3', 'find')], [wt('S4', 'same')]];
 const SW = [[tT - 0.42, tTu], [tQ - 0.42, tQ + 0.06], [tS - 0.42, tS + 0.06]];
 
 /* ---------- build ---------- */
 const wrap = (card, id, w, h) => { const d = document.createElement('div'); d.id = id; d.className = 'abs'; d.style.cssText = `left:0;top:0;width:${w}px;height:${h}px`; while (card.firstChild) d.appendChild(card.firstChild); card.appendChild(d); };
-const tile = (id, x, ic, n, t, cls = '') => `<div class="sws ${cls}" id="${id}" style="left:${x}px"><div class="zn">${n}</div><div class="zi">${M.icon(ic, 40, C.gold, 2.2)}</div><div class="zt">${t}</div></div>`;
-// A: three kinds of customers + one kitchen
-const HT = [['dumbbell', 'GYM-GOERS', 'More protein'], ['briefcase', 'OFFICE WORKERS', 'A desk snack'], ['backpack', 'PARENTS', 'A tiffin sweet']];
-$('#hRow').innerHTML = HT.map(([ic, n, t], i) => tile('ht' + i, 36 + i * 288, ic, n, t, 'w3')).join('');
-const METH = [['check', 'One recipe', 0], ['check', 'One kitchen', 0], ['x', 'All three?', 1]];
-$('#meth').innerHTML = METH.map(([ic, m, bad], i) => `<div class="stp" id="mt${i}" style="top:76px;${bad ? 'background:#F6E3DC;color:#B5482F' : ''}">${M.icon(ic, 26, bad ? C.red : C.gold, 2.6)}<span>${m}</span></div>`).join('');
-// L: where she asked + three steps
-const WT = [['cap', 'SCHOOL GATES', 'Parents'], ['dumbbell', 'GYMS', 'Gym-goers'], ['briefcase', 'OFFICES', 'Office snackers']];
-$('#wRow').innerHTML = WT.map(([ic, n, t], i) => tile('wt' + i, 36 + i * 243, ic, n, t)).join('');
-const BT = [['pie', 'STEP 1', 'Split the market', 'S'], ['target', 'STEP 2', 'Pick one group', 'T'], ['pin', 'STEP 3', 'Stand out', 'P']];
-$('#bRow').innerHTML = BT.map(([ic, n, t, l], i) => tile('bt' + i, 36 + i * 243, ic, n, t).replace(/<\/div>$/, `<div class="ltr" id="lt${i}">${l}</div></div>`)).join('');
+const tile = (id, x, w, ic, n, t) => `<div class="sws" id="${id}" style="left:${x}px;width:${w}px"><div class="zn">${n}</div><div class="zi">${M.icon(ic, 40, C.gold, 2.2)}</div><div class="zt">${t}</div></div>`;
+// A: the jar
+const HT = [['package', 'WHAT', 'A jar of 18'], ['coin', 'HOW MUCH', '₹360 a jar'], ['home', 'WHERE', "Nani's kitchen"], ['megaphone', 'WHO KNEW?', 'Nobody']];
+$('#hRow').innerHTML = HT.map(([ic, n, t], i) => tile('ht' + i, 36 + i * 216, 200, ic, n, t)).join('');
+const METH = [['x', 'Never heard of it'], ['x', "Won't fit a tiffin"]];
+$('#meth').innerHTML = METH.map(([ic, m], i) => `<div class="stp" id="mt${i}" style="top:76px;background:#F6E3DC;color:#B5482F">${M.icon(ic, 26, C.red, 2.6)}<span>${m}</span></div>`).join('');
+// L: team + four questions
+const TEAM = [['zoya', 'Zoya', 'FOUNDER'], ['nani', 'Nani', 'RECIPE'], ['arjun', 'Arjun', 'SALES'], ['dev', 'Dev', 'DESIGN']];
+$('#tRow').innerHTML = TEAM.map(([f, n, r], i) => { const cx = 125 + i * 178; return `<div class="av face tav" id="tv${i}" style="left:${cx - 36}px;${FACE(f)}">${n[0]}</div><div class="tnm" id="tn${i}x" style="left:${cx - 80}px">${n}</div><div class="trl" id="tr${i}x" style="left:${cx - 80}px">${r}</div>`; }).join('');
+const FQ = [['package', 'Q1', 'What?'], ['coin', 'Q2', 'How much?'], ['pin', 'Q3', 'Where?'], ['megaphone', 'Q4', 'Who knows?']];
+$('#fqRow').innerHTML = FQ.map(([ic, n, t], i) => tile('fq' + i, 36 + i * 182, 166, ic, n, t)).join('');
 wrap($('#ill'), 'illOut', 784, 580);
-// D: three words
-const DF = [['S', 'Segmentation', 'Groups of buyers with similar needs'], ['T', 'Targeting', 'Choose which group to serve'], ['P', 'Positioning', 'Own a clear place in their minds']];
-$('#dRows').innerHTML = DF.map(([l, tt, m], i) => `<div class="df" id="df${i}" style="top:${96 + i * 144}px"><div class="bg"></div><div class="bd">${l}</div><div class="serif dt">${tt}</div><div class="dm">${m}</div></div>`).join('');
+// D: definition, cook pills, twelve into four
+const CK = [['laddoo', 'Ingredients'], ['repeat', 'Mixed well'], ['check', 'A great dish']];
+$('#ckRow').innerHTML = CK.map(([ic, t], i) => `<div class="ck" id="ck${i}" style="${i === 2 ? 'background:#B8862F;color:#fff' : ''}">${M.icon(ic === 'repeat' ? 'plus' : ic, 24, i === 2 ? '#fff' : C.gold, 2.4)}<span>${t}</span></div>` + (i < 2 ? `<svg class="cka" id="cka${i}" width="44" height="24"><path d="M4 12 H34 M26 4 L36 12 L26 20" fill="none" stroke="#B9B1A3" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>` : '')).join('');
+const P4N = ['Product', 'Price', 'Place', 'Promotion'];
+$('#p4Row').innerHTML = P4N.map((n, i) => `<div class="p4" id="p4${i}" style="left:${36 + i * 182}px"><div class="pb">P</div><div class="pl">${n}</div></div>`).join('');
+const D12 = Array.from({ length: 12 }, (_, i) => { const k = Math.floor(i / 3), j = i % 3; return { x0: 36 + k * 182 + 83 + (j - 1) * 40, y0: 159, k, j }; });
+$('#tw4d').innerHTML = D12.map((d, i) => `<circle id="dz${i}" cx="${d.x0}" cy="${d.y0}" r="12" fill="#B8862F"/>`).join('');
 wrap($('#kq'), 'kqOut', 784, 580);
 
-/* M: the STP flow. 60 people (EXAMPLE FIGURES): 25 tiffin parents, 20 gym-goers, 15 office snackers. */
-const GN = [25, 20, 15], GC = [C.gold, C.ink, C.muted], CX = [115, 344, 573];
-const GT = [['backpack', 'Tiffin parents', 'PARENTS'], ['dumbbell', 'Gym-goers', 'GYM-GOERS'], ['briefcase', 'Office snackers', 'OFFICE']];
-const RATE = [[5, 4, 5], [4, 4, 2], [3, 3, 3]];
-const rnd = M.rng(12);
-const cells = Array.from({ length: 60 }, (_, i) => [34 + (i % 10) * 69 + (rnd() - 0.5) * 30, 36 + Math.floor(i / 10) * 59 + (rnd() - 0.5) * 26]);
-const grpOf = []; GN.forEach((n, k) => { for (let j = 0; j < n; j++) grpOf.push(k); });
-for (let i = grpOf.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [grpOf[i], grpOf[j]] = [grpOf[j], grpOf[i]]; }
-const slot = []; { const c = [0, 0, 0]; grpOf.forEach((k, i) => { slot[i] = c[k]++; }); }
-const DOT = cells.map(([x, y], i) => { const k = grpOf[i], j = slot[i]; return { x0: x, y0: y, k, j, x1: CX[k] - 64 + (j % 5) * 32, y1: 84 + Math.floor(j / 5) * 32 }; });
-$('#dots').innerHTML = DOT.map((d, i) => `<circle id="dt${i}" cx="${d.x0.toFixed(1)}" cy="${d.y0.toFixed(1)}" r="11" fill="${C.crowd}"/>`).join('');
-$('#colH').innerHTML = GT.map(([, , h], k) => `<text id="ch${k}" x="${CX[k]}" y="50" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="16" letter-spacing="2.4" fill="${GC[k]}">${h}</text>`).join('');
-$('#colHi').innerHTML = `<rect id="hiR" x="${CX[0] - 104}" y="14" width="208" height="340" rx="20" fill="#F3EAD6" stroke="#B8862F" stroke-width="3"/>`;
-$('#ourC').innerHTML = `<g transform="translate(${CX[0]} 310)"><g id="ourT"><rect x="-92" y="-24" width="184" height="48" rx="24" fill="#14213D"/><text x="0" y="7" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="20" fill="#FFFFFF">Our customer</text></g></g>`;
-const SC = [['1', 'Segment'], ['2', 'Target'], ['3', 'Position']];
-$('#sChips').innerHTML = SC.map(([n, t], i) => `<div class="sc" id="sc${i}"><b>${n}</b><span>${t}</span></div>` + (i < 2 ? `<svg class="sa" id="sa${i}" width="44" height="24"><path d="M4 12 H34 M26 4 L36 12 L26 20" fill="none" stroke="#B9B1A3" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>` : '')).join('');
-$('#bigPI').innerHTML = M.icon('search', 24, C.gold, 2.4);
-$('#tgPI').innerHTML = M.icon('target', 20, '#fff', 2.6);
-$('#tRows').innerHTML = GT.map(([ic, n], k) => `<div class="tr" id="tr${k}" style="top:${136 + k * 116}px"><div class="bg"></div><div class="ri">${M.icon(ic, 28, GC[k], 2.2)}</div><div class="rt">${n}</div><div class="rc" id="rc${k}">0 PEOPLE</div>` +
-  [0, 1, 2].map(c => `<div class="pp" style="left:${337 + c * 120}px">${[0, 1, 2, 3, 4].map(p => `<i id="pp${k}${c}${p}" style="left:${p * 20}px"></i>`).join('')}</div>`).join('') + `</div>`).join('');
-$('#raoF').style.cssText += ';' + FACE('rao');
-$('#cp0I').innerHTML = M.icon('target', 22, C.gold, 2.4); $('#cp1I').innerHTML = M.icon('heart', 22, C.gold2, 2.4);
+/* M: Mrs. Rao's week, twice. Gates in the order she meets them. Plan coords inside a 688 x 250 svg. */
+const GATE = [['megaphone', 'PROMOTION'], ['pin', 'PLACE'], ['tag', 'PRICE'], ['package', 'PRODUCT']];
+const GX = [89, 259, 429, 599];
+const gate = (k, i, ic, lb) => `<g id="g${k}${i}" transform="translate(${GX[i] - 65} 24)"><rect width="130" height="96" rx="16" fill="#FFFFFF" stroke="#E2DACB" stroke-width="2"/><g class="bi" transform="translate(51 16)">${M.icon(ic, 28, C.ink, 2.2)}</g><text x="65" y="76" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="13" letter-spacing="2" fill="#8A8274">${lb}</text>
+  <g class="gs" transform="translate(122 8)" visibility="hidden"><circle r="17" fill="#FFFFFF"/><circle r="14" fill="#B8862F"/><g class="gsi" transform="translate(-8 -8)">${M.icon('check', 16, '#fff', 3.2)}</g></g></g>`;
+const run = (k, label) => `<div class="mav" style="${FACE('rao')}"></div><div class="lbl mlb">${label}</div><div class="serif mrd" id="rd${k}">Week 1</div>
+  <svg class="mplan" id="plan${k}" width="688" height="250"><defs><clipPath id="avc${k}"><circle cx="0" cy="0" r="26"/></clipPath></defs>
+    <rect width="688" height="250" rx="24" fill="#F5F1E8"/>
+    <path d="M24 196 H664" stroke="#E2DACB" stroke-width="4" stroke-dasharray="2 12" stroke-linecap="round"/>
+    ${GATE.map(([ic, lb], i) => gate(k, i, ic, lb)).join('')}
+    <g id="av${k}" transform="translate(30 196)"><circle r="30" fill="#14213D"/><image href="${IMG}ll-rao-face.jpg" x="-26" y="-26" width="52" height="52" clip-path="url(#avc${k})"/></g>
+  </svg>
+  ${GATE.map(([, lb], i) => `<div class="gseg" id="gs${k}${i}" style="left:${48 + i * 176}px;width:160px"></div><div class="mtk" style="left:${48 + i * 176}px">${lb}</div>`).join('')}
+  <div class="mst" id="ms${k}"><span class="msi"></span><span class="mtx"></span></div>`;
+$('#mLIn').innerHTML = run('L', 'OLD MIX · THE BIG JAR');
+$('#mRIn').innerHTML = run('R', 'NEW MIX · THE SIX-PACK');
 
-/* P: the map (688 x 456) and the positioning statement */
-const T = (x, y, s, fill, txt, o = '') => `<text x="${x}" y="${y}" font-family="Poppins" font-weight="600" font-size="${s}" fill="${fill}" ${o}>${txt}</text>`;
-const CO = [[80, 112, 'Chocolate bar', 'PACKS WELL, A TREAT'], [96, 330, 'Sweet shop laddoo', 'TASTY, STICKY'], [470, 334, 'Fruit', 'HEALTHY, BRUISES']];
-$('#map').innerHTML = `<rect width="688" height="456" rx="24" fill="#F5F1E8"/>
-  <rect id="gapR" x="368" y="36" width="284" height="156" rx="20" fill="#FFFFFF" stroke="#B8862F" stroke-width="3" stroke-dasharray="10 9"/>
-  <g id="gapT">${T(388, 66, 16, C.gold, 'THE GAP', 'letter-spacing="2.4"')}</g>
-  <path id="axH" d="M28 228 H660" stroke="#14213D" stroke-width="4" stroke-linecap="round" fill="none"/>
-  <path id="axV" d="M344 436 V20" stroke="#14213D" stroke-width="4" stroke-linecap="round" fill="none"/>
-  <g id="al0">${T(32, 212, 16, C.muted, 'TREAT', 'letter-spacing="2.4"')}</g>
-  <g id="al1">${T(656, 212, 16, C.muted, 'HEALTHY', 'letter-spacing="2.4" text-anchor="end"')}</g>
-  <g id="al2">${T(328, 428, 16, C.muted, 'MESSY', 'letter-spacing="2.4" text-anchor="end"')}</g>
-  <g id="al3">${T(328, 40, 16, C.muted, 'TIFFIN READY', 'letter-spacing="2.4" text-anchor="end"')}</g>` +
-  CO.map(([x, y, n, s], i) => `<g transform="translate(${x} ${y})"><g id="co${i}"><circle r="14" fill="#3A4560"/>${T(26, 2, 21, C.ink, n)}${T(26, 28, 14, C.muted, s, 'letter-spacing="2"')}</g></g>`).join('') +
-  `<g id="llG" transform="translate(510 110)"><circle r="22" fill="#B8862F" stroke="#FFFFFF" stroke-width="5"/><rect x="-74" y="34" width="148" height="44" rx="22" fill="#14213D"/>${T(0, 63, 20, '#FFFFFF', 'Laddoo Lab', 'text-anchor="middle"')}</g>`;
-wrap($('#pm'), 'pmOut', 784, 580);
-const SR = [['FOR', 'Busy parents'], ['WHO WANT', 'A healthy tiffin treat'], ['LADDOO LAB IS', 'The millet laddoo kids love'], ['BECAUSE IT HAS', 'No refined sugar']];
-$('#sRows').innerHTML = SR.map(([l, v], i) => `<div class="sr2" id="sr${i}" style="top:${96 + i * 112}px"><div class="sl">${l}</div><div class="sd"></div><div class="serif sv">${i === 3 ? `<span class="acc">${v}</span>` : v}</div></div>`).join('');
-$('#zF').style.cssText += ';' + FACE('zoya');
+// P: the full mix
+const P5 = [['package', 'Product', 'What do we sell?', 'nani', 'The six-pack: six small laddoos, no refined sugar'],
+  ['tag', 'Price', 'What do they pay?', 'zoya', '₹120 for six: a fair price for a healthy snack'],
+  ['pin', 'Place', 'Where do they get it?', 'arjun', 'At their door every Monday, before the school week'],
+  ['megaphone', 'Promotion', 'How do they find out?', 'dev', 'Posters, free tastes, and parents telling parents']];
+$('#p5').innerHTML = P5.map(([ic, a, b], i) => `<div class="st5" id="pst${i}" style="left:${160 + i * 408}px"><div class="bg"></div><div class="sn">0${i + 1}</div><div class="si"></div><div class="s1">${a}</div><div class="s2">${b}</div></div>`).join('');
+$('#pePans').innerHTML = [[null, 'THE 4PS · E. JEROME McCARTHY, 1960', 'Four questions, one plan']].concat(P5.map((p, i) => [p[3], `0${i + 1} · ${p[1].toUpperCase()} AT LADDOO LAB`, p[4]])).concat([['rao', 'THE TARGET CUSTOMER', 'All four point at one person: the busy parent']]).map(([f, l, x], k) =>
+  `<div class="pex" id="pex${k}"><div class="lbl">${l}</div>${f ? `<div class="pa" style="${FACE(f)}"></div>` : `<div class="pi">${M.icon('package', 36, C.gold, 2.2)}</div>`}<div class="pt2">${x}</div></div>`).join('');
 
 // K: at work today
 const KA = [
-  ['pie', 'Segment', 'Split into groups', 'Parents, gym-goers, office snackers', 'bank', 'A bank: students, workers, retired people'],
-  ['target', 'Target', 'Choose whom to serve', 'Busy parents who pack tiffins', 'plane', 'Business class, built for work travellers'],
-  ['pin', 'Position', 'Own one clear idea', 'The healthy sweet for tiffin boxes', 'bike', 'A delivery app promises one thing: speed'],
-  ['repeat', 'Review', 'Needs keep changing', 'Zoya asks her buyers again each term', 'phone', 'A phone maker asks users again every year'],
+  ['package', 'Product', 'What you sell', 'Six small laddoos, each one wrapped', 'phone', 'A phone maker sells one model in three sizes'],
+  ['tag', 'Price', 'What they pay', '₹120 for six: ₹20 a school day', 'film', 'A cinema charges less for morning shows'],
+  ['pin', 'Place', 'Where they get it', 'Arjun delivers every Monday', 'store', 'A bakery sells from its shop and an app'],
+  ['megaphone', 'Promotion', 'How they find out', 'Posters and free tastes at the gate', 'hospital', 'A hospital runs a free health check camp'],
 ];
 $('#kRows').innerHTML = KA.map(([ic, t], i) => `<div class="kr" id="kr${i}" style="top:${100 + i * 120}px"><div class="bg"></div><div class="rn">0${i + 1}</div><div class="ri"></div><div class="rt">${t}</div></div>`).join('');
-const KP = [['STP TODAY', 'Four moves', 'Every business makes them', null]].concat(KA.map((a, i) => [`IN PRACTICE 0${i + 1} / 04`, a[1], a[2], a]));
+const KP = [['THE 4PS TODAY', 'Four levers', 'Every business pulls them', null]].concat(KA.map((a, i) => [`IN PRACTICE 0${i + 1} / 04`, a[1], a[2], a]));
 $('#kPans').innerHTML = KP.map(([s, t, m, a], i) => `<div class="pn" id="kn${i}"><div class="ps">${s}</div><div class="serif pt">${t}</div><div class="pm">${m}</div><div class="hr"></div>` +
   (a ? `<div class="ka" id="ka${i}0" style="top:322px"><i>${M.icon('laddoo', 34, C.gold, 2.2)}</i><div class="kl">AT LADDOO LAB</div><div class="kt">${a[3]}</div></div>
         <div class="ka" id="ka${i}1" style="top:442px"><i>${M.icon(a[4], 34, C.ink, 2.2)}</i><div class="kl">AT WORK TODAY</div><div class="kt">${a[5]}</div></div>`
-     : `<div class="px">FROM A HOME KITCHEN TO AN AIRLINE</div><div class="pe"><i>${M.icon('store', 34, C.gold, 2.2)}</i><span>Same flow, any size of business</span></div>`) + `</div>`).join('');
+     : `<div class="px">FROM A LADDOO KITCHEN TO A HOSPITAL</div><div class="pe"><i>${M.icon('store', 34, C.gold, 2.2)}</i><span>Same four questions, any business</span></div>`) + `</div>`).join('');
 
 // X: the human side
-const XG = [['coin', 'Saves money'], ['megaphone', 'A clear message']];
-const XH = [['users', 'Too small a group'], ['tag', 'Labels box people in']];
+const XG = [['check', 'Simple to use'], ['package', 'Nothing forgotten']];
+const XH = [['user', "The seller's view"], ['users', 'Weak for services']];
 $('#xChips').innerHTML = XG.map(([ic, t], i) => `<div class="xc" id="xg${i}" style="left:48px;top:${392 + i * 60}px">${M.icon(ic, 22, C.gold, 2.4)}<span>${t}</span></div>`).join('') +
   XH.map(([ic, t], i) => `<div class="xc" id="xh${i}" style="left:408px;top:${392 + i * 60}px">${M.icon(ic, 22, C.red, 2.4)}<span>${t}</span></div>`).join('');
 const pan = (col, n) => `<line x1="-70" y1="86" x2="0" y2="0" stroke="#3A4560" stroke-width="3"/><line x1="70" y1="86" x2="0" y2="0" stroke="#3A4560" stroke-width="3"/>` +
   Array.from({ length: 2 }, (_, i) => `<rect id="wt${n}${i}" x="${-40 + i * 44}" y="52" width="36" height="34" rx="6" fill="${col}"/>`).join('') +
   `<path d="M-84 86 H84 C84 112 50 122 0 122 C-50 122 -84 112 -84 86Z" fill="#E2DACB" stroke="#3A4560" stroke-width="3"/>`;
 $('#panL').innerHTML = pan('#B8862F', 'L'); $('#panR').innerHTML = pan('#B5482F', 'R');
-$('#bb2I').innerHTML = M.icon('check', 22, '#fff', 3);
-const FZ = [['Tiffin parents', 'DESIGN FOR', 1], ['Gym-goers', 'STILL WELCOME', 0], ['Office snackers', 'STILL WELCOME', 0]];
-$('#fzRow').innerHTML = FZ.map(([n, s, on], i) => `<div class="fz" id="fz${i}" style="left:${24 + i * 216}px;${on ? 'background:#14213D' : ''}"><div class="fn" style="color:${on ? '#fff' : C.ink}">${n}</div><div class="fs" style="color:${on ? C.gold2 : C.muted}">${s}</div></div>`).join('');
-$('#bothI').innerHTML = M.icon('ear', 52, C.gold, 2.2);
+const PC = [['package', 'Product', 'Customer needs'], ['tag', 'Price', 'Cost'], ['pin', 'Place', 'Convenience'], ['megaphone', 'Promotion', 'Communication']];
+$('#pcRows').innerHTML = PC.map(([ic, p, c], i) => `<div class="pc" id="pc${i}" style="top:${96 + i * 80}px"><div class="a">${M.icon(ic, 22, C.ink, 2.4)}<span>${p}</span></div><svg class="ar" width="60" height="24"><path d="M4 12 H48 M38 3 L50 12 L38 21" fill="none" stroke="#B8862F" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="c">${M.icon('user', 22, '#fff', 2.4)}<span>${c}</span></div></div>`).join('');
+$('#bothI').innerHTML = M.icon('eye', 52, C.gold, 2.2);
 wrap($('#xs'), 'xsOut', 784, 580);
 
 // quiz
-const OPTS = ['Segmentation', 'Targeting', 'Positioning', 'Promotion'], RIGHT = 0;
+const OPTS = ['Product', 'Price', 'Place', 'Promotion'], RIGHT = 2;
 $('#opts').innerHTML = OPTS.map((o, i) => `<div class="opt" id="o${i}" style="left:${160 + i * 408}px"><div class="bg"></div><div class="lt">${'ABCD'[i]}</div><div class="ot serif">${o}</div><div class="ok">${M.icon('check', 30, '#fff', 3)}</div></div>`).join('');
-$('#takeI').innerHTML = M.icon('pie', 44, C.gold2, 2.4);
+$('#takeI').innerHTML = M.icon('pin', 44, C.gold2, 2.4);
 // recap
-const ROWS = [['pie', 'Segment: split into groups', ['Similar needs']], ['target', 'Target: choose whom to serve', ['Serve them best']], ['pin', 'Position: own a clear place', ['In their minds']]];
+const ROWS = [['package', 'Tools you control', ['Product', 'Price', 'Place', 'Promotion']], ['help', 'One question each', ['What?', 'How much?', 'Where?', 'How they know']], ['target', 'All four aim at one customer', ['The same customer']]];
 $('#rRows').innerHTML = ROWS.map(([ic, tx, ps], i) => `<div class="card rw" id="rw${i}" style="top:${280 + i * 152}px"><div class="rn">0${i + 1}</div><div class="ri">${M.icon(ic, 34, C.gold, 2.2)}</div><div class="rt">${tx}</div>${ps.map((p, k) => `<div class="fp" id="fp${i}${k}">${p}</div>`).join('')}</div>`).join('');
 $('#nextI').innerHTML = M.icon('arrowR', 40, C.gold2, 2.4);
 
@@ -167,20 +143,38 @@ const sweepX = t => { for (const [a, b] of SW) { const a1 = M.io((t - a) / 0.42)
 const setIco = (el, ic, col, s = 32, w = 2.2) => { const k = ic + col + s; if (el._k !== k) { el._k = k; el.innerHTML = M.icon(ic, s, col, w); } };
 const snap = (el, v, prop = 'transform') => { if (el.style[prop] !== v) el.style[prop] = v; };
 const attr = (el, a, v) => { if (el['_' + a] !== v) { el['_' + a] = v; el.setAttribute(a, v); } };
-// a card that starts at full width (1600) and shrinks to 784 when its sibling arrives
 const grow = (card, inner, t, tShrink) => {
   const sh = M.spring(t - tShrink + 0.1, M.HEAVY), w = M.lerp(1600, 784, sh);
   snap(card, (sh >= 1 ? 784 : w.toFixed(1)) + 'px', 'width');
   snap(inner, (sh >= 1 ? 0 : ((w - 784) / 2).toFixed(1)) + 'px', 'left');
   return sh;
 };
-// active-row styling shared by tiles: 0 idle, 1 active (navy)
-const tileOn = (el, on, ic) => {
-  el.style.background = mix(C.paper, C.ink, on);
-  el.querySelector('.zt').style.color = mix(C.ink, '#fff', on); el.querySelector('.zn').style.color = mix(C.muted, C.gold2, on);
-  setIco(el.querySelector('.zi'), ic, on > 0.5 ? C.gold2 : C.gold, 40, 2.2);
+// tile states: on = navy (active), bad = red
+const tileOn = (el, on, ic, bad = 0) => {
+  el.style.background = mix(mix(C.paper, C.redBg, bad), C.ink, on);
+  el.querySelector('.zt').style.color = mix(mix(C.ink, C.red, bad), '#fff', on); el.querySelector('.zn').style.color = mix(mix(C.muted, C.red, bad), C.gold2, on);
+  setIco(el.querySelector('.zi'), ic, on > 0.5 ? C.gold2 : (bad > 0.5 ? C.red : C.gold), 40, 2.2);
 };
 const pop = { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 };
+// run helpers
+const pill = (k, ic, tx, bad, fin) => {
+  const ms = $('#ms' + k);
+  setIco(ms.querySelector('.msi'), ic, fin ? '#fff' : (bad ? C.red : C.gold), 26, 2.4);
+  M.setT(ms.querySelector('.mtx'), tx);
+  const bg = fin ? (bad ? C.red : C.gold) : (bad ? C.redBg : C.paper), fg = fin ? '#fff' : (bad ? C.red : C.ink);
+  if (ms._bg !== bg) { ms._bg = bg; ms.style.background = bg; ms.style.color = fg; }
+};
+const gateSt = (k, i, t, tOn, ok) => { // tOn: when evaluated
+  const g = $('#g' + k + i), r = g.querySelector('rect'), s = g.querySelector('.gs'), u = M.io((t - tOn) / 0.3);
+  const col = ok ? C.gold : C.red;
+  attr(r, 'stroke', u > 0 ? mix(C.line, col, u) : C.line); attr(r, 'stroke-width', u > 0.5 ? 4 : 2); attr(r, 'fill', mix('#FFFFFF', ok ? C.gold3 : C.redBg, u));
+  const on = t >= tOn; attr(s, 'visibility', on ? 'inherit' : 'hidden');
+  if (on) { const sc = M.spring(t - tOn, M.POP); attr(s, 'transform', `translate(122 8) scale(${Math.max(0.01, sc).toFixed(3)})`); }
+  if (s._ok !== ok) { s._ok = ok; s.querySelectorAll('circle')[1].setAttribute('fill', col); s.querySelector('.gsi').innerHTML = M.icon(ok ? 'check' : 'x', 16, '#fff', 3.2); }
+  const seg = $('#gs' + k + i); seg.style.background = mix(C.paper2, ok ? C.gold : C.red2, u);
+};
+const avL = M.track(30, [[tPromo - 0.6, GX[0]]], M.SOFT);
+const avR = M.track(30, [[tG[0] - 0.7, GX[0]], [tG[1] - 0.7, GX[1]], [tG[2] - 0.7, GX[2]], [tG[3] - 0.7, GX[3]], [tBuys - 0.2, 664]], M.SOFT);
 
 let geo = null;
 function measure() {
@@ -189,21 +183,19 @@ function measure() {
   const w = ti.offsetWidth, h = ti.offsetHeight;
   geo = { sx: 960 - w / 2, sy: 540 - h / 2 - 20, ex: 160, ey: 156, es: 56 / fs, cw: $('#eyebrow').offsetWidth, cy: 540 - h / 2 - 112 };
   const ex = $('#exChip'); ex.style.left = (1760 - ex.offsetWidth) + 'px'; ex.style.top = '170px';
-  let x = 36; for (let i = 0; i < 3; i++) { const p = $('#mt' + i); p.style.left = x + 'px'; x += p.offsetWidth + 16; }
-  const tz = $('#tgZ'); tz.style.left = (150 - tz.offsetWidth) + 'px'; $('#tgN').style.left = '660px';
-  document.querySelectorAll('.df .dm').forEach(el => { if (el.offsetWidth > 540) el.style.fontSize = Math.floor(26 * 540 / el.offsetWidth) + 'px'; });
-  x = 48; for (let i = 0; i < 3; i++) { const p = $('#sc' + i); p.style.left = x + 'px'; x += p.offsetWidth + 12; if (i < 2) { $('#sa' + i).style.left = x + 'px'; x += 56; } }
-  const bp = $('#bigP'); bp.style.left = (392 - bp.offsetWidth / 2) + 'px';
-  x = 48; for (let i = 0; i < 2; i++) { const p = $('#cp' + i); p.style.left = x + 'px'; x += p.offsetWidth + 16; }
+  let x = 36; for (let i = 0; i < 2; i++) { const p = $('#mt' + i); p.style.left = x + 'px'; x += p.offsetWidth + 16; }
+  const tz = $('#tgZ'); tz.style.left = (76 - tz.offsetWidth) + 'px'; $('#tgN').style.left = '708px';
+  for (let i = 0; i < 4; i++) { const ql = $('#ql' + i); if (ql && ql.offsetWidth > 688) ql.style.fontSize = Math.floor(34 * 688 / ql.offsetWidth) + 'px'; }
+  x = 48; for (let i = 0; i < 3; i++) { const p = $('#ck' + i); p.style.left = x + 'px'; x += p.offsetWidth + 8; if (i < 2) { $('#cka' + i).style.left = x + 'px'; x += 52; } }
   document.querySelectorAll('#kPans .pt').forEach(el => { if (el.offsetWidth > 848) el.style.fontSize = Math.floor(84 * 848 / el.offsetWidth) + 'px'; });
   document.querySelectorAll('#kPans .kt').forEach(el => { if (el.offsetWidth > 748) el.style.fontSize = Math.floor(30 * 748 / el.offsetWidth) + 'px'; });
-  document.querySelectorAll('.sr2 .sv').forEach(el => { if (el.offsetWidth > 688) el.style.fontSize = Math.floor(40 * 688 / el.offsetWidth) + 'px'; });
+  document.querySelectorAll('.st5 .s2').forEach(el => { if (el.offsetWidth > 304) el.style.fontSize = Math.floor(24 * 304 / el.offsetWidth) + 'px'; });
+  const b0 = $('#bkl0'); b0.style.left = (960 - b0.offsetWidth / 2) + 'px';
+  const fk = $('#fx .kt'); if (fk.offsetWidth > 548) fk.style.fontSize = Math.floor(28 * 548 / fk.offsetWidth) + 'px';
   OPTS.forEach((_, i) => { const o = $('#o' + i + ' .ot'); if (o.offsetWidth > 312) o.style.fontSize = Math.floor(40 * 312 / o.offsetWidth) + 'px'; });
   ROWS.forEach(([, , ps], i) => { let x = 216 + $('#rw' + i + ' .rt').offsetWidth + 40; ps.forEach((_, k) => { const p = $('#fp' + i + k); p.style.left = x + 'px'; x += p.offsetWidth + 16; }); });
 }
 const tiltT = M.track(0, [[tXg[0] + 0.1, -6], [tXg[1] + 0.1, -12], [tXh[0] + 0.1, -6], [tXh[1] + 0.1, 0]], M.SOFT);
-const tDot0 = tM1 + 0.7, dDot = 0.024;
-const llT = M.track(0, [[tLL, 1]], M.HEAVY);
 
 /* ---------- frame ---------- */
 M.on(t => {
@@ -221,9 +213,10 @@ M.on(t => {
   M.draw($('#ruleL'), t, 0.95, 0.7, M.o3);
   M.vis($('#rule'), t, 0.9, tMorph - 0.1, { dy: 0, outDur: 0.25, ody: 0 });
   M.rise($('#sub'), t, 1.15, { st: 0.04, out: tMorph - 0.1, outDur: 0.3 });
-  M.vis($('#exChip'), t, tM1 + 0.4, tMout, { dy: 10, outDur: 0.3 });
+  const exOn = t < tL1 ? [tMorph + 0.6, tAout] : [tM1 + 0.4, tMout];
+  M.vis($('#exChip'), t, exOn[0], exOn[1], { dy: 10, outDur: 0.3 });
 
-  /* ===== A: three kinds of customers ===== */
+  /* ===== A: the big jar ===== */
   const aOn = t < tL1 + 0.2; M.hide($('#sA'), !aOn);
   if (aOn) {
     const o = { outDur: 0.3, ody: -16 };
@@ -232,18 +225,14 @@ M.on(t => {
     M.vis($('#tbl'), t, tMorph + 0.35, 1e9, { dy: 20 });
     M.rise($('#hname'), t, tMorph + 0.6, { st: 0.06 }); M.vis($('#htag'), t, tMorph + 0.8, 1e9, { dy: 10 });
     M.vis($('#ways'), t, tMorph + 0.3, tAout, { dy: 36, ...o });
-    HT.forEach(([ic], i) => {
-      const el = $('#ht' + i); M.vis(el, t, tH[i] - 0.05, 1e9, pop);
-      tileOn(el, M.io((t - tH[i]) / 0.25) * (1 - (i < 2 ? M.io((t - tH[i + 1]) / 0.25) : M.io((t - tH3) / 0.3))), ic);
-    });
-    M.vis($('#ask'), t, tH[2] + 0.5, tAout, { dy: 36, ...o });
-    M.vis($('#mt0'), t, tH[2] + 0.8, 1e9, pop);
-    M.vis($('#mt1'), t, tH3 + 0.2, 1e9, pop);
-    M.vis($('#mt2'), t, tCant - 0.05, 1e9, pop);
-    M.rise($('#askT'), t, tWhom - 0.1, { st: 0.07, sp: M.HEAVY });
+    const tIn = [tMorph + 0.55, tH2 + 0.2, tOnly - 0.05, tNever - 0.05], tBad = [tFit, tMixH, tMixH + 0.15, tNever];
+    HT.forEach(([ic], i) => { const el = $('#ht' + i); M.vis(el, t, tIn[i], 1e9, pop); tileOn(el, 0, ic, M.io((t - tBad[i]) / 0.3)); });
+    M.vis($('#ask'), t, tH3 + 0.05, tAout, { dy: 36, ...o });
+    M.vis($('#mt0'), t, tNever + 0.1, 1e9, pop); M.vis($('#mt1'), t, tFit - 0.05, 1e9, pop);
+    M.rise($('#askT'), t, tH4 + 0.05, { st: 0.07, sp: M.HEAVY });
   }
 
-  /* ===== L: the homework ===== */
+  /* ===== L: the team plans again ===== */
   const lOn = t >= tL1 - 0.1 && t < tD1 + 0.2; M.hide($('#sL'), !lOn);
   if (lOn) {
     const o = { outDur: 0.3, ody: -16 };
@@ -252,108 +241,91 @@ M.on(t => {
     M.vis($('#tgZ'), t, tL1 + 0.6, tL2 - 0.3, { ...pop, outDur: 0.2, osc: 0.9, ody: 0 });
     M.vis($('#tgN'), t, tL1 + 0.9, tL2 - 0.3, { ...pop, outDur: 0.2, osc: 0.9, ody: 0 });
     M.vis($('#rcp'), t, tL2 + 0.12, tLout, { dx: 60, dy: 0, ...o });
-    WT.forEach(([ic], i) => {
-      const el = $('#wt' + i); M.vis(el, t, tW[i] - 0.05, 1e9, pop);
-      tileOn(el, M.io((t - tW[i]) / 0.25) * (1 - (i < 2 ? M.io((t - tW[i + 1]) / 0.25) : M.io((t - tL3) / 0.3))), ic);
+    TEAM.forEach((_, i) => {
+      const ta = tL2 + 0.3 + i * 0.1;
+      M.vis($('#tv' + i), t, ta, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.08 });
+      M.vis($('#tn' + i + 'x'), t, ta + 0.08, 1e9, { dy: 10 }); M.vis($('#tr' + i + 'x'), t, ta + 0.14, 1e9, { dy: 8 });
+      const nx = i === 3 ? tL3 : (i === 0 ? 1e9 : tNm[i + 1]);
+      const on = M.io((t - tNm[i]) / 0.25) * (1 - M.io((t - nx) / 0.25));
+      $('#tv' + i).style.boxShadow = '0 0 0 4px ' + mix(C.ink, C.gold, on);
     });
-    M.vis($('#team'), t, tL3 + 0.05, tLout, { dy: 36, ...o });
-    BT.forEach(([ic], i) => {
-      const el = $('#bt' + i); M.vis(el, t, tB[i] - 0.05, 1e9, pop);
-      const on = M.io((t - tB[i]) / 0.25) * (1 - (i < 2 ? M.io((t - tB[i + 1]) / 0.25) : M.io((t - tL4) / 0.3)));
-      tileOn(el, Math.max(on, M.io((t - tLtr[i]) / 0.2) * (1 - (i < 2 ? M.io((t - tLtr[i + 1]) / 0.2) : 0))), ic);
-      M.vis($('#lt' + i), t, tLtr[i] - 0.05, 1e9, { dy: 0, sc: 0.4, sp: M.POP, fade: 0.08 });
+    M.vis($('#team'), t, tFq[0] - 0.45, tLout, { dy: 36, ...o });
+    FQ.forEach(([ic], i) => {
+      const el = $('#fq' + i); M.vis(el, t, tFq[i] - 0.05, 1e9, pop);
+      tileOn(el, M.io((t - tFq[i]) / 0.25) * (1 - (i < 3 ? M.io((t - tFq[i + 1]) / 0.25) : M.io((t - tLout + 0.2) / 0.3))), ic);
     });
   }
 
-  /* ===== D: what is STP ===== */
+  /* ===== D: the marketing mix ===== */
   const dOn = t >= tD1 - 0.1 && t < tM1 + 0.2; M.hide($('#sD'), !dOn);
   if (dOn) {
     const o = { outDur: 0.3, ody: -16 };
     M.rise($('#dq'), t, tD1 + 0.05, { st: 0.07, sp: M.HEAVY, out: tD2 - 0.1, outDur: 0.3 });
-    const kq = $('#kq'); M.vis(kq, t, tD2 + 0.05, tDout, { dy: 36, ...o }); grow(kq, $('#kqOut'), t, tD6);
-    DF.forEach((_, i) => {
-      const el = $('#df' + i); M.vis(el, t, tTerm[i] - 0.05, 1e9, { dy: 18 });
-      const dm = el.querySelector('.dm'); M.rise(dm, t, tMean[i] + 0.1, { st: 0.04 });
-      const on = M.io((t - tMean[i]) / 0.3) * (1 - (i < 2 ? M.io((t - tMean[i + 1]) / 0.3) : M.io((t - tD6) / 0.35)));
-      el.querySelector('.bg').style.background = mix(C.paper, C.ink, on);
-      el.querySelector('.dt').style.color = mix(C.ink, '#fff', on); dm.style.color = mix(C.ink2, C.gold2, on);
-      const bd = el.querySelector('.bd'); bd.style.background = mix('#fff', C.navy2, on); bd.style.color = mix(C.gold, C.gold2, on);
+    const kq = $('#kq'); M.vis(kq, t, tD2 + 0.05, tDout, { dy: 36, ...o }); grow(kq, $('#kqOut'), t, tD4);
+    M.rise($('#kot1'), t, tD2 + 0.2, { st: 0.06, sp: M.HEAVY }); M.vis($('#kbk'), t, tD2 + 0.5, 1e9, { dy: 10 });
+    M.vis($('#kqHr'), t, tD2 + 0.55, 1e9, { dy: 0 });
+    for (let i = 0; i < 4; i++) { const q = $('#ql' + i); M.vis(q, t, tD2 + 0.6 + i * 0.1, 1e9, { dy: 14 }); q.style.color = mix(C.dim, C.ink, M.io((t - tHl[0] + 0.4 - i * 0.7) / 0.3)); }
+    tHl.forEach((th, i) => { const u = M.io((t - th + 0.05) / 0.3); $('#hl' + i).style.color = u <= 0 ? '' : mix(C.ink, C.gold, u); });
+    for (let i = 0; i < 3; i++) { M.vis($('#ck' + i), t, tCk[i] - 0.05, 1e9, pop); if (i < 2) M.vis($('#cka' + i), t, tCk[i + 1] - 0.2, 1e9, { dx: -10, dy: 0, fade: 0.15 }); }
+    M.vis($('#vc'), t, tD4 + 0.12, tDout, { dx: 60, dy: 0, ...o });
+    M.draw($('#tlL'), t, tD4 + 0.3, 0.8, M.o3);
+    M.vis($('#tc0'), t, tBor - 0.1, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.06 }); M.vis($('#tc1'), t, t1960 - 0.1, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.06 });
+    M.vis($('#tn0'), t, tBor - 0.05, 1e9, { dy: 16 }); M.vis($('#tn1'), t, t1960 - 0.05, 1e9, { dy: 16 });
+    M.vis($('#sw'), t, tD5 + 0.05, tDout, { dy: 36, ...o });
+    D12.forEach((d, i) => {
+      const el = $('#dz' + i), ta = tD5 + 0.35 + i * 0.05;
+      if (t < ta) { attr(el, 'r', '0'); return; }
+      const tf = tP4[d.k] - 0.35 + d.j * 0.06, p = M.io((t - tf) / 0.45);
+      const bx = 36 + d.k * 182 + 83, by = 84 + 46;
+      attr(el, 'cx', M.lerp(d.x0, bx, p).toFixed(1)); attr(el, 'cy', M.lerp(d.y0, by, p).toFixed(1));
+      attr(el, 'r', (12 * M.spring(t - ta, M.POP) * (1 - p)).toFixed(2));
     });
-    M.vis($('#vc'), t, tD6 + 0.12, tDout, { dx: 60, dy: 0, ...o });
-    M.vis($('#q0'), t, tQ0 - 0.1, 1e9, { dy: 16 }); M.vis($('#q1'), t, tQ1 - 0.1, 1e9, { dy: 16 });
-    M.vis($('#q0 .gc'), t, tQ0 + 0.4, 1e9, pop); M.vis($('#q1 .gc'), t, tQ1 + 0.6, 1e9, pop);
-    M.vis($('#sw'), t, tD7 + 0.05, tDout, { dy: 36, ...o });
-    M.draw($('#tlL'), t, tD7 + 0.3, 0.8, M.o3);
-    M.vis($('#tc0'), t, tWen - 0.1, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.06 }); M.vis($('#tc1'), t, tRies - 0.1, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.06 });
-    M.vis($('#tn0'), t, tWen - 0.05, 1e9, { dy: 16 }); M.vis($('#tn1'), t, tRies - 0.05, 1e9, { dy: 16 });
+    P4N.forEach((_, i) => {
+      const el = $('#p4' + i); M.vis(el, t, tP4[i] - 0.05, 1e9, pop);
+      const on = M.io((t - tP4[i]) / 0.25) * (1 - (i < 3 ? M.io((t - tP4[i + 1]) / 0.25) : M.io((t - tDout + 0.3) / 0.3)));
+      el.style.background = mix(C.paper, C.ink, on); el.querySelector('.pl').style.color = mix(C.ink, '#fff', on);
+      el.querySelector('.pb').style.background = mix(C.ink, C.gold, on); el.querySelector('.pb').style.color = mix(C.gold2, '#fff', on);
+    });
   }
 
-  /* ===== M: the STP flow ===== */
+  /* ===== M: two runs ===== */
   const mOn = t >= tM1 - 0.1 && t < tT + 0.1; M.hide($('#sM'), !mOn);
   if (mOn) {
     const o = { outDur: 0.3, ody: -16 };
-    M.vis($('#mL'), t, tM1 + 0.1, tMout, { dx: -60, dy: 0, ...o });
-    M.vis($('#mR'), t, tM1 + 0.25, tMout, { dx: 60, dy: 0, ...o });
-    M.vis($('#stg'), t, tM1 + 0.3, 1e9, { dy: 20, sp: M.SOFT });
-    // step chips
-    SC.forEach((_, i) => {
-      const el = $('#sc' + i); M.vis(el, t, tM1 + 0.45 + i * 0.08, 1e9, pop);
-      if (i < 2) M.vis($('#sa' + i), t, tM1 + 0.5 + i * 0.08, 1e9, { dx: -10, dy: 0, fade: 0.15 });
-      const on = M.io((t - tStep[i]) / 0.3), done = i < 2 ? M.io((t - tStep[i + 1]) / 0.3) : 0;
-      el.style.background = mix(mix(C.paper, C.ink, on), C.gold3, done);
-      el.style.color = t < tStep[i] ? C.dim : mix('#fff', C.ink, done);
-      el.querySelector('b').style.color = t < tStep[i] ? C.dim : mix(C.gold2, C.gold, done);
-    });
-    // dots: pop in as a crowd, then sort into groups
-    const winD = M.io((t - tWin) / 0.4);
-    DOT.forEach((d, i) => {
-      const el = $('#dt' + i), ta = tDot0 + i * dDot;
-      const s = M.spring(t - ta, M.POP); if (t < ta) { attr(el, 'r', '0'); return; }
-      attr(el, 'r', (11 * s).toFixed(2));
-      const p = M.spring(t - tGrp[d.k] - d.j * 0.014, M.SOFT), pc = M.clamp(p);
-      const x = M.lerp(d.x0, d.x1, p), y = M.lerp(d.y0, d.y1, p);
-      attr(el, 'cx', x.toFixed(1)); attr(el, 'cy', y.toFixed(1));
-      attr(el, 'fill', mix(C.crowd, GC[d.k], pc));
-      attr(el, 'opacity', d.k ? (1 - 0.7 * winD).toFixed(3) : '1');
-    });
-    GT.forEach((_, k) => { const h = $('#ch' + k); h.style.opacity = (M.clamp((t - tGrp[k]) / 0.3) * (k ? 1 - 0.65 * winD : 1)).toFixed(3); });
-    { const u = M.clamp((t - tWin) / 0.3); $('#hiR').style.opacity = u.toFixed(3); M.hide($('#hiR'), u <= 0); }
-    M.vis($('#ourT'), t, tHear - 0.05, 1e9, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.08 });
-    // right card: phase 0 counter
-    M.vis($('#rl0'), t, tM1 + 0.4, tStep[1] - 0.05, { dy: 10, outDur: 0.2, ody: -8 });
-    M.vis($('#bigN'), t, tM1 + 0.5, tGrp[0] - 0.15, { dy: 16, outDur: 0.25, ody: -12 });
-    M.count($('#bigN'), t, tDot0, 60 * dDot + 0.3, 0, 60);
-    M.vis($('#bigL'), t, tM1 + 0.6, tGrp[0] - 0.15, { dy: 10, outDur: 0.25, ody: -12 });
-    M.vis($('#bigP'), t, wt('M2', 'sixty') + 0.2, tGrp[0] - 0.15, { ...pop, outDur: 0.25, ody: -12 });
-    // phase 1-2: the table
-    const tTab = tStep[2] - 0.12, oo = { outDur: 0.25, ody: -12 };
-    M.vis($('#rl1'), t, tStep[1] + 0.05, tTab, { dy: 10, ...oo });
-    for (let c = 0; c < 3; c++) M.vis($('#th' + c), t, tCrit[c] - 0.1, tTab, { dy: 8, ...oo });
-    GT.forEach((_, k) => {
-      const r = $('#tr' + k); M.vis(r, t, tGrp[k] - 0.05, tTab, { dy: 18, ...oo });
-      const n = Math.round(GN[k] * M.clamp((t - tGrp[k] - 0.2) / (GN[k] * 0.014 + 0.4)));
-      const gx = k === 1 && t >= tGymX;
-      M.setT($('#rc' + k), gx ? 'NOT A FIT, FOR NOW' : `${n} PEOPLE`);
-      $('#rc' + k).style.color = gx ? C.red : C.muted;
-      const win = k === 0 ? winD : 0, lose = k ? winD : 0;
-      r.querySelector('.bg').style.background = mix(C.paper, C.gold3, win);
-      r.querySelector('.rt').style.color = mix(C.ink, C.dim, lose);
-      for (let c = 0; c < 3; c++) for (let p = 0; p < 5; p++) {
-        const f = p < RATE[k][c] ? M.io((t - tCrit[c] - 0.1 - k * 0.12 - p * 0.05) / 0.2) : 0;
-        $('#pp' + k + c + p).style.background = mix(C.line, mix(GC[k] === C.muted ? C.ink2 : GC[k], C.dim, lose), f);
-      }
-    });
-    M.vis($('#tgPill'), t, tWin + 0.1, tTab, { ...pop, ...oo });
-    // phase 3: in their minds
-    const tp = tStep[2] + 0.1;
-    M.vis($('#rl2'), t, tp, 1e9, { dy: 10 });
-    M.vis($('#raoF'), t, tp + 0.1, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.08 });
-    M.vis($('#raoN'), t, tp + 0.2, 1e9, { dy: 10 }); M.vis($('#raoT'), t, tp + 0.28, 1e9, { dy: 8 });
-    M.vis($('#bd0'), t, tHear + 0.1, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.06 }); M.vis($('#bd1'), t, tHear + 0.2, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.06 });
-    M.vis($('#bR'), t, tHear + 0.3, 1e9, { dy: 0, sc: 0.85, sp: M.POP, fade: 0.1 });
-    M.vis($('#bl1'), t, tHear + 0.5, 1e9, { dy: 10 });
-    M.rise($('#bl2'), t, tBl[0] - 0.05, { st: 0.06, sp: M.HEAVY }); M.rise($('#bl3'), t, tBl[1] - 0.05, { st: 0.06, sp: M.HEAVY });
-    M.vis($('#cp0'), t, tCp[0] - 0.1, 1e9, pop); M.vis($('#cp1'), t, tCp[1] - 0.1, 1e9, pop);
+    const mL = $('#mL'); M.vis(mL, t, tM1 + 0.1, tMout, { dy: 36, ...o }); grow(mL, $('#mLIn'), t, tM4);
+    M.vis($('#mR'), t, tM4 + 0.12, tMout, { dx: 60, dy: 0, ...o });
+    for (const k of ['L', 'R']) {
+      const base = k === 'L' ? tM1 + 0.3 : tM4 + 0.3, root = $('#m' + k + 'In');
+      M.vis(root.querySelector('.mav'), t, base, 1e9, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.08 });
+      M.vis(root.querySelector('.mlb'), t, base + 0.08, 1e9, { dy: 10 });
+      M.vis($('#rd' + k), t, base + 0.12, 1e9, { dy: 10 });
+      M.vis($('#plan' + k), t, base + 0.1, 1e9, { dy: 20, sp: M.SOFT });
+      for (let i = 0; i < 4; i++) { $('#g' + k + i).style.opacity = M.clamp((t - base - 0.3 - i * 0.07) / 0.1); M.vis($('#gs' + k + i), t, base + 0.35 + i * 0.05, 1e9, { dy: 8 }); }
+      root.querySelectorAll('.mtk').forEach((el, i) => M.vis(el, t, base + 0.4 + i * 0.05, 1e9, { dy: 8 }));
+      M.vis($('#ms' + k), t, base + 0.45, 1e9, pop);
+      $('#av' + k).style.opacity = M.clamp((t - base - 0.5) / 0.12).toFixed(3);
+    }
+    // old mix: stopped at the first gate
+    attr($('#avL'), 'transform', `translate(${avL(t).toFixed(1)} 196)`);
+    for (let i = 0; i < 4; i++) gateSt('L', i, t, tJx[i], false);
+    const doneL = t >= tJx[3] + 0.6;
+    M.setT($('#rdL'), t >= tNoSale - 0.05 ? 'No sale' : 'Week 1'); $('#rdL').style.color = t >= tNoSale - 0.05 ? C.red : C.ink;
+    if (doneL) pill('L', 'x', '0 of 4 gates open', 1, 1);
+    else if (t >= tJx[3]) pill('L', 'package', 'Too big for a tiffin', 1, 0);
+    else if (t >= tJx[2]) pill('L', 'tag', 'Too costly', 1, 0);
+    else if (t >= tJx[1]) pill('L', 'pin', 'Hard to find', 1, 0);
+    else if (t >= tNobody) pill('L', 'megaphone', 'Nobody told her', 1, 0);
+    else pill('L', 'clock', "Mrs. Rao's week", 0, 0);
+    // new mix: every gate opens
+    attr($('#avR'), 'transform', `translate(${avR(t).toFixed(1)} 196)`);
+    for (let i = 0; i < 4; i++) gateSt('R', i, t, tG[i] + 0.25, true);
+    M.setT($('#rdR'), t >= tAgain ? 'Every week' : t >= tBuys ? 'Bought' : 'Week 1'); $('#rdR').style.color = t >= tBuys ? C.gold : C.ink;
+    if (t >= tBuys) pill('R', 'check', '4 of 4 gates open', 0, 1);
+    else if (t >= tG[3]) pill('R', 'package', 'Six small, wrapped laddoos', 0, 0);
+    else if (t >= tG[2]) pill('R', 'tag', '₹120 for six: ₹20 a day', 0, 0);
+    else if (t >= tG[1]) pill('R', 'pin', 'Delivered every Monday', 0, 0);
+    else if (t >= tG[0]) pill('R', 'megaphone', 'Posters and free tastes', 0, 0);
+    else pill('R', 'clock', "Mrs. Rao's week", 0, 0);
   }
 
   /* ===== statement on navy ===== */
@@ -363,29 +335,35 @@ M.on(t => {
   if (stOn) {
     stmt.style.transform = t > tTu ? `translateX(${(sx ?? -1960).toFixed(1)}px)` : 'none';
     M.rise($('#st1'), t, tT + 0.08, { st: 0.05 });
-    M.rise($('#st2'), t, tSt2 - 0.05, { st: 0.08, sp: M.HEAVY });
+    M.rise($('#st2'), t, tT + 0.45, { st: 0.08, sp: M.HEAVY });
   }
 
-  /* ===== P: positioning map + statement ===== */
+  /* ===== P: the full mix ===== */
   const pOn = t >= tTu - 0.05 && t < tK0 + 0.2; M.hide($('#sP'), !pOn);
   if (pOn) {
     const o = { outDur: 0.3, ody: -16 };
-    const pm = $('#pm'); M.vis(pm, t, tP1 + 0.02, tPout, { dy: 36, ...o }); grow(pm, $('#pmOut'), t, tP6);
-    M.vis($('#map'), t, tP1 + 0.2, 1e9, { dy: 20, sp: M.SOFT });
-    M.draw($('#axH'), t, tDraw - 0.05, 0.6, M.o3); M.draw($('#axV'), t, tMap - 0.05, 0.6, M.o3);
-    for (let i = 0; i < 4; i++) M.vis($('#al' + i), t, tAx[i] - 0.1, 1e9, { dy: 0, fade: 0.2 });
-    for (let i = 0; i < 3; i++) M.vis($('#co' + i), t, tCo[i] - 0.1, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.08 });
-    M.vis($('#gapR'), t, tGap - 0.1, 1e9, { dy: 0, sc: 0.9, sp: M.POP, fade: 0.12 }); M.vis($('#gapT'), t, tGap + 0.1, 1e9, { dy: 0, fade: 0.15 });
-    { const u = llT(t), g = $('#llG'); M.hide(g, t < tLL - 0.02);
-      attr(g, 'transform', `translate(${M.lerp(344, 510, u).toFixed(1)} ${M.lerp(228, 110, u).toFixed(1)}) scale(${M.lerp(0.4, 1, M.clamp(u)).toFixed(3)})`); }
-    M.vis($('#ps'), t, tP6 + 0.12, tPout, { dx: 60, dy: 0, ...o });
-    M.vis($('#zF'), t, tP6 + 0.3, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.08 });
-    SR.forEach((_, i) => {
-      const r = $('#sr' + i); M.vis(r.querySelector('.sl'), t, tP6 + 0.35 + i * 0.12, 1e9, { dy: 10 });
-      M.vis(r.querySelector('.sd'), t, tP6 + 0.4 + i * 0.12, 1e9, { dy: 0, fade: 0.2 });
-      M.rise(r.querySelector('.sv'), t, tSv[i] - 0.05, { st: 0.05, sp: M.HEAVY });
-      r.querySelector('.sd').style.borderTopColor = mix(C.line, C.gold2, M.io((t - tSv[i]) / 0.3));
+    P5.forEach(([ic], i) => {
+      const el = $('#pst' + i), ta = tP[i], td = tP[i + 1];
+      M.vis(el, t, tP0 + 0.1 + i * 0.07, tPout, { dy: 36, ...o });
+      const on = M.io((t - ta) / 0.3), off = M.io((t - td) / 0.35), act = on * (1 - off), fin = M.io((t - tSame) / 0.3);
+      el.querySelector('.bg').style.background = mix(mix(C.card, C.ink, act), C.gold3, fin);
+      el.querySelector('.s1').style.color = t < ta ? C.dim : mix('#fff', C.ink, off);
+      el.querySelector('.s2').style.color = t < ta ? C.dim : mix(C.gold2, C.ink2, off);
+      el.querySelector('.sn').style.color = t < ta ? C.dim : mix(C.gold2, C.gold, off);
+      el.querySelector('.si').style.background = t < ta ? C.paper : mix(C.navy2, mix(C.paper, '#fff', fin), off);
+      setIco(el.querySelector('.si'), ic, t < ta ? C.dim : (act > 0.5 ? C.gold2 : C.gold), 34, 2.2);
     });
+    M.draw($('#bk0'), t, tSame - 0.1, 0.7, M.o3); M.vis($('#bkl0'), t, tSame + 0.2, tPout, { dy: 8, ...o });
+    M.hide($('#brk'), t > tPout + 0.3);
+    M.vis($('#pe'), t, tP0 + 0.35, tPout, { dy: 36, ...o });
+    for (let k = 0; k < 6; k++) {
+      const tin = k ? tP[k - 1] : tP0 + 0.6, tout = k < 5 ? tP[k] - 0.14 : 1e9;
+      const pn = $('#pex' + k), off = t < tin - 0.01 || t > tout + 0.3; M.hide(pn, off); if (off) continue;
+      const oo = { outDur: 0.18, ody: -12 };
+      M.vis(pn.querySelector('.lbl'), t, tin, tout, { dy: 10, ...oo });
+      M.vis(pn.querySelector('.pa, .pi'), t, tin + 0.05, tout, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.08, ...oo });
+      M.rise(pn.querySelector('.pt2'), t, tin + 0.12, { st: 0.04, out: tout, outDur: 0.2 });
+    }
   }
 
   /* ===== K: at work today ===== */
@@ -438,10 +416,13 @@ M.on(t => {
       g.style.background = C.gold3; g.style.color = C.ink; h.style.background = C.redBg; h.style.color = C.red;
     }
     M.vis($('#xw'), t, tX4 + 0.12, tXout, { dx: 60, dy: 0, ...o });
-    for (let i = 0; i < 3; i++) M.vis($('#xr' + i), t, [tArjX, tZoyX, tDes][i] - 0.1, 1e9, { dx: 24, dy: 0 });
-    $('#bb0').style.background = t > tZoyX ? C.redBg : C.paper; $('#bb0').style.color = t > tZoyX ? C.red : C.ink;
-    M.vis($('#fx'), t, tDes + 0.3, 1e9, { dy: 16 });
-    for (let i = 0; i < 3; i++) M.vis($('#fz' + i), t, tDes + 0.45 + i * 0.12, 1e9, pop);
+    PC.forEach((_, i) => {
+      const r2 = $('#pc' + i);
+      M.vis(r2.querySelector('.a'), t, tLaut + 0.2 + i * 0.1, 1e9, { dx: -16, dy: 0 });
+      M.vis(r2.querySelector(".ar"), t, tCs[i] - 0.25, 1e9, { dx: -12, dy: 0, fade: 0.15 });
+      M.vis(r2.querySelector('.c'), t, tCs[i] - 0.05, 1e9, pop);
+    });
+    M.vis($('#fx'), t, tCs[2] + 0.1, 1e9, { dy: 16 });
     M.vis($('#lesson'), t, tX6 + 0.05, 1e9, { dy: 16 });
     M.vis($('#both'), t, tX6 + 0.15, 1e9, { dy: 40 });
   }

@@ -87,7 +87,7 @@ $('#mxR').innerHTML = MX.map(([ic, t], i) => `<div class="mr" id="mr${i}" style=
 wrap($('#dfc'), 'dfOut', 784, 580);
 
 /* M: the two launch plans. Plan coords are inside a 688 x 250 svg. */
-const COLX = i => 86 + i * 172, BH = b => b * 140 / 90;
+const COLX = i => 86 + i * 172, BH = b => b * 124 / 90;
 const head = (k, face, name) => `<div class="mav" style="${FACE(face)}"></div><div class="lbl mlb">${name}</div><div class="serif mrd" id="rd${k}">₹${DATA[k].p[0]}</div>`;
 const tail = k => `<div class="mbar" id="bar${k}"><i id="sg${k}0"></i></div>
     <div class="mtk" id="tk0${k}" style="left:48px">BUYERS IN 4 WEEKS</div><div class="mtk" id="tk1${k}" style="right:48px">310</div>
@@ -130,7 +130,7 @@ $('#kPans').innerHTML = KP.map(([s, t, m, a], i) => `<div class="pn" id="kn${i}"
 // Z: Laddoo Lab's choice
 const ZR = [['shield', 'Survival', 'Doing well'], ['coin', 'Max profit', '₹200 is too dear'], ['users', 'Max market share', 'No cut corners'], ['trendDown', 'Skimming', 'Weekly buyers'], ['award', 'Quality leadership', 'Our pick']];
 $('#zRows').innerHTML = ZR.map(([ic, t, c], i) => `<div class="zr" id="zr${i}" style="top:${92 + i * 88}px"><div class="bg"></div><div class="rn">0${i + 1}</div><div class="ri"></div><div class="rt">${t}</div>
-  <div class="zc" id="zc${i}" style="${i < 4 ? 'background:#F6E3DC;color:#B5482F' : 'background:#B8862F;color:#fff'}">${M.icon(i < 4 ? 'x' : 'check', 20, i < 4 ? C.red : '#fff', 3)}<span>${c}</span></div></div>`).join('');
+  <div class="zch" id="zc${i}" style="${i < 4 ? 'background:#F6E3DC;color:#B5482F' : 'background:#B8862F;color:#fff'}">${M.icon(i < 4 ? 'x' : 'check', 20, i < 4 ? C.red : '#fff', 3)}<span>${c}</span></div></div>`).join('');
 const zx = p => 24 + (p - 60) * 4;
 const xb = `<g id="XB"><circle r="14" fill="#B5482F"/><path d="M-5 -5 L5 5 M5 -5 L-5 5" stroke="#fff" stroke-width="3" stroke-linecap="round"/></g>`;
 $('#zpS').innerHTML = clips([28]) + `<line x1="${zx(60)}" y1="150" x2="${zx(220)}" y2="150" stroke="#E2DACB" stroke-width="6" stroke-linecap="round"/>
