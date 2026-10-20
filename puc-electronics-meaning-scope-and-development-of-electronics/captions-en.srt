@@ -1,0 +1,437 @@
+1
+00:00:00,450 --> 00:00:02,450
+Aarav's phone fits in his pocket.
+
+2
+00:00:02,450 --> 00:00:06,614
+Yet it can do far more than a computer
+that once filled a whole room.
+
+3
+00:00:06,964 --> 00:00:08,163
+What changed?
+
+4
+00:00:08,163 --> 00:00:09,233
+Electronics.
+
+5
+00:00:09,733 --> 00:00:14,357
+In nineteen forty six, a computer
+called ENIAC used seventeen thousand,
+
+6
+00:00:14,357 --> 00:00:17,228
+four hundred and sixty eight vacuum tubes.
+
+7
+00:00:17,578 --> 00:00:19,735
+It weighed about twenty seven tonnes.
+
+8
+00:00:20,085 --> 00:00:24,979
+Today, a chip smaller than your fingernail
+holds billions of tiny switches.
+
+9
+00:00:25,629 --> 00:00:27,268
+So what is electronics?
+
+10
+00:00:27,618 --> 00:00:31,981
+Electronics is the branch of science
+and engineering that controls the
+
+11
+00:00:31,981 --> 00:00:33,360
+flow of electrons.
+
+12
+00:00:33,710 --> 00:00:38,028
+Those electrons can move through a
+vacuum, through a gas, or through a
+
+13
+00:00:38,028 --> 00:00:39,724
+semiconductor like silicon.
+
+14
+00:00:40,074 --> 00:00:41,936
+The key word is control.
+
+15
+00:00:41,936 --> 00:00:44,819
+Electronics does not just use electricity.
+
+16
+00:00:44,819 --> 00:00:45,968
+It steers it.
+
+17
+00:00:46,618 --> 00:00:48,717
+Let's see the difference on a breadboard.
+
+18
+00:00:49,067 --> 00:00:51,353
+Here is a simple electrical circuit.
+
+19
+00:00:51,353 --> 00:00:53,553
+A battery, a switch and a bulb.
+
+20
+00:00:53,903 --> 00:00:56,287
+Close the switch, and electrons flow.
+
+21
+00:00:56,287 --> 00:00:57,628
+The bulb lights up.
+
+22
+00:00:57,978 --> 00:00:59,818
+Open it, and the flow stops.
+
+23
+00:00:59,818 --> 00:01:02,155
+There are only two states, on or off.
+
+24
+00:01:02,805 --> 00:01:04,649
+Now an electronic circuit.
+
+25
+00:01:04,649 --> 00:01:08,356
+A tiny signal from a microphone
+goes into a transistor.
+
+26
+00:01:08,706 --> 00:01:13,393
+The transistor uses that tiny signal to
+control a much bigger current through
+
+27
+00:01:13,393 --> 00:01:14,365
+the speaker.
+
+28
+00:01:14,715 --> 00:01:15,886
+Watch the scope.
+
+29
+00:01:15,886 --> 00:01:17,551
+The input wave is small.
+
+30
+00:01:17,551 --> 00:01:21,968
+The output wave has the same shape,
+but it is a hundred times bigger.
+
+31
+00:01:22,318 --> 00:01:24,368
+This is called amplification.
+
+32
+00:01:24,368 --> 00:01:26,872
+A small signal controls a big one.
+
+33
+00:01:26,872 --> 00:01:28,383
+That is electronics.
+
+34
+00:01:29,033 --> 00:01:31,191
+Electrical circuits use energy.
+
+35
+00:01:31,191 --> 00:01:33,350
+Electronic circuits control it.
+
+36
+00:01:34,150 --> 00:01:36,436
+Now, how many electrons are moving?
+
+37
+00:01:36,436 --> 00:01:37,681
+Let's work it out.
+
+38
+00:01:38,031 --> 00:01:41,937
+Current is the charge that
+passes a point every second.
+
+39
+00:01:41,937 --> 00:01:44,130
+So I equals Q divided by t.
+
+40
+00:01:44,830 --> 00:01:47,068
+Charge comes in tiny packets.
+
+41
+00:01:47,068 --> 00:01:52,092
+Each electron carries a charge e,
+one point six times ten to the minus
+
+42
+00:01:52,092 --> 00:01:53,513
+nineteen coulombs.
+
+43
+00:01:54,213 --> 00:01:58,200
+So n electrons carry a
+charge Q equals n times e.
+
+44
+00:01:58,900 --> 00:02:02,973
+Put the two together, and n
+equals I times t, divided by e.
+
+45
+00:02:03,673 --> 00:02:07,293
+Current in amperes, time in
+seconds, charge in coulombs.
+
+46
+00:02:07,293 --> 00:02:10,216
+And n is just a count, so it has no unit.
+
+47
+00:02:10,866 --> 00:02:12,028
+Worked example.
+
+48
+00:02:12,028 --> 00:02:15,493
+A phone charger sends two
+amperes into the battery.
+
+49
+00:02:15,843 --> 00:02:19,037
+How many electrons pass through
+the cable in one second?
+
+50
+00:02:19,387 --> 00:02:24,469
+n equals two times one, divided by
+one point six times ten to the minus
+
+51
+00:02:24,469 --> 00:02:25,369
+nineteen.
+
+52
+00:02:25,908 --> 00:02:30,764
+That is one point two five times ten
+to the nineteen electrons, every single
+
+53
+00:02:30,764 --> 00:02:31,664
+second.
+
+54
+00:02:32,083 --> 00:02:35,479
+So how did we learn to
+control so many electrons?
+
+55
+00:02:35,479 --> 00:02:36,590
+Step by step.
+
+56
+00:02:36,940 --> 00:02:41,548
+In nineteen oh four, John Ambrose
+Fleming made the vacuum tube diode.
+
+57
+00:02:41,548 --> 00:02:43,913
+It let current flow only one way.
+
+58
+00:02:44,263 --> 00:02:47,380
+In nineteen oh six, Lee
+de Forest added a grid.
+
+59
+00:02:47,380 --> 00:02:50,195
+His triode could make
+a weak signal stronger.
+
+60
+00:02:50,545 --> 00:02:54,234
+But tubes were big, they got hot,
+and they used a lot of power.
+
+61
+00:02:54,584 --> 00:02:58,917
+In nineteen forty seven, Bardeen,
+Brattain and Shockley built the first
+
+62
+00:02:58,917 --> 00:03:01,093
+transistor, from a semiconductor.
+
+63
+00:03:01,443 --> 00:03:06,031
+In nineteen fifty eight, Jack Kilby
+put several parts on one small chip.
+
+64
+00:03:06,031 --> 00:03:08,116
+The integrated circuit was born.
+
+65
+00:03:08,466 --> 00:03:13,556
+In nineteen seventy one came the first
+microprocessor, the brain of a computer
+
+66
+00:03:13,556 --> 00:03:14,968
+on a single chip.
+
+67
+00:03:15,318 --> 00:03:19,411
+Later, microcontrollers put a
+whole small computer on one chip.
+
+68
+00:03:19,411 --> 00:03:22,834
+Each step made circuits
+smaller, faster and cheaper.
+
+69
+00:03:23,484 --> 00:03:25,926
+And the scope of
+electronics keeps growing.
+
+70
+00:03:26,276 --> 00:03:28,908
+Communication, like
+phones and the internet.
+
+71
+00:03:28,908 --> 00:03:31,350
+Entertainment, like television and music.
+
+72
+00:03:31,700 --> 00:03:33,372
+Defence, like radar.
+
+73
+00:03:33,372 --> 00:03:36,607
+Industry, like robots
+and automatic machines.
+
+74
+00:03:36,957 --> 00:03:39,811
+And medicine, like heart
+monitors and scanners.
+
+75
+00:03:39,811 --> 00:03:42,639
+We will explore each one
+later in this series.
+
+76
+00:03:43,289 --> 00:03:44,754
+Now, the exam trap.
+
+77
+00:03:45,104 --> 00:03:48,839
+Many students think electrons
+flow the same way as current.
+
+78
+00:03:48,839 --> 00:03:49,851
+They do not.
+
+79
+00:03:50,201 --> 00:03:54,118
+Conventional current flows from
+plus to minus outside the cell.
+
+80
+00:03:54,118 --> 00:03:57,438
+Electrons drift the other
+way, from minus to plus.
+
+81
+00:03:58,088 --> 00:03:59,776
+Where is this asked?
+
+82
+00:03:59,776 --> 00:04:02,799
+In PUC board papers, as short answers.
+
+83
+00:04:02,799 --> 00:04:07,793
+Define electronics, name an invention
+and its year, or count electrons
+
+84
+00:04:07,793 --> 00:04:09,854
+with n equals I t by e.
+
+85
+00:04:10,504 --> 00:04:11,404
+Try this.
+
+86
+00:04:11,295 --> 00:04:15,570
+A current of three point two milliamperes
+flows through a small lamp for
+
+87
+00:04:15,570 --> 00:04:16,554
+five seconds.
+
+88
+00:04:16,554 --> 00:04:18,831
+How many electrons pass through it?
+
+89
+00:04:24,231 --> 00:04:25,131
+B.
+
+90
+00:04:24,678 --> 00:04:27,031
+One times ten to the seventeen.
+
+91
+00:04:27,381 --> 00:04:29,935
+First, change milliamperes to amperes.
+
+92
+00:04:29,935 --> 00:04:33,962
+That is three point two times
+ten to the minus three amperes.
+
+93
+00:04:34,312 --> 00:04:36,440
+Charge is current times time.
+
+94
+00:04:36,440 --> 00:04:39,558
+That gives zero point
+zero one six coulombs.
+
+95
+00:04:39,908 --> 00:04:44,629
+Divide by one point six times ten to
+the minus nineteen, and you get one
+
+96
+00:04:44,629 --> 00:04:46,558
+times ten to the seventeen.
+
+97
+00:04:47,208 --> 00:04:48,730
+Screenshot this card.
+
+98
+00:04:51,930 --> 00:04:55,060
+Next, vacuum tubes and
+semiconductor devices.
+
+99
+00:04:55,060 --> 00:04:58,813
+Why did the tiny transistor
+beat the big glowing tube?
