@@ -165,7 +165,7 @@ const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap 
 const YQ = ['Why is "good students" not a set?', 'Write the vowels of English in roster form.', 'What does the colon mean in set builder form?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="n">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
-const nx = PUC.next($('#sF'), { label: 'NEXT · EP 02', topic: 'Why does SCHOOL keep only one O? Roster and Set Builder Forms', y: 764 });
+const nx = PUC.next($('#sF'), { label: 'NEXT · EP 03', topic: 'Why does SCHOOL keep only one O? Roster and Set Builder Forms', y: 764 });
 
 /* ---------- helpers ---------- */
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
