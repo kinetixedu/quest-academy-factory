@@ -13,5 +13,6 @@
 - NCERT chip `CLASS 11 · PHYSICS · CH N CHAPTER NAME` exactly as in the bible; subject pill MOTION NOTEBOOK. Title `<Hook-style title> Explained Simply | PUC Physics Class 11`, <= 70 chars. meta.json "series": {"name": "PUC Physics", "ep": N}.
 - Exam segment: "Where it is asked" chips light only exams verified from a cited past-paper analysis (cite it in your report); if not verifiable, light none and state only the type of question. MCQ is ORIGINAL (never copied), real JEE/NEET level, 4 options, answer and every step checked by hand and by running the arithmetic in python.
 - Facts: NCERT first for every constant, value and definition; Chapter 1 error topics follow the NTA syllabus note in the bible. Never invent exam weightage, counts or statistics. Illustrative numbers carry the ghost chip "EXAMPLE FIGURES".
+- Episode shape (Amjad's Ep 1 feedback, see the bible): curiosity opening in the first 10-15 s, reasoning shown link by link, 1-2 PUC.think pauses after side-by-side comparisons, ending = recap card -> three self-check questions -> NEXT teaser. No left border.
 - Length 4:00 to 6:00 of voice. 12-year-old language, JEE/NEET substance underneath. Plain hyphens only. No real brands.
 - Report any recurring fact you introduce (a colour for a symbol, a notation, a value) so the lead adds it to the bible.

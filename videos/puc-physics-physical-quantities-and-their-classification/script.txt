@@ -1,55 +1,65 @@
-H1|0.3|A recipe card in Diya's kitchen says: sugar, two.
-H2|0.5|Two spoons? Two cups? Two kilograms? The number alone means nothing.
-H3|0.65|It needs a unit. And that is the first big idea in physics: the physical quantity.
+H1|0.4|A doctor checks your temperature. A shopkeeper weighs rice. You measure a table.
+H2|0.45|Three very different jobs. But all three use the same basic idea.
+H3|0.35|Even Diya's recipe card needs it. It says: sugar, two.
+H4|0.5|Two spoons? Two cups? Two kilograms? The number alone means nothing.
+H5|0.65|By the end of this video, you will see why. It is the first big idea in physics.
 P1|0.35|So what is a physical quantity?
 P2|0.35|It is anything in nature that we can measure. Length, mass, time, temperature, speed.
-P3|0.6|Kindness and beauty matter, but they are not physical quantities. No instrument can measure them.
+P3|0.6|Kindness and beauty matter, but no instrument can measure them. So they are not physical quantities.
 P4|0.35|Every measurement has two parts. A number, called the magnitude. And a unit.
-P5|0.65|A unit is a fixed amount that everyone agrees to compare with, like one metre or one kilogram.
+P5|0.65|A unit is a fixed amount we all agree on, like one metre or one kilogram.
 S1|0.35|Let's measure one pencil on our measuring bench.
 S2|0.4|With a centimetre scale, it reads fifteen. Fifteen centimetres.
 S3|0.4|Switch to millimetres. Now it reads one hundred and fifty.
 S4|0.4|Switch to metres. Now it is only zero point one five.
 S5|0.5|The pencil never changed. The number and the unit changed together.
-S6|0.65|Look at the graph. Each time the unit gets ten times bigger, the number gets ten times smaller.
+S6|0.65|Look at the graph. Unit ten times bigger, number ten times smaller.
 D1|0.35|Let's write this as a rule, one step at a time.
 D2|0.75|Step one. A quantity Q equals its number n, times its unit u. Q equals n u.
 D3|0.75|Step two. The same quantity in two different units does not change. So n one u one equals n two u two.
-D4|0.75|Step three. The product n times u is fixed, so n is inversely proportional to u. A bigger unit means a smaller number.
-D5|0.65|On the bench, the area of each box is n times u. The shape changes, but the area stays the same.
+D4|0.75|Step three. n times u is fixed, so n is inversely proportional to u. A bigger unit means a smaller number.
 T1|0.7|Remember this. A physical quantity is always a number with a unit, never a number alone.
 C1|0.35|Now, physicists sort quantities in two big ways.
 C2|0.35|The first way: base quantities and derived quantities.
-C3|0.35|Base quantities are the building blocks. The SI system has seven of them.
+C3|0.35|Base quantities are the building blocks. The SI system picks seven of them.
 C4|0.4|Length, mass, time, electric current, temperature, amount of substance, and luminous intensity.
-C5|0.35|Derived quantities are built from these. Area is length times length.
-C6|0.65|Speed is length divided by time. So its unit is metre per second.
+R1|0.35|Derived quantities are built from these. Take speed.
+R2|0.4|Speed equals distance divided by time.
+R3|0.4|Distance is a length, so it is a base quantity. Time is also a base quantity.
+R4|0.4|So speed is made from two base quantities. That is why speed is derived.
+K1|0.4|Side by side. Length is base. You read it straight off a ruler.
+K2|0.6|Speed is derived. You need a length and a time, and then you divide.
+K3|3.2|Now you try. Is temperature a base quantity or a derived quantity? Pause the video and decide.
+K4|0.65|Base! Temperature is one of the seven. A thermometer reads it directly, and it is not built from length, mass or time.
 V1|0.35|The second way: scalars and vectors.
-V2|0.35|A scalar has only a size. Mass, time and temperature are scalars.
-V3|0.35|A vector has a size and a direction. Displacement, velocity and force are vectors.
+V2|0.35|A scalar has only a size. Five kilograms of rice is just five kilograms. No direction needed.
+V3|0.4|A vector has a size and a direction. Displacement, velocity and force are vectors.
 V4|0.35|Push a box with ten newtons to the right. It moves right.
-V5|0.65|Push it with the same ten newtons to the left. It moves left. Same size, different result. So force needs a direction.
+V5|0.65|Push with the same ten newtons to the left, and it moves left. Same size, different result. So force needs a direction.
+V6|3.2|Your turn. Is velocity a scalar or a vector? Pause and decide.
+V7|0.65|A vector! Velocity is speed in a given direction. Fifty kilometres per hour north is not the same as fifty south.
 G1|0.35|Let's sort six quantities on the board.
-G2|0.35|Mass is a base quantity, and a scalar.
-G3|0.35|Time is also base, and scalar.
-G4|0.35|Speed and density are derived, and scalar.
-G5|0.35|Velocity and force are derived, and they are vectors.
-G6|0.65|Notice one box stays empty. None of the seven base quantities is a vector.
+G2|0.35|Mass and time are base, and scalar.
+G3|0.35|Speed and density are derived, and scalar.
+G4|0.35|Velocity and force are derived, and they are vectors.
+G5|0.65|Notice one box stays empty. None of the seven base quantities is a vector.
 W1|0.35|Now, one worked example.
 W2|0.5|A steel rod is two point five metres long. How long is it in centimetres?
-W3|0.75|Write the rule. n two equals n one times u one, divided by u two.
+W3|0.75|Use the rule. n two equals n one times u one, divided by u two.
 W4|0.75|Here n one is two point five. u one is one metre. u two is one centimetre.
 W5|0.75|One metre is one hundred centimetres. So n two is two point five times one hundred.
 W6|0.65|That is two hundred and fifty. The rod is two hundred and fifty centimetres long.
 X1|0.35|Now, the exam trap.
 X2|0.35|Many students say electric current is a vector, because it flows in a direction.
 X3|0.65|But current is a scalar. At a junction, two amperes and three amperes always make five amperes, whatever the angle. Vectors do not add like that.
-E1|0.6|Where is this asked? Mostly as quick one mark questions: spot the base quantity, the derived quantity, or the vector.
-Q1|5.4|Your turn. Which set has only derived quantities that are also scalars? Pause and solve.
+E1|0.6|Where is this asked? As quick one mark questions: spot the base quantity, the derived one, or the vector.
+Q1|5.4|Exam level now. Which set has only derived quantities that are also scalars? Pause and solve.
 A1|0.5|The answer is A. Speed, density and work.
-A2|0.5|Set B has mass and time, which are base quantities. And velocity is a vector.
-A3|0.5|Set C has force, which is a vector.
-A4|0.5|Set D has electric current and temperature. Both are base quantities.
-A5|0.6|Only set A is fully derived, and fully scalar.
-F1|3.2|Screenshot this card. Q equals n u. The seven base quantities. And scalars versus vectors.
-N1|0.3|Next time, we look closer at fundamental and derived quantities.
+A2|0.5|B has mass and time, both base. C has force, a vector.
+A3|0.6|D has current and temperature, both base. Only A is fully derived and fully scalar.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why is sugar, two, not a complete measurement?
+Y3|0.9|Two. Why is speed a derived quantity?
+Y4|1.1|Three. Is electric current a scalar or a vector, and why?
+N1|0.3|Next time: if speed is built from length and time, what is force built from? We find out in fundamental and derived quantities.

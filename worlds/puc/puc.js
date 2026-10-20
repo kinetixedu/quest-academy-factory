@@ -184,6 +184,29 @@ P.solution = (host, steps, o = {}) => {
   const lb = host.querySelector('.lbl'), rows = [...host.querySelectorAll('.sol')];
   return (t, tin, ts) => { M.vis(lb, t, tin + 0.1, 1e9, { dy: 10 }); rows.forEach((r, i) => { M.vis(r.querySelector('.n'), t, ts[i] - 0.05, 1e9, { dy: 0, sc: 0.4, sp: M.POP, fade: 0.08 }); P.write(r.querySelector('.sx'), t, ts[i], 0.55); const w = r.querySelector('.why'); if (w) M.vis(w, t, ts[i] + 0.45, 1e9, { dx: -10, dy: 0 }); }); };
 };
+/* pause and think: o = {q, opts: [a, b], right, why}. host = a full-width .card (1600 x 580). Silent ring (no ticks: ticks belong to the MCQ). */
+P.think = (host, o) => {
+  host.classList.add('thk');
+  host.insertAdjacentHTML('beforeend', `<div class="pat" style="left:48px;top:40px">PAUSE AND THINK</div><div class="tq">${o.q}</div>
+    ${o.opts.map((x, i) => `<div class="tp">${x}</div>`).join('')}
+    <div class="ringW" style="right:48px;top:40px"><svg width="150" height="150"><circle cx="75" cy="75" r="62" fill="#fff" stroke="#E6E8EE" stroke-width="12"/><circle class="ra" cx="75" cy="75" r="62" fill="none" stroke="${P.C.ac}" stroke-width="12" stroke-linecap="round" transform="rotate(-90 75 75)"/></svg><div class="rn"></div></div>
+    <div class="tw">${o.why}</div>`);
+  const ps = [...host.querySelectorAll('.tp')], rw = host.querySelector('.ringW'), ra = host.querySelector('.ra'), rn = host.querySelector('.rn'), q = host.querySelector('.tq'), w = host.querySelector('.tw'), pat = host.querySelector('.pat');
+  let laid = false;
+  return (t, k) => {
+    if (!laid) { laid = true; let x = 48; ps.forEach(p => { p.style.left = x + 'px'; x += p.offsetWidth + 32; }); }
+    const dur = k.dur ?? 3;
+    M.vis(pat, t, k.tin + 0.1, 1e9, { dy: 10 }); M.rise(q, t, k.tin + 0.2, { st: 0.05, sp: M.HEAVY });
+    ps.forEach((p, i) => { M.vis(p, t, k.tOpts + i * 0.12, 1e9, { dy: 0, sc: 0.8, sp: M.POP, fade: 0.1 });
+      const r = M.io((t - k.tAns) / 0.3), right = i === o.right;
+      p.style.background = right ? M.mix('#FFFFFF', P.C.ok, r) : '#FFFFFF'; p.style.borderColor = right ? M.mix(P.C.line, P.C.ok, r) : P.C.line; p.style.color = right ? M.mix(P.C.ink, '#FFFFFF', r) : M.mix(P.C.ink, P.C.dim, r); });
+    const u = M.clamp((t - k.tCount) / dur);
+    M.vis(rw, t, k.tCount - 0.2, k.tAns, { dy: 0, sc: 0.7, sp: M.POP, outDur: 0.25, osc: 0.8, ody: 0 });
+    M.drawU(ra, 1 - u); M.hide(ra, t < k.tCount - 0.2 || t > k.tAns + 0.3);
+    M.setT(rn, String(Math.max(1, dur - Math.floor(u * dur - 1e-6))));
+    P.write(w, t, k.tWhy ?? k.tAns + 0.4, 0.9);
+  };
+};
 /* pinned formula card with a "SCREENSHOT THIS" chip. lines = html (KaTeX). */
 P.fcard = (host, o) => {
   const d = document.createElement('div'); d.className = 'fcard';

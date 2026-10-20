@@ -7,8 +7,8 @@
 #stage{font-family:Poppins;font-weight:500;color:var(--ink);background:var(--paper);
  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:40px 40px;background-position:0 0}
 #cam{position:absolute;left:0;top:0;width:1920px;height:1080px}
-.edge{position:absolute;left:0;top:0;width:14px;height:1080px;background:var(--ac);z-index:45}
-#prog{position:absolute;left:14px;top:0;height:6px;width:1906px;background:var(--grid);z-index:60}
+.edge{display:none}
+#prog{position:absolute;left:0;top:0;height:6px;width:1920px;background:var(--grid);z-index:60}
 #prog i{display:block;height:6px;background:var(--ac);width:0}
 
 /* header: NCERT chip (shared element with the title card), subject style pill, title */
@@ -100,3 +100,8 @@
 /* captions */
 .cap{font:600 38px Poppins;color:var(--ink);background:rgba(255,255,255,.97);padding:12px 30px;border-radius:14px;border:2px solid var(--line);box-shadow:0 10px 30px -12px rgba(22,33,62,.25)}
 .cap .cw{color:#6B7280}.cap .cw.on{color:var(--ink)}.cap .cw.act{color:var(--ac)}
+
+/* pause and think: a quick question for the viewer, silent 3-second ring, then the answer and the reason */
+.thk .tq{position:absolute;left:48px;top:108px;font:700 52px/1.2 Poppins;letter-spacing:-.01em;width:1180px}
+.thk .tp{position:absolute;top:330px;height:96px;padding:0 44px;border-radius:16px;border:3px solid var(--line);background:#fff;display:flex;align-items:center;gap:14px;font:700 40px Poppins;white-space:nowrap}
+.thk .tw{position:absolute;left:48px;top:470px;font:500 32px Poppins;white-space:nowrap;color:var(--ink)}

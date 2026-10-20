@@ -24,19 +24,24 @@ Object.assign(M.IC, {
 });
 
 /* ---------- beats (all from the voice) ---------- */
-const tMorph = T0('H2') + 0.02, tH3 = T0('H3'), tUnitH = wt('H3', 'unit');
+const tMorph = T0('H2') + 0.02, tH3 = T0('H3'), tH4 = T0('H4'), tH5 = T0('H5');
 const tP1 = T0('P1'), tP4 = T0('P4'), tP5 = T0('P5');
 const tS1 = T0('S1'), tS5 = T0('S5'), tS6 = T0('S6'), tD1 = T0('D1'), tT = T0('T1'), tC1 = T0('C1');
 const tCm = wt('S2', 'centimetre'), tMm = wt('S3', 'millimetres'), tMe = wt('S4', 'metres');
-const tV1 = T0('V1'), tG1 = T0('G1'), tW1 = T0('W1'), tX1 = T0('X1'), tQ = T0('Q1'), tF = T0('F1'), tN = T0('N1');
+const tK1 = T0('K1'), tK3 = T0('K3'), tV1 = T0('V1'), tV6 = T0('V6'), tG1 = T0('G1'), tW1 = T0('W1'), tX1 = T0('X1'), tQ = T0('Q1'), tF = T0('F1'), tY = T0('Y1'), tN = T0('N1');
 const tCount = T1('Q1') + 0.05, tAns = T0('A1') - 0.02;
 const SW = [[tT, tC1], [tQ, tQ + 0.06], [tF, tF + 0.06]];
 const OUT = id => T0(id) - 0.32;           // scene exits just before the next scene's first line
 
-/* ---------- H: the recipe card ---------- */
-const TILES = [['spoon', 'spoons'], ['cup', 'cups'], ['weight', 'kilograms']];
-$('#tiles').innerHTML = TILES.map(([ic, w], i) => `<div class="tile" id="tl${i}" style="left:${36 + i * 243}px"><div class="ti">${M.icon(ic, 40, C.ink2, 2.2)}</div><div class="tn">2</div><div class="tw">${w}</div></div>`).join('');
-const tTile = [wt('H2', 'spoons'), wt('H2', 'cups'), wt('H2', 'kilograms')];
+/* ---------- title card: three jobs ---------- */
+const JOBS = [['thermo', 'Doctor', 'TEMPERATURE', '37', '°C', 'doctor'], ['balance', 'Shopkeeper', 'MASS OF RICE', '5', 'kg', 'shopkeeper'], ['ruler', 'Student', 'LENGTH OF A TABLE', '1.2', 'm', 'table']];
+$('#jobs').innerHTML = JOBS.map(([ic, n, w], i) => `<div class="job" id="jb${i}" style="left:${390 + i * 390}px"><i>${M.icon(ic, 32, C.ac, 2.2)}</i><div class="jn">${n}</div><div class="jw">${w}</div></div>`).join('');
+const tJob = JOBS.map(j => wt('H1', j[5]));
+/* ---------- H: three jobs, one idea + the recipe card ---------- */
+$('#jrs').innerHTML = JOBS.map(([ic, n, w, v, u], i) => `<div class="jr" id="jr${i}" style="top:${84 + i * 134}px"><i>${M.icon(ic, 34, C.ac, 2.2)}</i><div class="jn">${n}</div><div class="jw">${w}</div><div class="jv"><span>${v}</span> <span class="u">${u}</span></div></div>`).join('');
+const TILES = [['spoon', '2 spoons?'], ['cup', '2 cups?'], ['weight', '2 kilograms?']];
+$('#wqs').innerHTML = TILES.map(([ic, w], i) => `<div class="wq" id="wq${i}">${M.icon(ic, 26, UC, 2.2)}<span>${w}</span></div>`).join('');
+const tTile = [wt('H4', 'spoons'), wt('H4', 'cups'), wt('H4', 'kilograms')];
 
 /* ---------- P: can we measure it? ---------- */
 const MT = [['ruler', 'Length', 'metre scale', 1], ['balance', 'Mass', 'balance', 1], ['clock', 'Time', 'clock', 1], ['thermo', 'Temperature', 'thermometer', 1], ['gauge', 'Speed', 'speedometer', 1], ['heart', 'Kindness', 'no instrument', 0], ['sparkle', 'Beauty', 'no instrument', 0]];
@@ -80,7 +85,7 @@ const avD = PUC.avatar($('#sS'), { x: 160 + 36, y: 270 + 486, who: 'Diya', face:
 const STEPS = [[`\\textcolor{${QC}}{Q} = \\textcolor{${NC}}{n}\\,\\textcolor{${UC}}{u}`, 'a number times a unit'],
   [`\\textcolor{${NC}}{n_1}\\textcolor{${UC}}{u_1} = \\textcolor{${NC}}{n_2}\\textcolor{${UC}}{u_2}`, 'the same quantity in any unit'],
   [`\\textcolor{${NC}}{n} \\propto 1/\\textcolor{${UC}}{u}`, 'bigger unit, smaller number']];
-$('#steps').innerHTML = `<div class="hiBox" id="hiB" style="left:20px;width:744px;height:132px"></div>` + STEPS.map(([f, w], i) => `<div class="st" id="st${i}" style="top:${84 + i * 156}px"><div class="n">${i + 1}</div><div class="sx">${K(f)}</div><div class="why">${w}</div></div>`).join('');
+$('#steps').innerHTML = `<div class="hiBox" id="hiB" style="left:20px;width:744px;height:132px"></div>` + STEPS.map(([f, w], i) => `<div class="st" id="dst${i}" style="top:${84 + i * 156}px"><div class="n">${i + 1}</div><div class="sx">${K(f)}</div><div class="why">${w}</div></div>`).join('');
 const tStep = [wt('D2', 'Q'), wt('D3', 'So'), wt('D4', 'inversely')];
 // same area, different shape
 const a = $('#arS'), AR = 64000, AX = 150, AY = 500;
@@ -90,8 +95,8 @@ const bw = mk(a, 'path', { fill: 'none', stroke: UC, 'stroke-width': 3, 'stroke-
 const lu = txt(a, 0, 0, 'u', { 'font-family': 'Poppins', 'font-style': 'italic', 'font-weight': 600, 'font-size': 34, fill: UC, 'text-anchor': 'middle' });
 const ln = txt(a, 0, 0, 'n', { 'font-family': 'Poppins', 'font-style': 'italic', 'font-weight': 600, 'font-size': 34, fill: NC, 'text-anchor': 'end' });
 const la = txt(a, 0, 0, 'n × u = same', { 'font-size': 22, fill: C.ink, 'font-weight': 600, 'text-anchor': 'middle' });
-const tD5 = T0('D5'), tShape = wt('D5', 'shape');
-const wK = [[tShape - 0.2, 400], [tShape + 1.4, 128], [wt('D5', 'same') - 0.2, 220]];
+const tD5 = wt('D4', 'fixed') - 0.2;
+const wK = [[wt('D4', 'inversely') - 0.2, 400], [wt('D4', 'bigger') - 0.1, 128], [wt('D4', 'smaller') + 0.2, 220]];
 const wTr = M.track(220, wK.map(([t, v]) => [t, v, [6, 0.95]]), [6, 0.95]);
 
 /* ---------- statement ---------- */
@@ -101,10 +106,24 @@ $('#stF').innerHTML = K(`\\textcolor{${QC}}{Q} = \\textcolor{${NC}}{n}\\,\\textc
 const BQ = [['Length', 'metre', 'm'], ['Mass', 'kilogram', 'kg'], ['Time', 'second', 's'], ['Electric current', 'ampere', 'A'], ['Thermodynamic temperature', 'kelvin', 'K'], ['Amount of substance', 'mole', 'mol'], ['Luminous intensity', 'candela', 'cd']];
 $('#bqs').innerHTML = BQ.map(([n, u, sy], i) => `<div class="bq" id="bq${i}" style="top:${80 + i * 68}px"><div class="bn">${n}</div><div class="bu">${u}</div><div class="bs">${sy}</div></div>`).join('');
 const tBq = [wt('C4', 'Length'), wt('C4', 'mass'), wt('C4', 'time'), wt('C4', 'electric'), wt('C4', 'temperature'), wt('C4', 'amount'), wt('C4', 'luminous')];
-$('#dvs').innerHTML = [['length', '×', 'length', 'area', '\\text{m} \\times \\text{m} = \\text{m}^2', 96], ['length', '÷', 'time', 'speed', '\\text{m} \\div \\text{s} = \\text{m/s}', 312]].map(([p, o, q, r, f, y], i) =>
-  `<div class="blk" id="db${i}0" style="top:${y}px">${p}</div><div class="op" id="do${i}0" style="top:${y + 10}px">${o}</div><div class="blk" id="db${i}1" style="top:${y}px">${q}</div><div class="op" id="do${i}1" style="top:${y + 10}px">=</div><div class="blk" id="db${i}2" style="top:${y}px;background:var(--ac);color:#fff">${r}</div>
-   <div class="fl2" id="df${i}" style="top:${y + 100}px">${K(f)}</div>`).join('') + `<div class="pillp ink" id="dvP" style="left:36px;top:500px">Derived = base quantities combined</div>`;
-const tDv = [[wt('C5', 'Area'), wt('C5', 'times'), wt('C5', 'length', 1)], [wt('C6', 'Speed'), wt('C6', 'divided'), wt('C6', 'time')]];
+const CH = [['Distance', 'cb'], ['÷', 'cop'], ['Time', 'cb'], ['=', 'cop'], ['Speed', 'cb']];
+$('#chn').innerHTML = CH.map(([x, c], i) => `<div class="${c}" id="ch${i}">${x}</div>`).join('') +
+  `<div class="ctag" id="ct0" style="background:var(--ac2);color:var(--ac)">LENGTH · BASE</div><div class="ctag" id="ct2" style="background:var(--ac2);color:var(--ac)">BASE</div><div class="ctag" id="ct4" style="background:var(--ink);color:#fff">DERIVED</div>
+   <div class="fl2" id="chU" style="top:300px">${K('\\text{unit:}\;\; \\text{m} \\div \\text{s} = \\textcolor{' + C.ac + '}{\\text{m/s}}')}</div>
+   <div class="pillp ink" id="chP" style="left:36px;top:470px">Made from base quantities = derived</div>`;
+const tCh = [wt('R2', 'distance'), wt('R2', 'divided'), wt('R2', 'time'), wt('R2', 'time') + 0.3, wt('R4', 'speed')];
+
+/* ---------- K: side by side + pause and think ---------- */
+const kb = $('#kbS'), KX = 92, KP = 400;      // 400 px per metre, ruler 0 - 1.5 m
+mk(kb, 'rect', { x: KX, y: 150, width: 480, height: 44, rx: 6, fill: '#C9A27A', stroke: C.ink, 'stroke-width': 2.5 });
+mk(kb, 'rect', { x: KX - 20, y: 214, width: 640, height: 100, rx: 8, fill: '#FFF8E7', stroke: C.ink, 'stroke-width': 2.5 });
+for (let d = 0; d <= 15; d++) { const x = KX + d * 40, L = d % 5 ? 22 : 40; mk(kb, 'line', { x1: x, y1: 214, x2: x, y2: 214 + L, stroke: C.ink, 'stroke-width': 2 }); if (d % 5 === 0) txt(kb, x, 284, (d / 10).toFixed(1).replace('.0', ''), { 'text-anchor': 'middle', 'font-size': 20, fill: C.ink, 'font-weight': 600 }); }
+txt(kb, KX + 600, 304, 'm', { 'text-anchor': 'end', fill: UC, 'font-weight': 600 });
+const kbl = mk(kb, 'line', { x1: KX + 480, y1: 150, x2: KX + 480, y2: 390, stroke: C.ac, 'stroke-width': 2.5, 'stroke-dasharray': '6 6' });
+const kbr = txt(kb, KX + 480, 430, '1.2 m', { 'text-anchor': 'middle', 'font-size': 40, fill: C.ink, 'font-weight': 600 });
+txt(kb, KX, 136, 'TABLE TOP', { 'font-size': 16, 'letter-spacing': 2 });
+$('#kdF').innerHTML = K(`\\text{speed} = \\dfrac{100\\,\\text{m}}{20\\,\\text{s}} = \\textcolor{${C.ac}}{5\\,\\text{m/s}}`);
+const th1 = PUC.think($('#th1'), { q: 'Is temperature a base quantity or a derived quantity?', opts: ['Base', 'Derived'], right: 0, why: 'One of the seven. A thermometer reads it directly; it is not built from others.' });
 
 /* ---------- V: push a box ---------- */
 const v = $('#vsS'), FY = 430;
@@ -117,11 +136,14 @@ const fL = txt(v, 0, 0, 'F', { 'font-family': 'Poppins', 'font-style': 'italic',
 $('#vro').innerHTML = `<span class="k" style="color:${FC}">F</span><span class="v" id="vF" style="color:${FC}">10</span><span class="u">N</span><span class="k" style="font-style:normal;font-size:22px;color:var(--mute)">dir</span><span class="v" id="vD" style="font-size:30px">right</span><span class="u"></span>`;
 const tPushR = wt('V4', 'Push'), tMoveR = wt('V4', 'moves'), tPushL = wt('V5', 'Push'), tMoveL = wt('V5', 'moves');
 const bxTr = M.keys([[0, 327], [tMoveR - 0.3, 507], [tMoveL - 0.3, 177]], 1.2, M.io);
-$('#cols').innerHTML = `<div class="lbl" style="left:36px;top:30px">TWO KINDS</div>
-  <div class="col" id="cS" style="left:36px"><div class="ch">Scalar</div><div class="cs">SIZE ONLY</div>${[['weight', 'Mass'], ['clock', 'Time'], ['thermo', 'Temperature']].map(([ic, n], i) => `<div class="chp" id="cs${i}" style="top:${104 + i * 62}px">${M.icon(ic, 24, C.ink2, 2.2)}<span>${n}</span></div>`).join('')}</div>
-  <div class="col" id="cV" style="left:408px"><div class="ch">Vector</div><div class="cs">SIZE + DIRECTION</div>${[['Displacement'], ['Velocity'], ['Force']].map(([n], i) => `<div class="chp" id="cv${i}" style="top:${104 + i * 62}px">${M.icon('arrowR', 24, i === 2 ? FC : C.ac, 2.6)}<span>${n}</span></div>`).join('')}</div>`;
-const tCs = [wt('V2', 'Mass'), wt('V2', 'time'), wt('V2', 'temperature')], tCv = [wt('V3', 'Displacement'), wt('V3', 'velocity'), wt('V3', 'force')];
-const avA = PUC.avatar($('#sV'), { x: 976 + 36, y: 270 + 410, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'So force needs an arrow. Mass does not.' });
+$('#cols').innerHTML = `<div class="lbl" style="left:36px;top:30px">SIDE BY SIDE</div>
+  <div class="sbx" id="cS" style="left:36px"><div class="h">Scalar</div><div class="s">SIZE ONLY</div><div style="position:absolute;left:24px;top:104px">${M.icon('weight', 64, C.ink2, 2)}</div><div class="v">5 <span class="u">kg</span></div><div class="c">rice: no direction needed</div></div>
+  <div class="sbx" id="cV" style="left:408px"><div class="h">Vector</div><div class="s">SIZE + DIRECTION</div><svg style="position:absolute;left:24px;top:110px" width="260" height="60"><line x1="4" y1="30" x2="220" y2="30" stroke="${FC}" stroke-width="8" stroke-linecap="round"/><path d="M212,12 L246,30 L212,48 Z" fill="${FC}"/></svg><div class="v" style="color:${FC}">10 <span class="u">N</span></div><div class="c">a push: direction matters</div></div>
+  <div class="lbl" id="cvL" style="left:408px;top:406px">VECTORS</div>${['Displacement', 'Velocity', 'Force'].map((n, i) => `<div class="chp" id="cv${i}" style="left:${[408, 408, 600][i]}px;top:${[440, 500, 500][i]}px;background:var(--soft)">${M.icon('arrowR', 22, i === 2 ? FC : C.ac, 2.6)}<span>${n}</span></div>`).join('')}
+  <div class="lbl" id="csL" style="left:36px;top:406px">SCALARS</div>${['Mass', 'Time', 'Temperature'].map((n, i) => `<div class="chp" id="cs${i}" style="left:${[36, 172, 36][i]}px;top:${[440, 440, 500][i]}px;background:var(--soft)"><span>${n}</span></div>`).join('')}`;
+const tCs = [wt('V2', 'Five'), wt('V2', 'kilograms', 1), wt('V2', 'direction')], tCv = [wt('V3', 'Displacement'), wt('V3', 'velocity'), wt('V3', 'force')];
+const th2 = PUC.think($('#th2'), { q: 'Is velocity a scalar or a vector?', opts: ['Scalar', 'Vector'], right: 1, why: 'Speed in a given direction: 50 km/h north is not 50 km/h south.' });
+const avA = PUC.avatar($('#sV'), { x: 160 + 36, y: 270 + 470, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'So force needs an arrow. Mass does not.' });
 
 /* ---------- G: sort board ---------- */
 const CX = [300, 940], CY = [84, 324];
@@ -130,7 +152,7 @@ $('#cells').innerHTML = `<div class="rh" id="rh0" style="top:${CY[0] + 88}px">Ba
   `<div id="empty" style="left:${CX[1] + 32}px;top:${CY[0] + 76}px;width:536px;height:110px">EMPTY · NO BASE QUANTITY IS A VECTOR</div>`;
 const SQ = [['Mass', 0, 0, 0, 'weight'], ['Time', 0, 0, 1, 'clock'], ['Speed', 1, 0, 0, 'gauge'], ['Density', 1, 0, 1, 'balance'], ['Velocity', 1, 1, 0, 'arrowR'], ['Force', 1, 1, 1, 'arrowR']];
 $('#cells').insertAdjacentHTML('beforeend', SQ.map(([n, r, c, k, ic], i) => `<div class="sq" id="sq${i}" style="left:${CX[c] + 32 + k * 280}px;top:${CY[r] + 96}px">${M.icon(ic, 26, c ? (n === 'Force' ? FC : C.ac) : C.ink2, 2.4)}<span>${n}</span></div>`).join(''));
-const tSq = [wt('G2', 'Mass'), wt('G3', 'Time'), wt('G4', 'Speed'), wt('G4', 'density'), wt('G5', 'Velocity'), wt('G5', 'force')];
+const tSq = [wt('G2', 'Mass'), wt('G2', 'time'), wt('G3', 'Speed'), wt('G3', 'density'), wt('G4', 'Velocity'), wt('G4', 'force')];
 
 /* ---------- W: worked example ---------- */
 const wsol = PUC.solution($('#wl'), [
@@ -146,7 +168,7 @@ for (let d = 0; d <= 30; d++) { const x = WX + d * 20, L = d % 10 ? (d % 5 ? 16 
 txt(WG[0], WX + 600, 350, 'm', { 'text-anchor': 'end', fill: UC, 'font-weight': 600 }); txt(WG[1], WX + 600, 350, 'cm', { 'text-anchor': 'end', fill: UC, 'font-weight': 600 });
 const rod = mk(w, 'rect', { x: WX, y: 196, width: 500, height: 40, rx: 6, fill: '#8D99AE', stroke: C.ink, 'stroke-width': 2.5 });
 mk(w, 'line', { x1: WX + 500, y1: 196, x2: WX + 500, y2: 398, stroke: C.ac, 'stroke-width': 2.5, 'stroke-dasharray': '6 6' });
-const tW = [wt('W3', 'Write'), wt('W4', 'Here'), wt('W5', 'One'), wt('W6', 'That')], tSwW = wt('W5', 'hundred');
+const tW = [wt('W3', 'Use'), wt('W4', 'Here'), wt('W5', 'One'), wt('W6', 'That')], tSwW = wt('W5', 'hundred');
 
 /* ---------- X / Q / F: exam segment ---------- */
 const trap = PUC.trap($('#trap'), { wrong: 'Electric current is a vector', right: 'Current is a scalar: currents add like numbers' });
@@ -160,11 +182,14 @@ const where = PUC.where($('#wa'), { on: [], type: 'Quick one mark questions: spo
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', q: 'Which set contains only derived quantities that are also scalars?', qW: 780,
   opts: ['Speed, density, work', 'Velocity, mass, time', 'Force, volume, pressure', 'Electric current, temperature, energy'], right: 0, cols: 1, optW: 968, optH: 68, optFs: 28, optY: 250 });
 const so = PUC.solution($('#so'), [['<b style="color:var(--red)">B</b>: mass and time are base'], ['<b style="color:var(--red)">C</b>: force is a vector'], ['<b style="color:var(--red)">D</b>: current, temperature are base'], ['<b style="color:var(--ok)">A</b>: all derived, all scalar']], { y0: 100, dy: 112 });
-const tSo = [T0('A2'), T0('A3'), T0('A4'), T0('A5')];
-const fc = PUC.fcard($('#sF'), { x: 410, y: 262, w: 1100, h: 470, title: 'Units and measurement · fact card', y0: 100, dy: 86, txt: [0, 0, 1, 1],
-  lines: [K(`\\textcolor{${QC}}{Q} = \\textcolor{${NC}}{n}\\,\\textcolor{${UC}}{u} \\qquad \\textcolor{${NC}}{n_1}\\textcolor{${UC}}{u_1} = \\textcolor{${NC}}{n_2}\\textcolor{${UC}}{u_2}`), K(`\\textcolor{${NC}}{n} \\propto 1/\\textcolor{${UC}}{u}\\;\\; \\text{(bigger unit, smaller number)}`),
-    '7 SI base: <span class="mono">m · kg · s · A · K · mol · cd</span>', '<b>Scalar</b>: size only &nbsp;·&nbsp; <b>Vector</b>: size + direction'] });
-const nx = PUC.next($('#sF'), { label: 'NEXT · EP 02', topic: 'Fundamental and Derived Quantities', y: 764 });
+const tSo = [wt('A2', 'B'), wt('A2', 'C'), wt('A3', 'D'), wt('A3', 'Only')];
+const fc = PUC.fcard($('#sF'), { x: 410, y: 262, w: 1100, h: 470, title: 'Recap · physical quantities', y0: 100, dy: 92, txt: [0, 1, 1, 1],
+  lines: [K(`\\textcolor{${QC}}{Q} = \\textcolor{${NC}}{n}\\,\\textcolor{${UC}}{u} \\qquad \\textcolor{${NC}}{n_1}\\textcolor{${UC}}{u_1} = \\textcolor{${NC}}{n_2}\\textcolor{${UC}}{u_2}`),
+    '<b>7 base</b>: <span class="mono">m · kg · s · A · K · mol · cd</span>', '<b>Derived</b> = built from base: speed = distance ÷ time', '<b>Scalar</b>: size only &nbsp;·&nbsp; <b>Vector</b>: size + direction'] });
+const YQ = ['Why is "sugar: 2" not a complete measurement?', 'Why is speed a derived quantity?', 'Is electric current a scalar or a vector, and why?'];
+$('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="n">${i + 1}</div><div class="q">${q}</div></div>`).join('');
+const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
+const nx = PUC.next($('#sF'), { label: 'NEXT · EP 02', topic: 'What is force built from? Fundamental and Derived Quantities', y: 764 });
 
 /* ---------- helpers ---------- */
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
@@ -180,8 +205,10 @@ function measure() {
   const L0 = a0.offsetLeft, W0 = a0.offsetWidth, L1 = a1.offsetLeft, W1 = a1.offsetWidth;
   $('#bk0').setAttribute('d', `M${L0} 4 V18 H${L0 + W0} V4`); $('#bk1').setAttribute('d', `M${L1} 4 V18 H${L1 + W1} V4`);
   const b0 = $('#bl0'), b1 = $('#bl1'); b0.style.left = (L0 + W0 / 2 - b0.offsetWidth / 2) + 'px'; b1.style.left = (L1 + W1 / 2 - b1.offsetWidth / 2) + 'px';
-  // derived builders: lay blocks in a row
-  for (let i = 0; i < 2; i++) { let x = 36; ['db' + i + '0', 'do' + i + '0', 'db' + i + '1', 'do' + i + '1', 'db' + i + '2'].forEach(id => { const e = $('#' + id); e.style.left = x + 'px'; x += e.offsetWidth + 20; }); }
+  // speed chain: blocks in a row, tags centred under their blocks
+  let x = 36; CH.forEach((_, i) => { const e = $('#ch' + i); e.style.left = x + 'px'; x += e.offsetWidth + 22; });
+  [0, 2, 4].forEach(i => { const b = $('#ch' + i), tg = $('#ct' + i); tg.style.left = (b.offsetLeft + b.offsetWidth / 2 - tg.offsetWidth / 2) + 'px'; });
+  x = 36; [0, 1, 2].forEach(i => { const e = $('#wq' + i); e.style.left = x + 'px'; x += e.offsetWidth + 16; });
 }
 
 /* ---------- frame ---------- */
@@ -191,21 +218,22 @@ M.on(t => {
   $('#prog i').style.width = (1906 * M.clamp(t / window.DUR)).toFixed(1) + 'px';
   const o = { outDur: 0.3, ody: -16 };
 
+  /* title card: the three jobs pop in with their words, then leave as the title travels */
+  JOBS.forEach((_, i) => M.vis($('#jb' + i), t, tJob[i] - 0.1, tMorph - 0.15, { dy: 24, sp: M.SOFT, outDur: 0.25, ody: 10 }));
+
   /* H */
   const hOn = t >= tMorph && t < tP1 + 0.1; M.hide($('#sH'), !hOn);
   if (hOn) {
     const out = OUT('P1');
-    M.vis($('#hk'), t, tMorph + 0.15, out, { dx: -60, dy: 0, ...o });
-    M.vis($('#hkImg'), t, tMorph + 0.35, 1e9, { dy: 20 });
-    M.vis($('#note'), t, tMorph + 0.7, 1e9, { dy: -30, sp: M.SOFT });
+    M.vis($('#hj'), t, tMorph + 0.1, out, { dx: -60, dy: 0, ...o });
+    M.vis($('#exH'), t, tMorph + 0.5, 1e9, { dy: 8 });
+    JOBS.forEach((_, i) => { const el = $('#jr' + i); M.vis(el, t, tMorph + 0.3 + i * 0.12, 1e9, { dy: 16 }); const on = M.io((t - wt('H2', 'same') + 0.1) / 0.3); el.querySelector('.jv span').style.color = mix(C.ink, C.ink, on); el.style.background = mix(C.soft, C.ac3 || C.ac2, on); });
+    M.vis($('#hjP'), t, wt('H2', 'idea') - 0.1, 1e9, POP);
+    M.vis($('#hk'), t, tH3 - 0.1, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#hkImg'), t, tH3 + 0.1, 1e9, { dy: 20 }); M.vis($('#hdF'), t, tH3 + 0.2, 1e9, { ...POP, sc: 0.5 });
+    M.vis($('#note'), t, wt('H3', 'sugar') - 0.3, 1e9, { dy: -30, sp: M.SOFT });
     $('#note').style.transform = ($('#note').style.transform === 'none' || !$('#note').style.transform ? '' : $('#note').style.transform + ' ') + 'rotate(-4deg)';
-    M.vis($('#hd'), t, tMorph + 0.3, out, { dx: 60, dy: 0, ...o });
-    M.vis($('#hdF'), t, tMorph + 0.5, 1e9, { ...POP, sc: 0.5 });
-    M.rise($('#hdN'), t, tMorph + 0.55, { st: 0.06 }); M.vis($('#hdT'), t, tMorph + 0.7, 1e9, { dy: 10 });
-    M.vis($('#hdB'), t, tMorph + 0.9, 1e9, POP);
-    M.vis($('#hq'), t, tMorph + 0.45, out, { dy: 36, ...o });
-    TILES.forEach((_, i) => { const el = $('#tl' + i); M.vis(el, t, tTile[i] - 0.1, 1e9, POP); const on = M.io((t - tTile[i]) / 0.25) * (i < 2 ? 1 - M.io((t - tTile[i + 1]) / 0.25) : 1 - M.io((t - tUnitH) / 0.3)); el.style.background = mix(C.soft, C.ac2, on); });
-    M.vis($('#hqP'), t, tUnitH - 0.05, 1e9, POP);
+    TILES.forEach((_, i) => { const el = $('#wq' + i); M.vis(el, t, tTile[i] - 0.1, 1e9, POP); const on = M.io((t - tTile[i]) / 0.25) * (1 - M.io((t - (i < 2 ? tTile[i + 1] : wt('H4', 'nothing'))) / 0.25)); el.style.background = mix(C.soft, C.ac2, on); });
   }
 
   /* P */
@@ -257,7 +285,7 @@ M.on(t => {
   const dOn = t >= tD1 - 0.1 && t < tT + 0.1; M.hide($('#sD'), !dOn);
   if (dOn) {
     M.vis($('#dl'), t, tD1 + 0.05, 1e9, { dx: -60, dy: 0 });
-    STEPS.forEach((_, i) => { const el = $('#st' + i); M.vis(el.querySelector('.n'), t, tStep[i] - 0.2, 1e9, { ...POP, sc: 0.4 }); PUC.write(el.querySelector('.sx'), t, tStep[i], 0.8); M.vis(el.querySelector('.why'), t, tStep[i] + 0.7, 1e9, { dx: -12, dy: 0 }); });
+    STEPS.forEach((_, i) => { const el = $('#dst' + i); M.vis(el.querySelector('.n'), t, tStep[i] - 0.2, 1e9, { ...POP, sc: 0.4 }); PUC.write(el.querySelector('.sx'), t, tStep[i], 0.8); M.vis(el.querySelector('.why'), t, tStep[i] + 0.7, 1e9, { dx: -12, dy: 0 }); });
     const hiY = M.track(84, [[tStep[1] - 0.1, 240], [tStep[2] - 0.1, 396]], M.SOFT)(t);
     const hb = $('#hiB'); M.vis(hb, t, tStep[0] - 0.1, 1e9, { dy: 0, fade: 0.2 }); hb.style.top = (hiY - 6).toFixed(1) + 'px';
     M.vis($('#dr'), t, wt('D2', 'Q', 1) - 0.1, 1e9, { dx: 60, dy: 0 });
@@ -277,24 +305,44 @@ M.on(t => {
     PUC.write($('#stF'), t, wt('T1', 'never'), 0.8);
   }
 
-  /* C: base and derived */
-  const cOn = t >= tC1 - 0.1 && t < tV1 + 0.1; M.hide($('#sC'), !cOn);
+  /* C: base list + why speed is derived */
+  const cOn = t >= tC1 - 0.1 && t < tK1 + 0.1; M.hide($('#sC'), !cOn);
   if (cOn) {
-    const out = OUT('V1');
+    const out = OUT('K1');
     M.vis($('#cb'), t, tC1 + 0.3, out, { dx: -60, dy: 0, ...o });
     BQ.forEach((_, i) => { const el = $('#bq' + i); M.vis(el, t, T0('C3') + 0.3 + i * 0.08, 1e9, { dy: 14 }); const on = M.io((t - tBq[i] + 0.05) / 0.25); el.style.background = mix(C.soft, C.ac2, on); el.querySelector('.bs').style.color = mix(C.dim, C.ac, on); el.querySelector('.bn').style.color = mix(C.dim, C.ink, on); el.querySelector('.bu').style.color = mix(C.dim, C.mute, on); });
-    M.vis($('#cd'), t, tC1 + 0.45, out, { dx: 60, dy: 0, ...o });
-    tDv.forEach((ts, i) => { M.vis($('#db' + i + '0'), t, ts[0] - 0.1, 1e9, POP); M.vis($('#do' + i + '0'), t, ts[1] - 0.1, 1e9, POP); M.vis($('#db' + i + '1'), t, ts[2] - 0.1, 1e9, POP); M.vis($('#do' + i + '1'), t, ts[2] + 0.25, 1e9, POP); M.vis($('#db' + i + '2'), t, ts[2] + 0.4, 1e9, POP); PUC.write($('#df' + i), t, ts[2] + 0.7, 0.7); });
-    M.vis($('#dvP'), t, wt('C6', 'metre') - 0.1, 1e9, POP);
+    M.vis($('#cd'), t, T0('R1') - 0.1, out, { dx: 60, dy: 0, ...o });
+    CH.forEach((_, i) => M.vis($('#ch' + i), t, tCh[i] - 0.1, 1e9, POP));
+    const sp = $('#ch4'), d4 = M.io((t - tCh[4]) / 0.3); sp.style.background = mix(C.soft, C.ink, d4); sp.style.color = mix(C.ink, '#FFFFFF', d4);
+    [[0, wt('R3', 'base')], [2, wt('R3', 'base', 1)], [4, wt('R4', 'derived')]].forEach(([i, tt]) => { M.vis($('#ct' + i), t, tt - 0.1, 1e9, POP); if (i < 4) { const b = $('#ch' + i), on = M.io((t - tt) / 0.3); b.style.background = mix(C.soft, C.ac2, on); } });
+    PUC.write($('#chU'), t, wt('R4', 'derived') + 0.4, 0.8);
+    M.vis($('#chP'), t, wt('R4', 'derived') + 1.2, 1e9, POP);
+  }
+
+  /* K: side by side, then pause and think */
+  const kOn = t >= tK1 - 0.1 && t < tV1 + 0.1; M.hide($('#sK'), !kOn);
+  if (kOn) {
+    const out = OUT('K3');
+    M.vis($('#kb'), t, tK1 + 0.1, out, { dx: -60, dy: 0, ...o });
+    M.draw(kbl, t, wt('K1', 'read') - 0.2, 0.4); M.vis(kbr, t, wt('K1', 'straight'), 1e9, POP); M.vis($('#kbC'), t, wt('K1', 'ruler') - 0.1, 1e9, POP);
+    M.vis($('#kd'), t, T0('K2') - 0.1, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#exK'), t, T0('K2') + 0.3, 1e9, { dy: 8 });
+    M.vis($('#kd0'), t, wt('K2', 'length') - 0.1, 1e9, POP); M.vis($('#kd1'), t, wt('K2', 'time') - 0.1, 1e9, POP);
+    PUC.write($('#kdF'), t, wt('K2', 'divide') - 0.2, 0.8); M.vis($('#kdC'), t, wt('K2', 'divide') + 0.5, 1e9, POP);
+    M.vis($('#th1'), t, tK3 + 0.05, OUT('V1'), { dy: 36, ...o });
+    th1(t, { tin: tK3, tOpts: wt('K3', 'base') - 0.1, tCount: T1('K3') + 0.05, dur: 3, tAns: T0('K4') - 0.02, tWhy: wt('K4', 'seven') });
   }
 
   /* V: scalars and vectors, push a box */
   const vOn = t >= tV1 - 0.1 && t < tG1 + 0.1; M.hide($('#sV'), !vOn);
   if (vOn) {
-    const out = OUT('G1');
+    const out = OUT('V6');
     M.vis($('#vr'), t, tV1 + 0.1, out, { dx: 60, dy: 0, ...o });
     M.vis($('#cS'), t, T0('V2') - 0.05, 1e9, { dy: 24 }); M.vis($('#cV'), t, T0('V3') - 0.05, 1e9, { dy: 24 });
-    tCs.forEach((tt, i) => M.vis($('#cs' + i), t, tt - 0.1, 1e9, POP)); tCv.forEach((tt, i) => M.vis($('#cv' + i), t, tt - 0.1, 1e9, POP));
+    M.vis($('#csL'), t, wt('V2', 'direction') + 0.2, 1e9, { dy: 8 }); M.vis($('#cvL'), t, wt('V3', 'Displacement') - 0.2, 1e9, { dy: 8 });
+    [0, 1, 2].forEach(i => M.vis($('#cs' + i), t, wt('V2', 'direction') + 0.3 + i * 0.12, 1e9, POP)); tCv.forEach((tt, i) => M.vis($('#cv' + i), t, tt - 0.1, 1e9, POP));
+    M.vis($('#th2'), t, tV6 + 0.05, OUT('G1'), { dy: 36, ...o });
+    th2(t, { tin: tV6, tOpts: wt('V6', 'scalar') - 0.1, tCount: T1('V6') + 0.05, dur: 3, tAns: T0('V7') - 0.02, tWhy: wt('V7', 'Velocity') });
     M.vis($('#vs'), t, tV1 + 0.25, out, { dx: -60, dy: 0, ...o });
     const bx = bxTr(t); attr(box, 'x', bx.toFixed(1));
     ghostB.forEach((gb, k) => { const gx = bxTr(t - 0.12 * (k + 1)), mv = Math.abs(bx - gx) > 3; attr(gb, 'x', gx.toFixed(1)); gb.style.opacity = mv ? [0.3, 0.2, 0.12][k] : 0; });
@@ -316,7 +364,7 @@ M.on(t => {
     [0, 1].forEach(r => [0, 1].forEach(c => { const el = $('#ce' + r + c); M.vis(el, t, tG1 + 0.3 + (r * 2 + c) * 0.08, 1e9, { dy: 16 }); }));
     SQ.forEach(([, r, c], i) => { M.vis($('#sq' + i), t, tSq[i] - 0.1, 1e9, { dy: -40, sp: M.SOFT, fade: 0.1 }); });
     [[0, 0, tSq[0]], [1, 0, tSq[2]], [1, 1, tSq[4]]].forEach(([r, c, tt]) => { const on = M.io((t - tt) / 0.3); $('#ce' + r + c).style.background = mix(C.soft, C.ac2, on); });
-    M.vis($('#empty'), t, wt('G6', 'empty') - 0.1, 1e9, POP);
+    M.vis($('#empty'), t, wt('G5', 'empty') - 0.1, 1e9, POP);
   }
 
   /* W: worked example */
@@ -356,7 +404,12 @@ M.on(t => {
 
   /* F: formula card + NEXT */
   const fOn = t >= tF; M.hide($('#sF'), !fOn);
-  if (fOn) { fc(t, { tin: tF + 0.1, tLines: [wt('F1', 'Q') - 0.1, wt('F1', 'Q') + 0.6, wt('F1', 'seven') - 0.1, wt('F1', 'scalars') - 0.1], tShot: wt('F1', 'card') }); nx(t, tN - 0.05); }
+  if (fOn) {
+    fc(t, { tin: tF + 0.1, tout: tY - 0.3, tLines: [tF + 0.4, tF + 0.9, tF + 1.4, tF + 1.9], tShot: wt('F1', 'Screenshot') });
+    M.vis($('#yq'), t, tY - 0.05, 1e9, { dy: 36 });
+    tYq.forEach((tt, i) => M.vis($('#yr' + i), t, tt - 0.1, 1e9, { dx: -24, dy: 0 }));
+    nx(t, tN - 0.05);
+  }
   caps(t);
 });
 

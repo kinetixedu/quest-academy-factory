@@ -15,6 +15,15 @@ Verified 20 Oct 2026: Class 11 Ch 1 against the rationalised text (keph101: 1.1 
 ### Chapter 1 note: errors and instruments are syllabus, not current NCERT text
 The rationalised NCERT chapter dropped the old sections on accuracy and precision, least count and errors in measurement (it keeps significant figures and the uncertainty in calculated results, 1.3.3). These topics stay in the NTA syllabus for both exams (JEE Main and NEET 2026, Unit 1 "Physics and Measurement": units, SI units, fundamental and derived units, least count, significant figures, errors in measurements, dimensions, dimensional analysis and its applications; plus the experimental skills unit with vernier callipers and screw gauge). Episodes 13-17 therefore follow the NTA syllabus wording and the standard error rules; keep the chip `CH 1 UNITS AND MEASUREMENT` and never claim "NCERT says" for content that is not in the current NCERT text.
 
+## Amjad's Ep 1 feedback (20 Oct 2026) - binding for every PUC Physics episode
+1. Opening (first 10-15 s) creates a reason to keep watching: a curiosity question that links everyday cases to the idea ("How can a doctor, a shopkeeper and a student all use the same idea?"), then the cast hook. Never open with a definition.
+2. Explain the reasoning, not only the category: show WHY (speed = distance / time; distance is base, time is base, so speed is derived), with each link tagged on screen.
+3. Thinking pauses: 1-2 "Pause and think" checks inside the lesson (PUC.think, script line pause 3.0-3.2 s, silent ring): ask, pause, reveal the answer AND the reason.
+4. Hard distinctions get a side-by-side comparison with one simple example each (e.g. base: length off a ruler vs derived: speed = 100 m / 20 s; scalar: 5 kg of rice vs vector: a 10 N push), followed by a question that tests the difference.
+5. Strong ending: recap card (pinned, SCREENSHOT THIS, held 3 s) -> "Can you answer these without help?" card with three questions (no answers) -> NEXT strip with a curiosity teaser for the next lesson -> brand outro.
+6. No blue left border (the world's .edge is off). Check every derivation/list row for alignment (avoid ids that collide with world ids such as #st1/#st2).
+Length stays 4:00-6:00 of voice.
+
 ## The cast (shared PUC canon, assets/illustrations/puc/)
 - **Aarav**, 17, PCME, JEE. Curious about machines, circuits and numbers; rides a bicycle to college. Hook lead for mechanics, measurement with instruments, electricity.
 - **Diya**, 17, PCMB, NEET. Curious about the body, plants and kitchen chemistry; wants to be a doctor. Hook lead for topics close to the body or the kitchen.

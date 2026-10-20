@@ -40,6 +40,7 @@ API (`PUC.`)
   - `where(card, {on: [...verified only], type})` -> fn(t, {tin, tLight: [...], tType}). Chips: JEE MAIN, JEE ADVANCED, NEET, PUC BOARDS. Light only what past-paper analysis verifies; otherwise light none and give only the type of question.
   - `mcq(card, {pat, q, opts, right, qW, optW, optY})` -> fn(t, {tin, tOpts, tCount, tAns}). 5-second ring from tCount (set the Q line's pause so tAns >= tCount + 5). Sound: `PUC.mcqSfx(tCount, tAns)` (3 ticks on the last 3 seconds + correct chime).
   - `solution(card, [[html], ...], {dy})` -> fn(t, tin, [times]).
+  - `think(card, {q, opts: [a, b], right, why})` -> fn(t, {tin, tOpts, tCount, dur, tAns, tWhy}): "Pause and think" check inside the lesson (silent 3 s ring; give the script line a 3.0-3.2 s pause). Use 1-2 per episode after a side-by-side comparison.
   - `fcard(host, {x, y, w, h, title, lines})` -> fn(t, {tin, tLines, tShot}): pinned formula card with "SCREENSHOT THIS", hold 3 s.
   - `next(host, {label, topic})` -> fn(t, tin).
 
