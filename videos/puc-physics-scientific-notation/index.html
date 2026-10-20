@@ -1,0 +1,172 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 12 - Scientific Notation</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 12: scientific notation (Motion notebook, notation bench) ===== */
+:root{--u:#7A4FE0;--f:#D9731A}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.u{color:var(--u)}.a{color:var(--ac)}
+sup{font-size:.6em;vertical-align:.75em;line-height:0}
+/* title tiles + hook */
+.job{position:absolute;top:724px;width:520px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:16px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.job .jv{position:absolute;left:108px;top:44px;font:600 36px 'IBM Plex Mono';white-space:nowrap}
+.hr{position:absolute;left:36px;width:712px;height:150px;border-radius:14px;background:var(--soft)}
+.hr i{position:absolute;left:20px;top:20px;width:64px;height:64px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.hr .jn{position:absolute;left:104px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.hr .jw{position:absolute;left:104px;top:62px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.hr .jv{position:absolute;left:24px;top:100px;font:600 34px/1 'IBM Plex Mono';white-space:nowrap}
+.hr .zc{position:absolute;right:20px;top:22px;height:40px;padding:0 14px;border-radius:9px;background:#fff;display:flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;color:var(--red);white-space:nowrap}
+#note{position:absolute;left:392px;top:300px;width:330px;height:136px;background:#FFFDF6;border-radius:6px;box-shadow:0 8px 20px rgba(22,33,62,.22);padding:18px 22px}
+#note .nt1{font:600 15px 'IBM Plex Mono';letter-spacing:.1em;color:var(--mute)}
+#note .nt2{font:700 40px Caveat;color:var(--ink);margin-top:6px;white-space:nowrap}
+.wq{position:absolute;top:494px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap}
+/* P: the form */
+#form{position:absolute;left:0;width:784px;top:120px;text-align:center;font-size:120px;white-space:nowrap}
+.brk{position:absolute;top:290px}
+.bl{position:absolute;top:330px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.bl2{position:absolute;top:360px;font:500 22px Poppins;color:var(--ink2);white-space:nowrap}
+.fr{position:absolute;left:36px;width:712px;height:64px;border-radius:12px;background:var(--soft)}
+.fr .fn{position:absolute;left:22px;top:12px;font:600 32px 'IBM Plex Mono';white-space:nowrap}
+.fr .fw{position:absolute;left:200px;top:18px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.fr .mk{position:absolute;right:16px;top:14px;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.pw{position:absolute;top:470px;height:64px;padding:0 24px;border-radius:12px;background:#EFE9FC;color:var(--u);display:flex;align-items:center;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+/* bench */
+#ex{position:absolute;left:0;width:784px;top:380px;text-align:center;font:600 46px 'IBM Plex Mono';white-space:nowrap}
+#hopC{position:absolute;left:36px;top:470px;height:56px;padding:0 20px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+#slow{position:absolute;right:36px;top:470px}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:136px}
+.st .n{position:absolute;left:0;top:6px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:40px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:72px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+.hn{position:absolute;font:600 44px 'IBM Plex Mono';white-space:nowrap;letter-spacing:.02em}
+.hres{position:absolute;font-size:40px;white-space:nowrap}
+/* side by side */
+.sbv{position:absolute;left:36px;top:356px;font:600 40px 'IBM Plex Mono';white-space:nowrap}
+.sbk{position:absolute;left:36px;top:420px;font-size:44px;white-space:nowrap}
+/* order of magnitude */
+.om{position:absolute;left:36px;font-size:38px;white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+#so .sol .sx .katex{font-size:1.2em}
+#mq .mq{font-size:31px}
+#mq .mq .katex{font-size:1.1em}
+#mq .opt .ot .katex{font-size:1em}
+#wl .sol .sx{font-size:34px}
+#wq{position:absolute;left:36px;top:70px;font:600 27px/1.38 Poppins;width:712px}
+#tmr{position:absolute;left:36px;top:470px;height:64px;padding:0 22px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 32px 'IBM Plex Mono';white-space:nowrap}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:31px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 1 UNITS AND MEASUREMENT</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Scientific <span class="acc">Notation</span></div>
+    <div id="sub">Explained on one notation bench</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: huge and tiny + Aarav's notebook -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">HUGE AND TINY · ONE SHORT LINE?</div><div id="hrs"></div>
+        <div class="pillp bad" id="hjP" style="left:36px;top:470px">Too many zeros to count</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV'S NOTEBOOK · SPEED OF LIGHT</div>
+        <div id="hdF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg" style="position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px">
+        <div id="note"><div class="nt1">SPEED OF LIGHT</div><div class="nt2">c = 300000000 m/s</div></div>
+        <div id="wqs"></div></div>
+    </div>
+
+    <!-- P: the form a x 10^b -->
+    <div id="sP">
+      <div class="card full" id="pf"><div class="lbl" style="left:36px;top:30px">SCIENTIFIC NOTATION · THE FORM</div>
+        <div id="form"><span id="fA"></span><span id="fX"></span><span id="fB"></span></div>
+        <svg class="brk" id="brk" width="784" height="40"><path id="bk0" d="" fill="none" stroke="#16213E" stroke-width="3" stroke-linecap="round"/><path id="bk1" d="" fill="none" stroke="#7A4FE0" stroke-width="3" stroke-linecap="round"/></svg>
+        <div class="bl" id="bl0">FRONT NUMBER</div><div class="bl u" id="bl1">POWER</div>
+        <div class="bl2" id="bl20">1 ≤ a &lt; 10</div><div class="bl2" id="bl21">whole number</div>
+        <div id="pws"></div></div>
+      <div class="card rf" id="pc"><div class="lbl" style="left:36px;top:30px">IS THE FRONT NUMBER ALLOWED?</div><div id="frs"></div>
+        <div class="pillp ac" id="pcP" style="left:36px;top:490px">Exactly one digit before the point</div></div>
+    </div>
+
+    <!-- S + M: the notation bench (sim + readout + graph) -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" id="simL" style="left:36px;top:30px">NOTATION BENCH · SPEED OF LIGHT</div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="ex"></div>
+        <div id="hopC">HOPS <span id="hopN">0</span></div>
+        <div class="tag" id="slow">SLOW-MO REPLAY · 0.25x</div></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro" id="roG" style="left:36px;top:74px;width:712px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">POWER <i style="font-family:Poppins;text-transform:none">b</i> VS NUMBER OF HOPS</div><svg id="grS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- D: the rule, 3 steps + count the hops -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE RULE · 3 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">COUNT THE HOPS</div><svg id="drS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="hn" id="dn0" style="left:60px;top:150px">300000000</div><div class="hres" id="dr0" style="left:60px;top:226px"></div>
+        <div class="hn" id="dn1" style="left:60px;top:390px">0000000000106</div><div class="hres" id="dr1" style="left:60px;top:466px"></div></div>
+    </div>
+
+    <!-- K: side by side + think -->
+    <div id="sK">
+      <div class="card full" id="kb"><div class="lbl" style="left:36px;top:30px">BIG · DIAMETER OF THE EARTH</div><svg id="kbS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="sbv" id="kbV">12800000 m</div><div class="sbk" id="kbK"></div>
+        <div class="pillp good" id="kbC" style="left:36px;top:504px">Bigger than 1: positive power</div></div>
+      <div class="card rf" id="ks"><div class="lbl" style="left:36px;top:30px">SMALL · DIAMETER OF A HYDROGEN ATOM</div><svg id="ksS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="sbv" id="ksV">0.000000000106 m</div><div class="sbk" id="ksK"></div>
+        <div class="pillp" id="ksC" style="left:36px;top:504px;background:#EFE9FC;color:var(--u)">Smaller than 1: negative power</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- O: order of magnitude -->
+    <div id="sO">
+      <div class="card full" id="ol"><div class="lbl" style="left:36px;top:30px">ORDER OF MAGNITUDE · THE RULE</div><svg id="olS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="om" id="om0" style="top:390px"></div><div class="om" id="om1" style="top:470px"></div></div>
+      <div class="card rf" id="or"><div class="lbl" style="left:36px;top:30px">THE POWERS OF TEN LADDER</div><svg id="orS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- J: quick check -->
+    <div id="sJ"><div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div></div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">Sunlight travels about 1.5 × 10<sup>11</sup> m to reach the earth at 3 × 10<sup>8</sup> m/s. How long does it take?</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">SIMULATION · LIGHT FROM THE SUN</div><svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="tmr"><i style="font-family:Poppins">t</i> = <span id="tmN">0</span> s</div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tpS" width="520" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + questions + NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">One digit, then a <span class="acc">power of ten</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
