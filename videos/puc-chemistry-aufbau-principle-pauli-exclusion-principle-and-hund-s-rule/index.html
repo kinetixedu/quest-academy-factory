@@ -1,0 +1,152 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Chemistry Ep 24 - Aufbau Principle, Pauli Exclusion Principle and Hund's Rule</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Chemistry Ep 24: Aufbau, Pauli and Hund's rule (Molecule bench) ===== */
+:root{--n:#0FA3A3;--l:#7A4FE0;--m:#B7791F;--e:#C8461B}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.n{color:var(--n)}.l{color:var(--l)}.m{color:var(--m)}.e{color:var(--e)}
+/* title card stories */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;right:36px;height:112px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:20px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:22px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:66px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.adr{position:absolute;right:24px;top:30px;height:52px;padding:0 16px;border-radius:10px;background:var(--ink);color:#fff;display:flex;align-items:center;font:600 22px 'IBM Plex Mono';letter-spacing:.04em;white-space:nowrap}
+.wq{position:absolute;top:494px;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* orbital + four numbers */
+#odef{position:absolute;left:36px;top:80px;height:64px;padding:0 22px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:14px;font:600 26px Poppins;white-space:nowrap}
+.qr{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.qr .qs{position:absolute;left:22px;top:14px;width:68px;height:68px;border-radius:14px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:40px}
+.qr .qt{position:absolute;left:112px;top:16px;font:700 30px Poppins;white-space:nowrap}
+.qr .qd{position:absolute;left:112px;top:58px;font:500 19px Poppins;color:var(--mute);white-space:nowrap}
+.qr .qk{position:absolute;right:24px;top:34px;font:600 20px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* bench: counter + rules */
+.slot{position:absolute;top:74px;width:170px;height:176px;border-radius:14px;background:var(--soft)}
+.slot .sy{position:absolute;left:0;right:0;top:12px;text-align:center;font-size:34px}
+.slot .sv{position:absolute;left:0;right:0;top:60px;text-align:center;font:600 50px 'IBM Plex Mono';white-space:nowrap}
+.slot .sn{position:absolute;left:0;right:0;top:138px;text-align:center;font:600 14px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.rp{position:absolute;inset:0}
+.rp .rf2{position:absolute;left:36px;top:78px;font-size:44px;white-space:nowrap}
+.rp .chs{position:absolute;left:36px;top:170px;display:flex;gap:12px}
+.rp .chs span{height:60px;padding:0 16px;border-radius:12px;background:var(--soft);display:inline-flex;align-items:center;gap:10px;font:700 28px Poppins;white-space:nowrap}
+.rp .chs span em{font:600 17px 'IBM Plex Mono';font-style:normal;letter-spacing:.06em;color:var(--mute)}
+.btag{position:absolute;height:40px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;gap:8px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font-size:30px}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:30px}
+#dl .sol .sx,#wl .sol .sx{font-size:34px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .nn{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+/* ep24 */
+.rr{position:absolute;left:36px;width:712px;height:136px;border-radius:14px;background:var(--soft)}
+.rr .nn{position:absolute;left:22px;top:22px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.rr .rn{position:absolute;left:92px;top:18px;font:700 32px Poppins;white-space:nowrap}
+.rr .rs{position:absolute;left:92px;top:70px;font:500 23px/1.35 Poppins;color:var(--ink2);white-space:nowrap}
+.rc{position:absolute;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:inline-flex;align-items:center;gap:10px;font:600 22px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.mob{display:inline-flex;gap:8px;vertical-align:middle}
+.mob i{display:flex;align-items:center;justify-content:center;gap:2px;width:60px;height:60px;border:3px solid currentColor;border-radius:9px;background:#fff}
+#cfg{position:absolute;left:36px;top:150px;font-size:52px;white-space:nowrap}
+#elc{position:absolute;left:36px;top:70px;display:flex;align-items:center;gap:16px}
+#elc .el{width:64px;height:64px;border-radius:50%;background:var(--ac);color:#fff;display:flex;align-items:center;justify-content:center;font:700 26px Poppins}
+#elc span{font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+#unp{position:absolute;right:36px;top:76px;font:600 20px 'IBM Plex Mono';letter-spacing:.06em;color:var(--e);white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · CHEMISTRY · CH 2 STRUCTURE OF ATOM</div>
+    <div class="subj" id="subj">MOLECULE BENCH</div>
+    <div id="title">Aufbau, Pauli and <span class="acc">Hund's Rule</span></div>
+    <div id="sub">Explained on one molecule bench</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#0FA3A3" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: three habits + Diya's college -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE HABITS · THREE RULES</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Electrons follow the same three rules</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA'S COLLEGE · BENGALURU</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-corridor.jpg">
+        <div id="wqs"></div>
+        <div class="pillp ink" id="hTz" style="left:36px;top:494px">Which orbital fills first?</div></div>
+    </div>
+
+    <!-- P: energy ladders -->
+    <div id="sP">
+      <div class="card full" id="po"><div id="poIn" class="abs" style="left:0;top:0;width:784px;height:580px"><div class="lbl" style="left:36px;top:30px">HYDROGEN · ENERGY DEPENDS ON n ONLY</div>
+        <svg id="pS1" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div></div>
+      <div class="card rf" id="pm"><div class="lbl" style="left:36px;top:30px">MANY ELECTRONS · ENERGY DEPENDS ON n AND l</div><svg id="pS2" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ink" id="pSh" style="left:36px;top:494px">Inner electrons shield the outer ones</div></div>
+    </div>
+
+    <!-- S: the n + l rule -->
+    <div id="sS">
+      <div class="card full" id="nl"><div id="nlIn" class="abs" style="left:0;top:0;width:784px;height:580px"><div class="lbl" style="left:36px;top:30px">THE n + l RULE</div><div id="nlr"></div>
+        <div class="pillp ac" id="nlP" style="left:36px;top:494px">Lower n + l first · a tie goes to lower n</div></div></div>
+      <div class="card rf" id="ld"><div class="lbl" style="left:36px;top:30px">ENERGY LADDER · FILLING ORDER</div><svg id="lS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- R: the three rules -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">THREE RULES FOR FILLING</div><div id="rrs"></div></div>
+      <div class="card rf" id="rd"><div class="lbl" style="left:36px;top:30px" id="rdL">RULE ONE · AUFBAU</div><svg id="rS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- G: the bench: fill nitrogen, then oxygen -->
+    <div id="sG">
+      <div class="card full" id="bn"><div class="lbl" style="left:36px;top:30px">MOLECULE BENCH · FILLING NITROGEN</div><svg id="bS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rt" id="cf"><div class="lbl" style="left:36px;top:30px">CONFIGURATION</div><div id="elc"><div class="el" id="elS">N</div><span id="elN">NITROGEN · 7 ELECTRONS</span></div><div id="unp"></div><div id="cfg"></div></div>
+      <div class="card rb" id="ru"><div class="lbl" style="left:36px;top:30px">RULE IN PLAY</div><div id="rcs"></div></div>
+      <div class="card wide" id="th1"></div>
+    </div>
+
+    <!-- D: ordering three subshells -->
+    <div id="sD">
+      <div class="card full" id="dl"></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">SORTING BY n + l</div><svg id="dS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq" style="position:absolute;left:36px;top:70px;font:600 29px/1.35 Poppins;width:712px">Phosphorus has 15 electrons. Fill them and count the unpaired ones.</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">PHOSPHORUS · 15 ELECTRONS</div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="fx" id="wCf" style="left:36px;top:330px;font-size:44px"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="620" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Lowest energy first. Two opposite spins per box.</div><div id="st2">Spread out <span class="acc">before you pair</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

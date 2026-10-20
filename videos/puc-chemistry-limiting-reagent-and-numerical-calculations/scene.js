@@ -125,7 +125,7 @@ const wsol = PUC.solution($('#wl'), [
   [K(`\\text{needed } ${H2} = 3 \\times 1.786 \\times 10^3 \\approx 5.36 \\times 10^3`)],
   [K(`${H2}\\text{ limiting}: \\; ${NH3} = \\tfrac{2}{3} \\times 4.96 \\times 10^3 \\approx 3.3 \\times 10^3\\,\\text{mol}`)],
   [K(`3.3 \\times 10^3 \\times 17\\,\\text{g} \\approx \\textcolor{${NC}}{56\\,\\text{kg}}\\; ${NH3}`)]], { label: 'NCERT WORKED EXAMPLE', y0: 220, dy: 64 });
-const tWs = [T0('W3'), wt('W4', 'Ten'), T0('W5'), T0('W6'), T0('W7')];
+const tWs = [T0('W3'), wt('W4', 'giving'), T0('W5'), T0('W6'), T0('W7')];
 const s2 = $('#wS2'), WU = 104;
 const WBR = [['NEEDED · 5.36 × 10³ mol', 5.36, 'need', 120], ['AVAILABLE · 4.96 × 10³ mol', 4.96, HC, 230], ['NH₃ FORMED · ≈ 3.3 × 10³ mol', 3.307, NC, 370]];
 const wbars = WBR.map(([l, v, c, y]) => ({ l: txt(s2, 36, y - 14, l, { 'font-size': 19, fill: c === 'need' ? C.ink : c, 'font-weight': 600 }), r: c === 'need' ? mk(s2, 'rect', { x: 36, y, height: 60, rx: 10, fill: 'none', stroke: C.ink, 'stroke-width': 3, 'stroke-dasharray': '10 8' }) : mk(s2, 'rect', { x: 36, y, height: 60, rx: 10, fill: c }), v }));
@@ -133,7 +133,7 @@ const shortR = mk(s2, 'rect', { x: 36 + 4.96 * WU, y: 230, width: 0.40 * WU, hei
 const shortT = txt(s2, 36 + 5.36 * WU + 14, 266, 'SHORT', { 'font-size': 18, fill: C.red, 'font-weight': 600 });
 const kgT = txt(s2, 36 + 3.307 * WU + 16, 408, '≈ 56 kg', { 'font-size': 28, fill: NC, 'font-weight': 600 });
 const limP = document.createElement('div'); limP.className = 'pillp bad'; limP.style.cssText = 'left:36px;top:470px'; limP.textContent = 'Hydrogen is the limiting reagent'; $('#wr').appendChild(limP);
-const tWb = [T0('W5'), wt('W4', 'Ten'), wt('W6', 'Two')];
+const tWb = [T0('W5'), wt('W4', 'giving'), wt('W6', 'Two')];
 
 /* ---------- N: practice numerical ---------- */
 const psol = PUC.solution($('#pl'), [
@@ -142,7 +142,7 @@ const psol = PUC.solution($('#pl'), [
   [K(`\\div\\text{ number in front}: \\; 0.5 \\;\\text{vs}\\; \\textcolor{${C.red}}{0.25} \\rightarrow ${O2}\\text{ limiting}`)],
   [K(`${CO2} = 0.25\\,\\text{mol} = 11\\,\\text{g}`)],
   [K(`\\text{left: } 4\\,\\text{g}\\; ${CH4}; \\;\\; 11 + 9 + 4 = 24\\,\\text{g}`)]], { label: 'SOLUTION', y0: 200, dy: 66 });
-const tPs = [wt('P6', 'Eight'), wt('P6', 'Methane'), T0('P7'), T0('P8'), T0('P9')];
+const tPs = [wt('P6', 'Eight'), wt('P6', 'That'), T0('P7'), T0('P8'), T0('P9')];
 const ps = $('#pS'), PU = 27;
 mk(ps, 'line', { x1: 36, y1: 0, x2: 36, y2: 0 });
 const seg = (y, x0, g, c, lab, dim) => { const r = mk(ps, 'rect', { x: 36 + x0 * PU, y, height: 72, width: g * PU - 4, rx: 10, fill: c, opacity: dim ? 0.45 : 1 }); const tx = txt(ps, 36 + x0 * PU + 14, y + 44, lab, { 'font-size': 20, fill: '#fff', 'font-weight': 600 }); return { r, tx, w: g * PU - 4 }; };
@@ -164,7 +164,7 @@ const where = PUC.where($('#wa'), { on: [], type: 'Numerical: two masses given; 
 const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', q: `10 g of ${K(H2)} reacts with 64 g of ${K(O2)} to form water. What mass of water forms?<br><span style="font:500 26px 'IBM Plex Mono';color:var(--mute)">Given: H = 1 u, O = 16 u</span>`, qW: 780,
   opts: ['90 g', '72 g', '74 g', '36 g'], right: 1, optW: 474, optY: 330, optH: 110, optFs: 36 });
 const so = PUC.solution($('#so'), [[K(`${G_(2)}${H2} + ${O2} \\rightarrow ${G_(2)}${H2O}`)], [K(`${H2}\\; \\tfrac{5}{2} = 2.5, \\;\\; ${O2}\\; \\tfrac{2}{1} = \\textcolor{${C.red}}{2}`)], [K(`${O2}\\text{ limiting} \\rightarrow 4\\,\\text{mol}\\; ${H2O}`)], [K(`4 \\times 18 = \\textcolor{${C.ok}}{72\\,\\text{g}}`)]], { y0: 100, dy: 112 });
-const tSo = [T0('A2'), T0('A3'), wt('A4', 'Two'), wt('A4', 'Times')];
+const tSo = [T0('A2'), T0('A3'), wt('A4', 'So'), wt('A4', 'seventy')];
 const fc = PUC.fcard($('#sF'), { x: 410, y: 262, w: 1100, h: 470, title: 'Recap · limiting reagent', y0: 96, dy: 74, txt: [0, 1, 1, 1, 1],
   lines: [K(EQ), '<b>Limiting reagent</b>: used up first; it fixes how much product forms', '<b>Excess reagent</b>: left over when the reaction stops', '<b>Method</b>: grams → moles → ÷ number in front → smallest is limiting', '<b>Trap</b>: compare moles ÷ coefficients, never raw grams or raw moles'] });
 const YQ = ['What is a limiting reagent, in one line?', 'Why must you compare moles, not grams, to find it?', '28 g of N₂ meets 8 g of H₂. Which one is left over?'];
@@ -211,7 +211,7 @@ M.on(t => {
     M.vis($('#hk'), t, tH3 - 0.1, out, { dx: 60, dy: 0, ...o });
     M.vis($('#hkImg'), t, tH3 + 0.1, 1e9, { dy: 20 }); M.vis($('#hdF'), t, tH3 + 0.2, 1e9, { ...POP, sc: 0.5 });
     KIT.forEach((_, i) => { const el = $('#wq' + i); M.vis(el, t, tKit[i] - 0.1, tH5 - 0.1, { ...POP, outDur: 0.25, ody: 0 }); const on = i === 1 ? M.io((t - wt('H4', 'two') + 0.1) / 0.3) : 0; setBg(el, mix(C.soft, C.redBg, on)); el.style.color = mix(C.ink, C.red, on); });
-    M.vis($('#hTz'), t, wt('H5', 'limit', 1) - 0.15, 1e9, POP);
+    M.vis($('#hTz'), t, wt('H5', 'Reactions') - 0.15, 1e9, POP);
   }
 
   /* P: definitions + bicycle model */
@@ -321,7 +321,7 @@ M.on(t => {
   const nOn = t >= tP5 - 0.1 && t < tX1 + 0.1; M.hide($('#sN'), !nOn);
   if (nOn) {
     const out = OUT('X1');
-    M.vis($('#pl'), t, tP5 + 0.05, out, { dx: -60, dy: 0, ...o }); M.vis($('#pl .pr'), t, wt('P5', 'extra') - 0.1, 1e9, POP);
+    M.vis($('#pl'), t, tP5 + 0.05, out, { dx: -60, dy: 0, ...o }); M.vis($('#pl .pr'), t, wt('P5', 'practice') - 0.1, 1e9, POP);
     M.vis($('#pq2'), t, T0('P6') - 0.1, 1e9, { dy: 14 });
     psol(t, tP5, tPs);
     M.vis($('#pr2'), t, T0('P6') + 0.2, out, { dx: 60, dy: 0, ...o });

@@ -1,0 +1,145 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Chemistry Ep 27 - Modern Periodic Law</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Chemistry Ep 27: modern periodic law (Molecule bench) ===== */
+:root{--n:#0FA3A3;--h:#16213E;--e:#C8461B;--g:#B7791F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.n{color:var(--n)}.e{color:var(--e)}.g{color:var(--g)}
+/* title card stories */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;right:36px;height:112px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:20px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:22px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:66px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.el{position:absolute;width:64px;height:64px;border-radius:12px;display:flex;align-items:center;justify-content:center;font:700 26px Poppins;color:#fff;background:var(--n)}
+.elw{position:absolute;right:24px;top:24px;display:flex;align-items:center;gap:12px}
+.elw .el{position:static}
+.elw span{font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.wq{position:absolute;top:494px;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* identity tile */
+#idT{position:absolute;left:36px;top:84px;width:250px;height:250px;border-radius:22px;border:4px solid var(--n);background:#fff}
+#idT .z{position:absolute;left:22px;top:14px;font:600 36px 'IBM Plex Mono';color:var(--n)}
+#idT .s{position:absolute;left:0;right:0;top:56px;text-align:center;font:700 110px/1 Poppins;color:var(--ink)}
+#idT .nm{position:absolute;left:0;right:0;top:190px;text-align:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.idr{position:absolute;left:318px;width:430px;height:72px;border-radius:14px;background:var(--soft)}
+.idr .a{position:absolute;left:20px;top:10px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.idr .b{position:absolute;left:20px;top:32px;font:600 24px Poppins;white-space:nowrap}
+#idEq{position:absolute;left:36px;top:388px;font-size:36px;white-space:nowrap}
+/* Moseley card */
+.hq{position:absolute;left:64px;font:600 60px Poppins;letter-spacing:-.02em;white-space:nowrap}
+#hHr{position:absolute;left:64px;right:64px;top:352px;height:2px;background:var(--line)}
+#hN{position:absolute;left:64px;top:380px;font:700 40px Poppins;white-space:nowrap}
+#hB{position:absolute;top:396px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.btag{position:absolute;height:40px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;gap:8px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.pane{position:absolute;inset:0}
+#lw0{position:absolute;left:36px;top:80px;width:712px;font:600 34px/1.32 Poppins}
+.cfr{position:absolute;left:36px;width:712px;height:64px;border-radius:12px;background:var(--soft)}
+.cfr .s{position:absolute;left:22px;top:10px;font:700 32px Poppins}
+.cfr .c{position:absolute;left:120px;top:14px;font:600 28px 'IBM Plex Mono';white-space:nowrap}
+.cfr .k{position:absolute;right:22px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.orl{position:absolute;left:36px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* roots */
+.rt{position:absolute;width:128px;height:96px;border-radius:14px;background:var(--soft)}
+.rt .d{position:absolute;left:14px;top:8px;font:600 28px 'IBM Plex Mono';color:var(--ink)}
+.rt .r{position:absolute;left:0;right:0;top:44px;text-align:center;font:700 28px Poppins;color:var(--n)}
+.rt .l{position:absolute;right:12px;top:12px;font:600 16px 'IBM Plex Mono';color:var(--mute)}
+#wq{position:absolute;left:36px;top:70px;font:600 28px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:30px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 26px Poppins}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:28px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .nn{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · CHEMISTRY · CH 3 CLASSIFICATION OF ELEMENTS AND PERIODICITY IN PROPERTIES</div>
+    <div class="subj" id="subj">MOLECULE BENCH</div>
+    <div id="title">Modern Periodic <span class="acc">Law</span></div>
+    <div id="sub">Explained on one molecule bench</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#0FA3A3" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE LISTS · ONE RIGHT NUMBER</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">The right number keeps the order</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">COLLEGE CORRIDOR · BENGALURU</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-corridor.jpg">
+        <div id="wqs"></div>
+        <div class="pillp ink" id="hTz" style="left:36px;top:494px">Name an element nobody has made?</div></div>
+    </div>
+
+    <!-- P: inside an atom + identity card -->
+    <div id="sP">
+      <div class="card full" id="pq"><div class="lbl" style="left:36px;top:30px">MOLECULE BENCH · INSIDE AN ATOM</div>
+        <svg id="aS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="pw"><div class="lbl" style="left:36px;top:30px">ATOMIC NUMBER · THE IDENTITY CARD</div>
+        <div id="idT"><div class="z" id="idZ"></div><div class="s" id="idS"></div><div class="nm" id="idN"></div></div>
+        <div class="idr" id="idr0" style="top:84px"><div class="a">HYDROGEN</div><div class="b">1 proton · Z = 1</div></div>
+        <div class="idr" id="idr1" style="top:172px"><div class="a">CARBON</div><div class="b">6 protons · Z = 6</div></div>
+        <div class="idr" id="idr2" style="top:260px"><div class="a">CARBON-12, CARBON-13</div><div class="b">mass changes · Z stays 6</div></div>
+        <div id="idEq"></div>
+        <div class="pillp ac" id="idP" style="left:36px;top:494px">Z changes = a new element</div></div>
+    </div>
+
+    <!-- U: Moseley -->
+    <div id="sU"><div class="card wide" id="hof"><div class="lbl" style="left:64px;top:40px">1913 · THE TRUE KEY</div><div id="hqI" style="position:absolute;left:64px;top:96px"></div>
+      <div class="hq" id="hq0" style="top:104px;left:140px">Atomic number is more basic</div>
+      <div class="hq" id="hq1" style="top:190px;left:140px">than <span id="hqT">atomic mass.</span></div>
+      <div id="hHr"></div><div id="hN">Henry Moseley</div><div id="hB">ENGLISH PHYSICIST · X-RAY SPECTRA OF THE ELEMENTS, 1913</div>
+      <div class="pillp ac" id="hP" style="left:64px;top:470px">It gave us the modern periodic law</div></div></div>
+
+    <!-- S: X-ray bench + graph -->
+    <div id="sS">
+      <div class="card full" id="bn"><div class="lbl" style="left:36px;top:30px" id="bnL">MOLECULE BENCH · MOSELEY'S X-RAY TEST</div>
+        <div class="pane" id="bnA"><svg id="bS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+        <div class="pane" id="bnB"><div id="lw0">The physical and chemical properties of the elements are periodic functions of their <span class="acc">atomic numbers</span>.</div>
+          <div class="orl" id="orl" style="top:268px">OUTER ARRANGEMENT REPEATS</div><div id="cfrs"></div></div>
+        <div class="pane" id="bnC"><svg id="oS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div></div>
+      <div class="card rf" id="gr"><div class="lbl" style="left:36px;top:30px" id="grL">√ν AGAINST ATOMIC NUMBER</div>
+        <svg id="gS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card wide" id="th1"></div>
+    </div>
+
+    <!-- W: naming Z > 100 -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">Give the IUPAC temporary name and symbol of element 119.</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">IUPAC ROOTS · ONE PER DIGIT</div><div id="rts"></div>
+        <svg id="nS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Atomic number, not atomic mass,</div><div id="st2">is the <span class="acc">true key</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
