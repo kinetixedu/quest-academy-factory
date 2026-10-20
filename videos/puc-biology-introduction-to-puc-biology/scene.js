@@ -256,7 +256,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 02', topic: 'Sugar crystal or
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tDiv - 0.2, 1.1, 1180, 540], [T0('C4') + 0.1, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tDiv - 0.2, 1.08, 1060, 540], [T0('C4') + 0.1, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = 1;
@@ -404,7 +404,7 @@ M.on(t => {
     const tNum = wt('M2', 'about'); M.vis($('#mBig'), t, tNum - 0.1, 1e9, { dy: 12 }); M.count($('#mN'), t, tNum, 1.2, 0, 1.7, v => v.toFixed(1)); M.vis($('#mSrc'), t, tNum + 0.6, 1e9, { dy: 8 });
     PR.forEach((_, i) => { const el = $('#pr' + i), ti = tPr0 + (tPr6 - tPr0) * i / 6; M.vis(el, t, T0('M3') + 0.1 + i * 0.06, 1e9, { dy: 12 });
       const on = M.io((t - ti) / 0.25); el.style.background = i === 6 ? mix(C.soft, C.ac, on) : mix(C.soft, C.ac2, on); el.style.color = i === 6 ? mix(C.ink, '#FFFFFF', on) : C.ink; });
-    M.vis($('#mr'), t, T0('M4') - 0.1, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#mr'), t, wt('M4', 'Mangifera') - 0.7, out, { dx: 60, dy: 0, ...o });
     NM.forEach((n, i) => { M.vis($('#nm' + i), t, n[3] - 0.15, 1e9, { dy: 20 }); M.vis($('#gg' + i), t, n[3] + 0.5, 1e9, POP); M.vis($('#gs' + i), t, n[3] + 0.8, 1e9, POP); });
     [0, 1, 2].forEach(i => M.vis($('#rl' + i), t, T1('M4') + 0.1 + i * 0.15, 1e9, POP));
   }
