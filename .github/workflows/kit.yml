@@ -61,7 +61,10 @@ jobs:
           cp videos/${{ matrix.slug }}/thumbnail.jpg $K/thumbnail.jpg
           cp videos/${{ matrix.slug }}/captions.srt $K/captions-en.srt
       - uses: actions/upload-artifact@v4
-        with: { name: kit-${{ matrix.slug }}, path: kit/, retention-days: 3 }
+        with:
+          name: kit-${{ matrix.slug }}
+          path: kit/
+          retention-days: 3
 
   push:
     needs: build
