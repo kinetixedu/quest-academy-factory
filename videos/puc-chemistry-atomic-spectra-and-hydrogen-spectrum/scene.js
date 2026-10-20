@@ -149,7 +149,7 @@ mk(tl, 'line', { x1: 160, y1: 70, x2: 400, y2: 70, stroke: C.ink, 'stroke-width'
 mk(tl, 'path', { d: 'M280 70 V186', stroke: BAL[0].c, 'stroke-width': 5, 'stroke-linecap': 'round' }); mk(tl, 'path', { d: 'M271 184 L280 200 L289 184 Z', fill: BAL[0].c });
 txt(tl, 150, 76, 'n = 3 · n₂ · STARTS', { 'text-anchor': 'end', 'font-size': 15, fill: N2C, 'font-weight': 700 }); txt(tl, 150, 206, 'n = 2 · n₁ · LANDS', { 'text-anchor': 'end', 'font-size': 15, fill: N1C, 'font-weight': 700 });
 const where = PUC.where($('#wa'), { on: [], type: 'Numericals on the wavelength of a line · which series lies in which region' });
-const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', q: `What is the shortest wavelength in the Lyman series of hydrogen?<br><span style="font:500 24px 'IBM Plex Mono';color:var(--mute)">Given: R = 109 677 cm⁻¹</span>`, qW: 780,
+const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', q: `What is the shortest wavelength in the Lyman series of hydrogen?<br><span style="font:500 24px 'IBM Plex Mono';color:var(--mute)">Given: R = 109 677 cm⁻¹</span>`, qW: 700,
   opts: ['121.6 nm', '656.5 nm', '91.2 nm', '364.7 nm'], right: 2, optW: 474, optY: 330, optH: 110, optFs: 36 });
 const so = PUC.solution($('#so'), [[K(`\\text{shortest } \\lambda: \\; ${n2} = \\infty, \\; ${n1} = 1`)], [K(`\\bar{\\nu} = 109\\,677\\,(1 - 0)\\,\\text{cm}^{-1}`)], [K(`\\lambda = \\frac{1}{109\\,677}\\,\\text{cm}`)], [K(`= \\textcolor{${C.ok}}{91.2\\,\\text{nm}}`)]], { y0: 100, dy: 112 });
 const tSo = [T0('A2'), T0('A3'), wt('A3', 'So'), T0('A4')];

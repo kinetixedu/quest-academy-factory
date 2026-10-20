@@ -90,7 +90,7 @@ const BP = barsIn($('#brP'), PER, 30, 712 / 7), BG = barsIn($('#brG'), GRP, 30, 
 $('#rxA').innerHTML = M.icon('arrowR', 18, C.mute, 2.4); $('#ctA').innerHTML = M.icon('arrowD', 18, C.mute, 2.4);
 const tBarG = [tGr[0] + 0.1, tGr[1], tGr[2], tGr[3], tGr[4]];
 const avD = PUC.avatar($('#bn'), { x: 36, y: 474, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'So fluorine wins every tug of war!' });
-const th1 = PUC.think($('#th1'), { q: `Which bond has the bigger tug of war?`, opts: [K(`${N_('Na')}{-}${N_('Cl')}`), K(`${N_('C')}{-}${N_('Cl')}`)], right: 0,
+const th1 = PUC.think($('#th1'), { q: `Which bond has the bigger tug of war?`, opts: ['Na-Cl', 'C-Cl'], right: 0,
   why: `Na-Cl: ${K(`${G_('3.0')} - ${G_('0.9')} = ${G_('2.1')}`)} &nbsp;·&nbsp; C-Cl: ${K(`${G_('3.0')} - ${G_('2.5')} = ${G_('0.5')}`)}` });
 
 /* ---------- D: link by link ---------- */
@@ -155,9 +155,9 @@ const avA = PUC.avatar($('#cp'), { x: 36, y: 470, who: 'Aarav', face: IMG + 'aar
 
 /* ---------- X / Q / F: exam segment ---------- */
 const trap = PUC.trap($('#trap'), { wrong: `Cl has the most negative ${K('\\Delta_{eg}H')}, so Cl is the most electronegative`, right: `${K(N_('F'))} is the most electronegative, ${K(G_('4.0'))}: the pull inside a bond` });
-$('#trap').insertAdjacentHTML('beforeend', `<div id="tmini" style="position:absolute;right:36px;top:84px;width:380px;display:flex;flex-direction:column;gap:14px">
-  <div id="tm0" style="height:72px;border-radius:12px;background:var(--soft);display:flex;align-items:center;justify-content:space-between;padding:0 18px;font:600 15px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute)">FREE ATOM, Δ<sub>eg</sub>H<b style="font:600 24px 'IBM Plex Mono';color:var(--ink)">Cl −349 · F −328</b></div>
-  <div id="tm1" style="height:72px;border-radius:12px;background:var(--okBg);display:flex;align-items:center;justify-content:space-between;padding:0 18px;font:600 15px 'IBM Plex Mono';letter-spacing:.06em;color:#1F6B3F">IN A BOND, PULL<b style="font:600 24px 'IBM Plex Mono';color:#1F6B3F">F 4.0 · Cl 3.0</b></div></div>`);
+$('#trap').insertAdjacentHTML('beforeend', `<div id="tmini" style="position:absolute;right:36px;top:84px;width:430px;display:flex;flex-direction:column;gap:14px">
+  <div id="tm0" style="height:72px;border-radius:12px;background:var(--soft);display:flex;align-items:center;justify-content:space-between;padding:0 18px;font:600 15px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute)">FREE ATOM · Δ<sub>eg</sub>H<b style="font:600 21px 'IBM Plex Mono';color:var(--ink)">Cl −349 · F −328</b></div>
+  <div id="tm1" style="height:72px;border-radius:12px;background:var(--okBg);display:flex;align-items:center;justify-content:space-between;padding:0 18px;font:600 15px 'IBM Plex Mono';letter-spacing:.06em;color:#1F6B3F">IN A BOND · PULL<b style="font:600 21px 'IBM Plex Mono';color:#1F6B3F">F 4.0 · Cl 3.0</b></div></div>`);
 const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'NEET'], type: 'Ordering across a period, and statement questions that pair it with oxidation states' });
 const pr2 = s => K(s.split('-').map((e, i) => i ? N_(e) : H_(e)).join('{-}'));
 const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', q: `On the Pauling scale, which pair has the <b>largest</b> electronegativity difference?`, qW: 780,
@@ -175,7 +175,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 35', topic: 'Can oxygen be +2
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('S3', 'smaller') - 0.2, 1.1, 640, 560], [wt('S4', 'Carbon') + 0.4, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('S3', 'smaller') - 0.2, 1.06, 760, 560], [wt('S4', 'Carbon') + 0.4, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};
@@ -218,7 +218,7 @@ M.on(t => {
     const out = OUT('U1');
     M.vis($('#pq'), t, tP1 + 0.1, out, { dx: -60, dy: 0, ...o });
     { const sh = M.spring(t - tP5 + 0.25, M.HEAVY); snap($('#pq'), 'width', (sh >= 1 ? 784 : M.lerp(1600, 784, sh)).toFixed(1) + 'px'); }
-    M.vis($('#mdef'), t, wt('P3', 'Electronegativity') - 0.1, 1e9, POP);
+    M.vis($('#mdef'), t, wt('P1', 'electronegativity') - 0.1, 1e9, POP);
     QR.forEach((_, i) => { const el = $('#qr' + i); M.vis(el, t, tQr[i] - 0.1, 1e9, { dy: 16 }); const nx2 = i < 3 ? tQr[i + 1] : tP5; const on = M.io((t - tQr[i]) / 0.25) * (1 - M.io((t - nx2) / 0.25)); setBg(el, mix(C.soft, C.ac2, on)); });
     M.vis($('#pw'), t, tP5 - 0.05, out, { dx: 60, dy: 0, ...o });
     const aIn = M.clamp((t - tP5 - 0.1) / 0.3);

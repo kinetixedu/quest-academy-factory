@@ -216,9 +216,9 @@ M.on(t => {
   }
 
   /* S + B */
-  const sOn = t >= tS1 - 0.1 && t < tD1 + 0.1; M.hide($('#sS'), !sOn);
+  const sOn = (t >= tS1 - 0.1 && t < tD1 + 0.1) || (t >= tB1 - 0.1 && t < tT + 0.1); M.hide($('#sS'), !sOn);
   if (sOn) {
-    const z = OUT('B1');
+    const z = OUT('D1');
     M.vis($('#bn'), t, tS1 + 0.05, z, { dy: 36, ...o });
     const tSplit = tS1 + 0.9;
     { const sh = M.spring(t - tSplit, M.HEAVY), wv = M.lerp(1600, 784, sh); snap($('#bn'), 'width', (sh >= 1 ? 784 : wv.toFixed(1)) + 'px'); snap($('#bnIn'), 'left', (sh >= 1 ? 0 : ((wv - 784) / 2).toFixed(1)) + 'px'); }
@@ -247,14 +247,14 @@ M.on(t => {
     M.vis($('#cmpC'), t, tB1 + 0.05, OUT('B2'), { dy: 36, ...o });
     M.vis($('#cm0'), t, wt('B1', 'electron') - 0.1, 1e9, { dy: 16 }); M.vis($('#cm1'), t, wt('B1', 'cricket') - 0.1, 1e9, { dy: 16 }); M.vis(cmG, t, wt('B1', 'cricket'), 1e9, POP);
     cmW.forEach((c, i) => { attr(c.w, 'd', wavePath(368, 230, i ? 400 : 60, i ? 0 : 70, 40, 696, -t * 5)); c.r.style.opacity = M.clamp((t - wt('B1', i ? 'cricket' : 'electron') - 0.5) / 0.3); });
-    M.vis($('#th1'), t, tB2 + 0.05, OUT('D1'), { dy: 36, ...o });
+    M.vis($('#th1'), t, tB2 + 0.05, OUT('T1'), { dy: 36, ...o });
     th1(t, { tin: tB2, tOpts: wt('B2', 'Whose') - 0.1, tCount: T1('B2') + 0.05, dur: 3, tAns: T0('B3') - 0.02, tWhy: wt('B3', 'Its') });
   }
 
   /* D */
-  const dOn = t >= tD1 - 0.1 && t < tT + 0.1; M.hide($('#sD'), !dOn);
+  const dOn = t >= tD1 - 0.1 && t < tB1 + 0.1; M.hide($('#sD'), !dOn);
   if (dOn) {
-    const out = OUT('T1');
+    const out = OUT('B1');
     M.vis($('#dl'), t, tD1 + 0.05, out, { dx: -60, dy: 0, ...o });
     dsol(t, tD1, tDs);
     M.vis($('#dR'), t, tD1 + 0.3, out, { dx: 60, dy: 0, ...o });

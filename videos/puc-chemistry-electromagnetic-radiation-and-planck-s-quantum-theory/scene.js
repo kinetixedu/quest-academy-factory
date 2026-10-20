@@ -132,7 +132,7 @@ const trap = PUC.trap($('#trap'), { wrong: `${K(`${NU} = \\frac{3 \\times 10^{8}
 const tsv = $('#tS'), tg = mk(tsv, 'g', {});
 txt(tg, 280, 110, '1 nm = 10⁻⁹ m', { 'text-anchor': 'middle', 'font-size': 30, fill: C.ink, 'font-weight': 700 }); txt(tg, 280, 160, 'CONVERT FIRST', { 'text-anchor': 'middle', 'font-size': 18, fill: C.ok, 'font-weight': 700 });
 const where = PUC.where($('#wa'), { on: [], type: 'Numericals linking λ, ν and photon energy · the order of the spectrum' });
-const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', q: `A 60 W lamp gives out all its energy as light of 600 nm. How many photons does it give out each second?<br><span style="font:500 24px 'IBM Plex Mono';color:var(--mute)">h = 6.626 × 10⁻³⁴ J s, c = 3.0 × 10⁸ m s⁻¹</span>`, qW: 820,
+const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', q: `A 60 W lamp gives out all its energy as light of 600 nm. How many photons does it give out each second?<br><span style="font:500 24px 'IBM Plex Mono';color:var(--mute)">h = 6.626 × 10⁻³⁴ J s, c = 3.0 × 10⁸ m s⁻¹</span>`, qW: 700,
   opts: [K('3.31 \\times 10^{-19}'), K('1.81 \\times 10^{29}'), K('5.52 \\times 10^{-21}'), K('1.81 \\times 10^{20}')], right: 3, optW: 474, optY: 350, optH: 104, optFs: 34 });
 const so = PUC.solution($('#so'), [[K(`${EE('E')} = \\frac{hc}{${L_}} = \\frac{6.626 \\times 10^{-34} \\times 3 \\times 10^{8}}{6 \\times 10^{-7}}`)], [K(`${EE('E')} = 3.313 \\times 10^{-19}\\,\\text{J}`)], [K(`N = \\frac{60\\,\\text{J s}^{-1}}{3.313 \\times 10^{-19}\\,\\text{J}}`)], [K(`= \\textcolor{${C.ok}}{1.81 \\times 10^{20}\\,\\text{s}^{-1}}`)]], { y0: 100, dy: 112 });
 const tSo = [T0('A2'), wt('A2', 'That'), T0('A3'), T0('A4')];
@@ -147,7 +147,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 18', topic: 'Can light knock 
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('R3', 'thin') - 0.2, 1.1, 960, 640], [OUT('D1'), 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]]]);
 let geo = null;
 function measure() {
   geo = {};

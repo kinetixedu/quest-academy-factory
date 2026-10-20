@@ -143,7 +143,7 @@ mk(beamT, 'circle', { cx: -150, cy: -46, r: 40, fill: PC }); txt(beamT, -150, -3
 mk(beamT, 'circle', { cx: 170, cy: -14, r: 7, fill: EC }); txt(beamT, 170, -32, 'e⁻', { 'text-anchor': 'middle', 'font-size': 18, fill: EC, 'font-weight': 700, 'font-family': 'Poppins' });
 txt(sees, 280, 262, '≈ 1836 TIMES HEAVIER', { 'text-anchor': 'middle', 'font-size': 16, fill: C.ok, 'font-weight': 600 });
 const where = PUC.where($('#wa'), { on: [], type: 'One mark: who found which particle · short numericals on e, mₑ and e/m' });
-const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', q: `What is the total mass of the electrons that carry a charge of −1 C?<br><span style="font:500 26px 'IBM Plex Mono';color:var(--mute)">Given: e = 1.602 × 10⁻¹⁹ C, mₑ = 9.109 × 10⁻³¹ kg</span>`, qW: 780,
+const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', q: `What is the total mass of the electrons that carry a charge of −1 C?<br><span style="font:500 26px 'IBM Plex Mono';color:var(--mute)">Given: e = 1.602 × 10⁻¹⁹ C, mₑ = 9.109 × 10⁻³¹ kg</span>`, qW: 700,
   opts: [K('1.76 \\times 10^{11}\\,\\text{kg}'), K('5.69 \\times 10^{-12}\\,\\text{kg}'), K('1.46 \\times 10^{-49}\\,\\text{kg}'), K('6.24 \\times 10^{18}\\,\\text{kg}')], right: 1, optW: 474, optY: 330, optH: 110, optFs: 34 });
 const so = PUC.solution($('#so'), [[K(`n = \\frac{1\\,\\text{C}}{1.602 \\times 10^{-19}\\,\\text{C}} = 6.24 \\times 10^{18}`)], [K(`m = n \\times ${me}`)], [K(`= 6.24 \\times 10^{18} \\times 9.109 \\times 10^{-31}`)], [K(`= \\textcolor{${C.ok}}{5.69 \\times 10^{-12}\\,\\text{kg}}`)]], { y0: 100, dy: 112 });
 const tSo = [T0('A2'), wt('A3', 'Multiply'), wt('A3', 'nine'), wt('A4', 'That')];
@@ -261,9 +261,9 @@ M.on(t => {
     const out = OUT('C1');
     M.vis($('#dl'), t, tD1 + 0.05, out, { dx: -60, dy: 0, ...o });
     dsol(t, tD1, tDs);
-    M.vis($('#dr'), t, T0('D2') - 0.1, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#dr'), t, tD1 + 0.3, out, { dx: 60, dy: 0, ...o });
     SCI.forEach((_, i) => { const el = $('#sc' + i); M.vis(el, t, tSc[i] - 0.1, 1e9, { dx: -16, dy: 0 }); const on = M.io((t - tSc[i]) / 0.25) * (i ? 1 - M.io((t - T0('D4')) / 0.3) : 1 - M.io((t - tSc[1]) / 0.25)); setBg(el, mix(C.soft, C.ac2, on)); });
-    M.vis($('#mres'), t, T0('D2') + 0.4, 1e9, { dy: 20 });
+    M.vis($('#mres'), t, wt('D1', 'heavy') - 0.1, 1e9, { dy: 20 });
     { const k = t >= tDs[3] + 0.4 ? 1 : 0, el = $('#mresV'); if (el._k !== k) { el._k = k; el.innerHTML = MRV[k]; } if (k) PUC.write(el, t, tDs[3] + 0.4, 0.7); else { M.hide(el, false); el.style.clipPath = 'none'; el.style.opacity = ''; } }
   }
 

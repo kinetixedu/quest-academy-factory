@@ -173,6 +173,7 @@ const rB = $('#rBalls');
 const ballSets = RF.map(([, , grp]) => { const g = mk(rB, 'g', {}); const flat = []; let w = 0; grp.forEach((gg, gi) => { gg.forEach(() => { w += 66; }); w += gi < grp.length - 1 ? 34 : 0; }); w -= 66 - 60;
   let x = 392 - w / 2 + 30; grp.forEach((gg, gi) => { gg.forEach(s => { const a = atomG(g, 30, COL[s], s, s.length > 1 ? 22 : 26); attr(a, 'transform', `translate(${x} 60)`); flat.push(a); x += 66; }); x += 34; }); return { g, flat }; });
 const tRf = RF.map(r => wt(r[3], r[4]) - 0.1);
+{ const card = $('#rl'), d = document.createElement('div'); d.id = 'rlIn'; d.className = 'abs'; d.style.cssText = 'position:absolute;left:0;top:0;width:784px;height:580px'; while (card.firstChild) d.appendChild(card.firstChild); card.appendChild(d); }
 const FR = [[H2O, [['H', 2], ['O', 1]]], [NACL, [['Na', 1], ['Cl', 1]]], [`${G_(2)}${H2O}`, [['MOLECULES', 2, GC], ['H', 4], ['O', 2]]], [CAOH, [['Ca', 1], ['O', 2], ['H', 2]]]];
 $('#frs').innerHTML = FR.map(([f, cs], i) => `<div class="fr" id="fr${i}" style="top:${84 + i * 112}px"><div class="ff">${K(f)}</div><div class="fc">${cs.map(([s, v, c]) => `<span style="color:${c || COL[s]}">${s === 'MOLECULES' ? `${v} molecules` : `${s} ${v}`}</span>`).join('<span style="color:var(--dim)"> · </span>')}</div></div>`).join('');
 const tFr = [wt('R3', 'hydrogens'), wt('R4', 'sodium'), wt('R5', 'water'), wt('R6', 'doubles')];
@@ -385,15 +386,16 @@ M.on(t => {
   const rOn = t >= tR2 - 0.1 && t < tK1 + 0.1; M.hide($('#sR'), !rOn);
   if (rOn) {
     const out = OUT('K1');
-    M.vis($('#rl'), t, tR2 + 0.05, out, { dx: -60, dy: 0, ...o });
-    M.vis($('#rr'), t, tFr[0] - 0.4, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#rl'), t, tR2 + 0.05, out, { dy: 36, ...o });
+    { const sh = M.spring(t - T0('R3') + 0.3, M.HEAVY), wv = M.lerp(1600, 784, sh); snap($('#rl'), 'width', (sh >= 1 ? 784 : wv.toFixed(1)) + 'px'); snap($('#rlIn'), 'left', (sh >= 1 ? 0 : ((wv - 784) / 2).toFixed(1)) + 'px'); }
+    M.vis($('#rr'), t, T0('R3') + 0.1, out, { dx: 60, dy: 0, ...o });
     RF.forEach((_, i) => { const a = tRf[i], z2 = i < 4 ? tRf[i + 1] - 0.15 : 1e9;
       M.vis($('#rb' + i), t, a, z2, { dy: 16, outDur: 0.2, ody: -12 }); M.vis($('#rn' + i), t, a + 0.35, z2, { dy: 10, outDur: 0.2, ody: -8 });
       const bs = ballSets[i]; bs.g.style.opacity = (1 - M.io((t - z2) / 0.2)).toFixed(3); M.hide(bs.g, t < a || t > z2 + 0.2);
       bs.flat.forEach((e, k) => { const u = M.spring(t - a - 0.5 - k * 0.12, M.POP); e.style.opacity = M.clamp((t - a - 0.5 - k * 0.12) / 0.1).toFixed(3); e.firstChild.setAttribute('r', (30 * (0.4 + 0.6 * u)).toFixed(1)); });
     });
-    M.vis($('#symL'), t, wt('R2', 'element') - 0.1, 1e9, { dy: 8 });
-    SYM.forEach(([s], i) => { const el = $('#sy' + s); M.vis(el, t, wt('R2', 'element') + i * 0.08, 1e9, { dy: 12 });
+    M.vis($('#symL'), t, tR2 + 0.3, 1e9, { dy: 8 });
+    SYM.forEach(([s], i) => { const el = $('#sy' + s); M.vis(el, t, tR2 + 0.4 + i * 0.08, 1e9, { dy: 12 });
       const ts = tSy.find(q => q[0] === s)[1], u = M.io((t - ts) / 0.3); setBg(el, mix('#FFFFFF', COL[s], u)); el.style.borderColor = mix(C.line, COL[s], u); el.querySelector('b').style.color = mix(C.ink, '#FFFFFF', u); el.querySelector('span').style.color = mix(C.mute, '#FFFFFF', u); });
     FR.forEach((_, i) => M.vis($('#fr' + i), t, tFr[i] - 0.1, 1e9, { dx: -16, dy: 0 }));
   }
@@ -413,7 +415,7 @@ M.on(t => {
   const cOn = t >= tC1 - 0.1 && t < tT + 0.1; M.hide($('#sC'), !cOn);
   if (cOn) {
     const out = OUT('T1');
-    M.vis($('#chP'), t, tC1 + 0.05, out, { dx: -60, dy: 0, ...o }); M.vis($('#chC'), t, T0('C3') - 0.2, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#chP'), t, tC1 + 0.05, out, { dx: -60, dy: 0, ...o }); M.vis($('#chC'), t, tC1 + 0.4, out, { dx: 60, dy: 0, ...o });
     const tMelt = wt('C2', 'melts') - 0.1, u = M.io((t - tMelt) / 2.2), tau = t - tMelt;
     pM.forEach((p, k) => { const a = ICE[k], w = WAT[k], amp = 3.5 * (1 - u); const r = Math.floor(k / 8), lx = w[0] + u * (r % 2 ? -1 : 1) * 18 * Math.sin(tau * 1.5 + r * 1.3);
       attr(p, 'cx', f1(M.lerp(a[0], lx, u) + amp * Math.sin(t * 17 + k * 1.7))); attr(p, 'cy', f1(M.lerp(a[1], w[1], u) + amp * Math.cos(t * 15 + k * 2.3))); });
@@ -440,11 +442,11 @@ M.on(t => {
   const jOn = t >= tJ1 - 0.1 && t < tW1 + 0.1; M.hide($('#sJ'), !jOn);
   if (jOn) {
     const out = OUT('W1');
-    M.vis($('#jl'), t, tJ1 + 0.05, out, { dx: -60, dy: 0, ...o }); M.vis($('#jb2'), t, wt('J4', 'branches') - 0.1, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#jl'), t, tJ1 + 0.05, out, { dx: -60, dy: 0, ...o }); M.vis($('#jb2'), t, tJ1 + 0.4, out, { dx: 60, dy: 0, ...o });
     CJ.forEach((_, i) => { const el = $('#cj' + i); M.vis(el, t, tCj[i] - 0.15, 1e9, { dy: 16 }); const nx2 = i < 2 ? tCj[i + 1] : T1('J1') + 0.2;
       const on = M.io((t - tCj[i] + 0.1) / 0.25) * (1 - M.io((t - nx2 + 0.1) / 0.25)); setBg(el, mix(C.soft, C.ink, on)); el.querySelector('.ct2').style.color = mix(C.ink, '#FFFFFF', on); el.querySelector('.cw2').style.color = mix(C.mute, C.ac2, on); });
     avA(t, T1('J1') - 0.6, out);
-    SR.forEach((s, i) => { const el = $('#sr' + i); M.vis(el, t, wt('J4', 'branches') + 0.2 + i * 0.1, 1e9, { dy: 14 });
+    SR.forEach((s, i) => { const el = $('#sr' + i); M.vis(el, t, tJ1 + 0.7 + i * 0.1, 1e9, { dy: 14 });
       const on = M.io((t - tSr[i] + 0.15) / 0.3) * (i < 4 ? 1 - M.io((t - tSr[i + 1] + 0.15) / 0.3) : 1);
       setBg(el, mix(C.soft, C.ink, on)); el.querySelector('.sn2').style.color = mix(C.ink, '#FFFFFF', on); el.querySelector('.sw').style.color = mix(C.mute, C.ac2, on);
       PUC.setIco(el.querySelector('i'), s[0], on > 0.5 ? C.ink : C.ac, 30, 2.2); });
@@ -460,8 +462,8 @@ M.on(t => {
     M.vis($('#wr'), t, T0('W2') + 0.3, out, { dx: 60, dy: 0, ...o });
     const tw7 = T0('W7');
     const grpT = [tWs[0], tWs[1], tWs[1] + 0.4, tWs[2]];
-    gb.forEach((row, ri) => row.forEach((a, k) => { const tt = grpT[ri] + k * 0.08, u = M.spring(t - tt, M.POP); const op = M.clamp((t - tt) / 0.1) * (1 - M.io((t - tw7) / 0.3));
-      a.style.opacity = op.toFixed(3); M.hide(a, op <= 0.002); a.firstChild.setAttribute('r', ((ri === 1 || ri === 2 ? 20 : 24) * (0.4 + 0.6 * u)).toFixed(1)); }));
+    gb.forEach((row, ri) => row.forEach((a, k) => { const tt = grpT[ri] + k * 0.08, u = M.spring(t - tt, M.POP); const op = (0.16 + 0.84 * M.clamp((t - tt) / 0.1)) * M.clamp((t - T0('W2') - 0.5) / 0.3) * (1 - M.io((t - tw7) / 0.3));
+      a.style.opacity = op.toFixed(3); M.hide(a, op <= 0.002); a.firstChild.setAttribute('r', ((ri === 1 || ri === 2 ? 20 : 24) * (t < tt ? 1 : 0.4 + 0.6 * u)).toFixed(1)); }));
     wMol.forEach((g, i) => fade(g, t, tw7 + 0.2 + i * 0.25, 1e9, 0.3));
     M.setT(wrL, t < tw7 ? 'ATOM COUNTER · ONE GLUCOSE' : 'ATOM COUNTER · 2 H₂O');
     const cC = t >= tWs[0] ? 6 : 0, cH = t >= tWs[1] + 0.4 ? 12 : t >= tWs[1] ? 6 : 0, cO = t >= tWs[2] ? 6 : 0;

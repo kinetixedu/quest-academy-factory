@@ -45,7 +45,7 @@ const tSph = mk(ps, 'circle', { cx: TX, cy: TY, r: TR, fill: C.ac3, stroke: PC, 
 const plus = mk(ps, 'g', {}); [[-90, -70], [0, -100], [90, -70], [-110, 10], [-40, -20], [40, -30], [110, 10], [-80, 80], [0, 50], [80, 80], [-20, 110], [40, 120]].forEach(([dx, dy]) => txt(plus, TX + dx, TY + dy + 8, '+', { 'text-anchor': 'middle', 'font-size': 26, fill: PC, 'font-weight': 700, 'font-family': 'Poppins' }));
 const eTh = [[-60, -60], [55, -75], [-120, -30], [10, -10], [100, -20], [-60, 40], [60, 30], [-30, 95], [100, 75], [-110, 70]].map(([dx, dy]) => mk(ps, 'circle', { cx: TX + dx, cy: TY + dy, r: 8, fill: EC }));
 const neuT = txt(ps, TX, TY + TR + 34, '+ CHARGE = − CHARGE · NEUTRAL', { 'text-anchor': 'middle', 'font-size': 17, ...B });
-const radL = mk(ps, 'g', {}); mk(radL, 'line', { x1: TX, y1: TY, x2: TX + TR, y2: TY, stroke: C.ink, 'stroke-width': 2, 'stroke-dasharray': '6 6' }); txt(radL, TX + 75, TY - 10, '~10⁻¹⁰ m', { 'text-anchor': 'middle', 'font-size': 17, ...B });
+const radL = mk(ps, 'g', {}); mk(radL, 'line', { x1: TX, y1: TY, x2: TX + TR, y2: TY, stroke: C.ink, 'stroke-width': 2, 'stroke-dasharray': '6 6' }); txt(radL, TX + TR + 12, TY + 6, 'r ~ 10⁻¹⁰ m', { 'font-size': 17, ...B });
 
 /* ---------- S: gold foil bench ---------- */
 const b = $('#bS'), FX = 430, FY = 280, RR = 210, V = 280, DC = 8, KQ = V * V * DC / 2;
@@ -121,7 +121,7 @@ const dEl = mk(ds, 'circle', { r: 10, fill: EC });
 const phIn = mk(ds, 'path', { fill: 'none', stroke: GC, 'stroke-width': 3.5, 'stroke-linecap': 'round' }), phOut = mk(ds, 'path', { fill: 'none', stroke: GC, 'stroke-width': 3.5, 'stroke-linecap': 'round' });
 const wavy = (x1, y1, x2, y2, amp = 9, wl = 26) => { const L = Math.hypot(x2 - x1, y2 - y1), ux = (x2 - x1) / L, uy = (y2 - y1) / L; let d = `M${x1} ${y1}`; for (let s = 2; s <= L; s += 2) { const a = amp * Math.sin(s / wl * 2 * Math.PI) * Math.min(1, (L - s) / 30); d += ` L${(x1 + ux * s - uy * a).toFixed(1)} ${(y1 + uy * s + ux * a).toFixed(1)}`; } return d; };
 const dTag = document.createElement('div'); dTag.className = 'btag'; dTag.style.cssText = 'right:36px;top:18px;background:var(--ink);color:#fff'; dTag.textContent = 'NIELS BOHR · 1913 · NOBEL 1922'; $('#dr').appendChild(dTag);
-const W1d = 1.4, tUp = wt('D4', 'takes') - 0.3, tDn = wt('D4', 'giving') - 0.1;
+const W1d = 1.4, tUp = wt('D4', 'takes') - 0.3, tDn = wt('D4', 'gives') - 0.1;
 const dAng = t => W1d * (t - tD1);
 const aUp = dAng(tUp + 0.55), aDn = dAng(tDn);
 attr(phIn, 'd', wavy(30, 120, AX + ORB[0] * Math.cos(aUp) - 12 * Math.cos(aUp), AY + ORB[0] * Math.sin(aUp)));
@@ -155,7 +155,7 @@ const nl = mk(tsv, 'g', {}); mk(nl, 'line', { x1: 260, y1: 24, x2: 260, y2: 236,
 [[0, '0', C.mute], [-0.545, 'n = 2 · −0.545', C.ink], [-2.18, 'n = 1 · −2.18 · LOWEST', C.ok]].forEach(([e, s, c]) => { mk(nl, 'line', { x1: 248, y1: NY(e), x2: 272, y2: NY(e), stroke: C.ink, 'stroke-width': 3 }); txt(nl, 286, NY(e) + 6, s, { 'font-size': 16, fill: c, 'font-weight': 600 }); });
 txt(nl, 236, 130, 'HIGHER ↑', { 'text-anchor': 'end', 'font-size': 15, fill: C.mute, 'font-weight': 600 });
 const where = PUC.where($('#wa'), { on: [], type: 'Statements on Rutherford\'s observations · numericals on Bohr energy and radius' });
-const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', q: `A hydrogen electron has energy −2.42 × 10⁻¹⁹ J. What is the radius of its orbit?<br><span style="font:500 24px 'IBM Plex Mono';color:var(--mute)">Given: Eₙ = −2.18 × 10⁻¹⁸/n² J, rₙ = 52.9 n² pm</span>`, qW: 780,
+const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', q: `A hydrogen electron has energy −2.42 × 10⁻¹⁹ J. What is the radius of its orbit?<br><span style="font:500 24px 'IBM Plex Mono';color:var(--mute)">Given: Eₙ = −2.18 × 10⁻¹⁸/n² J, rₙ = 52.9 n² pm</span>`, qW: 700,
   opts: ['158.7 pm', '476.1 pm', '211.6 pm', '52.9 pm'], right: 1, optW: 474, optY: 330, optH: 110, optFs: 36 });
 const so = PUC.solution($('#so'), [[K(`n^2 = \\frac{2.18 \\times 10^{-18}}{2.42 \\times 10^{-19}} = 9`)], [K(`n = 3`)], [K(`r_3 = 52.9 \\times 3^2`)], [K(`= \\textcolor{${C.ok}}{476.1\\,\\text{pm}}`)]], { y0: 100, dy: 112 });
 const tSo = [T0('A2'), wt('A2', 'So'), T0('A3'), T0('A4')];
@@ -170,7 +170,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 16', topic: 'Why only a few s
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('S5', 'bounced') - 0.4, 1.12, 960, 560], [tL1 - 0.1, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]]]);
 let geo = null;
 function measure() {
   geo = {};
