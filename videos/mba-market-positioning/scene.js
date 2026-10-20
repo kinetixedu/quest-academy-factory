@@ -87,12 +87,12 @@ $('#swRow').innerHTML = SWT.map(([ic, n, t], i) => `<div class="sws" id="sw${i}"
 wrap($('#kq'), 'kqOut', 784, 580);
 
 /* M: the positioning map (688 x 380 svg, axes cross at 344, 190) */
-const MP = [[170, 92, 'cookie', C.ink, 'Cream biscuits'], [170, 286, 'cake', C.ld, 'Sweet shop mithai'], [518, 286, 'dumbbell', C.ink2, 'Protein bars'], [518, 92, 'laddoo', C.gold, 'Laddoo Lab']];
+const MP = [[170, 92, 'cookie', C.ink, 'Cream biscuits'], [170, 262, 'cake', C.ld, 'Sweet shop mithai'], [518, 262, 'dumbbell', C.ink2, 'Protein bars'], [518, 92, 'laddoo', C.gold, 'Laddoo Lab']];
 const mk = ([x, y, ic, col, n], k) => `<g transform="translate(${x} ${y})"><g id="mk${k}"><circle r="28" fill="${col}" stroke="#FFFFFF" stroke-width="4"/><g transform="translate(-14 -14)">${M.icon(ic, 28, '#fff', 2.2)}</g><rect x="-82" y="36" width="164" height="30" rx="15" fill="#FFFFFF" stroke="#E2DACB" stroke-width="2"/><text x="0" y="57" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="15" fill="#14213D">${n}</text></g></g>`;
 $('#map').innerHTML = `<rect width="688" height="380" rx="24" fill="#F5F1E8"/><rect id="qTR" x="344" y="0" width="344" height="190" fill="#F3EAD6"/><path d="M344 0 H664 Q688 0 688 24 V190 H344 Z" fill="none"/>
   <path id="axX" d="M24 190 H664" stroke="#14213D" stroke-width="3" stroke-linecap="round"/><path id="axY" d="M344 18 V362" stroke="#14213D" stroke-width="3" stroke-linecap="round"/>
   <g id="lbX"><text x="30" y="178" font-family="Poppins" font-weight="600" font-size="13" letter-spacing="2" fill="#8A8274">INDULGENT</text><text x="658" y="178" text-anchor="end" font-family="Poppins" font-weight="600" font-size="13" letter-spacing="2" fill="#8A8274">HEALTHY</text></g>
-  <g id="lbY"><text x="356" y="36" font-family="Poppins" font-weight="600" font-size="13" letter-spacing="2" fill="#8A8274">MADE FOR TIFFINS</text><text x="356" y="356" font-family="Poppins" font-weight="600" font-size="13" letter-spacing="2" fill="#8A8274">NOT FOR TIFFINS</text></g>
+  <g id="lbY"><text x="356" y="36" font-family="Poppins" font-weight="600" font-size="13" letter-spacing="2" fill="#8A8274">MADE FOR TIFFINS</text><text x="356" y="362" font-family="Poppins" font-weight="600" font-size="13" letter-spacing="2" fill="#8A8274">NOT FOR TIFFINS</text></g>
   <circle id="emR" cx="518" cy="92" r="42" fill="none" stroke="#B8862F" stroke-width="3" stroke-dasharray="7 7"/><text id="emT" x="518" y="160" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="14" letter-spacing="2" fill="#B8862F">NOBODY HERE</text>` +
   MP.map(mk).join('');
 const MPR = [['cookie', C.ink, 'Cream biscuits', 'Easy to pack, not very healthy'], ['cake', C.ld, 'Sweet shop mithai', 'Rich and festive, messy in a tiffin'], ['dumbbell', C.ink2, 'Protein bars', 'Healthy, but made for adults'], ['laddoo', C.gold, 'Laddoo Lab', 'Healthy, and made for tiffins']];
@@ -299,7 +299,9 @@ M.on(t => {
     runP(t);
     const tR = [tRiv[0] + 0.3, tRiv[1] + 0.3, tRiv[2] + 0.3, tNobody];
     MPR.forEach((_, i) => {
-      const el = $('#mp' + i); M.vis(el, t, tR[i] - 0.05, 1e9, { dx: 24, dy: 0 });
+      const el = $('#mp' + i); M.vis(el, t, tM0 + 0.7 + i * 0.1, 1e9, { dy: 14 });
+      if (i < 3) { const on = M.io((t - tR[i] + 0.05) / 0.25); el.style.opacity = (0.35 + 0.65 * on).toFixed(3); el.querySelector('.bg').style.background = mix(C.paper, C.gold3, on * (1 - M.io((t - (i < 2 ? tR[i + 1] : tTop)) / 0.25))); }
+      else el.style.opacity = t < tR[3] ? '0.35' : '';
       if (i === 3) { const c = t >= tClaim; el.querySelector('.bg').style.background = c ? C.gold3 : C.paper; el.querySelector('.wd').style.color = c ? C.ink : C.dim; el.querySelector('.wn').style.color = c ? C.ink : C.dim;
         M.setT($('#mpT'), c ? 'OUR POSITION' : 'EMPTY SPOT'); $('#mpT').style.background = c ? C.gold : '#fff'; $('#mpT').style.color = c ? '#fff' : C.gold; }
     });

@@ -32,3 +32,9 @@ Eyebrow chip: `EP NN · MARKETING MANAGEMENT`. Title format: `<Hook-style title>
 - Cost per 6-pack ₹80 (ingredients 45, box and label 15, gas and electricity 8, delivery 12); 50% markup -> ₹120. Parents value it at about ₹140.
 - Student price ₹100 with a college ID (1 pack per ID per day). Monthly 4-pack ₹440 for everyone. Regular 6-pack stays ₹120.
 - Stores keep 20% (₹24), Laddoo Lab gets ₹96 per pack. 10 local stores; a nearby office orders 4 packs a month; supermarket chain + Dev's online shop start in Ep 26.
+
+## Canon added by Eps 32-35
+- About 3,000-3,450 packs a month; the year closes at 39,000 packs (30,000 the year before). Plans checked monthly; Arjun refills the supermarket shelf weekly.
+- Dev keeps a customer book; one Saturday reminder a week, only with consent. Regulars get every tenth pack free and a Sunday delivery.
+- Mrs. Rao orders on Sundays, buys 40 school weeks a year; lapsed two Sundays in July, won back with a coconut-jowar trial pack, referred two friends.
+- Pack profit ₹40 (₹120 - ₹80). Cost to win a new parent ₹500. 200 regular families, 170 kept. Festive campaign cost ₹40,000, brought ₹1 lakh extra profit. NPS +50.

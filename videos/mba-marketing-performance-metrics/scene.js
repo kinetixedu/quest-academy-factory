@@ -219,8 +219,8 @@ M.on(t => {
     const tc = [tShops, tSuper, tOnline];
     CH.forEach((_, i) => M.vis($('#ch' + i), t, tc[i] - 0.05, 1e9, POPo));
     M.vis($('#nowB'), t, tC2 + 0.05, 1e9, { dy: 10, fade: 0.2 });
-    M.vis($('#mt0'), t, tFeel - 0.1, 1e9, POPo); M.vis($('#mt1'), t, tMeas - 0.1, 1e9, POPo);
-    M.rise($('#askT2'), t, tMeas, { st: 0.07, sp: M.HEAVY });
+    M.vis($('#mt0'), t, tFeel - 0.1, 1e9, POPo); const tM2b = Math.min(tMeas, tFeel + 0.7); M.vis($('#mt1'), t, tM2b - 0.1, 1e9, POPo);
+    M.rise($('#askT2'), t, tM2b + 0.1, { st: 0.07, sp: M.HEAVY });
   }
 
   /* ===== L: the year-end review ===== */
