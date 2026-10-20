@@ -57,7 +57,7 @@ const orb = (p, type, cx, cy, R, o = {}) => {
     const dg = mk(g, 'g', { 'clip-path': `url(#${id})` }), rnd = M.rng(o.seed || 7), rn = (o.rad || []).map(f => f * R), gap = R * 0.06;
     let tries = 0;
     while (parts.dots.length < o.dots && tries++ < 40000) {
-      const r = R * Math.sqrt(rnd()), a = rnd() * Math.PI * 2, ang = S.f(a);
+      const r = R * (type === 's' ? rnd() : Math.sqrt(rnd())), a = rnd() * Math.PI * 2, ang = S.f(a);
       if (r > R * ang) continue;
       if (rn.some(q => Math.abs(r - q) < gap)) continue;
       const w = (type === 's' ? 1 : ang * ang) * (0.3 + 0.7 * Math.exp(-r / (R * 0.5)));
@@ -93,7 +93,7 @@ const tKit = KIT.map(k => wt('H3', k[2]));
 /* ---------- P: dot picture + boundary surface ---------- */
 const cS = $('#cS'), cS2 = $('#cS2');
 const cloud = orb(cS, 's', 392, 316, 210, { dots: 520, seed: 23, dr: 3.2, nr: 9 }); cloud.lobe.setAttribute('stroke', 'none'); M.hide(cloud.axes, true);
-const psiT = document.createElement('div'); psiT.className = 'btag'; psiT.style.cssText = 'right:36px;top:18px;background:var(--ink);color:#fff'; psiT.innerHTML = `PROBABILITY DENSITY&nbsp;${K('\\psi^2')}`; $('#poIn').appendChild(psiT);
+const psiT = document.createElement('div'); psiT.className = 'btag'; psiT.style.cssText = 'right:36px;top:18px;background:var(--ink);color:#fff'; psiT.innerHTML = `${K('\\psi^2')}&nbsp;· CHANCE AT EACH SPOT`; $('#poIn').appendChild(psiT);
 const bnd = orb(cS2, 's', 392, 300, 150, { dots: 260, seed: 23, dr: 3, nr: 8 }); M.hide(bnd.axes, true);
 const bEdge = mk(cS2, 'circle', { cx: 392, cy: 300, r: 150, fill: 'none', stroke: NC, 'stroke-width': 4 });
 const b90 = document.createElement('div'); b90.className = 'pillp ac'; b90.style.cssText = 'left:36px;top:494px'; b90.textContent = 'Holds about 90% of the dots'; $('#pb').appendChild(b90);

@@ -310,7 +310,7 @@ M.on(t => {
     wsol(t, tW1, tWs);
     M.vis($('#wr'), t, T0('W2') + 0.2, out, { dx: 60, dy: 0, ...o });
     const tRw = [wt('W3', 'three'), wt('W3', 'three', 1), wt('W3', 'three', 2)];
-    wrows.forEach((r, l) => { fade(r.g, t, tRw[l] - 0.15, 1e9, 0.3); fade(r.cnt, t, tRw[l] + 0.4, 1e9, 0.2); });
+    wrows.forEach((r, l) => { fade(r.g, t, T0('W2') + 0.5 + l * 0.25, 1e9, 0.3); fade(r.cnt, t, tRw[l] + 0.4, 1e9, 0.2); });
     const tFill = wt('W6', 'Two'), nAr = Math.max(0, Math.min(18, Math.floor((t - tFill) / 0.13) + 1));
     ALLAR.forEach((a, i) => M.hide(a, i >= nAr));
     const orb = t >= tRw[2] + 0.3 ? 9 : t >= tRw[1] + 0.3 ? 4 : t >= tRw[0] + 0.3 ? 1 : 0;

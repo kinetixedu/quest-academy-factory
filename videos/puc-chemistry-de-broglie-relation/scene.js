@@ -245,8 +245,8 @@ M.on(t => {
     M.vis(gEx, t, tMass + 0.2, 1e9, POP);
     // compare
     M.vis($('#cmpC'), t, tB1 + 0.05, OUT('B2'), { dy: 36, ...o });
-    M.vis($('#cm0'), t, wt('B1', 'electron') - 0.1, 1e9, { dy: 16 }); M.vis($('#cm1'), t, wt('B1', 'cricket') - 0.1, 1e9, { dy: 16 }); M.vis(cmG, t, wt('B1', 'cricket'), 1e9, POP);
-    cmW.forEach((c, i) => { attr(c.w, 'd', wavePath(368, 230, i ? 400 : 60, i ? 0 : 70, 40, 696, -t * 5)); c.r.style.opacity = M.clamp((t - wt('B1', i ? 'cricket' : 'electron') - 0.5) / 0.3); });
+    M.vis($('#cm0'), t, tB1 + 0.3, 1e9, { dy: 16 }); M.vis($('#cm1'), t, tB1 + 0.6, 1e9, { dy: 16 }); M.vis(cmG, t, tB1 + 0.9, 1e9, POP);
+    cmW.forEach((c, i) => { attr(c.w, 'd', wavePath(368, 230, i ? 400 : 60, i ? 0 : 70, 40, 696, -t * 5)); c.r.style.opacity = M.clamp((t - wt('B1', i ? 'cricket' : 'electron') + 0.1) / 0.3); });
     M.vis($('#th1'), t, tB2 + 0.05, OUT('T1'), { dy: 36, ...o });
     th1(t, { tin: tB2, tOpts: wt('B2', 'Whose') - 0.1, tCount: T1('B2') + 0.05, dur: 3, tAns: T0('B3') - 0.02, tWhy: wt('B3', 'Its') });
   }

@@ -101,7 +101,7 @@ const RCH = [['A', 'AUFBAU · LOWEST FIRST'], ['P', 'PAULI · OPPOSITE SPINS'], 
 $('#rcs').innerHTML = RCH.map(([k, s], i) => `<div class="rc" id="rc${i}" style="left:36px;top:${76 + i * 64}px">${s}</div>`).join('');
 const RWHY = { A: 'New subshell: the lowest empty one fills first', P: 'Second electron in a box: it must spin the other way', H: 'Empty 2p box free: no pairing yet' };
 const rWhy = document.createElement('div'); rWhy.className = 'fx'; rWhy.style.cssText = 'left:420px;top:80px;font:500 22px/1.35 Poppins;color:var(--ink2);white-space:normal;width:330px'; $('#ru').appendChild(rWhy);
-const avA = PUC.avatar($('#sG'), { x: 160 + 500, y: 270 + 470, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'Like the reading room!' });
+const avA = PUC.avatar($('#sG'), { x: 160 + 36, y: 270 + 486, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'Like the reading room!' });
 const mobH = (a) => `<span class="mob" style="color:${C.ink2}">${a.map(c => `<i>${c.includes('u') ? M.icon('upA', 34, EC, 3) : ''}${c.includes('d') ? M.icon('dnA', 34, EC, 3) : ''}</i>`).join('')}</span>`;
 const th1 = PUC.think($('#th1'), { q: 'Carbon has two 2p electrons. Which drawing is right?', opts: [mobH(['ud', '', '']), mobH(['u', 'u', ''])], right: 1, why: "Separate boxes, same spin: Hund's rule. Pairing waits until every p box has one." });
 
@@ -216,7 +216,7 @@ M.on(t => {
     const out = OUT('R1');
     M.vis($('#nl'), t, tS1 + 0.05, out, { dy: 36, ...o });
     
-    PUC.write($('#nlF'), t, wt('S2', 'Add') - 0.1, 0.8);
+    PUC.write($('#nlF'), t, tS1 + 0.4, 0.8);
     const tRow = [wx('S3', 'Four'), wx('S3', 'Three'), wx('S4', 'four')];
     NLR.forEach((_, i) => M.vis($('#nr' + i), t, tRow[i] - 0.15, 1e9, { dy: 16 }));
     M.setT($('#nk0'), 'FILLS FIRST'); M.vis($('#nk0'), t, wx('S3', 'So') - 0.1, 1e9, POP);

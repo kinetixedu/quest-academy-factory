@@ -98,12 +98,12 @@ const th1 = PUC.think($('#th1'), { q: 'Why does violet light have the higher fre
 
 /* ---------- C: Planck ---------- */
 const cs = $('#cS');
-const burner = mk(cs, 'g', {}); mk(burner, 'rect', { x: 300, y: 400, width: 184, height: 40, rx: 8, fill: C.ink2 }); [330, 372, 414, 456].forEach(x => mk(burner, 'path', { d: `M${x} 396 C${x - 14} 370 ${x + 2} 356 ${x} 336 C${x + 14} 356 ${x + 12} 376 ${x} 396Z`, fill: '#F2A541' }));
-const rod = mk(cs, 'rect', { x: 120, y: 260, width: 544, height: 56, rx: 14, fill: '#5A5F6B', stroke: C.ink, 'stroke-width': 2.5 });
-txt(cs, 120, 248, 'IRON ROD', { 'font-size': 15, ...B });
+const burner = mk(cs, 'g', {}); mk(burner, 'rect', { x: 300, y: 350, width: 184, height: 36, rx: 8, fill: C.ink2 }); [330, 372, 414, 456].forEach(x => mk(burner, 'path', { d: `M${x} 346 C${x - 14} 320 ${x + 2} 306 ${x} 286 C${x + 14} 306 ${x + 12} 326 ${x} 346Z`, fill: '#F2A541' }));
+const rod = mk(cs, 'rect', { x: 120, y: 210, width: 544, height: 56, rx: 14, fill: '#5A5F6B', stroke: C.ink, 'stroke-width': 2.5 });
+txt(cs, 120, 198, 'IRON ROD', { 'font-size': 15, ...B });
 const RODC = [['DULL RED', '#7A1E14', wt('C1', 'dull')], ['BRIGHTER RED', '#D8301E', wt('C1', 'brighter')], ['WHITE', '#FFF4E0', wt('C1', 'white')], ['BLUE', '#CFE0FF', wt('C1', 'blue')]];
-const rodL = txt(cs, 392, 296, '', { 'text-anchor': 'middle', 'font-size': 20, fill: '#fff', 'font-weight': 700 });
-const hot = mk(cs, 'g', {}); mk(hot, 'rect', { x: 120, y: 470, width: 544, height: 16, rx: 8, fill: C.soft }); const hotB = mk(hot, 'rect', { x: 120, y: 470, width: 0, height: 16, rx: 8, fill: '#D8301E' }); txt(hot, 664, 512, 'HOTTER →', { 'text-anchor': 'end', 'font-size': 15, ...B });
+const rodL = txt(cs, 392, 246, '', { 'text-anchor': 'middle', 'font-size': 20, fill: '#fff', 'font-weight': 700 });
+const hot = mk(cs, 'g', {}); mk(hot, 'rect', { x: 120, y: 414, width: 544, height: 16, rx: 8, fill: C.soft }); const hotB = mk(hot, 'rect', { x: 120, y: 414, width: 0, height: 16, rx: 8, fill: '#D8301E' }); txt(hot, 664, 452, 'HOTTER →', { 'text-anchor': 'end', 'font-size': 15, ...B });
 const c2 = $('#cS2');
 $('#cr').insertAdjacentHTML('beforeend', `<div class="fx" id="peq" style="left:36px;top:74px;font-size:40px">${K(`${EE('E')} = h${NU}`)}</div><div class="fx" id="peq2" style="left:36px;top:136px;font-size:30px">${K('h = 6.626 \\times 10^{-34}\\,\\text{J s}')}</div>`);
 const SX = 360, SB = 410, STH = 56, SWD = 90;
@@ -125,6 +125,7 @@ const tWs = [T0('W3'), T0('W4'), T0('W5'), T0('W6')];
 const w2 = $('#wS2'), GR = wl2c(500);
 const pk = mk(w2, 'path', { fill: 'none', stroke: GR, 'stroke-width': 5, 'stroke-linecap': 'round' });
 const WRO = [['λ', LC, 'WAVELENGTH', '5 × 10⁻⁷ m', T0('W3')], ['ν', NUC, 'FREQUENCY', '6 × 10¹⁴ Hz', wt('W4', 'six')], ['E', GC, 'ENERGY OF ONE PHOTON', '3.98 × 10⁻¹⁹ J', T0('W6')]];
+$('#wr').insertAdjacentHTML('beforeend', `<div class="pillp ac" id="wP" style="left:36px;top:500px">One photon carries a tiny packet of energy</div>`);
 WRO.forEach(([k, col, tg, v], i) => $('#wr').insertAdjacentHTML('beforeend', `<div class="ro2" id="wro${i}" style="top:${200 + i * 108}px"><div class="k" style="color:${col}">${k}</div><div class="tg">${tg}</div><div class="v" style="color:${col}">${v}</div></div>`));
 
 /* ---------- X / Q / F ---------- */
@@ -283,6 +284,7 @@ M.on(t => {
     attr(pk, 'd', wpath(80, 704, 120, 46, x => env(x) * Math.sin((x - ph) / 44 * 2 * Math.PI)));
     fade(pk, t, wt('W2', 'Green') - 0.1);
     WRO.forEach((r, i) => M.vis($('#wro' + i), t, r[4] - 0.1, 1e9, { dx: -16, dy: 0 }));
+    M.vis($('#wP'), t, wt('W6', 'photon') - 0.1, 1e9, POP);
   }
 
   /* X */
