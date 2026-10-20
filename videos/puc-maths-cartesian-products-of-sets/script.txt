@@ -1,0 +1,54 @@
+H1|0.4|The college canteen sells three snacks and two drinks. How many different combos of one snack and one drink can you order?
+H2|0.45|Most people say five. Three plus two. But count them, and you get six. Add one more drink, and it jumps to nine.
+H3|0.35|Diya spotted this at the canteen today.
+H4|0.5|Why do the choices multiply, and not add?
+H5|0.65|The answer opens a new chapter, Relations and Functions. Its very first idea is called the Cartesian product.
+P1|0.35|Let us build every combo, one at a time.
+P2|0.4|Set S holds the snacks: samosa, vada and puff. Set D holds the drinks: tea and juice.
+P3|0.4|Pick the samosa. It can go with tea, or with juice. That makes two combos.
+P4|0.4|Pick the vada. Two drinks again, so two more combos.
+P5|0.65|Pick the puff. Two more. Three snacks, two drinks each. Six combos in all.
+G1|0.4|Now put the same six combos on a grid. Snacks go along the bottom. Drinks go up the side.
+G2|0.4|Each dot, where a column meets a row, is one combo. Three columns, two rows, six dots.
+G3|0.4|Now the canteen adds a drink. Coffee comes in. One more row, so three more dots.
+G4|0.4|Then lemonade, then buttermilk. Every new drink adds a whole row of three.
+G5|0.65|So the number of combos is always three, times the number of drinks.
+D1|0.35|This set of all combos has a name.
+D2|0.4|In NCERT words: the Cartesian product of two non empty sets P and Q is the set of all ordered pairs of elements from P and Q.
+D3|0.4|We write it P cross Q. Each element is a pair in round brackets. First comes something from P, then something from Q.
+D4|0.75|In set builder form, P cross Q is the set of all pairs p comma q, such that p belongs to P, and q belongs to Q.
+D5|0.6|The word Cartesian comes from Rene Descartes, a French mathematician. Points on a graph are called Cartesian coordinates after him too.
+N1|0.35|Now, why do the choices multiply? Let us prove it in four small steps.
+N2|0.75|Step one. Say set A has p elements, and set B has q elements.
+N3|0.75|Step two. Fix one element of A. It pairs with each of the q elements of B. That gives q pairs.
+N4|0.75|Step three. Every element of A gets its own column of q pairs. No pair repeats, because their first entries are different.
+N5|0.75|Step four. p columns, with q pairs in each column. That is q added p times, which is p times q.
+N6|0.65|So n of A cross B equals n of A times n of B. Three snacks, times two drinks, is six.
+S1|0.4|Side by side. The union of S and D just puts every item into one set. They share no item, so three plus two gives five items.
+S2|0.6|The Cartesian product pairs every snack with every drink. Three times two gives six pairs. Union adds. The product multiplies.
+K1|3.2|Now you try. The canteen runs out of drinks, so D is empty. How many combos are left? Pause and think.
+K2|0.65|Zero! A combo needs one snack and one drink. With no drink, nothing can pair. If either set is empty, the product is empty too.
+T1|0.7|Remember this. In a Cartesian product, every element meets every element, so the choices multiply.
+W1|0.35|Now, one worked example.
+W2|0.5|A is the set of natural numbers less than three. B is the set of integers whose square is four. Find A cross B, and the number of its elements.
+W3|0.75|Step one. A is one and two. Remember, natural numbers start at one.
+W4|0.75|Step two. Two squared is four, and minus two squared is also four. So B is minus two and two.
+W5|0.75|Step three. Pair every element of A with every element of B. Watch the arrows.
+W6|0.75|Step four. A cross B is one comma minus two, one comma two, two comma minus two, and two comma two.
+W7|0.65|Step five. Check the count. Two times two is four pairs, and we listed four.
+X1|0.35|Now, the exam trap.
+X2|0.4|A is one and two. B is three and four. Many students pair them like a zip: one with three, two with four. Only two pairs.
+X3|0.65|But every element must meet every element. One also meets four, and two also meets three. So A cross B has four pairs, two times two.
+J1|0.6|Where is this asked? In PUC exams and in JEE Main, often as: find the number of elements, or the number of subsets, of A cross B.
+Q1|5.4|Exam level now. A is the set of factors of twelve. B is the set of integers whose square is less than five. The number of subsets of A cross B is two to the power k. Find k. Pause and solve.
+A1|0.5|The answer is C. Thirty.
+A2|0.5|Twelve has six factors: one, two, three, four, six and twelve.
+A3|0.5|For B, do not forget zero and the negatives. Minus two up to two gives five integers.
+A4|0.5|So A cross B has six times five, which is thirty elements.
+A5|0.6|A set with thirty elements has two to the power thirty subsets. So k is thirty.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. A has four elements and B has five. How many elements does A cross B have?
+Y3|0.9|Two. Write A cross B in roster form, when A is x and y, and B is one, two and three.
+Y4|1.1|Three. Why is A cross the empty set always empty?
+N1|0.3|Next time: exam hall seat three comma five is not seat five comma three. Why does the order change everything? We find out in Ordered Pairs.

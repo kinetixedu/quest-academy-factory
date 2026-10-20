@@ -1,0 +1,170 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 21 - Signum and Greatest Integer Functions</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 21: signum and greatest integer functions (Proof board) ===== */
+:root{--x:#7A4FE0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.x{color:var(--x)}.a{color:var(--ac)}
+/* title card: three exact ages */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:54px;font:700 30px Poppins;white-space:nowrap}
+/* hook */
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* readouts */
+.rd{position:absolute;font:600 52px/1 'IBM Plex Mono';white-space:nowrap}
+.rd .katex{font-size:1em}
+/* signum rows */
+.sr{position:absolute;left:36px;width:712px;height:84px;border-radius:14px;background:var(--soft)}
+.sr .o{position:absolute;left:16px;top:12px;width:60px;height:60px;border-radius:50%;background:#fff;border:3px solid var(--ac);color:var(--ac);display:flex;align-items:center;justify-content:center;font:600 28px 'IBM Plex Mono'}
+.sr .c{position:absolute;left:100px;top:20px;font-size:34px;white-space:nowrap}
+.sr .w{position:absolute;right:24px;top:30px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.bigf{position:absolute;left:36px;top:74px;font-size:46px;white-space:nowrap}
+/* proof steps */
+.st{position:absolute;left:36px;width:712px;height:110px}
+.st .n{position:absolute;left:0;top:14px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:36px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:76px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.ps{position:absolute;left:36px;width:712px;height:72px}
+.ps .n{position:absolute;left:0;top:13px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.ps .sx{position:absolute;left:70px;top:12px;font-size:36px;white-space:nowrap}
+/* modulus fraction readouts */
+.mf{position:absolute;left:0;width:784px;top:330px;text-align:center;font-size:60px;white-space:nowrap}
+/* greatest integer definition */
+#gD{position:absolute;left:36px;top:160px;width:712px;font:700 40px/1.3 Poppins;letter-spacing:-.01em}
+#gD b{color:var(--ac)}
+.hw{position:absolute;left:36px;height:52px;padding:0 18px;border-radius:10px;background:var(--soft);display:inline-flex;align-items:center;gap:12px;font:600 24px Poppins;white-space:nowrap}
+.hw i{font:600 18px 'IBM Plex Mono';color:var(--ac);font-style:normal}
+.rp{position:absolute;height:56px;padding:0 20px;border-radius:12px;background:var(--ac2);display:inline-flex;align-items:center;font-size:32px;white-space:nowrap}
+/* side by side */
+.nr{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.nr .nn{position:absolute;left:28px;top:20px;font-size:40px;white-space:nowrap}
+.chip{position:absolute;height:52px;padding:0 18px;border-radius:10px;display:inline-flex;align-items:center;gap:8px;font:700 24px Poppins;color:#fff;white-space:nowrap}
+/* legend */
+.lg{position:absolute;top:176px;display:inline-flex;align-items:center;gap:12px;font:600 24px Poppins;white-space:nowrap}
+.lg i{display:block;width:22px;height:22px;border-radius:50%;border:3.5px solid var(--ac)}
+/* worked example */
+#wq{position:absolute;left:36px;top:64px;font:600 30px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.2em}
+#wl .sol .sx{font-size:30px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 26px Poppins}
+#so .sol .sx .katex{font-size:1.08em}
+#mq .mq .katex{font-size:1.08em}
+.trapL .tx .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 2 RELATIONS AND FUNCTIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Why 16.9 Is Still <span class="acc">16</span></div>
+    <div id="sub">Explained with the signum and greatest integer functions</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: ages + Diya's puzzle -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">AGE IN COMPLETED YEARS</div>
+        <svg id="hS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="hlP" style="left:36px;top:470px">16.1, 16.5 and 16.9 are all just 16</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA · THE HEALTH CAMP FORM</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-corridor.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">-2.1 rounded down: -2 or -3?</div></div>
+    </div>
+
+    <!-- S: signum, live -->
+    <div id="sS">
+      <div class="card full" id="sl"><div class="lbl" style="left:36px;top:30px">SIGNUM FUNCTION · NCERT</div>
+        <div class="bigf" id="sgT"></div><div id="sgR"></div>
+        <div class="pillp" id="sgDm" style="left:36px;top:480px"></div><div class="pillp ac" id="sgRg" style="left:300px;top:480px"></div></div>
+      <div class="card rf" id="sg"><div class="lbl" style="left:36px;top:30px">LIVE · SLIDE X ALONG THE LINE</div>
+        <div class="rd" id="sgX" style="left:36px;top:76px"></div><div class="rd" id="sgY" style="right:36px;top:76px"></div>
+        <svg id="sgS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- M: signum with the modulus -->
+    <div id="sM">
+      <div class="card full" id="ml"><div class="lbl" style="left:36px;top:30px">SIGNUM WITH THE MODULUS · 3 STEPS</div>
+        <div class="bigf" id="mT"></div><div class="hiBox" id="mHi" style="left:20px;width:744px;height:118px"></div><div id="mSt"></div></div>
+      <div class="card rf" id="mr"><div class="lbl" style="left:36px;top:30px">MOD X = DISTANCE FROM ZERO</div>
+        <svg id="mS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="mf" id="mf0"></div><div class="mf" id="mf1"></div><div class="mf" id="mf2"></div></div>
+    </div>
+
+    <!-- G: greatest integer definition, live number line -->
+    <div id="sG">
+      <div class="card full" id="gl"><div class="lbl" style="left:36px;top:30px">GREATEST INTEGER FUNCTION · NCERT</div>
+        <div class="bigf" id="gT"></div>
+        <div id="gD">the <b>greatest integer</b> that is less than or equal to <i class="x">x</i></div>
+        <div class="hw" id="gw0" style="top:330px"><i>1</i>List every integer not bigger than x</div>
+        <div class="hw" id="gw1" style="top:396px"><i>2</i>Pick the largest one</div>
+        <div class="rp" id="gr0" style="left:36px;top:480px"></div><div class="rp" id="gr1" style="left:300px;top:480px"></div></div>
+      <div class="card rf" id="gr"><div class="lbl" style="left:36px;top:30px">LIVE · WHICH INTEGER IS IT?</div>
+        <div class="rd" id="gRd" style="left:36px;top:84px"></div>
+        <svg id="gS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- K: chop vs round down, then pause and think -->
+    <div id="sK">
+      <div class="card full" id="kc"><div class="lbl" id="kcL" style="left:36px;top:30px">CHOP OFF THE DECIMAL</div><div id="kcR"></div>
+        <div class="pillp bad" id="kcP" style="left:36px;top:470px">Chopping moves towards zero</div></div>
+      <div class="card rf" id="kd"><div class="lbl" style="left:36px;top:30px">ROUND DOWN · LOOK LEFT</div><div id="kdR"></div>
+        <svg id="kS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- D: the staircase, live -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE STAIRCASE · PROOF</div>
+        <div class="rd" id="dX" style="left:36px;top:84px"></div><div class="rd" id="dY" style="right:36px;top:84px"></div>
+        <div class="lg" id="lg0" style="left:36px"><i style="background:var(--ac)"></i>filled dot: included</div>
+        <div class="lg" id="lg1" style="left:376px"><i style="background:#fff"></i>empty dot: not included</div>
+        <div class="hiBox" id="dHi" style="left:20px;width:744px;height:80px"></div><div id="dSt"></div>
+        <div class="pillp ac" id="dRg" style="left:36px;top:492px"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">LIVE · LET X RUN</div>
+        <svg id="dS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">ONE WHOLE STEP OF ANSWERS</div>
+        <svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="wP" style="left:36px;top:492px"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="620" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Always round <span class="acc">down</span>, to the left.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

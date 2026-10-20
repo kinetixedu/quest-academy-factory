@@ -1,0 +1,59 @@
+H1|0.4|Ask someone who is sixteen point nine years old how old they are. They will not say seventeen. They will say sixteen.
+H2|0.45|Age counts completed years. Sixteen point one, sixteen point five, sixteen point nine. Every one of them is just sixteen.
+H3|0.35|Diya read this on the health camp form pinned in the college corridor. Age, in completed years.
+H4|0.5|So rounding down looks easy. But what is minus two point one, rounded down? Is it minus two, or minus three?
+H5|0.65|Two special functions answer questions like this. The signum function, and the greatest integer function.
+S1|0.35|Let us start with signum. Signum is the Latin word for sign.
+S2|0.4|It asks one question about any real number. Is it positive, negative, or zero?
+S3|0.4|If x is positive, the output is one. If x is zero, the output is zero. If x is negative, the output is minus one.
+S4|0.4|Watch x slide along the line. Minus three gives minus one. Minus a half gives minus one too. The size does not matter, only the sign.
+S5|0.4|At zero, the output jumps to zero. Just after zero, it jumps up to one, and stays there.
+S6|0.65|So the graph is two flat rays and a single dot at the origin. The domain is all real numbers. The range has just three values: minus one, zero and one.
+M1|0.4|NCERT also writes signum using the modulus from the last episode. Mod x, divided by x.
+M2|0.75|Step one. If x is five, mod x is five. Five divided by five is one.
+M3|0.75|Step two. If x is minus five, mod x is still five. Five divided by minus five is minus one.
+M4|0.75|Step three. At zero we cannot divide by zero. So the rule simply says: the output at zero is zero.
+G1|0.35|Now the greatest integer function. We write it as x inside square brackets.
+G2|0.4|Square bracket x means the greatest integer that is less than or equal to x.
+G3|0.4|Read it slowly. Look at every integer that is not bigger than x. Then pick the largest one.
+G4|0.4|Take two point seven. The integers not bigger than it are two, one, zero, and so on. The largest is two. So square bracket two point seven is two.
+G5|0.65|Now take exactly three. Three is less than or equal to three, so square bracket three is three. An integer stays as it is.
+K1|0.4|Side by side. Chopping off the decimal, and rounding down. For two point seven, both give two.
+K2|0.6|For minus two point one, chopping gives minus two. But minus two is bigger than minus two point one. It sits to the right on the number line.
+K3|3.2|Now you try. Square bracket minus two point one. Is it minus two, or minus three? Pause and decide.
+K4|0.65|Minus three! It is the first integer to the left of minus two point one. Rounding down always means moving left.
+T1|0.7|Remember this. The greatest integer function always rounds down, to the left on the number line.
+D1|0.35|Now let us draw its graph, and let x run.
+D2|0.4|Start at minus two. Square bracket x stays at minus two, until x reaches minus one.
+D3|0.4|Between zero and one, the value is zero. Between one and two, it is one. Each value holds flat, then jumps.
+D4|0.6|The graph is a staircase. Each step starts with a filled dot and ends with an empty dot.
+D5|0.4|A filled dot means that end is included. An empty dot means it is not.
+D6|0.75|Step one. For x from zero up to one, but not one, square bracket x is zero.
+D7|0.75|Step two. For x from one up to two, but not two, it is one.
+D8|0.75|Step three. In general, if square bracket x is n, then n is less than or equal to x, and x is less than n plus one.
+D9|0.65|The domain is all real numbers. The range is the set of integers, because every output is a whole number.
+Z1|3.2|Quick one. At x equal to two, is the staircase at height one, or height two? Pause and think.
+Z2|0.65|Height two! Two is an integer, so square bracket two is two. The filled dot sits at the start of the new step.
+W1|0.35|Now, one worked example.
+W2|0.5|Solve two times square bracket x, minus one, equals five.
+W3|0.75|Step one. Add one to both sides. Two times square bracket x is six.
+W4|0.75|Step two. Divide by two. Square bracket x is three.
+W5|0.75|Step three. Use the staircase rule. Three is less than or equal to x, and x is less than four.
+W6|0.75|Step four. So x is any number from three, included, up to four, not included.
+W7|0.65|Not one answer, but a whole step of the staircase. Three point nine nine works. Four does not.
+X1|0.35|Now, the exam trap.
+X2|0.4|Find square bracket minus three point seven. Many students drop the decimal and write minus three.
+X3|0.65|But minus three is bigger than minus three point seven. Move left to the first integer. The answer is minus four.
+J1|0.6|Where is this asked? In JEE Main, as questions that build a function from square bracket x and ask for its values or its range.
+Q1|5.4|Exam level now. This function mixes both ideas. What is its range? Pause and solve.
+A1|0.5|The answer is C. Minus two, minus one, zero and one.
+A2|0.5|At x equal to zero, every part is zero, so f is zero.
+A3|0.5|If x is any other integer n, square bracket x plus square bracket minus x is n minus n, which is zero. So f is just the sign: one or minus one.
+A4|0.5|If x is not an integer, square bracket minus x is one less than minus square bracket x. So those two parts add to minus one.
+A5|0.6|Then f is minus one plus one, which is zero, for positive x. Or minus one minus one, which is minus two, for negative x. So the range is minus two, minus one, zero and one.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What is the signum of minus seven? And the signum of zero?
+Y3|0.9|Two. Find square bracket minus zero point five.
+Y4|1.1|Three. For which numbers x is square bracket x equal to five?
+N1|0.3|Next time: one sheet of graph paper, six different shapes. Can you name each function from its graph alone? We find out in graphs of standard functions.

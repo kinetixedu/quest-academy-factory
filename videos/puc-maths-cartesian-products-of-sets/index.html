@@ -1,0 +1,158 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 13 - Cartesian Products of Sets</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 13: Cartesian products of sets (Proof board) ===== */
+:root{--sa:#2F6FEB;--sb:#0E8F8F;--sab:#E7EEFD;--sbb:#DDF1F1}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.sa{color:var(--sa)}.sb{color:var(--sb)}.a{color:var(--ac)}
+/* title card chips */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:54px;font:700 30px Poppins;white-space:nowrap}
+/* hook: canteen menu board */
+.mh{position:absolute;top:84px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.mi{position:absolute;height:64px;border-radius:12px;display:flex;align-items:center;padding:0 20px;font:600 28px Poppins;white-space:nowrap}
+.mi.s{background:var(--sab);color:var(--sa)}.mi.d{background:var(--sbb);color:var(--sb)}
+#hGs{position:absolute;left:36px;top:410px;font:600 44px 'IBM Plex Mono';white-space:nowrap;color:var(--red)}
+#hGs i{position:absolute;left:-6px;top:50%;height:5px;border-radius:3px;background:var(--red);width:0}
+#hRl{position:absolute;left:36px;top:484px}
+#hDi{position:absolute;left:36px;top:84px;width:378px;height:468px;object-fit:contain;object-position:50% 100%}
+#hkQ{position:absolute;left:424px;top:110px;width:330px;font:700 36px/1.3 Poppins}
+#hCh{position:absolute;left:424px;top:330px;width:330px;height:140px}
+#hCh .c1{position:absolute;left:0;top:54px;font:700 25px Poppins;white-space:nowrap}
+#hCh .c2{position:absolute;left:0;top:94px;font:500 21px Poppins;color:var(--mute);white-space:nowrap}
+/* pairs list */
+.pr{position:absolute;left:36px;height:60px;width:712px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:18px;padding:0 18px;font:600 28px Poppins;white-space:nowrap}
+.pr .k{flex:none;width:36px;height:36px;border-radius:50%;background:var(--ac);color:#fff;font:700 18px Poppins;display:flex;align-items:center;justify-content:center}
+/* live readout */
+#gRd{position:absolute;left:36px;top:76px;font:600 60px/1 'IBM Plex Mono';white-space:nowrap}
+#gEq{position:absolute;left:36px;top:168px;font:600 38px 'IBM Plex Mono';white-space:nowrap}
+.tb{position:absolute;left:36px;width:420px;height:48px;display:flex;align-items:center;font:600 26px 'IBM Plex Mono';border-bottom:2px solid var(--line);white-space:nowrap}
+.tb span{width:210px}
+.tb.h{font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+/* definition */
+#dfT{position:absolute;left:36px;top:84px;width:712px;font:700 38px/1.32 Poppins;letter-spacing:-.01em}
+#dfT b{color:var(--ac)}
+#dfF{position:absolute;left:36px;top:420px;font-size:40px;white-space:nowrap}
+#dfL2{left:36px;top:378px}
+#pB{position:absolute;left:0;width:784px;top:96px;text-align:center;font-size:96px;white-space:nowrap}
+.pa{position:absolute;height:48px;padding:0 18px;border-radius:10px;display:inline-flex;align-items:center;font:600 22px Poppins;white-space:nowrap}
+#dc{position:absolute;left:36px;top:390px;width:712px;height:160px;border-radius:14px;background:var(--soft)}
+#dc .t1{position:absolute;left:24px;top:22px;font:700 28px Poppins;white-space:nowrap}
+#dc .t2{position:absolute;left:24px;top:68px;width:664px;font:500 22px/1.4 Poppins;color:var(--ink2)}
+/* proof */
+.st{position:absolute;left:36px;width:712px;height:92px}
+.st .n{position:absolute;left:0;top:4px;width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 21px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:66px;top:0;font-size:34px;white-space:nowrap}
+.st .why{position:absolute;left:66px;top:50px;font:500 21px Poppins;color:var(--mute);white-space:nowrap}
+#nSum{position:absolute;left:36px;top:470px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+/* side by side */
+.bf{position:absolute;left:36px;top:420px;font-size:44px;white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:64px;font:600 28px/1.4 Poppins;width:712px}
+#wl .sol .sx{font-size:28px}
+#wl .sol .sx .katex{font-size:1.08em}
+#wRes{position:absolute;left:36px;top:490px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+#so .sol .sx .katex{font-size:1.1em}
+#mq .mq{font-size:30px}
+#mq .mq .katex{font-size:1.08em}
+.trapL .tx .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 32px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 2 RELATIONS AND FUNCTIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Why Choices <span class="acc">Multiply</span></div>
+    <div id="sub">Cartesian products, explained with one canteen menu</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: canteen menu + Diya -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">THE CANTEEN MENU</div><div id="hm"></div>
+        <div id="hGs">3 + 2 = 5 ?<i></i></div><div id="hRl"></div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA · THE COLLEGE CANTEEN</div>
+        <img id="hDi" src="../../assets/illustrations/puc/diya.png">
+        <div id="hkQ">Why do the choices <span class="a">multiply</span>, not add?</div>
+        <div id="hCh"><div class="tag" style="left:0;top:0">NEW CHAPTER · CH 2</div><div class="c1">Relations and Functions</div><div class="c2">Idea 1: the Cartesian product</div></div></div>
+    </div>
+
+    <!-- P: arrow diagram + list of pairs -->
+    <div id="sP">
+      <div class="card full" id="pa"><div class="lbl" style="left:36px;top:30px">ARROW DIAGRAM · SNACKS TO DRINKS</div><svg id="pS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="pl"><div class="lbl" style="left:36px;top:30px">EVERY COMBO IS A PAIR</div><div id="prs"></div>
+        <div class="pillp ac" id="pCt" style="left:36px;top:490px">6 combos = 3 × 2</div></div>
+    </div>
+
+    <!-- G: grid + live drinks counter -->
+    <div id="sG">
+      <div class="card full" id="gg"><div class="lbl" style="left:36px;top:30px">ON A GRID · ONE DOT PER COMBO</div><svg id="gS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="gr"><div class="lbl" style="left:36px;top:30px">LIVE · ADD A DRINK</div>
+        <div id="gRd"></div><div id="gEq"></div><div id="gTb"></div></div>
+    </div>
+
+    <!-- D: definition -->
+    <div id="sD">
+      <div class="card full" id="df"><div class="lbl" style="left:36px;top:30px">DEFINITION · NCERT</div>
+        <div id="dfT">The <b>Cartesian product</b> of two non-empty sets P and Q is the set of all ordered pairs of elements from P and Q.</div>
+        <div class="lbl" id="dfL2">IN SET BUILDER FORM</div><div id="dfF"></div></div>
+      <div class="card rf" id="dp"><div class="lbl" style="left:36px;top:30px">ONE ELEMENT OF P × Q</div><div id="pB"></div><div id="pAn"></div>
+        <div id="dc"><div class="t1">Why "Cartesian"?</div><div class="t2">Named after René Descartes, a French mathematician. Points on a graph are called Cartesian coordinates after him too.</div></div></div>
+    </div>
+
+    <!-- N: proof n(AxB) = pq -->
+    <div id="sN">
+      <div class="card full" id="np"><div class="lbl" style="left:36px;top:30px">PROOF · 4 STEPS</div><div id="nSt"></div></div>
+      <div class="card rf" id="ng"><div class="lbl" style="left:36px;top:30px">THE PICTURE · p = 4, q = 3</div><svg id="nS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div id="nSum"></div></div>
+    </div>
+
+    <!-- S: union vs product, then pause and think -->
+    <div id="sS">
+      <div class="card full" id="su"><div class="lbl" style="left:36px;top:30px">UNION · ALL ITEMS IN ONE SET</div><svg id="suS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="bf" id="suF"></div>
+        <div class="pillp" id="suP" style="left:36px;top:500px">Union adds</div></div>
+      <div class="card rf" id="sp"><div class="lbl" style="left:36px;top:30px">CARTESIAN PRODUCT · EVERY PAIR</div><svg id="spS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="bf" id="spF"></div>
+        <div class="pillp ac" id="spP" style="left:36px;top:500px">The product multiplies</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">ARROW DIAGRAM · A TO B</div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="wRes">4 pairs = 2 × 2</div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Every element meets every <span class="acc">element</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

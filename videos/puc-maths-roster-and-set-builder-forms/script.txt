@@ -1,0 +1,54 @@
+H1|0.4|Spell the word SCHOOL. Six letters. S, C, H, O, O, L.
+H2|0.45|Now write the set of its letters. Only five. S, C, H, O, L.
+H3|0.35|Aarav spotted this while copying his notes last night.
+H4|0.5|Six letters went in, but only five came out. Where did the second O go?
+H5|0.65|The answer hides inside the two ways of writing a set. Roster form, and set builder form.
+R1|0.35|Quick recall. Roster form lists every element of a set inside curly brackets, with commas between them.
+R2|0.4|But a roster list follows two rules. Rule one: no element is written twice.
+R3|0.4|Watch the letters of SCHOOL drop into the set. S is new, so it goes in. C is new. H is new. O is new.
+R4|0.4|Now the second O. A set only asks one question: is O in, or out? O is already in, so nothing changes.
+R5|0.65|L is new. So the set is S, C, H, O, L. Five elements. Writing O twice adds nothing.
+R6|0.65|Try it with the word BETTER. Six letters again, but the set is just B, E, T, R. Four elements.
+O1|0.4|Rule two: order does not matter. Side by side.
+O2|0.4|A word cares about order. T, E, A spells TEA. A, T, E spells ATE. Same letters, two different words.
+O3|0.6|A set does not care. The set T, E, A and the set A, T, E are the same set. Only what is inside counts.
+O4|3.2|Pause and think. Are one, two, two, three and three, two, one the same set?
+O5|0.65|Yes! Drop the repeat and ignore the order. Both sets are just one, two and three.
+B1|0.35|Now the second form. Set builder form writes the rule instead of the list.
+B2|0.4|Here is one. The set of all x, such that x is a positive integer, and x squared is less than forty.
+B3|0.4|To turn it into roster form, we test x one value at a time.
+B4|0.4|x is one. One squared is one, which is less than forty. So one is in.
+B5|0.4|Two gives four. Three gives nine. Four gives sixteen. Five gives twenty five. Six gives thirty six. All of them are in.
+B6|0.65|Seven gives forty nine. That crosses forty, so seven is out. Every bigger x gives an even bigger square, so we can stop.
+B7|0.65|The roster form is one, two, three, four, five, six. One short rule became a list of six.
+P1|0.4|Going backwards is harder. Here is a list. One, four, nine, sixteen, twenty five, and so on.
+P2|0.75|Step one. Ask what each element is made of. One is one times one. Four is two times two. Nine is three times three.
+P3|0.75|Step two. Spot the pattern. Every element is a natural number times itself. We call that number n.
+P4|0.75|Step three. Write the rule. x equals n squared, where n is a natural number.
+P5|0.65|So the set is all x, such that x equals n squared, and n belongs to N. The three dots became one short rule.
+D1|0.4|Notice the two letters here. x is the element of the set. n is only a counter that builds it.
+D2|0.6|n runs one, two, three, and so on. x is what comes out: one, four, nine. Only x lives in the set.
+D3|3.2|Pause and think. Is eight in this set?
+D4|0.65|No! Two squared is four and three squared is nine. No natural number squared gives eight, so eight does not belong.
+T1|0.7|Remember this. Roster form lists each element once, in any order. Set builder form gives the one rule they all follow.
+W1|0.35|Now, one worked example.
+W2|0.5|Write this set in set builder form. One half, two thirds, three quarters, and so on, up to six sevenths.
+W3|0.75|Step one. The tops run one, two, three, up to six. Call the top n.
+W4|0.75|Step two. Every bottom is one more than its top. So the bottom is n plus one.
+W5|0.75|Step three. n is a natural number, from one to six.
+W6|0.65|So the set is all x, such that x equals n over n plus one, where n is a natural number from one to six.
+X1|0.35|Now, the exam trap.
+X2|0.4|How many elements are in the set of letters of the word COMMITTEE? Many students count nine.
+X3|0.65|But M, T and E each appear twice. Write each letter once: C, O, M, I, T, E. The set has only six elements.
+J1|0.6|Where is this asked? In PUC board exams, as write this set in roster form or in set builder form. And in JEE Main, as how many elements does this set have.
+Q1|5.4|Exam level now. How many elements does this set have? Pause and solve.
+A1|0.5|The answer is B. Eight.
+A2|0.5|First, rewrite the rule. n squared minus six n plus ten equals n minus three, squared, plus one.
+A3|0.5|So n equals two and n equals four give the same value, two. And n equals one and n equals five both give five.
+A4|0.6|Ten values of n, but two values repeat. Ten minus two leaves eight different elements.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Write the set of letters of the word APPLE in roster form.
+Y3|0.9|Two. Write the set two, four, eight, sixteen, thirty two in set builder form.
+Y4|1.1|Three. In the set of all x such that x equals n squared, which letter lives in the set?
+N1|0.3|Next time: the set of even primes bigger than two. Is it nothing, or is it something? We meet the empty set, and sets that never end.

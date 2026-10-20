@@ -1,0 +1,56 @@
+H1|0.4|A quarter turn of a bicycle wheel is ninety degrees. A full turn is three hundred and sixty.
+H2|0.45|But who chose three hundred and sixty? Not the wheel. People did.
+H3|0.35|Aarav thought about this while riding to college today.
+H4|0.5|His wheel rolls along the road as it turns. Could the road tell us how far it turned?
+H5|0.65|It can. That idea is called the radian, and it opens a new chapter: Chapter 3, Trigonometric Functions.
+G1|0.35|First, what is an angle?
+G2|0.4|An angle is a measure of rotation. A ray turns about its starting point.
+G3|0.4|The ray starts on the initial side. Where it stops is the terminal side. The point it turns about is the vertex.
+G4|0.65|Watch it turn. The more it rotates, the bigger the angle. Now we need a unit to count it.
+D1|0.35|The first unit is the degree.
+D2|0.4|Cut one full turn into three hundred and sixty equal slices. One slice is one degree.
+D3|0.4|For finer work, one degree is cut into sixty minutes, and one minute into sixty seconds.
+D4|0.65|Three hundred and sixty splits evenly in many ways. But it is still a number people chose.
+K1|3.2|Quick one. Can an angle be bigger than three hundred and sixty degrees? Pause and think.
+K2|0.65|Yes! The ray can keep turning. One full turn plus sixty degrees more is four hundred and twenty degrees.
+R1|0.35|Now the second unit. This one comes from the circle itself.
+R2|0.4|Take a circle whose radius is one unit. We call it a unit circle.
+R3|0.4|Mark an arc on its rim that is also one unit long.
+R4|0.65|The angle this arc makes at the centre is one radian.
+R5|0.4|In any circle, when the arc is as long as the radius, the angle is one radian.
+R6|0.4|Now watch. Lay the radius around the rim, again and again. One, two, three, four, five, six.
+R7|0.65|Six radii fit, and a small gap is left. All the way round is about six point two eight radians. That number is two pi.
+V1|0.35|So how do we find the angle for any arc? Four small steps.
+V2|0.75|Step one. An arc as long as the radius makes one radian.
+V3|0.75|Step two. Equal arcs make equal angles at the centre. So an arc two radii long makes two radians.
+V4|0.75|Step three. So the angle in radians is how many radii fit in the arc. Theta equals l over r.
+V6|0.75|Step four. Multiply both sides by r. The arc length l equals r times theta.
+V7|0.65|Check it on a full turn. The arc is the whole rim, two pi r. Divide by r, and theta is two pi.
+T1|0.7|Remember this. One radian is the angle where the arc equals the radius.
+S1|0.4|Side by side. Degrees cut a full turn into three hundred and sixty parts. That number was chosen by people.
+S2|0.6|Radians count the arc in radii. A full turn is two pi, about six point two eight. That number comes from the circle.
+S3|0.6|A radian is a length divided by a length, so it has no real unit. When an angle has no unit written, it is in radians.
+S4|3.2|Now you try. A tiny wheel and a giant wheel each roll an arc equal to their own radius. Which one turns through the bigger angle? Pause and think.
+S5|0.65|Neither! Both turn exactly one radian. The radian does not care how big the circle is.
+W1|0.35|Now, one worked example.
+W2|0.5|Aarav's wheel has a radius of thirty five centimetres. His bicycle rolls forward one metre. Through what angle, in radians, does the wheel turn?
+W3|0.75|Step one. When a wheel rolls without slipping, the road it covers equals the arc that touched the road. So l is one metre.
+W4|0.75|Step two. Use the same units. One metre is one hundred centimetres.
+W5|0.75|Step three. Theta equals l over r, which is one hundred over thirty five.
+W6|0.75|Step four. That is twenty over seven, about two point eight six radians.
+W7|0.65|That is less than half of two pi, so the wheel turned a little less than half a turn.
+X1|0.35|Now, the exam trap.
+X2|0.4|Arc length for one full turn, radius ten centimetres. Many students write l equals ten times three hundred and sixty.
+X3|0.65|But l equals r theta needs theta in radians. A full turn is two pi, so l is ten times two pi, about sixty two point eight centimetres.
+J1|0.6|Where is this asked? In the PUC board exams: given an arc and a radius, find the angle in radians, or the other way round.
+Q1|5.4|Exam level now. Find theta in radians. Pause and solve.
+A1|0.5|The answer is B. Five by four.
+A2|0.5|The perimeter of a sector is two radii plus the arc. So two r plus l equals twenty six.
+A3|0.5|The arc is two more than the radius, so l is r plus two. Then three r plus two is twenty six, and r is eight.
+A4|0.6|So l is ten. Theta is l over r, ten over eight, which is five by four radians.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. How many degrees are there in two full turns?
+Y3|0.9|Two. An arc of fifteen centimetres sits on a circle of radius five. What is the angle in radians?
+Y4|1.1|Three. Why is one radian the same size in every circle?
+N1|0.3|Next time: half a wheel turn is one hundred and eighty degrees, and also pi radians. So how do we switch between the two?

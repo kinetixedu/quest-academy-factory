@@ -1,0 +1,66 @@
+H1|0.4|Every equation you have solved so far had an answer you could point to on the number line.
+H2|0.45|x minus three equals zero? Point at three. x squared equals four? Point at two, or minus two.
+H3|0.35|Last night, Aarav met one that broke the rule. A new chapter begins with it.
+H4|0.5|x squared plus one equals zero. He tried every number he could think of. Not one of them worked.
+H5|0.65|Is the equation broken, or is our number line too small? Let us find out.
+P1|0.35|So why does no number work?
+P2|0.4|Look at what squaring does. Three squared is nine. Minus three squared is also nine, because minus times minus is plus.
+P3|0.4|Zero squared is zero. A square can be zero or positive, but never negative.
+P4|0.4|Watch it live. As x slides along the number line, x squared never drops below zero.
+P5|0.65|So x squared plus one is always at least one. It can never reach zero.
+L1|0.35|Now the big picture. Draw the graph of y equals x squared plus c, where c is a number we can change.
+L2|0.4|Where the curve crosses the x axis, y is zero. So the crossing points are the real solutions.
+L3|0.4|Start with c equal to minus four. The curve cuts the axis at two and at minus two.
+L4|0.4|Now let c count up. At minus one, the crossings move in, to one and minus one.
+L5|0.4|At c equal to zero, the curve just touches the axis, at one point.
+L6|0.65|And the moment c passes zero, the curve lifts off. No crossing at all. No real solution.
+L7|0.65|At c equal to one, we reach our equation. The curve floats one full unit above the axis.
+D1|0.35|Let us prove it in four small steps.
+D2|0.75|Step one. Start with x squared plus one equals zero.
+D3|0.75|Step two. Subtract one from both sides. x squared equals minus one.
+D4|0.75|Step three. But for every real number x, x squared is zero or more. We just watched that.
+D5|0.75|Step four. A number cannot be zero or more, and also equal minus one. So no real number solves it.
+S1|0.4|Side by side. x squared minus one equals zero. The curve dips below the axis and crosses it twice, at one and minus one.
+S2|0.6|x squared plus one equals zero. The curve stays above the axis. It never crosses, so there is no real solution.
+S3|3.2|Now you try. Does x squared plus four equals zero have a real solution? Pause and decide.
+S4|0.65|No! x squared is never negative, so x squared plus four is at least four. It can never reach zero.
+Z1|0.35|This is not the first time numbers ran out.
+Z2|0.4|With only counting numbers, x plus five equals two has no answer. So we added zero and the negatives.
+Z3|0.4|Two x equals three has no integer answer. So we added fractions.
+Z4|0.4|x squared equals two has no fraction answer. So we added root two, and got the real numbers.
+Z5|0.65|Each time an equation got stuck, the number system grew. Now x squared equals minus one is stuck again.
+Z6|0.4|People saw this long ago. The Indian mathematicians Mahavira and Bhaskara wrote that a negative number has no square root.
+Z7|0.65|In fifteen forty five, Cardan looked for two numbers that add to ten and multiply to forty. He got five plus root minus fifteen, and called such answers useless.
+I1|0.35|So mathematicians did what they did before. They made the number system bigger.
+I2|0.4|They named a new number, i, whose square is minus one. In symbols, i is the square root of minus one.
+I3|0.65|Now x equals i solves our equation. i squared plus one is minus one plus one, which is zero.
+T1|0.7|Remember this. No real number has a negative square. That is why we need a new kind of number.
+U1|0.35|But where does i live? Not on the number line. Here is the clever part.
+U2|0.4|Multiplying by minus one flips a number to the other side. Three becomes minus three. That is a half turn.
+U3|0.4|And i times i is minus one. So multiplying by i, done twice, must make a half turn.
+U4|0.65|Two equal moves that make a half turn are two quarter turns. So multiplying by i turns a number a quarter turn, off the line, straight up.
+U5|0.65|The new numbers need a second direction. That is why they are called complex numbers.
+U6|3.2|Quick one. Start at three and multiply by i twice. Where do you land? Pause and think.
+U7|0.65|Minus three! Two quarter turns make a half turn. Three times i squared is three times minus one.
+W1|0.35|Now, one worked example.
+W2|0.5|Show that x squared plus four x plus five equals zero has no real solution. Then solve it using i.
+W3|0.75|Step one. Split five into four plus one, and group the first three terms.
+W4|0.75|Step two. x squared plus four x plus four is x plus two, all squared. So x plus two, squared, equals minus one.
+W5|0.75|Step three. A real square cannot be negative, so there is no real solution.
+W6|0.75|Step four. With i, x plus two can be i, or minus i. So x is minus two plus i, or minus two minus i.
+W7|0.65|The graph agrees. Its lowest point sits at height one, so the curve never touches the axis.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students say minus one solves x squared equals minus one, because minus one squared looks like minus one.
+X3|0.65|But minus one, in brackets, squared, is minus one times minus one. That is plus one. So minus one is not a solution.
+J1|0.6|Where is this asked? In PUC board exams, from this NCERT chapter. A typical question: show that an equation has no real solution, then solve it with i.
+Q1|5.4|Exam level now. For how many integers c does this equation have no real solution? Pause and solve.
+A1|0.5|The answer is C. Sixteen.
+A2|0.5|Complete the square. x minus two, squared, equals four minus c.
+A3|0.5|A real square is never negative. So there is no real solution exactly when four minus c is negative, that is, when c is more than four.
+A4|0.6|At c equal to four, x equals two still works. So c runs from five to twenty. That is sixteen integers.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why does x squared plus nine equals zero have no real solution?
+Y3|0.9|Two. For which values of c does the graph of y equals x squared plus c miss the x axis?
+Y4|1.1|Three. Is minus one, in brackets, squared, equal to minus one?
+N1|0.3|Next time: i times i is minus one. So what is i times i times i? The powers of i repeat every four turns.

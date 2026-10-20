@@ -1,0 +1,56 @@
+H1|0.4|Pump up a bicycle tyre, then watch the little valve as the wheel turns.
+H2|0.4|Sometimes it is above the hub, sometimes below. Sometimes to the right, sometimes to the left.
+H3|0.35|Diya spotted this while Aarav was fixing his front wheel after class.
+H4|0.5|She asked: when the valve is below the hub, is its height a minus number?
+H5|0.65|It is. And that one idea decides the sign of every trigonometric function, in all four quadrants.
+P1|0.35|First, a quick recall from the last episode.
+P2|0.4|Draw a circle of radius one, with its centre at the origin O. This is the unit circle.
+P3|0.4|Turn an angle theta from the positive x axis. The arm ends at a point P on the circle.
+P4|0.4|The x coordinate of P is cosine theta. The y coordinate is sine theta.
+P5|0.65|So cosine tells you left or right. Sine tells you up or down. Right and up are plus. Left and down are minus.
+S1|0.4|Now let P travel all the way round, and watch the signs.
+S2|0.5|First quadrant, theta from zero to pi by two. P is to the right and above. Cosine is plus, sine is plus.
+S3|0.5|Second quadrant, from pi by two to pi. P crosses to the left. Cosine turns minus, but sine stays plus.
+S4|0.5|Third quadrant, from pi to three pi by two. P is left and below. Cosine and sine are both minus.
+S5|0.5|Fourth quadrant, from three pi by two to two pi. P comes back to the right, but stays below. Cosine is plus again, sine is minus.
+S6|0.65|Look at the sine graph drawn beside the circle. It stays above the axis for the first half turn, and below it for the second half.
+D1|0.35|What about the other four functions? They are all built from sine and cosine, so their signs follow.
+D2|0.75|Step one. Tangent is sine divided by cosine.
+D3|0.75|Step two. When you divide, same signs give plus, and opposite signs give minus.
+D4|0.75|Step three. Sine and cosine have the same sign only in the first and third quadrants. So tangent is plus there, and minus in the other two.
+D5|0.75|Step four. Cosecant is one over sine, so it copies the sign of sine. Secant copies cosine. Cotangent copies tangent.
+D6|0.65|And the whole sign table is complete.
+K1|0.4|Side by side. Sixty degrees is in the first quadrant. Sine sixty is about zero point eight seven, and cosine sixty is plus a half.
+K2|0.6|One hundred and twenty degrees is in the second quadrant. Its sine is the same, plus zero point eight seven. But its cosine flips to minus a half.
+K3|0.6|Same height, opposite sides. The quadrant gives the sign. The size comes from the triangle.
+K4|3.2|Now you try. Is cosine of two hundred degrees positive or negative? Pause and decide.
+K5|0.65|Negative! Two hundred degrees is between one eighty and two seventy, in the third quadrant. P is to the left, so cosine is minus.
+M1|0.4|Here is a quick way to remember the table. Start in the first quadrant and go anticlockwise.
+M2|0.4|First quadrant, all six are plus. Second, only sine and cosecant. Third, only tangent and cotangent. Fourth, only cosine and secant.
+M3|0.65|All, Sine, Tangent, Cosine. Many students remember it as: All Students Take Coffee.
+T1|0.7|Remember this. Going anticlockwise from the first quadrant: All, Sine, Tangent, Cosine.
+Z1|3.2|Quick one. Sine is negative, but tangent is positive. Which quadrant is P in? Pause and think.
+Z2|0.65|The third! Sine is minus only in the third and fourth quadrants. Tangent is plus only in the first and third. Only the third has both.
+W1|0.35|Now, one worked example.
+W2|0.5|Theta is in the second quadrant, and sine theta is three fifths. Find cosine theta and tangent theta.
+W3|0.75|Step one. P is on the unit circle, so cosine squared plus sine squared is one.
+W4|0.75|Step two. Cosine squared is one minus nine over twenty five, which is sixteen over twenty five. So cosine is plus or minus four fifths.
+W5|0.75|Step three. In the second quadrant, P is to the left of the centre. So cosine theta is minus four fifths.
+W6|0.75|Step four. Tangent is sine over cosine. Three fifths divided by minus four fifths is minus three quarters.
+W7|0.65|Notice that the quadrant, not the arithmetic, chose the sign.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students think: in the third quadrant, everything is negative. So tangent must be negative too.
+X3|0.65|But tangent is sine over cosine, and minus divided by minus is plus. At two hundred and twenty five degrees, tangent is plus one.
+J1|0.6|Where is this asked? In PUC exams and in JEE Main, as: one ratio and the quadrant are given, find the others.
+Q1|5.4|Exam level now. Find the value of this expression. Pause and solve.
+A1|0.5|The answer is B. Nineteen.
+A2|0.5|Tangent is negative, and cosine is positive. That only happens in the fourth quadrant, so sine is negative.
+A3|0.5|Tangent is minus five over twelve, so think of a five, twelve, thirteen triangle.
+A4|0.5|So sine theta is minus five over thirteen, and cosine theta is plus twelve over thirteen.
+A5|0.6|Thirteen times minus five over thirteen is minus five. Twenty six times twelve over thirteen is twenty four. Minus five plus twenty four is nineteen.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. In which quadrant are sine and cosine both negative?
+Y3|0.9|Two. Is tangent of three hundred degrees positive or negative?
+Y4|1.1|Three. Why does cosecant always have the same sign as sine?
+N1|0.3|Next time: the valve can never rise higher than the wheel's radius. So how big can sine ever get? We find out in domain and range of trigonometric functions.

@@ -1,0 +1,150 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 28 - Signs in Different Quadrants</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 28: signs of trigonometric functions in the four quadrants (Proof board) ===== */
+:root{--th:#7A4FE0;--co:#2F6FEB;--ta:#0E8F8F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.th{color:var(--th)}.co{color:var(--co)}.si{color:var(--ac)}.ta{color:var(--ta)}
+svg text{font-family:'IBM Plex Mono'}
+/* title card: four quadrants, signs unknown */
+.lst{position:absolute;top:724px;width:320px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:50px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+/* hook */
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.rdl{position:absolute;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.rdv{position:absolute;height:52px;padding:0 18px;border-radius:10px;display:inline-flex;align-items:center;gap:10px;font:600 26px 'IBM Plex Mono';color:#fff;white-space:nowrap}
+/* steps (recall, derivation) */
+.st{position:absolute;left:36px;width:712px;height:100px}
+.st .n{position:absolute;left:0;top:6px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:40px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:60px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+/* live readout */
+#sRo{position:absolute;right:36px;top:22px;display:flex;gap:34px;font:600 28px 'IBM Plex Mono';white-space:nowrap}
+#sRo i{font-family:Poppins;font-style:italic}
+/* sign table */
+.tbH{position:absolute;top:80px;width:118px;text-align:center;font:600 20px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.tbN{position:absolute;left:36px;width:180px;height:58px;display:flex;align-items:center;font-size:34px;white-space:nowrap}
+.tbC{position:absolute;width:118px;height:52px;border-radius:10px;display:flex;align-items:center;justify-content:center;font:600 32px 'IBM Plex Mono'}
+.tbC.p{background:var(--okBg);color:var(--ok)}.tbC.m{background:var(--redBg);color:var(--red)}
+/* side by side */
+.kv{position:absolute;left:440px;white-space:nowrap}
+.kv.big{font:600 44px 'IBM Plex Mono'}
+.kv.sm{font:600 30px 'IBM Plex Mono'}
+.kv.lb{font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.kbx{position:absolute;left:424px;width:330px;height:56px;border-radius:12px;background:var(--redBg)}
+/* memory trick */
+.qr{position:absolute;left:36px;width:712px;height:88px;border-radius:14px;background:var(--soft)}
+.qr .rn{position:absolute;left:18px;top:18px;width:64px;height:52px;border-radius:10px;background:var(--ink);color:#fff;font:700 24px 'IBM Plex Mono';display:flex;align-items:center;justify-content:center}
+.qr .qt{position:absolute;left:104px;top:0;height:88px;display:flex;align-items:center;font:600 30px Poppins;white-space:nowrap}
+.qr .qt .katex{font-size:1.05em}
+/* worked example */
+#wq{position:absolute;left:36px;top:64px;font:600 30px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.15em}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.12em}
+#mq .mq .katex{font-size:1.08em}
+#wl .sol .sx{font-size:30px}
+.trapL .tx .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:32px}
+#stF .katex{font-size:1em}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 3 TRIGONOMETRIC FUNCTIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Signs in the Four <span class="acc">Quadrants</span></div>
+    <div id="sub">Explained with one tyre valve going round</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: the valve + Diya's puzzle -->
+    <div id="sH">
+      <div class="card full" id="hw"><div class="lbl" style="left:36px;top:30px">THE VALVE · WHERE IS IT NOW?</div>
+        <svg id="hS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="rdl" id="hL1" style="left:520px;top:150px">LEFT OR RIGHT</div><div class="rdv" id="hV1" style="left:520px;top:180px"></div>
+        <div class="rdl" id="hL2" style="left:520px;top:290px">ABOVE OR BELOW</div><div class="rdv" id="hV2" style="left:520px;top:320px"></div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA · AFTER CLASS</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">Below the hub: is the height minus?</div></div>
+    </div>
+
+    <!-- P: recall the unit circle -->
+    <div id="sP">
+      <div class="card full" id="pc"><div class="lbl" style="left:36px;top:30px">UNIT CIRCLE · RADIUS 1</div><svg id="pS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="pp"><div class="lbl" style="left:36px;top:30px">RECALL · 4 FACTS</div><div id="pSt"></div></div>
+    </div>
+
+    <!-- S: P goes round, sine graph draws live -->
+    <div id="sS">
+      <div class="card wide" id="sc"><div class="lbl" style="left:36px;top:30px">LIVE · P GOES ROUND · y = sin θ</div>
+        <svg id="sSv" width="1600" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="sRo"><span class="th"><i>θ</i> = <b id="rT">0°</b></span><span class="co">cos <i>θ</i> = <b id="rC"></b></span><span class="si">sin <i>θ</i> = <b id="rS"></b></span></div></div>
+    </div>
+
+    <!-- D: derive the other four signs -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">PROOF · 4 STEPS</div><div class="hiBox" id="dHi" style="left:20px;width:744px;height:96px"></div><div id="dSt"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">SIGN TABLE · 4 QUADRANTS</div><div class="hiBox" id="tHi" style="left:20px;width:744px;height:64px"></div><div id="tb"></div></div>
+    </div>
+
+    <!-- K: 60 vs 120 degrees, then pause and think -->
+    <div id="sK">
+      <div class="card full" id="ka"><div class="lbl" style="left:36px;top:30px">θ = 60° · QUADRANT I</div><svg id="kaS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div id="kaR"></div>
+        <div class="pillp good" id="kaP" style="left:36px;top:496px">Quadrant I: both plus</div></div>
+      <div class="card rf" id="kb"><div class="lbl" style="left:36px;top:30px">θ = 120° · QUADRANT II</div><svg id="kbS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="kbx" id="kbX"></div><div id="kbR"></div>
+        <div class="pillp ac" id="kbP" style="left:36px;top:496px">Same height, opposite sides</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- M: All Sine Tangent Cosine -->
+    <div id="sM">
+      <div class="card full" id="ml"><div class="lbl" style="left:36px;top:30px">ANTICLOCKWISE FROM QUADRANT I</div><svg id="mS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="mr"><div class="lbl" style="left:36px;top:30px">WHICH ONES ARE PLUS?</div><div id="mR"></div>
+        <div class="pillp ac" id="mP" style="left:36px;top:500px">All Students Take Coffee</div></div>
+    </div>
+
+    <!-- Z: pause and think 2 -->
+    <div id="sZ"><div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div></div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">QUADRANT II · P IS LEFT OF O</div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="600" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2"><span class="acc">A</span>ll · <span class="acc">S</span>ine · <span class="acc">T</span>angent · <span class="acc">C</span>osine</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

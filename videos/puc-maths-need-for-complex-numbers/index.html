@@ -1,0 +1,182 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 37 - Need for Complex Numbers</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 37: need for complex numbers (Proof board) ===== */
+:root{--re:#2F6FEB;--reb:#E7EEFD;--im:#7A4FE0;--imb:#EFE9FC}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.re{color:var(--re)}.im{color:var(--im)}.a{color:var(--ac)}
+/* title card: equations you could point at */
+.lst{position:absolute;top:724px;width:440px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:50px;font-size:34px;white-space:nowrap}
+/* hook: Aarav's tries */
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+#hEq{position:absolute;left:36px;top:76px;font-size:46px;white-space:nowrap}
+.tr{position:absolute;left:36px;width:712px;height:60px;border-radius:12px;background:var(--soft)}
+.tr .tx{position:absolute;left:22px;top:13px;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+.tr .ty{position:absolute;left:236px;top:13px;font:600 26px 'IBM Plex Mono';white-space:nowrap;color:var(--ink2)}
+.tr .chip{right:12px;top:10px;height:40px;font-size:18px;padding:0 14px;background:var(--red)}
+.chip{position:absolute;height:52px;padding:0 18px;border-radius:10px;display:inline-flex;align-items:center;gap:8px;font:700 24px Poppins;color:#fff;white-space:nowrap}
+#hTag{right:36px;top:22px}
+/* steps (proof column) */
+.st{position:absolute;left:36px;width:712px;height:112px}
+.st .n{position:absolute;left:0;top:8px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:44px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:66px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+/* live readouts */
+.rd{position:absolute;font:600 56px/1 'IBM Plex Mono';white-space:nowrap}
+.rdS{position:absolute;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+#lEq{position:absolute;left:36px;top:170px;font-size:48px;white-space:nowrap}
+#lSol{position:absolute;left:36px;top:290px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+.sr{position:absolute;left:36px;width:712px;height:58px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:16px;padding:0 20px;box-sizing:border-box;font:600 24px Poppins;white-space:nowrap}
+.sr .k{font-size:28px;width:110px}
+/* ladder */
+.ss{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.ss .sy{position:absolute;left:18px;top:14px;width:120px;font-size:40px;white-space:nowrap}
+.ss .sn{position:absolute;left:150px;top:10px;font-size:36px;white-space:nowrap}
+.ss .se{position:absolute;left:150px;top:58px;font:500 18px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+.ss .chip{right:18px;top:22px;font-size:26px;background:var(--re)}
+/* history (text cards, no portraits) */
+.hs{position:absolute;top:96px;width:720px;height:440px;border-radius:14px;background:var(--soft)}
+.hs .hn{position:absolute;left:28px;top:24px;font:700 34px Poppins;white-space:nowrap}
+.hs .hd{position:absolute;left:28px;top:76px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.hs .hq{position:absolute;left:28px;width:660px;font:500 28px/1.4 Poppins}
+.hs .hf{position:absolute;left:28px;font-size:36px;white-space:nowrap}
+/* new number */
+#iBig{position:absolute;left:36px;top:110px;font-size:110px;white-space:nowrap}
+#iRt{position:absolute;left:40px;top:300px;font-size:60px;white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.12em}
+#mq .mq .katex{font-size:1.08em}
+#wl .sol .sx{font-size:30px}
+#wq{position:absolute;left:36px;top:64px;font:600 30px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.2em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:46px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 4 COMPLEX NUMBERS AND QUADRATIC EQUATIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Why We Need <span class="acc">Complex</span> Numbers</div>
+    <div id="sub">Explained with one curve that lifts off the axis</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: Aarav's tries -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">AARAV TRIES EVERY NUMBER</div><div class="tag" id="hTag">NEW CHAPTER · CH 4</div>
+        <div id="hEq"></div><div id="hrs"></div>
+        <div class="pillp bad" id="hlP" style="left:36px;top:500px">Never zero. Not once.</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · STUDY TABLE, LAST NIGHT</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">Broken equation, or too small a line?</div></div>
+    </div>
+
+    <!-- P: what squaring does + live slide -->
+    <div id="sP">
+      <div class="card full" id="pl"><div class="lbl" style="left:36px;top:30px">WHAT SQUARING DOES</div><div id="pSt"></div>
+        <div class="pillp" id="pP" style="left:36px;top:470px;background:var(--reb)"></div></div>
+      <div class="card rf" id="pr"><div class="lbl" style="left:36px;top:30px">LIVE · x SLIDES ALONG THE LINE</div>
+        <div class="rdS" id="pX" style="left:36px;top:70px"></div><div class="rdS" id="pY" style="left:330px;top:70px"></div>
+        <svg id="pS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- L: the parabola y = x^2 + c, c counts up -->
+    <div id="sL">
+      <div class="card full" id="ll"><div class="lbl" style="left:36px;top:30px">LIVE · CHANGE c</div>
+        <div class="rd" id="lC" style="left:36px;top:76px"></div>
+        <div id="lEq"></div>
+        <div class="lbl" id="lSolL" style="left:36px;top:256px">REAL SOLUTIONS</div><div id="lSol"></div>
+        <div id="lRows"></div></div>
+      <div class="card rf" id="lr"><div class="lbl" style="left:36px;top:30px">GRAPH · y = x² + c</div>
+        <svg id="lS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- D: proof in four steps -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">PROOF · 4 STEPS</div><div class="hiBox" id="dHi" style="left:20px;width:744px;height:112px"></div><div id="dSt"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">WHERE A SQUARE CAN LIVE</div>
+        <svg id="dS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp bad" id="dP" style="left:36px;top:470px">No real number solves it</div></div>
+    </div>
+
+    <!-- S: side by side + pause and think -->
+    <div id="sS">
+      <div class="card full" id="sl"><div class="lbl" style="left:36px;top:30px;color:var(--ok)">CROSSES TWICE</div><div class="fx" id="slF" style="left:36px;top:70px;font-size:44px"></div>
+        <svg id="slS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp good" id="slP" style="left:36px;top:500px"></div></div>
+      <div class="card rf" id="sr"><div class="lbl" style="left:36px;top:30px;color:var(--red)">NEVER CROSSES</div><div class="fx" id="srF" style="left:36px;top:70px;font-size:44px"></div>
+        <svg id="srS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp bad" id="srP" style="left:36px;top:500px">No real solution</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- Z: numbers ran out before + history -->
+    <div id="sZ">
+      <div class="card full" id="zl"><div class="lbl" style="left:36px;top:30px">NUMBERS HAVE RUN OUT BEFORE</div><div class="hiBox" id="zHi" style="left:20px;width:744px;height:104px"></div><div id="zR"></div></div>
+      <div class="card rf" id="zr"><div class="lbl" style="left:36px;top:30px">THE NUMBER SYSTEM GROWS</div><svg id="zS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card inkt" id="zh" style="left:160px;top:270px;width:1600px;height:580px"><div class="lbl" style="left:48px;top:34px">FROM THE HISTORY OF MATHS · NCERT HISTORICAL NOTE</div>
+        <div class="hs" id="zh0" style="left:48px"><div class="hn">Mahavira and Bhaskara</div><div class="hd">INDIA · ABOUT 850 AND 1150</div>
+          <div class="hq" style="top:130px">A negative number is not a square, so it has no square root.</div>
+          <div class="hf" id="zhF0" style="top:300px"></div></div>
+        <div class="hs" id="zh1" style="left:832px"><div class="hn">Cardan</div><div class="hd">ITALY · 1545</div>
+          <div class="hq" style="top:118px">Two numbers that add to 10 and multiply to 40:</div>
+          <div class="hf" id="zhF1" style="top:214px"></div><div class="hf" id="zhF2" style="top:290px"></div>
+          <div class="pillp bad" id="zhP" style="left:28px;top:370px">"Useless" answers</div></div></div>
+    </div>
+
+    <!-- I: a new number i -->
+    <div id="sI">
+      <div class="card full" id="il"><div class="lbl" style="left:36px;top:30px">A NEW NUMBER · NCERT</div><div id="iBig"></div><div id="iRt"></div>
+        <div class="pillp" id="iP" style="left:36px;top:470px;background:var(--imb);color:var(--im)">Not on the number line</div></div>
+      <div class="card rf" id="ir"><div class="lbl" style="left:36px;top:30px">CHECK · x = i</div><div class="hiBox" id="iHi" style="left:20px;width:744px;height:96px"></div><div id="iSt"></div></div>
+    </div>
+
+    <!-- U: multiplying by i is a quarter turn -->
+    <div id="sU">
+      <div class="card full" id="ul"><div class="lbl" style="left:36px;top:30px">MULTIPLY = TURN</div><svg id="uS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="ur"><div class="lbl" style="left:36px;top:30px">WHY i IS A QUARTER TURN</div><div class="hiBox" id="uHi" style="left:20px;width:744px;height:112px"></div><div id="uSt"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">GRAPH · y = x² + 4x + 5</div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="wP" style="left:36px;top:500px">Lowest point at height 1: never touches</div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">No real square is <span class="acc">negative</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

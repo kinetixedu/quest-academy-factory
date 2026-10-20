@@ -1,0 +1,155 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 17 - Domain, Codomain and Range</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 17: domain, codomain and range (Proof board) ===== */
+:root{--x:#7A4FE0;--sa:#2F6FEB;--sab:#E7EEFD;--sb:#0E8F8F;--sbb:#DDF1F0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.x{color:var(--x)}.a{color:var(--ac)}.sa{color:var(--sa)}.sb{color:var(--sb)}
+/* title card chips */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:50px;font:600 36px 'IBM Plex Mono';white-space:nowrap}
+/* hook */
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.tg{position:absolute;height:44px;padding:0 16px;border-radius:9px;display:inline-flex;align-items:center;gap:8px;font:600 19px 'IBM Plex Mono';letter-spacing:.06em;color:#fff;white-space:nowrap}
+#hGh{left:36px;top:510px}
+/* definitions */
+#pF{position:absolute;left:36px;top:80px;font-size:60px;white-space:nowrap}
+.dr{position:absolute;left:36px;width:712px;height:104px;border-radius:14px;background:var(--soft)}
+.dr .dn{position:absolute;left:20px;top:16px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.dr .df{position:absolute;left:20px;top:44px;font-size:36px;white-space:nowrap}
+.dr .dw{position:absolute;right:22px;top:52px;font:500 22px Poppins;color:var(--ink2);white-space:nowrap}
+/* live mapping */
+#mRule{left:36px;top:80px}
+#mCnt{position:absolute;right:36px;top:84px;height:48px;padding:0 16px;border-radius:10px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 22px 'IBM Plex Mono';white-space:nowrap}
+.mr{position:absolute;left:36px;width:712px;height:66px}
+.mr .n{position:absolute;left:0;top:10px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.mr .sx{position:absolute;left:70px;top:4px;font-size:40px;white-space:nowrap}
+#mRg{position:absolute;left:36px;top:478px;font-size:40px;white-space:nowrap}
+#mHi{left:20px;width:744px;height:78px}
+/* image / preimage */
+#iF{position:absolute;left:36px;top:84px;font-size:72px;white-space:nowrap}
+.iw{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.iw .ik{position:absolute;left:22px;top:16px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.iw .iv{position:absolute;left:22px;top:44px;font:600 30px Poppins;white-space:nowrap}
+/* side by side */
+.bf{position:absolute;left:36px;top:96px;font-size:44px;white-space:nowrap}
+.sbF{position:absolute;left:36px;top:420px;font-size:40px;white-space:nowrap}
+/* graph */
+#gF{position:absolute;left:36px;top:84px;font-size:46px;white-space:nowrap}
+#gA{position:absolute;left:36px;top:168px;font:600 64px/1 'IBM Plex Mono';white-space:nowrap}
+.gr{position:absolute;left:36px;width:712px;height:84px;border-radius:14px;background:var(--soft)}
+.gr .gk{position:absolute;left:22px;top:28px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.gr .gv{position:absolute;left:200px;top:14px;font-size:42px;white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:64px;font:600 28px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.15em}
+#wl .sol .sx{font-size:28px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 26px Poppins}
+#so .sol .sx .katex{font-size:1.08em}
+#mq .mq .katex{font-size:1.1em}
+.trapL .tx .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 2 RELATIONS AND FUNCTIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Domain, Codomain and <span class="acc">Range</span></div>
+    <div id="sub">Explained with one test marked out of 100</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: marks allowed vs marks scored + Aarav -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">ONE TEST · MARKED OUT OF 100</div>
+        <svg id="hS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="ghost" id="hGh">EXAMPLE FIGURES</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · THE NOTICE BOARD</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-corridor.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">0 to 100, or 41 to 96?</div></div>
+    </div>
+
+    <!-- P: the three words -->
+    <div id="sP">
+      <div class="card full" id="pl"><div class="lbl" style="left:36px;top:30px">A FUNCTION · THREE WORDS</div>
+        <div id="pF"></div><div id="pRows"></div></div>
+      <div class="card rf" id="pr"><div class="lbl" style="left:36px;top:30px">THE PICTURE</div>
+        <svg id="pS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- M + I: live mapping run, then image and preimage -->
+    <div id="sM">
+      <div class="card full" id="ml"><div class="lbl" id="mLb" style="left:36px;top:30px">RUN THE RULE · ONE INPUT AT A TIME</div>
+        <div id="mA"><div class="pillp ac" id="mRule"></div><div id="mCnt"></div>
+          <div class="hiBox" id="mHi"></div><div id="mRows"></div><div id="mRg"></div></div>
+        <div id="mB"><div class="lbl" style="left:36px;top:30px">TWO EXAM WORDS</div><div id="iF"></div><div id="iRows"></div></div></div>
+      <div class="card rf" id="mr"><div class="lbl" style="left:36px;top:30px">LIVE · ARROWS FROM A TO B</div>
+        <svg id="mS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- K: codomain vs range + pause and think -->
+    <div id="sK">
+      <div class="card full" id="kc"><div class="lbl" style="left:36px;top:30px;color:var(--sb)">CODOMAIN · CHOSEN WHEN WRITTEN</div>
+        <div class="bf" id="kcF"></div><svg id="kcS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="kcP" style="left:36px;top:330px;background:var(--sbb);color:var(--sb)">The allowed outputs</div>
+        <div class="sbF" id="kcE"></div></div>
+      <div class="card rf" id="kr"><div class="lbl" style="left:36px;top:30px">RANGE · FOUND BY RUNNING</div>
+        <div class="bf" id="krF"></div><svg id="krS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="krP" style="left:36px;top:330px">The outputs that really appear</div>
+        <div class="sbF" id="krE"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- G: live graph, a counts up -->
+    <div id="sG">
+      <div class="card full" id="gl"><div class="lbl" style="left:36px;top:30px">LIVE · CHANGE a</div>
+        <div id="gF"></div><div id="gA"><i style="font-family:Poppins">a</i> = <span id="gAv">1.00</span></div>
+        <div class="gr" id="gr0" style="top:276px"><div class="gk sa">DOMAIN</div><div class="gv" id="gDv"></div></div>
+        <div class="gr" id="gr1" style="top:376px"><div class="gk a">RANGE</div><div class="gv" id="gRv"></div></div></div>
+      <div class="card rf" id="gp"><div class="lbl" style="left:36px;top:30px">GRAPH · LIVE CURVE</div>
+        <svg id="gS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">EVERY IMAGE · A TO Z</div>
+        <svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Allowed is not the same as <span class="acc">reached</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

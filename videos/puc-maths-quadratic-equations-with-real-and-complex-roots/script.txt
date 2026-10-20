@@ -1,0 +1,55 @@
+H1|0.4|Throw a ball straight up. It passes fifteen metres twice, once going up and once coming down.
+H2|0.45|It reaches twenty metres only once, right at the top. And twenty five metres? Never.
+H3|0.35|Aarav tried this on his way home from college today.
+H4|0.5|Every height gives the same kind of equation. So why two answers, then one, then none?
+H5|0.65|Here is the twist. Even never has two answers. They just do not live on the number line.
+P1|0.35|Each height question is a quadratic equation.
+P2|0.4|A quadratic equation looks like this. a x squared, plus b x, plus c, equals zero, and a is not zero.
+P3|0.4|a, b and c are fixed numbers, called the coefficients. The values of x that make it true are called its roots.
+P4|0.4|For the ball, we take the height as twenty t minus five t squared. Height fifteen means this equals fifteen.
+P5|0.4|Move everything to one side and divide by five. We get t squared minus four t plus three equals zero.
+P6|0.65|It factors into t minus one, times t minus three. So t is one second going up, or three seconds coming down.
+L1|0.4|Now watch the whole family at once. Here is y equals x squared minus four x plus c. For the ball, c is the height divided by five.
+L2|0.4|The roots are where the curve meets the x axis. Let c count up.
+L3|0.4|At c equals zero, the roots are zero and four. As c grows, the curve lifts, and the roots slide towards each other.
+L4|0.4|At c equals four, they meet at two. The curve just touches the axis. The two roots are equal.
+L5|0.4|Past four, the curve leaves the axis. No real root is left. But look at the map on the right.
+L6|0.65|The two roots have stepped off the number line, one up and one down. At c equals five, they are two plus i and two minus i.
+L7|3.2|Quick one. At c equals six, are the roots real or complex? Pause and think.
+L8|0.65|Complex! Past four the curve stays above the axis. The roots are two plus i root two, and two minus i root two.
+D1|0.4|Where do those roots come from? Let us build one formula that works for every quadratic.
+D2|0.75|Step one. Divide everything by a, so x squared stands alone.
+D3|0.75|Step two. Move c over a to the right side.
+D4|0.75|Step three. Add b over two a, squared, to both sides. Now the left side is a perfect square.
+D5|0.75|Step four. Take the square root of both sides. Plus or minus, because both signs give the same square.
+D6|0.75|Step five. Subtract b over two a. This is the quadratic formula.
+D7|0.4|On the curve, minus b over two a is the middle line. The roots sit at equal distances on either side of it.
+D8|0.65|Now, if b squared minus four a c is negative, its square root is not real. But the square root of minus one is i. So the root becomes i times a real number, and the formula still works.
+S1|0.4|Side by side. x squared minus four x plus three. The curve crosses the axis twice. The roots are one and three, both real.
+S2|0.6|x squared minus four x plus five. The curve never touches the axis. Under the root we get minus four, so the roots are two plus i and two minus i.
+S3|0.4|Notice the pair. Same real part, opposite imaginary parts. These are conjugates. When a, b and c are real, complex roots always come as a conjugate pair.
+K1|3.2|Your turn. Does x squared plus nine equal zero have real roots? Pause and decide.
+K2|0.65|No! x squared would have to be minus nine, and no real number squares to a negative. The roots are three i and minus three i.
+T1|0.7|Remember this. Every quadratic equation has two roots. Real or complex, one formula finds them both.
+W1|0.35|Now, one worked example.
+W2|0.5|Solve x squared plus x plus one equals zero.
+W3|0.75|Step one. Here a, b and c are all one.
+W4|0.75|Step two. b squared minus four a c is one minus four, which is minus three.
+W5|0.75|Step three. The square root of minus three is i root three.
+W6|0.75|Step four. So x is minus one, plus or minus i root three, all over two.
+W7|0.65|Two complex roots, a conjugate pair, both with real part minus one half.
+X1|0.35|Now, the exam trap.
+X2|0.4|Solve x squared minus two x plus five equals zero. Under the root we get minus sixteen. Many students write its square root as minus four, and get three and minus one.
+X3|0.65|But the square root of minus sixteen is four i, not minus four. Check: three does not even fit the equation. The roots are one plus two i, and one minus two i.
+J1|0.6|Where is this asked? In JEE Main, as questions where you first solve a quadratic with complex roots, then use those roots, like the April twenty nineteen paper. It is in the JEE Main syllabus, but not in the current NCERT text.
+Q1|5.4|Exam level now. The two roots of this equation and the origin make a triangle on the Argand plane. Find its area. Pause and solve.
+A1|0.5|The answer is B. Six.
+A2|0.5|b squared minus four a c is sixteen minus fifty two, which is minus thirty six.
+A3|0.5|Its square root is six i. So x is four plus or minus six i, over two. That is two plus three i, and two minus three i.
+A4|0.6|Both roots sit above and below the point two. The base is six, and its distance from the origin is two. Half of six times two is six.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Solve x squared plus four equals zero.
+Y3|0.9|Two. Why does the formula need plus or minus?
+Y4|1.1|Three. Three minus two i is a root of a quadratic with real coefficients. What is the other root?
+N1|0.3|Next time: one small number tells you if the roots are real, equal or complex, before you solve anything. It is called the discriminant.

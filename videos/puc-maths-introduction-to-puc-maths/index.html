@@ -1,0 +1,169 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 1 - Introduction to PUC Maths</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 01: Introduction to PUC Maths (Proof board) ===== */
+:root{--x:#7A4FE0;--sa:#2F6FEB;--sab:#E7EEFD}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.x{color:var(--x)}.a{color:var(--ac)}.sa{color:var(--sa)}
+/* title card chips */
+.tc{position:absolute;top:724px;width:270px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.tc .ln{position:absolute;left:24px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.tc .lv{position:absolute;left:24px;top:52px;font:600 36px 'IBM Plex Mono';white-space:nowrap}
+/* hook */
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.hr{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.hr i{position:absolute;left:18px;top:16px;width:64px;height:64px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.hr .hn{position:absolute;left:104px;top:16px;font:700 28px Poppins;white-space:nowrap}
+.hr .hw{position:absolute;left:104px;top:56px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.hr .hv{position:absolute;right:24px;top:22px;font:600 44px/1 'IBM Plex Mono';white-space:nowrap}
+/* language of patterns */
+#lgT{position:absolute;left:36px;top:84px;width:712px;font:700 56px/1.2 Poppins;letter-spacing:-.015em}
+#lgT b{color:var(--ac)}
+#lgS{position:absolute;left:36px;top:380px;width:712px;font:500 28px/1.4 Poppins;color:var(--ink2)}
+#pCnt{position:absolute;right:36px;top:84px;height:52px;padding:0 18px;border-radius:10px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+#pF{position:absolute;left:36px;top:470px;font-size:46px;white-space:nowrap}
+/* chapter map */
+.cm{position:absolute;width:358px;height:70px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:12px;padding:0 16px;font:600 21px Poppins;white-space:nowrap;box-sizing:border-box}
+.cm b{flex:none;width:40px;height:40px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font:600 18px 'IBM Plex Mono';color:var(--mute)}
+#cmD{position:absolute;left:48px;top:460px;width:1504px;height:84px;border-radius:14px;background:var(--ac2)}
+#cmD .ic{position:absolute;left:20px;top:14px;width:56px;height:56px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+#cmD .tx{position:absolute;left:96px;top:24px;font:600 30px Poppins;white-space:nowrap}
+/* number system */
+.nb{position:absolute;border-radius:16px;border:3px solid}
+.nl{position:absolute;font:700 24px Poppins;white-space:nowrap}
+.nl .katex{font-size:1.25em}
+.ne{position:absolute;font:600 22px 'IBM Plex Mono';white-space:nowrap}
+/* decimal test */
+.dr{position:absolute;left:48px;width:1504px;height:110px;border-radius:14px;background:var(--soft)}
+.dr .df{position:absolute;left:28px;top:18px;width:130px;font-size:48px;white-space:nowrap}
+.dr .dd{position:absolute;left:200px;top:28px;font:600 46px/1 'IBM Plex Mono';white-space:nowrap}
+.dr .dt{position:absolute;left:880px;top:30px;height:50px;padding:0 18px;border-radius:10px;background:#fff;display:inline-flex;align-items:center;font:600 20px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+.dr .dv{position:absolute;right:28px;top:28px;height:54px;padding:0 20px;border-radius:10px;display:inline-flex;align-items:center;gap:8px;font:700 24px Poppins;color:#fff;white-space:nowrap}
+/* equation vs inequality */
+.eq{position:absolute;left:36px;top:96px;font-size:60px;white-space:nowrap}
+.cap2{position:absolute;left:36px;top:470px;height:52px;padding:0 18px;border-radius:10px;display:inline-flex;align-items:center;font:600 24px Poppins;white-space:nowrap}
+#iRd{position:absolute;left:36px;top:190px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+/* symbols */
+.sy{position:absolute;left:48px;width:1504px;height:132px;border-radius:14px;background:var(--soft)}
+.sy .sg{position:absolute;left:24px;top:22px;width:110px;height:88px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:52px}
+.sy .sm{position:absolute;left:164px;top:24px;font:700 32px Poppins;white-space:nowrap}
+.sy .se{position:absolute;left:164px;top:74px;font-size:30px;white-space:nowrap;color:var(--ink2)}
+/* episode flow */
+.fl2{position:absolute;top:180px;width:186px;height:150px;border-radius:14px;background:var(--soft);box-sizing:border-box}
+.fl2 i{position:absolute;left:20px;top:20px;width:56px;height:56px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.fl2 .ft{position:absolute;left:20px;top:88px;width:150px;font:700 21px/1.2 Poppins}
+.fl2 .fn{position:absolute;right:16px;top:22px;font:600 18px 'IBM Plex Mono';color:var(--mute)}
+.far{position:absolute;top:244px}
+#flB{position:absolute;left:48px;top:380px;height:56px;padding:0 20px;border-radius:12px;display:inline-flex;align-items:center;font:600 22px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:64px;font:600 28px/1.4 Poppins;width:712px}
+.tg{position:absolute;width:96px;height:58px;border-radius:10px;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.th{position:absolute;top:84px;width:96px;text-align:center;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute)}
+.tl{position:absolute;left:36px;width:150px;height:58px;display:flex;align-items:center;font-size:34px;white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 26px Poppins}
+#so .sol .sx .katex{font-size:1.06em}
+#mq .mq .katex{font-size:1.04em}
+#wl .sol .sx{font:500 26px Poppins}
+#wl .sol .sx .katex{font-size:1.1em}
+.trapL .tx .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:46px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · INTRODUCTION</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Welcome to <span class="acc">PUC Maths</span></div>
+    <div id="sub">Explained with one bicycle ride</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="tcs"></div>
+
+    <!-- H: one ride, four kinds of maths -->
+    <div id="sH">
+      <div class="card full" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · THE RIDE TO COLLEGE</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">A count, a speed, an angle, a curve</div></div>
+      <div class="card rf" id="hm"><div class="lbl" style="left:36px;top:30px">FOUR KINDS OF MATHS</div><div class="ghost" id="exH" style="right:36px;top:18px">EXAMPLE FIGURES</div><div id="hrs"></div><svg id="hcS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- M: a language for patterns -->
+    <div id="sM">
+      <div class="card full" id="lg"><div class="lbl" style="left:36px;top:30px">CLASS 11 MATHS IS</div>
+        <div id="lgT">Not faster sums. A <b>language</b> for patterns.</div>
+        <div id="lgS">Learn the words and the rules, and every chapter opens up.</div></div>
+      <div class="card rf" id="pt"><div class="lbl" style="left:36px;top:30px">A PATTERN · ADD THE ODD NUMBERS</div><div id="pCnt"></div>
+        <svg id="ptS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div id="pF"></div></div>
+    </div>
+
+    <!-- C: chapter map -->
+    <div id="sC"><div class="card wide" id="cmap"><div class="lbl" style="left:48px;top:30px">THE YEAR · 14 NCERT CHAPTERS</div><div id="cms"></div>
+      <div id="cmD"><div class="ic" id="cmI"></div><div class="tx" id="cmT"></div></div></div></div>
+
+    <!-- B: number system -->
+    <div id="sB">
+      <div class="card full" id="nsy"><div class="lbl" style="left:36px;top:30px">TOOL 1 · THE NUMBER SYSTEM</div><div id="nbs"></div></div>
+      <div class="card rf" id="nln"><div class="lbl" style="left:36px;top:30px">ON THE NUMBER LINE</div><svg id="nS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="nTag" style="left:36px;top:470px"></div></div>
+    </div>
+
+    <!-- K: the decimal test -->
+    <div id="sK">
+      <div class="card wide" id="dtc"><div class="lbl" style="left:48px;top:30px">THE DECIMAL TEST · RATIONAL OR NOT?</div><div id="drs"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- E: equation vs inequality -->
+    <div id="sE">
+      <div class="card full" id="eqc"><div class="lbl" style="left:36px;top:30px">TOOL 2 · AN EQUATION</div><div class="eq" id="eqF"></div><svg id="eqS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="cap2" id="eqP" style="background:var(--ac2);color:var(--ac)">Exactly one answer</div></div>
+      <div class="card rf" id="inc"><div class="lbl" style="left:36px;top:30px">TOOL 2 · AN INEQUALITY</div><div class="eq" id="inF"></div><div id="iRd"></div><svg id="inS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="cap2" id="inP" style="background:var(--ac);color:#fff">A whole stretch of answers</div></div>
+    </div>
+
+    <!-- S: symbols -->
+    <div id="sS"><div class="card wide" id="syc"><div class="lbl" style="left:48px;top:30px">TOOL 3 · SYMBOLS IN EVERY EPISODE</div><div id="sys"></div><svg id="syS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg></div></div>
+
+    <!-- P: how each episode runs -->
+    <div id="sP"><div class="card wide" id="flc"><div class="lbl" style="left:48px;top:30px">HOW EVERY EPISODE RUNS</div><div id="fls"></div><svg id="flS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg>
+      <div id="flB"></div></div></div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">Sort these six numbers into their families:</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">WHICH FAMILIES? · TICK EACH</div><div id="tgs"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="620" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Maths is a <span class="acc">language</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

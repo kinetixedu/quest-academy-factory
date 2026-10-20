@@ -1,0 +1,150 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 3 - Roster and Set-Builder Forms</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 03: roster and set-builder forms (Proof board) ===== */
+:root{--x:#7A4FE0;--sa:#2F6FEB;--sab:#E7EEFD;--nn:#D9731A}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.x{color:var(--x)}.a{color:var(--ac)}.sa{color:var(--sa)}.nn{color:var(--nn)}
+/* letter tiles */
+.lt{position:absolute;width:80px;height:80px;border-radius:14px;background:#fff;border:3px solid var(--ink);display:flex;align-items:center;justify-content:center;font:700 44px Poppins;color:var(--ink)}
+#tiles .lt{top:724px;width:96px;height:96px;font-size:52px;box-shadow:0 10px 30px rgba(22,33,62,.08)}
+/* hook */
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+#hSet{position:absolute;left:36px;top:300px;font-size:60px;white-space:nowrap}
+/* step rows */
+.st{position:absolute;left:36px;width:712px;height:112px}
+.st .n{position:absolute;left:0;top:8px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:44px;white-space:nowrap}
+.st .sx.tx{font:600 32px/62px Poppins}
+.st .why{position:absolute;left:70px;top:66px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+#rCnt,#bCnt{position:absolute;right:36px;top:18px;height:52px;padding:0 18px;border-radius:10px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+/* order: word vs set */
+.wr{position:absolute;left:36px;height:110px}
+.wr .eq{position:absolute;left:330px;top:22px;font:700 48px Poppins;white-space:nowrap}
+.bf{position:absolute;left:36px;font-size:56px;white-space:nowrap}
+/* set builder test */
+#bF{position:absolute;left:36px;top:84px;font-size:38px;white-space:nowrap}
+#bRd{position:absolute;left:36px;top:236px;font:600 52px/1 'IBM Plex Mono';white-space:nowrap}
+#bV{position:absolute;right:36px;top:228px;height:64px;padding:0 24px;border-radius:12px;display:flex;align-items:center;gap:10px;font:700 28px Poppins;color:#fff;white-space:nowrap}
+#bStop{position:absolute;left:36px;top:338px;font-size:36px;white-space:nowrap}
+#bRo{position:absolute;left:36px;top:470px;font-size:48px;white-space:nowrap}
+/* backwards */
+#pRo{position:absolute;left:36px;top:76px;font-size:48px;white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:64px;font:600 30px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.25em}
+#wl .sol .sx{font-size:30px}
+.fr{position:absolute;width:200px;height:170px;border-radius:14px;background:var(--soft);border:2.5px solid transparent}
+.fr .tp,.fr .bt{position:absolute;left:0;width:200px;text-align:center;font:600 46px/1 'IBM Plex Mono'}
+.fr .tp{top:18px}.fr .bt{top:92px}
+.fr i{position:absolute;left:60px;width:80px;top:80px;height:4px;border-radius:2px;background:var(--ink)}
+.fr .nl{position:absolute;right:10px;top:10px;font:600 16px 'IBM Plex Mono';color:var(--nn);white-space:nowrap}
+.fr .p1{position:absolute;right:12px;bottom:12px;font:600 18px 'IBM Plex Mono';color:var(--ac);white-space:nowrap}
+#wRes{position:absolute;left:36px;top:496px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.12em}
+#mq .mq .katex{font-size:1.08em}
+.trapL .tx .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:46px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 1 SETS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Roster and Set Builder <span class="acc">Forms</span></div>
+    <div id="sub">Explained with the letters of one word</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="tiles"></div>
+
+    <!-- H: SCHOOL, six letters, five elements + Aarav -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">SCHOOL · THE WORD AND ITS SET</div>
+        <div class="lbl" id="hL1" style="left:36px;top:84px">THE WORD · 6 LETTERS</div><div id="hw"></div>
+        <div class="lbl" id="hL2" style="left:36px;top:256px">THE SET OF ITS LETTERS</div><div id="hSet"></div>
+        <div class="pillp" id="hP1" style="left:36px;top:470px">6 letters in</div><div class="pillp ac" id="hP2" style="left:224px;top:470px">5 elements out</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · COPYING NOTES LAST NIGHT</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">Where did the second O go?</div></div>
+    </div>
+
+    <!-- R: rule 1, no repeats + live letter drop -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">ROSTER FORM · RULE 1</div>
+        <div class="hiBox" id="rHi" style="left:20px;width:744px;height:112px"></div><div id="rSt"></div></div>
+      <div class="card rf" id="rm"><div class="lbl" style="left:36px;top:30px">LIVE · DROP THE LETTERS IN</div><div id="rCnt"></div>
+        <svg id="rS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- O: rule 2, order: a word vs a set -->
+    <div id="sO">
+      <div class="card full" id="ow"><div class="lbl" style="left:36px;top:30px;color:var(--red)">A WORD · ORDER MATTERS</div><div id="owR"></div>
+        <div class="pillp bad" id="owP" style="left:36px;top:490px">Same letters, 2 different words</div></div>
+      <div class="card rf" id="os"><div class="lbl" style="left:36px;top:30px;color:var(--ok)">A SET · ONLY WHAT IS INSIDE</div>
+        <div class="bf" id="osA" style="top:92px"></div><div class="bf" id="osB" style="top:192px"></div>
+        <svg id="oS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp good" id="osP" style="left:36px;top:490px">Same set</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- B: set builder to roster, live test of x -->
+    <div id="sB">
+      <div class="card full" id="bl"><div class="lbl" style="left:36px;top:30px">SET BUILDER TO ROSTER</div>
+        <div id="bF"></div>
+        <div class="lbl" id="bL" style="left:36px;top:186px">TEST x = 1, 2, 3, ... ONE AT A TIME</div>
+        <div id="bRd"></div><div id="bV"></div>
+        <div id="bStop"></div>
+        <div class="lbl" id="bL2" style="left:36px;top:432px">ROSTER FORM</div><div id="bRo"></div></div>
+      <div class="card rf" id="bg"><div class="lbl" style="left:36px;top:30px">LIVE · x² AGAINST THE LIMIT 40</div><div id="bCnt"></div>
+        <svg id="bS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- P: roster to set builder + x vs n -->
+    <div id="sP">
+      <div class="card full" id="pl"><div class="lbl" style="left:36px;top:30px">ROSTER TO SET BUILDER · 3 STEPS</div>
+        <div id="pRo"></div><div class="hiBox" id="pHi" style="left:20px;width:744px;height:112px"></div><div id="pSt"></div></div>
+      <div class="card rf" id="pr"><div class="lbl" style="left:36px;top:30px">THE COUNTER n BUILDS x</div>
+        <svg id="pS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">SPOT THE PATTERN · 6 FRACTIONS</div><div id="frs"></div>
+        <div class="pillp ac" id="wRes">n runs from 1 to 6</div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Once each, in <span class="acc">any</span> order.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

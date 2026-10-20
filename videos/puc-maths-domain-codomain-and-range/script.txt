@@ -1,0 +1,52 @@
+H1|0.4|A maths test is marked out of one hundred. Any mark from zero to one hundred is allowed.
+H2|0.45|But when the results go up, the lowest mark in the class is forty one, and the highest is ninety six.
+H3|0.35|Aarav noticed this on the college notice board today.
+H4|0.5|So which is the real answer for the marks? Zero to one hundred, or forty one to ninety six?
+H5|0.65|Both are right. Maths gives them two names: the codomain and the range. Today we meet both, with the domain.
+P1|0.35|Quick recall. A function sends every element of one set to exactly one element of another set.
+P2|0.4|We write f, from A to B. A is where the inputs come from. B is where the outputs land.
+P3|0.4|The domain is the set A. It holds every input the function takes.
+P4|0.4|The codomain is the set B. It holds every output the function is allowed to give.
+P5|0.65|The range is the set of outputs the function actually gives. These outputs are called images.
+M1|0.4|Watch one run. A is one, two, three, four. B is the numbers from one to eight. The rule is f of x equals two x.
+M2|0.4|One goes to two. Two goes to four. Three goes to six. Four goes to eight.
+M3|0.4|Every input got exactly one arrow. So the whole of A is the domain.
+M4|0.4|Now look at B. Two, four, six and eight are hit. One, three, five and seven are never hit.
+M5|0.65|So the range is two, four, six, eight. It sits inside the codomain, but it is smaller.
+I1|0.75|Two words you will meet in every exam. f of three is six. So six is the image of three, and three is the preimage of six.
+I2|0.65|Every element of the domain has exactly one image. But an element of the codomain can have no preimage at all, like five.
+K1|0.4|Side by side. The codomain is chosen when we write the function: the allowed outputs, like marks from zero to one hundred.
+K2|0.4|The range is found by running the function: the outputs that really appear, like forty one to ninety six.
+K3|0.6|So the range is always a subset of the codomain. They can be equal, but the range can never be bigger.
+K4|3.2|Now you try. f goes from N to N, and f of x equals two x. Is the range the whole of N? Pause and decide.
+K5|0.65|No! The outputs are two, four, six, and so on. Odd numbers are never hit, so the range is only the even natural numbers.
+T1|0.7|Remember this. The codomain is what is allowed. The range is what actually happens.
+G1|0.4|Now let us see this on a graph. Take f of x equals x squared, for x from minus a to a.
+G2|0.4|The domain is a stretch of the x axis, in blue. The range is a stretch of the y axis, in coral.
+G3|0.4|Watch a grow from one to three. The domain widens, and the range climbs. Zero to one, then zero to four, then zero to nine.
+G4|0.65|To read a range from any graph, slide every point of the curve across to the y axis. The shadow it leaves is the range.
+G5|3.2|Quick one. If x can be any real number, is minus one in the range of x squared? Pause and think.
+G6|0.65|No! A square is never negative. The curve never goes below the x axis, so the range is zero and above.
+W1|0.35|Now, one worked example.
+W2|0.5|A is minus two, minus one, zero, one, two. f goes from A to Z, and f of x equals x squared plus one. Find the domain, codomain and range.
+W3|0.75|Step one. The domain is A itself: minus two, minus one, zero, one and two.
+W4|0.75|Step two. The codomain is Z, the set of all integers.
+W5|0.75|Step three. Find every image. Five, two, one, two, five.
+W6|0.75|Step four. Write each image once. The range is one, two and five.
+W7|0.65|Notice that two has two preimages, minus one and one. That is allowed. Many inputs may share one output.
+X1|0.35|Now, the exam trap.
+X2|0.4|Find the range of x squared, for x from minus two to one. Many students put in only the two ends. They get one and four, and write one to four.
+X3|0.65|But zero lies inside the domain, and zero squared is zero. The curve dips to zero in between. The correct range is zero to four.
+J1|0.6|Where is this asked? In JEE Main, as find the range, or the codomain that equals the range. And in PUC boards, as find the domain and range.
+Q1|5.4|Exam level now. What is the range of this function? Pause and solve.
+A1|0.5|The answer is B. Three to twelve.
+A2|0.5|Complete the square. x squared minus four x plus seven is x minus two, whole squared, plus three.
+A3|0.5|x runs from minus one to four, so x minus two runs from minus three to two.
+A4|0.5|Its square runs from zero to nine. Zero, because x minus two can be zero. Nine, from minus three.
+A5|0.6|Add three. The range is three to twelve. The two ends alone give seven to twelve: option A, the trap.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. f of x equals x squared, on the set one, two, three. What is the range?
+Y3|0.9|Two. Can the range ever be bigger than the codomain?
+Y4|1.1|Three. Find the range of x squared, for x from minus three to two.
+N1|0.3|Next time: Diya's body temperature gives one number for every hour of the day. Functions like that have a special name. Real valued functions.

@@ -1,0 +1,58 @@
+H1|0.4|Play two musical notes that are almost the same, both at once. The sound swells, fades, swells and fades again.
+H2|0.4|Diya heard this at her study table tonight, when two phones rang with almost the same tone.
+H3|0.4|Each tone alone is a steady wave. Add the two waves, and a slow wobble appears. Loud, soft, loud, soft.
+H4|0.5|Where does that slow wobble come from? Diya has a guess. Hidden inside the sum is a product.
+H5|0.65|She is right. Today we learn to turn a sum of sines or cosines into a product, and back again.
+I1|0.35|Here is the whole idea in one picture.
+I2|0.4|On the unit circle, mark point P at angle x, and point Q at angle y.
+I3|0.4|P is at cos x, sine x. Q is at cos y, sine y. Add the two like two moves on a map, and you reach the point R.
+I4|0.4|R points exactly in the middle direction. That is the half sum angle, x plus y over two.
+I5|0.4|And its distance from the centre is two times the cos of the half difference, x minus y over two.
+I6|0.65|So how far R is across, cos x plus cos y, equals two cos of the half sum, times cos of the half difference. A sum became a product.
+L1|0.4|Watch it stay true. Keep x at seventy degrees, and slide y down.
+L2|0.4|The left side and the right side are worked out separately, as two different calculations. They never disagree.
+L3|0.65|And when y comes back up to x, the half difference is zero. cos zero is one, so the answer is simply two cos x.
+D1|0.35|Now let us prove it with algebra, in small steps.
+D2|0.75|Start from episode thirty three. cos of A plus B is cos A cos B, minus sine A sine B.
+D3|0.75|And cos of A minus B is cos A cos B, plus sine A sine B.
+D4|0.75|Add the two lines. The sine parts cancel, because one is minus and one is plus. Two cos A cos B is left.
+D5|0.75|That is already a product turned into a sum. Two cos A cos B equals cos of A plus B, plus cos of A minus B.
+D6|0.75|Now rename. Call A plus B x, and A minus B y. Adding them gives A as x plus y over two. Subtracting gives B as x minus y over two.
+D7|0.75|Put these back in. cos x plus cos y equals two cos of x plus y over two, times cos of x minus y over two.
+D8|0.4|The same trick on the sine formulas gives three more. Here are all four.
+D9|0.4|sine x plus sine y is two sine of the half sum, times cos of the half difference.
+D10|0.4|sine x minus sine y is two cos of the half sum, times sine of the half difference.
+D11|0.65|And cos x minus cos y is minus two sine of the half sum, times sine of the half difference. Watch that minus sign.
+B1|0.35|Now back to Diya's two tones.
+B2|0.4|Tone one is cos of twelve t, where t is time. Tone two is cos of eleven t, just a little slower.
+B3|0.4|By our formula, their sum is two cos of eleven point five t, times cos of half t.
+B4|0.4|The fast part, eleven point five t, is the note you hear. The slow part, cos of half t, is the wobble that hugs the wave.
+B5|0.4|Now pull the second tone further away, and watch the gap grow.
+B6|0.65|The bigger the gap, the faster the wobble. When the gap is zero, there is no wobble at all. That is a beat, and it is just a sum written as a product.
+S1|0.4|Side by side. Sum to product turns plus into times. Use it to factorise, or to simplify a fraction.
+S2|0.6|Product to sum turns times into plus. Use it to break a product into simple pieces. Two cos A cos B becomes cos of A plus B, plus cos of A minus B.
+S3|3.2|Now you try. Two sine three x cos x is a product. Which way do we go? Pause and decide.
+S4|0.65|Product to sum! Two sine A cos B is sine of A plus B, plus sine of A minus B. So it becomes sine four x plus sine two x.
+T1|0.7|Remember this. Half sum, half difference. That is the whole secret.
+W1|0.35|Now, one worked example.
+W2|0.5|Find the exact value of sine seventy five degrees plus sine fifteen degrees.
+W3|0.75|Step one. sine x plus sine y is two sine of the half sum, times cos of the half difference.
+W4|0.75|Step two. The half sum is seventy five plus fifteen over two, which is forty five. The half difference is seventy five minus fifteen over two, which is thirty.
+W5|0.75|Step three. So the sum is two sine forty five, times cos thirty.
+W6|0.75|Step four. That is two, times root two over two, times root three over two. The answer is root six over two.
+W7|0.65|On the circle, R points at forty five degrees, and its height is about one point two two. Both ways agree.
+X1|0.35|Now, the exam trap.
+X2|0.4|cos eighty degrees minus cos twenty degrees. Many students write two sine fifty, times sine thirty.
+X3|0.65|But cos eighty is smaller than cos twenty, so the answer must be negative. The formula starts with a minus sign. The right answer is minus two sine fifty sine thirty, which is minus sine fifty.
+J1|0.6|Where is this asked? In JEE Main, as short questions that simplify or evaluate sums and products of sines and cosines.
+Q1|5.4|Exam level now. Find cos of alpha plus beta. Pause and solve.
+A1|0.5|The answer is B. Five over thirteen.
+A2|0.5|Turn both sums into products. Both have the same cos of the half difference.
+A3|0.5|Divide them. That cos cancels, and so do the twos. tan of the half sum is one third over one half, which is two thirds.
+A4|0.6|Now cos of alpha plus beta is cos of twice the half sum. One minus four ninths, over one plus four ninths, gives five over thirteen.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Write cos four x plus cos two x as a product.
+Y3|0.9|Two. Find the exact value of sine seventy five degrees minus sine fifteen degrees.
+Y4|1.1|Three. Turn two cos five x cos x into a sum.
+N1|0.3|Next time: when is the tyre valve exactly at half height? Not once, but again and again, forever. Trigonometric equations.

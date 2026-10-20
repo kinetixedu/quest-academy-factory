@@ -1,0 +1,60 @@
+H1|0.4|Put two lists side by side. You can ask for everything on them, for only what they share, or for what only one list has.
+H2|0.45|Same two lists. Three questions. Three different answers.
+H3|0.35|Diya hit this today, planning a fruit salad with her friend Meera.
+H4|0.4|Diya likes mango, apple, guava and banana. Meera likes apple, mango and grapes.
+H5|0.5|Buy every fruit? Only the ones they both like? Or the ones only Diya likes?
+H6|0.65|Each question is a set operation. Today we build all three: union, intersection and difference.
+U1|0.35|Call Diya's fruits set A, and Meera's fruits set B.
+U2|0.4|The union of A and B is the set of all elements that are in A, or in B, or in both.
+U3|0.4|Its symbol looks like a cup. We read it as A union B.
+U4|0.4|Watch it build. First, every fruit of A goes in. Mango, apple, guava, banana.
+U5|0.4|Now B. Apple is already inside. Mango is already inside. In a set, each element is written only once.
+U6|0.65|Only grapes is new. So A union B has five fruits, not seven.
+U7|0.75|In set builder form, A union B is the set of all x, such that x is in A, or x is in B.
+I1|0.35|Now Meera's question. Only the fruits that both of them like.
+I2|0.4|The intersection of A and B is the set of elements that belong to both A and B. Its symbol is the cup turned upside down.
+I3|0.4|Run the test. Take each fruit of A and ask: is it in B too?
+I4|0.4|Mango? Yes. Apple? Yes. Guava? No. Banana? No.
+I5|0.65|So A intersection B is mango and apple. It lives exactly where the two circles overlap.
+I6|0.75|In set builder form, it is the set of all x, such that x is in A, and x is in B.
+J1|0.4|What if two sets share nothing at all? Take the odd numbers and the even numbers.
+J2|0.4|Pull their circles apart. No number is both odd and even, so the overlap is empty.
+J3|0.65|When the intersection is the empty set, we call the two sets disjoint.
+D1|0.35|Now Diya's last question. Which fruits does only she like?
+D2|0.4|The difference A minus B is the set of elements that are in A, but not in B.
+D3|0.4|Start with A. Remove every fruit that is also in B. Mango goes. Apple goes.
+D4|0.65|Guava and banana are left. That is A minus B, the fruits only Diya likes.
+D5|0.75|In set builder form, it is the set of all x, such that x is in A, and x is not in B.
+K1|0.4|Side by side. A minus B keeps what only A has. Guava and banana.
+K2|0.6|B minus A keeps what only B has. Just grapes.
+K3|3.2|So, is A minus B the same as B minus A? Pause and decide.
+K4|0.65|No! The order matters. A minus B and B minus A are different sets, and they never share an element.
+T1|0.7|Remember this. Or joins the sets. And keeps what they share. Minus takes away.
+L1|0.4|Look at circle A once more. It is made of two pieces.
+L2|0.4|The part outside B, which is A minus B. And the overlap, which is A intersection B.
+L3|0.6|Join the two pieces, and you get all of A back.
+L4|3.2|Quick one. If A and B are disjoint, what is A minus B? Pause and think.
+L5|0.65|It is A itself! There is no overlap, so nothing gets removed.
+W1|0.35|Now, one worked example.
+W2|0.5|A is the set of factors of twelve. B is the set of factors of eighteen. Find the union, the intersection, and both differences.
+W3|0.75|Step one. A is one, two, three, four, six and twelve.
+W4|0.75|Step two. B is one, two, three, six, nine and eighteen.
+W5|0.75|Step three. The common factors are one, two, three and six. That is A intersection B.
+W6|0.75|Step four. Join them, writing each factor once. A union B has eight elements.
+W7|0.75|Step five. A minus B is four and twelve. B minus A is nine and eighteen.
+W8|0.65|And look. The biggest number in the intersection, six, is the highest common factor of twelve and eighteen.
+X1|0.35|Now, the exam trap.
+X2|0.4|A is five and seven. B is two and three. Many students subtract the numbers, and write A minus B as three and four.
+X3|0.65|But set difference never does arithmetic. It only removes shared elements. A and B share nothing, so A minus B is still five and seven.
+Z1|0.6|Where is this asked? In PUC board exams, as direct questions on two given sets. And in JEE Main, where union and intersection are mixed with number rules.
+Q1|5.4|Exam level now. How many elements are in A minus B? Pause and solve.
+A1|0.5|The answer is B. Twenty seven.
+A2|0.5|A is the multiples of three up to one hundred. That is three up to ninety nine, so thirty three numbers.
+A3|0.5|We must remove the ones that are also in B. Those are multiples of both three and five, which means multiples of fifteen.
+A4|0.6|Fifteen, thirty, forty five, sixty, seventy five and ninety. That is six numbers. Thirty three minus six leaves twenty seven.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What is the union of the sets one, two and two, three?
+Y3|0.9|Two. When are two sets called disjoint?
+Y4|1.1|Three. If A is one, two, three and B is three and four, what is B minus A?
+N1|0.3|Next time: everyone in class who did not ride a bicycle today. That set has its own name. It is called the complement.

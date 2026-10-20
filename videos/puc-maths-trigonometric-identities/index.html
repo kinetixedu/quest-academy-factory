@@ -1,0 +1,160 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 32 - Trigonometric Identities</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 32: trigonometric identities (Proof board) ===== */
+:root{--th:#7A4FE0;--cs:#2F6FEB;--tn:#0E8F8F;--se:#B7791F;--co:#D9731A;--cc:#C2378A}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.th{font-family:KaTeX_Math;font-style:italic}
+.km{font-family:KaTeX_Main}
+/* title card: three expressions */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:50px;font-size:30px;white-space:nowrap}
+/* hook table */
+.hh{position:absolute;top:92px;width:172px;text-align:center;font-size:21px;white-space:nowrap}
+.hc{position:absolute;height:80px;border-radius:14px;background:var(--soft);display:flex;align-items:center;justify-content:center;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* identity definition */
+.eqr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.eqr .k{position:absolute;left:22px;top:16px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.eqr .f{position:absolute;left:22px;top:44px;font-size:38px;white-space:nowrap}
+.eqr .w{position:absolute;right:22px;top:56px;font:600 24px Poppins;white-space:nowrap}
+#idT{position:absolute;left:36px;top:356px;width:712px;font:700 40px/1.25 Poppins;letter-spacing:-.01em}
+#idT b{color:var(--ac)}
+#idW{position:absolute;left:36px;top:462px;font:500 26px Poppins;color:var(--ink2);white-space:nowrap}
+.sl{position:absolute;left:36px;font-size:34px;white-space:nowrap}
+.res{position:absolute;right:36px;height:44px;padding:0 16px;border-radius:10px;display:inline-flex;align-items:center;font:600 20px 'IBM Plex Mono';color:#fff;white-space:nowrap}
+/* unit circle + proof */
+#pfC{left:976px;top:270px;width:784px;height:406px}
+#slC{left:976px;top:708px;width:784px;height:142px}
+#pBig{position:absolute;left:0;width:784px;top:150px;text-align:center;font-size:60px;white-space:nowrap}
+.st{position:absolute;left:36px;width:712px;height:60px}
+.st .n{position:absolute;left:0;top:6px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:66px;top:4px;font-size:33px;white-space:nowrap}
+.st .why{position:absolute;right:14px;top:16px;font:500 20px Poppins;color:var(--mute);white-space:nowrap}
+#ro{position:absolute;left:36px;top:58px;font:600 38px 'IBM Plex Mono';white-space:nowrap}
+#ro2{position:absolute;left:36px;top:106px;font:500 18px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+.ro2 .th{font-size:20px}
+/* stretch derivation */
+.dr{position:absolute;left:36px;width:712px;height:84px}
+.dr .n{position:absolute;left:0;top:19px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.dr .sx{position:absolute;left:66px;top:0;height:84px;display:flex;align-items:center;font-size:31px;white-space:nowrap}
+.dr .why{position:absolute;right:14px;top:30px;font:500 20px Poppins;color:var(--mute);white-space:nowrap}
+#sCh{position:absolute;right:36px;top:18px;height:48px;padding:0 16px;border-radius:10px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;gap:8px;font:600 22px 'IBM Plex Mono';white-space:nowrap}
+/* side by side */
+.bf{position:absolute;left:36px;top:90px;font-size:50px;white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:64px;font:600 28px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.15em}
+#wl .sol .sx{font-size:28px}
+#wl .sol .sx .katex{font-size:1.05em}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.1em}
+#mq .mq .katex{font-size:1.1em}
+#mq .opt .ot .katex{font-size:1.15em}
+.trapL .tx .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:24px;font:600 34px Poppins;white-space:nowrap}
+.yr .q .katex{font-size:1.05em}
+#sF .fcard .fl{font-size:46px}
+#sF .fcard .fl.txt{font-size:32px}
+#sF .fcard .fl .cn{font:500 24px Poppins;color:var(--mute);margin-left:22px}
+.thk .tq .katex{font-size:1em}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 3 TRIGONOMETRIC FUNCTIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Trigonometric <span class="acc">Identities</span></div>
+    <div id="sub">Explained with one circle and Pythagoras</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: three expressions, any angle + Aarav -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">THREE EXPRESSIONS · ANY ANGLE</div><div id="hcs"></div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · AT HIS DESK</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">Three different rules. One answer. Luck, or a law?</div></div>
+    </div>
+
+    <!-- I: what is an identity + live test -->
+    <div id="sI">
+      <div class="card full" id="il"><div class="lbl" style="left:36px;top:30px">EQUATION OR IDENTITY?</div>
+        <div class="eqr" id="iq0" style="top:84px"><div class="k">AN EQUATION</div><div class="f" id="iqf0"></div><div class="w" style="color:var(--red)">true for one value</div></div>
+        <div class="eqr" id="iq1" style="top:218px"><div class="k">AN IDENTITY</div><div class="f" id="iqf1"></div><div class="w" style="color:var(--ok)">true for every value</div></div>
+        <div id="idT">An identity is true for <b>every</b> value of the angle,</div>
+        <div id="idW">wherever both sides are defined.</div></div>
+      <div class="card rf" id="ir"><div class="lbl" style="left:36px;top:30px">LIVE · TEST EVERY VALUE</div>
+        <div class="sl" id="ilA" style="top:80px"></div><div class="res" id="irA" style="top:86px;background:var(--red)">true at 1 value</div>
+        <div class="sl" id="ilB" style="top:300px"></div><div class="res" id="irB" style="top:306px;background:var(--ok)">true at every angle</div>
+        <svg id="iS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="iP" style="left:36px;top:500px">One lucky angle proves nothing</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- U + D: unit circle, live angle, 4-step proof -->
+    <div id="sU">
+      <div class="card full" id="uc"><div class="lbl" style="left:36px;top:30px">UNIT CIRCLE · RADIUS 1</div><svg id="uS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="pfC"><div class="lbl" id="pfL0" style="left:36px;top:30px">WHERE IS THE POINT P?</div><div class="lbl" id="pfL1" style="left:36px;top:30px">PROOF · 4 STEPS</div>
+        <div id="pBig"></div>
+        <div class="hiBox" id="pHi" style="left:20px;width:744px;height:68px"></div>
+        <div id="pSt"></div>
+        <div class="pillp" id="pNote" style="left:36px;top:340px"></div></div>
+      <div class="card" id="slC"><div class="lbl" style="left:36px;top:22px">ANGLE SLIDER · LIVE VALUES</div><div id="ro"></div><div id="ro2"></div></div>
+    </div>
+
+    <!-- E + C: identities 2 and 3 by stretching the triangle -->
+    <div id="sE">
+      <div class="card full" id="ec"><div class="lbl" style="left:36px;top:30px">STRETCH THE TRIANGLE</div><div id="sCh"></div><svg id="eS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="ed"><div class="lbl" id="edL0" style="left:36px;top:30px">IDENTITY 2 · DIVIDE BY COSINE SQUARED</div><div class="lbl" id="edL1" style="left:36px;top:30px">IDENTITY 3 · DIVIDE BY SINE SQUARED</div>
+        <div class="hiBox" id="eHi" style="left:20px;width:744px;height:92px"></div>
+        <div id="eSt"></div><div id="cSt"></div></div>
+    </div>
+
+    <!-- K: side by side + pause and think -->
+    <div id="sK">
+      <div class="card full" id="ka"><div class="lbl" style="left:36px;top:30px;color:var(--ok)">IDENTITY 1 · EVERY ANGLE</div><div class="bf" id="kaF"></div><svg id="kaS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp good" id="kaP" style="left:36px;top:388px">No exceptions</div></div>
+      <div class="card rf" id="kb"><div class="lbl" style="left:36px;top:30px;color:var(--red)">IDENTITY 2 · NEEDS A NON-ZERO COSINE</div><div class="bf" id="kbF"></div><svg id="kbS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp bad" id="kbP" style="left:36px;top:388px"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">SECOND QUADRANT · RADIUS 1</div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="620" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Three identities, one <span class="acc">circle</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
