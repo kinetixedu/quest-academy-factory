@@ -1,0 +1,77 @@
+name: Manual upload kit
+
+# Builds the given episodes and pushes final.mp4 + thumbnail + captions + upload text to the `kit` branch,
+# so they can be posted to YouTube by hand. No YouTube API calls.
+on:
+  workflow_dispatch:
+    inputs:
+      slugs:
+        description: 'Space-separated video slugs'
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.p.outputs.matrix }}
+    steps:
+      - id: p
+        run: |
+          python3 -c "import json,sys;print('matrix='+json.dumps({'slug':sys.argv[1].split()}))" "${{ github.event.inputs.slugs }}" >> "$GITHUB_OUTPUT"
+
+  build:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: ${{ fromJson(needs.plan.outputs.matrix) }}
+    env:
+      KOKORO_DIR: ${{ github.workspace }}/.kokoro/kokoro-multi-lang-v1_0
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - uses: actions/cache@v4
+        with: { path: .kokoro, key: kokoro-multi-lang-v1_0 }
+      - run: |
+          if [ ! -d "$KOKORO_DIR" ]; then
+            mkdir -p .kokoro && cd .kokoro
+            curl -sSL -o k.tar.bz2 https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/kokoro-multi-lang-v1_0.tar.bz2
+            tar xjf k.tar.bz2 && rm k.tar.bz2
+          fi
+      - uses: actions/cache@v4
+        with: { path: ~/.cache/ms-playwright, key: pw-1.56.1 }
+      - run: |
+          npm install --no-audit --no-fund
+          npx playwright install --with-deps chromium
+          pip install -q sherpa-onnx numpy scipy
+      - run: tools/build.sh videos/${{ matrix.slug }}
+      - name: Kit files
+        run: |
+          K=kit/${{ matrix.slug }}; mkdir -p $K
+          cp videos/${{ matrix.slug }}/final.mp4 $K/video.mp4
+          cp videos/${{ matrix.slug }}/thumbnail.jpg $K/thumbnail.jpg
+          cp videos/${{ matrix.slug }}/captions.srt $K/captions-en.srt
+      - uses: actions/upload-artifact@v4
+        with: { name: kit-${{ matrix.slug }}, path: kit/, retention-days: 3 }
+
+  push:
+    needs: build
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with: { pattern: 'kit-*', path: kit, merge-multiple: true }
+      - name: Push to kit branch
+        run: |
+          cd kit && git init -q -b kit && git config user.name quest-factory-bot && git config user.email factory@users.noreply.github.com
+          git add -A && git commit -qm "Manual upload kit"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" kit
