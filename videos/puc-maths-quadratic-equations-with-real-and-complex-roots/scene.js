@@ -31,7 +31,7 @@ const tLs = [wt('H1', 'fifteen') - 0.1, wt('H1', 'twice') + 0.1, wt('H1', 'twice
 
 /* ---------- H: the throw, h = 20t - 5t^2 ---------- */
 $('#hFx').innerHTML = K('h = 20t - 5t^2');
-const hs = $('#hS'), GX = s => 96 + s * 140, GY = h => 486 - h * 13.6, hf = s => 20 * s - 5 * s * s;
+const hs = $('#hS'), GX = s => 96 + s * 140, GY = h => 452 - h * 13, hf = s => 20 * s - 5 * s * s;
 mk(hs, 'line', { x1: GX(0), y1: GY(0), x2: 716, y2: GY(0), stroke: C.ink, 'stroke-width': 3 }); arrowHead(hs, 728, GY(0), 'r', C.ink);
 mk(hs, 'line', { x1: GX(0), y1: GY(0), x2: GX(0), y2: 104, stroke: C.ink, 'stroke-width': 3 }); arrowHead(hs, GX(0), 92, 'u', C.ink);
 [1, 2, 3, 4].forEach(s => { mk(hs, 'line', { x1: GX(s), y1: GY(0) - 7, x2: GX(s), y2: GY(0) + 7, stroke: C.ink, 'stroke-width': 2 }); txt(hs, GX(s), GY(0) + 34, s + ' s', { 'text-anchor': 'middle', fill: C.ink, 'font-weight': 600 }); });
@@ -89,18 +89,18 @@ const DS = [[`x^2 + \\frac{${bv('b')}}{${av('a')}}x + \\frac{${cv('c')}}{${av('a
   [`\\left(x + \\frac{${bv('b')}}{2${av('a')}}\\right)^2 = \\frac{${D}}{4${av('a')}^2}`, 'add (b/2a)² to both sides: a perfect square'],
   [`x + \\frac{${bv('b')}}{2${av('a')}} = \\pm\\frac{\\sqrt{${D}}}{2${av('a')}}`, 'square root: + and - both square to it'],
   [`x = \\frac{-${bv('b')} \\pm \\sqrt{${D}}}{2${av('a')}}`, 'subtract b/2a: the quadratic formula']];
-$('#dSt').innerHTML = DS.map(([f, w], i) => `<div class="st" id="ds${i}" style="top:${78 + i * 98}px"><div class="n">${i + 1}</div><div class="sx" style="font-size:34px;top:-4px">${K(f)}</div><div class="why" style="top:62px;font-size:19px">${w}</div></div>`).join('');
+$('#dSt').innerHTML = DS.map(([f, w], i) => `<div class="st" id="ds${i}" style="top:${78 + i * 98}px"><div class="n">${i + 1}</div><div class="sx" style="font-size:38px;top:-6px">${K(f)}</div><div class="why" style="top:60px">${w}</div></div>`).join('');
 const tDs = [wt('D2', 'Divide'), wt('D3', 'Move'), wt('D4', 'Add'), wt('D5', 'Take'), wt('D6', 'Subtract')];
-const ds = $('#dS'), DX = x => 80 + (x + 0.5) * 124, DY = y => 380 - (y + 1.5) * 38.6;
+const ds = $('#dS'), DX = x => 80 + (x + 0.5) * 124, DY = y => 350 - (y + 1.5) * 34;
 mk(ds, 'line', { x1: 50, y1: DY(0), x2: 742, y2: DY(0), stroke: C.ink, 'stroke-width': 3 }); arrowHead(ds, 754, DY(0), 'r', C.ink);
 mk(ds, 'line', { x1: DX(0), y1: 400, x2: DX(0), y2: 104, stroke: C.ink, 'stroke-width': 3 }); arrowHead(ds, DX(0), 92, 'u', C.ink);
-[1, 2, 3, 4].forEach(v => { mk(ds, 'line', { x1: DX(v), y1: DY(0) - 7, x2: DX(v), y2: DY(0) + 7, stroke: C.ink, 'stroke-width': 2 }); txt(ds, DX(v) + (v === 2 ? 0 : 0), DY(0) - 16, v, { 'text-anchor': 'middle', fill: C.ink, 'font-weight': 600 }); });
+[1, 2, 3, 4].forEach(v => { mk(ds, 'line', { x1: DX(v), y1: DY(0) - 7, x2: DX(v), y2: DY(0) + 7, stroke: C.ink, 'stroke-width': 2 }); txt(ds, DX(v) + (v === 2 ? 16 : 0), DY(0) - 16, v, { 'text-anchor': 'middle', fill: C.ink, 'font-weight': 600 }); });
 const dCurve = mk(ds, 'path', { d: path(x => x * x - 4 * x + 3, -0.45, 4.45, DX, DY), fill: 'none', stroke: C.ink, 'stroke-width': 4.5, 'stroke-linecap': 'round' });
 const dAx = mk(ds, 'line', { x1: DX(2), y1: DY(5.6), x2: DX(2), y2: DY(-1.4), stroke: VB, 'stroke-width': 3, 'stroke-dasharray': '9 7' });
 const dRt = [1, 3].map(v => mk(ds, 'circle', { cx: DX(v), cy: DY(0), r: 11, fill: RE, stroke: '#fff', 'stroke-width': 3 }));
 const dA1 = PUC.arrow(ds, VD, 5, 14), dA2 = PUC.arrow(ds, VD, 5, 14);
 $('#dO1').innerHTML = K(`${bv('x = -\\frac{b}{2a}')}`); $('#dO1').style.cssText += `;left:${DX(2) + 14}px;top:92px`;
-$('#dO2').innerHTML = K(`\\pm\\frac{\\sqrt{${D}}}{2${av('a')}}`); $('#dO2').style.cssText += `;left:${DX(2) - 64}px;top:${DY(0) + 36}px`;
+$('#dO2').innerHTML = K(`\\pm\\frac{\\sqrt{${D}}}{2${av('a')}}`); $('#dO2').style.cssText += `;left:${DX(2) - 80}px;top:${DY(0) + 44}px;font-size:30px`;
 $('#dnF').innerHTML = K(`\\sqrt{${D}} = ${I}\\,\\sqrt{${dv('4ac - b^2')}}`);
 
 /* ---------- S: real vs complex ---------- */
@@ -169,12 +169,13 @@ const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW
 const so = PUC.solution($('#so'), [[K(`${D} = 16 - 52 = ${dv('-36')}`)], [K(`\\sqrt{${dv('-36')}} = 6${I}`)], [K(`x = \\tfrac{4 \\pm 6${I}}{2} = ${re('2')} \\pm ${im('3')}${I}`)],
   [K(`\\text{base } ${im('3')} - (${im('-3')}) = 6,\\ \\text{height } ${re('2')}`)], [K(`\\text{area} = \\tfrac{1}{2} \\cdot 6 \\cdot 2 = 6`)]], { y0: 100, dy: 96 });
 const tSo = [wt('A2', 'sixteen'), wt('A3', 'six'), wt('A3', 'two'), wt('A4', 'base'), wt('A4', 'Half')];
-const fc = PUC.fcard($('#sF'), { x: 300, y: 252, w: 1320, h: 492, title: 'Recap · quadratic equations', y0: 96, dy: 78, txt: [1, 0, 0, 1, 1],
+const fc = PUC.fcard($('#sF'), { x: 300, y: 236, w: 1320, h: 540, title: 'Recap · quadratic equations', y0: 96, dy: 76, txt: [1, 1, 1, 0, 0],
   lines: [`<b>Quadratic</b>: ${K(`${av('a')}x^2 + ${bv('b')}x + ${cv('c')} = 0,\\ ${av('a')} \\ne 0`)} always has two roots`,
-    K(`x = \\frac{-${bv('b')} \\pm \\sqrt{${D}}}{2${av('a')}}`),
-    K(`${D} < 0:\\ \\ \\sqrt{${D}} = ${I}\\sqrt{${dv('4ac - b^2')}}`),
     'Curve crosses the x-axis: real roots. Stays off it: complex roots',
-    `Real a, b, c: complex roots come as a conjugate pair ${K(`${re('p')} \\pm ${im('q')}${I}`)}`] });
+    `Real a, b, c: complex roots come as a conjugate pair ${K(`${re('p')} \\pm ${im('q')}${I}`)}`,
+    K(`${D} < 0:\\ \\ \\sqrt{${D}} = ${I}\\sqrt{${dv('4ac - b^2')}}`),
+    K(`x = \\frac{-${bv('b')} \\pm \\sqrt{${D}}}{2${av('a')}}`)] });
+M.$$('#sF .fcard .fl')[4].style.cssText += ';font-size:60px;top:404px';
 const YQ = [`Solve ${K('x^2 + 4 = 0')}.`, 'Why does the formula need plus or minus?', `${K(`3 - 2${I}`)} is a root of a quadratic with real coefficients. What is the other root?`];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="n">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
@@ -185,7 +186,7 @@ const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
 const tPush = wt('L4', 'meet') - 0.3;
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tPush, 1.12, 640, 610], [tc2 - 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tPush, 1.1, 760, 620], [tc2 - 0.2, 1, 960, 540]]);
 let ghX = null;
 
 /* ---------- frame ---------- */
@@ -193,8 +194,8 @@ M.on(t => {
   camF(t); head(t); sweep(t);
   $('#prog i').style.width = (1906 * M.clamp(t / window.DUR)).toFixed(1) + 'px';
   const o = { outDur: 0.3, ody: -16 };
-  if (ghX === null) { ghX = 160 + $('#nchip').offsetWidth + 16; $('#gh').style.left = ghX + 'px'; }
-  M.vis($('#gh'), t, tMorph + 0.8, tQ - 0.05, { dy: 0, dx: -16, outDur: 0.01 });
+  if (ghX === null) { ghX = 1760 - $('#gh').offsetWidth; $('#gh').style.left = ghX + 'px'; $('#gh').style.top = '164px'; }
+  M.vis($('#gh'), t, tMorph + 0.8, tQ - 0.05, { dy: 0, dx: 16, outDur: 0.01 });
 
   /* title card */
   LS.forEach((_, i) => M.vis($('#ls' + i), t, tLs[i], tMorph - 0.15, { dy: 24, sp: M.SOFT, outDur: 0.25, ody: 10 }));

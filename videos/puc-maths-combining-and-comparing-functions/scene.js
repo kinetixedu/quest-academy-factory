@@ -77,7 +77,7 @@ $('#oA').innerHTML = K(`f(2) = 4`); $('#oB').innerHTML = K(`g(2) = 5`);
 const OV = [`(${F} + ${G})(2) = 4 + 5 = ${rc('9')}`, `(${F} - ${G})(2) = 4 - 5 = ${rc('-1')}`, `(3${F})(2) = 3 \\times 4 = ${rc('12')}`, `(${F}${G})(2) = 4 \\times 5 = ${rc('20')}`, `\\left(\\tfrac{${F}}{${G}}\\right)(2) = \\tfrac{4}{5} = ${rc('0.8')}`];
 $('#oV').innerHTML = OV.map((f, i) => `<div class="vr" id="ov${i}" style="top:${170 + i * 80}px"><div class="sx">${K(f)}</div></div>`).join('');
 $('#oV').querySelectorAll('.sx').forEach(e => { e.style.fontSize = '30px'; e.style.top = '14px'; });
-const tOs = ['O2', 'O3', 'O4', 'O5', 'O6'].map(id => wt(id, 'The'));
+const tOs = [wt('O2', 'The'), wt('O3', 'The'), wt('O4', 1), wt('O5', 'The'), wt('O6', 'The')];
 
 /* ---------- K: product vs quotient ---------- */
 $('#kF0').innerHTML = K(`${rc(`(${F}${G})`)}(${X}) = ${X}^2(2${X} + 1)`);
@@ -86,7 +86,7 @@ const kG = [0, 1].map(k => { const sv = $('#kS' + k), P = plot(sv, { x: 70, y: 1
   const c = P.curve(RC, 5); attr(c, 'd', k ? P.pathD(v => v * v / (2 * v + 1), -2.2, -0.52, 200) + P.pathD(v => v * v / (2 * v + 1), -0.48, 2.2, 200) : P.pathD(v => v * v * (2 * v + 1), -2.2, 2.2));
   const band = mk(sv, 'line', { x1: P.X(-2.15), y1: P.Y(0), x2: P.X(2.15), y2: P.Y(0), stroke: XC, 'stroke-width': 12, 'stroke-linecap': 'round', opacity: 0.3 });
   let asy = null, hole = null, lab = null;
-  if (k) { asy = mk(sv, 'line', { x1: P.X(-0.5), y1: P.Y(3), x2: P.X(-0.5), y2: P.Y(-3), stroke: C.red, 'stroke-width': 2.5, 'stroke-dasharray': '7 7' }); hole = holeAt(sv, P.X(-0.5), P.Y(0), C.red); lab = txt(sv, P.X(-0.5) - 16, P.Y(-2.6), 'x = −1/2: g(x) = 0', { 'text-anchor': 'end', 'font-size': 18, fill: C.red, 'font-weight': 600 }); }
+  if (k) { asy = mk(sv, 'line', { x1: P.X(-0.5), y1: P.Y(3), x2: P.X(-0.5), y2: P.Y(-3), stroke: C.red, 'stroke-width': 2.5, 'stroke-dasharray': '7 7' }); hole = holeAt(sv, P.X(-0.5), P.Y(0), C.red); lab = txt(sv, P.X(-0.5) + 16, P.Y(-0.9), 'x = −1/2: g(x) = 0', { 'text-anchor': 'start', 'font-size': 18, fill: C.red, 'font-weight': 600 }); }
   return { c, band, asy, hole, lab }; });
 const th1 = PUC.think($('#th1'), { q: 'f(x) = x², g(x) = x − 3. Is f/g defined at x = 3?', opts: ['Yes', 'No'], right: 1, why: 'g(3) = 0, and we can never divide by zero: 3 is thrown out of the domain of f/g.' });
 
@@ -99,9 +99,9 @@ $('#cF1').innerHTML = K(`${Gx} = \\dfrac{${X}^2}{${X}} \\qquad \\text{domain } \
 const cs = $('#cS'), CG = plot(cs, { x: 70, y: 84, w: 644, h: 420, xmin: -3.4, xmax: 3.4, ymin: -3.4, ymax: 3.4, xt: [-3, -2, -1, 1, 2, 3], yt: [-3, -2, -1, 1, 2, 3] });
 const cF = CG.curve(FC, 9, { opacity: 0.45 }), cGl = CG.curve(GC, 4); attr(cF, 'd', CG.pathD(v => v, -3.4, 3.4, 4)); attr(cGl, 'd', CG.pathD(v => v, -3.4, 3.4, 4));
 const cH = holeAt(cs, CG.X(0), CG.Y(0), C.red), cRing = mk(cs, 'circle', { cx: CG.X(0), cy: CG.Y(0), r: 34, fill: 'none', stroke: C.red, 'stroke-width': 3 });
-const cHl = txt(cs, CG.X(0) + 44, CG.Y(0) + 40, 'g(0) is not defined', { 'font-size': 20, fill: C.red, 'font-weight': 600 });
+const cHl = txt(cs, CG.X(0.5), CG.Y(-1.4), 'g(0) is not defined', { 'font-size': 20, fill: C.red, 'font-weight': 600 });
 const cLf = txt(cs, CG.X(2.2), CG.Y(3), 'f(x) = x', { 'text-anchor': 'end', 'font-family': 'Poppins', 'font-size': 22, fill: FC, 'font-weight': 700 });
-const cLg = txt(cs, CG.X(-1.2), CG.Y(-2.6), 'g(x) = x²/x', { 'font-family': 'Poppins', 'font-size': 22, fill: GC, 'font-weight': 700 });
+const cLg = txt(cs, CG.X(-3.2), CG.Y(1.6), 'g(x) = x²/x', { 'font-family': 'Poppins', 'font-size': 22, fill: GC, 'font-weight': 700 });
 const th2 = PUC.think($('#th2'), { q: 'Are |x| and √(x²) equal functions?', opts: ['Yes, equal', 'No'], right: 0, why: 'Both have domain R, and √(x²) = |x| for every real x: same domain, same outputs.' });
 
 /* ---------- W: worked example ---------- */
@@ -118,12 +118,12 @@ const wF = WG.curve(FC, 4), wG = WG.curve(GC, 4), wQ = WG.curve(RC, 6);
 attr(wF, 'd', WG.pathD(Math.sqrt, 0, 4.4)); attr(wG, 'd', WG.pathD(v => v, 0, 4.4, 4)); attr(wQ, 'd', WG.pathD(v => 1 / Math.sqrt(v), 0.08, 4.4, 160));
 const wLf = txt(wsv, WG.X(4.3), WG.Y(2.08) + 26, '√x', { 'text-anchor': 'end', 'font-family': 'Poppins', 'font-size': 22, fill: FC, 'font-weight': 700 });
 const wLg = txt(wsv, WG.X(3.2), WG.Y(3.2), 'x', { 'text-anchor': 'end', 'font-family': 'Poppins', 'font-style': 'italic', 'font-size': 22, fill: GC, 'font-weight': 700 });
-const wLq = txt(wsv, WG.X(1.3), WG.Y(1.3), '1/√x', { 'font-family': 'Poppins', 'font-size': 22, fill: RC, 'font-weight': 700 });
+const wLq = txt(wsv, WG.X(2.4), WG.Y(0.95), '1/√x', { 'font-family': 'Poppins', 'font-size': 22, fill: RC, 'font-weight': 700 });
 const wH = holeAt(wsv, WG.X(0), WG.Y(0), C.red), wHl = txt(wsv, WG.X(0) + 20, WG.Y(0) + 46, 'x = 0 removed', { 'font-size': 18, fill: C.red, 'font-weight': 600 });
 
 /* ---------- X / Q / F ---------- */
 const trap = PUC.trap($('#trap'), { wrong: K(`\\sqrt{x} + \\sqrt{1 - x}:\\ \\text{domain } \\mathbb{R}`), right: K(`\\text{domain} = ${rc('[0,\\ 1]')}`) + '&nbsp; where both work' });
-const ts = $('#tS'), TXv = v => 120 + (v + 1) * 130, TYl = 170;
+const ts = $('#tS'), TXv = v => 120 + (v + 1) * 110, TYl = 170;
 mk(ts, 'line', { x1: 40, y1: TYl, x2: 590, y2: TYl, stroke: C.ink, 'stroke-width': 3 });
 for (let v = -1; v <= 3; v++) { mk(ts, 'line', { x1: TXv(v), y1: TYl - 8, x2: TXv(v), y2: TYl + 8, stroke: C.ink, 'stroke-width': 2 }); txt(ts, TXv(v), TYl + 40, mn(v), { 'text-anchor': 'middle', 'font-size': 20, fill: C.ink, 'font-weight': 600 }); }
 const tA = mk(mk(ts, 'g', {}), 'g', {}); mk(tA, 'line', { x1: TXv(0), y1: TYl - 54, x2: 590, y2: TYl - 54, stroke: FC, 'stroke-width': 8, 'stroke-linecap': 'round' }); txt(tA, 590, TYl - 70, '√x: x ≥ 0', { 'text-anchor': 'end', 'font-size': 18, fill: FC, 'font-weight': 600 }); mk(tA, 'circle', { cx: TXv(0), cy: TYl - 54, r: 8, fill: FC });
@@ -151,7 +151,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 24', topic: 'Measure a wheel 
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('C4', 'hole') - 0.3, 1.08, 1368, 560], [T0('C5') - 0.4, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('C4', 'hole') - 0.3, 1.06, 1200, 560], [T0('C5') - 0.4, 1, 960, 540]]);
 
 /* ---------- frame ---------- */
 M.on(t => {
@@ -177,7 +177,7 @@ M.on(t => {
   const dOn = t >= tD1 - 0.1 && t < tO1 + 0.1; M.hide($('#sD'), !dOn);
   if (dOn) {
     const out = OUT('O1');
-    M.vis($('#dl'), t, tD1 + 0.1, out, { dx: -60, dy: 0, ...o }); M.vis($('#dr'), t, T0('D3') - 0.2, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#dl'), t, tD1 + 0.1, out, { dx: -60, dy: 0, ...o }); M.vis($('#dr'), t, tD1 + 0.4, out, { dx: 60, dy: 0, ...o });
     PUC.write($('#dF0'), t, wt('D2', 'sum') - 0.1, 0.8);
     PUC.write($('#dF1'), t, wt('D3', 'squared') - 0.4, 0.5); PUC.write($('#dF2'), t, wt('D3', 'two') - 0.2, 0.5);
     M.draw(dFc, t, wt('D3', 'squared') - 0.2, 0.8); M.draw(dGc, t, wt('D3', 'two'), 0.7);

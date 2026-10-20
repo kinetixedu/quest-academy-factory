@@ -99,7 +99,7 @@ const cG = [[v => v * v, -1, 5.2, [-2, 2], [4, 4], [1, 2, 3, 4]], [v => v * v * 
   const sv = $('#cS' + k), P = plot(sv, { x: 70, y: 140, w: 644, h: 340, xmin: -2.6, xmax: 2.6, ymin: y0, ymax: y1, xt: [-2, -1, 1, 2], yt });
   const c = P.curve(RC, 5); attr(c, 'd', P.pathD(f, -2.6, 2.6));
   const band = mk(sv, 'line', { x1: P.X(0), y1: P.Y(k ? y0 : 0), x2: P.X(0), y2: P.Y(y1), stroke: RC, 'stroke-width': 16, 'stroke-linecap': 'round', opacity: 0.3 });
-  const pts = xs.map((a, i) => { const g = mk(mk(sv, 'g', {}), 'g', {}); dotC(g, P.X(a), P.Y(ys[i]), 10); txt(g, P.X(a) + (a < 0 ? -14 : 14), P.Y(ys[i]) + (k && a < 0 ? 28 : -16), `(${mn(a)}, ${mn(ys[i])})`, { 'text-anchor': a < 0 ? 'end' : 'start', 'font-size': 20, fill: C.ink2, 'font-weight': 600 }); return g; });
+  const pts = xs.map((a, i) => { const g = mk(mk(sv, 'g', {}), 'g', {}); dotC(g, P.X(a), P.Y(ys[i]), 10); txt(g, P.X(a) + (a < 0 ? 16 : -16), P.Y(ys[i]) + (k ? 6 : -16), `(${mn(a)}, ${mn(ys[i])})`, { 'text-anchor': a < 0 ? 'start' : 'end', 'font-size': 20, fill: C.ink2, 'font-weight': 600 }); return g; });
   const mir = k ? null : mk(sv, 'line', { x1: P.X(-2), y1: P.Y(4), x2: P.X(2), y2: P.Y(4), stroke: C.ink2, 'stroke-width': 2, 'stroke-dasharray': '6 6' });
   return { c, band, pts, mir }; });
 const th1 = PUC.think($('#th1'), { q: 'Can x² ever equal −4?', opts: ['Yes', 'No'], right: 1, why: 'A square is never negative: range of x² is [0, ∞). The range of x³ is every real number.' });
@@ -162,7 +162,7 @@ const ts = $('#tS'), TG = plot(ts, { x: 70, y: 40, w: 420, h: 200, xmin: -1.6, x
 const tAll = TG.curve(C.dim, 3); attr(tAll, 'd', TG.pathD(v => v * v, -1.6, 2.15));
 const tSeg = TG.curve(RC, 5); attr(tSeg, 'd', TG.pathD(v => v * v, -1, 2));
 const tMin = dotC(ts, TG.X(0), TG.Y(0), 9, C.ok), tBand = mk(ts, 'line', { x1: TG.X(0) - 0, y1: TG.Y(0), x2: TG.X(0), y2: TG.Y(4), stroke: C.ok, 'stroke-width': 12, 'stroke-linecap': 'round', opacity: 0.35 });
-const tMinL = txt(ts, TG.X(0) + 16, TG.Y(0) - 12, 'lowest: 0', { 'font-size': 18, fill: C.ok, 'font-weight': 600 });
+const tMinL = txt(ts, TG.X(0.2), TG.Y(1.7), 'lowest: 0', { 'text-anchor': 'middle', 'font-size': 18, fill: C.ok, 'font-weight': 600 });
 const where = PUC.where($('#wa'), { on: ['JEE MAIN'], type: 'Count the solutions of an equation like x² − |x| − 12 = 0.' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 780,
   q: `${K(`y = x^3 \\quad \\text{and} \\quad y = |x|`)}<br>How many points do the two graphs share?`,
@@ -184,7 +184,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 23', topic: 'Can a canteen bi
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('U2', 'sharp') - 0.3, 1.08, 1368, 600], [T0('U3') - 0.4, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('U2', 'sharp') - 0.3, 1.06, 1220, 580], [T0('U3') - 0.4, 1, 960, 540]]);
 const setXY = (el, x, y) => { attr(el, 'cx', x.toFixed(1)); attr(el, 'cy', y.toFixed(1)); };
 const setL = (el, x1, y1, x2, y2) => { attr(el, 'x1', x1.toFixed(1)); attr(el, 'y1', y1.toFixed(1)); attr(el, 'x2', x2.toFixed(1)); attr(el, 'y2', y2.toFixed(1)); };
 

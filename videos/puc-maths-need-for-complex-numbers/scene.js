@@ -95,9 +95,9 @@ mk(dAx, 'line', { x1: 44, y1: DY, x2: 740, y2: DY, stroke: C.ink, 'stroke-width'
 for (let v = -4; v <= 4; v++) { mk(dAx, 'line', { x1: DX(v), y1: DY - 10, x2: DX(v), y2: DY + 10, stroke: C.ink, 'stroke-width': 2 }); txt(dAx, DX(v), DY + 44, v, { 'text-anchor': 'middle', 'font-size': 22, fill: C.ink, 'font-weight': 600 }); }
 const dRay = mk(ds, 'line', { x1: DX(0), y1: DY, x2: 728, y2: DY, stroke: RE, 'stroke-width': 12, 'stroke-linecap': 'round' });
 const dRay0 = mk(ds, 'circle', { cx: DX(0), cy: DY, r: 12, fill: RE });
-const dRayT = txt(ds, DX(2.1), DY - 34, 'x² lives here: 0 or more', { 'text-anchor': 'middle', 'font-size': 20, fill: RE, 'font-weight': 600 });
+const dRayT = txt(ds, DX(0.5), DY - 34, 'x² lives here: 0 or more', { 'text-anchor': 'start', 'font-size': 20, fill: RE, 'font-weight': 600 });
 const dM = mk(mk(ds, 'g', { transform: `translate(${DX(-1)},${DY})` }), 'g', {}); mk(dM, 'circle', { r: 16, fill: C.redBg, stroke: C.red, 'stroke-width': 4 });
-const dMT = txt(ds, DX(-1), DY - 40, 'x² = -1 ?', { 'text-anchor': 'middle', 'font-size': 22, fill: C.red, 'font-weight': 600 });
+const dMT = txt(ds, DX(-1.4), DY - 34, 'x² = -1 ?', { 'text-anchor': 'middle', 'font-size': 22, fill: C.red, 'font-weight': 600 });
 const dX = mk(mk(ds, 'g', { transform: `translate(${DX(-1)},${DY})` }), 'g', {}); mk(dX, 'path', { d: 'M-22,-22 L22,22 M22,-22 L-22,22', stroke: C.red, 'stroke-width': 5, 'stroke-linecap': 'round' });
 $('#dP').style.top = '360px';
 const avD = PUC.avatar($('#sD'), { x: 976 + 36, y: 270 + 470, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'So x² + 1 is always 1 or more.' });
@@ -121,7 +121,7 @@ const zs = $('#zS');
 const ZB = [['N', 260, 110], ['Z', 380, 190], ['Q', 500, 270], ['R', 620, 350]];
 const zBox = ZB.map(([n, w, h]) => { const g = mk(mk(zs, 'g', {}), 'g', {}); const r = mk(g, 'rect', { x: 392 - w / 2, y: 330 - h / 2, width: w, height: h, rx: 18, fill: 'none', stroke: RE, 'stroke-width': 3 }); const l = txt(g, 392 - w / 2 + 16, 330 - h / 2 + 30, n, { 'font-family': 'Poppins', 'font-size': 24, 'font-weight': 700, fill: RE }); return { g, r, l }; });
 const ZM = [[[392, 345, '1   2   3']], [[232, 340, '-3'], [552, 340, '0']], [[172, 340, '3/2'], [612, 340, '-1/2']], [[112, 340, '√2'], [672, 340, 'π']]];
-const zMem = ZM.map(ms => ms.map(([x, y, s]) => txt(zs, x, y, s, { 'text-anchor': 'middle', 'font-size': 22, fill: C.ink, 'font-weight': 600 })));
+const zMem = ZM.map(ms => ms.map(([x, y, s]) => txt(zs, x, y, s, { 'text-anchor': 'middle', 'font-size': 19, fill: C.ink, 'font-weight': 600 })));
 const zQ = mk(zs, 'rect', { x: 36, y: 118, width: 712, height: 432, rx: 22, fill: 'none', stroke: C.red, 'stroke-width': 3, 'stroke-dasharray': '10 8' });
 const zQT = txt(zs, 392, 146, 'x² = -1 needs a bigger box', { 'text-anchor': 'middle', 'font-size': 20, fill: C.red, 'font-weight': 600 });
 const tZb = [T0('Z1') + 0.6, wt('Z2', 'negative'), wt('Z2', 'fraction'), wt('Z3', 'root')];
@@ -152,8 +152,8 @@ const arcD = (a0, a1) => { if (a1 <= a0 + 1e-3) return ''; let d = ''; for (let 
 const uArmA = mk(us, 'line', { stroke: C.ink2, 'stroke-width': 3 }), uArmB = mk(us, 'line', { stroke: IM, 'stroke-width': 4 });
 const uDA = mk(us, 'circle', { r: 14, fill: RE, stroke: '#fff', 'stroke-width': 3 }), uDB = mk(us, 'circle', { r: 14, fill: IM, stroke: '#fff', 'stroke-width': 3 });
 const uO = mk(us, 'circle', { cx: UO[0], cy: UO[1], r: 6, fill: C.ink });
-const uLA = txt(us, 60, 126, '× (-1): a half turn', { 'font-size': 22, fill: C.ink2, 'font-weight': 600 });
-const uLB = txt(us, 724, 126, '× i: a quarter turn', { 'font-size': 22, fill: IM, 'font-weight': 600, 'text-anchor': 'end' });
+const uLA = txt(us, 60, 470, '× (-1): a half turn', { 'font-size': 22, fill: C.ink2, 'font-weight': 600 });
+const uLB = txt(us, 60, 512, '× i: a quarter turn', { 'font-size': 22, fill: IM, 'font-weight': 600 });
 const uUp = txt(us, UO[0] - 18, UO[1] - 3 * UU - 22, '3i', { 'font-family': 'Poppins', 'font-size': 26, 'font-weight': 700, fill: IM, 'text-anchor': 'end' });
 const aA = seg(0, [[wt('U2', 'turns'), wt('U2', 'That'), Math.PI]]);
 const aB = seg(0, [[wt('U4', 'once'), wt('U4', 'straight') + 0.2, Math.PI / 2]]);

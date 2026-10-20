@@ -172,11 +172,11 @@ const wsol = PUC.solution($('#wl'), [
   ['≈ 1.2247, the height of R']], { label: 'WORKED EXAMPLE', y0: 148, dy: 84 });
 $('#wl .lbl').style.top = '30px'; $('#wq').style.top = '62px';
 const tW = [wt('W3', 'sine'), wt('W4', 'half'), wt('W5', 'sum'), wt('W6', 'two'), wt('W7', 'height')];
-const cw = circ($('#wS'), { cx: 210, cy: 420, r: 140, x0: 50, x1: 740, y0: 90, y1: 568 });
+const cw = circ($('#wS'), { cx: 200, cy: 430, r: 150, x0: 50, x1: 740, y0: 76, y1: 568 });
 const wSet = cw.set(75, 15);
-const wHtL = txt($('#wS'), wSet.rx + 22, (420 + wSet.ry) / 2 + 8, 'sin 75° + sin 15° ≈ 1.22', { 'font-size': 20, fill: SC, 'font-weight': 600 });
-const wAngL = txt($('#wS'), 210 + 62, 420 - 14, '45°', { 'font-size': 20, fill: HSC, 'font-weight': 600 });
-const wLenL = txt($('#wS'), wSet.rx - 70, wSet.ry - 22, 'OR = 2 cos 30°', { 'font-size': 20, fill: HDC, 'font-weight': 600, 'text-anchor': 'end' });
+const wHtL = txt($('#wS'), wSet.rx + 22, (430 + wSet.ry) / 2 + 8, 'sin 75° + sin 15° ≈ 1.22', { 'font-size': 20, fill: SC, 'font-weight': 600 });
+const wAngL = txt($('#wS'), 200 + 54, 430 - 12, '45°', { 'font-size': 20, fill: HSC, 'font-weight': 600 });
+const wLenL = txt($('#wS'), 440, 500, 'OR = 2 cos 30° ≈ 1.73', { 'font-size': 20, fill: HDC, 'font-weight': 600 });
 
 /* ---------- X / Q / F: exam segment ---------- */
 const trap = PUC.trap($('#trap'), { wrong: K(`${cs} 80^{\\circ} - ${cs} 20^{\\circ} = 2\\,${sn} 50^{\\circ}\\,${sn} 30^{\\circ}`), right: K(`= ${red('-')}2\\,${sn} 50^{\\circ}\\,${sn} 30^{\\circ} = -${sn} 50^{\\circ}`) + '&nbsp; negative' });
@@ -188,7 +188,7 @@ const tNote = txt(ts, 420, 110, 'smaller', { 'text-anchor': 'middle', 'font-size
 const where = PUC.where($('#wa'), { on: ['JEE MAIN'], type: 'Simplify or evaluate sums and products of sines and cosines' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 800,
   q: `${K(`${sn}\\alpha + ${sn}\\beta = \\tfrac{1}{3},\\quad ${cs}\\alpha + ${cs}\\beta = \\tfrac{1}{2}`)}<br>Then ${K(`${cs}(\\alpha+\\beta)`)} equals`,
-  opts: [K('\\tfrac{12}{13}'), K('\\tfrac{5}{13}'), K('-\\tfrac{5}{13}'), K('\\tfrac{7}{13}')], right: 1, optW: 474, optY: 300 });
+  opts: [K('\\dfrac{12}{13}'), K('\\dfrac{5}{13}'), K('-\\dfrac{5}{13}'), K('\\dfrac{7}{13}')], right: 1, optW: 474, optY: 300 });
 const so = PUC.solution($('#so'), [
   [K(`${hs('s')} = ${hs('\\tfrac{\\alpha+\\beta}{2}')},\\ \\ ${hd('d')} = ${hd('\\tfrac{\\alpha-\\beta}{2}')}`)],
   [K(`${sn}\\alpha + ${sn}\\beta = 2\\,${sn} ${hs('s')}\\,${cs} ${hd('d')}`)],

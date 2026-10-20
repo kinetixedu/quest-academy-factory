@@ -143,7 +143,7 @@ $('#dSt').innerHTML = DS.map((f, i) => `<div class="ps" id="ds${i}" style="top:$
 $('#dRg').innerHTML = 'Domain&nbsp;' + K('\\mathbb{R}') + '&nbsp;&nbsp;·&nbsp;&nbsp;Range&nbsp;' + K('\\mathbb{Z}') + '&nbsp;(the integers)';
 const tDs = [wt('D6', 'Step'), wt('D7', 'Step'), wt('D8', 'general')];
 let dLast = null;
-const th2 = PUC.think($('#th2'), { q: 'At x = 2, is the staircase at height 1, or height 2?', opts: ['Height 1', 'Height 2'], right: 1, why: '[2] = 2. The filled dot sits at the start of the new step; the empty dot ends the old one.' });
+const th2 = PUC.think($('#th2'), { q: 'At x = 2, is the staircase at height 1 or 2?', opts: ['Height 1', 'Height 2'], right: 1, why: '[2] = 2. The filled dot sits at the start of the new step; the empty dot ends the old one.' });
 
 /* ---------- W: worked example ---------- */
 $('#wq').innerHTML = `Solve&nbsp; ${K(`2${GX} - 1 = 5`)}`;
@@ -169,13 +169,13 @@ $('#wP').innerHTML = 'Every x from 3 up to 4, but not 4';
 
 /* ---------- X / Q / F: exam segment ---------- */
 const trap = PUC.trap($('#trap'), { wrong: K(`${gi('-3.7')} = -3`) + '&nbsp; drop the decimal', right: K(`${gi('-3.7')} = ${rc('-4')}`) + '&nbsp; because ' + K(`-4 \\le -3.7 < -3`) });
-const ts = $('#tS'), TXv = v => 60 + (v + 5) * 100, TYl = 170;
+const ts = $('#tS'), TXv = v => 70 + (v + 5) * 160, TYl = 180;
 mk(ts, 'line', { x1: 30, y1: TYl, x2: 590, y2: TYl, stroke: C.ink, 'stroke-width': 3 });
-for (let v = -5; v <= 0; v++) { mk(ts, 'line', { x1: TXv(v), y1: TYl - 8, x2: TXv(v), y2: TYl + 8, stroke: C.ink, 'stroke-width': 2 }); txt(ts, TXv(v), TYl + 40, mn(v), { 'text-anchor': 'middle', 'font-size': 20, fill: C.ink, 'font-weight': 600 }); }
+for (let v = -5; v <= -2; v++) { mk(ts, 'line', { x1: TXv(v), y1: TYl - 8, x2: TXv(v), y2: TYl + 8, stroke: C.ink, 'stroke-width': 2 }); txt(ts, TXv(v), TYl + 40, mn(v), { 'text-anchor': 'middle', 'font-size': 20, fill: C.ink, 'font-weight': 600 }); }
 const tM = mk(mk(ts, 'g', {}), 'g', {}); mk(tM, 'circle', { cx: TXv(-3.7), cy: TYl, r: 10, fill: XC }); txt(tM, TXv(-3.7), TYl - 26, '−3.7', { 'text-anchor': 'middle', 'font-size': 20, fill: XC, 'font-weight': 600 });
-const tBad = mk(mk(ts, 'g', {}), 'g', {}); mk(tBad, 'circle', { cx: TXv(-3), cy: TYl, r: 18, fill: 'none', stroke: C.red, 'stroke-width': 3 }); txt(tBad, TXv(-3) + 26, TYl - 26, 'bigger', { 'font-size': 18, fill: C.red, 'font-weight': 600 });
+const tBad = mk(mk(ts, 'g', {}), 'g', {}); mk(tBad, 'circle', { cx: TXv(-3), cy: TYl, r: 18, fill: 'none', stroke: C.red, 'stroke-width': 3 }); txt(tBad, TXv(-3), TYl - 30, 'bigger', { 'text-anchor': 'middle', 'font-size': 18, fill: C.red, 'font-weight': 600 });
 const tArr = PUC.arrow(ts, C.ok, 4, 14);
-const tGood = mk(mk(ts, 'g', {}), 'g', {}); mk(tGood, 'circle', { cx: TXv(-4), cy: TYl, r: 18, fill: 'none', stroke: C.ok, 'stroke-width': 4 }); txt(tGood, TXv(-4), TYl - 70, 'first integer to the left', { 'text-anchor': 'middle', 'font-size': 18, fill: C.ok, 'font-weight': 600 });
+const tGood = mk(mk(ts, 'g', {}), 'g', {}); mk(tGood, 'circle', { cx: TXv(-4), cy: TYl, r: 18, fill: 'none', stroke: C.ok, 'stroke-width': 4 }); txt(tGood, TXv(-4) - 30, TYl - 92, 'first integer to the left', { 'text-anchor': 'start', 'font-size': 18, fill: C.ok, 'font-weight': 600 });
 const where = PUC.where($('#wa'), { on: ['JEE MAIN'], type: 'A function built from [x]: find its values or its range.' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 780,
   q: `${K(`f(x) = [x] + [-x] + \\operatorname{sgn} x,\\quad x \\in \\mathbb{R}`)}<br>What is the range of f?`,
@@ -197,7 +197,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 22', topic: 'Six shapes on on
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('D4', 'staircase') - 0.2, 1.08, 1300, 560], [T0('D6'), 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('D4', 'staircase') - 0.2, 1.07, 1200, 560], [T0('D6'), 1, 960, 540]]);
 
 /* ---------- frame ---------- */
 M.on(t => {
@@ -354,7 +354,7 @@ M.on(t => {
     trap(t, { tin: tX1, tWrong: wt('X2', 'Many') - 0.1, tStrike: wt('X3', 'bigger') - 0.1, tRight: wt('X3', 'answer') - 0.1 });
     M.vis(tM, t, wt('X2', 'Find') + 0.2, 1e9, { dy: 0, fade: 0.15 });
     M.vis(tBad, t, wt('X3', 'bigger') - 0.1, 1e9, { dy: 0, fade: 0.15 });
-    const au = M.io((t - wt('X3', 'Move')) / 0.6); if (au > 0) tArr.set(TXv(-3.7), TYl - 34, TXv(-3.7) + (TXv(-4) - TXv(-3.7) - 4) * au, TYl - 34); else tArr.set(0, 0, 0, 0);
+    const au = M.io((t - wt('X3', 'Move')) / 0.6); if (au > 0) tArr.set(TXv(-3.7), TYl - 62, TXv(-3.7) + (TXv(-4) - TXv(-3.7) - 4) * au, TYl - 62); else tArr.set(0, 0, 0, 0);
     M.vis(tGood, t, wt('X3', 'first') - 0.05, 1e9, { dy: 0, fade: 0.15 });
     where(t, { tin: T0('J1'), tLight: [wt('J1', 'JEE')], tType: wt('J1', 'questions') });
   }

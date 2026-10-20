@@ -77,7 +77,7 @@ const tHo = [wt('H6', 'union'), wt('H6', 'intersection'), wt('H6', 'difference')
 /* ---------- U: union, live build ---------- */
 $('#udS').innerHTML = K(UNI);
 const UOR = [['in A', AC, '#E7EEFD'], ['in B', BC, '#DDF1F1'], ['in both', RC, HIT]];
-$('#ud').insertAdjacentHTML('beforeend', UOR.map(([s, c, b], i) => `<div class="an" id="uor${i}" style="left:${36 + i * 150}px;top:186px;color:${c};background:${b}">${s}</div>`).join(''));
+$('#ud').insertAdjacentHTML('beforeend', `<div style="position:absolute;left:36px;top:186px;display:flex;gap:12px">${UOR.map(([s, c, b], i) => `<div class="an" id="uor${i}" style="position:relative;color:${c};background:${b}">${s}</div>`).join('')}</div>`);
 const tUor = [wt('U2', 15), wt('U2', 18), wt('U2', 'both')];
 $('#udF').innerHTML = K(`${UNI} = ${SB(rc(`${inA}\\ ${tx('or')}\\ ${inB}`))}`);
 const us = $('#uS'), uV = venn(us, { xa: VX[0], xb: VX[1], cy: VY, r: VR });
@@ -239,7 +239,7 @@ M.on(t => {
     M.draw(uV.cA, t, wt('U1', 'A') - 0.1, 0.7); M.draw(uV.cB, t, wt('U1', 'B') - 0.1, 0.7);
     M.vis(uV.lA, t, wt('U1', 'A'), 1e9, POP); M.vis(uV.lB, t, wt('U1', 'B'), 1e9, POP);
     const fromB = t >= T0('U5'); const fr = $('#uFrom'); M.setT(fr, fromB ? 'FROM B' : 'FROM A'); fr.style.color = fromB ? BC : AC;
-    M.vis(fr, t, wt('U4', 'First') - 0.1, 1e9, { dy: 0, fade: 0.15 }); fr.style.top = '72px';
+    M.vis(fr, t, wt('U4', 'First') - 0.1, tUfull, { dy: 0, fade: 0.15 }); fr.style.top = '72px';
     let n = 0;
     uA.forEach(a => { M.vis(a.k.g, t, a.tIn, 1e9, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.1 }); const u = flyU(a, t); if (u >= 1) n++;
       attr(a.k.t, 'fill', mix(AC, XC, M.io((t - a.tFly - 0.5) / 0.3)));

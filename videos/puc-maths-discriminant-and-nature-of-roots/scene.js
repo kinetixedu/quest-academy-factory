@@ -157,8 +157,8 @@ M.on(t => {
   camF(t); head(t); sweep(t);
   $('#prog i').style.width = (1906 * M.clamp(t / window.DUR)).toFixed(1) + 'px';
   const o = { outDur: 0.3, ody: -16 };
-  if (ghX === null) { ghX = 160 + $('#nchip').offsetWidth + 16; $('#gh').style.left = ghX + 'px'; }
-  M.vis($('#gh'), t, tMorph + 0.8, tQ - 0.05, { dy: 0, dx: -16, outDur: 0.01 });
+  if (ghX === null) { ghX = 1760 - $('#gh').offsetWidth; $('#gh').style.left = ghX + 'px'; $('#gh').style.top = '164px'; }
+  M.vis($('#gh'), t, tMorph + 0.8, tQ - 0.05, { dy: 0, dx: 16, outDur: 0.01 });
 
   /* title card */
   EQ.forEach((_, i) => M.vis($('#ls' + i), t, tLs[i], tMorph - 0.15, { dy: 24, sp: M.SOFT, outDur: 0.25, ody: 10 }));

@@ -72,7 +72,7 @@ const RS = [[`${SUM} = \\frac{(-${bv('b')} + \\sqrt{${DD}}) + (-${bv('b')} - \\s
   [`${SUM} = \\frac{-2${bv('b')}}{2${av('a')}} = -\\frac{${bv('b')}}{${av('a')}}`, 'what is left'],
   [`${PRO} = \\frac{${bv('b')}^2 - ${DD}}{4${av('a')}^2}`, '(p + q)(p - q) = p² - q²'],
   [`${PRO} = \\frac{${bv('b')}^2 - ${bv('b')}^2 + 4${av('a')}${cv('c')}}{4${av('a')}^2} = \\frac{${cv('c')}}{${av('a')}}`, 'put D = b² - 4ac back in']];
-$('#dSt').innerHTML = RS.map(([f, w], i) => `<div class="st" id="ds${i}" style="top:${80 + i * 104}px"><div class="n">${i + 1}</div><div class="sx" style="font-size:31px;top:-6px">${K(f)}</div><div class="why" style="top:66px;font-size:19px">${w}</div></div>`).join('');
+$('#dSt').innerHTML = RS.map(([f, w], i) => `<div class="st" id="ds${i}" style="top:${80 + i * 104}px"><div class="n">${i + 1}</div><div class="sx" style="font-size:34px;top:-8px">${K(f)}</div><div class="why" style="top:64px">${w}</div></div>`).join('');
 $('#rRes').innerHTML = K(`${SUM} = -\\frac{${bv('b')}}{${av('a')}} \\qquad ${PRO} = \\frac{${cv('c')}}{${av('a')}}`);
 const tDs = [wt('R2', 'Add'), wt('R3', 'left'), wt('R4', 'Multiply'), wt('R5', 'Put')];
 const rs = $('#rS'), RX = x => 120 + x * 130, RY = 180;
@@ -159,8 +159,8 @@ M.on(t => {
   camF(t); head(t); sweep(t);
   $('#prog i').style.width = (1906 * M.clamp(t / window.DUR)).toFixed(1) + 'px';
   const o = { outDur: 0.3, ody: -16 };
-  if (ghX === null) { ghX = 160 + $('#nchip').offsetWidth + 16; $('#gh').style.left = ghX + 'px'; }
-  M.vis($('#gh'), t, tMorph + 0.8, tQ - 0.05, { dy: 0, dx: -16, outDur: 0.01 });
+  if (ghX === null) { ghX = 1760 - $('#gh').offsetWidth; $('#gh').style.left = ghX + 'px'; $('#gh').style.top = '164px'; }
+  M.vis($('#gh'), t, tMorph + 0.8, tQ - 0.05, { dy: 0, dx: 16, outDur: 0.01 });
 
   LS.forEach((_, i) => M.vis($('#ls' + i), t, tLs[i], tMorph - 0.15, { dy: 24, sp: M.SOFT, outDur: 0.25, ody: 10 }));
 

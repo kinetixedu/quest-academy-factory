@@ -156,12 +156,12 @@ const th2 = PUC.think($('#th2'), { q: `Is ${K('8')} in the set ${K(`\\{\\, x : x
 $('#stF').innerHTML = K(`\\{\\,${xc('1, 2, 3, 4, 5, 6')}\\,\\} = \\{\\, ${xc('x')} : ${rc(`${xc('x')} \\in \\mathbb{N},\\ ${xc('x')}^2 < 40`)} \\,\\}`);
 
 /* ---------- W: worked example ---------- */
-$('#wq').innerHTML = `Write in set builder form:<br>${K(`\\{\\,\\tfrac{1}{2},\\ \\tfrac{2}{3},\\ \\tfrac{3}{4},\\ \\tfrac{4}{5},\\ \\tfrac{5}{6},\\ \\tfrac{6}{7}\\,\\}`)}`;
+$('#wq').innerHTML = `Write in set builder form:<br>${K(`\\left\\{\\,\\dfrac{1}{2},\\ \\dfrac{2}{3},\\ \\dfrac{3}{4},\\ \\dfrac{4}{5},\\ \\dfrac{5}{6},\\ \\dfrac{6}{7}\\,\\right\\}`)}`;
 const wsol = PUC.solution($('#wl'), [
   [K(`\\text{top} = ${nc('n')}:\\ 1, 2, 3, \\dots, 6`)],
   [K(`\\text{bottom} = ${nc('n')} + 1`)],
   [K(`${nc('n')} \\in \\mathbb{N},\\ 1 \\le ${nc('n')} \\le 6`)],
-  [K(`\\{\\, ${xc('x')} : ${rc(`${xc('x')} = \\tfrac{${nc('n')}}{${nc('n')}+1},\\ ${nc('n')} \\in \\mathbb{N},\\ 1 \\le ${nc('n')} \\le 6`)} \\,\\}`)]], { label: 'WORKED EXAMPLE', y0: 220, dy: 84 });
+  [K(`\\{\\, ${xc('x')} : ${rc(`${xc('x')} = \\dfrac{${nc('n')}}{${nc('n')}+1},\\ ${nc('n')} \\in \\mathbb{N},\\ 1 \\le ${nc('n')} \\le 6`)} \\,\\}`)]], { label: 'WORKED EXAMPLE', y0: 236, dy: 84 });
 $('#wl .lbl').style.top = '30px';
 $('#frs').innerHTML = [1, 2, 3, 4, 5, 6].map((n, i) => `<div class="fr" id="fr${n}" style="left:${62 + (i % 3) * 230}px;top:${88 + Math.floor(i / 3) * 196}px"><div class="tp">${n}</div><i></i><div class="bt">${n + 1}</div><div class="nl">n = ${n}</div><div class="p1">+1</div></div>`).join('');
 const tW = [wt('W3', 'Step'), wt('W4', 'Step'), wt('W5', 'Step'), wt('W6', 'set')];

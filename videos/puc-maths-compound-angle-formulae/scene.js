@@ -62,7 +62,7 @@ const pR30 = mk(ps, 'line', { x1: QX, y1: QY, x2: h30x, y2: QY_(0.5), stroke: C.
 const pH60 = mk(ps, 'line', { x1: h60x, y1: QY, x2: h60x, y2: QY_(Math.sin(60 * D2R)), stroke: SN, 'stroke-width': 8, 'stroke-linecap': 'round' });
 const pH30o = mk(ps, 'g', {}), pH30g = mk(pH30o, 'g', {}), pH30 = mk(pH30g, 'line', { x1: 0, y1: 0, x2: 0, y2: -QR * 0.5, stroke: SN, 'stroke-width': 8, 'stroke-linecap': 'round' });
 const pOver = mk(pH30g, 'line', { x1: 0, y1: -QR * (1 - Math.sin(60 * D2R)), x2: 0, y2: -QR * 0.5, stroke: C.red, 'stroke-width': 8, 'stroke-linecap': 'round' });
-const pL60 = txt(ps, h60x + 16, QY_(0.43), '0.866', { 'font-size': 20, fill: SN, 'font-weight': 600 });
+const pL60 = txt(ps, h60x - 12, QY - 18, '0.866', { 'text-anchor': 'end', 'font-size': 20, fill: SN, 'font-weight': 600 });
 const pL30 = txt(pH30g, 16, -QR * 0.25 + 6, '0.5', { 'font-size': 20, fill: SN, 'font-weight': 600 });
 const pSum = txt(ps, h60x + 18, QY_(1.366) + 6, '0.866 + 0.5 = 1.366', { 'font-size': 20, fill: C.red, 'font-weight': 600 });
 const tStack = wt('P2', 'Stack');
@@ -185,7 +185,7 @@ const fc = PUC.fcard($('#sF'), { x: 360, y: 240, w: 1200, h: 510, title: 'Recap 
 const YQ = [`Why is ${K('\\sin(x + y)')} not just ${K('\\sin x + \\sin y')}?`, `Write the formula for ${K(cxmy)}.`, `Use 45° and 30° to find ${K(f(CS, '\\cos 75^\\circ'))}.`];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="n">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
-const nxt = PUC.next($('#sF'), { label: 'NEXT · EP 34', topic: 'Double the angle. Does the sine double? Double-Angle and Triple-Angle Identities', y: 764 });
+const nxt = PUC.next($('#sF'), { label: 'NEXT · EP 34', topic: 'Double the angle, double the sine? Double and Triple Angles', y: 764 });
 
 /* ---------- helpers ---------- */
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });

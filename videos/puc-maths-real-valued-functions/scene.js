@@ -40,7 +40,7 @@ const pHo = mk(ps, 'line', { x1: 56, y1: PYo, x2: 728, y2: PYo, stroke: RC, 'str
 const pHi = mk(ps, 'line', { x1: 56, y1: PYi, x2: 728, y2: PYi, stroke: AC, 'stroke-width': 9, 'stroke-linecap': 'round', opacity: 0.85 });
 const pTo = txt(ps, 56, PYo - 30, 'OUTPUTS · REAL NUMBERS', { 'font-size': 18, fill: RC, 'font-weight': 600, 'letter-spacing': 1.5 });
 const pTi = txt(ps, 56, PYi + 50, 'INPUTS · REAL NUMBERS', { 'font-size': 18, fill: AC, 'font-weight': 600, 'letter-spacing': 1.5 });
-const PIN = [0.5, 1.6, 2.7, 3.8, 4.9], POU = [1.2, 0.4, 3.1, 4.4, 2.2];
+const PIN = [0.5, 1.6, 2.7, 3.8, 4.9], POU = [0.9, 0.3, 2.5, 3.7, 3.1];
 const pAr = PIN.map(() => PUC.arrow(ps, C.ink2, 3, 12));
 const pDi = PIN.map(v => mk(ps, 'circle', { cx: PX(v), cy: PYi, r: 11, fill: XC }));
 const pDo = POU.map(v => mk(ps, 'circle', { cx: PX(v), cy: PYo, r: 11, fill: RC }));
@@ -57,7 +57,7 @@ const lCur = mk(ls, 'path', { d: '', fill: 'none', stroke: RC, 'stroke-width': 5
 const lVg = mk(ls, 'line', { stroke: XC, 'stroke-width': 2, 'stroke-dasharray': '5 6' });
 const lHg = mk(ls, 'line', { stroke: RC, 'stroke-width': 2, 'stroke-dasharray': '5 6' });
 const lDot = mk(ls, 'circle', { r: 11, fill: RC, stroke: '#fff', 'stroke-width': 3 });
-const lMk = [[4, 'LOWEST · 4 A.M.', 1], [16, 'HIGHEST · 4 P.M.', -1]].map(([h, s, d]) => { const g = mk(mk(ls, 'g', {}), 'g', {}); mk(g, 'circle', { cx: LX(h), cy: LY(TMP(h)), r: 9, fill: '#fff', stroke: RC, 'stroke-width': 4 }); txt(g, LX(h), LY(TMP(h)) + d * 36 + (d > 0 ? 6 : 0), s, { 'text-anchor': 'middle', 'font-size': 16, fill: RC, 'font-weight': 700, 'letter-spacing': 1 }); return g; });
+const lMk = [[4, 'LOWEST · 4 A.M.', 1], [16, 'HIGHEST · 4 P.M.', -1]].map(([h, s, d]) => { const g = mk(mk(ls, 'g', {}), 'g', {}); mk(g, 'circle', { cx: LX(h), cy: LY(TMP(h)), r: 9, fill: '#fff', stroke: RC, 'stroke-width': 4 }); txt(g, LX(h) + (d > 0 ? 16 : 0), LY(TMP(h)) + (d > 0 ? 26 : -22), s, { 'text-anchor': d > 0 ? 'start' : 'middle', 'font-size': 16, fill: RC, 'font-weight': 700, 'letter-spacing': 1 }); return g; });
 const tL0 = wt('L2', 'counts'), tL1e = T0('L3') - 0.1;
 const hOf = t => 24 * M.clamp((t - tL0) / (tL1e - tL0));
 const lPath = h1 => { let d = ''; const n = Math.max(2, Math.ceil(h1 * 4)); for (let i = 0; i <= n; i++) { const h = h1 * i / n; d += (i ? 'L' : 'M') + LX(h).toFixed(1) + ',' + LY(TMP(h)).toFixed(1); } return d; };
@@ -154,10 +154,10 @@ const tSo = [wt('A2', 'Under'), wt('A3', 'bottom'), wt('A4', 'integers'), wt('A5
 const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · real-valued functions', y0: 100, dy: 78, txt: [1, 1, 0, 0, 1],
   lines: [`<b>Real valued</b>: range ${K('\\subset \\mathbb{R}')}, every output a real number`,
     `<b>Real function</b>: domain ${K('\\subset \\mathbb{R}')} as well, real inputs`,
-    K(`${rc('t')}(${xc('C')}) = \\tfrac{9${xc('C')}}{5} + 32, \\qquad ${rc('t')}(${xc('37')}) = ${rc('98.6')}`),
-    K(`\\tfrac{1}{x - 2}: ${ac('\\mathbb{R} - \\{2\\}')} \\qquad \\sqrt{x - 1}: ${ac('[1, \\infty)')}`),
+    K(`${rc('t')}(${xc('C')}) = 9${xc('C')}/5 + 32, \\qquad ${rc('t')}(${xc('37')}) = ${rc('98.6')}`),
+    K(`1/(x - 2): ${ac('\\mathbb{R} - \\{2\\}')} \\qquad \\sqrt{x - 1}: ${ac('[1, \\infty)')}`),
     'Domain from the rule as given: never cancel first'] });
-const YQ = ['What is the difference: real valued, and real function?', `Find ${K('t(-40)')} for ${K('t(C) = \\tfrac{9C}{5} + 32')}.`, `Find the domain of ${K('\\tfrac{1}{x^2 - 9}')}.`];
+const YQ = ['What is the difference: real valued, and real function?', `Find ${K('t(-40)')} for ${K('t(C) = 9C/5 + 32')}.`, `Find the domain of ${K('1/(x^2 - 9)')}.`];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="n">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
 const nx = PUC.next($('#sF'), { label: 'NEXT · EP 19', topic: 'A bus fare, a mirror, a square plot: Constant, Identity and Polynomial', y: 764 });
@@ -166,7 +166,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 19', topic: 'A bus fare, a mi
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('L3') - 0.2, 1.06, 1370, 560], [T0('L4') + 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('L3') - 0.2, 1.04, 1010, 550], [T0('L4') + 0.2, 1, 960, 540]]);
 
 /* ---------- frame ---------- */
 M.on(t => {
@@ -225,7 +225,7 @@ M.on(t => {
     const out = OUT('K3');
     M.vis($('#ka'), t, tK1 + 0.1, out, { dx: -60, dy: 0, ...o });
     [0, 1].forEach(i => M.vis($('#ka' + i), t, wt('K1', 'hours') - 0.1 + i * 0.2, 1e9, { dy: 14 }));
-    M.vis($('#kaC0'), t, wt('K1', 'numbers') - 0.1, 1e9, POP); M.vis($('#kaC1'), t, wt('K1', 'Both') - 0.1, 1e9, POP); M.vis($('#kaP'), t, wt('K1', 'real') - 0.1, 1e9, POP);
+    M.vis($('#kaC0'), t, wt('K1', 'hours') + 0.3, 1e9, POP); M.vis($('#kaC1'), t, wt('K1', 'degrees') + 0.2, 1e9, POP); M.vis($('#kaP'), t, wt('K1', 'real') - 0.1, 1e9, POP);
     M.vis($('#kb'), t, T0('K2') - 0.1, out, { dx: 60, dy: 0, ...o });
     [0, 1, 2].forEach(i => M.vis($('#kb' + i), t, wt('K2', 'student') - 0.1 + i * 0.2, 1e9, { dy: 14 }));
     M.vis($('#kbC1'), t, wt('K2', 'outputs') - 0.1, 1e9, POP); M.vis($('#kbC0'), t, wt('K2', 'inputs') - 0.1, 1e9, POP); M.vis($('#kbP'), t, wt('K2', 'valued') - 0.1, 1e9, POP);
