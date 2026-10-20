@@ -1,0 +1,51 @@
+H1|0.35|Aarav's phone fits in his pocket. Yet it can do far more than a computer that once filled a whole room.
+H2|0.5|What changed? Electronics.
+I1|0.35|In nineteen forty six, a computer called ENIAC used seventeen thousand, four hundred and sixty eight vacuum tubes.
+I2|0.35|It weighed about twenty seven tonnes.
+I3|0.65|Today, a chip smaller than your fingernail holds billions of tiny switches.
+D1|0.35|So what is electronics?
+D2|0.35|Electronics is the branch of science and engineering that controls the flow of electrons.
+D3|0.35|Those electrons can move through a vacuum, through a gas, or through a semiconductor like silicon.
+D4|0.65|The key word is control. Electronics does not just use electricity. It steers it.
+E1|0.35|Let's see the difference on a breadboard.
+E2|0.35|Here is a simple electrical circuit. A battery, a switch and a bulb.
+E3|0.35|Close the switch, and electrons flow. The bulb lights up.
+E4|0.65|Open it, and the flow stops. There are only two states, on or off.
+E5|0.35|Now an electronic circuit. A tiny signal from a microphone goes into a transistor.
+E6|0.35|The transistor uses that tiny signal to control a much bigger current through the speaker.
+E7|0.35|Watch the scope. The input wave is small. The output wave has the same shape, but it is a hundred times bigger.
+E8|0.65|This is called amplification. A small signal controls a big one. That is electronics.
+T1|0.8|Electrical circuits use energy. Electronic circuits control it.
+N1|0.35|Now, how many electrons are moving? Let's work it out.
+N2|0.7|Current is the charge that passes a point every second. So I equals Q divided by t.
+N3|0.7|Charge comes in tiny packets. Each electron carries a charge e, one point six times ten to the minus nineteen coulombs.
+N4|0.7|So n electrons carry a charge Q equals n times e.
+N5|0.7|Put the two together, and n equals I times t, divided by e.
+N6|0.65|Current in amperes, time in seconds, charge in coulombs. And n is just a count, so it has no unit.
+W1|0.35|Worked example. A phone charger sends two amperes into the battery.
+W2|0.35|How many electrons pass through the cable in one second?
+W3|0.6|n equals two times one, divided by one point six times ten to the minus nineteen.
+W4|0.65|That is one point two five times ten to the nineteen electrons, every single second.
+V1|0.35|So how did we learn to control so many electrons? Step by step.
+V2|0.35|In nineteen oh four, John Ambrose Fleming made the vacuum tube diode. It let current flow only one way.
+V3|0.35|In nineteen oh six, Lee de Forest added a grid. His triode could make a weak signal stronger.
+V4|0.35|But tubes were big, they got hot, and they used a lot of power.
+V5|0.35|In nineteen forty seven, Bardeen, Brattain and Shockley built the first transistor, from a semiconductor.
+V6|0.35|In nineteen fifty eight, Jack Kilby put several parts on one small chip. The integrated circuit was born.
+V7|0.35|In nineteen seventy one came the first microprocessor, the brain of a computer on a single chip.
+V8|0.65|Later, microcontrollers put a whole small computer on one chip. Each step made circuits smaller, faster and cheaper.
+S1|0.35|And the scope of electronics keeps growing.
+S2|0.35|Communication, like phones and the internet. Entertainment, like television and music.
+S3|0.35|Defence, like radar. Industry, like robots and automatic machines.
+S4|0.65|And medicine, like heart monitors and scanners. We will explore each one later in this series.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think electrons flow the same way as current. They do not.
+X3|0.65|Conventional current flows from plus to minus outside the cell. Electrons drift the other way, from minus to plus.
+X4|0.65|Where is this asked? In PUC board papers, as short answers. Define electronics, name an invention and its year, or count electrons with n equals I t by e.
+Q1|5.4|Try this. A current of three point two milliamperes flows through a small lamp for five seconds. How many electrons pass through it?
+A1|0.35|B. One times ten to the seventeen.
+A2|0.35|First, change milliamperes to amperes. That is three point two times ten to the minus three amperes.
+A3|0.35|Charge is current times time. That gives zero point zero one six coulombs.
+A4|0.65|Divide by one point six times ten to the minus nineteen, and you get one times ten to the seventeen.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, vacuum tubes and semiconductor devices. Why did the tiny transistor beat the big glowing tube?
