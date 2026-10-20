@@ -92,7 +92,7 @@ const curvePts = P3.slice(0, 7).map((_, i) => [DX(i) + 38, 380 - RE[i] * 250]);
 const dCur = mk(dsv, 'path', { d: 'M' + curvePts.map(p => p.map(v => v.toFixed(1)).join(' ')).join(' L'), fill: 'none', stroke: NC, 'stroke-width': 5, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' });
 const dAr = mk(dsv, 'circle', { cx: DX(7) + 38, cy: 380 - RE[7] * 250, r: 9, fill: C.dim });
 const eNa = mk(dsv, 'circle', { r: 9, fill: EC }), eCl = mk(dsv, 'circle', { r: 9, fill: EC });
-const ionT = [['Na⁺', DX(0) + 38, NC], ['Cl⁻', DX(6) + 38, NC]].map(([s, x, c]) => txt(dsv, x, 120, s, { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 30, fill: c }));
+const ionT = [['Na⁺', DX(0) + 92, NC], ['Cl⁻', DX(6) - 16, NC]].map(([s, x, c]) => txt(dsv, x, 168, s, { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 30, fill: c }));
 const lowT = txt(dsv, DX(3) + 38, 300, 'LOWEST', { 'text-anchor': 'middle', fill: HC, 'font-weight': 600 });
 const fullT = txt(dsv, DX(7) + 38, 344, 'FULL', { 'text-anchor': 'middle', fill: C.mute, 'font-weight': 600 });
 
@@ -145,7 +145,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 37', topic: 'Why does boron b
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('S2', 'caesium') - 0.3, 1.1, 700, 600], [T0('S3') + 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('S2', 'caesium') - 0.3, 1.05, 900, 560], [T0('S3') + 0.2, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};

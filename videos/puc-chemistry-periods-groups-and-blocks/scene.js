@@ -121,7 +121,7 @@ const BF = [['s', 's-block', 'GROUPS 1 AND 2', 'ns^{1-2}', 'REACTIVE METALS', ''
   ['d', 'd-block', 'GROUPS 3 TO 12', '(n-1)d^{1-10}\\,ns^{0-2}', 'TRANSITION<br>ELEMENTS', `\\text{group} = ${tc(DC, 'd')} + ${tc(SC, 's')} \\text{ electrons}`], ['f', 'f-block', 'TWO ROWS AT THE BOTTOM', '(n-2)f^{1-14}\\,(n-1)d^{0-1}\\,ns^2', 'INNER TRANSITION<br>ELEMENTS', '']];
 $('#bfs').innerHTML = BF.map(([k, n, g, cf, nat, ex]) => `<div class="bf" id="bfk${k}"><div class="bt" style="color:${BCOL[k]}">${n}</div><div class="bg">${g}</div><div class="bn">${nat}</div><div class="bc">${K(cf)}</div>${ex ? `<div class="bc" style="top:214px;font-size:26px" id="bfx">${K(ex)}</div>` : ''}</div>`).join('');
 const avD = PUC.avatar($('#sS'), { x: 160 + 36, y: 270 + 474, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'One clue gives the whole address!' });
-const th1 = PUC.think($('#th1'), { q: `Helium is ${K(`1s^${tc(EC, '2')}`)}. So why is it in group 18, and not in group 2?`, opts: ['Its only shell is full', 'It has two outer electrons'], right: 0, why: 'A full shell, like neon and argon: helium behaves like a noble gas.' });
+const th1 = PUC.think($('#th1'), { q: `Helium is ${K(`1s^{${tc(EC, '2')}}`)}. So why is it in group 18, and not in group 2?`, opts: ['Its only shell is full', 'It has two outer electrons'], right: 0, why: 'A full shell, like neon and argon: helium behaves like a noble gas.' });
 
 /* ---------- statement ---------- */
 $('#stF').innerHTML = K(`${tc(SC, 's')} \\quad ${tc(PC, 'p')} \\quad ${tc(DC, 'd')} \\quad ${tc(FC, 'f')}`);
