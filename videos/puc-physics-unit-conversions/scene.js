@@ -148,7 +148,7 @@ const where = PUC.where($('#wa'), { on: [], type: 'First step inside numericals:
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', q: `The acceleration due to gravity is ${K('\\textcolor{' + C.red + '}{g} = 9.8\\ \\text{m s}^{-2}')}. What is it in ${K('\\text{km h}^{-2}')}?`, qW: 780,
   opts: [K('35.3\\ \\text{km h}^{-2}'), K('1.27 \\times 10^{5}\\ \\text{km h}^{-2}'), K('1.27 \\times 10^{8}\\ \\text{km h}^{-2}'), K('7.56 \\times 10^{-4}\\ \\text{km h}^{-2}')], right: 1, optW: 474, optY: 330 });
 const so = PUC.solution($('#so'), [[K(`1\\,${u('m')} = 10^{-3}\\,${u('km')}`)], [K(`1\\,${u('s')} = \\tfrac{1}{3600}\\,${u('h')}`)], [K(`\\textcolor{${C.red}}{g} = 9.8 \\times \\dfrac{10^{-3}}{(1/3600)^2}`)], [K(`\\textcolor{${C.red}}{g} \\approx 1.27 \\times 10^{5}\\ \\text{km h}^{-2}`)], ['<span style="font:500 22px Poppins">A: no square · C: no 1000 · D: flipped</span>']], { y0: 96, dy: 100 });
-const tSo = [wt('A9', 'Metres'), wt('A9', 'second'), wt('A9', 'multiply'), wt('A9', 'squared') + 0.5, T0('A10')];
+const tSo = [wt('A9', 'Metres'), wt('A9', 'second'), wt('A9', 'times'), wt('A9', 'squared') + 0.5, T0('A10')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 262, w: 1200, h: 470, title: 'Recap · unit conversions', y0: 100, dy: 90, txt: [0, 1, 1, 1],
   lines: [K(`\\textcolor{${NC}}{n_1}\\textcolor{${UC}}{u_1} = \\textcolor{${NC}}{n_2}\\textcolor{${UC}}{u_2} \\qquad \\dfrac{1\\,\\text{km}}{1000\\,\\text{m}} = 1`),
     '<b>km/h → m/s</b>: × 5/18 &nbsp;·&nbsp; <b>m/s → km/h</b>: × 18/5',
@@ -337,12 +337,12 @@ M.on(t => {
   const xOn = t >= tX1 - 0.1 && t < tQ + 0.05; M.hide($('#sX'), !xOn);
   if (xOn) {
     M.vis($('#trap'), t, tX1 + 0.05, 1e9, { dy: 36 }); M.vis($('#wa'), t, T0('E1') - 0.1, 1e9, { dy: 36 });
-    trap(t, { tin: tX1, tWrong: wt('X2', 'multiplying') - 0.1, tStrike: wt('X3', 'backwards') - 0.1, tRight: wt('X3', 'Thirty') - 0.1 });
+    trap(t, { tin: tX1, tWrong: wt('X2', 'multiply') - 0.1, tStrike: wt('X3', 'backwards') - 0.1, tRight: wt('X3', 'Thirty') - 0.1 });
     const r0 = wt('X3', 'Thirty');
     M.vis(tb0, t, r0, 1e9, { dy: 0, sc: 0.8, sp: M.POP });
     const ua = M.io((t - r0 - 0.3) / 0.4); tAr.set(210, 124, 210 + 140 * ua, 124); M.hide(tAr.g, ua <= 0.01); tArT.style.opacity = ua.toFixed(3);
     M.vis(tb1, t, wt('X3', 'ten') - 0.05, 1e9, { dy: 0, sc: 0.8, sp: M.POP }); M.vis(tDn, t, wt('X3', 'ten') + 0.3, 1e9, { dy: 0 });
-    where(t, { tin: T0('E1'), tLight: [], tType: wt('E1', 'Inside') });
+    where(t, { tin: T0('E1'), tLight: [], tType: wt('E1', 'first') });
   }
 
   /* Q */

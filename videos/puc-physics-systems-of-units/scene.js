@@ -70,7 +70,7 @@ const vL = txt(s, 0, 0, 'v', { 'font-family': 'Poppins', 'font-style': 'italic',
 $('#roG').innerHTML = `<span class="k">t</span><span class="v" id="rt">0.00</span><span class="u">s</span>
   <span class="k" style="color:${FC}">F</span><span class="v" id="rf" style="color:${FC}">4</span><span class="u" id="rfu">N</span>
   <span class="k" style="color:${VC}">v</span><span class="v" id="rv" style="color:${VC}">0.00</span><span class="u" id="rvu">m/s</span>`;
-const G = PUC.graph($('#grS'), { x: 110, y: 74, w: 560, h: 140, xmax: 4, ymax: 8, xt: [0, 1, 2, 3, 4], yt: [0, 4, 8], xl: 't (s)', yl: 'v (m/s)' });
+const G = PUC.graph($('#grS'), { x: 110, y: 74, w: 560, h: 140, xmax: 4, ymax: 8, xt: [0, 1, 2, 3], yt: [0, 4, 8], xl: 't (s)', yl: 'v (m/s)' });
 G.ylab.setAttribute('x', 122); G.ylab.setAttribute('y', 78);
 const gCur = G.curve(VC), gDot = G.dot(VC);
 const tGo = wt('S3', 'speeds') - 0.2, tSlo = T0('S4') + 0.1, TEND = 4;

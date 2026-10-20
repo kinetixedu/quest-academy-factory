@@ -270,7 +270,7 @@ M.on(t => {
     M.vis(kdT, t, wt('K2', 'square') + 0.2, 1e9, { dy: 0 }); M.vis($('#kdP'), t, wt('K2', 'metre') + 0.1, 1e9, POP);
     kHi.forEach(h => M.vis(h, t, wt('K2', 'Only') - 0.1, 1e9, { dy: 0, fade: 0.2 }));
     M.vis($('#th1'), t, tK3 + 0.05, OUT('G1'), { dy: 36, ...o });
-    th1(t, { tin: tK3, tOpts: wt('K3', 'Which') - 0.1, tCount: T1('K3') + 0.05, dur: 3, tAns: T0('K4') - 0.02, tWhy: wt('K4', 'Its') });
+    th1(t, { tin: tK3, tOpts: wt('K3', 'Which') - 0.1, tCount: T1('K3') + 0.05, dur: 3, tAns: T0('K4') - 0.02, tWhy: wt('K4', 'Area') });
   }
 
   /* G */

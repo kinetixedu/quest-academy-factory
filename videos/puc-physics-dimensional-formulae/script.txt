@@ -2,16 +2,16 @@ H1|0.4|A doctor reads blood pressure. A tyre shop checks air pressure. A diver f
 H2|0.45|Three pressures, three places. But what is pressure actually made of?
 H3|0.35|Diya's pressure cooker whistles when the steam pushes hard enough on the lid.
 H4|0.5|Can we write that pressure using only mass, length and time? No units, no numbers.
-H5|0.65|By the end of this video, you will build it yourself, one block at a time.
+H5|0.65|By the end, you will build it yourself, one block at a time.
 P1|0.35|So what is a dimensional formula?
-P2|0.4|It is an expression that shows how a quantity depends on mass, length and time, and with which powers.
+P2|0.4|It shows how a quantity depends on mass, length and time, and with which powers.
 P3|0.4|We write it inside square brackets, as M to the a, L to the b, T to the c.
 P4|0.4|Written as an equation, like velocity equals L T to the minus one, it is a dimensional equation.
 P5|0.65|The trick is simple. Start from a formula you know, and replace every quantity by its dimensions.
 S1|0.35|Let's watch the cooker lid on our motion notebook.
 S2|0.4|Steam pushes up on the lid. That push is a force, F. It is spread over the area of the lid, A.
 S3|0.4|As the steam heats up, the force grows. Pressure is force divided by area, so the pressure grows too.
-S4|0.45|At a certain pressure, the weight lifts. Let's replay that moment in slow motion. Force up beats the weight down.
+S4|0.45|At a certain pressure, the weight lifts. Let's replay that in slow motion. Force up beats the weight down.
 S5|0.5|The weight jumps, steam escapes, and the pressure drops. Then it builds again.
 S6|0.65|On the graph, pressure climbs, drops, and climbs again. Every whistle is one peak.
 D1|0.35|Now let's build the dimensional formula of pressure, block by block.
@@ -22,13 +22,13 @@ D5|0.75|Step four. Pressure is force over area. Area is L squared.
 D6|0.65|M L T to the minus two, divided by L squared, is M L to the minus one T to the minus two.
 R1|0.35|Let's check each power, link by link.
 R2|0.4|Mass came only from the force. One M on top. So the power of M is one.
-R3|0.4|Length: one L on top from the force, two L below from the area. One minus two is minus one.
+R3|0.4|Length: one L on top from the force, two below from the area. One minus two is minus one.
 R4|0.6|Time came only from the acceleration, divided by time twice. So the power of T is minus two.
 T1|0.75|Remember this. To find a dimensional formula, start from a known formula and replace each quantity by its dimensions.
 K1|0.4|Side by side. Force is M L T to the minus two. It is the total push.
-K2|0.6|Pressure is M L to the minus one T to the minus two. It is the push on each square metre. Only the power of L is different.
+K2|0.6|Pressure is M L to the minus one T to the minus two. The push on each square metre. Only the power of L changes.
 K3|3.2|Now you try. A small pin and a big plate get the same push. Which one gets the bigger pressure? Pause and decide.
-K4|0.65|The pin! Its area is tiny, and area sits below the line. A smaller area means a bigger pressure for the same force.
+K4|0.65|The pin! Area sits below the line, so a tiny area means a big pressure for the same force.
 G1|0.35|With the same blocks, we can build energy and work.
 G2|0.4|Work is force times distance. M L T to the minus two, times L, gives M L squared T to the minus two.
 G3|0.4|Kinetic energy is half m v squared. The half is a pure number, so it has no dimension.
@@ -42,12 +42,12 @@ W5|0.75|Step three. Divide. T to the minus two, divided by T, is T to the minus 
 W6|0.65|So power is M L squared T to the minus three. Its unit, the watt, is one joule per second.
 X1|0.35|Now, the exam trap.
 X2|0.35|Many students write force as M L T squared, forgetting the minus sign.
-X3|0.65|But time sits below the line in acceleration. Dividing by time gives a negative power. Force is M L T to the minus two.
-E1|0.6|Where is this asked? As short questions: write the dimensional formula of a quantity, or match quantities to their formulae.
+X3|0.65|But time sits below the line in acceleration. Dividing gives a negative power. Force is M L T to the minus two.
+E1|0.6|Where is this asked? Short questions: write the formula of a quantity, or match quantities to formulae.
 Q1|5.4|Exam level now. Surface tension is force per unit length. What is its dimensional formula? Pause and solve.
 A1|0.5|The answer is B. M T to the minus two.
 A2|0.5|Force is M L T to the minus two. Per unit length means divide by L.
-A3|0.6|The L cancels, leaving M L to the zero, T to the minus two. A is force itself. C is pressure. D is energy.
+A3|0.6|The L cancels, leaving M T to the minus two. A is force. C is pressure. D is energy.
 F1|3.2|Here is your recap. Screenshot this card.
 Y1|0.4|Can you answer these three questions without help?
 Y2|0.9|One. What is the dimensional formula of force, and why is the power of T negative?

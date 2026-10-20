@@ -83,7 +83,7 @@ const avA = PUC.avatar($('#sim'), { x: 36, y: 474, who: 'Aarav', face: IMG + 'aa
 /* ---------- D: area ---------- */
 const STEPS = [[`A = l \\times b`, 'area = length × breadth'], [`[l] = ${D('[L]')},\\;\\; [b] = ${D('[L]')}`, 'breadth is also a length'], [`[A] = ${D('[L]')}\\times${D('[L]')} = ${D('[L^2]')}`, 'L times L'], [`[A] = ${D('[M^0 L^2 T^0]')}`, 'no mass, no time']];
 $('#steps').innerHTML = `<div class="hiBox" id="hiB" style="left:20px;width:744px;height:116px"></div>` + STEPS.map(([f, w], i) => `<div class="st" id="dst${i}" style="top:${84 + i * 120}px"><div class="n">${i + 1}</div><div class="sx">${K(f)}</div><div class="why">${w}</div></div>`).join('');
-const tStep = [wt('D2', 'Area'), wt('D3', 'Length'), wt('D4', 'L'), wt('D5', 'Mass')];
+const tStep = [wt('D2', 'Area'), wt('D3', 'Length'), wt('D4', 'L'), wt('D5', 'No')];
 const dS = $('#dS'), RX = 170, RYY = 110, RW = 440, RH = 260;
 const dRect = mk(dS, 'rect', { x: RX, y: RYY, width: RW, height: RH, fill: C.ac2, stroke: C.ac, 'stroke-width': 3 });
 const dB1 = mk(dS, 'path', { d: `M${RX},${RYY + RH + 18} v10 h${RW} v-10`, fill: 'none', stroke: DC, 'stroke-width': 3 });
@@ -166,7 +166,7 @@ const where = PUC.where($('#wa'), { on: [], type: 'Short questions: dimensions o
 const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', q: 'Which pair of quantities has the same dimensions?', qW: 780,
   opts: ['Speed and acceleration', 'Area and volume', 'Frequency and angular velocity', 'Mass and density'], right: 2, cols: 1, optW: 968, optH: 68, optFs: 28, optY: 220 });
 const so = PUC.solution($('#so'), [[K(`f:\\ ${D('[T^{-1}]')}`)], [K(`\\omega = \\dfrac{\\theta}{t}:\\ ${D('[T^{-1}]')}`)], ['<b style="color:var(--red)">A</b>: LT⁻¹ vs LT⁻²'], ['<b style="color:var(--red)">B</b>: L² vs L³ · <b style="color:var(--red)">D</b>: M vs ML⁻³']], { y0: 100, dy: 112 });
-const tSo = [wt('A2', 'Frequency'), wt('A2', 'Angular'), wt('A3', 'In'), wt('A3', 'B')];
+const tSo = [wt('A2', 'Frequency'), wt('A2', 'Angular'), wt('A3', 'A'), wt('A3', 'B')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 262, w: 1200, h: 470, title: 'Recap · dimensions', y0: 100, dy: 90, txt: [0, 1, 1, 1],
   lines: [K(`[Q] = [M^{a}\\,L^{b}\\,T^{c}] \\qquad [v] = [LT^{-1}] \\qquad [a] = [LT^{-2}]`),
     '<b>Area</b> [L²] · <b>Volume</b> [L³] · <b>Density</b> [ML⁻³]',
@@ -266,7 +266,7 @@ M.on(t => {
     M.draw(dB1, t, wt('D3', 'Length'), 0.4); M.vis(dT1, t, wt('D3', 'Length') + 0.2, 1e9, { dy: 0 });
     M.draw(dB2, t, wt('D3', 'Breadth'), 0.4); M.vis(dT2, t, wt('D3', 'Breadth') + 0.2, 1e9, { dy: 0 });
     M.vis(dT3, t, wt('D4', 'squared') - 0.1, 1e9, POP);
-    [wt('D5', 'Mass'), wt('D5', 'squared'), wt('D5', 'time')].forEach((tt, i) => { M.vis($('#zc' + i), t, tt - 0.1, 1e9, POP); });
+    [wt('D5', 'M'), wt('D5', 'squared'), wt('D5', 'T')].forEach((tt, i) => { M.vis($('#zc' + i), t, tt - 0.1, 1e9, POP); });
   }
 
   /* R */
@@ -349,9 +349,9 @@ M.on(t => {
   const xOn = t >= tX1 - 0.1 && t < tQ + 0.05; M.hide($('#sX'), !xOn);
   if (xOn) {
     M.vis($('#trap'), t, tX1 + 0.05, 1e9, { dy: 36 }); M.vis($('#wa'), t, T0('E1') - 0.1, 1e9, { dy: 36 });
-    trap(t, { tin: tX1, tWrong: wt('X2', 'quantity') - 0.1, tStrike: wt('X3', 'Half') - 0.1, tRight: wt('X3', 'Angle') - 0.1 });
+    trap(t, { tin: tX1, tWrong: wt('X2', 'quantity') - 0.1, tStrike: wt('X3', 'Not') - 0.1, tRight: wt('X3', 'Angle') - 0.1 });
     const r0 = wt('X3', 'Angle'); M.draw(trR, t, r0, 0.4); M.draw(trA, t, r0 + 0.3, 0.4); M.vis(trT, t, wt('X3', 'radian') - 0.1, 1e9, POP); M.vis(trT2, t, wt('X3', 'radian') + 0.3, 1e9, { dy: 0 });
-    where(t, { tin: T0('E1'), tLight: [], tType: wt('E1', 'As') });
+    where(t, { tin: T0('E1'), tLight: [], tType: wt('E1', 'Short') });
   }
 
   /* Q */
