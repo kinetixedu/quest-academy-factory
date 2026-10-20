@@ -37,7 +37,7 @@ const tNob = wt('L4', 'nobody');
 const tAout = tL1 - 0.32, tLout = T0('D1') - 0.32;
 // D
 const tD1 = T0('D1'), tD2 = T0('D2'), tD3 = T0('D3'), tD4 = T0('D4'), tDout = T0('M1') - 0.32;
-const tNerve = wt('D2', 'nerve'), tCalled = wt('D2', 'called'), tSixty = wt('D2', 'sixty');
+const tNerve = wt('D2', 'idea'), tCalled = wt('D2', 'called'), tSixty = wt('D2', 'sixty');
 const tHl = [wt('D3', 'people'), wt('D3', 'gather'), wt('D3', 'needed'), wt('D3', 'accurate'), wt('D3', 'decision')];
 const tNv = [wt('D3', 'gather'), wt('D3', 'analyze'), wt('D3', 'decision')];
 const tSw = [wt('D4', 'facts'), wt('D4', 'person'), wt('D4', 'time')];
@@ -143,7 +143,7 @@ const RC = 150;
 $('#radar').innerHTML = `<circle cx="${RC}" cy="${RC}" r="146" fill="#F5F1E8"/>` + [140, 95, 50].map(r => `<circle cx="${RC}" cy="${RC}" r="${r}" fill="none" stroke="#E2DACB" stroke-width="3"/>`).join('') +
   `<path d="M${RC - 140} ${RC} H${RC + 140} M${RC} ${RC - 140} V${RC + 140}" stroke="#E2DACB" stroke-width="3"/>` +
   `<g id="swp"><path d="M${RC} ${RC} L${RC + 140} ${RC} A140 140 0 0 0 ${(RC + 140 * Math.cos(-0.7)).toFixed(1)} ${(RC + 140 * Math.sin(-0.7)).toFixed(1)} Z" fill="#B8862F" fill-opacity=".22"/><path d="M${RC} ${RC} L${RC + 140} ${RC}" stroke="#B8862F" stroke-width="4" stroke-linecap="round"/></g>` +
-  [[-40, 104], [-160, 118], [-265, 66]].map(([a, r], i) => `<g id="bp${i}" transform="translate(${(RC + r * Math.cos(a * Math.PI / 180)).toFixed(1)} ${(RC + r * Math.sin(a * Math.PI / 180)).toFixed(1)})"><circle r="11" fill="#14213D"/><circle r="4" fill="#E9D9B5"/></g>`).join('') +
+  [[-40, 104], [-160, 118], [-265, 66]].map(([a, r], i) => `<g transform="translate(${(RC + r * Math.cos(a * Math.PI / 180)).toFixed(1)} ${(RC + r * Math.sin(a * Math.PI / 180)).toFixed(1)})"><g id="bp${i}"><circle r="11" fill="#14213D"/><circle r="4" fill="#E9D9B5"/></g></g>`).join('') +
   `<circle cx="${RC}" cy="${RC}" r="9" fill="#14213D"/>`;
 const SG = [['store', 'A new snack stall'], ['message', 'A customer message'], ['tag', 'A rival price change']];
 $('#sgs').innerHTML = SG.map(([ic, t], i) => `<div class="sg" id="sg${i}" style="top:${196 + i * 76}px">${M.icon(ic, 24, C.gold, 2.4)}<span>${t}</span></div>`).join('');
@@ -329,7 +329,7 @@ M.on(t => {
     });
     M.vis($('#wkBack'), t, tMon + 0.1, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
     M.setT($('#wkBackN'), String(Math.round(9 * M.io((t - tMon) / 0.3) + 11 * M.io((t - tUns) / 0.4))));
-    M.vis($('#ask'), t, tMorph + 0.42, tAout, { dy: 36, ...o });
+    M.vis($('#ask'), t, tC2 - 0.1, tAout, { dy: 36, ...o });
     const sc = M.spring(t - tScat, M.SOFT), SY = [-10, 8, -4], SR = [-3, 2.5, -2];
     for (let i = 0; i < 3; i++) {
       const el = $('#mt' + i), p = M.vis(el, t, tAnsw - 0.05 + i * 0.22, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
@@ -369,8 +369,8 @@ M.on(t => {
     M.rise($('#kot1'), t, wt('D2', 'Philip') - 0.05, { st: 0.06, sp: M.HEAVY });
     M.vis($('#kbk'), t, tSixty - 0.05, 1e9, { dy: 10 });
     M.rise($('#kot2'), t, tCalled - 0.05, { st: 0.06, sp: M.HEAVY });
-    M.vis($('#kqHr'), t, tD3 - 0.2, 1e9, { dy: 0 });
-    for (let i = 0; i < 5; i++) { const q = $('#ql' + i); M.vis(q, t, tD3 + 0.05 + i * 0.1, 1e9, { dy: 14 }); q.style.color = mix(C.dim, C.ink, M.io((t - tHl[i] + 0.1) / 0.3)); }
+    M.vis($('#kqHr'), t, tNerve + 0.5, 1e9, { dy: 0 });
+    for (let i = 0; i < 5; i++) { const q = $('#ql' + i); M.vis(q, t, tNerve + 0.6 + i * 0.1, 1e9, { dy: 14 }); q.style.color = mix(C.dim, C.ink, M.io((t - tHl[i] + 0.1) / 0.3)); }
     tHl.forEach((th, i) => { const u = M.io((t - th + 0.05) / 0.3); $('#hl' + i).style.color = u <= 0 ? '' : mix(C.ink, C.gold, u); });
     M.vis($('#vc'), t, tNerve + 0.12, tDout, { dx: 60, dy: 0, ...o });
     NV.forEach((_, i) => {

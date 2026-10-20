@@ -105,10 +105,10 @@ $('#cp0I').innerHTML = M.icon('target', 22, C.gold, 2.4); $('#cp1I').innerHTML =
 
 /* P: the map (688 x 456) and the positioning statement */
 const T = (x, y, s, fill, txt, o = '') => `<text x="${x}" y="${y}" font-family="Poppins" font-weight="600" font-size="${s}" fill="${fill}" ${o}>${txt}</text>`;
-const CO = [[160, 118, 'Chocolate bar', 'PACKS WELL, A TREAT'], [96, 330, 'Sweet shop laddoo', 'TASTY, STICKY'], [500, 338, 'Fruit', 'HEALTHY, BRUISES']];
+const CO = [[80, 112, 'Chocolate bar', 'PACKS WELL, A TREAT'], [96, 330, 'Sweet shop laddoo', 'TASTY, STICKY'], [470, 334, 'Fruit', 'HEALTHY, BRUISES']];
 $('#map').innerHTML = `<rect width="688" height="456" rx="24" fill="#F5F1E8"/>
-  <rect id="gapR" x="368" y="40" width="284" height="168" rx="20" fill="#FFFFFF" stroke="#B8862F" stroke-width="3" stroke-dasharray="10 9"/>
-  <g id="gapT">${T(388, 72, 16, C.gold, 'THE GAP', 'letter-spacing="2.4"')}</g>
+  <rect id="gapR" x="368" y="36" width="284" height="156" rx="20" fill="#FFFFFF" stroke="#B8862F" stroke-width="3" stroke-dasharray="10 9"/>
+  <g id="gapT">${T(388, 66, 16, C.gold, 'THE GAP', 'letter-spacing="2.4"')}</g>
   <path id="axH" d="M28 228 H660" stroke="#14213D" stroke-width="4" stroke-linecap="round" fill="none"/>
   <path id="axV" d="M344 436 V20" stroke="#14213D" stroke-width="4" stroke-linecap="round" fill="none"/>
   <g id="al0">${T(32, 212, 16, C.muted, 'TREAT', 'letter-spacing="2.4"')}</g>
@@ -116,7 +116,7 @@ $('#map').innerHTML = `<rect width="688" height="456" rx="24" fill="#F5F1E8"/>
   <g id="al2">${T(328, 428, 16, C.muted, 'MESSY', 'letter-spacing="2.4" text-anchor="end"')}</g>
   <g id="al3">${T(328, 40, 16, C.muted, 'TIFFIN READY', 'letter-spacing="2.4" text-anchor="end"')}</g>` +
   CO.map(([x, y, n, s], i) => `<g transform="translate(${x} ${y})"><g id="co${i}"><circle r="14" fill="#3A4560"/>${T(26, 2, 21, C.ink, n)}${T(26, 28, 14, C.muted, s, 'letter-spacing="2"')}</g></g>`).join('') +
-  `<g id="llG" transform="translate(510 124)"><circle r="22" fill="#B8862F" stroke="#FFFFFF" stroke-width="5"/><rect x="-74" y="34" width="148" height="44" rx="22" fill="#14213D"/>${T(0, 63, 20, '#FFFFFF', 'Laddoo Lab', 'text-anchor="middle"')}</g>`;
+  `<g id="llG" transform="translate(510 110)"><circle r="22" fill="#B8862F" stroke="#FFFFFF" stroke-width="5"/><rect x="-74" y="34" width="148" height="44" rx="22" fill="#14213D"/>${T(0, 63, 20, '#FFFFFF', 'Laddoo Lab', 'text-anchor="middle"')}</g>`;
 wrap($('#pm'), 'pmOut', 784, 580);
 const SR = [['FOR', 'Busy parents'], ['WHO WANT', 'A healthy tiffin treat'], ['LADDOO LAB IS', 'The millet laddoo kids love'], ['BECAUSE IT HAS', 'No refined sugar']];
 $('#sRows').innerHTML = SR.map(([l, v], i) => `<div class="sr2" id="sr${i}" style="top:${96 + i * 112}px"><div class="sl">${l}</div><div class="sd"></div><div class="serif sv">${i === 3 ? `<span class="acc">${v}</span>` : v}</div></div>`).join('');
@@ -377,7 +377,7 @@ M.on(t => {
     for (let i = 0; i < 3; i++) M.vis($('#co' + i), t, tCo[i] - 0.1, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.08 });
     M.vis($('#gapR'), t, tGap - 0.1, 1e9, { dy: 0, sc: 0.9, sp: M.POP, fade: 0.12 }); M.vis($('#gapT'), t, tGap + 0.1, 1e9, { dy: 0, fade: 0.15 });
     { const u = llT(t), g = $('#llG'); M.hide(g, t < tLL - 0.02);
-      attr(g, 'transform', `translate(${M.lerp(344, 510, u).toFixed(1)} ${M.lerp(228, 124, u).toFixed(1)}) scale(${M.lerp(0.4, 1, M.clamp(u)).toFixed(3)})`); }
+      attr(g, 'transform', `translate(${M.lerp(344, 510, u).toFixed(1)} ${M.lerp(228, 110, u).toFixed(1)}) scale(${M.lerp(0.4, 1, M.clamp(u)).toFixed(3)})`); }
     M.vis($('#ps'), t, tP6 + 0.12, tPout, { dx: 60, dy: 0, ...o });
     M.vis($('#zF'), t, tP6 + 0.3, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.08 });
     SR.forEach((_, i) => {

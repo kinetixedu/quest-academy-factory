@@ -114,7 +114,7 @@ const SPAWN = [344, 222];
 const slot = (side, n) => [side ? 538 - (n % 4) * 36 : 150 + (n % 4) * 36, 62 + Math.floor(n / 4) * 36];
 const slots = seq => { const c = [0, 0]; return seq.map(s => { const p = slot(s, c[s]); const n = c[s]++; return { s, p, n }; }); };
 const SL = { L: slots(BL), R: slots(NM) };
-const tpL = Array.from({ length: 20 }, (_, i) => tM3 + 0.1 + i * (tDead - 0.2 - tM3) / 20);
+const tpL = Array.from({ length: 20 }, (_, i) => tM3 + 0.1 + i * (tM4 - 0.1 - tM3) / 19);
 const tpR = Array.from({ length: 20 }, (_, i) => tM6 + 0.1 + i * (tSixteen + 0.5 - tM6) / 20);
 const head = (k, name) => `<div class="mav" style="${FACE('zoya')}"></div><div class="lbl mlb">${name}</div><div class="serif mrd" id="rd${k}">0 : 0</div>`;
 const tail = (k, a, b) => `<div class="mbar" id="bar${k}"><i id="sg${k}0"></i><i id="sg${k}1"></i></div>
@@ -134,21 +134,23 @@ $('#gLeftI').innerHTML = M.icon('scale', 22, C.gold2, 2.4);
 wrap($('#mL'), 'mLOut', 784, 580);
 
 // B: Keller's pyramid
-const PY = [['Identity', 'SALIENCE', 'Who are you?', 'zoya', 'Parents can name Laddoo Lab'],
-  ['Meaning', 'PERFORMANCE · IMAGERY', 'What do you stand for?', 'nani', 'A healthy sweet, no refined sugar'],
-  ['Response', 'JUDGMENTS · FEELINGS', 'What do people think and feel?', 'rao', 'They trust it and feel good giving it'],
-  ['Relationship', 'RESONANCE', 'Will they stay and speak up?', 'arjun', 'Loyal parents buy weekly and tell friends']];
+const PY = [['Identity', 'SALIENCE', 'Who are you?', 'zoya', 'Parents can name Laddoo Lab', 'eye', 'Be noticed and remembered'],
+  ['Meaning', 'PERFORMANCE · IMAGERY', 'What do you stand for?', 'nani', 'A healthy sweet, no refined sugar', 'award', 'Deliver what you promise'],
+  ['Response', 'JUDGMENTS · FEELINGS', 'What do people think and feel?', 'rao', 'They trust it and feel good giving it', 'heart', 'Earn trust and good feelings'],
+  ['Relationship', 'RESONANCE', 'Will they stay and speak up?', 'arjun', 'Loyal parents buy weekly and tell friends', 'repeat', 'Turn buyers into fans']];
 const hw = y => 120 + y / 456 * 224;
 $('#pyS').innerHTML = PY.map(([n, b], i) => {
   const yb = 456 - i * 116, yt = yb - 104, yc = (yt + yb) / 2;
   return `<g id="ty${i}"><g id="tyb${i}"><polygon id="tp${i}" points="${344 - hw(yt)},${yt} ${344 + hw(yt)},${yt} ${344 + hw(yb)},${yb} ${344 - hw(yb)},${yb}" fill="#EEE8DB" stroke="#EEE8DB" stroke-width="10" stroke-linejoin="round"/>
     <text id="tn${i}" x="344" y="${yc + 2}" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="30" fill="#B9B1A3">${n}</text>
-    <text id="tb${i}" x="344" y="${yc + 32}" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="14" letter-spacing="2.2" fill="#B9B1A3">${b}</text></g></g>`;
+    <text id="tb${i}" x="344" y="${yc + 32}" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="16" letter-spacing="2.4" fill="#B9B1A3">${b}</text></g></g>`;
 }).join('');
-const PYP = [['KELLER · CUSTOMER-BASED BRAND EQUITY', 'Built bottom up', 'Each step rests on the one below', null, 'BRAND PYRAMID · 4 STEPS', 'From knowing the name to loyalty']]
-  .concat(PY.map((p, i) => [`STEP 0${i + 1} OF 04 · ${p[1]}`, p[0], p[2], p[3], 'AT LADDOO LAB', p[4]]));
-$('#pyPans').innerHTML = PYP.map(([s, t, m, f, x, e], i) => `<div class="pn" id="yn${i}"><div class="ps">${s}</div><div class="serif pt">${t}</div><div class="pm">${m}</div><div class="hr"></div><div class="px">${x}</div>` +
-  `<div class="pe">${f ? `<div class="pa" style="${FACE(f)}"></div>` : `<i>${M.icon('layers', 34, C.gold, 2.2)}</i>`}<span>${e}</span></div></div>`).join('');
+const PYP = [['KELLER · CUSTOMER-BASED BRAND EQUITY', 'Built bottom up', 'Each step rests on the one below', ['layers', 'THE BASE', 'People must know the name first'], ['repeat', 'THE TOP', 'Loyalty that lasts for years']]]
+  .concat(PY.map((p, i) => [`STEP 0${i + 1} OF 04 · ${p[1]}`, p[0], p[2], [p[3], 'AT LADDOO LAB', p[4]], [p[5], "THE BRAND'S JOB", p[6]]]));
+const kaRow = (id, top, [ic, l, x]) => `<div class="ka" id="${id}" style="top:${top}px">` + (['zoya', 'nani', 'rao', 'arjun'].includes(ic)
+  ? `<i style="${FACE(ic)};background-size:cover;box-shadow:0 0 0 4px #B8862F"></i>` : `<i>${M.icon(ic, 34, C.gold, 2.2)}</i>`) + `<div class="kl">${l}</div><div class="kt">${x}</div></div>`;
+$('#pyPans').innerHTML = PYP.map(([s, t, m, r0, r1], i) => `<div class="pn" id="yn${i}"><div class="ps">${s}</div><div class="serif pt">${t}</div><div class="pm">${m}</div><div class="hr"></div>` +
+  kaRow(`ya${i}0`, 322, r0) + kaRow(`ya${i}1`, 442, r1) + `</div>`).join('');
 
 // K: Aaker's five assets at work today
 const KA = [
@@ -186,7 +188,7 @@ $('#bothI').innerHTML = M.icon('shield', 52, C.gold, 2.2);
 wrap($('#xs'), 'xsOut', 784, 580);
 
 // quiz
-const OPTS = ['Product life cycle', 'Brand equity', 'Price discrimination', 'Segmentation'], RIGHT = 1;
+const OPTS = ['Segmentation', 'Brand equity', 'Market research', 'A price cut'], RIGHT = 1;
 $('#opts').innerHTML = OPTS.map((o, i) => `<div class="opt" id="o${i}" style="left:${160 + i * 408}px"><div class="bg"></div><div class="lt">${'ABCD'[i]}</div><div class="ot serif">${o}</div><div class="ok">${M.icon('check', 30, '#fff', 3)}</div></div>`).join('');
 $('#takeI').innerHTML = M.icon('tag', 44, C.gold2, 2.4);
 // recap
@@ -254,11 +256,12 @@ function measure() {
   const gl = $('#gLeft'); gl.style.left = (392 - gl.offsetWidth / 2) + 'px';
   document.querySelectorAll('#pyPans .pt').forEach(el => { if (el.offsetWidth > 688) el.style.fontSize = Math.floor(76 * 688 / el.offsetWidth) + 'px'; });
   document.querySelectorAll('#pyPans .pm').forEach(el => { if (el.offsetWidth > 688) el.style.fontSize = Math.floor(36 * 688 / el.offsetWidth) + 'px'; });
-  document.querySelectorAll('#pyPans .pe span').forEach(el => { if (el.offsetWidth > 592) el.style.fontSize = Math.floor(32 * 592 / el.offsetWidth) + 'px'; });
+  document.querySelectorAll('#pyPans .kt').forEach(el => { if (el.offsetWidth > 588) el.style.fontSize = Math.floor(30 * 588 / el.offsetWidth) + 'px'; });
   document.querySelectorAll('#kPans .pt').forEach(el => { if (el.offsetWidth > 848) el.style.fontSize = Math.floor(84 * 848 / el.offsetWidth) + 'px'; });
   document.querySelectorAll('#kPans .kt').forEach(el => { if (el.offsetWidth > 748) el.style.fontSize = Math.floor(30 * 748 / el.offsetWidth) + 'px'; });
   document.querySelectorAll('#kPans .ps').forEach(el => { if (el.offsetWidth > 848) el.style.fontSize = Math.floor(20 * 848 / el.offsetWidth) + 'px'; });
   const kt = $('#fact .kt'); if (kt.offsetWidth > 556) kt.style.fontSize = Math.floor(28 * 556 / kt.offsetWidth) + 'px';
+  const q1 = $('#qq1'); if (q1.offsetWidth > 1400) q1.style.fontSize = Math.floor(68 * 1400 / q1.offsetWidth) + 'px';
   let ofs = 40; OPTS.forEach((_, i) => { const o = $('#o' + i + ' .ot'); if (o.offsetWidth > 312) ofs = Math.min(ofs, Math.floor(40 * 312 / o.offsetWidth)); });
   OPTS.forEach((_, i) => { $('#o' + i + ' .ot').style.fontSize = ofs + 'px'; });
   ROWS.forEach(([, , ps], i) => { let x = 216 + $('#rw' + i + ' .rt').offsetWidth + 40; ps.forEach((_, k) => { const p = $('#fp' + i + k); p.style.left = x + 'px'; x += p.offsetWidth + 16; }); });
@@ -306,7 +309,7 @@ M.on(t => {
     }
     M.setT($('#cLLN'), String(nL)); M.setT($('#cPlN'), String(nP));
     M.vis($('#cLL'), t, tPick - 0.1, 1e9, POP); M.vis($('#cPl'), t, tPick + 0.1, 1e9, POP);
-    M.vis($('#why'), t, tMorph + 0.42, tAout, { dy: 36, ...o });
+    M.vis($('#why'), t, tAgain - 0.65, tAout, { dy: 36, ...o });
     M.vis($('#wy0'), t, tAgain - 0.35, 1e9, POP); M.vis($('#wy1'), t, tAgain + 0.05, 1e9, POP); M.vis($('#wy2'), t, tWhyN - 0.1, 1e9, POP);
     M.rise($('#whyT'), t, tThat - 0.1, { st: 0.07, sp: M.HEAVY });
   }
@@ -441,8 +444,8 @@ M.on(t => {
       M.rise(pn.querySelector('.pt'), t, tin + 0.06, { st: 0.06, sp: M.HEAVY, out: tout, outDur: 0.2 });
       M.rise(pn.querySelector('.pm'), t, tin + 0.3, { st: 0.04, out: tout, outDur: 0.2 });
       M.vis(pn.querySelector('.hr'), t, tin + 0.4, tout, { dy: 0, ...oo });
-      M.vis(pn.querySelector('.px'), t, tin + 0.5, tout, { dy: 10, ...oo });
-      M.vis(pn.querySelector('.pe'), t, tin + 0.62, tout, { dy: 18, ...oo });
+      M.vis($('#ya' + k + '0'), t, tin + 0.6, tout, { dy: 18, ...oo });
+      M.vis($('#ya' + k + '1'), t, k ? tBn[k - 1] + 0.9 : tin + 1.2, tout, { dy: 18, ...oo });
     }
   }
 
