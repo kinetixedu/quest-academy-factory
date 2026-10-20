@@ -177,6 +177,7 @@ $('#gpS').innerHTML = `${T(0, 14, 'WHAT PARENTS FEEL IT IS WORTH')}<rect id="gp0
   ${T(240, 128, '₹120', { a: 'middle', fs: 20, w: 700, c: '#FFFFFF', ls: 0, id: 'gp1L' })}`;
 $('#bb1I').innerHTML = M.icon('heart', 22, '#fff', 2.4); $('#factI').innerHTML = M.icon('tag', 34, C.ink, 2.2);
 $('#bothI').innerHTML = M.icon('scale', 52, C.gold, 2.2);
+$('#xbR').innerHTML += `<div class="xc" id="xbFix" style="left:48px;top:506px;background:#14213D;color:#fff">${M.icon('layers', 22, C.gold2, 2.4)}<span>So check all three before you decide</span></div>`;
 wrap($('#xb'), 'xbOut', 784, 580);
 
 // quiz
@@ -213,7 +214,7 @@ function measure() {
   let fs = 120; if (ti.offsetWidth > 1560) fs = Math.floor(120 * 1560 / ti.offsetWidth); ti.style.fontSize = fs + 'px';
   const w = ti.offsetWidth, h = ti.offsetHeight;
   geo = { sx: 960 - w / 2, sy: 540 - h / 2 - 20, ex: 160, ey: 156, es: 56 / fs, cw: $('#eyebrow').offsetWidth, cy: 540 - h / 2 - 112 };
-  const ex = $('#exChip'); ex.style.left = (1760 - ex.offsetWidth) + 'px'; ex.style.top = (160 + w * geo.es > 1760 - ex.offsetWidth - 32) ? '96px' : '170px';
+  const ex = $('#exChip'); ex.style.left = (1760 - ex.offsetWidth) + 'px'; ex.style.top = (160 + w * geo.es > 1760 - ex.offsetWidth - 32) ? '222px' : '170px';
   let x = 36; for (let i = 0; i < 3; i++) { const p = $('#qp' + i); p.style.left = x + 'px'; x += p.offsetWidth + 16; }
   document.querySelectorAll('.dtx').forEach(el => { if (el.offsetWidth > 688) el.style.fontSize = Math.floor(40 * 688 / el.offsetWidth) + 'px'; });
   const fsb = $('#frSt'); fsb.style.left = (48 + $('#frBig').offsetWidth + 28) + 'px';
@@ -289,7 +290,7 @@ M.on(t => {
     const df = $('#dfc'); M.vis(df, t, tD1 + 0.05, tDout, { dy: 36, ...o }); grow(df, $('#dfOut'), t, tMk2);
     M.vis($('#cpP'), t, tAlso - 0.05, 1e9, POP);
     FM.forEach((_, i) => {
-      const el = $('#fm' + i), ta = [tD2 + 0.2, tMk, tMk + 0.5][i]; M.vis(el, t, ta - 0.1, 1e9, POP);
+      const el = $('#fm' + i), ta = [tD1 + 0.5, tD1 + 0.9, tD1 + 1.3][i]; M.vis(el, t, ta - 0.1, 1e9, POP);
       if (i < 2) M.vis($('#fo' + i), t, ta + 0.1, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.1 });
       el.style.background = i === 2 ? mix(C.paper, C.ink, M.io((t - ta - 0.2) / 0.3)) : C.paper;
       el.querySelector('.zt').style.color = i === 2 ? mix(C.ink, '#fff', M.io((t - ta - 0.2) / 0.3)) : C.ink;
@@ -381,7 +382,7 @@ M.on(t => {
     M.draw($('#fCe'), t, tCustF - 0.1, 0.5, M.o3); M.vis($('#fCeL'), t, tCeil - 0.1, 1e9, { dy: 6 });
     $('#fBand').style.opacity = M.clamp((t - tRivF) / 0.3).toFixed(3); M.vis($('#fBandL'), t, tRivF + 0.2, 1e9, { dy: 6 });
     M.vis($('#fOur'), t, tF4 + 0.1, 1e9, { dx: -20, dy: 0 });
-    const tr = [tFloor, tRivF, tCeil];
+    const tr = [tCostsF, tRivF, tCustF];
     TT.forEach((_, i) => { M.vis($('#tt' + i), t, tr[i] - 0.05, 1e9, { dx: 16, dy: 0 }); M.vis($('#to' + i), t, tPass + i * 0.2, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 }); });
     M.vis($('#frBig'), t, tPass + 0.3, 1e9, { dy: 16 });
     M.vis($('#frSt'), t, tStays - 0.05, 1e9, POP);
@@ -423,6 +424,7 @@ M.on(t => {
     const o = { outDur: 0.3, ody: -16 };
     const xb = $('#xb'); M.vis(xb, t, tX1 + 0.1, tXout, { dy: 36, ...o }); grow(xb, $('#xbOut'), t, tX3);
     XB.forEach((_, i) => { M.vis($('#xb' + i), t, tX1 + 0.4 + i * 0.1, 1e9, { dy: 14 }); M.vis($('#xc' + i), t, tBs[i] - 0.1, 1e9, POP); });
+    M.vis($('#xbFix'), t, tBs[2] + 0.9, 1e9, POP);
     M.vis($('#xw'), t, tX3 + 0.12, tXout, { dx: 60, dy: 0, ...o });
     M.vis($('#xr0'), t, tDev - 0.1, 1e9, { dx: 24, dy: 0 });
     $('#bb0').style.background = t > tZoya ? C.redBg : C.paper; $('#bb0').style.color = t > tZoya ? C.red : C.ink;
