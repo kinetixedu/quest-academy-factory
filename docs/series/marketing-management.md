@@ -26,3 +26,9 @@ Eyebrow chip: `EP NN · MARKETING MANAGEMENT`. Title format: `<Hook-style title>
 
 ## Episodes
 1 Introduction to Marketing · 2 Marketing Concepts and Orientations · 3 Needs, Wants and Demands · 4 Customer Value and Satisfaction · 5 Marketing Environment · 6 Microenvironment and Macroenvironment · 7 Marketing Information Systems · 8 Marketing Research Fundamentals · 9 Market Segmentation · 10 Market Targeting · 11 Market Positioning · 12 STP Framework · 13 Marketing Mix - 4Ps · 14 Extended Marketing Mix - 7Ps · 15 Product Classification · 16 Product Levels and Product Hierarchy · 17 Product Life Cycle · 18 New Product Development · 19 Product Portfolio Management · 20 Branding Fundamentals · 21 Brand Identity and Brand Image · 22 Brand Equity · 23 Pricing Objectives and Strategies · 24 Cost-Based, Competition-Based and Value-Based Pricing · 25 Price Discrimination · 26 Distribution Channels · 27 Channel Management · 28 Integrated Marketing Communications · 29 Advertising and Sales Promotion · 30 Personal Selling · 31 Public Relations · 32 Marketing Planning and Control · 33 Customer Relationship Management · 34 Customer Lifetime Value · 35 Marketing Performance Metrics
+
+## Canon added by Eps 22-26
+- Pack is navy and gold. Ghee is in the recipe.
+- Cost per 6-pack ₹80 (ingredients 45, box and label 15, gas and electricity 8, delivery 12); 50% markup -> ₹120. Parents value it at about ₹140.
+- Student price ₹100 with a college ID (1 pack per ID per day). Monthly 4-pack ₹440 for everyone. Regular 6-pack stays ₹120.
+- Stores keep 20% (₹24), Laddoo Lab gets ₹96 per pack. 10 local stores; a nearby office orders 4 packs a month; supermarket chain + Dev's online shop start in Ep 26.

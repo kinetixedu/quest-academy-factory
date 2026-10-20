@@ -63,7 +63,7 @@ $('#cClk').style.background = C.redBg; $('#cClk').style.color = C.red;
 $('#wgrid').innerHTML = Array.from({ length: 60 }, (_, i) => `<div class="wd" id="wd${i}" style="left:${36 + (i % 30) * 28.4}px;top:${80 + Math.floor(i / 30) * 30}px"></div>`).join('');
 // L
 $('#pr1I').innerHTML = M.icon('store', 30, '#fff', 2.2); $('#pb1I').innerHTML = M.icon('check', 22, '#fff', 3);
-$('#stR').innerHTML = Array.from({ length: 10 }, (_, i) => `<div class="st" id="st${i}" style="left:${36 + i * 72}px">${M.icon('store', 28, C.gold, 2.2)}</div>`).join('');
+$('#stR').innerHTML = Array.from({ length: 10 }, (_, i) => `<div class="st" id="sto${i}" style="left:${36 + i * 72}px">${M.icon('store', 28, C.gold, 2.2)}</div>`).join('');
 wrap($('#ill'), 'illOut', 784, 580);
 // D
 const IM = [['laddoo', 'MAKER', 'Laddoo Lab'], ['warehouse', 'MIDDLE', 'Wholesaler'], ['store', 'MIDDLE', 'Retailer'], ['user', 'CUSTOMER', 'You']];
@@ -285,7 +285,7 @@ M.on(t => {
     M.vis($('#pit'), t, tL2 + 0.12, tLout, { dx: 60, dy: 0, ...o });
     M.vis($('#pr0'), t, tL2 + 0.4, 1e9, { dx: 24, dy: 0 }); M.vis($('#pr1'), t, tYes - 0.1, 1e9, { dx: 24, dy: 0 });
     M.vis($('#sts'), t, tWithin - 0.1, tLout, { dy: 36, ...o });
-    let n = 0; for (let i = 0; i < 10; i++) { const ta = tTen - 0.2 + i * 0.12; M.vis($('#st' + i), t, ta, 1e9, POP); if (t >= ta + 0.05) n++; }
+    let n = 0; for (let i = 0; i < 10; i++) { const ta = tTen - 0.2 + i * 0.12; M.vis($('#sto' + i), t, ta, 1e9, POP); if (t >= ta + 0.05) n++; }
     M.setT($('#stNn'), String(n)); M.rise($('#stN'), t, tWithin + 0.1, { st: 0.06, sp: M.HEAVY });
   }
 

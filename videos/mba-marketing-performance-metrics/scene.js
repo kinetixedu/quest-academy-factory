@@ -86,7 +86,7 @@ wrap($('#ill'), 'illOut', 784, 580);
 const MC = [['chart', 'Sales'], ['users', 'Customers'], ['coin', 'Money'], ['heart', 'Happiness']];
 $('#mcRow').innerHTML = MC.map(([ic, t], i) => `<div class="mc" id="mc${i}" style="left:${48 + i * 176}px"><div class="zi">${M.icon(ic, 44, C.gold, 2.2)}</div><div class="zt">${t}</div></div>`).join('');
 $('#dSubI').innerHTML = M.icon('hash', 30, C.gold, 2.4);
-const AT = [['hash', 'A NUMBER', '80%', 'what you count'], ['target', 'A GOAL', 'Hit it', 'what good looks like'], ['calendar', 'A TIME', '1 year', 'by when']];
+const AT = [['hash', 'A NUMBER', '% kept', 'what you count'], ['target', 'A GOAL', '80%', 'what good looks like'], ['calendar', 'A TIME', '1 year', 'by when']];
 $('#atRow').innerHTML = AT.map(([ic, l, v, s], i) => `<div class="at" id="at${i}" style="left:${48 + i * 235}px"><i>${M.icon(ic, 34, C.gold, 2.2)}</i><div class="zn">${l}</div><div class="zv">${v}</div><div class="es" style="position:absolute;left:0;right:0;top:240px;text-align:center;font:500 20px Poppins;color:#3A4560;white-space:nowrap">${s}</div></div>`).join('');
 wrap($('#kq'), 'kqOut', 784, 580);
 // M: scorecard tiles
