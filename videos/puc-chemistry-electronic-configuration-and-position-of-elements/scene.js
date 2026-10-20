@@ -90,12 +90,12 @@ const CFG = {
   K: [[`1s^2\\;2s^2\\;2p^6\\;3s^2\\;3p^6\\;${last(4, 's', 1)}`, wt('B1', 'potassium') + 0.3]],
 };
 $('#cfg').innerHTML = Object.entries(CFG).map(([k, ps]) => `<span id="cf${k}" style="position:absolute;left:0;width:784px;text-align:center">${ps.map((p, i) => `<span id="cf${k}${i}">${K(p[0])}</span>`).join('')}</span>`).join('');
-const tClIn = T0('S8'), tKIn = tK[0];
+const tClIn = T0('S8'), tKIn = tK[0], tShr = T0('S2') - 0.2;
 // address card
 const AR = [['PERIOD', 'outermost shell, n', NC], ['BLOCK', 'subshell of the last e⁻', GC], ['GROUP', 'from the valence e⁻', VC]];
 $('#crs').innerHTML = AR.map(([k, w, c], i) => `<div class="cr" id="cr${i}" style="top:${74 + i * 64}px"><div class="ck" style="color:${c}">${k}</div><div class="cw2">${w}</div><div class="cv" id="cv${i}" style="background:${c}">?</div></div>`).join('');
 const tAd = { Na: [wt('S5', 'period'), wt('S6', 'block'), wt('S7', 'group')], Cl: [wt('S9', 'Period'), wt('S10', 'block'), 1e9] };
-const T1t = table($('#pt1'), 34, 4, 14);
+const T1t = table($('#pt1'), 36, 3, 15);
 const fRow1 = T1t.row(2), fCol1 = T1t.col(0);
 const th1 = PUC.think($('#th1'), { q: `${K(`\\mathrm{Na}`)} is 2, 8, 1 and ${K(`\\mathrm{K}`)} is 2, 8, 8, 1. Same group, or same period?`, opts: ['Same group', 'Same period'], right: 0, why: 'Both have 1 valence electron: group 1. K has 4 shells: period 4, one row below Na.' });
 
@@ -209,10 +209,10 @@ M.on(t => {
   const pOn = t >= tP1 - 0.1 && t < tS1 + 0.1; M.hide($('#sP'), !pOn);
   if (pOn) {
     const out = OUT('S1');
-    M.vis($('#pq'), t, tP1 + 0.1, out, { dx: -60, dy: 0, ...o });
+    M.vis($('#pq'), t, T0('P3') - 0.3, out, { dx: 60, dy: 0, ...o });
     M.vis($('#mdef'), t, wt('P3', 'electronic') - 0.1, 1e9, POP);
     QR.forEach((_, i) => { const el = $('#qr' + i); M.vis(el, t, tQr[i] - 0.1, 1e9, { dy: 16 }); const nx2 = i < 2 ? tQr[i + 1] : wt('P4', 'Valence', 1); const on = M.io((t - tQr[i]) / 0.25) * (1 - M.io((t - nx2) / 0.25)); setBg(el, mix(C.soft, C.ac2, on)); });
-    M.vis($('#pw'), t, wt('P2', 'shells') - 0.1, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#pw'), t, tP1 + 0.1, out, { dx: -60, dy: 0, ...o });
     SS.forEach((_, i) => { const el = $('#ss' + i); M.vis(el, t, (tSs[i] ?? T0('P2')) - 0.1, 1e9, { dx: -16, dy: 0 });
       const on = M.io((t - tSs[i]) / 0.2) * (1 - M.io((t - (tSs[i + 1] ?? T0('P3'))) / 0.3)); setBg(el, mix(C.soft, C.ac2, on));
       el.querySelectorAll('.bx i').forEach((bx, k) => { bx.style.opacity = M.clamp((t - tSs[i] - k * 0.05) / 0.15).toFixed(3); }); });
@@ -224,9 +224,9 @@ M.on(t => {
   if (sOn) {
     const z = OUT('B2');
     M.vis($('#bn'), t, tS1 + 0.05, z, { dy: 36, ...o });
-    { const sh = M.spring(t - wt('S5', 'outermost') + 0.4, M.HEAVY), wv = M.lerp(1600, 784, sh); snap($('#bn'), 'width', (sh >= 1 ? 784 : wv.toFixed(1)) + 'px'); const ofs = sh >= 1 ? 0 : (wv - 784) / 2; b.style.transform = `translateX(${ofs.toFixed(1)}px)`; $('#cfg').style.transform = `translateX(${ofs.toFixed(1)}px)`; }
-    M.vis($('#ad'), t, wt('S5', 'outermost') - 0.1, z, { dx: 60, dy: 0, ...o });
-    M.vis($('#tb'), t, wt('S5', 'outermost') + 0.2, z, { dy: 36, ...o });
+    { const sh = M.spring(t - tShr + 0.4, M.HEAVY), wv = M.lerp(1600, 784, sh); snap($('#bn'), 'width', (sh >= 1 ? 784 : wv.toFixed(1)) + 'px'); const ofs = sh >= 1 ? 0 : (wv - 784) / 2; b.style.transform = `translateX(${ofs.toFixed(1)}px)`; $('#cfg').style.transform = `translateX(${ofs.toFixed(1)}px)`; }
+    M.vis($('#ad'), t, tShr - 0.1, z, { dx: 60, dy: 0, ...o });
+    M.vis($('#tb'), t, tShr + 0.2, z, { dy: 36, ...o });
     M.vis($('#th1'), t, tB2 + 0.05, OUT('D1'), { dy: 36, ...o });
     th1(t, { tin: tB2, tOpts: wt('B2', 'same') - 0.1, tCount: T1('B2') + 0.05, dur: 3, tAns: T0('B3') - 0.02, tWhy: wt('B3', 'Each') });
     // atom: rings draw on as shells are used, electrons fly in to their slots
@@ -239,10 +239,10 @@ M.on(t => {
       attr(d, 'cx', M.lerp(fx, sx, u).toFixed(1)); attr(d, 'cy', M.lerp(fy, sy, u).toFixed(1)); d.style.opacity = M.clamp((t - ta) / 0.12).toFixed(3); M.hide(d, t < ta);
       attr(d, 'fill', i === lastI ? EC : HC); attr(d, 'r', i === lastI ? 11 : 9); });
     // outermost shell tag
-    const outK = elem === 'K' ? 3 : 2, tgOn = M.io((t - wt('S5', 'outermost') + 0.1) / 0.3);
+    const outK = elem === 'K' ? 3 : 2, tgOn = M.io((t - tShr + 0.1) / 0.3);
     rings.forEach((r, k) => { attr(r, 'stroke', k === outK ? mix(C.dim, NC, tgOn) : C.dim); attr(r, 'stroke-width', k === outK ? (2 + 2 * tgOn).toFixed(2) : 2); });
     M.setT(nTagT, `n = ${outK + 1}`); attr(nTagR, 'width', geo.tag.toFixed(1)); attr(nTagR, 'x', (AX + RR[outK] + 8).toFixed(1)); attr(nTagT, 'x', (AX + RR[outK] + 20).toFixed(1));
-    fade(nTag, t, wt('S5', 'outermost'));
+    fade(nTag, t, tShr);
     const TAG = [[tS1 + 0.3, 'Na · Z = 11'], [wt('S2', 'Two'), 'SHELL 1 · 2 e⁻'], [wt('S3', 'Eight'), 'SHELL 2 · 8 e⁻'], [wt('S4', 'new'), 'SHELL 3 · 1 e⁻'], [T0('S5'), 'Na · 2, 8, 1'], [tClIn, 'Cl · Z = 17'], [wt('S8', 'seven'), 'Cl · 2, 8, 7'], [tKIn, 'K · Z = 19 · 2, 8, 8, 1']];
     let tg = null; for (const [tt, s] of TAG) if (t >= tt) tg = s; if (tg) M.setT(btag, tg); M.vis(btag, t, tS1 + 0.2, 1e9, POP);
     // configuration
@@ -252,7 +252,7 @@ M.on(t => {
     const VAL = { Na: ['3', 's', '1'], Cl: ['3', 'p', '?'], K: ['?', '?', '?'] }, TT = tAd[elem] || [1e9, 1e9, 1e9];
     AR.forEach((_, i) => { const cv = $('#cv' + i), on = t >= TT[i]; M.setT(cv, on ? VAL[elem][i] : '?'); setBg(cv, on ? AR[i][2] : C.dim);
       const fl = M.io((t - TT[i]) / 0.2) * (1 - M.io((t - TT[i] - 0.6) / 0.4)); setBg($('#cr' + i), mix(C.soft, C.ac2, fl));
-      M.vis($('#cr' + i), t, wt('S5', 'outermost') + 0.1 + i * 0.12, 1e9, { dx: -16, dy: 0 }); });
+      M.vis($('#cr' + i), t, tShr + 0.1 + i * 0.12, 1e9, { dx: -16, dy: 0 }); });
     // table: Na lights at period, row frame at period, column at group; Cl and K later
     const uNa = M.io((t - tAd.Na[0] + 0.1) / 0.3), uCl = M.io((t - tAd.Cl[0] + 0.1) / 0.3), uK = M.io((t - tKIn - 0.3) / 0.3);
     lit(T1t.cells.Na, uNa * (1 - 0.5 * uCl * (1 - uK))); lit(T1t.cells.Cl, uCl); lit(T1t.cells.K, uK);

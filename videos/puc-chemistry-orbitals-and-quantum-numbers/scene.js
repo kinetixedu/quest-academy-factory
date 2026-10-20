@@ -47,7 +47,7 @@ const tKit = KIT.map(k => wt('H3', k[2]));
 $('#odefI').innerHTML = M.icon('orbit', 30, '#fff', 2);
 const cs = $('#cS'), CX = 392, CY = 344;
 const rnd = M.rng(22), DOTS = [];
-for (let i = 0; i < 420; i++) { const r = -46 * Math.log(1 - rnd() * 0.985), a = rnd() * Math.PI * 2; if (r > 190) continue; DOTS.push(mk(cs, 'circle', { cx: (CX + r * Math.cos(a)).toFixed(1), cy: (CY + r * Math.sin(a)).toFixed(1), r: 3.2, fill: C.ink2 })); }
+for (let i = 0; i < 650; i++) { const r = -62 * Math.log(1 - rnd() * 0.985), a = rnd() * Math.PI * 2; if (r > 190) continue; DOTS.push(mk(cs, 'circle', { cx: (CX + r * Math.cos(a)).toFixed(1), cy: (CY + r * Math.sin(a)).toFixed(1), r: 3.2, fill: C.ink2 })); }
 const bnd = mk(cs, 'circle', { cx: CX, cy: CY, r: 150, fill: 'none', stroke: NC, 'stroke-width': 3, 'stroke-dasharray': '10 9' });
 const nuc0 = mk(cs, 'g', {}); mk(nuc0, 'circle', { cx: CX, cy: CY, r: 16, fill: C.ink }); txt(nuc0, CX, CY + 7, '+', { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 22, fill: '#fff' });
 const cTag = document.createElement('div'); cTag.className = 'btag'; cTag.style.cssText = 'left:36px;top:498px;background:#FBEDE6;color:#C8461B'; cTag.textContent = 'ONE ORBITAL · AT MOST 2 e⁻'; $('#poIn').appendChild(cTag);
@@ -59,14 +59,14 @@ const P4W = M.L('P4').words, tQn = [0, 0, 0, 1].map((k, i) => { const h = P4W.fi
 /* ---------- S: the bench ---------- */
 const b = $('#bS');
 const aG = mk(b, 'g', {});
-const RR = [48, 90, 132, 174], SL = ['K', 'L', 'M', 'N'];
+const RR = [52, 96, 140, 184], SL = ['K', 'L', 'M', 'N'];
 const rings = RR.map(r => mk(aG, 'circle', { cx: 0, cy: 0, r, fill: 'none', stroke: C.dim, 'stroke-width': 2 }));
 mk(aG, 'circle', { cx: 0, cy: 0, r: 18, fill: C.ink }); txt(aG, 0, 8, '+', { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 24, fill: '#fff' });
-const sLab = RR.map((r, i) => { const g = mk(aG, 'g', { transform: `translate(${(r * Math.cos(-0.82)).toFixed(1)} ${(r * Math.sin(-0.82)).toFixed(1)})` }); mk(g, 'circle', { r: 17, fill: NC }); txt(g, 0, 6, SL[i], { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 17, fill: '#fff' }); return g; });
+const sLab = RR.map((r, i) => { const g = mk(aG, 'g', { transform: `translate(${(r * Math.cos(-0.82)).toFixed(1)} ${(r * Math.sin(-0.82)).toFixed(1)})` }); mk(g, 'circle', { r: 21, fill: NC }); txt(g, 0, 8, SL[i], { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 22, fill: '#fff' }); return g; });
 const nE = RR.map((r, i) => { const a = 2.4; return mk(aG, 'circle', { cx: (r * Math.cos(a)).toFixed(1), cy: (r * Math.sin(a)).toFixed(1), r: 7, fill: EC }); });
 const aX = M.keys([[0, 392], [tS4, 178]], 1), aS = M.keys([[0, 1], [tS4, 0.8]], 1);
 // subshell rows for n = 3 (columns line up by m_l)
-const BX = 54, STEP = 58, COL0 = 546, ROWY = [112, 222, 332];
+const BX = 58, STEP = 64, COL0 = 586, ROWY = [116, 244, 372];
 const rows = [0, 1, 2].map(l => {
   const g = mk(b, 'g', {}), y = ROWY[l];
   const lab = txt(g, 356, y + 38, 'l = ' + l, { 'font-family': 'IBM Plex Mono', 'font-weight': 600, 'font-size': 24, fill: LC });
@@ -110,7 +110,7 @@ const VAL = [
   [[0, '-'], [tFive, '-2'], [tFive + 0.35, '-1'], [tFive + 0.7, '0'], [tFive + 1.05, '+1'], [tFive + 1.4, '+2'], [tS10, '-1']],
   [[0, '-'], [wt('S9', 'plus'), '+1/2'], [wt('S9', 'minus'), '-1/2'], [tS10 + 0.2, '+1/2'], [wt('S10', 'partner'), '-1/2']]];
 const tSlot = [tS1, tS4, tS7, tS9];
-const th1 = PUC.think($('#th1'), { q: `Which address can really exist?`, opts: [K(`${n_} = 2,\\; ${l_} = 1`), K(`${n_} = 2,\\; ${l_} = 2`)], right: 0, why: `In shell 2, ${K(l_)} can be 0 or 1 only. There is no 2d orbital.` });
+const th1 = PUC.think($('#th1'), { q: `Which address can really exist?`, opts: [K(`n = 2,\\; l = 1`), K(`n = 2,\\; l = 2`)], right: 0, why: `In shell 2, ${K(l_)} can be 0 or 1 only. There is no 2d orbital.` });
 
 /* ---------- statement ---------- */
 $('#stF').innerHTML = K(`(${n_},\\; ${l_},\\; ${ml_},\\; ${ms_})`);
@@ -184,7 +184,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 23', topic: 'Why is a p orbit
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tS10 - 0.1, 1.1, 760, 520], [T1('S10') + 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tS10 - 0.1, 1.08, 900, 560], [T1('S10') + 0.2, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};
@@ -224,12 +224,12 @@ M.on(t => {
     M.vis($('#po'), t, tP1 + 0.1, out, { dy: 36, ...o });
     { const sh = M.spring(t - tP4 + 0.2, M.HEAVY), wv = M.lerp(1600, 784, sh); snap($('#po'), 'width', (sh >= 1 ? 784 : wv.toFixed(1)) + 'px'); snap($('#poIn'), 'left', (sh >= 1 ? 0 : ((wv - 784) / 2).toFixed(1)) + 'px'); }
     M.vis($('#odef'), t, wt('P2', 'orbital', 1) - 0.1, 1e9, POP);
-    const dIn = M.clamp((t - wt('P3', 'cloud') + 0.2) / 2.4); fade(nuc0, t, tP1 + 0.3);
+    const dIn = M.clamp((t - T0('P2') - 0.3) / Math.max(1, wt('P3', 'thick') - T0('P2') - 0.3)); fade(nuc0, t, tP1 + 0.3);
     DOTS.forEach((d, i) => { const on = i / DOTS.length < dIn; M.hide(d, !on); });
     const bu = M.io((t - wt('P3', 'thick') + 0.1) / 0.6); M.drawU(bnd, bu); M.hide(bnd, bu <= 0);
     M.vis(cTag2, t, wt('P3', 'often') - 0.1, 1e9, POP); M.vis(cTag, t, wt('P3', 'two') - 0.1, 1e9, POP);
     M.vis($('#pq'), t, tP4 - 0.05, out, { dx: 60, dy: 0, ...o });
-    QN.forEach((_, i) => { const el = $('#qr' + i); M.vis(el, t, tQn[i] - 0.15, 1e9, { dy: 16 }); const nx2 = i < 3 ? tQn[i + 1] : T1('P4'); setBg(el, mix(C.soft, C.ac2, M.io((t - tQn[i]) / 0.25) * (1 - M.io((t - nx2) / 0.25)))); });
+    QN.forEach((_, i) => { const el = $('#qr' + i); M.vis(el, t, tP4 + 0.2 + i * 0.12, 1e9, { dy: 16 }); const nx2 = i < 3 ? tQn[i + 1] : T1('P4'); setBg(el, mix(C.soft, C.ac2, M.io((t - tQn[i]) / 0.25) * (1 - M.io((t - nx2) / 0.25)))); });
   }
 
   /* S + B: the bench, counter, rules, think */
@@ -309,7 +309,7 @@ M.on(t => {
     M.vis($('#wq'), t, T0('W2') - 0.1, 1e9, { dy: 14 });
     wsol(t, tW1, tWs);
     M.vis($('#wr'), t, T0('W2') + 0.2, out, { dx: 60, dy: 0, ...o });
-    const tRw = [wt('W4', 'Three'), wt('W4', 'Three', 1), wt('W4', 'Three', 3)];
+    const tRw = [wt('W3', 'three'), wt('W3', 'three', 1), wt('W3', 'three', 2)];
     wrows.forEach((r, l) => { fade(r.g, t, tRw[l] - 0.15, 1e9, 0.3); fade(r.cnt, t, tRw[l] + 0.4, 1e9, 0.2); });
     const tFill = wt('W6', 'Two'), nAr = Math.max(0, Math.min(18, Math.floor((t - tFill) / 0.13) + 1));
     ALLAR.forEach((a, i) => M.hide(a, i >= nAr));
