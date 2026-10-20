@@ -111,11 +111,11 @@ const tTl = [wt('W2', 'three') , wt('W4', 'zero'), wt('W5', 'thirty')], tOp = [w
 
 /* ---------- X / Q / F ---------- */
 const trap = PUC.trap($('#trap'), { wrong: `${K('-328 > -349')}, so fluorine releases more`, right: `More negative = more released: Cl, ${K(tO('-349'))}` });
-const tsv = $('#tS'), NX = v => 60 + (v + 360) * 6.2;
+const tsv = $('#tS'), NX = v => 50 + (v + 360) * 7;
 const nl = mk(tsv, 'g', {}); mk(nl, 'line', { x1: 40, y1: 150, x2: 520, y2: 150, stroke: C.ink2, 'stroke-width': 3 });
-[[-349, 'Cl'], [-328, 'F'], [-295, 'I']].forEach(([v, s]) => { mk(nl, 'circle', { cx: NX(v), cy: 150, r: 9, fill: OK }); txt(nl, NX(v), 128, s, { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 20, fill: HC }); txt(nl, NX(v), 184, String(v), { 'text-anchor': 'middle', 'font-size': 16, fill: OK, 'font-weight': 600 }); });
+[[-349, 'Cl'], [-328, 'F'], [-295, 'I']].forEach(([v, s]) => { mk(nl, 'circle', { cx: NX(v), cy: 150, r: 11, fill: OK }); txt(nl, NX(v), 124, s, { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 26, fill: HC }); txt(nl, NX(v), 190, String(v), { 'text-anchor': 'middle', 'font-size': 20, fill: OK, 'font-weight': 600 }); });
 const nlA = mk(tsv, 'path', { d: 'M420 226 H80', stroke: OK, 'stroke-width': 5, fill: 'none', 'stroke-linecap': 'round' }), nlAH = mk(tsv, 'path', { d: 'M84 214 L62 226 L84 238 Z', fill: OK });
-const nlT = txt(tsv, 460, 232, 'MORE OUT', { 'font-size': 16, fill: OK, 'font-weight': 600 });
+const nlT = txt(tsv, 440, 232, 'MORE OUT', { 'font-size': 18, fill: OK, 'font-weight': 600 });
 const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'NEET'], type: 'Order electron gain enthalpies, with the F and Cl exception' });
 const OPT = ['F > Cl > Br > I', 'Cl > F > Br > I', 'Cl > Br > F > I', 'I > Br > Cl > F'];
 const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', q: 'Arrange F, Cl, Br and I by the energy released when each atom gains an electron (most first).', qW: 780,

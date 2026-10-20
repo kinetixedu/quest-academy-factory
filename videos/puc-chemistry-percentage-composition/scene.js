@@ -13,7 +13,8 @@ const fade = (el, t, tin, tout = 1e9, d = 0.25, max = 1) => { const u = M.io((t 
 const tc = (c, s) => `\\textcolor{${c}}{${s}}`, C_ = s => tc(CC, `\\mathrm{${s}}`), H_ = s => tc(HC, `\\mathrm{${s}}`), O_ = s => tc(OC, `\\mathrm{${s}}`);
 const atomG = (p, r, fill, lab, fs) => { const g = mk(p, 'g', {}); mk(g, 'circle', { r, fill }); txt(g, 0, fs * 0.36, lab, { 'font-family': 'Poppins', 'font-weight': 700, 'font-size': fs, fill: '#fff', 'text-anchor': 'middle' }); return g; };
 const ETH = `${C_('C')}_2${H_('H')}_5${O_('O')}${H_('H')}`;
-const RULE = `\\text{mass \\% of an element} = \\dfrac{\\text{mass of element in 1 mol}}{\\text{molar mass}} \\times 100`;
+const RULE = `\\text{mass \\%} = \\dfrac{\\text{mass of element in 1 mol}}{\\text{molar mass}} \\times 100`;
+const RULE1 = `\\text{mass \\%} = (\\text{mass of element in 1 mol} \\div \\text{molar mass}) \\times 100`;
 
 Object.assign(M.IC, {
   droplet: ['M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z'],
@@ -59,7 +60,7 @@ const drawBond = (bd, P, AA, u, eu) => {
   bd.dt.forEach((d, j) => { const i = j >> 1, s = j & 1 ? 1 : -1, k = (i - (bd.n - 1) / 2) * 17; attr(d, 'cx', (mxp + px * k + ux * s * 9).toFixed(1)); attr(d, 'cy', (myp + py * k + uy * s * 9).toFixed(1)); d.style.opacity = eu.toFixed(3); M.hide(d, eu <= 0.01); });
 };
 const BD = [bond('C1', 'C2'), bond('C2', 'O'), bond('C1', 'Ha'), bond('C1', 'Hb'), bond('C1', 'Hc'), bond('C2', 'Hd'), bond('C2', 'He'), bond('O', 'Hf')];
-const tCC = wt('S1', 'carbon'), tOx = wt('S2', 'Oxygen'), tSix = wt('S2', 'six'), tPair = wt('S2', 'pair');
+const tCC = T0('S1') + 0.6, tOx = wt('S2', 'Oxygen'), tSix = wt('S2', 'six'), tPair = wt('S2', 'pair');
 const HK = ['Ha', 'Hb', 'Hc', 'Hd', 'He', 'Hf'];
 const tAt = { C1: tCC - 0.1, C2: tCC + 0.05, O: tOx - 0.1 }; HK.forEach((k, i) => { tAt[k] = tSix + i * 0.18; });
 const tMove = { C1: tCC, C2: tCC, O: tOx, ...Object.fromEntries(HK.map((k, i) => [k, tSix + i * 0.18])) };
@@ -67,7 +68,8 @@ const tBd = [tCC + 0.6, tOx + 0.6, ...HK.map((k, i) => tSix + 0.6 + i * 0.18)];
 const PT = ['H', 'He', 'Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'Ne'];
 $('#ptS').innerHTML = PT.map(e => `<span id="pt${e}">${e}</span>`).join('');
 const btag = document.createElement('div'); btag.className = 'btag'; btag.style.cssText = 'right:36px;top:18px;background:var(--ink);color:#fff'; $('#bn').appendChild(btag);
-const avD = PUC.avatar($('#sS'), { x: 160 + 36, y: 270 + 470, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'Carbon owns more than half!' });
+{ const card = $('#bn'), d = document.createElement('div'); d.id = 'bnIn'; d.style.cssText = 'position:absolute;left:0;top:0;width:784px;height:580px'; while (card.firstChild) d.appendChild(card.firstChild); card.appendChild(d); }
+const avD = PUC.avatar($('#cmp'), { x: 820, y: 404, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'So light atoms add little mass!' });
 // mass rows + bar
 const MR = [['C', CC, '2 × 12.01', '24.02 g'], ['H', HC, '6 × 1.008', '6.048 g'], ['O', OC, '1 × 16.00', '16.00 g']];
 $('#mrs').innerHTML = MR.map(([e, c, a, v], i) => `<div class="mr" id="mr${i}" style="top:${76 + i * 84}px"><div class="el" style="background:${c}">${e}</div><div class="mt">${a}</div><div class="mv" style="color:${c}">${v}</div></div>`).join('') +
@@ -100,10 +102,10 @@ $('#stF').innerHTML = K(RULE);
 /* ---------- W: ethanol, full numbers + pie ---------- */
 const wsol = PUC.solution($('#wl'), [
   [K(`M = 2(12.01) + 6(1.008) + 16.00 = 46.068\\,\\text{g}`)],
-  [K(`${C_('C')}: \\tfrac{24.02}{46.068} \\times 100 = ${tc(CC, '52.14\\,\\%')}`)],
-  [K(`${H_('H')}: \\tfrac{6.048}{46.068} \\times 100 = ${tc(HC, '13.13\\,\\%')}`)],
-  [K(`${O_('O')}: \\tfrac{16.00}{46.068} \\times 100 = ${tc(OC, '34.73\\,\\%')}`)],
-  [K(`52.14 + 13.13 + 34.73 = 100 \\;\\checkmark`)]], { label: 'WORKED EXAMPLE', y0: 150, dy: 80 });
+  [K(`${C_('C')}: \\dfrac{24.02}{46.068} \\times 100 = ${tc(CC, '52.14\\,\\%')}`)],
+  [K(`${H_('H')}: \\dfrac{6.048}{46.068} \\times 100 = ${tc(HC, '13.13\\,\\%')}`)],
+  [K(`${O_('O')}: \\dfrac{16.00}{46.068} \\times 100 = ${tc(OC, '34.73\\,\\%')}`)],
+  [K(`52.14 + 13.13 + 34.73 = 100 \\;\\checkmark`)]], { label: 'WORKED EXAMPLE', y0: 150, dy: 82 });
 const tWs = [T0('W3'), T0('W4'), T0('W5'), T0('W6'), T0('W7')];
 const ps = $('#pS'), PX = 392, PY = 270, PR = 170, PRi = 88;
 const arc = (a0, a1) => { const p = (a, r) => [PX + r * Math.cos(a), PY + r * Math.sin(a)], L = a1 - a0 > Math.PI ? 1 : 0, [x0, y0] = p(a0, PR), [x1, y1] = p(a1, PR), [x2, y2] = p(a1, PRi), [x3, y3] = p(a0, PRi);
@@ -113,7 +115,7 @@ const pie = SEG.map(([e, c]) => ({ e, p: mk(ps, 'path', { d: '', fill: c, stroke
 txt(ps, PX, PY - 4, '46.068 g', { 'text-anchor': 'middle', 'font-size': 26, fill: C.ink, 'font-weight': 600 }); txt(ps, PX, PY + 24, '1 mol', { 'text-anchor': 'middle', 'font-size': 18, fill: C.mute, 'font-weight': 600 });
 
 /* ---------- X / Q / F ---------- */
-const trap = PUC.trap($('#trap'), { wrong: K(`${C_('C')}: \\tfrac{12.01}{46.068} \\times 100 = 26.07\\,\\%`), right: K(`${C_('C')}: \\tfrac{2 \\times 12.01}{46.068} \\times 100 = 52.14\\,\\% \\quad (\\text{two C atoms})`) });
+const trap = PUC.trap($('#trap'), { wrong: K(`${C_('C')}: 12.01 \\div 46.068 \\times 100 = 26.07\\,\\%`), right: K(`${C_('C')}: 2 \\times 12.01 \\div 46.068 \\times 100 = 52.14\\,\\% \\quad (\\text{two C atoms})`) });
 const tsv = $('#tS');
 const t1 = mk(tsv, 'g', {}); { const g = atomG(t1, 32, CC, 'C', 26); attr(g, 'transform', 'translate(150 116)'); txt(t1, 150, 190, 'ONE C', { 'text-anchor': 'middle', 'font-size': 16, fill: C.red, 'font-weight': 600 }); }
 const xT1 = mk(tsv, 'path', { d: 'M90 60 L210 170 M210 60 L90 170', stroke: C.red, 'stroke-width': 6, 'stroke-linecap': 'round', fill: 'none' });
@@ -124,17 +126,17 @@ const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', q: `Ma
 const so = PUC.solution($('#so'), [[K(`M = 12 + 16 + 2 \\times 16 = 60`)], [K(`m(\\mathrm{N}) = 2 \\times 14 = 28`)], [K(`\\tfrac{28}{60} \\times 100 = \\textcolor{${C.ok}}{46.7\\,\\%}`)], ['A: one N ✗ · B: atom count ✗']], { y0: 100, dy: 112 });
 const tSo = [T0('A2'), wt('A3', 'Nitrogen'), wt('A3', 'Twenty', 1), T0('A4')];
 const fc = PUC.fcard($('#sF'), { x: 410, y: 262, w: 1100, h: 470, title: 'Recap · percentage composition', y0: 92, dy: 76, txt: [0, 1, 1, 1, 1],
-  lines: [K(RULE), '<b>A share of mass, not of atoms</b>: H is 6 of 9 atoms but 13.13% of the mass', '<b>Ethanol</b>: C 52.14% · H 13.13% · O 34.73% · total 100%', '<b>Water</b>: O is 88.79% of the mass', '<b>Multiply by the subscript first</b>: C₂ means 2 × 12.01'] });
+  lines: [K(RULE1), '<b>A share of mass, not of atoms</b>: H is 6 of 9 atoms but 13.13% of the mass', '<b>Ethanol</b>: C 52.14% · H 13.13% · O 34.73% · total 100%', '<b>Water</b>: O is 88.79% of the mass', '<b>Multiply by the subscript first</b>: C₂ means 2 × 12.01'] });
 const YQ = ['What does percentage composition tell you?', 'Why is hydrogen only 13% of ethanol\'s mass?', 'Find the mass percent of hydrogen in water.'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="nn">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
-const nx = PUC.next($('#sF'), { label: 'NEXT · EP 11', topic: 'Only the percentages: can you find the formula? Empirical and Molecular Formulae', y: 764 });
+const nx = PUC.next($('#sF'), { label: 'NEXT · EP 11', topic: 'From percentages to a formula? Empirical and Molecular Formulae', y: 764 });
 
 /* ---------- helpers ---------- */
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tSplit - 0.3, 1.06, 1300, 640], [tB1 - 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]]]);
 let geo = null;
 function measure() {
   geo = {};
@@ -182,7 +184,8 @@ M.on(t => {
   const sOn = t >= tS1 - 0.1 && t < tB1 + 0.1; M.hide($('#sS'), !sOn);
   if (sOn) {
     const z = OUT('B1');
-    M.vis($('#bn'), t, tS1 + 0.05, z, { dx: -60, dy: 0, ...o }); M.vis($('#mb'), t, T0('S3') - 0.3, z, { dx: 60, dy: 0, ...o });
+    M.vis($('#bn'), t, tS1 + 0.05, z, { dy: 36, ...o });
+    { const sh = M.spring(t - T0('S3') + 0.4, M.HEAVY), wv = M.lerp(1600, 784, sh); snap($('#bn'), 'width', (sh >= 1 ? 784 : wv.toFixed(1)) + 'px'); snap($('#bnIn'), 'left', (sh >= 1 ? 0 : ((wv - 784) / 2).toFixed(1)) + 'px'); } M.vis($('#mb'), t, T0('S3') - 0.3, z, { dx: 60, dy: 0, ...o });
     const P = {};
     for (const k in POS) { const u = M.io((t - tMove[k]) / 0.7); P[k] = [M.lerp(START[k][0], POS[k][0], u), M.lerp(START[k][1], POS[k][1], u)]; attr(A[k].g, 'transform', `translate(${P[k][0].toFixed(1)} ${P[k][1].toFixed(1)})`); fade(A[k].g, t, tAt[k], 1e9, 0.25); }
     BD.forEach((bd, i) => { const u = M.io((t - tBd[i]) / 0.4); drawBond(bd, P, A, u, u * M.io((t - Math.min(tBd[i], tPair - 0.2)) / 0.3)); });
@@ -190,7 +193,6 @@ M.on(t => {
     let tg = null; for (const [tt, s] of TAG) if (t >= tt) tg = s; if (tg) M.setT(btag, tg); M.vis(btag, t, tCC, 1e9, POP);
     M.vis($('#ptL'), t, tS1 + 0.4, tSplit + 1.5, { dy: 8, outDur: 0.25, ody: 0 }); M.vis($('#ptS'), t, tS1 + 0.5, tSplit + 1.5, { dy: 8, outDur: 0.25, ody: 0 });
     [['C', tCC, CC], ['O', tOx, OC], ['H', tSix, HC]].forEach(([e, tt, c]) => { const el = $('#pt' + e), u = M.io((t - tt) / 0.3); setBg(el, mix('#FFFFFF', c, u)); el.style.color = mix(C.dim, '#FFFFFF', u); el.style.borderColor = mix(C.line, c, u); });
-    avD(t, tSplit + 1.8, z);
     MR.forEach((_, i) => { const el = $('#mr' + i); M.vis(el, t, tMr[i] - 0.15, 1e9, { dx: -16, dy: 0 }); setBg(el, mix(C.soft, C.ac2, M.io((t - tMr[i]) / 0.3) * (1 - M.io((t - tMr[i] - 1.4) / 0.4)))); });
     M.vis($('#mrT'), t, tTot - 0.1, 1e9, { dy: 12 });
     M.vis($('#bar0'), t, tSplit - 0.3, 1e9, { dy: 10 });
@@ -206,7 +208,7 @@ M.on(t => {
       M.vis($('#cl' + r), t, tt - 0.2, 1e9, { dy: 8 }); M.vis($('#cs' + r), t, tt - 0.1, 1e9, { dy: 8 });
       let x = 0; SEG.forEach(([e], i) => { const u = M.io((t - tt - i * 0.25) / 0.5), w = 1320 * S[e] / 100; const el = $('#' + pre + e); snap(el, 'left', x.toFixed(1) + 'px'); snap(el, 'width', (w * u).toFixed(1) + 'px'); x += w; }); });
     const hiH = M.io((t - wt('B2', 'small') + 0.1) / 0.3); $('#cmH').style.boxShadow = `inset 0 0 0 ${(5 * hiH).toFixed(1)}px ${C.red}`; $('#caH').style.boxShadow = `inset 0 0 0 ${(5 * M.io((t - wt('B1', 'thirds')) / 0.3)).toFixed(1)}px ${C.red}`;
-    M.vis($('#cP'), t, wt('B2', 'small') - 0.1, 1e9, POP);
+    M.vis($('#cP'), t, wt('B2', 'small') - 0.1, 1e9, POP); avD(t, wt('B2', 'small') + 0.5);
     M.vis($('#th1'), t, T0('B3') + 0.05, OUT('D1'), { dy: 36, ...o });
     th1(t, { tin: T0('B3'), tOpts: wt('B3', 'most') - 0.1, tCount: T1('B3') + 0.05, dur: 3, tAns: T0('B4') - 0.02, tWhy: wt('B4', 'Hydrogen') });
   }
@@ -239,7 +241,7 @@ M.on(t => {
     M.vis($('#wr'), t, T0('W2') + 0.2, out, { dx: 60, dy: 0, ...o });
     let a = -Math.PI / 2; const tp = [T0('W4'), T0('W5'), T0('W6')];
     pie.forEach(({ e, p, l }, i) => { const span = 2 * Math.PI * PCT[e] / 100, u = M.io((t - tp[i] - 0.3) / 0.8), a1 = a + span * Math.max(u, 0.0001); attr(p, 'd', u > 0 ? arc(a, a1) : ''); M.hide(p, u <= 0);
-      const am = a + span / 2, lr = PR + 44; attr(l, 'x', (PX + lr * Math.cos(am)).toFixed(1)); attr(l, 'y', (PY + lr * Math.sin(am) + 8).toFixed(1)); fade(l, t, tp[i] + 0.9); a += span; });
+      const am = a + span / 2, lr = PR + 22; attr(l, 'x', (PX + lr * Math.cos(am)).toFixed(1)); attr(l, 'y', (PY + lr * Math.sin(am) + 8 + 14 * Math.sin(am)).toFixed(1)); attr(l, 'text-anchor', Math.cos(am) > 0.2 ? 'start' : Math.cos(am) < -0.2 ? 'end' : 'middle'); fade(l, t, tp[i] + 0.9); a += span; });
     M.vis($('#wGp'), t, wt('W7', 'add') - 0.1, 1e9, POP);
   }
 
