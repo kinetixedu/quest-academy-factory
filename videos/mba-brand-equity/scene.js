@@ -307,7 +307,7 @@ M.on(t => {
     M.setT($('#cLLN'), String(nL)); M.setT($('#cPlN'), String(nP));
     M.vis($('#cLL'), t, tPick - 0.1, 1e9, POP); M.vis($('#cPl'), t, tPick + 0.1, 1e9, POP);
     M.vis($('#why'), t, tMorph + 0.42, tAout, { dy: 36, ...o });
-    M.vis($('#wy0'), t, tC2 - 0.05, 1e9, POP); M.vis($('#wy1'), t, tC2 + 0.3, 1e9, POP); M.vis($('#wy2'), t, tWhyN - 0.1, 1e9, POP);
+    M.vis($('#wy0'), t, tAgain - 0.35, 1e9, POP); M.vis($('#wy1'), t, tAgain + 0.05, 1e9, POP); M.vis($('#wy2'), t, tWhyN - 0.1, 1e9, POP);
     M.rise($('#whyT'), t, tThat - 0.1, { st: 0.07, sp: M.HEAVY });
   }
 

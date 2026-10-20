@@ -80,10 +80,10 @@ const DF = [['S', 'Segmentation', 'Groups of buyers with similar needs'], ['T', 
 $('#dRows').innerHTML = DF.map(([l, tt, m], i) => `<div class="df" id="df${i}" style="top:${96 + i * 144}px"><div class="bg"></div><div class="bd">${l}</div><div class="serif dt">${tt}</div><div class="dm">${m}</div></div>`).join('');
 wrap($('#kq'), 'kqOut', 784, 580);
 
-/* M: the STP flow. 60 people (EXAMPLE FIGURES): 26 tiffin parents, 18 gym-goers, 16 office snackers. */
-const GN = [26, 18, 16], GC = [C.gold, C.ink, C.muted], CX = [115, 344, 573];
+/* M: the STP flow. 60 people (EXAMPLE FIGURES): 25 tiffin parents, 20 gym-goers, 15 office snackers. */
+const GN = [25, 20, 15], GC = [C.gold, C.ink, C.muted], CX = [115, 344, 573];
 const GT = [['backpack', 'Tiffin parents', 'PARENTS'], ['dumbbell', 'Gym-goers', 'GYM-GOERS'], ['briefcase', 'Office snackers', 'OFFICE']];
-const RATE = [[5, 4, 5], [3, 4, 2], [3, 3, 3]];
+const RATE = [[5, 4, 5], [4, 4, 2], [3, 3, 3]];
 const rnd = M.rng(12);
 const cells = Array.from({ length: 60 }, (_, i) => [34 + (i % 10) * 69 + (rnd() - 0.5) * 30, 36 + Math.floor(i / 10) * 59 + (rnd() - 0.5) * 26]);
 const grpOf = []; GN.forEach((n, k) => { for (let j = 0; j < n; j++) grpOf.push(k); });
@@ -321,10 +321,10 @@ M.on(t => {
     M.vis($('#ourT'), t, tHear - 0.05, 1e9, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.08 });
     // right card: phase 0 counter
     M.vis($('#rl0'), t, tM1 + 0.4, tStep[1] - 0.05, { dy: 10, outDur: 0.2, ody: -8 });
-    M.vis($('#bigN'), t, tM1 + 0.5, tM3 - 0.1, { dy: 16, outDur: 0.25, ody: -12 });
+    M.vis($('#bigN'), t, tM1 + 0.5, tGrp[0] - 0.15, { dy: 16, outDur: 0.25, ody: -12 });
     M.count($('#bigN'), t, tDot0, 60 * dDot + 0.3, 0, 60);
-    M.vis($('#bigL'), t, tM1 + 0.6, tM3 - 0.1, { dy: 10, outDur: 0.25, ody: -12 });
-    M.vis($('#bigP'), t, wt('M2', 'sixty') + 0.2, tM3 - 0.1, { ...pop, outDur: 0.25, ody: -12 });
+    M.vis($('#bigL'), t, tM1 + 0.6, tGrp[0] - 0.15, { dy: 10, outDur: 0.25, ody: -12 });
+    M.vis($('#bigP'), t, wt('M2', 'sixty') + 0.2, tGrp[0] - 0.15, { ...pop, outDur: 0.25, ody: -12 });
     // phase 1-2: the table
     const tTab = tStep[2] - 0.12, oo = { outDur: 0.25, ody: -12 };
     M.vis($('#rl1'), t, tStep[1] + 0.05, tTab, { dy: 10, ...oo });
@@ -351,7 +351,7 @@ M.on(t => {
     M.vis($('#raoN'), t, tp + 0.2, 1e9, { dy: 10 }); M.vis($('#raoT'), t, tp + 0.28, 1e9, { dy: 8 });
     M.vis($('#bd0'), t, tHear + 0.1, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.06 }); M.vis($('#bd1'), t, tHear + 0.2, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.06 });
     M.vis($('#bR'), t, tHear + 0.3, 1e9, { dy: 0, sc: 0.85, sp: M.POP, fade: 0.1 });
-    M.vis($('#bl1'), t, wt('M7', 'think') - 0.1, 1e9, { dy: 10 });
+    M.vis($('#bl1'), t, tHear + 0.5, 1e9, { dy: 10 });
     M.rise($('#bl2'), t, tBl[0] - 0.05, { st: 0.06, sp: M.HEAVY }); M.rise($('#bl3'), t, tBl[1] - 0.05, { st: 0.06, sp: M.HEAVY });
     M.vis($('#cp0'), t, tCp[0] - 0.1, 1e9, pop); M.vis($('#cp1'), t, tCp[1] - 0.1, 1e9, pop);
   }
