@@ -88,7 +88,7 @@ const STEPS = [[`1\\,\\text{N} = 1\\,\\text{kg} \\times 1\\,\\text{m/s}^2`, 'MKS
   [`1\\,\\text{dyn} = 10^{-3} \\times 10^{-2} = 10^{-5}\\,\\text{N}`, 'multiply the factors']];
 $('#steps').innerHTML = `<div class="hiBox" id="hiB" style="left:20px;width:744px;height:116px"></div>` + STEPS.map(([f, w], i) => `<div class="st" id="dst${i}" style="top:${80 + i * 120}px"><div class="n">${i + 1}</div><div class="sx">${K(f)}</div><div class="why">${w}</div></div>`).join('');
 const tStep = [wt('D2', 'In'), wt('D3', 'In'), wt('D4', 'A'), wt('D5', 'Multiply')];
-const CMP = [['FORCE', `1\\,\\text{N} = 10^5\\,\\text{dyn}`], ['ENERGY', `1\\,\\text{J} = 10^7\\,\\text{erg}`], ['LENGTH', `1\\,\\text{m} = 100\\,\\text{cm}`], ['MASS', `1\\,\\text{kg} = 1000\\,\\text{g}`]];
+const CMP = [['MASS', `1\\,\\text{kg} = 1000\\,\\text{g}`], ['LENGTH', `1\\,\\text{m} = 100\\,\\text{cm}`], ['FORCE', `1\\,\\text{N} = 10^5\\,\\text{dyn}`]];
 $('#cmps').innerHTML = CMP.map(([k, f], i) => `<div class="cmp" id="cm${i}" style="top:${84 + i * 92}px"><div class="ck">${k}</div><div class="cv">${K(f)}</div></div>`).join('');
 $('#drN').innerHTML = K(`1\\,\\text{N} = 1\\text{ lakh dyn}`);
 $('#stF').innerHTML = K(`\\text{MKS} \\to \\text{N},\\,\\text{J} \\qquad \\text{CGS} \\to \\text{dyn},\\,\\text{erg}`);
@@ -134,7 +134,7 @@ const tW = [wt('W3', 'A'), wt('W4', 'Put'), wt('W5', 'Multiply'), wt('W6', 'So')
 
 /* ---------- X / Q / F ---------- */
 const trap = PUC.trap($('#trap'), { wrong: '1 N = 1000 dyn (only kg → g changed)', right: '1 N = 10³ × 10² = 10⁵ dyn' });
-$('#xc').innerHTML = `<div class="cmp" style="left:0;width:520px;top:0;height:76px"><div class="ck">kg → g</div><div class="cv" style="font:600 32px 'IBM Plex Mono';top:16px">× 1000</div></div><div class="cmp" style="left:0;width:520px;top:96px;height:76px"><div class="ck">m → cm</div><div class="cv" style="font:600 32px 'IBM Plex Mono';top:16px">× 100</div></div>`;
+$('#xc').innerHTML = `<div class="cmp" style="left:0;width:520px;top:0;height:76px"><div class="ck" style="font:600 28px 'IBM Plex Mono';color:var(--ink);top:18px">kg → g</div><div class="cv" style="font:600 32px 'IBM Plex Mono';top:16px">× 1000</div></div><div class="cmp" style="left:0;width:520px;top:96px;height:76px"><div class="ck" style="font:600 28px 'IBM Plex Mono';color:var(--ink);top:18px">m → cm</div><div class="cv" style="font:600 32px 'IBM Plex Mono';top:16px">× 100</div></div>`;
 const where = PUC.where($('#wa'), { on: [], type: 'Short questions: convert between systems, or find a unit in a new system' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', q: 'A new system has mass unit 1 g, length unit 1 cm and time unit 0.1 s. How many new force units make 1 N?', qW: 800,
   opts: [K('10^{-3}'), K('10^{3}'), K('10^{5}'), K('10^{7}')], right: 1, cols: 2, optW: 440, optH: 84, optFs: 32, optY: 320 });
@@ -151,7 +151,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 05', topic: '18 km/h on the b
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tSlo - 0.1, 1.1, 700, 560], [tCgs - 0.3, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tSlo - 0.1, 1.08, 960, 560], [tCgs - 0.3, 1, 960, 540]]);
 let geo = null;
 function measure() { geo = 1; }
 
@@ -236,7 +236,7 @@ M.on(t => {
     STEPS.forEach((_, i) => { const el = $('#dst' + i); M.vis(el.querySelector('.n'), t, tStep[i] - 0.2, 1e9, { ...POP, sc: 0.4 }); PUC.write(el.querySelector('.sx'), t, tStep[i], 0.8); M.vis(el.querySelector('.why'), t, tStep[i] + 0.7, 1e9, { dx: -12, dy: 0 }); });
     const hb = $('#hiB'), hiY = M.track(80, [[tStep[1] - 0.1, 200], [tStep[2] - 0.1, 320], [tStep[3] - 0.1, 440]], M.SOFT)(t); M.vis(hb, t, tStep[0] - 0.1, 1e9, { dy: 0, fade: 0.2 }); hb.style.top = (hiY - 10).toFixed(1) + 'px';
     M.vis($('#dr'), t, wt('D4', 'gram') - 0.1, 1e9, { dx: 60, dy: 0 });
-    [wt('D4', 'gram') + 0.2, wt('D4', 'centimetre') + 0.2, wt('D5', 'dyne') - 0.2, wt('D5', 'newton', 1)].forEach((tt, i) => M.vis($('#cm' + [3, 2, 0, 1][i]), t, tt - 0.1, 1e9, { dx: -20, dy: 0 }));
+    [wt('D4', 'gram') + 0.2, wt('D4', 'centimetre') + 0.2, wt('D5', 'dyne') - 0.2].forEach((tt, i) => M.vis($('#cm' + i), t, tt - 0.1, 1e9, { dx: -20, dy: 0 }));
     PUC.write($('#drN'), t, wt('D5', 'lakh') - 0.2, 0.8);
   }
 

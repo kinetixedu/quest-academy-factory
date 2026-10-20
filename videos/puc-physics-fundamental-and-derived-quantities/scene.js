@@ -140,7 +140,7 @@ mk(cub, 'path', { d: `M${CX0},${CY0 - CH} L${CX0 + DX},${CY0 - CH + DY} H${CX0 +
 mk(cub, 'path', { d: `M${CX0 + CW},${CY0 - CH} L${CX0 + CW + DX},${CY0 - CH + DY} V${CY0 + DY} L${CX0 + CW},${CY0} Z`, fill: '#8D99AE', stroke: C.ink, 'stroke-width': 2.5, 'stroke-linejoin': 'round' });
 mk(cub, 'rect', { x: CX0, y: CY0 - CH, width: CW, height: CH, fill: '#AEB7C6', stroke: C.ink, 'stroke-width': 2.5 });
 const mTag = txt(cub, CX0 + CW / 2, CY0 - CH / 2 + 9, '7.8 kg', { 'text-anchor': 'middle', 'font-size': 26, fill: C.ink, 'font-weight': 600 });
-const DL = [[CX0 + CW / 2, CY0 + 40, '20 cm', '0.2 m', 'middle'], [CX0 + CW + DX / 2 + 18, CY0 - CH + DY / 2 + 6, '10 cm', '0.1 m', 'start'], [CX0 - 16, CY0 - CH / 2 + 7, '5 cm', '0.05 m', 'end']];
+const DL = [[CX0 + CW / 2, CY0 + 40, '20 cm', '0.2 m', 'middle'], [CX0 + CW + DX + 14, CY0 - CH + DY / 2 + 30, '10 cm', '0.1 m', 'start'], [CX0 - 16, CY0 - CH / 2 + 7, '5 cm', '0.05 m', 'end']];
 const dlab = DL.map(([x, y, a, b, an]) => [txt(w, x, y, a, { 'text-anchor': an, 'font-size': 24, fill: UC, 'font-weight': 600 }), txt(w, x, y, b, { 'text-anchor': an, 'font-size': 24, fill: UC, 'font-weight': 600 })]);
 const tW = [wt('W3', 'First'), wt('W4', 'Multiply'), wt('W5', 'Density'), wt('W6', 'That')], tSwW = wt('W3', 'Zero');
 
@@ -148,12 +148,12 @@ const tW = [wt('W3', 'First'), wt('W4', 'Multiply'), wt('W5', 'Density'), wt('W6
 const trap = PUC.trap($('#trap'), { wrong: 'Electric charge is a base quantity', right: 'Current is base; charge = current × time' });
 const cw = $('#cw');
 const CB = [[40, '1 A', 'CURRENT · BASE', C.ac2, C.ac], [210, '×', '', null], [250, '1 s', 'TIME · BASE', C.ac2, C.ac], [420, '=', '', null], [450, '1 C', 'CHARGE · DERIVED', C.ink, '#fff']];
-const cbEl = CB.map(([x, s1, s2, bg, fg]) => { const g = mk(cw, 'g', {}); if (bg) { mk(g, 'rect', { x, y: 96, width: bg === C.ink ? 100 : 130, height: 72, rx: 12, fill: bg }); txt(g, x + (bg === C.ink ? 50 : 65), 143, s1, { 'text-anchor': 'middle', 'font-size': 30, fill: fg, 'font-weight': 600 }); } else txt(g, x + 10, 143, s1, { 'text-anchor': 'middle', 'font-size': 32, fill: C.mute, 'font-weight': 600 }); if (s2) txt(g, x + (bg === C.ink ? 50 : 65), 200, s2, { 'text-anchor': 'middle', 'font-size': 14, fill: C.mute, 'font-weight': 600, 'letter-spacing': 1 }); return g; });
+const cbEl = CB.map(([x, s1, s2, bg, fg]) => { const g = mk(cw, 'g', {}); if (bg) { mk(g, 'rect', { x, y: 96, width: bg === C.ink ? 100 : 130, height: 72, rx: 12, fill: bg }); txt(g, x + (bg === C.ink ? 50 : 65), 143, s1, { 'text-anchor': 'middle', 'font-size': 30, fill: fg, 'font-weight': 600 }); } else txt(g, x + 10, 143, s1, { 'text-anchor': 'middle', 'font-size': 32, fill: C.mute, 'font-weight': 600 }); if (s2) txt(g, x + (bg === C.ink ? 50 : 65), 200, s2, { 'text-anchor': 'middle', 'font-size': 16, fill: C.mute, 'font-weight': 600, 'letter-spacing': 0.5 }); return g; });
 const tCb = [wt('X3', 'ampere'), wt('X3', 'ampere') + 0.2, wt('X3', 'second'), wt('X3', 'second') + 0.2, wt('X3', 'derived', 0)];
 const where = PUC.where($('#wa'), { on: [], type: 'Quick one mark questions: pick the fundamental quantity, or write a unit in base units' });
-const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', q: `A quantity ${K('Q = \\dfrac{\\text{mass} \\times \\text{speed}}{\\text{time}}')}. Which statement is correct?`, qW: 800,
-  opts: [`Fundamental, unit ${K('\\text{kg}\\,\\text{m}\\,\\text{s}^{-1}')}`, `Derived, unit ${K('\\text{kg}\\,\\text{m}\\,\\text{s}^{-2}')}`, `Derived, unit ${K('\\text{kg}\\,\\text{m}\\,\\text{s}^{-1}')}`, `Derived, unit ${K('\\text{kg}\\,\\text{m}^2\\,\\text{s}^{-2}')}`], right: 1, cols: 1, optW: 968, optH: 68, optFs: 28, optY: 270 });
-const so = PUC.solution($('#so'), [[`${K('m \\times v')}: ${K('\\text{kg}\\,\\text{m}\\,\\text{s}^{-1}')} <b style="color:var(--red)">C</b> stops`], [`${K('\\div\\, t')}: ${K('\\text{kg}\\,\\text{m}\\,\\text{s}^{-2}')} = N`], ['<b style="color:var(--red)">D</b>: metre is not squared'], ['<b style="color:var(--red)">A</b>: Q is built, so derived']], { y0: 100, dy: 112 });
+const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', q: 'A quantity Q = (mass × speed) ÷ time. Which statement about Q is correct?', qW: 800,
+  opts: [`Fundamental, unit&nbsp;${K('\\text{kg}\\,\\text{m}\\,\\text{s}^{-1}')}`, `Derived, unit&nbsp;${K('\\text{kg}\\,\\text{m}\\,\\text{s}^{-2}')}`, `Derived, unit&nbsp;${K('\\text{kg}\\,\\text{m}\\,\\text{s}^{-1}')}`, `Derived, unit&nbsp;${K('\\text{kg}\\,\\text{m}^2\\,\\text{s}^{-2}')}`], right: 1, cols: 1, optW: 968, optH: 68, optFs: 28, optY: 270 });
+const so = PUC.solution($('#so'), [['mass × speed: kg m s⁻¹ (<b style="color:var(--red)">C</b> stops)'], ['÷ time: kg m s⁻² = newton'], ['<b style="color:var(--red)">D</b>: metre is not squared'], ['<b style="color:var(--red)">A</b>: Q is built, so derived']], { y0: 100, dy: 112 });
 const tSo = [wt('A2', 'Mass'), wt('A3', 'Divide'), wt('A3', 'squares') - 0.3, wt('A3', 'calls') - 0.3];
 const fc = PUC.fcard($('#sF'), { x: 410, y: 262, w: 1100, h: 470, title: 'Recap · fundamental and derived', y0: 100, dy: 92, txt: [0, 1, 1, 1],
   lines: [K(`${cv(VC, 'v')}: \\text{m}\\,\\text{s}^{-1} \\quad ${cv(AC, 'a')}: \\text{m}\\,\\text{s}^{-2} \\quad ${cv(FC, 'F')}: \\text{kg}\\,\\text{m}\\,\\text{s}^{-2} = ${cv(FC, '\\text{N}')}`),
@@ -167,7 +167,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 03', topic: 'Who decided how 
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tSlo - 0.1, 1.1, 700, 560], [T0('S8') + 0.1, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tSlo - 0.1, 1.08, 960, 560], [T0('S8') + 0.1, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = 1;
@@ -288,8 +288,8 @@ M.on(t => {
     LR.forEach((_, i) => { const el = $('#lr' + i); M.vis(el, t, tLr[i] - 0.15, 1e9, { dy: 16 }); PUC.write(el.querySelector('.lf'), t, tLr[i] + 0.3, 0.6); });
     M.vis($('#rr'), t, T0('R2') + 0.6, out, { dx: 60, dy: 0, ...o });
     M.vis($('#tb2'), t, T0('R2') + 0.9, 1e9, POP);
-    M.vis($('#tb0'), t, wt('R3', 'length') - 0.1, 1e9, POP); M.vis($('#tb1'), t, wt('R3', 'time') - 0.1, 1e9, POP);
-    M.draw(rA[0], t, wt('R3', 'length') + 0.1, 0.5); M.draw(rA[1], t, wt('R3', 'time') + 0.1, 0.5);
+    M.vis($('#tb0'), t, wt('R3', 'kilometres') - 0.1, 1e9, POP); M.vis($('#tb1'), t, wt('R3', 'hour') - 0.1, 1e9, POP);
+    M.draw(rA[0], t, wt('R3', 'length') - 0.1, 0.5); M.draw(rA[1], t, wt('R3', 'time') - 0.1, 0.5);
     M.vis($('#rrP'), t, wt('R3', 'parents') - 0.1, 1e9, POP);
     avR(t, T1('R3') - 0.4, out);
   }

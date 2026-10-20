@@ -31,17 +31,17 @@ const tJob = [wt('H1', 'Chennai'), wt('H1', 'Delhi'), wt('H1', 'watch')];
 /* ---------- H ---------- */
 $('#jrs').innerHTML = JOBS.map(([ic, n, w, v, u], i) => `<div class="jr" id="jr${i}" style="top:${84 + i * 134}px"><i>${M.icon(ic, 34, C.ac, 2.2)}</i><div class="jn">${n}</div><div class="jw">${w}</div><div class="jv"><span>${v}</span> <span class="u">${u}</span></div></div>`).join('');
 // spanner jaw vs bolt head, drawn to scale (20 px per mm)
-const hs = $('#hkS'), MMp = 20, HX = 392, HY = 270;
+const hs = $('#hkS'), MMp = 16, HX = 470, HY = 260;
 const bolt = mk(hs, 'g', {});
 { const r = 12.7 * MMp / 2 / Math.cos(Math.PI / 6); let d = ''; for (let k = 0; k < 6; k++) { const an = Math.PI / 6 + k * Math.PI / 3; d += (k ? 'L' : 'M') + (HX + r * Math.cos(an)).toFixed(1) + ',' + (HY + r * Math.sin(an)).toFixed(1); } mk(bolt, 'path', { d: d + 'Z', fill: '#C3CAD6', stroke: C.ink, 'stroke-width': 3 }); mk(bolt, 'circle', { cx: HX, cy: HY, r: 34, fill: '#AEB7C6', stroke: C.ink, 'stroke-width': 2 }); }
 const span = mk(hs, 'g', {});
 const J = 13 * MMp / 2;
 mk(span, 'path', { d: `M${HX - 190},${HY - J - 46} H${HX + 60} V${HY - J} H${HX - 140} V${HY + J} H${HX + 60} V${HY + J + 46} H${HX - 190} Z`, fill: '#8D99AE', stroke: C.ink, 'stroke-width': 3, 'stroke-linejoin': 'round', opacity: 0.92 });
-mk(span, 'rect', { x: HX - 470, y: HY - 34, width: 290, height: 68, rx: 12, fill: '#8D99AE', stroke: C.ink, 'stroke-width': 3 });
-txt(span, HX - 330, HY + 9, '13 mm', { 'text-anchor': 'middle', 'font-size': 28, fill: '#fff', 'font-weight': 600 });
-const gapT = txt(hs, HX + 120, HY - J + 10, 'gap 0.3 mm', { 'font-size': 26, fill: C.red, 'font-weight': 600 });
+mk(span, 'rect', { x: HX - 400, y: HY - 34, width: 220, height: 68, rx: 12, fill: '#8D99AE', stroke: C.ink, 'stroke-width': 3 });
+txt(span, HX - 290, HY + 9, '13 mm', { 'text-anchor': 'middle', 'font-size': 28, fill: '#fff', 'font-weight': 600 });
+const gapT = txt(hs, HX + 120, HY - J - 20, 'gap 0.3 mm', { 'font-size': 26, fill: C.red, 'font-weight': 600 });
 const gapL = mk(hs, 'path', { d: `M${HX + 64},${HY - J} H${HX + 112} M${HX + 64},${HY - 12.7 * MMp / 2} H${HX + 112}`, stroke: C.red, 'stroke-width': 3 });
-const bLab = txt(hs, HX, HY + 186, '1/2 inch = 12.7 mm', { 'text-anchor': 'middle', 'font-size': 26, fill: UC, 'font-weight': 600 });
+const bLab = txt(hs, HX - 60, HY + 200, '1/2 inch = 12.7 mm', { 'text-anchor': 'middle', 'font-size': 26, fill: UC, 'font-weight': 600 });
 const TILES = [['wrench', 'spanner: 13 mm'], ['ruler', 'bolt: 1/2 in = 12.7 mm']];
 $('#wqs').innerHTML = TILES.map(([ic, w], i) => `<div class="wq" id="wq${i}">${M.icon(ic, 26, i ? UC : C.ac, 2.2)}<span>${w}</span></div>`).join('');
 const tTile = [wt('H3', 'thirteen'), wt('H4', 'half')];
@@ -160,7 +160,7 @@ const where = PUC.where($('#wa'), { on: [], type: 'One mark questions: a unit in
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', q: `Sunlight intensity is measured in ${K('\\text{J}\\,\\text{s}^{-1}\\,\\text{m}^{-2}')}. In SI base units this is:`, qW: 800,
   opts: [K('\\text{kg}\\,\\text{s}^{-3}'), K('\\text{kg}\\,\\text{m}^2\\,\\text{s}^{-3}'), K('\\text{kg}\\,\\text{m}^{-1}\\,\\text{s}^{-2}'), K('\\text{kg}\\,\\text{m}\\,\\text{s}^{-3}')], right: 0, cols: 2, optW: 440, optH: 84, optFs: 32, optY: 300 });
 const so = PUC.solution($('#so'), [[`${K('\\text{J s}^{-1}')} = ${K('\\text{kg m}^2\\text{s}^{-3}')}`], [`${K('\\div\\,\\text{m}^2')}: ${K('\\text{m}^2')} cancels`], [`= ${K('\\text{kg}\\,\\text{s}^{-3}')}`], ['<b style="color:var(--red)">C</b> pascal · <b style="color:var(--red)">D</b> stray m']], { y0: 100, dy: 112 });
-const tSo = [wt('A2', 'Joule'), wt('A3', 'Divide'), wt('A3', 'leaving'), wt('A3', 'C')];
+const tSo = [wt('A2', 'Joule'), wt('A3', 'Divide'), wt('A3', 'kilogram'), wt('A3', 'C')];
 const fc = PUC.fcard($('#sF'), { x: 410, y: 262, w: 1100, h: 470, title: 'Recap · SI units', y0: 100, dy: 92, txt: [1, 1, 0, 1],
   lines: ['<b>7 base</b>: <span class="mono">m · kg · s · A · K · mol · cd</span>', '<b>Metre</b>: set by <i>c</i> = 299 792 458 m/s', K(`${cv(FC, '\\text{N}')} = \\text{kg m s}^{-2} \\quad ${cv(EC, '\\text{J}')} = \\text{kg m}^2\\text{s}^{-2} \\quad ${cv(EC, '\\text{W}')} = \\text{kg m}^2\\text{s}^{-3}`), '<b>Write</b>: 5 kg (never 5 Kg, kgs, kg.) · N, Pa capital'] });
 const YQ = ['How is the metre defined today?', 'Write the joule using only base units.', 'Why is “5 Kg” wrong?'];
@@ -172,7 +172,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 04', topic: 'Tyre in psi, pum
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tH3 + 0.6, 1, 960, 540], [wt('H5', 'tiny') - 0.1, 1.12, 1380, 540], [T0('P1') - 0.4, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tH3 + 0.6, 1, 960, 540], [wt('H5', 'gap') - 0.1, 1.08, 1060, 560], [T0('P1') - 0.4, 1, 960, 540]]);
 let geo = null;
 function measure() { geo = 1; let x = 36; [0, 1].forEach(i => { const e = $('#wq' + i); e.style.left = x + 'px'; x += e.offsetWidth + 16; }); }
 
@@ -209,7 +209,7 @@ M.on(t => {
     M.vis($('#pb'), t, tP1 + 0.1, out, { dx: -60, dy: 0, ...o });
     BQ.forEach((_, i) => { const el = $('#bq' + i); M.vis(el, t, T0('P2') + 0.2 + i * 0.08, 1e9, { dy: 14 }); const on = M.io((t - tBq[i] + 0.05) / 0.25); el.style.background = mix(C.soft, C.ac2, on); el.querySelector('.bs').style.color = mix(C.dim, C.ac, on); el.querySelector('.bn').style.color = mix(C.dim, C.ink, on); el.querySelector('.bu').style.color = mix(C.dim, UC, on); });
     M.vis($('#pd'), t, tP5 - 0.1, out, { dx: 60, dy: 0, ...o });
-    DQ.forEach((_, i) => { const el = $('#dq' + i), tt = wt('P5', 'built') + i * 0.35; M.vis(el, t, tt, 1e9, { dx: -20, dy: 0 }); PUC.write(el.querySelector('.dr'), t, tt + 0.15, 0.5); });
+    DQ.forEach((_, i) => { const el = $('#dq' + i), tt = T0('P5') + 0.2 + i * 0.4; M.vis(el, t, tt, 1e9, { dx: -20, dy: 0 }); PUC.write(el.querySelector('.dr'), t, tt + 0.15, 0.5); });
     M.vis($('#pdP'), t, wt('P5', 'derived') - 0.1, 1e9, POP);
   }
 
@@ -243,7 +243,7 @@ M.on(t => {
     M.vis($('#la'), t, tL1 + 0.05, out, { dx: -60, dy: 0, ...o });
     AN.forEach((_, i) => { const el = $('#an' + i); M.vis(el, t, i === 1 ? tL1 + 0.4 : tAn[i] - 0.1, 1e9, { dy: 16 }); PUC.write(el.querySelector('.ac'), t, (i === 1 ? tL1 + 0.4 : tAn[i]) + 0.3, 0.7); });
     M.vis($('#lb'), t, wt('L3', 'kilogram') - 0.1, out, { dx: 60, dy: 0, ...o });
-    M.vis(cyl, t, wt('L3', 'cylinder') - 0.2, 1e9, { dy: 20 });
+    M.vis(cyl, t, wt('L3', 'Until') - 0.2, 1e9, { dy: 20 });
     M.draw(xMark, t, wt('L3', 'Paris') + 0.2, 0.4);
     const ua = M.io((t - wt('L3', 'Paris') - 0.5) / 0.4); arr.set(300, 245, 300 + 110 * ua, 245);
     M.vis(hBox, t, wt('L3', 'Planck') - 0.1, 1e9, { ...POP, sc: 0.8 });
@@ -307,7 +307,7 @@ M.on(t => {
     wb.setAttribute('transform', `translate(${bx.toFixed(1)},${WY})`);
     const mv = t > tWgo && t < tWgo + 3.2;
     wgh.forEach((g, k) => { g.setAttribute('transform', `translate(${(WX0 + 60 + wPos(t - 0.15 * (k + 1)) * WPX).toFixed(1)},${WY})`); g.setAttribute('opacity', mv ? [0.3, 0.2, 0.12][k] : 0); });
-    const fo = M.io((t - wt('W2', 'force') + 0.1) / 0.4); wF.set(bx - 70 - 100 * fo, WY - 40, bx - 70, WY - 40); attr(wFL, 'x', (bx - 70 - 100 * fo).toFixed(1)); attr(wFL, 'y', WY - 70); wFL.style.opacity = fo.toFixed(3);
+    const fo = M.io((t - wt('W2', 'twenty') + 0.1) / 0.4); wF.set(bx - 70 - 100 * fo, WY - 40, bx - 70, WY - 40); attr(wFL, 'x', (bx - 70 - 100 * fo).toFixed(1)); attr(wFL, 'y', WY - 70); wFL.style.opacity = fo.toFixed(3);
     const x0 = WX0 + 60; attr(wD, 'd', `M${x0},${WY + 56} v10 H${bx.toFixed(1)} v-10`); attr(wDL, 'x', ((x0 + bx) / 2).toFixed(1)); wDL.style.opacity = M.io((t - wt('W2', 'fifteen')) / 0.3).toFixed(3); M.hide(wD, p < 0.2);
     M.vis($('#wJ'), t, wt('W4', 'joules') - 0.1, 1e9, POP); M.vis($('#wB'), t, wt('W6', 'three') - 0.1, 1e9, POP);
   }
