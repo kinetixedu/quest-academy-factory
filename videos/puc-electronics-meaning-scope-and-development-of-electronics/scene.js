@@ -250,7 +250,7 @@ M.on(t => {
     M.vis($('#thC'), t, wt('H1', 'computer') - 0.1, out, { dx: 60, dy: 0, ...o });
     const cnt = 17468 * M.o3((t - tEn) / 1.8);
     M.setT($('#thN'), Math.round(cnt).toLocaleString('en-IN'));
-    const nT = Math.ceil(60 * cnt / 17468); TUBES.forEach((g, i) => M.hide(g, i >= nT));
+    const nT = Math.ceil(60 * M.o3((t - wt('H1', 'computer') - 0.2) / 3.2)); TUBES.forEach((g, i) => M.hide(g, i >= nT));
     fadeAt([$('#thN'), $('#thL')], t, tEn - 0.1);
     M.vis($('#thW'), t, wt('I2', 'twenty') - 0.1, 1e9, { dy: 12 }); M.vis($('#thW2'), t, wt('I2', 'twenty'), 1e9, { dy: 12 });
     M.vis($('#nwC'), t, tNow - 0.1, out, { dy: 36, ...o });

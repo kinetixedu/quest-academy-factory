@@ -4,7 +4,7 @@ Standard: docs/series/PUC.md ("Every PUC episode must have", "Ending order", sha
 World: worlds/puc/ (Lab Notebook, shared, owned by PUC Physics; reuse, never edit). Accent amber #E8A317 (`PUC.init({subject:'electronics'})`, subject pill BREADBOARD). Category "PUC Electronics" (world id puc-electronics). Playlists: "PUC Electronics | Class 11 | Quest Academy", "PUC Electronics | Class 12 | Quest Academy". Kit branch: kit-puc-electronics (then -2, -3 for overlapping batches). Image prefix: puc-electronics-.
 Chip: `CLASS 11 · ELECTRONICS · CH N CHAPTER NAME` (uppercase, middle dots). If a chip is wider than 1200 px, keep the chapter number and the first words of the name (never invent a name). Where a topic overlaps NCERT Physics, the NCERT chapter may be named in the narration, never in the chip.
 Title: `<Hook-style title> Explained Simply | PUC Electronics Class 11` (Class 12 for second-year topics), <= 70 chars. meta.json `"series": {"name": "PUC Electronics", "ep": N}`.
-Reference episode (after Amjad approves): videos/puc-electronics-meaning-scope-and-development-of-electronics/ (Ep 1).
+Reference episode: videos/puc-electronics-meaning-scope-and-development-of-electronics/ (Ep 1, APPROVED by Amjad 21 Oct 2026). Copy its structure, helpers and components.
 
 ## Chapters - Karnataka PUC Electronics (subject code 40). Karnataka PUC Electronics is its own subject (not an NCERT book).
 Verified 20 Oct 2026 from two independent sources that agree (Shaalaa 2026-27 syllabus, SelfStudys textbook listing; KSEAB blueprint and model paper via AglaSem copies) and confirmed by Amjad's topic list. Official KSEAB PDFs could not be opened from the cloud workspace.
