@@ -17,6 +17,7 @@ Object.assign(M.IC, {
   bed: ['M2 4v16', 'M2 8h18a2 2 0 0 1 2 2v10', 'M2 17h20', 'M6 8v9'],
   plane: ['M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z'],
   quote: ['M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z', 'M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z'],
+  leaf: ['M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z', 'M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12'],
   layers: ['M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z', 'M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12', 'M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17'],
 });
 const IMG = '../../assets/illustrations/mba/';
@@ -77,7 +78,7 @@ const OP = [
   ['THE SIX-PACK', 'Five rings', 'Built from the inside out', [['n', 'Inside: the core'], ['a', ''], ['g', 'Outside: the extras']], 'KOTLER', 'Each ring adds value', 'layers'],
   ['LEVEL 01 · CORE BENEFIT', 'A healthy treat', 'What she really buys', [['g', 'Healthy'], ['', 'Kids enjoy it']], 'AT THE CENTRE', 'The reason she buys at all', 'heart'],
   ['LEVEL 02 · BASIC PRODUCT', 'Six laddoos', 'The thing itself', [['', 'Ragi'], ['', 'Jaggery'], ['n', 'Six-pack']], 'THE BARE PRODUCT', 'What anyone could copy', 'laddoo'],
-  ['LEVEL 03 · EXPECTED PRODUCT', 'Fresh and sealed', 'What every buyer takes for granted', [['', 'Fresh'], ['', 'Clean'], ['', 'Sealed'], ['', 'On time']], 'MISS ONE, AND', 'She is unhappy', 'check'],
+  ['LEVEL 03 · EXPECTED PRODUCT', 'Fresh and sealed', 'What every buyer takes for granted', [['', 'Fresh'], ['', 'Clean'], ['', 'Sealed'], ['', 'On time']], 'MISS ONE, AND', 'She is unhappy', 'x'],
   ['LEVEL 04 · AUGMENTED PRODUCT', 'Extras that win', 'What rivals do not give', [['g', 'Monday delivery'], ['g', 'Photo message'], ['g', "Nani's card"]], 'THIS IS WHERE', 'Laddoo Lab beats the new kitchen', 'star'],
   ['LEVEL 05 · POTENTIAL PRODUCT', 'A tiffin plan', 'What it could become one day', [['d', 'A new flavour every month']], 'NOT REAL YET', 'An idea for the future', 'bulb'],
   ['THE NEW KITCHEN', 'Same inner rings', 'Same core, same laddoo, same price', [['', 'Core'], ['', 'Basic'], ['', 'Expected'], ['d', 'No extras']], 'SO MRS. RAO', 'Stays with Laddoo Lab', 'heart'],
@@ -91,6 +92,7 @@ wrap($('#on'), 'onOut', 784, 580);
 const YH = [['Need family', 'Healthy eating'], ['Product family', 'Healthy snacks'], ['Product class', 'Sweet snacks'], ['Product line', "Laddoo Lab's laddoos"], ['Product type', 'Millet laddoos in packs'], ['Item', 'The ragi six-pack, ₹120']];
 $('#yRows').innerHTML = YH.map(([t, e], i) => { const w = 720 - i * 48; return `<div class="hr6" id="yr${i}" style="top:${96 + i * 76}px;width:1504px"><div class="bar" style="width:${w}px"></div><div class="n">0${i + 1}</div><div class="t">${t}</div>` +
   `<svg class="ar" style="left:${w + 16}px" width="${800 - w - 32}" height="24"><path d="M2 12 H${800 - w - 46} M${800 - w - 54} 4 L${800 - w - 44} 12 L${800 - w - 54} 20" fill="none" stroke="#B9B1A3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="${i === 5 ? 'none' : '2 9'}"/></svg><div class="e" style="left:812px">${e}</div></div>`; }).join('');
+const LN = [['layers', 'BIG TO SMALL', 'Six steps', 'ONE PATH DOWN'], ['heart', 'STEP 01', 'Healthy eating', 'NEED FAMILY'], ['leaf', 'STEP 02', 'Healthy snacks', 'PRODUCT FAMILY'], ['star', 'STEP 03', 'Sweet snacks', 'PRODUCT CLASS'], ['laddoo', 'STEP 04', "Laddoo Lab's laddoos", 'PRODUCT LINE'], ['package', 'STEP 05', 'Millet laddoos, packed', 'PRODUCT TYPE'], ['tag', 'STEP 06', 'Ragi six-pack, ₹120', 'THE ITEM']];
 $('#hyXI').innerHTML = M.icon('laddoo', 20, '#fff', 2.4);
 
 // K
@@ -285,6 +287,17 @@ M.on(t => {
       r.querySelector('.t').style.color = mix(C.ink, '#fff', Math.max(on, last)); r.querySelector('.n').style.color = mix(C.gold, C.gold2, Math.max(on, last));
       r.querySelector('.e').style.color = i === 5 ? C.gold : C.ink;
     });
+  }
+
+  if (yOn) {
+    M.vis($('#lens'), t, tY1 + 0.5, 1e9, { dx: 30, dy: 0 });
+    let k = 0; for (let i = 0; i < 6; i++) if (t >= tY[i] - 0.05) k = i + 1;
+    const [ic, st, tx, lb] = LN[k], tk = k ? tY[k - 1] : tY1 + 0.6;
+    setIco($('#lnI'), ic, k === 6 ? '#fff' : C.gold, 52, 2);
+    $('#lnI').style.background = k === 6 ? C.gold : '#fff';
+    M.setT($('#lnS'), st); M.setT($('#lnT'), tx); M.setT($('#lnL'), lb);
+    M.vis($('#lnI'), t, tk, 1e9, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.08 });
+    M.vis($('#lnT'), t, tk + 0.08, 1e9, { dy: 12 }); M.vis($('#lnL'), t, tk + 0.14, 1e9, { dy: 8 }); M.vis($('#lnS'), t, tk, 1e9, { dy: 8 });
   }
 
   /* ===== K: at work today ===== */

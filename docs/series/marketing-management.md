@@ -38,3 +38,9 @@ Eyebrow chip: `EP NN · MARKETING MANAGEMENT`. Title format: `<Hook-style title>
 - Dev keeps a customer book; one Saturday reminder a week, only with consent. Regulars get every tenth pack free and a Sunday delivery.
 - Mrs. Rao orders on Sundays, buys 40 school weeks a year; lapsed two Sundays in July, won back with a coconut-jowar trial pack, referred two friends.
 - Pack profit ₹40 (₹120 - ₹80). Cost to win a new parent ₹500. 200 regular families, 170 kept. Festive campaign cost ₹40,000, brought ₹1 lakh extra profit. NPS +50.
+
+## Canon added by Eps 7-11
+- Before the information system: 24 packs a day; demand about 40 on Fridays, 15 on Mondays. After: unsold packs drop from 20 to 4 a week.
+- Survey: 150 people, 50 each at school gates, gyms, offices. Segments: tiffin parents 60, gym-goers 40, office snackers 50. Tiffins packed by mothers ~50%, fathers ~30%, grandparents ~20% (so "tiffin parents", never "mothers").
+- Target: busy parents (concentrated); office snackers kept as a later second group.
+- Positioning statement: "To busy parents who want a healthy tiffin snack, Laddoo Lab is the healthy sweet for tiffin boxes, that is made with ragi and jaggery and has no refined sugar."

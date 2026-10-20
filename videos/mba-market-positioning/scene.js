@@ -300,8 +300,9 @@ M.on(t => {
     const tR = [tRiv[0] + 0.3, tRiv[1] + 0.3, tRiv[2] + 0.3, tNobody];
     MPR.forEach((_, i) => {
       const el = $('#mp' + i); M.vis(el, t, tM0 + 0.7 + i * 0.1, 1e9, { dy: 14 });
-      if (i < 3) { const on = M.io((t - tR[i] + 0.05) / 0.25); el.style.opacity = (0.35 + 0.65 * on).toFixed(3); el.querySelector('.bg').style.background = mix(C.paper, C.gold3, on * (1 - M.io((t - (i < 2 ? tR[i + 1] : tTop)) / 0.25))); }
-      else el.style.opacity = t < tR[3] ? '0.35' : '';
+      const on = M.io((t - tR[i] + 0.05) / 0.25), dimc = c => mix(C.dim, c, on);
+      el.querySelector('.wn').style.color = dimc(C.ink); el.querySelector('.wd').style.color = dimc(C.ink2); el.querySelector('.fi').style.background = mix(C.line, MPR[i][1], on);
+      if (i < 3) el.querySelector('.bg').style.background = mix(C.paper, C.gold3, on * (1 - M.io((t - (i < 2 ? tR[i + 1] : tTop)) / 0.25)));
       if (i === 3) { const c = t >= tClaim; el.querySelector('.bg').style.background = c ? C.gold3 : C.paper; el.querySelector('.wd').style.color = c ? C.ink : C.dim; el.querySelector('.wn').style.color = c ? C.ink : C.dim;
         M.setT($('#mpT'), c ? 'OUR POSITION' : 'EMPTY SPOT'); $('#mpT').style.background = c ? C.gold : '#fff'; $('#mpT').style.color = c ? '#fff' : C.gold; }
     });
@@ -339,7 +340,7 @@ M.on(t => {
     M.rise($('#cAt'), t, tR0 + 0.4, { st: 0.06, sp: M.HEAVY }); M.rise($('#cBt'), t, tR0 + 0.55, { st: 0.06, sp: M.HEAVY });
     M.vis($('#cAi'), t, tR0 + 0.5, 1e9, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.1 }); M.vis($('#cBi'), t, tR0 + 0.65, 1e9, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.1 });
     for (const [k, tb] of [['A', tBA], ['B', tBB]]) for (let i = 0; i < 3; i++) {
-      const r = $('#cr' + k + i); M.vis(r, t, tTests[i] - 0.1, 1e9, { dy: 12 });
+      const r = $('#cr' + k + i); M.vis(r, t, tR0 + 0.8 + i * 0.1, 1e9, { dy: 12 }); r.querySelector('.rt').style.color = mix(C.dim, C.ink, M.io((t - tTests[i] + 0.05) / 0.25));
       const act = M.io((t - tb[i]) / 0.2) * (1 - M.io((t - tb[i] - 0.9) / 0.3));
       r.querySelector('.bg').style.background = mix(C.paper, (k === 'A' && !BA[i]) ? C.redBg : C.gold3, act);
       M.vis($('#bd' + k + i), t, tb[i], 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 });
