@@ -8,6 +8,10 @@ on:
       slugs:
         description: 'Space-separated video slugs'
         required: true
+      branch:
+        description: 'Branch to push the kit to (one per stream, e.g. kit-bba)'
+        required: false
+        default: 'kit'
 
 permissions:
   contents: write
@@ -75,6 +79,6 @@ jobs:
         with: { pattern: 'kit-*', path: kit, merge-multiple: true }
       - name: Push to kit branch
         run: |
-          cd kit && git init -q -b kit && git config user.name quest-factory-bot && git config user.email factory@users.noreply.github.com
+          cd kit && git init -q -b "${{ github.event.inputs.branch || 'kit' }}" && git config user.name quest-factory-bot && git config user.email factory@users.noreply.github.com
           git add -A && git commit -qm "Manual upload kit"
-          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" kit
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" "${{ github.event.inputs.branch || 'kit' }}"
