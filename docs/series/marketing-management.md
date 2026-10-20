@@ -51,3 +51,10 @@ Eyebrow chip: `EP NN · MARKETING MANAGEMENT`. Title format: `<Hook-style title>
 - Dev's posters and free tastes at school gates.
 - A rival home kitchen sells millet laddoos at ₹120 for six (Ep 16). Future idea: a tiffin plan with a new flavour every month.
 - Laddoo Lab buys ragi and jaggery (materials), a grinder (capital item), tape and gas (supplies).
+
+## Canon added by Eps 17-21
+- Ep 17: a neighbourhood bakery starts selling millet laddoos (rival, alongside the Ep 16 home kitchen). The 6-pack is at maturity.
+- Ep 18: ideas dropped - mango, "sugar free", spicy masala; protein bar lost the concept test. Concept test with 20 parents: cocoa-ragi 12, coconut-jowar 6 (saved), protein bar 2. Cocoa-ragi ₹120 for six; 40 families tested it two weeks, 32 reordered; Nani cut the cocoa before launch.
+- Ep 19 range (5 products): original ragi 6-pack (cash cow), cocoa-ragi 6-pack (star), coconut-jowar 6-pack for gym-goers (question mark, waits), festive gift box for Diwali (question mark, funded), loose big laddoos at the college stall (dog, kept as a first taste).
+- Ep 20 brand: logo a gold laddoo with a small navy leaf; navy (trust), jaggery gold (warmth), cream (home-made); tagline "The healthy sweet for tiffin boxes"; navy packs, cream LADDOO LAB wordmark, flavour band gold/cocoa brown/cream. Nani's rule: say only what is true.
+- Ep 21: identity healthy, honest, home-made. School-gate survey of 30 parents; gaps "expensive", "for grandparents". Pack now shows "₹20 a laddoo"; Dev posts kids at lunch with ingredients; Nani stays in the posts.
