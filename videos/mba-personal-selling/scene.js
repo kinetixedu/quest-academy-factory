@@ -90,20 +90,20 @@ const bub = (id, who, txt, top, gold) => `<div class="bub" id="${id}" style="top
 const chips = (arr, top) => arr.map(([ic, t, id, red]) => `<div class="dch" id="${id}" style="top:${top}px;${red ? 'background:#F6E3DC;color:#B5482F' : ''}">${M.icon(ic, 22, red ? C.red : C.gold, 2.4)}<span>${t}</span></div>`).join('');
 const DP = [
   ['AT MR. SHETTY\'S SHOP', 'Seven steps, one shop', ''],
-  ['STEP 1 · PROSPECTING AND QUALIFYING', 'Find the right shops first', chips([['list', '20 shops near schools', 'c10'], ['check', 'The 5 best picked', 'c11']], 168)],
-  ['STEP 2 · PRE-APPROACH', 'Learn about the buyer first', bub('b20', 'shop', 'Mr. Shetty', 160) + chips([['ban', 'His worry: stock that does not sell', 'c20', 1]], 248)],
-  ['STEP 3 · APPROACH', 'Pick the right moment', chips([['clock', 'Three o\'clock, a quiet shop', 'c30'], ['laddoo', 'A free taste', 'c31']], 168)],
-  ['STEP 4 · PRESENTATION', 'Show how it helps his shop', chips([['users', 'Busy parents', 'c40'], ['package', 'Tiffin snacks', 'c41'], ['calendar', 'Here, every morning', 'c42']], 168)],
-  ['STEP 5 · HANDLING OBJECTIONS', 'Answer the worry, honestly', bub('b50', 'shop', 'What if it does not sell?', 160) + bub('b51', 'arjun', 'Take two boxes. We take back unsold packs.', 240, 1)],
-  ['STEP 6 · CLOSING', 'Ask for the order', bub('b60', 'arjun', 'Shall I set up the stand by your counter?', 160) + bub('b61', 'shop', 'Yes. Let us try it.', 240)],
-  ['STEP 7 · FOLLOW-UP', 'Come back, keep the promise', chips([['calendar', 'Next Monday', 'c70'], ['chart', 'Count the packs', 'c71'], ['repeat', 'Restock', 'c72']], 168)],
+  ['STEP 1 · PROSPECTING AND QUALIFYING', 'Find the right shops first', chips([['list', '20 shops near schools', 'c10'], ['check', 'The 5 best picked', 'c11']], 186)],
+  ['STEP 2 · PRE-APPROACH', 'Learn about the buyer first', bub('b20', 'shop', 'Mr. Shetty', 166) + chips([['ban', 'His worry: stock that does not sell', 'c20', 1]], 252)],
+  ['STEP 3 · APPROACH', 'Pick the right moment', chips([['clock', 'Three o\'clock, a quiet shop', 'c30'], ['laddoo', 'A free taste', 'c31']], 186)],
+  ['STEP 4 · PRESENTATION', 'Show how it helps his shop', chips([['users', 'Busy parents', 'c40'], ['package', 'Tiffin snacks', 'c41'], ['calendar', 'Here, every morning', 'c42']], 186)],
+  ['STEP 5 · HANDLING OBJECTIONS', 'Answer the worry, honestly', bub('b50', 'shop', 'What if it does not sell?', 166) + bub('b51', 'arjun', 'Take two boxes. We take back unsold packs.', 250, 1)],
+  ['STEP 6 · CLOSING', 'Ask for the order', bub('b60', 'arjun', 'Shall I set up the stand by your counter?', 166) + bub('b61', 'shop', 'Yes. Let us try it.', 250)],
+  ['STEP 7 · FOLLOW-UP', 'Come back, keep the promise', chips([['calendar', 'Next Monday', 'c70'], ['chart', 'Count the packs', 'c71'], ['repeat', 'Restock', 'c72']], 186)],
 ];
 $('#dps').innerHTML = DP.map(([l, h, body], i) => `<div class="dpn" id="dp${i}"><div class="lbl">${l}</div><div class="serif dh">${h}</div>${body}</div>`).join('');
 // W: why a person
 const mb = (who, txt, top, gold) => `<div class="mb" style="top:${top}px"><div class="fa" style="${who === 'shop' ? '' : FACE(who) + ';box-shadow:0 0 0 3px #B8862F'}">${who === 'shop' ? SHOP_AV(22) : ''}</div><div class="bb" style="${gold ? 'background:#B8862F;color:#fff' : ''}">${txt}</div></div>`;
-const WO = [['message', 'Two-way talk', 'Ask, and get answers now', 'AT THE COUNTER', mb('shop', 'Is it fresh?', 70) + mb('arjun', 'Made this morning.', 140, 1)],
-  ['target', 'A tailored pitch', 'Words that fit each buyer', 'SAME LADDOO, TWO PITCHES', mb('arjun', 'School shop: the tiffin story', 70) + mb('arjun', 'Gym shop: the protein story', 140)],
-  ['heart', 'Trust', 'People buy from people they trust', 'WEEK FOUR, AT THE SAME SHOP', mb('shop', 'Send me four boxes this time.', 70) + mb('arjun', 'Done. Same day.', 140, 1)]];
+const WO = [['message', 'Two-way talk', 'Ask, and get answers now', 'AT THE COUNTER', mb('shop', 'Is it fresh?', 84) + mb('arjun', 'Made this morning.', 168, 1)],
+  ['target', 'A tailored pitch', 'Words that fit each buyer', 'SAME LADDOO, TWO PITCHES', mb('arjun', 'School shop: the tiffin story', 84) + mb('arjun', 'Gym shop: the protein story', 168)],
+  ['heart', 'Trust', 'People buy from people they trust', 'WEEK FOUR, AT THE SAME SHOP', mb('shop', 'Send me four boxes this time.', 84) + mb('arjun', 'Done. Same day.', 168, 1)]];
 $('#obs').innerHTML = WO.map(([ic, t, s, al, body], i) => `<div class="ob" id="ob${i}" style="left:${160 + i * 544}px"><div class="bg"></div><div class="sn">0${i + 1}</div><div class="si"></div><div class="serif ot">${t}</div><div class="os">${s}</div><div class="ad" id="ad${i}"><div class="al">${al}</div>${body}</div></div>`).join('');
 // K
 const KA = [
@@ -173,8 +173,8 @@ function measure() {
   const dq = $('#dq'); if (dq.offsetWidth > 1600) dq.style.fontSize = Math.floor(88 * 1600 / dq.offsetWidth) + 'px';
   for (let i = 0; i < 4; i++) { const q = $('#ql' + i); if (q.offsetWidth > 688) q.style.fontSize = Math.floor(30 * 688 / q.offsetWidth) + 'px'; }
   // step panes: chips in a row with gaps
-  DP.forEach((_, i) => { let x = 40; document.querySelectorAll(`#dp${i} .dch`).forEach(c => { if (c.style.top === '248px') { c.style.left = '40px'; return; } c.style.left = x + 'px'; x += c.offsetWidth + 16; }); });
-  document.querySelectorAll('.ob .mb .bb').forEach(el => { if (el.offsetWidth > 320) { el.style.fontSize = Math.floor(19 * 320 / el.offsetWidth) + 'px'; } });
+  DP.forEach((_, i) => { let x = 40; document.querySelectorAll(`#dp${i} .dch`).forEach(c => { if (c.style.top === '252px') { c.style.left = '40px'; return; } c.style.left = x + 'px'; x += c.offsetWidth + 16; }); });
+  document.querySelectorAll('.ob .mb .bb').forEach(el => { if (el.offsetWidth > 312) { el.style.fontSize = Math.floor(21 * 312 / el.offsetWidth) + 'px'; } });
   document.querySelectorAll('#kPans .pt').forEach(el => { if (el.offsetWidth > 848) el.style.fontSize = Math.floor(84 * 848 / el.offsetWidth) + 'px'; });
   document.querySelectorAll('#kPans .kt').forEach(el => { if (el.offsetWidth > 748) el.style.fontSize = Math.floor(30 * 748 / el.offsetWidth) + 'px'; });
   for (const id of ['qq1', 'qq2']) { const q = $('#' + id); if (q.offsetWidth > 1400) q.style.fontSize = Math.floor(68 * 1400 / q.offsetWidth) + 'px'; }
