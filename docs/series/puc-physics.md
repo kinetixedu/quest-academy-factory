@@ -59,5 +59,64 @@ Length stays 4:00-6:00 of voice.
 Amjad's visual brief for Chapter 1: measuring instruments, unit-conversion tools and interactive error propagation (the Ch 1 "sim" is a measuring bench: rulers, scales, vernier and screw gauge drawn exactly, unit dials, live error bars).
 Slugs: `puc-physics-` + topic slug (tools/queue.py).
 
+## Episodes - Chapters 2-4 (Amjad's order, 20 Oct 2026, Class 11)
+Chips: `CLASS 11 · PHYSICS · CH 2 MOTION IN A STRAIGHT LINE`, `CH 3 MOTION IN A PLANE`, `CH 4 LAWS OF MOTION` (verified against the 2025-26 Class 11 syllabus chapter list: 1 Units and Measurements, 2 Motion in a Straight Line, 3 Motion in a Plane, 4 Laws of Motion).
+Syllabus notes (verified 20 Oct 2026): relative velocity (1D and 2D) is not in the current CBSE/NCERT rationalised syllabus but is in the JEE Main syllabus (kinematics) - treat like the Ch 1 error topics: follow the JEE syllabus, never say "NCERT says". Rolling friction, impulse, banked roads are in the syllabus. Apparent weight: teach from Newton's second law (lift problems); it is a standard JEE/NEET application.
+| ep | topic | chip | hook lead | hook idea |
+|---|---|---|---|---|
+| 18 | Reference Frames | CH 2 MOTION IN A STRAIGHT LINE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 19 | Position and Displacement | CH 2 MOTION IN A STRAIGHT LINE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 20 | Distance and Displacement Comparison | CH 2 MOTION IN A STRAIGHT LINE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 21 | Speed and Velocity | CH 2 MOTION IN A STRAIGHT LINE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 22 | Average and Instantaneous Velocity | CH 2 MOTION IN A STRAIGHT LINE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 23 | Average and Instantaneous Acceleration | CH 2 MOTION IN A STRAIGHT LINE | Diya | an ambulance speeding up past the college |
+| 24 | Uniform and Non-Uniform Motion | CH 2 MOTION IN A STRAIGHT LINE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 25 | Equations of Uniformly Accelerated Motion | CH 2 MOTION IN A STRAIGHT LINE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 26 | Motion under Gravity | CH 2 MOTION IN A STRAIGHT LINE | Diya | a mango falls from the tree outside her window |
+| 27 | Position-Time Graphs | CH 2 MOTION IN A STRAIGHT LINE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 28 | Velocity-Time Graphs | CH 2 MOTION IN A STRAIGHT LINE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 29 | Acceleration-Time Graphs | CH 2 MOTION IN A STRAIGHT LINE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 30 | Slope and Area Interpretation of Motion Graphs | CH 2 MOTION IN A STRAIGHT LINE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 31 | Relative Motion in One Dimension | CH 2 MOTION IN A STRAIGHT LINE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 32 | Scalars and Vectors | CH 3 MOTION IN A PLANE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 33 | Vector Representation | CH 3 MOTION IN A PLANE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 34 | Vector Addition and Subtraction | CH 3 MOTION IN A PLANE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 35 | Multiplication of Vectors by Scalars | CH 3 MOTION IN A PLANE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 36 | Resolution of Vectors into Components | CH 3 MOTION IN A PLANE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 37 | Unit Vectors | CH 3 MOTION IN A PLANE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 38 | Position and Displacement Vectors | CH 3 MOTION IN A PLANE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 39 | Vector Components in Two Dimensions | CH 3 MOTION IN A PLANE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 40 | Motion in Two Dimensions | CH 3 MOTION IN A PLANE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 41 | Projectile Motion | CH 3 MOTION IN A PLANE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 42 | Trajectory of a Projectile | CH 3 MOTION IN A PLANE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 43 | Time of Flight | CH 3 MOTION IN A PLANE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 44 | Maximum Height | CH 3 MOTION IN A PLANE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 45 | Horizontal Range | CH 3 MOTION IN A PLANE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 46 | Uniform Circular Motion | CH 3 MOTION IN A PLANE | Diya | the kitchen mixer jar spinning |
+| 47 | Angular Displacement and Angular Velocity | CH 3 MOTION IN A PLANE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 48 | Centripetal Acceleration | CH 3 MOTION IN A PLANE | Diya | a salad spinner flings water off the leaves |
+| 49 | Relative Velocity in Two Dimensions | CH 3 MOTION IN A PLANE | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 50 | Force and Inertia | CH 4 LAWS OF MOTION | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 51 | Newton's First Law | CH 4 LAWS OF MOTION | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 52 | Newton's Second Law | CH 4 LAWS OF MOTION | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 53 | Newton's Third Law | CH 4 LAWS OF MOTION | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 54 | Momentum | CH 4 LAWS OF MOTION | Diya | a slow truck vs a fast cricket ball |
+| 55 | Impulse | CH 4 LAWS OF MOTION | Diya | catching a raw egg without breaking it |
+| 56 | Conservation of Linear Momentum | CH 4 LAWS OF MOTION | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 57 | Free-Body Diagrams | CH 4 LAWS OF MOTION | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 58 | Equilibrium of Forces | CH 4 LAWS OF MOTION | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 59 | Contact and Non-Contact Forces | CH 4 LAWS OF MOTION | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 60 | Normal Reaction | CH 4 LAWS OF MOTION | Diya | the kitchen weighing scale under a pressure cooker |
+| 61 | Tension | CH 4 LAWS OF MOTION | Diya | a bucket pulled up from a well by a rope |
+| 62 | Static and Kinetic Friction | CH 4 LAWS OF MOTION | Diya | a heavy steel trunk that is hard to start but easier to keep sliding |
+| 63 | Coefficient of Friction | CH 4 LAWS OF MOTION | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 64 | Limiting Friction | CH 4 LAWS OF MOTION | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 65 | Rolling Friction | CH 4 LAWS OF MOTION | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 66 | Motion on Inclined Planes | CH 4 LAWS OF MOTION | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 67 | Connected Bodies and Pulley Systems | CH 4 LAWS OF MOTION | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 68 | Circular Motion and Centripetal Force | CH 4 LAWS OF MOTION | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 69 | Banking of Roads | CH 4 LAWS OF MOTION | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
+| 70 | Apparent Weight and Weightlessness | CH 4 LAWS OF MOTION | Diya | a hospital lift makes her feel heavier, then lighter |
+
 ## Canon added by episodes
 (lead adds recurring facts reported by subagents here)
