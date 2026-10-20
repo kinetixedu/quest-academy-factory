@@ -11,7 +11,9 @@ NCERT chip: `CLASS 11 · BIOLOGY · CH N CHAPTER NAME` (uppercase, middle dots).
 4. Hard distinctions get a side-by-side comparison with one simple example each, then a question that tests the difference.
 5. Ending: recap card (pinned, SCREENSHOT THIS, 3 s) -> "Can you answer these without help?" card with three questions (no answers) -> NEXT strip with a curiosity teaser -> brand outro.
 6. No left border. Check alignment of every list row. Avoid element ids that collide with world ids (#st1, #st2, #stF, #stmt, #sweep, #cap, #prog).
-Length 4:00-6:00 of voice. Approved PUC reference to copy for engine use: videos/puc-physics-physical-quantities-and-their-classification/.
+Length 4:00-6:00 of voice.
+
+Reference episode (APPROVED by Amjad 21 Oct 2026): videos/puc-biology-introduction-to-puc-biology/ (Ep 1). Copy its head/CSS, helpers, zoom ladder, labelled-diagram system and exam segment. Agent brief: docs/series/puc-biology-agent-brief.md.
 
 ## Chapters (current rationalised NCERT, verified 20 Oct 2026)
 Class 11: 1 The Living World · 2 Biological Classification · 3 Plant Kingdom · 4 Animal Kingdom · 5 Morphology of Flowering Plants · 6 Anatomy of Flowering Plants · 7 Structural Organisation in Animals · 8 Cell: The Unit of Life · 9 Biomolecules · 10 Cell Cycle and Cell Division · 11 Photosynthesis in Higher Plants · 12 Respiration in Plants · 13 Plant Growth and Development · 14 Breathing and Exchange of Gases · 15 Body Fluids and Circulation · 16 Excretory Products and their Elimination · 17 Locomotion and Movement · 18 Neural Control and Coordination · 19 Chemical Coordination and Integration
@@ -83,4 +85,7 @@ Chips: Eps 2-10 `CH 1 THE LIVING WORLD` · Eps 11-20 `CH 2 BIOLOGICAL CLASSIFICA
 | 39 | Comparative Classification Diagrams | Aarav | one flowchart that sorts every animal in the chapter |
 
 ## Canon added by episodes
-(lead adds recurring facts reported by subagents here)
+- Ep 1 drawing palette (vintage cartoon look in SVG): outlines dark brown #2E2A24 (stroke 2.5-4.5), leaf fill #8CC48F with pale veins #D8ECD2, chloroplast #3E9B5F (fill #6DB27A, dark #1F5E37), mitochondrion fill #F2B57E stroke #B35F22, nucleus fill #D7C3E6 stroke #7B4B94, vacuole fill #D6E9F5 stroke #5AA0C8, cell wall fill #E3D3A0 stroke #7A6A2E, cytoplasm #F3F7EA, red blood cell #D1495B, sunlight gold #C9962B.
+- Labels: SVG text class .zl (Poppins 600 26 px ink), dot r 6 on the part, leader line 2.5 px ink drawing on, text fades in 0.3 s after; NCERT names exactly.
+- Zoom ladder chip row #zch under the title; magnification tag + "EXAMPLE FIGURES" ghost together top-right of the diagram card (#ztr); dashed accent focus ring draws on the part before each push-in.
+- Ep 1 facts: NEET UG = 180 questions, 90 biology; NCERT: 1.7-1.8 million species known and described; cell theory Schleiden 1838 (plants), Schwann 1839 (animals), Virchow 1855 (omnis cellula-e cellula); NCERT spelling "Theodore Schwann"; blood is a fluid connective tissue; yeast is a unicellular fungus.
