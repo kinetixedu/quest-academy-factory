@@ -68,7 +68,7 @@ const wtr = mk(bk, 'rect', { x: 203, y: 262, width: 378, height: 139, fill: C.ac
 const flm = mk(bW, 'g', {}); flm.insertAdjacentHTML('beforeend', `<g transform="translate(372 408)">${M.icon('flame', 40, C.red, 2.4)}</g>`);
 const LIQ = [[240, 290, 40], [320, 300, -35], [400, 288, 45], [480, 298, -40], [540, 292, 30], [260, 350, -45], [350, 360, 38], [440, 352, -32], [520, 362, 42]];
 const GAS = [[120, 110, 60, 30], [300, 130, -55, -35], [470, 104, 50, 40], [650, 126, -60, 30], [210, 150, 45, -40], [570, 150, -50, -30]];
-const wm = LIQ.map(([x, y, v], i) => ({ g: molW(bW), x, y, v, rot: i * 37, w: i % 2 ? 20 : -20, gas: GAS[i] }));
+const wm = LIQ.map(([x, y, v], i) => ({ g: molW(bW), x, y, v, rot: i * 37, w: i % 2 ? 20 : -20, gas: GAS[i % 6] }));
 // methane + oxygen -> CO2 + 2 H2O
 const bondL = mk(bW, 'g', {}), atomL = mk(bW, 'g', {}), dotL = mk(bW, 'g', {});
 const atomG = (p, r, fill, lab, fs) => { const g = mk(p, 'g', {}); mk(g, 'circle', { r, fill }); txt(g, 0, fs * 0.36, lab, { 'font-family': 'Poppins', 'font-weight': 700, 'font-size': fs, fill: '#fff', 'text-anchor': 'middle' }); return g; };
@@ -223,7 +223,7 @@ M.on(t => {
   if (pOn) {
     const out = OUT('U1');
     M.vis($('#pq'), t, tP1 + 0.1, out, { dx: -60, dy: 0, ...o });
-    M.vis($('#mdef'), t, wt('P1', 'property') - 0.1, 1e9, POP);
+    M.vis($('#mdef'), t, wt('P1', 'properties') - 0.1, 1e9, POP);
     const tk = [wt('P2', 'Physical'), wt('P2', 'chemical')], tl = [T0('P3'), T0('P5')], te = [T0('P5'), 1e9];
     [0, 1].forEach(i => { const el = $('#kb' + i); M.vis(el, t, tk[i] - 0.1, 1e9, { dy: 16 }); const on = M.io((t - tl[i] + 0.1) / 0.3) * (1 - M.io((t - te[i] + 0.1) / 0.3)); setBg(el, mix(C.soft, i ? C.redBg : C.ac2, on)); });
     M.vis($('#pw'), t, T0('P3') + 0.3, out, { dx: 60, dy: 0, ...o });

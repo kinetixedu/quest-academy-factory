@@ -23,7 +23,7 @@ Object.assign(M.IC, {
 
 /* ---------- beats ---------- */
 const tMorph = T0('H2') + 0.02, tH3 = T0('H3'), tH5 = T0('H5');
-const tP1 = T0('P1'), tS1 = T0('S1'), tG1 = T0('G1'), tD1 = T0('D1'), tC1 = T0('C1'), tB2 = T0('B2'), tT = T0('T1'), tW1 = T0('W1'), tX1 = T0('X1'), tQ = T0('Q1'), tF = T0('F1'), tY = T0('Y1'), tN = T0('N1');
+const tP1 = T0('P1'), tS1 = T0('S1'), tG1 = T0('G1'), tD1 = T0('D1'), tC1 = T0('C1'), tB2 = T0('B2'), tT = T0('T1'), tW1 = T0('W1'), tX1 = T0('X1'), tQ = T0('Q1'), tF = T0('F1'), tY = T0('Y1'), tNx = T0('N1');
 const tCount = T1('Q1') + 0.05, tAns = T0('A1') - 0.02;
 const SW = [[tT, tW1], [tQ, tQ + 0.06], [tF, tF + 0.06]];
 const OUT = id => T0(id) - 0.32;
@@ -286,7 +286,7 @@ M.on(t => {
     fc(t, { tin: tF + 0.1, tout: tY - 0.3, tLines: [tF + 0.4, tF + 0.8, tF + 1.2, tF + 1.6, tF + 2.0], tShot: wt('F1', 'Screenshot') });
     M.vis($('#yq'), t, tY - 0.05, 1e9, { dy: 36 });
     tYq.forEach((tt, i) => M.vis($('#yr' + i), t, tt - 0.1, 1e9, { dx: -24, dy: 0 }));
-    nx(t, tN - 0.05);
+    nx(t, tNx - 0.05);
   }
   caps(t);
 });

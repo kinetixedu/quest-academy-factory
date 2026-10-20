@@ -147,7 +147,7 @@ const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', q: `Wh
   opts: [K('1.76 \\times 10^{11}\\,\\text{kg}'), K('5.69 \\times 10^{-12}\\,\\text{kg}'), K('1.46 \\times 10^{-49}\\,\\text{kg}'), K('6.24 \\times 10^{18}\\,\\text{kg}')], right: 1, optW: 474, optY: 330, optH: 110, optFs: 34 });
 const so = PUC.solution($('#so'), [[K(`n = \\frac{1\\,\\text{C}}{1.602 \\times 10^{-19}\\,\\text{C}} = 6.24 \\times 10^{18}`)], [K(`m = n \\times ${me}`)], [K(`= 6.24 \\times 10^{18} \\times 9.109 \\times 10^{-31}`)], [K(`= \\textcolor{${C.ok}}{5.69 \\times 10^{-12}\\,\\text{kg}}`)]], { y0: 100, dy: 112 });
 const tSo = [T0('A2'), wt('A3', 'Multiply'), wt('A3', 'nine'), wt('A4', 'That')];
-const fc = PUC.fcard($('#sF'), { x: 360, y: 262, w: 1200, h: 470, title: 'Recap · electrons, protons and neutrons', y0: 96, dy: 74, txt: [0, 1, 1, 1, 1],
+const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 496, title: 'Recap · electrons, protons and neutrons', y0: 100, dy: 80, txt: [0, 1, 1, 1, 1],
   lines: [K(`${me} = ${eS} \\div \\frac{${eS}}{${me}} = 9.109 \\times 10^{-31}\\,\\text{kg}`), `<b class="e">Electron e⁻</b>: cathode rays, bend to the + plate · Thomson, 1897`, `<b class="n">Proton p⁺</b>: canal rays, lightest from hydrogen · about 1836 × mₑ`, '<b>Neutron n</b>: no charge, mass slightly more than p⁺ · Chadwick, 1932', `<b class="g">Charge</b> comes in whole packets of e = 1.602 × 10⁻¹⁹ C · Millikan`] });
 const YQ = ['Which ray bends towards the positive plate, and why?', 'Who discovered the neutron, and how?', 'Why does finding the mass of an electron need two experiments?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="nn">${i + 1}</div><div class="q">${q}</div></div>`).join('');
@@ -166,6 +166,7 @@ function measure() {
   let cx = 36; ['ch0', 'ch1', 'ch2'].forEach(id => { const e = $('#' + id); e.style.left = cx + 'px'; cx += e.offsetWidth + 12; });
   let dx = 36; ['cc0', 'cc1'].forEach(id => { const e = $('#' + id); e.style.left = dx + 'px'; dx += e.offsetWidth + 12; });
   const ft = $('#sF .fcard'); if (ft) ft.querySelectorAll('.fl.txt').forEach(l => { if (l.offsetWidth > 1110) l.style.fontSize = Math.floor(30 * 1110 / l.offsetWidth) + 'px'; });
+  { const nt = $('#sF .next .nt'); if (nt && nt.scrollWidth > nt.clientWidth) nt.style.fontSize = Math.floor(34 * nt.clientWidth / nt.scrollWidth) + 'px'; }
   document.querySelectorAll('.yr .q').forEach(q => { if (q.offsetWidth > 1380) q.style.fontSize = Math.floor(34 * 1380 / q.offsetWidth) + 'px'; });
   document.querySelectorAll('.lk .lt').forEach(l => { const r = l.parentNode.querySelector('.lr'); const room = 712 - 20 - 24 - r.offsetWidth - 20; if (l.offsetWidth > room) l.style.fontSize = Math.floor(27 * room / l.offsetWidth) + 'px'; });
 }

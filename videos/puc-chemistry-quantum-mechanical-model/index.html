@@ -1,0 +1,161 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Chemistry Ep 21 - Quantum Mechanical Model</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Chemistry Ep 21: quantum mechanical model (Molecule bench) ===== */
+:root{--n:#0FA3A3;--h:#16213E;--e:#C8461B;--g:#B7791F;--v:#7A4FE0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.n{color:var(--n)}.e{color:var(--e)}.g{color:var(--g)}.v{color:var(--v)}
+/* title card stories */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;right:36px;height:112px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:20px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:22px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:66px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .jv{position:absolute;right:24px;top:34px;height:44px;padding:0 14px;border-radius:9px;display:flex;align-items:center;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.wq{position:absolute;top:494px;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* P: what is it */
+.sci{position:absolute;left:36px;top:80px;width:712px;height:112px;border-radius:14px;background:var(--ink);color:#fff}
+.sci .sn{position:absolute;left:28px;top:18px;font:700 34px Poppins;white-space:nowrap}
+.sci .sy{position:absolute;right:28px;top:22px;font:600 30px 'IBM Plex Mono';color:var(--ac2);white-space:nowrap}
+.sci .sw{position:absolute;left:28px;top:68px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:#AEB6C8;white-space:nowrap}
+.qr{position:absolute;left:36px;width:712px;height:80px;border-radius:14px;background:var(--soft)}
+.qr .nn{position:absolute;left:20px;top:17px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);background:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.qr .qt{position:absolute;left:88px;top:20px;font:600 28px Poppins;white-space:nowrap}
+.qr .qk{position:absolute;right:24px;top:26px;font:600 20px 'IBM Plex Mono';letter-spacing:.08em;color:var(--ac);white-space:nowrap}
+.el{position:absolute;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 26px Poppins;color:#fff;background:var(--n)}
+.gs{position:absolute;left:36px;top:84px;display:flex;flex-direction:column;gap:12px}
+.gs span{width:712px;height:68px;border-radius:12px;border:2px solid var(--line);background:#fff;display:flex;align-items:center;gap:20px;padding-left:20px;font:600 26px Poppins;color:var(--dim);box-sizing:border-box}
+.gs span b{width:52px;font:700 28px Poppins}
+.gs span em{font:600 16px 'IBM Plex Mono';font-style:normal;letter-spacing:.08em;margin-left:auto;margin-right:20px}
+#pWord{position:absolute;left:36px;top:478px;display:flex;align-items:center;gap:14px;white-space:nowrap}
+/* bench */
+.btag{position:absolute;height:40px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;gap:8px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.cr{position:absolute;left:36px;width:712px;height:72px;border-radius:14px;background:var(--soft)}
+.cr .cn{position:absolute;left:24px;top:22px;font:600 22px Poppins;white-space:nowrap}
+.cr .cv{position:absolute;right:28px;top:14px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+.cr .cb{position:absolute;left:300px;top:28px;height:16px;border-radius:8px}
+.rl{position:absolute;left:36px;width:712px;height:56px;display:flex;align-items:center;gap:16px;white-space:nowrap}
+.rl .nn{flex:none;width:40px;height:40px;border-radius:50%;background:var(--ac);color:#fff;font:700 19px Poppins;display:flex;align-items:center;justify-content:center}
+.rl .rt2{font:500 25px Poppins}
+/* compare */
+.cmp{position:absolute;top:84px;width:736px;height:460px;border-radius:14px;background:var(--soft)}
+.cmp .ct{position:absolute;left:28px;top:22px;font:700 32px Poppins;white-space:nowrap}
+.cmp .cw2{position:absolute;right:24px;top:28px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* derivation */
+#dSci{position:absolute;left:36px;top:76px;height:56px;padding:0 20px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:16px;font:700 26px Poppins;white-space:nowrap}
+#dSci em{font:600 18px 'IBM Plex Mono';font-style:normal;color:var(--ac2);letter-spacing:.08em}
+#dl .sol .sx{font-size:27px}
+#dEq{position:absolute;left:0;width:784px;top:478px;text-align:center;font-size:46px;white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:70px;font:600 27px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:27px}
+.ghost2{position:absolute;display:inline-flex;align-items:center;height:36px;padding:0 14px;border-radius:8px;border:1.5px dashed var(--dim);color:var(--mute);background:#fff;font:600 15px 'IBM Plex Mono';letter-spacing:.1em;white-space:nowrap}
+#wG{position:absolute;left:0;width:784px;top:492px;display:flex;justify-content:center}
+/* dual */
+.dh{position:absolute;left:36px;top:76px;font:700 44px Poppins;white-space:nowrap}
+.dch{position:absolute;left:36px;top:440px;display:flex;gap:12px}
+.dch span{height:52px;padding:0 18px;border-radius:12px;background:var(--soft);display:inline-flex;align-items:center;font:600 24px Poppins;white-space:nowrap}
+#dbq{position:absolute;left:64px;top:96px;font:600 50px Poppins;letter-spacing:-.01em;white-space:nowrap}
+#dbN{position:absolute;left:64px;top:30px}
+#dbHr{position:absolute;left:64px;right:64px;top:190px;height:2px;background:var(--line)}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font-size:28px}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .nn{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#uEq{position:absolute;left:64px;top:150px;font-size:110px;white-space:nowrap}
+.ul{position:absolute;height:64px;padding:0 22px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:14px;font:600 26px Poppins;white-space:nowrap}
+.ul b{font:700 34px Poppins}
+.mq .opt .ot{font-size:28px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · CHEMISTRY · CH 2 STRUCTURE OF ATOM</div>
+    <div class="subj" id="subj">MOLECULE BENCH</div>
+    <div id="title">The <span class="acc">Quantum</span> Mechanical Model</div>
+    <div id="sub">Explained on one molecule bench</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#0FA3A3" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE BLURS · ONE IDEA</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Chances, not certainties</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV'S STUDY TABLE</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div id="wqs"></div>
+        <div class="pillp ink" id="hTz" style="left:36px;top:494px">A cloud, not a dot</div></div>
+    </div>
+
+    <div id="sP">
+      <div class="card full" id="pq"><div class="lbl" style="left:36px;top:30px">WHY A NEW THEORY</div><div id="qrs"></div></div>
+      <div class="card rf" id="pw"><div class="lbl" style="left:36px;top:30px">BOHR'S CIRCLES</div>
+        <svg id="pS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ink" id="pP" style="left:36px;top:494px">Quantum mechanics</div></div>
+    </div>
+
+    <div id="sU"><div class="card wide" id="uc"><div class="lbl" style="left:64px;top:40px">IN 1926 · ERWIN SCHRÖDINGER · PHYSICIST</div>
+      <div id="uEq"></div><div id="uls"></div></div></div>
+
+    <div id="sS">
+      <div class="card full" id="bn"><div class="lbl" style="left:36px;top:30px">MOLECULE BENCH · ONE HYDROGEN ATOM</div>
+        <svg id="bS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rt" id="g1"><div class="lbl" style="left:36px;top:30px" id="g1L">WAVE FUNCTION ψ</div><svg id="g1S" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rb" id="g2"><div class="lbl" style="left:36px;top:30px">ψ² · PROBABILITY DENSITY</div><svg id="g2S" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card wide" id="cmpC"><div class="lbl" style="left:36px;top:30px">SIDE BY SIDE · ORBIT VS ORBITAL</div><div id="cmps"></div></div>
+      <div class="card wide" id="th1"></div>
+    </div>
+
+    <div id="sD">
+      <div class="card full" id="dl"></div>
+      <div class="card rf" id="dR"><div class="lbl" style="left:36px;top:30px">WHAT THE MODEL SAYS</div>
+        <svg id="dS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">ψ at three points: A = +0.6, B = -0.8, C = +0.2. Where is the electron most likely to be found?</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">ψ CAN BE NEGATIVE · ψ² NEVER</div><div class="ghost2" id="wEx" style="right:36px;top:22px">EXAMPLE FIGURES</div>
+        <svg id="wS2" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="wG"><div class="pillp ac" id="wGp">Most likely at B</div></div></div>
+    </div>
+
+    <div id="sC">
+      <div class="card full" id="cw"><div class="lbl" style="left:36px;top:30px">BOHR'S MODEL · WHAT WENT WRONG</div><div id="cws"></div></div>
+      <div class="card rf" id="cp"><div class="lbl" style="left:36px;top:30px">QUANTUM MECHANICAL MODEL · WHAT IT FIXED</div><div id="cps"></div></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="420" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">An orbit is a path.</div><div id="st2">An orbital is a <span class="acc">probability cloud</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

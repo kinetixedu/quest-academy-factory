@@ -1,0 +1,131 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Chemistry Ep 16 - Atomic Spectra and Hydrogen Spectrum</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Chemistry Ep 16: atomic spectra and hydrogen spectrum (Molecule bench) ===== */
+:root{--n:#0FA3A3;--h:#16213E;--e:#C8461B;--g:#B7791F;--v:#7A4FE0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.n{color:var(--n)}.e{color:var(--e)}.g{color:var(--g)}.v{color:var(--v)}
+/* title card stories */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr{position:absolute;left:36px;right:36px;height:112px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:20px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:22px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:66px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.elw{position:absolute;right:24px;top:32px;height:48px;padding:0 16px;border-radius:10px;background:var(--ink);color:#fff;display:flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+.wq{position:absolute;top:494px;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* rows */
+.qr{position:absolute;left:36px;width:712px;height:88px;border-radius:14px;background:var(--soft)}
+.qr .tg{position:absolute;left:20px;top:14px;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--ac);white-space:nowrap}
+.qr .qt{position:absolute;left:20px;top:38px;font:600 27px Poppins;white-space:nowrap}
+#mdef{position:absolute;left:36px;top:80px;height:64px;padding:0 22px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:14px;font:600 25px Poppins;white-space:nowrap}
+.sci{position:absolute;left:36px;width:712px;height:100px;border-radius:14px;background:var(--soft)}
+.sci .sy{position:absolute;left:24px;top:16px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--ac);white-space:nowrap}
+.sci .sn{position:absolute;left:24px;top:42px;font:700 32px Poppins;white-space:nowrap}
+.sci .sw{position:absolute;right:24px;top:52px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* bench */
+.btag{position:absolute;height:40px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;gap:8px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.lk{position:absolute;left:36px;width:712px;height:88px;border-radius:14px;background:var(--soft)}
+.lk .tg{position:absolute;left:20px;top:14px;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--ac);white-space:nowrap}
+.lk .lt{position:absolute;left:20px;top:38px;font:600 27px Poppins;white-space:nowrap}
+.lk .lr{position:absolute;right:24px;top:25px;height:38px;padding:0 12px;border-radius:9px;background:#fff;display:inline-flex;align-items:center;font:600 17px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+.lkC{position:absolute;left:36px;top:478px;height:64px;padding:0 22px;border-radius:12px;color:#fff;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+.cmp{position:absolute;top:84px;width:736px;height:460px;border-radius:16px;background:var(--soft)}
+.cmp .ch{position:absolute;left:32px;top:28px;font:700 40px Poppins;white-space:nowrap}
+.cmp .cy{position:absolute;right:32px;top:44px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.cmp .cr2{position:absolute;left:32px;height:72px;right:32px;border-radius:12px;background:#fff}
+.cmp .cr2 b{position:absolute;left:24px;top:12px;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.cmp .cr2 span{position:absolute;left:24px;top:32px;font:600 26px Poppins;white-space:nowrap}
+#dl .sol .sx{font-size:30px}
+#wl .sol .sx{font-size:30px}
+#wq{position:absolute;left:36px;top:70px;font:600 29px/1.35 Poppins;width:712px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins;font-size:28px}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .nn{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+.spr{position:absolute;left:36px;width:712px;height:136px;border-radius:14px;background:var(--soft)}
+.spr .tg{position:absolute;left:20px;top:14px;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--ac);white-space:nowrap}
+.spr .lt{position:absolute;left:20px;top:36px;font:600 26px Poppins;white-space:nowrap}
+.spr svg{position:absolute;left:20px;top:80px}
+.trow{position:absolute;left:36px;width:712px;height:46px;border-radius:10px;background:var(--soft);font:600 22px Poppins}
+.trow span{position:absolute;top:8px;white-space:nowrap}
+.trow .m{font:600 20px 'IBM Plex Mono';top:10px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · CHEMISTRY · CH 2 STRUCTURE OF ATOM</div>
+    <div class="subj" id="subj">MOLECULE BENCH</div>
+    <div id="title">The Hydrogen <span class="acc">Spectrum</span></div>
+    <div id="sub">Atomic spectra on one molecule bench</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#0FA3A3" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE GLOWS · ONE SIGNATURE</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Atoms write each colour</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA'S KITCHEN · BENGALURU</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-kitchen.jpg">
+        <div id="wqs"></div>
+        <div class="pillp ink" id="hTz" style="left:36px;top:494px">Why only yellow?</div></div>
+    </div>
+
+    <div id="sP">
+      <div class="card full" id="pq"><div class="lbl" style="left:36px;top:30px">THREE KINDS OF SPECTRUM</div><div id="sps"></div></div>
+      <div class="card rf" id="pw"><div class="lbl" style="left:36px;top:30px" id="pwL">MOLECULE BENCH · PRISM</div>
+        <svg id="pS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="btag" id="fpC" style="left:36px;top:500px;background:var(--ink);color:#fff">Rb · Cs · Ga · DISCOVERED BY THEIR LINES</div></div>
+    </div>
+
+    <div id="sS">
+      <div class="card full" id="bn"><div class="lbl" style="left:36px;top:30px">MOLECULE BENCH · HYDROGEN</div>
+        <svg id="bS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="sp"><div class="lbl" style="left:36px;top:30px">HYDROGEN · VISIBLE LINES</div>
+        <svg id="spS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card wide" id="cmpC"><div class="lbl" style="left:36px;top:30px">SIDE BY SIDE</div><div id="cmps"></div></div>
+      <div class="card wide" id="th1"></div>
+    </div>
+
+    <div id="sD">
+      <div class="card full" id="dl"></div>
+      <div class="card rf" id="dr"><div id="scis"></div><div class="lbl" style="left:36px;top:262px">SERIES · n₁ · n₂ · REGION</div><div id="tbs"></div></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">Wavelength of the red line, the fall from n = 3 to n = 2?</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">MOLECULE BENCH · THE RED LINE</div>
+        <svg id="wS2" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Every line in a spectrum is one electron</div><div id="st2"><span class="acc">falling</span> between two orbits.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

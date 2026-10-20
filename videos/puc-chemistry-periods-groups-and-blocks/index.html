@@ -1,0 +1,134 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Chemistry Ep 29 - Periods, Groups and Blocks</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Chemistry Ep 29: periods, groups and blocks (Molecule bench) ===== */
+:root{--n:#0FA3A3;--h:#16213E;--e:#C8461B;--g:#B7791F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+/* title card stories */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr{position:absolute;left:36px;right:36px;height:112px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:20px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:22px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:66px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.el{position:absolute;min-width:64px;height:64px;padding:0 8px;box-sizing:border-box;border-radius:12px;display:flex;align-items:center;justify-content:center;font:700 26px Poppins;color:#fff;background:var(--n)}
+.elw{position:absolute;right:24px;top:24px;display:flex;align-items:center;gap:12px}
+.elw .el{position:static}
+.elw span{font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.wq{position:absolute;top:494px;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* big table side panel */
+.sp{position:absolute;left:1036px;width:528px}
+.big{font:600 64px 'IBM Plex Mono';white-space:nowrap;line-height:1}
+.bigl{margin-top:8px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.olr{position:absolute;left:1036px;width:528px;height:52px;border-radius:10px;background:var(--soft);display:flex;align-items:center;gap:0;padding-left:16px;box-sizing:border-box}
+.olr span{width:56px;text-align:center;font:600 19px 'IBM Plex Mono';white-space:nowrap}
+.olr b{width:70px;font:600 14px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.btag{position:absolute;height:40px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;gap:8px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.pane{position:absolute;inset:0}
+#tdR{position:absolute;left:560px;top:84px;width:200px}
+#tdR .a{font:600 54px 'IBM Plex Mono';white-space:nowrap;line-height:1}
+#tdR .b{margin-top:10px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+#tdR .c{margin-top:14px;font:700 24px Poppins;white-space:nowrap}
+#fx1{position:absolute;left:36px;top:84px;font-size:36px;white-space:nowrap}
+#fx2{position:absolute;left:36px;top:168px;font-size:48px;white-space:nowrap}
+#wq{position:absolute;left:36px;top:70px;font:600 28px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:30px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 26px Poppins;font-size:28px}
+#sF .fcard .fl{font-size:38px}
+#sF .fcard .fl.txt{font-size:28px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .nn{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+/* block fact card */
+.bf{position:absolute;inset:0}
+.bf .bt{position:absolute;left:36px;top:70px;font:700 40px Poppins;white-space:nowrap}
+.bf .bg{position:absolute;left:36px;top:126px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.bf .bc{position:absolute;left:36px;top:160px;font-size:34px;white-space:nowrap}
+.bf .bn{position:absolute;right:36px;top:84px;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;color:var(--ink2);white-space:nowrap;text-align:right}
+.lg{position:absolute;display:flex;gap:10px}
+.lg span{height:44px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';letter-spacing:.06em;color:#fff;white-space:nowrap}
+.wr2{position:absolute;left:1036px;width:528px;height:56px;border-radius:12px;background:var(--soft)}
+.wr2 .a{position:absolute;left:18px;top:8px;font:700 28px Poppins}
+.wr2 .b{position:absolute;left:84px;top:14px;font:600 22px 'IBM Plex Mono';white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · CHEMISTRY · CH 3 CLASSIFICATION OF ELEMENTS AND PERIODICITY IN PROPERTIES</div>
+    <div class="subj" id="subj">MOLECULE BENCH</div>
+    <div id="title">Periods, Groups and <span class="acc">Blocks</span></div>
+    <div id="sub">Explained on one molecule bench</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#0FA3A3" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE PLACES · SPLIT BY KIND</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Split by kind, find your way</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA'S KITCHEN · BENGALURU</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-kitchen.jpg">
+        <div id="wqs"></div>
+        <div class="pillp ink" id="hTz" style="left:36px;top:494px">One clue: where the last electron goes</div></div>
+    </div>
+
+    <!-- P + U: the map, then the four blocks -->
+    <div id="sP"><div class="card wide" id="lf"><div class="lbl" style="left:36px;top:30px" id="lfL">THE MAP · PERIODS AND GROUPS</div>
+      <svg id="pS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg>
+      <div class="pillp ink" id="pp1" style="left:1036px;top:84px">Period = row · same outer shell</div>
+      <div class="pillp ac" id="pp2" style="left:1036px;top:148px">Group = column · same outer electrons</div>
+      <div class="wr2" id="nk0" style="top:236px"><div class="a" style="color:var(--n)">Na</div><div class="b">2, 8, <span style="color:var(--e)">1</span></div></div>
+      <div class="wr2" id="nk1" style="top:304px"><div class="a" style="color:var(--n)">K</div><div class="b">2, 8, 8, <span style="color:var(--e)">1</span></div></div>
+      <div class="pillp good" id="pp3" style="left:1036px;top:376px">Both react strongly with water</div>
+      <div class="lbl" id="lgL" style="left:1036px;top:236px">BLOCK = ORBITAL OF THE LAST ELECTRON</div>
+      <div class="lg" id="lg" style="left:1036px;top:272px"></div>
+      <div id="wds"></div>
+    </div></div>
+
+    <!-- S: the last electron -->
+    <div id="sS">
+      <div class="card full" id="bn"><div class="lbl" style="left:36px;top:30px" id="bnL">MOLECULE BENCH · THE LAST ELECTRON</div>
+        <svg id="bS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rt" id="rx"><div class="lbl" style="left:36px;top:30px" id="rxL">WHERE IT SITS</div>
+        <svg id="tdS" width="784" height="274" style="position:absolute;left:0;top:0"></svg>
+        <div id="tdR" style="left:556px"><div class="c" id="tdC" style="margin-top:0;font-size:44px"></div><div class="b" id="tdB"></div></div></div>
+      <div class="card rb" id="ct"><div class="lbl" style="left:36px;top:30px">THE BLOCK</div><div id="bfs"></div></div>
+      <div class="card wide" id="th1"></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">Place each element by its configuration.</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">ON THE TABLE</div><svg id="wS2" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="wGp" style="left:36px;top:494px">Last electron → block, n → period</div></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">The block is decided by</div><div id="st2">where the <span class="acc">last electron</span> goes.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

@@ -106,12 +106,10 @@ const molG = (p, kind) => { const g = mk(p, 'g', {}), a = (x, y, r, f, s) => { m
   if (kind === 'CO2') { a(-27, 0, 15, OC, 'O'); a(27, 0, 15, OC, 'O'); a(0, 0, 17, CC, 'C'); }
   if (kind === 'H2O') { a(-21, 16, 12, HC, 'H'); a(21, 16, 12, HC, 'H'); a(0, 0, 20, OC, 'O'); }
   return g; };
-const AIR = [['N2', 120, 140, 60, 40], ['N2', 300, 120, -50, 55], ['N2', 480, 160, 45, -60], ['N2', 650, 130, -65, -35], ['N2', 160, 300, 55, -45], ['N2', 360, 380, -40, -55], ['N2', 560, 330, 60, 50], ['N2', 690, 390, -55, 40], ['N2', 250, 220, 35, 65], ['N2', 440, 260, -60, 30], ['N2', 610, 230, 50, -55],
-  ['O2', 200, 400, -45, -50], ['O2', 520, 110, 55, 45], ['O2', 380, 180, -50, -40], ['Ar', 100, 220, 40, -60], ['CO2', 700, 280, -45, 50]];
-const airM = AIR.map(([k, x, y, vx, vy], i) => ({ g: molG(bW, k), x, y, vx, vy, rot: (i * 47) % 180, w: (i % 3 - 1) * 18 }));
-const WAT = [[150, 160, 40, 35], [380, 140, -35, 40], [600, 170, 30, -40], [240, 330, -40, -30], [470, 350, 35, -35], [660, 360, -30, 30], [330, 250, 30, 30], [540, 260, -35, 25]];
-const watM = WAT.map(([x, y, vx, vy], i) => ({ g: molG(bW, 'H2O'), x, y, vx, vy, rot: (i * 61) % 360, w: (i % 2 ? 14 : -14) }));
-const moveM = (m, t, op) => { const x = bounce(m.x + m.vx * t, 70, 714), y = bounce(m.y + m.vy * t, 108, 412); attr(m.g, 'transform', `translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${(m.rot + m.w * t).toFixed(1)})`); m.g.style.opacity = op.toFixed(3); M.hide(m.g, op <= 0.002); };
+const AIR = ['N2', 'N2', 'O2', 'N2', 'N2', 'Ar', 'N2', 'O2', 'N2', 'N2', 'N2', 'CO2', 'O2', 'N2', 'N2', 'N2'];
+const airM = AIR.map((k, i) => { const r = i >> 2, c = i & 3; return { g: molG(bW, k), hx: 128 + c * 176 + (r % 2) * 64, hy: 122 + r * 88, ax: 38 + (i % 3) * 6, ay: 16 + (i % 2) * 6, fx: 0.9 + (i * 0.37) % 0.6, fy: 1.1 + (i * 0.53) % 0.7, ph: i * 1.7, rot: (i * 47) % 180, w: (i % 3 - 1) * 16 }; });
+const watM = Array.from({ length: 8 }, (_, i) => { const r = i >> 2, c = i & 3; return { g: molG(bW, 'H2O'), hx: 136 + c * 168 + (r % 2) * 60, hy: 168 + r * 140, ax: 32, ay: 26, fx: 0.8 + (i * 0.29) % 0.5, fy: 1.0 + (i * 0.41) % 0.5, ph: i * 2.1, rot: (i * 61) % 360, w: i % 2 ? 14 : -14 }; });
+const moveM = (m, t, op) => { const x = m.hx + m.ax * Math.sin(t * m.fx + m.ph), y = m.hy + m.ay * Math.sin(t * m.fy + m.ph * 1.3); attr(m.g, 'transform', `translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${(m.rot + m.w * t).toFixed(1)})`); m.g.style.opacity = op.toFixed(3); M.hide(m.g, op <= 0.002); };
 const noteT = txt(b, 730, 432, 'NOT TO SCALE', { 'text-anchor': 'end', 'font-size': 14 });
 // the reaction: 2H2 + O2 -> 2H2O, atoms keyed, bonds with electron pairs
 const bondL = mk(bW, 'g', {}), atomL = mk(bW, 'g', {}), dotL = mk(bW, 'g', {});
@@ -130,7 +128,7 @@ const drawBond = (bd, P, u, eu) => {
     attr(l, 'x1', (sx + (ex - sx) * u).toFixed(1)); attr(l, 'y1', (sy + (ey - sy) * u).toFixed(1)); attr(l, 'x2', (sx + (fx - sx) * u).toFixed(1)); attr(l, 'y2', (sy + (fy - sy) * u).toFixed(1)); M.hide(l, u <= 0.01); });
   bd.dt.forEach((d, j) => { const i = j >> 1, s = j & 1 ? 1 : -1, k = (i - (bd.n - 1) / 2) * 17; attr(d, 'cx', (mxp + px * k + ux * s * 9).toFixed(1)); attr(d, 'cy', (myp + py * k + uy * s * 9).toFixed(1)); d.style.opacity = eu.toFixed(3); M.hide(d, eu <= 0.01); });
 };
-const tAirN = wt('S2', 'nitrogen'), tAirO = wt('S2', 'oxygen'), tAr = wt('S2', 'argon'), tCO2 = wt('S2', 'carbon'), tNot = wt('S3', 'Nothing');
+const tAirN = wt('S2', 'nitrogen'), tAirO = wt('S2', 'oxygen'), tAr = wt('S2', 'argon'), tCO2 = wt('S2', 'carbon'), tNot = wt('S3', 'No');
 const tWat = wt('S4', 'water'), tWatch = wt('S5', 'Watch'), tBrk = wt('S5', 'break'), tPair = wt('S5', 'electrons'), tNew = wt('S5', 'new'), tS6 = T0('S6');
 const KP = {
   Oa: [[0, 350, 170], [tBrk, 328, 166], [tPair, 230, 222]], Ob: [[0, 434, 170], [tBrk, 456, 166], [tPair, 554, 222]],
@@ -256,7 +254,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 04', topic: 'Boiling or burni
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('S3', 'Different') - 0.2, 1.1, 552, 520], [tWat - 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('S3', 'Different') - 0.2, 1.08, 720, 540], [tWat - 0.2, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};
@@ -299,7 +297,7 @@ M.on(t => {
     M.vis($('#pq'), t, tP1 + 0.1, out, { dx: -60, dy: 0, ...o });
     M.vis($('#mdef'), t, wt('P2', 'Matter') - 0.1, 1e9, POP);
     QR.forEach((_, i) => { const el = $('#qr' + i); M.vis(el, t, tQr[i] - 0.1, 1e9, { dy: 16 }); const nx2 = i < 3 ? tQr[i + 1] : 1e9; const on = M.io((t - tQr[i]) / 0.25) * (1 - M.io((t - nx2) / 0.25)); setBg(el, mix(C.soft, C.ac2, on)); });
-    M.vis($('#pw'), t, wt('P2', 'three') - 0.2, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#pw'), t, wt('P2', 'Matter') + 0.6, out, { dx: 60, dy: 0, ...o });
     [0, 1, 2].forEach(i => { const ti = tQr[i] - 0.1, u = fade(stBox[i], t, ti, 1e9, 0.3); stLab[i].style.opacity = u; stSub[i].style.opacity = u;
       stP[i].forEach((p, k) => { let x = p.x, y = p.y;
         if (i === 0) { x += 2.6 * Math.sin(t * 13 + k * 1.7); y += 2.6 * Math.cos(t * 11 + k * 2.3); }

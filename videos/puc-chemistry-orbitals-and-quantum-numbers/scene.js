@@ -122,7 +122,7 @@ const dsol = PUC.solution($('#dl'), [
   [K(`1 + 3 + 5 + \\dots = n^2`)],
   [K(`\\text{electrons} \\le 2n^2`)]], { label: 'COUNTING ORBITALS · STEP BY STEP', y0: 110, dy: 112 });
 const tDs = [wt('D2', 'Step'), wt('D3', 'Step'), wt('D4', 'Add'), wt('D5', 'Step')];
-const ds = $('#dS'), DX0 = 150, DB = 24, DST = 28, DGAP = 12, DROWY = [86, 172, 258, 344];
+const ds = $('#dS'), DX0 = 130, DB = 24, DST = 28, DGAP = 12, DROWY = [86, 172, 258, 344];
 const drows = [1, 2, 3, 4].map((n, ri) => {
   const g = mk(ds, 'g', {}), y = DROWY[ri];
   const lab = txt(g, 36, y + 19, 'n = ' + n, { 'font-size': 22, fill: NC, 'font-weight': 600 });

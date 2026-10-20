@@ -1,0 +1,123 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Chemistry Ep 28 - Structure of the Modern Periodic Table</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Chemistry Ep 28: structure of the modern periodic table (Molecule bench) ===== */
+:root{--n:#0FA3A3;--h:#16213E;--e:#C8461B;--g:#B7791F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+/* title card stories */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr{position:absolute;left:36px;right:36px;height:112px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:20px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:22px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:66px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.el{position:absolute;min-width:64px;height:64px;padding:0 8px;box-sizing:border-box;border-radius:12px;display:flex;align-items:center;justify-content:center;font:700 26px Poppins;color:#fff;background:var(--n)}
+.elw{position:absolute;right:24px;top:24px;display:flex;align-items:center;gap:12px}
+.elw .el{position:static}
+.elw span{font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.wq{position:absolute;top:494px;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* big table side panel */
+.sp{position:absolute;left:1036px;width:528px}
+.big{font:600 64px 'IBM Plex Mono';white-space:nowrap;line-height:1}
+.bigl{margin-top:8px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.olr{position:absolute;left:1036px;width:528px;height:52px;border-radius:10px;background:var(--soft);display:flex;align-items:center;gap:0;padding-left:16px;box-sizing:border-box}
+.olr span{width:56px;text-align:center;font:600 19px 'IBM Plex Mono';white-space:nowrap}
+.olr b{width:70px;font:600 14px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.btag{position:absolute;height:40px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;gap:8px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.pane{position:absolute;inset:0}
+#tdR{position:absolute;left:560px;top:84px;width:200px}
+#tdR .a{font:600 54px 'IBM Plex Mono';white-space:nowrap;line-height:1}
+#tdR .b{margin-top:10px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+#tdR .c{margin-top:14px;font:700 24px Poppins;white-space:nowrap}
+#fx1{position:absolute;left:36px;top:84px;font-size:36px;white-space:nowrap}
+#fx2{position:absolute;left:36px;top:168px;font-size:48px;white-space:nowrap}
+#wq{position:absolute;left:36px;top:70px;font:600 28px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:30px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 26px Poppins;font-size:28px}
+#sF .fcard .fl{font-size:38px}
+#sF .fcard .fl.txt{font-size:28px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .nn{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · CHEMISTRY · CH 3 CLASSIFICATION OF ELEMENTS AND PERIODICITY IN PROPERTIES</div>
+    <div class="subj" id="subj">MOLECULE BENCH</div>
+    <div id="title">Structure of the <span class="acc">Periodic Table</span></div>
+    <div id="sub">Explained on one molecule bench</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#0FA3A3" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE PLACES · ONE ADDRESS SYSTEM</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Rows + columns = an address</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA'S STUDY TABLE · BENGALURU</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div id="wqs"></div>
+        <div class="pillp ink" id="hTz" style="left:36px;top:494px">Why 2 in one row, 32 in another?</div></div>
+    </div>
+
+    <!-- P + U: the long form -->
+    <div id="sP"><div class="card wide" id="lf"><div class="lbl" style="left:36px;top:30px" id="lfL">THE LONG FORM · MODERN PERIODIC TABLE</div>
+      <svg id="pS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg>
+      <div class="sp" id="sp1" style="top:84px"><div class="big" id="nP">7</div><div class="bigl">PERIODS · ROWS</div></div>
+      <div class="sp" id="sp2" style="left:1300px;top:84px;width:260px"><div class="big" id="nG" style="color:var(--n)">18</div><div class="bigl">GROUPS · COLUMNS</div></div>
+      <div class="lbl" id="olL" style="left:1036px;top:236px">IUPAC 1-18 REPLACED THE OLD LABELS</div>
+      <div class="olr" id="ol0" style="top:270px"><b>IUPAC</b><span>1</span><span>2</span><span>13</span><span>14</span><span>17</span><span>18</span></div>
+      <div class="olr" id="ol1" style="top:330px"><b>OLD</b><span>IA</span><span>IIA</span><span>IIIA</span><span>IVA</span><span>VIIA</span><span>0</span></div>
+      <div class="pillp" id="fPl" style="left:1036px;top:420px;background:#E5EDFC;color:#1F4FB8">Inline, the table would be 32 wide</div>
+      <div class="pillp ac" id="uP1" style="left:1036px;top:420px">Same group: behave alike</div>
+      <div class="pillp ink" id="uP2" style="left:1036px;top:484px">Along a period: step by step</div>
+    </div></div>
+
+    <!-- S: filling orbitals -->
+    <div id="sS">
+      <div class="card full" id="bn"><div class="lbl" style="left:36px;top:30px" id="bnL">MOLECULE BENCH · FILLING ORBITALS</div>
+        <svg id="bS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rt" id="rx"><div class="lbl" style="left:36px;top:30px" id="rxL">THE PERIOD BEING FILLED</div>
+        <svg id="tdS" width="784" height="274" style="position:absolute;left:0;top:0"></svg>
+        <div id="tdR"><div class="a" id="tdA"></div><div class="b" id="tdB">ELEMENTS</div><div class="c" id="tdC"></div></div></div>
+      <div class="card rb" id="ct"><div class="lbl" style="left:36px;top:30px">COUNT</div><div id="fx1"></div><div id="fx2"></div></div>
+      <div class="card wide" id="th1"></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">How many elements are in period 6?</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">ORBITALS FILLED IN PERIOD 6</div><svg id="wS2" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="wGp" style="left:36px;top:494px">32 elements · 14 sit in the bottom row</div></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">A period fills one shell.</div><div id="st2" style="font-size:76px">A group shares one <span class="acc">outer arrangement</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

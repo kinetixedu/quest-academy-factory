@@ -312,7 +312,7 @@ M.on(t => {
         attr(k.r, 'fill', hi > 0 ? mix(C.ac2, NC, hi) : mix('#FFFFFF', C.ac2, on)); attr(k.t, 'fill', mix(C.ink, '#FFFFFF', hi)); });
       fade(pkT, t, tEvery - 0.1); fade(pkT2, t, tEvery);
     }
-    if (pd) { PUC.write($('#lw0'), t, wt('M2', 'properties') - 0.1, 2.2); M.vis($('#lw1'), t, wt('M2', 'Periodic', 1) - 0.1, 1e9, POP); }
+    if (pd) { PUC.write($('#lw0'), t, wt('M2', 'properties') - 0.1, 2.2); M.vis($('#lw1'), t, wt('M2', 'Periodic', 2) - 0.1, 1e9, POP); }
     if (pc) {
       const eks = t >= tB1 - 0.1;
       M.setT($('#ch1'), eks ? 'EKA-SILICON' : 'EKA-ALUMINIUM'); M.setT($('#ch2'), eks ? 'GERMANIUM · 1886' : 'GALLIUM · 1875');
