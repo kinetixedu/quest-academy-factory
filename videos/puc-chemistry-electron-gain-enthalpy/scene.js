@@ -128,7 +128,7 @@ const YQ = ['What does a negative electron gain enthalpy tell you?', 'Why are th
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="nn">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
 const nx = PUC.next($('#sF'), { label: 'NEXT · EP 34', topic: 'In a shared bond, who pulls harder? Electronegativity', y: 764 });
-const avD = PUC.avatar($('#sS'), { x: 976 + 36, y: 270 + 480, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'Helium says no, unless you pay!' });
+const avD = PUC.avatar($('#sS'), { x: 160 + 36, y: 270 + 70, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'Helium says no, unless you pay!' });
 
 /* ---------- helpers ---------- */
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
