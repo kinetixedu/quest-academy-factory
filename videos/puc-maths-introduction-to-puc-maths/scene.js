@@ -36,7 +36,7 @@ const OUT = id => T0(id) - 0.32;
 /* ---------- title card: four question chips ---------- */
 const TC = [['COUNT', '?'], ['SPEED', '?'], ['ANGLE', '?'], ['CURVE', '?']];
 $('#tcs').innerHTML = TC.map(([n, v], i) => `<div class="tc" id="tc${i}" style="left:${384 + i * 296}px"><div class="ln">${n}</div><div class="lv a">${v}</div></div>`).join('');
-const tTc = [0, 1, 2, 3].map(i => wt('H1', 'maths') + i * 0.18);
+const tTc = [0, 1, 2, 3].map(i => wt('H1', 'How') + i * 0.2);
 
 /* ---------- H ---------- */
 const HR = [['users', 'Count', 'FRIENDS AT THE GATE', '4'], ['gauge', 'Speed', 'KILOMETRES PER HOUR', '15 <span style="font-size:24px">km/h</span>'], ['angle', 'Angle', 'LEANING INTO A TURN', '45°'], ['curve', 'Curve', 'THE PATH OF A THROWN BALL', '']];

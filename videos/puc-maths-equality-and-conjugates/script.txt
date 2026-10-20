@@ -1,15 +1,14 @@
 H1|0.4|Take three plus two i, and three minus two i. Both numbers carry an imaginary part.
 H2|0.45|Add them, and you get six. Multiply them, and you get thirteen. Every i has vanished.
 H3|0.35|Aarav saw the same idea on his ride home today.
-H4|0.4|His friend Ravi waited across the road, exactly opposite. Same distance along, same distance from the middle line, just on the other side.
+H4|0.4|His friend Ravi waited exactly opposite, across the road. Same distance along, just on the other side of the middle line.
 H5|0.65|Complex numbers have partners like that. Today: when are two complex numbers equal, and what is a conjugate?
 E1|0.35|First question. When are two complex numbers equal?
 E2|0.4|Every complex number has two parts: a real part, a, and an imaginary part, b, next to i.
 E3|0.4|Two complex numbers are equal only when both parts match. Real with real, imaginary with imaginary.
 E4|0.4|Watch the match test. Three plus two i, against three plus two i. Real parts match. Imaginary parts match. Equal.
 E5|0.4|Now three plus two i, against three minus two i. The real parts match, but the imaginary parts do not. Not equal.
-E6|0.4|Last, two plus three i, against three plus two i. Same digits, swapped. Neither part matches.
-E7|0.65|So one equation between complex numbers gives two equations between real numbers. That is the power of equality.
+E7|0.65|So one complex equation gives two real equations. That is the power of equality.
 C1|0.35|Now, the partner from the hook.
 C2|0.4|The conjugate of a plus i b is a minus i b.
 C3|0.4|Keep the real part. Flip the sign of the imaginary part. That is all.
@@ -18,7 +17,7 @@ C5|0.4|Watch z move. Its conjugate follows, like a reflection in the real axis, 
 C6|0.4|When z climbs up, z bar dips down. Real parts stay equal. Imaginary parts stay opposite.
 C7|0.65|And when z lands on the middle line, the two meet. A real number is its own conjugate.
 K1|3.2|Quick one. Is six i its own conjugate, like a real number? Pause and think.
-K2|0.65|No! Six i is zero plus six i. Flip the imaginary sign: minus six i. Only numbers on the middle line are their own conjugates.
+K2|0.65|No! Six i is zero plus six i, so its conjugate is minus six i. Only real numbers are their own conjugates.
 S1|0.4|Side by side. The conjugate flips one sign. Three plus two i becomes three minus two i: a mirror image across the line.
 S2|0.6|The negative flips both signs. Three plus two i becomes minus three minus two i, through the centre.
 S3|3.2|Now you try. What is the conjugate of four minus seven i? Pause and decide.
@@ -27,29 +26,29 @@ T1|0.7|Remember this. Keep the real part, flip the sign of the imaginary part.
 D1|0.35|Now the magic from the hook. Why do the i's vanish?
 D2|0.75|Step one. Add z and z bar. Real parts add, and imaginary parts add.
 D3|0.75|Step two. Plus i b and minus i b cancel. What is left is two a, a real number.
-D4|0.75|Step three. Multiply z by z bar. The pattern x plus y, times x minus y, gives x squared minus y squared.
+D4|0.75|Step three. Multiply z by z bar. x plus y, times x minus y, is x squared minus y squared.
 D5|0.75|Step four. i squared is minus one. So minus i squared b squared turns into plus b squared.
 D6|0.65|So z times z bar is a squared plus b squared. Always real, never negative. For three plus two i: nine plus four, thirteen.
 W1|0.35|Now, one worked example.
 W2|0.5|Find the complex number z, if z plus two times z bar equals nine minus four i.
 W3|0.75|Step one. Let z be x plus i y, with x and y real. Then z bar is x minus i y.
-W4|0.75|Step two. Collect the parts. x plus two x is three x. And i y minus two i y is minus i y.
+W4|0.75|Step two. Collect: x plus two x is three x, and i y minus two i y is minus i y.
 W5|0.75|Step three. Equate real parts. Three x equals nine, so x is three.
 W6|0.75|Step four. Equate imaginary parts. Minus y equals minus four, so y is four.
 W7|0.65|So z is three plus four i. Check: three plus four i, plus six minus eight i, is nine minus four i.
 X1|0.35|Now, the exam trap.
-X2|0.4|Solve: one plus i, times x, plus one minus i, times y, equals two plus four i. Many students write x is two and y is four.
-X3|0.65|But x and y sit inside both parts. Collect first: real part x plus y, imaginary part x minus y. So x plus y is two, x minus y is four. x is three, y is minus one.
-J1|0.6|Where is this asked? In JEE Main and JEE Advanced, as equations in z and z bar, solved by equating parts. And in PUC board exams, as direct questions.
+X2|0.4|Solve: one plus i, times x, plus one minus i, times y, equals two plus four i. Many students write x is two, y is four.
+X3|0.65|But x and y sit inside both parts. Collect first: x plus y is two, and x minus y is four. So x is three, and y is minus one.
+J1|0.6|Where is this asked? In JEE Main and JEE Advanced, as equations in z and z bar. And in PUC board exams, as direct questions.
 Q1|5.4|Exam level now. Find the sum of the real parts of every element of S. Pause and solve.
 A1|0.5|The answer is B. Zero.
 A2|0.5|Write z as x plus i y. Real part: x squared minus y squared plus x. Imaginary part: y times two x minus one.
 A3|0.5|Both parts must be zero. So y is zero, or x is one half.
-A4|0.5|If y is zero, x squared plus x is zero: z is zero or minus one. If x is one half, y squared is three quarters: two more solutions.
+A4|0.5|If y is zero, z is zero or minus one. If x is one half, y squared is three quarters: two more solutions.
 A5|0.6|Real parts: zero, minus one, one half and one half. They add up to zero.
 F1|3.2|Here is your recap. Screenshot this card.
 Y1|0.4|Can you answer these three questions without help?
 Y2|0.9|One. What is the conjugate of minus two plus seven i?
-Y3|0.9|Two. If x plus three i equals four plus y i, with x and y real, find x and y.
+Y3|0.9|Two. If x plus three i equals four plus y i, find x and y.
 Y4|1.1|Three. Why is z times z bar never negative?
-N1|0.3|Next time: Aarav rides four kilometres east and three north. How far is he from home, and in which direction? The modulus and the argument.
+N1|0.3|Next time: Aarav rides four kilometres east and three north. How far, and which way? The modulus and the argument.

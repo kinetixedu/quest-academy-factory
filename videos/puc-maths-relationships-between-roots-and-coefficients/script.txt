@@ -1,51 +1,51 @@
-H1|0.4|Diya's homework said: for two x squared minus seven x plus three equals zero, find the sum and the product of the roots.
-H2|0.45|She solved the whole equation. The roots are three and one half. Sum, three and a half. Product, one and a half.
+H1|0.4|Diya's homework: for two x squared minus seven x plus three equals zero, find the sum and the product of the roots.
+H2|0.45|She solved it fully. The roots are three and one half. Sum, three and a half. Product, one and a half.
 H3|0.35|Aarav read the same two answers straight off the equation, in two seconds.
 H4|0.5|Seven over two, and three over two. How did he do it without solving?
-H5|0.65|The sum and the product of the roots are hiding inside a, b and c. Today: the relationships between roots and coefficients.
+H5|0.65|The sum and the product are hiding inside a, b and c. Today: relationships between roots and coefficients.
 P1|0.35|First, names. We call the two roots alpha and beta.
-P2|0.4|Alpha and beta are the two answers of a x squared plus b x plus c equals zero. They can be real, or a complex pair.
+P2|0.4|They are the two answers of a x squared plus b x plus c equals zero, real or a complex pair.
 P3|0.4|From the quadratic formula, alpha is minus b plus root D, over two a.
 P4|0.65|And beta is minus b minus root D, over two a. Same parts, opposite sign in the middle.
-L1|0.4|Now watch a sum stay still while everything else moves. Here is y equals x squared minus four x plus c, with c counting up.
+L1|0.4|Now watch a sum stay still while everything else moves. y equals x squared minus four x plus c, with c counting up.
 L2|0.4|The two roots slide towards each other, but their midpoint never moves. It stays pinned at two.
 L3|0.4|So their sum stays four the whole time. Look at the readout.
 L4|0.4|Their product does change. It is exactly c. At c equals three, the roots are one and three, and one times three is three.
-L5|0.4|Past c equals four, the roots become complex. The sum is still four, because the imaginary parts cancel.
+L5|0.4|Past four, the roots become complex. The sum is still four: the imaginary parts cancel.
 L6|0.65|And the product is still c. At c equals five, two plus i, times two minus i, is four minus i squared, which is five.
 L7|3.2|Quick one. In x squared minus four x plus c, what is the sum of the roots when c is one hundred? Pause and think.
-L8|0.65|Still four! c only moves the curve up and down, never sideways. The midpoint stays at two, so the sum stays four.
+L8|0.65|Still four! c only moves the curve up and down. The midpoint stays at two, so the sum stays four.
 R1|0.4|Now let us prove it for every quadratic.
 R2|0.75|Step one. Add the two roots. The root D parts have opposite signs, so they cancel.
 R3|0.75|Step two. What is left is minus two b over two a, which is minus b over a.
-R4|0.75|Step three. Multiply the roots. On top, a plus times a minus gives a difference of squares. That is b squared minus D.
+R4|0.75|Step three. Multiply the roots. A plus times a minus gives a difference of squares: b squared minus D.
 R5|0.75|Step four. Put D back in. b squared minus b squared plus four a c leaves four a c. Over four a squared, that is c over a.
 R6|0.65|So the sum of the roots is minus b over a. The product of the roots is c over a.
 S1|0.4|These two numbers also tell you the signs of the roots. Side by side.
-S2|0.4|x squared minus five x plus six. Product six is positive, so the roots have the same sign. Sum five is positive, so both are positive. They are two and three.
-S3|0.6|x squared plus x minus six. Product minus six is negative, so the roots have opposite signs. They are two and minus three.
+S2|0.4|x squared minus five x plus six. Product six is positive, so same signs. Sum five is positive, so both positive. They are two and three.
+S3|0.6|x squared plus x minus six. Product minus six is negative, so opposite signs. They are two and minus three.
 K1|3.2|Your turn. x squared minus three x minus ten. Can both roots be positive? Pause and decide.
-K2|0.65|No! The product is minus ten, which is negative. So one root is positive and one is negative. They are five and minus two.
+K2|0.65|No! The product, minus ten, is negative. So one root is positive, one negative. They are five and minus two.
 T1|0.7|Remember this. The sum of the roots is minus b over a. The product is c over a.
 W1|0.35|Now, one worked example.
-W2|0.5|Alpha and beta are the roots of x squared minus five x plus three equals zero. Find alpha squared plus beta squared.
+W2|0.5|Alpha and beta are the roots of x squared minus five x plus three. Find alpha squared plus beta squared.
 W3|0.75|Step one. Alpha plus beta is minus of minus five, over one. That is five.
 W4|0.75|Step two. Alpha beta is three over one. That is three.
 W5|0.75|Step three. Alpha plus beta, squared, is alpha squared plus two alpha beta plus beta squared. So alpha squared plus beta squared is the sum squared, minus two alpha beta.
 W6|0.75|Step four. That is twenty five minus six, which is nineteen.
-W7|0.65|Nineteen, and we never found alpha or beta themselves.
+W7|0.65|Nineteen, without ever finding alpha or beta.
 X1|0.35|Now, the exam trap.
 X2|0.4|Take two x squared minus seven x plus three again. Many students write the sum as b over a, which is minus seven over two.
-X3|0.65|But the sum is minus b over a. Minus of minus seven, over two, is plus seven over two. Check with the roots: three plus one half is three and a half.
-J1|0.6|Where is this asked? In JEE Main, as questions on expressions like alpha squared plus beta squared, built from the sum and the product, like the June twenty twenty two paper. You met this in Class ten, but it is not in the current Class eleven NCERT text.
+X3|0.65|But the sum is minus b over a: plus seven over two. Check with the roots: three plus one half is three and a half.
+J1|0.6|Where is this asked? In JEE Main, on expressions like alpha squared plus beta squared, built from the sum and product, as in June twenty twenty two. You met this in Class ten, but it is not in the current Class eleven NCERT text.
 Q1|5.4|Exam level now. Alpha and beta are the roots of this equation. Find one over alpha squared, plus one over beta squared. Pause and solve.
 A1|0.5|The answer is C. Eight thirds.
 A2|0.5|Alpha plus beta is six over two, which is three. Alpha beta is three over two.
 A3|0.5|Alpha squared plus beta squared is three squared, minus two times three halves. Nine minus three, which is six.
-A4|0.6|Over a common denominator, the expression is alpha squared plus beta squared, over alpha beta, squared. That is six over nine quarters, which is eight thirds.
+A4|0.6|Over a common denominator, that is alpha squared plus beta squared, over alpha beta, squared. Six over nine quarters, which is eight thirds.
 F1|3.2|Here is your recap. Screenshot this card.
 Y1|0.4|Can you answer these three questions without help?
 Y2|0.9|One. Find the sum and the product of the roots of three x squared plus six x minus nine.
 Y3|0.9|Two. Why do the imaginary parts cancel when you add a conjugate pair?
 Y4|1.1|Three. If alpha and beta are the roots of x squared minus seven x plus ten, find alpha squared plus beta squared.
-N1|0.3|Next time: we run it backwards. Give me any two roots, and we build their equation.
+N1|0.3|Next time: we run it backwards. Give any two roots, and we build their equation.

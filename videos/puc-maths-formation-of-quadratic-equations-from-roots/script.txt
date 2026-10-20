@@ -1,12 +1,12 @@
 H1|0.4|Most of the time, we are given an equation and asked for its roots.
 H2|0.45|Ravi turned it around for Aarav. I am thinking of a quadratic. Its roots are two and five. What is my equation?
 H3|0.35|Aarav had it on his study table in ten seconds.
-H4|0.5|Then Ravi pushed harder. Now the roots are one plus two i and one minus two i. Can you still build it, with no i anywhere in the equation?
+H4|0.5|Then Ravi pushed harder. Roots one plus two i and one minus two i. Can you still build it, with no i in the equation?
 H5|0.65|Yes. Today we build quadratic equations backwards, from their roots.
 P1|0.35|Start with the simplest idea. A product is zero only when one of its factors is zero.
 P2|0.4|So x minus two, times x minus five, equals zero, is true when x is two, and when x is five. Nowhere else.
 P3|0.65|Multiply it out. x squared minus seven x plus ten equals zero. That is Ravi's equation.
-L1|0.4|Now let the roots move, and watch the equation rebuild itself. We keep the roots at equal distances from three.
+L1|0.4|Now let the roots move, and watch the equation rebuild itself. The roots stay equally far from three.
 L2|0.4|Roots one and five. Their sum is six, their product is five. The equation is x squared minus six x plus five.
 L3|0.4|Slide them together. The sum stays six, the product grows, and the curve lifts.
 L4|0.4|Roots three and three. The product is nine. x squared minus six x plus nine, which is x minus three, squared.
@@ -22,7 +22,7 @@ R5|0.75|Step four. In words: x squared, minus the sum times x, plus the product,
 R6|0.65|This is the last episode run backwards. There, the sum was minus b over a. Here, with a equal to one, the middle coefficient is minus the sum.
 S1|0.4|But is it the only equation with those roots? Side by side.
 S2|0.4|x squared minus seven x plus ten. Its curve crosses the axis at two and five.
-S3|0.6|Two x squared minus fourteen x plus twenty. Every coefficient is doubled. The curve is steeper, but it crosses at exactly the same two points.
+S3|0.6|Two x squared minus fourteen x plus twenty. Every coefficient is doubled. The curve is steeper, but it crosses at the same two points.
 S4|0.4|So any non zero number k times the equation has the same roots. That is why we say a quadratic, not the quadratic.
 K1|3.2|Your turn. Does minus x squared plus seven x minus ten equal zero have roots two and five? Pause and decide.
 K2|0.65|Yes! It is minus one times Ravi's equation. The curve flips upside down, but it still crosses the axis at two and five.
@@ -35,13 +35,13 @@ W5|0.75|Step three. Put them in. x squared minus two x plus five equals zero.
 W6|0.65|Every coefficient is real. A conjugate pair always gives a real sum and a real product.
 X1|0.35|Now, the exam trap.
 X2|0.4|Roots two and five. Many students write x squared plus seven x plus ten. The sign of the middle term is wrong.
-X3|0.65|Its roots are minus two and minus five. The middle term is minus the sum. The right answer is x squared minus seven x plus ten. Always check by putting a root back in.
-J1|0.6|Where is this asked? In JEE Main, as questions where you build a new equation from the roots of an old one, like the April twenty twenty four paper. It is in the JEE Main syllabus, but not in the current NCERT text.
+X3|0.65|Its roots are minus two and minus five. The middle term is minus the sum. The right answer is x squared minus seven x plus ten. Always check with a root.
+J1|0.6|Where is this asked? In JEE Main, where you build a new equation from the roots of an old one, as in April twenty twenty four. It is in the JEE Main syllabus, not in the current NCERT text.
 Q1|5.4|Exam level now. Alpha and beta are the roots of this equation. Which equation has the roots alpha squared and beta squared? Pause and solve.
 A1|0.5|The answer is A.
 A2|0.5|For the old equation, alpha plus beta is three and alpha beta is one.
 A3|0.5|New sum. Alpha squared plus beta squared is the sum squared, minus two alpha beta. Nine minus two, which is seven.
-A4|0.6|New product. Alpha squared times beta squared is alpha beta, squared, which is one. So the equation is x squared minus seven x plus one.
+A4|0.6|New product. Alpha squared beta squared is alpha beta, squared: one. So the equation is x squared minus seven x plus one.
 F1|3.2|Here is your recap. Screenshot this card.
 Y1|0.4|Can you answer these three questions without help?
 Y2|0.9|One. Form a quadratic whose roots are three and minus four.

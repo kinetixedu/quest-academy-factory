@@ -9,27 +9,25 @@ P3|0.4|Watch it for y equals x squared, with x running from minus three to three
 P4|0.4|Minus three gives nine. Minus two gives four. Minus one gives one. Zero gives zero.
 P5|0.65|Then one, four and nine again. Join the dots, and a U shape appears. It is called a parabola.
 I1|0.35|Two shapes from earlier in the series are even simpler.
-I2|0.4|The identity function, y equals x, gives back whatever you put in. Its graph is a straight line through the origin.
-I3|0.65|A constant function, like y equals three, gives the same output every time. Its graph is a flat line.
+I2|0.4|The identity, y equals x, gives back what you put in: a straight line through the origin.
+I3|0.65|A constant function, like y equals three, gives the same output every time: a flat line.
 L1|0.35|Now watch the power of x grow. y equals x to the power n.
 L2|0.4|At n equals one, it is the straight line.
 L3|0.4|At n equals two, the line bends into the U. A negative times a negative is positive.
-L4|0.65|At n equals three, the left arm flips down. Minus two cubed is minus eight. The cube keeps the sign, so we get an S bend.
+L4|0.65|At n equals three, the left arm flips down. Minus two cubed is minus eight. The cube keeps the sign: an S bend.
 C1|0.4|Side by side. For x squared, minus two and two both give four. It is a mirror image, and it never goes below zero.
 C2|0.6|For x cubed, minus two gives minus eight. The curve climbs from far below to far above.
 C3|3.2|Now you try. Can x squared ever equal minus four? Pause and decide.
-C4|0.65|No! A square is never negative. So the range of x squared is zero and above. The range of x cubed is every real number.
+C4|0.65|No! A square is never negative. So x squared has range zero and above. x cubed takes every real number.
 T1|0.7|Remember this. Read the domain along the x axis, and the range up the y axis.
-R1|0.35|Shape five. The reciprocal function, y equals one over x.
-R2|0.4|We cannot divide by zero, so zero is not in the domain. There is a gap at the origin.
-R3|0.4|Watch x come towards zero. One gives one. A half gives two. A tenth gives ten.
-R4|0.4|The curve shoots up, but never touches the y axis. As x grows, y shrinks towards zero, but never reaches it.
-R5|0.65|For negative x, the same thing happens, upside down. Two curves, in opposite corners.
-R6|3.2|Quick one. Can one over x ever equal zero? Pause and think.
-R7|0.65|Never! One divided by any number is never zero. So zero is missing from the range too.
-V1|0.35|Shape six. The modulus function, y equals mod x.
-V2|0.4|For positive x, it copies the line y equals x. For negative x, it flips that arm up above the axis.
-V3|0.65|So the graph is a V, with its point at the origin. Its range is zero and above.
+R1|0.35|Shapes five and six came in the last episode: one over x, and mod x. Now read them like a detective.
+R2|0.4|Shine a light down onto the x axis. One over x casts a shadow everywhere except zero. So its domain leaves out zero.
+R3|0.4|Now shine it across onto the y axis. The curve never reaches height zero, so its range leaves out zero too.
+R4|0.65|Mod x casts a shadow on the whole x axis. On the y axis, its shadow starts at zero and goes up.
+U1|0.4|Side by side. The U of x squared and the V of mod x look alike. Both pass through the origin, and neither goes below the x axis.
+U2|0.6|But the V has a sharp corner and straight arms. The U is smooth and round at the bottom.
+U3|3.2|Quick one. A graph passes through the origin, never goes below the x axis, and has a sharp corner. Which is it? Pause and think.
+U4|0.65|Mod x! The sharp corner gives it away. The graph of x squared is smooth.
 W1|0.35|Now, one worked example.
 W2|0.5|Where do the graphs of y equals x squared and y equals mod x meet?
 W3|0.75|Step one. For x zero or more, mod x is x. So x squared equals x, which gives x equals zero or one.
@@ -37,17 +35,17 @@ W4|0.75|Step two. For negative x, mod x is minus x. So x squared equals minus x,
 W5|0.75|Step three. The meeting points are minus one comma one, zero comma zero, and one comma one.
 W6|0.65|The U and the V meet three times. The picture agrees with the algebra.
 X1|0.35|Now, the exam trap.
-X2|0.4|Find the range of x squared, for x from minus one to two. Many students square the two ends and write one to four.
+X2|0.4|Find the range of x squared, for x from minus one to two. Many students square the ends and write one to four.
 X3|0.65|But the U dips down to zero at x equals zero, which is inside the interval. The true range is zero to four.
-J1|0.6|Where is it asked? In JEE Main, as equations like x squared minus mod x minus twelve equals zero, where you count the solutions.
+J1|0.6|Where is it asked? In JEE Main, in equations like x squared minus mod x minus twelve equals zero: count the solutions.
 Q1|5.4|Exam level now. How many points do these two graphs share? Pause and solve.
 A1|0.5|The answer is B. Two points.
 A2|0.5|For x zero or more, x cubed equals x. So x is zero or one.
-A3|0.5|For negative x, x cubed equals minus x. That needs x squared to be minus one, which is impossible.
+A3|0.5|For negative x, x cubed equals minus x. That needs x squared to be minus one: impossible.
 A4|0.6|On the left, the S bend goes down while the V goes up. So, only two points.
 F1|3.2|Here is your recap. Screenshot this card.
 Y1|0.4|Can you answer these three questions without help?
 Y2|0.9|One. Which of the six graphs never touches either axis?
 Y3|0.9|Two. What is the range of x squared, for x from minus two to one?
 Y4|1.1|Three. Where does y equals x meet y equals one over x?
-N1|0.3|Next time: a canteen bill adds the cost of tea and the cost of a snack. Can we add two functions? Combining and comparing functions.
+N1|0.3|Next time: a canteen bill adds the cost of tea and a snack. Can we add two functions? Combining and comparing functions.

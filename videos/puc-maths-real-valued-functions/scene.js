@@ -225,7 +225,7 @@ M.on(t => {
     const out = OUT('K3');
     M.vis($('#ka'), t, tK1 + 0.1, out, { dx: -60, dy: 0, ...o });
     [0, 1].forEach(i => M.vis($('#ka' + i), t, wt('K1', 'hours') - 0.1 + i * 0.2, 1e9, { dy: 14 }));
-    M.vis($('#kaC0'), t, wt('K1', 'numbers') - 0.1, 1e9, POP); M.vis($('#kaC1'), t, wt('K1', 'numbers', 1) - 0.1, 1e9, POP); M.vis($('#kaP'), t, wt('K1', 'real') - 0.1, 1e9, POP);
+    M.vis($('#kaC0'), t, wt('K1', 'numbers') - 0.1, 1e9, POP); M.vis($('#kaC1'), t, wt('K1', 'Both') - 0.1, 1e9, POP); M.vis($('#kaP'), t, wt('K1', 'real') - 0.1, 1e9, POP);
     M.vis($('#kb'), t, T0('K2') - 0.1, out, { dx: 60, dy: 0, ...o });
     [0, 1, 2].forEach(i => M.vis($('#kb' + i), t, wt('K2', 'student') - 0.1 + i * 0.2, 1e9, { dy: 14 }));
     M.vis($('#kbC1'), t, wt('K2', 'outputs') - 0.1, 1e9, POP); M.vis($('#kbC0'), t, wt('K2', 'inputs') - 0.1, 1e9, POP); M.vis($('#kbP'), t, wt('K2', 'valued') - 0.1, 1e9, POP);
@@ -249,7 +249,7 @@ M.on(t => {
     PUC.write($('#cF'), t, wt('C1', 't') - 0.05, 0.9);
     csol(t, tC1 + 0.4, tCs);
     M.vis($('#cr'), t, tC1 + 0.5, out, { dx: 60, dy: 0, ...o });
-    cPts.forEach((g, i) => M.vis(g, t, wt(['C2', 'C3', 'C4'][i], 'Add'), 1e9, POP));
+    cPts.forEach((g, i) => M.vis(g, t, wt(['C2', 'C3', 'C4'][i], i ? 'plus' : 'Add'), 1e9, POP));
     const cu = M.clamp((t - tCc0) / (tCc1 - tCc0)), cv = 100 * M.io(cu), cf = 9 * cv / 5 + 32;
     attr(cLine, 'x2', CXp(cv).toFixed(1)); attr(cLine, 'y2', CYp(cf).toFixed(1)); M.hide(cLine, cu <= 0);
     attr(cDot, 'cx', CXp(cv).toFixed(1)); attr(cDot, 'cy', CYp(cf).toFixed(1)); M.hide(cDot, cu <= 0 || cu >= 1);

@@ -2,7 +2,7 @@ H1|0.4|Your body temperature is not fixed. It is lowest around four in the morni
 H2|0.45|Across a day it shifts by about half a degree Celsius. Every hour gives exactly one reading.
 H3|0.35|Diya tracked this for her biology notes.
 H4|0.5|One hour in, one number out, and the number can be thirty six point eight. What kind of function is that?
-H5|0.65|It has a name. A real valued function. Let us see why, and what makes a function a real function.
+H5|0.65|It has a name: a real valued function. Let us see why, and what makes a real function.
 P1|0.35|Recall: a function sends each input to exactly one output.
 P2|0.4|If every output is a real number, the function is called real valued. Its range is R, or a part of R.
 P3|0.65|If its inputs are real numbers too, so its domain is also R or a part of R, it is called a real function.
@@ -10,39 +10,39 @@ L1|0.4|Watch Diya's function run. The input is the hour, h. The output is the te
 L2|0.4|The hour counts up, and the curve draws itself. One dot for each moment, never two.
 L3|0.4|At four in the morning, the curve hits its lowest point. In the late afternoon, its highest.
 L4|0.65|Inputs are real numbers of hours. Outputs are real numbers of degrees. So this is a real function.
-K1|0.4|Side by side. Diya's function takes hours, which are numbers, and gives degrees, which are numbers. A real function.
-K2|0.6|Now a different rule. Take each student in the class, and give back their height in centimetres. The outputs are real numbers, so it is real valued. But the inputs are students, not numbers.
+K1|0.4|Side by side. Diya's function takes hours and gives degrees. Both are numbers. A real function.
+K2|0.6|Now a different rule. Each student goes to their height in centimetres. The outputs are real numbers, so it is real valued. But the inputs are students, not numbers.
 K3|3.2|So, is the height rule a real function? Pause and decide.
 K4|0.65|No! Its range is real, but its domain is a set of students. It is real valued, but not a real function.
 T1|0.7|Remember this. Real valued means real outputs. Real function means real inputs and real outputs.
-C1|0.4|Here is a real function from your NCERT book. t of C equals nine C over five, plus thirty two. It turns Celsius into Fahrenheit.
+C1|0.4|A real function from your NCERT book: t of C equals nine C over five, plus thirty two. It turns Celsius into Fahrenheit.
 C2|0.75|Step one. Put in zero. Nine times zero over five is zero. Add thirty two. Water freezes at thirty two Fahrenheit.
-C3|0.75|Step two. Put in thirty seven, a normal body temperature. Nine times thirty seven over five is sixty six point six. Add thirty two. Ninety eight point six.
-C4|0.75|Step three. Put in one hundred. Nine times one hundred over five is one eighty. Add thirty two. Two hundred and twelve, where water boils.
+C3|0.75|Step two. Put in thirty seven, a typical body temperature. That gives sixty six point six, plus thirty two. Ninety eight point six.
+C4|0.75|Step three. Put in one hundred. That gives one eighty, plus thirty two. Two hundred and twelve, where water boils.
 C5|0.65|Watch C count up. Each Celsius value gives exactly one Fahrenheit value. The points line up in a straight line.
 D1|0.4|Often a question gives only the rule. Then the domain is every real number x for which the rule gives a real number.
 D2|0.4|Take f of x equals one over x minus two. Scan x along the number line.
 D3|0.4|Every x works, except two. At two, the bottom becomes zero, and we can never divide by zero. So the domain is R minus two.
 D4|0.65|Now take the square root of x minus one. The number under the root must not be negative. So x must be one or more.
 D5|3.2|Quick one. Is x equal to one in the domain of root x minus one? Pause and think.
-D6|0.65|Yes! One minus one is zero, and the square root of zero is zero, a real number. So the domain starts at one, and includes it.
+D6|0.65|Yes! The root of one minus one is the root of zero, which is zero. So one is in the domain.
 W1|0.35|Now, one worked example.
 W2|0.5|Find the domain of f of x equals x squared plus two x plus one, over x squared minus eight x plus twelve.
 W3|0.75|Step one. The top is fine for every x. Only the bottom can cause trouble.
 W4|0.75|Step two. Factor the bottom. x squared minus eight x plus twelve is x minus two, times x minus six.
 W5|0.75|Step three. The bottom is zero when x is two or six.
 W6|0.75|Step four. Remove only those two numbers. The domain is R minus the set two, six.
-W7|0.65|Notice: we never needed the top. Domain questions with fractions are about the bottom.
+W7|0.65|Notice: we never needed the top. With fractions, watch the bottom.
 X1|0.35|Now, the exam trap.
 X2|0.4|Find the domain of x squared minus four, over x minus two. Many students cancel first. They get x plus two, and say the domain is all of R.
 X3|0.65|But the domain belongs to the rule as it is given. At x equals two the bottom is zero, so two is still not allowed. The domain is R minus two.
-J1|0.6|Where is this asked? In JEE Main, as find the domain of a function built from fractions, roots and logs. And in PUC boards, as find the domain and range of a real function.
+J1|0.6|Where is this asked? In JEE Main, as find the domain of a function with fractions, roots and logs. In PUC boards, as find the domain and range of a real function.
 Q1|5.4|Exam level now. How many integers are in the domain of this function? Pause and solve.
 A1|0.5|The answer is B. Five.
 A2|0.5|Under the root, nine minus x squared must be zero or more. So x runs from minus three to three.
 A3|0.5|The bottom, x squared minus one, must not be zero. So x cannot be one or minus one.
 A4|0.5|The integers from minus three to three are seven numbers.
-A5|0.6|Remove minus one and one. Five integers are left: minus three, minus two, zero, two and three.
+A5|0.6|Remove minus one and one. Five integers are left.
 F1|3.2|Here is your recap. Screenshot this card.
 Y1|0.4|Can you answer these three questions without help?
 Y2|0.9|One. What is the difference between a real valued function and a real function?

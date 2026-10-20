@@ -100,8 +100,7 @@ $('#drP').innerHTML = `Also: ${K(`${A} \\cup (${B} \\cap ${Cs}) = (${A} \\cup ${
 const chip = (y) => `<div class="chip" style="background:${y ? C.ok : C.red}">${M.icon(y ? 'check' : 'x', 20, '#fff', 3)}${y ? 'TRUE' : 'FALSE'}</div>`;
 $('#knR').innerHTML = [[`2 \\times (3 + 4) = 2 \\times 3 + 2 \\times 4`, '14 = 14', 1], [`2 + (3 \\times 4) \\ne (2 + 3) \\times (2 + 4)`, '14 ≠ 30', 0]].map(([f, v, y], i) => `<div class="cm" id="kn${i}" style="top:${84 + i * 170}px"><div class="f">${K(f)}</div><div class="v" style="color:${y ? C.ok : C.red}">${v}</div>${chip(y)}</div>`).join('');
 $('#ksR').innerHTML = [[`${A} \\cap (${B} \\cup ${Cs}) = (${A} \\cap ${B}) \\cup (${A} \\cap ${Cs})`, '∩ spreads over ∪'], [`${A} \\cup (${B} \\cap ${Cs}) = (${A} \\cup ${B}) \\cap (${A} \\cup ${Cs})`, '∪ spreads over ∩ too']].map(([f, v], i) => `<div class="cm" id="ks${i}" style="top:${84 + i * 170}px"><div class="f" style="font-size:30px">${K(f)}</div><div class="v" style="color:${C.ok}">${v}</div>${chip(1)}</div>`).join('');
-$$ = s => [...document.querySelectorAll(s)];
-$$('#sK .cm .chip').forEach(c => { c.style.top = '84px'; });
+document.querySelectorAll('#sK .cm .chip').forEach(c => { c.style.top = '84px'; });
 const th1 = PUC.think($('#th1'), { q: 'For sets, does union spread over intersection too?', opts: ['Yes', 'No'], right: 0, why: 'Yes: A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C). Both distributive laws hold.' });
 
 /* ---------- statement ---------- */
@@ -282,7 +281,7 @@ M.on(t => {
     Object.keys(wT).forEach((n, i) => M.vis(wT[n], t, T0('W2') + 0.8 + i * 0.1, 1e9, POP));
     const s1 = M.io((t - tW[0]) / 0.4), s2 = M.io((t - tW[1]) / 0.4), s3 = M.io((t - tW[2]) / 0.4);
     const un = mix(mix('#FFFFFF', HIT, s1), '#FFFFFF', s2);
-    mV; wV.fill('ab', un); wV.fill('a', s3 > 0 ? mix(un, BCB, s3) : un); wV.fill('b', s3 > 0 ? mix(un, ACB, s3) : un);
+    wV.fill('ab', un); wV.fill('a', s3 > 0 ? mix(un, BCB, s3) : un); wV.fill('b', s3 > 0 ? mix(un, ACB, s3) : un);
     wV.fill('out', mix('#FFFFFF', HIT, s2));
     M.vis($('#wP'), t, tW[4] + 0.2, 1e9, POP);
   }

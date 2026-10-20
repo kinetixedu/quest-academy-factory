@@ -70,12 +70,11 @@ const pRL = txt(hs, 456, 532, 'RAVI', { 'text-anchor': 'end', 'font-size': 16, f
 /* ---------- E: equality + match test ---------- */
 $('#eq1').innerHTML = K(`${re('a')} + ${im('b')}\\,${iv('i')} = ${re('c')} + ${im('d')}\\,${iv('i')}`);
 $('#eq2').innerHTML = K(`\\iff\\ ${re('a = c')}\\ \\text{and}\\ ${im('b = d')}`);
-const MR = [[cz(3, 2), cz(3, 2), 1, 1], [cz(3, 2), cz(3, -2), 1, 0], [cz(2, 3), cz(3, 2), 0, 0]];
+const MR = [[cz(3, 2), cz(3, 2), 1, 1], [cz(3, 2), cz(3, -2), 1, 0]];
 const mcH = (lab, ok, x) => `<div class="mc" style="left:${x}px;background:${ok ? C.ok : C.red}">${M.icon(ok ? 'check' : 'x', 16, '#fff', 3)}${lab}</div>`;
-$('#mrs').innerHTML = MR.map(([p, q, r, i], k) => `<div class="mrow" id="mr${k}" style="top:${84 + k * 116}px"><div class="mf">${K(`${p} \\quad\\text{vs}\\quad ${q}`)}</div>${mcH('REAL', r, 22)}${mcH('IMAGINARY', i, 142)}<div class="vd" style="background:${r && i ? C.ok : C.red}">${r && i ? 'EQUAL' : 'NOT EQUAL'}</div></div>`).join('');
+$('#mrs').innerHTML = MR.map(([p, q, r, i], k) => `<div class="mrow" id="mr${k}" style="top:${96 + k * 170}px"><div class="mf">${K(`${p} \\quad\\text{vs}\\quad ${q}`)}</div>${mcH('REAL', r, 22)}${mcH('IMAGINARY', i, 142)}<div class="vd" style="background:${r && i ? C.ok : C.red}">${r && i ? 'EQUAL' : 'NOT EQUAL'}</div></div>`).join('');
 const tM = [[wt('E4', 'Three') - 0.1, wt('E4', 'Real'), wt('E4', 'Imaginary'), wt('E4', 'Equal')],
-  [T0('E5'), wt('E5', 'real'), wt('E5', 'imaginary'), wt('E5', 'Not')],
-  [T0('E6') + 0.1, wt('E6', 'Neither'), wt('E6', 'Neither') + 0.15, wt('E6', 'matches')]];
+  [T0('E5'), wt('E5', 'real'), wt('E5', 'imaginary'), wt('E5', 'Not')]];
 const avA = PUC.avatar($('#sE'), { x: 976 + 36, y: 270 + 470, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'Same street, other floor? A different home.' });
 
 /* ---------- C: conjugate + live mirror ---------- */
@@ -213,7 +212,7 @@ M.on(t => {
     M.vis($('#eP3'), t, wt('E7', 'one') - 0.1, 1e9, POP);
     M.vis($('#em'), t, T0('E4') - 0.1, out, { dx: 60, dy: 0, ...o });
     tM.forEach(([a, r, i, v], k) => { const row = $('#mr' + k), c = row.querySelectorAll('.mc'); M.vis(row, t, a, 1e9, { dy: 16 }); M.vis(c[0], t, r, 1e9, POP); M.vis(c[1], t, i, 1e9, POP); M.vis(row.querySelector('.vd'), t, v - 0.05, 1e9, POP); });
-    avA(t, wt('E6', 'swapped') + 0.2, out);
+    avA(t, T1('E5') + 0.1, out);
   }
 
   /* C: conjugate + live mirror + think */
@@ -306,7 +305,7 @@ M.on(t => {
   if (xOn) {
     M.vis($('#trap'), t, tX1 + 0.05, 1e9, { dy: 36 }); M.vis($('#wa'), t, T0('J1') - 0.1, 1e9, { dy: 36 });
     trap(t, { tin: tX1, tWrong: wt('X2', 'Many') - 0.1, tStrike: wt('X3', 'both') - 0.1, tRight: wt('X3', 'three') - 0.2 });
-    [wt('X3', 'real'), wt('X3', 'imaginary'), wt('X3', 'three')].forEach((tt, i) => { const el = $('#tp' + i); M.vis(el, t, tt - 0.1, 1e9, { dx: 20, dy: 0 }); });
+    [wt('X3', 'Collect'), wt('X3', 'minus'), wt('X3', 'So')].forEach((tt, i) => { const el = $('#tp' + i); M.vis(el, t, tt - 0.1, 1e9, { dx: 20, dy: 0 }); });
     where(t, { tin: T0('J1'), tLight: [wt('J1', 'JEE'), wt('J1', 'Advanced'), wt('J1', 'PUC')], tType: wt('J1', 'equations') });
   }
 

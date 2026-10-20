@@ -1,0 +1,53 @@
+H1|0.4|Spin a bicycle wheel as fast as you like. How high can the tyre valve go?
+H2|0.4|Above the hub, never more than one radius. Below the hub, never more than one radius down.
+H3|0.35|Aarav checked this with a measuring tape on his front wheel.
+H4|0.5|However hard he spun it, the height stayed between minus one radius and plus one radius.
+H5|0.65|In maths, that limit is called the range of sine. Today, the domain and range of all six functions.
+I1|0.4|Two words from the functions chapter. The domain is every input you are allowed to put in.
+I2|0.65|The range is every output that actually comes out.
+L1|0.4|Now let P go round the unit circle, and track sine theta on a meter.
+L2|0.4|Sine theta is the height of P. It climbs to one at ninety degrees.
+L3|0.4|It falls to minus one at two hundred and seventy degrees.
+L4|0.65|P keeps going round and round, but the height only repeats. It never goes above one, or below minus one.
+D1|0.35|Here is the proof, in four steps.
+D2|0.75|Step one. P is on a circle of radius one. So its x and its y are never more than one away from zero.
+D3|0.75|Step two. So cosine theta lies from minus one to one, and so does sine theta.
+D4|0.75|Step three. Every real number theta, positive or negative, gives a point P. So the domain of sine and cosine is all real numbers.
+D5|0.65|Step four. Every height from minus one to one is reached. So the range of both is the closed interval, minus one to one.
+G1|0.4|Tangent is different. Tangent theta is sine theta divided by cosine theta.
+G2|0.4|Let theta creep up towards ninety degrees. Cosine shrinks towards zero.
+G3|0.4|And tangent shoots up. Five point six, eleven, fifty seven, five hundred and seventy three.
+G4|0.65|At exactly ninety degrees, cosine is zero, and we can never divide by zero. Tangent is not defined there.
+G5|0.75|Cosine is zero at every odd multiple of pi by two. So tangent's domain is all real numbers except those points. But its range is all real numbers.
+R1|0.4|Secant is one over cosine, so it skips the same points as tangent.
+R2|0.65|Cosine is never bigger than one in size. So one over cosine is never smaller than one in size. Secant is at least one, or at most minus one.
+R3|0.65|Cosecant and cotangent have sine underneath. They skip every multiple of pi, where sine is zero.
+K1|0.4|Side by side. Sine accepts every real number, but its range is small, only minus one to one.
+K2|0.6|Tangent is the other way round. Its domain has gaps, but its range is every real number.
+K3|3.2|Now you try. Can sine theta ever equal one point two? Pause and decide.
+K4|0.65|No! One point two is more than one, and sine theta is a height on a circle of radius one.
+T1|0.7|Remember this. Sine and cosine take any angle, but their answers stay between minus one and one.
+Z1|3.2|Quick one. Is tangent defined at theta equals pi? Pause and think.
+Z2|0.65|Yes! Cosine pi is minus one, not zero. So tangent pi is zero. Only the odd multiples of pi by two are missing.
+W1|0.35|Now, one worked example.
+W2|0.5|Find the range of three plus two sine theta.
+W3|0.75|Step one. Sine theta lies from minus one to one.
+W4|0.75|Step two. Multiply by two. Two sine theta lies from minus two to two.
+W5|0.75|Step three. Add three. Three plus two sine theta lies from one to five.
+W6|0.65|So the range is one to five. The wave is squeezed between those two lines.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students think: cosine lies from minus one to one, so secant does too.
+X3|0.65|But one over a small number is a big number. When cosine is one half, secant is two. Secant never lies strictly between minus one and one.
+J1|0.6|Where is this asked? In PUC exams and in JEE Main: find the range of an expression built from sine and cosine.
+Q1|5.4|Exam level now. How many integers are in the range of this function? Pause and solve.
+A1|0.5|The answer is B. Nine.
+A2|0.5|Sine theta lies from minus one to one, and it reaches both ends.
+A3|0.5|Multiply by four. Four sine theta lies from minus four to four.
+A4|0.5|Subtract three. The function lies from minus seven to one.
+A5|0.6|The integers from minus seven to one are nine in all.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What is the range of cosine theta?
+Y3|0.9|Two. Name two angles where tangent theta is not defined.
+Y4|1.1|Three. Can secant theta equal one half? Why not?
+N1|0.3|Next time: trace the valve's height over time, and a wave appears. We draw the graphs of sine, cosine and tangent.

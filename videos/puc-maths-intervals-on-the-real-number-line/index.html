@@ -1,0 +1,126 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 7 - Intervals on the Real Number Line</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 07: intervals on the real number line (Proof board) ===== */
+:root{--x:#7A4FE0;--sa:#2F6FEB;--sab:#E7EEFD}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.x{color:var(--x)}.a{color:var(--ac)}.sa{color:var(--sa)}
+#sign{position:absolute;left:660px;top:716px;width:600px;height:124px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+#sign .ln{position:absolute;left:30px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+#sign .lv{position:absolute;left:30px;top:50px;font:700 40px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+#dfT{position:absolute;left:36px;top:84px;width:712px;font:700 42px/1.28 Poppins;letter-spacing:-.015em}
+#dfT b{color:var(--ac)}
+.sy{position:absolute;left:36px;font-size:48px;white-space:nowrap}
+.st{position:absolute;left:36px;width:712px;height:112px}
+.st .n{position:absolute;left:0;top:8px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:38px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:58px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.rd{position:absolute;left:36px;top:84px;font:600 48px/1 'IBM Plex Mono';white-space:nowrap}
+.vd{position:absolute;right:36px;top:76px;height:64px;padding:0 24px;border-radius:12px;display:flex;align-items:center;gap:10px;font:700 28px Poppins;color:#fff;white-space:nowrap}
+.bf{position:absolute;left:36px;font-size:48px;white-space:nowrap}
+.bw{position:absolute;left:36px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+#wq{position:absolute;left:36px;top:64px;font:600 30px/1.4 Poppins;width:712px}
+#wl .sol .sx{font-size:30px}
+#wl .sol .sx .katex{font-size:1.1em}
+#wRes{position:absolute;left:36px;top:496px}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 26px Poppins}
+#so .sol .sx .katex{font-size:1.08em}
+#mq .mq .katex{font-size:1.1em}
+.trapL .tx .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 1 SETS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Intervals on the Real Number <span class="acc">Line</span></div>
+    <div id="sub">Explained with one road sign</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="sign"><div class="ln">THE ROAD SIGN</div><div class="lv">Speed 20 to 40 km/h</div></div>
+
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">THE SIGN ON A NUMBER LINE · KM/H</div>
+        <svg id="hS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="hP" style="left:36px;top:496px">Are the two ends allowed?</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · RIDING TO COLLEGE</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">Riding at exactly 40: in or out?</div></div>
+    </div>
+
+    <div id="sI">
+      <div class="card full" id="il"><div class="lbl" style="left:36px;top:30px">INTERVAL · NCERT</div>
+        <div id="dfT">An <b>interval</b> is the set of all real numbers between two ends a and b, with a &lt; b.</div>
+        <div class="pillp" id="iP1" style="left:36px;top:372px">Every real number in between</div>
+        <div class="sy" id="iS" style="top:456px"></div></div>
+      <div class="card rf" id="ir"><div class="lbl" style="left:36px;top:30px">LIVE · ZOOM IN BETWEEN 31 AND 32</div>
+        <svg id="iSv" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="iP2" style="left:36px;top:496px">No gaps: an infinite set</div></div>
+    </div>
+
+    <div id="sO">
+      <div class="card full" id="ol"><div class="lbl" style="left:36px;top:30px">FOUR KINDS OF INTERVAL</div>
+        <div class="hiBox" id="oHi" style="left:20px;width:744px;height:104px"></div><div id="oSt"></div></div>
+      <div class="card rf" id="or"><div class="lbl" style="left:36px;top:30px">ON THE NUMBER LINE</div>
+        <svg id="oS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sL">
+      <div class="card full" id="la"><div class="lbl" style="left:36px;top:30px">CLOSED · [20, 40]</div>
+        <div class="rd" id="laR"></div><div class="vd" id="laV"></div>
+        <svg id="laS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp good" id="laP" style="left:36px;top:496px">40 is in</div></div>
+      <div class="card rf" id="lb"><div class="lbl" style="left:36px;top:30px">OPEN · (20, 40) · ZOOMING IN</div>
+        <div class="rd" id="lbR"></div><div class="vd" id="lbV"></div>
+        <svg id="lbS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp bad" id="lbP" style="left:36px;top:496px">40 itself is out</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sG">
+      <div class="card full" id="gl"><div class="lbl" style="left:36px;top:30px">LENGTH OF AN INTERVAL</div>
+        <div class="bf" id="gF" style="top:84px"></div><div class="bw" id="gW" style="top:150px">the same for all four kinds</div>
+        <svg id="gS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="gr"><div class="lbl" style="left:36px;top:30px">INTERVALS THAT RUN FOREVER</div>
+        <div class="bf" id="zF" style="top:84px;font-size:44px"></div><div class="bw" id="zW" style="top:150px">all the non-negative real numbers</div>
+        <svg id="zS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="zP" style="left:36px;top:496px">∞ is not a number: always a round bracket</div></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">THE PICTURE</div>
+        <svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="wRes">length 12</div></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Round leaves out. <span class="acc">Square</span> keeps in.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

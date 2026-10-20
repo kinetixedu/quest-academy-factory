@@ -1,0 +1,123 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 12 - Applications of Sets to Real-World Problems</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 12: applications of sets (Proof board) ===== */
+:root{--x:#7A4FE0;--sa:#2F6FEB;--sb:#0E8F8F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.x{color:var(--x)}.a{color:var(--ac)}.sa{color:var(--sa)}.sb{color:var(--sb)}
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:50px;font:600 40px 'IBM Plex Mono';white-space:nowrap}
+#ghN{z-index:5}
+.sv{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--soft)}
+.sv .k{position:absolute;left:24px;top:22px;font:600 26px Poppins;white-space:nowrap}
+.sv .v{position:absolute;right:24px;top:14px;font:600 40px 'IBM Plex Mono';white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.cnt{position:absolute;height:52px;padding:0 18px;border-radius:10px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+.sym{position:absolute;left:36px;font-size:60px;white-space:nowrap}
+.symL{position:absolute;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+.ex2{position:absolute;left:36px;font-size:32px;white-space:nowrap}
+.tl{position:absolute;left:36px;width:712px;height:70px;border-radius:12px;background:var(--soft)}
+.tl .f{position:absolute;left:20px;top:14px;font-size:32px;white-space:nowrap}
+.tl .r{position:absolute;right:20px;top:12px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+.st{position:absolute;left:36px;width:712px;height:116px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:34px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:56px;font:500 23px Poppins;color:var(--mute);white-space:nowrap}
+.ro2{position:absolute;left:36px;font-size:32px;white-space:nowrap}
+#bSum{position:absolute;left:36px;top:120px;font:600 64px 'IBM Plex Mono';white-space:nowrap}
+#wq{position:absolute;left:36px;top:64px;font:600 27px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.1em}
+#wl .sol .sx{font-size:27px}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 26px Poppins}
+#so .sol .sx .katex{font-size:1.1em}
+#mq .mq{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 32px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 1 SETS</div>
+    <div class="ghost" id="ghN">NOT IN CURRENT NCERT TEXT · JEE</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Applications of Sets to Real-World <span class="acc">Problems</span></div>
+    <div id="sub">Explained with one class survey</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">THE SURVEY</div><div class="ghost" style="right:36px;top:18px">EXAMPLE FIGURES</div><div id="hcs"></div>
+        <div class="pillp bad" id="hlP" style="left:36px;top:420px">25 + 18 = 43 students?</div>
+        <div class="pillp" id="hlP2" style="left:36px;top:490px">Every student likes at least one</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA · THE CLASS TRIP SURVEY</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-corridor.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">So how many students?</div></div>
+    </div>
+
+    <!-- L: n(A) + live count -->
+    <div id="sL">
+      <div class="card full" id="ll"><div class="lbl" style="left:36px;top:30px">A NEW SYMBOL</div>
+        <div class="sym" id="lS" style="top:72px"></div><div class="symL" id="lSL" style="left:200px;top:96px">the number of elements in A</div>
+        <div class="ex2" id="lE" style="top:180px"></div>
+        <div class="lbl" id="lT0" style="left:36px;top:270px">THE COUNT</div><div id="lTl"></div></div>
+      <div class="card rf" id="lv"><div class="lbl" style="left:36px;top:30px">LIVE · COUNT THE CLASS</div><div class="cnt" id="lCnt" style="right:36px;top:18px"></div>
+        <svg id="lV" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="ghost" style="right:36px;top:520px">EXAMPLE FIGURES</div></div>
+    </div>
+
+    <!-- D: the formula -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE FORMULA · 4 STEPS</div><div class="hiBox" id="dHi" style="left:20px;width:744px;height:116px"></div><div id="dSt"></div></div>
+      <div class="card rf" id="dv"><div class="lbl" style="left:36px;top:30px">WHY THE OVERLAP IS SUBTRACTED</div><div class="cnt" id="dTag" style="right:36px;top:18px"></div><svg id="dV" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- K: likes tea vs only tea + think -->
+    <div id="sK">
+      <div class="card full" id="ka"><div class="lbl" style="left:36px;top:30px">LIKES TEA · ALL OF T</div><svg id="kaS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="ro2" id="kaR" style="top:478px"></div></div>
+      <div class="card rf" id="kb"><div class="lbl" style="left:36px;top:30px">LIKES ONLY TEA · T − C</div><svg id="kbS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="ro2" id="kbR" style="top:478px"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- B: three pieces check -->
+    <div id="sB">
+      <div class="card full" id="bv"><div class="lbl" style="left:36px;top:30px">THREE PIECES · NO ONE TWICE</div><svg id="bS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="bs"><div class="lbl" style="left:36px;top:30px">ADD THE PIECES</div><div id="bSum"></div>
+        <div class="pillp good" id="bP" style="left:36px;top:260px">Same answer: 33 students</div>
+        <div class="ro2" id="bF" style="top:360px;font-size:30px"></div></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">U = 60 STUDENTS</div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="wP" style="left:36px;top:496px">25 + 10 + 18 + 7 = 60</div></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Add both. Subtract the <span class="acc">overlap</span> once.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

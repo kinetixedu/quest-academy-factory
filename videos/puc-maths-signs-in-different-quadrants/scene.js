@@ -113,7 +113,7 @@ const QL = [[452, 152, 'start'], [148, 152, 'end'], [148, 516, 'end'], [452, 516
 const qLab = QL.map(([x, y, an], k) => { const g = mk(ssv, 'g', { class: 'pp' }); txt(g, x, y - 34, ['I', 'II', 'III', 'IV'][k], { 'text-anchor': an, 'font-size': 18, 'font-weight': 600 });
   const t = mk(g, 'text', { x, y, 'text-anchor': an, 'font-family': 'IBM Plex Mono', 'font-size': 30, 'font-weight': 700, fill: C.ink });
   t.innerHTML = `(<tspan fill="${CO}">${QS[k][0]}</tspan>, <tspan fill="${SI}">${QS[k][1]}</tspan>)`; return g; });
-const SEG = [['S2', 'right'], ['S3', 'crosses'], ['S4', 'left'], ['S5', 'comes']].map(([id, w]) => [T0(id) + 0.15, wt(id, w) + 0.5]);
+const SEG = [['S2', 'right'], ['S3', 'crosses'], ['S4', 'left'], ['S5', 'back']].map(([id, w]) => [T0(id) + 0.15, wt(id, w) + 0.5]);
 const sAng = t => SEG.reduce((a, [s, e]) => a + PI / 2 * M.io((t - s) / (e - s)), 0);
 const tQs = [wt('S2', 'Cosine'), wt('S3', 'Cosine'), wt('S4', 'Cosine'), wt('S5', 'Cosine')];
 
@@ -286,13 +286,13 @@ M.on(t => {
     M.vis($('#dl'), t, wt('D2', 'Step') - 0.4, out, { dx: -60, dy: 0, ...o });
     DS.forEach((_, i) => { const el = $('#ds' + i); M.vis(el.querySelector('.n'), t, tDs[i] - 0.2, 1e9, { ...POP, sc: 0.4 }); PUC.write(el.querySelector('.sx'), t, tDs[i], 0.8); M.vis(el.querySelector('.why'), t, tDs[i] + 0.6, 1e9, { dx: -12, dy: 0 }); });
     const hiY = M.track(84, tDs.slice(1).map((tt, i) => [tt - 0.1, 84 + (i + 1) * 104]), M.SOFT)(t);
-    const hb = $('#dHi'); M.vis(hb, t, tDs[0] - 0.1, T0('D6'), { dy: 0, fade: 0.2, ody: 0 }); hb.style.top = (hiY - 12).toFixed(1) + 'px';
+    const hb = $('#dHi'); M.vis(hb, t, tDs[0] - 0.1, T1('D5') + 0.1, { dy: 0, fade: 0.2, ody: 0 }); hb.style.top = (hiY - 12).toFixed(1) + 'px';
     M.vis($('#dr'), t, tD1 + 0.05, out, { dx: 60, dy: 0, ...o });
     TB.forEach((_, i) => { const t0 = i === 2 ? tDs[0] : tRow[i]; M.vis($('#tn' + i), t, t0 - 0.1, 1e9, { dx: -12, dy: 0 });
       for (let j = 0; j < 4; j++) M.vis($(`#tc${i}_${j}`), t, i === 2 ? tTan(j) : t0 + j * 0.08, 1e9, { ...POP, sc: 0.5 }); });
     const rowY = M.track(124 + 2 * 70, [[tRow[3] - 0.1, 124 + 3 * 70], [tRow[4] - 0.1, 124 + 4 * 70], [tRow[5] - 0.1, 124 + 5 * 70]], M.SOFT)(t);
-    const tb = $('#tHi'); M.vis(tb, t, tDs[0] - 0.1, T0('D6'), { dy: 0, fade: 0.2, ody: 0 }); tb.style.top = (rowY - 3).toFixed(1) + 'px';
-    avD(t, wt('D6', 'whole'), out);
+    const tb = $('#tHi'); M.vis(tb, t, tDs[0] - 0.1, T1('D5') + 0.1, { dy: 0, fade: 0.2, ody: 0 }); tb.style.top = (rowY - 3).toFixed(1) + 'px';
+    avD(t, T1('D5') + 0.2, out);
   }
 
   /* K: 60 vs 120, then pause and think */

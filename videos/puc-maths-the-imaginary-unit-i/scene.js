@@ -115,9 +115,9 @@ const wOT = txt(ws, WO[0] + 28, WO[1] - 22, 'start = end', { 'font-size': 20, fi
 /* ---------- X / Q / F: exam segment ---------- */
 const trap = PUC.trap($('#trap'), { wrong: K(`\\sqrt{-4} \\times \\sqrt{-9} = \\sqrt{36} = 6`), right: K(`\\sqrt{-4} \\times \\sqrt{-9} = 2${I} \\times 3${I} = 6${I}^2 = -6`) });
 const ts = $('#tS');
-const tR0 = txt(ts, 40, 112, '√a × √b = √(ab)', { 'font-family': 'Poppins', 'font-size': 30, 'font-weight': 600, fill: C.ink });
-const tR1 = txt(ts, 40, 160, 'breaks when a and b', { 'font-family': 'Poppins', 'font-size': 24, 'font-weight': 600, fill: C.red });
-const tR2 = txt(ts, 40, 196, 'are both negative', { 'font-family': 'Poppins', 'font-size': 24, 'font-weight': 600, fill: C.red });
+const tQ0 = txt(ts, 40, 112, '√a × √b = √(ab)', { 'font-family': 'Poppins', 'font-size': 30, 'font-weight': 600, fill: C.ink });
+const tQ1 = txt(ts, 40, 160, 'breaks when a and b', { 'font-family': 'Poppins', 'font-size': 24, 'font-weight': 600, fill: C.red });
+const tQ2 = txt(ts, 40, 196, 'are both negative', { 'font-family': 'Poppins', 'font-size': 24, 'font-weight': 600, fill: C.red });
 const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'PUC BOARDS'], type: 'Simplify a power of i, or find n so that a power of i equals 1.' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 780,
   q: `${K(`\\displaystyle\\sum_{n=1}^{2026} ${I}^{\\,n} = \\ ?`)}`,
@@ -264,7 +264,7 @@ M.on(t => {
   if (xOn) {
     M.vis($('#trap'), t, tX1 + 0.05, 1e9, { dy: 36 }); M.vis($('#wa'), t, T0('J1') - 0.1, 1e9, { dy: 36 });
     trap(t, { tin: tX1, tWrong: wt('X2', 'Many') - 0.1, tStrike: wt('X3', 'But') - 0.1, tRight: wt('X3', 'two') - 0.1 });
-    M.vis(tR0, t, wt('X3', 'rule'), 1e9, { dy: 0 }); M.vis(tR1, t, wt('X3', 'breaks'), 1e9, { dy: 0 }); M.vis(tR2, t, wt('X3', 'negative'), 1e9, { dy: 0 });
+    M.vis(tQ0, t, wt('X3', 'rule'), 1e9, { dy: 0 }); M.vis(tQ1, t, wt('X3', 'breaks'), 1e9, { dy: 0 }); M.vis(tQ2, t, wt('X3', 'negative'), 1e9, { dy: 0 });
     where(t, { tin: T0('J1'), tLight: [wt('J1', 'JEE'), wt('J1', 'PUC')], tType: wt('J1', 'simplify') });
   }
 

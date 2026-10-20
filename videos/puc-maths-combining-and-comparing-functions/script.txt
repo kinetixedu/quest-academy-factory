@@ -1,0 +1,49 @@
+H1|0.4|At the college canteen, a cup of tea costs fifteen rupees and a samosa costs twenty.
+H2|0.45|For x friends, the tea costs fifteen x. The samosas cost twenty x.
+H3|0.35|Diya does not add the bill friend by friend. She adds the two rules.
+H4|0.5|Fifteen x plus twenty x is thirty five x. One new rule, for any number of friends.
+H5|0.65|Adding two rules to make a new rule: the algebra of real functions.
+D1|0.35|Take two real functions, f and g, on the same domain.
+D2|0.4|Their sum, f plus g, adds the two outputs at each x: f of x plus g of x.
+D3|0.4|Watch it live. f of x is x squared. g of x is two x plus one.
+D4|0.4|At every x, stack the height of g on top of f. The new height traces f plus g.
+D5|0.65|The result, x squared plus two x plus one, is x plus one, all squared: the same U, shifted one step left.
+O1|0.35|NCERT defines five ways to combine f and g.
+O2|0.75|One. The sum. f plus g, at x, is f of x plus g of x.
+O3|0.75|Two. The difference. f minus g, at x, is f of x minus g of x.
+O4|0.75|Three. A scalar multiple. Alpha f, at x, is alpha times f of x, for any real alpha.
+O5|0.75|Four. The product. f g, at x, is f of x times g of x.
+O6|0.75|Five. The quotient. f over g, at x, is f of x over g of x, but only where g of x is not zero.
+K1|0.4|Side by side. The product f g works at every x where both f and g work.
+K2|0.6|The quotient needs one more check. At x equals minus one half, g of x is zero. So f over g breaks there.
+K3|3.2|Your turn. f of x is x squared, g of x is x minus three. Is f over g defined at three? Pause and decide.
+K4|0.65|No! g of three is zero, and we can never divide by zero.
+T1|0.7|Remember this. Combine the outputs at each x. For a quotient, throw out every x where the bottom is zero.
+C1|0.35|Now, comparing functions. This goes beyond NCERT, but JEE needs it.
+C2|0.4|Two functions are equal only when they have the same domain, and the same output at every x.
+C3|0.4|Compare x, with x squared over x. Cancel the x, and they look the same.
+C4|0.6|But x squared over x is not defined at zero. Its graph has a hole at the origin. So they are not equal.
+C5|3.2|Quick one. Are mod x, and the square root of x squared, equal functions? Pause and think.
+C6|0.65|Yes! Both have domain R, and both give the same output at every x.
+W1|0.35|Now, one worked example.
+W2|0.5|Let f of x be root x, and g of x be x, for x zero or more. Find f plus g, f g, and f over g.
+W3|0.75|Step one. f plus g, at x, is root x plus x.
+W4|0.75|Step two. f g, at x, is root x times x. That is x to the power three over two.
+W5|0.75|Step three. f over g, at x, is root x over x. That is one over root x.
+W6|0.65|Step four. The bottom must not be zero, so f over g lives only where x is greater than zero.
+X1|0.35|Now, the exam trap.
+X2|0.4|f of x is root x, and g of x is root of one minus x. Many students say f plus g works everywhere.
+X3|0.65|But f plus g needs both at the same x. Root x needs x zero or more. Root of one minus x needs x one or less. So the domain is zero to one.
+J1|0.6|Where is it asked? In JEE Main, as questions that combine two functions and ask for the domain of the result.
+Q1|5.4|Exam level now. What is the domain of f over g? Pause and solve.
+A1|0.5|The answer is C.
+A2|0.5|f needs four minus x squared to be zero or more. So x runs from minus two to two.
+A3|0.5|g works for every x, so it adds no limit of its own.
+A4|0.5|But g of x is zero at x equals one and minus one. Those two must go.
+A5|0.6|So the domain is minus two to two, including the ends, but without minus one and one.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. If f of x is x plus two, and g of x is three x, what is f plus g?
+Y3|0.9|Two. If g of x is x minus five, where is f over g not defined?
+Y4|1.1|Three. Are x, and x squared over x, equal functions? Why?
+N1|0.3|Next time, we leave functions for angles. Why measure a bicycle wheel's turn by the distance it rolls? Degree and radian measures.

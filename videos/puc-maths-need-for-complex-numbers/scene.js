@@ -171,7 +171,7 @@ const wsol = PUC.solution($('#wl'), [
   [K(`x + 2 = ${I}\\ \\text{ or }\\ -${I}`)],
   [K(`x = -2 + ${I}, \\quad x = -2 - ${I}`)]], { label: 'WORKED EXAMPLE', y0: 196, dy: 76 });
 $('#wl .lbl').style.top = '30px';
-const tW = [wt('W3', 'Write'), wt('W4', 'So'), wt('W5', 'real'), wt('W6', 'With'), wt('W6', 'So')];
+const tW = [wt('W3', 'Write'), wt('W4', 'That'), wt('W5', 'real'), wt('W6', 'With'), wt('W6', 'So')];
 const wg = plot($('#wS'), { x: 60, y: 96, w: 664, h: 370, xmin: -5.2, xmax: 1.4, ymin: -1.2, ymax: 8, xt: [-4, -3, -2, -1, 1], yt: [2, 4, 6] });
 const wC = wg.curve(C.ink, 5);
 const wGap = gap($('#wS'), wg.X, wg.Y, -2, 1, '1', RC);
@@ -185,14 +185,14 @@ mk(ts, 'line', { x1: 40, y1: TYl, x2: 520, y2: TYl, stroke: C.ink, 'stroke-width
 for (let v = -2; v <= 2; v++) { mk(ts, 'line', { x1: TXv(v), y1: TYl - 8, x2: TXv(v), y2: TYl + 8, stroke: C.ink, 'stroke-width': 2 }); txt(ts, TXv(v), TYl + 40, v, { 'text-anchor': 'middle', 'font-size': 20, fill: C.ink, 'font-weight': 600 }); }
 const tArc = mk(ts, 'path', { d: `M${TXv(-1)},${TYl - 14} Q${TXv(0)},${TYl - 120} ${TXv(1)},${TYl - 14}`, fill: 'none', stroke: C.ok, 'stroke-width': 3.5 });
 const tHead = mk(ts, 'path', { d: `M${TXv(1)},${TYl - 12} l-14,-8 l3,14 z`, fill: C.ok });
-const tD0 = mk(ts, 'circle', { cx: TXv(-1), cy: TYl, r: 12, fill: C.red }), tD1 = mk(ts, 'circle', { cx: TXv(1), cy: TYl, r: 12, fill: C.ok });
+const tDa = mk(ts, 'circle', { cx: TXv(-1), cy: TYl, r: 12, fill: C.red }), tDb = mk(ts, 'circle', { cx: TXv(1), cy: TYl, r: 12, fill: C.ok });
 const tNote = txt(ts, TXv(0), TYl - 84, '(-1) × (-1) = +1', { 'text-anchor': 'middle', 'font-size': 20, fill: C.ok, 'font-weight': 600 });
 const where = PUC.where($('#wa'), { on: ['PUC BOARDS'], type: 'Show that an equation has no real solution, then solve it using i.' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 780,
   q: `${K(`x^2 - 4x + ${rc('c')} = 0, \\quad ${rc('c')} \\in \\{1, 2, 3, \\dots, 20\\}`)}<br>For how many integers c is there no real solution?`,
   opts: ['4', '15', '16', '17'], right: 2, optW: 474, optY: 300 });
 const so = PUC.solution($('#so'), [[K(`(x - 2)^2 = 4 - ${rc('c')}`)], [K(`\\text{no real } x \\iff 4 - ${rc('c')} < 0`)], [K(`\\iff ${rc('c')} > 4`)], [K(`${rc('c')} = 4: x = 2 \\text{ is real}`)], [K(`${rc('c')} = 5, \\dots, 20 \\Rightarrow 16`)]], { y0: 100, dy: 96 });
-const tSo = [wt('A2', 'Complete'), wt('A3', 'never'), wt('A3', 'more'), wt('A4', 'At'), wt('A4', 'runs')];
+const tSo = [wt('A2', 'Complete'), wt('A3', 'never'), wt('A3', 'more'), wt('A4', 'At'), wt('A4', 'five')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · why we need complex numbers', y0: 98, dy: 80, txt: [1, 0, 1, 0, 1],
   lines: ['<b>A real square is never negative</b>: x² ≥ 0 for every real x',
     K(`x^2 + 1 = 0 \\;\\Rightarrow\\; x^2 = ${red('-1')} \\;\\Rightarrow\\; \\text{no real } x`),
@@ -305,14 +305,14 @@ M.on(t => {
     const out = OUT('S3');
     M.vis($('#sl'), t, tS1 + 0.1, out, { dx: -60, dy: 0, ...o });
     PUC.write($('#slF'), t, wt('S1', 'squared') - 0.1, 0.7); M.vis(sgL.ax, t, tS1 + 0.3, 1e9, { dy: 0, fade: 0.25 });
-    sCL(x => x * x - 1, -2.7, -2.7 + 5.4 * M.io((t - wt('S1', 'dips') + 0.1) / 0.9));
+    sCL(x => x * x - 1, -2.7, -2.7 + 5.4 * M.io((t - wt('S1', 'crosses') + 0.1) / 0.9));
     sD.forEach((g, i) => M.vis(g, t, wt('S1', 'twice') + i * 0.2, 1e9, { ...POP, sc: 0.3 }));
     M.vis($('#slP'), t, wt('S1', 'twice') + 0.5, 1e9, POP);
     M.vis($('#sr'), t, T0('S2') - 0.1, out, { dx: 60, dy: 0, ...o });
     PUC.write($('#srF'), t, T0('S2') + 0.1, 0.7); M.vis(sgR.ax, t, T0('S2') + 0.2, 1e9, { dy: 0, fade: 0.25 });
-    sCR(x => x * x + 1, -2.7, -2.7 + 5.4 * M.io((t - wt('S2', 'stays') + 0.1) / 0.9));
-    M.vis(sGap, t, wt('S2', 'never'), 1e9, { dy: 0, fade: 0.2 });
-    M.vis($('#srP'), t, wt('S2', 'no') - 0.1, 1e9, POP);
+    sCR(x => x * x + 1, -2.7, -2.7 + 5.4 * M.io((t - wt('S2', 'never') + 0.1) / 0.9));
+    M.vis(sGap, t, wt('S2', 'crosses'), 1e9, { dy: 0, fade: 0.2 });
+    M.vis($('#srP'), t, wt('S2', 'No') - 0.1, 1e9, POP);
     M.vis($('#th1'), t, tS3 + 0.05, OUT('Z1'), { dy: 36, ...o });
     th1(t, { tin: tS3, tOpts: wt('S3', 'real') - 0.1, tCount: T1('S3') + 0.05, dur: 3, tAns: T0('S4') - 0.02, tWhy: wt('S4', 'never') });
   }
@@ -330,7 +330,7 @@ M.on(t => {
     M.vis($('#zh'), t, tZ6 + 0.05, OUT('I1'), { dy: 36, ...o });
     M.vis($('#zh0'), t, wt('Z5', 'Indian') - 0.1, 1e9, { dy: 16 }); PUC.write($('#zhF0'), t, wt('Z5', 'negative'), 0.8);
     M.vis($('#zh1'), t, wt('Z6', 'Cardan') - 0.1, 1e9, { dy: 16 });
-    PUC.write($('#zhF1'), t, wt('Z6', 'add') - 0.1, 0.8); PUC.write($('#zhF2'), t, wt('Z6', 'got') - 0.1, 1.0);
+    PUC.write($('#zhF1'), t, wt('Z6', 'puzzle') - 0.1, 0.8); PUC.write($('#zhF2'), t, wt('Z6', 'got') - 0.1, 1.0);
     M.vis($('#zhP'), t, wt('Z6', 'useless') - 0.1, 1e9, POP);
   }
 
@@ -400,10 +400,10 @@ M.on(t => {
   if (xOn) {
     M.vis($('#trap'), t, tX1 + 0.05, 1e9, { dy: 36 }); M.vis($('#wa'), t, T0('J1') - 0.1, 1e9, { dy: 36 });
     trap(t, { tin: tX1, tWrong: wt('X2', 'Many') - 0.1, tStrike: wt('X3', 'But') - 0.1, tRight: wt('X3', 'plus') });
-    M.vis(tD0, t, wt('X3', 'brackets') - 0.1, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 });
+    M.vis(tDa, t, wt('X3', 'brackets') - 0.1, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 });
     M.draw(tArc, t, wt('X3', 'times'), 0.6); M.vis(tHead, t, wt('X3', 'times') + 0.55, 1e9, { dy: 0, fade: 0.1 });
-    M.vis(tD1, t, wt('X3', 'plus') - 0.1, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 }); M.vis(tNote, t, wt('X3', 'plus'), 1e9, { dy: 0 });
-    where(t, { tin: T0('J1'), tLight: [wt('J1', 'PUC')], tType: wt('J1', 'typical') });
+    M.vis(tDb, t, wt('X3', 'plus') - 0.1, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 }); M.vis(tNote, t, wt('X3', 'plus'), 1e9, { dy: 0 });
+    where(t, { tin: T0('J1'), tLight: [wt('J1', 'PUC')], tType: wt('J1', 'Show') });
   }
 
   /* Q: practice question */

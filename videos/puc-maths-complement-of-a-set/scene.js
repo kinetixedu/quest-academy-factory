@@ -133,7 +133,7 @@ const W3w = ['one', 'two', 'three'], tWp = { 2: wt('W4', 'two'), 3: wt('W4', 'th
 /* ---------- X / Q / F ---------- */
 const trap = PUC.trap($('#trap'), { wrong: K(`${ac('A')} = \\{1, 2, 3\\} \\Rightarrow ${AP} = \\{4, 5, 6, \\dots\\}`) + '&nbsp; no U given', right: K(`U = \\{1, \\dots, 5\\} \\Rightarrow ${AP} = \\{4, 5\\}`) + '&nbsp; complement inside U' });
 const ts = $('#tS'), tP = uPic(ts, { x: 30, y: 52, w: 500, h: 190, cx: 170, cy: 152, r: 76, ls: 28 });
-const tT = [[1, 140, 128], [2, 200, 128], [3, 170, 180], [4, 340, 152], [5, 430, 152]].map(([n, x, y]) => tok(ts, n, x, y, { mono: 1, fs: 28, rr: 22 }));
+const tTk = [[1, 140, 128], [2, 200, 128], [3, 170, 180], [4, 340, 152], [5, 430, 152]].map(([n, x, y]) => tok(ts, n, x, y, { mono: 1, fs: 28, rr: 22 }));
 const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'PUC BOARDS'], type: 'Find A′ for a given U, often mixed with intervals and integers.' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 800,
   q: `${K(`U = \\{1, 2, 3, \\dots, 100\\}`)}<br>${K(`${ac('A')} = \\{\\, n \\in U : n \\text{ is a perfect square or a perfect cube} \\,\\}`)}<br>How many elements does ${K(AP)} have?`,
@@ -307,9 +307,9 @@ M.on(t => {
     M.vis($('#trap'), t, tX1 + 0.05, 1e9, { dy: 36 }); M.vis($('#wa'), t, T0('J1') - 0.1, 1e9, { dy: 36 });
     trap(t, { tin: tX1, tWrong: wt('X2', 'Many') - 0.1, tStrike: wt('X3', 'only') - 0.1, tRight: wt('X3', 'If') });
     M.draw(tP.cA, t, T0('X2') + 0.1, 0.6); M.vis(tP.lA, t, T0('X2') + 0.3, 1e9, POP);
-    [0, 1, 2].forEach(i => M.vis(tT[i].g, t, T0('X2') + 0.3 + i * 0.1, 1e9, POP));
+    [0, 1, 2].forEach(i => M.vis(tTk[i].g, t, T0('X2') + 0.3 + i * 0.1, 1e9, POP));
     M.draw(tP.rect, t, wt('X3', 'If') - 0.1, 0.6); M.vis(tP.lU, t, wt('X3', 'If') + 0.2, 1e9, POP);
-    [3, 4].forEach(i => M.vis(tT[i].g, t, wt('X3', 'just') - 0.1 + (i - 3) * 0.1, 1e9, POP));
+    [3, 4].forEach(i => M.vis(tTk[i].g, t, wt('X3', 'just') - 0.1 + (i - 3) * 0.1, 1e9, POP));
     attr(tP.out, 'fill', mix('#FFFFFF', HIT, M.io((t - wt('X3', 'just')) / 0.4)));
     where(t, { tin: T0('J1'), tLight: [wt('J1', 'JEE'), wt('J1', 'PUC')], tType: wt('J1', 'find') });
   }

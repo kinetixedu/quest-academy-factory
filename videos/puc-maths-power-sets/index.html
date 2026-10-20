@@ -1,0 +1,157 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 6 - Power Sets</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 06: power sets (Proof board) ===== */
+:root{--x:#7A4FE0;--sa:#2F6FEB;--sab:#E7EEFD}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.x{color:var(--x)}.a{color:var(--ac)}.sa{color:var(--sa)}
+#gh{top:96px}
+/* title card */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:54px;font:700 32px Poppins;white-space:nowrap;color:var(--x)}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* definition */
+#dfT{position:absolute;left:36px;top:84px;width:712px;font:700 44px/1.28 Poppins;letter-spacing:-.015em}
+#dfT b{color:var(--ac)}
+.sy{position:absolute;left:36px;font-size:56px;white-space:nowrap}
+.syw{position:absolute;left:36px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+#pG{left:36px;top:470px}
+/* live tree */
+#lN{position:absolute;left:36px;top:84px;font:600 40px/1 'IBM Plex Mono';white-space:nowrap}
+#lB{position:absolute;left:36px;top:150px;font:600 104px/1 'IBM Plex Mono';color:var(--ac);white-space:nowrap}
+#lBl{position:absolute;left:36px;top:268px}
+#lF{position:absolute;left:36px;top:330px;font-size:52px;white-space:nowrap}
+#lAdd{position:absolute;left:36px;top:470px}
+/* steps */
+.st{position:absolute;left:36px;width:712px;height:112px}
+.st .n{position:absolute;left:0;top:8px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:40px;white-space:nowrap}
+.st .sx.tx{font:600 32px/58px Poppins}
+.st .why{position:absolute;left:70px;top:62px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+/* switches */
+.sr{position:absolute;left:36px;width:712px;height:84px;border-radius:14px;background:var(--soft)}
+.sr .el{position:absolute;left:22px;top:14px;width:56px;height:56px;border-radius:50%;background:#fff;border:3px solid var(--x);color:var(--x);font:700 28px Poppins;display:flex;align-items:center;justify-content:center;font-style:italic}
+.sr .nm{position:absolute;left:96px;top:26px;font:600 24px Poppins;white-space:nowrap}
+.sr .sw{position:absolute;top:16px;height:52px;width:120px;border-radius:10px;border:2.5px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;font:700 22px Poppins;color:var(--dim)}
+#dCur{position:absolute;left:36px;top:400px;font-size:46px;white-space:nowrap}
+#dCnt{position:absolute;right:36px;top:18px;height:52px;padding:0 18px;border-radius:10px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+/* side by side */
+.bf{position:absolute;left:36px;top:92px;font-size:52px;white-space:nowrap}
+.bf2{position:absolute;left:36px;font-size:36px;white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:64px;font:600 30px/1.4 Poppins;width:712px}
+#wl .sol .sx{font-size:30px}
+#wl .sol .sx .katex{font-size:1.08em}
+.col{position:absolute;top:92px;width:220px;height:370px;border-radius:14px;background:var(--soft)}
+.col .cl{position:absolute;left:0;width:220px;top:16px;text-align:center;font:600 16px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.bx{position:absolute;left:20px;width:180px;height:72px;border-radius:12px;background:#fff;border:2.5px solid var(--x);display:flex;align-items:center;justify-content:center;font-size:30px;white-space:nowrap}
+#wRes{position:absolute;left:36px;top:496px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.12em}
+#mq .mq .katex{font-size:1.08em}
+.trapL .tx .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 1 SETS</div>
+    <div class="ghost" id="gh">NOT IN CURRENT NCERT TEXT · JEE</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Power <span class="acc">Sets</span></div>
+    <div id="sub">Explained with one tiffin box</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: some boxes + Aarav -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">SOME TIFFIN BOXES</div>
+        <svg id="hS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="hP" style="left:36px;top:496px">Even the empty box counts</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · PACKING HIS TIFFIN</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-kitchen.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">How many different boxes?</div></div>
+    </div>
+
+    <!-- P: definition -->
+    <div id="sP">
+      <div class="card full" id="pl"><div class="lbl" style="left:36px;top:30px">DEFINITION</div>
+        <div id="dfT">The <b>power set</b> of A is the set of all the subsets of A.</div>
+        <div class="sy" id="pS" style="top:290px"></div><div class="syw" id="pW" style="top:372px">read: P of A</div>
+        <div class="ghost" id="pG">NOT IN CURRENT NCERT TEXT · JEE MAIN SYLLABUS</div></div>
+      <div class="card rf" id="pr"><div class="lbl" style="left:36px;top:30px">OUR SET A · 3 SNACKS</div>
+        <div class="sy" id="pA" style="top:92px"></div><div class="syw" id="pAw" style="top:176px">s samosa · b banana · l laddoo</div>
+        <div class="sy" id="pSub" style="top:262px;font-size:46px"></div><div class="syw" id="pSw" style="top:334px">one subset = one possible box</div>
+        <div class="sy" id="pPA" style="top:410px;font-size:46px"></div></div>
+    </div>
+
+    <!-- L: live doubling tree -->
+    <div id="sL">
+      <div class="card full" id="ll"><div class="lbl" style="left:36px;top:30px">LIVE · ADD ONE SNACK AT A TIME</div>
+        <svg id="lS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="lr"><div class="lbl" style="left:36px;top:30px">THE COUNT</div>
+        <div id="lN"></div><div id="lB">1</div><div class="lbl" id="lBl">DIFFERENT BOXES</div><div id="lF"></div>
+        <div class="pillp ac" id="lAdd"></div></div>
+    </div>
+
+    <!-- D: why 2^n -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">WHY 2 TO THE POWER n · 3 STEPS</div>
+        <div class="hiBox" id="dHi" style="left:20px;width:744px;height:112px"></div><div id="dSt"></div>
+        <div class="sy" id="dRes" style="top:470px;font-size:46px"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">LIVE · ONE SWITCH PER ELEMENT</div><div id="dCnt"></div><div id="dSw"></div>
+        <div id="dCur"></div></div>
+    </div>
+
+    <!-- K: A vs P(A), think -->
+    <div id="sK">
+      <div class="card full" id="ka"><div class="lbl" style="left:36px;top:30px">A · 3 ELEMENTS</div><div class="bf" id="kaF"></div>
+        <svg id="kaS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="kaP" style="left:36px;top:490px">Its elements are snacks</div></div>
+      <div class="card rf" id="kb"><div class="lbl" style="left:36px;top:30px">P(A) · 8 ELEMENTS</div><div class="bf2" id="kb1" style="top:92px"></div><div class="bf2" id="kb2" style="top:160px"></div>
+        <svg id="kbS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="kbP" style="left:36px;top:490px">Its elements are sets</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">SORT BY SIZE</div><div id="cols"></div>
+        <div class="pillp ac" id="wRes">4 subsets = 2²</div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Each element <span class="acc">doubles</span> the count.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
