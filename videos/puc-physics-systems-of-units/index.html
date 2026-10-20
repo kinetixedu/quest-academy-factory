@@ -1,0 +1,143 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 4 - Systems of Units</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 04: systems of units (Motion notebook, one trolley in three systems) ===== */
+:root{--u:#7A4FE0;--f:#D9731A;--r:#D64545;--e:#0E8F8F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.u{color:var(--u)}.f{color:var(--f)}.a{color:var(--ac)}.r{color:var(--r)}.e{color:var(--e)}
+svg.fill{position:absolute;left:0;top:0}
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .jv{position:absolute;right:28px;top:28px;font:600 52px/1 'IBM Plex Mono';white-space:nowrap}
+.gauge{position:absolute;top:96px;width:340px;height:370px;border-radius:14px;background:var(--soft)}
+.gauge .gh{position:absolute;left:0;width:340px;top:20px;text-align:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.gauge .gv{position:absolute;left:0;width:340px;top:290px;text-align:center;font:600 44px 'IBM Plex Mono';white-space:nowrap}
+.gauge svg{position:absolute;left:40px;top:60px}
+/* systems table */
+.sy{position:absolute;left:36px;width:712px;height:88px;border-radius:14px;background:var(--soft)}
+.sy .sn{position:absolute;left:24px;top:22px;font:700 34px 'IBM Plex Mono';white-space:nowrap}
+.sy .sc{position:absolute;top:16px;width:150px;height:56px;border-radius:10px;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;white-space:nowrap}
+.sy .sc b{font:600 24px Poppins}.sy .sc s{text-decoration:none;font:600 13px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.sh{position:absolute;top:84px;width:150px;text-align:center;font:600 16px 'IBM Plex Mono';letter-spacing:.1em;color:var(--mute)}
+.pq{position:absolute;left:36px;width:712px}
+.dial{position:absolute;top:22px;display:flex;gap:8px}
+.dial span{height:40px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';border:2px solid var(--line);background:#fff;color:var(--mute)}
+.ro{position:absolute;display:grid;grid-template-columns:50px 1fr 110px;column-gap:18px;row-gap:10px;align-items:baseline}
+.st{position:absolute;left:36px;width:712px;height:120px}
+.st .n{position:absolute;left:0;top:6px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:38px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:66px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.cmp{position:absolute;left:36px;width:712px;height:84px;border-radius:12px;background:var(--soft)}
+.cmp .ck{position:absolute;left:22px;top:28px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.cmp .cv{position:absolute;right:22px;top:18px;font-size:36px;white-space:nowrap}
+.sz{position:absolute;left:36px;width:712px;height:56px}
+.sz .bar{position:absolute;left:0;top:8px;height:40px;border-radius:8px}
+.sz .bl{position:absolute;top:12px;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+#wq{position:absolute;left:36px;top:70px;font:600 28px/1.35 Poppins;width:712px}
+.dimc{position:absolute;height:56px;padding:0 20px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+#wl .sol .sx{font-size:32px}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:32px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 1 UNITS AND MEASUREMENT</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Systems of <span class="acc">Units</span></div>
+    <div id="sub">One trolley, three sets of units</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">NOT A METRE OR A KILOGRAM IN SIGHT</div><div class="ghost" id="exH" style="right:36px;top:18px">EXAMPLE FIGURES</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Where do these units come from?</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV'S TYRE · TWO GAUGES</div>
+        <div style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)" id="hdF"></div>
+        <div class="gauge" id="g0" style="left:36px"><div class="gh">TYRE SAYS</div><svg width="260" height="220" id="g0S"></svg><div class="gv">40 <span class="u" style="font-size:30px">psi</span></div></div>
+        <div class="gauge" id="g1" style="left:408px"><div class="gh">PUMP GAUGE</div><svg width="260" height="220" id="g1S"></svg><div class="gv"><span id="g1N">0.00</span> <span class="u" style="font-size:30px">bar</span></div></div>
+        <div class="pillp" id="hkP" style="left:36px;top:490px">Same air, two different numbers</div></div>
+    </div>
+
+    <div id="sP">
+      <div class="card full" id="pa"><div class="lbl" style="left:36px;top:30px">A SYSTEM OF UNITS = ONE SET OF BASE UNITS</div><svg id="paS" class="fill" width="784" height="580"></svg>
+        <div class="pillp ink" id="paP" style="left:36px;top:490px">New base units → a new system</div></div>
+      <div class="card rf" id="pb"><div class="lbl" style="left:36px;top:30px">NCERT · SYSTEMS IN USE</div><div id="pqs"></div></div>
+    </div>
+
+    <div id="sC">
+      <div class="card" id="ct" style="left:160px;top:270px;width:1600px;height:580px"><div class="lbl" style="left:36px;top:30px">THREE OLDER SYSTEMS</div><div id="sys"></div></div>
+    </div>
+
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">SIMULATION · ONE TROLLEY</div>
+        <div class="dial" id="dial" style="right:36px"><span>MKS</span><span>CGS</span><span>FPS</span></div>
+        <div class="tag" id="sTag" style="left:36px;top:70px"></div>
+        <svg id="simS" class="fill" width="784" height="580"></svg></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro" id="roG" style="left:36px;top:70px;width:712px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">LIVE GRAPH · <i style="font-family:Poppins;text-transform:none;color:var(--ac)">v</i> AGAINST <i style="font-family:Poppins;text-transform:none">t</i></div>
+        <svg id="grS" class="fill" width="784" height="274"></svg></div>
+    </div>
+
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">NEWTON VS DYNE · 4 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">SAME QUANTITY, DIFFERENT UNIT</div><div id="cmps"></div>
+        <div class="fx" id="drN" style="left:36px;top:430px;font-size:52px"></div></div>
+    </div>
+
+    <div id="sK">
+      <div class="card full" id="kb"><div class="lbl" style="left:36px;top:30px">MKS · 1 NEWTON</div><div class="ghost" id="exK" style="right:36px;top:18px">ROUGH SIZES</div><svg id="kbS" class="fill" width="784" height="580"></svg>
+        <div id="kbC" class="pillp" style="left:36px;top:490px">About a small apple in your hand</div></div>
+      <div class="card rf" id="kd"><div class="lbl" style="left:36px;top:30px">CGS · 1 DYNE</div><svg id="kdS" class="fill" width="784" height="580"></svg>
+        <div id="kdC" class="pillp" style="left:36px;top:490px">A hundred thousand times smaller</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sB">
+      <div class="card full" id="bl"><div class="lbl" style="left:36px;top:30px">READ BOTH GAUGES</div><div id="bcs"></div></div>
+      <div class="card rf" id="br"><div class="lbl" style="left:36px;top:30px">PUMP UNTIL THE GAUGE READS</div><svg id="brS" class="fill" width="784" height="580"></svg>
+        <div class="pillp ac" id="brP" style="left:36px;top:490px">40 psi ≈ 2.76 bar</div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">Change 1 joule into ergs, the CGS unit of energy.</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">CONVERT EACH BASE UNIT</div><div id="wcs"></div>
+        <div class="dimc" id="wR" style="left:36px;top:476px;background:var(--e)">1 J = 10⁷ erg</div></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><div id="xc" style="position:absolute;right:36px;top:60px;width:520px;height:180px"></div></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">New base units, <span class="acc">new derived units</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

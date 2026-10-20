@@ -1,0 +1,155 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 3 - SI Base Units and Derived Units</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 03: SI base units and derived units (Motion notebook, light pulse) ===== */
+:root{--u:#7A4FE0;--f:#D9731A;--r:#D64545;--e:#0E8F8F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.u{color:var(--u)}.f{color:var(--f)}.a{color:var(--ac)}.r{color:var(--r)}.e{color:var(--e)}
+svg.fill{position:absolute;left:0;top:0}
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .jv{position:absolute;right:28px;top:28px;font:600 52px/1 'IBM Plex Mono';white-space:nowrap}
+.wq{position:absolute;top:494px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap}
+/* base unit table */
+.bq{position:absolute;left:36px;width:712px;height:58px;border-radius:12px;background:var(--soft)}
+.bq .bn{position:absolute;left:20px;top:13px;font:600 25px Poppins;white-space:nowrap}
+.bq .bu{position:absolute;left:390px;top:13px;font:600 25px Poppins;white-space:nowrap}
+.bq .bs{position:absolute;right:20px;top:12px;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+.dq{position:absolute;left:36px;width:712px;height:76px;border-radius:12px;background:var(--soft)}
+.dq .dn{position:absolute;left:22px;top:20px;font:700 28px Poppins;white-space:nowrap}
+.dq .dr{position:absolute;right:22px;top:16px;font-size:32px;white-space:nowrap}
+/* readout */
+.ro{position:absolute;display:grid;grid-template-columns:60px 1fr 90px;column-gap:18px;row-gap:10px;align-items:baseline}
+.ff{position:absolute;left:36px;font-size:34px;white-space:nowrap}
+/* anchors */
+.an{position:absolute;left:36px;width:712px;height:136px;border-radius:14px;background:var(--soft)}
+.an .au{position:absolute;left:24px;top:20px;font:700 30px Poppins;white-space:nowrap}
+.an .aw{position:absolute;left:24px;top:66px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.an .ac{position:absolute;left:24px;top:92px;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+/* steps + blocks */
+.st{position:absolute;left:36px;width:712px;height:136px}
+.st .n{position:absolute;left:0;top:6px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:44px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:76px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+.brow{position:absolute;left:36px;height:76px;display:flex;align-items:center;gap:12px;white-space:nowrap}
+.brow .rl{width:48px;font:600 36px 'IBM Plex Mono';text-align:center}
+.blk{height:64px;min-width:72px;padding:0 16px;border-radius:12px;background:var(--soft);border:2.5px solid var(--ink);display:inline-flex;align-items:center;justify-content:center;font:600 28px 'IBM Plex Mono'}
+.bop{font:600 34px 'IBM Plex Mono';color:var(--mute);width:26px;text-align:center}
+.bres{height:64px;padding:0 18px;border-radius:12px;display:inline-flex;align-items:center;font:600 28px 'IBM Plex Mono';color:#fff}
+.kp{position:absolute;left:36px}
+/* rules */
+.rw{position:absolute;left:36px;width:712px;height:76px;border-radius:12px;background:var(--soft)}
+.rw .rk{position:absolute;left:22px;top:21px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.rw .rv{position:absolute;left:230px;top:14px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+.lbx{position:absolute;width:220px;height:92px;border-radius:14px;background:#fff;border:3px solid var(--line);display:flex;align-items:center;justify-content:center;font:600 40px 'IBM Plex Mono';white-space:nowrap}
+.lbx .m{position:absolute;right:-14px;top:-14px;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+#wq{position:absolute;left:36px;top:70px;font:600 28px/1.35 Poppins;width:712px}
+.dimc{position:absolute;height:56px;padding:0 20px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+#wl .sol .sx{font-size:32px}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:32px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 1 UNITS AND MEASUREMENT</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">SI Base and <span class="acc">Derived</span> Units</div>
+    <div id="sub">One metre, set by light itself</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">FAR APART · SAME UNITS</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">They never met. How do they agree?</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV'S BICYCLE · SPANNER VS BOLT</div>
+        <div style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)" id="hdF"></div>
+        <svg id="hkS" class="fill" width="784" height="580"></svg>
+        <div id="wqs"></div></div>
+    </div>
+
+    <div id="sP">
+      <div class="card full" id="pb"><div class="lbl" style="left:36px;top:30px">SI · 7 BASE UNITS</div><div id="bqs"></div></div>
+      <div class="card rf" id="pd"><div class="lbl" style="left:36px;top:30px">DERIVED UNITS = BUILT FROM THE 7</div><div id="dqs"></div>
+        <div class="pillp ink" id="pdP" style="left:36px;top:490px">Every other unit is built from the seven</div></div>
+    </div>
+
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">SIMULATION · LIGHT SETS THE METRE</div>
+        <div class="tag" id="sTag" style="right:36px;top:20px"></div>
+        <svg id="simS" class="fill" width="784" height="580"></svg></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro" id="roG" style="left:36px;top:70px;width:712px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">LIVE GRAPH · <i style="font-family:Poppins;text-transform:none">x</i> AGAINST <i style="font-family:Poppins;text-transform:none">t</i></div>
+        <svg id="grS" class="fill" width="784" height="274"></svg><div class="pillp" id="grP" style="right:36px;top:18px;height:40px;font-size:19px;background:var(--ac2);color:var(--ac)">slope = <i>c</i></div></div>
+    </div>
+
+    <div id="sL">
+      <div class="card full" id="la"><div class="lbl" style="left:36px;top:30px">EACH UNIT TIED TO A NUMBER OF NATURE</div><div id="ans"></div></div>
+      <div class="card rf" id="lb"><div class="lbl" style="left:36px;top:30px">THE KILOGRAM · BEFORE AND AFTER 2019</div><svg id="lbS" class="fill" width="784" height="580"></svg>
+        <div class="pillp ac" id="lbP" style="left:36px;top:490px">Nature's numbers never drift</div></div>
+    </div>
+
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">BUILD THE JOULE · 3 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">OPEN UP A NAMED UNIT</div><div id="brs"></div></div>
+    </div>
+
+    <div id="sK">
+      <div class="card full" id="kb"><div class="lbl" style="left:36px;top:30px">BASE UNIT · KILOGRAM</div><svg id="kbS" class="fill" width="784" height="580"></svg>
+        <div id="kbC" class="pillp" style="left:36px;top:490px">Chosen, not built from anything</div></div>
+      <div class="card rf" id="kd"><div class="lbl" style="left:36px;top:30px">DERIVED UNIT · NEWTON</div>
+        <div class="fx" id="kdF" style="left:36px;top:110px;font-size:56px"></div>
+        <div class="brow" id="kdB" style="top:250px"><span class="blk">kg</span><span class="bop">×</span><span class="blk">m</span><span class="bop">÷</span><span class="blk">s²</span></div>
+        <div id="kdC" class="pillp" style="left:36px;top:490px">A name on the outside, base units inside</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">SI WRITING RULES</div><div id="rws"></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">WHICH LABELS ARE CORRECT?</div><div id="lbxs"></div>
+        <div class="pillp" id="rrP" style="left:36px;top:490px">No plural, no full stop, case matters</div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">Aarav pushes his bicycle with 20 N for 15 m. Find the work done in SI base units.</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">THE PUSH</div><svg id="wrS" class="fill" width="784" height="580"></svg>
+        <div class="dimc" id="wJ" style="left:36px;top:400px;background:var(--e)">W = 300 J</div>
+        <div class="dimc" id="wB" style="left:36px;top:476px">300 kg m² s⁻²</div></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="cw" width="600" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Seven base units. <span class="acc">Everything else is built.</span></div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

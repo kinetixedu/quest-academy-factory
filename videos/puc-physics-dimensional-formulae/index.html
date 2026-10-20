@@ -1,0 +1,155 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 7 - Dimensional Formulae</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 07: dimensional formulae (Motion notebook, pressure cooker lid) ===== */
+:root{--u:#7A4FE0;--f:#D9731A}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.u{color:var(--u)}.a{color:var(--ac)}.f{color:var(--f)}
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .jv{position:absolute;right:28px;top:30px;font:600 50px/1 'IBM Plex Mono';white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+.wq{position:absolute;top:494px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap}
+.blk3{position:absolute;top:500px;width:68px;height:44px;border-radius:10px;background:#EDE6FB;color:var(--u);display:flex;align-items:center;justify-content:center;font:600 26px 'IBM Plex Mono'}
+/* P */
+.pd{position:absolute;left:36px;font-size:46px;white-space:nowrap}
+.pt{position:absolute;left:36px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+.pex{position:absolute;left:36px;width:712px;height:84px;border-radius:14px;background:var(--soft)}
+.pex .h{position:absolute;left:24px;top:26px;font:700 28px Poppins;white-space:nowrap}
+.pex .d{position:absolute;right:24px;top:14px;height:56px;padding:0 16px;border-radius:12px;background:#fff;display:flex;align-items:center;font-size:34px;white-space:nowrap}
+/* sim */
+#slo{position:absolute;left:36px;top:76px}
+/* derivation */
+.dr{position:absolute;left:48px;width:1504px;height:84px}
+.dr .n{position:absolute;left:0;top:19px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.dr .nm{position:absolute;left:72px;top:0;height:84px;width:220px;display:flex;align-items:center;font:700 30px Poppins;white-space:nowrap}
+.dr .sx{position:absolute;left:300px;top:0;height:84px;display:flex;align-items:center;font-size:38px;white-space:nowrap}
+.dr .why{position:absolute;left:1040px;top:0;height:84px;display:flex;align-items:center;font:500 26px Poppins;color:var(--mute);white-space:nowrap}
+/* reasoning */
+.lk{position:absolute;left:36px;width:712px;height:136px;border-radius:14px;background:var(--soft)}
+.lk .h{position:absolute;left:24px;top:22px;font:700 30px Poppins;white-space:nowrap}
+.lk .s{position:absolute;left:24px;top:72px;font:500 24px Poppins;color:var(--ink2);white-space:nowrap}
+.lk .op{position:absolute;right:24px;top:36px;height:64px;padding:0 18px;border-radius:12px;background:#fff;display:flex;align-items:center;font:600 34px 'IBM Plex Mono';color:var(--u);white-space:nowrap}
+.pw{position:absolute;top:120px;width:216px;height:300px;border-radius:16px;background:var(--soft)}
+.pw .l{position:absolute;left:0;width:216px;top:28px;text-align:center;font:600 92px/1 'IBM Plex Mono';color:var(--u)}
+.pw .p{position:absolute;left:0;width:216px;top:150px;text-align:center;font:600 64px/1 'IBM Plex Mono';color:var(--ink);white-space:nowrap}
+.pw .s{position:absolute;left:0;width:216px;top:240px;text-align:center;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+#rF{position:absolute;left:36px;top:452px;font-size:44px;white-space:nowrap}
+/* side by side */
+.sbf{position:absolute;left:36px;top:84px;font-size:52px;white-space:nowrap}
+/* energy */
+.eq{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.eq .h{position:absolute;left:24px;top:16px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.eq .f{position:absolute;left:24px;top:46px;font-size:38px;white-space:nowrap}
+/* worked */
+#wq{position:absolute;left:36px;top:70px;font:600 30px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:34px}
+#wc{position:absolute;top:476px;height:72px;padding:0 24px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;font-size:34px;white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font-size:25px}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:32px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 1 UNITS AND MEASUREMENT</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Dimensional <span class="acc">Formulae</span></div>
+    <div id="sub">Pressure, built from M, L and T</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE PRESSURES · THREE PLACES</div><div class="ghost" id="exH" style="right:36px;top:18px">EXAMPLE FIGURES</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">What is pressure made of?</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA'S KITCHEN · THE COOKER WHISTLE</div>
+        <div id="hdF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-kitchen.jpg">
+        <div id="blks"></div></div>
+    </div>
+
+    <div id="sP">
+      <div class="card full" id="pl"><div class="lbl" style="left:36px;top:30px">A DIMENSIONAL FORMULA</div>
+        <div class="pd" id="pd0" style="top:100px"></div>
+        <div class="pt" id="pt0" style="top:180px">how Q depends on M, L, T, and with which powers</div>
+        <div class="lbl" id="pdL" style="left:36px;top:260px">A DIMENSIONAL EQUATION</div>
+        <div class="pd" id="pd1" style="top:300px"></div>
+        <div class="pillp ink" id="plP" style="left:36px;top:490px">Known formula → replace each quantity</div></div>
+      <div class="card rf" id="pr"><div class="lbl" style="left:36px;top:30px">THE BUILDING BLOCKS</div><div id="pexs"></div></div>
+    </div>
+
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">SIMULATION · THE COOKER LID</div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="tag" id="slo">SLOW-MO REPLAY · 0.25x</div></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ghost" id="exS" style="right:36px;top:18px">EXAMPLE FIGURES</div><div class="ro" id="roG" style="left:36px;top:76px;width:712px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">PRESSURE <i style="font-family:Poppins;text-transform:none">P</i> VS TIME <i style="font-family:Poppins;text-transform:none">t</i></div><svg id="grS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sD">
+      <div class="card" id="dl" style="left:160px;top:270px;width:1600px;height:580px"><div class="lbl" style="left:48px;top:30px">PRESSURE · BLOCK BY BLOCK</div><div id="drs"></div></div>
+    </div>
+
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">EACH POWER · LINK BY LINK</div><div id="lks"></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">THE POWERS OF PRESSURE</div><div id="pws"></div><div id="rF"></div></div>
+    </div>
+
+    <div id="sK">
+      <div class="card full" id="kb"><div class="lbl" style="left:36px;top:30px">FORCE · THE TOTAL PUSH</div><div class="sbf" id="kbF"></div>
+        <svg id="kbS" width="784" height="280" style="position:absolute;left:0;top:180px"></svg>
+        <div class="pillp" id="kbP" style="left:36px;top:490px">Total push, in newtons</div></div>
+      <div class="card rf" id="kd"><div class="lbl" style="left:36px;top:30px">PRESSURE · PUSH PER SQUARE METRE</div><div class="sbf" id="kdF"></div>
+        <svg id="kdS" width="784" height="280" style="position:absolute;left:0;top:180px"></svg>
+        <div class="pillp" id="kdP" style="left:36px;top:490px">Push on each m², in pascals</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sG">
+      <div class="card full" id="gl"><div class="lbl" style="left:36px;top:30px">SAME BLOCKS · WORK AND ENERGY</div><div id="eqs"></div>
+        <div class="pillp good" id="gP" style="left:36px;top:490px">Same formula, same unit: the joule</div></div>
+      <div class="card rf" id="gr2"><div class="lbl" style="left:36px;top:30px">WORK = FORCE × DISTANCE</div><svg id="gS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">Find the dimensional formula of power, P = W / t.</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">POWER = WORK PER SECOND</div><div class="ghost" id="exW" style="right:36px;top:18px">EXAMPLE FIGURES</div><svg id="wrS" width="784" height="460" style="position:absolute;left:0;top:0"></svg>
+        <div id="wc"></div></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="520" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Known formula → replace each <span class="acc">quantity</span></div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

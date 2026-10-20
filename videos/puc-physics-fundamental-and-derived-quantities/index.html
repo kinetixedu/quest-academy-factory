@@ -1,0 +1,192 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 2 - Fundamental and Derived Quantities</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 02: fundamental and derived quantities (Motion notebook, bicycle ride) ===== */
+:root{--u:#7A4FE0;--f:#D9731A;--r:#D64545}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.u{color:var(--u)}.f{color:var(--f)}.a{color:var(--ac)}.r{color:var(--r)}
+svg.fill{position:absolute;left:0;top:0}
+/* title card tiles */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .jv{position:absolute;right:28px;top:28px;font:600 52px/1 'IBM Plex Mono';white-space:nowrap}
+#note{position:absolute;left:470px;top:300px;width:230px;height:136px;background:#FFFDF6;border-radius:6px;box-shadow:0 8px 20px rgba(22,33,62,.22);padding:18px 22px}
+#note .nt1{font:600 15px 'IBM Plex Mono';letter-spacing:.1em;color:var(--mute)}
+#note .nt2{font:600 46px 'IBM Plex Mono';color:var(--ink);margin-top:8px;white-space:nowrap}
+.wq{position:absolute;top:494px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap}
+/* P: base list + derived recipes */
+.bq{position:absolute;left:36px;width:712px;height:58px;border-radius:12px;background:var(--soft)}
+.bq .bn{position:absolute;left:20px;top:13px;font:600 25px Poppins;white-space:nowrap}
+.bq .bs{position:absolute;right:20px;top:12px;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+.dq{position:absolute;left:36px;width:712px;height:76px;border-radius:12px;background:var(--soft)}
+.dq .dn{position:absolute;left:22px;top:20px;font:700 28px Poppins;white-space:nowrap}
+.dq .dr{position:absolute;right:22px;top:14px;font-size:34px;white-space:nowrap}
+/* S: readout grid with two pairs */
+.ro2{position:absolute;display:grid;grid-template-columns:auto 150px 60px auto 150px 60px;column-gap:16px;row-gap:8px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}
+.ro2 .v{font:600 36px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 22px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+.ff{position:absolute;left:36px;font-size:34px;white-space:nowrap}
+.btag{position:absolute;display:inline-flex;align-items:center;height:36px;padding:0 12px;border-radius:8px;background:var(--ac2);color:var(--ac);font:600 17px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* D: steps + block rows */
+.st{position:absolute;left:36px;width:712px;height:136px}
+.st .n{position:absolute;left:0;top:6px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:46px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:76px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+.brow{position:absolute;left:36px;height:76px;display:flex;align-items:center;gap:12px;white-space:nowrap}
+.brow .rl{width:48px;font:600 40px Poppins;font-style:italic;text-align:center}
+.blk{height:64px;min-width:72px;padding:0 16px;border-radius:12px;background:var(--soft);border:2.5px solid var(--ink);display:inline-flex;align-items:center;justify-content:center;font:600 28px 'IBM Plex Mono'}
+.bop{font:600 34px 'IBM Plex Mono';color:var(--mute);width:26px;text-align:center}
+.bres{height:64px;padding:0 18px;border-radius:12px;display:inline-flex;align-items:center;font:600 28px 'IBM Plex Mono';color:#fff}
+/* K side by side */
+.kp{position:absolute;left:36px}
+/* R: the opening solved */
+.lr{position:absolute;left:36px;width:712px;height:128px;border-radius:14px;background:var(--soft)}
+.lr svg{position:absolute;left:20px;top:14px}
+.lr .ln{position:absolute;left:150px;top:24px;font:700 28px Poppins;white-space:nowrap}
+.lr .lw{position:absolute;left:150px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lr .lf{position:absolute;right:24px;top:40px;font-size:36px;white-space:nowrap}
+.tb{position:absolute;height:84px;padding:0 24px;border-radius:14px;background:var(--soft);display:flex;flex-direction:column;justify-content:center;white-space:nowrap}
+.tb b{font:600 34px 'IBM Plex Mono'}.tb s{text-decoration:none;font:600 15px 'IBM Plex Mono';letter-spacing:.1em;color:var(--mute)}
+/* B: independence */
+.ib{position:absolute;width:220px;height:64px;border-radius:12px;background:var(--soft);border:2.5px solid var(--ink);display:flex;align-items:center;justify-content:space-between;padding:0 16px;box-sizing:border-box}
+.ib .in{font:600 22px Poppins;white-space:nowrap}.ib .is{font:600 24px 'IBM Plex Mono';color:var(--ac)}
+.at{position:absolute;left:36px;width:712px;height:132px;border-radius:14px;background:var(--redBg)}
+.at .aq{position:absolute;left:24px;top:18px;font:700 28px Poppins;white-space:nowrap}
+.at .ab{position:absolute;left:24px;top:70px;display:flex;gap:10px;align-items:center}
+.at .ab span{height:44px;padding:0 14px;border-radius:9px;background:#fff;border:2px solid var(--ink);display:inline-flex;align-items:center;font:600 22px 'IBM Plex Mono'}
+.at .ab em{font:600 26px 'IBM Plex Mono';color:var(--mute);font-style:normal}
+.at .ax{position:absolute;right:24px;top:40px;width:52px;height:52px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center}
+/* W */
+#wq{position:absolute;left:36px;top:70px;font:600 28px/1.35 Poppins;width:712px}
+.dimc{position:absolute;height:56px;padding:0 20px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+#wl .sol .sx{font-size:34px}
+#sF .fcard .fl{font-size:46px}
+#sF .fcard .fl.txt{font-size:32px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 1 UNITS AND MEASUREMENT</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Fundamental and <span class="acc">Derived</span></div>
+    <div id="sub">Built from blocks on one bicycle ride</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: three things, one block + Aarav's speedometer -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE THINGS · ONE MEASUREMENT</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">All three are built from length</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV'S RIDE · THE SPEEDOMETER</div>
+        <div id="hdF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg" style="position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px">
+        <div id="note"><div class="nt1">SPEEDOMETER</div><div class="nt2">15 <span class="a" style="font-size:30px">km/h</span></div></div>
+        <div id="wqs"></div></div>
+    </div>
+
+    <!-- P: fundamental = base, derived = built -->
+    <div id="sP">
+      <div class="card full" id="pb"><div class="lbl" style="left:36px;top:30px">FUNDAMENTAL (BASE) QUANTITIES · SI PICKS 7</div><div id="bqs"></div></div>
+      <div class="card rf" id="pd"><div class="lbl" style="left:36px;top:30px">DERIVED = BUILT BY &times; AND &divide;</div><div id="dqs"></div>
+        <div class="pillp ink" id="pdP" style="left:36px;top:490px">Only multiply or divide the blocks</div></div>
+    </div>
+
+    <!-- S: the ride (sim + readout + graph) -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">SIMULATION · AARAV'S RIDE</div>
+        <div class="tag" id="sTag" style="right:36px;top:20px"></div>
+        <svg id="simS" class="fill" width="784" height="580"></svg>
+        <div class="btag" id="tgT" style="left:460px;top:122px">STOPWATCH &rarr; TIME · BASE</div>
+        <div class="btag" id="tgL" style="right:36px;top:432px">TAPE &rarr; LENGTH · BASE</div></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro2" id="roG" style="left:36px;top:70px"></div>
+        <div class="ff" id="roF0" style="top:184px"></div><div class="ff" id="roF1" style="top:184px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">LIVE GRAPH · <i style="font-family:Poppins;text-transform:none;color:var(--ac)">v</i> AGAINST <i style="font-family:Poppins;text-transform:none">t</i></div>
+        <svg id="grS" class="fill" width="784" height="274"></svg><div class="pillp" id="grP" style="right:36px;top:18px;height:40px;font-size:19px;background:var(--redBg);color:var(--red)">slope = <i>a</i> = 1 m/s²</div></div>
+    </div>
+
+    <!-- D: build force -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">BUILD FORCE · 3 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">ONLY THREE BASE UNITS</div><div id="brs"></div>
+        <div class="fx" id="drN" style="left:36px;top:450px;font-size:50px"></div></div>
+    </div>
+
+    <!-- K: side by side + think -->
+    <div id="sK">
+      <div class="card full" id="kb"><div class="lbl" style="left:36px;top:30px">FUNDAMENTAL · MASS</div><div class="ghost" id="exK" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <svg id="kbS" class="fill" width="784" height="580"></svg>
+        <div id="kbC" class="pillp" style="left:36px;top:490px">One instrument, one reading</div></div>
+      <div class="card rf" id="kd"><div class="lbl" style="left:36px;top:30px">DERIVED · DENSITY OF WATER</div>
+        <div class="pillp kp" id="kd0" style="top:100px">Mass &nbsp;<b class="mono">1 kg</b></div><div class="pillp kp" id="kd1" style="top:172px">Volume &nbsp;<b class="mono">0.001 m³</b></div>
+        <div class="fx" id="kdF" style="left:36px;top:272px;font-size:50px"></div>
+        <div id="kdC" class="pillp" style="left:36px;top:490px">Needs two measurements, then divide</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- R: the opening, solved -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">ONE BASE QUANTITY · LENGTH</div><div id="lrs"></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">WHY DOES SPEED NEED TWO UNITS?</div><svg id="rrS" class="fill" width="784" height="580"></svg>
+        <div class="tb" id="tb0" style="left:60px;top:96px"><b>km</b><s>LENGTH · BASE</s></div><div class="tb" id="tb1" style="left:470px;top:96px"><b class="u">h</b><s>TIME · BASE</s></div>
+        <div class="tb" id="tb2" style="left:262px;top:330px;background:var(--ac);"><b style="color:#fff">15 km/h</b><s style="color:#DCE7FC">SPEED · DERIVED</s></div>
+        <div class="pillp ink" id="rrP" style="left:36px;top:490px">Speed has two parents: a length and a time</div></div>
+    </div>
+
+    <!-- B: why these seven -->
+    <div id="sB">
+      <div class="card full" id="bl"><div class="lbl" style="left:36px;top:30px">7 INDEPENDENT BLOCKS</div><div id="ibs"></div>
+        <div class="pillp ac" id="blP" style="left:36px;top:490px">None can be made from the other six</div></div>
+      <div class="card rf" id="br"><div class="lbl" style="left:36px;top:30px">TRY TO BUILD ONE FROM THE OTHERS</div><div id="ats"></div>
+        <div class="pillp" id="brP" style="left:36px;top:490px">Each base quantity is a fresh block</div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">A steel block is 20 cm &times; 10 cm &times; 5 cm. Its mass is 7.8 kg. Find its density.</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">THE STEEL BLOCK</div><svg id="wrS" class="fill" width="784" height="580"></svg>
+        <div class="dimc" id="wV" style="left:36px;top:400px">V = <span id="wVn">0.001</span><span style="color:#C9B6F5">m³</span></div>
+        <div class="dimc" id="wR" style="left:36px;top:476px;background:var(--ac)">&rho; = 7800<span style="color:#DCE7FC">kg/m³</span></div></div>
+    </div>
+
+    <!-- X: exam trap + where -->
+    <div id="sX"><div class="card red" id="trap"><svg id="cw" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Derived = base quantities, <span class="acc">multiplied and divided</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

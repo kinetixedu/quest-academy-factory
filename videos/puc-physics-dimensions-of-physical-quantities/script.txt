@@ -1,0 +1,56 @@
+H1|0.4|Five apples plus five apples is ten apples. Five rupees plus five rupees is ten rupees.
+H2|0.45|Adding is easy, as long as the things are the same kind.
+H3|0.35|Aarav rides five metres in five seconds. He writes five metres plus five seconds.
+H4|0.5|His calculator says ten. Ten what? Something is wrong.
+H5|0.65|By the end of this video, you will see exactly why. The answer is called dimensions.
+P1|0.35|So what are dimensions?
+P2|0.4|Every physical quantity is built from the seven base quantities.
+P3|0.4|In mechanics, three of them are enough. Mass, length and time.
+P4|0.4|We write them with square brackets. Capital M for mass, capital L for length, capital T for time.
+P5|0.65|The dimensions of a quantity are the powers of the base quantities, that you need to build it.
+S1|0.35|Let's watch Aarav's bicycle on our motion notebook.
+S2|0.4|It covers five metres in each second. Distance is a length. Its dimension is L.
+S3|0.4|Time is T. Speed is distance divided by time. So speed is L over T, or L T to the minus one.
+S4|0.45|Now he speeds up. Let's replay it in slow motion. Every second, the speed grows by two metres per second.
+S5|0.5|Acceleration is a change in speed, divided by time. So it is L T to the minus one, divided by T again.
+S6|0.65|That gives L T to the minus two. Look at the graphs. One slope gives speed, the other slope gives acceleration.
+D1|0.35|Let's build the dimensions of area, step by step.
+D2|0.75|Step one. Area equals length times breadth.
+D3|0.75|Step two. Length is L. Breadth is also a length, so it is L too.
+D4|0.75|Step three. L times L is L squared. So area has the dimension L squared.
+D5|0.75|Step four. Mass does not appear, and time does not appear. So we write M to the zero, L squared, T to the zero.
+D6|0.65|The zero powers tell us: no mass, no time. Only length, twice.
+R1|0.35|Now the reasoning for volume and density, link by link.
+R2|0.4|Volume is length times breadth times height. Three lengths. So L cubed.
+R3|0.4|Density is mass divided by volume. Mass is M. Volume is L cubed.
+R4|0.6|So density is M over L cubed. That is M L to the minus three. A negative power means we divided.
+T1|0.75|Remember this. Dimensions are the powers of M, L and T. You can only add or subtract quantities with the same dimensions.
+K1|0.4|Side by side. On the left, distance, five metres. Its dimension is L.
+K2|0.6|On the right, time, five seconds. Its dimension is T. L is not T, so they can never be added.
+K3|3.2|Now you try. Can you add a speed of five metres per second to a speed of eighteen kilometres per hour? Pause and decide.
+K4|0.65|Yes! Both are L T to the minus one. Eighteen kilometres per hour is five metres per second, so the sum is ten metres per second.
+C1|0.35|Here is a surprise. Different quantities can share the same dimensions.
+C2|0.4|Speed is L T to the minus one. Angle is arc length divided by radius. Length over length, so it has no dimension at all.
+C3|0.4|Frequency is how many times per second. That is T to the minus one.
+C4|3.2|Your turn. A strain is a change in length divided by the original length. Does strain have a dimension? Pause and decide.
+C5|0.65|No dimension! Length divided by length cancels. Strain is a pure number, just like an angle.
+W1|0.35|Now, one worked example.
+W2|0.5|Find the dimensions of momentum. Momentum is mass times velocity.
+W3|0.75|Step one. Mass is M.
+W4|0.75|Step two. Velocity is displacement over time. That is L T to the minus one.
+W5|0.75|Step three. Multiply. M times L T to the minus one.
+W6|0.65|So momentum is M L T to the minus one. Mass to the power one, length to the power one, time to the power minus one.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think a quantity with no unit, like an angle, has no dimensions, so it can be ignored everywhere.
+X3|0.65|Half true. Angle is dimensionless, but it still has a unit, the radian. Having no dimension does not mean having no unit.
+E1|0.6|Where is this asked? As short questions on dimensions of a quantity, and spotting quantities with the same dimensions.
+Q1|5.4|Exam level now. Which pair of quantities has the same dimensions? Pause and solve.
+A1|0.5|The answer is C. Frequency and angular velocity.
+A2|0.5|Frequency is cycles per second, T to the minus one. Angular velocity is angle per second. Angle has no dimension, so it is also T to the minus one.
+A3|0.6|In A, speed is L T to the minus one but acceleration is L T to the minus two. In B, area is L squared, volume L cubed. In D, mass and density differ by L cubed.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why can you not add five metres to five seconds?
+Y3|0.9|Two. What are the dimensions of acceleration?
+Y4|1.1|Three. Does an angle have a dimension? Does it have a unit?
+N1|0.3|Next time: what is pressure made of, in M, L and T? We find out in dimensional formulae.
