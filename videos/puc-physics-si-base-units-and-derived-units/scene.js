@@ -25,9 +25,9 @@ const SW = [[tT, tK1], [tQ, tQ + 0.06], [tF, tF + 0.06]];
 const OUT = id => T0(id) - 0.32;
 
 /* ---------- title card ---------- */
-const JOBS = [['weight', 'Cook, Chennai', '1 KG OF RICE', '1', 'kg', 'Chennai'], ['weight', 'Cook, Delhi', '1 KG OF RICE', '1', 'kg', 'Delhi'], ['clock', 'Watchmaker', 'THE SAME SECOND', '1', 's', 'watchmaker']];
+const JOBS = [['weight', 'Cook, Chennai', '1 KG OF RICE', '1', 'kg', 'Chennai'], ['weight', 'Cook, Delhi', '1 KG OF RICE', '1', 'kg', 'Delhi'], ['clock', 'Every watch', 'THE SAME SECOND', '1', 's', 'watch']];
 $('#jobs').innerHTML = JOBS.map(([ic, n, w], i) => `<div class="job" id="jb${i}" style="left:${390 + i * 390}px"><i>${M.icon(ic, 32, C.ac, 2.2)}</i><div class="jn">${n}</div><div class="jw">${w}</div></div>`).join('');
-const tJob = [wt('H1', 'Chennai'), wt('H1', 'Delhi'), wt('H1', 'watchmaker')];
+const tJob = [wt('H1', 'Chennai'), wt('H1', 'Delhi'), wt('H1', 'watch')];
 /* ---------- H ---------- */
 $('#jrs').innerHTML = JOBS.map(([ic, n, w, v, u], i) => `<div class="jr" id="jr${i}" style="top:${84 + i * 134}px"><i>${M.icon(ic, 34, C.ac, 2.2)}</i><div class="jn">${n}</div><div class="jw">${w}</div><div class="jv"><span>${v}</span> <span class="u">${u}</span></div></div>`).join('');
 // spanner jaw vs bolt head, drawn to scale (20 px per mm)
@@ -273,7 +273,7 @@ M.on(t => {
   if (kOn) {
     const out = OUT('K3');
     M.vis($('#kb'), t, tK1 + 0.1, out, { dx: -60, dy: 0, ...o });
-    M.vis(kgW, t, wt('K1', 'kilogram') - 0.1, 1e9, { dy: -40, sp: M.SOFT, fade: 0.1 }); M.vis($('#kbC'), t, wt('K1', 'chosen') - 0.1, 1e9, POP);
+    M.vis(kgW, t, wt('K1', 'kilogram') - 0.1, 1e9, { dy: -40, sp: M.SOFT, fade: 0.1 }); M.vis($('#kbC'), t, wt('K1', 'Chosen') - 0.1, 1e9, POP);
     M.vis($('#kd'), t, T0('K2') - 0.1, out, { dx: 60, dy: 0, ...o });
     PUC.write($('#kdF'), t, wt('K2', 'newton') + 0.1, 0.8);
     [...$('#kdB').children].forEach((c, k) => M.vis(c, t, wt('K2', 'inside') + k * 0.15, 1e9, POP));

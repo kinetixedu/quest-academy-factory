@@ -93,7 +93,7 @@ $('#steps').innerHTML = `<div class="hiBox" id="hiB" style="left:20px;width:744p
 const tStep = [wt('D2', 'Speed'), wt('D3', 'Acceleration'), wt('D4', 'Force')];
 const BR = [['v', VC, 'm', '÷', 's', 'm/s'], ['a', AC, 'm/s', '÷', 's', 'm/s²'], ['F', FC, 'kg', '×', 'm/s²', 'kg m/s²']];
 $('#brs').innerHTML = BR.map(([l, c, b1, op, b2, r], i) => `<div class="brow" id="br${i}" style="top:${92 + i * 112}px"><span class="rl" style="color:${c}">${l}</span><span class="blk" id="bk${i}a">${b1}</span><span class="bop">${op}</span><span class="blk" id="bk${i}b">${b2}</span><span class="bop">=</span><span class="bres" id="bk${i}r" style="background:${c}">${r}</span></div>`).join('');
-const tBr = [[wt('D2', 'length'), wt('D2', 'time'), wt('D2', 'metre')], [wt('D3', 'length'), wt('D3', 'again'), wt('D3', 'metre')], [wt('D4', 'Mass'), wt('D4', 'length'), wt('D4', 'squared')]];
+const tBr = [[wt('D2', 'length'), wt('D2', 'time'), wt('D2', 'metre')], [wt('D3', 'length'), wt('D3', 'twice'), wt('D3', 'metre')], [wt('D4', 'Mass'), wt('D4', 'length'), wt('D4', 'squared')]];
 $('#drN').innerHTML = K(`1\\,${cv(FC, '\\text{N}')} = 1\\,\\text{kg}\\,\\text{m}\\,\\text{s}^{-2}`);
 
 /* ---------- statement ---------- */
@@ -302,7 +302,7 @@ M.on(t => {
     BQ.forEach((_, i) => { const el = $('#ib' + i); M.vis(el, t, tB1 + 0.3 + i * 0.08, 1e9, { dy: 14 }); const on = M.io((t - wt('B2', 'independent') - i * 0.06) / 0.3); el.style.background = mix(C.soft, C.ac2, on); el.style.borderColor = mix(C.ink, C.ac, on); });
     M.vis($('#blP'), t, wt('B2', 'None') - 0.1, 1e9, POP);
     M.vis($('#br'), t, T0('B3') - 0.1, out, { dx: 60, dy: 0, ...o });
-    [wt('B3', 'cannot'), wt('B3', 'cannot', 1)].forEach((tt, i) => { const el = $('#at' + i); M.vis(el, t, tt - 0.2, 1e9, { dy: 16 }); M.vis(el.querySelector('.ax'), t, tt + 1.2, 1e9, { ...POP, sc: 0.3 }); });
+    [wt('B3', 'cannot'), wt('B3', 'mass')].forEach((tt, i) => { const el = $('#at' + i); M.vis(el, t, tt - 0.2, 1e9, { dy: 16 }); M.vis(el.querySelector('.ax'), t, tt + 1.2, 1e9, { ...POP, sc: 0.3 }); });
     M.vis($('#brP'), t, wt('B3', 'Each') - 0.1, 1e9, POP);
     M.vis($('#th2'), t, tB4 + 0.05, OUT('W1'), { dy: 36, ...o });
     th2(t, { tin: tB4, tOpts: wt('B4', 'derived') - 0.1, tCount: T1('B4') + 0.05, dur: 3, tAns: T0('B5') - 0.02, tWhy: wt('B5', 'Time') });
