@@ -216,7 +216,7 @@ M.on(t => {
     const out = OUT('T1');
     M.vis($('#dk'), t, tD1 + 0.05, out, { dx: -60, dy: 0, ...o });
     M.vis($('#dt'), t, tD1 + 0.25, out, { dx: 60, dy: 0, ...o });
-    M.vis($('#sfd'), t, wt('D1', 'significant') - 0.1, 1e9, POP);
+    M.vis($('#sfd'), t, T0('D1') + 0.4, 1e9, POP);
     const si = tKr.reduce((a, tt, i) => t >= tt - 0.1 ? i : a, -1);
     KR.forEach((_, i) => { const el = $('#kr' + i); M.vis(el, t, tKr[i] - 0.1, 1e9, { dy: 16 }); M.vis($('#kq' + i), t, tKq[i] - 0.1, 1e9, POP);
       setBg(el, mix(C.soft, C.ac2, i === si && t < T0('D6') ? M.io((t - tKr[i] + 0.1) / 0.25) : 0)); });

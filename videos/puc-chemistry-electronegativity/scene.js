@@ -132,10 +132,10 @@ const WR = WB.map(([s, x, gp, y, r]) => {
   mk(g, 'line', { x1: 184, y1: y, x2: 520 - r, y2: y, stroke: C.ink2, 'stroke-width': 6, 'stroke-linecap': 'round' });
   const c = atomG(g, 34, HC, 'C', 28); attr(c, 'transform', `translate(150 ${y})`);
   const p = atomG(g, r, NC, s, 30); attr(p, 'transform', `translate(520 ${y})`);
-  txt(g, 150, y + 62, '2.5', { 'text-anchor': 'middle', fill: GC, 'font-weight': 600, 'font-size': 20 });
-  txt(g, 520, y + r + 28, x.toFixed(1), { 'text-anchor': 'middle', fill: GC, 'font-weight': 600, 'font-size': 20 });
+  txt(g, 104, y + 8, '2.5', { 'text-anchor': 'end', fill: GC, 'font-weight': 600, 'font-size': 20 });
+  txt(g, 520 + r + 12, y + 8, x.toFixed(1), { 'text-anchor': 'start', fill: GC, 'font-weight': 600, 'font-size': 20 });
   const pr = [0, 1].map(() => mk(ws, 'circle', { r: 9, fill: EC }));
-  const gl = txt(ws, 690, y + 12, `GAP ${gp.toFixed(1)}`, { 'text-anchor': 'middle', fill: GC, 'font-weight': 600, 'font-size': 26 });
+  const gl = txt(ws, 700, y + 12, `GAP ${gp.toFixed(1)}`, { 'text-anchor': 'middle', fill: GC, 'font-weight': 600, 'font-size': 26 });
   const dp = txt(ws, 150, y - 46, 'δ+', { 'font-family': 'Poppins', 'font-size': 26, 'font-weight': 700, fill: HC, 'text-anchor': 'middle' });
   const dm = txt(ws, 520, y - r - 12, 'δ−', { 'font-family': 'Poppins', 'font-size': 26, 'font-weight': 700, fill: NC, 'text-anchor': 'middle' });
   return { g, pr, gl, dp, dm, y, off: gp / 1.5 * 120 };
@@ -305,7 +305,7 @@ M.on(t => {
   if (stOn) {
     const sx = PUC.sweep(SW)(t); stmt.style.transform = t > tW1 ? `translateX(${(sx ?? -1980).toFixed(1)}px)` : 'none';
     M.rise($('#st1'), t, wt('T1', 'Electronegativity') - 0.1, { st: 0.05 }); M.rise($('#st2'), t, wt('T1', 'and') - 0.1, { st: 0.07, sp: M.HEAVY });
-    PUC.write($('#stF'), t, wt('T1', 'wins') + 0.2, 0.8);
+    PUC.write($('#stF'), t, wt('T1', 'and') + 0.3, 0.8);
   }
 
   /* W */

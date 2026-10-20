@@ -123,7 +123,7 @@ const wBr = mk(s2, 'path', { d: `M${WX - 110},${WY + 140} V${WY + 152} H${WX + 1
 const wBrL = txt(s2, WX, WY + 182, 'Δx = 1.0 × 10⁻¹⁰ m · ABOUT ONE ATOM', { 'text-anchor': 'middle', 'font-size': 17, fill: XC, 'font-weight': 600 });
 const wE = mk(s2, 'circle', { cx: WX + 40, cy: WY - 30, r: 14, fill: EC });
 const wFan = Array.from({ length: 7 }, () => PUC.arrow(s2, PC, 4, 14));
-const wFanL = txt(s2, 720, 120, 'SPEED UNKNOWN BY', { 'text-anchor': 'end', 'font-size': 17, fill: PC, 'font-weight': 600 });
+const wFanL = txt(s2, 720, 470, 'SPEED UNKNOWN BY Δv', { 'text-anchor': 'end', 'font-size': 17, fill: PC, 'font-weight': 600 });
 
 /* ---------- C ---------- */
 const cw = $('#cwS'), OX = 392, OY = 270, OR = 150;
@@ -209,11 +209,11 @@ M.on(t => {
   }
 
   /* S + B */
-  const sOn = t >= tS1 - 0.1 && t < tD1 + 0.1; M.hide($('#sS'), !sOn);
+  const sOn = (t >= tS1 - 0.1 && t < tD1 + 0.1) || (t >= tB1 - 0.1 && t < tT + 0.1); M.hide($('#sS'), !sOn);
   if (sOn) {
-    const z = OUT('B1');
+    const z = OUT('D1');
     M.vis($('#bn'), t, tS1 + 0.05, z, { dy: 36, ...o });
-    const tSplit = tBlur - 0.2;
+    const tSplit = tS1 + 0.9;
     { const sh = M.spring(t - tSplit, M.HEAVY), wv = M.lerp(1600, 784, sh); snap($('#bn'), 'width', (sh >= 1 ? 784 : wv.toFixed(1)) + 'px'); snap($('#bnIn'), 'left', (sh >= 1 ? 0 : ((wv - 784) / 2).toFixed(1)) + 'px'); }
     M.vis($('#ro'), t, tSplit + 0.1, z, { dx: 60, dy: 0, ...o }); M.vis($('#gr'), t, tSplit + 0.35, z, { dy: 36, ...o });
     const s = sState(t);
@@ -245,16 +245,16 @@ M.on(t => {
     M.draw(hyp, t, tSplit + 0.8, 0.8);
     // compare
     M.vis($('#cmpC'), t, tB1 + 0.05, OUT('B4'), { dy: 36, ...o });
-    CM.forEach((c, i) => { M.vis($('#cm' + i), t, wt('B1', i ? 'electron' : 'grain') - 0.1, 1e9, { dy: 16 }); M.vis($('#cmv' + i), t, tCm[i] - 0.1, 1e9, { dy: 10 });
+    CM.forEach((c, i) => { M.vis($('#cm' + i), t, tB1 + 0.3 + i * 0.3, 1e9, { dy: 16 }); M.vis($('#cmv' + i), t, tCm[i] - 0.1, 1e9, { dy: 10 });
       snap($('#cmb' + i), 'width', (640 * c[3] * M.io((t - tCm[i]) / 0.6)).toFixed(1) + 'px'); M.vis($('#cmt' + i), t, tCm[i] + 0.8, 1e9, POP); });
-    M.vis($('#th1'), t, tB4 + 0.05, OUT('D1'), { dy: 36, ...o });
+    M.vis($('#th1'), t, tB4 + 0.05, OUT('T1'), { dy: 36, ...o });
     th1(t, { tin: tB4, tOpts: wt('B4', 'Does') - 0.1, tCount: T1('B4') + 0.05, dur: 3, tAns: T0('B5') - 0.02, tWhy: wt('B5', 'Its') });
   }
 
   /* D */
-  const dOn = t >= tD1 - 0.1 && t < tT + 0.1; M.hide($('#sD'), !dOn);
+  const dOn = t >= tD1 - 0.1 && t < tB1 + 0.1; M.hide($('#sD'), !dOn);
   if (dOn) {
-    const out = OUT('T1');
+    const out = OUT('B1');
     M.vis($('#dl'), t, tD1 + 0.05, out, { dx: -60, dy: 0, ...o });
     dsol(t, tD1, tDs);
     M.vis($('#dR'), t, tD1 + 0.3, out, { dx: 60, dy: 0, ...o });
@@ -288,7 +288,7 @@ M.on(t => {
     fade(wAt, t, T0('W2') + 0.5); fade(wNu, t, T0('W2') + 0.5); fade(wBr, t, wt('W2', 'size') - 0.1); fade(wBrL, t, wt('W2', 'size'));
     fade(wE, t, T0('W2') + 0.8);
     const fu = M.io((t - wt('W6', 'five') + 0.2) / 0.6);
-    wFan.forEach((a, i) => { const an = (-40 + i * 13) * Math.PI / 180, L0 = 22, L1 = 22 + (80 + 220 * fu) * (0.6 + 0.4 * hash(i + 3)); if (fu > 0.01) a.set(WX + 40 + L0 * Math.cos(an), WY - 30 + L0 * Math.sin(an), WX + 40 + L1 * Math.cos(an), WY - 30 + L1 * Math.sin(an)); else a.set(0, 0, 0, 0); a.g.style.opacity = (fu * 0.8).toFixed(3); });
+    wFan.forEach((a, i) => { const an = (-40 + i * 13) * Math.PI / 180, L0 = 22, L1 = 22 + (60 + 150 * fu) * (0.6 + 0.4 * hash(i + 3)); if (fu > 0.01) a.set(WX + 40 + L0 * Math.cos(an), WY - 30 + L0 * Math.sin(an), WX + 40 + L1 * Math.cos(an), WY - 30 + L1 * Math.sin(an)); else a.set(0, 0, 0, 0); a.g.style.opacity = (fu * 0.8).toFixed(3); });
     fade(wFanL, t, wt('W6', 'five'));
     M.vis($('#wGp'), t, wt('W6', 'metres') - 0.1, 1e9, POP);
   }

@@ -47,7 +47,7 @@ const gx = i => gr.X(i + 0.5);
 IE.forEach(([e], i) => txt(ps, gx(i), 524, e, { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 22, fill: C.ink }));
 const trendL = mk(ps, 'line', { x1: gx(0), y1: gr.Y(520), x2: gx(7), y2: gr.Y(2081), stroke: C.dim, 'stroke-width': 3, 'stroke-dasharray': '8 10' });
 const gPath = mk(ps, 'path', { d: 'M' + IE.map(([, v], i) => `${gx(i).toFixed(1)} ${gr.Y(v).toFixed(1)}`).join(' L'), fill: 'none', stroke: NC, 'stroke-width': 5, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' });
-const gDot = IE.map(([e, v], i) => { const g = mk(ps, 'g', {}); const dip = e === 'B' || e === 'O'; mk(g, 'circle', { cx: gx(i), cy: gr.Y(v), r: dip ? 11 : 9, fill: dip ? XC : NC }); txt(g, gx(i), gr.Y(v) - 22, String(v), { 'text-anchor': 'middle', fill: GC, 'font-weight': 600, 'font-size': 19 }); return g; });
+const gDot = IE.map(([e, v], i) => { const g = mk(ps, 'g', {}); const dip = e === 'B' || e === 'O'; mk(g, 'circle', { cx: gx(i), cy: gr.Y(v), r: dip ? 11 : 9, fill: dip ? XC : NC }); txt(g, gx(i), gr.Y(v) + (dip ? 52 : -22), String(v), { 'text-anchor': 'middle', fill: GC, 'font-weight': 600, 'font-size': 19 }); return g; });
 const dipRing = ['B', 'O'].map(e => { const i = IE.findIndex(x => x[0] === e); return mk(ps, 'circle', { cx: gx(i), cy: gr.Y(IE[i][1]), r: 30, fill: 'none', stroke: XC, 'stroke-width': 3, 'stroke-dasharray': '6 6' }); });
 const tIE = [wt('P3', 'Lithium'), wt('P3', 'Beryllium'), wt('P3', 'boron'), wt('P4', 'Carbon'), wt('P4', 'Nitrogen'), wt('P4', 'oxygen'), wt('P5', 'Fluorine'), wt('P5', 'neon')];
 $('#dips').innerHTML = [['TREND SAYS', 'Rises across the period', C.soft, C.ink], ['DIP 1', 'B 801 &lt; Be 899', C.redBg, XC], ['DIP 2', 'O 1314 &lt; N 1402', C.redBg, XC]].map(([a, b, bg, fg], i) => `<div id="dp${i}" style="position:absolute;left:0;top:${i * 112}px;width:452px;height:96px;border-radius:14px;background:${bg};box-sizing:border-box;padding:16px 22px"><div style="font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)">${a}</div><div style="font:600 28px Poppins;color:${fg};margin-top:6px;white-space:nowrap">${b}</div></div>`).join('') + `<div class="pillp ac" id="dpU" style="left:0;top:350px">Two dips, two exceptions</div>`;
@@ -90,7 +90,7 @@ const dsol = PUC.solution($('#dl'), [
 $('#dl').querySelectorAll('.sol .sx').forEach((e, i) => { if (i === 1 || i === 2) e.style.font = '600 24px Poppins'; });
 const tDs = [T0('D2'), T0('D3'), T0('D4'), T0('D5')];
 const ds = $('#dS');
-const EG = [{ s: 'F', x: 210, R: 63, sh: 2, v: '−328' }, { s: 'Cl', x: 560, R: 99, sh: 3, v: '−349' }], EY = 250;
+const EG = [{ s: 'F', x: 200, R: 90, sh: 2, v: '−328' }, { s: 'Cl', x: 545, R: 140, sh: 3, v: '−349' }], EY = 250;
 const EGd = EG.map(o => { const g = mk(ds, 'g', {});
   for (let i = 0; i < o.sh; i++) mk(g, 'circle', { cx: o.x, cy: EY, r: o.sh === 1 ? o.R : 34 + (o.R - 34) * (i + 1) / o.sh, fill: 'none', stroke: C.dim, 'stroke-width': 2 });
   const n = atomG(g, 26, NC, o.s, 22); attr(n, 'transform', `translate(${o.x} ${EY})`);
@@ -98,7 +98,7 @@ const EGd = EG.map(o => { const g = mk(ds, 'g', {});
   out.forEach(([x, y]) => mk(g, 'circle', { cx: x, cy: y, r: 6, fill: HC }));
   const e = mk(ds, 'circle', { r: 8, fill: EC });
   const rl = out.slice(0, 7).map(() => mk(ds, 'line', { stroke: XC, 'stroke-width': 2, 'stroke-dasharray': '4 5' }));
-  const val = txt(ds, o.x, EY + o.R + 50, `${o.s} ${o.v} kJ/mol`, { 'text-anchor': 'middle', fill: GC, 'font-weight': 600, 'font-size': 22 });
+  const val = txt(ds, o.x, EY + o.R + 36, `${o.s} ${o.v} kJ/mol`, { 'text-anchor': 'middle', fill: GC, 'font-weight': 600, 'font-size': 22 });
   return { g, e, rl, out, val, ...o }; });
 const egTag = [chip($('#dr'), 36, 470, 'F: SMALL n = 2 SHELL · STRONG REPULSION', XC), chip($('#dr'), 36, 520, 'Cl: LARGER n = 3 SHELL · MORE ROOM', C.ink)];
 const g16 = chip($('#dr'), 440, 18, 'GROUP 16: O −141 · S −200', GC);
@@ -238,8 +238,8 @@ M.on(t => {
     EGd.forEach((d, j) => {
       fade(d.g, t, tD1 + 0.4 + j * 0.2);
       const te = j ? T0('D4') : T0('D3'), u = M.io((t - te) / 1.0);
-      const sx = d.x + d.R + 120, ex = d.x + d.R * Math.cos(-Math.PI / 2 + 0.0001), ey = EY - d.R;
-      const x = M.lerp(sx, d.x, u), y = M.lerp(EY - d.R - 90, ey, u);
+      const sx = d.x + 70, ex = d.x + d.R * Math.cos(-Math.PI / 2 + 0.0001), ey = EY - d.R;
+      const x = M.lerp(sx, d.x, u), y = M.lerp(EY - d.R - 56, ey, u);
       attr(d.e, 'cx', x.toFixed(1)); attr(d.e, 'cy', y.toFixed(1)); fade(d.e, t, te - 0.2);
       const rp = M.io((t - te - 0.8) / 0.4) * (j ? 0.45 : 1);
       d.rl.forEach((l, k) => { const [ox, oy] = d.out[k]; const near = Math.hypot(ox - d.x, oy - ey) < d.R * 1.25; attr(l, 'x1', x.toFixed(1)); attr(l, 'y1', y.toFixed(1)); attr(l, 'x2', ox.toFixed(1)); attr(l, 'y2', oy.toFixed(1)); l.style.opacity = (near ? rp : 0).toFixed(3); M.hide(l, rp <= 0 || !near); });

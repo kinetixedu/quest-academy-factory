@@ -160,7 +160,7 @@ const avD = PUC.avatar($('#sD'), { x: 976 + 36, y: 270 + 470, who: 'Diya', face:
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('S4', 'brand') - 0.2, 1.1, 760, 560], [T0('S5') + 0.6, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('S4', 'brand') - 0.2, 1.1, 640, 580], [T0('S5') + 0.6, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};
@@ -287,7 +287,7 @@ M.on(t => {
   if (stOn) {
     const sx = PUC.sweep(SW)(t); stmt.style.transform = t > tW1 ? `translateX(${(sx ?? -1980).toFixed(1)}px)` : 'none';
     M.rise($('#st1'), t, wt('T1', 'outer') - 0.2, { st: 0.05 }); M.rise($('#st2'), t, wt('T1', 'last') - 0.2, { st: 0.07, sp: M.HEAVY });
-    PUC.write($('#stF'), t, wt('T1', 'block') + 0.2, 0.8);
+    PUC.write($('#stF'), t, wt('T1', 'block') - 0.2, 0.7);
   }
 
   /* W: worked example + orbital boxes */

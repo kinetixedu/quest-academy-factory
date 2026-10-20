@@ -107,7 +107,7 @@ const hot = mk(cs, 'g', {}); mk(hot, 'rect', { x: 120, y: 414, width: 544, heigh
 const c2 = $('#cS2');
 $('#cr').insertAdjacentHTML('beforeend', `<div class="fx" id="peq" style="left:36px;top:74px;font-size:40px">${K(`${EE('E')} = h${NU}`)}</div><div class="fx" id="peq2" style="left:36px;top:136px;font-size:30px">${K('h = 6.626 \\times 10^{-34}\\,\\text{J s}')}</div>`);
 const SX = 360, SB = 410, STH = 56, SWD = 90;
-const ramp = mk(c2, 'g', {}); mk(ramp, 'line', { x1: 60, y1: SB, x2: 300, y2: SB - 3 * STH, stroke: C.dim, 'stroke-width': 4, 'stroke-dasharray': '8 8' }); mk(ramp, 'path', { d: `M150 ${SB - 110} l40 40 M190 ${SB - 110} l-40 40`, stroke: C.red, 'stroke-width': 5, 'stroke-linecap': 'round' }); txt(ramp, 60, SB + 30, 'NOT SMOOTH', { 'font-size': 15, fill: C.red, 'font-weight': 700 });
+const ramp = mk(c2, 'g', {}); mk(ramp, 'line', { x1: 60, y1: SB, x2: 300, y2: SB - 3 * STH, stroke: C.dim, 'stroke-width': 4, 'stroke-dasharray': '8 8' }); txt(ramp, 60, SB - 3 * STH - 20, 'WAVE IDEA: SMOOTH', { 'font-size': 15, fill: C.mute, 'font-weight': 700 }); const rampX = mk(c2, 'g', {}); mk(rampX, 'path', { d: `M150 ${SB - 110} l40 40 M190 ${SB - 110} l-40 40`, stroke: C.red, 'stroke-width': 5, 'stroke-linecap': 'round' }); txt(rampX, 60, SB + 30, 'NOT SMOOTH', { 'font-size': 15, fill: C.red, 'font-weight': 700 });
 const steps = mk(c2, 'path', { d: `M${SX - 20} ${SB} H${SX + SWD} V${SB - STH} H${SX + 2 * SWD} V${SB - 2 * STH} H${SX + 3 * SWD} V${SB - 3 * STH} H${SX + 4 * SWD}`, fill: 'none', stroke: C.ink, 'stroke-width': 4 });
 const stL = ['0', 'hν', '2hν', '3hν'].map((s, i) => txt(c2, SX + i * SWD + SWD / 2 + 10, SB - i * STH - 12, s, { 'text-anchor': 'middle', 'font-size': 20, fill: GC, 'font-weight': 700 }));
 const packs = [1, 2, 3].map(i => { const g = mk(c2, 'g', {}); for (let k = 0; k < i; k++) mk(g, 'rect', { x: SX + i * SWD + 12 + k * 22, y: SB - i * STH + 10, width: 18, height: 18, rx: 4, fill: GC }); return g; });
@@ -256,8 +256,8 @@ M.on(t => {
     fade(burner, t, tC1 + 0.3); attr(hotB, 'width', (544 * M.clamp((t - RODC[0][2] + 0.2) / (RODC[3][2] - RODC[0][2] + 0.6))).toFixed(1)); fade(hot, t, RODC[0][2] - 0.2);
     attr(hotB, 'fill', col === '#FFF4E0' ? '#E8B400' : mix('#D8301E', '#2F6FEB', M.io((t - RODC[3][2]) / 0.5)));
     avA(t, wt('C1', 'hotter') + 0.2, out);
-    M.vis($('#cr'), t, T0('C2') - 0.1, out, { dx: 60, dy: 0, ...o });
-    fade(ramp, t, wt('C2', 'smoothly') - 0.2); M.draw(steps, t, wt('C2', 'packets') - 0.2, 0.7);
+    M.vis($('#cr'), t, wt('C1', 'iron') - 0.1, out, { dx: 60, dy: 0, ...o });
+    fade(ramp, t, wt('C1', 'dull') - 0.2); fade(rampX, t, wt('C2', 'smoothly') - 0.2); M.draw(steps, t, wt('C2', 'packets') - 0.2, 0.7);
     stL.forEach((l, i) => fade(l, t, (i < 2 ? wt('C4', 'h') : i === 2 ? wt('C4', 'two') : wt('C4', 'three')) - 0.1));
     packs.forEach((g, i) => fade(g, t, [wt('C4', 'h'), wt('C4', 'two'), wt('C4', 'three')][i]));
     PUC.write($('#peq'), t, wt('C3', 'E') - 0.1, 0.6); PUC.write($('#peq2'), t, wt('C3', 'constant') - 0.1, 0.7);

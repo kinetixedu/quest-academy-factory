@@ -103,7 +103,7 @@ const sumG = mk(stA, 'g', {}); mk(sumG, 'rect', { x: 212, y: 424, width: 360, he
 const cmpG = mk(stA, 'g', {}); mk(cmpG, 'rect', { x: 242, y: 500, width: 300, height: 52, rx: 12, fill: C.okBg }); txt(cmpG, 392, 536, '88 ≈ 88.5  ✓', { 'text-anchor': 'middle', 'font-size': 28, fill: C.ok, 'font-weight': 600 });
 // stage B: Newlands' octaves
 const OCT = [['Li', 'Be', 'B', 'C', 'N', 'O', 'F'], ['Na', 'Mg', 'Al', 'Si', 'P', 'S', 'Cl'], ['K', 'Ca']];
-const tB = []; OCT.forEach((row, r) => row.forEach((s, c) => { const T = tile(stB, 92 + c * 100, 150 + r * 116, 84, 84, s, 32, HC); const n = r * 7 + c; const bd = mk(T.g, 'g', {}); mk(bd, 'circle', { cx: 0, cy: -58, r: 15, fill: n < 8 ? C.ink : C.soft }); txt(bd, 0, -52, String(n + 1), { 'text-anchor': 'middle', 'font-size': 17, fill: '#FFFFFF', 'font-weight': 600 }); tB.push({ ...T, bd, r, c, n }); }));
+const tB = []; OCT.forEach((row, r) => row.forEach((s, c) => { const T = tile(stB, 92 + c * 100, 150 + r * 116, 84, 84, s, 32, HC); const n = r * 7 + c; const bd = mk(T.g, 'g', {}); mk(bd, 'circle', { cx: 0, cy: -58, r: 15, fill: n < 8 ? C.ink : C.soft }); txt(bd, 0, -52, String(n + 1), { 'text-anchor': 'middle', 'font-size': 17, fill: '#FFFFFF', 'font-weight': 600 }); tB.push({ ...T, bd, row: r, col: c, n }); }));
 const brk = mk(stB, 'g', {}); [2, 3, 4].forEach(c => mk(brk, 'rect', { x: 92 + c * 100 - 42, y: 382 - 42, width: 84, height: 84, rx: 14, fill: C.redBg, stroke: C.red, 'stroke-width': 2.5, 'stroke-dasharray': '6 6' }));
 txt(brk, 392, 398, '? ? ?', { 'text-anchor': 'middle', 'font-size': 28, fill: C.red, 'font-weight': 600 });
 const tOct = ['Lithium', 'beryllium', 'boron', 'carbon', 'nitrogen', 'oxygen', 'fluorine', 'eighth'].map(w => wt('S7', w));
@@ -112,7 +112,7 @@ const GH = ['III', 'IV', 'V', 'VI', 'VII'], MG = [['B', 'C', 'N', 'O', 'F'], ['A
 const gx = c => 104 + c * 144, gy = r => 152 + r * 96;
 GH.forEach((h, c) => txt(stC, gx(c), 92, 'GROUP ' + h, { 'text-anchor': 'middle', 'font-size': 16, fill: C.mute, 'font-weight': 600 }));
 const colBg = mk(stC, 'rect', { x: gx(4) - 66, y: 100, width: 132, height: 400, rx: 16, fill: C.ac2 });
-const tC = {}; MG.forEach((row, r) => row.forEach((s, c) => { if (!s) return; tC[s] = { ...tile(stC, gx(c), gy(r), 120, 80, s, 32, HC), r, c }; }));
+const tC = {}; MG.forEach((row, r) => row.forEach((s, c) => { if (!s) return; tC[s] = { ...tile(stC, gx(c), gy(r), 120, 80, s, 32, HC), row: r, col: c }; }));
 ['Te', 'I'].forEach(s => { const T = tC[s]; attr(T.t, 'y', 6); T.w = txt(T.g, 0, 30, s === 'Te' ? '127.6' : '126.9', { 'text-anchor': 'middle', 'font-size': 16, fill: C.mute, 'font-weight': 600 }); });
 const gaps = [0, 1].map(c => { const g = mk(stC, 'g', { transform: `translate(${gx(c)} ${gy(2)})` }); const r = mk(g, 'rect', { x: -60, y: -40, width: 120, height: 80, rx: 18, fill: 'none', stroke: GC, 'stroke-width': 3, 'stroke-dasharray': '8 7' }); const q = txt(g, 0, 12, '?', { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 34, fill: GC }); const e = txt(g, 0, 8, c ? 'eka-Si' : 'eka-Al', { 'text-anchor': 'middle', 'font-size': 22, fill: GC, 'font-weight': 600 }); const f = mk(g, 'rect', { x: -60, y: -40, width: 120, height: 80, rx: 18, fill: NC }); const ft = txt(g, 0, 12, c ? 'Ge' : 'Ga', { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 32, fill: '#FFFFFF' }); return { g, r, q, e, f, ft }; });
 const btag = document.createElement('div'); btag.className = 'btag'; btag.style.cssText = 'right:36px;top:18px;background:var(--ink);color:#fff'; $('#bn').appendChild(btag);
@@ -270,8 +270,8 @@ M.on(t => {
     }
     // stage B
     if (sB > 0) {
-      tB.forEach(T => { const tin = T.n < 8 ? tOct[T.n] - 0.1 : tEvery + 0.05 * (T.n - 8); const u = M.spring(t - tin, M.POP); attr(T.g, 'transform', `translate(${92 + T.c * 100} ${150 + T.r * 116}) scale(${Math.max(0.01, Math.min(u, 1.2)).toFixed(3)})`); M.hide(T.g, t < tin);
-        const one = T.c === 0 ? M.io((t - (T.n === 0 ? tLike : T.n === 7 ? tLike + 0.15 : tEvery + 0.5)) / 0.3) : 0; attr(T.r, 'fill', mix('#FFFFFF', NC, one)); attr(T.r, 'stroke', mix(HC, NC, one)); attr(T.t, 'fill', mix(HC, '#FFFFFF', one));
+      tB.forEach(T => { const tin = T.n < 8 ? tOct[T.n] - 0.1 : tEvery + 0.05 * (T.n - 8); const u = M.spring(t - tin, M.POP); attr(T.g, 'transform', `translate(${92 + T.col * 100} ${150 + T.row * 116}) scale(${Math.max(0.01, Math.min(u, 1.2)).toFixed(3)})`); M.hide(T.g, t < tin);
+        const one = T.col === 0 ? M.io((t - (T.n === 0 ? tLike : T.n === 7 ? tLike + 0.15 : tEvery + 0.5)) / 0.3) : 0; attr(T.r, 'fill', mix('#FFFFFF', NC, one)); attr(T.r, 'stroke', mix(HC, NC, one)); attr(T.t, 'fill', mix(HC, '#FFFFFF', one));
         fade(T.bd, t, tin + 0.05, T.n < 8 ? tEvery + 0.3 : 1e9); if (T.n === 15) { const cu = M.io((t - tCa) / 0.3) * (1 - M.io((t - tBroke - 0.2) / 0.3)); attr(T.r, 'stroke-width', (3 + 3 * cu).toFixed(1)); } });
       fade(brk, t, tBroke - 0.1);
     }
@@ -279,10 +279,10 @@ M.on(t => {
     // stage C
     if (sC > 0) {
       const sw = M.io((t - tSwap - 0.1) / 0.9);
-      for (const s in tC) { const T = tC[s]; let x = gx(T.c), y = gy(T.r);
-        if (s === 'Te' || s === 'I') { const from = s === 'I' ? 3 : 4, to = T.c; x = M.lerp(gx(from), gx(to), sw); y = gy(3) + Math.sin(sw * Math.PI) * (s === 'I' ? 54 : -54); }
-        const tin = tM1 + 0.15 + T.r * 0.12 + T.c * 0.05, u = M.spring(t - tin, M.POP); attr(T.g, 'transform', `translate(${x.toFixed(1)} ${y.toFixed(1)}) scale(${Math.max(0.01, Math.min(u, 1.15)).toFixed(3)})`); M.hide(T.g, t < tin);
-        const fam = T.c === 4 ? M.io((t - wt('M4', 'chlorine') - (T.r * 0.12)) / 0.3) : 0, si = s === 'Si' ? M.io((t - wt('B1', 'silicon')) / 0.3) : 0;
+      for (const s in tC) { const T = tC[s]; let x = gx(T.col), y = gy(T.row);
+        if (s === 'Te' || s === 'I') { const from = s === 'I' ? 3 : 4, to = T.col; x = M.lerp(gx(from), gx(to), sw); y = gy(3) + Math.sin(sw * Math.PI) * (s === 'I' ? 54 : -54); }
+        const tin = tM1 + 0.15 + T.row * 0.12 + T.col * 0.05, u = M.spring(t - tin, M.POP); attr(T.g, 'transform', `translate(${x.toFixed(1)} ${y.toFixed(1)}) scale(${Math.max(0.01, Math.min(u, 1.15)).toFixed(3)})`); M.hide(T.g, t < tin);
+        const fam = T.col === 4 ? M.io((t - wt('M4', 'chlorine') - (T.row * 0.12)) / 0.3) : 0, si = s === 'Si' ? M.io((t - wt('B1', 'silicon')) / 0.3) : 0;
         attr(T.r, 'fill', mix('#FFFFFF', s === 'I' ? NC : C.ac2, s === 'I' ? M.io((t - tSwap - 1) / 0.3) : Math.max(fam * 0, si))); attr(T.r, 'stroke', mix(HC, NC, Math.max(fam, si, s === 'I' ? M.io((t - tSwap - 1) / 0.3) : 0))); attr(T.t, 'fill', s === 'I' ? mix(HC, '#FFFFFF', M.io((t - tSwap - 1) / 0.3)) : HC);
         if (T.w) { fade(T.w, t, tLight - 0.1); attr(T.w, 'fill', s === 'I' ? mix(C.mute, '#FFFFFF', M.io((t - tSwap - 1) / 0.3)) : C.mute); }
       }
