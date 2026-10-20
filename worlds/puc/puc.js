@@ -148,10 +148,11 @@ P.where = (host, o) => {
 /* MCQ with a 5-second countdown ring (accent) then the correct option lights.
    host = .card. o: pat, q (html, may hold KaTeX), opts[4] (html), right (0-3), qW (question width), optW, optY */
 P.mcq = (host, o) => {
-  const ow = o.optW ?? 440, oy = o.optY ?? 290, ox = 36;
+  // cols: 2 (2 x 2 grid, default) or 1 (one option per row, for long options); optH: option height
+  const ow = o.optW ?? 440, oy = o.optY ?? 290, ox = 36, cols = o.cols ?? 2, oh = o.optH ?? 84, ofs = o.optFs ?? 32;
   host.insertAdjacentHTML('beforeend', `<div class="pat" style="left:36px;top:30px">${o.pat}</div><div class="lbl" style="right:36px;top:40px">PAUSE AND SOLVE</div>
     <div class="mq" style="left:36px;top:96px;width:${o.qW ?? 760}px">${o.q}</div>
-    ${o.opts.map((t, i) => `<div class="opt" style="left:${ox + (i % 2) * (ow + 20)}px;top:${oy + Math.floor(i / 2) * 104}px;width:${ow}px"><div class="bg"></div><div class="L">${'ABCD'[i]}</div><div class="ot">${t}</div>${i === o.right ? `<div class="okm">${M.icon('check', 28, '#fff', 3)}</div>` : ''}</div>`).join('')}
+    ${o.opts.map((t, i) => `<div class="opt" style="left:${ox + (i % cols) * (ow + 20)}px;top:${oy + Math.floor(i / cols) * (oh + 20)}px;width:${ow}px;height:${oh}px"><div class="bg"></div><div class="L" style="top:${(oh - 50) / 2}px">${'ABCD'[i]}</div><div class="ot" style="height:${oh}px;font-size:${ofs}px">${t}</div>${i === o.right ? `<div class="okm" style="top:${(oh - 50) / 2}px">${M.icon('check', 28, '#fff', 3)}</div>` : ''}</div>`).join('')}
     <div class="ringW" style="right:36px;top:90px"><svg width="150" height="150"><circle cx="75" cy="75" r="62" fill="#fff" stroke="#E6E8EE" stroke-width="12"/><circle class="ra" cx="75" cy="75" r="62" fill="none" stroke="${P.C.ac}" stroke-width="12" stroke-linecap="round" transform="rotate(-90 75 75)"/></svg><div class="rn"></div></div>`);
   const pat = host.querySelector('.pat'), pl = host.querySelector('.lbl'), q = host.querySelector('.mq'), ops = [...host.querySelectorAll('.opt')], rw = host.querySelector('.ringW'), ra = host.querySelector('.ra'), rn = host.querySelector('.rn');
   return (t, k) => {

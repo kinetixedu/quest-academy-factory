@@ -1,0 +1,174 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 1 - Physical Quantities and their Classification</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 01: physical quantities (Motion notebook, measuring bench) ===== */
+:root{--u:#7A4FE0;--f:#D9731A}
+.L784{left:160px}.R784{left:976px}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.big{position:absolute;font:700 44px Poppins;letter-spacing:-.02em;white-space:nowrap}
+.sm{position:absolute;font:500 26px Poppins;white-space:nowrap;color:var(--ink2)}
+.u{color:var(--u)}.f{color:var(--f)}.a{color:var(--ac)}
+/* hook */
+#hkImg{position:absolute;left:92px;top:100px;width:600px;height:450px;border-radius:12px}
+#note{position:absolute;left:470px;top:378px;width:250px;height:136px;background:#FFFDF6;border-radius:6px;box-shadow:0 8px 20px rgba(22,33,62,.22);padding:18px 22px}
+#note .nt1{font:600 15px 'IBM Plex Mono';letter-spacing:.1em;color:var(--mute)}
+#note .nt2{font:700 44px Caveat;color:var(--ink);margin-top:6px;white-space:nowrap}
+#hdF{position:absolute;left:36px;top:80px;width:128px;height:128px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 5px var(--ac)}
+.tile{position:absolute;top:80px;width:226px;height:156px;border-radius:14px;background:var(--soft)}
+.tile .ti{position:absolute;left:22px;top:22px}
+.tile .tn{position:absolute;left:22px;top:76px;font:600 48px 'IBM Plex Mono';white-space:nowrap}
+.tile .tw{position:absolute;left:76px;top:88px;font:600 28px Poppins;white-space:nowrap;color:var(--u)}
+/* measurable list */
+.mt{position:absolute;width:340px;height:76px;border-radius:14px;background:var(--soft)}
+.mt i{position:absolute;left:14px;top:14px;width:48px;height:48px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.mt .mn{position:absolute;left:78px;top:10px;font:600 26px Poppins;white-space:nowrap}
+.mt .mi{position:absolute;left:78px;top:44px;font:500 16px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap;text-transform:uppercase}
+.mt .mk{position:absolute;right:14px;top:22px;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+#mag{position:absolute;left:0;width:784px;top:96px;text-align:center;white-space:nowrap;font:600 150px/1 'IBM Plex Mono'}
+.brk{position:absolute;top:262px}
+.bl{position:absolute;top:300px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.unitc{position:absolute;top:452px;height:76px;padding:0 22px;border-radius:14px;background:var(--soft);display:flex;align-items:center;gap:14px;font:600 28px Poppins;white-space:nowrap}
+/* bench */
+.dial{position:absolute;top:22px;display:flex;gap:8px}
+.dial span{height:40px;padding:0 16px;border-radius:9px;display:inline-flex;align-items:center;font:600 20px 'IBM Plex Mono';border:2px solid var(--line);background:#fff;color:var(--mute)}
+#rd{position:absolute;top:404px;height:64px;padding:0 22px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+#rd .ru{color:#C9B6F5}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:136px}
+.st .n{position:absolute;left:0;top:6px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:46px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:76px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+/* base list */
+.bq{position:absolute;left:36px;width:712px;height:58px;border-radius:12px;background:var(--soft)}
+.bq .bn{position:absolute;left:20px;top:13px;font:600 25px Poppins;white-space:nowrap}
+.bq .bu{position:absolute;right:92px;top:15px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.bq .bs{position:absolute;right:20px;top:12px;width:60px;text-align:right;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+.blk{position:absolute;height:72px;padding:0 22px;border-radius:12px;display:flex;align-items:center;font:600 28px Poppins;white-space:nowrap;background:var(--soft)}
+.op{position:absolute;font:600 40px 'IBM Plex Mono';color:var(--mute)}
+.fl2{position:absolute;left:36px;font-size:40px;white-space:nowrap}
+/* scalar vector */
+.col{position:absolute;top:84px;width:340px;height:300px;border-radius:14px;background:var(--soft)}
+.col .ch{position:absolute;left:24px;top:20px;font:700 30px Poppins}
+.col .cs{position:absolute;left:24px;top:62px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.chp{position:absolute;left:24px;height:48px;padding:0 16px;border-radius:10px;background:#fff;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+/* sort board */
+#board{left:160px;top:270px;width:1600px;height:580px}
+.cell{position:absolute;width:600px;height:216px;border-radius:14px;background:var(--soft)}
+.rh{position:absolute;left:36px;font:700 30px Poppins;white-space:nowrap}
+.chd{position:absolute;top:44px;width:600px;text-align:center;font:600 20px 'IBM Plex Mono';letter-spacing:.1em;white-space:nowrap}
+.sq{position:absolute;height:64px;padding:0 22px;border-radius:12px;background:#fff;border:2.5px solid var(--ink);display:flex;align-items:center;gap:10px;font:600 28px Poppins;white-space:nowrap}
+#empty{position:absolute;border:2.5px dashed var(--dim);border-radius:12px;display:flex;align-items:center;justify-content:center;font:600 20px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+/* worked */
+#wq{position:absolute;left:36px;top:76px;font:600 30px/1.35 Poppins;width:712px}
+#rodC{position:absolute;top:404px;height:64px;padding:0 22px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+#rodC .ru{color:#C9B6F5}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+#wl .sol .sx{font-size:36px}
+#sF .fcard .fl{font-size:50px}
+#sF .fcard .fl.txt{font-size:34px}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 1 UNITS AND MEASUREMENT</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Physical <span class="acc">Quantities</span></div>
+    <div id="sub">Explained on one measuring bench</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+
+    <!-- H: the recipe card -->
+    <div id="sH">
+      <div class="card full" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA'S KITCHEN · BENGALURU</div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-kitchen.jpg">
+        <div id="note"><div class="nt1">RECIPE</div><div class="nt2">Sugar: 2</div></div></div>
+      <div class="card rt" id="hd"><div class="lbl" style="left:36px;top:30px">THE PUZZLE</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <div class="big" id="hdN" style="left:196px;top:72px">Diya</div>
+        <div class="lbl" id="hdT" style="left:198px;top:136px">17 · PCMB · PREPARING FOR NEET</div>
+        <div class="pillp ink" id="hdB" style="left:196px;top:184px">"Sugar: 2." Two what?</div></div>
+      <div class="card rb" id="hq"><div class="lbl" style="left:36px;top:30px">TWO WHAT?</div>
+        <div class="pillp ac" id="hqP" style="right:36px;top:18px;height:44px;font-size:20px">number + unit = meaning</div>
+        <div id="tiles"></div></div>
+    </div>
+
+    <!-- P: what is a physical quantity -->
+    <div id="sP">
+      <div class="card full" id="pq"><div class="lbl" style="left:36px;top:30px">CAN AN INSTRUMENT MEASURE IT?</div><div id="mts"></div></div>
+      <div class="card rf" id="pm"><div class="lbl" style="left:36px;top:30px">EVERY MEASUREMENT HAS TWO PARTS</div>
+        <div id="mag"><span id="magN">15</span> <span class="u" id="magU">cm</span></div>
+        <svg class="brk" id="brk" width="784" height="40"><path id="bk0" d="M150 4 V18 H448 V4" fill="none" stroke="#16213E" stroke-width="3" stroke-linecap="round"/><path id="bk1" d="M492 4 V18 H660 V4" fill="none" stroke="#7A4FE0" stroke-width="3" stroke-linecap="round"/></svg>
+        <div class="bl" id="bl0" style="left:180px">MAGNITUDE <i style="font-family:Poppins">n</i></div><div class="bl u" id="bl1" style="left:520px">UNIT <i style="font-family:Poppins">u</i></div>
+        <div class="lbl" id="pmL" style="left:36px;top:400px">A UNIT = A FIXED AMOUNT WE ALL AGREE ON</div>
+        <div class="unitc" id="uc0" style="left:36px"><span id="uc0I"></span>1 metre</div><div class="unitc" id="uc1" style="left:292px"><span id="uc1I"></span>1 kilogram</div><div class="unitc" id="uc2" style="left:568px"><span id="uc2I"></span>1 second</div>
+      </div>
+    </div>
+
+    <!-- S: measuring bench (sim + readout + graph) -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">MEASURING BENCH · ONE PENCIL</div>
+        <div class="dial" id="dial" style="right:36px"><span>mm</span><span>cm</span><span>m</span></div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="rd"><span id="rdN">15</span><span class="ru" id="rdU">cm</span></div></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro" id="roG" style="left:36px;top:74px;width:712px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">NUMBER <i style="font-family:Poppins;text-transform:none">n</i> VS SIZE OF UNIT <i style="font-family:Poppins;text-transform:none">u</i></div><svg id="grS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- D: the rule, 3 steps + same area -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE RULE · 3 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">SAME AREA, DIFFERENT SHAPE</div><svg id="arS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- C: base and derived -->
+    <div id="sC">
+      <div class="card full" id="cb"><div class="lbl" style="left:36px;top:30px">SI BASE QUANTITIES · 7</div><div id="bqs"></div></div>
+      <div class="card rf" id="cd"><div class="lbl" style="left:36px;top:30px">DERIVED · BUILT FROM BASE</div><div id="dvs"></div></div>
+    </div>
+
+    <!-- V: scalars and vectors -->
+    <div id="sV">
+      <div class="card full" id="vs"><div class="lbl" style="left:36px;top:30px">SIMULATION · PUSH A BOX</div><svg id="vsS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="ro" id="vro" style="left:36px;top:90px;width:712px"></div></div>
+      <div class="card rf" id="vr"><div id="cols"></div></div>
+    </div>
+
+    <!-- G: the sort board -->
+    <div id="sG"><div class="card" id="board"><div class="lbl" style="left:36px;top:30px">SORT SIX QUANTITIES</div><div id="cells"></div></div></div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">A steel rod is 2.5 m long. How long is it in centimetres?</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">MEASURING BENCH · THE ROD</div><svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="rodC"><span id="rodN">2.5</span><span class="ru" id="rodU">m</span></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="jn" width="520" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + NEXT -->
+    <div id="sF"></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">A number with a <span class="acc">unit</span>, never a number alone.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
