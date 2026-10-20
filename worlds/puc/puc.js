@@ -67,7 +67,8 @@ P.sweep = (W) => t => {
   for (const [a, b] of W) { const a1 = M.io((t - a + 0.42) / 0.42), a2 = M.io((t - b) / 0.46); if (a1 > 0 && a2 < 1) return 1960 * (1 - a1) - 1980 * a2; }
   return null;
 };
-P.sweepRun = (W) => { const f = P.sweep(W), sw = $('#sweep'); return t => { const x = f(t); M.hide(sw, x === null); if (x !== null) snap(sw, 'transform', `translateX(${x.toFixed(1)}px)`); return x; }; };
+P.sweepRun = (W) => { const f = P.sweep(W), sw = $('#sweep'); return t => { const x = f(t); M.hide(sw, x === null); if (x !== null) { snap(sw, 'transform', `translateX(${x.toFixed(1)}px)`); const st = sw.querySelector('b'); if (st) M.hide(st, Math.abs(x) < 1); } return x; }; };
+// (the accent strip shows only while the page is moving: no border on a settled page)
 
 /* cast reaction: small face avatar + bubble. face = '../../assets/illustrations/puc/aarav-face.jpg' */
 P.avatar = (host, o) => {
