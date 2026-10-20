@@ -72,7 +72,7 @@ const tL1w = wt('L1', 'walk'), tL2w = wt('L2', 'walk');
 const tA = [wt('L4', 'blue'), 0, wt('L5', 'three'), 0, 0]; tA[1] = (tA[0] + tA[2]) / 2; tA[3] = tA[2] + 0.9; tA[4] = tA[2] + 1.8;
 const aAt = t => { if (t <= tA[0]) return 1; for (let k = 0; k < 4; k++) if (t < tA[k + 1]) return k + 1 + M.io((t - tA[k]) / Math.min(0.6, tA[k + 1] - tA[k])); return 5; };
 $('#lTb').innerHTML = `<div class="lr h" style="top:160px"><span class="c1">a</span><span class="c2">(a, 3)</span><span class="c3"></span><span class="c4">(3, a)</span></div>` +
-  [1, 2, 3, 4, 5].map((a, i) => `<div class="lr" id="lr${a}" style="top:${212 + i * 52}px"><span class="c1">${a}</span><span class="c2">(${sp(a, AC)}, ${sp(3, BC)})</span><span class="c3" style="color:${a === 3 ? C.ok : C.red}">${a === 3 ? '=' : '≠'}</span><span class="c4">(${sp(3, AC)}, ${sp(a, BC)})</span>${a === 3 ? `<span class="st8" style="background:${C.okBg};color:#1F6B3F">SAME DESK</span>` : ''}</div>`).join('');
+  [1, 2, 3, 4, 5].map((a, i) => `<div class="lr" id="lr${a}" style="top:${212 + i * 52}px"><span class="c1">${a}</span><span class="c2">(${sp(a, AC)}, ${sp(3, BC)})</span><span class="c3" style="color:${a === 3 ? C.ok : C.red}">${a === 3 ? '=' : '≠'}</span><span class="c4">(${sp(3, AC)}, ${sp(a, BC)})</span>${a === 3 ? `<span class="st8" style="position:static;margin-left:14px;background:${C.okBg};color:#1F6B3F">SAME DESK</span>` : ''}</div>`).join('');
 let lLast = -1;
 
 /* ---------- S: set vs pair ---------- */
@@ -110,13 +110,13 @@ $('#dSt').innerHTML = `<div class="hiBox" id="dHi" style="left:20px;width:744px;
 const tDs = [wt('D2', 'Take'), wt('D3', 'A'), wt('D4', 'B'), wt('D5', 'One'), wt('D6', 'unless') - 0.3];
 const dsv = $('#dS'), DG = grid(dsv, 190, 470, 90, 4, 4);
 const dDiag = mk(dsv, 'line', { x1: DG.X(0), y1: DG.Y(0), x2: DG.X(4), y2: DG.Y(4), stroke: C.mute, 'stroke-width': 2.5, 'stroke-dasharray': '8 8' });
-const dDl = txt(dsv, DG.X(4) - 12, DG.Y(4) + 34, 'swap line', { 'text-anchor': 'end', 'font-size': 18, fill: C.mute });
+const dDl = txt(dsv, DG.X(4) + 14, DG.Y(4) + 12, 'swap line', { 'font-size': 18, fill: C.mute });
 const dAB = [[1, 3], [2, 3]].map(([x, y]) => { const g = pin(dsv, DG.X(x), DG.Y(y)); mk(g, 'circle', { r: 16, fill: PC }); return g; });
 const dBA = [[3, 1], [3, 2]].map(([x, y]) => { const g = pin(dsv, DG.X(x), DG.Y(y)); mk(g, 'circle', { r: 14, fill: '#fff', stroke: C.ink, 'stroke-width': 4 }); return g; });
 const dTa = [tag(dsv, DG.X(1), DG.Y(3) - 40, '(1, 3)', PC), tag(dsv, DG.X(2) + 20, DG.Y(3) - 40, '(2, 3)', PC)];
 const dTb = [tag(dsv, DG.X(3) + 74, DG.Y(1), '(3, 1)', C.ink), tag(dsv, DG.X(3) + 74, DG.Y(2), '(3, 2)', C.ink)];
 const dSw = mk(dsv, 'path', { d: `M${DG.X(1) + 12},${DG.Y(3) + 12} Q${DG.X(1) + 40},${DG.Y(1) - 20} ${DG.X(3) - 18},${DG.Y(1) + 2}`, fill: 'none', stroke: PC, 'stroke-width': 3, 'stroke-dasharray': '7 7' });
-const dLg = [tag(dsv, 470, 90, 'A × B', PC), tag(dsv, 620, 90, 'B × A', C.ink)];
+const dLg = [tag(dsv, 560, 540, 'A × B', PC), tag(dsv, 690, 540, 'B × A', C.ink)];
 
 /* ---------- R: triplets + R x R ---------- */
 $('#rTr').innerHTML = K(`(\\,${ac('a')},\\ ${bc('b')},\\ \\textcolor{${VC}}{c}\\,)`);
@@ -192,7 +192,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 15', topic: 'Classmates and b
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('L5', 'three') - 0.4, 1.06, 600, 560], [T1('L5') + 0.3, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('L5', 'three') - 0.4, 1.05, 960, 560], [T1('L5') + 0.3, 1, 960, 540]]);
 
 /* ---------- frame ---------- */
 M.on(t => {
@@ -237,8 +237,8 @@ M.on(t => {
     const out = OUT('S1'), tSw = T0('L3');
     M.vis($('#lg'), t, tL1 + 0.05, out, { dx: -60, dy: 0, ...o });
     const u1 = M.clamp((t - tL1w) / Math.max(0.8, wt('L1', 'up') + 0.3 - tL1w)), u2 = M.clamp((t - tL2w) / Math.max(0.8, wt('L2', 'up') + 0.3 - tL2w));
-    M.vis(lP1, t, tL1w - 0.05, tSw, { dy: 0, fade: 0.05, outDur: 0.3, ody: 0 }); M.drawU(lP1, u1);
-    M.vis(lP2, t, tL2w - 0.05, tSw, { dy: 0, fade: 0.05, outDur: 0.3, ody: 0 }); M.drawU(lP2, u2);
+    M.drawU(lP1, u1); if (u1 > 0) M.vis(lP1, t, tL1w - 0.05, tSw, { dy: 0, fade: 0.05, outDur: 0.3, ody: 0 });
+    M.drawU(lP2, u2); if (u2 > 0) M.vis(lP2, t, tL2w - 0.05, tSw, { dy: 0, fade: 0.05, outDur: 0.3, ody: 0 });
     const wk = (u, X, Y) => { const L = X + Y, d = u * L; return d <= X ? [LG.X(d), LG.Y(0)] : [LG.X(X), LG.Y(d - X)]; };
     const wOn = (t > tL1w && u1 < 1) || (t > tL2w && u2 < 1); M.hide(lWk, !wOn);
     if (wOn) { const [x, y] = t > tL2w ? wk(u2, 5, 3) : wk(u1, 3, 5); attr(lWk, 'cx', x.toFixed(1)); attr(lWk, 'cy', y.toFixed(1)); attr(lWk, 'stroke', t > tL2w ? C.ink : PC); }

@@ -108,7 +108,7 @@ DR.slice(0, 2).forEach((s, j) => txt(spv, SX0 - 18, SY[j] + 8, s, { 'text-anchor
 const spD = []; SX.forEach(x => SY.forEach(y => { const g = pin(spv, x, y); mk(g, 'circle', { r: 15, fill: PC }); spD.push(g); }));
 $('#suF').innerHTML = K(`n(${ac('S')} \\cup ${bc('D')}) = ${ac('3')} + ${bc('2')} = 5`);
 $('#spF').innerHTML = K(`n(${ac('S')} \\times ${bc('D')}) = ${ac('3')} \\times ${bc('2')} = ${pc('6')}`);
-const th1 = PUC.think($('#th1'), { q: 'D is empty: no drinks left. How many combos now?', opts: ['3 combos', '0 combos'], right: 1, why: 'A combo needs one snack AND one drink. If either set is empty, A × B is empty too.' });
+const th1 = PUC.think($('#th1'), { q: 'D is empty: no drinks left. How many combos now?', opts: ['3 combos', '0 combos'], right: 1, why: 'A combo needs a snack AND a drink. One set empty: the product is empty.' });
 
 /* ---------- statement ---------- */
 $('#stF').innerHTML = K(`n(${ac('A')} \\times ${bc('B')}) = n(${ac('A')}) \\cdot n(${bc('B')})`);
@@ -170,7 +170,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 14', topic: 'Seat (3, 5) is n
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('G3') - 0.2, 1.06, 820, 560], [T0('G5') + 0.3, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('G3') - 0.2, 1.05, 960, 560], [T0('G5') + 0.3, 1, 960, 540]]);
 
 /* ---------- frame ---------- */
 M.on(t => {

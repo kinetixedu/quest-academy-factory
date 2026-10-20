@@ -60,7 +60,7 @@ const hL1 = txt(hs, e1[0] + 14, e1[1] - 8, 'NORTH EAST', { 'font-size': 16, fill
 const hL2 = txt(hs, e2[0] - 14, e2[1] + 26, 'SOUTH WEST', { 'text-anchor': 'end', 'font-size': 16, fill: C.ink2, 'font-weight': 600, 'letter-spacing': 1.5 });
 const hG = mk(hs, 'rect', { x: GX - 9, y: GY - 9, width: 18, height: 18, rx: 3, fill: C.ink });
 const hGL = txt(hs, GX + 16, GY + 30, 'GATE', { 'font-size': 16, fill: C.mute, 'font-weight': 600, 'letter-spacing': 1.5 });
-const ks = $('#hkS'), KO = [486, 352], KS = 48;
+const ks = $("#hkS"), KO = [480, 360], KS = 56;
 const kE = PUC.arrow(ks, RE, 6), kN = PUC.arrow(ks, IM, 6);
 const kH = mk(ks, 'line', { x1: KO[0], y1: KO[1], x2: KO[0] + 4 * KS, y2: KO[1] - 3 * KS, stroke: MO, 'stroke-width': 4, 'stroke-dasharray': '8 7' });
 const kEL = txt(ks, KO[0] + 2 * KS, KO[1] + 28, '4 km east', { 'text-anchor': 'middle', 'font-size': 18, fill: RE, 'font-weight': 600 });

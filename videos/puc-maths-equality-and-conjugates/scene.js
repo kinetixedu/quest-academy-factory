@@ -163,7 +163,7 @@ const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap 
   lines: [K(`${re('a')} + ${iv('i')}${im('b')} = ${re('c')} + ${iv('i')}${im('d')} \\iff ${re('a = c')},\\ ${im('b = d')}`),
     K(`z = ${re('a')} + ${iv('i')}${im('b')} \\;\\Rightarrow\\; ${ZB} = ${re('a')} ${sg(1)} ${iv('i')}${im('b')}`),
     K(`z + ${ZB} = ${re('2a')} \\qquad z\\,${ZB} = ${re('a^2')} + ${im('b^2')}`),
-    K(`\\overline{${ZB}} = z \\qquad ${ZB} = z \\iff z \\text{ is real}`),
+    K(`\\bar{\\bar{z}} = z \\qquad ${ZB} = z \\iff z \\text{ is real}`),
     'Conjugate: keep the real part, flip the imaginary sign'] });
 const YQ = [`What is the conjugate of ${K('-2 + 7i')}?`, `If ${K('x + 3i = 4 + yi')} with x, y real, find x and y.`, `Why is ${K(`z\\,${ZB}`)} never negative?`];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="n">${i + 1}</div><div class="q">${q}</div></div>`).join('');

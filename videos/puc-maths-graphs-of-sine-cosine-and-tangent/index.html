@@ -1,0 +1,140 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 30 - Graphs of Sine, Cosine and Tangent</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 30: graphs of sine, cosine and tangent (Proof board) ===== */
+:root{--th:#7A4FE0;--co:#2F6FEB;--ta:#0E8F8F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.th{color:var(--th)}.co{color:var(--co)}.si{color:var(--ac)}.ta{color:var(--ta)}
+svg text{font-family:'IBM Plex Mono'}
+#stage svg .pp{transform-box:fill-box;transform-origin:center}
+#stage svg circle,#stage svg g{transform-box:fill-box;transform-origin:center}
+#stage .ringW svg circle{transform-box:view-box;transform-origin:0 0}
+/* title card: three shapes, unknown */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:50px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+/* hook */
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.rdl{position:absolute;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.rdv{position:absolute;height:52px;padding:0 18px;border-radius:10px;display:inline-flex;align-items:center;gap:10px;font:600 26px 'IBM Plex Mono';color:#fff;white-space:nowrap}
+/* steps (recall, derivation) */
+.st{position:absolute;left:36px;width:712px;height:100px}
+.st .n{position:absolute;left:0;top:6px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:40px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:60px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+/* live readout */
+#sRo{position:absolute;right:36px;top:22px;display:flex;gap:34px;font:600 28px 'IBM Plex Mono';white-space:nowrap}
+#sRo i{font-family:Poppins;font-style:italic}
+/* key point table */
+.kt{position:absolute;width:118px;height:52px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:28px;background:var(--soft)}
+.kh{position:absolute;left:36px;width:100px;height:52px;display:flex;align-items:center;font-size:30px;white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:64px;font:600 30px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.15em}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.12em}
+#mq .mq .katex{font-size:1.08em}
+#wl .sol .sx{font-size:30px}
+.trapL .tx .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:32px}
+#stF .katex{font-size:1em}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 3 TRIGONOMETRIC FUNCTIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Graphs of Sine, Cosine and <span class="acc">Tangent</span></div>
+    <div id="sub">Explained with a pen tied to a tyre valve</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: the pen on the valve -->
+    <div id="sH">
+      <div class="card full" id="hw"><div class="lbl" style="left:36px;top:30px">THE VALVE · A PEN · MOVING PAPER</div>
+        <svg id="hS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="hP" style="left:36px;top:506px">The pen draws a wave</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · RIDING HOME</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">A circle goes in. What comes out?</div></div>
+    </div>
+
+    <!-- P: the sine wave from the circle -->
+    <div id="sP">
+      <div class="card wide" id="pc"><div class="lbl" style="left:36px;top:30px">LIVE · CARRY THE HEIGHT ACROSS · y = sin x</div>
+        <svg id="pS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="sRo"><span class="th"><i>x</i> = <b id="rT">0°</b></span><span class="si">sin <i>x</i> = <b id="rS"></b></span></div></div>
+    </div>
+
+    <!-- D: five key points -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">FIVE KEY POINTS · 4 STEPS</div><div class="hiBox" id="dHi" style="left:20px;width:744px;height:96px"></div><div id="dSt"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">TABLE · THEN JOIN SMOOTHLY</div><div id="kTab"></div><svg id="dS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- C: the cosine wave -->
+    <div id="sC">
+      <div class="card wide" id="cc"><div class="lbl" style="left:36px;top:30px">LIVE · CARRY THE SIDE-TO-SIDE POSITION · y = cos x</div>
+        <svg id="cS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="cRo" style="position:absolute;right:36px;top:22px;display:flex;gap:34px;font:600 28px 'IBM Plex Mono';white-space:nowrap"><span class="th"><i style="font-family:Poppins">x</i> = <b id="cT">0°</b></span><span class="co">cos <i style="font-family:Poppins">x</i> = <b id="cV"></b></span></div></div>
+    </div>
+
+    <!-- K: sine vs cosine, then pause and think -->
+    <div id="sK">
+      <div class="card full" id="ka"><div class="lbl" style="left:36px;top:30px">y = sin x · STARTS AT 0</div><svg id="kaS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="kaP" style="left:36px;top:496px">Through the origin (0, 0)</div></div>
+      <div class="card rf" id="kb"><div class="lbl" style="left:36px;top:30px">y = cos x · STARTS AT 1</div><svg id="kbS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="kbP" style="left:36px;top:496px">Starts at its peak (0, 1)</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- G: the tangent graph -->
+    <div id="sG">
+      <div class="card wide" id="gc"><div class="lbl" style="left:36px;top:30px">LIVE · y = tan x = sin x / cos x</div>
+        <svg id="gS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="gRo" style="position:absolute;right:36px;top:22px;display:flex;gap:34px;font:600 28px 'IBM Plex Mono';white-space:nowrap"><span class="th"><i style="font-family:Poppins">x</i> = <b id="gT">0°</b></span><span class="ta">tan <i style="font-family:Poppins">x</i> = <b id="gV"></b></span></div></div>
+    </div>
+
+    <!-- Z: pause and think 2 -->
+    <div id="sZ"><div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div></div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">COUNT THE MEETING POINTS</div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="600" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Sine starts at <span class="acc">0</span>. Cosine starts at <span class="acc">1</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

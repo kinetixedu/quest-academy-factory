@@ -120,9 +120,9 @@ const sLineG = [...sS.children];
 
 /* ---------- P: episode flow ---------- */
 const FL = [['puzzle', 'A daily-life puzzle'], ['bulb', 'The idea'], ['chart', 'A live picture'], ['pencil', 'Worked example'], ['alert', 'The exam trap'], ['target', 'Exam level question'], ['card', 'Recap card']];
-$('#fls').innerHTML = FL.map(([ic, n], i) => `<div class="fl2" id="fl${i}" style="left:${48 + i * 219}px"><i>${M.icon(ic, 28, i < 4 ? C.ink2 : C.ac, 2.2)}</i><div class="fn">0${i + 1}</div><div class="ft">${n}</div></div>`).join('');
+$('#fls').innerHTML = FL.map(([ic, n], i) => `<div class="fl2" id="fl${i}" style="left:${48 + i * 219}px"><i>${M.icon(ic, 34, i < 4 ? C.ink2 : C.ac, 2.2)}</i><div class="fn">0${i + 1}</div><div class="ft">${n}</div></div>`).join('');
 const fS = $('#flS');
-const fAr = FL.slice(1).map((_, i) => mk(fS, 'path', { d: `M${48 + i * 219 + 192},255 h21`, stroke: C.dim, 'stroke-width': 3, fill: 'none', 'stroke-linecap': 'round' }));
+const fAr = FL.slice(1).map((_, i) => mk(fS, 'path', { d: `M${48 + i * 219 + 192},225 h21`, stroke: C.dim, 'stroke-width': 3, fill: 'none', 'stroke-linecap': 'round' }));
 const fBr = [mk(fS, 'path', { d: `M48,352 v12 H${48 + 3 * 219 + 186} v-12`, fill: 'none', stroke: C.ink2, 'stroke-width': 3 }), mk(fS, 'path', { d: `M${48 + 4 * 219},352 v12 H${48 + 6 * 219 + 186} v-12`, fill: 'none', stroke: C.ac, 'stroke-width': 3 })];
 const fBl = [txt(fS, 48 + 1.5 * 219 + 93, 400, 'THE LESSON', { 'text-anchor': 'middle', 'font-size': 20, fill: C.ink2, 'font-weight': 600, 'letter-spacing': 2 }), txt(fS, 48 + 5 * 219 + 93, 400, 'THE EXAM PART', { 'text-anchor': 'middle', 'font-size': 20, fill: C.ac, 'font-weight': 600, 'letter-spacing': 2 })];
 const tFl = [wt('P2', 'puzzle'), wt('P2', 'idea'), wt('P2', 'live'), wt('P2', 'worked'), wt('P3', 'trap'), wt('P3', 'level'), wt('P3', 'recap')];
@@ -145,7 +145,7 @@ $('#tgs').innerHTML = HC.map(([h, c], j) => `<div class="th" style="left:${200 +
 const tW = [wt('W3', 'Seven'), wt('W4', 'Minus'), wt('W5', 'Three'), wt('W6', 'Root')];
 
 /* ---------- X / Q / F: exam segment ---------- */
-const trap = PUC.trap($('#trap'), { wrong: K(`\\pi = \\tfrac{22}{7}`) + '&nbsp; exactly', right: K(`\\pi \\approx \\tfrac{22}{7}`) + '&nbsp; only a close guess' });
+const trap = PUC.trap($('#trap'), { wrong: K(`\\pi = \\dfrac{22}{7}`) + '&nbsp; exactly', right: K(`\\pi \\approx \\dfrac{22}{7}`) + '&nbsp; only a close guess' });
 const ts = $('#tS');
 const tr1 = txt(ts, 40, 112, '', { 'font-size': 36, fill: C.ink, 'font-weight': 600 }); tr1.innerHTML = `<tspan>22/7 = 3.14</tspan><tspan fill="${C.red}">28571...</tspan>`;
 const tr2 = txt(ts, 40, 182, '', { 'font-size': 36, fill: C.ink, 'font-weight': 600 }); tr2.innerHTML = `<tspan>   π = 3.14</tspan><tspan fill="${C.ok}">15926...</tspan>`;
