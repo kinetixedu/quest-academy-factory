@@ -67,10 +67,10 @@ const SW = [[tT - 0.42, tTu], [tQ - 0.42, tQ + 0.06], [tS - 0.42, tS + 0.06]];
 const wrap = (card, id, w, h) => { const d = document.createElement('div'); d.id = id; d.className = 'abs'; d.style.cssText = `left:0;top:0;width:${w}px;height:${h}px`; while (card.firstChild) d.appendChild(card.firstChild); card.appendChild(d); };
 const laddoo = (x, y, r) => `<g transform="translate(${x} ${y})"><circle r="${r}" fill="${C.ld}" stroke="${C.ldD}" stroke-width="2.5"/><circle cx="${-r * 0.35}" cy="${-r * 0.3}" r="${r * 0.13}" fill="${C.ldD}"/><circle cx="${r * 0.3}" cy="${-r * 0.1}" r="${r * 0.11}" fill="${C.ldD}"/><circle cx="${-r * 0.05}" cy="${r * 0.38}" r="${r * 0.12}" fill="${C.ldD}"/></g>`;
 // A: the six-pack on the table, weekly bars, the worry pills
-$('#six').innerHTML = `<rect x="384" y="2" width="132" height="66" rx="10" fill="#14213D"/><rect x="384" y="2" width="132" height="12" rx="6" fill="#24345A"/>` +
-  [0, 1, 2].map(i => laddoo(410 + i * 40, 30, 11) + laddoo(410 + i * 40, 52, 11)).join('');
+$('#six').innerHTML = `<rect x="452" y="8" width="104" height="58" rx="10" fill="#14213D"/><rect x="452" y="8" width="104" height="11" rx="5" fill="#24345A"/>` +
+  [0, 1, 2].map(i => laddoo(474 + i * 30, 32, 9) + laddoo(474 + i * 30, 52, 9)).join('');
 const WK = [10, 16, 26, 40, 56, 74, 90, 104, 112, 115, 116, 115];
-$('#wkBars').innerHTML = WK.map((v, i) => `<div class="wbar" id="wb${i}" style="left:${i * 72}px;height:${Math.round(v / 116 * 136)}px;background:#B8862F"></div>`).join('') + `<div id="flat" style="left:${8 * 72 - 10}px;width:${3 * 72 + 72}px;top:${150 - 136 - 16}px"></div>`;
+$('#wkBars').innerHTML = WK.map((v, i) => `<div class="wbar" id="wb${i}" style="left:${i * 72}px;height:${Math.round(v / 116 * 136)}px;background:#B8862F"></div>`).join('') + `<div id="flat" style="left:${8 * 72 - 10}px;width:${3 * 72 + 72}px;top:${150 - 136 - 8}px"></div>`;
 $('#stopI').innerHTML = M.icon('x', 20, C.red, 2.8);
 const METH = [['trendUp', 'Sales flat', 1], ['help', 'Dying?', 1]];
 $('#meth').innerHTML = METH.map(([ic, m], i) => `<div class="stp" id="mt${i}" style="top:76px;background:#F6E3DC;color:#B5482F">${M.icon(ic, 26, C.red, 2.6)}<span>${m}</span>${i === 1 ? '<div class="strike" id="mtS"></div>' : ''}</div>`).join('');
@@ -266,7 +266,7 @@ M.on(t => {
     { const u = M.io((t - tStop - 0.2) / 0.4); const f = $('#flat'); M.hide(f, u <= 0); f.style.clipPath = `inset(0 ${((1 - u) * 100).toFixed(1)}% 0 0)`; }
     M.vis($('#stopP'), t, tStop + 0.1, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
     M.vis($('#ask'), t, tMorph + 0.42, tAout, { dy: 36, ...o });
-    M.vis($('#mt0'), t, tC2 + 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
+    M.vis($('#mt0'), t, tStop + 0.35, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
     M.vis($('#mt1'), t, tDying - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
     { const u = M.io((t - tNo) / 0.3), s = $('#mtS'); s.style.transformOrigin = '0 50%'; s.style.transform = `scaleX(${u.toFixed(3)})`; M.hide(s, u <= 0); }
     $('#mt1').style.opacity = t > tNo + 0.3 ? String((1 - 0.45 * M.io((t - tNo - 0.3) / 0.3)).toFixed(3)) : $('#mt1').style.opacity;
@@ -346,8 +346,8 @@ M.on(t => {
     M.vis($('#futT'), t, tFall, 1e9, { dy: 0, fade: 0.2 });
     // "Laddoo Lab today" marker under the dot
     const hx = 48 + 600, hy = 88 + Y(fS(600));
-    const h = $('#here'); M.vis(h, t, tToday - 0.05, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.08 }); h.style.left = (hx - 32) + 'px'; h.style.top = (hy + 34) + 'px';
-    const ht = $('#hereT'); M.vis(ht, t, tToday + 0.1, 1e9, { dx: 16, dy: 0 }); ht.style.left = (hx - 48 - geo.hw) + 'px'; ht.style.top = (hy + 46) + 'px';
+    const h = $('#here'); M.vis(h, t, tToday - 0.05, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.08 }); h.style.left = (hx - 32) + 'px'; h.style.top = (hy + 56) + 'px';
+    const ht = $('#hereT'); M.vis(ht, t, tToday + 0.1, 1e9, { dx: 16, dy: 0 }); ht.style.left = (hx - 48 - geo.hw) + 'px'; ht.style.top = (hy + 68) + 'px';
     // right panes
     for (let k = 0; k < 5; k++) {
       const tin = k ? tStage[k - 1] : tM0 + 0.4, tout = k < 4 ? (k ? tStage[k] : tStage[0]) - 0.14 : 1e9;
