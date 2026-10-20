@@ -123,12 +123,12 @@ const shL = mk(g2, 'rect', { x: DX0, y: 80, width: GX - DX0, height: 120, fill: 
 mk(g2, 'rect', { x: DX0, y: DY, width: DX1 - DX0, height: 26, rx: 13, fill: 'url(#spec)' });
 [['RED', DX0 + 20], ['VIOLET', DX0 + (DX1 - DX0) * 0.8], ['UV', DX1 - 10]].forEach(([s, x]) => txt(g2, x, 210, s, { 'text-anchor': 'middle', 'font-size': 16, fill: C.mute, 'font-weight': 600 }));
 txt(g2, DX0, 244, 'FREQUENCY ν  →', { 'font-size': 16, fill: VC, 'font-weight': 600 });
-const zoneL = txt(g2, (DX0 + GX) / 2, 114, 'NO ELECTRONS', { 'text-anchor': 'middle', 'font-size': 18, fill: C.red, 'font-weight': 600 });
-const zoneR = txt(g2, (GX + DX1) / 2, 114, 'ELECTRONS OUT', { 'text-anchor': 'middle', 'font-size': 18, fill: C.ok, 'font-weight': 600 });
-const gPost = mk(g2, 'rect', { x: GX - 5, y: 74, width: 10, height: 112, rx: 4, fill: GC });
-const gArm = mk(g2, 'line', { x1: GX, y1: 82, x2: GX - 90, y2: 82, stroke: GC, 'stroke-width': 8, 'stroke-linecap': 'round' });
+const zoneL = txt(g2, (DX0 + GX) / 2, 104, 'NO ELECTRONS', { 'text-anchor': 'middle', 'font-size': 18, fill: C.red, 'font-weight': 600 });
+const zoneR = txt(g2, (GX + DX1) / 2, 104, 'ELECTRONS OUT', { 'text-anchor': 'middle', 'font-size': 18, fill: C.ok, 'font-weight': 600 });
+const gPost = mk(g2, 'rect', { x: GX - 5, y: 84, width: 10, height: 102, rx: 4, fill: GC });
+const gArm = mk(g2, 'line', { x1: GX, y1: 90, x2: GX - 70, y2: 90, stroke: GC, 'stroke-width': 8, 'stroke-linecap': 'round' });
 const gLab = txt(g2, GX, 244, 'ν₀ THRESHOLD', { 'text-anchor': 'middle', 'font-size': 16, fill: GC, 'font-weight': 700 });
-const ptr = mk(g2, 'g', {}); mk(ptr, 'path', { d: 'M-12 -18 L12 -18 L0 0 Z', fill: C.ink }); const ptrC = mk(ptr, 'circle', { cy: -32, r: 11, fill: RC });
+const ptr = mk(g2, 'g', {}); mk(ptr, 'path', { d: 'M-12 -18 L12 -18 L0 0 Z', fill: C.ink }); const ptrC = mk(ptr, 'circle', { cy: -28, r: 9, fill: RC });
 const gTag = document.createElement('div'); gTag.className = 'btag'; gTag.style.cssText = 'right:36px;top:18px;background:var(--ink);color:#fff'; gTag.textContent = 'EACH METAL: OWN ν₀'; $('#dl2').appendChild(gTag);
 const PV = M.keys([[0, 0.1], [tRed, 0.1], [tBr, 0.1], [tVi, 0.78], [tUV, 0.94]], 0.8);
 // counter card
@@ -307,7 +307,7 @@ M.on(t => {
     // dial
     const pv = PV(t), px = DX0 + (DX1 - DX0) * pv; attr(ptr, 'transform', `translate(${px.toFixed(1)} ${DY - 4})`); attr(ptrC, 'fill', lampCol(t));
     const open = M.io((px - GX + 10) / 40), an = Math.PI * (1 + 0.5 * open);
-    attr(gArm, 'x2', (GX + 90 * Math.cos(an)).toFixed(1)); attr(gArm, 'y2', (82 + 90 * Math.sin(an)).toFixed(1));
+    attr(gArm, 'x2', (GX + 70 * Math.cos(an)).toFixed(1)); attr(gArm, 'y2', (90 + 50 * Math.sin(an)).toFixed(1));
     const b2 = M.io((t - wt('B2', 'threshold') + 0.1) / 0.3);
     attr(shL, 'opacity', (0.35 + 0.65 * b2).toFixed(3)); attr(shR, 'opacity', (0.35 + 0.65 * b2).toFixed(3));
     zoneL.style.opacity = M.clamp((t - tRed - 0.6) / 0.3); zoneR.style.opacity = M.clamp((t - tVi - 0.4) / 0.3);
@@ -320,7 +320,7 @@ M.on(t => {
     M.vis($('#crs'), t, tRed + 0.4, tB1 - 0.2, { dy: 0, outDur: 0.25, ody: -10 });
     const r = rate(t), sp = t < tVi ? 0 : t < tUV ? 0.45 : 0.95;
     CR.forEach((_, i) => {
-      const cb = $('#cb' + i), w = i === 0 ? r / 11 : i === 1 ? 0 : sp; snap(cb, 'width', (200 * w).toFixed(1) + 'px'); setBg(cb, i === 0 ? lampCol(t) : EC); M.hide(cb, i === 1 || w <= 0.01);
+      const cb = $('#cb' + i), w = i === 0 ? r / 11 : i === 1 ? 0 : sp; snap(cb, 'width', (160 * w).toFixed(1) + 'px'); setBg(cb, i === 0 ? lampCol(t) : EC); M.hide(cb, i === 1 || w <= 0.01);
       M.vis($('#cr' + i), t, tRed + 0.5 + i * 0.12, 1e9, { dx: -16, dy: 0 });
     });
     M.setT($('#cv0'), t < tBr ? 'HIGH' : t < tVi ? 'VERY HIGH' : t < tVb ? 'LOW' : 'HIGH');
