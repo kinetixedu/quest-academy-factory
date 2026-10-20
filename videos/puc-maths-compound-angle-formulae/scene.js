@@ -60,7 +60,7 @@ const h60x = QX_(Math.cos(60 * D2R)), h30x = QX_(Math.cos(30 * D2R));
 const pR60 = mk(ps, 'line', { x1: QX, y1: QY, x2: h60x, y2: QY_(Math.sin(60 * D2R)), stroke: C.ink, 'stroke-width': 3 });
 const pR30 = mk(ps, 'line', { x1: QX, y1: QY, x2: h30x, y2: QY_(0.5), stroke: C.ink, 'stroke-width': 3 });
 const pH60 = mk(ps, 'line', { x1: h60x, y1: QY, x2: h60x, y2: QY_(Math.sin(60 * D2R)), stroke: SN, 'stroke-width': 8, 'stroke-linecap': 'round' });
-const pH30g = mk(ps, 'g', {}), pH30 = mk(pH30g, 'line', { x1: 0, y1: 0, x2: 0, y2: -QR * 0.5, stroke: SN, 'stroke-width': 8, 'stroke-linecap': 'round' });
+const pH30o = mk(ps, 'g', {}), pH30g = mk(pH30o, 'g', {}), pH30 = mk(pH30g, 'line', { x1: 0, y1: 0, x2: 0, y2: -QR * 0.5, stroke: SN, 'stroke-width': 8, 'stroke-linecap': 'round' });
 const pOver = mk(pH30g, 'line', { x1: 0, y1: -QR * (1 - Math.sin(60 * D2R)), x2: 0, y2: -QR * 0.5, stroke: C.red, 'stroke-width': 8, 'stroke-linecap': 'round' });
 const pL60 = txt(ps, h60x - 14, QY_(0.43), '0.866', { 'text-anchor': 'end', 'font-size': 20, fill: SN, 'font-weight': 600 });
 const pL30 = txt(pH30g, 16, -QR * 0.25 + 6, '0.5', { 'font-size': 20, fill: SN, 'font-weight': 600 });
@@ -228,7 +228,7 @@ M.on(t => {
     M.draw(pCir, t, T0('P2'), 0.8);
     [pR60, pH60, pL60].forEach(e => M.vis(e, t, wt('P2', 'sixty') - 0.2, 1e9, { dy: 0 }));
     const u = M.io((t - tStack - 0.6) / 1.1), sxp = M.lerp(h30x, h60x, u), syp = M.lerp(QY, QY_(Math.sin(60 * D2R)), u);
-    attr(pH30g, 'transform', `translate(${sxp.toFixed(1)},${syp.toFixed(1)})`);
+    attr(pH30o, 'transform', `translate(${sxp.toFixed(1)},${syp.toFixed(1)})`);
     [pR30, pH30g].forEach(e => M.vis(e, t, wt('P2', 'thirty') - 0.2, 1e9, { dy: 0 }));
     M.hide(pOver, t < wt('P3', 'pokes')); pOver.style.opacity = M.clamp((t - wt('P3', 'pokes')) / 0.3).toFixed(3);
     M.vis(pTop, t, wt('P3', 'circle') - 0.2, 1e9, { dy: 0 }); M.vis(pTopL, t, wt('P3', 'circle'), 1e9, { dy: 0 });

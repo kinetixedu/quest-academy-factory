@@ -71,7 +71,7 @@ mk(hs, 'line', { x1: HX - HR - 40, y1: HY, x2: HX + HR + 40, y2: HY, stroke: C.d
 mk(hs, 'line', { x1: HX, y1: HY - HR - 40, x2: HX, y2: HY + HR + 40, stroke: C.dim, 'stroke-width': 2, 'stroke-dasharray': '8 7' });
 mk(hs, 'circle', { cx: HX, cy: HY, r: HR, fill: 'none', stroke: C.ink, 'stroke-width': 16 });
 mk(hs, 'circle', { cx: HX, cy: HY, r: HR - 14, fill: 'none', stroke: GR, 'stroke-width': 3 });
-const spP = mk(hs, 'g', {}); for (let k = 0; k < 16; k++) { const a = k * PI / 8; mk(spP, 'line', { x1: HX + 16 * Math.cos(a), y1: HY + 16 * Math.sin(a), x2: HX + (HR - 16) * Math.cos(a), y2: HY + (HR - 16) * Math.sin(a), stroke: '#C9CCD4', 'stroke-width': 1.8 }); }
+const spk = []; for (let k = 0; k < 16; k++) spk.push(mk(hs, 'line', { stroke: '#C9CCD4', 'stroke-width': 1.8 }));
 const hCos = mk(hs, 'line', { stroke: CO, 'stroke-width': 6, 'stroke-linecap': 'round' }), hSin = mk(hs, 'line', { stroke: SI, 'stroke-width': 6, 'stroke-linecap': 'round' });
 mk(hs, 'circle', { cx: HX, cy: HY, r: 18, fill: C.ink });
 const hVal = mk(hs, 'circle', { r: 13, fill: SI, stroke: '#fff', 'stroke-width': 3 });
@@ -221,7 +221,7 @@ M.on(t => {
     const out = OUT('P1');
     M.vis($('#hw'), t, tMorph + 0.1, out, { dx: -60, dy: 0, ...o });
     const a = hAng(t), c = Math.cos(a), s = Math.sin(a), vx = HX + (HR - 2) * c, vy = HY - (HR - 2) * s;
-    attr(spP, 'transform', `rotate(${(-a / D2R).toFixed(2)} ${HX} ${HY})`);
+    spk.forEach((l, k) => { const b = a + k * PI / 8, cb = Math.cos(b), sb = Math.sin(b); attr(l, 'x1', (HX + 16 * cb).toFixed(1)); attr(l, 'y1', (HY - 16 * sb).toFixed(1)); attr(l, 'x2', (HX + (HR - 16) * cb).toFixed(1)); attr(l, 'y2', (HY - (HR - 16) * sb).toFixed(1)); });
     attr(hVal, 'cx', vx.toFixed(1)); attr(hVal, 'cy', vy.toFixed(1));
     attr(hCos, 'x1', HX); attr(hCos, 'y1', HY); attr(hCos, 'x2', vx.toFixed(1)); attr(hCos, 'y2', HY);
     attr(hSin, 'x1', vx.toFixed(1)); attr(hSin, 'y1', HY); attr(hSin, 'x2', vx.toFixed(1)); attr(hSin, 'y2', vy.toFixed(1));

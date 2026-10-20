@@ -104,8 +104,8 @@ const tO2a = wt('O2', 5) - 0.05, tO2b = wt('O2', 10) - 0.1;
 $('#osA').innerHTML = K(`\\{\\,${xc('T')},\\ ${xc('E')},\\ ${xc('A')}\\,\\}`);
 $('#osB').innerHTML = K(`= \\{\\,${xc('A')},\\ ${xc('T')},\\ ${xc('E')}\\,\\}`);
 const os = $('#oS');
-const bag = mk(os, 'ellipse', { cx: 392, cy: 382, rx: 240, ry: 76, fill: ACB, stroke: AC, 'stroke-width': 3 });
-const bagL = txt(os, 392, 288, 'a bag, not a queue', { 'text-anchor': 'middle', 'font-size': 20, fill: AC, 'font-weight': 600 });
+const bag = mk(os, 'ellipse', { cx: 392, cy: 392, rx: 240, ry: 72, fill: ACB, stroke: AC, 'stroke-width': 3 });
+const bagL = txt(os, 392, 300, 'a bag, not a queue', { 'text-anchor': 'middle', 'font-size': 20, fill: AC, 'font-weight': 600 });
 const bagT = OW1.map(ch => { const pg = mk(os, 'g', {}), g = mk(pg, 'g', {}); mk(g, 'circle', { r: 32, fill: '#fff', stroke: XC, 'stroke-width': 3 }); txt(g, 0, 12, ch, { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-size': 32, 'font-weight': 700, fill: XC }); return { pg, g }; });
 const th1 = PUC.think($('#th1'), { q: `Are ${K('\\{1, 2, 2, 3\\}')} and ${K('\\{3, 2, 1\\}')} the same set?`, opts: ['Yes, the same set', 'No, different sets'], right: 0, why: `Drop the repeat, ignore the order: both are ${K('\\{1, 2, 3\\}')}.` });
 
@@ -118,7 +118,7 @@ const tX = [T0('B4'), wt('B5', 'Two'), wt('B5', 'Three'), wt('B5', 'Four'), wt('
 const bs = $('#bS'), BB = 470, BX = x => 136 + (x - 1) * 94, BH = v => v * 6.4;
 mk(bs, 'line', { x1: 70, y1: BB, x2: 748, y2: BB, stroke: C.ink, 'stroke-width': 3 });
 const bLim = mk(bs, 'line', { x1: 70, y1: BB - BH(40), x2: 748, y2: BB - BH(40), stroke: RC, 'stroke-width': 3, 'stroke-dasharray': '10 7' });
-const bLimT = txt(bs, 748, BB - BH(40) - 14, 'limit: x² < 40', { 'text-anchor': 'end', 'font-size': 20, fill: RC, 'font-weight': 600 });
+const bLimT = txt(bs, 96, BB - BH(40) - 14, 'limit: x² < 40', { 'text-anchor': 'start', 'font-size': 20, fill: RC, 'font-weight': 600 });
 const bLim0 = txt(bs, 62, BB - BH(40) + 7, '40', { 'text-anchor': 'end', 'font-size': 20, fill: RC, 'font-weight': 600 });
 const bars = [1, 2, 3, 4, 5, 6, 7].map(x => {
   const r = mk(bs, 'rect', { x: BX(x) - 30, y: BB, width: 60, height: 0, rx: 6, fill: x < 7 ? XC : C.red });
@@ -251,7 +251,7 @@ M.on(t => {
     PUC.write($('#osA'), t, wt('O3', 7) - 0.05, 0.6); PUC.write($('#osB'), t, wt('O3', 13) - 0.1, 0.7);
     M.vis(bag, t, wt('O3', 'same') - 0.3, 1e9, { dy: 0, fade: 0.2 }); M.vis(bagL, t, wt('O3', 'same'), 1e9, { dy: 0 });
     const th0 = wt('O3', 'same');
-    bagT.forEach((b, i) => { const a = Math.PI * 2 * (i / 3) + 0.9 * Math.max(0, t - th0) + Math.PI / 2; attr(b.pg, 'transform', `translate(${(392 + 150 * Math.cos(a)).toFixed(1)},${(382 + 34 * Math.sin(a)).toFixed(1)})`); M.vis(b.g, t, th0 - 0.2 + i * 0.1, 1e9, { dy: 0, sc: 0.4, sp: M.POP, fade: 0.1 }); });
+    bagT.forEach((b, i) => { const a = Math.PI * 2 * (i / 3) + 0.9 * Math.max(0, t - th0) + Math.PI / 2; attr(b.pg, 'transform', `translate(${(392 + 150 * Math.cos(a)).toFixed(1)},${(392 + 32 * Math.sin(a)).toFixed(1)})`); M.vis(b.g, t, th0 - 0.2 + i * 0.1, 1e9, { dy: 0, sc: 0.4, sp: M.POP, fade: 0.1 }); });
     M.vis($('#osP'), t, wt('O3', 'inside') - 0.2, 1e9, POP);
     M.vis($('#th1'), t, tO4 + 0.05, OUT('B1'), { dy: 36, ...o });
     th1(t, { tin: tO4, tOpts: wt('O4', 'same') - 0.1, tCount: T1('O4') + 0.05, dur: 3, tAns: T0('O5') - 0.02, tWhy: wt('O5', 'Drop') });
@@ -269,13 +269,13 @@ M.on(t => {
     M.vis($('#bRd'), t, tX[0] - 0.15, 1e9, { dy: 14 }); M.vis($('#bV'), t, wt('B4', 'in') - 0.05, 1e9, POP);
     M.vis($('#bStop'), t, wt('B6', 'Every') - 0.1, 1e9, { dy: 10 });
     M.vis($('#bL2'), t, wt('B7', 'roster') - 0.1, 1e9, { dy: 10 }); PUC.write($('#bRo'), t, wt('B7', 'one') - 0.05, 1.4);
-    M.vis($('#bg'), t, T0('B3') - 0.1, out, { dx: 60, dy: 0, ...o });
-    M.draw(bLim, t, T0('B3') + 0.2, 0.7); M.vis(bLimT, t, T0('B3') + 0.6, 1e9, { dy: 0 }); M.vis(bLim0, t, T0('B3') + 0.6, 1e9, { dy: 0 });
-    M.vis(bAx, t, T0('B3') + 0.3, 1e9, { dy: 0 });
+    M.vis($('#bg'), t, T0('B2') + 0.4, out, { dx: 60, dy: 0, ...o });
+    M.draw(bLim, t, wt('B2', 'forty') - 0.2, 0.7); M.vis(bLimT, t, wt('B2', 'forty') + 0.2, 1e9, { dy: 0 }); M.vis(bLim0, t, wt('B2', 'forty') + 0.2, 1e9, { dy: 0 });
+    M.vis(bAx, t, T0('B2') + 0.7, 1e9, { dy: 0 });
     let inC = 0;
     bars.forEach((b, i) => { const g = M.spring(t - tX[i], M.SOFT), h = BH(b.x * b.x) * M.clamp(g, 0, 1.03);
       attr(b.r, 'y', (BB - h).toFixed(1)); attr(b.r, 'height', Math.max(0, h).toFixed(1)); M.hide(b.r, t < tX[i]);
-      attr(b.v, 'y', (BB - h - 12).toFixed(1)); M.vis(b.v, t, tX[i] + 0.25, 1e9, { dy: 0 }); M.vis(b.l, t, T0('B3') + 0.3 + i * 0.05, 1e9, { dy: 0 });
+      attr(b.v, 'y', (BB - h - 12).toFixed(1)); M.vis(b.v, t, tX[i] + 0.25, 1e9, { dy: 0 }); M.vis(b.l, t, T0('B2') + 0.7 + i * 0.05, 1e9, { dy: 0 });
       if (b.x < 7 && t >= tX[i] + 0.2) inC++; });
     M.setT($('#bCnt'), `${inC} in${t >= tX[6] + 0.3 ? ' · 1 out' : ''}`); M.vis($('#bCnt'), t, tX[0] + 0.2, 1e9, POP);
   }

@@ -76,13 +76,16 @@ const tHo = [wt('H6', 'union'), wt('H6', 'intersection'), wt('H6', 'difference')
 
 /* ---------- U: union, live build ---------- */
 $('#udS').innerHTML = K(UNI);
+const UOR = [['in A', AC, '#E7EEFD'], ['in B', BC, '#DDF1F1'], ['in both', RC, HIT]];
+$('#ud').insertAdjacentHTML('beforeend', UOR.map(([s, c, b], i) => `<div class="an" id="uor${i}" style="left:${36 + i * 150}px;top:186px;color:${c};background:${b}">${s}</div>`).join(''));
+const tUor = [wt('U2', 15), wt('U2', 18), wt('U2', 'both')];
 $('#udF').innerHTML = K(`${UNI} = ${SB(rc(`${inA}\\ ${tx('or')}\\ ${inB}`))}`);
 const us = $('#uS'), uV = venn(us, { xa: VX[0], xb: VX[1], cy: VY, r: VR });
 const ROWX = i => 236 + i * 128, ROWY = 112;
 const uA = FA.map((f, i) => ({ f, k: tok(us, f, ROWX(i), ROWY), tIn: wt('U4', 'First') + i * 0.1, tFly: wt('U4', f) }));
 const uB = FB.map((f, i) => ({ f, k: tok(us, f, ROWX(i), ROWY), tIn: T0('U5') + 0.1 + i * 0.1, tFly: f === 'grapes' ? wt('U6', 'grapes') : wt('U5', f === 'apple' ? 'Apple' : 'Mango') }));
 uB.forEach(b => attr(b.k.t, 'fill', BC)); uA.forEach(a => attr(a.k.t, 'fill', AC));
-const uAl = txt(us, MX, VY + 124, 'already inside: write once', { 'text-anchor': 'middle', 'font-size': 18, fill: RC, 'font-weight': 600 });
+const uAl = txt(us, MX, VY + 186, 'already inside: write once', { 'text-anchor': 'middle', 'font-size': 18, fill: RC, 'font-weight': 600 });
 $('#uRo').innerHTML = K(`${UNI} = \\{${xc(tx('mango, apple, guava, banana, grapes'))}\\}`); $('#uRo').style.fontSize = '26px';
 const tUfull = wt('U6', 'five');
 const flyU = (o, t) => { const [x2, y2] = POS[o.f], u = M.io((t - o.tFly) / 0.6); o.k.move(M.lerp(o.k.x, x2, u), M.lerp(o.k.y, y2, u) - 50 * Math.sin(Math.PI * u)); return u; };
@@ -210,8 +213,8 @@ M.on(t => {
     const out = OUT('U1');
     M.vis($('#hl'), t, tMorph + 0.1, out, { dx: -60, dy: 0, ...o });
     M.vis($('#hdw'), t, tMorph + 0.3, 1e9, { dy: 10 }); M.vis($('#hmw'), t, tMorph + 0.4, 1e9, { dy: 10 });
-    FA.forEach((_, i) => M.vis($('#hd' + i), t, tHd[i] - 0.1, 1e9, POP));
-    FB.forEach((_, i) => M.vis($('#hm' + i), t, tHm[i] - 0.1, 1e9, POP));
+    FA.forEach((_, i) => { const el = $('#hd' + i); M.vis(el, t, tMorph + 0.35 + i * 0.07, 1e9, POP); el.style.background = mix('#FFFFFF', '#E7EEFD', pulse(t, tHd[i] - 0.1, 0.8)); });
+    FB.forEach((_, i) => { const el = $('#hm' + i); M.vis(el, t, tMorph + 0.5 + i * 0.07, 1e9, POP); el.style.background = mix('#FFFFFF', '#DDF1F1', pulse(t, tHm[i] - 0.1, 0.8)); });
     HQ.forEach((_, i) => {
       const r = $('#hq' + i); M.vis(r, t, tMorph + 0.5 + i * 0.15, 1e9, { dx: -16, dy: 0 });
       const hi = M.io((t - tHq[i] + 0.1) / 0.3) * (1 - M.io((t - (tHq[i + 1] ?? T0('H6')) + 0.1) / 0.3));
@@ -229,6 +232,7 @@ M.on(t => {
     const out = OUT('I1');
     M.vis($('#ud'), t, tU1 + 0.1, out, { dx: -60, dy: 0, ...o });
     M.rise($('#udT'), t, T0('U2') + 0.05, { st: 0.05, sp: M.HEAVY });
+    UOR.forEach((_, i) => M.vis($('#uor' + i), t, tUor[i] - 0.1, 1e9, POP));
     PUC.write($('#udS'), t, wt('U3', 'symbol') - 0.1, 0.6); M.vis($('#udL'), t, wt('U3', 'read') - 0.1, 1e9, { dx: -12, dy: 0 });
     M.vis($('#udF0'), t, T0('U7'), 1e9, { dy: 10 }); PUC.write($('#udF'), t, wt('U7', 'set', 1) - 0.1, 1.2);
     M.vis($('#uv'), t, wt('U1', 'Meera') - 0.2, out, { dx: 60, dy: 0, ...o });
