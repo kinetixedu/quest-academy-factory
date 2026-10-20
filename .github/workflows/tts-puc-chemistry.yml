@@ -1,0 +1,49 @@
+name: Cloud voice (PUC Chemistry)
+run-name: tts ${{ github.event.inputs.tag }}
+
+# Voices one script in the cloud so the 2-CPU authoring box is free for stills.
+# Input: the slug, a unique tag and the script text (base64). Output artifact: cues.json + cues.js.
+# Owned by the PUC Chemistry stream; touches nothing in the repo.
+on:
+  workflow_dispatch:
+    inputs:
+      slug: { description: 'video slug', required: true }
+      tag: { description: 'unique tag for lookup', required: true }
+      script_b64: { description: 'base64 of script.txt', required: true }
+
+permissions:
+  contents: read
+
+jobs:
+  tts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      KOKORO_DIR: ${{ github.workspace }}/.kokoro/kokoro-multi-lang-v1_0
+    steps:
+      - uses: actions/checkout@v4
+        with: { sparse-checkout: tools }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - uses: actions/cache@v4
+        with: { path: .kokoro, key: kokoro-multi-lang-v1_0 }
+      - run: |
+          if [ ! -d "$KOKORO_DIR" ]; then
+            mkdir -p .kokoro && cd .kokoro
+            curl -sSL -o k.tar.bz2 https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/kokoro-multi-lang-v1_0.tar.bz2
+            tar xjf k.tar.bz2 && rm k.tar.bz2
+          fi
+      - run: pip install -q sherpa-onnx numpy scipy
+      - name: Voice
+        env: { SLUG: '${{ github.event.inputs.slug }}', B64: '${{ github.event.inputs.script_b64 }}' }
+        run: |
+          mkdir -p "out/$SLUG" && printf '%s' "$B64" | base64 -d > "out/$SLUG/script.txt"
+          python3 tools/tts.py "out/$SLUG"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cues
+          path: |
+            out/${{ github.event.inputs.slug }}/cues.json
+            out/${{ github.event.inputs.slug }}/cues.js
+          retention-days: 2
