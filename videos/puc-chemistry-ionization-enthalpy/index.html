@@ -1,0 +1,139 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Chemistry Ep 32 - Ionization Enthalpy</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Chemistry Ep 32: ionization enthalpy (Molecule bench) ===== */
+:root{--n:#0FA3A3;--e:#C8461B;--g:#B7791F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.n{color:var(--n)}.e{color:var(--e)}.g{color:var(--g)}
+/* title card stories */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr{position:absolute;left:36px;right:36px;height:112px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:20px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:22px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:66px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .jb{position:absolute;right:24px;top:30px;height:52px;padding:0 16px;border-radius:10px;background:#fff;display:flex;align-items:center;gap:8px;font:600 22px 'IBM Plex Mono';white-space:nowrap}
+.wq{position:absolute;top:494px;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.btag{position:absolute;height:40px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;gap:8px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.cr{position:absolute;left:36px;width:712px;height:56px;border-radius:12px;background:var(--soft)}
+.cr .ck{position:absolute;left:20px;top:15px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.cr .cw2{position:absolute;left:190px;top:13px;font:500 21px Poppins;color:var(--mute);white-space:nowrap}
+.cr .cv{position:absolute;right:20px;top:4px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+.ms{position:absolute;left:36px;display:flex;align-items:center;gap:16px;white-space:nowrap}
+.ms .sn{flex:none;width:44px;height:44px;border-radius:50%;background:var(--ac);color:#fff;font:700 21px Poppins;display:flex;align-items:center;justify-content:center}
+.ms .stx{font:500 27px Poppins}
+.ic{position:absolute;top:84px;width:178px;height:470px}
+.ic .ik{position:absolute;left:0;width:178px;top:270px;text-align:center;font-size:40px}
+.ic .ir{position:absolute;left:14px;width:150px;height:42px;border-radius:10px;background:var(--soft);display:flex;align-items:center;justify-content:center;gap:8px;font:600 20px 'IBM Plex Mono';white-space:nowrap}
+.rk{position:absolute;left:0;width:178px;top:430px;text-align:center;font:700 22px Poppins;white-space:nowrap}
+#wq{position:absolute;left:36px;top:70px;font:600 29px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:30px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins;font-size:28px}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .nn{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+/* ===== Ep 32 extras ===== */
+.qr{position:absolute;left:36px;width:712px;height:80px;border-radius:14px;background:var(--soft)}
+.qr .nn{position:absolute;left:20px;top:17px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);background:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.qr .qt{position:absolute;left:88px;top:20px;font:600 28px Poppins;white-space:nowrap}
+.qr .qk{position:absolute;right:24px;top:26px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--ac);white-space:nowrap}
+#mdef{position:absolute;left:36px;top:80px;height:64px;padding:0 22px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:14px;font:600 26px Poppins;white-space:nowrap}
+#eqB{position:absolute;left:0;width:784px;top:120px;text-align:center;font-size:58px;white-space:nowrap}
+.ebar{position:absolute;left:36px;width:712px;height:56px;border-radius:12px;background:var(--soft);overflow:hidden}
+.ebar i{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--g)}
+.ebv{position:absolute;right:36px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+.ebk{position:absolute;left:36px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.orow{position:absolute;display:flex;align-items:center;gap:14px}
+.orow .ol{width:110px;font:600 24px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.orow .ob{display:flex;gap:4px}
+.orow .ob i{position:relative;width:52px;height:52px;border:2.5px solid var(--ink2);border-radius:6px;background:#fff}
+.orow .ob i b{position:absolute;top:8px;width:4px;height:32px;border-radius:2px;background:currentColor;color:var(--ink)}
+.orow .ob i b:before{content:'';position:absolute;left:-5px;width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent}
+.orow .ob i b.u{left:14px}.orow .ob i b.u:before{top:-6px;border-bottom:9px solid currentColor}
+.orow .ob i b.d{left:32px}.orow .ob i b.d:before{bottom:-6px;border-top:9px solid currentColor}
+.orow .ov{font:600 26px 'IBM Plex Mono';color:var(--g);white-space:nowrap}
+.exh{position:absolute;left:36px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · CHEMISTRY · CH 3 CLASSIFICATION OF ELEMENTS AND PERIODICITY IN PROPERTIES</div>
+    <div class="subj" id="subj">MOLECULE BENCH</div>
+    <div id="title">Ionization <span class="acc">Enthalpy</span></div>
+    <div id="sub">How tightly an atom holds its electron, on one molecule bench</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#0FA3A3" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">LET GO OR HOLD ON</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Some let go easily. Some hold on tight.</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">COLLEGE CORRIDOR · LAB CHART</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-corridor.jpg">
+        <div id="wqs"></div>
+        <div class="pillp ink" id="hTz" style="left:36px;top:494px">How tightly is an electron held?</div></div>
+    </div>
+
+    <div id="sP">
+      <div class="card full" id="pq"><div class="lbl" style="left:36px;top:30px">THE DEFINITION · PIECE BY PIECE</div>
+        <div id="mdef"><span id="mdefI"></span>Energy to remove one electron</div><div id="qrs"></div></div>
+      <div class="card rf" id="pw"><div class="lbl" style="left:36px;top:30px">IONIZATION · AS AN EQUATION</div><div id="eqB"></div>
+        <svg id="pS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="pwP" style="left:36px;top:494px"></div></div>
+    </div>
+
+    <div id="sS">
+      <div class="card full" id="bn"><div class="lbl" style="left:36px;top:30px">MOLECULE BENCH · PULL ONE ELECTRON</div>
+        <svg id="bS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="fx" id="bEq" style="left:0;width:784px;top:496px;text-align:center;font-size:40px"></div></div>
+      <div class="card rt" id="eb1"><div class="lbl" style="left:36px;top:30px">ENERGY IN · FIRST ELECTRON</div><div class="ebar" id="bar1" style="top:120px"><i></i></div><div class="ebk" style="top:200px">KJ PER MOLE · NCERT</div><div class="ebv g" id="ev1" style="top:66px"></div></div>
+      <div class="card rb" id="eb2"><div class="lbl" style="left:36px;top:30px">ENERGY IN · SECOND ELECTRON</div><div class="ebar" id="bar2" style="top:120px"><i></i></div><div class="ebk" style="top:200px">FROM A FULL INNER SHELL OF A POSITIVE ION</div><div class="ebv g" id="ev2" style="top:66px">MUCH HIGHER</div></div>
+    </div>
+
+    <div id="sG">
+      <div class="card" id="gc" style="left:160px;top:270px;width:1600px;height:580px"><div id="gIn" class="abs" style="position:absolute;left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:36px;top:30px" id="gL">FIRST IONIZATION ENTHALPY · PERIOD 2</div><div class="ghost" style="right:36px;top:22px">kJ mol⁻¹ · NCERT EXEMPLAR</div>
+        <svg id="gS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div></div>
+      <div class="card full" id="mt"><div class="lbl" style="left:36px;top:30px">WHY IT RISES · 4 STEPS</div><div id="mss"></div></div>
+      <div class="card full" id="ex"><div class="lbl" style="left:36px;top:30px" id="exL">THE TWO DIPS</div><div id="exs"></div></div>
+      <div class="card wide" id="th1"></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">Hydrogen, ground state: E = -2.18 × 10⁻¹⁸ J. Find its ionization enthalpy.</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">ENERGY LADDER · ONE ATOM, THEN ONE MOLE</div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="wP" style="left:36px;top:494px"></div></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">A stronger pull on the electron</div><div id="st2">means a <span class="acc">bigger</span> ionization enthalpy.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

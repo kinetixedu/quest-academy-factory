@@ -1,0 +1,184 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Chemistry Ep 36 - Periodic Trends Across Periods and Down Groups</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Chemistry Ep 36: periodic trends across periods and down groups (Molecule bench) ===== */
+:root{--n:#0FA3A3;--h:#16213E;--e:#C8461B;--g:#B7791F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.n{color:var(--n)}.e{color:var(--e)}.g{color:var(--g)}
+
+/* title card stories */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;right:36px;height:112px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:20px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:22px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:66px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.el{position:absolute;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 26px Poppins;color:#fff;background:var(--n)}
+.elw{position:absolute;right:24px;top:24px;display:flex;align-items:center;gap:12px}
+.elw .el{position:static}
+.elw span{font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.wq{position:absolute;top:494px;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* definition */
+.qr{position:absolute;left:36px;width:712px;height:80px;border-radius:14px;background:var(--soft)}
+.qr .nn{position:absolute;left:20px;top:17px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);background:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.qr .qt{position:absolute;left:88px;top:20px;font:600 27px Poppins;white-space:nowrap}
+#mdef{position:absolute;left:36px;top:80px;width:712px;padding:18px 22px;box-sizing:border-box;border-radius:12px;background:var(--ink);color:#fff;font:600 26px/1.35 Poppins}
+#mdef b{color:#7FE0E0}
+#hclF{position:absolute;left:0;width:784px;top:478px;text-align:center;font-size:50px}
+/* pauling */
+.hq{position:absolute;left:140px;font:600 60px Poppins;letter-spacing:-.02em;white-space:nowrap}
+#hHr{position:absolute;left:64px;right:64px;top:352px;height:2px;background:var(--line)}
+#hN{position:absolute;left:64px;top:380px;font:700 40px Poppins;white-space:nowrap}
+#hB{position:absolute;top:396px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.scl{position:absolute;top:470px;height:48px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap}
+.scl em{font:600 15px 'IBM Plex Mono';font-style:normal;letter-spacing:.08em;color:var(--mute)}
+/* bench readout */
+.btag{position:absolute;height:40px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;gap:8px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.pt{position:absolute;display:flex;gap:10px}
+.pt span{position:relative;width:62px;height:62px;border-radius:10px;border:2px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;font:600 24px Poppins;color:var(--dim)}
+.pt span i{position:absolute;left:0;right:0;bottom:-26px;text-align:center;font:600 16px 'IBM Plex Mono';font-style:normal;color:var(--g)}
+#gz{position:absolute;left:36px;top:76px;width:712px;height:56px}
+#gz .gl{position:absolute;left:0;top:14px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+#gz .gt{position:absolute;left:150px;top:22px;width:420px;height:14px;border-radius:7px;background:var(--soft)}
+#gz .gt i{position:absolute;left:0;top:0;height:14px;border-radius:7px;background:var(--ac);width:0}
+#gz .gv{position:absolute;right:0;top:0;font:600 40px 'IBM Plex Mono';color:var(--g)}
+.bars{position:absolute;left:36px;top:66px;width:712px;height:190px}
+.bar{position:absolute;bottom:34px;width:64px}
+.bar i{position:absolute;left:0;bottom:0;width:64px;border-radius:8px 8px 0 0;background:var(--line);height:0}
+.bar b{position:absolute;left:-20px;right:-20px;text-align:center;font:600 20px 'IBM Plex Mono';color:var(--g)}
+.bar span{position:absolute;left:-10px;right:-10px;bottom:-32px;text-align:center;font:700 21px Poppins;color:var(--ink)}
+.chdr{position:absolute;right:36px;top:24px;height:36px;padding:0 12px;border-radius:8px;display:flex;align-items:center;gap:6px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap;background:var(--soft);color:var(--mute)}
+/* links */
+.lk{position:absolute;left:36px;width:712px;height:84px;border-radius:14px;background:var(--soft)}
+.lk .lt{position:absolute;left:18px;top:24px;height:36px;padding:0 10px;border-radius:8px;background:#fff;border:2px solid var(--ac);color:var(--ac);display:flex;align-items:center;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.lk .lx{position:absolute;left:126px;top:24px;font:600 25px Poppins;white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:70px;font:600 29px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:32px}
+/* period 3 */
+.pn{position:absolute;inset:0}
+.pn .ps{position:absolute;left:36px;top:30px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--ac);white-space:nowrap}
+.pn .ptt{position:absolute;left:36px;top:64px;font:700 56px Poppins;letter-spacing:-.02em;white-space:nowrap}
+.fr{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--soft);display:flex;align-items:center;gap:14px;padding:0 20px;box-sizing:border-box;font:600 24px Poppins;white-space:nowrap}
+.fr em{font:600 15px 'IBM Plex Mono';font-style:normal;letter-spacing:.08em;color:var(--mute)}
+.brk{position:absolute;height:40px;border-top:3px solid currentColor;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;text-align:center;padding-top:8px;box-sizing:border-box;white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins;font-size:28px}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .nn{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+.ox{position:absolute;height:40px;min-width:56px;padding:0 10px;box-sizing:border-box;border-radius:10px;display:flex;align-items:center;justify-content:center;font:600 24px 'IBM Plex Mono';white-space:nowrap;color:#fff}
+.vt{position:absolute;left:36px;top:70px;width:712px;border-collapse:separate;border-spacing:6px 6px;font:600 20px 'IBM Plex Mono'}
+.vt td{height:46px;text-align:center;border-radius:8px;background:var(--soft);color:var(--dim)}
+.vt td.h{background:none;text-align:left;font:600 14px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);width:120px}
+.rl{position:absolute;left:36px;right:36px;height:52px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:12px;padding:0 18px;font:600 23px Poppins;white-space:nowrap}
+.rl em{font:600 15px 'IBM Plex Mono';font-style:normal;letter-spacing:.08em;color:var(--mute);margin-left:auto}
+.ptile{position:absolute;width:84px;height:58px;border-radius:10px;border:2px solid var(--line);background:#fff;box-sizing:border-box;display:flex;align-items:center;justify-content:center;font:600 24px Poppins;color:var(--ink)}
+.ptile i{position:absolute;left:0;right:0;top:-24px;text-align:center;font:600 15px 'IBM Plex Mono';font-style:normal;color:var(--g);white-space:nowrap}
+.tr{position:absolute;left:0;right:36px;height:56px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:14px;padding:0 18px;font:600 24px Poppins;white-space:nowrap}
+.tr em{font:600 15px 'IBM Plex Mono';font-style:normal;letter-spacing:.08em;color:var(--mute);margin-left:auto}
+.cr{position:absolute;left:36px;width:712px;height:64px;border-radius:14px;background:var(--soft)}
+.cr .ce{position:absolute;left:24px;top:10px;font:700 34px Poppins}
+.cr .cv{position:absolute;right:104px;top:10px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+.cr .cm{position:absolute;right:24px;top:10px;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.oxt{position:absolute;top:110px;width:196px;height:120px;border-radius:14px;background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:36px}
+.oxl{position:absolute;top:250px;width:196px;text-align:center;font:600 16px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · CHEMISTRY · CH 3 CLASSIFICATION OF ELEMENTS AND PERIODICITY IN PROPERTIES</div>
+    <div class="subj" id="subj">MOLECULE BENCH</div>
+    <div id="title">Periodic Trends <span class="acc">Across and Down</span></div>
+    <div id="sub">Explained on one molecule bench</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#0FA3A3" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: three personalities + Aarav's corridor -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE ELEMENTS · ONE MAP</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">One table predicts all three</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV'S COLLEGE CORRIDOR · BENGALURU</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-corridor.jpg">
+        <div id="wqs"></div>
+        <div class="pillp ink" id="hTz" style="left:36px;top:494px">Five trends, one table</div></div>
+    </div>
+
+    <!-- P: what is a trend -->
+    <div id="sP">
+      <div class="card full" id="pq"><div class="lbl" style="left:36px;top:30px">PERIODIC TREND · THE IDEA</div>
+        <div id="mdef"><b>Periodic trend</b>: a property that changes steadily across a period or down a group</div><div id="qrs"></div></div>
+      <div class="card rf" id="pw"><div class="lbl" style="left:36px;top:30px">MOLECULE BENCH · SIZE AND PULL</div>
+        <svg id="pS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- S: the live periodic table -->
+    <div id="sS">
+      <div class="card wide" id="bn"><div class="lbl" style="left:48px;top:30px" id="bnL">LIVE PERIODIC TABLE · MAIN GROUPS</div>
+        <svg id="bS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg><div id="tbl"></div>
+        <div id="rp" style="position:absolute;left:880px;top:84px;width:720px;height:480px">
+          <div class="lbl" id="rpN" style="left:0;top:0;color:var(--ac)">TREND 1 OF 5</div>
+          <div id="rpT" style="position:absolute;left:0;top:30px;font:700 52px Poppins;letter-spacing:-.02em;white-space:nowrap"></div>
+          <div id="rpD" style="position:absolute;left:0;top:104px;font:500 24px Poppins;color:var(--ink2);white-space:nowrap"></div>
+          <div class="tr" id="tr0" style="top:160px"></div><div class="tr" id="tr1" style="top:228px"></div>
+          <div id="rpV" style="position:absolute;left:0;top:304px;font:600 30px 'IBM Plex Mono';color:var(--g);white-space:nowrap"></div>
+        </div></div>
+      <div class="card wide" id="th1"></div>
+    </div>
+
+    <!-- D: why the ends react most -->
+    <div id="sD">
+      <div class="card full" id="dl"></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">PERIOD 3 · REACTIVITY</div><div class="ghost" style="right:36px;top:22px">SKETCH · NOT TO SCALE</div><svg id="dS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div id="dts"></div></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">Using water, show that Na₂O is basic and Cl₂O₇ is acidic.</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">BALANCE COUNTER</div><div class="chdr" style="background:none">LEFT | RIGHT</div><div id="crs"></div>
+        <div class="lbl" id="lmL" style="left:36px;top:330px">LITMUS TEST</div><svg id="lmS" width="784" height="250" style="position:absolute;left:0;top:330px"></svg></div>
+    </div>
+
+    <!-- C: oxides across period 3 -->
+    <div id="sC">
+      <div class="card wide" id="cl"><div class="lbl" style="left:48px;top:30px">PERIOD 3 · OXIDES</div><div id="oxs"></div><svg id="cS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="lbl" id="nuL" style="left:48px;top:420px">NEUTRAL OXIDES</div><div id="nus"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Small atoms pull hard. Big atoms let go easily.</div><div id="st2">Every trend follows from <span class="acc">size and pull</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

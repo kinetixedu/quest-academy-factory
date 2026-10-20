@@ -1,0 +1,161 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Chemistry Ep 14 - Discovery of Electrons, Protons and Neutrons</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Chemistry Ep 14: discovery of electrons, protons and neutrons (Molecule bench) ===== */
+:root{--n:#0FA3A3;--h:#16213E;--e:#C8461B;--g:#B7791F;--v:#7A4FE0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.n{color:var(--n)}.e{color:var(--e)}.g{color:var(--g)}
+/* title card stories */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;right:36px;height:112px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:20px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:22px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:66px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.pe{position:absolute;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 26px Poppins;color:#fff;background:var(--e)}
+.elw{position:absolute;right:24px;top:24px;display:flex;align-items:center;gap:12px}
+.elw .pe{position:static}
+.elw span{font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.wq{position:absolute;top:494px;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* three particles */
+.qr{position:absolute;left:36px;width:712px;height:112px;border-radius:14px;background:var(--soft)}
+.qr .pb{position:absolute;left:20px;top:20px;width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 26px Poppins;color:#fff}
+.qr .qt{position:absolute;left:116px;top:20px;font:700 32px Poppins;white-space:nowrap}
+.qr .qs{position:absolute;left:116px;top:66px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.qr .qk{position:absolute;right:28px;top:30px;font:600 40px 'IBM Plex Mono';white-space:nowrap}
+#mdef{position:absolute;left:36px;top:80px;height:64px;padding:0 22px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:14px;font:600 26px Poppins;white-space:nowrap}
+/* bench */
+.btag{position:absolute;height:40px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;gap:8px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.lk{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.lk .tg{position:absolute;left:20px;top:14px;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--ac);white-space:nowrap}
+.lk .lt{position:absolute;left:20px;top:40px;font:600 27px Poppins;white-space:nowrap}
+.lk .lr{position:absolute;right:24px;top:30px;height:38px;padding:0 12px;border-radius:9px;background:#fff;display:inline-flex;align-items:center;font:600 17px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+.lkC{position:absolute;left:36px;top:478px;height:64px;padding:0 22px;border-radius:12px;color:#fff;display:flex;align-items:center;gap:12px;font:600 28px Poppins;white-space:nowrap}
+/* comparison */
+.cmp{position:absolute;top:84px;width:736px;height:460px;border-radius:16px;background:var(--soft)}
+.cmp .ch{position:absolute;left:32px;top:28px;font:700 40px Poppins;white-space:nowrap}
+.cmp .cr2{position:absolute;left:32px;height:72px;right:32px;border-radius:12px;background:#fff}
+.cmp .cr2 b{position:absolute;left:24px;top:12px;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.cmp .cr2 span{position:absolute;left:24px;top:32px;font:600 26px Poppins;white-space:nowrap}
+/* derivation */
+.sci{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.sci .sy{position:absolute;left:24px;top:22px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--ac);white-space:nowrap}
+.sci .sn{position:absolute;left:24px;top:50px;font:700 36px Poppins;white-space:nowrap}
+.sci .sw{position:absolute;right:24px;top:58px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+#mres{position:absolute;left:36px;top:388px;width:712px;height:150px;border-radius:14px;background:var(--ink);color:#fff}
+#mres .rl{position:absolute;left:28px;top:22px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:#9FB0C8}
+#mres .rv{position:absolute;left:28px;top:56px;font-size:46px;white-space:nowrap}
+#dl .sol .sx{font-size:30px}
+/* table 2.1 */
+.tb{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.tb .pb{position:absolute;left:18px;top:16px;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 22px Poppins;color:#fff}
+.tb .tn{position:absolute;left:100px;top:16px;font:700 26px Poppins;white-space:nowrap}
+.tb .tc{position:absolute;left:100px;top:54px;font:600 16px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.tb .tk{position:absolute;right:170px;top:30px;font:600 25px 'IBM Plex Mono';white-space:nowrap}
+.tb .tu{position:absolute;right:24px;top:24px;height:48px;width:126px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+.thd{position:absolute;top:96px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:70px;font:600 29px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:30px}
+#wG{position:absolute;left:0;width:784px;top:492px;display:flex;justify-content:center}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins;font-size:28px}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .nn{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · CHEMISTRY · CH 2 STRUCTURE OF ATOM</div>
+    <div class="subj" id="subj">MOLECULE BENCH</div>
+    <div id="title">Electrons, Protons and <span class="acc">Neutrons</span></div>
+    <div id="sub">Discovered on one molecule bench</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#0FA3A3" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: three surprises + Diya's study table -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE SURPRISES · ONE PARTICLE</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">All three are moving electrons</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA'S STUDY TABLE · BENGALURU</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div id="wqs"></div>
+        <div class="pillp ink" id="hTz" style="left:36px;top:494px">What is inside an atom?</div></div>
+    </div>
+
+    <!-- P: three particles -->
+    <div id="sP">
+      <div class="card full" id="pq"><div class="lbl" style="left:36px;top:30px">INSIDE EVERY ATOM</div>
+        <div id="mdef"><span id="mdefI"></span>Sub-atomic: smaller than an atom</div><div id="qrs"></div></div>
+      <div class="card rf" id="pw"><div class="lbl" style="left:36px;top:30px">HOW THEY WERE CAUGHT</div>
+        <svg id="pS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- S: the cathode ray tube bench + links + comparison + think -->
+    <div id="sS">
+      <div class="card full" id="bn"><div class="lbl" style="left:36px;top:30px" id="bnL">MOLECULE BENCH · DISCHARGE TUBE</div>
+        <svg id="bS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="lk"><div class="lbl" style="left:36px;top:30px" id="lkL">CATHODE RAYS · LINK BY LINK</div><div id="lks"></div><div id="lkr"></div></div>
+      <div class="card wide" id="cmpC"><div class="lbl" style="left:36px;top:30px">SIDE BY SIDE</div><div id="cmps"></div></div>
+      <div class="card wide" id="th1"></div>
+    </div>
+
+    <!-- D: mass of the electron -->
+    <div id="sD">
+      <div class="card full" id="dl"></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">TWO EXPERIMENTS · ONE MASS</div><div id="scis"></div>
+        <div id="mres"><div class="rl">MASS OF ONE ELECTRON</div><div class="rv" id="mresV"></div></div></div>
+    </div>
+
+    <!-- C: neutron + table -->
+    <div id="sC">
+      <div class="card full" id="cl"><div class="lbl" style="left:36px;top:30px">MOLECULE BENCH · CHADWICK, 1932</div>
+        <svg id="cS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="cr"><div class="lbl" style="left:36px;top:30px">ALL THREE · NCERT TABLE 2.1</div>
+        <div class="thd" style="right:194px">MASS (kg)</div><div class="thd" style="right:44px">MASS (u)</div><div id="tbs"></div></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">Three oil drops. How many electrons does each one carry?</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">OIL DROPS · CHARGE IN PACKETS</div><div class="ghost" id="wGh" style="right:36px;top:20px">EXAMPLE FIGURES</div>
+        <svg id="wS2" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="wG"><div class="pillp ac" id="wGp">Charge = whole number × e</div></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Every atom, of every element,</div><div id="st2">is built from the same <span class="acc">three particles</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

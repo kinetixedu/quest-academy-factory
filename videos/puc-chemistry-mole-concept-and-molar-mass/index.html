@@ -1,0 +1,142 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Chemistry Ep 9 - Mole Concept and Molar Mass</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Chemistry Ep 09: mole concept and molar mass (Molecule bench) ===== */
+:root{--n:#0FA3A3;--h:#16213E;--e:#C8461B;--g:#B7791F;--v:#7A4FE0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.n{color:var(--n)}.e{color:var(--e)}.g{color:var(--g)}.v{color:var(--v)}
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr{position:absolute;left:36px;right:36px;height:112px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:20px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:22px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:66px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* mole definition */
+#mN{position:absolute;left:36px;top:76px;font:700 72px Poppins;letter-spacing:-.02em;white-space:nowrap}
+#mD{position:absolute;left:36px;top:190px;width:712px;font:500 30px/1.4 Poppins}
+.qr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.qr svg{position:absolute;left:16px;top:10px}
+.qr .qt{position:absolute;left:230px;top:26px;font:700 32px Poppins;white-space:nowrap}
+.qr .qk{position:absolute;left:230px;top:72px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.btag{position:absolute;height:40px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;gap:8px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.pt{position:absolute;display:flex;gap:10px}
+.pt span{width:58px;height:58px;border-radius:10px;border:2px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;font:600 24px Poppins;color:var(--dim)}
+/* counter */
+.cnt{position:absolute;left:36px;width:712px;height:150px;border-radius:14px;background:var(--soft)}
+.cnt .cl{position:absolute;left:24px;top:18px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.cnt .cv{position:absolute;left:24px;top:52px;font:600 64px 'IBM Plex Mono';white-space:nowrap;letter-spacing:-.02em}
+#oneA{position:absolute;left:36px;top:420px;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+#age{position:absolute;left:36px;top:480px}
+/* derivation */
+.fr{position:absolute;left:0;width:784px;text-align:center;white-space:nowrap}
+.mp{position:absolute;left:36px;width:712px;height:64px;border-radius:12px;background:var(--soft);display:flex;align-items:center;justify-content:space-between;padding:0 24px;box-sizing:border-box;font:600 28px 'IBM Plex Mono';white-space:nowrap}
+.mp span:nth-child(2){color:var(--mute);font-size:24px}
+/* molar mass */
+#mmD{position:absolute;left:48px;top:84px;width:700px;font:700 44px/1.25 Poppins}
+#mmU{position:absolute;left:48px;top:260px;font-size:40px;white-space:nowrap}
+.dish{position:absolute;top:84px;width:360px;height:440px;border-radius:16px;background:var(--soft)}
+.dish svg{position:absolute;left:0;top:0}
+.dish .dn{position:absolute;left:0;width:360px;text-align:center;top:300px;font:700 30px Poppins;white-space:nowrap}
+.dish .dv{position:absolute;left:0;width:360px;text-align:center;top:350px;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+/* flow map */
+.fb{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.fb .fl1{position:absolute;left:24px;top:16px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.fb .fv{position:absolute;right:24px;top:22px;font:600 40px 'IBM Plex Mono';white-space:nowrap}
+.fa{position:absolute;left:84px;height:56px;display:flex;align-items:center;gap:12px;font:600 22px 'IBM Plex Mono';color:var(--ac);white-space:nowrap}
+#wq{position:absolute;left:36px;top:70px;font:600 29px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:30px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font-size:28px}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .nn{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · CHEMISTRY · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY</div>
+    <div class="subj" id="subj">MOLECULE BENCH</div>
+    <div id="title">Mole Concept and <span class="acc">Molar Mass</span></div>
+    <div id="sub">Explained on one molecule bench</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#0FA3A3" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">COUNTING WORDS</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Chemists count by weighing</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV'S BICYCLE · BENGALURU</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg">
+        <div class="pillp ink" id="hTz" style="left:36px;top:494px">Tiny steel balls: weighed, not counted</div></div>
+    </div>
+
+    <div id="sP">
+      <div class="card full" id="pm"><div class="lbl" style="left:36px;top:30px">THE CHEMIST'S DOZEN</div>
+        <div id="mN">1 <span class="acc">mole</span></div><div id="mD">as many particles as there are atoms in exactly <b>12 g of carbon-12</b></div>
+        <div class="pillp ink" id="mP" style="left:36px;top:470px">Symbol: mol</div></div>
+      <div class="card rf" id="pp"><div class="lbl" style="left:36px;top:30px">PARTICLES THE MOLE COUNTS</div><div id="qrs"></div></div>
+    </div>
+
+    <div id="sS">
+      <div class="card full" id="bn"><div class="lbl" style="left:36px;top:30px">MOLECULE BENCH · COUNT BY WEIGHING</div>
+        <svg id="bS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="lbl" id="ptL" style="left:36px;top:458px">PERIODIC TABLE · PERIODS 1 AND 2</div><div class="pt" id="ptS" style="left:36px;top:494px"></div></div>
+      <div class="card rf" id="ac"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div>
+        <div class="cnt" id="cM" style="top:76px"><div class="cl">MASS ON THE SCALE</div><div class="cv" id="cMv"></div></div>
+        <div class="cnt" id="cN" style="top:246px"><div class="cl">ATOMS COUNTED</div><div class="cv g" id="cNv"></div></div>
+        <div id="oneA"></div><div class="pillp" id="age">1 atom per second: far longer than the age of the universe</div></div>
+    </div>
+
+    <div id="sD">
+      <div class="card full" id="dl"></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">TWELVE GRAMS ÷ ONE ATOM</div><div id="frc"></div><div id="mps"></div></div>
+    </div>
+
+    <div id="sB">
+      <div class="card wide" id="cmp"><div class="lbl" style="left:48px;top:30px">ONE MOLE EACH · ON ONE BALANCE</div><svg id="mS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card wide" id="th1"></div>
+    </div>
+
+    <div id="sM">
+      <div class="card wide" id="mm"><div class="lbl" style="left:48px;top:30px">MOLAR MASS</div>
+        <div id="mmD">The mass of <span class="acc">one mole</span>, in grams</div><div id="mmU"></div>
+        <div class="pillp" id="mmP" style="left:48px;top:370px">Same number as the mass in u</div>
+        <div class="dish" id="ds0" style="left:820px"><svg width="360" height="300" id="dv0"></svg><div class="dn">1 mol H₂O</div><div class="dv v">18.02 g mol⁻¹</div></div>
+        <div class="dish" id="ds1" style="left:1204px"><svg width="360" height="300" id="dv1"></svg><div class="dn">1 mol NaCl</div><div class="dv n">58.5 g mol⁻¹</div></div></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">Aarav sips 9 g of water. M(H₂O) ≈ 18 g mol⁻¹. How many molecules?</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">GRAMS → MOLES → PARTICLES</div><div id="fls"></div></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">A mole is a count,</div><div id="st2">not a <span class="acc">mass</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

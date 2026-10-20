@@ -1,0 +1,149 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Chemistry Ep 13 - Limiting Reagent and Numerical Calculations</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Chemistry Ep 13: limiting reagent and numerical calculations (Molecule bench) ===== */
+:root{--n:#0FA3A3;--h:#16213E;--o:#7A4FE0;--c:#2F6FEB;--e:#C8461B;--g:#B7791F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.n{color:var(--n)}.e{color:var(--e)}.g{color:var(--g)}
+/* title card stories */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;right:36px;height:112px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:20px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:22px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:66px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lim{position:absolute;right:24px;top:30px;height:52px;padding:0 16px;border-radius:12px;background:var(--red);color:#fff;display:flex;align-items:center;gap:8px;font:600 20px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+.wq{position:absolute;top:494px;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* definitions */
+.dr{position:absolute;left:36px;width:712px;height:150px;border-radius:14px;background:var(--soft)}
+.dr .dn{position:absolute;left:24px;top:20px;font:700 34px Poppins;white-space:nowrap}
+.dr .dd{position:absolute;left:24px;top:72px;font:500 26px Poppins;color:var(--ink2);white-space:nowrap}
+.dr .dk{position:absolute;right:24px;top:28px;height:36px;padding:0 12px;border-radius:8px;color:#fff;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;display:flex;align-items:center;white-space:nowrap}
+#pNote{position:absolute;left:36px;top:428px;height:84px;width:712px;border-radius:14px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font:600 28px Poppins;white-space:nowrap}
+/* bench, reaction, counter */
+.btag{position:absolute;height:40px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;gap:8px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.pt{position:absolute;display:flex;gap:10px}
+.pt span{width:58px;height:58px;border-radius:10px;border:2px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;font:600 24px Poppins;color:var(--dim)}
+#eq{position:absolute;left:36px;top:84px;font-size:56px;white-space:nowrap}
+#eqS{position:absolute;left:36px;top:192px;display:flex;align-items:center;gap:16px;white-space:nowrap}
+#eqS .sn{flex:none;width:44px;height:44px;border-radius:50%;background:var(--ac);color:#fff;font:700 21px Poppins;display:flex;align-items:center;justify-content:center}
+#eqS .stx{font:500 26px Poppins}
+.cr{position:absolute;left:36px;width:712px;height:72px;border-radius:14px;background:var(--soft)}
+.cr .ce{position:absolute;left:20px;top:10px;font-size:36px;white-space:nowrap}
+.cr .ck{position:absolute;left:118px;top:18px;height:36px;padding:0 12px;border-radius:8px;color:#fff;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;display:flex;align-items:center;white-space:nowrap}
+.cr .cv{position:absolute;top:12px;width:100px;text-align:center;font:600 36px 'IBM Plex Mono';white-space:nowrap}
+.chdr{position:absolute;top:34px;width:100px;text-align:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* method */
+.mr{position:absolute;left:36px;width:1528px;height:90px;border-radius:14px;background:var(--soft)}
+.mr .nn{position:absolute;left:22px;top:22px;width:46px;height:46px;border-radius:50%;background:var(--ac);color:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.mr .mt{position:absolute;left:92px;top:24px;font:600 28px Poppins;white-space:nowrap}
+.mr .mx{position:absolute;left:820px;top:20px;font-size:34px;white-space:nowrap}
+#mHd{position:absolute;left:856px;top:34px}
+/* compare cases */
+.cs{position:absolute;left:36px;font-size:34px;white-space:nowrap}
+.cv2{position:absolute;left:36px;top:470px;height:60px;padding:0 20px;border-radius:12px;color:#fff;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+/* worked example + practice */
+#wq,#pq2{position:absolute;left:36px;top:70px;font:600 28px/1.35 Poppins;width:712px}
+#wl .sol .sx,#pl .sol .sx{font-size:27px}
+.pr{position:absolute;right:36px;top:22px;height:40px;padding:0 14px;border-radius:9px;border:2px dashed var(--g);color:var(--g);font:600 17px 'IBM Plex Mono';letter-spacing:.08em;display:flex;align-items:center;white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font-size:27px}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .nn{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · CHEMISTRY · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY</div>
+    <div class="subj" id="subj">MOLECULE BENCH</div>
+    <div id="title">Limiting <span class="acc">Reagent</span></div>
+    <div id="sub">Explained on one molecule bench, with numericals</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#0FA3A3" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: three shortages + Aarav's cycle club -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE SHORTAGES · ONE IDEA</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">What runs out first sets the limit</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV'S CYCLE CLUB · BENGALURU</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg">
+        <div id="wqs"></div>
+        <div class="pillp ink" id="hTz" style="left:36px;top:494px">Find the limit in any reaction</div></div>
+    </div>
+
+    <!-- P: definitions + bicycle model -->
+    <div id="sP">
+      <div class="card full" id="pq"><div class="lbl" style="left:36px;top:30px">TWO KINDS OF REACTANT</div><div id="drs"></div><div id="pNote">It limits how much product forms</div></div>
+      <div class="card rf" id="pw"><div class="lbl" style="left:36px;top:30px">SAME IDEA · 7 FRAMES, 10 WHEELS</div><svg id="kS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- S: the bench -->
+    <div id="sS">
+      <div class="card full" id="bn"><div class="lbl" style="left:36px;top:30px">MOLECULE BENCH · NOT ENOUGH HYDROGEN</div>
+        <svg id="bS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="lbl" id="ptL" style="left:36px;top:458px">PERIODIC TABLE · PERIODS 1 AND 2</div><div class="pt" id="ptS" style="left:36px;top:494px"></div></div>
+      <div class="card rt" id="rx"><div class="lbl" style="left:36px;top:30px">REACTION · BALANCED IN EP 2</div>
+        <div id="eq"></div><div id="eqS"><div class="sn" id="eqN">1</div><div class="stx" id="eqT"></div></div></div>
+      <div class="card rb" id="ct"><div class="lbl" style="left:36px;top:30px">MOLECULE COUNTER</div><div id="chs"></div><div id="crs"></div></div>
+    </div>
+
+    <!-- D: the method -->
+    <div id="sD"><div class="card wide" id="md"><div class="lbl" style="left:36px;top:30px">THE METHOD · FOR ANY PROBLEM</div><div class="lbl" id="mHd">ON OUR BENCH</div><div id="mrs"></div></div></div>
+
+    <!-- C: two cases + think -->
+    <div id="sC">
+      <div class="card full" id="ca"></div>
+      <div class="card rf" id="cb"></div>
+      <div class="card wide" id="th1"></div>
+    </div>
+
+    <!-- W: NCERT worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">50.0 kg N₂ and 10.0 kg H₂ are mixed to make NH₃. Which is the limiting reagent?</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">HYDROGEN · NEEDED VS AVAILABLE</div><svg id="wS2" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- PN: practice numerical (not NCERT) -->
+    <div id="sN">
+      <div class="card full" id="pl"><div class="pr">PRACTICE · NOT FROM NCERT</div><div id="pq2">8 g CH₄ burns in 16 g O₂. Which is limiting? How much CO₂ forms?</div></div>
+      <div class="card rf" id="pr2"><div class="lbl" style="left:36px;top:30px">MASS IN · MASS OUT</div><svg id="pS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">The reactant that runs out first</div><div id="st2">decides how much <span class="acc">product</span> forms.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

@@ -1,0 +1,155 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Chemistry Ep 8 - Atomic Mass and Molecular Mass</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Chemistry Ep 08: atomic mass and molecular mass (Molecule bench) ===== */
+:root{--n:#0FA3A3;--h:#16213E;--e:#C8461B;--g:#B7791F;--v:#7A4FE0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.n{color:var(--n)}.e{color:var(--e)}.g{color:var(--g)}.v{color:var(--v)}
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr{position:absolute;left:36px;right:36px;height:112px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:20px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:22px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:66px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* why a new unit */
+#zN{position:absolute;left:36px;top:100px;font:600 34px 'IBM Plex Mono';white-space:nowrap;letter-spacing:-.02em}
+#zN .z{color:var(--ink)}#zN .d{color:var(--ac)}
+#zC{position:absolute;left:36px;top:168px;height:44px;padding:0 14px;border-radius:9px;background:var(--redBg);color:var(--red);display:flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+#zSc{position:absolute;left:36px;top:250px;font:600 40px 'IBM Plex Mono';white-space:nowrap}
+#zSn{position:absolute;left:36px;top:316px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+.btag{position:absolute;height:40px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;gap:8px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.pt{position:absolute;display:flex;gap:10px}
+.pt span{width:58px;height:58px;border-radius:10px;border:2px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;font:600 24px Poppins;color:var(--dim)}
+/* u scale readout */
+#uDef{position:absolute;left:36px;top:76px;width:712px;height:100px;border-radius:14px;background:var(--soft);display:flex;align-items:center;padding-left:24px;font-size:34px;white-space:nowrap;box-sizing:border-box}
+.ur{position:absolute;left:36px;width:712px;height:88px;border-radius:14px;background:var(--soft)}
+.ur .el{position:absolute;left:18px;top:14px;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 24px Poppins;color:#fff}
+.ur .un{position:absolute;left:96px;top:26px;font:600 26px Poppins;white-space:nowrap}
+.ur .uv{position:absolute;right:24px;top:22px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+/* derivation */
+.fr{position:absolute;left:0;width:784px;text-align:center;white-space:nowrap}
+.sk2{position:absolute;height:5px;border-radius:3px;background:var(--red)}
+/* isotopes */
+#grid{position:absolute;left:0;top:0}
+#isoN{position:absolute;left:36px;top:532px;font:600 20px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+#avC{position:absolute;left:36px;font-size:30px;white-space:nowrap}
+/* molecular mass */
+#mSum{position:absolute;left:36px;top:400px;font-size:34px;white-space:nowrap}
+#wq{position:absolute;left:36px;top:70px;font:600 29px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:30px}
+.ar2{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.ar2 .el{position:absolute;left:20px;top:30px;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 24px Poppins;color:#fff}
+.ar2 .cnt{position:absolute;left:100px;top:18px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.ar2 .dts{position:absolute;left:100px;top:52px;display:flex;gap:6px}
+.ar2 .dts b{width:26px;height:26px;border-radius:50%}
+.ar2 .sv{position:absolute;right:24px;top:36px;font:600 36px 'IBM Plex Mono';white-space:nowrap}
+#wTot{position:absolute;left:36px;top:470px;width:712px;height:76px;border-radius:14px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 24px;box-sizing:border-box;font:600 26px Poppins}
+#wTot b{font:600 36px 'IBM Plex Mono'}
+/* NaCl */
+#fmB{position:absolute;left:36px;top:470px;width:712px;height:76px;border-radius:14px;background:var(--soft);display:flex;align-items:center;padding-left:24px;box-sizing:border-box;font-size:32px;white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font-size:30px}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .nn{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · CHEMISTRY · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY</div>
+    <div class="subj" id="subj">MOLECULE BENCH</div>
+    <div id="title">Atomic Mass and <span class="acc">Molecular Mass</span></div>
+    <div id="sub">Explained on one molecule bench</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#0FA3A3" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE SCALES · ONE PROBLEM</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">A new scale, just for atoms</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA'S KITCHEN · BENGALURU</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-kitchen.jpg">
+        <div class="pillp ink" id="hTz" style="left:36px;top:494px">Too small for any scale?</div></div>
+    </div>
+
+    <!-- P: why a new unit -->
+    <div id="sP">
+      <div class="card full" id="pz"><div class="lbl" style="left:36px;top:30px">ONE HYDROGEN ATOM · IN GRAMS</div>
+        <div id="zN"></div><div id="zC"></div>
+        <div id="zSc">1.6736 × 10⁻²⁴ g</div><div id="zSn">the same number, in scientific form</div>
+        <div class="pillp ac" id="zP" style="left:36px;top:470px">Compare with one standard atom</div></div>
+      <div class="card rf" id="ps"><div class="lbl" style="left:36px;top:30px">A KITCHEN SCALE · ONE ATOM</div><svg id="kS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- S: building the u scale -->
+    <div id="sS">
+      <div class="card full" id="bn"><div class="lbl" style="left:36px;top:30px">MOLECULE BENCH · THE u SCALE</div>
+        <svg id="bS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="lbl" id="ptL" style="left:36px;top:458px">PERIODIC TABLE · PERIODS 1 AND 2</div><div class="pt" id="ptS" style="left:36px;top:494px"></div></div>
+      <div class="card rf" id="ul"><div id="uDef"></div><div id="urs"></div></div>
+    </div>
+
+    <!-- D: derivation -->
+    <div id="sD">
+      <div class="card full" id="dl"></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">DIVIDE · THE POWERS OF TEN CANCEL</div><div id="frc"></div></div>
+    </div>
+
+    <!-- I: isotopes, average -->
+    <div id="sI">
+      <div class="card full" id="il"><div class="lbl" style="left:36px;top:30px">CHLORINE · TWO ISOTOPES</div><svg id="iS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div id="isoN"></div></div>
+      <div class="card rf" id="ir"><div class="lbl" style="left:36px;top:30px">AVERAGE ATOMIC MASS</div><svg id="nS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="avC" style="top:380px"></div><div class="pillp ac" id="avP" style="left:36px;top:470px">Cl ≈ 35.5 u</div></div>
+      <div class="card wide" id="th1"></div>
+    </div>
+
+    <!-- M: methane -->
+    <div id="sM">
+      <div class="card full" id="ml"><div class="lbl" style="left:36px;top:30px">MOLECULE BENCH · METHANE</div><svg id="mS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div id="mSum"></div></div>
+      <div class="card rf" id="mr"><div class="lbl" style="left:36px;top:30px">MOLECULAR MASS</div>
+        <div class="fx" id="mDef" style="left:36px;top:96px;font:600 34px/1.35 Poppins;white-space:normal;width:712px">Sum of the atomic masses of <span class="acc">all atoms</span> in one molecule</div>
+        <div id="mrows"></div></div>
+    </div>
+
+    <!-- W: glucose -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">Find the molecular mass of glucose, C₆H₁₂O₆. C = 12.011 u, H = 1.008 u, O = 16 u</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">ATOM COUNT · GLUCOSE</div><div id="wrows"></div><div id="wTot"><span>Glucose, C₆H₁₂O₆</span><b>180.162 u</b></div></div>
+    </div>
+
+    <!-- C: NaCl -->
+    <div id="sC">
+      <div class="card full" id="cl"><div class="lbl" style="left:36px;top:30px">MOLECULE BENCH · SODIUM MEETS CHLORINE</div><svg id="cS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="cr"><div class="lbl" style="left:36px;top:30px">NO MOLECULES · A CROWD OF IONS</div><svg id="xS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div id="fmB"></div></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Atoms are not weighed in grams.</div><div id="st2">They are <span class="acc">compared with carbon-12</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

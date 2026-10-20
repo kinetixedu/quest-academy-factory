@@ -1,0 +1,173 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Chemistry Ep 7 - Dalton's Atomic Theory</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Chemistry Ep 07: Dalton's atomic theory (Molecule bench) ===== */
+:root{--n:#0FA3A3;--h:#16213E;--e:#C8461B;--g:#B7791F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.n{color:var(--n)}.e{color:var(--e)}.g{color:var(--g)}
+/* title card stories */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;right:36px;height:112px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:20px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:22px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:66px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .jk{position:absolute;right:24px;top:34px;height:44px;padding:0 14px;border-radius:9px;background:#fff;display:flex;align-items:center;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--ac);white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* Dalton card */
+#dN{position:absolute;left:36px;top:84px;font:700 64px Poppins;letter-spacing:-.02em;white-space:nowrap}
+#dB{position:absolute;left:36px;top:178px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+#dBk{position:absolute;left:36px;top:228px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+#dBk i{position:absolute;left:20px;top:20px;width:56px;height:56px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+#dBk .t1{position:absolute;left:96px;top:16px;font:700 26px Poppins;white-space:nowrap}
+#dBk .t2{position:absolute;left:96px;top:56px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+#dAt{position:absolute;left:36px;top:356px;height:64px;padding:0 22px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:14px;font:600 26px Poppins;white-space:nowrap}
+#dDef{position:absolute;left:36px;top:446px;font:500 26px/1.4 Poppins;width:712px}
+#cutN{position:absolute;right:36px;top:24px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* postulate list */
+.po{position:absolute;left:36px;width:712px;height:104px;border-radius:14px;background:var(--soft)}
+.po .nn{position:absolute;left:20px;top:28px;width:48px;height:48px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);background:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.po .pt1{position:absolute;left:88px;top:18px;font:600 26px Poppins;white-space:nowrap}
+.po .pt2{position:absolute;left:88px;top:62px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.po .pm{position:absolute;right:20px;top:30px;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--ok)}
+.btag{position:absolute;height:40px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;gap:8px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.pt{position:absolute;display:flex;gap:10px}
+.pt span{width:58px;height:58px;border-radius:10px;border:2px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;font:600 24px Poppins;color:var(--dim)}
+#bEq{position:absolute;left:36px;top:384px;font-size:34px;white-space:nowrap}
+.bc{position:absolute;top:384px;height:52px;padding:0 14px;border-radius:10px;background:var(--soft);display:flex;align-items:center;gap:12px;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+.bc b{font:700 26px Poppins}
+.bc .cm{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--ok)}
+/* compare */
+.cmpH{position:absolute;top:30px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.cmpT{position:absolute;top:70px;font:700 44px Poppins;white-space:nowrap}
+.cmpR{position:absolute;top:420px;height:60px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:12px;font:600 28px 'IBM Plex Mono';white-space:nowrap}
+.cmpM{position:absolute;top:494px;font:600 24px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+#cmpV{position:absolute;left:799px;top:40px;width:2px;height:500px;background:var(--line)}
+/* links */
+.lk{position:absolute;left:48px;width:1504px;height:136px;border-radius:14px;background:var(--soft)}
+.lk .lt{position:absolute;left:24px;top:46px;height:44px;padding:0 14px;border-radius:9px;background:var(--ac);color:#fff;display:flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.lk .a{position:absolute;left:170px;top:28px;width:470px;font:600 26px/1.3 Poppins}
+.lk .ar{position:absolute;top:48px;width:40px;height:40px}
+.lk .b{position:absolute;left:720px;top:28px;width:390px;font:600 26px/1.3 Poppins}
+.lk .law{position:absolute;right:24px;top:40px;height:56px;padding:0 18px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;font:600 22px Poppins;white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:70px;font:600 29px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:30px}
+#wG{position:absolute;left:0;width:784px;top:500px;display:flex;justify-content:center}
+/* survived? */
+.sr{position:absolute;left:36px;width:712px;height:100px;border-radius:14px;background:var(--soft)}
+.sr .nn{position:absolute;left:20px;top:26px;width:48px;height:48px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);background:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.sr .sn2{position:absolute;left:88px;top:30px;font:600 26px Poppins;white-space:nowrap}
+.sr .st{position:absolute;right:20px;top:30px;height:40px;padding:0 14px;border-radius:9px;display:flex;align-items:center;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.pn{position:absolute;inset:0}
+.pn .ps{position:absolute;left:36px;top:30px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--ac);white-space:nowrap}
+.pn .ptt{position:absolute;left:36px;top:64px;font:700 56px Poppins;letter-spacing:-.02em;white-space:nowrap}
+.pn svg{position:absolute;left:0;top:0}
+.gp{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.gp i{position:absolute;left:20px;top:22px;width:52px;height:52px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center}
+.gp .g1{position:absolute;left:92px;top:16px;font:600 26px Poppins;white-space:nowrap}
+.gp .g2{position:absolute;left:92px;top:56px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 26px Poppins}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .nn{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · CHEMISTRY · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY</div>
+    <div class="subj" id="subj">MOLECULE BENCH</div>
+    <div id="title">Dalton's <span class="acc">Atomic Theory</span></div>
+    <div id="sub">Explained on one molecule bench</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#0FA3A3" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: three puzzles + Diya's kitchen -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE PUZZLES · ONE IDEA</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">One idea answers all three</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA'S KITCHEN · BENGALURU</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-kitchen.jpg">
+        <div class="pillp ink" id="hTz" style="left:36px;top:494px">Can sugar be crushed forever?</div></div>
+    </div>
+
+    <!-- P: Dalton + cutting -->
+    <div id="sP">
+      <div class="card full" id="pd"><div class="lbl" style="left:36px;top:30px">THE IDEA · 1808</div>
+        <div id="dN">John Dalton</div><div id="dB">ENGLISH SCIENTIST · ATOMIC THEORY</div>
+        <div id="dBk"><i></i><div class="t1">A New System of Chemical Philosophy</div><div class="t2">PUBLISHED 1808</div></div>
+        <div id="dAt"><span id="dAtI"></span>Atom</div>
+        <div id="dDef">The smallest particle of an element.<br><span style="color:var(--mute)">Dalton's picture: a hard, tiny ball.</span></div></div>
+      <div class="card rf" id="pc"><div class="lbl" style="left:36px;top:30px">CUT IT AGAIN · AND AGAIN</div><div id="cutN"></div>
+        <svg id="cS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- S: the bench, four postulates -->
+    <div id="sS">
+      <div class="card full" id="bn"><div class="lbl" style="left:36px;top:30px" id="bnL">MOLECULE BENCH · DALTON'S IDEAS</div>
+        <svg id="bS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="bEq"></div><div class="bc" id="bc0"><b class="n">O</b><span id="bv0">2 | 2</span><span class="cm" id="bm0"></span></div><div class="bc" id="bc1"><b>H</b><span id="bv1">4 | 4</span><span class="cm" id="bm1"></span></div>
+        <div class="lbl" id="ptL" style="left:36px;top:458px">PERIODIC TABLE · PERIODS 1 AND 2</div><div class="pt" id="ptS" style="left:36px;top:494px"></div></div>
+      <div class="card rf" id="pl"><div class="lbl" style="left:36px;top:30px">DALTON'S FOUR POSTULATES</div><div id="pos"></div></div>
+    </div>
+
+    <!-- B: water vs hydrogen peroxide + think -->
+    <div id="sB">
+      <div class="card wide" id="cmp"><svg id="mS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg><div id="cmpV"></div>
+        <div class="cmpH" style="left:48px">COMPOUND A</div><div class="cmpT" style="left:48px" id="cT0"></div>
+        <div class="cmpH" style="left:848px">COMPOUND B</div><div class="cmpT" style="left:848px" id="cT1"></div>
+        <div class="cmpR" id="cR0" style="left:48px">H : O = 2 : 1</div><div class="cmpR" id="cR1" style="left:848px">H : O = 1 : 1</div></div>
+      <div class="card wide" id="th1"></div>
+    </div>
+
+    <!-- D: link by link -->
+    <div id="sD"><div class="card wide" id="lks"><div class="lbl" style="left:48px;top:30px">HOW DALTON EXPLAINS THE LAWS · LINK BY LINK</div><div id="lkr"></div></div></div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">18 g of water holds 2 g H and 16 g O. How much H and O are in 72 g of water?</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">FIXED RATIO · FOUR TIMES THE WATER</div><svg id="wS2" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="wG"><div class="pillp ac" id="wGp">8 g + 64 g = 72 g</div></div></div>
+    </div>
+
+    <!-- C: what survived -->
+    <div id="sC">
+      <div class="card full" id="cl"><div class="lbl" style="left:36px;top:30px">200 YEARS LATER · WHAT SURVIVED?</div><div id="srs"></div></div>
+      <div class="card rf" id="cp"><div id="pns"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">In every reaction,</div><div id="st2">atoms only <span class="acc">change partners</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

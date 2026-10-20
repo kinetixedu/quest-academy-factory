@@ -1,0 +1,152 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Chemistry Ep 11 - Empirical and Molecular Formulae</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Chemistry Ep 11: empirical and molecular formulae (Molecule bench) ===== */
+:root{--n:#0FA3A3;--h:#16213E;--o:#7A4FE0;--cl:#2F6FEB;--e:#C8461B;--g:#B7791F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.n{color:var(--n)}.e{color:var(--e)}.g{color:var(--g)}.o{color:var(--o)}
+/* title card stories */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;right:36px;height:112px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:20px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:22px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:66px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jf{position:absolute;right:146px;top:30px;font-size:36px;white-space:nowrap}
+.jq{position:absolute;right:20px;top:30px;height:52px;width:112px;border-radius:12px;background:var(--ac);color:#fff;font:600 22px 'IBM Plex Mono';display:flex;align-items:center;justify-content:center;white-space:nowrap}
+.wq{position:absolute;top:494px;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+.wq .katex{font-size:28px}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* two kinds of formula */
+.dr{position:absolute;left:36px;width:712px;height:150px;border-radius:14px;background:var(--soft)}
+.dr .dn{position:absolute;left:24px;top:20px;font:700 34px Poppins;white-space:nowrap}
+.dr .dd{position:absolute;left:24px;top:72px;font:500 26px Poppins;color:var(--ink2);white-space:nowrap}
+.dr .dk{position:absolute;right:24px;top:30px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--ac);white-space:nowrap}
+.dr .dx{position:absolute;right:24px;top:96px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+#nrel{position:absolute;left:36px;top:428px;height:84px;width:712px;border-radius:14px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:36px;white-space:nowrap}
+#gM{position:absolute;left:36px;top:76px;font-size:46px}
+#gMl{position:absolute;left:300px;top:96px}
+.gc{position:absolute;left:470px;width:278px;height:72px;border-radius:12px;background:var(--soft)}
+.gc .ce{position:absolute;left:20px;top:12px;font:700 34px Poppins}
+.gc .cv{position:absolute;right:20px;top:14px;font:600 32px 'IBM Plex Mono';white-space:nowrap}
+#gE{position:absolute;left:470px;top:474px;height:60px;padding:0 18px;border-radius:12px;background:var(--ac);color:#fff;display:flex;align-items:center;gap:12px;font:600 22px 'IBM Plex Mono';white-space:nowrap}
+#gE .katex{font-size:32px}
+#gN{position:absolute;left:36px;top:474px;height:60px;padding:0 18px;border-radius:12px;background:var(--g);color:#fff;display:flex;align-items:center;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+/* bench */
+.btag{position:absolute;height:40px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;gap:8px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.pt{position:absolute;display:flex;gap:10px}
+.pt span{width:58px;height:58px;border-radius:10px;border:2px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;font:600 24px Poppins;color:var(--dim)}
+.fr{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--soft)}
+.fr .fn{position:absolute;left:22px;top:22px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.fr .ff{position:absolute;left:190px;top:10px;font-size:40px;white-space:nowrap}
+.fr .fd{position:absolute;left:330px;top:22px;font:600 24px 'IBM Plex Mono';color:var(--g);white-space:nowrap}
+.fr .fe{position:absolute;left:470px;top:10px;font-size:40px;white-space:nowrap}
+.fr .fz{position:absolute;right:22px;top:16px;height:44px;padding:0 14px;border-radius:10px;background:var(--g);color:#fff;font:600 20px 'IBM Plex Mono';display:flex;align-items:center;white-space:nowrap}
+.cr{position:absolute;left:36px;width:712px;height:72px;border-radius:14px;background:var(--soft)}
+.cr .ce{position:absolute;left:24px;top:12px;font:700 36px Poppins}
+.cr .cn{position:absolute;left:96px;top:24px;font:500 19px Poppins;color:var(--mute);white-space:nowrap}
+.cr .cv{position:absolute;right:28px;top:12px;font:600 38px 'IBM Plex Mono';white-space:nowrap}
+/* derivation table */
+.th{position:absolute;top:92px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.trw{position:absolute;left:36px;width:1528px;height:80px;border-radius:14px;background:var(--soft)}
+.tcol{position:absolute;top:80px;height:358px;border-radius:14px;background:var(--ac2)}
+.tc{position:absolute;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+.tc.el{font:700 36px Poppins}
+#dStep{position:absolute;right:36px;top:22px;height:44px;padding:0 16px;border-radius:10px;background:var(--ink);color:#fff;font:600 19px 'IBM Plex Mono';letter-spacing:.06em;display:flex;align-items:center;gap:10px;white-space:nowrap}
+.dp{position:absolute;top:470px;height:72px;padding:0 22px;border-radius:14px;display:flex;align-items:center;gap:14px;font:600 26px Poppins;white-space:nowrap}
+.dp .katex{font-size:36px}
+/* worked example */
+#wq{position:absolute;left:36px;top:70px;font:600 28px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:28px}
+#wG{position:absolute;left:0;width:784px;top:494px;display:flex;justify-content:center}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font-size:28px}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .nn{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · CHEMISTRY · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY</div>
+    <div class="subj" id="subj">MOLECULE BENCH</div>
+    <div id="title">Empirical and <span class="acc">Molecular</span> Formulae</div>
+    <div id="sub">Explained on one molecule bench</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#0FA3A3" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: three substances, one ratio + Diya's kitchen -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE SUBSTANCES · ONE RATIO</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Same ratio C : H : O = 1 : 2 : 1</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA'S KITCHEN · BENGALURU</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-kitchen.jpg">
+        <div id="wqs"></div>
+        <div class="pillp ink" id="hTz" style="left:36px;top:494px">A formula from percentages alone?</div></div>
+    </div>
+
+    <!-- P: two kinds of formula + glucose -->
+    <div id="sP">
+      <div class="card full" id="pq"><div class="lbl" style="left:36px;top:30px">TWO KINDS OF FORMULA</div><div id="drs"></div><div id="nrel"></div></div>
+      <div class="card rf" id="pw"><div class="lbl" style="left:36px;top:30px">GLUCOSE · ONE MOLECULE</div>
+        <div class="fx" id="gM"></div>
+        <svg id="gS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div id="gcs"></div>
+        <div id="gN">n = 6</div><div id="gE"><span>EMPIRICAL</span><span id="gEk"></span></div></div>
+    </div>
+
+    <!-- S: the bench: benzene into CH pieces, acetylene -->
+    <div id="sS">
+      <div class="card full" id="bn"><div class="lbl" style="left:36px;top:30px" id="bnL">MOLECULE BENCH · BENZENE</div>
+        <svg id="bS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="lbl" id="ptL" style="left:36px;top:458px">PERIODIC TABLE · PERIODS 1 AND 2</div><div class="pt" id="ptS" style="left:36px;top:494px"></div></div>
+      <div class="card rt" id="rx"><div class="lbl" style="left:36px;top:30px">MOLECULAR → EMPIRICAL</div><div id="frs"></div></div>
+      <div class="card rb" id="ct"><div class="lbl" style="left:36px;top:30px">ATOM COUNTER</div><div id="crs"></div></div>
+      <div class="card wide" id="th1"></div>
+    </div>
+
+    <!-- D: derivation table (glucose from percentages) -->
+    <div id="sD"><div class="card wide" id="dt"><div class="lbl" style="left:36px;top:30px">FROM PERCENTAGES · GLUCOSE</div><div id="dStep"></div><div id="dtb"></div></div></div>
+
+    <!-- W: NCERT worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">4.07% H, 24.27% C, 71.65% Cl. Molar mass 98.96 g. Find the empirical and molecular formula.</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px" id="wrL">MOLES IN 100 g</div><svg id="wS2" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="wG"><div class="pillp ac" id="wGp"></div></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="620" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Empirical is the simplest ratio.</div><div id="st2">Molecular is the <span class="acc">real count</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

@@ -1,0 +1,191 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Chemistry Ep 1 - Introduction to Chemistry</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Chemistry Ep 01: introduction to chemistry (Molecule bench) ===== */
+:root{--o:#0FA3A3;--h:#16213E;--c:#7A4FE0;--e:#C8461B;--g:#B7791F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+/* title card puzzles */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;right:36px;height:112px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:20px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:22px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:66px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .ja{position:absolute;right:20px;top:32px;height:48px;padding:0 16px;border-radius:10px;background:var(--ink);color:#fff;display:flex;align-items:center;font:600 17px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+.wq{position:absolute;top:494px;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* what is chemistry */
+#pdef{position:absolute;left:36px;top:84px;font:700 44px/1.2 Poppins;letter-spacing:-.01em;white-space:nowrap}
+#pdef2{position:absolute;left:36px;top:142px;font:700 44px/1.2 Poppins;letter-spacing:-.01em;white-space:nowrap}
+#mdef{position:absolute;left:36px;top:226px;height:60px;padding:0 22px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:14px;font:600 25px Poppins;white-space:nowrap}
+.kq{position:absolute;width:344px;height:100px;border-radius:14px;background:var(--soft)}
+.kq .kk{position:absolute;left:22px;top:18px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--ac);white-space:nowrap}
+.kq .kt{position:absolute;left:22px;top:46px;font:600 26px Poppins;white-space:nowrap}
+.mr{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.mr i{position:absolute;left:18px;top:16px;width:64px;height:64px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.mr .mn{position:absolute;left:104px;top:26px;font:700 32px Poppins;white-space:nowrap}
+.mr .mk{position:absolute;top:24px;height:48px;padding:0 14px;border-radius:10px;background:#fff;display:flex;align-items:center;gap:8px;font:600 17px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+/* states */
+.sbx{position:absolute;top:92px;width:480px;height:320px;border-radius:14px;background:var(--soft);overflow:hidden}
+.sbx svg{position:absolute;left:0;top:0}
+.sn3{position:absolute;top:436px;font:700 38px Poppins;white-space:nowrap}
+.sx3{position:absolute;top:490px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* ladder */
+.rg{position:absolute;left:36px;width:712px;height:62px;border-radius:12px;background:var(--soft)}
+.rg .nn{position:absolute;left:12px;top:9px;width:44px;height:44px;border-radius:50%;background:#fff;color:var(--ac);font:700 20px Poppins;display:flex;align-items:center;justify-content:center}
+.rg .rt{position:absolute;left:72px;top:13px;font:700 27px Poppins;white-space:nowrap}
+.rg .rw{position:absolute;right:20px;top:21px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.rh{position:absolute;top:0;height:62px;border-radius:12px;background:var(--soft)}
+.rh .rt{position:absolute;left:20px;top:13px;font:700 27px Poppins;white-space:nowrap}
+.rh .rw{position:absolute;right:16px;top:21px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.btag{position:absolute;height:40px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;gap:8px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.fl2{position:absolute;white-space:nowrap;font-size:36px;transform:translateX(-50%)}
+.tyt{position:absolute;height:34px;padding:0 12px;border-radius:8px;display:inline-flex;align-items:center;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap;transform:translateX(-50%);color:#fff}
+/* reading formulas */
+#rBig{position:absolute;left:0;width:784px;top:92px;text-align:center;font-size:96px;line-height:1.2;white-space:nowrap}
+#rNote{position:absolute;left:0;width:784px;top:236px;text-align:center;font:600 26px Poppins;white-space:nowrap}
+#rBalls{position:absolute;left:0;top:296px;width:784px;height:120px}
+.sym{position:absolute;top:0;width:118px;height:84px;border-radius:12px;border:2px solid var(--line);background:#fff}
+.sym b{position:absolute;left:0;right:0;top:6px;text-align:center;font:700 34px Poppins}
+.sym span{position:absolute;left:0;right:0;top:52px;text-align:center;font:600 13px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute)}
+.fr{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.fr .ff{position:absolute;left:24px;top:18px;font-size:44px;white-space:nowrap}
+.fr .fc{position:absolute;right:24px;top:32px;font:600 22px 'IBM Plex Mono';white-space:nowrap}
+/* compare */
+.kn{position:absolute;left:36px;top:420px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.kv{position:absolute;left:36px;top:452px;font:600 56px 'IBM Plex Mono';white-space:nowrap}
+.kd{position:absolute;right:36px;top:470px;white-space:nowrap}
+/* change */
+.chx{position:absolute;left:36px;top:470px;font-size:34px;white-space:nowrap}
+.chw{position:absolute;left:36px;top:470px;font:600 26px Poppins;white-space:nowrap}
+/* journey */
+.cj{position:absolute;left:36px;width:712px;height:112px;border-radius:14px;background:var(--soft)}
+.cj .cn2{position:absolute;left:20px;top:20px;width:72px;height:72px;border-radius:50%;background:#fff;color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;letter-spacing:-.02em}
+.cj .ct2{position:absolute;left:116px;top:20px;font:700 29px Poppins;white-space:nowrap}
+.cj .cw2{position:absolute;left:116px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.sr{position:absolute;left:36px;width:712px;height:80px;border-radius:14px;background:var(--soft)}
+.sr i{position:absolute;left:14px;top:12px;width:56px;height:56px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.sr .sn2{position:absolute;left:88px;top:20px;font:700 29px Poppins;white-space:nowrap}
+.sr .sw{position:absolute;right:24px;top:28px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:70px;font:600 29px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:30px}
+#wCnt{position:absolute;left:0;width:784px;top:420px;text-align:center;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+#wTot{position:absolute;left:0;width:784px;top:470px;text-align:center;font:700 44px 'IBM Plex Mono';white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins;font-size:30px}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:29px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .nn{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · CHEMISTRY · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY</div>
+    <div class="subj" id="subj">MOLECULE BENCH</div>
+    <div id="title">Introduction to <span class="acc">Chemistry</span></div>
+    <div id="sub">Explained on one molecule bench</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#0FA3A3" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: three puzzles + Diya's kitchen -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE PUZZLES · ONE SCIENCE</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">One science answers all three</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA'S KITCHEN · BENGALURU</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-kitchen.jpg">
+        <div id="wqs"></div></div>
+    </div>
+
+    <!-- P: what is chemistry + is it matter -->
+    <div id="sP">
+      <div class="card full" id="pq"><div class="lbl" style="left:36px;top:30px">WHAT IS CHEMISTRY?</div>
+        <div id="pdef">Chemistry is the study</div><div id="pdef2">of <span class="acc">matter</span>.</div>
+        <div id="mdef"><span id="mdefI"></span>Matter: has mass, takes up space</div><div id="kqs"></div></div>
+      <div class="card rf" id="pm"><div class="lbl" style="left:36px;top:30px">IS IT MATTER?</div><div id="mrs"></div>
+        <div class="pillp ac" id="pmP" style="left:36px;top:470px">All of it is matter</div></div>
+    </div>
+
+    <!-- M: three states -->
+    <div id="sM"><div class="card wide" id="stc"><div class="lbl" style="left:48px;top:34px">THREE STATES OF MATTER · PARTICLES</div><div id="sbs"></div></div></div>
+
+    <!-- L + B: the ladder, the zoom, the bench -->
+    <div id="sL">
+      <div class="card full" id="ld"><div class="lbl" style="left:36px;top:30px">ZOOM IN · BUILDING BLOCKS</div><div id="rgs"></div></div>
+      <div class="card rf" id="lz"><div class="lbl" style="left:36px;top:30px" id="lzL">ZOOM · ONE DROP OF WATER</div>
+        <svg id="zS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <svg id="bS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div id="bLab"></div></div>
+    </div>
+
+    <!-- R: reading a formula -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">READING A FORMULA</div><div class="fx" id="rBig"></div><div id="rNote"></div>
+        <svg id="rBalls" width="784" height="120"></svg>
+        <div class="lbl" style="left:36px;top:432px" id="symL">ELEMENT SYMBOLS</div><div id="syms" style="position:absolute;left:36px;top:466px"></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">ATOM COUNT</div><div id="frs"></div></div>
+    </div>
+
+    <!-- K: compare + pause and think -->
+    <div id="sK">
+      <div class="card full" id="ka"><div class="lbl" style="left:36px;top:30px">OXYGEN · O₂</div><svg id="kaS" width="784" height="400" style="position:absolute;left:0;top:0"></svg>
+        <div class="kn">KINDS OF ATOMS</div><div class="kv" id="kaV" style="color:var(--o)">1</div><div class="kd" id="kaD"></div></div>
+      <div class="card rf" id="kb"><div class="lbl" style="left:36px;top:30px">WATER · H₂O</div><svg id="kbS" width="784" height="400" style="position:absolute;left:0;top:0"></svg>
+        <div class="kn">KINDS OF ATOMS</div><div class="kv" id="kbV">2</div><div class="kd" id="kbD"></div></div>
+      <div class="card wide" id="th1"></div>
+    </div>
+
+    <!-- C: physical vs chemical change -->
+    <div id="sC">
+      <div class="card full" id="chP"><div class="lbl" style="left:36px;top:30px">PHYSICAL CHANGE · ICE MELTS</div><svg id="cpS" width="784" height="460" style="position:absolute;left:0;top:0"></svg>
+        <div class="chx" id="cpX"></div></div>
+      <div class="card rf" id="chC"><div class="lbl" style="left:36px;top:30px">CHEMICAL CHANGE · IRON RUSTS</div><svg id="ccS" width="784" height="460" style="position:absolute;left:0;top:0"></svg>
+        <div class="chw" id="ccX" style="top:410px">iron + oxygen + water <span style="color:var(--mute)">→</span> <b style="color:#9A4A1F">rust</b></div></div>
+    </div>
+
+    <!-- J: journey + branches -->
+    <div id="sJ">
+      <div class="card full" id="jl"><div class="lbl" style="left:36px;top:30px">THIS SERIES · THE ROADMAP</div><div id="cjs"></div></div>
+      <div class="card rf" id="jb2"><div class="lbl" style="left:36px;top:30px">BRANCHES OF CHEMISTRY</div><div id="srs"></div></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">ATOM COUNTER · ONE GLUCOSE</div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="wCnt"></div><div id="wTot"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Everything around you is made of atoms.</div><div id="st2">Chemistry is how they <span class="acc">join</span> and <span class="acc">change</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

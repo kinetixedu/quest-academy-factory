@@ -1,0 +1,173 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Chemistry Ep 3 - Nature and Classification of Matter</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Chemistry Ep 03: nature and classification of matter (Molecule bench) ===== */
+:root{--o:#0FA3A3;--h:#16213E;--nv:#7A4FE0;--e:#C8461B;--g:#B7791F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+/* title card samples */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;right:36px;height:112px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:20px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:22px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:66px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.qm{position:absolute;right:24px;top:28px;height:56px;padding:0 16px;border-radius:12px;background:#fff;border:2px dashed var(--dim);display:flex;align-items:center;gap:10px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.qm b{font:700 28px Poppins;color:var(--ac)}
+.wq{position:absolute;top:494px;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* matter + states */
+.qr{position:absolute;left:36px;width:712px;height:80px;border-radius:14px;background:var(--soft)}
+.qr .nn{position:absolute;left:20px;top:17px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);background:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.qr .qt{position:absolute;left:88px;top:20px;font:600 28px Poppins;white-space:nowrap}
+.qr .qk{position:absolute;right:24px;top:28px;font:600 17px 'IBM Plex Mono';letter-spacing:.06em;color:var(--ac);white-space:nowrap}
+#mdef{position:absolute;left:36px;top:80px;height:64px;padding:0 22px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:14px;font:600 26px Poppins;white-space:nowrap}
+/* sorting tree */
+.tn{position:absolute;border-radius:14px;background:var(--soft);border:2.5px solid transparent;text-align:center}
+.tn .tt{position:absolute;left:0;right:0;font:700 30px Poppins;white-space:nowrap}
+.tn .tx{position:absolute;left:0;right:0;font:600 16px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.tn.sm .tt{font-size:22px}.tn.sm .tx{font-size:13px}
+.tn svg{position:absolute;left:0;top:0}
+/* bench */
+.btag{position:absolute;height:40px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;gap:8px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.pt{position:absolute;display:flex;gap:10px}
+.pt span{width:58px;height:58px;border-radius:10px;border:2px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;font:600 24px Poppins;color:var(--dim)}
+.cbar{position:absolute;left:36px;width:712px;height:92px}
+.cbar .cnm{position:absolute;left:0;top:0;font:700 30px Poppins;white-space:nowrap}
+.cbar .cpc{position:absolute;right:0;top:2px;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+.cbar .ctr{position:absolute;left:0;top:50px;width:712px;height:22px;border-radius:11px;background:var(--soft);overflow:hidden}
+.cbar .cfl{position:absolute;left:0;top:0;height:22px;border-radius:11px;width:0}
+#eq{position:absolute;left:36px;top:84px;font-size:58px;white-space:nowrap}
+.pch{position:absolute;top:186px;height:52px;padding:0 14px;border-radius:10px;display:flex;align-items:center;font:600 17px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+.cr{position:absolute;left:36px;width:712px;height:72px;border-radius:14px;background:var(--soft)}
+.cr .cn{position:absolute;left:24px;top:20px;font:600 26px Poppins;white-space:nowrap}
+.cr .cv{position:absolute;right:24px;top:12px;font:600 38px 'IBM Plex Mono';white-space:nowrap}
+.chdr{position:absolute;right:24px;top:34px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* sorting key */
+.kr{position:absolute;left:36px;width:712px;height:88px;border-radius:14px;background:var(--soft)}
+.kr .nn{position:absolute;left:20px;top:21px;width:46px;height:46px;border-radius:50%;background:var(--ac);color:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.kr .qt{position:absolute;left:86px;top:24px;font:600 27px Poppins;white-space:nowrap}
+.kr .qk{position:absolute;right:20px;top:24px;height:40px;padding:0 12px;border-radius:9px;background:#fff;display:flex;align-items:center;font:600 16px 'IBM Plex Mono';letter-spacing:.06em;color:var(--ac);white-space:nowrap}
+/* worked example: tiles and bins */
+#wq{position:absolute;left:36px;top:70px;font:600 29px/1.35 Poppins;width:712px}
+.tile{position:absolute;border-radius:12px;background:#fff;border:2.5px solid var(--line);z-index:5}
+.tile .tn2{position:absolute;left:16px;top:50%;transform:translateY(-50%);font:600 25px Poppins;white-space:nowrap}
+.tile .tf{position:absolute;right:14px;top:50%;transform:translateY(-50%);font:600 15px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.bin{position:absolute;width:344px;height:230px;border-radius:14px;background:var(--soft);border-top:6px solid var(--ac)}
+.bin .bn{position:absolute;left:18px;top:14px;font:700 24px Poppins;white-space:nowrap}
+.bin .bs{position:absolute;right:16px;top:20px;font:600 15px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+/* separation */
+.sr{position:absolute;left:36px;width:712px;height:80px;border-radius:14px;background:var(--soft)}
+.sr i{position:absolute;left:14px;top:12px;width:56px;height:56px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font:700 22px Poppins}
+.sr .sn2{position:absolute;left:88px;top:20px;font:700 30px Poppins;white-space:nowrap}
+.sr .sw{position:absolute;right:24px;top:28px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.pn{position:absolute;inset:0}
+.pn .ps{position:absolute;left:36px;top:30px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--ac);white-space:nowrap}
+.pn .ptt{position:absolute;left:36px;top:64px;font:700 56px Poppins;letter-spacing:-.02em;white-space:nowrap}
+.pn .pd{position:absolute;left:36px;top:150px;font:500 26px/1.4 Poppins;width:712px;color:var(--ink2)}
+.pn svg{position:absolute;left:0;top:0}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins;font-size:27px}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .nn{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · CHEMISTRY · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY</div>
+    <div class="subj" id="subj">MOLECULE BENCH</div>
+    <div id="title">Classification of <span class="acc">Matter</span></div>
+    <div id="sub">Explained on one molecule bench</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#0FA3A3" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: three samples + Diya at the water cooler -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE SAMPLES · ONE QUESTION</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Only one is a pure substance</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA · COLLEGE CORRIDOR</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-corridor.jpg">
+        <div id="wqs"></div>
+        <div class="pillp ink" id="hTz" style="left:36px;top:494px">Sort any substance into its box</div></div>
+    </div>
+
+    <!-- P: matter + three states -->
+    <div id="sP">
+      <div class="card full" id="pq"><div class="lbl" style="left:36px;top:30px">WHAT IS MATTER</div>
+        <div id="mdef"><span id="mdefI"></span>Matter: has mass, takes up space</div><div id="qrs"></div></div>
+      <div class="card rf" id="pw"><div class="lbl" style="left:36px;top:30px">MOLECULE BENCH · THREE STATES</div>
+        <svg id="stS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="stP" style="left:36px;top:494px">Ice, water, vapour: all H₂O</div></div>
+    </div>
+
+    <!-- U: the sorting tree -->
+    <div id="sU"><div class="card wide" id="tr"><div class="lbl" style="left:36px;top:30px">SORTING MATTER</div><svg id="trS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg><div id="trN"></div></div></div>
+
+    <!-- S: the bench: air, water, making water -->
+    <div id="sS">
+      <div class="card full" id="bn"><div class="lbl" style="left:36px;top:30px" id="bnL">MOLECULE BENCH · INSIDE AIR</div>
+        <svg id="bS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="lbl" id="ptL" style="left:36px;top:458px">PERIODIC TABLE · PERIODS 1 AND 2</div><div class="pt" id="ptS" style="left:36px;top:494px"></div></div>
+      <div class="card rf" id="cp"><div class="lbl" style="left:36px;top:30px">DRY AIR · BY VOLUME · ROUGHLY</div><div id="cbs"></div>
+        <div class="pillp" id="cpP" style="left:36px;top:494px">Not bonded: just moving together</div></div>
+      <div class="card rt" id="rx"><div class="lbl" style="left:36px;top:30px">REACTION · MAKING WATER</div><div id="eq"></div><div id="pchs"></div></div>
+      <div class="card rb" id="ct"><div class="lbl" style="left:36px;top:30px">COUNTER</div><div class="chdr">AIR | WATER</div><div id="crs"></div></div>
+      <div class="card wide" id="th1"></div>
+    </div>
+
+    <!-- D: the sorting key -->
+    <div id="sD">
+      <div class="card full" id="dk"><div class="lbl" style="left:36px;top:30px">SORTING KEY · STEP BY STEP</div><div id="krs"></div></div>
+      <div class="card rf" id="dt"><div class="lbl" style="left:36px;top:30px">WHERE IT LANDS</div><svg id="dtS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div id="dtN"></div></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div class="lbl" style="left:36px;top:30px">WORKED EXAMPLE</div><div id="wq">Sort six samples into the right boxes.</div>
+        <div class="pillp ac" id="wR" style="left:36px;top:494px"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">FOUR BOXES</div><div id="bins"></div></div>
+      <div id="tiles"></div>
+    </div>
+
+    <!-- C: separating -->
+    <div id="sC">
+      <div class="card full" id="cl"><div class="lbl" style="left:36px;top:30px">HOW TO PULL THEM APART</div><div id="srs"></div></div>
+      <div class="card rf" id="cpn"><div id="pns"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="620" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">A mixture keeps its parts.</div><div id="st2">A compound makes something <span class="acc">new.</span></div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

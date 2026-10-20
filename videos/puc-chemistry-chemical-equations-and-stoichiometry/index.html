@@ -1,0 +1,175 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Chemistry Ep 12 - Chemical Equations and Stoichiometry</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Chemistry Ep 12: chemical equations and stoichiometry (Molecule bench) ===== */
+:root{--n:#0FA3A3;--h:#16213E;--o:#7A4FE0;--e:#C8461B;--g:#B7791F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:230px}
+.rb{left:976px;top:532px;width:784px;height:318px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.n{color:var(--n)}.e{color:var(--e)}.g{color:var(--g)}.o{color:var(--o)}
+/* title card stories */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;right:36px;height:112px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:20px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:22px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:66px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.el{position:absolute;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 24px Poppins;color:#fff;background:var(--o)}
+.elw{position:absolute;right:24px;top:24px;display:flex;align-items:center;gap:12px}
+.elw .el{position:static}
+.elw span{font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.wq{position:absolute;top:494px;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+.wq .katex{font-size:28px}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* anatomy of an equation */
+#an{position:absolute;left:36px;top:130px;display:flex;align-items:center;gap:22px;font-size:50px;white-space:nowrap}
+.br{position:absolute;height:3px;background:var(--ac);border-radius:2px}
+.brl{position:absolute;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--ac);white-space:nowrap}
+#anA{position:absolute;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--g);white-space:nowrap}
+.qr{position:absolute;left:36px;width:712px;height:70px;border-radius:14px;background:var(--soft)}
+.qr .nn{position:absolute;left:18px;top:12px;width:70px;height:46px;border-radius:10px;background:#fff;border:2.5px solid var(--ac);color:var(--ac);font:600 22px 'IBM Plex Mono';display:flex;align-items:center;justify-content:center}
+.qr .qt{position:absolute;left:110px;top:16px;font:600 26px Poppins;white-space:nowrap}
+#ety{position:absolute;left:36px;top:430px;width:712px;height:112px;border-radius:14px;background:var(--ink);color:#fff}
+#ety .a{position:absolute;left:24px;top:16px;font:700 30px Poppins;white-space:nowrap}
+#ety .b{position:absolute;left:24px;top:64px;font:500 22px Poppins;color:#C9CFDB;white-space:nowrap}
+/* bench, reaction, counter */
+.btag{position:absolute;height:40px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;gap:8px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.pt{position:absolute;display:flex;gap:10px}
+.pt span{width:58px;height:58px;border-radius:10px;border:2px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;font:600 24px Poppins;color:var(--dim)}
+#eq{position:absolute;left:36px;top:78px;display:flex;align-items:center;gap:14px;font-size:44px;white-space:nowrap}
+#eq .cf{display:inline-block;overflow:hidden;color:var(--g);font:700 44px Poppins;text-align:right}
+#eqS{position:absolute;left:36px;top:160px;display:flex;align-items:center;gap:16px;white-space:nowrap}
+#eqS .sn{flex:none;width:44px;height:44px;border-radius:50%;background:var(--ac);color:#fff;font:700 21px Poppins;display:flex;align-items:center;justify-content:center}
+#eqS .stx{font:500 25px Poppins}
+.cr{position:absolute;left:36px;width:712px;height:64px;border-radius:14px;background:var(--soft)}
+.cr .ce{position:absolute;left:24px;top:9px;font:700 34px Poppins}
+.cr .cn{position:absolute;left:96px;top:20px;font:500 19px Poppins;color:var(--mute);white-space:nowrap}
+.cr .cv{position:absolute;right:100px;top:9px;font:600 36px 'IBM Plex Mono';white-space:nowrap}
+.cr .cm{position:absolute;right:24px;top:10px;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.chdr{position:absolute;right:100px;top:34px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* recipe table */
+.rh{position:absolute;top:84px;transform:translateX(-50%);font-size:52px;white-space:nowrap}
+.rop{position:absolute;top:88px;transform:translateX(-50%);font-size:46px;white-space:nowrap}
+#rM{position:absolute;left:300px;top:170px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.rr{position:absolute;left:36px;width:1528px;height:80px;border-radius:14px;background:var(--soft)}
+.rr .rl{position:absolute;left:24px;top:28px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.rv{position:absolute;transform:translateX(-50%);font:600 34px 'IBM Plex Mono';white-space:nowrap}
+#rChk{position:absolute;right:36px;top:22px;height:44px;padding:0 16px;border-radius:10px;background:var(--ok);color:#fff;font:600 19px 'IBM Plex Mono';display:flex;align-items:center;white-space:nowrap}
+/* moles vs grams */
+.big{position:absolute;left:36px;top:420px;font:700 64px 'IBM Plex Mono';white-space:nowrap}
+.bigs{position:absolute;left:36px;top:510px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* molarity */
+.mc{position:absolute;top:84px;height:52px;padding:0 16px;border-radius:12px;background:var(--soft);display:inline-flex;align-items:center;font:600 22px Poppins;white-space:nowrap}
+#mF{position:absolute;left:36px;top:180px;font-size:40px;white-space:nowrap}
+#ml .sol .sx{font-size:28px}
+.ro2{position:absolute;left:470px;width:278px;height:72px;border-radius:12px;background:var(--soft)}
+.ro2 .k{position:absolute;left:18px;top:10px;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.ro2 .v{position:absolute;left:18px;top:30px;font:600 28px 'IBM Plex Mono';white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:70px;font:600 29px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:28px}
+#wG{position:absolute;left:0;width:784px;top:494px;display:flex;justify-content:center}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font-size:27px}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .nn{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · CHEMISTRY · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY</div>
+    <div class="subj" id="subj">MOLECULE BENCH</div>
+    <div id="title">Chemical Equations and <span class="acc">Stoichiometry</span></div>
+    <div id="sub">Explained on one molecule bench</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#0FA3A3" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: three flames + Aarav's kitchen -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE FLAMES · ONE QUESTION</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">How much oxygen? Count it to the gram</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV'S KITCHEN · BENGALURU</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-kitchen.jpg">
+        <div id="wqs"></div>
+        <div class="pillp ink" id="hTz" style="left:36px;top:494px">Read an equation like a recipe</div></div>
+    </div>
+
+    <!-- P: anatomy of an equation + states + the word -->
+    <div id="sP">
+      <div class="card full" id="pq"><div class="lbl" style="left:36px;top:30px">WRITING A REACTION</div><div id="an"></div><div id="anA">GIVES</div>
+        <div class="br" id="brR"></div><div class="brl" id="brRl">REACTANTS · START</div><div class="br" id="brP"></div><div class="brl" id="brPl">PRODUCTS · NEW</div>
+        <div class="pillp" id="pNote" style="left:36px;top:470px">Small letters in brackets = the state</div></div>
+      <div class="card rf" id="pw"><div class="lbl" style="left:36px;top:30px">STATE SYMBOLS</div><div id="qrs"></div>
+        <div id="ety"><div class="a">Stoichiometry = stoicheion + metron</div><div class="b">Greek: element + measure · the maths of amounts</div></div></div>
+    </div>
+
+    <!-- S: the bench: methane burns, counter, balancing -->
+    <div id="sS">
+      <div class="card full" id="bn"><div class="lbl" style="left:36px;top:30px" id="bnL">MOLECULE BENCH · METHANE BURNS</div>
+        <svg id="bS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="lbl" id="ptL" style="left:36px;top:458px">PERIODIC TABLE · PERIODS 1 AND 2</div><div class="pt" id="ptS" style="left:36px;top:494px"></div></div>
+      <div class="card rt" id="rx"><div class="lbl" style="left:36px;top:30px" id="rxL">REACTION · AS WRITTEN</div>
+        <div id="eq"></div><div id="eqS"><div class="sn" id="eqN">1</div><div class="stx" id="eqT"></div></div></div>
+      <div class="card rb" id="ct"><div class="lbl" style="left:36px;top:30px">BALANCE COUNTER</div><div class="chdr">LEFT | RIGHT</div><div id="crs"></div></div>
+    </div>
+
+    <!-- R: read it as a recipe -->
+    <div id="sR"><div class="card wide" id="rc"><div class="lbl" style="left:36px;top:30px">READ IT LIKE A RECIPE</div><div id="rChk">16 + 64 = 80 = 44 + 36 g</div><div id="rcb"></div></div></div>
+
+    <!-- B: moles vs grams side by side + think -->
+    <div id="sB">
+      <div class="card full" id="bm"><div class="lbl" style="left:36px;top:30px">IN MOLES</div><svg id="bmS" width="784" height="400" style="position:absolute;left:0;top:0"></svg>
+        <div class="big" id="bmV">1 : 2</div><div class="bigs">CH₄ : O₂ · MOLECULES</div></div>
+      <div class="card rf" id="bg"><div class="lbl" style="left:36px;top:30px">IN GRAMS</div><svg id="bgS" width="784" height="400" style="position:absolute;left:0;top:0"></svg>
+        <div class="big" id="bgV">16 : 64</div><div class="bigs" id="bgs">CH₄ : O₂ · GRAMS · = 1 : 4</div></div>
+      <div class="card wide" id="th1"></div>
+    </div>
+
+    <!-- M: solutions and molarity -->
+    <div id="sM">
+      <div class="card full" id="ml"><div class="lbl" style="left:36px;top:30px">REACTIONS IN SOLUTION · FOUR WAYS</div><div id="mcs"></div><div id="mF"></div></div>
+      <div class="card rf" id="mr"><div class="lbl" style="left:36px;top:30px">NCERT EXAMPLE · NaOH SOLUTION</div><svg id="mS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div id="ros"></div></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">How much O₂ burns 4 g of methane? How much water forms?</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">GRAMS IN · GRAMS OUT</div><svg id="wS2" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="wG"><div class="pillp ac" id="wGp">4 g CH₄ uses 16 g O₂</div></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">A balanced equation is a recipe</div><div id="st2">written in <span class="acc">moles</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
