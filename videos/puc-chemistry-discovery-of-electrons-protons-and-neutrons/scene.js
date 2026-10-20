@@ -166,7 +166,7 @@ function measure() {
   let cx = 36; ['ch0', 'ch1', 'ch2'].forEach(id => { const e = $('#' + id); e.style.left = cx + 'px'; cx += e.offsetWidth + 12; });
   let dx = 36; ['cc0', 'cc1'].forEach(id => { const e = $('#' + id); e.style.left = dx + 'px'; dx += e.offsetWidth + 12; });
   const ft = $('#sF .fcard'); if (ft) ft.querySelectorAll('.fl.txt').forEach(l => { if (l.offsetWidth > 1110) l.style.fontSize = Math.floor(30 * 1110 / l.offsetWidth) + 'px'; });
-  { const nt = $('#sF .next .nt'); if (nt && nt.scrollWidth > nt.clientWidth) nt.style.fontSize = Math.floor(34 * nt.clientWidth / nt.scrollWidth) + 'px'; }
+  { const d = $('#sF .next'), nt = d && d.querySelector('.nt'); if (nt) { nt.style.flex = 'none'; const over = d.scrollWidth - d.clientWidth + 8; if (over > 0) nt.style.fontSize = Math.floor(34 * (nt.offsetWidth - over) / nt.offsetWidth) + 'px'; } }
   document.querySelectorAll('.yr .q').forEach(q => { if (q.offsetWidth > 1380) q.style.fontSize = Math.floor(34 * 1380 / q.offsetWidth) + 'px'; });
   document.querySelectorAll('.lk .lt').forEach(l => { const r = l.parentNode.querySelector('.lr'); const room = 712 - 20 - 24 - r.offsetWidth - 20; if (l.offsetWidth > room) l.style.fontSize = Math.floor(27 * room / l.offsetWidth) + 'px'; });
 }

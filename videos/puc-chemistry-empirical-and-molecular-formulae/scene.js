@@ -149,8 +149,8 @@ const bars = BARS.map(([e, c, v, lv, dv, rv], i) => {
   const dvt = txt(s2, BX[i], BASE + 66, dv, { 'text-anchor': 'middle', 'font-size': 18, fill: C.mute, 'font-weight': 600 });
   return { r, val, el, dvt, v, lv, rv };
 });
-const unitLn = mk(s2, 'line', { x1: 100, x2: 684, stroke: GC, 'stroke-width': 3, 'stroke-dasharray': '10 8' });
-const unitT = txt(s2, 690, 0, '1 UNIT', { 'text-anchor': 'end', 'font-size': 18, fill: GC, 'font-weight': 600 });
+const unitLn = mk(s2, 'line', { x1: 130, x2: 684, stroke: GC, 'stroke-width': 3, 'stroke-dasharray': '10 8' });
+const unitT = txt(s2, 40, 0, '1 UNIT', { 'text-anchor': 'start', 'font-size': 18, fill: GC, 'font-weight': 600 });
 const hSplit = mk(s2, 'line', { x1: BX[0] - 56, x2: BX[0] + 56, stroke: '#fff', 'stroke-width': 4 });
 const tBar = [wt('W3', 'Hydrogen'), wt('W3', 'Carbon'), wt('W3', 'chlorine')];
 
@@ -172,7 +172,7 @@ const fc = PUC.fcard($('#sF'), { x: 410, y: 262, w: 1100, h: 470, title: 'Recap 
 const YQ = ['What is the empirical formula of hydrogen peroxide, H₂O₂?', 'Why must a ratio of 1 : 1.5 be multiplied, not rounded?', 'Empirical formula CH₂, molar mass 56 g. What is n?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="nn">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
-const nx = PUC.next($('#sF'), { label: 'NEXT · EP 12', topic: 'How much oxygen does a flame use up? Chemical Equations and Stoichiometry', y: 764 });
+const nx = PUC.next($('#sF'), { label: 'NEXT · EP 12', topic: 'How much O₂ does a flame use? Chemical Equations and Stoichiometry', y: 764 });
 
 /* ---------- helpers ---------- */
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });

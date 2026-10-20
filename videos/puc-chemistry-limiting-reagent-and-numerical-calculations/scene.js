@@ -170,7 +170,7 @@ const fc = PUC.fcard($('#sF'), { x: 410, y: 262, w: 1100, h: 470, title: 'Recap 
 const YQ = ['What is a limiting reagent, in one line?', 'Why must you compare moles, not grams, to find it?', '28 g of N₂ meets 8 g of H₂. Which one is left over?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="nn">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
-const nx = PUC.next($('#sF'), { label: 'NEXT · EP 14', topic: 'What is inside an atom? Discovery of Electrons, Protons and Neutrons', y: 764 });
+const nx = PUC.next($('#sF'), { label: 'NEXT · EP 14', topic: 'Inside an atom? Discovery of Electrons, Protons and Neutrons', y: 764 });
 
 /* ---------- helpers ---------- */
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });

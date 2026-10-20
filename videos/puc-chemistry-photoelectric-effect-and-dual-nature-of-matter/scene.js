@@ -136,7 +136,7 @@ const CR = [['Brightness', VC], ['Electrons out', EC], ['Speed of each electron'
 $('#crs').innerHTML = CR.map(([n], i) => `<div class="cr" id="cr${i}" style="top:${70 + i * 62}px;height:52px"><div class="cn" style="top:12px">${n}</div><div class="cb" id="cb${i}" style="top:18px;left:330px"></div><div class="cv" id="cv${i}" style="top:6px;font-size:28px">0</div></div>`).join('');
 const RL = [['Electrons leave the instant light strikes', 'One'], ['Brighter light: more electrons', 'Two'], ['Below a threshold frequency: none at all', 'Three']];
 $('#rls').innerHTML = RL.map(([s], i) => `<div class="rl" id="rl${i}" style="top:${70 + i * 60}px;height:52px"><div class="nn">${i + 1}</div><div class="rt2">${s}</div></div>`).join('');
-const tRl = RL.map(r => wt('B1', r[1]));
+const tRl = [wt('B1', 'One'), wt('B1', 'Two'), wt('B1', 'Three', 1)];
 // side by side
 $('#cmps').innerHTML = [['Very bright red lamp', 'MANY WEAK PACKETS', RC], ['Dim violet lamp', 'FEW STRONG PACKETS', VC]].map(([n, w, c], i) => `<div class="cmp" id="cm${i}" style="left:${36 + i * 792}px"><div class="ct">${n}</div><div class="cw2" style="color:${c}">${w}</div><svg id="cmS${i}" width="736" height="460" style="position:absolute;left:0;top:0"></svg></div>`).join('');
 const CMP = [0, 1].map(i => { const s = $('#cmS' + i); const lp = lamp(s, 120, 150, 36); attr(lp.bulb, 'fill', i ? VC : RC); const pl = plate(s, 260, 680, 360, 40, 'K', 26);
@@ -216,6 +216,14 @@ const dbP = document.createElement('div'); dbP.className = 'pillp ac'; dbP.style
 // light: dual (C4) shown as a pill row on the de Broglie card before the question
 const dl4 = document.createElement('div'); dl4.className = 'abs'; dl4.style.cssText = 'position:absolute;left:64px;top:96px;font:700 50px Poppins;white-space:nowrap';
 dl4.innerHTML = `Light: a <span class="acc">wave</span> while travelling, a <span class="v">particle</span> when it hits`; $('#db').appendChild(dl4);
+// C4: travels as a wave (left), gives energy as a packet (right)
+const d4 = mk(dbS, 'g', {});
+const d4W = mk(d4, 'path', { fill: 'none', stroke: VC, 'stroke-width': 5, 'stroke-linecap': 'round' });
+txt(d4, 100, 450, 'TRAVELS AS A WAVE', { 'font-size': 20, fill: VC, 'font-weight': 700 });
+const d4P = mk(d4, 'path', { d: SQ[1], fill: 'none', stroke: VC, 'stroke-width': 5, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' });
+plate(d4, 1000, 1500, 400, 44, 'K', 26);
+const d4E = mk(d4, 'circle', { r: 12, fill: EC });
+txt(d4, 1000, 490, 'HITS AS ONE PACKET', { 'font-size': 20, fill: VC, 'font-weight': 700 });
 const avA = PUC.avatar($('#sC'), { x: 160 + 1600 - 560, y: 270 + 480, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'So an electron can be a wave too?' });
 
 /* ---------- X / Q / F: exam segment ---------- */
@@ -354,7 +362,7 @@ M.on(t => {
     const ph = M.io((t - tDs[1] + 0.1) / 0.8), ex0 = 520, ey0 = BY0 + 17;
     const hx = M.lerp(260, ex0 - 18, ph), hy = M.lerp(150, ey0 - 18, ph), an = Math.atan2(ey0 - 150, ex0 - 260) * 180 / Math.PI;
     attr(dPh, 'transform', `translate(${hx.toFixed(1)} ${hy.toFixed(1)}) rotate(${an.toFixed(1)})`); dPh.style.opacity = (M.clamp((t - tDs[1] + 0.2) / 0.2) * (1 - M.clamp((ph - 0.95) / 0.05))).toFixed(3);
-    const ey = M.lerp(ey0, BY0 - B0H, u3), fx = M.lerp(ex0, 690, u4), fy = M.lerp(ey, 130, u4);
+    const ey = M.lerp(ey0, BY0 - B0H, u3), fx = M.lerp(ex0, 600, u4), fy = M.lerp(ey, 150, u4);
     attr(dE, 'cx', fx.toFixed(1)); attr(dE, 'cy', fy.toFixed(1)); dE.style.opacity = M.clamp((t - tD1 - 0.5) / 0.3);
     if (u4 > 0.05) { dEa.set(fx, fy, fx + 70 * u4, fy - 46 * u4); attr(dEl, 'x', (fx + 26).toFixed(1)); attr(dEl, 'y', (fy + 42).toFixed(1)); } else dEa.set(0, 0, 0, 0);
     dEl.style.opacity = u4; attr(dE, 'r', (13 + 3 * (ph >= 1 && u3 < 1 ? M.io((t - tDs[1] - 0.7) / 0.2) * (1 - M.io((t - tDs[1] - 1) / 0.3)) : 0)).toFixed(1));
@@ -412,6 +420,11 @@ M.on(t => {
     M.vis($('#dbN'), t, wt('C5', 'Louis') - 0.1, 1e9, { dy: 10 });
     PUC.write($('#dbq'), t, wt('C5', 'if') - 0.1, 1.4);
     M.vis($('#dbHr'), t, tC5 + 0.3, 1e9, { dy: 0 });
+    { const te4 = wt('C5', 'electron') - 0.4, on4 = fade(d4, t, tC4 + 0.4, te4 - 0.2, 0.3);
+      if (on4 > 0) { let d = ''; for (let x = 100; x <= 760; x += 4) d += (d ? 'L' : 'M') + x + ',' + (330 + Math.sin((x - t * 220) / 70 * Math.PI * 2) * 40).toFixed(1); attr(d4W, 'd', d);
+        const cyc = ((t - tC4) % 1.8) / 1.8, pu = Math.min(1, cyc / 0.5), px = M.lerp(880, 1220, pu), py = M.lerp(250, 392, pu);
+        attr(d4P, 'transform', `translate(${px.toFixed(1)} ${py.toFixed(1)}) rotate(${(Math.atan2(142, 340) * 180 / Math.PI).toFixed(1)}) scale(1.4)`); d4P.style.opacity = pu < 1 ? 1 : 0;
+        const eu = Math.max(0, (cyc - 0.5) / 0.5); attr(d4E, 'cx', (1230 + 60 * eu).toFixed(1)); attr(d4E, 'cy', (392 - 200 * eu).toFixed(1)); d4E.style.opacity = eu > 0 && eu < 0.95 ? 1 : 0; } }
     // the moving electron and its wave
     const te = wt('C5', 'electron') - 0.4, u = M.clamp((t - te) / 2.6), ex = M.lerp(120, 1480, u), we = M.clamp((t - wt('C5', 'wave') + 0.2) / 0.4);
     let d = ''; for (let x = Math.max(80, ex - 620); x <= ex; x += 6) d += (d ? 'L' : 'M') + x.toFixed(1) + ',' + (380 + Math.sin((x - ex) / 40 * Math.PI * 2 / 2.2) * 26 * Math.min(1, (x - ex + 620) / 200)).toFixed(1);

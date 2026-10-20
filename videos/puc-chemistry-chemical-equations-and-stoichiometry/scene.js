@@ -167,7 +167,7 @@ const fc = PUC.fcard($('#sF'), { x: 410, y: 262, w: 1100, h: 470, title: 'Recap 
 const YQ = ['In the burning of methane, what is the mole ratio of CH₄ to O₂?', 'Why does 1 g of methane not need 2 g of oxygen?', 'What is the molarity of 2 g of NaOH in 500 mL of solution?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="nn">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
-const nx = PUC.next($('#sF'), { label: 'NEXT · EP 13', topic: 'What if the oxygen runs out first? Limiting Reagent and Numerical Calculations', y: 764 });
+const nx = PUC.next($('#sF'), { label: 'NEXT · EP 13', topic: 'What if the oxygen runs out first? Limiting Reagent', y: 764 });
 
 /* ---------- helpers ---------- */
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });

@@ -94,14 +94,14 @@ const vTick = mk(sp, 'g', {}); [400, 500, 600, 700].forEach(w => { mk(vTick, 'li
 const vLines = BAL.map(bl => mk(sp, 'rect', { x: VX(bl.w) - 3.5, y: 84, width: 7, height: 90, fill: bl.c }));
 const vLab = BAL.map((bl, i) => { const g = mk(sp, 'g', {}); const x = VX(bl.w); const ly = i === 3 ? 254 : 216; mk(g, 'rect', { x: x - 34, y: ly, width: 68, height: 32, rx: 8, fill: bl.c }); txt(g, x, ly + 22, String(Math.round(bl.w)), { 'text-anchor': 'middle', 'font-size': 17, fill: '#fff', 'font-weight': 700 }); return g; });
 const LX = w => 36 + Math.log10(w / 80) / 2 * 712;
-const logG = mk(sp, 'g', {}); txt(logG, 36, 296, 'ALL SERIES · nm, LOG SCALE', { 'font-size': 16, fill: C.mute, 'font-weight': 600 });
-mk(logG, 'rect', { x: LX(80), y: 332, width: LX(380) - LX(80), height: 44, fill: '#E6DDFB' }); mk(logG, 'rect', { x: LX(750), y: 332, width: LX(8000) - LX(750), height: 44, fill: '#FBE6D5' });
-rainbow(logG, 'rbL', LX(380), 332, LX(750) - LX(380), 44);
-[['UV', 160], ['VISIBLE', 530], ['INFRARED', 2600]].forEach(([s, w]) => txt(logG, LX(w), 324, s, { 'text-anchor': 'middle', 'font-size': 14, ...B }));
-[100, 1000].forEach(w => txt(logG, LX(w), 396, String(w), { 'text-anchor': 'middle', 'font-size': 13, fill: C.mute }));
+const logG = mk(sp, 'g', {}); txt(logG, 36, 312, 'ALL SERIES · nm, LOG SCALE', { 'font-size': 16, fill: C.mute, 'font-weight': 600 });
+mk(logG, 'rect', { x: LX(80), y: 346, width: LX(380) - LX(80), height: 44, fill: '#E6DDFB' }); mk(logG, 'rect', { x: LX(750), y: 346, width: LX(8000) - LX(750), height: 44, fill: '#FBE6D5' });
+rainbow(logG, 'rbL', LX(380), 346, LX(750) - LX(380), 44);
+[['UV', 160], ['VISIBLE', 530], ['INFRARED', 2600]].forEach(([s, w]) => txt(logG, LX(w), 338, s, { 'text-anchor': 'middle', 'font-size': 14, ...B }));
+[100, 1000].forEach(w => txt(logG, LX(w), 410, String(w), { 'text-anchor': 'middle', 'font-size': 13, fill: C.mute }));
 const SRS = [['Lyman', 1, 0], ['Balmer', 2, 0], ['Paschen', 3, 0], ['Brackett', 4, 1], ['Pfund', 5, 2]];
-const serG = SRS.map(([nm, a, row]) => { const g = mk(sp, 'g', {}); const lo = lam(a, Infinity), hi = lam(a, a + 1), y = 416 + row * 40;
-  for (let n = a + 1; n <= a + 8; n++) mk(g, 'line', { x1: LX(lam(a, n)), y1: 332, x2: LX(lam(a, n)), y2: 376, stroke: SER[nm], 'stroke-width': 2.5 });
+const serG = SRS.map(([nm, a, row]) => { const g = mk(sp, 'g', {}); const lo = lam(a, Infinity), hi = lam(a, a + 1), y = 424 + row * 38;
+  for (let n = a + 1; n <= a + 8; n++) mk(g, 'line', { x1: LX(lam(a, n)), y1: 346, x2: LX(lam(a, n)), y2: 390, stroke: SER[nm], 'stroke-width': 2.5 });
   mk(g, 'rect', { x: LX(lo), y, width: LX(hi) - LX(lo), height: 26, rx: 6, fill: SER[nm] }); const tl = txt(g, LX(lo) + 8, y + 19, nm.toUpperCase(), { 'font-size': 14, fill: '#fff', 'font-weight': 700 });
   if (LX(hi) - LX(lo) < 110) { attr(tl, 'fill', SER[nm]); attr(tl, 'x', LX(hi) + 8); }
   return g; });
@@ -164,13 +164,13 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 17', topic: 'Wave or packets?
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('S6', 'Three') - 0.3, 1.08, 960, 560], [tR1 - 0.3, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('S6', 'Three') - 0.3, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};
   let x = 36; KIT.forEach((_, i) => { const e = $('#wq' + i); e.style.left = x + 'px'; x += e.offsetWidth + 14; });
   const ft = $('#sF .fcard'); if (ft) ft.querySelectorAll('.fl.txt').forEach(l => { if (l.offsetWidth > 1110) l.style.fontSize = Math.floor(30 * 1110 / l.offsetWidth) + 'px'; });
-  { const nt = $('#sF .next .nt'); if (nt && nt.scrollWidth > nt.clientWidth) nt.style.fontSize = Math.floor(34 * nt.clientWidth / nt.scrollWidth) + 'px'; }
+  { const d = $('#sF .next'), nt = d && d.querySelector('.nt'); if (nt) { nt.style.flex = 'none'; const over = d.scrollWidth - d.clientWidth + 8; if (over > 0) nt.style.fontSize = Math.floor(34 * (nt.offsetWidth - over) / nt.offsetWidth) + 'px'; } }
   document.querySelectorAll('.yr .q').forEach(q => { if (q.offsetWidth > 1380) q.style.fontSize = Math.floor(34 * 1380 / q.offsetWidth) + 'px'; });
 }
 const setBg = (el, c) => { if (el._bg !== c) { el._bg = c; el.style.background = c; } };

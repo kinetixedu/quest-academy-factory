@@ -28,7 +28,7 @@ const atomV = (svg, cx, cy, o = {}) => {
   const rt = txt(g, 0, 0, '', { 'font-size': 26, fill: NC, 'font-weight': 600, 'text-anchor': 'middle' });
   const nuc = mk(g, 'circle', { cx, cy, r: o.nr ?? 24, fill: NC });
   const sym = txt(g, cx, cy + 8, '', { 'font-family': 'Poppins', 'font-weight': 700, 'font-size': o.fs ?? 22, fill: '#fff', 'text-anchor': 'middle' });
-  const zt = txt(g, cx + 30, cy - 28, '', { 'font-size': 22, fill: GC, 'font-weight': 600 });
+  const zt = txt(g, cx - 30, cy - 30, '', { 'font-size': 22, fill: GC, 'font-weight': 600, 'text-anchor': 'end' });
   const dots = Array.from({ length: 12 }, () => mk(g, 'circle', { r: 8, fill: HC }));
   // st: {R (px), rr: [ring radii], ra: [ring alpha], e: [[ringIndex, count, colourLastOrange?]], sym, z, pm, lab}
   return { g, set(st) {
@@ -36,7 +36,7 @@ const atomV = (svg, cx, cy, o = {}) => {
     let di = 0;
     (st.e || []).forEach(([k, n, orange, a0 = 0, al = 1]) => { const R = st.rr[k]; for (let j = 0; j < n; j++) { const d = dots[di++]; if (!d) return; const a = -Math.PI / 2 + a0 + j * 2 * Math.PI / Math.max(n, 1); attr(d, 'cx', (cx + R * Math.cos(a)).toFixed(1)); attr(d, 'cy', (cy + R * Math.sin(a)).toFixed(1)); attr(d, 'fill', orange && j === n - 1 ? EC : HC); d.style.opacity = al.toFixed(3); M.hide(d, al <= 0.01); } });
     for (; di < dots.length; di++) M.hide(dots[di], true);
-    const R = st.R; attr(rl, 'x2', (cx + R).toFixed(1)); attr(rt, 'x', (cx + R / 2).toFixed(1)); attr(rt, 'y', (cy - 14).toFixed(1)); M.setT(rt, st.pm != null ? `${Math.round(st.pm)} pm` : ''); rl.style.opacity = rt.style.opacity = (st.ral ?? 1).toFixed(3);
+    const R = st.R; attr(rl, 'x2', (cx + R).toFixed(1)); attr(rt, 'x', (cx + R / 2).toFixed(1)); attr(rt, 'y', (cy + 36).toFixed(1)); M.setT(rt, st.pm != null ? `${Math.round(st.pm)} pm` : ''); rl.style.opacity = rt.style.opacity = (st.ral ?? 1).toFixed(3);
     M.setT(sym, st.sym); M.setT(zt, st.z);
   }, dots };
 };
@@ -79,7 +79,7 @@ $('#pmP').innerHTML = `${K(`1\\,\\text{pm} = 10^{-12}\\,\\text{m}`)}<span style=
 const P2 = [['Li', 3, 152, 1, 'S2', 'Lithium'], ['Be', 4, 111, 2, 'S3', 'Beryllium'], ['B', 5, 88, 3, 'S4', 'Boron'], ['C', 6, 77, 4, 'S4', 'Carbon'], ['N', 7, 74, 5, 'S4', 'Nitrogen'], ['O', 8, 66, 6, 'S5', 'Oxygen'], ['F', 9, 64, 7, 'S5', 'Fluorine']];
 const G1 = [['Li', 3, 152, 2, 'S7', 'Lithium'], ['Na', 11, 186, 3, 'S7', 'sodium'], ['K', 19, 231, 4, 'S7', 'potassium'], ['Rb', 37, 244, 5, 'S7', 'rubidium'], ['Cs', 55, 262, 6, 'S7', 'caesium']];
 const tP2 = P2.map(p => wt(p[4], p[5])), tG1 = G1.map(p => wt(p[4], p[5]));
-const SC = 0.92, AX = 392, AY = 300;
+const SCP = 1.35, SCG = 0.92, AX = 392, AY = 300;
 const av = atomV($('#bS'), AX, AY);
 const btag = document.createElement('div'); btag.className = 'btag'; btag.style.cssText = 'right:36px;top:18px;background:var(--ink);color:#fff'; $('#bn').appendChild(btag);
 const RO = [['PROTONS', 'pull of the nucleus', GC], ['SHELLS', 'layers of electrons', HC], ['RADIUS', 'size of the atom', NC]];
@@ -90,6 +90,7 @@ const mkBars = (set, x0, dx) => set.map(([s, , pm], i) => { const g = mk(ch, 'g'
 const bP = mkBars(P2, 120, 92), bG = mkBars(G1, 160, 116);
 mk(ch, 'line', { x1: 60, y1: BY, x2: 724, y2: BY, stroke: C.ink2, 'stroke-width': 2 });
 const arrL = document.createElement('div'); arrL.className = 'btag'; arrL.style.cssText = 'right:36px;top:22px;background:var(--ac2);color:var(--ac)'; $('#ch').appendChild(arrL);
+const zoomC = document.createElement('div'); zoomC.className = 'ghost'; zoomC.style.cssText = 'left:36px;top:510px'; zoomC.textContent = 'ZOOMED OUT TO FIT'; $('#bn').appendChild(zoomC);
 const avA = PUC.avatar($('#sS'), { x: 160 + 36, y: 270 + 480, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'More protons, same shell: a tighter pull.' });
 
 /* ---------- I: ions side by side ---------- */
@@ -157,7 +158,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 32', topic: 'Why is an electr
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tP2[5] - 0.3, 1.1, 640, 570], [T0('S6') + 0.4, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tP2[5] - 0.3, 1.1, 760, 560], [T0('S6') + 0.4, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};
@@ -220,11 +221,11 @@ M.on(t => {
     M.vis($('#bn'), t, tS1 + 0.05, z, { dy: 36, ...o });
     M.vis($('#ad'), t, tP2[0] - 0.1, z, { dx: 60, dy: 0, ...o });
     M.vis($('#ch'), t, tP2[0] + 0.2, z, { dy: 36, ...o });
-    const s = benchState(t), R = s.pmv * SC, n = s.grp ? M.lerp(s.prev[3], s.cur[3], s.i ? s.u : 1) : 2;
+    const zo = M.io((t - tG1[0] + 0.3) / 0.7), SC = M.lerp(SCP, SCG, zo), s = benchState(t), R = s.pmv * SC, n = s.grp ? M.lerp(s.prev[3], s.cur[3], s.i ? s.u : 1) : 2;
     const nI = Math.round(n), rr = [], ra = [];
     for (let k = 0; k < 6; k++) { rr.push(R * (k + 1) / Math.max(n, 1)); ra.push(k < n - 0.999 ? 1 : k < n ? n - Math.floor(n) || 1 : 0); }
     let e;
-    if (!s.grp) { const outE = s.cur[3]; e = [[0, 2, false], [1, outE, t >= s.i && s.i > 0 && s.u < 1 ? true : true, 0.35]]; }
+    if (!s.grp) { const outE = s.cur[3]; e = [[0, 2, false], [1, outE, true, 0.35]]; }
     else e = [[Math.max(0, Math.ceil(n) - 1), 1, true]];
     av.set({ R, rr, ra, e, sym: s.cur[0], z: `+${s.cur[1]}`, pm: s.pmv, ral: M.clamp((t - tP2[0] - 0.6) / 0.3) });
     av.g.style.opacity = M.clamp((t - tP2[0] + 0.3) / 0.3).toFixed(3);
@@ -239,7 +240,7 @@ M.on(t => {
     bG.forEach((bb, i) => { const u = M.io((t - tG1[i] + 0.05) / 0.45); attr(bb.r, 'height', (bb.pm * BS * u).toFixed(1)); attr(bb.r, 'y', (BY - bb.pm * BS * u).toFixed(1)); attr(bb.v, 'y', (BY - bb.pm * BS * u - 8).toFixed(1)); attr(bb.r, 'fill', s.grp && i === s.i ? NC : C.dim); bb.g.style.opacity = M.clamp((t - tG1[i] + 0.1) / 0.2).toFixed(3); M.hide(bb.g, t < tG1[i] - 0.1); });
     M.setT($('#chL'), s.grp ? 'ATOMIC RADIUS / pm · NCERT TABLE 3.6(b)' : 'ATOMIC RADIUS / pm · NCERT TABLE 3.6(a)');
     M.setT(arrL, s.grp ? 'NEW SHELL: BIGGER' : 'SAME SHELL: SMALLER'); M.vis(arrL, t, s.grp ? wt('S8', 'shell') - 0.1 : wt('S6', 'shrinks') - 0.1, 1e9, POP);
-    avA(t, wt('S6', 'pull') - 0.1, tG1[0] - 0.4);
+    avA(t, wt('S6', 'pull') - 0.1, tG1[0] - 0.4); fade(zoomC, t, tG1[0] + 0.3);
   }
 
   /* I: ions + think */
