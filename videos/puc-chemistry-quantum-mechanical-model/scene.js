@@ -53,7 +53,7 @@ const pX = mk(pS, 'path', { d: `M${OX - 200},${OY - 200} L${OX + 200},${OY + 200
 
 /* ---------- U: Schrodinger ---------- */
 $('#uEq').innerHTML = K(SCH);
-const UL = [['Ĥ', 'an operator: the total energy recipe', C.ink, 'H'], ['ψ', 'the wave function', VC, 'psi'], ['E', 'total energy of the electron', GC, 'E']];
+const UL = [['Ĥ', 'Hamiltonian: an operator for total energy', C.ink, 'H'], ['ψ', 'the wave function', VC, 'psi'], ['E', 'total energy of the electron', GC, 'E']];
 $('#uls').innerHTML = UL.map(([s, w, c], i) => `<div class="ul" id="ul${i}" style="left:${820}px;top:${120 + i * 92}px"><b style="color:${c}">${s}</b>${w}</div>`).join('');
 const uP = document.createElement('div'); uP.className = 'pillp ac'; uP.style.cssText = 'left:64px;top:470px'; uP.textContent = 'Solve it, and the electron\'s allowed states come out'; $('#uc').appendChild(uP);
 
@@ -66,14 +66,14 @@ const qE = mk(b, 'text', { x: BX + 140, y: BY - 120, 'font-family': 'Poppins', '
 const orbL = txt(b, BX, 540, 'ORBITAL · HYDROGEN, LOWEST ENERGY', { 'text-anchor': 'middle', 'font-size': 18, fill: EC, 'font-weight': 700 });
 const btag = document.createElement('div'); btag.className = 'btag'; btag.style.cssText = 'right:36px;top:18px;background:var(--ink);color:#fff'; $('#bn').appendChild(btag);
 { const card = $('#bn'), d = document.createElement('div'); d.id = 'bnIn'; d.style.cssText = 'position:absolute;left:0;top:0;width:784px;height:580px'; while (card.firstChild) d.appendChild(card.firstChild); card.appendChild(d); }
-const G1 = PUC.graph($('#g1S'), { x: 110, y: 74, w: 600, h: 140, xmax: 4, ymin: 0, ymax: 1, xt: [1, 2, 3, 4], yt: [], xl: 'r (Bohr radii, 52.9 pm)', yl: 'ψ' });
-const G2 = PUC.graph($('#g2S'), { x: 110, y: 74, w: 600, h: 140, xmax: 4, ymin: 0, ymax: 1, xt: [1, 2, 3, 4], yt: [], xl: 'r (Bohr radii)', yl: 'ψ²' });
+const G1 = PUC.graph($('#g1S'), { x: 110, y: 74, w: 600, h: 140, xmax: 4, ymin: 0, ymax: 1, xt: [1, 2], yt: [], xl: 'r  (a₀ = 52.9 pm)', yl: 'ψ' });
+const G2 = PUC.graph($('#g2S'), { x: 110, y: 74, w: 600, h: 140, xmax: 4, ymin: 0, ymax: 1, xt: [1, 2], yt: [], xl: 'r  (a₀ = 52.9 pm)', yl: 'ψ²' });
 const c1 = G1.curve(VC, 5), c2 = G2.curve(EC, 5); const d1 = G1.dot(VC, 9), d2 = G2.dot(EC, 9);
 const g1N = txt($('#g1S'), 410, 110, 'NO PHYSICAL MEANING BY ITSELF', { 'font-size': 16, fill: VC, 'font-weight': 600 });
 const g2N = txt($('#g2S'), 410, 110, 'HIGH NEAR THE NUCLEUS', { 'font-size': 16, fill: EC, 'font-weight': 600 });
 const tPsi = wt('S2', 'psi') - 0.1, tPsi2 = wt('S3', 'squared') - 0.1, tLook = wt('S4', 'again') - 0.2, tCrowd = wt('S5', 'crowd'), tOrb = wt('S6', 'orbital');
 // compare
-$('#cmps').innerHTML = [['Orbit · Bohr', 'A FLAT, FIXED CIRCLE', C.ink], ['Orbital · quantum model', 'A 3D REGION OF PROBABILITY', EC]].map(([n, w, c], i) => `<div class="cmp" id="cm${i}" style="left:${36 + i * 792}px"><div class="ct">${n}</div><div class="cw2" style="color:${c}">${w}</div><svg id="cmS${i}" width="736" height="460" style="position:absolute;left:0;top:0"></svg></div>`).join('');
+$('#cmps').innerHTML = [['Orbit', 'BOHR · A FLAT, FIXED CIRCLE', C.ink], ['Orbital', 'QUANTUM · 3D REGION OF PROBABILITY', EC]].map(([n, w, c], i) => `<div class="cmp" id="cm${i}" style="left:${36 + i * 792}px"><div class="ct">${n}</div><div class="cw2" style="color:${c}">${w}</div><svg id="cmS${i}" width="736" height="460" style="position:absolute;left:0;top:0"></svg></div>`).join('');
 const cm0 = $('#cmS0'), cm1 = $('#cmS1');
 mk(cm0, 'circle', { cx: 368, cy: 250, r: 130, fill: 'none', stroke: C.ink2, 'stroke-width': 3 }); mk(cm0, 'circle', { cx: 368, cy: 250, r: 14, fill: NC }); const cmE = mk(cm0, 'circle', { r: 13, fill: EC });
 txt(cm0, 368, 430, 'EXACT POSITION EVERY MOMENT', { 'text-anchor': 'middle', 'font-size': 18, fill: C.ink, 'font-weight': 600 });
@@ -90,9 +90,9 @@ const dsol = PUC.solution($('#dl'), [
   [K(`\\text{one orbital} \\leq 2\\ \\mathrm{e^-}`), 'never more than two']], { label: 'THE MODEL · LINK BY LINK', y0: 104, dy: 92 });
 const tDs = [wt('D2', 'energy'), wt('D3', 'These'), wt('D4', 'Each'), wt('D5', 'probability'), wt('D6', 'orbital')];
 const dS = $('#dS');
-const LV = [1, 2, 3, 4, 5].map(n => { const y = 110 + 250 * (1 - 1 / (n * n)) * 0 + (n === 1 ? 330 : 330 - 250 * (1 - 1 / (n * n))); const g = mk(dS, 'g', {}); mk(g, 'line', { x1: 60, y1: y, x2: 330, y2: y, stroke: GC, 'stroke-width': 4, 'stroke-linecap': 'round' }); txt(g, 346, y + 6, `n = ${n}`, { 'font-size': 16, fill: GC, 'font-weight': 600 }); return g; });
-const lvL = txt(dS, 60, 370, 'n = 1 : E = -2.18 × 10⁻¹⁸ J', { 'font-size': 17, fill: GC, 'font-weight': 600 });
-const lvT = txt(dS, 60, 70, 'ALLOWED ENERGIES ONLY', { 'font-size': 16, fill: GC, 'font-weight': 600 });
+const LV = [1, 2, 3, 4].map(n => { const y = 140 + 320 / (n * n); const g = mk(dS, 'g', {}); mk(g, 'line', { x1: 60, y1: y, x2: 330, y2: y, stroke: GC, 'stroke-width': 4, 'stroke-linecap': 'round' }); if (n < 4) txt(g, 346, y + 6, `n = ${n}`, { 'font-size': 16, fill: GC, 'font-weight': 600 }); return g; });
+const lvL = txt(dS, 60, 500, 'n = 1 : E = -2.18 × 10⁻¹⁸ J', { 'font-size': 17, fill: GC, 'font-weight': 600 });
+const lvT = txt(dS, 60, 110, 'ALLOWED ENERGIES ONLY', { 'font-size': 16, fill: GC, 'font-weight': 600 });
 const dCl = mk(dS, 'g', {}); Array.from({ length: 260 }, (_, n) => { const [x, y] = sample(n, 90); mk(dCl, 'circle', { cx: (590 + x * 34).toFixed(1), cy: (210 + y * 34).toFixed(1), r: 2.2, fill: EC, opacity: 0.6 }); }); mk(dCl, 'circle', { cx: 590, cy: 210, r: 9, fill: NC });
 const dClL = txt(dS, 590, 330, 'ψ → ORBITAL · ψ² → DOTS', { 'text-anchor': 'middle', 'font-size': 16, fill: VC, 'font-weight': 600 });
 const dBox = mk(dS, 'g', {}); mk(dBox, 'rect', { x: 500, y: 400, width: 180, height: 110, rx: 12, fill: '#fff', stroke: C.ink, 'stroke-width': 3 });
@@ -116,7 +116,7 @@ txt(s2, 60, 110, 'ψ', { 'font-size': 26, fill: VC, 'font-weight': 700, 'font-fa
 const WV = [0.6, -0.8, 0.2];
 const wB = WV.map((v, i) => { const g = mk(s2, 'g', {}); const bp = mk(g, 'rect', { x: 80 + i * 90, width: 60, rx: 6, fill: VC }); const bq = mk(g, 'rect', { x: 420 + i * 90, width: 60, rx: 6, fill: EC });
   const lp = txt(g, 110 + i * 90, 0, (v > 0 ? '+' : '') + v.toFixed(1), { 'text-anchor': 'middle', 'font-size': 18, fill: VC, 'font-weight': 600 }); const lq = txt(g, 450 + i * 90, 0, (v * v).toFixed(2), { 'text-anchor': 'middle', 'font-size': 18, fill: EC, 'font-weight': 600 });
-  txt(g, 110 + i * 90, WY0 + 170, 'ABC'[i], { 'text-anchor': 'middle', 'font-size': 20, fill: C.ink, 'font-weight': 700 }); txt(g, 450 + i * 90, WY0 + 170, 'ABC'[i], { 'text-anchor': 'middle', 'font-size': 20, fill: C.ink, 'font-weight': 700 }); return { bp, bq, lp, lq, v }; });
+  txt(g, 110 + i * 90, WY0 + 200, 'ABC'[i], { 'text-anchor': 'middle', 'font-size': 20, fill: C.ink, 'font-weight': 700 }); txt(g, 450 + i * 90, WY0 + 200, 'ABC'[i], { 'text-anchor': 'middle', 'font-size': 20, fill: C.ink, 'font-weight': 700 }); return { bp, bq, lp, lq, v }; });
 
 /* ---------- C ---------- */
 $('#cws').innerHTML = [['Ignored the wave nature', 'WAVE'], ['Gave an exact path', 'PATH']].map(([n, k], i) => `<div class="qr" id="cwr${i}" style="top:${96 + i * 112}px;height:92px"><div class="nn" style="top:22px;border-color:var(--red);color:var(--red)">${M.icon('x', 22, C.red, 3)}</div><div class="qt" style="top:24px">${n}</div><div class="qk" style="top:30px;color:var(--red)">${k}</div></div>`).join('');
@@ -132,7 +132,7 @@ mk(tg, 'rect', { x: 90, y: 130, width: 70, height: 88, rx: 6, fill: VC }); txt(t
 mk(tg, 'rect', { x: 250, y: 60, width: 70, height: 70, rx: 6, fill: EC }); txt(tg, 285, 48, 'ψ² = 0.64', { 'text-anchor': 'middle', 'font-size': 16, fill: EC, 'font-weight': 600 });
 const where = PUC.where($('#wa'), { on: [], type: `Statement questions on ${K(PSI)}, ${K(PSI2)}, orbit vs orbital, and the features of the model` });
 const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', q: 'Which statement about the quantum mechanical model is correct?', qW: 760,
-  opts: [`${K(PSI)} gives the probability of finding the electron`, `${K(PSI2)} is the probability density and is never negative`, 'An orbital can hold up to three electrons', 'An orbital is a fixed circular path'], right: 1, cols: 1, optW: 968, optY: 190, optH: 84, optFs: 28 });
+  opts: [`${K(PSI)}&nbsp;gives the probability of finding the electron`, `${K(PSI2)}&nbsp;is the probability density and is never negative`, 'An orbital can hold up to three electrons', 'An orbital is a fixed circular path'], right: 1, cols: 1, optW: 968, optY: 190, optH: 84, optFs: 28 });
 const so = PUC.solution($('#so'), [[`<b style="color:var(--ok)">B</b> ${K(`${PSI2} \\geq 0`)}`], [`<b style="color:var(--red)">A</b> ${K(PSI)}: no meaning`], ['<b style="color:var(--red)">C</b> at most 2'], ['<b style="color:var(--red)">D</b> a region, not a path']], { y0: 100, dy: 112 });
 const tSo = [wt('A1', 'Psi'), T0('A2'), T0('A3'), T0('A4')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 262, w: 1200, h: 470, title: 'Recap · quantum mechanical model', y0: 96, dy: 74, txt: [0, 1, 1, 1, 1],
@@ -196,8 +196,8 @@ M.on(t => {
   const uOn = t >= tU - 0.1 && t < tS1 + 0.1; M.hide($('#sU'), !uOn);
   if (uOn) {
     M.vis($('#uc'), t, tU + 0.05, OUT('S1'), { dy: 36, ...o });
-    PUC.write($('#uEq'), t, wt('U1', 'H') - 0.1, 0.9);
-    [wt('U1', 'H'), wt('U1', 'psi', 1), wt('U1', 'total')].forEach((tt, i) => M.vis($('#ul' + i), t, tt + 0.3 + (i === 0 ? 0.6 : 0), 1e9, { dx: -16, dy: 0 }));
+    PUC.write($('#uEq'), t, wt('U1', 'equation') - 0.1, 0.9);
+    [0, 1, 2].forEach(i => M.vis($('#ul' + i), t, wt('U1', 'equation') + 0.9 + i * 0.5, 1e9, { dx: -16, dy: 0 }));
     M.vis(uP, t, T1('U1') - 0.2, 1e9, POP);
   }
 
@@ -206,9 +206,9 @@ M.on(t => {
   if (sOn) {
     const z = OUT('B1');
     M.vis($('#bn'), t, tS1 + 0.05, z, { dy: 36, ...o });
-    const tSplit = tPsi - 0.2;
+    const tSplit = tS1 + 0.9;
     { const sh = M.spring(t - tSplit, M.HEAVY), wv = M.lerp(1600, 784, sh); snap($('#bn'), 'width', (sh >= 1 ? 784 : wv.toFixed(1)) + 'px'); snap($('#bnIn'), 'left', (sh >= 1 ? 0 : ((wv - 784) / 2).toFixed(1)) + 'px'); }
-    M.vis($('#g1'), t, tSplit + 0.1, z, { dx: 60, dy: 0, ...o }); M.vis($('#g2'), t, tPsi2 - 0.1, z, { dy: 36, ...o });
+    M.vis($('#g1'), t, tSplit + 0.1, z, { dx: 60, dy: 0, ...o }); M.vis($('#g2'), t, tSplit + 0.35, z, { dy: 36, ...o });
     fade(nuc, t, tS1 + 0.3); fade(nucL, t, tS1 + 0.3); fade(qE, t, wt('S1', 'electron') - 0.1, tLook);
     const u1 = M.clamp((t - tPsi) / 1.2), u2 = M.clamp((t - tPsi2) / 1.2);
     c1(r => [r, Math.exp(-r)], 0, 4 * u1); c2(r => [r, Math.exp(-2 * r)], 0, 4 * u2);
@@ -224,7 +224,7 @@ M.on(t => {
     let tg0 = null; for (const [tt, s0] of TAG) if (t >= tt) tg0 = s0; if (t >= tLook && t < tOrb) tg0 = `DOTS · ${n}`; if (tg0) M.setT(btag, tg0); M.vis(btag, t, tS1 + 0.3, 1e9, POP);
     // compare
     M.vis($('#cmpC'), t, tB1 + 0.05, OUT('B4'), { dy: 36, ...o });
-    M.vis($('#cm0'), t, T0('B2') - 0.1, 1e9, { dy: 16 }); M.vis($('#cm1'), t, T0('B3') - 0.1, 1e9, { dy: 16 });
+    M.vis($('#cm0'), t, tB1 + 0.3, 1e9, { dy: 16 }); M.vis($('#cm1'), t, tB1 + 0.6, 1e9, { dy: 16 });
     const a = (t - tB1) * 1.8; attr(cmE, 'cx', (368 + 130 * Math.cos(a)).toFixed(1)); attr(cmE, 'cy', (250 + 130 * Math.sin(a)).toFixed(1));
     M.vis($('#th1'), t, tB4 + 0.05, OUT('D1'), { dy: 36, ...o });
     th1(t, { tin: tB4, tOpts: wt('B4', 'Can') - 0.1, tCount: T1('B4') + 0.05, dur: 3, tAns: T0('B5') - 0.02, tWhy: wt('B5', 'An') });

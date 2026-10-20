@@ -87,7 +87,7 @@ const pans = [0, 1].map(i => { const g = mk(ms, 'g', {}); mk(g, 'line', { x1: -1
     if (!i) mk(g, 'circle', { cx: x, cy: y, r: 6, fill: HC });
     else { mk(g, 'circle', { cx: x, cy: y, r: 9, fill: OC }); mk(g, 'circle', { cx: x - 10, cy: y + 7, r: 5, fill: HC }); mk(g, 'circle', { cx: x + 10, cy: y + 7, r: 5, fill: HC }); } }
   txt(g, 0, 220, i ? '1 mol H₂O MOLECULES' : '1 mol H ATOMS', { 'text-anchor': 'middle', 'font-size': 22, fill: i ? OC : HC, 'font-weight': 600 });
-  const cnt = txt(g, 0, -6, '6.022 × 10²³', { 'text-anchor': 'middle', 'font-size': 26, fill: GC, 'font-weight': 600 });
+  const cnt = txt(g, 0, 304, '6.022 × 10²³ PARTICLES', { 'text-anchor': 'middle', 'font-size': 22, fill: GC, 'font-weight': 600 });
   const ms2 = txt(g, 0, 262, i ? '18.02 g' : '1.008 g', { 'text-anchor': 'middle', 'font-size': 34, fill: C.ink, 'font-weight': 600 });
   return { g, cnt, ms2 }; });
 mk(ms, 'circle', { cx: PVX, cy: PVY, r: 12, fill: C.ac });
@@ -125,7 +125,7 @@ const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', q: `Ho
 const so = PUC.solution($('#so'), [[K(`n = 117 \\div 58.5 = 2\\,\\text{mol}`)], [K(`N = 2 \\times 6.022 \\times 10^{23}`)], [K(`= \\textcolor{${C.ok}}{1.2044 \\times 10^{24}}`)], ['C counts each ion ✗']], { y0: 100, dy: 112 });
 const tSo = [T0('A2'), T0('A3'), wt('A3', 'one', 1), T0('A4')];
 const fc = PUC.fcard($('#sF'), { x: 410, y: 262, w: 1100, h: 470, title: 'Recap · mole concept and molar mass', y0: 96, dy: 74, txt: [0, 1, 1, 0, 1],
-  lines: [K(`${NA} = 6.022 \\times 10^{23}\\,\\text{mol}^{-1}`), '<b>1 mole</b>: as many particles as atoms in exactly 12 g of carbon-12', '<b>Molar mass</b>: mass of 1 mol in g · H₂O 18.02 g mol⁻¹ · NaCl 58.5 g mol⁻¹', K(`n = \\dfrac{m}{M}, \\quad N = n \\times ${NA}`), '<b>Atoms vs molecules</b>: one H₂O molecule holds 3 atoms'] });
+  lines: [K(`${NA} = 6.022 \\times 10^{23}\\,\\text{mol}^{-1}`), '<b>1 mole</b>: as many particles as atoms in exactly 12 g of carbon-12', '<b>Molar mass</b>: mass of 1 mol in g · H₂O 18.02 g mol⁻¹ · NaCl 58.5 g mol⁻¹', K(`n = m \\div M, \\quad N = n \\times ${NA}`), '<b>Atoms vs molecules</b>: one H₂O molecule holds 3 atoms'] });
 const YQ = ['What is one mole, in your own words?', 'Why does a mole of water weigh more than a mole of H atoms?', 'How many moles are in 44 g of carbon dioxide?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="nn">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
@@ -135,7 +135,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 10', topic: 'How much of wate
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tP0 - 0.2, 1.06, 700, 560], [tS5 - 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]]]);
 let geo = null;
 function measure() {
   geo = {};
@@ -196,7 +196,7 @@ M.on(t => {
     M.vis($('#cM'), t, tS1 + 0.5, 1e9, { dy: 12 }); M.vis($('#cN'), t, wt('S3', 'counter') - 0.2, 1e9, { dy: 12 });
     setBg($('#cN'), mix(C.soft, C.okBg, M.io((t - tP1e) / 0.3)));
     M.vis($('#oneA'), t, wt('S2', 'mass') - 0.1, 1e9, { dy: 10 }); M.vis($('#age'), t, wt('S5', 'longer') - 0.1, 1e9, POP);
-    const TAG = [[tS1 + 0.4, 'CARBON-12 ATOMS'], [tS2 + 0.3, '1 ATOM · 1.99 × 10⁻²³ g'], [tP0, 'POURING'], [tP1e, '12 g OF CARBON-12'], [tS5, '6.022 × 10²³ ATOMS']];
+    const TAG = [[tS1 + 0.4, 'CARBON-12 ATOMS'], [tS2 + 0.3, 'ONE ATOM'], [tP0, 'POURING'], [tP1e, '12 g OF CARBON-12'], [tS5, '6.022 × 10²³ ATOMS']];
     let tg = null; for (const [tt, s] of TAG) if (t >= tt) tg = s; if (tg) M.setT(btag, tg); M.vis(btag, t, tS1 + 0.4, 1e9, POP);
     M.vis($('#ptL'), t, tS1 + 0.4, 1e9, { dy: 8 }); M.vis($('#ptS'), t, tS1 + 0.5, 1e9, { dy: 8 });
     { const el = $('#ptC'), u = M.io((t - wt('S1', 'carbon')) / 0.3); setBg(el, mix('#FFFFFF', CC, u)); el.style.color = mix(C.dim, '#FFFFFF', u); el.style.borderColor = mix(C.line, CC, u); }

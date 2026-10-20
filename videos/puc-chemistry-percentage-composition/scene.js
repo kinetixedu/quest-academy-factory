@@ -142,7 +142,7 @@ function measure() {
   document.querySelectorAll('.yr .q').forEach(q => { if (q.offsetWidth > 1380) q.style.fontSize = Math.floor(34 * 1380 / q.offsetWidth) + 'px'; });
   const g = $('#gF .katex'); if (g && g.offsetWidth > 680) $('#gF').style.fontSize = Math.floor(30 * 680 / g.offsetWidth) + 'px';
   const sf = $('#stF .katex'); if (sf && sf.offsetWidth > 1500) $('#stF').style.fontSize = Math.floor(56 * 1500 / sf.offsetWidth) + 'px';
-  document.querySelectorAll('#wl .sol .sx').forEach(q => { if (q.offsetWidth > 640) q.style.fontSize = Math.floor(26 * 640 / q.offsetWidth) + 'px'; });
+  document.querySelectorAll('#wl .sol .sx').forEach(q => { if (q.offsetWidth > 640) q.style.fontSize = Math.floor(30 * 640 / q.offsetWidth) + 'px'; });
   document.querySelectorAll('#trap .trapL .tx').forEach(q => { if (q.offsetWidth > 960) q.style.fontSize = Math.floor(30 * 960 / q.offsetWidth) + 'px'; });
 }
 const setBg = (el, c) => { if (el._bg !== c) { el._bg = c; el.style.background = c; } };

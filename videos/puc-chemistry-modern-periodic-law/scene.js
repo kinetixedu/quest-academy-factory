@@ -51,7 +51,7 @@ const ID = [[0, 'H', '1', 'HYDROGEN'], [0, 'C', '6', 'CARBON'], [0, 'N', '7', 'N
 const tId = [wt('P3', 'Hydrogen'), wt('P3', 'Carbon'), wt('P5', 'Change'), wt('P5', 'Mass')];
 
 /* ---------- U ---------- */
-$('#hqI').innerHTML = M.icon('quote', 56, C.ac, 1.8);
+$('#hqI').innerHTML = M.icon('bulb', 56, C.ac, 1.8);
 
 /* ---------- S: X-ray bench ---------- */
 const b = $('#bS');

@@ -63,7 +63,7 @@ const teth = mk(b, 'line', { x1: AX, y1: AY, stroke: NC, 'stroke-width': 3, 'str
 const outE = mk(b, 'circle', { r: 12, fill: EC });
 const btag = document.createElement('div'); btag.className = 'btag'; btag.style.cssText = 'right:36px;top:18px;background:var(--ink);color:#fff'; $('#bn').appendChild(btag);
 $('#bEq').innerHTML = K(`\\mathrm{Na(g)} \\rightarrow \\mathrm{Na^{+}(g)} + ${tE('e^-')} \\quad ${dH} = ${tG('496')}\\,\\text{kJ mol}^{-1}`);
-const avA = PUC.avatar($('#sS'), { x: 976 + 36, y: 576 + 170, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'The second one is locked in tight!' });
+const avA = PUC.avatar($('#sS'), { x: 976 + 36, y: 576 + 172, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'The second one is locked in tight!' });
 
 /* ---------- G: period 2 chart ---------- */
 const IE = [['Li', 520, 'G2', 'Lithium'], ['Be', 899, 'G2', 'Beryllium'], ['B', 801, 'G2', 'Boron'], ['C', 1086, 'G3', 'Carbon'], ['N', 1402, 'G3', 'Nitrogen'], ['O', 1314, 'G3', 'Oxygen'], ['F', 1681, 'G4', 'Fluorine'], ['Ne', 2080, 'G4', 'Neon']];
@@ -71,7 +71,7 @@ const tIE = IE.map(e => wt(e[2], e[3]));
 const gs = $('#gS'), GY = 480, GK = 0.165;
 mk(gs, 'line', { x1: 60, y1: GY, x2: 730, y2: GY, stroke: C.ink2, 'stroke-width': 2 });
 const bars = IE.map(([s, v], i) => { const x = 104 + i * 82, g = mk(gs, 'g', {}); const r = mk(g, 'rect', { x: x - 28, y: GY, width: 56, height: 0, rx: 6, fill: GT }); const l = txt(g, x, GY + 32, s, { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 24, fill: HC }); const vt = txt(g, x, GY - 10, String(v), { 'text-anchor': 'middle', 'font-size': 19, fill: GC, 'font-weight': 600 }); return { x, g, r, vt, v }; });
-const trend = mk(gs, 'path', { d: `M${bars[0].x} ${GY - 520 * GK - 44} L${bars[7].x} ${GY - 2080 * GK - 44}`, stroke: NC, 'stroke-width': 4, 'stroke-dasharray': '10 10', fill: 'none', 'stroke-linecap': 'round' });
+const trend = mk(gs, 'path', { d: `M${bars[0].x} 170 L${bars[7].x - 50} 84`, stroke: NC, 'stroke-width': 4, 'stroke-dasharray': '10 10', fill: 'none', 'stroke-linecap': 'round' });
 const dip = (i) => { const g = mk(gs, 'g', {}); const x = bars[i].x, y = GY - bars[i].v * GK - 52; mk(g, 'circle', { cx: x, cy: y - 18, r: 20, fill: C.red }); g.insertAdjacentHTML('beforeend', `<g transform="translate(${x - 12} ${y - 30})">${M.icon('arrowD', 24, '#fff', 3)}</g>`); return g; };
 const dipB = dip(2), dipO = dip(5);
 const gTag = document.createElement('div'); gTag.className = 'btag'; gTag.style.cssText = 'left:36px;top:70px;background:var(--ac2);color:var(--ac)'; $('#gIn').appendChild(gTag);
@@ -104,7 +104,7 @@ const wsol = PUC.solution($('#wl'), [
   [K(`\\approx ${tG('1313')}\\,\\text{kJ mol}^{-1}`)]], { label: 'WORKED EXAMPLE', y0: 196, dy: 92 });
 $('#wl .lbl').style.top = '30px';
 const tWs = [T0('W3'), T0('W4'), T0('W5'), T0('W6')];
-const ws = $('#wS'), LX0 = 120, LX1 = 520, Y0 = 110, Y1 = 400;
+const ws = $("#wS"), LX0 = 120, LX1 = 520, Y0 = 96, Y1 = 360;
 const l0 = mk(ws, 'line', { x1: LX0, y1: Y0, x2: LX1, y2: Y0, stroke: C.ink2, 'stroke-width': 3, 'stroke-dasharray': '10 8' }), l1 = mk(ws, 'line', { x1: LX0, y1: Y1, x2: LX1, y2: Y1, stroke: HC, 'stroke-width': 5 });
 const l0t = txt(ws, LX1 + 16, Y0 + 6, 'E = 0 · FREE', { 'font-size': 18, fill: C.ink2, 'font-weight': 600 }), l1t = txt(ws, LX1 + 16, Y1 + 6, 'n = 1 · H', { 'font-size': 18, fill: HC, 'font-weight': 600 });
 const l1v = txt(ws, LX0, Y1 + 36, '-2.18 × 10⁻¹⁸ J', { 'font-size': 22, fill: HC, 'font-weight': 600 });
@@ -184,7 +184,7 @@ M.on(t => {
     M.vis($('#pw'), t, wt('P2', 'pull') - 0.1, out, { dx: 60, dy: 0, ...o });
     PUC.write($('#eqB'), t, wt('P2', 'electron') - 0.1, 0.8);
     fade(pAt, t, wt('P2', 'pull'));
-    const uE = M.io((t - wt('P2', 'off') + 0.1) / 0.8); attr(pE, 'cx', M.lerp(PX - 120 + 70 * Math.cos(-0.6), PX + 230, uE).toFixed(1)); attr(pE, 'cy', M.lerp(PY + 70 * Math.sin(-0.6), PY - 150, uE).toFixed(1)); fade(pE, t, wt('P2', 'pull'));
+    const uE = M.io((t - wt('P2', 'off') + 0.1) / 0.8); attr(pE, 'cx', M.lerp(PX - 120 + 70 * Math.cos(-0.6), PX + 220, uE).toFixed(1)); attr(pE, 'cy', M.lerp(PY + 70 * Math.sin(-0.6), PY - 40, uE).toFixed(1)); fade(pE, t, wt('P2', 'pull'));
     const ea = wt('P2', 'energy'); M.draw(pArr, t, ea, 0.5); fade(pArrH, t, ea + 0.4); fade(pArrT, t, ea + 0.4);
     M.vis($('#pwP'), t, wt('P4', 'positive') - 0.1, 1e9, POP);
   }
