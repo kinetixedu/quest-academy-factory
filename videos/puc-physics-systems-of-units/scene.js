@@ -63,7 +63,7 @@ const s = $('#simS'), X0 = 110, PX = 32, FY = 380;         // 32 px per metre, t
 mk(s, 'line', { x1: 30, y1: FY, x2: 754, y2: FY, stroke: C.ink, 'stroke-width': 3 });
 for (let x = 42; x < 754; x += 28) mk(s, 'line', { x1: x, y1: FY + 4, x2: x - 14, y2: FY + 18, stroke: C.dim, 'stroke-width': 2 });
 const mkTrolley = op => { const g = mk(s, 'g', { opacity: op }); mk(g, 'rect', { x: -60, y: -76, width: 120, height: 56, rx: 8, fill: C.ink }); [-34, 34].forEach(x => mk(g, 'circle', { cx: x, cy: -12, r: 12, fill: '#fff', stroke: C.ink, 'stroke-width': 4 })); txt(g, 0, -40, '2 kg', { 'text-anchor': 'middle', 'font-size': 20, fill: '#fff', 'font-weight': 600 }); return g; };
-const gTr = [0, 1, 2].map(() => mkTrolley(0)), tro = mkTrolley(1);
+const gTr = [0, 1, 2].map(() => mkTrolley(0)), troP = mk(s, 'g', {}), tro = mkTrolley(1); troP.appendChild(tro);
 const fA = PUC.arrow(s, FC, 7, 20), vA = PUC.arrow(s, VC, 6, 18);
 const fL = txt(s, 0, 0, 'F', { 'font-family': 'Poppins', 'font-style': 'italic', 'font-weight': 600, 'font-size': 30, fill: FC });
 const vL = txt(s, 0, 0, 'v', { 'font-family': 'Poppins', 'font-style': 'italic', 'font-weight': 600, 'font-size': 30, fill: VC });
@@ -151,7 +151,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 05', topic: '18 km/h on the b
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tSlo - 0.1, 1.1, 560, 580], [tCgs - 0.3, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tSlo - 0.1, 1.1, 700, 560], [tCgs - 0.3, 1, 960, 540]]);
 let geo = null;
 function measure() { geo = 1; }
 
@@ -208,7 +208,7 @@ M.on(t => {
     M.vis($('#ro'), t, tS1 + 0.25, out, { dx: 60, dy: 0, ...o });
     M.vis($('#gr'), t, tS1 + 0.4, out, { dy: 36, ...o });
     const tt = simT(t), v = 2 * tt, x = tt * tt, bx = X0 + x * PX;
-    tro.setAttribute('transform', `translate(${bx.toFixed(1)},${FY})`); M.vis(tro, t, T0('S2') - 0.1, 1e9, { dy: -20 });
+    troP.setAttribute('transform', `translate(${bx.toFixed(1)},${FY})`); M.vis(tro, t, T0('S2') - 0.1, 1e9, { dy: -20 });
     const mv = (t > tGo && t < tSlo) || (t > tSlo && tt < TEND);
     gTr.forEach((g, k) => { const tg = Math.max(0, tt - 0.18 * (k + 1)); g.setAttribute('transform', `translate(${(X0 + tg * tg * PX).toFixed(1)},${FY})`); g.setAttribute('opacity', mv && tt > 0.3 ? [0.3, 0.2, 0.12][k] : 0); });
     const fOn = M.io((t - wt('S2', 'force') + 0.1) / 0.4);

@@ -59,7 +59,7 @@ const makeBike = (p, op) => {
   mk(g, 'path', { d: 'M-58,-80 L-36,-80 M-12,-78 L-6,-92 L6,-92', fill: 'none', stroke: C.ink, 'stroke-width': 5, 'stroke-linecap': 'round' });
   return g;
 };
-const ghosts = [0.12, 0.2, 0.3].map(o => makeBike(s, 0)); const bike = makeBike(s, 1);
+const ghosts = [0.12, 0.2, 0.3].map(o => makeBike(s, 0)); const bikeP = mk(s, 'g', {}); const bike = makeBike(bikeP, 1);
 const mkr = mk(s, 'line', { x1: 0, y1: RY + 4, x2: 0, y2: 346, stroke: C.ac, 'stroke-width': 3, 'stroke-dasharray': '5 5' });
 const vA = PUC.arrow(s, VC, 6, 18), aA = PUC.arrow(s, AC, 6, 18);
 const vL = txt(s, 0, 0, 'v', { 'font-family': 'Poppins', 'font-style': 'italic', 'font-weight': 600, 'font-size': 30, fill: VC });
@@ -167,7 +167,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 03', topic: 'Who decided how 
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tSlo - 0.1, 1.1, 560, 560], [T0('S8') + 0.1, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tSlo - 0.1, 1.1, 700, 560], [T0('S8') + 0.1, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = 1;
@@ -225,7 +225,7 @@ M.on(t => {
     M.vis($('#tgL'), t, wt('S2', 'base') - 0.1, 1e9, POP);
     M.vis(swg, t, wt('S3', 'stopwatch') - 0.15, 1e9, { ...POP, sc: 0.5 }); M.vis($('#tgT'), t, wt('S3', 'base') - 0.1, 1e9, POP);
     const sm = simS(t), x = dOf(sm), v = vOf(sm), bx = X0 + x * PX;
-    bike.setAttribute('transform', `translate(${bx.toFixed(1)},${RY})`);
+    bikeP.setAttribute('transform', `translate(${bx.toFixed(1)},${RY})`);
     M.vis(bike, t, tS1 + 0.3, 1e9, { dx: -30, dy: 0 });
     ghosts.forEach((g, k) => { const sg = Math.max(0, sm - 0.22 * (k + 1)), moving = sm > 0.05 && sm < 7 && ((t > tR && t < tR + 5) || (t > tAcc && t < tAcc + 2) || (t > tSlo && t < tSloEnd)); g.setAttribute('transform', `translate(${(X0 + dOf(sg) * PX).toFixed(1)},${RY})`); g.setAttribute('opacity', moving ? [0.3, 0.2, 0.12][k] : 0); });
     attr(mkr, 'x1', bx.toFixed(1)); attr(mkr, 'x2', bx.toFixed(1)); M.hide(mkr, t < wt('S2', 'tape') + 0.6);
