@@ -45,7 +45,7 @@ const tN = [wt('M6', 'Monday'), wt('M6', 'Wednesday'), wt('M6', 'Friday')], tStr
 const tMout = T0('T1') - 0.32;
 const tT = T0('T1'), tSt2 = wt('T1', 'One'), tG1 = T0('G1'), tTu = tG1 - 0.32;
 // G: plan
-const tGs = [wt('G1', 'One'), T0('G2'), T0('G3'), T0('G4')], tGout = T0('K0') - 0.32;
+const tGs = [T0('G1') + 0.35, T0('G2'), T0('G3'), T0('G4')], tGout = T0('K0') - 0.32;
 const tAud = [wt('G1', 'busy'), wt('G1', 'school')], tThou = wt('G2', 'thousand'), tMonth = wt('G2', 'month');
 const tMsgG = wt('G3', 'message'), tCol = wt('G3', 'colours'), tTools = wt('G4', 'tools'), tCheck = wt('G4', 'check'), tWeek = wt('G4', 'week');
 // K
@@ -106,8 +106,8 @@ const runCard = (k, label) => `<div class="mav" style="${FACE('rao')}"></div><di
     <div class="mbar" id="bar${k}"><i id="sg${k}"></i></div>
     <div class="mtk" style="left:48px">WEAK</div><div class="mtk" style="right:48px">STRONG MEMORY</div>
     <div class="mst" id="ms${k}"><span class="msi"></span><span class="mtx"></span><span class="tm"></span></div>`;
-$('#mLIn').innerHTML = runCard('L', 'THE OLD WAY · MIXED MESSAGES');
-$('#mRIn').innerHTML = runCard('R', 'THE INTEGRATED WAY · ONE MESSAGE');
+$('#mLIn').innerHTML = runCard('L', 'OLD WAY · MIXED MESSAGES');
+$('#mRIn').innerHTML = runCard('R', 'INTEGRATED · ONE MESSAGE');
 const HW = [['phone', "MONDAY · DEV'S POST", 'Gym snack', C.red], ['store', 'WEDNESDAY · SHOP POSTER', 'Festive treat', C.slate], ['package', 'FRIDAY · THE PACK', 'Tiffin sweet', C.gold]];
 $('#hws').innerHTML = HW.map(([ic, l, t, col], i) => `<div class="hw" id="hw${i}" style="top:${92 + i * 104}px"><i>${M.icon(ic, 28, col, 2.2)}</i><div class="kl">${l}</div><div class="kt" style="color:${col}">${t}</div></div>`).join('');
 $('#hwPI').innerHTML = M.icon('x', 22, C.red, 2.6);
@@ -120,7 +120,7 @@ const sw3 = `<svg width="64" height="16" style="position:absolute;right:20px;top
 const GV = [
   `<div class="gav" id="ga0" style="left:0;${FACE('rao')}"></div><div class="gav" id="ga1" style="left:104px">${M.icon('user', 40, C.gold, 2.2)}</div><div class="gav" id="ga2" style="left:208px">${M.icon('user', 40, C.gold, 2.2)}</div><div class="gch" id="gc0" style="left:332px;top:18px">${M.icon('plus', 22, C.gold, 2.4)}<span>Many more like her</span></div>
    <div class="gch" id="gc1" style="left:0;top:136px">${M.icon('clock', 22, C.gold, 2.4)}<span>Busy mornings</span></div><div class="gch" id="gc2" style="left:0;top:136px">${M.icon('laddoo', 22, C.gold, 2.4)}<span>School tiffins</span></div><div class="gch" id="gc3" style="left:0;top:136px">${M.icon('heart', 22, C.gold, 2.4)}<span>Want healthy food</span></div>`,
-  `<div class="serif" id="gN">0</div><div id="gNl">parents aware</div><div class="gch" id="gMo" style="top:8px;background:#14213D;color:#fff">${M.icon('calendar', 22, C.gold2, 2.4)}<span>In one month</span></div><div id="gBar"><i id="gBarF"></i></div>` +
+  `<div class="serif" id="gCnt">0</div><div id="gCntL">parents aware</div><div class="gch" id="gMo" style="top:8px;background:#14213D;color:#fff">${M.icon('calendar', 22, C.gold2, 2.4)}<span>In one month</span></div><div id="gBar"><i id="gBarF"></i></div>` +
   [1, 2, 3, 4].map(w => `<div class="lbl" style="left:${(w - 1) * 212 + 106 - 30}px;top:156px">WEEK ${w}</div>`).join(''),
   [['package', 'THE PACK'], ['phone', "DEV'S POST"], ['store', 'SHOP POSTER']].map(([ic, n], i) => `<div class="g3" id="g3${i}" style="left:${i * 292}px"><div class="zn">${n}</div>${sw3.replace('<svg', `<svg class="sw3" id="sw3${i}"`)}<div class="zi">${M.icon(ic, 36, C.ink, 2.2)}</div><div class="zt">Healthy tiffin sweet</div></div>`).join(''),
   [['phone', 'Posts'], ['store', 'Shop posters'], ['package', 'The pack']].map(([ic, t], i) => `<div class="gch" id="gt${i}" style="top:0">${M.icon(ic, 22, C.gold, 2.4)}<span>${t}</span></div>`).join('') +
@@ -249,7 +249,7 @@ function measure() {
   document.querySelectorAll('.st5 .s1, .st5 .s2').forEach(el => { if (el.offsetWidth > 238) el.style.fontSize = Math.floor(32 * 238 / el.offsetWidth) + 'px'; });
   // plan panes
   x = 0; [1, 2, 3].forEach(i => { const c = $('#gc' + i); c.style.left = x + 'px'; x += c.offsetWidth + 16; });
-  $('#gNl').style.left = ($('#gN').offsetWidth + 20) + 'px'; $('#gMo').style.left = (848 - $('#gMo').offsetWidth) + 'px';
+  $('#gCnt').textContent = '1,000'; $('#gCntL').style.left = ($('#gCnt').offsetWidth + 20) + 'px'; $('#gCnt').textContent = '0'; $('#gCnt')._t = '0'; $('#gMo').style.left = (848 - $('#gMo').offsetWidth) + 'px';
   x = 0; [0, 1, 2].forEach(i => { const c = $('#gt' + i); c.style.left = x + 'px'; x += c.offsetWidth + 16; });
   ['#gPans', '#kPans'].forEach(p => {
     document.querySelectorAll(p + ' .pt').forEach(el => { if (el.offsetWidth > 848) el.style.fontSize = Math.floor(84 * 848 / el.offsetWidth) + 'px'; });
@@ -294,6 +294,7 @@ M.on(t => {
     let mm = 0; tMsg.forEach(ti => { mm = Math.max(mm, 0.3 * M.io((t - ti) / 0.3) * (1 - 0.7 * M.io((t - ti - 0.5) / 0.6))); });
     mm *= 1 - M.io((t - tNone) / 0.4);
     $('#memF').style.width = (848 * mm).toFixed(1) + 'px'; $('#memF').style.background = t > tSees ? C.red2 : C.gold;
+    M.vis($('#memA'), t, tMorph + 0.6, 1e9, { dy: 8 }); M.vis($('#memB'), t, tMorph + 0.6, 1e9, { dy: 8 });
     M.vis($('#cpill'), t, tSees, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
     M.rise($('#askT'), t, tNone - 0.05, { st: 0.07, sp: M.HEAVY });
   }
@@ -394,7 +395,12 @@ M.on(t => {
       $('#av' + k).style.opacity = M.clamp((t - base - 0.6) / 0.12).toFixed(3);
     }
     runL(t); runR(t);
-    HW.forEach((_, i) => M.vis($('#hw' + i), t, tO[i] - 0.05, 1e9, { dx: 24, dy: 0 }));
+    HW.forEach(([ic, , tx, col], i) => {
+      const el = $('#hw' + i), on = M.io((t - tO[i] + 0.05) / 0.25); M.vis(el, t, tM[1] + 0.5 + i * 0.08, 1e9, { dy: 14 });
+      const kt = el.querySelector('.kt'); M.setT(kt, on > 0.5 ? tx : 'Not seen yet'); kt.style.color = on > 0.5 ? col : C.dim;
+      el.style.background = mix(C.paper, col === C.gold ? C.gold3 : col === C.red ? C.redBg : C.slateBg, on);
+      setIco(el.querySelector('i'), ic, on > 0.5 ? col : C.dim, 28, 2.2);
+    });
     M.vis($('#hwP'), t, tWeak - 0.1, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
   }
 
@@ -425,7 +431,7 @@ M.on(t => {
       setIco(el.querySelector('.ri'), ic, t < ta ? C.dim : (act > 0.5 ? C.gold2 : C.gold), 28, 2.2);
     });
     GP.forEach((_, k) => {
-      const tin = k ? tGs[k - 1] : tG1 + 0.4, tout = k < 4 ? tGs[k] - 0.14 : 1e9;
+      const tin = k ? tGs[k - 1] : 1e9, tout = k < 4 ? tGs[k] - 0.14 : 1e9;
       const pn = $('#gn' + k); const off = t < tin - 0.01 || t > tout + 0.3; M.hide(pn, off); if (off) return;
       const oo = { outDur: 0.18, ody: -12 };
       M.vis(pn.querySelector('.ps'), t, tin, tout, { dy: 12, ...oo });
@@ -439,8 +445,8 @@ M.on(t => {
         M.vis($('#gc0'), t, tin + 0.85, tout, pop);
         M.vis($('#gc1'), t, tAud[0] - 0.1, tout, pop); M.vis($('#gc2'), t, tAud[1] - 0.1, tout, pop); M.vis($('#gc3'), t, tAud[1] + 0.4, tout, pop);
       } else if (k === 2) {
-        M.vis($('#gN'), t, tin + 0.5, tout, { dy: 12, ...oo }); M.vis($('#gNl'), t, tin + 0.6, tout, { dy: 12, ...oo });
-        M.count($('#gN'), t, tThou - 0.1, 1.4, 0, 1000, v => Math.round(v).toLocaleString('en-IN'));
+        M.vis($('#gCnt'), t, tin + 0.5, tout, { dy: 12, ...oo }); M.vis($('#gCntL'), t, tin + 0.6, tout, { dy: 12, ...oo });
+        M.count($('#gCnt'), t, tThou - 0.1, 1.4, 0, 1000, v => Math.round(v).toLocaleString('en-IN'));
         M.vis($('#gMo'), t, tMonth - 0.1, tout, pop);
         M.vis($('#gBar'), t, tin + 0.55, tout, { dy: 10, ...oo }); $('#gBarF').style.width = (848 * M.o5((t - tThou + 0.1) / 1.4)).toFixed(1) + 'px';
         pn.querySelectorAll('.pvx .lbl').forEach((el, i) => M.vis(el, t, tin + 0.7 + i * 0.06, tout, { dy: 8, ...oo }));
@@ -449,7 +455,7 @@ M.on(t => {
       } else {
         [0, 1, 2].forEach(i => M.vis($('#gt' + i), t, tTools - 0.1 + i * 0.12, tout, pop));
         M.vis($('#gwL'), t, tCheck - 0.2, tout, { dy: 8, ...oo });
-        [60, 120, 180, 250].forEach((hh, i) => { const u = M.spring(t - tCheck - i * 0.18, M.SOFT); $('#wb' + i).style.height = (Math.min(116, hh * 0.46) * M.clamp(u, 0, 1.05)).toFixed(1) + 'px'; });
+        [60, 120, 180, 250].forEach((hh, i) => { const u = M.spring(t - tCheck - i * 0.18, M.SOFT); $('#wb' + i).style.height = ([40, 64, 88, 112][i] * M.clamp(u, 0, 1.05)).toFixed(1) + 'px'; });
         M.vis($('#gOk'), t, tWeek - 0.1, tout, pop);
       }
     });

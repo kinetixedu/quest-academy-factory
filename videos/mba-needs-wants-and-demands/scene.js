@@ -59,7 +59,7 @@ const tT = T0('T1'), tSt2 = wt('T1', 'They'), tEout = tT - 0.32;
 const tF = [1, 2, 3, 4, 5].map(i => T0('F' + i)), tTu = tF[0] - 0.32;
 const tForty = wt('F2', 'forty'), tTwelve = wt('F3', 'Twelve'), tRest = wt('F3', 'rest'), tFive = wt('F4', 'five'), tNaniF = wt('F5', 'Nani');
 const tG = [1, 2, 3, 4, 5, 6].map(i => T0('G' + i)), tFout = tG[0] - 0.32;
-const tLv = [wt('G2', 'body'), wt('G2', 'safety'), wt('G3', 'love'), wt('G3', 'esteem'), wt('G4', 'top')], tGfive = wt('G1', 'five');
+const tLv = [wt('G2', 'body'), wt('G2', 'safety'), wt('G3', 'love'), wt('G3', 'esteem'), wt('G4', 'top')], tGfive = wt('G1', 'levels') + 0.2;
 const tFills = wt('G6', 'fills'), tRaoG = wt('G6', 'Rao'), tLove = wt('G6', 'love');
 const tK0 = T0('K0'), tK = [1, 2, 3].map(i => T0('K' + i)), tGout = tK0 - 0.32, tKout = T0('X1') - 0.32;
 const tKw = [wt('K1', 'hospital'), wt('K2', 'phone'), wt('K3', 'airline')];
@@ -119,7 +119,7 @@ const KA = [
   ['heart', 'Wants', 'Shaped by taste', 'In Bengaluru, a sweet laddoo', 'phone', 'A phone maker sells one phone in many colours'],
   ['coin', 'Demand', 'Want plus money', 'Five buyers ready to pay ₹120', 'plane', 'An airline checks who will pay before a new route'],
 ];
-$('#kRows').innerHTML = KA.map(([ic, t], i) => `<div class="kr" id="kr${i}" style="top:${110 + i * 120}px"><div class="bg"></div><div class="rn">0${i + 1}</div><div class="ri"></div><div class="rt">${t}</div></div>`).join('');
+$('#kRows').innerHTML = KA.map(([ic, t], i) => `<div class="kr" id="kr${i}" style="top:${96 + i * 152}px"><div class="bg"></div><div class="rn">0${i + 1}</div><div class="ri"></div><div class="rt">${t}</div></div>`).join('');
 const KP = [['THREE WORDS TODAY', 'Need, want, demand', 'Every business works with all three', null]].concat(KA.map((a, i) => [`IN PRACTICE 0${i + 1} / 03`, a[1], a[2], a]));
 $('#kPans').innerHTML = KP.map(([s, t, m, a], i) => `<div class="pn" id="kn${i}"><div class="ps">${s}</div><div class="serif pt">${t}</div><div class="pm">${m}</div><div class="hr"></div>` +
   (a ? `<div class="ka" id="ka${i}0" style="top:322px"><i>${M.icon('laddoo', 34, C.gold, 2.2)}</i><div class="kl">AT LADDOO LAB</div><div class="kt">${a[3]}</div></div>
@@ -240,7 +240,7 @@ M.on(t => {
     }
     M.vis($('#cSold'), t, tFiveA - 0.05, 1e9, POP); M.count($('#cSoldN'), t, tFiveA, 0.5, 0, 5);
     M.vis($('#cLeft'), t, tFiveA + 0.6, 1e9, POP);
-    M.vis($('#ask'), t, tMorph + 0.42, tAout, { dy: 36, ...o });
+    M.vis($('#ask'), t, tC2 - 0.2, tAout, { dy: 36, ...o });
     for (let i = 0; i < 3; i++) M.vis($('#mt' + i), t, tMeth[i] - 0.1, 1e9, POP);
     M.rise($('#askT'), t, tNotA - 0.05, { st: 0.07, sp: M.HEAVY });
   }
@@ -265,7 +265,8 @@ M.on(t => {
     M.rise($('#srcN'), t, tD2 + 0.2, { st: 0.06, sp: M.HEAVY }); M.vis($('#srcB'), t, wt('D2', 'Principles') - 0.05, 1e9, { dy: 10 });
     M.vis($('#srcR'), t, tD2 + 0.9, 1e9, { dy: 10 });
     for (let k = 0; k < 3; k++) {
-      const c = $('#dc' + k); M.vis(c, t, tD[k] + 0.05, tDout, { dy: 36, ...o });
+      const c = $('#dc' + k); M.vis(c, t, tD2 + 0.5 + k * 0.1, tDout, { dy: 36, ...o });
+      c.querySelector('.dcW').style.color = mix(C.dim, C.ink, M.io((t - tD[k]) / 0.3)); c.querySelector('.dcL').style.color = mix(C.dim, C.gold, M.io((t - tD[k]) / 0.3));
       for (let j = 0; j < 3; j++) M.vis($('#dt' + k + j), t, tD[k] + 0.5 + j * 0.35, 1e9, { dy: 12 });
       M.vis($('#de' + k), t, tChip[k] - 0.05, 1e9, POP);
       const on = M.io((t - tD[k]) / 0.3) * (k < 2 ? 1 - M.io((t - tD[k + 1]) / 0.3) : 1);
@@ -286,7 +287,8 @@ M.on(t => {
     M.vis($('#jtrk'), t, tDau - 0.2, 1e9, { dy: 0, fade: 0.15 });
     const tw = [tDau - 0.1, tE2 - 0.05, tE4 - 0.05];
     for (let i = 0; i < 3; i++) {
-      const r = $('#jw' + i); M.vis(r, t, tw[i], 1e9, { dx: 24, dy: 0 });
+      const r = $('#jw' + i); M.vis(r, t, tE1 + 0.5 + i * 0.1, 1e9, { dx: 24, dy: 0 });
+      r.querySelector('.jl').style.color = mix(C.dim, C.gold, M.io((t - tw[i]) / 0.3));
       const on = M.io((t - tw[i] - 0.3) / 0.3) * (i < 2 ? 1 - M.io((t - tw[i + 1] - 0.3) / 0.3) : 1);
       r.querySelector('.bg').style.background = mix(C.paper, C.gold3, on);
     }
@@ -351,7 +353,8 @@ M.on(t => {
       $('#ml' + i).style.color = t < tLv[i] - 0.05 ? C.dim : C.ink;
     }
     M.vis($('#m2'), t, tG[4] + 0.12, tGout, { dx: 60, dy: 0, ...o });
-    M.vis($('#mr0'), t, tFills - 0.1, 1e9, { dy: 16 }); M.vis($('#mr1'), t, tRaoG - 0.1, 1e9, { dy: 16 });
+    M.vis($('#mr0'), t, tG[4] + 0.4, 1e9, { dy: 16 }); M.vis($('#mr1'), t, tG[4] + 0.55, 1e9, { dy: 16 });
+    [tFills, tRaoG].forEach((tw, i) => { const u = M.io((t - tw + 0.1) / 0.3), r = $('#mr' + i); r.querySelector('.mt').style.color = mix(C.dim, C.ink, u); r.style.background = mix(C.paper, C.gold3, u); });
     M.vis($('#m2P'), t, tLove + 0.1, 1e9, POP);
   }
 

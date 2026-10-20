@@ -105,7 +105,7 @@ $('#mx').innerHTML = `<defs><marker id="ah" viewBox="0 0 10 10" refX="7" refY="5
   <g id="axX"><line x1="100" y1="416" x2="672" y2="416" stroke="#B9B1A3" stroke-width="3" stroke-linecap="round"/><path d="M662 408 L674 416 L662 424" fill="none" stroke="#B9B1A3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
     <text x="390" y="466" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="16" letter-spacing="2.4" fill="#8A8274">MARKET SHARE</text>
     <text x="100" y="442" font-family="Poppins" font-weight="600" font-size="13" letter-spacing="1.5" fill="#8A8274">HIGH</text><text x="672" y="442" text-anchor="end" font-family="Poppins" font-weight="600" font-size="13" letter-spacing="1.5" fill="#8A8274">LOW</text></g>` +
-  PL.map(([id, , x, y]) => `<line id="${id}h" x1="84" y1="${y}" x2="${x}" y2="${y}" stroke="#B8862F" stroke-width="2.5" stroke-dasharray="4 7"/><line id="${id}v" x1="${x}" y1="416" x2="${x}" y2="${y}" stroke="#14213D" stroke-width="2.5" stroke-dasharray="4 7"/>`).join('') +
+  PL.map(([id, , x, y]) => `<line id="${id}h" x1="84" y1="${y}" x2="${x - 42}" y2="${y}" stroke="#B8862F" stroke-width="2.5" stroke-dasharray="4 7"/><line id="${id}v" x1="${x}" y1="416" x2="${x}" y2="${y + 72}" stroke="#14213D" stroke-width="2.5" stroke-dasharray="4 7"/>`).join('') +
   `<path id="cf0" d="M220 272 C176 236 182 182 234 156" fill="none" stroke="#B8862F" stroke-width="5" stroke-linecap="round" marker-end="url(#ah)"/>
    <path id="cf1" d="M272 292 C400 270 520 210 584 118" fill="none" stroke="#B8862F" stroke-width="5" stroke-linecap="round" marker-end="url(#ah)"/>
    <path id="cf2" d="M270 304 C360 300 420 230 452 168" fill="none" stroke="#B9B1A3" stroke-width="3" stroke-linecap="round" stroke-dasharray="3 9"/>
@@ -211,7 +211,6 @@ function measure() {
   const dq = $('#dq'); if (dq.offsetWidth > 1600) dq.style.fontSize = Math.floor(88 * 1600 / dq.offsetWidth) + 'px';
   x = 48; for (let i = 0; i < 3; i++) { const p = $('#bp' + i); p.style.left = x + 'px'; x += p.offsetWidth + 16; }
   const wl = $('#wL'); wl.style.left = (410 - wl.offsetWidth / 2) + 'px';
-  document.querySelectorAll('.rg .gn').forEach(el => { const s = el.parentNode.querySelector('.gs'); if (s.offsetWidth + 92 > 560) s.style.fontSize = '13px'; });
   document.querySelectorAll('.sp .pt').forEach(el => { if (el.offsetWidth > 740) el.style.fontSize = Math.floor(60 * 740 / el.offsetWidth) + 'px'; });
   document.querySelectorAll('.sr4 .kt').forEach(el => { if (el.offsetWidth > 660) el.style.fontSize = Math.floor(28 * 660 / el.offsetWidth) + 'px'; });
   document.querySelectorAll('.st4 .s2, .st4 .s3').forEach(el => { if (el.offsetWidth > 312) el.style.fontSize = Math.floor(24 * 312 / el.offsetWidth) + 'px'; });

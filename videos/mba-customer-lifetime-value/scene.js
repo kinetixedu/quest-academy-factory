@@ -1,4 +1,4 @@
-// MBA - Marketing Management, Ep 01: Introduction to Marketing (Laddoo Lab)
+// MBA - Marketing Management, Ep 34: Customer Lifetime Value (Laddoo Lab)
 (() => {
 const { $ } = M;
 const C = { ink: '#14213D', ink2: '#3A4560', muted: '#8A8274', dim: '#B9B1A3', gold: '#B8862F', gold2: '#E9D9B5', gold3: '#F3EAD6', paper: '#F5F1E8', paper2: '#EEE8DB', card: '#FFFFFF', line: '#E2DACB', red: '#B5482F', redBg: '#F6E3DC', red2: '#E7B9AB', navy2: '#24345A', navy3: '#2C3B5E', ld: '#A8713A', ldD: '#7E5428' };
@@ -7,173 +7,132 @@ const wt = M.wt, T0 = M.t0, T1 = M.t1, mix = M.mix;
 /* extra line icons (24-unit, lucide style) */
 Object.assign(M.IC, {
   laddoo: ['M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z', 'M8.5 9h.01', 'M13 7.5h.01', 'M15.5 12h.01', 'M11 12.5h.01', 'M8 15h.01', 'M13 16.5h.01'],
-  wheat: ['M2 22 16 8', 'M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z', 'M7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z', 'M11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z', 'M20 2h2v2a4 4 0 0 1-4 4h-2V6a4 4 0 0 1 4-4Z', 'M11.47 17.47 13 19l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L5 19l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z', 'M15.47 13.47 17 15l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L9 15l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z', 'M19.47 9.47 21 11l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L13 11l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z'],
-  swap: ['M8 3 4 7l4 4', 'M4 7h16', 'm16 21 4-4-4-4', 'M20 17H4'],
   phone: ['M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Z', 'M12 18h.01'],
   bank: ['M3 22h18', 'M6 18v-7', 'M10 18v-7', 'M14 18v-7', 'M18 18v-7', 'M12 2 20 7H4z'],
-  quote: ['M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z', 'M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z'],
-  message: ['M7.9 20A9 9 0 1 0 4 16.1L2 22Z'],
   repeat: ['m17 2 4 4-4 4', 'M3 11v-1a4 4 0 0 1 4-4h14', 'm7 22-4-4 4-4', 'M21 13v1a4 4 0 0 1-4 4H3'],
   heart: ['M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z'],
   search: ['m21 21-4.34-4.34', 'M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z'],
-  cap: ['M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z', 'M22 10v6', 'M6 12.5V16a6 3 0 0 0 12 0v-3.5'],
-  target: ['M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z', 'M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z', 'M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z'],
   trendUp: ['M16 7h6v6', 'm22 7-8.5 8.5-5-5L2 17'],
   trendDown: ['M16 17h6v-6', 'm22 17-8.5-8.5-5 5L2 7'],
-  award: ['m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526', 'M12 14a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z'],
-  smile: ['M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z', 'M8 14s1.5 2 4 2 4-2 4-2', 'M9 9h.01', 'M15 9h.01'],
+  calendar: ['M8 2v4', 'M16 2v4', 'M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z', 'M3 10h18'],
+  gift: ['M20 12v10H4V12', 'M2 7h20v5H2z', 'M12 22V7', 'M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z', 'M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z'],
+  cup: ['M10 2v2', 'M14 2v2', 'M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1', 'M6 2v2'],
+  dumbbell: ['M14.4 14.4 9.6 9.6', 'M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z', 'm21.5 21.5-1.4-1.4', 'M3.9 3.9 2.5 2.5', 'M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z'],
   scale: ['m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z', 'm2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z', 'M7 21h10', 'M12 3v18', 'M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2'],
   ban: ['M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z', 'm4.9 4.9 14.2 14.2'],
-  megaOff: ['m3 11 18-5v12L3 14v-3z', 'M11.6 16.8a3 3 0 1 1-5.8-1.6'],
 });
 const IMG = '../../assets/illustrations/mba/';
 const FACE = n => `background-image:url(${IMG}ll-${n}-face.jpg)`;
+const fmt = v => '₹' + Math.round(v).toLocaleString('en-IN');
 
 /* ---------- beats (all from the voice) ---------- */
-const tTitle = 0.25, tMorph = T0('H2') + 0.02, tGreat = wt('H2', 'great'), tEight = wt('H2', 'eight');
-const tC2 = T0('C2'), tNever = wt('C2', 'never'), tAsked = wt('C2', 'asked');
-const tL1 = T0('L1'), tL2 = T0('L2'), tL3 = T0('L3'), tZoya = wt('L1', 'Zoya'), tNani = wt('L1', 'Nani');
-const tRagi = wt('L2', 'ragi'), tJag = wt('L2', 'jaggery'), tCane = wt('L2', 'sugarcane'), tArj = wt('L3', 'Arjun'), tDev = wt('L3', 'Dev');
-const tAout = tL1 - 0.32, tLout = T0('D1') - 0.32;
-// D: what is marketing
-const tD1 = T0('D1'), tD2 = T0('D2'), tD3 = T0('D3'), tD4 = T0('D4'), tD5 = T0('D5'), tDout = T0('M1') - 0.32;
-const tKqL = wt('D2', 'Principles') + 0.5, tHl = [wt('D3', 'creates'), wt('D3', 'relationships'), wt('D3', 'capture')];
-const tGood = wt('D4', 'good'), tPay = wt('D4', 'pay'), tSw = [wt('D5', 'find'), wt('D5', 'serve'), wt('D5', 'coming')];
-// M: selling vs marketing
-const tM1 = T0('M1'), tM2 = T0('M2'), tM3 = T0('M3'), tM4 = T0('M4'), tM5 = T0('M5'), tM6 = T0('M6'), tM7 = T0('M7'), tM8 = T0('M8');
-const tMakes = wt('M2', 'makes'), tWaits = wt('M2', 'waits'), tAsks = wt('M5', 'asks'), tArjun = wt('M7', 'Arjun'), tSoldR = wt('M8', 'sold');
-const tNeed = [wt('M6', 'tiffin'), wt('M6', 'Small'), wt('M6', 'refined')];
+const tTitle = 0.25, tMorph = T0('H2') + 0.02, tCust = wt('H2', 'customer');
+const tC2 = T0('C2'), tEvery = wt('C2', 'every'), tAfter = wt('C2', 'after'), tSo = wt('C2', 'So');
+const tL1 = T0('L1'), tL2 = T0('L2'), tL3 = T0('L3'), tAout = tL1 - 0.32, tLout = T0('D1') - 0.32;
+const tTagR = wt('L1', 'Mrs'), tTagD = wt('L1', 'daughter'), tDevL = wt('L2', 'Dev'), tFive = wt('L2', 'five'), tWinL = wt('L2', 'win'), tArjL = wt('L3', 'Arjun');
+// D
+const tD1 = T0('D1'), tD2 = T0('D2'), tD3 = T0('D3'), tD4 = T0('D4'), tDout = T0('M1') - 0.32;
+const tTotal = wt('D2', 'total'), tOne = wt('D3', 'one'), tEv = wt('D3', 'Every'), tYrs = wt('D3', 'years');
+const tF = [wt('D4', 'profit'), wt('D4', 'years'), wt('D4', 'cost'), T1('D4') - 0.25], tOp = [wt('D4', 'times'), wt('D4', 'minus'), T1('D4') - 0.35];
+// M
+const tM1 = T0('M1'), tM2 = T0('M2'), tM3 = T0('M3'), tM4 = T0('M4'), tM5 = T0('M5'), tM6 = T0('M6'), tM7 = T0('M7'), tM8 = T0('M8'), tM9 = T0('M9');
+const tSells = wt('M2', 'sells'), tEighty = wt('M2', 'eighty'), tForty = wt('M2', 'forty');
+const tWk0 = wt('M3', 'every'), tWk1 = T1('M3') - 0.1, tForty3 = wt('M3', 'forty');
+const tTimes4 = wt('M4', 'times'), tTh4 = wt('M4', 'thousand'), tFive5 = wt('M5', 'five'), tEight6 = wt('M6', 'eight');
+const tLittle = wt('M7', 'little'), tTen = wt('M8', 'ten'), tWorth8 = wt('M8', 'worth'), tSix = wt('M8', 'six');
+const tFive9 = wt('M9', 'five'), tWorth9 = wt('M9', 'worth');
 const tMout = T0('T1') - 0.32;
-// statement + Drucker
-const tT = T0('T1'), tSt2 = wt('T1', 'Marketing'), tU = T0('U2'), tTu = tU - 0.32;
-const tDl = [wt('U2', 'aim'), wt('U2', 'understand'), wt('U2', 'product')], tDk = [wt('U2', 'know'), wt('U2', 'understand'), wt('U2', 'sells')], tFits = wt('U2', 'fits');
-const tUout = T0('E1') - 0.32;
-// E: exchange + relationship
-const tE1 = T0('E1'), tE2 = T0('E2'), tE3 = T0('E3'), tE5 = T0('E5'), tGive = wt('E1', 'give'), tGet = wt('E1', 'get');
-const tXk = [wt('E2', 'healthy'), wt('E2', 'time'), wt('E3', 'money')], tBec = wt('E5', 'because'), tComes = wt('E5', 'comes'), tWeek = wt('E5', 'week'), tThat = wt('E5', 'That'), tRel = wt('E5', 'relationship');
-const tEout = T0('P0') - 0.32;
-// P: five steps
-const tP0 = T0('P0'), tP = [1, 2, 3, 4, 5].map(i => T0('P' + i)), tPout = T0('K0') - 0.32;
-// K: at work today
-const tK0 = T0('K0'), tK = [1, 2, 3, 4].map(i => T0('K' + i)), tKout = T0('X1') - 0.32;
-const tKw = [wt('K1', 'phone'), wt('K2', 'bank'), wt('K3', 'bakery'), wt('K4', 'food')];
-// X: human side
+// statement + K
+const tT = T0('T1'), tSt2 = wt('T1', 'count', 1), tK0 = T0('K0'), tTu = tK0 - 0.32;
+const tK = [1, 2, 3, 4].map(i => T0('K' + i)), tKout = T0('X1') - 0.32;
+const tKw = [wt('K1', 'phone'), wt('K2', 'coffee'), wt('K3', 'gym'), wt('K4', 'bank')];
+// X
 const tX1 = T0('X1'), tX2 = T0('X2'), tX3 = T0('X3'), tX4 = T0('X4'), tX5 = T0('X5'), tX6 = T0('X6'), tX7 = T0('X7');
-const tXg = [wt('X2', 'find'), wt('X2', 'small')], tXh = [wt('X3', 'lie'), wt('X3', 'push')];
-const tDevX = wt('X4', 'Dev'), tSugar = wt('X4', 'sugar'), tNaniX = wt('X4', 'Nani'), tStill = wt('X4', 'still'), tRef = wt('X5', 'refined'), tTrue = wt('X5', 'True'), tAct = wt('X6', 'Consumer');
+const tXg = [wt('X2', 'wisely'), wt('X2', 'look')], tXh = [wt('X3', 'guess'), wt('X3', 'small')];
+const tStud = wt('X4', 'studied'), tLoyal = wt('X4', 'Loyal'), tArjX = wt('X5', 'Arjun'), tShop = wt('X5', 'small'), tNaniX = wt('X6', 'Nani'), tZoyaX = wt('X6', 'Zoya');
 const tXout = tX7 - 0.15;
-const tQ = T0('Q1'), tCount = T1('Q1') + 0.05, tAns = T0('A1') - 0.02, tTakeQ = wt('A1', 'She');
+const tQ = T0('Q1'), tCount = T1('Q1') + 0.05, tAns = T0('A1') - 0.02, tTakeQ = wt('A1', 'One');
 const tS = T0('S1'), tRow = [T0('S2'), T0('S3'), T0('S4')], tN = T0('N1');
-const tPill = [[wt('S2', 'better')], [wt('S3', 'value'), wt('S3', 'money')], [wt('S4', 'come')]];
+const tPill = [[wt('S2', 'customer'), wt('S2', 'years')], [wt('S3', 'Profit'), wt('S3', 'minus'), wt('S3', 'today')], [wt('S4', 'profit'), wt('S4', 'visits'), wt('S4', 'longer'), wt('S4', 'cheaper')]];
 const SW = [[tT - 0.42, tTu], [tQ - 0.42, tQ + 0.06], [tS - 0.42, tS + 0.06]];
 
 /* ---------- build ---------- */
 const wrap = (card, id, w, h) => { const d = document.createElement('div'); d.id = id; d.className = 'abs'; d.style.cssText = `left:0;top:0;width:${w}px;height:${h}px`; while (card.firstChild) d.appendChild(card.firstChild); card.appendChild(d); };
-const laddoo = (x, y, r, id = '') => `<g ${id ? `id="${id}"` : ''} transform="translate(${x} ${y})"><circle r="${r}" fill="${C.ld}" stroke="${C.ldD}" stroke-width="2.5"/><circle cx="${-r * 0.35}" cy="${-r * 0.3}" r="${r * 0.13}" fill="${C.ldD}"/><circle cx="${r * 0.3}" cy="${-r * 0.1}" r="${r * 0.11}" fill="${C.ldD}"/><circle cx="${-r * 0.05}" cy="${r * 0.38}" r="${r * 0.12}" fill="${C.ldD}"/></g>`;
-// A: hero table + plate, 50 laddoos grid, the "what went wrong" pills
-const PL = [[440, 30], [476, 30], [512, 30], [458, -2], [494, -2], [476, -32]];
-
+const laddoo = (x, y, r) => `<g transform="translate(${x} ${y})"><circle r="${r}" fill="${C.ld}" stroke="${C.ldD}" stroke-width="2.5"/><circle cx="${-r * 0.35}" cy="${-r * 0.3}" r="${r * 0.13}" fill="${C.ldD}"/><circle cx="${r * 0.3}" cy="${-r * 0.1}" r="${r * 0.11}" fill="${C.ldD}"/><circle cx="${-r * 0.05}" cy="${r * 0.38}" r="${r * 0.12}" fill="${C.ldD}"/></g>`;
+// A
 $('#tbl').style.overflow = 'visible';
-$('#lgrid').innerHTML = Array.from({ length: 50 }, (_, i) => `<div class="ld0" id="g${i}" style="left:${(i % 25) * 34}px;top:${Math.floor(i / 25) * 36}px"></div>`).join('');
-$('#cSoldI').innerHTML = M.icon('check', 24, C.gold, 2.6); $('#cLeftI').innerHTML = M.icon('x', 24, C.red, 2.6);
-const METH = [['check', 'Tasty', 0], ['check', 'Healthy', 0], ['x', 'Asked people?', 1]];
-$('#meth').innerHTML = METH.map(([ic, m, bad], i) => `<div class="stp" id="mt${i}" style="top:76px;${bad ? 'background:#F6E3DC;color:#B5482F' : ''}">${M.icon(ic, 26, bad ? C.red : C.gold, 2.6)}<span>${m}</span></div>`).join('');
-// L: recipe + team
-$('#nrsI').innerHTML = M.icon('check', 20, '#fff', 3);
-$('#ig0I').innerHTML = M.icon('wheat', 30, C.gold, 2.2); $('#ig1I').innerHTML = M.icon('leaf', 30, C.gold, 2.2);
-const TEAM = [['zoya', 'Zoya', 'FOUNDER'], ['nani', 'Nani', 'RECIPE'], ['arjun', 'Arjun', 'SALES'], ['dev', 'Dev', 'DESIGN']];
-$('#tRow').innerHTML = TEAM.map(([f, n, r], i) => { const cx = 125 + i * 178; return `<div class="av face tav" id="tv${i}" style="left:${cx - 36}px;${FACE(f)}">${n[0]}</div><div class="tnm" id="tn${i}" style="left:${cx - 80}px">${n}</div><div class="trl" id="tr${i}" style="left:${cx - 80}px">${r}</div>`; }).join('');
+$('#wFace').style.cssText += ';' + FACE('rao'); $('#aFace').style.cssText += ';' + FACE('zoya');
+$('#oneCI').innerHTML = M.icon('package', 22, C.gold, 2.2);
+$('#pk6').innerHTML = `<rect x="6" y="20" width="208" height="124" rx="18" fill="#14213D"/><rect x="6" y="20" width="208" height="26" rx="10" fill="#24345A"/><text x="110" y="39" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="13" letter-spacing="2" fill="#F5E7C6">LADDOO LAB · 6</text>` +
+  [0, 1, 2].map(c => [0, 1].map(r => laddoo(50 + c * 60, 76 + r * 40, 16)).join('')).join('');
+$('#wkd').innerHTML = Array.from({ length: 40 }, (_, i) => `<div class="wd" id="wd${i}" style="left:${(i % 20) * 42}px;top:${Math.floor(i / 20) * 34}px"></div>`).join('');
+// L
+$('#askF').style.cssText += ';' + FACE('arjun');
 wrap($('#ill'), 'illOut', 784, 580);
-// D: value tiles + simple words
-$('#vgoodI').innerHTML = M.icon('check', 20, '#fff', 3);
-$('#vt0I').innerHTML = ['laddoo', 'heart', 'clock'].map(ic => M.icon(ic, 28, C.gold, 2.2)).join('');
-$('#vt1I').innerHTML = M.icon('coin', 28, C.ink, 2.2);
-const SWT = [['search', 'STEP 1', 'Find the need'], ['award', 'STEP 2', 'Serve it better'], ['repeat', 'STEP 3', 'Bring them back']];
-$('#swRow').innerHTML = SWT.map(([ic, n, t], i) => `<div class="sws" id="sw${i}" style="left:${36 + i * 243}px"><div class="zn">${n}</div><div class="zi">${M.icon(ic, 40, C.gold, 2.2)}</div><div class="zt">${t}</div></div>`).join('');
+// D
+$('#kqI').innerHTML = M.icon('heart', 44, C.gold, 2.2); $('#onePkI').innerHTML = M.icon('package', 20, '#fff', 2.4);
+$('#yRow').innerHTML = [1, 2, 3, 4, 5].map(i => `<div class="yb" id="yb${i - 1}" style="left:${24 + (i - 1) * 132}px"><i></i><span>YEAR ${i}</span></div>`).join('');
+const FR = [['coin', 'Profit per year', 'EVERY YEAR'], ['calendar', 'Years they stay', 'HOW LONG'], ['gift', 'Cost to win them', 'ONE TIME'], ['heart', 'Customer lifetime value', 'CLV']];
+$('#fRows').innerHTML = FR.map(([ic, t, e], i) => `<div class="fr4" id="fr${i}" style="top:${92 + i * 124}px"><i>${M.icon(ic, 28, C.gold, 2.2)}</i><div class="ft">${t}</div><div class="fe">${e}</div></div>`).join('') +
+  ['×', '−', '='].map((o, i) => `<div class="op" id="op${i}" style="top:${180 + i * 124}px">${o}</div>`).join('');
 wrap($('#kq'), 'kqOut', 784, 580);
-
-/* M: the two runs. Plan coords are inside a 688 x 250 svg. */
-const box = (id, x, y, ic, label, w = 110) => `<g id="${id}" transform="translate(${x} ${y})"><rect width="${w}" height="84" rx="16" fill="#FFFFFF" stroke="#E2DACB" stroke-width="2"/><g class="bi" transform="translate(${w / 2 - 14} 12)">${M.icon(ic, 28, C.ink, 2.2)}</g><text class="bt" x="${w / 2}" y="68" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="14" letter-spacing="2" fill="#8A8274">${label}</text></g>`;
-const avG = (id, face, x, y) => `<g id="${id}" transform="translate(${x} ${y})"><circle r="30" fill="#14213D"/><image href="${IMG}ll-${face}-face.jpg" x="-26" y="-26" width="52" height="52" clip-path="url(#avc)"/></g>`;
-const WALK = 10, STOP = [1, 5], V = 760 / 2.8, X0 = -30, tw = Array.from({ length: WALK }, (_, i) => tM3 - 0.25 + i * 0.36);
-const dStop = (344 - X0) / V;
-const card = (k, face, name) => `<div class="mav" style="${FACE(face)}"></div><div class="lbl mlb">${name}</div><div class="serif mrd" id="rd${k}">0 sold</div>`;
-const tail = k => `<div class="mbar" id="bar${k}"><i id="sg${k}0"></i><i id="sg${k}1"></i></div>
-    <div class="mtk" id="tk0${k}" style="left:48px">0</div><div class="mtk" id="tk1${k}" style="right:48px">50 LADDOOS</div>
-    <div class="mst" id="ms${k}"><span class="msi"></span><span class="mtx"></span><span class="tm"></span></div>`;
-$('#mLIn').innerHTML = card('L', 'zoya', 'THE SELLING WAY · MAKE FIRST') + `
-    <svg class="mplan" id="planL" width="688" height="250"><defs><clipPath id="avc"><circle cx="0" cy="0" r="26"/></clipPath><clipPath id="pclip"><rect width="688" height="250" rx="24"/></clipPath></defs>
-      <rect width="688" height="250" rx="24" fill="#F5F1E8"/>
-      ${box('sbLgate', 24, 22, 'cap', 'GATE')}${box('sbLstall', 289, 22, 'store', 'STALL')}${box('sbLbox', 554, 22, 'laddoo', '50 LEFT')}
-      <path d="M0 218 H688" stroke="#E2DACB" stroke-width="3" stroke-dasharray="10 10"/>
-      <g clip-path="url(#pclip)">${Array.from({ length: WALK }, (_, i) => `<g id="wk${i}" transform="translate(-60 218)"><circle r="19" fill="#3A4560"/><g transform="translate(-10 -10)">${M.icon('user', 20, '#fff', 2.4)}</g></g>`).join('')}</g>
-      ${avG('avZL', 'zoya', 609, 150)}
-    </svg>` + tail('L');
-$('#mRIn').innerHTML = card('R', 'zoya', 'THE MARKETING WAY · ASK FIRST') + `
-    <svg class="mplan" id="planR" width="688" height="250"><defs><clipPath id="avc2"><circle cx="0" cy="0" r="26"/></clipPath></defs>
-      <rect width="688" height="250" rx="24" fill="#F5F1E8"/>
-      ${[0, 1, 2, 3, 4].map(i => box('sbR' + i, 24 + i * 134, 22, 'home', 'FLAT ' + (i + 1), 104)).join('')}
-      ${avG('avZR', 'zoya', 76, 150).replace('#avc', '#avc2')}${avG('avAR', 'arjun', 76, 150).replace('#avc', '#avc2')}
-    </svg>
-    <div id="needs">${[['Tiffin boxes', 'laddoo'], ['Small size', 'target'], ['No refined sugar', 'leaf']].map(([n, ic], i) => `<div class="need" id="nd${i}">${M.icon(ic, 20, C.gold, 2.4)}<span>${n}</span></div>`).join('')}</div>` + tail('R');
-$('#gLeftI').innerHTML = M.icon('x', 22, C.red, 2.6);
+// M: calculator rows + chart
+const CR = [['STEP 1 · PROFIT PER PACK', ['₹120', '−', '₹80', '=', '₹40 a pack']],
+  ['STEP 2 · PROFIT PER YEAR', ['40 packs', '×', '₹40', '=', '₹1,600 a year']],
+  ['STEP 3 · YEARS SHE STAYS', ['₹1,600', '×', '5 years', '=', '₹8,000']],
+  ["STEP 4 · IN TODAY'S MONEY", ['At 10% a year', '=', '₹6,065 today']],
+  ['MINUS THE COST TO WIN HER', ['₹6,065', '−', '₹500', '=', '₹5,565']]];
+$('#cRows').innerHTML = CR.map(([l, parts], r) => `<div class="cvr" id="cv${r}" style="top:${92 + r * 88}px"><div class="zn">${l}</div><div class="eq">${parts.map((p, k) => `<span id="e${r}${k}" class="${['−', '×', '='].includes(p) ? 'o' : (k === parts.length - 1 ? 'r' : '')}">${p}</span>`).join('')}</div></div>`).join('');
+const tE = [[tSells, tEighty - 0.15, tEighty, tForty - 0.2, tForty],
+  [tForty3, tTimes4 - 0.05, tTimes4 + 0.25, tTh4 - 0.2, tTh4],
+  [tM5 + 0.2, tFive5 - 0.15, tFive5, tEight6 - 0.2, tEight6],
+  [tTen, tSix - 0.2, tSix],
+  [tM9 + 0.15, tFive9 - 0.15, tFive9, tWorth9 - 0.1, tWorth9 + 0.25]];
+const tRowOn = [tM2, tM3, tM5, tM7, tM9];
+const DISC = [1455, 1322, 1202, 1093, 993], BASE = 280, KY = 0.125, XC = [69, 206, 344, 482, 619], BWW = 84;
+$('#yGrid').innerHTML = `<line x1="0" y1="${BASE}" x2="688" y2="${BASE}" stroke="#D9D0BF" stroke-width="3" stroke-linecap="round"/>` + XC.map((x, i) => `<text id="yl${i}" x="${x}" y="${BASE + 28}" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="15" letter-spacing="2" fill="#14213D">YEAR ${i + 1}</text>`).join('');
+$('#yGhost').innerHTML = XC.map((x, i) => `<rect id="yg${i}" x="${x - BWW / 2}" y="${BASE - 1600 * KY}" width="${BWW}" height="${1600 * KY}" rx="8" fill="none" stroke="#B9B1A3" stroke-width="2.5" stroke-dasharray="6 6"/>`).join('');
+$('#yBars').innerHTML = XC.map((x, i) => `<rect id="ybr${i}" x="${x - BWW / 2}" width="${BWW}" rx="8" fill="#B8862F"/>`).join('');
+$('#yLab').innerHTML = XC.map((x, i) => `<text id="yv${i}" x="${x}" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="20" fill="#14213D"></text>`).join('');
+$('#wDots').innerHTML = Array.from({ length: 40 }, (_, i) => `<div class="wq" id="wq${i}" style="left:${20 + (i % 20) * 32}px;top:${44 + Math.floor(i / 20) * 24}px"></div>`).join('');
+$('#acqI').innerHTML = M.icon('gift', 18, C.red, 2.4);
 wrap($('#mL'), 'mLOut', 784, 580);
 
-// U: Drucker
-$('#dqI').innerHTML = M.icon('quote', 64, C.gold, 1.8);
-const DP = [['search', 'Know the customer', 0], ['target', 'The product fits', 0], ['trendUp', 'It sells itself', 1]];
-$('#dPills').innerHTML = DP.map(([ic, t, d], i) => `<div class="dp" id="dp${i}" style="${d ? 'background:#14213D;color:#fff' : ''}">${M.icon(ic, 26, d ? C.gold2 : C.gold, 2.2)}<span>${t}</span></div>` + (i < 2 ? `<svg class="da" id="da${i}" width="60" height="30"><path d="M4 15 H48 M38 5 L50 15 L38 25" fill="none" stroke="#B9B1A3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>` : '')).join('');
-// E: exchange + weeks
-$('#xn0').style.cssText += ';' + FACE('zoya'); $('#xn1').style.cssText += ';' + FACE('rao');
-$('#xk0I').innerHTML = M.icon('heart', 20, '#fff', 2.4); $('#xk1I').innerHTML = M.icon('clock', 20, '#fff', 2.4); $('#xk2I').innerHTML = M.icon('coin', 20, '#fff', 2.4);
-$('#winI').innerHTML = M.icon('check', 22, '#fff', 3);
-$('#wks').innerHTML = [1, 2, 3, 4].map(i => `<div class="wk" id="wk${i - 1}x" style="left:${48 + (i - 1) * 176}px"><div class="zn">WEEK ${i}</div><div class="zi"></div><div class="zt">Bought</div></div>`).join('') + `<div class="av face" style="right:48px;top:24px;width:56px;height:56px;${FACE('rao')}"></div>`;
-$('#rlPI').innerHTML = M.icon('heart', 22, C.gold2, 2.4);
-wrap($('#ex'), 'exOut', 784, 580);
-// P: five steps
-const P5 = [['search', 'Understand', 'needs', 'zoya', 'Zoya asks parents what their tiffins need'],
-  ['target', 'Choose and', 'stand out', 'zoya', 'Serve busy parents: the healthy tiffin sweet'],
-  ['package', 'Make the', 'right offer', 'nani', 'Small laddoos, a fair price, sold door to door'],
-  ['heart', 'Build', 'relationships', 'rao', "Mrs. Rao's pack is ready every week"],
-  ['coin', 'Capture', 'value', 'arjun', 'Arjun counts sales, profit and regular families']];
-$('#p5').innerHTML = P5.map(([ic, a, b], i) => `<div class="st5" id="pst${i}" style="left:${160 + i * 326}px"><div class="bg"></div><div class="sn">0${i + 1}</div><div class="si"></div><div class="s1">${a}</div><div class="s2">${b}</div></div>` + (i < 4 ? `<div class="cx" id="cx${i}" style="left:${454 + i * 326}px">${M.icon('arrowR', 18, C.gold, 2.6)}</div>` : '')).join('');
-$('#pePans').innerHTML = [[null, 'The marketing process', 'From a need to a loyal customer']].concat(P5.map((p, i) => [p[3], `STEP 0${i + 1} · AT LADDOO LAB`, p[4]])).map(([f, l, x], k) =>
-  `<div class="pex" id="pex${k}"><div class="lbl">${k ? l : 'KOTLER AND ARMSTRONG · 5 STEPS'}</div>${f ? `<div class="pa" style="${FACE(f)}"></div>` : `<div class="pi">${M.icon('repeat', 36, C.gold, 2.2)}</div>`}<div class="pt2">${k ? x : 'From a need to a loyal customer'}</div></div>`).join('');
-
-// K: at work today
+// K: four levers
 const KA = [
-  ['search', 'Needs', 'Ask before you make', 'Zoya asks parents before Nani cooks', 'phone', 'A phone maker asks users what annoys them'],
-  ['award', 'Value', 'More good for the price', 'Healthy, tasty and ready for the tiffin', 'bank', 'A bank opens your account on your phone'],
-  ['swap', 'Exchange', 'Both sides must win', 'A healthy snack for ₹120 a pack', 'store', 'A bakery sells fresh bread at a fair price'],
-  ['repeat', 'Relationships', 'Bring people back', 'Mrs. Rao orders again every week', 'phone', 'A delivery app remembers your favourite order'],
+  ['coin', 'Profit per sale', 'More profit per sale', 'Earn a little more each time', 'A festive gift box earns more per order', 'phone', 'A phone maker sells a cover and earphones too'],
+  ['repeat', 'How often', 'Buy more often', 'Give reasons to come back sooner', 'A second pack for after-school snacks', 'cup', 'A coffee shop stamp card brings you back sooner'],
+  ['calendar', 'How long', 'Stay longer', 'Make staying the easy choice', 'Sunday delivery keeps families for years', 'dumbbell', 'A gym offers a cheaper yearly plan'],
+  ['gift', 'Cost to win', 'Cost less to win', 'Let happy customers bring friends', "Mrs. Rao's two friends cost nothing to win", 'bank', 'A bank rewards customers who bring a friend'],
 ];
 $('#kRows').innerHTML = KA.map(([ic, t], i) => `<div class="kr" id="kr${i}" style="top:${100 + i * 120}px"><div class="bg"></div><div class="rn">0${i + 1}</div><div class="ri"></div><div class="rt">${t}</div></div>`).join('');
-const KP = [['MARKETING TODAY', 'Four ideas', 'You will see them in every business', null]].concat(KA.map((a, i) => [`IN PRACTICE 0${i + 1} / 04`, a[1], a[2], a]));
+const KP = [['PROFIT × YEARS − COST TO WIN', 'Four levers', 'Pull any one, and lifetime value grows', null]].concat(KA.map((a, i) => [`LEVER 0${i + 1} / 04`, a[2], a[3], a]));
 $('#kPans').innerHTML = KP.map(([s, t, m, a], i) => `<div class="pn" id="kn${i}"><div class="ps">${s}</div><div class="serif pt">${t}</div><div class="pm">${m}</div><div class="hr"></div>` +
-  (a ? `<div class="ka" id="ka${i}0" style="top:322px"><i>${M.icon('laddoo', 34, C.gold, 2.2)}</i><div class="kl">AT LADDOO LAB</div><div class="kt">${a[3]}</div></div>
-        <div class="ka" id="ka${i}1" style="top:442px"><i>${M.icon(a[4], 34, C.ink, 2.2)}</i><div class="kl">AT WORK TODAY</div><div class="kt">${a[5]}</div></div>`
-     : `<div class="px">FROM A HOME KITCHEN TO A BANK</div><div class="pe"><i>${M.icon('store', 34, C.gold, 2.2)}</i><span>Same ideas, any size of business</span></div>`) + `</div>`).join('');
+  (a ? `<div class="ka" id="ka${i}0" style="top:322px"><i>${M.icon('laddoo', 34, C.gold, 2.2)}</i><div class="kl">AT LADDOO LAB</div><div class="kt">${a[4]}</div></div>
+        <div class="ka" id="ka${i}1" style="top:442px"><i>${M.icon(a[5], 34, C.ink, 2.2)}</i><div class="kl">AT WORK TODAY</div><div class="kt">${a[6]}</div></div>`
+     : `<div class="px">FROM A HOME KITCHEN TO A BANK</div><div class="pe"><i>${M.icon('trendUp', 34, C.gold, 2.2)}</i><span>Same levers, any size of business</span></div>`) + `</div>`).join('');
 
-// X: the human side
-const XG = [['search', 'Find what you need'], ['trendUp', 'Small makers grow']];
-const XH = [['ban', 'False claims'], ['trendDown', 'Needless buying']];
+// X
+const XG = [['coin', 'Spend wisely'], ['heart', 'Keep the best']];
+const XH = [['help', 'Only a guess'], ['ban', 'Small buyers ignored']];
 $('#xChips').innerHTML = XG.map(([ic, t], i) => `<div class="xc" id="xg${i}" style="left:48px;top:${392 + i * 60}px">${M.icon(ic, 22, C.gold, 2.4)}<span>${t}</span></div>`).join('') +
   XH.map(([ic, t], i) => `<div class="xc" id="xh${i}" style="left:408px;top:${392 + i * 60}px">${M.icon(ic, 22, C.red, 2.4)}<span>${t}</span></div>`).join('');
 const pan = (col, n) => `<line x1="-70" y1="86" x2="0" y2="0" stroke="#3A4560" stroke-width="3"/><line x1="70" y1="86" x2="0" y2="0" stroke="#3A4560" stroke-width="3"/>` +
   Array.from({ length: 2 }, (_, i) => `<rect id="wt${n}${i}" x="${-40 + i * 44}" y="52" width="36" height="34" rx="6" fill="${col}"/>`).join('') +
   `<path d="M-84 86 H84 C84 112 50 122 0 122 C-50 122 -84 112 -84 86Z" fill="#E2DACB" stroke="#3A4560" stroke-width="3"/>`;
 $('#panL').innerHTML = pan('#B8862F', 'L'); $('#panR').innerHTML = pan('#B5482F', 'R');
-$('#pkL').innerHTML = [64, 100, 136].map(x => laddoo(x, 256, 16)).join('');
-$('#bb2I').innerHTML = M.icon('check', 22, '#fff', 3); $('#factI').innerHTML = M.icon('scale', 34, C.ink, 2.2);
-$('#bothI').innerHTML = M.icon('heart', 52, C.gold, 2.2);
+const CG = [['True friends', 'HIGH PROFIT · LOYAL', 'Mrs. Rao'], ['Butterflies', 'HIGH PROFIT · SHORT STAY', 'Festive gift-box buyers'], ['Barnacles', 'LOW PROFIT · LOYAL', 'A small shop, 1 pack a month'], ['Strangers', 'LOW PROFIT · SHORT STAY', 'One-time trial takers']];
+$('#cGrid').innerHTML = CG.map(([n, l, e], i) => `<div class="cg" id="cg${i}" style="left:${48 + (i % 2) * 352}px;top:${84 + Math.floor(i / 2) * 124}px"><div class="cn">${n}</div><div class="cl">${l}</div><div class="ce">${e}</div></div>`).join('');
+$('#bb2I').innerHTML = M.icon('check', 22, '#fff', 3);
+$('#bothI').innerHTML = M.icon('scale', 52, C.gold, 2.2);
 wrap($('#xs'), 'xsOut', 784, 580);
 
 // quiz
-const OPTS = ['Selling', 'Marketing', 'Advertising', 'Production'], RIGHT = 1;
+const OPTS = ['₹1,600', '₹4,800', '₹8,000', '₹24,000'], RIGHT = 2;
 $('#opts').innerHTML = OPTS.map((o, i) => `<div class="opt" id="o${i}" style="left:${160 + i * 408}px"><div class="bg"></div><div class="lt">${'ABCD'[i]}</div><div class="ot serif">${o}</div><div class="ok">${M.icon('check', 30, '#fff', 3)}</div></div>`).join('');
-$('#takeI').innerHTML = M.icon('search', 44, C.gold2, 2.4);
+$('#takeI').innerHTML = M.icon('coin', 44, C.gold2, 2.4);
 // recap
-const ROWS = [['search', 'Find the need, serve it better', ['Better than others']], ['swap', 'Exchange: value for money', ['Value', 'Money']], ['repeat', 'Build relationships', ['They come back']]];
+const ROWS = [['heart', 'All the profit from one customer', ['One customer', 'All the years']], ['coin', 'The formula', ['Profit × years', '− Cost to win', "Today's money"]], ['trendUp', 'Four levers', ['Profit', 'Visits', 'Stays', 'Wins']]];
 $('#rRows').innerHTML = ROWS.map(([ic, tx, ps], i) => `<div class="card rw" id="rw${i}" style="top:${280 + i * 152}px"><div class="rn">0${i + 1}</div><div class="ri">${M.icon(ic, 34, C.gold, 2.2)}</div><div class="rt">${tx}</div>${ps.map((p, k) => `<div class="fp" id="fp${i}${k}">${p}</div>`).join('')}</div>`).join('');
 $('#nextI').innerHTML = M.icon('arrowR', 40, C.gold2, 2.4);
 
@@ -184,88 +143,15 @@ const sweepX = t => { for (const [a, b] of SW) { const a1 = M.io((t - a) / 0.42)
 const setIco = (el, ic, col, s = 32, w = 2.2) => { const k = ic + col + s; if (el._k !== k) { el._k = k; el.innerHTML = M.icon(ic, s, col, w); } };
 const snap = (el, v, prop = 'transform') => { if (el.style[prop] !== v) el.style[prop] = v; };
 const attr = (el, a, v) => { if (el['_' + a] !== v) { el['_' + a] = v; el.setAttribute(a, v); } };
-// a card that starts at full width (1600) and shrinks to 784 when its sibling arrives
 const grow = (card, inner, t, tShrink) => {
   const sh = M.spring(t - tShrink + 0.1, M.HEAVY), w = M.lerp(1600, 784, sh);
   snap(card, (sh >= 1 ? 784 : w.toFixed(1)) + 'px', 'width');
   snap(inner, (sh >= 1 ? 0 : ((w - 784) / 2).toFixed(1)) + 'px', 'left');
   return sh;
 };
-// step pill of a run
-const pill = (k, t, ic, tx, tm, bad, fin) => {
-  const ms = $('#ms' + k);
-  setIco(ms.querySelector('.msi'), ic, fin ? '#fff' : (bad ? C.red : C.gold), 26, 2.4);
-  M.setT(ms.querySelector('.mtx'), tx); M.setT(ms.querySelector('.tm'), tm);
-  const bg = fin ? (bad ? C.red : C.gold) : (bad ? C.redBg : C.paper), fg = fin ? '#fff' : (bad ? C.red : C.ink);
-  if (ms._bg !== bg) { ms._bg = bg; ms.style.background = bg; ms.style.color = fg; }
-};
-const bars = (k, sold, left) => {
-  const g = $('#sg' + k + '0'), r = $('#sg' + k + '1'), gw = 688 * sold / 50, rw = 688 * left / 50;
-  g.style.left = '0px'; g.style.width = gw.toFixed(1) + 'px'; g.style.background = C.gold;
-  r.style.left = (688 - rw).toFixed(1) + 'px'; r.style.width = rw.toFixed(1) + 'px'; r.style.background = C.red2;
-};
-const boxHi = (id, state) => { // 0 idle, 1 active, 2 done
-  const g = $('#' + id), r = g.querySelector('rect');
-  attr(r, 'stroke', state ? C.gold : C.line); attr(r, 'stroke-width', state ? 4 : 2); attr(r, 'fill', state === 2 ? C.gold3 : '#FFFFFF');
-};
-// selling run: walkers past the stall at the college gate
-const walkX = (i, t) => {
-  const s = t - tw[i]; if (s < 0) return null;
-  if (!STOP.includes(i)) return X0 + V * s;
-  if (s < dStop) return X0 + V * s; if (s < dStop + 0.9) return 344; return 344 + V * (s - dStop - 0.9);
-};
-const soldL = t => STOP.reduce((a, i) => a + 4 * M.io((t - tw[i] - dStop - 0.25) / 0.35), 0);
-const runL = t => {
-  for (let i = 0; i < WALK; i++) {
-    const g = $('#wk' + i), x = walkX(i, t);
-    if (x === null || x > 730) { M.hide(g, true); continue; }
-    M.hide(g, false); attr(g, 'transform', `translate(${x.toFixed(1)} 218)`);
-    const buy = STOP.includes(i) && t > tw[i] + dStop + 0.2;
-    attr(g.querySelector('circle'), 'fill', buy ? C.gold : C.ink2);
-  }
-  const sold = soldL(t), n = Math.round(sold), done = t >= tM4;
-  const zx = M.lerp(609, 344, M.io((t - tWaits) / 0.8));
-  attr($('#avZL'), 'transform', `translate(${zx.toFixed(1)} 150)`);
-  M.setT($('#rdL'), `${n} sold`); $('#rdL').style.color = done ? C.red : C.ink;
-  M.setT($('#sbLbox').querySelector('.bt'), `${50 - n} LEFT`);
-  boxHi('sbLstall', t >= tWaits + 0.6 && !done ? 1 : 0); boxHi('sbLbox', t >= tMakes && t < tWaits ? 1 : 0);
-  const lf = 42 * M.o3((t - tM4 - 0.1) / 0.8);
-  bars('L', sold, lf);
-  if (done) pill('L', t, 'x', '42 left over', '8 sold', 1, 1);
-  else if (t >= tM3) pill('L', t, 'users', 'Most people walk past', '', 1, 0);
-  else if (t >= tWaits) pill('L', t, 'cap', 'Wait at the college gate', '', 0, 0);
-  else if (t >= tMakes) pill('L', t, 'laddoo', 'Make 50 big laddoos', '', 0, 0);
-  else pill('L', t, 'clock', 'Ready', '', 0, 0);
-  return sold;
-};
-// marketing run: ask first (Zoya), then Arjun door to door
-const DX = [76, 210, 344, 478, 612];
-const tv = [tAsks - 0.15, tAsks + 0.75, tAsks + 1.65];
-const zTrack = M.track(76, [[tv[1] - 0.5, 210], [tv[2] - 0.5, 344]], M.SOFT);
-const tA = DX.map((_, i) => tArjun + 0.45 + i * (tSoldR - tArjun - 0.45) / 4);
-const aTrack = M.track(76, DX.slice(1).map((x, i) => [tA[i + 1] - 0.5, x]), M.SOFT);
-const soldR = t => tA.reduce((a, ta) => a + 9.2 * M.io((t - ta) / 0.3), 0);
-const runR = t => {
-  const done = t >= tSoldR + 0.25, sold = soldR(t), n = Math.round(sold);
-  const zx = zTrack(t), ax = aTrack(t);
-  attr($('#avZR'), 'transform', `translate(${zx.toFixed(1)} 150)`); attr($('#avAR'), 'transform', `translate(${ax.toFixed(1)} 150)`);
-  const zo = 1 - M.clamp((t - tArjun) / 0.25), ao = M.clamp((t - tArjun) / 0.25);
-  $('#avZR').style.opacity = zo.toFixed(3); M.hide($('#avZR'), zo <= 0); $('#avAR').style.opacity = ao.toFixed(3); M.hide($('#avAR'), ao <= 0);
-  DX.forEach((_, i) => {
-    const asking = i < 3 && t >= tv[i] && t < tv[i] + 0.85, sd = t >= tA[i];
-    boxHi('sbR' + i, sd ? 2 : (asking ? 1 : 0));
-    M.setT($('#sbR' + i).querySelector('.bt'), sd ? 'SOLD' : 'FLAT ' + (i + 1));
-    attr($('#sbR' + i).querySelector('.bt'), 'fill', sd ? C.gold : C.muted);
-    const bi = $('#sbR' + i).querySelector('.bi'); if (bi._s !== sd) { bi._s = sd; bi.innerHTML = M.icon(sd ? 'check' : 'home', 28, sd ? C.gold : C.ink, sd ? 2.8 : 2.2); }
-  });
-  M.setT($('#rdR'), `${n} sold`); $('#rdR').style.color = done ? C.gold : C.ink;
-  bars('R', sold, 4 * M.o3((t - tSoldR - 0.3) / 0.6));
-  if (done) pill('R', t, 'check', '46 sold', '4 left', 0, 1);
-  else if (t >= tArjun) pill('R', t, 'home', 'Arjun goes door to door', '', 0, 0);
-  else if (t >= tM7) pill('R', t, 'laddoo', 'Nani makes small laddoos', '', 0, 0);
-  else if (t >= tM6) pill('R', t, 'heart', 'Need: a healthy tiffin sweet', '', 0, 0);
-  else pill('R', t, 'message', 'Ask the parents first', '', 0, 0);
-};
+// running readout: value steps, each counted from the previous one
+const RD = [[tForty, 40], [tTh4, 1600], [tEight6, 8000], [tSix, 6065], [tWorth9 + 0.25, 5565]];
+const readout = t => { let v = 0, prev = 0; for (const [a, b] of RD) { if (t >= a) { v = prev + (b - prev) * M.o5((t - a) / 0.5); prev = b; } } return v; };
 
 let geo = null;
 function measure() {
@@ -274,29 +160,18 @@ function measure() {
   const w = ti.offsetWidth, h = ti.offsetHeight;
   geo = { sx: 960 - w / 2, sy: 540 - h / 2 - 20, ex: 160, ey: 156, es: 56 / fs, cw: $('#eyebrow').offsetWidth, cy: 540 - h / 2 - 112 };
   const ex = $('#exChip'); ex.style.left = (1760 - ex.offsetWidth) + 'px'; ex.style.top = '170px';
-  let x = 36; for (let i = 0; i < 3; i++) { const p = $('#mt' + i); p.style.left = x + 'px'; x += p.offsetWidth + 16; }
-  const cl = $('#cLeft'); cl.style.left = (884 - cl.offsetWidth) + 'px';
-  // kitchen tags sit beside the two figures while the card is full width
-  const tz = $('#tgZ'); tz.style.left = (128 - tz.offsetWidth) + 'px'; $('#tgN').style.left = '648px';
-  for (let i = 0; i < 2; i++) { const g = $('#ig' + i); g.querySelector('.id').style.left = (88 + g.querySelector('.in').offsetWidth + 16) + 'px'; }
-  for (let i = 0; i < 5; i++) { const q = $('#ql' + i); if (q.offsetWidth > 688) q.style.fontSize = Math.floor(30 * 688 / q.offsetWidth) + 'px'; }
-  const gl = $('#gLeft'); gl.style.left = (392 - gl.offsetWidth / 2) + 'px';
-  let tot = 0; const nds = [0, 1, 2].map(i => $('#nd' + i)); nds.forEach(n => tot += n.offsetWidth); tot += 32;
-  x = 344 - tot / 2; nds.forEach(n => { n.style.left = x + 'px'; x += n.offsetWidth + 16; });
-  $('#druB').style.left = (64 + $('#druN').offsetWidth + 28) + 'px';
-  x = 64; for (let i = 0; i < 3; i++) { const p = $('#dp' + i); p.style.left = x + 'px'; x += p.offsetWidth + 16; if (i < 2) { $('#da' + i).style.left = x + 'px'; x += 76; } }
-  // exchange chips park on the lanes
-  const k0 = $('#xk0'), k1 = $('#xk1'), k2 = $('#xk2'), t2 = k0.offsetWidth + k1.offsetWidth + 16;
-  geo.xk = [[178, 392 - t2 / 2, 172], [178, 392 - t2 / 2 + k0.offsetWidth + 16, 172], [606 - k2.offsetWidth, 392 - k2.offsetWidth / 2, 396]];
-  const wn = $('#win'); wn.style.left = (392 - wn.offsetWidth / 2) + 'px';
-  document.querySelectorAll('.st5 .s1, .st5 .s2').forEach(el => { if (el.offsetWidth > 238) el.style.fontSize = Math.floor(32 * 238 / el.offsetWidth) + 'px'; });
-  const b0 = $('#bkl0'), b1 = $('#bkl1'); b0.style.left = (160 + 636 - b0.offsetWidth / 2) + 'px'; b1.style.left = (160 + 1451 - b1.offsetWidth / 2) + 'px';
+  const tr = $('#tgR'); tr.style.left = (60 - tr.offsetWidth) + 'px'; tr.style.top = '240px';
+  const td = $('#tgD'); td.style.left = '724px'; td.style.top = '300px';
   document.querySelectorAll('#kPans .pt').forEach(el => { if (el.offsetWidth > 848) el.style.fontSize = Math.floor(84 * 848 / el.offsetWidth) + 'px'; });
+  document.querySelectorAll('#kPans .pm').forEach(el => { if (el.offsetWidth > 848) el.style.fontSize = Math.floor(36 * 848 / el.offsetWidth) + 'px'; });
   document.querySelectorAll('#kPans .kt').forEach(el => { if (el.offsetWidth > 748) el.style.fontSize = Math.floor(30 * 748 / el.offsetWidth) + 'px'; });
+  document.querySelectorAll('.cg .ce').forEach(el => { if (el.offsetWidth > 300) el.style.fontSize = Math.floor(20 * 300 / el.offsetWidth) + 'px'; });
+  ['qq1', 'qq2'].forEach(id => { const q = $('#' + id); if (q.offsetWidth > 1400) q.style.fontSize = Math.floor(68 * 1400 / q.offsetWidth) + 'px'; });
   OPTS.forEach((_, i) => { const o = $('#o' + i + ' .ot'); if (o.offsetWidth > 312) o.style.fontSize = Math.floor(40 * 312 / o.offsetWidth) + 'px'; });
   ROWS.forEach(([, , ps], i) => { let x = 216 + $('#rw' + i + ' .rt').offsetWidth + 40; ps.forEach((_, k) => { const p = $('#fp' + i + k); p.style.left = x + 'px'; x += p.offsetWidth + 16; }); });
 }
 const tiltT = M.track(0, [[tXg[0] + 0.1, -6], [tXg[1] + 0.1, -12], [tXh[0] + 0.1, -6], [tXh[1] + 0.1, 0]], M.SOFT);
+const POPo = { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 };
 
 /* ---------- frame ---------- */
 M.on(t => {
@@ -314,10 +189,9 @@ M.on(t => {
   M.draw($('#ruleL'), t, 0.95, 0.7, M.o3);
   M.vis($('#rule'), t, 0.9, tMorph - 0.1, { dy: 0, outDur: 0.25, ody: 0 });
   M.rise($('#sub'), t, 1.15, { st: 0.04, out: tMorph - 0.1, outDur: 0.3 });
-  const exOn = t < tL1 ? [tMorph + 0.6, tAout] : t < tT ? [tM1 + 0.4, tMout] : [tE3 - 0.1, tEout];
-  M.vis($('#exChip'), t, exOn[0], exOn[1], { dy: 10, outDur: 0.3 });
+  M.vis($('#exChip'), t, t < tT ? tM1 + 0.4 : 1e9, tMout, { dy: 10, outDur: 0.3 });
 
-  /* ===== A: fifty laddoos, eight sold ===== */
+  /* ===== A: a 120 rupee customer? ===== */
   const aOn = t < tL1 + 0.2; M.hide($('#sA'), !aOn);
   if (aOn) {
     const o = { outDur: 0.3, ody: -16 };
@@ -326,102 +200,115 @@ M.on(t => {
     M.vis($('#tbl'), t, tMorph + 0.35, 1e9, { dy: 20 });
     M.rise($('#hname'), t, tMorph + 0.6, { st: 0.06 }); M.vis($('#htag'), t, tMorph + 0.8, 1e9, { dy: 10 });
     M.vis($('#ways'), t, tMorph + 0.3, tAout, { dy: 36, ...o });
-    for (let i = 0; i < 50; i++) {
-      const el = $('#g' + i), ta = tMorph + 0.55 + i * 0.018;
-      M.vis(el, t, ta, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.06 });
-      const s = i < 8 ? M.io((t - tEight - i * 0.04) / 0.25) : 0, l = i >= 8 ? M.io((t - tEight - 0.55 - (i - 8) * 0.012) / 0.25) : 0;
-      el.style.background = mix(mix(C.ld, C.gold, s), C.red2, l);
-      el.style.boxShadow = s > 0.5 ? '0 0 0 3px ' + C.gold3 : 'none';
+    M.vis($('#wFace'), t, tMorph + 0.5, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.08 });
+    M.rise($('#oneV'), t, tMorph + 0.55, { st: 0.06, sp: M.HEAVY });
+    M.vis($('#pk6'), t, tMorph + 0.7, 1e9, { dy: 20, sp: M.SOFT });
+    M.vis($('#oneC'), t, tCust - 0.1, 1e9, POPo);
+    M.vis($('#ask'), t, tC2 - 0.15, tAout, { dy: 36, ...o });
+    M.vis($('#aFace'), t, tC2 + 0.1, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.08 });
+    for (let i = 0; i < 40; i++) {
+      const el = $('#wd' + i); M.vis(el, t, tC2 + 0.2 + i * 0.01, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.06 });
+      el.style.background = mix(C.line, C.gold, M.io((t - (tEvery + (tAfter + 0.4 - tEvery) * i / 40)) / 0.2));
     }
-    M.vis($('#cSold'), t, tEight - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 }); M.count($('#cSoldN'), t, tEight, 0.5, 0, 8);
-    M.vis($('#cLeft'), t, tEight + 0.6, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
-    M.vis($('#ask'), t, tMorph + 0.42, tAout, { dy: 36, ...o });
-    M.vis($('#mt0'), t, tGreat - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
-    M.vis($('#mt1'), t, tGreat + 0.25, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
-    M.vis($('#mt2'), t, tAsked - 0.1, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
-    M.rise($('#askT'), t, tNever - 0.05, { st: 0.07, sp: M.HEAVY });
+    M.rise($('#askQ'), t, tSo - 0.05, { st: 0.07, sp: M.HEAVY });
+    // the one sale dims once Zoya counts every week
+    $('#oneV').style.color = mix(C.ink, C.dim, M.io((t - tEvery) / 0.4));
   }
 
-  /* ===== L: meet Laddoo Lab ===== */
+  /* ===== L: Dev's idea ===== */
   const lOn = t >= tL1 - 0.1 && t < tD1 + 0.2; M.hide($('#sL'), !lOn);
   if (lOn) {
     const o = { outDur: 0.3, ody: -16 };
     const ill = $('#ill'); M.vis(ill, t, tL1 + 0.1, tLout, { dy: 36, ...o }); grow(ill, $('#illOut'), t, tL2);
     M.vis($('#illImg'), t, tL1 + 0.3, 1e9, { dy: 24, sp: M.SOFT });
-    M.vis($('#tgZ'), t, tZoya - 0.05, tL2 - 0.3, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1, outDur: 0.2, osc: 0.9, ody: 0 });
-    M.vis($('#tgN'), t, tNani - 0.05, tL2 - 0.3, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1, outDur: 0.2, osc: 0.9, ody: 0 });
-    M.vis($('#rcp'), t, tL2 + 0.12, tLout, { dx: 60, dy: 0, ...o });
-    M.vis($('#ig0'), t, tRagi - 0.05, 1e9, { dy: 16 }); M.vis($('#ig1'), t, tJag - 0.05, 1e9, { dy: 16 });
-    M.vis($('#nrs'), t, tCane + 0.2, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
-    M.vis($('#team'), t, tL3 + 0.05, tLout, { dy: 36, ...o });
-    const tTv = [tL3 + 0.3, tL3 + 0.42, tArj - 0.05, tDev - 0.05];
-    TEAM.forEach((_, i) => {
-      M.vis($('#tv' + i), t, tTv[i], 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.08 });
-      M.vis($('#tn' + i), t, tTv[i] + 0.08, 1e9, { dy: 10 }); M.vis($('#tr' + i), t, tTv[i] + 0.14, 1e9, { dy: 8 });
-      const on = i >= 2 ? M.io((t - tTv[i]) / 0.25) * (1 - (i === 2 ? M.io((t - tDev + 0.05) / 0.25) : 0)) : 0;
-      $('#tv' + i).style.boxShadow = '0 0 0 4px ' + mix(C.ink, C.gold, on);
-    });
+    M.vis($('#tgR'), t, tTagR - 0.05, tL2 - 0.3, { ...POPo, outDur: 0.2, osc: 0.9, ody: 0 });
+    M.vis($('#tgD'), t, tTagD - 0.05, tL2 - 0.3, { ...POPo, outDur: 0.2, osc: 0.9, ody: 0 });
+    M.vis($('#offer'), t, tL2 + 0.12, tLout, { dx: 60, dy: 0, ...o });
+    M.vis($('#dvR'), t, tDevL - 0.1, 1e9, { dx: 24, dy: 0 });
+    M.vis($('#eq0'), t, tFive - 0.1, 1e9, POPo);
+    M.draw($('#eqAP'), t, tWinL - 0.4, 0.4, M.o3);
+    M.vis($('#eq1'), t, tWinL - 0.05, 1e9, POPo);
+    M.vis($('#askS'), t, tArjL - 0.15, 1e9, { dy: 24 });
+    M.rise($('#askS .g1'), t, tArjL + 0.1, { st: 0.04 });
+    M.vis($('#askS .g2'), t, tArjL + 0.4, 1e9, { dy: 10 });
   }
 
-  /* ===== D: what is marketing ===== */
+  /* ===== D: what is CLV ===== */
   const dOn = t >= tD1 - 0.1 && t < tM1 + 0.2; M.hide($('#sD'), !dOn);
   if (dOn) {
     const o = { outDur: 0.3, ody: -16 };
     M.rise($('#dq'), t, tD1 + 0.05, { st: 0.07, sp: M.HEAVY, out: tD2 - 0.1, outDur: 0.3 });
     const kq = $('#kq'); M.vis(kq, t, tD2 + 0.05, tDout, { dy: 36, ...o }); grow(kq, $('#kqOut'), t, tD4);
-    M.vis($('#bookS'), t, tD2 + 0.25, 1e9, { dy: 20, sp: M.SOFT });
-    ['bl1', 'bl2', 'bl3'].forEach((id, k) => M.vis($('#' + id), t, tD2 + 0.5 + k * 0.08, 1e9, { dy: 0, fade: 0.15 }));
-    M.rise($('#kot1'), t, wt('D2', 'Philip') - 0.05, { st: 0.06, sp: M.HEAVY });
-    M.rise($('#kot2'), t, wt('D2', 'Gary') - 0.1, { st: 0.06, sp: M.HEAVY });
-    M.vis($('#kbk'), t, wt('D2', 'Principles') - 0.05, 1e9, { dy: 10 });
-    M.vis($('#kqHr'), t, tD3 - 0.2, 1e9, { dy: 0 });
-    for (let i = 0; i < 5; i++) { const q = $('#ql' + i); M.vis(q, t, tKqL + i * 0.1, 1e9, { dy: 14 }); q.style.color = mix(C.dim, C.ink, M.io((t - tD3 - i * 0.45) / 0.3)); }
-    tHl.forEach((th, i) => { const u = M.io((t - th + 0.05) / 0.3); $('#hl' + i).style.color = u <= 0 ? '' : mix(C.ink, C.gold, u); });
-    M.vis($('#vc'), t, tD4 + 0.12, tDout, { dx: 60, dy: 0, ...o });
-    M.vis($('#vt0'), t, tGood - 0.1, 1e9, { dy: 0, sc: 0.8, sp: M.POP, fade: 0.1 });
-    M.vis($('#vgt'), t, tPay - 0.2, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.1 });
-    M.vis($('#vt1'), t, tPay - 0.05, 1e9, { dy: 0, sc: 0.8, sp: M.POP, fade: 0.1 });
-    M.vis($('#vgood'), t, tPay + 0.5, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
-    $('#vt0').style.background = mix(C.paper, C.gold3, M.io((t - tPay - 0.5) / 0.3));
-    M.vis($('#sw'), t, tD5 + 0.05, tDout, { dy: 36, ...o });
-    SWT.forEach((_, i) => {
-      const el = $('#sw' + i); M.vis(el, t, tSw[i] - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
-      const on = M.io((t - tSw[i]) / 0.25) * (1 - (i < 2 ? M.io((t - tSw[i + 1]) / 0.25) : 0));
-      el.style.background = mix(C.paper, C.ink, on);
-      el.querySelector('.zt').style.color = mix(C.ink, '#fff', on); el.querySelector('.zn').style.color = mix(C.muted, C.gold2, on);
-      setIco(el.querySelector('.zi'), SWT[i][0], on > 0.5 ? C.gold2 : C.gold, 40, 2.2);
+    M.vis($('#kqI'), t, tD2 + 0.25, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.08 });
+    M.rise($('#kqT'), t, tD2 + 0.3, { st: 0.06, sp: M.HEAVY }); M.vis($('#kqS'), t, tTotal - 0.05, 1e9, { dy: 10 });
+    M.vis($('#kqHr'), t, tD3 - 0.3, 1e9, { dy: 0 });
+    M.vis($('#lr0'), t, tD3 - 0.1, 1e9, { dy: 16 }); M.vis($('#onePk'), t, tOne, 1e9, POPo);
+    M.vis($('#lr1'), t, tEv - 0.1, 1e9, { dy: 16 });
+    for (let i = 0; i < 5; i++) {
+      const y = $('#yb' + i); M.vis(y, t, tEv + i * 0.08, 1e9, { dy: 0, sc: 0.8, sp: M.POP, fade: 0.1 });
+      y.querySelector('i').style.width = (116 * M.o3((t - tYrs - i * 0.12) / 0.4)).toFixed(1) + 'px';
+      y.querySelector('span').style.color = mix(C.muted, '#fff', M.io((t - tYrs - i * 0.12 - 0.15) / 0.2));
+    }
+    $('#onePk').style.opacity = (1 - 0.55 * M.io((t - tYrs) / 0.4)).toFixed(3);
+    M.vis($('#fm'), t, tD4 + 0.12, tDout, { dx: 60, dy: 0, ...o });
+    FR.forEach((_, i) => {
+      const el = $('#fr' + i); M.vis(el, t, tF[i] - 0.1, 1e9, { dy: 16 });
+      const fin = i === 3, on = M.io((t - tF[i]) / 0.25) * (fin ? 1 : 1 - M.io((t - (tF[i + 1])) / 0.3));
+      el.style.background = fin ? mix(C.paper, C.ink, M.io((t - tF[3]) / 0.3)) : mix(C.paper, C.gold3, on);
+      el.querySelector('.ft').style.color = fin ? mix(C.ink, '#fff', M.io((t - tF[3]) / 0.3)) : C.ink;
+      el.querySelector('.fe').style.color = fin ? mix(C.muted, C.gold2, M.io((t - tF[3]) / 0.3)) : C.muted;
+      el.style.boxShadow = !fin && on > 0.01 ? `0 0 0 3px ${M.rgba(C.gold, on)}` : 'none';
     });
+    for (let i = 0; i < 3; i++) M.vis($('#op' + i), t, tOp[i] - 0.1, 1e9, { dy: 0, sc: 0.4, sp: M.POP, fade: 0.08 });
   }
 
-  /* ===== M: selling vs marketing ===== */
+  /* ===== M: working it out ===== */
   const mOn = t >= tM1 - 0.1 && t < tT + 0.1; M.hide($('#sM'), !mOn);
   if (mOn) {
     const o = { outDur: 0.3, ody: -16 };
     M.vis($('#mL'), t, tM1 + 0.1, tMout, { dx: -60, dy: 0, ...o });
-    M.vis($('#mW'), t, tM1 + 0.25, tM5 - 0.05, { dx: 60, dy: 0, outDur: 0.25, ody: 0 });
-    M.vis($('#mR'), t, tM5 + 0.2, tMout, { dx: 60, dy: 0, ...o });
-    for (const k of ['L', 'R']) {
-      const base = k === 'L' ? tM1 + 0.3 : tM5 + 0.3;
-      const root = $('#m' + k + 'In');
-      M.vis(root.querySelector('.mav'), t, base, 1e9, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.08 });
-      M.vis(root.querySelector('.mlb'), t, base + 0.08, 1e9, { dy: 10 });
-      M.vis($('#rd' + k), t, base + 0.12, 1e9, { dy: 10 });
-      M.vis($('#plan' + k), t, base + 0.1, 1e9, { dy: 20, sp: M.SOFT });
-      M.vis($('#bar' + k), t, base + 0.35, 1e9, { dy: 10 });
-      M.vis($('#tk0' + k), t, base + 0.4, 1e9, { dy: 8 }); M.vis($('#tk1' + k), t, base + 0.4, 1e9, { dy: 8 });
-      M.vis($('#ms' + k), t, base + 0.45, 1e9, { dy: 0, sc: 0.8, sp: M.POP, fade: 0.1 });
+    M.vis($('#mR'), t, tM1 + 0.25, tMout, { dx: 60, dy: 0, ...o });
+    CR.forEach(([, parts], r) => {
+      const row = $('#cv' + r); M.vis(row, t, tM1 + 0.4 + r * 0.07, 1e9, { dy: 14 });
+      const nx = r < 4 ? tRowOn[r + 1] : 1e9, act = M.io((t - tRowOn[r]) / 0.25) * (1 - M.io((t - nx) / 0.3)), fin = r === 4 ? M.io((t - tE[4][4]) / 0.3) : 0;
+      row.style.boxShadow = act > 0.01 && r < 4 ? `0 0 0 3px ${M.rgba(C.gold, act)}` : 'none';
+      row.style.background = mix(C.paper, C.ink, fin);
+      row.querySelector('.zn').style.color = t < tRowOn[r] ? C.dim : mix(C.muted, C.gold2, fin);
+      parts.forEach((_, k) => {
+        const s = $('#e' + r + k); M.vis(s, t, tE[r][k] - 0.05, 1e9, { dy: 12, sp: M.SOFT, fade: 0.12 });
+        if (r === 4 && k < parts.length - 1 && !['−', '='].includes(parts[k])) s.style.color = mix(C.ink, '#fff', fin);
+      });
+    });
+    // chart
+    M.vis($('#ychart'), t, tM1 + 0.45, 1e9, { dy: 20, sp: M.SOFT });
+    const ghost = M.clamp((t - tLittle) / 0.3);
+    for (let i = 0; i < 5; i++) {
+      const tg = i === 0 ? tTh4 : tFive5 + 0.1 + (i - 1) * 0.14, g = M.o3((t - tg) / 0.5);
+      const td = tWorth8 + i * 0.16, d = M.o3((t - td) / 0.5);
+      const v = M.lerp(1600, DISC[i], d) * g, h = v * KY, b = $('#ybr' + i);
+      attr(b, 'y', (BASE - h).toFixed(2)); attr(b, 'height', Math.max(0, h).toFixed(2)); M.hide(b, h < 0.5);
+      attr(b, 'fill', mix(C.gold, '#C99B4A', d));
+      const lab = $('#yv' + i); attr(lab, 'y', (BASE - Math.max(h, 1600 * KY * (ghost > 0 ? 1 : 0)) - 12).toFixed(2));
+      M.setT(lab, fmt(M.lerp(1600, DISC[i], d))); lab.style.opacity = M.clamp((t - tg - 0.2) / 0.2).toFixed(3);
+      attr(lab, 'fill', d > 0.5 ? C.gold : C.ink);
+      $('#yg' + i).style.opacity = (ghost * M.clamp((t - tg) / 0.2)).toFixed(3);
+      $('#yl' + i).style.opacity = M.clamp((t - tM1 - 0.6 - i * 0.06) / 0.15).toFixed(3);
     }
-    ['sbLgate', 'sbLstall', 'sbLbox'].forEach((id, i) => { $('#' + id).style.opacity = M.clamp((t - tM1 - 0.55 - i * 0.07) / 0.1); });
-    [0, 1, 2, 3, 4].forEach(i => { $('#sbR' + i).style.opacity = M.clamp((t - tM5 - 0.55 - i * 0.07) / 0.1); });
-    $('#avZL').style.opacity = M.clamp((t - tM1 - 0.7) / 0.12).toFixed(3);
-    const sold = runL(t); runR(t);
-    for (let i = 0; i < 3; i++) M.vis($('#nd' + i), t, tNeed[i] - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
-    // live gauge for the selling way
-    M.vis($('#gv'), t, tM1 + 0.45, 1e9, { dy: 0, sc: 0.85, sp: M.POP });
-    M.drawU($('#gArc'), sold / 50); M.drawU($('#gArcR'), M.o3((t - tM4 - 0.1) / 0.8));
-    M.vis($('#gN'), t, tM1 + 0.55, 1e9, { dy: 12 }); M.setT($('#gN'), String(Math.round(sold)));
-    M.vis($('#gOf'), t, tM1 + 0.6, 1e9, { dy: 8 }); M.vis($('#gWay'), t, tM1 + 0.65, 1e9, { dy: 8 });
-    M.vis($('#gLeft'), t, tM4 + 0.2, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
+    M.vis($('#rdV'), t, tM1 + 0.5, 1e9, { dy: 10 });
+    M.setT($('#rdV'), fmt(readout(t))); $('#rdV').style.color = t >= tWorth9 + 0.25 ? C.gold : C.ink;
+    M.vis($('#acq'), t, tFive9 - 0.05, 1e9, POPo);
+    { const sp = $('#split'); M.vis(sp, t, tSells - 0.1, tTimes4 - 0.2, { dy: 16, outDur: 0.3, ody: -12 });
+      const c = M.o3((t - tSells) / 0.5), f = M.o3((t - tEighty) / 0.5);
+      $('#spC').style.cssText = `left:0;width:${(688 * c).toFixed(1)}px;background:#E2DACB`;
+      const fw = 688 / 3; $('#spC').style.width = (688 * 2 / 3 * c).toFixed(1) + 'px';
+      $('#spF').style.cssText = `left:${(688 * 2 / 3).toFixed(1)}px;width:${(fw * M.o3((t - tForty + 0.2) / 0.4)).toFixed(1)}px;background:#B8862F`;
+      $('#spCT').style.opacity = M.clamp((t - tEighty) / 0.2).toFixed(3);
+      const ft = $('#spFT'); ft.style.left = (688 * 2 / 3 + 24).toFixed(1) + 'px'; ft.style.opacity = M.clamp((t - tForty) / 0.2).toFixed(3);
+      M.vis($('#spP'), t, tForty + 0.2, 1e9, { dy: 8 }); }
+    M.vis($('#wkBox'), t, tM1 + 0.7, 1e9, { dy: 14 });
+    let n = 0;
+    for (let i = 0; i < 40; i++) { const tw = tWk0 + (tWk1 - tWk0) * i / 40, u = M.io((t - tw) / 0.15); if (t >= tw) n = i + 1; $('#wq' + i).style.background = mix(C.line, C.gold, u); }
+    M.setT($('#wkV'), `${n} PACKS`); $('#wkV').style.color = n ? C.gold : C.dim;
   }
 
   /* ===== statement on navy ===== */
@@ -434,95 +321,15 @@ M.on(t => {
     M.rise($('#st2'), t, tSt2 - 0.05, { st: 0.08, sp: M.HEAVY });
   }
 
-  /* ===== U: Drucker ===== */
-  const uOn = t >= tTu - 0.05 && t < tE1 + 0.2; M.hide($('#sU'), !uOn);
-  if (uOn) {
-    M.vis($('#dru'), t, tU + 0.02, tUout, { dy: 36, outDur: 0.3, ody: -16 });
-    M.vis($('#dqI'), t, tU + 0.2, 1e9, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.1 });
-    M.vis($('#druHr'), t, tU + 0.3, 1e9, { dy: 0 });
-    M.rise($('#druN'), t, tU + 0.3, { st: 0.06, sp: M.HEAVY }); M.vis($('#druB'), t, tU + 0.6, 1e9, { dy: 10 });
-    for (let i = 0; i < 3; i++) M.vis($('#dl' + i), t, tDl[i] - 0.1, 1e9, { dy: 16 });
-    tDk.forEach((tk, i) => { $('#dk' + i).style.color = mix(C.ink, C.gold, M.io((t - tk + 0.05) / 0.3)); });
-    const tdp = [tDk[0], tFits, tDk[2]];
-    for (let i = 0; i < 3; i++) { M.vis($('#dp' + i), t, tdp[i] - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 }); if (i < 2) M.vis($('#da' + i), t, tdp[i + 1] - 0.2, 1e9, { dx: -12, dy: 0, fade: 0.15 }); }
-  }
-
-  /* ===== E: exchange + relationship ===== */
-  const eOn = t >= tE1 - 0.1 && t < tP0 + 0.2; M.hide($('#sE'), !eOn);
-  if (eOn) {
-    const o = { outDur: 0.3, ody: -16 };
-    const exc = $('#ex'); M.vis(exc, t, tE1 + 0.1, tEout, { dy: 36, ...o }); grow(exc, $('#exOut'), t, tE2);
-    const win = M.io((t - tE5) / 0.3);
-    for (let i = 0; i < 2; i++) {
-      const n = $('#xn' + i); M.vis(n, t, tE1 + 0.3 + i * 0.12, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.08 });
-      n.style.boxShadow = '0 0 0 5px ' + mix(C.ink, C.gold, win);
-      M.vis($('#xm' + i), t, tE1 + 0.4 + i * 0.12, 1e9, { dy: 10 });
-    }
-    M.draw($('#ln0'), t, tGive - 0.1, 0.5, M.o3); M.vis($('#ah0'), t, tGive + 0.3, 1e9, { dy: 0, fade: 0.1 }); M.vis($('#xl0'), t, tGive, 1e9, { dy: 10 });
-    M.draw($('#ln1'), t, tGet - 0.1, 0.5, M.o3); M.vis($('#ah1'), t, tGet + 0.3, 1e9, { dy: 0, fade: 0.1 }); M.vis($('#xl1'), t, tGet, 1e9, { dy: 10 });
-    for (let i = 0; i < 3; i++) {
-      const el = $('#xk' + i), [x0, x1, y] = geo.xk[i], p = M.spring(t - tXk[i], M.HEAVY);
-      M.vis(el, t, tXk[i] - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
-      snap(el, (p >= 1 ? x1 : M.lerp(x0, x1, p).toFixed(1)) + 'px', 'left'); el.style.top = y + 'px';
-      el.style.background = i < 2 ? C.gold : C.ink; el.style.color = '#fff';
-    }
-    M.vis($('#win'), t, tE5 - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
-    M.vis($('#tf'), t, tE2 + 0.12, tBec - 0.1, { dx: 60, dy: 0, outDur: 0.25, ody: 0 });
-    M.vis($('#tfImg'), t, tE2 + 0.3, 1e9, { dy: 24, sp: M.SOFT });
-    M.vis($('#rl'), t, tBec + 0.15, tEout, { dx: 60, dy: 0, ...o });
-    for (let i = 0; i < 4; i++) {
-      const el = $('#wk' + i + 'x'), tl = tComes + i * (tThat - tComes) / 4;
-      M.vis(el, t, tBec + 0.35 + i * 0.06, 1e9, { dy: 16 });
-      const on = M.io((t - tl) / 0.25);
-      el.style.background = mix(C.paper, C.ink, on);
-      el.querySelector('.zn').style.color = mix(C.muted, C.gold2, on);
-      const zt = el.querySelector('.zt'); zt.style.color = mix(C.paper, C.gold2, on);
-      setIco(el.querySelector('.zi'), on > 0.5 ? 'check' : 'laddoo', on > 0.5 ? C.gold2 : C.dim, 44, 2.2);
-    }
-    M.draw($('#loopP'), t, tWeek - 0.1, 0.8, M.o3); M.vis($('#loopA'), t, tWeek + 0.6, 1e9, { dy: 0, fade: 0.1 });
-    M.rise($('#rlT'), t, tComes - 0.05, { st: 0.07, sp: M.HEAVY });
-    M.vis($('#rlP'), t, tRel - 0.15, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
-  }
-
-  /* ===== P: the marketing process ===== */
-  const pOn = t >= tP0 - 0.1 && t < tK0 + 0.2; M.hide($('#sP'), !pOn);
-  if (pOn) {
-    const o = { outDur: 0.3, ody: -16 };
-    P5.forEach(([ic], i) => {
-      const el = $('#pst' + i), ta = tP[i], td = i < 4 ? tP[i + 1] : tPout + 1;
-      M.vis(el, t, tP0 + 0.1 + i * 0.07, tPout, { dy: 36, ...o });
-      if (i < 4) M.vis($('#cx' + i), t, tP0 + 0.3 + i * 0.07, tPout, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.1, ...o });
-      const on = M.io((t - ta) / 0.3), off = M.io((t - td) / 0.35), act = on * (1 - off);
-      el.querySelector('.bg').style.background = mix(C.card, C.ink, act);
-      const tc = t < ta ? C.dim : mix('#fff', C.ink, off);
-      el.querySelector('.s1').style.color = tc; el.querySelector('.s2').style.color = t < ta ? C.dim : mix(C.gold2, C.gold, off);
-      el.querySelector('.sn').style.color = t < ta ? C.dim : mix(C.gold2, C.gold, off);
-      el.querySelector('.si').style.background = t < ta ? C.paper : mix(C.navy2, C.paper, off);
-      setIco(el.querySelector('.si'), ic, t < ta ? C.dim : (act > 0.5 ? C.gold2 : C.gold), 34, 2.2);
-    });
-    M.draw($('#bk0'), t, tP[4] + 0.2, 0.6, M.o3); M.draw($('#bk1'), t, tP[4] + 0.5, 0.5, M.o3);
-    M.vis($('#bkl0'), t, tP[4] + 0.4, tPout, { dy: 8, ...o }); M.vis($('#bkl1'), t, wt('P5', 'value') - 0.05, tPout, { dy: 8, ...o });
-    M.hide($('#brk'), t > tPout + 0.3);
-    M.vis($('#pe'), t, tP0 + 0.35, tPout, { dy: 36, ...o });
-    for (let k = 0; k < 6; k++) {
-      const tin = k ? tP[k - 1] : tP0 + 0.6, tout = k < 5 ? tP[k] - 0.14 : 1e9;
-      const pn = $('#pex' + k), off = t < tin - 0.01 || t > tout + 0.3; M.hide(pn, off); if (off) continue;
-      const oo = { outDur: 0.18, ody: -12 };
-      M.vis(pn.querySelector('.lbl'), t, tin, tout, { dy: 10, ...oo });
-      M.vis(pn.querySelector('.pa, .pi'), t, tin + 0.05, tout, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.08, ...oo });
-      M.rise(pn.querySelector('.pt2'), t, tin + 0.12, { st: 0.04, out: tout, outDur: 0.2 });
-    }
-  }
-
-  /* ===== K: at work today ===== */
-  const kOn = t >= tK0 - 0.1 && t < tX1 + 0.2; M.hide($('#sK'), !kOn);
+  /* ===== K: four levers ===== */
+  const kOn = t >= tTu - 0.05 && t < tX1 + 0.2; M.hide($('#sK'), !kOn);
   if (kOn) {
     const o = { outDur: 0.3, ody: -16 };
-    M.vis($('#kl'), t, tK0 + 0.1, tKout, { dx: -60, dy: 0, ...o });
-    M.vis($('#kp'), t, tK0 + 0.25, tKout, { dx: 60, dy: 0, ...o });
+    M.vis($('#kl'), t, tK0 + 0.02, tKout, { dx: -60, dy: 0, ...o });
+    M.vis($('#kp'), t, tK0 + 0.15, tKout, { dx: 60, dy: 0, ...o });
     KA.forEach(([ic], i) => {
       const el = $('#kr' + i), ta = tK[i], td = i < 3 ? tK[i + 1] : tKout + 1;
-      M.vis(el, t, tK0 + 0.4 + i * 0.07, 1e9, { dy: 14 });
+      M.vis(el, t, tK0 + 0.3 + i * 0.07, 1e9, { dy: 14 });
       const on = M.io((t - ta) / 0.3), off = M.io((t - td) / 0.35), act = on * (1 - off);
       el.querySelector('.bg').style.background = mix(C.paper, C.ink, act);
       el.querySelector('.rt').style.color = t < ta ? C.dim : mix('#fff', C.ink, off);
@@ -531,7 +338,7 @@ M.on(t => {
       setIco(el.querySelector('.ri'), ic, t < ta ? C.dim : (act > 0.5 ? C.gold2 : C.gold), 28, 2.2);
     });
     KP.forEach((_, k) => {
-      const tin = k ? tK[k - 1] : tK0 + 0.5, tout = k < 4 ? tK[k] - 0.14 : 1e9;
+      const tin = k ? tK[k - 1] : tK0 + 0.4, tout = k < 4 ? tK[k] - 0.14 : 1e9;
       const pn = $('#kn' + k); const off = t < tin - 0.01 || t > tout + 0.3; M.hide(pn, off); if (off) return;
       const oo = { outDur: 0.18, ody: -12 };
       M.vis(pn.querySelector('.ps'), t, tin, tout, { dy: 12, ...oo });
@@ -556,22 +363,21 @@ M.on(t => {
     attr($('#panR'), 'transform', `translate(${(344 + 280 * Math.cos(r)).toFixed(2)} ${(40 + 280 * Math.sin(r)).toFixed(2)})`);
     M.vis($('#xgL'), t, tX2 - 0.05, 1e9, { dy: 10 }); M.vis($('#xhL'), t, tX3 - 0.05, 1e9, { dy: 10 });
     for (let i = 0; i < 2; i++) {
-      M.vis($('#xg' + i), t, tXg[i] - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
-      M.vis($('#xh' + i), t, tXh[i] - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
+      M.vis($('#xg' + i), t, tXg[i] - 0.05, 1e9, POPo);
+      M.vis($('#xh' + i), t, tXh[i] - 0.05, 1e9, POPo);
       M.vis($('#wtL' + i), t, tXg[i], 1e9, { dy: -40, sp: M.POP, fade: 0.08 });
       M.vis($('#wtR' + i), t, tXh[i], 1e9, { dy: -40, sp: M.POP, fade: 0.08 });
       const g = $('#xg' + i), h = $('#xh' + i);
       g.style.background = C.gold3; g.style.color = C.ink; h.style.background = C.redBg; h.style.color = C.red;
     }
     M.vis($('#xw'), t, tX4 + 0.12, tXout, { dx: 60, dy: 0, ...o });
-    M.vis($('#pack'), t, tX4 + 0.3, 1e9, { dy: 24, sp: M.SOFT });
-    M.vis($('#clm0'), t, tSugar - 0.05, tRef - 0.1, { dy: 0, fade: 0.15, outDur: 0.2, ody: 0 });
-    M.draw($('#strk'), t, tStill - 0.05, 0.35, M.o3); if (t > tRef - 0.1) M.hide($('#strk'), true);
-    M.vis($('#clm1'), t, tRef + 0.05, 1e9, { dy: 0, fade: 0.2 });
-    { const u = M.clamp((t - tRef - 0.3) / 0.12); $('#pkOk').style.opacity = u.toFixed(3); M.hide($('#pkOk'), u <= 0); }
-    for (let i = 0; i < 3; i++) M.vis($('#xr' + i), t, [tDevX, tNaniX, tTrue][i] - 0.1, 1e9, { dx: 24, dy: 0 });
-    $('#bb0').style.background = t > tStill ? C.redBg : C.paper; $('#bb0').style.color = t > tStill ? C.red : C.ink;
-    M.vis($('#fact'), t, tAct - 0.1, 1e9, { dy: 16 });
+    CG.forEach((_, i) => {
+      const el = $('#cg' + i); M.vis(el, t, tX4 + 0.45 + i * 0.2, 1e9, POPo);
+      const hi = i === 0 ? M.io((t - tLoyal) / 0.3) * (1 - M.io((t - tShop) / 0.3)) : i === 2 ? M.io((t - tShop) / 0.3) : 0;
+      el.style.background = mix(C.paper, i === 2 ? C.redBg : C.gold3, hi);
+    });
+    for (let i = 0; i < 3; i++) M.vis($('#xr' + i), t, [tArjX, tNaniX, tZoyaX][i] - 0.1, 1e9, { dx: 24, dy: 0 });
+    $('#bb0').style.background = t > tNaniX + 0.3 ? C.redBg : C.paper; $('#bb0').style.color = t > tNaniX + 0.3 ? C.red : C.ink;
     M.vis($('#lesson'), t, tX7 + 0.05, 1e9, { dy: 16 });
     M.vis($('#both'), t, tX7 + 0.15, 1e9, { dy: 40 });
   }

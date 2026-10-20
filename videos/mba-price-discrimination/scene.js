@@ -35,9 +35,9 @@ const tM1 = T0('M1'), tM2 = T0('M2'), tM3 = T0('M3'), tM4 = T0('M4'), tM5 = T0('
 const tStuA = wt('M3', 'students'), tSixK = wt('M4', 'six'), tID = wt('M5', 'Students'), tEightK = wt('M7', 'Eight'), tEarns = wt('M8', 'earns');
 const tMout = T0('T1') - 0.32;
 // statement + C
-const tT = T0('T1'), tSt2 = wt('T1', 'Different', 1), tC1 = T0('C1'), tTu = tC1 - 0.32;
-const tCc = [2, 3, 4, 5].map(i => T0('C' + i)), tCout = T0('K0') - 0.32;
-const tCv = [wt('C2', 'ID'), wt('C3', 'One'), wt('C4', 'pay'), wt('C5', 'fair')];
+const tT = T0('T1'), tSt2 = wt('T1', 'Different', 1), tC1 = T0('R1'), tTu = tC1 - 0.32;
+const tCc = [2, 3, 4, 5].map(i => T0('R' + i)), tCout = T0('K0') - 0.32;
+const tCv = [wt('R2', 'ID'), wt('R3', 'One'), wt('R4', 'pay'), wt('R5', 'fair')];
 // K
 const tK0 = T0('K0'), tK = [1, 2, 3].map(i => T0('K' + i)), tKout = T0('X1') - 0.32;
 const tKw = [wt('K1', 'car'), wt('K2', 'wholesaler'), wt('K3', 'museum')];
@@ -135,9 +135,9 @@ $('#cvS').innerHTML = `<g id="cv0"><rect x="0" y="0" width="320" height="200" rx
     <rect x="148" y="90" width="140" height="12" rx="6" fill="#E2DACB"/><rect x="148" y="116" width="100" height="12" rx="6" fill="#E2DACB"/><rect x="148" y="142" width="120" height="12" rx="6" fill="#E2DACB"/></g>
   <g id="cv1"><rect x="352" y="0" width="336" height="200" rx="18" fill="#FFFFFF" stroke="#E7B9AB" stroke-width="3" stroke-dasharray="10 8"/>
     <g transform="translate(488 30)">${M.icon('ban', 64, C.red, 2.2)}</g>${T(520, 136, '1 STUDENT PACK', { a: 'middle', fs: 18, w: 700, c: '#B5482F', ls: 1.4 })}${T(520, 164, 'PER ID, PER DAY', { a: 'middle', fs: 18, w: 700, c: '#B5482F', ls: 1.4 })}</g>
-  <g id="cv2"><rect x="0" y="232" width="320" height="238" rx="18" fill="#F5F1E8"/>${T(24, 268, 'WHAT EACH CAN PAY', { fs: 14 })}
-    <rect id="cb0" x="56" y="${448 - 150}" width="80" height="150" rx="10" fill="#14213D"/><rect id="cb1" x="184" y="${448 - 125}" width="80" height="125" rx="10" fill="#5B647A"/>
-    ${T(96, 288, '₹120', { a: 'middle', fs: 18, w: 700, c: '#14213D', ls: 0 })}${T(224, 313, '₹100', { a: 'middle', fs: 18, w: 700, c: '#5B647A', ls: 0 })}
+  <g id="cv2"><rect x="0" y="232" width="320" height="238" rx="18" fill="#F5F1E8"/>${T(24, 264, 'WHAT EACH CAN PAY', { fs: 14 })}
+    <rect id="cb0" x="56" y="${448 - 120}" width="80" height="120" rx="10" fill="#14213D"/><rect id="cb1" x="184" y="${448 - 100}" width="80" height="100" rx="10" fill="#5B647A"/>
+    ${T(96, 316, '₹120', { a: 'middle', fs: 18, w: 700, c: '#14213D', ls: 0 })}${T(224, 336, '₹100', { a: 'middle', fs: 18, w: 700, c: '#5B647A', ls: 0 })}
     ${T(96, 468, 'PARENTS', { a: 'middle', fs: 13 })}${T(224, 468, 'STUDENTS', { a: 'middle', fs: 13 })}</g>
   <g id="cv3"><rect x="352" y="232" width="336" height="238" rx="18" fill="#14213D"/>${T(380, 272, 'PRICES ON SHOW FOR ALL', { fs: 14, c: '#E9D9B5' })}
     ${[['6-pack', '₹120'], ['Student, with ID', '₹100'], ['Monthly 4-pack', '₹440']].map(([a, b], i) => `${T(380, 324 + i * 48, a, { fs: 22, w: 600, c: '#FFFFFF', ls: 0 })}${T(660, 324 + i * 48, b, { a: 'end', fs: 24, w: 700, c: '#E9B95C', ls: 0 })}`).join('')}</g>`;

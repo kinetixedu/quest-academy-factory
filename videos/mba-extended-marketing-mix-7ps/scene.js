@@ -64,7 +64,7 @@ $('#meth').innerHTML = `<div class="av face" id="raoB" style="${FACE('rao')}"></
 // L
 const SR = [['package', 'THE PACK', 'Six laddoos'], ['clock', 'THE ROUND', 'Every Monday'], ['star', 'SO IT IS', 'A service too']];
 $('#sRow').innerHTML = SR.map(([ic, n, t], i) => tile('sr' + i, 36 + i * 243, 226, ic, n, t)).join('');
-const VR = [['ban', 'INTANGIBLE', "Can't touch it"], ['clock', 'INSEPARABLE', 'Made on delivery'], ['repeat', 'VARIABLE', 'Varies each day']];
+const VR = [['ban', 'INTANGIBLE', "Can't touch it"], ['zap', 'INSEPARABLE', 'Made on delivery'], ['repeat', 'VARIABLE', 'Varies each day']];
 $('#vRow').innerHTML = VR.map(([ic, n, t], i) => tile('vr' + i, 36 + i * 243, 226, ic, n, t)).join('');
 wrap($('#ill'), 'illOut', 784, 580);
 // D: seven tiles + three definitions
@@ -90,15 +90,15 @@ const plan = (k, evs, extra) => `<svg class="mplan" id="plan${k}" width="688" he
     <g id="mk${k}" visibility="hidden"><circle r="24" fill="#14213D"/>${k === 'R' ? `<image href="${IMG}ll-arjun-face.jpg" x="-20" y="-20" width="40" height="40" clip-path="url(#avc${k})"/>` : `<g transform="translate(-11 -11)">${M.icon('user', 22, '#fff', 2.4)}</g>`}</g>
   </svg>`;
 const PCH = [['users', 'People'], ['list', 'Process'], ['eye', 'Physical evidence']];
-const tail = k => PCH.map(([ic, n], i) => `<div class="pchip" id="pc${k}${i}" style="left:${48 + i * 235}px"><span class="pci"></span><span>${n}</span></div>`).join('') + `<div class="mst" id="ms${k}"><span class="msi"></span><span class="mtx"></span></div>`;
-$('#mLIn').innerHTML = `<div class="mav ic">${M.icon('user', 28, C.muted, 2.2)}</div><div class="lbl mlb">THE OLD WAY · NO LIST, NO CHECKS</div><div class="serif mrd" id="rdL">7:50 AM</div>` +
+const tail = k => PCH.map(([ic, n], i) => `<div class="pchip" id="pc${k}${i}" style="left:${[48, 244, 450][i]}px;width:${[180, 190, 286][i]}px"><span class="pci"></span><span>${n}</span></div>`).join('') + `<div class="mst" id="ms${k}"><span class="msi"></span><span class="mtx"></span></div>`;
+$('#mLIn').innerHTML = `<div class="mav ic">${M.icon('user', 28, C.muted, 2.2)}</div><div class="lbl mlb">THE OLD WAY</div><div class="serif mrd" id="rdL">7:50 AM</div>` +
   plan('L', ev('eL0', 480, 0, 'Packs in a hurry', C.ink2) + ev('eL1', 510, 1, 'Leaves late', C.ink2) + ev('eL2', 550, 0, 'Reaches 9:10', C.red, 'end'),
     `<path id="lostP" d="M${X(510)} 160 q15 -14 30 0 t30 0 t30 0 t30 0" fill="none" stroke="#B5482F" stroke-width="3" stroke-dasharray="4 6" visibility="hidden"/>
-     <g id="lateT" visibility="hidden"><rect x="${X(500) - 64}" y="176" width="128" height="28" rx="14" fill="#B5482F"/>${T(X(500), 195, 13, '#FFFFFF', '40 MIN LATE', 'text-anchor="middle" letter-spacing="1.5"')}</g>`) + tail('L');
-$('#mRIn').innerHTML = `<div class="mav" style="${FACE('arjun')}"></div><div class="lbl mlb">THE NEW WAY · A CHECKLIST</div><div class="serif mrd" id="rdR">Sun 8 PM</div>` +
+     <g id="lateT" visibility="hidden"><rect x="${X(500) - 64}" y="188" width="128" height="28" rx="14" fill="#B5482F"/>${T(X(500), 207, 13, '#FFFFFF', '40 MIN LATE', 'text-anchor="middle" letter-spacing="1.5"')}</g>`) + tail('L');
+$('#mRIn').innerHTML = `<div class="mav" style="${FACE('arjun')}"></div><div class="lbl mlb">THE NEW WAY</div><div class="serif mrd" id="rdR">Sun 8 PM</div>` +
   plan('R', ev('eR0', 360, 0, 'Nani checks', C.ink2, 'start') + ev('eR1', 400, 1, 'Arjun leaves', C.ink2) + ev('eR2', 440, 0, 'Delivered', C.gold),
     `<g id="remT" visibility="hidden"><rect x="440" y="84" width="224" height="40" rx="20" fill="#FFFFFF" stroke="#B8862F" stroke-width="2"/>${T(552, 109, 14, C.gold, 'SUN 8 PM · REMINDER SENT', 'text-anchor="middle" letter-spacing="1.2"')}</g>
-     <g id="earT" visibility="hidden"><rect x="${X(445) - 62}" y="176" width="124" height="28" rx="14" fill="#B8862F"/>${T(X(445), 195, 13, '#FFFFFF', '10 MIN EARLY', 'text-anchor="middle" letter-spacing="1.5"')}</g>`) + tail('R');
+     <g id="earT" visibility="hidden"><rect x="${X(445) - 62}" y="188" width="124" height="28" rx="14" fill="#B8862F"/>${T(X(445), 207, 13, '#FFFFFF', '10 MIN EARLY', 'text-anchor="middle" letter-spacing="1.5"')}</g>`) + tail('R');
 
 // P: the ring
 const RC = [344, 228], RO = 210, RI = 112, SEG = 360 / 7;
@@ -111,14 +111,14 @@ $('#ring7').innerHTML = P7.map(([ic, n], i) => {
     lines.map((l, k) => T(lx.toFixed(1), (ly + 28 + k * 18 - (lines.length - 1) * 9).toFixed(1), 15, '#FFFFFF', l, 'text-anchor="middle"')).join('') + `</g>`;
 }).join('') + `<circle cx="${RC[0]}" cy="${RC[1]}" r="${RI - 8}" fill="#F5F1E8"/><clipPath id="rcl"><circle cx="${RC[0]}" cy="${RC[1] - 12}" r="56"/></clipPath><circle cx="${RC[0]}" cy="${RC[1] - 12}" r="60" fill="#B8862F"/><image href="${IMG}ll-rao-face.jpg" x="${RC[0] - 56}" y="${RC[1] - 68}" width="112" height="112" clip-path="url(#rcl)"/>${T(RC[0], RC[1] + 74, 13, C.muted, 'THE CUSTOMER', 'text-anchor="middle" letter-spacing="2"')}`;
 const RP = [
-  ['THE 7PS', 'Seven Ps', 'Around one customer', [['n', '4 from McCarthy'], ['g', '3 from Booms and Bitner']]],
-  ['THE FIRST FOUR', 'The 4Ps', 'From the last episode', [['n', 'Product'], ['n', 'Price'], ['n', 'Place'], ['n', 'Promotion']]],
-  ['NEW P · 01', 'People', 'Everyone the customer meets', 'arjun|On time, polite, says his name'],
-  ['NEW P · 02', 'Process', 'The same steps, every time', [['', 'Checklist'], ['a', ''], ['', 'Route card'], ['a', ''], ['g', 'Every Monday']]],
-  ['NEW P · 03', 'Physical evidence', 'What they can see and touch', [['', 'Sealed pack'], ['', 'Clean bag'], ['g', 'Photo at the door']]],
-  ['THE RESULT', 'Seen and trusted', 'An invisible service, made visible', 'rao|Same laddoos, a far better Monday'],
+  ['THE 7PS', 'Seven Ps', 'Around one customer', [['n', '4 from McCarthy'], ['g', '3 from Booms and Bitner']], 'WHO ADDED WHAT', 'The new three matter most for services'],
+  ['THE FIRST FOUR', 'The 4Ps', 'From the last episode', [['n', 'Product'], ['n', 'Price'], ['n', 'Place'], ['n', 'Promotion']], 'COVERED IN EPISODE 13', 'Still the base of every mix'],
+  ['NEW P · 01', 'People', 'Everyone the customer meets', 'arjun|On time, polite, says his name', 'AT LADDOO LAB', 'Trained before his first round'],
+  ['NEW P · 02', 'Process', 'The same steps, every time', [['', 'Checklist'], ['a', ''], ['', 'Route card'], ['a', ''], ['g', 'Every Monday']], 'AT LADDOO LAB', 'The same result, whoever delivers'],
+  ['NEW P · 03', 'Physical evidence', 'What they can see and touch', [['', 'Sealed pack'], ['', 'Clean bag'], ['g', 'Photo at the door']], 'AT LADDOO LAB', 'Proof she can see before she tastes'],
+  ['THE RESULT', 'Seen and trusted', 'An invisible service, made visible', 'rao|Same laddoos, a far better Monday', 'WHAT CHANGED', 'Mrs. Rao orders again next week'],
 ];
-$('#rPans').innerHTML = RP.map(([s, t, m, c], k) => `<div class="pn" id="rp${k}"><div class="ps">${s}</div><div class="serif pt">${t}</div><div class="pm">${m}</div><div class="hr"></div>` +
+$('#rPans').innerHTML = RP.map(([s, t, m, c, xl, xt], k) => `<div class="pn" id="rp${k}"><div class="ps">${s}</div><div class="serif pt">${t}</div><div class="pm">${m}</div><div class="hr"></div><div class="lbl xl" style="left:48px;top:318px">${xl}</div><div class="ka xk" style="top:452px"><i>${M.icon(k === 5 ? 'repeat' : 'check', 30, C.gold, 2.4)}</i><div class="kt" style="top:24px">${xt}</div></div>` +
   (typeof c === 'string' ? `<div class="rcf" style="${FACE(c.split('|')[0])}"></div><div class="rct">${c.split('|')[1]}</div>`
     : c.map(([cl, tx], j) => cl === 'a' ? `<svg class="rca" id="rc${k}${j}" width="40" height="24"><path d="M4 12 H30 M22 4 L32 12 L22 20" fill="none" stroke="#B9B1A3" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>` : `<div class="rc7 ${cl}" id="rc${k}${j}">${tx}</div>`).join('')) + `</div>`).join('');
 
@@ -205,6 +205,7 @@ function measure() {
   const w = ti.offsetWidth, h = ti.offsetHeight;
   geo = { sx: 960 - w / 2, sy: 540 - h / 2 - 20, ex: 160, ey: 156, es: 56 / fs, cw: $('#eyebrow').offsetWidth, cy: 540 - h / 2 - 112 };
   const ex = $('#exChip'); ex.style.left = (1760 - ex.offsetWidth) + 'px'; ex.style.top = '170px';
+  const at = $('#askT'); if (at.offsetWidth > 848) at.style.fontSize = Math.floor(64 * 848 / at.offsetWidth) + 'px';
   document.querySelectorAll('.df .dm').forEach(el => { if (el.offsetWidth > 560) el.style.fontSize = Math.floor(26 * 560 / el.offsetWidth) + 'px'; });
   document.querySelectorAll('.tl7 span').forEach(el => { const max = el.parentNode.offsetWidth - 40; if (el.offsetWidth > max) el.style.fontSize = Math.floor(24 * max / el.offsetWidth) + 'px'; });
   RP.forEach(([, , , c], k) => {
@@ -368,6 +369,7 @@ M.on(t => {
       M.rise(pn.querySelector('.pt'), t, tin + 0.06, { st: 0.06, sp: M.HEAVY, out: tout, outDur: 0.2 });
       M.rise(pn.querySelector('.pm'), t, tin + 0.3, { st: 0.04, out: tout, outDur: 0.2 });
       M.vis(pn.querySelector('.hr'), t, tin + 0.4, tout, { dy: 0, ...oo });
+      M.vis(pn.querySelector('.xl'), t, tin + 0.5, tout, { dy: 10, ...oo }); M.vis(pn.querySelector('.xk'), t, tin + 1.4, tout, { dy: 16, ...oo });
       if (typeof c === 'string') { M.vis(pn.querySelector('.rcf'), t, tin + 0.6, tout, { ...pop, ...oo }); M.vis(pn.querySelector('.rct'), t, tin + 0.7, tout, { dy: 12, ...oo }); }
       else c.forEach((_, j) => M.vis($('#rc' + k + j), t, tin + 0.6 + j * 0.28, tout, { ...pop, ...oo }));
     });

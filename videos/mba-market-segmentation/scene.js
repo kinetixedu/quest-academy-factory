@@ -81,7 +81,7 @@ wrap($('#ill'), 'illOut', 784, 580);
 // D: split diagram + simple words
 const rs = M.rng(11), SP0 = Array.from({ length: 30 }, () => [30 + rs() * 190, 22 + rs() * 120]);
 const SPK = i => i % 3, SPJ = i => Math.floor(i / 3), SPC = i => [360 + SPK(i) * 150 - 44 + (SPJ(i) % 5) * 22, 60 + Math.floor(SPJ(i) / 5) * 24];
-$('#split').innerHTML = `<rect x="0" y="0" width="250" height="170" rx="20" fill="#F5F1E8"/><path id="spA" d="M262 85 H300 M290 75 L302 85 L290 95" fill="none" stroke="#B9B1A3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>` +
+$('#split').innerHTML = `<rect x="0" y="0" width="250" height="170" rx="20" fill="#F5F1E8"/><text x="125" y="160" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="13" letter-spacing="2" fill="#8A8274">ONE MARKET</text><path id="spA" d="M262 85 H300 M290 75 L302 85 L290 95" fill="none" stroke="#B9B1A3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>` +
   [0, 1, 2].map(k => `<rect id="spB${k}" x="${360 + k * 150 - 62}" y="0" width="124" height="170" rx="20" fill="#F5F1E8"/><text id="spT${k}" x="${360 + k * 150}" y="150" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="13" letter-spacing="2" fill="#8A8274">GROUP ${k + 1}</text>`).join('') +
   Array.from({ length: 30 }, (_, i) => `<circle id="sp${i}" r="8" fill="${SCOL[SPK(i)]}"/>`).join('');
 const SWT = [['ban', 'NOT', 'One for all'], ['users', 'BUT', 'Group by want'], ['check', 'SO', 'Want the same']];
@@ -218,7 +218,7 @@ function measure() {
   for (let k = 1; k < 5; k++) { const ch = P4[k - 1][5]; let xr = 1552; for (let j = ch.length - 1; j >= 0; j--) { const p = $('#pc' + k + j + 'x'); xr -= p.offsetWidth; p.style.left = xr + 'px'; xr -= 16; } }
   document.querySelectorAll('#kPans .pt').forEach(el => { if (el.offsetWidth > 848) el.style.fontSize = Math.floor(84 * 848 / el.offsetWidth) + 'px'; });
   document.querySelectorAll('#kPans .kt').forEach(el => { if (el.offsetWidth > 748) el.style.fontSize = Math.floor(30 * 748 / el.offsetWidth) + 'px'; });
-  SK.reduce((x0, f, i) => { const l = $('#skl' + i); l.style.left = (48 + x0 + 4) + 'px'; return x0 + 688 * f; }, 0);
+  SK.reduce((x0, f, i) => { const l = $('#skl' + i); l.style.left = (i === 2 ? 736 - l.offsetWidth : 48 + x0 + 4) + 'px'; return x0 + 688 * f; }, 0);
   const ro = $('#renO'); $('#renA').style.left = (ro.offsetWidth + 20) + 'px'; $('#renN').style.left = (ro.offsetWidth + 96) + 'px';
   OPTS.forEach((_, i) => { const o = $('#o' + i + ' .ot'); if (o.offsetWidth > 312) o.style.fontSize = Math.floor(40 * 312 / o.offsetWidth) + 'px'; });
   ROWS.forEach(([, , ps], i) => { let x = 216 + $('#rw' + i + ' .rt').offsetWidth + 40; ps.forEach((_, k) => { const p = $('#fp' + i + k); p.style.left = x + 'px'; x += p.offsetWidth + 16; }); });
@@ -327,9 +327,10 @@ M.on(t => {
     M.vis($('#msL'), t, base + 0.45, 1e9, { dy: 0, sc: 0.8, sp: M.POP, fade: 0.1 });
     runP(t);
     SGR.forEach((_, i) => {
-      const el = $('#sg' + i); M.vis(el, t, tMove[i] + 0.2, 1e9, { dx: 24, dy: 0 });
-      const nm = t >= tNm[i] - 0.05; M.setT($('#sgt' + i), nm ? SEG[i][2] : SGR[i][3]);
-      $('#sgt' + i).style.color = nm ? C.ink : C.ink2; $('#sgt' + i).style.fontWeight = nm ? '700' : '500';
+      const el = $('#sg' + i); M.vis(el, t, tM0 + 0.7 + i * 0.1, 1e9, { dy: 14 });
+      const nm = t >= tNm[i] - 0.05, mv = t >= tMove[i] + 0.2; M.setT($('#sgt' + i), nm ? SEG[i][2] : mv ? SGR[i][3] : 'Not sorted yet');
+      $('#sgt' + i).style.color = nm ? C.ink : mv ? C.ink2 : C.dim; $('#sgt' + i).style.fontWeight = nm ? '700' : '500';
+      el.querySelector('.ri').style.opacity = mv ? '' : '0.35'; el.querySelector('.rl').style.color = mv ? '' : C.dim;
       M.vis($('#sgp' + i), t, tNm[i] + 0.1, 1e9, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.08 });
       el.querySelector('.bg').style.background = mix(C.paper, C.gold3, M.io((t - tNm[i]) / 0.25) * (1 - (i < 2 ? M.io((t - tNm[i + 1]) / 0.25) : 0)));
     });
