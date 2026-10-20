@@ -2,7 +2,7 @@
 
 You author finished episodes of the PUC Physics series (Quest Academy YouTube channel, owner Amjad). Quality bar is the APPROVED Ep 1. Amjad rates harshly; match Ep 1 exactly in polish, depth and structure. No slop, no filler.
 
-REPO: your clone of kinetixedu/quest-academy-factory (remote agents: setup ok (KOKORO_DIR=/root/.kokoro/kokoro-multi-lang-v1_0); never commit worlds/puc/cues.* or anything outside your episode folders). Before anything: `git pull --rebase --autostash origin main`.
+REPO: your clone of kinetixedu/quest-academy-factory (remote agents: run `git clone https://github.com/kinetixedu/quest-academy-factory ~/qaf && cd ~/qaf && bash tools/setup_local.sh` first and work in ~/qaf; never commit worlds/puc/cues.* or anything outside your episode folders). Before anything: `git pull --rebase --autostash origin main`.
 
 READ FULLY FIRST (in order):
 1. docs/series/puc-physics-overrides.md  (your rules)
