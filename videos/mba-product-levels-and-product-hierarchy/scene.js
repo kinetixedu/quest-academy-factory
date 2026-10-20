@@ -1,7 +1,7 @@
-// MBA - Marketing Management, Ep 15: Product Classification (Laddoo Lab)
+// MBA - Marketing Management, Ep 16: Product Levels and Product Hierarchy (Laddoo Lab)
 (() => {
 const { $ } = M;
-const C = { ink: '#14213D', ink2: '#3A4560', muted: '#8A8274', dim: '#B9B1A3', gold: '#B8862F', gold2: '#E9D9B5', gold3: '#F3EAD6', paper: '#F5F1E8', paper2: '#EEE8DB', card: '#FFFFFF', line: '#E2DACB', red: '#B5482F', redBg: '#F6E3DC', red2: '#E7B9AB', navy2: '#24345A', navy3: '#2C3B5E' };
+const C = { ink: '#14213D', ink2: '#3A4560', muted: '#8A8274', dim: '#B9B1A3', gold: '#B8862F', gold2: '#E9D9B5', gold3: '#F3EAD6', paper: '#F5F1E8', paper2: '#EEE8DB', card: '#FFFFFF', line: '#E2DACB', red: '#B5482F', redBg: '#F6E3DC', red2: '#E7B9AB', navy2: '#24345A', navy3: '#2C3B5E', mid: '#C9A35A' };
 const wt = M.wt, T0 = M.t0, T1 = M.t1, mix = M.mix;
 
 /* extra line icons (24-unit, lucide style) */
@@ -9,157 +9,125 @@ Object.assign(M.IC, {
   laddoo: ['M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z', 'M8.5 9h.01', 'M13 7.5h.01', 'M15.5 12h.01', 'M11 12.5h.01', 'M8 15h.01', 'M13 16.5h.01'],
   heart: ['M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z'],
   repeat: ['m17 2 4 4-4 4', 'M3 11v-1a4 4 0 0 1 4-4h14', 'm7 22-4-4 4-4', 'M21 13v1a4 4 0 0 1-4 4H3'],
-  ban: ['M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z', 'm4.9 4.9 14.2 14.2'],
   scale: ['m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z', 'm2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z', 'M7 21h10', 'M12 3v18', 'M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2'],
   star: ['M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z'],
-  backpack: ['M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z', 'M8 10h8', 'M8 18h8', 'M8 22v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6', 'M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2'],
-  shield: ['M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z'],
-  watch: ['M12 10v2.2l1.6 1', 'm16.13 7.66-.81-4.05a2 2 0 0 0-2-1.61h-2.68a2 2 0 0 0-2 1.61l-.78 4.05', 'm7.88 16.36.8 4a2 2 0 0 0 2 1.61h2.72a2 2 0 0 0 2-1.61l.81-4.05', 'M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z'],
   phone: ['M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Z', 'M12 18h.01'],
-  search: ['m21 21-4.34-4.34', 'M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z'],
   target: ['M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z', 'M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z', 'M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z'],
-  pie: ['M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.998.398-.998.95v8a1 1 0 0 0 1 1z', 'M21.21 15.89A10 10 0 1 1 8 2.83'],
-  wheat: ['M2 22 16 8', 'M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z', 'M7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z', 'M11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z', 'M20 2h2v2a4 4 0 0 1-4 4h-2V6a4 4 0 0 1 4-4Z', 'M11.47 17.47 13 19l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L5 19l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z', 'M15.47 13.47 17 15l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L9 15l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z', 'M19.47 9.47 21 11l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L13 11l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z'],
-  briefcase: ['M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16', 'M4 6h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z'],
-  flame: ['M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z'],
+  list: ['m3 17 2 2 4-4', 'm3 7 2 2 4-4', 'M13 6h8', 'M13 12h8', 'M13 18h8'],
+  bed: ['M2 4v16', 'M2 8h18a2 2 0 0 1 2 2v10', 'M2 17h20', 'M6 8v9'],
+  plane: ['M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z'],
+  quote: ['M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z', 'M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z'],
+  layers: ['M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z', 'M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12', 'M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17'],
 });
 const IMG = '../../assets/illustrations/mba/';
 const FACE = n => `background-image:url(${IMG}ll-${n}-face.jpg)`;
 
 /* ---------- beats (all from the voice) ---------- */
 const tTitle = 0.25, tMorph = T0('H2') + 0.02;
-const tSix = wt('H1', 'six'), tSec = wt('H1', 'second'), tBag = wt('H2', 'bag'), tFour = wt('H2', 'four'), tH3 = T0('H3'), tTwo = wt('H3', 'Two');
-const tL1 = T0('L1'), tL2 = T0('L2'), tL3 = T0('L3');
-const tFr = [wt('L3', 'grab'), wt('L3', 'compare'), wt('L3', 'hunt'), wt('L3', 'never')];
+const tKit = wt('H1', 'kitchen'), tSame = wt('H1', 'same'), tH2 = T0('H2'), tStays = wt('H2', 'stays'), tH3 = T0('H3'), tMore = wt('H3', 'more');
+const tL1 = T0('L1'), tDraws = wt('L1', 'draws'), tRings = wt('L1', 'rings'), tOnionW = wt('L1', 'onion'), tL2 = T0('L2'), tL3 = T0('L3');
+const tHealthy = wt('L2', 'healthy'), tActually = wt('L2', 'actually');
 const tAout = tL1 - 0.32, tLout = T0('D1') - 0.32;
 // D
-const tD1 = T0('D1'), tD2 = T0('D2'), tD3 = T0('D3'), tD4 = T0('D4'), tD5 = T0('D5'), tDout = T0('M1') - 0.32;
-const tQl = [wt('D2', 'sorting'), wt('D2', 'how'), wt('D2', 'people')];
-const tCc = [wt('D3', 'convenience'), wt('D3', 'shopping'), wt('D3', 'specialty'), wt('D4', 'unsought')];
-const tInd = wt('D5', 'industrial'), tBiz = wt('D5', 'businesses');
-// M: the sorting tree
-const tM1 = T0('M1'), tM7 = T0('M7'), tMout = T0('T1') - 0.32;
-// statement + four types
-const tT = T0('T1'), tP0 = T0('P0'), tTu = tP0 - 0.32;
-const tP = [1, 2, 3, 4].map(i => T0('P' + i)), tI1 = T0('I1'), tPout = tI1 - 0.32;
-// I: industrial
-const tI = [T0('I2'), T0('I3'), T0('I4')], tIout = T0('K0') - 0.32;
+const tD1 = T0('D1'), tD2 = T0('D2'), tD3 = T0('D3'), tDout = T0('M1') - 0.32;
+const tLev = wt('D3', 'Levitt'), tMake = wt('D3', 'make'), tAdd = wt('D3', 'add');
+// M
+const tM = [1, 2, 3, 4, 5, 6, 7].map(i => T0('M' + i)), tMout = T0('T1') - 0.32;
+// statement + Y
+const tT = T0('T1'), tSt2 = wt('T1', 'You'), tY1 = T0('Y1'), tTu = tY1 - 0.32;
+const tY = [3, 4, 5, 6, 7, 8].map(i => T0('Y' + i)), tY2 = T0('Y2'), tYout = T0('K0') - 0.32;
 // K
 const tK0 = T0('K0'), tK = [1, 2, 3, 4].map(i => T0('K' + i)), tKout = T0('X1') - 0.32;
-const tKw = [wt('K1', 'biscuit'), wt('K2', 'phone'), wt('K3', 'luxury'), wt('K4', 'insurance')];
+const tKw = [wt('K1', 'hotel'), wt('K2', 'Guests'), wt('K3', 'fast'), wt('K4', 'phone')];
 // X
-const tX1 = T0('X1'), tX2 = T0('X2'), tX3 = T0('X3'), tX4 = T0('X4'), tX5 = T0('X5');
-const tXg = [wt('X2', 'where'), wt('X2', 'push')], tXh = [wt('X3', 'same'), wt('X3', 'different')];
-const tFan = wt('X4', 'fan'), tNaniX = wt('X4', 'Nani');
-const tXout = tX5 - 0.15;
-const tQ = T0('Q1'), tCount = T1('Q1') + 0.05, tAns = T0('A1') - 0.02, tTakeQ = wt('A1', 'They');
+const tX1 = T0('X1'), tX2 = T0('X2'), tX3 = T0('X3'), tX4 = T0('X4'), tX5 = T0('X5'), tX6 = T0('X6');
+const tXg = [wt('X2', 'apart'), wt('X2', 'loyalty')], tXh = [wt('X3', 'costs'), wt('X3', 'expectation')];
+const tMonths = wt('X4', 'months'), tCompl = wt('X4', 'complain');
+const tXout = tX6 - 0.15;
+const tQ = T0('Q1'), tCount = T1('Q1') + 0.05, tAns = T0('A1') - 0.02, tTakeQ = wt('A1', 'Extras');
 const tS = T0('S1'), tRow = [T0('S2'), T0('S3'), T0('S4')], tNx = T0('N1');
-const tPill = [[wt('S2', 'how'), wt('S2', 'why')], [wt('S3', 'convenience'), wt('S3', 'shopping'), wt('S3', 'specialty'), wt('S3', 'unsought')], [wt('S4', 'materials'), wt('S4', 'capital'), wt('S4', 'supplies')]];
+const tPill = [[wt('S2', 'core'), wt('S2', 'potential')], [wt('S3', 'copy')], [wt('S4', 'need'), wt('S4', 'item')]];
 const SW = [[tT - 0.42, tTu], [tQ - 0.42, tQ + 0.06], [tS - 0.42, tS + 0.06]];
 
 /* ---------- build ---------- */
 const wrap = (card, id, w, h) => { const d = document.createElement('div'); d.id = id; d.className = 'abs'; d.style.cssText = `left:0;top:0;width:${w}px;height:${h}px`; while (card.firstChild) d.appendChild(card.firstChild); card.appendChild(d); };
-const tile = (id, x, w, ic, n, t) => `<div class="sws" id="${id}" style="left:${x}px;width:${w}px"><div class="zn">${n}</div><div class="zi">${M.icon(ic, 40, C.gold, 2.2)}</div><div class="zt">${t}</div></div>`;
 const T = (x, y, s, fill, txt, o = '') => `<text x="${x}" y="${y}" font-family="Poppins" font-weight="600" font-size="${s}" fill="${fill}" ${o}>${txt}</text>`;
 // A
-const HC = [['laddoo', 'LADDOO SIX-PACK', 'Every week', 'zap', 'No comparing'], ['backpack', 'SCHOOL BAG', 'Once a year', 'search', 'Four shops compared']];
-$('#hRow').innerHTML = HC.map(([ic, n, t, si, s], i) => `<div class="cmp" id="hc${i}" style="left:${36 + i * 432}px"><i>${M.icon(ic, 30, C.gold, 2.2)}</i><div class="cn">${n}</div><div class="ct">${t}</div><div class="cs" id="hs${i}">${M.icon(si, 18, i ? C.ink : C.gold, 2.4)}<span>${s}</span></div></div>`).join('');
-const METH = [['zap', 'Grab it'], ['search', 'Compare first']];
-$('#meth').innerHTML = METH.map(([ic, m], i) => `<div class="stp" id="mt${i}" style="top:76px;${i ? 'background:#14213D;color:#fff' : ''}">${M.icon(ic, 26, i ? C.gold2 : C.gold, 2.4)}<span>${m}</span></div>`).join('');
+const HC = [['store', 'THE NEW KITCHEN', '₹120 for six'], ['laddoo', 'LADDOO LAB', '₹120 for six']];
+$('#hRow').innerHTML = HC.map(([ic, n, t], i) => `<div class="cmp" id="hc${i}" style="left:${36 + i * 432}px"><i>${M.icon(ic, 30, C.gold, 2.2)}</i><div class="cn">${n}</div><div class="ct">${t}</div><div class="cs">${M.icon('laddoo', 18, C.gold, 2.4)}<span>Millet laddoos</span></div></div>`).join('') + `<div id="eqS">${M.icon('equal', 16, C.ink, 3)}</div>`;
+$('#meth').innerHTML = `<div class="av face" id="raoB" style="${FACE('rao')}"></div><div class="stp" id="mt0" style="top:76px;left:112px;background:#B8862F;color:#fff">${M.icon('check', 24, '#fff', 3)}<span>She stays with Laddoo Lab</span></div>`;
 // L
-$('#zN').style.cssText += ';' + FACE('zoya');
-const FR = [['zap', 'GRAB', 'Six-pack'], ['scale', 'COMPARE', 'School bag'], ['target', 'HUNT FOR', 'Silk saree'], ['ban', 'IGNORE', 'Insurance']];
-$('#fRow').innerHTML = FR.map(([ic, n, t], i) => tile('fr' + i, 36 + i * 182, 166, ic, n, t)).join('');
+$('#mini').innerHTML = [80, 64, 48, 32, 16].map((r, i) => `<circle id="mc${i}" cx="96" cy="94" r="${r}" fill="${[C.gold3, C.gold2, C.mid, C.navy2, C.ink][i]}" stroke="#B8862F" stroke-width="2" ${i === 0 ? 'stroke-dasharray="5 5"' : ''}/>`).join('');
+$('#cF').style.cssText += ';' + FACE('rao');
 wrap($('#ill'), 'illOut', 784, 580);
 // D
-const CC = ['Convenience', 'Shopping', 'Specialty', 'Unsought'];
-$('#ccRow').innerHTML = CC.map((c, i) => `<div class="cc${i === 3 ? ' un' : ''}" id="cc${i}">${c}</div>`).join('');
+const D5 = [['Core benefit', 'What they really buy'], ['Basic product', 'The thing itself'], ['Expected product', 'What they take for granted'], ['Augmented product', 'Extras that beat rivals'], ['Potential product', 'What it could become']];
+$('#dRows').innerHTML = D5.map(([t, m], i) => `<div class="d5" id="d5${i}" style="top:${92 + i * 86}px"><div class="bg"></div><div class="n">0${i + 1}</div><div class="t">${t}</div><div class="m">${m}</div></div>`).join('');
+$('#lvI').innerHTML = M.icon('quote', 64, C.gold, 1.8);
 wrap($('#kq'), 'kqOut', 784, 580);
-// the two families
-const box = (id, x, y, w, h, fill, t1, t2, tc, sc) => `<g id="${id}"><rect x="${x - w / 2}" y="${y}" width="${w}" height="${h}" rx="16" fill="${fill}"/>${T(x, y + (t2 ? 34 : h / 2 + 8), 22, tc, t1, 'text-anchor="middle"')}${t2 ? T(x, y + 60, 13, sc, t2, 'text-anchor="middle" letter-spacing="2"') : ''}</g>`;
-const leaf = (id, x, y, txt) => `<g id="${id}"><rect x="${x - 130}" y="${y}" width="260" height="44" rx="22" fill="#F5F1E8"/>${T(x, y + 29, 19, C.ink, txt, 'text-anchor="middle"')}</g>`;
-$('#fam').innerHTML = `<path id="fb0" d="M344 64 V92 H172 V120" fill="none" stroke="#B9B1A3" stroke-width="3"/><path id="fb1" d="M344 64 V92 H516 V120" fill="none" stroke="#B9B1A3" stroke-width="3"/>` +
-  box('fr', 344, 0, 200, 64, C.ink, 'Products', '', '#FFFFFF') +
-  box('fc', 172, 120, 300, 80, C.gold3, 'Consumer products', 'FOR PERSONAL USE', C.ink, C.muted) +
-  box('fi', 516, 120, 300, 80, '#E8EAF0', 'Industrial products', 'FOR BUSINESS USE', C.ink, C.muted) +
-  CC.map((c, i) => leaf('lc' + i, 172, 220 + i * 58, c)).join('') +
-  ['Materials and parts', 'Capital items', 'Supplies and services'].map((c, i) => leaf('li' + i, 516, 220 + i * 58, c)).join('');
 
-/* M: the sorting tree. Coordinates inside a 1504 x 392 svg. */
-const QX = [330, 700, 1070], SY = 150, BY = 330, EX = 1370, SX = 40;
-const QT = ['Is she looking for it?', 'Will only one special kind do?', 'Does she compare first?'];
-const BIN = [[QX[0], 'UNSOUGHT'], [QX[1], 'SPECIALTY'], [QX[2], 'SHOPPING'], [EX, 'CONVENIENCE']];
-const lab = (x, y, txt, a = 'start') => T(x, y, 14, C.muted, txt, `text-anchor="${a}" letter-spacing="2"`);
-$('#tree').innerHTML = `<path id="spine" d="M${SX} ${SY} H${EX} V${BY - 50}" fill="none" stroke="#14213D" stroke-width="4" stroke-linecap="round"/>` +
-  QX.map((x, i) => `<path id="br${i}" d="M${x} ${SY} V${BY - 50}" fill="none" stroke="#B9B1A3" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 10"/>`).join('') +
-  QX.map((x, i) => `<g id="qn${i}"><rect x="${x - 172}" y="10" width="344" height="84" rx="20" fill="#FFFFFF" stroke="#E2DACB" stroke-width="2"/>${T(x, 46, 13, C.gold, 'QUESTION ' + (i + 1), 'text-anchor="middle" letter-spacing="2"')}${T(x, 76, 21, C.ink, QT[i], 'text-anchor="middle"')}<line x1="${x}" y1="94" x2="${x}" y2="${SY - 12}" stroke="#E2DACB" stroke-width="3"/><circle cx="${x}" cy="${SY}" r="9" fill="#14213D"/></g>`).join('') +
-  `<g id="brl">${QX.map((x, i) => lab(x + 16, SY + 46, i === 0 ? 'NO' : 'YES') + lab(x + 28, SY - 14, i === 0 ? 'YES' : 'NO')).join('')}</g>` +
-  BIN.map(([x, n], i) => `<g id="bn${i}"><rect class="bb" x="${x - 120}" y="${BY - 50}" width="240" height="110" rx="20" fill="#F5F1E8" stroke="#E2DACB" stroke-width="2"/>${T(x, BY - 18, 14, C.muted, n, 'text-anchor="middle" letter-spacing="2.4" class="bl"')}<g class="bi" visibility="hidden"><g class="bic"></g>${T(x + 14, BY + 30, 19, C.ink, '', 'class="bt"')}</g></g>`).join('') +
-  QX.map((x, i) => `<g id="an${i}" visibility="hidden"><rect class="ar" x="${x - 94}" y="${SY + 16}" width="68" height="30" rx="15" fill="#B8862F"/>${T(x - 60, SY + 37, 14, '#FFFFFF', 'YES', 'text-anchor="middle" letter-spacing="1.5" class="at"')}</g>`).join('') +
-  `<g id="tok" visibility="hidden"><circle r="30" fill="#14213D" stroke="#FFFFFF" stroke-width="4"/><g class="ti" transform="translate(-14 -14)"></g></g>`;
-// the four items and their routes
-const ITEMS = (() => {
-  const a0 = wt('M2', 'six') - 0.15, l0 = wt('M2', 'looking'), s0 = wt('M3', 'special'), n0 = wt('M3', 'No'), c0 = wt('M3', 'compare'), n1 = wt('M3', 'No', 1), g0 = wt('M3', 'grabs'), cv = wt('M3', 'convenience');
-  const b = wt('M4', 'bag'), cmp = wt('M4', 'compares'), sh = wt('M4', 'shopping');
-  const sa = wt('M5', 'saree'), on = wt('M5', 'only'), sp = wt('M5', 'specialty');
-  const ins = wt('M6', 'insurance'), lk = wt('M6', 'looking'), un = wt('M6', 'unsought');
-  return [
-    { ic: 'laddoo', name: 'Six-pack', bin: 3, done: cv, keys: [[a0, SX, SY], [l0, QX[0], SY], [s0 - 0.5, QX[0], SY], [s0, QX[1], SY], [c0 - 0.5, QX[1], SY], [c0, QX[2], SY], [g0 - 0.5, QX[2], SY], [g0 + 0.2, EX, SY], [g0 + 0.7, EX, BY + 4]], ans: [[0, l0 + 0.2, 'YES'], [1, n0, 'NO'], [2, n1, 'NO']] },
-    { ic: 'backpack', name: 'School bag', bin: 2, done: sh, keys: [[b - 0.15, SX, SY], [b + 0.5, QX[0], SY], [b + 0.8, QX[0], SY], [b + 1.4, QX[1], SY], [b + 1.7, QX[1], SY], [cmp - 0.1, QX[2], SY], [sh - 0.6, QX[2], SY], [sh - 0.1, QX[2], BY + 4]], ans: [[0, b + 0.5, 'YES'], [1, b + 1.4, 'NO'], [2, cmp + 0.2, 'YES']] },
-    { ic: 'star', name: 'Silk saree', bin: 1, done: sp, keys: [[sa - 0.15, SX, SY], [sa + 0.6, QX[0], SY], [sa + 0.9, QX[0], SY], [on - 0.1, QX[1], SY], [sp - 0.6, QX[1], SY], [sp - 0.1, QX[1], BY + 4]], ans: [[0, sa + 0.6, 'YES'], [1, on + 0.2, 'YES']] },
-    { ic: 'shield', name: 'Insurance', bin: 0, done: un, keys: [[ins - 0.15, SX, SY], [lk - 0.1, QX[0], SY], [un - 0.6, QX[0], SY], [un - 0.1, QX[0], BY + 4]], ans: [[0, lk + 0.2, 'NO']] },
-  ];
-})();
-ITEMS.forEach(it => { const g = $('#bn' + it.bin); g.querySelector('.bic').innerHTML = `<g transform="translate(${BIN[it.bin][0] - 62} ${BY + 14})">${M.icon(it.ic, 26, C.gold, 2.2)}</g>`; g.querySelector('.bt').textContent = it.name; g.querySelector('.bt').setAttribute('x', BIN[it.bin][0] - 26); });
+/* M: the onion (688 x 456 svg, centre 344,236) */
+const OC = [344, 236], OR = [56, 98, 138, 176, 212];
+const RING = [['CORE', C.ink, '#FFFFFF'], ['BASIC', C.mid, C.ink], ['EXPECTED', C.gold2, C.ink], ['AUGMENTED', C.gold3, C.ink], ['POTENTIAL', '#FFFFFF', C.gold]];
+$('#onion').innerHTML = [4, 3, 2, 1, 0].map(i => {
+  const [n, f, tc] = RING[i], r = OR[i], ly = i ? OC[1] - (OR[i - 1] + r) / 2 + 5 : OC[1] + 5;
+  return `<g id="rg${i}"><circle class="rc" cx="${OC[0]}" cy="${OC[1]}" r="${r}" fill="${f}" stroke="${i === 4 ? C.gold : '#FFFFFF'}" stroke-width="${i === 4 ? 3 : 3}" ${i === 4 ? 'stroke-dasharray="8 8"' : ''}/>${T(OC[0], ly, 14, tc, n, 'text-anchor="middle" letter-spacing="2.4"')}</g>`;
+}).join('') + `<g id="winT"><line x1="${OC[0] + 131}" y1="${OC[1] + 131}" x2="560" y2="412" stroke="#B8862F" stroke-width="3"/><rect x="536" y="398" width="148" height="40" rx="20" fill="#B8862F"/>${T(610, 424, 14, '#FFFFFF', 'WE WIN HERE', 'text-anchor="middle" letter-spacing="2"')}</g>`;
+const OP = [
+  ['THE SIX-PACK', 'Five rings', 'Built from the inside out', [['n', 'Inside: the core'], ['a', ''], ['g', 'Outside: the extras']], 'KOTLER', 'Each ring adds value', 'layers'],
+  ['LEVEL 01 · CORE BENEFIT', 'A healthy treat', 'What she really buys', [['g', 'Healthy'], ['', 'Kids enjoy it']], 'AT THE CENTRE', 'The reason she buys at all', 'heart'],
+  ['LEVEL 02 · BASIC PRODUCT', 'Six laddoos', 'The thing itself', [['', 'Ragi'], ['', 'Jaggery'], ['n', 'Six-pack']], 'THE BARE PRODUCT', 'What anyone could copy', 'laddoo'],
+  ['LEVEL 03 · EXPECTED PRODUCT', 'Fresh and sealed', 'What every buyer takes for granted', [['', 'Fresh'], ['', 'Clean'], ['', 'Sealed'], ['', 'On time']], 'MISS ONE, AND', 'She is unhappy', 'check'],
+  ['LEVEL 04 · AUGMENTED PRODUCT', 'Extras that win', 'What rivals do not give', [['g', 'Monday delivery'], ['g', 'Photo message'], ['g', "Nani's card"]], 'THIS IS WHERE', 'Laddoo Lab beats the new kitchen', 'star'],
+  ['LEVEL 05 · POTENTIAL PRODUCT', 'A tiffin plan', 'What it could become one day', [['d', 'A new flavour every month']], 'NOT REAL YET', 'An idea for the future', 'bulb'],
+  ['THE NEW KITCHEN', 'Same inner rings', 'Same core, same laddoo, same price', [['', 'Core'], ['', 'Basic'], ['', 'Expected'], ['d', 'No extras']], 'SO MRS. RAO', 'Stays with Laddoo Lab', 'heart'],
+];
+$('#oPans').innerHTML = OP.map(([s, t, m, c, xl, xt, xi], k) => `<div class="pn" id="op${k}"><div class="ps">${s}</div><div class="serif pt">${t}</div><div class="pm">${m}</div><div class="hr"></div><div class="lbl xl" style="left:48px;top:306px">${xl}</div>` +
+  c.map(([cl, tx], j) => cl === 'a' ? `<svg class="rca" id="oc${k}${j}" width="40" height="24" style="position:absolute;top:372px"><path d="M4 12 H30 M22 4 L32 12 L22 20" fill="none" stroke="#B9B1A3" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>` : `<div class="rc7 ${cl}" id="oc${k}${j}">${tx}</div>`).join('') +
+  `<div class="ka xk" style="top:452px"><i>${M.icon(xi, 30, C.gold, 2.4)}</i><div class="kt" style="top:24px">${xt}</div></div></div>`).join('');
+wrap($('#on'), 'onOut', 784, 580);
 
-// P: four types
-const P4 = [['zap', 'Convenience', 5, 1], ['scale', 'Shopping', 3, 4], ['star', 'Specialty', 1, 5], ['shield', 'Unsought', 1, 2]];
-$('#p5').innerHTML = P4.map(([ic, n], i) => `<div class="st5" id="pst${i}" style="left:${160 + i * 408}px"><div class="bg"></div><div class="si"></div><div class="s1">${n}</div>` +
-  `<div class="ml" style="top:136px">HOW OFTEN</div><div class="mb" style="top:166px"><i id="mo${i}"></i></div><div class="ml" style="top:204px">EFFORT TO BUY</div><div class="mb" style="top:234px"><i id="me${i}"></i></div></div>`).join('');
-const PE = [['pie', 'Four types, four plans', 'Two clues: how often people buy, and how hard they think'],
-  ['store', 'Sell everywhere, close to home', 'Cheap and frequent: soap, milk, a laddoo six-pack'],
-  ['search', 'Give facts, help them compare', 'Bags, phones, fridges: bought now and then'],
-  ['star', 'Fewer shops, a strong brand', 'Loyal buyers will travel for the one they love'],
-  ['users', 'Explain why they need it', 'Insurance, a health check: often sold face to face']];
-$('#pePans').innerHTML = PE.map(([ic, a, b], k) => `<div class="pex" id="pex${k}"><div class="lbl">${k ? `0${k} · ${P4[k - 1][1].toUpperCase()} · THE MARKETING PLAN` : 'WHAT EACH TYPE NEEDS'}</div><div class="pi">${M.icon(ic, 40, C.gold, 2.2)}</div><div class="pt2">${a}</div><div class="pt3">${b}</div></div>`).join('');
-// I: industrial
-const DF = [['wheat', 'Materials', 'Ragi and jaggery: part of the laddoo'], ['gear', 'Capital items', 'The grinder: costly, lasts for years'], ['flame', 'Supplies', 'Tape and gas: used up, bought again']];
-$('#dRows').innerHTML = DF.map(([ic, tt, m], i) => `<div class="df" id="df${i}" style="top:${96 + i * 148}px"><div class="bg"></div><div class="bd"></div><div class="serif dt">${tt}</div><div class="dm">${m}</div></div>`).join('');
-wrap($('#ill2'), 'ill2Out', 784, 580);
+// Y: the hierarchy
+const YH = [['Need family', 'Healthy eating'], ['Product family', 'Healthy snacks'], ['Product class', 'Sweet snacks'], ['Product line', "Laddoo Lab's laddoos"], ['Product type', 'Millet laddoos in packs'], ['Item', 'The ragi six-pack, ₹120']];
+$('#yRows').innerHTML = YH.map(([t, e], i) => { const w = 720 - i * 48; return `<div class="hr6" id="yr${i}" style="top:${96 + i * 76}px;width:1504px"><div class="bar" style="width:${w}px"></div><div class="n">0${i + 1}</div><div class="t">${t}</div>` +
+  `<svg class="ar" style="left:${w + 16}px" width="${800 - w - 32}" height="24"><path d="M2 12 H${800 - w - 46} M${800 - w - 54} 4 L${800 - w - 44} 12 L${800 - w - 54} 20" fill="none" stroke="#B9B1A3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="${i === 5 ? 'none' : '2 9'}"/></svg><div class="e" style="left:812px">${e}</div></div>`; }).join('');
+$('#hyXI').innerHTML = M.icon('laddoo', 20, '#fff', 2.4);
 
-// K: at work today
+// K
 const KA = [
-  ['zap', 'Convenience', 'Bought often, little effort', 'Mrs. Rao grabs her six-pack', 'store', 'A biscuit maker fills every small shop'],
-  ['scale', 'Shopping', 'Compared before buying', 'Four shops for one school bag', 'phone', 'A phone maker shows side by side specs'],
-  ['star', 'Specialty', 'Only one will do', 'One trusted weaver for a silk saree', 'watch', 'A luxury watchmaker sells in a few stores'],
-  ['shield', 'Unsought', 'Must be explained', 'Insurance, once someone explains it', 'users', 'An insurer sends advisers to explain plans'],
+  ['heart', 'Core benefit', 'What they really buy', 'A healthy treat for the tiffin', 'bed', 'A hotel really sells rest and sleep'],
+  ['check', 'Expected product', 'What they take for granted', 'Fresh, sealed and on time', 'bed', 'Guests expect a clean bed and fresh towels'],
+  ['star', 'Augmented product', 'Extras that beat rivals', "Monday delivery and Nani's card", 'plane', 'A fast check-in and a free airport ride'],
+  ['bulb', 'Potential product', 'What it could become', 'A monthly tiffin plan, one day', 'phone', "A phone maker plans next year's features"],
 ];
 $('#kRows').innerHTML = KA.map(([ic, t], i) => `<div class="kr" id="kr${i}" style="top:${100 + i * 120}px"><div class="bg"></div><div class="rn">0${i + 1}</div><div class="ri"></div><div class="rt">${t}</div></div>`).join('');
-const KP = [['PRODUCT TYPES TODAY', 'Four kinds', 'Every shelf holds all four', null]].concat(KA.map((a, i) => [`IN PRACTICE 0${i + 1} / 04`, a[1], a[2], a]));
+const KP = [['PRODUCT LEVELS TODAY', 'Rings everywhere', 'From a hotel to a phone', null]].concat(KA.map((a, i) => [`IN PRACTICE 0${i + 1} / 04`, a[1], a[2], a]));
 $('#kPans').innerHTML = KP.map(([s, t, m, a], i) => `<div class="pn" id="kn${i}"><div class="ps">${s}</div><div class="serif pt">${t}</div><div class="pm">${m}</div><div class="hr"></div>` +
-  (a ? `<div class="ka" id="ka${i}0" style="top:322px"><i>${M.icon('laddoo', 34, C.gold, 2.2)}</i><div class="kl">IN THE STORY</div><div class="kt">${a[3]}</div></div>
+  (a ? `<div class="ka" id="ka${i}0" style="top:322px"><i>${M.icon('laddoo', 34, C.gold, 2.2)}</i><div class="kl">AT LADDOO LAB</div><div class="kt">${a[3]}</div></div>
         <div class="ka" id="ka${i}1" style="top:442px"><i>${M.icon(a[4], 34, C.ink, 2.2)}</i><div class="kl">AT WORK TODAY</div><div class="kt">${a[5]}</div></div>`
-     : `<div class="px">FROM A CORNER SHOP TO AN INSURER</div><div class="pe"><i>${M.icon('store', 34, C.gold, 2.2)}</i><span>Each type is sold its own way</span></div>`) + `</div>`).join('');
+     : `<div class="px">SAME FIVE RINGS, ANY PRODUCT</div><div class="pe"><i>${M.icon('layers', 34, C.gold, 2.2)}</i><span>Core inside, extras outside</span></div>`) + `</div>`).join('');
 
 // X
-const XG = [['pin', 'Where to sell'], ['megaphone', 'How hard to push']];
-const XH = [['users', 'Depends on the buyer'], ['repeat', 'Boxes overlap']];
+const XG = [['star', 'Sets you apart'], ['heart', 'Builds loyalty']];
+const XH = [['coin', 'Extras cost money'], ['repeat', 'Extras become expected']];
 $('#xChips').innerHTML = XG.map(([ic, t], i) => `<div class="xc" id="xg${i}" style="left:48px;top:${392 + i * 60}px">${M.icon(ic, 22, C.gold, 2.4)}<span>${t}</span></div>`).join('') +
   XH.map(([ic, t], i) => `<div class="xc" id="xh${i}" style="left:408px;top:${392 + i * 60}px">${M.icon(ic, 22, C.red, 2.4)}<span>${t}</span></div>`).join('');
 const pan = (col, n) => `<line x1="-70" y1="86" x2="0" y2="0" stroke="#3A4560" stroke-width="3"/><line x1="70" y1="86" x2="0" y2="0" stroke="#3A4560" stroke-width="3"/>` +
   Array.from({ length: 2 }, (_, i) => `<rect id="wt${n}${i}" x="${-40 + i * 44}" y="52" width="36" height="34" rx="6" fill="${col}"/>`).join('') +
   `<path d="M-84 86 H84 C84 112 50 122 0 122 C-50 122 -84 112 -84 86Z" fill="#E2DACB" stroke="#3A4560" stroke-width="3"/>`;
 $('#panL').innerHTML = pan('#B8862F', 'L'); $('#panR').innerHTML = pan('#B5482F', 'R');
-$('#fanI').innerHTML = M.icon('user', 30, C.muted, 2.2);
-$('#bothI').innerHTML = M.icon('users', 52, C.gold, 2.2);
+$('#mig').innerHTML = [[140, C.gold3, 'AUGMENTED', C.ink], [95, C.gold2, 'EXPECTED', C.ink], [50, C.ink, 'CORE', '#FFFFFF']].map(([r, f, n, tc], i) =>
+  `<circle cx="150" cy="150" r="${r}" fill="${f}" stroke="#FFFFFF" stroke-width="3"/>${T(150, i === 2 ? 155 : 150 - r + 22, 12, tc, n, 'text-anchor="middle" letter-spacing="2"')}`).join('') +
+  `<g id="mgc" transform="translate(150 46)"><rect x="-56" y="-16" width="112" height="32" rx="16" fill="#B8862F"/>${T(0, 5, 13, '#FFFFFF', 'PHOTO MSG', 'text-anchor="middle" letter-spacing="1.5"')}</g>`;
+$('#bothI').innerHTML = M.icon('heart', 52, C.gold, 2.2);
 wrap($('#xs'), 'xsOut', 784, 580);
 
 // quiz
-const OPTS = ['Convenience', 'Shopping', 'Specialty', 'Unsought'], RIGHT = 1;
+const OPTS = ['Core benefit', 'Basic product', 'Expected product', 'Augmented product'], RIGHT = 3;
 $('#opts').innerHTML = OPTS.map((o, i) => `<div class="opt" id="o${i}" style="left:${160 + i * 408}px"><div class="bg"></div><div class="lt">${'ABCD'[i]}</div><div class="ot serif">${o}</div><div class="ok">${M.icon('check', 30, '#fff', 3)}</div></div>`).join('');
-$('#takeI').innerHTML = M.icon('scale', 44, C.gold2, 2.4);
+$('#takeI').innerHTML = M.icon('star', 44, C.gold2, 2.4);
 // recap
-const ROWS = [['pie', 'Sort by how people buy', ['How', 'Why']], ['users', 'Four consumer types', ['Convenience', 'Shopping', 'Specialty', 'Unsought']], ['briefcase', 'Industrial products', ['Materials', 'Capital items', 'Supplies']]];
+const ROWS = [['target', 'Five product levels', ['Core benefit', 'out to potential']], ['star', 'Win on what you add', ['Rivals copy the core']], ['list', 'The product hierarchy', ['A big need', 'down to one item']]];
 $('#rRows').innerHTML = ROWS.map(([ic, tx, ps], i) => `<div class="card rw" id="rw${i}" style="top:${280 + i * 152}px"><div class="rn">0${i + 1}</div><div class="ri">${M.icon(ic, 34, C.gold, 2.2)}</div><div class="rt">${tx}</div>${ps.map((p, k) => `<div class="fp" id="fp${i}${k}">${p}</div>`).join('')}</div>`).join('');
 $('#nextI').innerHTML = M.icon('arrowR', 40, C.gold2, 2.4);
 
@@ -176,27 +144,8 @@ const grow = (card, inner, t, tShrink) => {
   snap(inner, (sh >= 1 ? 0 : ((w - 784) / 2).toFixed(1)) + 'px', 'left');
   return sh;
 };
-const tileOn = (el, on, ic) => {
-  el.style.background = mix(C.paper, C.ink, on);
-  el.querySelector('.zt').style.color = mix(C.ink, '#fff', on); el.querySelector('.zn').style.color = mix(C.muted, C.gold2, on);
-  setIco(el.querySelector('.zi'), ic, on > 0.5 ? C.gold2 : C.gold, 40, 2.2);
-};
 const pop = { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 };
-const svgShow = (el, on) => attr(el, 'visibility', on ? 'inherit' : 'hidden');
-const fade = (el, t, t0, d = 0.25) => { const u = M.clamp((t - t0) / d); attr(el, 'opacity', u.toFixed(3)); svgShow(el, u > 0); };
-// position of an item along its keys at time t (null before / after)
-const posAt = (it, t) => {
-  const k = it.keys; if (t < k[0][0]) return null;
-  for (let i = 0; i < k.length - 1; i++) {
-    const [ta, xa, ya] = k[i], [tb, xb, yb] = k[i + 1];
-    if (t < tb) { const u = M.io((t - ta) / Math.max(0.01, tb - ta)); return [M.lerp(xa, xb, u), M.lerp(ya, yb, u)]; }
-  }
-  return [k[k.length - 1][1], k[k.length - 1][2]];
-};
-const msT = (ic, tx, st) => { // st 0 neutral, 2 final gold
-  const ms = $('#msT'); setIco(ms.querySelector('.msi'), ic, st ? '#fff' : C.gold, 26, 2.4); M.setT(ms.querySelector('.mtx'), tx);
-  const bg = st ? C.gold : C.paper; if (ms._bg !== bg) { ms._bg = bg; ms.style.background = bg; ms.style.color = st ? '#fff' : C.ink; }
-};
+const migY = M.track(46, [[tMonths, 78]], M.SOFT);
 
 let geo = null;
 function measure() {
@@ -205,10 +154,13 @@ function measure() {
   const w = ti.offsetWidth, h = ti.offsetHeight;
   geo = { sx: 960 - w / 2, sy: 540 - h / 2 - 20, ex: 160, ey: 156, es: 56 / fs, cw: $('#eyebrow').offsetWidth, cy: 540 - h / 2 - 112 };
   const ex = $('#exChip'); ex.style.left = (1760 - ex.offsetWidth) + 'px'; ex.style.top = '170px';
-  let x = 36; for (let i = 0; i < 2; i++) { const p = $('#mt' + i); p.style.left = x + 'px'; x += p.offsetWidth + 16; }
   const at = $('#askT'); if (at.offsetWidth > 848) at.style.fontSize = Math.floor(64 * 848 / at.offsetWidth) + 'px';
-  x = 48; for (let i = 0; i < 4; i++) { const p = $('#cc' + i); p.style.left = x + 'px'; x += p.offsetWidth + 12; }
-  document.querySelectorAll('.df .dm').forEach(el => { if (el.offsetWidth > 560) el.style.fontSize = Math.floor(26 * 560 / el.offsetWidth) + 'px'; });
+  for (let i = 0; i < 3; i++) { const q = $('#lq' + i); if (q.offsetWidth > 688) q.style.fontSize = Math.floor(40 * 688 / q.offsetWidth) + 'px'; }
+  OP.forEach(([, , , c], k) => {
+    const pt = $('#op' + k + ' .pt'); if (pt.offsetWidth > 688) pt.style.fontSize = Math.floor(72 * 688 / pt.offsetWidth) + 'px';
+    const pm = $('#op' + k + ' .pm'); if (pm.offsetWidth > 688) pm.style.fontSize = Math.floor(32 * 688 / pm.offsetWidth) + 'px';
+    let x = 48; c.forEach(([cl], j) => { const el = $('#oc' + k + j); el.style.left = x + 'px'; x += (cl === 'a' ? 40 : el.offsetWidth) + (cl === 'a' ? 6 : 12); });
+  });
   document.querySelectorAll('#kPans .pt').forEach(el => { if (el.offsetWidth > 848) el.style.fontSize = Math.floor(84 * 848 / el.offsetWidth) + 'px'; });
   document.querySelectorAll('#kPans .kt').forEach(el => { if (el.offsetWidth > 748) el.style.fontSize = Math.floor(30 * 748 / el.offsetWidth) + 'px'; });
   OPTS.forEach((_, i) => { const o = $('#o' + i + ' .ot'); if (o.offsetWidth > 312) o.style.fontSize = Math.floor(40 * 312 / o.offsetWidth) + 'px'; });
@@ -232,9 +184,9 @@ M.on(t => {
   M.draw($('#ruleL'), t, 0.95, 0.7, M.o3);
   M.vis($('#rule'), t, 0.9, tMorph - 0.1, { dy: 0, outDur: 0.25, ody: 0 });
   M.rise($('#sub'), t, 1.15, { st: 0.04, out: tMorph - 0.1, outDur: 0.3 });
-  M.vis($('#exChip'), t, tP0 + 0.4, tPout, { dy: 10, outDur: 0.3 });
+  M.hide($('#exChip'), true);
 
-  /* ===== A: two ways of buying ===== */
+  /* ===== A: same price, she stays ===== */
   const aOn = t < tL1 + 0.2; M.hide($('#sA'), !aOn);
   if (aOn) {
     const o = { outDur: 0.3, ody: -16 };
@@ -243,85 +195,70 @@ M.on(t => {
     M.vis($('#tbl'), t, tMorph + 0.35, 1e9, { dy: 20 });
     M.rise($('#hname'), t, tMorph + 0.6, { st: 0.06 }); M.vis($('#htag'), t, tMorph + 0.8, 1e9, { dy: 10 });
     M.vis($('#ways'), t, tMorph + 0.3, tAout, { dy: 36, ...o });
-    M.vis($('#hc0'), t, tMorph + 0.5, 1e9, pop); M.vis($('#hs0'), t, tMorph + 0.9, 1e9, pop);
-    M.vis($('#hc1'), t, tBag - 0.05, 1e9, pop); M.vis($('#hs1'), t, tFour - 0.05, 1e9, pop);
-    M.vis($('#ask'), t, tH3 + 0.05, tAout, { dy: 36, ...o });
-    M.vis($('#mt0'), t, tH3 + 0.3, 1e9, pop); M.vis($('#mt1'), t, tH3 + 0.6, 1e9, pop);
-    M.rise($('#askT'), t, tTwo - 0.05, { st: 0.07, sp: M.HEAVY });
+    M.vis($('#hc0'), t, tMorph + 0.5, 1e9, pop); M.vis($('#hc1'), t, tMorph + 0.75, 1e9, pop); M.vis($('#eqS'), t, tMorph + 1.0, 1e9, pop);
+    M.vis($('#ask'), t, tStays - 0.4, tAout, { dy: 36, ...o });
+    M.vis($('#raoB'), t, tStays - 0.2, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.08 }); M.vis($('#mt0'), t, tStays, 1e9, pop);
+    M.rise($('#askT'), t, tMore - 0.1, { st: 0.07, sp: M.HEAVY });
   }
 
-  /* ===== L: four ways to buy ===== */
+  /* ===== L: rings like an onion ===== */
   const lOn = t >= tL1 - 0.1 && t < tD1 + 0.2; M.hide($('#sL'), !lOn);
   if (lOn) {
     const o = { outDur: 0.3, ody: -16 };
-    const ill = $('#ill'); M.vis(ill, t, tL1 + 0.1, tLout, { dy: 36, ...o }); grow(ill, $('#illOut'), t, tL2);
-    M.vis($('#shopImg'), t, tL1 + 0.3, 1e9, { dy: 24, sp: M.SOFT });
-    M.vis($('#rcp'), t, tL2 + 0.12, tLout, { dx: 60, dy: 0, ...o });
-    M.vis($('#zN'), t, tL2 + 0.3, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.08 });
-    M.rise($('#zQ'), t, tL2 + 0.35, { st: 0.05, sp: M.HEAVY }); M.rise($('#zQ2'), t, wt('L2', 'different', 1) - 0.1, { st: 0.06, sp: M.HEAVY });
-    M.vis($('#zS'), t, tL2 + 0.8, 1e9, { dy: 8 });
-    M.vis($('#team'), t, tL3 - 0.1, tLout, { dy: 36, ...o });
-    FR.forEach(([ic], i) => {
-      const el = $('#fr' + i); M.vis(el, t, tFr[i] - 0.05, 1e9, pop);
-      tileOn(el, M.io((t - tFr[i]) / 0.25) * (1 - (i < 3 ? M.io((t - tFr[i + 1]) / 0.25) : M.io((t - tLout + 0.3) / 0.3))), ic);
-    });
+    const ill = $('#ill'); M.vis(ill, t, tL1 + 0.1, tLout, { dy: 36, ...o }); grow(ill, $('#illOut'), t, tDraws);
+    M.vis($('#illImg'), t, tL1 + 0.3, 1e9, { dy: 24, sp: M.SOFT });
+    M.vis($('#rcp'), t, tDraws + 0.12, tLout, { dx: 60, dy: 0, ...o });
+    for (let i = 0; i < 5; i++) { const c = $('#mc' + i); const u = M.clamp((t - tRings - (4 - i) * 0.12) / 0.2); attr(c, 'opacity', u.toFixed(3)); attr(c, 'visibility', u > 0 ? 'inherit' : 'hidden'); }
+    M.rise($('#miniT'), t, tOnionW - 0.2, { st: 0.06, sp: M.HEAVY }); M.vis($('#miniS'), t, tOnionW + 0.3, 1e9, { dy: 10 });
+    M.vis($('#team'), t, tL2 + 0.05, tLout, { dy: 36, ...o });
+    M.vis($('#cF'), t, tL2 + 0.3, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.08 });
+    M.rise($('#cq0'), t, tHealthy - 0.1, { st: 0.05, sp: M.HEAVY }); M.rise($('#cq1'), t, tActually - 0.1, { st: 0.06, sp: M.HEAVY });
+    M.vis($('#cS'), t, tActually + 0.5, 1e9, { dy: 8 });
   }
 
-  /* ===== D: what is product classification ===== */
-  const dOn = t >= tD1 - 0.1 && t < tM1 + 0.2; M.hide($('#sD'), !dOn);
+  /* ===== D: product levels ===== */
+  const dOn = t >= tD1 - 0.1 && t < tM[0] + 0.2; M.hide($('#sD'), !dOn);
   if (dOn) {
     const o = { outDur: 0.3, ody: -16 };
     M.rise($('#dq'), t, tD1 + 0.05, { st: 0.07, sp: M.HEAVY, out: tD2 - 0.1, outDur: 0.3 });
-    const kq = $('#kq'); M.vis(kq, t, tD2 + 0.05, tDout, { dy: 36, ...o }); grow(kq, $('#kqOut'), t, tD5);
-    for (let i = 0; i < 3; i++) M.rise($('#ql' + i), t, tQl[i] - 0.1, { st: 0.05, sp: M.HEAVY });
-    M.vis($('#kqHr'), t, tD3 - 0.2, 1e9, { dy: 0 });
-    M.rise($('#cop'), t, tD3 + 0.05, { st: 0.06, sp: M.HEAVY }); M.vis($('#copB'), t, wt('D3', 'Harvard') - 0.05, 1e9, { dy: 10 });
-    for (let i = 0; i < 4; i++) M.vis($('#cc' + i), t, tCc[i] - 0.05, 1e9, pop);
-    M.vis($('#vc'), t, tD5 + 0.12, tDout, { dx: 60, dy: 0, ...o });
-    M.vis($('#fam'), t, tD5 + 0.3, 1e9, { dy: 16, sp: M.SOFT });
-    fade($('#fr'), t, tD5 + 0.35); M.draw($('#fb0'), t, tD5 + 0.5, 0.4, M.o3); fade($('#fc'), t, tD5 + 0.7);
-    for (let i = 0; i < 4; i++) fade($('#lc' + i), t, tD5 + 0.9 + i * 0.1);
-    M.draw($('#fb1'), t, tInd - 0.2, 0.4, M.o3); fade($('#fi'), t, tInd);
-    for (let i = 0; i < 3; i++) fade($('#li' + i), t, tBiz + i * 0.12);
+    const kq = $('#kq'); M.vis(kq, t, tD2 + 0.05, tDout, { dy: 36, ...o }); grow(kq, $('#kqOut'), t, tD3);
+    D5.forEach((_, i) => {
+      const el = $('#d5' + i), ta = tD2 + 0.5 + i * 0.32; M.vis(el, t, ta, 1e9, { dy: 14 });
+      const on = M.io((t - ta) / 0.25) * (1 - M.io((t - ta - 0.6) / 0.3));
+      el.querySelector('.bg').style.background = mix(C.paper, C.gold3, on);
+    });
+    M.vis($('#vc'), t, tD3 + 0.12, tDout, { dx: 60, dy: 0, ...o });
+    M.vis($('#lvI'), t, tD3 + 0.3, 1e9, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.1 });
+    for (let i = 0; i < 3; i++) M.vis($('#lq' + i), t, tLev + 0.3 + i * 0.12, 1e9, { dy: 14 });
+    $('#lk0').style.color = mix(C.ink, C.dim, M.io((t - tMake) / 0.3)); $('#lk1').style.color = mix(C.ink, C.gold, M.io((t - tAdd) / 0.3));
+    M.vis($('#lvHr'), t, tD3 + 0.4, 1e9, { dy: 0 }); M.rise($('#lvN'), t, tLev - 0.1, { st: 0.06, sp: M.HEAVY }); M.vis($('#lvB'), t, tLev + 0.4, 1e9, { dy: 8 });
   }
 
-  /* ===== M: the sorting tree ===== */
-  const mOn = t >= tM1 - 0.1 && t < tT + 0.1; M.hide($('#sM'), !mOn);
+  /* ===== M: build the onion ===== */
+  const mOn = t >= tM[0] - 0.1 && t < tT + 0.1; M.hide($('#sM'), !mOn);
   if (mOn) {
-    M.vis($('#tr'), t, tM1 + 0.05, tMout, { dy: 36, outDur: 0.3, ody: -16 });
-    M.vis($('#tree'), t, tM1 + 0.2, 1e9, { dy: 16, sp: M.SOFT });
-    M.draw($('#spine'), t, tM1 + 0.3, 1.0, M.o3);
-    for (let i = 0; i < 3; i++) { fade($('#qn' + i), t, tM1 + 0.4 + i * 0.25); M.draw($('#br' + i), t, tM1 + 0.9 + i * 0.15, 0.4, M.o3); }
-    fade($('#brl'), t, tM1 + 1.3);
-    for (let i = 0; i < 4; i++) fade($('#bn' + i), t, tM1 + 1.0 + i * 0.12);
-    M.vis($('#msT'), t, tM1 + 0.6, 1e9, pop);
-    // the current item
-    let cur = -1; ITEMS.forEach((it, i) => { if (t >= it.keys[0][0]) cur = i; });
-    const tok = $('#tok');
-    const it = cur >= 0 ? ITEMS[cur] : null, p = it ? posAt(it, t) : null, last = it ? it.keys[it.keys.length - 1][0] : 0;
-    const inBin = it && t > last + 0.05;
-    svgShow(tok, !!p && !inBin);
-    if (p && !inBin) { attr(tok, 'transform', `translate(${p[0].toFixed(1)} ${p[1].toFixed(1)})`); const tic = tok.querySelector('.ti'); if (tic._ic !== it.ic) { tic._ic = it.ic; tic.innerHTML = M.icon(it.ic, 28, '#fff', 2.2); } }
-    // node highlight + answer chips for the current item
-    for (let n = 0; n < 3; n++) {
-      const at = p && !inBin && Math.abs(p[0] - QX[n]) < 4 && Math.abs(p[1] - SY) < 4;
-      const r = $('#qn' + n + ' rect'); attr(r, 'stroke', at ? C.gold : C.line); attr(r, 'stroke-width', at ? 4 : 2);
-      const a = it && it.ans.find(x => x[0] === n), an = $('#an' + n);
-      const showA = !!(a && t >= a[1] && t < last + 0.3 && !inBin);
-      svgShow(an, showA);
-      if (a && showA) { const tx = an.querySelector('.at'); if (tx.textContent !== a[2]) tx.textContent = a[2]; attr(an.querySelector('.ar'), 'fill', a[2] === 'YES' ? C.gold : C.ink2); }
+    const o = { outDur: 0.3, ody: -16 };
+    M.vis($('#on'), t, tM[0] + 0.05, tMout, { dx: -60, dy: 0, ...o });
+    M.vis($('#onP'), t, tM[0] + 0.2, tMout, { dx: 60, dy: 0, ...o });
+    for (let i = 0; i < 5; i++) {
+      const g = $('#rg' + i); M.vis(g, t, tM[i + 1] - 0.05, 1e9, { dy: 0, sc: 0.85, sp: M.POP, fade: 0.12 });
+      const rc = g.querySelector('.rc'), act = M.io((t - tM[i + 1]) / 0.25) * (1 - M.io((t - tM[i + 2]) / 0.3));
+      const win = i >= 3 ? M.io((t - tM[6]) / 0.3) : 0;
+      attr(rc, 'stroke', i === 4 ? C.gold : mix('#FFFFFF', C.gold, Math.max(act, win))); attr(rc, 'stroke-width', (3 + 3 * Math.max(act, win)).toFixed(2));
     }
-    // bins fill
-    ITEMS.forEach(it2 => {
-      const g = $('#bn' + it2.bin), on = t >= it2.done - 0.05, u = M.io((t - it2.done + 0.05) / 0.3);
-      svgShow(g.querySelector('.bi'), on);
-      attr(g.querySelector('.bb'), 'fill', mix(C.paper, C.gold3, u)); attr(g.querySelector('.bb'), 'stroke', mix(C.line, C.gold, u));
-      attr(g.querySelector('.bl'), 'fill', mix(C.muted, C.gold, u));
+    M.vis($('#winT'), t, tM[6] + 0.3, 1e9, { dy: 0, fade: 0.2 });
+    OP.forEach(([, , , c], k) => {
+      const tin = k ? tM[k] : tM[0] + 0.4, tout = k < 6 ? tM[k + 1] - 0.14 : 1e9;
+      const pn = $('#op' + k); const off = t < tin - 0.01 || t > tout + 0.3; M.hide(pn, off); if (off) return;
+      const oo = { outDur: 0.18, ody: -12 };
+      M.vis(pn.querySelector('.ps'), t, tin, tout, { dy: 12, ...oo });
+      M.rise(pn.querySelector('.pt'), t, tin + 0.06, { st: 0.06, sp: M.HEAVY, out: tout, outDur: 0.2 });
+      M.rise(pn.querySelector('.pm'), t, tin + 0.3, { st: 0.04, out: tout, outDur: 0.2 });
+      M.vis(pn.querySelector('.hr'), t, tin + 0.4, tout, { dy: 0, ...oo });
+      M.vis(pn.querySelector('.xl'), t, tin + 0.5, tout, { dy: 10, ...oo });
+      c.forEach((_, j) => M.vis($('#oc' + k + j), t, tin + 0.6 + j * 0.25, tout, { ...pop, ...oo }));
+      M.vis(pn.querySelector('.xk'), t, tin + 0.8 + c.length * 0.25, tout, { dy: 16, ...oo });
     });
-    if (t >= tM7) msT('check', 'Four products, four bins, four plans', 2);
-    else if (it && t >= it.done) msT(it.ic, `${it.name}: a ${BIN[it.bin][1].toLowerCase()} product`, 2);
-    else if (it) msT(it.ic, it.name, 0);
-    else msT('help', 'Three questions sort any product', 0);
   }
 
   /* ===== statement on navy ===== */
@@ -331,53 +268,22 @@ M.on(t => {
   if (stOn) {
     stmt.style.transform = t > tTu ? `translateX(${(sx ?? -1960).toFixed(1)}px)` : 'none';
     M.rise($('#st1'), t, tT + 0.08, { st: 0.05 });
-    M.rise($('#st2'), t, tT + 0.4, { st: 0.08, sp: M.HEAVY });
+    M.rise($('#st2'), t, tSt2 - 0.05, { st: 0.08, sp: M.HEAVY });
   }
 
-  /* ===== P: four types, four plans ===== */
-  const pOn = t >= tTu - 0.05 && t < tI1 + 0.2; M.hide($('#sP'), !pOn);
-  if (pOn) {
-    const o = { outDur: 0.3, ody: -16 };
-    P4.forEach(([ic, , fo, ef], i) => {
-      const el = $('#pst' + i), ta = tP[i], td = i < 3 ? tP[i + 1] : tPout + 1;
-      M.vis(el, t, tP0 + 0.1 + i * 0.07, tPout, { dy: 36, ...o });
-      const on = M.io((t - ta) / 0.3), off = M.io((t - td) / 0.35), act = on * (1 - off);
-      el.querySelector('.bg').style.background = mix(C.card, C.ink, act);
-      el.querySelector('.s1').style.color = mix(C.ink, '#fff', act);
-      el.querySelectorAll('.ml').forEach(l => { l.style.color = mix(C.muted, C.gold2, act); });
-      el.querySelectorAll('.mb').forEach(b => { b.style.background = mix(C.paper2, C.navy3, act); });
-      el.querySelector('.si').style.background = mix(C.paper, C.navy2, act);
-      setIco(el.querySelector('.si'), ic, act > 0.5 ? C.gold2 : C.gold, 30, 2.2);
-      const g = M.o3((t - tP0 - 0.6 - i * 0.1) / 0.7);
-      const mo = $('#mo' + i), me = $('#me' + i);
-      mo.style.width = (312 * fo / 5 * g).toFixed(1) + 'px'; mo.style.background = mix(C.gold, C.gold2, act);
-      me.style.width = (312 * ef / 5 * g).toFixed(1) + 'px'; me.style.background = mix(C.ink, '#FFFFFF', act);
-    });
-    M.vis($('#pe'), t, tP0 + 0.35, tPout, { dy: 36, ...o });
-    for (let k = 0; k < 5; k++) {
-      const tin = k ? tP[k - 1] : tP0 + 0.6, tout = k < 4 ? tP[k] - 0.14 : 1e9;
-      const pn = $('#pex' + k), off = t < tin - 0.01 || t > tout + 0.3; M.hide(pn, off); if (off) continue;
-      const oo = { outDur: 0.18, ody: -12 };
-      M.vis(pn.querySelector('.lbl'), t, tin, tout, { dy: 10, ...oo });
-      M.vis(pn.querySelector('.pi'), t, tin + 0.05, tout, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.08, ...oo });
-      M.rise(pn.querySelector('.pt2'), t, tin + 0.12, { st: 0.04, out: tout, outDur: 0.2 });
-      M.rise(pn.querySelector('.pt3'), t, tin + 0.5, { st: 0.03, out: tout, outDur: 0.2 });
-    }
-  }
-
-  /* ===== I: industrial products ===== */
-  const iOn = t >= tI1 - 0.1 && t < tK0 + 0.2; M.hide($('#sI'), !iOn);
-  if (iOn) {
-    const o = { outDur: 0.3, ody: -16 };
-    const il = $('#ill2'); M.vis(il, t, tI1 + 0.05, tIout, { dy: 36, ...o }); grow(il, $('#ill2Out'), t, tI[0]);
-    M.vis($('#kitImg'), t, tI1 + 0.25, 1e9, { dy: 24, sp: M.SOFT });
-    M.vis($('#bv'), t, tI[0] + 0.12, tIout, { dx: 60, dy: 0, ...o });
-    DF.forEach(([ic], i) => {
-      const el = $('#df' + i); M.vis(el, t, tI[i] + 0.05, 1e9, { dy: 18 });
-      const on = M.io((t - tI[i]) / 0.3) * (1 - (i < 2 ? M.io((t - tI[i + 1]) / 0.3) : M.io((t - tIout + 0.3) / 0.3)));
-      el.querySelector('.bg').style.background = mix(C.paper, C.ink, on);
-      el.querySelector('.dt').style.color = mix(C.ink, '#fff', on); el.querySelector('.dm').style.color = mix(C.ink2, C.gold2, on);
-      const bd = el.querySelector('.bd'); bd.style.background = mix('#fff', C.navy2, on); setIco(bd, ic, on > 0.5 ? C.gold2 : C.gold, 34, 2.2);
+  /* ===== Y: the product hierarchy ===== */
+  const yOn = t >= tTu - 0.05 && t < tK0 + 0.2; M.hide($('#sY'), !yOn);
+  if (yOn) {
+    M.vis($('#hy'), t, tY1 + 0.02, tYout, { dy: 36, outDur: 0.3, ody: -16 });
+    M.vis($('#hyX'), t, tY1 + 0.6, 1e9, pop);
+    YH.forEach((_, i) => {
+      const r = $('#yr' + i); M.vis(r.querySelector('.bar'), t, tY1 + 0.4 + i * 0.12, 1e9, { dx: -24, dy: 0 });
+      M.vis(r.querySelector('.n'), t, tY2 + 0.4 + i * 0.12, 1e9, { dy: 8 }); M.vis(r.querySelector('.t'), t, tY2 + 0.45 + i * 0.12, 1e9, { dy: 8 });
+      M.vis(r.querySelector('.ar'), t, tY[i] + 0.1, 1e9, { dx: -16, dy: 0, fade: 0.15 }); M.vis(r.querySelector('.e'), t, tY[i] + 0.25, 1e9, { dy: 10 });
+      const on = M.io((t - tY[i]) / 0.3) * (1 - (i < 5 ? M.io((t - tY[i + 1]) / 0.3) : 0)), last = i === 5 ? M.io((t - tY[5]) / 0.3) : 0;
+      r.querySelector('.bar').style.background = mix(mix(C.paper, C.ink, on), C.gold, last);
+      r.querySelector('.t').style.color = mix(C.ink, '#fff', Math.max(on, last)); r.querySelector('.n').style.color = mix(C.gold, C.gold2, Math.max(on, last));
+      r.querySelector('.e').style.color = i === 5 ? C.gold : C.ink;
     });
   }
 
@@ -431,11 +337,12 @@ M.on(t => {
       g.style.background = C.gold3; g.style.color = C.ink; h.style.background = C.redBg; h.style.color = C.red;
     }
     M.vis($('#xw'), t, tX4 + 0.12, tXout, { dx: 60, dy: 0, ...o });
-    M.vis($('#pc0'), t, tX4 + 0.4, 1e9, { dx: 24, dy: 0 }); M.vis($('#pc0 .c'), t, wt('X4', 'grab') - 0.05, 1e9, pop);
-    M.vis($('#pc1'), t, tFan - 0.1, 1e9, { dx: 24, dy: 0 }); M.vis($('#pc1 .c'), t, wt('X4', 'specialty') - 0.05, 1e9, pop);
-    M.vis($('#fx'), t, tNaniX, 1e9, { dy: 16 });
-    M.vis($('#lesson'), t, tX5 + 0.05, 1e9, { dy: 16 });
-    M.vis($('#both'), t, tX5 + 0.15, 1e9, { dy: 40 });
+    M.vis($('#mig'), t, tX4 + 0.3, 1e9, { dy: 16, sp: M.SOFT });
+    attr($('#mgc'), 'transform', `translate(150 ${migY(t).toFixed(1)})`);
+    M.vis($('#mr0'), t, tX4 + 0.5, 1e9, { dx: 16, dy: 0 }); M.vis($('#mr1'), t, tCompl - 0.1, 1e9, { dx: 16, dy: 0 });
+    M.vis($('#nB'), t, tX5 + 0.1, 1e9, { dy: 16 });
+    M.vis($('#lesson'), t, tX6 + 0.05, 1e9, { dy: 16 });
+    M.vis($('#both'), t, tX6 + 0.15, 1e9, { dy: 40 });
   }
 
   /* ===== quick check ===== */
@@ -444,7 +351,7 @@ M.on(t => {
     const tq = tQ + 0.12;
     M.vis($('#qchip'), t, tq + 0.05, 1e9, { dy: 16 });
     M.rise($('#qq1'), t, tq + 0.12, { st: 0.05, sp: M.HEAVY });
-    M.rise($('#qq2'), t, wt('Q1', 'What') - 0.05, { st: 0.06, sp: M.HEAVY });
+    M.rise($('#qq2'), t, wt('Q1', 'Which') - 0.05, { st: 0.06, sp: M.HEAVY });
     OPTS.forEach((o, i) => {
       const el = $('#o' + i); M.vis(el, t, tQ + 1.5 + i * 0.08, 1e9, { dy: 40 });
       const right = i === RIGHT, r = M.io((t - tAns) / 0.3), bg = el.querySelector('.bg');

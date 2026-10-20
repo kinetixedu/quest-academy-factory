@@ -86,14 +86,14 @@ const tail = k => `<div class="mbar" id="bar${k}"><i id="sg${k}0"></i></div>
     <div class="mtk" id="tk0${k}" style="left:48px">0</div><div class="mtk" id="tk1${k}" style="right:48px">30 TRIPS</div>
     <div class="mst" id="ms${k}"><span class="msi"></span><span class="mtx"></span><span class="tm"></span></div>`;
 const kitchen = `<g transform="translate(${KX} ${KY})"><circle r="26" fill="#B8862F"/><g transform="translate(-13 -13)">${M.icon('laddoo', 26, '#fff', 2.2)}</g></g>`;
-$('#mLIn').innerHTML = head('L', 'WITHOUT STORES · ARJUN GOES TO EVERY FAMILY') + `
+$('#mLIn').innerHTML = head('L', 'WITHOUT STORES') + `
     <svg class="mplan" id="planL" width="688" height="250"><defs><clipPath id="avc19"><circle r="19"/></clipPath></defs>
       <rect width="688" height="250" rx="24" fill="#F5F1E8"/>
       ${HOMES.map((h, i) => `<line id="spL${i}" x1="${KX}" y1="${KY}" x2="${h[0].toFixed(1)}" y2="${h[1].toFixed(1)}" stroke="#3A4560" stroke-width="2" opacity="0.5"/>`).join('')}
       ${HOMES.map((h, i) => `<circle id="hmL${i}" cx="${h[0].toFixed(1)}" cy="${h[1].toFixed(1)}" r="9" fill="#E2DACB"/>`).join('')}
       ${kitchen}${avG('avL', 'arjun')}
     </svg>` + tail('L');
-$('#mRIn').innerHTML = head('R', 'WITH STORES · ARJUN GOES TO 10 STORES') + `
+$('#mRIn').innerHTML = head('R', 'WITH 10 STORES') + `
     <svg class="mplan" id="planR" width="688" height="250">
       <rect width="688" height="250" rx="24" fill="#F5F1E8"/>
       ${FAM.map((f, i) => `<line id="flR${i}" x1="${STORES[f[2]][0].toFixed(1)}" y1="${STORES[f[2]][1].toFixed(1)}" x2="${f[0].toFixed(1)}" y2="${f[1].toFixed(1)}" stroke="#B8862F" stroke-width="2"/>`).join('')}
@@ -362,7 +362,7 @@ M.on(t => {
   if (vOn) {
     M.vis($('#lv'), t, tV0 + 0.05, tVout, { dy: 36, outDur: 0.3, ody: -16 });
     LV.forEach((_, i) => {
-      M.vis($('#lr' + i), t, i === 0 ? tV0 + 0.5 : tV[i] - 0.1, 1e9, { dx: -24, dy: 0 });
+      M.vis($('#lr' + i), t, tV0 + 0.5 + i * 0.25, 1e9, { dx: -24, dy: 0 });
       const on = M.io((t - tV[i]) / 0.3), off = i < 3 ? M.io((t - tV[i + 1]) / 0.35) : 0, act = on * (1 - off);
       attr($('#lb' + i), 'fill', mix(C.paper, C.gold3, act));
       attr($('#ln' + i), 'fill', mix(C.ink, C.gold, act));

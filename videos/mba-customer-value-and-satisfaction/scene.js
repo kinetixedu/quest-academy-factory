@@ -51,7 +51,7 @@ Object.assign(M.IC, {
 /* ---------- beats (all from the voice) ---------- */
 const tTitle = 0.25, tMorph = wt('H1', 'packet') - 0.45;
 const tH2 = T0('H2'), tPicks = wt('H2', 'picks'), tC2 = T0('C2'), tTi = [wt('C2', 'value'), wt('C2', 'satisfaction')];
-const tL1 = T0('L1'), tL2 = T0('L2'), tAout = tL1 - 0.32, tWorth = wt('L2', 'worth'), tProm = wt('L2', 'promise');
+const tL1 = T0('L1'), tL2 = T0('L2'), tAout = tL1 - 0.32, tWorth = wt('L2', 'worth'), tProm = wt('L2', 'did') + 0.1;
 const tD1 = T0('D1'), tD2 = T0('D2'), tD3 = T0('D3'), tD4 = T0('D4'), tLout = tD1 - 0.32;
 const tHl = [wt('D3', 'benefits'), wt('D3', 'costs'), wt('D3', 'compared')], tBel = wt('D4', 'believes'), tSel = wt('D4', 'seller');
 const tV = [1, 2, 3, 4].map(i => T0('V' + i)), tDout = tV[0] - 0.32;

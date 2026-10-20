@@ -31,11 +31,11 @@ const tL1 = T0('L1'), tL2 = T0('L2'), tL3 = T0('L3');
 const tDev = wt('L1', 'Dev'), tArj = wt('L1', 'Arjun'), tJob = [wt('L2', 'reason'), wt('L2', 'now')], tOneM = wt('L3', 'one'), tDiw = wt('L3', 'Diwali');
 const tAout = tL1 - 0.32, tLout = T0('D1') - 0.32;
 // D
-const tD1 = T0('D1'), tD2 = T0('D2'), tD3 = T0('D3'), tD4 = T0('D4'), tDout = T0('A0') - 0.32;
+const tD1 = T0('D1'), tD2 = T0('D2'), tD3 = T0('D3'), tD4 = T0('D4'), tDout = T0('O0') - 0.32;
 const tKey = [wt('D3', 'Paid'), wt('D3', 'Non'), wt('D3', 'everyone')], tShort = wt('D4', 'short'), tEnc = wt('D4', 'encourage'), tNowD = wt('D4', 'now');
 // O: three jobs of an ad
-const tA0 = T0('A0'), tA = [1, 2, 3].map(i => T0('A' + i)), tOout = T0('M1') - 0.32;
-const tAd = [wt('A1', 'Laddoo'), wt('A2', 'No'), wt('A3', 'poster')];
+const tA0 = T0('O0'), tA = [1, 2, 3].map(i => T0('O' + i)), tOout = T0('M1') - 0.32;
+const tAd = [wt('O1', 'Laddoo'), wt('O2', 'No'), wt('O3', 'poster')];
 // M: six weeks
 const tM = [0, 1, 2, 3, 4, 5, 6, 7].map(i => i ? T0('M' + i) : 0);
 const tB = [wt('M2', 'one'), wt('M2', 'two'), wt('M3', 'starts'), wt('M4', 'four'), wt('M4', 'five'), wt('M6', 'six')];

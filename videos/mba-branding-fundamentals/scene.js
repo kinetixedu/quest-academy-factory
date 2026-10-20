@@ -73,13 +73,13 @@ const plainPack = (x, y, s, txt, id = '') => `<g ${id ? `id="${id}"` : ''} trans
   <path d="M14 20 L146 20 L152 252 Q152 262 142 262 L18 262 Q8 262 8 252 Z" fill="${C.plain}"/><rect x="10" y="6" width="140" height="22" rx="5" fill="${C.plainD}"/>
   <text x="80" y="140" text-anchor="middle" font-family="Poppins" font-weight="500" font-size="13" fill="#9A917F">${txt}</text></g>`;
 // A: two look-alike packs
-$('#look').innerHTML = plainPack(30, 30, 1.05, 'laddoo lab', 'pkA') + plainPack(316, 30, 1.05, 'millet laddoos', 'pkB') +
-  `<g id="qm" transform="translate(260 170)"><circle r="30" fill="#F6E3DC"/><text y="12" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="34" fill="#B5482F">?</text></g>
-   <text x="114" y="350" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="16" letter-spacing="2.4" fill="#8A8274">LADDOO LAB</text>
-   <text x="400" y="350" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="16" letter-spacing="2.4" fill="#8A8274">THE BAKERY</text>
-   <rect id="ring0" x="22" y="22" width="184" height="302" rx="20" fill="none" stroke="#B5482F" stroke-width="3" stroke-dasharray="6 8"/>
-   <rect id="ring1" x="308" y="22" width="184" height="302" rx="20" fill="none" stroke="#B5482F" stroke-width="3" stroke-dasharray="6 8"/>
-   <text id="lookT" x="257" y="410" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="26" fill="#14213D">Which one is which?</text>`;
+$('#look').innerHTML = plainPack(22, 26, 1.25, 'laddoo lab', 'pkA') + plainPack(298, 26, 1.25, 'millet laddoos', 'pkB') +
+  `<g transform="translate(260 196)"><g id="qm"><circle r="30" fill="#F6E3DC"/><text y="12" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="34" fill="#B5482F">?</text></g></g>
+   <text x="122" y="396" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="16" letter-spacing="2.4" fill="#8A8274">LADDOO LAB</text>
+   <text x="398" y="396" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="16" letter-spacing="2.4" fill="#8A8274">THE BAKERY</text>
+   <rect id="ring0" x="18" y="18" width="210" height="350" rx="20" fill="none" stroke="#B5482F" stroke-width="3" stroke-dasharray="6 8"/>
+   <rect id="ring1" x="294" y="18" width="210" height="350" rx="20" fill="none" stroke="#B5482F" stroke-width="3" stroke-dasharray="6 8"/>
+   <text id="lookT" x="261" y="446" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="26" fill="#14213D">Which one is which?</text>`;
 const SAW = [['package', 'Same shape'], ['palette', 'Same colour'], ['type', 'Tiny name']];
 $('#saw').innerHTML = SAW.map(([ic, t], i) => `<div class="stp" id="sw${i}" style="top:76px;background:#F6E3DC;color:#B5482F">${M.icon(ic, 26, C.red, 2.4)}<span>${t}</span></div>`).join('') +
   `<div class="serif" id="mixT" style="position:absolute;left:36px;top:170px;font-size:56px;white-space:nowrap">Easy to <span class="acc">mix up.</span></div>`;
@@ -108,10 +108,10 @@ const rw3 = (id, top, ic, txt) => `<div class="rw3" id="${id}" style="top:${top}
 const CKS = ['Memorable', 'Meaningful', 'Likable', 'Transferable', 'Adaptable', 'Protectable'];
 const shelf = () => {
   const items = [['p', 0], ['o', 0], ['p', 1], ['o', 1], ['p', 2], ['o', 2]];
-  let x = 6, out = `<line x1="0" y1="262" x2="600" y2="262" stroke="#B9B1A3" stroke-width="5" stroke-linecap="round"/>`;
+  let out = `<line x1="0" y1="262" x2="600" y2="262" stroke="#B9B1A3" stroke-width="5" stroke-linecap="round"/>`;
   const BANDS = [[C.gold, 'ORIGINAL', '#fff'], [C.cocoa, 'COCOA-RAGI', '#fff'], [C.cream, 'COCONUT-JOWAR', C.ink]];
-  items.forEach(([k, i], j) => { const px = 8 + j * 99; out += k === 'p' ? plainPack(px, 60, 0.6, '') : pack(px, 60, 0.6, ...BANDS[i], `sh${i}`); });
-  out += [1, 3, 5].map((j, i) => `<rect id="shR${i}" x="${8 + j * 99 - 2}" y="54" width="100" height="168" rx="14" fill="none" stroke="#B8862F" stroke-width="4"/>`).join('');
+  items.forEach(([k, i], j) => { const px = 8 + j * 99; out += k === 'p' ? plainPack(px, 102, 0.6, '') : pack(px, 102, 0.6, ...BANDS[i], `sh${i}`); });
+  out += [1, 3, 5].map((j, i) => `<rect id="shR${i}" x="${8 + j * 99 - 2}" y="96" width="100" height="168" rx="14" fill="none" stroke="#B8862F" stroke-width="4"/>`).join('');
   return out;
 };
 const PANES = [
@@ -142,6 +142,7 @@ $('#kPans').innerHTML = KP.map(([s, t, m, a], i) => `<div class="pn" id="kn${i}"
 
 // P: icons
 $('#cb0I').innerHTML = M.icon('clock', 34, C.gold, 2.2); $('#cb1I').innerHTML = M.icon('shield', 34, C.gold, 2.2);
+wrap($('#wb'), 'wbOut', 784, 580);
 $('#cb2I').innerHTML = M.icon('heart', 34, C.ink, 2.2); $('#cb3I').innerHTML = M.icon('lock', 34, C.ink, 2.2);
 
 // X
@@ -253,7 +254,7 @@ M.on(t => {
     [tMorph + 0.8, tPlain - 0.05, tSmall - 0.1].forEach((ta, i) => M.vis($('#sw' + i), t, ta, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 }));
     M.rise($('#mixT'), t, tSmall + 0.3, { st: 0.07, sp: M.HEAVY });
     M.vis($('#ask'), t, tMorph + 0.42, tAout, { dy: 36, ...o });
-    M.vis($('#mt0'), t, tGood - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
+    M.vis($('#mt0'), t, Math.min(tGood - 0.05, tMorph + 1.4), 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
     M.vis($('#mt1'), t, tStrong - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
     M.rise($('#askT'), t, tNot - 0.1, { st: 0.07, sp: M.HEAVY });
   }
@@ -360,8 +361,8 @@ M.on(t => {
   const pOn = t >= tTu - 0.05 && t < tK0 + 0.2; M.hide($('#sP'), !pOn);
   if (pOn) {
     const o = { outDur: 0.3, ody: -16 };
-    M.vis($('#wb'), t, tP0 + 0.1, tPout, { dx: -60, dy: 0, ...o });
-    M.vis($('#ws'), t, tP0 + 0.25, tPout, { dx: 60, dy: 0, ...o });
+    const wb = $('#wb'); M.vis(wb, t, tP0 + 0.1, tPout, { dy: 36, ...o }); grow(wb, $('#wbOut'), t, tP[2] + 0.5);
+    M.vis($('#ws'), t, tP[2] + 0.62, tPout, { dx: 60, dy: 0, ...o });
     for (let i = 0; i < 4; i++) {
       const el = $('#cb' + i); M.vis(el, t, tP[i] - 0.05, 1e9, { dy: 16 });
       const act = M.io((t - tP[i]) / 0.3) * (1 - (i < 3 ? M.io((t - tP[i + 1]) / 0.3) : 0));
