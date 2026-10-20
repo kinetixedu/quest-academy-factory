@@ -77,7 +77,7 @@ $('#roG').innerHTML = `<span class="k">d</span><span class="v" id="rd">0.0</span
 $('#roF0').innerHTML = K(`${cv(VC, 'v')} = \\dfrac{d}{t} = \\dfrac{20\\,\\text{m}}{5\\,\\text{s}} = ${cv(VC, '4\\,\\text{m/s}')}`);
 $('#roF1').innerHTML = K(`${cv(AC, 'a')} = \\dfrac{\\Delta ${cv(VC, 'v')}}{t} = \\dfrac{(6-4)\\,\\text{m/s}}{2\\,\\text{s}} = ${cv(AC, '1\\,\\text{m/s}^2')}`);
 // graph v-t
-const G = PUC.graph($('#grS'), { x: 110, y: 74, w: 560, h: 140, xmax: 8, ymax: 8, xt: [0, 2, 4, 6, 8], yt: [0, 4, 8], xl: 't (s)', yl: 'v (m/s)' });
+const G = PUC.graph($('#grS'), { x: 110, y: 74, w: 560, h: 140, xmax: 8, ymax: 8, xt: [0, 2, 4, 6], yt: [0, 4, 8], xl: 't (s)', yl: 'v (m/s)' });
 G.ylab.setAttribute('x', 122); G.ylab.setAttribute('y', 78);
 const gCur = G.curve(VC), gDot = G.dot(VC);
 const vOf = x => x < 5 ? 4 : 4 + Math.min(2, x - 5), dOf = x => x < 5 ? 4 * x : 20 + 4 * (Math.min(x, 7) - 5) + 0.5 * Math.pow(Math.min(x, 7) - 5, 2);
