@@ -1,0 +1,59 @@
+H1|0.4|Ask three friends to list the good students in your class. You will get three different lists.
+H2|0.45|Now ask them to list the students who ride a bicycle to college. All three lists match, exactly.
+H3|0.35|Aarav noticed this in the college corridor today.
+H4|0.5|Same class, same friends. Why does one list work, and the other one fail?
+H5|0.65|The answer is the very first idea of Class 11 maths. It is called a set.
+P1|0.35|So what is a set?
+P2|0.4|A set is a well defined collection of objects.
+P3|0.4|Well defined means it passes one simple test. For any object, everyone can say clearly: is it in, or is it out?
+P4|0.4|Watch the test run. Our rule is: even numbers less than ten.
+P5|0.4|One? It is odd, so it is out. Two? Even, and less than ten. It is in.
+P6|0.65|Every number gets a clear answer. So the collection is two, four, six and eight. That is a set.
+K1|0.4|Side by side. Students who ride a bicycle. Kiran rides one, so she is in. Joel walks, so he is out. Everyone agrees.
+K2|0.6|Good students. Is Meera good? One friend says yes, another says no. There is no clear answer, so it is not a set.
+K3|3.2|Now you try. Is the collection of months that begin with the letter J a set? Pause and decide.
+K4|0.65|Yes! January, June and July. Anyone who checks a calendar gets the same three months.
+E1|0.35|The objects inside a set are called its elements, or members.
+E2|0.4|We name a set with a capital letter, like A. Its elements are small letters or numbers.
+E3|0.75|If two is in A, we write two, then this curly symbol, then A. It reads: two belongs to A.
+E4|0.75|If three is not in A, we strike the symbol through. Three does not belong to A.
+T1|0.7|Remember this. A set is a collection with a clear in or out answer for every object.
+Z1|0.35|Some sets are used so often that they get their own letters.
+Z2|0.4|N is the natural numbers. One, two, three, and on forever.
+Z3|0.4|Z is the integers. It adds zero and the negative numbers.
+Z4|0.4|Q is the rational numbers. Every number p over q, where p and q are integers and q is not zero.
+Z5|0.65|R is the real numbers. Every single point on the number line.
+Z6|3.2|Quick one. Is zero a natural number? Pause and think.
+Z7|0.65|No! Natural numbers start at one. Zero first appears in Z, the integers.
+R1|0.35|Now, how do we write a set down? There are two ways.
+R2|0.4|The first is roster form. List every element inside curly brackets, with commas between them.
+R3|0.6|Our set becomes two, four, six, eight, inside curly brackets.
+R4|0.4|The second is set builder form. Instead of listing the elements, we write the rule they all follow.
+R5|0.75|Read it like this. The set of all x, such that x is an even natural number, and x is less than ten.
+R6|0.75|The curly bracket means the set of. x stands for any element. The colon means such that. After the colon comes the rule.
+R7|0.4|Now watch the rule do the work. Change the limit from ten to twenty.
+R8|0.65|The rule stays short, but the list keeps growing. That is why set builder form wins for big sets.
+S1|0.4|Side by side. Roster form shows you every element. It is best for small sets.
+S2|0.6|Set builder form shows you the rule. It is best for large or endless sets, like all the real numbers between zero and one.
+W1|0.35|Now, one worked example.
+W2|0.5|A is the set of all x, such that x is a prime number less than twenty. Write A in roster form. Is nine in A?
+W3|0.75|Step one. A prime number has exactly two factors, one and itself.
+W4|0.75|Step two. Test every number from two to nineteen.
+W5|0.75|Step three. The primes are two, three, five, seven, eleven, thirteen, seventeen and nineteen.
+W6|0.75|Step four. Nine is three times three. It has three factors, so nine does not belong to A.
+W7|0.65|So A has eight elements, and two is the only even one.
+X1|0.35|Now, the exam trap.
+X2|0.4|Write the set of integers x such that x squared is less than ten. Many students write one, two, three.
+X3|0.65|But integers include zero and the negatives. Minus three squared is nine, which is also less than ten. The full set has seven elements, from minus three to three.
+J1|0.6|Where is this asked? In JEE Main, as questions that give a set in set builder form and ask how many elements it has.
+Q1|5.4|Exam level now. How many elements are in this set? Pause and solve.
+A1|0.5|The answer is C. Twenty five.
+A2|0.5|If n is even, n squared minus one is odd. An odd number is never divisible by eight.
+A3|0.5|If n is odd, n minus one and n plus one are two even numbers in a row. One of them is a multiple of four.
+A4|0.6|So their product is a multiple of two times four, which is eight. Every odd n from one to forty nine works, even one, because zero is divisible by eight. That is twenty five numbers.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why is good students not a set?
+Y3|0.9|Two. Write the vowels of English in roster form.
+Y4|1.1|Three. What does the colon mean in set builder form?
+N1|0.3|Next time: the word SCHOOL has two O's. So why does its set have only one? We find out in roster and set builder forms.

@@ -1,0 +1,179 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 1 - Definition and Representation of Sets</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 01: definition and representation of sets (Proof board) ===== */
+:root{--x:#7A4FE0;--sa:#2F6FEB;--sab:#E7EEFD}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.x{color:var(--x)}.a{color:var(--ac)}.sa{color:var(--sa)}
+/* title card: three friends' lists */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:54px;font:700 30px Poppins;white-space:nowrap}
+/* hook table */
+.hc{position:absolute;height:92px;border-radius:14px;background:var(--soft);display:flex;align-items:center;padding:0 20px;font:600 26px Poppins;white-space:nowrap}
+.hh{position:absolute;top:84px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* definition */
+#dfT{position:absolute;left:36px;top:84px;width:712px;font:700 50px/1.25 Poppins;letter-spacing:-.015em}
+#dfT b{color:var(--ac)}
+.io{position:absolute;top:410px;height:64px;padding:0 24px;border-radius:12px;display:flex;align-items:center;gap:12px;font:700 28px Poppins;color:#fff;white-space:nowrap}
+#dfW{position:absolute;left:36px;top:496px;font:500 26px Poppins;color:var(--ink2);white-space:nowrap}
+/* membership test */
+.rp{position:absolute;height:48px;padding:0 18px;border-radius:10px;background:var(--ac);color:#fff;display:inline-flex;align-items:center;font:600 22px Poppins;white-space:nowrap}
+#mRo{position:absolute;left:36px;top:498px;font-size:46px;white-space:nowrap}
+/* side by side */
+.nr{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.nr i{position:absolute;left:18px;top:16px;width:64px;height:64px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.nr .nn{position:absolute;left:104px;top:16px;font:700 30px Poppins;white-space:nowrap}
+.nr .nw{position:absolute;left:104px;top:56px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.chip{position:absolute;height:52px;padding:0 18px;border-radius:10px;display:inline-flex;align-items:center;gap:8px;font:700 24px Poppins;color:#fff;white-space:nowrap}
+#qm{position:absolute;left:0;width:784px;top:300px;text-align:center;font:700 120px/1 Poppins;color:var(--red)}
+/* notation steps */
+.st{position:absolute;left:36px;width:712px;height:136px}
+.st .n{position:absolute;left:0;top:10px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:52px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:80px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+/* special sets */
+.ss{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.ss .sy{position:absolute;left:20px;top:10px;width:70px;text-align:center;font-size:52px}
+.ss .sn{position:absolute;left:110px;top:16px;font:700 28px Poppins;white-space:nowrap}
+.ss .se{position:absolute;left:110px;top:56px;font:500 20px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+#zTag{position:absolute;left:36px;top:380px}
+/* two ways */
+.wy{position:absolute;left:36px;width:712px}
+.wy .lb{font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.wy .fx{position:static;margin-top:10px;font-size:46px}
+.an{position:absolute;height:44px;padding:0 14px;border-radius:9px;background:var(--soft);display:inline-flex;align-items:center;gap:8px;font:600 21px Poppins;white-space:nowrap}
+#kRd{position:absolute;left:36px;top:76px;font:600 64px/1 'IBM Plex Mono';white-space:nowrap}
+#kCnt{position:absolute;right:36px;top:88px;height:52px;padding:0 18px;border-radius:10px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+#kRo{position:absolute;left:36px;top:440px;font-size:40px;white-space:nowrap}
+/* roster vs builder */
+.bf{position:absolute;left:36px;top:100px;font-size:56px;white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:70px;font:600 30px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.2em}
+.gc{position:absolute;width:100px;height:96px;border-radius:12px;background:var(--soft);border:2.5px solid transparent;display:flex;align-items:center;justify-content:center;font:600 38px 'IBM Plex Mono'}
+#gx{position:absolute;font:600 18px 'IBM Plex Mono';color:var(--red);white-space:nowrap}
+#gRes{position:absolute;left:36px;top:470px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.12em}
+#mq .mq .katex{font-size:1.08em}
+#wl .sol .sx{font-size:30px}
+.trapL .tx .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:50px}
+#sF .fcard .fl.txt{font-size:34px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 1 SETS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">What Is a <span class="acc">Set</span>?</div>
+    <div id="sub">Explained with one clear in or out test</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: two lists + Aarav's puzzle -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">THREE FRIENDS · TWO LISTS</div><div id="hcs"></div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · THE COLLEGE CORRIDOR</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-corridor.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">One list works. One fails. Why?</div></div>
+    </div>
+
+    <!-- P: definition + the membership test -->
+    <div id="sP">
+      <div class="card full" id="df"><div class="lbl" style="left:36px;top:30px">DEFINITION · NCERT</div>
+        <div id="dfT">A set is a <b>well-defined</b> collection of objects.</div>
+        <div class="lbl" id="dfL" style="left:36px;top:368px">WELL-DEFINED = ONE CLEAR ANSWER</div>
+        <div class="io" id="ioI" style="left:36px;background:var(--ok)"></div><div class="io" id="ioO" style="left:200px;background:var(--red)"></div>
+        <div id="dfW">for every object, and everyone agrees</div></div>
+      <div class="card rf" id="mt"><div class="lbl" style="left:36px;top:30px">THE MEMBERSHIP TEST</div>
+        <div class="rp" id="mRule" style="right:36px;top:18px">Rule: even and less than 10</div>
+        <svg id="mS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="mRo"></div></div>
+    </div>
+
+    <!-- K: well-defined vs not, then pause and think -->
+    <div id="sK">
+      <div class="card full" id="kw"><div class="lbl" style="left:36px;top:30px;color:var(--ok)">WELL DEFINED · RIDES A BICYCLE</div><div id="kwR"></div>
+        <div class="pillp" id="kwP" style="left:36px;top:490px;background:var(--okBg);color:#1F6B3F">Everyone agrees: it is a set</div></div>
+      <div class="card rf" id="kn"><div class="lbl" style="left:36px;top:30px;color:var(--red)">NOT WELL DEFINED · GOOD STUDENTS</div><div id="knR"></div><div id="qm">?</div>
+        <div class="pillp bad" id="knP" style="left:36px;top:490px">No clear answer: not a set</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- E: elements and the belongs-to symbol -->
+    <div id="sE">
+      <div class="card full" id="ea"><div class="lbl" style="left:36px;top:30px">SET A · ITS ELEMENTS</div><svg id="eS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="en"><div class="lbl" style="left:36px;top:30px">HOW WE WRITE IT · 3 STEPS</div><div id="eSt"></div></div>
+    </div>
+
+    <!-- Z: special sets N Z Q R -->
+    <div id="sZ">
+      <div class="card full" id="zl"><div class="lbl" style="left:36px;top:30px">SETS WITH THEIR OWN LETTERS</div><div id="zR"></div></div>
+      <div class="card rf" id="zn"><div class="lbl" style="left:36px;top:30px">ON THE NUMBER LINE</div><svg id="zS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="zTag"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- R: roster and set-builder + live limit k -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">TWO WAYS TO WRITE A SET</div>
+        <div class="hiBox" id="rHi" style="left:20px;width:744px;height:118px"></div>
+        <div class="wy" id="wy0" style="top:84px"><div class="lb">1 · ROSTER FORM: LIST THEM</div><div class="fx" id="rRo"></div></div>
+        <div class="wy" id="wy1" style="top:230px"><div class="lb">2 · SET BUILDER FORM: WRITE THE RULE</div><div class="fx" id="rSb"></div></div>
+        <div id="rAn"></div></div>
+      <div class="card rf" id="rk"><div class="lbl" style="left:36px;top:30px">LIVE · CHANGE THE LIMIT</div>
+        <div id="kRd"><i style="font-family:Poppins" class="a">k</i> = <span id="kV">10</span></div><div id="kCnt"></div>
+        <svg id="kS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="kRo"></div></div>
+    </div>
+
+    <!-- S: roster vs set-builder side by side -->
+    <div id="sS">
+      <div class="card full" id="sr"><div class="lbl" style="left:36px;top:30px">ROSTER · SHOWS EVERY ELEMENT</div><div class="bf" id="srF"></div><svg id="srS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="srP" style="left:36px;top:400px">Best for small sets</div></div>
+      <div class="card rf" id="sb"><div class="lbl" style="left:36px;top:30px">SET BUILDER · SHOWS THE RULE</div><div class="bf" id="sbF"></div><svg id="sbS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="sbP" style="left:36px;top:400px">Best for large or endless sets</div></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">TEST EVERY NUMBER · 2 TO 19</div><div id="gcs"></div><div id="gx">3 × 3</div>
+        <div class="pillp ac" id="gRes">8 elements · 2 is the only even one</div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Clearly <span class="acc">in</span>, or clearly out.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
