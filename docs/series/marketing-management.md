@@ -58,3 +58,8 @@ Eyebrow chip: `EP NN · MARKETING MANAGEMENT`. Title format: `<Hook-style title>
 - Ep 19 range (5 products): original ragi 6-pack (cash cow), cocoa-ragi 6-pack (star), coconut-jowar 6-pack for gym-goers (question mark, waits), festive gift box for Diwali (question mark, funded), loose big laddoos at the college stall (dog, kept as a first taste).
 - Ep 20 brand: logo a gold laddoo with a small navy leaf; navy (trust), jaggery gold (warmth), cream (home-made); tagline "The healthy sweet for tiffin boxes"; navy packs, cream LADDOO LAB wordmark, flavour band gold/cocoa brown/cream. Nani's rule: say only what is true.
 - Ep 21: identity healthy, honest, home-made. School-gate survey of 30 parents; gaps "expensive", "for grandparents". Pack now shows "₹20 a laddoo"; Dev posts kids at lunch with ingredients; Nani stays in the posts.
+
+## Canon added by Eps 2-6
+- Paper packs instead of plastic (₹4 vs ₹2 a pack, illustrative); price stays ₹120.
+- Early on Arjun delivers to Mrs. Rao's door by 7:00 AM; Nani adds handwritten notes; Mrs. Rao recommends Laddoo Lab to two other mothers.
+- Nani buys jaggery in bulk straight from a farmer (jaggery went ₹60 to ₹80 a kilo). The pack says "made with ragi millet". A new bakery near the college is a rival. Parents pay by UPI.
