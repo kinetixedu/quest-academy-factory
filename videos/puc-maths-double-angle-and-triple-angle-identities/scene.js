@@ -99,7 +99,7 @@ G.ticks.forEach((e, i) => e.textContent = [0, 30, 60, 90][i] + '°');
 const cv2 = G.curve(C.dim, 4); const p2 = lg.lastChild; p2.setAttribute('stroke-dasharray', '9 7'); p2.setAttribute('stroke', C.ink2);
 const cvS = G.curve(SN, 6);
 const dS = G.dot(SN, 11), d2 = G.dot(C.ink2, 9);
-const gL1 = ml(lg, 600, 134, [['2 sin ', 'r'], ['x', 'i']], 24, C.ink2, { 'text-anchor': 'end' }), gL2 = ml(lg, 140, 134, [['sin 2', 'r'], ['x', 'i']], 24, SN);
+const gL1 = ml(lg, G.X(62), G.Y(2 * Math.sin(62 * D2R)) - 18, [['2 sin ', 'r'], ['x', 'i']], 24, C.ink2, { 'text-anchor': 'end' }), gL2 = ml(lg, G.X(45), G.Y(1) + 40, [['sin 2', 'r'], ['x', 'i']], 24, SN, { 'text-anchor': 'middle' });
 const tLs0 = wt('L1', 'coral'), tLs1 = T1('L2') + 0.6;
 const xL = t => 90 * M.clamp((t - tLs0) / (tLs1 - tLs0));
 let roL = '';
@@ -205,7 +205,7 @@ const nxt = PUC.next($('#sF'), { label: 'NEXT · EP 35', topic: 'Two notes make 
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('G3', 'cut') - 0.3, 1.08, 1368, 560], [T0('G4') + 0.4, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]]]);
 
 /* ---------- frame ---------- */
 M.on(t => {
@@ -246,7 +246,7 @@ M.on(t => {
       dS(xv, Math.sin(2 * xv * D2R), t >= tLs0); d2(xv, 2 * Math.sin(xv * D2R), t >= tLs0);
       M.vis(gL2, t, wt('L1', 'coral'), 1e9, { dy: 0 }); M.vis(gL1, t, wt('L1', 'dashed'), 1e9, { dy: 0 });
       const v = t >= tLs0 ? xv : 0, key = Math.round(v);
-      if (key !== roL) { roL = key; const r = v * D2R; $('#lRo').innerHTML = `<span style="color:${XC}"><span class="th">x</span> = ${Math.round(v)}°</span>&nbsp;&nbsp;<span style="color:${SN}">2 sin·cos = ${(2 * Math.sin(r) * Math.cos(r)).toFixed(3)}</span>&nbsp;&nbsp;<span style="color:${C.ink2}">2 sin = ${(2 * Math.sin(r)).toFixed(3)}</span>`; }
+      if (key !== roL) { roL = key; const r = v * D2R; $('#lRo').innerHTML = `<span style="color:${XC}"><span class="th">x</span> = ${Math.round(v)}°</span>&nbsp;&nbsp; ${K(`2${sx}${cx}`)} <span style="color:${SN}">= ${(2 * Math.sin(r) * Math.cos(r)).toFixed(3)}</span>&nbsp;&nbsp; ${K('2\\sin x')} <span style="color:${C.ink2}">= ${(2 * Math.sin(r)).toFixed(3)}</span>`; }
       if (t > tLs1) xd = 90;
     }
     // right picture
@@ -262,7 +262,8 @@ M.on(t => {
     M.vis(bis, t, wt('G3', 'cut') - 0.1, 1e9, { dy: 0 }); M.vis(rtM, t, wt('G3', 'right'), 1e9, { dy: 0 });
     [hA, hB].forEach((e, i) => M.vis(e, t, wt('G3', 'right') - 0.1 + i * 0.2, 1e9, { dy: 0, fade: 0.3 }));
     M.vis(lCos, t, wt('G3', 'cos'), 1e9, { dy: 0 }); [lSin1, lSin2].forEach(e => M.vis(e, t, wt('G3', 'sin'), 1e9, { dy: 0 }));
-    [lA1, lA2].forEach((e, i) => M.vis(e, t, wt('G4', 'Each') + i * 0.2, tL1, { dy: 0 }));
+    [lA1, lA2].forEach(e => M.hide(e, true));
+    const lf = 1 - M.io((t - tLs0) / 0.4); [lCos, lSin1, lSin2, lH, lX1, lX2, lOne].forEach(e => { if (t > tLs0) { e.style.opacity = lf.toFixed(3); if (lf < 0.01) M.hide(e, true); } else e.style.opacity = ''; });
     const g1 = pulse(t, tPr[3], 1.2) + pulse(t, tGr[3], 1.2) + pulse(t, wt('G3', 'sin'), 1.0), g2 = pulse(t, tPr[3], 1.2) + pulse(t, tGr[3], 1.2) + pulse(t, wt('G3', 'cos'), 1.0);
     [ch1, ch2].forEach(e => attr(e, 'stroke-width', (7 + 5 * g1).toFixed(2))); attr(bis, 'stroke-width', (7 + 5 * g2).toFixed(2));
     attr(hgt, 'stroke-width', (3.5 + 3 * pulse(t, tGr[0], 1.2)).toFixed(2));
@@ -306,7 +307,7 @@ M.on(t => {
     rArcs.forEach((a, i) => { M.vis(rRays[i], t, wt('R1', 'three') + i * 0.25, 1e9, { dy: 0 }); M.draw(a, t, wt('R1', 'three') + i * 0.25, 0.35); M.vis(rAl[i], t, wt('R1', 'three') + i * 0.25 + 0.2, 1e9, { dy: 0 }); });
     M.draw(rH, t, tRr[0], 0.6); M.vis(rHl, t, tRr[0] + 0.4, 1e9, { dy: 0 });
     M.vis($('#rd0'), t, tR1 + 0.6, 1e9, { dy: 10 }); M.vis($('#rd1'), t, tRr[0] + 0.3, 1e9, { dy: 10 }); M.vis($('#rd2'), t, tRr[3] + 0.6, 1e9, { dy: 10 }); M.vis($('#rd3'), t, wt('R7', 'Three') - 0.1, 1e9, { dy: 10 });
-    M.vis($('#th2'), t, tR6 + 0.05, wt('R7', 'Three') - 0.3, { dy: 36, ...o });
+    M.vis($('#th2'), t, tR6 + 0.05, OUT('T1'), { dy: 36, ...o });
     th2(t, { tin: tR6, tOpts: wt('R6', 'equal') - 0.1, tCount: T1('R6') + 0.05, dur: 3, tAns: T0('R7') - 0.02, tWhy: T0('R7') + 0.3 });
   }
 

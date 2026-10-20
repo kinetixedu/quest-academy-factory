@@ -144,7 +144,7 @@ const mini = (cx, cy, R, lab) => { const g = mk(mk(srs, 'g', {}), 'g', {}); mk(g
   mk(g, 'path', { d: arcD(cx, cy, R, 0, 1), fill: 'none', stroke: LC, 'stroke-width': 8, 'stroke-linecap': 'round' });
   mk(g, 'line', { x1: cx, y1: cy, x2: cx + R, y2: cy, stroke: C.ink, 'stroke-width': 3.5 }); const [ex, ey] = P(cx, cy, R, 1); mk(g, 'line', { x1: cx, y1: cy, x2: f2(ex), y2: f2(ey), stroke: C.ink, 'stroke-width': 3.5 });
   mk(g, 'path', { d: arcD(cx, cy, Math.min(34, R * 0.45), 0, 1), fill: 'none', stroke: TH, 'stroke-width': 4 }); mk(g, 'circle', { cx, cy, r: 5, fill: C.ink });
-  const [tx, ty] = P(cx, cy, Math.min(34, R * 0.45) + 34, 0.5); txt(g, f2(tx), f2(ty + 7), '1 rad', { 'text-anchor': 'middle', 'font-size': 20, fill: TH, 'font-weight': 600 });
+  const [tx, ty] = P(cx, cy, R < 80 ? R + 30 : Math.min(34, R * 0.45) + 34, 0.5); txt(g, f2(tx), f2(ty + 7), '1 rad', { 'text-anchor': 'middle', 'font-size': 20, fill: TH, 'font-weight': 600 });
   txt(g, cx, cy + R + 36, lab, { 'text-anchor': 'middle', 'font-size': 18, fill: C.mute, 'font-weight': 600, 'letter-spacing': 1.5 }); return g; };
 const srA = mini(180, 220, 62, 'TINY WHEEL'), srB = mini(500, 212, 120, 'GIANT WHEEL');
 const avD = PUC.avatar($('#sS'), { x: 976 + 36, y: 270 + 486, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'So an angle of 2, with no unit, means 2 radians.' });
@@ -179,7 +179,7 @@ const tL2 = txt(ts, 280, 178, 'r = 10 cm', { 'font-size': 22, fill: C.ink, 'font
 const where = PUC.where($('#wa'), { on: ['PUC BOARDS'], type: 'Given an arc and a radius, find the angle in radians (or the arc from the angle).' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 800,
   q: `A sector (two radii and their arc) has perimeter ${K('26\\ \\text{cm}')}. Its arc is ${K('2\\ \\text{cm}')} longer than its radius. Find ${K(th('\\theta'))} in radians.`,
-  opts: [K('\\tfrac{4}{5}'), K('\\tfrac{5}{4}'), K('1'), K('\\tfrac{8}{5}')], right: 1, optW: 474, optY: 316 });
+  opts: [K('4/5'), K('5/4'), K('1'), K('8/5')], right: 1, optW: 474, optY: 316 });
 const so = PUC.solution($('#so'), [[K(`2r + ${lc('l')} = 26`)], [K(`${lc('l')} = r + 2`)], [K(`3r + 2 = 26 \\Rightarrow r = 8`)], [K(`${lc('l')} = 10`)], [K(`${th('\\theta')} = 10/8 = 5/4`)]], { y0: 100, dy: 96 });
 const tSo = [wt('A2', 'perimeter'), wt('A3', 'arc'), wt('A3', 'Then'), wt('A4', 'So'), wt('A4', 'Theta')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · degrees and radians', y0: 98, dy: 78, txt: [1, 0, 1, 0, 0],
@@ -259,7 +259,7 @@ M.on(t => {
   if (rOn) {
     const out = OUT('V1');
     M.vis($('#rd'), t, tR1 + 0.1, out, { dx: -60, dy: 0, ...o });
-    M.rise($('#rT'), t, wt('R4', 'angle') - 0.1, { st: 0.04, sp: M.HEAVY });
+    M.rise($('#rT'), t, T0('R2') + 0.2, { st: 0.04, sp: M.HEAVY });
     M.vis($('#rL0'), t, T0('R2') + 0.1, 1e9, { dy: 10 }); PUC.write($('#rF0'), t, wt('R4', 'one') - 0.2, 0.8);
     M.vis($('#rL1'), t, T0('R5') - 0.05, 1e9, { dy: 10 }); PUC.write($('#rF1'), t, wt('R5', 'radius') - 0.1, 0.8);
     M.vis($('#rw'), t, T0('R2') - 0.1, out, { dx: 60, dy: 0, ...o });

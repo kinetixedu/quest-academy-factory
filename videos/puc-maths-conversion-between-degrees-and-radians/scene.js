@@ -144,7 +144,7 @@ txt(tG, 280, 150, '2 rad', { 'font-size': 26, fill: TH, 'font-weight': 600 }); t
 const where = PUC.where($('#wa'), { on: ['PUC BOARDS'], type: 'Convert degrees (often with minutes) into radians, or radians into degrees.' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 800,
   q: `At 4:20, what is the angle between the hour hand and the minute hand of a clock, in radians?`,
-  opts: [K('\\tfrac{\\pi}{18}'), K('\\tfrac{\\pi}{9}'), K('0'), K('\\tfrac{\\pi}{6}')], right: 0, optW: 474, optY: 300 });
+  opts: [K('\\pi/18'), K('\\pi/9'), K('0'), K('\\pi/6')], right: 0, optW: 474, optY: 300 });
 const so = PUC.solution($('#so'), [['Minute hand: 6° a minute, so 120°'], ['Hour hand: 0.5° a minute'], [K('4 \\times 30^\\circ + 20 \\times 0.5^\\circ = 130^\\circ')], [K('130^\\circ - 120^\\circ = 10^\\circ')], [K(`10 \\times \\tfrac{\\pi}{180} = ${th('\\tfrac{\\pi}{18}')}`)]], { y0: 100, dy: 96 });
 const tSo = [wt('A2', 'minute'), wt('A3', 'hour'), wt('A3', 'plus'), wt('A4', 'gap'), wt('A4', 'Multiply')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · degrees and radians', y0: 98, dy: 78, txt: [1, 0, 0, 0, 0],

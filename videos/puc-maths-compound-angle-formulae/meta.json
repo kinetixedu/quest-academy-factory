@@ -1,0 +1,29 @@
+{
+ "world": "puc-maths",
+ "topic": "Compound-Angle Formulae",
+ "series": {
+  "name": "PUC Maths",
+  "ep": 33
+ },
+ "title": "Sine of a Sum: Compound Angles Explained Simply | PUC Maths Class 11",
+ "description": "Is sin(30° + 60°) the same as sin 30° + sin 60°? The first is sin 90° = 1. The second is 1.366, higher than any point on a circle of radius 1. So how do we find the sine or cosine of a sum? In this animated lesson for PUC and Class 11 Maths (NCERT Chapter 3, Trigonometric Functions) we build the compound-angle formulae from one unit circle.\n\nYou will watch the NCERT proof come alive: four points on the unit circle and a chord that turns through the angle y to land exactly on another chord, then the distance formula turns that into cos(x + y) = cos x cos y - sin x sin y. From it we get cos(x - y), sin(x ± y) and tan(x + y), and a live slider shows the formula matching the real value while sin x + sin y never does. Two pause-and-think questions, the rule \"sine mixes and keeps the sign, cosine pairs and flips it\", a worked example (the exact value of sin 15°), the exam trap with the sign of cos(x + y), an original JEE Main pattern question with a full solution, a recap card and three questions to check yourself.\n\nMade for PUC (Karnataka), CBSE Class 11 and JEE Main students.\n\nIn this video:\n0:00 Is sin(30° + 60°) = sin 30° + sin 60°?\n0:21 Compound angles and the stacked heights\n0:55 The turning chord (NCERT proof)\n1:24 Proof of cos(x + y) in four steps\n2:14 cos(x - y), sin(x ± y) and tan(x + y)\n2:52 Live: move x and y\n2:58 Sine mixes, cosine flips\n3:26 Worked example: sin 15°\n4:00 Exam trap: the sign in cos(x + y)\n4:14 Where it is asked\n4:26 Practice question (JEE Main pattern)\n4:59 Recap and three questions to answer\n\nNext episode (Ep 34): Double-Angle and Triple-Angle Identities. Double the angle, and the sine does not double.\n\nVideo by Quest Academy.",
+ "tags": [
+  "compound angle formulae",
+  "sin(x+y) formula",
+  "cos(x+y) formula",
+  "tan(x+y) formula",
+  "sin(A+B) proof",
+  "sin 15 degrees exact value",
+  "class 11 maths chapter 3",
+  "trigonometric functions class 11",
+  "NCERT maths class 11 trigonometry",
+  "PUC maths",
+  "first PUC maths",
+  "JEE Main trigonometry"
+ ],
+ "thumb": {
+  "title": "Sine of a Sum",
+  "accent_word": "Sum",
+  "frame_t": 82
+ }
+}

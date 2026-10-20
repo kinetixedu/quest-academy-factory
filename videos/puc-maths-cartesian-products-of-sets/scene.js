@@ -170,7 +170,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 14', topic: 'Seat (3, 5) is n
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('G3') - 0.2, 1.06, 640, 560], [T0('G5') + 0.3, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('G3') - 0.2, 1.06, 820, 560], [T0('G5') + 0.3, 1, 960, 540]]);
 
 /* ---------- frame ---------- */
 M.on(t => {
@@ -274,7 +274,7 @@ M.on(t => {
     const out = OUT('K1');
     M.vis($('#su'), t, tS1 + 0.1, out, { dx: -60, dy: 0, ...o });
     suI.forEach((c, i) => M.vis(c.g, t, wt('S1', 'every') + i * 0.12, 1e9, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.1 }));
-    PUC.write($('#suF'), t, wt('S1', 'three') - 0.1, 0.8); M.vis($('#suP'), t, wt('S1', 'items', 1) - 0.1, 1e9, POP);
+    PUC.write($('#suF'), t, wt('S1', 'five') - 0.6, 0.8); M.vis($('#suP'), t, wt('S1', 'items') - 0.1, 1e9, POP);
     M.vis($('#sp'), t, T0('S2') - 0.1, out, { dx: 60, dy: 0, ...o });
     spD.forEach((d, i) => M.vis(d, t, wt('S2', 'every') + i * 0.14, 1e9, { dy: 0, sc: 0.2, sp: M.POP, fade: 0.08 }));
     PUC.write($('#spF'), t, wt('S2', 'Three') - 0.1, 0.8); M.vis($('#spP'), t, wt('S2', 'product', 1) - 0.1, 1e9, POP);

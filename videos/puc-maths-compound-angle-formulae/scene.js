@@ -43,7 +43,7 @@ $('#cg0').innerHTML = K(`${x} + ${y}`); $('#cg1').innerHTML = K(`${x} - ${y}`);
 const pd = $('#pdS'), PO = [120, 520];
 mk(pd, 'line', { x1: PO[0], y1: PO[1], x2: 700, y2: PO[1], stroke: C.ink, 'stroke-width': 3, 'stroke-linecap': 'round' });
 const pRx = mk(pd, 'line', { x1: PO[0], y1: PO[1], x2: PO[0] + 540 * Math.cos(25 * D2R), y2: PO[1] - 540 * Math.sin(25 * D2R), stroke: C.ink, 'stroke-width': 3, 'stroke-linecap': 'round' });
-const pRy = mk(pd, 'line', { x1: PO[0], y1: PO[1], x2: PO[0] + 300 * Math.cos(55 * D2R), y2: PO[1] - 300 * Math.sin(55 * D2R), stroke: C.ink, 'stroke-width': 3, 'stroke-linecap': 'round' });
+const pRy = mk(pd, 'line', { x1: PO[0], y1: PO[1], x2: PO[0] + 240 * Math.cos(55 * D2R), y2: PO[1] - 240 * Math.sin(55 * D2R), stroke: C.ink, 'stroke-width': 3, 'stroke-linecap': 'round' });
 const pAx = mk(pd, 'path', { d: arcD(PO[0], PO[1], 150, 0, 25), fill: 'none', stroke: XC, 'stroke-width': 5 });
 const pAy = mk(pd, 'path', { d: arcD(PO[0], PO[1], 150, 25, 55), fill: 'none', stroke: YC, 'stroke-width': 5 });
 const pAs = mk(pd, 'path', { d: arcD(PO[0], PO[1], 210, 0, 55), fill: 'none', stroke: C.ac, 'stroke-width': 3, 'stroke-dasharray': '7 6' });
@@ -55,14 +55,14 @@ const ps = $('#pS'), QX = 300, QY = 330, QR = 170, QX_ = u => QX + QR * u, QY_ =
 mk(ps, 'path', { d: `M${QX - QR - 40},${QY} H${QX + QR + 60} M${QX},${QY + QR + 30} V${QY - QR - 70}`, stroke: C.ink, 'stroke-width': 2, fill: 'none' });
 const pCir = mk(ps, 'circle', { cx: QX, cy: QY, r: QR, fill: 'none', stroke: GREY, 'stroke-width': 2.5 });
 const pTop = mk(ps, 'line', { x1: QX - 40, y1: QY_(1), x2: QX + QR + 160, y2: QY_(1), stroke: C.ink2, 'stroke-width': 2, 'stroke-dasharray': '7 6' });
-const pTopL = txt(ps, QX + QR + 160, QY_(1) - 12, 'radius 1: the top', { 'text-anchor': 'end', 'font-size': 18, fill: C.ink2, 'font-weight': 600 });
+const pTopL = txt(ps, QX - 52, QY_(1) + 6, 'top: 1', { 'text-anchor': 'end', 'font-size': 18, fill: C.ink2, 'font-weight': 600 });
 const h60x = QX_(Math.cos(60 * D2R)), h30x = QX_(Math.cos(30 * D2R));
 const pR60 = mk(ps, 'line', { x1: QX, y1: QY, x2: h60x, y2: QY_(Math.sin(60 * D2R)), stroke: C.ink, 'stroke-width': 3 });
 const pR30 = mk(ps, 'line', { x1: QX, y1: QY, x2: h30x, y2: QY_(0.5), stroke: C.ink, 'stroke-width': 3 });
 const pH60 = mk(ps, 'line', { x1: h60x, y1: QY, x2: h60x, y2: QY_(Math.sin(60 * D2R)), stroke: SN, 'stroke-width': 8, 'stroke-linecap': 'round' });
 const pH30o = mk(ps, 'g', {}), pH30g = mk(pH30o, 'g', {}), pH30 = mk(pH30g, 'line', { x1: 0, y1: 0, x2: 0, y2: -QR * 0.5, stroke: SN, 'stroke-width': 8, 'stroke-linecap': 'round' });
 const pOver = mk(pH30g, 'line', { x1: 0, y1: -QR * (1 - Math.sin(60 * D2R)), x2: 0, y2: -QR * 0.5, stroke: C.red, 'stroke-width': 8, 'stroke-linecap': 'round' });
-const pL60 = txt(ps, h60x - 14, QY_(0.43), '0.866', { 'text-anchor': 'end', 'font-size': 20, fill: SN, 'font-weight': 600 });
+const pL60 = txt(ps, h60x + 16, QY_(0.43), '0.866', { 'font-size': 20, fill: SN, 'font-weight': 600 });
 const pL30 = txt(pH30g, 16, -QR * 0.25 + 6, '0.5', { 'font-size': 20, fill: SN, 'font-weight': 600 });
 const pSum = txt(ps, h60x + 18, QY_(1.366) + 6, '0.866 + 0.5 = 1.366', { 'font-size': 20, fill: C.red, 'font-weight': 600 });
 const tStack = wt('P2', 'Stack');
@@ -100,7 +100,7 @@ const PS = [['d^2 = (\\text{gap across})^2 + (\\text{gap up})^2', 'Pythagoras on
   [`${cxy} = ${cx}${cy} - ${sx}${sy}`, 'the chords are equal: cancel the 2s']];
 $('#pSt').innerHTML = PS.map(([s, w], i) => `<div class="st" id="ps${i}" style="top:${88 + i * 116}px"><div class="n">${i + 1}</div><div class="sx">${K(s)}</div><div class="why">${w}</div></div>`).join('');
 const tPs = [wt('D2', 'Distance'), wt('D3', 'Expand'), wt('D4', 'So'), wt('D5', 'Cancel')];
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tTurn - 0.3, 1.08, 560, 560], [tLand + 1.6, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]]]);
 
 /* ---------- E: the family + live angles ---------- */
 const ES = [[`${cxmy} = ${cx}${cy} + ${sx}${sy}`, 'put -y in place of y'], [`${sxy} = ${sx}${cy} + ${cx}${sy}`, K('\\sin\\theta = \\cos(90^\\circ - \\theta)')],
@@ -118,7 +118,7 @@ const gH = mk(eSv, 'line', { stroke: SN, 'stroke-width': 8, 'stroke-linecap': 'r
 const gP = mk(eSv, 'circle', { r: 9, fill: C.ink });
 $('#rk0').innerHTML = K(sxy) + ' <span style="font:500 18px Poppins;color:var(--mute)">the real value</span>'; $('#rk1').innerHTML = K(`${sx}${cy} + ${cx}${sy}`); $('#rk2').innerHTML = K(`${sx} + ${sy}`);
 const tMove = wt('E4', 'move'), tMoveE = T1('E4') + 0.6;
-const xyAt = t => { const u = M.clamp((t - tMove) / (tMoveE - tMove)), w = M.io(u); return [50 + 70 * Math.sin(Math.PI * 2 * w) * 1, 35 + 25 * Math.sin(Math.PI * w) - 20 * Math.sin(Math.PI * 2 * w) * 0.5]; };
+const xyAt = t => { const u = M.clamp((t - tMove) / (tMoveE - tMove)), w = M.io(u); return [50 + 40 * Math.sin(Math.PI * 2 * w), 35 + 22 * Math.sin(Math.PI * 4 * w)]; };
 let roL = '';
 const avD = PUC.avatar($('#sE'), { x: 976 + 36, y: 270 + 486, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'One proof for cosine, and the rest follow.' });
 
@@ -172,10 +172,10 @@ const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'PUC BOARDS'], type: 'Exact
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 800,
   q: `If ${K(`${al} + ${be} = 135^\\circ`)}, then<br>${K(`(1 - ${ta})(1 - ${tb})`)} is equal to`,
   opts: [K('0'), K('1'), K('2'), K('-2')], right: 2, optW: 474, optY: 300 });
-const so = PUC.solution($('#so'), [[K(`\\tan(${al}+${be}) = -1`)], [K(`\\dfrac{${ta} + ${tb}}{1 - ${ta}${tb}} = -1`)], [K(`${ta} + ${tb} = -1 + ${ta}${tb}`)],
-  [K(`\\text{product} = 1 - (${ta} + ${tb}) + ${ta}${tb}`)], [K('= 1 + 1 = 2')]], { y0: 96, dy: 100 });
-$('#so').querySelectorAll('.sol .sx').forEach((e, i) => { if (i === 3) e.style.fontSize = '22px'; });
-const tSo = [wt('A2', 'Tan'), wt('A3', 'So'), wt('A4', 'Cross'), wt('A5', 'Expand'), wt('A5', 'Two')];
+const so = PUC.solution($('#so'), [[K(`\\dfrac{${ta} + ${tb}}{1 - ${ta}${tb}} = \\tan 135^\\circ = -1`)], [K(`${ta} + ${tb} = -1 + ${ta}${tb}`)],
+  [K(`(1 - ${ta})(1 - ${tb})`)], [K(`= 1 - (${ta} + ${tb}) + ${ta}${tb}`)], [K('= 1 + 1 = 2')]], { y0: 104, dy: 100 });
+$('#so').querySelectorAll('.sol .sx').forEach((e, i) => { if (i === 3) e.style.fontSize = '24px'; });
+const tSo = [wt('A2', 'Tan'), wt('A4', 'Cross'), wt('A5', 'Expand'), wt('A5', 'minus'), wt('A5', 'two')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 240, w: 1200, h: 510, title: 'Recap · compound-angle formulae', y0: 96, dy: 84, txt: [1, 0, 0, 0, 1],
   lines: ['<b>Compound angle</b>: a sum or difference, x + y or x - y',
     K(`\\sin(${x} \\pm ${y}) = ${sx}${cy} \\pm ${cx}${sy}`),

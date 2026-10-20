@@ -149,14 +149,14 @@ const wArP = (i, u) => { const v = WA[i], x1 = WXa + 26, y1 = WYa(i), x2 = WXz -
 const trap = PUC.trap($('#trap'), { wrong: K(`x^2,\\ -2 \\le x \\le 1:\\ \\text{range} = [1, 4]`), right: K(`\\text{range} = [0, 4]`) + '&nbsp; 0 is inside, and 0² = 0' });
 const ts = $('#tS'), TOX = 300, TOY = 224, TSX = 66, TSY = 40, TX = v => TOX + v * TSX, TY = v => TOY - v * TSY;
 mk(ts, 'line', { x1: 140, y1: TOY, x2: 420, y2: TOY, stroke: C.ink, 'stroke-width': 2 }); mk(ts, 'line', { x1: TOX, y1: 242, x2: TOX, y2: 44, stroke: C.ink, 'stroke-width': 2 });
-[-2, -1, 1].forEach(v => txt(ts, TX(v), TOY + 24, v, { 'text-anchor': 'middle', 'font-size': 16, fill: C.ink, 'font-weight': 600 }));
+[-2, -1].forEach(v => txt(ts, TX(v), TOY + 24, v, { 'text-anchor': 'middle', 'font-size': 16, fill: C.ink, 'font-weight': 600 }));
 [1, 4].forEach(v => { mk(ts, 'line', { x1: TOX - 5, y1: TY(v), x2: TOX + 5, y2: TY(v), stroke: C.ink, 'stroke-width': 2 }); });
 let td = ''; for (let i = 0; i <= 60; i++) { const x = -2 + 3 * i / 60; td += (i ? 'L' : 'M') + TX(x).toFixed(1) + ',' + TY(x * x).toFixed(1); }
 const tCurve = mk(ts, 'path', { d: td, fill: 'none', stroke: C.ink, 'stroke-width': 4, 'stroke-linecap': 'round' });
 const tBad = mk(ts, 'line', { x1: TOX - 26, y1: TY(1), x2: TOX - 26, y2: TY(4), stroke: C.red, 'stroke-width': 8, 'stroke-linecap': 'round' });
 const tGood = mk(ts, 'line', { x1: TOX + 26, y1: TY(0), x2: TOX + 26, y2: TY(4), stroke: C.ok, 'stroke-width': 8, 'stroke-linecap': 'round' });
 const tEnds = [[-2, 4, '(-2, 4)', 'end', -14], [1, 1, '(1, 1)', 'start', 14]].map(([x, y, s, an, dx]) => { const g = mk(ts, 'g', {}); mk(g, 'circle', { cx: TX(x), cy: TY(y), r: 9, fill: C.red }); txt(g, TX(x) + dx, TY(y) + 6, s, { 'text-anchor': an, 'font-size': 18, fill: C.red, 'font-weight': 600 }); return g; });
-const tV = mk(ts, 'g', {}); mk(tV, 'circle', { cx: TX(0), cy: TY(0), r: 10, fill: C.ok }); txt(tV, TX(0) + 60, TY(0) - 14, '(0, 0)', { 'text-anchor': 'start', 'font-size': 18, fill: C.ok, 'font-weight': 600 });
+const tV = mk(ts, 'g', {}); mk(tV, 'circle', { cx: TX(0), cy: TY(0), r: 10, fill: C.ok }); txt(tV, TX(0) + 10, TOY + 26, '(0, 0)', { 'text-anchor': 'start', 'font-size': 18, fill: C.ok, 'font-weight': 600 });
 const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'PUC BOARDS'], type: 'Find the range, or the codomain that equals the range. Boards: find the domain and range.' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 780,
   q: `${K(`f(x) = x^2 - 4x + 7,\\quad -1 \\le x \\le 4`)}<br>What is the range of f?`,
@@ -178,7 +178,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 18', topic: 'One number for e
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('M4', 'look') - 0.2, 1.06, 1370, 560], [T0('M5') + 0.2, 1, 960, 540], [tSl - 0.3, 1.06, 1370, 560], [T1('G4'), 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('M4', 'look') - 0.2, 1.05, 1150, 560], [T0('M5') + 0.2, 1, 960, 540], [tSl - 0.3, 1.05, 1150, 560], [T1('G4'), 1, 960, 540]]);
 
 /* ---------- frame ---------- */
 M.on(t => {
@@ -291,7 +291,7 @@ M.on(t => {
     M.vis($('#gA'), t, wt('G1', 'minus') - 0.1, 1e9, { dy: 14 });
     M.vis($('#gr0'), t, wt('G2', 'domain') - 0.1, 1e9, { dy: 14 }); M.vis($('#gr1'), t, wt('G2', 'range') - 0.1, 1e9, { dy: 14 });
     M.vis($('#gp'), t, tG1 + 0.5, out, { dx: 60, dy: 0, ...o });
-    const a = aOf(t), key = a.toFixed(2);
+    const a = Math.round(aOf(t) * 100) / 100, key = a.toFixed(2);
     if (key !== gLast) { gLast = key; M.setT($('#gAv'), a.toFixed(2)); $('#gDv').innerHTML = K(ac(`[-${fmt(a)},\\ ${fmt(a)}]`)); $('#gRv').innerHTML = K(rc(`[0,\\ ${fmt(a * a)}]`)); attr(gCur, 'd', pth(-a, a)); }
     M.vis(gGhost, t, wt('G1', 'squared'), 1e9, { dy: 0, fade: 0.3 });
     const cu = M.io((t - wt('G1', 'minus') + 0.1) / 0.8); M.hide(gCur, cu <= 0); gCur.style.opacity = cu.toFixed(3);

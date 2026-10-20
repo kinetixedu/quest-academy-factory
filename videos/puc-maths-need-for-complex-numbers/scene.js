@@ -59,15 +59,15 @@ const PS = [[`${rb('3')}^2 = 9`, 'three times three'], [`(${rb('-3')})^2 = 9`, '
 $('#pSt').innerHTML = PS.map(([f, w], i) => `<div class="st" id="ps${i}" style="top:${84 + i * 120}px"><div class="n">${i + 1}</div><div class="sx">${K(f)}</div><div class="why">${w}</div></div>`).join('');
 $('#pP').innerHTML = `${K(`${rb('x')}^2 \\ge 0`)}<span style="color:var(--ink)">for every real number x</span>`;
 const tPs = [wt('P2', 'Three'), wt('P2', 'Minus'), wt('P3', 'Zero')];
-const pg = plot($('#pS'), { x: 60, y: 130, w: 664, h: 390, xmin: -3.4, xmax: 3.4, ymin: -1.6, ymax: 11, xt: [-3, -2, -1, 1, 2, 3], yt: [4, 8] });
-const pBand = mk($('#pS'), 'rect', { x: 62, y: pg.Y(0) + 3, width: 660, height: pg.Y(-1.6) - pg.Y(0) - 3, fill: C.redBg });
-const pBandT = txt($('#pS'), 392, pg.Y(-0.85) + 7, 'x² never goes down here', { 'text-anchor': 'middle', fill: C.red, 'font-size': 18, 'font-weight': 600 });
+const pg = plot($('#pS'), { x: 60, y: 130, w: 664, h: 390, xmin: -3.4, xmax: 3.4, ymin: -3, ymax: 11, xt: [-3, -2, -1, 1, 2, 3], yt: [4, 8] });
+const pBand = mk($('#pS'), 'rect', { x: 62, y: pg.Y(0) + 3, width: 660, height: pg.Y(-3) - pg.Y(0) - 3, fill: C.redBg });
+const pBandT = txt($('#pS'), 392, pg.Y(0) + 68, 'x² never goes down here', { 'text-anchor': 'middle', fill: C.red, 'font-size': 18, 'font-weight': 600 });
 $('#pS').insertBefore(pBand, pg.ax.parentNode); $('#pS').insertBefore(pBandT, pg.ax.parentNode);
 const pC0 = pg.curve(C.ink), pC1 = pg.curve(RC, 5);
 const pDrop = mk($('#pS'), 'line', { stroke: RE, 'stroke-width': 2.5, 'stroke-dasharray': '6 5' });
 const pDotX = mk($('#pS'), 'circle', { r: 10, fill: RE }), pDot = mk($('#pS'), 'circle', { r: 12, fill: '#fff', stroke: C.ink, 'stroke-width': 4 });
 const pGap = gap($('#pS'), pg.X, pg.Y, 0, 1, '1', RC);
-const pLab = txt($('#pS'), pg.X(1.55), pg.Y(4.6), 'y = x² + 1', { fill: RC, 'font-size': 22, 'font-weight': 600 });
+const pLab = txt($('#pS'), pg.X(0.3), pg.Y(9.4), 'y = x² + 1', { fill: RC, 'font-size': 22, 'font-weight': 600 });
 const tPw = wt('P4', 'Watch'), tPs0 = wt('P4', 'slide'), tPs1 = T1('P4') + 0.5;
 const pXv = t => -3 + 6 * M.io((t - tPs0) / (tPs1 - tPs0));
 const tP5 = wt('P5', 'plus');
@@ -81,7 +81,7 @@ const lCur = lg.curve(C.ink, 5);
 const lR = [0, 1].map(() => mk($('#lS'), 'circle', { r: 12, fill: RE, stroke: '#fff', 'stroke-width': 3 }));
 const lGap = gap($('#lS'), lg.X, lg.Y, 0, 1, '1 unit', C.ink);
 const cK = seg(-4, [[wt('L4', 'count'), wt('L4', 'crossings'), -1], [T0('L5') + 0.1, wt('L5', 'touches'), 0], [wt('L6', 'Past'), wt('L6', 'No'), 0.5], [wt('L7', 'our'), wt('L7', 'floats'), 1]]);
-const tLg = wt('L1', 'graph'), tLc = wt('L2', 'crossing');
+const tLg = wt('L1', 'graph'), tLc = wt('L2', 'crosses');
 const tLr = [wt('L3', 'cuts'), wt('L5', 'touches'), wt('L6', 'lifts')];
 let lLast = null;
 
@@ -226,7 +226,7 @@ M.on(t => {
     const out = OUT('P1');
     M.vis($('#hl'), t, tMorph + 0.1, out, { dx: -60, dy: 0, ...o });
     M.vis($('#hTag'), t, wt('H3', 'chapter') - 0.1, 1e9, POP);
-    PUC.write($('#hEq'), t, tH4, 0.8);
+    PUC.write($('#hEq'), t, wt('H3', 'broke'), 0.8);
     M.vis($('#hrs .lbl'), t, tTry(0) - 0.2, 1e9, { dy: 10 });
     TRY.forEach((_, i) => { M.vis($('#hr' + i), t, tTry(i), 1e9, { dx: -16, dy: 0 }); M.vis($(`#hr${i} .chip`), t, tTry(i) + 0.25, 1e9, POP); });
     M.vis($('#hlP'), t, wt('H4', 'Not') - 0.1, 1e9, POP);

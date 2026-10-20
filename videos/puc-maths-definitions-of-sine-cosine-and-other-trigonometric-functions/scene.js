@@ -152,7 +152,7 @@ txt(tG, 40, 110, 'sin 30° = 1/2', { 'font-size': 26, fill: SN, 'font-weight': 6
 const where = PUC.where($('#wa'), { on: ['PUC BOARDS'], type: 'Find the trigonometric functions at a given angle, or from a point on the unit circle.' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 800,
   q: `The terminal side of angle ${K(th('x'))} meets the unit circle at ${K(`P\\left(${cs('-\\tfrac{3}{5}')},\\ ${sn('-\\tfrac{4}{5}')}\\right)`)}. Find ${K(`\\cot x + ${COSEC}\\, x`)}.`,
-  opts: [K('-\\tfrac{1}{2}'), K('\\tfrac{1}{2}'), K('-2'), K('2')], right: 0, optW: 474, optY: 316 });
+  opts: [K('-1/2'), K('1/2'), K('-2'), K('2')], right: 0, optW: 474, optY: 316 });
 const so = PUC.solution($('#so'), [[K(`${cs('\\cos x = -\\tfrac35')},\\ ${sn('\\sin x = -\\tfrac45')}`)], [K(`\\cot x = \\tfrac{${cs('\\cos x')}}{${sn('\\sin x')}} = \\tfrac34`)], [K(`${COSEC}\\, x = \\tfrac{1}{${sn('\\sin x')}} = -\\tfrac54`)], [K(`\\tfrac34 - \\tfrac54 = -\\tfrac12`)]], { y0: 100, dy: 110 });
 const tSo = [wt('A2', 'So'), wt('A3', 'Cot'), wt('A4', 'Cosec'), wt('A4', 'Three')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · the six trigonometric functions', y0: 98, dy: 78, txt: [0, 0, 0, 0, 1],

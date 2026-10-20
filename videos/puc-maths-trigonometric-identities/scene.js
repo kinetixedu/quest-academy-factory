@@ -84,8 +84,8 @@ const UC = (svg, cx, cy, R) => {
     attr(o.hgt, 'x1', Fx.toFixed(1)); attr(o.hgt, 'y1', cy); attr(o.hgt, 'x2', Fx.toFixed(1)); attr(o.hgt, 'y2', Py.toFixed(1));
     const sx = c >= 0 ? -1 : 1, sy = n >= 0 ? -1 : 1, k = 16;
     attr(o.rt, 'd', Math.abs(s * c) > 0.12 && Math.abs(s * n) > 0.12 ? `M${(Fx + sx * k).toFixed(1)},${cy} V${(cy + sy * k).toFixed(1)} H${Fx.toFixed(1)}` : '');
-    const ar = 46, aa = ((a % 360) + 360) % 360, ae = aa * Math.PI / 180;
-    attr(o.arc, 'd', aa < 1 ? '' : `M${cx + ar},${cy} A${ar},${ar} 0 ${aa > 180 ? 1 : 0} 0 ${(cx + ar * Math.cos(ae)).toFixed(1)},${(cy - ar * Math.sin(ae)).toFixed(1)}`);
+    const ar = 46, neg = a < 0, aa = neg ? -a : ((a % 360) + 360) % 360, ae = (neg ? -aa : aa) * Math.PI / 180;
+    attr(o.arc, 'd', aa < 1 ? '' : `M${cx + ar},${cy} A${ar},${ar} 0 ${aa > 180 ? 1 : 0} ${neg ? 1 : 0} ${(cx + ar * Math.cos(ae)).toFixed(1)},${(cy - ar * Math.sin(ae)).toFixed(1)}`);
     const am = ae / 2; attr(o.thl, 'x', (cx + 70 * Math.cos(am) - 8).toFixed(1)); attr(o.thl, 'y', (cy - 70 * Math.sin(am) + 10).toFixed(1));
     attr(o.P, 'cx', X(c).toFixed(1)); attr(o.P, 'cy', Y(n).toFixed(1));
     attr(o.Pl, 'x', (X(c) + 22 * Math.cos(r) - 8).toFixed(1)); attr(o.Pl, 'y', (Y(n) - 22 * Math.sin(r) + 8).toFixed(1));
@@ -181,8 +181,8 @@ const tW = [wt('W3', 'second'), wt('W4', 'plus'), wt('W5', 'Sine'), wt('W6', 'Co
 const WCX = 392, WCY = 270, ws = $('#wS'), W = UC(ws, WCX, WCY, 190);
 const wq2 = mk(ws, 'rect', { x: WCX + 8, y: WCY + 8, width: 236, height: 222, fill: '#F1ECFD', rx: 10 });
 ws.insertBefore(wq2, ws.firstChild);
-const wQl = txt(ws, WCX + 126, WCY + 160, 'IV', { 'font-family': 'Poppins', 'font-size': 26, 'font-weight': 700, fill: TH, 'text-anchor': 'middle' });
-const wQx = txt(ws, WCX + 126, WCY + 186, 'x > 0, y < 0', { 'font-size': 18, fill: TH, 'font-weight': 600, 'text-anchor': 'middle' });
+const wQl = txt(ws, WCX + 196, WCY + 170, 'IV', { 'font-family': 'Poppins', 'font-size': 26, 'font-weight': 700, fill: TH, 'text-anchor': 'middle' });
+const wQx = txt(ws, WCX + 196, WCY + 200, 'x > 0, y < 0', { 'font-size': 18, fill: TH, 'font-weight': 600, 'text-anchor': 'middle' });
 const mlab2 = (x, y, fn, col, sfx, a = {}) => { const e = mlab(ws, x, y, fn, col, 26, a); e.appendChild(document.createTextNode(' = ' + sfx)); return e; };
 const wcv = mlab2(0, 0, 'cos', CS, '5/13');
 const wsv = mlab2(0, 0, 'sin', SN, '-12/13');
@@ -396,7 +396,7 @@ M.on(t => {
     M.vis(wcv, t, wt('W2', 'fourth') + 0.6, 1e9, { dy: 0 }); M.vis(wsv, t, tW[2] + 0.4, 1e9, { dy: 0 });
     const gb = pulse(t, wt('W4', 'fourth'), 1.0), gh = pulse(t, wt('W4', 'negative'), 1.0) + pulse(t, tW[2], 1.4), gp = pulse(t, tW[0], 1.2);
     attr(W.base, 'stroke-width', (7 + 5 * gb).toFixed(2)); attr(W.hgt, 'stroke-width', (7 + 5 * gh).toFixed(2)); attr(W.hyp, 'stroke-width', (4 + 5 * gp).toFixed(2));
-    const Fx = W.X(5 / 13); attr(wcv, 'x', WCX + 14); attr(wcv, 'y', WCY - 16); attr(wsv, 'x', (Fx + 18).toFixed(1)); attr(wsv, 'y', (W.Y(-6 / 13) + 10).toFixed(1));
+    const Fx = W.X(5 / 13); attr(wcv, 'x', WCX + 20); attr(wcv, 'y', WCY - 70); attr(wsv, 'x', (Fx + 18).toFixed(1)); attr(wsv, 'y', (W.Y(-6 / 13) + 10).toFixed(1));
   }
 
   /* X: exam trap + where */

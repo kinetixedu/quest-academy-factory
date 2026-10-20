@@ -1,0 +1,142 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 40 - Algebra of Complex Numbers</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 40: algebra of complex numbers (Proof board) ===== */
+:root{--re:#2F6FEB;--reb:#E7EEFD;--im:#7A4FE0;--imb:#EFE9FC}
+#stage svg circle,#stage svg g{transform-box:fill-box;transform-origin:center}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.re{color:var(--re)}.im{color:var(--im)}.a{color:var(--ac)}
+#title .im{color:var(--im)}
+/* title card */
+.lst{position:absolute;top:724px;width:440px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:50px;font:700 32px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.chip{position:absolute;height:52px;padding:0 18px;border-radius:10px;display:inline-flex;align-items:center;gap:8px;font:700 24px Poppins;color:#fff;white-space:nowrap}
+.bg{color:var(--re)}.cg{color:var(--ac)}
+.fx2{position:absolute;left:36px;font-size:44px;white-space:nowrap}
+.why2{position:absolute;left:36px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+/* steps */
+.st{position:absolute;left:36px;width:712px;height:96px}
+.st .n{position:absolute;left:0;top:6px;width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 21px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:66px;top:0;font-size:40px;white-space:nowrap}
+.st .why{position:absolute;left:66px;top:58px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+/* column sum */
+.cs{position:absolute;left:120px;font-size:52px;white-space:nowrap}
+#aLine{position:absolute;left:100px;top:330px;width:420px;height:4px;background:var(--ink);border-radius:2px}
+/* readouts */
+.ro2{position:absolute;left:36px;font-size:44px;white-space:nowrap}
+/* multiply grid */
+.gh{position:absolute;width:150px;height:72px;display:flex;align-items:center;justify-content:center;font-size:40px;white-space:nowrap}
+.gc{position:absolute;width:200px;height:96px;border-radius:14px;background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:40px;white-space:nowrap;border:3px solid transparent;box-sizing:border-box}
+#vBig{position:absolute;left:36px;top:110px;font-size:72px;white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 26px Poppins}
+#so .sol .sx .katex{font-size:1.1em}
+#mq .mq .katex{font-size:1.08em}
+#wl .sol .sx{font-size:30px}
+#wq{position:absolute;left:36px;top:64px;font:600 30px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.2em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:46px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 4 COMPLEX NUMBERS AND QUADRATIC EQUATIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Algebra of <span class="acc">Complex</span> Numbers</div>
+    <div id="sub">Explained with two moves on a map</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: two rides -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">TWO RIDES · ONE AFTER THE OTHER</div><svg id="hS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="hlP" style="left:36px;top:500px">East with east, north with north</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · THE RIDE TO COLLEGE</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg">
+        <div class="pillp" id="hkP" style="left:36px;top:496px;background:var(--ac2)">Real with real, imaginary with imaginary</div></div>
+    </div>
+
+    <!-- A: addition in steps -->
+    <div id="sA">
+      <div class="card full" id="al"><div class="lbl" style="left:36px;top:30px">ADDITION · 3 STEPS</div><div class="fx2" id="aG" style="top:76px;font-size:38px"></div><div class="hiBox" id="aHi" style="left:20px;width:744px;height:104px"></div><div id="aSt"></div></div>
+      <div class="card rf" id="ar"><div class="lbl" style="left:36px;top:30px">WITH NUMBERS · PART BY PART</div>
+        <div class="cs" id="aC0" style="top:120px"></div><div class="cs" id="aC1" style="top:220px"></div><div id="aLine"></div><div class="cs" id="aC2" style="top:356px"></div>
+        <div class="pillp" id="aP" style="left:36px;top:490px;background:var(--reb);color:var(--re)">3 + 1 = 4 real · 2 + 4 = 6 imaginary</div></div>
+    </div>
+
+    <!-- L: tip to tail on the board -->
+    <div id="sL">
+      <div class="card full" id="ll"><div class="lbl" style="left:36px;top:30px">LIVE · TIP TO TAIL</div><svg id="lS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="lr"><div class="lbl" style="left:36px;top:30px">LIVE · THE SUM</div>
+        <div class="ro2" id="lR0" style="top:90px"></div><div class="ro2" id="lR1" style="top:180px"></div><div class="ro2" id="lR2" style="top:290px"></div>
+        <div class="lbl" id="lSL" style="left:36px;top:390px">SUBTRACTION = ADD THE OPPOSITE</div><div class="ro2" id="lR3" style="top:430px"></div></div>
+    </div>
+
+    <!-- S: add vs multiply -->
+    <div id="sS">
+      <div class="card full" id="sl"><div class="lbl" style="left:36px;top:30px">ADDING · THE PARTS STAY APART</div><div class="fx2" id="slF" style="top:110px;font-size:50px"></div><svg id="slS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="fx2" id="slR" style="top:330px;font-size:44px"></div></div>
+      <div class="card rf" id="sr"><div class="lbl" style="left:36px;top:30px">MULTIPLYING · EVERY TERM MEETS EVERY TERM</div><div id="sG"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- M: multiplication in steps -->
+    <div id="sM">
+      <div class="card full" id="ml"><div class="lbl" style="left:36px;top:30px">MULTIPLY · NCERT EXAMPLE</div><div class="hiBox" id="mHi" style="left:20px;width:744px;height:104px"></div><div id="mSt"></div></div>
+      <div class="card rf" id="mr"><div class="lbl" style="left:36px;top:30px">EVERY TERM BY EVERY TERM</div><div id="mG"></div><div class="fx2" id="mRes" style="top:470px"></div></div>
+    </div>
+
+    <!-- R: multiply by i -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">LIVE · TIMES i</div><svg id="rS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">ONE SPECIAL PRODUCT</div><div class="fx2" id="rF0" style="top:90px"></div><div class="fx2" id="rF1" style="top:180px"></div><div class="fx2" id="rF2" style="top:270px"></div>
+        <div class="pillp" id="rP" style="left:36px;top:400px;background:var(--imb);color:var(--im)">A quarter turn. Same length.</div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- V: division -->
+    <div id="sV">
+      <div class="card full" id="vl"><div class="lbl" style="left:36px;top:30px">DIVISION · THE MULTIPLICATIVE INVERSE</div><div id="vBig"></div>
+        <div class="why2" id="vW" style="top:290px">for z = a + ib, not zero (NCERT)</div>
+        <div class="fx2" id="vD" style="top:370px;font-size:40px"></div></div>
+      <div class="card rf" id="vr"><div class="lbl" style="left:36px;top:30px">CHECK · z = 2 - 3i</div><div class="hiBox" id="vHi" style="left:20px;width:744px;height:104px"></div><div id="vSt"></div></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">ON THE BOARD</div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="wP" style="left:36px;top:500px">Lands on the street: purely real</div></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="420" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Add parts. Multiply <span class="acc">every</span> term.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
