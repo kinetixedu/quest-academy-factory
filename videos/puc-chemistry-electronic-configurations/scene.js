@@ -61,7 +61,7 @@ const tKit = KIT.map(k => wt('H3', k[2]));
 const NA = [['1s', 2], ['2s', 2], ['2p', 6], ['3s', 1]];
 $('#naS').innerHTML = NA.map(([s, k], i) => `<span id="na${i}" style="display:inline-block;margin:0 10px">${K(TERM(s, k))}</span>`).join('');
 const LG = [[`<b style="color:${NC}">3</b>`, 'shell, n'], [`<b style="color:${LC}">s</b>`, 'subshell, l'], [`<b style="color:${EC}">1</b>`, 'electrons in it']];
-$('#lgs').innerHTML = LG.map(([a, b], i) => `<div class="lg" id="lg${i}" style="top:${330 + i * 0}px">${a}<span>${b}</span></div>`).join('');
+$('#lgs').innerHTML = LG.map(([a, b], i) => `<div class="lg" id="lg${i}" style="top:380px">${a}<span>${b}</span></div>`).join('');
 const tNa = [wx('P3', 'One'), wx('P3', 'two', 1), wx('P3', 'two', 3), wx('P3', 'three')];
 const pS = $('#pS'), pB = {}; { let x = 74; [['1s', 1], ['2s', 1], ['2p', 3], ['3s', 1]].forEach(([s, nb]) => { const x0 = x; pB[s] = []; for (let k = 0; k < nb; k++) { pB[s].push(BOX(pS, x, 200, 76, 3)); x += 84; } txt(pS, (x0 + x - 8) / 2, 316, s, { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 30, fill: LC }); x += 24; }); }
 const pTag = document.createElement('div'); pTag.className = 'pillp ac'; pTag.style.cssText = 'left:36px;top:494px'; pTag.textContent = 'Box = orbital · arrow = electron'; $('#pd').appendChild(pTag);
@@ -95,13 +95,14 @@ const tFill = [wx('S2', 'one', 1), wx('S2', 'two'), wx('S3', 'two'), wx('S4', 't
 /* ---------- R: why extra stable ---------- */
 const RR = [['Symmetry', 'Evenly spread electrons shield each other less'], ['Exchange energy', 'Same-spin electrons swap places; each swap releases energy']];
 $('#rrs').innerHTML = RR.map(([n, s], i) => `<div class="rr" id="rr${i}" style="top:${84 + i * 152}px"><div class="nn">${i + 1}</div><div class="rn">${n}</div><div class="rs">${s}</div></div>`).join('');
+$('#rl').insertAdjacentHTML('beforeend', `<div class="lbl" id="exT" style="left:36px;top:410px">THE TWO EXCEPTIONS</div><div class="lg" id="ex0" style="left:36px;top:446px"><b style="color:${NC}">Cr</b>${K(`3d^5`)} half filled</div><div class="lg" id="ex1" style="left:390px;top:446px"><b style="color:${NC}">Cu</b>${K(`3d^{10}`)} completely filled</div>`);
 const rS = $('#rS'); const rB = [0, 1, 2, 3, 4].map(k => BOX(rS, 122 + k * 112, 250, 96, 3));
-txt(rS, 100, 312, '3d', { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 34, fill: LC });
+txt(rS, 58, 312, '3d', { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 34, fill: LC });
 const rNuc = mk(rS, 'g', {}); [0, 1, 2, 3, 4].forEach(k => mk(rNuc, 'line', { x1: 392, y1: 440, x2: rB[k].cx, y2: 350, stroke: NC, 'stroke-width': 2.5, 'stroke-dasharray': '6 6' })); mk(rNuc, 'circle', { cx: 392, cy: 446, r: 16, fill: C.ink }); txt(rNuc, 392, 453, '+', { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 22, fill: '#fff' });
 const swA = mk(rS, 'path', { d: `M${rB[0].cx - 10} 240 Q ${(rB[0].cx + rB[1].cx) / 2} 150 ${rB[1].cx - 10} 240`, stroke: EC, 'stroke-width': 3, fill: 'none', 'stroke-dasharray': '8 7' });
 const swU = [ARW(rS, true, 1.3), ARW(rS, true, 1.3)];
 const rTag = document.createElement('div'); rTag.className = 'pillp ac'; rTag.style.cssText = 'left:36px;top:494px'; $('#rd').appendChild(rTag);
-const mobT = (d, s) => `<span style="display:inline-flex;align-items:center;gap:10px">${K(`${AR}\\,${TERM('3d', d)}\\,${TERM('4s', s)}`)}</span>`;
+const mobT = (d, s) => K(`${AR}\\,3d^{${d}}\\,4s^{${s}}`);
 const th1 = PUC.think($('#th1'), { q: 'Which is the real ground state of copper?', opts: [mobT(9, 2), mobT(10, 1)], right: 1, why: 'A completely filled 3d is extra stable, so one 4s electron moves into 3d.' });
 
 /* ---------- statement ---------- */
@@ -115,12 +116,12 @@ const dsol = PUC.solution($('#dl'), [
   [K(`${TERM('3d', 5)}:\\; 4+3+2+1 = 10 \\;>\\; ${TERM('3d', 4)}:\\; 6`)]], { label: 'COUNTING EXCHANGES · STEP BY STEP', y0: 110, dy: 112 });
 const tDs = [wx('D2', 'Step'), wx('D3', 'Step'), wx('D4', 'Step'), wx('D5', 'Step')];
 const dS = $('#dS');
-const exRow = (y, n) => { const bx = [0, 1, 2, 3, 4].map(k => BOX(dS, 120 + k * 92, y, 80, 2.5)); bx.forEach((q, k) => M.hide(q.u, !(k < n))); const arcs = [];
+const exRow = (y, n) => { const bx = [0, 1, 2, 3, 4].map(k => BOX(dS, 200 + k * 100, y, 84, 2.5)); bx.forEach((q, k) => M.hide(q.u, !(k < n))); const arcs = [];
   for (let i = 0; i < n; i++) for (let j = i + 1; j < n; j++) { const x1 = bx[i].cx, x2 = bx[j].cx, h = 26 + (j - i) * 24; arcs.push({ i, el: mk(dS, 'path', { d: `M${x1} ${y - 6} Q ${(x1 + x2) / 2} ${y - 6 - h * 2} ${x2} ${y - 6}`, stroke: EC, 'stroke-width': 2.5, fill: 'none', opacity: 0.85 }) }); }
   return { bx, arcs }; };
-const ex5 = exRow(220, 5), ex4 = exRow(440, 4);
-const exL = [txt(dS, 36, 300, '3d⁵', { 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 30, fill: LC }), txt(dS, 36, 520, '3d⁴', { 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 30, fill: LC })];
-const exC = [txt(dS, 748, 140, '', { 'text-anchor': 'end', 'font-size': 26, fill: EC, 'font-weight': 600 }), txt(dS, 748, 360, '', { 'text-anchor': 'end', 'font-size': 26, fill: EC, 'font-weight': 600 })];
+const ex5 = exRow(230, 5), ex4 = exRow(460, 4);
+const exL = [txt(dS, 36, 268, '3d⁵', { 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 30, fill: LC }), txt(dS, 36, 498, '3d⁴', { 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 30, fill: LC })];
+const exC = [txt(dS, 36, 300, '', { 'font-size': 18, fill: EC, 'font-weight': 600 }), txt(dS, 36, 530, '', { 'font-size': 18, fill: EC, 'font-weight': 600 })];
 const ex4g = mk(dS, 'g', {}); ex4.bx.forEach(q => [q.r, q.u, q.d].forEach(e => ex4g.appendChild(e))); ex4.arcs.forEach(a => ex4g.appendChild(a.el)); ex4g.appendChild(exL[1]); ex4g.appendChild(exC[1]);
 
 /* ---------- W: iron ---------- */
@@ -141,10 +142,10 @@ const avD = PUC.avatar($('#wr'), { x: 36, y: 486, who: 'Diya', face: IMG + 'diya
 /* ---------- X / Q / F ---------- */
 const trap = PUC.trap($('#trap'), { wrong: `Chromium: ${K(`${AR}\\,${TERM('3d', 4)}\\,${TERM('4s', 2)}`)}`, right: `Chromium: ${K(`${AR}\\,${TERM('3d', 5)}\\,${TERM('4s', 1)}`)} (half filled 3d)` });
 const tsv = $('#tS');
-const trRow = (x0, d, s) => { const g = mk(tsv, 'g', {}), bx = [0, 1, 2, 3, 4].map(k => BOX(g, x0 + k * 44, 96, 40, 2)), b4 = BOX(g, x0 + 5 * 44 + 14, 96, 40, 2); fillSub(bx, d); fillSub([b4], s); return g; };
-const tW = trRow(20, 4, 2), tRr = trRow(330, 5, 1);
-txt(tW, 140, 178, '3d⁴ 4s²', { 'text-anchor': 'middle', 'font-size': 18, fill: C.red, 'font-weight': 600 }); txt(tRr, 450, 178, '3d⁵ 4s¹', { 'text-anchor': 'middle', 'font-size': 18, fill: C.ok, 'font-weight': 600 });
-const xW = mk(tsv, 'path', { d: 'M20 80 L290 160 M290 80 L20 160', stroke: C.red, 'stroke-width': 5, 'stroke-linecap': 'round', fill: 'none' });
+const trRow = (y0, d, s) => { const g = mk(tsv, 'g', {}), bx = [0, 1, 2, 3, 4].map(k => BOX(g, 60 + k * 58, y0, 54, 2.5)), b4 = BOX(g, 60 + 5 * 58 + 16, y0, 54, 2.5); fillSub(bx, d); fillSub([b4], s); return g; };
+const tW = trRow(52, 4, 2), tRr = trRow(156, 5, 1);
+txt(tW, 440, 86, '3d⁴ 4s²', { 'font-size': 18, fill: C.red, 'font-weight': 600 }); txt(tRr, 440, 190, '3d⁵ 4s¹', { 'font-size': 18, fill: C.ok, 'font-weight': 600 });
+const xW = mk(tsv, 'path', { d: 'M48 46 L430 116 M430 46 L48 116', stroke: C.red, 'stroke-width': 5, 'stroke-linecap': 'round', fill: 'none' });
 const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'NEET'], type: 'Configurations of Cr and Cu, and counting electrons by l or unpaired electrons' });
 const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', q: `In a ground-state copper atom (Z = 29), how many electrons have ${K(`${l_} = 0`)}?`, qW: 780,
   opts: ['6', '7', '8', '9'], right: 1, optW: 474, optY: 300, optH: 110, optFs: 40 });
@@ -162,7 +163,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 26', topic: 'Lining up elemen
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tHopCr - 0.4, 1.12, 560, 440], [T1('C2') + 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tHopCr - 0.4, 1.06, 960, 560], [T1('C2') + 0.2, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};
@@ -204,6 +205,7 @@ M.on(t => {
     const out = OUT('S1');
     M.vis($('#po'), t, tP1 + 0.1, out, { dy: 36, ...o });
     { const sh = M.spring(t - tP4 + 0.2, M.HEAVY), wv = M.lerp(1600, 784, sh); snap($('#po'), 'width', (sh >= 1 ? 784 : wv.toFixed(1)) + 'px'); snap($('#poIn'), 'left', (sh >= 1 ? 0 : ((wv - 784) / 2).toFixed(1)) + 'px'); }
+    M.vis($('#naT'), t, tP1 + 0.4, 1e9, { dy: 12 });
     NA.forEach((_, i) => PUC.write($('#na' + i), t, tNa[i] - 0.1, 0.5));
     { const sz = t >= tP4 ? 66 : 84; snap($('#naS'), 'fontSize', sz + 'px'); }
     const tLg = [wx('P3', 'small'), wx('P3', 'subshell'), wx('P3', 'how')];
@@ -245,7 +247,7 @@ M.on(t => {
     // periodic strip
     EL.forEach((e, i) => { const el = $('#pe' + i), cur = i === Z - 1, past = i < Z - 1; setBg(el, cur ? NC : past ? C.ac3 : '#FFFFFF'); el.style.color = cur ? '#fff' : past ? '#0B7676' : C.dim; el.style.borderColor = cur ? NC : past ? C.ac2 : C.line; });
     // tag
-    const TAG = [[tS1 + 0.3, 'ONE ELECTRON AT A TIME'], [wx('S3', 'neon'), 'NEON · SHELL 2 FULL'], [wx('S5', 'four'), '4s BEFORE 3d'], [wx('S6', 'scandium'), '3d STARTS'], [tCore, '[Ar] = 18 ELECTRONS'], [wx('C1', 'predict'), 'PREDICTED 3d⁴ 4s²'], [tHopCr + HOP, 'ACTUAL 3d⁵ 4s¹ · HALF FILLED'], [wx('C3', 'Copper'), 'PREDICTED 3d⁹ 4s²'], [tHopCu + HOP, 'ACTUAL 3d¹⁰ 4s¹ · FULL'], [wx('C4', 'close'), '4s AND 3d · VERY CLOSE']];
+    const TAG = [[tS1 + 0.3, 'ONE ELECTRON AT A TIME'], [wx('S3', 'neon'), 'NEON · SHELL 2 FULL'], [wx('S5', 'four'), '4s BEFORE 3d'], [wx('S6', 'scandium'), '3d STARTS'], [tCore, '[Ar] = 18 ELECTRONS'], [wx('C1', 'predict'), 'PREDICTED 3d⁴ 4s²'], [tHopCr + HOP, 'ACTUAL 3d⁵ 4s¹'], [wx('C3', 'Copper'), 'PREDICTED 3d⁹ 4s²'], [tHopCu + HOP, 'ACTUAL 3d¹⁰ 4s¹'], [wx('C4', 'close'), '4s AND 3d · CLOSE']];
     let tg = null; for (const [tt, s] of TAG) if (t >= tt) tg = s; if (tg) M.setT(xTag, tg); M.vis(xTag, t, tS1 + 0.3, 1e9, POP);
   }
 
@@ -256,6 +258,7 @@ M.on(t => {
     M.vis($('#rl'), t, tC5 + 0.05, z, { dx: -60, dy: 0, ...o });
     M.vis($('#rd'), t, tC5 + 0.25, z, { dx: 60, dy: 0, ...o });
     const tR = [T0('C6'), T0('C7')];
+    M.vis($('#exT'), t, tC5 + 0.5, 1e9, { dy: 8 }); M.vis($('#ex0'), t, tC5 + 0.7, 1e9, POP); M.vis($('#ex1'), t, tC5 + 0.85, 1e9, POP);
     RR.forEach((_, i) => { M.vis($('#rr' + i), t, tR[i] - 0.15, 1e9, { dy: 16 }); setBg($('#rr' + i), mix(C.soft, C.ac2, M.io((t - tR[i]) / 0.3) * (i === 0 ? 1 - M.io((t - tR[1]) / 0.3) : 1))); });
     // swap animation: electrons 1 and 2 trade places along the arc, twice
     const tSw = wx('C7', 'swap'), su = M.clamp((t - tSw) / 1.2);
@@ -278,10 +281,10 @@ M.on(t => {
     M.vis($('#dr'), t, tD1 + 0.25, out, { dx: 60, dy: 0, ...o });
     const tGrp = [tDs[0] + 0.5, tDs[1] + 0.5, wx('D4', 'two'), wx('D4', 'one')];
     let n5 = 0; ex5.arcs.forEach((a, k) => { const ti = tGrp[a.i] + (k % 4) * 0.12, u = M.io((t - ti) / 0.4); M.drawU(a.el, u); M.hide(a.el, u <= 0); if (u >= 1) n5++; });
-    M.setT(exC[0], `EXCHANGES ${n5}`);
+    M.setT(exC[0], `${n5} SWAPS`);
     fade(ex4g, t, wx('D5', 'only') - 0.6, 1e9, 0.3);
     let n4 = 0; ex4.arcs.forEach((a, k) => { const u = M.io((t - wx('D5', 'only') + 0.4 - k * 0.1) / 0.3); M.drawU(a.el, u); M.hide(a.el, u <= 0); if (u >= 1) n4++; });
-    M.setT(exC[1], `EXCHANGES ${n4}`);
+    M.setT(exC[1], `${n4} SWAPS`);
   }
 
   /* statement */

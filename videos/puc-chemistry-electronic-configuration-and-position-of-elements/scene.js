@@ -105,7 +105,7 @@ $('#mss').innerHTML = MS.map(([s], i) => `<div class="ms" id="ms${i}" style="top
 const GR = [['S BLOCK', 'outer s electrons', 'D5', 'For'], ['P BLOCK', `${K(`10 + s + p`)} electrons`, 'D6', 'For'], ['D BLOCK', `${K(`s + (n-1)d`)} electrons`, 'D7', 'For']];
 $('#grs').innerHTML = GR.map(([k, w], i) => `<div class="gr" id="gr${i}" style="top:${370 + i * 66}px"><b style="color:${VC}">${k}</b><span>${w}</span></div>`).join('');
 const tMs = MS.map(m => T0(m[1]) + 0.25), tGr = [wt('D5', 'group'), wt('D6', 'add'), wt('D7', 'add')];
-const T2t = table($('#pt2'), 34, 3, 14, { labels: true });
+const T2t = table($('#pt2'), 36, 3, 15, { labels: true });
 const BL = [['s', 0, 'S BLOCK'], ['d', 2, 'D BLOCK'], ['p', 12, 'P BLOCK']];
 const blab = BL.map(([bk, c0, s]) => { const d = document.createElement('div'); d.className = 'pl'; d.style.cssText = `left:${c0 * T2t.P}px;top:${4 * T2t.P + 12}px;width:${(bk === 'd' ? 10 : bk === 's' ? 2 : 6) * T2t.P - 3}px;color:${GC};font-size:17px`; d.textContent = s; $('#pt2').appendChild(d); return d; });
 const fG1 = T2t.col(0), fG17 = T2t.col(16, 0, 3), fD = T2t.row(3, 2, 11, VC), fP2 = T2t.row(1, 0, 17, NC), fP4 = T2t.row(3, 0, 17, NC);
@@ -213,9 +213,9 @@ M.on(t => {
     M.vis($('#mdef'), t, wt('P3', 'electronic') - 0.1, 1e9, POP);
     QR.forEach((_, i) => { const el = $('#qr' + i); M.vis(el, t, tQr[i] - 0.1, 1e9, { dy: 16 }); const nx2 = i < 2 ? tQr[i + 1] : wt('P4', 'Valence', 1); const on = M.io((t - tQr[i]) / 0.25) * (1 - M.io((t - nx2) / 0.25)); setBg(el, mix(C.soft, C.ac2, on)); });
     M.vis($('#pw'), t, tP1 + 0.1, out, { dx: -60, dy: 0, ...o });
-    SS.forEach((_, i) => { const el = $('#ss' + i); M.vis(el, t, (tSs[i] ?? T0('P2')) - 0.1, 1e9, { dx: -16, dy: 0 });
+    SS.forEach((_, i) => { const el = $('#ss' + i); M.vis(el, t, tP1 + 0.4 + i * 0.15, 1e9, { dx: -16, dy: 0 });
       const on = M.io((t - tSs[i]) / 0.2) * (1 - M.io((t - (tSs[i + 1] ?? T0('P3'))) / 0.3)); setBg(el, mix(C.soft, C.ac2, on));
-      el.querySelectorAll('.bx i').forEach((bx, k) => { bx.style.opacity = M.clamp((t - tSs[i] - k * 0.05) / 0.15).toFixed(3); }); });
+      el.querySelectorAll('.bx i').forEach((bx, k) => { bx.style.opacity = M.clamp((t - tP1 - 0.6 - i * 0.15 - k * 0.05) / 0.15).toFixed(3); }); });
     M.vis($('#pwP'), t, wt('P3', 'list') - 0.1, 1e9, POP);
   }
 
@@ -239,10 +239,10 @@ M.on(t => {
       attr(d, 'cx', M.lerp(fx, sx, u).toFixed(1)); attr(d, 'cy', M.lerp(fy, sy, u).toFixed(1)); d.style.opacity = M.clamp((t - ta) / 0.12).toFixed(3); M.hide(d, t < ta);
       attr(d, 'fill', i === lastI ? EC : HC); attr(d, 'r', i === lastI ? 11 : 9); });
     // outermost shell tag
-    const outK = elem === 'K' ? 3 : 2, tgOn = M.io((t - tShr + 0.1) / 0.3);
+    const outK = elem === 'K' ? 3 : 2, tgOn = M.io((t - wt('S5', 'outermost') + 0.1) / 0.3);
     rings.forEach((r, k) => { attr(r, 'stroke', k === outK ? mix(C.dim, NC, tgOn) : C.dim); attr(r, 'stroke-width', k === outK ? (2 + 2 * tgOn).toFixed(2) : 2); });
     M.setT(nTagT, `n = ${outK + 1}`); attr(nTagR, 'width', geo.tag.toFixed(1)); attr(nTagR, 'x', (AX + RR[outK] + 8).toFixed(1)); attr(nTagT, 'x', (AX + RR[outK] + 20).toFixed(1));
-    fade(nTag, t, tShr);
+    fade(nTag, t, wt('S5', 'outermost'));
     const TAG = [[tS1 + 0.3, 'Na · Z = 11'], [wt('S2', 'Two'), 'SHELL 1 · 2 e⁻'], [wt('S3', 'Eight'), 'SHELL 2 · 8 e⁻'], [wt('S4', 'new'), 'SHELL 3 · 1 e⁻'], [T0('S5'), 'Na · 2, 8, 1'], [tClIn, 'Cl · Z = 17'], [wt('S8', 'seven'), 'Cl · 2, 8, 7'], [tKIn, 'K · Z = 19 · 2, 8, 8, 1']];
     let tg = null; for (const [tt, s] of TAG) if (t >= tt) tg = s; if (tg) M.setT(btag, tg); M.vis(btag, t, tS1 + 0.2, 1e9, POP);
     // configuration

@@ -75,10 +75,10 @@ const tTwoN = wt('S2', 'two'), tLock = wt('S2', 'shared'), tHyd = wt('S2', 'hydr
 const tBrk = wt('S4', 'bonds'), tMov = wt('S4', 'move'), tForm = wt('S4', 'new'), tUsed = wt('S5', 'used'), tSec = wt('S6', 'second'), tLim = wt('S6', 'limiting'), tExc = wt('S6', 'excess');
 const KP = {
   Na: [[0, 150, 160], [tBrk, 140, 160], [tMov, 230, 205]], Nb: [[0, 290, 160], [tBrk, 300, 160], [tMov + 0.1, 560, 205]],
-  Nc: [[0, 150, 340], [tSec, 322, 395]], Nd: [[0, 290, 340], [tSec + 0.05, 462, 395]],
+  Nc: [[0, 150, 392], [tSec, 322, 395]], Nd: [[0, 290, 392], [tSec + 0.05, 462, 395]],
   H1: [[0, 860, 120], [tHyd, 530, 120], [tBrk, 518, 112], [tMov + 0.1, 140, 152]], H2: [[0, 932, 120], [tHyd, 602, 120], [tBrk, 618, 112], [tMov + 0.15, 470, 152]],
   H3: [[0, 880, 240], [tHyd + 0.15, 550, 240], [tBrk, 538, 240], [tMov + 0.2, 320, 152]], H4: [[0, 952, 240], [tHyd + 0.15, 622, 240], [tBrk, 640, 240], [tMov + 0.25, 650, 152]],
-  H5: [[0, 860, 360], [tHyd + 0.3, 530, 360], [tBrk, 518, 368], [tMov + 0.3, 230, 302]], H6: [[0, 932, 360], [tHyd + 0.3, 602, 360], [tBrk, 618, 368], [tMov + 0.35, 560, 302]],
+  H5: [[0, 860, 360], [tHyd + 0.3, 530, 360], [tBrk, 518, 368], [tMov + 0.3, 230, 292]], H6: [[0, 932, 360], [tHyd + 0.3, 602, 360], [tBrk, 618, 368], [tMov + 0.35, 560, 292]],
 };
 const PF = {}; for (const k in KP) { const ks2 = KP[k]; PF[k] = [M.keys(ks2.map(([t, x]) => [t, x]), 0.9), M.keys(ks2.map(([t, , y]) => [t, y]), 0.9)]; }
 const btag = document.createElement('div'); btag.className = 'btag'; btag.style.cssText = 'right:36px;top:18px;background:var(--ink);color:#fff'; $('#bn').appendChild(btag);
@@ -100,7 +100,7 @@ $('#mrs').innerHTML = MR.map(([s, x], i) => `<div class="mr" id="mr${i}" style="
 const tMr = [T0('D2'), T0('D3'), T0('D4'), T0('D5')];
 
 /* ---------- C: two cases ---------- */
-const CASES = [['ca', 'CASE A · 28 g N₂ + 4 g H₂', `${H2}:\\; 4 \\div 2 = 2\\,\\text{mol}`, 2, `${K(H2)} is limiting`, 'var(--red)', 'C2'], ['cb', 'CASE B · 28 g N₂ + 10 g H₂', `${H2}:\\; 10 \\div 2 = 5\\,\\text{mol}`, 5, `${K(N2)} is limiting`, 'var(--ac)', 'C3']];
+const CASES = [['ca', 'CASE A · 28 g N₂ + 4 g H₂', `${H2}:\\; 4 \\div 2 = 2\\,\\text{mol}`, 2, 'H₂ is limiting', 'var(--red)', 'C2'], ['cb', 'CASE B · 28 g N₂ + 10 g H₂', `${H2}:\\; 10 \\div 2 = 5\\,\\text{mol}`, 5, 'N₂ is limiting', 'var(--ac)', 'C3']];
 const cbar = CASES.map(([id, l, h, v, vd, c]) => {
   const card = $('#' + id);
   card.innerHTML = `<div class="lbl" style="left:36px;top:30px">${l}</div><div class="cs" style="top:82px">${K(`${N2}:\\; 28 \\div 28 = 1\\,\\text{mol}`)}</div><div class="cs cH" style="top:146px">${K(h)}</div><svg width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="cv2" style="background:${c}">${vd.replace('is limiting', '<span>is limiting</span>')}</div>`;
@@ -113,7 +113,7 @@ const cbar = CASES.map(([id, l, h, v, vd, c]) => {
   const exT = txt(s, 36 + 3 * U + 12, 400, v > 3 ? '2 mol LEFT' : 'SHORT 1 mol', { 'font-size': 18, fill: v > 3 ? C.ink : C.red, 'font-weight': 600 });
   return { card, need, needL, have, haveL, extra, exT, v, U };
 });
-const th1 = PUC.think($('#th1'), { q: `Case B: ${K(H2)} has the smaller mass (10 g vs 28 g). Is ${K(H2)} the limiting reagent?`, opts: ['Yes', 'No'], right: 1, why: `No. 10 g of ${K(H2)} is 5 mol, more than the 3 mol needed. ${K(N2)} runs out first. Compare moles, never grams.` });
+const th1 = PUC.think($('#th1'), { q: `Case B: ${K(H2)} has less mass. Is ${K(H2)} the limiting reagent?`, opts: ['Yes', 'No'], right: 1, why: `No. 10 g of ${K(H2)} is 5 mol, more than the 3 mol needed. ${K(N2)} runs out first. Compare moles, never grams.` });
 
 /* ---------- statement ---------- */
 $('#stF').innerHTML = K(EQ);
@@ -176,7 +176,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 14', topic: 'Inside an atom? 
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tSec - 0.2, 1.1, 560, 600], [tExc + 0.6, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tSec - 0.2, 1.1, 960, 560], [tExc + 0.6, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};

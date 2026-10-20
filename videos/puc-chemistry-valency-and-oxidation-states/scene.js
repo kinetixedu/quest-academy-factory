@@ -42,7 +42,7 @@ $('#wqs').innerHTML = KIT.map((s, i) => `<div class="wq" id="wq${i}" style="font
 const tKit = [wt('H3', 'Every'), wt('H3', 'formula'), wt('H3', 'notebook')];
 
 /* ---------- P: valency + NaCl ---------- */
-const QR = [['How many bonds an atom usually forms', 'P2', 'bonds'], ['Comes from the valence electrons (outermost shell)', 'P3', 'valence'], ['Valency = valence electrons, or 8 minus them', 'P4', 'eight']];
+const QR = [['How many bonds an atom usually forms', 'P2', 'bonds'], ['Comes from the valence electrons (outermost shell)', 'P3', 'valence'], ['Valency = valence electrons, or 8 minus them', 'P4', 'eight'], ['Na gives 1, Cl takes 1: one Na per Cl', 'P6', 'One']];
 $('#qrs').innerHTML = QR.map(([q], i) => `<div class="qr" id="qr${i}" style="top:${170 + i * 92}px;height:76px;right:36px;width:auto"><div class="nn">${i + 1}</div><div class="qt">${q}</div></div>`).join('');
 const tQr = QR.map(q => wt(q[1], q[2]));
 { const card = $('#pq'), d = document.createElement('div'); d.id = 'pqIn'; d.className = 'abs'; d.style.cssText = 'left:0;top:0;right:0;height:580px'; while (card.firstChild) d.appendChild(card.firstChild); card.appendChild(d); }
@@ -66,7 +66,7 @@ const pTag = document.createElement('div'); pTag.className = 'btag'; pTag.style.
 const HYD = [['C', 4, 4, `${N_('C')}${H_('H')}_4`, 'METHANE'], ['N', 5, 3, `${N_('N')}${H_('H')}_3`, 'AMMONIA'], ['O', 6, 2, `${H_('H')}_2${N_('O')}`, 'WATER'], ['F', 7, 1, `${H_('H')}${N_('F')}`, 'HYDROGEN FLUORIDE']];
 const tHy = [tS1 + 0.1, T0('S3'), T0('S4'), T0('S5')];
 const tHb = [[wt('S2', 'Each'), wt('S2', 'Four'), wt('S2', 'hydrogens'), wt('S2', 'four', 1)], [wt('S3', 'takes'), wt('S3', 'three', 1), wt('S3', 'hydrogens')], [wt('S4', 'Two'), wt('S4', 'hydrogens')], [wt('S5', 'One', 0)]];
-const b = $('#bS'), BX = 392, BY = 250, BR = 92, HL = 178;
+const b = $('#bS'), BX = 392, BY = 272, BR = 92, HL = 170;
 const bRing = [mk(b, 'circle', { cx: BX, cy: BY, r: 46, fill: 'none', stroke: C.dim, 'stroke-width': 2 }), mk(b, 'circle', { cx: BX, cy: BY, r: BR, fill: 'none', stroke: C.dim, 'stroke-width': 2 })];
 const bSt = [0, 1, 2, 3].map(() => stick(b));
 const bNuc = atomG(b, 36, NC, 'C', 30); attr(bNuc, 'transform', `translate(${BX} ${BY})`);
@@ -113,7 +113,7 @@ const oG2 = atomG(ds, 36, NC, 'O', 30); attr(oG2, 'transform', `translate(${OB[0
 const nG = NB.map(n => { const g = atomG(ds, 32, HC, 'Na', 24); attr(g, 'transform', `translate(${n[0]} ${n[1]})`); return g; });
 const naEl = NB.map(() => mk(ds, 'circle', { r: 8, fill: EC }));
 const oxO2 = oxChip($('#dr'), OB[0] + 44, OB[1] - 82, '−2', MC), oxN = NB.map((n, i) => oxChip($('#dr'), n[0] + (i ? 40 : -96), n[1] - 20, '+1', PC));
-const sumTag = [oxChip($('#dr'), 600, 70, '+2 − 2 = 0', C.ok), oxChip($('#dr'), 600, 330, '2(+1) − 2 = 0', C.ok)];
+const sumTag = [oxChip($('#dr'), 560, 70, 'SUM: +2 − 2 = 0', C.ok), oxChip($('#dr'), 520, 324, 'SUM: 2(+1) − 2 = 0', C.ok)];
 const th2 = PUC.think($('#th2'), { q: `Is oxygen's valency different in ${K('\\mathrm{OF_2}')} and ${K('\\mathrm{Na_2O}')}?`, opts: ['Same', 'Different'], right: 0, why: `Valency 2 in both. Only the oxidation state flips: ${K(P_('+2'))} and ${K(M_('-2'))}.` });
 
 /* ---------- statement ---------- */
@@ -174,7 +174,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 36', topic: 'Why one map? Per
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('D3', 'fluorine') - 0.2, 1.1, 1360, 420], [T0('D5') - 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('D3', 'fluorine') - 0.2, 1.08, 1200, 500], [T0('D5') - 0.2, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};
@@ -215,7 +215,7 @@ M.on(t => {
     M.vis($('#pq'), t, tP1 + 0.1, out, { dx: -60, dy: 0, ...o });
     { const sh = M.spring(t - tP5 + 0.25, M.HEAVY); snap($('#pq'), 'width', (sh >= 1 ? 784 : M.lerp(1600, 784, sh)).toFixed(1) + 'px'); }
     M.vis($('#mdef'), t, wt('P2', 'Valency') - 0.1, 1e9, POP);
-    QR.forEach((_, i) => { const el = $('#qr' + i); M.vis(el, t, tQr[i] - 0.1, 1e9, { dy: 16 }); const nx2 = i < 2 ? tQr[i + 1] : tP5; const on = M.io((t - tQr[i]) / 0.25) * (1 - M.io((t - nx2) / 0.25)); setBg(el, mix(C.soft, C.ac2, on)); });
+    QR.forEach((_, i) => { const el = $('#qr' + i); M.vis(el, t, tQr[i] - 0.1, 1e9, { dy: 16 }); const nx2 = i < 3 ? tQr[i + 1] : 1e9; const on = M.io((t - tQr[i]) / 0.25) * (1 - M.io((t - nx2) / 0.25)); setBg(el, mix(C.soft, C.ac2, on)); });
     M.vis($('#pw'), t, tP5 - 0.05, out, { dx: 60, dy: 0, ...o });
     const mv = M.io((t - wt('P5', 'gives') + 0.1) / 0.9), a0 = 0, ex = M.lerp(NAX + 112, CLX - 104, mv), ey = PY - 70 * Math.sin(Math.PI * mv);
     attr(naE, 'cx', ex.toFixed(1)); attr(naE, 'cy', ey.toFixed(1));
@@ -261,7 +261,7 @@ M.on(t => {
     bE.forEach((d, i) => { if (!bondSlots.includes(i)) attr(d, 'fill', HC); });
     $('#bF').innerHTML !== (geo['bf' + k] || '') && ($('#bF').innerHTML = geo['bf' + k] = K(fx));
     PUC.write($('#bF'), t, tHb[k][tHb[k].length - 1] + 0.5, 0.5, k < 3 ? tHy[k + 1] - 0.3 : 1e9, 0.2);
-    M.setT(btag, `${sym} · ${ve} VALENCE e⁻ · ${nh} H · ${nm}`); M.vis(btag, t, tS1 + 0.4, 1e9, POP);
+    M.setT(btag, `${sym} · ${ve} e⁻ · ${nh} H · ${nm}`); M.vis(btag, t, tS1 + 0.4, 1e9, POP);
     // valence table: columns light as they are met; second values at B1
     VG.forEach((g, i) => { const u = M.io((t - tVg[i] + 0.1) / 0.3), curC = i >= 3 && i <= 6 && i - 3 === k && t < T0('S6');
       ['vg', 've', 'vv'].forEach((p, r) => { const el = $('#' + p + i); setBg(el, mix(C.soft, curC ? NC : r === 2 ? C.ac2 : '#E3E6EC', u)); el.style.color = mix(C.dim, curC ? '#fff' : C.ink, u); });

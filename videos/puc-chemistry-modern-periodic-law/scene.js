@@ -41,9 +41,9 @@ const tKit = KIT.map(k => wt('H3', k[2]));
 const as = $('#aS'), AX = 392, AY = 300;
 const rings = [120, 196].map(r => mk(as, 'circle', { cx: AX, cy: AY, r, fill: 'none', stroke: C.dim, 'stroke-width': 2 }));
 const NUC = [[-14, -24, 1], [14, -24, 0], [-28, 0, 0], [0, 0, 1], [28, 0, 1], [-14, 24, 0], [14, 24, 1], [-14, -48, 0], [14, 48, 0], [-42, 24, 1], [42, -24, 0], [42, 24, 1]];
-const nuc = NUC.map(([dx, dy, p]) => { const g = mk(as, 'g', { transform: `translate(${AX + dx} ${AY + dy})` }); const c = mk(g, 'circle', { r: 15, fill: p ? '#FFFFFF' : C.dim, stroke: p ? NC : C.dim, 'stroke-width': 2.5 }); const tx = p ? txt(g, 0, 7, '+', { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 20, fill: NC }) : null; return { g, c, tx, p }; });
+const nuc = NUC.map(([dx, dy, p]) => { const g = mk(as, 'g', { transform: `translate(${AX + dx * 1.45} ${AY + dy * 1.45})` }); const c = mk(g, 'circle', { r: 19, fill: p ? '#FFFFFF' : C.dim, stroke: p ? NC : C.dim, 'stroke-width': 2.5 }); const tx = p ? txt(g, 0, 8, '+', { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 24, fill: NC }) : null; return { g, c, tx, p }; });
 const els = [[120, 0], [120, Math.PI], [196, 0.4], [196, 0.4 + Math.PI / 2], [196, 0.4 + Math.PI], [196, 0.4 + 1.5 * Math.PI]].map(([r, a]) => ({ r, a, c: mk(as, 'circle', { r: 10, fill: EC }) }));
-const aTag = [['NUCLEUS', 'nucleus', AX, AY - 80, C.ink], ['6 PROTONS (+)', 'protons', 140, 120, NC], ['6 ELECTRONS (−)', 'electrons', 640, 120, EC]];
+const aTag = [['NUCLEUS', 'nucleus', AX, AY - 98, C.ink], ['6 PROTONS (+)', 'protons', 140, 120, NC], ['6 ELECTRONS (−)', 'electrons', 640, 120, EC]];
 const aT = aTag.map(([s, w, x, y, col], i) => txt(as, x, y, s, { 'text-anchor': 'middle', 'font-size': 18, fill: col, 'font-weight': 600 }));
 const zBig = mk(as, 'g', {}); mk(zBig, 'rect', { x: 262, y: 500, width: 260, height: 56, rx: 12, fill: NC }); txt(zBig, 392, 538, 'Z = 6 · CARBON', { 'text-anchor': 'middle', 'font-size': 26, fill: '#FFFFFF', 'font-weight': 600 });
 $('#idEq').innerHTML = K(`${tc(NC, 'Z')} = ${tc(NC, '\\text{protons}')} = ${tc(EC, '\\text{electrons}')}`);
@@ -103,7 +103,7 @@ const gBad = mk(gs, 'path', { d: '', fill: 'none', stroke: C.red, 'stroke-width'
 const gPts = MET.map(([s]) => { const g = mk(gs, 'g', {}); const c = mk(g, 'circle', { r: 9, fill: C.violet }); const l = txt(g, 0, 0, s, { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 18, fill: C.ink }); return { g, c, l }; });
 const gTag = document.createElement('div'); gTag.className = 'btag'; gTag.style.cssText = 'right:36px;top:18px;background:var(--ink);color:#fff'; $('#gr').appendChild(gTag);
 const avD = PUC.avatar($('#sS'), { x: 160 + 36, y: 270 + 470, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'So Z sets the outer electrons too!' });
-const th1 = PUC.think($('#th1'), { q: 'Nickel (58.69 u) is lighter than cobalt (58.93 u). Which comes first in the modern table?', opts: ['Cobalt', 'Nickel'], right: 0, why: `Cobalt is ${K(`${tc(NC, 'Z')} = 27`)}, nickel is ${K(`${tc(NC, 'Z')} = 28`)}. Atomic number decides the order.` });
+const th1 = PUC.think($('#th1'), { q: 'Nickel is lighter than cobalt. Which comes first in the modern table?', opts: ['Cobalt', 'Nickel'], right: 0, why: `Cobalt is ${K(`${tc(NC, 'Z')} = 27`)}, nickel is ${K(`${tc(NC, 'Z')} = 28`)}. Atomic number decides the order.` });
 // bench beats
 const tBeam = wt('S1', 'beam'), tXr = wt('S2', 'X'), tStr = wt('S4', 'straight'), tPlot = wt('S4', 'plotted'), tMass = wt('S5', 'against'), tCoNi = wt('S5', 'cobalt'), tHigh = wt('S5', 'higher');
 const tBreak = wt('S6', 'breaks'), tBack = wt('S6', 'Against', 1), tBasic = wt('S6', 'basic');
@@ -155,7 +155,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 28', topic: 'Why exactly 18 c
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tCoNi - 0.3, 1.08, 1440, 420], [tBack, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tCoNi - 0.3, 1.06, 980, 560], [tBack, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};
@@ -195,7 +195,7 @@ M.on(t => {
     const out = OUT('U1');
     M.vis($('#pq'), t, tP1 + 0.1, out, { dx: -60, dy: 0, ...o });
     const tNuc = wt('P2', 'nucleus'), tPr = wt('P2', 'protons'), tEl = wt('P4', 'electrons');
-    nuc.forEach((n, i) => { const u = M.spring(t - tNuc + 0.1 - i * 0.03, M.POP); attr(n.g, 'transform', `translate(${AX + NUC[i][0]} ${AY + NUC[i][1]}) scale(${Math.max(0.01, Math.min(1.15, u)).toFixed(3)})`); M.hide(n.g, t < tNuc - 0.1);
+    nuc.forEach((n, i) => { const u = M.spring(t - tNuc + 0.1 - i * 0.03, M.POP); attr(n.g, 'transform', `translate(${AX + NUC[i][0] * 1.45} ${AY + NUC[i][1] * 1.45}) scale(${Math.max(0.01, Math.min(1.15, u)).toFixed(3)})`); M.hide(n.g, t < tNuc - 0.1);
       if (n.p) { const l = M.io((t - tPr) / 0.3); attr(n.c, 'fill', mix('#FFFFFF', NC, l)); attr(n.tx, 'fill', mix(NC, '#FFFFFF', l)); } });
     rings.forEach(r => fade(r, t, tEl - 0.3));
     els.forEach((e, i) => { const a = e.a + (t - tEl) * (e.r === 120 ? 0.9 : 0.55); attr(e.c, 'cx', (AX + e.r * Math.cos(a)).toFixed(1)); attr(e.c, 'cy', (AY + e.r * Math.sin(a)).toFixed(1)); fade(e.c, t, tEl - 0.1 + i * 0.08); });
@@ -260,7 +260,7 @@ M.on(t => {
     const pts = MET.map(([s, Z, m]) => [M.lerp(Xz(Z), Xm(m), mm), Yv(Z)]);
     MET.forEach(([s, Z], i) => { const g = gPts[i], on = t >= tMet[s] + 0.25; fade(g.g, t, tMet[s] + 0.25, 1e9, 0.2); attr(g.c, 'cx', pts[i][0].toFixed(1)); attr(g.c, 'cy', pts[i][1].toFixed(1));
       const hi = (s === 'Co' || s === 'Ni') ? M.io((t - tCoNi) / 0.3) * (1 - M.io((t - tBasic) / 0.4)) : 0; attr(g.c, 'r', (9 + 4 * hi).toFixed(1)); attr(g.c, 'fill', mix(C.violet, C.red, hi));
-      attr(g.l, 'x', (pts[i][0] + (s === 'Ni' ? 20 : -20)).toFixed(1)); attr(g.l, 'y', (pts[i][1] + (s === 'Ni' ? 6 : -10)).toFixed(1)); g.l.style.opacity = (s === 'Ca' || s === 'Cu' ? 1 : hi).toFixed(3); });
+      attr(g.l, 'x', (pts[i][0] + (s === 'Ni' ? 30 : -30)).toFixed(1)); attr(g.l, 'y', (pts[i][1] + (s === 'Ni' ? 20 : -14)).toFixed(1)); g.l.style.opacity = (s === 'Ca' || s === 'Cu' ? 1 : hi).toFixed(3); });
     attr(gLine, 'd', poly(pts, M.io((t - tStr + 0.3) / 1.0))); attr(gLine, 'stroke', mix(NC, C.ink2, mm));
     const brkU = mm * M.io((t - tCoNi - 0.2) / 0.3); attr(gBad, 'd', `M${pts[7][0].toFixed(1)} ${pts[7][1].toFixed(1)} L${pts[8][0].toFixed(1)} ${pts[8][1].toFixed(1)}`); gBad.style.opacity = brkU.toFixed(3); M.hide(gBad, brkU < 0.01);
     ticksZ.style.opacity = (1 - mm).toFixed(3); ticksM.style.opacity = mm.toFixed(3);

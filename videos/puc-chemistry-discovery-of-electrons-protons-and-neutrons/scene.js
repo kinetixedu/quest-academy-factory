@@ -96,7 +96,7 @@ const dsol = PUC.solution($('#dl'), [
 const tDs = [wt('D2', 'gave'), wt('D3', 'is'), wt('D4', 'So'), wt('D5', 'm')];
 const SCI = [['1897 · CATHODE RAYS BENT', 'J. J. Thomson', 'MEASURED e/m', EC], ['1906-14 · OIL DROP EXPERIMENT', 'R. A. Millikan', 'MEASURED e', GC]];
 $('#scis').innerHTML = SCI.map(([y, n, w, col], i) => `<div class="sci" id="sc${i}" style="top:${84 + i * 140}px"><div class="sy" style="color:${col}">${y}</div><div class="sn">${n}</div><div class="sw">${w}</div></div>`).join('');
-$('#mresV').innerHTML = K(`m_{\\textcolor{#F2B39B}{e}} = 9.109 \\times 10^{-31}\\,\\text{kg}`);
+const MRV = [K(`m_{\\textcolor{#F2B39B}{e}} = \\;?`), K(`m_{\\textcolor{#F2B39B}{e}} = 9.109 \\times 10^{-31}\\,\\text{kg}`)];
 const tSc = [T0('D2'), wt('D3', 'Millikan')];
 
 /* ---------- C: neutron + table ---------- */
@@ -104,13 +104,13 @@ const cs = $('#cS');
 const src = mk(cs, 'g', {}); mk(src, 'rect', { x: 36, y: 180, width: 110, height: 100, rx: 12, fill: C.soft, stroke: C.ink, 'stroke-width': 2.5 }); txt(src, 91, 236, 'α SOURCE', { 'text-anchor': 'middle', 'font-size': 16, fill: AC, 'font-weight': 600 });
 const be = mk(cs, 'g', {}); mk(be, 'rect', { x: 300, y: 140, width: 18, height: 180, rx: 4, fill: '#8C93A3' }); txt(be, 309, 350, 'BERYLLIUM', { 'text-anchor': 'middle', 'font-size': 16, fill: C.ink, 'font-weight': 600 });
 const cpl = mk(cs, 'g', {}); mk(cpl, 'rect', { x: 460, y: 176, width: 170, height: 8, rx: 3, fill: C.ink2 }); mk(cpl, 'rect', { x: 460, y: 276, width: 170, height: 8, rx: 3, fill: C.ink2 }); sgn(cpl, 438, 180, '+'); sgn(cpl, 438, 280, '−');
-const NA = 6, LA = 154, VA = 170, ad = Array.from({ length: NA }, () => { const g = mk(cs, 'g', {}); mk(g, 'circle', { r: 11, fill: AC }); txt(g, 0, 5, 'α', { 'text-anchor': 'middle', 'font-size': 15, fill: '#fff', 'font-weight': 700 }); return g; });
+const NA = 3, LA = 154, VA = 170, ad = Array.from({ length: NA }, () => { const g = mk(cs, 'g', {}); mk(g, 'circle', { r: 11, fill: AC }); txt(g, 0, 5, 'α', { 'text-anchor': 'middle', 'font-size': 15, fill: '#fff', 'font-weight': 700 }); return g; });
 const NN = 7, LN = 420, VN = 220, nd = Array.from({ length: NN }, () => { const g = mk(cs, 'g', {}); mk(g, 'circle', { r: 11, fill: NC }); txt(g, 0, 5, 'n', { 'text-anchor': 'middle', 'font-size': 15, fill: '#fff', 'font-weight': 700 }); return g; });
 const noB = txt(cs, 545, 240, 'NO BEND', { 'text-anchor': 'middle', 'font-size': 18, fill: C.ink, 'font-weight': 700 });
 { const host = $('#cl'); [['cc0', 'CHARGE · 0'], ['cc1', 'MASS · SLIGHTLY MORE THAN p⁺']].forEach(([id, s], i) => host.insertAdjacentHTML('beforeend', `<div class="btag" id="${id}" style="left:${36 + i * 200}px;top:420px;background:var(--soft);color:var(--ink)">${s}</div>`)); }
 const avA = PUC.avatar($('#cl'), { x: 36, y: 470, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'A particle that ignores the field!' });
 const TB = [['e⁻', 'Electron', 'CHARGE −1', '9.109 × 10⁻³¹', '0.00054', EC], ['p⁺', 'Proton', 'CHARGE +1', '1.673 × 10⁻²⁷', '1.00727', PC], ['n', 'Neutron', 'CHARGE 0', '1.675 × 10⁻²⁷', '1.00867', NC]];
-$('#tbs').innerHTML = TB.map(([s, n, c, k, u, col], i) => `<div class="tb" id="tb${i}" style="top:${132 + i * 108}px"><div class="pb" style="background:${col}">${s}</div><div class="tn">${n}</div><div class="tc">${c}</div><div class="tk">${k}</div><div class="tu" style="color:${col}">${u}</div></div>`).join('') + `<div class="pillp ac" id="tbP" style="left:36px;top:470px">Proton ≈ 1836 × electron mass</div>`;
+$('#tbs').innerHTML = TB.map(([s, n, c, k, u, col], i) => `<div class="tb" id="tb${i}" style="top:${132 + i * 108}px"><div class="pb" style="background:${col}">${s}</div><div class="tn">${n}</div><div class="tc">${c}</div><div class="tk">${k}</div><div class="tu" style="color:${col}">${u}</div></div>`).join('') + `<div class="pillp ac" id="tbP" style="left:36px;top:470px">Proton ≈ 1836 × electron mass</div><div class="tb" id="tbQ" style="top:348px;background:none;border:2.5px dashed var(--dim)"><div class="tn" style="left:24px;top:28px;color:var(--mute)">? One particle missing</div></div>`;
 const tAl = wt('C1', 'fired'), tNo = wt('C2', 'Out'), tTb = [wt('C3', 'electron'), wt('C3', 'proton'), wt('C3', 'neutron')];
 
 /* ---------- statement ---------- */
@@ -158,7 +158,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 15', topic: 'Solid ball or em
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tGlow + 0.1, 1.12, 820, 500], [tFld - 0.3, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]]]);
 let geo = null;
 function measure() {
   geo = {};
@@ -263,8 +263,8 @@ M.on(t => {
     dsol(t, tD1, tDs);
     M.vis($('#dr'), t, T0('D2') - 0.1, out, { dx: 60, dy: 0, ...o });
     SCI.forEach((_, i) => { const el = $('#sc' + i); M.vis(el, t, tSc[i] - 0.1, 1e9, { dx: -16, dy: 0 }); const on = M.io((t - tSc[i]) / 0.25) * (i ? 1 - M.io((t - T0('D4')) / 0.3) : 1 - M.io((t - tSc[1]) / 0.25)); setBg(el, mix(C.soft, C.ac2, on)); });
-    M.vis($('#mres'), t, tDs[3] + 0.3, 1e9, { dy: 20 });
-    PUC.write($('#mresV'), t, tDs[3] + 0.5, 0.7);
+    M.vis($('#mres'), t, T0('D2') + 0.4, 1e9, { dy: 20 });
+    { const k = t >= tDs[3] + 0.4 ? 1 : 0, el = $('#mresV'); if (el._k !== k) { el._k = k; el.innerHTML = MRV[k]; } if (k) PUC.write(el, t, tDs[3] + 0.4, 0.7); else { M.hide(el, false); el.style.clipPath = 'none'; el.style.opacity = ''; } }
   }
 
   /* C: neutron + table */
@@ -272,16 +272,17 @@ M.on(t => {
   if (cOn) {
     const out = OUT('T1');
     M.vis($('#cl'), t, tC1 + 0.05, out, { dy: 36, ...o });
-    { const sh = M.spring(t - tTb[0] + 0.6, M.HEAVY), wv = M.lerp(1600, 784, sh); snap($('#cl'), 'width', (sh >= 1 ? 784 : wv.toFixed(1)) + 'px'); attr(cs, 'style', `position:absolute;top:0;left:${sh >= 1 ? 0 : ((wv - 784) / 2).toFixed(1)}px`); }
     fade(src, t, wt('C1', 'alpha') - 0.2); fade(be, t, wt('C1', 'beryllium') - 0.2); fade(cpl, t, wt('C2', 'field') - 0.2);
     stream(ad, t, tAl, LA, VA, NA, (g, s) => { const x = 146 + s; attr(g, 'transform', `translate(${x.toFixed(1)} 230)`); g.style.opacity = x > 290 ? 0 : 1; });
     stream(nd, t, tNo - 0.2, LN, VN, NN, (g, s) => { const x = 318 + s; attr(g, 'transform', `translate(${x.toFixed(1)} 230)`); g.style.opacity = x > 730 ? 0 : 1; });
     fade(noB, t, wt('C2', 'bend') - 0.1);
-    attr(noB, 'y', 214);
+    attr(noB, 'y', 162);
     M.vis($('#cc0'), t, wt('C2', 'charge') - 0.1, 1e9, POP); M.vis($('#cc1'), t, wt('C2', 'heavier') - 0.1, 1e9, POP);
     avA(t, wt('C2', 'Neutrons') + 0.2, tTb[0] - 0.6);
-    M.vis($('#cr'), t, tTb[0] - 0.3, out, { dx: 60, dy: 0, ...o });
-    TB.forEach((_, i) => M.vis($('#tb' + i), t, tTb[i] - 0.1, 1e9, { dx: -16, dy: 0 }));
+    M.vis($('#cr'), t, tC1 + 0.25, out, { dx: 60, dy: 0, ...o });
+    const tRow = [tC1 + 0.7, tC1 + 0.9, wt('C2', 'Neutrons') - 0.1];
+    TB.forEach((_, i) => { const el = $('#tb' + i); M.vis(el, t, tRow[i], 1e9, { dx: -16, dy: 0 }); setBg(el, mix(C.soft, C.ac2, M.io((t - tTb[i]) / 0.25) * (1 - M.io((t - (i < 2 ? tTb[i + 1] : wt('C3', 'one') + 1)) / 0.25)))); });
+    fade($('#tbQ'), t, tC1 + 1.1, tRow[2], 0.2);
     M.vis($('#tbP'), t, wt('C3', 'one') - 0.1, 1e9, POP);
   }
 

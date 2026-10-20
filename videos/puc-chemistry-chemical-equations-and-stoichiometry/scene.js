@@ -119,7 +119,9 @@ const MC = ['Mass percent', 'Mole fraction', 'Molarity', 'Molality'];
 $('#mcs').innerHTML = MC.map((m, i) => `<div class="mc" id="mc${i}">${m}</div>`).join('');
 const tMc = [wt('M2', 'Mass'), wt('M2', 'mole'), wt('M2', 'molarity'), wt('M2', 'molality')];
 $('#mF').innerHTML = K(`\\text{Molarity} = \\dfrac{\\text{moles of solute}}{\\text{litres of solution}}`);
-const msol = PUC.solution($('#ml'), [[K(`n = 4\\,\\text{g} \\div 40\\,\\text{g mol}^{-1} = 0.1\\,\\text{mol}`)], [K(`V = 250\\,\\text{mL} = 0.25\\,\\text{L}`)], [K(`M = 0.1 \\div 0.25 = \\textcolor{${CC}}{0.4\\,\\text{mol L}^{-1}}`)]], { label: '', y0: 354, dy: 68 });
+const msol = PUC.solution($('#ml'), [[K(`n = 4\\,\\text{g} \\div 40\\,\\text{g mol}^{-1} = 0.1\\,\\text{mol}`)], [K(`V = 250\\,\\text{mL} = 0.25\\,\\text{L}`)], [K(`M = 0.1 \\div 0.25 = \\textcolor{${CC}}{0.4\\,\\text{mol L}^{-1}}`)]], { label: 'NCERT EXAMPLE · 4 g NaOH IN 250 mL', y0: 354, dy: 68 });
+$('#ml').querySelectorAll('.lbl')[1].style.top = '308px';
+const mIntro = document.createElement('div'); mIntro.className = 'pillp ink'; mIntro.style.cssText = 'left:36px;top:84px'; mIntro.textContent = 'In solution: count moles by concentration'; $('#ml').appendChild(mIntro);
 const tMs = [T0('M5'), wt('M6', 'zero'), wt('M6', 'gives')];
 const ms = $('#mS'), BX0 = 90, BX1 = 400, BY0 = 110, BY1 = 470, LIQ = 210;
 const liq = mk(ms, 'rect', { x: BX0 + 4, width: BX1 - BX0 - 8, fill: C.ac2 });
@@ -311,13 +313,14 @@ M.on(t => {
   if (mOn) {
     const out = OUT('T1');
     M.vis($('#ml'), t, tM1 + 0.05, out, { dx: -60, dy: 0, ...o });
+    M.vis(mIntro, t, wt('M1', 'count') - 0.1, tMc[0] - 0.3, { ...POP, outDur: 0.2, ody: 0 });
     MC.forEach((_, i) => { const el = $('#mc' + i); M.vis(el, t, tMc[i] - 0.1, 1e9, POP); const on = i === 2 ? M.io((t - T0('M3')) / 0.3) : 0; setBg(el, mix(C.soft, C.ac, on)); el.style.color = mix(C.ink, '#FFFFFF', on); });
     PUC.write($('#mF'), t, wt('M3', 'molarity') - 0.1, 0.8);
     msol(t, T0('M5'), tMs);
-    M.vis($('#mr'), t, T0('M4') - 0.3, out, { dx: 60, dy: 0, ...o });
-    const lv = M.io((t - wt('M4', 'two') + 0.1) / 1.2), ly = BY1 - 4 - (BY1 - 4 - LIQ) * lv;
+    M.vis($('#mr'), t, wt('M1', 'solutions') - 0.3, out, { dx: 60, dy: 0, ...o });
+    const lv = M.io((t - wt('M1', 'solutions') + 0.1) / 1.2), ly = BY1 - 4 - (BY1 - 4 - LIQ) * lv;
     attr(liq, 'y', ly.toFixed(1)); attr(liq, 'height', (BY1 - 4 - ly).toFixed(1)); liq.style.opacity = M.clamp(lv * 5).toFixed(3);
-    mark.style.opacity = markT.style.opacity = M.clamp((t - T0('M4')) / 0.3).toFixed(3);
+    mark.style.opacity = markT.style.opacity = M.clamp((t - wt('M4', 'two')) / 0.3).toFixed(3);
     SD.forEach(([x, y], i) => { const u = M.io((t - wt('M4', 'four') - i * 0.07) / 0.6); attr(sdots[i], 'cx', x); attr(sdots[i], 'cy', M.lerp(70, y, u).toFixed(1)); sdots[i].style.opacity = M.clamp(u * 3).toFixed(3); });
     sTag.style.opacity = M.clamp((t - wt('M4', 'four') + 0.1) / 0.3).toFixed(3);
     RO.forEach((_, i) => M.vis($('#ro2' + i), t, tRo[i] - 0.1, 1e9, { dx: 16, dy: 0 }));

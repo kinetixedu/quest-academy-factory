@@ -43,7 +43,7 @@ $('#jobs').innerHTML = JOBS.map(([ic, n, w], i) => `<div class="job" id="jb${i}"
 const tJob = JOBS.map(j => wt(j[3], j[4]));
 const JV = [['LONG WAVES', '#EEE8FC', VC], ['TINY WAVES', '#EEE8FC', VC], ['WAVE TOO SMALL', C.soft, C.ink]];
 $('#jrs').innerHTML = JOBS.map(([ic, n, w], i) => `<div class="jr" id="jr${i}" style="top:${84 + i * 128}px"><i>${M.icon(ic, 34, C.ac, 2.2)}</i><div class="jn">${n}</div><div class="jw">${w}</div><div class="jv" id="jv${i}" style="background:${JV[i][1]};color:${JV[i][2]}">${JV[i][0]}</div></div>`).join('');
-const KIT = [['board', 'Notice board', 'notice'], ['search', 'Virus photo', 'virus'], ['atom', 'Made with electrons', 'electrons']];
+const KIT = [['search', 'Virus photo', 'virus'], ['atom', 'Made with electrons, not light', 'electrons']];
 $('#wqs').innerHTML = KIT.map(([ic, w], i) => `<div class="wq" id="wq${i}">${M.icon(ic, 24, C.ac, 2.2)}<span>${w}</span></div>`).join('');
 const tKit = KIT.map(k => wt('H3', k[2]));
 
@@ -220,7 +220,7 @@ M.on(t => {
   if (sOn) {
     const z = OUT('B1');
     M.vis($('#bn'), t, tS1 + 0.05, z, { dy: 36, ...o });
-    const tSplit = wt('S2', 'wavelength') - 0.2;
+    const tSplit = tS1 + 0.9;
     { const sh = M.spring(t - tSplit, M.HEAVY), wv = M.lerp(1600, 784, sh); snap($('#bn'), 'width', (sh >= 1 ? 784 : wv.toFixed(1)) + 'px'); snap($('#bnIn'), 'left', (sh >= 1 ? 0 : ((wv - 784) / 2).toFixed(1)) + 'px'); }
     M.vis($('#ro'), t, tSplit + 0.1, z, { dx: 60, dy: 0, ...o }); M.vis($('#gr'), t, tSplit + 0.35, z, { dy: 36, ...o });
     const v = VK(t), m = MK(t), lam = lamPm(v, m), lpx = lam * 0.2;

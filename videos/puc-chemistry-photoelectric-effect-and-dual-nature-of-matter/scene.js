@@ -303,9 +303,9 @@ M.on(t => {
   if (sOn) {
     const z = OUT('B3');
     M.vis($('#bn'), t, tS1 + 0.05, z, { dy: 36, ...o });
-    { const sh = M.spring(t - tRed + 0.3, M.HEAVY), wv = M.lerp(1600, 784, sh); snap($('#bn'), 'width', (sh >= 1 ? 784 : wv.toFixed(1)) + 'px'); snap($('#bnIn'), 'left', (sh >= 1 ? 0 : ((wv - 784) / 2).toFixed(1)) + 'px'); }
-    M.vis($('#dl2'), t, tRed - 0.1, z, { dx: 60, dy: 0, ...o });
-    M.vis($('#ct'), t, tRed + 0.25, z, { dy: 36, ...o });
+    { const sh = M.spring(t - tS1 - 0.9, M.HEAVY), wv = M.lerp(1600, 784, sh); snap($('#bn'), 'width', (sh >= 1 ? 784 : wv.toFixed(1)) + 'px'); snap($('#bnIn'), 'left', (sh >= 1 ? 0 : ((wv - 784) / 2).toFixed(1)) + 'px'); }
+    M.vis($('#dl2'), t, tS1 + 1.0, z, { dx: 60, dy: 0, ...o });
+    M.vis($('#ct'), t, tS1 + 1.25, z, { dy: 36, ...o });
     fade(bPl, t, tS1 + 0.3); fade(plL, t, tS1 + 0.5); fade(LMP.g, t, wt('S2', 'First') - 0.1);
     attr(LMP.bulb, 'fill', t < tRed ? '#FFFFFF' : lampCol(t)); attr(beam, 'opacity', t < tRed ? 0 : 0.9);
     bSim(t, 1);
@@ -325,13 +325,13 @@ M.on(t => {
     // counter -> rules
     const rOn = t >= tB1 - 0.2;
     M.setT($('#ctL'), rOn ? 'WHAT WE SAW · THREE RULES' : 'ON THE BENCH NOW');
-    M.vis($('#crs'), t, tRed + 0.4, tB1 - 0.2, { dy: 0, outDur: 0.25, ody: -10 });
+    M.vis($('#crs'), t, tS1 + 1.4, tB1 - 0.2, { dy: 0, outDur: 0.25, ody: -10 });
     const r = rate(t), sp = t < tVi ? 0 : t < tUV ? 0.45 : 0.95;
     CR.forEach((_, i) => {
       const cb = $('#cb' + i), w = i === 0 ? r / 11 : i === 1 ? 0 : sp; snap(cb, 'width', (160 * w).toFixed(1) + 'px'); setBg(cb, i === 0 ? lampCol(t) : EC); M.hide(cb, i === 1 || w <= 0.01);
-      M.vis($('#cr' + i), t, tRed + 0.5 + i * 0.12, 1e9, { dx: -16, dy: 0 });
+      M.vis($('#cr' + i), t, tS1 + 1.5 + i * 0.12, 1e9, { dx: -16, dy: 0 });
     });
-    M.setT($('#cv0'), t < tBr ? 'HIGH' : t < tVi ? 'VERY HIGH' : t < tVb ? 'LOW' : 'HIGH');
+    M.setT($('#cv0'), t < tRed ? 'OFF' : t < tBr ? 'HIGH' : t < tVi ? 'VERY HIGH' : t < tVb ? 'LOW' : 'HIGH');
     M.setT($('#cv1'), String(bSim.count(t)));
     M.setT($('#cv2'), t < tVi ? 'NONE' : t < tUV ? 'SLOW' : 'FAST');
     $('#cv1').style.color = bSim.count(t) > 0 ? EC : C.ink;

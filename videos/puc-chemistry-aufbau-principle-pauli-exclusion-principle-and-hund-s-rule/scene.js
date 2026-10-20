@@ -101,8 +101,8 @@ const RCH = [['A', 'AUFBAU · LOWEST FIRST'], ['P', 'PAULI · OPPOSITE SPINS'], 
 $('#rcs').innerHTML = RCH.map(([k, s], i) => `<div class="rc" id="rc${i}" style="left:36px;top:${76 + i * 64}px">${s}</div>`).join('');
 const RWHY = { A: 'New subshell: the lowest empty one fills first', P: 'Second electron in a box: it must spin the other way', H: 'Empty 2p box free: no pairing yet' };
 const rWhy = document.createElement('div'); rWhy.className = 'fx'; rWhy.style.cssText = 'left:420px;top:80px;font:500 22px/1.35 Poppins;color:var(--ink2);white-space:normal;width:330px'; $('#ru').appendChild(rWhy);
-const avA = PUC.avatar($('#sG'), { x: 160 + 36, y: 270 + 486, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'Like the reading room!' });
-const mobH = (a) => `<span class="mob" style="color:${C.ink2}">${a.map(c => `<i>${c.includes('u') ? M.icon('upA', 26, EC, 3) : ''}${c.includes('d') ? M.icon('dnA', 26, EC, 3) : ''}</i>`).join('')}</span>`;
+const avA = PUC.avatar($('#sG'), { x: 160 + 500, y: 270 + 470, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'Like the reading room!' });
+const mobH = (a) => `<span class="mob" style="color:${C.ink2}">${a.map(c => `<i>${c.includes('u') ? M.icon('upA', 34, EC, 3) : ''}${c.includes('d') ? M.icon('dnA', 34, EC, 3) : ''}</i>`).join('')}</span>`;
 const th1 = PUC.think($('#th1'), { q: 'Carbon has two 2p electrons. Which drawing is right?', opts: [mobH(['ud', '', '']), mobH(['u', 'u', ''])], right: 1, why: "Separate boxes, same spin: Hund's rule. Pairing waits until every p box has one." });
 
 /* ---------- statement ---------- */
@@ -164,7 +164,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 25', topic: 'Why does chromiu
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [EV[5][0] - 0.4, 1.1, 560, 500], [T1('G4') + 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [EV[5][0] - 0.4, 1.06, 960, 560], [T1('G4') + 0.2, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};
@@ -215,7 +215,7 @@ M.on(t => {
   if (sOn) {
     const out = OUT('R1');
     M.vis($('#nl'), t, tS1 + 0.05, out, { dy: 36, ...o });
-    { const sh = M.spring(t - tS3 + 0.2, M.HEAVY), wv = M.lerp(1600, 784, sh); snap($('#nl'), 'width', (sh >= 1 ? 784 : wv.toFixed(1)) + 'px'); snap($('#nlIn'), 'left', (sh >= 1 ? 0 : ((wv - 784) / 2).toFixed(1)) + 'px'); }
+    
     PUC.write($('#nlF'), t, wt('S2', 'Add') - 0.1, 0.8);
     const tRow = [wx('S3', 'Four'), wx('S3', 'Three'), wx('S4', 'four')];
     NLR.forEach((_, i) => M.vis($('#nr' + i), t, tRow[i] - 0.15, 1e9, { dy: 16 }));
@@ -225,8 +225,8 @@ M.on(t => {
     setBg($('#nr0'), mix(C.soft, C.ac2, M.io((t - wx('S3', 'So')) / 0.3) * (1 - M.io((t - T0('S4')) / 0.3))));
     setBg($('#nr1'), mix(C.soft, C.ac2, M.io((t - wx('S4', 'Three', 1)) / 0.3)));
     M.vis($('#nlP'), t, wx('S4', 'goes') + 0.1, 1e9, POP);
-    M.vis($('#ld'), t, tS3 - 0.05, out, { dx: 60, dy: 0, ...o });
-    rungs.forEach((r, i) => fade(r.g, t, tRung[i], 1e9, 0.3));
+    M.vis($('#ld'), t, tS1 + 0.3, out, { dx: 60, dy: 0, ...o });
+    rungs.forEach((r, i) => { const u = M.io((t - tRung[i]) / 0.3); r.g.style.opacity = (0.22 + 0.78 * u).toFixed(3); });
   }
 
   /* R: three rules */
@@ -288,7 +288,7 @@ M.on(t => {
     dsol(t, tD1, tDs);
     M.vis($('#dr'), t, tD1 + 0.25, out, { dx: 60, dy: 0, ...o });
     DC.forEach((c, i) => { attr(c.g, 'transform', `translate(${DX[i](t).toFixed(1)} 170)`); fade(c.g, t, wx('D1', ['five', 'd', 'Four'][i]) - 0.1, 1e9, 0.25); fade(c.tg, t, wx('D2', ['Five', 'Four', 'Four'][i], [0, 1, 0][i]) + 0.2, 1e9, 0.25); });
-    lts.forEach(e => fade(e, t, tDs[3] + 0.4, 1e9, 0.25)); fade(dAx, t, tDs[3] + 0.6, 1e9, 0.3);
+    lts.forEach(e => fade(e, t, tDs[3] + 0.4, 1e9, 0.25)); fade(dAx, t, tD1 + 0.6, 1e9, 0.3);
   }
 
   /* statement */

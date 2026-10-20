@@ -63,14 +63,14 @@ $('#sbs').innerHTML = ST.map(([n, w, m], i) => `<div class="sbx" id="sb${i}" sty
 const rng = M.rng(7);
 // solid lattice 7 x 5, liquid 8 x 3 jittered, gas 9 free
 const SOL = Array.from({ length: 35 }, (_, i) => [66 + (i % 7) * 58, 44 + Math.floor(i / 7) * 58]);
-const LIQ = Array.from({ length: 24 }, (_, i) => [52 + (i % 8) * 54 + (rng() - 0.5) * 14, 150 + Math.floor(i / 8) * 52 + (rng() - 0.5) * 10]);
+const LIQ = Array.from({ length: 24 }, (_, i) => [52 + (i % 8) * 54 + (Math.floor(i / 8) % 2) * 20 + (rng() - 0.5) * 6, 150 + Math.floor(i / 8) * 52 + (rng() - 0.5) * 6]);
 const GAS = Array.from({ length: 9 }, () => [40 + rng() * 400, 40 + rng() * 240, (rng() < 0.5 ? -1 : 1) * (170 + rng() * 120), (rng() < 0.5 ? -1 : 1) * (150 + rng() * 120)]);
 const sv = [0, 1, 2].map(i => $('#sv' + i));
 const liqFill = mk(sv[1], 'rect', { x: 0, y: 116, width: 480, height: 204, fill: '#D5F0F0' });
-const pS = SOL.map(() => mk(sv[0], 'circle', { r: 22, fill: OC })), pL = LIQ.map(() => mk(sv[1], 'circle', { r: 22, fill: OC })), pG = GAS.map(() => mk(sv[2], 'circle', { r: 22, fill: OC }));
+const pS = SOL.map(() => mk(sv[0], 'circle', { r: 22, fill: OC })), pL = LIQ.map(() => mk(sv[1], 'circle', { r: 21, fill: OC })), pG = GAS.map(() => mk(sv[2], 'circle', { r: 22, fill: OC }));
 const tri = (u, a, b) => { const L = b - a, m = ((u - a) % (2 * L) + 2 * L) % (2 * L); return a + (m < L ? m : 2 * L - m); };
 const posS = (i, tau, amp) => [SOL[i][0] + amp * 3.5 * Math.sin(tau * 17 + i * 1.7), SOL[i][1] + amp * 3.5 * Math.cos(tau * 15 + i * 2.3)];
-const posL = (i, tau) => { const r = Math.floor(i / 8); return [LIQ[i][0] + (r % 2 ? -1 : 1) * 24 * Math.sin(tau * 1.5 + (i % 8) * 0.5), LIQ[i][1] + 5 * Math.sin(tau * 2.3 + i)]; };
+const posL = (i, tau) => { const r = Math.floor(i / 8); return [LIQ[i][0] + (r % 2 ? -1 : 1) * 20 * Math.sin(tau * 1.5 + r * 1.3), LIQ[i][1] + 4 * Math.sin(tau * 2.3 + i)]; };
 const posG = (i, tau) => { const [x, y, vx, vy] = GAS[i]; return [tri(x + vx * tau, 22, 458), tri(y + vy * tau, 22, 298)]; };
 // local time: full speed while its line plays, a quarter after, frozen before
 const tauOf = (t, a, b) => t < a ? 0 : t < b ? t - a : (b - a) + 0.25 * (t - b);
@@ -153,7 +153,7 @@ const mCO2 = molecule({ atoms: [{ x: 392, y: 400, sx: 392, sy: 400, r: 34, ring:
 const BL = [[200, 252, O2, 'ELEMENT', OC], [580, 270, H2O, 'COMPOUND', HC], [392, 470, CO2, 'COMPOUND', HC]];
 $('#bLab').innerHTML = BL.map(([x, y, f, ty, c], i) => `<div id="bl${i}" style="position:absolute;top:${y}px;display:flex;align-items:center;gap:12px;white-space:nowrap"><span style="font-size:38px">${K(f)}</span><span class="btag" id="bt${i}" style="position:relative;background:${c};color:#fff;height:34px;font-size:15px">${ty}</span></div>`).join('');
 const btag = document.createElement('div'); btag.className = 'btag'; btag.style.cssText = 'right:36px;top:18px;background:var(--ink);color:#fff'; $('#lz').appendChild(btag);
-const tO2 = [wt('B1', 'Two'), wt('B2', 'Each'), wt('B2', 'pairs') - 0.2], tH2O = [wt('B4', 'hydrogen'), wt('B4', 'share'), wt('B4', 'electron')], tCO2 = [wt('B5', 'carbon'), wt('B5', 'shares'), wt('B5', 'pairs')];
+const tO2 = [tB1 + 0.4, wt('B2', 'Each'), wt('B2', 'pairs') - 0.2], tH2O = [wt('B4', 'hydrogen'), wt('B4', 'share'), wt('B4', 'electron')], tCO2 = [wt('B5', 'carbon'), wt('B5', 'shares'), wt('B5', 'pairs')];
 const tBl = [wt('B2', 'molecule') + 0.2, wt('B4', 'Water'), wt('B5', 'dioxide')], tBt = [wt('B3', 'element'), wt('B5', 'compounds'), wt('B5', 'compounds') + 0.15];
 
 /* ---------- R: reading a formula ---------- */
@@ -196,7 +196,7 @@ const cp = $('#cpS');
 mk(cp, 'rect', { x: 152, y: 90, width: 480, height: 300, rx: 14, fill: C.soft });
 const melt = mk(cp, 'rect', { x: 152, y: 190, width: 480, height: 200, rx: 0, fill: '#D5F0F0' });
 const ICE = Array.from({ length: 24 }, (_, i) => [152 + 95 + (i % 6) * 58, 90 + 64 + Math.floor(i / 6) * 58]);
-const WAT = Array.from({ length: 24 }, (_, i) => [152 + 52 + (i % 8) * 54 + (rng() - 0.5) * 14, 90 + 150 + Math.floor(i / 8) * 52 + (rng() - 0.5) * 10]);
+const WAT = Array.from({ length: 24 }, (_, i) => [152 + 52 + (i % 8) * 54 + (Math.floor(i / 8) % 2) * 20, 90 + 150 + Math.floor(i / 8) * 52 + (rng() - 0.5) * 10]);
 const pM = ICE.map(() => mk(cp, 'circle', { r: 22, fill: OC }));
 const cpT = txt(cp, 392, 430, 'ICE', { 'text-anchor': 'middle', fill: C.ink, 'font-weight': 600, 'font-size': 22 });
 $('#cpX').innerHTML = `${K(`${H2O}(\\text{s}) \\rightarrow ${H2O}(\\text{l})`)}<span class="btag" style="position:relative;margin-left:16px;top:-6px;background:var(--okBg);color:#1F6B3F">SAME SUBSTANCE</span>`;
@@ -266,7 +266,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 02', topic: 'How do chemists 
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tO2[1] - 0.3, 1.1, 1176, 470], [wt('B3', 'So'), 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tO2[1] - 0.3, 1.1, 1060, 520], [wt('B3', 'So'), 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};
@@ -312,7 +312,7 @@ M.on(t => {
     PUC.write($('#pdef'), t, wt('P2', 'Chemistry') - 0.1, 0.8); PUC.write($('#pdef2'), t, wt('P2', 'matter') - 0.2, 0.4);
     M.vis($('#mdef'), t, wt('P2', 'matter', 1) - 0.1, 1e9, POP);
     KQ.forEach((_, i) => { const el = $('#kq' + i); M.vis(el, t, tKq[i] - 0.15, 1e9, { dy: 16 }); const nx2 = i < 3 ? tKq[i + 1] : T1('P4') + 0.3; const on = M.io((t - tKq[i] + 0.1) / 0.25) * (1 - M.io((t - nx2 + 0.1) / 0.25)); setBg(el, mix(C.soft, C.ac2, on)); });
-    M.vis($('#pm'), t, wt('P2', 'Your') - 0.3, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#pm'), t, tP1 + 0.35, out, { dx: 60, dy: 0, ...o });
     MR.forEach((_, i) => { M.vis($('#mr' + i), t, tMr[i] - 0.1, 1e9, { dy: 16 }); M.vis($('#mkA' + i), t, tMr[i] + 0.25, 1e9, POP); M.vis($('#mkB' + i), t, tMr[i] + 0.45, 1e9, POP); });
     M.vis($('#pmP'), t, tMr[2] + 0.8, 1e9, POP);
   }
@@ -415,7 +415,7 @@ M.on(t => {
     const out = OUT('T1');
     M.vis($('#chP'), t, tC1 + 0.05, out, { dx: -60, dy: 0, ...o }); M.vis($('#chC'), t, T0('C3') - 0.2, out, { dx: 60, dy: 0, ...o });
     const tMelt = wt('C2', 'melts') - 0.1, u = M.io((t - tMelt) / 2.2), tau = t - tMelt;
-    pM.forEach((p, k) => { const a = ICE[k], w = WAT[k], amp = 3.5 * (1 - u); const r = Math.floor(k / 8), lx = w[0] + u * (r % 2 ? -1 : 1) * 20 * Math.sin(tau * 1.5 + (k % 8) * 0.5);
+    pM.forEach((p, k) => { const a = ICE[k], w = WAT[k], amp = 3.5 * (1 - u); const r = Math.floor(k / 8), lx = w[0] + u * (r % 2 ? -1 : 1) * 18 * Math.sin(tau * 1.5 + r * 1.3);
       attr(p, 'cx', f1(M.lerp(a[0], lx, u) + amp * Math.sin(t * 17 + k * 1.7))); attr(p, 'cy', f1(M.lerp(a[1], w[1], u) + amp * Math.cos(t * 15 + k * 2.3))); });
     melt.style.opacity = u.toFixed(3); M.setT(cpT, u > 0.5 ? 'WATER · STILL H₂O' : 'ICE');
     M.vis($('#cpX'), t, wt('C2', 'still') - 0.1, 1e9, { dy: 10 });

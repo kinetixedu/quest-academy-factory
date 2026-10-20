@@ -188,7 +188,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 24', topic: 'Which fills firs
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tPlane - 0.3, 1.1, 552, 570], [T1('S6') + 0.1, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tPlane - 0.3, 1.06, 960, 560], [T1('S6') + 0.1, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};
