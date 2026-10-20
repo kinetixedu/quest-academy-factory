@@ -88,7 +88,7 @@ const tDt = [wt('K2', 'stops'), wt('K3', 'repeats'), wt('K4', 'never')], tDv = [
 const th1 = PUC.think($('#th1'), { q: 'Is 0.121212... (repeating) rational or irrational?', opts: ['Rational', 'Irrational'], right: 0, why: 'The block 12 repeats forever: 0.121212... = 12/99 = 4/33, a fraction.' });
 
 /* ---------- E: equation vs inequality ---------- */
-$('#eqF').innerHTML = K(`${col(IC, 'x')} + 3 = 7`); $('#inF').innerHTML = K(`${col(IC, 'x')} + 3 < 7`);
+$('#eqV').innerHTML = K(col(IC, 'x')) + '&nbsp; a number we do not know yet'; $('#eqF').innerHTML = K(`${col(IC, 'x')} + 3 = 7`); $('#inF').innerHTML = K(`${col(IC, 'x')} + 3 < 7`);
 const EX = v => 92 + (v + 4) * 60, EY = 360;
 const nline = s => { mk(s, 'line', { x1: 52, y1: EY, x2: 732, y2: EY, stroke: C.ink, 'stroke-width': 3 }); for (let v = -4; v <= 6; v++) { mk(s, 'line', { x1: EX(v), y1: EY - 9, x2: EX(v), y2: EY + 9, stroke: C.ink, 'stroke-width': 2 }); txt(s, EX(v), EY + 42, v, { 'text-anchor': 'middle', 'font-size': 20, fill: C.ink, 'font-weight': 600 }); } };
 const eS = $('#eqS'), iS = $('#inS'); nline(eS); nline(iS);
@@ -171,7 +171,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 02', topic: 'Three lists, one
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('B7') - 0.2, 1.08, 600, 580], [T1('B7') + 0.3, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('B7') - 0.2, 1.06, 960, 560], [T1('B7') + 0.3, 1, 960, 540]]);
 
 /* ---------- frame ---------- */
 M.on(t => {
@@ -243,7 +243,7 @@ M.on(t => {
   const kOn = t >= tK1 - 0.1 && t < tE1 + 0.1; M.hide($('#sK'), !kOn);
   if (kOn) {
     M.vis($('#dtc'), t, tK1 + 0.05, OUT('K5'), { dy: 36, ...o });
-    DR.forEach(([, d], i) => { M.vis($('#dr' + i), t, i === 0 ? T0('K2') - 0.2 : T0(DR[i][4]) - 0.2, 1e9, { dy: 16 });
+    DR.forEach(([, d], i) => { M.vis($('#dr' + i), t, tK1 + 0.4 + i * 0.15, 1e9, { dy: 16 });
       const [a, b] = tDd[i], n = Math.round(d.replace('...', '').length * M.clamp((t - a) / Math.max(0.3, b - a)));
       const full = d.replace('...', ''); M.setT($('#dd' + i), n >= full.length && d.endsWith('...') ? d : full.slice(0, n));
       M.vis($('#dt' + i), t, tDt[i] - 0.05, 1e9, POP); M.vis($('#dv' + i), t, tDv[i] - 0.05, 1e9, POP); });
@@ -255,6 +255,7 @@ M.on(t => {
   const eOn = t >= tE1 - 0.1 && t < tT + 0.1; M.hide($('#sE'), !eOn);
   if (eOn) {
     M.vis($('#eqc'), t, tE1 + 0.1, 1e9, { dx: -60, dy: 0 });
+    M.vis($('#eqV'), t, wt('E2', 'variable') - 0.1, 1e9, POP);
     PUC.write($('#eqF'), t, wt('E3', 'equation') + 0.3, 0.7);
     M.vis(eDot, t, wt('E3', 'four') - 0.1, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 }); M.vis(eLab, t, wt('E3', 'four'), 1e9, { dy: 0 });
     M.vis($('#eqP'), t, wt('E3', 'one') - 0.1, 1e9, POP);
