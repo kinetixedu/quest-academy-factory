@@ -37,7 +37,7 @@ const tBp = [wt('D5', 'Build'), wt('D5', 'keep'), wt('D5', 'drop')];
 const tM0 = T0('M0'), tMl = Array.from({ length: 10 }, (_, i) => T0('M' + (i + 1))), tMout = T0('T1') - 0.32;
 const tHen = wt('M0', 'Henderson'), tFour = wt('M3', 'four');
 const PL = [ // product placements: [bubble id, product idx, x, y, tName, tGrowth, tShare, quadrant]
-  ['b1', 1, 250, 118, wt('M4', 'Cocoa'), wt('M4', 'growing'), wt('M4', 'leads'), 0],
+  ['b1', 1, 250, 118, wt('M4', 'Cocoa'), wt('M4', 'grows'), wt('M4', 'leads'), 0],
   ['b0', 0, 236, 306, wt('M5', 'original'), wt('M5', 'stopped'), wt('M5', 'leads'), 2],
   ['b2', 2, 474, 132, wt('M6', 'Coconut'), wt('M6', 'Growing'), wt('M6', 'few'), 1],
   ['b3', 3, 612, 84, wt('M6', 'gift'), wt('M6', 'Growing') + 0.15, wt('M6', 'few') + 0.15, 1],
@@ -117,7 +117,7 @@ $('#mx').innerHTML = `<defs><marker id="ah" viewBox="0 0 10 10" refX="7" refY="5
 const SROW = ['GROWTH', 'SHARE', 'CASH', 'THE MOVE'], SIC = ['trendUp', 'target', 'coin', 'arrowR'];
 const PANES = [
   ['BOSTON CONSULTING GROUP · 1970', 'Growth-share matrix', [['user', 'CREATED BY', 'Bruce Henderson, BCG founder'], ['trendUp', 'QUESTION 1', 'Is the market growing fast?'], ['target', 'QUESTION 2', 'Is our share big, versus rivals?'], ['grid', 'THE RESULT', 'Four boxes']]],
-  ['COCOA-RAGI SIX-PACK', 'Star', ['Fast', 'Leads at school gates', 'Needs cash to keep growing', 'Build it']],
+  ['COCOA-RAGI SIX-PACK', 'Star', ['Fast', 'Leads its market', 'Needs cash to keep growing', 'Build it']],
   ['ORIGINAL RAGI SIX-PACK', 'Cash cow', ['Stopped growing', 'Still the leader', 'Earns more than it needs', 'Hold, and use its cash']],
   ['COCONUT-JOWAR · GIFT BOX', 'Question marks', ['Growing', 'Few buyers so far', 'Need cash to grow', 'Back some, not all']],
   ['LOOSE BIG LADDOOS', 'Dog', ['Slow', 'Small', 'Very little', 'Drop it?']],

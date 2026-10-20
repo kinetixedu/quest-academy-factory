@@ -195,7 +195,7 @@ const colU = (k, t) => M.clamp((t - tCol0 - k * tColD) / (tColD * 0.85));
 const avX = M.track(BC(0), [[tCol0 + tColD - 0.35, BC(1)], [tCol0 + 2 * tColD - 0.35, BC(2)]], M.SOFT);
 const runP = t => {
   let k = 0; for (let i = 0; i < 4; i++) if (t >= tSt[i] - 0.05) k = i + 1;
-  const qo = M.clamp((t - tSt[0] - 0.2) / 0.25) * (1 - M.clamp((t - tPl[2] - 0.1) / 0.25));
+  const qo = M.clamp((t - tM0 - 0.6) / 0.25) * (1 - M.clamp((t - tPl[2] - 0.1) / 0.25));
   $('#qG').style.opacity = qo.toFixed(3); M.hide($('#qG'), qo <= 0.001);
   let tot = 0;
   for (let b = 0; b < 3; b++) {
@@ -393,7 +393,8 @@ M.on(t => {
     for (let i = 0; i < 3; i++) { M.vis($('#dsc' + i), t, tDSc[i] - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 }); M.vis($('#dpc' + i), t, tDPc[i] - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 }); }
     const mt = { S: [tCheap, tQuick, tFits], P: [tCosts, tCosts + 0.35, tFits + 0.25] }, MM = { S: MS, P: MP };
     for (const k of ['S', 'P']) for (let i = 0; i < 3; i++) {
-      const row = $('#m' + k + i), tm = mt[k][i]; M.vis(row, t, tm - 0.1, 1e9, { dy: 12 });
+      const row = $('#m' + k + i), tm = mt[k][i]; M.vis(row, t, (k === 'S' ? tP1 : tP2) + 0.7 + i * 0.1, 1e9, { dy: 12 });
+      $('#mv' + k + i).style.opacity = M.clamp((t - tm - 0.2) / 0.2).toFixed(3);
       for (let s = 0; s < 5; s++) { const u = M.io((t - tm - s * 0.06) / 0.2); $(`#g${k}${i}${s}`).style.background = s < MM[k][i][1] ? mix(C.paper2, C.gold, u) : C.paper2; }
     }
   }

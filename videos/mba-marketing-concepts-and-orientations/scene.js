@@ -52,7 +52,7 @@ const tFive = wt('D2', 'five'), tFr = [wt('D3', 'Production'), wt('D3', 'Product
 const tBelief = wt('D2', 'belief'), tWhy = wt('D2', 'why');
 const RUN = ['R', 'O', 'G', 'M', 'Y'];
 const tR = RUN.map(a => T0(a + '1')), tDout = tR[0] - 0.32;
-const tActor = [wt('R2', 'Arjun'), wt('O2', 'Nani'), wt('G2', 'Dev'), wt('M2', 'Busy'), wt('Y2', 'Dev')];
+const tActor = [wt('R2', 'Arjun'), wt('O2', 'Nani'), wt('G2', 'Dev'), wt('M1', 'customers'), wt('Y1', 'Serve')];
 const tVerd = [wt('R3', 'nobody'), wt('O3', 'parents'), wt('G3', 'Pushed'), wt('M3', 'sales'), wt('Y3', 'Good')];
 const tT = T0('T1'), tSt2 = wt('T1', 'last'), tPout = tT - 0.32;
 const tV = [1, 2, 3, 4, 5, 6, 7].map(i => T0('V' + i)), tTu = tV[0] - 0.32;
@@ -128,7 +128,7 @@ $('#lvE').innerHTML = M.icon('eye', 30, C.gold, 2.2);
 wrap($('#lv'), 'lvOut', 784, 580);
 const LZ = [
   ['WHAT BUSINESS WERE THEY IN?', 'WHAT THEY SAW', 'train', 'Railroads', 'only their product', 'WHAT CUSTOMERS NEEDED', 'Transportation', [['train', 'Train'], ['car', 'Car'], ['truck', 'Truck'], ['plane', 'Plane']], 'Product oriented, not customer oriented', 0],
-  ['WHAT BUSINESS IS LADDOO LAB IN?', 'NOT THIS', 'laddoo', 'Laddoos', 'only our product', 'BUT THIS', 'Healthy tiffin snacks', [['laddoo', 'Laddoo'], ['cookie', 'Biscuit'], ['apple', 'Fruit'], ['package', 'Chips']], 'Every tiffin snack is a rival', 1],
+  ['WHAT BUSINESS IS LADDOO LAB IN?', 'WHAT WE MAKE', 'laddoo', 'Laddoos', 'only our product', 'WHAT PARENTS BUY', 'Healthy tiffin snacks', [['laddoo', 'Laddoo'], ['cookie', 'Biscuit'], ['apple', 'Fruit'], ['package', 'Chips']], 'Every tiffin snack is a rival', 1],
 ];
 $('#lzs').innerHTML = LZ.map(([l, a, ic, nm, note, b, bt, tiles, pill, good], k) => `<div class="lz" id="lz${k}"><div class="lbl" style="left:48px;top:40px">${l}</div>
   <div class="lbl lza" style="left:48px;top:96px">${a}</div><div class="lnA" id="lnA${k}"><i>${M.icon(ic, 44, C.ink, 2.2)}</i><span>${nm}</span></div><div class="lnN" id="lnN${k}">${note}</div>
@@ -395,7 +395,7 @@ M.on(t => {
       const a = wt('M3', 'Mrs'), b = wt('M3', 'keep');
       barRun(3, MKT, MKT.map((_, i) => a + i * (b - a) / 5), () => C.gold); }
     // widget 4: societal
-    { const tin = [wt('Y2', 'refined'), wt('Y3', 'family'), wt('Y2', 'paper')], th = [wt('Y3', 'child'), wt('Y3', 'family'), wt('Y3', 'city')];
+    { const tin = [wt('Y1', 'people'), wt('Y1', 'customers'), wt('Y1', 'planet')], th = [wt('Y3', 'child'), wt('Y3', 'family'), wt('Y3', 'city')];
       const SO = ['smile', 'users', 'building'];
       for (let i = 0; i < 3; i++) {
         const el = $('#so' + i); M.vis(el, t, tin[i] - 0.1, 1e9, POP);
@@ -422,9 +422,9 @@ M.on(t => {
     const lv = $('#lv'); M.vis(lv, t, tV[0] + 0.02, tV[5] - 0.3, { dy: 36, ...o }); grow(lv, $('#lvOut'), t, tV[2]);
     M.rise($('#lvT'), t, wt('V1', 'Marketing') - 0.05, { st: 0.07, sp: M.HEAVY });
     M.vis($('#lvE'), t, tV[1] - 0.05, 1e9, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.1 }); M.rise($('#lvM'), t, tV[1] + 0.05, { st: 0.05 });
-    M.vis($('#lvH'), t, tV[1] + 0.6, 1e9, { dy: 0 });
+    M.vis($('#lvH'), t, wt('V1', 'Harvard') - 0.2, 1e9, { dy: 0 });
     const tl5 = [wt('V5', 'railroads'), wt('V5', 'product'), wt('V5', 'instead'), wt('V5', 'customer')];
-    for (let i = 0; i < 4; i++) { const q = $('#lq' + i); M.vis(q, t, tV[1] + 0.9 + i * 0.1, 1e9, { dy: 14 }); q.style.color = mix(C.dim, C.ink, M.io((t - tV[4] - i * 0.5) / 0.3)); }
+    for (let i = 0; i < 4; i++) { const q = $('#lq' + i); M.vis(q, t, wt('V1', 'Harvard') + i * 0.1, 1e9, { dy: 14 }); q.style.color = mix(C.dim, C.ink, M.io((t - tV[4] - i * 0.5) / 0.3)); }
     const lh = [[tl5[0], C.gold], [tl5[0] + 0.5, C.gold], [tl5[1], C.red], [tl5[3], C.gold]];
     lh.forEach(([th, col], i) => { const u = M.io((t - th) / 0.3); $('#lh' + i).style.color = u <= 0 ? '' : mix(C.ink, col, u); });
     M.vis($('#tf'), t, tV[5] + 0.05, tVout, { dx: -60, dy: 0, ...o });
@@ -434,7 +434,7 @@ M.on(t => {
       const z = $('#lz' + k), tin = k ? tV[5] : tV[2] + 0.2, tout = k ? 1e9 : tV[5] - 0.15;
       const off = t < tin - 0.01 || t > tout + 0.3; M.hide(z, off); if (off) continue;
       const oo = { outDur: 0.18, ody: -12 };
-      const tA = k ? wt('V7', 'Not') : wt('V3', 'railroads'), tB = k ? wt('V7', 'Healthy') : wt('V3', 'travel');
+      const tA = k ? wt('V6', 'business') : wt('V3', 'railroads'), tB = k ? wt('V7', 'Healthy') : wt('V3', 'travel');
       M.vis(z.querySelector('.lbl'), t, tin + 0.05, tout, { dy: 10, ...oo });
       M.vis(z.querySelector('.lza'), t, tA - 0.15, tout, { dy: 10, ...oo }); M.vis($('#lnA' + k), t, tA - 0.1, tout, { dy: 16, ...oo });
       M.vis($('#lnN' + k), t, tA + 0.3, tout, { dx: -12, dy: 0, ...oo });
@@ -515,9 +515,9 @@ M.on(t => {
     const tq = tQ + 0.12;
     M.vis($('#qchip'), t, tq + 0.05, 1e9, { dy: 16 });
     M.rise($('#qq1'), t, tq + 0.12, { st: 0.05, sp: M.HEAVY });
-    M.rise($('#qq2'), t, wt('Q1', 'Which') - 0.05, { st: 0.06, sp: M.HEAVY });
+    M.rise($('#qq2'), t, tq + 0.7, { st: 0.06, sp: M.HEAVY });
     OPTS.forEach((o, i) => {
-      const el = $('#o' + i); M.vis(el, t, wt('Q1', 'Which') + 0.3 + i * 0.08, 1e9, { dy: 40 });
+      const el = $('#o' + i); M.vis(el, t, tQ + 1.5 + i * 0.08, 1e9, { dy: 40 });
       const right = i === RIGHT, r = M.io((t - tAns) / 0.3), bg = el.querySelector('.bg');
       bg.style.background = right ? mix(C.card, C.ink, r) : mix(C.card, '#F0EBE1', r);
       bg.style.borderColor = right ? mix(C.line, C.ink, r) : mix(C.line, '#EAE3D6', r);

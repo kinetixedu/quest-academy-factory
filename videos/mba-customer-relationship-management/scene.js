@@ -66,7 +66,7 @@ const wrap = (card, id, w, h) => { const d = document.createElement('div'); d.id
 $('#tbl').style.overflow = 'visible';
 $('#lgrid').innerHTML = Array.from({ length: 56 }, (_, i) => `<div class="ld0" id="g${i}" style="left:${(i % 28) * 30}px;top:${Math.floor(i / 28) * 36}px"></div>`).join('');
 $('#cSoldI').innerHTML = M.icon('check', 24, C.gold, 2.6); $('#cLeftI').innerHTML = M.icon('x', 24, C.red, 2.6);
-const METH = [['check', 'Good laddoos', 0], ['check', 'Fair price', 0], ['x', 'Anyone watching?', 1]];
+const METH = [['check', 'Good laddoos', 0], ['check', 'Fair price', 0], ['x', 'Did we notice?', 1]];
 $('#meth').innerHTML = METH.map(([ic, m, bad], i) => `<div class="stp" id="mt${i}" style="top:76px;${bad ? 'background:#F6E3DC;color:#B5482F' : ''}">${M.icon(ic, 26, bad ? C.red : C.gold, 2.6)}<span>${m}</span></div>`).join('');
 // L: customers
 const RAO = 29; // grid cell that is Mrs. Rao
@@ -233,7 +233,7 @@ M.on(t => {
     }
     M.vis($('#cSold'), t, tf0, 1e9, POPo); M.count($('#cSoldN'), t, tf0, tf1 - tf0 + 0.2, 0, 52);
     M.vis($('#cLeft'), t, tStop + 0.3, 1e9, POPo);
-    M.vis($('#ask'), t, tMorph + 0.42, tAout, { dy: 36, ...o });
+    M.vis($('#ask'), t, tC2 - 0.15, tAout, { dy: 36, ...o });
     M.vis($('#mt0'), t, tC2 + 0.3, 1e9, POPo); M.vis($('#mt1'), t, tC2 + 0.55, 1e9, POPo); M.vis($('#mt2'), t, tNotice - 0.05, 1e9, POPo);
     M.rise($('#askT'), t, tC2 + 0.05, { st: 0.07, sp: M.HEAVY });
   }
@@ -297,11 +297,13 @@ M.on(t => {
     const o = { outDur: 0.3, ody: -16 };
     M.vis($('#mL'), t, tM1 + 0.1, tMout, { dx: -60, dy: 0, ...o });
     M.vis($('#mR'), t, tM1 + 0.25, tMout, { dx: 60, dy: 0, ...o });
-    M.vis($('#rFace'), t, tName - 0.1, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.08 });
-    M.rise($('#rName'), t, tName, { st: 0.06, sp: M.HEAVY }); M.vis($('#rSub'), t, tName + 0.2, 1e9, { dy: 8 });
+    M.vis($('#rFace'), t, tM1 + 0.45, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.08 });
+    M.rise($('#rName'), t, tM1 + 0.55, { st: 0.06, sp: M.HEAVY }); M.vis($('#rSub'), t, tM1 + 0.75, 1e9, { dy: 8 });
     M.vis($('#msL'), t, tM1 + 0.5, 1e9, { ...POPo, sc: 0.8 });
-    const fIn = [tFlav, tDay, tSat - 0.1, tM5 + 0.2], vIn = [tRagi, tSun, tSat + 0.1, tMissed];
+    const fIn = [0, 1, 2, 3].map(i => tM1 + 0.8 + i * 0.08), vIn = [tRagi, tSun, tSat + 0.1, tMissed];
     for (let i = 0; i < 4; i++) { M.vis($('#rf' + i), t, fIn[i] - 0.1, 1e9, { dy: 14 }); M.vis($('#fv' + i), t, vIn[i] - 0.05, 1e9, { dx: -12, dy: 0, fade: 0.15 }); }
+    const hiT = [[tFlav, tDay], [tDay, tM3], [tSat, tSat + 2], [tMissed, tMissed + 1.6]];
+    for (let i = 0; i < 4; i++) { const h = M.io((t - hiT[i][0]) / 0.25) * (1 - M.io((t - hiT[i][1]) / 0.3)); $('#rf' + i).style.boxShadow = h > 0.01 ? `0 0 0 3px ${M.rgba(C.gold, h)}` : 'none'; }
     const note = t >= tBored ? 'Daughter bored of one flavour' : t >= tListen ? 'Zoya called and listened' : 'Missed 2 Sundays';
     M.setT($('#fv3'), note); $('#fv3').style.color = t >= tBored ? C.ink : t >= tListen ? C.ink : C.red;
     M.vis($('#fx0'), t, tCoco - 0.05, 1e9, POPo);

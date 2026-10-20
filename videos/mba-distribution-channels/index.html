@@ -1,0 +1,399 @@
+<!doctype html><html><head><meta charset="utf-8"><title>MBA - Distribution Channels (Marketing Management Ep 26)</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<style>
+/* ===== MBA world: Boardroom ===== */
+:root{--paper:#F5F1E8;--paper2:#EEE8DB;--ink:#14213D;--ink2:#3A4560;--muted:#8A8274;--line:#E2DACB;--gold:#B8862F;--gold2:#E9D9B5;--card:#FFFFFF;--red:#B5482F}
+#stage{background:var(--paper);font-family:Poppins;color:var(--ink)}
+#bgv{position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 40%,rgba(255,255,255,.55),rgba(255,255,255,0) 60%),radial-gradient(140% 120% at 50% 50%,rgba(0,0,0,0) 62%,rgba(90,70,40,.08))}
+#prog{position:absolute;left:0;top:0;height:6px;width:1920px;background:var(--line);z-index:60}
+#prog i{display:block;height:6px;background:var(--gold);width:0}
+#cam{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.serif{font-family:Poppins;font-weight:700;letter-spacing:-.025em}
+.chip{position:absolute;display:inline-flex;align-items:center;gap:14px;height:44px;padding:0 20px;border-radius:22px;background:var(--ink);color:#F5E7C6;font:600 18px Poppins;letter-spacing:.16em;white-space:nowrap}
+.chip i{width:8px;height:8px;border-radius:4px;background:var(--gold)}
+.chip.ghost{background:transparent;color:var(--muted);border:2px solid var(--line);height:40px;font-size:16px}
+#title{position:absolute;left:0;top:0;line-height:1.05;white-space:nowrap;transform-origin:0 0;color:var(--ink)}
+#title .acc,.acc{color:var(--gold)}
+#sub{position:absolute;left:0;top:640px;width:1920px;text-align:center;font:500 32px Poppins;color:var(--muted)}
+#rule{position:absolute;left:840px;top:612px}
+.card{position:absolute;background:var(--card);border-radius:28px;box-shadow:0 1px 0 rgba(20,33,61,.04),0 18px 40px -12px rgba(20,33,61,.14)}
+.lbl{position:absolute;font:600 18px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.abs{position:absolute}
+.pill{position:absolute;height:48px;padding:0 20px;border-radius:24px;display:flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+.pill.bad{background:#F6E3DC;color:#B5482F}
+/* scene A: the stall */
+#hero{left:160px;top:270px;width:616px;height:580px;overflow:hidden}
+#hname{position:absolute;left:0;width:616px;top:452px;text-align:center;font-size:44px}
+#htag{position:absolute;left:0;width:616px;text-align:center;top:516px;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+#sweep{position:absolute;left:0;top:0;width:1920px;height:1080px;background:var(--ink);z-index:40}
+/* scene A: six ways */
+#ways{left:840px;top:270px;width:920px;height:274px}
+#ask{left:840px;top:576px;width:920px;height:274px}
+.cupt{position:absolute;top:76px;width:128px;height:150px;border-radius:18px;background:var(--paper)}
+.cupt .cn{position:absolute;left:0;width:128px;top:16px;text-align:center;font:600 16px Poppins;letter-spacing:.14em;white-space:nowrap;color:var(--muted)}
+.cupt .ci{position:absolute;left:44px;top:48px;width:40px;height:40px}
+.cupt .ct{position:absolute;left:0;width:128px;top:98px;text-align:center;font:600 28px Poppins;white-space:nowrap}
+#askT{position:absolute;left:36px;top:150px;font-size:64px;white-space:nowrap}
+/* scene D: Taylor + the book */
+#dq{position:absolute;left:0;width:1920px;top:470px;text-align:center;font-size:88px;white-space:nowrap}
+#tay{left:160px;top:270px;width:616px;height:580px;overflow:hidden}
+#tname{position:absolute;left:0;width:616px;top:352px;text-align:center;font-size:52px;white-space:nowrap}
+#ttag{position:absolute;left:0;width:616px;top:428px;text-align:center;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+#father{position:absolute;top:484px;height:56px;padding:0 24px;border-radius:28px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:12px;font:600 24px Poppins;white-space:nowrap}
+#book{left:840px;top:270px;width:920px;height:274px}
+#idea{left:840px;top:576px;width:920px;height:274px}
+.bk{position:absolute;left:236px;font-size:44px;white-space:nowrap}
+.stp{position:absolute;top:18px;height:64px;padding:0 28px;border-radius:32px;display:flex;align-items:center;gap:12px;font:600 28px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+/* scene B: the shovel test */
+#shv{left:160px;top:270px;width:784px;height:580px}
+#ton{left:976px;top:270px;width:784px;height:580px}
+#best{position:absolute;top:92px;height:56px;padding:0 24px;border-radius:28px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+.mat{position:absolute;width:336px;text-align:center;top:432px;font:600 18px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.ld{position:absolute;top:472px;height:52px;padding:0 22px;border-radius:26px;display:flex;align-items:center;font:600 26px Poppins;white-space:nowrap}
+.rc .lbl{left:48px;top:48px}
+.rc .big{position:absolute;right:48px;top:30px;font-size:64px;color:var(--gold);white-space:nowrap}
+.bar{position:absolute;left:48px;width:688px;height:120px}
+.bar .bl{position:absolute;left:0;top:0;font:600 22px Poppins;color:var(--muted);white-space:nowrap}
+.bar .bt{position:absolute;left:0;top:40px;height:64px;border-radius:16px;background:#E7E0D2}
+.bar .bv{position:absolute;top:44px;font-size:44px;white-space:nowrap}
+#tonHr{position:absolute;left:48px;right:48px;top:462px;height:2px;background:var(--line)}
+#tonSrc{left:48px;top:494px;font-size:17px}
+/* scene M: time and motion study */
+#watch{left:160px;top:270px;width:616px;height:580px}
+#swv{position:absolute;left:168px;top:84px}
+#rd{position:absolute;left:0;width:616px;top:396px;text-align:center;font-size:84px;line-height:1;white-space:nowrap}
+#saved{position:absolute;top:498px;height:52px;padding:0 22px;border-radius:26px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#steps{left:840px;top:270px;width:920px;height:580px}
+.sr{position:absolute;left:24px;width:872px;height:80px;border-radius:20px}
+.sr .bg{position:absolute;inset:0;border-radius:20px;background:var(--paper)}
+.sr .rn{position:absolute;left:24px;top:26px;font:700 22px Poppins;letter-spacing:.04em}
+.sr .ri{position:absolute;left:76px;top:12px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
+.sr .rt{position:absolute;left:156px;top:20px;font:600 30px Poppins;white-space:nowrap}
+.sr .st{position:absolute;right:28px;top:20px;font:600 30px Poppins;white-space:nowrap;text-align:right}
+.sr .sx{position:absolute;left:150px;top:39px;height:3px;border-radius:2px;background:#B5482F}
+/* scene P: four principles */
+#pl{left:160px;top:270px;width:624px;height:580px}
+.pr{position:absolute;left:24px;width:576px;height:100px;border-radius:20px}
+.pr .bg{position:absolute;inset:0;border-radius:20px;background:var(--paper)}
+.pr .rn{position:absolute;left:24px;top:36px;font:700 22px Poppins;letter-spacing:.04em}
+.pr .ri{position:absolute;left:76px;top:22px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
+.pr .rt{position:absolute;left:156px;top:30px;font:600 30px Poppins;white-space:nowrap}
+#pp{left:816px;top:270px;width:944px;height:580px}
+.pn{position:absolute;inset:0}
+.pn .ps{position:absolute;left:48px;top:48px;font:600 20px Poppins;letter-spacing:.16em;color:var(--gold);white-space:nowrap}
+.pn .pt{position:absolute;left:48px;top:88px;font-size:84px;line-height:1.1;white-space:nowrap}
+.pn .pm{position:absolute;left:48px;top:204px;font:500 36px Poppins;color:var(--ink2);white-space:nowrap}
+.pn .hr{position:absolute;left:48px;right:48px;top:290px;height:2px;background:var(--line)}
+.pn .px{position:absolute;left:48px;top:326px;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.pn .pe{position:absolute;left:48px;top:372px;width:848px;display:flex;align-items:center;gap:24px}
+.pn .pe i{flex:0 0 72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.pn .pe span{font:600 32px/1.25 Poppins;white-space:nowrap}
+.pv{position:absolute;left:48px;top:372px;width:848px;height:176px}
+.av{position:absolute;width:72px;height:72px;border-radius:36px;display:flex;align-items:center;justify-content:center;font:700 30px Poppins;color:#fff;background:var(--ink)}
+.av.face{color:transparent;background-size:cover!important;background-position:center!important;box-shadow:0 0 0 4px var(--ink)}
+.avn{position:absolute;width:160px;text-align:center;font:600 24px Poppins;white-space:nowrap}
+.stair{position:absolute;width:150px;border-radius:16px 16px 0 0;background:var(--paper)}
+.stair span{position:absolute;left:0;width:150px;bottom:14px;text-align:center;font:600 24px Poppins;white-space:nowrap}
+/* scene K: more tools (2 x 2) */
+.tc{position:absolute;width:784px;height:270px}
+.tc .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line);box-shadow:0 18px 40px -12px rgba(20,33,61,.14)}
+.tc .ti{position:absolute;left:36px;top:36px;width:72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.tc .tt{position:absolute;left:132px;top:30px;font-size:44px;white-space:nowrap}
+.tc .ts{position:absolute;left:132px;top:88px;font:500 26px Poppins;white-space:nowrap}
+.tc .th{position:absolute;left:36px;right:36px;top:146px;height:2px}
+.tc .tx2{position:absolute;left:36px;top:170px;font:600 17px Poppins;letter-spacing:.16em;white-space:nowrap}
+.tc .te{position:absolute;left:36px;top:204px;font:600 28px Poppins;white-space:nowrap}
+.fm{position:absolute;top:198px;width:44px;height:44px;border-radius:22px;display:flex;align-items:center;justify-content:center;font:700 18px Poppins;color:#fff}
+/* scene X: the criticism */
+.ee{position:absolute;top:280px;width:784px;height:392px;border-radius:28px}
+.ee .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line)}
+.ee .eic{position:absolute;left:44px;top:44px;width:96px;height:96px;border-radius:48px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.ee .et{position:absolute;left:172px;top:40px;font-size:64px;white-space:nowrap}
+.ee .em{position:absolute;left:174px;top:124px;font:600 30px Poppins;white-space:nowrap}
+.ee .hr{position:absolute;left:44px;right:44px;top:208px;height:2px;background:var(--line)}
+.ee .ex{position:absolute;left:44px;top:244px;font:600 17px Poppins;letter-spacing:.16em;white-space:nowrap}
+.ee .ev{position:absolute;left:44px;top:288px;font:600 34px Poppins;white-space:nowrap}
+#both{position:absolute;left:160px;top:704px;width:1600px;height:112px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;gap:22px}
+#both .tx{font-size:40px;white-space:nowrap}
+/* statement on navy */
+#stmt{position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:41}
+#st1{position:absolute;left:0;width:1920px;top:400px;text-align:center;font:500 52px Poppins;color:#E9D9B5;white-space:nowrap}
+#st2{position:absolute;left:0;width:1920px;top:492px;text-align:center;font-size:88px;color:#fff;white-space:nowrap}
+#sweep b{position:absolute;left:0;top:0;width:10px;height:1080px;background:var(--gold)}
+/* quiz */
+.opt{position:absolute;top:470px;width:376px;height:230px;border-radius:28px}
+.opt .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);border:2px solid var(--line)}
+.opt .lt{position:absolute;left:32px;top:30px;width:52px;height:52px;border-radius:26px;background:var(--paper);display:flex;align-items:center;justify-content:center;font:700 22px Poppins;color:var(--ink)}
+.opt .ot{position:absolute;left:32px;top:138px;font-size:40px;white-space:nowrap}
+.opt .ok{position:absolute;right:30px;top:30px;width:52px;height:52px;border-radius:26px;background:var(--gold);display:flex;align-items:center;justify-content:center}
+.qq{position:absolute;left:160px;font-size:68px;line-height:1.18;white-space:nowrap}
+#ring{position:absolute;left:1610px;top:236px;width:150px;height:150px}
+#ringN{position:absolute;left:0;top:0;width:150px;height:150px;display:flex;align-items:center;justify-content:center;font-size:64px}
+#take{position:absolute;left:160px;top:748px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:22px;padding:0 36px}
+#take .tx{font-size:40px;white-space:nowrap}
+/* recap */
+#rh{position:absolute;left:160px;top:142px;font-size:64px;white-space:nowrap}
+.rw{position:absolute;left:160px;width:1600px;height:128px}
+.rw .rn{position:absolute;left:40px;top:42px;font:700 30px Poppins;color:var(--gold);letter-spacing:.04em}
+.rw .ri{position:absolute;left:112px;top:28px;width:72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.rw .rt{position:absolute;left:216px;top:36px;font:600 38px Poppins;white-space:nowrap}
+.fp{position:absolute;top:36px;height:56px;padding:0 22px;border-radius:28px;display:flex;align-items:center;font:600 24px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+#next{position:absolute;left:160px;top:762px;width:1600px;height:96px;border-radius:24px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:24px;padding:0 32px}
+#next .nc{height:44px;padding:0 18px;border-radius:22px;background:var(--gold);display:flex;align-items:center;font:700 18px Poppins;letter-spacing:.14em;color:#fff;white-space:nowrap}
+#next .nt{font:600 34px Poppins;white-space:nowrap;flex:1}
+/* ===== v2: illustrated steel works, motion study, standard, at work today, human side ===== */
+#ill{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+.tagp{position:absolute;top:212px;height:52px;padding:0 22px;border-radius:26px;background:var(--ink);color:#fff;display:flex;align-items:center;font:600 24px Poppins;white-space:nowrap}
+#mL,#mR{top:270px;height:580px;overflow:hidden}
+#mL{left:160px;width:784px}#mR{left:976px;width:784px}
+.mIn{left:0;top:0;width:784px;height:580px}
+.mav{position:absolute;left:48px;top:30px;width:56px;height:56px;border-radius:28px;background-size:cover;background-position:center;box-shadow:0 0 0 3px #14213D}
+.mlb{left:124px;top:49px}
+.mrd{position:absolute;right:48px;top:22px;font-size:56px;line-height:1;white-space:nowrap}
+.mplan{position:absolute;left:48px;top:108px}
+.mbar{position:absolute;left:48px;top:384px;width:688px;height:36px;border-radius:12px;background:#EEE8DB;overflow:hidden}
+.mbar i{position:absolute;top:0;height:36px}
+.mtk{position:absolute;top:432px;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+.mst{position:absolute;left:48px;top:470px;height:64px;padding:0 26px;border-radius:32px;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+.mst .tm{margin-left:6px;opacity:.75}
+#zA{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+#zR{left:976px;top:270px;width:784px;height:274px}
+#zC{left:976px;top:576px;width:784px;height:274px}
+.zs{position:absolute;top:76px;width:160px;height:150px;border-radius:18px;background:var(--paper)}
+.zs .zn{position:absolute;left:0;width:160px;top:16px;text-align:center;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+.zs .zi{position:absolute;left:60px;top:46px;width:40px;height:40px}
+.zs .zt{position:absolute;left:0;width:160px;top:98px;text-align:center;font:600 26px Poppins;white-space:nowrap}
+.zc{position:absolute;top:76px;width:104px;height:150px;border-radius:18px;background:var(--paper)}
+.zc .cn{position:absolute;left:0;width:104px;top:16px;text-align:center;font:600 15px Poppins;letter-spacing:.12em;white-space:nowrap;color:var(--muted)}
+.zc .ci{position:absolute;left:32px;top:48px;width:40px;height:40px}
+.zc .ct{position:absolute;left:0;width:104px;top:98px;text-align:center;font:600 28px Poppins;white-space:nowrap}
+#zPill{position:absolute;right:36px;top:20px;height:44px;padding:0 18px;border-radius:22px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:10px;font:600 20px Poppins;white-space:nowrap}
+#kl{left:160px;top:270px;width:624px;height:580px}
+#kp{left:816px;top:270px;width:944px;height:580px}
+.kr{position:absolute;left:24px;width:576px;height:80px;border-radius:20px}
+.kr .bg{position:absolute;inset:0;border-radius:20px;background:var(--paper)}
+.kr .rn{position:absolute;left:24px;top:27px;font:700 22px Poppins;letter-spacing:.04em}
+.kr .ri{position:absolute;left:76px;top:12px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
+.kr .rt{position:absolute;left:156px;top:21px;font:600 28px Poppins;white-space:nowrap}
+.ka{position:absolute;left:48px;width:848px;height:96px}
+.ka i{position:absolute;left:0;top:12px;width:72px;height:72px;border-radius:36px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+.ka .kl{position:absolute;left:100px;top:12px;font:600 17px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+.ka .kt{position:absolute;left:100px;top:42px;font:600 30px Poppins;white-space:nowrap}
+#xs{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+#xw{left:976px;top:270px;width:784px;height:580px}
+.xc{position:absolute;height:48px;padding:0 20px;border-radius:24px;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#xban{position:absolute;top:496px;height:52px;padding:0 22px;border-radius:26px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#both{top:470px;height:140px}
+#both .tx{font-size:52px}
+.cap{font:600 38px Poppins;color:var(--ink);background:rgba(255,255,255,.96);padding:12px 30px;border-radius:40px;box-shadow:0 10px 30px -10px rgba(20,33,61,.25)}
+.cap .cw{color:#5B647A}.cap .cw.on{color:var(--ink)}.cap .cw.act{color:var(--gold)}
+
+/* ===== Marketing Management Ep 26: Distribution Channels ===== */
+.gp{position:absolute;right:36px;top:20px;height:44px;padding:0 18px;border-radius:22px;background:var(--gold);color:#fff;display:flex;align-items:center;gap:10px;font:600 20px Poppins;white-space:nowrap}
+.cnt{position:absolute;top:176px;height:56px;padding:0 22px;border-radius:28px;display:flex;align-items:center;gap:12px;font:600 24px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+.cnt b{font:700 30px Poppins}
+.sws{position:absolute;top:76px;width:150px;height:150px;border-radius:18px;background:var(--paper)}
+.sws .zn{position:absolute;left:0;width:100%;top:16px;text-align:center;font:600 15px Poppins;letter-spacing:.12em;color:var(--muted);white-space:nowrap}
+.sws .zi{position:absolute;left:50%;margin-left:-20px;top:46px;width:40px;height:40px}
+.sws .zt{position:absolute;left:0;width:100%;top:98px;text-align:center;font:600 22px Poppins;white-space:nowrap}
+.ar{position:absolute;top:131px;width:40px;height:40px;border-radius:20px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+/* hook */
+#hero{left:160px;top:270px;width:616px;height:580px;overflow:hidden}
+#hImg{position:absolute;left:148px;top:36px;width:320px;height:397px}
+#hname{position:absolute;left:0;width:616px;top:452px;text-align:center;font-size:44px}
+#htag{position:absolute;left:0;width:616px;text-align:center;top:516px;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+#rnd{left:840px;top:270px;width:920px;height:274px}
+#wai{left:840px;top:576px;width:920px;height:274px}
+.hd{position:absolute;width:34px;height:34px;border-radius:17px;background:#E2DACB}
+.wd{position:absolute;width:22px;height:22px;border-radius:11px;background:#E2DACB}
+#waiT{position:absolute;left:36px;top:150px;font-size:60px;white-space:nowrap}
+/* story */
+#ill{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+#shopImg{position:absolute;left:82px;top:92px;width:620px;height:465px;border-radius:20px}
+#pit{left:976px;top:270px;width:784px;height:274px}
+#sts{left:976px;top:576px;width:784px;height:274px}
+.xr{position:absolute;left:36px;width:712px;height:64px}
+.xr .fa{position:absolute;left:0;top:0;width:64px;height:64px;border-radius:32px;background-size:cover;background-position:center;box-shadow:0 0 0 3px #14213D}
+.xr .fi{position:absolute;left:0;top:0;width:64px;height:64px;border-radius:32px;background:#3A4560;display:flex;align-items:center;justify-content:center}
+.xr .bb{position:absolute;left:84px;top:8px;height:48px;padding:0 18px;border-radius:24px;display:flex;align-items:center;gap:8px;font:600 22px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
+.st{position:absolute;top:84px;width:56px;height:56px;border-radius:16px;background:var(--paper);display:flex;align-items:center;justify-content:center}
+#stN{position:absolute;left:36px;top:168px;font-size:56px;white-space:nowrap}
+/* definition */
+#dq{position:absolute;left:0;width:1920px;top:470px;text-align:center;font-size:88px;white-space:nowrap}
+#kq{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+.ql{position:absolute;left:48px;font:500 30px Poppins;white-space:nowrap;color:var(--ink)}
+.ql .hl{font-weight:700}
+#imd{left:976px;top:270px;width:784px;height:274px}
+#sw{left:976px;top:576px;width:784px;height:274px}
+#swS{position:absolute;left:36px;top:70px}
+/* process */
+#mW{left:976px;top:270px;width:784px;height:580px}
+#gv{position:absolute;left:252px;top:84px}
+#gN{position:absolute;left:0;width:784px;top:178px;text-align:center;font-size:96px;line-height:1;white-space:nowrap}
+#gOf{position:absolute;left:0;width:784px;top:290px;text-align:center;font:600 18px Poppins;letter-spacing:.16em;color:var(--muted);white-space:nowrap}
+#gWay{position:absolute;left:0;width:784px;top:404px;text-align:center}
+#gLeft{position:absolute;top:470px;height:56px;padding:0 24px;border-radius:28px;background:#F6E3DC;color:#B5482F;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+/* levels */
+#lv{left:160px;top:270px;width:1600px;height:580px}
+#lvS{position:absolute;left:0;top:0}
+/* growth */
+#gh{left:160px;top:270px;width:784px;height:580px}
+#ghS{position:absolute;left:48px;top:84px}
+#gm{left:976px;top:270px;width:784px;height:580px}
+.rr{position:absolute;left:48px;width:688px;height:96px;border-radius:20px}
+.rr .bg{position:absolute;inset:0;border-radius:20px;background:var(--paper)}
+.rr .ri{position:absolute;left:20px;top:20px;width:56px;height:56px;border-radius:28px;background:#fff;display:flex;align-items:center;justify-content:center}
+.rr .rt{position:absolute;left:100px;top:16px;font:600 28px Poppins;white-space:nowrap}
+.rr .rs{position:absolute;left:100px;top:56px;font:600 15px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+.rr .rv{position:absolute;right:20px;top:26px;height:44px;padding:0 16px;border-radius:22px;display:flex;align-items:center;font:600 18px Poppins;letter-spacing:.08em;white-space:nowrap;background:#14213D;color:#F5E7C6}
+#gmD{position:absolute;left:48px;top:436px;width:688px;height:112px;border-radius:20px;background:#14213D}
+#gmD .kl{position:absolute;left:32px;top:22px;font:600 16px Poppins;letter-spacing:.14em;color:#E9D9B5;white-space:nowrap}
+#gmD .kt{position:absolute;left:32px;top:52px;font:600 28px Poppins;color:#fff;white-space:nowrap}
+/* human side */
+#mgS{position:absolute;left:48px;top:84px}
+.wk{position:absolute;top:388px;width:154px;height:150px;border-radius:18px;background:var(--paper)}
+.wk .zn{position:absolute;left:0;width:154px;top:18px;text-align:center;font:600 16px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+.wk .zi{position:absolute;left:55px;top:52px;width:44px;height:44px}
+.wk .zt{position:absolute;left:0;width:154px;top:108px;text-align:center;font:600 20px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="bgv"></div>
+  <div id="cam">
+    <div class="chip" id="eyebrow"><i></i>EP 26 · MARKETING MANAGEMENT</div>
+    <div class="serif" id="title">Distribution <span class="acc">Channels</span></div>
+    <div id="sub">Explained with one laddoo brand</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#B8862F" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="chip ghost" id="exChip">EXAMPLE FIGURES</div>
+
+    <!-- A: one brother, one city -->
+    <div id="sA">
+      <div class="card" id="hero"><img id="hImg" src="../../assets/illustrations/mba/ll-arjun.png"><div class="serif" id="hname">Arjun</div><div id="htag">SALES AND DELIVERY · LADDOO LAB</div></div>
+      <div class="card" id="rnd"><div class="lbl" style="left:36px;top:34px">THIS MORNING'S ROUND · 30 FAMILIES</div><div id="hgrid"></div>
+        <div class="cnt" id="cDel" style="left:36px"><span id="cDelI"></span>Delivered <b id="cDelN">0</b></div>
+        <div class="cnt" id="cClk"><span id="cClkI"></span>Tired by noon</div></div>
+      <div class="card" id="wai"><div class="lbl" style="left:36px;top:34px">STILL WAITING</div><div id="wgrid"></div><div class="serif" id="waiT">Laddoo Lab needs <span class="acc">channels.</span></div></div>
+    </div>
+
+    <!-- L: the first store -->
+    <div id="sL">
+      <div class="card" id="ill"><div class="abs" id="illIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:48px;top:40px">A LOCAL STORE NEAR MRS. RAO'S SCHOOL</div>
+        <img id="shopImg" src="../../assets/illustrations/mba/ll-scene-shop.png">
+      </div></div>
+      <div class="card" id="pit"><div class="lbl" style="left:36px;top:34px">ARJUN'S PITCH</div>
+        <div class="xr" id="pr0" style="top:84px"><div class="fa" style="background-image:url(../../assets/illustrations/mba/ll-arjun-face.jpg)"></div><div class="bb" id="pb0">Will you keep our 6-packs on your shelf?</div></div>
+        <div class="xr" id="pr1" style="top:172px"><div class="fi" id="pr1I"></div><div class="bb" id="pb1" style="background:#B8862F;color:#fff"><span id="pb1I"></span>Yes. Let's try it.</div></div></div>
+      <div class="card" id="sts"><div class="lbl" style="left:36px;top:34px">WITHIN A MONTH</div><div id="stR"></div><div class="serif" id="stN"><span id="stNn">0</span> local <span class="acc">stores</span></div></div>
+    </div>
+
+    <!-- D: what is a distribution channel -->
+    <div id="sD">
+      <div class="serif" id="dq">So what is a <span class="acc">distribution channel?</span></div>
+      <div class="card" id="kq"><div class="abs" id="kqIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:48px;top:40px">THE TEXTBOOK DEFINITION</div>
+        <svg id="bookS" width="124" height="166" style="position:absolute;left:48px;top:88px">
+          <rect x="10" y="8" width="112" height="156" rx="10" fill="#E2DACB"/>
+          <rect x="0" y="0" width="112" height="156" rx="10" fill="#14213D"/>
+          <rect x="0" y="0" width="14" height="156" rx="6" fill="#B8862F"/>
+          <rect id="bl1" x="30" y="36" width="62" height="8" rx="4" fill="#E9D9B5"/><rect id="bl2" x="30" y="54" width="46" height="8" rx="4" fill="#E9D9B5"/><rect id="bl3" x="30" y="72" width="56" height="8" rx="4" fill="#E9D9B5"/>
+          <circle cx="62" cy="122" r="14" fill="#B8862F"/>
+        </svg>
+        <div class="serif" id="kot1" style="position:absolute;left:204px;top:94px;font-size:44px;white-space:nowrap">Philip Kotler</div>
+        <div class="serif" id="kot2" style="position:absolute;left:204px;top:146px;font-size:44px;white-space:nowrap">and <span class="acc">Gary Armstrong</span></div>
+        <div class="lbl" id="kbk" style="left:204px;top:214px">PRINCIPLES OF MARKETING</div>
+        <div id="kqHr" style="position:absolute;left:48px;right:48px;top:290px;height:2px;background:var(--line)"></div>
+        <div class="ql" id="ql0" style="top:314px">"A set of <span class="hl" id="hl0">interdependent organizations</span></div>
+        <div class="ql" id="ql1" style="top:362px">that help make a product or service</div>
+        <div class="ql" id="ql2" style="top:410px"><span class="hl" id="hl1">available</span> for use or consumption by</div>
+        <div class="ql" id="ql3" style="top:458px">the <span class="hl" id="hl2">consumer</span> or business user."</div>
+      </div></div>
+      <div class="card" id="imd"><div class="lbl" style="left:36px;top:34px">THE HELPERS IN THE MIDDLE · INTERMEDIARIES</div><div id="imR"></div></div>
+      <div class="card" id="sw"><div class="lbl" style="left:36px;top:34px">IN SIMPLE WORDS · THE PATH TO YOU</div><svg id="swS" width="712" height="190"></svg></div>
+    </div>
+
+    <!-- M: counting trips -->
+    <div id="sM">
+      <div class="card" id="mL"><div class="abs mIn" id="mLIn"></div></div>
+      <div class="card" id="mW"><div class="lbl" style="left:48px;top:40px">TRIPS TODAY</div>
+        <svg id="gv" width="280" height="280">
+          <circle cx="140" cy="140" r="118" fill="none" stroke="#EEE8DB" stroke-width="18"/>
+          <circle id="gArc" cx="140" cy="140" r="118" fill="none" stroke="#3A4560" stroke-width="18" stroke-linecap="round" transform="rotate(-90 140 140)"/>
+        </svg>
+        <div class="serif" id="gN">0</div><div id="gOf">TRIPS BY ARJUN</div>
+        <div class="lbl" id="gWay">WITHOUT STORES</div>
+        <div id="gLeft"><span id="gLeftI"></span>One trip per family</div>
+      </div>
+      <div class="card" id="mR"><div class="abs mIn" id="mRIn"></div></div>
+    </div>
+
+    <!-- V: channel levels -->
+    <div id="sV">
+      <div class="card" id="lv"><div class="lbl" style="left:48px;top:40px">KOTLER AND ARMSTRONG · CHANNEL LEVELS</div><svg id="lvS" width="1600" height="580"></svg></div>
+    </div>
+
+    <!-- G: more channels -->
+    <div id="sG">
+      <div class="card" id="gh"><div class="lbl" style="left:48px;top:40px">LADDOO LAB'S CHANNELS</div><svg id="ghS" width="688" height="470"></svg></div>
+      <div class="card" id="gm"><div class="lbl" style="left:48px;top:40px">THREE WAYS TO BUY</div><div id="gmR"></div>
+        <div id="gmD"><div class="kl">MULTICHANNEL DISTRIBUTION</div><div class="kt">Two or more channels at once</div></div></div>
+    </div>
+
+    <!-- K: at work today -->
+    <div id="sK">
+      <div class="card" id="kl"><div class="lbl" style="left:48px;top:40px">AT WORK TODAY</div><div id="kRows"></div></div>
+      <div class="card" id="kp"><div id="kPans"></div></div>
+    </div>
+
+    <!-- X: the human side -->
+    <div id="sX">
+      <div class="card" id="xs"><div class="abs" id="xsIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:48px;top:40px">ARE MORE MIDDLEMEN ALWAYS BETTER?</div>
+        <svg id="scl" width="688" height="250" style="position:absolute;left:48px;top:84px">
+          <rect x="254" y="226" width="180" height="20" rx="10" fill="#14213D"/>
+          <rect x="338" y="40" width="12" height="190" fill="#14213D"/>
+          <g id="panL"></g><g id="panR"></g>
+          <g id="beam"><rect x="64" y="34" width="560" height="12" rx="6" fill="#14213D"/></g>
+          <circle cx="344" cy="40" r="14" fill="#B8862F"/>
+        </svg>
+        <div class="lbl" id="xgL" style="left:48px;top:352px;color:#B8862F">THE GOOD SIDE</div>
+        <div class="lbl" id="xhL" style="left:408px;top:352px;color:#B5482F">THE HARD SIDE</div>
+        <div id="xChips"></div>
+      </div></div>
+      <div class="card" id="xw">
+        <div class="lbl" style="left:48px;top:40px">WHERE ₹120 GOES AT A STORE</div>
+        <svg id="mgS" width="688" height="180"></svg>
+        <div class="xr" id="xr0" style="left:48px;width:688px;top:292px"><div class="fa" style="background-image:url(../../assets/illustrations/mba/ll-nani-face.jpg)"></div><div class="bb" id="bb0" style="background:#B8862F;color:#fff"><span id="bb0I"></span>Check every shelf, every week</div></div>
+        <div id="wks"></div>
+      </div>
+      <div class="chip ghost" id="lesson" style="left:160px;top:390px">THE LESSON</div><div id="both"><span id="bothI"></span><span class="serif tx">Reach your customers,</span><span class="serif tx" style="color:#E9D9B5">keep control of quality</span></div>
+    </div>
+
+    <!-- quick check -->
+    <div id="quiz">
+      <div class="chip" id="qchip" style="left:160px;top:120px"><i></i>QUICK CHECK</div>
+      <div class="serif qq" id="qq1" style="top:224px">Laddoo Lab sells through ten local stores.</div><div class="serif qq acc" id="qq2" style="top:304px">How many channel levels?</div>
+      <svg id="ring" viewBox="0 0 150 150"><circle cx="75" cy="75" r="66" fill="#fff" stroke="#E2DACB" stroke-width="8"/><circle id="ringA" cx="75" cy="75" r="66" fill="none" stroke="#B8862F" stroke-width="8" stroke-linecap="round" transform="rotate(-90 75 75)"/></svg>
+      <div class="serif" id="ringN" style="left:1610px;top:236px;position:absolute"></div>
+      <div id="opts"></div>
+      <div id="take"><span id="takeI"></span><span class="serif tx" id="takeT">One retailer in between = One level</span></div>
+    </div>
+
+    <!-- recap -->
+    <div id="recap">
+      <div class="chip" id="rchip" style="left:160px;top:84px"><i></i>RECAP</div>
+      <div class="serif" id="rh">Remember these <span class="acc">three things</span></div>
+      <div id="rRows"></div>
+      <div id="next"><span class="nc">NEXT · EP 27</span><span class="nt">Channel Management</span><span id="nextI"></span></div>
+    </div>
+  </div>
+  <div id="stmt"><div id="st1">Put the product</div><div class="serif" id="st2">where the customer <span style="color:#E9B95C">already is.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

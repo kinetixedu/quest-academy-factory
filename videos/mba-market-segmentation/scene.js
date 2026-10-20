@@ -30,7 +30,7 @@ const FACE = n => `background-image:url(${IMG}ll-${n}-face.jpg)`;
 /* ---------- beats (all from the voice) ---------- */
 const tTitle = 0.25, tMorph = T0('H2') + 0.02, tPar = wt('H2', 'Parents'), tShrug = wt('H2', 'shrug'), tPast = wt('H2', 'past');
 const tC2 = T0('C2'), tOneM = wt('C2', 'message'), tEvery = wt('C2', 'everyone'), tNoOne = wt('C2', 'no');
-const tL1 = T0('L1'), tL2 = T0('L2'), tL3 = T0('L3'), tL4 = T0('L4'), tDiff = wt('L1', 'Different'), tClock = wt('L4', 'clock');
+const tL1 = T0('L1'), tL2 = T0('L2'), tL3 = T0('L3'), tL4 = T0('L4'), tDiff = wt('L1', 'Different'), tClock = wt('L4', 'four');
 const tAout = tL1 - 0.32, tLout = T0('D1') - 0.32;
 // D
 const tD1 = T0('D1'), tD2 = T0('D2'), tD3 = T0('D3'), tD4 = T0('D4'), tDout = T0('M0') - 0.32;
