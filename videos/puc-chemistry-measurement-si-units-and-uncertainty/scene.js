@@ -66,10 +66,10 @@ const th1 = PUC.think($('#th1'), { q: 'Is the power of ten for 0.005 positive or
 
 /* ---------- D: significant figures ---------- */
 const KR = [['Non-zero digits count', '285 → 3', 'D2'], ['Zeros between them count', '2.005 → 4', 'D3'], ['Leading zeros never count', '0.03 → 1', 'D4'], ['End zeros count after a point', '0.200 → 3', 'D5']];
-$('#krs').innerHTML = KR.map(([q, a], i) => `<div class="kr" id="kr${i}" style="top:${80 + i * 98}px"><div class="nn">${i + 1}</div><div class="qt">${q}</div><div class="qk" id="kq${i}">${a}</div></div>`).join('');
+$('#krs').innerHTML = KR.map(([q, a], i) => `<div class="kr" id="kr${i}" style="top:${166 + i * 98}px"><div class="nn">${i + 1}</div><div class="qt">${q}</div><div class="qk" id="kq${i}">${a}</div></div>`).join('');
 const tKr = KR.map(k => wt(k[2], 'Rule')), tKq = [wt('D2', 'Two'), wt('D3', 'point'), wt('D4', 'point'), wt('D5', 'point', 1)];
 // states: [time, digits (c count, p placeholder, e estimated, . point), caption]
-const SF = [[wt('D1', 'digits'), [['6', 'c'], ['6', 'c'], ['.', '.'], ['0', 'e']], 'Sure, sure, then one estimated digit'], [tKr[0], [['2', 'c'], ['8', 'c'], ['5', 'c']], '3 significant figures'],
+const SF = [[T0('D1') + 0.6, [['6', 'c'], ['6', 'c'], ['.', '.'], ['0', 'e']], 'Sure, sure, then one estimated digit'], [tKr[0], [['2', 'c'], ['8', 'c'], ['5', 'c']], '3 significant figures'],
   [tKr[1], [['2', 'c'], ['.', '.'], ['0', 'c'], ['0', 'c'], ['5', 'c']], '4 significant figures'], [tKr[2], [['0', 'p'], ['.', '.'], ['0', 'p'], ['3', 'c']], '1 significant figure'],
   [tKr[3], [['0', 'p'], ['.', '.'], ['2', 'c'], ['0', 'c'], ['0', 'c']], '3 significant figures'], [T0('D6'), [['6', 'c'], ['6', 'c'], ['.', '.'], ['0', 'e']], '66.0 → 3 figures · 66 → only 2']];
 const SFC = { c: [C.ac2, C.ink], p: [C.soft, C.dim], e: ['#FBEDE6', NC] };
@@ -120,12 +120,12 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 06', topic: 'Where does a bur
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [HA[0][0] - 0.3, 1.1, 552, 540], [T0('S5'), 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [HA[0][0] - 0.3, 1.05, 720, 540], [T0('S5'), 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};
   let x = 36; KIT.forEach((_, i) => { const e = $('#wq' + i); e.style.left = x + 'px'; x += e.offsetWidth + 14; });
-  const ft = $('#sF .fcard'); if (ft) ft.querySelectorAll('.fl.txt').forEach(l => { if (l.offsetWidth > 1010) l.style.fontSize = Math.floor(30 * 1010 / l.offsetWidth) + 'px'; });
+  const ft = $('#sF .fcard'); if (ft) { const ls = [...ft.querySelectorAll('.fl.txt')], mw = Math.max(...ls.map(l => l.offsetWidth)); if (mw > 1010) ls.forEach(l => { l.style.fontSize = Math.floor(30 * 1010 / mw) + 'px'; }); }
   document.querySelectorAll('.yr .q').forEach(q => { if (q.offsetWidth > 1380) q.style.fontSize = Math.floor(34 * 1380 / q.offsetWidth) + 'px'; });
   document.querySelectorAll('.kr').forEach(r => { const q = r.querySelector('.qt'), k = r.querySelector('.qk'); const room = 712 - 20 - k.offsetWidth - 106; if (q.offsetWidth > room) q.style.fontSize = Math.floor(27 * room / q.offsetWidth) + 'px'; });
   document.querySelectorAll('#wl .sol .sx').forEach(s => { if (s.offsetWidth > 640) s.style.fontSize = Math.floor(28 * 640 / s.offsetWidth) + 'px'; });
@@ -216,6 +216,7 @@ M.on(t => {
     const out = OUT('T1');
     M.vis($('#dk'), t, tD1 + 0.05, out, { dx: -60, dy: 0, ...o });
     M.vis($('#dt'), t, tD1 + 0.25, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#sfd'), t, wt('D1', 'significant') - 0.1, 1e9, POP);
     const si = tKr.reduce((a, tt, i) => t >= tt - 0.1 ? i : a, -1);
     KR.forEach((_, i) => { const el = $('#kr' + i); M.vis(el, t, tKr[i] - 0.1, 1e9, { dy: 16 }); M.vis($('#kq' + i), t, tKq[i] - 0.1, 1e9, POP);
       setBg(el, mix(C.soft, C.ac2, i === si && t < T0('D6') ? M.io((t - tKr[i] + 0.1) / 0.25) : 0)); });

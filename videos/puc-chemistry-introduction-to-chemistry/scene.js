@@ -255,19 +255,19 @@ const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', q: `Ho
   opts: ['7', '12', '14', '24'], right: 3, optW: 474, optY: 330, optH: 110, optFs: 40 });
 const so = PUC.solution($('#so'), [[K(`\\mathrm{S}${O_}_4 : \\; 4 \\; ${O_}`)], [K(`3 \\times 4 = 12 \\; ${O_} \\text{ per unit}`)], [K(`2 \\times 12 = \\textcolor{${C.ok}}{24}`)], [K(`\\text{B forgot the } ${G_(2)}`)]], { y0: 100, dy: 112 });
 const tSo = [T0('A2'), wt('A2', 'three'), T0('A3'), T0('A4')];
-const fc = PUC.fcard($('#sF'), { x: 410, y: 262, w: 1100, h: 470, title: 'Recap · introduction to chemistry', y0: 96, dy: 74, txt: [1, 1, 1, 0, 1],
+const fc = PUC.fcard($('#sF'), { x: 410, y: 262, w: 1100, h: 470, title: 'Recap · introduction to chemistry', y0: 96, dy: 74, txt: [1, 1, 1, 1, 1],
   lines: ['<b>Chemistry</b>: the study of matter, anything with mass that takes up space', '<b>States</b>: solid (shake in place) · liquid (slide) · gas (fly apart)', '<b>Element</b>: one kind of atom, O₂ · <b>Compound</b>: two or more kinds, H₂O, CO₂',
-    K(`${G_(2)}${H2O}: \\; \\text{big number = molecules, small number = atoms}`), '<b>Trap</b>: 2H is two separate atoms · H₂ is one molecule'] });
+    `${K(`${G_(2)}${H2O}`)}: the big number counts molecules, the small number counts atoms`, '<b>Trap</b>: 2H is two separate atoms · H₂ is one molecule'] });
 const YQ = ['How do particles move in a solid, a liquid and a gas?', 'Is carbon dioxide an element or a compound, and why?', 'How many atoms are in three H₂O?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="nn">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
-const nx = PUC.next($('#sF'), { label: 'NEXT · EP 02', topic: 'How do chemists turn air into plant food? Importance and Scope of Chemistry', y: 764 });
+const nx = PUC.next($('#sF'), { label: 'NEXT · EP 02', topic: 'Air into plant food? Importance and Scope of Chemistry', y: 764 });
 
 /* ---------- helpers ---------- */
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tO2[1] - 0.3, 1.1, 1060, 520], [wt('B3', 'So'), 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tO2[1] - 0.3, 1.1, 960, 560], [wt('B3', 'So'), 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};

@@ -81,7 +81,7 @@ const fY = BY + 7 * ST + 12;
 const LG = [['s', 's-BLOCK', SC], ['p', 'p-BLOCK', PC], ['d', 'd-BLOCK', DC], ['f', 'f-BLOCK', FC]];
 $('#lg').innerHTML = LG.map(([k, l, c]) => `<span id="lg${k}" style="background:${c}">${l}</span>`).join('');
 const WD = [['s', '1 orbital × 2 = 2', SC], ['p', '3 orbitals × 2 = 6', PC], ['d', '5 orbitals × 2 = 10', DC], ['f', '7 orbitals × 2 = 14', FC]];
-$('#wds').innerHTML = WD.map(([k, s, c], i) => `<div class="wr2" id="wd${i}" style="top:${190 + i * 64}px"><div class="a" style="color:${c}">${k}</div><div class="b">${s}</div></div>`).join('');
+$('#wds').innerHTML = WD.map(([k, s, c], i) => `<div class="wr2" id="wd${i}" style="top:${196 + i * 64}px"><div class="a" style="color:${c}">${k}</div><div class="b">${s}</div></div>`).join('');
 // width bars above the table (s, d, p) and below the f rows
 const bar = (x0, x1, y, col, n) => { const g = mk(ps, 'g', {}); mk(g, 'rect', { x: x0, y, width: x1 - x0, height: 22, rx: 6, fill: col }); txt(g, (x0 + x1) / 2, y + 17, n, { 'text-anchor': 'middle', 'font-size': 15, fill: '#FFFFFF', 'font-weight': 600 }); return g; };
 const bars = { s: bar(BX, BX + ST + CE, 72, SC, '2 WIDE'), d: bar(BX + 2 * ST, BX + 11 * ST + CE, 72, DC, '10 WIDE'), p: bar(BX + 12 * ST, BX + 17 * ST + CE, 72, PC, '6 WIDE'), f: bar(BX + 3 * ST, BX + 16 * ST + CE, fY + 2 * ST + 2, FC, '14 WIDE') };
@@ -119,7 +119,7 @@ const btag = document.createElement('div'); btag.className = 'btag'; btag.style.
 const td = ptable($('#tdS'), { x: 36, y: 56, cell: 20, gap: 3, fGap: 8, rx: 3 });
 const BF = [['s', 's-block', 'GROUPS 1 AND 2', 'ns^{1-2}', 'REACTIVE METALS', ''], ['p', 'p-block', 'GROUPS 13 TO 18', 'ns^2\\,np^{1-6}', 'METALS, NON-METALS,<br>METALLOIDS, NOBLE GASES', ''],
   ['d', 'd-block', 'GROUPS 3 TO 12', '(n-1)d^{1-10}\\,ns^{0-2}', 'TRANSITION<br>ELEMENTS', `\\text{group} = ${tc(DC, 'd')} + ${tc(SC, 's')} \\text{ electrons}`], ['f', 'f-block', 'TWO ROWS AT THE BOTTOM', '(n-2)f^{1-14}\\,(n-1)d^{0-1}\\,ns^2', 'INNER TRANSITION<br>ELEMENTS', '']];
-$('#bfs').innerHTML = BF.map(([k, n, g, cf, nat, ex]) => `<div class="bf" id="bf${k}"><div class="bt" style="color:${BCOL[k]}">${n}</div><div class="bg">${g}</div><div class="bn">${nat}</div><div class="bc">${K(cf)}</div>${ex ? `<div class="bc" style="top:214px;font-size:26px" id="bfx">${K(ex)}</div>` : ''}</div>`).join('');
+$('#bfs').innerHTML = BF.map(([k, n, g, cf, nat, ex]) => `<div class="bf" id="bfk${k}"><div class="bt" style="color:${BCOL[k]}">${n}</div><div class="bg">${g}</div><div class="bn">${nat}</div><div class="bc">${K(cf)}</div>${ex ? `<div class="bc" style="top:214px;font-size:26px" id="bfx">${K(ex)}</div>` : ''}</div>`).join('');
 const avD = PUC.avatar($('#sS'), { x: 160 + 36, y: 270 + 474, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'One clue gives the whole address!' });
 const th1 = PUC.think($('#th1'), { q: `Helium is ${K(`1s^${tc(EC, '2')}`)}. So why is it in group 18, and not in group 2?`, opts: ['Its only shell is full', 'It has two outer electrons'], right: 0, why: 'A full shell, like neon and argon: helium behaves like a noble gas.' });
 
@@ -242,7 +242,7 @@ M.on(t => {
     M.setT($('#tdC'), inB ? 'He' : S.el); $('#tdC').style.color = inB ? SC : BCOL[S.blk];
     M.setT($('#tdB'), inB ? '1s² · SITS IN GROUP 18' : S.grp);
     $('#tdR').style.opacity = inB ? 1 : M.io((t - S.tDrop - 0.4) / 0.4).toFixed(3);
-    BF.forEach(([k], i) => fade($('#bf' + k), t, STG[i].tDrop + 0.6, i < 3 ? STG[i + 1].tin - 0.15 : 1e9, 0.25));
+    BF.forEach(([k], i) => fade($('#bfk' + k), t, STG[i].tDrop + 0.6, i < 3 ? STG[i + 1].tin - 0.15 : 1e9, 0.25));
     const bx = $('#bfx'); if (bx) PUC.write(bx, t, wt('S7', 'group', 1) - 0.1, 0.8);
     const TAG = [[STG[0].tin, 'Na · Z = 11'], [STG[0].tDrop, 'THE 11th ELECTRON'], [STG[1].tin, 'Cl · Z = 17'], [STG[2].tin, 'Fe · Z = 26'], [STG[2].tDrop, 'AFTER 4s, INTO 3d'], [STG[3].tin, 'f-BLOCK'], [tB1, 'ONE ODD CASE']];
     let tg = null; for (const [tt, s] of TAG) if (t >= tt) tg = s; if (tg) M.setT(btag, tg); M.vis(btag, t, STG[0].tin - 0.1, 1e9, POP);

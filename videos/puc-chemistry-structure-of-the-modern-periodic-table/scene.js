@@ -138,7 +138,7 @@ const tOb = orbBoxes(tsv, [['3s', 1, 's'], ['3p', 3, 'p'], ['3d', 5, 'd']], { cx
 const t3d = tOb.bx.slice(4); const t3dT = txt(tsv, 280 + 110, 196, '3d WAITS FOR PERIOD 4', { 'text-anchor': 'middle', 'font-size': 16, fill: DC, 'font-weight': 600 });
 const where = PUC.where($('#wa'), { on: [], type: 'Short answer: the number of elements in a period, and which orbitals fill in it' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', q: 'How many elements are in the 5th period, and which orbitals fill?', qW: 780,
-  opts: [`8, filling ${K('5s')} and ${K('5p')}`, `18, filling ${K('5s')}, ${K('4d')} and ${K('5p')}`, `32, filling ${K('5s')}, ${K('4f')}, ${K('5d')} and ${K('5p')}`, `50, from ${K('2n^2')}`], right: 1, cols: 1, optW: 968, optY: 236, optH: 76, optFs: 30 });
+  opts: [`<span>8, filling ${K('5s')} and ${K('5p')}</span>`, `<span>18, filling ${K('5s')}, ${K('4d')} and ${K('5p')}</span>`, `<span>32, filling ${K('5s')}, ${K('4f')}, ${K('5d')} and ${K('5p')}</span>`, `<span>50, from ${K('2n^2')}</span>`], right: 1, cols: 1, optW: 968, optY: 236, optH: 76, optFs: 30 });
 const so = PUC.solution($('#so'), [[K(`${tc(SC, '5s')},\\; ${tc(DC, '4d')},\\; ${tc(PC, '5p')}`)], [K(`${tc(SC, '1')} + ${tc(DC, '5')} + ${tc(PC, '3')} = 9`)], [K(`9 \\times 2 = 18`)], [`D: ${K('2n^2')} ✗ · 4f waits`]], { y0: 100, dy: 112 });
 const tSo = [T0('A2'), T0('A3'), T0('A4'), wt('A4', 'D')];
 const fc = PUC.fcard($('#sF'), { x: 410, y: 262, w: 1100, h: 470, title: 'Recap · structure of the periodic table', y0: 96, dy: 62, txt: [0, 1, 1, 1, 1, 1],

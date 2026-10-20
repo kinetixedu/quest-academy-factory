@@ -206,7 +206,7 @@ M.on(t => {
     M.vis($('#po'), t, tP1 + 0.1, out, { dy: 36, ...o });
     { const sh = M.spring(t - tP4 + 0.2, M.HEAVY), wv = M.lerp(1600, 784, sh); snap($('#po'), 'width', (sh >= 1 ? 784 : wv.toFixed(1)) + 'px'); snap($('#poIn'), 'left', (sh >= 1 ? 0 : ((wv - 784) / 2).toFixed(1)) + 'px'); }
     M.vis($('#naT'), t, tP1 + 0.4, 1e9, { dy: 12 });
-    NA.forEach((_, i) => PUC.write($('#na' + i), t, tNa[i] - 0.1, 0.5));
+    NA.forEach((_, i) => { PUC.write($('#na' + i), t, T0('P2') + 0.6 + i * 0.35, 0.5); const pu = M.io((t - tNa[i] + 0.1) / 0.2) * (1 - M.io((t - tNa[i] - 0.7) / 0.3)); $('#na' + i).style.transform = `translateY(${(-10 * pu).toFixed(1)}px)`; });
     { const sz = t >= tP4 ? 66 : 84; snap($('#naS'), 'fontSize', sz + 'px'); }
     const tLg = [wx('P3', 'small'), wx('P3', 'subshell'), wx('P3', 'how')];
     LG.forEach((_, i) => M.vis($('#lg' + i), t, tLg[i] - 0.1, 1e9, POP));

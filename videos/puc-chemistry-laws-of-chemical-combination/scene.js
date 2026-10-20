@@ -153,7 +153,7 @@ $('#pns').innerHTML = LW.map(([n, , , who, d, e], i) => `<div class="pn" id="pn$
 const tSc = LW.map((l, i) => wt('C' + (i + 2), l[2]));
 
 /* ---------- X / Q / F ---------- */
-const trap = PUC.trap($('#trap'), { wrong: 'A burning candle breaks conservation of mass', right: 'Its gases escape: in a closed flask the total mass stays the same' });
+const trap = PUC.trap($('#trap'), { wrong: 'A burning candle breaks conservation of mass', right: 'Gases escape. In a closed flask, the mass stays the same' });
 const tsv = $('#tS');
 const cand = (p, x) => { const g = mk(p, 'g', {}); mk(g, 'rect', { x: x - 18, y: 120, width: 36, height: 80, rx: 6, fill: '#F2E6C9', stroke: C.ink2, 'stroke-width': 2 }); g.insertAdjacentHTML('beforeend', `<g transform="translate(${x - 16} 82)">${M.icon('flame', 32, C.red, 2.4)}</g>`); return g; };
 const gOpen = mk(tsv, 'g', {}); cand(gOpen, 130); [100, 160].forEach(x => mk(gOpen, 'path', { d: `M${x} 76 V36 M${x - 8} 46 L${x} 34 L${x + 8} 46`, stroke: C.mute, 'stroke-width': 3, fill: 'none', 'stroke-dasharray': '5 5' }));
@@ -177,12 +177,12 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 07', topic: "What is an atom,
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tS3 - 0.2, 1.1, 1118, 500], [tWg - 0.3, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tS3 - 0.2, 1.06, 960, 560], [tWg - 0.3, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};
   let x = 36; KIT.forEach((_, i) => { const e = $('#wq' + i); e.style.left = x + 'px'; x += e.offsetWidth + 14; });
-  const ft = $('#sF .fcard'); if (ft) ft.querySelectorAll('.fl.txt').forEach(l => { if (l.offsetWidth > 1010) l.style.fontSize = Math.floor(30 * 1010 / l.offsetWidth) + 'px'; });
+  const ft = $('#sF .fcard'); if (ft) { const ls = [...ft.querySelectorAll('.fl.txt')], mw = Math.max(...ls.map(l => l.offsetWidth)); if (mw > 1010) ls.forEach(l => { l.style.fontSize = Math.floor(30 * 1010 / mw) + 'px'; }); }
   document.querySelectorAll('.yr .q').forEach(q => { if (q.offsetWidth > 1380) q.style.fontSize = Math.floor(34 * 1380 / q.offsetWidth) + 'px'; });
   document.querySelectorAll('.pn .ptt').forEach(q => { if (q.offsetWidth > 712) q.style.fontSize = Math.floor(52 * 712 / q.offsetWidth) + 'px'; });
   document.querySelectorAll('#dl .sol .sx, #wl .sol .sx').forEach(s => { if (s.offsetWidth > 650) s.style.fontSize = Math.floor(28 * 650 / s.offsetWidth) + 'px'; });

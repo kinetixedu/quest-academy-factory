@@ -66,9 +66,9 @@ const molW = p => { const g = mk(p, 'g', {}); [[-21, 16], [21, 16]].forEach(([x,
 const bk = mk(bW, 'g', {}); mk(bk, 'path', { d: 'M200 176 V396 Q200 404 208 404 H576 Q584 404 584 396 V176', fill: 'none', stroke: C.ink, 'stroke-width': 3.5, 'stroke-linecap': 'round' });
 const wtr = mk(bk, 'rect', { x: 203, y: 262, width: 378, height: 139, fill: C.ac2 });
 const flm = mk(bW, 'g', {}); flm.insertAdjacentHTML('beforeend', `<g transform="translate(372 408)">${M.icon('flame', 40, C.red, 2.4)}</g>`);
-const LIQ = [[240, 290, 40], [320, 300, -35], [400, 288, 45], [480, 298, -40], [540, 292, 30], [260, 350, -45], [350, 360, 38], [440, 352, -32], [520, 362, 42]];
+const LIQ = [[250, 296], [322, 300], [394, 294], [466, 300], [538, 296], [286, 356], [358, 362], [430, 356], [502, 362]];
 const GAS = [[120, 110, 60, 30], [300, 130, -55, -35], [470, 104, 50, 40], [650, 126, -60, 30], [210, 150, 45, -40], [570, 150, -50, -30]];
-const wm = LIQ.map(([x, y, v], i) => ({ g: molW(bW), x, y, v, rot: i * 37, w: i % 2 ? 20 : -20, gas: GAS[i % 6] }));
+const wm = LIQ.map(([x, y], i) => ({ g: molW(bW), x, y, f: 1.1 + (i * 0.37) % 0.6, ph: i * 1.9, rot: i * 37, w: i % 2 ? 20 : -20, gas: GAS[i % 6] }));
 // methane + oxygen -> CO2 + 2 H2O
 const bondL = mk(bW, 'g', {}), atomL = mk(bW, 'g', {}), dotL = mk(bW, 'g', {});
 const atomG = (p, r, fill, lab, fs) => { const g = mk(p, 'g', {}); mk(g, 'circle', { r, fill }); txt(g, 0, fs * 0.36, lab, { 'font-family': 'Poppins', 'font-weight': 700, 'font-size': fs, fill: '#fff', 'text-anchor': 'middle' }); return g; };
@@ -121,7 +121,7 @@ mk(ds, 'path', { d: `M${PVX} ${PVY} L${PVX - 46} 430 H${PVX + 46} Z`, fill: C.so
 mk(ds, 'rect', { x: PVX - 130, y: 426, width: 260, height: 14, rx: 7, fill: C.ink });
 const beam = mk(ds, 'g', {}); mk(beam, 'rect', { x: -BL, y: -7, width: BL * 2, height: 14, rx: 7, fill: C.ink });
 const pans = [0, 1].map(() => { const g = mk(ds, 'g', {}); mk(g, 'line', { x1: -80, y1: 150, x2: 0, y2: 0, stroke: C.ink2, 'stroke-width': 2.5 }); mk(g, 'line', { x1: 80, y1: 150, x2: 0, y2: 0, stroke: C.ink2, 'stroke-width': 2.5 }); mk(g, 'path', { d: 'M-100 150 H100 C100 174 64 184 0 184 C-64 184 -100 174 -100 150Z', fill: '#E9E5DA', stroke: C.ink, 'stroke-width': 2.5 }); return g; });
-const cube = (p, n, lab, col) => { const g = mk(p, 'g', {}); mk(g, 'rect', { x: -60, y: 28, width: 120, height: 120, rx: 8, fill: '#fff', stroke: col, 'stroke-width': 3 }); const dots = []; for (let i = 0; i < n; i++) dots.push(mk(g, 'circle', { cx: -44 + (i % 6) * 17.6, cy: 46 + Math.floor(i / 6) * 21, r: 6, fill: col })); txt(g, 0, 18, lab, { 'text-anchor': 'middle', 'font-size': 16, fill: col, 'font-weight': 600 }); return { g, dots }; };
+const cube = (p, n, lab, col) => { const g = mk(p, 'g', {}); mk(g, 'rect', { x: -60, y: 28, width: 120, height: 120, rx: 8, fill: '#fff', stroke: col, 'stroke-width': 3 }); const dots = []; for (let i = 0; i < n; i++) dots.push(mk(g, 'circle', { cx: -44 + (i % 6) * 17.6, cy: 46 + Math.floor(i / 6) * 21, r: 6, fill: col })); txt(g, 0, 212, lab, { 'text-anchor': 'middle', 'font-size': 16, fill: col, 'font-weight': 600 }); return { g, dots }; };
 const cW = cube(pans[0], 10, 'WATER', OC), cA = cube(pans[1], 27, 'ALUMINIUM', C.ink2);
 const dR = [txt(ds, PVX - BL, 500, '1.0 g / 1 cm³', { 'text-anchor': 'middle', 'font-size': 22, fill: OC, 'font-weight': 600 }), txt(ds, PVX + BL, 500, '2.7 g / 1 cm³', { 'text-anchor': 'middle', 'font-size': 22, fill: C.ink2, 'font-weight': 600 })];
 const dNote = txt(ds, 748, 548, 'EACH DOT = 0.1 g', { 'text-anchor': 'end', 'font-size': 15 });
@@ -171,7 +171,7 @@ mk(gW, 'path', { d: 'M390 124 H460 M450 114 L462 124 L450 134', stroke: C.ok, 's
 txt(gW, 430, 200, 'STILL H₂O · PHYSICAL', { 'text-anchor': 'middle', 'font-size': 16, fill: C.ok, 'font-weight': 600 });
 const where = PUC.where($('#wa'), { on: [], type: 'Sort properties into physical and chemical, and small density numericals' });
 const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', q: 'Which pair contains only chemical properties?', qW: 780,
-  opts: ['Colour and combustibility', 'Density and acidity', 'Combustibility and basicity', 'Boiling point and odour'], right: 2, cols: 1, optW: 968, optY: 200, optH: 80, optFs: 32 });
+  opts: ['Colour and combustibility', 'Density and acidity', 'Combustibility and basicity', 'Boiling point and odour'], right: 2, cols: 1, optW: 968, optY: 256, optH: 72, optFs: 30 });
 const so = PUC.solution($('#so'), [['Combustibility: chemical'], ['Basicity: chemical'], ['Colour, density: physical'], ['Boiling point, odour: physical']], { y0: 100, dy: 112 });
 const tSo = [T0('A2'), wt('A2', 'reacts'), T0('A3'), T0('A4')];
 const fc = PUC.fcard($('#sF'), { x: 410, y: 262, w: 1100, h: 470, title: 'Recap · physical and chemical properties', y0: 96, dy: 74, txt: [0, 1, 1, 1, 1],
@@ -185,12 +185,12 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 05', topic: 'One metre for th
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tLook - 0.2, 1.12, 552, 420], [tS5, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tLook - 0.2, 1.06, 760, 500], [tS5, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};
   let x = 36; KIT.forEach((_, i) => { const e = $('#wq' + i); e.style.left = x + 'px'; x += e.offsetWidth + 14; });
-  const ft = $('#sF .fcard'); if (ft) ft.querySelectorAll('.fl.txt').forEach(l => { if (l.offsetWidth > 1010) l.style.fontSize = Math.floor(30 * 1010 / l.offsetWidth) + 'px'; });
+  const ft = $('#sF .fcard'); if (ft) { const ls = [...ft.querySelectorAll('.fl.txt')], mw = Math.max(...ls.map(l => l.offsetWidth)); if (mw > 1010) ls.forEach(l => { l.style.fontSize = Math.floor(30 * 1010 / mw) + 'px'; }); }
   document.querySelectorAll('.yr .q').forEach(q => { if (q.offsetWidth > 1380) q.style.fontSize = Math.floor(34 * 1380 / q.offsetWidth) + 'px'; });
   document.querySelectorAll('.pn .ptt').forEach(q => { if (q.offsetWidth > 712) q.style.fontSize = Math.floor(52 * 712 / q.offsetWidth) + 'px'; });
 }
@@ -268,7 +268,7 @@ M.on(t => {
     fade(flm, t, tHeat - 0.1, tS6 - 0.1, 0.3);
     const F = t + 2.2 * Math.max(0, t - tHeat);
     attr(wtr, 'y', (262 + 60 * M.io((t - tEsc) / 4)).toFixed(1)); attr(wtr, 'height', (139 - 60 * M.io((t - tEsc) / 4)).toFixed(1));
-    wm.forEach((m, i) => { const lx = bounce(m.x + m.v * F, 226, 558), ly = m.y + 5 * Math.sin(F * 2.4 + i);
+    wm.forEach((m, i) => { const lx = m.x + 14 * Math.sin(F * m.f + m.ph), ly = m.y + 6 * Math.sin(F * 1.7 * m.f + m.ph * 1.3);
       const te = tEsc + i * 0.4, u = i < 6 ? M.io((t - te) / 1.0) : 0, [gx0, gy0, vx, vy] = m.gas, gx = bounce(gx0 + vx * t, 60, 724), gy = bounce(gy0 + vy * t, 96, 164);
       const x = M.lerp(lx, gx, u), y = M.lerp(ly, gy, u) - Math.sin(Math.PI * u) * 40;
       attr(m.g, 'transform', `translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${(m.rot + m.w * F).toFixed(1)})`); m.g.style.opacity = bOp.toFixed(3); M.hide(m.g, bOp <= 0.002); });

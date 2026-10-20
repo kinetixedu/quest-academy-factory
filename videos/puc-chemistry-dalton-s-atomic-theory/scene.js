@@ -212,7 +212,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 08', topic: 'How do we weigh 
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tHon - 0.2, 1.08, 560, 560], [tS5 - 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tHon - 0.2, 1.05, 960, 560], [tS5 - 0.2, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};
@@ -285,7 +285,7 @@ M.on(t => {
     POS.forEach((_, i) => { const el = $('#po' + i); M.vis(el, t, tIdx[i] - 0.15, 1e9, { dx: -16, dy: 0 }); setBg(el, mix(C.soft, C.ac2, cur === i ? M.io((t - tIdx[i] + 0.1) / 0.3) : 0));
       M.vis($('#pm' + i), t, (i < 3 ? tIdx[i + 1] : tAft) - 0.3, 1e9, { ...POP, sc: 0.3 }); });
     // phase 1: lump
-    fade(lump, t, tIdx[0] + 0.2, tIdx[1] - 0.2, 0.3); LU.forEach((c, i) => { c.style.opacity = (0.9 * M.io((t - tIdx[0] - 0.2 - i * 0.04) / 0.25)).toFixed(3); });
+    fade(lump, t, tS1 + 0.4, tIdx[1] - 0.2, 0.3); LU.forEach((c, i) => { c.style.opacity = (0.9 * M.io((t - tS1 - 0.4 - i * 0.04) / 0.25)).toFixed(3); });
     if (t < tIdx[1]) { M.draw(lCut, t, tInd - 0.1, 0.4); fade(lX, t, tInd + 0.3, tIdx[1] - 0.2, 0.2); } else { M.hide(lCut, true); M.hide(lX, true); }
     // phase 2: identical rows
     fade(rowH, t, tIdent - 0.2, tWatch - 0.1, 0.3); fade(rowO, t, tDiff - 0.2, tWatch - 0.1, 0.3);
@@ -316,9 +316,9 @@ M.on(t => {
     const rIn = swp ? M.io((t - tSw - 0.1) / 0.35) * (1 - M.io((t - tBrk) / 0.35)) : 0;
     ['HHa', 'HHb', 'OO'].forEach(k => drawBond(BND[k], P, rIn, rIn));
     // bench tag
-    const TAG = [[tIdx[0] + 0.3, 'MATTER = ATOMS'], [tInd, 'CANNOT BE SPLIT'], [tIdent, 'ALL H ATOMS ALIKE'], [tDiff, 'O ATOMS ARE HEAVIER'], [tHon, '1 O VS H ATOMS'], [tBalOk + 0.2, '1 O ≈ 16 H'], [tS5 + 0.2, 'H AND O ATOMS'], [tPair, 'SHARED ELECTRON PAIRS'], [tAlw, 'H : O = 2 : 1'], [tS7 + 0.2, '2H₂ + O₂'], [tBrk, 'OLD BONDS BREAK'], [tMov, 'ATOMS CHANGE PARTNERS'], [tForm, 'NEW BONDS FORM'], [tB1, 'SAME ATOMS']];
+    const TAG = [[tS1 + 0.5, 'MATTER = ATOMS'], [tInd, 'CANNOT BE SPLIT'], [tIdent, 'ALL H ATOMS ALIKE'], [tDiff, 'O ATOMS ARE HEAVIER'], [tHon, '1 O VS H ATOMS'], [tBalOk + 0.2, '1 O ≈ 16 H'], [tS5 + 0.2, 'H AND O ATOMS'], [tPair, 'SHARED ELECTRON PAIRS'], [tAlw, 'H : O = 2 : 1'], [tS7 + 0.2, '2H₂ + O₂'], [tBrk, 'OLD BONDS BREAK'], [tMov, 'ATOMS CHANGE PARTNERS'], [tForm, 'NEW BONDS FORM'], [tB1, 'SAME ATOMS']];
     let tg = null; for (const [tt, s] of TAG) if (t >= tt) tg = s;
-    if (tg) M.setT(btag, tg); M.vis(btag, t, tIdx[0] + 0.2, 1e9, POP);
+    if (tg) M.setT(btag, tg); M.vis(btag, t, tS1 + 0.5, 1e9, POP);
     setBg(btag, tg === 'H : O = 2 : 1' ? GC : tg === '1 O ≈ 16 H' ? C.ok : C.ink);
     // equation + counters (reaction)
     M.vis($('#bEq'), t, tS7 + 0.3, 1e9, { dy: 10 });

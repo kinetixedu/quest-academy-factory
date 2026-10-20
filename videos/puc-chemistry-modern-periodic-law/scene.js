@@ -79,7 +79,7 @@ const order = [...MET].sort((a, z) => tMet[a[0]] - tMet[z[0]]);
 const btag = document.createElement('div'); btag.className = 'btag'; btag.style.cssText = 'right:36px;top:18px;background:var(--ink);color:#fff'; $('#bn').appendChild(btag);
 // law pane: repeating outer arrangement
 const CF = [['Li', '2, ', '1', 'Z = 3'], ['Na', '2, 8, ', '1', 'Z = 11'], ['K', '2, 8, 8, ', '1', 'Z = 19']];
-$('#cfrs').innerHTML = CF.map(([s, a, o, z], i) => `<div class="cfr" id="cf${i}" style="top:${306 + i * 76}px"><div class="s" style="color:${NC}">${s}</div><div class="c">${a}<span style="color:${EC}">${o}</span></div><div class="k">${z}</div></div>`).join('');
+$('#cfrs').innerHTML = CF.map(([s, a, o, z], i) => `<div class="cfr" id="cf${i}" style="top:${330 + i * 76}px"><div class="s" style="color:${NC}">${s}</div><div class="c">${a}<span style="color:${EC}">${o}</span></div><div class="k">${z}</div></div>`).join('');
 // order pane: by mass vs by Z
 const os = $('#oS');
 txt(os, 36, 110, 'ORDER BY ATOMIC MASS', { 'font-size': 18, fill: C.mute, 'font-weight': 600 }); const oz = txt(os, 36, 330, 'ORDER BY ATOMIC NUMBER', { 'font-size': 18, fill: NC, 'font-weight': 600 });
@@ -102,7 +102,7 @@ const gLine = mk(gs, 'path', { d: '', fill: 'none', stroke: NC, 'stroke-width': 
 const gBad = mk(gs, 'path', { d: '', fill: 'none', stroke: C.red, 'stroke-width': 5, 'stroke-linecap': 'round' });
 const gPts = MET.map(([s]) => { const g = mk(gs, 'g', {}); const c = mk(g, 'circle', { r: 9, fill: C.violet }); const l = txt(g, 0, 0, s, { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 18, fill: C.ink }); return { g, c, l }; });
 const gTag = document.createElement('div'); gTag.className = 'btag'; gTag.style.cssText = 'right:36px;top:18px;background:var(--ink);color:#fff'; $('#gr').appendChild(gTag);
-const avD = PUC.avatar($('#sS'), { x: 160 + 36, y: 270 + 470, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'So Z sets the outer electrons too!' });
+const avD = PUC.avatar($('#sS'), { x: 160 + 36, y: 270 + 470, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'So Z decides how an element behaves!' });
 const th1 = PUC.think($('#th1'), { q: 'Nickel is lighter than cobalt. Which comes first in the modern table?', opts: ['Cobalt', 'Nickel'], right: 0, why: `Cobalt is ${K(`${tc(NC, 'Z')} = 27`)}, nickel is ${K(`${tc(NC, 'Z')} = 28`)}. Atomic number decides the order.` });
 // bench beats
 const tBeam = wt('S1', 'beam'), tXr = wt('S2', 'X'), tStr = wt('S4', 'straight'), tPlot = wt('S4', 'plotted'), tMass = wt('S5', 'against'), tCoNi = wt('S5', 'cobalt'), tHigh = wt('S5', 'higher');
@@ -247,7 +247,7 @@ M.on(t => {
       M.vis($('#orl'), t, T0('L2') - 0.05, 1e9, { dy: 8 });
       CF.forEach((_, i) => M.vis($('#cf' + i), t, wt('L2', 'outer') + i * 0.35, 1e9, { dx: -16, dy: 0 }));
     }
-    avD(t, wt('L2', 'decides') + 0.3, tB1 - 0.3);
+    avD(t, wt('L1', 'functions') + 0.2, wt('L2', 'outer') - 0.3);
     if (pc) {
       const zm = M.io((t - tBz) / 0.9);
       oT.forEach((T, i) => { fade(T.g, t, tBm - 0.1 + i * 0.08); const bad = (T.s === 'Co' || T.s === 'Ni') ? M.io((t - tBm - 0.6) / 0.3) : 0; attr(T.r, 'stroke', mix(HC, C.red, bad)); });

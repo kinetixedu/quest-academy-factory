@@ -146,7 +146,7 @@ const CB = [['Nitrogen', 'N₂', 78, NVC, '78%', tAirN], ['Oxygen', 'O₂', 21, 
 $('#cbs').innerHTML = CB.map(([n, f, , c, p], i) => `<div class="cbar" id="cb${i}" style="top:${82 + i * 100}px"><div class="cnm">${n} <span style="font:600 22px 'IBM Plex Mono';color:${c}">${f}</span></div><div class="cpc" style="color:${c}">${p}</div><div class="ctr"><div class="cfl" id="cf${i}" style="background:${c}"></div></div></div>`).join('');
 // reaction card + property chips
 $('#eq').innerHTML = K(EQ);
-const PCH = [[`${'H₂'}: BURNS WITH A POP`, C.redBg, C.red, 'Hydrogen'], ['O₂: HELPS BURNING', '#FDF1E2', '#B05A12', 'Oxygen'], ['H₂O: PUTS OUT FIRE', C.okBg, '#1F6B3F', 'water']];
+const PCH = [['H₂ BURNS', C.redBg, C.red, 'Hydrogen'], ['O₂ HELPS BURNING', '#FDF1E2', '#B05A12', 'Oxygen'], ['H₂O PUTS OUT FIRE', C.okBg, '#1F6B3F', 'water']];
 $('#pchs').innerHTML = PCH.map(([s, bg, c], i) => `<div class="pch" id="pc${i}" style="background:${bg};color:${c}">${s}</div>`).join('');
 const tPch = PCH.map(p => wt('S6', p[3]));
 // counter
@@ -171,7 +171,7 @@ $('#bins').innerHTML = BINS.map(([n, s, c], i) => `<div class="bin" id="bin${i}"
 // tiles: name, tag, bin, slot, step time
 const TL = [['Air', 'N₂ · O₂ · Ar', 2, 0, wt('W6', 'Air')], ['Water', 'H₂O', 1, 0, wt('W5', 'Water')], ['Copper wire', 'Cu', 0, 0, wt('W3', 'Copper')],
   ['Sugar solution', 'IN WATER', 2, 1, wt('W6', 'sugar')], ['Salt with sugar', 'GRAINS', 3, 0, wt('W7', 'Salt')], ['Oxygen gas', 'O₂', 0, 1, wt('W4', 'Oxygen')]];
-$('#tiles').innerHTML = TL.map(([n, f], i) => `<div class="tile" id="tl${i}"><div class="tn2">${n}</div><div class="tf">${f}</div></div>`).join('');
+$('#tiles').innerHTML = TL.map((_, i) => `<div class="slot" id="sl${i}" style="left:${196 + (i % 2) * 372}px;top:${410 + Math.floor(i / 2) * 92}px">${M.icon('check', 20, C.ac, 3)}<span>SORTED</span></div>`).join('') + TL.map(([n, f], i) => `<div class="tile" id="tl${i}"><div class="tn2">${n}</div><div class="tf">${f}</div></div>`).join('');
 const tTl = [wt('W2', 'Air'), wt('W2', 'water'), wt('W2', 'copper'), wt('W2', 'sugar'), wt('W2', 'salt'), wt('W2', 'oxygen')];
 const RULE = [[wt('W3', 'Copper'), 'Only copper atoms: element'], [wt('W4', 'Oxygen'), 'O₂: both atoms are O, element'], [wt('W5', 'Water'), 'H and O in a fixed ratio: compound'], [wt('W6', 'Air'), 'Same all through: homogeneous'], [wt('W7', 'Salt'), 'Separate grains: heterogeneous']];
 
@@ -240,7 +240,7 @@ const xO2 = mk(tsv, 'path', { d: 'M80 70 L200 178 M200 70 L80 178', stroke: C.re
 const gEl = mk(tsv, 'g', {}); pair(gEl, 440, 70, HC, 'H', 18); pair(gEl, 440, 122, NVC, 'N', 18); pair(gEl, 440, 174, OC, 'O', 18); txt(gEl, 440, 222, 'ALL ELEMENTS', { 'text-anchor': 'middle', 'font-size': 16, fill: C.ok, 'font-weight': 600 });
 const where = PUC.where($('#wa'), { on: [], type: 'Classify a sample, or mark statements on matter true or false' });
 const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', q: 'Which set lists a homogeneous mixture, a compound and an element, in that order?', qW: 780,
-  opts: ['Air, water, oxygen gas', 'Salt with sugar, water, copper', 'Sugar solution, oxygen gas, water', `Air, ozone ${K(`${O_('O')}_3`)}, carbon dioxide`], right: 0, cols: 1, optW: 968, optY: 236, optH: 76, optFs: 30 });
+  opts: ['Air, water, oxygen gas', 'Salt with sugar, water, copper', 'Sugar solution, oxygen gas, water', `<span>Air, ozone ${K(`${O_('O')}_3`)}, carbon dioxide</span>`], right: 0, cols: 1, optW: 968, optY: 256, optH: 72, optFs: 30 });
 const so = PUC.solution($('#so'), [['Air: homogeneous mixture'], [`${K(H2O)}: compound`], [`${K(O2)}: element`], [`Ozone ${K(`${O_('O')}_3`)}: element too`]], { y0: 100, dy: 112 });
 const tSo = [T0('A2'), wt('A2', 'Water'), wt('A2', 'Oxygen'), wt('A4', 'ozone')];
 const fc = PUC.fcard($('#sF'), { x: 410, y: 262, w: 1100, h: 470, title: 'Recap · classification of matter', y0: 96, dy: 74, txt: [0, 1, 1, 1, 1],
@@ -260,8 +260,7 @@ function measure() {
   geo = {};
   let x = 36; KIT.forEach((_, i) => { const e = $('#wq' + i); e.style.left = x + 'px'; x += e.offsetWidth + 14; });
   x = 36; PCH.forEach((_, i) => { const e = $('#pc' + i); e.style.left = x + 'px'; x += e.offsetWidth + 12; });
-  if (x > 760) { const s = (724) / (x - 48); x = 36; PCH.forEach((_, i) => { const e = $('#pc' + i); e.style.fontSize = (17 * s).toFixed(1) + 'px'; e.style.left = x + 'px'; x += e.offsetWidth + 12; }); }
-  const ft = $('#sF .fcard'); if (ft) ft.querySelectorAll('.fl.txt').forEach(l => { if (l.offsetWidth > 1010) l.style.fontSize = Math.floor(30 * 1010 / l.offsetWidth) + 'px'; });
+  const ft = $('#sF .fcard'); if (ft) { const ls = [...ft.querySelectorAll('.fl.txt')], mw = Math.max(...ls.map(l => l.offsetWidth)); if (mw > 1010) ls.forEach(l => { l.style.fontSize = Math.floor(30 * 1010 / mw) + 'px'; }); }
   document.querySelectorAll('.yr .q').forEach(q => { if (q.offsetWidth > 1380) q.style.fontSize = Math.floor(34 * 1380 / q.offsetWidth) + 'px'; });
   document.querySelectorAll('.kr').forEach(r => { const q = r.querySelector('.qt'), k = r.querySelector('.qk'); if (86 + q.offsetWidth + 20 > 712 - 20 - k.offsetWidth) q.style.fontSize = Math.floor(27 * (712 - 20 - k.offsetWidth - 106) / q.offsetWidth) + 'px'; });
 }
@@ -394,7 +393,7 @@ M.on(t => {
       const u = M.io((t - tm) / 0.7), lift = Math.sin(Math.PI * u) * 60;
       tile(el, M.lerp(x0, x1, u), M.lerp(y0, y1, u) - lift, M.lerp(340, 312, u), M.lerp(76, 60, u));
       const op = M.clamp((t - tTl[i] + 0.1) / 0.2) * (1 - M.io((t - out) / 0.3)); el.style.opacity = op.toFixed(3); M.hide(el, op <= 0.002);
-      el.style.borderColor = mix(C.line, BINS[bi][2], u); });
+      el.style.borderColor = mix(C.line, BINS[bi][2], u); M.vis($('#sl' + i), t, tm + 0.5, out, { dy: 0, sc: 0.9, fade: 0.2, outDur: 0.3, ody: 0 }); });
     const ri = RULE.reduce((a, [tt], i) => t >= tt - 0.1 ? i : a, -1);
     if (ri >= 0) { M.setT($('#wR'), RULE[ri][1]); M.vis($('#wR'), t, RULE[ri][0] - 0.1, 1e9, POP); } else M.hide($('#wR'), true);
   }

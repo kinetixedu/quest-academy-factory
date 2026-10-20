@@ -54,7 +54,7 @@ mk(b, 'defs', {}).innerHTML = '<clipPath id="bclip"><rect x="0" y="66" width="78
 const bW = mk(b, 'g', { 'clip-path': 'url(#bclip)' });
 const CX = 260, CY = 250, CR = 120;
 const cAt = mk(bW, 'g', {}); mk(cAt, 'circle', { cx: CX, cy: CY, r: CR, fill: CC });
-const cLab = txt(cAt, CX, CY + 16, 'C-12', { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 44, fill: '#fff' });
+const cLab = txt(bW, CX, CY + CR + 44, 'CARBON-12', { 'text-anchor': 'middle', 'font-size': 22, fill: CC, 'font-weight': 600 });
 const spokes = Array.from({ length: 12 }, (_, i) => { const a = (i / 12) * Math.PI * 2 - Math.PI / 2; return mk(cAt, 'line', { x1: CX, y1: CY, x2: CX + CR * Math.cos(a), y2: CY + CR * Math.sin(a), stroke: '#fff', 'stroke-width': 3 }); });
 const a0 = -Math.PI / 2, a1 = a0 + Math.PI / 6;
 const wedge = mk(bW, 'path', { d: `M0 0 L${(CR * Math.cos(a0)).toFixed(1)} ${(CR * Math.sin(a0)).toFixed(1)} A${CR} ${CR} 0 0 1 ${(CR * Math.cos(a1)).toFixed(1)} ${(CR * Math.sin(a1)).toFixed(1)} Z`, fill: GC, stroke: '#fff', 'stroke-width': 3 });
@@ -106,6 +106,7 @@ const nEnds = [[34.97, CC, '34.97'], [36.97, C37, '36.97']].map(([v, c, l]) => {
 const nMid = mk(ns, 'g', {}); mk(nMid, 'line', { x1: NX(35.97), y1: 186, x2: NX(35.97), y2: 214, stroke: C.dim, 'stroke-width': 3 }); txt(nMid, NX(35.97), 160, '35.97 MIDDLE', { 'text-anchor': 'middle', 'font-size': 16, fill: C.mute, 'font-weight': 600 });
 const mark = mk(ns, 'g', {}); mk(mark, 'path', { d: 'M0 214 L-14 240 H14 Z', fill: GC }); const mkT = txt(mark, 0, 270, '', { 'text-anchor': 'middle', 'font-size': 24, fill: GC, 'font-weight': 600 });
 const tug = mk(ns, 'path', { d: '', stroke: CC, 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' });
+$('#ir').insertAdjacentHTML('beforeend', `<div class="pillp" id="sh0" style="left:36px;top:300px;color:${CC}">Cl-35 · 75.5%</div><div class="pillp" id="sh1" style="right:36px;top:300px;color:${C37}">Cl-37 · 24.5%</div>`);
 $('#avC').innerHTML = K(`34.97 \\times ${tc(CC, '0.755')} + 36.97 \\times ${tc(C37, '0.245')} = ${tc(GC, '35.46\\,\\text{u}')}`);
 const th1 = PUC.think($('#th1'), { q: `Is chlorine's average atomic mass closer to 35 or to 37?`, opts: ['Closer to 35', 'Closer to 37'], right: 0, why: '75.5% of chlorine atoms are Cl-35, so they pull the average toward 35.' });
 
@@ -187,13 +188,13 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 09', topic: 'How many molecul
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tObal - 0.3, 1.08, 560, 560], [tD1 - 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tObal - 0.3, 1.05, 960, 560], [tD1 - 0.2, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};
   const ft = $('#sF .fcard'); if (ft) ft.querySelectorAll('.fl.txt').forEach(l => { if (l.offsetWidth > 1010) l.style.fontSize = Math.floor(30 * 1010 / l.offsetWidth) + 'px'; });
   document.querySelectorAll('.yr .q').forEach(q => { if (q.offsetWidth > 1380) q.style.fontSize = Math.floor(34 * 1380 / q.offsetWidth) + 'px'; });
-  const av = $('#avC'); if (av.offsetWidth > 712) av.style.fontSize = Math.floor(30 * 712 / av.offsetWidth) + 'px';
+  const av = $('#avC'); if (av.offsetWidth > 712) av.style.fontSize = Math.floor(34 * 712 / av.offsetWidth) + 'px';
   const ud = $('#uDef .katex'); if (ud && ud.offsetWidth > 670) $('#uDef').style.fontSize = Math.floor(34 * 670 / ud.offsetWidth) + 'px';
 }
 const setBg = (el, c) => { if (el._bg !== c) { el._bg = c; el.style.background = c; } };
@@ -240,11 +241,11 @@ M.on(t => {
     const z = OUT('D1');
     M.vis($('#bn'), t, tS1 + 0.05, z, { dx: -60, dy: 0, ...o });
     M.vis($('#ul'), t, wt('S1', 'carbon') - 0.1, z, { dx: 60, dy: 0, ...o });
-    M.vis($('#uDef'), t, tS3, 1e9, { dy: 12 });
+    M.vis($('#uDef'), t, tPart + 0.4, 1e9, { dy: 12 });
     [wt('S2', 'twelve'), wt('S4', 'about'), tOv].forEach((tt, i) => { const el = $('#ur' + i); M.vis(el, t, tt - 0.15, 1e9, { dx: -16, dy: 0 }); setBg(el, mix(C.soft, C.ac2, M.io((t - tt) / 0.3) * (1 - M.io((t - tt - 1.6) / 0.5)))); });
     // the carbon atom, cut into twelve, one part leaves as 1 u
-    const cOut = M.io((t - tS4 + 0.1) / 0.3), cIn = M.io((t - wt('S1', 'carbon') + 0.1) / 0.35);
-    cAt.style.opacity = (cIn * (1 - cOut)).toFixed(3); M.hide(cAt, cIn * (1 - cOut) <= 0.002);
+    const cOut = M.io((t - tS4 + 0.1) / 0.3), cIn = M.io((t - tS1 - 0.4) / 0.35);
+    cAt.style.opacity = (cIn * (1 - cOut)).toFixed(3); M.hide(cAt, cIn * (1 - cOut) <= 0.002); cLab.style.opacity = cAt.style.opacity; M.hide(cLab, cIn * (1 - cOut) <= 0.002);
     spokes.forEach((s, i) => M.drawU(s, M.io((t - tSplit - i * 0.06) / 0.25)));
     const wu = M.io((t - tPart) / 0.8), wx = M.lerp(CX, 560, wu), wy = M.lerp(CY, 230, wu), wv = M.clamp((t - tPart + 0.1) / 0.1) * (1 - cOut);
     attr(wedge, 'transform', `translate(${wx.toFixed(1)} ${wy.toFixed(1)}) scale(${M.lerp(1, 1.25, wu).toFixed(3)})`); wedge.style.opacity = wv.toFixed(3); M.hide(wedge, wv <= 0.002);
@@ -264,9 +265,9 @@ M.on(t => {
       const n = blocks.reduce((a, _, i) => a + (t >= tDrop(i) + 0.3 ? 1 : 0), 0);
       M.setT(bRd, oPh ? 'O-16' : 'H'); attr(bRd, 'fill', oPh ? OC : HC); M.setT(bRn, `${n} u`);
     }
-    const TAG = [[wt('S1', 'carbon'), 'THE STANDARD · C-12'], [tSplit, '12 EQUAL PARTS'], [tPart, 'ONE PART = 1 u'], [tS4 + 0.2, 'H VS 1 u'], [tHbal, 'H ≈ 1.008 u'], [tO16, 'O-16 VS u BLOCKS'], [tOv, 'O-16 = 15.995 u']];
+    const TAG = [[tS1 + 0.4, 'THE STANDARD · C-12'], [tSplit, '12 EQUAL PARTS'], [tPart, 'ONE PART = 1 u'], [tS4 + 0.2, 'H VS 1 u'], [tHbal, 'H ≈ 1.008 u'], [tO16, 'O-16 VS u BLOCKS'], [tOv, 'O-16 = 15.995 u']];
     let tg = null; for (const [tt, s] of TAG) if (t >= tt) tg = s;
-    if (tg) M.setT(btag, tg); M.vis(btag, t, wt('S1', 'carbon'), 1e9, POP);
+    if (tg) M.setT(btag, tg); M.vis(btag, t, tS1 + 0.4, 1e9, POP);
     M.vis($('#ptL'), t, tS1 + 0.4, 1e9, { dy: 8 }); M.vis($('#ptS'), t, tS1 + 0.5, 1e9, { dy: 8 });
     [['C', wt('S1', 'carbon'), CC], ['H', tS4, HC], ['O', tO16, OC]].forEach(([e, tt, c]) => { const el = $('#pt' + e), u = M.io((t - tt) / 0.3); setBg(el, mix('#FFFFFF', c, u)); el.style.color = mix(C.dim, '#FFFFFF', u); el.style.borderColor = mix(C.line, c, u); });
   }
@@ -277,7 +278,7 @@ M.on(t => {
     const out = OUT('I1');
     M.vis($('#dl'), t, tD1 + 0.05, out, { dx: -60, dy: 0, ...o }); dsol(t, tD1, tDs);
     M.vis($('#dr'), t, tD1 + 0.2, out, { dx: 60, dy: 0, ...o });
-    PUC.write($('#fN'), t, wt('D3', 'One') - 0.1, 0.7); M.vis($('#fBar'), t, wt('D4', 'Divide') - 0.1, 1e9, { dy: 0 }); PUC.write($('#fD'), t, wt('D4', 'Divide') + 0.1, 0.7);
+    PUC.write($('#fD'), t, wt('D2', 'One') - 0.1, 0.7); M.vis($('#fBar'), t, wt('D2', 'One') + 0.3, 1e9, { dy: 0 }); PUC.write($('#fN'), t, wt('D3', 'One') - 0.1, 0.7);
     skF.forEach((s, i) => { const u = M.io((t - wt('D4', 'cancel') - i * 0.15) / 0.35); s.style.width = `calc(${(u * 100).toFixed(1)}% + 8px)`; M.hide(s, u <= 0); });
     M.vis($('#fR'), t, wt('D5', 'leaves') - 0.1, 1e9, POP); M.vis($('#fRn'), t, wt('D5', 'u') + 0.2, 1e9, { dy: 8 });
   }
@@ -294,7 +295,8 @@ M.on(t => {
     nEnds.forEach((g, i) => fade(g, t, i ? wt('I2', 'seven') : wt('I2', 'five'))); fade(nMid, t, wt('I3', 'lighter'));
     const mu = M.io((t - wt('I4', 'add') - 0.2) / 1.6), mv = M.lerp(35.97, 35.46, mu), mx = NX(mv);
     attr(mark, 'transform', `translate(${mx.toFixed(1)} 0)`); fade(mark, t, tI4 + 0.2); M.setT(mkT, mv.toFixed(2) + ' u');
-    attr(tug, 'd', `M${(mx - 20).toFixed(1)} 300 H${Math.max(NX(34.97) + 20, mx - 20 - 120 * mu).toFixed(1)}`); fade(tug, t, wt('I4', 'add'), 1e9, 0.2);
+    attr(tug, 'd', `M${(mx - 20).toFixed(1)} 280 H${Math.max(NX(34.97) + 20, mx - 20 - 120 * mu).toFixed(1)}`); fade(tug, t, wt('I4', 'add'), 1e9, 0.2);
+    M.vis($('#sh0'), t, wt('I3', 'seventy') - 0.1, 1e9, POP); M.vis($('#sh1'), t, wt('I3', 'twenty') - 0.1, 1e9, POP);
     PUC.write($('#avC'), t, wt('I4', 'Multiply') - 0.1, 1.2); M.vis($('#avP'), t, wt('I5', 'about') - 0.1, 1e9, POP);
     M.vis($('#th1'), t, tB1 + 0.05, OUT('I4'), { dy: 36, ...o });
     th1(t, { tin: tB1, tOpts: wt('B1', 'closer') - 0.1, tCount: T1('B1') + 0.05, dur: 3, tAns: T0('B2') - 0.02, tWhy: wt('B2', 'Most') });
