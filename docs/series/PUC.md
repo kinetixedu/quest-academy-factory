@@ -64,3 +64,6 @@ Textbook-quality labelled diagrams in the vintage cartoon illustration style (do
 
 ## puc-electronics - "Breadboard" (accent amber #E8A317)
 Circuit schematics drawn with standard symbols, current shown as dots flowing along wires (speed proportional to current), voltage and current readouts in Plex Mono, an oscilloscope panel drawing the waveform live (input and output traces for rectifiers, amplifiers). Truth tables fill row by row as switch tiles toggle (logic gates). Components light up when active (LED glow as a flat fill change, not a glow effect). Signature: the circuit and its scope trace changing together.
+
+## Style samples
+Reference frames (lesson + exam per subject): docs/series/puc-samples/*.png, source docs/series/puc-samples/frame.html (needs `npm i katex`). Pending Amjad sign-off.
