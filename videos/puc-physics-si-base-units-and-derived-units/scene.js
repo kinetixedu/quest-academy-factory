@@ -56,9 +56,9 @@ $('#dqs').innerHTML = DQ.map(([n, r], i) => `<div class="dq" id="dq${i}" style="
 /* ---------- S: light pulse sets the metre ---------- */
 const s = $('#simS'), LX0 = 92, LX1 = 692, LY = 250;          // 600 px = 1 metre
 mk(s, 'rect', { x: 40, y: 170, width: 52, height: 160, rx: 8, fill: C.ink });
-txt(s, 66, 360, 'LASER', { 'text-anchor': 'middle', 'font-size': 16, fill: C.ink, 'font-weight': 600, 'letter-spacing': 2 });
+txt(s, 66, 156, 'LASER', { 'text-anchor': 'middle', 'font-size': 16, fill: C.ink, 'font-weight': 600, 'letter-spacing': 2 });
 mk(s, 'rect', { x: LX1, y: 170, width: 14, height: 160, rx: 4, fill: '#C3CAD6', stroke: C.ink, 'stroke-width': 2 });
-txt(s, LX1 + 7, 360, 'DETECTOR', { 'text-anchor': 'middle', 'font-size': 16, fill: C.ink, 'font-weight': 600, 'letter-spacing': 2 });
+txt(s, LX1 + 7, 156, 'DETECTOR', { 'text-anchor': 'middle', 'font-size': 16, fill: C.ink, 'font-weight': 600, 'letter-spacing': 2 });
 mk(s, 'line', { x1: LX0, y1: LY, x2: LX1, y2: LY, stroke: C.line, 'stroke-width': 2, 'stroke-dasharray': '4 6' });
 const rl = mk(s, 'g', {});
 mk(rl, 'rect', { x: LX0 - 10, y: 400, width: 620, height: 64, rx: 8, fill: '#FFF8E7', stroke: C.ink, 'stroke-width': 2.5 });
@@ -172,7 +172,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 04', topic: 'Tyre in psi, pum
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tH3 + 0.6, 1, 960, 540], [wt('H5', 'gap') - 0.1, 1.08, 1060, 560], [T0('P1') - 0.4, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('S5') - 0.1, 1.08, 960, 560], [T0('S6') + 0.2, 1, 960, 540]]);
 let geo = null;
 function measure() { geo = 1; let x = 36; [0, 1].forEach(i => { const e = $('#wq' + i); e.style.left = x + 'px'; x += e.offsetWidth + 16; }); }
 
@@ -227,7 +227,7 @@ M.on(t => {
     const moving = (t > tGo && t < tGo + REAL) || (t > tSlo && t < tSlo + REAL * 4);
     gh.forEach((c, k) => { const nsg = Math.max(0, ns - 0.18 * (k + 1)); attr(c, 'cx', (LX0 + 600 * nsg / TNS).toFixed(1)); c.setAttribute('opacity', moving && ns > 0.1 ? [0.3, 0.2, 0.12][k] : 0); });
     const vOn = M.io((t - tSlo - 0.2) / 0.5);
-    cA.set(px + 22, LY - 46, px + 22 + 110 * vOn, LY - 46); attr(cL, 'x', (px + 22 + 110 * vOn + 8).toFixed(1)); attr(cL, 'y', LY - 36); cL.style.opacity = vOn.toFixed(3);
+    const ax = Math.min(Math.max(px, LX0 + 60), LX1 - 90); cA.set(ax - 55, LY - 46, ax - 55 + 110 * vOn, LY - 46); attr(cL, 'x', (ax - 55 + 110 * vOn + 8).toFixed(1)); attr(cL, 'y', LY - 36); cL.style.opacity = vOn.toFixed(3);
     const tg = $('#sTag'); M.setT(tg, 'SLOW-MO REPLAY · 0.25x'); M.vis(tg, t, tSlo - 0.1, T0('S6') + 1, { ...POP, outDur: 0.25 });
     M.setT($('#rt'), ns.toFixed(3)); M.setT($('#rx'), x.toFixed(3));
     M.vis($('#roG'), t, tS1 + 0.5, 1e9, { dy: 10 });
