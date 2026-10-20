@@ -134,7 +134,7 @@ const wA = WK.map((k, i) => { const g = atomG(ws, k === 'Al' ? 38 : 34, k === 'A
 const wOx = WK.map((k, i) => oxChip($('#wr'), WX[i] - 28, WY - 100, k === 'Al' ? '+3' : '−2', k === 'Al' ? PC : MC));
 const wBc = WK.map((k, i) => txt(ws, WX[i], WY + 72, k === 'Al' ? '3 BONDS' : '2 BONDS', { 'text-anchor': 'middle', fill: k === 'Al' ? NC : HC, 'font-weight': 600, 'font-size': 17 }));
 const wCnt = txt(ws, 392, 400, '', { 'text-anchor': 'middle', fill: C.ink, 'font-weight': 600, 'font-size': 28 });
-const tWb = [wt('W5', 'Balance'), wt('W5', 'Two') + 0.2, wt('W5', 'Three'), wt('W5', 'formula')];
+const tWb = [T0('W5'), wt('W5', 'give'), wt('W5', 'three'), wt('W5', 'formula')];
 
 /* ---------- C: variable valency + covalency ---------- */
 const FR = [[`Phosphorus: 3 and 5`, 'P₄O₆ · P₄O₁₀', wt('C1', 'Some')], ['Most common in transition elements', 'LATER CHAPTERS', wt('C1', 'transition')], ['And in actinoids', 'LATER CHAPTERS', wt('C1', 'actinoids')]];
@@ -277,7 +277,7 @@ M.on(t => {
     M.vis($('#dl'), t, tD1 + 0.05, z, { dx: -60, dy: 0, ...o }); M.vis($('#dr'), t, tD1 + 0.2, z, { dx: 60, dy: 0, ...o });
     dsol(t, tD1, tDs);
     M.vis($('#th2'), t, tB4 + 0.05, OUT('T1'), { dy: 36, ...o });
-    th2(t, { tin: tB4, tOpts: wt('B4', 'Is') - 0.1, tCount: T1('B4') + 0.05, dur: 3, tAns: T0('B5') - 0.02, tWhy: wt('B5', 'In') });
+    th2(t, { tin: tB4, tOpts: wt('B4', 'Is') - 0.1, tCount: T1('B4') + 0.05, dur: 3, tAns: T0('B5') - 0.02, tWhy: wt('B5', 'Oxygen') });
     // OF2: pairs on each O-F bond slide to F at "wins"
     const sl = M.io((t - wt('D3', 'wins') + 0.1) / 0.8);
     FA.forEach((f, i) => { const s0 = 0.5, s = M.lerp(s0, 0.78, sl), x = M.lerp(OA[0], f[0], s), y = M.lerp(OA[1], f[1], s), dx = f[0] - OA[0], dy = f[1] - OA[1], L = Math.hypot(dx, dy), px = -dy / L, py = dx / L;
@@ -308,7 +308,7 @@ M.on(t => {
     M.vis($('#wr'), t, T0('W2') + 0.2, out, { dx: 60, dy: 0, ...o });
     wA.forEach((g, i) => { const u = M.clamp((t - (WK[i] === 'Al' ? T0('W3') : T0('W4')) - 0.1 * i) / 0.3); g.style.opacity = u.toFixed(3); M.hide(g, u <= 0); fade(wBc[i], t, (WK[i] === 'Al' ? wt('W3', 'valency') : wt('W4', 'valency'))); });
     WBd.forEach(([a, c, n], j) => { const u = M.io((t - tWb[j] - 0.1) / 0.4); wStk[j].forEach((l, k) => { const off = (k - (n - 1) / 2) * 16; setL(l, WX[a] + 34, WY + off, WX[c] - 34, WY + off, u); }); });
-    wOx.forEach((c, i) => M.vis(c, t, wt('W6', WK[i] === 'Al' ? 'Aluminium' : 'Sulphur') - 0.1 + i * 0.06, 1e9, POP));
+    wOx.forEach((c, i) => M.vis(c, t, wt('W6', WK[i] === 'Al' ? 'aluminium' : 'Sulphur') - 0.1 + i * 0.06, 1e9, POP));
     M.setT(wCnt, t >= wt('W6', 'total') ? '2(+3) + 3(−2) = 0' : 'Al: 2 × 3 = 6   ·   S: 3 × 2 = 6'); fade(wCnt, t, wt('W5', 'six') - 0.1);
     attr(wCnt, 'fill', t >= wt('W6', 'total') ? C.ok : C.ink);
     M.setT($('#wGp'), 'Al₂S₃'); M.vis($('#wGp'), t, wt('W5', 'formula') - 0.1, 1e9, POP);

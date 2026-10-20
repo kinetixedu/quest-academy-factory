@@ -94,7 +94,7 @@ const th1 = PUC.think($('#th1'), { q: `Which bond has the bigger tug of war?`, o
   why: `Na-Cl: ${K(`${G_('3.0')} - ${G_('0.9')} = ${G_('2.1')}`)} &nbsp;·&nbsp; C-Cl: ${K(`${G_('3.0')} - ${G_('2.5')} = ${G_('0.5')}`)}` });
 
 /* ---------- D: link by link ---------- */
-const LK = [['Nucleus gains protons, same outer shell', 'D2', 'nucleus'], ['So the atom shrinks: Li 152 pm, F 64 pm', 'D3', 'shrinks'], ['The shared pair sits closer to the nucleus', 'D4', 'closer'], ['Stronger attraction = higher electronegativity', 'D5', 'Stronger'], ['Strong pull: non-metal · weak pull: metal', 'D6', 'strongly']];
+const LK = [['More protons, same outer shell', 'D2', 'protons'], ['So the atom shrinks: Li 152 pm, F 64 pm', 'D3', 'shrinks'], ['The shared pair sits closer to the nucleus', 'D4', 'closer'], ['Stronger attraction = higher electronegativity', 'D5', 'Stronger'], ['Strong pull: non-metal · weak pull: metal', 'D6', 'Strong']];
 $('#lks').innerHTML = LK.map(([s], i) => `<div class="lk" id="lk${i}" style="top:${80 + i * 94}px"><div class="lt">LINK ${i + 1}</div><div class="lx">${s}</div></div>`).join('');
 const tLk = LK.map(l => wt(l[1], l[2]));
 const ds = $('#dS');
@@ -149,7 +149,7 @@ $('#clA').innerHTML = M.icon('arrowR', 18, C.mute, 2.4);
 const tP3 = [wt('C1', 'Sodium'), wt('C1', 'Magnesium'), wt('C1', 'Aluminium'), wt('C1', 'Silicon'), wt('C2', 'Phosphorus'), wt('C2', 'Sulphur'), wt('C2', 'Chlorine')];
 { const g = 712 / 7, x0 = 36 + (g - 64) / 2; $('#brks').innerHTML = `<div class="brk" id="bk0" style="left:${x0}px;width:${2 * g + 64}px;top:484px;color:var(--ink)">METALS</div><div class="brk" id="bk1" style="left:${x0 + 4 * g}px;width:${2 * g + 64}px;top:484px;color:var(--ac)">NON-METALS</div>`; }
 { const card = $('#cl'), d = document.createElement('div'); d.id = 'clIn'; d.className = 'abs'; d.style.cssText = 'left:0;top:0;width:784px;height:580px'; while (card.firstChild) d.appendChild(card.firstChild); card.appendChild(d); }
-const FR = [['Bonded to a different atom?', 'VALUE SHIFTS A LITTLE', wt('C4', 'changes')], ['Tables give typical values', 'APPROXIMATE', wt('C4', 'typical')], ['Fluorine stays the highest', 'F 4.0', wt('C4', 'typical') + 0.9]];
+const FR = [['Bonded to a different atom?', 'VALUE SHIFTS A LITTLE', wt('C4', 'shifts')], ['Tables give typical values', 'APPROXIMATE', wt('C4', 'typical')], ['Fluorine stays the highest', 'F 4.0', wt('C4', 'typical') + 0.9]];
 $('#frs').innerHTML = FR.map(([a, e], i) => `<div class="fr" id="fr${i}" style="top:${170 + i * 92}px">${a}<em>${e}</em></div>`).join('');
 const avA = PUC.avatar($('#cp'), { x: 36, y: 470, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'So the table is a guide, not a law.' });
 
@@ -239,7 +239,7 @@ M.on(t => {
   if (uOn) {
     M.vis($('#pau'), t, tU + 0.05, OUT('S1'), { dy: 36, ...o });
     M.vis($('#hN'), t, wt('U1', 'Linus') - 0.1, 1e9, { dy: 10 }); M.vis($('#hB'), t, wt('U1', 'Pauling') + 0.1, 1e9, { dy: 10 }); M.vis($('#hHr'), t, tU + 0.3, 1e9, { dy: 0 });
-    PUC.write($('#hq0'), t, wt('U1', 'fluorine') - 0.1, 1.0); PUC.write($('#hq1'), t, wt('U1', 'value') - 0.1, 1.0);
+    PUC.write($('#hq0'), t, wt('U1', 'fluorine') - 0.1, 1.0); PUC.write($('#hq1'), t, wt('U1', 'set') - 0.1, 1.0);
     $('#hqT').style.color = mix(C.ink, GC, M.io((t - wt('U1', 'four')) / 0.3));
     [0, 1, 2].forEach(i => M.vis($('#sc' + i), t, wt('U1', 'scale') + i * 0.15, 1e9, POP));
     setBg($('#sc0'), mix(C.soft, C.ac2, M.io((t - wt('U1', 'compared')) / 0.3)));
@@ -253,7 +253,7 @@ M.on(t => {
     M.vis($('#rx'), t, tS1 + 0.3, z, { dx: 60, dy: 0, ...o });
     M.vis($('#ct'), t, T0('S6') - 0.2, z, { dy: 36, ...o });
     M.vis($('#th1'), t, tB2 + 0.05, OUT('D1'), { dy: 36, ...o });
-    th1(t, { tin: tB2, tOpts: wt('B2', 'sodium') - 0.1, tCount: T1('B2') + 0.05, dur: 3, tAns: T0('B3') - 0.02, tWhy: wt('B3', 'Three') });
+    th1(t, { tin: tB2, tOpts: wt('B2', 'sodium') - 0.1, tCount: T1('B2') + 0.05, dur: 3, tAns: T0('B3') - 0.02, tWhy: wt('B3', 'gap') });
     const k = cur(t), st = SEQ[k][1], R = fR(t), nS = fSh(t), x = fX(t), grp = t >= T0('S6') - 0.1;
     M.setT($('#bnL'), grp ? 'MOLECULE BENCH · GROUP 17' : 'MOLECULE BENCH · PERIOD 2');
     rings.forEach((r, i) => { const n = Math.round(nS), rr = n <= 1 ? R : 46 + (R - 46) * Math.min(i, n - 1) / (n - 1); attr(r, 'r', rr.toFixed(1)); r.style.opacity = M.clamp(nS - i).toFixed(3); M.hide(r, nS - i <= 0.01); });
@@ -266,7 +266,7 @@ M.on(t => {
     bPull.g.style.opacity = pIn; bPull.g.querySelector('path').setAttribute('stroke-width', aw.toFixed(1));
     M.vis($('#gz'), t, tS1 + 0.3, 1e9, { dy: 8 });
     $('#gzI').style.width = (420 * x / 4).toFixed(1) + 'px'; M.setT($('#gzV'), x.toFixed(1));
-    const TAG = [[tS1, `${st.s} · ${st.p} PROTONS`], [wt('S3', 'smaller'), `${st.s} · ${st.p} PROTONS · SMALLER`], [wt('S4', 'Beryllium') - 0.1, `${st.s} · ${st.p} PROTONS`], [wt('S5', 'strongest'), 'F · STRONGEST PULL'], [T0('S6'), `${st.s} · ${st.sh} SHELLS`], [wt('S7', 'new'), `${st.s} · ${st.sh} SHELLS · NEW SHELL`], [wt('S7', 'weaker'), 'PAIR FARTHER · WEAKER']];
+    const TAG = [[tS1, `${st.s} · ${st.p} PROTONS`], [wt('S3', 'smaller'), `${st.s} · ${st.p} PROTONS · SMALLER`], [wt('S4', 'Beryllium') - 0.1, `${st.s} · ${st.p} PROTONS`], [wt('S5', 'strongest'), 'F · STRONGEST PULL'], [T0('S6'), `${st.s} · ${st.sh} SHELLS`], [wt('S7', 'adds'), `${st.s} · ${st.sh} SHELLS · NEW SHELL`], [wt('S7', 'weaker'), 'PAIR FARTHER · WEAKER']];
     let tg = null; for (const [tt, s] of TAG) if (t >= tt) tg = s; if (t >= wt('S7', 'weaker')) tg = 'PAIR FARTHER · WEAKER';
     M.setT(btag, tg); M.vis(btag, t, tS1 + 0.4, 1e9, POP);
     // strips
@@ -295,7 +295,7 @@ M.on(t => {
       const ru = M.io((t - wt('D3', j ? 'Fluorine' : 'Lithium') + 0.1) / 0.5); M.drawU(g.rad, ru); fade(g.rt, t, wt('D3', j ? 'Fluorine' : 'Lithium') - 0.1);
       const o2 = SIDE[j], au = M.io((t - wt('D4', 'closer') + 0.1 + j * 0.25) / 0.5);
       if (au > 0) g.ar.set(o2.x + o2.R - 14, DY - 30, o2.x + o2.R - 14 - (o2.R - 44) * au, DY - 30); else g.ar.set(0, 0, 0, 0);
-      M.vis(g.ch, t, wt('D6', j ? 'strongly' : 'weakly') - 0.1, 1e9, POP);
+      M.vis(g.ch, t, wt('D6', j ? 'Strong' : 'Weak') - 0.1, 1e9, POP);
     });
     M.vis(dTag, t, wt('D5', 'Down') - 0.1, 1e9, POP);
   }
@@ -322,7 +322,7 @@ M.on(t => {
       r.pr.forEach((d, k) => { attr(d, 'cx', px.toFixed(1)); attr(d, 'cy', (r.y - 10 + k * 20).toFixed(1)); d.style.opacity = u.toFixed(3); });
       fade(r.gl, t, tWr[i] + 0.5); fade(r.dp, t, wt('W6', 'positive') - 0.1); fade(r.dm, t, wt('W6', 'positive') - 0.1);
     });
-    M.vis($('#wGp'), t, wt('W6', 'bigger') - 0.1, 1e9, POP);
+    M.vis($('#wGp'), t, wt('W6', 'Bigger') - 0.1, 1e9, POP);
   }
 
   /* C */

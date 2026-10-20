@@ -285,10 +285,10 @@ M.on(t => {
     M.vis(covT, t, wt('C1', 'covalent') - 0.1, 1e9, POP);
     RS.forEach(([, w], i) => M.vis($('#rs' + i), t, wt('C3', w) - 0.1, 1e9, POP));
     M.vis($('#cp'), t, tc4 - 0.05, out, { dx: 60, dy: 0, ...o });
-    MBd.forEach((m, i) => { const tt = [wt('C4', 'C'), wt('C4', 'N', 1), wt('C4', 'O', 1)][i], u = M.io((t - tt + 0.1) / 0.4);
+    MBd.forEach((m, i) => { const tt = [wt('C4', 'C'), wt('C4', 'N', 1), wt('C4', 'O')][i], u = M.io((t - tt + 0.1) / 0.4);
       [m.A, m.B].forEach(g => { g.style.opacity = M.clamp((t - tt + 0.3) / 0.2).toFixed(3); }); fade(m.l, t, tt);
       m.sts.forEach((l, k) => { const off = (k - (m.n - 1) / 2) * 16; setL(l, 194, m.y + off, 366, m.y + off, u); }); });
-    avD(t, wt('C4', 'O', 1) + 0.8, out);
+    avD(t, wt('C4', 'O') + 0.8, out);
   }
 
   /* X */
