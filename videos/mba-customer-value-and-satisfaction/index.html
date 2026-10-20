@@ -192,7 +192,7 @@
 /* hook: two choices */
 .pc{position:absolute;top:270px;width:784px;height:420px}
 .pc .bg{position:absolute;inset:0;border-radius:28px;background:var(--card);box-shadow:0 1px 0 rgba(20,33,61,.04),0 18px 40px -12px rgba(20,33,61,.14)}
-.pc svg{position:absolute;left:48px;top:96px}
+.pc > svg{position:absolute;left:48px;top:96px}
 .pc .pn2{position:absolute;left:340px;top:104px;font-size:44px;white-space:nowrap}
 .pc .pp{position:absolute;left:340px;top:166px;font-size:96px;line-height:1;white-space:nowrap}
 .pc .pq{left:340px;top:276px}
@@ -220,10 +220,10 @@
 .vr span{position:absolute;left:112px;top:32px;font:600 30px Poppins;white-space:nowrap}
 /* value builder */
 #vb{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
-.vcol{position:absolute;top:96px;width:256px;text-align:center}
-.blk{position:absolute;width:256px;height:64px;border-radius:14px;display:flex;align-items:center;justify-content:center;gap:10px;font:600 22px Poppins;white-space:nowrap}
+.vcol{position:absolute;top:196px;width:300px;text-align:center}
+.blk{position:absolute;width:300px;height:80px;border-radius:16px;display:flex;align-items:center;justify-content:center;gap:12px;font:600 24px Poppins;white-space:nowrap}
 #vbase{position:absolute;left:48px;top:508px;width:688px;height:4px;border-radius:2px;background:var(--ink)}
-#vgap{position:absolute;width:256px;border-radius:14px;border:3px dashed #B8862F;background:#F3EAD6;display:flex;align-items:center;justify-content:center;gap:8px;font:700 22px Poppins;letter-spacing:.12em;color:#B8862F;white-space:nowrap}
+#vgap{position:absolute;width:300px;border-radius:16px;border:3px dashed #B8862F;background:#F3EAD6;display:flex;align-items:center;justify-content:center;gap:8px;font:700 22px Poppins;letter-spacing:.12em;color:#B8862F;white-space:nowrap}
 #vline{position:absolute;height:0;border-top:2px dashed #B8862F}
 #vc2{left:976px;top:270px;width:784px;height:580px}
 .cmp{position:absolute;left:48px;width:688px;height:168px;border-radius:20px;background:var(--paper)}
@@ -249,7 +249,7 @@
 #clk{position:absolute;right:48px;top:24px;font-size:56px;line-height:1;white-space:nowrap}
 #tlb{position:absolute;left:48px;top:404px;width:688px;height:20px;border-radius:10px;background:var(--paper2)}
 .tlk{position:absolute;top:436px;font:600 15px Poppins;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
-.tld{position:absolute;top:398px;width:32px;height:32px;border-radius:16px;box-shadow:0 0 0 4px #fff;display:flex;align-items:center;justify-content:center;font:700 14px Poppins;color:#fff}
+.tld{position:absolute;top:401px;width:26px;height:26px;border-radius:13px;box-shadow:0 0 0 3px #fff;display:flex;align-items:center;justify-content:center;font:700 12px Poppins;color:#fff}
 #tlp{position:absolute;top:392px;width:4px;height:44px;border-radius:2px;background:var(--ink)}
 #mst{position:absolute;left:48px;top:478px;height:64px;padding:0 26px;border-radius:32px;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap;background:var(--paper);color:var(--ink)}
 #wk{left:976px;top:270px;width:784px;height:580px}
@@ -337,8 +337,8 @@
     <div id="sV">
       <div class="card" id="vb"><div class="abs" id="vbIn" style="left:0;top:0;width:784px;height:580px">
         <div class="lbl" style="left:48px;top:40px">MRS. RAO'S VALUE CHECK</div>
-        <div class="vcol" id="vhB" style="left:96px"><div class="lbl" style="position:static;color:#B8862F">BENEFITS SHE GETS</div></div>
-        <div class="vcol" id="vhC" style="left:432px"><div class="lbl" style="position:static;color:#B5482F">COSTS SHE PAYS</div></div>
+        <div class="serif" id="vbT" style="position:absolute;left:48px;top:80px;font-size:44px;white-space:nowrap">Benefits <span class="acc">minus</span> costs</div><div class="vcol" id="vhB" style="left:64px"><div class="lbl" style="position:static;color:#B8862F">BENEFITS SHE GETS</div></div>
+        <div class="vcol" id="vhC" style="left:420px"><div class="lbl" style="position:static;color:#B5482F">COSTS SHE PAYS</div></div>
         <div id="blks"></div>
         <div id="vline"></div><div id="vgap"><span id="vgapI"></span>VALUE</div>
         <div id="vbase"></div>
@@ -371,9 +371,9 @@
         <svg id="mpS" width="688" height="300"><defs><clipPath id="avc"><circle cx="0" cy="0" r="22"/></clipPath><clipPath id="mclip"><rect width="688" height="300" rx="24"/></clipPath></defs>
           <rect width="688" height="300" rx="24" fill="#F5F1E8"/>
           <g clip-path="url(#mclip)" stroke="#E7E0D2" stroke-width="18" stroke-linecap="round" fill="none"><path d="M0 240 H688"/><path d="M0 80 H688"/><path d="M0 180 H688"/><path d="M200 0 V300"/><path d="M340 0 V300"/><path d="M520 0 V300"/></g>
-          <path id="rtA" d="M60 240 H520 V180 H340 V80 H628" fill="none" stroke="#E7B9AB" stroke-width="5" stroke-dasharray="2 10" stroke-linecap="round"/>
-          <path id="rtB" d="M60 240 H340 V80 H628" fill="none" stroke="#B8862F" stroke-width="5" stroke-dasharray="2 10" stroke-linecap="round"/>
-          <path id="rtAf" d="M60 240 H520 V180 H340 V80 H628" fill="none" stroke="none"/><path id="rtBf" d="M60 240 H340 V80 H628" fill="none" stroke="none"/>
+          <path id="rtA" d="M60 240 H520 V180 H340 V80 H566" fill="none" stroke="#E7B9AB" stroke-width="5" stroke-dasharray="2 10" stroke-linecap="round"/>
+          <path id="rtB" d="M60 240 H340 V80 H566" fill="none" stroke="#B8862F" stroke-width="5" stroke-dasharray="2 10" stroke-linecap="round"/>
+          <path id="rtAf" d="M60 240 H520 V180 H340 V80 H566" fill="none" stroke="none"/><path id="rtBf" d="M60 240 H340 V80 H566" fill="none" stroke="none"/>
           <g transform="translate(18 198)"><rect width="84" height="84" rx="16" fill="#fff" stroke="#E2DACB" stroke-width="2"/><g transform="translate(28 14)" id="pinK"></g><text x="42" y="70" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="12" letter-spacing="2" fill="#8A8274">KITCHEN</text></g>
           <g transform="translate(586 38)"><rect width="84" height="84" rx="16" fill="#fff" stroke="#E2DACB" stroke-width="2" id="pinRr"/><g transform="translate(28 14)" id="pinR"></g><text x="42" y="70" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="12" letter-spacing="2" fill="#8A8274">MRS. RAO</text></g>
           <g id="mv" transform="translate(60 240)"><circle r="26" fill="#14213D"/><image href="../../assets/illustrations/mba/ll-arjun-face.jpg" x="-22" y="-22" width="44" height="44" clip-path="url(#avc)"/></g>

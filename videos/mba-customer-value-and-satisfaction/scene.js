@@ -44,6 +44,7 @@ Object.assign(M.IC, {
   wallet: ['M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1', 'M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4'],
   frown: ['M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z', 'M16 16s-1.5-2-4-2-4 2-4 2', 'M9 9h.01', 'M15 9h.01'],
   meh: ['M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z', 'M8 15h8', 'M9 9h.01', 'M15 9h.01'],
+  award: ['m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526', 'M12 14a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z'],
   note: ['M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z', 'M14 2v4a2 2 0 0 0 2 2h4', 'M10 13H8', 'M16 17H8', 'M16 13h-2'],
 });
 
@@ -87,14 +88,14 @@ wrap($('#ill'), 'illOut', 784, 580);
 $('#pvE').innerHTML = M.icon('eye', 44, C.gold, 2); $('#vr0I').innerHTML = M.icon('check', 30, C.gold, 2.8); $('#vr1I').innerHTML = M.icon('x', 30, C.red, 2.8);
 wrap($('#kq'), 'kqOut', 784, 580);
 // value builder
-const BEN = [['heart', 'A healthy snack'], ['smile', 'A taste she loves'], ['home', "Trust in Nani's kitchen"]];
+const BEN = [['heart', 'A healthy snack'], ['smile', 'A taste she loves'], ['home', 'Trust in Nani']];
 const COS = [['coin', '₹120 a week'], ['clock', 'Time to buy it'], ['help', 'A little worry']];
-const bTop = k => 436 - 72 * k;
-$('#blks').innerHTML = BEN.map(([ic, tx], k) => `<div class="blk" id="bb${k}x" style="left:96px;top:${bTop(k)}px;background:#F3EAD6;color:#14213D">${M.icon(ic, 22, C.gold, 2.4)}<span>${tx}</span></div>`).join('') +
-  COS.map(([ic, tx], k) => `<div class="blk" id="bc${k}x" style="left:432px;top:${bTop(k)}px;background:#F6E3DC;color:#B5482F">${M.icon(ic, 22, C.red, 2.4)}<span>${tx}</span></div>`).join('');
+const bTop = k => 420 - 88 * k;
+$('#blks').innerHTML = BEN.map(([ic, tx], k) => `<div class="blk" id="bb${k}x" style="left:64px;top:${bTop(k)}px;background:#F3EAD6;color:#14213D">${M.icon(ic, 22, C.gold, 2.4)}<span>${tx}</span></div>`).join('') +
+  COS.map(([ic, tx], k) => `<div class="blk" id="bc${k}x" style="left:420px;top:${bTop(k)}px;background:#F6E3DC;color:#B5482F">${M.icon(ic, 22, C.red, 2.4)}<span>${tx}</span></div>`).join('');
 $('#vgapI').innerHTML = M.icon('award', 22, C.gold, 2.4);
-Object.assign($('#vgap').style, { left: '432px', top: bTop(2) + 'px', height: '64px' });
-Object.assign($('#vline').style, { left: '96px', top: bTop(2) + 'px', width: '592px' });
+Object.assign($('#vgap').style, { left: '420px', top: bTop(2) + 'px', height: '80px' });
+Object.assign($('#vline').style, { left: '64px', top: bTop(2) + 'px', width: '656px' });
 wrap($('#vb'), 'vbOut', 784, 580);
 $('#cc0I').innerHTML = M.icon('coin', 18, C.gold, 2.4); $('#cc1I').innerHTML = M.icon('coin', 18, C.muted, 2.4); $('#vc2PI').innerHTML = M.icon('check', 22, '#fff', 3);
 // satisfaction
@@ -255,7 +256,7 @@ M.on(t => {
   if (vOn) {
     const o = { outDur: 0.3, ody: -16 };
     const vb = $('#vb'); M.vis(vb, t, tV[0] + 0.05, tVout, { dy: 36, ...o }); grow(vb, $('#vbOut'), t, tV[3]);
-    M.vis($('#vhB'), t, tV[0] + 0.3, 1e9, { dy: 10 }); M.vis($('#vhC'), t, tV[1] - 0.1, 1e9, { dy: 10 }); M.vis($('#vbase'), t, tV[0] + 0.25, 1e9, { dy: 0 });
+    M.rise($('#vbT'), t, tV[0] + 0.25, { st: 0.06, sp: M.HEAVY }); M.vis($('#vhB'), t, tV[0] + 0.3, 1e9, { dy: 10 }); M.vis($('#vhC'), t, tV[1] - 0.1, 1e9, { dy: 10 }); M.vis($('#vbase'), t, tV[0] + 0.25, 1e9, { dy: 0 });
     BEN.forEach((_, k) => M.vis($('#bb' + k + 'x'), t, tBen[k] - 0.1, 1e9, { dy: -60, sp: M.HEAVY, fade: 0.08 }));
     COS.forEach((_, k) => { const el = $('#bc' + k + 'x');
       if (k === 1) { const g = M.io((t - tDis + 0.2) / 0.4); M.vis(el, t, tCos[k] - 0.1, tDis - 0.2, { dy: -60, sp: M.HEAVY, fade: 0.08, outDur: 0.35, osc: 0.6, ody: 0 }); el.style.textDecoration = t > tGone ? 'line-through' : 'none'; void g; return; }
@@ -318,7 +319,7 @@ M.on(t => {
     const late = k === 0 && clock > 30; $('#clk').style.color = late ? C.red : (k > 0 && t >= RUN[k][1] ? C.gold : C.ink);
     const ra = k === 0 ? M.clamp((t - RUN[0][0] + 0.3) / 0.3) : k > 0 ? 1 - M.clamp((t - RUN[1][0] + 0.3) / 0.3) : 0; $('#rtA').style.opacity = ra.toFixed(3);
     attr($('#pinRr'), 'stroke', k >= 0 && t >= RUN[k][1] ? (k === 0 ? C.red : C.gold) : C.line); attr($('#pinRr'), 'stroke-width', k >= 0 && t >= RUN[k][1] ? 4 : 2);
-    RUN.forEach(([, b, arr], i) => { const d = $('#td' + i); d.style.left = (tlX(arr) - 16) + 'px'; M.vis(d, t, b, 1e9, POP); });
+    RUN.forEach(([, b, arr], i) => { const d = $('#td' + i); d.style.left = (tlX(arr) - 13) + 'px'; M.vis(d, t, b, 1e9, POP); });
     const ms = $('#mst'); let st;
     if (k < 0) st = ['clock', 'Promise: by 7:00 every morning', C.paper, C.ink, C.gold];
     else if (k === 0) st = t < RUN[0][1] ? ['x', 'Week 1 · a wrong turn', C.redBg, C.red, C.red] : ['frown', 'Week 1 · 8:15, late', C.red, '#fff', '#fff'];

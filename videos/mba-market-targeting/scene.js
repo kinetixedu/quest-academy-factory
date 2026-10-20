@@ -79,23 +79,23 @@ $('#swRow').innerHTML = SWT.map(([ic, n, t], i) => `<div class="sws" id="sw${i}"
 wrap($('#kq'), 'kqOut', 784, 580);
 
 /* M: the scoreboard (688 x 250 svg) and the target */
-const SC = [[5, 4, 5], [3, 1, 2], [4, 3, 3]], COLX = [214, 344, 474], RY = [86, 146, 206];
+const SC = [[5, 4, 5], [3, 1, 2], [4, 3, 3]], COLX = [262, 392, 522], RY = [86, 146, 206];
 const pip = (r, c, p) => `<circle id="pp${r}${c}${p}" cx="${COLX[c] - 40 + p * 20}" cy="${RY[r]}" r="7" fill="#E2DACB"/>`;
 $('#mLIn').innerHTML = `<div class="mav" style="${FACE('zoya')}"></div><div class="lbl mlb">SCORING THE GROUPS · 3 QUESTIONS</div><div class="serif mrd" id="rdL">0 / 15</div>
     <svg class="mplan" id="planL" width="688" height="250"><defs><clipPath id="avc"><circle cx="0" cy="0" r="15"/></clipPath></defs>
       <rect width="688" height="250" rx="24" fill="#F5F1E8"/>
-      ${['SIZE', 'FEW RIVALS', 'FIT', 'TOTAL'].map((h, c) => `<text id="hd${c}" x="${c < 3 ? COLX[c] : 600}" y="40" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="13" letter-spacing="2" fill="#8A8274">${h}</text>`).join('')}
+      ${['SIZE', 'FEW RIVALS', 'FIT', 'TOTAL'].map((h, c) => `<text id="hd${c}" x="${c < 3 ? COLX[c] : 626}" y="40" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="13" letter-spacing="2" fill="#8A8274">${h}</text>`).join('')}
       ${[0, 1, 2].map(r => `<rect id="rw${r}b" x="12" y="${RY[r] - 26}" width="664" height="52" rx="14" fill="#F5F1E8"/>
         <g transform="translate(36 ${RY[r]})"><circle r="17" fill="${SCOL[r]}"/>${r === 0 ? `<image href="${IMG}ll-rao-face.jpg" x="-15" y="-15" width="30" height="30" clip-path="url(#avc)"/>` : `<g transform="translate(-10 -10)">${M.icon(SEG[r][1], 20, C.gold2, 2.2)}</g>`}</g>
         <text x="62" y="${RY[r] + 6}" font-family="Poppins" font-weight="600" font-size="17" fill="#14213D">${SEG[r][2]}</text>
         ${[0, 1, 2].map(c => [0, 1, 2, 3, 4].map(p => pip(r, c, p)).join('')).join('')}
-        <text id="tt${r}" x="600" y="${RY[r] + 10}" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="28" fill="${SCOL[r]}">0</text>`).join('')}
+        <text id="tt${r}" x="626" y="${RY[r] + 10}" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="28" fill="${SCOL[r]}">0</text>`).join('')}
     </svg>
     <div class="mbar" id="barL">${[0, 1, 2, 3].map(k => `<i id="seg${k}" style="left:${k * 174}px;width:166px"></i>`).join('')}</div>
     <div class="mtk" style="left:48px">SIZE</div><div class="mtk" style="right:48px">ADD UP</div>
     <div class="mst" id="msL"><span class="msi"></span><span class="mtx"></span><span class="tm"></span></div>`;
 wrap($('#mL'), 'mLOut', 784, 580);
-const BX = 392, BY = 285, ANG = [-90, 150, 30];
+const BX = 392, BY = 285, ANG = [-90, 140, 40];
 $('#tgt').innerHTML = `<defs><clipPath id="avt"><circle cx="0" cy="0" r="23"/></clipPath></defs>` + [190, 140, 90, 40].map((r, i) => `<circle cx="${BX}" cy="${BY}" r="${r}" fill="${i % 2 ? '#FFFFFF' : '#F5F1E8'}" stroke="#E2DACB" stroke-width="2"/>`).join('') + `<circle cx="${BX}" cy="${BY}" r="8" fill="#14213D"/>` +
   SEG.map(([, ic, n], k) => `<g id="mk${k}"><circle id="mkR${k}" r="28" fill="${SCOL[k]}" stroke="#FFFFFF" stroke-width="4"/>${k === 0 ? `<image href="${IMG}ll-rao-face.jpg" x="-23" y="-23" width="46" height="46" clip-path="url(#avt)"/>` : `<g transform="translate(-13 -13)">${M.icon(SEG[k][1], 26, C.gold2, 2.2)}</g>`}<rect x="-74" y="34" width="148" height="30" rx="15" fill="#FFFFFF" stroke="#E2DACB" stroke-width="2"/><text x="0" y="55" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="15" fill="#14213D">${n}</text></g>`).join('');
 $('#tgtI').innerHTML = M.icon('target', 24, '#fff', 2.4);
@@ -212,7 +212,7 @@ const runP = t => {
   else pill('L', 'help', 'Three groups, one kitchen', '', 0, 0);
   // markers move in as points add up
   for (let r = 0; r < 3; r++) {
-    const rad = 232 - tot[r] * 13.5, a = ANG[r] * Math.PI / 180, g = $('#mk' + r);
+    const rad = 216 - tot[r] * 12.5, a = ANG[r] * Math.PI / 180, g = $('#mk' + r);
     attr(g, 'transform', `translate(${(BX + rad * Math.cos(a)).toFixed(1)} ${(BY + rad * Math.sin(a)).toFixed(1)})`);
     attr($('#mkR' + r), 'stroke', r === 0 && t >= tWin ? C.gold : '#FFFFFF');
     const u = M.clamp((t - tM0 - 0.8 - r * 0.1) / 0.15); g.style.opacity = u.toFixed(3); M.hide(g, u <= 0);
@@ -393,9 +393,9 @@ M.on(t => {
   if (rOn) {
     const o = { outDur: 0.3, ody: -16 };
     const rT = $('#rT'); M.vis(rT, t, tR0 + 0.1, tRout, { dy: 36, ...o }); grow(rT, $('#rTOut'), t, tR2);
-    M.rise($('#rTh'), t, tR1 - 0.05, { st: 0.07, sp: M.HEAVY });
-    M.vis($('#rTp'), t, wt('R1', 'Concentrated') + 0.2, 1e9, { dy: 14 });
-    RQ.forEach((_, i) => { const r = $('#rq' + i); M.vis(r, t, tR1 + 0.5 + i * 0.1, 1e9, { dy: 12 }); r.querySelector('.rt').style.color = mix(C.dim, C.ink, M.io((t - tRq[i]) / 0.25)); M.vis(r.querySelector('.ck'), t, tRq[i] + 0.05, 1e9, { dy: 0, sc: 0.4, sp: M.POP, fade: 0.08 }); });
+    M.rise($('#rTh'), t, tR0 + 0.3, { st: 0.07, sp: M.HEAVY });
+    M.vis($('#rTp'), t, tR0 + 0.6, 1e9, { dy: 14 }); $('#rTp').style.background = mix(C.paper, C.gold3, M.io((t - tR1) / 0.3));
+    RQ.forEach((_, i) => { const r = $('#rq' + i); M.vis(r, t, tR0 + 0.8 + i * 0.1, 1e9, { dy: 12 }); r.querySelector('.rt').style.color = mix(C.dim, C.ink, M.io((t - tRq[i]) / 0.25)); M.vis(r.querySelector('.ck'), t, tRq[i] + 0.05, 1e9, { dy: 0, sc: 0.4, sp: M.POP, fade: 0.08 }); });
     M.vis($('#rL'), t, tR2 + 0.12, tRout, { dx: 60, dy: 0, ...o });
     M.rise($('#rLh'), t, tR2 + 0.3, { st: 0.07, sp: M.HEAVY });
     RL.forEach((_, i) => M.vis($('#rl' + i), t, tRl[i] - 0.05, 1e9, { dx: 24, dy: 0 }));
