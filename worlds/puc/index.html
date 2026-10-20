@@ -1,0 +1,47 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC world sample - Lab Notebook (Physics accent)</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="katex/katex.min.css">
+<link rel="stylesheet" href="puc.css">
+<style>
+/* sample-only layout */
+#sim{left:160px;top:270px;width:784px;height:580px}
+#ro{left:976px;top:270px;width:784px;height:274px}
+#gr{left:976px;top:576px;width:784px;height:274px}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+.fcard .fl{font-size:46px}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 2 MOTION IN A STRAIGHT LINE</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Free <span class="acc">fall</span></div>
+    <div id="sub">Lab Notebook world sample</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+
+    <div id="sL">
+      <div class="card" id="sim"><div class="lbl" style="left:32px;top:28px">SIMULATION · DROPPED FROM REST</div><div class="tag" id="slow" style="right:32px;top:22px">SLOW-MO REPLAY · 0.25x</div><svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="ro"><div class="lbl" style="left:32px;top:28px">LIVE READOUT</div>
+        <div class="ro" id="roG" style="left:32px;top:76px;width:360px"></div>
+        <div class="fx" id="fx1" style="left:440px;top:120px;font-size:56px"></div></div>
+      <div class="card" id="gr"><div class="lbl" style="left:32px;top:28px">VELOCITY v VS TIME t</div><svg id="grS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+    <div id="sX"><div class="card red" id="trap"></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"></div>
+  </div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="katex/katex.min.js"></script>
+<script src="puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

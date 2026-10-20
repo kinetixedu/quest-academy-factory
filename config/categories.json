@@ -287,5 +287,157 @@
    "sub": "rgba(255,248,232,.62)",
    "font": "Archivo"
   }
+ },
+ "puc-physics": {
+  "category": "PUC Physics",
+  "look": "puc",
+  "style": "Motion notebook",
+  "accent": "#2F6FEB",
+  "playlist": "PUC Physics | Class 11 | Quest Academy",
+  "playlists": {
+   "11": "PUC Physics | Class 11 | Quest Academy",
+   "12": "PUC Physics | Class 12 | Quest Academy"
+  },
+  "tags": [
+   "PUC Physics",
+   "Quest Academy",
+   "PUC",
+   "Class 11",
+   "Class 12",
+   "NCERT",
+   "physics",
+   "JEE physics",
+   "NEET physics",
+   "explained simply",
+   "animated explainer"
+  ],
+  "outro": {
+   "bg": "#16213E",
+   "ink": "#FFFFFF",
+   "accent": "#2F6FEB",
+   "sub": "rgba(247,245,239,.72)",
+   "font": "Poppins"
+  }
+ },
+ "puc-chemistry": {
+  "category": "PUC Chemistry",
+  "look": "puc",
+  "style": "Molecule bench",
+  "accent": "#0FA3A3",
+  "playlist": "PUC Chemistry | Class 11 | Quest Academy",
+  "playlists": {
+   "11": "PUC Chemistry | Class 11 | Quest Academy",
+   "12": "PUC Chemistry | Class 12 | Quest Academy"
+  },
+  "tags": [
+   "PUC Chemistry",
+   "Quest Academy",
+   "PUC",
+   "Class 11",
+   "Class 12",
+   "NCERT",
+   "chemistry",
+   "JEE chemistry",
+   "NEET chemistry",
+   "explained simply",
+   "animated explainer"
+  ],
+  "outro": {
+   "bg": "#16213E",
+   "ink": "#FFFFFF",
+   "accent": "#0FA3A3",
+   "sub": "rgba(247,245,239,.72)",
+   "font": "Poppins"
+  }
+ },
+ "puc-maths": {
+  "category": "PUC Maths",
+  "look": "puc",
+  "style": "Proof board",
+  "accent": "#E4572E",
+  "playlist": "PUC Maths | Class 11 | Quest Academy",
+  "playlists": {
+   "11": "PUC Maths | Class 11 | Quest Academy",
+   "12": "PUC Maths | Class 12 | Quest Academy"
+  },
+  "tags": [
+   "PUC Maths",
+   "Quest Academy",
+   "PUC",
+   "Class 11",
+   "Class 12",
+   "NCERT",
+   "maths",
+   "JEE maths",
+   "explained simply",
+   "animated explainer"
+  ],
+  "outro": {
+   "bg": "#16213E",
+   "ink": "#FFFFFF",
+   "accent": "#E4572E",
+   "sub": "rgba(247,245,239,.72)",
+   "font": "Poppins"
+  }
+ },
+ "puc-biology": {
+  "category": "PUC Biology",
+  "look": "puc",
+  "style": "Living diagram",
+  "accent": "#3E9B5F",
+  "playlist": "PUC Biology | Class 11 | Quest Academy",
+  "playlists": {
+   "11": "PUC Biology | Class 11 | Quest Academy",
+   "12": "PUC Biology | Class 12 | Quest Academy"
+  },
+  "tags": [
+   "PUC Biology",
+   "Quest Academy",
+   "PUC",
+   "Class 11",
+   "Class 12",
+   "NCERT",
+   "biology",
+   "NEET biology",
+   "explained simply",
+   "animated explainer"
+  ],
+  "outro": {
+   "bg": "#16213E",
+   "ink": "#FFFFFF",
+   "accent": "#3E9B5F",
+   "sub": "rgba(247,245,239,.72)",
+   "font": "Poppins"
+  }
+ },
+ "puc-electronics": {
+  "category": "PUC Electronics",
+  "look": "puc",
+  "style": "Breadboard",
+  "accent": "#E8A317",
+  "playlist": "PUC Electronics | Class 11 | Quest Academy",
+  "playlists": {
+   "11": "PUC Electronics | Class 11 | Quest Academy",
+   "12": "PUC Electronics | Class 12 | Quest Academy"
+  },
+  "tags": [
+   "PUC Electronics",
+   "Quest Academy",
+   "PUC",
+   "Class 11",
+   "Class 12",
+   "NCERT",
+   "electronics",
+   "PUC electronics",
+   "explained simply",
+   "animated explainer"
+  ],
+  "outro": {
+   "bg": "#16213E",
+   "ink": "#FFFFFF",
+   "accent": "#E8A317",
+   "sub": "rgba(247,245,239,.72)",
+   "font": "Poppins"
+  }
  }
 }
