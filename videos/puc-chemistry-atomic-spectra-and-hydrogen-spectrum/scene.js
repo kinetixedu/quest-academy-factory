@@ -153,7 +153,7 @@ const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', q:
   opts: ['121.6 nm', '656.5 nm', '91.2 nm', '364.7 nm'], right: 2, optW: 474, optY: 330, optH: 110, optFs: 36 });
 const so = PUC.solution($('#so'), [[K(`\\text{shortest } \\lambda: \\; ${n2} = \\infty, \\; ${n1} = 1`)], [K(`\\bar{\\nu} = 109\\,677\\,(1 - 0)\\,\\text{cm}^{-1}`)], [K(`\\lambda = \\frac{1}{109\\,677}\\,\\text{cm}`)], [K(`= \\textcolor{${C.ok}}{91.2\\,\\text{nm}}`)]], { y0: 100, dy: 112 });
 const tSo = [T0('A2'), T0('A3'), wt('A3', 'So'), T0('A4')];
-const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 496, title: 'Recap · atomic spectra and the hydrogen spectrum', y0: 100, dy: 80, txt: [0, 1, 1, 1, 1],
+const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 520, title: 'Recap · atomic spectra and the hydrogen spectrum', y0: 98, dy: 86, txt: [0, 1, 1, 1, 1],
   lines: [K(`\\bar{\\nu} = \\frac{1}{\\lambda} = 109\\,677 \\left(\\frac{1}{${n1}^2} - \\frac{1}{${n2}^2}\\right) \\text{cm}^{-1}`), '<b>Continuous</b>: all colours · <b>line (emission)</b>: bright lines · <b>absorption</b>: dark lines', `<b style="color:${SER.Lyman}">Lyman</b> n₁ = 1 UV · <b class="n">Balmer</b> n₁ = 2 visible · Paschen 3, Brackett 4, Pfund 5 IR`, '<b>Balmer lines</b>: about 656 (red), 486, 434, 410 nm', '<b class="e">Each line</b>: one electron falling from n₂ to n₁, with n₂ > n₁'] });
 const YQ = ['How is a line spectrum different from a continuous spectrum?', 'Which hydrogen series is visible, and on which orbit do its falls end?', 'Why must n₂ always be bigger than n₁?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="nn">${i + 1}</div><div class="q">${q}</div></div>`).join('');

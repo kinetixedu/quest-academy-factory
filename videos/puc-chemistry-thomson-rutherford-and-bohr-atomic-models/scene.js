@@ -159,7 +159,7 @@ const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', q:
   opts: ['158.7 pm', '476.1 pm', '211.6 pm', '52.9 pm'], right: 1, optW: 474, optY: 330, optH: 110, optFs: 36 });
 const so = PUC.solution($('#so'), [[K(`n^2 = \\frac{2.18 \\times 10^{-18}}{2.42 \\times 10^{-19}} = 9`)], [K(`n = 3`)], [K(`r_3 = 52.9 \\times 3^2`)], [K(`= \\textcolor{${C.ok}}{476.1\\,\\text{pm}}`)]], { y0: 100, dy: 112 });
 const tSo = [T0('A2'), wt('A2', 'So'), T0('A3'), T0('A4')];
-const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 496, title: 'Recap · three models of the atom', y0: 100, dy: 80, txt: [0, 1, 1, 1, 1],
+const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 520, title: 'Recap · three models of the atom', y0: 98, dy: 86, txt: [0, 1, 1, 1, 1],
   lines: [K(`E_n = -2.18 \\times 10^{-18} \\tfrac{1}{n^2}\\,\\text{J} \\qquad r_n = 52.9\\,n^2\\,\\text{pm}`), '<b>Thomson, 1898</b>: + sphere, electrons inside like watermelon seeds', '<b class="v">Rutherford, 1911</b>: α on gold foil, about 1 in 20,000 back · tiny + nucleus', '<b class="e">The problem</b>: a circling electron accelerates, radiates, spirals in (~10⁻⁸ s)', '<b class="n">Bohr, 1913</b>: fixed orbits · a jump takes or gives ΔE = hν · mvr = nh/2π'] });
 const YQ = ['Why did Thomson\'s model fail the gold foil test?', 'Why should Rutherford\'s atom collapse?', 'Which orbit of hydrogen has the lowest energy, and why?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="nn">${i + 1}</div><div class="q">${q}</div></div>`).join('');

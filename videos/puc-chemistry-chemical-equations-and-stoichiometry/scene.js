@@ -34,7 +34,7 @@ const OUT = id => T0(id) - 0.32;
 /* ---------- title card: three flames ---------- */
 const JOBS = [['flame', 'Candle', 'GOES OUT UNDER A GLASS', 'candle', 'RUNS OUT'], ['rocket', 'Rocket', 'CARRIES ITS OXYGEN', 'rocket', 'ON BOARD'], ['wind', 'Stove flame', 'USES UP THE AIR', 'stove', 'FROM AIR']];
 $('#jobs').innerHTML = JOBS.map(([ic, n, w], i) => `<div class="job" id="jb${i}" style="left:${390 + i * 390}px"><i>${M.icon(ic, 32, C.ac, 2.2)}</i><div class="jn">${n}</div><div class="jw">${w}</div></div>`).join('');
-const tJob = JOBS.map(j => wt('H1', j[3]));
+const tJob = [wt('H1', 'candle'), wt('H1', 'rocket'), wt('H1', 'space') + 0.25];
 /* ---------- H ---------- */
 $('#jrs').innerHTML = JOBS.map(([ic, n, w, , el], i) => `<div class="jr" id="jr${i}" style="top:${84 + i * 128}px"><i>${M.icon(ic, 34, C.ac, 2.2)}</i><div class="jn">${n}</div><div class="jw">${w}</div><div class="elw" id="ew${i}"><span>${el}</span><div class="el">O₂</div></div></div>`).join('');
 const KIT = [['flame', 'Natural gas'], ['flame', `Mostly methane ${K(CH4)}`]];
@@ -173,7 +173,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 13', topic: 'What if the oxyg
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tBrk - 0.2, 1.1, 760, 560], [tCO2 + 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tBrk - 0.2, 1.1, 960, 560], [tCO2 + 0.2, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};
@@ -225,7 +225,7 @@ M.on(t => {
     M.vis($('#pq'), t, tP1 + 0.1, out, { dy: 36, ...o }); shrink($('#pq'), $('#pqIn'), t, tP4 - 0.3);
     AN.forEach((_, i) => PUC.write($('#an' + i), t, tAn[i] - 0.1, 0.4));
     M.vis($('#brR'), t, wt('P2', 'Reactants') + 0.3, 1e9, { dy: 0 }); M.vis($('#brRl'), t, wt('P2', 'starting'), 1e9, { dy: 8 });
-    M.vis($('#brP'), t, wt('P3', 'Products') + 0.4, 1e9, { dy: 0 }); M.vis($('#brPl'), t, wt('P3', 'new'), 1e9, { dy: 8 });
+    M.vis($('#brP'), t, wt('P3', 'Products') + 0.4, 1e9, { dy: 0 }); M.vis($('#brPl'), t, wt('P3', 'right'), 1e9, { dy: 8 });
     M.vis($('#anA'), t, wt('P3', 'gives') - 0.1, 1e9, POP);
     M.vis($('#pNote'), t, wt('P4', 'brackets') - 0.1, 1e9, POP);
     M.vis($('#pw'), t, tP4 - 0.2, out, { dx: 60, dy: 0, ...o });

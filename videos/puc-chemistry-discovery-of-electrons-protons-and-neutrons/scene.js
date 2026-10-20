@@ -41,7 +41,7 @@ const tKit = [wt('H3', 'combs'), wt('H3', 'paper'), wt('H4', 'moved')];
 $('#mdefI').innerHTML = M.icon('atom', 28, '#fff', 2);
 const QR = [['e⁻', 'Electron', 'CHARGE · NEGATIVE', '−1', EC, wt('P3', 'electron')], ['p⁺', 'Proton', 'CHARGE · POSITIVE', '+1', PC, wt('P3', 'proton')], ['n', 'Neutron', 'CHARGE · NONE, NEUTRAL', '0', NC, wt('P4', 'neutron')]];
 $('#qrs').innerHTML = QR.map(([s, n, c, v, col], i) => `<div class="qr" id="qr${i}" style="top:${170 + i * 126}px"><div class="pb" style="background:${col}">${s}</div><div class="qt">${n}</div><div class="qs">${c}</div><div class="qk" style="color:${col}">${v}</div></div>`).join('');
-const TL = [['1886 · CANAL RAYS', 'Eugen Goldstein', 'POSITIVE RAYS', PC, 'scientists'], ['1897 · CATHODE RAYS', 'J. J. Thomson', 'ELECTRON, e/m', EC, 'caught'], ['1906-14 · OIL DROPS', 'R. A. Millikan', 'CHARGE e', GC, 'clever'], ['1932 · BERYLLIUM', 'James Chadwick', 'NEUTRON', NC, 'watched']];
+const TL = [['1886 · CANAL RAYS', 'Eugen Goldstein', 'POSITIVE RAYS', PC, 'scientists'], ['1897 · CATHODE RAYS', 'J. J. Thomson', 'ELECTRON, e/m', EC, 'caught'], ['1906-14 · OIL DROPS', 'R. A. Millikan', 'CHARGE e', GC, 'glass'], ['1932 · BERYLLIUM', 'James Chadwick', 'NEUTRON', NC, 'tubes']];
 { const host = $('#pw'); TL.forEach(([y, n, w, col], i) => host.insertAdjacentHTML('beforeend', `<div class="sci" id="tl${i}" style="top:${84 + i * 116}px;height:100px"><div class="sy" style="top:16px;color:${col}">${y}</div><div class="sn" style="top:42px;font-size:32px">${n}</div><div class="sw" style="top:50px">${w}</div></div>`)); }
 const tTl = TL.map(r => wt('P5', r[4]));
 
@@ -147,7 +147,7 @@ const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', q: `Wh
   opts: [K('1.76 \\times 10^{11}\\,\\text{kg}'), K('5.69 \\times 10^{-12}\\,\\text{kg}'), K('1.46 \\times 10^{-49}\\,\\text{kg}'), K('6.24 \\times 10^{18}\\,\\text{kg}')], right: 1, optW: 474, optY: 330, optH: 110, optFs: 34 });
 const so = PUC.solution($('#so'), [[K(`n = \\frac{1\\,\\text{C}}{1.602 \\times 10^{-19}\\,\\text{C}} = 6.24 \\times 10^{18}`)], [K(`m = n \\times ${me}`)], [K(`= 6.24 \\times 10^{18} \\times 9.109 \\times 10^{-31}`)], [K(`= \\textcolor{${C.ok}}{5.69 \\times 10^{-12}\\,\\text{kg}}`)]], { y0: 100, dy: 112 });
 const tSo = [T0('A2'), wt('A3', 'Multiply'), wt('A3', 'nine'), wt('A4', 'That')];
-const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 496, title: 'Recap · electrons, protons and neutrons', y0: 100, dy: 80, txt: [0, 1, 1, 1, 1],
+const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 520, title: 'Recap · electrons, protons and neutrons', y0: 98, dy: 86, txt: [0, 1, 1, 1, 1],
   lines: [K(`${me} = ${eS} \\div \\frac{${eS}}{${me}} = 9.109 \\times 10^{-31}\\,\\text{kg}`), `<b class="e">Electron e⁻</b>: cathode rays, bend to the + plate · Thomson, 1897`, `<b class="n">Proton p⁺</b>: canal rays, lightest from hydrogen · about 1836 × mₑ`, '<b>Neutron n</b>: no charge, mass slightly more than p⁺ · Chadwick, 1932', `<b class="g">Charge</b> comes in whole packets of e = 1.602 × 10⁻¹⁹ C · Millikan`] });
 const YQ = ['Which ray bends towards the positive plate, and why?', 'Who discovered the neutron, and how?', 'Why does finding the mass of an electron need two experiments?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="nn">${i + 1}</div><div class="q">${q}</div></div>`).join('');
