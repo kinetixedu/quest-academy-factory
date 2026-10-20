@@ -1,0 +1,41 @@
+# Brief: author PUC Chemistry episodes (Quest Academy) - for parallel subagents
+
+Repo: /home/claude/quest-academy-factory (node_modules, Kokoro voice, Playwright ready). Several agents work in this repo at the same time on different episode folders. The machine has 2 CPUs shared by everyone.
+Amjad (the client) rates harshly. Every episode must look made by the same hand as the reference: same world, components, spacing, motion, polish and depth. No AI slop: no filler, no generic layouts, no decorative junk, no emoji, no em/en dashes anywhere (plain hyphens only).
+
+## CPU rule (mandatory)
+Run every CPU-heavy command through the slot wrapper so at most 2 run at once:
+`CPU=/tmp/claude-0/-home-claude/e2cd1df4-98e6-569a-93b1-4b388df2cb07/scratchpad/cpu.sh`
+- voice: `KOKORO_DIR=~/.kokoro/kokoro-multi-lang-v1_0 $CPU python3 tools/tts.py videos/<slug>`
+- stills: `$CPU node tools/probe.js videos/<slug> <scratch>/<name>.png t1 ... t9` (BIG=1 env for full size)
+- thumbnail: `$CPU node tools/thumb.js videos/<slug>`
+Never run tools/build.sh, tools/render.js or tools/audio.py (GitHub Actions renders). Never git add/commit/push (the lead commits after review). Never edit engine/, tools/, worlds/, assets/, docs/, queue/, config/ or any folder that is not yours.
+Your scratch dir for sheets: /tmp/claude-0/-home-claude/e2cd1df4-98e6-569a-93b1-4b388df2cb07/scratchpad/<slug>/
+
+## Read first (fully, once)
+1. docs/series/PUC.md (standard, "Every PUC episode must have", ending order, puc-chemistry "Molecule bench").
+2. docs/series/puc-chemistry.md (bible: chapters, Amjad's feedback rules 1-6, cast, Molecule bench canon, episode list with ep number, chip, hook lead, slug).
+3. docs/series/puc-chemistry-overrides.md (look, colour-coding, motion, sound, exam rules).
+4. THE REFERENCE: videos/puc-chemistry-importance-and-scope-of-chemistry/ - script.txt, index.html, scene.js, meta.json, review/stills.png. Copy its index.html head, stage skeleton and CSS block, scene.js structure, helpers (mk, txt, fade, atomG, drawBond style bonds with electron pairs, measure, setBg), the header travel, PUC components (PUC.think, trap, where, mcq, solution, fcard, next, avatar, sweepRun), camera use, captions and outro call. Only content changes.
+5. worlds/puc/README.md (PUC.* API) and skim worlds/puc/puc.js, worlds/puc/puc.css. assets/illustrations/puc/README.md (cast faces + 4 hook scenes: scene-corridor, scene-kitchen, scene-bicycle, scene-study).
+
+## Make, per episode: videos/<slug>/ script.txt, index.html, scene.js, meta.json, review/stills.png
+1. **Facts first.** Read the NCERT section for the topic (ncert.nic.in PDFs are robots-blocked: use ciet.nic.in e-texts/moocs PDFs, NCERT exemplar, or reputable reproductions of the NCERT text) and check every constant, value, name and date against two sources. Chapter 2/3 values to use exactly as NCERT: e = 1.602 × 10^-19 C, me = 9.109 × 10^-31 kg, h = 6.626 × 10^-34 J s, c = 3.0 × 10^8 m/s, RH = 109,677 cm^-1 (2.18 × 10^-18 J), Bohr radius 52.9 pm, En = -2.18 × 10^-18 (Z^2/n^2) J. Verify anything else. If a topic is not in the current rationalised NCERT text but is in the NEET/JEE Main syllabus, keep the chip, follow the syllabus, and never say "NCERT says" for it. If a fact cannot be confirmed, leave it out.
+2. **script.txt** (`ID|pause_after_seconds|text`), **4:00 to 6:00** of voice (aim 5:00-5:40; trim if over 6:00). Order (same as the reference): curiosity opening in the first 10-15 s linking 2-3 everyday cases (title card stories) -> cast hook (lead per bible, one kitchen/corridor/bicycle/study scene card + face) -> definition/core idea built visually -> the Molecule bench live process (electrons, bonds, atoms, spectra, orbitals, periodic strip: whatever the topic needs, animated step by step, at least one real moving process) -> derivation or mechanism in small steps (each step its own line with pause 0.75, each term explained, units shown) -> one PUC.think pause (pause 3.2) after a side-by-side comparison (optionally a second) -> a navy page-turn statement line (pause 0.7) -> one fully worked example (numbers for numerical topics) -> exam trap (wrong struck, right ticks) -> where it is asked (E1) -> ORIGINAL JEE/NEET pattern MCQ `Q1` with pause 5.4 then `A1..A4` solution lines -> `F1` recap card line "Here is your recap. Screenshot this card." (pause 3.2) -> `Y1..Y4` "Can you answer these three questions without help?" -> `N1` "Next time: <curiosity teaser>? We find out in <next topic>." 12-year-old words, JEE/NEET substance. Explain every new word the moment it appears.
+   Then voice it (CPU wrapper) and read cues.json for line times.
+3. **index.html + scene.js**: start from copies of the reference files and replace content scenes. NCERT chip exactly as the bible row; subject pill MOLECULE BENCH; title = topic (accent word teal, keep it short enough to fit; the header travel scales it); `#sub` "Explained on one molecule bench" or a close variant. Rules:
+   - Every beat timed from M.t0/M.t1/M.wt (never hardcoded seconds). Something meaningful changes every 2-4 s; no dead frames; no sparse lone cards (grow a lone card from full width like the reference bench card, or give it a real sibling).
+   - Layout: safe x 160-1760, content y 260-860, header chip top 96, title top ~156, captions at top 944 never cover content, 32 px gutters (two cards = 784 px), >= 32 px padding, nothing overlaps or clips, top-right 140x110 clear. Single-line text nowrap and must fit (auto-fit in measure()).
+   - Colour-coding: one colour per thing, same in diagram, KaTeX (\textcolor), counter and recap (canon in the bible; add your own per episode and keep them consistent).
+   - Chemistry notation via KaTeX: \mathrm{} for symbols, subscripts, charges, arrows; units upright \text{}.
+   - Sounds: only the reference's (whoosh on the 3 page turns, PUC.mcqSfx). M.outro({}) at the end.
+   - NEXT strip label `NEXT · EP NN` (two digits) with the next topic from the bible and a curiosity teaser.
+4. **Exam segment honesty**: "Where it is asked" lights NO chips unless you verified that exam asks it from a cited past-paper analysis (cite it in your report); otherwise `on: []` and give only the type of question. MCQ: original, real exam level, 4 options, distractors from real mistakes; compute every number with python before writing it; the solution lines must match the script.
+5. **Check with stills until clean** (most important): sheets of 9 times covering every scene, mid-transitions, the process at several moments, think, statement, worked example, trap, MCQ (before, ring, answer), recap, questions, NEXT. LOOK at every sheet. Fix overlaps, clipping, misalignment, sparse or dead frames, captions over content, unreadable small text, console errors and "word not found" warnings (fix the word in scene.js). Expect 3-5 rounds. Final: an 18-still sheet saved to `videos/<slug>/review/stills.png`.
+6. **meta.json** like the reference: world "puc-chemistry", topic, series {"name": "PUC Chemistry", "ep": N}, title `<Hook-style title> Explained Simply | PUC Chemistry Class 11` (<= 70 chars, check with python), description (2 short paragraphs on the hook and what the viewer sees, "This is Episode N of our PUC Chemistry series.", "Made for PUC (Karnataka), CBSE Class 11, NEET and JEE Main students.", chapter timestamps m:ss from cues.json, "Next episode: ...", "Video by Quest Academy."), 12-14 specific tags, thumb {title 2-4 words, accent_word, frame_t where the signature visual is fully built}. Run thumb.js (CPU wrapper), LOOK at thumbnail.jpg, fix if weak, then delete videos/<slug>/thumb_frame.jpg and thumbnail.jpg.
+
+## Time
+Amjad wants this fast. Work efficiently (reuse the reference code heavily, batch your fixes), about 30 minutes per episode, but never ship a frame you have not looked at.
+
+## Report back (short, per episode)
+Ep + slug, voice duration, the process animated, facts verified (source), where-asked decision (and source if lit), MCQ answer, any compromise or unsure point.

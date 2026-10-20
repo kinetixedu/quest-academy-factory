@@ -32,21 +32,47 @@ Removed in rationalisation (do not use as chapter chips): Class 11 States of Mat
 - Constants (NCERT values): NA = 6.022 × 10^23 mol^-1, R = 8.314 J mol^-1 K^-1, F = 96487 C mol^-1 (NCERT uses 96487; check per chapter), h = 6.626 × 10^-34 J s. Verify each against the chapter before use.
 
 ## Episodes (order as given by Amjad)
-Batch 1 (given 20 Oct 2026): all Class 11, chip `CLASS 11 · CHEMISTRY · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY`.
-1 Importance and Scope of Chemistry · Class 11 · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY · hook Diya · `puc-chemistry-importance-and-scope-of-chemistry`
-2 Nature and Classification of Matter · Class 11 · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY · hook Diya · `puc-chemistry-nature-and-classification-of-matter`
-3 Physical and Chemical Properties · Class 11 · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY · hook Diya · `puc-chemistry-physical-and-chemical-properties`
-4 Measurement, SI Units and Uncertainty · Class 11 · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY · hook Aarav · `puc-chemistry-measurement-si-units-and-uncertainty`
-5 Laws of Chemical Combination · Class 11 · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY · hook Aarav · `puc-chemistry-laws-of-chemical-combination`
-6 Dalton's Atomic Theory · Class 11 · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY · hook Diya · `puc-chemistry-dalton-s-atomic-theory`
-7 Atomic Mass and Molecular Mass · Class 11 · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY · hook Diya · `puc-chemistry-atomic-mass-and-molecular-mass`
-8 Mole Concept and Molar Mass · Class 11 · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY · hook Aarav · `puc-chemistry-mole-concept-and-molar-mass`
-9 Percentage Composition · Class 11 · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY · hook Diya · `puc-chemistry-percentage-composition`
-10 Empirical and Molecular Formulae · Class 11 · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY · hook Diya · `puc-chemistry-empirical-and-molecular-formulae`
-11 Chemical Equations and Stoichiometry · Class 11 · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY · hook Aarav · `puc-chemistry-chemical-equations-and-stoichiometry`
-12 Limiting Reagent and Numerical Calculations · Class 11 · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY · hook Aarav · `puc-chemistry-limiting-reagent-and-numerical-calculations`
-Ep 12 was listed by Amjad as "Limiting reagent and numerical calculations (supplementary extension where applicable)": core limiting reagent is in NCERT Ch 1 (stoichiometry section; verify the section number before use); extra numericals beyond NCERT are labelled as practice, never as NCERT text.
-Reference episode (after Amjad's approval): videos/puc-chemistry-importance-and-scope-of-chemistry/ (Ep 1).
+All Class 11. Ep 1 Introduction to Chemistry was added by Amjad on 20 Oct 2026 as the series opener (what chemistry is, so viewers have the basic idea before anything else); Importance and Scope moved to Ep 2.
+1 Introduction to Chemistry · Class 11 · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY · hook Diya · `puc-chemistry-introduction-to-chemistry`
+2 Importance and Scope of Chemistry · Class 11 · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY · hook Diya · `puc-chemistry-importance-and-scope-of-chemistry`
+3 Nature and Classification of Matter · Class 11 · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY · hook Diya · `puc-chemistry-nature-and-classification-of-matter`
+4 Physical and Chemical Properties · Class 11 · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY · hook Diya · `puc-chemistry-physical-and-chemical-properties`
+5 Measurement, SI Units and Uncertainty · Class 11 · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY · hook Aarav · `puc-chemistry-measurement-si-units-and-uncertainty`
+6 Laws of Chemical Combination · Class 11 · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY · hook Aarav · `puc-chemistry-laws-of-chemical-combination`
+7 Dalton's Atomic Theory · Class 11 · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY · hook Diya · `puc-chemistry-dalton-s-atomic-theory`
+8 Atomic Mass and Molecular Mass · Class 11 · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY · hook Diya · `puc-chemistry-atomic-mass-and-molecular-mass`
+9 Mole Concept and Molar Mass · Class 11 · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY · hook Aarav · `puc-chemistry-mole-concept-and-molar-mass`
+10 Percentage Composition · Class 11 · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY · hook Diya · `puc-chemistry-percentage-composition`
+11 Empirical and Molecular Formulae · Class 11 · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY · hook Diya · `puc-chemistry-empirical-and-molecular-formulae`
+12 Chemical Equations and Stoichiometry · Class 11 · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY · hook Aarav · `puc-chemistry-chemical-equations-and-stoichiometry`
+13 Limiting Reagent and Numerical Calculations · Class 11 · CH 1 SOME BASIC CONCEPTS OF CHEMISTRY · hook Aarav · `puc-chemistry-limiting-reagent-and-numerical-calculations`
+14 Discovery of Electrons, Protons and Neutrons · Class 11 · CH 2 STRUCTURE OF ATOM · hook Diya · `puc-chemistry-discovery-of-electrons-protons-and-neutrons`
+15 Thomson, Rutherford and Bohr Atomic Models · Class 11 · CH 2 STRUCTURE OF ATOM · hook Diya · `puc-chemistry-thomson-rutherford-and-bohr-atomic-models`
+16 Atomic Spectra and Hydrogen Spectrum · Class 11 · CH 2 STRUCTURE OF ATOM · hook Diya · `puc-chemistry-atomic-spectra-and-hydrogen-spectrum`
+17 Electromagnetic Radiation and Planck's Quantum Theory · Class 11 · CH 2 STRUCTURE OF ATOM · hook Aarav · `puc-chemistry-electromagnetic-radiation-and-planck-s-quantum-theory`
+18 Photoelectric Effect and Dual Nature of Matter · Class 11 · CH 2 STRUCTURE OF ATOM · hook Aarav · `puc-chemistry-photoelectric-effect-and-dual-nature-of-matter`
+19 de Broglie Relation · Class 11 · CH 2 STRUCTURE OF ATOM · hook Aarav · `puc-chemistry-de-broglie-relation`
+20 Heisenberg Uncertainty Principle · Class 11 · CH 2 STRUCTURE OF ATOM · hook Aarav · `puc-chemistry-heisenberg-uncertainty-principle`
+21 Quantum Mechanical Model · Class 11 · CH 2 STRUCTURE OF ATOM · hook Aarav · `puc-chemistry-quantum-mechanical-model`
+22 Orbitals and Quantum Numbers · Class 11 · CH 2 STRUCTURE OF ATOM · hook Diya · `puc-chemistry-orbitals-and-quantum-numbers`
+23 Shapes of s, p and d Orbitals · Class 11 · CH 2 STRUCTURE OF ATOM · hook Diya · `puc-chemistry-shapes-of-s-p-and-d-orbitals`
+24 Aufbau Principle, Pauli Exclusion Principle and Hund's Rule · Class 11 · CH 2 STRUCTURE OF ATOM · hook Diya · `puc-chemistry-aufbau-principle-pauli-exclusion-principle-and-hund-s-rule`
+25 Electronic Configurations · Class 11 · CH 2 STRUCTURE OF ATOM · hook Diya · `puc-chemistry-electronic-configurations`
+26 Development of Periodic Classification · Class 11 · CH 3 CLASSIFICATION OF ELEMENTS AND PERIODICITY IN PROPERTIES · hook Aarav · `puc-chemistry-development-of-periodic-classification`
+27 Modern Periodic Law · Class 11 · CH 3 CLASSIFICATION OF ELEMENTS AND PERIODICITY IN PROPERTIES · hook Diya · `puc-chemistry-modern-periodic-law`
+28 Structure of the Modern Periodic Table · Class 11 · CH 3 CLASSIFICATION OF ELEMENTS AND PERIODICITY IN PROPERTIES · hook Diya · `puc-chemistry-structure-of-the-modern-periodic-table`
+29 Periods, Groups and Blocks · Class 11 · CH 3 CLASSIFICATION OF ELEMENTS AND PERIODICITY IN PROPERTIES · hook Diya · `puc-chemistry-periods-groups-and-blocks`
+30 Electronic Configuration and Position of Elements · Class 11 · CH 3 CLASSIFICATION OF ELEMENTS AND PERIODICITY IN PROPERTIES · hook Diya · `puc-chemistry-electronic-configuration-and-position-of-elements`
+31 Atomic and Ionic Radii · Class 11 · CH 3 CLASSIFICATION OF ELEMENTS AND PERIODICITY IN PROPERTIES · hook Diya · `puc-chemistry-atomic-and-ionic-radii`
+32 Ionization Enthalpy · Class 11 · CH 3 CLASSIFICATION OF ELEMENTS AND PERIODICITY IN PROPERTIES · hook Aarav · `puc-chemistry-ionization-enthalpy`
+33 Electron Gain Enthalpy · Class 11 · CH 3 CLASSIFICATION OF ELEMENTS AND PERIODICITY IN PROPERTIES · hook Diya · `puc-chemistry-electron-gain-enthalpy`
+34 Electronegativity · Class 11 · CH 3 CLASSIFICATION OF ELEMENTS AND PERIODICITY IN PROPERTIES · hook Diya · `puc-chemistry-electronegativity`
+35 Valency and Oxidation States · Class 11 · CH 3 CLASSIFICATION OF ELEMENTS AND PERIODICITY IN PROPERTIES · hook Diya · `puc-chemistry-valency-and-oxidation-states`
+36 Periodic Trends Across Periods and Down Groups · Class 11 · CH 3 CLASSIFICATION OF ELEMENTS AND PERIODICITY IN PROPERTIES · hook Aarav · `puc-chemistry-periodic-trends-across-periods-and-down-groups`
+37 Exceptions and Anomalous Periodic Behaviour · Class 11 · CH 3 CLASSIFICATION OF ELEMENTS AND PERIODICITY IN PROPERTIES · hook Diya · `puc-chemistry-exceptions-and-anomalous-periodic-behaviour`
+Ep 13 "Limiting reagent and numerical calculations (supplementary extension where applicable)": core limiting reagent is NCERT Ch 1; extra numericals beyond NCERT are labelled as practice, never as NCERT text.
+Ep 37 is the last of this batch: NEXT strip teases Chapter 4, Chemical Bonding and Molecular Structure.
+Reference episode: videos/puc-chemistry-importance-and-scope-of-chemistry/ (Ep 2, style approved by Amjad's go-ahead on 20 Oct 2026).
 
 ## Canon added by episodes
 (lead adds recurring facts reported by subagents here)

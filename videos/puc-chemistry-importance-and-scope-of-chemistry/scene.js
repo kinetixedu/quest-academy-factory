@@ -191,7 +191,7 @@ const fc = PUC.fcard($('#sF'), { x: 410, y: 262, w: 1100, h: 470, title: 'Recap 
 const YQ = ['Name two drugs that chemistry gave to cancer treatment.', 'Why can\'t we balance an equation by changing H₂ into H₃?', 'Why must the total mass be the same on both sides of a reaction?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="nn">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
-const nx = PUC.next($('#sF'), { label: 'NEXT · EP 02', topic: 'Is air a compound or a mixture? Nature and Classification of Matter', y: 764 });
+const nx = PUC.next($('#sF'), { label: 'NEXT · EP 03', topic: 'Is air a compound or a mixture? Nature and Classification of Matter', y: 764 });
 
 /* ---------- helpers ---------- */
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
