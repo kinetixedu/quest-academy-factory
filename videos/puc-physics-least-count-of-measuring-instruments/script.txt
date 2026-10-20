@@ -1,0 +1,56 @@
+H1|0.4|A ruler, a kitchen scale, a stopwatch. Each has a smallest step.
+H2|0.45|So, a puzzle. Can a ruler measure something thinner than its smallest mark?
+H3|0.35|Aarav tries it. He holds his ruler against one bicycle spoke.
+H4|0.5|It sits between the two and three millimetre marks. Two point one? Two point five? The ruler cannot say.
+H5|0.65|By the end, you will read it to one hundredth of a millimetre.
+P1|0.35|The ruler's problem has a name. Least count.
+P2|0.45|It is the smallest value an instrument can measure correctly.
+P3|0.4|On a ruler, the smallest gap between two marks is one millimetre. So its least count is one millimetre.
+P4|0.45|A stopwatch showing hundredths: zero point zero one second.
+P5|0.65|A smaller least count means a finer measurement.
+S1|0.35|To beat the ruler, add a second, sliding scale. The vernier callipers.
+S2|0.35|The main scale has marks one millimetre apart.
+S3|0.45|The sliding vernier scale has ten marks, squeezed into nine millimetres.
+S4|0.45|Close the jaws on the spoke. The vernier zero stops just after two millimetres.
+S5|0.45|The third vernier mark lines up exactly with a main scale mark.
+S6|0.6|So the reading is two millimetres, plus three tenths. Two point three millimetres.
+S7|0.45|Slow replay. Each time the jaw opens one tenth of a millimetre, the matching mark moves one step.
+S8|0.65|On the graph, the ruler jumps in one millimetre steps. The vernier, in steps ten times smaller.
+D1|0.35|Why one tenth? Let's work it out, one step at a time.
+D2|0.75|Step one. Ten vernier divisions equal nine main scale divisions.
+D3|0.75|Step two. So one vernier division is zero point nine millimetre.
+D4|0.75|Step three. The least count is the difference. One main scale division, minus one vernier division.
+D5|0.75|Step four. One minus zero point nine is zero point one millimetre.
+D6|0.7|Reading equals main scale reading, plus the matching mark number times the least count.
+T1|0.7|Remember this. You can never read finer than the least count of your instrument.
+K1|0.45|Side by side. The ruler's least count is one millimetre. The spoke reads only between two and three.
+K2|0.6|The vernier's least count is zero point one millimetre. The same spoke reads two point three.
+K3|3.2|Now you try. Can a millimetre ruler tell a two point three millimetre spoke from a two point four? Pause and decide.
+K4|0.65|No! Both sit between the same two marks. Zero point one millimetre is below the ruler's least count.
+G1|0.35|For finer work, use a screw gauge.
+G2|0.45|One full turn of the cap moves the screw a fixed distance, the pitch. Here, half a millimetre.
+G3|0.4|The cap has fifty equal divisions around its edge.
+G4|0.75|So one division moves the screw by half a millimetre over fifty. Zero point zero one millimetre.
+G5|0.65|Least count equals the pitch, divided by the number of circular scale divisions.
+J1|0.45|Side by side. The vernier reads to zero point one millimetre. The screw gauge, to zero point zero one.
+J2|3.2|Your turn. To measure one sheet of paper, about zero point one millimetre thick, which would you pick?
+J3|0.65|The screw gauge! On the vernier, the sheet is just one least count. The screw gauge splits it into ten.
+W1|0.35|Worked example. The spoke goes in the screw gauge.
+W2|0.5|Pitch zero point five millimetre, fifty divisions. The main scale shows two millimetres, and division thirty one lines up.
+W3|0.75|Least count, zero point five over fifty. Zero point zero one millimetre.
+W4|0.75|Circular part, thirty one times zero point zero one. Zero point three one millimetre.
+W5|0.65|Total, two point three one millimetres. One more digit than the vernier.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students write the vernier least count as one, divided by the number of vernier divisions.
+X3|0.65|That works only when a main scale division is one millimetre. Always use one main scale division, divided by N. Half a millimetre over twenty five is zero point zero two, not zero point zero four.
+E1|0.6|Where is this asked? JEE Main and NEET. Find the least count, or the reading, of a vernier or screw gauge.
+Q1|5.4|Exam level now. Twenty vernier divisions match nineteen half millimetre divisions. Main scale twelve point five, eighth mark coincides. Pause and solve.
+A1|0.5|The answer is B. Twelve point seven zero millimetres.
+A2|0.5|Least count is zero point five divided by twenty. Zero point zero two five millimetre.
+A3|0.6|Eight times that is zero point two. Add twelve point five. Twelve point seven zero millimetres.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why can a ruler not read a two point three millimetre spoke?
+Y3|0.9|Two. Ten vernier divisions equal nine millimetres. What is the least count?
+Y4|1.1|Three. Pitch one millimetre, one hundred divisions. What is the least count?
+N1|0.3|Next time: one glass of water, measured five times, gives five numbers. Which is right? Absolute, relative and percentage errors.

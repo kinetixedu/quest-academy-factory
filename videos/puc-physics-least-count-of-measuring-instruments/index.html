@@ -1,0 +1,158 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 14 - Least Count of Measuring Instruments</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 14: least count (Motion notebook, measuring bench: ruler, vernier, screw gauge) ===== */
+:root{--u:#7A4FE0;--f:#D9731A}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.u{color:var(--u)}.a{color:var(--ac)}
+.svgF{position:absolute;left:0;top:0}
+/* title card instruments */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .jv{position:absolute;right:28px;top:30px;font:600 46px/1 'IBM Plex Mono';white-space:nowrap}
+.gq{position:absolute;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;font:600 28px 'IBM Plex Mono';white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+/* definition */
+#defn{position:absolute;left:36px;top:84px;width:712px;font:700 40px/1.25 Poppins;letter-spacing:-.01em}
+.ir{position:absolute;left:36px;width:712px;height:84px;border-radius:14px;background:var(--soft)}
+.ir i{position:absolute;left:16px;top:14px;width:56px;height:56px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.ir .in{position:absolute;left:92px;top:24px;font:600 28px Poppins;white-space:nowrap}
+.ir .il{position:absolute;right:24px;top:20px;font:600 36px/1 'IBM Plex Mono';white-space:nowrap;color:var(--ac)}
+.ir .ik{position:absolute;right:24px;top:58px;font:600 14px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* readout */
+.ro2{position:absolute;left:36px;top:76px;width:712px;display:grid;grid-template-columns:1fr auto auto;column-gap:16px;row-gap:8px;align-items:baseline}
+.ro2 .k{font:600 24px Poppins;white-space:nowrap}
+.ro2 .v{font:600 34px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .un{font:400 22px 'IBM Plex Mono';color:var(--mute);white-space:nowrap;width:44px}
+.ro2 .tot{border-top:2px solid var(--line);padding-top:6px}
+.smo{position:absolute;display:inline-flex;align-items:center;height:40px;padding:0 14px;border-radius:8px;background:var(--red);color:#fff;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.mag{position:absolute;display:inline-flex;align-items:center;height:34px;padding:0 12px;border-radius:8px;background:var(--soft);color:var(--mute);font:600 16px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:110px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:38px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:60px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+.fbox{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--ac2);display:flex;align-items:center;padding-left:28px;font-size:38px;white-space:nowrap;box-sizing:border-box}
+/* side by side */
+.sbr{position:absolute;left:36px;top:470px;height:72px;padding:0 24px;border-radius:14px;display:flex;align-items:center;gap:14px;font:600 30px Poppins;white-space:nowrap}
+.sbr b{font:600 34px 'IBM Plex Mono'}
+/* sheet of paper steps */
+.pstep{position:absolute;height:44px;border-radius:6px}
+/* worked */
+#wq{position:absolute;left:36px;top:70px;font:600 28px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:32px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font-size:25px}
+#mq .mq{font-size:30px}
+#sF .fcard .fl{font-size:42px}
+#sF .fcard .fl.txt{font-size:32px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 32px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 1 UNITS AND MEASUREMENT</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Least <span class="acc">Count</span></div>
+    <div id="sub">How fine can an instrument read?</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: smallest steps + the spoke puzzle -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">EVERY INSTRUMENT HAS A SMALLEST STEP</div><div class="ghost" id="exH" style="right:36px;top:18px">EXAMPLE FIGURES</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Can it measure below that step?</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV'S BICYCLE · ONE SPOKE</div>
+        <div id="hdF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg">
+        <svg id="hzS" class="svgF" width="784" height="580"></svg>
+        <div id="gqs"></div></div>
+    </div>
+
+    <!-- P: what least count is -->
+    <div id="sP">
+      <div class="card full" id="pq"><div class="lbl" style="left:36px;top:30px">LEAST COUNT</div><div id="defn">The smallest value an instrument can measure correctly</div><div id="irs"></div>
+        <div class="pillp ink" id="pqP" style="left:36px;top:490px">Smaller least count = finer measurement</div></div>
+      <div class="card rf" id="pm"><div class="lbl" style="left:36px;top:30px">ZOOM INTO A RULER</div><div class="mag" id="pmM" style="right:36px;top:22px">MAGNIFIED</div><svg id="pmS" class="svgF" width="784" height="580"></svg></div>
+    </div>
+
+    <!-- S: vernier bench (sim + readout + graph) -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">VERNIER CALLIPERS · ONE SPOKE</div><div class="mag" id="simM" style="right:36px;top:22px">MAGNIFIED</div>
+        <svg id="simS" class="svgF" width="784" height="580"></svg><div class="smo" id="smo" style="left:36px;top:70px">SLOW-MO REPLAY · 0.25x</div></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro2" id="roG"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">READING VS JAW OPENING</div><svg id="grS" class="svgF" width="784" height="274"></svg></div>
+    </div>
+
+    <!-- D: why one tenth -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">LEAST COUNT OF A VERNIER · 4 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">10 VERNIER DIVISIONS = 9 MAIN DIVISIONS</div><svg id="drS" class="svgF" width="784" height="580"></svg><div class="fbox" id="dF" style="top:450px"></div></div>
+    </div>
+
+    <!-- K: ruler vs vernier + think -->
+    <div id="sK">
+      <div class="card full" id="kb"><div class="lbl" style="left:36px;top:30px">RULER · LEAST COUNT 1 mm</div><svg id="kbS" class="svgF" width="784" height="580"></svg>
+        <div class="sbr" id="kbC" style="background:var(--redBg);color:var(--red)">Reads: between <b>2</b> and <b>3 mm</b></div></div>
+      <div class="card rf" id="kd"><div class="lbl" style="left:36px;top:30px">VERNIER · LEAST COUNT 0.1 mm</div><svg id="kdS" class="svgF" width="784" height="580"></svg>
+        <div class="sbr" id="kdC" style="background:var(--okBg);color:#1F6B3F">Reads: <b>2.3 mm</b></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- G: screw gauge -->
+    <div id="sG">
+      <div class="card full" id="gs"><div class="lbl" style="left:36px;top:30px">SCREW GAUGE</div><div class="mag" id="gsM" style="right:36px;top:22px">MAGNIFIED</div><svg id="gsS" class="svgF" width="784" height="580"></svg><div class="smo" id="gsmo" style="left:36px;top:70px">SLOW-MO · ONE DIVISION</div></div>
+      <div class="card rt" id="gro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro2" id="groG"></div></div>
+      <div class="card rb" id="ggr"><div class="lbl" style="left:36px;top:30px">SCREW MOVES VS TURNS OF THE CAP</div><svg id="ggS" class="svgF" width="784" height="274"></svg></div>
+      <div class="card" id="gF" style="left:976px;top:576px;width:784px;height:274px"><div class="lbl" style="left:36px;top:30px">LEAST COUNT OF A SCREW GAUGE</div><div class="fx" id="gFx" style="left:36px;top:96px;font-size:42px"></div></div>
+    </div>
+
+    <!-- J: vernier vs screw gauge + think -->
+    <div id="sJ">
+      <div class="card full" id="jv"><div class="lbl" style="left:36px;top:30px">VERNIER · 0.1 mm STEPS</div><svg id="jvS" class="svgF" width="784" height="580"></svg></div>
+      <div class="card rf" id="js"><div class="lbl" style="left:36px;top:30px">SCREW GAUGE · 0.01 mm STEPS</div><svg id="jsS" class="svgF" width="784" height="580"></svg></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">Pitch 0.5 mm, 50 divisions. Main scale: 2 mm. Division 31 on the line. How thick is the spoke?</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">SCREW GAUGE · THE SPOKE</div><div class="mag" id="wrM" style="right:36px;top:22px">MAGNIFIED</div><svg id="wrS" class="svgF" width="784" height="580"></svg></div>
+    </div>
+
+    <!-- X: exam trap + where -->
+    <div id="sX"><div class="card red" id="trap"></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap + questions + NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Never finer than the <span class="acc">least count</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
