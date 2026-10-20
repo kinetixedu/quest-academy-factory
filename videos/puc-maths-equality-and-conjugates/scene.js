@@ -174,7 +174,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 42', topic: 'How far, and whi
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tc2 - 0.3, 1.06, 1100, 560], [T1('C7') + 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tc2 - 0.3, 1.05, 1010, 560], [T1('C7') + 0.2, 1, 960, 540]]);
 
 /* ---------- frame ---------- */
 M.on(t => {
@@ -295,7 +295,7 @@ M.on(t => {
     M.vis($('#wl'), t, tW1 + 0.05, out, { dx: -60, dy: 0, ...o });
     M.vis($('#wq'), t, T0('W2') - 0.1, 1e9, { dy: 14 });
     wsol(t, tW1, tW);
-    M.vis($('#wr'), t, T0('W3') + 0.2, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#wr'), t, tPr[0] - 0.5, out, { dx: 60, dy: 0, ...o });
     PR.forEach((_, i) => { const el = $('#pr' + i); M.vis(el, t, tPr[i] - 0.2, 1e9, { dy: 16 }); PUC.write(el.querySelector('.pf'), t, tPr[i], 0.6); PUC.write(el.querySelector('.pa'), t, tPr[i] + (i === 2 ? 1.2 : 0.9), 0.5); });
     M.vis($('#wRes'), t, tW[4] + 0.2, 1e9, POP);
   }

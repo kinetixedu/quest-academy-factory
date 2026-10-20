@@ -65,7 +65,7 @@ $('#nbs').innerHTML = NB.map(([id, s, n, c, x, y, w, h]) => `<div class="nb" id=
   `<div class="nl" id="nlI" style="left:552px;top:150px;color:${IC}">Irrational</div>` +
   `<div class="ne" id="neN" style="left:116px;top:360px;color:${NC}">1, 2, 3, ...</div>` +
   `<div class="ne" id="neZ" style="left:290px;top:300px;color:${ZC};line-height:1.5">0<br>-1<br>-7</div>` +
-  `<div class="ne" id="neQ" style="left:410px;top:240px;line-height:1.5">${K(col(QC, '\\tfrac{1}{2}'))}<br>${K(col(QC, '-\\tfrac{3}{4}'))}</div>` +
+  `<div class="ne" id="neQ" style="left:410px;top:240px;line-height:1.5">${K(col(QC, '\\dfrac{1}{2}'))}<br>${K(col(QC, '-\\dfrac{3}{4}'))}</div>` +
   `<div class="ne" id="neI" style="left:560px;top:220px;line-height:1.7;font-size:30px">${K(col(IC, '\\sqrt{2}'))}<br>${K(col(IC, '\\pi'))}</div>`;
 const tNb = { N: wt('B2', 'Natural'), Z: wt('B3', 'integers'), Q: wt('B4', 'rational'), I: wt('B5', 'irrational'), R: wt('B6', 'real') };
 const tNest = [wt('B7', 'natural'), wt('B7', 'integer'), wt('B7', 'rational'), wt('B7', 'real')];
@@ -201,7 +201,7 @@ M.on(t => {
     M.rise($('#lgT'), t, T0('M2') + 0.05, { st: 0.06, sp: M.HEAVY });
     const lw = $('#lgT b'); lw.style.background = mix('#FFFFFF', C.ac2, M.io((t - wt('M2', 'language')) / 0.3)); lw.style.borderRadius = '8px';
     M.rise($('#lgS'), t, wt('M4', 'Learn'), { st: 0.04 });
-    M.vis($('#pt'), t, wt('M2', 'patterns') - 0.6, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#pt'), t, tM1 + 0.3, out, { dx: 60, dy: 0, ...o });
     let k = 0; tPk.forEach((tt, i) => { if (t >= tt) k = i + 1; });
     cells.forEach(cl => M.vis(cl.el, t, tPk[cl.k] + 0.04 * (cl.k), 1e9, { dy: 0, sc: 0.6, sp: M.POP, fade: 0.08 }));
     M.setT($('#pCnt'), k ? SUMS[k - 1] : '');

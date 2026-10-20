@@ -130,10 +130,10 @@ const bS = $('#bS'), BX0 = 130, BX1 = 1000;
 const bL = [['TONE 1', 116, CB], ['TONE 2', 186, '#5F86DB'], ['SUM', 386, C.ink]].map(([s, y, col]) => txt(bS, 36, y, s, { 'font-size': 18, fill: col, 'font-weight': 600, 'letter-spacing': 1.5 }));
 const bw1 = mk(bS, 'path', { d: wpath(t => Math.cos(12 * t), BX0, BX1, 0, T4, 110, 22), fill: 'none', stroke: CB, 'stroke-width': 2.2, 'stroke-linejoin': 'round' });
 const bw2 = mk(bS, 'path', { fill: 'none', stroke: LB, 'stroke-width': 2.2, 'stroke-linejoin': 'round' });
-mk(bS, 'line', { x1: BX0, y1: 380, x2: BX1, y2: 380, stroke: C.line, 'stroke-width': 1.5 });
+mk(bS, 'line', { x1: BX0, y1: 386, x2: BX1, y2: 386, stroke: C.line, 'stroke-width': 1.5 });
 const bws = mk(bS, 'path', { fill: 'none', stroke: C.ink, 'stroke-width': 2.6, 'stroke-linejoin': 'round' });
 const ben = [1, -1].map(() => mk(bS, 'path', { fill: 'none', stroke: HDC, 'stroke-width': 4, 'stroke-dasharray': '12 9' }));
-const bTag = txt(bS, BX1, 254, '', { 'text-anchor': 'end', 'font-size': 18, fill: HDC, 'font-weight': 600 });
+const bTag = txt(bS, BX1, 230, '', { 'text-anchor': 'end', 'font-size': 18, fill: HDC, 'font-weight': 600 });
 const tb1 = wt('B5', 'pull'), tb1e = wt('B6', 'faster') + 0.3, tb2 = wt('B6', 'no') - 0.3;
 const bOf = t => 11 - 2 * M.io((t - tb1) / Math.max(1, tb1e - tb1)) + 3 * M.io((t - tb2) / 0.9);
 let bLast = null;
@@ -142,8 +142,8 @@ const setB = b => {
   if (b === bLast) return; bLast = b;
   const s = (12 + b) / 2, d = (12 - b) / 2;
   attr(bw2, 'd', wpath(t => Math.cos(b * t), BX0, BX1, 0, T4, 180, 22));
-  attr(bws, 'd', wpath(t => Math.cos(12 * t) + Math.cos(b * t), BX0, BX1, 0, T4, 380, 80, 1100));
-  ben.forEach((p, i) => attr(p, 'd', wpath(t => (i ? -2 : 2) * Math.cos(d * t), BX0, BX1, 0, T4, 380, 80, 300)));
+  attr(bws, 'd', wpath(t => Math.cos(12 * t) + Math.cos(b * t), BX0, BX1, 0, T4, 386, 70, 1100));
+  ben.forEach((p, i) => attr(p, 'd', wpath(t => (i ? -2 : 2) * Math.cos(d * t), BX0, BX1, 0, T4, 386, 70, 300)));
   $('#bT2').innerHTML = K(`${cs}(${nf(b)}\\,t)`); $('#bGap').textContent = nf(12 - b);
   $('#bF').innerHTML = K(`2\\,${cs}(${hs(nf(s) + '\\,t')})\\,${cs}(${hd(nf(d) + '\\,t')})`);
   M.setT(bTag, d < 0.01 ? 'no wobble: the gap is zero' : 'the wobble: cos of the half difference');
@@ -155,7 +155,7 @@ $('#slA').innerHTML = K(`${cs} x + ${cs} y`); $('#slB').innerHTML = K(`= 2\\,${c
 const PS = [`2\\,${cs} ${A}\\,${cs} ${B} = ${cs}(${A}+${B}) + ${cs}(${A}-${B})`, `-2\\,${sn} ${A}\\,${sn} ${B} = ${cs}(${A}+${B}) - ${cs}(${A}-${B})`,
   `2\\,${sn} ${A}\\,${cs} ${B} = ${sn}(${A}+${B}) + ${sn}(${A}-${B})`, `2\\,${cs} ${A}\\,${sn} ${B} = ${sn}(${A}+${B}) - ${sn}(${A}-${B})`];
 $('#srR').innerHTML = PS.map((f, i) => `<div class="pr" id="ps${i}" style="top:${92 + i * 86}px">${K(f)}</div>`).join('');
-const th1 = PUC.think($('#th1'), { q: `${K(`2\\,${sn} 3x\\,${cs} x`)} is a product. Which way do we go?`, opts: ['Product to sum', 'Sum to product'], right: 0,
+const th1 = PUC.think($('#th1'), { q: `Which way for ${K(`2\\,${sn} 3x\\,${cs} x`)}?`, opts: ['Product to sum', 'Sum to product'], right: 0,
   why: `Product to sum: ${K(`2\\,${sn} A\\,${cs} B = ${sn}(A+B) + ${sn}(A-B)`)}, so it becomes ${K(`${sn} 4x + ${sn} 2x`)}` });
 
 /* ---------- statement ---------- */
