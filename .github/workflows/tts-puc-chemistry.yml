@@ -2,7 +2,7 @@ name: Cloud voice (PUC Chemistry)
 run-name: tts ${{ github.event.inputs.tag }}
 
 # Voices one script in the cloud so the 2-CPU authoring box is free for stills.
-# Input: the slug, a unique tag and the script text (base64). Output artifact: cues.json + cues.js.
+# Input: the slug, a unique tag and the script text (base64). Output: cues.json + cues.js on a short-lived branch tts/<tag> (the caller reads it and deletes the branch).
 # Owned by the PUC Chemistry stream; touches nothing in the repo.
 on:
   workflow_dispatch:
@@ -12,7 +12,7 @@ on:
       script_b64: { description: 'base64 of script.txt', required: true }
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   tts:
@@ -40,10 +40,10 @@ jobs:
         run: |
           mkdir -p "out/$SLUG" && printf '%s' "$B64" | base64 -d > "out/$SLUG/script.txt"
           python3 tools/tts.py "out/$SLUG"
-      - uses: actions/upload-artifact@v4
-        with:
-          name: cues
-          path: |
-            out/${{ github.event.inputs.slug }}/cues.json
-            out/${{ github.event.inputs.slug }}/cues.js
-          retention-days: 2
+      - name: Push cues to tts/<tag>
+        env: { SLUG: '${{ github.event.inputs.slug }}', TAG: '${{ github.event.inputs.tag }}' }
+        run: |
+          mkdir pub && cp "out/$SLUG/cues.json" "out/$SLUG/cues.js" pub/ && cd pub
+          git init -q -b "tts/$TAG" && git config user.name quest-factory-bot && git config user.email factory@users.noreply.github.com
+          git add -A && git commit -qm "cues $SLUG"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" "tts/$TAG"
