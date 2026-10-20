@@ -76,3 +76,6 @@ Reference episode: videos/puc-chemistry-importance-and-scope-of-chemistry/ (Ep 2
 
 ## Canon added by episodes
 (lead adds recurring facts reported by subagents here)
+- Colours: O violet #7A4FE0; coefficients and n gold #B7791F; Cl blue #2F6FEB (Ep 11); limiting reagent = red chip, excess = ink chip on the counter (Ep 13).
+- Molarity written M or mol L^-1; NCERT example 4 g NaOH in 250 mL = 0.4 M (Ep 12). Gas volumes at STP 22.7 L mol^-1 (NCERT, 1 bar).
+- Ep 13 practice numericals are labelled PRACTICE · NOT FROM NCERT on screen and in the voice.
