@@ -20,6 +20,7 @@ def main(folder):
                 blocks.append([t0, max(t1, t0 + 0.9), text]); cur = []
     out = []
     for n, (a, b, text) in enumerate(blocks, 1):
+        text = re.sub(r'\b([A-Z]) (?=[A-Z]\b)', r'\1', text)   # spelled-out acronyms: 'P R' -> 'PR'
         if len(text) > 42:   # split into two balanced lines
             ws = text.split(); best = min(range(1, len(ws)), key=lambda k: abs(len(' '.join(ws[:k])) - len(' '.join(ws[k:]))))
             text = ' '.join(ws[:best]) + '\n' + ' '.join(ws[best:])
