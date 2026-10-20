@@ -63,3 +63,10 @@ Eyebrow chip: `EP NN · MARKETING MANAGEMENT`. Title format: `<Hook-style title>
 - Paper packs instead of plastic (₹4 vs ₹2 a pack, illustrative); price stays ₹120.
 - Early on Arjun delivers to Mrs. Rao's door by 7:00 AM; Nani adds handwritten notes; Mrs. Rao recommends Laddoo Lab to two other mothers.
 - Nani buys jaggery in bulk straight from a farmer (jaggery went ₹60 to ₹80 a kilo). The pack says "made with ragi millet". A new bakery near the college is a rival. Parents pay by UPI.
+
+## Canon added by Eps 27-31
+- Three channels: 10 local shops (Arjun picked them from 12 near schools), a supermarket chain, Dev's online shop. Shops get a margin, a display stand and fresh packs every Monday; Arjun counts sales on Saturday. Fixes: one price everywhere; nearby online orders go to the local shop. Supermarket packs: no preservatives, smaller weekly deliveries.
+- First campaign line: "the healthy sweet for tiffin boxes"; goal 1,000 aware parents in a month.
+- Festive gift box launches for Diwali. Festive offer: buy two 6-packs, get a mini gift pack free, for two weeks. Free tastes at three shops; online coupon code.
+- Mr. Shetty owns the busiest shop next to a big school; it becomes Shop 11; Laddoo Lab takes back unsold packs.
+- CITY NEWS (made-up paper) runs a story with Nani's photo. Millet tasting at a school fair; Nani's free healthy-snack class for parents; stale-pack complaint answered the same day.
