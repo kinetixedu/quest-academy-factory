@@ -213,11 +213,11 @@ M.on(t => {
     M.vis($('#pq'), t, tP1 + 0.1, out, { dx: -60, dy: 0, ...o });
     M.vis($('#mdef'), t, wt('P2', 'picture') - 0.1, 1e9, POP);
     rowsHi(QR.map((_, i) => '#qr' + i), QR.map(q => q[2]), wt('P5', 'tested'), t);
-    M.vis($('#pw'), t, T0('P3') - 0.1, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#pw'), t, T0('P2') + 0.4, out, { dx: 60, dy: 0, ...o });
     fade(tSph, t, wt('P3', 'sphere') - 0.1); fade(radL, t, wt('P3', 'radius')); fade(plus, t, wt('P3', 'positive'), 1e9, 0.4);
     eTh.forEach((e, i) => fade(e, t, wt('P4', 'Electrons') + i * 0.07, 1e9, 0.15)); fade(neuT, t, wt('P4', 'neutral') - 0.1);
     attr(tSph, 'fill', mix(C.ac3, C.ac2, M.io((t - wt('P5', 'mass')) / 0.4)));
-    M.vis($('#tsc'), t, wt('P5', 'mass') + 0.4, 1e9, { dy: 16 });
+    M.vis($('#tsc'), t, T0('P2') + 0.8, 1e9, { dy: 16 });
   }
 
   /* S + L + B: gold foil */

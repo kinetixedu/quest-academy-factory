@@ -158,7 +158,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · CHAPTER 4', topic: 'Why do atoms
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('S6', 'share') - 0.2, 1.1, 1368, 560], [T0('B1') - 0.3, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('S6', 'share') - 0.2, 1.05, 1100, 560], [T0('B1') - 0.3, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};

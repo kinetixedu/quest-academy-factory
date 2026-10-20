@@ -120,7 +120,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 06', topic: 'Where does a bur
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [HA[0][0] - 0.3, 1.05, 720, 540], [T0('S5'), 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [HA[0][0] - 0.3, 1.06, 960, 560], [T0('S5'), 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};

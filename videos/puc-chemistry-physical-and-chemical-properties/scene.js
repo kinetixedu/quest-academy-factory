@@ -66,7 +66,7 @@ const molW = p => { const g = mk(p, 'g', {}); [[-21, 16], [21, 16]].forEach(([x,
 const bk = mk(bW, 'g', {}); mk(bk, 'path', { d: 'M200 176 V396 Q200 404 208 404 H576 Q584 404 584 396 V176', fill: 'none', stroke: C.ink, 'stroke-width': 3.5, 'stroke-linecap': 'round' });
 const wtr = mk(bk, 'rect', { x: 203, y: 262, width: 378, height: 139, fill: C.ac2 });
 const flm = mk(bW, 'g', {}); flm.insertAdjacentHTML('beforeend', `<g transform="translate(372 408)">${M.icon('flame', 40, C.red, 2.4)}</g>`);
-const LIQ = [[250, 296], [322, 300], [394, 294], [466, 300], [538, 296], [286, 356], [358, 362], [430, 356], [502, 362]];
+const LIQ = [[250, 298], [340, 298], [430, 298], [520, 298], [295, 362], [385, 362], [475, 362], [545, 360]];
 const GAS = [[120, 110, 60, 30], [300, 130, -55, -35], [470, 104, 50, 40], [650, 126, -60, 30], [210, 150, 45, -40], [570, 150, -50, -30]];
 const wm = LIQ.map(([x, y], i) => ({ g: molW(bW), x, y, f: 1.1 + (i * 0.37) % 0.6, ph: i * 1.9, rot: i * 37, w: i % 2 ? 20 : -20, gas: GAS[i % 6] }));
 // methane + oxygen -> CO2 + 2 H2O
@@ -185,7 +185,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 05', topic: 'One metre for th
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tLook - 0.2, 1.06, 760, 500], [tS5, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tLook - 0.2, 1.06, 960, 560], [tS5, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};
@@ -268,7 +268,7 @@ M.on(t => {
     fade(flm, t, tHeat - 0.1, tS6 - 0.1, 0.3);
     const F = t + 2.2 * Math.max(0, t - tHeat);
     attr(wtr, 'y', (262 + 60 * M.io((t - tEsc) / 4)).toFixed(1)); attr(wtr, 'height', (139 - 60 * M.io((t - tEsc) / 4)).toFixed(1));
-    wm.forEach((m, i) => { const lx = m.x + 14 * Math.sin(F * m.f + m.ph), ly = m.y + 6 * Math.sin(F * 1.7 * m.f + m.ph * 1.3);
+    wm.forEach((m, i) => { const lx = m.x + 9 * Math.sin(F * m.f + m.ph), ly = m.y + 5 * Math.sin(F * 1.7 * m.f + m.ph * 1.3);
       const te = tEsc + i * 0.4, u = i < 6 ? M.io((t - te) / 1.0) : 0, [gx0, gy0, vx, vy] = m.gas, gx = bounce(gx0 + vx * t, 60, 724), gy = bounce(gy0 + vy * t, 96, 164);
       const x = M.lerp(lx, gx, u), y = M.lerp(ly, gy, u) - Math.sin(Math.PI * u) * 40;
       attr(m.g, 'transform', `translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${(m.rot + m.w * F).toFixed(1)})`); m.g.style.opacity = bOp.toFixed(3); M.hide(m.g, bOp <= 0.002); });

@@ -84,7 +84,7 @@ mk(bal, 'circle', { cx: PVX, cy: PVY, r: 10, fill: C.ac });
 const balO = atomG(pans[0], 36, OC, 'O', 30); attr(balO, 'transform', 'translate(0 82)');
 const SLOT = []; [[6, 107], [5, 85], [4, 63], [1, 41]].forEach(([n, y]) => { for (let i = 0; i < n; i++) SLOT.push([(i - (n - 1) / 2) * 23, y]); });
 const balH = SLOT.map(() => mk(pans[1], 'circle', { r: 11, fill: HC }));
-const nTxt = txt(bal, PVX + BL, 112, '', { 'text-anchor': 'middle', 'font-size': 24, fill: HC, 'font-weight': 600 }), oTxt = txt(bal, PVX - BL, 112, 'O ATOMS 1', { 'text-anchor': 'middle', 'font-size': 24, fill: OC, 'font-weight': 600 });
+const nTxt = txt(bal, PVX + BL, 420, '', { 'text-anchor': 'middle', 'font-size': 24, fill: HC, 'font-weight': 600 }), oTxt = txt(bal, PVX - BL, 420, 'O ATOMS 1', { 'text-anchor': 'middle', 'font-size': 24, fill: OC, 'font-weight': 600 });
 // phase 4-5: the water molecules and the reaction (atoms reused)
 const bondL = mk(bW, 'g', {}), atomL = mk(bW, 'g', {}), dotL = mk(bW, 'g', {});
 const A = {};
@@ -219,7 +219,7 @@ function measure() {
   const ft = $('#sF .fcard'); if (ft) ft.querySelectorAll('.fl.txt').forEach(l => { if (l.offsetWidth > 1010) l.style.fontSize = Math.floor(30 * 1010 / l.offsetWidth) + 'px'; });
   document.querySelectorAll('.yr .q').forEach(q => { if (q.offsetWidth > 1380) q.style.fontSize = Math.floor(34 * 1380 / q.offsetWidth) + 'px'; });
   document.querySelectorAll('.po .pt1').forEach(q => { if (q.offsetWidth > 560) q.style.fontSize = Math.floor(26 * 560 / q.offsetWidth) + 'px'; });
-  document.querySelectorAll('.opt .ot').forEach(q => { if (q.scrollWidth > 840) q.style.fontSize = Math.floor(28 * 840 / q.scrollWidth) + 'px'; });
+  document.querySelectorAll('.opt .ot').forEach(q => { if (q.offsetWidth > 770) q.style.fontSize = Math.floor(28 * 770 / q.offsetWidth) + 'px'; });
   $('#bc0').style.left = (784 - 36 - $('#bc0').offsetWidth) + 'px'; $('#bc1').style.left = (784 - 36 - $('#bc0').offsetWidth - 16 - $('#bc1').offsetWidth) + 'px';
 }
 const setBg = (el, c) => { if (el._bg !== c) { el._bg = c; el.style.background = c; } };
