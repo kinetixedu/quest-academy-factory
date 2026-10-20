@@ -6,7 +6,7 @@ Amjad (the client) rates harshly. Every episode must look made by the same hand 
 ## CPU rule (mandatory)
 Run every CPU-heavy command through the slot wrapper so at most 2 run at once:
 `CPU=/tmp/claude-0/-home-claude/e2cd1df4-98e6-569a-93b1-4b388df2cb07/scratchpad/cpu.sh`
-- voice: `KOKORO_DIR=~/.kokoro/kokoro-multi-lang-v1_0 $CPU python3 tools/tts.py videos/<slug>`
+- voice (CLOUD, preferred, ~4 min, runs in parallel on GitHub Actions, no local CPU): `/tmp/claude-0/-home-claude/e2cd1df4-98e6-569a-93b1-4b388df2cb07/scratchpad/tts-cloud.sh videos/<slug>` - writes cues.json + cues.js (no voice.wav; not needed for stills). It falls back to local voicing by itself if the cloud fails.
 - stills: `$CPU node tools/probe.js videos/<slug> <scratch>/<name>.png t1 ... t9` (BIG=1 env for full size)
 - thumbnail: `$CPU node tools/thumb.js videos/<slug>`
 Never run tools/build.sh, tools/render.js or tools/audio.py (GitHub Actions renders). Never git add/commit/push (the lead commits after review). Never edit engine/, tools/, worlds/, assets/, docs/, queue/, config/ or any folder that is not yours.
