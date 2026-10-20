@@ -68,7 +68,7 @@ const pAL = txt(hs, 456, 436, 'AARAV', { 'text-anchor': 'end', 'font-size': 16, 
 const pRL = txt(hs, 456, 532, 'RAVI', { 'text-anchor': 'end', 'font-size': 16, fill: C.ink, 'font-weight': 600, 'letter-spacing': 1.5 });
 
 /* ---------- E: equality + match test ---------- */
-$('#eq1').innerHTML = K(`${re('a')} + ${im('b')}\\,${iv('i')} = ${re('c')} + ${im('d')}\\,${iv('i')}`);
+$('#eq1').innerHTML = K(`${re('a')} + ${iv('i')}${im('b')} = ${re('c')} + ${iv('i')}${im('d')}`);
 $('#eq2').innerHTML = K(`\\iff\\ ${re('a = c')}\\ \\text{and}\\ ${im('b = d')}`);
 const MR = [[cz(3, 2), cz(3, 2), 1, 1], [cz(3, 2), cz(3, -2), 1, 0]];
 const mcH = (lab, ok, x) => `<div class="mc" style="left:${x}px;background:${ok ? C.ok : C.red}">${M.icon(ok ? 'check' : 'x', 16, '#fff', 3)}${lab}</div>`;
@@ -78,8 +78,8 @@ const tM = [[wt('E4', 'Three') - 0.1, wt('E4', 'Real'), wt('E4', 'Imaginary'), w
 const avA = PUC.avatar($('#sE'), { x: 976 + 36, y: 270 + 470, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'Same street, other floor? A different home.' });
 
 /* ---------- C: conjugate + live mirror ---------- */
-$('#cf1').innerHTML = K(`z = ${re('a')} + ${im('b')}\\,${iv('i')}`);
-$('#cf2').innerHTML = K(`${ZB} = ${re('a')} ${sg(1)} ${im('b')}\\,${iv('i')}`);
+$('#cf1').innerHTML = K(`z = ${re('a')} + ${iv('i')}${im('b')}`);
+$('#cf2').innerHTML = K(`${ZB} = ${re('a')} ${sg(1)} ${iv('i')}${im('b')}`);
 $('#cf3').innerHTML = K(ZB);
 const cs = $('#cS'), CP = plane(cs, { ox: 392, oy: 280, s: 46, x0: -7.4, x1: 7.4, y0: -4.3, y1: 4.3 });
 const trZ = mk(cs, 'path', { d: '', fill: 'none', stroke: C.ink, 'stroke-width': 3, opacity: 0.22, 'stroke-linecap': 'round' });
@@ -109,10 +109,10 @@ const SC = sideP($('#scS'), false), SN = sideP($('#snS'), true);
 const th2 = PUC.think($('#th2'), { q: 'What is the conjugate of 4 - 7i?', opts: ['4 + 7i', '-4 + 7i'], right: 0, why: 'Keep the real part 4, flip only the imaginary sign: -7i becomes +7i.' });
 
 /* ---------- statement ---------- */
-$('#stF').innerHTML = K(`z = ${re('a')} + ${im('b')}\\,${iv('i')} \\qquad\\Rightarrow\\qquad ${ZB} = ${re('a')} ${sg(1)} ${im('b')}\\,${iv('i')}`);
+$('#stF').innerHTML = K(`z = ${re('a')} + ${iv('i')}${im('b')} \\qquad\\Rightarrow\\qquad ${ZB} = ${re('a')} ${sg(1)} ${iv('i')}${im('b')}`);
 
 /* ---------- D: derivation + picture ---------- */
-const DS = [[`z + ${ZB} = (${re('a')} + ${im('b')}${iv('i')}) + (${re('a')} ${sg(1)} ${im('b')}${iv('i')})`, 'real with real, imaginary with imaginary'],
+const DS = [[`z + ${ZB} = (${re('a')} + ${iv('i')}${im('b')}) + (${re('a')} ${sg(1)} ${iv('i')}${im('b')})`, 'real with real, imaginary with imaginary'],
   [`\\phantom{z + ${ZB}} = ${re('2a')}`, `+ib and -ib cancel: a real number`],
   [`z\\,${ZB} = (a + ib)(a - ib) = a^2 - (ib)^2`, 'the pattern (x + y)(x - y) = x² - y²'],
   [`\\phantom{z\\,${ZB}} = a^2 - ${iv('i')}^2 b^2 = ${re('a^2')} + ${im('b^2')}`, `because i² = -1`]];
@@ -160,8 +160,8 @@ const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW
 const so = PUC.solution($('#so'), [[K(`\\text{Re: } ${re('x^2 - y^2 + x')} = 0`)], [K(`\\text{Im: } ${im('y(2x - 1)')} = 0`)], [K(`y = 0 \\Rightarrow z = 0,\\ -1`)], [K(`x = \\tfrac12 \\Rightarrow z = \\tfrac12 \\pm \\tfrac{\\sqrt3}{2}i`)], [K(`0 - 1 + \\tfrac12 + \\tfrac12 = 0`)]], { y0: 100, dy: 96 });
 const tSo = [wt('A2', 'Real'), wt('A2', 'Imaginary'), wt('A4', 'If'), wt('A4', 'If', 1), wt('A5', 'add')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · equality and conjugates', y0: 100, dy: 78, txt: [0, 0, 0, 0, 1],
-  lines: [K(`${re('a')} + ${im('b')}${iv('i')} = ${re('c')} + ${im('d')}${iv('i')} \\iff ${re('a = c')},\\ ${im('b = d')}`),
-    K(`z = ${re('a')} + ${im('b')}${iv('i')} \\;\\Rightarrow\\; ${ZB} = ${re('a')} ${sg(1)} ${im('b')}${iv('i')}`),
+  lines: [K(`${re('a')} + ${iv('i')}${im('b')} = ${re('c')} + ${iv('i')}${im('d')} \\iff ${re('a = c')},\\ ${im('b = d')}`),
+    K(`z = ${re('a')} + ${iv('i')}${im('b')} \\;\\Rightarrow\\; ${ZB} = ${re('a')} ${sg(1)} ${iv('i')}${im('b')}`),
     K(`z + ${ZB} = ${re('2a')} \\qquad z\\,${ZB} = ${re('a^2')} + ${im('b^2')}`),
     K(`\\overline{${ZB}} = z \\qquad ${ZB} = z \\iff z \\text{ is real}`),
     'Conjugate: keep the real part, flip the imaginary sign'] });
@@ -174,7 +174,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 42', topic: 'How far, and whi
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tc2 - 0.3, 1.06, 1300, 560], [T1('C7') + 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tc2 - 0.3, 1.06, 1100, 560], [T1('C7') + 0.2, 1, 960, 540]]);
 
 /* ---------- frame ---------- */
 M.on(t => {
@@ -233,7 +233,7 @@ M.on(t => {
     attr(cLink, 'x1', X.toFixed(1)); attr(cLink, 'x2', X.toFixed(1)); attr(cLink, 'y1', (Yz + 14).toFixed(1)); attr(cLink, 'y2', (Yb - 14).toFixed(1));
     M.hide(cLink, t < tp + 0.6 || Math.abs(y) < 0.35); attr(cFoot, 'cx', X.toFixed(1)); attr(cFoot, 'cy', CP.Y(0)); M.hide(cFoot, t < tp + 0.6);
     // trails since the live run started
-    if (t > tc0) { let dz = '', db = ''; const n = 48, te = Math.min(t, tc5 + 0.5); for (let i = 0; i <= n; i++) { const [a, b] = zAt(tc0 + (te - tc0) * i / n); dz += (i ? 'L' : 'M') + CP.X(a).toFixed(1) + ',' + CP.Y(b).toFixed(1); db += (i ? 'L' : 'M') + CP.X(a).toFixed(1) + ',' + CP.Y(-b).toFixed(1); } attr(trZ, 'd', dz); attr(trB, 'd', db); } else { attr(trZ, 'd', ''); attr(trB, 'd', ''); }
+    if (false) { let dz = '', db = ''; const n = 48, te = Math.min(t, tc5 + 0.5); for (let i = 0; i <= n; i++) { const [a, b] = zAt(tc0 + (te - tc0) * i / n); dz += (i ? 'L' : 'M') + CP.X(a).toFixed(1) + ',' + CP.Y(b).toFixed(1); db += (i ? 'L' : 'M') + CP.X(a).toFixed(1) + ',' + CP.Y(-b).toFixed(1); } attr(trZ, 'd', dz); attr(trB, 'd', db); } else { attr(trZ, 'd', ''); attr(trB, 'd', ''); }
     const meet = M.io((t - tMeet + 0.2) / 0.3); if (cZ.l) { cB.l.style.opacity = (1 - meet).toFixed(3); }
     $('#cZ').innerHTML = zHTML(false, x, y); $('#cB').innerHTML = zHTML(true, x, -y);
     M.vis($('#cZ'), t, tp + 0.3, 1e9, { dy: 10 }); M.vis($('#cB'), t, tp + 0.6, 1e9, { dy: 10 });

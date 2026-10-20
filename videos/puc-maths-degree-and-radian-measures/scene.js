@@ -59,7 +59,7 @@ const gArc = mk(gs, 'path', { d: '', fill: 'none', stroke: TH, 'stroke-width': 5
 const gRay = PUC.arrow(gs, TH, 5, 20);
 mk(gs, 'circle', { cx: GX, cy: GY, r: 9, fill: C.ink });
 const gIL = txt(gs, GX + 300, GY + 36, 'initial side', { 'text-anchor': 'end', 'font-size': 20, fill: C.ink2, 'font-weight': 600 });
-const gVL = txt(gs, GX - 14, GY + 36, 'vertex', { 'text-anchor': 'end', 'font-size': 20, fill: C.ink2, 'font-weight': 600 });
+const gVL = txt(gs, GX - 72, GY + 40, 'vertex', { 'text-anchor': 'end', 'font-size': 20, fill: C.ink2, 'font-weight': 600 });
 const gTL = txt(gs, 0, 0, 'terminal side', { 'text-anchor': 'middle', 'font-size': 20, fill: TH, 'font-weight': 600 });
 const gThL = txt(gs, 0, 0, 'θ', { 'text-anchor': 'middle', 'font-size': 30, fill: TH, 'font-family': 'Poppins', 'font-style': 'italic', 'font-weight': 600 });
 const gA1 = wt('G2', 'rotation'), gA2 = wt('G3', 'terminal'), gB1 = wt('G4', 'turn'), gB2 = wt('G4', 'bigger') + 0.4;

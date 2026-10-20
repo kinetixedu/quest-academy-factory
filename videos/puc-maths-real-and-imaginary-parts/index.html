@@ -1,0 +1,136 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 39 - Real and Imaginary Parts</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 39: real and imaginary parts (Proof board) ===== */
+:root{--re:#2F6FEB;--reb:#E7EEFD;--im:#7A4FE0;--imb:#EFE9FC}
+#stage svg circle,#stage svg g{transform-box:fill-box;transform-origin:center}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.re{color:var(--re)}.im{color:var(--im)}.a{color:var(--ac)}
+#title .im{color:var(--im)}
+/* title card */
+.lst{position:absolute;top:724px;width:440px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:50px;font:700 32px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.chip{position:absolute;height:52px;padding:0 18px;border-radius:10px;display:inline-flex;align-items:center;gap:8px;font:700 24px Poppins;color:#fff;white-space:nowrap}
+.bg{color:var(--re)}.cg{color:var(--ac)}
+/* definition */
+#dZ{position:absolute;left:36px;top:84px;font-size:76px;white-space:nowrap}
+.fx2{position:absolute;left:36px;font-size:44px;white-space:nowrap}
+.why2{position:absolute;left:36px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+#dEx{position:absolute;left:36px;top:96px;font-size:60px;white-space:nowrap}
+/* steps */
+.st{position:absolute;left:36px;width:712px;height:96px}
+.st .n{position:absolute;left:0;top:6px;width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 21px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:66px;top:0;font-size:40px;white-space:nowrap}
+.st .why{position:absolute;left:66px;top:58px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+/* live readouts */
+.rdS{position:absolute;font:600 40px 'IBM Plex Mono';white-space:nowrap}
+#lZ{position:absolute;left:36px;top:250px;font-size:64px;white-space:nowrap}
+.sr{position:absolute;left:36px;width:712px;height:64px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:16px;padding:0 20px;box-sizing:border-box;font:600 24px Poppins;white-space:nowrap}
+/* sorting bins */
+.bin{position:absolute;top:250px;width:340px;height:240px;border-radius:16px;border:3px dashed}
+.bin .bl{position:absolute;left:18px;top:14px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.tl{position:absolute;height:72px;min-width:72px;padding:0 18px;box-sizing:border-box;border-radius:14px;background:#fff;border:3px solid var(--ink);display:flex;align-items:center;justify-content:center;font-size:36px;white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 26px Poppins}
+#so .sol .sx .katex{font-size:1.1em}
+#mq .mq .katex{font-size:1.08em}
+#wl .sol .sx{font-size:30px}
+#wq{position:absolute;left:36px;top:64px;font:600 30px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.2em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:46px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 4 COMPLEX NUMBERS AND QUADRATIC EQUATIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Real and <span class="acc">Imaginary</span> Parts</div>
+    <div id="sub">Explained with one two-part address</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: room 3, which floor? -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">THE COLLEGE BLOCK · ROOM 3</div><svg id="hS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA · THE COLLEGE CORRIDOR</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-corridor.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">Same room number. Different floor.</div></div>
+    </div>
+
+    <!-- D: definition -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">DEFINITION · NCERT</div><div id="dZ"></div>
+        <div class="why2" id="dW" style="top:196px">a and b are real numbers</div>
+        <div class="fx2" id="dR" style="top:270px"></div><div class="why2" id="dRw" style="top:336px">the real part</div>
+        <div class="fx2" id="dI" style="top:400px"></div><div class="why2" id="dIw" style="top:466px">the imaginary part: b alone, no i</div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">EXAMPLE</div><div id="dEx"></div>
+        <div class="pillp" id="dP0" style="left:36px;top:330px;background:var(--reb);color:var(--re)"></div>
+        <div class="pillp" id="dP1" style="left:36px;top:400px;background:var(--ac2);color:var(--ac)"></div>
+        <div class="pillp bad" id="dP2" style="left:36px;top:470px">Im z is 5, not 5i</div></div>
+    </div>
+
+    <!-- L: the address board -->
+    <div id="sL">
+      <div class="card full" id="ll"><div class="lbl" style="left:36px;top:30px">LIVE · THE ADDRESS BOARD</div><svg id="lS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="lr"><div class="lbl" style="left:36px;top:30px">LIVE · CHANGE THE PARTS</div>
+        <div class="rdS" id="lA" style="left:36px;top:84px"></div><div class="rdS" id="lB" style="left:36px;top:150px"></div><div id="lZ"></div>
+        <div class="sr" id="lr0" style="top:396px"><span class="bg" style="font-size:26px">a</span><span>how far along the street</span></div>
+        <div class="sr" id="lr1" style="top:476px"><span class="cg" style="font-size:26px">b</span><span>how many floors up</span></div></div>
+    </div>
+
+    <!-- S: purely real vs purely imaginary -->
+    <div id="sS">
+      <div class="card full" id="sl"><div class="lbl" style="left:36px;top:30px">b = 0 · PURELY REAL</div><div class="fx2" id="slF" style="top:80px"></div><svg id="slS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="slP" style="left:36px;top:490px;background:var(--reb);color:var(--re)"></div></div>
+      <div class="card rf" id="sr"><div class="lbl" style="left:36px;top:30px">a = 0, b ≠ 0 · PURELY IMAGINARY</div><div class="fx2" id="srF" style="top:80px"></div><svg id="srS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="srP" style="left:36px;top:490px">Straight above or below the start</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- P: tidy into a + ib -->
+    <div id="sP">
+      <div class="card full" id="pl"><div class="lbl" style="left:36px;top:30px">TIDY FIRST · 4 STEPS</div><div class="hiBox" id="pHi" style="left:20px;width:744px;height:104px"></div><div id="pSt"></div></div>
+      <div class="card rf" id="pr"><div class="lbl" style="left:36px;top:30px">SORT THE TERMS</div><div id="pTl"></div>
+        <div class="bin" id="pB0" style="left:36px;border-color:var(--re)"><div class="bl" style="color:var(--re)">REAL PART</div></div>
+        <div class="bin" id="pB1" style="left:408px;border-color:var(--ac)"><div class="bl" style="color:var(--ac)">IMAGINARY PART</div></div>
+        <div class="fx2" id="pRes" style="top:510px"></div></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">LIVE · SLIDE k</div><div class="rdS" id="wK" style="right:36px;top:22px;font-size:32px"></div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- X: exam trap + where -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="480" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Re z is a. Im z is <span class="acc">b</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

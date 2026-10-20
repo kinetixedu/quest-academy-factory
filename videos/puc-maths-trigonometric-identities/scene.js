@@ -119,7 +119,7 @@ const thU = seg([[wt('U2', 'Turn'), wt('U2', 'Turn') + 1.3, 0, 35], [wt('U4', 'W
 $('#ro').innerHTML = `<span style="color:${TH}"><span class="th">θ</span> = <span id="roA">35°</span></span>&nbsp;&nbsp;&nbsp;<span id="roC" style="color:${CS}"></span> + <span id="roS" style="color:${SN}"></span> = <b>1.000</b>`;
 $('#ro2').innerHTML = `<span style="color:${CS}">cos²<span class="th">θ</span></span> + <span style="color:${SN}">sin²<span class="th">θ</span></span> = 1 &nbsp;·&nbsp; <span id="ro2c" style="color:${CS}"></span> &nbsp; <span id="ro2s" style="color:${SN}"></span>`;
 let roLast = '';
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('D4', 'two') - 0.3, 1.08, 560, 560], [T0('D5') + 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]]]);
 
 /* ---------- E + C: stretch the triangle ---------- */
 const es = $('#eS'), E = UC(es, 300, 372, 170);
@@ -171,7 +171,7 @@ const CCt = f(CC, '\\operatorname{cosec}\\theta');
 $('#wq').innerHTML = `If ${K(`${SEt} = \\tfrac{13}{5}`)} and ${K(th)} lies in quadrant IV,<br>find ${K(Tt)}, ${K(Ss)} and ${K(CCt)}.`;
 const wsol = PUC.solution($('#wl'), [
   [K(`${T2} = ${SE2} - 1 = \\tfrac{169}{25} - 1 = \\tfrac{144}{25}`)],
-  [K(`${Tt} = \\pm\\tfrac{12}{5} \;\\Rightarrow\; -\\tfrac{12}{5}`), 'quadrant IV'],
+  [K(`${Tt} = \\pm\\tfrac{12}{5} \\;\\Rightarrow\\; -\\tfrac{12}{5}`), 'quadrant IV'],
   [K(`${Ss} = \\dfrac{${Tt}}{${SEt}} = -\\tfrac{12}{13}`)],
   [K(`${CCt} = \\dfrac{1}{${Ss}} = -\\tfrac{13}{12}`)],
   [K(`1 + \\tfrac{25}{144} = \\tfrac{169}{144} = ${CC2}`) + `&nbsp;${M.icon('check', 26, C.ok, 3)}`]], { label: 'WORKED EXAMPLE', y0: 184, dy: 78 });
@@ -181,10 +181,10 @@ const tW = [wt('W3', 'second'), wt('W4', 'plus'), wt('W5', 'Sine'), wt('W6', 'Co
 const WCX = 392, WCY = 270, ws = $('#wS'), W = UC(ws, WCX, WCY, 190);
 const wq2 = mk(ws, 'rect', { x: WCX + 8, y: WCY + 8, width: 236, height: 222, fill: '#F1ECFD', rx: 10 });
 ws.insertBefore(wq2, ws.firstChild);
-const wQl = txt(ws, WCX + 200, WCY + 214, 'IV', { 'font-family': 'Poppins', 'font-size': 26, 'font-weight': 700, fill: TH, 'text-anchor': 'middle' });
-const wQx = txt(ws, WCX + 214, WCY - 18, 'x > 0, y < 0 in IV', { 'font-size': 18, fill: TH, 'font-weight': 600, 'text-anchor': 'middle' });
+const wQl = txt(ws, WCX + 126, WCY + 160, 'IV', { 'font-family': 'Poppins', 'font-size': 26, 'font-weight': 700, fill: TH, 'text-anchor': 'middle' });
+const wQx = txt(ws, WCX + 126, WCY + 186, 'x > 0, y < 0', { 'font-size': 18, fill: TH, 'font-weight': 600, 'text-anchor': 'middle' });
 const mlab2 = (x, y, fn, col, sfx, a = {}) => { const e = mlab(ws, x, y, fn, col, 26, a); e.appendChild(document.createTextNode(' = ' + sfx)); return e; };
-const wcv = mlab2(0, 0, 'cos', CS, '5/13', { 'text-anchor': 'end' });
+const wcv = mlab2(0, 0, 'cos', CS, '5/13');
 const wsv = mlab2(0, 0, 'sin', SN, '-12/13');
 const WA = -Math.asin(12 / 13) * 180 / Math.PI;
 
@@ -203,7 +203,7 @@ txt(tChk, 270, 184, '0.5 + 0.5 + 0.5 + 0.5 = 2', { 'font-size': 22, fill: C.ink2
 const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'PUC BOARDS'], type: 'Given one ratio, find the others, or simplify using the identities.' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 780,
   q: `If ${K(`${SEt} + ${Tt} = 3`)},<br>then ${K(Ss)} is equal to`,
-  opts: [K('\\frac{3}{5}'), K('\\frac{4}{5}'), K('\\frac{3}{4}'), K('\\frac{1}{3}')], right: 1, optW: 474, optY: 300 });
+  opts: [K('3/5'), K('4/5'), K('3/4'), K('1/3')], right: 1, optW: 474, optY: 300 });
 const so = PUC.solution($('#so'), [[K(`${SE2} - ${T2} = 1`)], [K(`(${SEt} - ${Tt}) \\times 3 = 1`)], [K(`${SEt} - ${Tt} = \\tfrac{1}{3}`)], [K(`${SEt} = \\tfrac{5}{3},\\ ${Tt} = \\tfrac{4}{3}`)], [K(`${Ss} = \\dfrac{${Tt}}{${SEt}} = \\tfrac{4}{5}`)]], { y0: 100, dy: 96 });
 const tSo = [wt('A2', 'Secant'), wt('A2', 'which'), wt('A3', 'third'), wt('A4', 'Add'), wt('A5', 'Sine')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · trigonometric identities', y0: 98, dy: 78, txt: [1, 0, 0, 0, 1],
@@ -282,7 +282,7 @@ M.on(t => {
     [U.hyp, U.P, U.Pl, U.arc, U.thl].forEach(e => M.hide(e, !on));
     const { c, n } = U.set(a);
     const bOn = M.vis(U.base, t, wt('U3', 'x'), 1e9, { dy: 0, fade: 0.2 }), hOn2 = M.vis(U.hgt, t, wt('U3', 'y'), 1e9, { dy: 0, fade: 0.2 });
-    M.vis(U.cl, t, wt('U3', 'cosine'), 1e9, { dy: 0 }); M.vis(U.sl, t, wt('U3', 'sine'), 1e9, { dy: 0 });
+    const sqW = [wt('D4', 'base') - 0.3, wt('D6', 'means') + 0.2]; M.vis(U.cl, t, wt('U3', 'cosine'), 1e9, { dy: 0 }); M.vis(U.sl, t, wt('U3', 'sine'), 1e9, { dy: 0 }); if (t > sqW[0] && t < sqW[1]) { const q = 1 - M.io((t - sqW[0]) / 0.25) * (1 - M.io((t - sqW[1] + 0.25) / 0.25)); U.cl.style.opacity = q.toFixed(3); U.sl.style.opacity = q.toFixed(3); }
     M.vis(U.rt, t, wt('D2', 'right') - 0.1, 1e9, { dy: 0 });
     M.vis(U.one, t, wt('U5', 'slanted'), 1e9, { dy: 0 });
     // glow (thicker stroke) when a step talks about a part
@@ -396,7 +396,7 @@ M.on(t => {
     M.vis(wcv, t, wt('W2', 'fourth') + 0.6, 1e9, { dy: 0 }); M.vis(wsv, t, tW[2] + 0.4, 1e9, { dy: 0 });
     const gb = pulse(t, wt('W4', 'fourth'), 1.0), gh = pulse(t, wt('W4', 'negative'), 1.0) + pulse(t, tW[2], 1.4), gp = pulse(t, tW[0], 1.2);
     attr(W.base, 'stroke-width', (7 + 5 * gb).toFixed(2)); attr(W.hgt, 'stroke-width', (7 + 5 * gh).toFixed(2)); attr(W.hyp, 'stroke-width', (4 + 5 * gp).toFixed(2));
-    const Fx = W.X(5 / 13); attr(wcv, 'x', (Fx - 4).toFixed(1)); attr(wcv, 'y', WCY - 18); attr(wsv, 'x', (Fx + 18).toFixed(1)); attr(wsv, 'y', (W.Y(-6 / 13) + 10).toFixed(1));
+    const Fx = W.X(5 / 13); attr(wcv, 'x', WCX + 14); attr(wcv, 'y', WCY - 16); attr(wsv, 'x', (Fx + 18).toFixed(1)); attr(wsv, 'y', (W.Y(-6 / 13) + 10).toFixed(1));
   }
 
   /* X: exam trap + where */

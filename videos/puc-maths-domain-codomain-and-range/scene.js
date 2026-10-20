@@ -70,7 +70,7 @@ const mBl = txt(ms, 700, 118, 'B', { 'font-family': 'Poppins', 'font-style': 'it
 const mArr = [1, 2, 3, 4].map(() => PUC.arrow(ms, RC, 4, 14));
 const mA = [1, 2, 3, 4].map(i => { const g = mk(mk(ms, 'g', { transform: `translate(${XA},${YA(i - 1)})` }), 'g', {}); const c = mk(g, 'circle', { r: 24, fill: '#fff', stroke: XC, 'stroke-width': 3 }); const tt = txt(g, 0, 8, i, { 'text-anchor': 'middle', 'font-size': 24, fill: XC, 'font-weight': 600 }); return { g, c, tt }; });
 const mB = [1, 2, 3, 4, 5, 6, 7, 8].map(k => { const g = mk(mk(ms, 'g', { transform: `translate(${XB},${YB(k - 1)})` }), 'g', {}); const c = mk(g, 'circle', { r: 22, fill: '#fff', stroke: BC, 'stroke-width': 3 }); const tt = txt(g, 0, 8, k, { 'text-anchor': 'middle', 'font-size': 22, fill: BC, 'font-weight': 600 }); return { k, g, c, tt }; });
-const iPre = txt(ms, XA - 36, YA(2) + 7, 'preimage', { 'text-anchor': 'end', 'font-size': 18, fill: XC, 'font-weight': 600 });
+const iPre = txt(ms, XA + 32, YA(2) - 22, 'preimage', { 'text-anchor': 'start', 'font-size': 18, fill: XC, 'font-weight': 600 });
 const iImg = txt(ms, XB + 36, YB(5) + 7, 'image', { 'font-size': 18, fill: RC, 'font-weight': 600 });
 const iNo = txt(ms, XB + 36, YB(4) + 7, 'no preimage', { 'font-size': 18, fill: C.red, 'font-weight': 600 });
 const tMap = i => wt('M2', ['One', 'Two', 'Three', 'Four'][i - 1]);

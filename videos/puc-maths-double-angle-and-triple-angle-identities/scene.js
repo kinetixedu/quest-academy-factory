@@ -187,7 +187,7 @@ const xq2 = txt(ts, 40, 196, '2(1)² - 1 = 1    right', { 'font-size': 22, fill:
 const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'PUC BOARDS'], type: 'A product of cosines that collapses with sin 2x = 2 sin x cos x.' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 800,
   q: `If ${K(`${tx} = 2`)}, then ${K(`${c2x} + ${s2x}`)}<br>is equal to`,
-  opts: [K('\\frac{1}{5}'), K('\\frac{7}{5}'), K('-\\frac{1}{5}'), K('\\frac{3}{5}')], right: 0, optW: 474, optY: 300 });
+  opts: [K('1/5'), K('7/5'), K('-1/5'), K('3/5')], right: 0, optW: 474, optY: 300 });
 const so = PUC.solution($('#so'), [[K(`${s2x} = \\dfrac{2 \\cdot 2}{1 + 4} = \\tfrac45`)], [K(`${c2x} = \\dfrac{1 - 4}{1 + 4} = -\\tfrac35`)], [K('\\tfrac45 - \\tfrac35 = \\tfrac15')]], { y0: 110, dy: 120 });
 const tSo = [wt('A2', 'Sin'), wt('A3', 'Cos'), wt('A4', 'Add')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 240, w: 1200, h: 510, title: 'Recap · double and triple angles', y0: 96, dy: 82, txt: [1, 0, 0, 0, 0],

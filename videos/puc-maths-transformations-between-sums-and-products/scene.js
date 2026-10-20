@@ -78,8 +78,9 @@ const circ = (svg, o) => {
 };
 
 /* ---------- I: the picture + what it says ---------- */
-const ci = circ($('#iS'), { cx: 250, cy: 330, r: 125, x0: 70, x1: 740, y0: 76, y1: 500 });
-const iProjL = txt($('#iS'), 0, 372, 'cos x + cos y', { 'text-anchor': 'middle', 'font-size': 20, fill: CB, 'font-weight': 600 });
+const ci = circ($('#iS'), { cx: 270, cy: 370, r: 150, x0: 60, x1: 748, y0: 70, y1: 540 });
+const iLeg = [['half sum', HSC], ['half difference', HDC], ['cos x + cos y', CB]].map(([l, col], i) => { const g = mk(mk($('#iS'), 'g', { transform: `translate(${470},${430 + i * 34})` }), 'g', {}); mk(g, 'rect', { x: 0, y: -12, width: 26, height: 8, rx: 4, fill: col }); txt(g, 38, 0, l, { 'font-size': 18, fill: col, 'font-weight': 600 }); return g; });
+const iProjL = txt($('#iS'), 0, 416, 'cos x + cos y', { 'text-anchor': 'middle', 'font-size': 20, fill: CB, 'font-weight': 600 });
 const IS = [[`P = (${cs} x,\\ ${sn} x),\\ \\ Q = (${cs} y,\\ ${sn} y)`, 'the two points on the circle'],
   ['R = P + Q', 'add the two moves, like on a map'],
   [`\\text{angle of } R = ${HS}`, 'the half sum: the middle direction'],
@@ -254,7 +255,7 @@ M.on(t => {
     M.vis(ci.arcS, t, tIs[2] - 0.1, 1e9, { dy: 0, fade: 0.25 });
     M.vis(ci.or, t, tIs[3] - 0.1, 1e9, { dy: 0, fade: 0.25 }); M.vis(ci.arcD, t, tIs[3] + 0.3, 1e9, { dy: 0, fade: 0.25 });
     M.vis(ci.proj, t, wt('I6', 'across') - 0.1, 1e9, { dy: 0, fade: 0.25 }); M.vis(ci.drop, t, wt('I6', 'across'), 1e9, { dy: 0, fade: 0.25 });
-    attr(iProjL, 'x', ((250 + r.rx) / 2).toFixed(1)); M.vis(iProjL, t, wt('I6', 'across') + 0.1, 1e9, { dy: 0 });
+    attr(iProjL, 'x', ((270 + r.rx) / 2).toFixed(1)); iLeg.forEach((g, i) => M.vis(g, t, [tIs[2], tIs[3], wt('I6', 'across')][i], 1e9, { dy: 0, fade: 0.3 })); M.vis(iProjL, t, wt('I6', 'across') + 0.1, 1e9, { dy: 0 });
     M.hide(ci.ht, true);
     // right: what the picture says, then the live readouts
     M.vis($('#ir'), t, wt('I2', 'On') - 0.1, OUT('L1'), { dx: 60, dy: 0, ...o });
@@ -278,9 +279,9 @@ M.on(t => {
     M.vis($('#dr'), t, T0('D4') - 0.1, out, { dx: 60, dy: 0, ...o });
     const tc = wt('D4', 'cancel') - 0.1, u = M.io((t - tc) / 0.6);
     M.vis($('#cc0'), t, T0('D4') + 0.2, 1e9, { dy: 12 }); M.vis($('#cc1'), t, T0('D4') + 0.35, 1e9, { dy: 12 });
-    $('#cc0').style.left = (36 + 150 * u).toFixed(1) + 'px'; $('#cc1').style.left = (420 - 150 * u).toFixed(1) + 'px';
-    if (t > tc + 0.5) { const fo = (1 - 0.7 * M.io((t - tc - 0.5) / 0.4)).toFixed(3); $('#cc0').style.opacity = fo; $('#cc1').style.opacity = fo; }
-    M.vis($('#cc2'), t, tc + 0.7, 1e9, POP);
+    $('#cc0').style.left = '36px'; $('#cc1').style.left = '330px'; $('#ccS').style.width = (u * 560).toFixed(1) + 'px';
+    if (t > tc + 0.4) { const fo = (1 - 0.6 * M.io((t - tc - 0.4) / 0.4)).toFixed(3); $('#cc0').style.opacity = fo; $('#cc1').style.opacity = fo; }
+    M.vis($('#cc2'), t, tc + 0.7, 1e9, POP); M.vis($('#ccE'), t, tc + 0.5, 1e9, POP); M.hide($('#ccS'), u <= 0);
     M.vis($('#dRl'), t, tRn[0] - 0.4, 1e9, { dy: 10 });
     RN.forEach((_, i) => PUC.write($('#rn' + i), t, tRn[i], 0.7));
     avA(t, T1('D7') - 0.2, out);

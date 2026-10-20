@@ -1,0 +1,48 @@
+H1|0.4|Tell a friend to meet you in room three, and they may still end up in the wrong place.
+H2|0.45|Which room three? On which floor? A full address needs two parts, and one part can never stand in for the other.
+H3|0.35|Diya learnt this in the college corridor today. She waited in room three on the second floor. Her friend waited in room three on the ground floor.
+H4|0.5|Complex numbers work the same way. Each one is a single number with two separate parts.
+H5|0.65|Today we learn to read both parts.
+D1|0.35|First, the definition, straight from NCERT.
+D2|0.4|A complex number is a number of the form a plus i b, where a and b are real numbers.
+D3|0.4|We often call it z. The real number a is called the real part of z. We write Re z equals a.
+D4|0.65|The real number b is called the imaginary part of z. We write Im z equals b. Notice: b alone, without the i.
+D5|0.4|For example, take z equals two plus five i. Its real part is two. Its imaginary part is five.
+L1|0.35|Now picture the two parts as an address.
+L2|0.4|The real part a tells you how far along the street. The imaginary part b tells you how many floors up.
+L3|0.4|Watch. Let a count from minus three to three. The point slides along the street, and only the real part changes.
+L4|0.4|Now let b count up. The point climbs, and only the imaginary part changes.
+L5|0.65|Two numbers, two directions, one complex number. A later episode turns this into a full map.
+S1|0.4|Side by side. If b is zero, the point sits right on the street. z equals a, an ordinary real number. We call it purely real.
+S2|0.6|If a is zero and b is not zero, the point sits straight above or below the start. z equals i b. We call it purely imaginary.
+S3|0.65|So every real number is also a complex number. Seven is seven plus zero i.
+S4|3.2|Now you try. Is i squared purely real, or purely imaginary? Pause and think.
+S5|0.65|Purely real! i squared is minus one, which is minus one plus zero i.
+P1|0.35|Before you read the parts, always tidy the number into a plus i b. Watch.
+P2|0.75|Step one. Take z equals three plus five i minus i squared.
+P3|0.75|Step two. i squared is minus one, so minus i squared is plus one.
+P4|0.75|Step three. Group the real terms together. Three plus one is four.
+P5|0.75|Step four. So z equals four plus five i. Re z is four, and Im z is five.
+T1|0.7|Remember this. Re z is a. Im z is b. Both are real numbers.
+W1|0.35|Now, one worked example.
+W2|0.5|z equals k minus two, plus k squared minus nine, times i, where k is real. For which k is z purely real? For which k is it purely imaginary?
+W3|0.75|Step one. Read the parts. Re z is k minus two. Im z is k squared minus nine.
+W4|0.75|Step two. Purely real means Im z is zero. k squared equals nine, so k is three or minus three.
+W5|0.75|Step three. Purely imaginary means Re z is zero. So k equals two.
+W6|0.75|Step four. Check that Im z is not zero there. Four minus nine is minus five. So z equals minus five i.
+W7|0.65|On the address board, watch k slide. The point crosses the street twice, and the upright line once.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students say the imaginary part of three minus four i is minus four i.
+X3|0.65|But the imaginary part is the real number in front of i. Im of three minus four i is minus four. No i.
+J1|0.6|Where is this asked? In JEE Main, for example in January twenty nineteen: find the angles that make a number purely imaginary. And in PUC boards, from this NCERT section.
+Q1|5.4|Exam level now. For how many integers k is this number purely imaginary? Pause and solve.
+A1|0.5|The answer is B. Just one.
+A2|0.5|Purely imaginary needs the real part to be zero. k squared minus four is zero, so k is two or minus two.
+A3|0.5|It also needs the imaginary part to be non zero. At k equal to two, four minus ten plus six is zero. So z is zero, and two fails.
+A4|0.6|At k equal to minus two, the imaginary part is twenty. So only minus two works.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What are Re z and Im z for z equals minus five plus two i?
+Y3|0.9|Two. Is the number nine a complex number? Why?
+Y4|1.1|Three. For which k is k minus one, plus k plus one times i, purely real?
+N1|0.3|Next time: two moves on a map, one after the other. We add, subtract, multiply and divide complex numbers.

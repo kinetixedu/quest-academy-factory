@@ -1,5 +1,5 @@
 H1|0.4|Three expressions that look nothing alike. Sine squared plus cosine squared. Secant squared minus tan squared. Cosecant squared minus cot squared.
-H2|0.45|Put in any angle. Seventeen, fifty, one hundred and twenty three degrees.
+H2|0.45|Put in any angle: seventeen, fifty, one hundred and twenty three degrees.
 H3|0.35|Aarav tried this on his calculator last night.
 H4|0.5|Every time, all three give exactly one. Luck, or a law?
 H5|0.65|It is a law. These are trigonometric identities, and one circle proves all three.
@@ -13,7 +13,7 @@ U1|0.35|Now the unit circle: radius one, centre at the origin.
 U2|0.4|Turn a radius through an angle theta, to a point P.
 U3|0.4|The x coordinate of P is cosine theta, the y coordinate sine theta.
 U4|0.4|Watch theta count up. The blue base and coral height keep changing.
-U5|0.6|But the slanted side is the radius. It is always exactly one.
+U5|0.6|But the slanted side is the radius: always exactly one.
 D1|0.35|That one fact is the whole proof.
 D2|0.75|Step one. Drop a line from P to the x axis. The right triangle has base cosine theta and height sine theta.
 D3|0.75|Step two. The hypotenuse is the radius, so its length is one.
@@ -21,7 +21,7 @@ D4|0.75|Step three. Pythagoras: base squared plus height squared equals hypotenu
 D5|0.75|Step four. So cosine squared theta plus sine squared theta equals one.
 D6|0.4|Sine squared theta means sine theta, squared. The square is on the sine, not the angle.
 D7|0.65|Slide theta all the way round. Cosine turns negative in the second quadrant, but its square stays positive. The total stays one.
-E1|0.35|Now the second identity, straight from the first.
+E1|0.35|Now the second identity, from the first.
 E2|0.75|Divide every term by cosine squared theta, allowed only when cosine theta is not zero.
 E3|0.75|Sine squared over cosine squared is tan squared theta.
 E4|0.75|Cosine squared over itself is one.
@@ -30,7 +30,7 @@ E6|0.65|So, one plus tan squared theta equals secant squared theta.
 E7|0.4|Picture it. Stretch the triangle until its base is one.
 E8|0.65|Its height becomes tan theta, and its slanted side becomes secant theta. Same Pythagoras.
 C1|0.75|The third identity: divide by sine squared theta, where sine theta is not zero.
-C2|0.65|We get one plus cot squared theta equals cosecant squared theta. Now the height is stretched to one.
+C2|0.65|We get one plus cot squared theta equals cosecant squared theta, with the height stretched to one.
 K1|0.4|Side by side. Identity one works for every angle, no exceptions.
 K2|0.6|Identity two needs a non zero cosine. At ninety degrees cosine is zero, so tan and secant do not exist.
 K3|3.2|Quick check. At ninety degrees, is one plus tan squared theta equal to secant squared theta? Pause and think.
@@ -42,11 +42,11 @@ W3|0.75|Step one. By the second identity, tan squared theta is secant squared mi
 W4|0.75|Step two. So tan theta is plus or minus twelve fifths. In the fourth quadrant y is negative, so it is minus twelve fifths.
 W5|0.75|Step three. Sine is tan over secant: minus twelve thirteenths.
 W6|0.75|Step four. Cosecant is one over sine: minus thirteen twelfths.
-W7|0.65|Check with the third identity: one plus twenty five over one forty four is one sixty nine over one forty four. Cosecant squared.
+W7|0.65|Check: one plus twenty five over one forty four is one sixty nine over one forty four, cosecant squared.
 X1|0.35|Now, the exam trap.
 X2|0.4|Many students square sine theta plus cosine theta, and write sine squared plus cosine squared, which is one.
-X3|0.65|But a bracket squared has a middle term: one plus two sine theta cosine theta. At forty five degrees it is two, not one.
-J1|0.6|Where is this asked? JEE Main and the PUC boards: given one ratio, find the others, or simplify.
+X3|0.65|But a bracket squared has a middle term: one plus two sine theta cosine theta. At forty five degrees it is two.
+J1|0.6|Where is this asked? JEE Main and the PUC boards: given one ratio, find the rest.
 Q1|5.4|Exam level now. Secant theta plus tan theta equals three. Find sine theta. Pause and solve.
 A1|0.5|The answer is B. Four fifths.
 A2|0.5|Secant squared minus tan squared is one, which is secant minus tan, times secant plus tan.
@@ -54,8 +54,8 @@ A3|0.5|So secant minus tan equals one third.
 A4|0.6|Add the equations: secant is five thirds. Subtract: tan is four thirds.
 A5|0.6|Sine is tan over secant. Four thirds over five thirds is four fifths.
 F1|3.2|Here is your recap. Screenshot this card.
-Y1|0.4|Can you answer these three questions without help?
+Y1|0.4|Can you answer these three without help?
 Y2|0.9|One. Why is sine theta equals cosine theta not an identity?
 Y3|0.9|Two. If cosine theta is three fifths, what can sine theta be?
 Y4|1.1|Three. At which angles is the third identity not defined?
-N1|0.3|Next time: is sine of thirty plus sixty equal to sine thirty plus sine sixty? Compound angle formulae.
+N1|0.3|Next time: is sine of thirty plus sixty equal to sine thirty plus sine sixty? Compound angles.

@@ -1,0 +1,169 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 29 - Domain and Range of Trigonometric Functions</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 29: domain and range of trigonometric functions (Proof board) ===== */
+:root{--th:#7A4FE0;--co:#2F6FEB;--ta:#0E8F8F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.th{color:var(--th)}.co{color:var(--co)}.si{color:var(--ac)}.ta{color:var(--ta)}
+svg text{font-family:'IBM Plex Mono'}
+#stage svg .pp{transform-box:fill-box;transform-origin:center}
+#stage svg circle,#stage svg g{transform-box:fill-box;transform-origin:center}
+/* title card: three limits, unknown */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:50px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+/* hook */
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.rdl{position:absolute;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.rdv{position:absolute;height:52px;padding:0 18px;border-radius:10px;display:inline-flex;align-items:center;gap:10px;font:600 26px 'IBM Plex Mono';color:#fff;white-space:nowrap}
+/* steps (recall, derivation) */
+.st{position:absolute;left:36px;width:712px;height:100px}
+.st .n{position:absolute;left:0;top:6px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:40px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:60px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+/* live readout */
+#sRo{position:absolute;right:36px;top:22px;display:flex;gap:34px;font:600 28px 'IBM Plex Mono';white-space:nowrap}
+#sRo i{font-family:Poppins;font-style:italic}
+/* side by side */
+.kv{position:absolute;left:440px;white-space:nowrap}
+.kv.big{font:600 44px 'IBM Plex Mono'}
+.kv.sm{font:600 30px 'IBM Plex Mono'}
+.kv.lb{font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.kbx{position:absolute;left:424px;width:330px;height:56px;border-radius:12px;background:var(--redBg)}
+/* domain and range machine */
+.box{position:absolute;top:110px;width:440px;height:380px;border-radius:16px;background:var(--soft)}
+.box .bt{position:absolute;left:28px;top:26px;font:600 22px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.box .bs{position:absolute;left:28px;top:62px;font:500 24px Poppins;color:var(--ink2);white-space:nowrap}
+#mach{position:absolute;left:640px;top:210px;width:320px;height:180px;border-radius:20px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:64px}
+.tok{position:absolute;height:56px;padding:0 16px;border-radius:12px;display:inline-flex;align-items:center;font:600 28px 'IBM Plex Mono';white-space:nowrap;background:#fff;border:2.5px solid}
+/* tan readouts */
+.gl{position:absolute;left:36px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.gv{position:absolute;left:36px;font:600 50px 'IBM Plex Mono';white-space:nowrap}
+#gDom{position:absolute;left:36px;top:356px;font-size:30px;white-space:nowrap}
+/* table */
+.rh{position:absolute;top:84px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.rr{position:absolute;left:20px;width:1560px;height:62px;border-radius:12px;background:var(--soft)}
+.rr .c{position:absolute;top:0;height:62px;display:flex;align-items:center;font-size:32px;white-space:nowrap}
+#wRo{position:absolute;left:36px;top:70px;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+#wRo i{font-family:Poppins}
+/* worked example */
+#wq{position:absolute;left:36px;top:64px;font:600 30px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.15em}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.12em}
+#mq .mq .katex{font-size:1.08em}
+#wl .sol .sx{font-size:30px}
+.trapL .tx .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:32px}
+#stF .katex{font-size:1em}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 3 TRIGONOMETRIC FUNCTIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Domain and <span class="acc">Range</span> of Trig Functions</div>
+    <div id="sub">Explained with one tyre valve that never rises too high</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: the valve height + Aarav's tape -->
+    <div id="sH">
+      <div class="card full" id="hw"><div class="lbl" style="left:36px;top:30px">THE VALVE · HOW HIGH, HOW LOW?</div>
+        <svg id="hS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="rdv" id="hV" style="left:36px;top:506px;background:var(--ac)"></div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · HIS FRONT WHEEL</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">Never above +R, never below −R</div></div>
+    </div>
+
+    <!-- I: domain and range, two words -->
+    <div id="sI">
+      <div class="card wide" id="ic"><div class="lbl" style="left:36px;top:30px">TWO WORDS · DOMAIN AND RANGE</div>
+        <div class="box" id="bxD" style="left:60px"><div class="bt th">DOMAIN</div><div class="bs">every input you may put in</div></div>
+        <div id="mach"></div>
+        <div class="box" id="bxR" style="left:1100px"><div class="bt si">RANGE</div><div class="bs">every output that comes out</div></div>
+        <svg id="iS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg><div id="toks"></div></div>
+    </div>
+
+    <!-- L: P goes round, sine is trapped -->
+    <div id="sL">
+      <div class="card wide" id="lc"><div class="lbl" style="left:36px;top:30px">LIVE · TWO TURNS · y = sin θ</div>
+        <svg id="lS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="sRo"><span class="th"><i>θ</i> = <b id="rT">0°</b></span><span class="si">sin <i>θ</i> = <b id="rS"></b></span></div></div>
+    </div>
+
+    <!-- D: the proof -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">PROOF · 4 STEPS</div><div class="hiBox" id="dHi" style="left:20px;width:744px;height:96px"></div><div id="dSt"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">THE PICTURE</div><svg id="dS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- G: tangent blows up -->
+    <div id="sG">
+      <div class="card full" id="gl"><div class="lbl" style="left:36px;top:30px">TANGENT LINE · AT x = 1</div><svg id="gS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="gr"><div class="lbl" style="left:36px;top:30px">LIVE · θ CREEPS TO 90°</div>
+        <div class="gl" style="top:84px">ANGLE</div><div class="gv th" id="gT" style="top:106px"></div>
+        <div class="gl" style="top:84px;left:400px">cos θ</div><div class="gv co" id="gC" style="top:106px;left:400px"></div>
+        <div class="gl" style="top:204px">tan θ = sin θ / cos θ</div><div class="gv ta" id="gTn" style="top:226px"></div>
+        <div id="gDom"></div><svg id="gN" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- R: all six in one table -->
+    <div id="sR">
+      <div class="card wide" id="rt"><div class="lbl" style="left:36px;top:30px">ALL SIX · DOMAIN AND RANGE · n ∈ Z</div>
+        <div class="rh" style="left:56px">FUNCTION</div><div class="rh" style="left:300px">DOMAIN</div><div class="rh" style="left:1040px">RANGE</div><div id="rRows"></div></div>
+    </div>
+
+    <!-- K: sin vs tan, then pause and think -->
+    <div id="sK">
+      <div class="card full" id="ka"><div class="lbl" style="left:36px;top:30px">SINE · BIG DOMAIN, SMALL RANGE</div><svg id="kaS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="kaP" style="left:36px;top:496px">Any angle in, only −1 to 1 out</div></div>
+      <div class="card rf" id="kb"><div class="lbl" style="left:36px;top:30px">TANGENT · GAPS IN, EVERYTHING OUT</div><svg id="kbS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="kbP" style="left:36px;top:496px">Gaps in the domain, every real output</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- Z: pause and think 2 -->
+    <div id="sZ"><div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div></div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">LIVE · THE WAVE STRETCHES AND LIFTS</div><div id="wRo"></div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="600" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Any angle in. Only <span class="acc">−1 to 1</span> out.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

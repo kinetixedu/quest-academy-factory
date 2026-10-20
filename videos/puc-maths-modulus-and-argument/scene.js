@@ -196,7 +196,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 43', topic: 'An address for e
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tg0 - 0.3, 1.06, 1340, 540], [tg2 + 1.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tg0 - 0.3, 1.06, 1100, 560], [tg2 + 1.2, 1, 960, 540]]);
 
 /* ---------- frame ---------- */
 M.on(t => {
@@ -235,7 +235,7 @@ M.on(t => {
     M.vis(MP.g, t, tP1 + 0.3, 1e9, { dy: 0, fade: 0.3 }); M.vis(mO, t, wt('P2', 'origin'), 1e9, { dy: 0 });
     M.draw(mA, t, wt('P2', 'along') - 0.2, 0.7); M.vis(mAL, t, wt('P2', 'along'), 1e9, { dy: 0 });
     M.draw(mB, t, wt('P2', 'up') - 0.3, 0.6); M.vis(mBL, t, wt('P2', 'up'), 1e9, { dy: 0 });
-    M.vis(mP.g, t, wt('P2', 'land'), 1e9, PT); M.vis(mZL, t, wt('P2', 'point'), 1e9, { dy: 0 });
+    M.vis(mP.g, t, wt('P2', 'point') - 0.3, 1e9, PT); M.vis(mZL, t, wt('P2', 'point'), 1e9, { dy: 0 });
     M.vis(mTri, t, wt('M2', 'triangle') - 0.1, 1e9, { dy: 0, fade: 0.4 }); M.vis(mRA, t, wt('M2', 'triangle'), 1e9, { dy: 0 });
     M.draw(mH, t, wt('M3', 'squared') - 0.3, 0.7); M.vis(mHL, t, wt('M5', 'five') - 0.1, 1e9, POP);
     M.vis($('#pr'), t, wt('P2', 'Think') + 0.3, tM1 - 0.2, { dx: 60, dy: 0, ...o });
@@ -303,7 +303,7 @@ M.on(t => {
   const sOn = t >= tS1 - 0.1 && t < tT + 0.1; M.hide($('#sS'), !sOn);
   if (sOn) {
     const out = OUT('S3');
-    [[SM, '#sm', '#smF', '#smP', T0('S1'), 'mirror', 'Opposite'], [SN, '#sn', '#snF', '#snP', T0('S2'), 'point', 'pi']].forEach(([P, c, f, p, t0, w1, w2], k) => {
+    [[SM, '#sm', '#smF', '#smP', T0('S1'), 'mirror', 'Opposite'], [SN, '#sn', '#snF', '#snP', T0('S2'), 'point', 'opposite']].forEach(([P, c, f, p, t0, w1, w2], k) => {
       const id = k ? 'S2' : 'S1';
       M.vis($(c), t, t0 + 0.1 - (k ? 0.2 : 0), out, { dx: k ? 60 : -60, dy: 0, ...o });
       PUC.write($(f), t, wt(id, 'modulus') - 0.2, 0.8);
@@ -348,7 +348,7 @@ M.on(t => {
     M.draw(tWr, t, wt('X2', 'pi') - 0.1, 0.4); M.vis(tWrL, t, wt('X3', 'first') - 0.1, 1e9, { dy: 0 });
     M.vis(tPt, t, wt('X3', 'sits') - 0.2, 1e9, PT); M.vis(tRtL, t, wt('X3', 'sits'), 1e9, { dy: 0 });
     M.draw(tRt, t, wt('X3', 'right') - 0.1, 0.4); M.draw(tArc, t, wt('X3', 'minus') - 0.1, 0.6);
-    where(t, { tin: T0('J1'), tLight: [wt('J1', 'JEE'), wt('J1', 'Advanced')], tType: wt('J1', 'questions') });
+    where(t, { tin: T0('J1'), tLight: [wt('J1', 'JEE'), wt('J1', 'Advanced')], tType: wt('J1', 'modulus') });
   }
 
   /* Q */
