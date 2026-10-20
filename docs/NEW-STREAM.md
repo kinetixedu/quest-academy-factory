@@ -17,6 +17,10 @@ Each stream (BBA, BCom, BCA, BSc, Engineering...) can run in its own Claude sess
 6. Commit only finished, reviewed episodes; always `git pull --rebase` before push (other sessions push too). Never touch other streams' folders.
 7. Manual posting while the API quota is low: run the "Manual upload kit" workflow with the slugs, clone the `kit` branch with input branch=kit-<stream> so streams never overwrite each other, send video, thumbnail, captions + upload text.
 
+## PUC streams (extra)
+- PUC Physics owns the shared PUC world: it creates `worlds/puc/` (Lab Notebook look, docs/series/PUC.md), adds categories `puc-physics`, `puc-chemistry`, `puc-maths`, `puc-biology`, `puc-electronics` to config/categories.json (category names "PUC Physics" etc., playlist per subject and class), bundles KaTeX locally, and makes the shared cast (Aarav, Diya) in `assets/illustrations/puc/`.
+- The other PUC sessions write their series bible and scripts first, and start rendering only after `worlds/puc/` is on main. They change only the accent and their subject's editing style.
+
 ## Rules shared by all streams
 Plain hyphens only. 12-year-old language, real substance. Faceless, Kokoro voice, professional sound whitelist, brand outro. No real brands in stories. Verify every fact.
 
