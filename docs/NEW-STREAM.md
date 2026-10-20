@@ -19,3 +19,9 @@ Each stream (BBA, BCom, BCA, BSc, Engineering...) can run in its own Claude sess
 
 ## Rules shared by all streams
 Plain hyphens only. 12-year-old language, real substance. Faceless, Kokoro voice, professional sound whitelist, brand outro. No real brands in stories. Verify every fact.
+
+## Working alongside other sessions
+- Several sessions push to the same repo. Before every push: `git pull --rebase origin main`; if queue/topics.csv conflicts, keep both sides' rows (each series adds its own rows) and continue the rebase.
+- Use a unique file prefix for your stream's illustrations and a unique kit branch (kit-<stream>).
+- Only the session that owns a shared world (e.g. PUC Physics owns worlds/puc and assets/illustrations/puc) edits it; others reuse it.
+- Uploads are paused (config/schedule.json "paused": true) while Amjad posts manually; never unpause from a stream session.
