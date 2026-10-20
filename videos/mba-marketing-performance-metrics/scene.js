@@ -91,7 +91,7 @@ $('#atRow').innerHTML = AT.map(([ic, l, v, s], i) => `<div class="at" id="at${i}
 wrap($('#kq'), 'kqOut', 784, 580);
 // M: scorecard tiles
 const SC = [['METRIC 01', 'Sales growth', '30%', 'GOAL 25%', 1], ['METRIC 02', 'Customer retention', '85%', 'GOAL 80%', 1], ['METRIC 03', 'Cost to win one', '₹500', 'GOAL ₹400', 0], ['METRIC 04', 'Return on marketing', '150%', 'GOAL 100%', 1]];
-$('#scGrid').innerHTML = SC.map(([n, t, v, g], i) => `<div class="sct" id="st${i}" style="left:${48 + (i % 2) * 352}px;top:${92 + Math.floor(i / 2) * 216}px"><div class="zn">${n}</div><div class="zt">${t}</div><div class="zv" id="sv${i}">?</div><div class="zg">${g}</div><div class="lt" id="sl${i}"><span id="slI${i}"></span><span id="slT${i}"></span></div></div>`).join('');
+$('#scGrid').innerHTML = SC.map(([n, t, v, g], i) => `<div class="sct" id="sq${i}" style="left:${48 + (i % 2) * 352}px;top:${92 + Math.floor(i / 2) * 216}px"><div class="zn">${n}</div><div class="zt">${t}</div><div class="zv" id="sv${i}">?</div><div class="zg">${g}</div><div class="lt" id="sl${i}"><span id="slI${i}"></span><span id="slT${i}"></span></div></div>`).join('');
 // M: math panels
 $('#gUpI').innerHTML = M.icon('trendUp', 22, C.gold, 2.4); $('#gNetI').innerHTML = M.icon('trendUp', 22, C.gold, 2.4);
 const STOP = new Set(); while (STOP.size < 30) STOP.add(Math.floor(rnd() * 200));
@@ -268,7 +268,7 @@ M.on(t => {
     M.vis($('#mL'), t, tM1 + 0.1, tMout, { dx: -60, dy: 0, ...o });
     M.vis($('#mR'), t, tM1 + 0.25, tMout, { dx: 60, dy: 0, ...o });
     SC.forEach(([, , v, , good], i) => {
-      const el = $('#st' + i); M.vis(el, t, tM1 + 0.4 + i * 0.08, 1e9, { dy: 16 });
+      const el = $("#sq" + i); M.vis(el, t, tM1 + 0.4 + i * 0.08, 1e9, { dy: 16 });
       const nx = i < 3 ? tMs[i + 1] : tMout + 1, act = M.io((t - tMs[i]) / 0.25) * (1 - M.io((t - nx) / 0.3));
       el.style.boxShadow = act > 0.01 ? `0 0 0 3px ${M.rgba(C.gold, act)}` : 'none';
       el.querySelector('.zt').style.color = t < tMs[i] ? C.dim : C.ink;
