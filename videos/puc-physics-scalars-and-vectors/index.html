@@ -1,0 +1,165 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 32 - Scalars and Vectors</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 32: scalars and vectors (Motion notebook, one bicycle ride) ===== */
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.u{color:#7A4FE0}
+/* title card sum */
+.job{position:absolute;top:724px;width:300px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 22px 'IBM Plex Mono';white-space:nowrap}
+.jop{position:absolute;top:752px;font:600 48px 'IBM Plex Mono';color:var(--mute)}
+/* hook */
+.rrow{position:absolute;left:36px;top:84px;width:712px;height:84px;border-radius:14px;background:var(--soft)}
+.rrow .rx{position:absolute;left:24px;top:0;height:84px;display:flex;align-items:center;gap:16px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+.rrow .rt2{position:absolute;right:24px;top:24px;height:36px;padding:0 12px;border-radius:8px;background:var(--ink);color:#fff;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;display:flex;align-items:center}
+.bigv{position:absolute;font:600 52px/1 'IBM Plex Mono';white-space:nowrap}
+.chipk{position:absolute;height:64px;padding:0 22px;border-radius:12px;display:flex;align-items:center;gap:12px;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+.chipk small{font:600 16px 'IBM Plex Mono';letter-spacing:.08em;opacity:.8}
+/* rows (scalars / vectors) */
+.jr{position:absolute;left:36px;width:712px;height:84px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:16px;top:14px;width:56px;height:56px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:92px;top:22px;font:700 30px Poppins;white-space:nowrap}
+.jr .jv{position:absolute;right:24px;top:22px;font:600 32px 'IBM Plex Mono';white-space:nowrap}
+/* readout k with KaTeX */
+.ro .k .katex{font-size:1em}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:110px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:36px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:58px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+/* side by side */
+.case{position:absolute;left:36px;width:368px;height:76px;border-radius:14px;background:var(--soft)}
+.case .cn{position:absolute;left:20px;top:10px;font:700 23px Poppins;white-space:nowrap}
+.case .cv{position:absolute;left:20px;top:44px;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.case .cr{position:absolute;right:20px;top:18px;font:600 32px 'IBM Plex Mono';white-space:nowrap;color:#D9731A}
+.bag{position:absolute;top:110px;width:200px;height:200px;border-radius:14px;background:var(--soft)}
+.bag .bv{position:absolute;left:0;width:200px;top:128px;text-align:center;font:600 40px 'IBM Plex Mono';white-space:nowrap}
+.bop{position:absolute;top:180px;font:600 52px 'IBM Plex Mono';color:var(--mute)}
+/* link chain */
+.cb{position:absolute;height:80px;padding:0 26px;border-radius:14px;background:var(--soft);display:flex;align-items:center;font:700 32px Poppins;white-space:nowrap}
+.cop{position:absolute;font:600 48px 'IBM Plex Mono';color:var(--mute)}
+.ctag{position:absolute;height:42px;padding:0 14px;border-radius:8px;display:inline-flex;align-items:center;font:600 20px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.cwhy{position:absolute;font:500 40px Poppins;color:var(--ink2);white-space:nowrap}
+/* worked */
+#wq{position:absolute;left:36px;top:70px;font:600 30px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:32px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:31px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 3 MOTION IN A PLANE</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Scalars and <span class="acc">Vectors</span></div>
+    <div id="sub">Explained on one bicycle ride</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: same numbers, two kinds of adding + the ride -->
+    <div id="sH">
+      <div class="card full" id="hp"><div class="lbl" style="left:36px;top:30px">SAME NUMBERS · TWO WAYS TO ADD</div>
+        <div class="rrow" id="hr"><div class="rx"><span id="hrI"></span>10 kg + 10 kg = <b style="color:var(--ink)">20 kg</b></div><div class="rt2">ALWAYS</div></div>
+        <div class="lbl" id="hpL" style="left:36px;top:200px">TWO PUSHES OF 10 N · ONE BOX</div>
+        <svg id="hpS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="bigv" id="hpV" style="left:540px;top:252px;color:#D9731A"><span id="hpN">20</span> <span style="font-size:30px">N</span></div>
+        <div class="lbl" id="hpT" style="left:540px;top:318px">TOTAL PUSH</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV'S RIDE · THE PUZZLE</div>
+        <div id="hkF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg" style="position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px">
+        <div class="chipk" id="hk0" style="left:36px;top:494px;background:var(--ink);color:#fff"><small>TRIP METER</small>7 km</div>
+        <div class="chipk" id="hk1" style="left:400px;top:494px;background:#7A4FE0;color:#fff"><small>FROM THE GATE</small>5 km</div></div>
+    </div>
+
+    <!-- P: scalars and vectors -->
+    <div id="sP">
+      <div class="card full" id="ps"><div class="lbl" style="left:36px;top:30px">SCALARS · SIZE ONLY</div><div id="psr"></div></div>
+      <div class="card rf" id="pv"><div class="lbl" style="left:36px;top:30px">VECTORS · SIZE + DIRECTION</div><div id="pvr"></div>
+        <div class="pillp ac" id="pvP" style="left:36px;top:494px"><span id="pvI"></span>and they add by the triangle law</div></div>
+    </div>
+
+    <!-- S: the ride sim + readout + graph -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">MOTION NOTEBOOK · AARAV'S RIDE</div>
+        <div class="tag" id="slo" style="right:36px;top:22px">SLOW-MO REPLAY · 0.25x</div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro" id="roG" style="left:36px;top:70px;width:712px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">DISTANCE VS DISPLACEMENT</div><div class="ghost" id="exG" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <svg id="grS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- D: derivation + the triangle with squares -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE MATHS · 4 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">THE TRIANGLE · AREAS 9 + 16 = 25</div><svg id="trS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- K: side by side + think -->
+    <div id="sK">
+      <div class="card full" id="kb"><div class="lbl" style="left:36px;top:30px">SCALAR · MASS</div>
+        <div class="bag" id="kb0" style="left:36px"><div style="position:absolute;left:68px;top:36px" id="kbI0"></div><div class="bv">10 kg</div></div>
+        <div class="bop" id="kbp" style="left:252px">+</div>
+        <div class="bag" id="kb1" style="left:300px"><div style="position:absolute;left:68px;top:36px" id="kbI1"></div><div class="bv">10 kg</div></div>
+        <div class="bop" id="kbe" style="left:516px">=</div>
+        <div class="bigv" id="kbR" style="left:570px;top:184px">20 <span style="font-size:32px">kg</span></div>
+        <div class="pillp" id="kbC" style="left:36px;top:494px">Every time, in every direction: 20 kg</div></div>
+      <div class="card rf" id="kv"><div class="lbl" style="left:36px;top:30px">VECTOR · FORCE</div>
+        <svg id="kvS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div id="cases"></div>
+        <div class="pillp ink" id="kvC" style="left:36px;top:494px">Same numbers, different answers</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- L: follow the links -->
+    <div id="sL"><div class="card wide" id="lk"><div class="lbl" style="left:36px;top:30px">SCALAR OR VECTOR? FOLLOW THE LINKS</div><div id="chn"></div></div></div>
+
+    <!-- U: equal vectors + think -->
+    <div id="sU">
+      <div class="card full" id="ue"><div class="lbl" style="left:36px;top:30px">EQUAL VECTORS</div><svg id="ueS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp good" id="ueP" style="left:36px;top:494px">Same size + same direction: equal</div></div>
+      <div class="card rf" id="un"><div class="lbl" style="left:36px;top:30px">SAME SIZE, NOT EQUAL</div><svg id="unS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp bad" id="unP" style="left:36px;top:494px">Different direction: not equal</div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">A student walks 8 m east, then 6 m north. Find the distance and the displacement.</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">MOTION NOTEBOOK · THE WALK</div><svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="chipk" id="wd" style="left:36px;top:494px;background:var(--ink);color:#fff"><small>DISTANCE</small><span id="wdN">0</span> m</div>
+        <div class="chipk" id="ws" style="left:400px;top:494px;background:#7A4FE0;color:#fff"><small>DISPLACEMENT</small>10 m</div></div>
+    </div>
+
+    <!-- X: exam trap + where -->
+    <div id="sX"><div class="card red" id="trap"><svg id="rtS" width="600" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this. Scalars add like plain numbers.</div><div id="st2">Vectors add by the <span class="acc">triangle law</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
