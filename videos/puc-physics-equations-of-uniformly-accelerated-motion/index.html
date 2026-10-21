@@ -1,0 +1,130 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 25 - Equations of Uniformly Accelerated Motion</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 25: equations of uniformly accelerated motion (Motion notebook, bicycle down a slope) ===== */
+:root{--v1:#2F6FEB;--v2:#7A4FE0;--a:#D64545}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.v1{color:var(--v1)}.v2{color:var(--v2)}.ra{color:var(--a)}
+/* title card tiles */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .jq{position:absolute;right:24px;top:36px;height:48px;padding:0 16px;border-radius:10px;display:flex;align-items:center;font:600 20px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap;background:#fff;color:var(--mute)}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+.hq{position:absolute;top:494px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+/* definition */
+#dfx{position:absolute;left:36px;top:78px;font:700 34px/1.3 Poppins;width:712px}
+#tlS{position:absolute;left:0;top:200px}
+.nu{position:absolute;left:36px;width:712px;height:88px;border-radius:14px;background:var(--soft)}
+.nu i{position:absolute;left:18px;top:16px;width:56px;height:56px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.nu .nn{position:absolute;left:92px;top:14px;font:700 28px Poppins;white-space:nowrap}
+.nu .nw{position:absolute;left:92px;top:54px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.nu .nk{position:absolute;right:20px;top:24px;height:40px;padding:0 14px;border-radius:8px;display:flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;background:var(--redBg);color:var(--red);white-space:nowrap}
+/* sim */
+.tagS{position:absolute;display:inline-flex;align-items:center;height:40px;padding:0 14px;border-radius:8px;background:var(--red);color:#fff;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:86px}
+.st .n{position:absolute;left:0;top:4px;width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 21px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:64px;top:0;font:600 28px Poppins;white-space:nowrap}
+.st .why{position:absolute;left:64px;top:44px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+/* side by side */
+.sbh{position:absolute;left:36px;top:76px;font:700 34px Poppins;white-space:nowrap}
+.sbs{position:absolute;left:36px;top:124px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.mini{position:absolute;left:36px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* worked */
+#wq{position:absolute;left:36px;top:70px;font:600 27px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:32px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 24px Poppins}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 32px Poppins;white-space:nowrap}
+.thk .tp svg{display:block}
+.eqc{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.eqc .n{position:absolute;left:20px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.eqc .sx{position:absolute;left:92px;top:22px;font-size:36px;white-space:nowrap}
+.eqc .ms{position:absolute;right:20px;top:28px;height:40px;padding:0 14px;border-radius:8px;display:flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;background:#fff;color:var(--mute);white-space:nowrap}
+.qv{position:absolute;height:64px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+.qv .s{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 2 MOTION IN A STRAIGHT LINE</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Equations of <span class="acc">Motion</span></div>
+    <div id="sub">Built from one sloping straight line</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE MOMENTS · ONE SET OF EQUATIONS</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Constant acceleration? 3 equations predict it</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV AT THE TOP OF THE SLOPE</div>
+        <div id="hdF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg">
+        <div class="hq" id="hq0" style="left:36px">Speed at <b class="mono">5 s</b> ?</div>
+        <div class="hq" id="hq1" style="left:300px">How far down ?</div></div>
+    </div>
+
+    <div id="sP">
+      <div class="card" id="pv" style="left:160px;top:270px;width:1600px;height:580px"><div class="lbl" style="left:36px;top:30px">FIVE QUANTITIES · ONE CONDITION</div><div id="qvs"></div>
+        <div class="pillp bad" id="pvC" style="left:36px;top:440px">Only if acceleration is uniform: same size, same direction</div></div>
+    </div>
+
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">MOTION BENCH · DOWN THE SLOPE</div>
+        <div class="tagS" id="slo" style="right:36px;top:20px">SLOW-MO REPLAY · 0.25x</div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="lbl" id="tR" style="left:250px;top:30px;color:var(--ink)">t = 0.0 s</div><div class="ro" id="roG" style="left:36px;top:70px;width:712px;row-gap:2px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">VELOCITY <i style="font-family:Poppins;text-transform:none">v</i> VS TIME <i style="font-family:Poppins;text-transform:none">t</i></div><svg id="grS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" id="dlL" style="left:36px;top:30px">EQUATION 1 · FROM THE MEANING OF a</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">AREA UNDER v-t = DISPLACEMENT</div><svg id="drS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sK">
+      <div class="card" id="kc" style="left:160px;top:270px;width:1600px;height:580px"><div class="lbl" style="left:36px;top:30px">EACH EQUATION LEAVES ONE OUT</div><div id="eqs"></div><svg id="kcS" width="700" height="440" style="position:absolute;left:860px;top:100px"></svg></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">From rest, a = 2 m/s². Speed and distance after 5 s?</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">AARAV AFTER 5 s</div><svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tg" width="420" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Three equations, one condition: <span class="acc">constant a</span></div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

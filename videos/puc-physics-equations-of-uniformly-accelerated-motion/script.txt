@@ -1,0 +1,51 @@
+H1|0.4|A cricket ball thrown up. A car braking at a signal. A bicycle rolling down a slope.
+H2|0.45|Three very different moments. But one set of three equations can predict all of them.
+H3|0.35|Aarav starts from rest at the top of a slope. His bicycle gains two metres per second, every second.
+H4|0.5|Without riding it, can he know his speed after five seconds? And how far down he will be?
+H5|0.65|Yes. If the acceleration stays constant, three equations tell him everything. Let's build them.
+P1|0.35|First, what do we need?
+P2|0.4|Five quantities. Initial velocity, v nought. Final velocity, v. Acceleration, a. Time, t. And displacement, x.
+P3|0.6|The one condition: the acceleration must be uniform. Same size, same direction, all the time.
+S1|0.35|Let's run Aarav's ride on our motion bench.
+S2|0.4|He starts at zero. The acceleration is two metres per second squared.
+S3|0.4|Watch the velocity arrow. Every second, it grows by the same two metres per second.
+S4|0.5|And the paint marks spread out. One metre, three metres, five metres, seven metres.
+S5|0.4|Let's replay the first two seconds in slow motion.
+S6|0.65|Now the graph. Velocity against time is a straight line, sloping up. Its slope is the acceleration.
+D1|0.35|Equation one, from the meaning of acceleration.
+D2|0.75|Acceleration is the change in velocity divided by time. So a equals v minus v nought, over t.
+D3|0.75|Multiply both sides by t, and move v nought across. v equals v nought plus a t.
+D4|0.7|In words: final velocity is the starting velocity, plus the velocity you gain.
+E2|0.35|Equation two, from the area under the graph.
+E3|0.75|The area under a velocity time graph is the displacement. Here it splits into two parts.
+E4|0.75|A rectangle, v nought times t. That is how far you would go with no acceleration.
+E5|0.75|And a triangle, half of t times a t. That is the extra distance you gain by speeding up.
+E6|0.7|Add them. x equals v nought t, plus half a t squared.
+E7|0.35|Equation three, when time is not given.
+E8|0.75|From equation one, t equals v minus v nought, over a. Put this into equation two and simplify.
+E9|0.7|Time disappears. v squared equals v nought squared, plus two a x.
+T1|0.7|Remember this. Three equations, one condition. The acceleration must stay constant.
+K1|0.35|Side by side. Which equation do you pick?
+K2|0.45|Each equation leaves out one quantity. Equation one has no x. Equation two has no v. Equation three has no t.
+K3|0.6|So look at the question. Find the quantity it neither gives nor asks for. Pick the equation without it.
+K4|3.2|Now you try. A car moving at twenty metres per second brakes with a constant deceleration, and stops in forty metres. To find the deceleration, which equation? Pause and decide.
+K5|0.65|Equation three! Time is neither given nor asked, so pick the one without t. Zero equals four hundred minus eighty a, so a is five metres per second squared, against the motion.
+W1|0.35|Now, Aarav's question. Speed and distance after five seconds.
+W2|0.5|v nought is zero. a is two metres per second squared. t is five seconds.
+W3|0.75|Equation one. v equals zero plus two times five. That is ten metres per second.
+W4|0.75|Equation two. x equals zero plus half times two times twenty five. That is twenty five metres.
+W5|0.65|Check with equation three. Ten squared is one hundred. Two times two times twenty five is also one hundred. It matches.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students use these equations for any motion, even when the acceleration changes.
+X3|0.65|But they work only when the acceleration is constant. If a changes with time, use calculus instead. And keep signs: a deceleration is a negative a.
+E1|0.6|Where is this asked? As numericals: stopping distance, braking, and finding time, speed or distance with constant acceleration.
+Q1|5.4|Exam level now. A body starts from rest with constant acceleration and covers twelve metres in the third second. Find its acceleration. Pause and solve.
+A1|0.5|The answer is C. Four point eight metres per second squared.
+A2|0.5|Distance in the third second is the distance in three seconds, minus the distance in two seconds.
+A3|0.6|That is half a times nine, minus half a times four. Half a times five equals twelve. So a is twenty four over five, four point eight.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Which quantity is missing from v squared equals v nought squared plus two a x?
+Y3|0.9|Two. Where does the half a t squared term come from on the velocity time graph?
+Y4|1.1|Three. When can you not use these three equations?
+N1|0.3|Next time: drop a stone and a feather where there is no air. Which lands first? Motion under gravity.
