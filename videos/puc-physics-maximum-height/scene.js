@@ -1,7 +1,7 @@
 // PUC Physics Ep 44: Maximum height (Motion notebook: launch at 60 degrees, v_y-t graph, side by side angles)
 (() => {
 const { $ } = M, C = PUC.init({ subject: 'physics' }), K = PUC.K, wt = M.wt, T0 = M.t0, T1 = M.t1, mix = M.mix;
-const VC = C.ac, GC = C.red, HC = C.violet, THC = C.gold, TC = C.ink;   // v blue, g red, H / height violet, theta gold, t ink
+const VC = C.ac, VY = C.violet, GC = C.red, HC = C.violet, THC = C.gold, TC = C.ink;   // v blue, g red, H / height violet, theta gold, t ink
 const IMG = '../../assets/illustrations/puc/';
 const nsv = 'http://www.w3.org/2000/svg';
 const mk = (p, tag, a) => { const e = document.createElementNS(nsv, tag); for (const k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e; };
@@ -11,8 +11,8 @@ const attr = PUC.attr;
 const POP = { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 };
 const g = 9.8;
 const c = (col, s) => `\\textcolor{${col}}{${s}}`;
-const u_ = c(VC, 'u'), g_ = c(GC, 'g'), a_ = c(GC, 'a'), H_ = c(HC, 'H'), th_ = c(THC, '\\theta'), vy_ = c(VC, 'v_y'), vx_ = c(VC, 'v_x'), v_ = c(VC, 'v');
-const usin = `${u_}\\sin${th_}`, ucos = `${u_}\\cos${th_}`;
+const u_ = c(VC, 'u'), g_ = c(GC, 'g'), a_ = c(GC, 'a'), H_ = c(HC, 'H'), th_ = c(THC, '\\theta'), vy_ = c(VY, 'v_y'), vx_ = c(VC, 'v_x'), v_ = c(VC, 'v');
+const usin = `${c(VY, 'u\\sin')}${th_}`, ucos = `${u_}\\cos${th_}`;
 const ball = (p, r, op = 1) => { const og = mk(p, 'g', { opacity: op }); mk(og, 'circle', { cx: 0, cy: 0, r, fill: '#E4572E', stroke: C.ink, 'stroke-width': 2.5 }); return og; };
 const place = (el, x, y) => attr(el, 'transform', `translate(${x.toFixed(1)},${y.toFixed(1)})`);
 const sgn = v => (v >= 0.05 ? '+' : v <= -0.05 ? '−' : '') + Math.abs(v).toFixed(1);
@@ -67,13 +67,13 @@ mk(pl, 'circle', { cx: PLX, cy: PLY, r: 7, fill: C.ink });
 const plTop = mk(pl, 'g', {}); { const [x, y] = pxy(1); mk(plTop, 'circle', { cx: x, cy: y, r: 13, fill: '#E4572E', stroke: C.ink, 'stroke-width': 2.5 }); }
 const plH = mk(pl, 'line', { x1: pxy(1)[0], y1: pxy(1)[1] + 16, x2: pxy(1)[0], y2: PLY, stroke: HC, 'stroke-width': 3, 'stroke-dasharray': '8 6' });
 const plHl = sym(pl, pxy(1)[0] + 14, (pxy(1)[1] + PLY) / 2 + 10, 'H', HC, 36);
-const plV = [0, 1 / 3, 2 / 3].map(() => PUC.arrow(pl, VC, 5, 15));
-const plVl = sym(pl, 0, 0, 'v', VC, 26, 'y');
-const plZ = document.createElement('div'); plZ.className = 'tag2'; plZ.style.cssText = `left:${pxy(1)[0] + 26}px;top:${pxy(1)[1] - 50}px;background:${C.ac2};color:${VC}`; plZ.innerHTML = 'v<sub>y</sub> = 0 · TOP'; $('#pl').appendChild(plZ);
+const plV = [0, 1 / 3, 2 / 3].map(() => PUC.arrow(pl, VY, 5, 15));
+const plVl = sym(pl, 0, 0, 'v', VY, 26, 'y');
+const plZ = document.createElement('div'); plZ.className = 'tag2'; plZ.style.cssText = `left:${pxy(1)[0] + 26}px;top:${pxy(1)[1] - 50}px;background:#EEE7FB;color:${VY}`; plZ.innerHTML = 'v<sub>y</sub> = 0 · TOP'; $('#pl').appendChild(plZ);
 const tVy = [wt('P5', 'keeps'), wt('P5', 'vertical'), wt('P5', 'points')];
 // right: split u
 const pr = $('#prS'), PO = [110, 470], PU = 330, PA = 56 * Math.PI / 180, PTx = PO[0] + PU * Math.cos(PA), PTy = PO[1] - PU * Math.sin(PA);
-const pUa = PUC.arrow(pr, VC, 7, 22), pCx = mk(pr, 'line', { x1: PO[0], y1: PO[1], x2: PTx, y2: PO[1], stroke: VC, 'stroke-width': 4, 'stroke-dasharray': '10 8' }), pCy = mk(pr, 'line', { x1: PTx, y1: PO[1], x2: PTx, y2: PTy, stroke: VC, 'stroke-width': 4, 'stroke-dasharray': '10 8' });
+const pUa = PUC.arrow(pr, VC, 7, 22), pCx = mk(pr, 'line', { x1: PO[0], y1: PO[1], x2: PTx, y2: PO[1], stroke: VC, 'stroke-width': 4, 'stroke-dasharray': '10 8' }), pCy = mk(pr, 'line', { x1: PTx, y1: PO[1], x2: PTx, y2: PTy, stroke: VY, 'stroke-width': 4, 'stroke-dasharray': '10 8' });
 const pArc = mk(pr, 'path', { d: arcP(PO[0], PO[1], 64, 0, PA), fill: 'none', stroke: THC, 'stroke-width': 3 });
 const pGa = PUC.arrow(pr, GC, 7, 22), pGl = sym(pr, 712, 300, 'g', GC, 34);
 $('#pU').innerHTML = K(u_); $('#pUc').innerHTML = K(ucos); $('#pUs').innerHTML = K(usin); $('#pTh').innerHTML = K(th_);
@@ -94,8 +94,8 @@ const sArcL = txt(s, LX + 54, B0 - 12, '60°', { fill: THC, 'font-weight': 600, 
 const sGh = [0, 1, 2, 3].map(() => ball(s, 14, 0));
 const sTr = [0, 1, 2].map(() => ball(s, 14, 0));
 const sB = ball(s, 14);
-const sVx = PUC.arrow(s, VC, 6, 18), sVy = PUC.arrow(s, VC, 6, 18), sG = PUC.arrow(s, GC, 6, 18);
-const sVxl = sym(s, 0, 0, 'v', VC, 26, 'x'), sVyl = sym(s, 0, 0, 'v', VC, 26, 'y'), sGl = sym(s, 0, 0, 'g', GC, 28);
+const sVx = PUC.arrow(s, VC, 6, 18), sVy = PUC.arrow(s, VY, 6, 18), sG = PUC.arrow(s, GC, 6, 18);
+const sVxl = sym(s, 0, 0, 'v', VC, 26, 'x'), sVyl = sym(s, 0, 0, 'v', VY, 26, 'y'), sGl = sym(s, 0, 0, 'g', GC, 28);
 const sH = mk(s, 'line', { x1: sx(TT), y1: sy(TT) + 16, x2: sx(TT), y2: B0, stroke: HC, 'stroke-width': 3, 'stroke-dasharray': '8 6' });
 const sHl = document.createElement('div'); sHl.className = 'pillp'; sHl.style.cssText = `left:${sx(TT) + 16}px;top:${B0 - 120}px;color:${HC}`; sHl.innerHTML = '<span class="mono">H = 14.7 m</span>'; $('#sim').appendChild(sHl);
 const GK = [0, 1, 2, 3].map(k => k * TT / 4), BRX = 580;
@@ -103,15 +103,15 @@ const sBr = [0, 1, 2, 3].map(k => mk(s, 'path', { d: `M${BRX},${sy(GK[k]).toFixe
 const sBl = [0, 1, 2, 3].map(k => { const a = yv(GK[k]), b = yv(k < 3 ? GK[k + 1] : TT); return txt(s, BRX + 22, (sy(GK[k]) + sy(k < 3 ? GK[k + 1] : TT)) / 2 + 7, (b - a).toFixed(1) + ' m', { fill: HC, 'font-size': 20, 'font-weight': 600 }); });
 $('#roG').innerHTML = `<span class="k" style="color:${TC}">t</span><span class="v" id="rt">0.00</span><span class="u">s</span>
   <span class="k" style="color:${VC}">v<sub>x</sub></span><span class="v" id="rvx" style="color:${VC}">9.8</span><span class="u">m/s</span>
-  <span class="k" style="color:${VC}">v<sub>y</sub></span><span class="v" id="rvy" style="color:${VC}">+17.0</span><span class="u">m/s</span>
+  <span class="k" style="color:${VY}">v<sub>y</sub></span><span class="v" id="rvy" style="color:${VY}">+17.0</span><span class="u">m/s</span>
   <span class="k" style="color:${HC}">y</span><span class="v" id="ry" style="color:${HC}">0.0</span><span class="u">m</span>`;
 $('#roF1').innerHTML = K(`${vx_} = ${ucos}`); $('#roF2').innerHTML = K(`${vy_} = ${usin} - ${g_}t`);
 const sGr = PUC.graph($('#grS'), { x: 110, y: 70, w: 560, h: 160, xmax: 3.5, ymin: -17.5, ymax: 17.5, xt: [0, 1, 2, 3], yt: [16.97, 0, -16.97] });
 txt($('#grS'), 690, sGr.Y(0) + 6, 't (s)');
 const sTri = sGr.mk('path', { d: `M${sGr.X(0)},${sGr.Y(UY)} L${sGr.X(TT)},${sGr.Y(0)} L${sGr.X(0)},${sGr.Y(0)} Z`, fill: HC, 'fill-opacity': 0.2, stroke: HC, 'stroke-width': 2 });
-const sCv = sGr.curve(VC), sDt = sGr.dot(C.ink);
-const sZ = sGr.mk('circle', { cx: sGr.X(TT), cy: sGr.Y(0), r: 13, fill: 'none', stroke: VC, 'stroke-width': 3 });
-const sZl = sGr.mk('text', { x: sGr.X(TT) + 18, y: sGr.Y(0) - 14, 'font-family': 'IBM Plex Mono', 'font-size': 18, fill: VC, 'font-weight': 600 }); sZl.textContent = 'TOP · 1.73 s';
+const sCv = sGr.curve(VY), sDt = sGr.dot(C.ink);
+const sZ = sGr.mk('circle', { cx: sGr.X(TT), cy: sGr.Y(0), r: 13, fill: 'none', stroke: VY, 'stroke-width': 3 });
+const sZl = sGr.mk('text', { x: sGr.X(TT) + 18, y: sGr.Y(0) - 14, 'font-family': 'IBM Plex Mono', 'font-size': 18, fill: VY, 'font-weight': 600 }); sZl.textContent = 'TOP · 1.73 s';
 const sAr = sGr.mk('text', { x: 420, y: 100, 'font-family': 'IBM Plex Mono', 'font-size': 20, fill: HC, 'font-weight': 600 }); sAr.textContent = 'area = 14.7 m = H';
 // sim clock: first run at 0.5x, then a replay: 1x to 1 s, 0.25x to the top, freeze
 const tA = wt('S2', 'readout') - 0.1, tRp = tS5 - 0.1, tSlow = tRp + 1;
@@ -139,8 +139,8 @@ txt(dr, DAX, dy(TT) - 52, 'HEIGHT', { 'text-anchor': 'middle', 'font-size': 16, 
 const dLink = mk(dr, 'line', { x1: DAX, y1: DB, x2: DLX, y2: DB, stroke: C.dim, 'stroke-width': 2, 'stroke-dasharray': '3 6' });
 const dSh = mk(dr, 'circle', { cx: DAX, cy: DB, r: 11, fill: VC });
 const dB = ball(dr, 13);
-const dVy = PUC.arrow(dr, VC, 5, 16), dVyl = sym(dr, 0, 0, 'v', VC, 24, 'y');
-const dZ = txt(dr, DAX + 24, dy(TT) - 12, 'vy = 0', { fill: VC, 'font-size': 24, 'font-weight': 600 });
+const dVy = PUC.arrow(dr, VY, 5, 16), dVyl = sym(dr, 0, 0, 'v', VY, 24, 'y');
+const dZ = txt(dr, DAX + 24, dy(TT) - 12, 'vy = 0', { fill: VY, 'font-size': 24, 'font-weight': 600 });
 const dH = mk(dr, 'path', { d: `M${DAX - 30},${dy(TT)} h-12 V${DB} h12`, fill: 'none', stroke: HC, 'stroke-width': 3, 'stroke-linecap': 'round' });
 const dHl = sym(dr, DAX - 72, (dy(TT) + DB) / 2 + 10, 'H', HC, 32);
 $('#dU').innerHTML = `unit: &nbsp;${K('\\dfrac{(\\text{m/s})^2}{\\text{m/s}^2} = \\text{m}')}`;
@@ -156,22 +156,22 @@ $('#stF').innerHTML = K(`${vy_} = 0, \\;\\; ${v_} = ${ucos}`);
 
 /* ---------- R: link by link ---------- */
 const LK = [['The up part doubles', 'u sin θ grows in step with u', '7 → 14 m/s'], ['Time up doubles', 'g takes away 9.8 m/s every second', '0.71 → 1.43 s'], ['Average speed doubles', 'half of u sin θ, on the way up', '3.5 → 7 m/s'], ['Height × 4', 'H = average speed × time: 2 × 2', '2.5 → 10 m']];
-$('#lks').innerHTML = LK.map(([x, w, m], i) => `<div class="lk" id="lk${i}" style="top:${84 + i * 100}px"><div class="n">${i + 1}</div><div class="lx">${x}</div><div class="lw">${w}</div><div class="lm" style="color:${[VC, TC, VC, HC][i]}">${m}</div></div>`).join('');
+$('#lks').innerHTML = LK.map(([x, w, m], i) => `<div class="lk" id="lk${i}" style="top:${84 + i * 100}px"><div class="n">${i + 1}</div><div class="lx">${x}</div><div class="lw">${w}</div><div class="lm" style="color:${[VY, TC, VY, HC][i]}">${m}</div></div>`).join('');
 const tLk = [wt('R2', 'twice'), wt('R3', 'twice'), wt('R4', 'average'), wt('R5', 'four')];
 const rr = $('#rrS'), rG = PUC.graph(rr, { x: 120, y: 96, w: 560, h: 300, xmax: 1.6, ymin: 0, ymax: 15.5, xt: [], yt: [0, 7, 14] });
 [[0, '0'], [1 / 1.4, '0.71'], [2 / 1.4, '1.43']].forEach(([v, s2]) => { rG.mk('line', { x1: rG.X(v), y1: 396, x2: rG.X(v), y2: 404, stroke: C.ink, 'stroke-width': 2 }); const e = rG.mk('text', { x: rG.X(v), y: 428, 'text-anchor': 'middle', 'font-family': 'IBM Plex Mono', 'font-size': 18, fill: C.mute }); e.textContent = s2; });
-txt(rr, 700, 428, 't (s)', { 'text-anchor': 'end' }); txt(rr, 132, 90, 'vy (m/s)', { fill: VC, 'font-weight': 600 });
+txt(rr, 700, 428, 't (s)', { 'text-anchor': 'end' }); txt(rr, 132, 90, 'vy (m/s)', { fill: VY, 'font-weight': 600 });
 const t1s = 7 / g, t2s = 14 / g;
 const rT1 = rG.mk('path', { d: `M${rG.X(0)},${rG.Y(7)} L${rG.X(t1s)},${rG.Y(0)} L${rG.X(0)},${rG.Y(0)} Z`, fill: HC, 'fill-opacity': 0.35, stroke: 'none' });
 const rT2 = rG.mk('path', { d: `M${rG.X(0)},${rG.Y(14)} L${rG.X(t2s)},${rG.Y(0)} L${rG.X(0)},${rG.Y(0)} Z`, fill: HC, 'fill-opacity': 0.12, stroke: HC, 'stroke-width': 2 });
-const rL1 = rG.mk('path', { d: `M${rG.X(0)},${rG.Y(7)} L${rG.X(t1s)},${rG.Y(0)}`, stroke: VC, 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' });
-const rL2 = rG.mk('path', { d: `M${rG.X(0)},${rG.Y(14)} L${rG.X(t2s)},${rG.Y(0)}`, stroke: VC, 'stroke-width': 5, fill: 'none', 'stroke-linecap': 'round' });
+const rL1 = rG.mk('path', { d: `M${rG.X(0)},${rG.Y(7)} L${rG.X(t1s)},${rG.Y(0)}`, stroke: VY, 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' });
+const rL2 = rG.mk('path', { d: `M${rG.X(0)},${rG.Y(14)} L${rG.X(t2s)},${rG.Y(0)}`, stroke: VY, 'stroke-width': 5, fill: 'none', 'stroke-linecap': 'round' });
 const rMid = rG.mk('path', { d: `M${rG.X(0)},${rG.Y(7)} H${rG.X(t1s)} V${rG.Y(0)}`, stroke: HC, 'stroke-width': 2.5, fill: 'none', 'stroke-dasharray': '7 6' });
 const rA1 = rG.mk('text', { x: rG.X(0) + 14, y: rG.Y(2) , 'font-family': 'IBM Plex Mono', 'font-size': 20, fill: HC, 'font-weight': 600 }); rA1.textContent = '2.5 m';
-const rL1t = rG.mk('text', { x: rG.X(t1s) + 12, y: rG.Y(0.9), 'font-family': 'IBM Plex Mono', 'font-size': 18, fill: VC, 'font-weight': 600 }); rL1t.textContent = '14 m/s throw';
-const rL2t = rG.mk('text', { x: rG.X(0.62) + 10, y: rG.Y(10.5), 'font-family': 'IBM Plex Mono', 'font-size': 18, fill: VC, 'font-weight': 600 }); rL2t.textContent = '28 m/s throw';
+const rL1t = rG.mk('text', { x: rG.X(t1s) + 12, y: rG.Y(0.9), 'font-family': 'IBM Plex Mono', 'font-size': 18, fill: VY, 'font-weight': 600 }); rL1t.textContent = '14 m/s throw';
+const rL2t = rG.mk('text', { x: rG.X(0.62) + 10, y: rG.Y(10.5), 'font-family': 'IBM Plex Mono', 'font-size': 18, fill: VY, 'font-weight': 600 }); rL2t.textContent = '28 m/s throw';
 const rBase = rG.mk('path', { d: `M${rG.X(0)},${rG.Y(0) + 46} v-8 H${rG.X(t2s)} v8`, stroke: TC, 'stroke-width': 2.5, fill: 'none' });
-const rAvg = [7, 3.5].map(v => rG.mk('line', { x1: rG.X(0), y1: rG.Y(v), x2: rG.X(v === 7 ? t2s : t1s), y2: rG.Y(v), stroke: VC, 'stroke-width': 2, 'stroke-dasharray': '3 6' }));
+const rAvg = [7, 3.5].map(v => rG.mk('line', { x1: rG.X(0), y1: rG.Y(v), x2: rG.X(v === 7 ? t2s : t1s), y2: rG.Y(v), stroke: VY, 'stroke-width': 2, 'stroke-dasharray': '3 6' }));
 const rP = document.createElement('div'); rP.className = 'pillp ink'; rP.style.cssText = 'left:36px;top:490px'; rP.innerHTML = '2 × taller, 2 × wider = 4 copies: <span class="mono" style="color:#C9B6F5">10 m</span>'; $('#rr').appendChild(rP);
 const avA = PUC.avatar($('#sR'), { x: 160 + 36, y: 270 + 492, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'Twice as fast, four times as high!' });
 
@@ -208,8 +208,8 @@ mk(w, 'line', { x1: 650, y1: WB, x2: 650, y2: WB - 10 * WP, stroke: C.ink, 'stro
 [[0, '0'], [2.5, '2.5 m'], [5, '5 m'], [10, '10 m']].forEach(([m, s2]) => { mk(w, 'line', { x1: 642, y1: WB - m * WP, x2: 658, y2: WB - m * WP, stroke: C.ink, 'stroke-width': 2 }); txt(w, 668, WB - m * WP + 6, s2, { fill: m === 2.5 || m === 10 ? HC : C.mute, 'font-weight': m === 2.5 || m === 10 ? 600 : 400 }); });
 const wTop = [[WXA, 2.5], [WXB, 10]].map(([x, h]) => mk(w, 'line', { x1: x + 24, y1: WB - h * WP, x2: 640, y2: WB - h * WP, stroke: HC, 'stroke-width': 2, 'stroke-dasharray': '4 6' }));
 const wBa = ball(w, 13), wBb = ball(w, 13);
-const wVa = PUC.arrow(w, VC, 5, 16), wVb = PUC.arrow(w, VC, 5, 16);
-const wLa = txt(w, WXA, WB + 50, '', { 'text-anchor': 'middle', 'font-size': 22, fill: VC, 'font-weight': 600 }), wLb = txt(w, WXB, WB + 50, '', { 'text-anchor': 'middle', 'font-size': 22, fill: VC, 'font-weight': 600 });
+const wVa = PUC.arrow(w, VY, 5, 16), wVb = PUC.arrow(w, VY, 5, 16);
+const wLa = txt(w, WXA, WB + 50, '', { 'text-anchor': 'middle', 'font-size': 22, fill: VY, 'font-weight': 600 }), wLb = txt(w, WXB, WB + 50, '', { 'text-anchor': 'middle', 'font-size': 22, fill: VY, 'font-weight': 600 });
 wLa.textContent = '14 m/s · uy = 7'; wLb.textContent = '28 m/s · uy = 14';
 const wTag = document.createElement('div'); wTag.className = 'tag'; wTag.style.cssText = 'right:36px;top:22px'; wTag.innerHTML = 'SLOW-MO · 0.5x'; $('#wr').appendChild(wTag);
 const wX4 = document.createElement('div'); wX4.className = 'pillp ac'; wX4.style.cssText = 'left:300px;top:100px'; wX4.innerHTML = 'height × 4'; $('#wr').appendChild(wX4);
@@ -231,7 +231,7 @@ const so = PUC.solution($('#so'), [[K(`${ucos} = \\dfrac{${u_}}{2}`)], [K(`\\cos
 const tSo = [wt('A2', 'So'), wt('A3', 'So'), wt('A3', 'sine'), T0('A4')];
 const fc = PUC.fcard($('#sF'), { x: 330, y: 262, w: 1260, h: 470, title: 'Recap · maximum height', y0: 100, dy: 90, txt: [0, 1, 1, 1],
   lines: [K(`${H_} = ${u_}^2\\sin^2${th_} / 2${g_} \\qquad t_{\\text{top}} = ${usin} / ${g_}`),
-    `<b>At the top</b>: <span class="vv">v<sub>y</sub> = 0</span>, but <span class="vv">v = u cos θ</span>: still moving`,
+    `<b>At the top</b>: <span class="vi">v<sub>y</sub> = 0</span>, but <span class="vv">v = u cos θ</span>: still moving`,
     `<b>H ∝ u²</b>: 2 × speed → 4 × height &nbsp;·&nbsp; <b>H ∝ sin²θ</b>: 30° : 60° = 1 : 3`,
     `<b>Greatest at 90°</b>: <span class="vi">H = u²/2g</span> &nbsp;·&nbsp; height sin²θ, range sin 2θ`] });
 const YQ = ['At the very top of the flight, what is the ball’s velocity?', 'If the launch speed triples, how many times higher does the ball go?', 'Why does the height use sin²θ, not sin 2θ?'];
