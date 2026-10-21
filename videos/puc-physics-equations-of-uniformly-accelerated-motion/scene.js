@@ -48,7 +48,7 @@ const pxl = txt(pv, (PR0 + PR1) / 2, PY + 92, 'x', { 'font-family': 'Poppins', '
 const ptl = [txt(pv, PR0, PY + 92, 't = 0', { 'text-anchor': 'middle', 'font-size': 22, fill: C.ink, 'font-weight': 600 }), txt(pv, PR1, PY + 92, 't', { 'text-anchor': 'middle', 'font-size': 22, fill: C.ink, 'font-weight': 600 })];
 
 /* ---------- S: down the slope ---------- */
-const s = $('#simS'), SX0 = 70, SY0 = 160, SX1 = 720, SY1 = 420, AY = 2, XMAX = 25, TM = 5;
+const s = $('#simS'), SX0 = 80, SY0 = 170, SX1 = 560, SY1 = 400, AY = 2, XMAX = 25, TM = 5;
 const SL = Math.hypot(SX1 - SX0, SY1 - SY0), ux = (SX1 - SX0) / SL, uy = (SY1 - SY0) / SL, PXM = SL / XMAX;
 const at = m => [SX0 + ux * m * PXM, SY0 + uy * m * PXM];
 mk(s, 'path', { d: `M${SX0 - 30},${SY0 - 12} L${SX1 + 20},${SY1 + 8} L${SX1 + 20},${SY1 + 60} L${SX0 - 30},${SY1 + 60} Z`, fill: C.soft });
@@ -70,14 +70,14 @@ const gapT = txt(s, 36, 520, 'GAPS EACH SECOND: 1, 3, 5, 7, 9 m', { 'font-weight
 $('#roG').innerHTML = `<span class="k" style="color:${VC}">v</span><span class="v" id="rv" style="color:${VC}"></span><span class="u">m/s</span>
   <span class="k" style="color:${AC}">a</span><span class="v" id="ra" style="color:${AC}">2.0</span><span class="u">m/s²</span>
   <span class="k" style="color:${XC}">x</span><span class="v" id="rx"></span><span class="u">m</span>`;
-const gs = $('#grS'), G = PUC.graph(gs, { x: 110, y: 64, w: 540, h: 150, xmax: 5, ymax: 10, xt: [0, 1, 2, 3, 4, 5], yt: [0, 5, 10] });
-txt(gs, 664, 222, 't (s)', {}); txt(gs, 52, 56, 'v (m/s)', {});
+const gs = $('#grS'), G = PUC.graph(gs, { x: 110, y: 80, w: 540, h: 136, xmax: 5, ymax: 10, xt: [0, 1, 2, 3, 4, 5], yt: [0, 5, 10] });
+txt(gs, 664, 222, 't (s)', {}); txt(gs, 30, 86, 'm/s', {});
 const gc = G.curve(VC), gd = G.dot(VC);
 const gTri = mk(gs, 'path', { d: `M${G.X(3)},${G.Y(6)} H${G.X(4)} V${G.Y(8)}`, fill: 'none', stroke: AC, 'stroke-width': 3, 'stroke-dasharray': '6 5' });
 const gTl = txt(gs, G.X(4) + 12, G.Y(7) + 6, 'slope = a = 2 m/s²', { 'font-weight': 600, fill: AC, 'font-size': 18 });
 const ex = document.createElement('div'); ex.className = 'ghost'; ex.style.cssText = 'right:36px;top:18px'; ex.textContent = 'EXAMPLE FIGURES'; $('#ro').appendChild(ex);
 const tA = T0('S2') + 0.3, tB = T1('S4') - 0.2;
-const tR0 = wt('S5', 'slow') + 0.3, tR1 = tR0 + 8;            // replay the first 2 s at 0.25x
+const tR0 = wt('S5', 'slow') + 0.3, tR1 = tR0 + 6;            // replay the first 2 s at 1/3 speed
 const simT = t => t < tR0 - 0.05 ? TM * M.clamp((t - tA) / (tB - tA)) : t < tR1 ? 2 * M.clamp((t - tR0) / (tR1 - tR0)) : 2 + 3 * M.io((t - tR1) / 0.8);
 const avA = PUC.avatar($('#sS'), { x: 160 + 36, y: 270 + 486, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'Same +2 every second. That I can predict!' });
 
@@ -108,8 +108,8 @@ const rectL = txt(ds, DG.X(T5 / 2), DG.Y(DV0 / 2) + 10, '', { 'text-anchor': 'mi
 const triL = txt(ds, DG.X(T5 * 0.66), DG.Y(DV0 + 2.2) + 8, '½ × t × at', { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-weight': 600, 'font-size': 24, fill: V2 });
 const tBr = mk(ds, 'path', { d: `M${DG.X(0)},${DG.Y(0) + 46} v10 H${DG.X(T5)} v-10`, fill: 'none', stroke: C.ink, 'stroke-width': 2.5 });
 const tBl = txt(ds, DG.X(T5 / 2), DG.Y(0) + 84, 't', { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-style': 'italic', 'font-weight': 600, 'font-size': 26, fill: C.ink });
-const noT = document.createElement('div'); noT.className = 'pillp ink'; noT.style.cssText = 'left:400px;top:30px'; noT.innerHTML = 'Equation 3: no <i>t</i> needed'; $('#dr').appendChild(noT);
-const tStrike = mk(ds, 'line', { x1: DG.X(T5 / 2) - 26, y1: DG.Y(0) + 84, x2: DG.X(T5 / 2) + 26, y2: DG.Y(0) + 64, stroke: AC, 'stroke-width': 4, 'stroke-linecap': 'round' });
+const noT = document.createElement('div'); noT.className = 'pillp ink'; noT.style.cssText = 'left:440px;top:24px'; noT.innerHTML = 'Equation 3: no <i>t</i> needed'; $('#dr').appendChild(noT);
+const tStrike = mk(ds, 'line', { x1: DG.X(T5 / 2) - 26, y1: DG.Y(0) + 84, x2: DG.X(T5 / 2) + 26, y2: DG.Y(0) + 64, stroke: AC, 'stroke-width': 5, 'stroke-linecap': 'round' });
 const avD = PUC.avatar($('#sD'), { x: 160 + 36, y: 270 + 486, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'Start speed plus what you gain. Simple!' });
 
 /* ---------- statement ---------- */
@@ -169,7 +169,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 26', topic: 'Stone or feather
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tS6 + 0.2, 1.1, 1368, 713], [tD1 - 0.5, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tS6 + 0.2, 1.06, 960, 560], [tD1 - 0.5, 1, 960, 540]]);
 const f1 = v => v.toFixed(1);
 let geo = null;
 function measure() { geo = 1; const h0 = $('#hq0'), h1 = $('#hq1'); h1.style.left = (h0.offsetLeft + h0.offsetWidth + 16) + 'px'; }
@@ -224,9 +224,9 @@ M.on(t => {
     const tg0 = wt('S4', 'One');
     gapL.forEach((g, k) => { g.style.opacity = (M.io((t - tg0 - k * 0.45) / 0.3) * (k + 1 <= st + 1e-6 ? 1 : 0)).toFixed(3); });
     M.vis(gapT, t, wt('S4', 'seven') + 0.3, 1e9, { dy: 8 });
-    const vOn = M.io((t - wt('S3', 'velocity') + 0.1) / 0.4), len = 14 * v * vOn, ox = bx - uy * 70, oy = by + ux * -70;
+    const vOn = M.io((t - wt('S3', 'velocity') + 0.1) / 0.4), len = 14 * v * vOn, ox = bx + uy * 70, oy = by - ux * 70;
     va.set(ox, oy, ox + ux * len, oy + uy * len); attr(vl, 'x', (ox + ux * len / 2 - 6).toFixed(1)); attr(vl, 'y', (oy + uy * len / 2 - 14).toFixed(1)); vl.style.opacity = (vOn * M.clamp(len / 20)).toFixed(3);
-    const aOn = M.io((t - wt('S2', 'acceleration') + 0.1) / 0.4), ax0 = bx - uy * 104, ay0 = by - ux * 104;
+    const aOn = M.io((t - wt('S2', 'acceleration') + 0.1) / 0.4), ax0 = bx + uy * 104, ay0 = by - ux * 104;
     aa.set(ax0, ay0, ax0 + ux * 56 * aOn, ay0 + uy * 56 * aOn); attr(al, 'x', (ax0 - 24).toFixed(1)); attr(al, 'y', (ay0 + 4).toFixed(1)); al.style.opacity = aOn;
     M.vis($('#slo'), t, tR0 - 0.3, tR1, { ...POP, sc: 0.6 });
     M.setT($('#rv'), f1(v)); M.setT($('#rx'), f1(xm)); M.setT($('#tR'), 't = ' + f1(st) + ' s');
