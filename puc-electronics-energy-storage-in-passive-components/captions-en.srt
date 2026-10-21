@@ -1,0 +1,405 @@
+1
+00:00:00,450 --> 00:00:03,343
+Aarav pulls his phone
+charger out of the wall.
+
+2
+00:00:03,343 --> 00:00:07,547
+But the little light on the charger
+stays on for a moment, then slowly
+
+3
+00:00:07,547 --> 00:00:08,447
+fades.
+
+4
+00:00:08,469 --> 00:00:09,636
+The plug is out.
+
+5
+00:00:09,636 --> 00:00:12,479
+So where is that light
+getting its energy from?
+
+6
+00:00:12,979 --> 00:00:14,869
+The answer is stored energy.
+
+7
+00:00:14,869 --> 00:00:18,717
+Some parts in a circuit can
+hold energy, like a tiny tank.
+
+8
+00:00:19,067 --> 00:00:21,522
+Let's meet the three passive parts.
+
+9
+00:00:21,522 --> 00:00:23,924
+A resistor does not store energy.
+
+10
+00:00:23,924 --> 00:00:26,539
+It turns electrical energy into heat.
+
+11
+00:00:26,889 --> 00:00:31,456
+A capacitor stores energy in an
+electric field, between its two plates.
+
+12
+00:00:31,806 --> 00:00:36,038
+And an inductor stores energy in
+a magnetic field, around its coil.
+
+13
+00:00:36,688 --> 00:00:39,543
+Let's watch a capacitor
+fill up on the breadboard.
+
+14
+00:00:39,893 --> 00:00:44,156
+Here is a battery, a capacitor, and
+a small lamp, with a two way switch.
+
+15
+00:00:44,506 --> 00:00:46,379
+Flip the switch to the battery.
+
+16
+00:00:46,379 --> 00:00:49,639
+Electrons pile up on one plate
+and leave the other plate.
+
+17
+00:00:49,989 --> 00:00:51,256
+Watch the scope.
+
+18
+00:00:51,256 --> 00:00:55,974
+The voltage across the capacitor rises
+fast at first, then slows down and
+
+19
+00:00:55,974 --> 00:00:57,931
+levels off at twelve volts.
+
+20
+00:00:58,281 --> 00:01:00,873
+The charging current does the opposite.
+
+21
+00:01:00,873 --> 00:01:03,434
+It starts big and dies away to zero.
+
+22
+00:01:03,434 --> 00:01:05,306
+The capacitor is now full.
+
+23
+00:01:05,957 --> 00:01:07,824
+Now flip the switch to the lamp.
+
+24
+00:01:07,824 --> 00:01:10,119
+There is no battery in this loop at all.
+
+25
+00:01:10,469 --> 00:01:11,973
+Yet the lamp lights up.
+
+26
+00:01:11,973 --> 00:01:15,607
+The stored electrons rush back
+around the loop through the lamp.
+
+27
+00:01:15,957 --> 00:01:20,299
+On the scope, the voltage falls, and
+the lamp fades out together with it.
+
+28
+00:01:20,299 --> 00:01:22,329
+That is exactly the charger light.
+
+29
+00:01:22,979 --> 00:01:24,629
+Resistors spend energy.
+
+30
+00:01:24,629 --> 00:01:26,978
+Capacitors and inductors store it.
+
+31
+00:01:27,778 --> 00:01:30,660
+So how much energy does a capacitor hold?
+
+32
+00:01:30,660 --> 00:01:32,360
+Let's build the formula.
+
+33
+00:01:32,710 --> 00:01:36,822
+First, the charge on a capacitor
+grows with its voltage.
+
+34
+00:01:36,822 --> 00:01:38,467
+Q equals C times V.
+
+35
+00:01:38,467 --> 00:01:41,000
+C is the capacitance, in farads.
+
+36
+00:01:41,700 --> 00:01:45,943
+On a graph of voltage against charge,
+that is a straight line from zero.
+
+37
+00:01:46,643 --> 00:01:50,152
+While charging, the voltage
+climbs from zero up to V.
+
+38
+00:01:50,152 --> 00:01:54,226
+So on average, each bit of charge
+is pushed through V by two.
+
+39
+00:01:54,926 --> 00:01:57,295
+Work equals charge times voltage.
+
+40
+00:01:57,295 --> 00:02:00,365
+So the energy U equals Q times V by two.
+
+41
+00:02:00,365 --> 00:02:02,918
+That is the area of this triangle.
+
+42
+00:02:03,618 --> 00:02:05,492
+Now put Q equals CV.
+
+43
+00:02:05,492 --> 00:02:08,406
+The energy U equals half CV squared.
+
+44
+00:02:09,106 --> 00:02:12,809
+C in farads, V in volts,
+and U comes out in joules.
+
+45
+00:02:13,459 --> 00:02:14,717
+Worked example.
+
+46
+00:02:14,717 --> 00:02:19,155
+A one hundred microfarad capacitor
+is charged to twelve volts.
+
+47
+00:02:19,505 --> 00:02:24,364
+U equals half, times one hundred times
+ten to the minus six, times twelve
+
+48
+00:02:24,364 --> 00:02:25,264
+squared.
+
+49
+00:02:25,692 --> 00:02:27,877
+That is seven point two millijoules.
+
+50
+00:02:28,527 --> 00:02:31,487
+Now double the voltage
+to twenty four volts.
+
+51
+00:02:31,487 --> 00:02:35,174
+V is squared, so the energy
+becomes four times bigger.
+
+52
+00:02:35,524 --> 00:02:37,754
+Twenty eight point eight millijoules.
+
+53
+00:02:37,754 --> 00:02:39,046
+Look at the graph.
+
+54
+00:02:39,046 --> 00:02:41,824
+The new triangle holds
+four of the old ones.
+
+55
+00:02:42,474 --> 00:02:43,801
+Now the inductor.
+
+56
+00:02:43,801 --> 00:02:46,049
+An inductor is a coil of wire.
+
+57
+00:02:46,399 --> 00:02:50,972
+When current flows through it, a
+magnetic field builds up around the coil.
+
+58
+00:02:50,972 --> 00:02:52,572
+That field holds energy.
+
+59
+00:02:52,922 --> 00:02:55,668
+Its energy is U equals half LI squared.
+
+60
+00:02:55,668 --> 00:03:00,226
+L is the inductance, in henries,
+and I is the current, in amperes.
+
+61
+00:03:00,876 --> 00:03:03,582
+An inductor hates sudden
+changes in current.
+
+62
+00:03:03,582 --> 00:03:06,242
+Open the switch, and the field collapses.
+
+63
+00:03:06,592 --> 00:03:11,131
+Its stored energy has to go somewhere,
+so it can jump the gap as a spark.
+
+64
+00:03:11,781 --> 00:03:13,001
+See the pattern?
+
+65
+00:03:13,001 --> 00:03:15,193
+A capacitor holds on to voltage.
+
+66
+00:03:15,193 --> 00:03:17,384
+An inductor holds on to current.
+
+67
+00:03:17,384 --> 00:03:20,042
+Both formulas have a half and a square.
+
+68
+00:03:20,692 --> 00:03:22,158
+Now, the exam trap.
+
+69
+00:03:22,508 --> 00:03:27,111
+Many students think the capacitor
+keeps all the energy the battery gives.
+
+70
+00:03:27,111 --> 00:03:28,138
+It does not.
+
+71
+00:03:28,488 --> 00:03:30,463
+The battery gives Q times V.
+
+72
+00:03:30,463 --> 00:03:33,706
+The capacitor stores
+only half of it, half QV.
+
+73
+00:03:33,706 --> 00:03:36,703
+The other half is lost
+as heat in the wires.
+
+74
+00:03:37,353 --> 00:03:38,929
+Where is this asked?
+
+75
+00:03:38,929 --> 00:03:44,052
+In PUC board papers, and in JEE Main,
+for example in February twenty twenty
+
+76
+00:03:44,052 --> 00:03:46,602
+one and January twenty twenty three.
+
+77
+00:03:46,602 --> 00:03:51,290
+Find the energy in a capacitor or
+an inductor, or the energy lost.
+
+78
+00:03:51,940 --> 00:03:52,840
+Try this.
+
+79
+00:03:52,834 --> 00:03:56,183
+A fifty millihenry inductor
+carries two amperes.
+
+80
+00:03:56,183 --> 00:04:00,098
+What capacitance stores the
+same energy at twenty volts?
+
+81
+00:04:05,498 --> 00:04:06,398
+B.
+
+82
+00:04:06,038 --> 00:04:08,250
+Five hundred microfarads.
+
+83
+00:04:08,600 --> 00:04:10,673
+First, the inductor energy.
+
+84
+00:04:10,673 --> 00:04:14,188
+Half times zero point zero
+five times two squared.
+
+85
+00:04:14,188 --> 00:04:16,443
+That is zero point one joules.
+
+86
+00:04:16,793 --> 00:04:20,571
+Now set half CV squared
+equal to zero point one.
+
+87
+00:04:20,571 --> 00:04:23,652
+So C equals two U divided by V squared.
+
+88
+00:04:24,002 --> 00:04:27,419
+That is zero point two
+divided by four hundred.
+
+89
+00:04:27,419 --> 00:04:32,338
+Five times ten to the minus four
+farads, or five hundred microfarads.
+
+90
+00:04:32,988 --> 00:04:34,512
+Screenshot this card.
+
+91
+00:04:37,712 --> 00:04:40,335
+Next, transducers and their applications.
+
+92
+00:04:40,335 --> 00:04:43,988
+How does a thermometer turn
+your body heat into a number?

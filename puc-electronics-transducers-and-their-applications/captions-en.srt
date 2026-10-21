@@ -1,0 +1,411 @@
+1
+00:00:00,450 --> 00:00:03,562
+Diya holds a digital
+thermometer under her tongue.
+
+2
+00:00:03,562 --> 00:00:07,271
+One minute later, it beeps and
+shows thirty seven degrees.
+
+3
+00:00:07,621 --> 00:00:09,881
+But a thermometer cannot feel anything.
+
+4
+00:00:09,881 --> 00:00:12,300
+So how does it turn heat into a number?
+
+5
+00:00:12,800 --> 00:00:14,790
+The secret is a transducer.
+
+6
+00:00:15,140 --> 00:00:20,166
+A transducer is a device that changes
+energy from one form into another.
+
+7
+00:00:20,516 --> 00:00:25,073
+In electronics, it turns a physical
+quantity, like heat, light, sound or
+
+8
+00:00:25,073 --> 00:00:27,414
+pressure, into an electrical signal.
+
+9
+00:00:27,414 --> 00:00:29,039
+Or the other way round.
+
+10
+00:00:29,689 --> 00:00:32,198
+A microphone is an input transducer.
+
+11
+00:00:32,198 --> 00:00:35,031
+It turns sound into an electrical signal.
+
+12
+00:00:35,381 --> 00:00:37,989
+A loudspeaker is an output transducer.
+
+13
+00:00:37,989 --> 00:00:41,189
+It turns the electrical
+signal back into sound.
+
+14
+00:00:41,839 --> 00:00:44,752
+Now let's open the
+thermometer on the breadboard.
+
+15
+00:00:45,102 --> 00:00:46,756
+Inside is a thermistor.
+
+16
+00:00:46,756 --> 00:00:50,630
+That is a resistor whose resistance
+changes with temperature.
+
+17
+00:00:50,980 --> 00:00:55,782
+It sits in series with a fixed ten
+kilo ohm resistor, across a five volt
+
+18
+00:00:55,782 --> 00:00:56,682
+supply.
+
+19
+00:00:56,463 --> 00:00:59,593
+We read the voltage
+across the fixed resistor.
+
+20
+00:00:59,942 --> 00:01:04,638
+At room temperature, twenty five
+degrees, the thermistor is also ten kilo
+
+21
+00:01:04,638 --> 00:01:05,538
+ohms.
+
+22
+00:01:05,207 --> 00:01:09,028
+So the output is half the
+supply, two point five volts.
+
+23
+00:01:09,378 --> 00:01:11,340
+Now Diya's mouth warms it up.
+
+24
+00:01:11,340 --> 00:01:12,638
+Watch the readout.
+
+25
+00:01:12,638 --> 00:01:16,425
+The temperature climbs, and the
+thermistor's resistance falls.
+
+26
+00:01:16,775 --> 00:01:19,822
+More current flows, so
+the electrons speed up.
+
+27
+00:01:19,822 --> 00:01:22,577
+And the output voltage on the scope rises.
+
+28
+00:01:22,927 --> 00:01:27,096
+The chip inside reads that voltage
+and shows it as a temperature.
+
+29
+00:01:27,096 --> 00:01:28,716
+Heat in, voltage out.
+
+30
+00:01:29,367 --> 00:01:32,264
+A transducer turns the world into signals.
+
+31
+00:01:33,064 --> 00:01:35,093
+Why does the resistance fall?
+
+32
+00:01:35,093 --> 00:01:37,802
+A thermistor is made of a semiconductor.
+
+33
+00:01:38,152 --> 00:01:42,983
+Heat frees more charge carriers inside
+it, so current flows more easily.
+
+34
+00:01:42,983 --> 00:01:47,215
+This type is called a negative
+temperature coefficient thermistor.
+
+35
+00:01:47,865 --> 00:01:50,125
+Now let's find the output voltage.
+
+36
+00:01:50,125 --> 00:01:52,436
+This circuit is a voltage divider.
+
+37
+00:01:52,786 --> 00:01:55,925
+The same current flows
+through both resistors.
+
+38
+00:01:55,925 --> 00:01:59,995
+I equals the supply voltage
+divided by the total resistance.
+
+39
+00:02:00,695 --> 00:02:04,426
+The output is the voltage
+across the fixed resistor.
+
+40
+00:02:04,426 --> 00:02:06,363
+V out equals I times R.
+
+41
+00:02:07,063 --> 00:02:08,757
+Put the two together.
+
+42
+00:02:08,757 --> 00:02:14,025
+V out equals the supply voltage, times
+R, divided by R plus the thermistor
+
+43
+00:02:14,025 --> 00:02:14,971
+resistance.
+
+44
+00:02:15,671 --> 00:02:18,511
+Resistances in ohms, voltages in volts.
+
+45
+00:02:18,511 --> 00:02:22,141
+The ratio decides what
+share of the supply you get.
+
+46
+00:02:22,791 --> 00:02:23,966
+Worked example.
+
+47
+00:02:23,966 --> 00:02:28,327
+At thirty seven degrees, the
+thermistor drops to six kilo ohms.
+
+48
+00:02:28,677 --> 00:02:32,944
+V out equals five, times
+ten, divided by ten plus six.
+
+49
+00:02:33,544 --> 00:02:36,186
+That is three point one two five volts.
+
+50
+00:02:36,186 --> 00:02:37,863
+Up from two point five.
+
+51
+00:02:37,863 --> 00:02:39,687
+That change is the signal.
+
+52
+00:02:40,337 --> 00:02:43,401
+Some transducers do not
+need a supply at all.
+
+53
+00:02:43,401 --> 00:02:45,366
+They make their own voltage.
+
+54
+00:02:45,366 --> 00:02:47,734
+These are called active transducers.
+
+55
+00:02:48,084 --> 00:02:51,975
+A thermocouple makes a small
+voltage when its junction is heated.
+
+56
+00:02:51,975 --> 00:02:54,529
+A solar cell makes a voltage from light.
+
+57
+00:02:54,879 --> 00:02:58,542
+And a piezoelectric crystal makes
+a voltage when you squeeze it.
+
+58
+00:02:59,192 --> 00:03:03,687
+Others only change their resistance,
+so they need an outside supply.
+
+59
+00:03:03,687 --> 00:03:05,715
+These are passive transducers.
+
+60
+00:03:06,065 --> 00:03:10,303
+The thermistor, the light dependent
+resistor and the strain gauge are all
+
+61
+00:03:10,303 --> 00:03:11,203
+passive.
+
+62
+00:03:11,619 --> 00:03:13,374
+Transducers are everywhere.
+
+63
+00:03:13,724 --> 00:03:17,506
+A light dependent resistor
+switches street lights on at dusk.
+
+64
+00:03:17,506 --> 00:03:20,949
+A strain gauge inside a
+weighing scale feels the load.
+
+65
+00:03:21,299 --> 00:03:26,232
+And in hospitals, the ultrasound
+scanner uses a piezoelectric crystal to
+
+66
+00:03:26,232 --> 00:03:28,469
+send and receive sound waves.
+
+67
+00:03:29,119 --> 00:03:30,584
+Now, the exam trap.
+
+68
+00:03:30,934 --> 00:03:34,769
+Many students think every
+transducer needs a power supply.
+
+69
+00:03:34,769 --> 00:03:35,840
+It does not.
+
+70
+00:03:36,190 --> 00:03:40,078
+Active transducers like the
+thermocouple make their own voltage.
+
+71
+00:03:40,078 --> 00:03:43,674
+Only passive ones, like the
+thermistor, need a supply.
+
+72
+00:03:44,324 --> 00:03:45,955
+Where is this asked?
+
+73
+00:03:45,955 --> 00:03:47,586
+In PUC board papers.
+
+74
+00:03:47,586 --> 00:03:52,469
+Define a transducer, tell active from
+passive with examples, or explain
+
+75
+00:03:52,469 --> 00:03:53,749
+one application.
+
+76
+00:03:54,399 --> 00:03:55,299
+Try this.
+
+77
+00:03:55,283 --> 00:04:00,334
+A light dependent resistor and a four
+kilo ohm resistor are in series across
+
+78
+00:04:00,334 --> 00:04:01,271
+six volts.
+
+79
+00:04:01,271 --> 00:04:06,161
+In the dark, the voltage across the
+four kilo ohm resistor is one point
+
+80
+00:04:06,161 --> 00:04:07,098
+two volts.
+
+81
+00:04:07,098 --> 00:04:10,911
+What is the resistance of
+the light dependent resistor?
+
+82
+00:04:16,311 --> 00:04:17,211
+C.
+
+83
+00:04:16,858 --> 00:04:18,632
+Sixteen kilo ohms.
+
+84
+00:04:18,982 --> 00:04:20,598
+First, the current.
+
+85
+00:04:20,598 --> 00:04:26,102
+One point two volts divided by four kilo
+ohms is zero point three milliamperes.
+
+86
+00:04:26,452 --> 00:04:30,614
+The rest of the supply drops across
+the light dependent resistor.
+
+87
+00:04:30,614 --> 00:04:33,966
+Six minus one point two
+is four point eight volts.
+
+88
+00:04:34,316 --> 00:04:39,910
+So its resistance is four point eight
+divided by zero point three milliamperes.
+
+89
+00:04:39,910 --> 00:04:41,403
+Sixteen kilo ohms.
+
+90
+00:04:42,053 --> 00:04:43,577
+Screenshot this card.
+
+91
+00:04:46,777 --> 00:04:49,571
+Next, component symbols
+and identification.
+
+92
+00:04:49,571 --> 00:04:53,532
+How do you tell a capacitor
+from a resistor just by looking?

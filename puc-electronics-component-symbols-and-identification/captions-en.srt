@@ -1,0 +1,387 @@
+1
+00:00:00,450 --> 00:00:02,537
+Aarav opens an old radio.
+
+2
+00:00:02,537 --> 00:00:05,098
+Inside are dozens of tiny parts.
+
+3
+00:00:05,098 --> 00:00:10,512
+Striped beads, small orange discs,
+blue cans and coils of copper wire.
+
+4
+00:00:10,862 --> 00:00:14,177
+On the circuit diagram, they
+are just lines and zigzags.
+
+5
+00:00:14,177 --> 00:00:17,608
+So how do you match the drawing
+to the part in your hand?
+
+6
+00:00:18,108 --> 00:00:19,548
+You need two skills.
+
+7
+00:00:19,548 --> 00:00:22,766
+Reading the symbol, and
+recognising the real part.
+
+8
+00:00:23,116 --> 00:00:24,768
+Let's start with symbols.
+
+9
+00:00:24,768 --> 00:00:27,232
+Each passive part has a basic symbol.
+
+10
+00:00:27,582 --> 00:00:29,318
+A resistor is a zigzag.
+
+11
+00:00:29,318 --> 00:00:32,474
+A capacitor is two
+parallel plates with a gap.
+
+12
+00:00:32,474 --> 00:00:34,741
+An inductor is a coil of loops.
+
+13
+00:00:35,091 --> 00:00:37,827
+Now add small marks to change the meaning.
+
+14
+00:00:37,827 --> 00:00:40,852
+An arrow drawn across the
+symbol means variable.
+
+15
+00:00:40,852 --> 00:00:43,491
+You can change its value while it works.
+
+16
+00:00:43,841 --> 00:00:47,136
+An arrow pointing at the
+resistor is a potentiometer.
+
+17
+00:00:47,136 --> 00:00:51,570
+It has three terminals, and the arrow
+is the sliding contact, called the
+
+18
+00:00:51,570 --> 00:00:52,470
+wiper.
+
+19
+00:00:52,505 --> 00:00:55,251
+A short bar instead of
+an arrow means a preset.
+
+20
+00:00:55,251 --> 00:00:58,170
+You set it once with a
+screwdriver, and leave it.
+
+21
+00:00:58,520 --> 00:01:02,583
+For capacitors, a plus sign and
+one curved plate mean polarised.
+
+22
+00:01:02,583 --> 00:01:07,255
+That is an electrolytic capacitor,
+and it must go in the right way round.
+
+23
+00:01:07,605 --> 00:01:11,674
+For inductors, straight lines
+beside the coil mean an iron core.
+
+24
+00:01:11,674 --> 00:01:13,858
+Dashed lines mean a ferrite core.
+
+25
+00:01:13,858 --> 00:01:16,690
+Two coils sharing a
+core make a transformer.
+
+26
+00:01:17,340 --> 00:01:20,828
+Let's see the potentiometer
+at work on the breadboard.
+
+27
+00:01:20,828 --> 00:01:22,553
+It is a volume control.
+
+28
+00:01:22,903 --> 00:01:25,940
+A music signal goes across
+the whole resistor track.
+
+29
+00:01:25,940 --> 00:01:30,062
+The wiper picks off just a part of
+it, and sends it to the speaker.
+
+30
+00:01:30,412 --> 00:01:31,655
+Watch the scope.
+
+31
+00:01:31,655 --> 00:01:33,635
+The top trace is the input.
+
+32
+00:01:33,635 --> 00:01:34,929
+It never changes.
+
+33
+00:01:35,279 --> 00:01:38,465
+Slide the wiper down, and
+the output wave shrinks.
+
+34
+00:01:38,465 --> 00:01:40,006
+The music gets quieter.
+
+35
+00:01:40,356 --> 00:01:43,321
+Slide it back up, and
+the output grows again.
+
+36
+00:01:43,321 --> 00:01:46,768
+The arrow in the symbol is
+exactly this sliding contact.
+
+37
+00:01:47,418 --> 00:01:49,729
+The symbol tells you what a part does.
+
+38
+00:01:49,729 --> 00:01:51,670
+The markings tell you its value.
+
+39
+00:01:52,470 --> 00:01:53,886
+Now, the real parts.
+
+40
+00:01:53,886 --> 00:01:55,534
+How do you recognise them?
+
+41
+00:01:55,884 --> 00:02:00,439
+A carbon or metal film resistor is
+a small bead with coloured bands.
+
+42
+00:02:00,439 --> 00:02:02,290
+The bands give its value.
+
+43
+00:02:02,640 --> 00:02:06,985
+A ceramic disc capacitor is a flat
+disc, often with a three digit code
+
+44
+00:02:06,985 --> 00:02:08,079
+printed on it.
+
+45
+00:02:08,429 --> 00:02:11,116
+An electrolytic capacitor is a small can.
+
+46
+00:02:11,116 --> 00:02:15,957
+A stripe down one side marks the minus
+lead, and the longer lead is plus.
+
+47
+00:02:16,307 --> 00:02:20,725
+An inductor often looks like a coil
+of copper wire, sometimes wound on
+
+48
+00:02:20,725 --> 00:02:23,098
+a ring or a small rod of ferrite.
+
+49
+00:02:23,748 --> 00:02:27,180
+So how do you read that three
+digit code on a capacitor?
+
+50
+00:02:27,530 --> 00:02:30,472
+The first two digits are
+the significant figures.
+
+51
+00:02:31,172 --> 00:02:33,375
+The third digit is the multiplier.
+
+52
+00:02:33,375 --> 00:02:35,740
+It tells you how many zeros to add.
+
+53
+00:02:36,440 --> 00:02:39,332
+And the answer is always in picofarads.
+
+54
+00:02:39,332 --> 00:02:42,853
+One picofarad is ten to
+the minus twelve farads.
+
+55
+00:02:43,553 --> 00:02:46,926
+One thousand picofarads
+make one nanofarad.
+
+56
+00:02:46,926 --> 00:02:50,360
+One thousand nanofarads
+make one microfarad.
+
+57
+00:02:51,010 --> 00:02:52,232
+Worked example.
+
+58
+00:02:52,232 --> 00:02:55,265
+A disc capacitor is marked one zero four.
+
+59
+00:02:55,615 --> 00:02:57,851
+Ten, followed by four zeros.
+
+60
+00:02:57,851 --> 00:03:00,699
+That is one hundred thousand picofarads.
+
+61
+00:03:01,299 --> 00:03:03,061
+Divide by a thousand.
+
+62
+00:03:03,061 --> 00:03:04,869
+One hundred nanofarads.
+
+63
+00:03:05,469 --> 00:03:07,738
+Divide by a thousand again.
+
+64
+00:03:07,738 --> 00:03:09,936
+Zero point one microfarads.
+
+65
+00:03:09,936 --> 00:03:14,725
+So one zero four is the famous
+point one microfarad capacitor.
+
+66
+00:03:15,375 --> 00:03:16,840
+Now, the exam trap.
+
+67
+00:03:17,190 --> 00:03:21,763
+Many students think an electrolytic
+capacitor can be connected either way
+
+68
+00:03:21,763 --> 00:03:22,663
+round.
+
+69
+00:03:22,403 --> 00:03:23,315
+It cannot.
+
+70
+00:03:23,665 --> 00:03:26,538
+Its plus lead must go
+to the higher voltage.
+
+71
+00:03:26,538 --> 00:03:30,429
+Connected backwards, it can
+heat up, bulge, or even burst.
+
+72
+00:03:31,079 --> 00:03:32,654
+Where is this asked?
+
+73
+00:03:32,654 --> 00:03:34,228
+In PUC board papers.
+
+74
+00:03:34,228 --> 00:03:39,217
+Draw the symbols of components, identify
+a component, or decode a capacitor
+
+75
+00:03:39,217 --> 00:03:40,117
+marking.
+
+76
+00:03:40,617 --> 00:03:41,517
+Try this.
+
+77
+00:03:41,472 --> 00:03:44,526
+A ceramic capacitor is
+marked two two three.
+
+78
+00:03:44,526 --> 00:03:46,288
+What is its capacitance?
+
+79
+00:03:51,688 --> 00:03:52,588
+C.
+
+80
+00:03:52,234 --> 00:03:55,442
+Zero point zero two two microfarads.
+
+81
+00:03:55,792 --> 00:03:58,124
+The first two digits are twenty two.
+
+82
+00:03:58,124 --> 00:04:01,173
+The third digit, three,
+means add three zeros.
+
+83
+00:04:01,523 --> 00:04:06,168
+That is twenty two thousand picofarads,
+which is twenty two nanofarads.
+
+84
+00:04:06,518 --> 00:04:12,199
+Divide by a thousand once more, and you
+get zero point zero two two microfarads.
+
+85
+00:04:12,849 --> 00:04:14,370
+Screenshot this card.
+
+86
+00:04:17,570 --> 00:04:20,796
+Next, reading component
+specifications and datasheets.
+
+87
+00:04:20,796 --> 00:04:24,012
+What else does a part tell
+you, beyond its value?
