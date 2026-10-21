@@ -128,7 +128,7 @@ const tWa = [wt('W3', 'two', 1), wt('W3', 'four'), wt('W3', 'six')], tWx = wt('W
 const trap = PUC.trap($('#trap'), { wrong: K(`2^3 \\times 2^2 = 32 \\text{ relations}`), right: K(`n(A \\times B) = 3 \\times 2 = 6 \\;\\Rightarrow\\; 2^6 = 64`) + '&nbsp; relations' });
 const ts = $('#tS'), TXc = i => 250 + i * 80, TYr = j => 170 - j * 76;
 const tDots = []; [0, 1, 2].forEach(i => [0, 1].forEach(j => { const g = pin(ts, TXc(i), TYr(j)); mk(g, 'circle', { r: 14, fill: PC }); tDots.push(g); }));
-const tLb = txt(ts, 250, 236, '6 pairs: each kept or left', { 'font-size': 20, 'font-weight': 600, fill: C.ink2 });
+const tLb = txt(ts, 330, 236, '6 pairs, 2 choices each', { 'text-anchor': 'middle', 'font-size': 20, 'font-weight': 600, fill: C.ink2 });
 const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'PUC BOARDS'], type: 'Find the domain and range · count the pairs in a relation · count relations' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 860,
   q: `${K(`A = \\{1, 2, \\dots, 10\\}`)}<br>${K(`R = \\{(x, y) \\in A \\times A : x + 2y = 12\\}`)}<br>How many elements does ${K(`\\text{Domain} \\cup \\text{Range}`)} have?`,
