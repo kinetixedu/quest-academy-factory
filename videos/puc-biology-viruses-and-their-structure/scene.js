@@ -125,7 +125,7 @@ const kaS = $('#kaS');
 const kV = mk(kaS, 'g', {}); mk(kV, 'path', { d: hexP(300, 290, 170), fill: '#F6F1E8', stroke: BR, 'stroke-width': 5 });
 const kCaps = []; for (let k = 0; k < 6; k++) { const a = Math.PI / 6 + k * Math.PI / 3; for (let j = 0; j < 5; j++) { const a2 = a + Math.PI / 3, x0 = 300 + 160 * Math.cos(a), y0 = 290 + 160 * Math.sin(a), x1 = 300 + 160 * Math.cos(a2), y1 = 290 + 160 * Math.sin(a2), u = (j + 0.5) / 5; kCaps.push(mk(kV, 'circle', { cx: x0 + (x1 - x0) * u, cy: y0 + (y1 - y0) * u, r: 13, fill: CAP, stroke: BR, 'stroke-width': 2.5 })); } }
 const kNA = mk(kaS, 'path', { d: 'M220,250 c30,-50 70,40 100,0 s70,40 90,-10 M210,320 c30,-40 60,40 100,0 s60,40 100,0', stroke: RNA, 'stroke-width': 6, fill: 'none', 'stroke-linecap': 'round' });
-const kLab = [[300, 130, 560, 100, 'Capsid (protein coat)', wt('K2', 'capsid')], [450, 380, 560, 470, 'Capsomeres', wt('K3', 'Capsomeres')], [360, 290, 560, 300, 'Nucleic acid', wt('K2', 'genetic')]].map(([px, py, lx, ly, s, tt]) => {
+const kLab = [[300, 130, 430, 70, 'Capsid (protein coat)', wt('K2', 'capsid')], [450, 380, 560, 470, 'Capsomeres', wt('K3', 'Capsomeres')], [360, 290, 560, 300, 'Nucleic acid', wt('K2', 'genetic')]].map(([px, py, lx, ly, s, tt]) => {
   const ln = mk(kaS, 'path', { d: `M${px},${py} L${lx},${ly}`, stroke: C.ink, 'stroke-width': 2.5, fill: 'none' }), dot = mk(kaS, 'circle', { cx: px, cy: py, r: 6, fill: C.ink }); const tx = mk(kaS, 'text', { x: lx + 10, y: ly + 9, class: 'zl' }); tx.textContent = s; return { ln, dot, tx, tt }; });
 const KB = [['Helical', 'a spiral, like the TMV rod', wt('K3', 'helical')], ['Polyhedral', 'many-faced, like this one', wt('K3', 'polyhedral')], ['RNA or DNA', 'never both in one virus', wt('K4', 'either')], ['Nucleoprotein', 'nucleic acid + protein', wt('K4', 'nucleoprotein')]];
 $('#kbs').innerHTML = KB.map(([a, b], i) => `<div class="dfr" id="kb${i}" style="top:${84 + i * 116}px"><div class="t">${a}</div><div class="d">${b}</div></div>`).join('');
@@ -178,7 +178,7 @@ const wS = $('#wS');
 const wT = mk(wS, 'g', {}); tmvRod(wT, 90, 250, 560, 80, true);
 const wP = phage(wS, 1160, 150, 1.55);
 const WL = [[300, 210, 300, 120, 'Capsid', wt('W2', 'capsid')], [690, 250, 720, 360, 'RNA (single strand)', wt('W2', 'RNA')], [1160, 120, 1300, 90, 'Head', wt('W3', 'head')], [1190, 160, 1300, 150, 'DNA (double strand)', wt('W3', 'DNA')],
-  [1180, 210, 1300, 210, 'Collar', wt('W3', 'collar')], [1172, 260, 1300, 270, 'Sheath', wt('W3', 'sheath')], [1130, 340, 980, 380, 'Tail fibres', wt('W3', 'fibres')]];
+  [1180, 210, 1300, 210, 'Collar', wt('W3', 'collar')], [1172, 260, 1300, 270, 'Sheath', wt('W3', 'sheath')], [1130, 340, 1300, 390, 'Tail fibres', wt('W3', 'fibres')]];
 const wLB = WL.map(([px, py, lx, ly, s, tt]) => { const ln = mk(wS, 'path', { d: `M${px},${py} L${lx},${ly}`, stroke: C.ink, 'stroke-width': 2.5, fill: 'none' }), dot = mk(wS, 'circle', { cx: px, cy: py, r: 6, fill: C.ink });
   const left = lx < px && lx < 1000 && lx > 900; const tx = mk(wS, 'text', { x: left ? lx - 10 : lx + 10, y: ly + 9, class: 'zl', 'text-anchor': left ? 'end' : 'start' }); tx.textContent = s; return { ln, dot, tx, tt }; });
 const WC = [['SHAPE', 'Helical rod', 'Polyhedral head + tail'], ['NUCLEIC ACID', 'ssRNA', 'dsDNA'], ['HOST', 'Plant (tobacco)', 'Bacterium']];
@@ -234,8 +234,8 @@ M.on(t => {
   if (dOn) {
     const out = OUT('V1');
     M.vis($('#cl'), t, tD1 + 0.1, out, { dx: -60, dy: 0, ...o }); M.vis($('#cr'), t, EV[0][4] + 0.4, out, { dx: 60, dy: 0, ...o });
-    M.draw(tlL, t, EV[0][4] - 0.2, EV[2][4] - EV[0][4] + 0.2, M.o3);
-    EV.forEach((e, i) => { const el = $('#ev' + i); M.vis(el, t, e[4] - 0.1, 1e9, { dx: -20, dy: 0 }); M.vis(el.querySelector('.dt'), t, e[4] - 0.15, 1e9, { ...POP, sc: 0.3 }); });
+    M.draw(tlL, t, tD1 + 0.3, 1.2);
+    EV.forEach((e, i) => { const el = $('#ev' + i); M.vis(el, t, e[4] - 0.1, 1e9, { dx: -20, dy: 0 }); M.vis(el.querySelector('.dt'), t, tD1 + 0.5 + i * 0.25, 1e9, { ...POP, sc: 0.3 }); });
     const cryOn = t >= tCry - 0.2;
     M.hide(fx.fil, cryOn); M.hide(fx.leaf, cryOn); M.vis(fx.fil, t, EV[0][4] + 0.6, 1e9, { dy: 12 });
     bacs.forEach((b, k) => M.vis(b, t, tFil - 0.6 + k * 0.1, 1e9, { ...POP, sc: 0.3 }));
@@ -310,8 +310,8 @@ M.on(t => {
     copies.forEach((c, k) => { const on = M.clamp(cp * 10 - k); const x = c.x, y = c.y; attr(c.d, 'd', `M${x - 26},${y + 22} c10,-12 18,12 28,0 s16,-12 24,0`); c.d.style.opacity = on * (1 - as); attr(c.h, 'transform', `translate(${x} ${y - 10}) scale(${on.toFixed(2)})`); c.h.style.opacity = (1 - as).toFixed(2); M.hide(c.d, on <= 0 || as >= 1); M.hide(c.h, on <= 0 || as >= 1); });
     kids.forEach((k, i) => { const on = M.clamp(as * 10 - i); const fly = bu; const a = k.a, d = 520 * fly * k.sp, x = k.x + Math.cos(a) * d, y = k.y + Math.sin(a) * d * 0.6 - 40 * fly;
       M.hide(k.g, on <= 0); attr(k.g, 'transform', `translate(${x.toFixed(1)} ${y.toFixed(1)}) scale(${on.toFixed(2)}) rotate(${(fly * 120 * (i % 2 ? 1 : -1)).toFixed(0)})`); });
-    M.hide(bOut, bu > 0); M.hide(bLab, bu > 0);
-    shards.forEach((s, k) => { M.hide(s, bu <= 0); if (bu > 0) { const a0 = k * Math.PI / 3, cx = 530 + Math.cos(a0 + 0.5) * 200 * bu, cy = 375 + Math.sin(a0 + 0.5) * 80 * bu; attr(s, 'd', `M${(cx + 300 * Math.cos(a0) * 0.5).toFixed(1)},${(cy + 100 * Math.sin(a0) * 0.5).toFixed(1)} A350 115 0 0 1 ${(cx + 300 * Math.cos(a0 + 0.8) * 0.5).toFixed(1)},${(cy + 100 * Math.sin(a0 + 0.8) * 0.5).toFixed(1)}`); s.style.opacity = (1 - M.clamp((bu - 0.5) / 0.5) * 0.8).toFixed(2); } });
+    M.hide(bLab, bu > 0); bOut.style.strokeDasharray = bu > 0 ? `${(120 * (1 - bu) + 20).toFixed(0)} ${(80 * bu + 4).toFixed(0)}` : ''; bOut.style.opacity = (1 - 0.75 * bu).toFixed(2); bOut.setAttribute('fill', mix(BAC, '#FFFFFF', bu * 0.7));
+    shards.forEach((s, k) => { M.hide(s, true); return; if (bu > 0) { const a0 = k * Math.PI / 3, cx = 530 + Math.cos(a0 + 0.5) * 200 * bu, cy = 375 + Math.sin(a0 + 0.5) * 80 * bu; attr(s, 'd', `M${(cx + 300 * Math.cos(a0) * 0.5).toFixed(1)},${(cy + 100 * Math.sin(a0) * 0.5).toFixed(1)} A350 115 0 0 1 ${(cx + 300 * Math.cos(a0 + 0.8) * 0.5).toFixed(1)},${(cy + 100 * Math.sin(a0 + 0.8) * 0.5).toFixed(1)}`); s.style.opacity = (1 - M.clamp((bu - 0.5) / 0.5) * 0.8).toFixed(2); } });
   }
 
   /* C */
@@ -349,7 +349,7 @@ M.on(t => {
   const wOn = t >= tW1 - 0.1 && t < tX1 + 0.1; M.hide($('#sW'), !wOn);
   if (wOn) {
     M.vis($('#wb'), t, tW1 + 0.05, OUT('X1'), { dy: 36, ...o });
-    M.vis(wT, t, T0('W2') - 0.1, 1e9, { dy: 16 }); M.vis(wP.g, t, T0('W3') - 0.1, 1e9, { dy: 16 });
+    M.vis(wT, t, tW1 + 0.5, 1e9, { dy: 16 }); M.vis(wP.g, t, tW1 + 0.9, 1e9, { dy: 16 });
     wLB.forEach(l => { M.draw(l.ln, t, l.tt, 0.4); M.vis(l.dot, t, l.tt - 0.1, 1e9, { ...POP, sc: 0.2 }); l.tx.style.opacity = M.clamp((t - l.tt - 0.3) / 0.25).toFixed(3); });
     const ta = [wt('W2', 'helical'), wt('W2', 'RNA'), wt('W2', 'host')], tb = [wt('W3', 'many'), wt('W3', 'double'), wt('W4', 'bacterium')];
     WC.forEach((_, i) => { M.vis($('#wcA' + i), t, ta[i], 1e9, POP); M.vis($('#wcB' + i), t, tb[i], 1e9, POP); });

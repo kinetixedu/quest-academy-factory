@@ -131,8 +131,8 @@ const TK = PH.map((_, i) => [80 + (i % 2) * 70, 126 + Math.floor(i / 2) * 72]);
 $('#stF').innerHTML = '<span class="lad">canals · cnidoblasts · comb plates · flame cells · radula · water vascular</span>';
 
 /* ---------- U: two pairs ---------- */
-const uJ = AN.draw('jelly', $('#uaS'), 192, 190, 0.95), uC = AN.draw('comb', $('#uaS'), 584, 180, 0.95);
-const uF = AN.draw('flat', $('#ubS'), 192, 200, 0.9, { rot: 90 }), uW = AN.draw('worm', $('#ubS'), 584, 200, 1, { n: 12, L: 300, clit: 1 });
+const uJ = AN.draw('jelly', $('#uaS'), 192, 196, 1.12), uC = AN.draw('comb', $('#uaS'), 584, 190, 1.1);
+const uF = AN.draw('flat', $('#ubS'), 192, 200, 1.05, { rot: 90 }), uW = AN.draw('worm', $('#ubS'), 584, 200, 1, { n: 13, L: 340, clit: 1 });
 const tUn = [wt('U2', 'Coelenterates'), wt('U2', 'ctenophores'), wt('U3', 'Flatworms'), wt('U3', 'annelids')], tUk = [wt('U2', 'cnidoblasts'), wt('U2', 'comb'), wt('U3', 'flat', 2), wt('U3', 'segmented', 1)];
 const th1 = PUC.think($('#th1'), { q: 'A leech sucks blood, like many parasitic flatworms. Is it a flatworm, or an annelid?', opts: ['Flatworm', 'Annelid'], right: 1, why: 'Annelid. Hirudinaria is segmented, with a true coelom.' });
 
@@ -156,7 +156,7 @@ const tSo = [wt('A1', 3) + 0.1, wt('A2', 'Comb'), wt('A2', 'flame'), wt('A3', 'r
 const fc = PUC.fcard($('#sF'), { x: 260, y: 262, w: 1400, h: 470, title: 'Recap · ten non-chordate phyla', y0: 100, dy: 70, txt: [1, 1, 1, 1, 1],
   lines: ['<b>Porifera</b>: canals, collar cells · <b>Coelenterata</b>: cnidoblasts · <b>Ctenophora</b>: comb plates', '<b>Platyhelminthes</b>: flat, flame cells · <b>Aschelminthes</b>: round, pseudocoelom',
     '<b>Annelida</b>: metameric, nephridia · <b>Arthropoda</b>: jointed legs, chitin', '<b>Mollusca</b>: muscular foot, radula · <b>Echinodermata</b>: water vascular system',
-    '<b>Hemichordata</b>: proboscis, collar, trunk; a stomochord, not a notochord'] });
+    '<b>Hemichordata</b>: proboscis, collar, trunk; a stomochord in the collar'] });
 const YQ = ['Which phylum has a water canal system?', 'Name two examples of Aschelminthes.', 'Why is the leech an annelid and not a flatworm?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="n">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
@@ -166,7 +166,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 36', topic: 'A rod along the 
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('K5', 'true') - 0.3, 1.05, 1100, 640], [T1('K5') + 0.3, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]]]);
 let geo = null;
 function measure() { geo = 1; [0, 1, 2, 3].forEach(i => { const n = $('#un' + i), k = $('#uk' + i); k.style.left = (n.offsetLeft + n.offsetWidth / 2 - k.offsetWidth / 2) + 'px'; }); }
 
@@ -183,7 +183,7 @@ M.on(t => {
   if (hOn) {
     const out = OUT('S1');
     M.vis($('#hj'), t, tMorph + 0.2, out, { dx: -60, dy: 0, ...o });
-    JAR.forEach((j, i) => { M.vis(j.g, t, tMorph + 0.35 + i * 0.08, 1e9, { dy: 16 }); const tr = tJr[i]; j.ring.style.opacity = tr !== undefined && t > tMorph + 0.3 ? 1 : 0; j.ring.style.strokeDashoffset = ((t * 20) % 18).toFixed(1); });
+    JAR.forEach((j, i) => { M.vis(j.g, t, tMorph + 0.35 + i * 0.08, 1e9, { dy: 16 }); const tr = tJr[i]; j.ring.style.opacity = tr !== undefined ? M.clamp((t - Math.max(tr, tMorph + 0.4)) / 0.3) : 0; j.ring.style.strokeDashoffset = ((t * 20) % 18).toFixed(1); });
     M.vis($('#hjP'), t, wt('H2', 'phylum', 1) - 0.1, 1e9, POP);
     M.vis($('#hk'), t, tH3 - 0.1, out, { dx: 60, dy: 0, ...o });
     const kOut = tH4 - 0.1;
