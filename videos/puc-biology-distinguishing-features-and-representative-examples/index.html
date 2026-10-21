@@ -1,0 +1,156 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Biology Ep 38 - Distinguishing Features</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Biology Ep 38: distinguishing features (Living diagram, leaf green) ===== */
+:root{--br:#2E2A24;--no:#2A9D8F;--nc:#4C5FD5;--gs:#E4572E;--rb:#D1495B;--tl:#C9962B}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.ac{color:var(--ac)}
+/* title card objects */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .jt{position:absolute;right:24px;top:36px;height:48px;display:flex;align-items:center;gap:8px}
+.jr .jt b{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+#plan{position:absolute;left:0;top:0;width:784px;height:580px}
+.bigw{position:absolute;font:700 64px Poppins;letter-spacing:-.02em;white-space:nowrap}
+.ctr{position:absolute;left:36px;width:712px;height:70px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:16px;padding:0 20px;font:600 27px Poppins;white-space:nowrap}
+.ctr b{flex:none;width:38px;height:38px;border-radius:50%;background:var(--ac);color:#fff;font:700 19px Poppins;display:flex;align-items:center;justify-content:center}
+/* zoom ladder */
+#zch{position:absolute;left:160px;top:248px;display:flex;align-items:center;gap:12px}
+#zch .zc{height:48px;padding:0 18px;border-radius:10px;border:2px solid #CBD0DA;background:#fff;color:#9AA0AC;display:inline-flex;align-items:center;font:600 20px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+#zch .za{display:inline-flex}
+#zd{left:160px;top:324px;width:1056px;height:526px;overflow:hidden}
+#zi{left:1248px;top:324px;width:512px;height:526px}
+.lvI{position:absolute;left:0;top:0;width:512px;height:526px}
+.zl{font:600 26px Poppins;fill:#16213E}
+.zm{font:600 16px 'IBM Plex Mono';letter-spacing:.1em;fill:#6B7280}
+.fr{position:absolute;left:28px;width:456px;height:76px;border-radius:12px}
+.fr .d{position:absolute;left:14px;top:18px;width:40px;height:40px;border-radius:50%;color:#fff;font:700 19px Poppins;display:flex;align-items:center;justify-content:center}
+.fr .fn{position:absolute;left:70px;top:8px;font:700 23px Poppins;white-space:nowrap}
+.fr .fs{position:absolute;left:70px;top:42px;font:500 18px Poppins;color:var(--mute);white-space:nowrap}
+.ch4{position:absolute;height:42px;padding:0 14px;border-radius:9px;background:var(--ac2);color:#1F6B3F;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+/* comparison */
+.cmp{position:absolute;left:36px;width:712px;height:66px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:14px;padding:0 18px;font:600 24px Poppins;white-space:nowrap}
+.cmp b{flex:none;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+/* statement */
+#stF .lad{font:600 44px Poppins;color:var(--ink);letter-spacing:-.01em}
+#stF .lad b{color:var(--ac)}
+/* sort board */
+.colW{position:absolute;top:76px;width:352px;height:470px}
+.colW .ch2{position:absolute;left:0;top:0;width:352px;height:40px;border-radius:9px;background:var(--soft);display:flex;align-items:center;justify-content:center;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.colW .dz{position:absolute;left:0;top:52px;width:352px;height:220px;border-radius:14px;border:2.5px dashed #CBD0DA;background:#fff}
+.colW .it{position:absolute;left:0;top:52px;width:352px;height:220px;border-radius:14px;background:var(--ac2)}
+.colW .it.no{background:#FBE3E3}
+.colW .it svg.dr{position:absolute;left:0;top:0}
+.colW .it .inm{position:absolute;left:8px;width:336px;top:168px;text-align:center;font:700 25px/1.15 Poppins;white-space:nowrap}.colW .it .inm i{font-weight:700}
+.colW .rs{position:absolute;left:8px;top:290px;width:336px;text-align:center;font:500 20px/1.35 Poppins;color:var(--ink2)}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+.mq .sl{font:500 25px/1.5 Poppins;margin-top:8px;white-space:nowrap}
+.mq .sl b{display:inline-block;width:52px;font:600 22px 'IBM Plex Mono';color:var(--ac)}
+#sF .fcard .fl.txt{font-size:29px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+
+.wr{position:absolute;right:24px;top:36px;height:44px;padding:0 14px;border-radius:10px;background:#FBE3E3;color:var(--red);display:flex;align-items:center;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.mk5{position:absolute;left:36px;width:712px;height:76px;border-radius:12px;background:var(--soft)}
+.mk5 .c{position:absolute;left:18px;top:18px;height:40px;width:150px;border-radius:9px;background:#fff;display:flex;align-items:center;justify-content:center;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.mk5 .m{position:absolute;left:190px;top:20px;font:700 26px Poppins;white-space:nowrap}
+.fool{position:absolute;left:36px;width:712px;height:76px;border-radius:12px;background:#FBEDED;display:flex;align-items:center;gap:16px;padding:0 20px;font:600 25px Poppins;color:#8A1C1C;white-space:nowrap}
+.fool i{display:flex}
+/* sorter */
+#fch{position:absolute;left:28px;top:20px;height:40px;padding:0 14px;border-radius:9px;background:#FBE3E3;color:var(--red);display:inline-flex;align-items:center;gap:8px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+#fch s{text-decoration:none;position:relative}
+.gt{position:absolute;left:84px;width:400px;height:84px;border-radius:12px;background:var(--soft)}
+.gt .q{position:absolute;left:16px;top:10px;font:700 21px Poppins;white-space:nowrap}
+.gt .bn{position:absolute;right:12px;top:44px;height:30px;padding:0 10px;border-radius:7px;background:#fff;display:inline-flex;align-items:center;font:600 14px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+#gts .ic{position:absolute;top:42px;width:34px;height:34px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+#tok{position:absolute;left:22px;width:52px;height:52px;border-radius:50%;background:var(--ac);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px rgba(22,33,62,.18)}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · BIOLOGY · CH 4 ANIMAL KINGDOM</div>
+    <div class="subj" id="subj">LIVING DIAGRAM</div>
+    <div id="title">The Odd <span class="acc">Ones</span></div>
+    <div id="sub">Distinguishing features and examples</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#3E9B5F" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THE OBVIOUS RULE</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Where it lives and how it moves can fool you</div></div>
+      <div class="card rf" id="hk"><div class="lbl" id="hkL" style="left:36px;top:30px">DIYA'S LITTLE COUSIN</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div class="pillp" id="hkP" style="left:132px;top:494px">Sorted by home and movement: all wrong</div>
+        <div id="plan"><div class="lbl" style="left:36px;top:30px">BY THE END YOU WILL KNOW</div>
+          <div class="ctr" id="pc0" style="top:84px"><b>1</b>The one sure mark of each class</div>
+          <div class="ctr" id="pc1" style="top:170px"><b>2</b>How to place the odd ones</div>
+          <div class="pillp ac" id="pcP" style="left:36px;top:290px">NEET loves these examples</div></div></div>
+    </div>
+
+    <!-- D: one sure mark per class -->
+    <div id="sD">
+      <div class="card full" id="da"><div class="lbl" style="left:36px;top:30px">CAN FOOL YOU</div><div id="fls"></div>
+        <div class="lbl" id="daL" style="left:36px;top:356px;color:var(--ac)">NEVER LIES</div>
+        <div class="ctr" id="dn0" style="top:394px;background:var(--ac2)"><b>1</b>Features of the body itself</div></div>
+      <div class="card rf" id="db"><div class="lbl" style="left:36px;top:30px">ONE SURE MARK PER CLASS</div><div id="mks"></div></div>
+    </div>
+
+    <!-- S: the sorter -->
+    <div id="sS">
+      <div class="card" id="zd" style="left:160px;top:270px;width:1056px;height:580px"><svg id="zS" width="1056" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="fch"><span id="fchT">FOOLS YOU</span></div>
+        <div class="tag" id="zsc" style="right:28px;top:22px"><span id="zscN">ODD ONE 1 OF 6</span></div></div>
+      <div class="card" id="zi" style="left:1248px;top:270px;width:512px;height:580px"><div class="lbl" style="left:84px;top:30px">THE SORTING KEY</div>
+        <svg id="trk" width="512" height="580" style="position:absolute;left:0;top:0"></svg><div id="gts"></div><div id="tok"></div></div>
+    </div>
+
+    <!-- K: bat vs crow + think -->
+    <div id="sK">
+      <div class="card full" id="ka"><div class="lbl" style="left:36px;top:30px">A BAT · MAMMALIA</div><svg id="kaS" width="784" height="250" style="position:absolute;left:0;top:0"></svg><div id="kas"></div></div>
+      <div class="card rf" id="kb"><div class="lbl" style="left:36px;top:30px">A CROW · AVES</div><svg id="kbS" width="784" height="250" style="position:absolute;left:0;top:0"></svg><div id="kbs"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW"><div class="card wide" id="wb"><div class="lbl" style="left:36px;top:30px">WORKED EXAMPLE · FOUR NAMES WITH FISH IN THEM</div><div id="cols"></div></div></div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="460" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card + questions + NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Classify by the <span class="acc">body</span>, not the address.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

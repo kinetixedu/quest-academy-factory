@@ -1,0 +1,178 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Biology Ep 8 - Binomial Nomenclature and Scientific Naming Rules</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Biology Ep 08: binomial nomenclature (Living diagram, leaf green) ===== */
+:root{--br:#2E2A24;--gn:#3E9B5F;--ep:#C9962B;--au:#6B7280}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.ac{color:var(--ac)}
+#stage svg circle,#stage svg text,#stage svg .pp{transform-box:fill-box;transform-origin:center}
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook */
+.nmT{position:absolute;height:52px;padding:0 18px;border-radius:12px;background:var(--soft);display:inline-flex;align-items:center;gap:12px;font:700 28px Poppins;white-space:nowrap}
+.nmT em{font:600 14px 'IBM Plex Mono';font-style:normal;letter-spacing:.08em;color:var(--mute)}
+#sci{position:absolute;left:36px;top:470px;width:712px;height:80px;border-radius:14px;background:var(--ac2);display:flex;align-items:center;gap:16px;padding:0 24px;font:italic 600 36px Poppins;color:#1F6B3F;white-space:nowrap}
+#sci em{font:600 14px 'IBM Plex Mono';font-style:normal;letter-spacing:.08em;color:#1F6B3F}
+#dF{position:absolute;left:36px;top:84px;width:120px;height:120px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 4px var(--ac)}
+#dQ{position:absolute;left:184px;top:92px;width:560px;padding:20px 24px;border-radius:18px;border:2px solid var(--ink);background:#fff;font:600 30px/1.35 Poppins}
+#wcard{position:absolute;left:36px;top:300px;width:712px;height:240px;border-radius:14px;background:var(--soft)}
+#wcard .wn{position:absolute;left:28px;top:70px;font:italic 600 46px Poppins;color:var(--ac);white-space:nowrap}
+.cty{position:absolute;top:150px;height:40px;padding:0 14px;border-radius:9px;background:#fff;display:inline-flex;align-items:center;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--ink);white-space:nowrap}
+/* common names list */
+.ln2{position:absolute;left:36px;width:712px;height:64px;border-radius:12px;background:var(--soft)}
+.ln2 .k{position:absolute;left:20px;top:22px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.ln2 .v{position:absolute;left:220px;top:12px;font:700 30px Poppins;white-space:nowrap}
+.sct{position:absolute;top:120px;width:300px;height:250px;border-radius:14px;background:var(--soft)}
+.sct i{position:absolute;left:110px;top:30px;width:80px;height:80px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.sct .sn{position:absolute;left:0;width:300px;top:128px;text-align:center;font:700 26px Poppins;white-space:nowrap}
+.sct .sb{position:absolute;left:0;width:300px;top:170px;text-align:center;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* identification flow + Linnaeus */
+.fl3{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.fl3 .n{position:absolute;left:22px;top:24px;width:48px;height:48px;border-radius:50%;background:#fff;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.fl3 .a{position:absolute;left:96px;top:14px;font:700 30px Poppins;white-space:nowrap}
+.fl3 .b{position:absolute;left:96px;top:56px;font:500 21px Poppins;color:var(--ink2);white-space:nowrap}
+.lnn{position:absolute;left:36px;top:84px;width:712px;height:170px;border-radius:14px;background:var(--soft)}
+.lnn .nm{position:absolute;left:28px;top:22px;font:700 40px Poppins;white-space:nowrap}
+.lnn .wd{position:absolute;left:28px;top:80px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lnn .ds{position:absolute;left:28px;top:114px;font:500 24px Poppins;color:var(--ink2);white-space:nowrap}
+.wb{position:absolute;top:330px;height:110px;padding:0 30px;border-radius:16px;display:flex;align-items:center;font:700 64px Poppins;letter-spacing:-.02em;white-space:nowrap}
+.wop{position:absolute;top:350px;font:600 52px 'IBM Plex Mono';color:var(--mute)}
+.wm{position:absolute;top:458px;height:42px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* name anatomy */
+#zch{position:absolute;left:160px;top:248px;display:flex;align-items:center;gap:12px}
+#zch .zc{height:48px;padding:0 18px;border-radius:10px;border:2px solid #CBD0DA;background:#fff;color:#9AA0AC;display:inline-flex;align-items:center;font:600 20px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+#zch .za{display:inline-flex}
+#zd{left:160px;top:324px;width:1600px;height:526px;overflow:hidden}
+.zl{font:600 26px Poppins;fill:#16213E}
+/* gates */
+.gt{position:absolute;top:84px;width:362px;height:262px;border-radius:14px;background:var(--soft)}
+.gt .n{position:absolute;left:20px;top:20px;width:44px;height:44px;border-radius:50%;background:#fff;border:2.5px solid #CBD0DA;color:#9AA0AC;font:700 21px Poppins;display:flex;align-items:center;justify-content:center}
+.gt .gh{position:absolute;left:80px;top:26px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.gt .gq{position:absolute;left:20px;top:84px;width:322px;font:600 23px/1.35 Poppins}
+.gt svg{position:absolute;left:0;top:0}
+.tok{position:absolute;height:56px;padding:0 20px;border-radius:12px;background:#fff;border:2.5px solid var(--ink);display:inline-flex;align-items:center;font:italic 600 28px Poppins;white-space:nowrap}
+.gk{position:absolute;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+/* codes */
+.cd{position:absolute;left:36px;top:84px;width:712px;height:460px}
+.cd .ab{position:absolute;left:0;top:0;font:700 88px Poppins;letter-spacing:-.02em;color:var(--ac)}
+.cd .full2{position:absolute;left:0;top:120px;width:700px;font:600 30px/1.3 Poppins}
+.cd .for{position:absolute;left:0;top:226px;height:48px;padding:0 18px;border-radius:12px;background:var(--soft);display:inline-flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+.cd .ex{position:absolute;left:0;top:330px;font:italic 600 40px Poppins;white-space:nowrap}
+.cd .exl{position:absolute;left:0;top:300px;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* compare */
+.chp{position:absolute;height:52px;padding:0 18px;border-radius:12px;background:var(--soft);display:inline-flex;align-items:center;font:700 28px Poppins;white-space:nowrap}
+/* worked */
+.fx{position:absolute;left:36px;width:1528px;height:122px;border-radius:14px;background:var(--soft)}
+.fx .n{position:absolute;left:22px;top:37px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.fx .bf{position:absolute;left:100px;top:30px;font:500 44px Poppins;color:#8A1C1C;white-space:nowrap}
+.fx .af{position:absolute;left:760px;top:30px;font:500 44px Poppins;color:#1F6B3F;white-space:nowrap}
+.fx .ar2{position:absolute;left:640px;top:40px}
+.fx .why{position:absolute;right:28px;top:40px;height:42px;padding:0 14px;border-radius:9px;background:#fff;display:inline-flex;align-items:center;font:600 16px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.fx .sk{position:absolute;left:94px;top:61px;height:4px;border-radius:2px;background:var(--red);width:0}
+.hl{display:inline-block;border-radius:6px}
+.ul{position:absolute;height:4px;border-radius:2px;background:var(--ink)}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+.mq .sl{font:500 25px/1.5 Poppins;margin-top:8px}
+.mq .sl b{display:inline-block;width:46px;font:600 22px 'IBM Plex Mono';color:var(--ac)}
+#sF .fcard .fl.txt{font-size:29px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · BIOLOGY · CH 1 THE LIVING WORLD</div>
+    <div class="subj" id="subj">LIVING DIAGRAM</div>
+    <div id="title">Binomial <span class="acc">Nomenclature</span></div>
+    <div id="sub">One name for every living thing, worldwide</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#3E9B5F" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: one fish, three names + Diya's question -->
+    <div id="sH">
+      <div class="card full" id="hf"><div class="lbl" style="left:36px;top:30px">ONE FISH · THREE NAMES</div><svg id="fishS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div id="nmTs"></div>
+        <div id="sci"><span>Rastrelliger kanagurta</span><em>SCIENTIFIC NAME</em></div></div>
+      <div class="card rf" id="hq"><div class="lbl" style="left:36px;top:30px">DIYA'S QUESTION</div>
+        <div id="dF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <div id="dQ">If every language has its own name, which one does a scientist use?</div>
+        <div id="wcard"><div class="lbl" style="left:28px;top:24px">A SCIENTIST ANYWHERE WRITES</div><div class="wn">Rastrelliger kanagurta</div><div id="ctys"></div></div></div>
+    </div>
+
+    <!-- P: why common names fail -->
+    <div id="sP">
+      <div class="card full" id="pl"><div class="lbl" style="left:36px;top:30px">COMMON NAMES · SAME FISH</div><div id="ln2s"></div>
+        <div class="pillp bad" id="plP" style="left:36px;top:500px">Changes with language and place</div></div>
+      <div class="card rf" id="pr"><div class="lbl" style="left:36px;top:30px">TWO SCIENTISTS, ONE FISH</div><svg id="prS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div id="scts"></div>
+        <div class="pillp ac" id="prP" style="left:36px;top:420px">One scientific name, used worldwide</div>
+        <div class="pillp" id="prN" style="left:36px;top:492px">Nomenclature = the naming of organisms</div></div>
+    </div>
+
+    <!-- D: identification first + Linnaeus -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">BEFORE A NAME</div><div id="fl3s"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">WHO GAVE THE SYSTEM</div>
+        <div class="lnn" id="lnn"><div class="nm">Carolus Linnaeus</div><div class="wd">SWEDISH BOTANIST · 1707 - 1778</div><div class="ds">Gave every species a two-word name</div></div>
+        <div class="wb" id="wb0" style="left:36px;background:var(--ac);color:#fff">Bi</div><div class="wop" id="wop">+</div><div class="wb" id="wb1" style="background:var(--ink);color:#fff">nomial</div>
+        <div class="wm" id="wm0" style="background:var(--ac2);color:#1F6B3F">TWO</div><div class="wm" id="wm1" style="background:var(--soft);color:var(--ink)">NAMES</div></div>
+    </div>
+
+    <!-- Z: anatomy of a scientific name -->
+    <div id="sZ">
+      <div id="zch"></div>
+      <div class="card" id="zd"><div class="lbl" style="left:36px;top:30px">ANATOMY OF A SCIENTIFIC NAME · THE MANGO</div><svg id="zS" width="1600" height="526" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- G: four rule gates -->
+    <div id="sG"><div class="card wide" id="gw"><div class="lbl" style="left:36px;top:30px">THE FOUR RULE GATES</div><div id="gts"></div><div id="toks"></div>
+      <svg id="gS" width="1600" height="580" style="position:absolute;left:0;top:0;pointer-events:none"></svg></div></div>
+
+    <!-- R: the rule books -->
+    <div id="sR">
+      <div class="card full" id="cb"><div class="lbl" style="left:36px;top:30px">FOR PLANTS</div><div class="cd" id="cd0"><div class="ab">ICBN</div><div class="full2">International Code for Botanical Nomenclature</div><div class="for" id="cf0"></div><div class="exl">EXAMPLE</div><div class="ex">Mangifera indica</div></div></div>
+      <div class="card rf" id="cz"><div class="lbl" style="left:36px;top:30px">FOR ANIMALS</div><div class="cd" id="cd1"><div class="ab">ICZN</div><div class="full2">International Code of Zoological Nomenclature</div><div class="for" id="cf1"></div><div class="exl">EXAMPLE</div><div class="ex">Panthera leo</div></div></div>
+    </div>
+
+    <!-- C: common vs scientific + pause and think -->
+    <div id="sC">
+      <div class="card full" id="cc"><div class="lbl" style="left:36px;top:30px">COMMON NAME</div><svg id="ccS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div id="ccs"></div>
+        <div class="pillp bad" id="ccP" style="left:36px;top:494px">Many names · changes with place</div></div>
+      <div class="card rf" id="cs"><div class="lbl" style="left:36px;top:30px">SCIENTIFIC NAME</div><svg id="csS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="chp" id="csN" style="left:36px;top:300px;background:var(--ac2);color:#1F6B3F;font-style:italic">Rastrelliger kanagurta</div>
+        <div class="pillp good" id="csP" style="left:36px;top:494px">One name · same in every country</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW"><div class="card wide" id="wk"><div class="lbl" style="left:36px;top:30px">WORKED EXAMPLE · FIX THREE NAMES FROM A STUDENT'S NOTES</div><div id="fxs"></div></div></div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="520" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card + questions + NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Genus <span class="acc">Capital</span>, epithet small.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

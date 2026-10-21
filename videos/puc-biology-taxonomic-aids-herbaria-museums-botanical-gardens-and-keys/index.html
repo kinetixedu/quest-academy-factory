@@ -1,0 +1,170 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Biology Ep 9 - Taxonomic Aids: Herbaria, Museums, Botanical Gardens and Keys</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Biology Ep 09: taxonomic aids (Living diagram, leaf green) ===== */
+:root{--br:#2E2A24}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.ac{color:var(--ac)}
+#stage svg circle,#stage svg text,#stage svg .pp{transform-box:fill-box;transform-origin:center}
+#tgh{top:296px}
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .jt{position:absolute;right:24px;top:36px;height:48px;padding:0 16px;border-radius:10px;background:var(--ac);color:#fff;display:flex;align-items:center;gap:8px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* five aids */
+.ai{position:absolute;left:36px;width:712px;height:80px;border-radius:12px;background:var(--soft)}
+.ai i{position:absolute;left:16px;top:12px;width:56px;height:56px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.ai .an{position:absolute;left:90px;top:10px;font:700 27px Poppins;white-space:nowrap}
+.ai .aw{position:absolute;left:90px;top:48px;font:600 15px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+/* zoom ladder */
+#zch{position:absolute;left:160px;top:248px;display:flex;align-items:center;gap:12px}
+#zch .zc{height:48px;padding:0 18px;border-radius:10px;border:2px solid #CBD0DA;background:#fff;color:#9AA0AC;display:inline-flex;align-items:center;font:600 20px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+#zch .za{display:inline-flex}
+#zd{left:160px;top:324px;width:1056px;height:526px;overflow:hidden}
+#zi{left:1248px;top:324px;width:512px;height:526px}
+.lvI{position:absolute;left:0;top:0;width:512px;height:526px}
+.lvI .ln{position:absolute;left:36px;top:76px;font:700 56px Poppins;letter-spacing:-.02em;white-space:nowrap}
+.lvI .ld{position:absolute;left:36px;top:160px;width:440px;font:500 27px/1.35 Poppins}
+.lvI .lh{position:absolute;left:36px;top:300px;width:440px;font:600 23px/1.35 Poppins;color:var(--ac)}
+.zl{font:600 24px Poppins;fill:#16213E}
+.lf{font:600 15px 'IBM Plex Mono';letter-spacing:1px;fill:#6B7280}
+.lv2{font:600 21px Poppins;fill:#16213E}
+/* process */
+.sp{position:absolute;top:84px;width:282px;height:56px;border-radius:12px;border:2.5px solid #CBD0DA;background:#fff;color:#9AA0AC;display:flex;align-items:center;gap:12px;padding:0 16px;font:700 23px Poppins;white-space:nowrap}
+.sp b{flex:none;width:32px;height:32px;border-radius:50%;background:#EEF0F4;color:#9AA0AC;font:700 17px Poppins;display:flex;align-items:center;justify-content:center}
+#pst{position:absolute;left:36px;top:164px;width:1040px;height:384px;border-radius:14px;background:var(--soft);overflow:hidden}
+.pd{position:absolute;left:1112px;top:164px;width:452px;height:384px}
+.pd .ph{position:absolute;left:0;top:0;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.pd .pt{position:absolute;left:0;top:34px;font:700 50px Poppins;white-space:nowrap}
+.pd .pw{position:absolute;left:0;top:116px;width:440px;font:500 27px/1.4 Poppins}
+/* three places */
+.pl3{position:absolute;top:270px;width:512px;height:580px}
+.pl3 .pn{position:absolute;left:32px;top:300px;font:700 32px Poppins;white-space:nowrap}
+.pl3 .pq{position:absolute;left:32px;top:350px;width:450px;font:500 22px/1.38 Poppins;color:var(--ink2)}
+.gch{position:absolute;left:32px;height:40px;padding:0 14px;border-radius:9px;background:var(--soft);display:inline-flex;align-items:center;gap:8px;font:600 18px Poppins;white-space:nowrap}
+.gch em{font:600 13px 'IBM Plex Mono';font-style:normal;letter-spacing:.08em;color:var(--mute)}
+/* compare */
+.ctg{position:absolute;top:440px;height:46px;padding:0 16px;border-radius:10px;background:var(--soft);display:inline-flex;align-items:center;font:600 22px Poppins;white-space:nowrap}
+/* key */
+.cpl{position:absolute;left:36px;width:1060px;height:96px;border-radius:14px;background:var(--soft);display:flex;align-items:center;gap:20px;padding:0 26px;font:600 36px Poppins;white-space:nowrap}
+.cpl b{flex:none;height:40px;padding:0 12px;border-radius:8px;background:#fff;display:flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;color:var(--ac)}
+.cpl em{font-style:normal;color:var(--mute);font-weight:500}
+/* worked key */
+.nd{position:absolute;top:84px;width:320px;height:150px;border-radius:14px;background:var(--soft)}
+.nd .nh{position:absolute;left:18px;top:14px;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.nd .l1,.nd .l2{position:absolute;left:18px;font:600 23px Poppins;white-space:nowrap}
+.nd .l1{top:46px}.nd .l2{top:96px}
+.nd .l1 b,.nd .l2 b{display:inline-block;width:34px;font:600 16px 'IBM Plex Mono';color:var(--ac)}
+.rsb{position:absolute;top:420px;width:240px;height:120px;border-radius:14px;border:2.5px dashed #CBD0DA;background:#fff}
+.rsb .rn{position:absolute;left:0;width:240px;top:76px;text-align:center;font:700 26px Poppins;white-space:nowrap}
+.tkn{position:absolute;width:64px;height:64px;border-radius:50%;background:#fff;box-shadow:0 0 0 3px var(--ink);display:flex;align-items:center;justify-content:center}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+.mq .sl{font:500 25px/1.5 Poppins;margin-top:6px;white-space:nowrap}
+.mq .sl b{display:inline-block;width:40px;font:600 22px 'IBM Plex Mono';color:var(--ac)}
+.mq .sl i{display:inline-block;width:40px;font:600 22px 'IBM Plex Mono';color:#9A7420;font-style:normal;margin-left:30px}
+#sF .fcard .fl.txt{font-size:28px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · BIOLOGY · CH 1 THE LIVING WORLD</div>
+    <div class="subj" id="subj">LIVING DIAGRAM</div>
+    <div class="ghost" id="tgh">NOT IN THE CURRENT NCERT TEXT</div>
+    <div id="title">Taxonomic <span class="acc">Aids</span></div>
+    <div id="sub">Herbaria, gardens, museums, zoos and keys</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#3E9B5F" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE ODD THINGS · ONE JOB</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">All three help us name living things</div></div>
+      <div class="card rf" id="hk"><div class="lbl" id="hkL" style="left:36px;top:30px">DIYA'S DESK</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div class="pillp" id="hkP" style="left:132px;top:494px">Why keep a dead leaf for years?</div>
+        <div id="hcab" style="position:absolute;left:0;top:0;width:784px;height:580px"><div class="lbl" style="left:36px;top:30px">KEPT ON PURPOSE</div><svg id="cabS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+          <div class="pillp ac" id="cabP" style="left:132px;top:494px">Collections that help name living things</div></div></div>
+    </div>
+
+    <!-- B: what is a taxonomic aid -->
+    <div id="sB">
+      <div class="card full" id="bl"><div class="lbl" style="left:36px;top:30px">TO CLASSIFY, FIRST IDENTIFY</div><div class="ghost" id="bgh" style="right:28px;top:22px">NOT IN THE CURRENT NCERT TEXT</div>
+        <svg id="blS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="blP" style="left:36px;top:494px">Aids = real specimens and records to compare</div></div>
+      <div class="card rf" id="br"><div class="lbl" style="left:36px;top:30px">THE FIVE AIDS</div><div id="ais"></div></div>
+    </div>
+
+    <!-- Z: herbarium zoom ladder -->
+    <div id="sZ">
+      <div id="zch"></div>
+      <div class="card" id="zd"><svg id="zS" width="1056" height="526" style="position:absolute;left:0;top:0"></svg>
+        <div id="ztr" style="position:absolute;right:28px;top:22px;display:flex;gap:10px;align-items:center"><div class="ghost" id="zgh" style="position:relative">EXAMPLE FIGURES</div><div class="tag" id="zsc" style="position:relative"><span id="zscN">x1</span></div></div></div>
+      <div class="card" id="zi"><div id="lvs"></div></div>
+    </div>
+
+    <!-- P: making a herbarium sheet -->
+    <div id="sP"><div class="card wide" id="pw"><div class="lbl" style="left:36px;top:30px">MAKING ONE HERBARIUM SHEET · STAGE BY STAGE</div><div id="sps"></div>
+      <div id="pst"><svg id="pS" width="1040" height="384" style="position:absolute;left:0;top:0"></svg></div><div id="pds"></div></div></div>
+
+    <!-- G: garden, museum, zoo -->
+    <div id="sG">
+      <div class="card pl3" id="g0" style="left:160px"><div class="lbl" style="left:32px;top:30px">BOTANICAL GARDEN</div><svg id="g0S" width="512" height="300" style="position:absolute;left:0;top:0"></svg><div class="pn">Living plants</div><div class="pq">Each plant labelled with its botanical name and family.</div><div id="gchs"></div></div>
+      <div class="card pl3" id="g1" style="left:704px"><div class="lbl" style="left:32px;top:30px">MUSEUM</div><svg id="g1S" width="512" height="300" style="position:absolute;left:0;top:0"></svg><div class="pn">Preserved specimens</div><div class="pq">In jars of preserving liquid, insect boxes, stuffed birds and mammals, and skeletons.</div></div>
+      <div class="card pl3" id="g2" style="left:1248px"><div class="lbl" style="left:32px;top:30px">ZOOLOGICAL PARK</div><svg id="g2S" width="512" height="300" style="position:absolute;left:0;top:0"></svg><div class="pn">Live wild animals</div><div class="pq">Kept safe, close to their natural home. We learn food habits and behaviour.</div></div>
+    </div>
+
+    <!-- C: herbarium vs botanical garden + pause and think -->
+    <div id="sC">
+      <div class="card full" id="ca"><div class="lbl" style="left:36px;top:30px">HERBARIUM</div><svg id="caS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="ctg" id="ca0" style="left:36px">Dead</div><div class="ctg" id="ca1" style="left:150px">Dried and pressed</div><div class="ctg" id="ca2" style="left:400px">On sheets</div>
+        <div class="pillp" id="caP" style="left:36px;top:506px">Example: a pressed leaf on a sheet</div></div>
+      <div class="card rf" id="cb"><div class="lbl" style="left:36px;top:30px">BOTANICAL GARDEN</div><svg id="cbS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="ctg" id="cb0" style="left:36px">Living</div><div class="ctg" id="cb1" style="left:160px">Growing in soil</div><div class="ctg" id="cb2" style="left:380px">With a label</div>
+        <div class="pillp" id="cbP" style="left:36px;top:506px">Example: a mango tree with its name board</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- K: the key -->
+    <div id="sK"><div class="card wide" id="kw"><div class="lbl" style="left:36px;top:30px">THE KEY · ONE COUPLET</div><div id="cpls"></div><svg id="kS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg>
+      <div class="pillp ac" id="kP" style="left:36px;top:390px">Pick one lead: go to the next couplet, or get the name</div></div></div>
+
+    <!-- W: worked example, run a key -->
+    <div id="sW"><div class="card wide" id="wk"><div class="lbl" style="left:36px;top:30px">WORKED EXAMPLE · RUN FOUR ANIMALS THROUGH A KEY</div><svg id="wS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg><div id="nds"></div><div id="rsbs"></div><div id="tkns"></div></div></div>
+
+    <!-- X / Q / F -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">A key offers <span class="acc">two</span> choices at a time.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

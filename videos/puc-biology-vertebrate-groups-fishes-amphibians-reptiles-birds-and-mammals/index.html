@@ -1,0 +1,167 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Biology Ep 37 - Vertebrate Groups</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Biology Ep 37: vertebrate groups (Living diagram, leaf green) ===== */
+:root{--br:#2E2A24;--rb:#D1495B;--pl:#6D3B6E}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.ac{color:var(--ac)}
+/* title card objects */
+.job{position:absolute;top:724px;width:340px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .jt{position:absolute;right:24px;top:36px;height:48px;display:flex;align-items:center;gap:8px}
+.jr .jt b{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+#plan{position:absolute;left:0;top:0;width:784px;height:580px}
+.bigw{position:absolute;font:700 64px Poppins;letter-spacing:-.02em;white-space:nowrap}
+.ctr{position:absolute;left:36px;width:712px;height:70px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:16px;padding:0 20px;font:600 27px Poppins;white-space:nowrap}
+.ctr b{flex:none;width:38px;height:38px;border-radius:50%;background:var(--ac);color:#fff;font:700 19px Poppins;display:flex;align-items:center;justify-content:center}
+/* zoom ladder */
+#zch{position:absolute;left:160px;top:248px;display:flex;align-items:center;gap:12px}
+#zch .zc{height:48px;padding:0 18px;border-radius:10px;border:2px solid #CBD0DA;background:#fff;color:#9AA0AC;display:inline-flex;align-items:center;font:600 20px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+#zch .za{display:inline-flex}
+#zd{left:160px;top:324px;width:1056px;height:526px;overflow:hidden}
+#zi{left:1248px;top:324px;width:512px;height:526px}
+.lvI{position:absolute;left:0;top:0;width:512px;height:526px}
+.zl{font:600 26px Poppins;fill:#16213E}
+.zm{font:600 16px 'IBM Plex Mono';letter-spacing:.1em;fill:#6B7280}
+.fr{position:absolute;left:28px;width:456px;height:76px;border-radius:12px}
+.fr .d{position:absolute;left:14px;top:18px;width:40px;height:40px;border-radius:50%;color:#fff;font:700 19px Poppins;display:flex;align-items:center;justify-content:center}
+.fr .fn{position:absolute;left:70px;top:8px;font:700 23px Poppins;white-space:nowrap}
+.fr .fs{position:absolute;left:70px;top:42px;font:500 18px Poppins;color:var(--mute);white-space:nowrap}
+.ch4{position:absolute;height:42px;padding:0 14px;border-radius:9px;background:var(--ac2);color:#1F6B3F;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+/* comparison */
+.cmp{position:absolute;left:36px;width:712px;height:66px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:14px;padding:0 18px;font:600 24px Poppins;white-space:nowrap}
+.cmp b{flex:none;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+/* statement */
+#stF .lad{font:600 44px Poppins;color:var(--ink);letter-spacing:-.01em}
+#stF .lad b{color:var(--ac)}
+/* sort board */
+.colW{position:absolute;top:76px;width:352px;height:470px}
+.colW .ch2{position:absolute;left:0;top:0;width:352px;height:40px;border-radius:9px;background:var(--soft);display:flex;align-items:center;justify-content:center;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.colW .dz{position:absolute;left:0;top:52px;width:352px;height:220px;border-radius:14px;border:2.5px dashed #CBD0DA;background:#fff}
+.colW .it{position:absolute;left:0;top:52px;width:352px;height:220px;border-radius:14px;background:var(--ac2)}
+.colW .it.no{background:#FBE3E3}
+.colW .it svg.dr{position:absolute;left:0;top:0}
+.colW .it .inm{position:absolute;left:8px;width:336px;top:168px;text-align:center;font:700 25px/1.15 Poppins;white-space:nowrap}
+.colW .rs{position:absolute;left:8px;top:290px;width:336px;text-align:center;font:500 20px/1.35 Poppins;color:var(--ink2)}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+.mq .sl{font:500 25px/1.5 Poppins;margin-top:8px;white-space:nowrap}
+.mq .sl b{display:inline-block;width:52px;font:600 22px 'IBM Plex Mono';color:var(--ac)}
+.mq .sl{position:relative}.mq .sl .c2{position:absolute;left:400px;top:0}
+#sF .fcard .fl.txt{font-size:29px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+
+/* vertebrate tree */
+.nd{position:absolute;height:60px;border-radius:12px;background:#fff;border:2.5px solid #CBD0DA;display:flex;flex-direction:column;align-items:center;justify-content:center;white-space:nowrap}
+.nd .a{font:700 23px/1.1 Poppins}
+.nd .b{font:600 13px 'IBM Plex Mono';letter-spacing:.1em;color:var(--mute)}
+.nd.k{background:var(--ac);border-color:var(--ac);color:#fff}.nd.k .b{color:#E4F3E8}
+.exs{position:absolute;font:italic 500 18px Poppins;color:var(--ink2);white-space:nowrap}
+.cnt{position:absolute;height:38px;padding:0 12px;border-radius:8px;background:var(--ac2);color:#1F6B3F;display:inline-flex;align-items:center;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* class tour */
+.cI{position:absolute;left:0;top:0;width:512px;height:526px}
+.cI .cn{position:absolute;left:28px;top:70px;font:700 40px Poppins;letter-spacing:-.02em;white-space:nowrap}
+.cI .cm{position:absolute;left:28px;top:124px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.cI .cf{position:absolute;left:28px;width:456px;height:52px;border-radius:10px;background:var(--soft);display:flex;align-items:center;gap:12px;padding:0 14px;font:600 20px Poppins;white-space:nowrap}
+.cI .cf b{flex:none;width:12px;height:12px;border-radius:50%;background:var(--ac)}
+.cI .ce{position:absolute;left:28px;top:440px;width:456px;height:60px;border-radius:12px;background:var(--ac2);display:flex;align-items:center;gap:10px;padding:0 16px;font:600 20px Poppins;white-space:nowrap}
+.cI .ce i{font-style:italic;font-weight:700}
+/* heart stages */
+.sp3{position:absolute;left:28px;width:456px;height:96px;border-radius:14px;border:2.5px solid #CBD0DA;background:#fff}
+.sp3 .n{position:absolute;left:16px;top:26px;width:40px;height:40px;border-radius:50%;border:2.5px solid #CBD0DA;color:#9AA0AC;font:700 19px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.sp3 .sn{position:absolute;left:72px;top:12px;font:700 24px Poppins;white-space:nowrap}
+.sp3 .sf{position:absolute;left:72px;top:50px;font:500 18px Poppins;color:var(--mute);white-space:nowrap}
+.tmp{position:absolute;left:28px;width:456px;height:56px;border-radius:12px;display:flex;align-items:center;gap:12px;padding:0 14px;font:600 19px Poppins;white-space:nowrap}
+.tmp em{font:600 15px 'IBM Plex Mono';letter-spacing:.08em;font-style:normal;padding:4px 8px;border-radius:6px;color:#fff}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · BIOLOGY · CH 4 ANIMAL KINGDOM</div>
+    <div class="subj" id="subj">LIVING DIAGRAM</div>
+    <div id="title">Vertebrate <span class="acc">Groups</span></div>
+    <div id="sub">Five groups, one living diagram</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#3E9B5F" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">FOUR ANIMALS NEAR THE HOSTEL</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:500px">All vertebrates, four different classes</div></div>
+      <div class="card rf" id="hk"><div class="lbl" id="hkL" style="left:36px;top:30px">DIYA'S WALK TO CLASS</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-corridor.jpg">
+        <div class="pillp" id="hkP" style="left:132px;top:494px">What makes a frog different from a lizard?</div>
+        <div id="plan"><div class="lbl" style="left:36px;top:30px">THE ANSWER IS IN</div>
+          <div class="ctr" id="pc0" style="top:84px"><b>1</b>Their skin</div>
+          <div class="ctr" id="pc1" style="top:170px"><b>2</b>Their heart</div>
+          <div class="ctr" id="pc2" style="top:256px"><b>3</b>How they keep warm</div>
+          <div class="pillp ac" id="pcP" style="left:36px;top:380px">Every class in NCERT, its features, its examples</div></div></div>
+    </div>
+
+    <!-- D: the vertebrate tree -->
+    <div id="sD"><div class="card wide" id="dt"><div class="lbl" style="left:36px;top:30px">SUBPHYLUM VERTEBRATA · THE SPLITS</div><svg id="dS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg><div id="nds"></div></div></div>
+
+    <!-- C: class tour -->
+    <div id="sC">
+      <div id="zch"></div>
+      <div class="card" id="zd"><svg id="zS" width="1056" height="526" style="position:absolute;left:0;top:0"></svg>
+        <div id="ztr" style="position:absolute;right:28px;top:22px;display:flex;gap:10px;align-items:center"><div class="tag" id="zsc" style="position:relative"><span id="zscN">CLASS 1 OF 6</span></div></div></div>
+      <div class="card" id="zi"><div id="cis"></div></div>
+    </div>
+
+    <!-- P: the heart -->
+    <div id="sP">
+      <div class="card" id="pd" style="left:160px;top:270px;width:1056px;height:580px;overflow:hidden"><div class="lbl" style="left:36px;top:30px">THE HEART · CHAMBERS</div><div class="tag" id="pTag" style="right:28px;top:22px"><span id="pTagN">2 CHAMBERS</span></div>
+        <svg id="pS" width="1056" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="pr" style="left:1248px;top:270px;width:512px;height:580px"><div class="lbl" style="left:28px;top:30px">CLIMBING THE CLASSES</div><div id="sp3s"></div>
+        <div class="tmp" id="tm0" style="top:420px;background:#E8F1F8"><em style="background:#5AA0C8">COLD</em>Fishes, amphibians, reptiles</div>
+        <div class="tmp" id="tm1" style="top:488px;background:#FBE6E9"><em style="background:#D1495B">WARM</em>Birds, mammals</div></div>
+    </div>
+
+    <!-- K: shark vs rohu + think -->
+    <div id="sK">
+      <div class="card full" id="ka"><div class="lbl" style="left:36px;top:30px">CARTILAGINOUS · A SHARK</div><svg id="kaS" width="784" height="250" style="position:absolute;left:0;top:0"></svg><div id="kas"></div></div>
+      <div class="card rf" id="kb"><div class="lbl" style="left:36px;top:30px">BONY · A ROHU</div><svg id="kbS" width="784" height="250" style="position:absolute;left:0;top:0"></svg><div id="kbs"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW"><div class="card wide" id="wb"><div class="lbl" style="left:36px;top:30px">WORKED EXAMPLE · PLACE DIYA'S FOUR HOSTEL ANIMALS</div><div id="cols"></div></div></div>
+
+    <!-- X / Q / F -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="460" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2"><span class="acc">2</span> · <span class="acc">3</span> · <span class="acc">4</span> chambers</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

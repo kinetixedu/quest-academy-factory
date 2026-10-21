@@ -1,0 +1,192 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Biology Ep 19 - Viroids and Prions</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Biology Ep 19: Viroids and Prions (Living diagram, leaf green) ===== */
+:root{--br:#2E2A24;--mi:#E58A3C;--nu:#7B4B94;--wa:#5AA0C8;--rb:#D1495B}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.ac{color:var(--ac)}
+/* title card objects */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .jt{position:absolute;right:24px;top:36px;height:48px;padding:0 16px;border-radius:10px;background:var(--ac);color:#fff;display:flex;align-items:center;gap:8px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+#neet{position:absolute;left:0;top:0;width:784px;height:580px}
+.nq{position:absolute;width:26px;height:26px;border-radius:6px;background:var(--soft)}
+.big{position:absolute;font:600 64px/1 'IBM Plex Mono';white-space:nowrap}
+.keyt{position:absolute;display:flex;align-items:center;gap:10px;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.keyt b{width:22px;height:22px;border-radius:5px;display:inline-block}
+/* word + branches */
+#zch{position:absolute;left:160px;top:248px;display:flex;align-items:center;gap:12px}
+#zch .zc{height:48px;padding:0 18px;border-radius:10px;border:2px solid #CBD0DA;background:#fff;color:#9AA0AC;display:inline-flex;align-items:center;font:600 20px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+#zch .za{display:inline-flex}
+#zd{left:160px;top:324px;width:1056px;height:526px;overflow:hidden}
+#zi{left:1248px;top:324px;width:512px;height:526px}
+.lvI{position:absolute;left:0;top:0;width:512px;height:526px}
+.lvI .ln{position:absolute;left:36px;top:76px;font:700 60px Poppins;letter-spacing:-.02em;white-space:nowrap}
+.lvI .ld{position:absolute;left:36px;top:164px;width:440px;font:500 28px/1.35 Poppins}
+.lvI .lh{position:absolute;left:36px;top:300px;width:440px;font:600 24px/1.35 Poppins;color:var(--ac)}
+.zl{font:600 26px Poppins;fill:#16213E}
+/* ladder steps */
+.st5{position:absolute;left:36px;width:712px;height:92px}
+.st5 .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st5 .sx{position:absolute;left:70px;top:2px;font:700 30px Poppins;white-space:nowrap}
+.st5 .why{position:absolute;left:70px;top:48px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.rg{position:absolute;width:420px;height:42px;border-radius:10px;background:var(--soft);display:flex;align-items:center;gap:12px;padding:0 14px;font:600 22px Poppins;white-space:nowrap}
+.rg i{display:flex}
+/* statement */
+#stF .lad{font:600 30px 'IBM Plex Mono';color:var(--mute);letter-spacing:.02em}
+#stF .lad b{color:var(--ac)}
+/* cell theory */
+.ev{position:absolute;left:36px;width:712px;height:140px}
+.ev .yr2{position:absolute;left:56px;top:0;font:600 40px 'IBM Plex Mono';color:var(--ac)}
+.ev .nm{position:absolute;left:206px;top:2px;font:700 30px Poppins;white-space:nowrap}
+.ev .wd{position:absolute;left:206px;top:48px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.ev .ds{position:absolute;left:206px;top:76px;font:500 24px Poppins;color:var(--ink2);white-space:nowrap}
+.ev .dt{position:absolute;left:12px;top:14px;width:24px;height:24px;border-radius:50%;background:#fff;border:4px solid var(--ac)}
+.stg{position:absolute;top:84px;display:flex;align-items:center;gap:10px}
+.stg span{height:42px;padding:0 14px;border-radius:9px;border:2px solid #CBD0DA;background:#fff;color:#9AA0AC;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.ctr{position:absolute;left:36px;width:712px;height:58px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:14px;padding:0 18px;font:600 25px Poppins;white-space:nowrap}
+.ctr b{flex:none;width:34px;height:34px;border-radius:50%;background:var(--ac);color:#fff;font:700 18px Poppins;display:flex;align-items:center;justify-content:center}
+/* one vs many */
+.colW{position:absolute;top:76px;width:232px;height:380px}
+.colW .ch2{position:absolute;left:0;top:0;width:232px;height:40px;border-radius:9px;background:var(--soft);display:flex;align-items:center;justify-content:center;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.colW .dz{position:absolute;left:0;top:52px;width:232px;height:188px;border-radius:14px;border:2.5px dashed #CBD0DA;background:#fff}
+.colW .it{position:absolute;left:0;top:52px;width:232px;height:188px;border-radius:14px;background:var(--ac2)}
+.colW .it .ic{position:absolute;left:0;top:18px;width:232px;display:flex;justify-content:center}
+.colW .it .inm{position:absolute;left:8px;width:216px;top:116px;text-align:center;font:700 23px/1.15 Poppins}
+.colW .rs{position:absolute;left:4px;top:256px;width:224px;text-align:center;font:500 19px/1.3 Poppins;color:var(--ink2)}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+.mq .sl{font:500 25px/1.5 Poppins;margin-top:8px}
+.mq .sl b{display:inline-block;width:46px;font:600 22px 'IBM Plex Mono';color:var(--ac)}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+/* batch 16-20 shared: chain pills, 3-up cards, compare rows, info rows */
+.chn{position:absolute;left:160px;top:248px;display:flex;align-items:center;gap:12px}
+.chn .zc{height:48px;padding:0 18px;border-radius:10px;border:2px solid #CBD0DA;background:#fff;color:#9AA0AC;display:inline-flex;align-items:center;gap:8px;font:600 20px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.chn .za{display:inline-flex}
+.c3{top:270px;width:512px;height:580px}
+.c3 .nm3{position:absolute;left:32px;top:372px;font:700 34px Poppins;white-space:nowrap}
+.c3 .ds3{position:absolute;left:32px;top:420px;width:448px;font:500 22px/1.35 Poppins;color:var(--ink2)}
+.c3 .ex3{position:absolute;left:32px;display:inline-flex;align-items:center;height:40px;padding:0 14px;border-radius:9px;background:var(--soft);font:italic 600 20px Poppins;white-space:nowrap}
+.kv{position:absolute;left:36px;width:712px;height:64px;border-radius:12px;background:var(--soft)}
+.kv .k{position:absolute;left:20px;top:22px;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.kv .v{position:absolute;left:180px;top:14px;font:600 24px Poppins;white-space:nowrap}
+.dfr{position:absolute;left:36px;width:712px;height:96px;border-radius:12px;background:var(--soft)}
+.dfr .t{position:absolute;left:24px;top:12px;font:700 28px Poppins;white-space:nowrap}
+.dfr .d{position:absolute;left:24px;top:54px;font:500 21px Poppins;color:var(--ink2);white-space:nowrap}
+.flw2{position:absolute;display:flex;align-items:center;gap:10px}
+.flw2 span{height:52px;padding:0 16px;border-radius:11px;background:var(--soft);display:inline-flex;align-items:center;gap:8px;font:600 21px Poppins;white-space:nowrap}
+.flw2 em{font:600 24px 'IBM Plex Mono';color:var(--mute);font-style:normal}
+.mono{font-family:'IBM Plex Mono'}
+.plo{position:absolute;height:44px;padding:0 16px;border-radius:10px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 22px 'IBM Plex Mono';letter-spacing:.04em;white-space:nowrap}
+
+/* ===== episode ===== */
+#tq3{position:absolute;left:0;top:0;width:784px;height:580px}
+.tq2{position:absolute;left:36px;width:712px;height:150px;border-radius:14px;background:var(--soft)}
+.tq2 .n{position:absolute;left:24px;top:24px;width:52px;height:52px;border-radius:50%;background:var(--ac);color:#fff;font:700 26px Poppins;display:flex;align-items:center;justify-content:center}
+.tq2 .q{position:absolute;left:100px;top:26px;font:700 32px Poppins;white-space:nowrap}
+.tq2 .h{position:absolute;left:100px;top:80px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .jt.bad{background:var(--red)}
+.wb2{position:absolute;top:96px;height:96px;padding:0 24px;border-radius:14px;display:flex;align-items:center;font:700 44px Poppins;letter-spacing:-.01em;white-space:nowrap}
+.wm2{position:absolute;top:206px;height:40px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap;background:var(--soft)}
+.c3 .kr{position:absolute;left:32px;width:448px;height:48px;border-radius:10px;background:var(--soft)}
+.c3 .kr .k{position:absolute;left:16px;top:16px;font:600 14px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.c3 .kr .v{position:absolute;left:150px;top:10px;font:600 21px Poppins;white-space:nowrap}
+.kq{position:absolute;height:64px;padding:0 22px;border-radius:14px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 26px Poppins;white-space:nowrap}
+.kbin{position:absolute;width:300px;height:150px;border-radius:14px;border:2.5px dashed #CBD0DA;background:#fff}
+.kbin .h{position:absolute;left:0;top:10px;width:300px;text-align:center;font:600 18px 'IBM Plex Mono';letter-spacing:.1em;color:var(--mute)}
+.kag{position:absolute;height:50px;padding:0 16px;border-radius:11px;background:var(--ac2);display:inline-flex;align-items:center;font:600 21px Poppins;white-space:nowrap;box-shadow:0 8px 24px rgba(22,33,62,.12)}
+.kyn{position:absolute;font:600 18px 'IBM Plex Mono';letter-spacing:.1em}
+
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · BIOLOGY · CH 2 BIOLOGICAL CLASSIFICATION</div>
+    <div class="subj" id="subj">LIVING DIAGRAM</div>
+    <div id="title">Viroids and <span class="acc">Prions</span></div>
+    <div id="sub">Explained with one living diagram</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#3E9B5F" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+    <!-- H -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE CASES</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Something even simpler than a virus</div></div>
+      <div class="card rf" id="hk"><div class="lbl" id="hkL" style="left:36px;top:30px">DIYA'S NOTES</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div class="pillp" id="hkP" style="left:132px;top:494px">No coat, or no genes, and still a disease?</div>
+        <div id="tq3"><div class="lbl" style="left:36px;top:30px">TWO AGENTS</div>
+          <div class="tq2" id="tq0" style="top:96px"><div class="n">1</div><div class="q">Viroids</div><div class="h">SMALLER THAN VIRUSES</div></div>
+          <div class="tq2" id="tq1" style="top:270px"><div class="n">2</div><div class="q">Prions</div><div class="h">HOW TO TELL ALL THREE APART</div></div></div></div>
+    </div>
+    <!-- D -->
+    <div id="sD"><div class="card wide" id="dw"><div class="lbl" style="left:36px;top:30px">START FROM A VIRUS</div><svg id="dS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg></div></div>
+    <!-- Z -->
+    <div id="sZ">
+      <div id="zch"></div>
+      <div class="card" id="zd"><svg id="zS" width="1056" height="526" style="position:absolute;left:0;top:0"></svg>
+        <div id="ztr" style="position:absolute;right:28px;top:22px;display:flex;gap:10px;align-items:center"><div class="ghost" id="zgh" style="position:relative">EXAMPLE FIGURES</div><div class="tag" id="zsc" style="position:relative"><span id="zscN">x1</span></div></div></div>
+      <div class="card" id="zi"><div id="lvs"></div></div>
+    </div>
+    <!-- V: who found it -->
+    <div id="sV">
+      <div class="card full" id="cl"><div class="lbl" style="left:36px;top:30px">WHO FOUND IT</div><div class="ev" id="ev0" style="top:92px"><div class="dt"></div><div class="yr2">1971</div><div class="nm">T. O. Diener</div><div class="wd">A NEW INFECTIOUS AGENT</div><div class="ds">Smaller than viruses</div></div><div id="vks"></div></div>
+      <div class="card rf" id="cr"><div class="lbl" style="left:36px;top:30px">WHY THE NAME</div><svg id="crS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+    <!-- P: prion steps -->
+    <div id="sP">
+      <div class="card full" id="pl"><div class="lbl" style="left:36px;top:30px">THE PRION · 5 STEPS</div><div class="hiBox" id="hiB" style="left:20px;width:744px;height:96px"></div><div id="st5s"></div></div>
+      <div class="card rf" id="pr"><div class="lbl" style="left:36px;top:30px">WATCH THE PROTEINS</div><svg id="pS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="plo" id="pcnt" style="right:36px;top:22px">PRIONS&nbsp;<span id="pcN">1</span></div></div>
+    </div>
+    <!-- B: diseases -->
+    <div id="sB">
+      <div class="card full" id="ba"><div class="lbl" style="left:36px;top:30px">READ THE NAME</div>
+        <div class="wb2" id="bw0" style="left:36px;background:var(--ink);color:#fff">Bovine</div><div class="wb2" id="bw1" style="background:var(--ac);color:#fff">Spongiform</div><div class="wb2" id="bw2" style="left:36px;top:280px;background:var(--ink);color:#fff">Encephalopathy</div>
+        <div class="wm2" id="bm0">OF CATTLE</div><div class="wm2" id="bm1">LIKE A SPONGE</div><div class="wm2" id="bm2" style="top:390px">A DISEASE OF THE BRAIN</div>
+        <div class="pillp ac" id="bP" style="left:36px;top:494px">BSE · mad cow disease</div></div>
+      <div class="card rf" id="bb"><div class="lbl" style="left:36px;top:30px">A BRAIN LIKE A SPONGE</div><svg id="bS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="bQ" style="left:36px;top:430px">In humans: CJD</div><div class="pillp" id="bR" style="left:36px;top:494px">Prions: about the size of viruses</div></div>
+    </div>
+    <!-- C -->
+    <div id="sC"><div id="c3s"></div><div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div></div>
+    <!-- W: key -->
+    <div id="sW"><div class="card wide" id="wb"><div class="lbl" style="left:36px;top:30px">WORKED EXAMPLE · SORT FOUR AGENTS WITH A KEY</div><svg id="wS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg><div id="wks"></div></div></div>
+    <!-- X / Q / F -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="460" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Viroid: RNA, no coat. Prion: <span class="acc">misfolded protein</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

@@ -1,0 +1,156 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Biology Ep 13 - Kingdom Monera: Bacteria and Cyanobacteria</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Biology Ep 13: kingdom Monera (Living diagram, leaf green) ===== */
+:root{--br:#2E2A24;--mi:#E58A3C;--nu:#7B4B94;--wa:#5AA0C8;--rb:#D1495B}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .jt{position:absolute;right:24px;top:36px;height:48px;padding:0 16px;border-radius:10px;background:var(--ac);color:#fff;display:flex;align-items:center;gap:8px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* zoom ladder */
+#zch{position:absolute;left:160px;top:248px;display:flex;align-items:center;gap:12px}
+#zch .zc{height:48px;padding:0 18px;border-radius:10px;border:2px solid #CBD0DA;background:#fff;color:#9AA0AC;display:inline-flex;align-items:center;font:600 20px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+#zch .za{display:inline-flex}
+#zd{left:160px;top:324px;width:1056px;height:526px;overflow:hidden}
+#zi{left:1248px;top:324px;width:512px;height:526px}
+.lvI{position:absolute;left:0;top:0;width:512px;height:526px}
+.lvI .ln{position:absolute;left:36px;top:76px;font:700 56px Poppins;letter-spacing:-.02em;white-space:nowrap}
+.lvI .ld{position:absolute;left:36px;top:160px;width:440px;font:500 27px/1.35 Poppins}
+.lvI .lh{position:absolute;left:36px;top:300px;width:440px;font:600 24px/1.35 Poppins;color:var(--ac)}
+.zl{font:600 26px Poppins;fill:#16213E}
+/* K: kingdom + shapes */
+.kfact{position:absolute;left:36px;width:712px;font:700 34px/1.25 Poppins}
+.hab{position:absolute;top:330px;width:160px;height:150px;border-radius:14px;background:var(--soft)}
+.hab span{position:absolute;left:0;width:160px;top:104px;text-align:center;font:700 21px Poppins;white-space:nowrap}
+.shp{position:absolute;width:344px;height:228px;border-radius:14px;background:var(--soft)}
+.shp .sn{position:absolute;left:20px;top:156px;font:700 28px Poppins;white-space:nowrap}
+.shp .sw{position:absolute;left:20px;top:194px;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* G: two groups */
+.arc{position:absolute;left:36px;width:712px;height:110px;border-radius:14px;background:var(--soft)}
+.arc .an{position:absolute;left:150px;top:16px;font:700 27px Poppins;white-space:nowrap}
+.arc .aw{position:absolute;left:150px;top:56px;font:500 21px Poppins;color:var(--ink2);white-space:nowrap}
+.gsub{position:absolute;left:36px;top:66px;font:600 17px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+/* C: by food */
+.fr{position:absolute;left:36px;width:712px;border-radius:14px;background:var(--soft)}
+.fr .fn{position:absolute;left:22px;top:12px;font:700 26px Poppins;white-space:nowrap}
+.fr .fw{position:absolute;left:22px;top:50px;font:500 20px Poppins;color:var(--ink2);white-space:nowrap}
+.fr .fc{position:absolute;left:22px;display:flex;gap:10px}
+.fr .fc span{height:38px;padding:0 12px;border-radius:9px;background:#fff;display:inline-flex;align-items:center;font:600 18px Poppins;white-space:nowrap}
+.fr .fc span.bad{color:var(--red);background:var(--redBg)}
+.stp{position:absolute;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.stp>span{height:52px;padding:0 18px;border-radius:10px;border:2px solid #CBD0DA;background:#fff;color:#9AA0AC;display:inline-flex;align-items:center;font:600 22px Poppins;white-space:nowrap}
+.stp>em{font:600 22px 'IBM Plex Mono';color:var(--dim);font-style:normal;margin-left:24px;line-height:22px}
+/* R: reproduction */
+.fis{position:absolute;top:84px;display:flex;align-items:center;gap:10px}
+.fis span{height:42px;padding:0 14px;border-radius:9px;border:2px solid #CBD0DA;background:#fff;color:#9AA0AC;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.rr{position:absolute;left:36px;width:712px;height:140px;border-radius:14px;background:var(--soft)}
+.rr .rn{position:absolute;left:180px;top:22px;font:700 27px Poppins;white-space:nowrap}
+.rr .rw2{position:absolute;left:180px;top:62px;width:510px;font:500 21px/1.3 Poppins;color:var(--ink2)}
+/* W */
+.colW{position:absolute;top:76px;width:232px;height:460px}
+.colW .ch2{position:absolute;left:0;top:0;width:232px;height:40px;border-radius:9px;background:var(--soft);display:flex;align-items:center;justify-content:center;font:600 13.5px 'IBM Plex Mono';letter-spacing:.04em;color:var(--mute);white-space:nowrap}
+.colW .it{position:absolute;left:0;top:52px;width:232px;height:188px;border-radius:14px;background:var(--soft)}
+.colW .it .ic{position:absolute;left:0;top:18px;width:232px;display:flex;justify-content:center}
+.colW .it .inm{position:absolute;left:8px;width:216px;top:114px;text-align:center;font:700 22px/1.15 Poppins}
+.colW .dz{position:absolute;left:0;top:262px;width:232px;height:70px;border-radius:12px;border:2.5px dashed #CBD0DA;background:#fff}
+.colW .kg{position:absolute;left:0;top:262px;width:232px;height:70px;border-radius:12px;background:var(--ac);color:#fff;display:flex;align-items:center;justify-content:center;font:600 17px 'IBM Plex Mono';letter-spacing:.06em}
+.colW .rs{position:absolute;left:4px;top:348px;width:224px;text-align:center;font:500 19px/1.3 Poppins;color:var(--ink2)}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+.mq .ar2{font:500 24px/1.45 Poppins;margin-top:10px}
+.mq .ar2 b{font:600 20px 'IBM Plex Mono';color:var(--ac);margin-right:10px}
+#sF .fcard .fl.txt{font-size:27px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · BIOLOGY · CH 2 BIOLOGICAL CLASSIFICATION</div>
+    <div class="subj" id="subj">LIVING DIAGRAM</div>
+    <div id="title">Kingdom <span class="acc">Monera</span></div>
+    <div id="sub">Bacteria and cyanobacteria</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#3E9B5F" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE PLACES · ONE KINGDOM</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">All three: bacteria at work</div></div>
+      <div class="card rf" id="hk"><div class="lbl" id="hkL" style="left:36px;top:30px">DIYA'S KITCHEN · OVERNIGHT</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-kitchen.jpg">
+        <div class="pillp" id="hkP" style="left:132px;top:494px">Warm milk + a spoon of curd</div>
+        <div class="pillp ac" id="hkN" style="left:132px;top:494px">By morning: thick, sour curd</div></div>
+    </div>
+
+    <div id="sZ">
+      <div id="zch"></div>
+      <div class="card" id="zd"><svg id="zS" width="1056" height="526" style="position:absolute;left:0;top:0"></svg>
+        <div id="ztr" style="position:absolute;right:28px;top:22px;display:flex;gap:10px;align-items:center"><div class="ghost" id="zgh" style="position:relative">EXAMPLE FIGURES</div><div class="tag" id="zsc" style="position:relative"><span id="zscN">x1</span></div></div></div>
+      <div class="card" id="zi"><div id="lvs"></div></div>
+    </div>
+
+    <div id="sK">
+      <div class="card full" id="ka"><div class="lbl" style="left:36px;top:30px">KINGDOM MONERA</div>
+        <div class="kfact" id="kf0" style="top:80px">Bacteria are its <span class="acc">only</span> members</div>
+        <div class="kfact" id="kf1" style="top:170px;font-size:28px;font-weight:600;color:var(--ink2)">The most abundant microorganisms</div>
+        <div class="lbl" id="kfL" style="left:36px;top:280px">THEY LIVE ALMOST EVERYWHERE</div><div id="habs"></div></div>
+      <div class="card rf" id="kb"><div class="lbl" style="left:36px;top:30px">FOUR MAIN SHAPES</div><div id="shps"></div></div>
+    </div>
+
+    <div id="sG">
+      <div class="card full" id="ga"><div class="lbl" style="left:36px;top:30px">ARCHAEBACTERIA · EXTREME PLACES</div><div id="arcs"></div>
+        <div class="pillp ac" id="gaP" style="left:36px;top:500px;height:44px;font-size:21px">Secret: a differently built cell wall</div></div>
+      <div class="card rf" id="gb"><div class="lbl" style="left:36px;top:30px">EUBACTERIA · TRUE BACTERIA</div><svg id="gbS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="gbP" style="left:36px;top:500px;height:44px;font-size:21px">Rigid cell wall · flagellum if motile</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sC">
+      <div class="card full" id="ca"><div class="lbl" id="caL0" style="left:36px;top:30px">NOSTOC · A CYANOBACTERIUM</div><svg id="caS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="chemo"><div class="lbl" style="left:36px;top:30px">CHEMOSYNTHETIC · ENERGY WITHOUT LIGHT</div><div class="stp" id="stp" style="left:36px;top:76px"></div></div></div>
+      <div class="card rf" id="cb"><div class="lbl" style="left:36px;top:30px">EUBACTERIA · BY HOW THEY GET FOOD</div><div id="frs"></div></div>
+    </div>
+
+    <div id="sR">
+      <div class="card full" id="ra"><div class="lbl" style="left:36px;top:30px">FISSION · ONE CELL SPLITS IN TWO</div>
+        <div class="fis" id="fis" style="left:36px"><span>1 CELL</span><span>2 CELLS</span><span>4 CELLS</span><span>8 CELLS</span></div>
+        <svg id="raS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="rb"><div class="lbl" style="left:36px;top:30px">MORE TO KNOW</div><div id="rrs"></div></div>
+    </div>
+
+    <div id="sW"><div class="card wide" id="wb"><div class="lbl" style="left:36px;top:30px">WORKED EXAMPLE · SIX BACTERIA, THEIR GROUPS</div><div id="cols"></div></div></div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2"><span class="acc">No</span> nuclear membrane.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

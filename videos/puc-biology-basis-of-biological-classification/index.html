@@ -1,0 +1,187 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Biology Ep 11 - Basis of Biological Classification</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Biology Ep 11: basis of biological classification (Living diagram, leaf green) ===== */
+:root{--br:#2E2A24;--mi:#E58A3C;--nu:#7B4B94;--wa:#5AA0C8;--rb:#D1495B}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+/* title card objects */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .jt{position:absolute;right:24px;top:36px;height:48px;padding:0 16px;border-radius:10px;background:var(--redBg);color:var(--red);display:flex;align-items:center;gap:8px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.q7{position:absolute;top:236px;width:80px;height:96px;border-radius:14px;background:var(--soft);display:flex;align-items:center;justify-content:center;font:600 40px 'IBM Plex Mono';color:var(--dim)}
+.q7 b{position:absolute;left:8px;top:6px;font:600 15px 'IBM Plex Mono';color:var(--mute)}
+/* B: Aristotle + Linnaeus */
+.ar{position:absolute;left:36px;width:712px;height:200px;border-radius:14px;background:var(--soft)}
+.ar .h{position:absolute;left:24px;top:16px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.fm{position:absolute;top:44px;width:200px;height:144px}
+.fm span{position:absolute;left:0;width:200px;top:110px;text-align:center;font:700 24px Poppins;white-space:nowrap}
+.bl{position:absolute;top:70px;height:84px;width:316px;border-radius:12px;background:#fff;display:flex;align-items:center;gap:14px;padding:0 18px;font:700 25px Poppins;white-space:nowrap}
+.kb{position:absolute;top:84px;width:344px;height:400px;border-radius:16px;border:3px solid var(--ac);background:#fff}
+.kb .kn{position:absolute;left:0;width:338px;top:220px;text-align:center;font:700 40px Poppins;white-space:nowrap}
+.kb .kw{position:absolute;left:0;width:338px;top:282px;text-align:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.kb i{position:absolute;left:0;width:338px;top:60px;display:flex;justify-content:center}
+/* S: the two kingdom sort */
+#so2{left:160px;top:270px;width:1056px;height:580px;overflow:hidden}
+#vl{left:1248px;top:270px;width:512px;height:580px}
+.bin{position:absolute;top:300px;width:460px;height:248px;border-radius:16px;border:3px solid var(--ac);background:#FAFCF8}
+.bin .bn{position:absolute;left:20px;top:-22px;height:40px;padding:0 14px;border-radius:9px;background:var(--ac);color:#fff;display:flex;align-items:center;font:600 20px 'IBM Plex Mono';letter-spacing:.08em}
+.org{position:absolute;width:204px;height:60px;border-radius:12px;background:#fff;border:2.5px solid var(--line);display:flex;align-items:center;gap:10px;padding:0 12px;font:700 22px Poppins;white-space:nowrap;box-shadow:0 6px 16px rgba(22,33,62,.08)}
+.org i{flex:none;display:flex}
+.org .fl{position:absolute;right:-12px;top:-12px;width:30px;height:30px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font:700 18px Poppins}
+.vr{position:absolute;left:36px;width:440px;height:66px;border-radius:12px;background:var(--soft)}
+.vr .vn{position:absolute;left:18px;top:6px;font:700 22px Poppins;white-space:nowrap}
+.vr .vw{position:absolute;left:18px;top:36px;font:600 15px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+.vr .vk{position:absolute;right:14px;top:15px;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.ms{position:absolute;left:36px;width:440px;height:128px;border-radius:14px;background:var(--soft)}
+.ms .mn{position:absolute;left:18px;top:14px;width:34px;height:34px;border-radius:50%;background:var(--red);color:#fff;font:700 18px Poppins;display:flex;align-items:center;justify-content:center}
+.ms .mt{position:absolute;left:66px;top:14px;font:700 23px Poppins;white-space:nowrap}
+.ms .mp{position:absolute;left:18px;top:64px;display:flex;gap:10px;align-items:center}
+.ms .mp span{height:44px;padding:0 14px;border-radius:9px;background:#fff;display:inline-flex;align-items:center;font:600 19px Poppins;white-space:nowrap}
+.ms .mp em{font:600 16px 'IBM Plex Mono';color:var(--mute);font-style:normal}
+/* zoom ladder */
+#zch{position:absolute;left:160px;top:248px;display:flex;align-items:center;gap:12px}
+#zch .zc{height:48px;padding:0 18px;border-radius:10px;border:2px solid #CBD0DA;background:#fff;color:#9AA0AC;display:inline-flex;align-items:center;font:600 20px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+#zch .za{display:inline-flex}
+#zd{left:160px;top:324px;width:1056px;height:526px;overflow:hidden}
+#zi{left:1248px;top:324px;width:512px;height:526px}
+.lvI{position:absolute;left:0;top:0;width:512px;height:526px}
+.lvI .ln{position:absolute;left:36px;top:76px;font:700 56px Poppins;letter-spacing:-.02em;white-space:nowrap}
+.lvI .ld{position:absolute;left:36px;top:160px;width:440px;font:500 27px/1.35 Poppins}
+.lvI .lh{position:absolute;left:36px;top:300px;width:440px;font:600 24px/1.35 Poppins;color:var(--ac)}
+.zl{font:600 26px Poppins;fill:#16213E}
+/* C: seven tests */
+.c7{position:absolute;left:20px;width:744px;height:66px}
+.c7 .n{position:absolute;left:16px;top:10px;width:42px;height:42px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 20px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.c7 .cx{position:absolute;left:76px;top:4px;font:700 25px Poppins;white-space:nowrap}
+.c7 .why{position:absolute;left:76px;top:38px;font:500 19px Poppins;color:var(--mute);white-space:nowrap}
+.cp{position:absolute;left:0;top:0;width:784px;height:580px}
+.cp .ct{position:absolute;left:36px;top:76px;font:700 40px Poppins;white-space:nowrap}
+.cp .cq{position:absolute;left:36px;top:132px;font:500 24px Poppins;color:var(--ink2);white-space:nowrap}
+.cc{position:absolute;height:44px;padding:0 14px;border-radius:9px;background:var(--soft);display:inline-flex;align-items:center;font:600 20px Poppins;white-space:nowrap}
+/* P: prokaryotic vs eukaryotic */
+.vs{position:absolute;left:36px;top:76px;font:700 38px Poppins;white-space:nowrap}
+.vsx{position:absolute;left:36px;top:128px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* W: key */
+.qn{position:absolute;top:96px;width:300px;height:96px;border-radius:14px;background:var(--ink);color:#fff}
+.qn b{position:absolute;left:18px;top:12px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:#AEB6C8}
+.qn span{position:absolute;left:18px;top:42px;font:600 20px Poppins;white-space:nowrap}
+.kx{position:absolute;top:356px;width:256px;height:150px;border-radius:14px;border:2.5px dashed #CBD0DA;background:#fff}
+.kx .kh{position:absolute;left:0;width:252px;top:12px;text-align:center;font:600 16px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.yn{position:absolute;height:30px;padding:0 10px;border-radius:7px;display:inline-flex;align-items:center;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.tok{position:absolute;width:212px;height:56px;border-radius:12px;background:var(--ac2);display:flex;align-items:center;gap:10px;padding:0 12px;font:700 22px Poppins;white-space:nowrap}
+.tok i{flex:none;display:flex}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+.mq .sl{font:500 24px/1.45 Poppins;margin-top:6px}
+.mq .sl b{display:inline-block;width:46px;font:600 22px 'IBM Plex Mono';color:var(--ac)}
+#sF .fcard .fl.txt{font-size:28px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · BIOLOGY · CH 2 BIOLOGICAL CLASSIFICATION</div>
+    <div class="subj" id="subj">LIVING DIAGRAM</div>
+    <div id="title">Basis of <span class="acc">Classification</span></div>
+    <div id="sub">Seven questions behind every kingdom</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#3E9B5F" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: three misfits + Diya's garden -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">PLANT OR ANIMAL?</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">None of them fits cleanly</div></div>
+      <div class="card rf" id="hk"><div class="lbl" id="hkL" style="left:36px;top:30px">THE COLLEGE GARDEN · AFTER THE RAIN</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <svg id="hkS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="hkP" style="left:36px;top:494px">Diya · grows from soil, never moves</div>
+        <div class="pillp bad" id="hkN" style="left:36px;top:494px">Biologists: not a plant. Why?</div>
+        <div id="h7"><div class="lbl" style="left:36px;top:30px">BEFORE PLACING ANY LIVING THING</div>
+          <div class="big7" id="h7T" style="position:absolute;left:36px;top:96px;font:700 48px Poppins;white-space:nowrap"><span style="color:var(--ac)">7</span> questions to ask</div><div id="q7s"></div>
+          <div class="pillp" id="h7P" style="left:36px;top:400px">And why <b style="margin:0 8px;color:var(--red)">2</b> kingdoms broke</div></div></div>
+    </div>
+
+    <!-- B: Aristotle + Linnaeus -->
+    <div id="sB">
+      <div class="card full" id="ba"><div class="lbl" style="left:36px;top:30px">ARISTOTLE · THE FIRST SCIENTIFIC TRY</div>
+        <div class="ar" id="ar0" style="top:80px"><div class="h">PLANTS · BY SIMPLE FORM</div><svg id="arS" width="712" height="200" style="position:absolute;left:0;top:0"></svg><div id="fms"></div></div>
+        <div class="ar" id="ar1" style="top:300px;height:180px"><div class="h">ANIMALS · BY THEIR BLOOD</div>
+          <div class="bl" id="bl0" style="left:24px">With red blood</div><div class="bl" id="bl1" style="left:372px">Without red blood</div></div>
+        <div class="pillp" id="baP" style="left:36px;top:500px;height:44px;font-size:21px">Sorted by looks: simple, but rough</div></div>
+      <div class="card rf" id="bk"><div class="lbl" style="left:36px;top:30px">LINNAEUS · TWO KINGDOMS</div><div id="kbs"></div></div>
+    </div>
+
+    <!-- S: the two kingdom sort -->
+    <div id="sS">
+      <div class="card" id="so2"><div class="lbl" style="left:36px;top:30px">THE TWO KINGDOM SORT</div>
+        <svg id="soS" width="1056" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="bin" id="bin0" style="left:36px"><div class="bn">PLANTAE</div></div><div class="bin" id="bin1" style="left:560px"><div class="bn">ANIMALIA</div></div>
+        <div id="orgs"></div></div>
+      <div class="card" id="vl"><div class="lbl" id="vlL" style="left:36px;top:30px">VERDICT</div><div id="vrs"></div>
+        <div class="lbl" id="msL" style="left:36px;top:30px">THREE DIFFERENCES IT MIXED UP</div><div id="mss"></div></div>
+    </div>
+
+    <!-- Z: zoom ladder -->
+    <div id="sZ">
+      <div id="zch"></div>
+      <div class="card" id="zd"><svg id="zS" width="1056" height="526" style="position:absolute;left:0;top:0"></svg>
+        <div id="ztr" style="position:absolute;right:28px;top:22px;display:flex;gap:10px;align-items:center"><div class="ghost" id="zgh" style="position:relative">EXAMPLE FIGURES</div><div class="tag" id="zsc" style="position:relative"><span id="zscN">x1</span></div></div></div>
+      <div class="card" id="zi"><div id="lvs"></div></div>
+    </div>
+
+    <!-- C: the seven tests -->
+    <div id="sC">
+      <div class="card full" id="cf"><div class="lbl" style="left:36px;top:30px">THE SEVEN TESTS</div><div class="hiBox" id="hiB" style="left:20px;width:744px;height:66px"></div><div id="c7s"></div></div>
+      <div class="card rf" id="cr"><div id="cps"></div></div>
+    </div>
+
+    <!-- P: prokaryotic vs eukaryotic + pause and think -->
+    <div id="sP">
+      <div class="card full" id="pa"><div class="lbl" style="left:36px;top:30px">PROKARYOTIC · CURD BACTERIUM</div><svg id="paS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp bad" id="paP" style="left:36px;top:494px">No nuclear membrane</div></div>
+      <div class="card rf" id="pb"><div class="lbl" style="left:36px;top:30px">EUKARYOTIC · YEAST CELL</div><svg id="pbS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp good" id="pbP" style="left:36px;top:494px">DNA inside a nuclear membrane</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example (a key) -->
+    <div id="sW"><div class="card wide" id="wk"><div class="lbl" style="left:36px;top:30px">WORKED EXAMPLE · FIVE LIVING THINGS, FOUR QUESTIONS</div>
+      <svg id="wkS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg><div id="qns"></div><div id="kxs"></div><div id="toks"></div></div></div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card + questions + NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Classify by the <span class="acc">cell</span> and the <span class="acc">food</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

@@ -1,0 +1,188 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Biology Ep 34 - Coelom and Segmentation</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Biology Ep 34: coelom and segmentation (Living diagram, leaf green) ===== */
+:root{--br:#2E2A24;--ecto:#4A78C2;--meso:#C8553D;--endo:#E2B33C;--coel:#D6E9F5;--noto:#3D7A8C}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.ac{color:var(--ac)}
+#stage svg g:not([transform]),#stage svg circle,#stage svg ellipse:not([transform]){transform-box:fill-box;transform-origin:center}
+/* title card objects */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .jt{position:absolute;right:24px;top:36px;height:48px;padding:0 16px;border-radius:10px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:8px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+#spc{position:absolute;left:0;top:0;width:784px;height:580px}
+.big{position:absolute;font:600 64px/1 'IBM Plex Mono';white-space:nowrap}
+.q6{position:absolute;top:404px;display:flex;gap:12px}
+.q6 span{position:relative;width:100px;height:72px;border-radius:12px;border:2.5px dashed #CBD0DA;background:#fff;display:flex;align-items:center;justify-content:center;font:600 30px 'IBM Plex Mono';color:var(--dim)}
+/* looks vs body plan */
+.lk{position:absolute;top:84px;width:340px;height:236px;border-radius:14px;background:var(--soft)}
+.lk i{position:absolute;left:0;width:340px;top:22px;display:flex;justify-content:center}
+.lk .ln{position:absolute;left:0;width:340px;top:118px;text-align:center;font:700 30px Poppins}
+.lk .lt{position:absolute;left:110px;top:168px;width:120px;height:40px;border-radius:9px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font:600 17px 'IBM Plex Mono';letter-spacing:.08em}
+.gp{position:absolute;top:352px;width:340px;height:56px;border-radius:12px;background:#fff;border:2px solid var(--line);display:flex;align-items:center;justify-content:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+.gp b{font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+/* zoom ladder */
+#zch{position:absolute;left:160px;top:248px;display:flex;align-items:center;gap:12px}
+#zch .zc{height:48px;padding:0 18px;border-radius:10px;border:2px solid #CBD0DA;background:#fff;color:#9AA0AC;display:inline-flex;align-items:center;font:600 20px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+#zch .za{display:inline-flex}
+#zd{left:160px;top:324px;width:1056px;height:526px;overflow:hidden}
+#zi{left:1248px;top:324px;width:512px;height:526px}
+.lvI{position:absolute;left:0;top:0;width:512px;height:526px}
+.lvI .ln{position:absolute;left:36px;top:76px;font:700 60px Poppins;letter-spacing:-.02em;white-space:nowrap}
+.lvI .ld{position:absolute;left:36px;top:164px;width:440px;font:500 28px/1.35 Poppins}
+.lvI .lh{position:absolute;left:36px;top:316px;width:440px;font:600 24px/1.35 Poppins;color:var(--ac)}
+.zl{font:600 26px Poppins;fill:#16213E}
+/* six questions */
+.st5{position:absolute;left:36px;width:712px;height:76px}
+.st5 .n{position:absolute;left:0;top:4px;width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 21px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st5 .sx{position:absolute;left:66px;top:0;font:700 28px Poppins;white-space:nowrap}
+.st5 .why{position:absolute;left:66px;top:40px;font:500 20px Poppins;color:var(--mute);white-space:nowrap}
+.fq{position:absolute;left:0;top:0;width:784px;height:580px}
+.fq .ft{position:absolute;left:36px;top:30px}
+.sl2{font:600 20px Poppins;fill:#16213E}
+.chp{position:absolute;height:44px;padding:0 16px;border-radius:10px;background:var(--soft);display:inline-flex;align-items:center;gap:8px;font:600 21px Poppins;white-space:nowrap}
+/* statement */
+#stF .lad{font:600 28px 'IBM Plex Mono';color:var(--mute);letter-spacing:.02em}
+#stF .lad b{color:var(--ac)}
+/* run the six questions */
+.stc{position:absolute;left:36px;top:76px;display:flex;gap:10px}
+.stc span{height:46px;padding:0 14px;border-radius:10px;border:2px solid #CBD0DA;background:#fff;color:#9AA0AC;display:inline-flex;align-items:center;gap:8px;font:600 17px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+#sw{position:absolute;left:36px;top:150px;width:560px;height:394px;border-radius:14px;background:#FBFAF6;border:2px solid var(--line);overflow:hidden}
+.gh{position:absolute;height:56px;border-radius:10px;background:var(--soft);display:flex;align-items:center;justify-content:center;gap:10px;font:700 22px Poppins;white-space:nowrap}
+.gq{position:absolute;left:628px;width:210px;height:50px;display:flex;align-items:center;font:600 16px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.ga{position:absolute;width:226px;height:48px;border-radius:10px;background:#fff;border:2px solid var(--line);display:flex;align-items:center;justify-content:center;font:600 19px Poppins;white-space:nowrap}
+.sl3{font:600 18px 'IBM Plex Mono';fill:#6B7280;letter-spacing:1.2px}
+/* jellyfish vs starfish */
+.cr{position:absolute;left:36px;width:712px;height:52px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:14px;padding:0 18px;font:600 23px Poppins;white-space:nowrap}
+.cr b{font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);width:150px;flex:none}
+/* tree */
+.nd{position:absolute;height:52px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;font:600 22px Poppins;white-space:nowrap}
+.nd.q{background:#fff;border:2px solid var(--line);font:600 17px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute)}
+.nd.ph{background:var(--ac2);color:#1F6B3F;font-weight:700}
+/* worked example */
+.wr{position:absolute;left:36px;width:712px;height:66px;border-radius:12px;background:var(--soft)}
+.wr .wq{position:absolute;left:18px;top:21px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.wr .wa2{position:absolute;left:230px;top:9px;height:48px;padding:0 16px;border-radius:10px;background:#fff;display:flex;align-items:center;font:600 22px Poppins;white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 24px Poppins}
+.mq .sl{font:500 25px/1.5 Poppins;margin-top:8px}
+.mq .sl b{display:inline-block;width:46px;font:600 22px 'IBM Plex Mono';color:var(--ac)}
+.mt{display:flex;gap:40px;margin-top:10px}
+.mt div{font:500 24px/1.6 Poppins;white-space:nowrap}
+.mt b{display:inline-block;width:40px;font:600 21px 'IBM Plex Mono';color:var(--ac)}
+.mt .h{font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+#sF .fcard .fl.txt{font-size:27px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+/* ep 34 */
+.qr{position:absolute;left:36px;width:712px;height:88px;border-radius:14px;background:var(--soft)}
+.qr .n{position:absolute;left:20px;top:20px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.qr .q{position:absolute;left:88px;top:26px;font:600 27px Poppins;white-space:nowrap}
+.ans{position:absolute;height:48px;padding:0 16px;border-radius:10px;background:var(--ac2);color:#1F6B3F;display:inline-flex;align-items:center;gap:10px;font:600 21px Poppins;white-space:nowrap}
+.ans b{font:600 16px 'IBM Plex Mono';letter-spacing:.08em}
+.lg{position:absolute;top:500px;display:flex;gap:10px}
+.lg span{height:38px;padding:0 12px;border-radius:8px;background:var(--soft);display:inline-flex;align-items:center;gap:8px;font:600 15px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+.lg b{width:16px;height:16px;border-radius:4px}
+.stc2{position:absolute;left:36px;top:76px;display:flex;gap:10px;align-items:center}
+.stc2 span{height:46px;padding:0 14px;border-radius:10px;border:2px solid #CBD0DA;background:#fff;color:#9AA0AC;display:inline-flex;align-items:center;font:600 17px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+.stc2 em{font:600 22px 'IBM Plex Mono';color:var(--dim);font-style:normal}
+.colW{position:absolute;top:76px;width:496px;height:470px}
+.colW .ch2{position:absolute;left:0;top:0;width:496px;height:42px;border-radius:9px;background:var(--soft);display:flex;align-items:center;justify-content:center;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.colW .dz{position:absolute;left:0;top:56px;width:496px;height:290px;border-radius:14px;background:#FBFAF6;border:2px solid var(--line)}
+.colW .it{position:absolute;left:0;top:360px;width:496px;height:104px;border-radius:14px;background:var(--ac2)}
+.colW .inm{position:absolute;left:0;width:496px;top:14px;text-align:center;font:700 26px Poppins;white-space:nowrap}
+.colW .inc{position:absolute;left:0;width:496px;top:58px;text-align:center;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:#1F6B3F;white-space:nowrap}
+.sl4{font:600 22px Poppins;fill:#16213E}
+#sF .fcard .fl.txt{font-size:27px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · BIOLOGY · CH 4 ANIMAL KINGDOM</div>
+    <div class="subj" id="subj">LIVING DIAGRAM</div>
+    <div id="title">Coelom and <span class="acc">Segmentation</span></div>
+    <div id="sub">What lies between the skin and the gut</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#3E9B5F" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" id="hkL" style="left:36px;top:30px">AFTER THE RAIN</div><svg id="hjS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <div class="pillp" id="hjP" style="left:36px;top:494px">A long chain of rings</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA'S TWO QUESTIONS</div>
+        <div class="qr" id="qr0" style="top:84px"><div class="n">1</div><div class="q">Are the rings only outside?</div></div>
+        <div class="qr" id="qr1" style="top:188px"><div class="n">2</div><div class="q">What is between skin and gut?</div></div>
+        <div class="ans" id="an0" style="left:36px;top:300px"><b>ANSWER 1</b>Segmentation · repeated rings</div>
+        <div class="ans" id="an1" style="left:36px;top:362px"><b>ANSWER 2</b>The coelom · a body cavity</div>
+        <div id="hcs" style="position:absolute;left:36px;top:450px;width:712px;display:flex;flex-wrap:wrap;gap:10px"></div></div>
+    </div>
+
+    <div id="sB"><div class="card wide" id="bw"><div class="lbl" style="left:36px;top:30px">A TUBE INSIDE A TUBE</div><svg id="bwS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg>
+      <div class="pillp ac" id="bP" style="left:36px;top:494px">Is there a space? What lines it?</div></div></div>
+
+    <div id="sZ">
+      <div id="zch"></div>
+      <div class="card" id="zd"><svg id="zS" width="1056" height="526" style="position:absolute;left:0;top:0"></svg>
+        <div id="ztr" style="position:absolute;right:28px;top:22px;display:flex;gap:10px;align-items:center"><div class="ghost" id="zgh" style="position:relative">EXAMPLE FIGURES</div><div class="tag" id="zsc" style="position:relative"><span id="zscN">x1</span></div></div></div>
+      <div class="card" id="zi"><div id="lvs"></div></div>
+    </div>
+
+    <div id="sL">
+      <div class="card full" id="lf"><div class="lbl" style="left:36px;top:30px">THREE KINDS OF BODY · STEP BY STEP</div><div class="hiBox" id="hiB" style="left:20px;width:744px;height:84px"></div><div id="st5s"></div></div>
+      <div class="card rf" id="lr"><div class="lbl" style="left:36px;top:30px">CROSS-SECTIONS</div><svg id="lrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="lg" id="lg" style="left:36px"></div></div>
+    </div>
+
+    <div id="sC"><div class="card wide" id="cw"><div class="lbl" style="left:36px;top:30px">SEGMENTATION · METAMERISM</div><div class="stc2" id="stc"></div>
+      <svg id="cwS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg>
+      <div class="pillp ac" id="cP" style="left:36px;top:494px">Metamerism: part after part, repeated</div></div></div>
+
+    <div id="sD">
+      <div class="card full" id="da"><div class="lbl" style="left:36px;top:30px">FISH EMBRYO · CHORDATE</div><svg id="daS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="daP" style="left:36px;top:494px">Notochord formed: a chordate</div></div>
+      <div class="card rf" id="db"><div class="lbl" style="left:36px;top:30px">EARTHWORM · NON-CHORDATE</div><svg id="dbS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="dbP" style="left:36px;top:494px;background:#FBE9E9;color:#8A1C1C">No notochord: a non-chordate</div></div>
+    </div>
+
+    <div id="sU">
+      <div class="card full" id="ua"><div class="lbl" style="left:36px;top:30px">EARTHWORM · TRUE COELOM</div><svg id="uaS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="ub"><div class="lbl" style="left:36px;top:30px">ASCARIS · PSEUDOCOELOM</div><svg id="ubS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sW"><div class="card wide" id="wb"><div class="lbl" style="left:36px;top:30px">WORKED EXAMPLE · SORT THREE CROSS-SECTIONS</div><div id="cols"></div></div></div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="460" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">A true <span class="acc">coelom</span> is lined by mesoderm.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="animals.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

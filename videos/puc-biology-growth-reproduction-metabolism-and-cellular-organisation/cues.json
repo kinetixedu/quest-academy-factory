@@ -1,0 +1,3367 @@
+{
+ "lines": {
+  "H1": {
+   "t0": 0.45,
+   "t1": 5.139,
+   "text": "A mule pulls a cart up a hill road. It eats, breathes and gets tired.",
+   "words": [
+    {
+     "w": "A",
+     "t": 0.45
+    },
+    {
+     "w": "mule",
+     "t": 0.603
+    },
+    {
+     "w": "pulls",
+     "t": 0.9
+    },
+    {
+     "w": "a",
+     "t": 1.244
+    },
+    {
+     "w": "cart",
+     "t": 1.397
+    },
+    {
+     "w": "up",
+     "t": 1.694
+    },
+    {
+     "w": "a",
+     "t": 1.895
+    },
+    {
+     "w": "hill",
+     "t": 2.048
+    },
+    {
+     "w": "road.",
+     "t": 2.345
+    },
+    {
+     "w": "It",
+     "t": 2.881
+    },
+    {
+     "w": "eats,",
+     "t": 3.082
+    },
+    {
+     "w": "breathes",
+     "t": 3.522
+    },
+    {
+     "w": "and",
+     "t": 4.01
+    },
+    {
+     "w": "gets",
+     "t": 4.259
+    },
+    {
+     "w": "tired.",
+     "t": 4.556
+    }
+   ]
+  },
+  "H2": {
+   "t0": 5.539,
+   "t1": 8.742,
+   "text": "A worker bee spends its whole life working for the hive.",
+   "words": [
+    {
+     "w": "A",
+     "t": 5.539
+    },
+    {
+     "w": "worker",
+     "t": 5.677
+    },
+    {
+     "w": "bee",
+     "t": 6.031
+    },
+    {
+     "w": "spends",
+     "t": 6.256
+    },
+    {
+     "w": "its",
+     "t": 6.61
+    },
+    {
+     "w": "whole",
+     "t": 6.834
+    },
+    {
+     "w": "life",
+     "t": 7.145
+    },
+    {
+     "w": "working",
+     "t": 7.412
+    },
+    {
+     "w": "for",
+     "t": 7.809
+    },
+    {
+     "w": "the",
+     "t": 8.034
+    },
+    {
+     "w": "hive.",
+     "t": 8.258
+    }
+   ]
+  },
+  "H3": {
+   "t0": 9.192,
+   "t1": 15.895,
+   "text": "Diya learnt something odd about both. A mule never has babies. Most worker bees never lay eggs.",
+   "words": [
+    {
+     "w": "Diya",
+     "t": 9.192
+    },
+    {
+     "w": "learnt",
+     "t": 9.515
+    },
+    {
+     "w": "something",
+     "t": 9.943
+    },
+    {
+     "w": "odd",
+     "t": 10.528
+    },
+    {
+     "w": "about",
+     "t": 10.8
+    },
+    {
+     "w": "both.",
+     "t": 11.175
+    },
+    {
+     "w": "A",
+     "t": 11.76
+    },
+    {
+     "w": "mule",
+     "t": 11.927
+    },
+    {
+     "w": "never",
+     "t": 12.251
+    },
+    {
+     "w": "has",
+     "t": 12.627
+    },
+    {
+     "w": "babies.",
+     "t": 12.898
+    },
+    {
+     "w": "Most",
+     "t": 13.587
+    },
+    {
+     "w": "worker",
+     "t": 13.911
+    },
+    {
+     "w": "bees",
+     "t": 14.339
+    },
+    {
+     "w": "never",
+     "t": 14.663
+    },
+    {
+     "w": "lay",
+     "t": 15.038
+    },
+    {
+     "w": "eggs.",
+     "t": 15.31
+    }
+   ]
+  },
+  "H4": {
+   "t0": 16.245,
+   "t1": 21.066,
+   "text": "Yet both are clearly alive. So is making babies really a sign of life?",
+   "words": [
+    {
+     "w": "Yet",
+     "t": 16.245
+    },
+    {
+     "w": "both",
+     "t": 16.506
+    },
+    {
+     "w": "are",
+     "t": 16.818
+    },
+    {
+     "w": "clearly",
+     "t": 17.08
+    },
+    {
+     "w": "alive.",
+     "t": 17.543
+    },
+    {
+     "w": "So",
+     "t": 18.157
+    },
+    {
+     "w": "is",
+     "t": 18.368
+    },
+    {
+     "w": "making",
+     "t": 18.58
+    },
+    {
+     "w": "babies",
+     "t": 18.992
+    },
+    {
+     "w": "really",
+     "t": 19.405
+    },
+    {
+     "w": "a",
+     "t": 19.818
+    },
+    {
+     "w": "sign",
+     "t": 19.979
+    },
+    {
+     "w": "of",
+     "t": 20.291
+    },
+    {
+     "w": "life?",
+     "t": 20.502
+    }
+   ]
+  },
+  "H5": {
+   "t0": 21.566,
+   "t1": 27.003,
+   "text": "Today we take four features of life, one by one, and test each with its exceptions.",
+   "words": [
+    {
+     "w": "Today",
+     "t": 21.566
+    },
+    {
+     "w": "we",
+     "t": 21.918
+    },
+    {
+     "w": "take",
+     "t": 22.123
+    },
+    {
+     "w": "four",
+     "t": 22.426
+    },
+    {
+     "w": "features",
+     "t": 22.73
+    },
+    {
+     "w": "of",
+     "t": 23.228
+    },
+    {
+     "w": "life,",
+     "t": 23.434
+    },
+    {
+     "w": "one",
+     "t": 23.883
+    },
+    {
+     "w": "by",
+     "t": 24.138
+    },
+    {
+     "w": "one,",
+     "t": 24.343
+    },
+    {
+     "w": "and",
+     "t": 24.744
+    },
+    {
+     "w": "test",
+     "t": 24.998
+    },
+    {
+     "w": "each",
+     "t": 25.301
+    },
+    {
+     "w": "with",
+     "t": 25.604
+    },
+    {
+     "w": "its",
+     "t": 25.908
+    },
+    {
+     "w": "exceptions.",
+     "t": 26.162
+    }
+   ]
+  },
+  "B1": {
+   "t0": 27.653,
+   "t1": 30.467,
+   "text": "Every feature faces the same two questions.",
+   "words": [
+    {
+     "w": "Every",
+     "t": 27.653
+    },
+    {
+     "w": "feature",
+     "t": 28.012
+    },
+    {
+     "w": "faces",
+     "t": 28.471
+    },
+    {
+     "w": "the",
+     "t": 28.83
+    },
+    {
+     "w": "same",
+     "t": 29.09
+    },
+    {
+     "w": "two",
+     "t": 29.399
+    },
+    {
+     "w": "questions.",
+     "t": 29.658
+    }
+   ]
+  },
+  "B2": {
+   "t0": 30.817,
+   "t1": 33.389,
+   "text": "One. Does every living thing have it?",
+   "words": [
+    {
+     "w": "One.",
+     "t": 30.817
+    },
+    {
+     "w": "Does",
+     "t": 31.299
+    },
+    {
+     "w": "every",
+     "t": 31.592
+    },
+    {
+     "w": "living",
+     "t": 31.933
+    },
+    {
+     "w": "thing",
+     "t": 32.32
+    },
+    {
+     "w": "have",
+     "t": 32.661
+    },
+    {
+     "w": "it?",
+     "t": 32.954
+    }
+   ]
+  },
+  "B3": {
+   "t0": 33.839,
+   "t1": 40.077,
+   "text": "Two. Does no non living thing have it? Only a feature that passes both can define life.",
+   "words": [
+    {
+     "w": "Two.",
+     "t": 33.839
+    },
+    {
+     "w": "Does",
+     "t": 34.368
+    },
+    {
+     "w": "no",
+     "t": 34.689
+    },
+    {
+     "w": "non",
+     "t": 34.906
+    },
+    {
+     "w": "living",
+     "t": 35.176
+    },
+    {
+     "w": "thing",
+     "t": 35.601
+    },
+    {
+     "w": "have",
+     "t": 35.974
+    },
+    {
+     "w": "it?",
+     "t": 36.295
+    },
+    {
+     "w": "Only",
+     "t": 36.771
+    },
+    {
+     "w": "a",
+     "t": 37.093
+    },
+    {
+     "w": "feature",
+     "t": 37.258
+    },
+    {
+     "w": "that",
+     "t": 37.735
+    },
+    {
+     "w": "passes",
+     "t": 38.056
+    },
+    {
+     "w": "both",
+     "t": 38.481
+    },
+    {
+     "w": "can",
+     "t": 38.802
+    },
+    {
+     "w": "define",
+     "t": 39.072
+    },
+    {
+     "w": "life.",
+     "t": 39.496
+    }
+   ]
+  },
+  "G1": {
+   "t0": 40.727,
+   "t1": 42.102,
+   "text": "Feature one: growth.",
+   "words": [
+    {
+     "w": "Feature",
+     "t": 40.727
+    },
+    {
+     "w": "one:",
+     "t": 41.14
+    },
+    {
+     "w": "growth.",
+     "t": 41.509
+    }
+   ]
+  },
+  "G2": {
+   "t0": 42.452,
+   "t1": 47.885,
+   "text": "Growth means two things together: more body mass, and more cells or more individuals.",
+   "words": [
+    {
+     "w": "Growth",
+     "t": 42.452
+    },
+    {
+     "w": "means",
+     "t": 42.854
+    },
+    {
+     "w": "two",
+     "t": 43.207
+    },
+    {
+     "w": "things",
+     "t": 43.462
+    },
+    {
+     "w": "together:",
+     "t": 43.864
+    },
+    {
+     "w": "more",
+     "t": 44.511
+    },
+    {
+     "w": "body",
+     "t": 44.815
+    },
+    {
+     "w": "mass,",
+     "t": 45.119
+    },
+    {
+     "w": "and",
+     "t": 45.571
+    },
+    {
+     "w": "more",
+     "t": 45.826
+    },
+    {
+     "w": "cells",
+     "t": 46.13
+    },
+    {
+     "w": "or",
+     "t": 46.483
+    },
+    {
+     "w": "more",
+     "t": 46.689
+    },
+    {
+     "w": "individuals.",
+     "t": 46.993
+    }
+   ]
+  },
+  "G3": {
+   "t0": 48.335,
+   "t1": 53.624,
+   "text": "A many celled body grows by cell division. One cell becomes two, two become four.",
+   "words": [
+    {
+     "w": "A",
+     "t": 48.335
+    },
+    {
+     "w": "many",
+     "t": 48.489
+    },
+    {
+     "w": "celled",
+     "t": 48.787
+    },
+    {
+     "w": "body",
+     "t": 49.181
+    },
+    {
+     "w": "grows",
+     "t": 49.48
+    },
+    {
+     "w": "by",
+     "t": 49.826
+    },
+    {
+     "w": "cell",
+     "t": 50.028
+    },
+    {
+     "w": "division.",
+     "t": 50.326
+    },
+    {
+     "w": "One",
+     "t": 51.057
+    },
+    {
+     "w": "cell",
+     "t": 51.307
+    },
+    {
+     "w": "becomes",
+     "t": 51.605
+    },
+    {
+     "w": "two,",
+     "t": 52.047
+    },
+    {
+     "w": "two",
+     "t": 52.441
+    },
+    {
+     "w": "become",
+     "t": 52.691
+    },
+    {
+     "w": "four.",
+     "t": 53.086
+    }
+   ]
+  },
+  "G4": {
+   "t0": 54.074,
+   "t1": 59.29,
+   "text": "Plants keep growing this way all their life. Animals grow only up to a certain age.",
+   "words": [
+    {
+     "w": "Plants",
+     "t": 54.074
+    },
+    {
+     "w": "keep",
+     "t": 54.459
+    },
+    {
+     "w": "growing",
+     "t": 54.75
+    },
+    {
+     "w": "this",
+     "t": 55.181
+    },
+    {
+     "w": "way",
+     "t": 55.472
+    },
+    {
+     "w": "all",
+     "t": 55.716
+    },
+    {
+     "w": "their",
+     "t": 55.96
+    },
+    {
+     "w": "life.",
+     "t": 56.298
+    },
+    {
+     "w": "Animals",
+     "t": 56.823
+    },
+    {
+     "w": "grow",
+     "t": 57.255
+    },
+    {
+     "w": "only",
+     "t": 57.545
+    },
+    {
+     "w": "up",
+     "t": 57.836
+    },
+    {
+     "w": "to",
+     "t": 58.033
+    },
+    {
+     "w": "a",
+     "t": 58.23
+    },
+    {
+     "w": "certain",
+     "t": 58.38
+    },
+    {
+     "w": "age.",
+     "t": 58.812
+    }
+   ]
+  },
+  "G5": {
+   "t0": 59.74,
+   "t1": 64.683,
+   "text": "After that, cell division still replaces worn out cells, like the skin you shed.",
+   "words": [
+    {
+     "w": "After",
+     "t": 59.74
+    },
+    {
+     "w": "that,",
+     "t": 60.077
+    },
+    {
+     "w": "cell",
+     "t": 60.507
+    },
+    {
+     "w": "division",
+     "t": 60.796
+    },
+    {
+     "w": "still",
+     "t": 61.273
+    },
+    {
+     "w": "replaces",
+     "t": 61.609
+    },
+    {
+     "w": "worn",
+     "t": 62.086
+    },
+    {
+     "w": "out",
+     "t": 62.375
+    },
+    {
+     "w": "cells,",
+     "t": 62.618
+    },
+    {
+     "w": "like",
+     "t": 63.095
+    },
+    {
+     "w": "the",
+     "t": 63.385
+    },
+    {
+     "w": "skin",
+     "t": 63.627
+    },
+    {
+     "w": "you",
+     "t": 63.917
+    },
+    {
+     "w": "shed.",
+     "t": 64.16
+    }
+   ]
+  },
+  "G6": {
+   "t0": 65.133,
+   "t1": 70.818,
+   "text": "But mountains, boulders and sand mounds grow too, by piling material on their surface.",
+   "words": [
+    {
+     "w": "But",
+     "t": 65.133
+    },
+    {
+     "w": "mountains,",
+     "t": 65.398
+    },
+    {
+     "w": "boulders",
+     "t": 66.12
+    },
+    {
+     "w": "and",
+     "t": 66.638
+    },
+    {
+     "w": "sand",
+     "t": 66.903
+    },
+    {
+     "w": "mounds",
+     "t": 67.218
+    },
+    {
+     "w": "grow",
+     "t": 67.635
+    },
+    {
+     "w": "too,",
+     "t": 67.95
+    },
+    {
+     "w": "by",
+     "t": 68.367
+    },
+    {
+     "w": "piling",
+     "t": 68.581
+    },
+    {
+     "w": "material",
+     "t": 68.997
+    },
+    {
+     "w": "on",
+     "t": 69.516
+    },
+    {
+     "w": "their",
+     "t": 69.73
+    },
+    {
+     "w": "surface.",
+     "t": 70.096
+    }
+   ]
+  },
+  "G7": {
+   "t0": 71.268,
+   "t1": 77.232,
+   "text": "Living growth comes from inside. Still, since non living things can grow, growth fails the test.",
+   "words": [
+    {
+     "w": "Living",
+     "t": 71.268
+    },
+    {
+     "w": "growth",
+     "t": 71.649
+    },
+    {
+     "w": "comes",
+     "t": 72.031
+    },
+    {
+     "w": "from",
+     "t": 72.366
+    },
+    {
+     "w": "inside.",
+     "t": 72.654
+    },
+    {
+     "w": "Still,",
+     "t": 73.268
+    },
+    {
+     "w": "since",
+     "t": 73.743
+    },
+    {
+     "w": "non",
+     "t": 74.078
+    },
+    {
+     "w": "living",
+     "t": 74.32
+    },
+    {
+     "w": "things",
+     "t": 74.701
+    },
+    {
+     "w": "can",
+     "t": 75.083
+    },
+    {
+     "w": "grow,",
+     "t": 75.325
+    },
+    {
+     "w": "growth",
+     "t": 75.753
+    },
+    {
+     "w": "fails",
+     "t": 76.134
+    },
+    {
+     "w": "the",
+     "t": 76.469
+    },
+    {
+     "w": "test.",
+     "t": 76.711
+    }
+   ]
+  },
+  "R1": {
+   "t0": 77.882,
+   "t1": 81.547,
+   "text": "Feature two: reproduction, making young ones like the parents.",
+   "words": [
+    {
+     "w": "Feature",
+     "t": 77.882
+    },
+    {
+     "w": "two:",
+     "t": 78.295
+    },
+    {
+     "w": "reproduction,",
+     "t": 78.662
+    },
+    {
+     "w": "making",
+     "t": 79.433
+    },
+    {
+     "w": "young",
+     "t": 79.8
+    },
+    {
+     "w": "ones",
+     "t": 80.123
+    },
+    {
+     "w": "like",
+     "t": 80.4
+    },
+    {
+     "w": "the",
+     "t": 80.678
+    },
+    {
+     "w": "parents.",
+     "t": 80.911
+    }
+   ]
+  },
+  "R2": {
+   "t0": 81.897,
+   "t1": 87.558,
+   "text": "Many living things do it without a partner. Yeast and hydra grow a bud that breaks away.",
+   "words": [
+    {
+     "w": "Many",
+     "t": 81.897
+    },
+    {
+     "w": "living",
+     "t": 82.196
+    },
+    {
+     "w": "things",
+     "t": 82.592
+    },
+    {
+     "w": "do",
+     "t": 82.987
+    },
+    {
+     "w": "it",
+     "t": 83.19
+    },
+    {
+     "w": "without",
+     "t": 83.392
+    },
+    {
+     "w": "a",
+     "t": 83.836
+    },
+    {
+     "w": "partner.",
+     "t": 83.99
+    },
+    {
+     "w": "Yeast",
+     "t": 84.675
+    },
+    {
+     "w": "and",
+     "t": 85.022
+    },
+    {
+     "w": "hydra",
+     "t": 85.273
+    },
+    {
+     "w": "grow",
+     "t": 85.62
+    },
+    {
+     "w": "a",
+     "t": 85.919
+    },
+    {
+     "w": "bud",
+     "t": 86.073
+    },
+    {
+     "w": "that",
+     "t": 86.324
+    },
+    {
+     "w": "breaks",
+     "t": 86.623
+    },
+    {
+     "w": "away.",
+     "t": 87.018
+    }
+   ]
+  },
+  "R3": {
+   "t0": 88.008,
+   "t1": 95.396,
+   "text": "Cut a flatworm called Planaria into pieces, and each piece grows into a whole new worm. That is regeneration.",
+   "words": [
+    {
+     "w": "Cut",
+     "t": 88.008
+    },
+    {
+     "w": "a",
+     "t": 88.277
+    },
+    {
+     "w": "flatworm",
+     "t": 88.443
+    },
+    {
+     "w": "called",
+     "t": 88.971
+    },
+    {
+     "w": "Planaria",
+     "t": 89.395
+    },
+    {
+     "w": "into",
+     "t": 89.923
+    },
+    {
+     "w": "pieces,",
+     "t": 90.243
+    },
+    {
+     "w": "and",
+     "t": 90.823
+    },
+    {
+     "w": "each",
+     "t": 91.092
+    },
+    {
+     "w": "piece",
+     "t": 91.413
+    },
+    {
+     "w": "grows",
+     "t": 91.785
+    },
+    {
+     "w": "into",
+     "t": 92.158
+    },
+    {
+     "w": "a",
+     "t": 92.478
+    },
+    {
+     "w": "whole",
+     "t": 92.644
+    },
+    {
+     "w": "new",
+     "t": 93.017
+    },
+    {
+     "w": "worm.",
+     "t": 93.286
+    },
+    {
+     "w": "That",
+     "t": 93.865
+    },
+    {
+     "w": "is",
+     "t": 94.186
+    },
+    {
+     "w": "regeneration.",
+     "t": 94.403
+    }
+   ]
+  },
+  "R4": {
+   "t0": 95.846,
+   "t1": 105.293,
+   "text": "Fungi, threadlike algae and the protonema, the young thread stage of a moss, break into pieces, and each piece lives on. That is fragmentation.",
+   "words": [
+    {
+     "w": "Fungi,",
+     "t": 95.846
+    },
+    {
+     "w": "threadlike",
+     "t": 96.357
+    },
+    {
+     "w": "algae",
+     "t": 96.967
+    },
+    {
+     "w": "and",
+     "t": 97.327
+    },
+    {
+     "w": "the",
+     "t": 97.588
+    },
+    {
+     "w": "protonema,",
+     "t": 97.848
+    },
+    {
+     "w": "the",
+     "t": 98.558
+    },
+    {
+     "w": "young",
+     "t": 98.818
+    },
+    {
+     "w": "thread",
+     "t": 99.179
+    },
+    {
+     "w": "stage",
+     "t": 99.589
+    },
+    {
+     "w": "of",
+     "t": 99.949
+    },
+    {
+     "w": "a",
+     "t": 100.159
+    },
+    {
+     "w": "moss,",
+     "t": 100.319
+    },
+    {
+     "w": "break",
+     "t": 100.78
+    },
+    {
+     "w": "into",
+     "t": 101.14
+    },
+    {
+     "w": "pieces,",
+     "t": 101.45
+    },
+    {
+     "w": "and",
+     "t": 102.011
+    },
+    {
+     "w": "each",
+     "t": 102.271
+    },
+    {
+     "w": "piece",
+     "t": 102.581
+    },
+    {
+     "w": "lives",
+     "t": 102.941
+    },
+    {
+     "w": "on.",
+     "t": 103.301
+    },
+    {
+     "w": "That",
+     "t": 103.762
+    },
+    {
+     "w": "is",
+     "t": 104.072
+    },
+    {
+     "w": "fragmentation.",
+     "t": 104.282
+    }
+   ]
+  },
+  "R5": {
+   "t0": 105.743,
+   "t1": 113.098,
+   "text": "In one celled living things, like bacteria, growing and reproducing are the same event: one cell divides into two.",
+   "words": [
+    {
+     "w": "In",
+     "t": 105.743
+    },
+    {
+     "w": "one",
+     "t": 105.952
+    },
+    {
+     "w": "celled",
+     "t": 106.211
+    },
+    {
+     "w": "living",
+     "t": 106.619
+    },
+    {
+     "w": "things,",
+     "t": 107.027
+    },
+    {
+     "w": "like",
+     "t": 107.584
+    },
+    {
+     "w": "bacteria,",
+     "t": 107.893
+    },
+    {
+     "w": "growing",
+     "t": 108.55
+    },
+    {
+     "w": "and",
+     "t": 109.008
+    },
+    {
+     "w": "reproducing",
+     "t": 109.266
+    },
+    {
+     "w": "are",
+     "t": 109.923
+    },
+    {
+     "w": "the",
+     "t": 110.182
+    },
+    {
+     "w": "same",
+     "t": 110.441
+    },
+    {
+     "w": "event:",
+     "t": 110.749
+    },
+    {
+     "w": "one",
+     "t": 111.257
+    },
+    {
+     "w": "cell",
+     "t": 111.516
+    },
+    {
+     "w": "divides",
+     "t": 111.824
+    },
+    {
+     "w": "into",
+     "t": 112.282
+    },
+    {
+     "w": "two.",
+     "t": 112.591
+    }
+   ]
+  },
+  "R6": {
+   "t0": 113.548,
+   "t1": 121.456,
+   "text": "But mules, worker bees and couples who cannot have children never reproduce, and they are alive. So reproduction fails.",
+   "words": [
+    {
+     "w": "But",
+     "t": 113.548
+    },
+    {
+     "w": "mules,",
+     "t": 113.814
+    },
+    {
+     "w": "worker",
+     "t": 114.335
+    },
+    {
+     "w": "bees",
+     "t": 114.754
+    },
+    {
+     "w": "and",
+     "t": 115.071
+    },
+    {
+     "w": "couples",
+     "t": 115.336
+    },
+    {
+     "w": "who",
+     "t": 115.806
+    },
+    {
+     "w": "cannot",
+     "t": 116.072
+    },
+    {
+     "w": "have",
+     "t": 116.491
+    },
+    {
+     "w": "children",
+     "t": 116.807
+    },
+    {
+     "w": "never",
+     "t": 117.328
+    },
+    {
+     "w": "reproduce,",
+     "t": 117.696
+    },
+    {
+     "w": "and",
+     "t": 118.422
+    },
+    {
+     "w": "they",
+     "t": 118.687
+    },
+    {
+     "w": "are",
+     "t": 119.004
+    },
+    {
+     "w": "alive.",
+     "t": 119.269
+    },
+    {
+     "w": "So",
+     "t": 119.893
+    },
+    {
+     "w": "reproduction",
+     "t": 120.107
+    },
+    {
+     "w": "fails.",
+     "t": 120.833
+    }
+   ]
+  },
+  "M1": {
+   "t0": 122.106,
+   "t1": 124.074,
+   "text": "Feature three: metabolism.",
+   "words": [
+    {
+     "w": "Feature",
+     "t": 122.106
+    },
+    {
+     "w": "three:",
+     "t": 122.6
+    },
+    {
+     "w": "metabolism.",
+     "t": 123.149
+    }
+   ]
+  },
+  "M2": {
+   "t0": 124.424,
+   "t1": 131.283,
+   "text": "Metabolism is the sum of all the chemical reactions in a body. Food is broken down, new parts are built.",
+   "words": [
+    {
+     "w": "Metabolism",
+     "t": 124.424
+    },
+    {
+     "w": "is",
+     "t": 125.026
+    },
+    {
+     "w": "the",
+     "t": 125.233
+    },
+    {
+     "w": "sum",
+     "t": 125.49
+    },
+    {
+     "w": "of",
+     "t": 125.746
+    },
+    {
+     "w": "all",
+     "t": 125.954
+    },
+    {
+     "w": "the",
+     "t": 126.21
+    },
+    {
+     "w": "chemical",
+     "t": 126.467
+    },
+    {
+     "w": "reactions",
+     "t": 126.97
+    },
+    {
+     "w": "in",
+     "t": 127.523
+    },
+    {
+     "w": "a",
+     "t": 127.73
+    },
+    {
+     "w": "body.",
+     "t": 127.888
+    },
+    {
+     "w": "Food",
+     "t": 128.44
+    },
+    {
+     "w": "is",
+     "t": 128.746
+    },
+    {
+     "w": "broken",
+     "t": 128.954
+    },
+    {
+     "w": "down,",
+     "t": 129.358
+    },
+    {
+     "w": "new",
+     "t": 129.812
+    },
+    {
+     "w": "parts",
+     "t": 130.069
+    },
+    {
+     "w": "are",
+     "t": 130.424
+    },
+    {
+     "w": "built.",
+     "t": 130.681
+    }
+   ]
+  },
+  "M3": {
+   "t0": 131.733,
+   "t1": 136.485,
+   "text": "Every living thing runs metabolism, and no non living object does.",
+   "words": [
+    {
+     "w": "Every",
+     "t": 131.733
+    },
+    {
+     "w": "living",
+     "t": 132.13
+    },
+    {
+     "w": "thing",
+     "t": 132.582
+    },
+    {
+     "w": "runs",
+     "t": 132.979
+    },
+    {
+     "w": "metabolism,",
+     "t": 133.32
+    },
+    {
+     "w": "and",
+     "t": 134.158
+    },
+    {
+     "w": "no",
+     "t": 134.445
+    },
+    {
+     "w": "non",
+     "t": 134.677
+    },
+    {
+     "w": "living",
+     "t": 134.963
+    },
+    {
+     "w": "object",
+     "t": 135.416
+    },
+    {
+     "w": "does.",
+     "t": 135.868
+    }
+   ]
+  },
+  "M4": {
+   "t0": 136.935,
+   "t1": 146.406,
+   "text": "But scientists can run one of these reactions in a test tube, with no cell at all. That tube is neither living nor non living. It is a living reaction.",
+   "words": [
+    {
+     "w": "But",
+     "t": 136.935
+    },
+    {
+     "w": "scientists",
+     "t": 137.179
+    },
+    {
+     "w": "can",
+     "t": 137.751
+    },
+    {
+     "w": "run",
+     "t": 137.995
+    },
+    {
+     "w": "one",
+     "t": 138.239
+    },
+    {
+     "w": "of",
+     "t": 138.482
+    },
+    {
+     "w": "these",
+     "t": 138.679
+    },
+    {
+     "w": "reactions",
+     "t": 139.017
+    },
+    {
+     "w": "in",
+     "t": 139.542
+    },
+    {
+     "w": "a",
+     "t": 139.739
+    },
+    {
+     "w": "test",
+     "t": 139.889
+    },
+    {
+     "w": "tube,",
+     "t": 140.18
+    },
+    {
+     "w": "with",
+     "t": 140.611
+    },
+    {
+     "w": "no",
+     "t": 140.902
+    },
+    {
+     "w": "cell",
+     "t": 141.099
+    },
+    {
+     "w": "at",
+     "t": 141.389
+    },
+    {
+     "w": "all.",
+     "t": 141.586
+    },
+    {
+     "w": "That",
+     "t": 142.064
+    },
+    {
+     "w": "tube",
+     "t": 142.355
+    },
+    {
+     "w": "is",
+     "t": 142.646
+    },
+    {
+     "w": "neither",
+     "t": 142.843
+    },
+    {
+     "w": "living",
+     "t": 143.274
+    },
+    {
+     "w": "nor",
+     "t": 143.658
+    },
+    {
+     "w": "non",
+     "t": 143.902
+    },
+    {
+     "w": "living.",
+     "t": 144.146
+    },
+    {
+     "w": "It",
+     "t": 144.765
+    },
+    {
+     "w": "is",
+     "t": 144.962
+    },
+    {
+     "w": "a",
+     "t": 145.159
+    },
+    {
+     "w": "living",
+     "t": 145.309
+    },
+    {
+     "w": "reaction.",
+     "t": 145.693
+    }
+   ]
+  },
+  "C1": {
+   "t0": 147.056,
+   "t1": 154.276,
+   "text": "So the real line is drawn by feature four: cellular organisation. Life happens inside organised cells.",
+   "words": [
+    {
+     "w": "So",
+     "t": 147.056
+    },
+    {
+     "w": "the",
+     "t": 147.285
+    },
+    {
+     "w": "real",
+     "t": 147.569
+    },
+    {
+     "w": "line",
+     "t": 147.908
+    },
+    {
+     "w": "is",
+     "t": 148.246
+    },
+    {
+     "w": "drawn",
+     "t": 148.476
+    },
+    {
+     "w": "by",
+     "t": 148.869
+    },
+    {
+     "w": "feature",
+     "t": 149.099
+    },
+    {
+     "w": "four:",
+     "t": 149.601
+    },
+    {
+     "w": "cellular",
+     "t": 150.103
+    },
+    {
+     "w": "organisation.",
+     "t": 150.661
+    },
+    {
+     "w": "Life",
+     "t": 151.709
+    },
+    {
+     "w": "happens",
+     "t": 152.048
+    },
+    {
+     "w": "inside",
+     "t": 152.55
+    },
+    {
+     "w": "organised",
+     "t": 152.998
+    },
+    {
+     "w": "cells.",
+     "t": 153.61
+    }
+   ]
+  },
+  "C2": {
+   "t0": 154.726,
+   "t1": 160.33,
+   "text": "And one more feature: response. Every living thing senses its surroundings and reacts.",
+   "words": [
+    {
+     "w": "And",
+     "t": 154.726
+    },
+    {
+     "w": "one",
+     "t": 154.985
+    },
+    {
+     "w": "more",
+     "t": 155.244
+    },
+    {
+     "w": "feature:",
+     "t": 155.552
+    },
+    {
+     "w": "response.",
+     "t": 156.159
+    },
+    {
+     "w": "Every",
+     "t": 156.916
+    },
+    {
+     "w": "living",
+     "t": 157.274
+    },
+    {
+     "w": "thing",
+     "t": 157.682
+    },
+    {
+     "w": "senses",
+     "t": 158.041
+    },
+    {
+     "w": "its",
+     "t": 158.449
+    },
+    {
+     "w": "surroundings",
+     "t": 158.708
+    },
+    {
+     "w": "and",
+     "t": 159.414
+    },
+    {
+     "w": "reacts.",
+     "t": 159.673
+    }
+   ]
+  },
+  "C3": {
+   "t0": 160.78,
+   "t1": 166.25,
+   "text": "A shoot bends toward light. Day length tells many plants and animals when to breed.",
+   "words": [
+    {
+     "w": "A",
+     "t": 160.78
+    },
+    {
+     "w": "shoot",
+     "t": 160.939
+    },
+    {
+     "w": "bends",
+     "t": 161.297
+    },
+    {
+     "w": "toward",
+     "t": 161.655
+    },
+    {
+     "w": "light.",
+     "t": 162.063
+    },
+    {
+     "w": "Day",
+     "t": 162.67
+    },
+    {
+     "w": "length",
+     "t": 162.928
+    },
+    {
+     "w": "tells",
+     "t": 163.336
+    },
+    {
+     "w": "many",
+     "t": 163.694
+    },
+    {
+     "w": "plants",
+     "t": 164.002
+    },
+    {
+     "w": "and",
+     "t": 164.41
+    },
+    {
+     "w": "animals",
+     "t": 164.669
+    },
+    {
+     "w": "when",
+     "t": 165.126
+    },
+    {
+     "w": "to",
+     "t": 165.434
+    },
+    {
+     "w": "breed.",
+     "t": 165.643
+    }
+   ]
+  },
+  "C4": {
+   "t0": 166.7,
+   "t1": 171.432,
+   "text": "Humans go further. We are aware of ourselves. That is self consciousness.",
+   "words": [
+    {
+     "w": "Humans",
+     "t": 166.7
+    },
+    {
+     "w": "go",
+     "t": 167.086
+    },
+    {
+     "w": "further.",
+     "t": 167.284
+    },
+    {
+     "w": "We",
+     "t": 167.953
+    },
+    {
+     "w": "are",
+     "t": 168.151
+    },
+    {
+     "w": "aware",
+     "t": 168.396
+    },
+    {
+     "w": "of",
+     "t": 168.736
+    },
+    {
+     "w": "ourselves.",
+     "t": 168.934
+    },
+    {
+     "w": "That",
+     "t": 169.697
+    },
+    {
+     "w": "is",
+     "t": 169.989
+    },
+    {
+     "w": "self",
+     "t": 170.187
+    },
+    {
+     "w": "consciousness.",
+     "t": 170.48
+    }
+   ]
+  },
+  "V1": {
+   "t0": 172.082,
+   "t1": 173.882,
+   "text": "Look at growth side by side.",
+   "words": [
+    {
+     "w": "Look",
+     "t": 172.082
+    },
+    {
+     "w": "at",
+     "t": 172.359
+    },
+    {
+     "w": "growth",
+     "t": 172.547
+    },
+    {
+     "w": "side",
+     "t": 172.915
+    },
+    {
+     "w": "by",
+     "t": 173.192
+    },
+    {
+     "w": "side.",
+     "t": 173.38
+    }
+   ]
+  },
+  "V2": {
+   "t0": 174.232,
+   "t1": 178.572,
+   "text": "A sand mound grows from outside, as wind adds grains on top.",
+   "words": [
+    {
+     "w": "A",
+     "t": 174.232
+    },
+    {
+     "w": "sand",
+     "t": 174.403
+    },
+    {
+     "w": "mound",
+     "t": 174.733
+    },
+    {
+     "w": "grows",
+     "t": 175.117
+    },
+    {
+     "w": "from",
+     "t": 175.501
+    },
+    {
+     "w": "outside,",
+     "t": 175.831
+    },
+    {
+     "w": "as",
+     "t": 176.482
+    },
+    {
+     "w": "wind",
+     "t": 176.706
+    },
+    {
+     "w": "adds",
+     "t": 177.036
+    },
+    {
+     "w": "grains",
+     "t": 177.367
+    },
+    {
+     "w": "on",
+     "t": 177.804
+    },
+    {
+     "w": "top.",
+     "t": 178.028
+    }
+   ]
+  },
+  "V3": {
+   "t0": 179.022,
+   "t1": 183.076,
+   "text": "A bean shoot grows from inside, as its cells divide and swell.",
+   "words": [
+    {
+     "w": "A",
+     "t": 179.022
+    },
+    {
+     "w": "bean",
+     "t": 179.177
+    },
+    {
+     "w": "shoot",
+     "t": 179.479
+    },
+    {
+     "w": "grows",
+     "t": 179.829
+    },
+    {
+     "w": "from",
+     "t": 180.178
+    },
+    {
+     "w": "inside,",
+     "t": 180.48
+    },
+    {
+     "w": "as",
+     "t": 181.024
+    },
+    {
+     "w": "its",
+     "t": 181.228
+    },
+    {
+     "w": "cells",
+     "t": 181.481
+    },
+    {
+     "w": "divide",
+     "t": 181.831
+    },
+    {
+     "w": "and",
+     "t": 182.23
+    },
+    {
+     "w": "swell.",
+     "t": 182.483
+    }
+   ]
+  },
+  "V4": {
+   "t0": 183.676,
+   "t1": 190.864,
+   "text": "Your turn. A worker bee cannot reproduce. Is it non living? Yes, or no? Pause and decide.",
+   "words": [
+    {
+     "w": "Your",
+     "t": 183.676
+    },
+    {
+     "w": "turn.",
+     "t": 184.012
+    },
+    {
+     "w": "A",
+     "t": 184.62
+    },
+    {
+     "w": "worker",
+     "t": 184.794
+    },
+    {
+     "w": "bee",
+     "t": 185.239
+    },
+    {
+     "w": "cannot",
+     "t": 185.522
+    },
+    {
+     "w": "reproduce.",
+     "t": 185.967
+    },
+    {
+     "w": "Is",
+     "t": 186.846
+    },
+    {
+     "w": "it",
+     "t": 187.074
+    },
+    {
+     "w": "non",
+     "t": 187.302
+    },
+    {
+     "w": "living?",
+     "t": 187.585
+    },
+    {
+     "w": "Yes,",
+     "t": 188.301
+    },
+    {
+     "w": "or",
+     "t": 188.747
+    },
+    {
+     "w": "no?",
+     "t": 188.975
+    },
+    {
+     "w": "Pause",
+     "t": 189.474
+    },
+    {
+     "w": "and",
+     "t": 189.865
+    },
+    {
+     "w": "decide.",
+     "t": 190.147
+    }
+   ]
+  },
+  "V5": {
+   "t0": 194.064,
+   "t1": 203.53,
+   "text": "No! It is made of cells, its metabolism runs, and it responds. Only reproduction is missing, and reproduction is not a defining feature.",
+   "words": [
+    {
+     "w": "No!",
+     "t": 194.064
+    },
+    {
+     "w": "It",
+     "t": 194.541
+    },
+    {
+     "w": "is",
+     "t": 194.759
+    },
+    {
+     "w": "made",
+     "t": 194.977
+    },
+    {
+     "w": "of",
+     "t": 195.298
+    },
+    {
+     "w": "cells,",
+     "t": 195.516
+    },
+    {
+     "w": "its",
+     "t": 196.045
+    },
+    {
+     "w": "metabolism",
+     "t": 196.314
+    },
+    {
+     "w": "runs,",
+     "t": 196.947
+    },
+    {
+     "w": "and",
+     "t": 197.423
+    },
+    {
+     "w": "it",
+     "t": 197.693
+    },
+    {
+     "w": "responds.",
+     "t": 197.911
+    },
+    {
+     "w": "Only",
+     "t": 198.699
+    },
+    {
+     "w": "reproduction",
+     "t": 199.02
+    },
+    {
+     "w": "is",
+     "t": 199.756
+    },
+    {
+     "w": "missing,",
+     "t": 199.974
+    },
+    {
+     "w": "and",
+     "t": 200.607
+    },
+    {
+     "w": "reproduction",
+     "t": 200.876
+    },
+    {
+     "w": "is",
+     "t": 201.612
+    },
+    {
+     "w": "not",
+     "t": 201.83
+    },
+    {
+     "w": "a",
+     "t": 202.1
+    },
+    {
+     "w": "defining",
+     "t": 202.265
+    },
+    {
+     "w": "feature.",
+     "t": 202.794
+    }
+   ]
+  },
+  "T1": {
+   "t0": 204.18,
+   "t1": 210.67,
+   "text": "Remember this. Every living thing has cells, and runs metabolism inside them. No exception.",
+   "words": [
+    {
+     "w": "Remember",
+     "t": 204.18
+    },
+    {
+     "w": "this.",
+     "t": 204.719
+    },
+    {
+     "w": "Every",
+     "t": 205.311
+    },
+    {
+     "w": "living",
+     "t": 205.692
+    },
+    {
+     "w": "thing",
+     "t": 206.125
+    },
+    {
+     "w": "has",
+     "t": 206.506
+    },
+    {
+     "w": "cells,",
+     "t": 206.78
+    },
+    {
+     "w": "and",
+     "t": 207.32
+    },
+    {
+     "w": "runs",
+     "t": 207.594
+    },
+    {
+     "w": "metabolism",
+     "t": 207.922
+    },
+    {
+     "w": "inside",
+     "t": 208.567
+    },
+    {
+     "w": "them.",
+     "t": 209.0
+    },
+    {
+     "w": "No",
+     "t": 209.592
+    },
+    {
+     "w": "exception.",
+     "t": 209.814
+    }
+   ]
+  },
+  "W1": {
+   "t0": 211.27,
+   "t1": 214.929,
+   "text": "Now, a worked example. Four cases, four features.",
+   "words": [
+    {
+     "w": "Now,",
+     "t": 211.27
+    },
+    {
+     "w": "a",
+     "t": 211.689
+    },
+    {
+     "w": "worked",
+     "t": 211.853
+    },
+    {
+     "w": "example.",
+     "t": 212.272
+    },
+    {
+     "w": "Four",
+     "t": 212.997
+    },
+    {
+     "w": "cases,",
+     "t": 213.314
+    },
+    {
+     "w": "four",
+     "t": 213.835
+    },
+    {
+     "w": "features.",
+     "t": 214.152
+    }
+   ]
+  },
+  "W2": {
+   "t0": 215.279,
+   "t1": 222.519,
+   "text": "A mule. It grows, metabolises, has cells and responds. It cannot reproduce. Still living.",
+   "words": [
+    {
+     "w": "A",
+     "t": 215.279
+    },
+    {
+     "w": "mule.",
+     "t": 215.461
+    },
+    {
+     "w": "It",
+     "t": 216.101
+    },
+    {
+     "w": "grows,",
+     "t": 216.341
+    },
+    {
+     "w": "metabolises,",
+     "t": 216.923
+    },
+    {
+     "w": "has",
+     "t": 217.848
+    },
+    {
+     "w": "cells",
+     "t": 218.145
+    },
+    {
+     "w": "and",
+     "t": 218.556
+    },
+    {
+     "w": "responds.",
+     "t": 218.853
+    },
+    {
+     "w": "It",
+     "t": 219.721
+    },
+    {
+     "w": "cannot",
+     "t": 219.961
+    },
+    {
+     "w": "reproduce.",
+     "t": 220.429
+    },
+    {
+     "w": "Still",
+     "t": 221.354
+    },
+    {
+     "w": "living.",
+     "t": 221.766
+    }
+   ]
+  },
+  "W3": {
+   "t0": 222.969,
+   "t1": 228.019,
+   "text": "A sand mound. It grows, from outside. Nothing else. Non living.",
+   "words": [
+    {
+     "w": "A",
+     "t": 222.969
+    },
+    {
+     "w": "sand",
+     "t": 223.139
+    },
+    {
+     "w": "mound.",
+     "t": 223.468
+    },
+    {
+     "w": "It",
+     "t": 224.115
+    },
+    {
+     "w": "grows,",
+     "t": 224.338
+    },
+    {
+     "w": "from",
+     "t": 224.879
+    },
+    {
+     "w": "outside.",
+     "t": 225.208
+    },
+    {
+     "w": "Nothing",
+     "t": 225.961
+    },
+    {
+     "w": "else.",
+     "t": 226.449
+    },
+    {
+     "w": "Non",
+     "t": 227.043
+    },
+    {
+     "w": "living.",
+     "t": 227.319
+    }
+   ]
+  },
+  "W4": {
+   "t0": 228.469,
+   "t1": 234.223,
+   "text": "A reaction in a test tube. Metabolism, but no cells. Neither living nor non living.",
+   "words": [
+    {
+     "w": "A",
+     "t": 228.469
+    },
+    {
+     "w": "reaction",
+     "t": 228.628
+    },
+    {
+     "w": "in",
+     "t": 229.134
+    },
+    {
+     "w": "a",
+     "t": 229.342
+    },
+    {
+     "w": "test",
+     "t": 229.501
+    },
+    {
+     "w": "tube.",
+     "t": 229.809
+    },
+    {
+     "w": "Metabolism,",
+     "t": 230.364
+    },
+    {
+     "w": "but",
+     "t": 231.118
+    },
+    {
+     "w": "no",
+     "t": 231.376
+    },
+    {
+     "w": "cells.",
+     "t": 231.584
+    },
+    {
+     "w": "Neither",
+     "t": 232.189
+    },
+    {
+     "w": "living",
+     "t": 232.646
+    },
+    {
+     "w": "nor",
+     "t": 233.052
+    },
+    {
+     "w": "non",
+     "t": 233.31
+    },
+    {
+     "w": "living.",
+     "t": 233.568
+    }
+   ]
+  },
+  "W5": {
+   "t0": 234.723,
+   "t1": 242.013,
+   "text": "A piece of Planaria. It has cells, metabolism and response, and it regrows into a full worm. Living.",
+   "words": [
+    {
+     "w": "A",
+     "t": 234.723
+    },
+    {
+     "w": "piece",
+     "t": 234.891
+    },
+    {
+     "w": "of",
+     "t": 235.27
+    },
+    {
+     "w": "Planaria.",
+     "t": 235.491
+    },
+    {
+     "w": "It",
+     "t": 236.29
+    },
+    {
+     "w": "has",
+     "t": 236.511
+    },
+    {
+     "w": "cells,",
+     "t": 236.785
+    },
+    {
+     "w": "metabolism",
+     "t": 237.321
+    },
+    {
+     "w": "and",
+     "t": 237.963
+    },
+    {
+     "w": "response,",
+     "t": 238.237
+    },
+    {
+     "w": "and",
+     "t": 238.931
+    },
+    {
+     "w": "it",
+     "t": 239.204
+    },
+    {
+     "w": "regrows",
+     "t": 239.425
+    },
+    {
+     "w": "into",
+     "t": 239.909
+    },
+    {
+     "w": "a",
+     "t": 240.235
+    },
+    {
+     "w": "full",
+     "t": 240.404
+    },
+    {
+     "w": "worm.",
+     "t": 240.73
+    },
+    {
+     "w": "Living.",
+     "t": 241.319
+    }
+   ]
+  },
+  "X1": {
+   "t0": 242.663,
+   "t1": 244.127,
+   "text": "Now, the exam trap.",
+   "words": [
+    {
+     "w": "Now,",
+     "t": 242.663
+    },
+    {
+     "w": "the",
+     "t": 243.053
+    },
+    {
+     "w": "exam",
+     "t": 243.3
+    },
+    {
+     "w": "trap.",
+     "t": 243.594
+    }
+   ]
+  },
+  "X2": {
+   "t0": 244.477,
+   "t1": 248.62,
+   "text": "Many students say: a metabolic reaction in a test tube is living.",
+   "words": [
+    {
+     "w": "Many",
+     "t": 244.477
+    },
+    {
+     "w": "students",
+     "t": 244.774
+    },
+    {
+     "w": "say:",
+     "t": 245.263
+    },
+    {
+     "w": "a",
+     "t": 245.656
+    },
+    {
+     "w": "metabolic",
+     "t": 245.81
+    },
+    {
+     "w": "reaction",
+     "t": 246.347
+    },
+    {
+     "w": "in",
+     "t": 246.836
+    },
+    {
+     "w": "a",
+     "t": 247.038
+    },
+    {
+     "w": "test",
+     "t": 247.191
+    },
+    {
+     "w": "tube",
+     "t": 247.488
+    },
+    {
+     "w": "is",
+     "t": 247.786
+    },
+    {
+     "w": "living.",
+     "t": 247.987
+    }
+   ]
+  },
+  "X3": {
+   "t0": 249.02,
+   "t1": 255.863,
+   "text": "But it has no cells. It is neither living nor non living. It is a living reaction, outside a living thing.",
+   "words": [
+    {
+     "w": "But",
+     "t": 249.02
+    },
+    {
+     "w": "it",
+     "t": 249.264
+    },
+    {
+     "w": "has",
+     "t": 249.46
+    },
+    {
+     "w": "no",
+     "t": 249.704
+    },
+    {
+     "w": "cells.",
+     "t": 249.9
+    },
+    {
+     "w": "It",
+     "t": 250.471
+    },
+    {
+     "w": "is",
+     "t": 250.668
+    },
+    {
+     "w": "neither",
+     "t": 250.864
+    },
+    {
+     "w": "living",
+     "t": 251.295
+    },
+    {
+     "w": "nor",
+     "t": 251.679
+    },
+    {
+     "w": "non",
+     "t": 251.922
+    },
+    {
+     "w": "living.",
+     "t": 252.166
+    },
+    {
+     "w": "It",
+     "t": 252.783
+    },
+    {
+     "w": "is",
+     "t": 252.98
+    },
+    {
+     "w": "a",
+     "t": 253.177
+    },
+    {
+     "w": "living",
+     "t": 253.326
+    },
+    {
+     "w": "reaction,",
+     "t": 253.71
+    },
+    {
+     "w": "outside",
+     "t": 254.328
+    },
+    {
+     "w": "a",
+     "t": 254.759
+    },
+    {
+     "w": "living",
+     "t": 254.908
+    },
+    {
+     "w": "thing.",
+     "t": 255.292
+    }
+   ]
+  },
+  "E1": {
+   "t0": 256.513,
+   "t1": 262.478,
+   "text": "Where is this asked? As match the column questions: each way of reproduction with its organism.",
+   "words": [
+    {
+     "w": "Where",
+     "t": 256.513
+    },
+    {
+     "w": "is",
+     "t": 256.856
+    },
+    {
+     "w": "this",
+     "t": 257.056
+    },
+    {
+     "w": "asked?",
+     "t": 257.352
+    },
+    {
+     "w": "As",
+     "t": 257.933
+    },
+    {
+     "w": "match",
+     "t": 258.133
+    },
+    {
+     "w": "the",
+     "t": 258.476
+    },
+    {
+     "w": "column",
+     "t": 258.724
+    },
+    {
+     "w": "questions:",
+     "t": 259.115
+    },
+    {
+     "w": "each",
+     "t": 259.791
+    },
+    {
+     "w": "way",
+     "t": 260.087
+    },
+    {
+     "w": "of",
+     "t": 260.334
+    },
+    {
+     "w": "reproduction",
+     "t": 260.534
+    },
+    {
+     "w": "with",
+     "t": 261.211
+    },
+    {
+     "w": "its",
+     "t": 261.506
+    },
+    {
+     "w": "organism.",
+     "t": 261.754
+    }
+   ]
+  },
+  "Q1": {
+   "t0": 263.078,
+   "t1": 268.333,
+   "text": "Exam level now. Match each method with its organism. Pause and solve.",
+   "words": [
+    {
+     "w": "Exam",
+     "t": 263.078
+    },
+    {
+     "w": "level",
+     "t": 263.416
+    },
+    {
+     "w": "now.",
+     "t": 263.809
+    },
+    {
+     "w": "Match",
+     "t": 264.365
+    },
+    {
+     "w": "each",
+     "t": 264.757
+    },
+    {
+     "w": "method",
+     "t": 265.095
+    },
+    {
+     "w": "with",
+     "t": 265.542
+    },
+    {
+     "w": "its",
+     "t": 265.88
+    },
+    {
+     "w": "organism.",
+     "t": 266.164
+    },
+    {
+     "w": "Pause",
+     "t": 266.992
+    },
+    {
+     "w": "and",
+     "t": 267.385
+    },
+    {
+     "w": "solve.",
+     "t": 267.668
+    }
+   ]
+  },
+  "A1": {
+   "t0": 273.733,
+   "t1": 275.108,
+   "text": "The answer is B.",
+   "words": [
+    {
+     "w": "The",
+     "t": 273.733
+    },
+    {
+     "w": "answer",
+     "t": 274.01
+    },
+    {
+     "w": "is",
+     "t": 274.447
+    },
+    {
+     "w": "B.",
+     "t": 274.671
+    }
+   ]
+  },
+  "A2": {
+   "t0": 275.608,
+   "t1": 279.008,
+   "text": "Budding is yeast. Regeneration is Planaria.",
+   "words": [
+    {
+     "w": "Budding",
+     "t": 275.608
+    },
+    {
+     "w": "is",
+     "t": 276.137
+    },
+    {
+     "w": "yeast.",
+     "t": 276.378
+    },
+    {
+     "w": "Regeneration",
+     "t": 277.079
+    },
+    {
+     "w": "is",
+     "t": 277.894
+    },
+    {
+     "w": "Planaria.",
+     "t": 278.135
+    }
+   ]
+  },
+  "A3": {
+   "t0": 279.508,
+   "t1": 283.766,
+   "text": "Fragmentation is the moss protonema. Spores belong to fungi.",
+   "words": [
+    {
+     "w": "Fragmentation",
+     "t": 279.508
+    },
+    {
+     "w": "is",
+     "t": 280.319
+    },
+    {
+     "w": "the",
+     "t": 280.543
+    },
+    {
+     "w": "moss",
+     "t": 280.821
+    },
+    {
+     "w": "protonema.",
+     "t": 281.151
+    },
+    {
+     "w": "Spores",
+     "t": 282.016
+    },
+    {
+     "w": "belong",
+     "t": 282.453
+    },
+    {
+     "w": "to",
+     "t": 282.891
+    },
+    {
+     "w": "fungi.",
+     "t": 283.115
+    }
+   ]
+  },
+  "F1": {
+   "t0": 284.366,
+   "t1": 287.334,
+   "text": "Here is your recap. Screenshot this card.",
+   "words": [
+    {
+     "w": "Here",
+     "t": 284.366
+    },
+    {
+     "w": "is",
+     "t": 284.681
+    },
+    {
+     "w": "your",
+     "t": 284.894
+    },
+    {
+     "w": "recap.",
+     "t": 285.21
+    },
+    {
+     "w": "Screenshot",
+     "t": 285.83
+    },
+    {
+     "w": "this",
+     "t": 286.45
+    },
+    {
+     "w": "card.",
+     "t": 286.765
+    }
+   ]
+  },
+  "Y1": {
+   "t0": 290.534,
+   "t1": 293.371,
+   "text": "Can you answer these three questions without help?",
+   "words": [
+    {
+     "w": "Can",
+     "t": 290.534
+    },
+    {
+     "w": "you",
+     "t": 290.763
+    },
+    {
+     "w": "answer",
+     "t": 290.991
+    },
+    {
+     "w": "these",
+     "t": 291.351
+    },
+    {
+     "w": "three",
+     "t": 291.667
+    },
+    {
+     "w": "questions",
+     "t": 291.984
+    },
+    {
+     "w": "without",
+     "t": 292.475
+    },
+    {
+     "w": "help?",
+     "t": 292.879
+    }
+   ]
+  },
+  "Y2": {
+   "t0": 293.771,
+   "t1": 297.591,
+   "text": "One. How is a sand mound's growth different from a plant's?",
+   "words": [
+    {
+     "w": "One.",
+     "t": 293.771
+    },
+    {
+     "w": "How",
+     "t": 294.263
+    },
+    {
+     "w": "is",
+     "t": 294.514
+    },
+    {
+     "w": "a",
+     "t": 294.716
+    },
+    {
+     "w": "sand",
+     "t": 294.871
+    },
+    {
+     "w": "mound's",
+     "t": 295.17
+    },
+    {
+     "w": "growth",
+     "t": 295.565
+    },
+    {
+     "w": "different",
+     "t": 295.961
+    },
+    {
+     "w": "from",
+     "t": 296.501
+    },
+    {
+     "w": "a",
+     "t": 296.8
+    },
+    {
+     "w": "plant's?",
+     "t": 296.954
+    }
+   ]
+  },
+  "Y3": {
+   "t0": 298.491,
+   "t1": 303.069,
+   "text": "Two. Why can a mule not prove that reproduction defines life?",
+   "words": [
+    {
+     "w": "Two.",
+     "t": 298.491
+    },
+    {
+     "w": "Why",
+     "t": 299.052
+    },
+    {
+     "w": "can",
+     "t": 299.339
+    },
+    {
+     "w": "a",
+     "t": 299.625
+    },
+    {
+     "w": "mule",
+     "t": 299.801
+    },
+    {
+     "w": "not",
+     "t": 300.142
+    },
+    {
+     "w": "prove",
+     "t": 300.428
+    },
+    {
+     "w": "that",
+     "t": 300.824
+    },
+    {
+     "w": "reproduction",
+     "t": 301.165
+    },
+    {
+     "w": "defines",
+     "t": 301.947
+    },
+    {
+     "w": "life?",
+     "t": 302.453
+    }
+   ]
+  },
+  "Y4": {
+   "t0": 303.969,
+   "t1": 307.448,
+   "text": "Three. Why is a reaction in a test tube not alive?",
+   "words": [
+    {
+     "w": "Three.",
+     "t": 303.969
+    },
+    {
+     "w": "Why",
+     "t": 304.557
+    },
+    {
+     "w": "is",
+     "t": 304.808
+    },
+    {
+     "w": "a",
+     "t": 305.01
+    },
+    {
+     "w": "reaction",
+     "t": 305.164
+    },
+    {
+     "w": "in",
+     "t": 305.656
+    },
+    {
+     "w": "a",
+     "t": 305.858
+    },
+    {
+     "w": "test",
+     "t": 306.012
+    },
+    {
+     "w": "tube",
+     "t": 306.311
+    },
+    {
+     "w": "not",
+     "t": 306.609
+    },
+    {
+     "w": "alive?",
+     "t": 306.86
+    }
+   ]
+  },
+  "N1": {
+   "t0": 308.548,
+   "t1": 318.26,
+   "text": "Next time: one walk through the college garden. How many kinds of living things can you count? We find out in biodiversity and the need for classification.",
+   "words": [
+    {
+     "w": "Next",
+     "t": 308.548
+    },
+    {
+     "w": "time:",
+     "t": 308.845
+    },
+    {
+     "w": "one",
+     "t": 309.287
+    },
+    {
+     "w": "walk",
+     "t": 309.536
+    },
+    {
+     "w": "through",
+     "t": 309.834
+    },
+    {
+     "w": "the",
+     "t": 310.275
+    },
+    {
+     "w": "college",
+     "t": 310.525
+    },
+    {
+     "w": "garden.",
+     "t": 310.966
+    },
+    {
+     "w": "How",
+     "t": 311.6
+    },
+    {
+     "w": "many",
+     "t": 311.849
+    },
+    {
+     "w": "kinds",
+     "t": 312.147
+    },
+    {
+     "w": "of",
+     "t": 312.492
+    },
+    {
+     "w": "living",
+     "t": 312.694
+    },
+    {
+     "w": "things",
+     "t": 313.087
+    },
+    {
+     "w": "can",
+     "t": 313.481
+    },
+    {
+     "w": "you",
+     "t": 313.73
+    },
+    {
+     "w": "count?",
+     "t": 313.98
+    },
+    {
+     "w": "We",
+     "t": 314.565
+    },
+    {
+     "w": "find",
+     "t": 314.767
+    },
+    {
+     "w": "out",
+     "t": 315.064
+    },
+    {
+     "w": "in",
+     "t": 315.314
+    },
+    {
+     "w": "biodiversity",
+     "t": 315.515
+    },
+    {
+     "w": "and",
+     "t": 316.197
+    },
+    {
+     "w": "the",
+     "t": 316.446
+    },
+    {
+     "w": "need",
+     "t": 316.696
+    },
+    {
+     "w": "for",
+     "t": 316.993
+    },
+    {
+     "w": "classification.",
+     "t": 317.243
+    }
+   ]
+  }
+ },
+ "order": [
+  "H1",
+  "H2",
+  "H3",
+  "H4",
+  "H5",
+  "B1",
+  "B2",
+  "B3",
+  "G1",
+  "G2",
+  "G3",
+  "G4",
+  "G5",
+  "G6",
+  "G7",
+  "R1",
+  "R2",
+  "R3",
+  "R4",
+  "R5",
+  "R6",
+  "M1",
+  "M2",
+  "M3",
+  "M4",
+  "C1",
+  "C2",
+  "C3",
+  "C4",
+  "V1",
+  "V2",
+  "V3",
+  "V4",
+  "V5",
+  "T1",
+  "W1",
+  "W2",
+  "W3",
+  "W4",
+  "W5",
+  "X1",
+  "X2",
+  "X3",
+  "E1",
+  "Q1",
+  "A1",
+  "A2",
+  "A3",
+  "F1",
+  "Y1",
+  "Y2",
+  "Y3",
+  "Y4",
+  "N1"
+ ],
+ "dur": 318.56
+}

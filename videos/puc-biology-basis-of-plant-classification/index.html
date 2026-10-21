@@ -1,0 +1,213 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Biology Ep 21 - Basis of Plant Classification</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Biology Ep 21: basis of plant classification (Living diagram, leaf green) ===== */
+:root{--br:#2E2A24;--mi:#E58A3C;--nu:#7B4B94;--wa:#5AA0C8;--rb:#D1495B}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.ac{color:var(--ac)}
+/* title card objects */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .jt{position:absolute;right:24px;top:36px;height:48px;padding:0 16px;border-radius:10px;background:var(--ac);color:#fff;display:flex;align-items:center;gap:8px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+#brA,#brB,#hw,#neet{position:absolute;left:0;top:0;width:784px;height:580px}
+.nq{position:absolute;width:26px;height:26px;border-radius:6px;background:var(--soft)}
+.big{position:absolute;font:600 64px/1 'IBM Plex Mono';white-space:nowrap}
+.keyt{position:absolute;display:flex;align-items:center;gap:10px;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.keyt b{width:22px;height:22px;border-radius:5px;display:inline-block}
+
+.job{width:340px}
+.jr{height:96px}.jr i{top:12px}.jr .jn{top:14px}.jr .jw{top:56px}.jr .jt{top:24px;background:#fff;color:var(--mute);border:2px dashed #CBD0DA}
+#gS{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+.w3{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.w3 .n{position:absolute;left:24px;top:34px;width:52px;height:52px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.w3 .nm{position:absolute;left:100px;top:22px;font:700 32px Poppins;white-space:nowrap}
+.w3 .ds{position:absolute;left:100px;top:70px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* kingdom */
+.ex{position:absolute;left:36px;width:420px;height:72px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:14px;padding:0 20px;font:600 26px Poppins;white-space:nowrap}
+.ex i{display:flex}.ex .sk{position:absolute;left:14px;right:14px;top:35px;height:4px;border-radius:2px;background:var(--red);transform-origin:0 50%}
+.gp{position:absolute;left:36px;width:712px;height:80px;border-radius:12px;background:var(--soft)}
+.gp i{position:absolute;left:18px;top:12px;width:56px;height:56px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.gp .nm{position:absolute;left:94px;top:8px;font:700 28px Poppins;white-space:nowrap}
+.gp .ds{position:absolute;left:94px;top:48px;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.gp .no{position:absolute;right:20px;top:22px;height:36px;padding:0 12px;border-radius:8px;background:#fff;display:flex;align-items:center;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* features */
+.fch{position:absolute;height:44px;padding:0 16px;border-radius:10px;background:var(--soft);display:inline-flex;align-items:center;gap:8px;font:600 21px Poppins;white-space:nowrap}
+.fch i{display:flex}
+.pb{position:absolute;left:36px;width:712px;height:116px;border-radius:14px;background:var(--redBg)}
+.pb .n{position:absolute;left:20px;top:20px;height:32px;padding:0 10px;border-radius:7px;background:var(--red);color:#fff;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;display:flex;align-items:center}
+.pb .tx{position:absolute;left:20px;top:62px;font:600 23px Poppins;white-space:nowrap}
+.zl{font:600 24px Poppins;fill:#16213E}
+.zs{font:600 15px 'IBM Plex Mono';fill:#6B7280;letter-spacing:1.5px}
+.col2{position:absolute;top:120px;font:600 16px 'IBM Plex Mono';letter-spacing:.1em;white-space:nowrap}
+.nmc{position:absolute;left:36px;top:84px;width:712px;height:150px;border-radius:14px;background:var(--soft)}
+.nmc .a{position:absolute;left:28px;top:18px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.nmc .b{position:absolute;left:28px;top:46px;font:700 32px Poppins;white-space:nowrap}
+.nmc .c{position:absolute;left:28px;top:96px;font:500 22px Poppins;color:var(--ink2);white-space:nowrap}
+/* phylogeny */
+.tip{position:absolute;top:60px;width:240px;text-align:center}
+.tip i{display:flex;justify-content:center}
+.tip span{display:block;margin-top:6px;font:700 24px Poppins;white-space:nowrap}
+.inv{font:600 16px 'IBM Plex Mono';fill:#6B7280;letter-spacing:1px}
+/* side by side */
+.sbx{position:absolute;left:36px;width:712px;border-radius:14px;background:var(--soft)}
+.big2{position:absolute;left:36px;top:76px;font:700 40px Poppins;white-space:nowrap}
+.sub2{position:absolute;left:36px;top:134px;font:500 23px Poppins;color:var(--ink2);white-space:nowrap}
+.res{position:absolute;left:36px;top:486px;height:56px;padding:0 20px;border-radius:12px;display:flex;align-items:center;gap:12px;font:600 23px Poppins;white-space:nowrap}
+/* tools */
+.th{position:absolute;top:84px;width:104px;height:56px;display:flex;align-items:center;justify-content:center;text-align:center;font:600 14px/1.2 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute)}
+.tr{position:absolute;left:36px;height:60px;width:164px;display:flex;align-items:center;gap:10px;font:700 24px Poppins;white-space:nowrap}
+.tr i{display:flex}
+.tc{position:absolute;width:96px;height:52px;border-radius:10px;background:var(--soft);display:flex;align-items:center;justify-content:center;font:600 30px 'IBM Plex Mono'}
+.tl2{left:976px;width:784px;height:274px}
+.tl2 .tn{position:absolute;left:36px;top:76px;font:700 36px Poppins;white-space:nowrap}
+.tl2 .td{position:absolute;left:36px;top:128px;width:400px;font:500 23px/1.35 Poppins;color:var(--ink2)}
+/* key */
+.kn{position:absolute;top:200px;width:260px;height:84px;border-radius:14px;border:2.5px solid #CBD0DA;background:#fff;display:flex;align-items:center;justify-content:center;text-align:center;font:600 21px/1.25 Poppins;padding:0 14px}
+.kn b{position:absolute;left:-14px;top:-14px;width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;font:700 17px Poppins;display:flex;align-items:center;justify-content:center}
+.kb{position:absolute;top:410px;width:260px;height:120px;border-radius:14px;border:2.5px dashed #CBD0DA;background:#fff}
+.kb .nm{position:absolute;left:88px;top:28px;font:700 24px Poppins;white-space:nowrap}
+.kb .ds{position:absolute;left:88px;top:66px;font:600 14px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.tok{position:absolute;width:56px;height:56px;border-radius:12px;background:var(--ac2);border:2px solid var(--ac);display:flex;align-items:center;justify-content:center}
+.kl{font:600 17px 'IBM Plex Mono';fill:#6B7280;letter-spacing:1.5px}
+/* sort board */
+.colW{position:absolute;top:76px;width:280px;height:460px}
+.colW .ch2{position:absolute;left:0;top:0;width:280px;height:40px;border-radius:9px;background:var(--soft);display:flex;align-items:center;justify-content:center;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.colW .ac3{position:absolute;left:4px;top:54px;width:272px;height:92px;text-align:center;font:500 21px/1.3 Poppins;color:var(--ink2)}
+.colW .dz{position:absolute;left:0;top:156px;width:280px;height:188px;border-radius:14px;border:2.5px dashed #CBD0DA;background:#fff}
+.colW .it{position:absolute;left:0;top:156px;width:280px;height:188px;border-radius:14px;background:var(--ac2)}
+.colW .it .ic{position:absolute;left:0;top:22px;width:280px;display:flex;justify-content:center}
+.colW .it .inm{position:absolute;left:8px;width:264px;top:112px;text-align:center;font:700 25px/1.15 Poppins}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 24px Poppins}
+.mtc{display:flex;gap:28px;margin-top:10px}
+.mtc div{font:500 22px/1.55 Poppins;white-space:nowrap}
+.mtc b{display:inline-block;width:46px;font:600 20px 'IBM Plex Mono';color:var(--ac)}
+#sF .fcard .fl.txt{font-size:29px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · BIOLOGY · CH 3 PLANT KINGDOM</div>
+    <div class="subj" id="subj">LIVING DIAGRAM</div>
+    <div id="title">Basis of Plant <span class="acc">Classification</span></div>
+    <div id="sub">Three ways to sort plants, explained</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#3E9B5F" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: four plants + Diya's garden + three ways -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">FOUR PLANTS · ONE GARDEN</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:510px">All plants. The same kind?</div></div>
+      <div class="card rf" id="hk"><div class="lbl" id="hkL" style="left:36px;top:30px">DIYA'S COLLEGE GARDEN</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <svg id="gS" width="520" height="390" viewBox="0 0 520 390"></svg>
+        <div class="pillp" id="hkP" style="left:132px;top:494px">Diya · who decides the groups?</div>
+        <div id="hw"><div class="lbl" style="left:36px;top:30px">THREE WAYS TO SORT PLANTS</div><div id="w3s"></div>
+          <svg id="hwA" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div></div>
+    </div>
+
+    <!-- K: the plant kingdom today -->
+    <div id="sK">
+      <div class="card full" id="kl"><div class="lbl" style="left:36px;top:30px">MOVED OUT OF THE PLANT KINGDOM</div><div id="exs"></div>
+        <div class="pillp good" id="kP" style="left:36px;top:420px">Now in their own kingdoms</div>
+        <div class="lbl" id="kS" style="left:36px;top:500px;font-size:15px">SOURCE · NCERT CLASS 11 · CH 3</div></div>
+      <div class="card rf" id="kr"><div class="lbl" style="left:36px;top:30px">THE PLANT KINGDOM TODAY · 5 GROUPS</div><div id="gps"></div></div>
+    </div>
+
+    <!-- B: artificial system -->
+    <div id="sB">
+      <div class="card full" id="bl"><div class="lbl" style="left:36px;top:30px">ARTIFICIAL SYSTEM · A FEW FEATURES</div><div id="fcs"></div>
+        <svg id="flS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="br">
+        <div id="brA"><div class="lbl" style="left:36px;top:30px">THE OLDEST WAY · LINNAEUS</div><div class="big2">Count the stamens</div><div class="sub2">each count made its own group</div>
+          <svg id="lnS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+        <div id="brB"><div class="lbl" style="left:36px;top:30px">TWO PROBLEMS</div>
+        <div class="pb" id="pb0" style="top:84px"><div class="n">PROBLEM 1</div><div class="tx">A few features split up close relatives</div></div>
+        <div class="pb" id="pb1" style="top:216px"><div class="n">PROBLEM 2</div><div class="tx">Leaves count as much as flowers</div></div>
+        <svg id="ssS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div></div>
+    </div>
+
+    <!-- G: natural system -->
+    <div id="sG">
+      <div class="card full" id="gl"><div class="lbl" style="left:36px;top:30px">NATURAL SYSTEM · MANY FEATURES</div>
+        <div class="col2" id="gO" style="left:36px;top:84px;color:var(--mute)">OUTSIDE</div><div class="col2" id="gI" style="left:412px;top:84px;color:var(--ac)">INSIDE</div><div id="gfs"></div>
+        <div class="pillp ac" id="gP" style="left:36px;top:470px">How alike plants really are</div></div>
+      <div class="card rf" id="gr"><div class="lbl" style="left:36px;top:30px">INSIDE A STEM · ANATOMY</div>
+        <svg id="stS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="bh"><div class="nmc" style="top:404px"><div class="a">NATURAL SYSTEM · FLOWERING PLANTS</div><div class="b">Bentham and Hooker</div><div class="c">George Bentham · Joseph Dalton Hooker</div></div></div></div>
+    </div>
+
+    <!-- P: phylogenetic -->
+    <div id="sP"><div class="card wide" id="pm"><div class="lbl" style="left:36px;top:30px">PHYLOGENETIC SYSTEM · ONE FAMILY TREE (SIMPLIFIED)</div>
+      <svg id="pS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg><div id="tips"></div>
+      <div class="pillp" id="pW" style="left:1110px;top:470px">phylo = tribe, family line</div></div></div>
+
+    <!-- S: side by side + think -->
+    <div id="sS">
+      <div class="card full" id="sa"><div class="lbl" style="left:36px;top:30px">ARTIFICIAL</div><div class="big2">A few features</div><div class="sub2">often just leaves or stamens</div>
+        <svg id="saS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="res" id="saR" style="background:var(--redBg);color:var(--red)">Unrelated plants land together</div></div>
+      <div class="card rf" id="sn"><div class="lbl" style="left:36px;top:30px">NATURAL</div><div class="big2">Many features</div><div class="sub2">outside and inside</div>
+        <div id="sns"></div>
+        <div class="res" id="snR" style="background:var(--okBg);color:#1F6B3F">Truly alike plants land together</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- D: new tools -->
+    <div id="sD">
+      <div class="card full" id="dn"><div class="lbl" style="left:36px;top:30px">NUMERICAL TAXONOMY</div>
+        <div class="ghost" id="dgh" style="right:28px;top:22px">EXAMPLE FIGURES</div><div id="tbl"></div>
+        <div class="pillp ac" id="dP0" style="left:36px;top:410px;height:44px;font-size:21px">Every feature = equal importance</div>
+        <div class="pillp" id="dP1" style="left:432px;top:410px;height:44px;font-size:21px">Hundreds at once</div></div>
+      <div class="card tl2" id="dc" style="top:270px"><div class="lbl" style="left:36px;top:30px">CYTOTAXONOMY</div><div class="tn">Uses the cell</div><div class="td">chromosome number, structure and behaviour</div>
+        <svg id="dcS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card tl2" id="dk" style="top:576px"><div class="lbl" style="left:36px;top:30px">CHEMOTAXONOMY</div><div class="tn">Uses chemicals</div><div class="td">the chemical constituents of the plant</div>
+        <svg id="dkS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- R: the key sorts four plants -->
+    <div id="sR"><div class="card wide" id="rk"><div class="lbl" style="left:36px;top:30px">FEATURES SORT FOUR PLANTS · ONE QUESTION AT A TIME</div>
+      <svg id="rS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg><div id="kns"></div><div id="toks"></div></div></div>
+
+    <!-- W: worked example -->
+    <div id="sW"><div class="card wide" id="wb"><div class="lbl" style="left:36px;top:30px">WORKED EXAMPLE · WHICH SYSTEM OR TOOL?</div><div id="cols"></div></div></div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="460" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card + questions + NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Few features, many features, or <span class="acc">ancestry</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

@@ -1,0 +1,173 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Biology Ep 28 - Haploid and Diploid Phases</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+
+/* ===== PUC Biology Ep 26: angiosperms, monocots and dicots (Living diagram, leaf green) ===== */
+:root{--br:#2E2A24;--hn:#0E8F8F;--dn:#4A5FC1;--tn:#C9962B}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.ac{color:var(--ac)}
+/* title card objects */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+#ghT{left:0;top:872px}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.zl{font:600 26px Poppins;fill:#16213E}
+.lt{position:absolute;height:44px;padding:0 16px;border-radius:10px;background:var(--soft);display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* zoom ladder */
+#zch,#pch{position:absolute;left:160px;top:248px;display:flex;align-items:center;gap:12px}
+#zch .zc,#pch .zc{height:48px;padding:0 18px;border-radius:10px;border:2px solid #CBD0DA;background:#fff;color:#9AA0AC;display:inline-flex;align-items:center;font:600 20px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+#zch .za,#pch .za{display:inline-flex}
+#zd,#pd{left:160px;top:324px;width:1056px;height:526px;overflow:hidden}
+#zi,#pe{left:1248px;top:324px;width:512px;height:526px}
+.lvI{position:absolute;left:0;top:0;width:512px;height:526px}
+.lvI .ln{position:absolute;left:36px;top:76px;font:700 56px Poppins;letter-spacing:-.02em;white-space:nowrap}
+.lvI .ld{position:absolute;left:36px;top:160px;width:440px;font:500 28px/1.35 Poppins}
+.lvI .lh{position:absolute;left:36px;top:300px;width:440px;font:600 24px/1.35 Poppins;color:var(--ac)}
+/* process side card */
+.pq{position:absolute;left:36px;width:440px;height:96px;border-radius:12px;background:var(--soft)}
+.pq .pn{position:absolute;left:18px;top:10px;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.pq .px{position:absolute;left:18px;top:38px;font-size:30px;white-space:nowrap}
+
+.job i b{font:600 26px 'IBM Plex Mono';color:var(--ac)}
+/* puzzle */
+.nb{position:absolute;top:96px;width:216px;height:250px;border-radius:16px;background:var(--soft)}
+.nb .nv{position:absolute;left:0;width:216px;top:30px;text-align:center;font:600 80px/1 'IBM Plex Mono'}
+.nb .nl{position:absolute;left:0;width:216px;top:136px;text-align:center;font:700 24px Poppins;white-space:nowrap}
+.nb .nw{position:absolute;left:0;width:216px;top:176px;text-align:center;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.eqb{position:absolute;left:36px;top:378px;width:712px;height:100px;border-radius:14px;background:#fff;border:2px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:48px;white-space:nowrap}
+.sb{position:absolute;height:60px;padding:0 22px;border-radius:14px;display:inline-flex;align-items:center;gap:12px;font:700 28px Poppins;white-space:nowrap}
+.bigN{position:absolute;top:100px;width:330px;height:260px;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+.bigN b{font:600 110px/1 'IBM Plex Mono'}
+.bigN span{font:600 18px 'IBM Plex Mono';letter-spacing:.1em;white-space:nowrap}
+.fv{position:absolute;top:410px;height:52px;padding:0 16px;border-radius:12px;background:var(--soft);display:inline-flex;align-items:center;gap:10px;font:600 21px Poppins;white-space:nowrap}
+/* sets */
+.cr2{position:absolute;left:36px;width:712px;height:180px;border-radius:14px;background:var(--soft)}
+.cr2 .cb{position:absolute;left:24px;top:18px;font:700 36px Poppins;white-space:nowrap}
+.cr2 .cs{position:absolute;left:24px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.cr2 .cn{position:absolute;left:24px;top:108px;height:48px;padding:0 16px;border-radius:10px;color:#fff;display:inline-flex;align-items:center;font:600 24px 'IBM Plex Mono'}
+.cr2 svg{position:absolute;right:20px;top:14px}
+.hum{position:absolute;left:36px;top:474px;display:flex;align-items:center;gap:14px;font:600 22px 'IBM Plex Mono';white-space:nowrap}
+.hum b{font:600 34px 'IBM Plex Mono'}
+/* rules */
+.swr{position:absolute;left:36px;width:440px;height:100px;border-radius:12px;background:var(--soft)}
+.swr .sn{position:absolute;left:18px;top:12px;font:700 26px Poppins;white-space:nowrap}
+.swr .sd{position:absolute;left:18px;top:56px;font-size:24px;white-space:nowrap}
+.lane{position:absolute;left:24px;width:1008px;height:150px;border-radius:14px}
+.lane .lh2{position:absolute;left:18px;top:14px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* comparison */
+#vc{left:160px;top:270px;width:1600px;height:580px}
+.vh{position:absolute;top:30px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font:600 19px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.vr{position:absolute;left:24px;width:1552px;height:86px;border-radius:12px}
+.vr .vk{position:absolute;left:18px;top:24px;font:700 26px Poppins;white-space:nowrap}
+.vr .vt{position:absolute;top:26px;font:500 26px Poppins;white-space:nowrap}
+/* worked flow */
+.bx{position:absolute;width:250px;height:112px;border-radius:14px;border:2.5px solid;background:#fff}
+.bx .bn{position:absolute;left:18px;top:14px;font:700 23px Poppins;white-space:nowrap}
+.bx .bv{position:absolute;left:18px;top:50px;font:600 40px/1 'IBM Plex Mono'}
+.bx .bt{position:absolute;right:16px;top:58px;font:600 16px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute)}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+.mq .sl{font:500 25px/1.5 Poppins;margin-top:8px}
+.mq .sl b{display:inline-block;width:46px;font:600 22px 'IBM Plex Mono';color:var(--ac)}
+#sF .fcard .fl.txt{font-size:28px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+
+#stage svg *:not([transform]){transform-box:fill-box;transform-origin:center}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · BIOLOGY · CH 3 PLANT KINGDOM</div>
+    <div class="subj" id="subj">LIVING DIAGRAM</div>
+    <div id="title">Haploid and <span class="acc">Diploid</span> Phases</div>
+    <div id="sub">The chromosome number game, in one living diagram</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#3E9B5F" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+    <div class="ghost" id="ghT">NOT IN THE CURRENT NCERT TEXT</div>
+
+    <!-- H -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">THE NUMBER PUZZLE · HUMANS</div><div id="nbs"></div>
+        <div class="eqb" id="eqb"></div>
+        <div class="pillp ac" id="hlP" style="left:36px;top:500px">Count the chromosome sets</div></div>
+      <div class="card rf" id="hk"><div class="lbl" id="hkL" style="left:36px;top:30px">AARAV · STUDY TABLE</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div class="pillp" id="hkP" style="left:132px;top:494px">Aarav · PCME · loves number puzzles</div>
+        <div id="spl"><div class="lbl" style="left:36px;top:30px">THE NUMBER GAME</div>
+          <div class="bigN" id="bn0" style="left:36px;background:#E1F4F2;color:#0E8F8F"><b>n</b><span>ONE SET</span></div>
+          <div class="bigN" id="bn1" style="left:418px;background:#E6E9F8;color:#4A5FC1"><b>2n</b><span>TWO SETS</span></div>
+          <div id="fvs"></div></div></div>
+    </div>
+
+    <!-- D -->
+    <div id="sD">
+      <div class="card full" id="dw"><div class="lbl" style="left:36px;top:30px">WHAT IS BEING COUNTED</div><div class="ghost" id="ghD" style="right:28px;top:22px">NOT IN THE CURRENT NCERT TEXT</div>
+        <svg id="dwS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="dwP" style="left:36px;top:500px">n = chromosomes in one set</div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">ONE SET OR TWO</div>
+        <div class="cr2" id="cr0" style="top:84px"><div class="cb">Haploid</div><div class="cs">ONE SET</div><div class="cn" style="background:#0E8F8F">n</div><svg id="cs0" width="300" height="150"></svg></div>
+        <div class="cr2" id="cr1" style="top:280px"><div class="cb">Diploid</div><div class="cs">TWO SETS · ONE FROM EACH PARENT</div><div class="cn" style="background:#4A5FC1">2n</div><svg id="cs1" width="300" height="150"></svg></div>
+        <div class="hum" id="hum">HUMANS &nbsp; <span style="color:#0E8F8F">n =</span><b id="hn" style="color:#0E8F8F">23</b> &nbsp; <span style="color:#4A5FC1">2n =</span><b id="hd" style="color:#4A5FC1">46</b></div></div>
+    </div>
+
+    <!-- Z -->
+    <div id="sZ">
+      <div id="zch"></div>
+      <div class="card" id="zd"><svg id="zS" width="1056" height="526" style="position:absolute;left:0;top:0"></svg>
+        <div id="ztr" style="position:absolute;right:28px;top:22px;display:flex;gap:10px;align-items:center"><div class="ghost" id="zgh" style="position:relative">EXAMPLE FIGURES</div><div class="tag" id="zsc" style="position:relative"><span id="zscN">x1</span></div></div></div>
+      <div class="card" id="zi"><div id="lvs"></div>
+        <div class="hum" id="zcount" style="top:400px">COUNT &nbsp;<b id="zcn" style="color:#4A5FC1">0</b></div></div>
+    </div>
+
+    <!-- P + S -->
+    <div id="sP">
+      <div id="pch"></div>
+      <div class="card" id="pd"><div class="ghost" id="pgh" style="right:28px;top:22px">A TOY CELL · 2n = 4</div><div id="lns"></div><svg id="pS" width="1056" height="526" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="pe"><div id="pis"></div>
+        <div id="sws"><div class="lbl" style="left:36px;top:30px">THE THREE RULES</div>
+          <div class="swr" id="sw0" style="top:84px"><div class="sn">Meiosis halves</div><div class="sd" id="swk0"></div></div>
+          <div class="swr" id="sw1" style="top:200px"><div class="sn">Fertilisation doubles</div><div class="sd" id="swk1"></div></div>
+          <div class="swr" id="sw2" style="top:316px"><div class="sn">Mitosis copies</div><div class="sd" id="swk2"></div></div></div></div>
+    </div>
+
+    <!-- V + think -->
+    <div id="sV">
+      <div class="card" id="vc"><div class="lbl" style="left:36px;top:40px">THE PLANT TWIST</div><div id="vrs"></div>
+        <div class="vh" style="left:330px;width:600px;background:#D3ECEA;color:#0B6B6B">HAPLOID PHASE · n</div><div class="vh" style="left:962px;width:600px;background:#DDE2F6;color:#33449A">DIPLOID PHASE · 2n</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W -->
+    <div id="sW"><div class="card wide" id="wbd"><div class="lbl" style="left:36px;top:30px">WORKED EXAMPLE · ONION, 2n = 16 · FILL IN THE FLOWER</div><svg id="wS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg><div id="bxs"></div></div></div>
+
+    <!-- X / Q / F -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="460" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Halves. Doubles. <span class="acc">Copies.</span></div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

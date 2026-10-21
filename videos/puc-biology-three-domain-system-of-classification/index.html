@@ -1,0 +1,151 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Biology Ep 10 - Three-Domain System of Classification</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Biology Ep 10: three domains (Living diagram, leaf green) ===== */
+:root{--br:#2E2A24;--ba:#4F7CAC;--ar:#B5525C;--eu:#7B4B94}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.ac{color:var(--ac)}
+#stage svg circle,#stage svg text,#stage svg .pp{transform-box:fill-box;transform-origin:center}
+#tgh{top:296px}
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .jt{position:absolute;right:24px;top:36px;height:48px;padding:0 16px;border-radius:10px;background:var(--ac);color:#fff;display:flex;align-items:center;gap:8px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* kingdoms */
+.kg{position:absolute;top:96px;width:132px;height:120px;border-radius:12px;background:var(--soft)}
+.kg i{position:absolute;left:0;width:132px;top:14px;display:flex;justify-content:center}
+.kg span{position:absolute;left:0;width:132px;top:72px;text-align:center;font:700 20px Poppins;white-space:nowrap}
+.kgb{position:absolute;top:232px;height:40px;border-radius:9px;display:flex;align-items:center;justify-content:center;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* zoom ladder */
+#zch{position:absolute;left:160px;top:248px;display:flex;align-items:center;gap:12px}
+#zch .zc{height:48px;padding:0 18px;border-radius:10px;border:2px solid #CBD0DA;background:#fff;color:#9AA0AC;display:inline-flex;align-items:center;font:600 20px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+#zch .za{display:inline-flex}
+#zd{left:160px;top:324px;width:1056px;height:526px;overflow:hidden}
+#zi{left:1248px;top:324px;width:512px;height:526px}
+.lvI{position:absolute;left:0;top:0;width:512px;height:526px}
+.lvI .ln{position:absolute;left:36px;top:76px;font:700 54px Poppins;letter-spacing:-.02em;white-space:nowrap}
+.lvI .ld{position:absolute;left:36px;top:160px;width:440px;font:500 27px/1.35 Poppins}
+.lvI .lh{position:absolute;left:36px;top:300px;width:440px;font:600 23px/1.35 Poppins;color:var(--ac)}
+.zl{font:600 24px Poppins;fill:#16213E}
+/* sequence compare */
+.sp{position:absolute;top:84px;width:362px;height:56px;border-radius:12px;border:2.5px solid #CBD0DA;background:#fff;color:#9AA0AC;display:flex;align-items:center;gap:12px;padding:0 16px;font:700 22px Poppins;white-space:nowrap}
+.sp b{flex:none;width:32px;height:32px;border-radius:50%;background:#EEF0F4;color:#9AA0AC;font:700 17px Poppins;display:flex;align-items:center;justify-content:center}
+.sq{position:absolute;height:60px;display:flex;align-items:center}
+.sq .nm{position:absolute;left:0;top:18px;width:230px;font:600 16px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+.bs{position:absolute;top:6px;width:48px;height:48px;border-radius:10px;background:#fff;border:2.5px solid #D9DCE3;display:flex;align-items:center;justify-content:center;font:600 26px 'IBM Plex Mono'}
+.dc{position:absolute;left:1120px;width:440px;height:56px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:12px;padding:0 18px;font:600 21px Poppins;white-space:nowrap}
+.dc b{margin-left:auto;font:600 28px 'IBM Plex Mono'}
+/* domains */
+#dst{left:160px;top:270px;width:1600px;height:150px}
+.lad{position:absolute;top:84px;display:flex;align-items:center;gap:10px}
+.lad span{height:42px;padding:0 14px;border-radius:9px;border:2px solid #CBD0DA;background:#fff;color:#9AA0AC;display:inline-flex;align-items:center;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.dm{position:absolute;top:452px;width:512px;height:398px}
+.dm .dn{position:absolute;left:32px;top:200px;font:700 40px Poppins;white-space:nowrap}
+.dm .dq{position:absolute;left:32px;top:256px;width:450px;font:500 23px/1.38 Poppins;color:var(--ink2)}
+.dm .nuc{position:absolute;left:32px;top:340px;height:38px;padding:0 12px;border-radius:9px;display:inline-flex;align-items:center;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* compare */
+.ctg{position:absolute;height:44px;padding:0 16px;border-radius:10px;background:var(--soft);display:inline-flex;align-items:center;font:600 21px Poppins;white-space:nowrap}
+/* worked sort */
+.bin{position:absolute;top:330px;width:490px;height:220px;border-radius:16px;border:3px dashed #CBD0DA;background:#fff}
+.bin .bh{position:absolute;left:0;top:-2px;width:490px;height:52px;border-radius:14px 14px 0 0;display:flex;align-items:center;justify-content:center;font:700 26px Poppins;color:#fff}
+.org{position:absolute;width:228px;height:64px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;padding:0 14px;font:600 20px Poppins;white-space:nowrap}
+#mon{position:absolute;top:292px;height:34px;padding:0 14px;border-radius:8px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+.mq .sl{font:500 25px/1.5 Poppins;margin-top:8px}
+.mq .sl b{display:inline-block;width:46px;font:600 22px 'IBM Plex Mono';color:var(--ac)}
+#sF .fcard .fl.txt{font-size:28px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · BIOLOGY · CH 1 THE LIVING WORLD</div>
+    <div class="subj" id="subj">LIVING DIAGRAM</div>
+    <div class="ghost" id="tgh">NOT IN THE CURRENT NCERT TEXT</div>
+    <div id="title">The Three <span class="acc">Domains</span></div>
+    <div id="sub">How one molecule split all life into three</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#3E9B5F" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE HARSH PLACES · TINY LIFE</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Microbes live happily in all three</div></div>
+      <div class="card rf" id="hk"><div class="lbl" id="hkL" style="left:36px;top:30px">AARAV'S CYCLING TRIP</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <svg id="hsS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="hkP" style="left:36px;top:494px">Same kind of life as curd bacteria?</div>
+        <div class="pillp ac" id="hkP2" style="left:36px;top:494px">They look alike. Inside, they are very different.</div></div>
+    </div>
+
+    <!-- B: five kingdoms, prokaryote vs eukaryote -->
+    <div id="sB">
+      <div class="card full" id="bl"><div class="lbl" style="left:36px;top:30px">FIVE KINGDOMS · WHITTAKER, 1969</div><div class="ghost" id="bgh" style="right:28px;top:22px">NOT IN THE CURRENT NCERT TEXT</div><div id="kgs"></div>
+        <svg id="blS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="blP" style="left:36px;top:494px">Monera looked like one simple group</div></div>
+      <div class="card rf" id="br"><div class="lbl" style="left:36px;top:30px">TWO KINDS OF CELL</div><svg id="brS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- Z: cell, ribosome, rRNA -->
+    <div id="sZ">
+      <div id="zch"></div>
+      <div class="card" id="zd"><svg id="zS" width="1056" height="526" style="position:absolute;left:0;top:0"></svg>
+        <div id="ztr" style="position:absolute;right:28px;top:22px;display:flex;gap:10px;align-items:center"><div class="ghost" id="zgh" style="position:relative">EXAMPLE FIGURES</div><div class="tag" id="zsc" style="position:relative"><span id="zscN">x1</span></div></div></div>
+      <div class="card" id="zi"><div id="lvs"></div></div>
+    </div>
+
+    <!-- S: comparing rRNA, stage by stage -->
+    <div id="sS"><div class="card wide" id="sw"><div class="lbl" style="left:36px;top:30px">COMPARING RIBOSOMAL RNA · STEP BY STEP</div><div class="ghost" id="sgh" style="right:28px;top:22px">EXAMPLE FIGURES</div><div id="sps"></div><div id="sqs"></div><div id="dcs"></div>
+      <svg id="sS2" width="1600" height="580" style="position:absolute;left:0;top:0;pointer-events:none"></svg></div></div>
+
+    <!-- D: the three domains -->
+    <div id="sD">
+      <div class="card" id="dst"><div class="lbl" style="left:36px;top:30px">1990 · CARL WOESE, OTTO KANDLER AND MARK WHEELIS</div><div class="lad" id="lad" style="left:36px"></div></div>
+      <div id="dms"></div>
+    </div>
+
+    <!-- C: bacteria vs archaea + think -->
+    <div id="sC">
+      <div class="card full" id="ca"><div class="lbl" style="left:36px;top:30px">BACTERIA</div><svg id="caS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div id="cas"></div></div>
+      <div class="card rf" id="cb"><div class="lbl" style="left:36px;top:30px">ARCHAEA</div><svg id="cbS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div id="cbs"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: sort six organisms -->
+    <div id="sW"><div class="card wide" id="wk"><div class="lbl" style="left:36px;top:30px">WORKED EXAMPLE · SORT SIX ORGANISMS INTO DOMAINS</div><div id="bins"></div><div id="orgs"></div><div id="mon">OLD KINGDOM MONERA</div>
+      <svg id="wS" width="1600" height="580" style="position:absolute;left:0;top:0;pointer-events:none"></svg></div></div>
+
+    <!-- X / Q / F -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="520" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2"><span class="acc">Three</span> domains of life.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

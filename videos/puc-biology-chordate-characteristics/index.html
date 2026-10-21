@@ -1,0 +1,167 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Biology Ep 36 - Chordate Characteristics</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Biology Ep 36: chordate characteristics (Living diagram, leaf green) ===== */
+:root{--br:#2E2A24;--no:#2A9D8F;--nc:#4C5FD5;--gs:#E4572E;--rb:#D1495B;--tl:#C9962B}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.ac{color:var(--ac)}
+/* title card objects */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .jt{position:absolute;right:24px;top:36px;height:48px;display:flex;align-items:center;gap:8px}
+.jr .jt b{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+#plan{position:absolute;left:0;top:0;width:784px;height:580px}
+.bigw{position:absolute;font:700 64px Poppins;letter-spacing:-.02em;white-space:nowrap}
+.ctr{position:absolute;left:36px;width:712px;height:70px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:16px;padding:0 20px;font:600 27px Poppins;white-space:nowrap}
+.ctr b{flex:none;width:38px;height:38px;border-radius:50%;background:var(--ac);color:#fff;font:700 19px Poppins;display:flex;align-items:center;justify-content:center}
+/* zoom ladder */
+#zch{position:absolute;left:160px;top:248px;display:flex;align-items:center;gap:12px}
+#zch .zc{height:48px;padding:0 18px;border-radius:10px;border:2px solid #CBD0DA;background:#fff;color:#9AA0AC;display:inline-flex;align-items:center;font:600 20px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+#zch .za{display:inline-flex}
+#zd{left:160px;top:324px;width:1056px;height:526px;overflow:hidden}
+#zi{left:1248px;top:324px;width:512px;height:526px}
+.lvI{position:absolute;left:0;top:0;width:512px;height:526px}
+.zl{font:600 26px Poppins;fill:#16213E}
+.zm{font:600 16px 'IBM Plex Mono';letter-spacing:.1em;fill:#6B7280}
+.fr{position:absolute;left:28px;width:456px;height:76px;border-radius:12px}
+.fr .d{position:absolute;left:14px;top:18px;width:40px;height:40px;border-radius:50%;color:#fff;font:700 19px Poppins;display:flex;align-items:center;justify-content:center}
+.fr .fn{position:absolute;left:70px;top:8px;font:700 23px Poppins;white-space:nowrap}
+.fr .fs{position:absolute;left:70px;top:42px;font:500 18px Poppins;color:var(--mute);white-space:nowrap}
+.ch4{position:absolute;height:42px;padding:0 14px;border-radius:9px;background:var(--ac2);color:#1F6B3F;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+/* process: notochord over a lifetime */
+#pd{left:160px;top:270px;width:1056px;height:580px;overflow:hidden}
+#pr{left:1248px;top:270px;width:512px;height:580px}
+.sp3{position:absolute;left:28px;width:456px;height:118px;border-radius:14px;border:2.5px solid #CBD0DA;background:#fff}
+.sp3 .n{position:absolute;left:18px;top:18px;width:40px;height:40px;border-radius:50%;border:2.5px solid #CBD0DA;color:#9AA0AC;font:700 19px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.sp3 .sn{position:absolute;left:74px;top:14px;font:700 25px Poppins;white-space:nowrap}
+.sp3 .sf{position:absolute;left:74px;top:50px;font:500 18px Poppins;color:var(--mute);white-space:nowrap}
+.sp3 .se{position:absolute;left:74px;top:80px;font:italic 600 18px Poppins;color:var(--ink2);white-space:nowrap}
+#proto{position:absolute;left:28px;height:40px;padding:0 14px;border-radius:9px;background:var(--ac);color:#fff;display:inline-flex;align-items:center;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.tlx{font:600 16px 'IBM Plex Mono';letter-spacing:.1em;fill:#6B7280}
+/* vertebrata */
+.vr{position:absolute;left:36px;width:712px;height:130px;border-radius:14px;background:var(--soft)}
+.vr i{position:absolute;left:20px;top:28px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.vr .vn{position:absolute;left:116px;top:20px;font:700 28px Poppins;white-space:nowrap}
+.vr .vq{position:absolute;left:116px;top:62px;font:500 21px Poppins;color:var(--ink2);white-space:nowrap}
+.vr .cc{position:absolute;top:74px;height:36px;padding:0 12px;border-radius:8px;background:#fff;display:inline-flex;align-items:center;font:600 17px 'IBM Plex Mono';white-space:nowrap}
+/* comparison */
+.cmp{position:absolute;left:36px;width:712px;height:66px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:14px;padding:0 18px;font:600 24px Poppins;white-space:nowrap}
+.cmp b{flex:none;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+/* statement */
+#stF .lad{font:600 44px Poppins;color:var(--ink);letter-spacing:-.01em}
+#stF .lad b{color:var(--ac)}
+/* sort board */
+.colW{position:absolute;top:76px;width:352px;height:470px}
+.colW .ch2{position:absolute;left:0;top:0;width:352px;height:40px;border-radius:9px;background:var(--soft);display:flex;align-items:center;justify-content:center;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.colW .dz{position:absolute;left:0;top:52px;width:352px;height:220px;border-radius:14px;border:2.5px dashed #CBD0DA;background:#fff}
+.colW .it{position:absolute;left:0;top:52px;width:352px;height:220px;border-radius:14px;background:var(--ac2)}
+.colW .it.no{background:#FBE3E3}
+.colW .it svg.dr{position:absolute;left:0;top:0}
+.colW .it .inm{position:absolute;left:8px;width:336px;top:168px;text-align:center;font:italic 700 25px/1.15 Poppins;white-space:nowrap}
+.colW .rs{position:absolute;left:8px;top:290px;width:336px;text-align:center;font:500 20px/1.35 Poppins;color:var(--ink2)}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+.mq .sl{font:500 25px/1.5 Poppins;margin-top:8px;white-space:nowrap}
+.mq .sl b{display:inline-block;width:52px;font:600 22px 'IBM Plex Mono';color:var(--ac)}
+#sF .fcard .fl.txt{font-size:29px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · BIOLOGY · CH 4 ANIMAL KINGDOM</div>
+    <div class="subj" id="subj">LIVING DIAGRAM</div>
+    <div id="title">Chordate <span class="acc">Characteristics</span></div>
+    <div id="sub">Three features, one living diagram</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#3E9B5F" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: three animals, one body plan + Diya's textbook -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE ANIMALS · ONE BODY PLAN</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Rod · nerve tube · throat slits, early in life</div></div>
+      <div class="card rf" id="hk"><div class="lbl" id="hkL" style="left:36px;top:30px">DIYA'S TEXTBOOK</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div class="pillp" id="hkP" style="left:132px;top:494px">Fish embryo, human embryo: cousins?</div>
+        <div id="plan"><div class="lbl" style="left:36px;top:30px">THE ANSWER</div>
+          <div class="bigw" id="pW" style="left:36px;top:80px">Both are <span class="acc">chordates</span></div>
+          <div class="lbl" id="pL" style="left:36px;top:206px">BY THE END YOU WILL KNOW</div>
+          <div class="ctr" id="pc0" style="top:244px"><b>1</b>The three features of every chordate</div>
+          <div class="ctr" id="pc1" style="top:330px"><b>2</b>Chordates vs all other animals</div>
+          <div class="ctr" id="pc2" style="top:416px"><b>3</b>The three groups inside them</div></div></div>
+    </div>
+
+    <!-- Z: body plan + cross-section (zoom ladder) -->
+    <div id="sZ">
+      <div id="zch"></div>
+      <div class="card" id="zd"><svg id="zS" width="1056" height="526" style="position:absolute;left:0;top:0"></svg>
+        <div id="ztr" style="position:absolute;right:28px;top:22px;display:flex;gap:10px;align-items:center"><div class="ghost" id="zgh" style="position:relative">EXAMPLE FIGURES</div><div class="tag" id="zsc" style="position:relative"><span id="zscN">x1</span></div></div></div>
+      <div class="card" id="zi"><div class="lvI" id="lvi0"><div class="lbl" style="left:28px;top:30px">THE CHORDATE BODY PLAN</div><div id="frs"></div></div>
+        <div class="lvI" id="lvi1"><div class="lbl" style="left:28px;top:30px">THE SLICE · TOP TO BOTTOM</div><div id="frs2"></div>
+          <div class="ch4" id="z40" style="left:28px;top:404px">Bilateral</div><div class="ch4" id="z41" style="left:174px;top:404px">Triploblastic</div>
+          <div class="ch4" id="z42" style="left:28px;top:458px">Coelomate</div><div class="ch4" id="z43" style="left:174px;top:458px">Organ-system level</div></div></div>
+    </div>
+
+    <!-- P: the notochord over a lifetime (process) -->
+    <div id="sP">
+      <div class="card" id="pd"><div class="lbl" style="left:36px;top:30px">THE NOTOCHORD OVER A LIFETIME</div><div class="tag" id="pTag" style="right:28px;top:22px"><span id="pTagN">UROCHORDATA</span></div>
+        <svg id="pS" width="1056" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="pr"><div class="lbl" style="left:28px;top:30px">PHYLUM CHORDATA · 3 SUBPHYLA</div><div id="sp3s"></div><div id="proto">PROTOCHORDATES · ALL MARINE</div></div>
+    </div>
+
+    <!-- V: vertebrata -->
+    <div id="sV">
+      <div class="card full" id="vl"><div class="lbl" style="left:36px;top:30px">CHORDATES AND VERTEBRATES</div><svg id="vS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="vP" style="left:36px;top:494px">All vertebrates are chordates, not all chordates are vertebrates</div></div>
+      <div class="card rf" id="vr"><div class="lbl" style="left:36px;top:30px">VERTEBRATES ADD MORE</div><div id="vrs"></div></div>
+    </div>
+
+    <!-- K: chordate vs non-chordate + pause and think -->
+    <div id="sK">
+      <div class="card full" id="ka"><div class="lbl" style="left:36px;top:30px">CHORDATE · A FISH</div><svg id="kaS" width="784" height="250" style="position:absolute;left:0;top:0"></svg><div id="kas"></div></div>
+      <div class="card rf" id="kb"><div class="lbl" style="left:36px;top:30px">NON-CHORDATE · A COCKROACH</div><svg id="kbS" width="784" height="250" style="position:absolute;left:0;top:0"></svg><div id="kbs"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW"><div class="card wide" id="wb"><div class="lbl" style="left:36px;top:30px">WORKED EXAMPLE · SORT FOUR SEA ANIMALS</div><div id="cols"></div></div></div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="460" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card + questions + NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">A <span class="acc">notochord</span> makes a chordate.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

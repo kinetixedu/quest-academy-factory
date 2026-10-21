@@ -1,0 +1,177 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Biology Ep 26 - Angiosperms: Monocots and Dicots</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Biology Ep 26: angiosperms, monocots and dicots (Living diagram, leaf green) ===== */
+:root{--br:#2E2A24;--hn:#0E8F8F;--dn:#4A5FC1;--tn:#C9962B}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.ac{color:var(--ac)}
+/* title card objects */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+#ghT{left:0;top:872px}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.zl{font:600 26px Poppins;fill:#16213E}
+.lt{position:absolute;height:44px;padding:0 16px;border-radius:10px;background:var(--soft);display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* split tree */
+.sb{position:absolute;height:64px;padding:0 24px;border-radius:14px;display:inline-flex;align-items:center;gap:12px;font:700 30px Poppins;white-space:nowrap}
+.fv{position:absolute;top:430px;width:130px;height:104px;border-radius:14px;background:var(--soft)}
+.fv i{position:absolute;left:0;width:130px;top:14px;display:flex;justify-content:center}
+.fv span{position:absolute;left:0;width:130px;top:64px;text-align:center;font:600 20px Poppins;white-space:nowrap}
+/* word */
+.wb{position:absolute;top:96px;height:110px;padding:0 30px;border-radius:16px;display:flex;align-items:center;font:700 64px Poppins;letter-spacing:-.02em;white-space:nowrap}
+.wop{position:absolute;top:120px;font:600 52px 'IBM Plex Mono';color:var(--mute)}
+.wm{position:absolute;top:226px;height:42px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.big{position:absolute;font:600 56px/1 'IBM Plex Mono';white-space:nowrap}
+.sm{position:absolute;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* zoom ladder */
+#zch,#pch{position:absolute;left:160px;top:248px;display:flex;align-items:center;gap:12px}
+#zch .zc,#pch .zc{height:48px;padding:0 18px;border-radius:10px;border:2px solid #CBD0DA;background:#fff;color:#9AA0AC;display:inline-flex;align-items:center;font:600 20px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+#zch .za,#pch .za{display:inline-flex}
+#zd,#pd{left:160px;top:324px;width:1056px;height:526px;overflow:hidden}
+#zi,#pe{left:1248px;top:324px;width:512px;height:526px}
+.lvI{position:absolute;left:0;top:0;width:512px;height:526px}
+.lvI .ln{position:absolute;left:36px;top:76px;font:700 56px Poppins;letter-spacing:-.02em;white-space:nowrap}
+.lvI .ld{position:absolute;left:36px;top:160px;width:440px;font:500 28px/1.35 Poppins}
+.lvI .lh{position:absolute;left:36px;top:300px;width:440px;font:600 24px/1.35 Poppins;color:var(--ac)}
+/* process side card */
+.pq{position:absolute;left:36px;width:440px;height:96px;border-radius:12px;background:var(--soft)}
+.pq .pn{position:absolute;left:18px;top:10px;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.pq .px{position:absolute;left:18px;top:38px;font-size:30px;white-space:nowrap}
+/* cotyledons */
+.cr2{position:absolute;left:36px;width:712px;height:150px;border-radius:14px;background:var(--soft)}
+.cr2 .cb{position:absolute;left:24px;top:22px;font:700 34px Poppins;white-space:nowrap}
+.cr2 .cs{position:absolute;left:24px;top:76px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.cr2 .cn{position:absolute;right:24px;top:30px;font:600 64px/1 'IBM Plex Mono';color:var(--ac)}
+.ex{position:absolute;top:104px;display:flex;gap:10px}
+.ex span{height:34px;padding:0 12px;border-radius:8px;background:#fff;display:inline-flex;align-items:center;font:600 19px Poppins;white-space:nowrap}
+/* comparison */
+#vc{left:160px;top:270px;width:1600px;height:580px}
+.vh{position:absolute;top:30px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font:600 19px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.vr{position:absolute;left:24px;width:1552px;height:112px;border-radius:14px}
+.vr .vk{position:absolute;left:18px;top:30px;display:flex;align-items:center;gap:12px;font:700 28px Poppins;white-space:nowrap}
+.vr > svg{position:absolute;top:6px}
+.vr .vt{position:absolute;top:36px;font:500 24px Poppins;white-space:nowrap}
+/* sort board */
+.bin{position:absolute;top:76px;width:748px;height:476px;border-radius:14px;border:2.5px dashed #CBD0DA}
+.bin .bh{position:absolute;left:20px;top:16px;height:40px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.tl{position:absolute;left:20px;width:704px;height:118px;border-radius:14px;background:var(--ac2)}
+.tl i{position:absolute;left:20px;top:21px;width:76px;height:76px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.tl .tn{position:absolute;left:118px;top:20px;font:700 32px Poppins;white-space:nowrap}
+.tl .tc{position:absolute;left:118px;top:68px;font:500 22px Poppins;color:var(--ink2);white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+.mq .sl{font:500 25px/1.5 Poppins;margin-top:8px}
+.mq .sl b{display:inline-block;width:46px;font:600 22px 'IBM Plex Mono';color:var(--ac)}
+#sF .fcard .fl.txt{font-size:28px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#stage svg *:not([transform]){transform-box:fill-box;transform-origin:center}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · BIOLOGY · CH 3 PLANT KINGDOM</div>
+    <div class="subj" id="subj">LIVING DIAGRAM</div>
+    <div id="title">Monocots and <span class="acc">Dicots</span></div>
+    <div id="sub">Angiosperms explained with one living diagram</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#3E9B5F" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+    <div class="ghost" id="ghT">NOT IN THE CURRENT NCERT TEXT</div>
+
+    <!-- H: two leaves + Diya + the split -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">TWO LEAVES · HELD TO THE LIGHT</div><svg id="hlS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="lt" id="hlt0">PARALLEL LINES</div><div class="lt" id="hlt1">A NET OF VEINS</div>
+        <div class="pillp ac" id="hlP" style="left:36px;top:500px">One clue · two big groups</div></div>
+      <div class="card rf" id="hk"><div class="lbl" id="hkL" style="left:36px;top:30px">DIYA · THE COLLEGE GARDEN</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-corridor.jpg">
+        <div class="pillp" id="hkP" style="left:132px;top:494px">Diya · PCMB · wants to be a doctor</div>
+        <div id="spl"><div class="lbl" style="left:36px;top:30px">ALL FLOWERING PLANTS</div><svg id="splS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+          <div class="sb" id="sb0" style="background:var(--ink);color:#fff;top:84px">Flowering plants</div>
+          <div class="sb" id="sb1" style="background:var(--ac2);color:#1F6B3F;top:252px">Monocots</div><div class="sb" id="sb2" style="background:var(--ac2);color:#1F6B3F;top:252px">Dicots</div>
+          <div id="fvs"></div></div></div>
+    </div>
+
+    <!-- D: the word + range -->
+    <div id="sD">
+      <div class="card full" id="dw"><div class="lbl" style="left:36px;top:30px">WHAT THE WORD MEANS</div><div class="ghost" id="ghD" style="right:28px;top:22px">NOT IN THE CURRENT NCERT TEXT</div>
+        <div class="wb" id="wb0" style="left:36px;background:var(--ac);color:#fff">Angio</div><div class="wop" id="wop">+</div><div class="wb" id="wb1" style="background:var(--ink);color:#fff">sperm</div>
+        <div class="wm" id="wm0" style="background:var(--ac2);color:#1F6B3F">CLOSED VESSEL</div><div class="wm" id="wm1" style="background:var(--soft);color:var(--ink)">SEED</div>
+        <svg id="dwS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="dwP" style="left:36px;top:500px">Seeds closed inside a fruit</div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">THE FLOWERING PLANTS</div><svg id="drS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="drP" style="left:36px;top:84px">Sex organs sit inside flowers</div>
+        <div class="lbl" id="drL" style="left:36px;top:168px">SMALLEST TO TALLEST</div>
+        <div class="sm" id="dr0" style="left:36px;top:470px">WOLFFIA · FLOATS ON WATER</div><div class="sm" id="dr0b" style="left:36px;top:496px">ALMOST TOO SMALL TO SEE</div>
+        <div class="big" id="dr1" style="left:460px;top:212px;font-size:44px">&gt; 100 m</div><div class="sm" id="dr1b" style="left:460px;top:268px">EUCALYPTUS · TALL TREES</div></div>
+    </div>
+
+    <!-- Z: zoom ladder -->
+    <div id="sZ">
+      <div id="zch"></div>
+      <div class="card" id="zd"><svg id="zS" width="1056" height="526" style="position:absolute;left:0;top:0"></svg>
+        <div id="ztr" style="position:absolute;right:28px;top:22px;display:flex;gap:10px;align-items:center"><div class="ghost" id="zgh" style="position:relative">EXAMPLE FIGURES</div><div class="tag" id="zsc" style="position:relative"><span id="zscN">x1</span></div></div></div>
+      <div class="card" id="zi"><div id="lvs"></div></div>
+    </div>
+
+    <!-- P: double fertilisation -->
+    <div id="sP">
+      <div id="pch"></div>
+      <div class="card" id="pd"><svg id="pS" width="1056" height="526" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="pe"><div id="pis"></div><div class="lbl" id="peL" style="left:36px;top:300px">THE TWO FUSIONS</div>
+        <div class="pq" id="pq0" style="top:336px"><div class="pn">SYNGAMY</div><div class="px" id="pqx0"></div></div>
+        <div class="pq" id="pq1" style="top:420px"><div class="pn">TRIPLE FUSION</div><div class="px" id="pqx1"></div></div></div>
+    </div>
+
+    <!-- C: cotyledons -->
+    <div id="sC">
+      <div class="card full" id="cl"><div class="lbl" style="left:36px;top:30px">INSIDE THE SEED</div><svg id="clS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="cr"><div class="lbl" style="left:36px;top:30px">ONE OR TWO SEED LEAVES</div>
+        <div class="cr2" id="cr0" style="top:84px"><div class="cb">Monocots</div><div class="cs">MONO = ONE COTYLEDON</div><div class="cn">1</div><div class="ex" style="left:24px"><span>Maize</span><span>Wheat</span></div></div>
+        <div class="cr2" id="cr1" style="top:254px"><div class="cb">Dicots</div><div class="cs">DI = TWO COTYLEDONS</div><div class="cn">2</div><div class="ex" style="left:24px"><span>Pea</span><span>Gram</span></div></div></div>
+    </div>
+
+    <!-- V: side by side + pause and think -->
+    <div id="sV">
+      <div class="card" id="vc"><div id="vrs"></div>
+        <div class="vh" style="left:250px;width:640px;background:var(--ac2);color:#1F6B3F">MONOCOT · 1 COTYLEDON</div><div class="vh" style="left:922px;width:640px;background:var(--ink);color:#fff">DICOT · 2 COTYLEDONS</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW"><div class="card wide" id="wbd"><div class="lbl" style="left:36px;top:30px">WORKED EXAMPLE · SORT SIX PLANTS, ONE CLUE EACH</div>
+      <div class="bin" id="bn0" style="left:36px"><div class="bh" style="background:var(--ac2);color:#1F6B3F">MONOCOT</div></div>
+      <div class="bin" id="bn1" style="left:816px"><div class="bh" style="background:var(--ink);color:#fff">DICOT</div></div><div id="tls"></div></div></div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="520" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card + questions + NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">One <span class="acc">cotyledon</span> or two.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

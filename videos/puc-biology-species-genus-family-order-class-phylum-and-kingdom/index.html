@@ -1,0 +1,152 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Biology Ep 7 - Species, Genus, Family, Order, Class, Phylum and Kingdom</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Biology Ep 07: the seven ranks, walked (Living diagram, leaf green) ===== */
+:root{--br:#2E2A24;--mg:#3E9B5F;--wh:#C9962B;--fl:#5AA0C8;--hu:#D1495B}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.ac{color:var(--ac)}
+#stage svg circle,#stage svg text,#stage svg .pp{transform-box:fill-box;transform-origin:center}
+/* title card objects */
+.job{position:absolute;top:724px;width:376px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:18px;top:14px;width:68px;height:68px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:108px;top:14px;font:700 28px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:108px;top:54px;font:italic 500 20px Poppins;color:var(--ink2);white-space:nowrap}
+.jr .jt{position:absolute;right:20px;top:24px;height:48px;padding:0 14px;border-radius:10px;background:var(--ac);color:#fff;display:flex;align-items:center;gap:6px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.jr .jt b{width:9px;height:9px;border-radius:50%;background:#fff;display:inline-block}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+#hlad{position:absolute;left:0;top:0;width:784px;height:580px}
+.keyt{position:absolute;display:flex;align-items:center;gap:10px;font:600 17px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.keyt b{width:20px;height:20px;border-radius:50%;display:inline-block}
+/* ranks */
+.pr{position:absolute;height:52px;border-radius:12px;background:var(--soft);display:flex;align-items:center;justify-content:center;gap:14px;font:600 26px Poppins;white-space:nowrap}
+.pr em{font:600 15px 'IBM Plex Mono';font-style:normal;letter-spacing:.08em;color:var(--mute)}
+.arw{position:absolute;display:flex;align-items:center;gap:10px;height:44px;padding:0 16px;border-radius:10px;font:600 21px Poppins;white-space:nowrap}
+/* zoom ladder (rank ladder) */
+#zch{position:absolute;left:160px;top:248px;display:flex;align-items:center;gap:10px}
+#zch .zc{height:48px;padding:0 16px;border-radius:10px;border:2px solid #CBD0DA;background:#fff;color:#9AA0AC;display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+#zch .za{display:inline-flex}
+#zd{left:160px;top:324px;width:1056px;height:526px;overflow:hidden}
+#zi{left:1248px;top:324px;width:512px;height:526px}
+.lvI{position:absolute;left:0;top:0;width:512px;height:526px}
+.lvI .ln{position:absolute;left:36px;top:72px;font:700 54px Poppins;letter-spacing:-.02em;white-space:nowrap}
+.lvI .lv{position:absolute;left:36px;top:150px;font:italic 600 34px Poppins;color:var(--ac);white-space:nowrap}
+.lvI .ld{position:absolute;left:36px;top:214px;width:440px;font:500 26px/1.35 Poppins}
+.lvI .lh{position:absolute;left:36px;top:340px;width:440px;font:600 22px/1.35 Poppins;color:var(--mute)}
+.zl{font:600 24px Poppins;fill:#16213E}
+.rk{font:600 16px 'IBM Plex Mono';letter-spacing:1.2px}
+/* housefly address */
+.ad{position:absolute;left:28px;width:456px;height:56px;border-radius:12px;background:var(--soft)}
+.ad .ak{position:absolute;left:16px;top:18px;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.ad .av2{position:absolute;left:142px;top:11px;font:600 24px Poppins;white-space:nowrap}
+.ad .ar{position:absolute;right:12px;top:12px;height:32px;padding:0 10px;border-radius:8px;background:#fff;display:inline-flex;align-items:center;font:600 14px 'IBM Plex Mono';letter-spacing:.06em;color:var(--ac);white-space:nowrap}
+/* compare */
+.cmpc{top:270px;width:784px;height:400px}
+#cst{left:160px;top:702px;width:1600px;height:148px}
+.cs{position:absolute;height:38px;border-radius:9px;background:var(--soft);display:flex;align-items:center;justify-content:center;font:600 19px Poppins;white-space:nowrap}
+.csh{position:absolute;top:18px;font:600 14px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap;text-align:center}
+#split{position:absolute;top:12px;height:30px;padding:0 10px;border-radius:7px;background:var(--ac);color:#fff;display:inline-flex;align-items:center;font:600 14px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* worked table */
+.tb{position:absolute;height:56px;border-radius:10px;display:flex;align-items:center;padding:0 14px;font:600 22px Poppins;white-space:nowrap}
+.th{position:absolute;top:76px;font:600 15px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.rsn{position:absolute;top:400px;width:347px;height:148px;border-radius:14px;background:var(--soft)}
+.rsn .rk2{position:absolute;left:20px;top:16px;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.rsn .rv{position:absolute;left:20px;top:42px;font:700 28px Poppins;white-space:nowrap}
+.rsn .rw{position:absolute;left:20px;top:86px;width:310px;font:500 19px/1.3 Poppins;color:var(--ink2)}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+.mq .sl{font:500 25px/1.5 Poppins;margin-top:8px}
+.mq .sl b{display:inline-block;width:46px;font:600 22px 'IBM Plex Mono';color:var(--ac)}
+#sF .fcard .fl.txt{font-size:27px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · BIOLOGY · CH 1 THE LIVING WORLD</div>
+    <div class="subj" id="subj">LIVING DIAGRAM</div>
+    <div id="title">The Seven <span class="acc">Ranks</span></div>
+    <div id="sub">Four living things, walked up one ladder</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#3E9B5F" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: four things, one address + Diya's kitchen + ladder preview -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">FOUR LIVING THINGS · ONE ADDRESS EACH</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:500px">Each address has seven lines</div></div>
+      <div class="card rf" id="hk"><div class="lbl" id="hkL" style="left:36px;top:30px">DIYA'S KITCHEN</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-kitchen.jpg">
+        <div class="pillp" id="hkP" style="left:132px;top:494px">How close are these, really?</div>
+        <div id="hlad"><div class="lbl" style="left:36px;top:30px">WHERE DO THEY PART WAYS?</div><svg id="hlS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div></div>
+    </div>
+
+    <!-- R: the seven ranks -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">THE SEVEN MAIN RANKS</div><div id="prs"></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">GROUPS INSIDE GROUPS</div><svg id="rrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="arw" id="aw0" style="left:36px;top:500px;background:var(--ac2);color:#1F6B3F">More kinds going up</div>
+        <div class="arw" id="aw1" style="left:400px;top:500px;background:var(--soft);color:var(--ink)">Fewer shared features</div></div>
+    </div>
+
+    <!-- Z: mango climbs the rank ladder -->
+    <div id="sZ">
+      <div id="zch"></div>
+      <div class="card" id="zd"><svg id="zS" width="1056" height="526" style="position:absolute;left:0;top:0"></svg>
+        <div id="ztr" style="position:absolute;right:28px;top:22px;display:flex;gap:10px;align-items:center"><div class="tag" id="zsc" style="position:relative"><span id="zscN">THE PLANT</span></div></div></div>
+      <div class="card" id="zi"><div id="lvs"></div></div>
+    </div>
+
+    <!-- F: housefly, labelled -->
+    <div id="sF2">
+      <div class="card" id="fd" style="left:160px;top:270px;width:1056px;height:580px;overflow:hidden"><div class="lbl" style="left:36px;top:30px">HOUSEFLY · TOP VIEW</div><svg id="fS" width="1056" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="fa" style="left:1248px;top:270px;width:512px;height:580px"><div class="lbl" style="left:28px;top:30px">ITS ADDRESS</div><div id="ads"></div></div>
+    </div>
+
+    <!-- C: mango vs wheat + pause and think -->
+    <div id="sC">
+      <div class="card cmpc" id="cm" style="left:160px"><div class="lbl" style="left:36px;top:30px">MANGO · DICOT</div><svg id="cmS" width="784" height="400" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="cmP" style="left:400px;top:322px">Class Dicotyledonae</div></div>
+      <div class="card cmpc" id="cw" style="left:976px"><div class="lbl" style="left:36px;top:30px">WHEAT · MONOCOT</div><svg id="cwS" width="784" height="400" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="cwP" style="left:400px;top:322px">Class Monocotyledonae</div></div>
+      <div class="card" id="cst"><div id="csts"></div><div id="split">SPLIT HERE</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example, a human's full address -->
+    <div id="sW"><div class="card wide" id="wb"><div class="lbl" style="left:36px;top:30px">WORKED EXAMPLE · THE FULL ADDRESS OF A HUMAN · NCERT TABLE 1.1</div><div id="tbs"></div><div id="rsns"></div></div></div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="520" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card + questions + NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Higher rank, <span class="acc">more kinds</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

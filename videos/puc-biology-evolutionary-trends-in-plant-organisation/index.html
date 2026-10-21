@@ -1,0 +1,151 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Biology Ep 30 - Evolutionary Trends in Plant Organisation</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+
+/* ===== PUC Biology Ep 26: angiosperms, monocots and dicots (Living diagram, leaf green) ===== */
+:root{--br:#2E2A24;--hn:#0E8F8F;--dn:#4A5FC1;--tn:#C9962B}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.ac{color:var(--ac)}
+/* title card objects */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+#ghT{left:0;top:872px}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.zl{font:600 26px Poppins;fill:#16213E}
+.lt{position:absolute;height:44px;padding:0 16px;border-radius:10px;background:var(--soft);display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* zoom ladder */
+#zch,#pch{position:absolute;left:160px;top:248px;display:flex;align-items:center;gap:12px}
+#zch .zc,#pch .zc{height:48px;padding:0 18px;border-radius:10px;border:2px solid #CBD0DA;background:#fff;color:#9AA0AC;display:inline-flex;align-items:center;font:600 20px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+#zch .za,#pch .za{display:inline-flex}
+#zd,#pd{left:160px;top:324px;width:1056px;height:526px;overflow:hidden}
+#zi,#pe{left:1248px;top:324px;width:512px;height:526px}
+.lvI{position:absolute;left:0;top:0;width:512px;height:526px}
+.lvI .ln{position:absolute;left:36px;top:76px;font:700 56px Poppins;letter-spacing:-.02em;white-space:nowrap}
+.lvI .ld{position:absolute;left:36px;top:160px;width:440px;font:500 28px/1.35 Poppins}
+.lvI .lh{position:absolute;left:36px;top:300px;width:440px;font:600 24px/1.35 Poppins;color:var(--ac)}
+/* process side card */
+.pq{position:absolute;left:36px;width:440px;height:96px;border-radius:12px;background:var(--soft)}
+.pq .pn{position:absolute;left:18px;top:10px;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.pq .px{position:absolute;left:18px;top:38px;font-size:30px;white-space:nowrap}
+
+.sb{position:absolute;left:36px;width:712px;height:84px;border-radius:14px;background:var(--soft)}
+.sb i{position:absolute;left:20px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.sb .sn{position:absolute;left:92px;top:22px;font:700 30px Poppins;white-space:nowrap}
+.sb .ss{position:absolute;right:22px;top:32px;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.gt{position:absolute;top:76px;width:288px;height:380px;border-radius:14px;background:var(--soft)}
+.gt .gn{position:absolute;left:18px;top:232px;font:700 28px Poppins;white-space:nowrap}
+.gt .gs{position:absolute;left:18px;top:276px;width:256px;font:500 21px/1.3 Poppins;color:var(--ink2)}
+.gt .gx{position:absolute;left:18px;top:16px;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.tc{position:absolute;top:480px;height:52px;padding:0 18px;border-radius:12px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap}
+/* tracker grid */
+.gh{position:absolute;top:22px;width:160px;height:44px;border-radius:9px;display:flex;align-items:center;justify-content:center;font:600 15px 'IBM Plex Mono';letter-spacing:.04em;white-space:nowrap;background:var(--soft);color:var(--mute)}
+.rl2{position:absolute;left:24px;width:170px;font:700 23px/1.2 Poppins}
+.cl2{position:absolute;width:160px;text-align:center;font:600 18px/1.25 Poppins;white-space:nowrap}
+/* heterospory */
+.hp{position:absolute;top:76px;width:496px;height:470px;border-radius:14px;background:var(--soft)}
+.hp .hh{position:absolute;left:20px;top:16px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.hp .ht{position:absolute;left:20px;top:384px;width:456px;font:600 23px/1.3 Poppins}
+/* comparison */
+#vc{left:160px;top:270px;width:1600px;height:580px}
+.vh{position:absolute;top:24px;height:56px;border-radius:12px;display:flex;align-items:center;gap:12px;padding:0 20px;font:700 26px Poppins;white-space:nowrap}
+.vr{position:absolute;left:24px;width:1552px;height:84px;border-radius:12px}
+.vr .vk{position:absolute;left:18px;top:24px;font:700 24px Poppins;white-space:nowrap}
+.vr .vt{position:absolute;top:24px;font:500 25px Poppins;white-space:nowrap}
+.vr .eq{position:absolute;left:1440px;top:22px;height:40px;padding:0 12px;border-radius:9px;display:inline-flex;align-items:center;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* matching */
+.mc{position:absolute;left:36px;width:900px;height:96px;border-radius:14px;background:var(--soft)}
+.mc .mn{position:absolute;left:20px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.mc .mt2{position:absolute;left:88px;top:28px;font:500 26px Poppins;white-space:nowrap}
+.mg{position:absolute;left:1180px;width:380px;height:96px;border-radius:14px;border:2.5px solid #CBD0DA;background:#fff;display:flex;align-items:center;justify-content:center;font:700 28px Poppins;white-space:nowrap;color:#9AA0AC}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+.mq .sl{font:500 25px/1.5 Poppins;margin-top:8px}
+.mq .sl b{display:inline-block;width:46px;font:600 22px 'IBM Plex Mono';color:var(--ac)}
+#sF .fcard .fl.txt{font-size:28px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+
+#mq .opt .ot{white-space:nowrap}
+#stage svg *:not([transform]){transform-box:fill-box;transform-origin:center}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · BIOLOGY · CH 3 PLANT KINGDOM</div>
+    <div class="subj" id="subj">LIVING DIAGRAM</div>
+    <div id="title">Evolutionary Trends in <span class="acc">Plants</span></div>
+    <div id="sub">From water slime to tall trees, in one living diagram</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#3E9B5F" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">LOW AND WET · TALL AND DRY</div><svg id="hlS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="hlP" style="left:36px;top:500px">All three are plants</div></div>
+      <div class="card rf" id="hk"><div class="lbl" id="hkL" style="left:36px;top:30px">DIYA · THE ROAD TO COLLEGE</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg">
+        <div class="pillp" id="hkP" style="left:132px;top:494px">What actually changed?</div>
+        <div id="spl"><div class="lbl" style="left:36px;top:30px">FOUR THINGS CHANGED</div><div id="sbs"></div>
+          <div class="pillp" id="splP" style="left:36px;top:470px">Step by step, across five groups</div></div></div>
+    </div>
+
+    <!-- D: the five groups -->
+    <div id="sD"><div class="card wide" id="dw"><div class="lbl" style="left:36px;top:30px">FIVE GROUPS · SIMPLE TO COMPLEX</div><div id="gts"></div><svg id="dwS" width="1600" height="580" style="position:absolute;left:0;top:0;pointer-events:none"></svg><div id="tcs"></div></div></div>
+
+    <!-- Z: one plant from each group -->
+    <div id="sZ">
+      <div id="zch"></div>
+      <div class="card" id="zd"><svg id="zS" width="1056" height="526" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="zi"><div id="lvs"></div></div>
+    </div>
+
+    <!-- P: the tracker -->
+    <div id="sP">
+      <div id="pch"></div>
+      <div class="card" id="pd"><div id="ghs"></div><div id="rls"></div><div id="cls"></div><svg id="pS" width="1056" height="526" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="pe"><div id="pis"></div></div>
+    </div>
+
+    <!-- S: heterospory -->
+    <div id="sS"><div class="card wide" id="hs"><div class="lbl" style="left:36px;top:30px">THE STEP BETWEEN FERNS AND SEEDS</div><div id="hps"></div><svg id="hS" width="1600" height="580" style="position:absolute;left:0;top:0;pointer-events:none"></svg></div></div>
+
+    <!-- V + think -->
+    <div id="sV">
+      <div class="card" id="vc"><svg id="vS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg><div id="vrs"></div>
+        <div class="vh" id="vh0" style="left:300px;background:#E1F4F2;color:#0B6B6B">Bryophytes · moss</div><div class="vh" id="vh1" style="left:870px;background:#E6E9F8;color:#33449A">Pteridophytes · fern</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W -->
+    <div id="sW"><div class="card wide" id="wbd"><div class="lbl" style="left:36px;top:30px">WORKED EXAMPLE · MATCH EACH CLUE TO ITS GROUP</div><svg id="wS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg><div id="mcs"></div></div></div>
+
+    <!-- X / Q / F -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="460" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">The <span class="acc">sporophyte</span> takes over.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
