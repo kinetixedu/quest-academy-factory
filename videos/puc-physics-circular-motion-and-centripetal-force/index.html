@@ -1,0 +1,178 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 68 - Circular Motion and Centripetal Force</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 68: circular motion and centripetal force (Motion notebook, stone on a string + T against v, car on a flat curve) ===== */
+:root{--v:#2F6FEB;--a:#D64545;--f:#D9731A;--om:#0E8F8F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.vv{color:var(--v)}.aa{color:var(--a)}.ff{color:var(--f)}
+.sv{position:absolute;left:0;top:0;overflow:hidden}
+/* title card cases */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr svg{position:absolute;right:16px;top:0}
+.wq{position:absolute;top:494px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap}
+#turn{position:absolute;left:452px;top:262px;width:236px;height:214px;background:#fff;border-radius:12px;box-shadow:0 8px 20px rgba(22,33,62,.22)}
+#turn .ml{position:absolute;left:16px;top:12px;font:600 14px 'IBM Plex Mono';letter-spacing:.1em;color:var(--mute);white-space:nowrap}
+/* P: chain + suppliers */
+.ck{position:absolute;left:36px;width:712px;height:104px;border-radius:14px;background:var(--soft)}
+.ck .cf{position:absolute;left:24px;top:24px;font-size:40px;white-space:nowrap}
+.ck .ct{position:absolute;right:20px;top:34px;height:36px;padding:0 12px;border-radius:8px;background:#fff;display:inline-flex;align-items:center;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.dn{position:absolute;left:356px;font:600 30px 'IBM Plex Mono';color:var(--mute)}
+.tl{position:absolute;width:340px;height:220px;border-radius:14px;background:var(--soft);overflow:hidden}
+.tl svg{position:absolute;left:0;top:0;overflow:hidden}
+.tl .tn{position:absolute;left:20px;top:150px;font:700 26px Poppins;white-space:nowrap}
+.tl .tw{position:absolute;left:20px;top:188px;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* sim readout */
+#roG{row-gap:4px}
+#roG .v{font-size:32px}
+#roG .k{font-size:28px}
+.stag{position:absolute;height:40px;padding:0 14px;border-radius:8px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:110px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:38px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:62px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.chipd{position:absolute;height:56px;padding:0 18px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:10px;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+/* side by side */
+.sbv{position:absolute;left:36px;top:84px;width:712px;height:300px;border-radius:14px;background:var(--soft)}
+.sbl{position:absolute;left:36px;font-size:36px;white-space:nowrap}
+/* reasoning chain + bars */
+.lk{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.lk .n{position:absolute;left:18px;top:25px;width:46px;height:46px;border-radius:50%;background:var(--ac);color:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.lk .lt{position:absolute;left:84px;top:14px;font:600 26px/1.3 Poppins;white-space:nowrap}
+.bar{position:absolute;left:36px;width:712px;height:40px}
+.bar .bk{position:absolute;left:0;top:0;width:190px;font:600 18px 'IBM Plex Mono';letter-spacing:.04em;line-height:40px;white-space:nowrap}
+.bar .bt{position:absolute;left:200px;top:6px;width:360px;height:28px;border-radius:6px;background:var(--soft)}
+.bar .bf{position:absolute;left:0;top:0;height:28px;border-radius:6px;background:var(--f)}
+.bar .bv{position:absolute;left:574px;top:0;font:600 26px 'IBM Plex Mono';line-height:40px;white-space:nowrap}
+.lim{position:absolute;width:0;border-left:3px dashed var(--ink)}
+/* worked */
+#wq{position:absolute;left:36px;top:70px;font:600 28px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:30px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#mq .mq{font-size:30px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 24px Poppins}
+#sF .fcard .fl{font-size:42px}
+#sF .fcard .fl.txt{font-size:29px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 4 LAWS OF MOTION</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Centripetal <span class="acc">Force</span></div>
+    <div id="sub">Who pulls it inward?</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: three things going round + Aarav's turn -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">GOING ROUND · WHO PULLS IT IN?</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Going round needs a pull toward the centre</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV'S RIDE · THE COLLEGE GATE TURN</div>
+        <div id="hdF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg" style="position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px">
+        <div id="turn"><div class="ml">THE TURN · TOP VIEW</div><svg class="sv" id="tuS" width="236" height="214"></svg></div>
+        <div id="wqs"></div></div>
+    </div>
+
+    <!-- P: what it is + who does the job -->
+    <div id="sP">
+      <div class="card full" id="pc"><div class="lbl" style="left:36px;top:30px">WHY GOING ROUND NEEDS A FORCE</div><div id="cks"></div>
+        <div class="pillp ink" id="pcP" style="left:36px;top:490px">Not a new kind of force: a job</div></div>
+      <div class="card rf" id="pt"><div class="lbl" style="left:36px;top:30px">WHO DOES THE JOB?</div><div id="tls"></div></div>
+    </div>
+
+    <!-- S: the sim (stone on a string + readout + T against v) -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">STONE ON A STRING · TOP VIEW</div>
+        <div class="stag" id="slo" style="right:36px;top:20px">SLOW-MO REPLAY · 0.25x</div>
+        <svg class="sv" id="simS" width="784" height="580"></svg></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro" id="roG" style="left:36px;top:66px;width:712px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">TENSION <i style="font-family:Poppins;text-transform:none">T</i> VS SPEED <i style="font-family:Poppins;text-transform:none">v</i></div>
+        <div class="pillp" id="grP" style="right:36px;top:18px;height:40px;font-size:19px;color:var(--f)"><i>T</i>&nbsp;=&nbsp;<i>m</i><i style="color:var(--v)">v</i>²/<i>r</i></div>
+        <svg class="sv" id="grS" width="784" height="274"></svg></div>
+    </div>
+
+    <!-- D: the formula -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE FORMULA · 4 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">ONE STONE · ONE FORCE</div>
+        <svg class="sv" id="drS" width="784" height="580"></svg>
+        <div class="pillp" id="drP" style="left:36px;top:492px">Net force points the same way as <i style="color:var(--a)">a</i></div>
+        <div class="chipd" id="drU" style="left:36px;top:492px">kg · m/s² = N</div></div>
+    </div>
+
+    <!-- C: side by side + two thinks -->
+    <div id="sC">
+      <div class="card full" id="c0"><div class="lbl" style="left:36px;top:30px">STRING · TENSION DOES THE JOB</div>
+        <div class="sbv"><svg class="sv" id="c0S" width="712" height="300"></svg></div>
+        <div class="sbl" id="c0a" style="top:420px"></div>
+        <div class="pillp" id="c0P" style="left:36px;top:490px">Faster: the string pulls harder</div></div>
+      <div class="card rf" id="c1"><div class="lbl" style="left:36px;top:30px">FLAT ROAD · FRICTION DOES THE JOB</div>
+        <div class="sbv"><svg class="sv" id="c1S" width="712" height="300"></svg></div>
+        <div class="sbl" id="c1a" style="top:404px"></div>
+        <div class="sbl" id="c1b" style="top:480px"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- R: why the tyres slide out -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">SIMULATION · FLAT CURVE · r = 20 m</div><div class="ghost" id="exR" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <svg class="sv" id="rlS" width="784" height="580"></svg>
+        <div class="bar" id="bN" style="top:452px"><div class="bk ff">NEEDED mv²/r</div><div class="bt"><div class="bf" id="bNf"></div></div><div class="bv ff" id="bNv">0 N</div></div>
+        <div class="bar" id="bM" style="top:504px"><div class="bk">MAX FRICTION μmg</div><div class="bt"><div class="bf" id="bMf" style="background:#B8BCC6"></div></div><div class="bv" id="bMv">4900 N</div></div>
+        <div class="lim" id="bL" style="top:446px;height:104px"></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">LINK BY LINK</div><div id="lks"></div></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">Aarav + bike: 60 kg, flat turn r = 10 m, v = 5 m/s, μ = 0.4. Will he skid?</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">NEEDED VS AVAILABLE</div><div class="ghost" id="exW" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <svg class="sv" id="wrS" width="784" height="580"></svg>
+        <div class="bar" id="wN" style="top:300px"><div class="bk ff">NEEDED mv²/r</div><div class="bt"><div class="bf" id="wNf"></div></div><div class="bv ff" id="wNv">150 N</div></div>
+        <div class="bar" id="wM" style="top:352px"><div class="bk">MAX FRICTION μmg</div><div class="bt"><div class="bf" id="wMf" style="background:#B8BCC6"></div></div><div class="bv" id="wMv">235 N</div></div>
+        <div class="pillp good" id="wOk" style="left:36px;top:420px">150 N &lt; 235 N: he turns safely</div>
+        <div class="chipd" id="wV" style="left:36px;top:492px"><span>top speed</span><i style="font-family:Poppins;color:#9DBDF7">v</i><span>≈ 6.3 m/s</span></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tg" width="440" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + questions + NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Not a new force. A <span class="acc">job</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
