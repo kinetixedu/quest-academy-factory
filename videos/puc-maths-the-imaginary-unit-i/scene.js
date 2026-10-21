@@ -127,7 +127,7 @@ const so = PUC.solution($('#so'), [[K(`${I} + ${I}^2 + ${I}^3 + ${I}^4 = 0`)], [
 const tSo = [wt('A2', 'Any'), wt('A3', 'Two'), wt('A3', 'full'), wt('A4', 'Two'), wt('A4', 'sum')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · the imaginary unit i', y0: 98, dy: 80, txt: [0, 0, 1, 0, 1],
   lines: [K(`${I} = \\sqrt{-1}, \\qquad ${I}^2 = -1`),
-    K(`${I}^{4k} = 1,\\ \\ ${I}^{4k+1} = ${I},\\ \\ ${I}^{4k+2} = -1,\\ \\ ${I}^{4k+3} = -${I}`),
+    '<span style="font-size:.82em">' + K(`${I}^{4k} = 1,\\ \\ ${I}^{4k+1} = ${I},\\ \\ ${I}^{4k+2} = -1,\\ \\ ${I}^{4k+3} = -${I}`) + '</span>',
     '<b>Shortcut</b>: divide the power by 4, keep the remainder',
     K(`\\sqrt{-a} = \\sqrt{a}\\, ${I} \\quad (a > 0)`),
     '<b>Trap</b>: √a × √b ≠ √(ab) when a and b are both negative'] });
