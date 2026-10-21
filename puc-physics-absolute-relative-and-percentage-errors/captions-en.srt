@@ -1,0 +1,559 @@
+1
+00:00:00,450 --> 00:00:02,958
+A doctor checks your pulse three times.
+
+2
+00:00:02,958 --> 00:00:05,122
+A tailor measures a sleeve twice.
+
+3
+00:00:05,122 --> 00:00:06,549
+A cook tastes twice.
+
+4
+00:00:06,949 --> 00:00:09,533
+Why measure the same
+thing again and again?
+
+5
+00:00:09,533 --> 00:00:11,552
+Because no measurement is perfect.
+
+6
+00:00:12,002 --> 00:00:16,575
+Diya pours one glass of water
+into a measuring jug, five times.
+
+7
+00:00:16,925 --> 00:00:18,253
+Two forty eight.
+
+8
+00:00:18,253 --> 00:00:19,473
+Two fifty two.
+
+9
+00:00:19,473 --> 00:00:20,693
+Two fifty one.
+
+10
+00:00:20,693 --> 00:00:22,020
+Two forty seven.
+
+11
+00:00:22,020 --> 00:00:23,953
+Two fifty two millilitres.
+
+12
+00:00:24,453 --> 00:00:26,228
+Same glass, five numbers.
+
+13
+00:00:26,228 --> 00:00:27,617
+Which one is right?
+
+14
+00:00:27,617 --> 00:00:29,209
+And how wrong is each?
+
+15
+00:00:29,859 --> 00:00:31,892
+Every reading has a small error.
+
+16
+00:00:31,892 --> 00:00:35,269
+The error is how far a reading
+is from the true value.
+
+17
+00:00:35,619 --> 00:00:37,970
+We never know the true value exactly.
+
+18
+00:00:37,970 --> 00:00:40,955
+Our best guess is the
+mean of all the readings.
+
+19
+00:00:41,405 --> 00:00:44,463
+The five add up to
+twelve hundred and fifty.
+
+20
+00:00:44,463 --> 00:00:45,670
+Divide by five.
+
+21
+00:00:45,670 --> 00:00:48,768
+The mean is two hundred
+and fifty millilitres.
+
+22
+00:00:49,418 --> 00:00:51,976
+Let's put the readings
+on our measuring bench.
+
+23
+00:00:52,326 --> 00:00:55,694
+Each pour fills the jug to
+a slightly different mark.
+
+24
+00:00:55,694 --> 00:00:56,877
+Watch the level.
+
+25
+00:00:57,277 --> 00:00:59,881
+On the graph, each reading becomes a dot.
+
+26
+00:00:59,881 --> 00:01:02,394
+The dashed line is the mean, two fifty.
+
+27
+00:01:02,844 --> 00:01:06,791
+The gap between a dot and the mean
+is that reading's absolute error.
+
+28
+00:01:07,241 --> 00:01:09,149
+Slow replay, reading one.
+
+29
+00:01:09,149 --> 00:01:12,303
+Two forty eight minus
+two fifty is minus two.
+
+30
+00:01:12,303 --> 00:01:13,641
+Its size is two.
+
+31
+00:01:14,091 --> 00:01:16,707
+The other gaps are two,
+one, three and two.
+
+32
+00:01:16,707 --> 00:01:19,274
+Some readings are above
+the mean, some below.
+
+33
+00:01:19,924 --> 00:01:22,849
+Let's turn this into
+rules, one step at a time.
+
+34
+00:01:23,200 --> 00:01:24,100
+Step one.
+
+35
+00:01:23,995 --> 00:01:28,099
+The mean, a bar, is the sum
+of the readings, divided by n.
+
+36
+00:01:28,849 --> 00:01:29,749
+Step two.
+
+37
+00:01:29,663 --> 00:01:34,274
+The absolute error of each reading,
+delta a i, is the reading minus the
+
+38
+00:01:34,274 --> 00:01:35,174
+mean.
+
+39
+00:01:35,581 --> 00:01:36,560
+Step three.
+
+40
+00:01:36,560 --> 00:01:41,274
+The mean absolute error is the
+average of the sizes of these errors.
+
+41
+00:01:41,274 --> 00:01:43,349
+Here, ten divided by five.
+
+42
+00:01:43,349 --> 00:01:44,594
+Two millilitres.
+
+43
+00:01:45,344 --> 00:01:46,244
+Step four.
+
+44
+00:01:46,196 --> 00:01:51,285
+So we write the result as two hundred
+and fifty, plus or minus two millilitres.
+
+45
+00:01:52,035 --> 00:01:56,710
+The true value most likely lies between
+two forty eight and two fifty two.
+
+46
+00:01:57,410 --> 00:02:00,410
+But is two millilitres a
+big error or a small one?
+
+47
+00:02:00,410 --> 00:02:02,311
+It depends on what you measure.
+
+48
+00:02:02,661 --> 00:02:05,104
+So compare the error with the value.
+
+49
+00:02:05,104 --> 00:02:09,416
+Relative error equals the mean
+absolute error, divided by the mean.
+
+50
+00:02:10,166 --> 00:02:14,248
+Two divided by two fifty is
+zero point zero zero eight.
+
+51
+00:02:14,998 --> 00:02:18,744
+Multiply by one hundred, and
+you get the percentage error.
+
+52
+00:02:18,744 --> 00:02:20,437
+Zero point eight percent.
+
+53
+00:02:21,187 --> 00:02:22,263
+Remember this.
+
+54
+00:02:22,263 --> 00:02:24,584
+Absolute error tells you how much.
+
+55
+00:02:24,584 --> 00:02:28,253
+Relative error tells you how
+much compared to the value.
+
+56
+00:02:28,953 --> 00:02:30,008
+Side by side.
+
+57
+00:02:30,008 --> 00:02:33,711
+The glass: two hundred and
+fifty millilitres, error two.
+
+58
+00:02:33,711 --> 00:02:35,919
+That is zero point eight percent.
+
+59
+00:02:36,369 --> 00:02:40,313
+A spoon of cough syrup: ten
+millilitres, the same error of two.
+
+60
+00:02:40,313 --> 00:02:41,810
+That is twenty percent.
+
+61
+00:02:42,410 --> 00:02:43,511
+Now you try.
+
+62
+00:02:43,511 --> 00:02:45,040
+Same absolute error.
+
+63
+00:02:45,040 --> 00:02:47,060
+Which measurement is better?
+
+64
+00:02:47,060 --> 00:02:48,428
+Pause and decide.
+
+65
+00:02:51,628 --> 00:02:52,528
+The glass!
+
+66
+00:02:52,411 --> 00:02:54,831
+Its error is a tiny part of the whole.
+
+67
+00:02:54,831 --> 00:02:58,681
+For the syrup, the same two
+millilitres is a fifth of the dose.
+
+68
+00:02:59,331 --> 00:03:01,214
+One more thing about the units.
+
+69
+00:03:01,564 --> 00:03:04,692
+Absolute error has the
+same unit as the reading.
+
+70
+00:03:04,692 --> 00:03:05,839
+Two millilitres.
+
+71
+00:03:06,289 --> 00:03:09,835
+Relative error is millilitres
+divided by millilitres.
+
+72
+00:03:09,835 --> 00:03:11,202
+The units cancel.
+
+73
+00:03:11,202 --> 00:03:12,858
+It is a pure number.
+
+74
+00:03:13,308 --> 00:03:14,208
+Your turn.
+
+75
+00:03:14,179 --> 00:03:16,490
+Write the glass in litres instead.
+
+76
+00:03:16,490 --> 00:03:18,692
+Does the percentage error change?
+
+77
+00:03:18,692 --> 00:03:19,973
+Pause and decide.
+
+78
+00:03:23,173 --> 00:03:24,073
+No!
+
+79
+00:03:23,649 --> 00:03:28,290
+Two thousandths of a litre over a
+quarter litre is still zero point zero
+
+80
+00:03:28,290 --> 00:03:29,241
+zero eight.
+
+81
+00:03:29,241 --> 00:03:31,412
+Still zero point eight percent.
+
+82
+00:03:32,062 --> 00:03:33,290
+Worked example.
+
+83
+00:03:33,290 --> 00:03:36,896
+Diya times ten swings of
+a pendulum, five times.
+
+84
+00:03:37,246 --> 00:03:41,746
+Nineteen point eight, twenty point
+two, twenty point one, nineteen point
+
+85
+00:03:41,746 --> 00:03:43,942
+seven, twenty point two seconds.
+
+86
+00:03:44,442 --> 00:03:46,159
+The sum is one hundred.
+
+87
+00:03:46,159 --> 00:03:48,967
+So the mean is twenty point zero seconds.
+
+88
+00:03:49,717 --> 00:03:52,371
+The error sizes add to one point zero.
+
+89
+00:03:52,371 --> 00:03:54,915
+Their mean is zero point two seconds.
+
+90
+00:03:55,665 --> 00:03:58,661
+Relative error, zero
+point two over twenty.
+
+91
+00:03:58,661 --> 00:04:00,723
+That is zero point zero one.
+
+92
+00:04:01,473 --> 00:04:06,450
+So the time is twenty point zero,
+plus or minus zero point two seconds.
+
+93
+00:04:06,450 --> 00:04:08,015
+A one percent error.
+
+94
+00:04:08,665 --> 00:04:10,130
+Now, the exam trap.
+
+95
+00:04:10,480 --> 00:04:13,503
+Many students average the
+errors with their signs.
+
+96
+00:04:13,503 --> 00:04:17,152
+Minus two, plus two, plus
+one, minus three, plus two.
+
+97
+00:04:17,552 --> 00:04:21,379
+That sum is always zero, because
+the mean sits in the middle!
+
+98
+00:04:21,379 --> 00:04:22,810
+Drop the signs first.
+
+99
+00:04:22,810 --> 00:04:25,532
+Take the size of each error, then average.
+
+100
+00:04:26,182 --> 00:04:27,562
+Where is this asked?
+
+101
+00:04:27,562 --> 00:04:28,886
+As short numericals.
+
+102
+00:04:28,886 --> 00:04:33,230
+From a set of readings, find the
+mean, the mean absolute error, or the
+
+103
+00:04:33,230 --> 00:04:34,360
+percentage error.
+
+104
+00:04:34,960 --> 00:04:36,149
+Exam level now.
+
+105
+00:04:36,149 --> 00:04:39,041
+Five readings of a length, in centimetres.
+
+106
+00:04:39,041 --> 00:04:40,845
+Find the percentage error.
+
+107
+00:04:40,845 --> 00:04:42,084
+Pause and solve.
+
+108
+00:04:47,484 --> 00:04:48,863
+The answer is C.
+
+109
+00:04:48,863 --> 00:04:50,722
+Zero point seven percent.
+
+110
+00:04:51,222 --> 00:04:53,679
+The mean is four point zero zero.
+
+111
+00:04:53,679 --> 00:04:58,435
+The error sizes add to zero point
+one four, so the mean absolute error
+
+112
+00:04:58,435 --> 00:05:00,617
+is zero point zero two eight.
+
+113
+00:05:01,117 --> 00:05:06,243
+Zero point zero two eight over four,
+times one hundred, is zero point seven
+
+114
+00:05:06,243 --> 00:05:07,143
+percent.
+
+115
+00:05:06,995 --> 00:05:09,282
+Zero percent is the signs trap.
+
+116
+00:05:09,882 --> 00:05:11,341
+Here is your recap.
+
+117
+00:05:11,341 --> 00:05:12,841
+Screenshot this card.
+
+118
+00:05:16,041 --> 00:05:18,877
+Can you answer these three
+questions without help?
+
+119
+00:05:19,277 --> 00:05:20,177
+One.
+
+120
+00:05:19,774 --> 00:05:23,604
+Why do we use the mean of many
+readings as the true value?
+
+121
+00:05:24,504 --> 00:05:25,404
+Two.
+
+122
+00:05:24,990 --> 00:05:29,157
+Why is the average of the errors,
+with their signs, always zero?
+
+123
+00:05:30,057 --> 00:05:30,957
+Three.
+
+124
+00:05:30,674 --> 00:05:33,916
+Same absolute error on
+a big and a small value.
+
+125
+00:05:33,916 --> 00:05:36,458
+Which has the bigger percentage error?
+
+126
+00:05:37,558 --> 00:05:41,872
+Next time: Aarav's study table has
+a small error in its length and its
+
+127
+00:05:41,872 --> 00:05:42,772
+width.
+
+128
+00:05:42,465 --> 00:05:44,573
+What is the error in its area?
+
+129
+00:05:44,573 --> 00:05:45,807
+Error propagation.

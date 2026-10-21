@@ -1,0 +1,569 @@
+1
+00:00:00,450 --> 00:00:03,128
+A shopkeeper adds kilograms to kilograms.
+
+2
+00:00:03,128 --> 00:00:05,353
+A clock adds minutes to minutes.
+
+3
+00:00:05,753 --> 00:00:08,244
+But nobody adds kilograms to minutes.
+
+4
+00:00:08,244 --> 00:00:09,144
+Why not?
+
+5
+00:00:09,024 --> 00:00:11,789
+That one rule can catch a wrong formula.
+
+6
+00:00:12,239 --> 00:00:17,302
+Aarav's classmate writes: distance equals
+speed times time, plus acceleration
+
+7
+00:00:17,302 --> 00:00:18,304
+times time.
+
+8
+00:00:18,654 --> 00:00:20,125
+Is it even possible?
+
+9
+00:00:20,125 --> 00:00:23,520
+Aarav wants to know before
+doing a single experiment.
+
+10
+00:00:24,020 --> 00:00:25,810
+Today: a ten-second test.
+
+11
+00:00:26,410 --> 00:00:27,764
+Quick reminder.
+
+12
+00:00:27,764 --> 00:00:29,010
+Length is L.
+
+13
+00:00:29,010 --> 00:00:30,134
+Time is T.
+
+14
+00:00:30,134 --> 00:00:31,259
+Mass is M.
+
+15
+00:00:31,659 --> 00:00:33,929
+Speed is LT to the minus one.
+
+16
+00:00:34,329 --> 00:00:37,185
+Acceleration is LT to the minus two.
+
+17
+00:00:37,835 --> 00:00:39,185
+Now the big rule.
+
+18
+00:00:39,185 --> 00:00:42,802
+It is called the principle
+of homogeneity of dimensions.
+
+19
+00:00:43,152 --> 00:00:44,097
+Here it is.
+
+20
+00:00:44,097 --> 00:00:48,156
+In a correct equation, every term
+must have the same dimensions.
+
+21
+00:00:48,856 --> 00:00:52,804
+You can only add, subtract or
+equate things of the same kind.
+
+22
+00:00:53,204 --> 00:00:56,125
+Three metres plus two
+metres is five metres.
+
+23
+00:00:56,125 --> 00:00:59,566
+But three metres plus two
+seconds is nothing at all.
+
+24
+00:01:00,216 --> 00:01:02,444
+Let's test this on Aarav's bicycle.
+
+25
+00:01:02,444 --> 00:01:05,698
+It starts at two metres
+per second and speeds up.
+
+26
+00:01:06,048 --> 00:01:06,948
+Watch.
+
+27
+00:01:06,723 --> 00:01:09,224
+Speed times time grows in metres.
+
+28
+00:01:09,224 --> 00:01:12,135
+Half a t squared also grows in metres.
+
+29
+00:01:12,535 --> 00:01:16,309
+Add them, and you get x, the
+distance gone, also in metres.
+
+30
+00:01:16,309 --> 00:01:17,820
+The graph curves upward.
+
+31
+00:01:18,220 --> 00:01:19,350
+Slow-mo replay.
+
+32
+00:01:19,350 --> 00:01:21,885
+Velocity, in blue, keeps growing.
+
+33
+00:01:21,885 --> 00:01:24,695
+Acceleration, in red, stays the same.
+
+34
+00:01:25,094 --> 00:01:27,257
+Now his last term, a times t.
+
+35
+00:01:27,257 --> 00:01:29,565
+It comes out in metres per second.
+
+36
+00:01:29,965 --> 00:01:31,910
+Metres plus metres per second?
+
+37
+00:01:31,910 --> 00:01:34,491
+That is like adding kilograms to minutes.
+
+38
+00:01:34,491 --> 00:01:35,810
+It cannot be done.
+
+39
+00:01:36,460 --> 00:01:40,121
+Let's check the correct formula
+properly, one step at a time.
+
+40
+00:01:40,471 --> 00:01:41,371
+Step one.
+
+41
+00:01:41,277 --> 00:01:43,605
+The left side, x, is a length.
+
+42
+00:01:43,605 --> 00:01:45,119
+Its dimensions are L.
+
+43
+00:01:45,869 --> 00:01:46,769
+Step two.
+
+44
+00:01:46,737 --> 00:01:48,811
+u t is velocity times time.
+
+45
+00:01:48,811 --> 00:01:51,986
+LT to the minus one, times T, gives L.
+
+46
+00:01:52,736 --> 00:01:53,636
+Step three.
+
+47
+00:01:53,635 --> 00:01:55,500
+The half is a pure number.
+
+48
+00:01:55,500 --> 00:01:58,879
+LT to the minus two,
+times T squared, gives L.
+
+49
+00:01:59,629 --> 00:02:00,570
+Step four.
+
+50
+00:02:00,570 --> 00:02:01,965
+Every term is L.
+
+51
+00:02:01,965 --> 00:02:05,003
+So the equation is
+dimensionally consistent.
+
+52
+00:02:05,703 --> 00:02:07,664
+Now the classmate's formula.
+
+53
+00:02:07,664 --> 00:02:10,562
+Its last term is acceleration times time.
+
+54
+00:02:10,962 --> 00:02:13,077
+That is LT to the minus one.
+
+55
+00:02:13,077 --> 00:02:14,774
+A speed, not a length.
+
+56
+00:02:14,774 --> 00:02:16,870
+So the formula is surely wrong.
+
+57
+00:02:17,520 --> 00:02:19,512
+But why must every term match?
+
+58
+00:02:19,512 --> 00:02:20,720
+Follow the links.
+
+59
+00:02:21,070 --> 00:02:23,571
+A true law must stay true in any unit.
+
+60
+00:02:23,571 --> 00:02:25,914
+Let's run the bicycle for two seconds.
+
+61
+00:02:26,314 --> 00:02:28,784
+In seconds, both formulas give six.
+
+62
+00:02:28,784 --> 00:02:30,792
+His formula even looks right!
+
+63
+00:02:31,192 --> 00:02:33,559
+Now measure the same time in minutes.
+
+64
+00:02:33,559 --> 00:02:36,209
+The correct formula
+still gives six metres.
+
+65
+00:02:36,609 --> 00:02:39,947
+But his last term jumps
+to one hundred and twenty.
+
+66
+00:02:39,947 --> 00:02:43,176
+Now his formula says one
+hundred and twenty four.
+
+67
+00:02:43,576 --> 00:02:45,210
+Same ride, two answers.
+
+68
+00:02:45,210 --> 00:02:49,914
+A mixed formula changes with the unit,
+so it can never be a law of nature.
+
+69
+00:02:50,564 --> 00:02:51,636
+Side by side.
+
+70
+00:02:51,636 --> 00:02:53,929
+With a half, the formula passes.
+
+71
+00:02:53,929 --> 00:02:57,045
+It gives six metres,
+just like the real ride.
+
+72
+00:02:57,445 --> 00:03:01,241
+With a two, it still passes,
+since a number has no dimensions.
+
+73
+00:03:01,241 --> 00:03:02,886
+But it says twelve metres.
+
+74
+00:03:02,886 --> 00:03:03,786
+Wrong.
+
+75
+00:03:04,028 --> 00:03:05,036
+Now you try.
+
+76
+00:03:05,036 --> 00:03:09,060
+If a formula passes the dimension
+check, is it surely correct?
+
+77
+00:03:09,060 --> 00:03:10,920
+Pause the video and decide.
+
+78
+00:03:14,120 --> 00:03:15,020
+No!
+
+79
+00:03:14,600 --> 00:03:16,415
+Fails means surely wrong.
+
+80
+00:03:16,415 --> 00:03:18,710
+Passes means only possibly right.
+
+81
+00:03:18,710 --> 00:03:21,068
+Numbers like a half slip through.
+
+82
+00:03:21,718 --> 00:03:22,869
+One more rule.
+
+83
+00:03:22,869 --> 00:03:27,659
+Whatever goes inside sine, cosine,
+log or e to the power must be a pure
+
+84
+00:03:27,659 --> 00:03:28,559
+number.
+
+85
+00:03:28,731 --> 00:03:31,808
+An angle is arc length divided by radius.
+
+86
+00:03:31,808 --> 00:03:33,335
+Length over length.
+
+87
+00:03:33,335 --> 00:03:35,670
+So an angle has no dimensions.
+
+88
+00:03:36,270 --> 00:03:37,233
+Your turn.
+
+89
+00:03:37,233 --> 00:03:40,389
+In y equals A sine omega t, t is time.
+
+90
+00:03:40,389 --> 00:03:43,180
+What must the dimensions of omega be?
+
+91
+00:03:43,180 --> 00:03:44,597
+Pause and decide.
+
+92
+00:03:47,797 --> 00:03:49,381
+T to the minus one!
+
+93
+00:03:49,381 --> 00:03:54,184
+Omega times t must be a pure number,
+so omega has to cancel the T.
+
+94
+00:03:54,834 --> 00:03:56,570
+Now, one worked example.
+
+95
+00:03:56,920 --> 00:04:00,970
+Check the formula v squared
+equals u squared plus two a s.
+
+96
+00:04:00,970 --> 00:04:02,048
+Then use it.
+
+97
+00:04:02,548 --> 00:04:07,490
+v squared and u squared both have
+dimensions L squared T to the minus two.
+
+98
+00:04:08,240 --> 00:04:11,477
+Two a s is LT to the minus two, times L.
+
+99
+00:04:11,477 --> 00:04:13,997
+Also L squared T to the minus two.
+
+100
+00:04:13,997 --> 00:04:14,900
+It passes.
+
+101
+00:04:15,650 --> 00:04:20,319
+Now a cycle starts at three metres per
+second, and speeds up at two metres
+
+102
+00:04:20,319 --> 00:04:22,835
+per second squared, over four metres.
+
+103
+00:04:23,585 --> 00:04:27,243
+v squared is nine plus
+sixteen, which is twenty five.
+
+104
+00:04:27,243 --> 00:04:30,333
+So the final speed is
+five metres per second.
+
+105
+00:04:30,983 --> 00:04:32,445
+Now, the exam trap.
+
+106
+00:04:32,795 --> 00:04:37,808
+Many students think every quantity in an
+equation must have the same dimensions.
+
+107
+00:04:38,208 --> 00:04:39,108
+Not true.
+
+108
+00:04:39,095 --> 00:04:42,548
+Only terms that are added
+or equated must match.
+
+109
+00:04:42,548 --> 00:04:47,343
+In F equals m a, mass and
+acceleration differ, and that is fine.
+
+110
+00:04:47,993 --> 00:04:49,392
+Where is this asked?
+
+111
+00:04:49,392 --> 00:04:53,552
+As questions on the dimensions of
+constants, or on the formula that is
+
+112
+00:04:53,552 --> 00:04:54,452
+wrong.
+
+113
+00:04:54,725 --> 00:04:55,973
+Exam level now.
+
+114
+00:04:55,973 --> 00:04:59,568
+x equals alpha sine beta
+t, plus gamma t squared.
+
+115
+00:04:59,568 --> 00:05:02,994
+What are the dimensions
+of alpha beta over gamma?
+
+116
+00:05:02,994 --> 00:05:04,295
+Pause and solve.
+
+117
+00:05:09,695 --> 00:05:10,996
+The answer is C.
+
+118
+00:05:10,996 --> 00:05:12,650
+The dimensions of time.
+
+119
+00:05:13,150 --> 00:05:14,488
+Alpha is a length.
+
+120
+00:05:14,488 --> 00:05:18,577
+Beta t must be a pure number,
+so beta is T to the minus one.
+
+121
+00:05:19,077 --> 00:05:23,554
+Gamma t squared is a length, so
+gamma is LT to the minus two.
+
+122
+00:05:23,554 --> 00:05:25,674
+Divide, and only T is left.
+
+123
+00:05:26,274 --> 00:05:27,736
+Here is your recap.
+
+124
+00:05:27,736 --> 00:05:29,239
+Screenshot this card.
+
+125
+00:05:32,439 --> 00:05:35,276
+Can you answer these three
+questions without help?
+
+126
+00:05:35,676 --> 00:05:36,576
+One.
+
+127
+00:05:36,247 --> 00:05:39,386
+Why can distance never be u t plus a t?
+
+128
+00:05:40,286 --> 00:05:41,186
+Two.
+
+129
+00:05:40,794 --> 00:05:44,886
+If a formula passes the dimension
+check, is it surely correct?
+
+130
+00:05:45,786 --> 00:05:46,686
+Three.
+
+131
+00:05:46,476 --> 00:05:51,207
+In y equals A sine omega t, what
+are the dimensions of omega?
+
+132
+00:05:52,307 --> 00:05:56,127
+Next time: can this rule
+build a formula from nothing?
+
+133
+00:05:56,127 --> 00:05:58,575
+Applications of dimensional analysis.

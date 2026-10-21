@@ -1,0 +1,540 @@
+1
+00:00:00,450 --> 00:00:01,808
+A swing in a park.
+
+2
+00:00:01,808 --> 00:00:03,006
+A clock pendulum.
+
+3
+00:00:03,006 --> 00:00:05,478
+A bob on a string in the physics lab.
+
+4
+00:00:05,878 --> 00:00:08,840
+They all swing back and
+forth in a fixed time.
+
+5
+00:00:08,840 --> 00:00:10,382
+What decides that time?
+
+6
+00:00:10,832 --> 00:00:15,398
+Aarav ties his keys to a string in the
+college corridor and lets it swing.
+
+7
+00:00:15,748 --> 00:00:17,505
+No formula, no textbook.
+
+8
+00:00:17,505 --> 00:00:20,490
+Can he still guess the
+formula for one swing?
+
+9
+00:00:20,990 --> 00:00:21,890
+Yes.
+
+10
+00:00:21,605 --> 00:00:23,452
+Using only dimensions.
+
+11
+00:00:23,452 --> 00:00:25,069
+Today we see how.
+
+12
+00:00:25,669 --> 00:00:30,752
+Last time we learned: every term in a
+correct equation has the same dimensions.
+
+13
+00:00:30,752 --> 00:00:32,790
+That rule has three big uses.
+
+14
+00:00:33,190 --> 00:00:34,090
+One.
+
+15
+00:00:33,664 --> 00:00:36,004
+Check whether a formula can be right.
+
+16
+00:00:36,404 --> 00:00:37,304
+Two.
+
+17
+00:00:36,911 --> 00:00:40,491
+Convert a quantity from one
+system of units to another.
+
+18
+00:00:40,891 --> 00:00:41,791
+Three.
+
+19
+00:00:41,455 --> 00:00:44,636
+Guess the form of a formula,
+before any experiment.
+
+20
+00:00:44,636 --> 00:00:46,494
+Let us start with the swing.
+
+21
+00:00:47,144 --> 00:00:49,085
+Here is the corridor pendulum.
+
+22
+00:00:49,085 --> 00:00:52,408
+The time for one full swing
+is the time period, T.
+
+23
+00:00:52,758 --> 00:00:53,931
+Watch the graph.
+
+24
+00:00:53,931 --> 00:00:57,764
+The angle goes back and forth,
+and the dot follows the bob.
+
+25
+00:00:58,164 --> 00:00:59,208
+Slow-mo replay.
+
+26
+00:00:59,208 --> 00:01:01,813
+Gravity, in red, pulls the bob down.
+
+27
+00:01:01,813 --> 00:01:05,121
+The velocity, in blue,
+is biggest at the bottom.
+
+28
+00:01:05,521 --> 00:01:07,456
+What could the period depend on?
+
+29
+00:01:07,456 --> 00:01:09,120
+Only three things are here.
+
+30
+00:01:09,520 --> 00:01:11,317
+The mass of the bob, m.
+
+31
+00:01:11,317 --> 00:01:13,354
+The length of the string, l.
+
+32
+00:01:13,354 --> 00:01:14,590
+And gravity, g.
+
+33
+00:01:15,240 --> 00:01:17,908
+Let's build the formula,
+one step at a time.
+
+34
+00:01:18,258 --> 00:01:19,158
+Step one.
+
+35
+00:01:19,099 --> 00:01:23,732
+Guess T equals k, times m to
+the x, l to the y, g to the z.
+
+36
+00:01:23,732 --> 00:01:25,269
+k is a pure number.
+
+37
+00:01:26,019 --> 00:01:26,919
+Step two.
+
+38
+00:01:26,878 --> 00:01:27,779
+Dimensions.
+
+39
+00:01:27,779 --> 00:01:29,026
+T on the left.
+
+40
+00:01:29,026 --> 00:01:33,824
+M to the x, L to the y, and
+LT to the minus two, to the z.
+
+41
+00:01:34,574 --> 00:01:35,535
+Step three.
+
+42
+00:01:35,535 --> 00:01:37,256
+Match the powers of M.
+
+43
+00:01:37,256 --> 00:01:40,397
+There is no M on the left, so x is zero.
+
+44
+00:01:41,147 --> 00:01:42,194
+Step four.
+
+45
+00:01:42,194 --> 00:01:44,178
+Match the powers of T.
+
+46
+00:01:44,178 --> 00:01:46,223
+One equals minus two z.
+
+47
+00:01:46,223 --> 00:01:48,340
+So z is minus one half.
+
+48
+00:01:49,090 --> 00:01:50,092
+Step five.
+
+49
+00:01:50,092 --> 00:01:51,994
+Match the powers of L.
+
+50
+00:01:51,994 --> 00:01:53,837
+Zero equals y plus z.
+
+51
+00:01:53,837 --> 00:01:55,808
+So y is plus one half.
+
+52
+00:01:56,558 --> 00:02:00,082
+So T equals k times the
+square root of l over g.
+
+53
+00:02:00,082 --> 00:02:02,874
+We found it without a single experiment.
+
+54
+00:02:03,574 --> 00:02:06,182
+Now read what this formula is telling us.
+
+55
+00:02:06,182 --> 00:02:07,383
+Follow the links.
+
+56
+00:02:07,733 --> 00:02:10,117
+x is zero, so mass has no power.
+
+57
+00:02:10,117 --> 00:02:12,804
+So the mass of the bob does not matter.
+
+58
+00:02:13,204 --> 00:02:17,141
+y is one half, so T grows with
+the square root of the length.
+
+59
+00:02:17,541 --> 00:02:19,243
+z is minus one half.
+
+60
+00:02:19,243 --> 00:02:22,230
+So stronger gravity means a faster swing.
+
+61
+00:02:22,880 --> 00:02:23,961
+Side by side.
+
+62
+00:02:23,961 --> 00:02:25,551
+Two one metre strings.
+
+63
+00:02:25,551 --> 00:02:28,493
+A light key ring, and a heavy steel ball.
+
+64
+00:02:28,893 --> 00:02:31,746
+Both take about two
+seconds for a full swing.
+
+65
+00:02:31,746 --> 00:02:34,064
+The heavy one does not swing faster.
+
+66
+00:02:34,664 --> 00:02:35,678
+Now you try.
+
+67
+00:02:35,678 --> 00:02:38,354
+Aarav makes the string four times longer.
+
+68
+00:02:38,354 --> 00:02:40,223
+What happens to the period?
+
+69
+00:02:40,223 --> 00:02:42,093
+Pause the video and decide.
+
+70
+00:02:45,293 --> 00:02:46,193
+It doubles!
+
+71
+00:02:46,178 --> 00:02:50,663
+T goes as the square root of l,
+and the square root of four is two.
+
+72
+00:02:50,663 --> 00:02:52,338
+Two seconds becomes four.
+
+73
+00:02:52,988 --> 00:02:54,593
+Now the second use.
+
+74
+00:02:54,593 --> 00:02:55,953
+Converting units.
+
+75
+00:02:56,303 --> 00:02:59,963
+In the SI system, energy
+is measured in joules.
+
+76
+00:02:59,963 --> 00:03:02,403
+The older CGS system uses ergs.
+
+77
+00:03:02,803 --> 00:03:06,522
+Energy has dimensions ML
+squared T to the minus two.
+
+78
+00:03:06,922 --> 00:03:11,761
+So the number changes by the mass
+ratio, times the length ratio squared,
+
+79
+00:03:11,761 --> 00:03:14,510
+times the time ratio to the minus two.
+
+80
+00:03:15,260 --> 00:03:16,189
+Your turn.
+
+81
+00:03:16,189 --> 00:03:20,760
+Which ratio goes in: old unit
+over new unit, or new over old?
+
+82
+00:03:20,760 --> 00:03:22,127
+Pause and decide.
+
+83
+00:03:25,327 --> 00:03:26,487
+Old over new!
+
+84
+00:03:26,487 --> 00:03:29,719
+n two equals n one times u one over u two.
+
+85
+00:03:29,719 --> 00:03:32,930
+A bigger old unit gives
+a bigger new number.
+
+86
+00:03:33,580 --> 00:03:35,316
+Now, one worked example.
+
+87
+00:03:35,666 --> 00:03:37,564
+How many ergs make one joule?
+
+88
+00:03:38,064 --> 00:03:40,630
+One kilogram is one thousand grams.
+
+89
+00:03:40,630 --> 00:03:43,306
+One metre is one hundred centimetres.
+
+90
+00:03:43,306 --> 00:03:45,318
+The second stays the same.
+
+91
+00:03:46,068 --> 00:03:50,661
+n two equals one, times one thousand,
+times one hundred squared, times
+
+92
+00:03:50,661 --> 00:03:51,561
+one.
+
+93
+00:03:51,923 --> 00:03:54,511
+That is one thousand times ten thousand.
+
+94
+00:03:54,511 --> 00:03:56,159
+Ten to the power seven.
+
+95
+00:03:56,159 --> 00:03:58,767
+So one joule is ten to the seven ergs.
+
+96
+00:03:59,417 --> 00:04:00,882
+Now, the exam trap.
+
+97
+00:04:01,232 --> 00:04:06,040
+Many students flip the ratio, and get
+one newton equals ten to the minus
+
+98
+00:04:06,040 --> 00:04:07,004
+five dynes.
+
+99
+00:04:07,404 --> 00:04:09,817
+But a dyne is a much smaller force.
+
+100
+00:04:09,817 --> 00:04:11,755
+Smaller unit, bigger number.
+
+101
+00:04:11,755 --> 00:04:14,568
+One newton is ten to the power five dynes.
+
+102
+00:04:15,218 --> 00:04:16,687
+Where is this asked?
+
+103
+00:04:16,687 --> 00:04:21,461
+As questions that build a formula from
+what a quantity depends on, or convert
+
+104
+00:04:21,461 --> 00:04:22,361
+units.
+
+105
+00:04:22,663 --> 00:04:23,954
+Exam level now.
+
+106
+00:04:23,954 --> 00:04:28,783
+Ripple speed depends on surface
+tension S, density rho, and wavelength
+
+107
+00:04:28,783 --> 00:04:29,683
+lambda.
+
+108
+00:04:29,505 --> 00:04:31,016
+Which formula fits?
+
+109
+00:04:31,016 --> 00:04:32,363
+Pause and solve.
+
+110
+00:04:37,763 --> 00:04:39,082
+The answer is B.
+
+111
+00:04:39,082 --> 00:04:41,722
+The square root of S over rho lambda.
+
+112
+00:04:42,222 --> 00:04:46,111
+Surface tension is force per
+length, MT to the minus two.
+
+113
+00:04:46,111 --> 00:04:49,099
+Matching T gives the
+power of S as one half.
+
+114
+00:04:49,599 --> 00:04:52,784
+Matching M gives rho the
+power minus one half.
+
+115
+00:04:52,784 --> 00:04:55,752
+Matching L gives lambda
+minus one half too.
+
+116
+00:04:56,352 --> 00:04:57,811
+Here is your recap.
+
+117
+00:04:57,811 --> 00:04:59,311
+Screenshot this card.
+
+118
+00:05:02,511 --> 00:05:05,348
+Can you answer these three
+questions without help?
+
+119
+00:05:05,748 --> 00:05:06,648
+One.
+
+120
+00:05:06,228 --> 00:05:10,614
+Why does the mass of the bob not
+appear in the formula for the period?
+
+121
+00:05:11,514 --> 00:05:12,414
+Two.
+
+122
+00:05:11,999 --> 00:05:16,305
+If the string is made nine times
+longer, what happens to the period?
+
+123
+00:05:17,205 --> 00:05:18,105
+Three.
+
+124
+00:05:17,799 --> 00:05:20,456
+How many ergs make one joule, and why?
+
+125
+00:05:21,556 --> 00:05:25,102
+Next time: our formula
+had a mystery number k.
+
+126
+00:05:25,102 --> 00:05:26,926
+Can dimensions find it?
+
+127
+00:05:26,926 --> 00:05:29,472
+Limitations of dimensional analysis.
