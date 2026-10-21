@@ -193,7 +193,7 @@ const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap 
 const YQ = [`Find the principal solutions of ${K(`${cs}\\,${xv} = \\tfrac{1}{2}`)}`, `Write the general solution of ${K(`${tn}\\,${xv} = 1`)}`, `How many solutions does ${K(`${sn}\\,${xv} = \\tfrac{3}{2}`)} have?`];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="n">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
-const nx = PUC.next($('#sF'), { label: 'NEXT · EP 37', topic: `No real number solves ${K('x^2 + 1 = 0')}: Need for Complex Numbers`, y: 764 });
+const nx = PUC.next($('#sF'), { label: 'NEXT · EP 37', topic: 'x² + 1 = 0 has no real answer: Need for Complex Numbers', y: 764 });
 
 /* ---------- helpers ---------- */
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
@@ -220,7 +220,7 @@ M.on(t => {
     spokes.forEach((s, i) => { const b = rad(a + i * 30); attr(s, 'x2', (WX + (WR - 16) * Math.cos(b)).toFixed(1)); attr(s, 'y2', (WY - (WR - 16) * Math.sin(b)).toFixed(1)); });
     attr(hV, 'cx', vx.toFixed(1)); attr(hV, 'cy', vy.toFixed(1)); attr(hArm, 'x2', vx.toFixed(1)); attr(hArm, 'y2', vy.toFixed(1));
     attr(hHt, 'x1', vx.toFixed(1)); attr(hHt, 'x2', vx.toFixed(1)); attr(hHt, 'y1', WY); attr(hHt, 'y2', vy.toFixed(1));
-    M.vis(hLvl, t, wt('H2', 'Half') - 0.1, 1e9, { dy: 0, fade: 0.3 }); M.vis(hLvlT, t, wt('H2', 'Half'), 1e9, { dy: 0 });
+    M.vis(hLvl, t, wt('H2', 'Half') - 0.1, 1e9, { dy: 0, fade: 0.3 }); M.hide(hLvlT, true);
     M.vis(hHt, t, wt('H2', 'radius') - 0.1, 1e9, { dy: 0, fade: 0.3 });
     M.setT($('#hX'), `x = ${Math.round(a)}°`); M.vis($('#hX'), t, tMorph + 0.5, 1e9, { dy: 10 });
     M.vis($('#hSl'), t, tHk[0] - 0.2, 1e9, { dy: 10 });
