@@ -120,7 +120,7 @@ const cLy = txt(cw, 0, 186, 'OUTSIDE', { 'font-size': 16, 'letter-spacing': 1.4,
 /* ---------- D: notochord ---------- */
 const da = $('#daS'); AN.draw('fish', da, 392, 270, 2.3);
 const dRod = mk(da, 'path', { d: `M${392 - 66 * 2.3},${270 - 14 * 2.3} L${392 + 72 * 2.3},${270 - 14 * 2.3}`, stroke: NOTO, 'stroke-width': 12, 'stroke-linecap': 'round', fill: 'none' });
-const Ld = [lab(da, 392 + 30 * 2.3, 270 - 14 * 2.3, 560, 410, 'Notochord'), lab(da, 392 + 40 * 2.3, 270 - 40 * 2.3, 560, 100, 'Dorsal side (back)', 'start')];
+const Ld = [lab(da, 392 + 30 * 2.3, 270 - 14 * 2.3, 560, 410, 'Notochord'), lab(da, 392 + 40 * 2.3, 270 - 40 * 2.3, 560, 100, 'Dorsal side', 'start')];
 const dSub = txt(da, 572, 448, 'FORMS IN THE EMBRYO', { 'font-size': 15, 'letter-spacing': 1.2, 'font-weight': 600, fill: NOTO });
 const db = $('#dbS'), dw = AN.draw('worm', db, 392, 280, 1, { n: 20, L: 620, clit: 1 });
 const dSlot = mk(db, 'path', { d: 'M100,240 L690,240', stroke: C.dim, 'stroke-width': 10, 'stroke-dasharray': '14 12', 'stroke-linecap': 'round', fill: 'none' });
