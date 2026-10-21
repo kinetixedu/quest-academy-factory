@@ -1,0 +1,388 @@
+1
+00:00:00,450 --> 00:00:03,580
+Two friends order the
+same lunch on Kavya's app.
+
+2
+00:00:03,880 --> 00:00:06,832
+Rohan lives one point
+nine kilometres away.
+
+3
+00:00:06,832 --> 00:00:08,119
+He pays nothing.
+
+4
+00:00:08,619 --> 00:00:11,440
+Fatima lives two point
+one kilometres away.
+
+5
+00:00:11,440 --> 00:00:13,081
+She pays thirty rupees.
+
+6
+00:00:13,081 --> 00:00:13,981
+Fair?
+
+7
+00:00:14,241 --> 00:00:15,512
+Meet Dabba Dash.
+
+8
+00:00:15,512 --> 00:00:20,450
+Kavya, a student in Pune, built it
+to deliver lunch around her college.
+
+9
+00:00:20,750 --> 00:00:23,455
+The food comes from
+Joseph uncle's canteen.
+
+10
+00:00:23,455 --> 00:00:27,010
+Rohan runs the servers, and
+Fatima checks every number.
+
+11
+00:00:27,560 --> 00:00:32,182
+The delivery fee is a function: a rule
+where each input gives exactly one
+
+12
+00:00:32,182 --> 00:00:33,082
+output.
+
+13
+00:00:33,140 --> 00:00:36,504
+Here, the input is distance,
+and the output is the fee.
+
+14
+00:00:36,804 --> 00:00:39,207
+All the allowed inputs are the domain.
+
+15
+00:00:39,207 --> 00:00:41,656
+All the possible outputs are the range.
+
+16
+00:00:42,206 --> 00:00:44,298
+The trouble is at two kilometres.
+
+17
+00:00:44,298 --> 00:00:46,158
+To see it, we need limits.
+
+18
+00:00:46,458 --> 00:00:51,777
+In 1821, a French mathematician
+wrote down the idea.
+
+19
+00:00:52,077 --> 00:00:56,418
+When values come closer and closer
+to a fixed value, that value is their
+
+20
+00:00:56,418 --> 00:00:57,318
+limit.
+
+21
+00:00:57,295 --> 00:01:01,590
+Simply put, a limit is where a function
+is heading as the input gets close
+
+22
+00:01:01,590 --> 00:01:02,490
+to a point.
+
+23
+00:01:03,026 --> 00:01:05,931
+Watch the fee near two
+kilometres, from below.
+
+24
+00:01:06,231 --> 00:01:10,318
+One point nine, one point nine
+nine, one point nine nine nine.
+
+25
+00:01:10,318 --> 00:01:11,898
+The fee stays at zero.
+
+26
+00:01:12,198 --> 00:01:13,829
+The left limit is zero.
+
+27
+00:01:14,129 --> 00:01:15,307
+Now from above.
+
+28
+00:01:15,307 --> 00:01:19,419
+Two point one, two point zero
+one, two point zero zero one.
+
+29
+00:01:19,719 --> 00:01:21,316
+The fee stays at thirty.
+
+30
+00:01:21,316 --> 00:01:23,004
+The right limit is thirty.
+
+31
+00:01:23,304 --> 00:01:26,743
+The two sides disagree, so
+the limit does not exist.
+
+32
+00:01:26,743 --> 00:01:27,945
+That is a jump.
+
+33
+00:01:28,495 --> 00:01:31,229
+Professor Iyer shows something stranger.
+
+34
+00:01:31,229 --> 00:01:34,156
+x squared minus one, over x minus one.
+
+35
+00:01:34,156 --> 00:01:37,308
+At x equals one, it gives zero over zero.
+
+36
+00:01:37,608 --> 00:01:38,834
+No value there.
+
+37
+00:01:38,834 --> 00:01:40,486
+A program would crash.
+
+38
+00:01:40,486 --> 00:01:41,764
+But look nearby.
+
+39
+00:01:42,064 --> 00:01:45,699
+At zero point nine nine, it
+gives one point nine nine.
+
+40
+00:01:45,699 --> 00:01:48,628
+At one point zero one, two point zero one.
+
+41
+00:01:48,928 --> 00:01:50,420
+Both sides head to two.
+
+42
+00:01:50,420 --> 00:01:53,668
+The limit is two, though the
+function never gets there.
+
+43
+00:01:54,218 --> 00:01:57,265
+A limit is about where you are
+heading, not where you are.
+
+44
+00:01:57,915 --> 00:02:01,665
+A function is continuous at a
+point if it passes three checks.
+
+45
+00:02:01,965 --> 00:02:02,865
+One.
+
+46
+00:02:02,467 --> 00:02:04,042
+It has a value there.
+
+47
+00:02:04,342 --> 00:02:05,242
+Two.
+
+48
+00:02:04,887 --> 00:02:06,255
+The limit exists.
+
+49
+00:02:06,255 --> 00:02:07,902
+Left and right agree.
+
+50
+00:02:08,202 --> 00:02:09,102
+Three.
+
+51
+00:02:08,805 --> 00:02:10,686
+The limit equals the value.
+
+52
+00:02:10,986 --> 00:02:14,210
+So you can draw through that
+point without lifting your pen.
+
+53
+00:02:14,760 --> 00:02:16,515
+So Kavya fixes the fee.
+
+54
+00:02:16,515 --> 00:02:20,749
+The first kilometre is free, then
+fifteen rupees per kilometre.
+
+55
+00:02:21,049 --> 00:02:24,730
+At two kilometres, it is fifteen
+from the left, from the right, and at
+
+56
+00:02:24,730 --> 00:02:25,630
+the point.
+
+57
+00:02:25,713 --> 00:02:27,477
+All three checks pass.
+
+58
+00:02:27,477 --> 00:02:31,282
+Rohan pays thirteen fifty,
+and Fatima sixteen fifty.
+
+59
+00:02:31,282 --> 00:02:32,182
+No jump.
+
+60
+00:02:32,686 --> 00:02:34,718
+Where is this used at work today?
+
+61
+00:02:35,018 --> 00:02:35,918
+Functions.
+
+62
+00:02:35,857 --> 00:02:39,433
+A bank turns a loan amount
+into one monthly payment.
+
+63
+00:02:39,733 --> 00:02:40,633
+Limits.
+
+64
+00:02:40,411 --> 00:02:45,176
+In a hospital, a steady drip brings a
+medicine's level in the blood closer
+
+65
+00:02:45,176 --> 00:02:47,394
+and closer to one steady value.
+
+66
+00:02:47,694 --> 00:02:48,639
+Continuity.
+
+67
+00:02:48,639 --> 00:02:53,957
+Tax slabs charge a higher rate only
+above each limit, so tax never jumps.
+
+68
+00:02:54,507 --> 00:02:57,223
+But is the real world always continuous?
+
+69
+00:02:57,523 --> 00:02:58,647
+The good side.
+
+70
+00:02:58,647 --> 00:03:02,427
+Continuous rules are fair,
+and calculus is built on them.
+
+71
+00:03:02,727 --> 00:03:03,946
+The hard side.
+
+72
+00:03:03,946 --> 00:03:08,433
+Real life moves in steps, like
+whole orders and rounded prices.
+
+73
+00:03:08,733 --> 00:03:11,282
+And no jumps is not smooth.
+
+74
+00:03:11,282 --> 00:03:18,085
+In 1872, a German mathematician found a
+curve with no breaks, jagged everywhere.
+
+75
+00:03:18,385 --> 00:03:22,494
+So Kavya rounds the fees up, to
+fourteen and seventeen rupees.
+
+76
+00:03:22,794 --> 00:03:25,794
+Tiny one rupee steps that nobody minds.
+
+77
+00:03:26,094 --> 00:03:26,996
+The lesson?
+
+78
+00:03:26,996 --> 00:03:30,528
+Use smooth rules, but know
+where life moves in steps.
+
+79
+00:03:31,128 --> 00:03:32,095
+Quick check.
+
+80
+00:03:32,095 --> 00:03:36,398
+The fee is zero just below two
+kilometres, and thirty just above.
+
+81
+00:03:36,398 --> 00:03:38,032
+Is it continuous there?
+
+82
+00:03:39,932 --> 00:03:40,832
+No!
+
+83
+00:03:40,345 --> 00:03:43,943
+The left and right limits are
+different, so the graph jumps.
+
+84
+00:03:44,493 --> 00:03:45,506
+So, remember.
+
+85
+00:03:45,806 --> 00:03:49,014
+A function gives exactly
+one output for each input.
+
+86
+00:03:49,314 --> 00:03:52,548
+A limit is where a function
+is heading, from both sides.
+
+87
+00:03:52,848 --> 00:03:56,602
+A function is continuous when
+its value and its limit match.
+
+88
+00:03:57,152 --> 00:04:00,135
+Next time, we'll explore
+sequences and series.
