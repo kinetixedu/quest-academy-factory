@@ -152,7 +152,7 @@ const rPill = document.createElement('div'); rPill.className = 'pillp ac'; rPill
 /* ---------- C: side by side rules + think ---------- */
 $('#caF').innerHTML = K(`${dZ} = ${dA} + ${dB}`);
 $('#cbF').innerHTML = K(`\\dfrac{${dZ}}{${tZ}} = \\dfrac{${dA}}{${tA}} + \\dfrac{${dB}}{${tB}}`);
-const th2 = PUC.think($('#th2'), { q: 'Speed = distance ÷ time. Distance: 1 % error. Time: 2 % error. Error in speed?', opts: ['1 %', '3 %'], right: 1, why: 'Division still adds the relative errors: 1 % + 2 % = 3 %. They never subtract.' });
+const th2 = PUC.think($('#th2'), { q: 'Speed = distance ÷ time. Distance: 1 % error. Time: 2 % error. Error in speed?', opts: ['1 %', '3 %'], right: 1, why: 'Division still adds the relative errors: 1 % + 2 % = 3 %, never 1 %.' });
 
 /* ---------- W: worked example ---------- */
 const wsol = PUC.solution($('#wl'), [
