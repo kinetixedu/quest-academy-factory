@@ -1,0 +1,504 @@
+1
+00:00:00,450 --> 00:00:03,789
+Aarav switches on his
+grandfather's old valve radio.
+
+2
+00:00:03,789 --> 00:00:05,826
+For a few seconds, nothing.
+
+3
+00:00:05,826 --> 00:00:07,607
+Then the music fades in.
+
+4
+00:00:07,957 --> 00:00:10,566
+His phone plays the same song instantly.
+
+5
+00:00:10,566 --> 00:00:11,622
+Why the wait?
+
+6
+00:00:12,122 --> 00:00:14,572
+Inside that radio are vacuum tubes.
+
+7
+00:00:14,572 --> 00:00:17,946
+And a vacuum tube cannot
+work until it gets hot.
+
+8
+00:00:18,296 --> 00:00:20,806
+To see why, let's look inside the metal.
+
+9
+00:00:21,456 --> 00:00:23,676
+A metal is full of free electrons.
+
+10
+00:00:23,676 --> 00:00:26,945
+They wander inside, but the
+surface holds them back.
+
+11
+00:00:27,295 --> 00:00:30,719
+To escape, an electron needs
+a minimum amount of energy.
+
+12
+00:00:30,719 --> 00:00:32,782
+This is called the work function.
+
+13
+00:00:33,482 --> 00:00:37,560
+For tungsten, it is about four
+point five electron volts.
+
+14
+00:00:37,560 --> 00:00:42,251
+An electron volt is a tiny energy
+unit, made for single electrons.
+
+15
+00:00:42,951 --> 00:00:44,394
+Now heat the metal.
+
+16
+00:00:44,394 --> 00:00:46,960
+The electrons jiggle faster and faster.
+
+17
+00:00:47,310 --> 00:00:50,725
+Some gain enough energy to
+jump out of the surface.
+
+18
+00:00:50,725 --> 00:00:52,623
+This is thermionic emission.
+
+19
+00:00:52,623 --> 00:00:55,406
+Thermionic simply means given off by heat.
+
+20
+00:00:56,056 --> 00:01:01,060
+In nineteen oh four, John Ambrose Fleming
+used this idea to build the vacuum
+
+21
+00:01:01,060 --> 00:01:01,960
+diode.
+
+22
+00:01:02,048 --> 00:01:04,348
+A heated cathode gives off electrons.
+
+23
+00:01:04,348 --> 00:01:08,734
+A metal plate, the anode, sits across
+an empty space, with all the air
+
+24
+00:01:08,734 --> 00:01:09,634
+pumped out.
+
+25
+00:01:09,945 --> 00:01:14,250
+Let's put it on the breadboard, with
+an alternating supply and a resistor.
+
+26
+00:01:14,600 --> 00:01:18,567
+When the anode is positive,
+it pulls the electrons across.
+
+27
+00:01:18,567 --> 00:01:19,670
+Current flows.
+
+28
+00:01:20,020 --> 00:01:23,234
+When the anode turns
+negative, it pushes them back.
+
+29
+00:01:23,234 --> 00:01:24,533
+No current at all.
+
+30
+00:01:25,183 --> 00:01:26,400
+Watch the scope.
+
+31
+00:01:26,400 --> 00:01:28,437
+The input swings up and down.
+
+32
+00:01:28,437 --> 00:01:30,929
+The output keeps only the top halves.
+
+33
+00:01:31,279 --> 00:01:33,812
+Current flows in one direction only.
+
+34
+00:01:33,812 --> 00:01:38,428
+Turning alternating current into
+one-way current is called rectification.
+
+35
+00:01:39,078 --> 00:01:43,549
+In nineteen oh six, Lee de Forest
+added a wire mesh, the grid, between
+
+36
+00:01:43,549 --> 00:01:45,312
+the cathode and the anode.
+
+37
+00:01:45,662 --> 00:01:50,027
+A small voltage on the grid
+controls a big current to the anode.
+
+38
+00:01:50,027 --> 00:01:52,349
+This triode could amplify signals.
+
+39
+00:01:52,999 --> 00:01:54,975
+But tubes had real problems.
+
+40
+00:01:54,975 --> 00:01:58,421
+The heater wasted power
+and needed time to warm up.
+
+41
+00:01:58,771 --> 00:02:00,961
+The anode needed hundreds of volts.
+
+42
+00:02:00,961 --> 00:02:05,693
+The glass was big and fragile, and the
+heater burned out, like an old bulb.
+
+43
+00:02:06,343 --> 00:02:09,164
+The answer was a
+semiconductor, like silicon.
+
+44
+00:02:09,514 --> 00:02:13,708
+A semiconductor conducts better than
+an insulator, but not as well as a
+
+45
+00:02:13,708 --> 00:02:14,608
+metal.
+
+46
+00:02:14,629 --> 00:02:19,633
+Each silicon atom has four outer electrons,
+and shares them with four neighbours.
+
+47
+00:02:20,283 --> 00:02:22,261
+Add a few phosphorus atoms.
+
+48
+00:02:22,261 --> 00:02:27,351
+Phosphorus has five outer electrons,
+so one is left over and free to move.
+
+49
+00:02:27,351 --> 00:02:30,546
+This is n-type silicon,
+with negative carriers.
+
+50
+00:02:31,196 --> 00:02:32,607
+Add boron instead.
+
+51
+00:02:32,607 --> 00:02:36,700
+Boron has only three, so one
+bond is missing an electron.
+
+52
+00:02:36,700 --> 00:02:40,751
+That gap is a hole, and it
+acts like a positive charge.
+
+53
+00:02:40,751 --> 00:02:42,437
+This is p-type silicon.
+
+54
+00:02:43,087 --> 00:02:46,466
+Adding tiny impurities on
+purpose is called doping.
+
+55
+00:02:47,116 --> 00:02:50,131
+Now join a p-type piece
+to an n-type piece.
+
+56
+00:02:50,131 --> 00:02:51,883
+This is a p-n junction.
+
+57
+00:02:52,233 --> 00:02:56,039
+Near the joint, free electrons
+cross over and fill holes.
+
+58
+00:02:56,039 --> 00:02:59,394
+A thin layer with no free
+carriers is left behind.
+
+59
+00:02:59,394 --> 00:03:01,346
+This is the depletion layer.
+
+60
+00:03:01,996 --> 00:03:06,602
+It creates a small barrier, about
+zero point seven volts for silicon.
+
+61
+00:03:07,252 --> 00:03:10,746
+Connect the p side to plus
+and the n side to minus.
+
+62
+00:03:10,746 --> 00:03:12,275
+This is forward bias.
+
+63
+00:03:12,625 --> 00:03:17,037
+Above about zero point seven volts,
+the barrier gives way, and current
+
+64
+00:03:17,037 --> 00:03:17,945
+rises fast.
+
+65
+00:03:17,945 --> 00:03:20,639
+The scope draws the curve as it happens.
+
+66
+00:03:21,289 --> 00:03:22,925
+Now flip the battery.
+
+67
+00:03:22,925 --> 00:03:24,901
+The p side goes to minus.
+
+68
+00:03:24,901 --> 00:03:26,537
+This is reverse bias.
+
+69
+00:03:26,887 --> 00:03:30,603
+The depletion layer widens,
+and almost no current flows.
+
+70
+00:03:30,603 --> 00:03:34,026
+Just like the vacuum diode,
+it is a one-way valve.
+
+71
+00:03:34,676 --> 00:03:38,010
+A vacuum tube needs heat
+to free its electrons.
+
+72
+00:03:38,010 --> 00:03:40,749
+A p-n junction needs no heater at all.
+
+73
+00:03:41,549 --> 00:03:42,828
+Worked example.
+
+74
+00:03:42,828 --> 00:03:48,021
+A silicon diode and a one kilo ohm
+resistor are connected to a five volt
+
+75
+00:03:48,021 --> 00:03:50,064
+supply, in forward bias.
+
+76
+00:03:50,414 --> 00:03:51,765
+What current flows?
+
+77
+00:03:52,115 --> 00:03:55,040
+The diode takes about
+zero point seven volts.
+
+78
+00:03:55,040 --> 00:03:59,015
+The rest, four point three
+volts, falls across the resistor.
+
+79
+00:03:59,715 --> 00:04:02,957
+Current equals voltage
+divided by resistance.
+
+80
+00:04:02,957 --> 00:04:06,801
+Four point three volts
+divided by one thousand ohms.
+
+81
+00:04:07,501 --> 00:04:09,874
+That is four point three milliamperes.
+
+82
+00:04:09,874 --> 00:04:13,278
+Flip the diode, and the
+current drops to almost zero.
+
+83
+00:04:13,928 --> 00:04:16,157
+So why did semiconductors win?
+
+84
+00:04:16,507 --> 00:04:18,081
+A tube needs a heater.
+
+85
+00:04:18,081 --> 00:04:21,304
+A semiconductor needs none,
+so it starts instantly.
+
+86
+00:04:21,654 --> 00:04:23,941
+A tube needs hundreds of volts.
+
+87
+00:04:23,941 --> 00:04:26,938
+A semiconductor works on just a few volts.
+
+88
+00:04:27,288 --> 00:04:29,579
+A tube is a fragile glass bulb.
+
+89
+00:04:29,579 --> 00:04:33,129
+A semiconductor is tiny,
+solid and lasts for years.
+
+90
+00:04:33,129 --> 00:04:36,680
+In nineteen forty seven,
+it gave us the transistor.
+
+91
+00:04:37,330 --> 00:04:38,795
+Now, the exam trap.
+
+92
+00:04:39,145 --> 00:04:43,859
+Many students connect forward bias the
+wrong way, with the p side to minus.
+
+93
+00:04:44,209 --> 00:04:48,167
+Forward bias means p side
+to plus, n side to minus.
+
+94
+00:04:48,167 --> 00:04:49,200
+P to plus.
+
+95
+00:04:49,200 --> 00:04:50,857
+Remember the two Ps.
+
+96
+00:04:51,507 --> 00:04:53,115
+Where is this asked?
+
+97
+00:04:53,115 --> 00:04:57,993
+PUC board papers ask you to compare
+tubes with semiconductors, or explain
+
+98
+00:04:57,993 --> 00:04:58,893
+doping.
+
+99
+00:04:58,706 --> 00:05:03,487
+JEE Main asks for the current in
+diode circuits, as in February twenty
+
+100
+00:05:03,487 --> 00:05:04,480
+twenty one.
+
+101
+00:05:05,130 --> 00:05:06,030
+Try this.
+
+102
+00:05:06,014 --> 00:05:10,898
+Two silicon diodes, both forward
+biased, are in series with a two kilo
+
+103
+00:05:10,898 --> 00:05:13,722
+ohm resistor across a six volt battery.
+
+104
+00:05:13,722 --> 00:05:15,329
+What is the current?
+
+105
+00:05:20,729 --> 00:05:21,629
+C.
+
+106
+00:05:21,190 --> 00:05:23,370
+Two point three milliamperes.
+
+107
+00:05:23,720 --> 00:05:27,446
+Each silicon diode takes
+about zero point seven volts.
+
+108
+00:05:27,446 --> 00:05:30,254
+Two of them take one point four volts.
+
+109
+00:05:30,604 --> 00:05:33,851
+That leaves four point six
+volts across the resistor.
+
+110
+00:05:34,201 --> 00:05:39,669
+Four point six divided by two thousand
+ohms gives two point three milliamperes.
+
+111
+00:05:40,319 --> 00:05:41,840
+Screenshot this card.
+
+112
+00:05:45,040 --> 00:05:49,517
+Next, integrated circuits,
+microprocessors and microcontrollers.
+
+113
+00:05:49,517 --> 00:05:53,368
+How do billions of transistors
+fit on one tiny chip?

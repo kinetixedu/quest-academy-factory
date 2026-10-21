@@ -1,0 +1,392 @@
+1
+00:00:00,450 --> 00:00:02,326
+Aarav waits at the airport.
+
+2
+00:00:02,326 --> 00:00:03,640
+Thick fog outside.
+
+3
+00:00:03,640 --> 00:00:05,724
+He cannot even see the runway.
+
+4
+00:00:06,074 --> 00:00:08,160
+Yet the planes keep landing safely.
+
+5
+00:00:08,160 --> 00:00:10,343
+How does the control tower see them?
+
+6
+00:00:10,843 --> 00:00:12,111
+With electronics.
+
+7
+00:00:12,111 --> 00:00:13,982
+And not just at airports.
+
+8
+00:00:14,332 --> 00:00:17,165
+Electronics works the
+same way in every field.
+
+9
+00:00:17,165 --> 00:00:18,465
+A chain of blocks.
+
+10
+00:00:18,465 --> 00:00:21,823
+Sense something, process
+the signal, then act on it.
+
+11
+00:00:22,473 --> 00:00:25,314
+Let's follow one real chain in each field.
+
+12
+00:00:25,314 --> 00:00:26,868
+First, communication.
+
+13
+00:00:26,868 --> 00:00:27,972
+A phone call.
+
+14
+00:00:28,322 --> 00:00:32,228
+The microphone turns your voice
+into a tiny electrical signal.
+
+15
+00:00:32,578 --> 00:00:34,571
+An amplifier makes it stronger.
+
+16
+00:00:34,571 --> 00:00:39,116
+The transmitter puts it onto a radio
+wave, and the antenna sends it out.
+
+17
+00:00:39,466 --> 00:00:42,246
+At the other end, the
+chain runs backwards.
+
+18
+00:00:42,246 --> 00:00:44,186
+Receiver, amplifier, speaker.
+
+19
+00:00:44,186 --> 00:00:46,052
+Your friend hears your voice.
+
+20
+00:00:46,702 --> 00:00:48,884
+Entertainment uses the same blocks.
+
+21
+00:00:48,884 --> 00:00:53,125
+A television receives a signal,
+decodes the picture and the sound, and
+
+22
+00:00:53,125 --> 00:00:56,000
+amplifies them for the
+screen and the speaker.
+
+23
+00:00:56,350 --> 00:00:57,572
+Now, defence.
+
+24
+00:00:57,572 --> 00:00:58,979
+Back to the fog.
+
+25
+00:00:58,979 --> 00:01:00,212
+This is radar.
+
+26
+00:01:00,562 --> 00:01:04,409
+The radar sends out a short,
+strong pulse of radio waves.
+
+27
+00:01:04,759 --> 00:01:07,502
+The pulse hits the plane and bounces back.
+
+28
+00:01:07,502 --> 00:01:10,089
+That faint echo is caught and amplified.
+
+29
+00:01:10,439 --> 00:01:11,635
+Watch the scope.
+
+30
+00:01:11,635 --> 00:01:13,286
+The big pulse goes out.
+
+31
+00:01:13,286 --> 00:01:15,337
+A small echo comes back later.
+
+32
+00:01:15,337 --> 00:01:17,542
+The gap between them is the key.
+
+33
+00:01:18,192 --> 00:01:22,609
+Radio waves travel at the speed of
+light, c, three times ten to the eight
+
+34
+00:01:22,609 --> 00:01:23,833
+metres per second.
+
+35
+00:01:24,183 --> 00:01:27,873
+In time t, the pulse goes
+to the plane and comes back.
+
+36
+00:01:27,873 --> 00:01:30,036
+So it covers twice the distance.
+
+37
+00:01:30,036 --> 00:01:31,759
+Two d equals c times t.
+
+38
+00:01:32,459 --> 00:01:35,703
+So d equals c times t, divided by two.
+
+39
+00:01:36,403 --> 00:01:40,664
+Distance in metres, speed in
+metres per second, time in seconds.
+
+40
+00:01:41,314 --> 00:01:42,586
+Worked example.
+
+41
+00:01:42,586 --> 00:01:46,833
+The echo returns four hundred
+microseconds after the pulse.
+
+42
+00:01:47,183 --> 00:01:50,047
+A microsecond is a millionth of a second.
+
+43
+00:01:50,047 --> 00:01:53,508
+So t is four times ten to
+the minus four seconds.
+
+44
+00:01:54,208 --> 00:01:58,937
+d equals three times ten to the eight,
+times four times ten to the minus
+
+45
+00:01:58,937 --> 00:02:00,606
+four, divided by two.
+
+46
+00:02:01,306 --> 00:02:03,364
+That is sixty thousand metres.
+
+47
+00:02:03,364 --> 00:02:05,734
+The plane is sixty kilometres away.
+
+48
+00:02:06,384 --> 00:02:07,532
+Next, industry.
+
+49
+00:02:07,532 --> 00:02:11,512
+Think of an oven in a factory
+that must stay at one temperature.
+
+50
+00:02:11,862 --> 00:02:14,112
+A sensor measures the temperature.
+
+51
+00:02:14,112 --> 00:02:17,292
+A microcontroller compares
+it with the set value.
+
+52
+00:02:17,642 --> 00:02:20,094
+Too cold, it switches the heater on.
+
+53
+00:02:20,094 --> 00:02:22,106
+Too hot, it switches it off.
+
+54
+00:02:22,106 --> 00:02:25,540
+This loop runs again and
+again, with no human needed.
+
+55
+00:02:25,540 --> 00:02:27,257
+Robots work the same way.
+
+56
+00:02:27,907 --> 00:02:29,318
+Finally, medicine.
+
+57
+00:02:29,318 --> 00:02:30,523
+Diya's favourite.
+
+58
+00:02:30,873 --> 00:02:33,392
+An ECG machine records the heart.
+
+59
+00:02:33,392 --> 00:02:37,363
+Small pads on the skin pick up
+the heart's electrical signal.
+
+60
+00:02:37,713 --> 00:02:40,491
+That signal is only about one millivolt.
+
+61
+00:02:40,491 --> 00:02:42,156
+Far too small to see.
+
+62
+00:02:42,506 --> 00:02:46,918
+An amplifier makes it about a thousand
+times bigger, and the display draws
+
+63
+00:02:46,918 --> 00:02:48,032
+every heartbeat.
+
+64
+00:02:48,682 --> 00:02:53,227
+The same field gives us scanners,
+monitors and pacemakers that keep hearts
+
+65
+00:02:53,227 --> 00:02:54,450
+beating on time.
+
+66
+00:02:55,100 --> 00:02:56,477
+Different fields.
+
+67
+00:02:56,477 --> 00:02:57,403
+One idea.
+
+68
+00:02:57,403 --> 00:02:59,243
+Sense, process, act.
+
+69
+00:03:00,043 --> 00:03:01,508
+Now, the exam trap.
+
+70
+00:03:01,858 --> 00:03:05,246
+Many students write radar
+distance as c times t.
+
+71
+00:03:05,596 --> 00:03:08,473
+But the pulse travels
+to the target and back.
+
+72
+00:03:08,473 --> 00:03:09,741
+So divide by two.
+
+73
+00:03:09,741 --> 00:03:11,264
+d equals c t by two.
+
+74
+00:03:11,914 --> 00:03:13,545
+Where is this asked?
+
+75
+00:03:13,545 --> 00:03:15,177
+In PUC board papers.
+
+76
+00:03:15,177 --> 00:03:19,983
+List the applications of electronics
+in communication, defence, industry
+
+77
+00:03:19,983 --> 00:03:22,107
+or medicine, with examples.
+
+78
+00:03:22,757 --> 00:03:23,657
+Try this.
+
+79
+00:03:23,637 --> 00:03:28,658
+A radar echo returns zero point two
+milliseconds after the pulse is sent.
+
+80
+00:03:28,658 --> 00:03:30,761
+How far away is the target?
+
+81
+00:03:36,161 --> 00:03:37,061
+B.
+
+82
+00:03:36,672 --> 00:03:38,252
+Thirty kilometres.
+
+83
+00:03:38,602 --> 00:03:41,052
+First, change milliseconds to seconds.
+
+84
+00:03:41,052 --> 00:03:44,174
+That is two times ten to
+the minus four seconds.
+
+85
+00:03:44,524 --> 00:03:47,610
+c times t is six times
+ten to the four metres.
+
+86
+00:03:47,610 --> 00:03:49,792
+That is the trip there and back.
+
+87
+00:03:50,142 --> 00:03:55,173
+Divide by two, and the target is thirty
+thousand metres, or thirty kilometres
+
+88
+00:03:55,173 --> 00:03:56,073
+away.
+
+89
+00:03:56,400 --> 00:03:57,922
+Screenshot this card.
+
+90
+00:04:01,122 --> 00:04:04,478
+Next, the impact of
+electronics on everyday life.
+
+91
+00:04:04,478 --> 00:04:07,998
+What is electronics doing
+inside your home right now?
