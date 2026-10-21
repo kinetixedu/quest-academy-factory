@@ -249,10 +249,10 @@ const tpArc = mk(tp, 'path', { d: '', fill: 'none', stroke: GC, 'stroke-width': 
 $('#tc0').innerHTML = M.icon('x', 22, C.red, 3) + K(`${MG}\\sin 0 = 0`); $('#tc1').innerHTML = M.icon('check', 22, C.ok, 3) + K(`${MG}\\cos 0 = ${MG}`);
 const where = PUC.where($('#wa'), { on: [], type: 'Free-body numericals: blocks on ramps, pushed or pulled at an angle' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 800, cols: 2, optW: 474, optH: 76, optFs: 30, optY: 392,
-  q: `A ${K('4\\ \\text{kg}')} block is on a floor. A ${K(tc(FC, '40\\ \\text{N}'))} force at ${K(tc(GC, '30°'))} to the horizontal first pushes down on it, then pulls up. ${K('g = 10\\ \\text{m/s}^2')}. Find ${K(`${NN}_{\\text{push}} : ${NN}_{\\text{pull}}`)}.`,
-  opts: ['1 : 1', '2 : 1', '3 : 1', '3 : 2'], right: 2 });
-const so = PUC.solution($('#so'), [[K(`${FF}\\sin 30° = 40 \\times 0.5 = 20\\ \\text{N}`)], [K(`\\text{push: } ${NN} = 40 + 20 = 60\\ \\text{N}`)], [K(`\\text{pull: } ${NN} = 40 - 20 = 20\\ \\text{N}`)], [K(`60 : 20 = ${tc(C.ok, '3 : 1')}`)]], { y0: 100, dy: 112 });
-const tSo = [wt('A2', 'vertical'), wt('A3', 'Pushing'), wt('A3', 'Pulling'), T0('A4')];
+  q: `A ${K('2\\ \\text{kg}')} block rests on a smooth ramp at ${K(tc(GC, '37°'))}. A horizontal push ${K(FF)} holds it still. ${K('\\sin 37° = 0.6')}, ${K('g = 10\\ \\text{m/s}^2')}. Find ${K(NN)}.`,
+  opts: ['12 N', '16 N', '25 N', '20 N'], right: 2 });
+const so = PUC.solution($('#so'), [[K(`${FF}\\cos${TH} = ${MG}\\sin${TH} \\Rightarrow ${FF} = 15\\ \\text{N}`)], [K(`${MG}\\cos${TH} = 20 \\times 0.8 = 16\\ \\text{N}`)], [K(`${FF}\\sin${TH} = 15 \\times 0.6 = 9\\ \\text{N}`)], [K(`${NN} = 16 + 9 = ${tc(C.ok, '25\\ \\text{N}')}`)]], { y0: 100, dy: 112 });
+const tSo = [T0('A2'), T0('A3'), wt('A3', 'F'), T0('A4')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 262, w: 1200, h: 470, title: 'Recap · normal reaction', y0: 100, dy: 90, txt: [0, 0, 1, 1],
   lines: [K(`\\text{flat: } ${NN} = ${MG} \\qquad \\text{push or pull: } ${NN} = ${MG} \\pm ${FF}`),
     K(`\\text{ramp: } ${NN} = ${MG}\\cos ${TH}`),
