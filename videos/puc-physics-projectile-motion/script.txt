@@ -1,0 +1,55 @@
+H1|0.4|A ball tossed to a friend. Water from a hose. A long jumper in the air.
+H2|0.45|All three curve in the very same way. Why that shape?
+H3|0.35|Aarav tests it on his study table. He flicks one coin off the edge, and lets another coin fall at the same moment.
+H4|0.5|The flicked coin flies far. The other drops straight down. Which one hits the floor first?
+H5|0.65|Most people say the dropped coin. Let's find out, and see exactly why.
+P1|0.35|So what is a projectile?
+P2|0.4|It is any object that is thrown, and then moves only under gravity.
+P3|0.4|A thrown ball, a long jumper, a catapult stone. Once released, only gravity pulls on them.
+P4|0.65|A rocket with its engine on is not a projectile. The engine still pushes. We also ignore air resistance.
+S1|0.35|Aarav's test on the motion notebook. Two balls, same height, same moment.
+S2|0.4|The dark ball is just dropped. The blue ball is pushed sideways at five metres per second.
+S3|0.4|Watch the heights. At every flash, both balls are at the same level.
+S4|0.4|They land together, after one second. The height graph for both is the same curve.
+S5|0.35|Slow-mo replay. Freeze, and draw the velocities.
+S6|0.4|Sideways, the blue arrow never changes. Five metres per second, all the way.
+S7|0.65|Downwards, the violet arrow grows by nine point eight metres per second, every second. Exactly like the dropped ball.
+S8|3.2|Your turn. Push the blue ball three times faster. Does it land sooner, later, or at the same time? Pause and decide.
+S9|0.65|The same time! A faster push sends it farther, not faster down. Fall time depends only on height.
+A1|0.35|Now let's throw at an angle, like a real throw.
+A2|0.4|Speed twenty metres per second, at thirty degrees above the ground.
+A3|0.4|Split the throw into two parts. Across, u cos theta. Up, u sin theta.
+A4|0.4|Across, that is about seventeen point three metres per second. Up, it is ten.
+A5|0.4|Let it fly. The across speed stays the same. The up speed shrinks to zero at the top, then grows downwards.
+A6|0.65|And gravity, the red arrow, points down the whole time. At the start, at the top, and at the end.
+D1|0.35|Now the rules, one step at a time.
+D2|0.75|Step one. Split the start velocity. u x equals u cos theta. u y equals u sin theta.
+D3|0.75|Step two. Across, there is no acceleration. So x equals u cos theta, times t.
+D4|0.75|Step three. Up and down, the acceleration is g, downwards. So y equals u sin theta t, minus half g t squared.
+D5|0.75|Step four. The velocity parts. v x stays u cos theta. And v y equals u sin theta minus g t.
+T1|0.7|Remember this. One throw, two motions. Steady across, free fall up and down.
+K1|0.4|Side by side. Across, the ball moves like a car on cruise control. Same gap every tick.
+K2|0.6|Up and down, it moves like a ball thrown straight up. It slows, stops, and falls back.
+K3|3.2|Now you try. At the very top of the path, is the speed of the ball zero? Pause and decide.
+K4|0.65|No! Only the up and down part is zero. The across part, u cos theta, remains. So the top speed is u cos theta.
+W1|0.35|Now, one worked example.
+W2|0.5|A ball is thrown at twenty metres per second, at thirty degrees. Find its position and velocity at one point five seconds.
+W3|0.75|Across. x equals seventeen point three times one point five. About twenty six metres.
+W4|0.75|Up. y equals ten times one point five, minus half g times one point five squared. About four metres.
+W5|0.75|Velocity. v x stays seventeen point three. v y is ten minus nine point eight times one point five, minus four point seven. So it is coming down.
+W6|0.65|Speed is the root of seventeen point three squared plus four point seven squared. About eighteen metres per second.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students say that at the highest point, the acceleration is zero, because the ball stops going up.
+X3|0.65|But gravity never switches off. The acceleration is g, downwards, at every point, even at the top.
+E1|0.6|Where is this asked? In questions on a projectile's position or velocity at a given time, and its direction.
+Q1|5.4|Exam level now. A ball is thrown at thirty metres per second, at fifty three degrees. Sine fifty three is point eight, and g is ten. When is its velocity perpendicular to its starting velocity? Pause and solve.
+B1|0.5|The answer is B. Three point seven five seconds.
+B2|0.5|Split the start velocity. Across, eighteen. Up, twenty four.
+B3|0.5|Perpendicular means the dot product is zero. Eighteen times eighteen, plus twenty four times, twenty four minus ten t, is zero.
+B4|0.6|So two forty t is nine hundred, and t is three point seven five seconds. The flight lasts four point eight, so it is still flying.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. A coin is flicked off a table, another is dropped. Which lands first, and why?
+Y3|0.9|Two. What is the speed of a projectile at its highest point?
+Y4|1.1|Three. What is its acceleration at the highest point?
+N1|0.3|Next time: why does every throw make the very same curve? We find its equation in trajectory of a projectile.
