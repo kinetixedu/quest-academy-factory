@@ -192,10 +192,10 @@ const tUp = mk(tg, 'path', { d: `M${TG.X(0)},${TG.Y(0)} L${TG.X(0)},${TG.Y(8)} L
 mk(tg, 'path', { d: `M${TG.X(0)},${TG.Y(8)} L${TG.X(6)},${TG.Y(-4)}`, stroke: VC, 'stroke-width': 4, fill: 'none' });
 const tPl = txt(tg, TG.X(1.2), TG.Y(2), '+', { 'font-size': 40, fill: VC, 'font-weight': 600, 'text-anchor': 'middle' }), tMi = txt(tg, TG.X(5.3), TG.Y(-1.4) + 4, '−', { 'font-size': 40, fill: AC, 'font-weight': 600, 'text-anchor': 'middle' });
 const where = PUC.where($('#wa'), { on: [], type: 'Graph questions: find the acceleration, displacement or distance from a given graph' });
-const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN · NEET PATTERN · ORIGINAL QUESTION', q: `A velocity changes uniformly from ${K('+8\\,\\text{m/s}')} to ${K('-4\\,\\text{m/s}')} in ${K('6\\,\\text{s}')}. Find the displacement and the distance.`, qW: 780,
-  opts: ['12 m and 20 m', '20 m and 20 m', '12 m and 36 m', '36 m and 20 m'], right: 0, cols: 1, optW: 968, optH: 68, optFs: 28, optY: 250 });
-const so = PUC.solution($('#so'), [[K(`${av} = -2\\,\\text{m/s}^2,\\; ${vv} = 0 \\text{ at } 4\\,\\text{s}`)], [K('\\text{above: } \\tfrac12 \\times 4 \\times 8 = 16')], [K('\\text{below: } \\tfrac12 \\times 2 \\times 4 = 4')], [K(`${dX} = 16 - 4 = 12\\,\\text{m}`)], [K('\\text{distance} = 16 + 4 = 20\\,\\text{m}')]], { y0: 100, dy: 100 });
-const tSo = [wt('Z2', 'zero'), wt('Z2', 'half'), wt('Z3', 'half'), wt('Z3', 'Displacement'), wt('Z3', 'Distance')];
+const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN · NEET PATTERN · ORIGINAL QUESTION', q: `A car moves at ${K('+10\\,\\text{m/s}')}. Its acceleration is ${K('+2\\,\\text{m/s}^2')} for the next ${K('5\\,\\text{s}')}, then ${K('-4\\,\\text{m/s}^2')} for the ${K('5\\,\\text{s}')} after that. What is its velocity at ${K('t = 10\\,\\text{s}')}?`, qW: 760,
+  opts: ['0 m/s', '-10 m/s', '20 m/s', '40 m/s'], right: 0, cols: 1, optW: 968, optH: 68, optFs: 28, optY: 250 });
+const so = PUC.solution($('#so'), [[K(`${dV} = \\text{area under } a\\text{-}t`)], [K('0\\text{-}5\\,\\text{s}:\\quad 2 \\times 5 = +10')], [K('5\\text{-}10\\,\\text{s}:\\quad (-4) \\times 5 = -20')], [K(`${vv} = 10 + 10 - 20 = 0`)]], { y0: 100, dy: 110 });
+const tSo = [wt('Z2', 'Area'), wt('Z2', 'First'), wt('Z2', 'Second'), wt('Z3', 'Final')];
 const fc = PUC.fcard($('#sF'), { x: 410, y: 262, w: 1100, h: 470, title: 'Recap · slope and area', y0: 104, dy: 90, txt: [0, 0, 1, 1],
   lines: [K(`\\text{slope}:\\; x\\text{-}t \\to ${vv} \\qquad v\\text{-}t \\to ${av}`), K(`\\text{area}:\\; v\\text{-}t \\to ${dX} \\qquad a\\text{-}t \\to ${dV}`),
     '<b>Below the time axis</b>: area counts negative for displacement', '<b>Distance</b>: add the sizes of all the areas'] });
