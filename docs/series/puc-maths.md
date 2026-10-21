@@ -95,3 +95,12 @@ Topics Amjad marked "supplementary", "where prescribed" or "extension" (Eps 23, 
 (lead adds recurring facts reported by subagents here)
 - Chapter 3 fixed colours: theta / first angle x (alpha) violet #7A4FE0, cos blue #2F6FEB, sin coral (accent), tan teal #0E8F8F, sec and second angle y (beta) gold #B7791F, cot orange #D9731A, cosec magenta #C2378A.
 - Chapter 1 colours: element x violet, rule coral, set A blue, set B teal, U ink, not-in red. Intro number families: N coral, Z teal, Q blue, R ink, irrational violet.
+
+## PUC BOARDS chip: verified Karnataka 1st PUC annual papers (read 21 Oct 2026)
+Sources: M-2024 = 1st PUC Mathematics (35) annual exam March 2024, current syllabus (https://docs.aglasem.com/view/98372ba4-0d67-11ef-b7fe-0a5e36bc6706). A-2023 = 1st PUC annual exam Feb/March 2023, pre-rationalisation syllabus (https://docs.aglasem.com/view/961419e2-a627-11ee-8057-0a5e36bc6706).
+Light PUC BOARDS ONLY for these episodes (question that proves it in brackets):
+- Ep 3 roster form (A-2023 Q18) · Ep 5 subsets (M-2024 Q22) · Ep 7 intervals (M-2024 Q1) · Ep 8 union/difference (M-2024 Q21, Q22) · Ep 9 complement (M-2024 Q32, A-2023 Q22) · Ep 11 properties, De Morgan (M-2024 Q32, A-2023 Q1)
+- Ep 13 n(A x B) (M-2024 Q2, A-2023 Q23) · Ep 14 equal ordered pairs (M-2024 Q16) · Ep 15 number of relations, domain/range of a relation (A-2023 Q2, Q36) · Ep 17 domain, codomain, range (A-2023 Q36, M-2024 Q43) · Ep 18 real valued functions (M-2024 Q33) · Ep 20 modulus function (M-2024 Q43, A-2023 Q49) · Ep 22 graph of the modulus function (M-2024 Q43) · Ep 23 f+g, f-g, fg (M-2024 Q33)
+- Ep 24 arc length l = r theta (A-2023 Q24) · Ep 25 radian measure of 240 degrees (M-2024 Q3, A-2023 Q16) · Ep 27 standard values (M-2024 Q23) · Ep 28 signs by quadrant (M-2024 Q36, A-2023 Q25) · Ep 29 domain of sec x (A-2023 Q3) · Ep 32 identities (M-2024 Q36) · Ep 33 cos(x + y) geometric proof (M-2024 Q51, A-2023 Q59) · Ep 34 sin 3x (M-2024 Q34) · Ep 35 sum to product (M-2024 Q44, A-2023 Q50)
+- Ep 38 powers of i (M-2024 Q4) · Ep 39 a + ib form (M-2024 Q25) · Ep 40 inverses, (1 - i)^4 (M-2024 Q24, A-2023 Q4, Q26) · Ep 41 division by a conjugate (M-2024 Q35) · Ep 42 modulus, x^2 + y^2 = 1 (M-2024 Q35) · Ep 45 complex roots of 2x^2 + x + 1 = 0 (A-2023 Q39, only if still in current NCERT text)
+All other episodes: PUC BOARDS stays unlit (no verified question, or the topic left the current syllabus: power sets, n(A U B) applications, trig equations, polar form).
