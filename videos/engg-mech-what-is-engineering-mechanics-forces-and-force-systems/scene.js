@@ -97,14 +97,14 @@ wrap($('#kq'), 'kqOut', 784, 580);
 {
   const s = $('#fcS'); const GY = 452;
   s.innerHTML = defs('htf') + `<line x1="40" y1="${GY}" x2="1008" y2="${GY}" stroke="#2E3742" stroke-width="3"/>
-  <g id="sideAuto" transform="translate(250 0)">
+  <g id="sideAuto"><g transform="translate(250 0)">
     <path d="M40 ${GY - 60} V${GY - 210} C40 ${GY - 250} 70 ${GY - 266} 120 ${GY - 266} H330 C362 ${GY - 266} 376 ${GY - 250} 380 ${GY - 220} L404 ${GY - 120} C410 ${GY - 96} 410 ${GY - 70} 400 ${GY - 60} Z" fill="#F7F8FA" stroke="#2E3742" stroke-width="4" stroke-linejoin="round"/>
     <path d="M60 ${GY - 236} H330 L352 ${GY - 150} H60 Z" fill="#DDE2E7" stroke="#2E3742" stroke-width="3"/>
     <line x1="210" y1="${GY - 236}" x2="210" y2="${GY - 150}" stroke="#2E3742" stroke-width="3"/>
     <rect x="40" y="${GY - 112}" width="368" height="14" fill="#FF6A13"/>
     <circle cx="110" cy="${GY - 36}" r="36" fill="#2E3742"/><circle cx="110" cy="${GY - 36}" r="14" fill="#A9B2BD"/>
     <circle cx="360" cy="${GY - 36}" r="36" fill="#2E3742"/><circle cx="360" cy="${GY - 36}" r="14" fill="#A9B2BD"/>
-  </g>
+  </g></g>
   <line id="loa" x1="80" y1="${GY - 90}" x2="1010" y2="${GY - 90}" stroke="#6C7886" stroke-width="2.5" stroke-dasharray="18 8 4 8"/>
   ${arrow('fPush', 110, GY - 90, 286, GY - 90, C.steel, 10, 28)}
   ${arrow('fPull', 662, GY - 90, 902, GY - 90, C.orange, 10, 28)}
@@ -112,7 +112,7 @@ wrap($('#kq'), 'kqOut', 784, 580);
   $('#fcL').innerHTML = `<div class="fl" id="fl0" style="left:120px;top:${GY - 154}px">PUSH</div>
     <div class="fl or" id="fl1" style="left:770px;top:${GY - 154}px">SIZE<span class="v">300 N</span></div>
     <div class="fl or" id="fl2" style="left:770px;top:${GY - 208}px">DIRECTION<span class="v">→</span></div>
-    <div class="fl" id="fl3" style="left:560px;top:${GY - 20}px">POINT OF APPLICATION</div>
+    <div class="fl" id="fl3" style="left:680px;top:${GY - 62}px">POINT OF APPLICATION</div>
     <div class="fl" id="fl4" style="left:40px;top:${GY + 30}px">LINE OF ACTION</div>`;
   $('#apple').innerHTML = `<circle cx="60" cy="66" r="42" fill="#FF6A13" stroke="#2E3742" stroke-width="4"/><path d="M60 24 V10" stroke="#2E3742" stroke-width="4" stroke-linecap="round"/><path d="M62 18 C72 6 86 8 92 12 C84 22 72 24 62 18Z" fill="#6C7886" stroke="#2E3742" stroke-width="3"/>`;
   $('#vecI').innerHTML = M.icon('move', 26, '#fff', 2.6);
@@ -140,8 +140,8 @@ $('#vecL').innerHTML = `<g id="vgL">${arrow('vPL', HX, HY, HX + pP[0], HY, C.ste
   <g id="vCL" opacity="0">${arrow('vSL2', HX + pP[0], HY, HX + pR[0], HY + pR[1], C.orange, 5, 16)}</g></g>
   ${arrow('vRL', HX, HY, HX + pR[0], HY + pR[1], C.steel, 10, 26)}
   <text id="tPL" x="${HX + 50}" y="${HY + 34}" text-anchor="middle" font-family="IBM Plex Mono" font-weight="600" font-size="20" fill="#2E3742">200 N</text>
-  <text id="tSL" x="${HX + 18}" y="${HY - 64}" font-family="IBM Plex Mono" font-weight="600" font-size="20" fill="#FF6A13">300 N · 30°</text>
-  <text id="tRL" x="${HX + pR[0] + 14}" y="${HY + pR[1] + 6}" font-family="IBM Plex Mono" font-weight="600" font-size="22" fill="#2E3742">R = 484 N</text>`;
+  <text id="tSL" x="${HX + 60}" y="${HY - 112}" font-family="IBM Plex Mono" font-weight="600" font-size="20" fill="#FF6A13">300 N · 30°</text>
+  <text id="tRL" x="${HX + pR[0] / 2 + 30}" y="${HY + pR[1] / 2 + 44}" font-family="IBM Plex Mono" font-weight="600" font-size="22" fill="#2E3742">R = 484 N</text>`;
 $('#vecR').innerHTML = `${arrow('vPR', HX, HY, HX + 100, HY, C.steel, 7, 20)}<g id="vCR" opacity="0">${arrow('vSR', HX + 100, HY, HX + 250, HY, C.orange, 7, 20)}</g>
   <text id="tPR" x="${HX + 50}" y="${HY + 34}" text-anchor="middle" font-family="IBM Plex Mono" font-weight="600" font-size="20" fill="#2E3742">200 N</text>
   <text id="tSR" x="${HX + 175}" y="${HY + 34}" text-anchor="middle" font-family="IBM Plex Mono" font-weight="600" font-size="20" fill="#FF6A13">300 N</text>
@@ -155,7 +155,7 @@ const FS = [
   ['Parallel', 'Lines never meet', 'Ground on three wheels', `<rect x="40" y="88" width="200" height="40" rx="6" fill="#DDE2E7" stroke="#2E3742" stroke-width="3"/>${arrow('d20', 140, 20, 140, 84, C.orange, 7, 20)}${arrow('d21', 60, 210, 60, 132, C.steel, 7, 20)}${arrow('d22', 140, 210, 140, 132, C.steel, 7, 20)}${arrow('d23', 220, 210, 220, 132, C.steel, 7, 20)}`],
   ['General', 'Neither meet nor parallel', 'Wind and weight on a roof', `<path d="M40 150 L140 80 L240 150 Z" fill="#DDE2E7" stroke="#2E3742" stroke-width="3"/>${arrow('d30', 0, 90, 82, 110, C.orange, 7, 20)}${arrow('d31', 170, 60, 170, 120, C.steel, 7, 20)}${arrow('d32', 230, 220, 230, 160, C.steel, 7, 20)}${arrow('d33', 60, 220, 92, 160, C.steel, 7, 20)}`],
 ];
-$('#fsT').innerHTML = FS.map(([n, d, ex, svg], i) => `<div class="fs" id="fs${i}" style="left:${i % 2 ? 976 : 160}px;top:${i < 2 ? 270 : 576}px"><div class="bg"></div><div class="nm">0${i + 1}</div><div class="cond tt">${n}</div><div class="ds">${d}</div><div class="ex">${M.icon('pencil', 20, C.orange, 2.4)}<span>${ex}</span></div><svg width="280" height="230">${svg}</svg></div>`).join('');
+$('#fsT').innerHTML = FS.map(([n, d, ex, svg], i) => `<div class="fs" id="fs${i}" style="left:${i % 2 ? 976 : 160}px;top:${i < 2 ? 270 : 576}px"><div class="bg"></div><div class="nm">0${i + 1}</div><div class="cond tt">${n}</div><div class="ds">${d}</div><div class="ex">${M.icon('pencil', 20, C.orange, 2.4)}<span>${ex}</span></div><svg class="dg" width="280" height="230">${svg}</svg></div>`).join('');
 $('#ncpI').innerHTML = M.icon('move', 22, C.orange, 2.6);
 
 // K: at work today
@@ -168,7 +168,7 @@ const KA = [
 $('#kRows').innerHTML = KA.map(([ic, t], i) => `<div class="kr" id="kr${i}" style="top:${100 + i * 120}px"><div class="bg"></div><div class="rn">0${i + 1}</div><div class="ri"></div><div class="rt">${t}</div></div>`).join('');
 const KP = [['FORCE SYSTEMS TODAY', 'Four kinds', 'You will meet them in every machine', null]].concat(KA.map((a, i) => [`IN PRACTICE 0${i + 1} / 04`, a[1], a[2], a]));
 $('#kPans').innerHTML = KP.map(([s, t, m, a], i) => `<div class="pn" id="kn${i}"><div class="ps">${s}</div><div class="cond pt">${t}</div><div class="pm">${m}</div><div class="hr"></div>` +
-  (a ? `<div class="ka" id="ka${i}0" style="top:300px"><i class="f" style="${FACE(i === 1 ? 'kiran' : 'salim')}"></i><div class="kl">AT SALIM AUTO WORKS</div><div class="kt">${a[3]}</div></div>
+  (a ? `<div class="ka" id="ka${i}0" style="top:300px"><i class="f" style="${FACE(i === 2 ? 'kiran' : 'salim')}"></i><div class="kl">AT SALIM AUTO WORKS</div><div class="kt">${a[3]}</div></div>
         <div class="ka" id="ka${i}1" style="top:420px"><i>${M.icon(a[4], 34, C.steel, 2.2)}</i><div class="kl">AT WORK TODAY</div><div class="kt">${a[5]}</div></div>`
      : `<div class="ka" id="ka00" style="top:300px"><i>${M.icon('gear', 34, C.orange, 2.2)}</i><div class="kl">FROM AN AUTO TO A BRIDGE</div><div class="kt">Same rules, any size of machine</div></div>`) + `</div>`).join('');
 
@@ -366,7 +366,7 @@ M.on(t => {
     { const u = M.clamp((t - tTip) / 0.25); $('#vCL').setAttribute('opacity', u.toFixed(3)); if (u > 0) drawArrow($('#vSL2'), t, tTip); }
     drawArrow($('#vRL'), t, tRes - 0.1); M.vis($('#tRL'), t, tEight - 0.2, 1e9, { dy: 0, fade: 0.15 });
     // drift: the whole auto + its resultant travel along the resultant line, speeding up
-    const sL = travel(t, tDrift - 0.1, 2.6, 300), dxL = RU[0] * sL, dyL = RU[1] * sL;
+    const sL = travel(t, tDrift - 0.1, 2.6, 200), dxL = RU[0] * sL, dyL = RU[1] * sL;
     const hdg = M.io((t - tDrift + 0.1) / 0.6) * Math.atan2(RU[1], RU[0]) * 180 / PI;
     attr($('#carL'), 'transform', `translate(${f2(HX - 48 + dxL)} ${f2(HY + dyL)}) rotate(${f2(hdg)} 48 0)`);
     attr($('#vecL'), 'transform', `translate(${f2(dxL)} ${f2(dyL)})`);
@@ -415,7 +415,7 @@ M.on(t => {
       const bg = e.querySelector('.bg'); bg.style.borderColor = mix(C.line, C.orange, act); bg.style.borderWidth = act > 0.5 ? '4px' : '2px';
       e.querySelector('.tt').style.color = seen ? C.steel : C.dim; e.querySelector('.ds').style.color = seen ? C.steel2 : C.dim;
       e.querySelector('.nm').style.color = act > 0.5 ? C.orange : C.mid;
-      e.querySelectorAll('svg > g').forEach((g, k) => drawArrow(g, t, ta + 0.1 + k * 0.12, 0.35));
+      e.querySelectorAll('.dg > g').forEach((g, k) => drawArrow(g, t, ta + 0.1 + k * 0.12, 0.35));
       M.vis(e.querySelector('.ex'), t, tPex[i] - 0.1, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
     });
     M.vis($('#ncp'), t, tCop - 0.3, tPout, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1, ...o });
