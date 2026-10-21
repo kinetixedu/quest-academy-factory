@@ -17,5 +17,4 @@ Running story: Suryagaon (docs/series/basic-electrical-engineering.md). Generate
 | eeee-scene-panchayat.png | Farida, Meera, Shankar anna over a wiring drawing | 22, 23, 24 |
 | eeee-scene-lab.png | Dr. Rao and Meera at a lab bench with meters and breadboard | 3-7, 11 |
 | eeee-scene-workshop.png | Shankar anna rewinding a motor, Meera and Kittu watch | 14-21 |
-
-Rejected: eeee-scene-pumpset (first take showed work on a running pump; regenerate with the pump switched off).
+| eeee-scene-pumpset.png | Meera points at a switched-off farm pump, a farmer watches (first take rejected: work on a running pump) | 8-13, 19 |
