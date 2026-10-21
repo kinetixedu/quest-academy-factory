@@ -1,7 +1,7 @@
 // PUC Physics Ep 56: Conservation of linear momentum (Motion notebook)
 (() => {
 const { $ } = M, C = PUC.init({ subject: 'physics' }), K = PUC.K, wt = M.wt, T0 = M.t0, T1 = M.t1, mix = M.mix;
-const PC = '#B8327E', PD = '#7E1F55', PL = '#D27BAE';            // momentum p = magenta (A darker, B lighter shade on the graph)
+const PC = '#A23B72', PD = '#6B2049', PL = '#CF7FAE';            // momentum p = magenta (A darker, B lighter shade on the graph)
 const FC = C.orange, VC = C.ac, MC = C.ink, CB = '#5B6B8C';        // force orange, v blue, mass ink, cart B slate
 const IMG = '../../assets/illustrations/puc/';
 const nsv = 'http://www.w3.org/2000/svg';
