@@ -1,0 +1,57 @@
+H1|0.4|A book on a tilted desk stays put, until one tilt too many. A sand pile never gets steeper than one slope.
+H2|0.45|Something holds them, but only up to a limit.
+H3|0.35|Aarav props up his drawing board, with his geometry box on it.
+H4|0.5|He tilts it slowly. Still, still, then it shoots down. Two boxes taped together slip at the same angle. Why?
+H5|0.6|The answer is limiting friction.
+P1|0.35|So what is limiting friction?
+P2|0.4|Static friction pushes back just as hard as you push, but only up to a limit. That largest value, just before slipping, is limiting friction.
+P4|0.65|Limiting friction equals mu s times N: the coefficient of static friction, times the normal force.
+S1|0.35|To the motion notebook. A two kilogram block on a board, mu s zero point five.
+S2|0.4|Tilt the board. The pull down the slope, m g sine theta, grows, and friction grows to match it.
+S3|0.4|At ten degrees, both are three point four newtons. At twenty, six point seven.
+S4|0.4|But the limit, mu s N, shrinks, as the block presses less into the board.
+S5|0.4|At twenty six point six degrees, they meet. Friction is at its limit, eight point eight newtons.
+S6|0.6|A hair more, and it slips. Kinetic friction, about seven newtons, takes over. The graph drops.
+S7|0.35|Slow-mo replay. Freeze at the moment of slipping.
+S8|0.65|Down the slope, m g sine theta. Up the slope, friction at its limit. N balances m g cos theta. They are just equal.
+D1|0.35|Now the rule, one step at a time.
+D2|0.75|Step one. At rest, friction balances the pull down the slope. f equals m g sine theta.
+D3|0.75|Step two. Into the slope, N equals m g cos theta.
+D4|0.75|Step three. Static friction has a limit. f is at most mu s times N.
+D5|0.75|Step four. About to slip: m g sine theta r equals mu s m g cos theta r.
+D6|0.75|Step five. Cancel m g: tan theta r equals mu s. Theta r is the angle of repose.
+T1|0.7|Remember this. At the angle of repose, tan theta equals mu s. The mass cancels out.
+R1|0.35|Now, Aarav's puzzle. Link by link.
+R2|0.4|A heavier box pulls harder down the slope.
+R3|0.4|But it also presses harder, so N and the limit mu s N grow too.
+R4|0.65|Both grow with m, in the same ratio. So m cancels.
+K1|0.4|Side by side. At fifteen degrees, friction is five point one newtons, just m g sine theta. The limit is nine point five.
+K2|0.6|At twenty six point six, friction reaches the limit. Static friction gives only what is needed.
+K3|3.2|Your turn. At fifteen degrees, is the friction on the block nine point five newtons? Pause and decide.
+K4|0.65|No! Only five point one. It reaches mu s N only at the point of slipping.
+V1|0.4|One more pair. The angle of repose is the steepest slope where a body can rest. Tan theta r equals mu s.
+V2|0.4|The angle of friction, lambda, is between N and the total contact force at the limit. Tan lambda equals f L over N, so it is mu s too.
+V3|0.6|So theta r equals lambda.
+V4|3.2|Now you try. Dry sand has mu s of zero point seven five. What is the steepest slope of a sand pile? Pause and decide.
+V5|0.65|About thirty seven degrees! Tan thirty seven is about zero point seven five.
+W1|0.35|Now, one worked example.
+W2|0.5|Aarav presses a one point two kilogram book against a wall. Mu s is zero point four. What is the smallest push that holds it up?
+W3|0.75|The weight is one point two times nine point eight. Eleven point seven six newtons.
+W4|0.75|Friction must hold that up, and here N is the push F.
+W5|0.75|At the limit, mu s F equals eleven point seven six. So F is eleven point seven six over zero point four.
+W6|0.65|Twenty nine point four newtons. Any less, and the book slides.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students say slipping starts when tan theta equals mu k.
+X3|0.65|But a resting body slips when static friction runs out. So tan theta r equals mu s. Mu k matters only once it moves.
+E1|0.6|Where is this asked? Bodies about to slip, on slopes and against walls.
+Q1|5.4|Exam level now. A five kilogram block is on a thirty seven degree incline, mu s zero point five. g is ten, sine thirty seven is zero point six. What least force along the incline just starts it moving up? Pause and solve.
+A1|0.5|The answer is C. Fifty newtons.
+A2|0.5|Down the slope, m g sine theta is thirty newtons. N is forty.
+A3|0.5|Moving up, limiting friction acts down the slope: twenty newtons.
+A4|0.6|So F is thirty plus twenty, fifty. Ten newtons only stops it sliding down.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. Why do a light and a heavy box of one material slip at the same angle?
+Y3|0.9|Two. Is static friction always equal to mu s N? When is it?
+Y4|1.1|Three. What is the angle of friction, and why does it equal the angle of repose?
+N1|0.3|Next time: why is a heavy box so much easier to move on wheels? Rolling friction.

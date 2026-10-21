@@ -347,7 +347,7 @@ M.on(t => {
     const out = OUT('S1');
     vis($('#pq'), t, tP1 + 0.1, out, { dx: -60, dy: 0, ...o });
     M.rise($('#pD'), t, wt('P2', 'force') - 0.1, { st: 0.04 });
-    PR.forEach((p, i) => { vis($('#pr' + i), t, p[6] - 0.15, 1e9, POP); vis($('#pr' + i + ' .pv'), t, i ? wt('P5', 'causes') : wt('P3', 'No'), 1e9, POP); });
+    PR.forEach((p, i) => { vis($('#pr' + i), t, p[6] - 0.15, 1e9, POP); vis($('#pr' + i + ' .pv'), t, i ? wt('P5', 'causes') : wt('P3', 'friction'), 1e9, POP); });
     vis($('#pm'), t, T0('P3') - 0.1, out, { dx: 60, dy: 0, ...o });
     vis(pIdeal, t, wt('P3', 'wheel') - 0.1, 1e9, { dy: 20 });
     pDot.setAttribute('r', (9 + 4 * Math.max(0, Math.sin((t - wt('P3', 'point')) * 6)) * (t > wt('P3', 'point') && t < wt('P3', 'point') + 1.6 ? 1 : 0)).toFixed(2));
