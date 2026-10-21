@@ -1,0 +1,218 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 10 - Limitations of Dimensional Analysis</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 10: limitations of dimensional analysis (Motion notebook, pendulum bench) ===== */
+:root{--k:#7A4FE0;--f:#D9731A}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.kk{color:var(--k)}.f{color:var(--f)}.a{color:var(--ac)}.r{color:var(--red)}
+.fx2{position:absolute;white-space:nowrap;line-height:1.2}
+/* title card tiles: every tool has a limit */
+.tool{position:absolute;top:700px;width:470px;height:150px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.tool i{position:absolute;left:24px;top:24px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.tool .tn{position:absolute;left:108px;top:20px;font:700 28px Poppins;white-space:nowrap}
+.tool .ty{position:absolute;left:108px;top:66px;font:600 18px 'IBM Plex Mono';letter-spacing:.04em;color:var(--ok);white-space:nowrap}
+.tool .tx{position:absolute;left:108px;top:100px;font:600 18px 'IBM Plex Mono';letter-spacing:.04em;color:var(--red);white-space:nowrap}
+/* hook */
+#hkImg{position:absolute;left:36px;top:84px;width:712px;height:400px;object-fit:cover;border-radius:12px}
+.hrow{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.hrow .hl{position:absolute;left:24px;top:16px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.hrow .hf{position:absolute;left:24px;top:46px;font-size:48px;white-space:nowrap}
+#ring2{position:absolute;border:4px solid var(--red);border-radius:50%}
+#qmk{position:absolute;font:700 64px Poppins;color:var(--red)}
+/* P: what it sees */
+.dt{position:absolute;top:96px;width:216px;height:216px;border-radius:16px;background:var(--soft)}
+.dt .dl{position:absolute;left:0;width:216px;top:30px;text-align:center;font:700 96px/1 Poppins;font-style:italic}
+.dt .dn{position:absolute;left:0;width:216px;top:150px;text-align:center;font:600 22px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute)}
+.can{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--soft)}
+.can .ck{position:absolute;left:18px;top:16px;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.can .cn{position:absolute;left:82px;top:19px;font:600 28px Poppins;white-space:nowrap}
+.num{position:absolute;top:416px;height:72px;min-width:96px;padding:0 20px;border-radius:14px;background:var(--redBg);color:var(--red);display:flex;align-items:center;justify-content:center;font:600 36px 'IBM Plex Mono';white-space:nowrap}
+/* sim */
+.dial{position:absolute;top:22px;display:flex;gap:8px}
+.dial span{height:40px;padding:0 16px;border-radius:9px;display:inline-flex;align-items:center;font:600 20px 'IBM Plex Mono';border:2px solid var(--line);background:#fff;color:var(--mute)}
+#sw{position:absolute;left:36px;top:480px;height:64px;padding:0 22px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+#sw .su{color:#AFC6F7}
+#smo{position:absolute;left:36px;top:84px}
+#roG .v{font-size:30px}#roG .k{font-size:26px}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:116px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:38px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:62px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+.pw{position:absolute;left:36px;width:712px;height:84px;border-radius:14px;background:var(--soft)}
+.pw .pd{position:absolute;left:20px;top:16px;width:52px;height:52px;border-radius:12px;background:var(--ink);color:#fff;font:700 28px Poppins;font-style:italic;display:flex;align-items:center;justify-content:center}
+.pw .pe{position:absolute;left:96px;top:18px;font-size:36px;white-space:nowrap}
+.pw .pr{position:absolute;right:24px;top:18px;font-size:36px;white-space:nowrap}
+#stop{position:absolute;left:36px;top:420px;width:712px;height:124px;border-radius:14px;background:var(--redBg)}
+#stop .sx{position:absolute;left:28px;top:22px;font-size:50px;white-space:nowrap}
+#stop .sl{position:absolute;right:28px;top:44px;font:600 20px 'IBM Plex Mono';letter-spacing:.08em;color:var(--red);white-space:nowrap}
+/* reasoning chain */
+.lk{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.lk .n{position:absolute;left:20px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.lk .lt{position:absolute;left:90px;top:26px;font:600 28px Poppins;white-space:nowrap}
+.lka{position:absolute;left:68px;width:4px;height:24px;background:var(--ac)}
+.kc{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.kc .kv{position:absolute;left:24px;top:22px;font-size:40px;white-space:nowrap}
+.kc .kd{position:absolute;left:300px;top:24px;font-size:38px;white-space:nowrap}
+.kc .km{position:absolute;right:20px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ok);display:flex;align-items:center;justify-content:center}
+#lim1{position:absolute;left:36px;top:470px}
+/* side by side formulas */
+.ff{position:absolute;left:36px;top:110px;font-size:58px;white-space:nowrap}
+.dims{position:absolute;top:220px;height:44px;padding:0 14px;border-radius:9px;background:var(--ac2);color:var(--ac);display:inline-flex;align-items:center;font:600 22px 'IBM Plex Mono';white-space:nowrap}
+.verd{position:absolute;left:36px;height:52px;padding:0 18px;border-radius:12px;display:inline-flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap}
+.bar{position:absolute;left:36px;height:40px;border-radius:8px}
+.barl{position:absolute;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+/* work vs torque */
+.dimbig{position:absolute;left:36px;top:420px;font-size:46px;white-space:nowrap}
+/* Z: what it can build */
+.bd{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.bd .bx{position:absolute;left:24px;top:22px;font-size:40px;white-space:nowrap}
+.bd .bt{position:absolute;right:84px;top:34px;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.bd .bm{position:absolute;right:20px;top:24px;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.eqr{position:absolute;left:36px;width:712px;height:64px;border-radius:12px;background:var(--soft)}
+.eqr .ed{position:absolute;left:16px;top:10px;width:44px;height:44px;border-radius:10px;background:var(--ink);color:#fff;font:700 24px Poppins;font-style:italic;display:flex;align-items:center;justify-content:center}
+.eqr .et{position:absolute;left:80px;top:15px;font:600 24px Poppins;white-space:nowrap}
+.unk{position:absolute;top:340px;width:120px;height:96px;border-radius:14px;border:3px solid var(--ink);background:#fff;display:flex;align-items:center;justify-content:center;font:700 44px Poppins;font-style:italic}
+#stuck{position:absolute;left:36px;top:470px}
+/* worked */
+#wq{position:absolute;left:36px;top:70px;font:600 28px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:32px}
+#kRes{position:absolute;right:36px;top:470px;height:64px;padding:0 22px;border-radius:12px;background:var(--k);color:#fff;display:flex;align-items:center;gap:12px;font:600 32px 'IBM Plex Mono';white-space:nowrap}
+#wSw{position:absolute;right:36px;top:390px;height:64px;padding:0 22px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 32px 'IBM Plex Mono';white-space:nowrap}
+#wSw .su{color:#AFC6F7}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+#tv{position:absolute;right:36px;top:40px;width:520px;height:200px;border-radius:14px;background:var(--soft)}
+#tv .tf{position:absolute;left:24px;top:22px;font-size:40px;white-space:nowrap}
+.tvp{position:absolute;left:24px;height:48px;padding:0 16px;border-radius:10px;display:inline-flex;align-items:center;gap:8px;font:600 22px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:40px}#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 32px Poppins;white-space:nowrap}
+#stF{font:600 56px Poppins;color:var(--ink)}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 1 UNITS AND MEASUREMENT</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Limits of <span class="acc">Dimensional Analysis</span></div>
+    <div id="sub">Every tool has a limit. Even this one.</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="tools"></div>
+
+    <!-- H: the corridor swing and the missing 2 pi -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">AARAV'S CORRIDOR SWING</div>
+        <div style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)" id="hF"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-corridor.jpg">
+        <div class="pillp" id="hP" style="left:36px;top:504px">Time of one swing depends on length and <i>g</i></div></div>
+      <div class="card rf" id="hr"><div class="lbl" style="left:36px;top:30px">TWO ANSWERS · ONE MISSING PIECE</div>
+        <div class="hrow" id="hr0" style="top:84px"><div class="hl">HIS METHOD GAVE</div><div class="hf" id="hf0"></div></div>
+        <div class="hrow" id="hr1" style="top:236px"><div class="hl">THE TEXTBOOK SAYS</div><div class="hf" id="hf1"></div></div>
+        <div id="ring2"></div><div id="qmk">?</div>
+        <div class="pillp bad" id="hB" style="left:36px;top:410px">The method could not find the 2&pi;</div></div>
+    </div>
+
+    <!-- P: what dimensional analysis looks at -->
+    <div id="sP">
+      <div class="card full" id="pl"><div class="lbl" style="left:36px;top:30px">IT SEES ONLY DIMENSIONS</div>
+        <div class="dt" id="dt0" style="left:36px"><div class="dl">M</div><div class="dn">MASS</div></div>
+        <div class="dt" id="dt1" style="left:284px"><div class="dl">L</div><div class="dn">LENGTH</div></div>
+        <div class="dt" id="dt2" style="left:532px"><div class="dl">T</div><div class="dn">TIME</div></div>
+        <div class="lbl" id="nL" style="left:36px;top:370px;color:var(--red)">IT IGNORES PLAIN NUMBERS</div>
+        <div class="num" id="nu0" style="left:36px">2</div><div class="num" id="nu1" style="left:156px">&frac12;</div><div class="num" id="nu2" style="left:276px">&pi;</div><div class="num" id="nu3" style="left:396px">2&pi;</div><div class="num" id="nu4" style="left:516px">10</div></div>
+      <div class="card rf" id="pr"><div class="lbl" style="left:36px;top:30px">WHAT IT CAN DO</div><div id="cans"></div></div>
+    </div>
+
+    <!-- S: pendulum bench (sim + readout + graph) -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">MEASURING BENCH · A PENDULUM</div>
+        <div class="dial" id="dial" style="right:36px"><span>0.5 m</span><span>1 m</span><span>2 m</span></div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="tag" id="smo">SLOW-MO REPLAY · 0.25x</div>
+        <div id="sw"><span class="su">T =</span><span id="swN">1.42</span><span class="su">s</span></div></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro" id="roG" style="left:36px;top:70px;width:712px;row-gap:4px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">PERIOD <i style="font-family:Poppins;text-transform:none">T</i> VS &radic;(<i style="font-family:Poppins;text-transform:none">l/g</i>)</div><svg id="grS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- D: let the method try -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">LET THE METHOD TRY · 4 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">MATCH THE POWERS</div><div id="pws"></div>
+        <div id="stop"><div class="sx" id="stopF"></div><div class="sl">THE METHOD STOPS HERE</div></div></div>
+    </div>
+
+    <!-- R: why it stops -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">WHY IT STOPS · LINK BY LINK</div><div id="lks"></div>
+        <div class="pillp ink" id="lim1">Limitation 1: it cannot find number constants</div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">TRY ANY NUMBER FOR <i style="font-family:Poppins;text-transform:none">k</i></div><div id="kcs"></div>
+        <div class="pillp" id="rrP" style="left:36px;top:470px">All balanced. Dimensions cannot choose.</div></div>
+    </div>
+
+    <!-- C: right dims, wrong formula -->
+    <div id="sC">
+      <div class="card ok full" id="cl"><div class="lbl" style="left:36px;top:30px;color:var(--ok)">THE REAL ONE</div><div class="ghost" id="exC" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <div class="ff" id="cf0"></div><div id="cd0"></div>
+        <div class="verd" id="cv0" style="top:300px;background:var(--okBg);color:#1F6B3F">Dimensions balanced</div>
+        <div class="lbl" id="cx0" style="left:36px;top:394px">FROM REST, a = 2 m/s², AFTER 3 s</div>
+        <div class="bar" id="cb0" style="top:436px;background:var(--ok)"></div><div class="barl" id="bn0" style="top:440px">9 m</div></div>
+      <div class="card red rf" id="cr"><div class="lbl" style="left:36px;top:30px;color:var(--red)">THE FAKE ONE</div>
+        <div class="ff" id="cf1"></div><div id="cd1"></div>
+        <div class="verd" id="cv1" style="top:300px;background:var(--okBg);color:#1F6B3F">Dimensions balanced</div>
+        <div class="lbl" id="cx1" style="left:36px;top:394px">SAME CASE, AFTER 3 s</div>
+        <div class="bar" id="cb1" style="top:436px;background:var(--red)"></div><div class="barl" id="bn1" style="top:440px">36 m</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: work vs torque -->
+    <div id="sW">
+      <div class="card full" id="wkl"><div class="lbl" style="left:36px;top:30px">WORK · FORCE × DISTANCE MOVED</div><svg id="wkS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="dimbig" id="wd0"></div></div>
+      <div class="card rf" id="wkr"><div class="lbl" style="left:36px;top:30px">TORQUE · FORCE × ARM LENGTH</div><svg id="tqS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="dimbig" id="wd1"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- Z: limitations 3 and 4 -->
+    <div id="sZ">
+      <div class="card full" id="zl"><div class="lbl" style="left:36px;top:30px">LIMITATION 3 · WHAT IT CAN BUILD</div><div id="bds"></div></div>
+      <div class="card rf" id="zr"><div class="lbl" style="left:36px;top:30px">LIMITATION 4 · ONLY 3 EQUATIONS</div><div id="eqs"></div><div id="unks"></div>
+        <div class="pillp bad" id="stuck">4 unknowns, 3 equations: stuck</div></div>
+    </div>
+
+    <!-- E: worked example -->
+    <div id="sE">
+      <div class="card full" id="wl"><div id="wq">A swing 2.45 m long takes 3.14 s for one swing. Find <i>k</i> in <i>T</i> = <i>k</i>&radic;(<i>l</i>/<i>g</i>).</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">MEASURING BENCH · THE CORRIDOR SWING</div><svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="wSw"><span class="su">T =</span><span id="wSwN">0.00</span><span class="su">s</span></div>
+        <div id="kRes"><span>k = 6.28 = 2&pi;</span></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><div id="tv"><div class="tf" id="tvF"></div><div class="tvp" id="tv0" style="top:100px;background:var(--okBg);color:#1F6B3F"></div><div class="tvp" id="tv1" style="top:100px;background:var(--redBg);color:var(--red)"></div></div></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap + questions + NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Wrong dimensions: <span style="color:var(--red)">surely wrong</span>.</div><div id="stF">Right dimensions: only <span class="acc">maybe</span> right.</div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

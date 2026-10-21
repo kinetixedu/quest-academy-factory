@@ -1,0 +1,63 @@
+H1|0.4|A ruler tells you how long a pencil is. Not its colour.
+H2|0.45|A thermometer reads temperature, not your mood. Every tool has a limit.
+H3|0.35|Last time, Aarav used dimensions on the corridor swing. Its time depends on length and g.
+H4|0.5|But his textbook says T equals two pi, root l by g. Where did that two pi come from?
+H5|0.65|His method could not find it. Today, see why, and what else it cannot do.
+P1|0.35|Quick reminder. What does dimensional analysis use?
+P2|0.35|It looks only at dimensions. Mass M, length L and time T.
+P3|0.35|It can check a formula, convert units, and even guess a formula.
+P4|0.65|But it never looks at plain numbers. That is the trouble.
+S1|0.35|Let's test a real pendulum on our measuring bench.
+S2|0.4|A string half a metre long. One swing takes one point four two seconds.
+S3|0.4|Make it one metre. Now one swing takes about two seconds.
+S4|0.4|Make it two metres. Two point eight four seconds.
+S5|0.4|Now divide the time by root l over g. Every time, we get six point two eight.
+S6|0.65|That is two pi. All three points sit on one straight line, and its slope is two pi.
+M1|0.35|Let's freeze one swing. Slow motion.
+M2|0.6|At the bottom, the bob moves fastest. Gravity pulls down the whole time. The real swing knows the two pi.
+D1|0.35|Now let dimensional analysis try, one step at a time.
+D2|0.75|Step one. Guess that T equals k, times l to the a, m to the b, g to the c.
+D3|0.75|Step two. Write the dimensions. L to the a, M to the b, and L T to the minus two, to the c.
+D4|0.75|Step three. Match the powers. Mass gives b equals zero. Time gives c equals minus a half. Length gives a equals a half.
+D5|0.75|Step four. So T equals k, root l over g. And here the method stops.
+R1|0.35|Why does it stop? Follow the links.
+R2|0.4|k is a plain number. A plain number has no mass, no length and no time.
+R3|0.4|So its dimension is M to the zero, L to the zero, T to the zero.
+R4|0.4|Multiply by two pi, by ten, or by one half. The dimensions do not change.
+R5|0.65|So the method cannot tell them apart. The two pi must come from experiment, or from theory.
+L1|0.5|That is limitation one. It cannot find number constants.
+C1|0.4|Limitation two. Two formulas, side by side.
+C2|0.4|On the left, s equals u t, plus half a t squared. This is the real one.
+C3|0.6|On the right, s equals u t, plus two a t squared. A two has replaced the half.
+C4|3.2|Pause and think. Is the right one dimensionally correct? Yes or no?
+C5|0.65|Yes! Every term is a length. But the formula is still wrong. Dimensions cannot see the two.
+W1|0.4|Here is a sneakier case. Work, and the turning effect called torque.
+W2|0.4|Work is force times distance moved. Torque is force times the arm length.
+W3|3.2|Both give M L squared T to the minus two. Can dimensional analysis tell them apart? Pause and decide.
+W4|0.65|No! Same dimensions, different quantities. Matching never proves a formula right.
+Z1|0.35|Limitation three. It only builds products of powers, like l to the half, times g to the minus half.
+Z2|0.4|So it cannot build a sum, like u t plus half a t squared.
+Z3|0.6|And it cannot build sine, log or e to the x. Those need a pure number inside.
+Z4|0.35|Limitation four. In mechanics, we have only three base dimensions. M, L and T.
+Z5|0.65|That gives only three equations. With four or more unknowns, the method gets stuck.
+T1|0.7|Remember this. Wrong dimensions mean surely wrong. Right dimensions mean only maybe right.
+E1|0.35|Now, one worked example.
+E2|0.5|A swing two point four five metres long takes three point one four seconds. Find k.
+E3|0.75|From T equals k root l over g, k equals T, divided by root l over g.
+E4|0.75|l over g is two point four five, over nine point eight. That is zero point two five.
+E5|0.75|The square root of zero point two five is zero point five seconds.
+E6|0.65|So k is three point one four over zero point five. Six point two eight. Two pi, found by measuring.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think: the dimensions match, so the formula must be correct.
+X3|0.65|Wrong. Matching dimensions only means it might be right. A wrong number can still hide inside.
+G1|0.6|Where is this asked? As statement questions. Which formula can it derive, and which can it not?
+Q1|5.4|Exam level now. Which of these could dimensional analysis alone derive, apart from a constant? Pause and solve.
+A1|0.5|The answer is B. The pendulum period, root l over g.
+A2|0.5|A is a sum of two terms. C has an exponential. D has a sine.
+A3|0.6|Only B is a product of powers. Even there, the two pi comes from experiment.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why can the method not find the two pi in the pendulum formula?
+Y3|0.9|Two. Work and torque have the same dimensions. What does that tell you?
+Y4|1.1|Three. Why can the method not derive s equals u t, plus half a t squared?
+N1|0.3|Next time: is the extra zero in two fifty point zero grams worth anything? Find out in significant figures.

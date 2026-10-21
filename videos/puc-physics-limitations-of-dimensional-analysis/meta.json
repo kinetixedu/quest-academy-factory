@@ -1,0 +1,30 @@
+{
+ "world": "puc-physics",
+ "topic": "Limitations of Dimensional Analysis",
+ "series": {
+  "name": "PUC Physics",
+  "ep": 10
+ },
+ "title": "Missing 2π? Dimensional Limits Explained Simply | PUC Physics Class 11",
+ "description": "A ruler cannot read colour. A thermometer cannot read your mood. Every tool has a limit, and so does dimensional analysis. Aarav used it to find how the corridor swing's time depends on length and g, but the textbook formula has a 2π his method could never find. In this animated lesson for PUC and Class 11 Physics (NCERT Chapter 1, Units and Measurement) we see exactly what dimensional analysis cannot do, and why.\n\nA live pendulum on the measuring bench swings at 0.5 m, 1 m and 2 m while the readout divides T by √(l/g) and gets 6.28 every time, and the graph shows a straight line with slope 2π. We let the method derive T = k√(l/g) step by step, then follow the reasoning link by link: k is a plain number with dimensions M⁰L⁰T⁰, so dimensions can never choose its value. Two pause-and-think questions test a fake formula with balanced dimensions and work vs torque. Then sums, sine, log and the three-equation limit, a worked example that finds k = 2π by measuring, the exam trap, an original JEE Main pattern question with a full solution, a recap card and three questions to check yourself.\n\nMade for PUC (Karnataka), CBSE Class 11, JEE Main and NEET students.\n\nIn this video:\n0:00 Every tool has a limit\n0:27 What dimensional analysis looks at\n0:44 The pendulum bench: T divided by root l/g\n1:23 Let the method try, step by step\n1:57 Why it cannot find 2π\n2:27 Right dimensions, wrong formula\n2:57 Work vs torque + pause and think\n3:23 Sums, sine, log and the 3-equation limit\n4:00 Worked example: finding k by measuring\n4:35 Exam trap: matching dimensions\n4:55 Practice question (JEE Main pattern)\n5:23 Recap and three questions to answer\n\nNext episode: Significant Figures. Is the extra zero in 250.0 g worth anything?\n\nVideo by Quest Academy.",
+ "tags": [
+  "limitations of dimensional analysis",
+  "dimensional analysis",
+  "units and measurement class 11",
+  "PUC physics",
+  "class 11 physics chapter 1",
+  "dimensionless constant",
+  "pendulum time period 2 pi",
+  "dimensional formula",
+  "work and torque dimensions",
+  "JEE Main physics",
+  "NEET physics",
+  "NCERT physics class 11",
+  "dimensional analysis applications"
+ ],
+ "thumb": {
+  "title": "The Missing 2π",
+  "accent_word": "2π",
+  "frame_t": 66.0
+ }
+}
