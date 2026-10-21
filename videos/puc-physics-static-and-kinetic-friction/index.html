@@ -1,0 +1,150 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 62 - Static and Kinetic Friction</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 62: Static and kinetic friction (Motion notebook) ===== */
+:root{--fo:#D9731A;--ar:#D64545;--vb:#2F6FEB}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:228px}
+.rb{left:976px;top:522px;width:784px;height:328px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.fo{color:var(--fo)}.ar{color:var(--ar)}.vb{color:var(--vb)}
+svg.ov{position:absolute;left:0;top:0;overflow:hidden}
+/* title tiles */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .jt{position:absolute;right:24px;top:38px;height:44px;padding:0 16px;border-radius:10px;display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+.wq{position:absolute;top:494px;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 25px Poppins;white-space:nowrap}
+/* P rows */
+.fr{position:absolute;left:36px;width:712px;height:210px;border-radius:14px;background:var(--soft)}
+.fr .fn{position:absolute;left:28px;top:20px;font:700 34px Poppins;white-space:nowrap}
+.fr .fs{position:absolute;left:28px;top:70px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.fr .fe{position:absolute;left:28px;top:150px;font:500 24px Poppins;color:var(--ink2);white-space:nowrap}
+.fr svg{position:absolute;right:24px;top:20px}
+/* readout */
+.ro2{position:absolute;display:grid;grid-template-columns:auto 1fr auto;column-gap:14px;row-gap:6px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic;white-space:nowrap}.ro2 .k sub{font-size:.6em}
+.ro2 .v{font:600 34px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 20px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+.chipS{position:absolute;right:36px;top:18px;height:44px;padding:0 16px;border-radius:9px;display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.smo{background:var(--ink);color:#fff}
+.frz{background:var(--redBg);color:var(--red)}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:92px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:36px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:52px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+/* chain */
+.lk{position:absolute;left:36px;width:712px;height:84px;border-radius:12px;background:var(--soft)}
+.lk .ln{position:absolute;left:16px;top:22px;width:40px;height:40px;border-radius:50%;background:var(--ac);color:#fff;font:700 19px Poppins;display:flex;align-items:center;justify-content:center}
+.lk .lt{position:absolute;left:74px;top:24px;font:600 26px Poppins;white-space:nowrap}
+.kp{position:absolute;left:36px;top:490px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+#wkq{position:absolute;left:36px;top:70px;font:600 26px/1.38 Poppins;width:712px}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font-size:25px}
+#wl .sol .sx{font-size:27px}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 32px Poppins;white-space:nowrap}
+#stmt #st2{font-size:64px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 4 LAWS OF MOTION</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Static and <span class="acc">Kinetic</span> Friction</div>
+    <div id="sub">Why a heavy trunk is hard to start, but easy to keep sliding</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">ONE CUPBOARD · THREE PUSHES</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Stuck, stuck, then it gives way all at once</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA'S ROOM · THE STEEL TRUNK</div>
+        <div id="hdF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <svg id="hkS" class="ov" width="784" height="480"></svg>
+        <div id="wqs"></div></div>
+    </div>
+
+    <!-- P -->
+    <div id="sP">
+      <div class="card full" id="pl"><div class="lbl" style="left:36px;top:30px">FRICTION · A PUSH BACK ALONG THE CONTACT</div><svg id="plS" class="ov" width="784" height="580"></svg>
+        <div class="pillp ink" id="plP" style="left:36px;top:490px">A contact force, along the surface</div></div>
+      <div class="card rf" id="pr"><div class="lbl" style="left:36px;top:30px">TWO KINDS</div><div id="prs"></div></div>
+    </div>
+
+    <!-- S: sim -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">SIMULATION · DIYA'S STEEL TRUNK</div>
+        <div class="chipS" id="stc"></div><div class="chipS smo" id="smo">SLOW-MO REPLAY · 0.25x</div><div class="chipS frz" id="frz">FROZEN · AT THE LIMIT</div>
+        <svg id="simS" class="ov" width="784" height="580"></svg></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ghost" id="exS" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <div class="ro2" id="roA" style="left:36px;top:74px;width:330px"></div><div class="ro2" id="roB" style="left:430px;top:74px;width:318px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">FRICTION <i style="font-family:Poppins;text-transform:none">f</i> VS PUSH <i style="font-family:Poppins;text-transform:none">P</i></div><svg id="grS" class="ov" width="784" height="328"></svg></div>
+    </div>
+
+    <!-- D -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE RULE · 5 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">EACH STEP ON THE GRAPH</div><svg id="drS" class="ov" width="784" height="580"></svg><div class="fx" id="drF" style="left:36px;top:470px;height:76px;padding:0 24px;border-radius:14px;background:var(--ac2);display:flex;align-items:center;font-size:38px"></div></div>
+    </div>
+
+    <!-- R -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">LINK BY LINK · WHY STARTING IS HARDER</div><div id="lks"></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">ZOOM IN · TRUNK ON FLOOR</div><div class="ghost" id="exR" style="right:36px;top:18px">NOT TO SCALE</div><svg id="rrS" class="ov" width="784" height="580"></svg>
+        <div class="pillp ink" id="rrP" style="left:36px;top:490px">Breaking stuck points costs extra</div></div>
+    </div>
+
+    <!-- K -->
+    <div id="sK">
+      <div class="card full" id="k1"><div class="lbl" style="left:36px;top:30px">STATIC · AT REST</div><div class="ghost" id="exK1" style="right:36px;top:18px">EXAMPLE FIGURES</div><svg id="k1S" class="ov" width="784" height="580"></svg><div class="kp" id="k1P"></div></div>
+      <div class="card rf" id="k2"><div class="lbl" style="left:36px;top:30px">KINETIC · SLIDING</div><div class="ghost" id="exK2" style="right:36px;top:18px">EXAMPLE FIGURES</div><svg id="k2S" class="ov" width="784" height="580"></svg><div class="kp" id="k2P"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- V -->
+    <div id="sV">
+      <div class="card" id="vc" style="left:160px;top:270px;width:1600px;height:580px"><div class="lbl" style="left:36px;top:30px">SIMULATION · DIYA LETS GO</div><div class="chipS smo" id="vsm" style="right:auto;left:560px">SLOW-MO · 0.25x</div>
+        <svg id="vS" class="ov" width="1100" height="580"></svg>
+        <div class="ro2" id="vro" style="left:1130px;top:110px;width:420px"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wkq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">THE BOX · TWO PUSHES</div><div class="chipS" id="wtag"></div><svg id="wrS" class="ov" width="784" height="580"></svg></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tpS" class="ov" width="600" height="274" style="left:auto;right:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Static friction <span class="acc">matches</span> the push, up to a limit.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
