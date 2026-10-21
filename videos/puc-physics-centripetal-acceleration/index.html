@@ -1,0 +1,170 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 48 - Centripetal Acceleration</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 48: centripetal acceleration (Motion notebook, ball on a circle + a against v) ===== */
+:root{--v:#2F6FEB;--a:#D64545;--th:#B7791F;--dist:#7A4FE0;--f:#D9731A}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.vv{color:var(--v)}.aa{color:var(--a)}.th{color:var(--th)}.rd{color:var(--red)}.ff{color:var(--f)}
+.sv{position:absolute;left:0;top:0;overflow:hidden}
+/* title card cases */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;width:712px;height:150px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:39px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:40px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:84px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr svg{position:absolute;right:20px;top:5px}
+.wq{position:absolute;top:494px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap}
+#spin{position:absolute;left:452px;top:268px;width:236px;height:214px;background:#fff;border-radius:12px;box-shadow:0 8px 20px rgba(22,33,62,.22)}
+#spin .ml{position:absolute;left:16px;top:12px;font:600 14px 'IBM Plex Mono';letter-spacing:.1em;color:var(--mute);white-space:nowrap}
+/* definition */
+#pdef{position:absolute;left:36px;top:76px;width:712px;font:600 34px/1.35 Poppins}
+.dr{position:absolute;left:36px;width:712px;height:104px;border-radius:14px;background:var(--soft)}
+.dr i{position:absolute;left:20px;top:20px;width:64px;height:64px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.dr .dn{position:absolute;left:104px;top:16px;font:700 30px Poppins;white-space:nowrap}
+.dr .dw{position:absolute;left:104px;top:60px;font:500 24px Poppins;color:var(--ink2);white-space:nowrap}
+/* sim readout */
+#roG{row-gap:4px}
+#roG .v{font-size:32px}
+#roG .k{font-size:28px}
+.stag{position:absolute;height:40px;padding:0 14px;border-radius:8px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.leg{position:absolute;top:22px;display:flex;gap:10px}
+.leg span{height:36px;padding:0 12px;border-radius:8px;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';white-space:nowrap;background:var(--soft)}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:96px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:34px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:56px;font:500 20px Poppins;color:var(--mute);white-space:nowrap}
+.chipd{position:absolute;height:56px;padding:0 18px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:10px;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+/* side by side */
+.sbv{position:absolute;left:36px;top:84px;width:712px;height:360px;border-radius:14px;background:var(--soft)}
+.sbl{position:absolute;left:36px;font-size:36px;white-space:nowrap}
+.sbr{position:absolute;top:96px;height:44px;padding:0 14px;border-radius:9px;background:#fff;display:inline-flex;align-items:center;gap:8px;font:600 20px 'IBM Plex Mono';white-space:nowrap}
+/* reasoning chain */
+.lk{position:absolute;left:36px;width:712px;height:84px;border-radius:14px;background:var(--soft)}
+.lk .n{position:absolute;left:18px;top:19px;width:46px;height:46px;border-radius:50%;background:var(--ac);color:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.lk .lt{position:absolute;left:84px;top:24px;font:600 26px Poppins;white-space:nowrap}
+/* worked */
+#wq{position:absolute;left:36px;top:70px;font:600 28px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:32px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#mq .mq{font-size:30px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 24px Poppins}
+#sF .fcard .fl{font-size:42px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 3 MOTION IN A PLANE</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Centripetal <span class="acc">Acceleration</span></div>
+    <div id="sub">Why the water flies off</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: two everyday cases + Diya's salad spinner -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">GOING ROUND · SOMETHING SLIPS OUT</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Something does not want to stay on the circle</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA'S KITCHEN · THE SALAD SPINNER</div>
+        <div id="hdF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-kitchen.jpg" style="position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px">
+        <div id="spin"><div class="ml">SPINNER BASKET · TOP VIEW</div><svg class="sv" id="spS" width="236" height="214"></svg></div>
+        <div id="wqs"></div></div>
+    </div>
+
+    <!-- P: what it is -->
+    <div id="sP">
+      <div class="card full" id="pd"><div class="lbl" style="left:36px;top:30px">CENTRIPETAL ACCELERATION</div>
+        <div id="pdef">Steady speed on a circle, yet the velocity keeps turning. So there is an acceleration.</div>
+        <div class="dr" id="dr0" style="top:228px"><i id="dr0I"></i><div class="dn">Direction</div><div class="dw">always toward the centre</div></div>
+        <div class="dr" id="dr1" style="top:352px"><i id="dr1I"></i><div class="dn">Centripetal</div><div class="dw">means centre seeking</div></div>
+        <div class="pillp ac" id="pdP" style="left:36px;top:490px">But how big is it?</div></div>
+      <div class="card rf" id="pt"><div class="lbl" style="left:36px;top:30px">EVERY POINT · ARROW TO THE CENTRE</div>
+        <svg class="sv" id="ptS" width="784" height="580"></svg></div>
+    </div>
+
+    <!-- S: the sim (ball on a circle + readout + a against v) -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">SIMULATION · ONE BALL · r = 2 m</div>
+        <div class="stag" id="slo" style="right:36px;top:20px">SLOW-MO REPLAY · 0.25x</div>
+        <svg class="sv" id="simS" width="784" height="580"></svg></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro" id="roG" style="left:36px;top:66px;width:712px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">ACCELERATION <i style="font-family:Poppins;text-transform:none">a</i> VS SPEED <i style="font-family:Poppins;text-transform:none">v</i></div>
+        <div class="leg" id="leg" style="right:36px"><span class="aa" id="lg0">a = v²/r</span><span id="lg1">if a grew like v</span></div>
+        <svg class="sv" id="grS" width="784" height="274"></svg></div>
+    </div>
+
+    <!-- D: how big, two triangles -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">HOW BIG? · 5 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">TWO TRIANGLES · ONE SHAPE</div><div class="ghost" id="exD" style="right:36px;top:18px">ANGLE DRAWN LARGER</div>
+        <svg class="sv" id="trS" width="784" height="580"></svg>
+        <div class="pillp ink" id="drP" style="left:36px;top:492px">Same angle Δθ, so the same shape</div></div>
+    </div>
+
+    <!-- C: side by side + think -->
+    <div id="sC">
+      <div class="card full" id="c0"><div class="lbl" style="left:36px;top:30px">SAME SPEED · <i style="font-family:Poppins;text-transform:none">v</i> = 4 m/s</div><div class="ghost" id="exC0" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <div class="sbv"><svg class="sv" id="c0S" width="712" height="360"></svg></div>
+        <div class="sbl" id="c0a" style="top:472px"></div></div>
+      <div class="card rf" id="c1"><div class="lbl" style="left:36px;top:30px">SAME TURNING RATE · <i style="font-family:Poppins;text-transform:none">ω</i> = 1 rad/s</div><div class="ghost" id="exC1" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <div class="sbv"><svg class="sv" id="c1S" width="712" height="360"></svg></div>
+        <div class="sbl" id="c1a" style="top:472px"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- R: why the water flies off + think -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">THE SPINNER · TOP VIEW</div><div class="stag" id="rslo" style="right:36px;top:20px">SHOWN SLOWED</div>
+        <svg class="sv" id="rlS" width="784" height="580"></svg></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">LINK BY LINK</div><div id="lks"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">Basket radius 10 cm, 5 turns each second. Find the acceleration of a leaf at the wall.</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">SIMULATION · THE SPINNER</div><div class="ghost" id="exW" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <div class="stag" id="wslo" style="left:36px;top:66px">SHOWN AT 1/10 SPEED</div>
+        <svg class="sv" id="wrS" width="784" height="580"></svg>
+        <div class="chipd" id="wc0" style="left:36px;top:492px"><i style="font-family:Poppins;color:#E2B566">ω</i><span>10π rad/s</span></div>
+        <div class="chipd" id="wc1" style="left:286px;top:492px"><i style="font-family:Poppins;color:#F09A9A">a</i><span>98.7 m/s²</span></div>
+        <div class="chipd" id="wc2" style="left:536px;top:492px"><span>≈ 10 g</span></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tg" width="420" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + questions + NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Always toward the <span class="acc">centre</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
