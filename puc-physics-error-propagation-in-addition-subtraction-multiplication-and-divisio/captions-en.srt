@@ -1,0 +1,568 @@
+1
+00:00:00,450 --> 00:00:02,095
+A tailor measures cloth.
+
+2
+00:00:02,095 --> 00:00:03,944
+A builder measures a floor.
+
+3
+00:00:03,944 --> 00:00:05,395
+A painter, a wall.
+
+4
+00:00:05,745 --> 00:00:07,386
+All three combine lengths.
+
+5
+00:00:07,386 --> 00:00:09,698
+And every length hides a small error.
+
+6
+00:00:10,148 --> 00:00:12,299
+Aarav measures his study table.
+
+7
+00:00:12,299 --> 00:00:15,392
+One hundred and twenty
+centimetres, by sixty.
+
+8
+00:00:15,742 --> 00:00:19,122
+His ruler can be off by one
+millimetre on each side.
+
+9
+00:00:19,472 --> 00:00:21,455
+So how far off is the area?
+
+10
+00:00:21,455 --> 00:00:22,957
+One square millimetre?
+
+11
+00:00:22,957 --> 00:00:24,322
+It is much bigger.
+
+12
+00:00:24,872 --> 00:00:26,766
+So what is error propagation?
+
+13
+00:00:27,116 --> 00:00:31,676
+When we calculate with measured values,
+their errors travel into the result.
+
+14
+00:00:32,026 --> 00:00:34,100
+Propagation simply means spreading.
+
+15
+00:00:34,700 --> 00:00:39,203
+We always take the worst case, so
+the true value surely lies inside our
+
+16
+00:00:39,203 --> 00:00:40,103
+range.
+
+17
+00:00:40,358 --> 00:00:41,514
+First, adding.
+
+18
+00:00:41,514 --> 00:00:43,698
+Two rods on our measuring bench.
+
+19
+00:00:44,048 --> 00:00:48,086
+Rod A is twenty centimetres,
+plus or minus zero point one.
+
+20
+00:00:48,436 --> 00:00:51,964
+Rod B is fifteen, plus
+or minus zero point one.
+
+21
+00:00:52,314 --> 00:00:55,430
+End to end, the total is
+thirty five centimetres.
+
+22
+00:00:55,780 --> 00:00:58,180
+Let both rods be at their longest.
+
+23
+00:00:58,180 --> 00:01:00,580
+The total grows by zero point two.
+
+24
+00:01:00,930 --> 00:01:04,251
+Both at their shortest, it
+shrinks by zero point two.
+
+25
+00:01:04,601 --> 00:01:08,122
+So it is thirty five, plus
+or minus zero point two.
+
+26
+00:01:08,122 --> 00:01:09,595
+The errors added up.
+
+27
+00:01:10,145 --> 00:01:11,259
+Now subtract.
+
+28
+00:01:11,259 --> 00:01:13,127
+Lay rod B along rod A.
+
+29
+00:01:13,127 --> 00:01:15,138
+Five centimetres stick out.
+
+30
+00:01:15,487 --> 00:01:19,041
+Longest case: A at its
+longest, B at its shortest.
+
+31
+00:01:19,041 --> 00:01:20,222
+Five point two.
+
+32
+00:01:20,572 --> 00:01:22,791
+Shortest case: the other way round.
+
+33
+00:01:22,791 --> 00:01:23,945
+Four point eight.
+
+34
+00:01:24,295 --> 00:01:27,253
+So it is five, plus or
+minus zero point two.
+
+35
+00:01:27,253 --> 00:01:29,760
+Even when we subtract, the errors add.
+
+36
+00:01:30,310 --> 00:01:33,134
+Let's write this as a
+rule, one step at a time.
+
+37
+00:01:33,484 --> 00:01:34,384
+Step one.
+
+38
+00:01:34,364 --> 00:01:38,245
+Z equals A plus B, with
+errors delta A and delta B.
+
+39
+00:01:38,895 --> 00:01:39,795
+Step two.
+
+40
+00:01:39,772 --> 00:01:43,815
+The biggest Z is A plus
+delta A, plus B plus delta B.
+
+41
+00:01:44,465 --> 00:01:45,434
+Step three.
+
+42
+00:01:45,434 --> 00:01:48,605
+So the error in Z is delta A plus delta B.
+
+43
+00:01:48,605 --> 00:01:50,838
+The same holds for A minus B.
+
+44
+00:01:51,488 --> 00:01:52,549
+Remember this.
+
+45
+00:01:52,549 --> 00:01:55,910
+When you add or subtract,
+the absolute errors add.
+
+46
+00:01:56,610 --> 00:01:57,758
+Side by side.
+
+47
+00:01:57,758 --> 00:02:01,636
+Adding gave thirty five,
+plus or minus zero point two.
+
+48
+00:02:01,986 --> 00:02:03,462
+Subtracting gave five.
+
+49
+00:02:03,462 --> 00:02:06,241
+The same error, on a much smaller answer.
+
+50
+00:02:06,841 --> 00:02:07,958
+Now you try.
+
+51
+00:02:07,958 --> 00:02:12,092
+Fifty plus or minus one, minus
+thirty plus or minus one.
+
+52
+00:02:12,092 --> 00:02:14,273
+Is the error zero, or two?
+
+53
+00:02:14,273 --> 00:02:15,662
+Pause and decide.
+
+54
+00:02:18,862 --> 00:02:19,762
+Two!
+
+55
+00:02:19,363 --> 00:02:20,768
+Errors never cancel.
+
+56
+00:02:20,768 --> 00:02:23,912
+One reading can be high
+while the other is low.
+
+57
+00:02:24,462 --> 00:02:25,614
+Now multiply.
+
+58
+00:02:25,614 --> 00:02:27,352
+Back to Aarav's table.
+
+59
+00:02:27,702 --> 00:02:32,197
+One twenty by sixty is seven thousand
+two hundred square centimetres.
+
+60
+00:02:32,547 --> 00:02:35,205
+Now stretch both sides by one millimetre.
+
+61
+00:02:35,205 --> 00:02:36,808
+Two thin strips appear.
+
+62
+00:02:37,158 --> 00:02:41,121
+The long strip is one hundred
+and twenty times zero point one.
+
+63
+00:02:41,121 --> 00:02:42,805
+Twelve square centimetres.
+
+64
+00:02:43,155 --> 00:02:46,380
+The short strip is sixty
+times zero point one.
+
+65
+00:02:46,380 --> 00:02:47,280
+Six.
+
+66
+00:02:46,912 --> 00:02:49,657
+The tiny corner is too small to count.
+
+67
+00:02:50,007 --> 00:02:55,073
+So the area can be off by eighteen square
+centimetres, not one square millimetre!
+
+68
+00:02:55,623 --> 00:02:59,061
+Make the table narrower, and
+the percentage error climbs.
+
+69
+00:02:59,061 --> 00:03:01,047
+A short side brings more error.
+
+70
+00:03:01,597 --> 00:03:04,531
+Now the rule for
+multiplying, step by step.
+
+71
+00:03:04,881 --> 00:03:05,823
+Step one.
+
+72
+00:03:05,823 --> 00:03:07,545
+Z equals A times B.
+
+73
+00:03:07,545 --> 00:03:11,231
+The extra area is A
+delta B, plus B delta A.
+
+74
+00:03:11,881 --> 00:03:12,792
+Step two.
+
+75
+00:03:12,792 --> 00:03:16,234
+Divide both sides by
+Z, which is A times B.
+
+76
+00:03:16,884 --> 00:03:17,965
+Step three.
+
+77
+00:03:17,965 --> 00:03:22,769
+Delta Z over Z equals delta A
+over A, plus delta B over B.
+
+78
+00:03:22,769 --> 00:03:24,754
+The relative errors add.
+
+79
+00:03:25,404 --> 00:03:26,304
+Step four.
+
+80
+00:03:26,285 --> 00:03:29,533
+For Z equals A over B,
+the rule is the same.
+
+81
+00:03:30,183 --> 00:03:31,298
+Side by side.
+
+82
+00:03:31,298 --> 00:03:35,573
+Adding or subtracting: add the
+absolute errors, in centimetres.
+
+83
+00:03:35,923 --> 00:03:40,730
+Multiplying or dividing: add the
+relative errors, which have no unit.
+
+84
+00:03:40,730 --> 00:03:42,184
+Or the percentages.
+
+85
+00:03:42,784 --> 00:03:43,684
+Your turn.
+
+86
+00:03:43,652 --> 00:03:45,596
+Speed is distance over time.
+
+87
+00:03:45,596 --> 00:03:48,668
+Distance has one percent
+error, time has two.
+
+88
+00:03:48,668 --> 00:03:51,540
+Is the speed error one percent, or three?
+
+89
+00:03:51,540 --> 00:03:52,440
+Pause.
+
+90
+00:03:55,348 --> 00:03:56,475
+Three percent!
+
+91
+00:03:56,475 --> 00:03:59,223
+Division still adds the relative errors.
+
+92
+00:03:59,223 --> 00:04:00,729
+They never subtract.
+
+93
+00:04:01,279 --> 00:04:03,066
+Now, one worked example.
+
+94
+00:04:03,066 --> 00:04:04,903
+Aarav's table, done fully.
+
+95
+00:04:05,253 --> 00:04:10,663
+Length one twenty, width sixty, each
+plus or minus zero point one centimetres.
+
+96
+00:04:11,113 --> 00:04:15,640
+Relative error in length: zero point
+one over one hundred and twenty.
+
+97
+00:04:16,290 --> 00:04:19,955
+Relative error in width:
+zero point one over sixty.
+
+98
+00:04:20,605 --> 00:04:21,538
+Add them.
+
+99
+00:04:21,538 --> 00:04:26,282
+Zero point zero zero two five,
+or zero point two five percent.
+
+100
+00:04:26,932 --> 00:04:32,346
+Seven thousand two hundred times zero
+point zero zero two five gives eighteen.
+
+101
+00:04:32,996 --> 00:04:37,541
+So the area is seven thousand two
+hundred, plus or minus eighteen square
+
+102
+00:04:37,541 --> 00:04:38,454
+centimetres.
+
+103
+00:04:39,004 --> 00:04:40,469
+Now, the exam trap.
+
+104
+00:04:40,819 --> 00:04:44,542
+Many students subtract the
+errors when they subtract values.
+
+105
+00:04:44,892 --> 00:04:46,656
+But errors always add.
+
+106
+00:04:46,656 --> 00:04:49,640
+Delta Z is still delta A plus delta B.
+
+107
+00:04:50,190 --> 00:04:51,710
+Where is this asked?
+
+108
+00:04:51,710 --> 00:04:55,533
+As numericals on the maximum
+percentage error in a result.
+
+109
+00:04:56,133 --> 00:04:57,372
+Exam level now.
+
+110
+00:04:57,372 --> 00:05:01,623
+Find the maximum percentage error
+in the trolley's average speed.
+
+111
+00:05:01,623 --> 00:05:02,914
+Pause and solve.
+
+112
+00:05:08,314 --> 00:05:09,648
+The answer is C.
+
+113
+00:05:09,648 --> 00:05:11,344
+One point four percent.
+
+114
+00:05:11,794 --> 00:05:14,211
+The distance is fifty centimetres.
+
+115
+00:05:14,211 --> 00:05:18,862
+Its error is zero point one plus
+zero point one, zero point two.
+
+116
+00:05:19,312 --> 00:05:21,542
+That is zero point four percent.
+
+117
+00:05:21,542 --> 00:05:25,650
+The time error is zero point
+zero two over two, one percent.
+
+118
+00:05:26,100 --> 00:05:28,422
+Speed is a division, so add them.
+
+119
+00:05:28,422 --> 00:05:29,995
+One point four percent.
+
+120
+00:05:30,595 --> 00:05:32,055
+Here is your recap.
+
+121
+00:05:32,055 --> 00:05:33,556
+Screenshot this card.
+
+122
+00:05:36,756 --> 00:05:39,754
+Can you answer these three
+questions without help?
+
+123
+00:05:40,104 --> 00:05:41,004
+One.
+
+124
+00:05:40,596 --> 00:05:43,422
+Why do errors add, even when you subtract?
+
+125
+00:05:44,322 --> 00:05:45,222
+Two.
+
+126
+00:05:44,825 --> 00:05:47,556
+When do you add percentage errors instead?
+
+127
+00:05:48,456 --> 00:05:49,356
+Three.
+
+128
+00:05:49,068 --> 00:05:52,483
+What is the error in the
+perimeter of Aarav's table?
+
+129
+00:05:53,583 --> 00:05:56,712
+Next time: your calculator
+shows eight digits.
+
+130
+00:05:56,712 --> 00:05:58,444
+Which ones do you keep?
+
+131
+00:05:58,444 --> 00:06:00,044
+Measurement uncertainty.

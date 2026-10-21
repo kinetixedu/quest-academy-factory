@@ -1,0 +1,554 @@
+1
+00:00:00,450 --> 00:00:02,626
+A coach reads a runner's graph.
+
+2
+00:00:02,626 --> 00:00:04,854
+An engineer reads a car's graph.
+
+3
+00:00:04,854 --> 00:00:07,184
+A doctor reads a heartbeat graph.
+
+4
+00:00:07,584 --> 00:00:09,526
+All of them ask two questions.
+
+5
+00:00:09,526 --> 00:00:11,044
+How steep is the line?
+
+6
+00:00:11,044 --> 00:00:13,087
+And how much space is under it?
+
+7
+00:00:13,537 --> 00:00:16,379
+Aarav's bicycle meter
+shows only his speed.
+
+8
+00:00:16,379 --> 00:00:18,656
+It never shows how far he went.
+
+9
+00:00:19,006 --> 00:00:22,772
+Yet he says he can find the
+distance from the speed graph alone.
+
+10
+00:00:22,772 --> 00:00:24,188
+Is that even possible?
+
+11
+00:00:24,688 --> 00:00:25,588
+It is.
+
+12
+00:00:25,329 --> 00:00:29,126
+By the end, you will read any
+motion graph with two tools.
+
+13
+00:00:29,776 --> 00:00:31,343
+Tool one is the slope.
+
+14
+00:00:31,693 --> 00:00:33,352
+Slope means steepness.
+
+15
+00:00:33,352 --> 00:00:37,537
+How much the line rises,
+divided by how much time passes.
+
+16
+00:00:37,537 --> 00:00:38,762
+Rise over run.
+
+17
+00:00:39,162 --> 00:00:40,805
+Tool two is the area.
+
+18
+00:00:41,155 --> 00:00:44,745
+Area means the space between
+the line and the time axis.
+
+19
+00:00:44,745 --> 00:00:47,541
+We find it like a rectangle or a triangle.
+
+20
+00:00:48,041 --> 00:00:51,278
+Slope tells you a rate,
+how fast something changes.
+
+21
+00:00:51,278 --> 00:00:54,091
+Area tells you a total, how much piles up.
+
+22
+00:00:54,741 --> 00:00:57,794
+Let's watch Aarav's ride
+on our motion notebook.
+
+23
+00:00:58,144 --> 00:01:02,871
+He starts from rest and speeds up for
+four seconds, to six metres per second.
+
+24
+00:01:03,271 --> 00:01:07,189
+Then he rides steady at six metres
+per second for four seconds.
+
+25
+00:01:07,589 --> 00:01:10,059
+Then he brakes, and stops in two seconds.
+
+26
+00:01:10,459 --> 00:01:11,886
+Slow motion replay.
+
+27
+00:01:11,886 --> 00:01:16,685
+While braking, velocity points forward,
+but acceleration points backward.
+
+28
+00:01:17,185 --> 00:01:20,622
+Now watch the blue space
+under the velocity graph.
+
+29
+00:01:20,622 --> 00:01:23,359
+It grows exactly as his distance grows.
+
+30
+00:01:23,759 --> 00:01:26,175
+At the end, the area is forty two.
+
+31
+00:01:26,175 --> 00:01:27,893
+He rode forty two metres.
+
+32
+00:01:27,893 --> 00:01:29,612
+The area is the distance.
+
+33
+00:01:30,262 --> 00:01:32,439
+Now let's see why, step by step.
+
+34
+00:01:32,789 --> 00:01:33,689
+Step one.
+
+35
+00:01:33,641 --> 00:01:38,461
+On a position time graph, slope is
+the change in position over the change
+
+36
+00:01:38,461 --> 00:01:39,361
+in time.
+
+37
+00:01:39,261 --> 00:01:40,590
+That is velocity.
+
+38
+00:01:41,340 --> 00:01:42,240
+Step two.
+
+39
+00:01:42,222 --> 00:01:47,211
+On a velocity time graph, slope is
+the change in velocity over the change
+
+40
+00:01:47,211 --> 00:01:48,111
+in time.
+
+41
+00:01:48,039 --> 00:01:49,630
+That is acceleration.
+
+42
+00:01:50,380 --> 00:01:51,397
+Step three.
+
+43
+00:01:51,397 --> 00:01:55,717
+The area under a velocity time
+graph is velocity times time.
+
+44
+00:01:55,717 --> 00:01:57,353
+That is displacement.
+
+45
+00:01:58,103 --> 00:01:59,068
+Step four.
+
+46
+00:01:59,068 --> 00:02:03,907
+The area under an acceleration time
+graph is acceleration times time.
+
+47
+00:02:03,907 --> 00:02:06,305
+That is the change in velocity.
+
+48
+00:02:07,055 --> 00:02:08,236
+Check the units.
+
+49
+00:02:08,236 --> 00:02:11,327
+Metres per second, times
+seconds, gives metres.
+
+50
+00:02:11,327 --> 00:02:13,304
+This area really is a length.
+
+51
+00:02:14,005 --> 00:02:15,045
+Remember this.
+
+52
+00:02:15,045 --> 00:02:16,544
+Slope gives the rate.
+
+53
+00:02:16,544 --> 00:02:18,042
+Area gives the total.
+
+54
+00:02:18,742 --> 00:02:22,764
+But why does area give distance,
+even when the speed keeps changing?
+
+55
+00:02:23,114 --> 00:02:27,302
+Cut the time into thin slices,
+each just a tiny bit of time.
+
+56
+00:02:27,702 --> 00:02:30,762
+In one thin slice, the
+speed hardly changes.
+
+57
+00:02:30,762 --> 00:02:34,307
+So the distance in it is
+speed times that tiny time.
+
+58
+00:02:34,707 --> 00:02:38,637
+And speed times that tiny time
+is the area of that thin strip.
+
+59
+00:02:39,037 --> 00:02:43,033
+Add up all the strips, and you
+add up all the little distances.
+
+60
+00:02:43,033 --> 00:02:45,031
+Total area, total displacement.
+
+61
+00:02:45,681 --> 00:02:46,775
+Side by side.
+
+62
+00:02:46,775 --> 00:02:50,534
+Here is a straight rising
+line on a position time graph.
+
+63
+00:02:50,934 --> 00:02:54,181
+Its slope is steady, so
+the velocity is steady.
+
+64
+00:02:54,181 --> 00:02:55,454
+Constant velocity.
+
+65
+00:02:55,854 --> 00:02:59,355
+Now the same straight line
+on a velocity time graph.
+
+66
+00:02:59,355 --> 00:03:02,470
+Here a steady slope means
+constant acceleration.
+
+67
+00:03:03,070 --> 00:03:04,000
+Your turn.
+
+68
+00:03:04,000 --> 00:03:06,756
+A velocity time graph is a flat line.
+
+69
+00:03:06,756 --> 00:03:08,614
+What is the acceleration?
+
+70
+00:03:08,614 --> 00:03:09,982
+Pause and decide.
+
+71
+00:03:13,182 --> 00:03:14,082
+Zero!
+
+72
+00:03:13,784 --> 00:03:15,786
+A flat line has no slope.
+
+73
+00:03:15,786 --> 00:03:19,928
+The velocity is not changing,
+so the acceleration is zero.
+
+74
+00:03:20,578 --> 00:03:21,742
+One more pair.
+
+75
+00:03:21,742 --> 00:03:26,234
+The area under a velocity time
+graph gives displacement, in metres.
+
+76
+00:03:26,634 --> 00:03:30,599
+So what does the area under an
+acceleration time graph give?
+
+77
+00:03:30,599 --> 00:03:32,880
+Distance, or change in velocity?
+
+78
+00:03:32,880 --> 00:03:34,127
+Pause and think.
+
+79
+00:03:37,327 --> 00:03:38,791
+Change in velocity!
+
+80
+00:03:38,791 --> 00:03:43,408
+Metres per second squared, times
+seconds, gives metres per second.
+
+81
+00:03:43,408 --> 00:03:44,384
+A velocity.
+
+82
+00:03:45,034 --> 00:03:48,084
+Now, one worked example,
+from Aarav's ride.
+
+83
+00:03:48,434 --> 00:03:52,951
+Find his acceleration in the first four
+seconds, and his total displacement.
+
+84
+00:03:53,451 --> 00:03:55,299
+Acceleration is the slope.
+
+85
+00:03:55,299 --> 00:03:57,745
+The rise is six metres per second.
+
+86
+00:03:57,745 --> 00:03:59,551
+The run is four seconds.
+
+87
+00:04:00,301 --> 00:04:02,994
+Six divided by four is one point five.
+
+88
+00:04:02,994 --> 00:04:06,372
+So a is one point five
+metres per second squared.
+
+89
+00:04:07,122 --> 00:04:08,868
+Displacement is the area.
+
+90
+00:04:08,868 --> 00:04:13,465
+A trapezium, with parallel sides of
+ten seconds and four seconds, and a
+
+91
+00:04:13,465 --> 00:04:14,599
+height of six.
+
+92
+00:04:15,349 --> 00:04:18,896
+Half of ten plus four,
+times six, is forty two.
+
+93
+00:04:18,896 --> 00:04:20,930
+Aarav rode forty two metres.
+
+94
+00:04:21,580 --> 00:04:23,045
+Now, the exam trap.
+
+95
+00:04:23,395 --> 00:04:26,453
+Some velocity graphs
+dip below the time axis.
+
+96
+00:04:26,453 --> 00:04:28,658
+That part means moving backward.
+
+97
+00:04:29,008 --> 00:04:31,149
+Many students add all the area.
+
+98
+00:04:31,149 --> 00:04:35,114
+But for displacement, area below
+the axis counts as negative.
+
+99
+00:04:35,114 --> 00:04:37,771
+Only for distance do you add the sizes.
+
+100
+00:04:38,421 --> 00:04:39,901
+Where is this asked?
+
+101
+00:04:39,901 --> 00:04:44,831
+Usually as a graph question: find the
+acceleration, displacement or distance.
+
+102
+00:04:45,431 --> 00:04:46,634
+Exam level now.
+
+103
+00:04:46,634 --> 00:04:49,581
+A car moves at plus ten metres per second.
+
+104
+00:04:49,581 --> 00:04:54,098
+Its acceleration is plus two for
+five seconds, then minus four for the
+
+105
+00:04:54,098 --> 00:04:54,998
+next five.
+
+106
+00:04:54,985 --> 00:04:57,290
+Find its velocity at ten seconds.
+
+107
+00:04:57,290 --> 00:04:58,544
+Pause and solve.
+
+108
+00:05:03,944 --> 00:05:05,351
+The answer is A.
+
+109
+00:05:05,351 --> 00:05:07,140
+Zero metres per second.
+
+110
+00:05:07,640 --> 00:05:11,366
+Area under the acceleration
+graph is change in velocity.
+
+111
+00:05:11,366 --> 00:05:14,190
+First part, two times five, plus ten.
+
+112
+00:05:14,190 --> 00:05:17,698
+Second part, minus four
+times five, minus twenty.
+
+113
+00:05:18,198 --> 00:05:20,169
+Total change, minus ten.
+
+114
+00:05:20,169 --> 00:05:21,866
+Add the starting ten.
+
+115
+00:05:21,866 --> 00:05:23,672
+Final velocity is zero.
+
+116
+00:05:24,272 --> 00:05:25,734
+Here is your recap.
+
+117
+00:05:25,734 --> 00:05:27,237
+Screenshot this card.
+
+118
+00:05:30,437 --> 00:05:33,274
+Can you answer these three
+questions without help?
+
+119
+00:05:33,674 --> 00:05:34,574
+One.
+
+120
+00:05:34,144 --> 00:05:37,470
+What does the slope of a
+position time graph tell you?
+
+121
+00:05:38,370 --> 00:05:39,270
+Two.
+
+122
+00:05:38,924 --> 00:05:43,391
+Why does the area under a velocity
+time graph give displacement?
+
+123
+00:05:44,291 --> 00:05:45,191
+Three.
+
+124
+00:05:44,922 --> 00:05:48,813
+When does the area below the
+time axis count as negative?
+
+125
+00:05:49,913 --> 00:05:53,911
+Next time: two buses side by
+side look still to each other.
+
+126
+00:05:53,911 --> 00:05:54,811
+Why?
+
+127
+00:05:54,418 --> 00:05:57,383
+Find out in relative
+motion in one dimension.

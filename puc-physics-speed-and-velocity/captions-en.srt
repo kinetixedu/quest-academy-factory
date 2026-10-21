@@ -1,0 +1,558 @@
+1
+00:00:00,450 --> 00:00:02,215
+A speedometer shows sixty.
+
+2
+00:00:02,215 --> 00:00:05,154
+The wind report says
+twenty, from the west.
+
+3
+00:00:05,554 --> 00:00:07,385
+One number has no direction.
+
+4
+00:00:07,385 --> 00:00:08,738
+The other one does.
+
+5
+00:00:08,738 --> 00:00:10,851
+Does that small difference matter?
+
+6
+00:00:11,301 --> 00:00:14,520
+Aarav and his friend cycle
+out of the college gate.
+
+7
+00:00:14,520 --> 00:00:17,616
+Both speedometers read
+eighteen kilometres per hour.
+
+8
+00:00:17,966 --> 00:00:18,876
+Same speed.
+
+9
+00:00:18,876 --> 00:00:22,378
+But after ten minutes, they
+are six kilometres apart.
+
+10
+00:00:22,378 --> 00:00:23,278
+How?
+
+11
+00:00:23,382 --> 00:00:25,656
+They rode in opposite directions.
+
+12
+00:00:25,656 --> 00:00:27,869
+Same speed, different velocity.
+
+13
+00:00:27,869 --> 00:00:28,985
+Let's see why.
+
+14
+00:00:29,635 --> 00:00:32,587
+Speed tells you how
+fast you cover the path.
+
+15
+00:00:32,587 --> 00:00:34,719
+It is distance divided by time.
+
+16
+00:00:35,069 --> 00:00:38,066
+It only has a size, so speed is a scalar.
+
+17
+00:00:38,066 --> 00:00:39,865
+And it is never negative.
+
+18
+00:00:40,315 --> 00:00:45,108
+Velocity tells you how fast your
+position changes, and in which direction.
+
+19
+00:00:45,108 --> 00:00:47,479
+It is displacement divided by time.
+
+20
+00:00:47,829 --> 00:00:51,537
+It has a size and a direction,
+so velocity is a vector.
+
+21
+00:00:51,537 --> 00:00:54,079
+Both are measured in metres per second.
+
+22
+00:00:54,729 --> 00:00:56,958
+Two riders, one straight road.
+
+23
+00:00:56,958 --> 00:00:58,565
+The gate is at zero.
+
+24
+00:00:58,565 --> 00:00:59,892
+East is positive.
+
+25
+00:01:00,242 --> 00:01:03,083
+Aarav rides east at
+five metres per second.
+
+26
+00:01:03,083 --> 00:01:06,230
+His friend rides west at
+five metres per second.
+
+27
+00:01:06,630 --> 00:01:09,378
+The readout shows the same speed for both.
+
+28
+00:01:09,378 --> 00:01:10,971
+Five metres per second.
+
+29
+00:01:11,371 --> 00:01:14,386
+But the velocities are
+plus five and minus five.
+
+30
+00:01:14,386 --> 00:01:16,371
+The sign carries the direction.
+
+31
+00:01:16,771 --> 00:01:18,216
+Look at the graph.
+
+32
+00:01:18,216 --> 00:01:21,252
+Aarav's line climbs,
+his friend's line falls.
+
+33
+00:01:21,252 --> 00:01:22,469
+Opposite slopes.
+
+34
+00:01:22,969 --> 00:01:25,470
+Let's replay one second in slow motion.
+
+35
+00:01:25,870 --> 00:01:30,362
+In one second, Aarav moves five metres
+east, and his friend five metres
+
+36
+00:01:30,362 --> 00:01:31,262
+west.
+
+37
+00:01:31,561 --> 00:01:35,589
+After a hundred and twenty seconds,
+they are twelve hundred metres apart.
+
+38
+00:01:36,239 --> 00:01:39,064
+Let's write this as a
+rule, one step at a time.
+
+39
+00:01:39,414 --> 00:01:40,314
+Step one.
+
+40
+00:01:40,309 --> 00:01:44,734
+Average speed equals total path
+length, divided by total time.
+
+41
+00:01:45,484 --> 00:01:46,501
+Step two.
+
+42
+00:01:46,501 --> 00:01:50,618
+Average velocity equals
+displacement divided by time.
+
+43
+00:01:50,618 --> 00:01:53,309
+v equals delta x over delta t.
+
+44
+00:01:54,059 --> 00:01:55,035
+Step three.
+
+45
+00:01:55,035 --> 00:01:59,674
+Distance is never less than the size
+of displacement, so average speed
+
+46
+00:01:59,674 --> 00:02:03,060
+is never less than the
+size of average velocity.
+
+47
+00:02:03,810 --> 00:02:08,139
+And eighteen kilometres per hour
+is exactly five metres per second.
+
+48
+00:02:08,789 --> 00:02:09,917
+Remember this.
+
+49
+00:02:09,917 --> 00:02:11,382
+Speed is how fast.
+
+50
+00:02:11,382 --> 00:02:14,091
+Velocity is how fast, and which way.
+
+51
+00:02:14,791 --> 00:02:16,581
+Why is velocity a vector?
+
+52
+00:02:16,581 --> 00:02:19,335
+Let's follow the reasoning, link by link.
+
+53
+00:02:19,685 --> 00:02:20,585
+Link one.
+
+54
+00:02:20,563 --> 00:02:22,426
+Displacement is a vector.
+
+55
+00:02:22,426 --> 00:02:23,968
+It has a direction.
+
+56
+00:02:24,368 --> 00:02:25,268
+Link two.
+
+57
+00:02:25,235 --> 00:02:26,652
+Time is a scalar.
+
+58
+00:02:26,652 --> 00:02:28,227
+It has no direction.
+
+59
+00:02:28,627 --> 00:02:29,561
+Link three.
+
+60
+00:02:29,561 --> 00:02:33,419
+Dividing a vector by a positive
+number keeps its direction.
+
+61
+00:02:33,819 --> 00:02:36,945
+So velocity points the
+same way as displacement.
+
+62
+00:02:36,945 --> 00:02:39,262
+That is why velocity is a vector.
+
+63
+00:02:39,862 --> 00:02:40,968
+Side by side.
+
+64
+00:02:40,968 --> 00:02:45,227
+Aarav rides two hundred metres
+out and back, in eighty seconds.
+
+65
+00:02:45,627 --> 00:02:50,161
+Average speed: four hundred metres
+over eighty seconds, five metres per
+
+66
+00:02:50,161 --> 00:02:51,061
+second.
+
+67
+00:02:50,831 --> 00:02:53,738
+Average velocity: zero over eighty, zero.
+
+68
+00:02:54,338 --> 00:02:55,501
+Now you try.
+
+69
+00:02:55,501 --> 00:02:58,864
+Can a moving body have
+zero average velocity?
+
+70
+00:02:58,864 --> 00:03:00,309
+Pause and decide.
+
+71
+00:03:03,509 --> 00:03:04,409
+Yes!
+
+72
+00:03:04,038 --> 00:03:06,445
+A round trip ends where it began.
+
+73
+00:03:06,445 --> 00:03:11,073
+Displacement zero, so average velocity
+zero, though the speed was never
+
+74
+00:03:11,073 --> 00:03:11,973
+zero.
+
+75
+00:03:12,304 --> 00:03:13,372
+One more case.
+
+76
+00:03:13,372 --> 00:03:15,811
+Moving in a circle at a steady speed.
+
+77
+00:03:16,161 --> 00:03:18,070
+The speedometer never changes.
+
+78
+00:03:18,070 --> 00:03:22,635
+But the velocity arrow keeps turning,
+because the direction keeps changing.
+
+79
+00:03:23,035 --> 00:03:26,553
+So steady speed does not
+always mean steady velocity.
+
+80
+00:03:26,553 --> 00:03:29,816
+On a curve, the velocity
+changes all the time.
+
+81
+00:03:30,466 --> 00:03:31,417
+Your turn.
+
+82
+00:03:31,417 --> 00:03:34,511
+Aarav circles a track at a constant speed.
+
+83
+00:03:34,511 --> 00:03:36,413
+Is his velocity constant?
+
+84
+00:03:36,413 --> 00:03:37,812
+Pause and decide.
+
+85
+00:03:41,012 --> 00:03:41,912
+No!
+
+86
+00:03:41,483 --> 00:03:45,424
+The size stays the same, but
+the direction keeps changing.
+
+87
+00:03:45,424 --> 00:03:48,588
+A change in direction
+is a change in velocity.
+
+88
+00:03:49,238 --> 00:03:50,973
+Now, one worked example.
+
+89
+00:03:51,323 --> 00:03:54,356
+Aarav rides two kilometres
+east in ten minutes.
+
+90
+00:03:54,356 --> 00:03:57,851
+Then he rides one kilometre
+back west in five minutes.
+
+91
+00:03:58,351 --> 00:04:00,611
+Total distance is three kilometres.
+
+92
+00:04:00,611 --> 00:04:04,658
+Total time is fifteen minutes,
+which is a quarter of an hour.
+
+93
+00:04:05,408 --> 00:04:08,354
+Average speed is three
+divided by a quarter.
+
+94
+00:04:08,354 --> 00:04:10,204
+Twelve kilometres per hour.
+
+95
+00:04:10,954 --> 00:04:13,242
+Displacement is two minus one.
+
+96
+00:04:13,242 --> 00:04:14,950
+One kilometre, east.
+
+97
+00:04:15,700 --> 00:04:18,894
+Average velocity is one
+divided by a quarter.
+
+98
+00:04:18,894 --> 00:04:21,252
+Four kilometres per hour, east.
+
+99
+00:04:21,902 --> 00:04:23,368
+Now, the exam trap.
+
+100
+00:04:23,718 --> 00:04:28,585
+Many students think average speed is
+just the size of the average velocity.
+
+101
+00:04:28,935 --> 00:04:30,186
+But it is not.
+
+102
+00:04:30,186 --> 00:04:34,446
+Here average speed was twelve,
+and average velocity only four.
+
+103
+00:04:35,096 --> 00:04:36,509
+Where is this asked?
+
+104
+00:04:36,509 --> 00:04:41,081
+One step problems: round trips, parts
+of a circle, journeys with stops.
+
+105
+00:04:41,681 --> 00:04:42,979
+Exam level now.
+
+106
+00:04:42,979 --> 00:04:48,139
+A cyclist covers half a circular track
+of radius twenty one metres in eleven
+
+107
+00:04:48,139 --> 00:04:49,039
+seconds.
+
+108
+00:04:48,920 --> 00:04:52,936
+Find the average speed and
+the size of average velocity.
+
+109
+00:04:52,936 --> 00:04:54,290
+Pause and solve.
+
+110
+00:04:59,690 --> 00:05:00,941
+The answer is B.
+
+111
+00:05:00,941 --> 00:05:05,580
+Six metres per second, and about three
+point eight two metres per second.
+
+112
+00:05:06,080 --> 00:05:07,840
+The distance is pi r.
+
+113
+00:05:07,840 --> 00:05:11,976
+Twenty two by seven times
+twenty one is sixty six metres.
+
+114
+00:05:11,976 --> 00:05:15,431
+Sixty six over eleven is
+six metres per second.
+
+115
+00:05:15,931 --> 00:05:19,267
+The displacement is the
+diameter, forty two metres.
+
+116
+00:05:19,767 --> 00:05:24,235
+Forty two over eleven is about three
+point eight two metres per second.
+
+117
+00:05:24,835 --> 00:05:26,295
+Here is your recap.
+
+118
+00:05:26,295 --> 00:05:27,797
+Screenshot this card.
+
+119
+00:05:30,997 --> 00:05:33,833
+Can you answer these three
+questions without help?
+
+120
+00:05:34,233 --> 00:05:35,133
+One.
+
+121
+00:05:34,740 --> 00:05:38,167
+Why is velocity a vector,
+while speed is a scalar?
+
+122
+00:05:39,067 --> 00:05:39,967
+Two.
+
+123
+00:05:39,606 --> 00:05:44,065
+Can a body move with a constant
+speed, but a changing velocity?
+
+124
+00:05:44,965 --> 00:05:45,865
+Three.
+
+125
+00:05:45,591 --> 00:05:49,440
+After one full round trip,
+what is the average velocity?
+
+126
+00:05:50,540 --> 00:05:54,550
+Next time: how do we find
+velocity at one single instant?
+
+127
+00:05:54,550 --> 00:05:57,418
+That is average and
+instantaneous velocity.

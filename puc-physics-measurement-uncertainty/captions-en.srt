@@ -1,0 +1,536 @@
+1
+00:00:00,450 --> 00:00:02,498
+A doctor reads a thermometer.
+
+2
+00:00:02,498 --> 00:00:04,444
+A shopkeeper reads a scale.
+
+3
+00:00:04,444 --> 00:00:06,441
+A student reads a stopwatch.
+
+4
+00:00:06,791 --> 00:00:09,470
+None of them can read
+the exact true value.
+
+5
+00:00:09,470 --> 00:00:11,293
+Every reading has some doubt.
+
+6
+00:00:11,743 --> 00:00:16,789
+Diya divides the mass of some water by
+its volume, and her calculator shows
+
+7
+00:00:16,789 --> 00:00:17,875
+eight digits.
+
+8
+00:00:18,225 --> 00:00:21,482
+But her measuring jar was
+only good to one millilitre.
+
+9
+00:00:21,832 --> 00:00:24,785
+So which digits are real,
+and which are noise?
+
+10
+00:00:24,785 --> 00:00:25,831
+Let's find out.
+
+11
+00:00:26,381 --> 00:00:28,533
+So what is measurement uncertainty?
+
+12
+00:00:28,883 --> 00:00:32,604
+It is the range in which the
+true value most likely lies.
+
+13
+00:00:32,604 --> 00:00:35,166
+We call it delta, the plus or minus.
+
+14
+00:00:35,516 --> 00:00:37,379
+A full answer has three parts.
+
+15
+00:00:37,379 --> 00:00:40,231
+The best value, the
+uncertainty, and the unit.
+
+16
+00:00:40,831 --> 00:00:42,842
+Uncertainty is not a mistake.
+
+17
+00:00:42,842 --> 00:00:46,624
+Even a perfect student with
+a perfect ruler still has it.
+
+18
+00:00:47,174 --> 00:00:48,967
+Let's see where it comes from.
+
+19
+00:00:48,967 --> 00:00:50,892
+A pencil on our measuring bench.
+
+20
+00:00:51,242 --> 00:00:55,208
+With a centimetre scale, the end
+falls between seven and eight.
+
+21
+00:00:55,208 --> 00:00:57,354
+The uncertainty is one centimetre.
+
+22
+00:00:57,704 --> 00:00:59,792
+Switch to a millimetre scale.
+
+23
+00:00:59,792 --> 00:01:04,043
+Now it reads seven point four,
+plus or minus zero point one.
+
+24
+00:01:04,393 --> 00:01:06,404
+Switch to a vernier calliper.
+
+25
+00:01:06,404 --> 00:01:10,337
+Seven point four three, plus
+or minus zero point zero one.
+
+26
+00:01:10,687 --> 00:01:12,989
+Better instrument, smaller error bar.
+
+27
+00:01:12,989 --> 00:01:14,886
+But it never shrinks to zero.
+
+28
+00:01:15,436 --> 00:01:16,833
+Look at the graph.
+
+29
+00:01:16,833 --> 00:01:20,651
+Each finer instrument gives
+the answer one more real digit.
+
+30
+00:01:21,201 --> 00:01:22,971
+Now, repeated readings.
+
+31
+00:01:22,971 --> 00:01:26,383
+Diya times one swing of
+a pendulum, five times.
+
+32
+00:01:26,733 --> 00:01:31,437
+Two point six two, two point five
+eight, two point six four, two point
+
+33
+00:01:31,437 --> 00:01:33,554
+six zero, two point six one.
+
+34
+00:01:33,904 --> 00:01:35,769
+The best value is the mean.
+
+35
+00:01:35,769 --> 00:01:37,530
+Two point six one seconds.
+
+36
+00:01:37,880 --> 00:01:41,439
+Each reading's distance from
+the mean is its absolute error.
+
+37
+00:01:41,789 --> 00:01:45,092
+The mean of those distances
+is the uncertainty.
+
+38
+00:01:45,092 --> 00:01:49,564
+Zero point zero one six, so about
+zero point zero two seconds.
+
+39
+00:01:50,114 --> 00:01:52,647
+Let's write the rules, one step at a time.
+
+40
+00:01:52,997 --> 00:01:53,897
+Step one.
+
+41
+00:01:53,799 --> 00:01:55,716
+The best value is the mean.
+
+42
+00:01:55,716 --> 00:01:59,198
+a bar equals the sum of
+the readings, divided by n.
+
+43
+00:01:59,848 --> 00:02:00,754
+Step two.
+
+44
+00:02:00,754 --> 00:02:03,869
+The uncertainty is the
+mean absolute error.
+
+45
+00:02:03,869 --> 00:02:05,007
+Delta a bar.
+
+46
+00:02:05,657 --> 00:02:06,674
+Step three.
+
+47
+00:02:06,674 --> 00:02:10,783
+Write the result as a bar,
+plus or minus delta a bar.
+
+48
+00:02:10,783 --> 00:02:15,678
+Here, two point six one plus or
+minus zero point zero two seconds.
+
+49
+00:02:16,328 --> 00:02:17,404
+Remember this.
+
+50
+00:02:17,404 --> 00:02:22,375
+Every result is a best value, plus or
+minus its uncertainty, with a unit.
+
+51
+00:02:23,075 --> 00:02:24,242
+Side by side.
+
+52
+00:02:24,242 --> 00:02:27,398
+Diya's density, as her
+calculator showed it.
+
+53
+00:02:27,398 --> 00:02:30,629
+One point zero zero
+five seven six nine two.
+
+54
+00:02:30,979 --> 00:02:33,021
+And as a physicist writes it.
+
+55
+00:02:33,021 --> 00:02:36,669
+Round the uncertainty, usually
+to one significant figure.
+
+56
+00:02:36,669 --> 00:02:39,682
+Then cut the value at
+the same decimal place.
+
+57
+00:02:40,282 --> 00:02:41,396
+Now you try.
+
+58
+00:02:41,396 --> 00:02:43,387
+Which is written correctly?
+
+59
+00:02:43,387 --> 00:02:48,525
+Nine point eight two six plus or minus
+zero point one, or nine point eight
+
+60
+00:02:48,525 --> 00:02:50,754
+plus or minus zero point one?
+
+61
+00:02:50,754 --> 00:02:52,139
+Pause and decide.
+
+62
+00:02:55,339 --> 00:02:56,437
+The second one!
+
+63
+00:02:56,437 --> 00:03:00,610
+The uncertainty sits in the first
+decimal place, so the value must stop
+
+64
+00:03:00,610 --> 00:03:01,510
+there too.
+
+65
+00:03:01,970 --> 00:03:03,098
+One more idea.
+
+66
+00:03:03,098 --> 00:03:07,402
+To compare how good two results
+are, use the relative uncertainty.
+
+67
+00:03:07,752 --> 00:03:12,813
+A stopwatch gives two point six one,
+plus or minus zero point zero two
+
+68
+00:03:12,813 --> 00:03:13,713
+seconds.
+
+69
+00:03:13,613 --> 00:03:15,112
+Under one percent.
+
+70
+00:03:15,462 --> 00:03:19,871
+A wall clock gives two point six,
+plus or minus zero point two.
+
+71
+00:03:19,871 --> 00:03:21,344
+About eight percent.
+
+72
+00:03:21,694 --> 00:03:25,339
+Same swing, but the stopwatch
+result is ten times better.
+
+73
+00:03:25,889 --> 00:03:26,836
+Your turn.
+
+74
+00:03:26,836 --> 00:03:31,200
+A ruler gives ten centimetres,
+plus or minus zero point one.
+
+75
+00:03:31,200 --> 00:03:35,955
+A tape gives one metre, plus or
+minus zero point five centimetres.
+
+76
+00:03:35,955 --> 00:03:37,294
+Which is better?
+
+77
+00:03:37,294 --> 00:03:38,687
+Pause and decide.
+
+78
+00:03:41,887 --> 00:03:42,787
+The tape!
+
+79
+00:03:42,656 --> 00:03:46,682
+Its error is bigger, but it is
+only half a percent of a metre.
+
+80
+00:03:46,682 --> 00:03:48,418
+The ruler's is one percent.
+
+81
+00:03:48,968 --> 00:03:50,704
+Now, one worked example.
+
+82
+00:03:51,054 --> 00:03:56,133
+A wire's length is measured four times:
+fifty point two, fifty point five,
+
+83
+00:03:56,133 --> 00:03:59,501
+fifty point three, fifty
+point four centimetres.
+
+84
+00:03:59,951 --> 00:04:04,546
+The mean is the sum, two hundred
+and one point four, divided by four.
+
+85
+00:04:04,546 --> 00:04:06,136
+Fifty point three five.
+
+86
+00:04:06,786 --> 00:04:12,131
+The distances from the mean are zero
+point one five, zero point one five,
+
+87
+00:04:12,131 --> 00:04:15,492
+zero point zero five,
+zero point zero five.
+
+88
+00:04:16,142 --> 00:04:18,212
+Their mean is zero point one.
+
+89
+00:04:18,212 --> 00:04:19,910
+That is the uncertainty.
+
+90
+00:04:20,560 --> 00:04:25,117
+The uncertainty is in the first decimal,
+so round the value to fifty point
+
+91
+00:04:25,117 --> 00:04:26,017
+four.
+
+92
+00:04:26,311 --> 00:04:31,283
+The answer: fifty point four, plus
+or minus zero point one centimetres.
+
+93
+00:04:31,833 --> 00:04:33,298
+Now, the exam trap.
+
+94
+00:04:33,648 --> 00:04:37,421
+Many students copy every
+calculator digit into the answer.
+
+95
+00:04:37,771 --> 00:04:41,237
+But a value can never be more
+exact than its uncertainty.
+
+96
+00:04:41,237 --> 00:04:44,500
+Round the uncertainty, then
+round the value to match.
+
+97
+00:04:45,050 --> 00:04:46,506
+Where is this asked?
+
+98
+00:04:46,506 --> 00:04:50,766
+As mean absolute error numericals,
+and as picking the correctly written
+
+99
+00:04:50,766 --> 00:04:51,666
+result.
+
+100
+00:04:52,011 --> 00:04:53,267
+Exam level now.
+
+101
+00:04:53,267 --> 00:04:55,662
+Which result is written correctly?
+
+102
+00:04:55,662 --> 00:04:56,972
+Pause and solve.
+
+103
+00:05:02,372 --> 00:05:03,748
+The answer is B.
+
+104
+00:05:04,198 --> 00:05:08,797
+The mean is eight point six two four,
+and the mean absolute error is zero
+
+105
+00:05:08,797 --> 00:05:10,608
+point zero two four eight.
+
+106
+00:05:11,058 --> 00:05:16,139
+Rounded to one significant figure, the
+uncertainty is zero point zero two.
+
+107
+00:05:16,139 --> 00:05:18,547
+That is the second decimal place.
+
+108
+00:05:18,997 --> 00:05:21,050
+So the value stops there too.
+
+109
+00:05:21,050 --> 00:05:24,798
+Eight point six two, plus or
+minus zero point zero two.
+
+110
+00:05:25,398 --> 00:05:26,860
+Here is your recap.
+
+111
+00:05:26,860 --> 00:05:28,363
+Screenshot this card.
+
+112
+00:05:31,563 --> 00:05:34,561
+Can you answer these three
+questions without help?
+
+113
+00:05:34,911 --> 00:05:35,811
+One.
+
+114
+00:05:35,453 --> 00:05:38,557
+Why can no measurement
+have zero uncertainty?
+
+115
+00:05:39,457 --> 00:05:40,357
+Two.
+
+116
+00:05:39,964 --> 00:05:43,484
+How do you find the uncertainty
+from repeated readings?
+
+117
+00:05:44,384 --> 00:05:45,284
+Three.
+
+118
+00:05:45,029 --> 00:05:50,315
+Why is nine point eight two six plus or
+minus zero point one written wrongly?
+
+119
+00:05:51,415 --> 00:05:53,620
+That completes units and measurement.
+
+120
+00:05:53,620 --> 00:05:57,405
+Next: sitting still on a moving
+bus, are you moving or not?
+
+121
+00:05:57,405 --> 00:05:58,526
+Reference frames.

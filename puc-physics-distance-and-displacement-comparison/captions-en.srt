@@ -1,0 +1,573 @@
+1
+00:00:00,450 --> 00:00:03,814
+A bus goes all around the
+city and back to its depot.
+
+2
+00:00:03,814 --> 00:00:06,398
+A runner finishes four laps of the track.
+
+3
+00:00:06,798 --> 00:00:08,507
+Both travel a long way.
+
+4
+00:00:08,507 --> 00:00:11,402
+And both end up exactly
+where they started.
+
+5
+00:00:11,852 --> 00:00:16,425
+Aarav rides his bicycle to the shop,
+one kilometre away, and comes straight
+
+6
+00:00:16,425 --> 00:00:17,325
+back home.
+
+7
+00:00:17,607 --> 00:00:19,884
+His trip meter says two kilometres.
+
+8
+00:00:19,884 --> 00:00:22,663
+But his physics teacher
+says he moved zero.
+
+9
+00:00:22,663 --> 00:00:23,706
+Who is right?
+
+10
+00:00:24,206 --> 00:00:25,211
+Both of them.
+
+11
+00:00:25,211 --> 00:00:27,306
+They measure two different things.
+
+12
+00:00:27,306 --> 00:00:28,405
+Let's see which.
+
+13
+00:00:29,055 --> 00:00:30,862
+The first one is distance.
+
+14
+00:00:30,862 --> 00:00:34,282
+Distance is the length of
+the actual path you travel.
+
+15
+00:00:34,632 --> 00:00:36,850
+Every bend and every turn counts.
+
+16
+00:00:36,850 --> 00:00:39,943
+It only has a size, so
+distance is a scalar.
+
+17
+00:00:40,393 --> 00:00:42,182
+The second one is displacement.
+
+18
+00:00:42,182 --> 00:00:45,743
+It is the straight arrow from
+where you start to where you end.
+
+19
+00:00:46,093 --> 00:00:49,769
+It has a size and a direction,
+so displacement is a vector.
+
+20
+00:00:49,769 --> 00:00:52,128
+It does not care which path you took.
+
+21
+00:00:52,778 --> 00:00:55,425
+Let's watch one ride on a straight road.
+
+22
+00:00:55,425 --> 00:00:56,698
+Home is at zero.
+
+23
+00:00:57,048 --> 00:01:01,621
+This time Aarav rides forward to the
+library, six hundred metres away.
+
+24
+00:01:02,021 --> 00:01:06,146
+Up to here, distance and displacement
+are both six hundred metres.
+
+25
+00:01:06,146 --> 00:01:07,466
+They grow together.
+
+26
+00:01:07,866 --> 00:01:11,883
+Now he turns back and rides four
+hundred metres to his friend's house.
+
+27
+00:01:12,284 --> 00:01:13,530
+Watch the graph.
+
+28
+00:01:13,530 --> 00:01:15,181
+Distance keeps climbing.
+
+29
+00:01:15,181 --> 00:01:17,096
+Displacement starts to fall.
+
+30
+00:01:17,596 --> 00:01:20,034
+Let's replay the turn in slow motion.
+
+31
+00:01:20,434 --> 00:01:23,157
+The wheels keep rolling,
+so the path adds up.
+
+32
+00:01:23,157 --> 00:01:25,343
+But the arrow from home gets shorter.
+
+33
+00:01:25,993 --> 00:01:27,056
+Final count.
+
+34
+00:01:27,056 --> 00:01:29,414
+Distance is one thousand metres.
+
+35
+00:01:29,414 --> 00:01:32,604
+Displacement is two
+hundred metres, forward.
+
+36
+00:01:33,254 --> 00:01:36,079
+Let's write this as a
+rule, one step at a time.
+
+37
+00:01:36,429 --> 00:01:37,329
+Step one.
+
+38
+00:01:37,270 --> 00:01:40,716
+Distance s is the sum of
+every piece of the path.
+
+39
+00:01:40,716 --> 00:01:42,818
+Six hundred plus four hundred.
+
+40
+00:01:42,818 --> 00:01:44,284
+One thousand metres.
+
+41
+00:01:45,034 --> 00:01:45,934
+Step two.
+
+42
+00:01:45,914 --> 00:01:49,584
+Displacement is final position
+minus starting position.
+
+43
+00:01:49,584 --> 00:01:52,718
+Two hundred minus zero,
+two hundred metres.
+
+44
+00:01:53,468 --> 00:01:54,368
+Step three.
+
+45
+00:01:54,355 --> 00:01:58,374
+So the size of the displacement
+is never more than the distance.
+
+46
+00:01:59,124 --> 00:02:00,214
+Remember this.
+
+47
+00:02:00,214 --> 00:02:02,148
+Distance is the whole path.
+
+48
+00:02:02,148 --> 00:02:04,642
+Displacement is the straight shortcut.
+
+49
+00:02:05,342 --> 00:02:07,715
+But why can distance never be smaller?
+
+50
+00:02:07,715 --> 00:02:10,273
+Let's follow the reasoning, link by link.
+
+51
+00:02:10,623 --> 00:02:11,523
+Link one.
+
+52
+00:02:11,406 --> 00:02:15,035
+Between two points, a straight
+line is the shortest path.
+
+53
+00:02:15,435 --> 00:02:16,335
+Link two.
+
+54
+00:02:16,261 --> 00:02:20,342
+Displacement is exactly that
+straight line, from start to end.
+
+55
+00:02:20,742 --> 00:02:21,700
+Link three.
+
+56
+00:02:21,700 --> 00:02:26,466
+Any real path is that line, or
+something longer with bends and turns.
+
+57
+00:02:26,866 --> 00:02:30,405
+So distance is always at least
+the size of displacement.
+
+58
+00:02:30,405 --> 00:02:33,701
+Equal only on a straight
+path with no turning back.
+
+59
+00:02:34,301 --> 00:02:35,413
+Side by side.
+
+60
+00:02:35,413 --> 00:02:36,998
+Distance is a scalar.
+
+61
+00:02:36,998 --> 00:02:40,230
+It is never negative,
+and it never goes down.
+
+62
+00:02:40,630 --> 00:02:42,377
+Displacement is a vector.
+
+63
+00:02:42,377 --> 00:02:45,158
+It can be positive, negative, or zero.
+
+64
+00:02:45,158 --> 00:02:47,537
+Only the start and the end matter.
+
+65
+00:02:48,137 --> 00:02:49,244
+Now you try.
+
+66
+00:02:49,244 --> 00:02:53,671
+Aarav cycles once around a round
+park and stops where he began.
+
+67
+00:02:53,671 --> 00:02:55,540
+Is his displacement zero?
+
+68
+00:02:55,540 --> 00:02:56,916
+Pause and decide.
+
+69
+00:03:00,116 --> 00:03:01,040
+Yes, zero!
+
+70
+00:03:01,040 --> 00:03:02,756
+He ends where he started.
+
+71
+00:03:02,756 --> 00:03:05,949
+But his distance is the
+whole way around the park.
+
+72
+00:03:06,599 --> 00:03:08,335
+Let's test this on a circle.
+
+73
+00:03:08,685 --> 00:03:11,720
+A dot moves around a circle of radius r.
+
+74
+00:03:11,720 --> 00:03:13,439
+Violet arc: distance.
+
+75
+00:03:13,439 --> 00:03:15,375
+Blue arrow: displacement.
+
+76
+00:03:15,775 --> 00:03:19,250
+After a quarter turn, the
+distance is pi r by two.
+
+77
+00:03:19,250 --> 00:03:21,745
+The displacement is root two times r.
+
+78
+00:03:22,145 --> 00:03:24,849
+After half a turn, distance is pi r.
+
+79
+00:03:24,849 --> 00:03:28,848
+Displacement is two r, straight
+across, its biggest value.
+
+80
+00:03:29,248 --> 00:03:32,361
+After a full turn, the
+distance is two pi r.
+
+81
+00:03:32,361 --> 00:03:34,742
+The displacement drops back to zero.
+
+82
+00:03:35,392 --> 00:03:36,292
+Your turn.
+
+83
+00:03:36,246 --> 00:03:41,255
+On any path, can the distance ever be
+less than the size of the displacement?
+
+84
+00:03:41,255 --> 00:03:42,512
+Pause and decide.
+
+85
+00:03:45,712 --> 00:03:46,612
+Never!
+
+86
+00:03:46,251 --> 00:03:50,472
+The displacement is the straight line,
+and nothing is shorter than a straight
+
+87
+00:03:50,472 --> 00:03:51,372
+line.
+
+88
+00:03:51,617 --> 00:03:53,353
+Now, one worked example.
+
+89
+00:03:53,703 --> 00:03:58,237
+Aarav cycles half way around a
+round park of radius seventy metres.
+
+90
+00:03:58,237 --> 00:04:00,924
+Find the distance and the displacement.
+
+91
+00:04:01,424 --> 00:04:03,962
+Distance is half the circumference.
+
+92
+00:04:03,962 --> 00:04:05,506
+So s equals pi r.
+
+93
+00:04:06,256 --> 00:04:11,222
+With pi as twenty two by seven, s is
+twenty two by seven times seventy.
+
+94
+00:04:11,222 --> 00:04:13,343
+Two hundred and twenty metres.
+
+95
+00:04:14,093 --> 00:04:18,199
+Displacement is the straight line
+across the park, the diameter.
+
+96
+00:04:18,199 --> 00:04:19,683
+So it equals two r.
+
+97
+00:04:20,433 --> 00:04:21,870
+Two times seventy.
+
+98
+00:04:21,870 --> 00:04:24,031
+One hundred and forty metres.
+
+99
+00:04:24,681 --> 00:04:26,146
+Now, the exam trap.
+
+100
+00:04:26,496 --> 00:04:30,819
+Many students say that after one full
+round, the displacement is two pi
+
+101
+00:04:30,819 --> 00:04:31,719
+r.
+
+102
+00:04:31,564 --> 00:04:33,537
+But two pi r is the distance.
+
+103
+00:04:33,537 --> 00:04:37,716
+After one full round you are back
+at the start, so the displacement is
+
+104
+00:04:37,716 --> 00:04:38,616
+zero.
+
+105
+00:04:38,887 --> 00:04:40,352
+Where is this asked?
+
+106
+00:04:40,352 --> 00:04:44,728
+Short questions on round trips and
+circles: distance, displacement, or
+
+107
+00:04:44,728 --> 00:04:45,682
+their ratio.
+
+108
+00:04:46,282 --> 00:04:47,542
+Exam level now.
+
+109
+00:04:47,542 --> 00:04:52,447
+A particle goes three quarters of
+the way around a circle of radius R.
+
+110
+00:04:52,447 --> 00:04:55,513
+Find distance over the
+size of displacement.
+
+111
+00:04:55,513 --> 00:04:56,828
+Pause and solve.
+
+112
+00:05:02,228 --> 00:05:03,553
+The answer is A.
+
+113
+00:05:03,553 --> 00:05:05,721
+Three pi, over two root two.
+
+114
+00:05:06,221 --> 00:05:09,057
+Distance is three quarters of two pi R.
+
+115
+00:05:09,057 --> 00:05:11,141
+That is three pi R by two.
+
+116
+00:05:11,641 --> 00:05:15,985
+Start and end are ninety degrees
+apart, so the displacement is root two
+
+117
+00:05:15,985 --> 00:05:16,885
+R.
+
+118
+00:05:16,882 --> 00:05:17,782
+Divide.
+
+119
+00:05:17,583 --> 00:05:22,740
+Three pi R by two, over root two R,
+gives three pi over two root two.
+
+120
+00:05:22,740 --> 00:05:24,533
+About three point three.
+
+121
+00:05:25,133 --> 00:05:26,590
+Here is your recap.
+
+122
+00:05:26,590 --> 00:05:28,088
+Screenshot this card.
+
+123
+00:05:31,288 --> 00:05:34,125
+Can you answer these three
+questions without help?
+
+124
+00:05:34,525 --> 00:05:35,425
+One.
+
+125
+00:05:35,006 --> 00:05:38,402
+Can the distance be zero
+while the displacement is not?
+
+126
+00:05:39,302 --> 00:05:40,202
+Two.
+
+127
+00:05:39,848 --> 00:05:43,186
+When are distance and
+displacement exactly equal?
+
+128
+00:05:44,086 --> 00:05:44,986
+Three.
+
+129
+00:05:44,725 --> 00:05:49,324
+What is the displacement after
+half a lap of a circle of radius r?
+
+130
+00:05:50,424 --> 00:05:54,347
+Next time: two cyclists, same
+speed, opposite directions.
+
+131
+00:05:54,347 --> 00:05:56,773
+Same speed, but different velocity?
+
+132
+00:05:56,773 --> 00:05:58,694
+That is speed and velocity.
