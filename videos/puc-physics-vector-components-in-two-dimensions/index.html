@@ -1,0 +1,121 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 39 - Vector Components in Two Dimensions</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+#stage svg g.pv{transform-box:fill-box;transform-origin:center}
+/* ===== PUC Physics Ep 39: vector components in two dimensions (Motion notebook, turning arrow) ===== */
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.svf{position:absolute;left:0;top:0}
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr .jn{position:absolute;left:136px;top:24px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:136px;top:68px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr svg{position:absolute;left:20px;top:14px}
+.wq{position:absolute;top:494px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap}
+#hbub{position:absolute;left:300px;top:110px;background:#fff;border:2.5px solid var(--ink);border-radius:18px;padding:10px 20px;font:600 28px Poppins;white-space:nowrap}
+.fxl{position:absolute;left:36px;white-space:nowrap;font-size:44px}
+.st{position:absolute;left:36px;width:712px;height:92px}
+.st .n{position:absolute;left:0;top:2px;width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 21px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:66px;top:0;font-size:34px;white-space:nowrap}
+.st .why{position:absolute;left:66px;top:54px;font:500 21px Poppins;color:var(--mute);white-space:nowrap}
+.qc{position:absolute;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:12px;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+.qc b{font:700 22px Poppins;color:var(--mute)}
+.qn{position:absolute;font:700 28px Poppins;color:var(--dim)}
+#wq{position:absolute;left:36px;top:70px;font:600 28px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:29px}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+#sF .fcard .fl{font-size:42px}
+#sF .fcard .fl.txt{font-size:32px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 3 MOTION IN A PLANE</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Vector <span class="acc">Components</span></div>
+    <div id="sub">Explained with one turning arrow</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE SLANTS · TWO JOBS EACH</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Every slant = sideways + upward</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">COLLEGE GROUND · AARAV</div><div class="ghost" id="exH" style="right:100px;top:18px">EXAMPLE FIGURES</div>
+        <div id="hdF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg" style="position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px">
+        <div id="hbub">5 m/s across the ground</div>
+        <div id="wqs"></div></div>
+    </div>
+
+    <div id="sP">
+      <div class="card full" id="pg"><div class="lbl" style="left:36px;top:30px">TWO SHADOWS OF ONE ARROW</div><svg class="svf" id="pgS" width="784" height="580"></svg></div>
+      <div class="card rf" id="pr"><div class="lbl" style="left:36px;top:30px">ONE SLANT = TWO STRAIGHTS</div>
+        <div class="fxl" id="pf0" style="top:110px"></div>
+        <div class="pillp" id="pc0" style="left:36px;top:220px"></div><div class="pillp" id="pc1" style="left:36px;top:284px"></div>
+        <div class="fxl" id="pf1" style="top:400px;font-size:52px"></div></div>
+    </div>
+
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">SIMULATION · TURN THE ARROW</div><div class="tag" id="slow" style="right:36px;top:22px">SLOW-MO REPLAY · 0.25x</div><svg class="svf" id="simS" width="784" height="580"></svg></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro" id="roG" style="left:36px;top:74px;width:712px;grid-template-columns:repeat(4,auto 1fr auto);column-gap:10px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">PARTS VS ANGLE θ</div><svg class="svf" id="grS" width="784" height="274"></svg></div>
+    </div>
+
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE RULE · 4 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">THE RIGHT ANGLE TRIANGLE</div><svg class="svf" id="drS" width="784" height="580"></svg></div>
+    </div>
+
+    <div id="sC">
+      <div class="card full" id="ca"><div class="lbl" style="left:36px;top:30px">θ = 30°</div><div class="ghost" style="right:36px;top:18px">EXAMPLE FIGURES</div><svg class="svf" id="caS" width="784" height="580"></svg><div id="caV"></div></div>
+      <div class="card rf" id="cb"><div class="lbl" style="left:36px;top:30px">θ = 60°</div><svg class="svf" id="cbS" width="784" height="580"></svg><div id="cbV"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sG">
+      <div class="card wide" id="gq"><div class="lbl" style="left:36px;top:30px">SIGNS IN THE FOUR QUADRANTS</div><svg class="svf" id="gqS" width="1600" height="580"></svg><div id="gqc"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sV">
+      <div class="card full" id="vl"><div class="lbl" style="left:36px;top:30px">ADD A AND B</div><svg class="svf" id="vlS" width="784" height="580"></svg></div>
+      <div class="card rf" id="vr"><div class="lbl" style="left:36px;top:30px">ADD PART BY PART</div><div class="fxl" id="vf0" style="top:110px"></div><div class="fxl" id="vf1" style="top:200px"></div><div class="fxl" id="vf2" style="top:310px"></div>
+        <div class="pillp ac" id="vP" style="left:36px;top:470px">No drawing, no protractor: two sums</div></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">20 m at 30° north of east, then 5 m due north. Total displacement?</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">AARAV'S TWO RIDES</div><svg class="svf" id="wrS" width="784" height="580"></svg></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tpS" width="520" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Every vector = an <span class="acc">x part</span> + a <span style="color:#7A4FE0">y part</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
