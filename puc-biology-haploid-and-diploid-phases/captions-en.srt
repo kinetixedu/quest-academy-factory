@@ -1,0 +1,495 @@
+1
+00:00:00,450 --> 00:00:01,460
+Forty six.
+
+2
+00:00:01,460 --> 00:00:02,644
+Twenty three.
+
+3
+00:00:02,644 --> 00:00:03,654
+Forty six.
+
+4
+00:00:04,054 --> 00:00:05,549
+A cell from your skin.
+
+5
+00:00:05,549 --> 00:00:06,863
+A sperm or an egg.
+
+6
+00:00:06,863 --> 00:00:08,829
+The very first cell of a baby.
+
+7
+00:00:09,279 --> 00:00:11,058
+Aarav loves number puzzles.
+
+8
+00:00:11,058 --> 00:00:15,378
+He asked: if cells copy themselves,
+why is the middle number half?
+
+9
+00:00:15,728 --> 00:00:18,365
+The answer is a count of chromosome sets.
+
+10
+00:00:18,365 --> 00:00:22,284
+And plants play this number game
+in a stranger way than we do.
+
+11
+00:00:22,784 --> 00:00:27,272
+By the end, you will read n and two
+n, and know where a plant halves and
+
+12
+00:00:27,272 --> 00:00:28,774
+doubles its chromosomes.
+
+13
+00:00:29,424 --> 00:00:31,229
+First, what is being counted?
+
+14
+00:00:31,579 --> 00:00:36,245
+Inside the nucleus sit chromosomes,
+thin threads that carry the instructions
+
+15
+00:00:36,245 --> 00:00:37,287
+of the cell.
+
+16
+00:00:37,737 --> 00:00:39,055
+They come in sets.
+
+17
+00:00:39,055 --> 00:00:42,574
+The letter n means the number
+of chromosomes in one set.
+
+18
+00:00:43,024 --> 00:00:45,850
+A cell with one set is haploid, written n.
+
+19
+00:00:45,850 --> 00:00:50,471
+A cell with two sets, one from each
+parent, is diploid, written two n.
+
+20
+00:00:50,471 --> 00:00:54,034
+In humans, n is twenty
+three, so two n is forty six.
+
+21
+00:00:54,684 --> 00:00:57,108
+Let's zoom into an onion root, and count.
+
+22
+00:00:57,458 --> 00:01:00,088
+The root tip is where cells divide fast.
+
+23
+00:01:00,588 --> 00:01:01,488
+Zoom in.
+
+24
+00:01:01,324 --> 00:01:04,716
+These are root tip cells,
+each with its own nucleus.
+
+25
+00:01:05,216 --> 00:01:06,773
+Zoom into one nucleus.
+
+26
+00:01:06,773 --> 00:01:08,624
+The threads are chromosomes.
+
+27
+00:01:08,624 --> 00:01:10,593
+Let's line them up and count.
+
+28
+00:01:11,093 --> 00:01:12,383
+Onion has sixteen.
+
+29
+00:01:12,383 --> 00:01:16,125
+They form eight pairs, one of
+each pair from each parent.
+
+30
+00:01:16,125 --> 00:01:18,733
+So n is eight, and two n is sixteen.
+
+31
+00:01:19,383 --> 00:01:22,179
+Now let's run the two ways a cell divides.
+
+32
+00:01:22,179 --> 00:01:23,389
+Watch the count.
+
+33
+00:01:23,739 --> 00:01:24,639
+Step one.
+
+34
+00:01:24,625 --> 00:01:25,525
+Mitosis.
+
+35
+00:01:25,391 --> 00:01:29,657
+The chromosomes copy themselves,
+and the cell splits in two.
+
+36
+00:01:30,407 --> 00:01:31,307
+Step two.
+
+37
+00:01:31,219 --> 00:01:33,567
+Each new cell gets the same count.
+
+38
+00:01:33,567 --> 00:01:35,003
+Two n stays two n.
+
+39
+00:01:35,003 --> 00:01:38,025
+A haploid cell can do this too: n stays n.
+
+40
+00:01:38,775 --> 00:01:39,825
+Step three.
+
+41
+00:01:39,825 --> 00:01:40,725
+Meiosis.
+
+42
+00:01:40,635 --> 00:01:45,610
+A diploid cell divides twice, but
+copies its chromosomes only once.
+
+43
+00:01:46,360 --> 00:01:47,274
+Step four.
+
+44
+00:01:47,274 --> 00:01:48,725
+The pairs separate.
+
+45
+00:01:48,725 --> 00:01:51,373
+Four cells form, each with one set.
+
+46
+00:01:51,373 --> 00:01:52,728
+Two n becomes n.
+
+47
+00:01:53,478 --> 00:01:54,418
+Step five.
+
+48
+00:01:54,418 --> 00:01:57,063
+Fertilisation joins two haploid cells.
+
+49
+00:01:57,063 --> 00:01:59,245
+n plus n makes two n again.
+
+50
+00:01:59,995 --> 00:02:02,752
+So here are the three
+rules of the number game.
+
+51
+00:02:03,102 --> 00:02:05,842
+Meiosis halves the count, from two n to n.
+
+52
+00:02:06,592 --> 00:02:09,439
+Fertilisation doubles it, from n to two n.
+
+53
+00:02:10,189 --> 00:02:11,478
+Mitosis copies it.
+
+54
+00:02:11,478 --> 00:02:15,337
+The count stays the same,
+whether the cell is n or two n.
+
+55
+00:02:16,087 --> 00:02:17,710
+Now the plant twist.
+
+56
+00:02:17,710 --> 00:02:22,188
+In plants, both haploid and
+diploid cells can grow by mitosis.
+
+57
+00:02:22,538 --> 00:02:25,976
+So a plant can build a whole
+body from haploid cells.
+
+58
+00:02:25,976 --> 00:02:28,796
+That is the haploid
+phase, the gametophyte.
+
+59
+00:02:28,796 --> 00:02:30,438
+It starts from a spore.
+
+60
+00:02:30,888 --> 00:02:33,200
+And a whole body from diploid cells.
+
+61
+00:02:33,200 --> 00:02:35,887
+That is the diploid phase, the sporophyte.
+
+62
+00:02:35,887 --> 00:02:37,526
+It starts from a zygote.
+
+63
+00:02:37,976 --> 00:02:41,421
+In us, the haploid phase is
+just the sperm and the egg.
+
+64
+00:02:41,421 --> 00:02:44,767
+In a moss, the haploid phase
+is the whole green plant.
+
+65
+00:02:45,417 --> 00:02:46,317
+Your turn.
+
+66
+00:02:46,296 --> 00:02:49,481
+A cell from the green,
+leafy part of a moss.
+
+67
+00:02:49,481 --> 00:02:51,766
+One set of chromosomes, or two?
+
+68
+00:02:51,766 --> 00:02:53,060
+Pause and decide.
+
+69
+00:02:56,260 --> 00:02:57,160
+One set!
+
+70
+00:02:57,053 --> 00:03:02,366
+The leafy moss grows from a spore by
+mitosis, so every cell in it is haploid.
+
+71
+00:03:03,016 --> 00:03:04,342
+Remember this.
+
+72
+00:03:04,342 --> 00:03:05,730
+Meiosis halves.
+
+73
+00:03:05,730 --> 00:03:07,551
+Fertilisation doubles.
+
+74
+00:03:07,551 --> 00:03:08,939
+Mitosis copies.
+
+75
+00:03:09,539 --> 00:03:11,244
+Now, a worked example.
+
+76
+00:03:11,244 --> 00:03:13,977
+Onion leaf cells have sixteen chromosomes.
+
+77
+00:03:13,977 --> 00:03:15,743
+Let's fill in its flower.
+
+78
+00:03:16,093 --> 00:03:19,254
+Meiosis in the anther
+leads to the pollen grain.
+
+79
+00:03:19,254 --> 00:03:20,314
+Half: eight.
+
+80
+00:03:20,764 --> 00:03:23,573
+Meiosis in the ovule leads to the egg.
+
+81
+00:03:23,573 --> 00:03:24,555
+Also eight.
+
+82
+00:03:25,005 --> 00:03:27,897
+A male gamete, eight,
+joins the egg, eight.
+
+83
+00:03:27,897 --> 00:03:30,843
+The zygote has sixteen,
+and so does the embryo.
+
+84
+00:03:31,293 --> 00:03:34,995
+The other male gamete joins
+two polar nuclei, eight each.
+
+85
+00:03:34,995 --> 00:03:37,197
+Three times eight is twenty four.
+
+86
+00:03:37,197 --> 00:03:38,950
+The endosperm is three n.
+
+87
+00:03:39,600 --> 00:03:41,064
+Now, the exam trap.
+
+88
+00:03:41,414 --> 00:03:45,723
+Many students think a haploid
+cell cannot divide by mitosis.
+
+89
+00:03:46,123 --> 00:03:47,810
+But in plants it can.
+
+90
+00:03:47,810 --> 00:03:52,733
+Spores divide by mitosis to build the
+whole gametophyte, and the gametophyte
+
+91
+00:03:52,733 --> 00:03:55,116
+makes its gametes by mitosis too.
+
+92
+00:03:55,766 --> 00:03:57,198
+Where is this asked?
+
+93
+00:03:57,198 --> 00:04:02,001
+As chromosome counts: given two n of
+a plant, find the count in the pollen,
+
+94
+00:04:02,001 --> 00:04:04,567
+the egg, the zygote and the endosperm.
+
+95
+00:04:05,167 --> 00:04:06,360
+Exam level now.
+
+96
+00:04:06,360 --> 00:04:10,516
+A flowering plant has twenty four
+chromosomes in its leaf cells.
+
+97
+00:04:10,516 --> 00:04:12,548
+Find the count in each part.
+
+98
+00:04:12,548 --> 00:04:13,792
+Pause and solve.
+
+99
+00:04:19,192 --> 00:04:20,412
+The answer is A.
+
+100
+00:04:20,412 --> 00:04:23,269
+Twelve, twelve, twenty
+four and thirty six.
+
+101
+00:04:23,769 --> 00:04:27,791
+Pollen and egg come after meiosis:
+half of twenty four is twelve.
+
+102
+00:04:28,291 --> 00:04:30,887
+The zygote is n plus n, twenty four.
+
+103
+00:04:30,887 --> 00:04:34,736
+The endosperm is three n:
+three times twelve, thirty six.
+
+104
+00:04:35,336 --> 00:04:36,798
+Here is your recap.
+
+105
+00:04:36,798 --> 00:04:38,301
+Screenshot this card.
+
+106
+00:04:41,501 --> 00:04:44,500
+Can you answer these three
+questions without help?
+
+107
+00:04:44,900 --> 00:04:45,800
+One.
+
+108
+00:04:45,372 --> 00:04:47,522
+What does the letter n stand for?
+
+109
+00:04:48,422 --> 00:04:49,322
+Two.
+
+110
+00:04:48,950 --> 00:04:51,807
+Which division halves
+the chromosome count?
+
+111
+00:04:52,707 --> 00:04:53,607
+Three.
+
+112
+00:04:53,321 --> 00:04:56,960
+Why can a plant build a whole
+body from haploid cells?
+
+113
+00:04:58,060 --> 00:05:03,055
+Next time: in a moss, a fern and a
+mango tree, which phase do we actually
+
+114
+00:05:03,055 --> 00:05:03,955
+see?
+
+115
+00:05:03,569 --> 00:05:06,893
+We find out in life cycles
+of major plant groups.
