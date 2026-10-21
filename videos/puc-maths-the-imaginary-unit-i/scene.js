@@ -35,7 +35,7 @@ const tLs = [wt('H1', 'What'), wt('H1', 'times')];
 /* ---------- H: the notebook ---------- */
 $('#hrs').innerHTML = [1, 2, 3, 4, 5, 6].map((n, k) => `<div class="nb" id="hb${k}" style="top:${84 + k * 68}px"><div class="k">${K(`${I}^{${n}}`)}</div><div class="v">${K(`= ${pv(n)}`)}</div></div>`).join('');
 const hB = $('#hBr'); hB.style.top = (84 + 4 * 68 + 4) + 'px'; hB.style.height = (68 + 56 - 8) + 'px'; $('#hBrT').style.top = (84 + 4 * 68 + 44) + 'px';
-const tHb = [T0('H4') + 0.05, wt('H4', 'minus'), wt('H4', 'minus', 1), wt('H4', 'one'), wt('H4', 'Then'), wt('H4', 'minus', 2)];
+const tHb = [wt('H3', 'one') + 0.1, wt('H4', 'minus'), wt('H4', 'minus', 1), wt('H4', 'one'), wt('H4', 'Then'), wt('H4', 'minus', 2)];
 
 /* ---------- P: definition ---------- */
 $('#pA').innerHTML = K(`${I} = \\sqrt{-1}`); $('#pB').innerHTML = K(`${I}^2 = -1`);
@@ -44,22 +44,22 @@ $('#pA').innerHTML = K(`${I} = \\sqrt{-1}`); $('#pB').innerHTML = K(`${I}^2 = -1
 const DS = [[`${I}^1 = ${I}`, 'just i'], [`${I}^2 = ${rb('-1')}`, 'the definition'], [`${I}^3 = ${I}^2 \\cdot ${I} = ${ic('-i')}`, 'minus one times i'], [`${I}^4 = ${I}^2 \\cdot ${I}^2 = ${rb('1')}`, 'minus one times minus one'], [`${I}^5 = ${I}^4 \\cdot ${I} = ${I}`, 'one times i: back at the start']];
 const dEl = steps($('#dSt'), DS, 84, 94);
 const tDs = ['D2', 'D3', 'D4', 'D5', 'D6'].map(id => wt(id, 2));
-$('#dCh').innerHTML = [1, 2, 3, 4, 5].map((n, k) => `<div class="cp" id="dp${k}" style="top:${108 + k * 94}px">${K(`${I}^{${n}}`)}</div><div class="cn" id="dc${k}" style="top:${84 + k * 94}px">${K(pv(n))}</div>` + (k < 4 ? `<div class="cx" id="dx${k}" style="left:560px;top:${144 + k * 94}px">× i</div>` : '')).join('');
+$('#dCh').innerHTML = [1, 2, 3, 4, 5].map((n, k) => `<div class="cp" id="dp${k}" style="top:${96 + k * 94}px">${K(`${I}^{${n}}`)}</div><div class="cn" id="dc${k}" style="top:${84 + k * 94}px">${K(pv(n))}</div>` + (k < 4 ? `<div class="cx" id="dx${k}" style="left:560px;top:${144 + k * 94}px">× i</div>` : '')).join('');
 
 /* ---------- L: quarter turns ---------- */
-const ls = $('#lS'), LO = [392, 316], LR = 196;
+const ls = $('#lS'), LO = [392, 340], LR = 186;
 const lP = (a, r = LR) => [LO[0] + r * Math.cos(a), LO[1] - r * Math.sin(a)];
 const lAx = mk(mk(ls, 'g', {}), 'g', {});
 mk(lAx, 'circle', { cx: LO[0], cy: LO[1], r: LR, fill: 'none', stroke: C.line, 'stroke-width': 2, 'stroke-dasharray': '6 6' });
 mk(lAx, 'line', { x1: 96, y1: LO[1], x2: 688, y2: LO[1], stroke: RE, 'stroke-width': 3 });
-mk(lAx, 'line', { x1: LO[0], y1: 86, x2: LO[0], y2: 548, stroke: IM, 'stroke-width': 3 });
-const LL = [[0, '1', RE, 22, 34], [Math.PI / 2, 'i', IM, 26, -16], [Math.PI, '-1', RE, -30, 34], [3 * Math.PI / 2, '-i', IM, 26, 30]];
+mk(lAx, 'line', { x1: LO[0], y1: 128, x2: LO[0], y2: 552, stroke: IM, 'stroke-width': 3 });
+const LL = [[0, '1', RE, 26, -14], [Math.PI / 2, 'i', IM, 26, -16], [Math.PI, '-1', RE, -34, -14], [3 * Math.PI / 2, '-i', IM, 26, 30]];
 const lPts = LL.map(([a, s, col, dx, dy]) => { const [x, y] = lP(a); const g = mk(mk(ls, 'g', { transform: `translate(${x.toFixed(1)},${y.toFixed(1)})` }), 'g', {}); mk(g, 'circle', { r: 10, fill: '#fff', stroke: col, 'stroke-width': 4 }); txt(g, dx, dy, s, { 'font-family': 'Poppins', 'font-size': 30, 'font-weight': 700, fill: col, 'text-anchor': 'middle', 'font-style': s.includes('i') ? 'italic' : 'normal' }); return g; });
 const lArc = mk(ls, 'path', { fill: 'none', stroke: IM, 'stroke-width': 6, 'stroke-linecap': 'round', opacity: 0.55 });
 const lArm = mk(ls, 'line', { x1: LO[0], y1: LO[1], stroke: C.ink, 'stroke-width': 4 });
 const lDot = mk(ls, 'circle', { r: 16, fill: RC, stroke: '#fff', 'stroke-width': 4 });
 mk(ls, 'circle', { cx: LO[0], cy: LO[1], r: 6, fill: C.ink });
-const lTurn = txt(ls, 60, 548, 'each × i = a quarter turn, anticlockwise', { 'font-size': 20, fill: IM, 'font-weight': 600 });
+const lTurn = txt(ls, 748, 92, 'each × i = a quarter turn, anticlockwise', { 'font-size': 20, fill: IM, 'font-weight': 600, 'text-anchor': 'end' });
 const arcD = (a1) => { const a = Math.min(a1, 2 * Math.PI - 0.001); if (a <= 0.001) return ''; let d = ''; for (let k = 0; k <= 60; k++) { const [x, y] = lP(a * k / 60, LR); d += (k ? 'L' : 'M') + x.toFixed(1) + ',' + y.toFixed(1); } return d; };
 const tL4 = [wt('L4', 'quarter'), wt('L4', 'Another'), wt('L4', 'Then'), wt('L4', 'home')];
 const tL5 = wt('L5', 'That');
