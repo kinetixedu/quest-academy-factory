@@ -91,7 +91,8 @@ const sP = dotL(s, gx(PP[0]), gy(PP[1]), 'P', C.ink, 18, 30), sQ = dotL(s, gx(QQ
 const sB = bike(s);
 const RO = [['x', XC, 'rx', 'm'], ['y', YC, 'ry', 'm'], ['|r|', RC, 'rr', 'm'], ['θ', RC, 'rt', '°']];
 $('#roG').innerHTML = RO.map(([k, c, id, u]) => `<span class="k" style="color:${c}">${k}</span><span class="v" id="${id}" style="color:${c}">0.0</span><span class="u">${u}</span>`).join('');
-const G = PUC.graph($('#grS'), { x: 90, y: 74, w: 600, h: 140, xmax: 10, ymin: 0, ymax: 60, xt: [0, 5, 10], yt: [0, 30, 60], xl: 't (s)', yl: 'metres' });
+const G = PUC.graph($('#grS'), { x: 90, y: 74, w: 600, h: 140, xmax: 10, ymin: 0, ymax: 60, xt: [0, 5, 10], yt: [0, 30, 60], yl: 'metres' });
+txt($('#grS'), 712, 220, 't (s)');
 const gX = G.curve(XC), gY = G.curve(YC), gXd = G.dot(XC, 10), gYd = G.dot(YC, 10);
 const gxl = txt($('#grS'), 712, 0, 'x', { 'font-family': 'Poppins', 'font-style': 'italic', 'font-weight': 700, 'font-size': 26, fill: XC }), gyl = txt($('#grS'), 712, 0, 'y', { 'font-family': 'Poppins', 'font-style': 'italic', 'font-weight': 700, 'font-size': 26, fill: YC });
 const gGh = document.createElement('div'); gGh.className = 'ghost'; gGh.style.cssText = 'right:36px;top:18px'; gGh.textContent = 'EXAMPLE FIGURES'; $('#gr').appendChild(gGh);
@@ -286,7 +287,7 @@ M.on(t => {
     // readout + graph follow the bike every frame
     M.setT($('#rx'), x.toFixed(1)); M.setT($('#ry'), y.toFixed(1)); M.setT($('#rr'), Math.hypot(x, y).toFixed(1)); M.setT($('#rt'), (Math.atan2(y, x) * 180 / Math.PI).toFixed(1));
     gX(k2 => [k2, pos(k2)[0]], 0, u); gY(k2 => [k2, pos(k2)[1]], 0, u); gXd(u, x, t > tGo - 0.3); gYd(u, y, t > tGo - 0.3);
-    attr(gxl, 'y', (G.Y(x) + 8).toFixed(1)); attr(gyl, 'y', (G.Y(y) + 8).toFixed(1)); attr(gxl, 'x', (G.X(u) + 18).toFixed(1)); attr(gyl, 'x', (G.X(u) + 18).toFixed(1));
+    attr(gxl, 'y', (G.Y(x) + (x <= y ? 28 : -6)).toFixed(1)); attr(gyl, 'y', (G.Y(y) + (y < x ? 28 : -6)).toFixed(1)); attr(gxl, 'x', (G.X(u) + 18).toFixed(1)); attr(gyl, 'x', (G.X(u) + 18).toFixed(1));
     gxl.style.opacity = gyl.style.opacity = t > tGo - 0.3 ? 1 : 0;
     M.vis(gGh, t, tS1 + 0.8, 1e9, { dy: 8 });
     avA(t, wt('S8', 'straight') + 0.2, out);
