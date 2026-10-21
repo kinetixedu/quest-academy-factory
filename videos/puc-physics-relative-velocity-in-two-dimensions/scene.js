@@ -201,7 +201,7 @@ const fc = PUC.fcard($('#sF'), { x: 340, y: 262, w: 1240, h: 470, title: 'Recap 
 const YQ = ['Why does rain seem to slant when you run?', 'Rain falls at 8 m/s and you ride at 6 m/s. At what angle should you tilt?', 'Why does a boat pointed straight across land downstream?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="n">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
-const nx = PUC.next($('#sF'), { label: 'NEXT · CH 4 · EP 50', topic: 'Who pushed the passengers forward? Force and Inertia', y: 764 });
+const nx = PUC.next($('#sF'), { label: 'NEXT · CH 4 · EP 50', topic: 'Why does the coin stay? Force and Inertia', y: 764 });
 
 /* ---------- helpers ---------- */
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
