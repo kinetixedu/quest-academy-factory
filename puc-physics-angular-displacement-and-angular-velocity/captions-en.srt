@@ -1,0 +1,523 @@
+1
+00:00:00,450 --> 00:00:04,434
+A merry-go-round: the outer horse
+races, the inner one strolls.
+
+2
+00:00:04,434 --> 00:00:07,630
+A fan: the tip blurs,
+the centre barely moves.
+
+3
+00:00:08,030 --> 00:00:10,217
+Each one turns as a single piece.
+
+4
+00:00:10,217 --> 00:00:12,309
+So what do all its parts share?
+
+5
+00:00:12,759 --> 00:00:15,399
+Aarav spins his upside-down bicycle wheel.
+
+6
+00:00:15,399 --> 00:00:20,054
+The valve near the rim and the reflector
+near the hub go round together.
+
+7
+00:00:20,404 --> 00:00:22,599
+The valve covers far more distance.
+
+8
+00:00:22,599 --> 00:00:24,608
+So which one is turning faster?
+
+9
+00:00:25,108 --> 00:00:28,895
+To answer that, we measure
+turning by angle, not by distance.
+
+10
+00:00:29,545 --> 00:00:31,650
+Let's start with angular position.
+
+11
+00:00:32,000 --> 00:00:34,577
+Draw a line from the centre to the point.
+
+12
+00:00:34,577 --> 00:00:38,678
+Its angle from a fixed reference
+line is the angular position, theta.
+
+13
+00:00:39,078 --> 00:00:41,455
+As the wheel turns, theta changes.
+
+14
+00:00:41,455 --> 00:00:44,984
+The change, delta theta, is
+the angular displacement.
+
+15
+00:00:44,984 --> 00:00:47,095
+Anticlockwise counts as positive.
+
+16
+00:00:47,495 --> 00:00:49,387
+We measure it in radians.
+
+17
+00:00:49,387 --> 00:00:54,328
+One radian is the angle where the
+arc is exactly as long as the radius.
+
+18
+00:00:54,728 --> 00:00:57,018
+One full turn is two pi radians.
+
+19
+00:00:57,018 --> 00:00:59,712
+That is three hundred and sixty degrees.
+
+20
+00:01:00,312 --> 00:01:03,403
+Let's spin Aarav's wheel
+in our motion notebook.
+
+21
+00:01:03,403 --> 00:01:06,239
+It makes one full turn every two seconds.
+
+22
+00:01:06,589 --> 00:01:09,606
+The reflector sits ten
+centimetres from the centre.
+
+23
+00:01:09,606 --> 00:01:11,915
+The valve sits thirty centimetres out.
+
+24
+00:01:12,315 --> 00:01:13,458
+Start the clock.
+
+25
+00:01:13,458 --> 00:01:17,231
+After half a second, both have
+turned through the same angle.
+
+26
+00:01:17,231 --> 00:01:19,527
+A quarter turn, pi by two radians.
+
+27
+00:01:19,927 --> 00:01:23,837
+But the valve's arc is three times
+longer than the reflector's arc.
+
+28
+00:01:24,337 --> 00:01:25,524
+Keep it spinning.
+
+29
+00:01:25,524 --> 00:01:29,957
+On the graph, the angle grows along
+one straight line, for both points.
+
+30
+00:01:30,357 --> 00:01:31,706
+Let's slow it down.
+
+31
+00:01:32,056 --> 00:01:34,854
+The valve's velocity arrow
+is three times longer.
+
+32
+00:01:34,854 --> 00:01:38,064
+But both arrows turn together,
+through the same angle.
+
+33
+00:01:38,464 --> 00:01:40,705
+So the angle is what they share.
+
+34
+00:01:40,705 --> 00:01:44,052
+How fast the angle grows
+is called angular velocity.
+
+35
+00:01:44,702 --> 00:01:47,269
+Let's write it down, one step at a time.
+
+36
+00:01:47,619 --> 00:01:48,553
+Step one.
+
+37
+00:01:48,553 --> 00:01:52,973
+Angular velocity, omega, is
+angular displacement over time.
+
+38
+00:01:52,973 --> 00:01:57,599
+Omega equals delta theta over
+delta t, in radians per second.
+
+39
+00:01:58,349 --> 00:01:59,265
+Step two.
+
+40
+00:01:59,265 --> 00:02:04,817
+For a point at radius r, the arc it
+covers is s equals r theta, with theta
+
+41
+00:02:04,817 --> 00:02:05,845
+in radians.
+
+42
+00:02:06,595 --> 00:02:07,601
+Step three.
+
+43
+00:02:07,601 --> 00:02:09,909
+Divide both sides by the time.
+
+44
+00:02:09,909 --> 00:02:13,933
+s over t is the speed v,
+and theta over t is omega.
+
+45
+00:02:14,683 --> 00:02:16,311
+So v equals r omega.
+
+46
+00:02:16,311 --> 00:02:19,872
+The same omega, a bigger
+radius, a bigger speed.
+
+47
+00:02:20,622 --> 00:02:21,597
+Step four.
+
+48
+00:02:21,597 --> 00:02:25,308
+One full turn is two pi
+radians in one period T.
+
+49
+00:02:25,308 --> 00:02:29,310
+So omega equals two pi
+over T, which is two pi nu.
+
+50
+00:02:30,060 --> 00:02:34,619
+For Aarav's wheel, two pi over two
+seconds is pi radians per second.
+
+51
+00:02:35,269 --> 00:02:36,404
+Remember this.
+
+52
+00:02:36,404 --> 00:02:39,957
+Every point on a turning
+wheel has the same omega.
+
+53
+00:02:39,957 --> 00:02:41,654
+And v equals r omega.
+
+54
+00:02:42,354 --> 00:02:43,767
+Side by side now.
+
+55
+00:02:44,117 --> 00:02:45,321
+The reflector.
+
+56
+00:02:45,321 --> 00:02:50,473
+Radius ten centimetres, omega pi
+radians per second, so v is zero point
+
+57
+00:02:50,473 --> 00:02:52,667
+three one metres per second.
+
+58
+00:02:53,067 --> 00:02:53,973
+The valve.
+
+59
+00:02:53,973 --> 00:02:59,004
+Radius thirty centimetres, the same
+omega, so v is zero point nine four.
+
+60
+00:02:59,004 --> 00:03:02,265
+Three times the radius,
+three times the speed.
+
+61
+00:03:02,865 --> 00:03:03,871
+Now you try.
+
+62
+00:03:03,871 --> 00:03:08,103
+On a clock, the second hand's
+tip, or a point halfway along it.
+
+63
+00:03:08,103 --> 00:03:10,557
+Which has the bigger angular velocity?
+
+64
+00:03:10,557 --> 00:03:11,808
+Pause and decide.
+
+65
+00:03:15,008 --> 00:03:15,908
+The same!
+
+66
+00:03:15,865 --> 00:03:19,891
+Both sweep three hundred and
+sixty degrees in sixty seconds.
+
+67
+00:03:19,891 --> 00:03:21,711
+Only their speeds differ.
+
+68
+00:03:22,361 --> 00:03:23,261
+One more.
+
+69
+00:03:23,168 --> 00:03:25,599
+Aarav spins the wheel twice as fast.
+
+70
+00:03:25,599 --> 00:03:27,823
+What happens to the valve's speed?
+
+71
+00:03:27,823 --> 00:03:29,034
+Pause and think.
+
+72
+00:03:32,233 --> 00:03:33,252
+It doubles!
+
+73
+00:03:33,252 --> 00:03:34,736
+v equals r omega.
+
+74
+00:03:34,736 --> 00:03:39,287
+The radius stays the same, so
+double omega gives double speed.
+
+75
+00:03:39,937 --> 00:03:41,673
+Now, one worked example.
+
+76
+00:03:42,023 --> 00:03:45,209
+A ceiling fan makes three
+hundred turns a minute.
+
+77
+00:03:45,209 --> 00:03:48,100
+Its blade tip is zero
+point six metres out.
+
+78
+00:03:48,100 --> 00:03:50,175
+Find omega and the tip's speed.
+
+79
+00:03:50,675 --> 00:03:54,272
+Three hundred turns a minute
+is five turns each second.
+
+80
+00:03:54,272 --> 00:03:55,820
+So nu is five hertz.
+
+81
+00:03:56,570 --> 00:03:58,422
+Omega equals two pi nu.
+
+82
+00:03:58,422 --> 00:04:03,019
+That is ten pi, about thirty one
+point four radians per second.
+
+83
+00:04:03,769 --> 00:04:05,299
+v equals r omega.
+
+84
+00:04:05,299 --> 00:04:09,548
+That is zero point six times
+ten pi, which is six pi.
+
+85
+00:04:10,298 --> 00:04:13,727
+About eighteen point eight
+metres per second at the tip.
+
+86
+00:04:13,727 --> 00:04:16,537
+Every point on the blade
+has the same omega.
+
+87
+00:04:17,187 --> 00:04:18,652
+Now, the exam trap.
+
+88
+00:04:19,002 --> 00:04:22,857
+Many students put degrees
+straight into v equals r omega.
+
+89
+00:04:23,207 --> 00:04:26,310
+But s equals r theta
+works only in radians.
+
+90
+00:04:26,310 --> 00:04:30,110
+One eighty degrees per second
+is pi radians per second.
+
+91
+00:04:30,110 --> 00:04:34,901
+So the valve moves at zero point nine
+four metres per second, not fifty
+
+92
+00:04:34,901 --> 00:04:35,801
+four.
+
+93
+00:04:36,142 --> 00:04:37,652
+Where is this asked?
+
+94
+00:04:37,652 --> 00:04:42,405
+As quick numericals: clock hands,
+fan blades, and r p m to radians per
+
+95
+00:04:42,405 --> 00:04:43,305
+second.
+
+96
+00:04:43,674 --> 00:04:44,867
+Exam level now.
+
+97
+00:04:44,867 --> 00:04:47,879
+A clock's minute hand
+is six centimetres long.
+
+98
+00:04:47,879 --> 00:04:51,467
+Find its angular velocity,
+and the speed of its tip.
+
+99
+00:04:51,467 --> 00:04:52,710
+Pause and solve.
+
+100
+00:04:58,110 --> 00:04:59,485
+The answer is B.
+
+101
+00:04:59,985 --> 00:05:04,720
+The minute hand turns two pi radians
+in one hour, three thousand six hundred
+
+102
+00:05:04,720 --> 00:05:05,620
+seconds.
+
+103
+00:05:05,922 --> 00:05:11,110
+So omega is two pi over thirty six
+hundred, which is pi over eighteen hundred
+
+104
+00:05:11,110 --> 00:05:12,571
+radians per second.
+
+105
+00:05:13,071 --> 00:05:15,123
+The tip's speed is r omega.
+
+106
+00:05:15,123 --> 00:05:19,765
+Six times pi over eighteen hundred
+is pi over three hundred centimetres
+
+107
+00:05:19,765 --> 00:05:20,754
+per second.
+
+108
+00:05:21,354 --> 00:05:22,816
+Here is your recap.
+
+109
+00:05:22,816 --> 00:05:24,319
+Screenshot this card.
+
+110
+00:05:27,519 --> 00:05:30,356
+Can you answer these three
+questions without help?
+
+111
+00:05:30,756 --> 00:05:31,656
+One.
+
+112
+00:05:31,231 --> 00:05:36,075
+On a turning wheel, which is the same
+for every point: omega, or the speed?
+
+113
+00:05:36,975 --> 00:05:37,875
+Two.
+
+114
+00:05:37,527 --> 00:05:41,840
+Why must theta be in radians
+when you use s equals r theta?
+
+115
+00:05:42,740 --> 00:05:43,640
+Three.
+
+116
+00:05:43,332 --> 00:05:47,234
+How do you turn sixty turns a
+minute into radians per second?
+
+117
+00:05:48,334 --> 00:05:52,403
+Next time: why does a salad
+spinner fling water off the leaves?
+
+118
+00:05:52,403 --> 00:05:54,467
+We meet centripetal acceleration.

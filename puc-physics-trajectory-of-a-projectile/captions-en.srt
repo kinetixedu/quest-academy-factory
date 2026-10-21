@@ -1,0 +1,508 @@
+1
+00:00:00,450 --> 00:00:02,627
+Throw a paper ball into a bin.
+
+2
+00:00:02,627 --> 00:00:03,860
+Kick a football.
+
+3
+00:00:03,860 --> 00:00:06,027
+Spray water from a garden hose.
+
+4
+00:00:06,427 --> 00:00:09,143
+Three different things,
+one same kind of curve.
+
+5
+00:00:09,593 --> 00:00:11,850
+Aarav noticed it at his study table.
+
+6
+00:00:11,850 --> 00:00:14,115
+He flicked a paper ball at the bin.
+
+7
+00:00:14,465 --> 00:00:17,435
+It rose, turned, and
+dropped in one smooth curve.
+
+8
+00:00:17,435 --> 00:00:19,534
+Is that curve a piece of a circle?
+
+9
+00:00:20,034 --> 00:00:23,700
+By the end, you will know its
+exact shape, and prove it yourself.
+
+10
+00:00:24,350 --> 00:00:26,141
+So what is a trajectory?
+
+11
+00:00:26,491 --> 00:00:29,462
+It is the path a projectile
+traces in the air.
+
+12
+00:00:29,462 --> 00:00:32,735
+Every point on it is a
+pair of numbers, x and y.
+
+13
+00:00:33,135 --> 00:00:35,256
+We already have two equations.
+
+14
+00:00:35,256 --> 00:00:37,129
+One gives x at any time.
+
+15
+00:00:37,129 --> 00:00:38,195
+One gives y.
+
+16
+00:00:38,595 --> 00:00:41,070
+But a path does not care about time.
+
+17
+00:00:41,070 --> 00:00:45,161
+To get its shape, we remove
+time, and write y using only x.
+
+18
+00:00:45,811 --> 00:00:48,308
+Let's launch a ball in
+our motion notebook.
+
+19
+00:00:48,658 --> 00:00:52,458
+It leaves at twenty metres per
+second, at forty five degrees.
+
+20
+00:00:52,858 --> 00:00:55,499
+Across, the blue part never changes.
+
+21
+00:00:55,499 --> 00:00:58,645
+So x grows in equal steps, in equal times.
+
+22
+00:00:59,045 --> 00:01:03,429
+Up and down, the violet part shrinks,
+because gravity pulls down all the
+
+23
+00:01:03,429 --> 00:01:04,329
+time.
+
+24
+00:01:04,359 --> 00:01:06,067
+Slow motion at the top.
+
+25
+00:01:06,067 --> 00:01:08,137
+The violet part is zero here.
+
+26
+00:01:08,137 --> 00:01:10,106
+Only the blue part is left.
+
+27
+00:01:10,606 --> 00:01:14,744
+On the graph, the dot draws y
+against x, as the ball flies.
+
+28
+00:01:15,394 --> 00:01:18,477
+Now let's find its equation,
+one step at a time.
+
+29
+00:01:18,827 --> 00:01:19,727
+Step one.
+
+30
+00:01:19,705 --> 00:01:22,169
+Across, there is no acceleration.
+
+31
+00:01:22,169 --> 00:01:25,266
+So x equals v naught cos theta, times t.
+
+32
+00:01:26,016 --> 00:01:26,953
+Step two.
+
+33
+00:01:26,953 --> 00:01:28,301
+Turn it around.
+
+34
+00:01:28,301 --> 00:01:32,073
+Time t equals x, divided
+by v naught cos theta.
+
+35
+00:01:32,823 --> 00:01:33,841
+Step three.
+
+36
+00:01:33,841 --> 00:01:39,443
+Up and down, y equals v naught sin
+theta times t, minus half g t squared.
+
+37
+00:01:40,193 --> 00:01:41,093
+Step four.
+
+38
+00:01:41,046 --> 00:01:43,831
+Put this t from step two into step three.
+
+39
+00:01:44,581 --> 00:01:47,006
+The first part becomes x tan theta.
+
+40
+00:01:47,006 --> 00:01:51,706
+The second part becomes g x squared,
+over two v naught squared cos squared
+
+41
+00:01:51,706 --> 00:01:52,606
+theta.
+
+42
+00:01:53,118 --> 00:01:54,164
+Remember this.
+
+43
+00:01:54,164 --> 00:01:57,891
+Remove time, and the path of
+a projectile is a parabola.
+
+44
+00:01:58,591 --> 00:01:59,653
+Why a parabola?
+
+45
+00:01:59,653 --> 00:02:01,788
+Look at the shape of the equation.
+
+46
+00:02:02,138 --> 00:02:05,733
+For one throw, theta, v
+naught and g are fixed.
+
+47
+00:02:05,733 --> 00:02:08,525
+So y equals a x, minus b x squared.
+
+48
+00:02:08,925 --> 00:02:12,949
+The a x part alone is a straight
+line, along the launch direction.
+
+49
+00:02:13,349 --> 00:02:17,528
+The minus b x squared part
+pulls it down, more as x grows.
+
+50
+00:02:17,528 --> 00:02:18,804
+That is gravity.
+
+51
+00:02:18,804 --> 00:02:21,428
+A line bent like this is a parabola.
+
+52
+00:02:22,078 --> 00:02:23,184
+Side by side.
+
+53
+00:02:23,184 --> 00:02:25,293
+With no gravity, b is zero.
+
+54
+00:02:25,293 --> 00:02:28,191
+The ball flies in a straight line forever.
+
+55
+00:02:28,591 --> 00:02:30,923
+With gravity, the line bends down.
+
+56
+00:02:30,923 --> 00:02:35,209
+The far end drops the most, because
+the drop grows with x squared.
+
+57
+00:02:35,809 --> 00:02:36,853
+Now you try.
+
+58
+00:02:36,853 --> 00:02:39,823
+A ball rolls off a table, straight across.
+
+59
+00:02:39,823 --> 00:02:41,545
+Is its path a parabola?
+
+60
+00:02:41,545 --> 00:02:42,843
+Pause and decide.
+
+61
+00:02:46,043 --> 00:02:46,943
+Yes!
+
+62
+00:02:46,609 --> 00:02:49,527
+Theta is zero, so tan theta is zero.
+
+63
+00:02:49,527 --> 00:02:53,644
+y equals minus g x squared,
+over two v naught squared.
+
+64
+00:02:53,644 --> 00:02:55,586
+That is half a parabola.
+
+65
+00:02:56,236 --> 00:02:57,985
+What changes the curve?
+
+66
+00:02:57,985 --> 00:02:58,976
+Look at b.
+
+67
+00:02:59,326 --> 00:03:02,053
+v naught squared sits at the bottom of b.
+
+68
+00:03:02,053 --> 00:03:05,558
+Throw twice as fast, and b
+becomes four times smaller.
+
+69
+00:03:05,958 --> 00:03:08,484
+So a faster throw bends more slowly.
+
+70
+00:03:08,484 --> 00:03:10,795
+Its parabola is wider and taller.
+
+71
+00:03:11,395 --> 00:03:12,295
+Your turn.
+
+72
+00:03:12,275 --> 00:03:15,864
+Both leave at forty five
+degrees, one twice as fast.
+
+73
+00:03:15,864 --> 00:03:18,350
+Ten metres across, which is higher?
+
+74
+00:03:18,350 --> 00:03:19,594
+Pause and think.
+
+75
+00:03:22,794 --> 00:03:23,924
+The faster one!
+
+76
+00:03:23,924 --> 00:03:25,993
+Both start along the same line.
+
+77
+00:03:25,993 --> 00:03:29,948
+But the faster ball has a smaller
+b, so it has dropped less.
+
+78
+00:03:30,598 --> 00:03:32,334
+Now, one worked example.
+
+79
+00:03:32,684 --> 00:03:37,154
+A ball is thrown at twenty metres
+per second, at forty five degrees.
+
+80
+00:03:37,154 --> 00:03:39,591
+How high is it, ten metres across?
+
+81
+00:03:40,091 --> 00:03:45,144
+At forty five degrees, tan theta is
+one, and cos squared theta is one half.
+
+82
+00:03:45,894 --> 00:03:50,878
+So b equals nine point eight, over
+two times four hundred times one half.
+
+83
+00:03:50,878 --> 00:03:53,587
+That is zero point zero two four five.
+
+84
+00:03:54,337 --> 00:03:55,834
+Put x equals ten.
+
+85
+00:03:55,834 --> 00:04:00,897
+y equals ten, minus zero point zero
+two four five times one hundred.
+
+86
+00:04:01,647 --> 00:04:04,464
+y equals ten minus two point four five.
+
+87
+00:04:04,464 --> 00:04:07,712
+The ball is seven point
+five five metres high.
+
+88
+00:04:08,362 --> 00:04:09,827
+Now, the exam trap.
+
+89
+00:04:10,177 --> 00:04:14,649
+Many students write cos theta at the
+bottom, instead of cos squared theta.
+
+90
+00:04:14,999 --> 00:04:17,729
+But t was squared, in half g t squared.
+
+91
+00:04:17,729 --> 00:04:22,132
+So the whole t gets squared, and
+cos theta becomes cos squared theta.
+
+92
+00:04:22,782 --> 00:04:24,080
+Where is this asked?
+
+93
+00:04:24,080 --> 00:04:28,210
+You get a trajectory equation, and
+find the angle or the speed from it.
+
+94
+00:04:28,810 --> 00:04:30,070
+Exam level now.
+
+95
+00:04:30,070 --> 00:04:35,402
+A projectile moves along y equals root
+three x, minus x squared over twenty.
+
+96
+00:04:35,402 --> 00:04:36,342
+g is ten.
+
+97
+00:04:36,342 --> 00:04:38,543
+Find the angle and the speed.
+
+98
+00:04:38,543 --> 00:04:39,858
+Pause and solve.
+
+99
+00:04:45,258 --> 00:04:46,523
+The answer is A.
+
+100
+00:04:46,523 --> 00:04:49,438
+Sixty degrees, and
+twenty metres per second.
+
+101
+00:04:49,938 --> 00:04:52,559
+Match it with y equals x tan theta.
+
+102
+00:04:52,559 --> 00:04:56,259
+Tan theta is root three,
+so theta is sixty degrees.
+
+103
+00:04:56,759 --> 00:05:01,898
+Next, g over two v naught squared cos
+squared theta equals one over twenty.
+
+104
+00:05:01,898 --> 00:05:06,611
+Cos squared sixty is one quarter,
+so v naught squared is four hundred,
+
+105
+00:05:06,611 --> 00:05:08,380
+and v naught is twenty.
+
+106
+00:05:08,980 --> 00:05:10,436
+Here is your recap.
+
+107
+00:05:10,436 --> 00:05:11,933
+Screenshot this card.
+
+108
+00:05:15,133 --> 00:05:18,132
+Can you answer these three
+questions without help?
+
+109
+00:05:18,532 --> 00:05:19,432
+One.
+
+110
+00:05:19,000 --> 00:05:22,282
+Why do we remove time to
+find the shape of the path?
+
+111
+00:05:23,182 --> 00:05:24,082
+Two.
+
+112
+00:05:23,701 --> 00:05:27,309
+In the trajectory equation,
+why is cos theta squared?
+
+113
+00:05:28,209 --> 00:05:29,109
+Three.
+
+114
+00:05:28,725 --> 00:05:31,475
+What would the path be
+if there were no gravity?
+
+115
+00:05:32,575 --> 00:05:35,769
+Next time: same speed,
+thirty degrees or sixty.
+
+116
+00:05:35,769 --> 00:05:37,823
+Which stays in the air longer?
+
+117
+00:05:37,823 --> 00:05:39,732
+Find out in time of flight.

@@ -1,0 +1,561 @@
+1
+00:00:00,450 --> 00:00:02,211
+A ladder leaning on a wall.
+
+2
+00:00:02,211 --> 00:00:04,249
+A kite string pulled at a slant.
+
+3
+00:00:04,249 --> 00:00:05,696
+A ramp up to a door.
+
+4
+00:00:06,096 --> 00:00:10,092
+Each is a slanted line,
+secretly doing two jobs at once.
+
+5
+00:00:10,542 --> 00:00:13,419
+Aarav crosses the college
+ground in two legs.
+
+6
+00:00:13,419 --> 00:00:16,681
+Twenty metres one way, then
+fifteen metres another.
+
+7
+00:00:17,031 --> 00:00:20,167
+His friend asks: how far
+from the start is he now?
+
+8
+00:00:20,167 --> 00:00:21,633
+And in which direction?
+
+9
+00:00:22,083 --> 00:00:23,978
+Drawing it to scale is slow.
+
+10
+00:00:23,978 --> 00:00:26,344
+Components give the answer in seconds.
+
+11
+00:00:26,844 --> 00:00:28,452
+First, a quick reminder.
+
+12
+00:00:28,802 --> 00:00:34,059
+Any vector A has a shadow on the x
+axis, A x, and a shadow on the y axis,
+
+13
+00:00:34,059 --> 00:00:34,959
+A y.
+
+14
+00:00:35,042 --> 00:00:38,015
+So A equals A x i hat plus A y j hat.
+
+15
+00:00:38,015 --> 00:00:41,146
+One slanted arrow becomes
+two straight arrows.
+
+16
+00:00:41,746 --> 00:00:43,606
+Now the big idea, live.
+
+17
+00:00:43,606 --> 00:00:47,585
+Aarav's first leg, A, is twenty
+metres at thirty degrees.
+
+18
+00:00:47,935 --> 00:00:51,451
+Its parts: A x is seventeen
+point three, A y is ten.
+
+19
+00:00:51,851 --> 00:00:54,512
+His second leg, B, is fifteen metres.
+
+20
+00:00:54,512 --> 00:00:56,986
+Watch what happens as we turn leg B.
+
+21
+00:00:57,386 --> 00:00:59,752
+The x parts stack on the x axis.
+
+22
+00:00:59,752 --> 00:01:02,117
+The y parts stack on the y axis.
+
+23
+00:01:02,117 --> 00:01:04,422
+R joins the start to the finish.
+
+24
+00:01:04,872 --> 00:01:05,898
+Slow motion.
+
+25
+00:01:05,898 --> 00:01:08,776
+Freeze at one hundred and twenty degrees.
+
+26
+00:01:08,776 --> 00:01:12,395
+B x now points left, so
+it takes away from R x.
+
+27
+00:01:12,895 --> 00:01:14,964
+The graph shows the size of R.
+
+28
+00:01:14,964 --> 00:01:19,236
+It is biggest at thirty degrees,
+when both legs point the same way.
+
+29
+00:01:19,636 --> 00:01:22,335
+Two legs or ten, the trick is the same.
+
+30
+00:01:22,335 --> 00:01:24,986
+Add the x parts, then add the y parts.
+
+31
+00:01:25,586 --> 00:01:28,130
+Let's write the rule, one step at a time.
+
+32
+00:01:28,480 --> 00:01:29,433
+Step one.
+
+33
+00:01:29,433 --> 00:01:30,979
+Split each vector.
+
+34
+00:01:30,979 --> 00:01:33,780
+A is A x i hat plus A y j hat.
+
+35
+00:01:33,780 --> 00:01:36,580
+B is B x i hat plus B y j hat.
+
+36
+00:01:37,330 --> 00:01:38,241
+Step two.
+
+37
+00:01:38,241 --> 00:01:42,262
+Add them, i hats with i
+hats, j hats with j hats.
+
+38
+00:01:43,012 --> 00:01:44,204
+Step three.
+
+39
+00:01:44,204 --> 00:01:49,684
+So R x equals A x plus B x,
+and R y equals A y plus B y.
+
+40
+00:01:50,434 --> 00:01:51,413
+Step four.
+
+41
+00:01:51,413 --> 00:01:55,974
+The size of R is the root of
+R x squared plus R y squared.
+
+42
+00:01:56,724 --> 00:01:59,432
+And tan theta equals R y over R x.
+
+43
+00:01:59,432 --> 00:02:02,564
+Check the signs to pick
+the right quadrant.
+
+44
+00:02:03,314 --> 00:02:04,427
+Remember this.
+
+45
+00:02:04,427 --> 00:02:06,298
+Add vectors part by part.
+
+46
+00:02:06,298 --> 00:02:08,024
+x with x, y with y.
+
+47
+00:02:08,724 --> 00:02:10,907
+Subtraction works the same way.
+
+48
+00:02:10,907 --> 00:02:12,030
+Side by side.
+
+49
+00:02:12,380 --> 00:02:14,352
+On the left, A plus B.
+
+50
+00:02:14,352 --> 00:02:16,444
+A is three i plus four j.
+
+51
+00:02:16,444 --> 00:02:18,144
+B is two i minus j.
+
+52
+00:02:18,144 --> 00:02:19,375
+Add the parts.
+
+53
+00:02:19,375 --> 00:02:21,064
+Five i plus three j.
+
+54
+00:02:21,464 --> 00:02:23,508
+On the right, A minus B.
+
+55
+00:02:23,508 --> 00:02:24,984
+Subtract the parts.
+
+56
+00:02:24,984 --> 00:02:26,535
+One i plus five j.
+
+57
+00:02:26,535 --> 00:02:28,525
+Only the signs of B flip.
+
+58
+00:02:29,125 --> 00:02:30,423
+Pause and think.
+
+59
+00:02:30,423 --> 00:02:33,591
+Two vectors add up to
+give R x equals zero.
+
+60
+00:02:33,591 --> 00:02:35,924
+Must they be equal and opposite?
+
+61
+00:02:35,924 --> 00:02:37,275
+Pause and decide.
+
+62
+00:02:40,475 --> 00:02:41,375
+No!
+
+63
+00:02:40,971 --> 00:02:43,297
+Only their x parts must cancel.
+
+64
+00:02:43,297 --> 00:02:48,488
+Three i plus four j, and minus
+three i plus two j, add up to six j.
+
+65
+00:02:48,988 --> 00:02:50,111
+Now the signs.
+
+66
+00:02:50,111 --> 00:02:52,973
+They tell you which
+quadrant R points into.
+
+67
+00:02:53,323 --> 00:02:56,085
+Quadrant one, x and y both positive.
+
+68
+00:02:56,085 --> 00:02:58,943
+Quadrant two, x negative, y positive.
+
+69
+00:02:59,343 --> 00:03:01,524
+Quadrant three, both negative.
+
+70
+00:03:01,524 --> 00:03:04,351
+Quadrant four, x positive, y negative.
+
+71
+00:03:04,751 --> 00:03:05,871
+Now you try.
+
+72
+00:03:05,871 --> 00:03:09,199
+R x is minus four, and R y is plus three.
+
+73
+00:03:09,199 --> 00:03:11,656
+Which quadrant does R point into?
+
+74
+00:03:11,656 --> 00:03:13,048
+Pause and decide.
+
+75
+00:03:16,248 --> 00:03:17,702
+The second quadrant!
+
+76
+00:03:17,702 --> 00:03:20,428
+Negative x is left, positive y is up.
+
+77
+00:03:20,428 --> 00:03:22,950
+Up and to the left is quadrant two.
+
+78
+00:03:23,450 --> 00:03:25,185
+Now, one worked example.
+
+79
+00:03:25,535 --> 00:03:29,275
+Aarav rides twenty metres at
+thirty degrees north of east.
+
+80
+00:03:29,275 --> 00:03:31,170
+Then five metres due north.
+
+81
+00:03:31,170 --> 00:03:33,055
+Find his total displacement.
+
+82
+00:03:33,555 --> 00:03:34,498
+First ride.
+
+83
+00:03:34,498 --> 00:03:38,240
+A x is twenty cos thirty,
+about seventeen point three.
+
+84
+00:03:38,240 --> 00:03:41,151
+A y is twenty sin thirty, which is ten.
+
+85
+00:03:41,901 --> 00:03:43,123
+Second ride.
+
+86
+00:03:43,123 --> 00:03:44,497
+B x is zero.
+
+87
+00:03:44,497 --> 00:03:45,870
+B y is five.
+
+88
+00:03:46,620 --> 00:03:47,934
+Add the parts.
+
+89
+00:03:47,934 --> 00:03:50,328
+R x is seventeen point three.
+
+90
+00:03:50,328 --> 00:03:51,770
+R y is fifteen.
+
+91
+00:03:52,520 --> 00:03:56,955
+Size: the root of seventeen point
+three squared plus fifteen squared.
+
+92
+00:03:56,955 --> 00:03:59,302
+About twenty two point nine metres.
+
+93
+00:04:00,052 --> 00:04:04,009
+Direction: tan theta is fifteen
+over seventeen point three.
+
+94
+00:04:04,009 --> 00:04:06,658
+About forty one degrees north of east.
+
+95
+00:04:07,158 --> 00:04:08,623
+Now, the exam trap.
+
+96
+00:04:08,973 --> 00:04:13,905
+Many students find the angle of minus
+three i plus three j from tan theta
+
+97
+00:04:13,905 --> 00:04:17,207
+equals minus one, and
+write minus forty five.
+
+98
+00:04:17,557 --> 00:04:19,625
+But that points down and right.
+
+99
+00:04:19,625 --> 00:04:24,076
+Here A x is negative and A y positive,
+so it is the second quadrant.
+
+100
+00:04:24,076 --> 00:04:26,048
+The angle is one thirty five.
+
+101
+00:04:26,548 --> 00:04:28,153
+Where is this asked?
+
+102
+00:04:28,153 --> 00:04:33,020
+Mostly as a step inside bigger problems,
+like resolving forces or finding
+
+103
+00:04:33,020 --> 00:04:34,064
+a resultant.
+
+104
+00:04:34,564 --> 00:04:35,897
+Exam level now.
+
+105
+00:04:35,897 --> 00:04:38,235
+A is six units along plus x.
+
+106
+00:04:38,235 --> 00:04:42,144
+B is six root two units at
+one thirty five degrees.
+
+107
+00:04:42,144 --> 00:04:44,595
+C is four units along minus y.
+
+108
+00:04:44,595 --> 00:04:46,154
+Find the resultant.
+
+109
+00:04:46,154 --> 00:04:47,544
+Pause and solve.
+
+110
+00:04:52,944 --> 00:04:54,333
+The answer is A.
+
+111
+00:04:54,333 --> 00:04:56,326
+Two units, along plus y.
+
+112
+00:04:56,826 --> 00:05:00,986
+R x is six, plus six root two
+times cos one thirty five.
+
+113
+00:05:00,986 --> 00:05:02,732
+That is six minus six.
+
+114
+00:05:02,732 --> 00:05:03,632
+Zero.
+
+115
+00:05:03,825 --> 00:05:07,945
+R y is six root two times sin
+one thirty five, minus four.
+
+116
+00:05:07,945 --> 00:05:09,683
+That is six minus four.
+
+117
+00:05:09,683 --> 00:05:10,583
+Two.
+
+118
+00:05:10,704 --> 00:05:14,829
+Taking cos one thirty five as
+positive gives twelve point two.
+
+119
+00:05:14,829 --> 00:05:17,586
+Dropping the minus sign on C gives ten.
+
+120
+00:05:17,586 --> 00:05:18,800
+Both are traps.
+
+121
+00:05:19,300 --> 00:05:20,759
+Here is your recap.
+
+122
+00:05:20,759 --> 00:05:22,258
+Screenshot this card.
+
+123
+00:05:25,458 --> 00:05:28,295
+Can you answer these three
+questions without help?
+
+124
+00:05:28,695 --> 00:05:29,595
+One.
+
+125
+00:05:29,164 --> 00:05:32,431
+To add two vectors, which
+parts do you add together?
+
+126
+00:05:33,331 --> 00:05:34,231
+Two.
+
+127
+00:05:33,919 --> 00:05:37,817
+A is three i plus four
+j, B is two i minus j.
+
+128
+00:05:37,817 --> 00:05:39,489
+What is A minus B?
+
+129
+00:05:40,389 --> 00:05:41,289
+Three.
+
+130
+00:05:40,991 --> 00:05:44,860
+Why must you check the signs
+before finding the angle of R?
+
+131
+00:05:45,960 --> 00:05:51,055
+Next time: velocity and acceleration
+get x and y parts too, in motion in
+
+132
+00:05:51,055 --> 00:05:52,272
+two dimensions.

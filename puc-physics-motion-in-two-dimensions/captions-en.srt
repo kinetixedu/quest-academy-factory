@@ -1,0 +1,581 @@
+1
+00:00:00,450 --> 00:00:02,447
+A kite drifts across the sky.
+
+2
+00:00:02,447 --> 00:00:04,299
+A ball curves to a friend.
+
+3
+00:00:04,299 --> 00:00:06,393
+A bicycle swings around a bend.
+
+4
+00:00:06,793 --> 00:00:08,788
+None moves in a straight line.
+
+5
+00:00:08,788 --> 00:00:11,369
+So how do we describe motion that bends?
+
+6
+00:00:11,819 --> 00:00:14,720
+Aarav cuts across an
+empty road at a slant.
+
+7
+00:00:14,720 --> 00:00:18,214
+Each second, four metres
+east and three metres north.
+
+8
+00:00:18,564 --> 00:00:21,218
+So is he going seven metres per second?
+
+9
+00:00:21,218 --> 00:00:22,693
+Most people say yes.
+
+10
+00:00:22,693 --> 00:00:23,861
+They are wrong.
+
+11
+00:00:24,361 --> 00:00:28,198
+By the end, you will know his real
+speed, and the trick behind it.
+
+12
+00:00:28,848 --> 00:00:30,124
+First, where is he?
+
+13
+00:00:30,124 --> 00:00:32,550
+On a straight road, one number was enough.
+
+14
+00:00:32,900 --> 00:00:34,934
+On flat ground, we need two.
+
+15
+00:00:34,934 --> 00:00:36,273
+x, how far east.
+
+16
+00:00:36,273 --> 00:00:37,911
+And y, how far north.
+
+17
+00:00:38,311 --> 00:00:42,096
+The arrow from the start to
+Aarav is his position vector, r.
+
+18
+00:00:42,496 --> 00:00:46,081
+In symbols, r equals x i hat plus y j hat.
+
+19
+00:00:46,081 --> 00:00:49,481
+i hat points along x, and j hat along y.
+
+20
+00:00:50,131 --> 00:00:52,033
+Now, onto the motion notebook.
+
+21
+00:00:52,383 --> 00:00:53,977
+Watch his two shadows.
+
+22
+00:00:53,977 --> 00:00:56,964
+The x shadow slides four
+metres every second.
+
+23
+00:00:56,964 --> 00:00:58,819
+The y shadow climbs three.
+
+24
+00:00:59,219 --> 00:01:00,842
+Two straight line motions.
+
+25
+00:01:00,842 --> 00:01:02,847
+Two straight lines on the graph.
+
+26
+00:01:03,247 --> 00:01:04,412
+Slow-mo replay.
+
+27
+00:01:04,412 --> 00:01:07,036
+Freeze him, and draw his velocity.
+
+28
+00:01:07,386 --> 00:01:10,670
+The blue arrow is v x,
+four metres per second.
+
+29
+00:01:10,670 --> 00:01:13,015
+The violet arrow is v y, three.
+
+30
+00:01:13,415 --> 00:01:16,747
+His real velocity is the
+diagonal that joins them.
+
+31
+00:01:16,747 --> 00:01:20,130
+Its length is root four
+squared plus three squared.
+
+32
+00:01:20,130 --> 00:01:22,571
+Five metres per second, not seven.
+
+33
+00:01:23,221 --> 00:01:24,121
+Your turn.
+
+34
+00:01:24,099 --> 00:01:27,157
+Six metres per second
+east, and eight north.
+
+35
+00:01:27,157 --> 00:01:28,872
+What is the real speed?
+
+36
+00:01:28,872 --> 00:01:30,164
+Pause and decide.
+
+37
+00:01:33,364 --> 00:01:34,264
+Ten!
+
+38
+00:01:33,894 --> 00:01:35,444
+Root of one hundred.
+
+39
+00:01:35,444 --> 00:01:37,692
+Never just add the two numbers.
+
+40
+00:01:38,342 --> 00:01:40,694
+Now the rules, one step at a time.
+
+41
+00:01:41,044 --> 00:01:41,976
+Step one.
+
+42
+00:01:41,976 --> 00:01:46,602
+In a short time, delta t, the
+position changes by delta r.
+
+43
+00:01:46,602 --> 00:01:49,966
+That is delta x i hat plus delta y j hat.
+
+44
+00:01:50,716 --> 00:01:51,723
+Step two.
+
+45
+00:01:51,723 --> 00:01:53,431
+Divide by delta t.
+
+46
+00:01:53,431 --> 00:01:57,142
+The velocity is v x i hat plus v y j hat.
+
+47
+00:01:57,892 --> 00:01:58,829
+Step three.
+
+48
+00:01:58,829 --> 00:02:01,507
+The speed is the length of this arrow.
+
+49
+00:02:01,507 --> 00:02:03,982
+Root v x squared plus v y squared.
+
+50
+00:02:04,732 --> 00:02:05,730
+Step four.
+
+51
+00:02:05,730 --> 00:02:10,939
+The direction is the angle theta,
+where tan theta equals v y divided by
+
+52
+00:02:10,939 --> 00:02:11,839
+v x.
+
+53
+00:02:12,343 --> 00:02:13,371
+Remember this.
+
+54
+00:02:13,371 --> 00:02:17,878
+Motion in a plane is just two straight
+line motions, happening at the same
+
+55
+00:02:17,878 --> 00:02:18,778
+time.
+
+56
+00:02:19,116 --> 00:02:20,672
+Now add acceleration.
+
+57
+00:02:21,022 --> 00:02:25,540
+Aarav flicks a marble sideways,
+along x, across a tilted board.
+
+58
+00:02:25,940 --> 00:02:30,323
+The slope pulls it down the board,
+along y, with a steady acceleration.
+
+59
+00:02:30,323 --> 00:02:31,689
+Watch the path bend.
+
+60
+00:02:32,089 --> 00:02:34,637
+Across the board, the
+speed stays the same.
+
+61
+00:02:34,637 --> 00:02:36,757
+The blue line on the graph is flat.
+
+62
+00:02:37,157 --> 00:02:39,541
+Down the slope, it keeps speeding up.
+
+63
+00:02:39,541 --> 00:02:41,034
+The violet line climbs.
+
+64
+00:02:41,434 --> 00:02:45,919
+And the velocity arrow always follows
+the path, not the pull of the slope.
+
+65
+00:02:46,569 --> 00:02:49,565
+So we use the straight
+line equations twice.
+
+66
+00:02:49,565 --> 00:02:51,466
+Once for x, once for y.
+
+67
+00:02:51,816 --> 00:02:52,716
+Along x.
+
+68
+00:02:52,712 --> 00:02:55,142
+v x equals u x plus a x t.
+
+69
+00:02:55,142 --> 00:02:58,771
+And x equals u x t plus
+half a x t squared.
+
+70
+00:02:59,521 --> 00:03:00,480
+Along y.
+
+71
+00:03:00,480 --> 00:03:03,082
+v y equals u y plus a y t.
+
+72
+00:03:03,082 --> 00:03:06,967
+And y equals u y t plus
+half a y t squared.
+
+73
+00:03:07,717 --> 00:03:09,689
+Together, the vector form.
+
+74
+00:03:09,689 --> 00:03:11,369
+v equals u plus a t.
+
+75
+00:03:11,369 --> 00:03:14,291
+And r equals u t plus half a t squared.
+
+76
+00:03:15,041 --> 00:03:16,338
+Side by side.
+
+77
+00:03:16,338 --> 00:03:18,548
+Along x, no acceleration.
+
+78
+00:03:18,548 --> 00:03:21,070
+Equal distances in equal times.
+
+79
+00:03:21,470 --> 00:03:23,524
+Along y, there is acceleration.
+
+80
+00:03:23,524 --> 00:03:26,641
+The gaps grow, in the
+ratio one, three, five.
+
+81
+00:03:27,241 --> 00:03:28,268
+Now you try.
+
+82
+00:03:28,268 --> 00:03:30,828
+Aarav flicks the marble twice as fast.
+
+83
+00:03:30,828 --> 00:03:33,548
+Does it take longer to reach the bottom?
+
+84
+00:03:33,548 --> 00:03:34,823
+Pause and decide.
+
+85
+00:03:38,023 --> 00:03:38,923
+No!
+
+86
+00:03:38,545 --> 00:03:39,531
+Same time.
+
+87
+00:03:39,531 --> 00:03:42,332
+The flick changes only the x motion.
+
+88
+00:03:42,332 --> 00:03:44,906
+The time down depends only on y.
+
+89
+00:03:45,556 --> 00:03:47,292
+Now, one worked example.
+
+90
+00:03:47,642 --> 00:03:52,311
+A particle starts at the origin with
+velocity four i hat, and acceleration
+
+91
+00:03:52,311 --> 00:03:53,249
+two j hat.
+
+92
+00:03:53,249 --> 00:03:56,255
+Find its position and
+speed at three seconds.
+
+93
+00:03:56,755 --> 00:03:59,772
+Along x, u x is four and a x is zero.
+
+94
+00:03:59,772 --> 00:04:02,758
+So x is four times three, twelve metres.
+
+95
+00:04:03,508 --> 00:04:06,362
+Along y, u y is zero and a y is two.
+
+96
+00:04:06,362 --> 00:04:10,231
+So y is half times two times
+three squared, nine metres.
+
+97
+00:04:10,981 --> 00:04:12,006
+Now velocity.
+
+98
+00:04:12,006 --> 00:04:13,252
+v x stays four.
+
+99
+00:04:13,252 --> 00:04:16,517
+v y is two times three,
+six metres per second.
+
+100
+00:04:17,267 --> 00:04:20,119
+Speed is root four
+squared plus six squared.
+
+101
+00:04:20,119 --> 00:04:23,769
+Root fifty two, about seven
+point two metres per second.
+
+102
+00:04:24,419 --> 00:04:25,884
+Now, the exam trap.
+
+103
+00:04:26,234 --> 00:04:30,177
+Many students put plain numbers
+into v equals u plus a t.
+
+104
+00:04:30,177 --> 00:04:32,509
+Four plus two times three, ten.
+
+105
+00:04:32,909 --> 00:04:35,754
+But u and a point in different directions.
+
+106
+00:04:35,754 --> 00:04:38,849
+Solve along x and y
+separately, then combine.
+
+107
+00:04:38,849 --> 00:04:41,281
+The real answer is seven point two.
+
+108
+00:04:41,931 --> 00:04:43,398
+Where is this asked?
+
+109
+00:04:43,398 --> 00:04:47,907
+In questions giving u and a as
+vectors, asking for position or speed.
+
+110
+00:04:48,507 --> 00:04:49,779
+Exam level now.
+
+111
+00:04:49,779 --> 00:04:54,715
+A particle starts at the origin with
+velocity six i hat, and acceleration
+
+112
+00:04:54,715 --> 00:04:55,771
+four j hat.
+
+113
+00:04:55,771 --> 00:04:59,220
+When y is eight metres,
+find x and the speed.
+
+114
+00:04:59,220 --> 00:05:00,545
+Pause and solve.
+
+115
+00:05:05,945 --> 00:05:07,193
+The answer is B.
+
+116
+00:05:07,193 --> 00:05:09,919
+Twelve metres, and ten metres per second.
+
+117
+00:05:10,419 --> 00:05:14,301
+Along y, eight equals half
+times four times t squared.
+
+118
+00:05:14,301 --> 00:05:15,950
+So t is two seconds.
+
+119
+00:05:16,450 --> 00:05:19,126
+So x is six times two, twelve metres.
+
+120
+00:05:19,126 --> 00:05:21,602
+And v y is four times two, eight.
+
+121
+00:05:22,102 --> 00:05:25,308
+Speed is root six squared
+plus eight squared, ten.
+
+122
+00:05:25,308 --> 00:05:27,549
+Option A just added six and eight.
+
+123
+00:05:27,549 --> 00:05:28,816
+That is the trap.
+
+124
+00:05:29,416 --> 00:05:30,876
+Here is your recap.
+
+125
+00:05:30,876 --> 00:05:32,376
+Screenshot this card.
+
+126
+00:05:35,576 --> 00:05:38,413
+Can you answer these three
+questions without help?
+
+127
+00:05:38,813 --> 00:05:39,713
+One.
+
+128
+00:05:39,325 --> 00:05:42,329
+Why is four east plus
+three north not seven?
+
+129
+00:05:43,229 --> 00:05:44,129
+Two.
+
+130
+00:05:43,748 --> 00:05:46,928
+How do you find the
+speed from v x and v y?
+
+131
+00:05:47,828 --> 00:05:48,728
+Three.
+
+132
+00:05:48,434 --> 00:05:51,709
+Does a faster flick change
+the time down a slope?
+
+133
+00:05:51,709 --> 00:05:52,609
+Why?
+
+134
+00:05:53,315 --> 00:05:56,854
+Next time: throw one ball
+sideways and drop another.
+
+135
+00:05:56,854 --> 00:05:58,203
+Which lands first?
+
+136
+00:05:58,203 --> 00:05:59,491
+Projectile motion.
