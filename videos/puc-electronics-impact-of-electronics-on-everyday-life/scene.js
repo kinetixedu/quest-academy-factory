@@ -89,7 +89,7 @@ const Tof = t => 35 + (TEMP - 35) * M.io((t - wt('I2', 'warms')) / Math.max(1, t
 /* ================= M: home ================= */
 const HT = [['plug', 'Phone charger', '230 V AC in, about 5 V DC out'], ['wash', 'Washing machine', 'a microcontroller runs each step'], ['snow', 'Fridge and AC', 'sensors switch the compressor']];
 $('#hTiles').innerHTML = HT.map(([ic, n, d], i) => `<div class="card hT" style="left:${160 + i * 544}px"><div class="ic">${M.icon(ic, 46, AM, 2.2)}</div><div class="nm">${n}</div><div class="ds">${d}</div><svg class="full" width="512" height="600"></svg></div>`).join('');
-const hT = [...$('#hTiles').children], hS = hT.map(h => h.querySelector('svg'));
+const hT = [...$('#hTiles').children], hS = hT.map(h => h.querySelector('svg.full'));
 // charger
 const sinD = [...Array(91)].map((_, i) => (i ? 'L' : 'M') + (40 + i * 4.8).toFixed(1) + ',' + (290 - 34 * Math.sin(i * 0.21)).toFixed(1)).join('');
 const ch = [mono(hS[0], 40, 236, 'IN · 230 V AC', { fill: TE, 'font-size': 20 }), W(hS[0], sinD, { stroke: TE, 'stroke-width': 4 }), W(hS[0], 'M256,336 V360 M246,350 L256,362 L266,350', { 'stroke-width': 3 }),
@@ -101,7 +101,7 @@ const wsP = WS.map((s, i) => { const g = mk(hS[1], 'g'); const r = mk(g, 'rect',
 const wsT = mono(hS[1], 32, 530, 'a timer moves to the next step', { 'font-size': 19 });
 // fridge
 const fG = PUC.graph(hS[2], { x: 60, y: 230, w: 400, h: 190, xmax: 10, ymin: 0, ymax: 8, yt: [0, 4, 8], xl: 'time', yl: '°C' });
-const fTemp = s => { const p = (s % 2.5) / 2.5; return p < 0.6 ? 3 + 2 * p / 0.6 : 5 - 2 * (p - 0.6) / 0.4; }, fOn = s => ((s % 2.5) / 2.5) >= 0.6;
+const fTemp = s => { const p = (s % 2.5) / 2.5; return p < 0.6 ? 3 + 2 * p / 0.6 : 5 - 2 * (p - 0.6) / 0.4; }, frOn = s => ((s % 2.5) / 2.5) >= 0.6;
 const fCurve = fG.curve(AM, 4), fDot = fG.dot(AM, 8);
 const fChip = document.createElement('div'); fChip.className = 'pillp'; fChip.style.cssText = 'left:32px;top:500px;height:44px;font:600 20px "IBM Plex Mono";letter-spacing:.06em'; hT[2].appendChild(fChip);
 const tH = [wt('M2', 'charger'), wt('M3', 'washing'), wt('M4', 'fridge')];
@@ -119,7 +119,7 @@ const volT = tx(ck, 624, 214, 'VOLUME', { fill: '#fff', 'font-family': 'IBM Plex
 const volN = tx(ck, 866, 214, '12', { fill: AM, 'font-family': 'IBM Plex Mono', 'font-size': 22, 'text-anchor': 'end' });
 const segs = [...Array(16)].map((_, i) => mk(ck, 'rect', { x: 624 + i * 15.5, y: 236, width: 11, height: 40, rx: 2, fill: '#3A4A70' }));
 const chT = tx(ck, 745, 330, 'CHANNEL 7', { fill: '#fff', 'font-family': 'IBM Plex Mono', 'font-size': 22, 'text-anchor': 'middle' });
-const bLab = [mono(ck, 200, 386, 'remote', { 'text-anchor': 'middle', 'font-size': 18 }), mono(ck, 470, 262, 'infrared: invisible to us', { 'text-anchor': 'middle', 'font-size': 18 }), mono(ck, 600, 444, 'receiver', { 'text-anchor': 'middle', 'font-size': 18 }), mono(ck, 272, 336, 'chip', { 'text-anchor': 'middle', 'font-size': 14 })];
+const bLab = [mono(ck, 200, 386, 'remote', { 'text-anchor': 'middle', 'font-size': 18 }), mono(ck, 466, 262, 'infrared: invisible', { 'text-anchor': 'middle', 'font-size': 17 }), mono(ck, 600, 444, 'receiver', { 'text-anchor': 'middle', 'font-size': 18 }), mono(ck, 272, 336, 'chip', { 'text-anchor': 'middle', 'font-size': 14 })];
 const beam = [...Array(8)].map(() => mk(ck, 'line', { x1: 0, y1: 300, x2: 0, y2: 300, stroke: AM, 'stroke-width': 5, 'stroke-linecap': 'round', 'stroke-dasharray': '2 9' }));
 const CODES = { V: [1, 0, 1, 1, 0, 0, 1, 0], C: [1, 0, 0, 1, 1, 0, 1, 1] };
 const codeSeg = bitsA => { const s = [[0, 0.3]]; let x = 0.45; bitsA.forEach(b => { s.push([x, x + 0.08]); x += 0.08 + (b ? 0.24 : 0.08); }); s.push([x, x + 0.08]); return { s, len: x + 0.08 }; };
@@ -218,7 +218,7 @@ M.on(t => {
   const iOn = t >= tI - 0.05 && t < tM + 0.1; M.hide($('#sI'), !iOn);
   if (iOn) {
     M.vis($('#iC'), t, tI + 0.1, tM - 0.32, { dy: 36, ...o });
-    iBl.forEach((b, i) => { M.vis(b, t, tIb[i] - 0.15, 1e9, { dx: -20, dy: 0 }); b.style.borderColor = M.mix(C.line, AM, M.io((t - tIb[i]) / 0.3)); });
+    iBl.forEach((b, i) => { M.vis(b, t, tI + 0.3 + i * 0.12, 1e9, { dx: -20, dy: 0 }); b.querySelector('.lv').style.opacity = t < tIb[i] - 0.1 ? 0 : 1; b.style.borderColor = M.mix(C.line, AM, M.io((t - tIb[i]) / 0.3)); });
     iAr.forEach((a, i) => M.draw(a, t, tIb[i + 1] - 0.3, 0.3));
     iBr.forEach((b, i) => M.vis(b, t, [tIb[0] + 0.3, tIb[2] + 0.2, tIb[3] + 0.3][i], 1e9, { dy: 10 }));
     iRest.forEach(e => M.vis(e, t, wt('I2', 'warms') - 0.2, 1e9, { dy: 10 }));
@@ -233,14 +233,14 @@ M.on(t => {
   const mOn = t >= tM - 0.05 && t < tB + 0.1; M.hide($('#sM'), !mOn);
   if (mOn) {
     const out = tB - 0.32;
-    hT.forEach((h, i) => { M.vis(h, t, tH[i] - 0.2, out, { dy: 36, ...o }); });
+    hT.forEach((h, i) => { M.vis(h, t, tM + 0.2 + i * 0.12, out, { dy: 36, ...o }); h.querySelector('.ic').style.background = M.mix(C.soft, C.ac2, M.io((t - tH[i]) / 0.3)); });
     drawSeq(ch, t, tH[0] + 0.1, 0.35, 0.18); ch.forEach(e => { if (e.tagName === 'text') M.vis(e, t, tH[0] + 0.1, 1e9, { dy: 0, fade: 0.2 }); });
     const wsu = t < wt('M3', 'fill') ? -1 : Math.floor((t - wt('M3', 'fill')) / 0.7) % 4;
     wsP.forEach((p, i) => { M.vis(p.g, t, tH[1] + 0.2 + i * 0.1, 1e9, { dy: 0, fade: 0.2 }); PUC.attr(p.r, 'fill', wsu === i ? AM : C.soft); PUC.attr(p.l, 'fill', wsu === i ? '#FFFFFF' : C.ink2); });
     M.vis(wsT, t, tH[1] + 0.6, 1e9, { dy: 0, fade: 0.2 });
     M.draw(fG.axes, t, tH[2] + 0.2, 0.4); const fs = M.clamp((t - tH[2] - 0.4) / 5) * 10;
     fCurve(v => [v, fTemp(v)], 0, fs); fDot(fs, fTemp(fs), t >= tH[2] + 0.4);
-    M.vis(fChip, t, tH[2] + 0.5, 1e9, { dy: 0, fade: 0.2 }); const on = fOn(fs); M.setT(fChip, on ? 'COMPRESSOR ON' : 'COMPRESSOR OFF'); fChip.style.background = on ? AM : C.soft; fChip.style.color = on ? '#fff' : INK;
+    M.vis(fChip, t, tH[2] + 0.5, 1e9, { dy: 0, fade: 0.2 }); const on = frOn(fs); M.setT(fChip, on ? 'COMPRESSOR ON' : 'COMPRESSOR OFF'); fChip.style.background = on ? AM : C.soft; fChip.style.color = on ? '#fff' : INK;
   }
 
   /* B: breadboard, TV remote */
@@ -261,7 +261,7 @@ M.on(t => {
     M.setT(volN, String(vol)); segs.forEach((g, i) => PUC.attr(g, 'fill', i < vol ? AM : '#3A4A70')); M.setT(chT, 'CHANNEL ' + chn); M.setT($('#r1v'), String(vol));
     M.setT($('#r1b'), lp ? (lp.k === 'V' ? 'VOLUME +' : 'CHANNEL +') : '-');
     if (lp) { const u = t - lp.t0, nb = lp.s.filter(([a]) => u >= a + 0.05).length - 1; M.setT($('#r1c'), CODES[lp.k].slice(0, Math.max(0, Math.min(8, nb))).join('') || '·'); } else M.setT($('#r1c'), '-');
-    tr1(τ => 44 * sigAt(τ), t, tB + 0.5, 6, 84, t >= tB + 0.5); tr2(τ => 44 * sigAt(τ, 0.05), t, tB + 0.5, 6, 176, t >= tB + 0.5);
+    tr1(τ => 44 * sigAt(τ), t, tB + 0.5, 6, 84, t >= tB + 0.5); tr2(τ => 40 * sigAt(τ, 0.05), t, tB + 0.5, 6, 166, t >= tB + 0.5);
     sLab.forEach(e => M.vis(e, t, tB + 0.6, 1e9, { dy: 0, fade: 0.2 }));
     M.vis($('#ro1'), t, tB + 0.6, 1e9, { dy: 12 });
     M.vis($('#slowT'), t, T0('B4'), 1e9, { dy: 0, sc: 0.8, sp: M.POP, fade: 0.1 });
@@ -288,9 +288,9 @@ M.on(t => {
   /* G: impact */
   const gOn = t >= tG - 0.05 && t < tT + 0.05; M.hide($('#sG'), !gOn);
   if (gOn) {
-    M.vis($('#gL'), t, tG + 0.1, 1e9, { dx: -60, dy: 0 }); M.vis($('#gR'), t, T0('G4') - 0.1, 1e9, { dx: 60, dy: 0 });
+    M.vis($('#gL'), t, tG + 0.1, 1e9, { dx: -60, dy: 0 }); M.vis($('#gR'), t, tG + 0.25, 1e9, { dx: 60, dy: 0 });
     gR.forEach((r, i) => M.vis(r, t, tGg[i] - 0.15, 1e9, { dx: -24, dy: 0 }));
-    bR.forEach((r, i) => M.vis(r, t, tGb[i] - 0.15, 1e9, { dx: -24, dy: 0 }));
+    bR.forEach((r, i) => { if (i < 3) { M.vis(r, t, tG + 0.5 + i * 0.1, 1e9, { dy: 0, fade: 0.2 }); const u = M.io((t - tGb[i] + 0.15) / 0.3); if (t >= tG + 0.7) r.style.opacity = (0.28 + 0.72 * u).toFixed(3); r.style.filter = u < 1 ? `grayscale(${(1 - u).toFixed(2)})` : ''; } else M.vis(r, t, tGb[i] - 0.15, 1e9, { dx: -24, dy: 0 }); });
     avG(t, T1('G6') + 0.1, tT - 0.4);
   }
 
