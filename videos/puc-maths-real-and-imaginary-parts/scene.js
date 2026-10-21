@@ -63,8 +63,8 @@ $('#dP1').innerHTML = K(`\\text{Im}\\, z = 5`) + '<span style="color:var(--ink)"
 /* ---------- L: address board ---------- */
 const lb = board($('#lS'), { x0: 392, y0: 444, ux: 96, uy: 80, a0: -3.6, a1: 3.6, b0: -1.2, b1: 4.2, at: [-3, -2, -1, 1, 2, 3], bt: [1, 2, 3, 4] });
 const lsv = $('#lS');
-txt(lb.g, 712, lb.Y(0) - 14, 'street: real part a', { 'text-anchor': 'end', fill: RE, 'font-size': 18, 'font-weight': 600 });
-txt(lb.g, lb.X(0) + 14, 104, 'floors: imaginary part b', { fill: RC, 'font-size': 18, 'font-weight': 600 });
+txt(lb.g, lb.X(-3.5), lb.Y(0) - 14, 'street: real part a', { 'text-anchor': 'start', fill: RE, 'font-size': 18, 'font-weight': 600 });
+txt(lb.g, lb.X(0) - 14, 104, 'floors: imaginary part b', { 'text-anchor': 'end', fill: RC, 'font-size': 18, 'font-weight': 600 });
 const lPa = mk(lsv, 'line', { stroke: RE, 'stroke-width': 9, 'stroke-linecap': 'round' }), lPb = mk(lsv, 'line', { stroke: RC, 'stroke-width': 5, 'stroke-dasharray': '8 6' });
 const lDot = mk(lsv, 'circle', { r: 15, fill: '#fff', stroke: C.ink, 'stroke-width': 5 });
 const aK = seg(2, [[wt('L3', 'Let'), wt('L3', 'Let') + 0.7, -3], [wt('L3', 'from') + 0.2, wt('L3', 'street') + 0.4, 3]]);
@@ -170,7 +170,7 @@ M.on(t => {
     PUC.write($('#dZ'), t, wt('D2', 'form'), 0.9); M.vis($('#dW'), t, wt('D2', 'where'), 1e9, { dy: 10 });
     PUC.write($('#dR'), t, wt('D3', 'real') - 0.2, 0.7); M.vis($('#dRw'), t, wt('D3', 'real') + 0.4, 1e9, { dy: 10 });
     PUC.write($('#dI'), t, wt('D4', 'imaginary') - 0.2, 0.7); M.vis($('#dIw'), t, wt('D4', 'Notice'), 1e9, { dy: 10 });
-    M.vis($('#dr'), t, wt('D2', 'form') + 0.4, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#dr'), t, T0('D5') - 0.4, out, { dx: 60, dy: 0, ...o });
     PUC.write($('#dEx'), t, T0('D5'), 0.9);
     M.vis($('#dP0'), t, wt('D5', 'real') - 0.1, 1e9, POP); M.vis($('#dP1'), t, wt('D5', 'imaginary') - 0.1, 1e9, POP); M.vis($('#dP2'), t, T1('D5') - 0.2, 1e9, POP);
   }
