@@ -1,6 +1,6 @@
 # Engineering Electronics (ECE / E&TC) - year-wise topic list (draft, 22 Oct 2026)
 
-One line = one video. Built from the common core of the AICTE model curriculum (2018 and 2023 revision), GATE EC 2026 and 2027, and the ESE/IES E&T syllabus. University schemes (VTU 2022, Anna R2021, KTU, JNTUH R22, Mumbai EXTC, SPPU, AKTU, GTU, MAKAUT) are being cross-checked; any gaps get added. No exam weightage anywhere.
+One line = one video. Built from the common core of the AICTE model curriculum (2018 and 2023 revision), GATE EC 2026 and 2027, and the ESE/IES E&T syllabus. Cross-checked 22 Oct 2026 against VTU 2022 (and 2025 Sem 3-4), Anna R2021, KTU 2019 and 2024, JNTUH R22, Mumbai EXTC Rev-2019 and NEP, SPPU 2019 and 2024, AKTU (latest), GTU (new and legacy), MAKAUT R18 and NIT Kurukshetra. Core common to all: devices, analog and linear ICs, digital design, networks, signals and systems, EM and antennas, analog and digital communication, DSP, control, microcontrollers and embedded, VLSI, microwave, optical, wireless, computer networks - all covered below. University-only extras added as 179-182. No exam weightage anywhere.
 First-year maths is covered by the Engineering Mathematics series; first-year physics, chemistry and programming are left out.
 
 ## Year 1 - Basics (common first year, ECE side)
@@ -210,5 +210,10 @@ First-year maths is covered by the Engineering Mathematics series; first-year ph
 176 Radar Basics
 177 Machine Learning for Electronics Engineers
 178 Electronic Product Design and PCB
+### University extras (taught in several schemes)
+179 Tuned Amplifiers and Multivibrators (JNTUH, Mumbai)
+180 Network Synthesis - Foster and Cauer Forms (JNTUH, PTU)
+181 FinFET and Beyond-CMOS Devices (KTU, GTU)
+182 Automotive Electronics (VTU, GTU)
 </content>
 </invoke>

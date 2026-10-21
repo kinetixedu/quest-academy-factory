@@ -1,0 +1,32 @@
+{
+ "style": "Style: hand-drawn 2D vintage educational cartoon, bold slightly imperfect dark brown outlines, rounded hand-inked linework, flat colors with minimal cel shading, warm peach skin (warm brown with peach highlights for Indian characters), palette of muted copper and soft PCB green accents with charcoal and warm greys, low saturation, vintage textbook look with clean digital coloring. Plain flat warm off-white (#F4F1EA) background, no scenery, figures centered with generous space around them. No text, no letters, no signs, no labels. Not photorealistic, not 3D, not anime, not Pixar, not watercolor. No extra objects, no extra fingers.",
+ "scene_note": "Scenes swap the 'Plain flat ... background, no scenery' sentence for: Simple minimal scene on a plain flat warm off-white (#F4F1EA) sky/background, generous space around the figures. Characters in scenes reuse the cast clauses (minus the waist-up/prop parts where they do not fit).",
+ "aspect": {
+  "cast": "PORTRAIT_4_5",
+  "scenes": "LANDSCAPE_4_3"
+ },
+ "cast": {
+  "tanvi": "Tanvi, an 18-year-old Indian girl, first-year engineering student, short black hair clipped back, a muted teal-green kurta, holding a small spiral notebook and pencil, curious bright expression, waist-up",
+  "imran": "Imran, a 19-year-old Indian boy, engineering student, short wavy black hair, light stubble, a copper-brown shirt with sleeves rolled up, clear safety glasses pushed up on his head, holding a soldering iron pointing down safely, confident grin, waist-up",
+  "lakshmi": "Lakshmi, an 18-year-old Indian girl, engineering student, long single black braid over the shoulder, a grey cardigan over a cream top, holding a small handheld multimeter with two probe leads, calm focused expression, waist-up",
+  "mahadev": "Mahadev, a 54-year-old Indian farmer from Karnataka, short grey hair, grey moustache, sun-tanned face, plain white half-sleeve shirt, a green towel over one shoulder, holding a small clay pot of soil, practical doubtful expression, waist-up",
+  "shabana": "Dr. Shabana, a 46-year-old Indian woman professor, rectangular glasses, black hair in a neat bun with a few grey strands, a maroon saree under an open white lab coat, holding a small circuit board, kind sharp expression, waist-up"
+ },
+ "scenes": {
+  "scene-field": "Mahadev standing in a dry cracked ragi field at noon looking worried at a small water pump with a hose, a distant coconut tree, Karnataka farmland",
+  "scene-lab": "Tanvi, Imran and Lakshmi around a college electronics lab bench with a breadboard, wires, a small battery pack and a lit LED, Dr. Shabana watching from behind",
+  "scene-install": "Tanvi and Imran pushing a small two-prong soil sensor into moist field soil next to a small grey weatherproof box on a wooden post, Mahadev watching, green crops",
+  "scene-water": "Mahadev smiling as a small pump waters a green ragi field through a pipe, a small box with a tiny green light on a post nearby, morning light"
+ },
+ "canva_media_ids": {
+  "tanvi": "MAHYrLGjFkg",
+  "imran": "MAHYrEQ9XDk",
+  "lakshmi": "MAHYrJuN6CY",
+  "mahadev": "MAHYrA9TqoI",
+  "shabana": "MAHYrO5npjc",
+  "scene-field": "MAHYrBoJBfM",
+  "scene-lab": "MAHYrJJQ8WA",
+  "scene-install": "MAHYrFYt05Y",
+  "scene-water": "MAHYrPIMOi8"
+ }
+}

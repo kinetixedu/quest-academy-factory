@@ -1,0 +1,45 @@
+H1|0.3|Mahadev's ragi field dried out last week.
+H2|0.35|He was away for three days, and nobody switched on the pump.
+H3|0.6|Could a small circuit do the job for him? That is exactly what electronics is for.
+L1|0.35|Meet Project Neeru. Tanvi, a first-year engineering student in Mandya, wants to build a smart water controller for her uncle's farm.
+L2|0.35|Imran builds the circuits. Lakshmi measures and codes.
+L3|0.65|And Doctor Shabana, their lab teacher, asks the hard questions.
+D1|0.3|So what is electronics?
+D2|0.35|Electricity is moving charge. It can light a bulb or run a motor.
+D3|0.35|Electronics uses that current to carry information and make decisions.
+D4|0.65|In simple words: electrical power does the work. Electronics decides when and how.
+G1|0.35|The information travels as a signal. A signal is a quantity that changes to carry a message.
+G2|0.35|An analog signal changes smoothly, like the soil getting drier hour by hour.
+G3|0.65|A digital signal has only two levels, on and off. We write them as one and zero.
+C1|0.35|Signals flow through components.
+C2|0.35|Passive components, like resistors and capacitors, cannot add energy. They resist, store or guide it.
+C3|0.65|Active components, like transistors and chips, can control the current and make a signal bigger.
+Y0|0.35|Put components together for a purpose, and you get a system. Every system does three things.
+Y1|0.3|Sense. A sensor turns the real world into a signal.
+Y2|0.3|Decide. A circuit compares the signal with a rule.
+Y3|0.65|Act. An output, like a pump or a light, does the work.
+P1|0.35|Let's watch Project Neeru do it.
+P2|0.35|At sunrise the soil is wet. The sensor reads high. The pump stays off.
+P3|0.35|By noon the soil dries, and the signal falls, slowly.
+P4|0.35|It crosses the dry line. The circuit decides: water now.
+P5|0.35|The relay clicks, the pump runs, and the green light comes on.
+P6|0.65|Water soaks in, the signal climbs back, and the pump switches off on its own. Nobody had to be there.
+T1|0.7|Electrical power does the work. Electronics does the thinking.
+K0|0.35|Where do we see this at work today?
+K1|0.35|Sense. A hospital monitor reads a patient's heartbeat through sensors on the skin.
+K2|0.35|Decide. A car's airbag circuit decides in a split second whether a crash is real.
+K3|0.65|Act. A phone screen turns a signal into millions of tiny dots of light.
+X1|0.35|But is more electronics always better?
+X2|0.35|The good side. It saves water, time, and even lives.
+X3|0.35|The hard side. It needs power, it can fail, and old gadgets become e-waste.
+X4|0.35|In twenty twenty two, the world threw away about sixty two million tonnes of electronic waste. Less than a quarter was properly recycled.
+X5|0.35|Mahadev asks: what if the sensor breaks, and the pump never stops?
+X6|0.35|So Tanvi adds a safety timer. The pump can never run for more than one hour at a time.
+X7|0.65|The lesson? Good electronics also plans for when things go wrong.
+Q1|1.9|Quick check. A soil sensor, a circuit and a pump. Which one decides?
+A1|0.6|The circuit! The sensor senses, the circuit decides, and the pump acts.
+R1|0.3|So, remember.
+R2|0.35|Electronics uses current to carry information and make decisions.
+R3|0.35|Signals are analog or digital. Components are passive or active.
+R4|0.6|And every system senses, decides and acts.
+N1|0.2|Next time: voltage, current, power and energy.

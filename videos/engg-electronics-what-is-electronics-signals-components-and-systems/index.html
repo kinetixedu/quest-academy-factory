@@ -1,0 +1,317 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Engg Electronics - What Is Electronics (Engineering Electronics Ep 1)</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<style>
+/* ===== Engg Electronics world: Circuit board ===== */
+:root{--pcb:#0B2A20;--pcb2:#0F3328;--pcb3:#133D30;--tr:#1F4A3A;--cu:#D9A35B;--cu2:#F0D2A2;--cud:#4A3A22;--silk:#E9F2EC;--mut:#7FA595;--dim:#3F6B5A;--red:#FF4D4D;--grn:#3DDC84;--plate:#F4F1EA;--scope:#06170F}
+#stage{background:var(--pcb);font-family:'Chakra Petch';color:var(--silk)}
+#holes{position:absolute;inset:0}
+#prog{position:absolute;left:0;top:0;height:6px;width:1920px;background:#123B2D;z-index:60}
+#prog i{display:block;height:6px;background:var(--cu);width:0}
+#cam{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.h{font-family:'Chakra Petch';font-weight:600;letter-spacing:-.01em}
+.chip{position:absolute;display:inline-flex;align-items:center;gap:14px;height:44px;padding:0 18px;background:var(--cu);color:var(--pcb);font:600 18px 'IBM Plex Mono';letter-spacing:.14em;white-space:nowrap;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%)}
+.chip i{width:10px;height:10px;border-radius:5px;background:var(--pcb)}
+.chip.ghost{background:var(--pcb);color:var(--mut);box-shadow:inset 0 0 0 2px var(--tr);height:40px;font-size:16px}
+#title{position:absolute;left:0;top:0;line-height:1.05;white-space:nowrap;transform-origin:0 0;color:var(--silk)}
+.acc,#title .acc{color:var(--cu)}
+#sub{position:absolute;left:0;top:640px;width:1920px;text-align:center;font:500 34px 'Chakra Petch';color:var(--mut)}
+#rule{position:absolute;left:840px;top:612px}
+.card{position:absolute;background:var(--pcb2);border:2px solid var(--tr);border-radius:6px;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 22px,100% 100%,0 100%)}
+.lbl{position:absolute;font:600 18px 'IBM Plex Mono';letter-spacing:.14em;color:var(--mut);white-space:nowrap}
+.abs{position:absolute}
+.plate{position:absolute;left:46px;top:84px;width:688px;height:452px;background:var(--plate);border-radius:4px;overflow:hidden}
+.plate img{position:absolute;left:43px;top:2px;width:602px;height:451px}
+.tagp{position:absolute;height:48px;padding:0 20px;border-radius:4px;background:var(--pcb);color:var(--silk);display:flex;align-items:center;font:600 24px 'Chakra Petch';white-space:nowrap;box-shadow:inset 0 0 0 2px var(--cu)}
+.pill{position:absolute;height:52px;padding:0 22px;border-radius:4px;display:flex;align-items:center;gap:12px;font:600 24px 'Chakra Petch';white-space:nowrap;background:var(--pcb3);color:var(--silk)}
+.pill.cu{background:var(--cu);color:var(--pcb)}
+.pill.bad{background:#3A1E1E;color:#FF8A8A}
+.led{display:inline-block;width:22px;height:22px;border-radius:11px;background:#1C3A2F;box-shadow:inset 0 0 0 3px #2E5A49}
+.av{position:absolute;width:88px;height:88px;border-radius:44px;background-size:cover!important;background-position:center!important;box-shadow:0 0 0 4px var(--tr)}
+.nm{position:absolute;width:300px;font:600 30px 'Chakra Petch';white-space:nowrap}
+.rl{position:absolute;width:300px;font:600 16px 'IBM Plex Mono';letter-spacing:.14em;color:var(--mut);white-space:nowrap}
+/* hook */
+#hA{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+#days{left:976px;top:270px;width:784px;height:580px}
+.dy{position:absolute;top:84px;width:200px;height:300px;background:var(--pcb3);border-radius:4px}
+.dy .dl{position:absolute;left:0;width:200px;top:20px;text-align:center;font:600 18px 'IBM Plex Mono';letter-spacing:.14em;color:var(--mut)}
+.dy .dt{position:absolute;left:76px;top:64px;width:48px;height:170px;background:var(--scope);border-radius:4px;overflow:hidden}
+.dy .dt i{position:absolute;left:0;bottom:0;width:48px;background:var(--cu)}
+.dy .dv{position:absolute;left:0;width:200px;top:248px;text-align:center;font:600 30px 'IBM Plex Mono'}
+#pumpOff{position:absolute;left:48px;top:410px}
+#hq{position:absolute;left:48px;top:488px;font-size:52px;white-space:nowrap}
+/* meet */
+#ill{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+#team{left:976px;top:270px;width:784px;height:580px}
+#goal{position:absolute;left:48px;top:478px;width:688px;height:64px;background:var(--cu);color:var(--pcb);display:flex;align-items:center;gap:14px;padding:0 22px;font:600 26px 'Chakra Petch';white-space:nowrap;border-radius:4px}
+/* definition */
+#dq{position:absolute;left:0;width:1920px;top:470px;text-align:center;font-size:96px;white-space:nowrap}
+#def{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+.ql{position:absolute;left:48px;font:600 44px 'Chakra Petch';white-space:nowrap;color:var(--silk)}
+#defHr{position:absolute;left:48px;right:48px;top:392px;height:2px;background:var(--tr)}
+#defS{position:absolute;left:48px;top:420px;font:500 26px 'Chakra Petch';color:var(--mut);white-space:nowrap}
+#defW{position:absolute;left:48px;top:470px}
+#elc{left:976px;top:270px;width:784px;height:274px}
+#enc{left:976px;top:576px;width:784px;height:274px}
+.bx .bi{position:absolute;left:40px;top:76px;width:96px;height:96px;border-radius:4px;background:var(--pcb3);display:flex;align-items:center;justify-content:center}
+.bx .bt{position:absolute;left:168px;top:70px;font-size:48px;white-space:nowrap}
+.bx .bs{position:absolute;left:168px;top:132px;font:500 26px 'Chakra Petch';color:var(--mut);white-space:nowrap}
+.bx .bp{position:absolute;top:196px;height:44px;padding:0 16px;border-radius:4px;display:flex;align-items:center;gap:8px;font:600 20px 'IBM Plex Mono';letter-spacing:.06em;background:var(--pcb3);color:var(--silk);white-space:nowrap}
+/* signals */
+#gdef{left:160px;top:270px;width:1600px;height:580px}
+#gdT{position:absolute;left:64px;top:96px;font-size:60px;white-space:nowrap}
+#gdT2{position:absolute;left:64px;top:176px;font-size:60px;white-space:nowrap}
+#gdS{position:absolute;left:64px;top:296px}
+.scr{position:absolute;background:var(--scope);border-radius:4px}
+#gA{left:160px;top:270px;width:784px;height:580px}
+#gD{left:976px;top:270px;width:784px;height:580px}
+.gs{position:absolute;left:48px;top:470px;font:500 26px 'Chakra Petch';color:var(--mut);white-space:nowrap}
+/* components */
+#cP{left:160px;top:270px;width:784px;height:580px}
+#cA{left:976px;top:270px;width:784px;height:580px}
+.sym{position:absolute;top:84px;width:208px;height:230px;background:var(--pcb3);border-radius:4px}
+.sym .sn{position:absolute;left:0;width:208px;top:178px;text-align:center;font:600 24px 'Chakra Petch';white-space:nowrap}
+.sym svg{position:absolute;left:24px;top:30px}
+.vb{position:absolute;top:348px;height:48px;padding:0 18px;border-radius:4px;display:flex;align-items:center;font:600 22px 'IBM Plex Mono';letter-spacing:.08em;background:var(--pcb3);color:var(--silk);white-space:nowrap}
+.cpb{position:absolute;left:48px;top:440px;width:688px;height:96px;border-radius:4px;display:flex;align-items:center;gap:16px;padding:0 24px;font:600 30px 'Chakra Petch';white-space:nowrap}
+/* system */
+.yb{position:absolute;top:270px;width:480px;height:290px}
+.yb .yn{position:absolute;left:40px;top:34px;font:600 18px 'IBM Plex Mono';letter-spacing:.14em}
+.yb .yi{position:absolute;left:40px;top:76px;width:96px;height:96px;border-radius:4px;display:flex;align-items:center;justify-content:center}
+.yb .yt{position:absolute;left:40px;top:192px;font-size:56px;white-space:nowrap}
+#yTr{position:absolute;left:160px;top:270px}
+#ym{left:160px;top:592px;width:1600px;height:258px}
+.ymc{position:absolute;top:84px;width:480px;height:140px}
+.ymc i{position:absolute;left:0;top:0;width:88px;height:88px;border-radius:44px;background-size:cover;background-position:center;box-shadow:0 0 0 3px var(--tr)}
+.ymc .a{position:absolute;left:112px;top:6px;font:600 16px 'IBM Plex Mono';letter-spacing:.14em;color:var(--mut);white-space:nowrap}
+.ymc .b{position:absolute;left:112px;top:36px;font:600 30px 'Chakra Petch';white-space:nowrap}
+/* process */
+#pL{left:160px;top:270px;width:784px;height:580px}
+#pR{left:976px;top:270px;width:784px;height:580px}
+#pClk{position:absolute;right:48px;top:24px;font:600 44px 'IBM Plex Mono';white-space:nowrap}
+#pst{position:absolute;left:48px;top:484px;height:60px;padding:0 24px;border-radius:4px;display:flex;align-items:center;gap:12px;font:600 26px 'Chakra Petch';white-space:nowrap;background:var(--pcb3);color:var(--silk)}
+.rdo{position:absolute;top:470px;width:332px;height:76px;background:var(--pcb3);border-radius:4px}
+.rdo .a{position:absolute;left:20px;top:10px;font:600 16px 'IBM Plex Mono';letter-spacing:.14em;color:var(--mut);white-space:nowrap}
+.rdo .b{position:absolute;left:20px;top:32px;font:600 32px 'IBM Plex Mono';white-space:nowrap}
+.rdo .led{position:absolute;right:20px;top:26px}
+/* statement */
+#sweep{position:absolute;left:0;top:0;width:1920px;height:1080px;background:#061A13;z-index:40}
+#sweep b{position:absolute;left:0;top:0;width:10px;height:1080px;background:var(--cu)}
+#stmt{position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:41}
+#st1{position:absolute;left:0;width:1920px;top:396px;text-align:center;font:500 54px 'Chakra Petch';color:var(--mut);white-space:nowrap}
+#st2{position:absolute;left:0;width:1920px;top:488px;text-align:center;font-size:92px;color:var(--silk);white-space:nowrap}
+/* at work today */
+#kl{left:160px;top:270px;width:624px;height:580px}
+#kp{left:816px;top:270px;width:944px;height:580px}
+.kr{position:absolute;left:24px;width:576px;height:96px;border-radius:4px}
+.kr .bg{position:absolute;inset:0;border-radius:4px;background:var(--pcb3)}
+.kr .rn{position:absolute;left:24px;top:33px;font:600 22px 'IBM Plex Mono'}
+.kr .ri{position:absolute;left:76px;top:16px;width:64px;height:64px;border-radius:4px;background:var(--pcb);display:flex;align-items:center;justify-content:center}
+.kr .rt{position:absolute;left:164px;top:25px;font:600 34px 'Chakra Petch';white-space:nowrap}
+.pn{position:absolute;inset:0}
+.pn .ps{position:absolute;left:48px;top:44px;font:600 18px 'IBM Plex Mono';letter-spacing:.14em;color:var(--cu);white-space:nowrap}
+.pn .pt{position:absolute;left:48px;top:84px;font-size:84px;line-height:1.1;white-space:nowrap}
+.pn .pm{position:absolute;left:48px;top:200px;font:500 34px 'Chakra Petch';color:var(--mut);white-space:nowrap}
+.pn .hr{position:absolute;left:48px;right:48px;top:284px;height:2px;background:var(--tr)}
+.ka{position:absolute;left:48px;width:848px;height:104px}
+.ka i{position:absolute;left:0;top:12px;width:76px;height:76px;border-radius:38px;background:var(--pcb3);background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center}
+.ka .kl{position:absolute;left:104px;top:12px;font:600 17px 'IBM Plex Mono';letter-spacing:.14em;color:var(--mut);white-space:nowrap}
+.ka .kt{position:absolute;left:104px;top:42px;font:600 32px 'Chakra Petch';white-space:nowrap}
+/* human side */
+#xs{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+#xw{left:976px;top:270px;width:784px;height:580px}
+.xc{position:absolute;height:48px;padding:0 18px;border-radius:4px;display:flex;align-items:center;gap:10px;font:600 22px 'Chakra Petch';white-space:nowrap}
+.xr{position:absolute;left:48px;width:688px;height:72px}
+.xr .fa{position:absolute;left:0;top:0;width:72px;height:72px;border-radius:36px;background-size:cover;background-position:center;box-shadow:0 0 0 3px var(--tr)}
+.xr .bb{position:absolute;left:96px;top:12px;height:48px;padding:0 18px;border-radius:4px;display:flex;align-items:center;gap:10px;font:600 24px 'Chakra Petch';white-space:nowrap;background:var(--pcb3);color:var(--silk)}
+#tmr{position:absolute;left:48px;top:280px;width:688px;height:100px;background:var(--pcb3);border-radius:4px}
+#tmr .a{position:absolute;left:120px;top:16px;font:600 16px 'IBM Plex Mono';letter-spacing:.14em;color:var(--mut);white-space:nowrap}
+#tmr .b{position:absolute;left:120px;top:42px;font:600 32px 'Chakra Petch';white-space:nowrap}
+#tmrS{position:absolute;left:24px;top:14px}
+#fact{position:absolute;left:48px;top:412px;width:688px;height:128px;border-radius:4px;background:var(--scope);box-shadow:inset 0 0 0 2px var(--tr)}
+#fact .a{position:absolute;left:24px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.12em;color:var(--cu);white-space:nowrap}
+#fact .b{position:absolute;left:24px;top:50px;font:600 30px 'Chakra Petch';white-space:nowrap}
+#fact .c{position:absolute;left:24px;top:90px;font:500 22px 'Chakra Petch';color:var(--mut);white-space:nowrap}
+#both{position:absolute;left:160px;top:470px;width:1600px;height:140px;background:var(--cu);color:var(--pcb);display:flex;align-items:center;justify-content:center;gap:22px;border-radius:6px;clip-path:polygon(0 0,calc(100% - 24px) 0,100% 24px,100% 100%,0 100%)}
+#both .tx{font-size:52px;white-space:nowrap}
+/* quiz */
+.opt{position:absolute;top:470px;width:376px;height:230px}
+.opt .bg{position:absolute;inset:0;border-radius:6px;background:var(--pcb2);border:2px solid var(--tr)}
+.opt .lt{position:absolute;left:30px;top:30px;width:52px;height:52px;border-radius:4px;background:var(--cud);display:flex;align-items:center;justify-content:center;font:600 24px 'IBM Plex Mono';color:var(--cu)}
+.opt .ot{position:absolute;left:30px;top:138px;font-size:40px;white-space:nowrap}
+.opt .ok{position:absolute;right:30px;top:30px;width:52px;height:52px;border-radius:26px;background:var(--grn);display:flex;align-items:center;justify-content:center}
+.qq{position:absolute;left:160px;font-size:68px;line-height:1.18;white-space:nowrap}
+#ring{position:absolute;left:1610px;top:236px;width:150px;height:150px}
+#ringN{position:absolute;left:1610px;top:236px;width:150px;height:150px;display:flex;align-items:center;justify-content:center;font-size:64px}
+#take{position:absolute;left:160px;top:748px;width:1600px;height:96px;background:var(--cu);color:var(--pcb);display:flex;align-items:center;gap:22px;padding:0 36px;border-radius:6px;clip-path:polygon(0 0,calc(100% - 24px) 0,100% 24px,100% 100%,0 100%)}
+#take .tx{font-size:40px;white-space:nowrap}
+/* recap */
+#rh{position:absolute;left:160px;top:142px;font-size:64px;white-space:nowrap}
+.rw{position:absolute;left:160px;width:1600px;height:128px}
+.rw .rn{position:absolute;left:40px;top:44px;font:600 30px 'IBM Plex Mono';color:var(--cu)}
+.rw .ri{position:absolute;left:112px;top:28px;width:72px;height:72px;border-radius:4px;background:var(--pcb3);display:flex;align-items:center;justify-content:center}
+.rw .rt{position:absolute;left:216px;top:38px;font:600 38px 'Chakra Petch';white-space:nowrap}
+.fp{position:absolute;top:38px;height:52px;padding:0 20px;border-radius:4px;display:flex;align-items:center;font:600 22px 'IBM Plex Mono';letter-spacing:.04em;white-space:nowrap;background:var(--pcb3);color:var(--silk)}
+#next{position:absolute;left:160px;top:762px;width:1600px;height:96px;background:#061A13;box-shadow:inset 0 0 0 2px var(--cu);color:var(--silk);display:flex;align-items:center;gap:24px;padding:0 32px;border-radius:6px}
+#next .nc{height:44px;padding:0 18px;border-radius:4px;background:var(--cu);display:flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.14em;color:var(--pcb);white-space:nowrap}
+#next .nt{font:600 34px 'Chakra Petch';white-space:nowrap;flex:1}
+.cap{font:600 38px 'Chakra Petch';color:#E9F2EC;background:#0F3328;border:2px solid #1F4A3A;padding:10px 28px;border-radius:6px}
+.cap .cw{color:#6E9283}.cap .cw.on{color:#E9F2EC}.cap .cw.act{color:#D9A35B}
+</style></head><body>
+<div id="stage">
+  <svg id="holes" width="1920" height="1080"></svg>
+  <div id="cam">
+    <div class="chip" id="eyebrow"><i></i>EP 01 · ENGINEERING ELECTRONICS</div>
+    <div class="h" id="title">What Is <span class="acc">Electronics?</span></div>
+    <div id="sub">Signals, components and systems, on one farm</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#D9A35B" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="chip ghost" id="exChip">EXAMPLE FIGURES</div>
+
+    <!-- A: the dry field -->
+    <div id="sA">
+      <div class="card" id="hA"><div class="abs" id="hAIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:46px;top:38px">MAHADEV'S RAGI FIELD · MANDYA</div>
+        <div class="plate" id="hPl"><img id="hImg" src="../../assets/illustrations/engg-electronics/eece-scene-field.png"></div>
+      </div><div class="tagp" id="tgM" style="left:48px;top:500px">Mahadev</div></div>
+      <div class="card" id="days"><div class="lbl" style="left:48px;top:38px">THREE DAYS AWAY · SOIL WATER</div>
+        <div id="dRow"></div>
+        <div class="pill bad" id="pumpOff"><span class="led" id="poL"></span>Pump: nobody switched it on</div>
+        <div class="h" id="hq">Could a <span class="acc">circuit</span> do it?</div>
+      </div>
+    </div>
+
+    <!-- L: meet Project Neeru -->
+    <div id="sL">
+      <div class="card" id="ill"><div class="abs" id="illIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:46px;top:38px">PROJECT NEERU · COLLEGE LAB, MANDYA</div>
+        <div class="plate"><img id="illImg" src="../../assets/illustrations/engg-electronics/eece-scene-lab.png"></div>
+      </div></div>
+      <div class="card" id="team"><div class="lbl" style="left:48px;top:38px">THE TEAM</div><div id="tRow"></div>
+        <div id="goal"><span id="goalI"></span>Goal: water only when the soil is dry</div></div>
+    </div>
+
+    <!-- D: what is electronics -->
+    <div id="sD">
+      <div class="h" id="dq">So what is <span class="acc">electronics?</span></div>
+      <div class="card" id="def"><div class="abs" id="defIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:48px;top:38px">DEFINITION · IN PLAIN WORDS</div>
+        <div class="ql" id="ql0" style="top:96px">Electronics uses electric</div>
+        <div class="ql" id="ql1" style="top:154px">current to <span id="hl0">carry information</span></div>
+        <div class="ql" id="ql2" style="top:212px">and <span id="hl1">make decisions.</span></div>
+        <div class="pill" id="defP" style="left:48px;top:300px"><span id="defPI"></span>Moving charge = electricity</div>
+        <div id="defHr"></div>
+        <div id="defS">Power does the work. Electronics decides when and how.</div>
+      </div></div>
+      <div class="card bx" id="elc"><div class="lbl" style="left:40px;top:30px">ELECTRICAL</div><div class="bi" id="elI"></div><div class="h bt">Does the work</div><div class="bs">Moves power to a load</div>
+        <div class="bp" id="elp0" style="left:168px"><span></span>BULB</div><div class="bp" id="elp1"><span></span>MOTOR</div></div>
+      <div class="card bx" id="enc"><div class="lbl" style="left:40px;top:30px">ELECTRONICS</div><div class="bi" id="enI"></div><div class="h bt">Decides <span class="acc">when and how</span></div><div class="bs">Uses current as information</div>
+        <div class="bp" id="enp0" style="left:168px"><span></span>SENSOR</div><div class="bp" id="enp1"><span></span>CONTROLLER</div></div>
+    </div>
+
+    <!-- G: signals -->
+    <div id="sG">
+      <div class="card" id="gdef"><div class="lbl" style="left:64px;top:44px">WHAT IS A SIGNAL?</div>
+        <div class="h" id="gdT">A quantity that <span class="acc">changes</span></div>
+        <div class="h" id="gdT2">to carry a message.</div>
+        <svg id="gdS" width="1472" height="220"><rect width="1472" height="220" rx="4" fill="#06170F"/><g id="gdGrid"></g><path id="gdW" fill="none" stroke="#D9A35B" stroke-width="5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="card" id="gA"><div class="lbl" style="left:48px;top:38px">ANALOG · CHANGES SMOOTHLY</div>
+        <svg class="scr" id="gAS" width="688" height="340" style="left:48px;top:84px"><g id="gAGrid"></g><path id="gAW" fill="none" stroke="#D9A35B" stroke-width="5" stroke-linecap="round"/><text x="16" y="34" font-family="IBM Plex Mono" font-size="18" fill="#7FA595" letter-spacing="2">WET</text><text x="16" y="320" font-family="IBM Plex Mono" font-size="18" fill="#7FA595" letter-spacing="2">DRY</text></svg>
+        <div class="gs" id="gAs">Soil getting drier, hour by hour</div>
+      </div>
+      <div class="card" id="gD"><div class="lbl" style="left:48px;top:38px">DIGITAL · ONLY TWO LEVELS</div>
+        <svg class="scr" id="gDS" width="688" height="340" style="left:48px;top:84px"><g id="gDGrid"></g><path id="gDW" fill="none" stroke="#3DDC84" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+          <text x="16" y="74" font-family="IBM Plex Mono" font-weight="600" font-size="30" fill="#E9F2EC">1</text><text x="16" y="284" font-family="IBM Plex Mono" font-weight="600" font-size="30" fill="#E9F2EC">0</text></svg>
+        <div class="gs" id="gDs">On or off. We write them as 1 and 0.</div>
+        <div class="led" id="gLed" style="position:absolute;right:48px;top:476px"></div>
+      </div>
+    </div>
+
+    <!-- C: components -->
+    <div id="sC">
+      <div class="card" id="cP"><div class="lbl" style="left:48px;top:38px">PASSIVE COMPONENTS</div><div id="cPs"></div>
+        <div class="cpb" id="cPb" style="background:#3A1E1E;color:#FF8A8A"><span id="cPbI"></span>Cannot add energy</div></div>
+      <div class="card" id="cA"><div class="lbl" style="left:48px;top:38px">ACTIVE COMPONENTS</div><div id="cAs"></div>
+        <svg class="scr" id="amp" width="208" height="230" style="left:528px;top:84px"><path id="ampI" fill="none" stroke="#7FA595" stroke-width="4"/><path id="ampO" fill="none" stroke="#D9A35B" stroke-width="5" stroke-linecap="round"/><text x="104" y="210" text-anchor="middle" font-family="IBM Plex Mono" font-weight="600" font-size="16" fill="#7FA595" letter-spacing="2">IN · OUT</text></svg>
+        <div class="cpb" id="cAb" style="background:#D9A35B;color:#0B2A20"><span id="cAbI"></span>Control the current, make it bigger</div></div>
+    </div>
+
+    <!-- Y: system -->
+    <div id="sY">
+      <svg id="yTr" width="1600" height="290"><path id="yt0" d="M480 145 H560" stroke="#1F4A3A" stroke-width="10"/><path id="yt1" d="M1040 145 H1120" stroke="#1F4A3A" stroke-width="10"/><g id="yDots"></g></svg>
+      <div id="yBlocks"></div>
+      <div class="card" id="ym"><div class="lbl" style="left:48px;top:38px">IN PROJECT NEERU</div><div id="ymRow"></div></div>
+    </div>
+
+    <!-- P: the live run -->
+    <div id="sP">
+      <div class="card" id="pL"><div class="lbl" style="left:48px;top:38px">THE CONTROLLER · LIVE</div><div id="pClk">06:00</div>
+        <svg id="pS" width="688" height="380" style="position:absolute;left:48px;top:84px"></svg>
+        <div id="pst"><span id="pstI"></span><span id="pstT">Soil wet, pump off</span></div></div>
+      <div class="card" id="pR"><div class="lbl" style="left:48px;top:38px">OSCILLOSCOPE · CH1 SENSOR · CH2 PUMP</div>
+        <svg class="scr" id="oS" width="688" height="360" style="left:48px;top:84px"></svg>
+        <div class="rdo" id="rd0" style="left:48px"><div class="a">SENSOR</div><div class="b" id="rdV">2.8 V</div></div>
+        <div class="rdo" id="rd1" style="left:404px"><div class="a">PUMP</div><div class="b" id="rdP">OFF</div><span class="led" id="rdL"></span></div>
+      </div>
+    </div>
+
+    <!-- K: at work today -->
+    <div id="sK">
+      <div class="card" id="kl"><div class="lbl" style="left:48px;top:38px">AT WORK TODAY</div><div id="kRows"></div></div>
+      <div class="card" id="kp"><div id="kPans"></div></div>
+    </div>
+
+    <!-- X: the human side -->
+    <div id="sX">
+      <div class="card" id="xs"><div class="abs" id="xsIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:48px;top:38px">IS MORE ELECTRONICS ALWAYS BETTER?</div>
+        <svg id="scl" width="688" height="250" style="position:absolute;left:48px;top:84px">
+          <rect x="254" y="226" width="180" height="20" rx="4" fill="#3F6B5A"/>
+          <rect x="338" y="40" width="12" height="190" fill="#3F6B5A"/>
+          <g id="panL"></g><g id="panR"></g>
+          <g id="beam"><rect x="64" y="34" width="560" height="12" rx="4" fill="#7FA595"/></g>
+          <circle cx="344" cy="40" r="14" fill="#D9A35B"/>
+        </svg>
+        <div class="lbl" id="xgL" style="left:48px;top:350px;color:#3DDC84">THE GOOD SIDE</div>
+        <div class="lbl" id="xhL" style="left:408px;top:350px;color:#FF8A8A">THE HARD SIDE</div>
+        <div id="xChips"></div>
+      </div></div>
+      <div class="card" id="xw"><div class="lbl" style="left:48px;top:38px">PLAN FOR FAILURE</div>
+        <div class="xr" id="xr0" style="top:92px"><div class="fa" id="xf0"></div><div class="bb" id="bb0">What if the sensor breaks?</div></div>
+        <div class="xr" id="xr1" style="top:184px"><div class="fa" id="xf1"></div><div class="bb" id="bb1"><span id="bb1I"></span>Add a safety timer</div></div>
+        <div id="tmr"><svg id="tmrS" width="72" height="72"><circle cx="36" cy="36" r="30" fill="none" stroke="#1F4A3A" stroke-width="8"/><circle id="tmrA" cx="36" cy="36" r="30" fill="none" stroke="#D9A35B" stroke-width="8" stroke-linecap="round" transform="rotate(-90 36 36)"/></svg>
+          <div class="a">SAFETY TIMER</div><div class="b">Pump stops after 1 hour, always</div></div>
+        <div id="fact"><div class="a">UN GLOBAL E-WASTE MONITOR 2024</div><div class="b">62 million tonnes of e-waste in 2022</div><div class="c">Less than a quarter properly recycled</div></div>
+      </div>
+      <div class="chip ghost" id="lesson" style="left:160px;top:390px">THE LESSON</div>
+      <div id="both"><span id="bothI"></span><span class="h tx">Good electronics plans for</span><span class="h tx" style="color:#E9F2EC">when things go wrong</span></div>
+    </div>
+
+    <!-- quick check -->
+    <div id="quiz">
+      <div class="chip" id="qchip" style="left:160px;top:120px"><i></i>QUICK CHECK</div>
+      <div class="h qq" id="qq1" style="top:224px">A soil sensor, a circuit and a pump.</div><div class="h qq acc" id="qq2" style="top:304px">Which one decides?</div>
+      <svg id="ring" viewBox="0 0 150 150"><circle cx="75" cy="75" r="66" fill="#0F3328" stroke="#1F4A3A" stroke-width="8"/><circle id="ringA" cx="75" cy="75" r="66" fill="none" stroke="#D9A35B" stroke-width="8" stroke-linecap="round" transform="rotate(-90 75 75)"/></svg>
+      <div class="h" id="ringN"></div>
+      <div id="opts"></div>
+      <div id="take"><span id="takeI"></span><span class="h tx" id="takeT">Sense, decide, act: the circuit decides</span></div>
+    </div>
+
+    <!-- recap -->
+    <div id="recap">
+      <div class="chip" id="rchip" style="left:160px;top:84px"><i></i>RECAP</div>
+      <div class="h" id="rh">Remember these <span class="acc">three things</span></div>
+      <div id="rRows"></div>
+      <div id="next"><span class="nc">NEXT · EP 02</span><span class="nt">Voltage, Current, Power and Energy</span><span id="nextI"></span></div>
+    </div>
+  </div>
+  <div id="stmt"><div id="st1">Electrical power does the work.</div><div class="h" id="st2">Electronics does <span class="acc">the thinking.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
