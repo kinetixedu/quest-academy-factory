@@ -1,44 +1,44 @@
-H1|0.3|Monsoon night in Suryagaon. A neighbour touches his water pump, and feels a sharp tingle.
-H2|0.55|He is lucky. Kittu asks the scary question. Could that shock have killed him?
-C1|0.35|The next morning, Shankar anna and Meera check the neighbour's wiring.
-C2|0.35|The pump's metal body is live. A wire inside has rubbed through, and there is no earth wire at all.
-C3|0.35|The old fuse never blew, because the current was too small to melt it.
-C4|0.65|Farida wants a rule for every house in the village, before the next monsoon.
-D1|0.3|So what keeps a house wiring safe?
-D2|0.35|Protective devices that cut the power the moment something goes wrong.
-D3|0.65|The fuse and the M C B stop too much current. The R C C B stops leaking current. Earthing gives a fault a safe path.
-J1|0.35|Let's watch each one work on the board.
-J2|0.35|A fuse is a thin wire in a holder. Too much current heats it, it melts, and the circuit breaks. Then it must be replaced.
-J3|0.35|An M C B, a miniature circuit breaker, does the same job, but it can be reset with a switch.
-J4|0.35|A slow overload bends a strip of two metals until it trips. A sudden short circuit pulls a tiny electromagnet, and it trips at once.
-J5|0.35|An R C C B, a residual current circuit breaker, compares the current going out on live with the current coming back on neutral.
-J6|0.35|They should be equal. If thirty milliamps go missing, through a person or into the ground, it trips in a fraction of a second.
-J7|0.65|And the earth wire joins every metal body to a rod in the ground, so a fault current rushes there, not through you.
+H1|0.3|Monsoon night in Suryagaon. A neighbour touches his pump and feels a sharp tingle.
+H2|0.55|Kittu asks the scary question. Could that shock have killed him?
+C1|0.35|Next morning, Shankar anna and Meera check the pump.
+C2|0.35|Its metal body is live. A wire rubbed through, and there is no earth.
+C3|0.35|The old fuse never blew. The current was too small to melt it.
+C4|0.65|Farida wants a rule for every house before the next monsoon.
+D1|0.3|So what keeps house wiring safe?
+D2|0.35|Devices that cut the power the moment something goes wrong.
+D3|0.65|Fuses and M C Bs stop too much current. R C C Bs stop leaks. Earthing gives faults a safe path.
+J1|0.35|Let's watch each one on the board.
+J2|0.35|A fuse is a thin wire. Too much current melts it, and the circuit breaks.
+J3|0.35|An M C B, a miniature circuit breaker, does the same job, but you can reset it.
+J4|0.35|Overload bends a two metal strip until it trips. A short pulls an electromagnet, and it trips at once.
+J5|0.35|An R C C B compares current out on live with current back on neutral.
+J6|0.35|They should match. If thirty milliamps go missing, it trips in a fraction of a second.
+J7|0.65|The earth wire joins metal bodies to a rod in the ground. Fault current goes there, not through you.
 W1|0.35|Why can't the fuse protect a person? Look at the numbers.
 W2|0.35|Wet skin can have about one thousand ohms of resistance.
-W3|0.35|Two hundred and thirty volts, divided by one thousand ohms, is zero point two three amps. That is two hundred and thirty milliamps.
-W4|0.35|Around one hundred milliamps through the heart can stop it beating properly. A sixteen amp fuse would never notice.
-W5|0.65|But an R C C B trips at just thirty milliamps of leakage. That is the one that saves lives.
+W3|0.35|Two hundred and thirty volts over one thousand ohms is two hundred and thirty milliamps.
+W4|0.35|Near one hundred milliamps, the heart can lose its rhythm. A sixteen amp fuse never notices.
+W5|0.65|An R C C B trips at just thirty milliamps. That one saves lives.
 T1|0.7|The M C B protects the wires. The R C C B protects the people.
-V1|0.35|Now the M C B in action, on the kitchen circuit, rated at sixteen amps.
-V2|0.35|A two kilowatt heater and a one and a half kilowatt iron draw about fifteen amps together. Safe.
-V3|0.65|Add another one and a half kilowatts, and the current climbs to about twenty two amps. The M C B trips before the wire overheats.
+V1|0.35|Now a sixteen amp M C B on the kitchen circuit.
+V2|0.35|A two kilowatt heater and a one and a half kilowatt iron draw about fifteen amps. Safe.
+V3|0.65|Add one and a half kilowatts more, about twenty two amps. The M C B trips before the wire overheats.
 K0|0.35|Where do we see this at work today?
-K1|0.35|Fuse. A factory protects its big motors with fuses that blow in a flash on a short circuit.
-K2|0.35|M C B. An airport's lighting board has a row of M C Bs, one per circuit, so one fault darkens only one zone.
-K3|0.35|R C C B. A hospital puts residual current protection on circuits near patients and water.
-K4|0.65|Earth. A mobile tower is earthed with rods in the ground, to carry away faults and lightning.
-X1|0.35|So does all this make wiring perfectly safe? Not completely.
-X2|0.35|The good side. An M C B, an R C C B and a good earth stop most fires and most deadly shocks.
-X3|0.35|The hard side. An R C C B cannot help if someone touches live and neutral together, and it costs more than a fuse.
-X4|0.35|Kittu wants to press the test button with wet hands. Meera stops him, dries his hands, and lets him press it with her watching. Click. It trips.
-X5|0.35|Farida decides. Every house gets an M C B board, an R C C B, and a proper earth, starting with the pumps.
-X6|0.35|History helps too. In eighteen ninety, Thomas Edison patented a fuse, as part of his power system.
-X7|0.65|The lesson? Protect the wire, protect the person, and give every fault a path to earth.
-Q1|1.9|Quick check. A wet hand touches a live pump body. Which device trips to save the person?
-A1|0.6|The R C C B! It sees thirty milliamps missing between live and neutral, and cuts the power.
+K1|0.35|Fuse. A factory guards big motors with fast fuses.
+K2|0.35|M C B. An airport gives each lighting circuit its own M C B.
+K3|0.35|R C C B. A hospital puts leakage protection on circuits near patients and water.
+K4|0.65|Earth. A mobile tower is earthed with rods, to carry away faults and lightning.
+X1|0.35|So is wiring now perfectly safe? Not completely.
+X2|0.35|The good side. Together they stop most fires and deadly shocks.
+X3|0.35|The hard side. An R C C B cannot help if you touch live and neutral together.
+X4|0.35|Kittu reaches for the test button with wet hands. Meera stops him, dries them, then lets him press.
+X5|0.35|Farida decides. Every house gets M C Bs, an R C C B and an earth, pumps first.
+X6|0.35|History helps too. In eighteen ninety, Thomas Edison patented a fuse for his power system.
+X7|0.65|The lesson? Protect the wire, protect the person, and earth every fault.
+Q1|1.9|Quick check. A wet hand touches a live pump body. Which device saves the person?
+A1|0.6|The R C C B! It sees current leaking away, and cuts the power.
 S1|0.3|So, remember.
 S2|0.35|Fuses and M C Bs cut the power when too much current flows.
-S3|0.35|An R C C B trips when current leaks away, at about thirty milliamps.
-S4|0.6|Earthing gives a fault current a safe path into the ground.
+S3|0.35|An R C C B trips when about thirty milliamps leak away.
+S4|0.6|Earthing gives fault current a safe path into the ground.
 N1|0.2|Next time, we'll read the electricity bill, and see how batteries keep the lights on.

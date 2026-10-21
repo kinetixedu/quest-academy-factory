@@ -5,15 +5,15 @@ C2|0.35|Last time, they saw a three phase pump motor start all by itself.
 C3|0.35|But every home in the village gets only one phase, two hundred and thirty volts.
 C4|0.65|Farida is listening too. Half the fans in the panchayat office hum the same way.
 D1|0.3|So what is a single phase motor?
-D2|0.35|It is an A C motor that runs on one live wire and one neutral, the supply in every home.
+D2|0.35|An A C motor that runs on one live and one neutral, the supply in every home.
 D3|0.65|Its big problem? One phase alone cannot give it a push to start.
 J1|0.35|Shankar anna switches off first, then opens the fan. Let's look inside.
 J2|0.35|One winding gets the supply. Its magnetic field grows north, shrinks, then grows south.
 J3|0.35|The field only pulses back and forth. It never turns around the circle.
-J4|0.35|Think of it as two equal fields spinning opposite ways. Their pulls cancel, so the rotor stays still.
+J4|0.35|Think of it as two equal fields spinning opposite ways. Their pulls cancel.
 J5|0.35|Now add a second winding, with a capacitor in its path.
 J6|0.35|The capacitor makes this winding's current run ahead, by nearly a quarter of a cycle.
-J7|0.65|Two fields, shifted in time and place, now make one turning field. The rotor follows, and the fan spins.
+J7|0.65|Two shifted fields make one turning field. The rotor follows, and the fan spins.
 W1|0.35|Now flip the idea. Spin a magnet inside coils, and A C comes out. That is an alternator.
 W2|0.35|Its speed and frequency are locked together.
 W3|0.35|Speed in r p m equals one hundred and twenty, times frequency, divided by the number of poles.
@@ -22,7 +22,7 @@ W5|0.65|A two pole machine must turn twice as fast, three thousand r p m, for th
 T1|0.7|Motors turn electricity into motion. Alternators turn motion into electricity.
 V1|0.35|In a big alternator, the magnet is the part that spins, the rotor.
 V2|0.35|A small direct current reaches it through two slip rings, and makes it an electromagnet.
-V3|0.65|The heavy output coils stay still in the stator, so big currents never pass through sliding contacts.
+V3|0.65|The heavy output coils stay still in the stator, so big currents avoid sliding contacts.
 K0|0.35|Where do we see this at work today?
 K1|0.35|Start. A hospital's ceiling fans each use a capacitor to start.
 K2|0.35|Run. A bakery's mixer runs on a single phase motor from an ordinary socket.

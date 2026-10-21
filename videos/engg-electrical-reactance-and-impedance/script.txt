@@ -22,7 +22,7 @@ W5|0.65|Two hundred and thirty over fifty is four point six amps. The mystery is
 T1|0.7|On A C, opposition is impedance, not just resistance.
 V1|0.35|Look at the ceiling fan too. It has a small capacitor, two point five microfarads.
 V2|0.35|At fifty hertz, that capacitor's reactance is about one thousand two hundred and seventy ohms.
-V3|0.65|It shifts the current in one fan winding, so the fan gets a push to start turning.
+V3|0.65|It shifts one winding's current, so the fan can start turning.
 K0|0.35|Where do we see this at work today?
 K1|0.35|Inductive reactance. A power station puts large coils in its lines to limit fault currents.
 K2|0.35|Capacitive reactance. A factory adds capacitors near its motors to help the supply.
@@ -31,7 +31,7 @@ K4|0.65|Impedance. A phone maker lists earphone impedance in ohms, so they match
 X1|0.35|So is reactance a problem or a tool? Both.
 X2|0.35|The good side. It limits current without wasting energy as heat.
 X3|0.35|The hard side. It shifts current out of step, and wires must still carry that current.
-X4|0.35|Kittu wants to hold the choke while it is plugged in. Shankar anna unplugs it first. Switch off, then touch.
+X4|0.35|Kittu reaches for the plugged in choke. Shankar anna unplugs it first. Switch off, then touch.
 X5|0.35|Farida asks if a new choke will pay back. Shankar anna says yes, one choke fixes the flicker.
 X6|0.35|Note, reactance stores energy and gives it back. Resistance turns it into heat.
 X7|0.65|The lesson? Check A C parts on A C, not just with a D C meter.

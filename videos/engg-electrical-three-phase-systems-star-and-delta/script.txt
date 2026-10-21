@@ -1,11 +1,11 @@
 H1|0.3|The farm pumpset has four wires, not two.
-H2|0.55|Kittu counts them, puzzled. Our house needs two. Why does this pump need more?
-C1|0.35|Out in the fields of Suryagaon, the big pumpsets run on the three phase line.
+H2|0.55|Kittu counts them. Our house needs two. Why does this pump need more?
+C1|0.35|In Suryagaon's fields, the big pumpsets run on the three phase line.
 C2|0.35|Shankar anna knows every pole on this line.
 C3|0.35|A farmer's pump keeps tripping, and the field is drying.
-C4|0.65|Meera wants to know how three wires do the work that one pair could not.
+C4|0.65|Meera wants to know why three live wires work better than one.
 D1|0.3|So what is three phase power?
-D2|0.35|It is three A C supplies, of the same voltage and frequency.
+D2|0.35|It is three A C supplies, same voltage, same frequency.
 D3|0.65|Each one is shifted a third of a turn, one hundred and twenty degrees, from the next.
 J1|0.35|Let's watch the generator make it.
 J2|0.35|Inside, a magnet spins past three coils, set a third of a circle apart.
@@ -13,28 +13,28 @@ J3|0.35|Coil one makes a wave. Coil two follows, then coil three, each a third o
 J4|0.35|Three waves, red, yellow and blue, take turns at the top.
 J5|0.35|At any moment, add the three currents. If the load is balanced, the sum is zero.
 J6|0.35|So the return wire, the neutral, carries little or no current.
-J7|0.65|And the power never drops to zero. A three phase motor turns smoothly.
+J7|0.65|The total power never dips to zero, so motors turn smoothly.
 W1|0.35|Now, how the coils connect.
 W2|0.35|In star, one end of each coil joins at a centre point, the neutral.
 W3|0.35|Line to neutral, two hundred and thirty volts. Line to line, root three times that. About four hundred volts.
 W4|0.35|In delta, the coils join end to end in a triangle. The line current is root three times the coil current.
-W5|0.65|A four point five kilowatt pump, power factor point eight, draws about eight point one two amps per line. Each delta coil carries about four point six nine.
+W5|0.65|A four point five kilowatt pump at power factor point eight draws about eight point one two amps. Each delta coil carries four point six nine.
 T1|0.7|Three phases, one twenty degrees apart, deliver smooth power with fewer wires.
 V1|0.35|The power formula is root three, times line voltage, times line current, times power factor.
 V2|0.35|Root three, times four hundred, times eight point one two, times point eight. About four point five kilowatts.
 V3|0.65|Our house gets one phase and the neutral. The farm pumps get all three.
 K0|0.35|Where do we see this at work today?
-K1|0.35|Star. A hospital takes three phase in star, and runs single phase rooms from each line.
+K1|0.35|Star. A hospital takes a star supply, and feeds single phase rooms from each line.
 K2|0.35|Delta. A factory runs its big motors in delta, at four hundred volts.
 K3|0.35|Balance. A data centre spreads its load equally on all three phases.
 K4|0.65|Transmission. A power station sends its power out on three phase lines.
 X1|0.35|So is three phase always best? For big loads, yes.
 X2|0.35|The good side. Smooth power, self starting motors, and less copper for the same power.
-X3|0.35|The hard side. If one phase is lost, a three phase motor can overheat and burn.
+X3|0.35|The hard side. Lose one phase, and a motor can overheat and burn.
 X4|0.35|Kittu reaches for the terminal box. Shankar anna stops him, switches off, and tests every wire.
 X5|0.35|One phase is missing. Farida asks the board to fix the loose joint before the pump runs.
 X6|0.35|In eighteen ninety one, a three phase line in Germany carried power about one hundred and seventy five kilometres.
-X7|0.65|The lesson? Three balanced phases work as a team. Lose one, and the team fails.
+X7|0.65|The lesson? Three phases work as a team. Lose one, and the team fails.
 Q1|1.9|Quick check. In a star system with two hundred and thirty volts per phase, what is the line voltage?
 A1|0.6|About four hundred volts! The line voltage is root three times the phase voltage.
 S1|0.3|So, remember.

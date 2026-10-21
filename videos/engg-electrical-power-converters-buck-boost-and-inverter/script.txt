@@ -1,5 +1,5 @@
 H1|0.3|Power cut again in Suryagaon. But Meera's lights stay on.
-H2|0.55|Kittu points at the box in the corner. How does a twelve volt battery run a two hundred and thirty volt fan?
+H2|0.55|Kittu points at the box in the corner. How does a twelve volt battery run our fan?
 C1|0.35|The box is the home inverter. Shankar anna repairs them every week.
 C2|0.35|Today one sits open on his bench, with its battery beside it.
 C3|0.35|Meera wants to know what happens inside.
@@ -10,7 +10,7 @@ D3|0.65|It can lower D C, raise it, or turn it into A C. The buck, the boost, an
 J1|0.35|Start with the buck converter. It lowers the voltage.
 J2|0.35|A switch connects twenty four volts to a coil, an inductor. It opens, then closes again.
 J3|0.35|It does this thousands of times every second.
-J4|0.35|When the switch is open, the inductor keeps current flowing through a diode. A capacitor smooths it.
+J4|0.35|Switch open, the inductor keeps current flowing through a diode. A capacitor smooths it.
 J5|0.35|The share of time the switch is on is the duty cycle, D.
 J6|0.35|Watch the meter. Switch on half the time, and the output settles at half the input.
 J7|0.65|Twenty four volts in, twelve volts out, with very little heat.
@@ -32,7 +32,7 @@ X1|0.35|So are converters perfect? Close, but not quite.
 X2|0.35|The good side. Good converters often waste less than a tenth of the power.
 X3|0.35|The hard side. Fast switching makes electrical noise, and cheap inverters give a stepped wave that makes fans hum.
 X4|0.35|Kittu reaches for the battery clamps. Shankar anna stops him. A shorted battery can spark and burn.
-X5|0.35|He disconnects it first. Meera finds the burnt switch, and Farida notes a spare costs far less than a new inverter.
+X5|0.35|He disconnects it first. Meera finds the burnt switch. Farida notes a spare is cheap.
 X6|0.35|History helps too. In eighteen fifty nine, Gaston Plante made the first rechargeable battery, the lead acid kind.
 X7|0.65|The lesson? Switches, coils and timing can reshape electricity any way we need.
 Q1|1.9|Quick check. A buck converter has twenty four volts in, switch on half the time. What comes out?

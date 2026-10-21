@@ -1,44 +1,44 @@
-H1|0.3|The electricity bill arrives at Meera's house. Her mother frowns at the number.
-H2|0.55|Kittu asks. What is a unit, and why do we pay for it even when the power keeps going off?
+H1|0.3|The electricity bill arrives at Meera's house. Her mother frowns.
+H2|0.55|Kittu asks. What is a unit, and why do we pay for so many?
 C1|0.35|It is the last weekend of Meera's first year.
-C2|0.35|She has fixed the fan, the inverter, and the wiring. Now she wants to understand the bill.
-C3|0.35|Shankar anna reads meters for half the village. He says most people never check theirs.
-C4|0.65|And Farida has called a panchayat meeting tonight, about the solar idea.
-D1|0.3|So what is a unit on the bill?
-D2|0.35|One unit is one kilowatt hour. It is the energy used by one thousand watts running for one hour.
+C2|0.35|She has fixed the fan, the inverter and the wiring. Now, the bill.
+C3|0.35|Shankar anna says most people never read their meter.
+C4|0.65|And tonight, Farida meets the panchayat about the solar idea.
+D1|0.3|So what is a unit?
+D2|0.35|One unit is one kilowatt hour. A thousand watts, running for one hour.
 D3|0.65|Energy equals power times time. The meter simply counts it.
 J1|0.35|Let's watch the meter count one day in Meera's house.
-J2|0.35|The fan, seventy five watts, runs for ten hours. The counter climbs by zero point seven five units.
-J3|0.35|Four L E D bulbs, ten watts each, glow for five hours. That adds zero point two units.
-J4|0.35|The T V, one hundred watts, plays for four hours. Zero point four units more.
-J5|0.35|The fridge switches itself on and off all day, and uses about one point two units.
+J2|0.35|The fan, seventy five watts, runs ten hours. Zero point seven five units.
+J3|0.35|Four L E D bulbs, ten watts each, glow five hours. Zero point two units.
+J4|0.35|The T V, one hundred watts, plays four hours. Zero point four units.
+J5|0.35|The fridge switches on and off all day, about one point two units.
 J6|0.35|Add them up. Two point five five units in one day.
-J7|0.65|Thirty days of that, and the meter has counted seventy six point five units.
-W1|0.35|Now the bill. Say the energy charge is seven rupees per unit.
-W2|0.35|Seventy six point five, times seven, is five hundred and thirty five rupees and fifty paise.
-W3|0.35|Real bills add a fixed charge and taxes, and the rate rises in slabs as you use more.
-W4|0.35|Look again. The fridge alone uses almost half the energy, because it never fully stops.
-W5|0.65|Switch the fan to a more efficient model, and the counter climbs slower every single day.
+J7|0.65|Thirty days, and the meter counts seventy six point five units.
+W1|0.35|Now the bill. Say the rate is seven rupees per unit.
+W2|0.35|Seventy six point five times seven is five hundred and thirty five rupees, fifty paise.
+W3|0.35|Real bills add a fixed charge and taxes, and the rate rises in slabs.
+W4|0.35|Look again. The fridge uses almost half, because it never fully stops.
+W5|0.65|Cut the watts or the hours, and the counter climbs slower every day.
 T1|0.7|Watts times hours makes units. Units make the bill.
-V1|0.35|Now the backup. Their inverter battery is twelve volts, one hundred and fifty ampere hours.
-V2|0.35|Twelve times one hundred and fifty is eighteen hundred watt hours. Use only half, to keep it healthy. That is nine hundred.
-V3|0.65|A one hundred and fifty watt load, with the inverter wasting about fifteen percent, runs for about five hours.
+V1|0.35|Now the backup. The inverter battery is twelve volts, one hundred and fifty ampere hours.
+V2|0.35|Twelve times one fifty is eighteen hundred watt hours. Use only half to keep it healthy. Nine hundred.
+V3|0.65|A one hundred and fifty watt load, with the inverter losing about fifteen percent, runs about five hours.
 K0|0.35|Where do we see this at work today?
-K1|0.35|Units. A factory checks its meter every day, to see which machine uses the most.
-K2|0.35|Peak. A bakery runs its big ovens early in the morning, when power is easier to get.
-K3|0.35|Batteries. A bank's data centre keeps huge battery rooms, so servers never blink.
-K4|0.65|Backup. A mobile tower runs on batteries during a cut, then a generator if it lasts too long.
+K1|0.35|Units. A factory reads its meters daily, to find the hungriest machine.
+K2|0.35|Timing. A bakery runs heavy ovens when its tariff is cheaper.
+K3|0.35|Batteries. A bank's data centre keeps battery rooms, so servers never blink.
+K4|0.65|Backup. A mobile tower runs on batteries in a cut, then a generator.
 X1|0.35|So are batteries the answer to every power cut? Not alone.
-X2|0.35|The good side. They store energy for when it is needed, silently and instantly.
-X3|0.35|The hard side. Draining them too deep shortens their life, and they must be charged from somewhere.
-X4|0.35|Kittu wants to open the battery cap to look inside. Shankar anna stops him. The acid burns skin, and the gas can catch fire.
-X5|0.35|That night, Meera shows the panchayat her numbers: solar panels by day, batteries by night, built for Suryagaon.
-X6|0.35|Farida checks the payback, and the panchayat agrees. The village will study its own solar micro-grid.
+X2|0.35|The good side. They store energy and deliver it instantly and silently.
+X3|0.35|The hard side. Deep draining shortens their life, and they must be charged from somewhere.
+X4|0.35|Kittu wants to open the battery cap. Shankar anna stops him. The acid burns, and the gas can catch fire.
+X5|0.35|That night, Meera shows the panchayat her plan: solar panels by day, batteries by night.
+X6|0.35|Farida checks the payback. The panchayat agrees to study a solar micro-grid for Suryagaon.
 X7|0.65|The lesson? Measure your energy first. Then you can plan your own.
-Q1|1.9|Quick check. A seventy five watt fan runs for ten hours. How many units does it use?
-A1|0.6|Zero point seven five units! Seventy five watts times ten hours is seven hundred and fifty watt hours.
+Q1|1.9|Quick check. A seventy five watt fan runs ten hours. How many units?
+A1|0.6|Zero point seven five! Seventy five times ten is seven hundred and fifty watt hours.
 S1|0.3|So, remember.
 S2|0.35|One unit is one kilowatt hour. Energy equals power times time.
-S3|0.35|Your bill is units used, times the rate, plus fixed charges.
-S4|0.6|Battery energy is volts times ampere hours. Use only part of it to make it last.
+S3|0.35|Your bill is units times the rate, plus fixed charges.
+S4|0.6|Battery energy is volts times ampere hours. Use only part of it.
 N1|0.2|That's the full series for year one. From one power cut to a village plan, thank you for learning with Meera.
