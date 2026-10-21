@@ -68,7 +68,7 @@ const DUPA = [2], DUPB = [4];
 const zs = $('#zS');
 const ZR = [['R', 392, 300, 352, 250, '#F3F4F7', C.ink], ['Q', 300, 300, 240, 190, '#FCE6DF', C.ac], ['Z', 262, 300, 172, 136, BCB, BC], ['N', 236, 300, 96, 80, ACB, AC]];
 const zE = ZR.map(([n, cx, cy, rx, ry, f, s]) => ({ e: mk(zs, 'ellipse', { cx, cy, rx, ry, fill: f, stroke: s, 'stroke-width': 3.5 }) }));
-ZR.forEach(([n, cx, cy, rx, ry, f, s], k) => { zE[k].l = txt(zs, k === 3 ? cx : cx - rx * 0.62, k === 3 ? cy + 12 : cy - ry * 0.62, n, { 'text-anchor': 'middle', 'font-family': 'KaTeX_AMS, Poppins', 'font-size': 34, 'font-weight': 700, fill: s }); });
+ZR.forEach(([n, cx, cy, rx, ry, f, s], k) => { zE[k].l = txt(zs, cx, k === 3 ? cy + 12 : [86, 146, 202][k], n, { 'text-anchor': 'middle', 'font-family': 'KaTeX_AMS, Poppins', 'font-size': 34, 'font-weight': 700, fill: s }); });
 const zT = mk(zs, 'ellipse', { cx: 640, cy: 300, rx: 72, ry: 110, fill: '#FFF4D6', stroke: C.gold, 'stroke-width': 3.5 });
 const zTL = txt(zs, 640, 250, 'T', { 'text-anchor': 'middle', 'font-family': 'KaTeX_AMS, Poppins', 'font-size': 34, 'font-weight': 700, fill: C.gold });
 const zTx = [['√2', 640, 300], ['π', 640, 350]].map(([s, x, y]) => txt(zs, x, y, s, { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-size': 26, fill: C.gold, 'font-weight': 600 }));

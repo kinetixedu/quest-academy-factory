@@ -98,7 +98,7 @@ const th2 = PUC.think($('#th2'), { q: `${K(`(1 + ${I})^2`)} : is it 2i, or 2 + 2
 /* ---------- V: division ---------- */
 $('#vBig').innerHTML = K(`\\dfrac{1}{z} = \\dfrac{${A('a')} - ${I}\\,${B('b')}}{${A('a')}^2 + ${B('b')}^2}`);
 $('#vD').innerHTML = K(`\\dfrac{z_1}{z_2} = z_1 \\cdot \\dfrac{1}{z_2}`);
-const vEl = steps($('#vSt'), [[`z = 2 - 3${I}`, 'a = 2, b = -3'], [`\\tfrac{1}{z} = \\tfrac{2 + 3${I}}{4 + 9} = \\tfrac{2 + 3${I}}{13}`, 'a squared plus b squared is 13'], [`(2 - 3${I})(2 + 3${I}) = 4 - 9${I}^2 = 13`, 'every term by every term'], [`\\tfrac{13}{13} = 1 \\ \\checkmark`, 'so it really is the inverse']], 84, 112);
+const vEl = steps($('#vSt'), [[`z = 2 - 3${I}`, 'a = 2, b = -3'], [`1/z = (2 + 3${I})/(4 + 9) = (2 + 3${I})/13`, 'a squared plus b squared is 13'], [`(2 - 3${I})(2 + 3${I}) = 4 - 9${I}^2 = 13`, 'every term by every term'], [`13/13 = 1 \\ \\checkmark`, 'so it really is the inverse']], 84, 112);
 const tVs = [T0('V3'), wt('V3', 'One'), wt('V3', 'Multiply'), wt('V3', 'thirteen', 1)];
 
 /* ---------- W: worked example ---------- */
@@ -132,7 +132,7 @@ const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap 
   lines: [K(`(${A('a')} + ${I}${B('b')}) + (${A('c')} + ${I}${B('d')}) = (${A('a + c')}) + ${I}(${B('b + d')})`),
     '<b>Subtract</b>: add the opposite &nbsp;·&nbsp; <b>times i</b>: a quarter turn',
     K(`(${A('a')} + ${I}${B('b')})(${A('c')} + ${I}${B('d')}) = (${A('ac')} - ${B('bd')}) + ${I}(${A('a')}${B('d')} + ${B('b')}${A('c')})`),
-    K(`\\dfrac{1}{z} = \\dfrac{${A('a')} - ${I}${B('b')}}{${A('a')}^2 + ${B('b')}^2} \\quad (z \\ne 0)`),
+    K(`1/z = (${A('a')} - ${I}${B('b')})/(${A('a')}^2 + ${B('b')}^2) \\quad (z \\ne 0)`),
     'The usual identities still hold, with i² = -1'] });
 const YQ = ['What is (4 - i) + (2 + 5i)?', 'What is i(1 + i)?', 'Why is (2 + 3i)(4 + 5i) not 8 + 15i?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="n">${i + 1}</div><div class="q">${q}</div></div>`).join('');
