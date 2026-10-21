@@ -293,7 +293,7 @@ M.on(t => {
       PUC.attr(swLev, 'transform', `rotate(${(t < tClose ? -32 : ang).toFixed(2)} 400 150)`); M.vis(swLev, t, tC1 + 0.7, 1e9, { dy: 0, fade: 0.2 });
       const lit = M.io((t - tClose) / 0.15) * (1 - M.io((t - tOpen) / 0.15));
       PUC.attr(bulbC, 'fill', M.mix('#FFFFFF', AM, lit));
-      e1.set(-150 * onT(t) + 0, t >= tB + 1.0 && t < c1out + 0.3);
+      e1.set(150 * onT(t), t >= tB + 1.0 && t < c1out + 0.3);
       trI(τ => closed(τ) ? 120 : 0, t, tB + 0.6, 6, 168, t >= tB + 0.6);
       M.setT($('#r1I'), closed(t) ? '0.30' : '0.00'); M.setT($('#r1B'), closed(t) ? 'ON' : 'OFF'); $('#r1B').style.color = closed(t) ? '#B7791F' : MU;
     } else { trI(() => 0, t, 0, 6, 168, false); e1.set(0, false); }
@@ -386,7 +386,7 @@ M.on(t => {
     trap(t, { tin: tX, tWrong: wt('X2', 'Many') - 0.05, tStrike: wt('X2', 'not'), tRight: wt('X3', 'Electrons') - 0.1 });
     drawSeq(tcW, t, tX + 0.5, 0.4, 0.12); fadeAt(tcL, t, tX + 0.9);
     const ia = M.io((t - wt('X3', 'Conventional') + 0.1) / 0.45); tcI.set(250, 72, 250 + 190 * ia, 72); tcIL.style.opacity = ia;
-    tcE.set(-80 * Math.max(0, t - wt('X3', 'Electrons')), t >= wt('X3', 'Electrons') - 0.2); M.vis(tcEL, t, wt('X3', 'Electrons'), 1e9, { dy: 0, fade: 0.2 });
+    tcE.set(80 * Math.max(0, t - wt('X3', 'Electrons')), t >= wt('X3', 'Electrons') - 0.2); M.vis(tcEL, t, wt('X3', 'Electrons'), 1e9, { dy: 0, fade: 0.2 });
     where(t, { tin: wt('X4', 'Where') - 0.2, tLight: [wt('X4', 'PUC')], tType: wt('X4', 'Define') - 0.2 });
   }
 
