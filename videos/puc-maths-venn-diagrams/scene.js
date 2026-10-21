@@ -206,7 +206,7 @@ M.on(t => {
   if (kOn) {
     const out = OUT('K5');
     [0, 1, 2].forEach(i => { M.vis($('#k' + i), t, tK1 + 0.2 + i * 0.15, out, { dy: 30, ...o });
-      kC[i].forEach((c, j) => { M.draw(c.c, t, tK[i] + j * 0.25, 0.6); M.vis(c.lb, t, tK[i] + j * 0.25 + 0.2, 1e9, POP); });
+      kC[i].forEach((c, j) => { M.draw(c.c, t, tK1 + 0.5 + i * 0.25 + j * 0.2, 0.6); M.vis(c.lb, t, tK1 + 0.7 + i * 0.25 + j * 0.2, 1e9, POP); });
       M.vis($(`#k${i} .cap2`), t, tK[i] + 0.3, 1e9, { dy: 10 }); M.vis($(`#k${i} .sub2`), t, tK[i] + 0.5, 1e9, { dy: 10 });
       M.vis($(`#k${i} .ex`), t, tK[i] + 0.8, 1e9, POP); });
     M.vis($('#th1'), t, T0('K5') + 0.05, OUT('T1') + 0.2, { dy: 36, ...o });

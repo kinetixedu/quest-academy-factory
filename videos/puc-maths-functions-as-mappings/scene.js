@@ -152,7 +152,7 @@ const tAc = [1, 2, 3].map((n, i) => chip(ts, 130, TAY[i], String(n), AC, '#fff',
 [[0, 0], [1, 2], [2, 2]].forEach(([i, j]) => { const a = PUC.arrow(ts, PC, 3, 11); a.set(156, TAY[i], 374, TBY[j]); });
 const tRing = [1, 3].map(j => mk(ts, 'circle', { cx: 400, cy: TBY[j], r: 26, fill: 'none', stroke: C.red, 'stroke-width': 3.5 }));
 const tOk = [0, 1, 2].map(i => mk(ts, 'circle', { cx: 130, cy: TAY[i], r: 30, fill: 'none', stroke: C.ok, 'stroke-width': 3.5 }));
-const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'PUC BOARDS'], type: 'Which of these relations are functions? · count the functions that obey a condition' });
+const where = PUC.where($('#wa'), { on: ['JEE MAIN'], type: 'Count the functions that obey a condition' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 800,
   q: `${K(`A = \\{1, 2, 3\\},\\ \\ B = \\{1, 2, 3, 4\\}`)}<br>How many functions ${K('f : A \\to B')}<br>satisfy ${K('f(1) \\ne f(2)')}?`,
   opts: ['48', '64', '24', '36'], right: 0, optW: 474, optY: 312 });
@@ -325,7 +325,7 @@ M.on(t => {
     trap(t, { tin: tX1, tWrong: wt('X2', 'Many') - 0.1, tStrike: wt('X3', 'only') - 0.1, tRight: wt('X3', 'Every') });
     tRing.forEach((c, k) => M.vis(c, t, wt('X2', 'five') + k * 0.25, 1e9, { dy: 0, fade: 0.15 }));
     tOk.forEach((c, k) => M.vis(c, t, wt('X3', 'Every') + 0.2 + k * 0.15, 1e9, { dy: 0, fade: 0.15 }));
-    where(t, { tin: T0('J1'), tLight: [wt('J1', 'JEE'), wt('J1', 'PUC')], tType: wt('J1', 'as') });
+    where(t, { tin: T0('J1'), tLight: [wt('J1', 'JEE')], tType: wt('J1', 'count') });
   }
 
   /* Q */

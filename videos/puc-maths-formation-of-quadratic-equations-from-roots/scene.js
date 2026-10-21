@@ -29,7 +29,7 @@ const OUT = id => T0(id) - 0.32;
 /* ---------- title card ---------- */
 const LS = [['USUALLY', 'Equation → roots', C.ink], ['TODAY', 'Roots → equation', C.ac], ['RAVI ASKS', 'Roots 2 and 5', C.ink]];
 $('#lists').innerHTML = LS.map(([n, v, col], i) => `<div class="lst" id="ls${i}" style="left:${390 + i * 390}px"><div class="ln">${n}</div><div class="lv" style="color:${col}">${v}</div></div>`).join('');
-const tLs = [wt('H1', 'equation') - 0.1, wt('H1', 'roots') + 0.2, wt('H1', 'roots') + 0.6];
+const tLs = [T0('H1') + 0.2, wt('H1', 'equation'), wt('H1', 'roots') - 0.1];
 
 /* ---------- H: Ravi's puzzle ---------- */
 const PZ = [['ROUND 1 · ROOTS', `${re('2')}\\ \\text{and}\\ ${re('5')}`, 'Equation?'], ['ROUND 2 · ROOTS', `${cpx('1', '2')}\\ \\text{and}\\ ${cpx('1', '2', '-')}`, 'No i allowed']];

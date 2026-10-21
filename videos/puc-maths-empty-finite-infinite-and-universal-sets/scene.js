@@ -115,7 +115,7 @@ const trap = PUC.trap($('#trap'), { wrong: K(`\\{0\\} = ${PHI}`), right: K(`n(\\
 const ts = $('#tS');
 const tBox = (x, lab, inner) => { const g = mk(ts, 'g', {}); mk(g, 'path', { d: `M${x - 70},90 L${x - 70},190 L${x + 70},190 L${x + 70},90`, fill: 'none', stroke: C.ink, 'stroke-width': 4, 'stroke-linejoin': 'round' }); txt(g, x, 230, lab, { 'text-anchor': 'middle', 'font-size': 18, fill: C.mute, 'font-weight': 600 }); if (inner) { const c = mk(g, 'circle', { cx: x, cy: 150, r: 28, fill: '#fff', stroke: XC, 'stroke-width': 3 }); txt(g, x, 160, inner, { 'text-anchor': 'middle', 'font-size': 28, fill: XC, 'font-weight': 600 }); } return g; };
 const tbA = tBox(130, 'φ: no element', ''), tbB = tBox(400, '{0}: one element', '0');
-const where = PUC.where($('#wa'), { on: ['PUC BOARDS'], type: 'Which of these sets are empty? Which are finite, and which infinite?' });
+const where = PUC.where($('#wa'), { on: [], type: 'Which of these sets are empty? Which are finite, and which infinite?' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 800,
   q: `${K(`A = \\{${xc('x')} \\in \\mathbb{R} : ${xc('x')}^2 + 1 = 0\\}, \\quad B = \\{${xc('x')} \\in \\mathbb{N} : ${xc('x')}^2 - 3${xc('x')} + 2 = 0\\}`)}<br>${K(`C = \\{${xc('x')} \\in \\mathbb{Z} : 1 < ${xc('x')} < 2\\}, \\quad D = \\{${xc('x')} \\in \\mathbb{Q} : ${xc('x')}^2 = 2\\}, \\quad E = \\{${PHI}\\}`)}<br>How many of these five sets are empty?`,
   opts: ['2', '3', '4', '5'], right: 1, optW: 474, optY: 330 });
@@ -275,7 +275,7 @@ M.on(t => {
     M.vis($('#trap'), t, tX1 + 0.05, 1e9, { dy: 36 }); M.vis($('#wa'), t, T0('J1') - 0.1, 1e9, { dy: 36 });
     trap(t, { tin: tX1, tWrong: wt('X2', 'Many') - 0.1, tStrike: wt('X3', 'element') - 0.1, tRight: wt('X3', 'none') });
     M.vis(tbA, t, wt('X3', 'element'), 1e9, { dy: 10 }); M.vis(tbB, t, wt('X3', 'element') + 0.3, 1e9, { dy: 10 });
-    where(t, { tin: T0('J1'), tLight: [wt('J1', 'PUC')], tType: wt('J1', 'which') });
+    where(t, { tin: T0('J1'), tLight: [], tType: wt('J1', 'which') });
   }
 
   /* Q: practice question */
