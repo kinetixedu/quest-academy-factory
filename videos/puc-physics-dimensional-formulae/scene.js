@@ -310,7 +310,7 @@ M.on(t => {
     M.vis($('#trap'), t, tX1 + 0.05, 1e9, { dy: 36 }); M.vis($('#wa'), t, T0('E1') - 0.1, 1e9, { dy: 36 });
     trap(t, { tin: tX1, tWrong: wt('X2', 'write') - 0.1, tStrike: T0('X3') - 0.1, tRight: wt('X3', 'Force') - 0.2 });
     PUC.write(tx, t, wt('X3', 'time') - 0.2, 0.8);
-    where(t, { tin: T0('E1'), tLight: [], tType: wt('E1', 'As') });
+    where(t, { tin: T0('E1'), tLight: [], tType: wt('E1', 'Short') });
   }
 
   /* Q */
