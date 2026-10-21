@@ -1,0 +1,192 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 11 - Significant Figures</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 11: significant figures (Motion notebook, measuring bench) ===== */
+:root{--sig:#2F6FEB;--unc:#B7791F;--non:#B8BCC6}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+/* digit colouring: significant (sure) ink-on-blue, uncertain gold, not significant grey */
+.dg{font-family:'IBM Plex Mono';font-weight:600}
+.dg .s{color:var(--sig)}.dg .u{color:var(--unc);text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:8px}.dg .x{color:var(--non)}.dg .p{color:var(--ink)}
+/* title card */
+.tool{position:absolute;top:700px;width:560px;height:150px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.tool i{position:absolute;left:24px;top:24px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.tool .tn{position:absolute;left:108px;top:20px;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.tool .tv{position:absolute;left:108px;top:52px;font:600 52px/1 'IBM Plex Mono';white-space:nowrap}
+.tool .tc{position:absolute;right:24px;top:58px;height:40px;padding:0 14px;border-radius:9px;background:var(--soft);display:inline-flex;align-items:center;font:600 20px 'IBM Plex Mono';white-space:nowrap}
+/* hook */
+#hkImg{position:absolute;left:36px;top:84px;width:712px;height:400px;object-fit:cover;border-radius:12px}
+.disp{position:absolute;left:36px;width:712px;height:200px;border-radius:16px;background:var(--soft)}
+.disp .dl{position:absolute;left:24px;top:18px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.disp .lcd{position:absolute;left:24px;top:56px;width:440px;height:120px;border-radius:12px;background:#1E2A44;color:#B9F3C9;display:flex;align-items:center;justify-content:flex-end;padding-right:28px;box-sizing:border-box;font:600 80px 'IBM Plex Mono';white-space:nowrap}
+.disp .lcd small{font-size:36px;margin-left:16px;color:#7FBF95}
+.disp .cnt{position:absolute;right:24px;top:96px;height:48px;padding:0 16px;border-radius:10px;background:#fff;display:inline-flex;align-items:center;font:600 22px 'IBM Plex Mono';white-space:nowrap}
+#zq{position:absolute;font:700 52px Poppins;color:var(--red)}
+/* P: reliable + uncertain */
+#bigR{position:absolute;left:0;width:784px;top:150px;text-align:center;font-size:160px;line-height:1;white-space:nowrap}
+.brk{position:absolute;top:330px}
+.bl{position:absolute;top:372px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.pform{position:absolute;left:36px;top:84px;width:712px;height:240px;border-radius:16px;background:var(--soft)}
+.pform .pl{position:absolute;left:28px;font:600 30px Poppins;white-space:nowrap}
+/* bench */
+.dial{position:absolute;top:22px;display:flex;gap:8px}
+.dial span{height:40px;padding:0 16px;border-radius:9px;display:inline-flex;align-items:center;font:600 20px 'IBM Plex Mono';border:2px solid var(--line);background:#fff;color:var(--mute)}
+#rd{position:absolute;top:470px;height:72px;padding:0 24px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 40px 'IBM Plex Mono';white-space:nowrap}
+#rd .s{color:#AFC6F7}#rd .u{color:#F3C77A;text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:8px}#rd .ru{color:#C9CFDB;font-size:30px}
+#smo{position:absolute;left:36px;top:84px}
+#roG .v{font-size:32px}
+/* rules */
+.st{position:absolute;left:36px;width:712px;height:112px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:4px;font:600 28px Poppins;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:50px;font-size:34px;white-space:nowrap}
+.st .why b{font:600 22px 'IBM Plex Mono';color:var(--mute);margin-left:18px}
+#bigN{position:absolute;left:0;width:784px;top:150px;text-align:center;font-size:112px;line-height:1;white-space:nowrap}
+#bigC{position:absolute;top:330px;height:64px;padding:0 22px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+.key{position:absolute;top:470px;height:44px;padding:0 14px;border-radius:9px;background:var(--soft);display:inline-flex;align-items:center;gap:10px;font:600 20px 'IBM Plex Mono';white-space:nowrap}
+.key i{width:18px;height:18px;border-radius:4px;display:inline-block}
+/* reasoning */
+.lk{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--soft)}
+.lk .n{position:absolute;left:20px;top:14px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.lk .lt{position:absolute;left:90px;top:19px;font:600 27px Poppins;white-space:nowrap}
+.lka{position:absolute;left:68px;width:4px;height:20px;background:var(--ac)}
+.ur{position:absolute;left:36px;width:712px;height:104px;border-radius:14px;background:var(--soft)}
+.ur .uv{position:absolute;left:28px;top:20px;font-size:56px;line-height:1.1;white-space:nowrap}
+.ur .uc{position:absolute;right:24px;top:30px;height:44px;padding:0 14px;border-radius:9px;background:var(--ac);color:#fff;display:inline-flex;align-items:center;font:600 20px 'IBM Plex Mono';white-space:nowrap}
+/* side by side */
+.sc{position:absolute;left:36px;top:96px;width:712px;height:220px;border-radius:16px;background:var(--soft)}
+.sc .lcd{position:absolute;left:28px;top:40px;width:656px;height:140px;border-radius:14px;background:#1E2A44;color:#B9F3C9;display:flex;align-items:center;justify-content:center;font:600 96px 'IBM Plex Mono';white-space:nowrap}
+.sc .lcd small{font-size:44px;margin-left:18px;color:#7FBF95}
+.sv{position:absolute;left:36px;top:350px;font:600 30px Poppins;white-space:nowrap}
+.sv2{position:absolute;left:36px;top:410px;font:500 26px Poppins;color:var(--ink2);white-space:nowrap}
+/* calc rules */
+.cr{position:absolute;left:36px;top:84px;font:700 34px Poppins;white-space:nowrap}
+.cr2{position:absolute;left:36px;top:136px;font:500 26px Poppins;color:var(--ink2);white-space:nowrap}
+.col{position:absolute;left:36px;width:712px;height:68px;border-radius:12px;background:var(--soft)}
+.col .cv{position:absolute;right:220px;top:10px;font:600 40px 'IBM Plex Mono';white-space:nowrap}
+.col .cn{position:absolute;right:24px;top:18px;height:34px;padding:0 12px;border-radius:8px;background:#fff;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';white-space:nowrap}
+.col .co{position:absolute;left:24px;top:10px;font:600 40px 'IBM Plex Mono';color:var(--mute)}
+/* worked */
+#wq{position:absolute;left:36px;top:70px;font:600 28px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:32px}
+.wro{position:absolute;right:36px;height:56px;padding:0 18px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:10px;font:600 28px 'IBM Plex Mono';white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 24px Poppins}
+#addC{position:absolute;right:48px;top:30px;width:380px;height:220px;font:600 30px/1.3 'IBM Plex Mono';text-align:right}
+#addC div{white-space:pre;position:absolute;right:0}
+#addSh{position:absolute;top:0;width:60px;height:210px;background:var(--redBg);border-radius:6px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 32px Poppins;white-space:nowrap}
+#stF{font:600 56px Poppins;color:var(--ink)}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 1 UNITS AND MEASUREMENT</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Significant <span class="acc">Figures</span></div>
+    <div id="sub">How a number tells you how carefully it was measured</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="tools"></div>
+
+    <!-- H: kitchen scale vs lab balance -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">DIYA'S KITCHEN · THE FLOUR</div>
+        <div style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/diya-face.jpg)" id="hF"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-kitchen.jpg">
+        <div class="pillp" id="hP" style="left:36px;top:504px">Same flour, two readings</div></div>
+      <div class="card rf" id="hr"><div class="lbl" style="left:36px;top:30px">TWO SCALES · ONE EXTRA ZERO</div>
+        <div class="disp" id="hd0" style="top:84px"><div class="dl">KITCHEN SCALE</div><div class="lcd">250<small>g</small></div></div>
+        <div class="disp" id="hd1" style="top:316px"><div class="dl">LAB BALANCE</div><div class="lcd" id="lcd1">250.<span id="z0">0</span><small>g</small></div></div>
+        <div id="zq">?</div></div>
+    </div>
+
+    <!-- P: reliable + uncertain digit -->
+    <div id="sP">
+      <div class="card full" id="pl"><div class="lbl" style="left:36px;top:30px">EVERY READING HAS TWO KINDS OF DIGITS</div>
+        <div id="bigR" class="dg"><span class="s">7</span><span class="p">.</span><span class="u">4</span><span style="font:600 64px 'IBM Plex Mono';color:var(--mute)"> cm</span></div>
+        <svg class="brk" id="brk" width="784" height="40"><path id="bk0" d="" fill="none" stroke="#2F6FEB" stroke-width="3" stroke-linecap="round"/><path id="bk1" d="" fill="none" stroke="#B7791F" stroke-width="3" stroke-linecap="round"/></svg>
+        <div class="bl" id="bl0" style="color:var(--sig)">RELIABLE · SURE</div><div class="bl" id="bl1" style="color:var(--unc)">UNCERTAIN · GUESSED</div></div>
+      <div class="card rf" id="pr"><div class="lbl" style="left:36px;top:30px">THE DEFINITION</div>
+        <div class="pform" id="pform"><div class="pl" id="pl0" style="top:30px"><span style="color:var(--sig)">reliable digits</span></div><div class="pl" id="pl1" style="top:92px">+ <span style="color:var(--unc)">first uncertain digit</span></div><div class="pl" id="pl2" style="top:154px">= <b>significant figures</b></div></div>
+        <div class="pillp ac" id="pP" style="left:36px;top:360px">7.4 cm has 2 significant figures</div></div>
+    </div>
+
+    <!-- S: measuring bench -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">MEASURING BENCH · ONE PENCIL</div>
+        <div class="dial" id="dial" style="right:36px"><span>1 cm marks</span><span>1 mm marks</span></div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="tag" id="smo">SLOW-MO REPLAY · 0.25x</div>
+        <div id="rd"><span id="rdN"></span><span class="ru">cm</span></div></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro" id="roG" style="left:36px;top:70px;width:712px;row-gap:6px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">SIGNIFICANT FIGURES VS GAP BETWEEN MARKS</div><svg id="grS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- D: four counting rules -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">COUNTING · 4 RULES</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">COUNT IT LIVE</div><div id="bigN" class="dg"></div><div id="bigC"></div>
+        <div class="key" style="left:36px;top:420px"><i style="background:var(--sig)"></i>counts</div><div class="key" style="left:200px;top:420px"><i style="background:var(--non)"></i>does not count</div></div>
+    </div>
+
+    <!-- R: why leading zeros never count -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">WHY FRONT ZEROS NEVER COUNT · LINK BY LINK</div><div id="lks"></div>
+        <div class="pillp ink" id="rP" style="left:36px;top:470px">Front zeros only place the decimal point</div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">ONE LENGTH · THREE UNITS</div><div id="urs"></div>
+        <div class="pillp" id="rrP" style="left:36px;top:470px">Change the unit: the count stays 4</div></div>
+    </div>
+
+    <!-- K: side by side + think -->
+    <div id="sK">
+      <div class="card full" id="kl"><div class="lbl" style="left:36px;top:30px">KITCHEN SCALE</div><div class="sc"><div class="lcd dg"><span class="s">25</span><span class="x" id="kz">0</span><small>g</small></div></div>
+        <div class="sv" id="kv0">No decimal point: <span style="color:var(--sig)">2</span> significant figures</div><div class="sv2" id="kv1">Was the last zero measured? We cannot tell.</div></div>
+      <div class="card rf" id="kr"><div class="lbl" style="left:36px;top:30px">LAB BALANCE</div><div class="sc"><div class="lcd dg"><span class="s">250.0</span><small>g</small></div></div>
+        <div class="sv" id="kv2">Decimal point: <span style="color:var(--sig)">4</span> significant figures</div><div class="sv2" id="kv3">Every zero was measured.</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- C: calculation rules + think -->
+    <div id="sC">
+      <div class="card full" id="cl"><div class="cr">× and ÷</div><div class="cr2">keep the fewest significant figures</div><div id="cls"></div></div>
+      <div class="card rf" id="cr"><div class="cr">+ and −</div><div class="cr2">keep the fewest decimal places</div><div id="crs"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">A metal block: mass 39.6 g, volume 5.0 cm³. Find its density.</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">MEASURING BENCH · THE BLOCK</div><svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="wro" id="wm" style="top:84px">m = 39.6 g</div><div class="wro" id="wv" style="top:156px">V = <span id="wvN">20.0</span> cm³</div></div>
+    </div>
+
+    <!-- X: exam trap + where -->
+    <div id="sX"><div class="card red" id="trap"><div id="addC"><div id="addSh"></div></div></div><div class="card" id="wa"></div></div>
+    <!-- Q -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Significant figures show <span class="acc">precision</span>.</div><div id="stF">Changing the unit never changes them.</div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

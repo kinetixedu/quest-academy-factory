@@ -1,0 +1,56 @@
+H1|0.4|A friend says the shop is about one kilometre away. A map says nine sixty three metres.
+H2|0.45|Both are true. But one tells you far more about how carefully it was measured.
+H3|0.35|Diya sees it in her kitchen. The kitchen scale shows two fifty grams of flour.
+H4|0.5|The lab balance: two fifty point zero grams. Same flour.
+H5|0.65|Is that extra zero just decoration?
+P1|0.35|Every measurement has digits we are sure of, and one we guessed.
+P2|0.35|The sure digits are called reliable digits. The last guessed one is the uncertain digit.
+P3|0.65|The reliable digits plus the first uncertain digit are the significant figures.
+S1|0.35|Let's measure a pencil on our measuring bench.
+S2|0.4|First, a ruler marked only in centimetres. The tip is past seven, a little before halfway.
+S3|0.4|So we write seven point four centimetres. Seven is sure. Four is our guess. Two significant figures.
+S4|0.4|Now a ruler with millimetre marks. The tip is past seven point four. We guess one more digit: seven point four three.
+S5|0.4|Three significant figures. A finer scale gives one more sure digit.
+S6|0.65|Each ten times finer scale adds one significant figure. More significant figures, more precise.
+M1|0.35|Let's replay the reading in slow motion.
+M2|0.6|The tip stops between two marks. Up to the last mark is sure. The gap is the guess.
+D1|0.35|So how do we count significant figures in a number? Four rules, one at a time.
+D2|0.75|Rule one. Every non-zero digit is significant. Two four three has three.
+D3|0.75|Rule two. A zero between non-zero digits is significant. Two zero five has three.
+D4|0.75|Rule three. Zeros before the first non-zero digit do not count. Zero point zero zero two five has only two.
+D5|0.75|Rule four. Zeros at the end count only with a decimal point. Two fifty point zero has four. Two fifty, with no point, has two.
+R1|0.35|Why don't front zeros count? Follow the links.
+R2|0.4|Take two point three zero eight centimetres. Four significant figures.
+R3|0.4|In millimetres, it is twenty three point zero eight. In metres, zero point zero two three zero eight.
+R4|0.4|The pencil and the ruler did not change. So the precision cannot change.
+R5|0.65|The front zeros came only from choosing metres. They just place the decimal point.
+T1|0.7|Remember this. Significant figures show precision. Changing the unit never changes them.
+K1|0.4|Side by side. The kitchen scale writes two fifty grams. No decimal point, so the rule counts only two. Was that zero measured? We cannot tell.
+K2|0.6|The lab balance writes two fifty point zero. The decimal point shows every zero was measured. Four significant figures.
+K3|3.2|Your turn. How many significant figures in zero point zero zero two five zero? Two, or three?
+K4|0.65|Three! The front zeros only place the point. The last zero comes after a decimal point, so it counts.
+C2|0.4|Multiply or divide: keep as many significant figures as the measurement with the fewest.
+C3|0.6|Add or subtract: keep as many decimal places as the measurement with the fewest.
+C4|0.4|Why? An answer is never more precise than its weakest measurement.
+C5|3.2|Try this. Two point zero times three point one four is six point two eight. Do we write six point two eight, or six point three?
+C6|0.65|Six point three! Two point zero has only two significant figures, so the answer keeps two.
+W1|0.35|Now, one worked example.
+W2|0.5|A metal block: mass thirty nine point six grams, volume five point zero cubic centimetres. Find its density.
+W3|0.75|Density is mass over volume. Thirty nine point six over five point zero.
+W4|0.75|The calculator says seven point nine two.
+W5|0.75|Thirty nine point six has three significant figures. Five point zero has two. Keep two.
+W6|0.65|So the density is seven point nine grams per cubic centimetre.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students use the multiply rule when adding. Add one fifty two point three six, twenty point four, and zero point five one two.
+X3|0.65|The sum is one seventy three point two seven two. One seventy three is wrong. Twenty point four has one decimal place, so: one seventy three point three.
+E1|0.6|Where is this asked? Count significant figures, or round a calculated answer.
+Q1|5.4|Exam level now. A card is twelve point six zero centimetres by four point three centimetres. What is its area, to correct significant figures? Pause and solve.
+A1|0.5|The answer is C. Fifty four square centimetres.
+A2|0.5|Twelve point six zero has four significant figures. Four point three has only two.
+A3|0.6|The product is fifty four point one eight. Keep the fewest, two. So fifty four.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why does two fifty point zero grams say more than two fifty grams?
+Y3|0.9|Two. Why don't the zeros in zero point zero zero two five count?
+Y4|1.1|Three. When adding measurements, what decides the decimal places?
+N1|0.3|Next time: the speed of light is three with eight zeros after it. Which zeros were measured? Find out in scientific notation.
