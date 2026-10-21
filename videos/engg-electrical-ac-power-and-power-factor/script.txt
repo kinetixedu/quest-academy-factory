@@ -1,0 +1,44 @@
+H1|0.3|The panchayat water pump draws ten amps at two hundred and thirty volts.
+H2|0.55|That looks like two thousand three hundred watts. The meter says one thousand six hundred and ten.
+C1|0.35|The drinking water tank in Suryagaon is filled by one single phase pump.
+C2|0.35|Its wire gets warm, and the voltage at the far end drops.
+C3|0.35|Farida wants to know. Do we need a thicker wire, and will it pay back?
+C4|0.65|Meera and Shankar anna bring a clamp meter, and a meter that reads real power.
+D1|0.3|So what is power factor?
+D2|0.35|Power factor is the real power, divided by volts times amps.
+D3|0.65|For a clean sine wave, it is the cosine of the angle between the voltage and the current.
+J1|0.35|Let's watch the power flow, moment by moment.
+J2|0.35|Voltage and current waves run side by side. The current lags behind.
+J3|0.35|Multiply them, moment by moment, and you get the power wave.
+J4|0.35|Most of the time, the power is positive. Energy flows into the pump.
+J5|0.35|But for short moments, it goes negative. Energy flows back to the supply.
+J6|0.35|That energy feeds the motor's magnetic field, then returns. It does no useful work.
+J7|0.65|The more the current lags, the more energy just bounces back.
+W1|0.35|Let's do the pump's numbers.
+W2|0.35|Apparent power is volts times amps. Two thousand three hundred volt amps.
+W3|0.35|Real power is one thousand six hundred and ten watts. So the power factor is point seven.
+W4|0.35|Reactive power is the third side of the triangle. About one thousand six hundred and forty three volt amps reactive.
+W5|0.65|Add a capacitor to raise the power factor to point nine five. The same work now needs only about seven point four amps.
+T1|0.7|Low power factor makes wires carry current that does no work.
+V1|0.35|Why does that matter? The heat in a wire grows with the current squared.
+V2|0.35|Seven point four amps instead of ten. That cuts the wire loss by almost half.
+V3|0.65|Same water, same work, cooler wire, better voltage at the pump.
+K0|0.35|Where do we see this at work today?
+K1|0.35|Real power. A bakery's ovens run near a power factor of one, because heaters do pure work.
+K2|0.35|Reactive power. A factory full of motors draws lots of it.
+K3|0.35|Correction. A factory installs capacitor banks to raise its power factor.
+K4|0.65|Billing. Some electricity boards in India charge big users more if their power factor stays low.
+X1|0.35|So should every pump get a capacitor? Not always.
+X2|0.35|The good side. Less current, cooler wires, and better voltage.
+X3|0.35|The hard side. A wrong sized capacitor can overshoot, and cause trouble.
+X4|0.35|Shankar anna switches off at the main before he fits the capacitor. Kittu watches from behind the line on the floor.
+X5|0.35|Farida decides. One small capacitor, instead of a whole new wire. It pays back.
+X6|0.35|In Maharashtra, for example, many larger consumers pay a penalty if their average power factor falls below point nine.
+X7|0.65|The lesson? Measure the real power, not just the amps.
+Q1|1.9|Quick check. A pump takes two thousand three hundred volt amps and uses one thousand six hundred and ten watts. What is its power factor?
+A1|0.6|Point seven! Real power divided by apparent power.
+S1|0.3|So, remember.
+S2|0.35|Real power, in watts, does useful work. Reactive power, in V A R, just goes back and forth.
+S3|0.35|Power factor is real power over apparent power. For sine waves, it is cos phi.
+S4|0.6|Raising power factor cuts current and wire losses for the same work.
+N1|0.2|Next time, we'll go out to the farm pumps, and meet three phase power, in star and delta.

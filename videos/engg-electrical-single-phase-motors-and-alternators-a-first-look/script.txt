@@ -1,0 +1,44 @@
+H1|0.3|A hot afternoon in Suryagaon. Meera switches on the ceiling fan.
+H2|0.55|It hums, but it does not turn. Kittu gives a blade a push, and it spins. Why?
+C1|0.35|Meera carries the fan to Shankar anna's repair corner.
+C2|0.35|Last time, they saw a three phase pump motor start all by itself.
+C3|0.35|But every home in the village gets only one phase, two hundred and thirty volts.
+C4|0.65|Farida is listening too. Half the fans in the panchayat office hum the same way.
+D1|0.3|So what is a single phase motor?
+D2|0.35|It is an A C motor that runs on one live wire and one neutral, the supply in every home.
+D3|0.65|Its big problem? One phase alone cannot give it a push to start.
+J1|0.35|Shankar anna switches off first, then opens the fan. Let's look inside.
+J2|0.35|One winding gets the supply. Its magnetic field grows north, shrinks, then grows south.
+J3|0.35|The field only pulses back and forth. It never turns around the circle.
+J4|0.35|Think of it as two equal fields spinning opposite ways. Their pulls cancel, so the rotor stays still.
+J5|0.35|Now add a second winding, with a capacitor in its path.
+J6|0.35|The capacitor makes this winding's current run ahead, by nearly a quarter of a cycle.
+J7|0.65|Two fields, shifted in time and place, now make one turning field. The rotor follows, and the fan spins.
+W1|0.35|Now flip the idea. Spin a magnet inside coils, and A C comes out. That is an alternator.
+W2|0.35|Its speed and frequency are locked together.
+W3|0.35|Speed in r p m equals one hundred and twenty, times frequency, divided by the number of poles.
+W4|0.35|A four pole alternator at fifty hertz turns at one hundred and twenty times fifty, over four. Fifteen hundred r p m.
+W5|0.65|A two pole machine must turn twice as fast, three thousand r p m, for the same fifty hertz.
+T1|0.7|Motors turn electricity into motion. Alternators turn motion into electricity.
+V1|0.35|In a big alternator, the magnet is the part that spins, the rotor.
+V2|0.35|A small direct current reaches it through two slip rings, and makes it an electromagnet.
+V3|0.65|The heavy output coils stay still in the stator, so big currents never pass through sliding contacts.
+K0|0.35|Where do we see this at work today?
+K1|0.35|Start. A hospital's ceiling fans each use a capacitor to start.
+K2|0.35|Run. A bakery's mixer runs on a single phase motor from an ordinary socket.
+K3|0.35|Generate. A power station alternator holds a steady speed to keep fifty hertz.
+K4|0.65|Back up. A mobile tower keeps a diesel generator, an engine turning an alternator.
+X1|0.35|So is the single phase motor perfect? Not quite.
+X2|0.35|The good side. It runs from any home socket, cheap and simple.
+X3|0.35|The hard side. It starts weakly, and big loads still need three phase.
+X4|0.35|Kittu reaches for the old capacitor. Shankar anna stops him. It can hold a charge even after switch off.
+X5|0.35|He discharges it safely, and Meera fits a new one. The hum is gone.
+X6|0.35|History helps too. In eighteen eighty seven, Nikola Tesla applied for patents on the A C induction motor.
+X7|0.65|The lesson? One phase cannot start alone. Give it a second, shifted field.
+Q1|1.9|Quick check. Why does a fan hum but not turn when its capacitor fails?
+A1|0.6|No turning field! One phase only pulses, so the two pulls cancel.
+S1|0.3|So, remember.
+S2|0.35|A single phase field pulses but does not rotate, so the motor cannot self start.
+S3|0.35|A capacitor and a second winding create a turning field.
+S4|0.6|An alternator's speed sets its frequency. N equals one hundred and twenty f over P.
+N1|0.2|Next time, we'll see how power converters step D C down, up, and into A C.

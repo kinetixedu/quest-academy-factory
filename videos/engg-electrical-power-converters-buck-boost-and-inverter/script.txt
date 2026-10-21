@@ -1,0 +1,44 @@
+H1|0.3|Power cut again in Suryagaon. But Meera's lights stay on.
+H2|0.55|Kittu points at the box in the corner. How does a twelve volt battery run a two hundred and thirty volt fan?
+C1|0.35|The box is the home inverter. Shankar anna repairs them every week.
+C2|0.35|Today one sits open on his bench, with its battery beside it.
+C3|0.35|Meera wants to know what happens inside.
+C4|0.65|Farida asks the panchayat question. Can the village repair these here?
+D1|0.3|So what is a power converter?
+D2|0.35|It is a circuit that changes electricity from one form to another, using fast switches.
+D3|0.65|It can lower D C, raise it, or turn it into A C. The buck, the boost, and the inverter.
+J1|0.35|Start with the buck converter. It lowers the voltage.
+J2|0.35|A switch connects twenty four volts to a coil, an inductor. It opens, then closes again.
+J3|0.35|It does this thousands of times every second.
+J4|0.35|When the switch is open, the inductor keeps current flowing through a diode. A capacitor smooths it.
+J5|0.35|The share of time the switch is on is the duty cycle, D.
+J6|0.35|Watch the meter. Switch on half the time, and the output settles at half the input.
+J7|0.65|Twenty four volts in, twelve volts out, with very little heat.
+W1|0.35|The ideal buck rule. V out equals D times V in.
+W2|0.35|Twenty four, times zero point five, gives twelve volts.
+W3|0.35|Now the boost converter. Same parts, arranged differently. It raises the voltage.
+W4|0.35|The ideal boost rule. V out equals V in, divided by one minus D.
+W5|0.65|Twelve volts, with D at zero point seven five, is twelve over zero point two five. Forty eight volts.
+T1|0.7|Switch fast, store energy in a coil, and push the voltage down or up.
+V1|0.35|Now the inverter. Four switches sit around the load, in a shape called an H bridge.
+V2|0.35|Two diagonal switches close, and current flows one way. The other two close, and it flows back.
+V3|0.65|Flip fifty times a second, and the load sees fifty hertz A C. Smarter switching shapes it close to a sine wave.
+K0|0.35|Where do we see this at work today?
+K1|0.35|Buck. A phone maker builds tiny buck converters to feed its chips about one volt.
+K2|0.35|Boost. A solar power station boosts the panel voltage before inverting it.
+K3|0.35|Inverter. A metro railway makes A C of any frequency to drive its train motors.
+K4|0.65|Backup. A hospital keeps big inverters and batteries, so machines never lose power.
+X1|0.35|So are converters perfect? Close, but not quite.
+X2|0.35|The good side. Good converters often waste less than a tenth of the power.
+X3|0.35|The hard side. Fast switching makes electrical noise, and cheap inverters give a stepped wave that makes fans hum.
+X4|0.35|Kittu reaches for the battery clamps. Shankar anna stops him. A shorted battery can spark and burn.
+X5|0.35|He disconnects it first. Meera finds the burnt switch, and Farida notes a spare costs far less than a new inverter.
+X6|0.35|History helps too. In eighteen fifty nine, Gaston Plante made the first rechargeable battery, the lead acid kind.
+X7|0.65|The lesson? Switches, coils and timing can reshape electricity any way we need.
+Q1|1.9|Quick check. A buck converter has twenty four volts in, switch on half the time. What comes out?
+A1|0.6|Twelve volts! V out equals D times V in.
+S1|0.3|So, remember.
+S2|0.35|A buck converter lowers D C. V out equals D times V in.
+S3|0.35|A boost converter raises it. V out equals V in over one minus D.
+S4|0.6|An inverter flips an H bridge to turn D C into A C.
+N1|0.2|Next time, we'll ask where electricity comes from: thermal, hydro, nuclear, solar and wind.

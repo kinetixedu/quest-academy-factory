@@ -1,0 +1,44 @@
+H1|0.3|Meera clamps her meter on two wires. Three amps on one, four amps on the other.
+H2|0.55|Then she clamps the main wire that feeds both. Five amps, not seven. Where did two amps go?
+C1|0.35|At home, the water heater and the small water pump run together.
+C2|0.35|Farida, visiting, says the main wire should be sized for seven amps.
+C3|0.35|Shankar anna says the meter is fine. He has seen this before.
+C4|0.65|Meera calls Dr. Nalini Rao. She asks one question. Do both currents peak at the same moment?
+D1|0.3|So what is a phasor?
+D2|0.35|A phasor is an arrow that stands for a sine wave.
+D3|0.65|Its length is the wave's size. Its angle tells when the wave peaks.
+J1|0.35|Let's build one.
+J2|0.35|An arrow spins around a circle, fifty turns every second.
+J3|0.35|Watch only its height. Up, down, and up again.
+J4|0.35|Plot that height against time, and out comes a sine wave.
+J5|0.35|Add a second arrow, same speed, but a quarter turn behind.
+J6|0.35|Its wave peaks later. That gap is the phase angle, ninety degrees.
+J7|0.65|Both arrows spin together, so we can freeze them. The angle between them stays fixed.
+W1|0.35|Now solve Meera's puzzle.
+W2|0.35|The heater current is three amps, in step with the voltage. Draw it flat, pointing right.
+W3|0.35|The pump coil current is four amps, a quarter turn behind. Draw it pointing down.
+W4|0.35|Place them tip to tail. Three across, four down. The long side is five amps.
+W5|0.65|It sits about fifty three degrees behind the voltage. So the wire must carry five amps, not seven.
+T1|0.7|A C currents add like arrows, not like plain numbers.
+V1|0.35|Arrows can also be written as complex numbers.
+V2|0.35|The heater is three plus j zero. The pump is zero minus j four. j marks the part at ninety degrees.
+V3|0.65|Add them. Three minus j four. Its size is root of nine plus sixteen. Five again.
+K0|0.35|Where do we see this at work today?
+K1|0.35|Angle. A power station matches its generator's angle to the grid before it connects.
+K2|0.35|Adding. A factory electrician adds load currents as phasors to size the main cable.
+K3|0.35|Measuring. Grid control rooms use phasor measurement units to watch angles across the country.
+K4|0.65|Design. A mobile tower's radio circuits are worked out with the same arrow maths.
+X1|0.35|So do phasors always work? Not always.
+X2|0.35|The good side. They turn messy waves into simple triangles.
+X3|0.35|The hard side. They only work for clean sine waves, all at the same frequency.
+X4|0.35|Kittu reaches for the clamp. Shankar anna stops him. Only Meera clamps the wire, gloves on.
+X5|0.35|Farida decides. The house gets the right sized wire, and saves money.
+X6|0.35|In eighteen ninety three, the engineer Charles Steinmetz showed how to solve A C circuits with complex numbers.
+X7|0.65|The lesson? With A C, ask when, not just how much.
+Q1|1.9|Quick check. Three amps in step, plus four amps a quarter turn behind. What is the total?
+A1|0.6|Five amps! The arrows are at right angles, so they make a three, four, five triangle.
+S1|0.3|So, remember.
+S2|0.35|A phasor is a spinning arrow. Length is size, angle is timing.
+S3|0.35|The phase angle tells how far one wave is ahead or behind.
+S4|0.6|Add A C quantities as arrows, tip to tail, or as complex numbers.
+N1|0.2|Next time, we'll see why coils and capacitors push current out of step. Reactance and impedance.

@@ -1,0 +1,44 @@
+H1|0.3|Meera turns the supply up to just ten volts.
+H2|0.55|The meter across the coil reads one hundred volts. Ten times more than she put in. How?
+C1|0.35|Meera is in Dr. Nalini Rao's lab in the city.
+C2|0.35|On the bench sit a resistor, a coil, and a capacitor, all in one line.
+C3|0.35|Back home, Shankar anna has seen capacitors on the street line, and wants to know why.
+C4|0.65|Dr. Rao asks one question. What happens when the coil and the capacitor cancel each other?
+D1|0.3|So what is resonance?
+D2|0.35|In a series R L C circuit, resonance is when the coil's reactance equals the capacitor's.
+D3|0.65|They cancel. Only the resistance is left, so the current is as big as it can get.
+J1|0.35|Let's sweep the frequency and watch.
+J2|0.35|At low frequency, the capacitor blocks a lot. The current is small.
+J3|0.35|At high frequency, the coil blocks a lot. Again, the current is small.
+J4|0.35|In between, the two reactances shrink and grow toward each other.
+J5|0.35|At one frequency, they match exactly. The current shoots up to a peak.
+J6|0.35|Watch the arrows. The coil's voltage points up, the capacitor's points down. Same size. They cancel.
+J7|0.65|That frequency is the resonant frequency, one over two pi root L C.
+W1|0.35|Here are the lab's values.
+W2|0.35|Resistance, five ohms. At fifty hertz, the coil and the capacitor are fifty ohms each.
+W3|0.35|They cancel, so the current is ten volts over five ohms. Two amps.
+W4|0.35|Now the coil alone. Two amps times fifty ohms is one hundred volts. The capacitor has one hundred volts too.
+W5|0.65|They are opposite, so they cancel. The ratio of one hundred to ten is the quality factor, Q equals ten.
+T1|0.7|At resonance, the coil and capacitor cancel, and only resistance remains.
+V1|0.35|Now double the frequency to one hundred hertz.
+V2|0.35|The coil becomes one hundred ohms. The capacitor drops to twenty five.
+V3|0.65|The impedance jumps to about seventy five ohms. The current falls to about point one three amps.
+K0|0.35|Where do we see this at work today?
+K1|0.35|Tuning. A radio picks one station by tuning a circuit to resonate at its frequency.
+K2|0.35|Filtering. A phone maker uses resonant circuits to pick one signal and reject others.
+K3|0.35|Danger. A power station checks that capacitors on its lines do not resonate with coils.
+K4|0.65|Sensing. A hospital's M R I scanner uses tuned coils to pick up tiny signals from the body.
+X1|0.35|So is resonance good or bad? It depends where it happens.
+X2|0.35|The good side. It picks one frequency out of many, sharply.
+X3|0.35|The hard side. Voltages inside the circuit can be many times the supply.
+X4|0.35|Dr. Rao keeps the supply at ten volts. At two hundred and thirty, the coil would see two thousand three hundred.
+X5|0.35|Meera calls home. Kittu wants to try this on the house socket. Meera says no, firmly.
+X6|0.35|That is why engineers check for resonance before adding capacitors to any power line.
+X7|0.65|The lesson? Resonance is a tool for signals, and a hazard for power.
+Q1|1.9|Quick check. At resonance in a series R L C circuit, what limits the current?
+A1|0.6|Resistance! The coil and capacitor reactances cancel, so only R is left.
+S1|0.3|So, remember.
+S2|0.35|Resonance happens when the coil's reactance equals the capacitor's.
+S3|0.35|The resonant frequency is one over two pi root L C.
+S4|0.6|At resonance, current is highest, and the coil and capacitor voltages can be Q times the supply.
+N1|0.2|Next time, we'll see why some power does real work, and some just bounces back. A C power and power factor.

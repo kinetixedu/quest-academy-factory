@@ -1,0 +1,44 @@
+H1|0.3|Meera's meter says the old street light coil is forty ohms.
+H2|0.55|Ohm's law says two hundred and thirty volts should push five point seven five amps. Only four point six flow.
+C1|0.35|The street light outside Meera's house keeps flickering.
+C2|0.35|Shankar anna takes down its old choke, a coil of copper wire on an iron core.
+C3|0.35|On the bench, Meera tests it with D C. Forty ohms, just like a resistor.
+C4|0.65|But on A C, it lets less current through. Something else is pushing back.
+D1|0.3|So what is that push back?
+D2|0.35|It is called reactance. Coils and capacitors oppose A C because the current keeps changing.
+D3|0.65|Resistance and reactance together make impedance, in ohms. Oliver Heaviside coined that word in eighteen eighty six.
+J1|0.35|Let's watch a coil fight the change.
+J2|0.35|The A C current rises. The coil's magnetic field grows, and pushes back against the rise.
+J3|0.35|The current falls. The field shrinks, and pushes to keep it going.
+J4|0.35|So the coil's current lags its voltage by a quarter turn, ninety degrees.
+J5|0.35|Now a capacitor. It fills with charge, then empties, every half cycle.
+J6|0.35|Its current runs ahead of its voltage, by ninety degrees.
+J7|0.65|Turn up the frequency. The coil pushes back harder. The capacitor lets more through.
+W1|0.35|Now the numbers.
+W2|0.35|A coil's reactance is two pi times frequency times inductance. A capacitor's is one over two pi f C.
+W3|0.35|This choke has thirty ohms of reactance at fifty hertz, plus its forty ohms of resistance.
+W4|0.35|They are at right angles, so we add them like arrows. Forty across, thirty up. Impedance, fifty ohms.
+W5|0.65|Two hundred and thirty over fifty is four point six amps. The mystery is solved.
+T1|0.7|On A C, opposition is impedance, not just resistance.
+V1|0.35|Look at the ceiling fan too. It has a small capacitor, two point five microfarads.
+V2|0.35|At fifty hertz, that capacitor's reactance is about one thousand two hundred and seventy ohms.
+V3|0.65|It shifts the current in one fan winding, so the fan gets a push to start turning.
+K0|0.35|Where do we see this at work today?
+K1|0.35|Inductive reactance. A power station puts large coils in its lines to limit fault currents.
+K2|0.35|Capacitive reactance. A factory adds capacitors near its motors to help the supply.
+K3|0.35|Frequency. A mobile tower uses coils and capacitors as filters, to pass one frequency band.
+K4|0.65|Impedance. A phone maker lists earphone impedance in ohms, so they match the phone.
+X1|0.35|So is reactance a problem or a tool? Both.
+X2|0.35|The good side. It limits current without wasting energy as heat.
+X3|0.35|The hard side. It shifts current out of step, and wires must still carry that current.
+X4|0.35|Kittu wants to hold the choke while it is plugged in. Shankar anna unplugs it first. Switch off, then touch.
+X5|0.35|Farida asks if a new choke will pay back. Shankar anna says yes, one choke fixes the flicker.
+X6|0.35|Note, reactance stores energy and gives it back. Resistance turns it into heat.
+X7|0.65|The lesson? Check A C parts on A C, not just with a D C meter.
+Q1|1.9|Quick check. A coil has forty ohms of resistance and thirty ohms of reactance. What is its impedance?
+A1|0.6|Fifty ohms! Resistance and reactance are at right angles, so they add like a three, four, five triangle.
+S1|0.3|So, remember.
+S2|0.35|Reactance is a coil or capacitor's push back against A C.
+S3|0.35|A coil's current lags by ninety degrees. A capacitor's current leads by ninety degrees.
+S4|0.6|Impedance is resistance and reactance added as arrows, in ohms.
+N1|0.2|Next time, we'll put a resistor, a coil and a capacitor in one line, and meet resonance.

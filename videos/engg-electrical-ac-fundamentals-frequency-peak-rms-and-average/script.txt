@@ -1,0 +1,44 @@
+H1|0.3|The water heater sticker says two hundred and thirty volts.
+H2|0.55|But Meera's meter shows the socket swinging past three hundred. Is the sticker lying?
+C1|0.35|The battery in Meera's house gave steady D C. One direction, one level.
+C2|0.35|The wall socket is different. It gives A C, alternating current.
+C3|0.35|Shankar anna brings an old meter that draws the voltage as a moving line.
+C4|0.65|Kittu wants to know which number on that line is the real two hundred and thirty.
+D1|0.3|So what is alternating current?
+D2|0.35|It is a current that keeps changing direction, in a smooth wave called a sine wave.
+D3|0.65|The voltage behind it rises, falls, turns negative, and comes back, again and again.
+J1|0.35|Let's watch one wave being drawn.
+J2|0.35|At the start, the voltage is zero. Then it climbs.
+J3|0.35|Five milliseconds later, it hits its peak, about three hundred and twenty five volts.
+J4|0.35|It falls back through zero, and the current turns the other way.
+J5|0.35|It dips to minus three hundred and twenty five, then climbs back to zero.
+J6|0.35|That full swing took twenty milliseconds. That is one cycle, called the period.
+J7|0.65|Fifty cycles fit into one second. So the frequency is fifty hertz.
+W1|0.35|So which number is real? Let's heat some water.
+W2|0.35|The heater has a resistance of forty six ohms.
+W3|0.35|The R M S voltage is the peak divided by root two. That gives two hundred and thirty volts.
+W4|0.35|So the current is two hundred and thirty over forty six. Five amps.
+W5|0.65|Power is two hundred and thirty times five. One thousand one hundred and fifty watts, the same as steady D C.
+T1|0.7|R M S is the A C value that heats like the same D C.
+V1|0.35|One more number, the average.
+V2|0.35|Over a full cycle, the ups and downs cancel to zero. So we average just one half.
+V3|0.65|Half a wave averages about two hundred and seven volts. That is point six three seven times the peak.
+K0|0.35|Where do we see this at work today?
+K1|0.35|Frequency. A power station control room keeps the grid close to fifty hertz.
+K2|0.35|Peak. A phone maker builds chargers that survive the peak voltage.
+K3|0.35|R M S. A factory electrician uses a true R M S meter to size motor cables.
+K4|0.65|Average. A data centre turns A C into steady D C for its computers.
+X1|0.35|So is A C simply better than D C? It depends on the job.
+X2|0.35|The good side. A C is easy to step up and down, so it travels far.
+X3|0.35|The hard side. Insulation must survive the peak, not just the R M S.
+X4|0.35|Kittu grabs the meter probes. Shankar anna stops him. Only Meera tests the socket, one hand, while he watches.
+X5|0.35|Two hundred and thirty sounds small, he says, but every swing peaks higher.
+X6|0.35|The unit hertz is named after Heinrich Hertz. The I E C chose the name in nineteen thirty.
+X7|0.65|The lesson? Read a wave fully: its frequency, its peak, and its R M S.
+Q1|1.9|Quick check. Your socket says two hundred and thirty volts. Which value is that?
+A1|0.6|R M S! It heats like two hundred and thirty volts of D C. The peak is higher.
+S1|0.3|So, remember.
+S2|0.35|A C keeps changing direction. In India, fifty times a second, fifty hertz.
+S3|0.35|R M S is peak over root two. Two hundred and thirty R M S peaks near three hundred and twenty five.
+S4|0.6|The half wave average is point six three seven times the peak.
+N1|0.2|Next time, we'll turn these waves into spinning arrows, called phasors.
