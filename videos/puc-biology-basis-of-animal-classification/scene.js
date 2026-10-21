@@ -231,7 +231,7 @@ const tSo = [wt('A1', 3) + 0.1, wt('A2', 'Sponges'), wt('A2', 'Coelenterates'), 
 const fc = PUC.fcard($('#sF'), { x: 360, y: 262, w: 1200, h: 470, title: 'Recap · basis of animal classification', y0: 100, dy: 70, txt: [1, 1, 1, 1, 1],
   lines: ['<b>Bases</b>: level · symmetry · germ layers · coelom · segments · notochord', '<b>Levels</b>: cellular (sponges) › tissue › organ › organ system',
     '<b>Symmetry</b>: none (sponges) · radial (jellyfish) · bilateral (cockroach)', '<b>Germ layers</b>: 2 = diploblastic &nbsp;·&nbsp; 3 = triploblastic',
-    '<b>Notochord</b>: present = chordate &nbsp;·&nbsp; absent = non-chordate'] });
+    '<b>Notochord</b>: chordates have one, non-chordates do not'] });
 const YQ = ['Name the six features used to classify animals.', 'Why is symmetry alone not enough to place an animal?', 'Is a sponge a plant or an animal, and why?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="n">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];

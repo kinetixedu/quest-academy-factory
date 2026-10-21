@@ -182,7 +182,7 @@ const WL = [[300, 210, 300, 120, 'Capsid', wt('W2', 'capsid')], [690, 250, 720, 
 const wLB = WL.map(([px, py, lx, ly, s, tt]) => { const ln = mk(wS, 'path', { d: `M${px},${py} L${lx},${ly}`, stroke: C.ink, 'stroke-width': 2.5, fill: 'none' }), dot = mk(wS, 'circle', { cx: px, cy: py, r: 6, fill: C.ink });
   const left = lx < px && lx < 1000 && lx > 900; const tx = mk(wS, 'text', { x: left ? lx - 10 : lx + 10, y: ly + 9, class: 'zl', 'text-anchor': left ? 'end' : 'start' }); tx.textContent = s; return { ln, dot, tx, tt }; });
 const WC = [['SHAPE', 'Helical rod', 'Polyhedral head + tail'], ['NUCLEIC ACID', 'ssRNA', 'dsDNA'], ['HOST', 'Plant (tobacco)', 'Bacterium']];
-$('#wcs').innerHTML = WC.map(([k, a, b], i) => `<div class="cmpW" id="wcA${i}" style="left:${90 + i * 196}px;top:${430 + 0}px"><b>${k}</b>${a}</div><div class="cmpW" id="wcB${i}" style="left:${830}px;top:${410 + i * 54}px"><b>${k}</b>${b}</div>`).join('');
+$('#wcs').innerHTML = WC.map(([k, a, b], i) => `<div class="cmpW" id="wcA${i}" style="left:90px;top:${410 + i * 54}px"><b>${k}</b>${a}</div><div class="cmpW" id="wcB${i}" style="left:${830}px;top:${410 + i * 54}px"><b>${k}</b>${b}</div>`).join('');
 
 /* ---------- X / Q / F ---------- */
 const trap = PUC.trap($('#trap'), { wrong: 'A virus has both DNA and RNA, like a cell', right: 'A virus has either RNA or DNA, never both' });
@@ -233,11 +233,11 @@ M.on(t => {
   const dOn = t >= tD1 - 0.1 && t < tV1 + 0.1; M.hide($('#sD'), !dOn);
   if (dOn) {
     const out = OUT('V1');
-    M.vis($('#cl'), t, tD1 + 0.1, out, { dx: -60, dy: 0, ...o }); M.vis($('#cr'), t, EV[0][4] + 0.4, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#cl'), t, tD1 + 0.1, out, { dx: -60, dy: 0, ...o }); M.vis($('#cr'), t, tD1 + 0.6, out, { dx: 60, dy: 0, ...o });
     M.draw(tlL, t, tD1 + 0.3, 1.2);
     EV.forEach((e, i) => { const el = $('#ev' + i); M.vis(el, t, e[4] - 0.1, 1e9, { dx: -20, dy: 0 }); M.vis(el.querySelector('.dt'), t, tD1 + 0.5 + i * 0.25, 1e9, { ...POP, sc: 0.3 }); });
     const cryOn = t >= tCry - 0.2;
-    M.hide(fx.fil, cryOn); M.hide(fx.leaf, cryOn); M.vis(fx.fil, t, EV[0][4] + 0.6, 1e9, { dy: 12 });
+    M.hide(fx.fil, cryOn); M.hide(fx.leaf, cryOn); M.vis(fx.fil, t, tD1 + 0.9, 1e9, { dy: 12 });
     bacs.forEach((b, k) => M.vis(b, t, tFil - 0.6 + k * 0.1, 1e9, { ...POP, sc: 0.3 }));
     vir.forEach(v => { const u = t < tFil ? -1 : ((t - tFil) * 0.45 + v.ph) % 1; M.hide(v.e, u < 0 || cryOn); if (u >= 0) { const y = 170 + u * 260, x = y < 300 ? v.x + (290 - v.x) * M.clamp((y - 222) / 78) : 290 + (v.x - 290) * 0.4 * M.clamp((y - 350) / 80); attr(v.e, 'cx', x.toFixed(1)); attr(v.e, 'cy', y.toFixed(1)); v.e.style.opacity = Math.min(1, u * 6, (1 - u) * 5).toFixed(2); } });
     M.vis(fx.leaf, t, tJuice - 0.2, 1e9, { dy: 16 }); const sick = M.io((t - tInf) / 1.2); mos.forEach(m => m.style.opacity = sick); sickT.style.opacity = sick;
