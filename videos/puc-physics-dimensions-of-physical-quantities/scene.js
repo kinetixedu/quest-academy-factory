@@ -46,7 +46,7 @@ $('#dchs').innerHTML = DCH.map(([l, n, s], i) => `<div class="dch" id="dch${i}" 
 $('#pDef').innerHTML = K(`[Q] = ${D('[M^{a}\\,L^{b}\\,T^{c}]')}`);
 
 /* ---------- S: the ride, speeding up ---------- */
-const s = $('#simS'), X0 = 110, PXM = 24, RY = 300, WR = 26;      // 24 px per metre, 0-25 m
+const s = $('#simS'), X0 = 150, PXM = 23, RY = 360, WR = 26;      // 24 px per metre, 0-25 m
 mk(s, 'line', { x1: 40, y1: RY, x2: 744, y2: RY, stroke: C.ink, 'stroke-width': 3 });
 for (let m = 0; m <= 25; m++) { const x = X0 + m * PXM, L = m % 5 ? 10 : 22; mk(s, 'line', { x1: x, y1: RY + 3, x2: x, y2: RY + 3 + L, stroke: C.ink, 'stroke-width': m % 5 ? 1.5 : 2.5 }); if (m % 5 === 0) txt(s, x, RY + 52, m + ' m', { 'text-anchor': 'middle', 'font-size': 20, fill: C.ink, 'font-weight': 600 }); }
 const bike = () => {
@@ -76,8 +76,8 @@ const G1 = PUC.graph($('#grS'), { x: 90, y: 78, w: 270, h: 132, xmax: 4, ymin: 0
 const G2 = PUC.graph($('#grS'), { x: 470, y: 78, w: 270, h: 132, xmax: 4, ymin: 0, ymax: 8, xt: [0, 2, 4], yt: [0, 8], xl: 't', yl: '' });
 const g1c = G1.curve(C.ink, 4), g1d = G1.dot(C.ink, 9), g2c = G2.curve(VC, 4), g2d = G2.dot(VC, 9);
 const g1o = G1.curve(C.ac2, 4);
-const gTag = document.createElement('div'); gTag.className = 'pillp'; gTag.style.cssText = 'left:36px;top:218px;height:40px;font-size:18px;background:#EDE6FB;color:#7A4FE0'; gTag.innerHTML = 'slope of x-t = v · [LT⁻¹]'; $('#gr').appendChild(gTag);
-const gTag2 = document.createElement('div'); gTag2.className = 'pillp'; gTag2.style.cssText = 'left:420px;top:218px;height:40px;font-size:18px;background:#FBE6E6;color:#D64545'; gTag2.innerHTML = 'slope of v-t = a · [LT⁻²]'; $('#gr').appendChild(gTag2);
+const gTag = document.createElement('div'); gTag.className = 'pillp'; gTag.style.cssText = 'left:170px;top:20px;height:38px;font-size:16px;background:#EDE6FB;color:#7A4FE0'; gTag.innerHTML = 'slope = v · [LT⁻¹]'; $('#gr').appendChild(gTag);
+const gTag2 = document.createElement('div'); gTag2.className = 'pillp'; gTag2.style.cssText = 'left:546px;top:20px;height:38px;font-size:16px;background:#FBE6E6;color:#D64545'; gTag2.innerHTML = 'slope = a · [LT⁻²]'; $('#gr').appendChild(gTag2);
 const avA = PUC.avatar($('#sim'), { x: 36, y: 474, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'Divide by T twice: T⁻²!' });
 
 /* ---------- D: area ---------- */
@@ -102,7 +102,7 @@ chain($('#chD'), [['Mass', 'cb', 'd0'], ['÷', 'cop', 'd1'], ['Volume', 'cb', 'd
 $('#chD').insertAdjacentHTML('beforeend', `<div class="ctag" id="d0t" style="top:206px">[M]</div><div class="ctag" id="d2t" style="top:206px">[L³]</div>` +
   `<div class="fl2" id="dF" style="top:290px">${K(`[\\rho] = \\dfrac{${D('[M]')}}{${D('[L^3]')}} = ${D('[M\\,L^{-3}]')}`)}</div>`);
 const tV = [wt('R2', 'length'), wt('R2', 'times'), wt('R2', 'breadth'), wt('R2', 'times', 1), wt('R2', 'height')];
-const tDn = [wt('R3', 'Density'), wt('R3', 'divided'), wt('R3', 'volume'), wt('R3', 'volume') + 0.2, wt('R3', 'Density') + 0.1];
+const tDn = [wt('R3', 'Density'), wt('R3', 'divided'), wt('R3', 'volume'), wt('R3', 'volume') + 0.2, wt('R3', 'volume') + 0.5];
 
 /* ---------- statement ---------- */
 $('#stF').innerHTML = K(`[Q] = ${D('[M^{a}\\,L^{b}\\,T^{c}]')} \\qquad ${D('[L]')} + ${D('[T]')} \\;\\text{is not allowed}`);
@@ -112,13 +112,13 @@ const kS = $('#kbS');
 mk(kS, 'line', { x1: 36, y1: 120, x2: 748, y2: 120, stroke: C.ink, 'stroke-width': 3 });
 for (let m = 0; m <= 5; m++) { const x = 36 + m * 120; mk(kS, 'line', { x1: x, y1: 120, x2: x, y2: 140, stroke: C.ink, 'stroke-width': 2.5 }); txt(kS, x, 170, m + ' m', { 'text-anchor': 'middle', 'font-size': 18, fill: C.ink, 'font-weight': 600 }); }
 const kBar = mk(kS, 'rect', { x: 36, y: 70, width: 600, height: 36, rx: 6, fill: '#B9A3EE' });
-const tS2 = $('#kdS'), CK = [140, 100];
+const tS2 = $('#kdS'), CK = [620, 100];
 mk(tS2, 'circle', { cx: CK[0], cy: CK[1], r: 80, fill: '#fff', stroke: C.ink, 'stroke-width': 4 });
 for (let k = 0; k < 12; k++) { const a = k * Math.PI / 6; mk(tS2, 'line', { x1: CK[0] + 66 * Math.sin(a), y1: CK[1] - 66 * Math.cos(a), x2: CK[0] + 76 * Math.sin(a), y2: CK[1] - 76 * Math.cos(a), stroke: C.ink, 'stroke-width': 2.5 }); }
 const kArc = mk(tS2, 'path', { fill: '#EDE6FB', stroke: 'none' });
 const kHand = mk(tS2, 'line', { x1: CK[0], y1: CK[1], x2: CK[0], y2: CK[1] - 62, stroke: C.red, 'stroke-width': 4, 'stroke-linecap': 'round' });
 mk(tS2, 'circle', { cx: CK[0], cy: CK[1], r: 6, fill: C.ink });
-const kTT = txt(tS2, 270, 112, '5 s on the clock', { 'font-size': 26, fill: C.ink, 'font-weight': 600 });
+const kTT = txt(tS2, 36, 112, '5 s on the clock', { 'font-size': 26, fill: C.ink, 'font-weight': 600 });
 const th1 = PUC.think($('#th1'), { q: 'Can you add 5 m/s to 18 km/h?', opts: ['Yes', 'No'], right: 0, why: 'Both are [LT⁻¹]. 18 km/h = 5 m/s, so 5 m/s + 5 m/s = 10 m/s.' });
 
 /* ---------- C: same or no dimensions ---------- */
@@ -150,7 +150,7 @@ const wBt = txt(wS, 210, 290, 'm', { 'text-anchor': 'middle', 'font-family': 'Po
 const wGh = [0, 1, 2].map(() => mk(wS, 'rect', { x: 140, y: 230, width: 140, height: 100, rx: 10, fill: C.ink, opacity: 0 }));
 const wV = PUC.arrow(wS, VC, 6, 18), wVl = txt(wS, 0, 0, 'v', { 'font-family': 'Poppins', 'font-style': 'italic', 'font-size': 32, fill: VC, 'font-weight': 600 });
 const wMt = txt(wS, 210, 384, '[M]', { 'text-anchor': 'middle', 'font-size': 26, fill: DC, 'font-weight': 600 });
-const wVt = txt(wS, 0, 194, '[LT⁻¹]', { 'text-anchor': 'middle', 'font-size': 26, fill: DC, 'font-weight': 600 });
+const wVt = txt(wS, 0, 258, '[LT⁻¹]', { 'text-anchor': 'middle', 'font-size': 26, fill: DC, 'font-weight': 600 });
 $('#wc').innerHTML = K(`p = m\\,v \\;\\to\\; [M\\,L\\,T^{-1}]`);
 const tW = [wt('W3', 'Mass'), wt('W4', 'Velocity'), wt('W5', 'Multiply'), wt('W6', 'So')];
 
@@ -158,13 +158,13 @@ const tW = [wt('W3', 'Mass'), wt('W4', 'Velocity'), wt('W5', 'Multiply'), wt('W6
 const trap = PUC.trap($('#trap'), { wrong: 'No unit means no dimension, so ignore it', right: 'Angle: no dimension, but it has a unit, the radian' });
 const tS = $('#tS');
 mk(tS, 'line', { x1: 80, y1: 200, x2: 330, y2: 200, stroke: C.ink, 'stroke-width': 4, 'stroke-linecap': 'round' });
-const trR = mk(tS, 'line', { x1: 80, y1: 200, x2: 80 + 250 * Math.cos(1), y2: 200 - 250 * Math.sin(1), stroke: C.ink, 'stroke-width': 4, 'stroke-linecap': 'round' });
+const trR = mk(tS, 'line', { x1: 80, y1: 200, x2: 80 + 180 * Math.cos(1), y2: 200 - 180 * Math.sin(1), stroke: C.ink, 'stroke-width': 4, 'stroke-linecap': 'round' });
 const trA = mk(tS, 'path', { d: `M150,200 A70,70 0 0 0 ${(80 + 70 * Math.cos(1)).toFixed(1)},${(200 - 70 * Math.sin(1)).toFixed(1)}`, fill: 'none', stroke: DC, 'stroke-width': 4 });
-const trT = txt(tS, 170, 160, '1 rad', { 'font-size': 26, fill: DC, 'font-weight': 600 });
+const trT = txt(tS, 160, 186, '1 rad', { 'font-size': 26, fill: DC, 'font-weight': 600 });
 const trT2 = txt(tS, 200, 250, 'unit: rad · dimension: none', { 'text-anchor': 'middle', 'font-size': 17, fill: C.ink2, 'font-weight': 600 });
 const where = PUC.where($('#wa'), { on: [], type: 'Short questions: dimensions of a quantity, or which pair has the same dimensions' });
 const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', q: 'Which pair of quantities has the same dimensions?', qW: 780,
-  opts: ['Speed and acceleration', 'Area and volume', 'Frequency and angular velocity', 'Mass and density'], right: 2, cols: 1, optW: 968, optH: 68, optFs: 28, optY: 220 });
+  opts: ['Speed and acceleration', 'Area and volume', 'Frequency and angular velocity', 'Mass and density'], right: 2, cols: 1, optW: 968, optH: 68, optFs: 28, optY: 268 });
 const so = PUC.solution($('#so'), [[K(`f:\\ ${D('[T^{-1}]')}`)], [K(`\\omega = \\dfrac{\\theta}{t}:\\ ${D('[T^{-1}]')}`)], ['<b style="color:var(--red)">A</b>: LT⁻¹ vs LT⁻²'], ['<b style="color:var(--red)">B</b>: L² vs L³ · <b style="color:var(--red)">D</b>: M vs ML⁻³']], { y0: 100, dy: 112 });
 const tSo = [wt('A2', 'Frequency'), wt('A2', 'Angular'), wt('A3', 'A'), wt('A3', 'B')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 262, w: 1200, h: 470, title: 'Recap · dimensions', y0: 100, dy: 90, txt: [0, 1, 1, 1],
@@ -221,7 +221,7 @@ M.on(t => {
     M.vis($('#pl'), t, tP1 + 0.1, out, { dx: -60, dy: 0, ...o });
     BQ.forEach(([, , m3], i) => { const el = $('#bq' + i); M.vis(el, t, T0('P2') + 0.2 + i * 0.08, 1e9, { dy: 14 }); const on = m3 ? M.io((t - wt('P3', ['Mass', 'length', 'time'][i]) + 0.05) / 0.25) : 0; el.style.background = mix(C.soft, '#EDE6FB', on); el.querySelector('.bs').style.color = mix(C.dim, DC, on); el.querySelector('.bn').style.color = m3 ? mix(C.mute, C.ink, on) : mix(C.ink, C.dim, M.io((t - wt('P3', 'three')) / 0.3)); });
     M.vis($('#pr'), t, T0('P4') - 0.1, out, { dx: 60, dy: 0, ...o });
-    [wt('P4', 'M'), wt('P4', 'L'), wt('P4', 'T')].forEach((tt, i) => M.vis($('#dch' + i), t, tt - 0.15, 1e9, POP));
+    [wt('P4', 'mass') - 0.4, wt('P4', 'length') - 0.4, wt('P4', 'time') - 0.4].forEach((tt, i) => M.vis($('#dch' + i), t, tt - 0.15, 1e9, POP));
     M.vis($('#pDefL'), t, T0('P5') + 0.1, 1e9, { dy: 10 }); PUC.write($('#pDef'), t, wt('P5', 'powers') - 0.1, 0.9);
     M.vis($('#prP'), t, wt('P5', 'build') + 0.2, 1e9, POP);
   }
@@ -245,7 +245,7 @@ M.on(t => {
     M.setT($('#tV'), S.u.toFixed(2));
     M.setT($('#rx'), S.x.toFixed(1)); M.setT($('#rv'), S.v.toFixed(1)); M.setT($('#ra'), (ph === 2 && t >= tRep ? 2 : 0).toFixed(1));
     // dimension tags pop on their words
-    const dt = $('#roG').querySelectorAll('.dimt'); [wt('S2', 'L'), wt('S3', 'minus'), wt('S6', 'L')].forEach((tt, i) => M.vis(dt[i], t, tt - 0.1, 1e9, POP));
+    const dt = $('#roG').querySelectorAll('.dimt'); [wt('S2', 'dimension') + 0.4, wt('S3', 'minus'), wt('S6', 'gives') + 0.2].forEach((tt, i) => M.vis(dt[i], t, tt - 0.1, 1e9, POP));
     // graphs: x-t (ink) and v-t (blue), dots linked to the bike
     if (ph === 1) { g1o((u2) => [u2, 0], 0, 0); g1c((u2) => [u2, 5 * u2], 0, S.u); g1d(S.u, S.x, t > tS1 + 0.4); g2c((u2) => [u2, 5], 0, S.u); g2d(S.u, S.v, t > tA); }
     else { g1o((u2) => [u2, 5 * u2], 0, 2); g1c((u2) => [u2, u2 * u2], 0, S.u); g1d(S.u, S.x, true); g2c((u2) => [u2, 2 * u2], 0, S.u); g2d(S.u, S.v, true); }
@@ -266,7 +266,7 @@ M.on(t => {
     M.draw(dB1, t, wt('D3', 'Length'), 0.4); M.vis(dT1, t, wt('D3', 'Length') + 0.2, 1e9, { dy: 0 });
     M.draw(dB2, t, wt('D3', 'Breadth'), 0.4); M.vis(dT2, t, wt('D3', 'Breadth') + 0.2, 1e9, { dy: 0 });
     M.vis(dT3, t, wt('D4', 'squared') - 0.1, 1e9, POP);
-    [wt('D5', 'M'), wt('D5', 'squared'), wt('D5', 'T')].forEach((tt, i) => { M.vis($('#zc' + i), t, tt - 0.1, 1e9, POP); });
+    [wt('D5', 'write') + 0.3, wt('D5', 'squared'), wt('D5', 'squared') + 0.6].forEach((tt, i) => { M.vis($('#zc' + i), t, tt - 0.1, 1e9, POP); });
   }
 
   /* R */
@@ -279,7 +279,7 @@ M.on(t => {
     M.vis($('#rr'), t, T0('R3') - 0.1, 1e9, { dx: 60, dy: 0 });
     ['d0', 'd1', 'd2', 'd3', 'd4'].forEach((id, i) => M.vis($('#' + id), t, tDn[i] - 0.1, 1e9, POP));
     const d4 = M.io((t - wt('R4', 'density')) / 0.3); $('#d4').style.background = mix(C.soft, C.ink, d4); $('#d4').style.color = mix(C.ink, '#FFFFFF', d4);
-    M.vis($('#d0t'), t, wt('R3', 'M') - 0.1, 1e9, POP); M.vis($('#d2t'), t, wt('R3', 'cubed') - 0.1, 1e9, POP);
+    M.vis($('#d0t'), t, wt('R3', 'Mass') + 0.3, 1e9, POP); M.vis($('#d2t'), t, wt('R3', 'cubed') - 0.1, 1e9, POP);
     PUC.write($('#dF'), t, wt('R4', 'over') - 0.2, 0.9); M.vis($('#rrP'), t, wt('R4', 'negative') - 0.1, 1e9, POP);
   }
 
@@ -296,16 +296,16 @@ M.on(t => {
   if (kOn) {
     const out = OUT('K3');
     M.vis($('#kb'), t, tK1 + 0.1, out, { dx: -60, dy: 0, ...o });
-    M.vis($('#kbN'), t, wt('K1', 'five') - 0.1, 1e9, { dy: 20 }); M.vis($('#kbD'), t, wt('K1', 'L') - 0.1, 1e9, POP);
+    M.vis($('#kbN'), t, wt('K1', 'five') - 0.1, 1e9, { dy: 20 }); M.vis($('#kbD'), t, wt('K1', 'dimension') + 0.5, 1e9, POP);
     attr(kBar, 'width', (600 * M.o3((t - wt('K1', 'five')) / 0.8)).toFixed(1));
-    M.vis($('#kbP'), t, wt('K1', 'L') + 0.3, 1e9, POP);
+    M.vis($('#kbP'), t, wt('K1', 'dimension') + 0.9, 1e9, POP);
     M.vis($('#kd'), t, T0('K2') - 0.1, out, { dx: 60, dy: 0, ...o });
-    M.vis($('#kdN'), t, wt('K2', 'five') - 0.1, 1e9, { dy: 20 }); M.vis($('#kdD'), t, wt('K2', 'T') - 0.1, 1e9, POP);
+    M.vis($('#kdN'), t, wt('K2', 'five') - 0.1, 1e9, { dy: 20 }); M.vis($('#kdD'), t, wt('K2', 'dimension') + 0.5, 1e9, POP);
     const hu = M.o3((t - wt('K2', 'five')) / 1.0), ha = hu * 5 / 60 * 2 * Math.PI;
     attr(kHand, 'x2', (CK[0] + 62 * Math.sin(ha)).toFixed(1)); attr(kHand, 'y2', (CK[1] - 62 * Math.cos(ha)).toFixed(1));
     attr(kArc, 'd', hu > 0.01 ? `M${CK[0]},${CK[1]} L${CK[0]},${CK[1] - 62} A62,62 0 0 1 ${(CK[0] + 62 * Math.sin(ha)).toFixed(1)},${(CK[1] - 62 * Math.cos(ha)).toFixed(1)} Z` : '');
     M.vis(kTT, t, wt('K2', 'seconds') + 0.1, 1e9, { dy: 0 });
-    M.vis($('#kdP'), t, wt('K2', 'T') + 0.3, 1e9, POP);
+    M.vis($('#kdP'), t, wt('K2', 'dimension') + 0.9, 1e9, POP);
     M.vis($('#kNo'), t, wt('K2', 'never') - 0.1, out, { ...POP, sc: 0.6, outDur: 0.3, ody: 0 });
     M.vis($('#th1'), t, tK3 + 0.05, OUT('C1'), { dy: 36, ...o });
     th1(t, { tin: tK3, tOpts: wt('K3', 'Can') + 0.3, tCount: T1('K3') + 0.05, dur: 3, tAns: T0('K4') - 0.02, tWhy: wt('K4', 'Both') });
@@ -340,8 +340,8 @@ M.on(t => {
     const pos = tt => 140 + 300 * M.clamp((tt - m0) / 2.4);
     const bx = pos(t); attr(wBox, 'x', bx.toFixed(1)); attr(wBt, 'x', (bx + 70).toFixed(1)); attr(wMt, 'x', (bx + 70).toFixed(1));
     wGh.forEach((g, k) => { const gx = pos(t - 0.2 * (k + 1)); attr(g, 'x', gx.toFixed(1)); g.style.opacity = Math.abs(gx - bx) > 4 ? [0.3, 0.2, 0.12][k] : 0; });
-    const vl = 140 * M.io((t - m0 + 0.1) / 0.4); wV.set(bx + 70, 200, bx + 70 + vl, 200); attr(wVl, 'x', (bx + 80 + vl).toFixed(1)); attr(wVl, 'y', 210); wVl.style.opacity = vl > 30 ? 1 : 0;
-    M.vis(wMt, t, tW[0], 1e9, { dy: 0 }); attr(wVt, 'x', (bx + 70 + vl / 2).toFixed(1)); M.vis(wVt, t, tW[1] + 0.3, 1e9, { dy: 0 });
+    const vl = 140 * M.io((t - m0 + 0.1) / 0.4); wV.set(bx + 150, 280, bx + 150 + vl, 280); attr(wVl, 'x', (bx + 160 + vl).toFixed(1)); attr(wVl, 'y', 290); wVl.style.opacity = vl > 30 ? 1 : 0;
+    M.vis(wMt, t, tW[0], 1e9, { dy: 0 }); attr(wVt, 'x', (bx + 150 + vl / 2).toFixed(1)); M.vis(wVt, t, tW[1] + 0.3, 1e9, { dy: 0 });
     M.vis($('#wc'), t, tW[3] + 0.2, 1e9, POP); $('#wc').style.left = (392 - $('#wc').offsetWidth / 2) + 'px';
   }
 
