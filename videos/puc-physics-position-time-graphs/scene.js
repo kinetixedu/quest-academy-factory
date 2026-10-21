@@ -214,7 +214,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 28', topic: 'Where does the a
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [cT1 - 0.2, 1.1, 1220, 560], [cB - 0.3, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [cT1 - 0.2, 1.06, 960, 540], [cB - 0.3, 1, 960, 540]]);
 
 /* ---------- frame ---------- */
 M.on(t => {
@@ -328,7 +328,7 @@ M.on(t => {
     attr(tan, 'x1', cG.X(p0[0]).toFixed(1)); attr(tan, 'y1', cG.Y(p0[1]).toFixed(1)); attr(tan, 'x2', cG.X(p1[0]).toFixed(1)); attr(tan, 'y2', cG.Y(p1[1]).toFixed(1));
     tan.style.opacity = tv; cDt(t >= cT1 && t < cB ? ts : sec, xS(t >= cT1 && t < cB ? ts : sec), t > cA - 0.2);
     M.vis($('#cro'), t, cT1 + 0.4, 1e9, { dy: 10 });
-    M.setT($('#ct'), ts.toFixed(1)); M.setT($('#cv'), vS(ts).toFixed(1));
+    const tR = Math.round(ts * 10) / 10; M.setT($('#ct'), tR.toFixed(1)); M.setT($('#cv'), vS(tR).toFixed(1));   // v from the exact piecewise formula at the shown t
     M.vis($('#th2'), t, tC6 + 0.05, OUT('W1'), { dy: 36, ...o });
     th2(t, { tin: tC6, tOpts: wt('C6', 'is') - 0.1, tCount: T1('C6') + 0.05, dur: 3, tAns: T0('C7') - 0.02, tWhy: wt('C7', 'tangent') });
   }
