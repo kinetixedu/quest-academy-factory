@@ -119,4 +119,13 @@ Syllabus notes (verified 20 Oct 2026): relative velocity (1D and 2D) is not in t
 | 70 | Apparent Weight and Weightlessness | CH 4 LAWS OF MOTION | Diya | a hospital lift makes her feel heavier, then lighter |
 
 ## Canon added by episodes
-(lead adds recurring facts reported by subagents here)
+Binding for Eps 38 onward (earlier episodes stay as made):
+- Colours: velocity v, v-bar and speed-type readouts on a v graph = blue #2F6FEB; displacement, position x, distance travelled and area under a v-t graph = violet #7A4FE0; acceleration a, g, change in velocity = red #D64545; force F and every error term (delta) = orange #D9731A; energy/work = teal #0E8F8F; time t, numbers, magnitudes = ink #16213E; angle theta = gold #B7791F.
+- Vectors (Ch 3+): first vector A and x component / i-hat = blue; second vector B, y component / j-hat and the scaled vector lambda A = violet; resultant R = ink; k-hat = gold. When a vector IS a physical quantity, its physics colour wins (a velocity vector is blue, a force is orange).
+- Angle theta between two vectors is always measured tail to tail.
+- Aarav's standard straight-line ride: 0 to 6 m/s in 4 s (a = 1.5 m/s^2), cruise 6 m/s for 4 s, brake to rest in 3 s (a = -2 m/s^2); 45 m in total. His bike cruise is 18 km/h = 5 m/s in Ch 1-2 hooks. East is positive; home or the college gate is x = 0.
+- Aarav's 2D ride (Ch 3): 3 km east then 4 km north, 7 km ridden, 5 km from the gate. Already used by Eps 32 and 34; later episodes pick a different 2D example.
+- NCERT note (Ch 2): the rationalised text dropped path length vs displacement and average speed vs average velocity; they stay in the JEE Main syllabus. Never say "NCERT says" for them.
+- Camera push-ins max 1.06x, centred (960, 540), so the header and readout are never cropped. PUC.think "why" lines under about 65 characters. Wrap any SVG group animated with M.vis in an outer g (M.vis overwrites transform).
+- MCQs must not repeat an idea used by another episode's MCQ: grep videos/puc-physics-*/script.txt Q lines first. Used so far include: speed ratio of x-t slopes at 30/60 degrees, v from a-t areas plus u, distance vs displacement for v from +8 to -4, three-quarter circle ratio, half circle average speed vs velocity, trains crossing, ball from a 20 m tower, A-B from |A+B|, opposite vector of given magnitude, 6 E / 8 N / 6 W ratio, -A with a scale, component with tan^-1(5/12), vector of 15 N along 6i+8j.
+- Ghost chip "ERROR DRAWN 10x LARGER" (or similar) when an error band is drawn bigger than scale.
