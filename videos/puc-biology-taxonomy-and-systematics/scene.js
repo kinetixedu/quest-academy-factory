@@ -158,7 +158,7 @@ const vb = $('#vbS'), VT = [];
 const vbG = ['GROUP A', 'GROUP B', 'GROUP C', 'GROUP D'].map((s, i) => txt(vb, [150, 310, 474, 634][i], 180, s, { 'text-anchor': 'middle', 'font-size': 15, 'letter-spacing': 1.2, 'font-weight': 600, fill: C.ink }));
 const vbA = [mk(vb, 'circle', { cx: 230, cy: 300, r: 12, fill: GOLD, stroke: BR, 'stroke-width': 2.5 }), mk(vb, 'circle', { cx: 392, cy: 380, r: 12, fill: GOLD, stroke: BR, 'stroke-width': 2.5 })];
 const vbR = mk(vb, 'rect', { x: 100, y: 150, width: 260, height: 160, rx: 16, fill: 'none', stroke: C.ac, 'stroke-width': 4, 'stroke-dasharray': '10 8' });
-const th1 = PUC.think($('#th1'), { q: 'A scientist draws a tree showing which groups share a common ancestor. Taxonomy, or systematics?', opts: ['Taxonomy', 'Systematics'], right: 1, why: 'Systematics. It adds evolutionary relationships to identifying, naming and grouping.' });
+const th1 = PUC.think($('#th1'), { q: 'A scientist draws a tree showing which groups share a common ancestor. Taxonomy, or systematics?', opts: ['Taxonomy', 'Systematics'], right: 1, why: 'Systematics. It adds evolutionary relationships to taxonomy.' });
 
 /* ---------- statement ---------- */
 $('#stF').innerHTML = '<span class="lad">characterise · identify · classify · <b>name</b> &nbsp;+&nbsp; systematics adds evolution</span>';

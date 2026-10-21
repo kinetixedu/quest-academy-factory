@@ -267,7 +267,7 @@ M.on(t => {
   const lOn = t >= tL1 - 0.1 && t < tC1 + 0.1; M.hide($('#sL'), !lOn);
   if (lOn) {
     M.vis($('#lp'), t, tL1 + 0.05, OUT('C1'), { dy: 36, ...o });
-    const tl = [wt('L3', 'grow'), wt('L3', 'disappear') - 0.6, wt('L3', 'disappear')];
+    const tl = [0, wt('L2', 'polluted') + 0.3, wt('L2', 'polluted')];
     LPN.forEach((_, i) => M.vis($('#lpn' + i), t, tL1 + 0.3 + i * 0.15, 1e9, { dy: 16 }));
     LPL.forEach((p, i) => { const fade = i === 0 ? 0 : M.io((t - tl[i]) / 0.8);
       p.pl.forEach((l, k) => { const keep = l.on ? 1 : 1 - fade; M.hide(l.g, keep <= 0.01); attr(l.g, 'transform', `translate(${l.x} ${l.y}) scale(${keep.toFixed(3)}) translate(${-l.x} ${-l.y})`); });
