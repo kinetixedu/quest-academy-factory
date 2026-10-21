@@ -1,0 +1,53 @@
+H1|0.4|A map says three blocks east. A friend says four steps north. A drone climbs five metres up.
+H2|0.45|Every instruction has two parts. How much, and which way.
+H3|0.35|At college, Aarav gives a new student directions to the library.
+H4|0.5|Three steps east, then four steps north. But what exactly is one step east?
+H5|0.65|That tiny arrow has a name. It is the building block of every vector.
+P1|0.35|So what is a unit vector?
+P2|0.4|A unit vector is a vector with a size of exactly one. It only shows a direction.
+P3|0.4|It has no unit and no dimension. It is a pure pointer.
+P4|0.4|We write it with a small hat on top. Say it as A hat.
+P5|0.35|Three special unit vectors point along the axes.
+P6|0.65|i hat along x. j hat along y. And k hat along z, for three dimensions.
+S1|0.35|Let's build a vector out of unit steps in our motion notebook.
+S2|0.4|Take three steps of i hat. That is three units along x.
+S3|0.4|Now four steps of j hat. That is four units along y.
+S4|0.4|Join start to end. The vector is three i hat plus four j hat.
+S5|0.4|Now let's stretch this arrow and watch its unit vector.
+S6|0.5|The arrow grows from five to ten. But its unit vector stays at one. Look at the graph. One line climbs. The other stays flat.
+S7|0.35|Slow it down and turn the arrow.
+S8|0.65|The unit vector turns with it, always with its tip on a circle of radius one. Only the direction changes.
+D1|0.35|Now, how do we find a unit vector? One step at a time.
+D2|0.75|Step one. Divide the vector by its own size. A hat equals vector A divided by A.
+D3|0.75|Step two. Check its size. A divided by A is one. So A hat really is a unit vector.
+D4|0.75|Step three. The units cancel too. Metres divided by metres leave nothing. So a unit vector has no unit.
+D5|0.75|Step four. Turn it around. Any vector equals its size times its unit vector. A equals A times A hat.
+D6|0.75|In components, A equals A x i hat plus A y j hat. Size times direction, along each axis.
+T1|0.7|Remember this. A vector is a size times a direction, and the direction is the unit vector.
+C1|0.35|Let's compare two arrows side by side.
+C2|0.4|The vector three i plus four j. Its size is five.
+C3|0.6|Its unit vector is zero point six i plus zero point eight j. Same direction, but its size is one.
+C4|3.2|Now you try. Is two i hat a unit vector? Pause and decide.
+C5|0.65|No! Two i hat points along x, but its size is two. A unit vector must have a size of exactly one.
+K1|3.2|One more. Is i hat plus j hat a unit vector? Pause and think.
+K2|0.65|No! Its size is the square root of two, about one point four one. Divide by root two to make it a unit vector.
+W1|0.35|Now, one worked example.
+W2|0.5|Aarav walks three metres east and four metres north. Find the unit vector of his displacement.
+W3|0.75|His displacement is three i hat plus four j hat, in metres.
+W4|0.75|Its size is the square root of three squared plus four squared. That is five metres.
+W5|0.75|Divide by five. The unit vector is zero point six i hat plus zero point eight j hat.
+W6|0.65|Check: zero point six squared plus zero point eight squared is one. So its size is one.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students write the unit vector with a unit, like zero point six i plus zero point eight j metres.
+X3|0.65|But the metres cancel when you divide by the size. A unit vector has no unit. The unit stays with the size.
+E1|0.6|Where is this asked? Mostly inside bigger questions: find a vector of a given size along a given direction.
+Q1|5.4|Exam level now. Vector P is six i plus eight j newtons. Vector Q has a size of fifteen newtons along P. What is Q? Pause and solve.
+A1|0.5|The answer is B. Nine i plus twelve j newtons.
+A2|0.5|The size of P is the square root of thirty six plus sixty four. That is ten.
+A3|0.6|So P hat is zero point six i plus zero point eight j. Multiply by fifteen. Q is nine i plus twelve j.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why does a unit vector have no unit?
+Y3|0.9|Two. How do you find the unit vector of any vector?
+Y4|1.1|Three. Is i hat plus j hat a unit vector, and why?
+N1|0.3|Next time: a point on a map has a position. When it moves, how do we write the change as a vector? Position and displacement vectors.

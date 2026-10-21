@@ -1,0 +1,128 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 37 - Unit Vectors</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 37: unit vectors (Motion notebook) ===== */
+:root{--vx:#2F6FEB;--vy:#7A4FE0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.vx{color:var(--vx)}.vy{color:var(--vy)}
+.sv{position:absolute;left:0;top:0}
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .jv{position:absolute;right:28px;top:30px;display:flex;gap:10px}
+.jr .jv span{height:56px;padding:0 16px;border-radius:10px;background:#fff;display:inline-flex;align-items:center;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+.wq{position:absolute;top:494px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap}
+#pdef{position:absolute;left:36px;top:76px;width:712px;font:600 32px/1.35 Poppins}
+.pr{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--soft)}
+.pr .pk{position:absolute;left:24px;top:14px;font-size:40px;white-space:nowrap}
+.pr .pw{position:absolute;left:150px;top:24px;font:600 24px Poppins;white-space:nowrap}
+#roG{row-gap:4px}
+#roG .v{font-size:32px}
+#roG .k{font-size:28px}
+.stag{position:absolute;height:40px;padding:0 14px;border-radius:8px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.leg{position:absolute;top:22px;display:flex;gap:10px}
+.leg span{height:36px;padding:0 12px;border-radius:8px;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';white-space:nowrap;background:var(--soft)}
+.st{position:absolute;left:36px;width:712px;height:110px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:40px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:64px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.sbv{position:absolute;left:36px;top:96px;width:712px;height:292px;border-radius:14px;background:var(--soft)}
+.sbl{position:absolute;left:36px;font-size:36px;white-space:nowrap}
+#wq{position:absolute;left:36px;top:70px;font:600 28px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:32px}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#mq .mq{font-size:30px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+#sF .fcard .fl{font-size:42px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 3 MOTION IN A PLANE</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Unit <span class="acc">Vectors</span></div>
+    <div id="sub">The arrow of length one</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">EVERY INSTRUCTION · TWO PARTS</div><div class="ghost" id="exH" style="right:36px;top:18px">EXAMPLE FIGURES</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">How much + which way</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · DIRECTIONS AT COLLEGE</div>
+        <div id="hdF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-corridor.jpg" style="position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px">
+        <div id="wqs"></div></div>
+    </div>
+
+    <div id="sP">
+      <div class="card full" id="pd"><div class="lbl" style="left:36px;top:30px">A UNIT VECTOR</div>
+        <div id="pdef">Size exactly 1. It only shows a direction.</div>
+        <div class="pillp" id="pd0" style="left:36px;top:196px">No unit</div><div class="pillp" id="pd1" style="left:196px;top:196px">No dimension</div><div class="pillp ac" id="pd2" style="left:418px;top:196px">A pure pointer</div>
+        <div class="lbl" id="pdL" style="left:36px;top:300px">WRITTEN WITH A HAT</div>
+        <div class="fx" id="pdF" style="left:36px;top:340px;font-size:64px"></div>
+        <div class="sm" id="pdS" style="position:absolute;left:220px;top:372px;font:500 26px Poppins;color:var(--mute);white-space:nowrap">read "A hat"</div></div>
+      <div class="card rf" id="ps"><div class="lbl" style="left:36px;top:30px">THREE SPECIAL UNIT VECTORS</div><svg class="sv" id="psS" width="784" height="580"></svg></div>
+    </div>
+
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">SIMULATION · UNIT STEPS</div>
+        <div class="stag" id="slo" style="right:36px;top:20px">SLOW-MO REPLAY · 0.25x</div>
+        <svg class="sv" id="simS" width="784" height="580"></svg></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro" id="roG" style="left:36px;top:66px;width:712px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">SIZE VS STRETCH</div>
+        <div class="leg" id="leg" style="right:36px"><span id="lg0"></span><span class="a" id="lg1" style="color:var(--ac)"></span></div>
+        <svg class="sv" id="grS" width="784" height="274"></svg></div>
+    </div>
+
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">FINDING A UNIT VECTOR · 4 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">SAME DIRECTION · SIZE 1</div><svg class="sv" id="trS" width="784" height="580"></svg></div>
+    </div>
+
+    <div id="sC">
+      <div class="card full" id="c0"><div class="lbl" style="left:36px;top:30px">THE VECTOR · SIZE 5</div><div class="sbv"><svg class="sv" id="c0S" width="712" height="292"></svg></div>
+        <div class="sbl" id="c0a" style="top:416px"></div><div class="sbl" id="c0b" style="top:486px"></div></div>
+      <div class="card rf" id="c1"><div class="lbl" style="left:36px;top:30px">ITS UNIT VECTOR · SIZE 1</div><div class="sbv"><svg class="sv" id="c1S" width="712" height="292"></svg></div>
+        <div class="sbl" id="c1a" style="top:416px"></div><div class="sbl" id="c1b" style="top:486px"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">Aarav walks 3 m east and then 4 m north. Find the unit vector of his displacement.</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">SIMULATION · THE WALK</div><svg class="sv" id="wrS" width="784" height="580"></svg></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2" style="font-size:74px">A vector = a <span class="acc">size</span> × a direction.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
