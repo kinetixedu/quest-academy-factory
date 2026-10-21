@@ -1,0 +1,62 @@
+H1|0.4|A recipe for two, made for four. A photo zoomed to double size. A car going twice as fast, the same way.
+H2|0.45|Each time, one number scales something up, but its shape or direction stays the same.
+H3|0.35|Aarav cruises north at six metres per second. His little cousin rides beside him at three.
+H4|0.5|Same direction, double the speed. So is Aarav's velocity two times his cousin's? And what would minus two times mean?
+H5|0.65|By the end, you will know what a plain number does to an arrow.
+P1|0.35|So what does a scalar do to a vector?
+P2|0.4|A scalar is a plain number, like two, or half, or minus one.
+P3|0.4|Multiply vector A by a number lambda, and you get a new vector, lambda A.
+P4|0.4|Its size becomes lambda times the size of A.
+P5|0.65|If lambda is positive, it points the same way as A. If lambda is negative, it points the opposite way.
+S1|0.35|Let's see it on our motion notebook.
+S2|0.4|Here is vector A, three units long, pointing north east.
+S3|0.4|Turn the dial to two. The arrow stretches to six units, in the same direction.
+S4|0.4|Turn it to one half. It shrinks to one and a half units. Still the same direction.
+S5|0.5|Now slide lambda below zero. Watch closely. At zero, it shrinks to a point: the zero vector.
+S6|0.5|Past zero, it flips around. At minus one, it is the same length, but pointing south west.
+S7|0.65|The graph is a V shape. The size depends only on the size of lambda, not its sign.
+D1|0.35|Let's write the rules one step at a time.
+D2|0.75|Step one. The size. The magnitude of lambda A equals the size of lambda, times the magnitude of A.
+D3|0.75|Step two. The direction. Lambda above zero keeps it. Lambda below zero reverses it.
+D4|0.75|Step three. Lambda equals minus one gives minus A.
+D5|0.75|Step four. In components, every part is multiplied. Two times two i plus three j is four i plus six j.
+T1|0.7|Remember this. A positive number stretches or shrinks the arrow. A negative number also flips it.
+C1|0.35|Now, why does this matter so much in physics?
+C2|0.4|Because many laws are just a scalar times a vector.
+C3|0.4|Displacement equals time times velocity. So displacement points the same way as velocity.
+C4|0.4|Force equals mass times acceleration. Mass is positive, so force and acceleration always point the same way.
+C5|0.65|And momentum equals mass times velocity. The scalar sets the size, the vector sets the direction.
+R1|0.35|Here is the reasoning link by link, for Aarav and his cousin.
+R2|0.4|His cousin's velocity is three metres per second, north.
+R3|0.4|Aarav goes in the same direction, so the number in front must be positive.
+R4|0.6|His speed is six, two times three. So Aarav's velocity is two times his cousin's.
+K1|0.4|Side by side. Two times A is twice as long, and points the same way as A.
+K2|0.6|Minus two times A is also twice as long, but points the opposite way.
+K3|3.2|Now you try. Do two A and minus two A have the same magnitude? Pause the video and decide.
+K4|0.65|Yes! Both are twice as long as A. The minus sign changes only the direction, never the size.
+V1|0.35|One more idea. A scalar can even change the unit.
+V2|0.4|Velocity in metres per second, times a time in seconds, gives a displacement in metres.
+V3|0.4|Aarav cruises at six metres per second north for four seconds.
+V4|0.6|Four seconds times six metres per second is twenty four metres, north. Same direction, but now a displacement.
+V5|3.2|Your turn. Multiply a vector by zero point five. Does its direction change? Pause and decide.
+V6|0.65|No. Zero point five is positive, so the arrow only shrinks. Only a negative number flips it.
+W1|0.35|Now, one worked example.
+W2|0.5|Vector A is three i plus four j. Find minus two A, and its magnitude.
+W3|0.75|Multiply each part by minus two.
+W4|0.75|Minus two times three i is minus six i. Minus two times four j is minus eight j.
+W5|0.75|So minus two A is minus six i minus eight j.
+W6|0.65|Its magnitude is the root of thirty six plus sixty four. Root one hundred is ten: two times five.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think that multiplying by a negative number makes the magnitude negative.
+X3|0.65|But a magnitude is a length, never negative. The size of minus three A is three times the size of A. Only the direction flips.
+E1|0.6|Where is this asked? Inside bigger problems: a vector parallel or opposite to a given one.
+Q1|5.4|Exam level now. A is two i minus j plus two k. Which vector has magnitude six and points opposite to A? Pause and solve.
+A1|0.5|The answer is C.
+A2|0.5|The size of A is the root of four plus one plus four, which is three.
+A3|0.6|We need size six, so the factor is two. Opposite, so it is minus two. Minus two A is the answer.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. What happens to a vector when you multiply it by minus one?
+Y3|0.9|Two. Is the magnitude of minus five A positive or negative?
+Y4|1.1|Three. Why do force and acceleration always point the same way?
+N1|0.3|Next time: how can one slanted arrow be split into two parts? Resolution of vectors into components.

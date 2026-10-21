@@ -1,0 +1,170 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 35 - Multiplication of Vectors by Scalars</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 35: multiplication of vectors by scalars (Motion notebook, lambda dial) ===== */
+:root{--u:#7A4FE0;--f:#D9731A}
+.L784{left:160px}.R784{left:976px}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.big{position:absolute;font:700 44px Poppins;letter-spacing:-.02em;white-space:nowrap}
+.sm{position:absolute;font:500 26px Poppins;white-space:nowrap;color:var(--ink2)}
+.u{color:var(--u)}.f{color:var(--f)}.a{color:var(--ac)}
+/* vectors: A blue, B violet, resultant R ink, change in velocity red */
+:root{--A:#2F6FEB;--B:#7A4FE0;--R:#16213E;--dv:#D64545}
+.cA{color:var(--A)}.cB{color:var(--B)}.cR{color:var(--R)}.cD{color:var(--dv)}
+/* title card cases */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr>svg{position:absolute;right:20px;top:10px}
+#note{position:absolute;left:432px;top:300px;width:270px;height:136px;background:#FFFDF6;border-radius:6px;box-shadow:0 8px 20px rgba(22,33,62,.22);padding:18px 22px}
+#note .nt1{font:600 15px 'IBM Plex Mono';letter-spacing:.1em;color:var(--mute)}
+#note .nt2{font:600 48px 'IBM Plex Mono';color:var(--ink);margin-top:6px;white-space:nowrap}
+.wq{position:absolute;top:494px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap}
+.wq b{font-family:'IBM Plex Mono'}
+/* svg labels */
+.vl{font-family:Poppins;font-weight:700;font-size:34px}
+/* readout 2 x 2 */
+.ro .v{font-size:34px}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:112px}
+.st .n{position:absolute;left:0;top:2px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:36px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:62px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+.chk{position:absolute;top:500px;height:52px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+.fl2{position:absolute;left:36px;font-size:40px;white-space:nowrap}
+.fr{position:absolute;left:36px;font-size:36px;white-space:nowrap}
+.frt{position:absolute;left:36px;font:500 28px Poppins;white-space:nowrap}
+/* side by side */
+.sbv{position:absolute;left:36px;top:74px;font:700 30px Poppins;white-space:nowrap}
+/* worked */
+#wq{position:absolute;left:36px;top:70px;font:600 30px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:34px}
+.bnd{position:absolute;left:36px;top:470px;width:712px;height:80px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font-size:27px}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:32px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+.slo{position:absolute;left:36px;top:74px;height:40px;padding:0 14px;border-radius:8px;background:var(--red);color:#fff;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+
+.dialT{position:absolute;left:36px;top:470px;width:712px;height:80px}
+.lam{position:absolute;height:52px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 28px 'IBM Plex Mono';white-space:nowrap}
+.rule{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.rule .rh{position:absolute;left:24px;top:18px;font:700 28px Poppins;white-space:nowrap}
+.rule .rs{position:absolute;left:24px;top:64px;font:500 24px Poppins;color:var(--ink2);white-space:nowrap}
+.rule>svg{position:absolute;right:20px;top:20px}
+.law{position:absolute;left:36px;width:1528px;height:128px;border-radius:14px;background:var(--soft)}
+.law .lf{position:absolute;left:28px;top:30px;font-size:48px;white-space:nowrap}
+.law .lw{position:absolute;left:330px;top:44px;font:500 28px Poppins;color:var(--ink2);white-space:nowrap}
+.law>svg{position:absolute;right:28px;top:14px}
+.cb{position:absolute;height:72px;padding:0 22px;border-radius:14px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 28px Poppins;white-space:nowrap;left:36px}
+.cb .mono{font-weight:600}
+.ctag{position:absolute;left:36px;height:36px;padding:0 12px;border-radius:8px;display:inline-flex;align-items:center;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap;background:var(--ac2);color:var(--ac)}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 3 MOTION IN A PLANE</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Scaling a <span class="acc">Vector</span></div>
+    <div id="sub">Explained with one number dial</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE CASES · ONE NUMBER SCALES IT</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Size changes, the shape stays</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV AND HIS COUSIN</div><div class="ghost" id="exH" style="right:100px;top:18px">EXAMPLE FIGURES</div>
+        <div id="hdF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg" style="position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px">
+        <div id="note"><div class="nt1">AARAV'S SPEED</div><div class="nt2">2 × 3 m/s</div></div>
+        <div id="wqs"></div></div>
+    </div>
+
+    <div id="sP">
+      <div class="card full" id="pq"><div class="lbl" style="left:36px;top:30px">A SCALAR = A PLAIN NUMBER</div>
+        <div class="lam" id="lm0" style="left:36px;top:84px">2</div><div class="lam" id="lm1" style="left:130px;top:84px">½</div><div class="lam" id="lm2" style="left:224px;top:84px">−1</div>
+        <div class="fx" id="pqF" style="left:36px;top:200px;font-size:60px"></div>
+        <div class="fx" id="pqG" style="left:36px;top:330px;font-size:46px"></div>
+        <div class="pillp ink" id="pqP" style="left:36px;top:490px">λ sets the size and the sense</div></div>
+      <div class="card rf" id="pm"><div class="lbl" style="left:36px;top:30px">THE SIGN OF λ DECIDES THE DIRECTION</div>
+        <div class="rule" id="ru0" style="top:84px"><div class="rh">λ &gt; 0</div><div class="rs">same direction as A</div><svg id="ru0S" width="300" height="80"></svg></div>
+        <div class="rule" id="ru1" style="top:228px"><div class="rh" style="color:var(--red)">λ &lt; 0</div><div class="rs">opposite direction</div><svg id="ru1S" width="300" height="80"></svg></div>
+        <div class="rule" id="ru2" style="top:372px"><div class="rh">λ = 0</div><div class="rs">the zero vector: no size</div><svg id="ru2S" width="300" height="80"></svg></div></div>
+    </div>
+
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">SIMULATION · THE λ DIAL</div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="slo" id="slo">SLOW-MO REPLAY · 0.25x</div></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div>
+        <div class="ro" id="roA" style="left:36px;top:84px;width:330px"></div><div class="ro" id="roB" style="left:418px;top:84px;width:330px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">SIZE |λA| VS λ</div><svg id="grS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE RULES · 4 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">EVERY COMPONENT IS MULTIPLIED</div><svg id="drS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sC"><div class="card" id="cl" style="left:160px;top:270px;width:1600px;height:580px"><div class="lbl" style="left:36px;top:30px">LAWS THAT ARE A SCALAR × A VECTOR</div><div id="laws"></div></div></div>
+
+    <div id="sR">
+      <div class="card full" id="rs"><div class="lbl" style="left:36px;top:30px">SIMULATION · RIDING SIDE BY SIDE</div><svg id="rsS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">LINK BY LINK</div><div id="chn"></div></div>
+    </div>
+
+    <div id="sK">
+      <div class="card full" id="ka"><div class="lbl" style="left:36px;top:30px">2A · SAME WAY</div><svg id="kaS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="kaC" style="left:36px;top:490px">Twice as long, same direction</div></div>
+      <div class="card rf" id="ks"><div class="lbl" style="left:36px;top:30px">−2A · OPPOSITE WAY</div><svg id="ksS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="ksC" style="left:36px;top:490px">Twice as long, opposite direction</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sV">
+      <div class="card full" id="vs"><div class="lbl" style="left:36px;top:30px">SIMULATION · FOUR SECONDS NORTH</div><svg id="vsS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="ro" id="vro" style="left:430px;top:84px;width:318px"></div></div>
+      <div class="card rf" id="vr"><div class="lbl" style="left:36px;top:30px">A SCALAR CAN CHANGE THE UNIT</div><div class="ghost" id="exV" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <div class="fr" id="vr0" style="top:96px"></div><div class="fr" id="vr1" style="top:200px"></div><div class="fr" id="vr2" style="top:304px"></div>
+        <div class="pillp ink" id="vrP" style="left:36px;top:490px">Same direction, new quantity: a displacement</div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">Vector A = 3i + 4j. Find −2A and its magnitude.</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">ON THE GRID</div><svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tpS" width="520" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">A negative number also <span class="acc">flips</span> the arrow.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
