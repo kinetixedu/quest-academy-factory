@@ -211,7 +211,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 39', topic: 'One arrow hides 
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tSlow - 0.1, 1.06, 560, 520], [tSlow + SLOW + 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tSlow - 0.1, 1.06, 960, 540], [tSlow + SLOW + 0.2, 1, 960, 540]]);
 const labAt = (el, x1, y1, x2, y2, off = 26, f = 0.5) => { const mx = x1 + (x2 - x1) * f, my = y1 + (y2 - y1) * f, L = Math.hypot(x2 - x1, y2 - y1) || 1; attr(el, 'x', (mx - (y2 - y1) / L * off - 12).toFixed(1)); attr(el, 'y', (my + (x2 - x1) / L * off + 10).toFixed(1)); };
 const grow = (a, x1, y1, x2, y2, u) => a.set(x1, y1, x1 + (x2 - x1) * u, y1 + (y2 - y1) * u);
 let geo = null;
