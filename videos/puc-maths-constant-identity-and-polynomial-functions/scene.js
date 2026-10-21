@@ -141,7 +141,7 @@ const tLin = mk(ts, 'path', { d: ta.path(x => 2 * x + 1, -0.9, 2), fill: 'none',
 const tLt = txt(ts, ta.X(2) + 12, ta.Y(4.6), 'a straight line', { 'font-size': 18, fill: C.ok, 'font-weight': 700 });
 const where = PUC.where($('#wa'), { on: [], type: 'Spot constant, identity and polynomial functions inside bigger function questions.' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 800,
-  q: `${K(`f \\text{ is a polynomial with } f(x + 1) - f(x) = 2x + 3`)}<br>for all x, and ${K('f(0) = 1')}. Find ${K('f(2)')}.`,
+  q: `${K('f(x + 1) - f(x) = 2x + 3')} for all x<br>f is a polynomial, ${K('f(0) = 1')}. Find ${K('f(2)')}.`,
   opts: ['6', '8', '9', '10'], right: 2, optW: 474, optY: 300 });
 const so = PUC.solution($('#so'), [[K(`x = 0:\\ f(1) - f(0) = 3`)], [K(`f(1) = 4`)], [K(`x = 1:\\ f(2) - f(1) = 5`)], [K(`f(2) = 4 + 5 = 9`)], [K(`\\text{check: } f(x) = (x + 1)^2`)]], { y0: 100, dy: 96 });
 const tSo = [wt('A2', 'Put'), wt('A2', 'four'), wt('A3', 'Put'), wt('A4', 'Nine'), wt('A4', 'fact')];

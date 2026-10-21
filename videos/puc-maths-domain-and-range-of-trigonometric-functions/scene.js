@@ -193,15 +193,15 @@ const tB = wt('W4', 'Multiply'), tA = wt('W5', 'Add');
 
 /* ---------- X / Q / F: exam segment ---------- */
 const trap = PUC.trap($('#trap'), { wrong: K(`-1 \\le \\cos\\theta \\le 1 \;\\Rightarrow\; -1 \\le \\sec\\theta \\le 1`), right: K(`\\sec\\theta \\le -1\\ \\ \\text{or}\\ \\ \\sec\\theta \\ge 1`) + '&nbsp; (cos θ = 1/2 gives sec θ = 2)' });
-const ts = $('#tS'), XX = a => 40 + 520 * a / (2 * PI), XY = v => 137 - 38 * v;
+const ts = $('#tS'), XX = a => 40 + 520 * a / (2 * PI), XY = v => 146 - 34 * v;
 const tBand = mk(ts, 'rect', { x: 40, y: XY(1), width: 520, height: XY(-1) - XY(1), fill: C.redBg });
 const tBandT = txt(ts, 300, XY(0.45), 'sec θ never here', { 'text-anchor': 'middle', 'font-size': 20, 'font-weight': 700, fill: C.red });
 mk(ts, 'line', { x1: 30, y1: XY(0), x2: 570, y2: XY(0), stroke: C.ink, 'stroke-width': 2 });
 const tCos = mk(ts, 'path', { d: '', fill: 'none', stroke: CO, 'stroke-width': 3.5 });
 { let d = ''; for (let i = 0; i <= 80; i++) { const x = 2 * PI * i / 80; d += (i ? 'L' : 'M') + XX(x).toFixed(1) + ',' + XY(Math.cos(x)).toFixed(1); } attr(tCos, 'd', d); }
 const tSec = mk(ts, 'path', { d: '', fill: 'none', stroke: C.ink, 'stroke-width': 4, 'stroke-linejoin': 'round' });
-{ let d = '', pen = false; for (let i = 0; i <= 400; i++) { const x = 2 * PI * i / 400, v = 1 / Math.cos(x); if (Math.abs(v) > 3.2) { pen = false; continue; } d += (pen ? 'L' : 'M') + XX(x).toFixed(1) + ',' + XY(v).toFixed(1); pen = true; } attr(tSec, 'd', d); }
-const tLab = [txt(ts, 560, XY(-1) + 26, 'cos θ', { 'text-anchor': 'end', 'font-size': 18, 'font-weight': 700, fill: CO, 'font-family': 'Poppins', 'font-style': 'italic' }), txt(ts, XX(0.2), 20, 'sec θ', { 'font-size': 18, 'font-weight': 700, fill: C.ink, 'font-family': 'Poppins', 'font-style': 'italic' })];
+{ let d = '', pen = false; for (let i = 0; i <= 400; i++) { const x = 2 * PI * i / 400, v = 1 / Math.cos(x); if (Math.abs(v) > 3.05) { pen = false; continue; } d += (pen ? 'L' : 'M') + XX(x).toFixed(1) + ',' + XY(v).toFixed(1); pen = true; } attr(tSec, 'd', d); }
+const tLab = [txt(ts, 560, XY(-1) + 26, 'cos θ', { 'text-anchor': 'end', 'font-size': 18, 'font-weight': 700, fill: CO, 'font-family': 'Poppins', 'font-style': 'italic' }), txt(ts, XX(0.25), 40, 'sec θ', { 'font-size': 18, 'font-weight': 700, fill: C.ink, 'font-family': 'Poppins', 'font-style': 'italic' })];
 const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'PUC BOARDS'], type: 'Find the range of an expression built from sin θ and cos θ.' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 780,
   q: `How many integers lie in the range of<br>${K(`f(${TQ}) = 4\\,${SIN} - 3\\ ?`)}`, opts: ['8', '9', '10', '11'].map(s => K(s)), right: 1, optW: 474, optY: 300 });

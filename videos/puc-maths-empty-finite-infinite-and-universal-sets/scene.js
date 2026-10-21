@@ -76,7 +76,7 @@ const gVal = t => {
   if (t < tG5[1]) return 1; if (t < tG5[2]) return 2; if (t < tKeep) return 3;
   const seg = (a, b, va, vb) => Math.exp(Math.log(va) + (Math.log(vb) - Math.log(va)) * M.clamp((t - a) / (b - a)));
   if (t < tTh) return seg(tKeep, tTh, 3, 1000); if (t < tMi) return seg(tTh, tMi, 1000, 1e6); if (t < tBi) return seg(tMi, tBi, 1e6, 1e9);
-  return seg(tBi, tBi + 14, 1e9, 9.99e11);
+  return seg(tBi, tBi + 22, 1e9, 9.99e11);
 };
 const th2 = PUC.think($('#th2'), { q: 'The natural numbers less than one crore: finite or infinite?', opts: ['Finite', 'Infinite'], right: 0, why: 'Huge, but the counting stops at 9,999,999. Big is not the same as endless.' });
 
