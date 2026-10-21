@@ -1,0 +1,576 @@
+1
+00:00:00,450 --> 00:00:03,083
+A ruler tells you how long a pencil is.
+
+2
+00:00:03,083 --> 00:00:04,217
+Not its colour.
+
+3
+00:00:04,617 --> 00:00:07,439
+A thermometer reads
+temperature, not your mood.
+
+4
+00:00:07,439 --> 00:00:08,977
+Every tool has a limit.
+
+5
+00:00:09,427 --> 00:00:13,173
+Last time, Aarav used dimensions
+on the corridor swing.
+
+6
+00:00:13,173 --> 00:00:15,561
+Its time depends on length and g.
+
+7
+00:00:15,911 --> 00:00:19,463
+But his textbook says T
+equals two pi, root l by g.
+
+8
+00:00:19,463 --> 00:00:21,690
+Where did that two pi come from?
+
+9
+00:00:22,190 --> 00:00:24,017
+His method could not find it.
+
+10
+00:00:24,017 --> 00:00:26,802
+Today, see why, and
+what else it cannot do.
+
+11
+00:00:27,452 --> 00:00:28,643
+Quick reminder.
+
+12
+00:00:28,643 --> 00:00:31,090
+What does dimensional analysis use?
+
+13
+00:00:31,440 --> 00:00:33,491
+It looks only at dimensions.
+
+14
+00:00:33,491 --> 00:00:35,773
+Mass M, length L and time T.
+
+15
+00:00:36,123 --> 00:00:40,249
+It can check a formula, convert
+units, and even guess a formula.
+
+16
+00:00:40,599 --> 00:00:42,742
+But it never looks at plain numbers.
+
+17
+00:00:42,742 --> 00:00:44,035
+That is the trouble.
+
+18
+00:00:44,685 --> 00:00:48,011
+Let's test a real pendulum
+on our measuring bench.
+
+19
+00:00:48,361 --> 00:00:50,230
+A string half a metre long.
+
+20
+00:00:50,230 --> 00:00:52,976
+One swing takes one
+point four two seconds.
+
+21
+00:00:53,376 --> 00:00:54,795
+Make it one metre.
+
+22
+00:00:54,795 --> 00:00:57,419
+Now one swing takes about two seconds.
+
+23
+00:00:57,819 --> 00:00:59,205
+Make it two metres.
+
+24
+00:00:59,205 --> 00:01:01,129
+Two point eight four seconds.
+
+25
+00:01:01,529 --> 00:01:04,153
+Now divide the time by root l over g.
+
+26
+00:01:04,153 --> 00:01:06,916
+Every time, we get six point two eight.
+
+27
+00:01:07,316 --> 00:01:08,490
+That is two pi.
+
+28
+00:01:08,490 --> 00:01:12,786
+All three points sit on one straight
+line, and its slope is two pi.
+
+29
+00:01:13,436 --> 00:01:15,118
+Let's freeze one swing.
+
+30
+00:01:15,118 --> 00:01:16,143
+Slow motion.
+
+31
+00:01:16,493 --> 00:01:18,981
+At the bottom, the bob moves fastest.
+
+32
+00:01:18,981 --> 00:01:21,174
+Gravity pulls down the whole time.
+
+33
+00:01:21,174 --> 00:01:23,330
+The real swing knows the two pi.
+
+34
+00:01:23,930 --> 00:01:27,519
+Now let dimensional analysis
+try, one step at a time.
+
+35
+00:01:27,869 --> 00:01:28,769
+Step one.
+
+36
+00:01:28,724 --> 00:01:33,761
+Guess that T equals k, times l
+to the a, m to the b, g to the c.
+
+37
+00:01:34,511 --> 00:01:35,411
+Step two.
+
+38
+00:01:35,326 --> 00:01:36,798
+Write the dimensions.
+
+39
+00:01:36,798 --> 00:01:41,354
+L to the a, M to the b, and
+LT to the minus two, to the c.
+
+40
+00:01:42,104 --> 00:01:43,081
+Step three.
+
+41
+00:01:43,081 --> 00:01:44,440
+Match the powers.
+
+42
+00:01:44,440 --> 00:01:46,351
+Mass gives b equals zero.
+
+43
+00:01:46,351 --> 00:01:48,815
+Time gives c equals minus a half.
+
+44
+00:01:48,815 --> 00:01:51,002
+Length gives a equals a half.
+
+45
+00:01:51,752 --> 00:01:52,694
+Step four.
+
+46
+00:01:52,694 --> 00:01:55,163
+So T equals k, root l over g.
+
+47
+00:01:55,163 --> 00:01:57,166
+And here the method stops.
+
+48
+00:01:57,916 --> 00:01:59,172
+Why does it stop?
+
+49
+00:01:59,172 --> 00:02:00,371
+Follow the links.
+
+50
+00:02:00,721 --> 00:02:02,210
+k is a plain number.
+
+51
+00:02:02,210 --> 00:02:05,583
+A plain number has no mass,
+no length and no time.
+
+52
+00:02:05,983 --> 00:02:10,593
+So its dimension is M to the zero,
+L to the zero, T to the zero.
+
+53
+00:02:10,993 --> 00:02:14,355
+Multiply by two pi, by
+ten, or by one half.
+
+54
+00:02:14,355 --> 00:02:16,456
+The dimensions do not change.
+
+55
+00:02:16,856 --> 00:02:19,075
+So the method cannot tell them apart.
+
+56
+00:02:19,075 --> 00:02:22,245
+The two pi must come from
+experiment, or from theory.
+
+57
+00:02:22,895 --> 00:02:24,501
+That is limitation one.
+
+58
+00:02:24,501 --> 00:02:26,606
+It cannot find number constants.
+
+59
+00:02:27,106 --> 00:02:28,447
+Limitation two.
+
+60
+00:02:28,447 --> 00:02:30,843
+Two formulas, side by side.
+
+61
+00:02:31,243 --> 00:02:34,831
+On the left, s equals u
+t, plus half a t squared.
+
+62
+00:02:34,831 --> 00:02:36,417
+This is the real one.
+
+63
+00:02:36,817 --> 00:02:40,351
+On the right, s equals u
+t, plus two a t squared.
+
+64
+00:02:40,351 --> 00:02:42,313
+A two has replaced the half.
+
+65
+00:02:42,913 --> 00:02:44,151
+Pause and think.
+
+66
+00:02:44,151 --> 00:02:46,730
+Is the right one dimensionally correct?
+
+67
+00:02:46,730 --> 00:02:47,666
+Yes or no?
+
+68
+00:02:50,866 --> 00:02:51,766
+Yes!
+
+69
+00:02:51,374 --> 00:02:53,068
+Every term is a length.
+
+70
+00:02:53,068 --> 00:02:55,220
+But the formula is still wrong.
+
+71
+00:02:55,220 --> 00:02:57,262
+Dimensions cannot see the two.
+
+72
+00:02:57,912 --> 00:02:59,412
+Here is a sneakier case.
+
+73
+00:02:59,412 --> 00:03:01,915
+Work, and the turning
+effect called torque.
+
+74
+00:03:02,315 --> 00:03:04,566
+Work is force times distance moved.
+
+75
+00:03:04,566 --> 00:03:06,970
+Torque is force times the arm length.
+
+76
+00:03:07,370 --> 00:03:10,318
+Both give ML squared T to the minus two.
+
+77
+00:03:10,318 --> 00:03:13,023
+Can dimensional analysis tell them apart?
+
+78
+00:03:13,023 --> 00:03:14,324
+Pause and decide.
+
+79
+00:03:17,524 --> 00:03:18,424
+No!
+
+80
+00:03:17,988 --> 00:03:20,501
+Same dimensions, different quantities.
+
+81
+00:03:20,501 --> 00:03:23,035
+Matching never proves a formula right.
+
+82
+00:03:23,685 --> 00:03:24,970
+Limitation three.
+
+83
+00:03:24,970 --> 00:03:30,196
+It only builds products of powers, like
+l to the half, times g to the minus
+
+84
+00:03:30,196 --> 00:03:31,096
+half.
+
+85
+00:03:31,136 --> 00:03:35,024
+So it cannot build a sum, like
+u t plus half a t squared.
+
+86
+00:03:35,424 --> 00:03:38,634
+And it cannot build
+sine, log or e to the x.
+
+87
+00:03:38,634 --> 00:03:40,844
+Those need a pure number inside.
+
+88
+00:03:41,444 --> 00:03:42,702
+Limitation four.
+
+89
+00:03:42,702 --> 00:03:46,230
+In mechanics, we have only
+three base dimensions.
+
+90
+00:03:46,230 --> 00:03:47,457
+M, L and T.
+
+91
+00:03:47,807 --> 00:03:49,811
+That gives only three equations.
+
+92
+00:03:49,811 --> 00:03:52,972
+With four or more unknowns,
+the method gets stuck.
+
+93
+00:03:53,622 --> 00:03:54,687
+Remember this.
+
+94
+00:03:54,687 --> 00:03:56,977
+Wrong dimensions mean surely wrong.
+
+95
+00:03:56,977 --> 00:03:59,526
+Right dimensions mean only maybe right.
+
+96
+00:04:00,226 --> 00:04:01,961
+Now, one worked example.
+
+97
+00:04:02,311 --> 00:04:07,539
+A swing two point four five metres long
+takes three point one four seconds.
+
+98
+00:04:07,539 --> 00:04:08,439
+Find k.
+
+99
+00:04:08,816 --> 00:04:14,952
+From T equals k root l over g, k
+equals T, divided by root l over g.
+
+100
+00:04:15,702 --> 00:04:19,505
+l over g is two point four
+five, over nine point eight.
+
+101
+00:04:19,505 --> 00:04:21,507
+That is zero point two five.
+
+102
+00:04:22,257 --> 00:04:26,760
+The square root of zero point two
+five is zero point five seconds.
+
+103
+00:04:27,510 --> 00:04:31,034
+So k is three point one
+four over zero point five.
+
+104
+00:04:31,034 --> 00:04:32,574
+Six point two eight.
+
+105
+00:04:32,574 --> 00:04:34,641
+Two pi, found by measuring.
+
+106
+00:04:35,291 --> 00:04:36,756
+Now, the exam trap.
+
+107
+00:04:37,106 --> 00:04:41,582
+Many students think: the dimensions
+match, so the formula must be correct.
+
+108
+00:04:41,932 --> 00:04:42,832
+Wrong.
+
+109
+00:04:42,526 --> 00:04:45,624
+Matching dimensions only
+means it might be right.
+
+110
+00:04:45,624 --> 00:04:48,079
+A wrong number can still hide inside.
+
+111
+00:04:48,729 --> 00:04:50,100
+Where is this asked?
+
+112
+00:04:50,100 --> 00:04:51,554
+As statement questions.
+
+113
+00:04:51,554 --> 00:04:54,730
+Which formula can it derive,
+and which can it not?
+
+114
+00:04:55,330 --> 00:04:56,552
+Exam level now.
+
+115
+00:04:56,552 --> 00:05:01,700
+Which of these could dimensional analysis
+alone derive, apart from a constant?
+
+116
+00:05:01,700 --> 00:05:02,975
+Pause and solve.
+
+117
+00:05:08,375 --> 00:05:09,773
+The answer is B.
+
+118
+00:05:09,773 --> 00:05:12,505
+The pendulum period, root l over g.
+
+119
+00:05:13,005 --> 00:05:14,911
+A is a sum of two terms.
+
+120
+00:05:14,911 --> 00:05:16,481
+C has an exponential.
+
+121
+00:05:16,481 --> 00:05:17,644
+D has a sine.
+
+122
+00:05:18,144 --> 00:05:20,250
+Only B is a product of powers.
+
+123
+00:05:20,250 --> 00:05:23,239
+Even there, the two pi
+comes from experiment.
+
+124
+00:05:23,839 --> 00:05:25,298
+Here is your recap.
+
+125
+00:05:25,298 --> 00:05:26,797
+Screenshot this card.
+
+126
+00:05:29,997 --> 00:05:32,996
+Can you answer these three
+questions without help?
+
+127
+00:05:33,396 --> 00:05:34,296
+One.
+
+128
+00:05:33,936 --> 00:05:38,367
+Why can the method not find the
+two pi in the pendulum formula?
+
+129
+00:05:39,267 --> 00:05:40,167
+Two.
+
+130
+00:05:39,745 --> 00:05:42,294
+Work and torque have the same dimensions.
+
+131
+00:05:42,294 --> 00:05:43,933
+What does that tell you?
+
+132
+00:05:44,833 --> 00:05:45,733
+Three.
+
+133
+00:05:45,496 --> 00:05:50,438
+Why can the method not derive s
+equals u t, plus half a t squared?
+
+134
+00:05:51,538 --> 00:05:56,772
+Next time: is the extra zero in two
+fifty point zero grams worth anything?
+
+135
+00:05:56,772 --> 00:05:59,073
+Find out in significant figures.
