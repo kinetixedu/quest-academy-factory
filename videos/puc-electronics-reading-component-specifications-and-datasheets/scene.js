@@ -194,11 +194,11 @@ const sol = PUC.solution($('#so'), [[K(`${Ii}_{\\max} = \\sqrt{${Pp}/R}`)], [K(`
 const tSol = [wt('A2', 'Use'), wt('A3', 'That'), wt('A4', 'The'), wt('A4', 'About')];
 
 /* ================= F: formula card + coming up ================= */
-const fc = PUC.fcard($('#sF'), { x: 460, y: 248, w: 1000, h: 492, y0: 92, dy: 100, title: 'Specifications and datasheets · formula card', txt: [0, 0, 1, 1],
-  lines: [K(`${Pp} = ${Vv}${Ii} = \\dfrac{${Vv}^{2}}{R} = ${Ii}^{2}R`),
+const fc = PUC.fcard($('#sF'), { x: 460, y: 248, w: 1000, h: 492, y0: 92, dy: 104, title: 'Specifications and datasheets · formula card', txt: [0, 0, 1, 1],
+  lines: [K(`${Pp} = ${Vv}${Ii} = ${Vv}^{2}/R = ${Ii}^{2}R`),
     K(`${Vv}_{\\max} = \\sqrt{${Pp}R} \\qquad ${Ii}_{\\max} = \\sqrt{${Pp}/R}`),
     'Tolerance ±5 %: 1 kΩ can be 950 to 1050 Ω',
-    'Absolute maximum = never cross · above a set temperature, derate'] });
+    'Absolute maximum = never cross · derate when hot'] });
 const nx = PUC.next($('#sF'), { label: 'COMING UP', topic: 'More PUC Electronics soon - follow the playlist', y: 764 });
 
 /* ================= run ================= */
