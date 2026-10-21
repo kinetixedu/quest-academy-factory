@@ -25,7 +25,7 @@ $('#tsv').innerHTML = K(`\\{\\, ${xc('x')} : ${rc(`${xc('x')}\\ \\text{is an eve
 
 /* ---------- H: even numbers after 2 ---------- */
 const HR = [['4', '2 \\times 2'], ['6', '2 \\times 3'], ['8', '2 \\times 4']];
-$('#hrs').innerHTML = HR.map(([n, f], i) => `<div class="hr" id="hr${i}" style="top:${92 + i * 120}px"><div class="hx">${K(`${red(n)} = ${f}`)}</div><div class="hw">SPLITS BY 2 · NOT PRIME</div><div class="chip" style="right:22px;top:22px;background:${C.red}">${M.icon('x', 22, '#fff', 3)}OUT</div></div>`).join('');
+$('#hrs').innerHTML = HR.map(([n, f], i) => `<div class="hr" id="hr${i}" style="top:${92 + i * 120}px"><div class="hx">${K(`${red(n)} = ${f}`)}</div><div class="hw">NOT PRIME</div><div class="chip" style="right:22px;top:22px;background:${C.red}">${M.icon('x', 22, '#fff', 3)}OUT</div></div>`).join('');
 $('#hEm').innerHTML = K(`= \\{\\ \\ \\}`);
 const tHr = [wt('H2', 'Four'), wt('H2', 'Six'), wt('H2', 'Eight')];
 
@@ -39,7 +39,7 @@ const tray = mk(es, 'rect', { x: 456, y: 222, width: 292, height: 160, rx: 16, f
 const trL = txt(es, 474, 250, 'OUT', { 'font-size': 20, fill: C.red, 'font-weight': 600, 'letter-spacing': 2 });
 const EN = [4, 6, 8, 10, 12, 14], OSL = [[520, 300], [602, 300], [684, 300], [520, 354], [602, 354], [684, 354]];
 const eTok = EN.map((n, i) => { const pg = mk(es, 'g', {}), g = mk(pg, 'g', {}); const c = mk(g, 'circle', { r: 30, fill: '#fff', stroke: C.ink, 'stroke-width': 2.5 }); const tt = txt(g, 0, 9, n, { 'text-anchor': 'middle', 'font-size': 26, fill: C.ink, 'font-weight': 600 }); return { n, i, pg, g, c, tt }; });
-const eLab = txt(es, 392, 190, '', { 'text-anchor': 'middle', 'font-size': 20, fill: C.red, 'font-weight': 600 });
+const eLab = txt(es, 392, 416, '', { 'text-anchor': 'middle', 'font-size': 20, fill: C.red, 'font-weight': 600 });
 const tEt = [wt('E4', 'Four'), wt('E4', 'Six'), wt('E4', 'Eight'), wt('E4', 'ten'), wt('E4', 'twelve'), wt('E4', 'all') + 0.15];
 const EX = 116, ETX = i => 116 + i * 110, ETY = 120;
 const eTokP = (k, t) => { const u = M.io((t - tEt[k.i] - 0.25) / 0.5), [x2, y2] = OSL[k.i], x1 = ETX(k.i), y1 = ETY; return [x1 + (x2 - x1) * u, y1 + (y2 - y1) * u - 50 * Math.sin(Math.PI * u), u]; };
