@@ -1,0 +1,59 @@
+H1|0.4|A bus goes all around the city and back to its depot. A runner finishes four laps of the track.
+H2|0.45|Both travel a long way. And both end up exactly where they started.
+H3|0.35|Aarav rides his bicycle to the shop, one kilometre away, and comes straight back home.
+H4|0.5|His trip meter says two kilometres. But his physics teacher says he moved zero. Who is right?
+H5|0.65|Both of them. They measure two different things. Let's see which.
+P1|0.35|The first one is distance. Distance is the length of the actual path you travel.
+P2|0.45|Every bend and every turn counts. It only has a size, so distance is a scalar.
+P3|0.35|The second one is displacement. It is the straight arrow from where you start to where you end.
+P4|0.65|It has a size and a direction, so displacement is a vector. It does not care which path you took.
+S1|0.35|Let's watch one ride on a straight road. Home is at zero.
+S2|0.4|This time Aarav rides forward to the library, six hundred metres away.
+S3|0.4|Up to here, distance and displacement are both six hundred metres. They grow together.
+S4|0.4|Now he turns back and rides four hundred metres to his friend's house.
+S5|0.5|Watch the graph. Distance keeps climbing. Displacement starts to fall.
+S6|0.4|Let's replay the turn in slow motion.
+S7|0.65|The wheels keep rolling, so the path adds up. But the arrow from home gets shorter.
+S8|0.65|Final count. Distance is one thousand metres. Displacement is two hundred metres, forward.
+D1|0.35|Let's write this as a rule, one step at a time.
+D2|0.75|Step one. Distance s is the sum of every piece of the path. Six hundred plus four hundred. One thousand metres.
+D3|0.75|Step two. Displacement is final position minus starting position. Two hundred minus zero, two hundred metres.
+D4|0.75|Step three. So the size of the displacement is never more than the distance.
+T1|0.7|Remember this. Distance is the whole path. Displacement is the straight shortcut.
+C1|0.35|But why can distance never be smaller? Let's follow the reasoning, link by link.
+C2|0.4|Link one. Between two points, a straight line is the shortest path.
+C3|0.4|Link two. Displacement is exactly that straight line, from start to end.
+C4|0.4|Link three. Any real path is that line, or something longer with bends and turns.
+C5|0.6|So distance is always at least the size of displacement. Equal only on a straight path with no turning back.
+K1|0.4|Side by side. Distance is a scalar. It is never negative, and it never goes down.
+K2|0.6|Displacement is a vector. It can be positive, negative, or zero. Only the start and the end matter.
+K3|3.2|Now you try. Aarav cycles once around a round park and stops where he began. Is his displacement zero? Pause and decide.
+K4|0.65|Yes, zero! He ends where he started. But his distance is the whole way around the park.
+V1|0.35|Let's test this on a circle.
+V2|0.4|A dot moves around a circle of radius r. Violet arc: distance. Blue arrow: displacement.
+V3|0.4|After a quarter turn, the distance is pi r by two. The displacement is root two times r.
+V4|0.4|After half a turn, distance is pi r. Displacement is two r, straight across, its biggest value.
+V5|0.65|After a full turn, the distance is two pi r. The displacement drops back to zero.
+V6|3.2|Your turn. On any path, can the distance ever be less than the size of the displacement? Pause and decide.
+V7|0.65|Never! The displacement is the straight line, and nothing is shorter than a straight line.
+W1|0.35|Now, one worked example.
+W2|0.5|Aarav cycles half way around a round park of radius seventy metres. Find the distance and the displacement.
+W3|0.75|Distance is half the circumference. So s equals pi r.
+W4|0.75|With pi as twenty two by seven, s is twenty two by seven times seventy. Two hundred and twenty metres.
+W5|0.75|Displacement is the straight line across the park, the diameter. So it equals two r.
+W6|0.65|Two times seventy. One hundred and forty metres.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students say that after one full round, the displacement is two pi r.
+X3|0.65|But two pi r is the distance. After one full round you are back at the start, so the displacement is zero.
+E1|0.6|Where is this asked? Short questions on round trips and circles: distance, displacement, or their ratio.
+Q1|5.4|Exam level now. A particle goes three quarters of the way around a circle of radius R. Find distance over the size of displacement. Pause and solve.
+A1|0.5|The answer is A. Three pi, over two root two.
+A2|0.5|Distance is three quarters of two pi R. That is three pi R by two.
+A3|0.5|Start and end are ninety degrees apart, so the displacement is root two R.
+A4|0.6|Divide. Three pi R by two, over root two R, gives three pi over two root two. About three point three.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Can the distance be zero while the displacement is not?
+Y3|0.9|Two. When are distance and displacement exactly equal?
+Y4|1.1|Three. What is the displacement after half a lap of a circle of radius r?
+N1|0.3|Next time: two cyclists, same speed, opposite directions. Same speed, but different velocity? That is speed and velocity.
