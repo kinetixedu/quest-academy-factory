@@ -1,0 +1,145 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 36 - Resolution of Vectors into Components</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 36: resolution of vectors into components (Motion notebook) ===== */
+:root{--vx:#2F6FEB;--vy:#7A4FE0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.vx{color:var(--vx)}.vy{color:var(--vy)}
+.sv{position:absolute;left:0;top:0}
+/* title card cases */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr svg{position:absolute;right:24px;top:10px}
+.wq{position:absolute;top:494px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap}
+/* definition */
+#pdef{position:absolute;left:36px;top:76px;width:712px;font:600 32px/1.35 Poppins}
+/* sim readout */
+#roG{row-gap:4px}
+#roG .v{font-size:32px}
+#roG .k{font-size:28px}
+.stag{position:absolute;height:40px;padding:0 14px;border-radius:8px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.leg{position:absolute;top:22px;display:flex;gap:10px}
+.leg span{height:36px;padding:0 12px;border-radius:8px;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';white-space:nowrap;background:var(--soft)}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:110px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:34px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:58px;font:500 20px Poppins;color:var(--mute);white-space:nowrap}
+.rf2{position:absolute;left:36px;font-size:36px;white-space:nowrap}
+/* side by side */
+.sbv{position:absolute;left:36px;top:96px;width:712px;height:292px;border-radius:14px;background:var(--soft)}
+.sbl{position:absolute;left:36px;font-size:36px;white-space:nowrap}
+/* worked */
+#wq{position:absolute;left:36px;top:70px;font:600 28px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:32px}
+.chipd{position:absolute;height:56px;padding:0 18px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:10px;font:600 28px 'IBM Plex Mono';white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#mq .mq{font-size:30px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+#sF .fcard .fl{font-size:42px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 3 MOTION IN A PLANE</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Vector <span class="acc">Components</span></div>
+    <div id="sub">One arrow, two shadows</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: three motions + Aarav's slope -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">ONE DIRECTION · TWO QUESTIONS</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Every slanted arrow = a forward part + an up part</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV'S RIDE · THE SLOPE</div>
+        <div id="hdF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg" style="position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px">
+        <div id="wqs"></div></div>
+    </div>
+
+    <!-- P: what resolving means + shadows -->
+    <div id="sP">
+      <div class="card full" id="pd"><div class="lbl" style="left:36px;top:30px">TO RESOLVE A VECTOR</div>
+        <div id="pdef">Split one vector into two vectors along chosen directions.</div>
+        <svg class="sv" id="pdS" width="784" height="580"></svg>
+        <div class="fx" id="pdF" style="left:36px;top:420px;font-size:44px"></div>
+        <div class="pillp ac" id="pdP" style="left:36px;top:500px">Easiest pair: x and y, at 90°</div></div>
+      <div class="card rf" id="ps"><div class="lbl" style="left:36px;top:30px">TWO LAMPS · TWO SHADOWS</div><svg class="sv" id="psS" width="784" height="580"></svg></div>
+    </div>
+
+    <!-- S: the turning arrow (sim + readout + graph) -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">SIMULATION · TURN ONE ARROW</div>
+        <div class="stag" id="slo" style="right:36px;top:20px">SLOW-MO REPLAY · 0.25x</div>
+        <svg class="sv" id="simS" width="784" height="580"></svg></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro" id="roG" style="left:36px;top:66px;width:712px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">COMPONENT VS ANGLE</div>
+        <div class="leg" id="leg" style="right:36px"><span class="vx" id="lg0"></span><span class="vy" id="lg1"></span></div>
+        <svg class="sv" id="grS" width="784" height="274"></svg></div>
+    </div>
+
+    <!-- D: why cos and sin -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">WHY COS AND SIN · 4 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">ONE RIGHT TRIANGLE</div><svg class="sv" id="trS" width="784" height="580"></svg>
+        <div class="rf2" id="rc0" style="top:84px"></div><div class="rf2" id="rc1" style="top:150px"></div><div class="rf2" id="rc2" style="top:216px"></div></div>
+    </div>
+
+    <!-- C: side by side + two thinks -->
+    <div id="sC">
+      <div class="card full" id="c0"><div class="lbl" style="left:36px;top:30px">θ = 0° · LYING FLAT</div><div class="sbv"><svg class="sv" id="c0S" width="712" height="292"></svg></div>
+        <div class="sbl" id="c0a" style="top:416px"></div><div class="sbl" id="c0b" style="top:486px"></div></div>
+      <div class="card rf" id="c1"><div class="lbl" style="left:36px;top:30px">θ = 90° · STRAIGHT UP</div><div class="sbv"><svg class="sv" id="c1S" width="712" height="292"></svg></div>
+        <div class="sbl" id="c1a" style="top:416px"></div><div class="sbl" id="c1b" style="top:486px"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">Aarav rides 10 m up a slope that rises at 30°. How far forward, and how high?</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">SIMULATION · THE SLOPE</div><svg class="sv" id="wrS" width="784" height="580"></svg>
+        <div class="chipd" id="wc0" style="left:36px;top:492px"><span>forward</span><span id="wc0v" style="color:#9DBBF7">8.66 m</span></div>
+        <div class="chipd" id="wc1" style="left:400px;top:492px"><span>height</span><span id="wc1v" style="color:#C9B6F5">5 m</span></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tg" width="520" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + questions + NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2" style="font-size:66px">Cos: the side <span class="acc">next to</span> the angle. Sin: the side across.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

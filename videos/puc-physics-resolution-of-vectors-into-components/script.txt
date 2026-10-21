@@ -1,0 +1,53 @@
+H1|0.4|A kite string pulls up and sideways. A ball flies forward and up. A bicycle climbs a slope.
+H2|0.45|Each one moves in a single direction. But we usually want to know two things.
+H3|0.35|Aarav rides ten metres up a straight slope near his college.
+H4|0.5|How high has he climbed? And how far forward has he moved?
+H5|0.65|One arrow hides both answers. Today we learn to split it.
+P1|0.35|So what does it mean to resolve a vector?
+P2|0.4|To resolve a vector means to split it into two vectors along chosen directions.
+P3|0.4|These two parts are called components. Added together, they give back the original vector.
+P4|0.6|Any two directions will do. But the easiest pair is the x axis and the y axis, at right angles.
+P5|0.35|Think of shadows. A lamp straight overhead throws the arrow's shadow on the floor. That is the x component.
+P6|0.65|A lamp at the side throws its shadow on the wall. That is the y component.
+S1|0.35|Let's turn one arrow in our motion notebook.
+S2|0.4|Vector A is ten units long. At zero degrees, it lies flat. All of it is along x.
+S3|0.4|Turn it up to thirty degrees. The x part shrinks a little. The y part grows to five.
+S4|0.4|At sixty degrees, the y part is now the bigger one.
+S5|0.4|At ninety degrees, the arrow points straight up. The x part is zero.
+S6|0.5|Watch the graph. The x part follows a cosine curve. The y part follows a sine curve.
+S7|0.35|Now let's slow it down past ninety degrees.
+S8|0.65|The arrow leans left, so the x part points left. Its sign turns negative. A component can be negative.
+D1|0.35|Now, why cosine and sine? One step at a time.
+D2|0.75|Step one. The arrow and its two parts make a right triangle. A is the longest side.
+D3|0.75|Step two. Cos theta is the side next to the angle, divided by the longest side. So A x equals A cos theta.
+D4|0.75|Step three. Sin theta is the side across from the angle, divided by the longest side. So A y equals A sin theta.
+D5|0.75|Step four. Going back. By Pythagoras, A equals the square root of A x squared plus A y squared.
+D6|0.75|And tan theta equals A y divided by A x. That gives the direction.
+T1|0.7|Remember this. Cosine goes with the side next to the angle. Sine goes with the side across from it.
+C1|0.35|Let's compare two simple cases side by side.
+C2|0.4|At zero degrees, cos is one and sin is zero. So A x is the full ten, and A y is zero.
+C3|0.6|At ninety degrees, cos is zero and sin is one. So A x is zero, and A y is the full ten.
+C4|3.2|Now you try. At forty five degrees, which part is bigger, A x or A y? Pause and decide.
+C5|0.65|They are equal! Cos forty five and sin forty five are both about zero point seven oh seven. So each part is about seven point oh seven units.
+K1|3.2|Here is one more. Can a component ever be longer than the vector itself? Pause and think.
+K2|0.65|No! A component is a side of the right triangle, and the vector is the longest side. Cos and sin never go above one.
+W1|0.35|Now, one worked example. Back to Aarav's slope.
+W2|0.5|He rides ten metres up a slope that rises at thirty degrees. How far forward, and how high?
+W3|0.75|Forward is the side next to the angle. So forward equals ten times cos thirty.
+W4|0.75|Cos thirty is about zero point eight six six. So forward is about eight point six six metres.
+W5|0.75|Height is the side across from the angle. So height equals ten times sin thirty, which is ten times one half.
+W6|0.65|That is five metres. Check: eight point six six squared plus five squared is about one hundred. Its square root is ten.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think the x component is always A cos theta.
+X3|0.65|But it depends on where the angle is measured. If theta is measured from the y axis, then A x equals A sin theta.
+E1|0.6|Where is this asked? Mostly inside bigger problems: projectiles, forces on a slope, and adding many vectors.
+Q1|5.4|Exam level now. A vector of thirteen units has an x component of plus twelve, and it points below the x axis. Which is correct? Pause and solve.
+A1|0.5|The answer is B.
+A2|0.5|A y squared equals thirteen squared minus twelve squared, which is twenty five. So the size of A y is five.
+A3|0.6|It points below the x axis, so A y is minus five. And tan of the angle is five over twelve, below the x axis.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What does it mean to resolve a vector?
+Y3|0.9|Two. Why can a component never be longer than the vector?
+Y4|1.1|Three. If the angle is measured from the y axis, which formula gives A x?
+N1|0.3|Next time: what if every vector could be built from tiny arrows of length one? We meet unit vectors.
