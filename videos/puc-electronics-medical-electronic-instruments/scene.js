@@ -178,7 +178,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 25', topic: 'Fixed and variab
 const head = PUC.header({ tMorph });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const cam = M.camera($('#cam'), [[0, 1, 960, 540], [tLab[0] - 0.3, 1.12, 1380, 470], [T0('B6') + 1.5, 1, 960, 540], [tWs[0] - 0.2, 1.08, 1340, 540], [tWs[2] + 0.8, 1, 960, 540]]);
+const cam = M.camera($('#cam'), [[0, 1, 960, 540], [tLab[0] - 0.3, 1.12, 1380, 470], [T0('B6') + 1.5, 1, 960, 540], [tWs[0] - 0.2, 1.08, 1340, 540], [wt('W3', 'Seventy'), 1, 960, 540]]);
 const ghost = $('#ghost'); let gw = 0;
 
 M.on(t => {
@@ -279,7 +279,7 @@ M.on(t => {
     wR.forEach((r, i) => { M.hide(r, t < tWs[i] - 0.15); M.vis(r.querySelector('.n'), t, tWs[i] - 0.1, 1e9, { dy: 0, sc: 0.4, sp: M.POP, fade: 0.08 }); PUC.write(r.querySelector('.sx'), t, tWs[i], 0.6); });
     M.vis($('#wBox'), t, wt('W3', 'Seventy') - 0.1, 1e9, { dy: 0, sc: 0.96, fade: 0.2 });
     const dt = M.io((t - wt('W1', 'zero') + 0.1) / 0.25); $('#dTag').style.background = M.mix(INK, '#B7791F', dt);
-    avD(t, wt('W3', 'Seventy') + 0.8, out);
+    avD(t, wt('W3', 'Seventy') + 1.6, out);
   }
 
   /* X: exam trap + where it is asked */
