@@ -172,7 +172,7 @@ P.mcq = (host, o) => {
     const u = M.clamp((t - k.tCount) / 5);
     M.vis(rw, t, k.tCount - 0.2, k.tAns, { dy: 0, sc: 0.7, sp: M.POP, outDur: 0.25, osc: 0.8, ody: 0 });
     M.drawU(ra, 1 - u); M.hide(ra, t < k.tCount - 0.2 || t > k.tAns + 0.3);
-    M.setT(rn, String(Math.max(1, 5 - Math.floor(u * 5 - 1e-6))));
+    M.setT(rn, String(Math.max(1, Math.min(5, 5 - Math.floor(u * 5)))));
   };
 };
 /* sound for the MCQ: 3 ticks on the last three seconds of the ring, correct chime on the answer */
@@ -204,7 +204,7 @@ P.think = (host, o) => {
     const u = M.clamp((t - k.tCount) / dur);
     M.vis(rw, t, k.tCount - 0.2, k.tAns, { dy: 0, sc: 0.7, sp: M.POP, outDur: 0.25, osc: 0.8, ody: 0 });
     M.drawU(ra, 1 - u); M.hide(ra, t < k.tCount - 0.2 || t > k.tAns + 0.3);
-    M.setT(rn, String(Math.max(1, dur - Math.floor(u * dur - 1e-6))));
+    M.setT(rn, String(Math.max(1, Math.min(dur, dur - Math.floor(u * dur)))));
     P.write(w, t, k.tWhy ?? k.tAns + 0.4, 0.9);
   };
 };
