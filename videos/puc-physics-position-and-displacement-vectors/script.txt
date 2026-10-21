@@ -1,0 +1,58 @@
+H1|0.4|A pin on a map. A seat number in an exam hall. A treasure map saying ten steps east, five north.
+H2|0.45|Three different things, all answering one question. Where exactly is it?
+H3|0.35|Aarav parked his bicycle somewhere in the big college ground. His friend asks, where is it?
+H4|0.45|Aarav points and says, over there. But how far? And which way?
+H5|0.5|Physics answers both with just one arrow. By the end of this video, you will draw it yourself.
+P1|0.35|So what is a position vector?
+P2|0.4|First, pick one fixed point to measure from, the origin O. Here, the college gate.
+P3|0.4|Next, draw two axes. The x axis points east. The y axis points north.
+P4|0.45|Now draw an arrow from the origin straight to the bicycle. That arrow is the position vector, r.
+P5|0.5|Its length tells you how far. Its direction tells you which way. Both answers in one arrow.
+P6|0.65|Using i hat and j hat, r equals x i hat plus y j hat. Here, twenty i hat plus ten j hat metres.
+S1|0.35|Now watch it live. Aarav rides from P to Q along a curved path.
+S2|0.4|At P, he is twenty metres east and ten metres north of the gate.
+S3|0.4|As he rides, the position arrow swings and stretches, always from O to the bicycle.
+S4|0.45|Watch the graph. x grows steadily. y climbs fast, then levels off.
+S5|0.5|Slow motion. Freeze. Right now, r is the arrow from O to the bicycle, at this instant.
+S6|0.4|He stops at Q, fifty metres east and fifty north.
+S7|0.4|Now the big idea. Draw one arrow straight from P to Q. This is the displacement, delta r.
+S8|0.5|The road curved. But the displacement is one straight arrow, from start to finish.
+D1|0.35|Let's find delta r from the two position arrows, one step at a time.
+D2|0.75|Step one. The position at the start is r one. The position at the end is r two.
+D3|0.75|Step two. O to P, then P to Q, gets you to Q. So r one plus delta r equals r two.
+D4|0.75|Step three. Move r one across. Delta r equals r two minus r one. Final minus initial.
+D5|0.75|Step four. In parts, delta r equals delta x i hat plus delta y j hat.
+T1|0.7|Remember this. Displacement is the final position minus the initial position.
+R1|0.35|Now a surprising question. What if we pick a different origin?
+R2|0.4|On the left, the origin is the gate. On the right, it is the canteen.
+R3|0.4|From the canteen, r one is a new arrow. r two is a new arrow too.
+R4|0.45|But both arrows changed by the same extra piece, the arrow from the canteen to the gate.
+R5|0.5|When we subtract, that extra piece cancels out.
+R6|3.2|So, pause and think. With the origin at the canteen, does delta r change, or stay the same?
+R7|0.55|It stays the same! Thirty i hat plus forty j hat from both. Position depends on the origin. Displacement does not.
+K1|0.4|Side by side. A position vector starts at the origin and ends at the object. Move the origin, and it changes.
+K2|0.6|A displacement starts where the motion starts and ends where it ends. It ignores the origin and the path.
+K3|3.2|Now you try. Aarav rides a full loop and parks exactly where he started. What is his displacement? Pause and decide.
+K4|0.65|Zero! He ended where he began, so r two minus r one is zero. The loop's length is distance, not displacement.
+W1|0.35|Now, one worked example.
+W2|0.5|A ball moves from A, one comma two, to B, six comma fourteen, in metres. Find its displacement.
+W3|0.75|Delta x equals six minus one. Five metres.
+W4|0.75|Delta y equals fourteen minus two. Twelve metres.
+W5|0.75|So delta r equals five i hat plus twelve j hat metres.
+W6|0.75|Its size is the root of five squared plus twelve squared. Root one sixty nine. Thirteen metres.
+W7|0.65|Direction: tan theta is twelve over five, so theta is about sixty seven degrees.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students subtract the wrong way round, and write delta r as r one minus r two.
+X3|0.65|That arrow points backwards, from the end to the start. Always final minus initial. r two minus r one.
+E1|0.5|Where is this asked? As a quick calculation: find the displacement from two position vectors, and its size.
+Q1|5.4|Exam level now. A particle moves from r one to r two along a curved path ten metres long. What is the magnitude of its displacement? Pause and solve.
+A1|0.5|The answer is C. Seven metres.
+A2|0.5|Delta r is r two minus r one, which is two i hat, minus six j hat, plus three k hat.
+A3|0.5|Its size is the square root of four plus thirty six plus nine. The square root of forty nine. Seven.
+A4|0.6|Ten is the path length, the distance. Eleven adds parts without squaring. Two point one just subtracts the sizes. All traps.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why do we need an origin before we can write a position vector?
+Y3|0.9|Two. Why does moving the origin not change the displacement?
+Y4|1.1|Three. Can displacement be zero when distance is not? Give an example.
+N1|0.3|Next time: one slanted arrow hides two straight arrows. We find them in vector components in two dimensions.
