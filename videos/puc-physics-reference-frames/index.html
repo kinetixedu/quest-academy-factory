@@ -1,0 +1,158 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 18 - Reference Frames</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 18: reference frames (Motion notebook, one bicycle ride in two frames) ===== */
+:root{--xp:#7A4FE0;--xg:#16213E}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.xp{color:var(--xp)}.a{color:var(--ac)}
+/* title card tiles */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook */
+.qr{position:absolute;left:36px;width:712px;height:150px;border-radius:14px;background:var(--soft)}
+.qr .f{position:absolute;left:22px;top:30px;width:90px;height:90px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 4px var(--ac)}
+.qr .w{position:absolute;left:136px;top:28px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.qr .q{position:absolute;left:136px;top:58px;font:700 34px Poppins;white-space:nowrap}
+.qr .tg{position:absolute;right:22px;top:20px;height:36px;padding:0 12px;border-radius:8px;display:inline-flex;align-items:center;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* frame = 3 things */
+.fr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.fr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.fr .fn{position:absolute;left:116px;top:22px;font:700 30px Poppins;white-space:nowrap}
+.fr .fw{position:absolute;left:116px;top:68px;font:500 22px Poppins;color:var(--ink2);white-space:nowrap}
+.fr .fv{position:absolute;right:28px;top:34px;font:600 36px 'IBM Plex Mono';white-space:nowrap}
+/* readout */
+.ro .k sup{font-size:.62em}
+/* reasoning chain */
+.lk{position:absolute;left:36px;width:712px;height:84px;border-radius:14px;background:var(--soft)}
+.lk .n{position:absolute;left:20px;top:19px;width:46px;height:46px;border-radius:50%;background:#fff;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.lk .lt{position:absolute;left:86px;top:22px;font:600 27px Poppins;white-space:nowrap}
+.ld{position:absolute;left:58px}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:110px}
+.st .n{position:absolute;left:0;top:6px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:42px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:64px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+/* side by side tables */
+.tb{position:absolute;left:36px;width:712px;height:70px;border-radius:12px;background:var(--soft)}
+.tb .c0{position:absolute;left:28px;top:16px;font:600 30px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+.tb .c1{position:absolute;right:36px;top:12px;font:600 36px 'IBM Plex Mono';white-space:nowrap}
+.th{position:absolute;left:36px;top:84px;width:712px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.th span{position:absolute;white-space:nowrap}
+/* worked */
+#wq{position:absolute;left:36px;top:70px;font:600 27px/1.35 Poppins;width:712px}
+.chipd{position:absolute;height:64px;padding:0 22px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#mq .mq{font-size:28px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 29px Poppins}
+#wl .sol .sx{font-size:34px}
+#sF .fcard .fl{font-size:50px}
+#sF .fcard .fl.txt{font-size:32px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+.tchip{position:absolute;height:40px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 2 MOTION IN A STRAIGHT LINE</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Reference <span class="acc">Frames</span></div>
+    <div id="sub">Explained with one bicycle ride</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: the ride past the gate -->
+    <div id="sH">
+      <div class="card full" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV'S RIDE · THE COLLEGE GATE</div>
+        <div style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)" id="hkF"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg" style="position:absolute;left:72px;top:84px;width:640px;height:480px;border-radius:12px"></div>
+      <div class="card rf" id="hq"><div class="lbl" style="left:36px;top:30px">SAME BAG · SAME MOMENT</div>
+        <div class="qr" id="qr0" style="top:84px"><div class="f" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div><div class="w">AARAV · ON THE BICYCLE</div><div class="q">"My bag has not moved."</div><div class="tg" id="qt0" style="background:var(--ac2);color:var(--xp)">AT REST</div></div>
+        <div class="qr" id="qr1" style="top:254px"><div class="f" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div><div class="w">DIYA · AT THE GATE</div><div class="q">"It just shot past me!"</div><div class="tg" id="qt1" style="background:var(--ink);color:#fff">MOVING</div></div>
+        <div class="pillp ac" id="hqP" style="left:36px;top:450px">Both are right. How?</div></div>
+    </div>
+
+    <!-- P: where is it, from where? -->
+    <div id="sP">
+      <div class="card full" id="pl"><div class="lbl" style="left:36px;top:30px">WHERE IS THE BAG? FROM WHERE?</div><svg id="plS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="pr"><div class="lbl" style="left:36px;top:30px">A FRAME OF REFERENCE = 3 THINGS</div><div id="frs"></div>
+        <div class="pillp ink" id="prP" style="left:36px;top:490px">Origin + direction + clock = a frame</div></div>
+    </div>
+
+    <!-- S: the sim in two frames + readout + graph -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">ONE RIDE · TWO FRAMES</div>
+        <div class="tag" id="smo" style="right:36px;top:22px;background:var(--red)">SLOW-MO REPLAY · 0.25x</div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT · THE BAG</div><div class="ro" id="roG" style="left:36px;top:70px;width:712px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">POSITION OF THE BAG VS TIME</div><svg id="grS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- L: the reasoning chain -->
+    <div id="sL">
+      <div class="card full" id="ll"><div class="lbl" style="left:36px;top:30px">WHY REST AND MOTION ARE RELATIVE</div><div id="lks"></div></div>
+      <div class="card rf" id="lr"><div class="lbl" style="left:36px;top:30px">SAME BAG · MOVE THE ORIGIN</div><svg id="lrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="chipd" id="lrC" style="top:380px"><span id="lrN">10</span><span style="color:#C9C3B5">m</span></div></div>
+    </div>
+
+    <!-- D: the rule connecting two frames -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">CONNECT THE TWO FRAMES · 3 STEPS + UNITS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">LENGTHS ALONG A LINE ADD UP</div><svg id="drS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- K: side by side + pause and think -->
+    <div id="sK">
+      <div class="card full" id="kl"><div class="lbl" style="left:36px;top:30px">GROUND FRAME · ORIGIN AT THE GATE</div><div id="kla"></div>
+        <div class="pillp" id="klP" style="left:36px;top:490px">The bag's position keeps changing: <b>&nbsp;moving</b></div></div>
+      <div class="card rf" id="kr"><div class="lbl" style="left:36px;top:30px">BICYCLE FRAME · ORIGIN AT AARAV</div><div id="kra"></div>
+        <div class="pillp" id="krP" style="left:36px;top:490px">The bag's position never changes: <b>&nbsp;at rest</b></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- O: origin and sign are a choice -->
+    <div id="sO">
+      <div class="card full" id="ol"><div class="lbl" style="left:36px;top:30px">ORIGIN AND DIRECTION · YOUR CHOICE</div><svg id="olS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="chipd" id="olC" style="top:440px"><span>x =</span><span id="olN">+3</span><span style="color:#C9C3B5">m</span></div></div>
+      <div class="card rf" id="or"><div class="lbl" style="left:36px;top:30px">THE SIGN TELLS THE SIDE</div><div id="ors"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">Aarav passes the gate at <span class="mono">t = 0</span> at <span class="mono a">5 m/s</span>. His bottle is <span class="mono xp">0.5 m</span> ahead of him. Where is the bottle from the gate at <span class="mono">t = 6 s</span>?</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">SIMULATION · 6 SECONDS OF THE RIDE</div><svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="chipd" id="wrC" style="top:440px"><span>x =</span><span id="wrN">0.5</span><span style="color:#C9C3B5">m</span></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tpS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Rest and motion depend on the <span class="acc">frame</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
