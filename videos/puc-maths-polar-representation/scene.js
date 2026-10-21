@@ -91,8 +91,8 @@ const bBL = txt(bS, BP.X(4) + 16, BP.Y(1.5) + 8, 'b = r sin θ', { 'font-size': 
 const bZ = zpt(bS, false, 'P'); bZ.set(BP.X(4), BP.Y(3));
 
 /* ---------- L: live dials ---------- */
-const lS = $('#lS'), LP = plane(lS, { ox: 392, oy: 292, s: 38, x0: -9.4, x1: 9.4, y0: -6.1, y1: 6.1, ticks: false });
-const lOrb = mk(lS, 'circle', { cx: LP.ox, cy: LP.oy, r: 5 * 38, fill: 'none', stroke: MO, 'stroke-width': 2, 'stroke-dasharray': '6 7', opacity: 0.6 });
+const lS = $('#lS'), LP = plane(lS, { ox: 392, oy: 300, s: 33, x0: -9.4, x1: 9.4, y0: -6.1, y1: 6.1, ticks: false });
+const lOrb = mk(lS, 'circle', { cx: LP.ox, cy: LP.oy, r: 5 * 33, fill: 'none', stroke: MO, 'stroke-width': 2, 'stroke-dasharray': '6 7', opacity: 0.6 });
 const lRad = seg(lS, MO, 6), lRadB = seg(lS, MO, 3, '6 6');
 const lArc = mk(lS, 'path', { d: '', fill: 'none', stroke: IV, 'stroke-width': 4.5 }), lArcB = mk(lS, 'path', { d: '', fill: 'none', stroke: IV, 'stroke-width': 3, 'stroke-dasharray': '5 5', opacity: 0.7 });
 const lZ = zpt(lS, false), lB = zpt(lS, true);
@@ -232,7 +232,7 @@ M.on(t => {
     M.vis($('#ll'), t, tL1 + 0.1, out, { dx: -60, dy: 0, ...o });
     M.vis($('#lr'), t, tL1 + 0.2, out, { dx: 60, dy: 0, ...o });
     const th = thL(t), r = rL(t), a = th * D2R, X = LP.X(r * Math.cos(a)), Y = LP.Y(r * Math.sin(a)), Yb = LP.Y(-r * Math.sin(a));
-    attr(lOrb, 'r', (r * 38).toFixed(1)); M.vis(lOrb, t, tL1 + 0.5, 1e9, { dy: 0, fade: 0.3 });
+    attr(lOrb, 'r', (r * LP.s).toFixed(1)); M.vis(lOrb, t, tL1 + 0.5, 1e9, { dy: 0, fade: 0.3 });
     lZ.set(X, Y); M.vis(lZ.g, t, tL1 + 0.4, 1e9, PT); setL(lRad, LP.ox, LP.oy, X, Y); M.hide(lRad, t < tL1 + 0.5);
     attr(lArc, 'd', arcD(LP.ox, LP.oy, 54, 0, a)); M.hide(lArc, t < tL1 + 0.6);
     const bOnL = t >= tlB; lB.set(X, Yb); M.vis(lB.g, t, tlB, 1e9, PT); setL(lRadB, LP.ox, LP.oy, X, Yb); M.hide(lRadB, !bOnL); attr(lArcB, 'd', arcD(LP.ox, LP.oy, 40, 0, -a)); M.hide(lArcB, !bOnL);
