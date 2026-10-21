@@ -1,0 +1,143 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 26 - Motion under Gravity</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 26: motion under gravity (Motion notebook, drop tower) ===== */
+:root{--v:#2F6FEB;--g:#D64545;--vi:#7A4FE0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.gv{color:var(--g)}.vv{color:var(--v)}.vi{color:var(--vi)}
+/* hook */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .jv{position:absolute;right:28px;top:30px;width:60px;height:60px}
+#hkImg{position:absolute;left:520px;top:150px;width:250px;height:310px}
+#dyF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/diya-face.jpg)}
+.hq{position:absolute;left:36px;height:60px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+.hq b{font:600 28px 'IBM Plex Mono'}
+/* free fall */
+.ff{position:absolute;left:36px;width:712px;height:80px;border-radius:14px;background:var(--soft)}
+.ff i{position:absolute;left:16px;top:14px;width:52px;height:52px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.ff .fn{position:absolute;left:86px;top:12px;font:600 26px Poppins;white-space:nowrap}
+.ff .fs{position:absolute;left:86px;top:46px;font:600 16px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap;text-transform:uppercase}
+.ff .fv{position:absolute;right:20px;top:18px;font:600 32px 'IBM Plex Mono';white-space:nowrap;color:var(--g)}
+#gbig{position:absolute;left:36px;top:84px;font-size:96px;white-space:nowrap}
+#gsub{position:absolute;left:36px;top:228px;font:500 26px Poppins;color:var(--ink2);white-space:nowrap}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:112px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:38px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:62px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.cnd{position:absolute;left:36px;height:52px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;font-size:30px;white-space:nowrap}
+/* side by side */
+.sbx{position:absolute;top:84px;width:340px;height:120px;border-radius:14px;background:var(--soft)}
+.sbx .h{position:absolute;left:24px;top:18px;font:700 28px Poppins;white-space:nowrap}
+.sbx .s{position:absolute;left:24px;top:62px;font:600 18px 'IBM Plex Mono';white-space:nowrap}
+.ratio{position:absolute;left:36px;font-size:36px;white-space:nowrap}
+.tag2{position:absolute;display:inline-flex;align-items:center;height:36px;padding:0 12px;border-radius:8px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* worked */
+#wq{position:absolute;left:36px;top:70px;font:600 28px/1.35 Poppins;width:712px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font-size:25px}
+#wl .sol .sx{font-size:32px}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:30px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 2 MOTION IN A STRAIGHT LINE</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Motion under <span class="acc">Gravity</span></div>
+    <div id="sub">Explained with one falling mango</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: three falls + Diya's mango -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE FALLS · ONE PULL</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Same pull from the Earth: gravity</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA'S WINDOW · THE MANGO TREE</div><div id="dyF"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/diya.png">
+        <svg id="hkS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="hq" id="hq0" style="top:494px">4.9 m <b>→</b> 1 s</div>
+        <div class="hq" id="hq1" style="top:494px;background:var(--ac2)">9.8 m <b>→</b> 2 s ?</div></div>
+    </div>
+
+    <!-- P: what is free fall -->
+    <div id="sP">
+      <div class="card full" id="pf"><div class="lbl" style="left:36px;top:30px">FREE FALL = ONLY GRAVITY ACTS</div><div id="ffs"></div></div>
+      <div class="card rf" id="pg"><div class="lbl" style="left:36px;top:30px">ACCELERATION DUE TO GRAVITY</div>
+        <div id="gbig"></div><div id="gsub">gain 9.8 m/s of speed, every second</div>
+        <svg id="pgS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- S: drop sim + readout + graph -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">SIMULATION · DROPPED FROM REST</div><div class="tag" id="slow" style="right:36px;top:22px">SLOW-MO REPLAY · 0.25x</div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro" id="roG" style="left:36px;top:70px;width:340px"></div>
+        <div class="fx" id="roF" style="left:420px;top:96px;font-size:50px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">VELOCITY <i style="font-family:Poppins;text-transform:none">v</i> VS TIME <i style="font-family:Poppins;text-transform:none">t</i></div><svg id="grS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- D: derivation -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">FREE FALL FORMULAS · 4 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">HEIGHT FALLEN <i style="font-family:Poppins;text-transform:none">h</i> VS TIME <i style="font-family:Poppins;text-transform:none">t</i></div><svg id="drS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- K: side by side stones + think -->
+    <div id="sK">
+      <div class="card full" id="kl"><div class="lbl" style="left:36px;top:30px">SIDE BY SIDE · NO AIR</div><svg id="klS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="kr"><div class="lbl" style="left:36px;top:30px">PULL ÷ MASS = SAME <i style="font-family:Poppins;text-transform:none">g</i></div><div id="krs"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- U: thrown up -->
+    <div id="sU">
+      <div class="card full" id="usim"><div class="lbl" style="left:36px;top:30px">SIMULATION · THROWN STRAIGHT UP</div><div class="tag2" id="upTag" style="right:36px;top:22px;background:var(--ac2);color:var(--ac)">UP = POSITIVE</div>
+        <svg id="usS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rt" id="uro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro" id="uroG" style="left:36px;top:70px;width:340px"></div>
+        <div class="pillp" id="uTop" style="left:420px;top:150px">At the top: <span class="vv mono">v = 0</span></div></div>
+      <div class="card rb" id="ugr"><div class="lbl" style="left:36px;top:30px">VELOCITY <i style="font-family:Poppins;text-transform:none">v</i> VS TIME <i style="font-family:Poppins;text-transform:none">t</i></div><svg id="ugS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">From 4.9 m the mango takes 1 s. How long from 9.8 m?</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">TWO BRANCHES · SAME g</div><svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="trS" width="460" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">In free fall, <span class="acc">g</span> never changes.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
