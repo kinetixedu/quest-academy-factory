@@ -1,0 +1,534 @@
+1
+00:00:00,450 --> 00:00:02,859
+A recipe for two, made for four.
+
+2
+00:00:02,859 --> 00:00:05,003
+A photo zoomed to double size.
+
+3
+00:00:05,003 --> 00:00:07,940
+A car going twice as fast, the same way.
+
+4
+00:00:08,340 --> 00:00:12,624
+Each time, one number scales something
+up, but its shape or direction stays
+
+5
+00:00:12,624 --> 00:00:13,524
+the same.
+
+6
+00:00:13,809 --> 00:00:16,778
+Aarav cruises north at
+six metres per second.
+
+7
+00:00:16,778 --> 00:00:19,697
+His little cousin rides
+beside him at three.
+
+8
+00:00:20,047 --> 00:00:22,372
+Same direction, double the speed.
+
+9
+00:00:22,372 --> 00:00:25,335
+So is Aarav's velocity
+two times his cousin's?
+
+10
+00:00:25,335 --> 00:00:27,832
+And what would minus two times mean?
+
+11
+00:00:28,332 --> 00:00:31,612
+By the end, you will know what
+a plain number does to an arrow.
+
+12
+00:00:32,262 --> 00:00:34,532
+So what does a scalar do to a vector?
+
+13
+00:00:34,882 --> 00:00:38,835
+A scalar is a plain number,
+like two, or half, or minus one.
+
+14
+00:00:39,235 --> 00:00:43,266
+Multiply vector A by a number lambda,
+and you get a new vector, lambda
+
+15
+00:00:43,266 --> 00:00:44,166
+A.
+
+16
+00:00:44,026 --> 00:00:46,972
+Its size becomes lambda
+times the size of A.
+
+17
+00:00:47,372 --> 00:00:50,785
+If lambda is positive, it
+points the same way as A.
+
+18
+00:00:50,785 --> 00:00:54,036
+If lambda is negative, it
+points the opposite way.
+
+19
+00:00:54,686 --> 00:00:56,890
+Let's see it on our motion notebook.
+
+20
+00:00:57,240 --> 00:01:00,739
+Here is vector A, three units
+long, pointing north east.
+
+21
+00:01:01,139 --> 00:01:02,568
+Turn the dial to two.
+
+22
+00:01:02,568 --> 00:01:05,916
+The arrow stretches to six
+units, in the same direction.
+
+23
+00:01:06,316 --> 00:01:07,642
+Turn it to one half.
+
+24
+00:01:07,642 --> 00:01:09,763
+It shrinks to one and a half units.
+
+25
+00:01:09,763 --> 00:01:11,251
+Still the same direction.
+
+26
+00:01:11,651 --> 00:01:13,577
+Now slide lambda below zero.
+
+27
+00:01:13,577 --> 00:01:14,634
+Watch closely.
+
+28
+00:01:14,634 --> 00:01:18,043
+At zero, it shrinks to a
+point: the zero vector.
+
+29
+00:01:18,543 --> 00:01:20,394
+Past zero, it flips around.
+
+30
+00:01:20,394 --> 00:01:24,301
+At minus one, it is the same
+length, but pointing south west.
+
+31
+00:01:24,801 --> 00:01:26,450
+The graph is a V shape.
+
+32
+00:01:26,450 --> 00:01:30,170
+The size depends only on the
+size of lambda, not its sign.
+
+33
+00:01:30,820 --> 00:01:33,282
+Let's write the rules one step at a time.
+
+34
+00:01:33,632 --> 00:01:34,532
+Step one.
+
+35
+00:01:34,448 --> 00:01:35,348
+The size.
+
+36
+00:01:35,263 --> 00:01:39,767
+The magnitude of lambda A equals the
+size of lambda, times the magnitude
+
+37
+00:01:39,767 --> 00:01:40,667
+of A.
+
+38
+00:01:41,134 --> 00:01:42,034
+Step two.
+
+39
+00:01:42,017 --> 00:01:43,171
+The direction.
+
+40
+00:01:43,171 --> 00:01:45,218
+Lambda above zero keeps it.
+
+41
+00:01:45,218 --> 00:01:47,428
+Lambda below zero reverses it.
+
+42
+00:01:48,178 --> 00:01:49,211
+Step three.
+
+43
+00:01:49,211 --> 00:01:52,097
+Lambda equals minus one gives minus A.
+
+44
+00:01:52,847 --> 00:01:53,816
+Step four.
+
+45
+00:01:53,816 --> 00:01:56,832
+In components, every part is multiplied.
+
+46
+00:01:56,832 --> 00:02:00,762
+Two times two i plus three
+j is four i plus six j.
+
+47
+00:02:01,512 --> 00:02:02,559
+Remember this.
+
+48
+00:02:02,559 --> 00:02:05,671
+A positive number stretches
+or shrinks the arrow.
+
+49
+00:02:05,671 --> 00:02:07,834
+A negative number also flips it.
+
+50
+00:02:08,534 --> 00:02:11,375
+Now, why does this matter
+so much in physics?
+
+51
+00:02:11,725 --> 00:02:14,914
+Because many laws are just
+a scalar times a vector.
+
+52
+00:02:15,314 --> 00:02:18,093
+Displacement equals time times velocity.
+
+53
+00:02:18,093 --> 00:02:21,503
+So displacement points
+the same way as velocity.
+
+54
+00:02:21,903 --> 00:02:24,528
+Force equals mass times acceleration.
+
+55
+00:02:24,528 --> 00:02:29,527
+Mass is positive, so force and
+acceleration always point the same way.
+
+56
+00:02:29,927 --> 00:02:32,595
+And momentum equals mass times velocity.
+
+57
+00:02:32,595 --> 00:02:36,430
+The scalar sets the size, the
+vector sets the direction.
+
+58
+00:02:37,080 --> 00:02:40,687
+Here is the reasoning link by
+link, for Aarav and his cousin.
+
+59
+00:02:41,037 --> 00:02:44,601
+His cousin's velocity is three
+metres per second, north.
+
+60
+00:02:45,001 --> 00:02:49,558
+Aarav goes in the same direction, so
+the number in front must be positive.
+
+61
+00:02:49,958 --> 00:02:52,545
+His speed is six, two times three.
+
+62
+00:02:52,545 --> 00:02:55,615
+So Aarav's velocity is
+two times his cousin's.
+
+63
+00:02:56,215 --> 00:02:57,287
+Side by side.
+
+64
+00:02:57,287 --> 00:03:01,395
+Two times A is twice as long,
+and points the same way as A.
+
+65
+00:03:01,795 --> 00:03:06,373
+Minus two times A is also twice as
+long, but points the opposite way.
+
+66
+00:03:06,973 --> 00:03:08,014
+Now you try.
+
+67
+00:03:08,014 --> 00:03:11,411
+Do two A and minus two A
+have the same magnitude?
+
+68
+00:03:11,411 --> 00:03:13,332
+Pause the video and decide.
+
+69
+00:03:16,532 --> 00:03:17,432
+Yes!
+
+70
+00:03:17,064 --> 00:03:19,220
+Both are twice as long as A.
+
+71
+00:03:19,220 --> 00:03:23,231
+The minus sign changes only
+the direction, never the size.
+
+72
+00:03:23,881 --> 00:03:25,046
+One more idea.
+
+73
+00:03:25,046 --> 00:03:27,491
+A scalar can even change the unit.
+
+74
+00:03:27,841 --> 00:03:32,695
+Velocity in metres per second, times a
+time in seconds, gives a displacement
+
+75
+00:03:32,695 --> 00:03:33,595
+in metres.
+
+76
+00:03:33,969 --> 00:03:38,098
+Aarav cruises at six metres per
+second north for four seconds.
+
+77
+00:03:38,498 --> 00:03:43,041
+Four seconds times six metres per
+second is twenty four metres, north.
+
+78
+00:03:43,041 --> 00:03:45,686
+Same direction, but now a displacement.
+
+79
+00:03:46,286 --> 00:03:47,259
+Your turn.
+
+80
+00:03:47,259 --> 00:03:50,079
+Multiply a vector by zero point five.
+
+81
+00:03:50,079 --> 00:03:52,082
+Does its direction change?
+
+82
+00:03:52,082 --> 00:03:53,515
+Pause and decide.
+
+83
+00:03:56,715 --> 00:03:57,615
+No.
+
+84
+00:03:57,204 --> 00:04:01,145
+Zero point five is positive,
+so the arrow only shrinks.
+
+85
+00:04:01,145 --> 00:04:03,498
+Only a negative number flips it.
+
+86
+00:04:04,148 --> 00:04:05,884
+Now, one worked example.
+
+87
+00:04:06,234 --> 00:04:08,671
+Vector A is three i plus four j.
+
+88
+00:04:08,671 --> 00:04:11,359
+Find minus two A, and its magnitude.
+
+89
+00:04:11,859 --> 00:04:14,332
+Multiply each part by minus two.
+
+90
+00:04:15,082 --> 00:04:18,195
+Minus two times three i is minus six i.
+
+91
+00:04:18,195 --> 00:04:21,365
+Minus two times four j is minus eight j.
+
+92
+00:04:22,115 --> 00:04:25,442
+So minus two A is minus
+six i minus eight j.
+
+93
+00:04:26,192 --> 00:04:29,950
+Its magnitude is the root of
+thirty six plus sixty four.
+
+94
+00:04:29,950 --> 00:04:32,817
+Root one hundred is ten: two times five.
+
+95
+00:04:33,466 --> 00:04:34,932
+Now, the exam trap.
+
+96
+00:04:35,282 --> 00:04:39,983
+Many students think that multiplying by
+a negative number makes the magnitude
+
+97
+00:04:39,983 --> 00:04:40,883
+negative.
+
+98
+00:04:41,106 --> 00:04:44,082
+But a magnitude is a
+length, never negative.
+
+99
+00:04:44,082 --> 00:04:47,794
+The size of minus three A is
+three times the size of A.
+
+100
+00:04:47,794 --> 00:04:49,503
+Only the direction flips.
+
+101
+00:04:50,153 --> 00:04:51,645
+Where is this asked?
+
+102
+00:04:51,645 --> 00:04:56,171
+Inside bigger problems: a vector
+parallel or opposite to a given one.
+
+103
+00:04:56,771 --> 00:04:58,072
+Exam level now.
+
+104
+00:04:58,072 --> 00:05:00,598
+A is two i minus j plus two k.
+
+105
+00:05:00,598 --> 00:05:04,624
+Which vector has magnitude
+six and points opposite to A?
+
+106
+00:05:04,624 --> 00:05:05,981
+Pause and solve.
+
+107
+00:05:11,381 --> 00:05:12,647
+The answer is C.
+
+108
+00:05:13,147 --> 00:05:17,531
+The size of A is the root of four
+plus one plus four, which is three.
+
+109
+00:05:18,031 --> 00:05:20,840
+We need size six, so the factor is two.
+
+110
+00:05:20,840 --> 00:05:22,976
+Opposite, so it is minus two.
+
+111
+00:05:22,976 --> 00:05:24,865
+Minus two A is the answer.
+
+112
+00:05:25,465 --> 00:05:26,926
+Here is your recap.
+
+113
+00:05:26,926 --> 00:05:28,427
+Screenshot this card.
+
+114
+00:05:31,627 --> 00:05:33,558
+Can you answer these without help?
+
+115
+00:05:33,958 --> 00:05:34,858
+One.
+
+116
+00:05:34,467 --> 00:05:38,373
+What happens to a vector when
+you multiply it by minus one?
+
+117
+00:05:39,273 --> 00:05:40,173
+Two.
+
+118
+00:05:39,834 --> 00:05:43,738
+Is the magnitude of minus
+five A positive or negative?
+
+119
+00:05:44,638 --> 00:05:45,538
+Three.
+
+120
+00:05:45,286 --> 00:05:49,161
+Why do force and acceleration
+always point the same way?
+
+121
+00:05:50,261 --> 00:05:54,593
+Next time: how can one slanted
+arrow be split into two parts?
+
+122
+00:05:54,593 --> 00:05:57,170
+Resolution of vectors into components.

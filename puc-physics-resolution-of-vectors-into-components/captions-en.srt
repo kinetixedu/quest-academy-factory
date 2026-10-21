@@ -1,0 +1,512 @@
+1
+00:00:00,450 --> 00:00:02,873
+A kite string pulls up and sideways.
+
+2
+00:00:02,873 --> 00:00:04,845
+A ball flies forward and up.
+
+3
+00:00:04,845 --> 00:00:06,610
+A bicycle climbs a slope.
+
+4
+00:00:07,010 --> 00:00:09,310
+Each one moves in a single direction.
+
+5
+00:00:09,310 --> 00:00:11,755
+But we usually want to know two things.
+
+6
+00:00:12,205 --> 00:00:15,939
+Aarav rides ten metres up a
+straight slope near his college.
+
+7
+00:00:16,289 --> 00:00:17,942
+How high has he climbed?
+
+8
+00:00:17,942 --> 00:00:20,132
+And how far forward has he moved?
+
+9
+00:00:20,632 --> 00:00:22,603
+One arrow hides both answers.
+
+10
+00:00:22,603 --> 00:00:24,535
+Today we learn to split it.
+
+11
+00:00:25,185 --> 00:00:27,674
+So what does it mean to resolve a vector?
+
+12
+00:00:28,024 --> 00:00:33,091
+To resolve a vector means to split it
+into two vectors along chosen directions.
+
+13
+00:00:33,491 --> 00:00:35,727
+These two parts are called components.
+
+14
+00:00:35,727 --> 00:00:38,738
+Added together, they give
+back the original vector.
+
+15
+00:00:39,138 --> 00:00:41,055
+Any two directions will do.
+
+16
+00:00:41,055 --> 00:00:45,698
+But the easiest pair is the x axis
+and the y axis, at right angles.
+
+17
+00:00:46,298 --> 00:00:47,492
+Think of shadows.
+
+18
+00:00:47,492 --> 00:00:51,279
+A lamp straight overhead throws
+the arrow's shadow on the floor.
+
+19
+00:00:51,279 --> 00:00:52,911
+That is the x component.
+
+20
+00:00:53,261 --> 00:00:56,342
+A lamp at the side throws
+its shadow on the wall.
+
+21
+00:00:56,342 --> 00:00:57,947
+That is the y component.
+
+22
+00:00:58,597 --> 00:01:01,203
+Let's turn one arrow
+in our motion notebook.
+
+23
+00:01:01,553 --> 00:01:03,558
+Vector A is ten units long.
+
+24
+00:01:03,558 --> 00:01:05,819
+At zero degrees, it lies flat.
+
+25
+00:01:05,819 --> 00:01:07,518
+All of it is along x.
+
+26
+00:01:07,918 --> 00:01:09,905
+Turn it up to thirty degrees.
+
+27
+00:01:09,905 --> 00:01:11,845
+The x part shrinks a little.
+
+28
+00:01:11,845 --> 00:01:13,640
+The y part grows to five.
+
+29
+00:01:14,040 --> 00:01:17,403
+At sixty degrees, the y
+part is now the bigger one.
+
+30
+00:01:17,803 --> 00:01:20,847
+At ninety degrees, the
+arrow points straight up.
+
+31
+00:01:20,847 --> 00:01:22,261
+The x part is zero.
+
+32
+00:01:22,661 --> 00:01:23,883
+Watch the graph.
+
+33
+00:01:23,883 --> 00:01:26,239
+The x part follows a cosine curve.
+
+34
+00:01:26,239 --> 00:01:28,496
+The y part follows a sine curve.
+
+35
+00:01:28,996 --> 00:01:31,751
+Now let's slow it down
+past ninety degrees.
+
+36
+00:01:32,101 --> 00:01:35,450
+The arrow leans left, so
+the x part points left.
+
+37
+00:01:35,450 --> 00:01:37,140
+Its sign turns negative.
+
+38
+00:01:37,140 --> 00:01:39,089
+A component can be negative.
+
+39
+00:01:39,739 --> 00:01:41,649
+Now, why cosine and sine?
+
+40
+00:01:41,649 --> 00:01:43,157
+One step at a time.
+
+41
+00:01:43,507 --> 00:01:44,407
+Step one.
+
+42
+00:01:44,316 --> 00:01:47,620
+The arrow and its two parts
+make a right triangle.
+
+43
+00:01:47,620 --> 00:01:49,247
+A is the longest side.
+
+44
+00:01:49,997 --> 00:01:50,897
+Step two.
+
+45
+00:01:50,881 --> 00:01:55,883
+Cos theta is the side next to the
+angle, divided by the longest side.
+
+46
+00:01:55,883 --> 00:01:58,006
+So A x equals A cos theta.
+
+47
+00:01:58,756 --> 00:01:59,745
+Step three.
+
+48
+00:01:59,745 --> 00:02:04,948
+Sin theta is the side across from the
+angle, divided by the longest side.
+
+49
+00:02:04,948 --> 00:02:07,065
+So A y equals A sin theta.
+
+50
+00:02:07,815 --> 00:02:08,770
+Step four.
+
+51
+00:02:08,770 --> 00:02:09,780
+Going back.
+
+52
+00:02:09,780 --> 00:02:15,105
+By Pythagoras, A equals the square
+root of A x squared plus A y squared.
+
+53
+00:02:15,855 --> 00:02:18,924
+And tan theta equals A y divided by A x.
+
+54
+00:02:18,924 --> 00:02:20,798
+That gives the direction.
+
+55
+00:02:21,548 --> 00:02:22,568
+Remember this.
+
+56
+00:02:22,568 --> 00:02:25,421
+Cosine goes with the
+side next to the angle.
+
+57
+00:02:25,421 --> 00:02:27,978
+Sine goes with the side across from it.
+
+58
+00:02:28,678 --> 00:02:31,727
+Let's compare two simple
+cases side by side.
+
+59
+00:02:32,078 --> 00:02:35,356
+At zero degrees, cos
+is one and sin is zero.
+
+60
+00:02:35,356 --> 00:02:38,552
+So A x is the full ten, and A y is zero.
+
+61
+00:02:38,952 --> 00:02:42,156
+At ninety degrees, cos
+is zero and sin is one.
+
+62
+00:02:42,156 --> 00:02:45,183
+So A x is zero, and A y is the full ten.
+
+63
+00:02:45,783 --> 00:02:46,835
+Now you try.
+
+64
+00:02:46,835 --> 00:02:50,954
+At forty five degrees, which
+part is bigger, A x or A y?
+
+65
+00:02:50,954 --> 00:02:52,262
+Pause and decide.
+
+66
+00:02:55,462 --> 00:02:56,713
+They are equal!
+
+67
+00:02:56,713 --> 00:03:01,909
+Cos forty five and sin forty five are
+both about zero point seven oh seven.
+
+68
+00:03:01,909 --> 00:03:05,409
+So each part is about
+seven point oh seven units.
+
+69
+00:03:06,059 --> 00:03:07,307
+Here is one more.
+
+70
+00:03:07,307 --> 00:03:10,614
+Can a component ever be
+longer than the vector itself?
+
+71
+00:03:10,614 --> 00:03:11,760
+Pause and think.
+
+72
+00:03:14,960 --> 00:03:15,860
+No!
+
+73
+00:03:15,422 --> 00:03:20,194
+A component is a side of the right
+triangle, and the vector is the longest
+
+74
+00:03:20,194 --> 00:03:21,094
+side.
+
+75
+00:03:20,757 --> 00:03:22,987
+Cos and sin never go above one.
+
+76
+00:03:23,637 --> 00:03:25,464
+Now, one worked example.
+
+77
+00:03:25,464 --> 00:03:27,035
+Back to Aarav's slope.
+
+78
+00:03:27,385 --> 00:03:31,296
+He rides ten metres up a slope
+that rises at thirty degrees.
+
+79
+00:03:31,296 --> 00:03:33,472
+How far forward, and how high?
+
+80
+00:03:33,972 --> 00:03:36,566
+Forward is the side next to the angle.
+
+81
+00:03:36,566 --> 00:03:39,149
+So forward equals ten times cos thirty.
+
+82
+00:03:39,899 --> 00:03:43,151
+Cos thirty is about zero
+point eight six six.
+
+83
+00:03:43,151 --> 00:03:46,509
+So forward is about eight
+point six six metres.
+
+84
+00:03:47,259 --> 00:03:49,916
+Height is the side across from the angle.
+
+85
+00:03:49,916 --> 00:03:54,197
+So height equals ten times sin
+thirty, which is ten times one half.
+
+86
+00:03:54,947 --> 00:03:56,411
+That is five metres.
+
+87
+00:03:56,411 --> 00:04:01,155
+Check: eight point six six squared
+plus five squared is about one hundred.
+
+88
+00:04:01,155 --> 00:04:02,824
+Its square root is ten.
+
+89
+00:04:03,474 --> 00:04:04,940
+Now, the exam trap.
+
+90
+00:04:05,290 --> 00:04:09,007
+Many students think the x
+component is always A cos theta.
+
+91
+00:04:09,357 --> 00:04:12,315
+But it depends on where
+the angle is measured.
+
+92
+00:04:12,315 --> 00:04:16,671
+If theta is measured from the y
+axis, then A x equals A sin theta.
+
+93
+00:04:17,321 --> 00:04:18,847
+Where is this asked?
+
+94
+00:04:18,847 --> 00:04:23,620
+Mostly inside bigger problems:
+projectiles, forces on a slope, and adding
+
+95
+00:04:23,620 --> 00:04:24,665
+many vectors.
+
+96
+00:04:25,265 --> 00:04:26,492
+Exam level now.
+
+97
+00:04:26,492 --> 00:04:31,486
+A vector of thirteen units has an x
+component of plus twelve, and it points
+
+98
+00:04:31,486 --> 00:04:32,880
+below the x axis.
+
+99
+00:04:32,880 --> 00:04:34,211
+Which is correct?
+
+100
+00:04:34,211 --> 00:04:35,491
+Pause and solve.
+
+101
+00:04:40,891 --> 00:04:42,266
+The answer is B.
+
+102
+00:04:42,766 --> 00:04:47,239
+A y squared equals thirteen squared
+minus twelve squared, which is twenty
+
+103
+00:04:47,239 --> 00:04:48,139
+five.
+
+104
+00:04:47,793 --> 00:04:49,851
+So the size of A y is five.
+
+105
+00:04:50,351 --> 00:04:53,872
+It points below the x
+axis, so A y is minus five.
+
+106
+00:04:53,872 --> 00:04:57,953
+And tan of the angle is five
+over twelve, below the x axis.
+
+107
+00:04:58,553 --> 00:05:00,012
+Here is your recap.
+
+108
+00:05:00,012 --> 00:05:01,511
+Screenshot this card.
+
+109
+00:05:04,711 --> 00:05:07,548
+Can you answer these three
+questions without help?
+
+110
+00:05:07,948 --> 00:05:08,848
+One.
+
+111
+00:05:08,433 --> 00:05:10,935
+What does it mean to resolve a vector?
+
+112
+00:05:11,835 --> 00:05:12,735
+Two.
+
+113
+00:05:12,305 --> 00:05:15,487
+Why can a component never
+be longer than the vector?
+
+114
+00:05:16,387 --> 00:05:17,287
+Three.
+
+115
+00:05:17,015 --> 00:05:21,633
+If the angle is measured from the
+y axis, which formula gives A x?
+
+116
+00:05:22,733 --> 00:05:27,098
+Next time: what if every vector could
+be built from tiny arrows of length
+
+117
+00:05:27,098 --> 00:05:27,998
+one?
+
+118
+00:05:27,578 --> 00:05:29,027
+We meet unit vectors.

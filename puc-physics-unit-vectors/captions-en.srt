@@ -1,0 +1,505 @@
+1
+00:00:00,450 --> 00:00:02,465
+A map says three blocks east.
+
+2
+00:00:02,465 --> 00:00:04,578
+A friend says four steps north.
+
+3
+00:00:04,578 --> 00:00:06,642
+A drone climbs five metres up.
+
+4
+00:00:07,042 --> 00:00:09,052
+Every instruction has two parts.
+
+5
+00:00:09,052 --> 00:00:10,781
+How much, and which way.
+
+6
+00:00:11,231 --> 00:00:15,138
+At college, Aarav gives a new
+student directions to the library.
+
+7
+00:00:15,488 --> 00:00:18,132
+Three steps east, then four steps north.
+
+8
+00:00:18,132 --> 00:00:20,394
+But what exactly is one step east?
+
+9
+00:00:20,894 --> 00:00:22,748
+That tiny arrow has a name.
+
+10
+00:00:22,748 --> 00:00:25,378
+It is the building block of every vector.
+
+11
+00:00:26,028 --> 00:00:27,773
+So what is a unit vector?
+
+12
+00:00:28,123 --> 00:00:31,778
+A unit vector is a vector
+with a size of exactly one.
+
+13
+00:00:31,778 --> 00:00:33,646
+It only shows a direction.
+
+14
+00:00:34,046 --> 00:00:36,288
+It has no unit and no dimension.
+
+15
+00:00:36,288 --> 00:00:37,869
+It is a pure pointer.
+
+16
+00:00:38,269 --> 00:00:40,606
+We write it with a small hat on top.
+
+17
+00:00:40,606 --> 00:00:41,824
+Say it as A hat.
+
+18
+00:00:42,224 --> 00:00:45,273
+Three special unit vectors
+point along the axes.
+
+19
+00:00:45,623 --> 00:00:46,851
+i hat along x.
+
+20
+00:00:46,851 --> 00:00:48,080
+j hat along y.
+
+21
+00:00:48,080 --> 00:00:51,002
+And k hat along z, for three dimensions.
+
+22
+00:00:51,652 --> 00:00:55,343
+Let's build a vector out of unit
+steps in our motion notebook.
+
+23
+00:00:55,694 --> 00:00:57,594
+Take three steps of i hat.
+
+24
+00:00:57,594 --> 00:00:59,593
+That is three units along x.
+
+25
+00:00:59,993 --> 00:01:01,871
+Now four steps of j hat.
+
+26
+00:01:01,871 --> 00:01:03,904
+That is four units along y.
+
+27
+00:01:04,304 --> 00:01:05,668
+Join start to end.
+
+28
+00:01:05,668 --> 00:01:08,562
+The vector is three i hat plus four j hat.
+
+29
+00:01:08,962 --> 00:01:12,161
+Now let's stretch this arrow
+and watch its unit vector.
+
+30
+00:01:12,561 --> 00:01:14,826
+The arrow grows from five to ten.
+
+31
+00:01:14,826 --> 00:01:17,091
+But its unit vector stays at one.
+
+32
+00:01:17,091 --> 00:01:18,449
+Look at the graph.
+
+33
+00:01:18,449 --> 00:01:19,650
+One line climbs.
+
+34
+00:01:19,650 --> 00:01:21,153
+The other stays flat.
+
+35
+00:01:21,653 --> 00:01:23,469
+Slow it down and turn the arrow.
+
+36
+00:01:23,819 --> 00:01:28,302
+The unit vector turns with it, always
+with its tip on a circle of radius
+
+37
+00:01:28,302 --> 00:01:29,202
+one.
+
+38
+00:01:28,794 --> 00:01:30,568
+Only the direction changes.
+
+39
+00:01:31,218 --> 00:01:33,566
+Now, how do we find a unit vector?
+
+40
+00:01:33,566 --> 00:01:34,959
+One step at a time.
+
+41
+00:01:35,309 --> 00:01:36,215
+Step one.
+
+42
+00:01:36,215 --> 00:01:38,835
+Divide the vector by its own size.
+
+43
+00:01:38,835 --> 00:01:41,577
+A hat equals vector A divided by A.
+
+44
+00:01:42,327 --> 00:01:43,227
+Step two.
+
+45
+00:01:43,185 --> 00:01:44,419
+Check its size.
+
+46
+00:01:44,419 --> 00:01:46,207
+A divided by A is one.
+
+47
+00:01:46,207 --> 00:01:48,696
+So A hat really is a unit vector.
+
+48
+00:01:49,446 --> 00:01:50,435
+Step three.
+
+49
+00:01:50,435 --> 00:01:52,089
+The units cancel too.
+
+50
+00:01:52,089 --> 00:01:54,840
+Metres divided by metres leave nothing.
+
+51
+00:01:54,840 --> 00:01:57,117
+So a unit vector has no unit.
+
+52
+00:01:57,867 --> 00:01:58,820
+Step four.
+
+53
+00:01:58,820 --> 00:02:00,112
+Turn it around.
+
+54
+00:02:00,112 --> 00:02:03,659
+Any vector equals its size
+times its unit vector.
+
+55
+00:02:03,659 --> 00:02:05,586
+A equals A times A hat.
+
+56
+00:02:06,336 --> 00:02:10,224
+In components, A equals
+A x i hat plus A y j hat.
+
+57
+00:02:10,224 --> 00:02:13,058
+Size times direction, along each axis.
+
+58
+00:02:13,808 --> 00:02:14,835
+Remember this.
+
+59
+00:02:14,835 --> 00:02:19,635
+A vector is a size times a direction,
+and the direction is the unit vector.
+
+60
+00:02:20,335 --> 00:02:22,791
+Let's compare two arrows side by side.
+
+61
+00:02:23,141 --> 00:02:25,526
+The vector three i plus four j.
+
+62
+00:02:25,526 --> 00:02:26,965
+Its size is five.
+
+63
+00:02:27,365 --> 00:02:31,694
+Its unit vector is zero point
+six i plus zero point eight j.
+
+64
+00:02:31,694 --> 00:02:34,454
+Same direction, but its size is one.
+
+65
+00:02:35,054 --> 00:02:36,146
+Now you try.
+
+66
+00:02:36,146 --> 00:02:38,288
+Is two i hat a unit vector?
+
+67
+00:02:38,288 --> 00:02:39,645
+Pause and decide.
+
+68
+00:02:42,845 --> 00:02:43,745
+No!
+
+69
+00:02:43,319 --> 00:02:46,729
+Two i hat points along
+x, but its size is two.
+
+70
+00:02:46,729 --> 00:02:49,975
+A unit vector must have
+a size of exactly one.
+
+71
+00:02:50,625 --> 00:02:51,525
+One more.
+
+72
+00:02:51,481 --> 00:02:54,082
+Is i hat plus j hat a unit vector?
+
+73
+00:02:54,082 --> 00:02:55,366
+Pause and think.
+
+74
+00:02:58,566 --> 00:02:59,466
+No!
+
+75
+00:02:59,035 --> 00:03:03,291
+Its size is the square root of
+two, about one point four one.
+
+76
+00:03:03,291 --> 00:03:06,397
+Divide by root two to
+make it a unit vector.
+
+77
+00:03:07,047 --> 00:03:08,783
+Now, one worked example.
+
+78
+00:03:09,133 --> 00:03:12,421
+Aarav walks three metres
+east and four metres north.
+
+79
+00:03:12,421 --> 00:03:15,059
+Find the unit vector of his displacement.
+
+80
+00:03:15,559 --> 00:03:19,528
+His displacement is three i
+hat plus four j hat, in metres.
+
+81
+00:03:20,278 --> 00:03:24,274
+Its size is the square root of
+three squared plus four squared.
+
+82
+00:03:24,274 --> 00:03:25,719
+That is five metres.
+
+83
+00:03:26,469 --> 00:03:27,751
+Divide by five.
+
+84
+00:03:27,751 --> 00:03:32,691
+The unit vector is zero point six
+i hat plus zero point eight j hat.
+
+85
+00:03:33,441 --> 00:03:37,994
+Check: zero point six squared plus
+zero point eight squared is one.
+
+86
+00:03:37,994 --> 00:03:39,539
+So its size is one.
+
+87
+00:03:40,189 --> 00:03:41,655
+Now, the exam trap.
+
+88
+00:03:42,005 --> 00:03:46,756
+Many students write the unit vector
+with a unit, like zero point six i
+
+89
+00:03:46,756 --> 00:03:49,041
+plus zero point eight j metres.
+
+90
+00:03:49,391 --> 00:03:52,726
+But the metres cancel when
+you divide by the size.
+
+91
+00:03:52,726 --> 00:03:54,627
+A unit vector has no unit.
+
+92
+00:03:54,627 --> 00:03:56,678
+The unit stays with the size.
+
+93
+00:03:57,328 --> 00:03:58,882
+Where is this asked?
+
+94
+00:03:58,882 --> 00:04:03,826
+Mostly inside bigger questions: find
+a vector of a given size along a given
+
+95
+00:04:03,826 --> 00:04:04,726
+direction.
+
+96
+00:04:05,270 --> 00:04:06,663
+Exam level now.
+
+97
+00:04:06,663 --> 00:04:09,895
+Vector P is six i plus eight j newtons.
+
+98
+00:04:09,895 --> 00:04:13,671
+Vector Q has a size of
+fifteen newtons along P.
+
+99
+00:04:13,671 --> 00:04:14,768
+What is Q?
+
+100
+00:04:14,768 --> 00:04:16,219
+Pause and solve.
+
+101
+00:04:21,619 --> 00:04:23,088
+The answer is B.
+
+102
+00:04:23,088 --> 00:04:25,434
+Nine i plus twelve j newtons.
+
+103
+00:04:25,934 --> 00:04:30,362
+The size of P is the square root
+of thirty six plus sixty four.
+
+104
+00:04:30,362 --> 00:04:31,437
+That is ten.
+
+105
+00:04:31,937 --> 00:04:36,459
+So P hat is zero point six
+i plus zero point eight j.
+
+106
+00:04:36,459 --> 00:04:38,216
+Multiply by fifteen.
+
+107
+00:04:38,216 --> 00:04:40,636
+Q is nine i plus twelve j.
+
+108
+00:04:41,236 --> 00:04:42,700
+Here is your recap.
+
+109
+00:04:42,700 --> 00:04:44,205
+Screenshot this card.
+
+110
+00:04:47,405 --> 00:04:50,242
+Can you answer these three
+questions without help?
+
+111
+00:04:50,642 --> 00:04:51,542
+One.
+
+112
+00:04:51,165 --> 00:04:53,761
+Why does a unit vector have no unit?
+
+113
+00:04:54,661 --> 00:04:55,561
+Two.
+
+114
+00:04:55,132 --> 00:04:58,043
+How do you find the unit
+vector of any vector?
+
+115
+00:04:58,943 --> 00:04:59,843
+Three.
+
+116
+00:04:59,586 --> 00:05:02,914
+Is i hat plus j hat a
+unit vector, and why?
+
+117
+00:05:04,014 --> 00:05:06,948
+Next time: a point on
+a map has a position.
+
+118
+00:05:06,948 --> 00:05:10,518
+When it moves, how do we
+write the change as a vector?
+
+119
+00:05:10,518 --> 00:05:12,591
+Position and displacement vectors.
