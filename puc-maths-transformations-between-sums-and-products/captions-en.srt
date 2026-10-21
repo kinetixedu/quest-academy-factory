@@ -1,0 +1,524 @@
+1
+00:00:00,450 --> 00:00:03,946
+Play two notes that are
+almost the same, both at once.
+
+2
+00:00:03,946 --> 00:00:06,801
+The sound swells and
+fades, again and again.
+
+3
+00:00:07,201 --> 00:00:11,395
+Diya heard this tonight, when two
+phones rang with almost the same tone.
+
+4
+00:00:11,795 --> 00:00:14,143
+Each tone alone is a steady wave.
+
+5
+00:00:14,143 --> 00:00:16,956
+Add the two, and a slow wobble appears.
+
+6
+00:00:16,956 --> 00:00:18,919
+Loud, soft, loud, soft.
+
+7
+00:00:19,319 --> 00:00:21,383
+Where does that wobble come from?
+
+8
+00:00:21,383 --> 00:00:24,149
+Diya's guess: inside
+the sum hides a product.
+
+9
+00:00:24,649 --> 00:00:25,682
+She is right.
+
+10
+00:00:25,682 --> 00:00:28,876
+Today we turn sums into
+products, and back again.
+
+11
+00:00:29,526 --> 00:00:31,640
+Here is the idea in one picture.
+
+12
+00:00:31,990 --> 00:00:37,031
+On the unit circle, mark point P
+at angle x, and point Q at angle y.
+
+13
+00:00:37,431 --> 00:00:39,367
+P is at cos x, sine x.
+
+14
+00:00:39,367 --> 00:00:41,303
+Q is at cos y, sine y.
+
+15
+00:00:41,303 --> 00:00:44,999
+Add them like two moves
+on a map, and you reach R.
+
+16
+00:00:45,399 --> 00:00:49,774
+R points in the middle direction,
+the half sum, x plus y over two.
+
+17
+00:00:50,174 --> 00:00:54,521
+Its distance from the centre is two
+cos of the half difference, x minus
+
+18
+00:00:54,521 --> 00:00:55,459
+y over two.
+
+19
+00:00:55,859 --> 00:01:01,156
+So how far R is across, cos x plus
+cos y, equals two cos of the half sum,
+
+20
+00:01:01,156 --> 00:01:03,513
+times cos of the half difference.
+
+21
+00:01:03,513 --> 00:01:05,286
+A sum became a product.
+
+22
+00:01:05,936 --> 00:01:07,386
+Watch it stay true.
+
+23
+00:01:07,386 --> 00:01:10,497
+Keep x at seventy
+degrees, and slide y down.
+
+24
+00:01:10,897 --> 00:01:14,166
+Left side and right side
+are worked out separately.
+
+25
+00:01:14,166 --> 00:01:15,566
+They never disagree.
+
+26
+00:01:15,966 --> 00:01:20,416
+When y comes back up to x, the half
+difference is zero, and the answer
+
+27
+00:01:20,416 --> 00:01:21,507
+is two cos x.
+
+28
+00:01:22,157 --> 00:01:25,123
+Now let us prove it with
+algebra, in small steps.
+
+29
+00:01:25,473 --> 00:01:30,475
+From episode thirty three: cos of A
+plus B is cos A cos B, minus sine A
+
+30
+00:01:30,475 --> 00:01:31,375
+sine B.
+
+31
+00:01:31,972 --> 00:01:36,356
+And cos of A minus B is cos
+A cos B, plus sine A sine B.
+
+32
+00:01:37,106 --> 00:01:38,582
+Add the two lines.
+
+33
+00:01:38,582 --> 00:01:40,270
+The sine parts cancel.
+
+34
+00:01:40,270 --> 00:01:42,256
+Two cos A cos B is left.
+
+35
+00:01:43,006 --> 00:01:44,006
+Now rename.
+
+36
+00:01:44,006 --> 00:01:46,834
+Call A plus B x, and A minus B y.
+
+37
+00:01:46,834 --> 00:01:49,760
+Adding them, A is x plus y over two.
+
+38
+00:01:49,760 --> 00:01:53,012
+Subtracting them, B is x minus y over two.
+
+39
+00:01:53,762 --> 00:01:55,138
+Put these back in.
+
+40
+00:01:55,138 --> 00:01:59,763
+cos x plus cos y equals two cos of
+the half sum, times cos of the half
+
+41
+00:01:59,763 --> 00:02:00,663
+difference.
+
+42
+00:02:01,365 --> 00:02:04,733
+The same trick on the sine
+formulas gives three more.
+
+43
+00:02:05,133 --> 00:02:09,865
+sine x plus sine y: two sine of the
+half sum, cos of the half difference.
+
+44
+00:02:10,265 --> 00:02:15,340
+sine x minus sine y: two cos of the
+half sum, sine of the half difference.
+
+45
+00:02:15,740 --> 00:02:20,639
+And cos x minus cos y: minus two sine
+of the half sum, sine of the half
+
+46
+00:02:20,639 --> 00:02:21,539
+difference.
+
+47
+00:02:21,513 --> 00:02:22,813
+Watch that minus.
+
+48
+00:02:23,463 --> 00:02:25,433
+Now back to Diya's two tones.
+
+49
+00:02:25,783 --> 00:02:28,837
+Tone one is cos twelve t, where t is time.
+
+50
+00:02:28,837 --> 00:02:31,832
+Tone two is cos eleven t, a little slower.
+
+51
+00:02:32,232 --> 00:02:37,053
+By our formula, their sum is two cos
+of eleven point five t, times cos
+
+52
+00:02:37,053 --> 00:02:38,018
+of half t.
+
+53
+00:02:38,418 --> 00:02:40,643
+The fast part is the note you hear.
+
+54
+00:02:40,643 --> 00:02:43,559
+The slow part, cos of
+half t, is the wobble.
+
+55
+00:02:43,959 --> 00:02:46,306
+Now pull the second tone further away.
+
+56
+00:02:46,706 --> 00:02:49,306
+The bigger the gap, the faster the wobble.
+
+57
+00:02:49,306 --> 00:02:51,321
+With no gap, no wobble at all.
+
+58
+00:02:51,321 --> 00:02:54,072
+That is a beat: a sum
+written as a product.
+
+59
+00:02:54,722 --> 00:02:55,861
+Side by side.
+
+60
+00:02:55,861 --> 00:02:58,519
+Sum to product turns plus into times.
+
+61
+00:02:58,519 --> 00:03:01,937
+Use it to factorise, or
+to simplify a fraction.
+
+62
+00:03:02,337 --> 00:03:04,924
+Product to sum turns times into plus.
+
+63
+00:03:04,924 --> 00:03:08,045
+Use it to break a product
+into simple pieces.
+
+64
+00:03:08,645 --> 00:03:09,749
+Now you try.
+
+65
+00:03:09,749 --> 00:03:12,524
+Two sine three x cos x is a product.
+
+66
+00:03:12,524 --> 00:03:14,131
+Which way do we go?
+
+67
+00:03:14,131 --> 00:03:15,502
+Pause and decide.
+
+68
+00:03:18,702 --> 00:03:19,957
+Product to sum!
+
+69
+00:03:19,957 --> 00:03:24,656
+Two sine A cos B is sine of A
+plus B, plus sine of A minus B.
+
+70
+00:03:24,656 --> 00:03:27,240
+So, sine four x plus sine two x.
+
+71
+00:03:27,890 --> 00:03:28,846
+Remember this.
+
+72
+00:03:28,846 --> 00:03:30,534
+Half sum, half difference.
+
+73
+00:03:30,534 --> 00:03:32,143
+That is the whole secret.
+
+74
+00:03:32,843 --> 00:03:34,578
+Now, one worked example.
+
+75
+00:03:34,928 --> 00:03:40,137
+Find the exact value of sine seventy
+five degrees plus sine fifteen degrees.
+
+76
+00:03:40,637 --> 00:03:41,537
+Step one.
+
+77
+00:03:41,423 --> 00:03:46,672
+sine x plus sine y is two sine of the half
+sum, times cos of the half difference.
+
+78
+00:03:47,422 --> 00:03:48,322
+Step two.
+
+79
+00:03:48,215 --> 00:03:51,752
+The half sum of seventy five
+and fifteen is forty five.
+
+80
+00:03:51,752 --> 00:03:53,733
+The half difference is thirty.
+
+81
+00:03:54,483 --> 00:03:55,389
+Step three.
+
+82
+00:03:55,389 --> 00:03:58,946
+So the sum is two sine forty
+five, times cos thirty.
+
+83
+00:03:59,696 --> 00:04:00,596
+Step four.
+
+84
+00:04:00,554 --> 00:04:05,389
+Two, times root two over two, times
+root three over two, is root six over
+
+85
+00:04:05,389 --> 00:04:06,289
+two.
+
+86
+00:04:06,643 --> 00:04:11,044
+On the circle, R points at forty
+five degrees, and its height is about
+
+87
+00:04:11,044 --> 00:04:12,377
+one point two two.
+
+88
+00:04:13,027 --> 00:04:14,492
+Now, the exam trap.
+
+89
+00:04:14,842 --> 00:04:17,838
+cos eighty degrees minus
+cos twenty degrees.
+
+90
+00:04:17,838 --> 00:04:21,585
+Many students write two sine
+fifty, times sine thirty.
+
+91
+00:04:21,985 --> 00:04:26,817
+But cos eighty is smaller than cos
+twenty, so the answer must be negative.
+
+92
+00:04:26,817 --> 00:04:31,343
+The right answer starts with a minus:
+minus two sine fifty sine thirty,
+
+93
+00:04:31,343 --> 00:04:32,816
+or minus sine fifty.
+
+94
+00:04:33,466 --> 00:04:35,020
+Where is this asked?
+
+95
+00:04:35,020 --> 00:04:39,745
+In JEE Main, as short questions that
+simplify sums and products of sines
+
+96
+00:04:39,745 --> 00:04:40,756
+and cosines.
+
+97
+00:04:41,356 --> 00:04:42,669
+Exam level now.
+
+98
+00:04:42,669 --> 00:04:44,905
+Find cos of alpha plus beta.
+
+99
+00:04:44,905 --> 00:04:46,274
+Pause and solve.
+
+100
+00:04:51,674 --> 00:04:53,130
+The answer is B.
+
+101
+00:04:53,130 --> 00:04:54,689
+Five over thirteen.
+
+102
+00:04:55,189 --> 00:04:57,073
+Turn both sums into products.
+
+103
+00:04:57,073 --> 00:04:59,495
+Both share cos of the half difference.
+
+104
+00:04:59,995 --> 00:05:00,966
+Divide them.
+
+105
+00:05:00,966 --> 00:05:05,788
+The cos and the twos cancel, so tan
+of the half sum is one third over one
+
+106
+00:05:05,788 --> 00:05:07,739
+half, which is two thirds.
+
+107
+00:05:08,239 --> 00:05:12,072
+Then cos of alpha plus beta
+is cos of twice the half sum.
+
+108
+00:05:12,072 --> 00:05:16,844
+One minus four ninths, over one plus
+four ninths, is five over thirteen.
+
+109
+00:05:17,444 --> 00:05:18,903
+Here is your recap.
+
+110
+00:05:18,903 --> 00:05:20,402
+Screenshot this card.
+
+111
+00:05:23,602 --> 00:05:26,439
+Can you answer these three
+questions without help?
+
+112
+00:05:26,839 --> 00:05:27,739
+One.
+
+113
+00:05:27,410 --> 00:05:30,947
+Write cos four x plus
+cos two x as a product.
+
+114
+00:05:31,847 --> 00:05:32,747
+Two.
+
+115
+00:05:32,416 --> 00:05:37,864
+Find the exact value of sine seventy
+five degrees minus sine fifteen degrees.
+
+116
+00:05:38,764 --> 00:05:39,664
+Three.
+
+117
+00:05:39,462 --> 00:05:42,549
+Turn two cos five x cos x into a sum.
+
+118
+00:05:43,649 --> 00:05:47,377
+Next time: when is the tyre
+valve exactly at half height?
+
+119
+00:05:47,377 --> 00:05:50,101
+Not once, but again and again, forever.
+
+120
+00:05:50,101 --> 00:05:51,618
+Trigonometric equations.

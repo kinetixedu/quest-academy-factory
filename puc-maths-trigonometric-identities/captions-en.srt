@@ -1,0 +1,529 @@
+1
+00:00:00,450 --> 00:00:03,205
+Three expressions that look nothing alike.
+
+2
+00:00:03,205 --> 00:00:05,442
+Sine squared plus cosine squared.
+
+3
+00:00:05,442 --> 00:00:07,679
+Secant squared minus tan squared.
+
+4
+00:00:07,679 --> 00:00:10,017
+Cosecant squared minus cot squared.
+
+5
+00:00:10,417 --> 00:00:15,136
+Put in any angle: seventeen, fifty,
+one hundred and twenty three degrees.
+
+6
+00:00:15,586 --> 00:00:18,592
+Aarav tried this on his
+calculator last night.
+
+7
+00:00:18,942 --> 00:00:21,627
+Every time, all three give exactly one.
+
+8
+00:00:21,627 --> 00:00:22,950
+Luck, or a law?
+
+9
+00:00:23,450 --> 00:00:24,567
+It is a law.
+
+10
+00:00:24,567 --> 00:00:29,028
+These are trigonometric identities,
+and one circle proves all three.
+
+11
+00:00:29,678 --> 00:00:31,502
+First, what is an identity?
+
+12
+00:00:31,852 --> 00:00:36,701
+An equation like two x equals six
+is true for one value only: x equals
+
+13
+00:00:36,701 --> 00:00:37,601
+three.
+
+14
+00:00:37,751 --> 00:00:42,252
+An identity is true for every angle,
+wherever both sides are defined.
+
+15
+00:00:42,652 --> 00:00:45,060
+So one lucky angle proves nothing.
+
+16
+00:00:45,660 --> 00:00:47,033
+Pause and think.
+
+17
+00:00:47,033 --> 00:00:50,871
+Sine theta equals cosine
+theta at forty five degrees.
+
+18
+00:00:50,871 --> 00:00:52,423
+Is it an identity?
+
+19
+00:00:55,623 --> 00:00:56,523
+No!
+
+20
+00:00:56,113 --> 00:00:59,684
+At zero degrees sine is
+zero, but cosine is one.
+
+21
+00:00:59,684 --> 00:01:01,763
+One failing angle breaks it.
+
+22
+00:01:02,413 --> 00:01:06,175
+Now the unit circle: radius
+one, centre at the origin.
+
+23
+00:01:06,525 --> 00:01:09,806
+Turn a radius through an
+angle theta, to a point P.
+
+24
+00:01:10,206 --> 00:01:15,132
+The x coordinate of P is cosine
+theta, the y coordinate sine theta.
+
+25
+00:01:15,532 --> 00:01:16,965
+Watch theta count up.
+
+26
+00:01:16,965 --> 00:01:19,737
+The blue base and coral
+height keep changing.
+
+27
+00:01:20,137 --> 00:01:23,806
+But the slanted side is the
+radius: always exactly one.
+
+28
+00:01:24,406 --> 00:01:26,588
+That one fact is the whole proof.
+
+29
+00:01:26,938 --> 00:01:27,838
+Step one.
+
+30
+00:01:27,817 --> 00:01:30,433
+Drop a line from P to the x axis.
+
+31
+00:01:30,433 --> 00:01:34,785
+The right triangle has base cosine
+theta and height sine theta.
+
+32
+00:01:35,535 --> 00:01:36,435
+Step two.
+
+33
+00:01:36,371 --> 00:01:39,940
+The hypotenuse is the
+radius, so its length is one.
+
+34
+00:01:40,690 --> 00:01:41,604
+Step three.
+
+35
+00:01:41,604 --> 00:01:46,018
+Pythagoras: base squared plus height
+squared equals hypotenuse squared.
+
+36
+00:01:46,018 --> 00:01:48,732
+The two small squares match the big one.
+
+37
+00:01:49,482 --> 00:01:50,439
+Step four.
+
+38
+00:01:50,439 --> 00:01:54,616
+So cosine squared theta plus
+sine squared theta equals one.
+
+39
+00:01:55,366 --> 00:01:58,220
+Sine squared theta means
+sine theta, squared.
+
+40
+00:01:58,220 --> 00:02:00,999
+The square is on the sine, not the angle.
+
+41
+00:02:01,399 --> 00:02:03,523
+Slide theta all the way round.
+
+42
+00:02:03,523 --> 00:02:08,426
+Cosine turns negative in the second
+quadrant, but its square stays positive.
+
+43
+00:02:08,426 --> 00:02:09,926
+The total stays one.
+
+44
+00:02:10,576 --> 00:02:13,090
+Now the second identity, from the first.
+
+45
+00:02:13,440 --> 00:02:18,518
+Divide every term by cosine squared
+theta, allowed only when cosine theta
+
+46
+00:02:18,518 --> 00:02:19,675
+is not zero.
+
+47
+00:02:20,425 --> 00:02:23,926
+Sine squared over cosine
+squared is tan squared theta.
+
+48
+00:02:24,676 --> 00:02:26,888
+Cosine squared over itself is one.
+
+49
+00:02:27,638 --> 00:02:30,750
+One over cosine squared
+is secant squared theta.
+
+50
+00:02:31,500 --> 00:02:35,354
+So, one plus tan squared theta
+equals secant squared theta.
+
+51
+00:02:36,004 --> 00:02:36,921
+Picture it.
+
+52
+00:02:36,921 --> 00:02:39,791
+Stretch the triangle
+until its base is one.
+
+53
+00:02:40,191 --> 00:02:45,092
+Its height becomes tan theta, and its
+slanted side becomes secant theta.
+
+54
+00:02:45,092 --> 00:02:46,320
+Same Pythagoras.
+
+55
+00:02:46,970 --> 00:02:51,729
+The third identity: divide by sine
+squared theta, where sine theta is not
+
+56
+00:02:51,729 --> 00:02:52,629
+zero.
+
+57
+00:02:53,048 --> 00:02:57,298
+We get one plus cot squared theta
+equals cosecant squared theta, with the
+
+58
+00:02:57,298 --> 00:02:58,866
+height stretched to one.
+
+59
+00:02:59,516 --> 00:03:00,677
+Side by side.
+
+60
+00:03:00,677 --> 00:03:04,255
+Identity one works for
+every angle, no exceptions.
+
+61
+00:03:04,655 --> 00:03:07,425
+Identity two needs a non zero cosine.
+
+62
+00:03:07,425 --> 00:03:12,240
+At ninety degrees cosine is zero,
+so tan and secant do not exist.
+
+63
+00:03:12,840 --> 00:03:13,809
+Quick check.
+
+64
+00:03:13,809 --> 00:03:18,335
+At ninety degrees, is one plus tan
+squared theta equal to secant squared
+
+65
+00:03:18,335 --> 00:03:19,235
+theta?
+
+66
+00:03:18,945 --> 00:03:20,173
+Pause and think.
+
+67
+00:03:23,373 --> 00:03:24,273
+No!
+
+68
+00:03:23,901 --> 00:03:27,135
+At ninety degrees both
+sides are undefined.
+
+69
+00:03:27,135 --> 00:03:31,367
+An identity only promises
+equality where both sides exist.
+
+70
+00:03:32,017 --> 00:03:33,125
+Remember this.
+
+71
+00:03:33,125 --> 00:03:36,293
+Three identities, one
+circle, one Pythagoras.
+
+72
+00:03:36,993 --> 00:03:38,728
+Now, one worked example.
+
+73
+00:03:39,078 --> 00:03:43,505
+Secant theta is thirteen fifths,
+with theta in the fourth quadrant.
+
+74
+00:03:43,505 --> 00:03:46,682
+Find tan theta, sine
+theta and cosecant theta.
+
+75
+00:03:47,182 --> 00:03:48,082
+Step one.
+
+76
+00:03:48,034 --> 00:03:52,680
+By the second identity, tan squared
+theta is secant squared minus one:
+
+77
+00:03:52,680 --> 00:03:55,776
+one sixty nine over
+twenty five, minus one.
+
+78
+00:03:55,776 --> 00:03:58,613
+That is one forty four over twenty five.
+
+79
+00:03:59,363 --> 00:04:00,263
+Step two.
+
+80
+00:04:00,207 --> 00:04:03,283
+So tan theta is plus
+or minus twelve fifths.
+
+81
+00:04:03,283 --> 00:04:07,892
+In the fourth quadrant y is negative,
+so it is minus twelve fifths.
+
+82
+00:04:08,642 --> 00:04:09,572
+Step three.
+
+83
+00:04:09,572 --> 00:04:12,938
+Sine is tan over secant:
+minus twelve thirteenths.
+
+84
+00:04:13,688 --> 00:04:14,627
+Step four.
+
+85
+00:04:14,627 --> 00:04:18,273
+Cosecant is one over sine:
+minus thirteen twelfths.
+
+86
+00:04:19,023 --> 00:04:23,714
+Check: one plus twenty five over one
+forty four is one sixty nine over
+
+87
+00:04:23,714 --> 00:04:26,118
+one forty four, cosecant squared.
+
+88
+00:04:26,768 --> 00:04:28,233
+Now, the exam trap.
+
+89
+00:04:28,583 --> 00:04:33,325
+Many students square sine theta plus
+cosine theta, and write sine squared
+
+90
+00:04:33,325 --> 00:04:35,854
+plus cosine squared, which is one.
+
+91
+00:04:36,254 --> 00:04:40,657
+But a bracket squared has a middle
+term: one plus two sine theta cosine
+
+92
+00:04:40,657 --> 00:04:41,557
+theta.
+
+93
+00:04:41,248 --> 00:04:43,450
+At forty five degrees it is two.
+
+94
+00:04:44,100 --> 00:04:45,725
+Where is this asked?
+
+95
+00:04:45,725 --> 00:04:50,274
+JEE Main and the PUC boards:
+given one ratio, find the rest.
+
+96
+00:04:50,874 --> 00:04:52,215
+Exam level now.
+
+97
+00:04:52,215 --> 00:04:55,307
+Secant theta plus tan theta equals three.
+
+98
+00:04:55,307 --> 00:04:56,705
+Find sine theta.
+
+99
+00:04:56,705 --> 00:04:58,104
+Pause and solve.
+
+100
+00:05:03,504 --> 00:05:04,935
+The answer is B.
+
+101
+00:05:04,935 --> 00:05:06,012
+Four fifths.
+
+102
+00:05:06,512 --> 00:05:11,244
+Secant squared minus tan squared is
+one, which is secant minus tan, times
+
+103
+00:05:11,244 --> 00:05:12,487
+secant plus tan.
+
+104
+00:05:12,987 --> 00:05:15,880
+So secant minus tan equals one third.
+
+105
+00:05:16,380 --> 00:05:19,195
+Add the equations: secant is five thirds.
+
+106
+00:05:19,195 --> 00:05:21,291
+Subtract: tan is four thirds.
+
+107
+00:05:21,891 --> 00:05:23,701
+Sine is tan over secant.
+
+108
+00:05:23,701 --> 00:05:26,732
+Four thirds over five
+thirds is four fifths.
+
+109
+00:05:27,332 --> 00:05:28,793
+Here is your recap.
+
+110
+00:05:28,793 --> 00:05:30,294
+Screenshot this card.
+
+111
+00:05:33,494 --> 00:05:35,695
+Can you answer these three without help?
+
+112
+00:05:36,095 --> 00:05:36,995
+One.
+
+113
+00:05:36,673 --> 00:05:40,698
+Why is sine theta equals
+cosine theta not an identity?
+
+114
+00:05:41,598 --> 00:05:42,498
+Two.
+
+115
+00:05:42,131 --> 00:05:46,115
+If cosine theta is three
+fifths, what can sine theta be?
+
+116
+00:05:47,015 --> 00:05:47,915
+Three.
+
+117
+00:05:47,679 --> 00:05:51,262
+At which angles is the
+third identity not defined?
+
+118
+00:05:52,362 --> 00:05:57,266
+Next time: is sine of thirty plus
+sixty equal to sine thirty plus sine
+
+119
+00:05:57,266 --> 00:05:58,166
+sixty?
+
+120
+00:05:57,932 --> 00:05:59,210
+Compound angles.

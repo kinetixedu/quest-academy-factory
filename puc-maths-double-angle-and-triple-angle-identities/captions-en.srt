@@ -1,0 +1,488 @@
+1
+00:00:00,450 --> 00:00:03,381
+Double an angle, and
+surely its sine doubles?
+
+2
+00:00:03,381 --> 00:00:05,483
+Sine thirty degrees is one half.
+
+3
+00:00:05,883 --> 00:00:07,798
+So sine sixty should be one.
+
+4
+00:00:07,798 --> 00:00:10,161
+But it is zero point eight six six.
+
+5
+00:00:10,611 --> 00:00:13,730
+Aarav spotted this while
+doing homework at his desk.
+
+6
+00:00:14,080 --> 00:00:18,650
+Double again, to one twenty degrees,
+and the sine does not grow at all.
+
+7
+00:00:19,150 --> 00:00:21,866
+So what really happens
+when you double an angle?
+
+8
+00:00:22,516 --> 00:00:28,319
+Start from the sum formula: sin of x
+plus y is sin x cos y plus cos x sin
+
+9
+00:00:28,319 --> 00:00:29,219
+y.
+
+10
+00:00:29,201 --> 00:00:30,836
+Put y equal to x.
+
+11
+00:00:30,836 --> 00:00:32,961
+Then x plus y is two x.
+
+12
+00:00:33,711 --> 00:00:37,733
+So sin two x is sin x
+cos x plus cos x sin x.
+
+13
+00:00:37,733 --> 00:00:41,033
+The same term twice: two sin x cos x.
+
+14
+00:00:41,783 --> 00:00:43,194
+Here is the picture.
+
+15
+00:00:43,194 --> 00:00:47,400
+An angle of two x at the centre,
+between two radii of length one.
+
+16
+00:00:47,800 --> 00:00:48,930
+Join the ends.
+
+17
+00:00:48,930 --> 00:00:53,641
+With one radius as base, the height
+is sine two x, so the area is half
+
+18
+00:00:53,641 --> 00:00:54,831
+of sine two x.
+
+19
+00:00:55,231 --> 00:00:59,835
+Now cut it down the middle: two right
+triangles, each with sides cos x
+
+20
+00:00:59,835 --> 00:01:00,768
+and sin x.
+
+21
+00:01:01,168 --> 00:01:03,972
+Each has area half of sin x cos x.
+
+22
+00:01:03,972 --> 00:01:06,044
+Same triangle, same area.
+
+23
+00:01:06,044 --> 00:01:08,860
+So sine two x is two sin x cos x.
+
+24
+00:01:09,460 --> 00:01:10,586
+Watch it live.
+
+25
+00:01:10,586 --> 00:01:15,123
+The coral curve is sine two x, and
+the dashed curve is two sine x.
+
+26
+00:01:15,523 --> 00:01:16,859
+They split apart.
+
+27
+00:01:16,859 --> 00:01:20,859
+But two sin x cos x stays on
+the coral curve every time.
+
+28
+00:01:21,509 --> 00:01:22,691
+Now cosine.
+
+29
+00:01:22,691 --> 00:01:29,113
+Put y equal to x in cos of x plus y:
+cos two x is cos squared x minus sin
+
+30
+00:01:29,113 --> 00:01:30,230
+squared x.
+
+31
+00:01:30,980 --> 00:01:36,102
+Swap sin squared for one minus cos
+squared, and cos two x is two cos squared
+
+32
+00:01:36,102 --> 00:01:37,177
+x minus one.
+
+33
+00:01:37,927 --> 00:01:41,290
+Swap the other way: one
+minus two sin squared x.
+
+34
+00:01:41,290 --> 00:01:43,037
+Three forms, one value.
+
+35
+00:01:43,787 --> 00:01:49,019
+From the tan of a sum, tan two x is
+two tan x over one minus tan squared
+
+36
+00:01:49,019 --> 00:01:49,919
+x.
+
+37
+00:01:50,213 --> 00:01:55,005
+Divide by cos squared plus sin squared,
+which is one, and sine two x and
+
+38
+00:01:55,005 --> 00:01:57,982
+cos two x can be written with tan x alone.
+
+39
+00:01:58,632 --> 00:01:59,891
+Side by side.
+
+40
+00:01:59,891 --> 00:02:01,395
+Know only cos x?
+
+41
+00:02:01,395 --> 00:02:04,041
+Use two cos squared x minus one.
+
+42
+00:02:04,441 --> 00:02:05,902
+Know only sin x?
+
+43
+00:02:05,902 --> 00:02:08,474
+Use one minus two sin squared x.
+
+44
+00:02:09,074 --> 00:02:10,323
+Pause and think.
+
+45
+00:02:10,323 --> 00:02:11,896
+Sine x is one third.
+
+46
+00:02:11,896 --> 00:02:14,464
+Which form of cos two x is quickest?
+
+47
+00:02:17,664 --> 00:02:22,439
+One minus two sin squared x: one minus
+two ninths, which is seven ninths.
+
+48
+00:02:23,089 --> 00:02:24,712
+Now the triple angle.
+
+49
+00:02:24,712 --> 00:02:27,062
+Write three x as two x plus x.
+
+50
+00:02:27,462 --> 00:02:28,474
+Step one.
+
+51
+00:02:28,474 --> 00:02:33,103
+Sin three x is sin two x
+cos x plus cos two x sin x.
+
+52
+00:02:33,853 --> 00:02:34,753
+Step two.
+
+53
+00:02:34,745 --> 00:02:39,683
+Put in the double angle forms, then
+change cos squared x into one minus
+
+54
+00:02:39,683 --> 00:02:40,912
+sin squared x.
+
+55
+00:02:41,662 --> 00:02:42,680
+Step three.
+
+56
+00:02:42,680 --> 00:02:47,885
+Collect the terms: sin three x is
+three sin x minus four sin cubed x.
+
+57
+00:02:48,635 --> 00:02:53,738
+The same way, cos three x is four
+cos cubed x minus three cos x.
+
+58
+00:02:54,388 --> 00:02:55,368
+Quick check.
+
+59
+00:02:55,368 --> 00:02:59,901
+At thirty degrees, is sine of three
+x equal to three times sine x?
+
+60
+00:02:59,901 --> 00:03:01,143
+Pause and think.
+
+61
+00:03:04,343 --> 00:03:05,243
+No!
+
+62
+00:03:04,826 --> 00:03:08,876
+Three times sine thirty is
+one point five, more than one.
+
+63
+00:03:08,876 --> 00:03:13,903
+The formula gives one point five minus
+zero point five: one, which is sine
+
+64
+00:03:13,903 --> 00:03:14,803
+ninety.
+
+65
+00:03:15,245 --> 00:03:16,398
+Remember this.
+
+66
+00:03:16,398 --> 00:03:19,382
+Doubling the angle never doubles the sine.
+
+67
+00:03:19,382 --> 00:03:21,796
+Sin two x is two sin x cos x.
+
+68
+00:03:22,496 --> 00:03:23,982
+Now a worked example.
+
+69
+00:03:24,332 --> 00:03:27,408
+Tan x is three quarters and x is acute.
+
+70
+00:03:27,408 --> 00:03:30,787
+Find sin two x, cos two x and tan two x.
+
+71
+00:03:31,287 --> 00:03:32,187
+Step one.
+
+72
+00:03:32,184 --> 00:03:37,366
+A three four five triangle: sin x
+is three fifths, cos x four fifths.
+
+73
+00:03:38,116 --> 00:03:39,016
+Step two.
+
+74
+00:03:38,968 --> 00:03:43,683
+Sin two x is two times three fifths
+times four fifths: twenty four over
+
+75
+00:03:43,683 --> 00:03:44,690
+twenty five.
+
+76
+00:03:45,440 --> 00:03:46,450
+Step three.
+
+77
+00:03:46,450 --> 00:03:51,475
+Cos two x is sixteen twenty fifths
+minus nine twenty fifths: seven twenty
+
+78
+00:03:51,475 --> 00:03:52,375
+fifths.
+
+79
+00:03:52,950 --> 00:03:53,878
+Step four.
+
+80
+00:03:53,878 --> 00:03:58,330
+Tan two x is twenty four sevenths,
+and the tan formula agrees.
+
+81
+00:03:58,980 --> 00:04:00,445
+Now, the exam trap.
+
+82
+00:04:00,795 --> 00:04:05,553
+Many students flip the signs, and
+write cos two x as one minus two cos
+
+83
+00:04:05,553 --> 00:04:06,463
+squared x.
+
+84
+00:04:06,863 --> 00:04:08,558
+Test at x equals zero.
+
+85
+00:04:08,558 --> 00:04:11,948
+Cos zero is one, but that
+form gives minus one.
+
+86
+00:04:11,948 --> 00:04:13,798
+The right form gives one.
+
+87
+00:04:14,448 --> 00:04:16,175
+Where is this asked?
+
+88
+00:04:16,175 --> 00:04:21,541
+JEE Main, as in January twenty nineteen,
+where a long product of cosines
+
+89
+00:04:21,541 --> 00:04:25,435
+collapses using sin two
+x equals two sin x cos x.
+
+90
+00:04:25,435 --> 00:04:27,104
+And the PUC boards.
+
+91
+00:04:27,704 --> 00:04:29,099
+Exam level now.
+
+92
+00:04:29,099 --> 00:04:30,446
+Tan x is two.
+
+93
+00:04:30,446 --> 00:04:33,082
+Find cos two x plus sin two x.
+
+94
+00:04:33,082 --> 00:04:34,535
+Pause and solve.
+
+95
+00:04:39,935 --> 00:04:41,420
+The answer is A.
+
+96
+00:04:41,420 --> 00:04:42,422
+One fifth.
+
+97
+00:04:42,922 --> 00:04:44,471
+Use the tan forms.
+
+98
+00:04:44,471 --> 00:04:49,252
+Sin two x is two tan x over one
+plus tan squared: four fifths.
+
+99
+00:04:49,752 --> 00:04:54,990
+Cos two x is one minus tan squared
+over one plus tan squared: minus three
+
+100
+00:04:54,990 --> 00:04:55,890
+fifths.
+
+101
+00:04:56,225 --> 00:04:57,125
+Add them.
+
+102
+00:04:57,065 --> 00:05:00,067
+Four fifths minus three
+fifths is one fifth.
+
+103
+00:05:00,667 --> 00:05:02,126
+Here is your recap.
+
+104
+00:05:02,126 --> 00:05:03,626
+Screenshot this card.
+
+105
+00:05:06,826 --> 00:05:09,662
+Can you answer these three
+questions without help?
+
+106
+00:05:10,062 --> 00:05:10,962
+One.
+
+107
+00:05:10,607 --> 00:05:13,437
+Why is sine of two x not two sine x?
+
+108
+00:05:14,337 --> 00:05:15,237
+Two.
+
+109
+00:05:14,895 --> 00:05:17,609
+Write all three forms of cos two x.
+
+110
+00:05:18,509 --> 00:05:19,409
+Three.
+
+111
+00:05:19,149 --> 00:05:22,294
+If cos x is three fifths, find cos two x.
+
+112
+00:05:23,394 --> 00:05:27,995
+Next time: two notes played together
+make a beat, a sum hiding a product.
+
+113
+00:05:27,995 --> 00:05:29,234
+Sums and products.

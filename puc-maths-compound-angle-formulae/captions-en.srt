@@ -1,0 +1,461 @@
+1
+00:00:00,450 --> 00:00:04,952
+Is sine of thirty plus sixty degrees
+the same as sine thirty plus sine
+
+2
+00:00:04,952 --> 00:00:05,852
+sixty?
+
+3
+00:00:05,978 --> 00:00:10,041
+Thirty plus sixty is ninety,
+and sine ninety is exactly one.
+
+4
+00:00:10,491 --> 00:00:14,704
+But sine thirty plus sine sixty
+is one point three six six.
+
+5
+00:00:15,154 --> 00:00:18,005
+Aarav checked it twice
+on his ride to college.
+
+6
+00:00:18,355 --> 00:00:20,613
+So how do we find the sine of a sum?
+
+7
+00:00:21,263 --> 00:00:26,610
+A compound angle is a sum or difference
+of two angles, like x plus y, or
+
+8
+00:00:26,610 --> 00:00:27,643
+x minus y.
+
+9
+00:00:28,043 --> 00:00:31,906
+Stack the height for thirty degrees
+on top of the one for sixty.
+
+10
+00:00:32,306 --> 00:00:35,514
+It pokes out above the circle,
+higher than the radius.
+
+11
+00:00:35,514 --> 00:00:38,573
+So the sine of a sum is
+not the sum of the sines.
+
+12
+00:00:39,173 --> 00:00:40,574
+Pause and think.
+
+13
+00:00:40,574 --> 00:00:45,959
+Is cosine of sixty minus thirty equal
+to cosine sixty minus cosine thirty?
+
+14
+00:00:49,159 --> 00:00:50,059
+No!
+
+15
+00:00:49,626 --> 00:00:54,725
+Cosine thirty is about zero point eight
+seven, but the difference is negative.
+
+16
+00:00:55,375 --> 00:00:57,028
+We need a real formula.
+
+17
+00:00:57,028 --> 00:01:00,032
+Here is the NCERT proof,
+on the unit circle.
+
+18
+00:01:00,382 --> 00:01:01,871
+Mark four points.
+
+19
+00:01:01,871 --> 00:01:05,557
+P one at angle x, P two at angle x plus y.
+
+20
+00:01:05,957 --> 00:01:11,274
+P three at angle minus y, and P four
+at angle zero, the point one comma
+
+21
+00:01:11,274 --> 00:01:12,174
+zero.
+
+22
+00:01:12,300 --> 00:01:16,258
+Now turn the chord from P three
+to P one, through the angle y.
+
+23
+00:01:16,658 --> 00:01:19,706
+P three lands on P four, P one on P two.
+
+24
+00:01:19,706 --> 00:01:24,303
+Both chords stand on the same
+angle, x plus y, so they are equal.
+
+25
+00:01:24,903 --> 00:01:27,313
+Now in coordinates, in four steps.
+
+26
+00:01:27,663 --> 00:01:28,563
+Step one.
+
+27
+00:01:28,515 --> 00:01:32,624
+Distance squared is gap across
+squared, plus gap up squared.
+
+28
+00:01:32,624 --> 00:01:33,524
+Pythagoras.
+
+29
+00:01:34,269 --> 00:01:35,252
+Step two.
+
+30
+00:01:35,252 --> 00:01:37,495
+P one is cos x, sin x.
+
+31
+00:01:37,495 --> 00:01:40,289
+P three is cos y, minus sin y.
+
+32
+00:01:40,289 --> 00:01:45,793
+Expand, use sin squared plus cos
+squared equals one, and P one P three
+
+33
+00:01:45,793 --> 00:01:51,009
+squared is two minus two, times
+cos x cos y minus sin x sin y.
+
+34
+00:01:51,759 --> 00:01:52,826
+Step three.
+
+35
+00:01:52,826 --> 00:01:58,673
+P two is cos of x plus y, sin of
+x plus y, and P four is one, zero.
+
+36
+00:01:58,673 --> 00:02:03,313
+So P two P four squared is
+two minus two cos of x plus y.
+
+37
+00:02:04,063 --> 00:02:05,147
+Step four.
+
+38
+00:02:05,147 --> 00:02:07,627
+Equal chords, equal answers.
+
+39
+00:02:07,627 --> 00:02:13,770
+Cancel the twos: cos of x plus y
+equals cos x cos y minus sin x sin y.
+
+40
+00:02:14,520 --> 00:02:16,396
+Put minus y for y.
+
+41
+00:02:16,396 --> 00:02:21,906
+Cos of minus y is cos y, and
+sin of minus y is minus sin y.
+
+42
+00:02:21,906 --> 00:02:26,834
+So cos of x minus y is cos
+x cos y plus sin x sin y.
+
+43
+00:02:27,584 --> 00:02:33,276
+For sine, use one fact: sine of an
+angle is cosine of ninety degrees minus
+
+44
+00:02:33,276 --> 00:02:34,176
+it.
+
+45
+00:02:33,815 --> 00:02:39,695
+Then sin of x plus y is sin x cos y
+plus cos x sin y, and sin of x minus
+
+46
+00:02:39,695 --> 00:02:40,716
+y follows.
+
+47
+00:02:41,466 --> 00:02:44,808
+And tan of x plus y is sine over cosine.
+
+48
+00:02:44,808 --> 00:02:50,401
+Divide top and bottom by cos x cos
+y: tan x plus tan y, over one minus
+
+49
+00:02:50,401 --> 00:02:51,680
+tan x tan y.
+
+50
+00:02:52,430 --> 00:02:54,111
+Move x and y anywhere.
+
+51
+00:02:54,111 --> 00:02:58,198
+The formula always matches; the
+sum of the sines never does.
+
+52
+00:02:58,848 --> 00:02:59,989
+Side by side.
+
+53
+00:02:59,989 --> 00:03:03,792
+Sine mixes: sin cos plus
+cos sin, keeping the sign.
+
+54
+00:03:04,192 --> 00:03:08,235
+Cosine pairs: cos cos minus
+sin sin, flipping the sign.
+
+55
+00:03:08,835 --> 00:03:09,848
+Quick check.
+
+56
+00:03:09,848 --> 00:03:13,848
+In cos of x minus y, is the
+middle sign plus or minus?
+
+57
+00:03:13,848 --> 00:03:15,133
+Pause and think.
+
+58
+00:03:18,333 --> 00:03:19,233
+Plus!
+
+59
+00:03:18,950 --> 00:03:20,306
+Cosine flips it.
+
+60
+00:03:20,956 --> 00:03:22,055
+Remember this.
+
+61
+00:03:22,055 --> 00:03:24,223
+Sine mixes and keeps the sign.
+
+62
+00:03:24,223 --> 00:03:26,124
+Cosine pairs and flips it.
+
+63
+00:03:26,824 --> 00:03:30,957
+One worked example: the exact
+value of sine fifteen degrees.
+
+64
+00:03:31,307 --> 00:03:32,207
+Step one.
+
+65
+00:03:32,147 --> 00:03:35,935
+Fifteen is forty five minus
+thirty, two angles we know.
+
+66
+00:03:36,685 --> 00:03:37,746
+Step two.
+
+67
+00:03:37,746 --> 00:03:42,727
+Use sin of x minus y: sin
+x cos y minus cos x sin y.
+
+68
+00:03:43,477 --> 00:03:44,456
+Step three.
+
+69
+00:03:44,456 --> 00:03:49,515
+Root two over two times root three
+over two, minus root two over two times
+
+70
+00:03:49,515 --> 00:03:50,415
+a half.
+
+71
+00:03:51,032 --> 00:03:51,940
+Step four.
+
+72
+00:03:51,940 --> 00:03:55,113
+That is root six minus
+root two, over four.
+
+73
+00:03:55,863 --> 00:03:58,281
+About zero point two five nine.
+
+74
+00:03:58,281 --> 00:03:59,881
+A calculator agrees.
+
+75
+00:04:00,531 --> 00:04:01,997
+Now, the exam trap.
+
+76
+00:04:02,347 --> 00:04:06,446
+Many students put a plus sign in
+the middle of cos of x plus y.
+
+77
+00:04:06,846 --> 00:04:08,755
+But cosine flips the sign.
+
+78
+00:04:08,755 --> 00:04:13,493
+At thirty and sixty, cos ninety is
+zero, and only the minus sign gives
+
+79
+00:04:13,493 --> 00:04:14,393
+zero.
+
+80
+00:04:14,721 --> 00:04:16,355
+Where is this asked?
+
+81
+00:04:16,355 --> 00:04:21,653
+JEE Main, as in April twenty nineteen,
+and the PUC boards: exact values,
+
+82
+00:04:21,653 --> 00:04:25,952
+or tan two alpha from alpha
+plus beta and alpha minus beta.
+
+83
+00:04:26,552 --> 00:04:27,816
+Exam level now.
+
+84
+00:04:27,816 --> 00:04:31,673
+Alpha plus beta is one hundred
+and thirty five degrees.
+
+85
+00:04:31,673 --> 00:04:33,098
+Find this product.
+
+86
+00:04:33,098 --> 00:04:34,416
+Pause and solve.
+
+87
+00:04:39,816 --> 00:04:41,076
+The answer is C.
+
+88
+00:04:41,076 --> 00:04:41,976
+Two.
+
+89
+00:04:42,075 --> 00:04:44,424
+Tan one thirty five is minus one.
+
+90
+00:04:44,924 --> 00:04:49,321
+So the sum of the tans, over one
+minus their product, is minus one.
+
+91
+00:04:49,821 --> 00:04:53,488
+Cross multiply: the sum is
+minus one, plus the product.
+
+92
+00:04:53,988 --> 00:04:56,954
+Expand: one, minus the
+sum, plus the product.
+
+93
+00:04:56,954 --> 00:04:58,953
+That leaves one plus one: two.
+
+94
+00:04:59,553 --> 00:05:01,015
+Here is your recap.
+
+95
+00:05:01,015 --> 00:05:02,518
+Screenshot this card.
+
+96
+00:05:05,718 --> 00:05:08,716
+Can you answer these three
+questions without help?
+
+97
+00:05:09,116 --> 00:05:10,016
+One.
+
+98
+00:05:09,728 --> 00:05:13,785
+Why is sine of x plus y
+not sine x plus sine y?
+
+99
+00:05:14,685 --> 00:05:15,585
+Two.
+
+100
+00:05:15,313 --> 00:05:18,689
+Write the formula for cos of x minus y.
+
+101
+00:05:19,589 --> 00:05:20,489
+Three.
+
+102
+00:05:20,221 --> 00:05:23,741
+Use forty five and thirty
+to find cos seventy five.
+
+103
+00:05:24,841 --> 00:05:28,666
+Next time: double the angle,
+and the sine does not double.
+
+104
+00:05:28,666 --> 00:05:31,204
+Double angle and triple angle identities.

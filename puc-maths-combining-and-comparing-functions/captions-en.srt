@@ -1,0 +1,472 @@
+1
+00:00:00,450 --> 00:00:04,996
+At the college canteen, a cup of tea
+costs fifteen rupees and a samosa
+
+2
+00:00:04,996 --> 00:00:06,029
+costs twenty.
+
+3
+00:00:06,429 --> 00:00:09,285
+For x friends, the tea costs fifteen x.
+
+4
+00:00:09,285 --> 00:00:11,186
+The samosas cost twenty x.
+
+5
+00:00:11,636 --> 00:00:14,578
+Diya does not add the
+bill friend by friend.
+
+6
+00:00:14,578 --> 00:00:16,250
+She adds the two rules.
+
+7
+00:00:16,600 --> 00:00:19,498
+Fifteen x plus twenty x is thirty five x.
+
+8
+00:00:19,498 --> 00:00:22,387
+One new rule, for any number of friends.
+
+9
+00:00:22,887 --> 00:00:27,321
+Adding two rules to make a new
+rule: the algebra of real functions.
+
+10
+00:00:27,971 --> 00:00:31,631
+Take two real functions, f
+and g, on the same domain.
+
+11
+00:00:31,981 --> 00:00:37,764
+Their sum, f plus g, adds the two
+outputs at each x: f of x plus g of x.
+
+12
+00:00:38,164 --> 00:00:39,329
+Watch it live.
+
+13
+00:00:39,329 --> 00:00:40,989
+f of x is x squared.
+
+14
+00:00:40,989 --> 00:00:43,031
+g of x is two x plus one.
+
+15
+00:00:43,431 --> 00:00:46,757
+At every x, stack the
+height of g on top of f.
+
+16
+00:00:46,757 --> 00:00:48,948
+The new height traces f plus g.
+
+17
+00:00:49,348 --> 00:00:54,238
+The result, x squared plus two x
+plus one, is x plus one, all squared:
+
+18
+00:00:54,238 --> 00:00:56,728
+the same U, shifted one step left.
+
+19
+00:00:57,378 --> 00:01:00,794
+NCERT defines five ways
+to combine f and g.
+
+20
+00:01:01,144 --> 00:01:02,044
+One.
+
+21
+00:01:01,736 --> 00:01:02,636
+The sum.
+
+22
+00:01:02,630 --> 00:01:06,263
+f plus g, at x, is f of x plus g of x.
+
+23
+00:01:07,013 --> 00:01:07,913
+Two.
+
+24
+00:01:07,605 --> 00:01:08,904
+The difference.
+
+25
+00:01:08,904 --> 00:01:12,651
+f minus g, at x, is f of x minus g of x.
+
+26
+00:01:13,401 --> 00:01:14,301
+Three.
+
+27
+00:01:14,074 --> 00:01:15,543
+A scalar multiple.
+
+28
+00:01:15,543 --> 00:01:20,226
+Alpha f, at x, is alpha times
+f of x, for any real alpha.
+
+29
+00:01:20,976 --> 00:01:21,876
+Four.
+
+30
+00:01:21,613 --> 00:01:22,718
+The product.
+
+31
+00:01:22,718 --> 00:01:25,985
+f g, at x, is f of x times g of x.
+
+32
+00:01:26,735 --> 00:01:27,635
+Five.
+
+33
+00:01:27,393 --> 00:01:28,592
+The quotient.
+
+34
+00:01:28,592 --> 00:01:35,080
+f over g, at x, is f of x over g of
+x, but only where g of x is not zero.
+
+35
+00:01:35,830 --> 00:01:37,019
+Side by side.
+
+36
+00:01:37,019 --> 00:01:41,358
+The product f g works at every
+x where both f and g work.
+
+37
+00:01:41,758 --> 00:01:44,220
+The quotient needs one more check.
+
+38
+00:01:44,220 --> 00:01:47,588
+At x equals minus one
+half, g of x is zero.
+
+39
+00:01:47,588 --> 00:01:49,570
+So f over g breaks there.
+
+40
+00:01:50,170 --> 00:01:51,124
+Your turn.
+
+41
+00:01:51,124 --> 00:01:54,834
+f of x is x squared, g
+of x is x minus three.
+
+42
+00:01:54,834 --> 00:01:57,160
+Is f over g defined at three?
+
+43
+00:01:57,160 --> 00:01:58,565
+Pause and decide.
+
+44
+00:02:01,765 --> 00:02:02,665
+No!
+
+45
+00:02:02,274 --> 00:02:06,340
+g of three is zero, and we
+can never divide by zero.
+
+46
+00:02:06,990 --> 00:02:08,020
+Remember this.
+
+47
+00:02:08,020 --> 00:02:10,050
+Combine the outputs at each x.
+
+48
+00:02:10,050 --> 00:02:13,918
+For a quotient, throw out every
+x where the bottom is zero.
+
+49
+00:02:14,618 --> 00:02:16,391
+Now, comparing functions.
+
+50
+00:02:16,391 --> 00:02:19,261
+This goes beyond NCERT, but JEE needs it.
+
+51
+00:02:19,611 --> 00:02:24,183
+Two functions are equal only when they
+have the same domain, and the same
+
+52
+00:02:24,183 --> 00:02:25,553
+output at every x.
+
+53
+00:02:25,953 --> 00:02:28,295
+Compare x, with x squared over x.
+
+54
+00:02:28,295 --> 00:02:30,889
+Cancel the x, and they look the same.
+
+55
+00:02:31,289 --> 00:02:34,364
+But x squared over x
+is not defined at zero.
+
+56
+00:02:34,364 --> 00:02:36,865
+Its graph has a hole at the origin.
+
+57
+00:02:36,865 --> 00:02:38,529
+So they are not equal.
+
+58
+00:02:39,129 --> 00:02:40,029
+Quick one.
+
+59
+00:02:39,957 --> 00:02:43,971
+Are mod x, and the square root
+of x squared, equal functions?
+
+60
+00:02:43,971 --> 00:02:45,140
+Pause and think.
+
+61
+00:02:48,340 --> 00:02:49,240
+Yes!
+
+62
+00:02:48,885 --> 00:02:53,345
+Both have domain R, and both
+give the same output at every x.
+
+63
+00:02:53,995 --> 00:02:55,730
+Now, one worked example.
+
+64
+00:02:56,080 --> 00:03:01,204
+Let f of x be root x, and g
+of x be x, for x zero or more.
+
+65
+00:03:01,204 --> 00:03:04,327
+Find f plus g, f g, and f over g.
+
+66
+00:03:04,827 --> 00:03:05,738
+Step one.
+
+67
+00:03:05,738 --> 00:03:08,739
+f plus g, at x, is root x plus x.
+
+68
+00:03:09,489 --> 00:03:10,389
+Step two.
+
+69
+00:03:10,309 --> 00:03:12,747
+f g, at x, is root x times x.
+
+70
+00:03:12,747 --> 00:03:15,435
+That is x to the power three over two.
+
+71
+00:03:16,185 --> 00:03:17,172
+Step three.
+
+72
+00:03:17,172 --> 00:03:20,069
+f over g, at x, is root x over x.
+
+73
+00:03:20,069 --> 00:03:22,012
+That is one over root x.
+
+74
+00:03:22,762 --> 00:03:23,715
+Step four.
+
+75
+00:03:23,715 --> 00:03:28,766
+The bottom must not be zero, so f
+over g lives only where x is greater
+
+76
+00:03:28,766 --> 00:03:29,719
+than zero.
+
+77
+00:03:30,369 --> 00:03:31,835
+Now, the exam trap.
+
+78
+00:03:32,185 --> 00:03:36,395
+f of x is root x, and g of
+x is root of one minus x.
+
+79
+00:03:36,395 --> 00:03:39,549
+Many students say f
+plus g works everywhere.
+
+80
+00:03:39,949 --> 00:03:42,946
+But f plus g needs both at the same x.
+
+81
+00:03:42,946 --> 00:03:45,202
+Root x needs x zero or more.
+
+82
+00:03:45,202 --> 00:03:48,309
+Root of one minus x needs x one or less.
+
+83
+00:03:48,309 --> 00:03:50,619
+So the domain is zero to one.
+
+84
+00:03:51,269 --> 00:03:52,623
+Where is it asked?
+
+85
+00:03:52,623 --> 00:03:57,238
+In JEE Main, as questions that combine
+two functions and ask for the domain
+
+86
+00:03:57,238 --> 00:03:58,339
+of the result.
+
+87
+00:03:58,939 --> 00:04:00,231
+Exam level now.
+
+88
+00:04:00,231 --> 00:04:02,729
+What is the domain of f over g?
+
+89
+00:04:02,729 --> 00:04:04,077
+Pause and solve.
+
+90
+00:04:09,477 --> 00:04:10,743
+The answer is C.
+
+91
+00:04:11,243 --> 00:04:14,698
+f needs four minus x
+squared to be zero or more.
+
+92
+00:04:14,698 --> 00:04:17,130
+So x runs from minus two to two.
+
+93
+00:04:17,630 --> 00:04:21,194
+g works for every x, so it
+adds no limit of its own.
+
+94
+00:04:21,694 --> 00:04:25,521
+But g of x is zero at x
+equals one and minus one.
+
+95
+00:04:25,521 --> 00:04:27,049
+Those two must go.
+
+96
+00:04:27,549 --> 00:04:31,800
+So the domain is minus two to two,
+including the ends, but without minus
+
+97
+00:04:31,800 --> 00:04:32,734
+one and one.
+
+98
+00:04:33,334 --> 00:04:34,793
+Here is your recap.
+
+99
+00:04:34,793 --> 00:04:36,292
+Screenshot this card.
+
+100
+00:04:39,492 --> 00:04:42,329
+Can you answer these three
+questions without help?
+
+101
+00:04:42,729 --> 00:04:43,629
+One.
+
+102
+00:04:43,308 --> 00:04:48,875
+If f of x is x plus two, and g of
+x is three x, what is f plus g?
+
+103
+00:04:49,775 --> 00:04:50,675
+Two.
+
+104
+00:04:50,377 --> 00:04:55,218
+If g of x is x minus five,
+where is f over g not defined?
+
+105
+00:04:56,118 --> 00:04:57,018
+Three.
+
+106
+00:04:56,818 --> 00:05:00,538
+Are x, and x squared
+over x, equal functions?
+
+107
+00:05:00,538 --> 00:05:01,438
+Why?
+
+108
+00:05:02,224 --> 00:05:05,164
+Next time, we leave functions for angles.
+
+109
+00:05:05,164 --> 00:05:09,189
+Why measure a bicycle wheel's
+turn by the distance it rolls?
+
+110
+00:05:09,189 --> 00:05:11,108
+Degree and radian measures.
