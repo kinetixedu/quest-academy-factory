@@ -139,7 +139,7 @@ const d10 = mk(nS, 'circle', { cx: GX(10), cy: GY(0.1), r: 9, fill: C.ok }), d20
 const dMax = mk(nS, 'circle', { cx: GX(15.811), cy: GY(0.25), r: 10, fill: INK });
 const vMx = W(nS, `M${GX(15.811)},${GY(0.25)} V520`, { stroke: INK, 'stroke-width': 2.5, 'stroke-dasharray': '6 6' });
 const vMxL = mono(nS, GX(15.811), 584, 'V max 15.8 V', { 'text-anchor': 'middle', fill: INK, 'font-weight': 600, 'font-size': 18 });
-const safeL = mono(nS, GX(5.5), 500, 'SAFE', { 'text-anchor': 'middle', fill: '#1F6B3F', 'font-weight': 600, 'font-size': 18 });
+const safeL = mono(nS, GX(12.5), 506, 'SAFE', { 'text-anchor': 'middle', fill: '#1F6B3F', 'font-weight': 600, 'font-size': 18 });
 const dSteps = [
   [K(`${Pp} = ${Vv}\\,${Ii}`), 'power', 92],
   [K(`${Pp} = \\dfrac{${Vv}^{2}}{R} = ${Ii}^{2}R`), 'put I = V/R', 188],
@@ -205,7 +205,7 @@ const nx = PUC.next($('#sF'), { label: 'COMING UP', topic: 'More PUC Electronics
 const head = PUC.header({ tMorph });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const cam = M.camera($('#cam'), [[0, 1, 960, 540], [T0('S3'), 1.1, 560, 470], [T0('S4') + 0.2, 1, 960, 540]]);
+const cam = M.camera($('#cam'), [[0, 1, 960, 540]]);
 const ghost = $('#ghost'); let gw = 0;
 
 M.on(t => {
@@ -303,7 +303,7 @@ M.on(t => {
     M.vis(d10, t, wt('W3', 'Twenty') - 0.6, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 }); M.vis(d20, t, wt('W3', 'Twenty'), 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 });
     M.vis($('#nRL1'), t, tN + 0.4, tW - 0.3, { dy: 10, outDur: 0.25 }); M.vis($('#nRL2'), t, tW + 0.1, 1e9, { dy: 10 });
     dRows.forEach((r, i) => { M.vis(r, t, tDer[i] - 0.1, tW - 0.3, { dy: 0, fade: 0.12, outDur: 0.25, ody: -10 }); if (t < tW) { M.vis(r.querySelector('.n'), t, tDer[i] - 0.1, 1e9, { dy: 0, sc: 0.4, sp: M.POP, fade: 0.08 }); PUC.write(r.querySelector('.sx'), t, tDer[i], 0.6); M.vis(r.querySelector('.why'), t, tDer[i] + 0.5, 1e9, { dx: -10, dy: 0 }); } });
-    M.vis($('#nBox'), t, tDer[3] + 0.6, 1e9, { dy: 0, sc: 0.96, fade: 0.2 });
+    if (t < tW) M.vis($('#nBox'), t, tDer[3] + 0.6, tW - 0.3, { dy: 0, sc: 0.96, fade: 0.2, outDur: 0.25, ody: 0 }); else M.vis($('#nBox'), t, tWr[2] - 0.1, 1e9, { dy: 0, sc: 0.96, fade: 0.2 });
     M.vis($('#nUnit'), t, wt('D5', 'watts') - 0.3, tW - 0.3, { dy: 12, outDur: 0.25 });
     wR.forEach((r, i) => { M.vis(r.querySelector('.n'), t, tWr[i] - 0.1, 1e9, { dy: 0, sc: 0.4, sp: M.POP, fade: 0.08 }); PUC.write(r.querySelector('.sx'), t, tWr[i], 0.7); const w = r.querySelector('.why'); if (w) M.vis(w, t, tWr[i] + 0.6, 1e9, { dx: -10, dy: 0 }); M.hide(r, t < tWr[i] - 0.15); });
   }
@@ -313,10 +313,10 @@ M.on(t => {
   if (gOn) {
     M.vis($('#gC'), t, tG + 0.1, tX - 0.32, { dy: 36, ...o });
     M.draw(gAx, t, tG + 0.4, 0.6); fadeAt([...gTk, ...gYt, gYl, gXl], t, tG + 0.7, 0.05);
-    M.draw(gFlat, t, tG2 - 0.6, 0.8); M.draw(g70, t, tG2, 0.4); M.draw(gDrop, t, tG3, 1.2, M.o3); M.vis(gDer, t, wt('G3', 'derating') - 0.1, 1e9, { dy: 0, fade: 0.2 });
+    M.draw(gFlat, t, wt('G1', 'rating') - 0.2, 0.8); M.draw(g70, t, tG2, 0.4); M.draw(gDrop, t, tG3, 1.2, M.o3); M.vis(gDer, t, wt('G3', 'derating') - 0.1, 1e9, { dy: 0, fade: 0.2 });
     const th = thG(t), pa = pAllow(th);
-    PUC.attr(gDot, 'cx', DX(th).toFixed(1)); PUC.attr(gDot, 'cy', DY(100 * pa / 0.25).toFixed(1)); M.vis(gDot, t, tG2 - 0.6, 1e9, { dy: 0, sc: 0.4, sp: M.POP, fade: 0.1 });
-    M.vis($('#gRo'), t, tG2 - 0.8, 1e9, { dy: 12 }); M.setT($('#gT'), String(Math.round(th))); M.setT($('#gP'), pa.toFixed(3));
+    PUC.attr(gDot, 'cx', DX(th).toFixed(1)); PUC.attr(gDot, 'cy', DY(100 * pa / 0.25).toFixed(1)); M.vis(gDot, t, wt('G1', 'rating') + 0.4, 1e9, { dy: 0, sc: 0.4, sp: M.POP, fade: 0.1 });
+    M.vis($('#gRo'), t, wt('G1', 'rating') + 0.3, 1e9, { dy: 12 }); M.setT($('#gT'), String(Math.round(th))); M.setT($('#gP'), pa.toFixed(3));
   }
 
   /* X: exam trap + where it is asked */

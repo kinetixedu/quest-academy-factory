@@ -71,28 +71,28 @@ const twS = $('#twS');
 const rad = [mk(twS, 'circle', { cx: 210, cy: 160, r: 100, fill: '#16213E' }), mk(twS, 'circle', { cx: 210, cy: 160, r: 66, fill: 'none', stroke: '#2A3758', 'stroke-width': 2 }), mk(twS, 'circle', { cx: 210, cy: 160, r: 33, fill: 'none', stroke: '#2A3758', 'stroke-width': 2 })];
 const sweepL = mk(twS, 'line', { x1: 210, y1: 160, x2: 310, y2: 160, stroke: AM, 'stroke-width': 3, 'stroke-linecap': 'round' });
 const blip = mk(twS, 'circle', { cx: 262, cy: 112, r: 8, fill: AM });
-const blipL = mono(twS, 330, 116, 'plane, 18 km', { 'font-size': 18, fill: INK });
+const blipL = mono(twS, 330, 116, 'plane', { 'font-size': 18, fill: INK });
 const tFog = wt('H1', 'Thick'), tTw = wt('H2', 'planes');
 
 /* ================= I: chain idea ================= */
 const iS = $('#iS');
 const IB = [['SENSE', 'pick up a signal', 'microphone, sensor, antenna', 120], ['PROCESS', 'shape the signal', 'amplifier, microcontroller', 610], ['ACT', 'do something useful', 'speaker, screen, motor', 1100]];
-$('#iB').innerHTML = IB.map(([n, d, e, x]) => `<div class="blk" style="left:${x}px;top:120px;width:380px;height:170px"><div class="nm" style="font-size:40px;top:20px">${n}</div><div class="ds" style="top:78px;font-size:22px;color:var(--ink2)">${d}</div><div class="ds" style="top:114px;font-size:19px">${e}</div></div>`).join('');
+$('#iB').innerHTML = IB.map(([n, d, e, x]) => `<div class="blk" style="left:${x}px;top:100px;width:380px;height:230px"><div class="nm" style="font-size:48px;top:30px">${n}</div><div class="ds" style="top:104px;font-size:26px;color:var(--ink2)">${d}</div><div class="ds" style="top:150px;font-size:21px">${e}</div></div>`).join('');
 const iBl = [...$('#iB').children];
-const iAr = [W(iS, 'M512,205 H598'), W(iS, 'M582,191 L598,205 L582,219'), W(iS, 'M1002,205 H1088'), W(iS, 'M1072,191 L1088,205 L1072,219')];
+const iAr = [W(iS, 'M512,215 H598'), W(iS, 'M582,201 L598,215 L582,229'), W(iS, 'M1002,215 H1088'), W(iS, 'M1072,201 L1088,215 L1072,229')];
 const iDot = mk(iS, 'circle', { r: 12, fill: AM, stroke: INK, 'stroke-width': 2 });
 const IF = ['Communication', 'Entertainment', 'Defence', 'Industry', 'Medicine'];
-$('#iF').innerHTML = `<div class="lbl" style="left:120px;top:360px">THE SAME CHAIN IN EVERY FIELD</div>` + IF.map((s, i) => `<span class="pillp" style="left:${120 + i * 276}px;top:404px;width:252px;justify-content:center">${s}</span>`).join('');
+$('#iF').innerHTML = `<div class="lbl" style="left:120px;top:400px">THE SAME CHAIN IN EVERY FIELD</div>` + IF.map((s, i) => `<span class="pillp" style="left:${120 + i * 276}px;top:444px;height:60px;font-size:26px;width:252px;justify-content:center">${s}</span>`).join('');
 const iFl = [...$('#iF').children];
 const tIb = [wt('I2', 'Sense'), wt('I2', 'process'), wt('I2', 'act')];
 
 /* ================= O: communication + TV chains ================= */
 const oS = $('#oS');
 const wv = (k) => { // sparkline 120 x 44
-  if (k === 'small') return `<svg width="120" height="44"><path d="${[...Array(41)].map((_, i) => (i ? 'L' : 'M') + (i * 3) + ',' + (22 - 5 * Math.sin(i * 0.47)).toFixed(1)).join('')}" fill="none" stroke="${CH1}" stroke-width="3"/></svg>`;
-  if (k === 'big') return `<svg width="120" height="44"><path d="${[...Array(41)].map((_, i) => (i ? 'L' : 'M') + (i * 3) + ',' + (22 - 17 * Math.sin(i * 0.47)).toFixed(1)).join('')}" fill="none" stroke="${AM}" stroke-width="3"/></svg>`;
-  if (k === 'mod') return `<svg width="120" height="44"><path d="${[...Array(121)].map((_, i) => (i ? 'L' : 'M') + i + ',' + (22 - (8 + 10 * Math.sin(i * 0.157)) * Math.sin(i * 1.3)).toFixed(1)).join('')}" fill="none" stroke="${AM}" stroke-width="2"/></svg>`;
-  return `<div style="position:absolute;right:20px;top:24px">${M.icon(k, 44, C.ink2, 2)}</div>`; };
+  if (k === 'small') return `<svg class="wv" width="100" height="44"><path d="${[...Array(41)].map((_, i) => (i ? 'L' : 'M') + (i * 2.5) + ',' + (22 - 5 * Math.sin(i * 0.47)).toFixed(1)).join('')}" fill="none" stroke="${CH1}" stroke-width="3"/></svg>`;
+  if (k === 'big') return `<svg class="wv" width="100" height="44"><path d="${[...Array(41)].map((_, i) => (i ? 'L' : 'M') + (i * 2.5) + ',' + (22 - 17 * Math.sin(i * 0.47)).toFixed(1)).join('')}" fill="none" stroke="${AM}" stroke-width="3"/></svg>`;
+  if (k === 'mod') return `<svg class="wv" width="100" height="44"><path d="${[...Array(101)].map((_, i) => (i ? 'L' : 'M') + i + ',' + (22 - (8 + 10 * Math.sin(i * 0.157)) * Math.sin(i * 1.3)).toFixed(1)).join('')}" fill="none" stroke="${AM}" stroke-width="2"/></svg>`;
+  return `<div class="ico">${M.icon(k, 44, C.ink2, 2)}</div>`; };
 const OB = [
   [0, 'Microphone', 'sound to signal', 'small'], [0, 'Amplifier', 'makes it stronger', 'big'], [0, 'Transmitter', 'onto a radio wave', 'mod'], [0, 'Antenna', 'sends it out', 'ant'],
   [1, 'Antenna', 'catches the wave', 'ant'], [1, 'Receiver', 'takes the signal off', 'small'], [1, 'Amplifier', 'makes it stronger', 'big'], [1, 'Speaker', 'signal to sound', 'vol'],
@@ -144,7 +144,7 @@ $('#gRo').innerHTML = `<span class="k">c</span><span class="v">3.0 × 10<sup>8</
   <span class="k">d</span><span class="v" id="gD" style="color:#B7791F">?</span><span class="u">km</span>`;
 const dRows = steps($('#dSteps'), [[K(`c = 3\\times10^{8}\\,\\text{m/s}`), 'speed of light', 92], [K(`2d = c\\,t`), 'there and back', 186], [K(`d = \\dfrac{c\\,t}{2}`), 'distance to target', 296]]);
 const tDer = [wt('R5', 'speed'), wt('R6', 'Two'), wt('R7', 'So')];
-const wRows = steps($('#wSteps'), [[K(`t = 400\\,\\mu\\text{s} = 4\\times10^{-4}\\,\\text{s}`), '', 92], [K(`d = \\dfrac{3\\times10^{8}\\times4\\times10^{-4}}{2}`), '', 196], [K(`d = 6\\times10^{4}\\,\\text{m} = 60\\,\\text{km}`), '', 436]]);
+const wRows = steps($('#wSteps'), [[K(`t = 400\\,\\mu\\text{s} = 4\\times10^{-4}\\,\\text{s}`), '', 92], [K(`d = \\dfrac{3\\times10^{8}\\times4\\times10^{-4}}{2}`), '', 196], [K(`d = 6\\times10^{4}\\,\\text{m} = 60\\,\\text{km}`), '', 412]]);
 const tWr = [wt('W2', 'So'), wt('W3', 'd'), wt('W4', 'That')];
 const avR = PUC.avatar($('#sD2'), { x: 1008, y: 776, who: 'Aarav', face: FACE + 'aarav-face.jpg', text: 'So the tower knows exactly how far it is!' });
 
@@ -206,7 +206,7 @@ const sol = PUC.solution($('#so'), [[K(`t = 2\\times10^{-4}\\,\\text{s}`)], [K(`
 const tSol = [wt('A2', 'That'), wt('A3', 'c'), wt('A4', 'Divide'), wt('A4', 'or')];
 
 /* ================= F: formula card + next ================= */
-const fc = PUC.fcard($('#sF'), { x: 410, y: 248, w: 1100, h: 492, y0: 92, dy: 112, title: 'Applications of electronics · formula card', txt: [0, 0, 1, 1],
+const fc = PUC.fcard($('#sF'), { x: 410, y: 248, w: 1100, h: 492, y0: 84, dy: 118, title: 'Applications of electronics · formula card', txt: [0, 0, 1, 1],
   lines: [K(`d = \\dfrac{c\\,t}{2} \\qquad c = 3\\times10^{8}\\,\\text{m/s}`),
     K(`\\text{gain} = \\dfrac{\\textcolor{${TE}}{V_{out}}}{\\textcolor{${TE}}{V_{in}}} = \\dfrac{1\\,\\text{V}}{1\\,\\text{mV}} = 1000`),
     'Every application: sense → process → act',
@@ -255,10 +255,10 @@ M.on(t => {
   const iOn = t >= tI - 0.05 && t < tO + 0.1; M.hide($('#sI'), !iOn);
   if (iOn) {
     M.vis($('#iC'), t, tI + 0.1, tO - 0.32, { dy: 36, ...o });
-    iBl.forEach((b, i) => { M.vis(b, t, tIb[i] - 0.15, 1e9, { dy: 0, sc: 0.9, sp: M.SOFT, fade: 0.1 }); b.style.borderColor = M.mix(C.line, AM, M.io((t - tIb[i]) / 0.3)); });
+    iBl.forEach((b, i) => { M.vis(b, t, tI + 0.3 + i * 0.12, 1e9, { dy: 0, sc: 0.9, sp: M.SOFT, fade: 0.1 }); b.style.borderColor = M.mix(C.line, AM, M.io((t - tIb[i]) / 0.3)); });
     drawSeq(iAr.slice(0, 2), t, tIb[1] - 0.3, 0.25, 0.1); drawSeq(iAr.slice(2), t, tIb[2] - 0.3, 0.25, 0.1);
     const u = ((t - tIb[2] - 0.4) / 2.4) % 1; M.hide(iDot, t < tIb[2] + 0.4);
-    PUC.attr(iDot, 'cx', (310 + 980 * M.io(u)).toFixed(1)); PUC.attr(iDot, 'cy', 205); iDot.style.opacity = u < 0.08 ? u / 0.08 : u > 0.92 ? (1 - u) / 0.08 : 1;
+    PUC.attr(iDot, 'cx', (310 + 980 * M.io(u)).toFixed(1)); PUC.attr(iDot, 'cy', 215); iDot.style.opacity = u < 0.08 ? u / 0.08 : u > 0.92 ? (1 - u) / 0.08 : 1;
     iFl.forEach((f, i) => { const ti = i ? wt('I1', 'not') + i * 0.1 : wt('I1', 'not') - 0.1; M.vis(f, t, ti, 1e9, { dy: 0, sc: 0.85, sp: M.POP, fade: 0.1 });
       if (i) { const l = M.io((t - wt('I2', 'every') - i * 0.08) / 0.25); f.style.background = M.mix(C.soft, AM, l); f.style.color = M.mix(INK, '#FFFFFF', l); } });
   }
@@ -271,7 +271,7 @@ M.on(t => {
     oBl.forEach((b, i) => { M.vis(b, t, tOb[i] - 0.15, 1e9, { dx: -20, dy: 0 }); b.style.borderColor = M.mix(C.line, AM, M.io((t - tOb[i]) / 0.3)); });
     oAr.forEach((a, i) => M.draw(a, t, tOb[i + Math.floor(i / 3) + 1] - 0.3, 0.3));
     oDots.forEach((d, r) => { const t0 = tOb[r * 4 + 3] + 0.2, u = ((t - t0) / 2.6) % 1; M.hide(d, t < t0);
-      PUC.attr(d, 'cx', (OX[0] + 165 + (OX[3] - OX[0]) * u).toFixed(1)); PUC.attr(d, 'cy', OY[r] - 8); });
+      PUC.attr(d, 'cx', (OX[0] + 165 + (OX[3] - OX[0]) * u).toFixed(1)); PUC.attr(d, 'cy', OY[r] + 112); });
   }
 
   /* R: radar breadboard */

@@ -107,7 +107,8 @@ const tSym = [[wt('S2', 'resistor'), wt('S3', 'arrow'), wt('S4', 'arrow'), wt('S
 /* ================= B: breadboard (potentiometer volume control) ================= */
 const ck = $('#ckS');
 const src = [mk(ck, 'circle', { cx: 150, cy: 300, r: 42, fill: '#fff', stroke: INK, 'stroke-width': 4 }), W(ck, 'M124,300 C134,276 142,276 150,300 S166,324 176,300', { 'stroke-width': 3.5 })];
-const bw = [W(ck, 'M150,258 V150 H470 V196'), W(ck, 'M470,404 V450'), W(ck, 'M780,324 V450 H150 V342')];
+const bw = [W(ck, 'M150,258 V150 H470 V196'), W(ck, 'M470,404 V450 H150 V342')];
+const bwOut = W(ck, 'M780,324 V450 H470');
 const potR = W(ck, 'M470,196 L486,206 L454,226 L486,246 L454,266 L486,286 L454,306 L486,326 L454,346 L486,366 L454,386 L486,396 L470,404');
 const wipW = W(ck, '', {}), wipA = mk(ck, 'path', { d: '', fill: AM });
 const wipL = W(ck, '', { stroke: AM, 'stroke-width': 4 });
@@ -253,7 +254,7 @@ M.on(t => {
     M.vis($('#ck'), t, tB + 0.1, 1e9, { dx: -60, dy: 0 }); M.vis($('#sc'), t, tB + 0.3, 1e9, { dx: 60, dy: 0 }); M.vis($('#rb'), t, tB + 0.45, 1e9, { dy: 36 });
     M.vis($('#ckE'), t, tB + 0.8, 1e9, { dy: 0, fade: 0.2 });
     drawSeq(src, t, tB + 0.4, 0.4, 0.15); drawSeq(bw, t, tB + 0.6, 0.4, 0.15); M.draw(potR, t, wt('B1', 'volume') - 0.3, 0.5); M.vis(jn, t, tB + 1.0, 1e9, { dy: 0, fade: 0.2 });
-    drawSeq(spk, t, wt('B2', 'speaker') - 0.3, 0.3, 0.1); fadeAt(lb.slice(0, 2), t, wt('B2', 'music')); fadeAt(lb.slice(2, 4), t, wt('B2', 'track')); fadeAt(lb.slice(4), t, wt('B2', 'speaker'));
+    drawSeq(spk, t, wt('B2', 'speaker') - 0.3, 0.3, 0.1); M.draw(bwOut, t, wt('B2', 'speaker') - 0.1, 0.4); fadeAt(lb.slice(0, 2), t, wt('B2', 'music')); fadeAt(lb.slice(2, 4), t, wt('B2', 'track')); fadeAt(lb.slice(4), t, wt('B2', 'speaker'));
     const k = kOf(t), y = yBot - (yBot - yTop) * k, tWp = wt('B2', 'wiper');
     PUC.attr(wipW, 'd', `M540,${y.toFixed(1)} H660 V150 H780 V276`); PUC.attr(wipL, 'd', `M540,${y.toFixed(1)} H502`);
     PUC.attr(wipA, 'd', `M490,${y.toFixed(1)} L508,${(y - 10).toFixed(1)} L508,${(y + 10).toFixed(1)} Z`);
