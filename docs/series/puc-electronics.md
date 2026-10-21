@@ -36,3 +36,9 @@ Slugs: puc-electronics-<topic slug> as in queue/topics.csv (series "PUC Electron
 
 ## Canon added by episodes
 (lead adds recurring facts reported by subagents here)
+- (Eps 2-33, Oct 2026) Power P and energy U gold #B7791F; C, L, f, T, ω, φ, ρ ink; EMF E teal; temperature θ red #D64545; field lines dashed #8FA3C8; Φ dashed #5F7399; infrared #8A2A2A; holes = hollow circles with orange outline.
+- Real source = ideal cell + r in a dashed grey box. Thevenin V_TH teal, R_TH ink. Peak V_m, V_rms, V_avg, V_pp as subscripts.
+- Slowed AC dots and scopes run at about 0.5 Hz on screen with a SLOW-MOTION VIEW tag. Measuring graticule 10 x 8 div; small scope panels 6 x 4. When a trace is a canon quantity, colour it by quantity (V teal, I violet).
+- Electron dots: positive flow() offset along a path that starts at the - terminal. (Ep 1 had the sign reversed in two scenes; fixed 21 Oct.)
+- Engine gotcha: M.vis sets style.transform, which overrides an SVG transform attribute - rotate or move a wrapper <g> instead.
+- Constants used: e = 1.6 x 10^-19 C, eps0 = 8.85 x 10^-12 F/m, mu0 = 4 pi x 10^-7 H/m, Si diode drop about 0.7 V, 1 eV = 1.6 x 10^-19 J, 1 mAh = 3.6 C, India mains 230 V 50 Hz.

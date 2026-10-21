@@ -1,0 +1,137 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Electronics Ep 25 - Fixed and Variable Resistors</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== Breadboard (PUC Electronics) layout ===== */
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.card svg.full{position:absolute;left:0;top:0}
+.big{position:absolute;font:600 56px 'IBM Plex Mono';white-space:nowrap}
+.sm{position:absolute;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.txt{position:absolute;font:500 30px/1.35 Poppins;white-space:nowrap}
+#ghost{top:168px}
+/* hook */
+#aC{left:160px;top:260px;width:784px;height:600px;overflow:hidden}
+#aImg{position:absolute;left:24px;top:84px;height:516px}
+#kC{left:976px;top:260px;width:784px;height:600px}
+/* resistor intro */
+#rL{left:160px;top:260px;width:784px;height:600px}
+#rR{left:976px;top:260px;width:784px;height:600px}
+.ro2{position:absolute;left:32px;top:76px;width:576px;display:grid;grid-template-columns:auto 1fr auto;column-gap:18px;row-gap:14px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .k.n{font-style:normal;font-size:24px;font-family:'IBM Plex Mono';letter-spacing:.06em}
+.ro2 .v{font:600 38px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 22px 'IBM Plex Mono';color:var(--mute);white-space:nowrap;min-width:52px}
+#rRo{left:36px;top:400px;width:712px;row-gap:6px}
+.fam{position:absolute;width:300px;height:200px;border-radius:16px;background:var(--soft);border:2.5px solid var(--soft)}
+.fam .fn{position:absolute;left:24px;top:22px;font:700 34px Poppins;white-space:nowrap}
+.fam .fd{position:absolute;left:24px;top:76px;width:260px;font:500 23px/1.3 Poppins;color:var(--mute)}
+/* tiles */
+.fT{position:absolute;top:260px;width:376px;height:600px}
+.fT svg{position:absolute;left:0;top:64px}
+.fT .nm{position:absolute;left:28px;top:262px;font:700 28px Poppins;white-space:nowrap}
+.fT .kl{position:absolute;left:28px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.fT .kv{position:absolute;left:28px;width:320px;font:500 23px/1.3 Poppins;color:var(--ink2)}
+.fT .ch{position:absolute;left:28px;top:516px}
+.vT{position:absolute;top:260px;width:512px;height:600px}
+.vT svg{position:absolute;left:0;top:60px}
+.vT .nm{position:absolute;left:32px;top:300px;font:700 34px Poppins;white-space:nowrap}
+.vT .kv{position:absolute;left:32px;top:356px;width:450px;font:500 24px/1.35 Poppins;color:var(--ink2)}
+.vT .ch{position:absolute;left:32px;top:500px}
+/* breadboard */
+#ck{left:160px;top:260px;width:928px;height:600px}
+#sc{left:1120px;top:260px;width:640px;height:300px}
+#rb{left:1120px;top:592px;width:640px;height:268px}
+#scS{position:absolute;left:24px;top:76px}
+/* derivation */
+#dL{left:160px;top:260px;width:784px;height:600px}
+#dR{left:976px;top:260px;width:784px;height:600px}
+#dRo{left:36px;top:388px;width:712px;row-gap:4px}
+.st2{position:absolute;left:36px;display:flex;align-items:center;gap:22px;white-space:nowrap}
+.st2 .n{flex:none;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st2 .sx{font-size:34px}
+.st2 .why{font:500 22px Poppins;color:var(--mute)}
+#dUnit{position:absolute;left:36px;top:532px;font:500 22px 'IBM Plex Mono';color:var(--ink2);white-space:nowrap}
+#dBox{position:absolute;left:24px;top:390px;width:736px;height:112px;border-radius:14px;background:var(--ac2)}
+#wBox{position:absolute;left:24px;top:318px;width:736px;height:112px;border-radius:14px;background:var(--ac2)}
+/* exam */
+#trap{left:160px;top:260px;width:784px;height:300px}
+#tc{left:976px;top:260px;width:784px;height:300px}
+#wa{left:160px;top:592px;width:1600px;height:268px}
+#mq{left:160px;top:260px;width:1040px;height:600px}
+#mq .mq{font-size:29px}
+#so{left:1232px;top:260px;width:528px;height:600px}
+#so .sol{left:32px}
+.fcard .fl{font-size:40px}
+.fcard .fl.txt{font:500 28px Poppins}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · ELECTRONICS · CH 4 PASSIVE ELECTRONIC COMPONENTS</div>
+    <div class="subj" id="subj">BREADBOARD</div>
+    <div id="title">Behind the <span class="acc">volume knob</span></div>
+    <div id="sub">Fixed and variable resistors</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E8A317" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="ghost" id="ghost">EXAMPLE FIGURES</div>
+
+    <!-- A: hook -->
+    <div class="sc" id="sA">
+      <div class="card" id="aC"><div class="lbl" style="left:32px;top:28px">AARAV · PCME · JEE</div>
+        <img id="aImg" src="../../assets/illustrations/puc/aarav.png" alt="">
+        <div class="pillp ac" id="aPill" style="left:470px;top:500px">Smooth, no steps</div></div>
+      <div class="card" id="kC"><div class="lbl" style="left:32px;top:28px">THE VOLUME KNOB</div><svg class="full" id="kS" width="784" height="600"></svg>
+        <div class="pillp ink" id="kQ" style="left:32px;top:520px">What is behind that knob?</div></div>
+    </div>
+
+    <!-- R: what is a resistor -->
+    <div class="sc" id="sR">
+      <div class="card" id="rL"><div class="lbl" style="left:32px;top:28px">A RESISTOR OPPOSES CURRENT</div>
+        <div class="tag" id="rE" style="right:32px;top:22px"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="#E8A317" stroke="#16213E" stroke-width="1.5"/></svg>ELECTRONS</div>
+        <svg class="full" id="rS" width="784" height="600"></svg><div class="ro2" id="rRo"></div></div>
+      <div class="card" id="rR"><div class="lbl" style="left:32px;top:28px">TWO FAMILIES</div><svg class="full" id="fS" width="784" height="600"></svg>
+        <div class="fam" id="fm0" style="left:56px;top:300px"><div class="fn">Fixed</div><div class="fd">The value never changes</div></div>
+        <div class="fam" id="fm1" style="left:428px;top:300px"><div class="fn">Variable</div><div class="fd">You can change the value</div></div></div>
+    </div>
+
+    <!-- F: fixed types -->
+    <div class="sc" id="sF2"><div id="fTiles"></div></div>
+    <!-- V: variable types -->
+    <div class="sc" id="sV"><div id="vTiles"></div></div>
+
+    <!-- B: breadboard volume control -->
+    <div class="sc" id="sB">
+      <div class="card" id="ck"><div class="lbl" style="left:32px;top:28px">BREADBOARD · VOLUME CONTROL</div><svg class="full" id="ckS" width="928" height="600"></svg></div>
+      <div class="card" id="sc"><div class="lbl" style="left:32px;top:28px">OSCILLOSCOPE</div><svg id="scS" width="592" height="200"></svg></div>
+      <div class="card" id="rb"><div class="lbl" style="left:32px;top:28px">LIVE READOUT</div><div class="ro2" id="ro1"></div></div>
+    </div>
+
+    <!-- D: voltage divider derivation + worked example -->
+    <div class="sc" id="sD">
+      <div class="card" id="dL"><div class="lbl" style="left:32px;top:28px">INSIDE THE POTENTIOMETER</div><svg class="full" id="dS" width="784" height="600"></svg><div class="ro2" id="dRo"></div></div>
+      <div class="card" id="dR"><div class="lbl" id="dL1" style="left:36px;top:28px">DERIVATION</div><div class="lbl" id="dL2" style="left:36px;top:28px">WORKED EXAMPLE</div>
+        <div id="dBox"></div><div id="dSteps"></div><div id="dUnit">V in volts · R in ohms · x/L has no unit</div><div id="wBox"></div><div id="wSteps"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div class="sc" id="sX"><div class="card red" id="trap"></div>
+      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">SAME PART, TWO WAYS TO CONNECT</div><svg class="full" id="tcS" width="784" height="300"></svg></div>
+      <div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div class="sc" id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- C: formula card + next -->
+    <div class="sc" id="sC"></div>
+  </div>
+  <div id="stmt"><div id="st1">Fixed resistors set a value.</div><div id="st2">Variable resistors let you <span class="acc">choose it.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

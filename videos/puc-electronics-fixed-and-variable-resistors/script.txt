@@ -1,0 +1,40 @@
+H1|0.35|Aarav turns the volume knob on a speaker. The music grows louder, smoothly, with no steps.
+H2|0.5|What is behind that knob?
+R1|0.35|A resistor. A part that opposes the flow of current.
+R2|0.35|Its resistance is measured in ohms. More ohms means less current for the same voltage.
+R3|0.65|There are two big families. Fixed resistors, whose value never changes. And variable resistors, whose value you can change.
+F1|0.35|Fixed resistors come in a few kinds.
+F2|0.35|Carbon composition resistors are made of carbon powder mixed with a binder. They are cheap, but not very precise.
+F3|0.35|Carbon film and metal film resistors have a thin layer coated on a ceramic rod. Metal film is the more precise and stable one.
+F4|0.65|Wire wound resistors use a long wire, often nichrome, wound on a ceramic core. They can handle large power without burning out.
+V1|0.35|Now the variable ones.
+V2|0.35|A potentiometer has three terminals. Two ends of a resistive track, and a sliding contact called the wiper.
+V3|0.35|A rheostat uses only two terminals, one end and the wiper, to change the current.
+V4|0.65|A preset, or trimmer, is a tiny one. It is set once with a screwdriver, and then left alone.
+B1|0.35|Let's build the volume control on the breadboard. A potentiometer, with the music signal across its two ends.
+B2|0.35|The wiper picks off part of the signal and sends it to the speaker.
+B3|0.35|Watch the scope. Channel one is the full input. Channel two is what reaches the speaker.
+B4|0.35|Turn the knob up. The wiper slides, and the output wave grows. The music gets louder.
+B5|0.65|Turn it down, and the output shrinks. At the bottom end, it is silent.
+S1|0.8|Fixed resistors set a value. Variable resistors let you choose it.
+D1|0.35|So how much does the wiper pick off? Let's work it out.
+D2|0.7|The resistance of a uniform track grows with its length. So R is proportional to L.
+D3|0.7|If the wiper sits a length x from the bottom, the lower part has a resistance R x equals x over L, times R.
+D4|0.7|The current through the whole track is I equals V in over R.
+D5|0.7|The output is that current times the lower part. So V out equals V in times R x over R.
+D6|0.65|This is called a voltage divider. Volts in volts, ohms in ohms, and the fraction has no unit.
+W1|0.35|Worked example. A ten kilo ohm potentiometer is connected across nine volts.
+W2|0.35|The wiper is at thirty percent of the track, so R x is three kilo ohms.
+W3|0.6|The current is nine divided by ten thousand. That is zero point nine milliamperes.
+W4|0.65|V out is nine times three over ten. Two point seven volts.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think a potentiometer and a rheostat are connected the same way. They are not.
+X3|0.65|A potentiometer uses all three terminals and divides the voltage. A rheostat uses two terminals and changes the current.
+X4|0.65|Where is this asked? In PUC board papers. Classify resistors, describe a wire wound resistor, or tell a potentiometer from a rheostat.
+Q1|5.6|Try this. A twenty kilo ohm potentiometer is connected across twelve volts. The wiper is a quarter of the way up from the bottom. A five kilo ohm load is connected between the wiper and the bottom. Find the output voltage.
+A1|0.35|B. About one point seven one volts.
+A2|0.35|The lower part is five kilo ohms, and the upper part is fifteen.
+A3|0.35|The load sits in parallel with the lower part. Five and five in parallel make two point five kilo ohms.
+A4|0.65|V out is twelve times two point five over seventeen point five. That is about one point seven one volts.
+C1|3.2|Screenshot this card.
+NX|0.6|Next, resistor colour codes and ratings. How do four coloured bands tell you the value?
