@@ -58,7 +58,7 @@ NU.forEach(([, , , xs], i) => { const s = $('#nu' + i).querySelector('.nd');
 const tNu = [wt('P5', 'Speeding'), wt('P5', 'slowing'), wt('P5', 'turning')];
 
 /* ---------- S: motion bench, two bicycles ---------- */
-const s = $('#simS'), RX0 = 80, RPX = 16, AY = 1.25;          // 16 px per metre, road 0 - 40 m; B: a = 1.25 m/s^2 from rest
+const s = $('#simS'), RX0 = 80, RPX = 13, AY = 1.25;          // 16 px per metre, road 0 - 40 m; B: a = 1.25 m/s^2 from rest
 const LANE = [{ y: 210, col: B1, x: tt => 5 * tt, v: () => 5 }, { y: 404, col: B2, x: tt => 0.5 * AY * tt * tt, v: tt => AY * tt }];
 txt(s, 40, 98, 'A · STEADY 5 m/s', { 'font-weight': 600, fill: B1, 'letter-spacing': 1 });
 txt(s, 40, 290, 'B · FROM REST, SPEEDING UP', { 'font-weight': 600, fill: B2, 'letter-spacing': 1 });
@@ -155,14 +155,14 @@ $('#wl .lbl').style.top = '30px';
 const w = $('#wrS'), WX0 = 60, WPX = 664 / 1200;
 mk(w, 'rect', { x: WX0, y: 150, width: 664, height: 30, rx: 6, fill: C.soft }); mk(w, 'line', { x1: WX0, y1: 150, x2: WX0 + 664, y2: 150, stroke: C.ink, 'stroke-width': 3 });
 mk(w, 'line', { x1: WX0 + 332, y1: 140, x2: WX0 + 332, y2: 190, stroke: C.ink, 'stroke-width': 2, 'stroke-dasharray': '4 4' });
-const wL = [txt(w, WX0 + 166, 126, '600 m at 5 m/s', { 'text-anchor': 'middle', 'font-weight': 600, fill: B1, 'font-size': 20 }), txt(w, WX0 + 498, 126, '600 m at 3 m/s', { 'text-anchor': 'middle', 'font-weight': 600, fill: B2, 'font-size': 20 })];
+const wL = [txt(w, WX0 + 166, 214, '600 m at 5 m/s', { 'text-anchor': 'middle', 'font-weight': 600, fill: B1, 'font-size': 20 }), txt(w, WX0 + 498, 214, '600 m at 3 m/s', { 'text-anchor': 'middle', 'font-weight': 600, fill: B2, 'font-size': 20 })];
 const wBike = bikeG(w, C.ink, 1);
-txt(w, WX0, 262, 'TIME SPENT', { 'font-weight': 600, 'letter-spacing': 1 });
+txt(w, WX0, 268, 'TIME SPENT', { 'font-weight': 600, 'letter-spacing': 1 });
 const tb = [mk(w, 'rect', { x: WX0, y: 280, height: 56, rx: 8, fill: B1, width: 0 }), mk(w, 'rect', { x: WX0, y: 280, height: 56, rx: 8, fill: B2, width: 0 })];
 const tbT = [txt(w, WX0 + 249 / 2, 318, '120 s', { 'text-anchor': 'middle', 'font-weight': 600, fill: '#fff', 'font-size': 24 }), txt(w, WX0 + 249 + 415 / 2, 318, '200 s', { 'text-anchor': 'middle', 'font-weight': 600, fill: '#fff', 'font-size': 24 })];
 const tot = mk(w, 'path', { d: `M${WX0},352 v10 h664 v-10`, fill: 'none', stroke: C.ink, 'stroke-width': 2.5 });
 const totT = txt(w, WX0 + 332, 392, '1200 m in 320 s', { 'text-anchor': 'middle', 'font-weight': 600, fill: C.ink, 'font-size': 22 });
-const wClock = txt(w, 724, 262, 't = 0 s', { 'text-anchor': 'end', 'font-weight': 600, fill: C.ink, 'font-size': 22 });
+const wClock = txt(w, 724, 268, 't = 0 s', { 'text-anchor': 'end', 'font-weight': 600, fill: C.ink, 'font-size': 22 });
 const avD = PUC.avatar($('#sW'), { x: 976 + 36, y: 270 + 470, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'The slow half takes more of the time!' });
 const tW = [wt('W3', 'first'), wt('W4', 'second'), wt('W5', 'Average'), wt('W6', 'three')];
 const tWa = T0('W3'), tWb = wt('W5', 'Twelve');          // ride clock: 0 - 320 s over these voice lines
@@ -177,7 +177,7 @@ const cva = PUC.arrow(cs, VC, 5, 14);
 const cT = txt(cs, CX, 262, 'same speed, new direction', { 'text-anchor': 'middle', 'font-weight': 600, fill: VC, 'font-size': 17 });
 const where = PUC.where($('#wa'), { on: [], type: 'Concept MCQs: reading x-t and v-t graphs, and average speed for a journey in parts' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 780,
-  q: `A particle moves along a line with ${K('x = 2t^2 - 8t + 5')} (x in m, t in s). Which statement is correct?`,
+  q: `A particle moves along a line with<br>${K('x = 2t^2 - 8t + 5')} &nbsp;(x in m, t in s).<br>Which statement is correct?`,
   opts: ['The motion is uniform, with velocity −8 m/s', 'Non-uniform; it is momentarily at rest at t = 2 s', 'Its acceleration is zero at t = 2 s', 'Its displacement in the first 4 s is 16 m'],
   right: 1, cols: 1, optW: 968, optH: 68, optFs: 28, optY: 290 });
 const so = PUC.solution($('#so'), [[K(`${kv('v')} = \\dfrac{dx}{dt} = 4t - 8`)], [K(`${kv('v')} = 0 \\text{ at } t = 2\\,\\text{s}`) + ' <b style="color:var(--ok)">B</b>'], [K(`${ka('a')} = 4\\,\\text{m/s}^2`) + ' &nbsp;<b style="color:var(--red)">A, C</b> wrong'], [K('x(4) = 5 = x(0)') + ' &nbsp;<b style="color:var(--red)">D</b> wrong']], { y0: 100, dy: 112 });
@@ -194,7 +194,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 25', topic: 'Predict where Aa
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tS9 + 0.1, 1.08, 1150, 620], [tD1 - 0.5, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tS9 + 0.1, 1.06, 960, 560], [tD1 - 0.5, 1, 960, 540]]);
 const f1 = v => v.toFixed(1);
 let geo = null;
 function measure() {
@@ -268,7 +268,7 @@ M.on(t => {
       L.marks.forEach((m, k) => M.hide(m, k > st + 1e-6 || t < tA - 0.05 || (rp && t < tR0)));
       // gap labels during the replay, when the voice reads them
       const tg = li ? wt('S8', 'gaps') : wt('S7', 'equal');
-      L.gl.forEach((g, k) => { g.style.opacity = (rp && (li === 0 || k >= 2) ? M.io((t - Math.max(tg, tR0 + (k + 1) / 8 * (tR1 - tR0))) / 0.3) : 0).toFixed(3); });
+      L.gl.forEach((g, k) => { g.style.opacity = (rp && (li === 0 || k >= 3) ? M.io((t - Math.max(tg, tR0 + (k + 1) / 8 * (tR1 - tR0))) / 0.3) : 0).toFixed(3); });
       M.vis(gapT[li], t, tg - 0.1, 1e9, { dy: 0, dx: 16 });
       // velocity arrows grow in the replay (blue = v for both bikes)
       const vOn = rp ? M.io((t - tR0 - 0.1) / 0.4) : 0, vv = L.v(st), len = 12 * vv * vOn;
