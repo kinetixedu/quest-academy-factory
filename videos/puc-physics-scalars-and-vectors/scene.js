@@ -148,7 +148,7 @@ const kTot = txt(kv, 36, 430, '', { 'font-size': 34, 'font-weight': 600, fill: F
 const CASES = [['Same way', '0°', '20 N', wt('K2', 'same')], ['At a right angle', '90°', '14.1 N', wt('K3', 'right')], ['Against each other', '180°', '0 N', wt('K3', 'against')]];
 $('#cases').innerHTML = CASES.map(([n, a, r], i) => `<div class="case" id="ca${i}" style="left:380px;top:${84 + i * 96}px"><div class="cn">${n}</div><div class="cv">ANGLE ${a}</div><div class="cr">${r}</div></div>`).join('');
 const kphi = M.keys([[0, 0], [CASES[1][3] - 0.2, 90], [CASES[2][3] - 0.2, 180]], 0.6, M.io);
-const th1 = PUC.think($('#th1'), { q: 'Two pushes of 10 N act on one box. Can the total push be zero?', opts: ['Yes', 'No'], right: 0, why: 'Opposite pushes cancel: 10 N right + 10 N left = 0 N. Masses can never cancel.' });
+const th1 = PUC.think($('#th1'), { q: 'Two pushes of 10 N act on one box. Can the total push be zero?', opts: ['Yes', 'No'], right: 0, why: 'Opposite pushes cancel: 10 N right + 10 N left = 0 N.' });
 
 /* ---------- L: follow the links ---------- */
 const ROWS = [[['Distance', 'cb', 'SCALAR', 'L3', 'Distance'], ['÷', 'cop'], ['Time', 'cb', 'SCALAR', 'L3', 'Time'], ['=', 'cop'], ['Speed', 'cb', 'SCALAR', 'L3', 'speed']],
@@ -177,7 +177,7 @@ const uE = PUC.arrow(un, BC, 7, 20), uN = PUC.arrow(un, BC, 7, 20);
 const uEt = txt(un, UO[0] + UL / 2, UO[1] + 40, '5 km east', { 'text-anchor': 'middle', 'font-size': 24, 'font-weight': 600, fill: BC });
 const uNt = txt(un, UO[0] - 20, UO[1] - UL / 2, '5 km north', { 'text-anchor': 'end', 'font-size': 24, 'font-weight': 600, fill: BC });
 const uNe = txt(un, 440, 250, '≠', { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-size': 120, 'font-weight': 700, fill: RC });
-const th2 = PUC.think($('#th2'), { q: 'Can the size of the displacement ever be bigger than the distance travelled?', opts: ['Yes', 'No'], right: 1, why: 'A straight line is the shortest path from start to finish: |s| ≤ distance, never more.' });
+const th2 = PUC.think($('#th2'), { q: 'Can the size of the displacement ever be bigger than the distance travelled?', opts: ['Yes', 'No'], right: 1, why: 'A straight line is the shortest path, so |s| ≤ distance.' });
 
 /* ---------- W: worked example ---------- */
 const wsol = PUC.solution($('#wl'), [
@@ -225,7 +225,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 33', topic: 'How do you draw 
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tM2 - 0.1, 1.12, 460, 540], [tD1 - 0.5, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tM2 - 0.1, 1.06, 960, 540], [tD1 - 0.5, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = 1;

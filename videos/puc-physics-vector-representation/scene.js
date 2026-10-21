@@ -156,7 +156,7 @@ const tArc = mk(mt, 'path', { d: arcD(TO[0], TO[1], 120, 30, 50), stroke: VC, 's
 const tArcT = txt(mt, TO[0] + 128 * Math.cos(40 * deg) + 8, TO[1] - 128 * Math.sin(40 * deg) - 6, '+20°', { 'font-size': 22, 'font-weight': 600, fill: VC });
 const tLab = txt(mt, 560, 150, 'new', { 'font-family': 'Poppins', 'font-size': 34, 'font-weight': 700, fill: RC });
 const tTu = wt('M3', 'turn') - 0.1, tuF = t => 30 + 20 * M.io((t - tTu) / 1.0);
-const th2 = PUC.think($('#th2'), { q: 'A 2 cm arrow stands for 6 N. What does a 5 cm arrow stand for?', opts: ['12 N', '15 N', '30 N'], right: 1, why: '6 N ÷ 2 cm = 3 N per cm, so 5 cm × 3 N per cm = 15 N.' });
+const th2 = PUC.think($('#th2'), { q: 'A 2 cm arrow stands for 6 N. What does a 5 cm arrow stand for?', opts: ['12 N', '15 N', '30 N'], right: 1, why: '6 N ÷ 2 cm = 3 N per cm, so 5 cm gives 15 N.' });
 
 /* ---------- W: worked example ---------- */
 const wsol = PUC.solution($('#wl'), [
@@ -209,7 +209,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 34', topic: 'Two ropes, one b
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tTurn - 0.1, 1.12, 500, 560], [tStr + 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tTurn - 0.1, 1.06, 960, 540], [tStr + 0.2, 1, 960, 540]]);
 
 /* ---------- frame ---------- */
 M.on(t => {
