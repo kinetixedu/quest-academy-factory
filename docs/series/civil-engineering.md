@@ -35,5 +35,25 @@ Any B.E./B.Tech Civil student in India, whatever the university or state. The li
 ## Library (assets/illustrations/engg-civil/)
 Cast: eciv-ananya, eciv-raghu, eciv-farhan, eciv-lakshmi, eciv-deshpande (.png full plate image, -face.jpg circle crop). Scenes: eciv-scene-old-school (cracked, leaking old school), eciv-scene-plot (the empty plot, team with instruments), eciv-scene-site-office (team around drawings), eciv-scene-frame (the RCC frame rising), eciv-scene-handover (finished school, children).
 
+## Year 1 beats (the story problem each episode solves; numbers are EXAMPLE FIGURES unless verified)
+2 Building Components: Mrs. Lakshmi asks why the old wall cracked; Ananya walks her from footing, plinth and plinth beam up through columns, beams, slab, walls, lintels, sunshades, parapet and stairs of the new two-storey school.
+3 Building Planning and Bye-laws: Farhan fits 12 classrooms on the plot; setbacks, ground coverage and FAR/FSI decide how big the school may be; orientation for light and breeze; rules differ by town, so they check the local bye-laws and the National Building Code.
+4 Types of Loads: what will push on the school - its own weight (dead), children, desks and crowds (imposed), wind, earthquake, rain water on the roof; IS 875 parts and IS 1893 named only once verified.
+5 Forces, Resultants and Moments: two ropes lift a precast lintel; forces add tip to tail; the heavy new gate - why the handle sits far from the hinge.
+6 Free Body Diagrams and Equilibrium: the lamp over the gate hangs from two wires; Lami's theorem; Raghu's ladder.
+7 Supports, Beams and Reactions: the corridor beam on two columns; pinned, roller and fixed supports; reactions under a point load and a spread load.
+8 Trusses: the assembly hall roof truss; method of joints and method of sections; which members pull and which push.
+9 Friction: the wheelchair ramp and its slope; the ladder against the wall; why a dusty ramp is dangerous.
+10 Centroid and Centre of Gravity: the L-shaped name wall and the T-shaped beam; where the balance point sits.
+11 Moment of Inertia: Raghu's plank sags flat but stays stiff on edge; why beams are deep, not wide; parallel axis theorem.
+12 Work, Energy and Momentum: the brick hoist lifting a load to the roof; the pile hammer; power of the hoist motor.
+13 Drawing Basics: Farhan's sheet - scales (1:100, 1:50), line types, lettering, dimensioning.
+14 Orthographic Projections: the staircase block in front view, top view and side view; first angle method.
+15 Isometric Projections: Farhan draws the water tank stand in 3D so Mrs. Lakshmi can picture it.
+16 Building Drawing: one classroom as plan, elevation and section - the drawings Raghu builds from.
+17 Stones and Bricks: choosing bricks for the walls; field tests and lab tests (strength, water absorption, efflorescence); stone for the plinth.
+18 Lime, Timber, Glass and Plastics: doors and window frames (seasoned timber), glass for light, PVC pipes, lime plaster in the old block.
+19 Steel and Green Materials: TMT bars for the frame; fly ash bricks and AAC blocks; why a school should be built green. Next is Year 2 (Ep 20 Stress and Strain).
+
 ## Canon (update after every batch)
 - Ep 01: the old Hosahalli school was built decades ago; roof leaks every monsoon, a diagonal crack runs over a classroom door. The new school: two storeys, 600 children, on an empty plot next to the old one. Ananya is the site engineer, Raghu the head mason, Farhan the surveyor-draftsman, Mrs. Lakshmi the headmistress (client), Prof. Deshpande the checker.
