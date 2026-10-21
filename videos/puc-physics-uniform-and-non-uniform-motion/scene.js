@@ -138,7 +138,7 @@ const side = (svg, col, xs, vt, lab) => {
 const SA = side($('#kaS'), B1, [0, 5, 10, 15, 20, 25, 30, 35, 40], tt => 5, ['straight line', 'flat line: v same']);
 const SB = side($('#knS'), B2, [0, 1, 2, 3, 4, 5, 6, 7, 8].map(k => 0.625 * k * k), tt => 1.25 * tt, ['curve, bending up', 'sloping line: v grows']);
 const tSA = [wt('K2', 'Equal'), wt('K2', 'Straight'), wt('K2', 'Flat')], tSB = [wt('K3', 'Growing'), wt('K3', 'curve'), wt('K3', 'sloping')];
-const th1 = PUC.think($('#th1'), { q: 'A train covers 10 km in every 10 minutes for one hour. Is its motion surely uniform?', opts: ['Surely uniform', 'Not surely'], right: 1, why: 'Uniform needs equal displacements in EVERY interval, however small.' });
+const th1 = PUC.think($('#th1'), { q: 'A train covers 10 km in every 10 minutes for one hour. Is its motion surely uniform?', opts: ['Surely uniform', 'Not surely'], right: 1, why: 'Uniform needs equal steps in every interval, however small.' });
 const th2 = PUC.think($('#th2'), { q: 'Which x-t graph shows uniform motion?', opts: ['Graph A', 'Graph B'], right: 0, why: 'A straight line has one slope everywhere: constant velocity.' });
 const tg = mk($('#th2'), 'svg', { width: 720, height: 250, style: 'position:absolute;left:820px;top:200px' });
 const TA = PUC.graph(tg, { x: 40, y: 30, w: 260, h: 170, xmax: 8, ymax: 40 }), TB = PUC.graph(tg, { x: 420, y: 30, w: 260, h: 170, xmax: 8, ymax: 40 });
