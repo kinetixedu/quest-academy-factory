@@ -168,7 +168,7 @@ const wT = {}; Object.keys(WP).forEach(n => { wT[n] = tok(ws, n, WP[n][0], WP[n]
 const W3w = { 1: 'one', 2: 'two', 3: 'three', 4: 'four', 6: 'six', 12: 'twelve' }, W4w = { 1: 'one', 2: 'two', 3: 'three', 6: 'six', 9: 'nine', 18: 'eighteen' };
 const tWin = n => W3w[n] ? wt('W3', W3w[n]) : wt('W4', W4w[n]);
 const tWb = n => W4w[n] ? wt('W4', W4w[n]) : null;
-$('#wP').innerHTML = `${K(xc('6'))} = highest common factor of 12 and 18`;
+$('#wP').innerHTML = `6 = highest common factor of 12 and 18`;
 
 /* ---------- X / Q / F: exam segment ---------- */
 const trap = PUC.trap($('#trap'), { wrong: K(`\\{5, 7\\} - \\{2, 3\\} = \\{3, 4\\}`) + '&nbsp; subtracted the numbers', right: K(`\\{5, 7\\} - \\{2, 3\\} = \\{5, 7\\}`) + '&nbsp; nothing shared, nothing removed' });

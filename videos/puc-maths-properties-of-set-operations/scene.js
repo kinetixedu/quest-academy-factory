@@ -37,7 +37,7 @@ const v3 = (svg, pre) => {
   lay.aB = mk(svg, 'g', { 'clip-path': `url(#${pre}A)` }); mk(lay.aB, 'circle', { cx: V3[1][0], cy: V3[1][1], r: VR3, fill: HIT });
   lay.aC = mk(svg, 'g', { 'clip-path': `url(#${pre}A)` }); mk(lay.aC, 'circle', { cx: V3[2][0], cy: V3[2][1], r: VR3, fill: HIT });
   [AC, BC, CC].forEach((col, i) => mk(svg, 'circle', { cx: V3[i][0], cy: V3[i][1], r: VR3, fill: 'none', stroke: col, 'stroke-width': 3.5 }));
-  [['A', 392, 158, AC], ['B', 222, 470, BC], ['C', 562, 470, CC]].forEach(([l, x, y, col]) => txt(svg, x, y, l, { ...LT, 'font-size': 36, fill: col }));
+  [['A', 280, 200, AC], ['B', 222, 470, BC], ['C', 562, 470, CC]].forEach(([l, x, y, col]) => txt(svg, x, y, l, { ...LT, 'font-size': 36, fill: col }));
   return lay;
 };
 const op = (el, v) => attr(el, 'opacity', M.clamp(v).toFixed(3));
