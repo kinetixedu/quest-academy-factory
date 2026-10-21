@@ -1,0 +1,54 @@
+H1|0.4|A doctor checks your pulse three times. A tailor measures a sleeve twice. A cook tastes twice.
+H2|0.45|Why measure the same thing again and again? Because no measurement is perfect.
+H3|0.35|Diya pours one glass of water into a measuring jug, five times.
+H4|0.5|Two forty eight. Two fifty two. Two fifty one. Two forty seven. Two fifty two millilitres.
+H5|0.65|Same glass, five numbers. Which one is right? And how wrong is each?
+P1|0.35|Every reading has a small error. The error is how far a reading is from the true value.
+P2|0.45|We never know the true value exactly. Our best guess is the mean of all the readings.
+P3|0.65|The five add up to twelve hundred and fifty. Divide by five. The mean is two hundred and fifty millilitres.
+S1|0.35|Let's put the readings on our measuring bench.
+S2|0.4|Each pour fills the jug to a slightly different mark. Watch the level.
+S3|0.45|On the graph, each reading becomes a dot. The dashed line is the mean, two fifty.
+S4|0.45|The gap between a dot and the mean is that reading's absolute error.
+S5|0.45|Slow replay, reading one. Two forty eight minus two fifty is minus two. Its size is two.
+S6|0.65|The other gaps are two, one, three and two. Some readings are above the mean, some below.
+D1|0.35|Let's turn this into rules, one step at a time.
+D2|0.75|Step one. The mean, a bar, is the sum of the readings, divided by n.
+D3|0.75|Step two. The absolute error of each reading, delta a i, is the reading minus the mean.
+D4|0.75|Step three. The mean absolute error is the average of the sizes of these errors. Here, ten divided by five. Two millilitres.
+D5|0.75|Step four. So we write the result as two hundred and fifty, plus or minus two millilitres.
+D6|0.7|The true value most likely lies between two forty eight and two fifty two.
+R1|0.35|But is two millilitres a big error or a small one? It depends on what you measure.
+R2|0.75|So compare the error with the value. Relative error equals the mean absolute error, divided by the mean.
+R3|0.75|Two divided by two fifty is zero point zero zero eight.
+R4|0.75|Multiply by one hundred, and you get the percentage error. Zero point eight percent.
+T1|0.7|Remember this. Absolute error tells you how much. Relative error tells you how much compared to the value.
+K1|0.45|Side by side. The glass: two hundred and fifty millilitres, error two. That is zero point eight percent.
+K2|0.6|A spoon of cough syrup: ten millilitres, the same error of two. That is twenty percent.
+K3|3.2|Now you try. Same absolute error. Which measurement is better? Pause and decide.
+K4|0.65|The glass! Its error is a tiny part of the whole. For the syrup, the same two millilitres is a fifth of the dose.
+V1|0.35|One more thing about the units.
+V2|0.45|Absolute error has the same unit as the reading. Two millilitres.
+V3|0.45|Relative error is millilitres divided by millilitres. The units cancel. It is a pure number.
+V4|3.2|Your turn. Write the glass in litres instead. Does the percentage error change? Pause and decide.
+V5|0.65|No! Two thousandths of a litre over a quarter litre is still zero point zero zero eight. Still zero point eight percent.
+W1|0.35|Worked example. Diya times ten swings of a pendulum, five times.
+W2|0.5|Nineteen point eight, twenty point two, twenty point one, nineteen point seven, twenty point two seconds.
+W3|0.75|The sum is one hundred. So the mean is twenty point zero seconds.
+W4|0.75|The error sizes add to one point zero. Their mean is zero point two seconds.
+W5|0.75|Relative error, zero point two over twenty. That is zero point zero one.
+W6|0.65|So the time is twenty point zero, plus or minus zero point two seconds. A one percent error.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students average the errors with their signs. Minus two, plus two, plus one, minus three, plus two.
+X3|0.65|That sum is always zero, because the mean sits in the middle! Drop the signs first. Take the size of each error, then average.
+E1|0.6|Where is this asked? As short numericals. From a set of readings, find the mean, the mean absolute error, or the percentage error.
+Q1|5.4|Exam level now. Five readings of a length, in centimetres. Find the percentage error. Pause and solve.
+A1|0.5|The answer is C. Zero point seven percent.
+A2|0.5|The mean is four point zero zero. The error sizes add to zero point one four, so the mean absolute error is zero point zero two eight.
+A3|0.6|Zero point zero two eight over four, times one hundred, is zero point seven percent. Zero percent is the signs trap.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why do we use the mean of many readings as the true value?
+Y3|0.9|Two. Why is the average of the errors, with their signs, always zero?
+Y4|1.1|Three. Same absolute error on a big and a small value. Which has the bigger percentage error?
+N1|0.3|Next time: Aarav's study table has a small error in its length and its width. What is the error in its area? Error propagation.

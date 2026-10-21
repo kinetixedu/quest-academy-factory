@@ -1,0 +1,3779 @@
+{
+ "lines": {
+  "H1": {
+   "t0": 0.45,
+   "t1": 6.544,
+   "text": "A doctor checks your pulse three times. A tailor measures a sleeve twice. A cook tastes twice.",
+   "words": [
+    {
+     "w": "A",
+     "t": 0.45
+    },
+    {
+     "w": "doctor",
+     "t": 0.603
+    },
+    {
+     "w": "checks",
+     "t": 0.995
+    },
+    {
+     "w": "your",
+     "t": 1.388
+    },
+    {
+     "w": "pulse",
+     "t": 1.684
+    },
+    {
+     "w": "three",
+     "t": 2.028
+    },
+    {
+     "w": "times.",
+     "t": 2.373
+    },
+    {
+     "w": "A",
+     "t": 2.956
+    },
+    {
+     "w": "tailor",
+     "t": 3.109
+    },
+    {
+     "w": "measures",
+     "t": 3.502
+    },
+    {
+     "w": "a",
+     "t": 3.99
+    },
+    {
+     "w": "sleeve",
+     "t": 4.143
+    },
+    {
+     "w": "twice.",
+     "t": 4.535
+    },
+    {
+     "w": "A",
+     "t": 5.118
+    },
+    {
+     "w": "cook",
+     "t": 5.271
+    },
+    {
+     "w": "tastes",
+     "t": 5.568
+    },
+    {
+     "w": "twice.",
+     "t": 5.96
+    }
+   ]
+  },
+  "H2": {
+   "t0": 6.944,
+   "t1": 11.571,
+   "text": "Why measure the same thing again and again? Because no measurement is perfect.",
+   "words": [
+    {
+     "w": "Why",
+     "t": 6.944
+    },
+    {
+     "w": "measure",
+     "t": 7.178
+    },
+    {
+     "w": "the",
+     "t": 7.593
+    },
+    {
+     "w": "same",
+     "t": 7.828
+    },
+    {
+     "w": "thing",
+     "t": 8.107
+    },
+    {
+     "w": "again",
+     "t": 8.432
+    },
+    {
+     "w": "and",
+     "t": 8.757
+    },
+    {
+     "w": "again?",
+     "t": 8.991
+    },
+    {
+     "w": "Because",
+     "t": 9.542
+    },
+    {
+     "w": "no",
+     "t": 9.957
+    },
+    {
+     "w": "measurement",
+     "t": 10.146
+    },
+    {
+     "w": "is",
+     "t": 10.741
+    },
+    {
+     "w": "perfect.",
+     "t": 10.931
+    }
+   ]
+  },
+  "H3": {
+   "t0": 12.021,
+   "t1": 16.595,
+   "text": "Diya pours one glass of water into a measuring jug, five times.",
+   "words": [
+    {
+     "w": "Diya",
+     "t": 12.021
+    },
+    {
+     "w": "pours",
+     "t": 12.357
+    },
+    {
+     "w": "one",
+     "t": 12.747
+    },
+    {
+     "w": "glass",
+     "t": 13.029
+    },
+    {
+     "w": "of",
+     "t": 13.419
+    },
+    {
+     "w": "water",
+     "t": 13.647
+    },
+    {
+     "w": "into",
+     "t": 14.037
+    },
+    {
+     "w": "a",
+     "t": 14.373
+    },
+    {
+     "w": "measuring",
+     "t": 14.547
+    },
+    {
+     "w": "jug,",
+     "t": 15.153
+    },
+    {
+     "w": "five",
+     "t": 15.598
+    },
+    {
+     "w": "times.",
+     "t": 15.934
+    }
+   ]
+  },
+  "H4": {
+   "t0": 16.945,
+   "t1": 23.963,
+   "text": "Two forty eight. Two fifty two. Two fifty one. Two forty seven. Two fifty two millilitres.",
+   "words": [
+    {
+     "w": "Two",
+     "t": 16.945
+    },
+    {
+     "w": "forty",
+     "t": 17.225
+    },
+    {
+     "w": "eight.",
+     "t": 17.613
+    },
+    {
+     "w": "Two",
+     "t": 18.271
+    },
+    {
+     "w": "fifty",
+     "t": 18.551
+    },
+    {
+     "w": "two.",
+     "t": 18.939
+    },
+    {
+     "w": "Two",
+     "t": 19.489
+    },
+    {
+     "w": "fifty",
+     "t": 19.77
+    },
+    {
+     "w": "one.",
+     "t": 20.158
+    },
+    {
+     "w": "Two",
+     "t": 20.707
+    },
+    {
+     "w": "forty",
+     "t": 20.988
+    },
+    {
+     "w": "seven.",
+     "t": 21.376
+    },
+    {
+     "w": "Two",
+     "t": 22.034
+    },
+    {
+     "w": "fifty",
+     "t": 22.314
+    },
+    {
+     "w": "two",
+     "t": 22.702
+    },
+    {
+     "w": "millilitres.",
+     "t": 22.982
+    }
+   ]
+  },
+  "H5": {
+   "t0": 24.463,
+   "t1": 29.214,
+   "text": "Same glass, five numbers. Which one is right? And how wrong is each?",
+   "words": [
+    {
+     "w": "Same",
+     "t": 24.463
+    },
+    {
+     "w": "glass,",
+     "t": 24.762
+    },
+    {
+     "w": "five",
+     "t": 25.253
+    },
+    {
+     "w": "numbers.",
+     "t": 25.552
+    },
+    {
+     "w": "Which",
+     "t": 26.236
+    },
+    {
+     "w": "one",
+     "t": 26.583
+    },
+    {
+     "w": "is",
+     "t": 26.834
+    },
+    {
+     "w": "right?",
+     "t": 27.036
+    },
+    {
+     "w": "And",
+     "t": 27.624
+    },
+    {
+     "w": "how",
+     "t": 27.875
+    },
+    {
+     "w": "wrong",
+     "t": 28.125
+    },
+    {
+     "w": "is",
+     "t": 28.472
+    },
+    {
+     "w": "each?",
+     "t": 28.674
+    }
+   ]
+  },
+  "P1": {
+   "t0": 29.864,
+   "t1": 35.274,
+   "text": "Every reading has a small error. The error is how far a reading is from the true value.",
+   "words": [
+    {
+     "w": "Every",
+     "t": 29.864
+    },
+    {
+     "w": "reading",
+     "t": 30.195
+    },
+    {
+     "w": "has",
+     "t": 30.619
+    },
+    {
+     "w": "a",
+     "t": 30.858
+    },
+    {
+     "w": "small",
+     "t": 31.005
+    },
+    {
+     "w": "error.",
+     "t": 31.336
+    },
+    {
+     "w": "The",
+     "t": 31.897
+    },
+    {
+     "w": "error",
+     "t": 32.137
+    },
+    {
+     "w": "is",
+     "t": 32.468
+    },
+    {
+     "w": "how",
+     "t": 32.661
+    },
+    {
+     "w": "far",
+     "t": 32.9
+    },
+    {
+     "w": "a",
+     "t": 33.139
+    },
+    {
+     "w": "reading",
+     "t": 33.287
+    },
+    {
+     "w": "is",
+     "t": 33.71
+    },
+    {
+     "w": "from",
+     "t": 33.903
+    },
+    {
+     "w": "the",
+     "t": 34.188
+    },
+    {
+     "w": "true",
+     "t": 34.427
+    },
+    {
+     "w": "value.",
+     "t": 34.713
+    }
+   ]
+  },
+  "P2": {
+   "t0": 35.624,
+   "t1": 40.956,
+   "text": "We never know the true value exactly. Our best guess is the mean of all the readings.",
+   "words": [
+    {
+     "w": "We",
+     "t": 35.624
+    },
+    {
+     "w": "never",
+     "t": 35.82
+    },
+    {
+     "w": "know",
+     "t": 36.155
+    },
+    {
+     "w": "the",
+     "t": 36.444
+    },
+    {
+     "w": "true",
+     "t": 36.687
+    },
+    {
+     "w": "value",
+     "t": 36.976
+    },
+    {
+     "w": "exactly.",
+     "t": 37.311
+    },
+    {
+     "w": "Our",
+     "t": 37.973
+    },
+    {
+     "w": "best",
+     "t": 38.215
+    },
+    {
+     "w": "guess",
+     "t": 38.504
+    },
+    {
+     "w": "is",
+     "t": 38.84
+    },
+    {
+     "w": "the",
+     "t": 39.036
+    },
+    {
+     "w": "mean",
+     "t": 39.278
+    },
+    {
+     "w": "of",
+     "t": 39.567
+    },
+    {
+     "w": "all",
+     "t": 39.763
+    },
+    {
+     "w": "the",
+     "t": 40.005
+    },
+    {
+     "w": "readings.",
+     "t": 40.247
+    }
+   ]
+  },
+  "P3": {
+   "t0": 41.406,
+   "t1": 48.769,
+   "text": "The five add up to twelve hundred and fifty. Divide by five. The mean is two hundred and fifty millilitres.",
+   "words": [
+    {
+     "w": "The",
+     "t": 41.406
+    },
+    {
+     "w": "five",
+     "t": 41.672
+    },
+    {
+     "w": "add",
+     "t": 41.989
+    },
+    {
+     "w": "up",
+     "t": 42.255
+    },
+    {
+     "w": "to",
+     "t": 42.469
+    },
+    {
+     "w": "twelve",
+     "t": 42.684
+    },
+    {
+     "w": "hundred",
+     "t": 43.103
+    },
+    {
+     "w": "and",
+     "t": 43.574
+    },
+    {
+     "w": "fifty.",
+     "t": 43.84
+    },
+    {
+     "w": "Divide",
+     "t": 44.464
+    },
+    {
+     "w": "by",
+     "t": 44.883
+    },
+    {
+     "w": "five.",
+     "t": 45.098
+    },
+    {
+     "w": "The",
+     "t": 45.67
+    },
+    {
+     "w": "mean",
+     "t": 45.936
+    },
+    {
+     "w": "is",
+     "t": 46.253
+    },
+    {
+     "w": "two",
+     "t": 46.468
+    },
+    {
+     "w": "hundred",
+     "t": 46.734
+    },
+    {
+     "w": "and",
+     "t": 47.205
+    },
+    {
+     "w": "fifty",
+     "t": 47.47
+    },
+    {
+     "w": "millilitres.",
+     "t": 47.839
+    }
+   ]
+  },
+  "S1": {
+   "t0": 49.419,
+   "t1": 51.977,
+   "text": "Let's put the readings on our measuring bench.",
+   "words": [
+    {
+     "w": "Let's",
+     "t": 49.419
+    },
+    {
+     "w": "put",
+     "t": 49.685
+    },
+    {
+     "w": "the",
+     "t": 49.908
+    },
+    {
+     "w": "readings",
+     "t": 50.132
+    },
+    {
+     "w": "on",
+     "t": 50.569
+    },
+    {
+     "w": "our",
+     "t": 50.749
+    },
+    {
+     "w": "measuring",
+     "t": 50.973
+    },
+    {
+     "w": "bench.",
+     "t": 51.453
+    }
+   ]
+  },
+  "S2": {
+   "t0": 52.327,
+   "t1": 56.876,
+   "text": "Each pour fills the jug to a slightly different mark. Watch the level.",
+   "words": [
+    {
+     "w": "Each",
+     "t": 52.327
+    },
+    {
+     "w": "pour",
+     "t": 52.625
+    },
+    {
+     "w": "fills",
+     "t": 52.923
+    },
+    {
+     "w": "the",
+     "t": 53.269
+    },
+    {
+     "w": "jug",
+     "t": 53.519
+    },
+    {
+     "w": "to",
+     "t": 53.769
+    },
+    {
+     "w": "a",
+     "t": 53.971
+    },
+    {
+     "w": "slightly",
+     "t": 54.125
+    },
+    {
+     "w": "different",
+     "t": 54.616
+    },
+    {
+     "w": "mark.",
+     "t": 55.154
+    },
+    {
+     "w": "Watch",
+     "t": 55.693
+    },
+    {
+     "w": "the",
+     "t": 56.039
+    },
+    {
+     "w": "level.",
+     "t": 56.289
+    }
+   ]
+  },
+  "S3": {
+   "t0": 57.276,
+   "t1": 62.393,
+   "text": "On the graph, each reading becomes a dot. The dashed line is the mean, two fifty.",
+   "words": [
+    {
+     "w": "On",
+     "t": 57.276
+    },
+    {
+     "w": "the",
+     "t": 57.466
+    },
+    {
+     "w": "graph,",
+     "t": 57.701
+    },
+    {
+     "w": "each",
+     "t": 58.162
+    },
+    {
+     "w": "reading",
+     "t": 58.442
+    },
+    {
+     "w": "becomes",
+     "t": 58.858
+    },
+    {
+     "w": "a",
+     "t": 59.274
+    },
+    {
+     "w": "dot.",
+     "t": 59.418
+    },
+    {
+     "w": "The",
+     "t": 59.879
+    },
+    {
+     "w": "dashed",
+     "t": 60.115
+    },
+    {
+     "w": "line",
+     "t": 60.485
+    },
+    {
+     "w": "is",
+     "t": 60.765
+    },
+    {
+     "w": "the",
+     "t": 60.955
+    },
+    {
+     "w": "mean,",
+     "t": 61.19
+    },
+    {
+     "w": "two",
+     "t": 61.606
+    },
+    {
+     "w": "fifty.",
+     "t": 61.841
+    }
+   ]
+  },
+  "S4": {
+   "t0": 62.843,
+   "t1": 66.79,
+   "text": "The gap between a dot and the mean is that reading's absolute error.",
+   "words": [
+    {
+     "w": "The",
+     "t": 62.843
+    },
+    {
+     "w": "gap",
+     "t": 63.077
+    },
+    {
+     "w": "between",
+     "t": 63.311
+    },
+    {
+     "w": "a",
+     "t": 63.726
+    },
+    {
+     "w": "dot",
+     "t": 63.87
+    },
+    {
+     "w": "and",
+     "t": 64.104
+    },
+    {
+     "w": "the",
+     "t": 64.339
+    },
+    {
+     "w": "mean",
+     "t": 64.573
+    },
+    {
+     "w": "is",
+     "t": 64.852
+    },
+    {
+     "w": "that",
+     "t": 65.041
+    },
+    {
+     "w": "reading's",
+     "t": 65.321
+    },
+    {
+     "w": "absolute",
+     "t": 65.78
+    },
+    {
+     "w": "error.",
+     "t": 66.24
+    }
+   ]
+  },
+  "S5": {
+   "t0": 67.24,
+   "t1": 73.64,
+   "text": "Slow replay, reading one. Two forty eight minus two fifty is minus two. Its size is two.",
+   "words": [
+    {
+     "w": "Slow",
+     "t": 67.24
+    },
+    {
+     "w": "replay,",
+     "t": 67.561
+    },
+    {
+     "w": "reading",
+     "t": 68.142
+    },
+    {
+     "w": "one.",
+     "t": 68.619
+    },
+    {
+     "w": "Two",
+     "t": 69.148
+    },
+    {
+     "w": "forty",
+     "t": 69.418
+    },
+    {
+     "w": "eight",
+     "t": 69.791
+    },
+    {
+     "w": "minus",
+     "t": 70.165
+    },
+    {
+     "w": "two",
+     "t": 70.538
+    },
+    {
+     "w": "fifty",
+     "t": 70.808
+    },
+    {
+     "w": "is",
+     "t": 71.181
+    },
+    {
+     "w": "minus",
+     "t": 71.399
+    },
+    {
+     "w": "two.",
+     "t": 71.773
+    },
+    {
+     "w": "Its",
+     "t": 72.302
+    },
+    {
+     "w": "size",
+     "t": 72.571
+    },
+    {
+     "w": "is",
+     "t": 72.893
+    },
+    {
+     "w": "two.",
+     "t": 73.111
+    }
+   ]
+  },
+  "S6": {
+   "t0": 74.09,
+   "t1": 79.275,
+   "text": "The other gaps are two, one, three and two. Some readings are above the mean, some below.",
+   "words": [
+    {
+     "w": "The",
+     "t": 74.09
+    },
+    {
+     "w": "other",
+     "t": 74.306
+    },
+    {
+     "w": "gaps",
+     "t": 74.607
+    },
+    {
+     "w": "are",
+     "t": 74.865
+    },
+    {
+     "w": "two,",
+     "t": 75.082
+    },
+    {
+     "w": "one,",
+     "t": 75.423
+    },
+    {
+     "w": "three",
+     "t": 75.765
+    },
+    {
+     "w": "and",
+     "t": 76.065
+    },
+    {
+     "w": "two.",
+     "t": 76.282
+    },
+    {
+     "w": "Some",
+     "t": 76.707
+    },
+    {
+     "w": "readings",
+     "t": 76.966
+    },
+    {
+     "w": "are",
+     "t": 77.391
+    },
+    {
+     "w": "above",
+     "t": 77.607
+    },
+    {
+     "w": "the",
+     "t": 77.907
+    },
+    {
+     "w": "mean,",
+     "t": 78.124
+    },
+    {
+     "w": "some",
+     "t": 78.508
+    },
+    {
+     "w": "below.",
+     "t": 78.766
+    }
+   ]
+  },
+  "D1": {
+   "t0": 79.925,
+   "t1": 82.851,
+   "text": "Let's turn this into rules, one step at a time.",
+   "words": [
+    {
+     "w": "Let's",
+     "t": 79.925
+    },
+    {
+     "w": "turn",
+     "t": 80.204
+    },
+    {
+     "w": "this",
+     "t": 80.483
+    },
+    {
+     "w": "into",
+     "t": 80.762
+    },
+    {
+     "w": "rules,",
+     "t": 81.041
+    },
+    {
+     "w": "one",
+     "t": 81.5
+    },
+    {
+     "w": "step",
+     "t": 81.734
+    },
+    {
+     "w": "at",
+     "t": 82.013
+    },
+    {
+     "w": "a",
+     "t": 82.202
+    },
+    {
+     "w": "time.",
+     "t": 82.346
+    }
+   ]
+  },
+  "D2": {
+   "t0": 83.201,
+   "t1": 88.084,
+   "text": "Step one. The mean, a bar, is the sum of the readings, divided by n.",
+   "words": [
+    {
+     "w": "Step",
+     "t": 83.201
+    },
+    {
+     "w": "one.",
+     "t": 83.5
+    },
+    {
+     "w": "The",
+     "t": 83.994
+    },
+    {
+     "w": "mean,",
+     "t": 84.245
+    },
+    {
+     "w": "a",
+     "t": 84.69
+    },
+    {
+     "w": "bar,",
+     "t": 84.845
+    },
+    {
+     "w": "is",
+     "t": 85.241
+    },
+    {
+     "w": "the",
+     "t": 85.444
+    },
+    {
+     "w": "sum",
+     "t": 85.695
+    },
+    {
+     "w": "of",
+     "t": 85.947
+    },
+    {
+     "w": "the",
+     "t": 86.15
+    },
+    {
+     "w": "readings,",
+     "t": 86.401
+    },
+    {
+     "w": "divided",
+     "t": 87.04
+    },
+    {
+     "w": "by",
+     "t": 87.484
+    },
+    {
+     "w": "n.",
+     "t": 87.688
+    }
+   ]
+  },
+  "D3": {
+   "t0": 88.834,
+   "t1": 94.81,
+   "text": "Step two. The absolute error of each reading, delta a i, is the reading minus the mean.",
+   "words": [
+    {
+     "w": "Step",
+     "t": 88.834
+    },
+    {
+     "w": "two.",
+     "t": 89.142
+    },
+    {
+     "w": "The",
+     "t": 89.648
+    },
+    {
+     "w": "absolute",
+     "t": 89.906
+    },
+    {
+     "w": "error",
+     "t": 90.412
+    },
+    {
+     "w": "of",
+     "t": 90.77
+    },
+    {
+     "w": "each",
+     "t": 90.978
+    },
+    {
+     "w": "reading,",
+     "t": 91.286
+    },
+    {
+     "w": "delta",
+     "t": 91.891
+    },
+    {
+     "w": "a",
+     "t": 92.249
+    },
+    {
+     "w": "i,",
+     "t": 92.408
+    },
+    {
+     "w": "is",
+     "t": 92.715
+    },
+    {
+     "w": "the",
+     "t": 92.924
+    },
+    {
+     "w": "reading",
+     "t": 93.182
+    },
+    {
+     "w": "minus",
+     "t": 93.639
+    },
+    {
+     "w": "the",
+     "t": 93.996
+    },
+    {
+     "w": "mean.",
+     "t": 94.254
+    }
+   ]
+  },
+  "D4": {
+   "t0": 95.56,
+   "t1": 104.572,
+   "text": "Step three. The mean absolute error is the average of the sizes of these errors. Here, ten divided by five. Two millilitres.",
+   "words": [
+    {
+     "w": "Step",
+     "t": 95.56
+    },
+    {
+     "w": "three.",
+     "t": 95.89
+    },
+    {
+     "w": "The",
+     "t": 96.539
+    },
+    {
+     "w": "mean",
+     "t": 96.815
+    },
+    {
+     "w": "absolute",
+     "t": 97.145
+    },
+    {
+     "w": "error",
+     "t": 97.688
+    },
+    {
+     "w": "is",
+     "t": 98.071
+    },
+    {
+     "w": "the",
+     "t": 98.294
+    },
+    {
+     "w": "average",
+     "t": 98.571
+    },
+    {
+     "w": "of",
+     "t": 99.06
+    },
+    {
+     "w": "the",
+     "t": 99.284
+    },
+    {
+     "w": "sizes",
+     "t": 99.56
+    },
+    {
+     "w": "of",
+     "t": 99.943
+    },
+    {
+     "w": "these",
+     "t": 100.167
+    },
+    {
+     "w": "errors.",
+     "t": 100.55
+    },
+    {
+     "w": "Here,",
+     "t": 101.252
+    },
+    {
+     "w": "ten",
+     "t": 101.741
+    },
+    {
+     "w": "divided",
+     "t": 102.018
+    },
+    {
+     "w": "by",
+     "t": 102.508
+    },
+    {
+     "w": "five.",
+     "t": 102.731
+    },
+    {
+     "w": "Two",
+     "t": 103.327
+    },
+    {
+     "w": "millilitres.",
+     "t": 103.603
+    }
+   ]
+  },
+  "D5": {
+   "t0": 105.322,
+   "t1": 111.268,
+   "text": "Step four. So we write the result as two hundred and fifty, plus or minus two millilitres.",
+   "words": [
+    {
+     "w": "Step",
+     "t": 105.322
+    },
+    {
+     "w": "four.",
+     "t": 105.625
+    },
+    {
+     "w": "So",
+     "t": 106.174
+    },
+    {
+     "w": "we",
+     "t": 106.38
+    },
+    {
+     "w": "write",
+     "t": 106.585
+    },
+    {
+     "w": "the",
+     "t": 106.938
+    },
+    {
+     "w": "result",
+     "t": 107.193
+    },
+    {
+     "w": "as",
+     "t": 107.594
+    },
+    {
+     "w": "two",
+     "t": 107.8
+    },
+    {
+     "w": "hundred",
+     "t": 108.055
+    },
+    {
+     "w": "and",
+     "t": 108.505
+    },
+    {
+     "w": "fifty,",
+     "t": 108.76
+    },
+    {
+     "w": "plus",
+     "t": 109.26
+    },
+    {
+     "w": "or",
+     "t": 109.563
+    },
+    {
+     "w": "minus",
+     "t": 109.769
+    },
+    {
+     "w": "two",
+     "t": 110.122
+    },
+    {
+     "w": "millilitres.",
+     "t": 110.376
+    }
+   ]
+  },
+  "D6": {
+   "t0": 112.018,
+   "t1": 116.654,
+   "text": "The true value most likely lies between two forty eight and two fifty two.",
+   "words": [
+    {
+     "w": "The",
+     "t": 112.018
+    },
+    {
+     "w": "true",
+     "t": 112.27
+    },
+    {
+     "w": "value",
+     "t": 112.57
+    },
+    {
+     "w": "most",
+     "t": 112.918
+    },
+    {
+     "w": "likely",
+     "t": 113.218
+    },
+    {
+     "w": "lies",
+     "t": 113.615
+    },
+    {
+     "w": "between",
+     "t": 113.915
+    },
+    {
+     "w": "two",
+     "t": 114.36
+    },
+    {
+     "w": "forty",
+     "t": 114.612
+    },
+    {
+     "w": "eight",
+     "t": 114.96
+    },
+    {
+     "w": "and",
+     "t": 115.308
+    },
+    {
+     "w": "two",
+     "t": 115.56
+    },
+    {
+     "w": "fifty",
+     "t": 115.812
+    },
+    {
+     "w": "two.",
+     "t": 116.16
+    }
+   ]
+  },
+  "R1": {
+   "t0": 117.354,
+   "t1": 122.254,
+   "text": "But is two millilitres a big error or a small one? It depends on what you measure.",
+   "words": [
+    {
+     "w": "But",
+     "t": 117.354
+    },
+    {
+     "w": "is",
+     "t": 117.582
+    },
+    {
+     "w": "two",
+     "t": 117.767
+    },
+    {
+     "w": "millilitres",
+     "t": 117.996
+    },
+    {
+     "w": "a",
+     "t": 118.576
+    },
+    {
+     "w": "big",
+     "t": 118.717
+    },
+    {
+     "w": "error",
+     "t": 118.946
+    },
+    {
+     "w": "or",
+     "t": 119.263
+    },
+    {
+     "w": "a",
+     "t": 119.447
+    },
+    {
+     "w": "small",
+     "t": 119.588
+    },
+    {
+     "w": "one?",
+     "t": 119.905
+    },
+    {
+     "w": "It",
+     "t": 120.354
+    },
+    {
+     "w": "depends",
+     "t": 120.538
+    },
+    {
+     "w": "on",
+     "t": 120.943
+    },
+    {
+     "w": "what",
+     "t": 121.128
+    },
+    {
+     "w": "you",
+     "t": 121.4
+    },
+    {
+     "w": "measure.",
+     "t": 121.629
+    }
+   ]
+  },
+  "R2": {
+   "t0": 122.604,
+   "t1": 129.359,
+   "text": "So compare the error with the value. Relative error equals the mean absolute error, divided by the mean.",
+   "words": [
+    {
+     "w": "So",
+     "t": 122.604
+    },
+    {
+     "w": "compare",
+     "t": 122.811
+    },
+    {
+     "w": "the",
+     "t": 123.266
+    },
+    {
+     "w": "error",
+     "t": 123.524
+    },
+    {
+     "w": "with",
+     "t": 123.88
+    },
+    {
+     "w": "the",
+     "t": 124.186
+    },
+    {
+     "w": "value.",
+     "t": 124.443
+    },
+    {
+     "w": "Relative",
+     "t": 125.047
+    },
+    {
+     "w": "error",
+     "t": 125.551
+    },
+    {
+     "w": "equals",
+     "t": 125.907
+    },
+    {
+     "w": "the",
+     "t": 126.312
+    },
+    {
+     "w": "mean",
+     "t": 126.57
+    },
+    {
+     "w": "absolute",
+     "t": 126.876
+    },
+    {
+     "w": "error,",
+     "t": 127.381
+    },
+    {
+     "w": "divided",
+     "t": 127.885
+    },
+    {
+     "w": "by",
+     "t": 128.34
+    },
+    {
+     "w": "the",
+     "t": 128.548
+    },
+    {
+     "w": "mean.",
+     "t": 128.805
+    }
+   ]
+  },
+  "R3": {
+   "t0": 130.109,
+   "t1": 134.191,
+   "text": "Two divided by two fifty is zero point zero zero eight.",
+   "words": [
+    {
+     "w": "Two",
+     "t": 130.109
+    },
+    {
+     "w": "divided",
+     "t": 130.399
+    },
+    {
+     "w": "by",
+     "t": 130.912
+    },
+    {
+     "w": "two",
+     "t": 131.146
+    },
+    {
+     "w": "fifty",
+     "t": 131.436
+    },
+    {
+     "w": "is",
+     "t": 131.837
+    },
+    {
+     "w": "zero",
+     "t": 132.072
+    },
+    {
+     "w": "point",
+     "t": 132.417
+    },
+    {
+     "w": "zero",
+     "t": 132.819
+    },
+    {
+     "w": "zero",
+     "t": 133.165
+    },
+    {
+     "w": "eight.",
+     "t": 133.51
+    }
+   ]
+  },
+  "R4": {
+   "t0": 134.941,
+   "t1": 140.38,
+   "text": "Multiply by one hundred, and you get the percentage error. Zero point eight percent.",
+   "words": [
+    {
+     "w": "Multiply",
+     "t": 134.941
+    },
+    {
+     "w": "by",
+     "t": 135.437
+    },
+    {
+     "w": "one",
+     "t": 135.641
+    },
+    {
+     "w": "hundred,",
+     "t": 135.894
+    },
+    {
+     "w": "and",
+     "t": 136.488
+    },
+    {
+     "w": "you",
+     "t": 136.741
+    },
+    {
+     "w": "get",
+     "t": 136.994
+    },
+    {
+     "w": "the",
+     "t": 137.247
+    },
+    {
+     "w": "percentage",
+     "t": 137.5
+    },
+    {
+     "w": "error.",
+     "t": 138.093
+    },
+    {
+     "w": "Zero",
+     "t": 138.687
+    },
+    {
+     "w": "point",
+     "t": 138.988
+    },
+    {
+     "w": "eight",
+     "t": 139.338
+    },
+    {
+     "w": "percent.",
+     "t": 139.689
+    }
+   ]
+  },
+  "T1": {
+   "t0": 141.13,
+   "t1": 148.195,
+   "text": "Remember this. Absolute error tells you how much. Relative error tells you how much compared to the value.",
+   "words": [
+    {
+     "w": "Remember",
+     "t": 141.13
+    },
+    {
+     "w": "this.",
+     "t": 141.642
+    },
+    {
+     "w": "Absolute",
+     "t": 142.205
+    },
+    {
+     "w": "error",
+     "t": 142.717
+    },
+    {
+     "w": "tells",
+     "t": 143.079
+    },
+    {
+     "w": "you",
+     "t": 143.441
+    },
+    {
+     "w": "how",
+     "t": 143.702
+    },
+    {
+     "w": "much.",
+     "t": 143.964
+    },
+    {
+     "w": "Relative",
+     "t": 144.527
+    },
+    {
+     "w": "error",
+     "t": 145.039
+    },
+    {
+     "w": "tells",
+     "t": 145.401
+    },
+    {
+     "w": "you",
+     "t": 145.763
+    },
+    {
+     "w": "how",
+     "t": 146.024
+    },
+    {
+     "w": "much",
+     "t": 146.285
+    },
+    {
+     "w": "compared",
+     "t": 146.597
+    },
+    {
+     "w": "to",
+     "t": 147.109
+    },
+    {
+     "w": "the",
+     "t": 147.32
+    },
+    {
+     "w": "value.",
+     "t": 147.582
+    }
+   ]
+  },
+  "K1": {
+   "t0": 148.895,
+   "t1": 155.861,
+   "text": "Side by side. The glass: two hundred and fifty millilitres, error two. That is zero point eight percent.",
+   "words": [
+    {
+     "w": "Side",
+     "t": 148.895
+    },
+    {
+     "w": "by",
+     "t": 149.198
+    },
+    {
+     "w": "side.",
+     "t": 149.403
+    },
+    {
+     "w": "The",
+     "t": 149.95
+    },
+    {
+     "w": "glass:",
+     "t": 150.204
+    },
+    {
+     "w": "two",
+     "t": 150.702
+    },
+    {
+     "w": "hundred",
+     "t": 150.956
+    },
+    {
+     "w": "and",
+     "t": 151.406
+    },
+    {
+     "w": "fifty",
+     "t": 151.66
+    },
+    {
+     "w": "millilitres,",
+     "t": 152.012
+    },
+    {
+     "w": "error",
+     "t": 152.803
+    },
+    {
+     "w": "two.",
+     "t": 153.155
+    },
+    {
+     "w": "That",
+     "t": 153.653
+    },
+    {
+     "w": "is",
+     "t": 153.956
+    },
+    {
+     "w": "zero",
+     "t": 154.161
+    },
+    {
+     "w": "point",
+     "t": 154.464
+    },
+    {
+     "w": "eight",
+     "t": 154.816
+    },
+    {
+     "w": "percent.",
+     "t": 155.167
+    }
+   ]
+  },
+  "K2": {
+   "t0": 156.311,
+   "t1": 161.753,
+   "text": "A spoon of cough syrup: ten millilitres, the same error of two. That is twenty percent.",
+   "words": [
+    {
+     "w": "A",
+     "t": 156.311
+    },
+    {
+     "w": "spoon",
+     "t": 156.457
+    },
+    {
+     "w": "of",
+     "t": 156.786
+    },
+    {
+     "w": "cough",
+     "t": 156.978
+    },
+    {
+     "w": "syrup:",
+     "t": 157.306
+    },
+    {
+     "w": "ten",
+     "t": 157.772
+    },
+    {
+     "w": "millilitres,",
+     "t": 158.009
+    },
+    {
+     "w": "the",
+     "t": 158.749
+    },
+    {
+     "w": "same",
+     "t": 158.986
+    },
+    {
+     "w": "error",
+     "t": 159.269
+    },
+    {
+     "w": "of",
+     "t": 159.598
+    },
+    {
+     "w": "two.",
+     "t": 159.79
+    },
+    {
+     "w": "That",
+     "t": 160.255
+    },
+    {
+     "w": "is",
+     "t": 160.538
+    },
+    {
+     "w": "twenty",
+     "t": 160.73
+    },
+    {
+     "w": "percent.",
+     "t": 161.104
+    }
+   ]
+  },
+  "K3": {
+   "t0": 162.353,
+   "t1": 168.371,
+   "text": "Now you try. Same absolute error. Which measurement is better? Pause and decide.",
+   "words": [
+    {
+     "w": "Now",
+     "t": 162.353
+    },
+    {
+     "w": "you",
+     "t": 162.631
+    },
+    {
+     "w": "try.",
+     "t": 162.909
+    },
+    {
+     "w": "Same",
+     "t": 163.454
+    },
+    {
+     "w": "absolute",
+     "t": 163.785
+    },
+    {
+     "w": "error.",
+     "t": 164.33
+    },
+    {
+     "w": "Which",
+     "t": 164.982
+    },
+    {
+     "w": "measurement",
+     "t": 165.367
+    },
+    {
+     "w": "is",
+     "t": 166.073
+    },
+    {
+     "w": "better?",
+     "t": 166.297
+    },
+    {
+     "w": "Pause",
+     "t": 167.003
+    },
+    {
+     "w": "and",
+     "t": 167.388
+    },
+    {
+     "w": "decide.",
+     "t": 167.666
+    }
+   ]
+  },
+  "K4": {
+   "t0": 171.571,
+   "t1": 178.626,
+   "text": "The glass! Its error is a tiny part of the whole. For the syrup, the same two millilitres is a fifth of the dose.",
+   "words": [
+    {
+     "w": "The",
+     "t": 171.571
+    },
+    {
+     "w": "glass!",
+     "t": 171.805
+    },
+    {
+     "w": "Its",
+     "t": 172.354
+    },
+    {
+     "w": "error",
+     "t": 172.588
+    },
+    {
+     "w": "is",
+     "t": 172.912
+    },
+    {
+     "w": "a",
+     "t": 173.101
+    },
+    {
+     "w": "tiny",
+     "t": 173.245
+    },
+    {
+     "w": "part",
+     "t": 173.524
+    },
+    {
+     "w": "of",
+     "t": 173.803
+    },
+    {
+     "w": "the",
+     "t": 173.992
+    },
+    {
+     "w": "whole.",
+     "t": 174.226
+    },
+    {
+     "w": "For",
+     "t": 174.775
+    },
+    {
+     "w": "the",
+     "t": 175.009
+    },
+    {
+     "w": "syrup,",
+     "t": 175.243
+    },
+    {
+     "w": "the",
+     "t": 175.702
+    },
+    {
+     "w": "same",
+     "t": 175.936
+    },
+    {
+     "w": "two",
+     "t": 176.215
+    },
+    {
+     "w": "millilitres",
+     "t": 176.449
+    },
+    {
+     "w": "is",
+     "t": 177.043
+    },
+    {
+     "w": "a",
+     "t": 177.232
+    },
+    {
+     "w": "fifth",
+     "t": 177.376
+    },
+    {
+     "w": "of",
+     "t": 177.7
+    },
+    {
+     "w": "the",
+     "t": 177.888
+    },
+    {
+     "w": "dose.",
+     "t": 178.122
+    }
+   ]
+  },
+  "V1": {
+   "t0": 179.276,
+   "t1": 181.159,
+   "text": "One more thing about the units.",
+   "words": [
+    {
+     "w": "One",
+     "t": 179.276
+    },
+    {
+     "w": "more",
+     "t": 179.503
+    },
+    {
+     "w": "thing",
+     "t": 179.773
+    },
+    {
+     "w": "about",
+     "t": 180.087
+    },
+    {
+     "w": "the",
+     "t": 180.401
+    },
+    {
+     "w": "units.",
+     "t": 180.628
+    }
+   ]
+  },
+  "V2": {
+   "t0": 181.509,
+   "t1": 185.804,
+   "text": "Absolute error has the same unit as the reading. Two millilitres.",
+   "words": [
+    {
+     "w": "Absolute",
+     "t": 181.509
+    },
+    {
+     "w": "error",
+     "t": 182.012
+    },
+    {
+     "w": "has",
+     "t": 182.366
+    },
+    {
+     "w": "the",
+     "t": 182.622
+    },
+    {
+     "w": "same",
+     "t": 182.879
+    },
+    {
+     "w": "unit",
+     "t": 183.184
+    },
+    {
+     "w": "as",
+     "t": 183.489
+    },
+    {
+     "w": "the",
+     "t": 183.696
+    },
+    {
+     "w": "reading.",
+     "t": 183.952
+    },
+    {
+     "w": "Two",
+     "t": 184.652
+    },
+    {
+     "w": "millilitres.",
+     "t": 184.908
+    }
+   ]
+  },
+  "V3": {
+   "t0": 186.254,
+   "t1": 192.835,
+   "text": "Relative error is millilitres divided by millilitres. The units cancel. It is a pure number.",
+   "words": [
+    {
+     "w": "Relative",
+     "t": 186.254
+    },
+    {
+     "w": "error",
+     "t": 186.8
+    },
+    {
+     "w": "is",
+     "t": 187.185
+    },
+    {
+     "w": "millilitres",
+     "t": 187.41
+    },
+    {
+     "w": "divided",
+     "t": 188.116
+    },
+    {
+     "w": "by",
+     "t": 188.608
+    },
+    {
+     "w": "millilitres.",
+     "t": 188.833
+    },
+    {
+     "w": "The",
+     "t": 189.807
+    },
+    {
+     "w": "units",
+     "t": 190.085
+    },
+    {
+     "w": "cancel.",
+     "t": 190.47
+    },
+    {
+     "w": "It",
+     "t": 191.176
+    },
+    {
+     "w": "is",
+     "t": 191.401
+    },
+    {
+     "w": "a",
+     "t": 191.626
+    },
+    {
+     "w": "pure",
+     "t": 191.797
+    },
+    {
+     "w": "number.",
+     "t": 192.129
+    }
+   ]
+  },
+  "V4": {
+   "t0": 193.285,
+   "t1": 199.94,
+   "text": "Your turn. Write the glass in litres instead. Does the percentage error change? Pause and decide.",
+   "words": [
+    {
+     "w": "Your",
+     "t": 193.285
+    },
+    {
+     "w": "turn.",
+     "t": 193.595
+    },
+    {
+     "w": "Write",
+     "t": 194.154
+    },
+    {
+     "w": "the",
+     "t": 194.514
+    },
+    {
+     "w": "glass",
+     "t": 194.774
+    },
+    {
+     "w": "in",
+     "t": 195.134
+    },
+    {
+     "w": "litres",
+     "t": 195.344
+    },
+    {
+     "w": "instead.",
+     "t": 195.753
+    },
+    {
+     "w": "Does",
+     "t": 196.463
+    },
+    {
+     "w": "the",
+     "t": 196.772
+    },
+    {
+     "w": "percentage",
+     "t": 197.032
+    },
+    {
+     "w": "error",
+     "t": 197.642
+    },
+    {
+     "w": "change?",
+     "t": 198.002
+    },
+    {
+     "w": "Pause",
+     "t": 198.661
+    },
+    {
+     "w": "and",
+     "t": 199.021
+    },
+    {
+     "w": "decide.",
+     "t": 199.281
+    }
+   ]
+  },
+  "V5": {
+   "t0": 203.14,
+   "t1": 211.379,
+   "text": "No! Two thousandths of a litre over a quarter litre is still zero point zero zero eight. Still zero point eight percent.",
+   "words": [
+    {
+     "w": "No!",
+     "t": 203.14
+    },
+    {
+     "w": "Two",
+     "t": 203.616
+    },
+    {
+     "w": "thousandths",
+     "t": 203.884
+    },
+    {
+     "w": "of",
+     "t": 204.567
+    },
+    {
+     "w": "a",
+     "t": 204.784
+    },
+    {
+     "w": "litre",
+     "t": 204.949
+    },
+    {
+     "w": "over",
+     "t": 205.321
+    },
+    {
+     "w": "a",
+     "t": 205.642
+    },
+    {
+     "w": "quarter",
+     "t": 205.807
+    },
+    {
+     "w": "litre",
+     "t": 206.283
+    },
+    {
+     "w": "is",
+     "t": 206.655
+    },
+    {
+     "w": "still",
+     "t": 206.872
+    },
+    {
+     "w": "zero",
+     "t": 207.244
+    },
+    {
+     "w": "point",
+     "t": 207.564
+    },
+    {
+     "w": "zero",
+     "t": 207.937
+    },
+    {
+     "w": "zero",
+     "t": 208.257
+    },
+    {
+     "w": "eight.",
+     "t": 208.577
+    },
+    {
+     "w": "Still",
+     "t": 209.208
+    },
+    {
+     "w": "zero",
+     "t": 209.58
+    },
+    {
+     "w": "point",
+     "t": 209.901
+    },
+    {
+     "w": "eight",
+     "t": 210.273
+    },
+    {
+     "w": "percent.",
+     "t": 210.645
+    }
+   ]
+  },
+  "W1": {
+   "t0": 212.029,
+   "t1": 216.863,
+   "text": "Worked example. Diya times ten swings of a pendulum, five times.",
+   "words": [
+    {
+     "w": "Worked",
+     "t": 212.029
+    },
+    {
+     "w": "example.",
+     "t": 212.478
+    },
+    {
+     "w": "Diya",
+     "t": 213.257
+    },
+    {
+     "w": "times",
+     "t": 213.596
+    },
+    {
+     "w": "ten",
+     "t": 213.991
+    },
+    {
+     "w": "swings",
+     "t": 214.276
+    },
+    {
+     "w": "of",
+     "t": 214.725
+    },
+    {
+     "w": "a",
+     "t": 214.956
+    },
+    {
+     "w": "pendulum,",
+     "t": 215.131
+    },
+    {
+     "w": "five",
+     "t": 215.854
+    },
+    {
+     "w": "times.",
+     "t": 216.194
+    }
+   ]
+  },
+  "W2": {
+   "t0": 217.213,
+   "t1": 223.909,
+   "text": "Nineteen point eight, twenty point two, twenty point one, nineteen point seven, twenty point two seconds.",
+   "words": [
+    {
+     "w": "Nineteen",
+     "t": 217.213
+    },
+    {
+     "w": "point",
+     "t": 217.711
+    },
+    {
+     "w": "eight,",
+     "t": 218.062
+    },
+    {
+     "w": "twenty",
+     "t": 218.56
+    },
+    {
+     "w": "point",
+     "t": 218.96
+    },
+    {
+     "w": "two,",
+     "t": 219.311
+    },
+    {
+     "w": "twenty",
+     "t": 219.712
+    },
+    {
+     "w": "point",
+     "t": 220.112
+    },
+    {
+     "w": "one,",
+     "t": 220.463
+    },
+    {
+     "w": "nineteen",
+     "t": 220.863
+    },
+    {
+     "w": "point",
+     "t": 221.361
+    },
+    {
+     "w": "seven,",
+     "t": 221.713
+    },
+    {
+     "w": "twenty",
+     "t": 222.21
+    },
+    {
+     "w": "point",
+     "t": 222.611
+    },
+    {
+     "w": "two",
+     "t": 222.962
+    },
+    {
+     "w": "seconds.",
+     "t": 223.216
+    }
+   ]
+  },
+  "W3": {
+   "t0": 224.409,
+   "t1": 228.936,
+   "text": "The sum is one hundred. So the mean is twenty point zero seconds.",
+   "words": [
+    {
+     "w": "The",
+     "t": 224.409
+    },
+    {
+     "w": "sum",
+     "t": 224.671
+    },
+    {
+     "w": "is",
+     "t": 224.934
+    },
+    {
+     "w": "one",
+     "t": 225.146
+    },
+    {
+     "w": "hundred.",
+     "t": 225.409
+    },
+    {
+     "w": "So",
+     "t": 226.127
+    },
+    {
+     "w": "the",
+     "t": 226.339
+    },
+    {
+     "w": "mean",
+     "t": 226.602
+    },
+    {
+     "w": "is",
+     "t": 226.915
+    },
+    {
+     "w": "twenty",
+     "t": 227.127
+    },
+    {
+     "w": "point",
+     "t": 227.541
+    },
+    {
+     "w": "zero",
+     "t": 227.905
+    },
+    {
+     "w": "seconds.",
+     "t": 228.218
+    }
+   ]
+  },
+  "W4": {
+   "t0": 229.686,
+   "t1": 234.884,
+   "text": "The error sizes add to one point zero. Their mean is zero point two seconds.",
+   "words": [
+    {
+     "w": "The",
+     "t": 229.686
+    },
+    {
+     "w": "error",
+     "t": 229.948
+    },
+    {
+     "w": "sizes",
+     "t": 230.312
+    },
+    {
+     "w": "add",
+     "t": 230.675
+    },
+    {
+     "w": "to",
+     "t": 230.937
+    },
+    {
+     "w": "one",
+     "t": 231.149
+    },
+    {
+     "w": "point",
+     "t": 231.412
+    },
+    {
+     "w": "zero.",
+     "t": 231.775
+    },
+    {
+     "w": "Their",
+     "t": 232.34
+    },
+    {
+     "w": "mean",
+     "t": 232.704
+    },
+    {
+     "w": "is",
+     "t": 233.017
+    },
+    {
+     "w": "zero",
+     "t": 233.228
+    },
+    {
+     "w": "point",
+     "t": 233.541
+    },
+    {
+     "w": "two",
+     "t": 233.905
+    },
+    {
+     "w": "seconds.",
+     "t": 234.167
+    }
+   ]
+  },
+  "W5": {
+   "t0": 235.634,
+   "t1": 240.689,
+   "text": "Relative error, zero point two over twenty. That is zero point zero one.",
+   "words": [
+    {
+     "w": "Relative",
+     "t": 235.634
+    },
+    {
+     "w": "error,",
+     "t": 236.157
+    },
+    {
+     "w": "zero",
+     "t": 236.68
+    },
+    {
+     "w": "point",
+     "t": 236.997
+    },
+    {
+     "w": "two",
+     "t": 237.367
+    },
+    {
+     "w": "over",
+     "t": 237.633
+    },
+    {
+     "w": "twenty.",
+     "t": 237.951
+    },
+    {
+     "w": "That",
+     "t": 238.628
+    },
+    {
+     "w": "is",
+     "t": 238.946
+    },
+    {
+     "w": "zero",
+     "t": 239.161
+    },
+    {
+     "w": "point",
+     "t": 239.479
+    },
+    {
+     "w": "zero",
+     "t": 239.848
+    },
+    {
+     "w": "one.",
+     "t": 240.166
+    }
+   ]
+  },
+  "W6": {
+   "t0": 241.439,
+   "t1": 247.963,
+   "text": "So the time is twenty point zero, plus or minus zero point two seconds. A one percent error.",
+   "words": [
+    {
+     "w": "So",
+     "t": 241.439
+    },
+    {
+     "w": "the",
+     "t": 241.659
+    },
+    {
+     "w": "time",
+     "t": 241.931
+    },
+    {
+     "w": "is",
+     "t": 242.256
+    },
+    {
+     "w": "twenty",
+     "t": 242.476
+    },
+    {
+     "w": "point",
+     "t": 242.905
+    },
+    {
+     "w": "zero,",
+     "t": 243.282
+    },
+    {
+     "w": "plus",
+     "t": 243.764
+    },
+    {
+     "w": "or",
+     "t": 244.088
+    },
+    {
+     "w": "minus",
+     "t": 244.308
+    },
+    {
+     "w": "zero",
+     "t": 244.685
+    },
+    {
+     "w": "point",
+     "t": 245.01
+    },
+    {
+     "w": "two",
+     "t": 245.387
+    },
+    {
+     "w": "seconds.",
+     "t": 245.659
+    },
+    {
+     "w": "A",
+     "t": 246.403
+    },
+    {
+     "w": "one",
+     "t": 246.57
+    },
+    {
+     "w": "percent",
+     "t": 246.843
+    },
+    {
+     "w": "error.",
+     "t": 247.324
+    }
+   ]
+  },
+  "X1": {
+   "t0": 248.613,
+   "t1": 250.079,
+   "text": "Now, the exam trap.",
+   "words": [
+    {
+     "w": "Now,",
+     "t": 248.613
+    },
+    {
+     "w": "the",
+     "t": 249.003
+    },
+    {
+     "w": "exam",
+     "t": 249.251
+    },
+    {
+     "w": "trap.",
+     "t": 249.546
+    }
+   ]
+  },
+  "X2": {
+   "t0": 250.429,
+   "t1": 257.093,
+   "text": "Many students average the errors with their signs. Minus two, plus two, plus one, minus three, plus two.",
+   "words": [
+    {
+     "w": "Many",
+     "t": 250.429
+    },
+    {
+     "w": "students",
+     "t": 250.718
+    },
+    {
+     "w": "average",
+     "t": 251.195
+    },
+    {
+     "w": "the",
+     "t": 251.625
+    },
+    {
+     "w": "errors",
+     "t": 251.868
+    },
+    {
+     "w": "with",
+     "t": 252.251
+    },
+    {
+     "w": "their",
+     "t": 252.541
+    },
+    {
+     "w": "signs.",
+     "t": 252.877
+    },
+    {
+     "w": "Minus",
+     "t": 253.448
+    },
+    {
+     "w": "two,",
+     "t": 253.784
+    },
+    {
+     "w": "plus",
+     "t": 254.167
+    },
+    {
+     "w": "two,",
+     "t": 254.457
+    },
+    {
+     "w": "plus",
+     "t": 254.84
+    },
+    {
+     "w": "one,",
+     "t": 255.13
+    },
+    {
+     "w": "minus",
+     "t": 255.513
+    },
+    {
+     "w": "three,",
+     "t": 255.85
+    },
+    {
+     "w": "plus",
+     "t": 256.326
+    },
+    {
+     "w": "two.",
+     "t": 256.616
+    }
+   ]
+  },
+  "X3": {
+   "t0": 257.493,
+   "t1": 265.472,
+   "text": "That sum is always zero, because the mean sits in the middle! Drop the signs first. Take the size of each error, then average.",
+   "words": [
+    {
+     "w": "That",
+     "t": 257.493
+    },
+    {
+     "w": "sum",
+     "t": 257.781
+    },
+    {
+     "w": "is",
+     "t": 258.022
+    },
+    {
+     "w": "always",
+     "t": 258.217
+    },
+    {
+     "w": "zero,",
+     "t": 258.598
+    },
+    {
+     "w": "because",
+     "t": 259.025
+    },
+    {
+     "w": "the",
+     "t": 259.453
+    },
+    {
+     "w": "mean",
+     "t": 259.694
+    },
+    {
+     "w": "sits",
+     "t": 259.982
+    },
+    {
+     "w": "in",
+     "t": 260.27
+    },
+    {
+     "w": "the",
+     "t": 260.465
+    },
+    {
+     "w": "middle!",
+     "t": 260.707
+    },
+    {
+     "w": "Drop",
+     "t": 261.32
+    },
+    {
+     "w": "the",
+     "t": 261.608
+    },
+    {
+     "w": "signs",
+     "t": 261.849
+    },
+    {
+     "w": "first.",
+     "t": 262.184
+    },
+    {
+     "w": "Take",
+     "t": 262.75
+    },
+    {
+     "w": "the",
+     "t": 263.038
+    },
+    {
+     "w": "size",
+     "t": 263.28
+    },
+    {
+     "w": "of",
+     "t": 263.568
+    },
+    {
+     "w": "each",
+     "t": 263.763
+    },
+    {
+     "w": "error,",
+     "t": 264.051
+    },
+    {
+     "w": "then",
+     "t": 264.525
+    },
+    {
+     "w": "average.",
+     "t": 264.813
+    }
+   ]
+  },
+  "E1": {
+   "t0": 266.122,
+   "t1": 274.296,
+   "text": "Where is this asked? As short numericals. From a set of readings, find the mean, the mean absolute error, or the percentage error.",
+   "words": [
+    {
+     "w": "Where",
+     "t": 266.122
+    },
+    {
+     "w": "is",
+     "t": 266.455
+    },
+    {
+     "w": "this",
+     "t": 266.65
+    },
+    {
+     "w": "asked?",
+     "t": 266.937
+    },
+    {
+     "w": "As",
+     "t": 267.501
+    },
+    {
+     "w": "short",
+     "t": 267.696
+    },
+    {
+     "w": "numericals.",
+     "t": 268.029
+    },
+    {
+     "w": "From",
+     "t": 268.825
+    },
+    {
+     "w": "a",
+     "t": 269.112
+    },
+    {
+     "w": "set",
+     "t": 269.26
+    },
+    {
+     "w": "of",
+     "t": 269.501
+    },
+    {
+     "w": "readings,",
+     "t": 269.695
+    },
+    {
+     "w": "find",
+     "t": 270.306
+    },
+    {
+     "w": "the",
+     "t": 270.593
+    },
+    {
+     "w": "mean,",
+     "t": 270.834
+    },
+    {
+     "w": "the",
+     "t": 271.26
+    },
+    {
+     "w": "mean",
+     "t": 271.501
+    },
+    {
+     "w": "absolute",
+     "t": 271.788
+    },
+    {
+     "w": "error,",
+     "t": 272.26
+    },
+    {
+     "w": "or",
+     "t": 272.732
+    },
+    {
+     "w": "the",
+     "t": 272.926
+    },
+    {
+     "w": "percentage",
+     "t": 273.167
+    },
+    {
+     "w": "error.",
+     "t": 273.732
+    }
+   ]
+  },
+  "Q1": {
+   "t0": 274.896,
+   "t1": 282.028,
+   "text": "Exam level now. Five readings of a length, in centimetres. Find the percentage error. Pause and solve.",
+   "words": [
+    {
+     "w": "Exam",
+     "t": 274.896
+    },
+    {
+     "w": "level",
+     "t": 275.209
+    },
+    {
+     "w": "now.",
+     "t": 275.572
+    },
+    {
+     "w": "Five",
+     "t": 276.087
+    },
+    {
+     "w": "readings",
+     "t": 276.399
+    },
+    {
+     "w": "of",
+     "t": 276.914
+    },
+    {
+     "w": "a",
+     "t": 277.126
+    },
+    {
+     "w": "length,",
+     "t": 277.287
+    },
+    {
+     "w": "in",
+     "t": 277.852
+    },
+    {
+     "w": "centimetres.",
+     "t": 278.064
+    },
+    {
+     "w": "Find",
+     "t": 278.982
+    },
+    {
+     "w": "the",
+     "t": 279.295
+    },
+    {
+     "w": "percentage",
+     "t": 279.557
+    },
+    {
+     "w": "error.",
+     "t": 280.172
+    },
+    {
+     "w": "Pause",
+     "t": 280.788
+    },
+    {
+     "w": "and",
+     "t": 281.151
+    },
+    {
+     "w": "solve.",
+     "t": 281.413
+    }
+   ]
+  },
+  "A1": {
+   "t0": 287.428,
+   "t1": 290.661,
+   "text": "The answer is C. Zero point seven percent.",
+   "words": [
+    {
+     "w": "The",
+     "t": 287.428
+    },
+    {
+     "w": "answer",
+     "t": 287.706
+    },
+    {
+     "w": "is",
+     "t": 288.143
+    },
+    {
+     "w": "C.",
+     "t": 288.367
+    },
+    {
+     "w": "Zero",
+     "t": 288.804
+    },
+    {
+     "w": "point",
+     "t": 289.135
+    },
+    {
+     "w": "seven",
+     "t": 289.519
+    },
+    {
+     "w": "percent.",
+     "t": 289.903
+    }
+   ]
+  },
+  "A2": {
+   "t0": 291.161,
+   "t1": 300.555,
+   "text": "The mean is four point zero zero. The error sizes add to zero point one four, so the mean absolute error is zero point zero two eight.",
+   "words": [
+    {
+     "w": "The",
+     "t": 291.161
+    },
+    {
+     "w": "mean",
+     "t": 291.436
+    },
+    {
+     "w": "is",
+     "t": 291.764
+    },
+    {
+     "w": "four",
+     "t": 291.987
+    },
+    {
+     "w": "point",
+     "t": 292.315
+    },
+    {
+     "w": "zero",
+     "t": 292.696
+    },
+    {
+     "w": "zero.",
+     "t": 293.025
+    },
+    {
+     "w": "The",
+     "t": 293.618
+    },
+    {
+     "w": "error",
+     "t": 293.893
+    },
+    {
+     "w": "sizes",
+     "t": 294.275
+    },
+    {
+     "w": "add",
+     "t": 294.656
+    },
+    {
+     "w": "to",
+     "t": 294.931
+    },
+    {
+     "w": "zero",
+     "t": 295.154
+    },
+    {
+     "w": "point",
+     "t": 295.482
+    },
+    {
+     "w": "one",
+     "t": 295.863
+    },
+    {
+     "w": "four,",
+     "t": 296.139
+    },
+    {
+     "w": "so",
+     "t": 296.626
+    },
+    {
+     "w": "the",
+     "t": 296.848
+    },
+    {
+     "w": "mean",
+     "t": 297.124
+    },
+    {
+     "w": "absolute",
+     "t": 297.452
+    },
+    {
+     "w": "error",
+     "t": 297.992
+    },
+    {
+     "w": "is",
+     "t": 298.373
+    },
+    {
+     "w": "zero",
+     "t": 298.596
+    },
+    {
+     "w": "point",
+     "t": 298.924
+    },
+    {
+     "w": "zero",
+     "t": 299.305
+    },
+    {
+     "w": "two",
+     "t": 299.634
+    },
+    {
+     "w": "eight.",
+     "t": 299.909
+    }
+   ]
+  },
+  "A3": {
+   "t0": 301.055,
+   "t1": 309.227,
+   "text": "Zero point zero two eight over four, times one hundred, is zero point seven percent. Zero percent is the signs trap.",
+   "words": [
+    {
+     "w": "Zero",
+     "t": 301.055
+    },
+    {
+     "w": "point",
+     "t": 301.384
+    },
+    {
+     "w": "zero",
+     "t": 301.765
+    },
+    {
+     "w": "two",
+     "t": 302.094
+    },
+    {
+     "w": "eight",
+     "t": 302.369
+    },
+    {
+     "w": "over",
+     "t": 302.751
+    },
+    {
+     "w": "four,",
+     "t": 303.08
+    },
+    {
+     "w": "times",
+     "t": 303.567
+    },
+    {
+     "w": "one",
+     "t": 303.949
+    },
+    {
+     "w": "hundred,",
+     "t": 304.224
+    },
+    {
+     "w": "is",
+     "t": 304.871
+    },
+    {
+     "w": "zero",
+     "t": 305.093
+    },
+    {
+     "w": "point",
+     "t": 305.422
+    },
+    {
+     "w": "seven",
+     "t": 305.803
+    },
+    {
+     "w": "percent.",
+     "t": 306.185
+    },
+    {
+     "w": "Zero",
+     "t": 306.937
+    },
+    {
+     "w": "percent",
+     "t": 307.266
+    },
+    {
+     "w": "is",
+     "t": 307.753
+    },
+    {
+     "w": "the",
+     "t": 307.976
+    },
+    {
+     "w": "signs",
+     "t": 308.252
+    },
+    {
+     "w": "trap.",
+     "t": 308.633
+    }
+   ]
+  },
+  "F1": {
+   "t0": 309.827,
+   "t1": 312.788,
+   "text": "Here is your recap. Screenshot this card.",
+   "words": [
+    {
+     "w": "Here",
+     "t": 309.827
+    },
+    {
+     "w": "is",
+     "t": 310.141
+    },
+    {
+     "w": "your",
+     "t": 310.354
+    },
+    {
+     "w": "recap.",
+     "t": 310.669
+    },
+    {
+     "w": "Screenshot",
+     "t": 311.287
+    },
+    {
+     "w": "this",
+     "t": 311.906
+    },
+    {
+     "w": "card.",
+     "t": 312.22
+    }
+   ]
+  },
+  "Y1": {
+   "t0": 315.988,
+   "t1": 318.987,
+   "text": "Can you answer these three questions without help?",
+   "words": [
+    {
+     "w": "Can",
+     "t": 315.988
+    },
+    {
+     "w": "you",
+     "t": 316.23
+    },
+    {
+     "w": "answer",
+     "t": 316.471
+    },
+    {
+     "w": "these",
+     "t": 316.852
+    },
+    {
+     "w": "three",
+     "t": 317.186
+    },
+    {
+     "w": "questions",
+     "t": 317.52
+    },
+    {
+     "w": "without",
+     "t": 318.04
+    },
+    {
+     "w": "help?",
+     "t": 318.467
+    }
+   ]
+  },
+  "Y2": {
+   "t0": 319.387,
+   "t1": 323.711,
+   "text": "One. Why do we use the mean of many readings as the true value?",
+   "words": [
+    {
+     "w": "One.",
+     "t": 319.387
+    },
+    {
+     "w": "Why",
+     "t": 319.884
+    },
+    {
+     "w": "do",
+     "t": 320.137
+    },
+    {
+     "w": "we",
+     "t": 320.341
+    },
+    {
+     "w": "use",
+     "t": 320.546
+    },
+    {
+     "w": "the",
+     "t": 320.799
+    },
+    {
+     "w": "mean",
+     "t": 321.052
+    },
+    {
+     "w": "of",
+     "t": 321.354
+    },
+    {
+     "w": "many",
+     "t": 321.559
+    },
+    {
+     "w": "readings",
+     "t": 321.861
+    },
+    {
+     "w": "as",
+     "t": 322.357
+    },
+    {
+     "w": "the",
+     "t": 322.562
+    },
+    {
+     "w": "true",
+     "t": 322.815
+    },
+    {
+     "w": "value?",
+     "t": 323.117
+    }
+   ]
+  },
+  "Y3": {
+   "t0": 324.611,
+   "t1": 329.26,
+   "text": "Two. Why is the average of the errors, with their signs, always zero?",
+   "words": [
+    {
+     "w": "Two.",
+     "t": 324.611
+    },
+    {
+     "w": "Why",
+     "t": 325.097
+    },
+    {
+     "w": "is",
+     "t": 325.345
+    },
+    {
+     "w": "the",
+     "t": 325.545
+    },
+    {
+     "w": "average",
+     "t": 325.792
+    },
+    {
+     "w": "of",
+     "t": 326.231
+    },
+    {
+     "w": "the",
+     "t": 326.431
+    },
+    {
+     "w": "errors,",
+     "t": 326.678
+    },
+    {
+     "w": "with",
+     "t": 327.212
+    },
+    {
+     "w": "their",
+     "t": 327.507
+    },
+    {
+     "w": "signs,",
+     "t": 327.85
+    },
+    {
+     "w": "always",
+     "t": 328.336
+    },
+    {
+     "w": "zero?",
+     "t": 328.727
+    }
+   ]
+  },
+  "Y4": {
+   "t0": 330.16,
+   "t1": 336.574,
+   "text": "Three. Same absolute error on a big and a small value. Which has the bigger percentage error?",
+   "words": [
+    {
+     "w": "Three.",
+     "t": 330.16
+    },
+    {
+     "w": "Same",
+     "t": 330.779
+    },
+    {
+     "w": "absolute",
+     "t": 331.094
+    },
+    {
+     "w": "error",
+     "t": 331.611
+    },
+    {
+     "w": "on",
+     "t": 331.977
+    },
+    {
+     "w": "a",
+     "t": 332.19
+    },
+    {
+     "w": "big",
+     "t": 332.352
+    },
+    {
+     "w": "and",
+     "t": 332.616
+    },
+    {
+     "w": "a",
+     "t": 332.88
+    },
+    {
+     "w": "small",
+     "t": 333.042
+    },
+    {
+     "w": "value.",
+     "t": 333.408
+    },
+    {
+     "w": "Which",
+     "t": 334.027
+    },
+    {
+     "w": "has",
+     "t": 334.392
+    },
+    {
+     "w": "the",
+     "t": 334.656
+    },
+    {
+     "w": "bigger",
+     "t": 334.92
+    },
+    {
+     "w": "percentage",
+     "t": 335.336
+    },
+    {
+     "w": "error?",
+     "t": 335.955
+    }
+   ]
+  },
+  "N1": {
+   "t0": 337.674,
+   "t1": 345.912,
+   "text": "Next time: Aarav's study table has a small error in its length and its width. What is the error in its area? Error propagation.",
+   "words": [
+    {
+     "w": "Next",
+     "t": 337.674
+    },
+    {
+     "w": "time:",
+     "t": 337.975
+    },
+    {
+     "w": "Aarav's",
+     "t": 338.421
+    },
+    {
+     "w": "study",
+     "t": 338.819
+    },
+    {
+     "w": "table",
+     "t": 339.168
+    },
+    {
+     "w": "has",
+     "t": 339.517
+    },
+    {
+     "w": "a",
+     "t": 339.77
+    },
+    {
+     "w": "small",
+     "t": 339.925
+    },
+    {
+     "w": "error",
+     "t": 340.274
+    },
+    {
+     "w": "in",
+     "t": 340.624
+    },
+    {
+     "w": "its",
+     "t": 340.828
+    },
+    {
+     "w": "length",
+     "t": 341.08
+    },
+    {
+     "w": "and",
+     "t": 341.478
+    },
+    {
+     "w": "its",
+     "t": 341.73
+    },
+    {
+     "w": "width.",
+     "t": 341.982
+    },
+    {
+     "w": "What",
+     "t": 342.574
+    },
+    {
+     "w": "is",
+     "t": 342.875
+    },
+    {
+     "w": "the",
+     "t": 343.079
+    },
+    {
+     "w": "error",
+     "t": 343.331
+    },
+    {
+     "w": "in",
+     "t": 343.68
+    },
+    {
+     "w": "its",
+     "t": 343.884
+    },
+    {
+     "w": "area?",
+     "t": 344.137
+    },
+    {
+     "w": "Error",
+     "t": 344.68
+    },
+    {
+     "w": "propagation.",
+     "t": 345.029
+    }
+   ]
+  }
+ },
+ "order": [
+  "H1",
+  "H2",
+  "H3",
+  "H4",
+  "H5",
+  "P1",
+  "P2",
+  "P3",
+  "S1",
+  "S2",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "D1",
+  "D2",
+  "D3",
+  "D4",
+  "D5",
+  "D6",
+  "R1",
+  "R2",
+  "R3",
+  "R4",
+  "T1",
+  "K1",
+  "K2",
+  "K3",
+  "K4",
+  "V1",
+  "V2",
+  "V3",
+  "V4",
+  "V5",
+  "W1",
+  "W2",
+  "W3",
+  "W4",
+  "W5",
+  "W6",
+  "X1",
+  "X2",
+  "X3",
+  "E1",
+  "Q1",
+  "A1",
+  "A2",
+  "A3",
+  "F1",
+  "Y1",
+  "Y2",
+  "Y3",
+  "Y4",
+  "N1"
+ ],
+ "dur": 346.212
+}
