@@ -123,7 +123,7 @@ const trap = PUC.trap($('#trap'), { wrong: 'Only the two circles: where do 1, 5 
 const ts = $('#tS'), tV = v2(ts, { xa: 230, xb: 330, cy: 150, r: 74, ca: AC, cb: BC, la: 'A', lb: 'B', ls: 28 });
 const tRect = mk(ts, 'path', { d: rectP(24, 36, 512, 222, 14), fill: 'none', stroke: C.ink, 'stroke-width': 3 });
 const tOut = [[1, 76, 100], [5, 76, 200], [7, 486, 150]].map(([n, x, y]) => tok(ts, n, x, y, { mono: 1, fs: 28, rr: 22, col: C.red }));
-const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'PUC BOARDS'], type: 'Draw or shade a Venn diagram, or pick the diagram that fits a statement.' });
+const where = PUC.where($('#wa'), { on: ['JEE MAIN'], type: 'Pick the Venn diagram that fits a statement, or name the set a shaded region shows.' });
 const PT = `P = (A \\cap B) \\cup (B \\cap C) \\cup (C \\cap A)`;
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 660,
   q: `Let ${K(PT)}.<br>Which set is shaded?`,
@@ -277,7 +277,7 @@ M.on(t => {
     M.draw(tV.cA, t, T0('X2') + 0.1, 0.5); M.draw(tV.cB, t, T0('X2') + 0.3, 0.5); M.vis(tV.lA, t, T0('X2') + 0.4, 1e9, POP); M.vis(tV.lB, t, T0('X2') + 0.5, 1e9, POP);
     tOut.forEach((k, i) => { M.vis(k.g, t, wt('X2', 'circles') + i * 0.1, 1e9, POP); attr(k.t, 'fill', mix(C.red, XC, M.io((t - wt('X3', 'Without') - 0.6) / 0.3))); });
     M.draw(tRect, t, wt('X3', 'Without') - 0.1, 0.8);
-    where(t, { tin: T0('J1'), tLight: [wt('J1', 'JEE'), wt('J1', 'PUC')], tType: wt('J1', 'draw') });
+    where(t, { tin: T0('J1'), tLight: [wt('J1', 'JEE')], tType: wt('J1', 'which') });
   }
 
   /* Q */
