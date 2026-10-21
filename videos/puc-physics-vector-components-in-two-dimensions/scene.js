@@ -1,4 +1,4 @@
-// PUC Physics Ep 39: Vector Components in Two Dimensions (Motion notebook, turning arrow)
+// PUC Physics Ep 39: Vector Components in Two Dimensions (Motion notebook, adding two legs by components)
 (() => {
 const { $ } = M, C = PUC.init({ subject: 'physics' }), K = PUC.K, wt = M.wt, T0 = M.t0, T1 = M.t1, mix = M.mix;
 const AC = C.ink, XC = C.ac, YC = C.violet, RC = C.gold, DC = C.ac;   // colour-coding: vector A ink, x part blue, y part violet, generic resultant gold, displacement blue (canon)
@@ -24,7 +24,7 @@ Object.assign(M.IC, {
 
 /* ---------- beats ---------- */
 const tMorph = T0('H2') + 0.02, tH3 = T0('H3');
-const tP1 = T0('P1'), tS1 = T0('S1'), tD1 = T0('D1'), tT = T0('T1'), tC1 = T0('C2'), tG1 = T0('G1'), tV1 = T0('V1'), tW1 = T0('W1'), tX1 = T0('X1'), tQ = T0('Q1'), tF = T0('F1'), tY = T0('Y1'), tN = T0('N1');
+const tP1 = T0('P1'), tS1 = T0('S1'), tD1 = T0('D1'), tT = T0('T1'), tC1 = T0('C1'), tG1 = T0('G1'), tW1 = T0('W1'), tX1 = T0('X1'), tQ = T0('Q1'), tF = T0('F1'), tY = T0('Y1'), tN = T0('N1');
 const tCount = T1('Q1') + 0.05, tAns = T0('A1') - 0.02;
 const SW = [[tT, tC1], [tQ, tQ + 0.06], [tF, tF + 0.06]];
 const OUT = id => T0(id) - 0.32;
@@ -41,6 +41,7 @@ const axes = (s, o, L, opt = {}) => {
   txt(g, o[0] + 14, o[1] - u + 14, 'y', { 'font-family': 'Poppins', 'font-style': 'italic', 'font-size': 24, fill: C.ink });
   return g;
 };
+const dotL0 = (sv, x, y, lab) => { mk(sv, 'circle', { cx: x, cy: y, r: 7, fill: C.ink }); txt(sv, x - 30, y + 28, lab, { 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 24, fill: C.ink }); };
 const arcP = (o, rad, a0, a1) => { const p = a => [o[0] + rad * cs(a), o[1] - rad * sn(a)]; const [x0, y0] = p(a0), [x1, y1] = p(a1); return `M${x0.toFixed(1)},${y0.toFixed(1)} A${rad},${rad} 0 ${Math.abs(a1 - a0) > 180 ? 1 : 0} 0 ${x1.toFixed(1)},${y1.toFixed(1)}`; };
 
 /* ---------- title card + hook ---------- */
@@ -50,114 +51,116 @@ const tJob = JOBS.map(j => wt('H1', j[3]));
 // each row: a mini slanted arrow with its two parts, name and the two jobs
 const MINI = [62, 35, 25];
 $('#jrs').innerHTML = JOBS.map(([ic, n, w], i) => { const a = MINI[i], L = 86, ex = 6 + L * cs(a), ey = 86 - L * sn(a); return `<div class="jr" id="jr${i}" style="top:${84 + i * 134}px"><svg width="100" height="92"><line class="mx" x1="6" y1="86" x2="${ex.toFixed(1)}" y2="86" stroke="${XC}" stroke-width="5" stroke-linecap="round"/><line class="my" x1="${ex.toFixed(1)}" y1="86" x2="${ex.toFixed(1)}" y2="${ey.toFixed(1)}" stroke="${YC}" stroke-width="5" stroke-linecap="round"/><line x1="6" y1="86" x2="${ex.toFixed(1)}" y2="${ey.toFixed(1)}" stroke="${AC}" stroke-width="6" stroke-linecap="round"/></svg><div class="jn">${n}</div><div class="jw">${w}</div></div>`; }).join('');
-const TILES = [['arrowR', 'East?', XC], ['arrowU', 'North?', YC]];
+const TILES = [['ruler', 'How far?', RC], ['arrowR', 'Which way?', RC]];
 $('#wqs').innerHTML = TILES.map(([ic, w, c], i) => `<div class="wq" id="wq${i}">${M.icon(ic, 26, c, 2.6)}<span>${w}</span></div>`).join('');
-const tTile = [wt('H4', 'east'), wt('H4', 'north')];
+const tTile = [wt('H4', 'far'), wt('H4', 'direction')];
 
-/* ---------- P: two shadows ---------- */
-const pS = $('#pgS'), PO = [140, 470], PL = 380, PA = 37;           // A = 10 units at 37 deg (38 px per unit)
+/* ---------- P: quick reminder, two shadows ---------- */
+const pS = $('#pgS'), PO = [140, 470], PL = 380, PA = 37;
 const pAx = axes(pS, PO, [40, 560, 360, 40]);
 const tip = [PO[0] + PL * cs(PA), PO[1] - PL * sn(PA)];
 const pArr = PUC.arrow(pS, AC, 7, 20), pAL = sym(pS, 'A', AC, 34);
 attr(pAL, 'x', (PO[0] + tip[0]) / 2 - 30); attr(pAL, 'y', (PO[1] + tip[1]) / 2 - 16);
-const pLx = mk(pS, 'path', { d: `M${tip[0]},96 V${PO[1]}`, stroke: C.gold, 'stroke-width': 2, 'stroke-dasharray': '6 6', fill: 'none' });
-const pLy = mk(pS, 'path', { d: `M${PO[0]},${tip[1]} H${tip[0]}`, stroke: C.gold, 'stroke-width': 2, 'stroke-dasharray': '6 6', fill: 'none' });
-const pSunX = mk(pS, 'g', { class: 'pv' }); mk(pSunX, 'circle', { cx: tip[0], cy: 92, r: 14, fill: '#F2C94C', stroke: C.ink, 'stroke-width': 2 });
-const pSunY = mk(pS, 'g', { class: 'pv' }); mk(pSunY, 'circle', { cx: 720, cy: tip[1], r: 14, fill: '#F2C94C', stroke: C.ink, 'stroke-width': 2 });
+const pLx = mk(pS, 'path', { d: `M${tip[0]},${tip[1]} V${PO[1]}`, stroke: C.dim, 'stroke-width': 2, 'stroke-dasharray': '6 6', fill: 'none' });
+const pLy = mk(pS, 'path', { d: `M${tip[0]},${tip[1]} H${PO[0]}`, stroke: C.dim, 'stroke-width': 2, 'stroke-dasharray': '6 6', fill: 'none' });
 const pBx = PUC.arrow(pS, XC, 9, 20), pBy = PUC.arrow(pS, YC, 9, 20);
 const pBxL = sym(pS, 'Aₓ', XC, 30), pByL = sym(pS, 'Aᵧ', YC, 30);
 attr(pBxL, 'x', (PO[0] + tip[0]) / 2 - 18); attr(pBxL, 'y', PO[1] + 44); attr(pByL, 'x', PO[0] - 68); attr(pByL, 'y', (PO[1] + tip[1]) / 2 + 10);
-const pWx = PUC.arrow(pS, XC, 5, 14), pWy = PUC.arrow(pS, YC, 5, 14);
-const pWalker = mk(pS, 'circle', { r: 10, fill: C.ink, cx: -40, cy: -40 });
 $('#pf0').innerHTML = K(`${vA} \\;\\to\\; ${Ax}\\; \\text{and}\\; ${Ay}`);
 $('#pc0').innerHTML = `${M.icon('arrowR', 24, XC, 2.6)}<span><b style="color:${XC}">x component</b>: shadow on the x axis</span>`;
 $('#pc1').innerHTML = `${M.icon('arrowU', 24, YC, 2.6)}<span><b style="color:${YC}">y component</b>: shadow on the y axis</span>`;
 $('#pf1').innerHTML = K(`${vA} = ${Ax}\\,${IH} + ${Ay}\\,${JH}`);
 
-/* ---------- S: turning arrow sim ---------- */
-const s = $('#simS'), SO = [392, 330], SL = 220, AU = 10;          // 22 px per unit, |A| = 10
-axes(s, SO, [300, 300, 230, 230]);
-mk(s, 'circle', { cx: SO[0], cy: SO[1], r: SL, fill: 'none', stroke: C.dim, 'stroke-width': 1.5, 'stroke-dasharray': '4 8' });
-const sArc = mk(s, 'path', { d: '', fill: 'none', stroke: AC, 'stroke-width': 2.5 }), sTh = sym(s, 'θ', AC, 26);
-const sGh = [0, 1, 2].map(() => mk(s, 'line', { x1: SO[0], y1: SO[1], stroke: AC, 'stroke-width': 5, 'stroke-linecap': 'round', opacity: 0 }));
-const sDx = mk(s, 'line', { stroke: C.dim, 'stroke-width': 2, 'stroke-dasharray': '6 6' }), sDy = mk(s, 'line', { stroke: C.dim, 'stroke-width': 2, 'stroke-dasharray': '6 6' });
-const sX = PUC.arrow(s, XC, 9, 20), sY = PUC.arrow(s, YC, 9, 20), sA = PUC.arrow(s, AC, 7, 20);
-const sXL = sym(s, 'Aₓ', XC, 28), sYL = sym(s, 'Aᵧ', YC, 28), sAL = sym(s, 'A', AC, 30);
-$('#roG').innerHTML = [['θ', AC, 'rt', '°'], ['|A|', AC, 'ra', ''], ['Aₓ', XC, 'rx', ''], ['Aᵧ', YC, 'ry', '']].map(([k, c, id, u]) => `<span class="k" style="color:${c}">${k}</span><span class="v" id="${id}" style="color:${c}">0.0</span><span class="u">${u}</span>`).join('');
-const G = PUC.graph($('#grS'), { x: 90, y: 66, w: 600, h: 160, xmax: 360, ymin: -10, ymax: 10, xt: [0, 90, 180, 270, 360], yt: [-10, 0, 10], yl: '' });
-txt($('#grS'), 704, 232, 'θ (°)');
-const gX = G.curve(XC), gY = G.curve(YC), gXd = G.dot(XC, 10), gYd = G.dot(YC, 10);
-const gxl = sym($('#grS'), 'Aₓ', XC, 24), gyl = sym($('#grS'), 'Aᵧ', YC, 24);
-const tTurn = wt('S2', 'grows'), tSlow = T0('S5') + 0.05, tFull = T0('S7') - 0.1, tLap = T1('S7') - 0.4;
-// angle track: 0 until tTurn, rises to 150 at tSlow, holds for the replay, 150 -> 360 during S6/S7
-const thAt = t => {
-  if (t < tTurn) return 0;
-  if (t < tSlow) return 150 * M.io((t - tTurn) / (tSlow - tTurn));
-  const tRes = T0('S6') + 0.4; if (t < tRes) return 150;
-  return 150 + 210 * M.clamp((t - tRes) / (tLap - tRes));
+/* ---------- shared: two legs A and B, parts stacked along each axis, resultant R ---------- */
+const XB = M.mix(C.ac, '#FFFFFF', 0.45), YB = M.mix(C.violet, '#FFFFFF', 0.45);     // B's parts: lighter blue / violet
+const LA = [20, 30], LB = 15;                                                        // leg A 20 m at 30 deg, leg B 15 m at phi
+const legs = phi => { const ax = LA[0] * cs(LA[1]), ay = LA[0] * sn(LA[1]), bx = LB * cs(phi), by = LB * sn(phi); return { ax, ay, bx, by, rx: ax + bx, ry: ay + by }; };
+const pairFig = (sv, o, U, withR) => {
+  const P = (x, y) => [o[0] + x * U, o[1] - y * U];
+  const g = mk(sv, 'g', {});
+  for (let m = 10; m <= 30; m += 10) { mk(g, 'line', { x1: P(m, 0)[0], y1: o[1], x2: P(m, 0)[0], y2: P(0, 26)[1], stroke: '#E9E5DA', 'stroke-width': 1.5 }); txt(g, P(m, 0)[0], o[1] + 84, m, { 'text-anchor': 'middle', 'font-size': 16 }); }
+  for (let m = 10; m <= 20; m += 10) { mk(g, 'line', { x1: o[0], y1: P(0, m)[1], x2: P(34, 0)[0], y2: P(0, m)[1], stroke: '#E9E5DA', 'stroke-width': 1.5 }); txt(g, o[0] - 70, P(0, m)[1] + 6, m, { 'text-anchor': 'end', 'font-size': 16 }); }
+  axes(sv, o, [10, 34 * U + 10, 26 * U + 6, 10]);
+  dotL0(sv, o[0], o[1], 'O');
+  const f = { P, o, U,
+    gx: [mk(sv, 'line', { stroke: C.dim, 'stroke-width': 2, 'stroke-dasharray': '6 6' }), mk(sv, 'line', { stroke: C.dim, 'stroke-width': 2, 'stroke-dasharray': '6 6' })],
+    ax: PUC.arrow(sv, XC, 7, 16), bx: PUC.arrow(sv, XB, 7, 16), ay: PUC.arrow(sv, YC, 7, 16), by: PUC.arrow(sv, YB, 7, 16),
+    rxB: PUC.arrow(sv, XC, 10, 18), ryB: PUC.arrow(sv, YC, 10, 18),
+    A: PUC.arrow(sv, AC, 6, 18), B: PUC.arrow(sv, C.ink2, 6, 18), R: PUC.arrow(sv, RC, 8, 22),
+    AL: sym(sv, 'A', AC, 28), BL: sym(sv, 'B', C.ink2, 28), RL: sym(sv, 'R', RC, 30),
+    rxL: txt(sv, 0, 0, 'Rₓ', { fill: XC, 'font-weight': 700, 'font-size': 20 }), ryL: txt(sv, 0, 0, 'Rᵧ', { fill: YC, 'font-weight': 700, 'font-size': 20, 'text-anchor': 'end' }) };
+  // k: {a, ap, b, bp, r, rp} grow fractions 0..1
+  f.set = (phi, k) => {
+    const L = legs(phi), O = o, [axp] = P(L.ax, 0), [, ayp] = P(0, L.ay), [bxp] = P(L.rx, 0), [, byp] = P(0, L.ry), at = P(L.ax, L.ay), rt = P(L.rx, L.ry);
+    grow(f.A, O[0], O[1], at[0], at[1], k.a); grow(f.B, at[0], at[1], rt[0], rt[1], k.b);
+    grow(f.ax, O[0], O[1] + 16, axp, O[1] + 16, k.ap); grow(f.ay, O[0] - 16, O[1], O[0] - 16, ayp, k.ap);
+    grow(f.bx, axp, O[1] + 34, bxp, O[1] + 34, k.bp); grow(f.by, O[0] - 34, ayp, O[0] - 34, byp, k.bp);
+    grow(f.rxB, O[0], O[1] + 54, bxp, O[1] + 54, k.rp); grow(f.ryB, O[0] - 54, O[1], O[0] - 54, byp, k.rp);
+    grow(f.R, O[0], O[1], rt[0], rt[1], k.r);
+    const lab = (el, x, y, v) => { attr(el, 'x', x.toFixed(1)); attr(el, 'y', y.toFixed(1)); op(el, v); };
+    lab(f.AL, (O[0] + at[0]) / 2 + 6, (O[1] + at[1]) / 2 + 30, k.a); lab(f.BL, (at[0] + rt[0]) / 2 + 12, (at[1] + rt[1]) / 2 + 6, k.b); lab(f.RL, (O[0] + rt[0]) / 2 - 34, (O[1] + rt[1]) / 2 - 6, k.r);
+    lab(f.rxL, bxp + 10, O[1] + 61, k.rp); lab(f.ryL, O[0] - 60, byp - 6, k.rp);
+    [[rt[0], rt[1], rt[0], O[1]], [rt[0], rt[1], O[0], rt[1]]].forEach(([a, b, c, d], i) => { attr(f.gx[i], 'x1', a.toFixed(1)); attr(f.gx[i], 'y1', b.toFixed(1)); attr(f.gx[i], 'x2', c.toFixed(1)); attr(f.gx[i], 'y2', d.toFixed(1)); op(f.gx[i], k.r * 0.9); });
+    return { L, at, rt };
+  };
+  return f;
 };
-const avA = PUC.avatar($('#sS'), { x: 976 + 36, y: 270 + 186, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'Same arrow, but the parts keep trading!' });
 
-/* ---------- D: derivation + triangle ---------- */
-const STEPS = [[`\\text{right triangle: } ${Am} \\text{ is the longest side}`, 'the arrow and its two parts'],
-  [`\\cos\\theta = ${Ax} / ${Am} \\;\\Rightarrow\\; ${Ax} = ${Am}\\cos\\theta`, 'side next to θ over the longest side'],
-  [`\\sin\\theta = ${Ay} / ${Am} \\;\\Rightarrow\\; ${Ay} = ${Am}\\sin\\theta`, 'opposite side over the longest side'],
-  [`${Am} = \\sqrt{${Ax}^2 + ${Ay}^2}`, 'Pythagoras gives the size'],
-  [`\\tan\\theta = ${Ay} / ${Ax}`, 'and the direction']];
+/* ---------- S: the live two-leg sim ---------- */
+const s = $('#simS'), SO = [150, 470], SU = 13.5;
+const sGh = [0, 1, 2].map(() => ({ b: mk(s, 'line', { stroke: C.ink2, 'stroke-width': 5, 'stroke-linecap': 'round', opacity: 0 }), r: mk(s, 'line', { stroke: RC, 'stroke-width': 6, 'stroke-linecap': 'round', opacity: 0 }) }));
+const SF = pairFig(s, SO, SU, true);
+const sArc = mk(s, 'path', { d: '', fill: 'none', stroke: C.ink2, 'stroke-width': 2.5 }), sPh = sym(s, 'φ', C.ink2, 24);
+const RO = [['Aₓ', XC, 'r0'], ['Bₓ', XB, 'r1'], ['Rₓ', XC, 'r2'], ['Aᵧ', YC, 'r3'], ['Bᵧ', YB, 'r4'], ['Rᵧ', YC, 'r5'], ['|R|', RC, 'r6'], ['θ', RC, 'r7'], ['φ', C.ink2, 'r8']];
+$('#roG').innerHTML = RO.map(([k, c, id], i) => `<span class="k" style="color:${c}">${k}</span><span class="v" id="${id}" style="color:${c};font-size:32px">0.0</span><span class="u">${i < 7 ? 'm' : '°'}</span>`).join('');
+const G = PUC.graph($('#grS'), { x: 90, y: 66, w: 600, h: 150, xmax: 180, ymin: 0, ymax: 40, xt: [0, 30, 60, 90, 120, 150, 180], yt: [0, 20, 40], yl: '|R| (m)' });
+txt($('#grS'), 704, 222, 'φ (°)');
+const gR = G.curve(RC), gRd = G.dot(RC, 11);
+const tA = wt('S1', 'twenty') - 0.2, tAp = wt('S2', 'seventeen') - 0.3, tB = wt('S3', 'fifteen') - 0.2, tTurn = wt('S3', 'turn');
+const tSlow = T0('S5') + 0.05, tRes = T1('S5') + 0.1, tEnd = T1('S6') - 0.3;
+const SLOW = tRes - tSlow;
+const phiAt = t => t < tTurn ? 0 : t < tSlow ? 120 * M.io((t - tTurn) / (tSlow - tTurn)) : t < tRes ? 120 : 120 + 60 * M.io((t - tRes) / (tEnd - tRes));
+
+/* ---------- D: derivation + static figure ---------- */
+const Bv = `\\textcolor{${C.ink2}}{\\vec B}`, Bx = `\\textcolor{${XC}}{B_x}`, By = `\\textcolor{${YC}}{B_y}`, Rx = `\\textcolor{${XC}}{R_x}`, Ry = `\\textcolor{${YC}}{R_y}`, Rm = `\\textcolor{${RC}}{R}`;
+const STEPS = [[`${vA} = ${Ax}${IH} + ${Ay}${JH},\\;\\; ${Bv} = ${Bx}${IH} + ${By}${JH}`, 'split each vector into parts'],
+  [`${vA} + ${Bv} = (${Ax} + ${Bx})${IH} + (${Ay} + ${By})${JH}`, 'î with î, ĵ with ĵ'],
+  [`${Rx} = ${Ax} + ${Bx},\\;\\; ${Ry} = ${Ay} + ${By}`, 'the parts of R are sums'],
+  [`${Rm} = \\sqrt{${Rx}^2 + ${Ry}^2}`, 'Pythagoras gives the size'],
+  [`\\tan\\theta = ${Ry} / ${Rx}`, 'signs of Rₓ, Rᵧ pick the quadrant']];
 $('#steps').innerHTML = `<div class="hiBox" id="hiB" style="left:20px;width:744px;height:94px"></div>` + STEPS.map(([f, w], i) => `<div class="st" id="dst${i}" style="top:${80 + i * 98}px"><div class="n">${i + 1}</div><div class="sx">${K(f)}</div><div class="why">${w}</div></div>`).join('');
-const tStep = [wt('D2', 'arrow'), wt('D3', 'Cos'), wt('D4', 'Sin'), wt('D5', 'Pythagoras'), wt('D6', 'direction')];
-const dS = $('#drS'), DO = [120, 460], DL = 520, DA = 37;
-const dt = [DO[0] + DL * cs(DA), DO[1] - DL * sn(DA)];
-axes(dS, DO, [40, 600, 380, 40]);
-const dTri = mk(dS, 'path', { d: `M${DO[0]},${DO[1]} L${dt[0]},${DO[1]} L${dt[0]},${dt[1]} Z`, fill: C.ac2 || '#DCE7FC', opacity: 0.5, stroke: 'none' });
-const dSq = mk(dS, 'path', { d: `M${dt[0] - 22},${DO[1]} V${DO[1] - 22} H${dt[0]}`, fill: 'none', stroke: C.ink, 'stroke-width': 2 });
-const dX = PUC.arrow(dS, XC, 9, 20), dY = PUC.arrow(dS, YC, 9, 20), dAr = PUC.arrow(dS, AC, 7, 20);
-const dArc = mk(dS, 'path', { d: arcP(DO, 80, 0, DA), fill: 'none', stroke: AC, 'stroke-width': 2.5 }), dTh = sym(dS, 'θ', AC, 28); attr(dTh, 'x', DO[0] + 92); attr(dTh, 'y', DO[1] - 20);
-const dAL = sym(dS, 'A', AC, 34), dXL = sym(dS, 'Aₓ = A cos θ', XC, 26), dYL = sym(dS, 'Aᵧ = A sin θ', YC, 26);
-attr(dAL, 'x', (DO[0] + dt[0]) / 2 - 36); attr(dAL, 'y', (DO[1] + dt[1]) / 2 - 18); attr(dXL, 'x', (DO[0] + dt[0]) / 2 - 80); attr(dXL, 'y', DO[1] + 46); attr(dYL, 'x', dt[0] + 16); attr(dYL, 'y', (DO[1] + dt[1]) / 2 + 10);
-const dHx = mk(dS, 'path', { d: `M${DO[0]},${DO[1]} H${dt[0]}`, stroke: XC, 'stroke-width': 16, opacity: 0.25, fill: 'none' });
-const dHy = mk(dS, 'path', { d: `M${dt[0]},${DO[1]} V${dt[1]}`, stroke: YC, 'stroke-width': 16, opacity: 0.25, fill: 'none' });
-const dHa = mk(dS, 'path', { d: `M${DO[0]},${DO[1]} L${dt[0]},${dt[1]}`, stroke: AC, 'stroke-width': 16, opacity: 0.18, fill: 'none' });
-$('#stF').innerHTML = K(`${vA} = ${Am}\\cos\\theta\\,${IH} + ${Am}\\sin\\theta\\,${JH}`);
+const tStep = [wt('D2', 'Split'), wt('D3', 'Add'), wt('D4', 'So'), wt('D5', 'size'), wt('D6', 'tan')];
+const DF = pairFig($('#drS'), [150, 470], 13.5, true);
+const dArc = mk($('#drS'), 'path', { d: '', fill: 'none', stroke: RC, 'stroke-width': 3 }), dTh = sym($('#drS'), 'θ', RC, 26);
+$('#stF').innerHTML = K(`${Rx} = ${Ax} + ${Bx} \\qquad ${Ry} = ${Ay} + ${By}`);
 
-/* ---------- C: 30 vs 60 side by side ---------- */
-const CPAN = [[$('#caS'), 30, '#caV'], [$('#cbS'), 60, '#cbV']].map(([sv, a, vid]) => {
-  const o = [150, 450], L = 340;
-  axes(sv, o, [40, 560, 360, 40]);
-  const e = [o[0] + L * cs(a), o[1] - L * sn(a)];
-  const x = PUC.arrow(sv, XC, 9, 20), y = PUC.arrow(sv, YC, 9, 20), A = PUC.arrow(sv, AC, 7, 20);
-  const arc = mk(sv, 'path', { d: arcP(o, 70, 0, a), fill: 'none', stroke: AC, 'stroke-width': 2.5 });
-  const th = txt(sv, o[0] + 82, o[1] - 14, a + '°', { fill: AC, 'font-weight': 600, 'font-size': 22 });
-  $(vid).innerHTML = `<div class="pillp" style="left:36px;top:492px;font-family:'IBM Plex Mono'"><span style="color:${XC}">Aₓ = ${(10 * cs(a)).toFixed(1)}</span><span style="color:var(--dim)">·</span><span style="color:${YC}">Aᵧ = ${(10 * sn(a)).toFixed(1)}</span></div>`;
-  return { o, e, x, y, A, arc, th, pill: $(vid).firstChild };
+/* ---------- C: A + B vs A - B ---------- */
+const CPAN = [[$('#caS'), [2, -1], '#caP', 'Rₓ = 3 + 2 = 5 · Rᵧ = 4 - 1 = 3'], [$('#cbS'), [-2, 1], '#cbP', 'Rₓ = 3 - 2 = 1 · Rᵧ = 4 + 1 = 5']].map(([sv, b, pid, ptx], k) => {
+  const o = [150, 430], U = 60, P = (x, y) => [o[0] + x * U, o[1] - y * U];
+  for (let i = 1; i <= 8; i++) mk(sv, 'line', { x1: P(i, 0)[0], y1: P(0, -1)[1], x2: P(i, 0)[0], y2: P(0, 5.6)[1], stroke: '#E9E5DA', 'stroke-width': 1.5 });
+  for (let j = -1; j <= 5; j++) if (j) mk(sv, 'line', { x1: o[0], y1: P(0, j)[1], x2: P(8.6, 0)[0], y2: P(0, j)[1], stroke: '#E9E5DA', 'stroke-width': 1.5 });
+  axes(sv, o, [10, 8.6 * U, 5.6 * U, 1.2 * U]);
+  for (let i = 1; i <= 7; i++) txt(sv, P(i, 0)[0], o[1] + 26, i, { 'text-anchor': 'middle', 'font-size': 16 });
+  for (let j = 1; j <= 5; j++) txt(sv, o[0] - 12, P(0, j)[1] + 6, j, { 'text-anchor': 'end', 'font-size': 16 });
+  const at = P(3, 4), rt = P(3 + b[0], 4 + b[1]);
+  const A = PUC.arrow(sv, AC, 6, 18), B = PUC.arrow(sv, C.ink2, 6, 18), R = PUC.arrow(sv, RC, 8, 22);
+  const AL = sym(sv, 'A', AC, 28), BL = sym(sv, k ? '-B' : 'B', C.ink2, 28), RL = sym(sv, k ? 'A - B' : 'A + B', RC, 26);
+  attr(AL, 'x', P(1.2, 2.6)[0] - 28); attr(AL, 'y', P(1.2, 2.6)[1]); attr(BL, 'x', (at[0] + rt[0]) / 2 + (k ? -46 : 14)); attr(BL, 'y', (at[1] + rt[1]) / 2 + (k ? -10 : 0));
+  const rm = [(o[0] + rt[0]) / 2, (o[1] + rt[1]) / 2]; attr(RL, 'x', rm[0] + (k ? -96 : 16)); attr(RL, 'y', rm[1] + (k ? 0 : 34));
+  $(pid).innerHTML = ptx.replace('Rₓ', `<span style="color:${XC}">Rₓ</span>`).replace('Rᵧ', `<span style="color:${YC}">Rᵧ</span>`);
+  return { o, at, rt, A, B, R, AL, BL, RL, pill: $(pid) };
 });
-const th1 = PUC.think($('#th1'), { q: 'Keep turning A to 90°. What is Aₓ now?', opts: ['Zero', 'Ten'], right: 0, why: 'cos 90° = 0. A points straight up: its shadow on x is just a dot.' });
+const th1 = PUC.think($('#th1'), { q: 'Two vectors add up to give Rₓ = 0. Must they be equal and opposite?', opts: ['Yes', 'No'], right: 1, why: 'Only the x parts must cancel: (3î + 4ĵ) + (-3î + 2ĵ) = 6ĵ.' });
 
-/* ---------- G: four quadrants ---------- */
+/* ---------- G: four quadrants for R ---------- */
 const gq = $('#gqS'), QO = [800, 300];
 axes(gq, QO, [300, 300, 220, 220]);
 const QA = [40, 140, 220, 320], QL = 190;
-const QD = QA.map(a => { const e = [QO[0] + QL * cs(a), QO[1] - QL * sn(a)]; return { a, e, x: PUC.arrow(gq, XC, 7, 18), y: PUC.arrow(gq, YC, 7, 18), A: PUC.arrow(gq, AC, 6, 18) }; });
+const QD = QA.map(a => { const e = [QO[0] + QL * cs(a), QO[1] - QL * sn(a)]; return { a, e, x: PUC.arrow(gq, XC, 7, 18), y: PUC.arrow(gq, YC, 7, 18), A: PUC.arrow(gq, RC, 6, 18) }; });
 const QN = ['I', 'II', 'III', 'IV'], QP = [[1000, 140], [430, 140], [430, 440], [1000, 440]];
-$('#gqc').innerHTML = QD.map((q, i) => `<div class="qn" id="qn${i}" style="left:${QP[i][0]}px;top:${QP[i][1] - 48}px">${QN[i]}</div><div class="qc" id="qc${i}" style="left:${QP[i][0]}px;top:${QP[i][1]}px"><b>x</b><span style="color:${XC}">${cs(q.a) > 0 ? '+' : '-'}</span><b>y</b><span style="color:${YC}">${sn(q.a) > 0 ? '+' : '-'}</span></div>`).join('');
-const tQd = [wt('G2', 'First'), wt('G2', 'Second'), wt('G3', 'Third'), wt('G3', 'Fourth')];
-const th2 = PUC.think($('#th2'), { q: 'Can a component ever be longer than the vector itself?', opts: ['Yes', 'No'], right: 1, why: 'Aₓ = A cos θ and Aᵧ = A sin θ; cos and sin are never above 1.' });
-
-/* ---------- V: adding by parts ---------- */
-const vS = $('#vlS'), VO = [110, 470], VU = 34;
-axes(vS, VO, [40, 620, 400, 40]);
-const VA = [5, 3], VB = [3, 6];
-const vp = (x, y) => [VO[0] + x * VU, VO[1] - y * VU];
-const vAa = PUC.arrow(vS, AC, 6, 18), vBa = PUC.arrow(vS, C.ink2, 6, 18), vRa = PUC.arrow(vS, RC, 7, 20);
-const vRx = PUC.arrow(vS, XC, 8, 18), vRy = PUC.arrow(vS, YC, 8, 18);
-const vAL = sym(vS, 'A', AC, 30), vBL = sym(vS, 'B', C.ink2, 30), vRL = sym(vS, 'R', RC, 32);
-attr(vAL, 'x', vp(2.5, 1.5)[0] + 6); attr(vAL, 'y', vp(2.5, 1.5)[1] + 34); attr(vBL, 'x', vp(6.5, 6)[0] + 18); attr(vBL, 'y', vp(6.5, 6)[1]); attr(vRL, 'x', vp(4, 4.5)[0] - 40); attr(vRL, 'y', vp(4, 4.5)[1] - 10);
-const vXl = txt(vS, vp(4, 0)[0], VO[1] + 34, 'Rₓ = 5 + 3 = 8', { 'text-anchor': 'middle', fill: XC, 'font-weight': 600, 'font-size': 22 });
-const vYl = txt(vS, vp(8, 0)[0] + 16, vp(0, 4.5)[1] + 6, 'Rᵧ = 3 + 6 = 9', { fill: YC, 'font-weight': 600, 'font-size': 22 });
-const vGh = document.createElement('div'); vGh.className = 'ghost'; vGh.style.cssText = 'right:36px;top:18px'; vGh.textContent = 'EXAMPLE FIGURES'; $('#vl').appendChild(vGh);
-$('#vf0').innerHTML = K(`\\vec R = ${vA} + \\textcolor{${C.ink2}}{\\vec B}`);
-$('#vf1').innerHTML = K(`\\textcolor{${XC}}{R_x} = \\textcolor{${XC}}{A_x} + \\textcolor{${XC}}{B_x}`);
-$('#vf2').innerHTML = K(`\\textcolor{${YC}}{R_y} = \\textcolor{${YC}}{A_y} + \\textcolor{${YC}}{B_y}`);
+$('#gqc').innerHTML = QD.map((q, i) => `<div class="qn" id="qn${i}" style="left:${QP[i][0]}px;top:${QP[i][1] - 48}px">${QN[i]}</div><div class="qc" id="qc${i}" style="left:${QP[i][0]}px;top:${QP[i][1]}px"><b>Rₓ</b><span style="color:${XC}">${cs(q.a) > 0 ? '+' : '-'}</span><b>Rᵧ</b><span style="color:${YC}">${sn(q.a) > 0 ? '+' : '-'}</span></div>`).join('');
+const tQd = [wt('G2', 'one'), wt('G2', 'two'), wt('G3', 'three'), wt('G3', 'four')];
+const th2 = PUC.think($('#th2'), { q: 'Rₓ is -4 and Rᵧ is +3. Which quadrant does R point into?', opts: ['Second', 'Fourth'], right: 0, why: 'Negative x is left, positive y is up: up and left is quadrant II.' });
 
 /* ---------- W: worked example ---------- */
 const wsol = PUC.solution($('#wl'), [
@@ -201,11 +204,11 @@ const so = PUC.solution($('#so'), [
   [K(`\\textcolor{${YC}}{R_y} = 6 - 4 = \\textcolor{${YC}}{2}`)],
   ['<b style="color:var(--red)">12.2, 10</b>: sign traps']], { y0: 100, dy: 100 });
 const tSo = [wt('A2', 'R'), wt('A2', 'That'), wt('A3', 'R'), wt('A3', 'That'), wt('A4', 'Taking')];
-const fc = PUC.fcard($('#sF'), { x: 360, y: 262, w: 1200, h: 470, title: 'Recap · vector components', y0: 100, dy: 100, txt: [0, 0, 1, 1],
-  lines: [K(`${Ax} = ${Am}\\cos\\theta \\qquad ${Ay} = ${Am}\\sin\\theta`),
-    K(`${Am} = \\sqrt{${Ax}^2 + ${Ay}^2} \\qquad \\tan\\theta = ${Ay}/${Ax}`),
-    '<b>Signs</b> come from the quadrant: check them before finding θ', '<b>Add vectors</b>: add x parts, add y parts'] });
-const YQ = ['Why is Aₓ negative for an arrow pointing up and to the left?', 'If Aₓ and Aᵧ are both 5, what is the angle of A?', 'Why can a component never be longer than the vector?'];
+const fc = PUC.fcard($('#sF'), { x: 360, y: 262, w: 1200, h: 470, title: 'Recap · adding by components', y0: 100, dy: 100, txt: [0, 0, 1, 1],
+  lines: [K(`${Rx} = ${Ax} + ${Bx} \\qquad ${Ry} = ${Ay} + ${By}`),
+    K(`${Rm} = \\sqrt{${Rx}^2 + ${Ry}^2} \\qquad \\tan\\theta = ${Ry}/${Rx}`),
+    '<b>Subtract</b>: flip the signs of B, then add', '<b>Signs</b> of Rₓ, Rᵧ give the quadrant: check before finding θ'] });
+const YQ = ['To add two vectors, which parts do you add together?', 'A = 3î + 4ĵ, B = 2î - ĵ. What is A - B?', 'Why must you check the signs before finding the angle of R?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="n">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
 const nx = PUC.next($('#sF'), { label: 'NEXT · EP 40', topic: 'Velocity has parts too: Motion in Two Dimensions', y: 764 });
@@ -214,8 +217,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 40', topic: 'Velocity has par
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const SLOW = T0('S6') + 0.4 - tSlow;
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tSlow - 0.1, 1.06, 560, 540], [tSlow + SLOW + 0.1, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tSlow - 0.1, 1.06, 960, 540], [tRes + 0.1, 1, 960, 540]]);
 let geo = null;
 function measure() { geo = 1; let x = 36; [0, 1].forEach(i => { const e = $('#wq' + i); e.style.left = x + 'px'; x += e.offsetWidth + 16; }); }
 const labNear = (el, x, y) => { attr(el, 'x', x.toFixed(1)); attr(el, 'y', y.toFixed(1)); };
@@ -238,64 +240,55 @@ M.on(t => {
     M.vis($('#hjP'), t, wt('H2', 'jobs') - 0.1, 1e9, POP);
     M.vis($('#hk'), t, tH3 - 0.1, out, { dx: 60, dy: 0, ...o });
     M.vis($('#hkImg'), t, tH3 + 0.1, 1e9, { dy: 20 }); M.vis($('#hdF'), t, tH3 + 0.2, 1e9, { ...POP, sc: 0.5 });
-    M.vis($('#exH'), t, wt('H3', 'five') - 0.1, 1e9, { dy: 8 });
-    M.vis($('#hbub'), t, wt('H3', 'five') - 0.1, 1e9, { dx: -16, dy: 0, sp: M.SOFT });
-    TILES.forEach((_, i) => { const el = $('#wq' + i); M.vis(el, t, tTile[i] - 0.1, 1e9, POP); el.style.background = mix(C.soft, C.ac2, M.io((t - wt('H5', 'both')) / 0.3)); });
+    M.vis($('#exH'), t, wt('H3', 'Twenty') - 0.1, 1e9, { dy: 8 });
+    M.vis($('#hbub'), t, wt('H3', 'fifteen') - 0.1, 1e9, { dx: -16, dy: 0, sp: M.SOFT });
+    TILES.forEach((_, i) => { const el = $('#wq' + i); M.vis(el, t, tTile[i] - 0.1, 1e9, POP); el.style.background = mix(C.soft, C.ac2, M.io((t - wt('H5', 'Components')) / 0.3)); });
   }
 
-  /* P: shadows */
+  /* P: quick reminder */
   const pOn = t >= tP1 - 0.1 && t < tS1 + 0.1; M.hide($('#sP'), !pOn);
   if (pOn) {
     const out = OUT('S1');
     M.vis($('#pg'), t, tP1 + 0.1, out, { dx: -60, dy: 0, ...o });
-    M.vis(pAx, t, T0('P2') - 0.1, 1e9, { dy: 0, fade: 0.3 });
-    grow(pArr, PO[0], PO[1], tip[0], tip[1], M.io((t - wt('P2', 'tail')) / 0.7)); op(pAL, (t - wt('P2', 'tail') - 0.4) / 0.25);
-    M.vis(pSunX, t, wt('P3', 'light') - 0.1, 1e9, POP); M.draw(pLx, t, wt('P3', 'shadow') - 0.2, 0.5);
-    grow(pBx, PO[0], PO[1], tip[0], PO[1], M.io((t - wt('P3', 'x', 1)) / 0.6)); op(pBxL, (t - wt('P3', 'component')) / 0.25);
-    M.vis(pSunY, t, wt('P4', 'light') - 0.1, 1e9, POP); M.draw(pLy, t, wt('P4', 'shadow') - 0.2, 0.5);
-    grow(pBy, PO[0], PO[1], PO[0], tip[1], M.io((t - wt('P4', 'y', 1)) / 0.6)); op(pByL, (t - wt('P4', 'component')) / 0.25);
-    // walk Ax then Ay: a dot and two thin arrows head-to-tail
-    const tw = wt('P5', 'Walk'), k1 = M.io((t - tw) / 0.9), k2 = M.io((t - wt('P5', 'then')) / 0.9);
-    grow(pWx, PO[0], PO[1] + 0, tip[0], PO[1], k1); pWx.g.style.opacity = 0;
-    grow(pWy, tip[0], PO[1], tip[0], tip[1], k2);
-    const wx = PO[0] + (tip[0] - PO[0]) * k1, wy = PO[1] + (tip[1] - PO[1]) * k2; attr(pWalker, 'cx', wx.toFixed(1)); attr(pWalker, 'cy', wy.toFixed(1)); M.hide(pWalker, t < tw - 0.05 || t > T0('P6') + 0.5);
-    M.vis($('#pr'), t, wt('P3', 'x', 1) - 0.1, out, { dx: 60, dy: 0, ...o });
-    PUC.write($('#pf0'), t, wt('P3', 'component'), 0.8);
-    M.vis($('#pc0'), t, wt('P3', 'component') + 0.4, 1e9, POP); M.vis($('#pc1'), t, wt('P4', 'component') + 0.2, 1e9, POP);
-    PUC.write($('#pf1'), t, wt('P6', 'equals'), 0.9);
+    M.vis(pAx, t, tP1 + 0.2, 1e9, { dy: 0, fade: 0.3 });
+    grow(pArr, PO[0], PO[1], tip[0], tip[1], M.io((t - tP1 - 0.4) / 0.7)); op(pAL, (t - tP1 - 0.9) / 0.25);
+    const tx = wt('P2', 'x'), ty = wt('P2', 'y');
+    M.draw(pLx, t, tx - 0.4, 0.4); grow(pBx, PO[0], PO[1], tip[0], PO[1], M.io((t - tx + 0.1) / 0.6)); op(pBxL, (t - tx + 0.1) / 0.25);
+    M.draw(pLy, t, ty - 0.4, 0.4); grow(pBy, PO[0], PO[1], PO[0], tip[1], M.io((t - ty + 0.1) / 0.6)); op(pByL, (t - ty + 0.1) / 0.25);
+    M.vis($('#pr'), t, T0('P2') - 0.1, out, { dx: 60, dy: 0, ...o });
+    PUC.write($('#pf0'), t, T0('P2') + 0.2, 0.8);
+    M.vis($('#pc0'), t, tx + 0.2, 1e9, POP); M.vis($('#pc1'), t, ty + 0.2, 1e9, POP);
+    PUC.write($('#pf1'), t, wt('P3', 'equals'), 0.9);
   }
 
-  /* S: turning arrow */
+  /* S: two legs, parts stack live */
   const sOn = t >= tS1 - 0.1 && t < tD1 + 0.1; M.hide($('#sS'), !sOn);
   if (sOn) {
     const out = OUT('D1');
     M.vis($('#sim'), t, tS1 + 0.05, out, { dx: -60, dy: 0, ...o });
     M.vis($('#ro'), t, tS1 + 0.25, out, { dx: 60, dy: 0, ...o });
     M.vis($('#gr'), t, tS1 + 0.4, out, { dy: 36, ...o });
-    const th = thAt(t), aOn = M.io((t - T0('S2') - 0.1) / 0.6);
-    const ex = SO[0] + SL * cs(th) * aOn, ey = SO[1] - SL * sn(th) * aOn;
-    sA.set(SO[0], SO[1], ex, ey);
-    const slowOn = t >= tSlow && t < tSlow + SLOW, re = slowOn ? M.io((t - tSlow - 0.25) / 0.8) : 1;
-    const cOn = M.io((t - wt('S3', 'along') + 0.1) / 0.4) * re;
-    sX.set(SO[0], SO[1], SO[0] + (ex - SO[0]) * cOn, SO[1]); sY.set(ex, SO[1], ex, SO[1] + (ey - SO[1]) * cOn);
-    attr(sDx, 'x1', SO[0]); attr(sDx, 'y1', ey); attr(sDx, 'x2', ex); attr(sDx, 'y2', ey); attr(sDy, 'x1', ex); attr(sDy, 'y1', SO[1]); attr(sDy, 'x2', ex); attr(sDy, 'y2', ey);
-    sDx.style.opacity = sDy.style.opacity = aOn * (t > wt('S3', 'along') ? 1 : 0);
-    const AxV = AU * cs(th), AyV = AU * sn(th);
-    labNear(sAL, SO[0] + (SL * 0.55) * cs(th) * aOn - (sn(th) * 30) - 10, SO[1] - (SL * 0.55) * sn(th) * aOn - cs(th) * 30 + 10); op(sAL, aOn);
-    labNear(sXL, SO[0] + (ex - SO[0]) / 2 - 16, SO[1] + (AyV >= 0 ? 40 : -16)); op(sXL, Math.abs(AxV) > 1.2 ? cOn : 0);
-    labNear(sYL, ex + (AxV >= 0 ? 14 : -56), SO[1] + (ey - SO[1]) / 2 + 10); op(sYL, Math.abs(AyV) > 1.2 ? cOn : 0);
-    attr(sArc, 'd', th > 2 && aOn > 0.9 ? arcP(SO, 46, 0, Math.min(th, 359.5)) : ''); labNear(sTh, SO[0] + 60 * cs(Math.min(th, 359) / 2) - 8, SO[1] - 60 * sn(Math.min(th, 359) / 2) + 10); op(sTh, th > 12 ? 1 : 0);
-    // ghost arrows at 30, 60, 90 deg while it turns
-    [30, 60, 90].forEach((g, k) => { attr(sGh[k], 'x2', (SO[0] + SL * cs(g)).toFixed(1)); attr(sGh[k], 'y2', (SO[1] - SL * sn(g)).toFixed(1)); sGh[k].style.opacity = th > g + 6 && t < T0('S6') ? [0.12, 0.2, 0.3][k] : 0; });
-    M.vis($('#slow'), t, tSlow, tSlow + SLOW, { dy: 0, sc: 0.8, sp: M.POP, fade: 0.08, outDur: 0.2, ody: 0 });
-    M.setT($('#rt'), th.toFixed(0)); M.setT($('#ra'), (AU * aOn).toFixed(1)); M.setT($('#rx'), (Math.abs(AxV) < 0.05 ? 0 : AxV).toFixed(1)); M.setT($('#ry'), (Math.abs(AyV) < 0.05 ? 0 : AyV).toFixed(1));
-    const gOn = t > tTurn - 0.3;
-    gX(a => [a, AU * cs(a)], 0, th); gY(a => [a, AU * sn(a)], 0, th); gXd(th, AxV, gOn); gYd(th, AyV, gOn);
-    labNear(gxl, G.X(th) + 14, G.Y(AxV) + (AxV < AyV ? 26 : -8)); labNear(gyl, G.X(th) + 14, G.Y(AyV) + (AyV <= AxV ? 26 : -8)); op(gxl, gOn ? 1 : 0); op(gyl, gOn ? 1 : 0);
-    avA(t, wt('S7', 'waves') + 0.3, out);
+    const phi = phiAt(t), slowOn = t >= tSlow && t < tRes, re = slowOn ? M.io((t - tSlow - 0.3) / 0.8) : 1;
+    const kb = M.io((t - tB) / 0.6), kbp = M.io((t - tB - 0.5) / 0.6) * re, kr = M.io((t - tB - 1.0) / 0.6);
+    const st = SF.set(phi, { a: M.io((t - tA) / 0.6), ap: M.io((t - tAp) / 0.6), b: kb, bp: kbp, r: kr, rp: kr * re });
+    // B's angle arc at the tip of A
+    attr(sArc, 'd', kb > 0.9 && phi > 3 ? arcP(st.at, 34, 0, phi) : ''); attr(sPh, 'x', (st.at[0] + 44 * cs(phi / 2) - 6).toFixed(1)); attr(sPh, 'y', (st.at[1] - 44 * sn(phi / 2) + 8).toFixed(1)); op(sPh, phi > 12 ? 1 : 0);
+    // ghosts of B and R at 30, 60, 90 degrees while B turns
+    [30, 60, 90].forEach((g, k) => { const L = legs(g), at = SF.P(L.ax, L.ay), rt = SF.P(L.rx, L.ry), on = phi > g + 6 && t < T0('S7') ? [0.12, 0.2, 0.3][k] : 0;
+      [[sGh[k].b, at], [sGh[k].r, SO]].forEach(([el, a]) => { attr(el, 'x1', a[0].toFixed(1)); attr(el, 'y1', a[1].toFixed(1)); attr(el, 'x2', rt[0].toFixed(1)); attr(el, 'y2', rt[1].toFixed(1)); el.style.opacity = on; }); });
+    M.vis($('#slow'), t, tSlow, tRes, { dy: 0, sc: 0.8, sp: M.POP, fade: 0.08, outDur: 0.2, ody: 0 });
+    M.vis($('#sTag'), t, T0('S7'), 1e9, { dy: 0, sc: 0.8, sp: M.POP, fade: 0.08 });
+    // readout + graph follow the sim every frame
+    const L = st.L, shown = [t > tAp ? L.ax : 0, t > tB ? L.bx : 0, 0, t > tAp ? L.ay : 0, t > tB ? L.by : 0, 0];
+    shown[2] = shown[0] + shown[1]; shown[5] = shown[3] + shown[4];
+    const f1 = v => (Math.abs(v) < 0.05 ? 0 : v).toFixed(1);
+    shown.forEach((v, i) => M.setT($('#r' + i), f1(v)));
+    M.setT($('#r6'), Math.hypot(shown[2], shown[5]).toFixed(1)); M.setT($('#r7'), (Math.atan2(shown[5], shown[2]) * 180 / Math.PI).toFixed(1)); M.setT($('#r8'), phi.toFixed(0));
+    const gOn = t > tB + 0.5;
+    gR(p => [p, Math.hypot(legs(p).rx, legs(p).ry)], 0, gOn ? phi : 0); gRd(phi, Math.hypot(L.rx, L.ry), gOn);
   }
 
-  /* D: rule */
+  /* D: rule + static figure at phi = 120 */
   const dOn = t >= tD1 - 0.1 && t < tT + 0.1; M.hide($('#sD'), !dOn);
   if (dOn) {
     M.vis($('#dl'), t, tD1 + 0.05, 1e9, { dx: -60, dy: 0 });
@@ -303,68 +296,50 @@ M.on(t => {
     const hiY = M.track(80, tStep.slice(1).map((tt, i) => [tt - 0.1, 80 + (i + 1) * 98]), M.SOFT)(t);
     const hb = $('#hiB'); M.vis(hb, t, tStep[0] - 0.1, 1e9, { dy: 0, fade: 0.2 }); hb.style.top = (hiY - 6).toFixed(1) + 'px';
     M.vis($('#dr'), t, tD1 + 0.3, 1e9, { dx: 60, dy: 0 });
-    grow(dAr, DO[0], DO[1], dt[0], dt[1], M.io((t - tD1 - 0.6) / 0.6)); op(dAL, (t - tD1 - 1.0) / 0.25);
-    grow(dX, DO[0], DO[1], dt[0], DO[1], M.io((t - wt('D2', 'parts')) / 0.5)); grow(dY, dt[0], DO[1], dt[0], dt[1], M.io((t - wt('D2', 'parts') - 0.3) / 0.5));
-    op(dTri, 0.6 * M.clamp((t - wt('D2', 'triangle')) / 0.4)); op(dSq, (t - wt('D2', 'triangle')) / 0.3);
-    M.draw(dArc, t, wt('D3', 'theta') - 0.1, 0.4); op(dTh, (t - wt('D3', 'theta')) / 0.25);
-    op(dHx, 0.3 * M.clamp((t - wt('D3', 'next')) / 0.2) * (1 - M.clamp((t - T0('D4')) / 0.2)) + 0.3 * M.clamp((t - wt('D5', 'square')) / 0.2) * (1 - M.clamp((t - T0('D6') - 0.6) / 0.3)));
-    op(dHa, 0.25 * (M.clamp((t - wt('D3', 'longest')) / 0.2) * (1 - M.clamp((t - T0('D4')) / 0.2)) + M.clamp((t - wt('D4', 'longest')) / 0.2) * (1 - M.clamp((t - T0('D5')) / 0.2))));
-    op(dHy, 0.3 * M.clamp((t - wt('D4', 'opposite')) / 0.2) * (1 - M.clamp((t - T0('D5')) / 0.2)) + 0.3 * M.clamp((t - wt('D5', 'y', 0)) / 0.2) * (1 - M.clamp((t - T0('D6') - 0.6) / 0.3)));
-    op(dXL, (t - wt('D3', 'So') - 0.3) / 0.25); op(dYL, (t - wt('D4', 'So') - 0.3) / 0.25);
+    const ka = M.io((t - tD1 - 0.6) / 0.6), kp = M.io((t - wt('D2', 'A', 1)) / 0.6), kb = M.io((t - wt('D2', 'B', 0) + 0.2) / 0.6), kbp = M.io((t - wt('D2', 'B', 1)) / 0.6);
+    const krp = M.io((t - wt('D4', 'R')) / 0.6), kr = M.io((t - wt('D5', 'size')) / 0.6);
+    const st = DF.set(120, { a: ka, ap: kp, b: kb, bp: kbp, r: kr, rp: krp });
+    const th = Math.atan2(st.L.ry, st.L.rx) * 180 / Math.PI;
+    attr(dArc, 'd', t > wt('D6', 'tan') ? arcP(DF.o, 70, 0, th) : ''); attr(dTh, 'x', DF.o[0] + 82 * cs(th / 2)); attr(dTh, 'y', DF.o[1] - 82 * sn(th / 2) + 8); op(dTh, (t - wt('D6', 'tan')) / 0.3);
   }
 
   /* statement */
   const stOn = t >= tT && t < tC1 + 0.5; const stmt = $('#stmt'); M.hide(stmt, !stOn);
   if (stOn) {
     const sx = PUC.sweep(SW)(t); stmt.style.transform = t > tC1 ? `translateX(${(sx ?? -1980).toFixed(1)}px)` : 'none';
-    M.rise($('#st1'), t, tT + 0.08, { st: 0.05 }); M.rise($('#st2'), t, wt('T1', 'Every') - 0.05, { st: 0.07, sp: M.HEAVY });
-    PUC.write($('#stF'), t, wt('T1', 'y') + 0.1, 0.9);
+    M.rise($('#st1'), t, tT + 0.08, { st: 0.05 }); M.rise($('#st2'), t, wt('T1', 'Add') - 0.05, { st: 0.07, sp: M.HEAVY });
+    PUC.write($('#stF'), t, wt('T1', 'x', 1), 0.9);
   }
 
-  /* C: 30 vs 60 + think */
+  /* C: A + B vs A - B + think */
   const cOn = t >= tC1 - 0.1 && t < tG1 + 0.1; M.hide($('#sC'), !cOn);
   if (cOn) {
-    const out = OUT('C5');
+    const out = OUT('C4');
     CPAN.forEach((p, k) => {
-      const tin = k ? T0('C3') - 0.1 : tC1 + 0.2, ta = k ? wt('C3', 'sixty') : wt('C2', 'thirty');
+      const tin = k ? T0('C3') - 0.1 : tC1 + 0.2;
       M.vis($(k ? '#cb' : '#ca'), t, tin, out, { dx: k ? 60 : -60, dy: 0, ...o });
-      grow(p.A, p.o[0], p.o[1], p.e[0], p.e[1], M.io((t - ta + 0.3) / 0.6)); M.draw(p.arc, t, ta, 0.4); op(p.th, (t - ta) / 0.25);
-      const tx = k ? wt('C3', 'x') : wt('C2', 'x'), ty = k ? wt('C3', 'y') : wt('C2', 'y');
-      grow(p.x, p.o[0], p.o[1], p.e[0], p.o[1], M.io((t - tx + 0.1) / 0.5)); grow(p.y, p.e[0], p.o[1], p.e[0], p.e[1], M.io((t - ty + 0.1) / 0.5));
-      M.vis(p.pill, t, tx, 1e9, POP);
-      p.pill.style.background = mix(C.soft, C.ac2, M.io((t - wt('C3', 'swap')) / 0.3));
+      const ta = k ? T0('C3') + 0.4 : wt('C2', 'A', 1) - 0.1, tb = k ? wt('C3', 'Subtract') : wt('C2', 'B', 1) - 0.1, tr = k ? wt('C3', 'One') - 0.2 : wt('C2', 'Five') - 0.2;
+      grow(p.A, p.o[0], p.o[1], p.at[0], p.at[1], M.io((t - ta) / 0.6)); op(p.AL, (t - ta - 0.3) / 0.25);
+      grow(p.B, p.at[0], p.at[1], p.rt[0], p.rt[1], M.io((t - tb) / 0.6)); op(p.BL, (t - tb - 0.3) / 0.25);
+      grow(p.R, p.o[0], p.o[1], p.rt[0], p.rt[1], M.io((t - tr) / 0.6)); op(p.RL, (t - tr - 0.3) / 0.25);
+      M.vis(p.pill, t, tr + 0.3, 1e9, POP);
+      if (k) p.pill.style.background = mix(C.soft, C.ac2, M.io((t - wt('C3', 'flip')) / 0.3));
     });
-    M.vis($('#th1'), t, T0('C5') + 0.05, OUT('G1'), { dy: 36, ...o });
-    th1(t, { tin: T0('C5'), tOpts: wt('C5', 'What') - 0.1, tCount: T1('C5') + 0.05, dur: 3, tAns: T0('C6') - 0.02, tWhy: wt('C6', 'Cos') });
+    M.vis($('#th1'), t, T0('C4') + 0.05, OUT('G1'), { dy: 36, ...o });
+    th1(t, { tin: T0('C4'), tOpts: wt('C4', 'Must') - 0.1, tCount: T1('C4') + 0.05, dur: 3, tAns: T0('C5') - 0.02, tWhy: wt('C5', 'Only') });
   }
 
   /* G: quadrants + think */
-  const gOn = t >= tG1 - 0.1 && t < tV1 + 0.1; M.hide($('#sG'), !gOn);
+  const gOn = t >= tG1 - 0.1 && t < tW1 + 0.1; M.hide($('#sG'), !gOn);
   if (gOn) {
     M.vis($('#gq'), t, tG1 + 0.05, OUT('G4'), { dy: 36, ...o });
     QD.forEach((q, i) => {
       const ta = tQd[i], u = M.io((t - ta + 0.1) / 0.5), c = M.io((t - ta - 0.3) / 0.5);
       grow(q.A, QO[0], QO[1], q.e[0], q.e[1], u); q.x.set(QO[0], QO[1], QO[0] + (q.e[0] - QO[0]) * c, QO[1]); q.y.set(q.e[0], QO[1], q.e[0], QO[1] + (q.e[1] - QO[1]) * c);
-      M.vis($('#qc' + i), t, ta + 0.2, 1e9, POP); const qn = $('#qn' + i); M.vis(qn, t, ta, 1e9, { dy: 8 }); qn.style.color = mix(C.dim, C.ink, M.io((t - ta) / 0.3));
+      M.vis($('#qc' + i), t, ta + 0.2, 1e9, POP); const qn = $('#qn' + i); M.vis(qn, t, wt('G1', 'quadrant') - 0.2 + i * 0.15, 1e9, { dy: 8 }); qn.style.color = mix(C.dim, C.ink, M.io((t - ta) / 0.3));
     });
-    M.vis($('#th2'), t, T0('G4') + 0.05, OUT('V1'), { dy: 36, ...o });
-    th2(t, { tin: T0('G4'), tOpts: wt('G4', 'itself') - 0.1, tCount: T1('G4') + 0.05, dur: 3, tAns: T0('G5') - 0.02, tWhy: wt('G5', 'component') });
-  }
-
-  /* V: add by parts */
-  const vOn = t >= tV1 - 0.1 && t < tW1 + 0.1; M.hide($('#sV'), !vOn);
-  if (vOn) {
-    const out = OUT('W1');
-    M.vis($('#vl'), t, tV1 + 0.05, out, { dx: -60, dy: 0, ...o }); M.vis(vGh, t, tV1 + 0.4, 1e9, { dy: 8 });
-    const [ax, ay] = vp(...VA), [rx, ry] = vp(VA[0] + VB[0], VA[1] + VB[1]);
-    grow(vAa, VO[0], VO[1], ax, ay, M.io((t - tV1 - 0.4) / 0.6)); op(vAL, (t - tV1 - 0.8) / 0.25);
-    grow(vBa, ax, ay, rx, ry, M.io((t - tV1 - 0.9) / 0.6)); op(vBL, (t - tV1 - 1.3) / 0.25);
-    grow(vRx, VO[0], VO[1], rx, VO[1], M.io((t - wt('V2', 'x')) / 0.6)); op(vXl, (t - wt('V2', 'x') - 0.4) / 0.25);
-    grow(vRy, rx, VO[1], rx, ry, M.io((t - wt('V2', 'y')) / 0.6)); op(vYl, (t - wt('V2', 'y') - 0.4) / 0.25);
-    grow(vRa, VO[0], VO[1], rx, ry, M.io((t - T0('V3')) / 0.6)); op(vRL, (t - T0('V3') - 0.4) / 0.25);
-    M.vis($('#vr'), t, T0('V2') - 0.1, out, { dx: 60, dy: 0, ...o });
-    PUC.write($('#vf0'), t, wt('V2', 'add'), 0.7); PUC.write($('#vf1'), t, wt('V2', 'x'), 0.7); PUC.write($('#vf2'), t, wt('V2', 'y'), 0.7);
-    M.vis($('#vP'), t, wt('V3', 'drawing') - 0.1, 1e9, POP);
+    M.vis($('#th2'), t, T0('G4') + 0.05, OUT('W1'), { dy: 36, ...o });
+    th2(t, { tin: T0('G4'), tOpts: wt('G4', 'Which') - 0.1, tCount: T1('G4') + 0.05, dur: 3, tAns: T0('G5') - 0.02, tWhy: wt('G5', 'Negative') });
   }
 
   /* W: worked example */

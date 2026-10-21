@@ -1,40 +1,35 @@
 H1|0.4|A ladder leaning on a wall. A kite string pulled at a slant. A ramp up to a door.
 H2|0.45|Each is a slanted line, secretly doing two jobs at once.
-H3|0.35|Aarav cuts straight across the college ground on his bicycle, at five metres per second, on a slant.
-H4|0.45|His friend asks: how fast is he going east? And how fast north?
-H5|0.5|One slanted arrow holds both answers. By the end, you will pull them out in seconds.
-P1|0.35|So what are components?
-P2|0.4|Take any vector A in the x y plane. Put its tail at the origin.
-P3|0.4|Shine a light from above. The shadow on the x axis is the x component, A x.
-P4|0.4|Shine a light from the side. The shadow on the y axis is the y component, A y.
-P5|0.5|Walk A x along x, then A y along y, and you land exactly at the tip of A.
-P6|0.65|So A equals A x i hat plus A y j hat. One slanted arrow becomes two straight arrows.
-S1|0.35|Now let's turn the arrow and watch both parts change live.
-S2|0.4|The arrow has a fixed length of ten units. Its angle theta grows from zero.
-S3|0.4|At zero degrees, all of it is along x. A x is ten, A y is zero.
-S4|0.45|As it turns, A x shrinks and A y grows. The graph traces both parts.
-S5|0.5|Slow motion. Freeze at one fifty degrees. The x part now points left, so A x is negative.
-S6|0.4|The y part still points up, so A y stays positive.
-S7|0.5|One full turn, and the parts trace two waves. Cosine for x, sine for y.
+H3|0.35|Aarav crosses the college ground in two legs. Twenty metres one way, then fifteen metres another.
+H4|0.45|His friend asks: how far from the start is he now? And in which direction?
+H5|0.5|Drawing it to scale is slow. Components give the answer in seconds.
+P1|0.35|First, a quick reminder.
+P2|0.4|Any vector A has a shadow on the x axis, A x, and a shadow on the y axis, A y.
+P3|0.6|So A equals A x i hat plus A y j hat. One slanted arrow becomes two straight arrows.
+S1|0.35|Now the big idea, live. Aarav's first leg, A, is twenty metres at thirty degrees.
+S2|0.4|Its parts: A x is seventeen point three, A y is ten.
+S3|0.4|His second leg, B, is fifteen metres. Watch what happens as we turn leg B.
+S4|0.45|The x parts stack on the x axis. The y parts stack on the y axis. R joins the start to the finish.
+S5|0.5|Slow motion. Freeze at one hundred and twenty degrees. B x now points left, so it takes away from R x.
+S6|0.4|The graph shows the size of R. It is biggest at thirty degrees, when both legs point the same way.
+S7|0.6|Two legs or ten, the trick is the same. Add the x parts, then add the y parts.
 D1|0.35|Let's write the rule, one step at a time.
-D2|0.75|Step one. The arrow and its two parts make a right triangle. A is the longest side.
-D3|0.75|Step two. Cos theta is the next side over the longest side. So A x equals A cos theta.
-D4|0.75|Step three. Sin theta is the opposite side over the longest side. So A y equals A sin theta.
-D5|0.75|Step four. Pythagoras gives the size. A is the root of A x squared plus A y squared.
-D6|0.75|And the direction comes from tan theta equals A y over A x.
-T1|0.7|Remember this. Every vector in a plane is an x part plus a y part.
-C2|0.35|Side by side. Two arrows, both ten units. At thirty degrees, A x is eight point seven and A y is five.
-C3|0.4|At sixty degrees, they swap. A x is five, and A y is eight point seven. Bigger angle, less x, more y.
-C5|3.2|So, pause and think. Keep turning to ninety degrees. What is A x now? Pause and decide.
-C6|0.5|Zero! Cos ninety is zero. The arrow points straight up, so its x shadow is just a dot.
-G1|0.35|Now the signs. The angle tells you which way each part points.
-G2|0.4|First quadrant, both parts positive. Second quadrant, x negative, y positive.
-G3|0.4|Third quadrant, both negative. Fourth quadrant, x positive, y negative.
-G4|3.2|Now you try. Can a component ever be longer than the vector itself? Pause and decide.
-G5|0.5|No! A component is A times a cos or a sin, and those never go above one. A shadow is never longer than the stick.
-V1|0.35|Components make adding vectors easy.
-V2|0.4|To add A and B, add the x parts together, and the y parts together.
-V3|0.5|No drawing, no protractor. Just two simple sums.
+D2|0.75|Step one. Split each vector. A is A x i hat plus A y j hat. B is B x i hat plus B y j hat.
+D3|0.75|Step two. Add them, i hats with i hats, j hats with j hats.
+D4|0.75|Step three. So R x equals A x plus B x, and R y equals A y plus B y.
+D5|0.75|Step four. The size of R is the root of R x squared plus R y squared.
+D6|0.75|And tan theta equals R y over R x. Check the signs to pick the right quadrant.
+T1|0.7|Remember this. Add vectors part by part. x with x, y with y.
+C1|0.35|Subtraction works the same way. Side by side.
+C2|0.4|On the left, A plus B. A is three i plus four j. B is two i minus j. Add the parts. Five i plus three j.
+C3|0.6|On the right, A minus B. Subtract the parts. One i plus five j. Only the signs of B flip.
+C4|3.2|Pause and think. Two vectors add up to give R x equals zero. Must they be equal and opposite? Pause and decide.
+C5|0.5|No! Only their x parts must cancel. Three i plus four j, and minus three i plus two j, add up to six j.
+G1|0.35|Now the signs. They tell you which quadrant R points into.
+G2|0.4|Quadrant one, x and y both positive. Quadrant two, x negative, y positive.
+G3|0.4|Quadrant three, both negative. Quadrant four, x positive, y negative.
+G4|3.2|Now you try. R x is minus four, and R y is plus three. Which quadrant does R point into? Pause and decide.
+G5|0.5|The second quadrant! Negative x is left, positive y is up. Up and to the left is quadrant two.
 W1|0.35|Now, one worked example.
 W2|0.5|Aarav rides twenty metres at thirty degrees north of east. Then five metres due north. Find his total displacement.
 W3|0.75|First ride. A x is twenty cos thirty, about seventeen point three. A y is twenty sin thirty, which is ten.
@@ -53,7 +48,7 @@ A3|0.5|R y is six root two times sin one thirty five, minus four. That is six mi
 A4|0.5|Taking cos one thirty five as positive gives twelve point two. Dropping the minus sign on C gives ten. Both are traps.
 F1|3.2|Here is your recap. Screenshot this card.
 Y1|0.4|Can you answer these three questions without help?
-Y2|0.9|One. Why is A x negative for an arrow pointing up and to the left?
-Y3|0.9|Two. If A x and A y are both five, what is the angle of A?
-Y4|1.1|Three. Why can a component never be longer than the vector?
+Y2|0.9|One. To add two vectors, which parts do you add together?
+Y3|0.9|Two. A is three i plus four j, B is two i minus j. What is A minus B?
+Y4|1.1|Three. Why must you check the signs before finding the angle of R?
 N1|0.3|Next time: velocity and acceleration get x and y parts too, in motion in two dimensions.
