@@ -1,0 +1,53 @@
+H1|0.4|A goalkeeper's high kick. A friend's flat throw. A jump over a puddle.
+H2|0.45|Some stay in the air for ages. Some land almost at once. What decides it?
+H3|0.35|Aarav tested it in the college corridor with a soft ball.
+H4|0.5|He threw it at thirty degrees, then at sixty, with the same speed. Which one stays up longer?
+H5|0.65|Most people guess, the same. Let's find the exact answer, and the reason.
+P1|0.35|So what is the time of flight?
+P2|0.4|It is the total time a projectile stays in the air, from leaving to landing.
+P3|0.4|Here, it lands back at the same height it started from.
+P4|0.65|The key idea: only the up and down motion decides when it lands. The sideways motion just comes along.
+S1|0.35|Let's throw two balls in our motion notebook, with the same speed, twenty metres per second.
+S2|0.4|The blue ball goes at thirty degrees. The violet ball goes at sixty degrees.
+S3|0.4|Watch the two clocks, and the graph of height against time.
+S4|0.4|The thirty degree ball lands first, after about two seconds.
+S5|0.5|Slow motion at the top. The violet ball is at its top at half its flight time. Going up takes as long as coming down.
+S6|0.65|The sixty degree ball lands after about three and a half seconds. A steeper throw has a bigger upward part, so it stays up longer.
+D1|0.35|Now let's find the formula, one step at a time.
+D2|0.75|Step one. Up and down, y equals v naught sin theta times t, minus half g t squared.
+D3|0.75|Step two. When the ball lands, it is back at height zero. So put y equals zero.
+D4|0.75|Step three. Take t out as a common factor. t times, v naught sin theta minus half g t, equals zero.
+D5|0.75|Step four. So either t is zero, which is the launch, or the bracket is zero.
+D6|0.8|The bracket gives the landing time. T equals two v naught sin theta, over g.
+T1|0.7|Remember this. Time of flight depends only on the upward part of the velocity.
+C1|0.35|Let's check it a second way, using the top of the path.
+C2|0.4|Going up, the upward speed falls by g every second, from v naught sin theta down to zero.
+C3|0.4|So the time to reach the top is v naught sin theta, over g.
+C4|0.65|Coming down takes the same time, so the total is twice that. Two v naught sin theta over g. Both ways agree.
+K1|0.4|Side by side. At thirty degrees, sin theta is one half. T is two times twenty times a half, over nine point eight. About two seconds.
+K2|0.6|At sixty degrees, sin theta is about zero point eight seven. T is about three point five seconds.
+K3|3.2|Now you try. Same speed again. Which angle gives the longest time in the air? Pause and decide.
+K4|0.65|Ninety degrees! Straight up. Sin ninety is one, the biggest sin can be. So T is two v naught over g.
+B1|0.35|Here is a surprise. Look at what is missing from the formula.
+B2|0.4|There is no cos theta in it. The sideways speed does not change the time at all.
+B3|3.2|Your turn. From one table top, a ball is dropped, and another is pushed off sideways. Which lands first? Pause and think.
+B4|0.65|Together! Both start with zero upward speed, and the same gravity. The push only makes one land farther away.
+W1|0.35|Now, one worked example.
+W2|0.5|A ball is kicked at nineteen point six metres per second, at thirty degrees. How long is it in the air?
+W3|0.75|The upward part is v naught sin theta. Nineteen point six times one half, nine point eight metres per second.
+W4|0.75|Time to the top is nine point eight, over nine point eight. That is one second.
+W5|0.65|The time of flight is twice that. Two seconds.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students write T equals v naught sin theta over g, and stop.
+X3|0.65|But that is only the time to the top. The ball still has to come down. Always multiply by two.
+E1|0.6|Where is this asked? You find the time of flight, or work back from it to the speed or the angle.
+Q1|5.4|Exam level now. A ball is in the air for four seconds, and lands eighty metres away. g is ten. Find its launch speed and angle. Pause and solve.
+A1|0.5|The answer is A. Twenty root two metres per second, at forty five degrees.
+A2|0.5|T equals two v naught sin theta over g. So v naught sin theta is four times ten over two, which is twenty.
+A3|0.6|Sideways, eighty metres in four seconds means v naught cos theta is twenty. Both parts are twenty, so theta is forty five degrees, and v naught is twenty root two.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why does the sideways speed not change the time of flight?
+Y3|0.9|Two. Why is there a two in the formula?
+Y4|1.1|Three. Which launch angle keeps a ball in the air the longest?
+N1|0.3|Next time: the ball turns at half its flight time. But how high is that turning point? Find out in maximum height.
