@@ -1,0 +1,56 @@
+H1|0.4|A bus pulls away from a stop. A ball rolls to a halt. A lift starts to rise.
+H2|0.45|Three different things. But in all three, the velocity is changing.
+H3|0.35|Outside Diya's college, an ambulance sets off from the gate, its siren on.
+H4|0.5|Its speed climbs every second. But how fast is the speed itself climbing, at one exact instant?
+H5|0.65|By the end of this video, you will measure it.
+P1|0.35|So what is acceleration?
+P2|0.4|Acceleration is how fast the velocity changes. The change in velocity, divided by the time taken.
+P3|0.4|Its SI unit is metres per second squared.
+P4|0.65|Two metres per second squared means the velocity grows by two metres per second, every second.
+S1|0.35|Let's watch the ambulance on our motion notebook.
+S2|0.4|It starts from rest. Its velocity is v equals four t, minus a quarter t squared, in metres per second.
+S3|0.4|Watch the velocity arrow grow. Fast at first, then more slowly.
+S4|0.4|The velocity time graph curves and flattens out.
+S5|0.5|Slow motion replay. Freeze at t equals two seconds.
+S6|0.65|The velocity is seven metres per second. But how fast is it changing, right now?
+Z1|0.45|Try an average. From two seconds to six seconds, v goes from seven to fifteen. Eight over four. Two metres per second squared.
+Z2|0.45|Shrink the gap to two seconds. Five over two. Two point five.
+Z3|0.45|One second. Two point seven five over one. Two point seven five.
+Z4|0.45|A tenth of a second. Two point nine seven five.
+Z5|0.45|A hundredth of a second. Two point nine nine seven five. The answers close in on three.
+Z6|0.65|On the graph, the chord turns into the tangent. Its slope is three.
+D1|0.35|Let's write this as a rule, one step at a time.
+D2|0.75|Step one. Average acceleration, a bar, equals delta v over delta t.
+D3|0.75|Step two. Let delta t shrink towards zero. The acceleration at an instant is the limit of delta v over delta t.
+D4|0.75|Step three. This limit is written d v by d t. The slope of the tangent on the velocity time graph.
+D5|0.75|Step four. Here, d v by d t is four minus half t. At two seconds, that is three. Just like our table.
+T1|0.7|Remember this. Velocity is the slope of the position graph. Acceleration is the slope of the velocity graph.
+K1|0.4|Side by side. When velocity and acceleration point the same way, the speed goes up.
+K2|0.6|When they point opposite ways, the speed goes down.
+K3|3.2|Now you try. A ball is thrown straight up. At the very top, its velocity is zero. Is its acceleration zero there too? Pause and decide.
+K4|0.65|No! Gravity still pulls it down at nine point eight metres per second squared. The velocity is zero for only an instant.
+N1|0.35|One more thing. A negative sign does not always mean slowing down.
+N2|0.4|The sign only tells the direction, compared with the positive direction we chose.
+N3|0.4|An ambulance driving left and speeding up has negative velocity and negative acceleration.
+N4|3.2|Your turn. Velocity minus ten metres per second, acceleration minus two metres per second squared. Speeding up or slowing down? Pause and think.
+N5|0.65|Speeding up! Both point the same way. Signs match, speed up. Signs differ, slow down.
+W1|0.35|Now, one worked example.
+W2|0.5|The ambulance has v equals three t squared plus two t. Find the average acceleration in the first two seconds, and the acceleration at two seconds.
+W3|0.75|At t equals zero, v is zero. At t equals two, v is twelve plus four. Sixteen metres per second.
+W4|0.75|Average acceleration is sixteen over two. Eight metres per second squared.
+W5|0.75|For the instant, find d v by d t. a equals six t plus two.
+W6|0.65|At two seconds, a is fourteen metres per second squared. Almost double the average.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students think that zero velocity means zero acceleration.
+X3|0.65|Not true. At the top of a throw, v is zero, but a is still g, downwards. Acceleration depends on how v changes.
+E1|0.6|Where is this asked? Given v as a function of t, find the average acceleration, and the acceleration at one instant.
+Q1|5.4|Exam level now. v equals t squared minus four t plus three. Find the average acceleration from zero to four seconds, and the acceleration when it first stops. Pause and solve.
+A1|0.5|The answer is B. Zero, and minus two metres per second squared.
+A2|0.5|v at zero is three. v at four is sixteen, minus sixteen, plus three. Also three. So the average acceleration is zero.
+A3|0.6|It first stops when v is zero, at t equals one second. a equals two t minus four. Minus two metres per second squared.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Can a body have zero velocity and still accelerate?
+Y3|0.9|Two. What does the slope of a velocity time graph tell you?
+Y4|1.1|Three. With velocity negative and acceleration positive, is the body speeding up or slowing down?
+NX|0.3|Next time: same change every second, or not? Uniform and non uniform motion.
