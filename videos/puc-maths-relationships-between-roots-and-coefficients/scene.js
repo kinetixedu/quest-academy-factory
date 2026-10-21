@@ -39,8 +39,8 @@ const tHr = [tMorph + 0.3, wt('H2', 'solved'), wt('H2', 'roots'), wt('H2', 'Sum'
 /* ---------- P: names ---------- */
 $('#abBig').innerHTML = K('\\alpha,\\ \\beta');
 $('#dr0 .dk').innerHTML = K('\\alpha,\\ \\beta'); $('#dr1 .dk').innerHTML = K(`${re('p')} \\pm ${im('q')}${I}`);
-$('#ff0').innerHTML = K(`\\alpha = \\frac{-${bv('b')}\\ ${dv('+')}\\ \\sqrt{${DD}}}{2${av('a')}}`);
-$('#ff1').innerHTML = K(`\\beta = \\frac{-${bv('b')}\\ ${dv('-')}\\ \\sqrt{${DD}}}{2${av('a')}}`);
+$('#ff0').innerHTML = K(`\\alpha = \\dfrac{-${bv('b')}\\ ${dv('+')}\\ \\sqrt{${DD}}}{2${av('a')}}`);
+$('#ff1').innerHTML = K(`\\beta = \\dfrac{-${bv('b')}\\ ${dv('-')}\\ \\sqrt{${DD}}}{2${av('a')}}`);
 
 /* ---------- L: live ---------- */
 $('#lFx').innerHTML = K(`y = x^2 ${bv('- 4')}x + ${cv('c')}`);
@@ -72,7 +72,7 @@ const RS = [[`${SUM} = \\frac{(-${bv('b')} + \\sqrt{${DD}}) + (-${bv('b')} - \\s
   [`${SUM} = \\frac{-2${bv('b')}}{2${av('a')}} = -\\frac{${bv('b')}}{${av('a')}}`, 'what is left'],
   [`${PRO} = \\frac{${bv('b')}^2 - ${DD}}{4${av('a')}^2}`, '(p + q)(p - q) = p² - q²'],
   [`${PRO} = \\frac{${bv('b')}^2 - ${bv('b')}^2 + 4${av('a')}${cv('c')}}{4${av('a')}^2} = \\frac{${cv('c')}}{${av('a')}}`, 'put D = b² - 4ac back in']];
-$('#dSt').innerHTML = RS.map(([f, w], i) => `<div class="st" id="ds${i}" style="top:${80 + i * 104}px"><div class="n">${i + 1}</div><div class="sx" style="font-size:34px;top:-8px">${K(f)}</div><div class="why" style="top:64px">${w}</div></div>`).join('');
+$('#dSt').innerHTML = RS.map(([f, w], i) => `<div class="st" id="ds${i}" style="top:${80 + i * 104}px"><div class="n">${i + 1}</div><div class="sx" style="font-size:38px;top:-10px">${K(f)}</div><div class="why" style="top:64px">${w}</div></div>`).join('');
 $('#rRes').innerHTML = K(`${SUM} = -\\frac{${bv('b')}}{${av('a')}} \\qquad ${PRO} = \\frac{${cv('c')}}{${av('a')}}`);
 const tDs = [wt('R2', 'Add'), wt('R3', 'left'), wt('R4', 'Multiply'), wt('R5', 'Put')];
 const rs = $('#rS'), RX = x => 120 + x * 130, RY = 180;
@@ -132,7 +132,7 @@ const tChk = txt(ts, 24, 150, '3 + 1/2 = 7/2', { 'font-size': 32, fill: C.ok, 'f
 const where = PUC.where($('#wa'), { on: ['JEE MAIN'], type: 'Find expressions like 1/α² + 1/β² from the sum and product (JEE Main, 24 June 2022, Shift 1)' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 780,
   q: `${K('\\alpha, \\beta')} are the roots of ${K('2x^2 - 6x + 3 = 0')}.<br>Find ${K('\\dfrac{1}{\\alpha^2} + \\dfrac{1}{\\beta^2}')}`,
-  opts: [K('\\tfrac{4}{3}'), K('2'), K('\\tfrac{8}{3}'), K('4')], right: 2, optW: 474, optY: 316 });
+  opts: [K('\\dfrac{4}{3}'), K('2'), K('\\dfrac{8}{3}'), K('4')], right: 2, optW: 474, optY: 316 });
 const so = PUC.solution($('#so'), [[K(`${SUM} = 3,\\ \\ ${PRO} = \\tfrac{3}{2}`)], [K(`\\alpha^2 + \\beta^2 = 9 - 3 = 6`)], [K(`\\tfrac{1}{\\alpha^2} + \\tfrac{1}{\\beta^2} = \\tfrac{\\alpha^2 + \\beta^2}{(${PRO})^2}`)], [K(`= 6 \\div \\tfrac{9}{4} = \\tfrac{8}{3}`)]], { y0: 100, dy: 110 });
 const tSo = [wt('A2', 'Alpha'), wt('A3', 'Nine'), wt('A4', 'common'), wt('A4', 'six')];
 const fc = PUC.fcard($('#sF'), { x: 330, y: 252, w: 1260, h: 492, title: 'Recap · roots and coefficients', y0: 98, dy: 80, txt: [1, 0, 0, 0, 1],
@@ -151,7 +151,7 @@ const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
 const tPush = wt('L2', 'pinned') - 0.3;
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tPush, 1.1, 620, 600], [T0('L3') + 0.6, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tPush, 1.1, 700, 580], [T0('L3') + 0.6, 1, 960, 540]]);
 let ghX = null;
 
 /* ---------- frame ---------- */
