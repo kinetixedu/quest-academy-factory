@@ -24,23 +24,23 @@ const OUT = id => T0(id) - 0.32;
 const hs = $('#hS');
 const hB = mk(hs, 'ellipse', { cx: 392, cy: 290, rx: 340, ry: 186, fill: BCB, stroke: BC, 'stroke-width': 3.5 });
 const hA = mk(hs, 'ellipse', { cx: 330, cy: 300, rx: 220, ry: 128, fill: ACB, stroke: AC, 'stroke-width': 3.5 });
-const hBL = txt(hs, 600, 150, 'PUC', { 'text-anchor': 'middle', 'font-size': 22, fill: BC, 'font-weight': 600, 'letter-spacing': 2 });
+const hBL = txt(hs, 620, 190, 'PUC', { 'text-anchor': 'middle', 'font-size': 22, fill: BC, 'font-weight': 600, 'letter-spacing': 2 });
 const hAL = txt(hs, 330, 206, 'NEET', { 'text-anchor': 'middle', 'font-size': 22, fill: AC, 'font-weight': 600, 'letter-spacing': 2 });
 const hEl = [['Physics', 250, 268], ['Chemistry', 410, 268], ['Biology', 330, 346], ['Maths', 640, 300]].map(([s, x, y], i) => txt(hs, x, y, s, { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-size': 28, fill: i === 3 ? BC : AC, 'font-weight': 600 }));
 
 /* ---------- S: definition + live check ---------- */
 $('#sy1').innerHTML = K(`${ac('A')} \\subset ${bc('B')}`);
 $('#sy2').innerHTML = K(`${ac('A')} \\not\\subset ${bc('B')}`);
-const cs = $('#cS'), AX = 170, BX = 610, RY = i => 130 + i * 84;
+const cs = $('#cS'), AX = 170, BX = 610, RY = i => 156 + i * 84;
 const pill = (x, y, s, col, bg) => { const g = mk(mk(cs, 'g', { transform: `translate(${x},${y})` }), 'g', {}); const r = mk(g, 'rect', { x: -110, y: -28, width: 220, height: 56, rx: 12, fill: bg, stroke: col, 'stroke-width': 2.5 }); txt(g, 0, 9, s, { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-size': 24, 'font-weight': 600, fill: col }); return { g, r }; };
-const cAL = txt(cs, AX, 100, 'NEET', { 'text-anchor': 'middle', 'font-size': 20, fill: AC, 'font-weight': 600, 'letter-spacing': 2 });
-const cBL = txt(cs, BX, 100, 'PUC', { 'text-anchor': 'middle', 'font-size': 20, fill: BC, 'font-weight': 600, 'letter-spacing': 2 });
+const cAL = txt(cs, AX, 110, 'NEET', { 'text-anchor': 'middle', 'font-size': 20, fill: AC, 'font-weight': 600, 'letter-spacing': 2 });
+const cBL = txt(cs, BX, 110, 'PUC', { 'text-anchor': 'middle', 'font-size': 20, fill: BC, 'font-weight': 600, 'letter-spacing': 2 });
 const NEET = ['Physics', 'Chemistry', 'Biology'], PUCS = ['Physics', 'Chemistry', 'Maths', 'Biology'];
 const cA = NEET.map((s, i) => pill(AX, RY(i), s, AC, ACB)), cB = PUCS.map((s, i) => pill(BX, RY(i), s, BC, BCB));
 const fw = NEET.map((s, i) => { const a = PUC.arrow(cs, C.ok, 4, 14); a.set(AX + 116, RY(i), BX - 116, RY(PUCS.indexOf(s))); const k = txt(cs, (AX + BX) / 2, (RY(i) + RY(PUCS.indexOf(s))) / 2 - 10, '✓', { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-size': 26, fill: C.ok, 'font-weight': 700 }); return { a, k }; });
 const bw = [0, 1, 2].map(i => { const s = PUCS[i], j = NEET.indexOf(s), a = PUC.arrow(cs, j < 0 ? C.red : C.ok, 4, 14); a.set(BX - 116, RY(i), j < 0 ? AX + 150 : AX + 116, j < 0 ? RY(i) + 20 : RY(j)); const k = txt(cs, (AX + BX) / 2, (RY(i) + (j < 0 ? RY(i) + 20 : RY(j))) / 2 - 10, j < 0 ? '✕' : '✓', { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-size': 26, fill: j < 0 ? C.red : C.ok, 'font-weight': 700 }); return { a, k }; });
 const tFw = [wt('S5', 'Physics'), wt('S5', 'Chemistry'), wt('S5', 'Biology')], tBw = [wt('S6', 'Physics'), wt('S6', 'Chemistry'), wt('S6', 'Maths')];
-$('#ckP1').innerHTML = K(`\\text{NEET} \\subset \\text{PUC}`); $('#ckP2').innerHTML = K(`\\text{PUC} \\not\\subset \\text{NEET}`);
+$('#ckP1').textContent = 'NEET ⊂ PUC'; $('#ckP2').textContent = 'PUC ⊄ NEET';
 
 /* ---------- V: two facts ---------- */
 const VS = [[K(`${ac('A')} \\subset ${ac('A')}`), 'every set is a subset of itself'], [K(`${PHI} \\subset ${ac('A')}`), 'the empty set is a subset of every set']];
@@ -51,7 +51,7 @@ const vA = mk(vs, 'circle', { cx: 300, cy: 300, r: 160, fill: ACB, stroke: AC, '
 const vAL = txt(vs, 300, 120, 'A', { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-style': 'italic', 'font-size': 40, 'font-weight': 700, fill: AC });
 const vCpP = mk(vs, 'g', {}), vCp = mk(vCpP, 'g', {}); mk(vCp, 'circle', { cx: 0, cy: 0, r: 160, fill: 'none', stroke: AC, 'stroke-width': 4, 'stroke-dasharray': '12 8' });
 const vEl = [[250, 250], [350, 260], [270, 350], [360, 360]].map(([x, y]) => mk(vs, 'circle', { cx: x, cy: y, r: 13, fill: XC }));
-const vPhiP = mk(vs, 'g', {}), vPhi = mk(vPhiP, 'g', {}); mk(vPhi, 'circle', { r: 46, fill: '#fff', stroke: C.ink, 'stroke-width': 3, 'stroke-dasharray': '8 6' }); txt(vPhi, 0, 14, 'φ', { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-size': 40, fill: C.ink, 'font-weight': 600 });
+const vPhiP = mk(vs, 'g', {}), vPhi = mk(vPhiP, 'g', {}); mk(vPhi, 'circle', { r: 34, fill: '#fff', stroke: C.ink, 'stroke-width': 3, 'stroke-dasharray': '8 6' }); txt(vPhi, 0, 11, 'φ', { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-size': 32, fill: C.ink, 'font-weight': 600 });
 const vCap = txt(vs, 392, 520, '', { 'text-anchor': 'middle', 'font-size': 20, fill: C.ink2, 'font-weight': 600 });
 
 /* ---------- E: equal sets ---------- */
@@ -67,8 +67,8 @@ const DUPA = [2], DUPB = [4];
 /* ---------- Z: number sets ---------- */
 const zs = $('#zS');
 const ZR = [['R', 392, 300, 352, 250, '#F3F4F7', C.ink], ['Q', 300, 300, 240, 190, '#FCE6DF', C.ac], ['Z', 262, 300, 172, 136, BCB, BC], ['N', 236, 300, 96, 80, ACB, AC]];
-const zE = ZR.map(([n, cx, cy, rx, ry, f, s]) => { const e = mk(zs, 'ellipse', { cx, cy, rx, ry, fill: f, stroke: s, 'stroke-width': 3.5 }); const l = txt(zs, cx - rx + 26, cy - 6, n, { 'font-family': 'KaTeX_AMS, Poppins', 'font-size': 34, 'font-weight': 700, fill: s }); return { e, l }; });
-attr(zE[3].l, 'x', 222); attr(zE[3].l, 'y', 312);
+const zE = ZR.map(([n, cx, cy, rx, ry, f, s]) => ({ e: mk(zs, 'ellipse', { cx, cy, rx, ry, fill: f, stroke: s, 'stroke-width': 3.5 }) }));
+ZR.forEach(([n, cx, cy, rx, ry, f, s], k) => { zE[k].l = txt(zs, k === 3 ? cx : cx - rx * 0.62, k === 3 ? cy + 12 : cy - ry * 0.62, n, { 'text-anchor': 'middle', 'font-family': 'KaTeX_AMS, Poppins', 'font-size': 34, 'font-weight': 700, fill: s }); });
 const zT = mk(zs, 'ellipse', { cx: 640, cy: 300, rx: 72, ry: 110, fill: '#FFF4D6', stroke: C.gold, 'stroke-width': 3.5 });
 const zTL = txt(zs, 640, 250, 'T', { 'text-anchor': 'middle', 'font-family': 'KaTeX_AMS, Poppins', 'font-size': 34, 'font-weight': 700, fill: C.gold });
 const zTx = [['√2', 640, 300], ['π', 640, 350]].map(([s, x, y]) => txt(zs, x, y, s, { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-size': 26, fill: C.gold, 'font-weight': 600 }));
@@ -189,7 +189,7 @@ M.on(t => {
     M.vis(vA, t, tV1 + 0.5, 1e9, { dy: 0, sc: 0.7, fade: 0.2 }); M.vis(vAL, t, tV1 + 0.6, 1e9, { dy: 0 });
     vEl.forEach((e, i) => M.vis(e, t, tV1 + 0.7 + i * 0.08, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 }));
     const u = M.io((t - wt('V2', 'subset') + 0.1) / 0.9); attr(vCpP, 'transform', `translate(${(620 - 320 * u).toFixed(1)},300)`); M.vis(vCp, t, wt('V2', 'Every') - 0.1, T0('V3'), { dy: 0, fade: 0.2, outDur: 0.3, ody: 0 });
-    const p = M.io((t - wt('V3', 'empty')) / 0.9); attr(vPhiP, 'transform', `translate(${(640 - 300 * p).toFixed(1)},${(470 - 170 * p).toFixed(1)})`); M.vis(vPhi, t, wt('V3', 'empty') - 0.2, 1e9, { dy: 0, fade: 0.15 });
+    const p = M.io((t - wt('V3', 'empty')) / 0.9); attr(vPhiP, 'transform', `translate(${(640 - 330 * p).toFixed(1)},${(470 - 165 * p).toFixed(1)})`); M.vis(vPhi, t, wt('V3', 'empty') - 0.2, 1e9, { dy: 0, fade: 0.15 });
     M.setT(vCap, t < T0('V3') ? 'A fits exactly on A' : 'φ has no element, so nothing fails'); M.vis(vCap, t, wt('V2', 'itself'), 1e9, { dy: 0 });
   }
 

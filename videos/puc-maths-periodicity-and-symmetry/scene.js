@@ -109,7 +109,7 @@ const hBr = [0, 1, 2].map(k => brk(hs, MX0 + PXB * k, MX0 + PXB * (k + 1), 150, 
 
 /* ---------- P: keep turning ---------- */
 const ps = $('#pS'), SX = 300, SY = 330, SR = 160, pg = GG(660, 1540, 0, 4 * PI, SY, SR);
-const pu = UC(ps, { cx: SX, cy: SY, R: SR, ax: 44, fs: 24, r0: 38 });
+const pu = UC(ps, { cx: SX, cy: SY, R: SR, ax: 44, fs: 24, r0: 38 }); M.setT(pu.thT, 'x'); M.setT(pu.sinT, 'sin x'); M.setT(pu.cosT, 'cos x');
 const pAx = axes(ps, pg, 640, 1560, 150, 510, [[0, '0'], [PI, 'π'], [2 * PI, '2π'], [3 * PI, '3π'], [4 * PI, '4π']], 534);
 txt(pAx, 648, pg.Y(1) + 6, '1', { 'text-anchor': 'end', 'font-size': 18 }); txt(pAx, 648, pg.Y(-1) + 6, MIN + '1', { 'text-anchor': 'end', 'font-size': 18 });
 const pCur = mk(ps, 'path', { d: '', fill: 'none', stroke: SI, 'stroke-width': 5, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' });
@@ -137,7 +137,7 @@ const tWn = [tDs[2], wt('D4', 'again'), wt('D4', 'integer')];
 const dWinX = t => { let k = 0; tWn.forEach((tt, i) => { if (i) k += M.io((t - tt) / 0.6); }); return k; };
 
 /* ---------- G: tangent, period pi ---------- */
-const gs = $('#gS'), GA = 35 * D2R, gu = UC(gs, { cx: 392, cy: 290, R: 180, ax: 40, fs: 22, r0: 34 });
+const gs = $('#gS'), GA = 35 * D2R, gu = UC(gs, { cx: 392, cy: 290, R: 180, ax: 40, fs: 22, r0: 34 }); M.setT(gu.thT, 'x'); M.setT(gu.sinT, 'sin x'); M.setT(gu.cosT, 'cos x');
 gu.set(GA);
 const gQ = mk(gs, 'g', {}); const gDia = mk(gQ, 'line', { x1: 392, y1: 290, x2: 392 - 180 * Math.cos(GA), y2: 290 + 180 * Math.sin(GA), stroke: C.ink, 'stroke-width': 3.5, 'stroke-dasharray': '7 6' });
 mk(gQ, 'line', { x1: 392, y1: 290, x2: 392 - 180 * Math.cos(GA), y2: 290, stroke: CO, 'stroke-width': 7, 'stroke-linecap': 'round', opacity: 0.55 });
@@ -202,7 +202,7 @@ $('#wq').innerHTML = `Find the value of<br>${K(`${si('\\sin')}(-1050^\\circ)`)}`
 const wsol = PUC.solution($('#wl'), [[K(`\\sin(-1050^\\circ) = -\\sin 1050^\\circ`)], [K(`1050^\\circ = 3 \\times 360^\\circ - 30^\\circ`)], [K(`\\sin 1050^\\circ = \\sin(-30^\\circ) = -\\tfrac{1}{2}`)], [K(`\\sin(-1050^\\circ) = -\\left(-\\tfrac{1}{2}\\right) = \\tfrac{1}{2}`)]], { label: 'WORKED EXAMPLE', y0: 220, dy: 84 });
 $('#wl .lbl').style.top = '30px';
 const tW = [wt('W3', 'odd'), wt('W4', 'three'), wt('W5', 'minus'), wt('W6', 'answer')];
-const ws = $('#wS'), wu = UC(ws, { cx: 392, cy: 320, R: 180, ax: 40, fs: 22, r0: 36 });
+const ws = $('#wS'), wu = UC(ws, { cx: 392, cy: 320, R: 180, ax: 40, fs: 22, r0: 36 }); M.setT(wu.thT, 'x'); M.setT(wu.sinT, 'sin x'); M.setT(wu.cosT, 'cos x');
 M.setT(wu.thT, ''); M.setT(wu.cosT, ''); 
 const wTurns = txt(ws, 744, 540, '', { 'text-anchor': 'end', 'font-size': 22, 'font-weight': 700, fill: TH });
 const wSpin = t => -1050 * D2R * M.io((t - wt('W4', 'three') + 0.2) / 2.6);

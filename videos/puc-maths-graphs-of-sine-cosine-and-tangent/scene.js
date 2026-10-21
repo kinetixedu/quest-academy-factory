@@ -108,7 +108,7 @@ const tPen = wt('H4', 'valve') - 0.2;
 
 /* ---------- P: sine wave from the circle ---------- */
 const ps = $('#pS'), SX = 300, SY = 320, SR = 170, pg = GG(660, 1540, 0, 2 * PI, SY, SR);
-const pu = UC(ps, { cx: SX, cy: SY, R: SR, ax: 46, fs: 24, r0: 40 });
+const pu = UC(ps, { cx: SX, cy: SY, R: SR, ax: 46, fs: 24, r0: 40 }); M.setT(pu.thT, 'x'); M.setT(pu.sinT, 'sin x'); M.setT(pu.cosT, 'cos x');
 const pAx = axes(ps, pg, 640, 1560, 130, 510, Q4, 534);
 txt(pAx, 1556, SY - 14, 'x', { 'text-anchor': 'end', 'font-size': 20, 'font-family': 'Poppins', 'font-style': 'italic', 'font-weight': 600, fill: C.ink2 });
 txt(pAx, 648, pg.Y(1) + 6, '1', { 'text-anchor': 'end', 'font-size': 18 }); txt(pAx, 648, pg.Y(-1) + 6, MIN + '1', { 'text-anchor': 'end', 'font-size': 18 });
@@ -139,7 +139,7 @@ const dCur = mk(ds, 'path', { d: dg.path(Math.sin, 0, 2 * PI), fill: 'none', str
 
 /* ---------- C: cosine wave ---------- */
 const cs = $('#cS'), cg = GG(660, 1540, 0, 2 * PI, SY, SR);
-const cu = UC(cs, { cx: SX, cy: SY, R: SR, ax: 46, fs: 24, r0: 40 });
+const cu = UC(cs, { cx: SX, cy: SY, R: SR, ax: 46, fs: 24, r0: 40 }); M.setT(cu.thT, 'x'); M.setT(cu.sinT, 'sin x'); M.setT(cu.cosT, 'cos x');
 const cAx = axes(cs, cg, 640, 1560, 130, 510, Q4, 534);
 txt(cAx, 648, cg.Y(1) + 6, '1', { 'text-anchor': 'end', 'font-size': 18 }); txt(cAx, 648, cg.Y(-1) + 6, MIN + '1', { 'text-anchor': 'end', 'font-size': 18 });
 const cGhost = mk(cs, 'path', { d: cg.path(Math.cos, 0, 2 * PI), fill: 'none', stroke: GR, 'stroke-width': 2.5, 'stroke-dasharray': '2 8', 'stroke-linecap': 'round' });

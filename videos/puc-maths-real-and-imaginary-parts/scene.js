@@ -94,7 +94,7 @@ let pSwap = false;
 $('#stF').innerHTML = K(`z = ${A('a')} + ${I}\\,${B('b')}: \\quad \\text{Re}\\,z = ${A('a')}, \\quad \\text{Im}\\,z = ${B('b')}`);
 
 /* ---------- W: worked example with a live k ---------- */
-$('#wq').innerHTML = `${K(`z = (${A('k - 2')}) + (${B('k^2 - 9')})\\,${I}`)}<br>k real. When is z purely real? Purely imaginary?`;
+$('#wq').innerHTML = `${K(`z = (${A('k - 2')}) + (${B('k^2 - 9')})\\,${I}`)}<br><span style="font-size:26px">k is real. For which k is z purely real? Purely imaginary?</span>`;
 const wsol = PUC.solution($('#wl'), [
   [K(`\\text{Re}\\,z = ${A('k - 2')}, \\quad \\text{Im}\\,z = ${B('k^2 - 9')}`)],
   [K(`\\text{real: } ${B('k^2 - 9')} = 0 \\Rightarrow k = \\pm 3`)],
@@ -116,7 +116,7 @@ const trap = PUC.trap($('#trap'), { wrong: K(`\\text{Im}(3 - 4${I}) = -4${I}`), 
 const ts = $('#tS');
 const tz = txt(ts, 60, 130, '', { 'font-family': 'Poppins', 'font-size': 64, 'font-weight': 700 });
 [['3', RE], [' - ', C.ink], ['4', RC], [' i', IM]].forEach(([s, col]) => { const sp = mk(tz, 'tspan', { fill: col }); sp.textContent = s; });
-const tU = [txt(ts, 60, 186, 'Re = 3', { fill: RE, 'font-size': 20, 'font-weight': 600 }), txt(ts, 168, 186, 'Im = -4', { fill: RC, 'font-size': 20, 'font-weight': 600 }), txt(ts, 290, 186, 'i is just the marker', { fill: IM, 'font-size': 18, 'font-weight': 600 })];
+const tU = [txt(ts, 60, 186, 'Re = 3', { fill: RE, 'font-size': 20, 'font-weight': 600 }), txt(ts, 180, 186, 'Im = -4', { fill: RC, 'font-size': 20, 'font-weight': 600 }), txt(ts, 60, 220, 'i is just the marker', { fill: IM, 'font-size': 18, 'font-weight': 600 })];
 const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'PUC BOARDS'], type: 'Find when a complex number is purely real or purely imaginary.' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 940,
   q: `${K(`z = (${A('k^2 - 4')}) + (${B('k^2 - 5k + 6')})\\,${I}, \\quad k \\in \\mathbb{Z}`)}<br>For how many integers k is z purely imaginary?`,
@@ -139,7 +139,7 @@ const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
 const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]]]);
-const avD = PUC.avatar($('#sS'), { x: 976 + 36, y: 270 + 400, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'So the street is just the real numbers.' });
+const avD = PUC.avatar($('#sS'), { x: 976 + 36, y: 270 + 488, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'So the street is just the real numbers.' });
 
 /* ---------- frame ---------- */
 M.on(t => {
