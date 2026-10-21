@@ -1,0 +1,270 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Engineering Mechanics Ep 1 - Forces and Force Systems</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<style>
+/* ===== engg-mech world: Workshop CAD (v2 components ported from the MBA reference episodes) ===== */
+:root{--bg:#E9ECEF;--dot:#CDD3DA;--steel:#2E3742;--steel2:#3E4855;--mid:#6C7886;--dim:#A9B2BD;--line:#CBD2DA;--card:#F7F8FA;--orange:#FF6A13;--soft:#FFE3D2;--track:#DDE2E7;--red:#C2410C}
+#stage{background:var(--bg);font-family:Barlow;font-weight:500;color:var(--steel)}
+#grid{position:absolute;left:0;top:0}
+#prog{position:absolute;left:0;top:0;height:6px;width:1920px;background:var(--line);z-index:60}
+#prog i{display:block;height:6px;background:var(--orange);width:0}
+#cam{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.cond{font-family:'Barlow Condensed';font-weight:700;text-transform:uppercase;letter-spacing:.02em}
+.mono{font-family:'IBM Plex Mono';font-weight:600}
+.chip{position:absolute;display:inline-flex;align-items:center;gap:14px;height:44px;padding:0 18px;border-radius:4px;background:var(--steel);color:#fff;font:600 20px 'Barlow Condensed';letter-spacing:.2em;white-space:nowrap}
+.chip i{width:10px;height:10px;background:var(--orange)}
+.chip.ghost{background:transparent;color:var(--mid);border:2px dashed var(--dim);height:40px;font-size:18px}
+#title{position:absolute;left:0;top:0;line-height:1;white-space:nowrap;transform-origin:0 0;color:var(--steel)}
+.acc{color:var(--orange)}
+#sub{position:absolute;left:0;top:650px;width:1920px;text-align:center;font:500 34px Barlow;color:var(--mid)}
+#tdim{position:absolute;left:0;top:0}
+.card{position:absolute;background:var(--card);border:2px solid var(--line);border-radius:8px;box-shadow:0 14px 30px -18px rgba(46,55,66,.35)}
+.lbl{position:absolute;font:600 19px 'Barlow Condensed';letter-spacing:.18em;color:var(--mid);white-space:nowrap;text-transform:uppercase}
+.abs{position:absolute}
+.pill{position:absolute;height:48px;padding:0 18px;border-radius:4px;display:flex;align-items:center;gap:10px;font:600 24px Barlow;white-space:nowrap;background:var(--track);color:var(--steel)}
+.pill.bad{background:#FBE1D3;color:var(--red)}
+.pill.or{background:var(--orange);color:#fff}
+.pill.st{background:var(--steel);color:#fff}
+.tagp{position:absolute;height:48px;padding:0 18px;border-radius:4px;background:var(--steel);color:#fff;display:flex;align-items:center;font:700 26px 'Barlow Condensed';letter-spacing:.06em;white-space:nowrap;text-transform:uppercase}
+.big{position:absolute;font-size:64px;line-height:1;white-space:nowrap}
+.av{position:absolute;width:72px;height:72px;border-radius:36px;background-size:cover;background-position:center;box-shadow:0 0 0 4px var(--steel)}
+.avn{position:absolute;width:140px;text-align:center;font:700 26px 'Barlow Condensed';letter-spacing:.04em;white-space:nowrap;text-transform:uppercase}
+.avr{position:absolute;width:140px;text-align:center;font:600 15px 'Barlow Condensed';letter-spacing:.16em;color:var(--mid);white-space:nowrap}
+/* hook */
+#ill{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+#path{left:976px;top:270px;width:784px;height:274px}
+#ask{left:976px;top:576px;width:784px;height:274px}
+#askT{position:absolute;left:36px;top:160px;font-size:62px;white-space:nowrap}
+/* meet */
+#ill2{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+#proj{left:976px;top:270px;width:784px;height:274px}
+#team{left:976px;top:576px;width:784px;height:274px}
+/* definition */
+#dq{position:absolute;left:0;width:1920px;top:470px;text-align:center;font-size:96px;white-space:nowrap}
+#kq{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+.ql{position:absolute;left:48px;font:500 31px Barlow;white-space:nowrap;color:var(--steel)}
+.ql .hl{font-weight:700}
+#br{left:976px;top:270px;width:784px;height:274px}
+#sw{left:976px;top:576px;width:784px;height:274px}
+.bx{position:absolute;height:64px;padding:0 22px;border-radius:4px;display:flex;align-items:center;gap:12px;font:700 30px 'Barlow Condensed';letter-spacing:.04em;white-space:nowrap;text-transform:uppercase;background:var(--track);color:var(--steel)}
+.bx small{font:500 22px Barlow;letter-spacing:0;text-transform:none;color:var(--mid)}
+/* force */
+#fc{left:160px;top:270px;width:1048px;height:580px;overflow:hidden}
+#un{left:1240px;top:270px;width:520px;height:580px}
+.fl{position:absolute;height:44px;padding:0 16px;border-radius:4px;display:flex;align-items:center;gap:10px;font:700 22px 'Barlow Condensed';letter-spacing:.1em;white-space:nowrap;text-transform:uppercase;background:var(--steel);color:#fff}
+.fl.or{background:var(--orange)}
+.fl .v{font:600 22px 'IBM Plex Mono';letter-spacing:0}
+.eq{position:absolute;left:40px;font:600 40px 'IBM Plex Mono';white-space:nowrap}
+/* process */
+#mL,#mR{top:270px;height:580px;width:784px;overflow:hidden}
+#mL{left:160px}#mR{left:976px}
+.mIn{left:0;top:0;width:784px;height:580px}
+.mav{position:absolute;left:40px;top:28px;width:56px;height:56px;border-radius:28px;background-size:cover;background-position:center;box-shadow:0 0 0 3px #2E3742}
+.mlb{left:116px;top:46px}
+.plan{position:absolute;left:40px;top:104px}
+.ro{position:absolute;top:422px;width:338px;height:72px;border-radius:4px;background:var(--track)}
+.ro .k{position:absolute;left:18px;top:10px;font:600 16px 'Barlow Condensed';letter-spacing:.18em;color:var(--mid);white-space:nowrap}
+.ro .n{position:absolute;right:18px;top:16px;font:600 38px 'IBM Plex Mono';line-height:40px;white-space:nowrap}
+.mst{position:absolute;left:40px;top:510px;height:52px;padding:0 20px;border-radius:4px;display:flex;align-items:center;gap:12px;font:600 24px Barlow;white-space:nowrap;background:var(--track);color:var(--steel)}
+/* force systems */
+.fs{position:absolute;width:784px;height:274px}
+.fs .bg{position:absolute;inset:0;border-radius:8px;background:var(--card);border:2px solid var(--line)}
+.fs .nm{position:absolute;left:36px;top:28px;font:600 18px 'IBM Plex Mono';color:var(--mid)}
+.fs .tt{position:absolute;left:36px;top:58px;font-size:48px;white-space:nowrap}
+.fs .ds{position:absolute;left:36px;top:124px;font:500 26px Barlow;white-space:nowrap;color:var(--steel2)}
+.fs .ex{position:absolute;left:36px;top:190px;height:44px;padding:0 16px;border-radius:4px;display:flex;align-items:center;gap:10px;font:600 21px Barlow;white-space:nowrap;background:var(--track);color:var(--steel)}
+.fs svg{position:absolute;left:470px;top:22px}
+#ncp{position:absolute;left:160px;top:868px}
+/* at work today */
+#kl{left:160px;top:270px;width:624px;height:580px}
+#kp{left:816px;top:270px;width:944px;height:580px}
+.kr{position:absolute;left:24px;width:576px;height:80px;border-radius:4px}
+.kr .bg{position:absolute;inset:0;border-radius:4px;background:var(--track)}
+.kr .rn{position:absolute;left:24px;top:24px;font:600 24px 'IBM Plex Mono'}
+.kr .ri{position:absolute;left:84px;top:12px;width:56px;height:56px;border-radius:4px;background:#fff;display:flex;align-items:center;justify-content:center}
+.kr .rt{position:absolute;left:164px;top:18px;font:700 34px 'Barlow Condensed';letter-spacing:.04em;white-space:nowrap;text-transform:uppercase}
+.pn{position:absolute;inset:0}
+.pn .ps{position:absolute;left:48px;top:44px;font:600 20px 'Barlow Condensed';letter-spacing:.2em;color:var(--orange);white-space:nowrap}
+.pn .pt{position:absolute;left:48px;top:80px;font-size:92px;line-height:1;white-space:nowrap}
+.pn .pm{position:absolute;left:48px;top:190px;font:500 34px Barlow;color:var(--steel2);white-space:nowrap}
+.pn .hr{position:absolute;left:48px;right:48px;top:262px;height:2px;background:var(--line)}
+.ka{position:absolute;left:48px;width:848px;height:96px}
+.ka i{position:absolute;left:0;top:12px;width:72px;height:72px;border-radius:4px;background:var(--track);display:flex;align-items:center;justify-content:center}
+.ka i.f{background-size:cover;background-position:center;border-radius:36px;box-shadow:0 0 0 3px #2E3742}
+.ka .kl{position:absolute;left:100px;top:12px;font:600 18px 'Barlow Condensed';letter-spacing:.18em;color:var(--mid);white-space:nowrap}
+.ka .kt{position:absolute;left:100px;top:42px;font:600 30px Barlow;white-space:nowrap}
+/* human side */
+#xs{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+#xw{left:976px;top:270px;width:784px;height:580px}
+.xc{position:absolute;height:48px;padding:0 18px;border-radius:4px;display:flex;align-items:center;gap:10px;font:600 23px Barlow;white-space:nowrap}
+#fact{position:absolute;left:40px;top:40px;width:700px;height:200px;border-radius:4px;background:var(--track)}
+#fact i{position:absolute;left:24px;top:24px;width:72px;height:72px;border-radius:4px;background:#fff;display:flex;align-items:center;justify-content:center}
+#fact .kl{position:absolute;left:120px;top:26px;font:600 18px 'Barlow Condensed';letter-spacing:.18em;color:var(--mid);white-space:nowrap}
+#fact .kt{position:absolute;left:120px;top:58px;font:600 30px Barlow;line-height:1.3;width:560px}
+.xr{position:absolute;left:40px;width:700px;height:72px}
+.xr .fa{position:absolute;left:0;top:0;width:72px;height:72px;border-radius:36px;background-size:cover;background-position:center;box-shadow:0 0 0 3px #2E3742}
+.xr .bb{position:absolute;left:96px;top:12px;height:48px;padding:0 18px;border-radius:4px;display:flex;align-items:center;gap:10px;font:600 24px Barlow;white-space:nowrap;background:var(--track);color:var(--steel)}
+#both{position:absolute;left:160px;top:470px;width:1600px;height:140px;border-radius:8px;background:var(--steel);color:#fff;display:flex;align-items:center;justify-content:center;gap:22px}
+#both .tx{font-size:58px;white-space:nowrap}
+/* statement sweep (steel, CAD hatch, orange cutting-plane edge) */
+#sweep{position:absolute;left:0;top:0;width:1920px;height:1080px;background:var(--steel) repeating-linear-gradient(45deg,rgba(255,255,255,.05) 0 2px,transparent 2px 28px);z-index:40}
+#sweep b{position:absolute;left:0;top:0;width:10px;height:1080px;background:var(--orange)}
+#stmt{position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:41}
+#st1{position:absolute;left:0;width:1920px;top:392px;text-align:center;font:500 54px Barlow;color:#C9D1DA;white-space:nowrap}
+#st2{position:absolute;left:0;width:1920px;top:484px;text-align:center;font-size:110px;color:#fff;white-space:nowrap}
+/* quiz */
+.qq{position:absolute;left:160px;font-size:70px;line-height:1.1;white-space:nowrap}
+.opt{position:absolute;top:500px;width:376px;height:200px}
+.opt .bg{position:absolute;inset:0;border-radius:8px;background:var(--card);border:2px solid var(--line)}
+.opt .lt{position:absolute;left:28px;top:26px;width:52px;height:52px;border:2.5px solid var(--steel);border-radius:4px;display:flex;align-items:center;justify-content:center;font:600 24px 'IBM Plex Mono'}
+.opt .ot{position:absolute;left:28px;top:112px;font:600 52px 'IBM Plex Mono';white-space:nowrap}
+.opt .ok{position:absolute;right:26px;top:26px;width:52px;height:52px;border-radius:4px;background:var(--orange);display:flex;align-items:center;justify-content:center}
+#ring{position:absolute;left:1610px;top:236px;width:150px;height:150px}
+#ringN{position:absolute;left:1610px;top:236px;width:150px;height:150px;display:flex;align-items:center;justify-content:center;font:600 64px 'IBM Plex Mono'}
+#take{position:absolute;left:160px;top:748px;width:1600px;height:96px;border-radius:8px;background:var(--steel);color:#fff;display:flex;align-items:center;gap:22px;padding:0 36px}
+#take .tx{font-size:44px;white-space:nowrap}
+/* recap */
+#rh{position:absolute;left:160px;top:142px;font-size:72px;white-space:nowrap}
+.rw{position:absolute;left:160px;width:1600px;height:128px}
+.rw .rn{position:absolute;left:40px;top:42px;font:600 32px 'IBM Plex Mono';color:var(--orange)}
+.rw .ri{position:absolute;left:116px;top:28px;width:72px;height:72px;border-radius:4px;background:var(--track);display:flex;align-items:center;justify-content:center}
+.rw .rt{position:absolute;left:216px;top:38px;font:600 38px Barlow;white-space:nowrap}
+.fp{position:absolute;top:36px;height:56px;padding:0 20px;border-radius:4px;display:flex;align-items:center;font:600 24px Barlow;white-space:nowrap;background:var(--track);color:var(--steel)}
+#next{position:absolute;left:160px;top:762px;width:1600px;height:96px;border-radius:8px;background:var(--steel);color:#fff;display:flex;align-items:center;gap:24px;padding:0 32px}
+#next .nc{height:44px;padding:0 16px;border-radius:4px;background:var(--orange);display:flex;align-items:center;font:700 20px 'Barlow Condensed';letter-spacing:.16em;color:#fff;white-space:nowrap}
+#next .nt{font:700 40px 'Barlow Condensed';letter-spacing:.03em;text-transform:uppercase;white-space:nowrap;flex:1}
+.cap{font:600 38px Barlow;color:#fff;background:var(--steel);padding:12px 30px;border-radius:6px}
+.cap .cw{color:#8D98A6}.cap .cw.on{color:#fff}.cap .cw.act{color:var(--orange)}
+</style></head><body>
+<div id="stage">
+  <svg id="grid" width="1920" height="1080"><defs><pattern id="iso" width="32" height="55.4256" patternUnits="userSpaceOnUse"><g fill="#CDD3DA"><circle cx="0" cy="0" r="1.7"/><circle cx="32" cy="0" r="1.7"/><circle cx="16" cy="27.7128" r="1.7"/><circle cx="0" cy="55.4256" r="1.7"/><circle cx="32" cy="55.4256" r="1.7"/></g></pattern></defs><rect width="1920" height="1080" fill="url(#iso)"/></svg>
+  <div id="cam">
+    <div class="chip" id="eyebrow"><i></i>EP 01 · ENGINEERING MECHANICS</div>
+    <div class="cond" id="title">Forces and <span class="acc">Force Systems</span></div>
+    <svg id="tdim" width="1920" height="1080"><g id="tdimG" stroke="#6C7886" stroke-width="2" fill="none"></g></svg>
+    <div id="sub">What is engineering mechanics? Explained with one old auto</div>
+    <div class="chip ghost" id="exChip">EXAMPLE FIGURES</div>
+
+    <!-- A: hook -->
+    <div id="sA">
+      <div class="card" id="ill"><div class="abs" id="illIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:40px;top:36px">SALIM AUTO WORKS · PEENYA, BENGALURU</div>
+        <img id="illImg" src="../../assets/illustrations/engg-mech/emech-scene-push-cut.png" style="position:absolute;left:92px;top:100px;width:600px;height:450px">
+      </div><div class="tagp" id="tgK">Kiran</div><div class="tagp" id="tgS">Salim</div></div>
+      <div class="card" id="path"><div class="lbl" style="left:36px;top:30px">SEEN FROM ABOVE</div><svg id="pathS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="ask"><div class="lbl" style="left:36px;top:30px">WHAT WENT WRONG?</div><div id="meth"></div><div class="cond big" id="askT">Nobody checked <span class="acc">which way.</span></div></div>
+    </div>
+
+    <!-- L: meet the team -->
+    <div id="sL">
+      <div class="card" id="ill2"><div class="abs" id="ill2In" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:40px;top:36px">THE TEAM AT THE WORKBENCH</div>
+        <img id="ill2Img" src="../../assets/illustrations/engg-mech/emech-scene-team-cut.png" style="position:absolute;left:92px;top:100px;width:600px;height:450px">
+      </div></div>
+      <div class="card" id="proj"><div class="lbl" style="left:36px;top:30px">THE PROJECT</div><div id="projR"></div></div>
+      <div class="card" id="team"><div class="lbl" style="left:36px;top:30px">THE CAST</div><div id="tRow"></div></div>
+    </div>
+
+    <!-- D: definition -->
+    <div id="sD">
+      <div class="cond" id="dq">So what is <span class="acc">engineering mechanics?</span></div>
+      <div class="card" id="kq"><div class="abs" id="kqIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:48px;top:40px">THE TEXTBOOK DEFINITION</div>
+        <svg id="bookS" width="124" height="166" style="position:absolute;left:48px;top:88px">
+          <rect x="10" y="8" width="112" height="156" rx="6" fill="#CBD2DA"/>
+          <rect x="0" y="0" width="112" height="156" rx="6" fill="#2E3742"/>
+          <rect x="0" y="0" width="14" height="156" rx="4" fill="#FF6A13"/>
+          <rect id="bl1" x="30" y="36" width="62" height="8" rx="2" fill="#A9B2BD"/><rect id="bl2" x="30" y="54" width="46" height="8" rx="2" fill="#A9B2BD"/><rect id="bl3" x="30" y="72" width="56" height="8" rx="2" fill="#A9B2BD"/>
+          <circle cx="62" cy="122" r="14" fill="none" stroke="#FF6A13" stroke-width="4"/>
+        </svg>
+        <div class="cond" id="kot1" style="position:absolute;left:204px;top:96px;font-size:54px;white-space:nowrap">R. C. <span class="acc">Hibbeler</span></div>
+        <div class="lbl" id="kbk" style="left:204px;top:168px">ENGINEERING MECHANICS: STATICS</div>
+        <div id="kqHr" style="position:absolute;left:48px;right:48px;top:290px;height:2px;background:var(--line)"></div>
+        <div class="ql" id="ql0" style="top:314px">"Mechanics is a branch of the physical</div>
+        <div class="ql" id="ql1" style="top:362px">sciences that is concerned with the <span class="hl" id="hl0">state</span></div>
+        <div class="ql" id="ql2" style="top:410px"><span class="hl" id="hl1">of rest or motion of bodies</span> that are</div>
+        <div class="ql" id="ql3" style="top:458px">subjected to the <span class="hl" id="hl2">action of forces."</span></div>
+      </div></div>
+      <div class="card" id="br"><div class="lbl" style="left:36px;top:30px">TWO BRANCHES</div><svg id="brS" width="784" height="274" style="position:absolute;left:0;top:0"></svg><div id="brB"></div></div>
+      <div class="card" id="sw"><div class="lbl" style="left:36px;top:30px">IN SIMPLE WORDS</div><div id="swRow"></div></div>
+    </div>
+
+    <!-- F: what is a force -->
+    <div id="sF">
+      <div class="card" id="fc"><div class="lbl" style="left:40px;top:36px">ONE FORCE ON THE AUTO · SIDE VIEW</div><svg id="fcS" width="1048" height="580" style="position:absolute;left:0;top:0"></svg><div id="fcL"></div></div>
+      <div class="card" id="un"><div class="lbl" style="left:40px;top:36px">THE UNIT · NEWTON</div>
+        <div class="cond" id="unN" style="position:absolute;left:40px;top:84px;font-size:84px;line-height:1">1 <span class="acc">N</span></div>
+        <div class="eq" id="unE" style="top:190px">= 1 kg × 1 m/s²</div>
+        <svg id="apple" width="120" height="120" style="position:absolute;left:40px;top:278px"></svg>
+        <div id="unA" style="position:absolute;left:180px;top:300px;font:600 28px Barlow;line-height:1.3;width:300px">About the weight of a 100 g apple</div>
+        <div class="lbl" id="unC" style="left:180px;top:378px">0.1 kg × 9.81 m/s² = 0.98 N</div>
+        <div class="pill or" id="vec" style="left:40px;top:470px"><span id="vecI"></span>Size + direction = a vector</div>
+      </div>
+    </div>
+
+    <!-- M: the push, replayed -->
+    <div id="sM">
+      <div class="card" id="mL"><div class="abs mIn" id="mLIn"></div></div>
+      <div class="card" id="mR"><div class="abs mIn" id="mRIn"></div></div>
+    </div>
+
+    <!-- P: force systems -->
+    <div id="sP"><div id="fsT"></div><div class="pill st" id="ncp"><span id="ncpI"></span>Not on one flat plane? Non coplanar</div></div>
+
+    <!-- K: at work today -->
+    <div id="sK">
+      <div class="card" id="kl"><div class="lbl" style="left:48px;top:40px">AT WORK TODAY</div><div id="kRows"></div></div>
+      <div class="card" id="kp"><div id="kPans"></div></div>
+    </div>
+
+    <!-- X: the human side -->
+    <div id="sX">
+      <div class="card" id="xs"><div class="abs" id="xsIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:48px;top:40px">IS THIS ALWAYS ENOUGH?</div>
+        <svg id="scl" width="688" height="250" style="position:absolute;left:48px;top:84px">
+          <rect x="254" y="226" width="180" height="20" rx="4" fill="#2E3742"/>
+          <rect x="338" y="40" width="12" height="190" fill="#2E3742"/>
+          <g id="panL"></g><g id="panR"></g>
+          <g id="beam"><rect x="64" y="34" width="560" height="12" rx="3" fill="#2E3742"/></g>
+          <circle cx="344" cy="40" r="14" fill="#FF6A13"/>
+        </svg>
+        <div class="lbl" id="xgL" style="left:48px;top:352px;color:#2E3742">THE GOOD SIDE</div>
+        <div class="lbl" id="xhL" style="left:408px;top:352px;color:#C2410C">THE HARD SIDE</div>
+        <div id="xChips"></div>
+      </div></div>
+      <div class="card" id="xw">
+        <div id="fact"><i id="factI"></i><div class="kl">USA · 1940 · TACOMA NARROWS BRIDGE</div><div class="kt">Opened in July. By November, wind forces twisted its thin deck until it fell.</div></div>
+        <div class="xr" id="xr0" style="top:290px"><div class="fa" style="background-image:url(../../assets/illustrations/engg-mech/emech-salim-face.jpg)"></div><div class="bb" id="bb0">New rule for the whole project</div></div>
+        <div class="xr" id="xr1" style="top:390px"><div class="fa" style="background-image:url(../../assets/illustrations/engg-mech/emech-kiran-face.jpg)"></div><div class="bb" id="bb1" style="background:#FF6A13;color:#fff"><span id="bb1I"></span>Draw every force, then lift or tow</div></div>
+      </div>
+      <div class="chip ghost" id="lesson" style="left:160px;top:390px">THE LESSON</div><div id="both"><span id="bothI"></span><span class="cond tx">Every force counts,</span><span class="cond tx" style="color:#FF6A13">even the unseen ones</span></div>
+    </div>
+
+    <!-- quick check -->
+    <div id="quiz">
+      <div class="chip" id="qchip" style="left:160px;top:120px"><i></i>QUICK CHECK</div>
+      <div class="cond qq" id="qq1" style="top:224px">200 N and 300 N, same line, same way.</div><div class="cond qq acc" id="qq2" style="top:310px">What is the total force?</div>
+      <svg id="ring" viewBox="0 0 150 150"><circle cx="75" cy="75" r="66" fill="#F7F8FA" stroke="#CBD2DA" stroke-width="8"/><circle id="ringA" cx="75" cy="75" r="66" fill="none" stroke="#FF6A13" stroke-width="8" stroke-linecap="round" transform="rotate(-90 75 75)"/></svg>
+      <div id="ringN"></div>
+      <div id="opts"></div>
+      <div id="take"><span id="takeI"></span><span class="cond tx" id="takeT">Same line, same way: just add · <span style="color:#FF6A13">500 N</span></span></div>
+    </div>
+
+    <!-- recap -->
+    <div id="recap">
+      <div class="chip" id="rchip" style="left:160px;top:84px"><i></i>RECAP</div>
+      <div class="cond" id="rh">Remember these <span class="acc">three things</span></div>
+      <div id="rRows"></div>
+      <div id="next"><span class="nc">NEXT · EP 02</span><span class="nt">Resultant of Concurrent Forces</span><span id="nextI"></span></div>
+    </div>
+  </div>
+  <div id="stmt"><div id="st1">A force is not just how hard.</div><div class="cond" id="st2">It is also <span style="color:#FF6A13">which way.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
