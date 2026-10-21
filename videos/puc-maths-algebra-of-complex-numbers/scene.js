@@ -66,13 +66,13 @@ let lLast = '';
 $('#slF').innerHTML = K(`(${A('a')} + ${I}\\,${B('b')}) + (${A('c')} + ${I}\\,${B('d')})`);
 $('#slR').innerHTML = K(`= (${A('a + c')}) + ${I}\\,(${B('b + d')})`);
 const sls = $('#slS');
-const sLk = [[166, 180, 456, 180, RE], [300, 180, 590, 180, RC]].map(([x1, y1, x2, y2, c]) => { const p = mk(sls, 'path', { d: `M${x1},${y1 + 14} Q${(x1 + x2) / 2},${y1 + 110} ${x2},${y1 + 14}`, fill: 'none', stroke: c, 'stroke-width': 4, 'stroke-dasharray': '2 0' }); return p; });
+const sLk = [[66, 180, 303, 180, RE], [186, 180, 429, 180, RC]].map(([x1, y1, x2, y2, c]) => { const p = mk(sls, 'path', { d: `M${x1},${y1 + 14} Q${(x1 + x2) / 2},${y1 + 110} ${x2},${y1 + 14}`, fill: 'none', stroke: c, 'stroke-width': 4, 'stroke-dasharray': '2 0' }); return p; });
 const GH = [[`${A('c')}`, 370], [`${I}\\,${B('d')}`, 580]], GR = [[`${A('a')}`, 196], [`${I}\\,${B('b')}`, 312]];
 const gridHTML = (cols, rows, cells, id) => cols.map(([f, x], k) => `<div class="gh" style="left:${x - 75}px;top:84px">${K(f)}</div>`).join('') + rows.map(([f, y], k) => `<div class="gh" style="left:56px;top:${y - 36}px">${K(f)}</div>`).join('') +
   cells.map((f, k) => `<div class="gc" id="${id}${k}" style="left:${[370, 580][k % 2] - 100}px;top:${[196, 312][Math.floor(k / 2)] - 48}px">${K(f)}</div>`).join('');
 $('#sG').innerHTML = gridHTML(GH, GR, [`${A('ac')}`, `${I}\\,${A('a')}${B('d')}`, `${I}\\,${B('b')}${A('c')}`, `${I}^2 ${B('bd')}`], 'sg') + `<div class="fx2" id="sGr" style="top:400px;font-size:36px"></div>`;
 $('#sGr').innerHTML = K(`= (${A('ac')} - ${B('bd')}) + ${I}\\,(${A('a')}${B('d')} + ${B('b')}${A('c')})`);
-const th1 = PUC.think($('#th1'), { q: `What is ${K(`(5 + 2${I}) - (3 - ${I})`)} ?`, opts: [K(`2 + 3${I}`), K(`2 + ${I}`)], right: 0, why: `Real: 5 - 3 = 2. Imaginary: 2 - (-1) = 3. So ${K(`2 + 3${I}`)}.` });
+const th1 = PUC.think($('#th1'), { q: `What is ${K(`(5 + 2${I}) - (3 - ${I})`)} ?`, opts: [K(`2 + 3i`), K(`2 + i`)], right: 0, why: `Real: 5 - 3 = 2. Imaginary: 2 - (-1) = 3. So ${K(`2 + 3${I}`)}.` });
 
 /* ---------- M: multiplication ---------- */
 const mEl = steps($('#mSt'), [[`3 \\cdot 2 = 6, \\quad 3 \\cdot 6${I} = 18${I}`, 'first row'], [`5${I} \\cdot 2 = 10${I}, \\quad 5${I} \\cdot 6${I} = 30${I}^2`, 'second row'], [`30${I}^2 = 30(-1) = -30`, 'i squared is -1'], [`(${A('6 - 30')}) + (${B('18 + 10')})${I}`, 'collect real, then imaginary']], 84, 108);
@@ -93,7 +93,7 @@ const rL1 = txt($('#rS'), rb.X(-2) - 10, rb.Y(3) - 14, '-2 + 3i', { 'font-family
 const r0 = Math.atan2(2, 3), rr = Math.hypot(3, 2);
 const rAng = seg(0, [[wt('R2', 'turns') - 0.2, wt('R2', 'turns') + 0.9, Math.PI / 2]]);
 $('#rF0').innerHTML = K(`(${cx(3, 2)}) \\cdot ${I}`); $('#rF1').innerHTML = K(`= 3${I} + 2${I}^2`); $('#rF2').innerHTML = K(`= ${cx(-2, 3)}`);
-const th2 = PUC.think($('#th2'), { q: `${K(`(1 + ${I})^2`)} : is it 2i, or 2 + 2i?`, opts: [K(`2${I}`), K(`2 + 2${I}`)], right: 0, why: `${K(`(1 + ${I})^2 = 1 + 2${I} + ${I}^2 = 1 + 2${I} - 1 = 2${I}`)}` });
+const th2 = PUC.think($('#th2'), { q: `${K(`(1 + ${I})^2`)} : is it 2i, or 2 + 2i?`, opts: [K(`2i`), K(`2 + 2i`)], right: 0, why: `${K(`(1 + ${I})^2 = 1 + 2${I} + ${I}^2 = 1 + 2${I} - 1 = 2${I}`)}` });
 
 /* ---------- V: division ---------- */
 $('#vBig').innerHTML = K(`\\dfrac{1}{z} = \\dfrac{${A('a')} - ${I}\\,${B('b')}}{${A('a')}^2 + ${B('b')}^2}`);
