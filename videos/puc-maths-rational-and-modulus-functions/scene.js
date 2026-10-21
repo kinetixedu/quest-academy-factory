@@ -50,7 +50,7 @@ txt(hs, HX(-4) - 30, HY + 80, 'WEST · NEGATIVE', { 'font-size': 16, fill: C.mut
 txt(hs, HX(4) + 30, HY + 80, 'EAST · POSITIVE', { 'text-anchor': 'end', 'font-size': 16, fill: C.mute, 'font-weight': 600, 'letter-spacing': 1 });
 const hBar = mk(hs, 'line', { y1: HY - 30, y2: HY - 30, stroke: RC, 'stroke-width': 8, 'stroke-linecap': 'round' });
 const hDot = mk(hs, 'circle', { cy: HY, r: 14, fill: XC, stroke: '#fff', 'stroke-width': 3 });
-const tE0 = wt('H1', 'Ride'), tE1 = wt('H1', 'and'), tW0 = wt('H2', 'Ride'), tW1e = wt('H2', 'and');
+const tE0 = tMorph + 0.3, tE1 = tMorph + 1.3, tW0 = wt('H2', 'west') - 0.2, tW1e = wt('H2', 'still');
 const hxOf = t => t < tW0 ? 3 * M.io((t - tE0) / Math.max(0.6, tE1 - tE0)) : 3 - 6 * M.io((t - tW0) / Math.max(0.8, tW1e - tW0));
 
 /* ---------- M: modulus definition ---------- */
@@ -91,20 +91,20 @@ const kbGt = txt(kbs, kbA.X(3.6), kbA.Y(3.6) + 34, 'same for x ≥ 0', { 'text-a
 const th1 = PUC.think($('#th1'), { q: `Is ${K('|x| = x')} for every real number ${K('x')}?`, opts: ['Yes', 'No'], right: 1, why: `Only when ${K('x \\ge 0')}. For ${K('x = -2')}: ${K('|x| = 2')}, but ${K('x = -2')}.` });
 
 /* ---------- statement ---------- */
-$('#stF').innerHTML = K(`|${xc('-3')}| = ${rc('3')} \\qquad\\qquad |${xc('3')}| = ${rc('3')}`);
+$('#stF').innerHTML = K(`\\lvert ${xc('-3')} \\rvert = ${rc('3')} \\qquad\\qquad \\lvert ${xc('3')} \\rvert = ${rc('3')}`);
 
 /* ---------- R: rational, 1/x ---------- */
 $('#rF').innerHTML = K(`\\dfrac{f(${xc('x')})}{g(${xc('x')})}, \\quad g(${xc('x')}) \\ne 0`);
 const RT = [['1', '1'], ['0.1', '10'], ['0.01', '100']];
 $('#rRows').innerHTML = RT.map(([a, b], i) => `<div class="tb" id="rt${i}" style="top:${206 + i * 82}px"><div class="tx">x = ${a}</div><div class="ta">→</div><div class="tv">1/x = ${b}</div></div>`).join('');
 $('#rD').innerHTML = K(`y = \\dfrac{1}{${xc('x')}}: \\ \\text{domain } ${ac('\\mathbb{R} - \\{0\\}')}`);
-const rs = $('#rS'), ra = axes(rs, { ox: 392, oy: 310, sx: 80, sy: 40, x0: -4.6, x1: 4.6, y0: -6, y1: 6.4, xt: [-4, -2, 2, 4], yt: [-4, 4] });
+const rs = $('#rS'), ra = axes(rs, { ox: 392, oy: 320, sx: 80, sy: 36, x0: -4.6, x1: 4.6, y0: -6, y1: 6.4, xt: [-4, -2, 2, 4], yt: [-4, 4] });
 const rR = mk(rs, 'path', { d: '', fill: 'none', stroke: RC, 'stroke-width': 5, 'stroke-linecap': 'round' });
 const rL = mk(rs, 'path', { d: ra.path(x => 1 / x, -4.5, -1 / 6.3, 200), fill: 'none', stroke: RC, 'stroke-width': 5, 'stroke-linecap': 'round' });
 const rDot = mk(rs, 'circle', { r: 11, fill: XC, stroke: '#fff', 'stroke-width': 3 });
 const rHug = [mk(rs, 'line', { x1: ra.X(-4.5), y1: ra.Y(0), x2: ra.X(4.5), y2: ra.Y(0), stroke: C.ac2, 'stroke-width': 14, 'stroke-linecap': 'round' }), mk(rs, 'line', { x1: ra.X(0), y1: ra.Y(-5.8), x2: ra.X(0), y2: ra.Y(6.2), stroke: C.ac2, 'stroke-width': 14, 'stroke-linecap': 'round' })];
 rHug.forEach(l => rs.insertBefore(l, rs.firstChild));
-const rNo = txt(rs, ra.X(0) + 14, ra.Y(6.4) + 20, 'never touches', { 'font-size': 17, fill: C.red, 'font-weight': 700 });
+const rNo = txt(rs, ra.X(0) + 16, ra.Y(-4.6), 'never touches the axes', { 'font-size': 17, fill: C.red, 'font-weight': 700 });
 const tRx = [wt('R3', 'one', 1), wt('R3', 'tenth'), wt('R3', 'hundredth')];
 const rxOf = t => { const t0 = T0('R3'), t1 = wt('R3', 'hundredth') + 0.5; const u = M.clamp((t - t0) / (t1 - t0)); return Math.pow(10, 0.6 - 2.6 * M.io(u)); };
 let rLast = '';
@@ -116,7 +116,7 @@ const wsol = PUC.solution($('#wl'), [
   [K(`|${xc('x')} - 2|`) + ' = distance of ' + K(xc('x')) + ' from 2'],
   [K(`${xc('x')} - 2 \\ge 0: \\ ${xc('x')} - 2 = 5 \\Rightarrow ${xc('x')} = ${rc('7')}`)],
   [K(`${xc('x')} - 2 < 0: \\ -(${xc('x')} - 2) = 5 \\Rightarrow ${xc('x')} = ${rc('-3')}`)],
-  [K(`|7 - 2| = 5, \\quad |-3 - 2| = |-5| = 5`)],
+  [K(`\\lvert 7 - 2 \\rvert = 5, \\quad \\lvert -3 - 2 \\rvert = \\lvert -5 \\rvert = 5`)],
   [K(`${xc('x')} = ${rc('7')} \\ \\text{ or } \\ ${xc('x')} = ${rc('-3')}`)]], { label: 'WORKED EXAMPLE', y0: 150, dy: 82 });
 $('#wl .lbl').style.top = '30px';
 const tW = [wt('W3', 'distance'), wt('W4', 'If'), wt('W5', 'If'), wt('W6', 'Check'), wt('W7', 'Two')];
@@ -133,9 +133,9 @@ const wHits = [7, -3].map(v => mk(ws, 'circle', { cx: wa2.X(v), cy: wa2.Y(5), r:
 
 /* ---------- X / Q / F ---------- */
 const trap = PUC.trap($('#trap'), { wrong: K(`\\sqrt{x^2} = x`), right: K(`\\sqrt{x^2} = |x|`) + '&nbsp; for ' + K('x = -4') + ': ' + K('\\sqrt{16} = 4') });
-const ts = $('#tS'), ta = axes(ts, { ox: 270, oy: 200, sx: 34, sy: 34, x0: -5, x1: 5, y0: -4.5, y1: 4.8, xt: [-4, 4], yt: [], lab: false });
-const tWr = mk(ts, 'path', { d: ta.path(x => x, -4.4, 4.4), fill: 'none', stroke: C.red, 'stroke-width': 3, 'stroke-dasharray': '6 6' });
-const tRt = mk(ts, 'path', { d: ta.path(x => Math.abs(x), -4.4, 4.4), fill: 'none', stroke: C.ok, 'stroke-width': 5, 'stroke-linejoin': 'round' });
+const ts = $('#tS'), ta = axes(ts, { ox: 270, oy: 210, sx: 34, sy: 40, x0: -5, x1: 5, y0: -1.4, y1: 4.6, xt: [-4, 4], yt: [], lab: false });
+const tWr = mk(ts, 'path', { d: ta.path(x => x, -1.2, 4.3), fill: 'none', stroke: C.red, 'stroke-width': 3, 'stroke-dasharray': '6 6' });
+const tRt = mk(ts, 'path', { d: ta.path(x => Math.abs(x), -4.3, 4.3), fill: 'none', stroke: C.ok, 'stroke-width': 5, 'stroke-linejoin': 'round' });
 const tP = mk(ts, 'circle', { cx: ta.X(-4), cy: ta.Y(4), r: 9, fill: C.ok });
 const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'PUC BOARDS'], type: 'Count the real solutions of an equation with mod. Boards: domain and range.' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 780,
@@ -147,9 +147,9 @@ const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap 
   lines: [K(`|${xc('x')}| = ${xc('x')} \\ (${xc('x')} \\ge 0), \\qquad |${xc('x')}| = -${xc('x')} \\ (${xc('x')} < 0)`),
     K(`|${xc('x')}|: \\ \\text{domain } ${ac('\\mathbb{R}')},\\ \\text{range } ${rc('[0, \\infty)')}`),
     `${K('|x - k|')} is the distance of x from k. And ${K('\\sqrt{x^2} = |x|')}`,
-    K(`\\text{Rational: } \\dfrac{f(x)}{g(x)},\\ g(x) \\ne 0`),
-    K(`\\dfrac{1}{x}: \\ \\text{domain } ${ac('\\mathbb{R} - \\{0\\}')},\\ \\text{range } ${rc('\\mathbb{R} - \\{0\\}')}`)] });
-const YQ = [`What is ${K('|-7|')}?`, `What is the domain of ${K('\\dfrac{1}{x - 4}')}?`, `Solve ${K('|x + 1| = 3')}.`];
+    K(`\\text{Rational: } f(x)/g(x),\\ g(x) \\ne 0`),
+    K(`1/x: \\ \\text{domain } ${ac('\\mathbb{R} - \\{0\\}')},\\ \\text{range } ${rc('\\mathbb{R} - \\{0\\}')}`)] });
+const YQ = [`What is ${K('\\lvert -7 \\rvert')}?`, `What is the domain of ${K('1/(x - 4)')}?`, `Solve ${K('|x + 1| = 3')}.`];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="n">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
 const nx = PUC.next($('#sF'), { label: 'NEXT · EP 21', topic: 'Is 16.9 years old still 16? Signum and Greatest Integer', y: 764 });
@@ -158,7 +158,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 21', topic: 'Is 16.9 years ol
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('L4') - 0.2, 1.06, 1370, 600], [T1('L4') + 0.3, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('L4') - 0.2, 1.04, 1010, 560], [T1('L4') + 0.3, 1, 960, 540]]);
 
 /* ---------- frame ---------- */
 M.on(t => {
@@ -186,8 +186,8 @@ M.on(t => {
   const mOn = t >= tM1 - 0.1 && t < tL1 + 0.1; M.hide($('#sM'), !mOn);
   if (mOn) {
     const out = OUT('L1');
-    M.vis($('#ml'), t, tM1 + 0.1, out, { dx: -60, dy: 0, ...o });
-    PUC.write($('#mF'), t, wt('M3', 'two') - 0.1, 1.2);
+    M.vis($('#ml'), t, T0('M2') - 0.1, out, { dx: -60, dy: 0, ...o });
+    PUC.write($('#mF'), t, wt('M2', 'written') - 0.1, 1.2);
     M.vis($('#ms0'), t, wt('M4', 'If') - 0.1, 1e9, { dy: 14 }); M.vis($('#ms1'), t, wt('M5', 'domain') - 0.1, 1e9, { dy: 14 });
     M.vis($('#mr'), t, tM1 + 0.3, out, { dx: 60, dy: 0, ...o });
     const x = mxOf(t); M.vis(mHome, t, tM1 + 0.5, 1e9, { dy: 0 });
@@ -210,7 +210,7 @@ M.on(t => {
     if (key !== lLast) { lLast = key;
       attr(lCur, 'd', drawn > -3.99 ? la.path(v => Math.abs(v - k), -4, Math.min(4.4, drawn + (t < tK0 ? 0 : 0.4)), 160) : '');
       M.setT($('#lXv'), f1(t < tK0 ? x : 4)); M.setT($('#lYv'), f1(Math.abs((t < tK0 ? x : 4) - k)));
-      $('#lK').innerHTML = K(`y = |${xc('x')} - ${rc(f1(k))}|`); attr(lKm.parentNode, 'transform', `translate(${la.X(k).toFixed(1)},0)`); }
+      $('#lK').innerHTML = K(+f1(k) < 0 ? `y = |${xc('x')} + ${rc(f1(-k))}|` : `y = |${xc('x')} - ${rc(f1(k))}|`); attr(lKm.parentNode, 'transform', `translate(${la.X(k).toFixed(1)},0)`); }
     const on = M.clamp((t - tLx0 + 0.3) / 0.3) * (1 - M.clamp((t - tK0 + 0.3) / 0.3));
     attr(lDot, 'cx', la.X(x).toFixed(1)); attr(lDot, 'cy', la.Y(Math.abs(x)).toFixed(1)); lDot.style.opacity = on.toFixed(3); M.hide(lDot, on <= 0);
     attr(lVg, 'x1', la.X(x).toFixed(1)); attr(lVg, 'x2', la.X(x).toFixed(1)); attr(lVg, 'y1', la.Y(0)); attr(lVg, 'y2', la.Y(Math.abs(x)).toFixed(1)); lVg.style.opacity = on.toFixed(3); M.hide(lVg, on <= 0);
