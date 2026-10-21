@@ -1,0 +1,133 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 61 - Tension</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 61: Tension (Motion notebook) ===== */
+:root{--fo:#D9731A;--gd:#B7791F;--ar:#D64545;--vb:#2F6FEB}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.fo{color:var(--fo)}.gd{color:var(--gd)}.ar{color:var(--ar)}.vb{color:var(--vb)}
+.tchip{position:absolute;left:36px;top:80px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 28px 'IBM Plex Mono';white-space:nowrap}
+/* title tiles */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr svg{position:absolute;right:20px;top:10px}
+.wq{position:absolute;top:490px;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 25px Poppins;white-space:nowrap}
+#lcd{position:absolute;left:470px;top:330px;height:76px;padding:0 20px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:10px;font:600 40px 'IBM Plex Mono';white-space:nowrap;box-shadow:0 8px 20px rgba(22,33,62,.25)}
+#lcd .lu{font-size:24px;color:#B8BCC6}
+/* what it is */
+#defQ{position:absolute;left:36px;top:84px;width:712px;font:700 38px/1.3 Poppins;letter-spacing:-.01em}
+.lp{position:absolute;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+/* sim */
+.ro2{position:absolute;display:grid;grid-template-columns:auto 1fr auto;column-gap:14px;row-gap:8px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k.n{font-style:normal;font-size:22px;color:var(--mute)}
+.ro2 .v{font:600 34px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 20px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+.smo{position:absolute;right:36px;top:18px;height:44px;padding:0 16px;border-radius:9px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.gsv{position:absolute;left:0;top:0}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:92px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:-2px;font-size:36px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:52px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.pn{position:absolute;width:340px;height:236px;border-radius:14px;background:var(--soft)}
+.pn .pt{position:absolute;left:18px;top:14px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.pn .pf{position:absolute;right:18px;top:8px;font-size:26px;white-space:nowrap}
+.pn svg{position:absolute;left:0;top:0}
+/* side by side */
+.kp{position:absolute;left:36px;top:490px;height:56px;padding:0 20px;border-radius:12px;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+.klcd{position:absolute;height:56px;padding:0 16px;border-radius:10px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:8px;font:600 28px 'IBM Plex Mono';white-space:nowrap}
+.klcd .lu{font-size:18px;color:#B8BCC6}
+/* worked */
+#wkq{position:absolute;left:36px;top:70px;font:600 27px/1.38 Poppins;width:712px}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font-size:26px}
+#wl .sol .sx{font-size:30px}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:31px}
+#st2{font-size:76px;top:480px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 32px Poppins;white-space:nowrap}
+.tchk{position:absolute;height:48px;padding:0 16px;border-radius:10px;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 4 LAWS OF MOTION</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title"><span class="acc">Tension</span> in a Rope</div>
+    <div id="sub">The pull a rope gives, and why it changes</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">EVERY ROPE · A PULL</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">A tight rope pulls on what is tied to it</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA'S VILLAGE · THE WELL</div>
+        <div style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/diya-face.jpg)" id="hdF"></div>
+        <svg id="hkS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div id="wqs"></div></div>
+    </div>
+
+    <div id="sP">
+      <div class="card full" id="pq"><div class="lbl" style="left:36px;top:30px">TENSION · T</div><div id="defQ"></div><div id="lps"></div></div>
+      <div class="card rf" id="pm"><div class="lbl" style="left:36px;top:30px">ONE LIGHT ROPE · ONE SMOOTH PULLEY</div><svg id="pmS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg></div>
+    </div>
+
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">THE BUCKET ON THE ROPE</div><div class="smo" id="smo">SLOW-MO REPLAY · 0.25x</div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg><div class="tchip" id="tChip"></div></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div>
+        <div class="ro2" id="roL" style="left:36px;top:76px;width:330px"></div><div class="ro2" id="roR" style="left:412px;top:76px;width:336px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">TENSION T VS ACCELERATION</div><svg class="gsv" id="grS" width="784" height="274"></svg></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE RULE · 5 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">FREE-BODY DIAGRAM OF THE BUCKET</div><svg id="drS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg></div>
+    </div>
+
+    <div id="sK">
+      <div class="card full" id="kf"><div class="lbl" style="left:36px;top:30px">PULLED UP FASTER AND FASTER</div><svg id="kfS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div class="kp pillp" id="kfP" style="background:var(--soft)"></div></div>
+      <div class="card rf" id="km"><div class="lbl" style="left:36px;top:30px">LOWERED FASTER AND FASTER</div><svg id="kmS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div class="kp pillp" id="kmP" style="background:var(--soft)"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wkq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">OVER A SMOOTH PULLEY</div><div class="ghost" id="exW" style="right:36px;top:18px">EXAMPLE FIGURES</div><svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tpS" width="600" height="274" style="position:absolute;right:0;top:0;overflow:hidden"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Tension follows <span class="acc">a</span>, not the motion</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
