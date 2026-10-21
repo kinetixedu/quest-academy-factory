@@ -1,0 +1,161 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 29 - Acceleration-Time Graphs</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 29: acceleration-time graphs (Motion notebook, the water-bottle ride) ===== */
+:root{--v:#2F6FEB;--a:#D64545;--x:#7A4FE0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.vv{color:var(--v)}.aa{color:var(--a)}.xx{color:var(--x)}
+svg.fil{position:absolute;left:0;top:0}
+/* title card: three meters */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:22px;font:700 30px Poppins;white-space:nowrap}
+.jr .jy{position:absolute;left:116px;top:70px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--ok);white-space:nowrap}
+.jr .jx{position:absolute;left:290px;top:70px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--red);white-space:nowrap}
+.jr .jv{position:absolute;right:28px;top:30px;font:600 48px/1 'IBM Plex Mono';white-space:nowrap;color:var(--v)}
+.jr .jv small{font-size:24px;color:var(--mute)}
+#meter{position:absolute;left:470px;top:118px;width:200px;height:118px;border-radius:14px;background:var(--ink);color:#fff;box-shadow:0 8px 20px rgba(22,33,62,.25)}
+#meter .ml{position:absolute;left:18px;top:14px;font:600 15px 'IBM Plex Mono';letter-spacing:.1em;color:#9FB8F5}
+#meter .mv{position:absolute;left:18px;top:40px;font:600 46px/1 'IBM Plex Mono';white-space:nowrap}
+#meter .mv small{font-size:20px;color:#9FB8F5}
+#nodist{position:absolute;left:470px;top:250px;width:200px;height:56px;border-radius:12px;border:2.5px dashed var(--red);background:#fff;display:flex;align-items:center;justify-content:center;font:600 20px 'IBM Plex Mono';letter-spacing:.06em;color:var(--red);white-space:nowrap}
+.wq{position:absolute;top:494px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+/* P */
+.pt{position:absolute;left:36px;width:712px;height:200px;border-radius:14px;background:var(--soft)}
+.pt .h{position:absolute;left:24px;top:20px;font:700 32px Poppins;white-space:nowrap}
+.pt .s{position:absolute;left:24px;top:68px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.pt .q{position:absolute;left:24px;top:118px;font:600 34px Poppins;white-space:nowrap}
+.pt svg{position:absolute;right:24px;top:24px}
+/* sim */
+.phase{position:absolute;left:36px;top:74px;height:44px;padding:0 16px;border-radius:10px;display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap;color:#fff}
+#slo{right:36px;top:20px}
+.shp{position:absolute;top:500px;height:52px;padding:0 16px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap}
+/* derivation rows */
+.st8{position:absolute;left:36px;width:712px;height:136px}
+.st8 .n{position:absolute;left:0;top:6px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st8 .sx{position:absolute;left:70px;top:0;font-size:42px;white-space:nowrap}
+.st8 .why{position:absolute;left:70px;top:72px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+.res{position:absolute;top:494px;height:60px;padding:0 20px;border-radius:12px;display:flex;align-items:center;font-size:32px;white-space:nowrap}
+/* K, B sims */
+.ro2{position:absolute;display:grid;grid-template-columns:auto auto auto;column-gap:14px;align-items:baseline}
+.ro2 .k{font:600 28px Poppins;font-style:italic}.ro2 .v{font:600 34px 'IBM Plex Mono';text-align:right;white-space:nowrap;min-width:120px}.ro2 .u{font:400 20px 'IBM Plex Mono';color:var(--mute)}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 31px Poppins}
+#wl .sol .sx{font-size:32px}
+#wq{position:absolute;left:36px;top:70px;font:600 27px/1.35 Poppins;width:712px}
+#sF .fcard .fl{font-size:46px}
+#sF .fcard .fl.txt{font-size:32px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#stF{font:700 84px Poppins;letter-spacing:-.02em;top:590px}
+#bott{position:absolute;right:36px;top:74px;width:170px;height:196px;border-radius:14px;background:var(--soft)}
+#bott .bl{position:absolute;left:0;width:170px;top:14px;text-align:center;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.vt{position:absolute;height:52px;width:84px;border-radius:12px;background:var(--soft);display:flex;align-items:center;justify-content:center;font:600 26px 'IBM Plex Mono';color:var(--v)}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 2 MOTION IN A STRAIGHT LINE</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Acceleration-Time <span class="acc">Graphs</span></div>
+    <div id="sub">Explained with one water bottle</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: three pushes + the water bottle -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">WHEN DO YOU FEEL A PUSH?</div><div id="jrs"></div>
+        <div class="pillp bad" id="hjP" style="left:36px;top:494px">Steady speed, even fast: no push</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV'S WATER BOTTLE</div>
+        <div id="hdF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <svg class="fil" id="hkS" width="784" height="580"></svg><div id="hst"></div></div>
+    </div>
+
+    <!-- P: what is an a-t graph -->
+    <div id="sP">
+      <div class="card full" id="pg"><div class="lbl" style="left:36px;top:30px">AN ACCELERATION-TIME GRAPH</div><svg class="fil" id="pgS" width="784" height="580"></svg>
+        <div class="pillp" id="pgC" style="left:36px;top:494px">One point = how fast <i>&nbsp;v&nbsp;</i> is changing</div></div>
+      <div class="card rf" id="pc"><div class="lbl" style="left:36px;top:30px">THREE GRAPHS · THREE QUESTIONS</div><div id="pts"></div></div>
+    </div>
+
+    <!-- S: the ride with the bottle -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">SIMULATION · THE BOTTLE RIDE</div><div class="tag" id="slo" style="left:36px;right:auto;top:74px">SLOW-MO REPLAY · 0.25x</div>
+        <div class="phase" id="ph"></div>
+        <div id="bott"><div class="bl">WATER BOTTLE</div></div>
+        <svg class="fil" id="simS" width="784" height="580"></svg><div id="shps"></div></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div>
+        <div class="ro" id="roG" style="left:36px;top:74px;width:712px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">ACCELERATION-TIME GRAPH · LIVE</div><svg class="fil" id="grS" width="784" height="274"></svg></div>
+    </div>
+
+    <!-- G: from the v-t graph -->
+    <div id="sG">
+      <div class="card full" id="gl"><div class="lbl" style="left:36px;top:30px">FROM THE VELOCITY-TIME GRAPH · 3 STEPS</div><div id="gsteps"></div></div>
+      <div class="card rf" id="gg"><div class="lbl" style="left:36px;top:30px">ONE RIDE · TWO GRAPHS</div><svg class="fil" id="ggS" width="784" height="580"></svg></div>
+    </div>
+
+    <!-- K: side by side + think -->
+    <div id="sK">
+      <div class="card full" id="kx"><div class="lbl" style="left:36px;top:30px">VELOCITY-TIME · FLAT AT 6</div><svg class="fil" id="kxS" width="784" height="580"></svg>
+        <div class="pillp" id="kxC" style="left:36px;top:494px">Velocity stays <b class="vv">&nbsp;6 m/s</b></div></div>
+      <div class="card rf" id="kv"><div class="lbl" style="left:36px;top:30px">ACCELERATION-TIME · FLAT AT 2</div><svg class="fil" id="kvS" width="784" height="580"></svg><div id="vts"></div>
+        <div class="pillp" id="kvC" style="left:36px;top:494px">Velocity grows by <b class="vv">&nbsp;2 m/s&nbsp;</b> every second</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- R: area = change in velocity -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">AREA = CHANGE IN VELOCITY</div><div id="rsteps"></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">AREA UNDER THE RIDE</div><svg class="fil" id="rrS" width="784" height="580"></svg>
+        <div class="res" id="rTot" style="left:36px;background:var(--ac2)"></div></div>
+    </div>
+
+    <!-- B: ball thrown up -->
+    <div id="sB">
+      <div class="card full" id="bs"><div class="lbl" style="left:36px;top:30px">SIMULATION · BALL THROWN UP</div><div class="ghost" id="exB" style="right:36px;top:18px">EXAMPLE FIGURES</div><svg class="fil" id="bsS" width="784" height="580"></svg>
+        <div class="ro2" id="bro" style="left:36px;top:84px"></div></div>
+      <div class="card rf" id="bg"><div class="lbl" style="left:36px;top:30px">TWO GRAPHS · LIVE</div><svg class="fil" id="bgS" width="784" height="580"></svg>
+        <div class="pillp bad" id="bgC" style="left:36px;top:494px"><b>a = &minus;9.8 m/s²</b>&nbsp; the whole flight</div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">A scooter moves at 4 m/s. It accelerates at 2 m/s² for 3 s, then at −1 m/s² for 4 s. Find its final velocity.</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">THE SCOOTER ON AN ACCELERATION-TIME GRAPH</div><div class="ghost" id="exW" style="right:36px;top:64px">EXAMPLE FIGURES</div><svg class="fil" id="wrS" width="784" height="580"></svg>
+        <div class="res" id="wa0" style="left:36px;background:var(--ac2)"></div></div>
+    </div>
+
+    <!-- X / Q / F -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tg" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Area under <span style="color:#D64545">a</span>-t = change in <span style="color:#2F6FEB">velocity</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
