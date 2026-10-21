@@ -1,0 +1,180 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 50 - Force and Inertia</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 50: force and inertia (Motion notebook) ===== */
+:root{--f:#D9731A;--v:#2F6FEB;--x:#7A4FE0;--a:#D64545;--th:#B7791F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.lt{left:160px;top:270px;width:784px;height:274px}
+.lb{left:160px;top:576px;width:784px;height:274px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.fo{color:var(--f)}.vb{color:var(--v)}.xv{color:var(--x)}.th{color:var(--th)}
+/* title tiles + hook */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr svg{position:absolute;right:20px;top:14px}
+.wq{position:absolute;top:476px;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 25px Poppins;white-space:nowrap}
+/* what a force does */
+.mt{position:absolute;width:340px;height:76px;border-radius:14px;background:var(--soft)}
+.mt i{position:absolute;left:14px;top:14px;width:48px;height:48px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.mt .mn{position:absolute;left:78px;top:10px;font:600 25px Poppins;white-space:nowrap}
+.mt .mi{position:absolute;left:78px;top:44px;font:500 16px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap;text-transform:uppercase}
+/* scientist text cards */
+.sc{position:absolute;left:36px;top:76px;width:712px}
+.sc .nm{font:700 40px Poppins;letter-spacing:-.01em;white-space:nowrap}
+.sc .dt{margin-top:4px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.sc .qt{margin-top:18px;font:500 28px/1.35 Poppins;white-space:nowrap}
+.stamp{position:absolute;right:36px;top:22px;height:40px;padding:0 14px;border-radius:8px;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* readouts */
+.ro2{position:absolute;display:grid;grid-template-columns:auto 1fr auto;column-gap:14px;row-gap:6px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic;white-space:nowrap}.ro2 .k sub{font-size:.6em}
+.ro2 .v{font:600 34px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 20px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+.smo{position:absolute;right:36px;top:18px;height:44px;padding:0 16px;border-radius:9px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.flash{position:absolute;right:36px;top:18px;height:44px;padding:0 16px;border-radius:9px;background:var(--ac2);color:var(--ac);display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* derivation */
+.dst{position:absolute;left:36px;width:712px;height:136px}
+.dst .n{position:absolute;left:0;top:6px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.dst .sx{position:absolute;left:70px;top:0;font-size:44px;white-space:nowrap}
+.dst .why{position:absolute;left:70px;top:72px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+/* reasoning chain */
+.lk{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--soft);display:flex;align-items:center;gap:18px;padding:0 24px;box-sizing:border-box;font:600 30px Poppins;white-space:nowrap}
+.lk .ln{flex:none;width:40px;height:40px;border-radius:50%;background:var(--ac);color:#fff;font:700 19px Poppins;display:flex;align-items:center;justify-content:center}
+.lk .lt2{margin-left:auto;height:34px;padding:0 12px;border-radius:8px;background:#fff;display:inline-flex;align-items:center;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.lka{position:absolute;left:84px}
+/* side by side */
+.sbr{position:absolute;left:36px;width:712px;height:70px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:14px;padding:0 22px;box-sizing:border-box;font:600 28px Poppins;white-space:nowrap}
+.sbr .tg{margin-left:auto;height:38px;padding:0 14px;border-radius:8px;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em}
+#wkq{position:absolute;left:36px;top:70px;font:600 27px/1.38 Poppins;width:712px}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font-size:25px}
+#wl .sol .sx{font-size:32px}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:31px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+#stmt #st2{font-size:66px}
+#cS,#gS,#mS,#kaS,#kgS,#bkS,#pmS,#idS{overflow:hidden}
+#m_v1,#m_v2{border-radius:6px;padding:0 6px}
+.yr .q{position:absolute;left:96px;top:26px;font:600 32px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 4 LAWS OF MOTION</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Force and <span class="acc">Inertia</span></div>
+    <div id="sub">Why things start, stop and keep going</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: three cases + the coin trick -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE CASES · ONE QUESTION</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">What makes motion change?</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV'S STUDY TABLE · THE COIN TRICK</div>
+        <div id="hdF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg" style="position:absolute;left:152px;top:84px;width:480px;height:360px;border-radius:12px">
+        <svg id="hkS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="wqs"></div></div>
+    </div>
+
+    <!-- P: what a force is -->
+    <div id="sP">
+      <div class="card full" id="pq"><div class="lbl" style="left:36px;top:30px">WHAT CAN A FORCE DO?</div><div id="mts"></div></div>
+      <div class="card rf" id="pm"><div class="lbl" style="left:36px;top:30px">A FORCE = A PUSH OR A PULL</div><svg id="pmS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="pmU" style="left:36px;top:490px">Unit: newton (N)</div><div class="pillp ink" id="pmV" style="left:300px;top:490px">Vector: size + direction</div></div>
+    </div>
+
+    <!-- A: Aristotle and Galileo -->
+    <div id="sA">
+      <div class="card lt" id="ar"><div class="lbl" style="left:36px;top:30px">TEXT CARD · ANCIENT GREECE</div>
+        <div class="sc"><div class="nm">Aristotle</div><div class="dt">384 - 322 BCE · GREEK PHILOSOPHER</div><div class="qt" id="arQ">"A moving body needs a force to keep moving."</div></div></div>
+      <div class="card lb" id="ga"><div class="lbl" style="left:36px;top:30px">TEXT CARD · ITALY</div>
+        <div class="sc"><div class="nm">Galileo Galilei</div><div class="dt">1564 - 1642 · STUDIED MOTION ON RAMPS</div><div class="qt" id="gaQ">"What is slowing it down?"</div></div></div>
+      <div class="card rf" id="bk"><div class="lbl" style="left:36px;top:30px">STOP PEDALLING</div><svg id="bkS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="bkP" style="left:36px;top:490px">It slows down. Something must act on it.</div></div>
+    </div>
+
+    <!-- G: Galileo's ramps (sim + readout + graph) -->
+    <div id="sG">
+      <div class="card full" id="gsim"><div class="lbl" style="left:36px;top:30px">GALILEO'S RAMPS · SMOOTH</div><div class="flash" id="gfl">LIVE · REAL TIME</div>
+        <svg id="gS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rt" id="gro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ghost" id="exG" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <div class="ro2" id="gA" style="left:36px;top:76px;width:320px"></div><div class="ro2" id="gB" style="left:412px;top:76px;width:336px"></div></div>
+      <div class="card rb" id="ggr"><div class="lbl" style="left:36px;top:30px">SPEED VS TIME · EACH RUN</div><svg id="ggS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- K: Aristotle vs Galileo side by side + think -->
+    <div id="sK">
+      <div class="card full" id="ka"><div class="lbl" style="left:36px;top:30px">ARISTOTLE'S PICTURE</div><svg id="kaS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp bad" id="kaP" style="left:36px;top:490px">Push stops, motion stops</div></div>
+      <div class="card rf" id="kg"><div class="lbl" style="left:36px;top:30px">GALILEO'S PICTURE</div><svg id="kgS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp good" id="kgP" style="left:36px;top:490px">A force changes motion; friction slows it</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- I: inertia + coin sim -->
+    <div id="sI">
+      <div class="card full" id="csim"><div class="lbl" style="left:36px;top:30px">THE COIN TRICK · SIDE VIEW</div><div class="smo" id="csmo">SLOW-MO REPLAY · 0.05x</div>
+        <svg id="cS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="idf" style="left:160px;top:270px;width:1600px;height:580px"><div class="lbl" style="left:48px;top:34px">A PROPERTY OF EVERY OBJECT</div>
+        <div style="position:absolute;left:48px;top:80px;font:700 64px Poppins;letter-spacing:-.02em;white-space:nowrap" id="idT">Inertia = resistance to <span class="acc">change</span></div>
+        <svg id="idS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ink" id="idP" style="left:48px;top:490px">It changes only when a force acts</div></div>
+      <div class="card rt" id="cro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ghost" id="exC" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <div class="ro2" id="cA" style="left:36px;top:76px;width:320px"></div><div class="ro2" id="cB" style="left:412px;top:76px;width:336px"></div></div>
+      <div class="card rb" id="cgr"><div class="lbl" style="left:36px;top:30px">SIDEWAYS POSITION VS TIME</div><svg id="cgS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- M: two carts (signature sim) -->
+    <div id="sM">
+      <div class="card full" id="msim"><div class="lbl" style="left:36px;top:30px">TWO CARTS · SAME PUSH · SMOOTH FLOOR</div><div class="flash" id="mfl">PAUSED · t = 3.0 S</div>
+        <svg id="mS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rt" id="mro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ghost" id="exM" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <div class="ro2" id="mA" style="left:36px;top:76px;width:320px"></div><div class="ro2" id="mB" style="left:412px;top:76px;width:336px"></div></div>
+      <div class="card rb" id="mgr"><div class="lbl" style="left:36px;top:30px">VELOCITY VS TIME · BOTH CARTS</div><svg id="mgS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- D: the rule + reasoning -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE RULE · 3 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">WHY MASS MEASURES INERTIA</div><div id="lks"></div>
+        <div class="pillp ac" id="drP" style="left:36px;top:490px">Mass is the measure of inertia</div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wkq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">SAME PUSH · SAME TIME</div><div class="ghost" id="exW" style="right:36px;top:18px">EXAMPLE FIGURES</div><svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tpS" width="640" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Motion needs no force. A <span class="acc">change</span> in motion does.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
