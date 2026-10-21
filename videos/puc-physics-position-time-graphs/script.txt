@@ -1,0 +1,53 @@
+H1|0.4|A runner on a track. A bus on a road. Your cycle on the way to college.
+H2|0.45|Three trips. One picture can tell the whole story of each.
+H3|0.35|Aarav rides to college. At the gate, he checks his cycle app. It shows just one line on a graph.
+H4|0.5|His friend asks: where did you stop? Where were you fastest? Did you ever turn back?
+H5|0.65|Aarav says one line cannot tell all that. By the end, you will read it all from the line.
+P1|0.35|So what is a position-time graph?
+P2|0.4|We pick a starting point, called the origin. Position x is how far you are from it. Ahead is positive.
+P3|0.4|Time goes on the horizontal axis. Position goes on the vertical axis.
+P4|0.6|At every moment, we mark one dot: where you are, at that time. Join the dots, and you get the x-t graph.
+S1|0.35|Let's ride with Aarav on our motion notebook.
+S2|0.4|Part one. He rides at a steady five metres per second. Every second, he moves the same five metres.
+S3|0.5|Equal steps in equal times. So the graph is a straight sloping line.
+S4|0.4|Part two. He stops at a signal. Time keeps going, but the position stays at fifty metres.
+S5|0.5|The graph goes flat. A flat line means the object is at rest.
+S6|0.4|Part three. He rides faster, ten metres per second. Now the line is steeper.
+S7|0.6|Steeper line, faster motion. The steepness of the line tells you the speed.
+D1|0.35|Let's turn steepness into a number, one step at a time.
+D2|0.75|Step one. Pick two points on the line. Read their times and their positions.
+D3|0.75|Step two. The change in position, delta x, is x two minus x one. The change in time, delta t, is t two minus t one.
+D4|0.75|Step three. Slope equals delta x over delta t. That is rise over run.
+D5|0.75|Step four. Delta x over delta t is exactly the velocity. So the slope of an x-t graph is the velocity.
+T1|0.7|Remember this. On a position-time graph, the slope is the velocity.
+K1|0.4|Side by side. One line goes up. The position grows, so the velocity is positive.
+K2|0.6|The other line goes down. The position shrinks. The object is coming back towards the origin, so the velocity is negative.
+K3|3.2|Now you try. A line slopes down. Is the object moving away from the origin, or towards it? Pause and decide.
+K4|0.65|Towards it! A falling line means x is getting smaller, so the object moves back towards the origin. Its velocity is negative.
+C1|0.35|Now, what if the line bends?
+C2|0.4|Here is Aarav's ride from home. From rest, he speeds up to six metres per second in four seconds.
+C3|0.4|Each second he covers more than the last. So the graph curves upward, getting steeper.
+C4|0.5|At any moment, draw a tangent, a line that just touches the curve there. Its slope is the velocity at that instant.
+C5|0.6|Then he cruises at six metres per second. A straight part. Then he brakes, and stops in three seconds, forty five metres from home.
+C6|3.2|Your turn. In the last part, the curve gets flatter and flatter. Is he speeding up or slowing down? Pause and decide.
+C7|0.65|Slowing down! The tangent gets less steep, until it is flat. A flat tangent means zero velocity. He has stopped.
+W1|0.35|Now, one worked example.
+W2|0.5|Aarav's position goes from fifty metres at twenty seconds to one hundred and fifty metres at thirty seconds. Find his velocity.
+W3|0.75|Delta x is one hundred and fifty minus fifty. That is one hundred metres.
+W4|0.75|Delta t is thirty minus twenty. That is ten seconds.
+W5|0.65|Slope is one hundred over ten. His velocity is ten metres per second.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think an x-t graph shows the path of the object, like a hill it climbs.
+X3|0.65|But Aarav rides on a flat, straight road. The graph is not a picture of the road. It is a record of where he was, and when.
+E1|0.6|Where is this asked? As graph reading questions: compare the slopes of lines, or spot where the velocity is zero or negative.
+Q1|5.4|Exam level now. Two cyclists, P and Q. On the x-t graph, P's line makes thirty degrees with the time axis, and Q's makes sixty degrees. What is the ratio of P's velocity to Q's? Pause and solve.
+A1|0.5|The answer is B. One is to three.
+A2|0.5|Velocity is the slope, and slope is tan of the angle with the time axis.
+A3|0.5|Tan thirty is one over root three. Tan sixty is root three.
+A4|0.6|So the ratio is one over root three, divided by root three. That is one third, or one is to three.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What does a flat line on an x-t graph tell you?
+Y3|0.9|Two. How do you find the velocity from an x-t graph?
+Y4|1.1|Three. Can an x-t graph ever be a vertical line? Why not?
+N1|0.3|Next time: what if we plot velocity instead of position? The area under that line hides the distance. We find out in velocity-time graphs.

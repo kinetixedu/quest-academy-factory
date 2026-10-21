@@ -1,0 +1,120 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 27 - Position-Time Graphs</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 27: position-time graphs (Motion notebook, the ride to college) ===== */
+:root{--v:#2F6FEB;--x:#7A4FE0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.vv{color:var(--v)}.xv{color:var(--x)}
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+#hkImg{position:absolute;left:212px;top:78px;width:360px;height:270px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)}
+.phone{position:absolute;left:36px;top:84px;width:712px;height:340px;border-radius:18px;background:var(--ink)}
+.hqq{position:absolute;left:36px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap}
+.st{position:absolute;left:36px;width:712px;height:112px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:38px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:62px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.seg{position:absolute;left:36px;width:712px;height:64px;border-radius:12px;background:var(--soft)}
+.seg .sn{position:absolute;left:20px;top:16px;font:600 24px Poppins;white-space:nowrap}
+.seg .sv{position:absolute;right:20px;top:14px;font:600 28px 'IBM Plex Mono';white-space:nowrap}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#wq{position:absolute;left:36px;top:70px;font:600 28px/1.35 Poppins;width:712px}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font-size:25px}
+#wl .sol .sx{font-size:32px}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:30px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 2 MOTION IN A STRAIGHT LINE</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Position-Time <span class="acc">Graphs</span></div>
+    <div id="sub">Explained with one ride to college</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">AARAV'S RIDE · THE CYCLE APP</div><div id="hkF"></div>
+        <div class="phone" id="phone"><svg id="phS" width="712" height="340" style="position:absolute;left:0;top:0"></svg></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:470px">One line. The whole trip.</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">HIS FRIEND ASKS</div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg">
+        <div class="hqq" id="hq0" style="top:372px">Where did you stop?</div>
+        <div class="hqq" id="hq1" style="top:440px">Where were you fastest?</div>
+        <div class="hqq" id="hq2" style="top:508px">Did you ever turn back?</div></div>
+    </div>
+
+    <!-- P: what is an x-t graph -->
+    <div id="sP">
+      <div class="card full" id="pl"><div class="lbl" style="left:36px;top:30px">POSITION <i style="font-family:Poppins;text-transform:none">x</i> = DISTANCE FROM THE ORIGIN</div><svg id="plS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="pr"><div class="lbl" style="left:36px;top:30px">ONE DOT FOR EVERY MOMENT</div><svg id="prS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- S: ride sim + readout + graph -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">SIMULATION · THE RIDE</div><div class="tag" id="slow" style="right:36px;top:22px">SLOW-MO REPLAY · 0.25x</div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div id="segs"></div></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro" id="roG" style="left:36px;top:70px;width:360px"></div>
+        <div class="pillp" id="roP" style="left:440px;top:150px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">POSITION <i style="font-family:Poppins;text-transform:none">x</i> VS TIME <i style="font-family:Poppins;text-transform:none">t</i></div><svg id="grS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- D -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">SLOPE = VELOCITY · 4 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">RISE OVER RUN</div><div class="ghost" id="exD" style="right:36px;top:18px">EXAMPLE FIGURES</div><svg id="drS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- K: up vs down -->
+    <div id="sK">
+      <div class="card full" id="kl"><div class="lbl" style="left:36px;top:30px">LINE GOES UP · MOVING AWAY</div><svg id="klS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="kr"><div class="lbl" style="left:36px;top:30px">LINE GOES DOWN · COMING BACK</div><svg id="krS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- C: curve + tangent -->
+    <div id="sC">
+      <div class="card full" id="csim"><div class="lbl" style="left:36px;top:30px">SIMULATION · AARAV'S RIDE FROM HOME</div><svg id="csS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="cgr"><div class="lbl" style="left:36px;top:30px">A CURVE · THE TANGENT GIVES <i style="font-family:Poppins;text-transform:none">v</i></div><div class="ghost" id="exC" style="right:36px;top:18px">EXAMPLE FIGURES</div><svg id="cgS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="ro" id="cro" style="left:36px;top:470px;width:712px"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">x = 50 m at t = 20 s, and x = 150 m at t = 30 s. Find the velocity.</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">READ IT OFF THE GRAPH</div><svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="trS" width="520" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2" style="font-size:68px">On an x-t graph, the <span class="acc">slope</span> is the velocity.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
