@@ -1,0 +1,165 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 70 - Apparent Weight and Weightlessness</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 70: apparent weight and weightlessness (Motion notebook, Diya on a scale in a lift + scale reading against time) ===== */
+:root{--v:#2F6FEB;--a:#D64545;--f:#D9731A}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.vv{color:var(--v)}.aa{color:var(--a)}.ff{color:var(--f)}
+.sv{position:absolute;left:0;top:0;overflow:hidden}
+/* title card cases */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft);overflow:hidden}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr svg{position:absolute;right:12px;top:0}
+.wq{position:absolute;top:494px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap}
+#lift{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px;overflow:hidden;background:#E9EEF6}
+#diyaC{position:absolute;left:250px;top:96px;width:300px;height:372px}
+/* P */
+.dr{position:absolute;left:36px;width:712px;height:104px;border-radius:14px;background:var(--soft)}
+.dr i{position:absolute;left:20px;top:20px;width:64px;height:64px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.dr .dn{position:absolute;left:104px;top:16px;font:700 28px Poppins;white-space:nowrap}
+.dr .dw{position:absolute;left:104px;top:60px;font:500 22px Poppins;color:var(--ink2);white-space:nowrap}
+/* sim readout */
+#roG{row-gap:4px}
+#roG .v{font-size:32px}
+#roG .k{font-size:28px}
+.stag{position:absolute;height:40px;padding:0 14px;border-radius:8px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.tv{position:absolute;width:200px;height:150px;border-radius:12px;background:#fff;border:2px solid var(--line);overflow:hidden}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:92px}
+.st .n{position:absolute;left:0;top:2px;width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 21px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:66px;top:0;font-size:32px;white-space:nowrap}
+.st .why{position:absolute;left:66px;top:52px;font:500 20px Poppins;color:var(--mute);white-space:nowrap}
+.chipd{position:absolute;height:56px;padding:0 18px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:10px;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+/* side by side */
+.sbv{position:absolute;left:36px;top:84px;width:712px;height:330px;border-radius:14px;background:var(--soft);overflow:hidden}
+.sbl{position:absolute;left:36px;font-size:34px;white-space:nowrap}
+/* reasoning */
+.lk{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.lk .n{position:absolute;left:18px;top:25px;width:46px;height:46px;border-radius:50%;background:var(--ac);color:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.lk .lt{position:absolute;left:84px;top:28px;font:600 26px/1.3 Poppins;white-space:nowrap}
+/* worked */
+#wq{position:absolute;left:36px;top:70px;font:600 27px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:30px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#mq .mq{font-size:27px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 24px Poppins}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:29px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 4 LAWS OF MOTION</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Apparent <span class="acc">Weight</span></div>
+    <div id="sub">What does a scale really read?</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: three floaty moments + Diya's hospital lift -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">FEELING LIGHT · FEELING WEIGHTLESS</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Did their weight really change?</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA · THE HOSPITAL LIFT</div>
+        <div id="hdF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <div id="lift"><svg class="sv" id="liS" width="520" height="390"></svg><img id="diyaC" src="../../assets/illustrations/puc/diya.png"></div>
+        <div id="wqs"></div></div>
+    </div>
+
+    <!-- P: what apparent weight is -->
+    <div id="sP">
+      <div class="card full" id="pd"><div class="lbl" style="left:36px;top:30px">TRUE WEIGHT VS WHAT YOU FEEL</div>
+        <div class="dr" id="dr0" style="top:84px"><i id="dr0I"></i><div class="dn">True weight: <span style="font-style:italic">mg</span></div><div class="dw">the Earth's pull. It does not change in the lift</div></div>
+        <div class="dr" id="dr1" style="top:208px"><i id="dr1I"></i><div class="dn">What you feel: the floor's push</div><div class="dw">gravity itself is never felt directly</div></div>
+        <div class="dr" id="dr2" style="top:332px"><i id="dr2I"></i><div class="dn">A scale reads <span class="ff" style="font-style:italic">N</span> (Ep 60)</div><div class="dw">the normal force from the scale</div></div>
+        <div class="pillp ac" id="pdP" style="left:36px;top:490px">Apparent weight = N, and N can change</div></div>
+      <div class="card rf" id="pt"><div class="lbl" style="left:36px;top:30px">TWO FORCES ON DIYA</div>
+        <svg class="sv" id="ptS" width="784" height="580"></svg></div>
+    </div>
+
+    <!-- S: the sim (Diya on a scale in a lift + readout + reading against time) -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">THE HOSPITAL LIFT · GOING UP</div>
+        <div class="stag" id="slo" style="left:36px;top:66px">SLOW-MO REPLAY · 0.25x</div>
+        <div class="stag" id="pau" style="left:36px;top:66px;background:#6B7280">PAUSED</div>
+        <svg class="sv" id="simS" width="784" height="580"></svg>
+        <div class="tv" id="tv" style="left:548px;top:66px"><svg class="sv" id="tvS" width="200" height="150"></svg></div></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT · <span style="text-transform:none">m = 50 kg · up is +</span></div><div class="ro" id="roG" style="left:36px;top:66px;width:712px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">SCALE READING VS TIME <i style="font-family:Poppins;text-transform:none">t</i></div>
+        <div class="pillp" id="grP" style="right:36px;top:18px;height:40px;font-size:19px"><span class="ff"><i>N</i></span>&nbsp;=&nbsp;<i>m</i>(<i>g</i> + <i class="aa">a</i>)</div>
+        <svg class="sv" id="grS" width="784" height="274"></svg></div>
+    </div>
+
+    <!-- D: the formula -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE FORMULA · 5 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">FREE-BODY DIAGRAM · DIYA</div>
+        <svg class="sv" id="drS" width="784" height="580"></svg></div>
+    </div>
+
+    <!-- C: side by side + think -->
+    <div id="sC">
+      <div class="card full" id="c0"><div class="lbl" style="left:36px;top:30px">GOING UP · SLOWING DOWN</div>
+        <div class="sbv"><svg class="sv" id="c0S" width="712" height="330"></svg></div>
+        <div class="sbl" id="c0a" style="top:446px"></div></div>
+      <div class="card rf" id="c1"><div class="lbl" style="left:36px;top:30px">GOING DOWN · SPEEDING UP</div>
+        <div class="sbv"><svg class="sv" id="c1S" width="712" height="330"></svg></div>
+        <div class="sbl" id="c1a" style="top:446px"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- R: weightlessness, link by link + think -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">A FALLING BOX · SCALE + APPLE</div><div class="stag" id="rslo" style="right:36px;top:20px">SHOWN AT 0.25x</div>
+        <svg class="sv" id="rlS" width="784" height="580"></svg></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">LINK BY LINK</div><div id="lks"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">A 60 kg man in the lift. It speeds up going down at 1.8 m/s². What does the scale read?</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">FREE-BODY DIAGRAM · THE MAN</div><div class="ghost" id="exW" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <svg class="sv" id="wrS" width="784" height="580"></svg>
+        <div class="chipd" id="wc0" style="left:36px;top:492px"><span style="color:#F3B27A">N</span><span>= 480 N</span></div>
+        <div class="chipd" id="wc1" style="left:268px;top:492px"><span>scale ≈ 49.0 kg</span></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tg" width="420" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + questions + NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">A scale reads <span class="acc">N</span>, not your weight.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
