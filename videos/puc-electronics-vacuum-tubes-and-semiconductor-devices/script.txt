@@ -1,0 +1,54 @@
+H1|0.35|Aarav switches on his grandfather's old valve radio. For a few seconds, nothing. Then the music fades in.
+H2|0.5|His phone plays the same song instantly. Why the wait?
+I1|0.35|Inside that radio are vacuum tubes. And a vacuum tube cannot work until it gets hot.
+I2|0.65|To see why, let's look inside the metal.
+E1|0.35|A metal is full of free electrons. They wander inside, but the surface holds them back.
+E2|0.7|To escape, an electron needs a minimum amount of energy. This is called the work function.
+E3|0.7|For tungsten, it is about four point five electron volts. An electron volt is a tiny energy unit, made for single electrons.
+E4|0.35|Now heat the metal. The electrons jiggle faster and faster.
+E5|0.65|Some gain enough energy to jump out of the surface. This is thermionic emission. Thermionic simply means given off by heat.
+B1|0.35|In nineteen oh four, John Ambrose Fleming used this idea to build the vacuum diode.
+B2|0.35|A heated cathode gives off electrons. A metal plate, the anode, sits across an empty space, with all the air pumped out.
+B3|0.35|Let's put it on the breadboard, with an alternating supply and a resistor.
+B4|0.35|When the anode is positive, it pulls the electrons across. Current flows.
+B5|0.65|When the anode turns negative, it pushes them back. No current at all.
+B6|0.35|Watch the scope. The input swings up and down. The output keeps only the top halves.
+B7|0.65|Current flows in one direction only. Turning alternating current into one-way current is called rectification.
+P1|0.35|In nineteen oh six, Lee de Forest added a wire mesh, the grid, between the cathode and the anode.
+P2|0.65|A small voltage on the grid controls a big current to the anode. This triode could amplify signals.
+P3|0.35|But tubes had real problems. The heater wasted power and needed time to warm up.
+P4|0.65|The anode needed hundreds of volts. The glass was big and fragile, and the heater burned out, like an old bulb.
+S1|0.35|The answer was a semiconductor, like silicon.
+S2|0.35|A semiconductor conducts better than an insulator, but not as well as a metal.
+S3|0.65|Each silicon atom has four outer electrons, and shares them with four neighbours.
+S4|0.65|Add a few phosphorus atoms. Phosphorus has five outer electrons, so one is left over and free to move. This is n-type silicon, with negative carriers.
+S5|0.65|Add boron instead. Boron has only three, so one bond is missing an electron. That gap is a hole, and it acts like a positive charge. This is p-type silicon.
+S6|0.65|Adding tiny impurities on purpose is called doping.
+J1|0.35|Now join a p-type piece to an n-type piece. This is a p-n junction.
+J2|0.65|Near the joint, free electrons cross over and fill holes. A thin layer with no free carriers is left behind. This is the depletion layer.
+J3|0.65|It creates a small barrier, about zero point seven volts for silicon.
+J4|0.35|Connect the p side to plus and the n side to minus. This is forward bias.
+J5|0.65|Above about zero point seven volts, the barrier gives way, and current rises fast. The scope draws the curve as it happens.
+J6|0.35|Now flip the battery. The p side goes to minus. This is reverse bias.
+J7|0.65|The depletion layer widens, and almost no current flows. Just like the vacuum diode, it is a one-way valve.
+T1|0.8|A vacuum tube needs heat to free its electrons. A p-n junction needs no heater at all.
+W1|0.35|Worked example. A silicon diode and a one kilo ohm resistor are connected to a five volt supply, in forward bias.
+W2|0.35|What current flows?
+W3|0.7|The diode takes about zero point seven volts. The rest, four point three volts, falls across the resistor.
+W4|0.7|Current equals voltage divided by resistance. Four point three volts divided by one thousand ohms.
+W5|0.65|That is four point three milliamperes. Flip the diode, and the current drops to almost zero.
+C1|0.35|So why did semiconductors win?
+C2|0.35|A tube needs a heater. A semiconductor needs none, so it starts instantly.
+C3|0.35|A tube needs hundreds of volts. A semiconductor works on just a few volts.
+C4|0.65|A tube is a fragile glass bulb. A semiconductor is tiny, solid and lasts for years. In nineteen forty seven, it gave us the transistor.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students connect forward bias the wrong way, with the p side to minus.
+X3|0.65|Forward bias means p side to plus, n side to minus. P to plus. Remember the two Ps.
+X4|0.65|Where is this asked? PUC board papers ask you to compare tubes with semiconductors, or explain doping. JEE Main asks for the current in diode circuits, as in February twenty twenty one.
+Q1|5.4|Try this. Two silicon diodes, both forward biased, are in series with a two kilo ohm resistor across a six volt battery. What is the current?
+A1|0.35|C. Two point three milliamperes.
+A2|0.35|Each silicon diode takes about zero point seven volts. Two of them take one point four volts.
+A3|0.35|That leaves four point six volts across the resistor.
+A4|0.65|Four point six divided by two thousand ohms gives two point three milliamperes.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, integrated circuits, microprocessors and microcontrollers. How do billions of transistors fit on one tiny chip?

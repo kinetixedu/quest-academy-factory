@@ -1,0 +1,51 @@
+H1|0.35|Aarav finds an old meter. Its needle swings all the way for just one milliampere.
+H2|0.5|So how can the same kind of meter read ten amperes, or two hundred and thirty volts from the wall?
+G1|0.35|Inside every analogue meter sits a moving coil galvanometer.
+G2|0.35|A small coil of wire sits between the poles of a strong magnet.
+G3|0.35|Send current through the coil, and the magnet pushes its two sides in opposite directions. The coil turns.
+G4|0.35|A tiny spring pulls back. The needle stops where the two balance.
+G5|0.65|Double the current, and the needle turns twice as far. The deflection is proportional to the current.
+G6|0.65|Two numbers describe every galvanometer. The coil resistance, G. And the full scale current, I g, the current that swings the needle all the way.
+B1|0.35|Now let's turn it into an ammeter on the breadboard.
+B2|0.35|A big current would burn the thin coil. So we connect a tiny resistance in parallel with it. This is called a shunt.
+B3|0.35|Watch the electrons. At the junction, almost all of them take the easy path through the shunt. Only a few pass through the coil.
+B4|0.35|Turn up the current. The coil still gets only its small share, and the needle stays on the scale.
+B5|0.65|An ammeter is connected in series, and its resistance must be very low, so it does not change the current it measures.
+D1|0.35|So how big should the shunt be? Let's work it out.
+D2|0.7|The coil and the shunt are in parallel, so they have the same voltage across them.
+D3|0.7|The voltage across the coil is I g times G.
+D4|0.7|The rest of the current, I minus I g, flows through the shunt S. So its voltage is I minus I g, times S.
+D5|0.7|Set the two equal, and S equals I g times G, divided by I minus I g.
+D6|0.65|Resistances in ohms, currents in amperes. Bigger range, smaller shunt.
+V1|0.35|Now a voltmeter. Here we need the opposite.
+V2|0.35|We add a large resistance in series with the coil. This is called a multiplier.
+V3|0.65|A voltmeter is connected in parallel, across the part we test. Its resistance must be very high, so it draws almost no current.
+V4|0.7|At full scale, the current I g flows through G and R together. So V equals I g times G plus R.
+V5|0.65|Rearrange it, and R equals V divided by I g, minus G.
+W1|0.35|Worked example. A galvanometer has G equal to fifty ohms, and I g equal to one milliampere.
+W2|0.35|First, an ammeter for one ampere.
+W3|0.6|S equals one times ten to the minus three, times fifty, divided by one minus zero point zero zero one.
+W4|0.65|That is about zero point zero five ohms. A tiny shunt.
+W5|0.35|Next, a voltmeter for ten volts.
+W6|0.6|R equals ten divided by one times ten to the minus three, minus fifty.
+W7|0.65|That is nine thousand, nine hundred and fifty ohms. A big multiplier.
+C1|0.35|But what about AC from the wall socket?
+C2|0.35|At fifty hertz, the current changes direction a hundred times every second.
+C3|0.65|The needle cannot follow that fast. The average push is zero, so it just shivers near zero.
+C4|0.35|So an AC meter adds a rectifier. Four diodes flip every negative half to the positive side.
+C5|0.35|Watch the scope. The input swings both ways. After the rectifier, every hump points up.
+C6|0.35|Now the needle settles at the average value, zero point six three seven times the peak.
+C7|0.65|But the scale is marked to show the R M S value, zero point seven zero seven times the peak. Their ratio, one point one one, is called the form factor.
+C8|0.65|So when a meter reads two hundred and thirty volts, that is the R M S value. The peak is about three hundred and twenty five volts.
+T1|0.8|An ammeter goes in series with a tiny shunt. A voltmeter goes across, with a big multiplier.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think a shunt goes in series to make an ammeter.
+X3|0.65|It does not. The shunt goes in parallel with the coil. The multiplier goes in series, to make a voltmeter.
+X4|0.65|Where is this asked? In PUC board papers, as short answers and problems. And in JEE Main, as numericals on the shunt or the series resistance.
+Q1|5.4|Try this. A galvanometer of resistance forty ohms gives full scale deflection at two milliamperes. What should you connect to make a voltmeter of range zero to five volts?
+A1|0.35|B. Two thousand four hundred and sixty ohms, in series.
+A2|0.35|A voltmeter needs a multiplier in series with the coil.
+A3|0.35|The total resistance is V over I g. Five divided by two times ten to the minus three is two thousand five hundred ohms.
+A4|0.65|Take away the coil's forty ohms, and R is two thousand four hundred and sixty ohms.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, ohmmeters. How can a meter with a battery inside measure resistance?

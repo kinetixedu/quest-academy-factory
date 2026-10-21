@@ -1,0 +1,31 @@
+{
+ "world": "puc-electronics",
+ "topic": "Ohmmeters",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 19
+ },
+ "class": "11",
+ "title": "How Ohmmeters Work Explained Simply | PUC Electronics Class 11",
+ "description": "Aarav touches the two probes of a meter together and the needle jumps all the way to the right, where the scale says zero ohms. Infinity sits on the left. Why is the ohm scale backwards? This animated lesson builds the series ohmmeter (a cell, a zero adjust resistor and a galvanometer) and shows that an ohmmeter really measures current.\n\nOn a live breadboard we short the probes and zero-adjust to full scale, pull them apart to read infinity, then connect an unknown resistor while the oscilloscope traces the meter current. We derive the needle position I/Ifs = Rin / (Rin + Rx) step by step, find the half-scale (mid-scale) resistance, and work a full example with a 1.5 V cell and a 1 mA meter. Then the zero adjust knob, the shunt type ohmmeter for small resistances, two precautions, the exam trap (the scale is reversed and crowded), where it is asked, an original JEE Main pattern question with a full solution, and a formula card to screenshot.\n\nThis is Episode 19 of PUC Electronics, Class 11, Chapter 3: Measuring Instruments (Karnataka PUC Electronics).\n\nIn this video:\n0:00 Why the ohm scale is backwards\n0:13 An ohmmeter carries its own cell\n0:30 Series ohmmeter on the breadboard\n1:06 Where each mark goes: I/Ifs = Rin/(Rin+Rx)\n1:42 Worked example: marking the scale\n2:12 Zero adjust, shunt type, precautions\n2:59 Exam trap: the scale is not even\n3:13 Where it is asked\n3:23 Practice question\n4:05 Formula card\n\nNext episode: Analogue and Digital Multimeters.\n\nVideo by Quest Academy.",
+ "tags": [
+  "ohmmeter",
+  "series ohmmeter",
+  "shunt type ohmmeter",
+  "how an ohmmeter works",
+  "ohmmeter scale",
+  "zero adjustment ohmmeter",
+  "half scale resistance",
+  "mid scale resistance",
+  "measuring resistance",
+  "PUC electronics",
+  "1st PUC electronics chapter 3",
+  "measuring instruments",
+  "Karnataka PUC electronics"
+ ],
+ "thumb": {
+  "title": "The Backwards Scale",
+  "accent_word": "Backwards",
+  "frame_t": 58
+ }
+}

@@ -1,0 +1,40 @@
+H1|0.35|Aarav charges his phone with a long, thin cable. It charges slowly.
+H2|0.5|A short, thick cable charges it faster. Same charger. So what is the thin cable doing?
+R1|0.35|It is resisting the current. Every material pushes back a little on the moving electrons.
+R2|0.35|Inside a wire, electrons keep bumping into the vibrating atoms. Each bump slows them down.
+R3|0.65|This opposition to the flow of current is called resistance, R.
+B1|0.35|So how are voltage, current and resistance linked? Let's test it on the breadboard.
+B2|0.35|A variable supply, an ammeter, and one resistor. A voltmeter sits across the resistor.
+B3|0.35|Set the supply to two volts. The current is zero point five amperes.
+B4|0.35|Four volts, one ampere. Six volts, one point five amperes. Eight volts, two amperes.
+B5|0.65|Plot each reading. The points fall on a straight line through zero.
+B6|0.35|Now swap in a resistor twice as big, and repeat.
+B7|0.35|At every voltage, the current is now half. The new line is twice as steep.
+B8|0.65|On a graph of V against I, the slope of the line is the resistance.
+L1|0.35|This is Ohm's law. Georg Simon Ohm, a German physicist, published it in eighteen twenty seven.
+L2|0.7|At a steady temperature, the current through a conductor is directly proportional to the voltage across it.
+L3|0.7|So V is proportional to I. Put in a constant, R, and V equals I times R.
+L4|0.7|Turn it around, and R equals V divided by I.
+L5|0.65|Resistance is measured in ohms, written with the Greek letter omega. One ohm is one volt per ampere.
+L6|0.65|Metals obey this law at a steady temperature. Some parts, like a diode, do not. We call them non ohmic.
+T1|0.8|Double the push, double the flow. Resistance stays the same.
+G1|0.35|So what decides the resistance of a wire? Three things.
+G2|0.7|Length. A longer wire means more bumps. R is proportional to the length, L.
+G3|0.7|Thickness. A wider wire gives more paths. R is inversely proportional to the area of cross section, A.
+G4|0.7|And the material. Put them together. R equals rho times L, divided by A.
+G5|0.65|Rho is the resistivity of the material, in ohm metres. Copper has a very low resistivity, so wires are made of copper.
+G6|0.65|That is why the long, thin cable charges slowly. More length, less area, more resistance.
+W1|0.35|Worked example. A resistor has six volts across it, and a current of zero point three amperes.
+W2|0.35|R equals V by I. Six divided by zero point three is twenty ohms.
+W3|0.65|Now raise the voltage to nine volts. I equals V by R. Nine divided by twenty is zero point four five amperes.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students read R equals V by I, and think a bigger voltage makes a bigger resistance.
+X3|0.65|It does not. R depends on the material, the length, the area and the temperature. V by I only measures it.
+X4|0.65|Where is this asked? In PUC board papers. State Ohm's law, define resistance and resistivity, and solve problems with V equals I R and R equals rho L by A.
+Q1|5.4|Try this. A wire of resistance ten ohms is stretched evenly to three times its length. It is then connected to a nine volt cell. What current flows?
+A1|0.35|C. Zero point one amperes.
+A2|0.35|Stretching keeps the volume the same. Three times the length means one third of the area.
+A3|0.35|So R becomes three times three, nine times bigger. Ninety ohms.
+A4|0.65|Then I equals V by R. Nine divided by ninety is zero point one amperes.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, series and parallel circuits. Why do all the lights in a house stay on when one bulb fails?

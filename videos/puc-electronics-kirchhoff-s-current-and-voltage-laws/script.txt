@@ -1,0 +1,52 @@
+H1|0.35|Aarav plugs a desk lamp and a phone charger into one extension board.
+H2|0.35|One wire brings the current in. Then it splits two ways.
+H3|0.5|So how much goes each way? And does any of it get lost?
+K1|0.35|Two simple rules answer this, for any circuit.
+K2|0.35|They are Kirchhoff's laws. Gustav Kirchhoff wrote them in eighteen forty five, while he was still a student.
+K3|0.65|The first rule is about junctions. The second rule is about loops.
+C1|0.35|Let's build it on the breadboard. A twelve volt battery feeds two resistors, side by side.
+C2|0.35|The point where the wire splits is called a junction. We will call it P.
+C3|0.35|Follow the current arrows. Three amperes arrive at the junction.
+C4|0.35|One ampere takes the first path. Two amperes take the second path.
+C5|0.35|One plus two is three. Nothing is lost, and nothing is added.
+C6|0.35|Now turn the knob, and make the second resistor smaller.
+C7|0.35|Its current jumps up, and the current from the battery jumps with it.
+C8|0.65|On the scope, the current going in and the total current coming out stay right on top of each other. Always.
+D1|0.35|This is Kirchhoff's current law.
+D2|0.7|At any junction, the total current flowing in equals the total current flowing out.
+D3|0.7|Why? Because charge cannot pile up at a point, and it cannot vanish. Charge is conserved.
+D4|0.7|Call currents coming in positive, and currents going out negative. Then all the currents at a junction add up to zero.
+D5|0.65|Here, I minus I one minus I two equals zero. So I equals I one plus I two.
+L1|0.35|Now the second law. Take one closed loop. A twelve volt battery, and two resistors of two ohms and four ohms.
+L2|0.35|Twelve volts across six ohms in total gives a current of two amperes.
+L3|0.35|Now walk a probe around the loop, and let the scope draw the voltage at every point.
+L4|0.35|Through the battery, from minus to plus, the voltage climbs by twelve volts.
+L5|0.35|Across the two ohm resistor, it drops by four volts. That is I times R, two times two.
+L6|0.35|Across the four ohm resistor, it drops by eight volts.
+L7|0.65|Back at the start, the voltage is exactly where it began. Plus twelve, minus four, minus eight. Zero.
+V1|0.35|This is Kirchhoff's voltage law.
+V2|0.7|Around any closed loop, the voltage rises add up to the same amount as the voltage drops.
+V3|0.7|Why? A charge that goes once round the loop comes back to the same point, with the same energy. Energy is conserved.
+V4|0.7|So around a loop, the sum of the E M Fs equals the sum of all the I R drops.
+V5|0.65|Two sign rules. Cross a cell from minus to plus, write plus E. Cross a resistor along the current, write minus I R.
+T1|0.8|Junctions keep charge. Loops keep energy.
+W1|0.35|Worked example. A twelve volt battery and a two ohm resistor, then six ohms and three ohms side by side.
+W2|0.35|Find the current in each resistor.
+W3|0.7|At junction P, the current law gives I equals I two plus I three.
+W4|0.7|Left loop. Twelve equals two times I, plus six times I two.
+W5|0.7|Right loop, around the two side by side resistors. Six times I two equals three times I three. So I three is twice I two.
+W6|0.7|That makes I three times I two. Put it in the left loop. Twelve equals twelve times I two.
+W7|0.65|So I two is one ampere, I three is two amperes, and the battery gives three amperes.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students write minus I R for every resistor, whichever way they walk.
+X3|0.65|The sign depends on your direction. Walk along the current, write minus I R. Walk against it, write plus I R.
+X4|0.65|And if a current comes out negative, nothing is wrong. It simply flows the other way.
+X5|0.65|Where is this asked? In PUC board papers, as five mark problems. In JEE Main and NEET, as circuits where you find the current in one branch.
+Q1|5.4|Try this. Two cells of twelve volts and six volts, each with a two ohm resistor, are joined in parallel across a four ohm resistor. What current flows through the four ohm resistor?
+A1|0.35|B. One point eight amperes.
+A2|0.35|Let I one and I two flow up through the cells. By the current law, I one plus I two flows through the four ohm resistor.
+A3|0.35|Left loop. Twelve equals two I one, plus four times the total. Right loop. Six equals two I two, plus four times the total.
+A4|0.35|Add the two loops. Eighteen equals two times the total, plus eight times the total. That is ten times the total.
+A5|0.65|So the current is eighteen over ten, one point eight amperes. And I two comes out negative, so the six volt cell is being charged.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, D C sources and circuit analysis. Why does a battery's voltage drop when it works hard?

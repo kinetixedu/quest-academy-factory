@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "Vacuum Tubes and Semiconductor Devices",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 2
+ },
+ "class": "11",
+ "title": "Vacuum Tubes vs Silicon Explained Simply | PUC Electronics Class 11",
+ "description": "Aarav switches on his grandfather's old valve radio and has to wait for the music, while his phone plays instantly. Why? In this animated lesson we look inside a hot cathode to see thermionic emission and the work function (about 4.5 eV for tungsten), then build Fleming's vacuum diode (1904) on a live breadboard: the oscilloscope shows an alternating input turning into one-way current, which is rectification. We add de Forest's grid to make a triode (1906) and list the real problems of tubes.\n\nThen the semiconductor answer: silicon, doping with phosphorus (n-type, free electrons) and boron (p-type, holes), the p-n junction, the depletion layer and its barrier of about 0.7 V for silicon, and forward vs reverse bias with the I-V curve drawn live on the scope. A worked example finds the current through a silicon diode and a 1 kilo-ohm resistor on 5 V (4.3 mA), followed by why semiconductors won, the exam trap (forward bias means p side to plus), where it is asked, an original JEE Main pattern practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 2 of PUC Electronics, Class 11, Chapter 1: Introduction to Electronics (Karnataka PUC Electronics).\n\nIn this video:\n0:00 Why does the old radio make you wait?\n0:21 Thermionic emission and the work function\n0:56 Fleming's vacuum diode on a breadboard\n1:39 The triode and the trouble with tubes\n2:06 Semiconductors and doping: n-type and p-type\n2:47 The p-n junction: forward and reverse bias\n3:41 Worked example: current through a silicon diode\n4:13 Why semiconductors won\n4:37 Exam trap: forward bias polarity\n4:51 Where it is asked\n5:05 Practice question\n5:40 Formula card\n\nNext episode: Integrated Circuits, Microprocessors and Microcontrollers.\n\nVideo by Quest Academy.",
+ "tags": [
+  "vacuum tube",
+  "vacuum diode",
+  "thermionic emission",
+  "work function",
+  "semiconductor devices",
+  "p-n junction",
+  "forward bias and reverse bias",
+  "depletion layer",
+  "n-type and p-type semiconductor",
+  "doping",
+  "PUC electronics",
+  "1st PUC electronics chapter 1",
+  "Karnataka PUC electronics",
+  "class 11 electronics"
+ ],
+ "thumb": {
+  "title": "Tubes vs Silicon",
+  "accent_word": "Silicon",
+  "frame_t": 200
+ }
+}

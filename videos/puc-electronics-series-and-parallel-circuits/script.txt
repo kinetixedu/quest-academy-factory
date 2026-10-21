@@ -1,0 +1,37 @@
+H1|0.35|One tiny bulb fails on Aarav's old string of festival lights, and the whole string goes dark.
+H2|0.5|But when one bulb fails at home, every other light stays on. Why?
+S1|0.35|The answer is how the parts are connected. There are two basic ways. Series, and parallel.
+S2|0.35|In series, the parts sit one after another, in a single path. Like beads on one thread.
+S3|0.65|In parallel, each part gets its own path, connected across the same two points. Like lanes on a road.
+B1|0.35|Let's build both on the breadboard. A twelve volt supply, and two resistors, four ohms and twelve ohms.
+B2|0.35|First, in series. There is only one path, so the same current flows through both. Zero point seven five amperes.
+B3|0.35|But the voltage is shared. Three volts across the four ohm resistor, nine volts across the twelve ohm resistor.
+B4|0.65|Now break one resistor. The only path is cut. Everything stops. That is the festival string.
+B5|0.35|Now rebuild them in parallel. Each resistor sits right across the twelve volt supply.
+B6|0.35|Three amperes take the four ohm path. One ampere takes the twelve ohm path. The supply gives four amperes in total.
+B7|0.65|Break one resistor now. Its path stops, but the other path keeps flowing. On the scope, the total drops, but never to zero.
+T1|0.8|Series shares the voltage. Parallel shares the current.
+D1|0.35|Now let's find the total resistance, starting with series.
+D2|0.7|The supply voltage is shared. V equals V one plus V two.
+D3|0.7|The current I is the same in both. So V equals I R one plus I R two.
+D4|0.7|Divide by I. The series total is R one plus R two. Resistances simply add.
+D5|0.35|Now parallel. The voltage V is the same across each one.
+D6|0.7|The currents add. I equals I one plus I two.
+D7|0.7|Each current is V over R. So V over R equals V over R one, plus V over R two.
+D8|0.65|Divide by V. One over R equals one over R one, plus one over R two. The total is always smaller than the smallest resistor.
+W1|0.35|Worked example. A six ohm and a three ohm resistor, with an eighteen volt supply.
+W2|0.35|In series, R is six plus three, nine ohms. The current is eighteen by nine, two amperes.
+W3|0.35|In parallel, one over R is one sixth plus one third, which is one half. So R is two ohms.
+W4|0.65|The supply then gives eighteen by two, nine amperes. Three through the six ohm resistor, and six through the three ohm resistor.
+U1|0.65|Homes are wired in parallel. Every appliance gets the full mains voltage, and each one has its own switch.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students work out one over R, and stop. They write half an ohm.
+X3|0.65|Always flip it at the end. One over R is one half, so R is two ohms.
+X4|0.65|Where is this asked? In PUC board papers, as problems on combinations of resistors, and the differences between series and parallel.
+Q1|5.4|Try this. Three resistors of six ohms each. Two are joined in parallel, and this pair is in series with the third, across a nine volt cell. What current flows through one of the parallel resistors?
+A1|0.35|A. Zero point five amperes.
+A2|0.35|The parallel pair is six by two, three ohms. Add the third resistor. Nine ohms in total.
+A3|0.35|The current from the cell is nine by nine, one ampere.
+A4|0.65|It splits equally between two equal resistors. So each one carries zero point five amperes.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, Kirchhoff's current and voltage laws. Two rules that solve any circuit, however tangled.

@@ -1,0 +1,44 @@
+H1|0.35|Aarav's bicycle lamp is glowing dim. He picks up a meter with two probes.
+H2|0.5|But where do the probes go?
+I1|0.35|In a circuit, we measure three things. Voltage, current and resistance.
+I2|0.35|Each one needs the meter connected in a different way.
+I3|0.65|And for signals that change with time, we use a fourth tool, the oscilloscope.
+V1|0.35|Let's start on the breadboard. A six volt battery, a resistor and a lamp.
+V2|0.35|Voltage is a push between two points. So the voltmeter goes across the part, in parallel.
+V3|0.35|Red probe on the plus side of the lamp, black probe on the other side. It reads four point five volts.
+V4|0.65|A good voltmeter has a very high resistance. It takes almost no current, so it does not disturb the circuit.
+C1|0.35|Current is different. Current is a flow through the wire, so the ammeter must sit in the path, in series.
+C2|0.35|Switch off, break the circuit, and put the ammeter into the gap. Now every electron must pass through it.
+C3|0.35|Switch on. It reads zero point three amperes.
+C4|0.65|A good ammeter has a very low resistance, so it hardly slows the flow.
+R1|0.35|Resistance is the odd one. The ohmmeter has its own small cell inside.
+R2|0.35|So switch the circuit off, lift the resistor out, and measure it alone. Five ohms.
+R3|0.65|Measure a live circuit, and the reading is wrong. The meter can even be damaged.
+S1|0.8|Voltmeter across. Ammeter in line. Ohmmeter with the power off.
+W1|0.35|Now, signals that change with time. A meter shows one number. An oscilloscope draws the whole wave.
+W2|0.35|The screen is a grid of boxes called divisions. Two knobs tell you what one box is worth.
+W3|0.35|The volts per division knob sets the height of one box. The time per division knob sets its width.
+W4|0.35|Watch. Turn up the signal generator, and the wave grows taller. The readout climbs with it.
+W5|0.65|Turn up the frequency, and the waves crowd closer together. The period gets shorter.
+D1|0.35|So here is how to read any wave, step by step.
+D2|0.7|Count the boxes from the lowest point to the highest point. Multiply by volts per division. That is the peak to peak voltage.
+D3|0.7|Half of that is the peak voltage, V m.
+D4|0.7|For a sine wave, the R M S value is the peak divided by root two.
+D5|0.7|Now count the boxes across one full cycle. Multiply by time per division. That is the period, T.
+D6|0.65|And the frequency is one over T. Voltage in volts, time in seconds, frequency in hertz.
+X1|0.35|Worked example. A sine wave is four divisions high, peak to peak, at two volts per division.
+X2|0.35|One cycle is four divisions wide, at five milliseconds per division.
+X3|0.6|Peak to peak is four times two, eight volts. So the peak is four volts.
+X4|0.6|The R M S value is four divided by root two, about two point eight three volts.
+X5|0.65|The period is four times five, twenty milliseconds. So the frequency is one over zero point zero two seconds. Fifty hertz.
+T1|0.35|Now, the exam trap.
+T2|0.35|Many students connect the ammeter across a part, like a voltmeter. Never do that.
+T3|0.65|An ammeter has almost no resistance. Across a part it acts like a short circuit. A huge current flows, and the meter or its fuse can burn out.
+T4|0.65|Where is this asked? In PUC board papers. How to connect each meter, and how to read voltage and frequency from an oscilloscope screen.
+Q1|5.6|Try this. A sine wave on an oscilloscope is five divisions peak to peak, at zero point five volts per division. One cycle is eight divisions wide, at zero point one milliseconds per division. Find the R M S voltage and the frequency.
+A1|0.35|A. About zero point eight eight volts, and one point two five kilohertz.
+A2|0.35|Peak to peak is five times zero point five, two point five volts. So the peak is one point two five volts.
+A3|0.35|Divide by root two. The R M S value is about zero point eight eight volts.
+A4|0.65|The period is eight times zero point one, zero point eight milliseconds. One over that is one thousand two hundred and fifty hertz.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, instrument symbols, controls, ranges and precautions. What do all those markings on a meter really mean?

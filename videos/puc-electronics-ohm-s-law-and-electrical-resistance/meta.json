@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "Ohm's Law and Electrical Resistance",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 8
+ },
+ "class": "11",
+ "title": "Ohm's Law Explained Simply | PUC Electronics Class 11",
+ "description": "Aarav's phone charges slowly with a long, thin cable and faster with a short, thick one. Same charger, so what is the thin cable doing? In this animated lesson we see resistance from the inside (electrons bumping into vibrating atoms) and then discover Ohm's law on a live breadboard.\n\nA variable supply steps from 2 V to 8 V while the ammeter and voltmeter read the current and voltage, and every reading is plotted live on a V against I graph: a straight line through zero whose slope is the resistance. Swap in a resistor twice as big and the new line is twice as steep. We state Ohm's law (Georg Simon Ohm, 1827), derive V = IR and R = V/I, define the ohm, meet ohmic and non ohmic parts, and find what decides a wire's resistance: R = ρL/A. Then a worked example, the exam trap (R does not depend on V), where it is asked, an original JEE Main pattern practice question on a stretched wire with a full solution, and a formula card to screenshot.\n\nThis is Episode 8 of PUC Electronics, Class 11, Chapter 2: Principles of Electricity, Network Theorems and AC Principles (Karnataka PUC Electronics).\n\nIn this video:\n0:00 A long thin cable vs a short thick one\n0:12 What is resistance?\n0:29 Plotting V against I on a breadboard\n1:10 Ohm's law: V = IR\n1:50 Double the push, double the flow\n1:54 What decides resistance: R = ρL/A\n2:34 Worked example\n2:56 Exam trap: R does not depend on V\n3:12 Where it is asked\n3:24 Practice question\n4:00 Formula card\n\nNext episode: Series and Parallel Circuits.\n\nVideo by Quest Academy.",
+ "tags": [
+  "Ohm's law",
+  "electrical resistance",
+  "V = IR",
+  "resistivity",
+  "R = rho L/A",
+  "V-I graph",
+  "ohmic and non ohmic",
+  "unit of resistance ohm",
+  "stretched wire resistance",
+  "PUC electronics",
+  "1st PUC electronics chapter 2",
+  "principles of electricity",
+  "Karnataka PUC electronics",
+  "class 11 electronics"
+ ],
+ "thumb": {
+  "title": "Why Wires Fight Back",
+  "accent_word": "Fight",
+  "frame_t": 66
+ }
+}

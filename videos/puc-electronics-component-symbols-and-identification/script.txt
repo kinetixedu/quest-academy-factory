@@ -1,0 +1,41 @@
+H1|0.35|Aarav opens an old radio. Inside are dozens of tiny parts. Striped beads, small orange discs, blue cans and coils of copper wire.
+H2|0.5|On the circuit diagram, they are just lines and zigzags. So how do you match the drawing to the part in your hand?
+I1|0.35|You need two skills. Reading the symbol, and recognising the real part.
+S1|0.35|Let's start with symbols. Each passive part has a basic symbol.
+S2|0.35|A resistor is a zigzag. A capacitor is two parallel plates with a gap. An inductor is a coil of loops.
+S3|0.35|Now add small marks to change the meaning. An arrow drawn across the symbol means variable. You can change its value while it works.
+S4|0.35|An arrow pointing at the resistor is a potentiometer. It has three terminals, and the arrow is the sliding contact, called the wiper.
+S5|0.35|A short bar instead of an arrow means a preset. You set it once with a screwdriver, and leave it.
+S6|0.35|For capacitors, a plus sign and one curved plate mean polarised. That is an electrolytic capacitor, and it must go in the right way round.
+S7|0.65|For inductors, straight lines beside the coil mean an iron core. Dashed lines mean a ferrite core. Two coils sharing a core make a transformer.
+B1|0.35|Let's see the potentiometer at work on the breadboard. It is a volume control.
+B2|0.35|A music signal goes across the whole resistor track. The wiper picks off just a part of it, and sends it to the speaker.
+B3|0.35|Watch the scope. The top trace is the input. It never changes.
+B4|0.35|Slide the wiper down, and the output wave shrinks. The music gets quieter.
+B5|0.65|Slide it back up, and the output grows again. The arrow in the symbol is exactly this sliding contact.
+T1|0.8|The symbol tells you what a part does. The markings tell you its value.
+P1|0.35|Now, the real parts. How do you recognise them?
+P2|0.35|A carbon or metal film resistor is a small bead with coloured bands. The bands give its value.
+P3|0.35|A ceramic disc capacitor is a flat disc, often with a three digit code printed on it.
+P4|0.35|An electrolytic capacitor is a small can. A stripe down one side marks the minus lead, and the longer lead is plus.
+P5|0.65|An inductor often looks like a coil of copper wire, sometimes wound on a ring or a small rod of ferrite.
+D1|0.35|So how do you read that three digit code on a capacitor?
+D2|0.7|The first two digits are the significant figures.
+D3|0.7|The third digit is the multiplier. It tells you how many zeros to add.
+D4|0.7|And the answer is always in picofarads. One picofarad is ten to the minus twelve farads.
+D5|0.65|One thousand picofarads make one nanofarad. One thousand nanofarads make one microfarad.
+W1|0.35|Worked example. A disc capacitor is marked one zero four.
+W2|0.6|Ten, followed by four zeros. That is one hundred thousand picofarads.
+W3|0.6|Divide by a thousand. One hundred nanofarads.
+W4|0.65|Divide by a thousand again. Zero point one microfarads. So one zero four is the famous point one microfarad capacitor.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think an electrolytic capacitor can be connected either way round. It cannot.
+X3|0.65|Its plus lead must go to the higher voltage. Connected backwards, it can heat up, bulge, or even burst.
+X4|0.65|Where is this asked? In PUC board papers. Draw the symbols of components, identify a component, or decode a capacitor marking.
+Q1|5.4|Try this. A ceramic capacitor is marked two two three. What is its capacitance?
+A1|0.35|C. Zero point zero two two microfarads.
+A2|0.35|The first two digits are twenty two. The third digit, three, means add three zeros.
+A3|0.35|That is twenty two thousand picofarads, which is twenty two nanofarads.
+A4|0.65|Divide by a thousand once more, and you get zero point zero two two microfarads.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, reading component specifications and datasheets. What else does a part tell you, beyond its value?

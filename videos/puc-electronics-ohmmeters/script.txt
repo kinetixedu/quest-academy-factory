@@ -1,0 +1,41 @@
+H1|0.35|Aarav touches the two probes of a meter together. The needle jumps all the way to the right.
+H2|0.5|And the scale there says zero. Zero ohms on the right, infinity on the left. Why is this scale backwards?
+O1|0.35|An ohmmeter measures resistance. But a resistor cannot push any current by itself.
+O2|0.35|So the ohmmeter carries its own battery inside.
+O3|0.65|The simplest one is the series ohmmeter. A cell, a galvanometer and a resistor, all in series, ending in two probes.
+B1|0.35|Let's run it on the breadboard.
+B2|0.35|First, short the probes together. Turn the zero adjust knob until the needle sits exactly at full scale.
+B3|0.65|That mark is zero ohms. The current is as big as it can be.
+B4|0.65|Now pull the probes apart. No current flows, so the needle falls back to the left. That mark is infinity.
+B5|0.35|Put an unknown resistor between the probes. Less current flows, and the needle stops somewhere in between.
+B6|0.65|Watch the scope. A bigger resistance gives a smaller current. That is why the scale runs backwards.
+D1|0.35|So where does each mark go? Let's work it out.
+D2|0.7|Call the ohmmeter's own total resistance R in. With the probes shorted, the full scale current is E divided by R in.
+D3|0.7|With an unknown resistor R x, the current is E divided by R in plus R x.
+D4|0.7|Divide the two. The needle's fraction of full scale is R in, divided by R in plus R x.
+D5|0.7|When R x equals R in, the needle stops exactly at half scale.
+D6|0.65|And doubling R x does not halve the needle. So the marks crowd together on the left.
+W1|0.35|Worked example. An ohmmeter has a one point five volt cell and a meter that reads one milliampere at full scale.
+W2|0.6|R in equals one point five divided by one times ten to the minus three. That is fifteen hundred ohms.
+W3|0.65|So the half scale mark reads fifteen hundred ohms.
+W4|0.6|Now connect three thousand ohms. The fraction is fifteen hundred divided by four thousand five hundred.
+W5|0.65|That is one third of full scale.
+Z1|0.35|Why do we need the zero adjust knob at all?
+Z2|0.65|As the cell gets weaker, E falls, and the needle no longer reaches full scale. The knob brings it back, so zero ohms stays at zero.
+S1|0.35|For very small resistances, a shunt type ohmmeter puts the resistor in parallel with the meter instead.
+S2|0.65|Its scale runs the normal way, with zero ohms on the left.
+P1|0.35|Two rules keep the reading honest.
+P2|0.35|Never measure resistance in a circuit that is switched on. Its own voltage spoils the reading, and can damage the meter.
+P3|0.65|And take the part out, or lift one end, so other parts connected across it do not change the reading.
+T1|0.8|An ohmmeter does not measure ohms directly. It measures current, and turns it into ohms.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think the ohmmeter scale is even, like an ammeter's.
+X3|0.65|It is not. The scale is reversed and crowded. Half scale means R x equals R in, not half of some range.
+X4|0.65|Where is this asked? In PUC board papers, as short answers. What an ohmmeter is, why it needs zero adjustment, and the precautions while using it.
+Q1|5.4|Try this. An ohmmeter uses a three volt cell and a meter of one hundred microamperes full scale. Which resistance makes the needle stop at one fifth of full scale?
+A1|0.35|C. One hundred and twenty kilo ohms.
+A2|0.35|First, R in is three divided by one hundred times ten to the minus six. That is thirty kilo ohms.
+A3|0.35|One fifth of full scale means R in, over R in plus R x, equals one fifth.
+A4|0.65|So R in plus R x is five times R in. R x is four times thirty, one hundred and twenty kilo ohms.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, analogue and digital multimeters. One box that measures volts, amperes and ohms.

@@ -1,0 +1,44 @@
+H1|0.35|Diya holds a digital thermometer under her tongue. One minute later, it beeps and shows thirty seven degrees.
+H2|0.5|But a thermometer cannot feel anything. So how does it turn heat into a number?
+I1|0.35|The secret is a transducer.
+I2|0.35|A transducer is a device that changes energy from one form into another.
+I3|0.65|In electronics, it turns a physical quantity, like heat, light, sound or pressure, into an electrical signal. Or the other way round.
+I4|0.35|A microphone is an input transducer. It turns sound into an electrical signal.
+I5|0.65|A loudspeaker is an output transducer. It turns the electrical signal back into sound.
+B1|0.35|Now let's open the thermometer on the breadboard.
+B2|0.35|Inside is a thermistor. That is a resistor whose resistance changes with temperature.
+B3|0.35|It sits in series with a fixed ten kilo ohm resistor, across a five volt supply. We read the voltage across the fixed resistor.
+B4|0.35|At room temperature, twenty five degrees, the thermistor is also ten kilo ohms. So the output is half the supply, two point five volts.
+B5|0.35|Now Diya's mouth warms it up. Watch the readout. The temperature climbs, and the thermistor's resistance falls.
+B6|0.35|More current flows, so the electrons speed up. And the output voltage on the scope rises.
+B7|0.65|The chip inside reads that voltage and shows it as a temperature. Heat in, voltage out.
+T1|0.8|A transducer turns the world into signals.
+M1|0.35|Why does the resistance fall? A thermistor is made of a semiconductor.
+M2|0.65|Heat frees more charge carriers inside it, so current flows more easily. This type is called a negative temperature coefficient thermistor.
+D1|0.35|Now let's find the output voltage. This circuit is a voltage divider.
+D2|0.7|The same current flows through both resistors. I equals the supply voltage divided by the total resistance.
+D3|0.7|The output is the voltage across the fixed resistor. V out equals I times R.
+D4|0.7|Put the two together. V out equals the supply voltage, times R, divided by R plus the thermistor resistance.
+D5|0.65|Resistances in ohms, voltages in volts. The ratio decides what share of the supply you get.
+W1|0.35|Worked example. At thirty seven degrees, the thermistor drops to six kilo ohms.
+W2|0.6|V out equals five, times ten, divided by ten plus six.
+W3|0.65|That is three point one two five volts. Up from two point five. That change is the signal.
+P1|0.35|Some transducers do not need a supply at all. They make their own voltage. These are called active transducers.
+P2|0.35|A thermocouple makes a small voltage when its junction is heated. A solar cell makes a voltage from light.
+P3|0.65|And a piezoelectric crystal makes a voltage when you squeeze it.
+P4|0.35|Others only change their resistance, so they need an outside supply. These are passive transducers.
+P5|0.65|The thermistor, the light dependent resistor and the strain gauge are all passive.
+U1|0.35|Transducers are everywhere.
+U2|0.35|A light dependent resistor switches street lights on at dusk. A strain gauge inside a weighing scale feels the load.
+U3|0.65|And in hospitals, the ultrasound scanner uses a piezoelectric crystal to send and receive sound waves.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think every transducer needs a power supply. It does not.
+X3|0.65|Active transducers like the thermocouple make their own voltage. Only passive ones, like the thermistor, need a supply.
+X4|0.65|Where is this asked? In PUC board papers. Define a transducer, tell active from passive with examples, or explain one application.
+Q1|5.4|Try this. A light dependent resistor and a four kilo ohm resistor are in series across six volts. In the dark, the voltage across the four kilo ohm resistor is one point two volts. What is the resistance of the light dependent resistor?
+A1|0.35|C. Sixteen kilo ohms.
+A2|0.35|First, the current. One point two volts divided by four kilo ohms is zero point three milliamperes.
+A3|0.35|The rest of the supply drops across the light dependent resistor. Six minus one point two is four point eight volts.
+A4|0.65|So its resistance is four point eight divided by zero point three milliamperes. Sixteen kilo ohms.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, component symbols and identification. How do you tell a capacitor from a resistor just by looking?

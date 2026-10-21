@@ -1,0 +1,198 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Electronics Ep 2 - Vacuum Tubes and Semiconductor Devices</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== Breadboard (PUC Electronics) layout ===== */
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.card svg.full{position:absolute;left:0;top:0}
+.big{position:absolute;font:600 56px 'IBM Plex Mono';white-space:nowrap}
+.sm{position:absolute;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.txt{position:absolute;font:500 30px/1.35 Poppins;white-space:nowrap}
+#ghost{top:168px}
+/* hook */
+#aC{left:160px;top:260px;width:784px;height:600px;overflow:hidden}
+#aImg{position:absolute;left:24px;top:84px;height:516px}
+#rC{left:976px;top:260px;width:784px;height:284px}
+#pC{left:976px;top:576px;width:784px;height:284px}
+.wbar{position:absolute;left:300px;top:150px;width:440px;height:18px;border-radius:9px;background:var(--soft);overflow:hidden}
+.wbar i{display:block;height:18px;width:0;background:var(--ac);border-radius:9px}
+/* thermionic */
+#eL{left:160px;top:260px;width:784px;height:600px}
+#eR{left:976px;top:260px;width:784px;height:600px}
+.st2{position:absolute;left:36px;display:flex;align-items:center;gap:22px;white-space:nowrap}
+.st2 .n{flex:none;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st2 .sx{font-size:34px}
+.st2 .sx.tx{font:600 28px Poppins}
+.st2 .why{font:500 22px Poppins;color:var(--mute)}
+#eStrip{position:absolute;left:36px;top:470px;width:712px;height:96px;border-radius:14px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:18px;padding:0 28px;box-sizing:border-box;font:600 30px Poppins;white-space:nowrap}
+#eStrip .acc{color:var(--ac)}
+.ro2{position:absolute;left:32px;top:76px;width:576px;display:grid;grid-template-columns:auto 1fr auto;column-gap:18px;row-gap:14px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .k.n{font-style:normal;font-size:24px;font-family:'IBM Plex Mono';letter-spacing:.06em}
+.ro2 .v{font:600 38px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 22px 'IBM Plex Mono';color:var(--mute);white-space:nowrap;min-width:52px}
+/* breadboard */
+#ck{left:160px;top:260px;width:928px;height:600px}
+#sc{left:1120px;top:260px;width:640px;height:300px}
+#rb{left:1120px;top:592px;width:640px;height:268px}
+#scS{position:absolute;left:24px;top:76px}
+/* triode + trouble */
+#pL{left:160px;top:260px;width:784px;height:600px}
+#pR{left:976px;top:260px;width:784px;height:600px}
+.pr{position:absolute;left:36px;width:712px;height:100px;border-radius:14px;background:var(--soft);display:flex;align-items:center;gap:22px;padding:0 24px;box-sizing:border-box}
+.pr .ic{flex:none;width:56px;height:56px;border-radius:50%;background:var(--redBg);display:flex;align-items:center;justify-content:center}
+.pr .t1{font:700 28px Poppins;white-space:nowrap}
+.pr .t2{font:500 21px Poppins;color:var(--mute);white-space:nowrap}
+/* doping */
+#sL{left:160px;top:260px;width:784px;height:600px}
+#sR{left:976px;top:260px;width:784px;height:600px}
+.tile{position:absolute;left:32px;width:720px;height:132px;border-radius:14px;background:var(--soft);border:2.5px solid var(--soft);box-sizing:border-box}
+.tile .tl{position:absolute;left:24px;top:22px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.tile .tn{position:absolute;left:24px;top:54px;font:700 30px Poppins;color:var(--ink2);white-space:nowrap}
+.tile .td{position:absolute;left:24px;top:94px;font:500 21px Poppins;color:var(--mute);white-space:nowrap}
+#sStrip{position:absolute;left:32px;top:520px;width:720px;height:56px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:14px;padding:0 24px;box-sizing:border-box;font:600 26px Poppins;white-space:nowrap}
+#sStrip .acc{color:var(--ac)}
+#sTag{position:absolute;right:32px;top:22px}
+/* junction */
+#jL{left:160px;top:260px;width:928px;height:600px}
+#jsc{left:1120px;top:260px;width:640px;height:300px}
+#jrb{left:1120px;top:592px;width:640px;height:268px}
+#jS2{position:absolute;left:24px;top:76px}
+/* worked example */
+#wL{left:160px;top:260px;width:784px;height:600px}
+#wR{left:976px;top:260px;width:784px;height:600px}
+#wBox{position:absolute;left:24px;top:416px;width:736px;height:100px;border-radius:14px;background:var(--ac2)}
+/* comparison */
+#cC{left:160px;top:260px;width:1600px;height:600px}
+.cr{position:absolute;left:36px;width:1528px;height:66px;display:grid;grid-template-columns:300px 1fr 1fr;column-gap:16px;align-items:center}
+.cr div{height:58px;border-radius:12px;display:flex;align-items:center;padding:0 22px;font:600 26px Poppins;white-space:nowrap}
+.cr .k{font:600 19px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);background:none;padding-left:4px}
+.cr .a{background:#F4F5F7;color:var(--ink2)}.cr .b{background:var(--soft);color:var(--ink2)}
+.cr.h div{height:44px;font:600 18px 'IBM Plex Mono';letter-spacing:.1em;background:none;color:var(--mute)}
+#cStrip{position:absolute;left:36px;top:512px;width:1528px;height:60px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:18px;padding:0 24px;box-sizing:border-box;border-left:10px solid var(--ac)}
+#cStrip .nc{height:36px;padding:0 12px;border-radius:8px;background:var(--ac);display:flex;align-items:center;font:600 17px 'IBM Plex Mono';letter-spacing:.1em;white-space:nowrap}
+#cStrip .nt{font:600 26px Poppins;white-space:nowrap}
+/* exam */
+#trap{left:160px;top:260px;width:784px;height:300px}
+#tc{left:976px;top:260px;width:784px;height:300px}
+#wa{left:160px;top:592px;width:1600px;height:268px}
+#mq{left:160px;top:260px;width:1040px;height:600px}
+#so{left:1232px;top:260px;width:528px;height:600px}
+#so .sol{left:32px}
+.fcard .fl{font-size:40px}
+.fcard .fl.txt{font:500 28px Poppins}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · ELECTRONICS · CH 1 INTRODUCTION TO ELECTRONICS</div>
+    <div class="subj" id="subj">BREADBOARD</div>
+    <div id="title">Why did <span class="acc">silicon</span> win?</div>
+    <div id="sub">Vacuum tubes and semiconductor devices</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E8A317" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="ghost" id="ghost">EXAMPLE FIGURES</div>
+
+    <!-- A: hook -->
+    <div class="sc" id="sA">
+      <div class="card" id="aC"><div class="lbl" style="left:32px;top:28px">AARAV · PCME · JEE</div>
+        <img id="aImg" src="../../assets/illustrations/puc/aarav.png" alt="">
+        <svg id="radS" width="330" height="300" style="position:absolute;left:430px;top:150px"></svg>
+        <div class="pillp ac" id="aPill" style="left:462px;top:476px">Grandpa's radio</div></div>
+      <div class="card" id="rC"><div class="lbl" style="left:32px;top:28px">OLD RADIO · VACUUM TUBES</div>
+        <svg id="rtS" width="230" height="200" style="position:absolute;left:32px;top:64px"></svg>
+        <div class="sm" id="rL1" style="left:300px;top:96px">WARMING UP</div><div class="wbar" id="rBar"><i></i></div>
+        <svg id="rWav" width="440" height="70" style="position:absolute;left:300px;top:188px"></svg>
+        <div class="pillp bad" id="rWait" style="left:592px;top:84px;height:44px;font-size:22px">wait...</div></div>
+      <div class="card" id="pC"><div class="lbl" style="left:32px;top:28px">PHONE · SEMICONDUCTORS</div>
+        <svg id="phS" width="230" height="200" style="position:absolute;left:32px;top:64px"></svg>
+        <div class="sm" id="pL1" style="left:300px;top:96px">READY</div><div class="wbar" id="pBar"><i></i></div>
+        <svg id="pWav" width="440" height="70" style="position:absolute;left:300px;top:188px"></svg>
+        <div class="pillp good" id="pNow" style="left:592px;top:84px;height:44px;font-size:22px">instant</div></div>
+    </div>
+
+    <!-- E: thermionic emission -->
+    <div class="sc" id="sE">
+      <div class="card" id="eL"><div class="lbl" style="left:32px;top:28px">INSIDE A HOT CATHODE</div>
+        <div class="tag" id="eHeat" style="right:32px;top:22px">HEATER OFF</div>
+        <svg class="full" id="eS" width="784" height="600"></svg></div>
+      <div class="card" id="eR"><div class="lbl" style="left:36px;top:28px">ESCAPING THE METAL</div>
+        <div id="eSteps"></div>
+        <div id="eStrip"><span id="eZ"></span><span>Thermionic emission: <span class="acc">given off by heat</span></span></div></div>
+    </div>
+
+    <!-- B: breadboard, vacuum diode -->
+    <div class="sc" id="sB">
+      <div class="card" id="ck"><div class="lbl" style="left:32px;top:28px">VACUUM DIODE · 1904 · FLEMING</div>
+        <div class="tag" id="ckE" style="right:32px;top:22px"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="#E8A317" stroke="#16213E" stroke-width="1.5"/></svg>ELECTRONS</div>
+        <svg class="full" id="ckS" width="928" height="600"></svg>
+        <div class="pillp ac" id="oneWay" style="left:300px;top:516px">One way only: rectification</div></div>
+      <div class="card" id="sc"><div class="lbl" style="left:32px;top:28px">OSCILLOSCOPE</div><div class="tag" id="slowT" style="right:24px;top:22px">SLOW-MOTION VIEW</div><svg id="scS" width="592" height="200"></svg></div>
+      <div class="card" id="rb"><div class="lbl" style="left:32px;top:28px">LIVE READOUT</div><div class="ro2" id="ro1"></div></div>
+    </div>
+
+    <!-- P: triode + trouble with tubes -->
+    <div class="sc" id="sP">
+      <div class="card" id="pL"><div class="lbl" style="left:32px;top:28px">TRIODE · 1906 · DE FOREST</div>
+        <svg class="full" id="tS" width="784" height="600"></svg></div>
+      <div class="card" id="pR"><div class="lbl" id="pRL1" style="left:36px;top:28px">WHAT THE GRID DOES</div><div class="lbl" id="pRL2" style="left:36px;top:28px">THE TROUBLE WITH TUBES</div><div id="pGrid"></div><div id="pRows"></div></div>
+    </div>
+
+    <!-- S: semiconductors and doping -->
+    <div class="sc" id="sS">
+      <div class="card" id="sL"><div class="lbl" style="left:32px;top:28px">SILICON CRYSTAL</div>
+        <div class="tag" id="sTag">PURE SILICON</div>
+        <svg class="full" id="lS" width="784" height="600"></svg></div>
+      <div class="card" id="sR"><div class="lbl" style="left:32px;top:28px">SEMICONDUCTORS</div>
+        <div class="tile" id="dT0" style="top:76px"><div class="tl">IN BETWEEN</div><svg width="720" height="132" style="position:absolute;left:0;top:0"></svg></div>
+        <div class="tile" id="dT1" style="top:224px"><div class="tl">ADD PHOSPHORUS · 5 OUTER ELECTRONS</div><div class="tn">n-type</div><div class="td">one spare electron, free to move</div><svg width="720" height="132" style="position:absolute;left:0;top:0"></svg></div>
+        <div class="tile" id="dT2" style="top:372px"><div class="tl">ADD BORON · 3 OUTER ELECTRONS</div><div class="tn">p-type</div><div class="td">one missing electron: a hole</div><svg width="720" height="132" style="position:absolute;left:0;top:0"></svg></div>
+        <div id="sStrip"><span id="sZ"></span><span>Doping: adding impurities <span class="acc">on purpose</span></span></div></div>
+    </div>
+
+    <!-- J: p-n junction -->
+    <div class="sc" id="sJ">
+      <div class="card" id="jL"><div class="lbl" style="left:32px;top:28px">P-N JUNCTION</div>
+        <div class="tag" id="jBias" style="right:32px;top:22px">NO BIAS</div>
+        <svg class="full" id="jS" width="928" height="600"></svg></div>
+      <div class="card" id="jsc"><div class="lbl" style="left:32px;top:28px">OSCILLOSCOPE · X-Y MODE</div><svg id="jS2" width="592" height="200"></svg></div>
+      <div class="card" id="jrb"><div class="lbl" style="left:32px;top:28px">LIVE READOUT</div><div class="ro2" id="jro"></div></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div class="sc" id="sW">
+      <div class="card" id="wL"><div class="lbl" style="left:32px;top:28px">THE CIRCUIT</div>
+        <svg class="full" id="wS" width="784" height="600"></svg></div>
+      <div class="card" id="wR"><div class="lbl" style="left:36px;top:28px">WORKED EXAMPLE</div>
+        <div id="wBox"></div><div id="wSteps"></div></div>
+    </div>
+
+    <!-- C: why semiconductors won -->
+    <div class="sc" id="sC">
+      <div class="card" id="cC"><div class="lbl" style="left:36px;top:28px">WHY SEMICONDUCTORS WON</div>
+        <div id="cRows"></div>
+        <div id="cStrip"><span class="nc">1947</span><span class="nt">Semiconductors gave us the transistor</span><span id="cArr"></span></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div class="sc" id="sX"><div class="card red" id="trap"></div>
+      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">FORWARD BIAS</div><svg class="full" id="tcS" width="784" height="300"></svg></div>
+      <div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div class="sc" id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + next -->
+    <div class="sc" id="sF"></div>
+  </div>
+  <div id="stmt"><div id="st1">A vacuum tube needs heat to free its electrons.</div><div id="st2">A p-n junction needs <span class="acc">no heater.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

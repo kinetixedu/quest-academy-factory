@@ -1,0 +1,160 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Electronics Ep 31 - Transducers and Their Applications</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== Breadboard (PUC Electronics) layout ===== */
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.card svg.full{position:absolute;left:0;top:0}
+.big{position:absolute;font:600 56px 'IBM Plex Mono';white-space:nowrap}
+.sm{position:absolute;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.txt{position:absolute;font:500 30px/1.35 Poppins;white-space:nowrap}
+#ghost{top:168px}
+/* hook */
+#aC{left:160px;top:260px;width:784px;height:600px;overflow:hidden}
+#aImg{position:absolute;left:24px;top:84px;height:516px}
+#thC{left:976px;top:260px;width:784px;height:284px}
+#nwC{left:976px;top:576px;width:784px;height:284px}
+/* definition */
+#dL{left:160px;top:260px;width:784px;height:600px}
+#dR{left:976px;top:260px;width:784px;height:600px}
+#dq{position:absolute;left:36px;top:84px;width:712px;font:600 42px/1.32 Poppins;letter-spacing:-.01em}
+#dq b{color:var(--ac);font-weight:700}
+.tile{position:absolute;left:32px;width:720px;height:236px;border-radius:14px;background:var(--soft);border:2.5px solid var(--soft)}
+.tile .tl{position:absolute;left:24px;top:22px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.tile .tn{position:absolute;left:24px;top:54px;font:700 30px Poppins;color:var(--ink2);white-space:nowrap}
+.tile svg{position:absolute;left:0;top:0}
+#dStrip{position:absolute;left:36px;top:468px;width:712px;height:96px;border-radius:14px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:18px;padding:0 28px;box-sizing:border-box;font:600 30px Poppins;white-space:nowrap}
+#dStrip .acc{color:var(--ac)}
+/* breadboard */
+#ck{left:160px;top:260px;width:928px;height:600px}
+#sc{left:1120px;top:260px;width:640px;height:300px}
+#rb{left:1120px;top:592px;width:640px;height:268px}
+#scS{position:absolute;left:24px;top:76px}
+.ro2{position:absolute;left:32px;top:64px;width:576px;display:grid;grid-template-columns:auto 1fr auto;column-gap:18px;row-gap:4px;align-items:baseline}
+.ro2 .k{font:600 28px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .k.n{font-style:normal;font-size:24px;font-family:'IBM Plex Mono';letter-spacing:.06em}
+.ro2 .v{font:600 32px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 22px 'IBM Plex Mono';color:var(--mute);white-space:nowrap;min-width:52px}
+/* derivation */
+#nL{left:160px;top:260px;width:784px;height:600px}
+#nR{left:976px;top:260px;width:784px;height:600px}
+.st2{position:absolute;left:36px;display:flex;align-items:center;gap:22px;white-space:nowrap}
+.st2 .n{flex:none;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st2 .sx{font-size:34px}
+.st2 .why{font:500 22px Poppins;color:var(--mute)}
+#nBox{position:absolute;left:24px;top:400px;width:736px;height:108px;border-radius:14px;background:var(--ac2)}
+#nUnit{position:absolute;left:36px;top:532px;font:500 24px 'IBM Plex Mono';color:var(--ink2);white-space:nowrap}
+/* active / passive */
+#pA{left:160px;top:260px;width:784px;height:600px}
+#pP{left:976px;top:260px;width:784px;height:600px}
+.pr{position:absolute;left:32px;width:720px;height:132px;border-radius:14px;background:var(--soft)}
+.pr svg{position:absolute;left:0;top:0}
+.pr .nm{position:absolute;left:176px;top:30px;font:700 30px Poppins;white-space:nowrap}
+.pr .ex{position:absolute;left:176px;top:76px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.pr .out{position:absolute;right:24px;top:44px;height:44px;padding:0 14px;border-radius:9px;display:flex;align-items:center;font:600 20px 'IBM Plex Mono';letter-spacing:.04em;white-space:nowrap}
+/* applications */
+.uT{position:absolute;top:260px;width:512px;height:480px}
+.uT svg{position:absolute;left:0;top:64px}
+.uT .nm{position:absolute;left:0;width:512px;top:300px;text-align:center;font:700 32px Poppins;white-space:nowrap}
+.uT .ex{position:absolute;left:0;width:512px;top:352px;text-align:center;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+.uT .pillp{top:400px}
+/* exam */
+#trap{left:160px;top:260px;width:784px;height:300px}
+#tc{left:976px;top:260px;width:784px;height:300px}
+#wa{left:160px;top:592px;width:1600px;height:268px}
+#mq{left:160px;top:260px;width:1040px;height:600px}
+#so{left:1232px;top:260px;width:528px;height:600px}
+#so .sol{left:32px}
+.fcard .fl{font-size:44px}
+.fcard .fl.txt{font:500 28px Poppins}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · ELECTRONICS · CH 4 PASSIVE ELECTRONIC COMPONENTS</div>
+    <div class="subj" id="subj">BREADBOARD</div>
+    <div id="title">How does heat become a <span class="acc">number?</span></div>
+    <div id="sub">Transducers and their applications</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E8A317" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="ghost" id="ghost">EXAMPLE FIGURES</div>
+
+    <!-- A: hook -->
+    <div class="sc" id="sA">
+      <div class="card" id="aC"><div class="lbl" style="left:32px;top:28px">DIYA · PCMB · NEET</div>
+        <img id="aImg" src="../../assets/illustrations/puc/diya.png" alt="">
+        <svg id="thS" width="300" height="420" style="position:absolute;left:470px;top:84px"></svg>
+        <div class="pillp ac" id="aPill" style="left:486px;top:500px">Beep!</div></div>
+      <div class="card" id="thC"><div class="lbl" style="left:32px;top:28px">THE DISPLAY</div>
+        <div class="big" id="thN" style="left:36px;top:84px;font-size:96px;color:var(--red)">25.0</div><div class="sm" id="thL" style="left:300px;top:118px;font-size:34px">°C</div>
+        <div class="sm" id="thL2" style="left:36px;top:208px">body temperature, in about a minute</div>
+        <svg id="dgS" width="300" height="190" style="position:absolute;left:452px;top:72px"></svg></div>
+      <div class="card" id="nwC"><div class="lbl" style="left:32px;top:28px">BUT HOW?</div>
+        <div id="chain" style="position:absolute;left:36px;top:96px;display:flex;align-items:center;gap:22px;white-space:nowrap"></div>
+        <div class="sm" id="nwB2" style="left:36px;top:206px">a thermometer has no sense of touch</div></div>
+    </div>
+
+    <!-- D: definition -->
+    <div class="sc" id="sD">
+      <div class="card" id="dL"><div class="lbl" style="left:36px;top:28px">DEFINITION</div>
+        <div id="dq">A transducer changes energy from <b>one form into another.</b></div>
+        <div class="pillp" id="dp0" style="left:36px;top:300px">Heat</div>
+        <div class="pillp" id="dp1" style="left:154px;top:300px">Light</div>
+        <div class="pillp" id="dp2" style="left:276px;top:300px">Sound</div>
+        <div class="pillp" id="dp3" style="left:410px;top:300px">Pressure</div>
+        <div class="sm" id="dArr" style="left:36px;top:378px;font-size:24px">physical quantity  ⇄  electrical signal</div>
+        <div id="dStrip"><span id="dZ"></span><span>Input <span class="acc">senses.</span> Output <span class="acc">acts.</span></span></div></div>
+      <div class="card" id="dR"><div class="lbl" style="left:32px;top:28px">TWO DIRECTIONS</div>
+        <div class="tile" id="dt0" style="top:76px"><div class="tl">INPUT TRANSDUCER</div><div class="tn">Microphone</div><svg width="720" height="236"></svg></div>
+        <div class="tile" id="dt1" style="top:336px"><div class="tl">OUTPUT TRANSDUCER</div><div class="tn">Loudspeaker</div><svg width="720" height="236"></svg></div></div>
+    </div>
+
+    <!-- B: breadboard -->
+    <div class="sc" id="sB">
+      <div class="card" id="ck"><div class="lbl" style="left:32px;top:28px">THERMOMETER · VOLTAGE DIVIDER</div>
+        <div class="tag" id="ckE" style="right:32px;top:22px"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="#E8A317" stroke="#16213E" stroke-width="1.5"/></svg>ELECTRONS</div>
+        <svg class="full" id="ckS" width="928" height="600"></svg></div>
+      <div class="card" id="sc"><div class="lbl" style="left:32px;top:28px">OSCILLOSCOPE</div><svg id="scS" width="592" height="200"></svg></div>
+      <div class="card" id="rb"><div class="lbl" style="left:32px;top:28px">LIVE READOUT</div><div class="ro2" id="ro1"></div></div>
+    </div>
+
+    <!-- N: mechanism + derivation + worked example -->
+    <div class="sc" id="sN">
+      <div class="card" id="nL"><div class="lbl" style="left:32px;top:28px">INSIDE A THERMISTOR</div>
+        <svg class="full" id="nS" width="784" height="600"></svg></div>
+      <div class="card" id="nR"><div class="lbl" id="nRL0" style="left:36px;top:28px">WHY RESISTANCE FALLS</div><div class="lbl" id="nRL1" style="left:36px;top:28px">DERIVATION · VOLTAGE DIVIDER</div><div class="lbl" id="nRL2" style="left:36px;top:28px">WORKED EXAMPLE</div>
+        <svg class="full" id="mS" width="784" height="600"></svg>
+        <div id="nBox"></div><div id="nSteps"></div><div id="nUnit">Ω · V   →   V<sub>out</sub> in volts</div><div id="wSteps"></div></div>
+    </div>
+
+    <!-- P: active vs passive -->
+    <div class="sc" id="sP">
+      <div class="card" id="pA"><div class="lbl" style="left:32px;top:28px">ACTIVE · MAKES ITS OWN VOLTAGE</div><div id="pAr"></div></div>
+      <div class="card" id="pP"><div class="lbl" style="left:32px;top:28px">PASSIVE · NEEDS A SUPPLY</div><div id="pPr"></div></div>
+    </div>
+
+    <!-- U: applications -->
+    <div class="sc" id="sU"><div id="uTiles"></div></div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div class="sc" id="sX"><div class="card red" id="trap"></div>
+      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">NO SUPPLY ATTACHED</div><svg class="full" id="tcS" width="784" height="300"></svg></div>
+      <div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div class="sc" id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + next -->
+    <div class="sc" id="sF"></div>
+  </div>
+  <div id="stmt"><div id="st1">A transducer...</div><div id="st2">turns the world into <span class="acc">signals.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

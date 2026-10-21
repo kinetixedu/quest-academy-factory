@@ -1,0 +1,144 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Electronics Ep 8 - Ohm's Law and Electrical Resistance</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== Breadboard (PUC Electronics) layout ===== */
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.card svg.full{position:absolute;left:0;top:0}
+.big{position:absolute;font:600 56px 'IBM Plex Mono';white-space:nowrap}
+.sm{position:absolute;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.txt{position:absolute;font:500 30px/1.35 Poppins;white-space:nowrap}
+#ghost{top:168px}
+/* hook */
+#aC{left:160px;top:260px;width:784px;height:600px;overflow:hidden}
+#aImg{position:absolute;left:24px;top:84px;height:516px}
+#h1C{left:976px;top:260px;width:784px;height:284px}
+#h2C{left:976px;top:576px;width:784px;height:284px}
+.hq{position:absolute;right:40px;top:92px;width:100px;height:100px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 56px Poppins;color:#fff;background:var(--ac)}
+.bar{position:absolute;left:330px;top:196px;width:300px;height:28px;border-radius:14px;background:var(--soft);overflow:hidden}.bar i{position:absolute;left:0;top:0;height:28px;background:var(--ac);border-radius:14px}
+.strip{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:18px;padding:0 28px;box-sizing:border-box;font:600 28px Poppins;white-space:nowrap}
+.strip .acc{color:var(--ac)}
+.hbox{position:absolute;left:24px;width:736px;border-radius:14px;background:var(--ac2)}
+.st2{position:absolute;left:36px;display:flex;align-items:center;gap:22px;white-space:nowrap}
+.st2 .n{flex:none;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st2 .sx{font-size:36px}
+.st2 .why{font:500 22px Poppins;color:var(--mute)}
+.st2 .tt{font:600 30px Poppins;color:var(--ink)}
+.prow{position:absolute;display:flex;gap:14px}.prow span{position:static}
+.L2{left:160px;top:260px;width:784px;height:600px}.R2{left:976px;top:260px;width:784px;height:600px}
+.tile{position:absolute;left:32px;width:720px;height:132px;border-radius:14px;background:var(--soft)}
+.tile .tl{position:absolute;left:24px;top:28px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.tile .tn{position:absolute;left:24px;top:62px;font:700 30px Poppins;color:var(--ink);white-space:nowrap}
+#rq{position:absolute;left:36px;top:84px;width:712px;font:600 40px/1.3 Poppins;letter-spacing:-.01em}
+#rq b{color:var(--ac);font-weight:700}
+/* breadboard */
+#ck{left:160px;top:260px;width:928px;height:600px}
+#gc{left:1120px;top:260px;width:640px;height:300px}
+#rb{left:1120px;top:592px;width:640px;height:268px}
+.ro2{position:absolute;left:32px;top:76px;width:576px;display:grid;grid-template-columns:auto 1fr auto;column-gap:18px;row-gap:14px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .k.n{font-style:normal;font-size:24px;font-family:'IBM Plex Mono';letter-spacing:.06em}
+.ro2 .v{font:600 38px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 22px 'IBM Plex Mono';color:var(--mute);white-space:nowrap;min-width:52px}
+/* exam */
+#trap{left:160px;top:260px;width:784px;height:300px}
+#tc{left:976px;top:260px;width:784px;height:300px}
+#wa{left:160px;top:592px;width:1600px;height:268px}
+#mq{left:160px;top:260px;width:1040px;height:600px}
+#so{left:1232px;top:260px;width:528px;height:600px}
+#so .sol{left:32px}
+.fcard .fl{font-size:42px}
+.fcard .fl.txt{font:500 28px Poppins}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · ELECTRONICS · CH 2 PRINCIPLES OF ELECTRICITY</div>
+    <div class="subj" id="subj">BREADBOARD</div>
+    <div id="title">Why thin wires <span class="acc">fight back</span></div>
+    <div id="sub">Ohm's law and electrical resistance</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E8A317" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="ghost" id="ghost">EXAMPLE FIGURES</div>
+
+    <!-- A: hook -->
+    <div class="sc" id="sA">
+      <div class="card" id="aC"><div class="lbl" style="left:32px;top:28px">AARAV · PCME · JEE</div>
+        <img id="aImg" src="../../assets/illustrations/puc/aarav.png" alt=""></div>
+      <div class="card" id="h1C"><div class="lbl" style="left:32px;top:28px">LONG, THIN CABLE</div>
+        <svg id="h1S" width="290" height="190" style="position:absolute;left:24px;top:72px"></svg>
+        <div class="txt" id="h1T" style="left:330px;top:92px;font-weight:600">Charges slowly</div><div class="bar" id="h1B"><i></i></div>
+        <div class="hq" id="h1Q">?</div></div>
+      <div class="card" id="h2C"><div class="lbl" style="left:32px;top:28px">SHORT, THICK CABLE</div>
+        <svg id="h2S" width="290" height="190" style="position:absolute;left:24px;top:72px"></svg>
+        <div class="txt" id="h2T" style="left:330px;top:92px;font-weight:600">Charges faster</div><div class="bar" id="h2B"><i></i></div></div>
+    </div>
+
+    <!-- R: what is resistance -->
+    <div class="sc" id="sR">
+      <div class="card L2" id="rL"><div class="lbl" style="left:32px;top:28px">INSIDE A METAL WIRE</div>
+        <div class="tag" id="rE" style="right:32px;top:22px"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="#E8A317" stroke="#16213E" stroke-width="1.5"/></svg>ELECTRONS</div>
+        <svg class="full" id="rS" width="784" height="600"></svg>
+        <div class="strip" id="rStrip" style="top:492px"><span id="rZ"></span><span>Every bump <span class="acc">slows the flow.</span></span></div></div>
+      <div class="card R2" id="rR"><div class="lbl" style="left:36px;top:28px">RESISTANCE</div>
+        <div class="tile" id="rt0" style="top:76px"><div class="tl">EVERY MATERIAL</div><div class="tn">pushes back a little</div></div>
+        <div class="tile" id="rt1" style="top:228px"><div class="tl">ELECTRONS</div><div class="tn">bump into vibrating atoms</div></div>
+        <div class="hbox" id="rBox" style="top:380px;height:188px"></div>
+        <div id="rDef" style="position:absolute;left:56px;top:400px;width:680px;font:600 32px/1.35 Poppins">Resistance <span id="rK"></span> is the opposition to the flow of current.</div>
+        <svg id="rSym" width="300" height="60" style="position:absolute;left:56px;top:494px"></svg></div>
+    </div>
+
+    <!-- B: breadboard -->
+    <div class="sc" id="sB">
+      <div class="card" id="ck"><div class="lbl" style="left:32px;top:28px">CIRCUIT · VARIABLE SUPPLY, ONE RESISTOR</div>
+        <div class="tag" id="ckE" style="right:32px;top:22px"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="#E8A317" stroke="#16213E" stroke-width="1.5"/></svg>ELECTRONS</div>
+        <svg class="full" id="ckS" width="928" height="600"></svg></div>
+      <div class="card" id="gc"><div class="lbl" style="left:32px;top:28px">V AGAINST I · LIVE PLOT</div><svg class="full" id="gS" width="640" height="300"></svg></div>
+      <div class="card" id="rb"><div class="lbl" style="left:32px;top:28px">LIVE READOUT</div><div class="ro2" id="ro1"></div></div>
+    </div>
+
+    <!-- L: Ohm's law -->
+    <div class="sc" id="sL">
+      <div class="card L2" id="lL"><div class="lbl" style="left:32px;top:28px">THE LAW</div>
+        <div class="big" id="lY" style="left:36px;top:78px;color:var(--ac)">1827</div>
+        <div class="txt" id="lN" style="left:36px;top:150px;font:700 40px Poppins">Georg Simon Ohm</div>
+        <div class="sm" id="lP" style="left:36px;top:206px;font-size:24px">German physicist</div>
+        <div class="tag" id="lTag" style="left:36px;top:250px">AT A STEADY TEMPERATURE</div>
+        <svg class="full" id="lS" width="784" height="600"></svg></div>
+      <div class="card R2" id="lR"><div class="lbl" style="left:36px;top:28px">OHM'S LAW</div>
+        <div class="hbox" id="lBox" style="top:182px;height:96px"></div><div id="lSteps"></div></div>
+    </div>
+
+    <!-- G: what decides resistance + worked example -->
+    <div class="sc" id="sG">
+      <div class="card L2" id="gL"><div class="lbl" id="gLL1" style="left:32px;top:28px">THE WIRE</div><div class="lbl" id="gLL2" style="left:32px;top:28px">WORKED EXAMPLE · ONE RESISTOR</div>
+        <svg class="full" id="wS" width="784" height="600"></svg>
+        <div class="ro2" id="gRo" style="top:340px;width:600px"></div>
+        <div class="ro2" id="wRo" style="top:340px;width:600px"></div></div>
+      <div class="card R2" id="gR"><div class="lbl" id="gRL1" style="left:36px;top:28px">WHAT DECIDES R</div><div class="lbl" id="gRL2" style="left:36px;top:28px">WORKED EXAMPLE</div>
+        <div class="hbox" id="gBox" style="top:270px;height:104px"></div><div id="gSteps"></div>
+        <div class="hbox" id="wBox" style="top:270px;height:104px"></div><div id="wSteps"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div class="sc" id="sX"><div class="card red" id="trap"></div>
+      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">SAME RESISTOR, ANY VOLTAGE</div><svg class="full" id="tcS" width="784" height="300"></svg></div>
+      <div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div class="sc" id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + next -->
+    <div class="sc" id="sF"></div>
+  </div>
+  <div id="stmt"><div id="st1">Double the push, double the flow.</div><div id="st2">Resistance <span class="acc">stays the same.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

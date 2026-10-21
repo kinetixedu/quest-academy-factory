@@ -1,0 +1,41 @@
+H1|0.35|Aarav waits at the airport. Thick fog outside. He cannot even see the runway.
+H2|0.5|Yet the planes keep landing safely. How does the control tower see them?
+I1|0.35|With electronics. And not just at airports.
+I2|0.65|Electronics works the same way in every field. A chain of blocks. Sense something, process the signal, then act on it.
+O1|0.35|Let's follow one real chain in each field. First, communication. A phone call.
+O2|0.35|The microphone turns your voice into a tiny electrical signal.
+O3|0.35|An amplifier makes it stronger. The transmitter puts it onto a radio wave, and the antenna sends it out.
+O4|0.65|At the other end, the chain runs backwards. Receiver, amplifier, speaker. Your friend hears your voice.
+E1|0.35|Entertainment uses the same blocks. A television receives a signal, decodes the picture and the sound, and amplifies them for the screen and the speaker.
+R1|0.35|Now, defence. Back to the fog. This is radar.
+R2|0.35|The radar sends out a short, strong pulse of radio waves.
+R3|0.35|The pulse hits the plane and bounces back. That faint echo is caught and amplified.
+R4|0.65|Watch the scope. The big pulse goes out. A small echo comes back later. The gap between them is the key.
+R5|0.35|Radio waves travel at the speed of light, c, three times ten to the eight metres per second.
+R6|0.7|In time t, the pulse goes to the plane and comes back. So it covers twice the distance. Two d equals c times t.
+R7|0.7|So d equals c times t, divided by two.
+R8|0.65|Distance in metres, speed in metres per second, time in seconds.
+W1|0.35|Worked example. The echo returns four hundred microseconds after the pulse.
+W2|0.7|A microsecond is a millionth of a second. So t is four times ten to the minus four seconds.
+W3|0.7|d equals three times ten to the eight, times four times ten to the minus four, divided by two.
+W4|0.65|That is sixty thousand metres. The plane is sixty kilometres away.
+N1|0.35|Next, industry. Think of an oven in a factory that must stay at one temperature.
+N2|0.35|A sensor measures the temperature. A microcontroller compares it with the set value.
+N3|0.65|Too cold, it switches the heater on. Too hot, it switches it off. This loop runs again and again, with no human needed. Robots work the same way.
+D1|0.35|Finally, medicine. Diya's favourite.
+D2|0.35|An E C G machine records the heart. Small pads on the skin pick up the heart's electrical signal.
+D3|0.35|That signal is only about one millivolt. Far too small to see.
+D4|0.65|An amplifier makes it about a thousand times bigger, and the display draws every heartbeat.
+D5|0.65|The same field gives us scanners, monitors and pacemakers that keep hearts beating on time.
+T1|0.8|Different fields. One idea. Sense, process, act.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students write radar distance as c times t.
+X3|0.65|But the pulse travels to the target and back. So divide by two. d equals c t by two.
+X4|0.65|Where is this asked? In PUC board papers. List the applications of electronics in communication, defence, industry or medicine, with examples.
+Q1|5.4|Try this. A radar echo returns zero point two milliseconds after the pulse is sent. How far away is the target?
+A1|0.35|B. Thirty kilometres.
+A2|0.35|First, change milliseconds to seconds. That is two times ten to the minus four seconds.
+A3|0.35|c times t is six times ten to the four metres. That is the trip there and back.
+A4|0.65|Divide by two, and the target is thirty thousand metres, or thirty kilometres away.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, the impact of electronics on everyday life. What is electronics doing inside your home right now?

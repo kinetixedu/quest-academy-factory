@@ -1,0 +1,43 @@
+H1|0.35|Aarav turns the dial of his meter. A V with a straight line. A V with a wavy line. Numbers like two, twenty and two hundred.
+H2|0.5|What do all these markings mean?
+Y1|0.35|Every meter speaks in symbols. Let's learn them.
+Y2|0.35|A V with a straight line and a dashed line means D C volts. A steady voltage, like a battery.
+Y3|0.35|A V with a wavy line means A C volts. A voltage that keeps changing direction, like the supply at home.
+Y4|0.35|A stands for amperes, the current. The Greek letter omega stands for ohms, the resistance.
+Y5|0.35|Now the sockets. The black lead always goes into the socket marked COM, which means common.
+Y6|0.35|The red lead goes into the socket for volts and ohms. Large currents often get a separate socket of their own.
+Y7|0.65|In circuit diagrams, a voltmeter is a circle with a V, an ammeter is a circle with an A, and a galvanometer is a circle with a G.
+G1|0.35|Now, ranges. A range is the largest value the meter can show on that setting.
+G2|0.35|Here is a nine volt battery. On the two volt range, the meter cannot show nine. The display says O L, which means over the limit.
+G3|0.35|Switch to the twenty volt range. Now it reads nine point zero zero.
+G4|0.65|On the two hundred volt range, it reads nine point zero. Same voltage, but one digit is lost. So pick the lowest range that is still above the value.
+G5|0.35|The oscilloscope has ranges too. Its volts per division knob is a range switch.
+G6|0.35|At one volt per division, the nine volt line shoots off the top of the screen.
+G7|0.65|Turn the knob to five volts per division. Now the line sits at one point eight divisions, safely on the screen.
+G8|0.65|Its other controls are simple. Intensity sets the brightness, focus makes the trace sharp, and the position knobs move it up, down, left or right.
+P1|0.35|An analogue meter has a needle and a scale. Here is how to read it.
+P2|0.7|First, note where the needle stops, counted in scale divisions.
+P3|0.7|Divide by the total divisions on the scale. That is the fraction of full scale.
+P4|0.7|Multiply by the range. That is your reading.
+P5|0.65|The same needle position on a bigger range means a bigger value. So always check the range before you read.
+E1|0.35|Worked example. A scale has fifty divisions. On the ten volt range, the needle stops at thirty two.
+E2|0.6|The reading is thirty two over fifty, times ten.
+E3|0.65|That is zero point six four times ten, which is six point four volts.
+K1|0.35|Now, the precautions.
+K2|0.35|One. Start on the highest range, then step down. A big value on a small range can damage the meter.
+K3|0.35|Two. For D C, watch the polarity. Red to plus, black to minus. Reverse it, and an analogue needle kicks the wrong way.
+K4|0.35|Three. Measure resistance only with the power off. For an analogue ohmmeter, touch the probes together and set the needle to zero first.
+K5|0.35|Four. Read the needle with your eye straight in front of it. Looking from the side gives a parallax error.
+K6|0.65|Five. When you finish, turn the dial to off, so the cell inside does not drain.
+S1|0.8|Highest range first. Then step down.
+T1|0.35|Now, the exam trap.
+T2|0.35|Many students think O L on the display means the meter is broken. It does not.
+T3|0.65|O L means the value is over the range. Switch to a higher range. On the ohms setting, it means the resistance is too high to show, like an open circuit.
+T4|0.65|Where is this asked? In PUC board papers. Name the symbols, list the precautions, and read a value from a scale and a range.
+Q1|5.6|Try this. An analogue voltmeter has a fifty division scale. On the ten volt range, the needle stops at thirty five. The meter is switched to the twenty five volt range. Where will the needle stop now?
+A1|0.35|C. Fourteen divisions.
+A2|0.35|First, find the voltage. Thirty five over fifty, times ten, is seven volts.
+A3|0.35|The voltage does not change when you change the range.
+A4|0.65|On the twenty five volt range, seven over twenty five, times fifty, is fourteen divisions.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, medical electronic instruments. How does a small clip on your finger read the oxygen in your blood?

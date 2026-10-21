@@ -1,0 +1,38 @@
+H1|0.35|Aarav plugs his table fan into the wall socket. The voltage there is not steady at all.
+H2|0.35|It swings from plus to minus and back, fifty times every second.
+H3|0.5|So how do we describe a voltage that never sits still?
+I1|0.35|With four ideas. Amplitude, period, frequency and phase.
+I2|0.65|Let's build them one at a time, on the scope.
+G1|0.35|On the breadboard, an A C source drives a resistor. Watch the electrons. They do not flow round. They rock back and forth.
+G2|0.35|Inside the source, picture an arm turning in a circle at a steady speed. Its height at each moment is the voltage.
+G3|0.65|As the arm turns, the scope draws its height. That smooth shape is a sine wave.
+AM1|0.35|First, amplitude. It is the highest value the wave reaches, its peak. We write it V m.
+AM2|0.65|Turn up the amplitude, and the wave grows taller. The arm simply gets longer.
+P1|0.35|Next, the period, T. It is the time for one complete cycle, one full turn of the arm.
+P2|0.35|And the frequency, f, is how many cycles happen in one second. It is measured in hertz.
+P3|0.65|So f equals one over T. Turn the frequency up, and the waves squeeze closer together. The electrons rock faster too.
+D1|0.35|Now let's write the wave as an equation.
+D2|0.7|One full turn is three hundred and sixty degrees, or two pi radians.
+D3|0.7|The arm makes f turns every second. So its angular speed is omega equals two pi f, in radians per second.
+D4|0.7|After a time t, the arm has turned through an angle omega t. Its height is V m times the sine of omega t.
+D5|0.65|So small v equals V m sine omega t. Small v is the value at any instant.
+PH1|0.35|The last idea is phase. Phase tells you where in its cycle a wave is, at a given moment.
+PH2|0.35|Now put a second wave on the scope, with the same frequency, but a quarter turn ahead.
+PH3|0.35|Its peaks come first. We say it leads by ninety degrees. That gap is the phase difference.
+PH4|0.65|We write it as v equals V m sine of omega t plus phi. Phi is the phase angle.
+T1|0.8|Amplitude says how big. Frequency says how often. Phase says when.
+W1|0.35|Worked example. The mains supply in India is two hundred and thirty volts, at fifty hertz.
+W2|0.7|The period is one over fifty. That is zero point zero two seconds, or twenty milliseconds.
+W3|0.7|Omega is two pi times fifty. About three hundred and fourteen radians per second.
+W4|0.65|And two hundred and thirty volts is not the peak. The peak is about three hundred and twenty five volts. We will see why, in the next episode.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students mix up omega and f. In v equals V m sine of one hundred pi t, they say the frequency is one hundred pi.
+X3|0.65|One hundred pi is omega, the angular frequency. Divide by two pi. The frequency is fifty hertz.
+X4|0.65|Where is this asked? In PUC board papers, as definitions of frequency, period, amplitude and phase. In JEE Main, inside alternating current problems.
+Q1|5.4|Try this. An alternating voltage is v equals one hundred and twenty sine of two hundred pi t. Find its peak value, frequency and period.
+A1|0.35|C. One hundred and twenty volts, one hundred hertz, and ten milliseconds.
+A2|0.35|Compare with v equals V m sine omega t. So V m is one hundred and twenty volts.
+A3|0.35|Omega is two hundred pi. Omega is two pi f, so f is one hundred hertz.
+A4|0.65|T is one over f. One over one hundred is zero point zero one seconds. Ten milliseconds.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, R M S and average values. Why the two hundred and thirty volt mains actually peaks near three hundred and twenty five.

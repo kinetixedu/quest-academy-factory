@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "Network Theorems and Thevenin's Theorem",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 12
+ },
+ "class": "11",
+ "title": "Thevenin's Theorem Explained Simply | PUC Electronics Class 11",
+ "description": "Aarav has a circuit with a battery and two resistors, and five different loads to test. Must he solve the whole circuit five times? Network theorems are the shortcut. We meet superposition, Norton's theorem and maximum power transfer, then focus on the most used of all: Thevenin's theorem (Helmholtz 1853, Thévenin 1883). Any linear circuit, seen from two terminals A and B, acts like one voltage source in series with one resistance.\n\nWe find V_TH and R_TH in four steps (remove the load, measure the open-circuit voltage, short the battery and look in from A and B, rebuild the copy). On a live breadboard the real circuit and its Thevenin copy carry exactly the same load current, and the oscilloscope shows both load voltages moving together as a knob changes the load. Then the load-power curve peaks when R_L = R_TH, giving P_max = V_TH²/4R_TH. A worked example, the exam trap (short voltage sources, open current sources), where it is asked, an original JEE Main pattern practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 12 of PUC Electronics, Class 11, Chapter 2: Principles of Electricity, Network Theorems and AC Principles (Karnataka PUC Electronics).\n\nIn this video:\n0:00 Five loads, one circuit\n0:15 Network theorems\n0:39 Thevenin's theorem: who and what\n1:03 Finding V_TH and R_TH in four steps\n1:49 Breadboard: real circuit vs Thevenin copy\n2:11 Maximum power transfer\n2:43 Worked example\n3:11 Exam trap: how to switch sources off\n3:27 Where it is asked\n3:37 Practice question\n4:18 Formula card\n\nNext episode: AC Waveform: Frequency, Period, Phase and Amplitude.\n\nVideo by Quest Academy.",
+ "tags": [
+  "Thevenin's theorem",
+  "network theorems",
+  "Thevenin equivalent circuit",
+  "Thevenin voltage and resistance",
+  "maximum power transfer theorem",
+  "Norton's theorem",
+  "superposition theorem",
+  "PUC electronics",
+  "1st PUC electronics chapter 2",
+  "Karnataka PUC electronics",
+  "how to find Rth",
+  "load current",
+  "class 11 electronics",
+  "JEE Main current electricity"
+ ],
+ "thumb": {
+  "title": "Thevenin's Shortcut",
+  "accent_word": "Shortcut",
+  "frame_t": 121.6
+ }
+}

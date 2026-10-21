@@ -1,0 +1,3179 @@
+{
+ "lines": {
+  "H1": {
+   "t0": 0.45,
+   "t1": 5.331,
+   "text": "Aarav's bicycle lamp is glowing dim. He picks up a meter with two probes.",
+   "words": [
+    {
+     "w": "Aarav's",
+     "t": 0.45
+    },
+    {
+     "w": "bicycle",
+     "t": 0.859
+    },
+    {
+     "w": "lamp",
+     "t": 1.318
+    },
+    {
+     "w": "is",
+     "t": 1.628
+    },
+    {
+     "w": "glowing",
+     "t": 1.837
+    },
+    {
+     "w": "dim.",
+     "t": 2.297
+    },
+    {
+     "w": "He",
+     "t": 2.806
+    },
+    {
+     "w": "picks",
+     "t": 3.015
+    },
+    {
+     "w": "up",
+     "t": 3.375
+    },
+    {
+     "w": "a",
+     "t": 3.584
+    },
+    {
+     "w": "meter",
+     "t": 3.744
+    },
+    {
+     "w": "with",
+     "t": 4.103
+    },
+    {
+     "w": "two",
+     "t": 4.413
+    },
+    {
+     "w": "probes.",
+     "t": 4.672
+    }
+   ]
+  },
+  "H2": {
+   "t0": 5.681,
+   "t1": 7.26,
+   "text": "But where do the probes go?",
+   "words": [
+    {
+     "w": "But",
+     "t": 5.681
+    },
+    {
+     "w": "where",
+     "t": 5.89
+    },
+    {
+     "w": "do",
+     "t": 6.18
+    },
+    {
+     "w": "the",
+     "t": 6.349
+    },
+    {
+     "w": "probes",
+     "t": 6.559
+    },
+    {
+     "w": "go?",
+     "t": 6.889
+    }
+   ]
+  },
+  "I1": {
+   "t0": 7.76,
+   "t1": 12.427,
+   "text": "In a circuit, we measure three things. Voltage, current and resistance.",
+   "words": [
+    {
+     "w": "In",
+     "t": 7.76
+    },
+    {
+     "w": "a",
+     "t": 7.961
+    },
+    {
+     "w": "circuit,",
+     "t": 8.115
+    },
+    {
+     "w": "we",
+     "t": 8.701
+    },
+    {
+     "w": "measure",
+     "t": 8.902
+    },
+    {
+     "w": "three",
+     "t": 9.344
+    },
+    {
+     "w": "things.",
+     "t": 9.69
+    },
+    {
+     "w": "Voltage,",
+     "t": 10.324
+    },
+    {
+     "w": "current",
+     "t": 10.909
+    },
+    {
+     "w": "and",
+     "t": 11.351
+    },
+    {
+     "w": "resistance.",
+     "t": 11.601
+    }
+   ]
+  },
+  "I2": {
+   "t0": 12.777,
+   "t1": 16.112,
+   "text": "Each one needs the meter connected in a different way.",
+   "words": [
+    {
+     "w": "Each",
+     "t": 12.777
+    },
+    {
+     "w": "one",
+     "t": 13.068
+    },
+    {
+     "w": "needs",
+     "t": 13.312
+    },
+    {
+     "w": "the",
+     "t": 13.651
+    },
+    {
+     "w": "meter",
+     "t": 13.895
+    },
+    {
+     "w": "connected",
+     "t": 14.233
+    },
+    {
+     "w": "in",
+     "t": 14.759
+    },
+    {
+     "w": "a",
+     "t": 14.957
+    },
+    {
+     "w": "different",
+     "t": 15.107
+    },
+    {
+     "w": "way.",
+     "t": 15.633
+    }
+   ]
+  },
+  "I3": {
+   "t0": 16.462,
+   "t1": 21.181,
+   "text": "And for signals that change with time, we use a fourth tool, the oscilloscope.",
+   "words": [
+    {
+     "w": "And",
+     "t": 16.462
+    },
+    {
+     "w": "for",
+     "t": 16.699
+    },
+    {
+     "w": "signals",
+     "t": 16.935
+    },
+    {
+     "w": "that",
+     "t": 17.353
+    },
+    {
+     "w": "change",
+     "t": 17.635
+    },
+    {
+     "w": "with",
+     "t": 18.008
+    },
+    {
+     "w": "time,",
+     "t": 18.29
+    },
+    {
+     "w": "we",
+     "t": 18.708
+    },
+    {
+     "w": "use",
+     "t": 18.899
+    },
+    {
+     "w": "a",
+     "t": 19.135
+    },
+    {
+     "w": "fourth",
+     "t": 19.281
+    },
+    {
+     "w": "tool,",
+     "t": 19.654
+    },
+    {
+     "w": "the",
+     "t": 20.072
+    },
+    {
+     "w": "oscilloscope.",
+     "t": 20.308
+    }
+   ]
+  },
+  "V1": {
+   "t0": 21.831,
+   "t1": 26.428,
+   "text": "Let's start on the breadboard. A six volt battery, a resistor and a lamp.",
+   "words": [
+    {
+     "w": "Let's",
+     "t": 21.831
+    },
+    {
+     "w": "start",
+     "t": 22.117
+    },
+    {
+     "w": "on",
+     "t": 22.448
+    },
+    {
+     "w": "the",
+     "t": 22.642
+    },
+    {
+     "w": "breadboard.",
+     "t": 22.881
+    },
+    {
+     "w": "A",
+     "t": 23.674
+    },
+    {
+     "w": "six",
+     "t": 23.821
+    },
+    {
+     "w": "volt",
+     "t": 24.061
+    },
+    {
+     "w": "battery,",
+     "t": 24.346
+    },
+    {
+     "w": "a",
+     "t": 24.908
+    },
+    {
+     "w": "resistor",
+     "t": 25.056
+    },
+    {
+     "w": "and",
+     "t": 25.525
+    },
+    {
+     "w": "a",
+     "t": 25.765
+    },
+    {
+     "w": "lamp.",
+     "t": 25.912
+    }
+   ]
+  },
+  "V2": {
+   "t0": 26.778,
+   "t1": 32.457,
+   "text": "Voltage is a push between two points. So the voltmeter goes across the part, in parallel.",
+   "words": [
+    {
+     "w": "Voltage",
+     "t": 26.778
+    },
+    {
+     "w": "is",
+     "t": 27.217
+    },
+    {
+     "w": "a",
+     "t": 27.417
+    },
+    {
+     "w": "push",
+     "t": 27.569
+    },
+    {
+     "w": "between",
+     "t": 27.865
+    },
+    {
+     "w": "two",
+     "t": 28.303
+    },
+    {
+     "w": "points.",
+     "t": 28.551
+    },
+    {
+     "w": "So",
+     "t": 29.18
+    },
+    {
+     "w": "the",
+     "t": 29.38
+    },
+    {
+     "w": "voltmeter",
+     "t": 29.627
+    },
+    {
+     "w": "goes",
+     "t": 30.161
+    },
+    {
+     "w": "across",
+     "t": 30.456
+    },
+    {
+     "w": "the",
+     "t": 30.847
+    },
+    {
+     "w": "part,",
+     "t": 31.095
+    },
+    {
+     "w": "in",
+     "t": 31.533
+    },
+    {
+     "w": "parallel.",
+     "t": 31.733
+    }
+   ]
+  },
+  "V3": {
+   "t0": 32.807,
+   "t1": 39.076,
+   "text": "Red probe on the plus side of the lamp, black probe on the other side. It reads four point five volts.",
+   "words": [
+    {
+     "w": "Red",
+     "t": 32.807
+    },
+    {
+     "w": "probe",
+     "t": 33.043
+    },
+    {
+     "w": "on",
+     "t": 33.37
+    },
+    {
+     "w": "the",
+     "t": 33.56
+    },
+    {
+     "w": "plus",
+     "t": 33.796
+    },
+    {
+     "w": "side",
+     "t": 34.077
+    },
+    {
+     "w": "of",
+     "t": 34.359
+    },
+    {
+     "w": "the",
+     "t": 34.549
+    },
+    {
+     "w": "lamp,",
+     "t": 34.785
+    },
+    {
+     "w": "black",
+     "t": 35.202
+    },
+    {
+     "w": "probe",
+     "t": 35.529
+    },
+    {
+     "w": "on",
+     "t": 35.856
+    },
+    {
+     "w": "the",
+     "t": 36.046
+    },
+    {
+     "w": "other",
+     "t": 36.282
+    },
+    {
+     "w": "side.",
+     "t": 36.609
+    },
+    {
+     "w": "It",
+     "t": 37.117
+    },
+    {
+     "w": "reads",
+     "t": 37.307
+    },
+    {
+     "w": "four",
+     "t": 37.634
+    },
+    {
+     "w": "point",
+     "t": 37.915
+    },
+    {
+     "w": "five",
+     "t": 38.242
+    },
+    {
+     "w": "volts.",
+     "t": 38.523
+    }
+   ]
+  },
+  "V4": {
+   "t0": 39.426,
+   "t1": 46.236,
+   "text": "A good voltmeter has a very high resistance. It takes almost no current, so it does not disturb the circuit.",
+   "words": [
+    {
+     "w": "A",
+     "t": 39.426
+    },
+    {
+     "w": "good",
+     "t": 39.579
+    },
+    {
+     "w": "voltmeter",
+     "t": 39.874
+    },
+    {
+     "w": "has",
+     "t": 40.407
+    },
+    {
+     "w": "a",
+     "t": 40.655
+    },
+    {
+     "w": "very",
+     "t": 40.807
+    },
+    {
+     "w": "high",
+     "t": 41.102
+    },
+    {
+     "w": "resistance.",
+     "t": 41.398
+    },
+    {
+     "w": "It",
+     "t": 42.217
+    },
+    {
+     "w": "takes",
+     "t": 42.417
+    },
+    {
+     "w": "almost",
+     "t": 42.76
+    },
+    {
+     "w": "no",
+     "t": 43.15
+    },
+    {
+     "w": "current,",
+     "t": 43.35
+    },
+    {
+     "w": "so",
+     "t": 43.931
+    },
+    {
+     "w": "it",
+     "t": 44.131
+    },
+    {
+     "w": "does",
+     "t": 44.331
+    },
+    {
+     "w": "not",
+     "t": 44.626
+    },
+    {
+     "w": "disturb",
+     "t": 44.874
+    },
+    {
+     "w": "the",
+     "t": 45.312
+    },
+    {
+     "w": "circuit.",
+     "t": 45.56
+    }
+   ]
+  },
+  "C1": {
+   "t0": 46.886,
+   "t1": 53.234,
+   "text": "Current is different. Current is a flow through the wire, so the ammeter must sit in the path, in series.",
+   "words": [
+    {
+     "w": "Current",
+     "t": 46.886
+    },
+    {
+     "w": "is",
+     "t": 47.297
+    },
+    {
+     "w": "different.",
+     "t": 47.485
+    },
+    {
+     "w": "Current",
+     "t": 48.209
+    },
+    {
+     "w": "is",
+     "t": 48.62
+    },
+    {
+     "w": "a",
+     "t": 48.808
+    },
+    {
+     "w": "flow",
+     "t": 48.951
+    },
+    {
+     "w": "through",
+     "t": 49.228
+    },
+    {
+     "w": "the",
+     "t": 49.64
+    },
+    {
+     "w": "wire,",
+     "t": 49.872
+    },
+    {
+     "w": "so",
+     "t": 50.283
+    },
+    {
+     "w": "the",
+     "t": 50.471
+    },
+    {
+     "w": "ammeter",
+     "t": 50.704
+    },
+    {
+     "w": "must",
+     "t": 51.115
+    },
+    {
+     "w": "sit",
+     "t": 51.392
+    },
+    {
+     "w": "in",
+     "t": 51.625
+    },
+    {
+     "w": "the",
+     "t": 51.812
+    },
+    {
+     "w": "path,",
+     "t": 52.045
+    },
+    {
+     "w": "in",
+     "t": 52.456
+    },
+    {
+     "w": "series.",
+     "t": 52.644
+    }
+   ]
+  },
+  "C2": {
+   "t0": 53.584,
+   "t1": 59.734,
+   "text": "Switch off, break the circuit, and put the ammeter into the gap. Now every electron must pass through it.",
+   "words": [
+    {
+     "w": "Switch",
+     "t": 53.584
+    },
+    {
+     "w": "off,",
+     "t": 53.942
+    },
+    {
+     "w": "break",
+     "t": 54.3
+    },
+    {
+     "w": "the",
+     "t": 54.615
+    },
+    {
+     "w": "circuit,",
+     "t": 54.842
+    },
+    {
+     "w": "and",
+     "t": 55.375
+    },
+    {
+     "w": "put",
+     "t": 55.602
+    },
+    {
+     "w": "the",
+     "t": 55.829
+    },
+    {
+     "w": "ammeter",
+     "t": 56.056
+    },
+    {
+     "w": "into",
+     "t": 56.458
+    },
+    {
+     "w": "the",
+     "t": 56.729
+    },
+    {
+     "w": "gap.",
+     "t": 56.956
+    },
+    {
+     "w": "Now",
+     "t": 57.401
+    },
+    {
+     "w": "every",
+     "t": 57.628
+    },
+    {
+     "w": "electron",
+     "t": 57.943
+    },
+    {
+     "w": "must",
+     "t": 58.388
+    },
+    {
+     "w": "pass",
+     "t": 58.659
+    },
+    {
+     "w": "through",
+     "t": 58.93
+    },
+    {
+     "w": "it.",
+     "t": 59.332
+    }
+   ]
+  },
+  "C3": {
+   "t0": 60.084,
+   "t1": 63.501,
+   "text": "Switch on. It reads zero point three amperes.",
+   "words": [
+    {
+     "w": "Switch",
+     "t": 60.084
+    },
+    {
+     "w": "on.",
+     "t": 60.524
+    },
+    {
+     "w": "It",
+     "t": 61.019
+    },
+    {
+     "w": "reads",
+     "t": 61.244
+    },
+    {
+     "w": "zero",
+     "t": 61.631
+    },
+    {
+     "w": "point",
+     "t": 61.964
+    },
+    {
+     "w": "three",
+     "t": 62.351
+    },
+    {
+     "w": "amperes.",
+     "t": 62.738
+    }
+   ]
+  },
+  "C4": {
+   "t0": 63.851,
+   "t1": 68.381,
+   "text": "A good ammeter has a very low resistance, so it hardly slows the flow.",
+   "words": [
+    {
+     "w": "A",
+     "t": 63.851
+    },
+    {
+     "w": "good",
+     "t": 64.005
+    },
+    {
+     "w": "ammeter",
+     "t": 64.305
+    },
+    {
+     "w": "has",
+     "t": 64.749
+    },
+    {
+     "w": "a",
+     "t": 65.0
+    },
+    {
+     "w": "very",
+     "t": 65.155
+    },
+    {
+     "w": "low",
+     "t": 65.454
+    },
+    {
+     "w": "resistance,",
+     "t": 65.705
+    },
+    {
+     "w": "so",
+     "t": 66.439
+    },
+    {
+     "w": "it",
+     "t": 66.642
+    },
+    {
+     "w": "hardly",
+     "t": 66.845
+    },
+    {
+     "w": "slows",
+     "t": 67.241
+    },
+    {
+     "w": "the",
+     "t": 67.589
+    },
+    {
+     "w": "flow.",
+     "t": 67.84
+    }
+   ]
+  },
+  "R1": {
+   "t0": 69.031,
+   "t1": 73.866,
+   "text": "Resistance is the odd one. The ohmmeter has its own small cell inside.",
+   "words": [
+    {
+     "w": "Resistance",
+     "t": 69.031
+    },
+    {
+     "w": "is",
+     "t": 69.654
+    },
+    {
+     "w": "the",
+     "t": 69.869
+    },
+    {
+     "w": "odd",
+     "t": 70.135
+    },
+    {
+     "w": "one.",
+     "t": 70.4
+    },
+    {
+     "w": "The",
+     "t": 70.922
+    },
+    {
+     "w": "ohmmeter",
+     "t": 71.188
+    },
+    {
+     "w": "has",
+     "t": 71.709
+    },
+    {
+     "w": "its",
+     "t": 71.975
+    },
+    {
+     "w": "own",
+     "t": 72.241
+    },
+    {
+     "w": "small",
+     "t": 72.506
+    },
+    {
+     "w": "cell",
+     "t": 72.874
+    },
+    {
+     "w": "inside.",
+     "t": 73.191
+    }
+   ]
+  },
+  "R2": {
+   "t0": 74.216,
+   "t1": 79.445,
+   "text": "So switch the circuit off, lift the resistor out, and measure it alone. Five ohms.",
+   "words": [
+    {
+     "w": "So",
+     "t": 74.216
+    },
+    {
+     "w": "switch",
+     "t": 74.41
+    },
+    {
+     "w": "the",
+     "t": 74.79
+    },
+    {
+     "w": "circuit",
+     "t": 75.03
+    },
+    {
+     "w": "off,",
+     "t": 75.456
+    },
+    {
+     "w": "lift",
+     "t": 75.835
+    },
+    {
+     "w": "the",
+     "t": 76.122
+    },
+    {
+     "w": "resistor",
+     "t": 76.363
+    },
+    {
+     "w": "out,",
+     "t": 76.835
+    },
+    {
+     "w": "and",
+     "t": 77.214
+    },
+    {
+     "w": "measure",
+     "t": 77.455
+    },
+    {
+     "w": "it",
+     "t": 77.881
+    },
+    {
+     "w": "alone.",
+     "t": 78.075
+    },
+    {
+     "w": "Five",
+     "t": 78.639
+    },
+    {
+     "w": "ohms.",
+     "t": 78.926
+    }
+   ]
+  },
+  "R3": {
+   "t0": 79.795,
+   "t1": 84.506,
+   "text": "Measure a live circuit, and the reading is wrong. The meter can even be damaged.",
+   "words": [
+    {
+     "w": "Measure",
+     "t": 79.795
+    },
+    {
+     "w": "a",
+     "t": 80.192
+    },
+    {
+     "w": "live",
+     "t": 80.33
+    },
+    {
+     "w": "circuit,",
+     "t": 80.598
+    },
+    {
+     "w": "and",
+     "t": 81.126
+    },
+    {
+     "w": "the",
+     "t": 81.35
+    },
+    {
+     "w": "reading",
+     "t": 81.575
+    },
+    {
+     "w": "is",
+     "t": 81.973
+    },
+    {
+     "w": "wrong.",
+     "t": 82.154
+    },
+    {
+     "w": "The",
+     "t": 82.682
+    },
+    {
+     "w": "meter",
+     "t": 82.906
+    },
+    {
+     "w": "can",
+     "t": 83.218
+    },
+    {
+     "w": "even",
+     "t": 83.442
+    },
+    {
+     "w": "be",
+     "t": 83.71
+    },
+    {
+     "w": "damaged.",
+     "t": 83.892
+    }
+   ]
+  },
+  "S1": {
+   "t0": 85.156,
+   "t1": 89.71,
+   "text": "Voltmeter across. Ammeter in line. Ohmmeter with the power off.",
+   "words": [
+    {
+     "w": "Voltmeter",
+     "t": 85.156
+    },
+    {
+     "w": "across.",
+     "t": 85.735
+    },
+    {
+     "w": "Ammeter",
+     "t": 86.418
+    },
+    {
+     "w": "in",
+     "t": 86.895
+    },
+    {
+     "w": "line.",
+     "t": 87.112
+    },
+    {
+     "w": "Ohmmeter",
+     "t": 87.692
+    },
+    {
+     "w": "with",
+     "t": 88.22
+    },
+    {
+     "w": "the",
+     "t": 88.541
+    },
+    {
+     "w": "power",
+     "t": 88.81
+    },
+    {
+     "w": "off.",
+     "t": 89.182
+    }
+   ]
+  },
+  "W1": {
+   "t0": 90.51,
+   "t1": 96.857,
+   "text": "Now, signals that change with time. A meter shows one number. An oscilloscope draws the whole wave.",
+   "words": [
+    {
+     "w": "Now,",
+     "t": 90.51
+    },
+    {
+     "w": "signals",
+     "t": 90.898
+    },
+    {
+     "w": "that",
+     "t": 91.332
+    },
+    {
+     "w": "change",
+     "t": 91.625
+    },
+    {
+     "w": "with",
+     "t": 92.012
+    },
+    {
+     "w": "time.",
+     "t": 92.305
+    },
+    {
+     "w": "A",
+     "t": 92.834
+    },
+    {
+     "w": "meter",
+     "t": 92.985
+    },
+    {
+     "w": "shows",
+     "t": 93.325
+    },
+    {
+     "w": "one",
+     "t": 93.665
+    },
+    {
+     "w": "number.",
+     "t": 93.911
+    },
+    {
+     "w": "An",
+     "t": 94.534
+    },
+    {
+     "w": "oscilloscope",
+     "t": 94.732
+    },
+    {
+     "w": "draws",
+     "t": 95.403
+    },
+    {
+     "w": "the",
+     "t": 95.743
+    },
+    {
+     "w": "whole",
+     "t": 95.989
+    },
+    {
+     "w": "wave.",
+     "t": 96.329
+    }
+   ]
+  },
+  "W2": {
+   "t0": 97.207,
+   "t1": 103.137,
+   "text": "The screen is a grid of boxes called divisions. Two knobs tell you what one box is worth.",
+   "words": [
+    {
+     "w": "The",
+     "t": 97.207
+    },
+    {
+     "w": "screen",
+     "t": 97.465
+    },
+    {
+     "w": "is",
+     "t": 97.872
+    },
+    {
+     "w": "a",
+     "t": 98.08
+    },
+    {
+     "w": "grid",
+     "t": 98.239
+    },
+    {
+     "w": "of",
+     "t": 98.546
+    },
+    {
+     "w": "boxes",
+     "t": 98.754
+    },
+    {
+     "w": "called",
+     "t": 99.111
+    },
+    {
+     "w": "divisions.",
+     "t": 99.518
+    },
+    {
+     "w": "Two",
+     "t": 100.321
+    },
+    {
+     "w": "knobs",
+     "t": 100.579
+    },
+    {
+     "w": "tell",
+     "t": 100.936
+    },
+    {
+     "w": "you",
+     "t": 101.243
+    },
+    {
+     "w": "what",
+     "t": 101.501
+    },
+    {
+     "w": "one",
+     "t": 101.808
+    },
+    {
+     "w": "box",
+     "t": 102.066
+    },
+    {
+     "w": "is",
+     "t": 102.324
+    },
+    {
+     "w": "worth.",
+     "t": 102.532
+    }
+   ]
+  },
+  "W3": {
+   "t0": 103.487,
+   "t1": 109.548,
+   "text": "The volts per division knob sets the height of one box. The time per division knob sets its width.",
+   "words": [
+    {
+     "w": "The",
+     "t": 103.487
+    },
+    {
+     "w": "volts",
+     "t": 103.73
+    },
+    {
+     "w": "per",
+     "t": 104.066
+    },
+    {
+     "w": "division",
+     "t": 104.309
+    },
+    {
+     "w": "knob",
+     "t": 104.785
+    },
+    {
+     "w": "sets",
+     "t": 105.075
+    },
+    {
+     "w": "the",
+     "t": 105.364
+    },
+    {
+     "w": "height",
+     "t": 105.607
+    },
+    {
+     "w": "of",
+     "t": 105.99
+    },
+    {
+     "w": "one",
+     "t": 106.186
+    },
+    {
+     "w": "box.",
+     "t": 106.429
+    },
+    {
+     "w": "The",
+     "t": 106.905
+    },
+    {
+     "w": "time",
+     "t": 107.148
+    },
+    {
+     "w": "per",
+     "t": 107.437
+    },
+    {
+     "w": "division",
+     "t": 107.68
+    },
+    {
+     "w": "knob",
+     "t": 108.157
+    },
+    {
+     "w": "sets",
+     "t": 108.446
+    },
+    {
+     "w": "its",
+     "t": 108.736
+    },
+    {
+     "w": "width.",
+     "t": 108.978
+    }
+   ]
+  },
+  "W4": {
+   "t0": 109.898,
+   "t1": 115.898,
+   "text": "Watch. Turn up the signal generator, and the wave grows taller. The readout climbs with it.",
+   "words": [
+    {
+     "w": "Watch.",
+     "t": 109.898
+    },
+    {
+     "w": "Turn",
+     "t": 110.483
+    },
+    {
+     "w": "up",
+     "t": 110.78
+    },
+    {
+     "w": "the",
+     "t": 110.981
+    },
+    {
+     "w": "signal",
+     "t": 111.23
+    },
+    {
+     "w": "generator,",
+     "t": 111.623
+    },
+    {
+     "w": "and",
+     "t": 112.304
+    },
+    {
+     "w": "the",
+     "t": 112.553
+    },
+    {
+     "w": "wave",
+     "t": 112.802
+    },
+    {
+     "w": "grows",
+     "t": 113.099
+    },
+    {
+     "w": "taller.",
+     "t": 113.444
+    },
+    {
+     "w": "The",
+     "t": 114.077
+    },
+    {
+     "w": "readout",
+     "t": 114.326
+    },
+    {
+     "w": "climbs",
+     "t": 114.767
+    },
+    {
+     "w": "with",
+     "t": 115.16
+    },
+    {
+     "w": "it.",
+     "t": 115.457
+    }
+   ]
+  },
+  "W5": {
+   "t0": 116.248,
+   "t1": 121.343,
+   "text": "Turn up the frequency, and the waves crowd closer together. The period gets shorter.",
+   "words": [
+    {
+     "w": "Turn",
+     "t": 116.248
+    },
+    {
+     "w": "up",
+     "t": 116.531
+    },
+    {
+     "w": "the",
+     "t": 116.722
+    },
+    {
+     "w": "frequency,",
+     "t": 116.959
+    },
+    {
+     "w": "and",
+     "t": 117.606
+    },
+    {
+     "w": "the",
+     "t": 117.843
+    },
+    {
+     "w": "waves",
+     "t": 118.08
+    },
+    {
+     "w": "crowd",
+     "t": 118.408
+    },
+    {
+     "w": "closer",
+     "t": 118.736
+    },
+    {
+     "w": "together.",
+     "t": 119.11
+    },
+    {
+     "w": "The",
+     "t": 119.802
+    },
+    {
+     "w": "period",
+     "t": 120.039
+    },
+    {
+     "w": "gets",
+     "t": 120.413
+    },
+    {
+     "w": "shorter.",
+     "t": 120.696
+    }
+   ]
+  },
+  "D1": {
+   "t0": 121.993,
+   "t1": 125.098,
+   "text": "So here is how to read any wave, step by step.",
+   "words": [
+    {
+     "w": "So",
+     "t": 121.993
+    },
+    {
+     "w": "here",
+     "t": 122.19
+    },
+    {
+     "w": "is",
+     "t": 122.48
+    },
+    {
+     "w": "how",
+     "t": 122.677
+    },
+    {
+     "w": "to",
+     "t": 122.921
+    },
+    {
+     "w": "read",
+     "t": 123.118
+    },
+    {
+     "w": "any",
+     "t": 123.409
+    },
+    {
+     "w": "wave,",
+     "t": 123.653
+    },
+    {
+     "w": "step",
+     "t": 124.085
+    },
+    {
+     "w": "by",
+     "t": 124.376
+    },
+    {
+     "w": "step.",
+     "t": 124.573
+    }
+   ]
+  },
+  "D2": {
+   "t0": 125.448,
+   "t1": 133.302,
+   "text": "Count the boxes from the lowest point to the highest point. Multiply by volts per division. That is the peak to peak voltage.",
+   "words": [
+    {
+     "w": "Count",
+     "t": 125.448
+    },
+    {
+     "w": "the",
+     "t": 125.789
+    },
+    {
+     "w": "boxes",
+     "t": 126.036
+    },
+    {
+     "w": "from",
+     "t": 126.377
+    },
+    {
+     "w": "the",
+     "t": 126.671
+    },
+    {
+     "w": "lowest",
+     "t": 126.918
+    },
+    {
+     "w": "point",
+     "t": 127.307
+    },
+    {
+     "w": "to",
+     "t": 127.648
+    },
+    {
+     "w": "the",
+     "t": 127.848
+    },
+    {
+     "w": "highest",
+     "t": 128.094
+    },
+    {
+     "w": "point.",
+     "t": 128.531
+    },
+    {
+     "w": "Multiply",
+     "t": 129.109
+    },
+    {
+     "w": "by",
+     "t": 129.593
+    },
+    {
+     "w": "volts",
+     "t": 129.792
+    },
+    {
+     "w": "per",
+     "t": 130.134
+    },
+    {
+     "w": "division.",
+     "t": 130.38
+    },
+    {
+     "w": "That",
+     "t": 131.101
+    },
+    {
+     "w": "is",
+     "t": 131.395
+    },
+    {
+     "w": "the",
+     "t": 131.594
+    },
+    {
+     "w": "peak",
+     "t": 131.841
+    },
+    {
+     "w": "to",
+     "t": 132.135
+    },
+    {
+     "w": "peak",
+     "t": 132.334
+    },
+    {
+     "w": "voltage.",
+     "t": 132.628
+    }
+   ]
+  },
+  "D3": {
+   "t0": 134.002,
+   "t1": 136.664,
+   "text": "Half of that is the peak voltage, V m.",
+   "words": [
+    {
+     "w": "Half",
+     "t": 134.002
+    },
+    {
+     "w": "of",
+     "t": 134.297
+    },
+    {
+     "w": "that",
+     "t": 134.498
+    },
+    {
+     "w": "is",
+     "t": 134.794
+    },
+    {
+     "w": "the",
+     "t": 134.994
+    },
+    {
+     "w": "peak",
+     "t": 135.242
+    },
+    {
+     "w": "voltage,",
+     "t": 135.538
+    },
+    {
+     "w": "V",
+     "t": 136.12
+    },
+    {
+     "w": "m.",
+     "t": 136.273
+    }
+   ]
+  },
+  "D4": {
+   "t0": 137.364,
+   "t1": 142.236,
+   "text": "For a sine wave, the R M S value is the peak divided by root two.",
+   "words": [
+    {
+     "w": "For",
+     "t": 137.364
+    },
+    {
+     "w": "a",
+     "t": 137.642
+    },
+    {
+     "w": "sine",
+     "t": 137.813
+    },
+    {
+     "w": "wave,",
+     "t": 138.144
+    },
+    {
+     "w": "the",
+     "t": 138.635
+    },
+    {
+     "w": "R",
+     "t": 138.913
+    },
+    {
+     "w": "M",
+     "t": 139.084
+    },
+    {
+     "w": "S",
+     "t": 139.255
+    },
+    {
+     "w": "value",
+     "t": 139.426
+    },
+    {
+     "w": "is",
+     "t": 139.811
+    },
+    {
+     "w": "the",
+     "t": 140.035
+    },
+    {
+     "w": "peak",
+     "t": 140.313
+    },
+    {
+     "w": "divided",
+     "t": 140.644
+    },
+    {
+     "w": "by",
+     "t": 141.136
+    },
+    {
+     "w": "root",
+     "t": 141.36
+    },
+    {
+     "w": "two.",
+     "t": 141.691
+    }
+   ]
+  },
+  "D5": {
+   "t0": 142.936,
+   "t1": 149.921,
+   "text": "Now count the boxes across one full cycle. Multiply by time per division. That is the period, T.",
+   "words": [
+    {
+     "w": "Now",
+     "t": 142.936
+    },
+    {
+     "w": "count",
+     "t": 143.21
+    },
+    {
+     "w": "the",
+     "t": 143.589
+    },
+    {
+     "w": "boxes",
+     "t": 143.863
+    },
+    {
+     "w": "across",
+     "t": 144.242
+    },
+    {
+     "w": "one",
+     "t": 144.674
+    },
+    {
+     "w": "full",
+     "t": 144.948
+    },
+    {
+     "w": "cycle.",
+     "t": 145.275
+    },
+    {
+     "w": "Multiply",
+     "t": 145.917
+    },
+    {
+     "w": "by",
+     "t": 146.455
+    },
+    {
+     "w": "time",
+     "t": 146.676
+    },
+    {
+     "w": "per",
+     "t": 147.002
+    },
+    {
+     "w": "division.",
+     "t": 147.276
+    },
+    {
+     "w": "That",
+     "t": 148.077
+    },
+    {
+     "w": "is",
+     "t": 148.404
+    },
+    {
+     "w": "the",
+     "t": 148.625
+    },
+    {
+     "w": "period,",
+     "t": 148.899
+    },
+    {
+     "w": "T.",
+     "t": 149.489
+    }
+   ]
+  },
+  "D6": {
+   "t0": 150.621,
+   "t1": 156.815,
+   "text": "And the frequency is one over T. Voltage in volts, time in seconds, frequency in hertz.",
+   "words": [
+    {
+     "w": "And",
+     "t": 150.621
+    },
+    {
+     "w": "the",
+     "t": 150.891
+    },
+    {
+     "w": "frequency",
+     "t": 151.161
+    },
+    {
+     "w": "is",
+     "t": 151.743
+    },
+    {
+     "w": "one",
+     "t": 151.961
+    },
+    {
+     "w": "over",
+     "t": 152.231
+    },
+    {
+     "w": "T.",
+     "t": 152.554
+    },
+    {
+     "w": "Voltage",
+     "t": 152.98
+    },
+    {
+     "w": "in",
+     "t": 153.458
+    },
+    {
+     "w": "volts,",
+     "t": 153.676
+    },
+    {
+     "w": "time",
+     "t": 154.206
+    },
+    {
+     "w": "in",
+     "t": 154.528
+    },
+    {
+     "w": "seconds,",
+     "t": 154.746
+    },
+    {
+     "w": "frequency",
+     "t": 155.38
+    },
+    {
+     "w": "in",
+     "t": 155.962
+    },
+    {
+     "w": "hertz.",
+     "t": 156.181
+    }
+   ]
+  },
+  "X1": {
+   "t0": 157.465,
+   "t1": 163.613,
+   "text": "Worked example. A sine wave is four divisions high, peak to peak, at two volts per division.",
+   "words": [
+    {
+     "w": "Worked",
+     "t": 157.465
+    },
+    {
+     "w": "example.",
+     "t": 157.867
+    },
+    {
+     "w": "A",
+     "t": 158.563
+    },
+    {
+     "w": "sine",
+     "t": 158.72
+    },
+    {
+     "w": "wave",
+     "t": 159.024
+    },
+    {
+     "w": "is",
+     "t": 159.328
+    },
+    {
+     "w": "four",
+     "t": 159.534
+    },
+    {
+     "w": "divisions",
+     "t": 159.838
+    },
+    {
+     "w": "high,",
+     "t": 160.387
+    },
+    {
+     "w": "peak",
+     "t": 160.838
+    },
+    {
+     "w": "to",
+     "t": 161.142
+    },
+    {
+     "w": "peak,",
+     "t": 161.348
+    },
+    {
+     "w": "at",
+     "t": 161.799
+    },
+    {
+     "w": "two",
+     "t": 162.005
+    },
+    {
+     "w": "volts",
+     "t": 162.26
+    },
+    {
+     "w": "per",
+     "t": 162.613
+    },
+    {
+     "w": "division.",
+     "t": 162.868
+    }
+   ]
+  },
+  "X2": {
+   "t0": 163.963,
+   "t1": 168.456,
+   "text": "One cycle is four divisions wide, at five milliseconds per division.",
+   "words": [
+    {
+     "w": "One",
+     "t": 163.963
+    },
+    {
+     "w": "cycle",
+     "t": 164.228
+    },
+    {
+     "w": "is",
+     "t": 164.595
+    },
+    {
+     "w": "four",
+     "t": 164.809
+    },
+    {
+     "w": "divisions",
+     "t": 165.124
+    },
+    {
+     "w": "wide,",
+     "t": 165.695
+    },
+    {
+     "w": "at",
+     "t": 166.164
+    },
+    {
+     "w": "five",
+     "t": 166.378
+    },
+    {
+     "w": "milliseconds",
+     "t": 166.694
+    },
+    {
+     "w": "per",
+     "t": 167.417
+    },
+    {
+     "w": "division.",
+     "t": 167.682
+    }
+   ]
+  },
+  "X3": {
+   "t0": 168.806,
+   "t1": 173.484,
+   "text": "Peak to peak is four times two, eight volts. So the peak is four volts.",
+   "words": [
+    {
+     "w": "Peak",
+     "t": 168.806
+    },
+    {
+     "w": "to",
+     "t": 169.096
+    },
+    {
+     "w": "peak",
+     "t": 169.293
+    },
+    {
+     "w": "is",
+     "t": 169.583
+    },
+    {
+     "w": "four",
+     "t": 169.779
+    },
+    {
+     "w": "times",
+     "t": 170.069
+    },
+    {
+     "w": "two,",
+     "t": 170.406
+    },
+    {
+     "w": "eight",
+     "t": 170.789
+    },
+    {
+     "w": "volts.",
+     "t": 171.126
+    },
+    {
+     "w": "So",
+     "t": 171.697
+    },
+    {
+     "w": "the",
+     "t": 171.893
+    },
+    {
+     "w": "peak",
+     "t": 172.137
+    },
+    {
+     "w": "is",
+     "t": 172.427
+    },
+    {
+     "w": "four",
+     "t": 172.623
+    },
+    {
+     "w": "volts.",
+     "t": 172.913
+    }
+   ]
+  },
+  "X4": {
+   "t0": 174.084,
+   "t1": 179.853,
+   "text": "The R M S value is four divided by root two, about two point eight three volts.",
+   "words": [
+    {
+     "w": "The",
+     "t": 174.084
+    },
+    {
+     "w": "R",
+     "t": 174.366
+    },
+    {
+     "w": "M",
+     "t": 174.539
+    },
+    {
+     "w": "S",
+     "t": 174.713
+    },
+    {
+     "w": "value",
+     "t": 174.886
+    },
+    {
+     "w": "is",
+     "t": 175.277
+    },
+    {
+     "w": "four",
+     "t": 175.504
+    },
+    {
+     "w": "divided",
+     "t": 175.84
+    },
+    {
+     "w": "by",
+     "t": 176.339
+    },
+    {
+     "w": "root",
+     "t": 176.567
+    },
+    {
+     "w": "two,",
+     "t": 176.903
+    },
+    {
+     "w": "about",
+     "t": 177.348
+    },
+    {
+     "w": "two",
+     "t": 177.738
+    },
+    {
+     "w": "point",
+     "t": 178.02
+    },
+    {
+     "w": "eight",
+     "t": 178.41
+    },
+    {
+     "w": "three",
+     "t": 178.801
+    },
+    {
+     "w": "volts.",
+     "t": 179.191
+    }
+   ]
+  },
+  "X5": {
+   "t0": 180.453,
+   "t1": 189.351,
+   "text": "The period is four times five, twenty milliseconds. So the frequency is one over zero point zero two seconds. Fifty hertz.",
+   "words": [
+    {
+     "w": "The",
+     "t": 180.453
+    },
+    {
+     "w": "period",
+     "t": 180.738
+    },
+    {
+     "w": "is",
+     "t": 181.188
+    },
+    {
+     "w": "four",
+     "t": 181.418
+    },
+    {
+     "w": "times",
+     "t": 181.758
+    },
+    {
+     "w": "five,",
+     "t": 182.153
+    },
+    {
+     "w": "twenty",
+     "t": 182.658
+    },
+    {
+     "w": "milliseconds.",
+     "t": 183.108
+    },
+    {
+     "w": "So",
+     "t": 184.161
+    },
+    {
+     "w": "the",
+     "t": 184.392
+    },
+    {
+     "w": "frequency",
+     "t": 184.677
+    },
+    {
+     "w": "is",
+     "t": 185.291
+    },
+    {
+     "w": "one",
+     "t": 185.522
+    },
+    {
+     "w": "over",
+     "t": 185.807
+    },
+    {
+     "w": "zero",
+     "t": 186.147
+    },
+    {
+     "w": "point",
+     "t": 186.487
+    },
+    {
+     "w": "zero",
+     "t": 186.882
+    },
+    {
+     "w": "two",
+     "t": 187.222
+    },
+    {
+     "w": "seconds.",
+     "t": 187.507
+    },
+    {
+     "w": "Fifty",
+     "t": 188.286
+    },
+    {
+     "w": "hertz.",
+     "t": 188.681
+    }
+   ]
+  },
+  "T1": {
+   "t0": 190.001,
+   "t1": 191.466,
+   "text": "Now, the exam trap.",
+   "words": [
+    {
+     "w": "Now,",
+     "t": 190.001
+    },
+    {
+     "w": "the",
+     "t": 190.391
+    },
+    {
+     "w": "exam",
+     "t": 190.638
+    },
+    {
+     "w": "trap.",
+     "t": 190.933
+    }
+   ]
+  },
+  "T2": {
+   "t0": 191.816,
+   "t1": 197.029,
+   "text": "Many students connect the ammeter across a part, like a voltmeter. Never do that.",
+   "words": [
+    {
+     "w": "Many",
+     "t": 191.816
+    },
+    {
+     "w": "students",
+     "t": 192.113
+    },
+    {
+     "w": "connect",
+     "t": 192.602
+    },
+    {
+     "w": "the",
+     "t": 193.043
+    },
+    {
+     "w": "ammeter",
+     "t": 193.292
+    },
+    {
+     "w": "across",
+     "t": 193.733
+    },
+    {
+     "w": "a",
+     "t": 194.126
+    },
+    {
+     "w": "part,",
+     "t": 194.279
+    },
+    {
+     "w": "like",
+     "t": 194.72
+    },
+    {
+     "w": "a",
+     "t": 195.017
+    },
+    {
+     "w": "voltmeter.",
+     "t": 195.17
+    },
+    {
+     "w": "Never",
+     "t": 195.946
+    },
+    {
+     "w": "do",
+     "t": 196.291
+    },
+    {
+     "w": "that.",
+     "t": 196.493
+    }
+   ]
+  },
+  "T3": {
+   "t0": 197.379,
+   "t1": 206.736,
+   "text": "An ammeter has almost no resistance. Across a part it acts like a short circuit. A huge current flows, and the meter or its fuse can burn out.",
+   "words": [
+    {
+     "w": "An",
+     "t": 197.379
+    },
+    {
+     "w": "ammeter",
+     "t": 197.586
+    },
+    {
+     "w": "has",
+     "t": 198.037
+    },
+    {
+     "w": "almost",
+     "t": 198.292
+    },
+    {
+     "w": "no",
+     "t": 198.695
+    },
+    {
+     "w": "resistance.",
+     "t": 198.901
+    },
+    {
+     "w": "Across",
+     "t": 199.745
+    },
+    {
+     "w": "a",
+     "t": 200.148
+    },
+    {
+     "w": "part",
+     "t": 200.305
+    },
+    {
+     "w": "it",
+     "t": 200.609
+    },
+    {
+     "w": "acts",
+     "t": 200.816
+    },
+    {
+     "w": "like",
+     "t": 201.12
+    },
+    {
+     "w": "a",
+     "t": 201.424
+    },
+    {
+     "w": "short",
+     "t": 201.581
+    },
+    {
+     "w": "circuit.",
+     "t": 201.935
+    },
+    {
+     "w": "A",
+     "t": 202.632
+    },
+    {
+     "w": "huge",
+     "t": 202.789
+    },
+    {
+     "w": "current",
+     "t": 203.093
+    },
+    {
+     "w": "flows,",
+     "t": 203.545
+    },
+    {
+     "w": "and",
+     "t": 204.046
+    },
+    {
+     "w": "the",
+     "t": 204.301
+    },
+    {
+     "w": "meter",
+     "t": 204.556
+    },
+    {
+     "w": "or",
+     "t": 204.91
+    },
+    {
+     "w": "its",
+     "t": 205.116
+    },
+    {
+     "w": "fuse",
+     "t": 205.371
+    },
+    {
+     "w": "can",
+     "t": 205.675
+    },
+    {
+     "w": "burn",
+     "t": 205.931
+    },
+    {
+     "w": "out.",
+     "t": 206.235
+    }
+   ]
+  },
+  "T4": {
+   "t0": 207.386,
+   "t1": 216.42,
+   "text": "Where is this asked? In PUC board papers. How to connect each meter, and how to read voltage and frequency from an oscilloscope screen.",
+   "words": [
+    {
+     "w": "Where",
+     "t": 207.386
+    },
+    {
+     "w": "is",
+     "t": 207.749
+    },
+    {
+     "w": "this",
+     "t": 207.962
+    },
+    {
+     "w": "asked?",
+     "t": 208.275
+    },
+    {
+     "w": "In",
+     "t": 208.891
+    },
+    {
+     "w": "PUC",
+     "t": 209.104
+    },
+    {
+     "w": "board",
+     "t": 209.366
+    },
+    {
+     "w": "papers.",
+     "t": 209.73
+    },
+    {
+     "w": "How",
+     "t": 210.397
+    },
+    {
+     "w": "to",
+     "t": 210.66
+    },
+    {
+     "w": "connect",
+     "t": 210.872
+    },
+    {
+     "w": "each",
+     "t": 211.337
+    },
+    {
+     "w": "meter,",
+     "t": 211.65
+    },
+    {
+     "w": "and",
+     "t": 212.166
+    },
+    {
+     "w": "how",
+     "t": 212.429
+    },
+    {
+     "w": "to",
+     "t": 212.691
+    },
+    {
+     "w": "read",
+     "t": 212.904
+    },
+    {
+     "w": "voltage",
+     "t": 213.217
+    },
+    {
+     "w": "and",
+     "t": 213.682
+    },
+    {
+     "w": "frequency",
+     "t": 213.944
+    },
+    {
+     "w": "from",
+     "t": 214.51
+    },
+    {
+     "w": "an",
+     "t": 214.824
+    },
+    {
+     "w": "oscilloscope",
+     "t": 215.036
+    },
+    {
+     "w": "screen.",
+     "t": 215.753
+    }
+   ]
+  },
+  "Q1": {
+   "t0": 217.07,
+   "t1": 233.536,
+   "text": "Try this. A sine wave on an oscilloscope is five divisions peak to peak, at zero point five volts per division. One cycle is eight divisions wide, at zero point one milliseconds per division. Find the R M S voltage and the frequency.",
+   "words": [
+    {
+     "w": "Try",
+     "t": 217.07
+    },
+    {
+     "w": "this.",
+     "t": 217.351
+    },
+    {
+     "w": "A",
+     "t": 217.954
+    },
+    {
+     "w": "sine",
+     "t": 218.126
+    },
+    {
+     "w": "wave",
+     "t": 218.461
+    },
+    {
+     "w": "on",
+     "t": 218.795
+    },
+    {
+     "w": "an",
+     "t": 219.021
+    },
+    {
+     "w": "oscilloscope",
+     "t": 219.247
+    },
+    {
+     "w": "is",
+     "t": 220.012
+    },
+    {
+     "w": "five",
+     "t": 220.238
+    },
+    {
+     "w": "divisions",
+     "t": 220.573
+    },
+    {
+     "w": "peak",
+     "t": 221.176
+    },
+    {
+     "w": "to",
+     "t": 221.51
+    },
+    {
+     "w": "peak,",
+     "t": 221.736
+    },
+    {
+     "w": "at",
+     "t": 222.232
+    },
+    {
+     "w": "zero",
+     "t": 222.458
+    },
+    {
+     "w": "point",
+     "t": 222.792
+    },
+    {
+     "w": "five",
+     "t": 223.18
+    },
+    {
+     "w": "volts",
+     "t": 223.514
+    },
+    {
+     "w": "per",
+     "t": 223.902
+    },
+    {
+     "w": "division.",
+     "t": 224.182
+    },
+    {
+     "w": "One",
+     "t": 225.001
+    },
+    {
+     "w": "cycle",
+     "t": 225.281
+    },
+    {
+     "w": "is",
+     "t": 225.669
+    },
+    {
+     "w": "eight",
+     "t": 225.896
+    },
+    {
+     "w": "divisions",
+     "t": 226.284
+    },
+    {
+     "w": "wide,",
+     "t": 226.887
+    },
+    {
+     "w": "at",
+     "t": 227.383
+    },
+    {
+     "w": "zero",
+     "t": 227.609
+    },
+    {
+     "w": "point",
+     "t": 227.943
+    },
+    {
+     "w": "one",
+     "t": 228.331
+    },
+    {
+     "w": "milliseconds",
+     "t": 228.611
+    },
+    {
+     "w": "per",
+     "t": 229.376
+    },
+    {
+     "w": "division.",
+     "t": 229.656
+    },
+    {
+     "w": "Find",
+     "t": 230.475
+    },
+    {
+     "w": "the",
+     "t": 230.809
+    },
+    {
+     "w": "R",
+     "t": 231.09
+    },
+    {
+     "w": "M",
+     "t": 231.262
+    },
+    {
+     "w": "S",
+     "t": 231.434
+    },
+    {
+     "w": "voltage",
+     "t": 231.607
+    },
+    {
+     "w": "and",
+     "t": 232.102
+    },
+    {
+     "w": "the",
+     "t": 232.383
+    },
+    {
+     "w": "frequency.",
+     "t": 232.663
+    }
+   ]
+  },
+  "A1": {
+   "t0": 239.136,
+   "t1": 244.327,
+   "text": "A. About zero point eight eight volts, and one point two five kilohertz.",
+   "words": [
+    {
+     "w": "A.",
+     "t": 239.136
+    },
+    {
+     "w": "About",
+     "t": 239.567
+    },
+    {
+     "w": "zero",
+     "t": 239.946
+    },
+    {
+     "w": "point",
+     "t": 240.273
+    },
+    {
+     "w": "eight",
+     "t": 240.652
+    },
+    {
+     "w": "eight",
+     "t": 241.031
+    },
+    {
+     "w": "volts,",
+     "t": 241.41
+    },
+    {
+     "w": "and",
+     "t": 241.947
+    },
+    {
+     "w": "one",
+     "t": 242.221
+    },
+    {
+     "w": "point",
+     "t": 242.494
+    },
+    {
+     "w": "two",
+     "t": 242.873
+    },
+    {
+     "w": "five",
+     "t": 243.147
+    },
+    {
+     "w": "kilohertz.",
+     "t": 243.474
+    }
+   ]
+  },
+  "A2": {
+   "t0": 244.677,
+   "t1": 252.205,
+   "text": "Peak to peak is five times zero point five, two point five volts. So the peak is one point two five volts.",
+   "words": [
+    {
+     "w": "Peak",
+     "t": 244.677
+    },
+    {
+     "w": "to",
+     "t": 245.002
+    },
+    {
+     "w": "peak",
+     "t": 245.222
+    },
+    {
+     "w": "is",
+     "t": 245.548
+    },
+    {
+     "w": "five",
+     "t": 245.768
+    },
+    {
+     "w": "times",
+     "t": 246.094
+    },
+    {
+     "w": "zero",
+     "t": 246.472
+    },
+    {
+     "w": "point",
+     "t": 246.797
+    },
+    {
+     "w": "five,",
+     "t": 247.175
+    },
+    {
+     "w": "two",
+     "t": 247.658
+    },
+    {
+     "w": "point",
+     "t": 247.931
+    },
+    {
+     "w": "five",
+     "t": 248.309
+    },
+    {
+     "w": "volts.",
+     "t": 248.635
+    },
+    {
+     "w": "So",
+     "t": 249.275
+    },
+    {
+     "w": "the",
+     "t": 249.496
+    },
+    {
+     "w": "peak",
+     "t": 249.769
+    },
+    {
+     "w": "is",
+     "t": 250.094
+    },
+    {
+     "w": "one",
+     "t": 250.315
+    },
+    {
+     "w": "point",
+     "t": 250.588
+    },
+    {
+     "w": "two",
+     "t": 250.966
+    },
+    {
+     "w": "five",
+     "t": 251.239
+    },
+    {
+     "w": "volts.",
+     "t": 251.564
+    }
+   ]
+  },
+  "A3": {
+   "t0": 252.555,
+   "t1": 258.194,
+   "text": "Divide by root two. The R M S value is about zero point eight eight volts.",
+   "words": [
+    {
+     "w": "Divide",
+     "t": 252.555
+    },
+    {
+     "w": "by",
+     "t": 253.007
+    },
+    {
+     "w": "root",
+     "t": 253.239
+    },
+    {
+     "w": "two.",
+     "t": 253.581
+    },
+    {
+     "w": "The",
+     "t": 254.144
+    },
+    {
+     "w": "R",
+     "t": 254.431
+    },
+    {
+     "w": "M",
+     "t": 254.607
+    },
+    {
+     "w": "S",
+     "t": 254.784
+    },
+    {
+     "w": "value",
+     "t": 254.961
+    },
+    {
+     "w": "is",
+     "t": 255.358
+    },
+    {
+     "w": "about",
+     "t": 255.59
+    },
+    {
+     "w": "zero",
+     "t": 255.987
+    },
+    {
+     "w": "point",
+     "t": 256.329
+    },
+    {
+     "w": "eight",
+     "t": 256.726
+    },
+    {
+     "w": "eight",
+     "t": 257.124
+    },
+    {
+     "w": "volts.",
+     "t": 257.521
+    }
+   ]
+  },
+  "A4": {
+   "t0": 258.544,
+   "t1": 267.031,
+   "text": "The period is eight times zero point one, zero point eight milliseconds. One over that is one thousand two hundred and fifty hertz.",
+   "words": [
+    {
+     "w": "The",
+     "t": 258.544
+    },
+    {
+     "w": "period",
+     "t": 258.804
+    },
+    {
+     "w": "is",
+     "t": 259.215
+    },
+    {
+     "w": "eight",
+     "t": 259.425
+    },
+    {
+     "w": "times",
+     "t": 259.785
+    },
+    {
+     "w": "zero",
+     "t": 260.145
+    },
+    {
+     "w": "point",
+     "t": 260.456
+    },
+    {
+     "w": "one,",
+     "t": 260.816
+    },
+    {
+     "w": "zero",
+     "t": 261.226
+    },
+    {
+     "w": "point",
+     "t": 261.537
+    },
+    {
+     "w": "eight",
+     "t": 261.897
+    },
+    {
+     "w": "milliseconds.",
+     "t": 262.257
+    },
+    {
+     "w": "One",
+     "t": 263.218
+    },
+    {
+     "w": "over",
+     "t": 263.478
+    },
+    {
+     "w": "that",
+     "t": 263.788
+    },
+    {
+     "w": "is",
+     "t": 264.099
+    },
+    {
+     "w": "one",
+     "t": 264.309
+    },
+    {
+     "w": "thousand",
+     "t": 264.569
+    },
+    {
+     "w": "two",
+     "t": 265.08
+    },
+    {
+     "w": "hundred",
+     "t": 265.34
+    },
+    {
+     "w": "and",
+     "t": 265.8
+    },
+    {
+     "w": "fifty",
+     "t": 266.06
+    },
+    {
+     "w": "hertz.",
+     "t": 266.421
+    }
+   ]
+  },
+  "F1": {
+   "t0": 267.681,
+   "t1": 269.203,
+   "text": "Screenshot this card.",
+   "words": [
+    {
+     "w": "Screenshot",
+     "t": 267.681
+    },
+    {
+     "w": "this",
+     "t": 268.308
+    },
+    {
+     "w": "card.",
+     "t": 268.627
+    }
+   ]
+  },
+  "NX": {
+   "t0": 272.403,
+   "t1": 279.719,
+   "text": "Next, instrument symbols, controls, ranges and precautions. What do all those markings on a meter really mean?",
+   "words": [
+    {
+     "w": "Next,",
+     "t": 272.403
+    },
+    {
+     "w": "instrument",
+     "t": 272.866
+    },
+    {
+     "w": "symbols,",
+     "t": 273.479
+    },
+    {
+     "w": "controls,",
+     "t": 274.093
+    },
+    {
+     "w": "ranges",
+     "t": 274.758
+    },
+    {
+     "w": "and",
+     "t": 275.17
+    },
+    {
+     "w": "precautions.",
+     "t": 275.432
+    },
+    {
+     "w": "What",
+     "t": 276.348
+    },
+    {
+     "w": "do",
+     "t": 276.66
+    },
+    {
+     "w": "all",
+     "t": 276.871
+    },
+    {
+     "w": "those",
+     "t": 277.133
+    },
+    {
+     "w": "markings",
+     "t": 277.495
+    },
+    {
+     "w": "on",
+     "t": 278.008
+    },
+    {
+     "w": "a",
+     "t": 278.22
+    },
+    {
+     "w": "meter",
+     "t": 278.381
+    },
+    {
+     "w": "really",
+     "t": 278.743
+    },
+    {
+     "w": "mean?",
+     "t": 279.156
+    }
+   ]
+  }
+ },
+ "order": [
+  "H1",
+  "H2",
+  "I1",
+  "I2",
+  "I3",
+  "V1",
+  "V2",
+  "V3",
+  "V4",
+  "C1",
+  "C2",
+  "C3",
+  "C4",
+  "R1",
+  "R2",
+  "R3",
+  "S1",
+  "W1",
+  "W2",
+  "W3",
+  "W4",
+  "W5",
+  "D1",
+  "D2",
+  "D3",
+  "D4",
+  "D5",
+  "D6",
+  "X1",
+  "X2",
+  "X3",
+  "X4",
+  "X5",
+  "T1",
+  "T2",
+  "T3",
+  "T4",
+  "Q1",
+  "A1",
+  "A2",
+  "A3",
+  "A4",
+  "F1",
+  "NX"
+ ],
+ "dur": 280.319
+}

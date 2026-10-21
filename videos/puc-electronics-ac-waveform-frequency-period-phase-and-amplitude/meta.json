@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "AC Waveform: Frequency, Period, Phase and Amplitude",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 13
+ },
+ "class": "11",
+ "title": "AC Waveform Explained Simply | PUC Electronics Class 11",
+ "description": "Aarav plugs his table fan into the wall socket, where the voltage swings from plus to minus and back fifty times every second. How do we describe a voltage that never sits still? With four ideas: amplitude, period, frequency and phase.\n\nOn a live breadboard an AC source drives a resistor: the electrons rock back and forth while a turning arm traces a sine wave on the oscilloscope. Turn up the amplitude and the wave grows taller; turn up the frequency and the waves squeeze together while the electrons rock faster. We build v = Vm sin(ωt) from one turn of the arm (2π radians, ω = 2πf), add a second wave a quarter turn ahead to show phase difference, and work out the mains supply in India (230 V, 50 Hz, T = 20 ms, ω ≈ 314 rad/s). Then the exam trap (ω is not f), where it is asked, an original JEE Main pattern practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 13 of PUC Electronics, Class 11, Chapter 2: Principles of Electricity, Network Theorems and AC Principles (Karnataka PUC Electronics).\n\nIn this video:\n0:00 A voltage that never sits still\n0:14 Four ideas\n0:22 Breadboard: a turning arm draws a sine wave\n0:44 Amplitude\n0:55 Period and frequency\n1:16 The equation v = Vm sin ωt\n1:48 Phase and phase difference\n2:19 Worked example: mains in India\n2:48 Exam trap: ω is not f\n3:08 Where it is asked\n3:19 Practice question\n4:01 Formula card\n\nNext episode: RMS and Average Values.\n\nVideo by Quest Academy.",
+ "tags": [
+  "AC waveform",
+  "frequency and period",
+  "amplitude of AC",
+  "phase and phase difference",
+  "sine wave",
+  "v = Vm sin wt",
+  "angular frequency",
+  "50 Hz mains India",
+  "PUC electronics",
+  "1st PUC electronics chapter 2",
+  "Karnataka PUC electronics",
+  "alternating current basics",
+  "class 11 electronics",
+  "JEE Main alternating current"
+ ],
+ "thumb": {
+  "title": "Reading an AC Wave",
+  "accent_word": "AC Wave",
+  "frame_t": 73.7
+ }
+}

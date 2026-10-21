@@ -1,0 +1,31 @@
+{
+ "world": "puc-electronics",
+ "topic": "Analogue and Digital Multimeters",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 20
+ },
+ "class": "11",
+ "title": "Analogue vs Digital Meters Explained Simply | PUC Electronics Class 11",
+ "description": "Aarav checks the same resistor with two meters. The needle meter says 4 V, the digital meter says 4.97 V. Same resistor, same moment: which one is telling the truth? This animated lesson opens up both kinds of multimeter and solves the puzzle.\n\nWe see how one rotary switch turns an analogue multimeter into an ammeter, voltmeter or ohmmeter (shunts, multipliers, a rectifier and a cell around one moving coil meter) and what ohms per volt sensitivity means (a 50 microampere movement gives 20,000 ohms per volt). Then the digital multimeter, block by block: input stage, converters, analogue to digital converter, counter and decoder, display. On a live breadboard both meters measure the same 100 kilo-ohm resistor while the oscilloscope shows the voltage drop when the meter loads the circuit, and we work out both readings (4.0 V and 4.975 V). Then a side-by-side comparison, what a 3 1/2 digit display means, the exam trap (the loading effect), where it is asked, an original JEE Main pattern question with a full solution, and a formula card to screenshot.\n\nThis is Episode 20 of PUC Electronics, Class 11, Chapter 3: Measuring Instruments (Karnataka PUC Electronics).\n\nIn this video:\n0:00 Two meters, two readings\n0:13 What a multimeter is\n0:28 Inside an analogue multimeter\n0:53 Inside a digital multimeter\n1:27 The loading effect on the breadboard\n2:01 Worked example: 4.0 V vs 4.975 V\n2:43 Analogue vs digital compared\n3:13 What 3 1/2 digits means\n3:24 Exam trap: the loading effect\n3:39 Where it is asked\n3:51 Practice question\n4:30 Formula card\n\nNext episode: The Dual-Channel Oscilloscope.\n\nVideo by Quest Academy.",
+ "tags": [
+  "analogue multimeter",
+  "digital multimeter",
+  "analogue vs digital multimeter",
+  "multimeter block diagram",
+  "digital multimeter ADC",
+  "loading effect voltmeter",
+  "ohms per volt sensitivity",
+  "3 1/2 digit display",
+  "voltmeter reading across resistor",
+  "PUC electronics",
+  "1st PUC electronics chapter 3",
+  "measuring instruments",
+  "Karnataka PUC electronics"
+ ],
+ "thumb": {
+  "title": "Needle vs Digits",
+  "accent_word": "Digits",
+  "frame_t": 112
+ }
+}

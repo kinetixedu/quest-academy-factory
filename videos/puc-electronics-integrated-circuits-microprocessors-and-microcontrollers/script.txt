@@ -1,0 +1,49 @@
+H1|0.35|Aarav opens a broken TV remote. No tubes. No tangle of wires. Just a flat board and one small black chip.
+H2|0.5|How can one tiny chip run the whole remote?
+I1|0.35|Before chips, every transistor, resistor and capacitor was a separate part, soldered together by hand.
+I2|0.35|Each joint was a place where things could fail.
+I3|0.65|In nineteen fifty eight, Jack Kilby had a better idea. Make all the parts, and the wires between them, together on one piece of semiconductor.
+D1|0.35|This is an integrated circuit, or I C. Integrated means joined into one.
+D2|0.35|Transistors, resistors, capacitors and their connections are all built on one tiny chip of silicon. Since it is one single piece, it is called a monolithic I C.
+D3|0.65|In nineteen fifty nine, Robert Noyce showed how to make such chips from silicon in a way that could be mass produced.
+D4|0.35|As methods improved, more and more parts fitted on one chip. Small scale, medium scale, large scale, and very large scale integration.
+D5|0.65|I Cs are small, cheap to make in bulk, use little power, and are very reliable, because there are almost no soldered joints. But they cannot handle large power, and big coils are hard to build inside them.
+M1|0.35|Now put a whole computer brain on one chip. That is a microprocessor.
+M2|0.35|It has three main parts.
+M3|0.35|The arithmetic and logic unit, or A L U, does the maths and makes comparisons.
+M4|0.35|The control unit is the boss. It fetches each instruction, decodes it, and tells the other parts what to do.
+M5|0.65|And registers are tiny, super fast stores that hold the numbers being worked on right now.
+M6|0.65|But a microprocessor cannot work alone. Memory and input output chips sit outside it, joined by sets of wires called buses.
+M7|0.65|The first commercial microprocessor came in nineteen seventy one. It handled four bits at a time and had about two thousand three hundred transistors.
+C1|0.35|A microcontroller goes one step further.
+C2|0.35|It packs the processor, the memory, input output ports and timers, all onto one chip.
+C3|0.65|It is a complete small computer, built to do one job well. Like the one inside Aarav's remote.
+B1|0.35|Let's give a microcontroller a job on the breadboard. Blink a small lamp.
+B2|0.35|The program has just four lines. Pin on. Wait. Pin off. Wait. Then repeat.
+B3|0.35|Watch the program step from line to line. When the pin turns on, it gives five volts, and current flows through the lamp.
+B4|0.35|When the pin turns off, it drops to zero volts, and the lamp goes dark.
+B5|0.65|The scope shows a square wave. The program and the voltage move together.
+B6|0.65|Change one number in the wait line, and the lamp blinks faster. Same chip, new behaviour. Just new code.
+T1|0.8|A microprocessor is a computer's brain. A microcontroller is a whole small computer on one chip.
+L1|0.35|So how much memory can a processor reach? It depends on its address lines.
+L2|0.7|Each address line is a wire that can be zero or one. One line gives two addresses.
+L3|0.7|Two lines give four. Three lines give eight. Every new line doubles the count.
+L4|0.7|So n address lines give two to the power n addresses.
+W1|0.35|Worked example. A processor has sixteen address lines. Each address holds one byte.
+W2|0.7|Two to the power sixteen is sixty five thousand, five hundred and thirty six.
+W3|0.65|Divide by one thousand and twenty four bytes per kilobyte, and you get sixty four kilobytes.
+V1|0.35|So which one goes where? Compare them side by side.
+V2|0.35|A microprocessor keeps memory and input output outside. A microcontroller has them inside.
+V3|0.35|A microprocessor is built for many jobs, like a laptop. A microcontroller is built for one job, like a washing machine.
+V4|0.65|So a microcontroller is smaller, cheaper and uses less power for its task.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students write that a microprocessor has memory built in. It does not.
+X3|0.65|Memory, ports and timers on the same chip is a microcontroller. A microprocessor needs them outside.
+X4|0.65|Where is this asked? In PUC board papers. Name the parts of a microprocessor, compare it with a microcontroller, or list the advantages of I Cs.
+Q1|5.4|Try this. A microcontroller has twelve address lines, and each address holds one byte. How many bytes can it address?
+A1|0.35|C. Four thousand and ninety six bytes.
+A2|0.35|n address lines give two to the power n addresses.
+A3|0.35|Two to the power twelve is four thousand and ninety six.
+A4|0.65|With one byte each, that is four thousand and ninety six bytes, or four kilobytes.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, applications of electronics. How does one idea, controlling electrons, run phones, radar and hospitals?

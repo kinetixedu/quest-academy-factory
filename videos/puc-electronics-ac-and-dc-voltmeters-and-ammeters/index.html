@@ -1,0 +1,167 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Electronics Ep 18 - AC and DC Voltmeters and Ammeters</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== Breadboard (PUC Electronics) layout ===== */
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.card svg.full{position:absolute;left:0;top:0}
+.big{position:absolute;font:600 56px 'IBM Plex Mono';white-space:nowrap}
+.sm{position:absolute;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.txt{position:absolute;font:500 30px/1.35 Poppins;white-space:nowrap}
+#ghost{top:168px}
+.ro2{position:absolute;left:32px;top:76px;width:576px;display:grid;grid-template-columns:auto 1fr auto;column-gap:18px;row-gap:14px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .k.n{font-style:normal;font-size:24px;font-family:'IBM Plex Mono';letter-spacing:.06em}
+.ro2 .v{font:600 38px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 22px 'IBM Plex Mono';color:var(--mute);white-space:nowrap;min-width:52px}
+.st2{position:absolute;left:36px;display:flex;align-items:center;gap:22px;white-space:nowrap}
+.st2 .n{flex:none;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st2 .sx{font-size:36px}
+.st2 .why{font:500 22px Poppins;color:var(--mute)}
+.hb{position:absolute;left:24px;width:736px;border-radius:14px;background:var(--ac2)}
+/* hook */
+#aC{left:160px;top:260px;width:784px;height:600px;overflow:hidden}
+#aImg{position:absolute;left:24px;top:84px;height:516px}
+#thC{left:976px;top:260px;width:784px;height:284px}
+#nwC{left:976px;top:576px;width:784px;height:284px}
+.qv{position:absolute;top:84px;width:330px;height:150px;border-radius:14px;background:var(--soft)}
+.qv .b{position:absolute;left:28px;top:22px;font:600 64px 'IBM Plex Mono';white-space:nowrap}
+.qv .q{position:absolute;right:28px;top:26px;width:60px;height:60px;border-radius:50%;background:var(--ac);color:#fff;font:700 38px Poppins;display:flex;align-items:center;justify-content:center}
+.qv .s{position:absolute;left:28px;top:104px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+/* mechanism */
+#gL{left:160px;top:260px;width:784px;height:600px}
+#gR{left:976px;top:260px;width:784px;height:600px}
+.tl2{position:absolute;top:452px;width:344px;height:116px;border-radius:14px;background:var(--soft)}
+.tl2 .k{position:absolute;left:24px;top:16px;font-size:40px}
+.tl2 .d{position:absolute;left:24px;top:72px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* breadboard */
+#ck{left:160px;top:260px;width:928px;height:600px}
+#dl{left:1120px;top:260px;width:640px;height:300px}
+#rb{left:1120px;top:592px;width:640px;height:268px}
+/* derivation + voltmeter */
+#pL,#vL{left:160px;top:260px;width:784px;height:600px}
+#pR,#vR{left:976px;top:260px;width:784px;height:600px}
+#pUnit{position:absolute;left:36px;top:528px;font:500 24px 'IBM Plex Mono';color:var(--ink2);white-space:nowrap}
+.cmp{position:absolute;left:32px;width:720px;height:84px;border-radius:14px;background:var(--soft);display:flex;align-items:center;gap:20px;padding:0 24px;box-sizing:border-box;white-space:nowrap}
+.cmp .nm{font:700 28px Poppins;width:170px}
+.cmp .p{font:600 22px Poppins;color:var(--ink2);height:44px;padding:0 14px;border-radius:10px;background:#fff;display:flex;align-items:center}
+/* worked example */
+#wL{left:160px;top:260px;width:784px;height:600px}
+#wR{left:976px;top:260px;width:784px;height:600px}
+/* AC */
+#acK{left:160px;top:260px;width:928px;height:600px}
+#sc{left:1120px;top:260px;width:640px;height:300px}
+#rb2{left:1120px;top:592px;width:640px;height:268px}
+#scS{position:absolute;left:24px;top:76px}
+/* exam */
+#trap{left:160px;top:260px;width:784px;height:300px}
+#tc{left:976px;top:260px;width:784px;height:300px}
+#wa{left:160px;top:592px;width:1600px;height:268px}
+#mq{left:160px;top:260px;width:1040px;height:600px}
+#so{left:1232px;top:260px;width:528px;height:600px}
+#so .sol{left:32px}
+.fcard .fl{font-size:44px}
+.fcard .fl.txt{font:500 28px Poppins}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · ELECTRONICS · CH 3 MEASURING INSTRUMENTS</div>
+    <div class="subj" id="subj">BREADBOARD</div>
+    <div id="title">One needle, <span class="acc">every range</span></div>
+    <div id="sub">AC and DC voltmeters and ammeters</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E8A317" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="ghost" id="ghost">EXAMPLE FIGURES</div>
+
+    <!-- A: hook -->
+    <div class="sc" id="sA">
+      <div class="card" id="aC"><div class="lbl" style="left:32px;top:28px">AARAV · PCME · JEE</div>
+        <img id="aImg" src="../../assets/illustrations/puc/aarav.png" alt="">
+        <svg id="hmS" width="320" height="420" style="position:absolute;left:440px;top:96px"></svg>
+        <div class="pillp ac" id="aPill" style="left:470px;top:500px">An old meter</div></div>
+      <div class="card" id="thC"><div class="lbl" style="left:32px;top:28px">ITS NEEDLE SWINGS ALL THE WAY FOR</div>
+        <div class="big" id="thN" style="left:32px;top:84px;font-size:72px;color:var(--violet)">1 mA</div>
+        <div class="sm" id="thL" style="left:36px;top:186px">= 0.001 A, one thousandth of an ampere</div>
+        <svg id="thBar" width="300" height="60" style="position:absolute;left:440px;top:100px"></svg></div>
+      <div class="card" id="nwC"><div class="lbl" style="left:32px;top:28px">YET THE SAME KIND OF METER READS</div>
+        <div class="qv" id="q1" style="left:32px"><div class="b" style="color:#7A4FE0">10 A</div><div class="q">?</div><div class="s">a big current</div></div>
+        <div class="qv" id="q2" style="left:390px"><div class="b" style="color:#0E8F8F">230 V</div><div class="q">?</div><div class="s">the wall socket</div></div></div>
+    </div>
+
+    <!-- G: galvanometer mechanism -->
+    <div class="sc" id="sG">
+      <div class="card" id="gL"><div class="lbl" style="left:32px;top:28px">MOVING COIL GALVANOMETER</div>
+        <svg class="full" id="gS" width="784" height="600"></svg></div>
+      <div class="card" id="gR"><div class="lbl" style="left:32px;top:28px">LIVE READOUT</div>
+        <div class="ro2" id="gRo"></div>
+        <svg id="gGr" width="720" height="250" style="position:absolute;left:32px;top:188px"></svg>
+        <div class="tl2" id="tG" style="left:32px"><div class="k"></div><div class="d">COIL RESISTANCE</div></div>
+        <div class="tl2" id="tI" style="left:408px"><div class="k"></div><div class="d">FULL-SCALE CURRENT</div></div></div>
+    </div>
+
+    <!-- B: breadboard ammeter -->
+    <div class="sc" id="sB">
+      <div class="card" id="ck"><div class="lbl" style="left:32px;top:28px">BUILDING AN AMMETER</div>
+        <div class="tag" id="ckE" style="right:32px;top:22px"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="#E8A317" stroke="#16213E" stroke-width="1.5"/></svg>ELECTRONS</div>
+        <svg class="full" id="ckS" width="928" height="600"></svg></div>
+      <div class="card" id="dl"><div class="lbl" style="left:32px;top:28px">AMMETER SCALE</div><div class="tag" id="dlT" style="right:24px;top:22px">0 TO 1 A</div><svg id="dlS" width="592" height="220" style="position:absolute;left:24px;top:68px"></svg></div>
+      <div class="card" id="rb"><div class="lbl" style="left:32px;top:28px">LIVE READOUT</div><div class="ro2" id="bRo"></div></div>
+    </div>
+
+    <!-- D: shunt derivation -->
+    <div class="sc" id="sD">
+      <div class="card" id="pL"><div class="lbl" style="left:32px;top:28px">INSIDE THE AMMETER</div><svg class="full" id="pS" width="784" height="600"></svg></div>
+      <div class="card" id="pR"><div class="lbl" style="left:36px;top:28px">DERIVATION · SHUNT</div>
+        <div class="hb" id="pBox" style="top:394px;height:108px"></div><div id="pSteps"></div><div id="pUnit">Ω and A   →   bigger range, smaller shunt</div></div>
+    </div>
+
+    <!-- V: voltmeter -->
+    <div class="sc" id="sV">
+      <div class="card" id="vL"><div class="lbl" style="left:32px;top:28px">BUILDING A VOLTMETER</div>
+        <div class="tag" id="vE" style="right:32px;top:22px"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="#E8A317" stroke="#16213E" stroke-width="1.5"/></svg>ELECTRONS</div>
+        <svg class="full" id="vS" width="784" height="600"></svg></div>
+      <div class="card" id="vR"><div class="lbl" style="left:36px;top:28px">AMMETER VS VOLTMETER</div>
+        <div class="cmp" id="cA" style="top:76px"><span class="nm">Ammeter</span><span class="p">in series</span><span class="p">very low R</span><span class="p">shunt</span></div>
+        <div class="cmp" id="cV" style="top:176px"><span class="nm">Voltmeter</span><span class="p">in parallel</span><span class="p">very high R</span><span class="p">multiplier</span></div>
+        <div class="lbl" id="vRL" style="left:36px;top:300px">DERIVATION · MULTIPLIER</div>
+        <div class="hb" id="vBox" style="top:448px;height:112px"></div><div id="vSteps"></div></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div class="sc" id="sW">
+      <div class="card" id="wL"><div class="lbl" style="left:32px;top:28px">ONE GALVANOMETER, TWO METERS</div><svg class="full" id="wS" width="784" height="600"></svg></div>
+      <div class="card" id="wR"><div class="lbl" style="left:36px;top:28px">WORKED EXAMPLE</div><div class="hb" id="wB1" style="top:262px;height:84px"></div><div class="hb" id="wB2" style="top:480px;height:84px"></div><div id="wSteps"></div></div>
+    </div>
+
+    <!-- C: AC meters -->
+    <div class="sc" id="sC">
+      <div class="card" id="acK"><div class="lbl" id="acL1" style="left:32px;top:28px">AC STRAIGHT INTO THE COIL</div><div class="lbl" id="acL2" style="left:32px;top:28px">RECTIFIER TYPE AC VOLTMETER</div>
+        <div class="tag" id="acE" style="right:32px;top:22px"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="#E8A317" stroke="#16213E" stroke-width="1.5"/></svg>ELECTRONS</div>
+        <svg class="full" id="acS" width="928" height="600"></svg></div>
+      <div class="card" id="sc"><div class="lbl" style="left:32px;top:28px">OSCILLOSCOPE</div><div class="tag" id="slowT" style="right:24px;top:22px">SLOW-MOTION VIEW</div><svg id="scS" width="592" height="200"></svg></div>
+      <div class="card" id="rb2"><div class="lbl" style="left:32px;top:28px">METER AND READOUT</div><svg id="ndS" width="250" height="190" style="position:absolute;left:16px;top:62px"></svg><div class="ro2" id="cRo" style="left:280px;width:336px;top:80px"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div class="sc" id="sX"><div class="card red" id="trap"></div>
+      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">REMEMBER THE SHAPES</div><svg class="full" id="tcS" width="784" height="300"></svg></div>
+      <div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div class="sc" id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + next -->
+    <div class="sc" id="sF"></div>
+  </div>
+  <div id="stmt"><div id="st1">An ammeter goes in series, with a tiny shunt.</div><div id="st2">A voltmeter goes <span class="acc">across</span>.</div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

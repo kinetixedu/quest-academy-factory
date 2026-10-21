@@ -1,0 +1,45 @@
+H1|0.35|Aarav presses the start button on his dad's scooter. For a moment, the headlight goes dim.
+H2|0.35|The battery is the same. Nothing is broken.
+H3|0.5|So where did the missing voltage go?
+S1|0.35|First, what is a D C source? It is anything that pushes current in one direction only, with a steady voltage.
+S2|0.35|A cell makes it from chemicals. A battery is a group of cells joined together.
+S3|0.35|A solar cell makes it from light. And a D C power supply makes it from the A C mains at home.
+S4|0.65|Each one has two terminals, plus and minus, that never swap.
+E1|0.35|Every source has an E M F, written E. It is the voltage the source gives when no current is drawn.
+E2|0.35|But inside every real cell, the chemicals and plates also resist the current. This is the internal resistance, small r.
+E3|0.65|So a real source is like a perfect E M F, with a small resistor hidden inside it.
+B1|0.35|Let's test it on the breadboard. A twelve volt battery, with an internal resistance of half an ohm.
+B2|0.35|With the switch open, no current flows. The voltmeter reads twelve volts, the full E M F.
+B3|0.35|Now close the switch, with a five and a half ohm load. Two amperes flow.
+B4|0.35|The meter drops to eleven volts. One volt is used up inside the battery itself.
+B5|0.35|Now make the load much heavier, like the scooter's starter motor. The current shoots up to six amperes.
+B6|0.65|Watch the scope. The E M F stays flat, but the terminal voltage sinks to nine volts. That is why the headlight dims.
+D1|0.35|Let's write it down.
+D2|0.7|Walk around the loop with Kirchhoff's voltage law. E minus I r, minus I R, equals zero.
+D3|0.7|So the current is I equals E, divided by R plus r.
+D4|0.7|The terminal voltage is the drop across the load. V equals I R.
+D5|0.7|And since I R is E minus I r, V equals E minus I r.
+D6|0.65|I r is the lost voltage, used up inside the source. Volts, amperes and ohms, as always.
+G1|0.35|Now plot V against I for this battery. It is a straight line.
+G2|0.35|It starts at E when the current is zero, and slopes down. The steepness of the slope is r.
+G3|0.35|An ideal voltage source has zero internal resistance. Its line stays flat. The voltage never drops.
+G4|0.35|An ideal current source is the opposite. It pushes the same current into any load. Its line stands straight up.
+G5|0.65|Real voltage sources have a small r in series. Real current sources have a very large r in parallel.
+T1|0.8|E M F is what a source can give. Terminal voltage is what it does give.
+W1|0.35|Worked example. A cell of E M F one point five volts and internal resistance half an ohm lights a two and a half ohm lamp.
+W2|0.35|Find the current, and the terminal voltage.
+W3|0.7|I equals E over R plus r. One point five over three. That is zero point five amperes.
+W4|0.7|The lost voltage, I r, is zero point five times zero point five. Zero point two five volts.
+W5|0.65|So V equals one point five minus zero point two five. One point two five volts.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think the terminal voltage always equals the E M F.
+X3|0.65|Only when no current flows. When a cell gives current, V equals E minus I r. When it is being charged, V equals E plus I r.
+X4|0.65|Where is this asked? In PUC board papers, as definitions and short problems. In JEE Main and NEET, as terminal voltage and internal resistance questions.
+Q1|5.4|Try this. A battery reads eleven volts at its terminals when it supplies two amperes, and ten volts when it supplies four amperes. Find its E M F and internal resistance.
+A1|0.35|A. Twelve volts and half an ohm.
+A2|0.35|Use V equals E minus I r, for both readings.
+A3|0.35|Eleven equals E minus two r. And ten equals E minus four r.
+A4|0.35|Subtract the two. One equals two r, so r is half an ohm.
+A5|0.65|Then E equals eleven, plus two times half. Twelve volts.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, network theorems and Thevenin's theorem. How to shrink a whole circuit into one battery and one resistor.

@@ -1,0 +1,48 @@
+H1|0.35|Aarav reads the tiny print on his phone charger. Five volts. Two amperes.
+H2|0.5|Two numbers on every charger. But what do they really mean?
+C1|0.35|To answer that, we start with electric charge.
+C2|0.35|Charge is a property of tiny particles. Protons carry positive charge. Electrons carry negative charge.
+C3|0.65|Like charges push each other away. Unlike charges pull together.
+C4|0.35|Charge is measured in coulombs, written with a capital C.
+C5|0.35|And charge comes in fixed packets. The smallest packet is the charge of one electron, e. That is one point six times ten to the minus nineteen coulombs.
+C6|0.65|So any charge Q is a whole number of packets. Q equals n times e. One coulomb is about six point two five times ten to the eighteen electrons.
+I1|0.35|Now, current.
+I2|0.35|When charge moves along a wire, we get an electric current.
+I3|0.35|Stand at one point and count the charge that passes every second. That rate is the current.
+I4|0.7|So I equals Q divided by t.
+I5|0.65|Current is measured in amperes. One ampere means one coulomb passing every second.
+I6|0.65|Remember from episode one. Electrons drift from minus to plus. Conventional current I points the other way.
+P1|0.35|But why do the charges move at all? They need a push.
+P2|0.35|Think of two water tanks joined by a pipe. Water flows only when one tank is higher than the other.
+P3|0.35|In a circuit, the height is electric potential. Charges flow when there is a potential difference between two points.
+P4|0.35|Potential difference is the work done to move one coulomb of charge from one point to the other.
+P5|0.7|So V equals W divided by Q.
+P6|0.65|It is measured in volts. One volt means one joule of work for every coulomb.
+P7|0.65|And voltage is simply the everyday name for potential difference.
+B1|0.35|Let's watch both on the breadboard.
+B2|0.35|One cell, one switch, and a resistor. A voltmeter reads the voltage across the cell.
+B3|0.35|With the switch open, the cell still has one point five volts across it. But no current flows.
+B4|0.65|Close the switch. Now the charges move. The meter reads zero point one five amperes.
+B5|0.35|Add a second cell. The push doubles to three volts.
+B6|0.35|Watch the scope. Both traces step up together. The electrons speed up, and the current rises to zero point three amperes.
+B7|0.65|More push, more flow. And with no push, there is no flow at all.
+T1|0.8|Voltage is the push. Current is the flow.
+D1|0.35|Now, how much energy does the source give?
+D2|0.7|From the volt, the work W equals V times Q.
+D3|0.7|And the charge Q equals I times t.
+D4|0.7|Put them together. W equals V times I times t.
+D5|0.65|Volts times amperes times seconds gives joules, the unit of energy.
+W1|0.35|Worked example. Aarav's charger gives five volts and two amperes for one minute.
+W2|0.35|First, the charge. Q equals two times sixty, which is one hundred and twenty coulombs.
+W3|0.35|Then the energy. W equals five times one hundred and twenty, which is six hundred joules.
+W4|0.65|And the electrons? One hundred and twenty, divided by one point six times ten to the minus nineteen. That is seven point five times ten to the twenty electrons.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students say voltage flows through a resistor. It does not.
+X3|0.65|Current flows through a component. Voltage is always across it, between two points.
+X4|0.65|Where is this asked? In PUC board papers. Define current, potential difference and the volt, and solve short problems with I equals Q by t, and V equals W by Q.
+Q1|5.4|Try this. A current of zero point five amperes flows through a lamp for six seconds, and the source does thirty six joules of work. What is the potential difference across the lamp?
+A1|0.35|C. Twelve volts.
+A2|0.35|First, the charge. Q equals I times t. Zero point five times six is three coulombs.
+A3|0.65|Then V equals W by Q. Thirty six divided by three is twelve volts.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, direct current and alternating current. Why does a cell give one kind, and the wall socket the other?

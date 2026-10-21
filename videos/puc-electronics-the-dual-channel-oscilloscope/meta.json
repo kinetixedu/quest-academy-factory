@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "The Dual-Channel Oscilloscope",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 21
+ },
+ "class": "11",
+ "title": "Dual-Channel Oscilloscope Explained Simply | PUC Electronics Class 11",
+ "description": "Aarav's meter reads 7 V from a small adapter. But is that voltage steady, or wobbling up and down? A meter gives one number. To see the shape, he needs an oscilloscope. This animated lesson builds the cathode ray oscilloscope piece by piece and then puts a dual-channel scope to work.\n\nInside the cathode ray tube: the heated cathode, the control grid (brightness), the anodes (speed and focus), the Y plates (the signal moves the spot up and down), the X plates driven by the sawtooth time base, the phosphor screen and the trigger that makes the picture stand still. Then how one beam shows two channels in alternate mode and chop mode, and a live breadboard where CH1 and CH2 probe an RC circuit and the output shrinks and lags as the frequency rises. We read the screen with VOLTS/DIV and TIME/DIV, find peak-to-peak voltage, period, frequency and phase difference, and work a full example (8 V peak to peak, 1 kHz). Then the exam trap (peak vs peak to peak), where it is asked, an original JEE Main pattern question with a full solution, and a formula card to screenshot.\n\nThis is Episode 21 of PUC Electronics, Class 11, Chapter 3: Measuring Instruments (Karnataka PUC Electronics).\n\nIn this video:\n0:00 A number or a shape?\n0:20 Inside the cathode ray tube\n1:09 Two channels, one beam: alternate and chop\n1:32 Two probes on an RC circuit\n1:53 Reading the screen: V/div and time/div\n2:28 Worked example\n2:58 Exam trap: peak vs peak to peak\n3:10 Where it is asked\n3:22 Practice question\n4:06 Formula card\n\nNext episode: Measuring Voltage, Current, Resistance and Waveforms.\n\nVideo by Quest Academy.",
+ "tags": [
+  "dual channel oscilloscope",
+  "dual trace CRO",
+  "cathode ray oscilloscope",
+  "CRO block diagram",
+  "cathode ray tube",
+  "time base sawtooth",
+  "chop and alternate mode",
+  "volts per division",
+  "measuring frequency with CRO",
+  "phase difference CRO",
+  "PUC electronics",
+  "1st PUC electronics chapter 3",
+  "measuring instruments",
+  "Karnataka PUC electronics"
+ ],
+ "thumb": {
+  "title": "Two Waves, One Screen",
+  "accent_word": "One",
+  "frame_t": 108
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "Kirchhoff's Current and Voltage Laws",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 10
+ },
+ "class": "11",
+ "title": "Kirchhoff's Laws Explained Simply | PUC Electronics Class 11",
+ "description": "Aarav plugs a desk lamp and a phone charger into one extension board. One wire brings the current in, then it splits two ways. How much goes each way, and is any of it lost? Two simple rules answer this for any circuit: Kirchhoff's current law and Kirchhoff's voltage law, first written by Gustav Kirchhoff in 1845 while he was still a student.\n\nOn a live breadboard you watch the current split at a junction (3 A in, 1 A and 2 A out) while the oscilloscope shows the current into the junction and the total current out staying on top of each other, even as a knob changes the load. Then a probe walks around a closed loop while the scope draws the voltage at every point: up 12 V through the battery, down 4 V and 8 V across the resistors, back to zero. We derive both laws step by step (conservation of charge and conservation of energy), learn the sign rules, solve a two-loop circuit, and finish with the exam trap (the sign of IR), where it is asked, an original JEE Main pattern practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 10 of PUC Electronics, Class 11, Chapter 2: Principles of Electricity, Network Theorems and AC Principles (Karnataka PUC Electronics).\n\nIn this video:\n0:00 One wire in, two ways out\n0:13 Kirchhoff's two laws (1845)\n0:27 Breadboard: current at a junction\n1:07 Kirchhoff's current law\n1:36 Breadboard: walking around a loop\n2:17 Kirchhoff's voltage law and sign rules\n2:53 Worked example: a two-loop circuit\n3:36 Exam trap: the sign of IR\n3:57 Where it is asked\n4:07 Practice question\n5:00 Formula card\n\nNext episode: DC Sources and Circuit Analysis.\n\nVideo by Quest Academy.",
+ "tags": [
+  "kirchhoff's laws",
+  "kirchhoff's current law",
+  "kirchhoff's voltage law",
+  "KCL and KVL",
+  "junction rule",
+  "loop rule",
+  "PUC electronics",
+  "1st PUC electronics chapter 2",
+  "Karnataka PUC electronics",
+  "principles of electricity",
+  "network analysis",
+  "sign convention KVL",
+  "JEE Main current electricity",
+  "class 11 electronics"
+ ],
+ "thumb": {
+  "title": "Kirchhoff's Laws",
+  "accent_word": "Laws",
+  "frame_t": 64
+ }
+}

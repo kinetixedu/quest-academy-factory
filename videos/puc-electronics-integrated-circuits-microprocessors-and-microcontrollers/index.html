@@ -1,0 +1,192 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Electronics Ep 3 - Integrated Circuits, Microprocessors and Microcontrollers</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== Breadboard (PUC Electronics) layout ===== */
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.card svg.full{position:absolute;left:0;top:0}
+.big{position:absolute;font:600 56px 'IBM Plex Mono';white-space:nowrap}
+.sm{position:absolute;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.txt{position:absolute;font:500 30px/1.35 Poppins;white-space:nowrap}
+#ghost{top:168px}
+.st2{position:absolute;left:36px;display:flex;align-items:center;gap:22px;white-space:nowrap}
+.st2 .n{flex:none;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st2 .sx{font-size:34px}
+.st2 .sx.tx{font:600 28px Poppins}
+.st2 .why{font:500 22px Poppins;color:var(--mute)}
+.hiB{position:absolute;left:24px;width:736px;border-radius:14px;background:var(--ac2)}
+/* hook */
+#aC{left:160px;top:260px;width:784px;height:600px;overflow:hidden}
+#aImg{position:absolute;left:24px;top:84px;height:516px}
+#bdC{left:976px;top:260px;width:784px;height:600px}
+/* before / after */
+#iL{left:160px;top:260px;width:784px;height:600px}
+#iR{left:976px;top:260px;width:784px;height:600px}
+/* definition + levels */
+#dL{left:160px;top:260px;width:784px;height:600px}
+#dR{left:976px;top:260px;width:784px;height:600px}
+#dq{position:absolute;left:36px;top:84px;width:712px;font:600 38px/1.32 Poppins;letter-spacing:-.01em}
+#dq b{color:var(--ac);font-weight:700}
+#dStrip{position:absolute;left:36px;top:500px;width:712px;height:72px;border-radius:14px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:16px;padding:0 24px;box-sizing:border-box;font:600 26px Poppins;white-space:nowrap}
+#dStrip .y{font:600 26px 'IBM Plex Mono';color:var(--ac)}
+.lv{position:absolute;left:36px;display:flex;align-items:center;gap:18px;white-space:nowrap}
+.lv .k{width:84px;font:600 22px 'IBM Plex Mono';letter-spacing:.06em;color:var(--ink)}
+.lv .bar{height:40px;border-radius:10px;background:var(--ac)}
+.lv .nm{font:500 20px Poppins;color:var(--mute)}
+/* microprocessor / microcontroller */
+#mC{left:160px;top:260px;width:1040px;height:600px}
+#mR{left:1232px;top:260px;width:528px;height:600px}
+#mTag{position:absolute;right:32px;top:22px}
+.blk{position:absolute;border-radius:12px;border:3px solid var(--ink);background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font:700 24px Poppins;white-space:nowrap;box-sizing:border-box}
+.blk small{font:500 17px Poppins;color:var(--mute)}
+.cyc{position:absolute;left:36px;width:456px;height:72px;border-radius:14px;background:var(--soft);display:flex;align-items:center;gap:18px;padding:0 22px;box-sizing:border-box;font:700 28px Poppins;white-space:nowrap;color:var(--ink2)}
+.cyc .s{font:500 20px Poppins;color:var(--mute)}
+.fact{position:absolute;left:36px;white-space:nowrap}
+.fact .v{font:600 44px 'IBM Plex Mono';color:var(--ac)}
+.fact .l{font:500 22px Poppins;color:var(--mute)}
+/* breadboard */
+#ck{left:160px;top:260px;width:928px;height:600px}
+#sc{left:1120px;top:260px;width:640px;height:300px}
+#pg{left:1120px;top:592px;width:640px;height:268px}
+#scS{position:absolute;left:24px;top:76px}
+.pl{position:absolute;left:32px;width:576px;height:40px;border-radius:9px;display:flex;align-items:center;gap:18px;padding:0 14px;box-sizing:border-box;font:600 24px 'IBM Plex Mono';white-space:nowrap;color:var(--ink2)}
+.pl .ln{color:var(--dim);width:22px}
+#pgR{position:absolute;right:32px;top:22px}
+/* address lines */
+#lL{left:160px;top:260px;width:784px;height:600px}
+#lR{left:976px;top:260px;width:784px;height:600px}
+.tt{position:absolute;display:flex;gap:10px}
+.tt span{width:64px;height:40px;border-radius:9px;display:flex;align-items:center;justify-content:center;font:600 22px 'IBM Plex Mono';background:var(--soft);color:var(--mute)}
+.tt span.one{background:var(--ac);color:#fff}
+.tt span.h{background:none;color:var(--mute);font-size:18px;letter-spacing:.06em}
+.tt span.ad{width:120px;background:none;color:var(--ink);justify-content:flex-start;padding-left:8px}
+/* worked example */
+#wL{left:160px;top:260px;width:784px;height:600px}
+#wR{left:976px;top:260px;width:784px;height:600px}
+#bits{position:absolute;left:32px;top:96px;display:flex;gap:8px}
+#bits span{width:38px;height:56px;border-radius:8px;background:var(--soft);display:flex;align-items:center;justify-content:center;font:600 24px 'IBM Plex Mono';color:var(--mute)}
+#bits span.one{background:var(--ac);color:#fff}
+/* comparison */
+#vC{left:160px;top:260px;width:1600px;height:600px}
+.cr{position:absolute;left:36px;width:1528px;height:66px;display:grid;grid-template-columns:300px 1fr 1fr;column-gap:16px;align-items:center}
+.cr div{height:60px;border-radius:12px;display:flex;align-items:center;padding:0 22px;font:600 26px Poppins;white-space:nowrap}
+.cr .k{font:600 19px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);background:none;padding-left:4px}
+.cr .a,.cr .b{background:var(--soft);color:#C4C8D0}
+.cr.h div{height:44px;font:600 18px 'IBM Plex Mono';letter-spacing:.1em;background:none;color:var(--mute)}
+/* exam */
+#trap{left:160px;top:260px;width:784px;height:300px}
+#tc{left:976px;top:260px;width:784px;height:300px}
+#wa{left:160px;top:592px;width:1600px;height:268px}
+#mq{left:160px;top:260px;width:1040px;height:600px}
+#so{left:1232px;top:260px;width:528px;height:600px}
+#so .sol{left:32px}
+.fcard .fl{font-size:40px}
+.fcard .fl.txt{font:500 28px Poppins}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · ELECTRONICS · CH 1 INTRODUCTION TO ELECTRONICS</div>
+    <div class="subj" id="subj">BREADBOARD</div>
+    <div id="title">A computer on one <span class="acc">chip</span></div>
+    <div id="sub">Integrated circuits, microprocessors and microcontrollers</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E8A317" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="ghost" id="ghost">EXAMPLE FIGURES</div>
+
+    <!-- A: hook -->
+    <div class="sc" id="sA">
+      <div class="card" id="aC"><div class="lbl" style="left:32px;top:28px">AARAV · PCME · JEE</div>
+        <img id="aImg" src="../../assets/illustrations/puc/aarav.png" alt="">
+        <svg id="rmS" width="300" height="420" style="position:absolute;left:452px;top:84px"></svg>
+        <div class="pillp ac" id="aPill" style="left:470px;top:500px">Broken remote</div></div>
+      <div class="card" id="bdC"><div class="lbl" style="left:32px;top:28px">INSIDE THE REMOTE</div>
+        <svg class="full" id="bdS" width="784" height="600"></svg>
+        <div class="pillp ac" id="bdP" style="left:32px;top:512px">Just one small chip</div>
+        <div class="pillp ink" id="bdQ" style="left:404px;top:512px">Runs everything?</div></div>
+    </div>
+
+    <!-- I: separate parts -> one piece -->
+    <div class="sc" id="sI">
+      <div class="card" id="iL"><div class="lbl" style="left:32px;top:28px">BEFORE · SEPARATE PARTS</div>
+        <svg class="full" id="iS" width="784" height="600"></svg>
+        <div class="pillp bad" id="iBad" style="left:32px;top:512px">Every joint can fail</div></div>
+      <div class="card" id="iR"><div class="lbl" style="left:32px;top:28px">1958 · JACK KILBY</div>
+        <svg class="full" id="jS" width="784" height="600"></svg>
+        <div class="pillp good" id="iGood" style="left:32px;top:512px">Parts and wires, made together</div></div>
+    </div>
+
+    <!-- D: definition + levels -->
+    <div class="sc" id="sD">
+      <div class="card" id="dL"><div class="lbl" style="left:36px;top:28px">INTEGRATED CIRCUIT (IC)</div>
+        <div id="dq">Many parts <b>and their connections</b>, built on one tiny chip of silicon.</div>
+        <svg id="dieS" width="712" height="200" style="position:absolute;left:36px;top:232px"></svg>
+        <div class="pillp ac" id="dMono" style="left:36px;top:432px">Monolithic IC: one single piece</div>
+        <div id="dStrip"><span class="y">1959</span><span>Robert Noyce: silicon chips, mass produced</span></div></div>
+      <div class="card" id="dR"><div class="lbl" style="left:36px;top:28px">MORE AND MORE PARTS PER CHIP</div>
+        <div id="dLv"></div>
+        <div class="lbl" id="dPl" style="left:36px;top:340px">GOOD</div><div class="lbl" id="dMl" style="left:36px;top:478px">LIMITS</div>
+        <div id="dPills"></div></div>
+    </div>
+
+    <!-- M: microprocessor -> microcontroller -->
+    <div class="sc" id="sM">
+      <div class="card" id="mC"><div class="lbl" id="mL" style="left:32px;top:28px">INSIDE THE CHIP</div>
+        <div class="tag" id="mTag">MICROPROCESSOR</div>
+        <svg class="full" id="mS" width="1040" height="600"></svg><div id="mBlk"></div></div>
+      <div class="card" id="mR"><div class="lbl" id="mRL1" style="left:36px;top:28px">EVERY INSTRUCTION</div><div class="lbl" id="mRL2" style="left:36px;top:28px">ON ONE MICROCONTROLLER</div>
+        <div id="mCyc"></div><div id="mFacts"></div><div id="mIn"></div></div>
+    </div>
+
+    <!-- B: breadboard -->
+    <div class="sc" id="sB">
+      <div class="card" id="ck"><div class="lbl" style="left:32px;top:28px">BLINK A LAMP</div>
+        <div class="tag" id="ckE" style="right:32px;top:22px"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="#E8A317" stroke="#16213E" stroke-width="1.5"/></svg>ELECTRONS</div>
+        <svg class="full" id="ckS" width="928" height="600"></svg></div>
+      <div class="card" id="sc"><div class="lbl" style="left:32px;top:28px">OSCILLOSCOPE</div><div class="tag" id="slowT" style="right:24px;top:22px">SLOW-MOTION VIEW</div><svg id="scS" width="592" height="200"></svg></div>
+      <div class="card" id="pg"><div class="lbl" style="left:32px;top:28px">THE PROGRAM</div><div class="tag" id="pgR">REPEAT</div><div id="pgL"></div></div>
+    </div>
+
+    <!-- L: address lines -->
+    <div class="sc" id="sL">
+      <div class="card" id="lL"><div class="lbl" style="left:32px;top:28px">ADDRESS LINES · EACH 0 OR 1</div><div id="tt"></div></div>
+      <div class="card" id="lR"><div class="lbl" style="left:36px;top:28px">EVERY LINE DOUBLES IT</div><div class="hiB" id="lBox" style="top:412px;height:100px"></div><div id="lSteps"></div><div class="pillp ink" id="lNote" style="left:36px;top:532px">Address: the number of one memory box</div></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div class="sc" id="sW">
+      <div class="card" id="wL"><div class="lbl" style="left:32px;top:28px">16 ADDRESS LINES</div><div id="bits"></div>
+        <div class="lbl" style="left:32px;top:200px">ADDRESSES</div>
+        <div class="big" id="wN" style="left:32px;top:236px;font-size:84px;color:var(--ac)">0</div>
+        <div class="lbl" style="left:32px;top:380px">MEMORY · 1 BYTE EACH</div>
+        <div class="big" id="wK" style="left:32px;top:416px;font-size:64px">64 KB</div></div>
+      <div class="card" id="wR"><div class="lbl" style="left:36px;top:28px">WORKED EXAMPLE</div><div class="hiB" id="wBox" style="top:318px;height:100px"></div><div id="wSteps"></div></div>
+    </div>
+
+    <!-- V: comparison -->
+    <div class="sc" id="sV">
+      <div class="card" id="vC"><div class="lbl" style="left:36px;top:28px">MICROPROCESSOR VS MICROCONTROLLER</div><div id="vRows"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div class="sc" id="sX"><div class="card red" id="trap"></div>
+      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">WHERE IS THE MEMORY?</div><svg class="full" id="tcS" width="784" height="300"></svg></div>
+      <div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div class="sc" id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + next -->
+    <div class="sc" id="sF"></div>
+  </div>
+  <div id="stmt"><div id="st1">A microprocessor is a computer's brain.</div><div id="st2">A microcontroller is a <span class="acc">whole computer.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

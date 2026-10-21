@@ -1,0 +1,41 @@
+H1|0.35|Aarav builds a circuit with exactly the right resistor value. A few seconds later, the resistor is too hot to touch, and it smells burnt.
+H2|0.5|The value was correct. So what went wrong?
+I1|0.35|The value is only one number. Every part also has limits, called its specifications.
+I2|0.65|They are printed in a document from the maker, called a datasheet.
+S1|0.35|A datasheet has a few main sections.
+S2|0.35|First, a short description and the key features.
+S3|0.35|Then the absolute maximum ratings. These are limits you must never cross.
+S4|0.35|Then the electrical characteristics, with minimum, typical and maximum values.
+S5|0.65|Then graphs, and finally the size and shape of the package, so you know it fits your board.
+K1|0.35|Which numbers matter most? For a resistor, the resistance, the tolerance and the power rating.
+K2|0.35|For a capacitor, the capacitance, the tolerance and the voltage rating.
+K3|0.35|For an inductor, the inductance and the largest current it can carry.
+K4|0.65|Tolerance tells you how far the real value can be from the printed one. A one kilo ohm resistor with five percent tolerance can be anywhere from nine hundred and fifty to one thousand and fifty ohms.
+B1|0.35|Now let's test Aarav's resistor on the breadboard. It is one kilo ohm, and its power rating is a quarter of a watt.
+B2|0.35|Turn up the supply. The current rises, and the power rises even faster, because it depends on the voltage squared.
+B3|0.35|At ten volts, the power is zero point one watts. That is well inside the rating. The resistor stays cool.
+B4|0.35|At twenty volts, the power is zero point four watts. That is above the rating.
+B5|0.65|The resistor overheats. That is exactly what happened to Aarav. The value was right, but the rating was too small.
+T1|0.8|The value tells you what a part is. The rating tells you what it can survive.
+D1|0.35|So what is the most a resistor can take? Let's work it out.
+D2|0.7|Power is voltage times current. P equals V times I.
+D3|0.7|From Ohm's law, I equals V by R. So P equals V squared by R. Or, in terms of current, I squared R.
+D4|0.7|Now set P equal to the rating, and solve. The largest safe voltage is the square root of P times R.
+D5|0.65|And the largest safe current is the square root of P by R. P in watts, R in ohms.
+W1|0.35|Worked example. One kilo ohm, rated a quarter of a watt.
+W2|0.6|V max equals the square root of zero point two five times one thousand. That is about fifteen point eight volts.
+W3|0.65|I max equals the square root of zero point two five by one thousand. About fifteen point eight milliamperes. Twenty volts was too much.
+G1|0.35|One more thing. A rating holds only up to a stated temperature.
+G2|0.35|In this example datasheet, the full quarter watt is allowed up to seventy degrees.
+G3|0.65|Above that, the allowed power falls in a straight line, down to zero at one hundred and fifty five degrees. This is called derating.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think the absolute maximum rating is a safe value to work at. It is not.
+X3|0.65|It is the limit where damage can begin. Always design inside the recommended operating values, with room to spare.
+X4|0.65|Where is this asked? In PUC board papers. List the specifications of a resistor or a capacitor, or work out a power rating or a tolerance range.
+Q1|5.4|Try this. A four hundred and seventy ohm resistor is rated half a watt. What is the largest current it can safely carry?
+A1|0.35|C. About thirty two point six milliamperes.
+A2|0.35|Use I max equals the square root of P by R.
+A3|0.35|That is the square root of zero point five divided by four hundred and seventy.
+A4|0.65|The square root of zero point zero zero one zero six. About zero point zero three two six amperes, or thirty two point six milliamperes.
+F1|3.2|Screenshot this card.
+NX|0.6|That is the end of this chapter, but the series continues. More PUC Electronics is coming soon, so follow the playlist.

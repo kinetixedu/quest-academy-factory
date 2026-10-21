@@ -1,0 +1,43 @@
+H1|0.35|Aarav has a circuit with a battery and two resistors. He wants to test five different loads on it.
+H2|0.35|Must he solve the whole circuit again, five times?
+H3|0.5|There is a shortcut. Squeeze the whole circuit into one battery and one resistor.
+N1|0.35|Shortcuts like this are called network theorems.
+N2|0.35|Superposition says, when there are many sources, find the effect of each one alone, then add them up.
+N3|0.35|Norton's theorem turns a circuit into one current source, with one resistor in parallel.
+N4|0.35|Maximum power transfer tells you which load gets the most power.
+N5|0.65|And the most used of all is Thevenin's theorem.
+V1|0.35|It was first found by Hermann von Helmholtz in eighteen fifty three. Leon Thevenin, a French engineer, published it again in eighteen eighty three.
+V2|0.65|Here is what it says. Any linear circuit, seen from two terminals A and B, acts like one voltage source in series with one resistance.
+V3|0.65|We call them V T H and R T H. The Thevenin voltage, and the Thevenin resistance.
+P1|0.35|Let's find them in four steps. Our circuit is a twelve volt battery, with six ohms and three ohms.
+P2|0.7|Step one. Take the load out, and mark the two terminals, A and B.
+P3|0.7|Step two. Find the voltage across A and B, with nothing connected. Three ohms out of nine gets one third of twelve volts. So V T H is four volts.
+P4|0.7|Step three. Replace the battery with a plain wire. Now look in from A and B. Six ohms and three ohms are in parallel. R T H is two ohms.
+P5|0.7|Step four. Draw a four volt source, in series with two ohms. Then put the load back.
+P6|0.65|The load current is V T H, divided by R T H plus R L.
+B1|0.35|Now let's check it on the breadboard. The real circuit on the left, the Thevenin copy on the right.
+B2|0.35|Connect a two ohm load to both. Each one carries exactly one ampere.
+B3|0.35|Now turn the knob, and change the load.
+B4|0.65|The scope shows the load voltage of both circuits. The two traces never separate. For the load, the two circuits are the same.
+M1|0.35|Thevenin also tells us how to get the most power into a load.
+M2|0.35|Plot the load power, as the load resistance changes.
+M3|0.35|Too small a load, and little voltage reaches it. Too big a load, and little current flows.
+M4|0.7|The peak comes when the load equals R T H. Here, at two ohms.
+M5|0.65|Then the maximum power is V T H squared, divided by four R T H. Four squared over eight. Two watts.
+T1|0.8|From any two points, a circuit is just one battery and one resistor.
+W1|0.35|Worked example. A twenty four volt battery feeds four ohms, then twelve ohms across A and B. Find the current in a six ohm load.
+W2|0.7|V T H is twenty four, times twelve over sixteen. Eighteen volts.
+W3|0.7|With the battery shorted, R T H is four and twelve in parallel. Forty eight over sixteen, three ohms.
+W4|0.65|So the load current is eighteen, over three plus six. Two amperes.
+X1|0.35|Now, the exam trap.
+X2|0.35|To find R T H, many students just take the battery out, and leave a gap.
+X3|0.65|Wrong. Replace every voltage source with a short circuit, a plain wire. Replace every current source with an open circuit, a gap.
+X4|0.65|Where is this asked? In PUC board papers, to state the theorem and find a load current. JEE Main asks when a load gets the maximum power.
+Q1|5.4|Try this. A nine volt battery feeds three ohms, then six ohms across A and B. Which load across A B takes the maximum power, and how much power is it?
+A1|0.35|A. Two ohms, and four point five watts.
+A2|0.35|V T H is nine, times six over nine. Six volts.
+A3|0.35|R T H is three and six in parallel. Eighteen over nine, two ohms.
+A4|0.35|Maximum power needs a load equal to R T H. Two ohms.
+A5|0.65|And the power is six squared, over four times two. Thirty six over eight, four point five watts.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, the A C waveform. Frequency, period, phase and amplitude, on a live scope.

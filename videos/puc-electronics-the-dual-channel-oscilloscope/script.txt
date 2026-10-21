@@ -1,0 +1,41 @@
+H1|0.35|Aarav's meter reads seven volts from a small adapter. But is that voltage steady, or wobbling up and down?
+H2|0.5|A meter gives just one number. To see the shape, he needs an oscilloscope.
+C1|0.65|An oscilloscope draws a voltage as a picture. Voltage goes up and down the screen. Time runs across it.
+R1|0.35|The classic one is the cathode ray oscilloscope. Its heart is the cathode ray tube.
+R2|0.35|At the back sits the electron gun. A heated cathode gives off electrons.
+R3|0.35|The control grid sets how many get through. That sets the brightness.
+R4|0.35|Anodes speed the electrons up and focus them into a thin beam.
+R5|0.65|The beam hits a screen coated with phosphor, which glows as a bright spot.
+R6|0.35|Two pairs of deflection plates steer the beam. The vertical plates move it up and down, with the input signal.
+R7|0.35|The horizontal plates sweep it from left to right at a steady speed, then snap it back. That sawtooth comes from the time base.
+R8|0.35|Put the two together, and the spot draws the waveform.
+R9|0.65|A trigger circuit starts every sweep at the same point on the wave, so the picture stands still.
+D1|0.35|A dual channel oscilloscope shows two signals at once, on channel one and channel two.
+D2|0.35|Most use one beam and an electronic switch.
+D3|0.35|In alternate mode, it draws channel one on one sweep, and channel two on the next. This suits fast signals.
+D4|0.65|In chop mode, it hops between the two many times during every sweep. This suits slow signals.
+B1|0.35|Let's use it on the breadboard.
+B2|0.35|An AC signal feeds a resistor and a capacitor. Channel one probes the input. Channel two probes the capacitor.
+B3|0.65|Watch both traces. The output is smaller, and it lags behind the input.
+B4|0.65|Turn up the frequency. The output shrinks even more, and lags even further.
+M1|0.35|Now, how do we read the screen? Two knobs matter most.
+M2|0.65|Volts per division sets the vertical scale. Time per division sets the horizontal scale.
+M3|0.7|Peak to peak voltage equals the number of vertical divisions, times volts per division.
+M4|0.7|The time period equals the divisions in one cycle, times time per division. And frequency is one over the period.
+M5|0.7|With two channels, you can read the phase difference too. It is the shift in divisions, over the divisions in one cycle, times three hundred and sixty degrees.
+W1|0.35|Worked example. A wave is four divisions tall, peak to peak, at two volts per division.
+W2|0.6|So the peak to peak voltage is eight volts, and the peak is four volts.
+W3|0.6|One cycle spans five divisions, at zero point two milliseconds per division. So T is one millisecond.
+W4|0.65|The frequency is one over one millisecond. That is one thousand hertz.
+T1|0.8|A meter gives you a number. An oscilloscope gives you the whole picture.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students read the full height of the wave as the peak voltage.
+X3|0.65|It is not. Top to bottom is the peak to peak value. The peak is half of it.
+X4|0.65|Where is this asked? In PUC board papers. The block diagram, what each control does, chop and alternate modes, and reading voltage and frequency from the screen.
+Q1|5.4|Try this. A scope is set to zero point five milliseconds per division. One cycle of each wave covers eight divisions, and channel two is shifted one division behind channel one. Find the frequency and the phase difference.
+A1|0.35|A. Two hundred and fifty hertz, and forty five degrees.
+A2|0.35|The period is eight divisions times zero point five milliseconds. That is four milliseconds.
+A3|0.35|So the frequency is one over four milliseconds, two hundred and fifty hertz.
+A4|0.65|The shift is one division out of eight. So the phase is one eighth of three hundred and sixty, which is forty five degrees.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, measuring voltage, current, resistance and waveforms. Every instrument, put to work.

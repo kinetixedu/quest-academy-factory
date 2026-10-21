@@ -1,0 +1,2883 @@
+{
+ "lines": {
+  "H1": {
+   "t0": 0.45,
+   "t1": 7.355,
+   "text": "Aarav's meter reads seven volts from a small adapter. But is that voltage steady, or wobbling up and down?",
+   "words": [
+    {
+     "w": "Aarav's",
+     "t": 0.45
+    },
+    {
+     "w": "meter",
+     "t": 0.858
+    },
+    {
+     "w": "reads",
+     "t": 1.216
+    },
+    {
+     "w": "seven",
+     "t": 1.574
+    },
+    {
+     "w": "volts",
+     "t": 1.932
+    },
+    {
+     "w": "from",
+     "t": 2.291
+    },
+    {
+     "w": "a",
+     "t": 2.599
+    },
+    {
+     "w": "small",
+     "t": 2.758
+    },
+    {
+     "w": "adapter.",
+     "t": 3.116
+    },
+    {
+     "w": "But",
+     "t": 3.823
+    },
+    {
+     "w": "is",
+     "t": 4.082
+    },
+    {
+     "w": "that",
+     "t": 4.291
+    },
+    {
+     "w": "voltage",
+     "t": 4.599
+    },
+    {
+     "w": "steady,",
+     "t": 5.057
+    },
+    {
+     "w": "or",
+     "t": 5.614
+    },
+    {
+     "w": "wobbling",
+     "t": 5.823
+    },
+    {
+     "w": "up",
+     "t": 6.33
+    },
+    {
+     "w": "and",
+     "t": 6.539
+    },
+    {
+     "w": "down?",
+     "t": 6.798
+    }
+   ]
+  },
+  "H2": {
+   "t0": 7.705,
+   "t1": 12.256,
+   "text": "A meter gives just one number. To see the shape, he needs an oscilloscope.",
+   "words": [
+    {
+     "w": "A",
+     "t": 7.705
+    },
+    {
+     "w": "meter",
+     "t": 7.848
+    },
+    {
+     "w": "gives",
+     "t": 8.17
+    },
+    {
+     "w": "just",
+     "t": 8.492
+    },
+    {
+     "w": "one",
+     "t": 8.769
+    },
+    {
+     "w": "number.",
+     "t": 9.002
+    },
+    {
+     "w": "To",
+     "t": 9.592
+    },
+    {
+     "w": "see",
+     "t": 9.779
+    },
+    {
+     "w": "the",
+     "t": 10.012
+    },
+    {
+     "w": "shape,",
+     "t": 10.244
+    },
+    {
+     "w": "he",
+     "t": 10.701
+    },
+    {
+     "w": "needs",
+     "t": 10.888
+    },
+    {
+     "w": "an",
+     "t": 11.21
+    },
+    {
+     "w": "oscilloscope.",
+     "t": 11.398
+    }
+   ]
+  },
+  "C1": {
+   "t0": 12.756,
+   "t1": 19.792,
+   "text": "An oscilloscope draws a voltage as a picture. Voltage goes up and down the screen. Time runs across it.",
+   "words": [
+    {
+     "w": "An",
+     "t": 12.756
+    },
+    {
+     "w": "oscilloscope",
+     "t": 12.969
+    },
+    {
+     "w": "draws",
+     "t": 13.689
+    },
+    {
+     "w": "a",
+     "t": 14.054
+    },
+    {
+     "w": "voltage",
+     "t": 14.216
+    },
+    {
+     "w": "as",
+     "t": 14.683
+    },
+    {
+     "w": "a",
+     "t": 14.895
+    },
+    {
+     "w": "picture.",
+     "t": 15.058
+    },
+    {
+     "w": "Voltage",
+     "t": 15.777
+    },
+    {
+     "w": "goes",
+     "t": 16.244
+    },
+    {
+     "w": "up",
+     "t": 16.558
+    },
+    {
+     "w": "and",
+     "t": 16.771
+    },
+    {
+     "w": "down",
+     "t": 17.034
+    },
+    {
+     "w": "the",
+     "t": 17.349
+    },
+    {
+     "w": "screen.",
+     "t": 17.612
+    },
+    {
+     "w": "Time",
+     "t": 18.281
+    },
+    {
+     "w": "runs",
+     "t": 18.596
+    },
+    {
+     "w": "across",
+     "t": 18.91
+    },
+    {
+     "w": "it.",
+     "t": 19.326
+    }
+   ]
+  },
+  "R1": {
+   "t0": 20.442,
+   "t1": 26.112,
+   "text": "The classic one is the cathode ray oscilloscope. Its heart is the cathode ray tube.",
+   "words": [
+    {
+     "w": "The",
+     "t": 20.442
+    },
+    {
+     "w": "classic",
+     "t": 20.71
+    },
+    {
+     "w": "one",
+     "t": 21.184
+    },
+    {
+     "w": "is",
+     "t": 21.452
+    },
+    {
+     "w": "the",
+     "t": 21.669
+    },
+    {
+     "w": "cathode",
+     "t": 21.937
+    },
+    {
+     "w": "ray",
+     "t": 22.411
+    },
+    {
+     "w": "oscilloscope.",
+     "t": 22.679
+    },
+    {
+     "w": "Its",
+     "t": 23.668
+    },
+    {
+     "w": "heart",
+     "t": 23.936
+    },
+    {
+     "w": "is",
+     "t": 24.308
+    },
+    {
+     "w": "the",
+     "t": 24.524
+    },
+    {
+     "w": "cathode",
+     "t": 24.792
+    },
+    {
+     "w": "ray",
+     "t": 25.266
+    },
+    {
+     "w": "tube.",
+     "t": 25.534
+    }
+   ]
+  },
+  "R2": {
+   "t0": 26.462,
+   "t1": 31.258,
+   "text": "At the back sits the electron gun. A heated cathode gives off electrons.",
+   "words": [
+    {
+     "w": "At",
+     "t": 26.462
+    },
+    {
+     "w": "the",
+     "t": 26.67
+    },
+    {
+     "w": "back",
+     "t": 26.928
+    },
+    {
+     "w": "sits",
+     "t": 27.236
+    },
+    {
+     "w": "the",
+     "t": 27.544
+    },
+    {
+     "w": "electron",
+     "t": 27.802
+    },
+    {
+     "w": "gun.",
+     "t": 28.309
+    },
+    {
+     "w": "A",
+     "t": 28.815
+    },
+    {
+     "w": "heated",
+     "t": 28.974
+    },
+    {
+     "w": "cathode",
+     "t": 29.381
+    },
+    {
+     "w": "gives",
+     "t": 29.838
+    },
+    {
+     "w": "off",
+     "t": 30.196
+    },
+    {
+     "w": "electrons.",
+     "t": 30.454
+    }
+   ]
+  },
+  "R3": {
+   "t0": 31.608,
+   "t1": 35.575,
+   "text": "The control grid sets how many get through. That sets the brightness.",
+   "words": [
+    {
+     "w": "The",
+     "t": 31.608
+    },
+    {
+     "w": "control",
+     "t": 31.831
+    },
+    {
+     "w": "grid",
+     "t": 32.226
+    },
+    {
+     "w": "sets",
+     "t": 32.493
+    },
+    {
+     "w": "how",
+     "t": 32.759
+    },
+    {
+     "w": "many",
+     "t": 32.982
+    },
+    {
+     "w": "get",
+     "t": 33.248
+    },
+    {
+     "w": "through.",
+     "t": 33.471
+    },
+    {
+     "w": "That",
+     "t": 34.081
+    },
+    {
+     "w": "sets",
+     "t": 34.347
+    },
+    {
+     "w": "the",
+     "t": 34.613
+    },
+    {
+     "w": "brightness.",
+     "t": 34.837
+    }
+   ]
+  },
+  "R4": {
+   "t0": 35.925,
+   "t1": 39.792,
+   "text": "Anodes speed the electrons up and focus them into a thin beam.",
+   "words": [
+    {
+     "w": "Anodes",
+     "t": 35.925
+    },
+    {
+     "w": "speed",
+     "t": 36.315
+    },
+    {
+     "w": "the",
+     "t": 36.657
+    },
+    {
+     "w": "electrons",
+     "t": 36.904
+    },
+    {
+     "w": "up",
+     "t": 37.436
+    },
+    {
+     "w": "and",
+     "t": 37.635
+    },
+    {
+     "w": "focus",
+     "t": 37.882
+    },
+    {
+     "w": "them",
+     "t": 38.224
+    },
+    {
+     "w": "into",
+     "t": 38.519
+    },
+    {
+     "w": "a",
+     "t": 38.813
+    },
+    {
+     "w": "thin",
+     "t": 38.966
+    },
+    {
+     "w": "beam.",
+     "t": 39.26
+    }
+   ]
+  },
+  "R5": {
+   "t0": 40.142,
+   "t1": 44.6,
+   "text": "The beam hits a screen coated with phosphor, which glows as a bright spot.",
+   "words": [
+    {
+     "w": "The",
+     "t": 40.142
+    },
+    {
+     "w": "beam",
+     "t": 40.379
+    },
+    {
+     "w": "hits",
+     "t": 40.662
+    },
+    {
+     "w": "a",
+     "t": 40.944
+    },
+    {
+     "w": "screen",
+     "t": 41.09
+    },
+    {
+     "w": "coated",
+     "t": 41.464
+    },
+    {
+     "w": "with",
+     "t": 41.838
+    },
+    {
+     "w": "phosphor,",
+     "t": 42.12
+    },
+    {
+     "w": "which",
+     "t": 42.722
+    },
+    {
+     "w": "glows",
+     "t": 43.05
+    },
+    {
+     "w": "as",
+     "t": 43.378
+    },
+    {
+     "w": "a",
+     "t": 43.57
+    },
+    {
+     "w": "bright",
+     "t": 43.716
+    },
+    {
+     "w": "spot.",
+     "t": 44.089
+    }
+   ]
+  },
+  "R6": {
+   "t0": 45.25,
+   "t1": 51.799,
+   "text": "Two pairs of deflection plates steer the beam. The vertical plates move it up and down, with the input signal.",
+   "words": [
+    {
+     "w": "Two",
+     "t": 45.25
+    },
+    {
+     "w": "pairs",
+     "t": 45.485
+    },
+    {
+     "w": "of",
+     "t": 45.81
+    },
+    {
+     "w": "deflection",
+     "t": 46.0
+    },
+    {
+     "w": "plates",
+     "t": 46.551
+    },
+    {
+     "w": "steer",
+     "t": 46.921
+    },
+    {
+     "w": "the",
+     "t": 47.246
+    },
+    {
+     "w": "beam.",
+     "t": 47.481
+    },
+    {
+     "w": "The",
+     "t": 47.987
+    },
+    {
+     "w": "vertical",
+     "t": 48.222
+    },
+    {
+     "w": "plates",
+     "t": 48.682
+    },
+    {
+     "w": "move",
+     "t": 49.053
+    },
+    {
+     "w": "it",
+     "t": 49.333
+    },
+    {
+     "w": "up",
+     "t": 49.522
+    },
+    {
+     "w": "and",
+     "t": 49.712
+    },
+    {
+     "w": "down,",
+     "t": 49.947
+    },
+    {
+     "w": "with",
+     "t": 50.363
+    },
+    {
+     "w": "the",
+     "t": 50.643
+    },
+    {
+     "w": "input",
+     "t": 50.877
+    },
+    {
+     "w": "signal.",
+     "t": 51.203
+    }
+   ]
+  },
+  "R7": {
+   "t0": 52.149,
+   "t1": 59.621,
+   "text": "The horizontal plates sweep it from left to right at a steady speed, then snap it back. That sawtooth comes from the time base.",
+   "words": [
+    {
+     "w": "The",
+     "t": 52.149
+    },
+    {
+     "w": "horizontal",
+     "t": 52.382
+    },
+    {
+     "w": "plates",
+     "t": 52.928
+    },
+    {
+     "w": "sweep",
+     "t": 53.296
+    },
+    {
+     "w": "it",
+     "t": 53.618
+    },
+    {
+     "w": "from",
+     "t": 53.806
+    },
+    {
+     "w": "left",
+     "t": 54.084
+    },
+    {
+     "w": "to",
+     "t": 54.362
+    },
+    {
+     "w": "right",
+     "t": 54.55
+    },
+    {
+     "w": "at",
+     "t": 54.873
+    },
+    {
+     "w": "a",
+     "t": 55.061
+    },
+    {
+     "w": "steady",
+     "t": 55.204
+    },
+    {
+     "w": "speed,",
+     "t": 55.571
+    },
+    {
+     "w": "then",
+     "t": 56.028
+    },
+    {
+     "w": "snap",
+     "t": 56.306
+    },
+    {
+     "w": "it",
+     "t": 56.584
+    },
+    {
+     "w": "back.",
+     "t": 56.772
+    },
+    {
+     "w": "That",
+     "t": 57.274
+    },
+    {
+     "w": "sawtooth",
+     "t": 57.551
+    },
+    {
+     "w": "comes",
+     "t": 58.008
+    },
+    {
+     "w": "from",
+     "t": 58.331
+    },
+    {
+     "w": "the",
+     "t": 58.609
+    },
+    {
+     "w": "time",
+     "t": 58.842
+    },
+    {
+     "w": "base.",
+     "t": 59.119
+    }
+   ]
+  },
+  "R8": {
+   "t0": 59.971,
+   "t1": 63.097,
+   "text": "Put the two together, and the spot draws the waveform.",
+   "words": [
+    {
+     "w": "Put",
+     "t": 59.971
+    },
+    {
+     "w": "the",
+     "t": 60.194
+    },
+    {
+     "w": "two",
+     "t": 60.416
+    },
+    {
+     "w": "together,",
+     "t": 60.639
+    },
+    {
+     "w": "and",
+     "t": 61.204
+    },
+    {
+     "w": "the",
+     "t": 61.427
+    },
+    {
+     "w": "spot",
+     "t": 61.649
+    },
+    {
+     "w": "draws",
+     "t": 61.915
+    },
+    {
+     "w": "the",
+     "t": 62.223
+    },
+    {
+     "w": "waveform.",
+     "t": 62.446
+    }
+   ]
+  },
+  "R9": {
+   "t0": 63.447,
+   "t1": 68.84,
+   "text": "A trigger circuit starts every sweep at the same point on the wave, so the picture stands still.",
+   "words": [
+    {
+     "w": "A",
+     "t": 63.447
+    },
+    {
+     "w": "trigger",
+     "t": 63.585
+    },
+    {
+     "w": "circuit",
+     "t": 63.983
+    },
+    {
+     "w": "starts",
+     "t": 64.382
+    },
+    {
+     "w": "every",
+     "t": 64.737
+    },
+    {
+     "w": "sweep",
+     "t": 65.048
+    },
+    {
+     "w": "at",
+     "t": 65.36
+    },
+    {
+     "w": "the",
+     "t": 65.542
+    },
+    {
+     "w": "same",
+     "t": 65.767
+    },
+    {
+     "w": "point",
+     "t": 66.035
+    },
+    {
+     "w": "on",
+     "t": 66.347
+    },
+    {
+     "w": "the",
+     "t": 66.529
+    },
+    {
+     "w": "wave,",
+     "t": 66.754
+    },
+    {
+     "w": "so",
+     "t": 67.152
+    },
+    {
+     "w": "the",
+     "t": 67.334
+    },
+    {
+     "w": "picture",
+     "t": 67.559
+    },
+    {
+     "w": "stands",
+     "t": 67.957
+    },
+    {
+     "w": "still.",
+     "t": 68.312
+    }
+   ]
+  },
+  "D1": {
+   "t0": 69.49,
+   "t1": 75.063,
+   "text": "A dual channel oscilloscope shows two signals at once, on channel one and channel two.",
+   "words": [
+    {
+     "w": "A",
+     "t": 69.49
+    },
+    {
+     "w": "dual",
+     "t": 69.651
+    },
+    {
+     "w": "channel",
+     "t": 69.962
+    },
+    {
+     "w": "oscilloscope",
+     "t": 70.424
+    },
+    {
+     "w": "shows",
+     "t": 71.137
+    },
+    {
+     "w": "two",
+     "t": 71.498
+    },
+    {
+     "w": "signals",
+     "t": 71.759
+    },
+    {
+     "w": "at",
+     "t": 72.221
+    },
+    {
+     "w": "once,",
+     "t": 72.432
+    },
+    {
+     "w": "on",
+     "t": 72.894
+    },
+    {
+     "w": "channel",
+     "t": 73.105
+    },
+    {
+     "w": "one",
+     "t": 73.567
+    },
+    {
+     "w": "and",
+     "t": 73.828
+    },
+    {
+     "w": "channel",
+     "t": 74.089
+    },
+    {
+     "w": "two.",
+     "t": 74.551
+    }
+   ]
+  },
+  "D2": {
+   "t0": 75.413,
+   "t1": 78.393,
+   "text": "Most use one beam and an electronic switch.",
+   "words": [
+    {
+     "w": "Most",
+     "t": 75.413
+    },
+    {
+     "w": "use",
+     "t": 75.734
+    },
+    {
+     "w": "one",
+     "t": 76.003
+    },
+    {
+     "w": "beam",
+     "t": 76.272
+    },
+    {
+     "w": "and",
+     "t": 76.592
+    },
+    {
+     "w": "an",
+     "t": 76.861
+    },
+    {
+     "w": "electronic",
+     "t": 77.079
+    },
+    {
+     "w": "switch.",
+     "t": 77.71
+    }
+   ]
+  },
+  "D3": {
+   "t0": 78.743,
+   "t1": 85.493,
+   "text": "In alternate mode, it draws channel one on one sweep, and channel two on the next. This suits fast signals.",
+   "words": [
+    {
+     "w": "In",
+     "t": 78.743
+    },
+    {
+     "w": "alternate",
+     "t": 78.939
+    },
+    {
+     "w": "mode,",
+     "t": 79.464
+    },
+    {
+     "w": "it",
+     "t": 79.896
+    },
+    {
+     "w": "draws",
+     "t": 80.093
+    },
+    {
+     "w": "channel",
+     "t": 80.43
+    },
+    {
+     "w": "one",
+     "t": 80.861
+    },
+    {
+     "w": "on",
+     "t": 81.105
+    },
+    {
+     "w": "one",
+     "t": 81.302
+    },
+    {
+     "w": "sweep,",
+     "t": 81.546
+    },
+    {
+     "w": "and",
+     "t": 82.024
+    },
+    {
+     "w": "channel",
+     "t": 82.268
+    },
+    {
+     "w": "two",
+     "t": 82.699
+    },
+    {
+     "w": "on",
+     "t": 82.943
+    },
+    {
+     "w": "the",
+     "t": 83.139
+    },
+    {
+     "w": "next.",
+     "t": 83.383
+    },
+    {
+     "w": "This",
+     "t": 83.908
+    },
+    {
+     "w": "suits",
+     "t": 84.199
+    },
+    {
+     "w": "fast",
+     "t": 84.536
+    },
+    {
+     "w": "signals.",
+     "t": 84.827
+    }
+   ]
+  },
+  "D4": {
+   "t0": 85.843,
+   "t1": 91.857,
+   "text": "In chop mode, it hops between the two many times during every sweep. This suits slow signals.",
+   "words": [
+    {
+     "w": "In",
+     "t": 85.843
+    },
+    {
+     "w": "chop",
+     "t": 86.046
+    },
+    {
+     "w": "mode,",
+     "t": 86.345
+    },
+    {
+     "w": "it",
+     "t": 86.79
+    },
+    {
+     "w": "hops",
+     "t": 86.993
+    },
+    {
+     "w": "between",
+     "t": 87.293
+    },
+    {
+     "w": "the",
+     "t": 87.738
+    },
+    {
+     "w": "two",
+     "t": 87.989
+    },
+    {
+     "w": "many",
+     "t": 88.241
+    },
+    {
+     "w": "times",
+     "t": 88.54
+    },
+    {
+     "w": "during",
+     "t": 88.889
+    },
+    {
+     "w": "every",
+     "t": 89.285
+    },
+    {
+     "w": "sweep.",
+     "t": 89.633
+    },
+    {
+     "w": "This",
+     "t": 90.223
+    },
+    {
+     "w": "suits",
+     "t": 90.523
+    },
+    {
+     "w": "slow",
+     "t": 90.871
+    },
+    {
+     "w": "signals.",
+     "t": 91.171
+    }
+   ]
+  },
+  "B1": {
+   "t0": 92.507,
+   "t1": 94.399,
+   "text": "Let's use it on the breadboard.",
+   "words": [
+    {
+     "w": "Let's",
+     "t": 92.507
+    },
+    {
+     "w": "use",
+     "t": 92.785
+    },
+    {
+     "w": "it",
+     "t": 93.018
+    },
+    {
+     "w": "on",
+     "t": 93.206
+    },
+    {
+     "w": "the",
+     "t": 93.395
+    },
+    {
+     "w": "breadboard.",
+     "t": 93.628
+    }
+   ]
+  },
+  "B2": {
+   "t0": 94.749,
+   "t1": 102.315,
+   "text": "An AC signal feeds a resistor and a capacitor. Channel one probes the input. Channel two probes the capacitor.",
+   "words": [
+    {
+     "w": "An",
+     "t": 94.749
+    },
+    {
+     "w": "AC",
+     "t": 94.967
+    },
+    {
+     "w": "signal",
+     "t": 95.185
+    },
+    {
+     "w": "feeds",
+     "t": 95.61
+    },
+    {
+     "w": "a",
+     "t": 95.984
+    },
+    {
+     "w": "resistor",
+     "t": 96.15
+    },
+    {
+     "w": "and",
+     "t": 96.679
+    },
+    {
+     "w": "a",
+     "t": 96.949
+    },
+    {
+     "w": "capacitor.",
+     "t": 97.115
+    },
+    {
+     "w": "Channel",
+     "t": 97.956
+    },
+    {
+     "w": "one",
+     "t": 98.434
+    },
+    {
+     "w": "probes",
+     "t": 98.703
+    },
+    {
+     "w": "the",
+     "t": 99.129
+    },
+    {
+     "w": "input.",
+     "t": 99.399
+    },
+    {
+     "w": "Channel",
+     "t": 100.032
+    },
+    {
+     "w": "two",
+     "t": 100.509
+    },
+    {
+     "w": "probes",
+     "t": 100.779
+    },
+    {
+     "w": "the",
+     "t": 101.205
+    },
+    {
+     "w": "capacitor.",
+     "t": 101.475
+    }
+   ]
+  },
+  "B3": {
+   "t0": 102.665,
+   "t1": 107.457,
+   "text": "Watch both traces. The output is smaller, and it lags behind the input.",
+   "words": [
+    {
+     "w": "Watch",
+     "t": 102.665
+    },
+    {
+     "w": "both",
+     "t": 103.019
+    },
+    {
+     "w": "traces.",
+     "t": 103.323
+    },
+    {
+     "w": "The",
+     "t": 103.971
+    },
+    {
+     "w": "output",
+     "t": 104.227
+    },
+    {
+     "w": "is",
+     "t": 104.629
+    },
+    {
+     "w": "smaller,",
+     "t": 104.835
+    },
+    {
+     "w": "and",
+     "t": 105.434
+    },
+    {
+     "w": "it",
+     "t": 105.69
+    },
+    {
+     "w": "lags",
+     "t": 105.896
+    },
+    {
+     "w": "behind",
+     "t": 106.2
+    },
+    {
+     "w": "the",
+     "t": 106.603
+    },
+    {
+     "w": "input.",
+     "t": 106.858
+    }
+   ]
+  },
+  "B4": {
+   "t0": 108.107,
+   "t1": 112.965,
+   "text": "Turn up the frequency. The output shrinks even more, and lags even further.",
+   "words": [
+    {
+     "w": "Turn",
+     "t": 108.107
+    },
+    {
+     "w": "up",
+     "t": 108.404
+    },
+    {
+     "w": "the",
+     "t": 108.605
+    },
+    {
+     "w": "frequency.",
+     "t": 108.853
+    },
+    {
+     "w": "The",
+     "t": 109.628
+    },
+    {
+     "w": "output",
+     "t": 109.876
+    },
+    {
+     "w": "shrinks",
+     "t": 110.269
+    },
+    {
+     "w": "even",
+     "t": 110.708
+    },
+    {
+     "w": "more,",
+     "t": 111.005
+    },
+    {
+     "w": "and",
+     "t": 111.445
+    },
+    {
+     "w": "lags",
+     "t": 111.694
+    },
+    {
+     "w": "even",
+     "t": 111.99
+    },
+    {
+     "w": "further.",
+     "t": 112.286
+    }
+   ]
+  },
+  "M1": {
+   "t0": 113.615,
+   "t1": 117.054,
+   "text": "Now, how do we read the screen? Two knobs matter most.",
+   "words": [
+    {
+     "w": "Now,",
+     "t": 113.615
+    },
+    {
+     "w": "how",
+     "t": 113.976
+    },
+    {
+     "w": "do",
+     "t": 114.205
+    },
+    {
+     "w": "we",
+     "t": 114.389
+    },
+    {
+     "w": "read",
+     "t": 114.574
+    },
+    {
+     "w": "the",
+     "t": 114.847
+    },
+    {
+     "w": "screen?",
+     "t": 115.075
+    },
+    {
+     "w": "Two",
+     "t": 115.656
+    },
+    {
+     "w": "knobs",
+     "t": 115.884
+    },
+    {
+     "w": "matter",
+     "t": 116.201
+    },
+    {
+     "w": "most.",
+     "t": 116.561
+    }
+   ]
+  },
+  "M2": {
+   "t0": 117.404,
+   "t1": 123.245,
+   "text": "Volts per division sets the vertical scale. Time per division sets the horizontal scale.",
+   "words": [
+    {
+     "w": "Volts",
+     "t": 117.404
+    },
+    {
+     "w": "per",
+     "t": 117.773
+    },
+    {
+     "w": "division",
+     "t": 118.04
+    },
+    {
+     "w": "sets",
+     "t": 118.564
+    },
+    {
+     "w": "the",
+     "t": 118.882
+    },
+    {
+     "w": "vertical",
+     "t": 119.149
+    },
+    {
+     "w": "scale.",
+     "t": 119.673
+    },
+    {
+     "w": "Time",
+     "t": 120.299
+    },
+    {
+     "w": "per",
+     "t": 120.617
+    },
+    {
+     "w": "division",
+     "t": 120.884
+    },
+    {
+     "w": "sets",
+     "t": 121.408
+    },
+    {
+     "w": "the",
+     "t": 121.726
+    },
+    {
+     "w": "horizontal",
+     "t": 121.993
+    },
+    {
+     "w": "scale.",
+     "t": 122.619
+    }
+   ]
+  },
+  "M3": {
+   "t0": 123.895,
+   "t1": 129.55,
+   "text": "Peak to peak voltage equals the number of vertical divisions, times volts per division.",
+   "words": [
+    {
+     "w": "Peak",
+     "t": 123.895
+    },
+    {
+     "w": "to",
+     "t": 124.212
+    },
+    {
+     "w": "peak",
+     "t": 124.426
+    },
+    {
+     "w": "voltage",
+     "t": 124.743
+    },
+    {
+     "w": "equals",
+     "t": 125.212
+    },
+    {
+     "w": "the",
+     "t": 125.631
+    },
+    {
+     "w": "number",
+     "t": 125.896
+    },
+    {
+     "w": "of",
+     "t": 126.314
+    },
+    {
+     "w": "vertical",
+     "t": 126.529
+    },
+    {
+     "w": "divisions,",
+     "t": 127.049
+    },
+    {
+     "w": "times",
+     "t": 127.774
+    },
+    {
+     "w": "volts",
+     "t": 128.141
+    },
+    {
+     "w": "per",
+     "t": 128.509
+    },
+    {
+     "w": "division.",
+     "t": 128.774
+    }
+   ]
+  },
+  "M4": {
+   "t0": 130.25,
+   "t1": 137.766,
+   "text": "The time period equals the divisions in one cycle, times time per division. And frequency is one over the period.",
+   "words": [
+    {
+     "w": "The",
+     "t": 130.25
+    },
+    {
+     "w": "time",
+     "t": 130.514
+    },
+    {
+     "w": "period",
+     "t": 130.829
+    },
+    {
+     "w": "equals",
+     "t": 131.245
+    },
+    {
+     "w": "the",
+     "t": 131.662
+    },
+    {
+     "w": "divisions",
+     "t": 131.926
+    },
+    {
+     "w": "in",
+     "t": 132.495
+    },
+    {
+     "w": "one",
+     "t": 132.708
+    },
+    {
+     "w": "cycle,",
+     "t": 132.972
+    },
+    {
+     "w": "times",
+     "t": 133.49
+    },
+    {
+     "w": "time",
+     "t": 133.856
+    },
+    {
+     "w": "per",
+     "t": 134.171
+    },
+    {
+     "w": "division.",
+     "t": 134.435
+    },
+    {
+     "w": "And",
+     "t": 135.207
+    },
+    {
+     "w": "frequency",
+     "t": 135.471
+    },
+    {
+     "w": "is",
+     "t": 136.039
+    },
+    {
+     "w": "one",
+     "t": 136.253
+    },
+    {
+     "w": "over",
+     "t": 136.517
+    },
+    {
+     "w": "the",
+     "t": 136.832
+    },
+    {
+     "w": "period.",
+     "t": 137.096
+    }
+   ]
+  },
+  "M5": {
+   "t0": 138.466,
+   "t1": 148.211,
+   "text": "With two channels, you can read the phase difference too. It is the shift in divisions, over the divisions in one cycle, times three hundred and sixty degrees.",
+   "words": [
+    {
+     "w": "With",
+     "t": 138.466
+    },
+    {
+     "w": "two",
+     "t": 138.757
+    },
+    {
+     "w": "channels,",
+     "t": 139.001
+    },
+    {
+     "w": "you",
+     "t": 139.621
+    },
+    {
+     "w": "can",
+     "t": 139.865
+    },
+    {
+     "w": "read",
+     "t": 140.109
+    },
+    {
+     "w": "the",
+     "t": 140.4
+    },
+    {
+     "w": "phase",
+     "t": 140.644
+    },
+    {
+     "w": "difference",
+     "t": 140.982
+    },
+    {
+     "w": "too.",
+     "t": 141.555
+    },
+    {
+     "w": "It",
+     "t": 142.033
+    },
+    {
+     "w": "is",
+     "t": 142.231
+    },
+    {
+     "w": "the",
+     "t": 142.428
+    },
+    {
+     "w": "shift",
+     "t": 142.672
+    },
+    {
+     "w": "in",
+     "t": 143.01
+    },
+    {
+     "w": "divisions,",
+     "t": 143.207
+    },
+    {
+     "w": "over",
+     "t": 143.873
+    },
+    {
+     "w": "the",
+     "t": 144.164
+    },
+    {
+     "w": "divisions",
+     "t": 144.409
+    },
+    {
+     "w": "in",
+     "t": 144.934
+    },
+    {
+     "w": "one",
+     "t": 145.131
+    },
+    {
+     "w": "cycle,",
+     "t": 145.375
+    },
+    {
+     "w": "times",
+     "t": 145.854
+    },
+    {
+     "w": "three",
+     "t": 146.192
+    },
+    {
+     "w": "hundred",
+     "t": 146.53
+    },
+    {
+     "w": "and",
+     "t": 146.962
+    },
+    {
+     "w": "sixty",
+     "t": 147.206
+    },
+    {
+     "w": "degrees.",
+     "t": 147.544
+    }
+   ]
+  },
+  "W1": {
+   "t0": 148.911,
+   "t1": 154.958,
+   "text": "Worked example. A wave is four divisions tall, peak to peak, at two volts per division.",
+   "words": [
+    {
+     "w": "Worked",
+     "t": 148.911
+    },
+    {
+     "w": "example.",
+     "t": 149.327
+    },
+    {
+     "w": "A",
+     "t": 150.047
+    },
+    {
+     "w": "wave",
+     "t": 150.209
+    },
+    {
+     "w": "is",
+     "t": 150.524
+    },
+    {
+     "w": "four",
+     "t": 150.737
+    },
+    {
+     "w": "divisions",
+     "t": 151.052
+    },
+    {
+     "w": "tall,",
+     "t": 151.62
+    },
+    {
+     "w": "peak",
+     "t": 152.087
+    },
+    {
+     "w": "to",
+     "t": 152.401
+    },
+    {
+     "w": "peak,",
+     "t": 152.614
+    },
+    {
+     "w": "at",
+     "t": 153.081
+    },
+    {
+     "w": "two",
+     "t": 153.294
+    },
+    {
+     "w": "volts",
+     "t": 153.558
+    },
+    {
+     "w": "per",
+     "t": 153.923
+    },
+    {
+     "w": "division.",
+     "t": 154.187
+    }
+   ]
+  },
+  "W2": {
+   "t0": 155.308,
+   "t1": 159.659,
+   "text": "So the peak to peak voltage is eight volts, and the peak is four volts.",
+   "words": [
+    {
+     "w": "So",
+     "t": 155.308
+    },
+    {
+     "w": "the",
+     "t": 155.499
+    },
+    {
+     "w": "peak",
+     "t": 155.734
+    },
+    {
+     "w": "to",
+     "t": 156.015
+    },
+    {
+     "w": "peak",
+     "t": 156.206
+    },
+    {
+     "w": "voltage",
+     "t": 156.487
+    },
+    {
+     "w": "is",
+     "t": 156.904
+    },
+    {
+     "w": "eight",
+     "t": 157.094
+    },
+    {
+     "w": "volts,",
+     "t": 157.42
+    },
+    {
+     "w": "and",
+     "t": 157.883
+    },
+    {
+     "w": "the",
+     "t": 158.118
+    },
+    {
+     "w": "peak",
+     "t": 158.354
+    },
+    {
+     "w": "is",
+     "t": 158.635
+    },
+    {
+     "w": "four",
+     "t": 158.825
+    },
+    {
+     "w": "volts.",
+     "t": 159.106
+    }
+   ]
+  },
+  "W3": {
+   "t0": 160.259,
+   "t1": 167.528,
+   "text": "One cycle spans five divisions, at zero point two milliseconds per division. So T is one millisecond.",
+   "words": [
+    {
+     "w": "One",
+     "t": 160.259
+    },
+    {
+     "w": "cycle",
+     "t": 160.545
+    },
+    {
+     "w": "spans",
+     "t": 160.94
+    },
+    {
+     "w": "five",
+     "t": 161.335
+    },
+    {
+     "w": "divisions,",
+     "t": 161.676
+    },
+    {
+     "w": "at",
+     "t": 162.455
+    },
+    {
+     "w": "zero",
+     "t": 162.686
+    },
+    {
+     "w": "point",
+     "t": 163.026
+    },
+    {
+     "w": "two",
+     "t": 163.422
+    },
+    {
+     "w": "milliseconds",
+     "t": 163.707
+    },
+    {
+     "w": "per",
+     "t": 164.487
+    },
+    {
+     "w": "division.",
+     "t": 164.772
+    },
+    {
+     "w": "So",
+     "t": 165.607
+    },
+    {
+     "w": "T",
+     "t": 165.837
+    },
+    {
+     "w": "is",
+     "t": 166.013
+    },
+    {
+     "w": "one",
+     "t": 166.244
+    },
+    {
+     "w": "millisecond.",
+     "t": 166.529
+    }
+   ]
+  },
+  "W4": {
+   "t0": 168.128,
+   "t1": 172.783,
+   "text": "The frequency is one over one millisecond. That is one thousand hertz.",
+   "words": [
+    {
+     "w": "The",
+     "t": 168.128
+    },
+    {
+     "w": "frequency",
+     "t": 168.388
+    },
+    {
+     "w": "is",
+     "t": 168.946
+    },
+    {
+     "w": "one",
+     "t": 169.155
+    },
+    {
+     "w": "over",
+     "t": 169.414
+    },
+    {
+     "w": "one",
+     "t": 169.723
+    },
+    {
+     "w": "millisecond.",
+     "t": 169.982
+    },
+    {
+     "w": "That",
+     "t": 170.889
+    },
+    {
+     "w": "is",
+     "t": 171.198
+    },
+    {
+     "w": "one",
+     "t": 171.407
+    },
+    {
+     "w": "thousand",
+     "t": 171.666
+    },
+    {
+     "w": "hertz.",
+     "t": 172.175
+    }
+   ]
+  },
+  "T1": {
+   "t0": 173.433,
+   "t1": 177.682,
+   "text": "A meter gives you a number. An oscilloscope gives you the whole picture.",
+   "words": [
+    {
+     "w": "A",
+     "t": 173.433
+    },
+    {
+     "w": "meter",
+     "t": 173.573
+    },
+    {
+     "w": "gives",
+     "t": 173.89
+    },
+    {
+     "w": "you",
+     "t": 174.207
+    },
+    {
+     "w": "a",
+     "t": 174.435
+    },
+    {
+     "w": "number.",
+     "t": 174.576
+    },
+    {
+     "w": "An",
+     "t": 175.157
+    },
+    {
+     "w": "oscilloscope",
+     "t": 175.342
+    },
+    {
+     "w": "gives",
+     "t": 175.966
+    },
+    {
+     "w": "you",
+     "t": 176.283
+    },
+    {
+     "w": "the",
+     "t": 176.512
+    },
+    {
+     "w": "whole",
+     "t": 176.741
+    },
+    {
+     "w": "picture.",
+     "t": 177.057
+    }
+   ]
+  },
+  "X1": {
+   "t0": 178.482,
+   "t1": 179.945,
+   "text": "Now, the exam trap.",
+   "words": [
+    {
+     "w": "Now,",
+     "t": 178.482
+    },
+    {
+     "w": "the",
+     "t": 178.871
+    },
+    {
+     "w": "exam",
+     "t": 179.118
+    },
+    {
+     "w": "trap.",
+     "t": 179.413
+    }
+   ]
+  },
+  "X2": {
+   "t0": 180.295,
+   "t1": 184.433,
+   "text": "Many students read the full height of the wave as the peak voltage.",
+   "words": [
+    {
+     "w": "Many",
+     "t": 180.295
+    },
+    {
+     "w": "students",
+     "t": 180.588
+    },
+    {
+     "w": "read",
+     "t": 181.07
+    },
+    {
+     "w": "the",
+     "t": 181.362
+    },
+    {
+     "w": "full",
+     "t": 181.608
+    },
+    {
+     "w": "height",
+     "t": 181.901
+    },
+    {
+     "w": "of",
+     "t": 182.288
+    },
+    {
+     "w": "the",
+     "t": 182.487
+    },
+    {
+     "w": "wave",
+     "t": 182.732
+    },
+    {
+     "w": "as",
+     "t": 183.025
+    },
+    {
+     "w": "the",
+     "t": 183.224
+    },
+    {
+     "w": "peak",
+     "t": 183.469
+    },
+    {
+     "w": "voltage.",
+     "t": 183.762
+    }
+   ]
+  },
+  "X3": {
+   "t0": 184.783,
+   "t1": 190.261,
+   "text": "It is not. Top to bottom is the peak to peak value. The peak is half of it.",
+   "words": [
+    {
+     "w": "It",
+     "t": 184.783
+    },
+    {
+     "w": "is",
+     "t": 184.993
+    },
+    {
+     "w": "not.",
+     "t": 185.203
+    },
+    {
+     "w": "Top",
+     "t": 185.712
+    },
+    {
+     "w": "to",
+     "t": 185.972
+    },
+    {
+     "w": "bottom",
+     "t": 186.182
+    },
+    {
+     "w": "is",
+     "t": 186.592
+    },
+    {
+     "w": "the",
+     "t": 186.802
+    },
+    {
+     "w": "peak",
+     "t": 187.062
+    },
+    {
+     "w": "to",
+     "t": 187.372
+    },
+    {
+     "w": "peak",
+     "t": 187.582
+    },
+    {
+     "w": "value.",
+     "t": 187.892
+    },
+    {
+     "w": "The",
+     "t": 188.502
+    },
+    {
+     "w": "peak",
+     "t": 188.761
+    },
+    {
+     "w": "is",
+     "t": 189.071
+    },
+    {
+     "w": "half",
+     "t": 189.281
+    },
+    {
+     "w": "of",
+     "t": 189.591
+    },
+    {
+     "w": "it.",
+     "t": 189.801
+    }
+   ]
+  },
+  "X4": {
+   "t0": 190.911,
+   "t1": 201.65,
+   "text": "Where is this asked? In PUC board papers. The block diagram, what each control does, chop and alternate modes, and reading voltage and frequency from the screen.",
+   "words": [
+    {
+     "w": "Where",
+     "t": 190.911
+    },
+    {
+     "w": "is",
+     "t": 191.275
+    },
+    {
+     "w": "this",
+     "t": 191.487
+    },
+    {
+     "w": "asked?",
+     "t": 191.801
+    },
+    {
+     "w": "In",
+     "t": 192.418
+    },
+    {
+     "w": "PUC",
+     "t": 192.63
+    },
+    {
+     "w": "board",
+     "t": 192.893
+    },
+    {
+     "w": "papers.",
+     "t": 193.257
+    },
+    {
+     "w": "The",
+     "t": 193.924
+    },
+    {
+     "w": "block",
+     "t": 194.187
+    },
+    {
+     "w": "diagram,",
+     "t": 194.551
+    },
+    {
+     "w": "what",
+     "t": 195.168
+    },
+    {
+     "w": "each",
+     "t": 195.482
+    },
+    {
+     "w": "control",
+     "t": 195.795
+    },
+    {
+     "w": "does,",
+     "t": 196.26
+    },
+    {
+     "w": "chop",
+     "t": 196.726
+    },
+    {
+     "w": "and",
+     "t": 197.039
+    },
+    {
+     "w": "alternate",
+     "t": 197.302
+    },
+    {
+     "w": "modes,",
+     "t": 197.868
+    },
+    {
+     "w": "and",
+     "t": 198.384
+    },
+    {
+     "w": "reading",
+     "t": 198.647
+    },
+    {
+     "w": "voltage",
+     "t": 199.112
+    },
+    {
+     "w": "and",
+     "t": 199.577
+    },
+    {
+     "w": "frequency",
+     "t": 199.84
+    },
+    {
+     "w": "from",
+     "t": 200.407
+    },
+    {
+     "w": "the",
+     "t": 200.72
+    },
+    {
+     "w": "screen.",
+     "t": 200.983
+    }
+   ]
+  },
+  "Q1": {
+   "t0": 202.3,
+   "t1": 216.912,
+   "text": "Try this. A scope is set to zero point five milliseconds per division. One cycle of each wave covers eight divisions, and channel two is shifted one division behind channel one. Find the frequency and the phase difference.",
+   "words": [
+    {
+     "w": "Try",
+     "t": 202.3
+    },
+    {
+     "w": "this.",
+     "t": 202.565
+    },
+    {
+     "w": "A",
+     "t": 203.136
+    },
+    {
+     "w": "scope",
+     "t": 203.3
+    },
+    {
+     "w": "is",
+     "t": 203.667
+    },
+    {
+     "w": "set",
+     "t": 203.881
+    },
+    {
+     "w": "to",
+     "t": 204.146
+    },
+    {
+     "w": "zero",
+     "t": 204.36
+    },
+    {
+     "w": "point",
+     "t": 204.676
+    },
+    {
+     "w": "five",
+     "t": 205.043
+    },
+    {
+     "w": "milliseconds",
+     "t": 205.359
+    },
+    {
+     "w": "per",
+     "t": 206.083
+    },
+    {
+     "w": "division.",
+     "t": 206.348
+    },
+    {
+     "w": "One",
+     "t": 207.123
+    },
+    {
+     "w": "cycle",
+     "t": 207.388
+    },
+    {
+     "w": "of",
+     "t": 207.755
+    },
+    {
+     "w": "each",
+     "t": 207.969
+    },
+    {
+     "w": "wave",
+     "t": 208.286
+    },
+    {
+     "w": "covers",
+     "t": 208.602
+    },
+    {
+     "w": "eight",
+     "t": 209.02
+    },
+    {
+     "w": "divisions,",
+     "t": 209.387
+    },
+    {
+     "w": "and",
+     "t": 210.111
+    },
+    {
+     "w": "channel",
+     "t": 210.376
+    },
+    {
+     "w": "two",
+     "t": 210.845
+    },
+    {
+     "w": "is",
+     "t": 211.11
+    },
+    {
+     "w": "shifted",
+     "t": 211.324
+    },
+    {
+     "w": "one",
+     "t": 211.793
+    },
+    {
+     "w": "division",
+     "t": 212.058
+    },
+    {
+     "w": "behind",
+     "t": 212.578
+    },
+    {
+     "w": "channel",
+     "t": 212.996
+    },
+    {
+     "w": "one.",
+     "t": 213.465
+    },
+    {
+     "w": "Find",
+     "t": 213.985
+    },
+    {
+     "w": "the",
+     "t": 214.301
+    },
+    {
+     "w": "frequency",
+     "t": 214.566
+    },
+    {
+     "w": "and",
+     "t": 215.137
+    },
+    {
+     "w": "the",
+     "t": 215.403
+    },
+    {
+     "w": "phase",
+     "t": 215.668
+    },
+    {
+     "w": "difference.",
+     "t": 216.035
+    }
+   ]
+  },
+  "A1": {
+   "t0": 222.312,
+   "t1": 226.273,
+   "text": "A. Two hundred and fifty hertz, and forty five degrees.",
+   "words": [
+    {
+     "w": "A.",
+     "t": 222.312
+    },
+    {
+     "w": "Two",
+     "t": 222.728
+    },
+    {
+     "w": "hundred",
+     "t": 222.992
+    },
+    {
+     "w": "and",
+     "t": 223.459
+    },
+    {
+     "w": "fifty",
+     "t": 223.723
+    },
+    {
+     "w": "hertz,",
+     "t": 224.089
+    },
+    {
+     "w": "and",
+     "t": 224.607
+    },
+    {
+     "w": "forty",
+     "t": 224.871
+    },
+    {
+     "w": "five",
+     "t": 225.237
+    },
+    {
+     "w": "degrees.",
+     "t": 225.551
+    }
+   ]
+  },
+  "A2": {
+   "t0": 226.623,
+   "t1": 232.886,
+   "text": "The period is eight divisions times zero point five milliseconds. That is four milliseconds.",
+   "words": [
+    {
+     "w": "The",
+     "t": 226.623
+    },
+    {
+     "w": "period",
+     "t": 226.899
+    },
+    {
+     "w": "is",
+     "t": 227.335
+    },
+    {
+     "w": "eight",
+     "t": 227.558
+    },
+    {
+     "w": "divisions",
+     "t": 227.941
+    },
+    {
+     "w": "times",
+     "t": 228.537
+    },
+    {
+     "w": "zero",
+     "t": 228.919
+    },
+    {
+     "w": "point",
+     "t": 229.249
+    },
+    {
+     "w": "five",
+     "t": 229.632
+    },
+    {
+     "w": "milliseconds.",
+     "t": 229.961
+    },
+    {
+     "w": "That",
+     "t": 230.982
+    },
+    {
+     "w": "is",
+     "t": 231.312
+    },
+    {
+     "w": "four",
+     "t": 231.535
+    },
+    {
+     "w": "milliseconds.",
+     "t": 231.865
+    }
+   ]
+  },
+  "A3": {
+   "t0": 233.236,
+   "t1": 238.015,
+   "text": "So the frequency is one over four milliseconds, two hundred and fifty hertz.",
+   "words": [
+    {
+     "w": "So",
+     "t": 233.236
+    },
+    {
+     "w": "the",
+     "t": 233.439
+    },
+    {
+     "w": "frequency",
+     "t": 233.691
+    },
+    {
+     "w": "is",
+     "t": 234.234
+    },
+    {
+     "w": "one",
+     "t": 234.438
+    },
+    {
+     "w": "over",
+     "t": 234.69
+    },
+    {
+     "w": "four",
+     "t": 234.99
+    },
+    {
+     "w": "milliseconds,",
+     "t": 235.291
+    },
+    {
+     "w": "two",
+     "t": 236.124
+    },
+    {
+     "w": "hundred",
+     "t": 236.376
+    },
+    {
+     "w": "and",
+     "t": 236.822
+    },
+    {
+     "w": "fifty",
+     "t": 237.074
+    },
+    {
+     "w": "hertz.",
+     "t": 237.423
+    }
+   ]
+  },
+  "A4": {
+   "t0": 238.365,
+   "t1": 246.145,
+   "text": "The shift is one division out of eight. So the phase is one eighth of three hundred and sixty, which is forty five degrees.",
+   "words": [
+    {
+     "w": "The",
+     "t": 238.365
+    },
+    {
+     "w": "shift",
+     "t": 238.613
+    },
+    {
+     "w": "is",
+     "t": 238.957
+    },
+    {
+     "w": "one",
+     "t": 239.158
+    },
+    {
+     "w": "division",
+     "t": 239.406
+    },
+    {
+     "w": "out",
+     "t": 239.894
+    },
+    {
+     "w": "of",
+     "t": 240.142
+    },
+    {
+     "w": "eight.",
+     "t": 240.343
+    },
+    {
+     "w": "So",
+     "t": 240.926
+    },
+    {
+     "w": "the",
+     "t": 241.127
+    },
+    {
+     "w": "phase",
+     "t": 241.375
+    },
+    {
+     "w": "is",
+     "t": 241.72
+    },
+    {
+     "w": "one",
+     "t": 241.92
+    },
+    {
+     "w": "eighth",
+     "t": 242.169
+    },
+    {
+     "w": "of",
+     "t": 242.561
+    },
+    {
+     "w": "three",
+     "t": 242.761
+    },
+    {
+     "w": "hundred",
+     "t": 243.105
+    },
+    {
+     "w": "and",
+     "t": 243.545
+    },
+    {
+     "w": "sixty,",
+     "t": 243.794
+    },
+    {
+     "w": "which",
+     "t": 244.281
+    },
+    {
+     "w": "is",
+     "t": 244.625
+    },
+    {
+     "w": "forty",
+     "t": 244.826
+    },
+    {
+     "w": "five",
+     "t": 245.17
+    },
+    {
+     "w": "degrees.",
+     "t": 245.466
+    }
+   ]
+  },
+  "F1": {
+   "t0": 246.795,
+   "t1": 248.316,
+   "text": "Screenshot this card.",
+   "words": [
+    {
+     "w": "Screenshot",
+     "t": 246.795
+    },
+    {
+     "w": "this",
+     "t": 247.422
+    },
+    {
+     "w": "card.",
+     "t": 247.74
+    }
+   ]
+  },
+  "NX": {
+   "t0": 251.516,
+   "t1": 257.188,
+   "text": "Next, measuring voltage, current, resistance and waveforms. Every instrument, put to work.",
+   "words": [
+    {
+     "w": "Next,",
+     "t": 251.516
+    },
+    {
+     "w": "measuring",
+     "t": 251.946
+    },
+    {
+     "w": "voltage,",
+     "t": 252.469
+    },
+    {
+     "w": "current,",
+     "t": 253.039
+    },
+    {
+     "w": "resistance",
+     "t": 253.609
+    },
+    {
+     "w": "and",
+     "t": 254.179
+    },
+    {
+     "w": "waveforms.",
+     "t": 254.422
+    },
+    {
+     "w": "Every",
+     "t": 255.179
+    },
+    {
+     "w": "instrument,",
+     "t": 255.515
+    },
+    {
+     "w": "put",
+     "t": 256.226
+    },
+    {
+     "w": "to",
+     "t": 256.468
+    },
+    {
+     "w": "work.",
+     "t": 256.665
+    }
+   ]
+  }
+ },
+ "order": [
+  "H1",
+  "H2",
+  "C1",
+  "R1",
+  "R2",
+  "R3",
+  "R4",
+  "R5",
+  "R6",
+  "R7",
+  "R8",
+  "R9",
+  "D1",
+  "D2",
+  "D3",
+  "D4",
+  "B1",
+  "B2",
+  "B3",
+  "B4",
+  "M1",
+  "M2",
+  "M3",
+  "M4",
+  "M5",
+  "W1",
+  "W2",
+  "W3",
+  "W4",
+  "T1",
+  "X1",
+  "X2",
+  "X3",
+  "X4",
+  "Q1",
+  "A1",
+  "A2",
+  "A3",
+  "A4",
+  "F1",
+  "NX"
+ ],
+ "dur": 257.788
+}

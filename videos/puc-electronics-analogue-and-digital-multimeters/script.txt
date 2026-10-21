@@ -1,0 +1,41 @@
+H1|0.35|Aarav checks the same resistor with two meters. The needle meter says four volts.
+H2|0.5|The digital meter says four point nine seven. Same resistor, same moment. Which one is telling the truth?
+M1|0.35|Both are multimeters. One box that measures voltage, current and resistance, for both AC and DC.
+M2|0.65|A rotary switch picks the quantity and the range. Two probes plug in, and the black one always goes to common.
+N1|0.35|Inside an analogue multimeter sits a single moving coil meter.
+N2|0.35|The switch connects shunts to make an ammeter, multipliers to make a voltmeter, a rectifier for AC, and a cell for ohms.
+N3|0.35|You read the answer from the needle, on the matching scale.
+N4|0.65|Its sensitivity is one divided by the full scale current. A fifty microampere movement gives twenty thousand ohms per volt.
+G1|0.35|A digital multimeter works in a different way.
+G2|0.35|First, the input stage scales the signal down to a small voltage.
+G3|0.35|Converters turn every quantity into a DC voltage. AC is rectified. Current flows through a small known resistor. A resistor gets a steady known current.
+G4|0.35|Then an analogue to digital converter measures that voltage, and turns it into a number.
+G5|0.65|A counter and decoder drive the display, so the digits appear directly. Its input resistance is very high, typically ten million ohms.
+B1|0.35|Now back to Aarav's puzzle on the breadboard.
+B2|0.35|Two resistors of one hundred kilo ohms each share ten volts. Each one should get five volts.
+B3|0.35|Connect the analogue meter on its ten volt range. Its two hundred kilo ohms now sits in parallel with the lower resistor.
+B4|0.65|Watch the electrons. Some current leaks through the meter, and on the scope, the voltage across the resistor drops to four volts.
+B5|0.65|Swap in the digital meter. Ten million ohms draws almost nothing, and the voltage climbs back close to five.
+W1|0.35|Let's check the numbers.
+W2|0.7|One hundred kilo ohms in parallel with two hundred kilo ohms is sixty six point seven kilo ohms.
+W3|0.7|So the analogue meter reads ten times sixty six point seven, divided by one hundred and sixty six point seven. That is four volts.
+W4|0.7|With the digital meter, one hundred kilo ohms in parallel with ten mega ohms is about ninety nine kilo ohms. The reading is four point nine seven five volts.
+W5|0.65|This error is called the loading effect. The higher the meter's resistance, the smaller the error.
+T1|0.8|A good voltmeter is almost invisible to the circuit it measures.
+K1|0.35|So how do the two compare?
+K2|0.35|An analogue meter shows changes smoothly as a moving needle, and needs no battery to measure volts and amperes.
+K3|0.65|But you must pick the right scale, and if you look at the needle from an angle, you get a parallax error.
+K4|0.35|A digital meter is more accurate, has a much higher input resistance, and shows the number directly. Many even pick the range for you.
+K5|0.65|But it needs a battery, and a quickly changing value makes its digits flicker.
+K6|0.65|One more term. A three and a half digit display shows up to one thousand nine hundred and ninety nine. The half digit is the leading one, which can only be zero or one.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think a voltmeter never changes the circuit it measures.
+X3|0.65|It does. Its resistance sits in parallel with the part, and pulls the reading down a little. That is the loading effect.
+X4|0.65|Where is this asked? In PUC board papers, comparing analogue and digital meters. And in JEE Main, as numericals on what a real voltmeter reads across a resistor.
+Q1|5.4|Try this. Two twenty kilo ohm resistors are in series across twelve volts. A voltmeter of resistance twenty kilo ohms is connected across one of them. What does it read?
+A1|0.35|B. Four volts.
+A2|0.35|The meter and the resistor in parallel make ten kilo ohms.
+A3|0.35|The total is thirty kilo ohms, so the current is twelve divided by thirty kilo ohms, zero point four milliamperes.
+A4|0.65|The reading is zero point four milliamperes times ten kilo ohms. That is four volts.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, the dual channel oscilloscope. A meter that draws the voltage as a picture.

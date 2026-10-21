@@ -1,0 +1,3055 @@
+{
+ "lines": {
+  "H1": {
+   "t0": 0.45,
+   "t1": 6.007,
+   "text": "Aarav reads the tiny print on his phone charger. Five volts. Two amperes.",
+   "words": [
+    {
+     "w": "Aarav",
+     "t": 0.45
+    },
+    {
+     "w": "reads",
+     "t": 0.844
+    },
+    {
+     "w": "the",
+     "t": 1.238
+    },
+    {
+     "w": "tiny",
+     "t": 1.522
+    },
+    {
+     "w": "print",
+     "t": 1.861
+    },
+    {
+     "w": "on",
+     "t": 2.255
+    },
+    {
+     "w": "his",
+     "t": 2.485
+    },
+    {
+     "w": "phone",
+     "t": 2.769
+    },
+    {
+     "w": "charger.",
+     "t": 3.163
+    },
+    {
+     "w": "Five",
+     "t": 3.94
+    },
+    {
+     "w": "volts.",
+     "t": 4.279
+    },
+    {
+     "w": "Two",
+     "t": 4.946
+    },
+    {
+     "w": "amperes.",
+     "t": 5.231
+    }
+   ]
+  },
+  "H2": {
+   "t0": 6.357,
+   "t1": 10.107,
+   "text": "Two numbers on every charger. But what do they really mean?",
+   "words": [
+    {
+     "w": "Two",
+     "t": 6.357
+    },
+    {
+     "w": "numbers",
+     "t": 6.598
+    },
+    {
+     "w": "on",
+     "t": 7.022
+    },
+    {
+     "w": "every",
+     "t": 7.216
+    },
+    {
+     "w": "charger.",
+     "t": 7.549
+    },
+    {
+     "w": "But",
+     "t": 8.205
+    },
+    {
+     "w": "what",
+     "t": 8.445
+    },
+    {
+     "w": "do",
+     "t": 8.731
+    },
+    {
+     "w": "they",
+     "t": 8.925
+    },
+    {
+     "w": "really",
+     "t": 9.211
+    },
+    {
+     "w": "mean?",
+     "t": 9.59
+    }
+   ]
+  },
+  "C1": {
+   "t0": 10.607,
+   "t1": 13.509,
+   "text": "To answer that, we start with electric charge.",
+   "words": [
+    {
+     "w": "To",
+     "t": 10.607
+    },
+    {
+     "w": "answer",
+     "t": 10.802
+    },
+    {
+     "w": "that,",
+     "t": 11.182
+    },
+    {
+     "w": "we",
+     "t": 11.608
+    },
+    {
+     "w": "start",
+     "t": 11.803
+    },
+    {
+     "w": "with",
+     "t": 12.137
+    },
+    {
+     "w": "electric",
+     "t": 12.424
+    },
+    {
+     "w": "charge.",
+     "t": 12.897
+    }
+   ]
+  },
+  "C2": {
+   "t0": 13.859,
+   "t1": 21.512,
+   "text": "Charge is a property of tiny particles. Protons carry positive charge. Electrons carry negative charge.",
+   "words": [
+    {
+     "w": "Charge",
+     "t": 13.859
+    },
+    {
+     "w": "is",
+     "t": 14.327
+    },
+    {
+     "w": "a",
+     "t": 14.567
+    },
+    {
+     "w": "property",
+     "t": 14.75
+    },
+    {
+     "w": "of",
+     "t": 15.332
+    },
+    {
+     "w": "tiny",
+     "t": 15.572
+    },
+    {
+     "w": "particles.",
+     "t": 15.926
+    },
+    {
+     "w": "Protons",
+     "t": 16.851
+    },
+    {
+     "w": "carry",
+     "t": 17.377
+    },
+    {
+     "w": "positive",
+     "t": 17.788
+    },
+    {
+     "w": "charge.",
+     "t": 18.371
+    },
+    {
+     "w": "Electrons",
+     "t": 19.125
+    },
+    {
+     "w": "carry",
+     "t": 19.764
+    },
+    {
+     "w": "negative",
+     "t": 20.175
+    },
+    {
+     "w": "charge.",
+     "t": 20.758
+    }
+   ]
+  },
+  "C3": {
+   "t0": 21.862,
+   "t1": 26.003,
+   "text": "Like charges push each other away. Unlike charges pull together.",
+   "words": [
+    {
+     "w": "Like",
+     "t": 21.862
+    },
+    {
+     "w": "charges",
+     "t": 22.164
+    },
+    {
+     "w": "push",
+     "t": 22.612
+    },
+    {
+     "w": "each",
+     "t": 22.914
+    },
+    {
+     "w": "other",
+     "t": 23.216
+    },
+    {
+     "w": "away.",
+     "t": 23.567
+    },
+    {
+     "w": "Unlike",
+     "t": 24.112
+    },
+    {
+     "w": "charges",
+     "t": 24.512
+    },
+    {
+     "w": "pull",
+     "t": 24.96
+    },
+    {
+     "w": "together.",
+     "t": 25.262
+    }
+   ]
+  },
+  "C4": {
+   "t0": 26.653,
+   "t1": 30.353,
+   "text": "Charge is measured in coulombs, written with a capital C.",
+   "words": [
+    {
+     "w": "Charge",
+     "t": 26.653
+    },
+    {
+     "w": "is",
+     "t": 27.052
+    },
+    {
+     "w": "measured",
+     "t": 27.256
+    },
+    {
+     "w": "in",
+     "t": 27.753
+    },
+    {
+     "w": "coulombs,",
+     "t": 27.957
+    },
+    {
+     "w": "written",
+     "t": 28.6
+    },
+    {
+     "w": "with",
+     "t": 29.048
+    },
+    {
+     "w": "a",
+     "t": 29.35
+    },
+    {
+     "w": "capital",
+     "t": 29.506
+    },
+    {
+     "w": "C.",
+     "t": 29.954
+    }
+   ]
+  },
+  "C5": {
+   "t0": 30.703,
+   "t1": 40.911,
+   "text": "And charge comes in fixed packets. The smallest packet is the charge of one electron, e. That is one point six times ten to the minus nineteen coulombs.",
+   "words": [
+    {
+     "w": "And",
+     "t": 30.703
+    },
+    {
+     "w": "charge",
+     "t": 30.967
+    },
+    {
+     "w": "comes",
+     "t": 31.385
+    },
+    {
+     "w": "in",
+     "t": 31.751
+    },
+    {
+     "w": "fixed",
+     "t": 31.965
+    },
+    {
+     "w": "packets.",
+     "t": 32.331
+    },
+    {
+     "w": "The",
+     "t": 33.054
+    },
+    {
+     "w": "smallest",
+     "t": 33.318
+    },
+    {
+     "w": "packet",
+     "t": 33.838
+    },
+    {
+     "w": "is",
+     "t": 34.255
+    },
+    {
+     "w": "the",
+     "t": 34.469
+    },
+    {
+     "w": "charge",
+     "t": 34.733
+    },
+    {
+     "w": "of",
+     "t": 35.151
+    },
+    {
+     "w": "one",
+     "t": 35.364
+    },
+    {
+     "w": "electron,",
+     "t": 35.629
+    },
+    {
+     "w": "e.",
+     "t": 36.301
+    },
+    {
+     "w": "That",
+     "t": 36.718
+    },
+    {
+     "w": "is",
+     "t": 37.033
+    },
+    {
+     "w": "one",
+     "t": 37.247
+    },
+    {
+     "w": "point",
+     "t": 37.512
+    },
+    {
+     "w": "six",
+     "t": 37.878
+    },
+    {
+     "w": "times",
+     "t": 38.143
+    },
+    {
+     "w": "ten",
+     "t": 38.509
+    },
+    {
+     "w": "to",
+     "t": 38.774
+    },
+    {
+     "w": "the",
+     "t": 38.988
+    },
+    {
+     "w": "minus",
+     "t": 39.252
+    },
+    {
+     "w": "nineteen",
+     "t": 39.619
+    },
+    {
+     "w": "coulombs.",
+     "t": 40.138
+    }
+   ]
+  },
+  "C6": {
+   "t0": 41.261,
+   "t1": 51.612,
+   "text": "So any charge Q is a whole number of packets. Q equals n times e. One coulomb is about six point two five times ten to the eighteen electrons.",
+   "words": [
+    {
+     "w": "So",
+     "t": 41.261
+    },
+    {
+     "w": "any",
+     "t": 41.49
+    },
+    {
+     "w": "charge",
+     "t": 41.774
+    },
+    {
+     "w": "Q",
+     "t": 42.221
+    },
+    {
+     "w": "is",
+     "t": 42.396
+    },
+    {
+     "w": "a",
+     "t": 42.625
+    },
+    {
+     "w": "whole",
+     "t": 42.799
+    },
+    {
+     "w": "number",
+     "t": 43.192
+    },
+    {
+     "w": "of",
+     "t": 43.639
+    },
+    {
+     "w": "packets.",
+     "t": 43.868
+    },
+    {
+     "w": "Q",
+     "t": 44.642
+    },
+    {
+     "w": "equals",
+     "t": 44.817
+    },
+    {
+     "w": "n",
+     "t": 45.264
+    },
+    {
+     "w": "times",
+     "t": 45.439
+    },
+    {
+     "w": "e.",
+     "t": 45.831
+    },
+    {
+     "w": "One",
+     "t": 46.279
+    },
+    {
+     "w": "coulomb",
+     "t": 46.562
+    },
+    {
+     "w": "is",
+     "t": 47.064
+    },
+    {
+     "w": "about",
+     "t": 47.293
+    },
+    {
+     "w": "six",
+     "t": 47.686
+    },
+    {
+     "w": "point",
+     "t": 47.969
+    },
+    {
+     "w": "two",
+     "t": 48.362
+    },
+    {
+     "w": "five",
+     "t": 48.645
+    },
+    {
+     "w": "times",
+     "t": 48.984
+    },
+    {
+     "w": "ten",
+     "t": 49.376
+    },
+    {
+     "w": "to",
+     "t": 49.66
+    },
+    {
+     "w": "the",
+     "t": 49.889
+    },
+    {
+     "w": "eighteen",
+     "t": 50.172
+    },
+    {
+     "w": "electrons.",
+     "t": 50.729
+    }
+   ]
+  },
+  "I1": {
+   "t0": 52.262,
+   "t1": 53.31,
+   "text": "Now, current.",
+   "words": [
+    {
+     "w": "Now,",
+     "t": 52.262
+    },
+    {
+     "w": "current.",
+     "t": 52.646
+    }
+   ]
+  },
+  "I2": {
+   "t0": 53.66,
+   "t1": 57.304,
+   "text": "When charge moves along a wire, we get an electric current.",
+   "words": [
+    {
+     "w": "When",
+     "t": 53.66
+    },
+    {
+     "w": "charge",
+     "t": 53.946
+    },
+    {
+     "w": "moves",
+     "t": 54.323
+    },
+    {
+     "w": "along",
+     "t": 54.654
+    },
+    {
+     "w": "a",
+     "t": 54.985
+    },
+    {
+     "w": "wire,",
+     "t": 55.133
+    },
+    {
+     "w": "we",
+     "t": 55.556
+    },
+    {
+     "w": "get",
+     "t": 55.749
+    },
+    {
+     "w": "an",
+     "t": 55.988
+    },
+    {
+     "w": "electric",
+     "t": 56.182
+    },
+    {
+     "w": "current.",
+     "t": 56.651
+    }
+   ]
+  },
+  "I3": {
+   "t0": 57.654,
+   "t1": 63.117,
+   "text": "Stand at one point and count the charge that passes every second. That rate is the current.",
+   "words": [
+    {
+     "w": "Stand",
+     "t": 57.654
+    },
+    {
+     "w": "at",
+     "t": 57.981
+    },
+    {
+     "w": "one",
+     "t": 58.172
+    },
+    {
+     "w": "point",
+     "t": 58.408
+    },
+    {
+     "w": "and",
+     "t": 58.734
+    },
+    {
+     "w": "count",
+     "t": 58.97
+    },
+    {
+     "w": "the",
+     "t": 59.297
+    },
+    {
+     "w": "charge",
+     "t": 59.533
+    },
+    {
+     "w": "that",
+     "t": 59.905
+    },
+    {
+     "w": "passes",
+     "t": 60.186
+    },
+    {
+     "w": "every",
+     "t": 60.558
+    },
+    {
+     "w": "second.",
+     "t": 60.885
+    },
+    {
+     "w": "That",
+     "t": 61.484
+    },
+    {
+     "w": "rate",
+     "t": 61.765
+    },
+    {
+     "w": "is",
+     "t": 62.046
+    },
+    {
+     "w": "the",
+     "t": 62.237
+    },
+    {
+     "w": "current.",
+     "t": 62.473
+    }
+   ]
+  },
+  "I4": {
+   "t0": 63.467,
+   "t1": 65.938,
+   "text": "So I equals Q divided by t.",
+   "words": [
+    {
+     "w": "So",
+     "t": 63.467
+    },
+    {
+     "w": "I",
+     "t": 63.724
+    },
+    {
+     "w": "equals",
+     "t": 63.92
+    },
+    {
+     "w": "Q",
+     "t": 64.421
+    },
+    {
+     "w": "divided",
+     "t": 64.617
+    },
+    {
+     "w": "by",
+     "t": 65.18
+    },
+    {
+     "w": "t.",
+     "t": 65.437
+    }
+   ]
+  },
+  "I5": {
+   "t0": 66.638,
+   "t1": 72.121,
+   "text": "Current is measured in amperes. One ampere means one coulomb passing every second.",
+   "words": [
+    {
+     "w": "Current",
+     "t": 66.638
+    },
+    {
+     "w": "is",
+     "t": 67.111
+    },
+    {
+     "w": "measured",
+     "t": 67.327
+    },
+    {
+     "w": "in",
+     "t": 67.852
+    },
+    {
+     "w": "amperes.",
+     "t": 68.068
+    },
+    {
+     "w": "One",
+     "t": 68.798
+    },
+    {
+     "w": "ampere",
+     "t": 69.066
+    },
+    {
+     "w": "means",
+     "t": 69.487
+    },
+    {
+     "w": "one",
+     "t": 69.858
+    },
+    {
+     "w": "coulomb",
+     "t": 70.125
+    },
+    {
+     "w": "passing",
+     "t": 70.598
+    },
+    {
+     "w": "every",
+     "t": 71.071
+    },
+    {
+     "w": "second.",
+     "t": 71.442
+    }
+   ]
+  },
+  "I6": {
+   "t0": 72.77,
+   "t1": 79.751,
+   "text": "Remember from episode one. Electrons drift from minus to plus. Conventional current I points the other way.",
+   "words": [
+    {
+     "w": "Remember",
+     "t": 72.77
+    },
+    {
+     "w": "from",
+     "t": 73.278
+    },
+    {
+     "w": "episode",
+     "t": 73.586
+    },
+    {
+     "w": "one.",
+     "t": 74.043
+    },
+    {
+     "w": "Electrons",
+     "t": 74.551
+    },
+    {
+     "w": "drift",
+     "t": 75.107
+    },
+    {
+     "w": "from",
+     "t": 75.465
+    },
+    {
+     "w": "minus",
+     "t": 75.774
+    },
+    {
+     "w": "to",
+     "t": 76.132
+    },
+    {
+     "w": "plus.",
+     "t": 76.341
+    },
+    {
+     "w": "Conventional",
+     "t": 76.897
+    },
+    {
+     "w": "current",
+     "t": 77.603
+    },
+    {
+     "w": "I",
+     "t": 78.061
+    },
+    {
+     "w": "points",
+     "t": 78.22
+    },
+    {
+     "w": "the",
+     "t": 78.628
+    },
+    {
+     "w": "other",
+     "t": 78.886
+    },
+    {
+     "w": "way.",
+     "t": 79.244
+    }
+   ]
+  },
+  "P1": {
+   "t0": 80.401,
+   "t1": 83.829,
+   "text": "But why do the charges move at all? They need a push.",
+   "words": [
+    {
+     "w": "But",
+     "t": 80.401
+    },
+    {
+     "w": "why",
+     "t": 80.635
+    },
+    {
+     "w": "do",
+     "t": 80.868
+    },
+    {
+     "w": "the",
+     "t": 81.056
+    },
+    {
+     "w": "charges",
+     "t": 81.29
+    },
+    {
+     "w": "move",
+     "t": 81.702
+    },
+    {
+     "w": "at",
+     "t": 81.98
+    },
+    {
+     "w": "all?",
+     "t": 82.169
+    },
+    {
+     "w": "They",
+     "t": 82.626
+    },
+    {
+     "w": "need",
+     "t": 82.905
+    },
+    {
+     "w": "a",
+     "t": 83.183
+    },
+    {
+     "w": "push.",
+     "t": 83.326
+    }
+   ]
+  },
+  "P2": {
+   "t0": 84.179,
+   "t1": 90.389,
+   "text": "Think of two water tanks joined by a pipe. Water flows only when one tank is higher than the other.",
+   "words": [
+    {
+     "w": "Think",
+     "t": 84.179
+    },
+    {
+     "w": "of",
+     "t": 84.517
+    },
+    {
+     "w": "two",
+     "t": 84.715
+    },
+    {
+     "w": "water",
+     "t": 84.96
+    },
+    {
+     "w": "tanks",
+     "t": 85.298
+    },
+    {
+     "w": "joined",
+     "t": 85.637
+    },
+    {
+     "w": "by",
+     "t": 86.023
+    },
+    {
+     "w": "a",
+     "t": 86.221
+    },
+    {
+     "w": "pipe.",
+     "t": 86.371
+    },
+    {
+     "w": "Water",
+     "t": 86.898
+    },
+    {
+     "w": "flows",
+     "t": 87.237
+    },
+    {
+     "w": "only",
+     "t": 87.576
+    },
+    {
+     "w": "when",
+     "t": 87.867
+    },
+    {
+     "w": "one",
+     "t": 88.159
+    },
+    {
+     "w": "tank",
+     "t": 88.404
+    },
+    {
+     "w": "is",
+     "t": 88.695
+    },
+    {
+     "w": "higher",
+     "t": 88.893
+    },
+    {
+     "w": "than",
+     "t": 89.279
+    },
+    {
+     "w": "the",
+     "t": 89.571
+    },
+    {
+     "w": "other.",
+     "t": 89.815
+    }
+   ]
+  },
+  "P3": {
+   "t0": 90.739,
+   "t1": 97.87,
+   "text": "In a circuit, the height is electric potential. Charges flow when there is a potential difference between two points.",
+   "words": [
+    {
+     "w": "In",
+     "t": 90.739
+    },
+    {
+     "w": "a",
+     "t": 90.938
+    },
+    {
+     "w": "circuit,",
+     "t": 91.089
+    },
+    {
+     "w": "the",
+     "t": 91.666
+    },
+    {
+     "w": "height",
+     "t": 91.912
+    },
+    {
+     "w": "is",
+     "t": 92.3
+    },
+    {
+     "w": "electric",
+     "t": 92.498
+    },
+    {
+     "w": "potential.",
+     "t": 92.981
+    },
+    {
+     "w": "Charges",
+     "t": 93.747
+    },
+    {
+     "w": "flow",
+     "t": 94.182
+    },
+    {
+     "w": "when",
+     "t": 94.475
+    },
+    {
+     "w": "there",
+     "t": 94.768
+    },
+    {
+     "w": "is",
+     "t": 95.109
+    },
+    {
+     "w": "a",
+     "t": 95.307
+    },
+    {
+     "w": "potential",
+     "t": 95.459
+    },
+    {
+     "w": "difference",
+     "t": 95.988
+    },
+    {
+     "w": "between",
+     "t": 96.565
+    },
+    {
+     "w": "two",
+     "t": 97.0
+    },
+    {
+     "w": "points.",
+     "t": 97.246
+    }
+   ]
+  },
+  "P4": {
+   "t0": 98.22,
+   "t1": 103.792,
+   "text": "Potential difference is the work done to move one coulomb of charge from one point to the other.",
+   "words": [
+    {
+     "w": "Potential",
+     "t": 98.22
+    },
+    {
+     "w": "difference",
+     "t": 98.729
+    },
+    {
+     "w": "is",
+     "t": 99.284
+    },
+    {
+     "w": "the",
+     "t": 99.475
+    },
+    {
+     "w": "work",
+     "t": 99.711
+    },
+    {
+     "w": "done",
+     "t": 99.993
+    },
+    {
+     "w": "to",
+     "t": 100.274
+    },
+    {
+     "w": "move",
+     "t": 100.465
+    },
+    {
+     "w": "one",
+     "t": 100.747
+    },
+    {
+     "w": "coulomb",
+     "t": 100.983
+    },
+    {
+     "w": "of",
+     "t": 101.402
+    },
+    {
+     "w": "charge",
+     "t": 101.592
+    },
+    {
+     "w": "from",
+     "t": 101.965
+    },
+    {
+     "w": "one",
+     "t": 102.247
+    },
+    {
+     "w": "point",
+     "t": 102.483
+    },
+    {
+     "w": "to",
+     "t": 102.81
+    },
+    {
+     "w": "the",
+     "t": 103.001
+    },
+    {
+     "w": "other.",
+     "t": 103.238
+    }
+   ]
+  },
+  "P5": {
+   "t0": 104.142,
+   "t1": 107.087,
+   "text": "So V equals W divided by Q.",
+   "words": [
+    {
+     "w": "So",
+     "t": 104.142
+    },
+    {
+     "w": "V",
+     "t": 104.448
+    },
+    {
+     "w": "equals",
+     "t": 104.682
+    },
+    {
+     "w": "W",
+     "t": 105.279
+    },
+    {
+     "w": "divided",
+     "t": 105.513
+    },
+    {
+     "w": "by",
+     "t": 106.183
+    },
+    {
+     "w": "Q.",
+     "t": 106.489
+    }
+   ]
+  },
+  "P6": {
+   "t0": 107.787,
+   "t1": 112.894,
+   "text": "It is measured in volts. One volt means one joule of work for every coulomb.",
+   "words": [
+    {
+     "w": "It",
+     "t": 107.787
+    },
+    {
+     "w": "is",
+     "t": 107.995
+    },
+    {
+     "w": "measured",
+     "t": 108.204
+    },
+    {
+     "w": "in",
+     "t": 108.709
+    },
+    {
+     "w": "volts.",
+     "t": 108.918
+    },
+    {
+     "w": "One",
+     "t": 109.523
+    },
+    {
+     "w": "volt",
+     "t": 109.78
+    },
+    {
+     "w": "means",
+     "t": 110.088
+    },
+    {
+     "w": "one",
+     "t": 110.445
+    },
+    {
+     "w": "joule",
+     "t": 110.703
+    },
+    {
+     "w": "of",
+     "t": 111.06
+    },
+    {
+     "w": "work",
+     "t": 111.268
+    },
+    {
+     "w": "for",
+     "t": 111.575
+    },
+    {
+     "w": "every",
+     "t": 111.833
+    },
+    {
+     "w": "coulomb.",
+     "t": 112.19
+    }
+   ]
+  },
+  "P7": {
+   "t0": 113.544,
+   "t1": 117.552,
+   "text": "And voltage is simply the everyday name for potential difference.",
+   "words": [
+    {
+     "w": "And",
+     "t": 113.544
+    },
+    {
+     "w": "voltage",
+     "t": 113.798
+    },
+    {
+     "w": "is",
+     "t": 114.248
+    },
+    {
+     "w": "simply",
+     "t": 114.453
+    },
+    {
+     "w": "the",
+     "t": 114.854
+    },
+    {
+     "w": "everyday",
+     "t": 115.108
+    },
+    {
+     "w": "name",
+     "t": 115.607
+    },
+    {
+     "w": "for",
+     "t": 115.91
+    },
+    {
+     "w": "potential",
+     "t": 116.164
+    },
+    {
+     "w": "difference.",
+     "t": 116.711
+    }
+   ]
+  },
+  "B1": {
+   "t0": 118.202,
+   "t1": 120.216,
+   "text": "Let's watch both on the breadboard.",
+   "words": [
+    {
+     "w": "Let's",
+     "t": 118.202
+    },
+    {
+     "w": "watch",
+     "t": 118.472
+    },
+    {
+     "w": "both",
+     "t": 118.786
+    },
+    {
+     "w": "on",
+     "t": 119.056
+    },
+    {
+     "w": "the",
+     "t": 119.239
+    },
+    {
+     "w": "breadboard.",
+     "t": 119.466
+    }
+   ]
+  },
+  "B2": {
+   "t0": 120.566,
+   "t1": 125.944,
+   "text": "One cell, one switch, and a resistor. A voltmeter reads the voltage across the cell.",
+   "words": [
+    {
+     "w": "One",
+     "t": 120.566
+    },
+    {
+     "w": "cell,",
+     "t": 120.809
+    },
+    {
+     "w": "one",
+     "t": 121.239
+    },
+    {
+     "w": "switch,",
+     "t": 121.482
+    },
+    {
+     "w": "and",
+     "t": 122.006
+    },
+    {
+     "w": "a",
+     "t": 122.249
+    },
+    {
+     "w": "resistor.",
+     "t": 122.399
+    },
+    {
+     "w": "A",
+     "t": 123.11
+    },
+    {
+     "w": "voltmeter",
+     "t": 123.26
+    },
+    {
+     "w": "reads",
+     "t": 123.784
+    },
+    {
+     "w": "the",
+     "t": 124.12
+    },
+    {
+     "w": "voltage",
+     "t": 124.364
+    },
+    {
+     "w": "across",
+     "t": 124.794
+    },
+    {
+     "w": "the",
+     "t": 125.177
+    },
+    {
+     "w": "cell.",
+     "t": 125.421
+    }
+   ]
+  },
+  "B3": {
+   "t0": 126.294,
+   "t1": 132.367,
+   "text": "With the switch open, the cell still has one point five volts across it. But no current flows.",
+   "words": [
+    {
+     "w": "With",
+     "t": 126.294
+    },
+    {
+     "w": "the",
+     "t": 126.592
+    },
+    {
+     "w": "switch",
+     "t": 126.841
+    },
+    {
+     "w": "open,",
+     "t": 127.234
+    },
+    {
+     "w": "the",
+     "t": 127.676
+    },
+    {
+     "w": "cell",
+     "t": 127.925
+    },
+    {
+     "w": "still",
+     "t": 128.223
+    },
+    {
+     "w": "has",
+     "t": 128.568
+    },
+    {
+     "w": "one",
+     "t": 128.817
+    },
+    {
+     "w": "point",
+     "t": 129.067
+    },
+    {
+     "w": "five",
+     "t": 129.412
+    },
+    {
+     "w": "volts",
+     "t": 129.709
+    },
+    {
+     "w": "across",
+     "t": 130.055
+    },
+    {
+     "w": "it.",
+     "t": 130.448
+    },
+    {
+     "w": "But",
+     "t": 130.889
+    },
+    {
+     "w": "no",
+     "t": 131.139
+    },
+    {
+     "w": "current",
+     "t": 131.34
+    },
+    {
+     "w": "flows.",
+     "t": 131.781
+    }
+   ]
+  },
+  "B4": {
+   "t0": 132.717,
+   "t1": 138.732,
+   "text": "Close the switch. Now the charges move. The meter reads zero point one five amperes.",
+   "words": [
+    {
+     "w": "Close",
+     "t": 132.717
+    },
+    {
+     "w": "the",
+     "t": 133.093
+    },
+    {
+     "w": "switch.",
+     "t": 133.365
+    },
+    {
+     "w": "Now",
+     "t": 134.056
+    },
+    {
+     "w": "the",
+     "t": 134.328
+    },
+    {
+     "w": "charges",
+     "t": 134.6
+    },
+    {
+     "w": "move.",
+     "t": 135.081
+    },
+    {
+     "w": "The",
+     "t": 135.667
+    },
+    {
+     "w": "meter",
+     "t": 135.939
+    },
+    {
+     "w": "reads",
+     "t": 136.315
+    },
+    {
+     "w": "zero",
+     "t": 136.692
+    },
+    {
+     "w": "point",
+     "t": 137.016
+    },
+    {
+     "w": "one",
+     "t": 137.393
+    },
+    {
+     "w": "five",
+     "t": 137.665
+    },
+    {
+     "w": "amperes.",
+     "t": 137.989
+    }
+   ]
+  },
+  "B5": {
+   "t0": 139.382,
+   "t1": 142.818,
+   "text": "Add a second cell. The push doubles to three volts.",
+   "words": [
+    {
+     "w": "Add",
+     "t": 139.382
+    },
+    {
+     "w": "a",
+     "t": 139.63
+    },
+    {
+     "w": "second",
+     "t": 139.783
+    },
+    {
+     "w": "cell.",
+     "t": 140.174
+    },
+    {
+     "w": "The",
+     "t": 140.708
+    },
+    {
+     "w": "push",
+     "t": 140.957
+    },
+    {
+     "w": "doubles",
+     "t": 141.252
+    },
+    {
+     "w": "to",
+     "t": 141.692
+    },
+    {
+     "w": "three",
+     "t": 141.892
+    },
+    {
+     "w": "volts.",
+     "t": 142.236
+    }
+   ]
+  },
+  "B6": {
+   "t0": 143.168,
+   "t1": 151.118,
+   "text": "Watch the scope. Both traces step up together. The electrons speed up, and the current rises to zero point three amperes.",
+   "words": [
+    {
+     "w": "Watch",
+     "t": 143.168
+    },
+    {
+     "w": "the",
+     "t": 143.523
+    },
+    {
+     "w": "scope.",
+     "t": 143.779
+    },
+    {
+     "w": "Both",
+     "t": 144.381
+    },
+    {
+     "w": "traces",
+     "t": 144.687
+    },
+    {
+     "w": "step",
+     "t": 145.091
+    },
+    {
+     "w": "up",
+     "t": 145.397
+    },
+    {
+     "w": "together.",
+     "t": 145.604
+    },
+    {
+     "w": "The",
+     "t": 146.354
+    },
+    {
+     "w": "electrons",
+     "t": 146.61
+    },
+    {
+     "w": "speed",
+     "t": 147.163
+    },
+    {
+     "w": "up,",
+     "t": 147.518
+    },
+    {
+     "w": "and",
+     "t": 147.873
+    },
+    {
+     "w": "the",
+     "t": 148.129
+    },
+    {
+     "w": "current",
+     "t": 148.386
+    },
+    {
+     "w": "rises",
+     "t": 148.84
+    },
+    {
+     "w": "to",
+     "t": 149.195
+    },
+    {
+     "w": "zero",
+     "t": 149.402
+    },
+    {
+     "w": "point",
+     "t": 149.708
+    },
+    {
+     "w": "three",
+     "t": 150.063
+    },
+    {
+     "w": "amperes.",
+     "t": 150.418
+    }
+   ]
+  },
+  "B7": {
+   "t0": 151.468,
+   "t1": 155.524,
+   "text": "More push, more flow. And with no push, there is no flow at all.",
+   "words": [
+    {
+     "w": "More",
+     "t": 151.468
+    },
+    {
+     "w": "push,",
+     "t": 151.736
+    },
+    {
+     "w": "more",
+     "t": 152.134
+    },
+    {
+     "w": "flow.",
+     "t": 152.402
+    },
+    {
+     "w": "And",
+     "t": 152.886
+    },
+    {
+     "w": "with",
+     "t": 153.111
+    },
+    {
+     "w": "no",
+     "t": 153.379
+    },
+    {
+     "w": "push,",
+     "t": 153.561
+    },
+    {
+     "w": "there",
+     "t": 153.959
+    },
+    {
+     "w": "is",
+     "t": 154.27
+    },
+    {
+     "w": "no",
+     "t": 154.452
+    },
+    {
+     "w": "flow",
+     "t": 154.633
+    },
+    {
+     "w": "at",
+     "t": 154.901
+    },
+    {
+     "w": "all.",
+     "t": 155.083
+    }
+   ]
+  },
+  "T1": {
+   "t0": 156.174,
+   "t1": 159.345,
+   "text": "Voltage is the push. Current is the flow.",
+   "words": [
+    {
+     "w": "Voltage",
+     "t": 156.174
+    },
+    {
+     "w": "is",
+     "t": 156.664
+    },
+    {
+     "w": "the",
+     "t": 156.887
+    },
+    {
+     "w": "push.",
+     "t": 157.164
+    },
+    {
+     "w": "Current",
+     "t": 157.759
+    },
+    {
+     "w": "is",
+     "t": 158.249
+    },
+    {
+     "w": "the",
+     "t": 158.472
+    },
+    {
+     "w": "flow.",
+     "t": 158.749
+    }
+   ]
+  },
+  "D1": {
+   "t0": 160.145,
+   "t1": 162.908,
+   "text": "Now, how much energy does the source give?",
+   "words": [
+    {
+     "w": "Now,",
+     "t": 160.145
+    },
+    {
+     "w": "how",
+     "t": 160.531
+    },
+    {
+     "w": "much",
+     "t": 160.777
+    },
+    {
+     "w": "energy",
+     "t": 161.069
+    },
+    {
+     "w": "does",
+     "t": 161.455
+    },
+    {
+     "w": "the",
+     "t": 161.748
+    },
+    {
+     "w": "source",
+     "t": 161.993
+    },
+    {
+     "w": "give?",
+     "t": 162.379
+    }
+   ]
+  },
+  "D2": {
+   "t0": 163.258,
+   "t1": 166.596,
+   "text": "From the volt, the work W equals V times Q.",
+   "words": [
+    {
+     "w": "From",
+     "t": 163.258
+    },
+    {
+     "w": "the",
+     "t": 163.591
+    },
+    {
+     "w": "volt,",
+     "t": 163.871
+    },
+    {
+     "w": "the",
+     "t": 164.367
+    },
+    {
+     "w": "work",
+     "t": 164.647
+    },
+    {
+     "w": "W",
+     "t": 164.98
+    },
+    {
+     "w": "equals",
+     "t": 165.153
+    },
+    {
+     "w": "V",
+     "t": 165.594
+    },
+    {
+     "w": "times",
+     "t": 165.767
+    },
+    {
+     "w": "Q.",
+     "t": 166.154
+    }
+   ]
+  },
+  "D3": {
+   "t0": 167.296,
+   "t1": 169.996,
+   "text": "And the charge Q equals I times t.",
+   "words": [
+    {
+     "w": "And",
+     "t": 167.296
+    },
+    {
+     "w": "the",
+     "t": 167.585
+    },
+    {
+     "w": "charge",
+     "t": 167.874
+    },
+    {
+     "w": "Q",
+     "t": 168.329
+    },
+    {
+     "w": "equals",
+     "t": 168.507
+    },
+    {
+     "w": "I",
+     "t": 168.963
+    },
+    {
+     "w": "times",
+     "t": 169.141
+    },
+    {
+     "w": "t.",
+     "t": 169.541
+    }
+   ]
+  },
+  "D4": {
+   "t0": 170.696,
+   "t1": 174.702,
+   "text": "Put them together. W equals V times I times t.",
+   "words": [
+    {
+     "w": "Put",
+     "t": 170.696
+    },
+    {
+     "w": "them",
+     "t": 171.007
+    },
+    {
+     "w": "together.",
+     "t": 171.378
+    },
+    {
+     "w": "W",
+     "t": 172.287
+    },
+    {
+     "w": "equals",
+     "t": 172.478
+    },
+    {
+     "w": "V",
+     "t": 172.968
+    },
+    {
+     "w": "times",
+     "t": 173.159
+    },
+    {
+     "w": "I",
+     "t": 173.59
+    },
+    {
+     "w": "times",
+     "t": 173.781
+    },
+    {
+     "w": "t.",
+     "t": 174.212
+    }
+   ]
+  },
+  "D5": {
+   "t0": 175.402,
+   "t1": 179.972,
+   "text": "Volts times amperes times seconds gives joules, the unit of energy.",
+   "words": [
+    {
+     "w": "Volts",
+     "t": 175.402
+    },
+    {
+     "w": "times",
+     "t": 175.779
+    },
+    {
+     "w": "amperes",
+     "t": 176.157
+    },
+    {
+     "w": "times",
+     "t": 176.639
+    },
+    {
+     "w": "seconds",
+     "t": 177.016
+    },
+    {
+     "w": "gives",
+     "t": 177.499
+    },
+    {
+     "w": "joules,",
+     "t": 177.876
+    },
+    {
+     "w": "the",
+     "t": 178.463
+    },
+    {
+     "w": "unit",
+     "t": 178.736
+    },
+    {
+     "w": "of",
+     "t": 179.06
+    },
+    {
+     "w": "energy.",
+     "t": 179.281
+    }
+   ]
+  },
+  "W1": {
+   "t0": 180.623,
+   "t1": 185.812,
+   "text": "Worked example. Aarav's charger gives five volts and two amperes for one minute.",
+   "words": [
+    {
+     "w": "Worked",
+     "t": 180.623
+    },
+    {
+     "w": "example.",
+     "t": 181.033
+    },
+    {
+     "w": "Aarav's",
+     "t": 181.745
+    },
+    {
+     "w": "charger",
+     "t": 182.155
+    },
+    {
+     "w": "gives",
+     "t": 182.616
+    },
+    {
+     "w": "five",
+     "t": 182.977
+    },
+    {
+     "w": "volts",
+     "t": 183.287
+    },
+    {
+     "w": "and",
+     "t": 183.648
+    },
+    {
+     "w": "two",
+     "t": 183.908
+    },
+    {
+     "w": "amperes",
+     "t": 184.169
+    },
+    {
+     "w": "for",
+     "t": 184.63
+    },
+    {
+     "w": "one",
+     "t": 184.89
+    },
+    {
+     "w": "minute.",
+     "t": 185.151
+    }
+   ]
+  },
+  "W2": {
+   "t0": 186.162,
+   "t1": 192.001,
+   "text": "First, the charge. Q equals two times sixty, which is one hundred and twenty coulombs.",
+   "words": [
+    {
+     "w": "First,",
+     "t": 186.162
+    },
+    {
+     "w": "the",
+     "t": 186.671
+    },
+    {
+     "w": "charge.",
+     "t": 186.93
+    },
+    {
+     "w": "Q",
+     "t": 187.589
+    },
+    {
+     "w": "equals",
+     "t": 187.749
+    },
+    {
+     "w": "two",
+     "t": 188.158
+    },
+    {
+     "w": "times",
+     "t": 188.418
+    },
+    {
+     "w": "sixty,",
+     "t": 188.777
+    },
+    {
+     "w": "which",
+     "t": 189.286
+    },
+    {
+     "w": "is",
+     "t": 189.645
+    },
+    {
+     "w": "one",
+     "t": 189.855
+    },
+    {
+     "w": "hundred",
+     "t": 190.114
+    },
+    {
+     "w": "and",
+     "t": 190.573
+    },
+    {
+     "w": "twenty",
+     "t": 190.833
+    },
+    {
+     "w": "coulombs.",
+     "t": 191.242
+    }
+   ]
+  },
+  "W3": {
+   "t0": 192.351,
+   "t1": 198.807,
+   "text": "Then the energy. W equals five times one hundred and twenty, which is six hundred joules.",
+   "words": [
+    {
+     "w": "Then",
+     "t": 192.351
+    },
+    {
+     "w": "the",
+     "t": 192.687
+    },
+    {
+     "w": "energy.",
+     "t": 192.968
+    },
+    {
+     "w": "W",
+     "t": 193.683
+    },
+    {
+     "w": "equals",
+     "t": 193.857
+    },
+    {
+     "w": "five",
+     "t": 194.301
+    },
+    {
+     "w": "times",
+     "t": 194.637
+    },
+    {
+     "w": "one",
+     "t": 195.027
+    },
+    {
+     "w": "hundred",
+     "t": 195.308
+    },
+    {
+     "w": "and",
+     "t": 195.807
+    },
+    {
+     "w": "twenty,",
+     "t": 196.088
+    },
+    {
+     "w": "which",
+     "t": 196.695
+    },
+    {
+     "w": "is",
+     "t": 197.085
+    },
+    {
+     "w": "six",
+     "t": 197.312
+    },
+    {
+     "w": "hundred",
+     "t": 197.594
+    },
+    {
+     "w": "joules.",
+     "t": 198.092
+    }
+   ]
+  },
+  "W4": {
+   "t0": 199.157,
+   "t1": 209.974,
+   "text": "And the electrons? One hundred and twenty, divided by one point six times ten to the minus nineteen. That is seven point five times ten to the twenty electrons.",
+   "words": [
+    {
+     "w": "And",
+     "t": 199.157
+    },
+    {
+     "w": "the",
+     "t": 199.426
+    },
+    {
+     "w": "electrons?",
+     "t": 199.694
+    },
+    {
+     "w": "One",
+     "t": 200.529
+    },
+    {
+     "w": "hundred",
+     "t": 200.797
+    },
+    {
+     "w": "and",
+     "t": 201.271
+    },
+    {
+     "w": "twenty,",
+     "t": 201.539
+    },
+    {
+     "w": "divided",
+     "t": 202.117
+    },
+    {
+     "w": "by",
+     "t": 202.591
+    },
+    {
+     "w": "one",
+     "t": 202.808
+    },
+    {
+     "w": "point",
+     "t": 203.076
+    },
+    {
+     "w": "six",
+     "t": 203.447
+    },
+    {
+     "w": "times",
+     "t": 203.715
+    },
+    {
+     "w": "ten",
+     "t": 204.086
+    },
+    {
+     "w": "to",
+     "t": 204.354
+    },
+    {
+     "w": "the",
+     "t": 204.571
+    },
+    {
+     "w": "minus",
+     "t": 204.839
+    },
+    {
+     "w": "nineteen.",
+     "t": 205.21
+    },
+    {
+     "w": "That",
+     "t": 205.994
+    },
+    {
+     "w": "is",
+     "t": 206.314
+    },
+    {
+     "w": "seven",
+     "t": 206.53
+    },
+    {
+     "w": "point",
+     "t": 206.901
+    },
+    {
+     "w": "five",
+     "t": 207.273
+    },
+    {
+     "w": "times",
+     "t": 207.592
+    },
+    {
+     "w": "ten",
+     "t": 207.963
+    },
+    {
+     "w": "to",
+     "t": 208.232
+    },
+    {
+     "w": "the",
+     "t": 208.448
+    },
+    {
+     "w": "twenty",
+     "t": 208.716
+    },
+    {
+     "w": "electrons.",
+     "t": 209.139
+    }
+   ]
+  },
+  "X1": {
+   "t0": 210.624,
+   "t1": 212.09,
+   "text": "Now, the exam trap.",
+   "words": [
+    {
+     "w": "Now,",
+     "t": 210.624
+    },
+    {
+     "w": "the",
+     "t": 211.014
+    },
+    {
+     "w": "exam",
+     "t": 211.262
+    },
+    {
+     "w": "trap.",
+     "t": 211.557
+    }
+   ]
+  },
+  "X2": {
+   "t0": 212.44,
+   "t1": 216.817,
+   "text": "Many students say voltage flows through a resistor. It does not.",
+   "words": [
+    {
+     "w": "Many",
+     "t": 212.44
+    },
+    {
+     "w": "students",
+     "t": 212.755
+    },
+    {
+     "w": "say",
+     "t": 213.273
+    },
+    {
+     "w": "voltage",
+     "t": 213.537
+    },
+    {
+     "w": "flows",
+     "t": 214.004
+    },
+    {
+     "w": "through",
+     "t": 214.37
+    },
+    {
+     "w": "a",
+     "t": 214.837
+    },
+    {
+     "w": "resistor.",
+     "t": 214.999
+    },
+    {
+     "w": "It",
+     "t": 215.771
+    },
+    {
+     "w": "does",
+     "t": 215.984
+    },
+    {
+     "w": "not.",
+     "t": 216.299
+    }
+   ]
+  },
+  "X3": {
+   "t0": 217.167,
+   "t1": 222.427,
+   "text": "Current flows through a component. Voltage is always across it, between two points.",
+   "words": [
+    {
+     "w": "Current",
+     "t": 217.167
+    },
+    {
+     "w": "flows",
+     "t": 217.609
+    },
+    {
+     "w": "through",
+     "t": 217.954
+    },
+    {
+     "w": "a",
+     "t": 218.396
+    },
+    {
+     "w": "component.",
+     "t": 218.549
+    },
+    {
+     "w": "Voltage",
+     "t": 219.327
+    },
+    {
+     "w": "is",
+     "t": 219.768
+    },
+    {
+     "w": "always",
+     "t": 219.97
+    },
+    {
+     "w": "across",
+     "t": 220.363
+    },
+    {
+     "w": "it,",
+     "t": 220.757
+    },
+    {
+     "w": "between",
+     "t": 221.102
+    },
+    {
+     "w": "two",
+     "t": 221.544
+    },
+    {
+     "w": "points.",
+     "t": 221.793
+    }
+   ]
+  },
+  "X4": {
+   "t0": 223.077,
+   "t1": 235.181,
+   "text": "Where is this asked? In PUC board papers. Define current, potential difference and the volt, and solve short problems with I equals Q by t, and V equals W by Q.",
+   "words": [
+    {
+     "w": "Where",
+     "t": 223.077
+    },
+    {
+     "w": "is",
+     "t": 223.48
+    },
+    {
+     "w": "this",
+     "t": 223.715
+    },
+    {
+     "w": "asked?",
+     "t": 224.062
+    },
+    {
+     "w": "In",
+     "t": 224.745
+    },
+    {
+     "w": "PUC",
+     "t": 224.98
+    },
+    {
+     "w": "board",
+     "t": 225.271
+    },
+    {
+     "w": "papers.",
+     "t": 225.675
+    },
+    {
+     "w": "Define",
+     "t": 226.414
+    },
+    {
+     "w": "current,",
+     "t": 226.873
+    },
+    {
+     "w": "potential",
+     "t": 227.556
+    },
+    {
+     "w": "difference",
+     "t": 228.183
+    },
+    {
+     "w": "and",
+     "t": 228.866
+    },
+    {
+     "w": "the",
+     "t": 229.157
+    },
+    {
+     "w": "volt,",
+     "t": 229.448
+    },
+    {
+     "w": "and",
+     "t": 229.963
+    },
+    {
+     "w": "solve",
+     "t": 230.254
+    },
+    {
+     "w": "short",
+     "t": 230.658
+    },
+    {
+     "w": "problems",
+     "t": 231.061
+    },
+    {
+     "w": "with",
+     "t": 231.632
+    },
+    {
+     "w": "I",
+     "t": 231.979
+    },
+    {
+     "w": "equals",
+     "t": 232.158
+    },
+    {
+     "w": "Q",
+     "t": 232.617
+    },
+    {
+     "w": "by",
+     "t": 232.796
+    },
+    {
+     "w": "t,",
+     "t": 233.032
+    },
+    {
+     "w": "and",
+     "t": 233.379
+    },
+    {
+     "w": "V",
+     "t": 233.67
+    },
+    {
+     "w": "equals",
+     "t": 233.849
+    },
+    {
+     "w": "W",
+     "t": 234.308
+    },
+    {
+     "w": "by",
+     "t": 234.487
+    },
+    {
+     "w": "Q.",
+     "t": 234.722
+    }
+   ]
+  },
+  "Q1": {
+   "t0": 235.832,
+   "t1": 247.444,
+   "text": "Try this. A current of zero point five amperes flows through a lamp for six seconds, and the source does thirty six joules of work. What is the potential difference across the lamp?",
+   "words": [
+    {
+     "w": "Try",
+     "t": 235.832
+    },
+    {
+     "w": "this.",
+     "t": 236.088
+    },
+    {
+     "w": "A",
+     "t": 236.64
+    },
+    {
+     "w": "current",
+     "t": 236.798
+    },
+    {
+     "w": "of",
+     "t": 237.251
+    },
+    {
+     "w": "zero",
+     "t": 237.458
+    },
+    {
+     "w": "point",
+     "t": 237.764
+    },
+    {
+     "w": "five",
+     "t": 238.118
+    },
+    {
+     "w": "amperes",
+     "t": 238.424
+    },
+    {
+     "w": "flows",
+     "t": 238.878
+    },
+    {
+     "w": "through",
+     "t": 239.232
+    },
+    {
+     "w": "a",
+     "t": 239.686
+    },
+    {
+     "w": "lamp",
+     "t": 239.844
+    },
+    {
+     "w": "for",
+     "t": 240.149
+    },
+    {
+     "w": "six",
+     "t": 240.405
+    },
+    {
+     "w": "seconds,",
+     "t": 240.662
+    },
+    {
+     "w": "and",
+     "t": 241.263
+    },
+    {
+     "w": "the",
+     "t": 241.519
+    },
+    {
+     "w": "source",
+     "t": 241.776
+    },
+    {
+     "w": "does",
+     "t": 242.18
+    },
+    {
+     "w": "thirty",
+     "t": 242.485
+    },
+    {
+     "w": "six",
+     "t": 242.89
+    },
+    {
+     "w": "joules",
+     "t": 243.146
+    },
+    {
+     "w": "of",
+     "t": 243.55
+    },
+    {
+     "w": "work.",
+     "t": 243.757
+    },
+    {
+     "w": "What",
+     "t": 244.309
+    },
+    {
+     "w": "is",
+     "t": 244.615
+    },
+    {
+     "w": "the",
+     "t": 244.822
+    },
+    {
+     "w": "potential",
+     "t": 245.078
+    },
+    {
+     "w": "difference",
+     "t": 245.63
+    },
+    {
+     "w": "across",
+     "t": 246.231
+    },
+    {
+     "w": "the",
+     "t": 246.636
+    },
+    {
+     "w": "lamp?",
+     "t": 246.892
+    }
+   ]
+  },
+  "A1": {
+   "t0": 252.844,
+   "t1": 254.571,
+   "text": "C. Twelve volts.",
+   "words": [
+    {
+     "w": "C.",
+     "t": 252.844
+    },
+    {
+     "w": "Twelve",
+     "t": 253.339
+    },
+    {
+     "w": "volts.",
+     "t": 253.834
+    }
+   ]
+  },
+  "A2": {
+   "t0": 254.921,
+   "t1": 261.446,
+   "text": "First, the charge. Q equals I times t. Zero point five times six is three coulombs.",
+   "words": [
+    {
+     "w": "First,",
+     "t": 254.921
+    },
+    {
+     "w": "the",
+     "t": 255.489
+    },
+    {
+     "w": "charge.",
+     "t": 255.779
+    },
+    {
+     "w": "Q",
+     "t": 256.513
+    },
+    {
+     "w": "equals",
+     "t": 256.692
+    },
+    {
+     "w": "I",
+     "t": 257.148
+    },
+    {
+     "w": "times",
+     "t": 257.326
+    },
+    {
+     "w": "t.",
+     "t": 257.727
+    },
+    {
+     "w": "Zero",
+     "t": 258.184
+    },
+    {
+     "w": "point",
+     "t": 258.529
+    },
+    {
+     "w": "five",
+     "t": 258.93
+    },
+    {
+     "w": "times",
+     "t": 259.275
+    },
+    {
+     "w": "six",
+     "t": 259.676
+    },
+    {
+     "w": "is",
+     "t": 259.965
+    },
+    {
+     "w": "three",
+     "t": 260.199
+    },
+    {
+     "w": "coulombs.",
+     "t": 260.6
+    }
+   ]
+  },
+  "A3": {
+   "t0": 261.796,
+   "t1": 267.413,
+   "text": "Then V equals W by Q. Thirty six divided by three is twelve volts.",
+   "words": [
+    {
+     "w": "Then",
+     "t": 261.796
+    },
+    {
+     "w": "V",
+     "t": 262.176
+    },
+    {
+     "w": "equals",
+     "t": 262.371
+    },
+    {
+     "w": "W",
+     "t": 262.873
+    },
+    {
+     "w": "by",
+     "t": 263.069
+    },
+    {
+     "w": "Q.",
+     "t": 263.326
+    },
+    {
+     "w": "Thirty",
+     "t": 263.827
+    },
+    {
+     "w": "six",
+     "t": 264.329
+    },
+    {
+     "w": "divided",
+     "t": 264.647
+    },
+    {
+     "w": "by",
+     "t": 265.21
+    },
+    {
+     "w": "three",
+     "t": 265.467
+    },
+    {
+     "w": "is",
+     "t": 265.908
+    },
+    {
+     "w": "twelve",
+     "t": 266.165
+    },
+    {
+     "w": "volts.",
+     "t": 266.666
+    }
+   ]
+  },
+  "F1": {
+   "t0": 268.063,
+   "t1": 269.587,
+   "text": "Screenshot this card.",
+   "words": [
+    {
+     "w": "Screenshot",
+     "t": 268.063
+    },
+    {
+     "w": "this",
+     "t": 268.691
+    },
+    {
+     "w": "card.",
+     "t": 269.01
+    }
+   ]
+  },
+  "NX": {
+   "t0": 272.787,
+   "t1": 279.339,
+   "text": "Next, direct current and alternating current. Why does a cell give one kind, and the wall socket the other?",
+   "words": [
+    {
+     "w": "Next,",
+     "t": 272.787
+    },
+    {
+     "w": "direct",
+     "t": 273.209
+    },
+    {
+     "w": "current",
+     "t": 273.585
+    },
+    {
+     "w": "and",
+     "t": 274.007
+    },
+    {
+     "w": "alternating",
+     "t": 274.246
+    },
+    {
+     "w": "current.",
+     "t": 274.851
+    },
+    {
+     "w": "Why",
+     "t": 275.503
+    },
+    {
+     "w": "does",
+     "t": 275.742
+    },
+    {
+     "w": "a",
+     "t": 276.026
+    },
+    {
+     "w": "cell",
+     "t": 276.173
+    },
+    {
+     "w": "give",
+     "t": 276.457
+    },
+    {
+     "w": "one",
+     "t": 276.742
+    },
+    {
+     "w": "kind,",
+     "t": 276.98
+    },
+    {
+     "w": "and",
+     "t": 277.403
+    },
+    {
+     "w": "the",
+     "t": 277.641
+    },
+    {
+     "w": "wall",
+     "t": 277.88
+    },
+    {
+     "w": "socket",
+     "t": 278.164
+    },
+    {
+     "w": "the",
+     "t": 278.54
+    },
+    {
+     "w": "other?",
+     "t": 278.779
+    }
+   ]
+  }
+ },
+ "order": [
+  "H1",
+  "H2",
+  "C1",
+  "C2",
+  "C3",
+  "C4",
+  "C5",
+  "C6",
+  "I1",
+  "I2",
+  "I3",
+  "I4",
+  "I5",
+  "I6",
+  "P1",
+  "P2",
+  "P3",
+  "P4",
+  "P5",
+  "P6",
+  "P7",
+  "B1",
+  "B2",
+  "B3",
+  "B4",
+  "B5",
+  "B6",
+  "B7",
+  "T1",
+  "D1",
+  "D2",
+  "D3",
+  "D4",
+  "D5",
+  "W1",
+  "W2",
+  "W3",
+  "W4",
+  "X1",
+  "X2",
+  "X3",
+  "X4",
+  "Q1",
+  "A1",
+  "A2",
+  "A3",
+  "F1",
+  "NX"
+ ],
+ "dur": 279.939
+}

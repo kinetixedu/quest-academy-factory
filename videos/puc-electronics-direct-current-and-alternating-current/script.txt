@@ -1,0 +1,41 @@
+H1|0.35|Aarav's torch runs on a cell. His table fan runs from the wall socket.
+H2|0.5|Both use electric current. So why can't the fan just run on a cell?
+D1|0.35|Start with the cell. It gives direct current, or D C.
+D2|0.35|Direct current flows in one direction only. Out of the plus terminal, round the circuit, and back into the minus terminal.
+D3|0.35|Draw current against time, and you get a flat line. Same size, same direction, all the time.
+D4|0.65|D C can also rise and fall in size, like the output of a rectifier, which we will meet later. But it never turns around.
+D5|0.65|Cells, batteries and solar cells all give direct current.
+C1|0.35|Now the wall socket. It gives alternating current, or A C.
+C2|0.35|Alternating current keeps changing its direction. It rises to a peak, falls to zero, then flows the other way.
+C3|0.35|Draw it against time, and you get a smooth wave called a sine wave.
+C4|0.65|Power stations make it with A C generators. A coil turns inside a magnetic field, and every half turn, the push reverses.
+B1|0.35|Let's see both on the breadboard. One resistor, and a small indicator lamp.
+B2|0.35|First, connect a cell. The electrons march one way, at a steady speed.
+B3|0.65|The scope draws a flat line, and the current reads plus zero point two amperes, all the time.
+B4|0.35|Now switch to an A C source. We have slowed it right down so you can watch.
+B5|0.35|The electrons move forward, slow down, stop, and then move backward.
+B6|0.35|The scope draws a sine wave. The reading swings from plus to minus, and the lamp dims each time the current passes zero.
+B7|0.65|In A C, the electrons do not travel round the circuit. They rock back and forth, passing energy along.
+T1|0.8|D C flows one way. A C keeps turning back.
+P1|0.35|So how fast does A C turn back? Two numbers tell us.
+P2|0.7|One full forward and backward swing is called a cycle. The time for one cycle is the period, T, in seconds.
+P3|0.7|The number of cycles in one second is the frequency, f. Its unit is the hertz. One hertz is one cycle per second.
+P4|0.7|They are linked. f equals one over T.
+P5|0.65|And in every cycle, the current changes direction twice.
+W1|0.35|Worked example. In India, the mains supply is about two hundred and thirty volts, at fifty hertz.
+W2|0.35|The period is one over fifty. That is zero point zero two seconds, or twenty milliseconds.
+W3|0.65|Two reversals per cycle, times fifty cycles. So the current changes direction one hundred times every second.
+U1|0.35|So why do homes get A C?
+U2|0.35|A C voltage can be raised or lowered easily with a transformer, and a transformer works only with A C.
+U3|0.35|Power is sent over long distances at very high voltage, because that wastes far less energy in the wires.
+U4|0.65|But phones and laptops need steady D C. So their chargers change A C into D C. And the fan? It is built to run on A C, at two hundred and thirty volts. A cell cannot give that.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think fifty hertz means the current reverses fifty times a second.
+X3|0.65|But each cycle has two reversals. So fifty hertz means one hundred reversals every second.
+X4|0.65|Where is this asked? In PUC board papers. Differences between A C and D C, and short problems on frequency and period.
+Q1|5.4|Try this. An A C source has a period of four milliseconds. How many times does its current change direction in one second?
+A1|0.35|C. Five hundred times.
+A2|0.35|First, the frequency. f equals one over T, one over zero point zero zero four seconds. That is two hundred and fifty hertz.
+A3|0.65|Each cycle has two reversals. Two times two hundred and fifty is five hundred.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, Ohm's law and electrical resistance. Why does the same push give a big current in one wire, and a tiny one in another?

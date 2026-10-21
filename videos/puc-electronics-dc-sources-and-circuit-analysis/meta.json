@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "DC Sources and Circuit Analysis",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 11
+ },
+ "class": "11",
+ "title": "Why Batteries Sag Explained Simply | PUC Electronics Class 11",
+ "description": "When Aarav presses the scooter's start button, the headlight dims for a moment. The battery is the same and nothing is broken, so where did the missing voltage go? In this animated lesson we meet DC sources (cells, batteries, solar cells and DC power supplies), EMF and internal resistance, and see why a real source always loses a little voltage inside itself.\n\nOn a live breadboard a 12 V battery with a hidden 0.5 ohm internal resistance drives a load: the voltmeter reads the full 12 V with no current, 11 V at 2 A, and sinks to 9 V when a heavy load draws 6 A, while the oscilloscope shows the EMF staying flat and the terminal voltage sagging. We derive I = E/(R + r) and V = E - Ir with Kirchhoff's voltage law, plot the V-I line of a source, compare ideal and real voltage and current sources, work an example with a 1.5 V cell, and finish with the exam trap (terminal voltage is not always the EMF), where it is asked, an original JEE Main pattern practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 11 of PUC Electronics, Class 11, Chapter 2: Principles of Electricity, Network Theorems and AC Principles (Karnataka PUC Electronics).\n\nIn this video:\n0:00 Why does the headlight dim?\n0:12 DC sources\n0:35 EMF and internal resistance\n0:56 Breadboard: a real battery under load\n1:35 Deriving I = E/(R + r) and V = E - Ir\n2:06 The V-I line, ideal voltage and current sources\n2:46 Worked example: a cell and a lamp\n3:20 Exam trap: V is not always E\n3:36 Where it is asked\n3:48 Practice question\n4:27 Formula card\n\nNext episode: Network Theorems and Thevenin's Theorem.\n\nVideo by Quest Academy.",
+ "tags": [
+  "DC sources",
+  "emf and internal resistance",
+  "terminal voltage",
+  "V = E - Ir",
+  "internal resistance of a cell",
+  "ideal voltage source",
+  "ideal current source",
+  "PUC electronics",
+  "1st PUC electronics chapter 2",
+  "Karnataka PUC electronics",
+  "circuit analysis",
+  "why battery voltage drops",
+  "class 11 electronics",
+  "JEE Main current electricity"
+ ],
+ "thumb": {
+  "title": "Why Batteries Sag",
+  "accent_word": "Sag",
+  "frame_t": 91.3
+ }
+}

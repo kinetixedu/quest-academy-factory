@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "AC and DC Voltmeters and Ammeters",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 18
+ },
+ "class": "11",
+ "title": "Voltmeters and Ammeters Explained Simply | PUC Electronics Class 11",
+ "description": "Aarav finds an old meter whose needle swings all the way for just one milliampere. So how can the same kind of meter read 10 A, or 230 V from the wall socket? This animated lesson opens up the moving coil galvanometer (coil, magnet, spring and pointer) and shows how one small meter becomes every ammeter and voltmeter.\n\nOn a live breadboard, a tiny shunt in parallel turns the galvanometer into an ammeter while the electrons split at the junction. We derive the shunt S = Ig G / (I - Ig) and the multiplier R = V / Ig - G step by step, work a full example (G = 50 ohm, Ig = 1 mA: a 0.05 ohm shunt for 1 A and a 9950 ohm multiplier for 10 V), then add a bridge rectifier to build an AC voltmeter while the oscilloscope shows the input and the rectified wave. You will see why an AC meter shows the RMS value (0.707 of the peak), what the average (0.637 of the peak) and the form factor 1.11 mean, and why 230 V mains peaks near 325 V. Then the exam trap, where it is asked, an original JEE Main pattern question with a full solution, and a formula card to screenshot.\n\nThis is Episode 18 of PUC Electronics, Class 11, Chapter 3: Measuring Instruments (Karnataka PUC Electronics).\n\nIn this video:\n0:00 One needle, every range?\n0:12 Inside: the moving coil galvanometer\n0:50 Building an ammeter: the shunt\n1:23 Deriving the shunt formula\n1:56 Building a voltmeter: the multiplier\n2:27 Worked example\n3:04 AC meters: rectifier, RMS and form factor\n4:04 Exam trap: shunt vs multiplier\n4:18 Where it is asked\n4:29 Practice question\n5:09 Formula card\n\nNext episode: Ohmmeters.\n\nVideo by Quest Academy.",
+ "tags": [
+  "voltmeter and ammeter",
+  "conversion of galvanometer into ammeter",
+  "conversion of galvanometer into voltmeter",
+  "shunt resistance formula",
+  "multiplier resistance",
+  "moving coil galvanometer",
+  "PMMC meter",
+  "rectifier type AC voltmeter",
+  "form factor 1.11",
+  "RMS value meter",
+  "PUC electronics",
+  "1st PUC electronics chapter 3",
+  "measuring instruments",
+  "Karnataka PUC electronics"
+ ],
+ "thumb": {
+  "title": "One Needle, Every Range",
+  "accent_word": "Every",
+  "frame_t": 72
+ }
+}

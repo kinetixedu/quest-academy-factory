@@ -1,0 +1,41 @@
+H1|0.35|Diya has a fever. Her mother holds a digital thermometer under her tongue. Beep. Thirty eight point one degrees.
+H2|0.5|No mercury, no squinting at a glass tube. How does a tiny stick read her temperature so fast?
+I1|0.35|Inside it is a small chain of electronics.
+I2|0.35|A sensor, called a thermistor, changes its resistance as it warms up. That changes a voltage.
+I3|0.35|A converter turns that voltage into numbers. A microcontroller works out the temperature.
+I4|0.65|And the display shows it. Sense, process, show. Electronics is quietly doing this all around us.
+M1|0.35|Let's walk through a home and spot the electronic blocks.
+M2|0.35|The phone charger takes two hundred and thirty volts A C from the wall, and turns it into about five volts of steady D C for the phone.
+M3|0.35|The washing machine has a microcontroller that runs each step, fill, wash, rinse and spin, on a timer.
+M4|0.65|The fridge and the air conditioner use sensors to switch the compressor on and off, and keep the temperature steady.
+B1|0.35|Now the TV remote, on the breadboard.
+B2|0.35|Press a button. The microcontroller inside sends a code, a pattern of short on and off pulses.
+B3|0.35|An infrared light flashes that pattern. It is light, but our eyes cannot see it.
+B4|0.35|Watch the scope. The top trace is the code sent by the remote. The bottom trace is what the TV's receiver picks up.
+B5|0.65|The two patterns match. The TV reads the code, and the volume goes up by one.
+B6|0.65|A different button sends a different pattern. That is all a remote really does. It talks in flashes of light.
+P1|0.35|Every one of these runs on energy. So how long does a phone battery last?
+P2|0.35|A battery's capacity is written in milliampere hours.
+P3|0.7|That unit is current times time. And current times time is charge. So capacity tells us how much charge the battery can deliver.
+P4|0.7|If the phone draws a steady current I, the battery lasts for a time t equal to capacity divided by I.
+W1|0.35|Worked example. A phone battery is rated four thousand milliampere hours. On average, the phone draws two hundred and fifty milliamperes.
+W2|0.7|t equals four thousand divided by two hundred and fifty.
+W3|0.65|That is sixteen hours. The milliamperes cancel, so the answer comes out in hours.
+G1|0.35|So what has electronics changed for us?
+G2|0.35|We talk face to face across the world. We pay with a phone. We learn online.
+G3|0.65|Hospitals watch patients every second, and alarms keep homes safe.
+G4|0.35|But there is another side.
+G5|0.35|Old gadgets become electronic waste, with harmful metals like lead inside.
+G6|0.65|Too much screen time strains our eyes and our sleep. And online fraud is a real risk.
+T1|0.8|Electronics makes life easier. Using it wisely is our job.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think milliampere hours measure current. They do not.
+X3|0.65|Milliampere hours measure charge. Current times time. One milliampere hour is three point six coulombs.
+X4|0.65|Where is this asked? In PUC board papers. Explain the impact of electronics on daily life, with advantages and disadvantages, or name the electronic parts of a common device.
+Q1|5.4|Try this. A phone battery is rated three thousand milliampere hours. How much charge can it deliver, in coulombs?
+A1|0.35|B. Ten thousand, eight hundred coulombs.
+A2|0.35|Three thousand milliampere hours is three ampere hours.
+A3|0.35|One hour is three thousand six hundred seconds.
+A4|0.65|So charge equals three amperes times three thousand six hundred seconds, which is ten thousand, eight hundred coulombs.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, electric charge, current, voltage and potential difference. What really pushes electrons around a circuit?

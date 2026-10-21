@@ -1,0 +1,154 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Electronics Ep 23 - Instrument Symbols, Controls, Ranges and Precautions</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== Breadboard (PUC Electronics) layout ===== */
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.card svg.full{position:absolute;left:0;top:0}
+.big{position:absolute;font:600 56px 'IBM Plex Mono';white-space:nowrap}
+.sm{position:absolute;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.txt{position:absolute;font:500 30px/1.35 Poppins;white-space:nowrap}
+#ghost{top:168px}
+/* hook */
+#aC{left:160px;top:260px;width:784px;height:600px;overflow:hidden}
+#aImg{position:absolute;left:24px;top:84px;height:516px}
+#dlC{left:976px;top:260px;width:784px;height:600px}
+/* symbols */
+#yL{left:160px;top:260px;width:784px;height:600px}
+#yR{left:976px;top:260px;width:784px;height:600px}
+.yr{position:absolute;left:32px;width:720px;height:112px;border-radius:14px;background:var(--soft);border:2.5px solid var(--soft)}
+.yr svg{position:absolute;left:16px;top:6px}
+.yr .yn{position:absolute;left:170px;top:18px;font:700 32px Poppins;white-space:nowrap}
+.yr .ym{position:absolute;left:170px;top:62px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+/* ranges */
+#gC{left:160px;top:260px;width:784px;height:600px}
+#gM{left:976px;top:260px;width:784px;height:284px}
+#gS{left:976px;top:576px;width:784px;height:284px}
+#lcd{position:absolute;left:32px;top:76px;width:360px;height:132px;border-radius:12px;background:#E4E9DF;border:3px solid var(--ink)}
+#lcdV{position:absolute;right:82px;top:22px;font:600 64px 'IBM Plex Mono';color:var(--ink);white-space:nowrap}
+#lcdU{position:absolute;right:22px;top:52px;font:600 30px 'IBM Plex Mono';color:var(--ink2);white-space:nowrap}
+#rngs{position:absolute;left:424px;top:84px;display:flex;flex-direction:column;gap:12px}
+#rngs span{display:inline-flex;align-items:center;justify-content:center;width:160px;height:44px;border-radius:10px;border:2px solid #CBD0DA;background:#fff;color:#9AA0AC;font:600 22px 'IBM Plex Mono';white-space:nowrap}
+#rngL{position:absolute;left:608px;top:96px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+#rngV{position:absolute;left:608px;top:126px;font:600 40px 'IBM Plex Mono';white-space:nowrap}
+#gOK{position:absolute;left:32px;top:228px}
+#gOL{position:absolute;left:32px;top:228px}
+#scS{position:absolute;left:24px;top:68px}
+#vdL{position:absolute;left:360px;top:72px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+#vdV{position:absolute;left:360px;top:98px;font:600 40px 'IBM Plex Mono';white-space:nowrap}
+#offT{position:absolute;left:540px;top:104px}
+.ctl{position:absolute;left:360px}
+/* analogue scale */
+#pL{left:160px;top:260px;width:784px;height:600px}
+#pR{left:976px;top:260px;width:784px;height:600px}
+#pRng{position:absolute;right:32px;top:22px}
+#pRead{position:absolute;left:32px;top:500px;width:720px;height:76px;border-radius:14px;background:var(--soft);display:flex;align-items:center;gap:18px;padding:0 24px;box-sizing:border-box;white-space:nowrap}
+#pRead .k{font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+#pRead .v{font:600 40px 'IBM Plex Mono';color:var(--teal,#0E8F8F)}
+.st2{position:absolute;left:36px;display:flex;align-items:center;gap:22px;white-space:nowrap}
+.st2 .n{flex:none;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st2 .sx{font-size:34px}
+.st2 .why{font:500 22px Poppins;color:var(--mute)}
+#pBox{position:absolute;left:24px;top:348px;width:736px;height:108px;border-radius:14px;background:var(--ac2)}
+#eBox{position:absolute;left:24px;top:322px;width:736px;height:100px;border-radius:14px;background:var(--ac2)}
+/* precautions */
+#kL{left:160px;top:260px;width:1040px;height:600px}
+#kR{left:1232px;top:260px;width:528px;height:600px}
+.kr{position:absolute;left:24px;width:992px;height:96px;border-radius:14px;border-left:8px solid transparent}
+.kr .n{position:absolute;left:20px;top:24px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.kr .kt{position:absolute;left:88px;top:12px;font:700 28px Poppins;white-space:nowrap}
+.kr .kd{position:absolute;left:88px;top:52px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+#kIc{position:absolute;left:144px;top:110px;width:240px;height:240px;border-radius:50%;background:var(--ac2);display:flex;align-items:center;justify-content:center}
+#kCap{position:absolute;left:0;width:528px;top:390px;text-align:center;font:700 34px Poppins;white-space:nowrap}
+#kSub{position:absolute;left:0;width:528px;top:444px;text-align:center;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+/* exam */
+#trap{left:160px;top:260px;width:784px;height:300px}
+#tc{left:976px;top:260px;width:784px;height:300px}
+#wa{left:160px;top:592px;width:1600px;height:268px}
+#mq{left:160px;top:260px;width:1040px;height:600px}
+#mq .mq{font-size:30px}
+#so{left:1232px;top:260px;width:528px;height:600px}
+#so .sol{left:32px}
+.fcard .fl{font-size:40px}
+.fcard .fl.txt{font:500 28px Poppins}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · ELECTRONICS · CH 3 MEASURING INSTRUMENTS</div>
+    <div class="subj" id="subj">BREADBOARD</div>
+    <div id="title">Reading the <span class="acc">dial</span></div>
+    <div id="sub">Instrument symbols, controls, ranges and precautions</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E8A317" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="ghost" id="ghost">EXAMPLE FIGURES</div>
+
+    <!-- A: hook -->
+    <div class="sc" id="sA">
+      <div class="card" id="aC"><div class="lbl" style="left:32px;top:28px">AARAV · PCME · JEE</div>
+        <img id="aImg" src="../../assets/illustrations/puc/aarav.png" alt="">
+        <div class="pillp ac" id="aPill" style="left:470px;top:500px">So many markings</div></div>
+      <div class="card" id="dlC"><div class="lbl" style="left:32px;top:28px">THE DIAL</div>
+        <svg class="full" id="dlS" width="784" height="600"></svg>
+        <div class="pillp ink" id="dQ" style="left:32px;top:520px">What do they all mean?</div></div>
+    </div>
+
+    <!-- Y: symbols and sockets -->
+    <div class="sc" id="sY">
+      <div class="card" id="yL"><div class="lbl" style="left:32px;top:28px">SYMBOLS ON THE DIAL</div><div id="yRows"></div></div>
+      <div class="card" id="yR"><div class="lbl" style="left:32px;top:28px">SOCKETS</div><div class="lbl" id="yCl" style="left:32px;top:340px">CIRCUIT SYMBOLS</div>
+        <svg class="full" id="yS" width="784" height="600"></svg></div>
+    </div>
+
+    <!-- G: ranges -->
+    <div class="sc" id="sG">
+      <div class="card" id="gC"><div class="lbl" style="left:32px;top:28px">BREADBOARD · 9 V BATTERY</div><svg class="full" id="gCS" width="784" height="600"></svg></div>
+      <div class="card" id="gM"><div class="lbl" style="left:32px;top:28px">THE METER · DC VOLTS</div>
+        <div id="lcd"><div id="lcdV">----</div><div id="lcdU">V</div></div>
+        <div id="rngs"><span>2 V</span><span>20 V</span><span>200 V</span></div>
+        <div id="rngL">RANGE</div><div id="rngV">-</div>
+        <div class="tag" id="gOL" style="background:var(--red)">O L · OVER THE LIMIT</div><div class="tag" id="gOK" style="background:var(--ok)">BEST RANGE</div></div>
+      <div class="card" id="gS"><div class="lbl" style="left:32px;top:28px">OSCILLOSCOPE · DC</div>
+        <svg id="scS" width="300" height="200"></svg>
+        <div id="vdL">VOLTS / DIV</div><div id="vdV">1 V</div><div class="tag" id="offT" style="background:var(--red)">OFF SCREEN</div>
+        <div class="tag ctl" id="c0" style="top:156px">INTENSITY · BRIGHTNESS</div><div class="tag ctl" id="c1" style="top:196px">FOCUS · SHARP TRACE</div><div class="tag ctl" id="c2" style="top:236px">POSITION · MOVE</div></div>
+    </div>
+
+    <!-- P: analogue scale, derivation, worked example -->
+    <div class="sc" id="sP">
+      <div class="card" id="pL"><div class="lbl" style="left:32px;top:28px">ANALOGUE METER</div><div class="tag" id="pRng">RANGE 10 V</div>
+        <svg class="full" id="pS" width="784" height="600"></svg>
+        <div id="pRead"><span class="k">READING</span><span class="v" id="pRv">-</span></div></div>
+      <div class="card" id="pR"><div class="lbl" id="pL1" style="left:36px;top:28px">HOW TO READ A SCALE</div><div class="lbl" id="pL2" style="left:36px;top:28px">WORKED EXAMPLE</div>
+        <div id="pBox"></div><div id="pSteps"></div><div id="pNote" class="sm" style="left:36px;top:488px">d = needle divisions · N = total divisions</div>
+        <div id="eSteps"></div></div>
+    </div>
+
+    <!-- K: precautions -->
+    <div class="sc" id="sK">
+      <div class="card" id="kL"><div class="lbl" style="left:32px;top:28px">PRECAUTIONS</div><div id="kRows"></div></div>
+      <div class="card" id="kR"><div class="lbl" style="left:32px;top:28px">REMEMBER</div><div id="kIc"></div><div id="kCap"></div><div id="kSub"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div class="sc" id="sX"><div class="card red" id="trap"></div>
+      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">O L ON THE DISPLAY</div><svg class="full" id="tcS" width="784" height="300"></svg></div>
+      <div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div class="sc" id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + next -->
+    <div class="sc" id="sF"></div>
+  </div>
+  <div id="stmt"><div id="st1">Highest range first.</div><div id="st2">Then <span class="acc">step down.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

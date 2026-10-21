@@ -1,0 +1,44 @@
+H1|0.35|Aarav pulls his phone charger out of the wall. But the little light on the charger stays on for a moment, then slowly fades.
+H2|0.5|The plug is out. So where is that light getting its energy from?
+I1|0.35|The answer is stored energy. Some parts in a circuit can hold energy, like a tiny tank.
+I2|0.35|Let's meet the three passive parts. A resistor does not store energy. It turns electrical energy into heat.
+I3|0.35|A capacitor stores energy in an electric field, between its two plates.
+I4|0.65|And an inductor stores energy in a magnetic field, around its coil.
+B1|0.35|Let's watch a capacitor fill up on the breadboard.
+B2|0.35|Here is a battery, a capacitor, and a small lamp, with a two way switch.
+B3|0.35|Flip the switch to the battery. Electrons pile up on one plate and leave the other plate.
+B4|0.35|Watch the scope. The voltage across the capacitor rises fast at first, then slows down and levels off at twelve volts.
+B5|0.65|The charging current does the opposite. It starts big and dies away to zero. The capacitor is now full.
+B6|0.35|Now flip the switch to the lamp. There is no battery in this loop at all.
+B7|0.35|Yet the lamp lights up. The stored electrons rush back around the loop through the lamp.
+B8|0.65|On the scope, the voltage falls, and the lamp fades out together with it. That is exactly the charger light.
+T1|0.8|Resistors spend energy. Capacitors and inductors store it.
+D1|0.35|So how much energy does a capacitor hold? Let's build the formula.
+D2|0.7|First, the charge on a capacitor grows with its voltage. Q equals C times V. C is the capacitance, in farads.
+D3|0.7|On a graph of voltage against charge, that is a straight line from zero.
+D4|0.7|While charging, the voltage climbs from zero up to V. So on average, each bit of charge is pushed through V by two.
+D5|0.7|Work equals charge times voltage. So the energy U equals Q times V by two. That is the area of this triangle.
+D6|0.7|Now put Q equals C V. The energy U equals half C V squared.
+D7|0.65|C in farads, V in volts, and U comes out in joules.
+W1|0.35|Worked example. A one hundred microfarad capacitor is charged to twelve volts.
+W2|0.6|U equals half, times one hundred times ten to the minus six, times twelve squared.
+W3|0.65|That is seven point two millijoules.
+W4|0.35|Now double the voltage to twenty four volts. V is squared, so the energy becomes four times bigger.
+W5|0.65|Twenty eight point eight millijoules. Look at the graph. The new triangle holds four of the old ones.
+L1|0.35|Now the inductor. An inductor is a coil of wire.
+L2|0.35|When current flows through it, a magnetic field builds up around the coil. That field holds energy.
+L3|0.65|Its energy is U equals half L I squared. L is the inductance, in henries, and I is the current, in amperes.
+L4|0.35|An inductor hates sudden changes in current. Open the switch, and the field collapses.
+L5|0.65|Its stored energy has to go somewhere, so it can jump the gap as a spark.
+L6|0.65|See the pattern? A capacitor holds on to voltage. An inductor holds on to current. Both formulas have a half and a square.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think the capacitor keeps all the energy the battery gives. It does not.
+X3|0.65|The battery gives Q times V. The capacitor stores only half of it, half Q V. The other half is lost as heat in the wires.
+X4|0.65|Where is this asked? In PUC board papers, and in JEE Main, for example in February twenty twenty one and January twenty twenty three. Find the energy in a capacitor or an inductor, or the energy lost.
+Q1|5.4|Try this. A fifty millihenry inductor carries two amperes. What capacitance stores the same energy at twenty volts?
+A1|0.35|B. Five hundred microfarads.
+A2|0.35|First, the inductor energy. Half times zero point zero five times two squared. That is zero point one joules.
+A3|0.35|Now set half C V squared equal to zero point one. So C equals two U divided by V squared.
+A4|0.65|That is zero point two divided by four hundred. Five times ten to the minus four farads, or five hundred microfarads.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, transducers and their applications. How does a thermometer turn your body heat into a number?

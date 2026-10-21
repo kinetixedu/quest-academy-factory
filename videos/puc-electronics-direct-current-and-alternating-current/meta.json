@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "Direct Current and Alternating Current",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 7
+ },
+ "class": "11",
+ "title": "DC vs AC Explained Simply | PUC Electronics Class 11",
+ "description": "Aarav's torch runs on a cell, but his table fan runs from the wall socket. Both use electric current, so why can't the fan just run on a cell? In this animated lesson we compare direct current (DC), which flows in one direction only, with alternating current (AC), which keeps reversing as a smooth sine wave made by a coil turning in a magnetic field.\n\nOn a live breadboard the same resistor and indicator lamp run first from a cell (steady electrons, a flat line on the oscilloscope) and then from an AC source in slow motion (electrons rocking back and forth, a sine wave on the scope, the reading swinging from plus to minus). We define the cycle, the period T and the frequency f = 1/T, show why every cycle has two reversals, and work out the period and reversals of India's 230 V, 50 Hz mains. Then why homes get AC (transformers and high-voltage lines) while phones need DC, the exam trap (50 Hz means 100 reversals a second), where it is asked, an original JEE Main pattern practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 7 of PUC Electronics, Class 11, Chapter 2: Principles of Electricity, Network Theorems and AC Principles (Karnataka PUC Electronics).\n\nIn this video:\n0:00 A torch and a table fan\n0:10 Direct current\n0:41 Alternating current and the sine wave\n1:06 DC and AC on a breadboard\n1:47 DC flows one way, AC turns back\n1:51 Cycle, period and frequency: f = 1/T\n2:19 Worked example: India's 50 Hz mains\n2:40 Why homes get AC\n3:10 Exam trap: 50 Hz means 100 reversals\n3:23 Where it is asked\n3:33 Practice question\n4:03 Formula card\n\nNext episode: Ohm's Law and Electrical Resistance.\n\nVideo by Quest Academy.",
+ "tags": [
+  "direct current",
+  "alternating current",
+  "AC vs DC",
+  "difference between AC and DC",
+  "frequency and time period",
+  "f = 1/T",
+  "50 Hz mains India",
+  "sine wave",
+  "PUC electronics",
+  "1st PUC electronics chapter 2",
+  "principles of electricity",
+  "AC principles",
+  "Karnataka PUC electronics",
+  "class 11 electronics"
+ ],
+ "thumb": {
+  "title": "DC vs AC",
+  "accent_word": "AC",
+  "frame_t": 96
+ }
+}

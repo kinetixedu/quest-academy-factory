@@ -1,0 +1,124 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Electronics Ep 13 - AC Waveform: Frequency, Period, Phase and Amplitude</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== Breadboard (PUC Electronics) layout ===== */
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.card svg.full{position:absolute;left:0;top:0}
+.big{position:absolute;font:600 56px 'IBM Plex Mono';white-space:nowrap}
+.sm{position:absolute;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+#ghost{top:168px}
+/* hook */
+#aC{left:160px;top:260px;width:784px;height:600px;overflow:hidden}
+#aImg{position:absolute;left:24px;top:84px;height:516px}
+#hC{left:976px;top:260px;width:784px;height:600px}
+/* four ideas */
+.sT{position:absolute;top:260px;width:376px;height:380px}
+.sT svg{position:absolute;left:0;top:0}
+.sT .nm{position:absolute;left:0;width:376px;top:214px;text-align:center;font:700 32px Poppins;white-space:nowrap}
+.sT .ex{position:absolute;left:24px;width:328px;top:266px;text-align:center;font:500 24px/1.35 Poppins;color:var(--mute)}
+/* breadboard: circuit (left) + wheel and scope (right) */
+#ck,#phL{left:160px;top:260px;width:600px;height:600px}
+#wv,#wv2{left:792px;top:260px;width:968px;height:600px}
+.ro2{position:absolute;left:32px;top:76px;width:536px;display:grid;grid-template-columns:auto 1fr auto;column-gap:18px;row-gap:10px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .k.n{font-style:normal;font-size:22px;font-family:'IBM Plex Mono';letter-spacing:.06em}
+.ro2 .v{font:600 36px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 22px 'IBM Plex Mono';color:var(--mute);white-space:nowrap;min-width:52px}
+/* derivation */
+#dL,#wL{left:160px;top:260px;width:784px;height:600px}
+#dR,#wR{left:976px;top:260px;width:784px;height:600px}
+.st2{position:absolute;left:36px;display:flex;align-items:center;gap:22px;white-space:nowrap}
+.st2 .n{flex:none;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st2 .sx{font-size:34px}
+.st2 .why{font:500 22px Poppins;color:var(--mute)}
+.hbox{position:absolute;left:24px;width:736px;height:92px;border-radius:14px;background:var(--ac2)}
+.def{position:absolute;left:36px;width:528px;font:600 32px/1.32 Poppins;letter-spacing:-.01em}
+.def b{color:var(--ac)}
+/* exam */
+#trap{left:160px;top:260px;width:784px;height:300px}
+#tc{left:976px;top:260px;width:784px;height:300px}
+#wa{left:160px;top:592px;width:1600px;height:268px}
+#mq{left:160px;top:260px;width:1040px;height:600px}
+#qc,#so{left:1232px;top:260px;width:528px;height:600px}
+#so .sol{left:32px}
+.fcard .fl{font-size:44px}
+.fcard .fl.txt{font:500 28px Poppins}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · ELECTRONICS · CH 2 PRINCIPLES OF ELECTRICITY</div>
+    <div class="subj" id="subj">BREADBOARD</div>
+    <div id="title">Reading an <span class="acc">AC wave</span></div>
+    <div id="sub">Frequency, period, phase and amplitude</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E8A317" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="ghost" id="ghost">EXAMPLE FIGURES</div>
+
+    <!-- A: hook -->
+    <div class="sc" id="sA">
+      <div class="card" id="aC"><div class="lbl" style="left:32px;top:28px">AARAV · PCME · JEE</div>
+        <img id="aImg" src="../../assets/illustrations/puc/aarav.png" alt="">
+        <svg id="sockS" width="300" height="420" style="position:absolute;left:452px;top:100px"></svg></div>
+      <div class="card" id="hC"><div class="lbl" style="left:32px;top:28px">THE VOLTAGE AT THE SOCKET</div><div class="tag" id="hSlow" style="right:32px;top:22px">SLOW-MOTION VIEW</div>
+        <svg id="hS" width="720" height="360" style="position:absolute;left:32px;top:84px"></svg>
+        <div class="pillp ac" id="hP" style="left:32px;top:476px">50 swings every second</div>
+        <div class="pillp bad" id="hQ" style="left:376px;top:476px">How do we describe it?</div></div>
+    </div>
+
+    <!-- I: four ideas -->
+    <div class="sc" id="sI"><div id="iTiles"></div></div>
+
+    <!-- B: breadboard -->
+    <div class="sc" id="sB">
+      <div class="card" id="ck"><div class="lbl" style="left:32px;top:28px">CIRCUIT · AC SOURCE + RESISTOR</div>
+        <svg class="full" id="ckS" width="600" height="600"></svg>
+        <div class="ro2" id="ro1" style="top:380px"></div></div>
+      <div class="card" id="wv"><div class="lbl" style="left:32px;top:28px">TURNING ARM + OSCILLOSCOPE</div><div class="tag" id="wvSlow" style="right:32px;top:22px">SLOW-MOTION VIEW</div></div>
+    </div>
+
+    <!-- D: derivation -->
+    <div class="sc" id="sD">
+      <div class="card" id="dL"><div class="lbl" style="left:32px;top:28px">ONE TURN OF THE ARM</div><svg class="full" id="dS" width="784" height="600"></svg></div>
+      <div class="card" id="dR"><div class="lbl" style="left:36px;top:28px">THE EQUATION</div><div class="hbox" id="dBox" style="top:380px"></div><div id="dSteps"></div></div>
+    </div>
+
+    <!-- PH: phase -->
+    <div class="sc" id="sPh">
+      <div class="card" id="phL"><div class="lbl" style="left:36px;top:28px">PHASE</div>
+        <div class="def" id="phD">Phase tells you <b>where in its cycle</b> a wave is at a given moment.</div>
+        <svg class="full" id="phS" width="600" height="600"></svg></div>
+      <div class="card" id="wv2"><div class="lbl" style="left:32px;top:28px">TWO WAVES · SAME FREQUENCY</div><div class="tag" id="phT" style="right:32px;top:22px">LEADS BY 90°</div></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div class="sc" id="sW">
+      <div class="card" id="wL"><div class="lbl" style="left:32px;top:28px">WORKED EXAMPLE · MAINS IN INDIA</div><svg class="full" id="wS" width="784" height="600"></svg></div>
+      <div class="card" id="wR"><div class="lbl" style="left:36px;top:28px">SOLUTION</div><div class="hbox" id="wBox" style="top:378px"></div><div id="wSteps"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div class="sc" id="sX"><div class="card red" id="trap"></div>
+      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">MATCH TERM BY TERM</div><div id="tcF"></div><svg class="full" id="tcS" width="784" height="300"></svg></div>
+      <div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div class="sc" id="sQ"><div class="card" id="mq"></div>
+      <div class="card" id="qc"><div class="lbl" style="left:32px;top:28px">ON THE SCOPE</div><svg class="full" id="qS" width="528" height="600"></svg></div>
+      <div class="card ok" id="so"></div></div>
+    <!-- F: formula card + next -->
+    <div class="sc" id="sF"></div>
+  </div>
+  <div id="stmt"><div id="st1">Amplitude says how big. Frequency says how often.</div><div id="st2">Phase says <span class="acc">when.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

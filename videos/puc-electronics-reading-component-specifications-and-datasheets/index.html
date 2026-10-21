@@ -1,0 +1,143 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Electronics Ep 33 - Reading Component Specifications and Datasheets</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== Breadboard (PUC Electronics) layout ===== */
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.card svg.full{position:absolute;left:0;top:0}
+.big{position:absolute;font:600 56px 'IBM Plex Mono';white-space:nowrap}
+.sm{position:absolute;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.txt{position:absolute;font:500 30px/1.35 Poppins;white-space:nowrap}
+#ghost{top:168px}
+/* hook */
+#aC{left:160px;top:260px;width:784px;height:600px;overflow:hidden}
+#aImg{position:absolute;left:24px;top:84px;height:516px}
+#thC{left:976px;top:260px;width:784px;height:284px}
+#nwC{left:976px;top:576px;width:784px;height:284px}
+.chk{position:absolute;left:36px;display:flex;align-items:center;gap:16px;font:600 30px Poppins;white-space:nowrap}
+.chk .m{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--soft)}
+/* datasheet */
+#dsL{left:160px;top:260px;width:784px;height:600px}
+#dsR{left:976px;top:260px;width:784px;height:600px}
+.blk{position:absolute;left:40px;width:704px;border-radius:10px;border:2px solid var(--line);background:#fff}
+.blk .bh{position:absolute;left:16px;top:10px;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.blk .bt{position:absolute;left:16px;font:500 16px 'IBM Plex Mono';color:var(--ink2);white-space:pre}
+.dsr{position:absolute;left:32px;width:720px;height:88px;border-radius:14px;background:var(--soft)}
+.dsr .n{position:absolute;left:20px;top:21px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.dsr .nm{position:absolute;left:88px;top:14px;font:700 26px Poppins;white-space:nowrap}
+.dsr .ex{position:absolute;left:88px;top:50px;font:500 20px Poppins;color:var(--mute);white-space:nowrap}
+/* key specs */
+.kC{position:absolute;top:260px;width:512px;height:380px}
+.kC svg{position:absolute;left:0;top:56px}
+.kC .nm{position:absolute;left:0;width:512px;top:186px;text-align:center;font:700 32px Poppins;white-space:nowrap}
+.kC .sp{position:absolute;left:0;width:512px;top:244px;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;padding:0 28px;box-sizing:border-box}
+.kC .sp span{height:42px;padding:0 14px;border-radius:9px;background:var(--soft);display:inline-flex;align-items:center;font:600 20px Poppins;white-space:nowrap}
+#tolC{left:160px;top:672px;width:1600px;height:188px}
+/* breadboard */
+#ck{left:160px;top:260px;width:928px;height:600px}
+#sc{left:1120px;top:260px;width:640px;height:300px}
+#rb{left:1120px;top:592px;width:640px;height:268px}
+#scS{position:absolute;left:24px;top:76px}
+.ro2{position:absolute;left:32px;top:72px;width:576px;display:grid;grid-template-columns:auto 1fr auto;column-gap:18px;row-gap:10px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .k.n{font-style:normal;font-size:24px;font-family:'IBM Plex Mono';letter-spacing:.06em}
+.ro2 .v{font:600 36px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 22px 'IBM Plex Mono';color:var(--mute);white-space:nowrap;min-width:52px}
+/* derivation */
+#nL{left:160px;top:260px;width:784px;height:600px}
+#nR{left:976px;top:260px;width:784px;height:600px}
+.st2{position:absolute;left:36px;display:flex;align-items:center;gap:22px;white-space:nowrap}
+.st2 .n{flex:none;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st2 .sx{font-size:34px}
+.st2 .why{font:500 22px Poppins;color:var(--mute)}
+#nBox{position:absolute;left:24px;top:420px;width:736px;height:100px;border-radius:14px;background:var(--ac2)}
+#nUnit{position:absolute;left:36px;top:540px;font:500 24px 'IBM Plex Mono';color:var(--ink2);white-space:nowrap}
+/* derating */
+#gC{left:160px;top:260px;width:1600px;height:600px}
+/* exam */
+#trap{left:160px;top:260px;width:784px;height:300px}
+#tc{left:976px;top:260px;width:784px;height:300px}
+#wa{left:160px;top:592px;width:1600px;height:268px}
+#mq{left:160px;top:260px;width:1040px;height:600px}
+#so{left:1232px;top:260px;width:528px;height:600px}
+#so .sol{left:32px}
+.fcard .fl{font-size:44px}
+.fcard .fl.txt{font:500 28px Poppins}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · ELECTRONICS · CH 4 PASSIVE ELECTRONIC COMPONENTS</div>
+    <div class="subj" id="subj">BREADBOARD</div>
+    <div id="title">Why did the resistor <span class="acc">burn?</span></div>
+    <div id="sub">Reading component specifications and datasheets</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E8A317" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="ghost" id="ghost">EXAMPLE FIGURES</div>
+
+    <!-- A: hook -->
+    <div class="sc" id="sA">
+      <div class="card" id="aC"><div class="lbl" style="left:32px;top:28px">AARAV · PCME · JEE</div>
+        <img id="aImg" src="../../assets/illustrations/puc/aarav.png" alt="">
+        <svg id="hkS" width="320" height="420" style="position:absolute;left:440px;top:84px"></svg>
+        <div class="pillp bad" id="aPill" style="left:486px;top:500px">Too hot!</div></div>
+      <div class="card" id="thC"><div class="lbl" style="left:32px;top:28px">THE VALUE</div>
+        <svg id="vS" width="300" height="200" style="position:absolute;left:24px;top:64px"></svg>
+        <div class="big" id="thN" style="left:360px;top:92px;font-size:72px">1 kΩ</div><div class="sm" id="thL" style="left:364px;top:190px">exactly what the circuit needed</div></div>
+      <div class="card" id="nwC"><div class="lbl" style="left:32px;top:28px">WHAT WENT WRONG?</div>
+        <div class="chk" id="ck1" style="top:92px"><span class="m"></span>Value</div><div class="chk" id="ck2" style="top:168px"><span class="m"></span>Something else?</div>
+        <svg id="smS" width="300" height="200" style="position:absolute;left:440px;top:64px"></svg></div>
+    </div>
+
+    <!-- S: datasheet sections -->
+    <div class="sc" id="sS">
+      <div class="card" id="dsL"><div class="lbl" style="left:32px;top:28px">EXAMPLE DATASHEET · CARBON FILM RESISTOR</div><div id="page"></div></div>
+      <div class="card" id="dsR"><div class="lbl" style="left:32px;top:28px">THE MAIN SECTIONS</div><div id="dsRows"></div></div>
+    </div>
+
+    <!-- K: key specs -->
+    <div class="sc" id="sK"><div id="kCards"></div>
+      <div class="card" id="tolC"><div class="lbl" style="left:32px;top:28px">TOLERANCE · 1 kΩ ± 5 %</div><svg class="full" id="tolS" width="1600" height="188"></svg></div></div>
+
+    <!-- B: breadboard -->
+    <div class="sc" id="sB">
+      <div class="card" id="ck"><div class="lbl" style="left:32px;top:28px">POWER TEST · 1 kΩ, RATED 0.25 W</div>
+        <div class="tag" id="ckE" style="right:32px;top:22px"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="#E8A317" stroke="#16213E" stroke-width="1.5"/></svg>ELECTRONS</div>
+        <svg class="full" id="ckS" width="928" height="600"></svg></div>
+      <div class="card" id="sc"><div class="lbl" style="left:32px;top:28px">OSCILLOSCOPE</div><svg id="scS" width="592" height="200"></svg></div>
+      <div class="card" id="rb"><div class="lbl" style="left:32px;top:28px">LIVE READOUT</div><div class="ro2" id="ro1"></div></div>
+    </div>
+
+    <!-- N: derivation + worked example -->
+    <div class="sc" id="sN">
+      <div class="card" id="nL"><div class="lbl" style="left:32px;top:28px">POWER AGAINST VOLTAGE · 1 kΩ</div><svg class="full" id="nS" width="784" height="600"></svg></div>
+      <div class="card" id="nR"><div class="lbl" id="nRL1" style="left:36px;top:28px">DERIVATION</div><div class="lbl" id="nRL2" style="left:36px;top:28px">WORKED EXAMPLE</div>
+        <div id="nBox"></div><div id="nSteps"></div><div id="nUnit">P in W · R in Ω   →   V in V, I in A</div><div id="wSteps"></div></div>
+    </div>
+
+    <!-- G: derating -->
+    <div class="sc" id="sG"><div class="card" id="gC"><div class="lbl" style="left:36px;top:28px">DERATING CURVE · FROM THE EXAMPLE DATASHEET</div><svg class="full" id="gS" width="1600" height="600"></svg>
+      <div class="ro2" id="gRo" style="left:1140px;top:120px;width:420px"></div></div></div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div class="sc" id="sX"><div class="card red" id="trap"></div>
+      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">WHERE TO WORK</div><svg class="full" id="tcS" width="784" height="300"></svg></div>
+      <div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div class="sc" id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + next -->
+    <div class="sc" id="sF"></div>
+  </div>
+  <div id="stmt"><div id="st1">The value tells you what a part is.</div><div id="st2">The rating tells you what it can <span class="acc">survive.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

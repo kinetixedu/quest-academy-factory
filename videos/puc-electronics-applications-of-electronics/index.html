@@ -1,0 +1,141 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Electronics Ep 4 - Applications of Electronics</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== Breadboard (PUC Electronics) layout ===== */
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.card svg.full{position:absolute;left:0;top:0}
+.big{position:absolute;font:600 56px 'IBM Plex Mono';white-space:nowrap}
+.sm{position:absolute;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.txt{position:absolute;font:500 30px/1.35 Poppins;white-space:nowrap}
+#ghost{top:168px}
+.st2{position:absolute;left:36px;display:flex;align-items:center;gap:22px;white-space:nowrap}
+.st2 .n{flex:none;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st2 .sx{font-size:34px}
+.st2 .sx.tx{font:600 28px Poppins}
+.st2 .why{font:500 22px Poppins;color:var(--mute)}
+.hiB{position:absolute;left:24px;width:736px;border-radius:14px;background:var(--ac2)}
+.ro2{position:absolute;left:32px;top:76px;width:576px;display:grid;grid-template-columns:auto 1fr auto;column-gap:18px;row-gap:14px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .k.n{font-style:normal;font-size:24px;font-family:'IBM Plex Mono';letter-spacing:.06em}
+.ro2 .v{font:600 38px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 22px 'IBM Plex Mono';color:var(--mute);white-space:nowrap;min-width:52px}
+.blk{position:absolute;border-radius:14px;border:3px solid var(--line);background:#fff;box-sizing:border-box;white-space:nowrap}
+.blk .nm{position:absolute;left:20px;top:14px;font:700 26px Poppins;color:var(--ink)}
+.blk .ds{position:absolute;left:20px;top:52px;font:500 18px Poppins;color:var(--mute)}
+.blk svg{position:absolute;right:14px;bottom:12px}
+.rl{position:absolute;left:36px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook */
+#aC{left:160px;top:260px;width:784px;height:600px;overflow:hidden}
+#aImg{position:absolute;left:24px;top:84px;height:516px}
+#fgC{left:976px;top:260px;width:784px;height:284px}
+#twC{left:976px;top:576px;width:784px;height:284px}
+/* chain idea */
+#iC{left:160px;top:260px;width:1600px;height:600px}
+/* communication */
+#oC{left:160px;top:260px;width:1600px;height:600px}
+/* radar */
+#ck{left:160px;top:260px;width:928px;height:600px}
+#sc{left:1120px;top:260px;width:640px;height:300px}
+#rb{left:1120px;top:592px;width:640px;height:268px}
+#scS{position:absolute;left:24px;top:76px}
+#rL{left:160px;top:260px;width:784px;height:600px}
+#rR{left:976px;top:260px;width:784px;height:600px}
+/* industry */
+#nL{left:160px;top:260px;width:784px;height:600px}
+#nR{left:976px;top:260px;width:784px;height:600px}
+/* medicine */
+#mk{left:160px;top:260px;width:928px;height:600px}
+#msc{left:1120px;top:260px;width:640px;height:300px}
+#mrb{left:1120px;top:592px;width:640px;height:268px}
+#mscS{position:absolute;left:24px;top:76px}
+/* exam */
+#trap{left:160px;top:260px;width:784px;height:300px}
+#tc{left:976px;top:260px;width:784px;height:300px}
+#wa{left:160px;top:592px;width:1600px;height:268px}
+#mq{left:160px;top:260px;width:1040px;height:600px}
+#so{left:1232px;top:260px;width:528px;height:600px}
+#so .sol{left:32px}
+.fcard .fl{font-size:40px}
+.fcard .fl.txt{font:500 28px Poppins}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · ELECTRONICS · CH 1 INTRODUCTION TO ELECTRONICS</div>
+    <div class="subj" id="subj">BREADBOARD</div>
+    <div id="title">Seeing through <span class="acc">fog</span></div>
+    <div id="sub">Applications of electronics</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E8A317" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="ghost" id="ghost">EXAMPLE FIGURES</div>
+
+    <!-- A: hook -->
+    <div class="sc" id="sA">
+      <div class="card" id="aC"><div class="lbl" style="left:32px;top:28px">AARAV · AT THE AIRPORT</div>
+        <img id="aImg" src="../../assets/illustrations/puc/aarav.png" alt="">
+        <svg id="plS" width="300" height="300" style="position:absolute;left:452px;top:120px"></svg>
+        <div class="pillp ac" id="aPill" style="left:470px;top:476px">Planes still land</div></div>
+      <div class="card" id="fgC"><div class="lbl" style="left:32px;top:28px">OUTSIDE · THICK FOG</div><svg class="full" id="fgS" width="784" height="284"></svg>
+        <div class="pillp bad" id="fgP" style="left:560px;top:120px">Runway: hidden</div></div>
+      <div class="card" id="twC"><div class="lbl" style="left:32px;top:28px">CONTROL TOWER SCREEN</div><svg class="full" id="twS" width="784" height="284"></svg>
+        <div class="pillp good" id="twP" style="left:560px;top:120px">Plane: seen</div></div>
+    </div>
+
+    <!-- I: the chain idea -->
+    <div class="sc" id="sI"><div class="card" id="iC"><div class="lbl" style="left:36px;top:28px">EVERY APPLICATION IS A CHAIN</div><svg class="full" id="iS" width="1600" height="600"></svg><div id="iB"></div><div id="iF"></div></div></div>
+
+    <!-- O: communication + entertainment chains -->
+    <div class="sc" id="sO"><div class="card" id="oC"><div class="lbl" style="left:36px;top:28px">ONE REAL CHAIN PER FIELD</div><svg class="full" id="oS" width="1600" height="600"></svg><div id="oB"></div></div></div>
+
+    <!-- R: radar breadboard -->
+    <div class="sc" id="sR">
+      <div class="card" id="ck"><div class="lbl" style="left:32px;top:28px">DEFENCE · RADAR</div><div class="tag" id="slowT" style="right:32px;top:22px">SLOW-MOTION VIEW</div>
+        <svg class="full" id="ckS" width="928" height="600"></svg></div>
+      <div class="card" id="sc"><div class="lbl" style="left:32px;top:28px">OSCILLOSCOPE</div><svg id="scS" width="592" height="200"></svg></div>
+      <div class="card" id="rb"><div class="lbl" style="left:32px;top:28px">LIVE READOUT</div><div class="ro2" id="ro1"></div></div>
+    </div>
+
+    <!-- RD: radar formula + worked example -->
+    <div class="sc" id="sD2">
+      <div class="card" id="rL"><div class="lbl" style="left:32px;top:28px">THERE AND BACK</div><svg class="full" id="gS" width="784" height="600"></svg><div class="ro2" id="gRo" style="top:396px"></div></div>
+      <div class="card" id="rR"><div class="lbl" id="rRL1" style="left:36px;top:28px">DERIVATION</div><div class="lbl" id="rRL2" style="left:36px;top:28px">WORKED EXAMPLE</div>
+        <div class="hiB" id="dBox" style="top:282px;height:100px"></div><div id="dSteps"></div><div id="dUnit" style="position:absolute;left:36px;top:420px;font:500 24px 'IBM Plex Mono';color:var(--ink2);white-space:nowrap">d in m · c in m/s · t in s</div>
+        <div class="hiB" id="wBox" style="top:420px;height:100px"></div><div id="wSteps"></div></div>
+    </div>
+
+    <!-- N: industry -->
+    <div class="sc" id="sN">
+      <div class="card" id="nL"><div class="lbl" style="left:32px;top:28px">INDUSTRY · OVEN TEMPERATURE</div><svg class="full" id="nS" width="784" height="600"></svg></div>
+      <div class="card" id="nR"><div class="lbl" style="left:32px;top:28px">THE CONTROL LOOP</div><svg class="full" id="nS2" width="784" height="600"></svg><div id="nB"></div></div>
+    </div>
+
+    <!-- M: medicine ECG breadboard -->
+    <div class="sc" id="sM">
+      <div class="card" id="mk"><div class="lbl" style="left:32px;top:28px">MEDICINE · ECG MACHINE</div><svg class="full" id="mkS" width="928" height="600"></svg><div id="mB"></div></div>
+      <div class="card" id="msc"><div class="lbl" style="left:32px;top:28px">OSCILLOSCOPE</div><svg id="mscS" width="592" height="200"></svg></div>
+      <div class="card" id="mrb"><div class="lbl" style="left:32px;top:28px">LIVE READOUT</div><div class="ro2" id="mro"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div class="sc" id="sX"><div class="card red" id="trap"></div>
+      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">THE PULSE GOES TWICE</div><svg class="full" id="tcS" width="784" height="300"></svg></div>
+      <div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div class="sc" id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + next -->
+    <div class="sc" id="sF"></div>
+  </div>
+  <div id="stmt"><div id="st1">Different fields. One idea.</div><div id="st2">Sense, process, <span class="acc">act.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
