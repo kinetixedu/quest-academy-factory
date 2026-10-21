@@ -1,0 +1,59 @@
+H1|0.4|A race track tilts at its curves. So does a flyover ramp, and a cycling track.
+H2|0.45|A leaning road looks unsafe. So why build one?
+H3|0.35|Aarav rides up the flyover near college. On the curve, the road tilts, with its outer edge higher.
+H4|0.5|Why tilt it at all? And how much tilt is just right?
+H5|0.65|By the end of this video, you will find the right angle with one short formula.
+P1|0.35|So what is banking?
+P2|0.4|A banked road is a curve with its outer edge raised. It tilts toward the centre by an angle theta.
+P3|0.4|In episode sixty eight, a flat curve needed friction to push the car in.
+P4|0.6|On a banked road, the road's normal force leans inward, so part of it points to the centre.
+P5|0.65|So the road itself can turn the car, even with no friction.
+S1|0.35|A one tonne car on a fifty metre curve, seen from behind.
+S2|0.4|On a flat road, theta is zero. The normal force points straight up. It cannot turn the car.
+S3|0.4|Now tilt the road. The normal force tilts too, by the same angle theta.
+S4|0.4|Its sideways part, N sine theta, points to the centre. That is the centripetal force.
+S5|0.5|More tilt, more inward push, so a faster ideal speed. The dot climbs the graph.
+S6|0.35|Slow-mo replay, at twenty degrees.
+S7|0.4|At the ideal speed, thirteen point four metres per second, friction is zero.
+S8|0.4|Go faster, and the car tends to slide up and out. Friction acts down the slope.
+S9|0.65|Go slower, and it tends to slide down and in. Friction acts up the slope.
+D1|0.35|Now the formula, step by step. No friction first.
+D2|0.75|Step one. Up and down. The upward part of N, N cos theta, balances the weight, m g.
+D3|0.75|Step two. Sideways. N sine theta gives the centripetal force, m v squared over r.
+D4|0.75|Step three. Divide the two. Tan theta equals v squared over r g. So the ideal speed is root r g tan theta.
+D5|0.75|Step four. Now add friction down the slope, at its limit, mu N.
+D6|0.75|Step five. Solve them. The top speed is root of r g, times mu plus tan theta, over one minus mu tan theta.
+T1|0.7|Remember this. On a banked road, the normal force leans in and helps turn the car.
+C1|0.35|Now, side by side.
+C2|0.4|A flat road: only friction turns the car. Top speed, root mu r g.
+C3|0.6|A banked road: the normal force helps. Put theta to zero in the big formula, and you get the flat road back.
+C4|3.2|Now you try. A curve is banked for thirteen metres per second. On ice, with no grip, a car goes round at exactly thirteen. Does it make the turn? Pause and decide.
+C5|0.65|Yes! At the ideal speed, N sine theta alone gives the centripetal force. No friction is needed.
+K1|3.2|One more. A car goes slower than the ideal speed. Which way does friction act on it? Pause and think.
+K2|0.65|Up the slope! A slow car tends to slide down the tilt, so friction holds it up.
+R1|0.35|So why tilt the flyover? Follow the links.
+R2|0.4|One. Turning needs an inward force, m v squared over r.
+R3|0.4|Two. On a tilted road, the normal force leans inward.
+R4|0.4|Three. Its sideways part does some, or all, of the turning.
+R5|0.6|Four. So the tyres need less friction. Less wear, and safer when wet.
+W1|0.35|Now, one worked example.
+W2|0.5|A flyover curve of radius forty metres is built for ten metres per second. Find the bank angle, then the top speed with mu zero point three.
+W3|0.75|Tan theta is v squared over r g. One hundred, over forty times nine point eight. About zero point two five five.
+W4|0.75|So theta is about fourteen point three degrees.
+W5|0.75|Top speed. Root of r g, times mu plus tan theta, over one minus mu tan theta.
+W6|0.65|That is root of three ninety two, times zero point six zero one. About fifteen point four metres per second.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students write N equals m g cos theta, as for a block resting on a slope.
+X3|0.65|But at the ideal speed, N cos theta equals m g. So N is m g over cos theta, bigger than the weight.
+E1|0.6|Where is this asked? In bank angle and top speed numericals.
+Q1|5.4|Exam level now. A curve of radius ninety metres is banked for fifteen metres per second, and g is ten. A car takes it at exactly fifteen. Find the normal force divided by the car's weight. Pause and solve.
+A1|0.5|The answer is A. Root seventeen over four.
+A2|0.5|Tan theta is v squared over r g. Two twenty five over nine hundred, one quarter.
+A3|0.5|With no friction, N equals m g over cos theta. So N over m g is one over cos theta.
+A4|0.6|That is root of one plus tan squared. Root seventeen over sixteen. Root seventeen over four, about one point zero three.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Which force turns a car on a banked road with no friction?
+Y3|0.9|Two. Why is the normal force on a banked curve bigger than the car's weight?
+Y4|1.1|Three. A car goes faster than the ideal speed. Which way does friction act?
+N1|0.3|Next time: in a hospital lift, Diya feels heavier, then lighter. Does her weight change? We find out in apparent weight and weightlessness.

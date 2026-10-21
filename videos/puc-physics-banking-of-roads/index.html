@@ -1,0 +1,175 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 69 - Banking of Roads</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 69: banking of roads (Motion notebook, car on a banked curve seen from behind + ideal speed against bank angle) ===== */
+:root{--v:#2F6FEB;--a:#D64545;--f:#D9731A;--th:#B7791F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.vv{color:var(--v)}.aa{color:var(--a)}.ff{color:var(--f)}.th{color:var(--th)}
+.sv{position:absolute;left:0;top:0;overflow:hidden}
+/* title card cases */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft);overflow:hidden}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr svg{position:absolute;right:12px;top:0;overflow:hidden}
+.wq{position:absolute;top:494px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap}
+#ins{position:absolute;left:452px;top:262px;width:236px;height:214px;background:#fff;border-radius:12px;box-shadow:0 8px 20px rgba(22,33,62,.22);overflow:hidden}
+#ins .ml{position:absolute;left:16px;top:12px;font:600 14px 'IBM Plex Mono';letter-spacing:.1em;color:var(--mute);white-space:nowrap}
+/* P */
+#pdef{position:absolute;left:36px;top:76px;width:712px;font:600 32px/1.35 Poppins}
+.dr{position:absolute;left:36px;width:712px;height:104px;border-radius:14px;background:var(--soft)}
+.dr i{position:absolute;left:20px;top:20px;width:64px;height:64px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.dr .dn{position:absolute;left:104px;top:16px;font:700 28px Poppins;white-space:nowrap}
+.dr .dw{position:absolute;left:104px;top:60px;font:500 22px Poppins;color:var(--ink2);white-space:nowrap}
+/* sim readout */
+#roG{row-gap:4px}
+#roG .v{font-size:32px}
+#roG .k{font-size:28px}
+.stag{position:absolute;height:40px;padding:0 14px;border-radius:8px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.tv{position:absolute;width:210px;height:150px;border-radius:12px;background:#fff;border:2px solid var(--line);overflow:hidden}
+.tv .ml{position:absolute;left:12px;top:8px;font:600 13px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:92px}
+.st .n{position:absolute;left:0;top:2px;width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 21px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:66px;top:0;font-size:30px;white-space:nowrap}
+.st .why{position:absolute;left:66px;top:52px;font:500 20px Poppins;color:var(--mute);white-space:nowrap}
+.chipd{position:absolute;height:56px;padding:0 18px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:10px;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+/* side by side */
+.sbv{position:absolute;left:36px;top:84px;width:712px;height:300px;border-radius:14px;background:var(--soft);overflow:hidden}
+.sbl{position:absolute;left:36px;font-size:34px;white-space:nowrap}
+/* reasoning */
+.lk{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.lk .n{position:absolute;left:18px;top:25px;width:46px;height:46px;border-radius:50%;background:var(--ac);color:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.lk .lt{position:absolute;left:84px;top:28px;font:600 26px/1.3 Poppins;white-space:nowrap}
+.bar{position:absolute;left:36px;width:712px;height:40px}
+.bar .bk{position:absolute;left:0;top:0;width:200px;font:600 18px 'IBM Plex Mono';letter-spacing:.04em;line-height:40px;white-space:nowrap}
+.bar .bt{position:absolute;left:210px;top:6px;width:360px;height:28px;border-radius:6px;background:var(--soft)}
+.bar .bf{position:absolute;left:0;top:0;height:28px;border-radius:6px;background:var(--f)}
+.bar .bv{position:absolute;left:584px;top:0;font:600 26px 'IBM Plex Mono';line-height:40px;white-space:nowrap}
+/* worked */
+#wq{position:absolute;left:36px;top:70px;font:600 27px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:28px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#mq .mq{font-size:30px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 24px Poppins}
+#sF .fcard .fl{font-size:38px}
+#sF .fcard .fl.txt{font-size:29px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 4 LAWS OF MOTION</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Banking of <span class="acc">Roads</span></div>
+    <div id="sub">Why curves lean inward</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: three tilted curves + Aarav's flyover -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">CURVES THAT LEAN · SEEN FROM BEHIND</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">A leaning road looks unsafe. So why build one?</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV'S RIDE · THE FLYOVER CURVE</div>
+        <div id="hdF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg" style="position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px">
+        <div id="ins"><div class="ml">THE CURVE · FROM BEHIND</div><svg class="sv" id="inS" width="236" height="214"></svg></div>
+        <div id="wqs"></div></div>
+    </div>
+
+    <!-- P: what banking is -->
+    <div id="sP">
+      <div class="card full" id="pd"><div class="lbl" style="left:36px;top:30px">BANKING</div>
+        <div id="pdef">A curve with its outer edge raised. The road tilts toward the centre by an angle <i class="th">θ</i>.</div>
+        <div class="dr" id="dr0" style="top:228px"><i id="dr0I"></i><div class="dn">Flat curve (Ep 68)</div><div class="dw">only friction pushes the car in</div></div>
+        <div class="dr" id="dr1" style="top:352px"><i id="dr1I"></i><div class="dn">Banked curve</div><div class="dw">the normal force leans inward too</div></div>
+        <div class="pillp ac" id="pdP" style="left:36px;top:490px">The road itself can turn the car</div></div>
+      <div class="card rf" id="pt"><div class="lbl" style="left:36px;top:30px">THE NORMAL FORCE LEANS IN</div>
+        <svg class="sv" id="ptS" width="784" height="580"></svg></div>
+    </div>
+
+    <!-- S: the sim (banked curve + readout + ideal speed against angle) -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">BANKED CURVE · FROM BEHIND</div>
+        <div class="stag" id="slo" style="left:36px;top:66px">SLOW-MO REPLAY · 0.25x</div>
+        <svg class="sv" id="simS" width="784" height="580"></svg>
+        <div class="tv" id="tv" style="left:538px;top:66px"><div class="ml">TOP VIEW</div><svg class="sv" id="tvS" width="210" height="150"></svg></div></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT · m = 1000 kg · r = 50 m</div><div class="ro" id="roG" style="left:36px;top:66px;width:712px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">IDEAL SPEED <i style="font-family:Poppins;text-transform:none">v</i> VS BANK ANGLE <i style="font-family:Poppins;text-transform:none">θ</i></div>
+        <div class="pillp" id="grP" style="right:36px;top:18px;height:40px;font-size:19px"><span class="vv"><i>v</i></span>&nbsp;=&nbsp;√(<i>rg</i>&nbsp;tan&nbsp;<i class="th">θ</i>)</div>
+        <svg class="sv" id="grS" width="784" height="274"></svg></div>
+    </div>
+
+    <!-- D: the formula -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE FORMULA · 5 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">FREE-BODY DIAGRAM · FROM BEHIND</div>
+        <svg class="sv" id="drS" width="784" height="580"></svg>
+        <div class="chipd" id="drC0" style="left:36px;top:492px"></div><div class="chipd" id="drC1" style="left:36px;top:492px"></div></div>
+    </div>
+
+    <!-- C: side by side + two thinks -->
+    <div id="sC">
+      <div class="card full" id="c0"><div class="lbl" style="left:36px;top:30px">FLAT ROAD · ONLY FRICTION</div>
+        <div class="sbv"><svg class="sv" id="c0S" width="712" height="300"></svg></div>
+        <div class="sbl" id="c0a" style="top:430px"></div></div>
+      <div class="card rf" id="c1"><div class="lbl" style="left:36px;top:30px">BANKED ROAD · THE NORMAL FORCE HELPS</div>
+        <div class="sbv"><svg class="sv" id="c1S" width="712" height="300"></svg></div>
+        <div class="sbl" id="c1a" style="top:404px"></div>
+        <div class="sbl" id="c1b" style="top:488px;font-size:30px"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- R: why tilt the flyover -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">FLYOVER · r = 40 m · v = 10 m/s</div><div class="ghost" id="exR" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <svg class="sv" id="rlS" width="784" height="580"></svg>
+        <div class="bar" id="bN" style="top:510px"><div class="bk ff">FRICTION NEEDED</div><div class="bt"><div class="bf" id="bNf"></div></div><div class="bv ff" id="bNv">2500 N</div></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">LINK BY LINK</div><div id="lks"></div></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">Flyover curve: r = 40 m, built for v = 10 m/s. Find θ. Then the top speed with μ = 0.3.</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">THE FLYOVER · FROM BEHIND</div><div class="ghost" id="exW" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <svg class="sv" id="wrS" width="784" height="580"></svg>
+        <div class="chipd" id="wc0" style="left:36px;top:492px"><i style="font-family:Poppins;color:#E2B55A">θ</i><span>≈ 14.3°</span></div>
+        <div class="chipd" id="wc1" style="left:236px;top:492px"><i style="font-family:Poppins;color:#9DBDF7">v</i><sub style="font-size:15px">max</sub><span>≈ 15.4 m/s</span></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tg" width="420" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + questions + NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">The road leans in, and so does <span class="acc">N</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
