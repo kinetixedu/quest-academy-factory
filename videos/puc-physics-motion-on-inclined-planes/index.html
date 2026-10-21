@@ -1,0 +1,160 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 66 - Motion on Inclined Planes</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 66: motion on inclined planes (Motion notebook) ===== */
+:root{--fo:#D9731A;--ar:#D64545;--vb:#2F6FEB;--vi:#7A4FE0;--gd:#B7791F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.fo{color:var(--fo)}.ar{color:var(--ar)}.vb{color:var(--vb)}.vi{color:var(--vi)}.gd{color:var(--gd)}
+svg.cl{position:absolute;left:0;top:0;overflow:hidden}
+/* title tiles */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr svg{position:absolute;right:20px;top:10px}
+.wq{position:absolute;top:476px;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 25px Poppins;white-space:nowrap}
+/* P rows */
+.qr{position:absolute;left:36px;width:712px;height:100px;border-radius:14px;background:var(--soft)}
+.qr .qs{position:absolute;left:20px;top:16px;width:68px;font:600 52px/1 Poppins;font-style:italic;text-align:center}
+.qr .qn{position:absolute;left:112px;top:14px;font:700 30px Poppins;white-space:nowrap}
+.qr .qd{position:absolute;left:112px;top:58px;font:500 22px Poppins;color:var(--ink2);white-space:nowrap}
+.gal{position:absolute;left:36px;top:440px;width:712px;height:104px;border-radius:14px;background:var(--ink);color:#fff;box-sizing:border-box;padding:16px 24px}
+.gal .g1{font:600 17px 'IBM Plex Mono';letter-spacing:.1em;color:#AFC6F7;white-space:nowrap}
+.gal .g2{font:600 26px Poppins;margin-top:8px;white-space:nowrap}
+/* sim + readout */
+.ro2{position:absolute;display:grid;grid-template-columns:auto 1fr auto;column-gap:14px;row-gap:6px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .v{font:600 34px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 20px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+.smo{position:absolute;right:36px;top:18px;height:44px;padding:0 16px;border-radius:9px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.frz{position:absolute;right:36px;top:18px;height:44px;padding:0 16px;border-radius:9px;background:var(--redBg);color:var(--red);display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.sw2{position:absolute;right:36px;top:18px;display:flex;gap:8px}
+.sw2 span{height:40px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';border:2px solid var(--line);background:#fff;color:var(--mute);white-space:nowrap}
+#simEq{position:absolute;left:36px;top:76px;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+.gleg{position:absolute;right:36px;top:24px;display:flex;gap:18px;font:600 17px 'IBM Plex Mono';white-space:nowrap}
+.gleg span{display:flex;align-items:center;gap:8px}
+.gleg i{display:inline-block;width:24px;height:5px;border-radius:3px}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:92px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:-2px;font-size:33px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:52px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+/* link chain */
+.lk{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.lk .n{position:absolute;left:20px;top:25px;width:46px;height:46px;border-radius:50%;background:var(--ac);color:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.lk .lt{position:absolute;left:86px;top:0;height:96px;line-height:96px;font:600 27px/96px Poppins;white-space:nowrap}
+.lkA{position:absolute;left:51px;width:16px;height:22px}
+.kp{position:absolute;left:36px;top:490px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+.chipG{position:absolute;height:34px;padding:0 12px;border-radius:8px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 16px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+.rc{position:absolute;left:36px;width:712px;height:88px;border-radius:14px;background:var(--soft)}
+.rc .rh{position:absolute;left:24px;top:14px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.rc .rv{position:absolute;left:24px;top:40px;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+#wkq{position:absolute;left:36px;top:70px;font:600 27px/1.38 Poppins;width:712px}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font-size:27px}
+#wl .sol .sx{font-size:29px}
+#sF .fcard .fl{font-size:38px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 32px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 4 LAWS OF MOTION</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Inclined <span class="acc">Planes</span></div>
+    <div id="sub">Gravity, split along a slope</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+    <!-- H: three slopes + Aarav coasting -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE SLOPES · ONE PUZZLE</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Pulled straight down, moving along a slope</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV ON THE COLLEGE ROAD</div>
+        <div style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)" id="hdF"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg" style="position:absolute;left:152px;top:84px;width:480px;height:360px;border-radius:12px">
+        <div id="wqs"></div></div>
+    </div>
+    <!-- P: what an inclined plane is -->
+    <div id="sP">
+      <div class="card full" id="pq"><div class="lbl" style="left:36px;top:30px">AN INCLINED PLANE</div><div id="qrs"></div></div>
+      <div class="card rf" id="pm"><div class="lbl" style="left:36px;top:30px">ONE BLOCK · ONE GIVER PER ARROW</div>
+        <svg id="pmS" class="cl" width="784" height="580"></svg>
+        <div class="gal" id="gal"><div class="g1">GALILEO · TWO NEW SCIENCES · 1638</div><div class="g2">Gentle slopes slowed falling enough to time it</div></div></div>
+    </div>
+    <!-- S: slope sim + readout + a-theta graph -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">TILTING SLOPE · ONE BLOCK</div>
+        <div class="sw2" id="sw2"><span>SMOOTH</span><span>ROUGH · μk 0.3</span></div>
+        <div class="smo" id="smo">SLOW-MO REPLAY · 0.25x</div><div class="frz" id="frz">FROZEN · SPLIT THE WEIGHT</div>
+        <svg id="simS" class="cl" width="784" height="580"></svg>
+        <div id="simEq"></div></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div>
+        <div class="ro2" id="roA" style="left:36px;top:70px;width:320px"></div><div class="ro2" id="roB" style="left:412px;top:70px;width:336px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">ACCELERATION VS ANGLE</div>
+        <div class="gleg" id="gleg"><span><i style="background:var(--ar)"></i>smooth</span><span id="glR"><i style="background:var(--ar);opacity:.45"></i>rough · μk 0.3</span></div>
+        <svg id="grS" class="cl" width="784" height="274"></svg></div>
+    </div>
+    <!-- D: the rule in 5 steps -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE RULE · 5 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">TILTED AXES · ONE BLOCK</div>
+        <svg id="drS" class="cl" width="784" height="580"></svg></div>
+    </div>
+    <!-- R: why mass cancels -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">WHY DOES MASS CANCEL? · LINK BY LINK</div><div id="lks"></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">SMOOTH SLOPE · 30° · TWO MASSES</div>
+        <svg id="rrS" class="cl" width="784" height="580"></svg></div>
+    </div>
+    <!-- K: up vs down + pause and think -->
+    <div id="sK">
+      <div class="card full" id="ku"><div class="lbl" style="left:36px;top:30px">SLIDING UP · 30° · μk 0.3</div><svg id="kuS" class="cl" width="784" height="580"></svg>
+        <div class="kp" id="kuP"></div></div>
+      <div class="card rf" id="kd"><div class="lbl" style="left:36px;top:30px">SLIDING DOWN · 30° · μk 0.3</div><svg id="kdS" class="cl" width="784" height="580"></svg>
+        <div class="kp" id="kdP"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+    <!-- V: same height race + pause and think -->
+    <div id="sV">
+      <div class="card full" id="vr"><div class="lbl" style="left:36px;top:30px">SMOOTH · SAME HEIGHT · 2.5 m</div><svg id="vrS" class="cl" width="784" height="580"></svg></div>
+      <div class="card rf" id="vt"><div class="lbl" style="left:36px;top:30px">THE RACE · LIVE</div><div id="rcs"></div>
+        <div class="fx" id="vF" style="left:36px;top:400px;font-size:38px"></div><div class="fx" id="vF2" style="left:36px;top:476px;font-size:38px"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wkq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">THE RAMP · 3 m UP, 5 m LONG</div><div class="ghost" id="exW" style="right:36px;top:18px">EXAMPLE FIGURES</div><svg id="wrS" class="cl" width="784" height="580"></svg></div>
+    </div>
+    <div id="sX"><div class="card red" id="trap"><svg id="tpS" class="cl" width="560" height="274" style="left:auto;right:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Along a slope, gravity is only <span class="acc">g sin θ</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
