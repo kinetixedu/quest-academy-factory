@@ -16,21 +16,21 @@ M4|0.65|So each strip counts as its area, times its distance squared. Add them u
 P0|0.35|For a rectangle, I is b times d cubed, over twelve. B is the width, d is the depth.
 P1|0.35|Raghu's plank is two hundred millimetres wide and fifty deep.
 P2|0.35|Lying flat, I is about two point oh eight million, in millimetres to the fourth.
-P3|0.35|Now turn it on edge. The fifty becomes the width, and the two hundred becomes the depth.
+P3|0.35|Now turn it on edge. Fifty becomes the width, two hundred the depth.
 P4|0.35|I jumps to about thirty three point three million.
 P5|0.65|Sixteen times stiffer. Same wood, same weight, just turned on its edge.
 P6|0.35|That is why depth is cubed. Double the depth, and the beam gets eight times stiffer.
 P7|0.65|Double the width, and it only gets twice as stiff.
 T1|0.7|It's not how much material you use. It's where you put it.
-K0|0.35|Where does the moment of inertia work today?
+K0|0.35|Where do we see this today?
 K1|0.35|Deep beams. Ananya's classroom beams are two thirty wide and four fifty deep, in millimetres. On a metro line, deck girders are far deeper than wide.
-K2|0.35|I sections. Steel goes to the top and bottom, where it works hardest. Farhan draws the gate frame in I sections. An airport hangar uses I shaped steel beams.
-K3|0.35|Parallel axis theorem. I about a new axis is I at the centroid, plus area times distance squared. Ananya uses it for the T beam. Bridge engineers use it on built up girders.
+K2|0.35|I sections. Steel goes to the top and bottom, where it works hardest. An airport hangar rests on I shaped steel beams.
+K3|0.35|Parallel axis theorem. I about a new axis is I at the centroid, plus area times distance squared. Ananya uses it on her T beam. A bridge girder is checked the same way.
 K4|0.65|Columns. A column buckles the weak way first, so Farhan marks both axes. In a hospital, columns are checked about both.
 X1|0.35|But is deeper always better? Not always.
-X2|0.35|The good side. More stiffness from the same material, so less sag and less cost.
+X2|0.35|The good side. More stiffness from the same material. Less sag, less cost.
 X3|0.35|The hard side. A very deep, thin beam can twist sideways, and steals headroom.
-X4|0.35|The term moment of inertia was introduced by Leonhard Euler, in his book on the motion of rigid bodies, in 1765.
+X4|0.35|Leonhard Euler introduced the term moment of inertia, in a book on rigid bodies, in 1765.
 X5|0.35|Raghu wants wide, flat beams. Ananya shows him the plank once more.
 X6|0.35|Raghu laughs. My hands knew it. Now I know why.
 X7|0.65|The lesson? Put material where the stress is.

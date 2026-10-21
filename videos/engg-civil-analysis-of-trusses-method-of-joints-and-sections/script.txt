@@ -3,28 +3,28 @@ H2|0.35|No columns in the middle, so all six hundred children fit.
 C2|0.65|Mrs. Lakshmi asks, how can thin steel hold a roof that wide?
 L1|0.35|Farhan draws a triangle frame, three metres high at the peak.
 L2|0.35|Raghu has built many roof trusses, but never worked one out.
-L3|0.65|Professor Deshpande asks one question. Which members pull, and which push?
+L3|0.65|Professor Deshpande asks, which members pull, and which push?
 D1|0.3|So what is a truss?
 D2|0.35|A truss is a frame of straight members, joined at their ends to make triangles.
 D3|0.35|Loads sit only at the joints.
 D4|0.35|So each member feels just a pull, called tension, or a push, called compression.
-D5|0.65|In simple words, a truss turns a heavy load into simple pulls and pushes.
+D5|0.65|In simple words, a truss turns a heavy load into pulls and pushes.
 M0|0.35|Why triangles? Push on a square frame, and it folds flat.
 M1|0.65|Push on a triangle, and it holds its shape. No member can move without stretching another.
 P0|0.35|Now let's solve Farhan's truss with the method of joints.
 P1|0.35|The roof puts twenty kilonewtons on the peak, joint C.
-P2|0.35|First, the reactions. The truss is the same on both sides, so each support takes ten.
+P2|0.35|First, the reactions. The truss is symmetric, so each support takes ten.
 P3|0.35|Now visit joint A. Two members meet here. The sloping rafter, and the flat tie.
-P4|0.35|Only the rafter can balance the ten kilonewtons pushing up. The rafter slopes one in two.
+P4|0.35|Only the rafter can balance the ten pushing up. It rises one in two.
 P5|0.35|So the rafter carries about twenty two point four kilonewtons. It pushes back. Compression.
 P6|0.35|Its sideways part is balanced by the tie. The tie carries twenty kilonewtons. It pulls. Tension.
 P7|0.65|Now joint D, under the peak. Nothing else pulls up or down there. So the king post carries zero.
-S5|0.35|There is a faster way, the method of sections.
-S6|0.35|Cut through the members you want. Keep the left part.
-S7|0.35|Take moments about the peak. Ten kilonewtons times six metres, must equal the tie force times three.
-S8|0.65|Sixty over three. The tie pulls with twenty kilonewtons. Same answer, one step.
+R1|0.35|There is a faster way, the method of sections.
+R2|0.35|Cut through the members you want. Keep the left part.
+R3|0.35|Take moments about the peak. Ten kilonewtons times six metres, must equal the tie force times three.
+R4|0.65|Sixty over three. The tie pulls with twenty kilonewtons. Same answer, one step.
 T1|0.7|Triangles can't fold. That is why a light truss can carry a heavy roof.
-K0|0.35|Where do trusses work today?
+K0|0.35|Where do we see this today?
 K1|0.35|Tension. The tie holds the feet of the rafters together. On a bridge, the bottom chord pulls the same way.
 K2|0.35|Compression. The rafters push. At an airport, long steel trusses carry the roof over the hall.
 K3|0.35|Method of joints. Ananya checks every joint. A metro station roof is checked the same way.
@@ -32,14 +32,14 @@ K4|0.65|Method of sections. One cut, one answer. On a highway, it checks one mem
 X1|0.35|But is a truss a perfect answer? Not always.
 X2|0.35|The good side. Very little steel spans a wide hall.
 X3|0.35|The hard side. One weak joint, or one buckled member, can bring a roof down.
-X4|0.35|In 1847, Squire Whipple wrote A Work on Bridge Building, one of the first to calculate the forces in truss bridges.
+X4|0.35|In 1847, Squire Whipple wrote A Work on Bridge Building. It was among the first to calculate stresses in truss bridges.
 X5|0.35|Raghu says, the king post carries nothing, so leave it out.
 X6|0.35|Ananya keeps it. It stops the long tie sagging, and wind can change the loads.
 X7|0.65|The lesson? Zero force today does not mean useless.
 Q1|1.9|Quick check. A member in a truss is being stretched. Is it in tension or compression?
-A1|0.6|Tension! The member pulls on the joints at both its ends.
+A1|0.6|Tension! It pulls on the joints at both its ends.
 S1|0.3|So, remember.
 S2|0.35|A truss is made of triangles, loaded only at its joints.
 S3|0.35|The method of joints balances forces at one joint at a time.
-S4|0.6|The method of sections cuts the truss, and takes moments to find one member fast.
+S4|0.6|The method of sections cuts the truss, and finds one member fast.
 N1|0.2|Next time, we'll look at friction, and the wheelchair ramp at the school gate.

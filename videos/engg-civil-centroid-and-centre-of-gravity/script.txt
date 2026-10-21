@@ -5,8 +5,8 @@ L1|0.35|Ananya says, that depends on where its weight acts.
 L2|0.35|Farhan cuts the wall's shape from cardboard.
 L3|0.65|Professor Deshpande asks one question. Where is its balance point?
 D1|0.3|That balance point has two names.
-D2|0.35|The centre of gravity is the point where the whole weight of a body seems to act.
-D3|0.35|The centroid is the geometric centre of a shape. Its area balances there.
+D2|0.35|The centre of gravity is where the whole weight of a body seems to act.
+D3|0.35|The centroid is the centre of a shape's area.
 D4|0.65|In simple words, if the material is the same all through, both points match.
 M0|0.35|Let's find it with Farhan's cardboard.
 M1|0.35|He hangs the L from a pin at one corner, beside a weighted thread.
@@ -17,17 +17,17 @@ P0|0.35|Now Ananya checks it with numbers.
 P1|0.35|She splits the L into two rectangles. The base is three metres by one. Area three.
 P2|0.35|Its centre is one and a half metres across, half a metre up.
 P3|0.35|The pillar on top is one metre by two. Area two. Its centre is half a metre across, two metres up.
-P4|0.35|Take moments of area. Three times one and a half, plus two times a half, is five and a half.
+P4|0.35|Moments of area. Three times one and a half, plus two times a half, is five and a half.
 P5|0.35|Divide by the total area, five. The centroid is one point one metres across.
 P6|0.65|The same sum upward gives one point one metres high. It matches the thread.
 T1|0.7|Every shape has one balance point. Find it, and you know where its weight really acts.
-K0|0.35|Where do centroids work today?
-K1|0.35|Composite shapes. A T shaped beam, four hundred millimetres deep, has its centroid two hundred and thirty up. Bridge girders are checked the same way.
+K0|0.35|Where do we see this today?
+K1|0.35|Composite shapes. Ananya's T beam, four hundred millimetres deep, has its centroid two hundred and thirty up. Bridge girders are found the same way.
 K2|0.35|Stability. A wall stands while its weight acts inside its base. A dam's weight keeps it from tipping.
 K3|0.35|Footings. Ananya centres the footing under the wall's weight, so it presses evenly. In a housing society, each footing sits under its column.
 K4|0.65|Lifting. Raghu slings lintels at their centre of gravity. On a metro line, cranes lift long beams the same way.
 X1|0.35|But is the centroid always where you expect? Not always.
-X2|0.35|The good side. Simple shapes add up to give any shape's balance point.
+X2|0.35|The good side. Simple parts give any shape's balance point.
 X3|0.35|The hard side. For an L or a ring, the centroid can lie in empty air.
 X4|0.35|Over two thousand years ago, Archimedes of Syracuse worked out the centres of gravity of triangles and parallelograms.
 X5|0.35|Raghu wants the footing under the pillar alone. Ananya centres it under the whole wall.
@@ -38,5 +38,5 @@ A1|0.6|At its centroid! Same material all through, so weight and area balance at
 S1|0.3|So, remember.
 S2|0.35|The centre of gravity is where the whole weight seems to act.
 S3|0.35|The centroid is the balance point of a shape's area.
-S4|0.6|Split a shape into simple parts, take moments of area, and divide by the total.
+S4|0.6|Split it into simple parts, take moments of area, divide by the total.
 N1|0.2|Next time, we'll turn Raghu's plank on its edge, and meet the moment of inertia.

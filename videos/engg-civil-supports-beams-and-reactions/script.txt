@@ -7,14 +7,14 @@ L3|0.65|Professor Deshpande asks one question. What pushes back up on that beam?
 D1|0.3|That push is called a reaction.
 D2|0.35|A support is any point that holds a beam in place.
 D3|0.35|A reaction is the force the support gives back.
-D4|0.65|In simple words, the beam pushes down, and the supports push back up just as hard.
+D4|0.65|In simple words, the beam pushes down, and the supports push back just as hard.
 M0|0.35|There are three main kinds of support.
-M1|0.35|A pinned support stops sliding, but lets the beam turn. It gives two reactions, up and sideways.
+M1|0.35|A pinned support stops sliding, but lets the beam turn. Two reactions, up and sideways.
 M2|0.35|A roller lets the beam slide. It gives one reaction, straight up.
-M3|0.35|A fixed support allows no sliding and no turning. It gives three, up, sideways, and a turning moment.
+M3|0.35|A fixed support allows no sliding, no turning. Three reactions, up, sideways, and a moment.
 M4|0.65|The window sunshade is fixed at one end, and free at the other. That is a cantilever.
 P0|0.35|Now let's find the reactions on the corridor beam.
-P1|0.35|Step one. Draw the free body. The tank pushes down. Columns A and B push up.
+P1|0.35|Step one. Draw the free body. Tank down, columns A and B up.
 P2|0.35|Step two. Take moments about A, so the force at A drops out.
 P3|0.35|The tank turns the beam one way. Thirty times two is sixty.
 P4|0.35|Reaction B turns it back. B times six must also be sixty. So B is ten kilonewtons.
@@ -24,7 +24,7 @@ U1|0.35|Now spread the load. The slab puts ten kilonewtons on every metre of bea
 U2|0.35|Over six metres, that is sixty kilonewtons, acting at the middle.
 U3|0.65|So each column takes half. Thirty at A, thirty at B.
 T1|0.7|Every push down needs a push back up. Find the reactions, and you know what each column must carry.
-K0|0.35|Where do supports work today?
+K0|0.35|Where do we see this today?
 K1|0.35|Pinned supports. The corridor beam sits on a pin at column A. On a highway, bridge girders rest on hinged bearings.
 K2|0.35|Rollers. The other end can slide. On a long bridge, rollers let the deck grow in the summer heat.
 K3|0.35|Fixed supports. The sunshade is held tight. At an airport, a canopy sticks out over the drop off lane.
@@ -32,14 +32,14 @@ K4|0.65|Reactions. Ananya sizes every footing from them. In a hospital, reaction
 X1|0.35|But are real supports this neat? Not quite.
 X2|0.35|The good side. A simple model makes a hard problem easy.
 X3|0.35|The hard side. A real joint is never a perfect pin, or perfectly fixed.
-X4|0.35|Steel grows about twelve millionths of its length per degree. A hundred metre steel bridge, thirty degrees warmer, grows over three centimetres.
+X4|0.35|Heat makes steel grow. A hundred metre steel bridge, thirty degrees warmer, grows over three centimetres.
 X5|0.35|Raghu wants to lock both ends. Ananya keeps one end free, as drawn.
 X6|0.35|Professor Deshpande nods. Build what you calculated.
 X7|0.65|The lesson? Draw the support you will really build.
 Q1|1.9|Quick check. Which support lets a beam slide, and pushes back only straight up?
 A1|0.6|A roller! It gives just one reaction, at right angles to the surface.
 S1|0.3|So, remember.
-S2|0.35|Supports hold a beam. Reactions are the forces they push back with.
+S2|0.35|Supports hold a beam. Reactions are how hard they push back.
 S3|0.35|Pinned gives two reactions, roller gives one, and fixed gives three.
 S4|0.6|Take moments about one support, and the other reaction falls out.
 N1|0.2|Next time, we'll climb up to the assembly hall roof, and solve its truss, joint by joint.
