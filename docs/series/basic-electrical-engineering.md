@@ -1,7 +1,7 @@
 # Series bible - Basic Electrical Engineering (Engineering Electrical, Year 1, 24 episodes)
 
 Standard: the v2 episode standard in `docs/series/principles-of-management.md` ("Every episode must have") applies unchanged, except the running story below. Look and components: copy Ep 01 of this series (`videos/engg-electrical-what-electrical-engineering-is-and-how-power-reaches-your-home/`, once approved). It ports the v2 components of `videos/mba-scientific-management-f-w-taylor/` and `videos/mba-introduction-to-marketing/` into the engg-electrical world (Power grid: charcoal #121417, panels #1B1F24, steel lines #39404A, high-voltage yellow #FFC93C as the accent, cool blue #6EA8FF secondary, Archivo wide 800 headings, Archivo 500 body, IBM Plex Mono values and units, hazard-yellow bar transition).
-Eyebrow chip: `EP NN · BASIC ELECTRICAL ENGINEERING`. Title format: `<Hook-style title> Explained Simply | Basic Electrical Engineering Ep N` (<= 70 chars). meta.json world "engg-electrical", `"series": {"name": "Basic Electrical Engineering", "ep": N}`. Kit branch: kit-engg-electrical.
+Eyebrow chip: `EP NN · BASIC ELECTRICAL ENGINEERING`. Title format: `<Hook-style title> Explained Simply | Basic Electrical Engineering Ep N` (<= 70 chars; the fixed suffix is 52-53 characters, so the hook is at most 17 characters, e.g. "How Power Travels"). meta.json world "engg-electrical", `"series": {"name": "Basic Electrical Engineering", "ep": N}`. Kit branch: kit-engg-electrical.
 Illustrations: `assets/illustrations/engg-electrical/eeee-*` (dark world: never cut out onto charcoal; show the full image on a light plate card #F4F1EA, see docs/ILLUSTRATIONS.md).
 
 ## Who it is for
