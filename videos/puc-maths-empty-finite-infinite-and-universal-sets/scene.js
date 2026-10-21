@@ -117,7 +117,7 @@ const tBox = (x, lab, inner) => { const g = mk(ts, 'g', {}); mk(g, 'path', { d: 
 const tbA = tBox(130, 'φ: no element', ''), tbB = tBox(400, '{0}: one element', '0');
 const where = PUC.where($('#wa'), { on: [], type: 'Which of these sets are empty? Which are finite, and which infinite?' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 800,
-  q: `${K(`A = \\{${xc('x')} \\in \\mathbb{R} : ${xc('x')}^2 + 1 = 0\\}, \\quad C = \\{${xc('x')} \\in \\mathbb{Z} : 1 < ${xc('x')} < 2\\}`)}<br>${K(`B = \\{${xc('x')} \\in \\mathbb{N} : ${xc('x')}^2 - 3${xc('x')} + 2 = 0\\}, \\quad D = \\{${xc('x')} \\in \\mathbb{Q} : ${xc('x')}^2 = 2\\}`)}<br>${K(`E = \\{${PHI}\\}`)}. How many of these five sets are empty?`,
+  q: `${K(`A = \\{${xc('x')} \\in \\mathbb{R} : ${xc('x')}^2 + 1 = 0\\}, \\ \\  C = \\{${xc('x')} \\in \\mathbb{Z} : 1 < ${xc('x')} < 2\\}`)}<br>${K(`B = \\{${xc('x')} \\in \\mathbb{N} : ${xc('x')}^2 - 3${xc('x')} + 2 = 0\\}, \\ \\  D = \\{${xc('x')} \\in \\mathbb{Q} : ${xc('x')}^2 = 2\\}`)}<br>${K(`E = \\{${PHI}\\}`)}. How many of these five sets are empty?`,
   opts: ['2', '3', '4', '5'], right: 1, optW: 474, optY: 330 });
 const so = PUC.solution($('#so'), [[K(`A:\\ ${xc('x')}^2 = -1 \\Rightarrow ${PHI}`)], [K(`B = \\{1, 2\\}`)], [K(`C = ${PHI},\\ \\ D = ${PHI}`)], [K(`E = \\{${PHI}\\}:\\ \\text{1 element}`)], [K(`\\text{empty: } A, C, D \\Rightarrow 3`)]], { y0: 100, dy: 96 });
 const tSo = [wt('A2', 'real'), wt('A3', 0), wt('A4', 0), wt('A5', 0), wt('A5', 'three')];

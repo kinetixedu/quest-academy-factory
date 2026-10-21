@@ -175,11 +175,11 @@ txt(sQ, 392 + 208 * Math.cos(SA), 290 + 208 * Math.sin(SA) + 16, 'Q', { 'text-an
 itx(sQ, sQx + 14, 290 + 90 * Math.sin(SA) + 8, MIN + 'sin x', { fill: SI, 'font-size': 22 });
 const sArc = mk(sv, 'path', { d: `M${392 + 34},290 A34,34 0 0 1 ${392 + 34 * Math.cos(SA)},${290 + 34 * Math.sin(SA)}`, fill: 'none', stroke: TH, 'stroke-width': 3 });
 const sArcT = itx(sv, 392 + 58 * Math.cos(SA / 2), 290 + 58 * Math.sin(SA / 2) + 10, MIN + 'x', { fill: TH, 'font-size': 22, 'text-anchor': 'middle' });
-M.setT(su.thT, 'x'); M.setT(su.sinT, 'sin x'); M.setT(su.cosT, 'cos x');
+M.setT(su.thT, 'x'); M.setT(su.sinT, 'sin x'); M.setT(su.cosT, 'cos x'); attr(su.cosT, 'y', 290 - 14); attr(su.cosT, 'x', 392 + 74);
 const sMir = mk(sv, 'line', { x1: 160, y1: 290, x2: 624, y2: 290, stroke: TH, 'stroke-width': 4, 'stroke-dasharray': '12 8', opacity: 0.6 });
 $('#sF1').innerHTML = K(`${co('\\cos')}(-${X_}) = ${co('\\cos')}\\,${X_}`); $('#sF2').innerHTML = K(`${si('\\sin')}(-${X_}) = -\\,${si('\\sin')}\\,${X_}`);
 $('#sF2').style.left = '400px';
-const sg_ = $('#sG'), sgg = GG(70, 714, -2 * PI, 2 * PI, 300, 110);
+const sg_ = $('#sGr'), sgg = GG(70, 714, -2 * PI, 2 * PI, 300, 110);
 const sAx = axes(sg_, sgg, 56, 728, 170, 430, [[-2 * PI, MIN + '2π'], [-PI, MIN + 'π'], [0, '0'], [PI, 'π'], [2 * PI, '2π']], 460);
 const sCosR = mk(sg_, 'path', { d: sgg.path(Math.cos, 0, 2 * PI), fill: 'none', stroke: CO, 'stroke-width': 4.5 });
 const sCosL = mk(sg_, 'path', { d: '', fill: 'none', stroke: CO, 'stroke-width': 4.5 });
@@ -330,7 +330,7 @@ M.on(t => {
     PUC.write($('#sF1'), t, wt('S3', 'cosine'), 0.7); PUC.write($('#sF2'), t, wt('S3', 'sine'), 0.7);
     M.vis(sAx, t, T0('S3') + 0.1, 1e9, { dy: 0, fade: 0.3 });
     const cosOn = t < tSpin - 0.6, u = -1 + 2 * M.io((t - tFold) / 1.4);
-    M.vis(sCosR, t, wt('S4', 'cosine') - 0.1, cosOn ? 1e9 : tSpin - 0.6, { dy: 0, fade: 0.3, outDur: 0.3, ody: 0 }); attr(sCosL, 'd', foldPath(Math.cos, -Math.max(-1, u) * -1 * -1)); attr(sCosL, 'd', foldPath(Math.cos, -u));
+    M.vis(sCosR, t, wt('S4', 'cosine') - 0.1, cosOn ? 1e9 : tSpin - 0.6, { dy: 0, fade: 0.3, outDur: 0.3, ody: 0 }); attr(sCosL, 'd', foldPath(Math.cos, -u));
     M.vis(sCosL, t, tFold - 0.1, cosOn ? 1e9 : tSpin - 0.6, { dy: 0, fade: 0.2, outDur: 0.3, ody: 0 }); M.vis(sFold, t, wt('S4', 'y') - 0.1, tSpin - 0.6, { dy: 0, fade: 0.3, outDur: 0.3, ody: 0 });
     const ph = PI * M.io((t - tSpin) / 1.6);
     M.vis(sSinR, t, tSpin - 0.4, 1e9, { dy: 0, fade: 0.3 }); attr(sSinL, 'd', spinPath(Math.sin, ph)); M.vis(sSinL, t, tSpin - 0.1, 1e9, { dy: 0, fade: 0.2 }); M.vis(sPiv, t, wt('S5', 'origin') - 0.1, 1e9, { ...POP, sc: 0.3 });

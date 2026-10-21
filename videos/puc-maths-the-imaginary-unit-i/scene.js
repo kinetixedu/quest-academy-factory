@@ -106,7 +106,7 @@ const ws = $('#wS'), WO = [470, 200], WU = 150;
 const wAx = mk(mk(ws, 'g', {}), 'g', {});
 mk(wAx, 'line', { x1: 120, y1: WO[1], x2: 720, y2: WO[1], stroke: RE, 'stroke-width': 2, opacity: 0.45 });
 mk(wAx, 'line', { x1: WO[0], y1: 80, x2: WO[0], y2: 470, stroke: IM, 'stroke-width': 2, opacity: 0.45 });
-const WV = [[[0, 0], [-1, 0], RE, 'i¹⁰ = -1', [-0.5, -0.22]], [[-1, 0], [-1, -1], IM, 'i¹¹ = -i', [-1.62, -0.5]], [[-1, -1], [0, -1], RE, 'i¹² = 1', [-0.5, -1.3]], [[0, -1], [0, 0], IM, 'i¹³ = i', [0.12, -0.5]]];
+const WV = [[[0, 0], [-1, 0], RE, 'i¹⁰ = -1', [-0.5, 0.2]], [[-1, 0], [-1, -1], IM, 'i¹¹ = -i', [-1.62, -0.5]], [[-1, -1], [0, -1], RE, 'i¹² = 1', [-0.5, -1.3]], [[0, -1], [0, 0], IM, 'i¹³ = i', [0.12, -0.5]]];
 const wP = ([x, y]) => [WO[0] + x * WU, WO[1] - y * WU];
 const wArr = WV.map(([a, b, col, lab, lp]) => { const ar = PUC.arrow(ws, col, 6, 18); const [lx, ly] = wP(lp); const l = txt(ws, lx, ly + 7, lab, { 'font-family': 'Poppins', 'font-size': 24, 'font-weight': 700, fill: col, 'text-anchor': lp[0] < -1 ? 'start' : 'middle' }); return { ar, a, b, l }; });
 const wO = mk(ws, 'circle', { cx: WO[0], cy: WO[1], r: 18, fill: 'none', stroke: RC, 'stroke-width': 4 });
@@ -200,7 +200,7 @@ M.on(t => {
     const ni = Math.round(n);
     if (ni !== lLast) { lLast = ni; M.setT($('#lNv'), String(ni)); $('#lV').innerHTML = K(`${I}^{${ni}} = ${pv(ni)}`); }
     M.vis($('#lN'), t, wt('L4', 'Start'), 1e9, { dy: 14 }); M.vis($('#lV'), t, wt('L4', 'Start') + 0.2, 1e9, { dy: 14 });
-    for (let k = 0; k < 8; k++) { const el = $('#lt' + k); const tk = k < 4 ? tL4[k] + 0.45 : tL5 + (k - 4) * 0.6 + 0.45; M.vis(el, t, tk, 1e9, { ...POP, sc: 0.6 }); el.style.background = ni === k + 1 ? C.ac2 : C.soft; }
+    for (let k = 0; k < 8; k++) { const el = $('#lt' + k); const tk = k < 4 ? tL4[k] + 0.3 : tL5 + (k - 4) * 0.6 + 0.3; M.vis(el, t, tk, 1e9, { ...POP, sc: 0.6 }); el.style.background = ni === k + 1 ? C.ac2 : C.soft; }
   }
 
   /* R */
