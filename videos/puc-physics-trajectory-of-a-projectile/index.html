@@ -1,0 +1,160 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 42 - Trajectory of a Projectile</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 42: trajectory of a projectile (Motion notebook) ===== */
+:root{--vi:#7A4FE0;--g:#D64545}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.vi{color:var(--vi)}.gr{color:var(--g)}.a{color:var(--ac)}
+.sv{position:absolute;left:0;top:0}
+/* title card: three throws */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook */
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+.wq{position:absolute;top:494px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap}
+/* readout in two columns */
+.ro .k{font-size:28px}.ro .v{font-size:32px}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:116px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:36px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:62px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.fx{position:absolute;white-space:nowrap}
+.brl{position:absolute;font:600 20px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+.rowc{position:absolute;left:36px;height:72px;width:712px;border-radius:14px;background:var(--soft)}
+.rowc .rk{position:absolute;left:22px;top:0;height:72px;display:flex;align-items:center;font:600 26px Poppins;white-space:nowrap}
+.rowc .rv{position:absolute;right:22px;top:0;height:72px;display:flex;align-items:center;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+.rowc .rk .katex{font-size:1.2em}
+.chip2{position:absolute;height:44px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;font:600 20px 'IBM Plex Mono';letter-spacing:.04em;white-space:nowrap;background:var(--soft)}
+/* worked */
+#wq{position:absolute;left:36px;top:70px;font:600 28px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:30px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:32px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+.slo{position:absolute;height:40px;padding:0 14px;border-radius:8px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 3 MOTION IN A PLANE</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Trajectory of a <span class="acc">Projectile</span></div>
+    <div id="sub">Explained with one throw</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: three throws, one curve + Aarav's paper ball -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE THROWS · ONE KIND OF CURVE</div><svg class="sv" id="hjS" width="784" height="580"></svg>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">All three bend the same way</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV'S STUDY TABLE · THE PAPER BALL</div>
+        <div id="hdF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <svg class="sv" id="hkS" width="784" height="580"></svg>
+        <div id="wqs"></div></div>
+    </div>
+
+    <!-- P: what is a trajectory -->
+    <div id="sP">
+      <div class="card full" id="pl"><div class="lbl" style="left:36px;top:30px">TRAJECTORY = THE PATH IN THE AIR</div><svg class="sv" id="plS" width="784" height="580"></svg></div>
+      <div class="card rf" id="pr"><div class="lbl" style="left:36px;top:30px">TWO EQUATIONS · ONE CLOCK</div>
+        <div class="rowc" id="pe0" style="top:84px;height:96px"><div class="rk" style="height:96px" id="pe0k"></div></div>
+        <div class="rowc" id="pe1" style="top:204px;height:96px"><div class="rk" style="height:96px" id="pe1k"></div></div>
+        <div class="lbl" id="prL" style="left:36px;top:340px">THE PATH DOES NOT CARE ABOUT TIME</div>
+        <div class="fx" id="prF" style="left:36px;top:384px;font-size:44px"></div>
+        <div class="pillp ink" id="prP" style="left:36px;top:490px">Remove t, write y using only x</div></div>
+    </div>
+
+    <!-- S: the launch (sim + readout + graph) -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">SIMULATION · ONE THROW</div><div class="ghost" id="exS" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <svg class="sv" id="simS" width="784" height="580"></svg><div class="slo" id="slo" style="left:36px;top:74px">SLOW-MO REPLAY · 0.25x</div></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div>
+        <div class="ro" id="roA" style="left:36px;top:74px;width:330px"></div><div class="ro" id="roB" style="left:418px;top:74px;width:330px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">GRAPH · <i style="font-family:Poppins;text-transform:none">y</i> AGAINST <i style="font-family:Poppins;text-transform:none">x</i></div><svg class="sv" id="grS" width="784" height="274"></svg></div>
+    </div>
+
+    <!-- D: derivation -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE EQUATION · 4 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">PUT t INTO y</div>
+        <div class="fx" id="dsub" style="left:36px;top:96px;font-size:31px"></div>
+        <div class="fx" id="dres" style="left:36px;top:250px;font-size:44px"></div>
+        <svg class="sv" id="drS" width="784" height="580"></svg>
+        <div class="brl a" id="drL0">sin θ / cos θ = tan θ</div><div class="brl gr" id="drL1">t SQUARED → cos²θ</div>
+        <div class="pillp ac" id="drP" style="left:36px;top:490px">Only x and y left. No time.</div></div>
+    </div>
+
+    <!-- C: why a parabola -->
+    <div id="sC">
+      <div class="card full" id="cl"><div class="lbl" style="left:36px;top:30px">THE SHAPE OF THE EQUATION</div>
+        <div class="fx" id="cF" style="left:36px;top:92px;font-size:56px"></div>
+        <div class="rowc" id="ca" style="top:220px"><div class="rk"><span id="caK"></span></div><div class="rv a" id="caV">a straight line</div></div>
+        <div class="rowc" id="cb" style="top:312px"><div class="rk"><span id="cbK"></span></div><div class="rv gr" id="cbV">bends it down</div></div>
+        <div class="lbl" id="cfL" style="left:36px;top:420px;text-transform:none">FOR ONE THROW: θ, v₀ AND g ARE FIXED</div>
+        <div class="pillp ink" id="cP" style="left:36px;top:490px">A line bent by x² = a parabola</div></div>
+      <div class="card rf" id="cr"><div class="lbl" style="left:36px;top:30px">LINE, THEN GRAVITY'S DROP</div><svg class="sv" id="crS" width="784" height="580"></svg></div>
+    </div>
+
+    <!-- K: side by side + think -->
+    <div id="sK">
+      <div class="card full" id="kl"><div class="lbl" style="left:36px;top:30px">NO GRAVITY · b = 0</div><svg class="sv" id="klS" width="784" height="580"></svg>
+        <div class="pillp" id="klC" style="left:36px;top:490px">A straight line, forever</div></div>
+      <div class="card rf" id="kr"><div class="lbl" style="left:36px;top:30px">WITH GRAVITY</div><svg class="sv" id="krS" width="784" height="580"></svg>
+        <div class="pillp" id="krC" style="left:36px;top:490px">Drop grows with x²: 1, 4, 9</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- B: what changes the curve + think -->
+    <div id="sB">
+      <div class="card full" id="bl"><div class="lbl" style="left:36px;top:30px">WHAT CHANGES THE CURVE?</div><div class="ghost" id="exB" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <div class="fx" id="bF" style="left:36px;top:92px;font-size:56px"></div>
+        <svg class="sv" id="blS" width="784" height="580"></svg>
+        <div class="rowc" id="b0" style="top:270px"><div class="rk" id="b0k"></div><div class="rv" id="b0v"></div></div>
+        <div class="rowc" id="b1" style="top:362px"><div class="rk" id="b1k"></div><div class="rv a" id="b1v"></div></div>
+        <div class="pillp ac" id="bP" style="left:36px;top:470px">Twice as fast → b is 4 times smaller</div></div>
+      <div class="card rf" id="br"><div class="lbl" style="left:36px;top:30px">SAME ANGLE · 45°</div><svg class="sv" id="brS" width="784" height="580"></svg></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">A ball is thrown at 20 m/s at 45°. How high is it 10 m across? (g = 9.8 m/s²)</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">THE THROW · CHECK ON THE CURVE</div><svg class="sv" id="wrS" width="784" height="580"></svg></div>
+    </div>
+
+    <!-- X: exam trap + where -->
+    <div id="sX"><div class="card red" id="trap"><div class="fx" id="xF" style="right:48px;top:96px;font-size:40px"></div><div class="brl gr" id="xL" style="right:48px;top:212px">TIME WAS SQUARED, SO cos θ IS TOO</div></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap + questions + NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Remove time, and the path is a <span class="acc">parabola</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

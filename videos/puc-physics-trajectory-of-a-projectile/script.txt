@@ -1,0 +1,55 @@
+H1|0.4|Throw a paper ball into a bin. Kick a football. Spray water from a garden hose.
+H2|0.45|Three different things, one same kind of curve.
+H3|0.35|Aarav noticed it at his study table. He flicked a paper ball at the bin.
+H4|0.5|It rose, turned, and dropped in one smooth curve. Is that curve a piece of a circle?
+H5|0.65|By the end, you will know its exact shape, and prove it yourself.
+P1|0.35|So what is a trajectory?
+P2|0.4|It is the path a projectile traces in the air. Every point on it is a pair of numbers, x and y.
+P3|0.4|We already have two equations. One gives x at any time. One gives y.
+P4|0.65|But a path does not care about time. To get its shape, we remove time, and write y using only x.
+S1|0.35|Let's launch a ball in our motion notebook.
+S2|0.4|It leaves at twenty metres per second, at forty five degrees.
+S3|0.4|Across, the blue part never changes. So x grows in equal steps, in equal times.
+S4|0.4|Up and down, the violet part shrinks, because gravity pulls down all the time.
+S5|0.5|Slow motion at the top. The violet part is zero here. Only the blue part is left.
+S6|0.65|On the graph, the dot draws y against x, as the ball flies.
+D1|0.35|Now let's find its equation, one step at a time.
+D2|0.75|Step one. Across, there is no acceleration. So x equals v naught cos theta, times t.
+D3|0.75|Step two. Turn it around. Time t equals x, divided by v naught cos theta.
+D4|0.75|Step three. Up and down, y equals v naught sin theta times t, minus half g t squared.
+D5|0.75|Step four. Put this t from step two into step three.
+D6|0.8|The first part becomes x tan theta. The second part becomes g x squared, over two v naught squared cos squared theta.
+T1|0.7|Remember this. Remove time, and the path of a projectile is a parabola.
+C1|0.35|Why a parabola? Look at the shape of the equation.
+C2|0.4|For one throw, theta, v naught and g are fixed. So y equals a x, minus b x squared.
+C3|0.4|The a x part alone is a straight line, along the launch direction.
+C4|0.65|The minus b x squared part pulls it down, more as x grows. That is gravity. A line bent like this is a parabola.
+K1|0.4|Side by side. With no gravity, b is zero. The ball flies in a straight line forever.
+K2|0.6|With gravity, the line bends down. The far end drops the most, because the drop grows with x squared.
+K3|3.2|Now you try. A ball rolls off a table, straight across. Is its path a parabola? Pause and decide.
+K4|0.65|Yes! Theta is zero, so tan theta is zero. y equals minus g x squared, over two v naught squared. That is half a parabola.
+B1|0.35|What changes the curve? Look at b.
+B2|0.4|v naught squared sits at the bottom of b. Throw twice as fast, and b becomes four times smaller.
+B3|0.6|So a faster throw bends more slowly. Its parabola is wider and taller.
+B4|3.2|Your turn. Both leave at forty five degrees, one twice as fast. Ten metres across, which is higher? Pause and think.
+B5|0.65|The faster one! Both start along the same line. But the faster ball has a smaller b, so it has dropped less.
+W1|0.35|Now, one worked example.
+W2|0.5|A ball is thrown at twenty metres per second, at forty five degrees. How high is it, ten metres across?
+W3|0.75|At forty five degrees, tan theta is one, and cos squared theta is one half.
+W4|0.75|So b equals nine point eight, over two times four hundred times one half. That is zero point zero two four five.
+W5|0.75|Put x equals ten. y equals ten, minus zero point zero two four five times one hundred.
+W6|0.65|y equals ten minus two point four five. The ball is seven point five five metres high.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students write cos theta at the bottom, instead of cos squared theta.
+X3|0.65|But t was squared, in half g t squared. So the whole t gets squared, and cos theta becomes cos squared theta.
+E1|0.6|Where is this asked? You get a trajectory equation, and find the angle or the speed from it.
+Q1|5.4|Exam level now. A projectile moves along y equals root three x, minus x squared over twenty. g is ten. Find the angle and the speed. Pause and solve.
+A1|0.5|The answer is A. Sixty degrees, and twenty metres per second.
+A2|0.5|Match it with y equals x tan theta. Tan theta is root three, so theta is sixty degrees.
+A3|0.6|Next, g over two v naught squared cos squared theta equals one over twenty. Cos squared sixty is one quarter, so v naught squared is four hundred, and v naught is twenty.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why do we remove time to find the shape of the path?
+Y3|0.9|Two. In the trajectory equation, why is cos theta squared?
+Y4|1.1|Three. What would the path be if there were no gravity?
+N1|0.3|Next time: same speed, thirty degrees or sixty. Which stays in the air longer? Find out in time of flight.
