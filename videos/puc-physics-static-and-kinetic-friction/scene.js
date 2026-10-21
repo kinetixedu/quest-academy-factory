@@ -178,7 +178,7 @@ const kLn = KL.map(([y, v, w]) => { const fl = floorT(k2, 0, 784, y, 45); const 
   const vl = lab(k2, `v = ${v.toFixed(1)} m/s`, VC, { 'font-size': 18 }); attr(vl, 'x', 470); attr(vl, 'y', y - 66);
   const items = [tr, hd, pa.g, fa.g, va.g, fl2, pl2, vl]; return { y, v, w, fl, gh, items }; });
 $('#k2P').innerHTML = `${M.icon('move', 24, FC, 2.4)}<span>Nearly constant, slow or fast</span>`;
-const th1 = PUC.think($('#th1'), { q: 'A book lies on a level table. Nobody pushes it. How big is the friction on it?', opts: ['Zero', 'Its maximum'], right: 0, why: 'Nothing tries to slide the book, so friction has nothing to oppose.' });
+const th1 = PUC.think($('#th1'), { q: 'A book lies on a level table. Nobody pushes it. How big is the friction on it?', opts: ['Zero', 'Its maximum'], right: 0, why: 'Nothing tries to slide the book, so friction is zero.' });
 
 /* ---------- V: Diya lets go ---------- */
 const vs = $('#vS'), VF = 420, VXL = 470;
