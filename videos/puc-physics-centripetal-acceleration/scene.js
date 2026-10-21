@@ -1,7 +1,7 @@
 // PUC Physics Ep 48: Centripetal acceleration (Motion notebook, ball on a circle + a against v, two triangles)
 (() => {
 const { $ } = M, C = PUC.init({ subject: 'physics' }), K = PUC.K, wt = M.wt, T0 = M.t0, T1 = M.t1, mix = M.mix;
-const VC = C.ac, AC = C.red, TH = C.gold, DC = C.violet, RC = C.ink, FC = C.orange, WC = '#7FB2F0', LC = '#3E9B5F';   // v blue, a and Δv red, θ and ω gold, displacement violet, radius ink, push orange, water light blue, leaves green
+const VC = C.ac, AC = C.red, TH = C.gold, OM = C.teal, DC = C.violet, RC = C.ink, FC = C.orange, WC = '#7FB2F0', LC = '#3E9B5F';   // v blue, a and Δv red, θ gold, ω teal (as Ep 47), displacement violet, radius ink, push orange, water light blue, leaves green
 const IMG = '../../assets/illustrations/puc/';
 const nsv = 'http://www.w3.org/2000/svg';
 const mk = (p, tag, a) => { const e = document.createElementNS(nsv, tag); for (const k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e; };
@@ -10,7 +10,7 @@ const sym = (p, x, y, b, sub, col, fs = 30, a = {}) => { const e = mk(p, 'text',
 const attr = PUC.attr;
 const POP = { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 };
 const tx = (c, s) => `\\textcolor{${c}}{${s}}`;
-const vK = tx(VC, 'v'), aK = tx(AC, 'a'), wK = tx(TH, '\\omega'), dvK = tx(AC, '\\Delta v'), thK = tx(TH, '\\Delta\\theta');
+const vK = tx(VC, 'v'), aK = tx(AC, 'a'), wK = tx(OM, '\\omega'), dvK = tx(AC, '\\Delta v'), thK = tx(TH, '\\Delta\\theta');
 const rad = d => d * Math.PI / 180, PI = Math.PI;
 // point on a circle (counter-clockwise, screen y down), unit tangent along the motion, unit vector to the centre
 const P = (o, R, th) => [o[0] + R * Math.cos(th), o[1] - R * Math.sin(th)];
@@ -85,7 +85,7 @@ const sV = PUC.arrow(s, VC, 7, 20), sA = PUC.arrow(s, AC, 7, 20);
 const sVl = sym(s, 0, 0, 'v', '', VC, 30), sAl = sym(s, 0, 0, 'a', '', AC, 30);
 $('#roG').innerHTML = `<span class="k" style="color:${VC}">v</span><span class="v" id="r0" style="color:${VC}">2.00</span><span class="u">m/s · speed</span>
   <span class="k">r</span><span class="v" id="r1">2.00</span><span class="u">m · radius</span>
-  <span class="k" style="color:${TH}">ω</span><span class="v" id="r2" style="color:${TH}">1.00</span><span class="u">rad/s · v/r</span>
+  <span class="k" style="color:${OM}">ω</span><span class="v" id="r2" style="color:${OM}">1.00</span><span class="u">rad/s · v/r</span>
   <span class="k" style="color:${AC}">a</span><span class="v" id="r3" style="color:${AC}">2.00</span><span class="u">m/s² · v²/r</span>`;
 const gr = PUC.graph($('#grS'), { x: 110, y: 78, w: 600, h: 140, xmax: 5, ymin: 0, ymax: 12.5, xt: [0, 1, 2, 3, 4, 5], yt: [0, 4, 8, 12], xl: 'v (m/s)' });
 gr.xlab.setAttribute('y', 78 + 140 + 56);
