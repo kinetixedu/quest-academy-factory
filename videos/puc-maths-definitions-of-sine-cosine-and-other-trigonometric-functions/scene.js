@@ -100,7 +100,7 @@ const lX = M.track(0, [[T0('L1') + 0.4, 0.7], [wt('L2', 'zero') - 0.4, 0], [wt('
 const VS = [[`${sn('\\sin x')} = 0 \\iff P\\ \\text{on the } x\\text{-axis}`, 'no height: at A or at the far left'],
   [`${sn('\\sin x')} = 0 \\iff ${th('x')} = n\\pi, \\ n \\in \\mathbb{Z}`, '0, π, 2π, ... and -π, -2π, ...'],
   [`${cs('\\cos x')} = 0 \\iff P\\ \\text{on the } y\\text{-axis}`, 'no sideways distance: top or bottom'],
-  [`${cs('\\cos x')} = 0 \\iff ${th('x')} = (2n+1)\\tfrac{\\pi}{2}`, 'odd multiples of π/2']];
+  [`${cs('\\cos x')} = 0 \\iff ${th('x')} = (2n+1)\\pi/2`, 'odd multiples of π/2']];
 $('#vSt').innerHTML = VS.map(([f, w], i) => `<div class="pf" id="vs${i}" style="top:${84 + i * 116}px"><div class="n">${i + 1}</div><div class="sx">${K(f)}</div><div class="why">${w}</div></div>`).join('');
 const tVs = [wt('V2', 'Step'), wt('V3', 'Step'), wt('V4', 'Step'), T0('V5')];
 const vsv = $('#vS'), VX = 392, VY = 290, VR = 170;
@@ -113,9 +113,9 @@ const vX = M.track(0.8, [[tVs[0] + 0.2, 0], [wt('V2', 'far') - 0.2, Math.PI], [t
 
 /* ---------- S: cos vs sin ---------- */
 const sC = UCS($('#scS'), 392, 254, 160, { ext: 40 }); sC.set(60 * D2R); attr(sC.ht, 'opacity', '0.25'); M.hide(sC.sl, true);
-$('#scF').innerHTML = K(`${cs('\\cos 60^\\circ')} = \\tfrac{1}{2}`);
+$('#scF').innerHTML = K(`${cs('\\cos 60^\\circ')} = 1/2`);
 const sS = UCS($('#ssS'), 260, 280, 160, { ext: 40 }); sS.set(30 * D2R); attr(sS.base, 'opacity', '0.25');
-$('#ssF').innerHTML = K(`${sn('\\sin 30^\\circ')} = \\tfrac{1}{2}`);
+$('#ssF').innerHTML = K(`${sn('\\sin 30^\\circ')} = 1/2`);
 const avD = PUC.avatar($('#sS'), { x: 976 + 36, y: 270 + 486, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'Cos goes left and right. Sin goes up and down.' });
 const th1 = PUC.think($('#th1'), { q: 'At x = π/2, which one is zero: sine or cosine?', opts: ['Sine', 'Cosine'], right: 1, why: 'P is at the very top (0, 1): no sideways distance, so cos π/2 = 0 and sin π/2 = 1.' });
 
@@ -134,9 +134,9 @@ $('#stF').innerHTML = K(`P = (${cs('\\cos x')},\\ ${sn('\\sin x')})`);
 const th2 = PUC.think($('#th2'), { q: 'Is tan(π/2) defined?', opts: ['Yes', 'No'], right: 1, why: 'tan = sin / cos, and cos(π/2) = 0. Division by zero is not allowed.' });
 
 /* ---------- W: all six at pi/4 ---------- */
-$('#wq').innerHTML = `Find all six trigonometric functions at ${K(th('x = \\tfrac{\\pi}{4}'))}.`;
-const wsol = PUC.solution($('#wl'), [['P is on the line y = x, so a = b'], [K(`${cs('a')}^2 + ${sn('b')}^2 = 1 \\;\\Rightarrow\\; 2${cs('a')}^2 = 1`)], [K(`${cs('a')} = ${sn('b')} = \\tfrac{1}{\\sqrt{2}}`)],
-  [K(`${cs('\\cos\\tfrac{\\pi}{4}')} = ${sn('\\sin\\tfrac{\\pi}{4}')} = \\tfrac{1}{\\sqrt{2}}`)], [K(`\\tan = \\cot = 1, \\quad \\sec = ${COSEC} = \\sqrt{2}`)]], { label: 'WORKED EXAMPLE', y0: 150, dy: 84 });
+$('#wq').innerHTML = `Find all six trigonometric functions at ${K(th('x = \\pi/4'))}.`;
+const wsol = PUC.solution($('#wl'), [['P is on the line y = x, so a = b'], [K(`${cs('a')}^2 + ${sn('b')}^2 = 1 \\;\\Rightarrow\\; 2${cs('a')}^2 = 1`)], [K(`${cs('a')} = ${sn('b')} = 1/\\sqrt{2}`)],
+  [K(`${cs('\\cos(\\pi/4)')} = ${sn('\\sin(\\pi/4)')} = 1/\\sqrt{2}`)], [K(`\\tan = \\cot = 1, \\quad \\sec = ${COSEC} = \\sqrt{2}`)]], { label: 'WORKED EXAMPLE', y0: 150, dy: 84 });
 $('#wl .lbl').style.top = '30px';
 const wsv = $('#wS'), WX = 392, WY = 300, WR = 180;
 const wLn = mk(wsv, 'line', { x1: WX - 230, y1: WY + 230, x2: WX + 220, y2: WY - 220, stroke: C.mute, 'stroke-width': 2.5, 'stroke-dasharray': '8 7' });
@@ -151,15 +151,15 @@ const ts = $('#tS'); const tG = mk(mk(ts, 'g', {}), 'g', {});
 txt(tG, 40, 110, 'sin 30° = 1/2', { 'font-size': 26, fill: SN, 'font-weight': 600 }); txt(tG, 40, 160, 'cosec 30° = 2', { 'font-size': 26, fill: C.ink, 'font-weight': 600 }); txt(tG, 40, 204, 'flip the fraction', { 'font-size': 20, fill: C.mute, 'font-weight': 600 });
 const where = PUC.where($('#wa'), { on: ['PUC BOARDS'], type: 'Find the trigonometric functions at a given angle, or from a point on the unit circle.' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 800,
-  q: `The terminal side of angle ${K(th('x'))} meets the unit circle at ${K(`P\\left(${cs('-\\tfrac{3}{5}')},\\ ${sn('-\\tfrac{4}{5}')}\\right)`)}. Find ${K(`\\cot x + ${COSEC}\\, x`)}.`,
+  q: `The terminal side of angle ${K(th('x'))} meets the unit circle at ${K(`P\\left(${cs('-3/5')},\\ ${sn('-4/5')}\\right)`)}. Find ${K(`\\cot x + ${COSEC}\\, x`)}.`,
   opts: [K('-1/2'), K('1/2'), K('-2'), K('2')], right: 0, optW: 474, optY: 316 });
-const so = PUC.solution($('#so'), [[K(`${cs('\\cos x = -\\tfrac35')},\\ ${sn('\\sin x = -\\tfrac45')}`)], [K(`\\cot x = \\tfrac{${cs('\\cos x')}}{${sn('\\sin x')}} = \\tfrac34`)], [K(`${COSEC}\\, x = \\tfrac{1}{${sn('\\sin x')}} = -\\tfrac54`)], [K(`\\tfrac34 - \\tfrac54 = -\\tfrac12`)]], { y0: 100, dy: 110 });
+const so = PUC.solution($('#so'), [[K(`${cs('\\cos x = -3/5')},\\ ${sn('\\sin x = -4/5')}`)], [K(`\\cot x = ${cs('\\cos x')}/${sn('\\sin x')} = 3/4`)], [K(`${COSEC}\\, x = 1/${sn('\\sin x')} = -5/4`)], [K(`3/4 - 5/4 = -1/2`)]], { y0: 100, dy: 110 });
 const tSo = [wt('A2', 'So'), wt('A3', 'Cot'), wt('A4', 'Cosec'), wt('A4', 'Three')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · the six trigonometric functions', y0: 98, dy: 78, txt: [0, 0, 0, 0, 1],
   lines: [K(`P = (${cs('\\cos x')},\\ ${sn('\\sin x')}) \\ \\text{on the unit circle}`),
     K(`\\tan x = ${sn('\\sin x')} / ${cs('\\cos x')} \\qquad \\cot x = ${cs('\\cos x')} / ${sn('\\sin x')}`),
     K(`\\sec x = 1 / ${cs('\\cos x')} \\qquad ${COSEC}\\, x = 1 / ${sn('\\sin x')}`),
-    K(`${sn('\\sin x')} = 0 \\iff x = n\\pi \\qquad ${cs('\\cos x')} = 0 \\iff x = (2n+1)\\tfrac{\\pi}{2}`),
+    K(`${sn('\\sin x')} = 0 \\iff x = n\\pi \\qquad ${cs('\\cos x')} = 0 \\iff x = (2n+1)\\pi/2`),
     'cos 0 = 1, sin 0 = 0 · cos π/2 = 0, sin π/2 = 1'] });
 const YQ = ['What are cos π and sin π?', 'Why is sec(π/2) not defined?', 'P = (0.6, 0.8). What is tan x?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="n">${i + 1}</div><div class="q">${q}</div></div>`).join('');

@@ -1,0 +1,51 @@
+H1|0.4|Watch a heart monitor in a biology video. Beep. Beep. Beep.
+H2|0.4|The line draws a spike, then the same spike again, and again. The same shape, every beat.
+H3|0.35|Diya saw this while studying at her desk, and thought of the sine wave.
+H4|0.5|Both repeat. But how long is one repeat of sine, and why does it repeat at all?
+H5|0.65|Today, periodicity, and the hidden mirror symmetry of the trigonometric graphs.
+P1|0.4|Turn P once round the unit circle. That is two pi radians, or three hundred and sixty degrees.
+P2|0.4|Now keep turning. Thirty degrees, then thirty plus three sixty, which is three ninety.
+P3|0.65|P lands on exactly the same point. Same height, same side. So sine and cosine give exactly the same values.
+P4|0.65|Watch the graph. Every two pi, the same wave is printed again, like the heartbeat.
+D1|0.35|Let us write it down.
+D2|0.75|Step one. Adding two pi turns P one full circle, back to the same point.
+D3|0.75|Step two. So sine of two pi plus x equals sine x, and cosine of two pi plus x equals cosine x.
+D4|0.75|Step three. Add two pi again and again. For any integer n, sine of two n pi plus x equals sine x. The same holds for cosine.
+D5|0.75|Step four. The smallest positive gap after which the values repeat is called the period. For sine and cosine, the period is two pi.
+G1|0.4|Tangent repeats even sooner. Its period is pi.
+G2|0.65|Half a turn sends P to the opposite point. Sine and cosine both flip their signs, so their ratio, tangent, stays the same.
+K1|0.4|Side by side. Sine and cosine need a full turn, two pi, to repeat.
+K2|0.6|Tangent needs only half a turn, pi. So its graph repeats twice as often.
+K3|3.2|Now you try. Is sine of seven hundred and fifty degrees the same as sine of thirty degrees? Pause and decide.
+K4|0.65|Yes! Seven fifty is two full turns, seven twenty, plus thirty. So sine seven fifty is sine thirty, which is one half.
+S1|0.4|Now symmetry. Turn P by minus x, clockwise instead of anticlockwise.
+S2|0.4|The new point is the mirror image of P in the x axis. Same side to side position, opposite height.
+S3|0.65|So cosine of minus x equals cosine x, and sine of minus x equals minus sine x.
+S4|0.65|On the graph, cosine is a mirror image about the y axis. Fold the paper along the y axis, and the two halves match.
+S5|0.65|Sine has a different symmetry. Spin its graph half a turn about the origin, and it lands on itself.
+S6|0.6|A function like cosine is called even. A function like sine is called odd.
+T1|0.7|Remember this. Sine and cosine repeat every two pi. Tangent repeats every pi.
+Z1|3.2|Quick one. Is cosine of minus sixty degrees plus a half, or minus a half? Pause and think.
+Z2|0.65|Plus a half! Cosine of minus x equals cosine x, so cosine of minus sixty is cosine sixty, one half.
+W1|0.35|Now, one worked example.
+W2|0.5|Find the value of sine of minus one thousand and fifty degrees.
+W3|0.75|Step one. Sine is odd. So sine of minus one thousand fifty is minus sine of one thousand fifty.
+W4|0.75|Step two. One thousand fifty is three full turns, one thousand eighty, minus thirty. Drop the full turns. We get sine of minus thirty.
+W5|0.75|Step three. Sine of minus thirty is minus sine thirty, which is minus one half.
+W6|0.65|So the answer is minus, minus one half. That is plus one half.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students write: sine of minus x equals sine x, just like cosine.
+X3|0.65|But only cosine is even. Sine flips. Sine of minus thirty degrees is minus one half, not plus one half.
+J1|0.6|Where is this asked? In PUC exams, to find the values of large or negative angles. Entrance exams also ask for the period of a function.
+Q1|5.4|Exam level now. Find the value of this expression. Pause and solve.
+A1|0.5|The answer is B. One.
+A2|0.5|Sine is odd, and seven fifty is seven twenty plus thirty. So sine of minus seven fifty is minus a half.
+A3|0.5|Cosine is even, and four twenty is three sixty plus sixty. So cosine of minus four twenty is plus a half.
+A4|0.6|Tangent repeats every one eighty degrees. Eleven twenty five is six times one eighty, plus forty five. So it is tan forty five, which is one.
+A5|0.5|Minus a half, plus a half, plus one. The total is one.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What is the period of tangent?
+Y3|0.9|Two. Is sine of minus x equal to sine x?
+Y4|1.1|Three. Simplify cosine of x plus four pi.
+N1|0.3|Next time: three different looking expressions always give the same number. We meet the trigonometric identities.

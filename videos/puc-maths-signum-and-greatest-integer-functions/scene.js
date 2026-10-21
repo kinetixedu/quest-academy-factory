@@ -197,7 +197,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 22', topic: 'Six shapes on on
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('D4', 'staircase') - 0.2, 1.07, 1200, 560], [T0('D6'), 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('D4', 'staircase') - 0.2, 1.05, 960, 560], [T0('D6'), 1, 960, 540]]);
 
 /* ---------- frame ---------- */
 M.on(t => {

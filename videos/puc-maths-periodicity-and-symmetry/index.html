@@ -1,0 +1,139 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 31 - Periodicity and Symmetry</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 31: periodicity and symmetry (Proof board) ===== */
+:root{--th:#7A4FE0;--co:#2F6FEB;--ta:#0E8F8F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.th{color:var(--th)}.co{color:var(--co)}.si{color:var(--ac)}.ta{color:var(--ta)}
+svg text{font-family:'IBM Plex Mono'}
+#stage svg .pp{transform-box:fill-box;transform-origin:center}
+#stage svg circle,#stage svg g{transform-box:fill-box;transform-origin:center}
+#stage .ringW svg circle{transform-box:view-box;transform-origin:0 0}
+/* title card: three repeats, unknown */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:50px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+/* hook */
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.rdl{position:absolute;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.rdv{position:absolute;height:52px;padding:0 18px;border-radius:10px;display:inline-flex;align-items:center;gap:10px;font:600 26px 'IBM Plex Mono';color:#fff;white-space:nowrap}
+/* steps (recall, derivation) */
+.st{position:absolute;left:36px;width:712px;height:100px}
+.st .n{position:absolute;left:0;top:6px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:40px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:60px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+/* live readout */
+#sRo{position:absolute;right:36px;top:22px;display:flex;gap:34px;font:600 28px 'IBM Plex Mono';white-space:nowrap}
+#sRo i{font-family:Poppins;font-style:italic}
+.fx2{position:absolute;left:36px;top:70px;font-size:34px;white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:64px;font:600 30px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.15em}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.12em}
+#mq .mq .katex{font-size:1.08em}
+#wl .sol .sx{font-size:30px}
+.trapL .tx .katex{font-size:1em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:32px}
+#stF .katex{font-size:1em}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 3 TRIGONOMETRIC FUNCTIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Periodicity and <span class="acc">Symmetry</span></div>
+    <div id="sub">Explained with a heartbeat that repeats</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: the heart monitor -->
+    <div id="sH">
+      <div class="card full" id="hw"><div class="lbl" style="left:36px;top:30px">HEART MONITOR · THE SAME SHAPE AGAIN</div>
+        <svg id="hS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="hP" style="left:36px;top:506px;background:var(--okBg);color:#1F6B3F">Same shape, every beat</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA · AT HER DESK</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">Sine repeats too. But how often?</div></div>
+    </div>
+
+    <!-- P: two turns, the wave prints again -->
+    <div id="sP">
+      <div class="card wide" id="pc"><div class="lbl" style="left:36px;top:30px">LIVE · KEEP TURNING · y = sin x</div>
+        <svg id="pS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="sRo"><span class="th"><i>x</i> = <b id="rT">0°</b></span><span class="si">sin <i>x</i> = <b id="rS"></b></span></div></div>
+    </div>
+
+    <!-- D: the proof + sliding window -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">PROOF · 4 STEPS</div><div class="hiBox" id="dHi" style="left:20px;width:744px;height:96px"></div><div id="dSt"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">ONE PERIOD, PRINTED AGAIN AND AGAIN</div><div class="fx2" id="dF"></div><svg id="dS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- G: tangent repeats every pi -->
+    <div id="sG">
+      <div class="card full" id="gl"><div class="lbl" style="left:36px;top:30px">HALF A TURN · THE OPPOSITE POINT</div><svg id="gS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="gP" style="left:36px;top:506px">Both signs flip: the ratio stays</div></div>
+      <div class="card rf" id="gr"><div class="lbl" style="left:36px;top:30px">y = tan x · PERIOD π</div><svg id="gN" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- K: 2pi vs pi, then pause and think -->
+    <div id="sK">
+      <div class="card full" id="ka"><div class="lbl" style="left:36px;top:30px">SIN AND COS · PERIOD 2π</div><svg id="kaS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="kaP" style="left:36px;top:496px">A full turn to repeat</div></div>
+      <div class="card rf" id="kb"><div class="lbl" style="left:36px;top:30px">TAN · PERIOD π</div><svg id="kbS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="kbP" style="left:36px;top:496px">Half a turn: repeats twice as often</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- S: symmetry -->
+    <div id="sS">
+      <div class="card full" id="sl"><div class="lbl" style="left:36px;top:30px">TURN BY x, THEN BY −x</div><svg id="sSv" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="sP1" style="left:36px;top:506px">Mirror image in the x-axis</div></div>
+      <div class="card rf" id="sr"><div class="lbl" style="left:36px;top:30px" id="srL">THE GRAPHS</div><div class="fx2" id="sF1"></div><div class="fx2" id="sF2"></div><svg id="sG" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="sE" style="left:36px;top:506px;background:var(--co);color:#fff">cos is even</div><div class="pillp ac" id="sO" style="left:240px;top:506px">sin is odd</div></div>
+    </div>
+
+    <!-- Z: pause and think 2 -->
+    <div id="sZ"><div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div></div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">LIVE · TURN CLOCKWISE 1050°</div><div class="fx2" id="wRo" style="font:600 30px 'IBM Plex Mono'"></div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="600" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">sin, cos: every <span class="acc">2π</span>. tan: every <span class="acc">π</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

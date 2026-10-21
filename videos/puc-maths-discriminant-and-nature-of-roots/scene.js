@@ -34,7 +34,7 @@ $('#eqR').innerHTML = EQ.map((c, i) => `<div class="er" id="er${i}" style="top:$
 const tEr = [wt('H2', 'One'), wt('H2', 'One', 1), wt('H2', 'And')];
 
 /* ---------- P: the part under the root ---------- */
-$('#pF').innerHTML = K(`x = \\frac{-${bv('b')} \\pm \\sqrt{${DF}}}{2${av('a')}}`);
+$('#pF').innerHTML = K(`x = \\dfrac{-${bv('b')} \\pm \\sqrt{${DF}}}{2${av('a')}}`);
 $('#dr0 .dk').innerHTML = K(`-\\frac{${bv('b')}}{2${av('a')}}`); $('#dr1 .dk').innerHTML = K(`\\sqrt{${DF}}`);
 $('#dBig').innerHTML = K(`${DD} = ${DF}`); $('#dr3 .dk').innerHTML = K(`${DD} \\gtrless 0`);
 let boxSet = false;
@@ -149,7 +149,7 @@ const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
 const tPush = wt('L4', 'hits') - 0.3;
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tPush, 1.12, 620, 640], [tc2 - 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tPush, 1.08, 760, 620], [tc2 - 0.2, 1, 960, 540]]);
 let ghX = null;
 
 /* ---------- frame ---------- */
@@ -183,7 +183,7 @@ M.on(t => {
     PUC.write($('#pF'), t, wt('P1', 'formula') - 0.1, 1.0);
     const card = $('#df'), sq = $('#pF .sqrt'), bx = $('#pBox');
     if (sq && t >= wt('P2', 'Only') - 0.3) { const cr = card.getBoundingClientRect(), r = sq.getBoundingClientRect(), k = card.offsetWidth / cr.width;
-      bx.style.left = ((r.left - cr.left) * k - 10).toFixed(1) + 'px'; bx.style.top = ((r.top - cr.top) * k - 8).toFixed(1) + 'px'; bx.style.width = (r.width * k + 20).toFixed(1) + 'px'; bx.style.height = (r.height * k + 16).toFixed(1) + 'px'; }
+      bx.style.left = ((r.left - cr.left) * k - 2).toFixed(1) + 'px'; bx.style.top = ((r.top - cr.top) * k - 8).toFixed(1) + 'px'; bx.style.width = (r.width * k + 8).toFixed(1) + 'px'; bx.style.height = (r.height * k + 16).toFixed(1) + 'px'; }
     M.vis(bx, t, wt('P2', 'Only') - 0.05, 1e9, { ...POP, sc: 0.9 });
     M.vis($('#dr0'), t, wt('P2', 'Minus') - 0.1, 1e9, { dy: 14 }); M.vis($('#dr1'), t, wt('P2', 'Only') + 0.1, 1e9, { dy: 14 });
     M.vis($('#dd'), t, T0('P3') - 0.1, out, { dx: 60, dy: 0, ...o });
@@ -239,7 +239,7 @@ M.on(t => {
   const sOn = t >= tS1 - 0.1 && t < tT + 0.1; M.hide($('#sS'), !sOn);
   if (sOn) {
     const out = OUT('K1');
-    M.vis($('#sRat'), t, wt('S1', 'rational') - 0.1, out, POP);
+    M.vis($('#sRat'), t, wt('S1', 'Take') + 0.3, out, POP);
     M.vis($('#s1'), t, wt('S1', 'Take'), out, { dx: -60, dy: 0, ...o });
     [wt('S2', 'squared'), wt('S2', 'sixteen'), wt('S2', 'roots', 1)].forEach((tt, i) => PUC.write($('#s1r' + i), t, tt - 0.1, 0.7));
     n1.forEach((g, i) => M.vis(g, t, wt('S2', 'roots', 1) + 0.3 + i * 0.2, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 }));

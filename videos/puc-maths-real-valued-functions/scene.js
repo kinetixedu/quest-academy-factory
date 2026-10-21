@@ -193,7 +193,7 @@ M.on(t => {
   if (pOn) {
     const out = OUT('L1');
     M.vis($('#pl'), t, tP1 + 0.1, out, { dx: -60, dy: 0, ...o });
-    M.vis($('#pd0'), t, wt('P2', 'real') - 0.1, 1e9, { dy: 14 }); M.vis($('#pd1'), t, wt('P3', 'real', 1) - 0.1, 1e9, { dy: 14 });
+    M.vis($('#pd0'), t, wt('P2', 'real') - 0.1, 1e9, { dy: 14 }); M.vis($('#pd1'), t, wt('P3', 'inputs') - 0.1, 1e9, { dy: 14 });
     M.vis($('#pr'), t, tP1 + 0.4, out, { dx: 60, dy: 0, ...o });
     PIN.forEach((v, i) => { M.vis(pDi[i], t, tP1 + 0.7 + i * 0.08, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 }); M.vis(pDo[i], t, T0('P1') + 1.4 + i * 0.12, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 });
       const u = M.io((t - T0('P1') - 1.0 - i * 0.12) / 0.45), x1 = PX(v), y1 = PYi - 14, x2 = PX(POU[i]), y2 = PYo + 16; pAr[i].set(x1, y1, x1 + (x2 - x1) * u, y1 + (y2 - y1) * u); });

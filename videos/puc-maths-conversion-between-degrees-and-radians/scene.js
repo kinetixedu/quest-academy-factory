@@ -44,7 +44,7 @@ mk(hs, 'circle', { cx: HX, cy: HY, r: 7, fill: C.ink });
 const hDot = mk(hs, 'circle', { cx: HX + HR, cy: HY, r: 11, fill: C.ink, stroke: '#fff', 'stroke-width': 3 });
 const h3g = mk(mk(hs, 'g', {}), 'g', {}); const [h3x, h3y] = P(HX, HY, HR + 6, 3);
 mk(h3g, 'line', { x1: HX, y1: HY, x2: f2(h3x), y2: f2(h3y), stroke: C.ink, 'stroke-width': 3, 'stroke-dasharray': '7 6' });
-txt(h3g, f2(h3x - 8), f2(h3y - 26), '3 rad ?', { 'text-anchor': 'middle', 'font-size': 22, fill: C.ink, 'font-weight': 600 });
+txt(h3g, f2(h3x - 16), f2(h3y + 34), '3 rad ?', { 'text-anchor': 'end', 'font-size': 22, fill: C.ink, 'font-weight': 600 });
 const hA0 = tMorph + 0.5, hA1 = T0('H3') - 0.2;
 const hAng = t => Math.PI * M.io((t - hA0) / (hA1 - hA0));
 
@@ -67,8 +67,8 @@ const cAng = M.track(0, [[wt('L2', 'quarter') - 0.4, Math.PI / 2], [wt('L3', 'ha
 
 /* ---------- V: 1 radian, 1 degree ---------- */
 const VS = [[`${th('\\pi\\ \\text{rad}')} = ${dg('180^\\circ')}`, 'the one fact'],
-  [`${th('1\\ \\text{rad}')} = ${dg('\\tfrac{180^\\circ}{\\pi}')} \\approx ${dg('57.3^\\circ')}`, 'divide both sides by π'],
-  [`${dg('1^\\circ')} = ${th('\\tfrac{\\pi}{180}\\ \\text{rad}')}`, 'go back to step 1, divide both sides by 180'],
+  [`${th('1\\ \\text{rad}')} = ${dg('180^\\circ/\\pi')} \\approx ${dg('57.3^\\circ')}`, 'divide both sides by π'],
+  [`${dg('1^\\circ')} = ${th('\\pi/180\\ \\text{rad}')}`, 'go back to step 1, divide both sides by 180'],
   [`${dg('1^\\circ')} \\approx ${th('0.0175\\ \\text{rad}')}`, 'a degree is tiny, a radian is big']];
 $('#vSt').innerHTML = VS.map(([f, w], i) => `<div class="pf" id="vs${i}" style="top:${84 + i * 116}px"><div class="n">${i + 1}</div><div class="sx">${K(f)}</div><div class="why">${w}</div></div>`).join('');
 const tVs = [wt('V2', 'Pi'), wt('V3', 'Divide'), wt('V4', 'Go'), wt('V5', 'zero')];
@@ -116,8 +116,8 @@ $('#wq').innerHTML = `Convert ${K(dg("22^\\circ\\,30'"))} into radians.`;
 const wsol = PUC.solution($('#wl'), [
   [K(`30' = (30/60)^\\circ = ${dg('0.5^\\circ')}`)],
   [K(`${dg("22^\\circ 30'")} = ${dg('22.5^\\circ')} = ${dg('(45/2)^\\circ')}`)],
-  [K(`\\tfrac{45}{2} \\times \\tfrac{\\pi}{180} = \\tfrac{45\\pi}{360}`)],
-  [K(`= ${th('\\tfrac{\\pi}{8}\\ \\text{rad}')}`)],
+  [K(`45/2 \\times \\pi/180 = 45\\pi/360`)],
+  [K(`= ${th('\\pi/8\\ \\text{rad}')}`)],
   [K(`\\text{check: } 180^\\circ / 8 = ${dg('22.5^\\circ')}`)]], { label: 'WORKED EXAMPLE', y0: 150, dy: 82 });
 $('#wl .lbl').style.top = '30px';
 const wsv = $('#wS'), WX = 392, WY = 278, WR = 190;
@@ -132,7 +132,7 @@ const wHL = txt(wsv, WX, WY - WR - 18, '8 slices = π', { 'text-anchor': 'middle
 const tW = [wt('W3', 'Step'), wt('W4', 'Step'), wt('W5', 'Step'), wt('W6', 'Step'), wt('W7', 'Check')];
 
 /* ---------- X / Q / F ---------- */
-const trap = PUC.trap($('#trap'), { wrong: K(`${th('2\\ \\text{rad}')} = 2 \\times \\tfrac{\\pi}{180} = \\tfrac{\\pi}{90}`), right: K(`${th('2\\ \\text{rad}')} = 2 \\times \\tfrac{180^\\circ}{\\pi} \\approx ${dg('114.6^\\circ')}`) });
+const trap = PUC.trap($('#trap'), { wrong: K(`${th('2\\ \\text{rad}')} = 2 \\times \\pi/180 = \\pi/90`), right: K(`${th('2\\ \\text{rad}')} = 2 \\times 180^\\circ/\\pi \\approx ${dg('114.6^\\circ')}`) });
 const ts = $('#tS'), TCX = 150, TCY = 160, TR = 92;
 const tG = mk(mk(ts, 'g', {}), 'g', {});
 mk(tG, 'circle', { cx: TCX, cy: TCY, r: TR, fill: 'none', stroke: C.line, 'stroke-width': 3 });
@@ -145,14 +145,14 @@ const where = PUC.where($('#wa'), { on: ['PUC BOARDS'], type: 'Convert degrees (
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 800,
   q: `At 4:20, what is the angle between the hour hand and the minute hand of a clock, in radians?`,
   opts: [K('\\pi/18'), K('\\pi/9'), K('0'), K('\\pi/6')], right: 0, optW: 474, optY: 300 });
-const so = PUC.solution($('#so'), [['Minute hand: 6° a minute, so 120°'], ['Hour hand: 0.5° a minute'], [K('4 \\times 30^\\circ + 20 \\times 0.5^\\circ = 130^\\circ')], [K('130^\\circ - 120^\\circ = 10^\\circ')], [K(`10 \\times \\tfrac{\\pi}{180} = ${th('\\tfrac{\\pi}{18}')}`)]], { y0: 100, dy: 96 });
+const so = PUC.solution($('#so'), [['Minute hand: 20 × 6° = 120°'], ['Hour hand: 0.5° a minute'], [K('4 \\times 30^\\circ + 20 \\times 0.5^\\circ = 130^\\circ')], [K('130^\\circ - 120^\\circ = 10^\\circ')], [K(`10 \\times \\pi/180 = ${th('\\pi/18')}`)]], { y0: 100, dy: 96 });
 const tSo = [wt('A2', 'minute'), wt('A3', 'hour'), wt('A3', 'plus'), wt('A4', 'gap'), wt('A4', 'Multiply')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · degrees and radians', y0: 98, dy: 78, txt: [1, 0, 0, 0, 0],
   lines: ['<b>The one fact</b>: π radians = 180°',
-    K(`${th('1\\ \\text{rad}')} = ${dg('\\tfrac{180^\\circ}{\\pi}')} \\approx ${dg('57.3^\\circ')} \\qquad ${dg('1^\\circ')} = ${th('\\tfrac{\\pi}{180}')} \\approx ${th('0.0175\\ \\text{rad}')}`),
-    K(`${th('\\text{radians}')} = ${dg('\\text{degrees}')} \\times \\tfrac{\\pi}{180}`),
-    K(`${dg('\\text{degrees}')} = ${th('\\text{radians}')} \\times \\tfrac{180}{\\pi}`),
-    K(`${dg('30^\\circ')} = ${th('\\tfrac{\\pi}{6}')} \\quad ${dg('45^\\circ')} = ${th('\\tfrac{\\pi}{4}')} \\quad ${dg('60^\\circ')} = ${th('\\tfrac{\\pi}{3}')} \\quad ${dg('90^\\circ')} = ${th('\\tfrac{\\pi}{2}')}`)] });
+    K(`${th('1\\ \\text{rad}')} = ${dg('180^\\circ/\\pi')} \\approx ${dg('57.3^\\circ')} \\qquad ${dg('1^\\circ')} = ${th('\\pi/180')} \\approx ${th('0.0175\\ \\text{rad}')}`),
+    K(`${th('\\text{radians}')} = ${dg('\\text{degrees}')} \\times \\pi/180`),
+    K(`${dg('\\text{degrees}')} = ${th('\\text{radians}')} \\times 180/\\pi`),
+    K(`${dg('30^\\circ')} = ${th('\\pi/6')} \\quad ${dg('45^\\circ')} = ${th('\\pi/4')} \\quad ${dg('60^\\circ')} = ${th('\\pi/3')} \\quad ${dg('90^\\circ')} = ${th('\\pi/2')}`)] });
 const YQ = ['Convert 135° into radians.', 'Convert 5π/3 radians into degrees.', 'Why is it wrong to write π = 180?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="n">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
@@ -192,6 +192,7 @@ M.on(t => {
     M.vis($('#cl'), t, tC1 + 0.1, out, { dx: -60, dy: 0, ...o });
     CS.forEach((_, i) => { const el = $('#cs' + i); M.vis(el.querySelector('.n'), t, tCs[i] - 0.2, 1e9, { ...POP, sc: 0.4 }); PUC.write(el.querySelector('.sx'), t, tCs[i], 0.7); M.vis(el.querySelector('.why'), t, tCs[i] + 0.6, 1e9, { dx: -12, dy: 0 }); });
     const hy = M.track(84, tCs.slice(1).map((tt, i) => [tt - 0.1, 84 + (i + 1) * 112]), M.SOFT)(t); const hb = $('#cHi'); M.vis(hb, t, tCs[0] - 0.1, 1e9, { dy: 0, fade: 0.2 }); hb.style.top = (hy - 4).toFixed(1) + 'px';
+    M.vis($('#cP'), t, wt('C4', 'work') - 0.6, 1e9, POP);
     M.vis($('#cr'), t, tL1 - 0.2, out, { dx: 60, dy: 0, ...o });
     const a = cAng(t); attr(cArc, 'd', arcD(CX, CY, CR - 56, 0, a)); const [x, y] = P(CX, CY, CR, a); attr(cPtr, 'x2', f2(x)); attr(cPtr, 'y2', f2(y)); attr(cDot, 'cx', f2(x)); attr(cDot, 'cy', f2(y));
     M.setT($('#cD span'), Math.round(a * 180 / Math.PI) + '°'); M.setT($('#cR span'), a.toFixed(2) + piName(a));

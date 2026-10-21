@@ -175,12 +175,12 @@ const wLT = txt(wsv, 392 + 236, 320 - 0.6 * 186 + 6, 'y = 3/5', { 'font-size': 2
 const wCand = mk(mk(wsv, 'g', { transform: `translate(${392 + 0.8 * 186},${320 - 0.6 * 186})` }), 'g', {});
 const wcC = mk(wCand, 'circle', { r: 14, fill: '#fff', stroke: C.ink, 'stroke-width': 3, 'stroke-dasharray': '5 4' });
 const wcX = mk(wCand, 'path', { d: 'M-10,-10 L10,10 M10,-10 L-10,10', stroke: C.red, 'stroke-width': 4, 'stroke-linecap': 'round' });
-const wcT = txt(wCand, 0, 44, 'cos θ = +4/5 ?', { 'text-anchor': 'middle', 'font-size': 20, 'font-weight': 600, fill: C.ink2 });
+const wcT = txt(wCand, 0, -26, 'cos θ = +4/5 ?', { 'text-anchor': 'middle', 'font-size': 20, 'font-weight': 600, fill: C.ink2 });
 const wPl = PUC.avatar($('#sW'), { x: 976 + 36, y: 270 + 492, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'The quadrant chose the sign, not the arithmetic.' });
 
 /* ---------- X / Q / F: exam segment ---------- */
 const trap = PUC.trap($('#trap'), { wrong: K(`\\text{Quadrant III: everything negative} \\;\\Rightarrow\\; ${TAN} < 0`), right: K(`${TAN} = (-)\\,/\\,(-) > 0`) + '&nbsp; in quadrant III' });
-const ts = $('#tS'), tu = UC(ts, { cx: 170, cy: 140, R: 92, ax: 24, lw: 5, fs: 18, r0: 24 }); tu.set(225 * D2R); tu.lit(2, 1);
+const ts = $('#tS'), tu = UC(ts, { cx: 170, cy: 140, R: 92, ax: 24, lw: 5, fs: 18, r0: 24 }); tu.set(225 * D2R); tu.lit(2, 1); [tu.cosT, tu.sinT, tu.thT].forEach(e => { e.style.display = 'none'; });
 const tR = [['sin 225° < 0', SI, 96], ['cos 225° < 0', CO, 136], ['tan 225° = +1', TA, 186]].map(([s, col, y]) => txt(ts, 330, y, s, { 'font-size': 24, 'font-weight': 600, fill: col }));
 const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'PUC BOARDS'], type: 'One ratio and the quadrant are given: find the other ratios.' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 780,

@@ -116,7 +116,7 @@ const gmAng = t => 420 * D2R * M.io((t - gm0) / Math.max(1, gm1 - gm0));
 
 /* ---------- R: wrap the number line ---------- */
 const RRW = [['ZERO', 'sits on the point A'], ['POSITIVE', 'wrap anticlockwise'], ['NEGATIVE', 'wrap clockwise'], ['RESULT', 'number x ↔ angle of x radians']];
-$('#rRows').innerHTML = RRW.map(([a, b], i) => `<div class="an" id="rw${i}" style="top:${84 + i * 84}px"><b>${a}</b>${b}</div>`).join('') + `<div class="pillp ac" id="rP" style="left:36px;top:440px">2π lands back on A after one lap</div>`;
+$('#rRows').innerHTML = `<div id="rH" style="position:absolute;left:36px;top:84px;width:712px;font:700 40px/1.25 Poppins;letter-spacing:-.015em">Every real number can be an <span style="color:var(--ac)">angle</span>.</div>` + RRW.map(([a, b], i) => `<div class="an" id="rw${i}" style="top:${196 + i * 74}px"><b>${a}</b>${b}</div>`).join('') + `<div class="pillp ac" id="rP" style="left:36px;top:500px">2π lands back on A after one lap</div>`;
 const tRw = [wt('R2', 'Zero'), wt('R3', 'positive'), wt('R3', 'negative'), wt('R6', 'radian')];
 const rs = $('#rS'), RX = 320, RY = 268, RR = 112;
 const clip = mk(mk(rs, 'defs', {}), 'clipPath', { id: 'rClip' }); mk(clip, 'rect', { x: 20, y: 66, width: 744, height: 392 });
@@ -160,14 +160,14 @@ const ws = $('#wS'), WX = 392, WY = 270, WR = 170;
 UC(ws, WX, WY, WR, { ext: 40 });
 ['I', 'II', 'III', 'IV'].forEach((s, i) => txt(ws, WX + [1, -1, -1, 1][i] * 112, WY + [-1, -1, 1, 1][i] * 96 + 12, s, { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-size': 34, fill: '#D0D3DA', 'font-weight': 700 }));
 const wG = mk(mk(ws, 'g', {}), 'g', {}); const [w8x, w8y] = P(WX, WY, WR + 30, 80 * D2R);
-txt(wG, f2(w8x + 4), f2(w8y + 4), '80°', { 'font-size': 22, fill: TH, 'font-weight': 600 });
+txt(wG, f2(w8x + 22), f2(w8y + 4), '80°', { 'font-size': 22, fill: TH, 'font-weight': 600 });
 const wA = ANG(ws, WX, WY, WR, 34);
 const w0 = wt('W3', 'clockwise'), w1 = Math.max(w0 + 4, T1('W5'));
 const wAng = t => -1000 * D2R * M.io((t - w0) / (w1 - w0));
 const tW = [wt('W3', 'Step'), wt('W4', 'Step'), wt('W5', 'Step'), wt('W6', 'Step'), wt('W7', 'Two')];
 
 /* ---------- X / Q / F ---------- */
-const trap = PUC.trap($('#trap'), { wrong: K(`\\tfrac{5\\pi}{4}\\ \\text{and}\\ \\tfrac{\\pi}{4}\\ \\text{end at the same point}`), right: K(`\\tfrac{5\\pi}{4} - \\tfrac{\\pi}{4} = \\pi`) + '&nbsp; half a turn: opposite points' });
+const trap = PUC.trap($('#trap'), { wrong: K(`5\\pi/4\\ \\text{and}\\ \\pi/4\\ \\text{end at the same point}`), right: K(`5\\pi/4 - \\pi/4 = \\pi`) + '&nbsp; half a turn: opposite points' });
 const ts = $('#tS'), TCX = 150, TCY = 140, TR = 92;
 const tG = mk(mk(ts, 'g', {}), 'g', {});
 mk(tG, 'line', { x1: TCX - TR - 20, y1: TCY, x2: TCX + TR + 20, y2: TCY, stroke: C.line, 'stroke-width': 2 }); mk(tG, 'line', { x1: TCX, y1: TCY - TR - 20, x2: TCX, y2: TCY + TR + 20, stroke: C.line, 'stroke-width': 2 });
@@ -179,9 +179,9 @@ txt(tG, f2(q1x + 14), f2(q1y - 8), 'π/4', { 'font-size': 20, fill: C.ink, 'font
 txt(tG, 290, 132, 'differ by π:', { 'font-size': 22, fill: C.ink2, 'font-weight': 600 }); txt(tG, 290, 166, 'opposite sides', { 'font-size': 22, fill: C.ink2, 'font-weight': 600 });
 const where = PUC.where($('#wa'), { on: ['PUC BOARDS'], type: 'Find the quadrant of an angle, or the angle in [0, 2π) with the same end point.' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 800,
-  q: `How many of these angles end at the same point as ${K(th('\\tfrac{\\pi}{3}'))} on the unit circle?<br>${K('\\tfrac{7\\pi}{3},\\quad -\\tfrac{5\\pi}{3},\\quad \\tfrac{4\\pi}{3},\\quad \\tfrac{13\\pi}{3},\\quad -\\tfrac{\\pi}{3}')}`,
+  q: `How many of these angles end at the same point as ${K(th('\\pi/3'))} on the unit circle?<br>${K('7\\pi/3,\\quad -5\\pi/3,\\quad 4\\pi/3,\\quad 13\\pi/3,\\quad -\\pi/3')}`,
   opts: ['1', '2', '3', '4'], right: 2, optW: 474, optY: 316 });
-const so = PUC.solution($('#so'), [[K('\\text{same point} \\iff \\text{difference} = 2n\\pi')], [K('\\tfrac{7\\pi}{3}: 2\\pi \\;\\checkmark \\quad -\\tfrac{5\\pi}{3}: -2\\pi \\;\\checkmark')], [K('\\tfrac{13\\pi}{3}: 4\\pi \\;\\checkmark')], [K(`\\tfrac{4\\pi}{3}: \\pi \\;${red('\\times')} \\quad -\\tfrac{\\pi}{3}: -\\tfrac{2\\pi}{3} \\;${red('\\times')}`)], ['3 angles match']], { y0: 100, dy: 96 });
+const so = PUC.solution($('#so'), [[K('\\text{same point} \\iff \\text{difference} = 2n\\pi')], [K('7\\pi/3: 2\\pi \\;\\checkmark \\quad -5\\pi/3: -2\\pi \\;\\checkmark')], [K('13\\pi/3: 4\\pi \\;\\checkmark')], [K(`4\\pi/3: \\pi \\;${red('\\times')} \\quad -\\pi/3: -2\\pi/3 \\;${red('\\times')}`)], ['3 angles match']], { y0: 100, dy: 96 });
 const tSo = [wt('A2', 'Subtract'), wt('A3', 'Seven'), wt('A3', 'Thirteen'), wt('A4', 'Four'), wt('A4', 'only')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · the unit circle', y0: 98, dy: 76, txt: [1, 1, 1, 0, 1],
   lines: ['<b>Unit circle</b>: centre O at the origin, radius 1, angles start at A(1, 0)',
@@ -226,7 +226,7 @@ M.on(t => {
   const uOn = t >= tU2 - 0.1 && t < tS1 + 0.1; M.hide($('#sU'), !uOn);
   if (uOn) {
     const out = OUT('S1');
-    M.vis($('#ul'), t, tU2 + 0.1, out, { dx: -60, dy: 0, ...o });
+    M.vis($('#ul'), t, tUr[0] - 0.4, out, { dx: -60, dy: 0, ...o });
     UR.forEach((_, i) => M.vis($('#ur' + i), t, tUr[i] - 0.1, 1e9, { dx: -16, dy: 0 }));
     M.vis($('#ur'), t, tU2 + 0.2, out, { dx: 60, dy: 0, ...o });
     const ta = wt('U2', 'axes') - 0.1; [uC.ax, uC.ay].forEach(e => M.draw(e, t, ta, 0.6)); [uC.hx, uC.hy, uC.lx, uC.ly].forEach(e => M.vis(e, t, ta + 0.5, 1e9, { dy: 0 }));
@@ -260,7 +260,7 @@ M.on(t => {
     const a = gAng(t); gA.set(a); [gA.ray, gA.p].forEach(e => M.vis(e, t, wt('G2', 'Sixty') - 0.3, 1e9, { dy: 0, fade: 0.15 }));
     const q = a < 0.01 ? -1 : Math.floor(a / (Math.PI / 2)); gQ.forEach((r, i) => attr(r, 'opacity', i === q && t > wt('G2', 'Sixty') ? '1' : '0'));
     M.setT(gAngL, Math.round(a / D2R) + '°'); const [lx, ly] = P(GX, GY, 86, a / 2); attr(gAngL, 'x', f2(lx)); attr(gAngL, 'y', f2(ly + 8)); M.hide(gAngL, t < wt('G2', 'Sixty'));
-    M.vis($('#gm'), t, T0('G3') - 0.2, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#gm'), t, tG1 + 0.4, out, { dx: 60, dy: 0, ...o });
     const m = gmAng(t); gM.set(m, 40); M.setT($('#gRd span'), Math.round(m / D2R) + '°' + (m > TAU ? ' = 360° + ' + Math.round(m / D2R - 360) + '°' : ''));
     M.vis($('#gRd'), t, gm0, 1e9, { dy: 10 }); M.vis(gG, t, wt('G3', 'exactly') - 0.1, 1e9, { dy: 0, fade: 0.2 }); M.vis($('#gP'), t, wt('G3', 'lands', 0) - 0.1, 1e9, POP);
   }
@@ -270,6 +270,7 @@ M.on(t => {
   if (rOn) {
     const out = OUT('D1');
     M.vis($('#rl'), t, tR1 + 0.1, out, { dx: -60, dy: 0, ...o });
+    M.rise($('#rH'), t, tR1 + 0.3, { st: 0.05, sp: M.HEAVY });
     RRW.forEach((_, i) => M.vis($('#rw' + i), t, tRw[i] - 0.1, 1e9, { dx: -16, dy: 0 }));
     M.vis($('#rP'), t, wt('R5', 'lap') - 0.1, 1e9, POP);
     M.vis($('#rr'), t, T0('R2') - 0.1, out, { dx: 60, dy: 0, ...o });

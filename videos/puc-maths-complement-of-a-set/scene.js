@@ -182,7 +182,7 @@ M.on(t => {
   if (cOn) {
     const out = OUT('V1');
     M.vis($('#cd'), t, tU1 + 0.1, out, { dx: -60, dy: 0, ...o });
-    M.vis($('#cu0'), t, wt('U1', 'call') - 0.1, 1e9, { dx: -16, dy: 0 }); M.vis($('#cu1'), t, wt('U2', 'A') - 0.1, 1e9, { dx: -16, dy: 0 });
+    M.vis($('#cu0'), t, wt('U1', 'universal') + 0.2, 1e9, { dx: -16, dy: 0 }); M.vis($('#cu1'), t, wt('U2', 'A') - 0.1, 1e9, { dx: -16, dy: 0 });
     M.rise($('#cdT'), t, T0('C1') + 0.05, { st: 0.05, sp: M.HEAVY });
     PUC.write($('#cdS'), t, wt('C1', 'dash') - 0.1, 0.5); M.vis($('#cdL'), t, wt('C1', 'read') - 0.1, 1e9, { dx: -12, dy: 0 });
     PUC.write($('#cdF'), t, wt('C6', 'set', 1) - 0.1, 1.2);

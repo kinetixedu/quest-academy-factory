@@ -151,7 +151,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 24', topic: 'Measure a wheel 
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('C4', 'hole') - 0.3, 1.06, 1200, 560], [T0('C5') - 0.4, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('C4', 'hole') - 0.3, 1.05, 960, 560], [T0('C5') - 0.4, 1, 960, 540]]);
 
 /* ---------- frame ---------- */
 M.on(t => {
@@ -234,7 +234,7 @@ M.on(t => {
     M.vis($('#cl'), t, tC1 + 0.3, out, { dx: -60, dy: 0, ...o }); M.vis($('#cG'), t, wt('C1', 'beyond') - 0.1, 1e9, POP);
     M.vis($('#ct0'), t, wt('C2', 'domain') - 0.2, 1e9, { dx: -16, dy: 0 }); M.vis($('#ct1'), t, wt('C2', 'output') - 0.2, 1e9, { dx: -16, dy: 0 });
     PUC.write($('#cF0'), t, wt('C3', 'Compare') + 0.1, 0.5); PUC.write($('#cF1'), t, wt('C3', 'squared') - 0.1, 0.7);
-    M.vis($('#cr'), t, wt('C3', 'Compare'), out, { dx: 60, dy: 0, ...o });
+    M.vis($('#cr'), t, T0('C2') + 0.2, out, { dx: 60, dy: 0, ...o });
     M.draw(cF, t, wt('C3', 'Compare') + 0.3, 0.7); M.draw(cGl, t, wt('C3', 'squared') + 0.2, 0.7);
     M.vis(cLf, t, wt('C3', 'Compare') + 0.6, 1e9, { dy: 0 }); M.vis(cLg, t, wt('C3', 'squared') + 0.6, 1e9, { dy: 0 });
     M.vis(cH, t, wt('C4', 'hole') - 0.1, 1e9, { ...POP, sc: 0.3 }); M.vis(cRing, t, wt('C4', 'hole'), 1e9, { dy: 0, sc: 0.4, sp: M.POP }); M.vis(cHl, t, wt('C4', 'hole') + 0.2, 1e9, { dy: 0 });

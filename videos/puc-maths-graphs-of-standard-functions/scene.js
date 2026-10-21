@@ -162,7 +162,7 @@ const ts = $('#tS'), TG = plot(ts, { x: 70, y: 40, w: 420, h: 200, xmin: -1.6, x
 const tAll = TG.curve(C.dim, 3); attr(tAll, 'd', TG.pathD(v => v * v, -1.6, 2.15));
 const tSeg = TG.curve(RC, 5); attr(tSeg, 'd', TG.pathD(v => v * v, -1, 2));
 const tMin = dotC(ts, TG.X(0), TG.Y(0), 9, C.ok), tBand = mk(ts, 'line', { x1: TG.X(0) - 0, y1: TG.Y(0), x2: TG.X(0), y2: TG.Y(4), stroke: C.ok, 'stroke-width': 12, 'stroke-linecap': 'round', opacity: 0.35 });
-const tMinL = txt(ts, TG.X(0.2), TG.Y(1.7), 'lowest: 0', { 'text-anchor': 'middle', 'font-size': 18, fill: C.ok, 'font-weight': 600 });
+const tMinL = txt(ts, TG.X(0.65), TG.Y(1.7), 'lowest: 0', { 'text-anchor': 'middle', 'font-size': 18, fill: C.ok, 'font-weight': 600 });
 const where = PUC.where($('#wa'), { on: ['JEE MAIN'], type: 'Count the solutions of an equation like x² − |x| − 12 = 0.' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 780,
   q: `${K(`y = x^3 \\quad \\text{and} \\quad y = |x|`)}<br>How many points do the two graphs share?`,
@@ -184,7 +184,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 23', topic: 'Can a canteen bi
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('U2', 'sharp') - 0.3, 1.06, 1220, 580], [T0('U3') - 0.4, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('U2', 'sharp') - 0.3, 1.05, 960, 560], [T0('U3') - 0.4, 1, 960, 540]]);
 const setXY = (el, x, y) => { attr(el, 'cx', x.toFixed(1)); attr(el, 'cy', y.toFixed(1)); };
 const setL = (el, x1, y1, x2, y2) => { attr(el, 'x1', x1.toFixed(1)); attr(el, 'y1', y1.toFixed(1)); attr(el, 'x2', x2.toFixed(1)); attr(el, 'y2', y2.toFixed(1)); };
 
@@ -212,8 +212,8 @@ M.on(t => {
     const out = OUT('I1');
     M.vis($('#pl'), t, tP1 + 0.1, out, { dx: -60, dy: 0, ...o });
     [wt('P2', 'Pick'), wt('P2', 'find'), wt('P2', 'Plot'), wt('P2', 'join')].forEach((tt, i) => M.vis($('#pw' + i), t, tt - 0.1, 1e9, POP));
-    M.vis($('#ptb'), t, T0('P3') - 0.1, 1e9, { dy: 14 });
-    PX.forEach((_, i) => { M.vis($('#pxc' + i), t, T0('P3') + 0.1 + i * 0.05, 1e9, { dy: 8, fade: 0.1 }); M.vis($('#pyc' + i), t, tPx[i] + 0.15, 1e9, { ...POP, sc: 0.5 }); });
+    M.vis($('#ptb'), t, wt('P2', 'Pick') + 0.2, 1e9, { dy: 14 });
+    PX.forEach((_, i) => { M.vis($('#pxc' + i), t, wt('P2', 'Pick') + 0.3 + i * 0.05, 1e9, { dy: 8, fade: 0.1 }); M.vis($('#pyc' + i), t, tPx[i] + 0.15, 1e9, { ...POP, sc: 0.5 }); });
     PUC.write($('#pF'), t, wt('P3', 'equals') - 0.1, 0.6);
     M.vis($('#pr'), t, T0('P2') + 0.3, out, { dx: 60, dy: 0, ...o });
     const live = t >= pK[0][0], xv = pw(t, pK), yv = xv * xv, run = live && t < tPx[6] + 0.6;

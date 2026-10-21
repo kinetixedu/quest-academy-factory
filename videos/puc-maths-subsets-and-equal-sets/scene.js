@@ -116,7 +116,7 @@ const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW
   opts: ['2', '3', '4', '5'], right: 2, optW: 474, optY: 330 });
 const so = PUC.solution($('#so'), [[K(`\\text{(i) } 2 \\notin ${ac('A')}:\\ \\text{false}`)], [K(`\\text{(ii) } \\{2\\} \\in ${ac('A')}:\\ \\text{true}`)], [K(`\\text{(iii) } 2 \\notin ${ac('A')}:\\ \\text{false}`)], [K(`\\text{(iv), (v)}:\\ \\text{true}`)], [K(`\\text{(vi) true} \\Rightarrow 4`)]], { y0: 100, dy: 96 });
 const tSo = [wt('A2', 'false'), wt('A3', 'true'), wt('A3', 'false'), wt('A4', 'four'), wt('A5', 'Four')];
-const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · subsets and equal sets', y0: 98, dy: 78, txt: [1, 0, 1, 0, 0],
+const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · subsets and equal sets', y0: 96, dy: 84, txt: [1, 0, 1, 0, 0],
   lines: ['<b>Subset</b>: every element of A is also in B',
     K(`${ac('A')} \\subset ${bc('B')},\\quad ${ac('A')} \\subset ${ac('A')},\\quad ${PHI} \\subset ${ac('A')}`),
     '<b>Equal sets</b>: exactly the same elements',

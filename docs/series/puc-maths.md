@@ -93,3 +93,5 @@ Topics Amjad marked "supplementary", "where prescribed" or "extension" (Eps 23, 
 
 ## Canon added by episodes
 (lead adds recurring facts reported by subagents here)
+- Chapter 3 fixed colours: theta / first angle x (alpha) violet #7A4FE0, cos blue #2F6FEB, sin coral (accent), tan teal #0E8F8F, sec and second angle y (beta) gold #B7791F, cot orange #D9731A, cosec magenta #C2378A.
+- Chapter 1 colours: element x violet, rule coral, set A blue, set B teal, U ink, not-in red. Intro number families: N coral, Z teal, Q blue, R ink, irrational violet.

@@ -121,7 +121,7 @@ const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW
   opts: ['2', '3', '4', '5'], right: 1, optW: 474, optY: 330 });
 const so = PUC.solution($('#so'), [[K(`A:\\ ${xc('x')}^2 = -1 \\Rightarrow ${PHI}`)], [K(`B = \\{1, 2\\}`)], [K(`C = ${PHI},\\ \\ D = ${PHI}`)], [K(`E = \\{${PHI}\\}:\\ \\text{1 element}`)], [K(`\\text{empty: } A, C, D \\Rightarrow 3`)]], { y0: 100, dy: 96 });
 const tSo = [wt('A2', 'real'), wt('A3', 0), wt('A4', 0), wt('A5', 0), wt('A5', 'three')];
-const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · four kinds of sets', y0: 98, dy: 78, txt: [1, 0, 1, 0, 1],
+const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · four kinds of sets', y0: 96, dy: 84, txt: [1, 0, 1, 0, 1],
   lines: ['<b>Empty set</b>: no element at all',
     K(`${PHI} = \\{\\ \\ \\},\\quad n(${PHI}) = 0,\\quad \\{0\\} \\ne ${PHI}`),
     '<b>Finite</b>: the counting ends · <b>Infinite</b>: it never does',

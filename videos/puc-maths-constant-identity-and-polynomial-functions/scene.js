@@ -101,7 +101,7 @@ $('#sqA').innerHTML = K(`(2${xc('s')})^2 = 4${xc('s')}^2`);
 
 /* ---------- G: live y = x^n ---------- */
 const NR = [[0, 'y = 1', 'constant'], [1, 'y = x', 'identity'], [2, 'y = x^2', 'parabola'], [3, 'y = x^3', 'cubic']];
-$('#nRows').innerHTML = NR.map(([n, f, w], i) => `<div class="nn" id="nr${i}" style="top:${200 + i * 88}px"><div class="nk">n = ${n}</div><div class="nv">${K(f)}</div><div class="nw">${w}</div></div>`).join('');
+$('#nRows').innerHTML = NR.map(([n, f, w], i) => `<div class="nn" id="nr${i}" style="top:${180 + i * 74}px"><div class="nk">n = ${n}</div><div class="nv">${K(f)}</div><div class="nw">${w}</div></div>`).join('');
 const gs = $('#gS'), ga = axes(gs, { ox: 392, oy: 330, sx: 150, sy: 52, x0: -2.4, x1: 2.4, y0: -4.4, y1: 4.6, xt: [-2, -1, 1, 2], yt: [-4, -2, 2, 4] });
 const gGhost = [0, 1, 2].map(k => mk(gs, 'path', { d: ga.path(x => Math.pow(x, k), -2.3, 2.3), fill: 'none', stroke: C.dim, 'stroke-width': 2, 'stroke-dasharray': '5 6' }));
 const gCur = mk(gs, 'path', { d: '', fill: 'none', stroke: RC, 'stroke-width': 5, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' });
@@ -126,7 +126,7 @@ const wsol = PUC.solution($('#wl'), [
   [K(`f(${xc('-1')}) = -1 - 1 + 2 = ${rc('0')}`)],
   [K(`f(${xc('0')}) = ${rc('2')}`)],
   [K(`f(${xc('2')}) = 8 - 4 + 2 = ${rc('6')}`)],
-  ['Points ' + K(`(${xc('-1')}, ${rc('0')}),\\ (${xc('0')}, ${rc('2')}),\\ (${xc('2')}, ${rc('6')})`)]], { label: 'WORKED EXAMPLE', y0: 196, dy: 76 });
+  ['Points ' + K(`(${xc('-1')}, ${rc('0')}),\\ (${xc('0')}, ${rc('2')}),\\ (${xc('2')}, ${rc('6')})`)]], { label: 'WORKED EXAMPLE', y0: 210, dy: 74 });
 $('#wl .lbl').style.top = '30px';
 const tW = [wt('W3', 'powers'), wt('W4', 'minus'), wt('W5', 'zero'), wt('W6', 'two'), wt('W7', 'graph')];
 const ws = $('#wS'), wa = axes(ws, { ox: 330, oy: 470, sx: 120, sy: 48, x0: -2, x1: 3.3, y0: -1.8, y1: 8, xt: [-1, 1, 2], yt: [2, 4, 6] });
@@ -149,9 +149,9 @@ const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap 
   lines: [K(`f(${xc('x')}) = ${rc('c')}: \\ \\text{domain } ${ac('\\mathbb{R}')},\\ \\text{range } \\{${rc('c')}\\}`),
     K(`f(${xc('x')}) = ${xc('x')}: \\ \\text{domain } ${ac('\\mathbb{R}')},\\ \\text{range } ${rc('\\mathbb{R}')}`),
     K(`f(${xc('x')}) = ${rc('a_0')} + ${rc('a_1')}${xc('x')} + \\dots + ${rc('a_n')}${xc('x')}^n, \\ n = 0, 1, 2, \\dots`),
-    `Powers must be whole numbers: ${K('x^{2/3}')} and ${K('\\tfrac{1}{x}')} are not polynomials`,
+    `Powers must be whole numbers: ${K('x^{2/3}')} and ${K('1/x')} are not polynomials`,
     'Simplify first, then read the degree'] });
-const YQ = [`What is the range of a constant function ${K('f(x) = c')}?`, `Is ${K('\\tfrac{1}{x}')} a polynomial function? Why?`, `Find ${K('f(3)')} for ${K('f(x) = x^3 - x^2 + 2')}.`];
+const YQ = [`What is the range of a constant function ${K('f(x) = c')}?`, `Is ${K('1/x')} a polynomial function? Why?`, `Find ${K('f(3)')} for ${K('f(x) = x^3 - x^2 + 2')}.`];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="n">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
 const nx = PUC.next($('#sF'), { label: 'NEXT · EP 20', topic: 'Distance is never negative: Rational and Modulus Functions', y: 764 });
@@ -160,7 +160,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 20', topic: 'Distance is neve
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('G4') - 0.2, 1.06, 1370, 560], [T0('G6') + 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('G4') - 0.2, 1.04, 1010, 550], [T0('G6') + 0.2, 1, 960, 540]]);
 
 /* ---------- frame ---------- */
 M.on(t => {

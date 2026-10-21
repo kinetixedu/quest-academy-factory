@@ -174,8 +174,8 @@ const fc = PUC.fcard($('#sF'), { x: 300, y: 236, w: 1320, h: 540, title: 'Recap 
     'Curve crosses the x-axis: real roots. Stays off it: complex roots',
     `Real a, b, c: complex roots come as a conjugate pair ${K(`${re('p')} \\pm ${im('q')}${I}`)}`,
     K(`${D} < 0:\\ \\ \\sqrt{${D}} = ${I}\\sqrt{${dv('4ac - b^2')}}`),
-    K(`x = \\frac{-${bv('b')} \\pm \\sqrt{${D}}}{2${av('a')}}`)] });
-M.$$('#sF .fcard .fl')[4].style.cssText += ';font-size:60px;top:404px';
+    K(`x = \\dfrac{-${bv('b')} \\pm \\sqrt{${D}}}{2${av('a')}}`)] });
+M.$$('#sF .fcard .fl')[4].style.cssText += ';font-size:46px;top:398px';
 const YQ = [`Solve ${K('x^2 + 4 = 0')}.`, 'Why does the formula need plus or minus?', `${K(`3 - 2${I}`)} is a root of a quadratic with real coefficients. What is the other root?`];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="n">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
@@ -309,7 +309,7 @@ M.on(t => {
   if (stOn) {
     const sx = PUC.sweep(SW)(t); stmt.style.transform = t > tW1 ? `translateX(${(sx ?? -1980).toFixed(1)}px)` : 'none';
     M.rise($('#st1'), t, tT + 0.08, { st: 0.05 }); M.rise($('#st2'), t, wt('T1', 'Every') - 0.05, { st: 0.07, sp: M.HEAVY });
-    PUC.write($('#stF'), t, wt('T1', 'formula') - 0.4, 0.9);
+    PUC.write($('#stF'), t, wt('T1', 'Real') - 0.3, 0.9);
   }
 
   /* W: worked example */

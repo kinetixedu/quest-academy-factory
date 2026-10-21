@@ -145,7 +145,7 @@ $('#tgs').innerHTML = HC.map(([h, c], j) => `<div class="th" style="left:${200 +
 const tW = [wt('W3', 'Seven'), wt('W4', 'Minus'), wt('W5', 'Three'), wt('W6', 'Root')];
 
 /* ---------- X / Q / F: exam segment ---------- */
-const trap = PUC.trap($('#trap'), { wrong: K(`\\pi = \\dfrac{22}{7}`) + '&nbsp; exactly', right: K(`\\pi \\approx \\dfrac{22}{7}`) + '&nbsp; only a close guess' });
+const trap = PUC.trap($('#trap'), { wrong: K(`\\pi = 22/7`) + '&nbsp; exactly', right: K(`\\pi \\approx 22/7`) + '&nbsp; only a close guess' });
 const ts = $('#tS');
 const tr1 = txt(ts, 40, 112, '', { 'font-size': 36, fill: C.ink, 'font-weight': 600 }); tr1.innerHTML = `<tspan>22/7 = 3.14</tspan><tspan fill="${C.red}">28571...</tspan>`;
 const tr2 = txt(ts, 40, 182, '', { 'font-size': 36, fill: C.ink, 'font-weight': 600 }); tr2.innerHTML = `<tspan>   π = 3.14</tspan><tspan fill="${C.ok}">15926...</tspan>`;

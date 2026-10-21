@@ -13,9 +13,9 @@ L2|0.4|Where the curve crosses the x axis, y is zero. Those points are the real 
 L3|0.4|At c equal to minus four, the curve cuts the axis at two and at minus two.
 L4|0.4|Let c count up. The crossings move in, to one and minus one.
 L5|0.4|At c equal to zero, the curve just touches the axis.
-L6|0.65|Past zero, it lifts off. No crossing, so no real solution.
-L7|0.65|At c equal to one, our equation, it floats one full unit above the axis.
-D1|0.35|Now prove it in four small steps.
+L6|0.55|Past zero, it lifts off. No crossing, so no real solution.
+L7|0.55|At c equal to one, our equation, it floats one full unit above the axis.
+D1|0.35|Now prove it in four steps.
 D2|0.75|Step one. Start with x squared plus one equals zero.
 D3|0.75|Step two. Subtract one from both sides. x squared equals minus one.
 D4|0.75|Step three. But every real square is zero or more.
@@ -42,7 +42,7 @@ U5|0.6|So complex numbers need a second direction.
 U6|3.2|Quick one. Start at three and multiply by i twice. Where do you land? Pause and think.
 U7|0.65|Minus three! Two quarter turns make one half turn.
 W1|0.35|Now, one worked example.
-W2|0.5|Show that x squared plus four x plus five equals zero has no real solution. Then solve it with i.
+W2|0.5|Show x squared plus four x plus five equals zero has no real solution. Then solve it with i.
 W3|0.75|Step one. Write five as four plus one.
 W4|0.75|Step two. That gives x plus two, squared, equals minus one.
 W5|0.75|Step three. A real square cannot be negative. So there is no real solution.
@@ -59,7 +59,7 @@ A3|0.5|A real square is never negative. So there is no real solution exactly whe
 A4|0.6|At c equal to four, x equals two still works. So c is five to twenty: sixteen integers.
 F1|3.2|Here is your recap. Screenshot this card.
 Y1|0.4|Can you answer these three questions without help?
-Y2|0.9|One. Why does x squared plus nine equals zero have no real solution?
-Y3|0.9|Two. For which c does the graph of x squared plus c miss the x axis?
-Y4|1.1|Three. Is minus one, in brackets, squared, equal to minus one?
+Y2|0.8|One. Why does x squared plus nine equals zero have no real solution?
+Y3|0.8|Two. For which c does the graph of x squared plus c miss the x axis?
+Y4|0.9|Three. Is minus one, in brackets, squared, equal to minus one?
 N1|0.3|Next time: what is i times i times i? And why do the powers of i repeat every four?

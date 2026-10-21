@@ -177,7 +177,7 @@ const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW
   opts: ['6', '8', '9', '10'], right: 1, optW: 474, optY: 300 });
 const so = PUC.solution($('#so'), [[K(`${nc('n')}^2 - 6${nc('n')} + 10 = (${nc('n')} - 3)^2 + 1`)], [K(`${nc('n')} = 2,\\ 4 \\;\\Rightarrow\\; ${xc('x')} = 2`)], [K(`${nc('n')} = 1,\\ 5 \\;\\Rightarrow\\; ${xc('x')} = 5`)], ['10 values, 2 repeats'], [K(`10 - 2 = 8 \\text{ elements}`)]], { y0: 100, dy: 96 });
 const tSo = [wt('A2', 'rewrite'), wt('A3', 'two'), wt('A3', 'one'), wt('A4', 'Ten'), wt('A4', 'minus')];
-const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · roster and set builder', y0: 98, dy: 78, txt: [1, 0, 1, 0, 1],
+const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · roster and set builder', y0: 96, dy: 84, txt: [1, 0, 1, 0, 1],
   lines: ['<b>Roster</b>: each element once, in any order',
     K(`\\{\\,${xc('S, C, H, O, L')}\\,\\} = \\{\\,${xc('H, O, L, C, S')}\\,\\}`),
     '<b>Set builder</b>: the one rule every element follows',

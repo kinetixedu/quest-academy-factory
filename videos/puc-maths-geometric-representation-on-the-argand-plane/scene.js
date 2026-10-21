@@ -75,7 +75,7 @@ const PS = [['The flat line: the <span style="color:#2F6FEB">real axis</span>', 
   [`${re('x')} + ${iv('i')}\\,${im('y')} \\;\\longleftrightarrow\\; P(${re('x')},\\ ${im('y')})`, 'go x along, then y up', 0], ['One point for every number, and back', 'the complex plane, or the Argand plane', 1]];
 $('#pSt').innerHTML = PS.map(([f, w, tx], i) => `<div class="st${tx ? ' t' : ''}" id="ps${i}" style="top:${84 + i * 92}px"><div class="n">${i + 1}</div><div class="sx">${tx ? f : K(f)}</div><div class="why">${w}</div></div>`).join('');
 $('#hs').innerHTML = `<div class="hist" id="hist" style="top:452px"><div class="hn">Jean-Robert Argand · essay, 1806</div><div class="hw">Caspar Wessel published the same idea in 1799</div></div>`;
-const tPs = [wt('P3', 'flat'), wt('P3', 'upright'), wt('P4', 'complex'), wt('P5', 'Every')];
+const tPs = [wt('P2', 'flat'), wt('P2', 'second'), wt('P4', 'complex'), wt('P5', 'Every')];
 const pS = $('#pS'), PP = plane(pS, { ox: 430, oy: 296, s: 48, x0: -6.6, x1: 6.2, y0: -3.8, y1: 5.2, lab: 'long' });
 const pReH = mk(pS, 'line', { x1: PP.X(-6.6), y1: PP.oy, x2: PP.X(6.2), y2: PP.oy, stroke: RE, 'stroke-width': 7, 'stroke-linecap': 'round' });
 const pImH = mk(pS, 'line', { x1: PP.ox, y1: PP.Y(-3.8), x2: PP.ox, y2: PP.Y(5.2), stroke: IM, 'stroke-width': 7, 'stroke-linecap': 'round' });

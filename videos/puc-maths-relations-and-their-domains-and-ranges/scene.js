@@ -70,9 +70,9 @@ $('#iF').innerHTML = K(`(${ac('x')},\\ ${bc('y')}) \\in R:\\ \\ ${bc('y')} \\tex
 
 /* ---------- M: domain, range, codomain ---------- */
 const ms = $('#mS');
-const mDom = mk(ms, 'rect', { x: 120, y: 118, width: 180, height: 334, rx: 18, fill: 'none', stroke: AC, 'stroke-width': 4, 'stroke-dasharray': '10 7' });
-const mRng = [0, 1, 3].map(j => mk(ms, 'rect', { x: 530, y: GY[j] - 32, width: 120, height: 64, rx: 16, fill: BC, opacity: 0.22 }));
 const MD = diagram(ms);
+const mDom = mk(ms, 'rect', { x: 122, y: 116, width: 176, height: 338, rx: 18, fill: 'none', stroke: AC, 'stroke-width': 4, 'stroke-dasharray': '10 7' });
+const mRng = [0, 1, 3].map(j => mk(ms, 'rect', { x: 534, y: GY[j] - 32, width: 112, height: 64, rx: 16, fill: 'none', stroke: BC, 'stroke-width': 4 }));
 const mCod = mk(ms, 'ellipse', { cx: 590, cy: 320, rx: 126, ry: 206, fill: 'none', stroke: PC, 'stroke-width': 4, 'stroke-dasharray': '10 7' });
 const mAr = Object.entries(TRUE).map(([i, j]) => { const a = PUC.arrow(ms, PC, 4, 14); a.set(AX1, SY[+i], AX2, GY[j]); return a; });
 const MR = [['DOMAIN', AC, K(`\\{${ac('\\text{Ravi, Meera, Kiran, Sana}')}\\}`), 'first elements'], ['RANGE', BC, K(`\\{${bc('O,\\ A,\\ B')}\\}`), 'second elements'], ['CODOMAIN', PC, K(`G = \\{${bc('A,\\ B,\\ AB,\\ O')}\\}`), 'the whole second set']];
@@ -102,7 +102,7 @@ const CP = [['1', 'x'], ['1', 'y'], ['2', 'x'], ['2', 'y']];
 $('#cSw').innerHTML = CP.map(([a, b], i) => `<div class="sw" id="sw${i}" style="left:${36 + (i % 2) * 340}px;top:${180 + Math.floor(i / 2) * 100}px"><i><b></b></i>(<span style="color:${AC}">${a}</span>, <span style="color:${BC}">${b}</span>)</div>`).join('');
 const tCy0 = wt('C6', 'Four'), tCy1 = T1('C6') + 0.5;
 const cK = t => Math.max(0, Math.min(15, Math.floor((t - tCy0) / ((tCy1 - tCy0) / 16))));
-let cLast = -1;
+let cLast = -2;
 
 /* ---------- W: worked example ---------- */
 $('#wq').innerHTML = `${K(`A = \\{1, 2, 3, 4, 5, 6\\},\\ \\ R = \\{(x, y) : y = 2x\\}`)}<br>Find R, its domain, range and codomain.`;
@@ -131,7 +131,7 @@ const tDots = []; [0, 1, 2].forEach(i => [0, 1].forEach(j => { const g = pin(ts,
 const tLb = txt(ts, 250, 236, '6 pairs: each kept or left', { 'font-size': 20, 'font-weight': 600, fill: C.ink2 });
 const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'PUC BOARDS'], type: 'Find the domain and range · count the pairs in a relation · count relations' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 860,
-  q: `${K(`A = \\{1, 2, \\dots, 10\\},\\ \\ R = \\{(x, y) \\in A \\times A : x + 2y = 12\\}`)}<br>How many elements are in (Domain of R) ∪ (Range of R)?`,
+  q: `${K(`A = \\{1, 2, \\dots, 10\\},\\ \\ R = \\{(x, y) \\in A \\times A : x + 2y = 12\\}`)}<br>How many elements does ${K(`\\text{Domain} \\cup \\text{Range}`)} have?`,
   opts: ['10', '8', '6', '5'], right: 1, optW: 474, optY: 290 });
 const so = PUC.solution($('#so'), [
   [K(`x = 12 - 2y,\\ \\ y = 1, \\dots, 5`)],
