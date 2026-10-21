@@ -100,7 +100,7 @@ const wsol = PUC.solution($('#wl'), [
   [K(`\\text{real: } ${B('k^2 - 9')} = 0 \\Rightarrow k = \\pm 3`)],
   [K(`\\text{imaginary: } ${A('k - 2')} = 0 \\Rightarrow k = 2`)],
   [K(`k = 2: \\ \\text{Im}\\,z = 4 - 9 = -5 \\ne 0`)],
-  [K(`\\text{so } z = -5\\,${I}`)]], { label: 'WORKED EXAMPLE', y0: 196, dy: 76 });
+  [K(`\\text{so } z = -5\\,${I}`)]], { label: 'WORKED EXAMPLE', y0: 214, dy: 74 });
 $('#wl .lbl').style.top = '30px';
 const tW = [wt('W3', 'Read'), wt('W4', 'Purely'), wt('W5', 'Purely'), wt('W6', 'Check'), wt('W6', 'So')];
 const wsv = $('#wS'), wb = board(wsv, { x0: 482, y0: 300, ux: 58, uy: 22, a0: -7, a1: 4.2, b0: -10, b1: 10, at: [-6, -4, -2, 2], bt: [-8, -4, 4, 8] });

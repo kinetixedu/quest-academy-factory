@@ -112,11 +112,11 @@ const tSet = mk(mk(ts, 'g', { transform: 'translate(400,130)' }), 'g', {}); mk(t
 const tSL = txt(ts, 400, 222, 'a set: {1}', { 'text-anchor': 'middle', 'font-size': 18, fill: AC, 'font-weight': 600 });
 const where = PUC.where($('#wa'), { on: ['PUC BOARDS'], type: `Fill in ${K('\\subset')} or ${K('\\not\\subset')}; which of these sets are equal?` });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 940,
-  q: `${K(`${ac('A')} = \\{\\,1,\\ \\{2\\},\\ 3\\,\\}`)}. How many statements are true?<br>${K(`\\text{(i) } 2 \\in ${ac('A')} \\qquad \\text{(ii) } \\{2\\} \\in ${ac('A')} \\qquad \\text{(iii) } \\{2\\} \\subset ${ac('A')}`)}<br>${K(`\\text{(iv) } \\{1, 3\\} \\subset ${ac('A')} \\qquad \\text{(v) } \\{\\{2\\}\\} \\subset ${ac('A')} \\qquad \\text{(vi) } ${PHI} \\subset ${ac('A')}`)}`,
-  opts: ['2', '3', '4', '5'], right: 2, optW: 474, optY: 330 });
+  q: `${K(`${ac('A')} = \\{\\,1,\\ \\{2\\},\\ 3\\,\\}`)}<br>${K(`\\text{(i) } 2 \\in ${ac('A')} \\qquad \\text{(ii) } \\{2\\} \\in ${ac('A')}`)}<br>${K(`\\text{(iii) } \\{2\\} \\subset ${ac('A')} \\qquad \\text{(iv) } \\{1, 3\\} \\subset ${ac('A')}`)}<br>${K(`\\text{(v) } \\{\\{2\\}\\} \\subset ${ac('A')} \\qquad \\text{(vi) } ${PHI} \\subset ${ac('A')}`)}<br>How many of these statements are true?`,
+  opts: ['2', '3', '4', '5'], right: 2, optW: 474, optY: 380, optH: 76 });
 const so = PUC.solution($('#so'), [[K(`\\text{(i) } 2 \\notin ${ac('A')}:\\ \\text{false}`)], [K(`\\text{(ii) } \\{2\\} \\in ${ac('A')}:\\ \\text{true}`)], [K(`\\text{(iii) } 2 \\notin ${ac('A')}:\\ \\text{false}`)], [K(`\\text{(iv), (v)}:\\ \\text{true}`)], [K(`\\text{(vi) true} \\Rightarrow 4`)]], { y0: 100, dy: 96 });
 const tSo = [wt('A2', 'false'), wt('A3', 'true'), wt('A3', 'false'), wt('A4', 'four'), wt('A5', 'Four')];
-const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · subsets and equal sets', y0: 96, dy: 84, txt: [1, 0, 1, 0, 0],
+const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · subsets and equal sets', y0: 88, dy: 80, txt: [1, 0, 1, 0, 0],
   lines: ['<b>Subset</b>: every element of A is also in B',
     K(`${ac('A')} \\subset ${bc('B')},\\quad ${ac('A')} \\subset ${ac('A')},\\quad ${PHI} \\subset ${ac('A')}`),
     '<b>Equal sets</b>: exactly the same elements',

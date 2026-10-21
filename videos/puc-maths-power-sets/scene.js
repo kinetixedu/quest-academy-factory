@@ -32,9 +32,9 @@ const HB = [[[0], 'just the samosa'], [[1, 2], 'banana and laddoo'], [[0, 1, 2],
 const hBox = HB.map(([els, cap], i) => {
   const x = 36 + (i % 2) * 364, y = 90 + Math.floor(i / 2) * 196, g = mk(mk(hs, 'g', { transform: `translate(${x},${y})` }), 'g', {});
   const r = mk(g, 'rect', { x: 0, y: 0, width: 348, height: 132, rx: 16, fill: els.length ? '#fff' : C.soft, stroke: C.ink, 'stroke-width': 3, 'stroke-dasharray': els.length ? '' : '9 7' });
-  els.forEach((k, j) => { const w = 100, gx = 18 + j * 108; mk(g, 'rect', { x: gx, y: 26, width: w, height: 44, rx: 10, fill: '#EDE6FC', stroke: XC, 'stroke-width': 2 }); txt(g, gx + w / 2, 55, SNN[k], { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-size': 19, 'font-weight': 600, fill: XC }); });
+  els.forEach((k, j) => { const w = 100, gx = 18 + j * 108; mk(g, 'rect', { x: gx, y: 26, width: w, height: 44, rx: 10, fill: '#EDE6FC', stroke: XC, 'stroke-width': 2 }); txt(g, gx + w / 2, 55, SNN[k], { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-size': 21, 'font-weight': 600, fill: XC }); });
   if (!els.length) txt(g, 174, 58, 'empty box', { 'text-anchor': 'middle', 'font-size': 20, fill: C.mute, 'font-weight': 600 });
-  txt(g, 18, 112, cap.toUpperCase(), { 'font-size': 15, fill: C.mute, 'font-weight': 600, 'letter-spacing': 1 });
+  txt(g, 18, 112, cap.toUpperCase(), { 'font-size': 16, fill: C.mute, 'font-weight': 600, 'letter-spacing': 1 });
   return g;
 });
 const tHb = [wt('H2', 'samosa'), wt('H2', 'banana'), wt('H2', 'three'), wt('H2', 'nothing')];

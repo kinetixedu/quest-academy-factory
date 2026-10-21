@@ -108,7 +108,7 @@ const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW
   opts: ['6', '7', '8', '9'], right: 1, optW: 474, optY: 300 });
 const so = PUC.solution($('#so'), [[K(`2 < \\sqrt{7} < 3:\\ -\\sqrt{7} \\approx -2.6`)], [K(`-3 \\notin I,\\ \\ -2 \\in I`)], [K(`4 < \\sqrt{20} < 5:\\ 4 \\in I,\\ 5 \\notin I`)], [K(`-2, -1, 0, 1, 2, 3, 4`)], [K(`7\\ \\text{integers}`)]], { y0: 100, dy: 96 });
 const tSo = [wt('A2', 'Root'), wt('A2', 'Minus'), wt('A3', 'Root'), wt('A4', 'integers'), wt('A4', 'Seven')];
-const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · intervals', y0: 96, dy: 84, txt: [1, 0, 0, 0, 0],
+const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · intervals', y0: 88, dy: 80, txt: [1, 0, 0, 0, 0],
   lines: ['<b>Round</b> bracket: end left out · <b>square</b>: end kept',
     K(`(a, b) = \\{${xc('x')} : ${rc(`a < ${xc('x')} < b`)}\\}`),
     K(`[a, b] = \\{${xc('x')} : ${rc(`a \\le ${xc('x')} \\le b`)}\\}`),

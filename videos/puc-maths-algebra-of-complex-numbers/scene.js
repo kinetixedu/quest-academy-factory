@@ -98,7 +98,7 @@ const th2 = PUC.think($('#th2'), { q: `${K(`(1 + ${I})^2`)} : is it 2i, or 2 + 2
 /* ---------- V: division ---------- */
 $('#vBig').innerHTML = K(`\\dfrac{1}{z} = \\dfrac{${A('a')} - ${I}\\,${B('b')}}{${A('a')}^2 + ${B('b')}^2}`);
 $('#vD').innerHTML = K(`\\dfrac{z_1}{z_2} = z_1 \\cdot \\dfrac{1}{z_2}`);
-const vEl = steps($('#vSt'), [[`z = 2 - 3${I}`, 'a = 2, b = -3'], [`1/z = (2 + 3${I})/(4 + 9) = (2 + 3${I})/13`, 'a squared plus b squared is 13'], [`(2 - 3${I})(2 + 3${I}) = 4 - 9${I}^2 = 13`, 'every term by every term'], [`13/13 = 1 \\ \\checkmark`, 'so it really is the inverse']], 84, 112);
+const vEl = steps($('#vSt'), [[`z = 2 - 3${I}`, 'a = 2, b = -3'], [`1/z = (2 + 3${I})/13`, 'a squared plus b squared: 4 + 9 = 13'], [`(2 - 3${I})(2 + 3${I}) = 4 - 9${I}^2 = 13`, 'every term by every term'], [`13/13 = 1 \\ \\checkmark`, 'so it really is the inverse']], 84, 112);
 const tVs = [T0('V3'), wt('V3', 'One'), wt('V3', 'Multiply'), wt('V3', 'thirteen', 1)];
 
 /* ---------- W: worked example ---------- */
