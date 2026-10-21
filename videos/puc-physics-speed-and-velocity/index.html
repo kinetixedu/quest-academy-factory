@@ -1,0 +1,168 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 21 - Speed and Velocity</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 21: speed vs velocity (Motion notebook, two riders) ===== */
+:root{--s:#7A4FE0;--d:#2F6FEB}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.sv{color:var(--s)}.dv{color:var(--d)}
+.job{position:absolute;top:724px;width:380px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook */
+.hr{position:absolute;left:36px;width:712px;height:170px;border-radius:14px;background:var(--soft)}
+.hr svg{position:absolute;left:16px;top:15px}
+.hr .jn{position:absolute;left:196px;top:38px;font:700 32px Poppins;white-space:nowrap}
+.hr .jw{position:absolute;left:196px;top:86px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.hr .se{position:absolute;right:24px;top:58px;height:52px;padding:0 18px;border-radius:12px;background:#fff;border:2.5px solid var(--line);display:flex;align-items:center;font:600 20px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.wq{position:absolute;top:494px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap}
+/* sims */
+.slo{position:absolute;right:36px;top:20px;height:40px;padding:0 14px;border-radius:8px;background:var(--red);color:#fff;display:inline-flex;align-items:center;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.lg{position:absolute;top:22px;display:flex;gap:10px}
+.lg span{height:34px;padding:0 12px;border-radius:8px;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';color:#fff;white-space:nowrap}
+.ro.r3{row-gap:6px}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:136px}
+.st .n{position:absolute;left:0;top:6px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:38px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:72px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+/* reasoning links */
+.lk{position:absolute;left:36px;width:712px;height:92px;border-radius:14px;background:var(--soft)}
+.lk .n{position:absolute;left:20px;top:22px;width:48px;height:48px;border-radius:50%;background:#fff;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.lk .tx{position:absolute;left:88px;top:13px;font:600 26px/1.3 Poppins;white-space:nowrap}
+.lk .tg{position:absolute;left:88px;top:50px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lkc{position:absolute;left:36px;top:414px;width:712px;height:130px;border-radius:14px;background:var(--ink);color:#fff}
+.lkc .a{position:absolute;left:28px;top:18px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:#AFC6F7;white-space:nowrap}
+.lkc .b{position:absolute;left:28px;top:46px;font-size:44px;white-space:nowrap}
+.lkc .c{position:absolute;right:28px;top:62px;font:500 22px Poppins;color:#D6DCEA;white-space:nowrap;text-align:right}
+/* side by side */
+.big{position:absolute;left:36px;top:96px;font:600 120px/1 'IBM Plex Mono';white-space:nowrap}
+.prop{position:absolute;left:36px;height:52px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+.dl{position:absolute;left:36px;width:712px;height:84px;border-radius:14px;background:var(--soft)}
+.dl svg{position:absolute;left:0;top:0}
+.dl .val{position:absolute;right:24px;top:20px;font-size:36px;white-space:nowrap}
+/* worked + exam */
+#wq{position:absolute;left:36px;top:70px;font:600 28px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:34px}
+.chip2{position:absolute;height:56px;padding:0 18px;border-radius:12px;display:flex;align-items:center;gap:10px;font:600 28px 'IBM Plex Mono';color:#fff;white-space:nowrap}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+#so .sol .sx .katex{font-size:1.25em}
+#mq .opt .ot .katex{font-size:1.15em}
+#sF .fcard .fl{font-size:46px}
+#sF .fcard .fl.txt{font-size:32px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+/* ep 21 extras */
+.rt2{position:absolute;left:36px;width:712px;display:grid;grid-template-columns:150px 1fr 1fr;row-gap:8px;align-items:baseline}
+.rt2 .h{font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);text-align:right}
+.rt2 .k{font:600 26px Poppins;font-style:italic}
+.rt2 .v{font:600 34px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.kc{position:absolute;top:84px;width:340px;height:380px;border-radius:14px;background:var(--soft)}
+.kc .h{position:absolute;left:24px;top:20px;font:700 30px Poppins;white-space:nowrap}
+.kc .s{position:absolute;left:24px;top:62px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.kc .f{position:absolute;left:24px;top:118px;font-size:34px;white-space:nowrap}
+.kc .v{position:absolute;left:24px;top:236px;font:600 56px/1 'IBM Plex Mono';white-space:nowrap}
+.kc .c{position:absolute;left:24px;top:316px;font:500 22px Poppins;color:var(--ink2);white-space:nowrap}
+.du{position:absolute;left:36px;font-size:40px;white-space:nowrap}
+#st2{font-size:64px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 2 MOTION IN A STRAIGHT LINE</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Speed vs <span class="acc">Velocity</span></div>
+    <div id="sub">Explained with two riders at one gate</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: a number with and without a direction + the two riders -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">TWO READINGS · ONE HAS A DIRECTION</div><div class="ghost" id="exH" style="right:36px;top:18px">EXAMPLE FIGURES</div><div id="hrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Does the direction matter?</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">THE COLLEGE GATE · TWO RIDERS</div>
+        <div id="hdF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg" style="position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px">
+        <div id="wqs"></div></div>
+    </div>
+
+    <!-- P: speed and velocity defined -->
+    <div id="sP">
+      <div class="card full" id="pl"><div class="lbl" style="left:36px;top:30px">SPEED · HOW FAST</div><div class="fx" id="plF" style="left:36px;top:96px;font-size:50px"></div><svg id="plS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="plT" style="left:36px;top:490px">Scalar · never negative</div></div>
+      <div class="card rf" id="pr"><div class="lbl" style="left:36px;top:30px">VELOCITY · HOW FAST + WHICH WAY</div><div class="fx" id="prF" style="left:36px;top:96px;font-size:50px"></div><svg id="prS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="prT" style="left:36px;top:490px">Vector · unit m/s</div></div>
+    </div>
+
+    <!-- S: two riders (sim + readout + graph) -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">SIMULATION · TWO RIDERS, ONE ROAD</div>
+        <div class="slo" id="slo">SLOW-MO REPLAY · 0.25x</div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ghost" id="exS" style="right:36px;top:18px">EXAMPLE FIGURES</div><div id="roT"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">POSITION x VS TIME</div><svg id="grS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- D: the rule -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE RULE · 3 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">SAME UNIT FOR BOTH</div><div id="dru"></div></div>
+    </div>
+
+    <!-- C: why velocity is a vector -->
+    <div id="sC">
+      <div class="card full" id="cl"><div class="lbl" style="left:36px;top:30px">WHY IS VELOCITY A VECTOR?</div><div id="lks"></div></div>
+      <div class="card rf" id="cr"><div class="lbl" style="left:36px;top:30px">DIVIDE AN ARROW BY A TIME</div><div class="ghost" id="exC" style="right:36px;top:18px">EXAMPLE FIGURES</div><svg id="crS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- K: side by side + think -->
+    <div id="sK">
+      <div class="card full" id="kl"><div class="lbl" style="left:36px;top:30px">ONE ROUND TRIP · 80 s</div><div class="ghost" id="exK" style="right:36px;top:18px">EXAMPLE FIGURES</div><svg id="klS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="kr"><div class="lbl" style="left:36px;top:30px">SIDE BY SIDE</div><div id="kcols"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- V: steady speed on a circle -->
+    <div id="sV">
+      <div class="card full" id="vc"><div class="lbl" style="left:36px;top:30px">SIMULATION · STEADY SPEED ON A CIRCLE</div><svg id="vcS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rt" id="vro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ghost" id="exV" style="right:36px;top:18px">EXAMPLE FIGURES</div><div class="ro r3" id="vroG" style="left:36px;top:76px;width:712px"></div></div>
+      <div class="card rb" id="vgr"><div class="lbl" style="left:36px;top:30px">m/s VS TIME</div><div class="lg" style="right:36px"><span style="background:var(--s)">speed</span><span style="background:var(--d)">v east part</span></div><svg id="vgS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">2 km east in 10 min, then 1 km back west in 5 min. Average speed and average velocity?</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">THE TRIP ON A NUMBER LINE</div><svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="chip2" id="wcS" style="left:36px;top:490px;background:var(--s)"></div><div class="chip2" id="wcD" style="left:400px;top:490px;background:var(--d)"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tpS" width="400" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap, questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Speed is <span class="sv">how fast</span>. Velocity is how fast, and <span class="acc">which way</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

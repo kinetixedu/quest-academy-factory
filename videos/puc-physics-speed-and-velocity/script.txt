@@ -1,0 +1,58 @@
+H1|0.4|A speedometer shows sixty. The wind report says twenty, from the west.
+H2|0.45|One number has no direction. The other one does. Does that small difference matter?
+H3|0.35|Aarav and his friend cycle out of the college gate. Both speedometers read eighteen kilometres per hour.
+H4|0.5|Same speed. But after ten minutes, they are six kilometres apart. How?
+H5|0.65|They rode in opposite directions. Same speed, different velocity. Let's see why.
+P1|0.35|Speed tells you how fast you cover the path. It is distance divided by time.
+P2|0.45|It only has a size, so speed is a scalar. And it is never negative.
+P3|0.35|Velocity tells you how fast your position changes, and in which direction. It is displacement divided by time.
+P4|0.65|It has a size and a direction, so velocity is a vector. Both are measured in metres per second.
+S1|0.35|Two riders, one straight road. The gate is at zero. East is positive.
+S2|0.4|Aarav rides east at five metres per second. His friend rides west at five metres per second.
+S3|0.4|The readout shows the same speed for both. Five metres per second.
+S4|0.4|But the velocities are plus five and minus five. The sign carries the direction.
+S5|0.5|Look at the graph. Aarav's line climbs, his friend's line falls. Opposite slopes.
+S6|0.4|Let's replay one second in slow motion.
+S7|0.65|In one second, Aarav moves five metres east, and his friend five metres west.
+S8|0.65|After a hundred and twenty seconds, they are twelve hundred metres apart.
+D1|0.35|Let's write this as a rule, one step at a time.
+D2|0.75|Step one. Average speed equals total path length, divided by total time.
+D3|0.75|Step two. Average velocity equals displacement divided by time. v equals delta x over delta t.
+D4|0.75|Step three. Distance is never less than the size of displacement, so average speed is never less than the size of average velocity.
+D5|0.65|And eighteen kilometres per hour is exactly five metres per second.
+T1|0.7|Remember this. Speed is how fast. Velocity is how fast, and which way.
+C1|0.35|Why is velocity a vector? Let's follow the reasoning, link by link.
+C2|0.4|Link one. Displacement is a vector. It has a direction.
+C3|0.4|Link two. Time is a scalar. It has no direction.
+C4|0.4|Link three. Dividing a vector by a positive number keeps its direction.
+C5|0.6|So velocity points the same way as displacement. That is why velocity is a vector.
+K1|0.4|Side by side. Aarav rides two hundred metres out and back, in eighty seconds.
+K2|0.6|Average speed: four hundred metres over eighty seconds, five metres per second. Average velocity: zero over eighty, zero.
+K3|3.2|Now you try. Can a moving body have zero average velocity? Pause and decide.
+K4|0.65|Yes! A round trip ends where it began. Displacement zero, so average velocity zero, though the speed was never zero.
+V1|0.35|One more case. Moving in a circle at a steady speed.
+V2|0.4|The speedometer never changes. But the velocity arrow keeps turning, because the direction keeps changing.
+V3|0.65|So steady speed does not always mean steady velocity. On a curve, the velocity changes all the time.
+V4|3.2|Your turn. Aarav circles a track at a constant speed. Is his velocity constant? Pause and decide.
+V5|0.65|No! The size stays the same, but the direction keeps changing. A change in direction is a change in velocity.
+W1|0.35|Now, one worked example.
+W2|0.5|Aarav rides two kilometres east in ten minutes. Then he rides one kilometre back west in five minutes.
+W3|0.75|Total distance is three kilometres. Total time is fifteen minutes, which is a quarter of an hour.
+W4|0.75|Average speed is three divided by a quarter. Twelve kilometres per hour.
+W5|0.75|Displacement is two minus one. One kilometre, east.
+W6|0.65|Average velocity is one divided by a quarter. Four kilometres per hour, east.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think average speed is just the size of the average velocity.
+X3|0.65|But it is not. Here average speed was twelve, and average velocity only four.
+E1|0.6|Where is this asked? One step problems: round trips, parts of a circle, journeys with stops.
+Q1|5.4|Exam level now. A cyclist covers half a circular track of radius twenty one metres in eleven seconds. Find the average speed and the size of average velocity. Pause and solve.
+A1|0.5|The answer is B. Six metres per second, and about three point eight two metres per second.
+A2|0.5|The distance is pi r. Twenty two by seven times twenty one is sixty six metres. Sixty six over eleven is six metres per second.
+A3|0.5|The displacement is the diameter, forty two metres.
+A4|0.6|Forty two over eleven is about three point eight two metres per second.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why is velocity a vector, while speed is a scalar?
+Y3|0.9|Two. Can a body move with a constant speed, but a changing velocity?
+Y4|1.1|Three. After one full round trip, what is the average velocity?
+N1|0.3|Next time: how do we find velocity at one single instant? That is average and instantaneous velocity.
