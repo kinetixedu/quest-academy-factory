@@ -1,0 +1,58 @@
+H1|0.4|An engine pulls coaches. A lift rides with a counterweight. A flag climbs its pole on a rope.
+H2|0.45|Each time, bodies are tied together, and they move as one.
+H3|0.35|At his study table, Aarav ties a small bag to a toy trolley, over a pulley at the edge.
+H4|0.5|The bag falls, dragging the trolley. He doubles the bag. Does the trolley go twice as fast? No. Why?
+H5|0.6|To find out, we solve connected bodies.
+P1|0.35|Connected bodies are tied by a light string that does not stretch.
+P2|0.4|It does not stretch, so both move together, with the same size of acceleration.
+P3|0.4|It is light, so the tension is the same all along it. We met that in tension.
+P4|0.65|The method: one free-body diagram per body, and the second law for each.
+S1|0.35|To the motion notebook. An Atwood machine: two blocks on one string, over a smooth pulley.
+S2|0.4|Three kilograms on each side. Let go. Nothing moves.
+S3|0.4|Make the left block five kilograms. Now it falls, and the right block rises.
+S4|0.35|Slow-mo replay. Freeze. Each block gets its own diagram.
+S5|0.4|Left: forty nine newtons down, T up. Right: twenty nine point four down, T up.
+S6|0.4|One string, so one T. And one a: the left block down, the right block up.
+S7|0.6|a is two point four five metres per second squared. T is thirty six point seven five newtons.
+S8|0.4|Now nine kilograms against three. a jumps to four point nine. Half of g.
+S9|0.65|On the graph, a climbs with the mass ratio. But it never reaches g.
+D1|0.35|Now the rule, one step at a time.
+D2|0.75|Step one. Heavy block, down is positive. m one g minus T equals m one a.
+D3|0.75|Step two. Light block, up is positive. T minus m two g equals m two a.
+D4|0.75|Step three. Add them. The T's cancel. a equals m one minus m two, times g, over m one plus m two.
+D5|0.75|Step four. Put a back in. T equals two m one m two g, over m one plus m two.
+D6|0.75|Step five. Check: equal masses give a equals zero, and T equals m g.
+T1|0.7|Remember this. One string means one a and one T. Write the second law for each body, then add.
+R1|0.35|Why is T between the two weights? Link by link.
+R2|0.4|The heavy block speeds up downward, so its weight beats T. T is under forty nine.
+R3|0.4|The light block speeds up upward, so T beats its weight. T is over twenty nine point four.
+R4|0.65|So T sits between them. Thirty six point seven five newtons.
+K1|0.4|Side by side. Aarav's two kilogram trolley, with a half kilogram bag. a is one point nine six.
+K2|0.6|Double the bag to one kilogram. The pull doubles, but the total mass grows too. a is only three point two seven.
+K3|3.2|Now you try. Is the string tension equal to the bag's weight? Pause and decide.
+K4|0.65|Less! The bag speeds up downward, so its weight must beat T. T is three point nine two, not four point nine.
+V1|0.4|Another pair. A four kilogram and a two kilogram block, tied on a smooth floor.
+V2|0.4|Pull the four kilogram block with eighteen newtons. a is three. The string drags the two kilogram block, so T is six.
+V3|3.2|Your turn. Same eighteen newtons, on the two kilogram block. Is T still six? Pause and decide.
+V4|0.65|No! Twelve newtons. a is still three, but now the string must drag the four kilogram block.
+W1|0.35|Now, one worked example.
+W2|0.5|An engine pulls three coaches on a smooth track with thirty newtons. Five, three and two kilograms. Find both tensions.
+W3|0.75|All three share one a. Thirty over ten. Three metres per second squared.
+W4|0.75|The first string drags the last two coaches, five kilograms. T one is five times three, fifteen newtons.
+W5|0.75|The second string drags only the last coach. T two is two times three, six newtons.
+W6|0.65|Check the front coach: thirty minus fifteen is fifteen, five times three. It works.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students say the pulley's hook holds both weights. Seventy eight point four newtons.
+X3|0.65|But the hook holds two T, the string's two pulls. Seventy three point five. Less, while the blocks speed up.
+E1|0.6|Where is this asked? In connected body numericals: find a and T, or the force on a pulley.
+Q1|5.4|Exam level now. A three kilogram block on a rough table, mu k zero point two, is tied over a smooth pulley to a hanging two kilogram block. g is ten. Find the tension. Pause and solve.
+A1|0.5|The answer is C. Fourteen point four newtons.
+A2|0.5|Friction on the table block: zero point two times thirty, six newtons.
+A3|0.5|Whole system: twenty minus six is fourteen newtons, over five kilograms. a is two point eight.
+A4|0.6|Hanging block: T equals two times ten minus two point eight. Fourteen point four newtons.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. Why does doubling the bag not double the trolley's acceleration?
+Y3|0.9|Two. Why is the tension in an Atwood machine between the two weights?
+Y4|1.1|Three. Why must both blocks on one string share the same acceleration?
+N1|0.3|Next time: on a curve, what pulls Aarav's bicycle round the circle? Circular motion and centripetal force.
