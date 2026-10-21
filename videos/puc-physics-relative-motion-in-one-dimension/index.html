@@ -1,0 +1,153 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 31 - Relative Motion in One Dimension</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 31: relative motion in one dimension (Motion notebook) ===== */
+:root{--v:#2F6FEB;--a:#D64545}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.cv{color:var(--v)}.ca{color:var(--a)}
+svg.fill{position:absolute;left:0;top:0}
+/* title card tiles */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook */
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkQ{position:absolute;left:36px;top:494px;height:60px;padding:0 22px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.vw{position:absolute;left:36px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+.vw b{font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:#fff;background:var(--ink);padding:4px 10px;border-radius:7px}
+/* definition */
+.tbig{position:absolute;left:36px;font-size:48px;white-space:nowrap}
+.why2{position:absolute;left:36px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+/* sim */
+#vwT{position:absolute;left:36px;top:76px}
+#smo{position:absolute;left:36px;top:76px}
+.roW{position:absolute;top:74px;display:grid;grid-template-columns:auto 1fr auto;column-gap:16px;row-gap:12px;align-items:baseline}
+.roW .k{font:600 30px Poppins;font-style:italic}
+.roW .k sub{font-size:.6em}
+.roW .v{font:600 34px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.roW .u{font:400 20px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+#sumF{position:absolute;left:36px;top:200px;font-size:34px;white-space:nowrap}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:100px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:-8px;font-size:36px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:60px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+/* reasoning chain */
+.lk{position:absolute;left:36px;height:60px;display:flex;align-items:center;gap:18px;white-space:nowrap}
+.lk .n{flex:none;width:44px;height:44px;border-radius:50%;background:var(--ac);color:#fff;font:700 20px Poppins;display:flex;align-items:center;justify-content:center}
+.lk .lt{font:600 27px Poppins}
+/* side by side */
+.cf{position:absolute;left:36px;top:400px;font-size:36px;white-space:nowrap}
+/* worked */
+#wq{position:absolute;left:36px;top:70px;font:600 28px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:30px}
+#ans{position:absolute;right:36px;top:470px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 30px Poppins}
+#mq .mq{font-size:29px}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:32px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 2 MOTION IN A STRAIGHT LINE</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Relative <span class="acc">Motion</span></div>
+    <div id="sub">Why a moving bus can look still</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: two views of one train + Aarav's buses -->
+    <div id="sH">
+      <div class="card full" id="hA"><div class="lbl" style="left:36px;top:30px">ONE TRAIN · TWO VIEWS</div><svg class="fill" id="hAS" width="784" height="580"></svg>
+        <div class="vw" id="vw0" style="top:420px"><b>FROM YOUR TRAIN</b>It looks still</div><div class="vw" id="vw1" style="top:492px"><b>FROM THE PLATFORM</b>It rushes past</div></div>
+      <div class="card rf" id="hB"><div class="lbl" style="left:36px;top:30px">AARAV'S RIDE · THE COLLEGE ROAD</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg">
+        <svg class="fill" id="hBS" width="784" height="580"></svg>
+        <div id="hkQ"><span id="hkQI"></span>Frozen friend, flying bus: which is true?</div></div>
+    </div>
+
+    <!-- P: definition -->
+    <div id="sP">
+      <div class="card full" id="pL"><div class="lbl" style="left:36px;top:30px">RELATIVE VELOCITY</div><svg class="fill" id="pLS" width="784" height="580"></svg>
+        <div class="why2" id="pW" style="top:300px">velocity of B, as seen from A</div></div>
+      <div class="card rf" id="pR"><div class="lbl" style="left:36px;top:30px">THE RULE</div>
+        <div class="tbig" id="pF" style="top:120px"></div>
+        <div class="why2" id="pF1" style="top:220px">the other one's velocity</div><div class="why2" id="pF2" style="top:262px">minus the watcher's velocity</div>
+        <div class="pillp ac" id="pP" style="left:36px;top:490px">One subtraction. Signs carry the direction.</div></div>
+    </div>
+
+    <!-- S: two buses (sim + readout + live x-t graph) -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">SIMULATION · TWO BUSES</div><div class="ghost" id="exS" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <svg class="fill" id="simS" width="784" height="580"></svg>
+        <div class="tag" id="vwT">VIEW · FROM THE GROUND</div><div class="tag" id="smo" style="background:var(--red)">SLOW-MO REPLAY · 0.25x</div></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div>
+        <div class="roW" id="roL" style="left:36px;width:330px"></div><div class="roW" id="roR" style="left:420px;width:328px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px" id="grL">POSITION-TIME · FROM THE GROUND</div><svg class="fill" id="grS" width="784" height="274"></svg></div>
+    </div>
+
+    <!-- D: derivation -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE RULE · 4 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">THE GAP BETWEEN A AND B</div><svg class="fill" id="drS" width="784" height="580"></svg></div>
+    </div>
+
+    <!-- R: parallel lines -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">WHY THE BUS LOOKS FROZEN · LINK BY LINK</div><div id="lks"></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">POSITION-TIME · TWO BUSES</div><svg class="fill" id="rrS" width="784" height="580"></svg></div>
+    </div>
+
+    <!-- K: same way vs opposite ways + think -->
+    <div id="sK">
+      <div class="card full" id="kx"><div class="lbl" style="left:36px;top:30px">SAME DIRECTION</div><svg class="fill" id="kxS" width="784" height="580"></svg><div class="cf" id="kxF"></div>
+        <div class="pillp" id="kxC" style="left:36px;top:490px">Gap changes slowly</div></div>
+      <div class="card rf" id="kv"><div class="lbl" style="left:36px;top:30px">OPPOSITE DIRECTIONS</div><div class="ghost" id="exK" style="right:36px;top:18px">EXAMPLE FIGURES</div><svg class="fill" id="kvS" width="784" height="580"></svg><div class="cf" id="kvF"></div>
+        <div class="pillp" id="kvC" style="left:36px;top:490px">Gap changes fast: speeds add</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">A car at 72 km/h is 150 m behind a bus at 54 km/h. When does it catch up?</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">SEEN FROM THE BUS</div><svg class="fill" id="wrS" width="784" height="580"></svg>
+        <div class="pillp ac" id="ans" style="font-family:'IBM Plex Mono'">t = 30 s</div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tg" width="460" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap + questions + NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">The <span class="acc">other</span> one's velocity, minus your own.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
