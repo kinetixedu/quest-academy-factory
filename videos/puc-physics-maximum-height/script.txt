@@ -1,0 +1,58 @@
+H1|0.4|A fountain jet. A long jumper. A ball tossed to a friend.
+H2|0.45|All three rise, slow down, and stop rising at one highest point.
+H3|0.35|On the college ground, Aarav throws a ball at fourteen metres per second, thirty degrees up. It rises two point five metres.
+H4|0.5|His puzzle: if he throws it twice as fast, will it go twice as high?
+H5|0.65|Most people say yes. By the end, you will see why the answer is no.
+P1|0.35|So what is maximum height?
+P2|0.4|It is the greatest height a projectile reaches, above the point where it was thrown.
+P3|0.4|Split the launch velocity u into two parts: u cos theta across, and u sine theta up.
+P4|0.4|Gravity pulls only down. So it slows the vertical part, and leaves the horizontal part alone.
+P5|0.65|The ball keeps rising while the vertical part points up. When it reaches zero, the ball is at its highest point.
+S1|0.35|Let's launch a ball at nineteen point six metres per second, sixty degrees up.
+S2|0.4|Watch the readout. The horizontal velocity stays at nine point eight, all the way.
+S3|0.4|The vertical velocity starts at about seventeen, and drops by nine point eight every second.
+S4|0.5|On the graph, the line slopes down and crosses zero at one point seven three seconds. That is the top.
+S5|0.4|Slow-motion replay. Freeze at the top.
+S6|0.5|The red arrow is g, still pointing down. The vertical arrow is gone. Only the horizontal arrow is left.
+S7|0.4|Now the ghost copies. On the way up, the steps in height get smaller and smaller.
+S8|0.65|The ball tops out at fourteen point seven metres. On the graph, that height is the area of the shaded triangle.
+S9|3.2|Your turn. At the very top, is the ball's speed zero? Pause and decide.
+S10|0.65|No! Only the vertical part is zero. The ball still moves sideways at u cos theta, nine point eight metres per second.
+D1|0.35|Now the formula, step by step.
+D2|0.75|Step one. Look only up and down. The ball starts up at u sine theta, with acceleration minus g.
+D3|0.75|Step two. At the highest point, the vertical velocity is zero.
+D4|0.75|Step three. Use v squared equals u squared plus two a s. So zero equals u squared sine squared theta, minus two g H.
+D5|0.75|Step four. So H equals u squared sine squared theta, over two g. The units work out to metres.
+D6|0.75|And from v equals u plus a t, the time to reach the top is u sine theta over g.
+T1|0.7|Remember this. At the top, only the vertical velocity is zero. The ball is still moving.
+R1|0.35|Now, Aarav's puzzle. Why not twice as high?
+R2|0.4|Throw twice as fast, and the vertical part, u sine theta, is also twice as big.
+R3|0.4|Gravity removes nine point eight every second, so it takes twice as long to stop rising.
+R4|0.4|So the ball rises twice as fast on average, for twice as long.
+R5|0.65|Two times two is four. The height becomes four times. That is why u is squared in the formula.
+K1|0.4|Side by side. Same speed, nineteen point six metres per second. One ball at thirty degrees, one at sixty.
+K2|0.6|At thirty degrees it rises four point nine metres. At sixty degrees, fourteen point seven.
+K3|3.2|Now you try. The angle doubled. How many times higher did the ball go? Pause and decide.
+K4|0.65|Three times! H follows sine squared theta. Three quarters divided by one quarter is three, not two.
+K5|0.6|And straight up, at ninety degrees, sine theta is one. That is the greatest height of all, u squared over two g. Here, nineteen point six metres.
+W1|0.35|Now, one worked example.
+W2|0.5|Back to Aarav. He throws at twenty eight metres per second, thirty degrees up. How high does the ball go?
+W3|0.75|Use H equals u squared sine squared theta, over two g.
+W4|0.75|The vertical part is twenty eight times sine thirty, which is fourteen metres per second.
+W5|0.75|So H is fourteen squared, one ninety six, over nineteen point six.
+W6|0.65|That is ten metres. Four times his first throw, not twice.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students mix up the formulas, and put sine two theta in the height.
+X3|0.65|Wrong. Sine two theta belongs to the range. Height uses sine squared theta: the vertical part, squared.
+E1|0.6|Where is this asked? As numericals and ratios on height, speed and angle.
+Q1|5.4|Exam level now. At its highest point, a projectile's speed is half its launch speed u. What is its maximum height? Pause and solve.
+A1|0.5|The answer is B. Three u squared over eight g.
+A2|0.5|At the top, only the horizontal part is left. So u cos theta equals u over two.
+A3|0.5|So cos theta is one half, theta is sixty degrees, and sine squared theta is three quarters.
+A4|0.6|H equals u squared times three quarters, over two g. That is three u squared over eight g.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. At the very top of the flight, what is the ball's velocity?
+Y3|0.9|Two. If the launch speed triples, how many times higher does the ball go?
+Y4|1.1|Three. Why does the height use sine squared theta, not sine two theta?
+N1|0.3|Next time: ninety degrees gives the greatest height. But which angle sends the ball the farthest? We find out in horizontal range.
