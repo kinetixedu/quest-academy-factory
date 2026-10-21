@@ -84,15 +84,15 @@ const gH = RELS[2].map(([i, j]) => { const g = pin(gs2, GH.X(i), GH.Y(j)); mk(g,
 const gGb = mk(gs2, 'rect', { x: GG.X(0) - 28, y: GG.Y(3) - 30, width: 56, height: 400 - GG.Y(3) + 14, rx: 12, fill: 'none', stroke: C.red, 'stroke-width': 4 });
 const gHb = mk(gs2, 'rect', { x: GH.X(1) - 28, y: GH.Y(3) - 30, width: 56, height: 400 - GH.Y(3) + 14, rx: 12, fill: 'none', stroke: C.red, 'stroke-width': 4, 'stroke-dasharray': '8 6' });
 const gGt = tag(gs2, 200, 490, 'g: 2 dots in column 1', C.red), gHt = tag(gs2, 570, 490, 'h: column 2 empty', C.red);
-txt(gs2, 200, 110, 'g', { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-style': 'italic', 'font-size': 34, 'font-weight': 700, fill: C.ink });
-txt(gs2, 560, 110, 'h', { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-style': 'italic', 'font-size': 34, 'font-weight': 700, fill: C.ink });
+txt(gs2, 200, 86, 'g', { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-style': 'italic', 'font-size': 34, 'font-weight': 700, fill: C.ink });
+txt(gs2, 560, 86, 'h', { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-style': 'italic', 'font-size': 34, 'font-weight': 700, fill: C.ink });
 
 /* ---------- S: arrows out vs arrows in ---------- */
 const soS = $('#soS'), siS = $('#siS');
 ovals(soS, 200, 570, 260, 120, 170); ovals(siS, 200, 570, 260, 150, 170);
 const so1 = chip(soS, 200, 260, '1', AC, '#fff', 64), soB = [[4, 170], [5, 260], [6, 350]].map(([n, y]) => chip(soS, 570, y, String(n), BC, '#fff', 64));
 const soA = [170, 350].map(y => { const a = PUC.arrow(soS, C.red, 5, 15); return { y, a }; });
-const soX = tag(soS, 392, 260, '1 has 2 images', C.red);
+const soX = tag(soS, 392, 430, '1 has 2 images', C.red);
 const siA2 = [[2, 200], [3, 320]].map(([n, y]) => ({ y, c: chip(siS, 200, y, String(n), AC, '#fff', 64) })), siB = [[4, 170], [5, 260], [6, 350]].map(([n, y]) => chip(siS, 570, y, String(n), BC, '#fff', 64));
 const siA = siA2.map(({ y }) => PUC.arrow(siS, PC, 5, 15));
 const siT = tag(siS, 392, 400, 'both share 5', C.ok);

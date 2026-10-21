@@ -29,7 +29,7 @@ const OUT = id => T0(id) - 0.32;
 /* ---------- title card ---------- */
 const LS = [['USUALLY', 'Equation → roots', C.ink], ['TODAY', 'Roots → equation', C.ac], ['RAVI ASKS', 'Roots 2 and 5', C.ink]];
 $('#lists').innerHTML = LS.map(([n, v, col], i) => `<div class="lst" id="ls${i}" style="left:${390 + i * 390}px"><div class="ln">${n}</div><div class="lv" style="color:${col}">${v}</div></div>`).join('');
-const tLs = [wt('H1', 'given') - 0.1, wt('H1', 'roots') + 0.2, wt('H1', 'roots') + 0.6];
+const tLs = [wt('H1', 'equation') - 0.1, wt('H1', 'roots') + 0.2, wt('H1', 'roots') + 0.6];
 
 /* ---------- H: Ravi's puzzle ---------- */
 const PZ = [['ROUND 1 · ROOTS', `${re('2')}\\ \\text{and}\\ ${re('5')}`, 'Equation?'], ['ROUND 2 · ROOTS', `${cpx('1', '2')}\\ \\text{and}\\ ${cpx('1', '2', '-')}`, 'No i allowed']];
@@ -222,7 +222,7 @@ M.on(t => {
     RS.forEach((_, i) => { const el = $('#ds' + i); M.vis(el.querySelector('.n'), t, tDs[i] - 0.2, 1e9, { ...POP, sc: 0.4 }); PUC.write(el.querySelector('.sx'), t, tDs[i], 0.8); M.vis(el.querySelector('.why'), t, tDs[i] + 0.6, 1e9, { dx: -12, dy: 0 }); });
     const hiY = M.track(80, tDs.slice(1).map((tt, i) => [tt - 0.1, 80 + (i + 1) * 104]), M.SOFT)(t);
     const hb = $('#dHi'); M.vis(hb, t, tDs[0] - 0.1, 1e9, { dy: 0, fade: 0.2 }); hb.style.top = (hiY - 10).toFixed(1) + 'px';
-    M.vis($('#rRes'), t, wt('R6', 'Here') - 0.1, 1e9, POP);
+    M.vis($('#rRes'), t, wt('R6', 'with') - 0.1, 1e9, POP);
     M.vis($('#rC'), t, tR1 + 0.3, out, { dx: 60, dy: 0, ...o });
     [0, 1].forEach(i => M.vis($('#fb' + i), t, wt('R1', 'alpha') + i * 0.3, 1e9, POP));
     [2, 3].forEach(i => M.vis($('#fb' + i), t, tDs[2] + 0.4 + (i - 2) * 0.3, 1e9, { dy: 14 }));

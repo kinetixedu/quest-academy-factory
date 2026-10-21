@@ -165,7 +165,7 @@ M.on(t => {
   if (hOn) {
     const out = OUT('V1');
     M.vis($('#hl'), t, tMorph + 0.1, out, { dx: -60, dy: 0, ...o });
-    HR.forEach(([w, ns], r) => { M.vis($('#hw' + r), t, tMorph + 0.3 + r * 0.1, 1e9, { dy: 10 }); ns.forEach((_, i) => M.vis($(`#hn${r}${i}`), t, tHn[r][i] - 0.1, 1e9, POP)); });
+    HR.forEach(([w, ns], r) => { M.vis($('#hw' + r), t, tMorph + 0.3 + r * 0.1, 1e9, { dy: 10 }); ns.forEach((_, i) => { const el = $(`#hn${r}${i}`); M.vis(el, t, tMorph + 0.4 + r * 0.15 + i * 0.07, 1e9, POP); if (!(r < 2 && i === 2)) el.style.background = mix('#FFFFFF', C.ac2, pulse(t, tHn[r][i] - 0.1, 0.8)); }); });
     ['#hn02', '#hn12'].forEach(s => { const el = $(s), b = M.io((t - wt('H5', 'Where')) / 0.3); el.style.background = mix('#FFFFFF', C.redBg, b); });
     M.vis($('#hlP'), t, wt('H5', 'Where') - 0.1, 1e9, POP);
     M.vis($('#hk'), t, tH3 - 0.1, out, { dx: 60, dy: 0, ...o });
@@ -205,7 +205,7 @@ M.on(t => {
   const kOn = t >= tK1 - 0.1 && t < tT + 0.1; M.hide($('#sK'), !kOn);
   if (kOn) {
     const out = OUT('K5');
-    [0, 1, 2].forEach(i => { M.vis($('#k' + i), t, tK[i] - 0.3, out, { dy: 30, ...o });
+    [0, 1, 2].forEach(i => { M.vis($('#k' + i), t, tK1 + 0.2 + i * 0.15, out, { dy: 30, ...o });
       kC[i].forEach((c, j) => { M.draw(c.c, t, tK[i] + j * 0.25, 0.6); M.vis(c.lb, t, tK[i] + j * 0.25 + 0.2, 1e9, POP); });
       M.vis($(`#k${i} .ex`), t, tK[i] + 0.8, 1e9, POP); });
     M.vis($('#th1'), t, T0('K5') + 0.05, OUT('T1') + 0.2, { dy: 36, ...o });
