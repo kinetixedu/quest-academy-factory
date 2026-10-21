@@ -1,0 +1,44 @@
+H1|0.3|Three in the morning. Suryagaon is asleep, yet the village transformer is warm.
+H2|0.55|Shankar anna touches the tank and nods. It is losing power, even now.
+C1|0.35|Farida has a question from the board. Is the transformer wasting the village's money?
+C2|0.35|Meera brings her notebook. Shankar anna brings his test records.
+C3|0.35|It is rated one hundred kilovolt amperes, and feeds every house and street light.
+C4|0.65|Kittu asks the simple question. Where does the lost power go?
+D1|0.3|So what are transformer losses?
+D2|0.35|They are the power that goes in but never comes out. It turns into heat.
+D3|0.65|Efficiency is output power divided by input power. A good transformer keeps nearly all of it.
+J1|0.35|Let's follow the power through a full day.
+J2|0.35|Three in the morning. Almost no load. Still, the core warms, because its flux swings fifty times a second.
+J3|0.35|That is iron loss. Hysteresis wastes energy each loop, and eddy currents swirl in the iron.
+J4|0.35|Iron loss stays nearly the same all day, whether the load is big or small.
+J5|0.35|Seven in the evening. Lights, fans and pumps come on. The current rises.
+J6|0.35|Now the copper windings heat up too. That is copper loss, I squared R.
+J7|0.65|Double the current, and copper loss becomes four times bigger.
+W1|0.35|Now the numbers. Iron loss, two hundred and fifty watts. Full load copper loss, one thousand watts.
+W2|0.35|At full load, the output is one hundred kilowatts. Total loss, one point two five kilowatts. Efficiency, about ninety eight point eight percent.
+W3|0.35|At half load, the current halves, so copper loss drops to a quarter. Two hundred and fifty watts.
+W4|0.35|Now copper loss equals iron loss. Fifty kilowatts out, half a kilowatt lost. Efficiency, about ninety nine percent.
+W5|0.65|This is the peak. A transformer is most efficient when copper loss equals iron loss.
+T1|0.7|Iron loss never sleeps. Copper loss follows the load.
+V1|0.35|How do engineers fight iron loss? They build the core from thin sheets of silicon steel.
+V2|0.35|Each sheet is insulated from the next, so eddy currents can only swirl in tiny loops.
+V3|0.65|The silicon also narrows the hysteresis loop. Core loss falls to about a third of plain steel.
+K0|0.35|Where do we see this at work today?
+K1|0.35|Laminations. A factory motor uses stacks of thin steel sheets, for the same reason.
+K2|0.35|Cooling. A power station transformer sits in oil, which carries its heat to the radiators.
+K3|0.35|All day efficiency. A hospital chooses transformers with low iron loss, because they stay on all night.
+K4|0.65|Testing. A mobile tower's power team watches transformer temperature to catch overloads.
+X1|0.35|So can we make a transformer with no losses? Not quite.
+X2|0.35|The good side. A good transformer wastes only one or two percent of the power.
+X3|0.35|The hard side. That small loss runs every hour. Two hundred and fifty watts, all day, is six units a day.
+X4|0.35|Farida asks, will a better core pay back? Meera promises to work out the numbers.
+X5|0.35|Kittu reaches for the warm tank. Shankar anna stops him. Switch off, then touch.
+X6|0.35|Typical distribution transformers run at about ninety eight to ninety nine percent.
+X7|0.65|The lesson? Small losses matter when they never stop.
+Q1|1.9|Quick check. When is a transformer at its maximum efficiency?
+A1|0.6|Equal losses! Efficiency peaks when copper loss equals iron loss.
+S1|0.3|So, remember.
+S2|0.35|Iron loss comes from hysteresis and eddy currents, and stays nearly constant.
+S3|0.35|Copper loss is I squared R, and grows with the square of the load current.
+S4|0.6|Efficiency is highest when the two losses are equal.
+N1|0.2|Next time, we'll make things spin, with the DC generator and the DC motor.

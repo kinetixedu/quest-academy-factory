@@ -1,0 +1,44 @@
+H1|0.3|The wires on Suryagaon's main pole carry eleven thousand volts.
+H2|0.55|Yet the socket in Meera's house gives two hundred and thirty. Who drops the voltage?
+C1|0.35|Shankar anna points to the grey box on the pole. The village transformer.
+C2|0.35|He climbed poles for thirty years. Today he stays on the ground.
+C3|0.35|Farida joins them. Does the village need a bigger one?
+C4|0.65|First, Meera wants to know how it works, with no moving parts.
+D1|0.3|So what is a transformer?
+D2|0.35|Two coils on one iron core. It changes AC voltage from one level to another, at the same frequency.
+D3|0.65|It grew from Faraday's iron ring of eighteen thirty one. In eighteen eighty five, engineers in Budapest built practical ones.
+J1|0.35|Let's look inside.
+J2|0.35|AC flows into the first coil, the primary. Its current swings back and forth, fifty times a second.
+J3|0.35|That makes a flux in the iron core that also swings, fifty times a second.
+J4|0.35|The core carries this changing flux through the second coil, the secondary.
+J5|0.35|By Faraday's law, the changing flux makes the same voltage in every turn, in both coils.
+J6|0.35|Fewer turns on the secondary means less voltage out. More turns means more.
+J7|0.65|Give it steady DC, and the flux stops changing. The output drops to zero.
+W1|0.35|Now the numbers.
+W2|0.35|The primary has two thousand two hundred turns, on eleven thousand volts. That's five volts per turn.
+W3|0.35|The secondary has forty six turns. Forty six times five gives two hundred and thirty volts.
+W4|0.35|The E M F equation tells us the flux. E equals four point four four, times frequency, times turns, times peak flux.
+W5|0.65|Put in eleven thousand volts, fifty hertz and two thousand two hundred turns. The peak flux is about twenty two point five milliwebers.
+T1|0.7|The turns ratio is the voltage ratio.
+V1|0.35|What about current? Power in is nearly equal to power out.
+V2|0.35|So when voltage goes down, current goes up by the same ratio.
+V3|0.65|Ten amps on the house side needs only about zero point two one amps on the eleven thousand volt side. So high voltage wires can stay thin.
+K0|0.35|Where do we see this at work today?
+K1|0.35|Step up. A power station raises its output voltage for the long journey.
+K2|0.35|Step down. A hospital takes eleven thousand volts and brings it down for its wards.
+K3|0.35|Isolate. A factory runs its control circuits at safe low voltage, through small transformers.
+K4|0.65|Adapt. A phone maker's charger has a tiny transformer inside.
+X1|0.35|Is it perfect? Almost.
+X2|0.35|The good side. No moving parts, and very little waste.
+X3|0.35|The hard side. It works only on AC, and it gets hot when overloaded.
+X4|0.35|Farida asks what it costs to replace. Shankar anna says first, measure the load.
+X5|0.35|Kittu wants a closer look. Shankar anna holds him back. Only linemen go near it, switched off and earthed.
+X6|0.35|Faraday's ring was already a closed core transformer, but he never found the turns ratio rule.
+X7|0.65|The lesson? Count the turns, and you know the voltage.
+Q1|1.9|Quick check. The secondary has twice the turns of the primary. What happens to the voltage?
+A1|0.6|Doubles! Each turn gets the same voltage, so twice the turns gives twice the voltage.
+S1|0.3|So, remember.
+S2|0.35|A transformer uses a changing flux in an iron core to link two coils.
+S3|0.35|The voltage ratio equals the turns ratio, and current goes the other way.
+S4|0.6|E equals four point four four, f, N, and peak flux, and it works only on AC.
+N1|0.2|Next time, we'll find where a transformer loses power, and how efficient it really is.

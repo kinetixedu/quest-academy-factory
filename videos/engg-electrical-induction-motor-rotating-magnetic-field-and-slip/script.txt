@@ -1,0 +1,44 @@
+H1|0.3|Suryagaon's flour mill motor has no brushes, and no wires to its spinning part.
+H2|0.55|So how does the spinning part know to turn?
+C1|0.35|The mill owner calls Shankar anna. The motor hums louder than usual.
+C2|0.35|Meera comes along. It's a three phase motor on the four hundred volt line.
+C3|0.35|Its plate says fifty hertz, four poles, fourteen hundred and forty revolutions per minute.
+C4|0.65|Kittu reads it twice. Why not a round fifteen hundred?
+D1|0.3|So what is an induction motor?
+D2|0.35|It is an AC motor whose rotor gets its current by induction, from a magnetic field that rotates.
+D3|0.65|Galileo Ferraris and Nikola Tesla found it independently. Tesla's patent was granted on the first of May, eighteen eighty eight.
+J1|0.35|Let's build the rotating field.
+J2|0.35|Three coils sit around the outer frame, the stator, one hundred and twenty degrees apart.
+J3|0.35|Each gets one phase. Their currents peak one after another.
+J4|0.35|Add their fields, and you get one steady field, sweeping round and round.
+J5|0.35|Inside sits the rotor, a cage of metal bars. The sweeping field induces currents in them.
+J6|0.35|Those currents feel a push from the field. The rotor starts to chase it.
+J7|0.65|But it never quite catches up. If it did, the bars would see no change, and the push would vanish.
+W1|0.35|Now the numbers. Synchronous speed, the field's speed, is one hundred and twenty times frequency, over poles.
+W2|0.35|One hundred and twenty times fifty, divided by four. That's one thousand five hundred revolutions per minute.
+W3|0.35|The rotor turns at fourteen hundred and forty. It lags by sixty.
+W4|0.35|Slip is that lag, divided by synchronous speed. Sixty divided by fifteen hundred is zero point zero four. Four percent.
+W5|0.65|The rotor's own currents flip at slip times supply frequency. Four percent of fifty, just two hertz.
+T1|0.7|The rotor chases the field, and never catches it.
+V1|0.35|More load slows the rotor a little. Slip grows, and the torque rises to match.
+V2|0.35|To reverse it, swap any two supply wires. The field turns the other way.
+V3|0.65|And a two pole motor on fifty hertz has a field at three thousand revolutions per minute.
+K0|0.35|Where do we see this at work today?
+K1|0.35|Rotating field. A factory's conveyors and fans run on three phase induction motors.
+K2|0.35|Slip. A bakery's dough mixer slows a little under heavy dough, and pushes harder.
+K3|0.35|Reverse. A factory crane's hoist motor goes up or down by swapping two phases.
+K4|0.65|Everywhere. A water pumping station runs its big pumps on induction motors.
+X1|0.35|So is the induction motor perfect? It comes close.
+X2|0.35|The good side. No brushes to wear out. It is simple, tough and cheap.
+X3|0.35|The hard side. Lose one phase, and a running motor keeps turning on two, draws extra current, and overheats.
+X4|0.35|Shankar anna finds one blown fuse. The motor was running on two phases.
+X5|0.35|Kittu wants to replace the fuse himself. Shankar anna stops him and switches off first.
+X6|0.35|In twenty twenty three, electric motor systems used about fifty three percent of the world's electricity.
+X7|0.65|The lesson? Give the motor all three phases, and it will run for years.
+Q1|1.9|Quick check. Why can an induction motor's rotor never reach synchronous speed?
+A1|0.6|No slip, no current! At the field's speed the bars cut no flux, so no current and no push.
+S1|0.3|So, remember.
+S2|0.35|Three phase currents make a rotating magnetic field.
+S3|0.35|Synchronous speed is one hundred and twenty f over P, and the rotor runs a little slower.
+S4|0.6|Slip is the lag over synchronous speed, and it grows with load.
+N1|0.2|Next time, we'll look at single phase motors and alternators.

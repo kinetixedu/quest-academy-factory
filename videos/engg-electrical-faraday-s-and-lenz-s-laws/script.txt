@@ -1,0 +1,44 @@
+H1|0.3|Kittu's bicycle lamp has no battery. Yet when he pedals, it glows.
+H2|0.55|When he stops, it goes dark. Where does that light come from?
+C1|0.35|Kittu wheels the bicycle into Shankar anna's repair corner.
+C2|0.35|Shankar anna opens the little dynamo on the wheel. Inside, a magnet sits in a coil of wire.
+C3|0.35|Meera smiles. This is the same idea that runs every power station.
+C4|0.65|And today, Kittu gets to see it work.
+D1|0.3|So what did Faraday discover?
+D2|0.35|On twenty ninth August, eighteen thirty one, Michael Faraday found that a changing magnetic field makes a voltage in a coil.
+D3|0.65|Faraday's law says the voltage equals the number of turns times how fast the flux changes.
+J1|0.35|Let's watch it happen on the bench.
+J2|0.35|A coil sits still, wired to a meter. The needle reads zero.
+J3|0.35|Meera pushes a magnet into the coil. The needle kicks right.
+J4|0.35|She holds the magnet still. The needle falls back to zero. No change, no voltage.
+J5|0.35|She pulls it out. The needle kicks left. The current now flows the other way.
+J6|0.35|She moves it faster. The needle kicks harder.
+J7|0.65|Only change makes voltage. Faster change makes more.
+W1|0.35|Now some numbers. A coil of two hundred turns.
+W2|0.35|The flux through it rises from zero to three milliwebers, in one tenth of a second.
+W3|0.35|Voltage equals turns times change in flux, divided by time. Two hundred times zero point zero zero three, divided by zero point one.
+W4|0.35|That's six volts.
+W5|0.65|Do the same change in half the time, and you get twelve volts. Twice as fast, twice the voltage.
+T1|0.7|No change in flux, no voltage. Faster change, more voltage.
+V1|0.35|But which way does the current flow? In eighteen thirty four, Heinrich Lenz gave the answer.
+V2|0.35|The induced current always flows so that it opposes the change that made it. That is the minus sign in Faraday's law.
+V3|0.65|Shankar anna drops a strong magnet down a copper pipe. It floats down slowly, because the pipe's currents push back on it.
+K0|0.35|Where do we see this at work today?
+K1|0.35|Generate. A power station spins magnets past coils to make the grid's electricity.
+K2|0.35|Brake. A metro railway turns its motors into generators while stopping, and sends power back.
+K3|0.35|Charge. A phone maker builds wireless charging on two coils, with a changing field between them.
+K4|0.65|Heat. A factory's induction heater warms steel using currents made inside the metal.
+X1|0.35|So is induction always welcome? Not always.
+X2|0.35|The good side. Motion becomes electricity, with no fuel burning inside the machine.
+X3|0.35|The hard side. Lenz pushes back, so you must work harder to make more power.
+X4|0.35|Kittu feels it. With the lamp on, pedalling is a little heavier.
+X5|0.35|Shankar anna adds a warning. A switched off line beside a live line can pick up a voltage too. Linemen earth it before they touch it.
+X6|0.35|Kittu wants to test it on the village line. Meera says no. Only trained linemen, and only after earthing.
+X7|0.65|The lesson? Change makes electricity, and nature always pushes back.
+Q1|1.9|Quick check. Meera holds the magnet perfectly still inside the coil. What does the meter read?
+A1|0.6|Zero! The flux is not changing, so no voltage is induced.
+S1|0.3|So, remember.
+S2|0.35|A changing magnetic flux induces a voltage in a coil.
+S3|0.35|More turns, or faster change, means more voltage.
+S4|0.6|Lenz's law: the induced current always opposes the change.
+N1|0.2|Next time, we'll use this to step voltage up and down, inside a transformer.

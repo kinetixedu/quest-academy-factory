@@ -1,0 +1,44 @@
+H1|0.3|A pump starter in Suryagaon will not hold. It buzzes, clicks, and drops out.
+H2|0.55|The motor is fine. The problem is a gap you can barely see.
+C1|0.35|Meera carries the starter to Shankar anna's repair corner.
+C2|0.35|He switches off and points at a coil of copper wire.
+C3|0.35|Current in this coil makes a magnet. It pulls an iron plate shut, and the pump's contacts close.
+C4|0.65|Today it pulls weakly. Meera wants to know why.
+D1|0.3|So what is a magnetic circuit?
+D2|0.35|It is a closed iron path that carries magnetic flux, the way a wire carries current.
+D3|0.65|The push is turns times current, called ampere turns. The opposition is called reluctance.
+J1|0.35|Watch the starter's magnet work.
+J2|0.35|The switch closes. Current flows into the coil, two hundred turns of wire.
+J3|0.35|Lines of flux appear and loop around the iron path.
+J4|0.35|Iron lets flux through thousands of times more easily than air, so the flux stays inside.
+J5|0.35|The loop closes through the plate. The plate snaps shut.
+J6|0.35|Now add a speck of dust. The plate stops one millimetre short.
+J7|0.65|The flux must jump through air. The pull drops, and the plate chatters.
+W1|0.35|Let's put numbers on it. Two hundred turns, carrying half an amp, make one hundred ampere turns.
+W2|0.35|Over an iron path twenty centimetres long, that's five hundred ampere turns per metre. We call this H, the magnetising force.
+W3|0.35|In iron two thousand times better than air, that gives a flux density, B, of about one point two six tesla.
+W4|0.35|Now open a one millimetre gap. That thin slice of air has ten times the reluctance of all the iron.
+W5|0.65|The flux drops to one eleventh, about zero point one one tesla.
+T1|0.7|Iron carries flux easily. Air fights it hard.
+V1|0.35|Now raise the current, and plot B against H. This is the B H curve.
+V2|0.35|B climbs fast, bends at the knee, then flattens. The iron is saturated, and extra current adds almost nothing.
+V3|0.65|Bring the current back to zero, and some magnetism stays. The path makes a loop, called hysteresis, and each loop wastes a little heat.
+K0|0.35|Where do we see this at work today?
+K1|0.35|Electromagnet. A factory scrap crane lifts steel, and drops it when the current stops.
+K2|0.35|Core. A power station transformer uses silicon steel, which wastes little in each loop.
+K3|0.35|Air gap. A factory motor keeps its air gap very small, so the flux stays strong.
+K4|0.65|Memory. A data centre stores data on disks as tiny magnetised spots.
+X1|0.35|So is iron the perfect path? Mostly, but it has limits.
+X2|0.35|The good side. A little current makes a strong, switchable magnet.
+X3|0.35|The hard side. Iron saturates, and every loop warms the core.
+X4|0.35|Kittu reaches for the plate while it is live. Shankar anna stops him. Switch off, then touch.
+X5|0.35|Meera cleans the plate. The starter holds firm and quiet.
+X6|0.35|The word hysteresis was coined in eighteen eighty one by James Alfred Ewing.
+X7|0.65|The lesson? Give flux a clean iron path, and don't push iron past its knee.
+Q1|1.9|Quick check. Why did one millimetre of dust weaken the starter magnet?
+A1|0.6|Reluctance! Air resists flux far more than iron, so even a thin gap cuts the flux sharply.
+S1|0.3|So, remember.
+S2|0.35|A magnetic circuit is an iron path for flux, pushed by ampere turns.
+S3|0.35|Reluctance opposes flux, and air gaps add a lot of it.
+S4|0.6|The B H curve rises, bends and saturates, and hysteresis wastes energy.
+N1|0.2|Next time, we'll make electricity from a moving magnet, with Faraday's and Lenz's laws.

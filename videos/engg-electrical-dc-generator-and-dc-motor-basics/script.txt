@@ -1,0 +1,44 @@
+H1|0.3|A farmer's battery sprayer hums but will not turn. Its fuse keeps blowing.
+H2|0.55|The same motor ran all season. What changed?
+C1|0.35|The farmer brings it to Shankar anna's repair corner.
+C2|0.35|It's a small DC motor, running on a twelve volt battery.
+C3|0.35|Shankar anna disconnects the battery and opens it. Inside, a coil sits between two magnets.
+C4|0.65|Meera spots the problem. The pump is jammed with mud, so the motor cannot turn.
+D1|0.3|So what are a DC motor and a DC generator?
+D2|0.35|A DC motor turns electricity into turning motion. A DC generator turns motion into electricity.
+D3|0.65|Same machine. Push current in, it spins. Spin it, current comes out.
+J1|0.35|Let's watch the motor work.
+J2|0.35|Current flows through a coil, called the armature, sitting in the magnet's field.
+J3|0.35|A current carrying wire in a field feels a push. One side goes up, the other down. The coil turns.
+J4|0.35|After half a turn, the push would reverse. But a split ring, the commutator, swaps the current just in time.
+J5|0.35|Carbon brushes press on it and carry current in. The coil keeps turning one way.
+J6|0.35|Now spin it by hand. The coil cuts the field, and a voltage appears. A generator.
+J7|0.65|Here the commutator turns the coil's back and forth voltage into one way DC.
+W1|0.35|Now the numbers. The battery gives twelve volts. The armature's resistance is half an ohm.
+W2|0.35|At standstill, nothing pushes back. Current is twelve divided by half an ohm. That's twenty four amps.
+W3|0.35|Once it spins, the coil also generates. This back E M F pushes against the battery.
+W4|0.35|At full speed, the back E M F is eleven volts. Only one volt is left. One divided by half an ohm, two amps.
+W5|0.65|A jammed motor has no back E M F, so it draws full starting current and blows the fuse.
+T1|0.7|A spinning motor is also a generator, pushing back.
+V1|0.35|How much voltage does a generator make? E equals P, phi, Z, N, over sixty A.
+V2|0.35|Poles, flux per pole, conductors, speed, and parallel paths.
+V3|0.65|Two poles, ten milliwebers, six hundred conductors, two paths, fifteen hundred revolutions per minute. One hundred and fifty volts.
+K0|0.35|Where do we see this at work today?
+K1|0.35|Motor. A factory conveyor uses DC motors where speed must be easy to control.
+K2|0.35|Generator. Older power station generators used a small dynamo, the exciter, to feed their magnets.
+K3|0.35|Both. A metro railway's motors become generators while braking, and send power back.
+K4|0.65|Start. A hospital's backup diesel generator is cranked to life by a DC starter motor.
+X1|0.35|So is the DC machine perfect? Not quite.
+X2|0.35|The good side. Easy speed control and a strong start.
+X3|0.35|The hard side. Brushes wear out and spark, and need regular care.
+X4|0.35|Kittu reaches into the jammed pump while it is connected. Shankar anna stops him. Disconnect first.
+X5|0.35|Meera clears the mud, and the motor runs at two amps. The fuse holds.
+X6|0.35|In eighteen thirty seven, Thomas Davenport received the first American patent for an electric machine.
+X7|0.65|The lesson? A motor protects itself by spinning. Never let it stall.
+Q1|1.9|Quick check. Why does a jammed DC motor draw so much current?
+A1|0.6|No back E M F! A still coil makes no push back, so only the small resistance limits current.
+S1|0.3|So, remember.
+S2|0.35|The same DC machine works as a motor or a generator.
+S3|0.35|The commutator and brushes keep the current one way in the coil.
+S4|0.6|A spinning motor makes a back E M F that limits its current.
+N1|0.2|Next time, we'll meet the induction motor and its rotating magnetic field.
