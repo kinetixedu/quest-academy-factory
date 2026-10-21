@@ -97,8 +97,10 @@ const LAB = [];
   mk(g, 'rect', { x: 60, y: 70, width: 900, height: 400, rx: 10, fill: '#D6D3CC', stroke: BR, 'stroke-width': 4.5 });
   for (let k = 0; k < 4; k++) mk(g, 'line', { x1: 60, y1: 150 + k * 80, x2: 960, y2: 150 + k * 80, stroke: '#BDB8AE', 'stroke-width': 3 });
   const r = M.rng(5);
-  for (let k = 0; k < 9; k++) { const x = 90 + k * 96 + r() * 20, y = 260 + r() * 60, w = 70 + r() * 40, h = 120 + r() * 70;
-    mk(g, 'path', { d: `M${x},${Math.min(470, y + h)} C${x - 8},${y + h * 0.4} ${x + w * 0.2},${y} ${x + w * 0.5},${y} C${x + w * 0.8},${y} ${x + w + 8},${y + h * 0.5} ${x + w},${Math.min(470, y + h)} Z`, fill: '#6DB27A', stroke: DARK, 'stroke-width': 3, opacity: 0.94 }); }
+  [[180, 320, 90, 60], [330, 360, 80, 70], [470, 330, 110, 80], [630, 370, 90, 60], [780, 330, 100, 70], [880, 400, 60, 50], [250, 420, 70, 40], [560, 430, 90, 36]].forEach(([x, y, rx, ry], k) => {
+    let d = ''; for (let j = 0; j <= 16; j++) { const a = j / 16 * Math.PI * 2, rr = 1 + 0.18 * Math.sin(3 * a + k) + 0.1 * Math.sin(5 * a + 2 * k); d += (j ? ' L' : 'M') + (x + rx * rr * Math.cos(a)).toFixed(1) + ',' + (y + ry * rr * Math.sin(a)).toFixed(1); }
+    mk(g, 'path', { d: d + ' Z', fill: '#6DB27A', stroke: DARK, 'stroke-width': 3, opacity: 0.94 });
+    for (let j = 0; j < 6; j++) mk(g, 'circle', { cx: x + (r() - 0.5) * rx * 1.2, cy: y + (r() - 0.5) * ry * 1.1, r: 3.5, fill: '#4E9A5A' }); });
   LAB[0] = [[300, 330, 300, 120, 'Green slime', 'start'], [140, 150, 150, 110, 'Tank wall', 'start']]; }
 // level 1: filaments
 const filament = (g, y, x0, x1, ph, cw = 54) => { const pts = []; for (let x = x0; x <= x1; x += 6) pts.push([x, y + 14 * Math.sin((x + ph) / 70)]);
@@ -185,7 +187,7 @@ const GMT = [0, 1].map(k => { const g = mk(RG[2], 'g', {}); mk(g, 'circle', { cx
 const ZYG = mk(RG[2], 'g', {}); mk(ZYG, 'circle', { cx: 800, cy: 340, r: 52, fill: '#6DB27A', stroke: DARK, 'stroke-width': 4 }); mk(ZYG, 'circle', { cx: 800, cy: 340, r: 14, fill: NUC });
 const zyT = mk(RG[2], 'text', { x: 800, y: 440, 'text-anchor': 'middle', class: 'zl' }); zyT.textContent = 'Zygote';
 const gmT = [mk(RG[2], 'text', { x: 300, y: 430, 'text-anchor': 'middle', class: 'zl' }), mk(RG[2], 'text', { x: 1300, y: 430, 'text-anchor': 'middle', class: 'zl' })]; gmT.forEach(e => e.textContent = 'Gamete');
-const tFuse = wt('R4', 'fuse'), tZyg = wt('R4', 'zygote');
+const tFuse = wt('R4', 'fuse'), tZyg = wt('R4', 'fuse') + 1.0;
 // iso vs oo
 const ri = $('#riS'), ISO = [0, 1].map(k => { const g = mk(ri, 'g', {}); mk(g, 'path', { d: 'M0,-30 C22,-30 28,6 0,30 C-28,6 -22,-30 0,-30 Z', fill: '#8FC994', stroke: DARK, 'stroke-width': 3 });
   mk(g, 'circle', { cx: 0, cy: 4, r: 7, fill: NUC }); const f1 = mk(g, 'path', { d: '', stroke: BR, 'stroke-width': 2.5, fill: 'none' }), f2 = mk(g, 'path', { d: '', stroke: BR, 'stroke-width': 2.5, fill: 'none' }); return { g, f1, f2 }; });
@@ -256,7 +258,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 23', topic: 'Velvet moss in t
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tO1 + 0.1, 1, 960, 540], [wt('O3', 'kelps') - 0.3, 1.08, 1380, 560], [T1('O3') + 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tO1 + 0.1, 1, 960, 540]]);
 const flag = (x, y, ang, len, ph) => { let d = `M${x},${y}`; for (let k = 1; k <= 8; k++) { const u = k / 8, px = x + Math.cos(ang) * len * u - Math.sin(ang) * 6 * Math.sin(u * 7 + ph), py = y + Math.sin(ang) * len * u + Math.cos(ang) * 6 * Math.sin(u * 7 + ph); d += ` L${px.toFixed(1)},${py.toFixed(1)}`; } return d; };
 
 /* ---------- frame ---------- */
@@ -342,7 +344,7 @@ M.on(t => {
     // way 1
     const b = M.io((t - tBreak) / 0.8), gr = M.io((t - tGrow) / 1.4);
     FCELL.forEach((c, k) => { const p = Math.floor(k / 4), j = k % 4, cw = 70 + 25 * gr, off = (p - 1) * (80 * b + 100 * gr), x = 520 + p * 280 + off - 2 * cw + j * cw;
-      attr(c, 'transform', `translate(${x.toFixed(1)} 320) scale(${(cw / 70).toFixed(3)} 1)`); });
+      attr(c, 'transform', `translate(${(800 + (x - 800) * 1.35).toFixed(1)} 300) scale(${(cw / 70 * 1.35).toFixed(3)} 1.35)`); });
     // way 2
     ZSP.forEach((z, k) => { const a = k * Math.PI / 3 + 0.4, d = 100 + 520 * M.clamp((t - tZsp - k * 0.12) / 3.4), wob = Math.sin((t - tZsp) * 6 + k) * 10;
       const x = 400 + Math.cos(a) * d * (Math.cos(a) > 0 ? 1.2 : 0.55), y = 340 + Math.sin(a) * Math.min(d, 150) + wob;
@@ -357,7 +359,7 @@ M.on(t => {
     // iso vs oo
     M.vis($('#ri'), t, tIso, tR7 - 0.05, { dx: -60, dy: 0, outDur: 0.01 }); M.vis($('#ro'), t, T0('R6') - 0.15, tR7 - 0.05, { dx: 60, dy: 0, outDur: 0.01 });
     const lp = ((t - tIso) % 3.2) / 3.2, mv = M.io(lp / 0.6), mg = lp > 0.62;
-    ISO.forEach((z, k) => { const x = k ? M.lerp(640, 420, mv) : M.lerp(140, 360, mv); attr(z.g, 'transform', `translate(${x.toFixed(1)} 320) rotate(${k ? -90 : 90})`); z.g.style.opacity = mg && k ? 0 : 1;
+    ISO.forEach((z, k) => { const x = k ? M.lerp(640, 420, mv) : M.lerp(140, 360, mv); attr(z.g, 'transform', `translate(${x.toFixed(1)} 320) rotate(${k ? -90 : 90}) scale(1.6)`); z.g.style.opacity = mg && k ? 0 : 1;
       attr(z.f1, 'd', flag(-5, -30, -Math.PI / 2 - 0.35, 40, t * 9)); attr(z.f2, 'd', flag(5, -30, -Math.PI / 2 + 0.35, 40, t * 9 + 1)); });
     M.vis($('#ri0'), t, wt('R5', 'Chlamydomonas') - 0.1, 1e9, POP); M.vis($('#ri1'), t, wt('R5', 'Spirogyra') - 0.1, 1e9, POP);
     const lp2 = ((t - T0('R6')) % 3.0) / 3.0, sx = M.lerp(110, 360, M.io(lp2 / 0.75));

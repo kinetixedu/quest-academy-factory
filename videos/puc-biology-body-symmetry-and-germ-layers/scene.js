@@ -161,7 +161,7 @@ const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
 const tMeso = wt('C3', 'mesoderm');
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tMeso - 0.3, 1.06, 760, 520], [T1('C4') + 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]]]);
 let geo = null; function measure() { geo = 1; }
 
 /* ---------- frame ---------- */
@@ -246,12 +246,12 @@ M.on(t => {
     let st = -1; tSt.forEach((tt, i) => { if (t >= tt - 0.2) st = i; });
     STP.forEach((_, i) => { M.vis($('#sp' + i), t, tL1 + 0.5 + i * 0.06, 1e9, { dy: 8 }); lite($('#sp' + i), i < st, i === st); });
     const lt = t - tL1, s = i => M.io((t - tSt[i] + 0.1) / 0.6);
-    eBall.forEach((c, k) => { c.style.opacity = (M.clamp((t - tSt[0] + 0.3) / 0.4) * (1 - s(1))).toFixed(3); attr(c, 'r', (20 + 2 * Math.sin(lt * 3 + k)).toFixed(2)); });
+    eBall.forEach((c, k) => { c.style.opacity = (M.clamp((t - wt('L1', 'embryo') - k * 0.04) / 0.3) * (1 - s(1))).toFixed(3); attr(c, 'r', (20 + 2 * Math.sin(lt * 3 + k)).toFixed(2)); });
     M.drawU(eEc, s(1)); eEc.style.opacity = s(1) > 0 ? 1 : 0;
     M.drawU(eEn, s(2)); eEn.style.opacity = s(2) > 0 ? 1 : 0; eGut.style.opacity = s(2);
     eJel.style.opacity = (s(3) * (1 - 0.85 * s(4))).toFixed(3);
     eMe.style.opacity = s(4); attr(eMe, 'stroke-width', (30 * s(4) * (1 + 0.08 * Math.sin(lt * 3))).toFixed(1));
-    Le.forEach((l, i) => labT(l, t, [tSt[1] + 0.3, tSt[2] + 0.3, tSt[3] + 0.3, tSt[4] + 0.3][i]));
+    Le.forEach((l, i) => labT(l, t, [tSt[1] + 0.3, tSt[2] + 0.3, tSt[3] + 0.3, tSt[4] + 0.3][i])); { const f = 1 - M.clamp((t - tSt[4]) / 0.4); [Le[2].ln, Le[2].dot].forEach(e => e.style.opacity = (t > tSt[3] ? f : '')); Le[2].tx.style.opacity = (M.clamp((t - tSt[3] - 0.3) / 0.25) * f).toFixed(3); }
     M.vis($('#lr0'), t, wt('L7', 'diploblastic') - 0.1, 1e9, POP); M.vis($('#lr1'), t, wt('L7', 'triploblastic') - 0.1, 1e9, POP);
   }
 

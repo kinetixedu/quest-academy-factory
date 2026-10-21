@@ -130,9 +130,9 @@ const L2 = { m: cellG('2n', SET2, 48), a: cellG('2n', [[-6, 40, NUC], [7, 24, NU
   q: [[[-6, 40, NUC], [7, 24, NUL]], [[-6, 40, NUC], [7, 24, NUL]], [[-6, 40, NUL], [7, 24, NUC]], [[-6, 40, NUL], [7, 24, NUC]]].map(s => cellG('n', s, 38)) };
 const L3 = { a: cellG('n', [[-6, 40, NUC], [7, 24, NUC]], 40), b: cellG('n', [[-6, 40, NUL], [7, 24, NUL]], 40), z: cellG('2n', SET2, 48) };
 L2.a.G.querySelector('circle').setAttribute('fill', '#EEF0F8'); L2.b.G.querySelector('circle').setAttribute('fill', '#EEF0F8');
-const PT = { r1: txt(ps, 450, 152, '2n → 2n', { 'font-size': 24, 'font-weight': 600, fill: DN }), h1: txt(ps, 900, 152, 'n → n', { 'font-size': 24, 'font-weight': 600, fill: HN }),
-  r2: txt(ps, 920, 300, '2n → n', { 'font-size': 24, 'font-weight': 600, fill: HN }), r3: txt(ps, 660, 448, 'n + n → 2n', { 'font-size': 24, 'font-weight': 600, fill: DN }) };
-const AR = [[200, 144, 230], [560, 144, 590], [200, 292, 230], [490, 292, 520], [440, 440, 480]].map(([x, y]) => mk(ps, 'path', { d: `M${x - 10},${y - 10} L${x},${y} L${x - 10},${y + 10}`, stroke: C.dim, 'stroke-width': 3, fill: 'none', 'stroke-linecap': 'round' }));
+const PT = { r1: txt(ps, 466, 152, '2n → 2n', { 'font-size': 24, 'font-weight': 600, fill: DN }), h1: txt(ps, 900, 152, 'n → n', { 'font-size': 24, 'font-weight': 600, fill: HN }),
+  r2: txt(ps, 920, 300, '2n → n', { 'font-size': 24, 'font-weight': 600, fill: HN }), r3: txt(ps, 640, 448, 'n + n → 2n', { 'font-size': 24, 'font-weight': 600, fill: DN }) };
+const AR = [[200, 144, 230], [560, 144, 590], [200, 292, 230], [490, 292, 520], [430, 440, 470]].map(([x, y]) => mk(ps, 'path', { d: `M${x - 10},${y - 10} L${x},${y} L${x - 10},${y + 10}`, stroke: C.dim, 'stroke-width': 3, fill: 'none', 'stroke-linecap': 'round' }));
 const avP = PUC.avatar($('#sP'), { x: 1248 + 28, y: 324 + 526 - 104, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'Halve, double, copy. Easy maths!' });
 
 /* ---------- V: the plant twist ---------- */
@@ -225,7 +225,7 @@ M.on(t => {
     DW.th.forEach((p, i) => M.draw(p, t, wt('D2', 'chromosomes') - 0.1 + i * 0.06, 0.4));
     labRun(DW.lab[2], t, tD1 + 0.6); labRun(DW.lab[0], t, wt('D2', 'nucleus')); labRun(DW.lab[1], t, wt('D2', 'threads'));
     M.vis($('#dwP'), t, wt('D3', 'letter') - 0.1, 1e9, POP);
-    M.vis($('#dr'), t, T0('D3') - 0.15, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#dr'), t, wt('D4', 'haploid') - 0.5, out, { dx: 60, dy: 0, ...o });
     M.vis($('#cr0'), t, wt('D4', 'haploid') - 0.2, 1e9, { dy: 20 }); M.vis($('#cr1'), t, wt('D4', 'diploid') - 0.2, 1e9, { dy: 20 });
     [...$('#cs0').children].forEach((c, i) => M.vis(c, t, wt('D4', 'one') + i * 0.1, 1e9, { ...POP, sc: 0.3 }));
     [...$('#cs1').children].forEach((c, i) => M.vis(c, t, wt('D4', 'two') + i * 0.08, 1e9, { ...POP, sc: 0.3 }));
@@ -278,26 +278,25 @@ M.on(t => {
     const dupA = M.io((t - wt('P2', 'copy') + 0.1) / 0.6), spA = M.io((t - wt('P2', 'splits') + 0.1) / 0.9);
     [L1.m, L1.a, L1.b].forEach(c => c.sis.forEach(s => attr(s, 'transform', `translate(${(4 * (c === L1.m ? dupA : 1 - M.io((t - wt('P2', 'splits') - 0.9) / 0.5))).toFixed(2)} 0)`)));
     L1.m.sis.forEach(s => s.style.opacity = dupA > 0 ? 1 : 0); [L1.a, L1.b].forEach(c => c.sis.forEach(s => s.style.opacity = '0'));
-    const on1 = t >= tP1 + 0.8; place(L1.m, 120, 144, on1 ? pul(0) * (st <= 0 ? 1 : 1) : 0, spA > 0 ? 0 : on1 ? 1 : 0);
-    place(L1.a, 120 + 180 * spA, 144 - 0 * spA, spA > 0 ? pul(1) : 0, spA > 0 ? 1 : 0); place(L1.b, 120 + 300 * spA, 144, spA > 0 ? pul(2) : 0, spA > 0 ? 1 : 0);
-    if (spA > 0) attr(L1.a.G, 'transform', `translate(${(120 + 170 * spA).toFixed(1)} 144) scale(${pul(1).toFixed(3)})`), attr(L1.b.G, 'transform', `translate(${(120 + 280 * spA).toFixed(1)} 144) scale(${pul(2).toFixed(3)})`);
+    const on1 = t >= tP1 + 0.8; place(L1.m, 120, 144, on1 ? pul(0) : 0, on1 ? (spA > 0 ? 1 - 0.65 * spA : 1) : 0);
+    place(L1.a, 120 + 170 * spA, 144, spA > 0 ? pul(1) : 0, spA > 0 ? 1 : 0); place(L1.b, 120 + 280 * spA, 144, spA > 0 ? pul(2) : 0, spA > 0 ? 1 : 0);
     M.vis(PT.r1, t, wt('P3', 'same') - 0.1, 1e9, { dy: 6 }); M.vis(AR[0], t, wt('P2', 'splits'), 1e9, { dy: 0, fade: 0.2 });
     const tH = wt('P3', 'haploid'), spH = M.io((t - tH - 0.6) / 0.9);
-    place(L1.hm, 640, 144, t > tH - 0.1 ? pul(3) : 0, t > tH - 0.1 && spH <= 0 ? 1 : 0); L1.hm.sis.forEach(s => s.style.opacity = M.io((t - tH - 0.1) / 0.4));
+    place(L1.hm, 640, 144, t > tH - 0.1 ? pul(3) : 0, t > tH - 0.1 ? 1 - 0.65 * spH : 0); L1.hm.sis.forEach(s => s.style.opacity = M.io((t - tH - 0.1) / 0.4));
     [L1.ha, L1.hb].forEach(c => c.sis.forEach(s => s.style.opacity = '0'));
     place(L1.ha, 640 + 100 * spH, 144, spH > 0 ? pul(4) : 0, spH > 0 ? 1 : 0); place(L1.hb, 640 + 200 * spH, 144, spH > 0 ? pul(5) : 0, spH > 0 ? 1 : 0);
     M.vis(PT.h1, t, wt('P3', 'stays', 1) - 0.1, 1e9, { dy: 6 }); M.vis(AR[1], t, tH + 0.6, 1e9, { dy: 0, fade: 0.2 });
     // lane 2: meiosis
     const on2 = t >= tPs[2] - 0.2, d1 = M.io((t - wt('P4', 'twice') + 0.2) / 0.9), d2 = M.io((t - wt('P5', 'Four') + 0.1) / 0.9);
-    L2.m.sis.forEach(s => s.style.opacity = M.io((t - wt('P4', 'copies')) / 0.4)); place(L2.m, 120, 292, on2 ? pul(6) : 0, on2 && d1 <= 0 ? 1 : 0);
-    [L2.a, L2.b].forEach((c, i) => { c.sis.forEach(s => s.style.opacity = d2 > 0 ? 0 : 1); place(c, 120 + (170 + i * 120) * d1, 292, d1 > 0 ? pul(7 + i) : 0, d1 > 0 && d2 <= 0 ? 1 : d1 > 0 ? 1 - d2 : 0); });
+    L2.m.sis.forEach(s => s.style.opacity = M.io((t - wt('P4', 'copies')) / 0.4)); place(L2.m, 120, 292, on2 ? pul(6) : 0, on2 ? 1 - 0.65 * d1 : 0);
+    [L2.a, L2.b].forEach((c, i) => { c.sis.forEach(s => s.style.opacity = d2 > 0 ? 0 : 1); place(c, 120 + (170 + i * 120) * d1, 292, d1 > 0 ? pul(7 + i) : 0, d1 > 0 ? 1 - 0.65 * d2 : 0); });
     L2.q.forEach((c, i) => { c.sis.forEach(s => s.style.opacity = '0'); const x0 = i < 2 ? 290 : 410; place(c, x0 + (560 + i * 100 - x0) * d2, 292, d2 > 0 ? pul(9 + i) : 0, d2 > 0 ? 1 : 0); });
     M.vis(AR[2], t, wt('P4', 'twice'), 1e9, { dy: 0, fade: 0.2 }); M.vis(AR[3], t, wt('P5', 'Four'), 1e9, { dy: 0, fade: 0.2 }); M.vis(PT.r2, t, wt('P5', 'becomes') - 0.1, 1e9, { dy: 6 });
     // lane 3: fertilisation
     const on3 = t >= tPs[4] - 0.1, fz = M.io((t - wt('P6', 'joins') + 0.1) / 1.0);
     [L3.a, L3.b, L3.z].forEach(c => c.sis.forEach(s => s.style.opacity = '0'));
-    place(L3.a, 160 + (300 - 160) * fz, 440, on3 ? pul(13) : 0, on3 && fz < 1 ? 1 : 0); place(L3.b, 340 + (300 - 340) * fz, 440, on3 ? pul(14) : 0, on3 && fz < 1 ? 1 : 0);
-    place(L3.z, 300, 440, fz >= 1 ? pul(15) : 0, fz >= 1 ? 1 : 0); M.vis(PT.r3, t, wt('P6', 'plus') - 0.1, 1e9, { dy: 6 }); M.vis(AR[4], t, wt('P6', 'plus'), 1e9, { dy: 0, fade: 0.2 });
+    place(L3.a, 140 + (560 - 140) * fz, 440, on3 ? pul(13) : 0, on3 && fz < 1 ? 1 : 0); place(L3.b, 260 + (560 - 260) * fz, 440, on3 ? pul(14) : 0, on3 && fz < 1 ? 1 : 0);
+    place(L3.z, 560, 440, fz >= 1 ? pul(15) : 0, fz >= 1 ? 1 : 0); M.vis(PT.r3, t, wt('P6', 'plus') - 0.1, 1e9, { dy: 6 }); M.vis(AR[4], t, wt('P6', 'plus'), 1e9, { dy: 0, fade: 0.2 });
     // rules panel
     const swOn = M.vis($('#sws'), t, tS1 + 0.2, 1e9, { dy: 16 });
     if (swOn) [0, 1, 2].forEach(i => { const tt = T0('S' + (i + 2)); M.vis($('#sw' + i), t, tt - 0.1, 1e9, { dx: -16, dy: 0 }); PUC.write($('#swk' + i), t, tt + 0.4, 0.5); $('#sw' + i).style.background = t >= tt - 0.1 && t < (i < 2 ? T0('S' + (i + 3)) : tC1) - 0.1 ? C.ac2 : C.soft; });

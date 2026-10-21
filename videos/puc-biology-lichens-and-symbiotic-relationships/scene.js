@@ -87,7 +87,7 @@ const LAB = [];
   mk(g, 'circle', { cx: 528, cy: 263, r: 150, fill: '#BFE0B4', stroke: ALGD, 'stroke-width': 5 }); mk(g, 'path', { d: 'M440,230 C470,180 560,170 610,220 C640,260 600,320 540,316 C470,312 420,280 440,230 Z', fill: ALG, stroke: ALGD, 'stroke-width': 3 });
   mk(g, 'circle', { cx: 600, cy: 330, r: 26, fill: '#D7C3E6', stroke: NUC, 'stroke-width': 3 });
   tube(g, 'M200,120 C330,90 380,140 360,200 C340,260 330,330 390,390 C450,440 560,450 640,420', 12); tube(g, 'M880,110 C760,110 700,150 690,220 C680,290 720,340 800,420', 12); tube(g, 'M200,440 C300,450 380,420 420,400', 12);
-  LAB[3] = [[620, 200, 790, 90, 'Algal cell (phycobiont)', 'start'], [360, 220, 180, 260, 'Fungal hypha (mycobiont)', 'end']];
+  LAB[3] = [[620, 200, 700, 62, 'Algal cell (phycobiont)', 'end'], [340, 300, 300, 470, 'Fungal hypha (mycobiont)', 'start']];
 }
 const LB = LAB.map((L, lv) => L.filter(l => l[4]).map(([px, py, lx, ly, s, an]) => {
   const g = ZG[lv], ln = mk(g, 'path', { d: `M${px},${py} L${lx},${ly}`, stroke: C.ink, 'stroke-width': 2.5, fill: 'none' }), dot = mk(g, 'circle', { cx: px, cy: py, r: 6, fill: C.ink });
@@ -161,7 +161,7 @@ $('#scs').innerHTML = SC3.map(([h, sg], i) => `<div class="scol" id="sc${i}" sty
 const slot = [0, 0, 0], SIpos = SI.map(([, , c]) => { const k = slot[c]++; return [36 + c * 520 + 24, 84 + 72 + k * 74]; });
 
 /* ---------- X / Q / F ---------- */
-const trap = PUC.trap($('#trap'), { wrong: 'In a lichen, the fungus makes the food', right: 'The alga (phycobiont) makes food; the fungus gives shelter, water and minerals' });
+const trap = PUC.trap($('#trap'), { wrong: 'In a lichen, the fungus makes the food', right: 'The alga makes the food; the fungus gives shelter, water and minerals' });
 const tS = $('#tS'); const tAl = mk(tS, 'circle', { cx: 150, cy: 140, r: 56, fill: '#BFE0B4', stroke: ALGD, 'stroke-width': 4 }); const tAlc = mk(tS, 'ellipse', { cx: 140, cy: 134, rx: 22, ry: 13, fill: CHL });
 const tHy = tube(tS, 'M260,70 C300,110 290,160 330,200 M300,120 C340,100 380,120 400,100', 8);
 const tFood = PUC.arrow(tS, GOLD, 5, 14);
@@ -215,7 +215,7 @@ M.on(t => {
     M.vis($('#dl'), t, tD1 + 0.1, out, { dx: -60, dy: 0, ...o }); M.vis($('#dr'), t, T0('D4') - 0.2, out, { dx: 60, dy: 0, ...o });
     M.vis(dBoth, t, wt('D2', 'symbiotic') - 0.1, 1e9, { dy: 16 });
     M.vis(dA, t, wt('D3', 'alga') - 0.1, 1e9, { ...POP, sc: 0.5 }); M.vis(dPl, t, wt('D3', 'and') - 0.05, 1e9, POP); M.vis(dF, t, wt('D3', 'fungus') - 0.1, 1e9, { ...POP, sc: 0.5 });
-    M.vis(dEq, t, T1('D3') - 0.1, 1e9, POP); M.vis(dL, t, T1('D3') + 0.1, 1e9, { ...POP, sc: 0.4 });
+    M.vis(dEq, t, T1('D3') - 0.1, 1e9, POP); M.vis(dL, t, wt('D2', 'lichen') - 0.1, 1e9, { ...POP, sc: 0.4 });
     DW.forEach((w, i) => M.vis($('#dw' + i), t, w[2] - 0.15, 1e9, { dx: -16, dy: 0 })); M.vis($('#dP'), t, wt('D4', 'fungus', 1) + 0.2, 1e9, POP);
   }
 
@@ -303,7 +303,7 @@ M.on(t => {
     M.vis($('#wb'), t, tW1 + 0.05, OUT('X1'), { dy: 36, ...o });
     SC3.forEach((_, i) => M.vis($('#sc' + i), t, tW1 + 0.3 + i * 0.1, 1e9, { dy: 12 }));
     SI.forEach(([n], i) => { const el = $('#si' + i), ts = [wt('W2', 'lichen'), wt('W3', 'Mycorrhiza'), wt('W4', 'orchid'), wt('W5', 'Albugo'), wt('W5', 'egret')][i], tl = SI[i][3];
-      const u = M.io((t - tl + 0.1) / 0.6), [x1, y1] = SIpos[i], x0 = 576, y0 = 30 + 0;
+      const u = M.io((t - tl + 0.1) / 0.6), [x1, y1] = SIpos[i], x0 = 1100, y0 = 410;
       M.vis(el, t, ts - 0.15, 1e9, POP); el.style.left = (x0 + (x1 - x0) * u - (i === 0 ? 0 : 0)).toFixed(1) + 'px'; el.style.top = (y0 + 60 + (y1 - y0 - 60) * u).toFixed(1) + 'px';
       el.style.background = u >= 1 ? C.ac2 : '#FFFFFF'; el.style.boxShadow = u < 1 ? '0 8px 24px rgba(22,33,62,.14)' : 'none'; });
     M.vis($('#wP'), t, tW1 + 0.6, 1e9, { dy: 8 });

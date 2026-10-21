@@ -108,8 +108,8 @@ const rib = {}; { const g = ZG[1];
   mk(g, 'path', { d: 'M340,350 C340,312 420,300 520,302 C620,304 690,320 686,360 C682,400 600,414 510,412 C420,410 340,396 340,350 Z', fill: '#DCC3A6', stroke: BR, 'stroke-width': 4 });
   [['M380,200 q20,-30 40,0 t40,0 t40,0', 0], ['M560,170 q16,-24 32,0 t32,0', 0], ['M420,360 q18,-20 36,0 t36,0 t36,0', 1]].forEach(([d]) => mk(g, 'path', { d, stroke: NUC, 'stroke-width': 4.5, fill: 'none', 'stroke-linecap': 'round' }));
   rib.m = mk(g, 'path', { d: 'M150,312 C300,318 700,300 900,312', stroke: '#8A8F99', 'stroke-width': 5, fill: 'none', 'stroke-dasharray': '14 8' });
-  rib.beads = Array.from({ length: 9 }, (_, k) => mk(g, 'circle', { cx: 700 + k * 30, cy: 120 - k * 8 - (k % 2) * 10, r: 11, fill: ['#E58A3C', '#3E9B5F', '#5AA0C8', '#C9962B'][k % 4], stroke: BR, 'stroke-width': 2 })); }
-const LZ1 = LBmake(ZG[1], [[640, 150, 760, 196, 'Large subunit', 'start'], [640, 392, 760, 440, 'Small subunit', 'start'], [462, 200, 230, 64, 'Ribosomal RNA inside', 'start', [230, 120]], [790, 106, 900, 72, 'New protein', 'end', [920, 140]]]);
+  rib.beads = Array.from({ length: 9 }, (_, k) => mk(g, 'circle', { cx: 712 + k * 28, cy: 134 + (k % 2) * 8, r: 11, fill: ['#E58A3C', '#3E9B5F', '#5AA0C8', '#C9962B'][k % 4], stroke: BR, 'stroke-width': 2 })); }
+const LZ1 = LBmake(ZG[1], [[702, 252, 770, 262, 'Large subunit', 'start'], [640, 392, 760, 440, 'Small subunit', 'start'], [420, 200, 300, 72, 'Ribosomal RNA inside', 'start'], [824, 138, 850, 72, 'New protein', 'start']]);
 const tLZ1 = [wt('Z3', 'protein') - 0.2, wt('Z3', 'protein') + 0.2, wt('Z3', 'ribosomal'), wt('Z2', 'proteins') + 99];
 // level 2: rRNA chain
 const SEQ = 'AUGGCACUAGCU', rna = []; { const g = ZG[2], pts = [];
@@ -178,7 +178,7 @@ const xL = [[120, 'BACTERIA', BA], [300, 'ARCHAEA', AR], [430, 'EUKARYA', EU]].m
 const xNote = txt(tS, 365, 80, 'CLOSEST PAIR', { 'text-anchor': 'middle', 'font-size': 14, 'letter-spacing': 1.5, 'font-weight': 600, fill: C.ok });
 const where = PUC.where($('#wa'), { on: [], type: 'Not in the current NCERT text. Who proposed it; which domain an organism is in' });
 const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', qW: 860,
-  q: 'Which statements are correct?<div class="sl"><b>I</b>Carl Woese and co-workers proposed three domains in 1990.</div><div class="sl"><b>II</b>A domain is a rank above kingdom.</div><div class="sl"><b>III</b>Kingdom Fungi falls in the domain Archaea.</div><div class="sl"><b>IV</b>The domains rest on ribosomal RNA sequences.</div>',
+  q: 'Which statements are correct?<div class="sl"><b>I</b>Woese and co-workers proposed three domains in 1990.</div><div class="sl"><b>II</b>A domain is a rank above kingdom.</div><div class="sl"><b>III</b>Kingdom Fungi falls in the domain Archaea.</div><div class="sl"><b>IV</b>The domains rest on ribosomal RNA sequences.</div>',
   opts: ['I and III only', 'II and III only', 'I, II and III only', 'I, II and IV only'], right: 3, optW: 474, optY: 400 });
 const so = PUC.solution($('#so'), [['Answer: <b style="color:var(--ok)">D</b> (I, II, IV)'], ['<b style="color:var(--red)">III</b> is false'], ['Fungi: nucleus, so Eukarya'], ['<b style="color:var(--ok)">I, II, IV</b> are true']], { y0: 100, dy: 100 });
 const tSo = [wt('A1', 3) + 0.1, wt('A2', 'Three'), wt('A2', 'Fungi'), wt('A3', 'One')];
@@ -195,7 +195,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 11', topic: 'Why a mushroom i
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('S4') - 0.1, 1.06, 900, 580], [T0('S5') + 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('S4') - 0.1, 1.05, 960, 580], [T0('S5') + 0.2, 1, 960, 540]]);
 let geo = null;
 function measure() { geo = 1; const g = $('#tgh'); g.style.left = (960 - g.offsetWidth / 2) + 'px'; }
 
@@ -296,7 +296,9 @@ M.on(t => {
     M.vis($('#dst'), t, tD1 + 0.05, out, { dy: 30, ...o });
     LADR.forEach((_, i) => { const el = $('#ld' + i); M.vis(el, t, T0('D2') + i * 0.06, 1e9, POP); const on = i === 0 ? M.io((t - wt('D2', 'domain')) / 0.3) : 0;
       el.style.background = mix('#FFFFFF', C.ac, on); el.style.color = i === 0 ? mix('#9AA0AC', '#FFFFFF', on) : '#6B7280'; el.style.borderColor = i === 0 ? mix('#CBD0DA', C.ac, on) : '#CBD0DA'; });
-    DM.forEach((d, i) => M.vis($('#dm' + i), t, T0(d[4]) - 0.15, out, { dy: 36, ...o }));
+    DM.forEach((d, i) => { const c = $('#dm' + i), ti = T0(d[4]) - 0.1; M.vis(c, t, T0('D1') + 1.2 + i * 0.15, out, { dy: 36, ...o });
+      [c.querySelector('svg'), c.querySelector('.dq'), c.querySelector('.nuc')].forEach((e, k) => M.vis(e, t, ti + k * 0.2, 1e9, { dy: 12 }));
+      c.style.borderTopColor = mix('#CBD0DA', d[3], M.io((t - ti) / 0.3)); c.querySelector('.dn').style.color = mix('#9AA0AC', d[3], M.io((t - ti) / 0.3)); });
   }
 
   /* C: compare + think */
@@ -325,7 +327,7 @@ M.on(t => {
     M.vis($('#wk'), t, tW1 + 0.05, OUT('X1'), { dy: 36, ...o });
     BINS.forEach((_, i) => M.vis($('#bn' + i), t, tW1 + 0.4 + i * 0.1, 1e9, { dy: 16 }));
     ORG.forEach(([, , b, c, tt], i) => { const el = $('#og' + i); M.vis(el, t, tW1 + 0.6 + i * 0.08, 1e9, { dy: 12 });
-      const u = M.io((t - tt) / 0.7), x0 = 36 + i * 256, y0 = 90, x1 = BX(b) + 18 + (SL[i] % 2) * 238, y1 = 406 + Math.floor(SL[i] / 2) * 76;
+      const u = M.io((t - tt) / 0.7), x0 = 36 + i * 256, y0 = 150, x1 = BX(b) + 18 + (SL[i] % 2) * 238, y1 = 406 + Math.floor(SL[i] / 2) * 76;
       el.style.left = (x0 + (x1 - x0) * u).toFixed(1) + 'px'; el.style.top = (y0 + (y1 - y0) * u - Math.sin(Math.PI * u) * 40).toFixed(1) + 'px';
       el.style.background = mix(C.soft, mix('#FFFFFF', c, 0.16), u); });
     BINS.forEach((_, i) => $('#bn' + i).style.borderStyle = t > ORG.find(o => o[2] === i)[4] + 0.6 ? 'solid' : 'dashed');

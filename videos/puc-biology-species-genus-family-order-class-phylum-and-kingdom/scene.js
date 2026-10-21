@@ -279,6 +279,8 @@ M.on(t => {
       LBP.forEach((l, i) => LBrun(l, t, tLP[i])); } else M.hide(gP, true);
     M.hide(gR, t < tZ[0] - 0.05);
     if (t >= tZ[0] - 0.05) {
+      let hw = [ZW(0), ZH(0)]; tZ.forEach((tt, k) => { const g = M.io((t - tt) / 0.7); if (g > 0 && k) hw = [ZW(k - 1) + (ZW(k) - ZW(k - 1)) * g, ZH(k - 1) + (ZH(k) - ZH(k - 1)) * g]; });
+      const zsc = Math.max(1, Math.min(2.4, 470 / hw[1], 1000 / hw[0])); attr(gR, 'transform', `translate(${ZC[0]} ${ZC[1] - 34 * (zsc - 1) / 1.4}) scale(${zsc.toFixed(4)}) translate(${-ZC[0]} ${-ZC[1]})`);
       ZRING.forEach((r, k) => { const g = M.io((t - tZ[k]) / 0.7); ZLB[k].style.opacity = M.clamp((t - tZ[k] - 0.5) / 0.3).toFixed(3); if (g <= 0) { M.hide(r, true); return; } M.hide(r, false);
         const w = k ? ZW(k - 1) + (ZW(k) - ZW(k - 1)) * g : ZW(0) * (0.4 + 0.6 * g), h = k ? ZH(k - 1) + (ZH(k) - ZH(k - 1)) * g : ZH(0) * (0.4 + 0.6 * g);
         attr(r, 'x', (ZC[0] - w / 2).toFixed(1)); attr(r, 'y', (ZC[1] - h / 2).toFixed(1)); attr(r, 'width', w.toFixed(1)); attr(r, 'height', h.toFixed(1));

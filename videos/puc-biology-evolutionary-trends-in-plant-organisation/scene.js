@@ -156,7 +156,7 @@ const ps = $('#pS');
 const CUR = mk(ps, 'rect', { x: 0, y: 74, width: 164, height: 438, rx: 14, fill: C.ac3, stroke: C.ac, 'stroke-width': 2.5 });
 ps.insertBefore(CUR, ps.firstChild);
 RY.forEach(y => mk(ps, 'line', { x1: 16, y1: y + 50, x2: 1040, y2: y + 50, stroke: C.line, 'stroke-width': 1.5 }));
-const BODY = ['Thallus', 'No true organs', 'Roots, stem, leaves', 'Roots, stem, leaves', 'Roots, stem, leaves'], NFR = [0.88, 0.72, 0.26, 0.08, 0.06];
+const BODY = ['Thallus', 'No true organs', 'True organs', 'True organs', 'True organs'], NFR = [0.88, 0.72, 0.26, 0.08, 0.06];
 const CELL = GN.map((_, i) => { const x = COLX(i), c = {};
   c.body = mk(ps, 'g', {}); [() => spiro(c.body, x, RY[0] - 14, 0.62), () => moss(c.body, x, RY[0] - 18, 0.85), () => frond(c.body, x, RY[0] - 14, 0.24, false), () => pine(c.body, x, RY[0] - 20, 0.26), () => flowerPlant(c.body, x, RY[0] - 6, 0.26)][i]();
   c.bt = txt(c.body, x, RY[0] + 36, BODY[i], { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-size': 16, 'font-weight': 600, fill: C.ink });
@@ -167,10 +167,10 @@ const CELL = GN.map((_, i) => { const x = COLX(i), c = {};
   else { mk(c.pipe, 'path', { d: `M${x - 12},${RY[1] - 22} L${x + 12},${RY[1] + 2} M${x + 12},${RY[1] - 22} L${x - 12},${RY[1] + 2}`, stroke: C.dim, 'stroke-width': 4, 'stroke-linecap': 'round' }); txt(c.pipe, x, RY[1] + 36, 'NONE', { 'text-anchor': 'middle', 'font-size': 15, 'letter-spacing': 1.5, fill: C.mute, 'font-weight': 600 }); }
   c.ph = mk(ps, 'g', {}); const w = 136; mk(c.ph, 'rect', { x: x - w / 2, y: RY[2] - 26, width: w * NFR[i], height: 28, rx: 0, fill: HN }); mk(c.ph, 'rect', { x: x - w / 2 + w * NFR[i], y: RY[2] - 26, width: w * (1 - NFR[i]), height: 28, fill: DN });
   mk(c.ph, 'rect', { x: x - w / 2, y: RY[2] - 26, width: w, height: 28, rx: 6, fill: 'none', stroke: BR, 'stroke-width': 2 });
-  txt(c.ph, x, RY[2] + 28, i < 2 ? 'GAMETOPHYTE · n' : 'SPOROPHYTE · 2n', { 'text-anchor': 'middle', 'font-size': 13, 'letter-spacing': 0.6, fill: i < 2 ? HN : DN, 'font-weight': 600 });
+  txt(c.ph, x, RY[2] + 28, i < 2 ? 'GAMETOPHYTE · n' : 'SPOROPHYTE · 2n', { 'text-anchor': 'middle', 'font-size': 14, 'letter-spacing': 0.4, fill: i < 2 ? HN : DN, 'font-weight': 600 });
   c.wa = mk(ps, 'g', {});
   if (i < 3) { drop(c.wa, x, RY[3] - 6, 1.1); c.sw = mk(c.wa, 'circle', { cx: x, cy: RY[3], r: 4, fill: HN }); txt(c.wa, x, RY[3] + 38, 'NEEDED', { 'text-anchor': 'middle', 'font-size': 15, 'letter-spacing': 1.5, fill: WAT, 'font-weight': 600 }); }
-  else { mk(c.wa, 'circle', { cx: x - 22, cy: RY[3] - 14, r: 11, fill: HNL, stroke: HN, 'stroke-width': 2.5 }); c.tube = mk(c.wa, 'path', { d: `M${x - 14},${RY[3] - 6} C${x},${RY[3] + 10} ${x + 10},${RY[3] - 4} ${x + 26},${RY[3] + 6}`, stroke: HN, 'stroke-width': 3, fill: 'none', 'stroke-linecap': 'round' });
+  else { mk(c.wa, 'circle', { cx: x - 22, cy: RY[3] - 14, r: 11, fill: HNL, stroke: HN, 'stroke-width': 2.5 }); mk(c.wa, 'ellipse', { cx: x + 30, cy: RY[3] + 8, rx: 12, ry: 9, fill: '#F3E7C9', stroke: BR, 'stroke-width': 2 }); c.tube = mk(c.wa, 'path', { d: `M${x - 14},${RY[3] - 6} C${x - 4},${RY[3] + 12} ${x + 6},${RY[3] + 10} ${x + 20},${RY[3] + 8}`, stroke: HN, 'stroke-width': 3, fill: 'none', 'stroke-linecap': 'round' });
     txt(c.wa, x, RY[3] + 38, 'POLLEN TUBE', { 'text-anchor': 'middle', 'font-size': 15, 'letter-spacing': 1.2, fill: C.ac, 'font-weight': 600 }); }
   return c; });
 const tPs = ['P2', 'P3', 'P4', 'P5', 'P6'].map(id => T0(id));

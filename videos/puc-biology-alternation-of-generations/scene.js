@@ -62,8 +62,8 @@ const tJob = JOBS.map(j => wt('H1', j[3]));
 
 /* ---------- H: moss on the wall ---------- */
 const hl = $('#hlS'), HW = {};
-{ const wall = mk(hl, 'g', {}); for (let r = 0; r < 4; r++) for (let c = 0; c < 6; c++) mk(wall, 'rect', { x: 36 + c * 120 + (r % 2 ? 60 : 0) - 60, y: 300 + r * 46, width: 116, height: 42, fill: '#E4DCCB', stroke: '#CFC4AE', 'stroke-width': 2 });
-  mk(wall, 'rect', { x: -40, y: 290, width: 900, height: 8, fill: '#FFFFFF' }); HW.wall = wall;
+{ const wall = mk(hl, 'g', {}); for (let r = 0; r < 4; r++) for (let c = 0; c < 8; c++) { const x0 = Math.max(36, 36 + c * 120 + (r % 2 ? 60 : 0) - 60), x1 = Math.min(748, 36 + c * 120 + (r % 2 ? 60 : 0) - 60 + 116); if (x1 - x0 > 8) mk(wall, 'rect', { x: x0, y: 300 + r * 46, width: x1 - x0, height: 42, fill: '#E4DCCB', stroke: '#CFC4AE', 'stroke-width': 2 }); }
+  HW.wall = wall;
   HW.cush = mk(hl, 'path', { d: 'M90,360 C100,300 160,290 200,300 C240,262 320,262 360,292 C400,270 480,272 520,300 C560,284 640,296 660,340 C690,350 700,380 680,400 L100,400 C80,392 80,372 90,360 Z', fill: '#6FAE5E', stroke: BR, 'stroke-width': 3.5 });
   const r = M.rng(3); HW.tufts = []; for (let k = 0; k < 40; k++) { const x = 110 + r() * 560, y = 300 + r() * 90; HW.tufts.push(mk(hl, 'path', { d: `M${x.toFixed(0)},${y.toFixed(0)} l-4,-9 M${x.toFixed(0)},${y.toFixed(0)} l4,-9`, stroke: '#3F7A35', 'stroke-width': 2, 'stroke-linecap': 'round' })); }
   HW.st = [[180, 300, 150, 120], [280, 284, 300, 100], [390, 280, 372, 110], [480, 290, 520, 104], [590, 300, 600, 132]].map(([x0, y0, x1, y1]) => { const G = mk(hl, 'g', {});
@@ -75,7 +75,7 @@ const hl = $('#hlS'), HW = {};
 const spl = $('#splS'), SPL = {};
 { SPL.a = mk(spl, 'path', { d: 'M180,190 C260,90 520,90 600,190', stroke: HN, 'stroke-width': 5, fill: 'none', 'stroke-linecap': 'round' }); SPL.ah = mk(spl, 'path', { d: 'M600,190 l-4,-22 l-14,16 Z', fill: HN });
   SPL.b = mk(spl, 'path', { d: 'M604,280 C524,380 264,380 184,280', stroke: DN, 'stroke-width': 5, fill: 'none', 'stroke-linecap': 'round' }); SPL.bh = mk(spl, 'path', { d: 'M184,280 l4,22 l14,-16 Z', fill: DN });
-  SPL.m = moss(spl, 120, 330, 1.1); SPL.s = moss(spl, 660, 330, 1.1, true); }
+  SPL.m = moss(spl, 120, 300, 1.8); SPL.s = moss(spl, 660, 300, 1.8, true); }
 const FV = [['loop', 'Two generations', 'generations'], ['switch', 'Two switches', 'switches'], ['eye', 'How to spot each', 'spot']];
 $('#fvs').innerHTML = FV.map(([ic, n], i) => `<div class="fv" id="fv${i}">${M.icon(ic, 26, C.ac, 2.2)}${n}</div>`).join('');
 const tFv = FV.map(f => wt('H5', f[2]));
@@ -85,7 +85,7 @@ $('#cr0').insertAdjacentHTML('beforeend', `<div class="cn" style="background:${H
 const CH = [['Gametophyte', HN, HNL, 36, 92], ['Sporophyte', DN, DNL, 372, 186], ['Gametophyte', HN, HNL, 36, 280], ['Sporophyte', DN, DNL, 372, 374]];
 const drs = $('#drS'), DCH = CH.map(([s, c, bg, x, y]) => { const G = mk(drs, 'g', {}); mk(G, 'rect', { x, y, width: 300, height: 64, rx: 14, fill: bg, stroke: c, 'stroke-width': 2.5 });
   mk(G, 'text', { x: x + 150, y: y + 42, 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 28, fill: C.ink }).textContent = s; return G; });
-const DAR = [[336, 124, 372, 218], [372, 218, 336, 312], [336, 312, 372, 406]].map(([x1, y1, x2, y2], i) => mk(drs, 'path', { d: i === 1 ? `M${x2 + 150},${y1 + 32} C${x2 + 150},${y1 + 70} ${x1 - 150},${y2 - 40} ${x1 - 150},${y2 - 32}` : `M${x1 - 150},${y1 + 32} C${x1 - 150},${y1 + 70} ${x2 + 150},${y2 - 40} ${x2 + 150},${y2 - 32}`, stroke: C.dim, 'stroke-width': 3, fill: 'none', 'stroke-dasharray': '0' }));
+const DAR = [0, 1, 2].map(i => { const [, , , x, y] = CH[i], [, , , x2, y2] = CH[i + 1]; return mk(drs, 'path', { d: `M${x + 150},${y + 64} L${x + 150},${y + 79} L${x2 + 150},${y + 79} L${x2 + 150},${y2}`, stroke: C.dim, 'stroke-width': 3, fill: 'none' }); });
 const tCh = [wt('D4', 'Gametophyte'), wt('D4', 'sporophyte'), wt('D4', 'gametophyte', 1), wt('D4', 'again') + 0.3];
 
 /* ---------- Z: MOSS -> CAPSULE -> SPORE ---------- */
@@ -108,9 +108,9 @@ const LB = [], ZX = {};
   mk(g, 'path', { d: 'M466,252 C468,200 466,160 470,118', stroke: STALK, 'stroke-width': 6, fill: 'none', 'stroke-linecap': 'round' });
   mk(g, 'ellipse', { cx: 472, cy: 82, rx: 22, ry: 38, fill: '#C9A46A', stroke: BR, 'stroke-width': 3.5, transform: 'rotate(8 472 82)' });
   mk(g, 'path', { d: 'M454,52 Q472,36 490,52', stroke: BR, 'stroke-width': 3, fill: '#B08A5A' });
-  ZX.brG = mk(g, 'path', { d: 'M290,262 L280,262 L280,470 L290,470', stroke: HN, 'stroke-width': 4, fill: 'none' }); ZX.brGt = txt(g, 270, 372, 'n', { 'text-anchor': 'end', 'font-size': 30, 'font-weight': 600, fill: HN });
-  ZX.brS = mk(g, 'path', { d: 'M640,44 L650,44 L650,262 L640,262', stroke: DN, 'stroke-width': 4, fill: 'none' }); ZX.brSt = txt(g, 662, 162, '2n', { 'font-size': 30, 'font-weight': 600, fill: DN });
-  LB[0] = [lab(g, 430, 380, 300, 330, 'Leafy gametophyte', 'end', null, 24), lab(g, 432, 500, 300, 500, 'Rhizoids', 'end', null, 24), lab(g, 478, 258, 700, 300, 'Foot', 'start', null, 24), lab(g, 468, 180, 700, 196, 'Seta (stalk)', 'start', null, 24), lab(g, 494, 82, 700, 92, 'Capsule', 'start', null, 24)];
+  ZX.brG = mk(g, 'path', { d: 'M150,266 L140,266 L140,470 L150,470', stroke: HN, 'stroke-width': 4, fill: 'none' }); ZX.brGt = txt(g, 128, 378, 'n', { 'text-anchor': 'end', 'font-size': 30, 'font-weight': 600, fill: HN });
+  ZX.brS = mk(g, 'path', { d: 'M150,40 L140,40 L140,258 L150,258', stroke: DN, 'stroke-width': 4, fill: 'none' }); ZX.brSt = txt(g, 128, 160, '2n', { 'text-anchor': 'end', 'font-size': 30, 'font-weight': 600, fill: DN });
+  LB[0] = [lab(g, 430, 380, 330, 330, 'Gametophyte', 'end', null, 24), lab(g, 432, 500, 330, 500, 'Rhizoids', 'end', null, 24), lab(g, 478, 258, 700, 300, 'Foot', 'start', null, 24), lab(g, 468, 180, 700, 196, 'Seta (stalk)', 'start', null, 24), lab(g, 494, 82, 700, 92, 'Capsule', 'start', null, 24)];
 }
 { const g = ZG[1];
   mk(g, 'path', { d: 'M500,526 L500,476 M556,526 L556,476', stroke: STALK, 'stroke-width': 8 });

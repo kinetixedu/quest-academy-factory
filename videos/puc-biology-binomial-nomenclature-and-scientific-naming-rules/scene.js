@@ -116,7 +116,7 @@ $('#fxs').innerHTML = FX.map(([b, a, w, it], i) => `<div class="fx" id="fx${i}" 
   <div class="ar2" id="ar${i}">${M.icon('arrowR', 44, C.dim, 2.6)}</div><div class="af" id="af${i}" style="font-style:${it ? 'italic' : 'normal'}">${a}</div><div class="why" id="wy${i}">${w}</div></div>`).join('') +
   `<div class="ul" id="ulB"></div><div class="ul" id="ulA0" style="background:var(--ok)"></div><div class="ul" id="ulA1" style="background:var(--ok)"></div>`;
 const tFx = [wt('W2', 'solanum'), wt('W3', 'Homo'), wt('W4', 'Musca')], tFix = [wt('W2', 'capital'), wt('W3', 'small'), wt('W4', 'Each')];
-const avW = PUC.avatar($('#sW'), { x: 160 + 36, y: 270 + 470, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'Two lines, not one!' });
+const avW = PUC.avatar($('#sW'), { x: 160 + 36, y: 270 + 492, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'Two lines, not one!' });
 
 /* ---------- X / Q / F ---------- */
 const trap = PUC.trap($('#trap'), { wrong: 'The species name of the mango is indica', right: 'The species name is Mangifera indica. indica is the epithet.' });
@@ -271,7 +271,7 @@ M.on(t => {
     M.vis($('#tk1'), t, tTok2 - 0.1, 1e9, POP); $('#tk1').style.left = (36 + mv2 * (GX(2) - 36 - 20)).toFixed(1) + 'px';
     [0, 1].forEach(i => $('#bad' + i).style.background = mix('#FFFFFF', '#FBE6E6', M.io((t - tStop - 0.4) / 0.3)));
     [0, 1, 2, 3].forEach(g => { M.vis($('#gk0' + g), t, tPass + 0.2 + g * 0.42, 1e9, { ...POP, sc: 0.3 }); M.hide($('#gk1' + g), true);
-      if (g < 3) M.vis($('#gk1' + g), t, tStop + 0.2 + g * 0.3, 1e9, { ...POP, sc: 0.3 }); });
+      if (g < 3) M.vis($('#gk1' + g), t, tStop - 0.3 + g * 0.25, 1e9, { ...POP, sc: 0.3 }); });
   }
 
   /* R: rule books */

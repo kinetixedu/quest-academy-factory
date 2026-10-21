@@ -78,13 +78,13 @@ $('#jrs').innerHTML = JOBS.map(([ic, n, w], i) => `<div class="jr" id="jr${i}" s
 
 /* ---------- B ---------- */
 const bS = $('#blS');
-const unk = mk(bS, 'g', {}); mk(unk, 'rect', { x: 36, y: 96, width: 200, height: 340, rx: 12, fill: '#F3F7EA', stroke: '#9FCFAE', 'stroke-width': 2.5 }); twig(unk, 136, 410, 270, 1);
-const unkQ = txt(unk, 136, 468, 'UNKNOWN', { 'text-anchor': 'middle', 'font-size': 15, 'letter-spacing': 1.5, 'font-weight': 600 });
-const REF = [['Hibiscus', '#E7A33E'], ['Hibiscus', RED], ['Jasmine', '#FFFFFF']].map(([n, fc], i) => { const g = mk(bS, 'g', {}), x = 330 + i * 140;
-  mk(g, 'rect', { x, y: 96, width: 120, height: 340, rx: 10, fill: PAPER, stroke: '#BDB49A', 'stroke-width': 2.5 }); twig(g, x + 60, 410, 250, 0.95, DRY, fc);
-  const nm = txt(g, x + 60, 468, ['SPECIES A', 'SPECIES B', 'SPECIES C'][i], { 'text-anchor': 'middle', 'font-size': 14, 'letter-spacing': 1.2, 'font-weight': 600 }); return { g, nm, x }; });
+const unk = mk(bS, 'g', {}); mk(unk, 'rect', { x: 36, y: 96, width: 180, height: 340, rx: 12, fill: '#F3F7EA', stroke: '#9FCFAE', 'stroke-width': 2.5 }); twig(unk, 126, 414, 290, 0.8);
+const unkQ = txt(unk, 126, 468, 'UNKNOWN', { 'text-anchor': 'middle', 'font-size': 15, 'letter-spacing': 1.5, 'font-weight': 600 });
+const REF = [['Hibiscus', '#E7A33E'], ['Hibiscus', RED], ['Jasmine', '#FFFFFF']].map(([n, fc], i) => { const g = mk(bS, 'g', {}), x = 240 + i * 172;
+  mk(g, 'rect', { x, y: 96, width: 160, height: 340, rx: 10, fill: PAPER, stroke: '#BDB49A', 'stroke-width': 2.5 }); twig(g, x + 80, 414, 290, 0.8, DRY, fc);
+  const nm = txt(g, x + 80, 468, ['SPECIES A', 'SPECIES B', 'SPECIES C'][i], { 'text-anchor': 'middle', 'font-size': 14, 'letter-spacing': 1.2, 'font-weight': 600 }); return { g, nm, x }; });
 const lensW = mk(bS, 'g', {}), lens = mk(lensW, 'g', {}); mk(lens, 'circle', { cx: 0, cy: 0, r: 34, fill: 'rgba(255,255,255,.35)', stroke: C.ink, 'stroke-width': 5 }); mk(lens, 'line', { x1: 24, y1: 24, x2: 52, y2: 52, stroke: C.ink, 'stroke-width': 8, 'stroke-linecap': 'round' });
-const match = mk(bS, 'rect', { x: 462, y: 88, width: 136, height: 396, rx: 14, fill: 'none', stroke: GRN, 'stroke-width': 4, 'stroke-dasharray': '10 8' });
+const match = mk(bS, 'rect', { x: 404, y: 88, width: 176, height: 396, rx: 14, fill: 'none', stroke: GRN, 'stroke-width': 4, 'stroke-dasharray': '10 8' });
 const AIS = [['sheet', 'Herbarium', 'DRIED, PRESSED PLANTS', 'herbarium'], ['tree', 'Botanical garden', 'LIVING PLANTS', 'botanical'], ['jar', 'Museum', 'PRESERVED SPECIMENS', 'museum'], ['zoo', 'Zoological park', 'LIVE WILD ANIMALS', 'zoological'], ['key', 'Key', 'PAIRS OF CHOICES', 'key']];
 $('#ais').innerHTML = AIS.map(([ic, n, w], i) => `<div class="ai" id="ai${i}" style="top:${84 + i * 92}px"><i>${M.icon(ic, 30, C.ac, 2.2)}</i><div class="an">${n}</div><div class="aw">${w}</div></div>`).join('');
 const tAi = AIS.map(a => wt('B4', a[3]));
@@ -284,7 +284,7 @@ M.on(t => {
     M.vis($('#bl'), t, tB1 + 0.1, out, { dx: -60, dy: 0, ...o }); M.vis($('#bgh'), t, tB1 + 0.5, 1e9, { dy: 8 });
     M.vis(unk, t, T0('B2') - 0.1, 1e9, { dy: 16 });
     REF.forEach((r, i) => M.vis(r.g, t, wt('B2', 'already') + i * 0.15, 1e9, { dy: 16 }));
-    const ts = wt('B2', 'compare'), u = M.clamp((t - ts) / 2.4), lx = 390 + 280 * Math.min(1, u * 1.25) - (u > 0.8 ? 140 * M.io((u - 0.8) / 0.2) : 0);
+    const ts = wt('B2', 'compare'), u = M.clamp((t - ts) / 2.4), lx = 320 + 344 * Math.min(1, u * 1.25) - (u > 0.8 ? 172 * M.io((u - 0.8) / 0.2) : 0);
     M.vis(lensW, t, ts - 0.1, 1e9, { dy: 0, fade: 0.2 }); attr(lens, 'transform', `translate(${lx.toFixed(1)} 250)`);
     const tm = ts + 2.3; M.draw(match, t, tm, 0.5); REF[1].nm.textContent = t > tm + 0.3 ? 'MATCH' : 'SPECIES B'; REF[1].nm.setAttribute('fill', t > tm + 0.3 ? GRN : C.mute);
     M.vis($('#blP'), t, wt('B3', 'Taxonomic') - 0.1, 1e9, POP);

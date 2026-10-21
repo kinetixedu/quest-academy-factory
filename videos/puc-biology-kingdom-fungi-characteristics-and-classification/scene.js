@@ -157,7 +157,7 @@ const ph = {}, as = {}, ba = {}, de = {};
   as.con = [0, 1, 2, 3, 4].map(k => fb(mk(g, 'circle', { cx: 250, cy: 184 - k * 30, r: 14, fill: '#7E9C78', stroke: BR, 'stroke-width': 2.5 })));
   mk(g, 'path', { d: 'M640,416 C600,330 600,180 660,110 C720,180 720,330 680,416 Z', fill: '#FBF6EC', stroke: CHIT, 'stroke-width': 5 });
   as.asp = [0, 1, 2, 3, 4, 5, 6, 7].map(k => fb(mk(g, 'ellipse', { cx: 660, cy: 150 + k * 32, rx: 14, ry: 11, fill: SPO })));
-  as.lab = labels(g, [[250, 330, 70, 370, 'Conidiophore', 'start'], [264, 100, 400, 70, 'Conidia (outside)', 'start'], [700, 300, 760, 220, 'Ascus (a sac)', 'start'], [660, 342, 760, 380, 'Ascospores (inside)', 'start']]); }
+  as.lab = labels(g, [[250, 330, 330, 330, 'Conidiophore', 'start'], [264, 100, 400, 70, 'Conidia (outside)', 'start'], [700, 300, 760, 220, 'Ascus (a sac)', 'start'], [660, 342, 760, 380, 'Ascospores (inside)', 'start']]); }
 { const g = GA[2];
   mk(g, 'path', { d: 'M150,470 C154,420 156,380 160,340 L196,340 C200,380 202,420 206,470 Z', fill: HYF, stroke: BR, 'stroke-width': 3.5 }); mk(g, 'path', { d: 'M70,344 C84,240 272,240 286,344 Q178,360 70,344 Z', fill: '#B9805A', stroke: BR, 'stroke-width': 4 });
   mk(g, 'path', { d: 'M260,350 L460,200 M260,350 L460,470', stroke: C.dim, 'stroke-width': 2.5, 'stroke-dasharray': '6 6' });
@@ -165,7 +165,7 @@ const ph = {}, as = {}, ba = {}, de = {};
   mk(g, 'path', { d: 'M680,470 L680,300 C680,250 780,250 780,300 L780,470', fill: '#E9D9BF', stroke: CHIT, 'stroke-width': 5 });
   ba.st = [[690, 270, 660, 210], [715, 258, 705, 190], [745, 258, 755, 190], [770, 270, 800, 210]].map(([a, b, c, d]) => mk(g, 'line', { x1: a, y1: b, x2: c, y2: d, stroke: CHIT, 'stroke-width': 4 }));
   ba.sp = [[660, 196], [705, 176], [755, 176], [800, 196]].map(([x, y]) => fb(mk(g, 'ellipse', { cx: x, cy: y, rx: 16, ry: 12, fill: SPO })));
-  ba.lab = labels(g, [[100, 320, 60, 140, 'Basidiocarp', 'start'], [690, 400, 520, 440, 'Basidium', 'start'], [800, 196, 840, 130, 'Basidiospores', 'start']]); }
+  ba.lab = labels(g, [[100, 320, 60, 140, 'Basidiocarp', 'start'], [690, 400, 610, 450, 'Basidium', 'end'], [800, 196, 840, 130, 'Basidiospores', 'start']]); }
 { const g = GA[3]; hypha(g, 60, 960, 440, 50, [300, 600], [180, 450, 760]);
   mk(g, 'path', { d: 'M450,416 L450,230', stroke: CHIT, 'stroke-width': 14, 'stroke-linecap': 'round' }); mk(g, 'path', { d: 'M450,416 L450,230', stroke: HYF, 'stroke-width': 7 });
   de.con = [0, 1, 2, 3].map(k => fb(mk(g, 'circle', { cx: 450, cy: 214 - k * 30, r: 14, fill: '#7E9C78', stroke: BR, 'stroke-width': 2.5 })));

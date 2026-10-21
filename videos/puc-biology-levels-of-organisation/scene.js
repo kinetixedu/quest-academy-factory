@@ -94,7 +94,7 @@ const fl = [], am = [];
   fl.forEach(f => g.appendChild(f.e)); }
 const pore = mk(ZG[1], 'path', { d: 'M470,96 L470,330', stroke: WAT, 'stroke-width': 5, fill: 'none', 'stroke-linecap': 'round', 'stroke-dasharray': '12 10' });
 const FC1 = [418, 322];
-const L1 = [lab(ZG[1], 470, 150, 640, 150, 'Pore (ostium)'), lab(ZG[1], am[1] ? am[1].x : 210, am[1] ? am[1].y : 190, 230, 260, 'Loose cells'), lab(ZG[1], 763, 165, 880, 220, 'Spicule'), lab(ZG[1], 650, 322, 880, 330, 'Collar cells')];
+const L1 = [lab(ZG[1], 470, 150, 850, 112, 'Pore (ostium)'), lab(ZG[1], am[am.length - 1].x, am[am.length - 1].y, 850, 236, 'Loose cells'), lab(ZG[1], 763, 165, 850, 174, 'Spicule'), lab(ZG[1], 766, 322, 850, 330, 'Collar cells')];
 const F1 = mk(ZG[1], 'circle', { cx: FC1[0], cy: FC1[1], r: 40, fill: 'none', stroke: GRN, 'stroke-width': 4, 'stroke-dasharray': '10 8' });
 // level 2: one collar cell
 const cc = {}; { const g = ZG[2], X = 420;
@@ -161,9 +161,9 @@ const WC = [['CELLULAR', 'Spongilla', 'FRESHWATER SPONGE', ['Loose cells'], wt('
   ['ORGAN', 'Fasciola', 'LIVER FLUKE', ['Organs', 'Gut: one opening'], wt('W4', 'Fasciola'), [wt('W4', 'organs'), wt('W4', 'one')]],
   ['ORGAN SYSTEM', 'Pheretima', 'EARTHWORM', ['Gut: two openings', 'Closed circulation'], wt('W5', 'Pheretima'), [wt('W5', 'two'), wt('W5', 'vessels')]]];
 $('#cols').innerHTML = WC.map(([h, n, c, rs], i) => `<div class="colW" id="cw${i}" style="left:${36 + i * 382}px"><div class="ch2">${h}</div><div class="dz"></div>
-  <div class="it" id="it${i}"><svg id="its${i}" width="358" height="180" style="position:absolute;left:0;top:0"></svg><div class="inm">${n}</div><div class="inc">${c}</div></div>
+  <div class="it" id="it${i}"><svg id="its${i}" width="358" height="220" style="position:absolute;left:0;top:0"></svg><div class="inm">${n}</div><div class="inc">${c}</div></div>
   <div class="rs">${rs.map((r, k) => `<span id="rs${i}${k}">${r}</span>`).join('')}</div></div>`).join('');
-AN.draw('sponge', $('#its0'), 179, 96, 0.62, { cut: false }); const hyW = AN.draw('hydra', $('#its1'), 179, 104, 0.5); AN.draw('flat', $('#its2'), 179, 92, 0.6, { rot: 90 }); const wmW = AN.draw('worm', $('#its3'), 179, 92, 1, { n: 16, L: 300, clit: 1 });
+AN.draw('sponge', $('#its0'), 179, 118, 0.8, { cut: false }); const hyW = AN.draw('hydra', $('#its1'), 179, 128, 0.62); AN.draw('flat', $('#its2'), 179, 112, 0.8, { rot: 90 }); const wmW = AN.draw('worm', $('#its3'), 179, 112, 1, { n: 16, L: 320, clit: 1 });
 
 /* ---------- X / Q / F: exam segment ---------- */
 const trap = PUC.trap($('#trap'), { wrong: 'Every organ-system animal has closed circulation', right: 'Arthropods: organ-system level, yet open circulation' });
@@ -171,7 +171,7 @@ const tS = $('#tS'), tro = AN.draw('roach', tS, 110, 150, 0.68), tDots = [0, 1, 
 const TC = [['ORGAN SYSTEM', '#E3F1E7', '#1F6B3F'], ['OPEN CIRCULATION', '#FBE9E9', '#8A1C1C']].map(([s, b, f], i) => { const g = mk(tS, 'g', {}); mk(g, 'rect', { x: 210, y: 84 + i * 62, width: 226, height: 44, rx: 10, fill: b }); txt(g, 323, 112 + i * 62, s, { 'text-anchor': 'middle', 'font-size': 17, 'letter-spacing': 1.2, 'font-weight': 600, fill: f }); return g; });
 const where = PUC.where($('#wa'), { on: [], type: 'Statement questions: a group with its level, its gut or its circulation' });
 const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', qW: 800,
-  q: 'Which of these statements are correct?<div class="sl"><b>I</b>Sponges show the cellular level of organisation.</div><div class="sl"><b>II</b>Coelenterates show the organ level of organisation.</div><div class="sl"><b>III</b>The digestive system of Platyhelminthes has a single opening.</div><div class="sl"><b>IV</b>In open circulation, blood flows only in arteries, veins and capillaries.</div>',
+  q: 'Which of these statements are correct?<div class="sl"><b>I</b>Sponges show the cellular level of organisation.</div><div class="sl"><b>II</b>Coelenterates show the organ level.</div><div class="sl"><b>III</b>The gut of Platyhelminthes has a single opening.</div><div class="sl"><b>IV</b>In open circulation, blood stays inside vessels.</div>',
   opts: ['I and III only', 'I, II and III only', 'II and IV only', 'I, III and IV only'], right: 0, optW: 474, optY: 404 });
 const so = PUC.solution($('#so'), [['Answer: <b style="color:var(--ok)">A</b> (I, III)'], ['<b style="color:var(--red)">II</b> is false'], ['Coelenterates: tissue level'], ['<b style="color:var(--red)">IV</b> is false'], ['Only in vessels = closed']], { y0: 100, dy: 100 });
 const tSo = [wt('A1', 3) + 0.1, wt('A2', 'Two'), wt('A2', 'Coelenterates'), wt('A3', 'Four'), wt('A3', 'closed')];
@@ -181,13 +181,13 @@ const fc = PUC.fcard($('#sF'), { x: 360, y: 262, w: 1200, h: 470, title: 'Recap 
 const YQ = ['What is division of labour in a sponge?', 'What makes a digestive system complete?', 'How is open circulation different from closed circulation?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="n">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
-const nx = PUC.next($('#sF'), { label: 'NEXT · EP 33', topic: 'One straight cut: which animals split evenly? Body Symmetry and Germ Layers', y: 764 });
+const nx = PUC.next($('#sF'), { label: 'NEXT · EP 33', topic: 'One straight cut: Body Symmetry and Germ Layers', y: 764 });
 
 /* ---------- helpers ---------- */
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('C3') + 0.3, 1.06, 1368, 560], [T1('C4') + 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]]]);
 const blob = (x, y, R, tt, k) => { const n = 18, pts = []; for (let i = 0; i < n; i++) { const a = i * 2 * Math.PI / n, r = R * (1 + 0.18 * Math.sin(3 * a + tt * 1.2 + k) + 0.08 * Math.sin(5 * a - tt + k)); pts.push([x + r * Math.cos(a), y + r * Math.sin(a) * 0.7]); }
   return 'M' + pts.map(p => p[0].toFixed(1) + ',' + p[1].toFixed(1)).join(' L') + ' Z'; };
 let geo = null;

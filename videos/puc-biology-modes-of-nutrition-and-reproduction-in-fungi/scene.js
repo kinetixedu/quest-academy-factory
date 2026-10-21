@@ -193,7 +193,7 @@ const r3 = {}; { const g = RG[2];
   mk(r3.fb, 'path', { d: 'M270,336 C270,250 330,212 390,212 C450,212 510,250 510,336 Z', fill: '#C9A27A', stroke: BR, 'stroke-width': 4 });
   for (let k = 0; k < 9; k++) mk(r3.fb, 'line', { x1: 290 + k * 25, y1: 336, x2: 300 + k * 22, y2: 348, stroke: BR, 'stroke-width': 2.5 });
   r3.sp = []; const r = M.rng(21); for (let k = 0; k < 14; k++) r3.sp.push({ e: mk(g, 'circle', { r: 6, fill: '#CFC6B8', stroke: BR, 'stroke-width': 1.5 }), ph: r(), x0: 300 + r() * 180 });
-  rLab(g, 470, 260, 700, 200, 'Fruiting body', 'start', ['R4', 'fruiting']); rLab(g, 120, 440, 120, 330, 'Two strains meet', 'start', ['R4', 'parents']);
+  rLab(g, 470, 260, 700, 200, 'Fruiting body', 'start', ['R4', 'fruiting']); rLab(g, 120, 440, 100, 490, 'Two strains meet', 'start', ['R4', 'parents']);
 }
 
 /* ---------- S: the sexual route ---------- */
@@ -306,7 +306,7 @@ M.on(t => {
     M.vis($('#hkImg'), t, tH3 + 0.1, kOut, { dy: 20, outDur: 0.25 }); M.vis($('#hdF'), t, tH3 + 0.2, 1e9, { ...POP, sc: 0.5 });
     M.vis($('#hkP'), t, wt('H3', 'jumped') - 0.2, kOut, { ...POP, outDur: 0.25 }); M.vis($('#hkL'), t, tH3, kOut, { dy: 8, outDur: 0.2 });
     M.vis($('#twoQ .lbl'), t, tH4, 1e9, { dy: 8 });
-    M.vis($('#tq0'), t, wt('H4', 'eats') - 0.6, 1e9, { dx: -20, dy: 0 }); M.vis($('#tq1'), t, wt('H4', 'makes') - 0.3, 1e9, { dx: -20, dy: 0 });
+    M.vis($('#tq0'), t, tH4 + 0.2, 1e9, { dx: -20, dy: 0 }); M.vis($('#tq1'), t, wt('H4', 'makes') - 0.3, 1e9, { dx: -20, dy: 0 });
   }
 
   /* D */
@@ -390,9 +390,9 @@ M.on(t => {
     r2.sp.forEach(s => { const u = t < tRt[1] + 0.4 ? -1 : ((t - tRt[1] - 0.4) * 0.35 + s.ph) % 1; M.hide(s.e, u < 0);
       if (u >= 0) { attr(s.e, 'cx', (s.x0 + s.dx * u).toFixed(1)); attr(s.e, 'cy', (s.y0 + s.dy * u + 30 * Math.sin(u * 7)).toFixed(1)); s.e.style.opacity = Math.min(1, u * 6, (1 - u) * 4).toFixed(2); } });
     // route 3: two strains meet, then the fruiting body rises and sheds spores
-    { const t3 = tRt[2]; drawT(r3.h1, t, t3, 0.9); drawT(r3.h2, t, t3 + 0.2, 0.9); const fb = M.io((t - wt('R4', 'fruiting') + 0.4) / 0.8);
+    { const t3 = tRt[2]; drawT(r3.h1, t, t3, 0.9); drawT(r3.h2, t, t3 + 0.2, 0.9); const fb = M.io((t - t3 - 1.1) / 0.9);
       attr(r3.fb, 'transform', `translate(390 440) scale(${(0.05 + 0.95 * fb).toFixed(3)}) translate(-390 -440)`); M.hide(r3.fb, fb <= 0);
-      r3.sp.forEach(s => { const u = fb < 1 ? -1 : ((t - wt('R4', 'fruiting') - 0.4) * 0.4 + s.ph) % 1; M.hide(s.e, u < 0); if (u >= 0) { attr(s.e, 'cx', (s.x0 + u * 200).toFixed(1)); attr(s.e, 'cy', (350 + u * 60).toFixed(1)); s.e.style.opacity = Math.min(1, u * 6, (1 - u) * 4).toFixed(2); } }); }
+      r3.sp.forEach(s => { const u = fb < 1 ? -1 : ((t - t3 - 2.0) * 0.4 + s.ph) % 1; M.hide(s.e, u < 0); if (u >= 0) { attr(s.e, 'cx', (s.x0 + u * 200).toFixed(1)); attr(s.e, 'cy', (350 + u * 60).toFixed(1)); s.e.style.opacity = Math.min(1, u * 6, (1 - u) * 4).toFixed(2); } }); }
   }
 
   /* S: sexual route step by step */
@@ -486,7 +486,7 @@ M.on(t => {
   const qOn = t >= tQ && t < tF; M.hide($('#sQ'), !qOn);
   if (qOn) {
     M.vis($('#mq'), t, tQ + 0.05, 1e9, { dy: 36 });
-    mcq(t, { tin: tQ, tOpts: wt('Q1', 'Arrange') - 0.2, tCount, tAns });
+    mcq(t, { tin: tQ, tOpts: wt('Q1', 'Put') - 0.2, tCount, tAns });
     M.vis($('#so'), t, tAns + 0.1, 1e9, { dx: 60, dy: 0 }); so(t, tAns + 0.1, tSo);
   }
 

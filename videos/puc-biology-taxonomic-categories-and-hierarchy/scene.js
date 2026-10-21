@@ -25,7 +25,7 @@ Object.assign(M.IC, {
   grass: ['M5 21c0-6 1-10 3-13', 'M10 21c0-5 .5-9 2-14', 'M15 21c0-5 1-8 4-11', 'M3 21h18'],
   maize: ['M12 21c-3 0-4-4-4-9s1.5-9 4-9 4 4 4 9-1 9-4 9Z', 'M10 7h4', 'M9.5 10h5', 'M9.5 13h5', 'M10 16h4', 'M8 15c-3 1-4 4-4 7', 'M16 15c3 1 4 4 4 7'],
   bamboo: ['M8 21V3', 'M16 21V3', 'M6.5 8h3', 'M6.5 14h3', 'M14.5 6h3', 'M14.5 12h3', 'M14.5 18h3', 'M8 8c3-1 5-3 6-6'],
-  fly: [ci(12, 7, 2.5), 'M12 9.5c2 0 3 2 3 4.5s-1 6-3 6-3-3.5-3-6 1-4.5 3-4.5Z', 'M12 11c-4-4-8-3-8-1s4 3 8 2', 'M12 11c4-4 8-3 8-1s-4 3-8 2', 'M9.5 13 6 15l-1 3', 'M14.5 13l3.5 2 1 3'],
+  fly: [ci(12, 5.6, 2.4), 'M12 8c1.8 0 2.6 2 2.6 5S13.6 20 12 20s-2.6-3.6-2.6-7 .8-5 2.6-5Z', 'M10 9.6C6 5.6 2.5 7.6 3.5 10.1S8 11.6 10 11.1', 'M14 9.6c4-4 7.5-2 6.5.5S16 11.6 14 11.1', 'M9.6 13 6 15l-1 3', 'M14.4 13l3.6 2 1 3', 'M9.8 16.2 7 19.4', 'M14.2 16.2 17 19.4'],
   paw: [ci(6, 9, 2), ci(10, 5, 2), ci(15, 5, 2), ci(19, 9, 2), 'M12.5 11c-3 0-6 4-6 6.5 0 2 2 3 3.5 2.5 1.2-.4 1.8-.8 2.5-.8s1.3.4 2.5.8c1.5.5 3.5-.5 3.5-2.5 0-2.5-3-6.5-6-6.5Z'],
 });
 
@@ -98,9 +98,9 @@ const vJ = vLeg.map((_, i) => { const s = i < 3 ? -1 : 1, k = i % 3, dy = [-34, 
 [-1, 1].forEach(s => mk(va, 'path', { d: `M${VX},${VY - 40} C${VX + s * 70},${VY - 150} ${VX + s * 200},${VY - 130} ${VX + s * 180},${VY - 70} C${VX + s * 160},${VY - 30} ${VX + s * 60},${VY - 30} ${VX},${VY - 40} Z`, fill: '#DCEBF5', stroke: BR, 'stroke-width': 3, opacity: 0.9 }));
 mk(va, 'ellipse', { cx: VX, cy: VY + 76, rx: 34, ry: 64, fill: '#6B7A52', stroke: BR, 'stroke-width': 3.5 }); mk(va, 'ellipse', { cx: VX, cy: VY, rx: 38, ry: 36, fill: '#7E8C62', stroke: BR, 'stroke-width': 3.5 }); mk(va, 'circle', { cx: VX, cy: VY - 60, r: 28, fill: '#7E8C62', stroke: BR, 'stroke-width': 3.5 });
 [-1, 1].forEach(s => mk(va, 'circle', { cx: VX + s * 16, cy: VY - 66, r: 12, fill: '#C8432F', stroke: BR, 'stroke-width': 2 }));
-const vL = [[VX + 28, VY - 60, 560, 110, 'Head'], [VX + 38, VY, 600, 200, 'Thorax'], [VX + 30, VY + 100, 560, 400, 'Abdomen'], [VX - 96, VY - 34, 150, 150, 'Jointed leg']].map(([px, py, lx, ly, s]) => { const g = mk(va, 'g', {});
+const vL = [[VX + 28, VY - 60, 560, 110, 'Head'], [VX + 38, VY, 600, 200, 'Thorax'], [VX + 30, VY + 100, 560, 400, 'Abdomen'], [VX - 96, VY - 34, 60, 440, 'Jointed leg']].map(([px, py, lx, ly, s]) => { const g = mk(va, 'g', {});
   const ln = mk(g, 'path', { d: `M${px},${py} L${lx},${ly}`, stroke: C.ink, 'stroke-width': 2.5, fill: 'none' }); mk(g, 'circle', { cx: px, cy: py, r: 6, fill: C.ink });
-  const tx = mk(g, 'text', { x: lx + (lx > px ? 12 : -12), y: ly + 9, 'text-anchor': lx > px ? 'start' : 'end', class: 'zl' }); tx.textContent = s; return { g, ln, tx }; });
+  const an = s === 'Jointed leg' || lx > px ? 'start' : 'end', tx = mk(g, 'text', { x: lx + (s === 'Jointed leg' ? -8 : an === 'start' ? 12 : -12), y: ly + (s === 'Jointed leg' ? 34 : 9), 'text-anchor': an, class: 'zl' }); tx.textContent = s; return { g, ln, tx }; });
 const vb = $('#vbS');
 const VO = [[392, 260, 340, 200, 'ANIMALS', 'KINGDOM'], [440, 290, 230, 140, 'MAMMALS', 'CLASS'], [480, 310, 120, 80, 'DOGS', 'GENUS']];
 const vO = VO.map(([cx, cy, rx, ry, n, r], i) => { const g = mk(vb, 'g', {}); mk(g, 'ellipse', { cx, cy, rx, ry, fill: ['#FFFFFF', '#F3F7EA', '#E6F2DF'][i], stroke: GRN, 'stroke-width': 4 });
@@ -116,7 +116,12 @@ const lad = (svg, top, low, ic, col) => { const g = mk(svg, 'g', {});
   [[top, 120, 1], [low, 300, 0]].forEach(([[k, v], y, h]) => { mk(g, 'rect', { x: 260, y, width: 470, height: 110, rx: 16, fill: h ? '#E6F2DF' : '#FFFFFF', stroke: h ? GRN : C.line, 'stroke-width': 3 });
     txt(g, 290, y + 40, k, { 'font-size': 17, 'letter-spacing': 1.4, 'font-weight': 600, fill: h ? GRN : C.mute }); txt(g, 290, y + 84, v, { 'font-family': 'Poppins', 'font-size': 34, 'font-weight': 700, fill: C.ink }); });
   mk(g, 'path', { d: 'M495,296 L495,238 M481,252 L495,236 L509,252', stroke: C.dim, 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' });
-  ico(g, ic, 60, 200, 150, col, 1.6); txt(g, 135, 380, ic === 'fly' ? 'HOUSEFLY' : 'WHEAT', { 'text-anchor': 'middle', 'font-size': 16, 'letter-spacing': 1.4, 'font-weight': 600 }); return g; };
+  if (ic === 'fly') { const X = 135, Y = 270, f = mk(g, 'g', {});
+    [-1, 1].forEach(s2 => mk(f, 'ellipse', { cx: X + s2 * 44, cy: Y - 44, rx: 46, ry: 22, fill: '#DCEBF5', stroke: BR, 'stroke-width': 2.5, transform: `rotate(${s2 * -25} ${X + s2 * 44} ${Y - 44})` }));
+    [-1, 1].forEach(s2 => [-14, 4, 22].forEach((dy, k) => mk(f, 'path', { d: `M${X + s2 * 12},${Y + dy} l${s2 * 30},${-12 + k * 6} l${s2 * 14},${24}`, stroke: BR, 'stroke-width': 3, fill: 'none', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' })));
+    mk(f, 'ellipse', { cx: X, cy: Y + 34, rx: 16, ry: 30, fill: '#6B7A52', stroke: BR, 'stroke-width': 2.5 }); mk(f, 'ellipse', { cx: X, cy: Y, rx: 18, ry: 17, fill: '#7E8C62', stroke: BR, 'stroke-width': 2.5 });
+    mk(f, 'circle', { cx: X, cy: Y - 26, r: 14, fill: '#7E8C62', stroke: BR, 'stroke-width': 2.5 }); [-1, 1].forEach(s2 => mk(f, 'circle', { cx: X + s2 * 8, cy: Y - 30, r: 7, fill: '#C8432F', stroke: BR, 'stroke-width': 1.5 })); }
+  else ico(g, ic, 60, 200, 150, col, 1.6); txt(g, 135, 380, ic === 'fly' ? 'HOUSEFLY' : 'WHEAT', { 'text-anchor': 'middle', 'font-size': 16, 'letter-spacing': 1.4, 'font-weight': 600 }); return g; };
 const pL = lad($('#paS'), ['PHYLUM', 'Arthropoda'], ['CLASS', 'Insecta'], 'fly', C.ink), pR = lad($('#pbS'), ['DIVISION', 'Angiospermae'], ['CLASS', 'Monocotyledonae'], 'wheat', WHEAT);
 const avP = PUC.avatar($('#sP'), { x: 976 + 36, y: 270 + 470, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'Same rank, two names.' });
 
@@ -135,7 +140,7 @@ const tL = [txt(tS, 150, 96, 'KINGDOM', { 'font-size': 16, 'letter-spacing': 1.4
 const where = PUC.where($('#wa'), { on: [], type: 'Match the column: an organism with its family, order and class' });
 const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', qW: 800,
   q: 'For wheat, <i>Triticum aestivum</i>, which pair of taxon and category is correctly matched?',
-  opts: ['Poales : family', 'Poaceae : order', 'Monocotyledonae : class', 'Angiospermae : class'], right: 2, optW: 474, optY: 300, optFs: 28 });
+  opts: ['Poales : family', 'Poaceae : order', 'Monocotyledonae : class', 'Angiospermae : class'], right: 2, cols: 1, optW: 700, optH: 72, optY: 236, optFs: 28 });
 const so = PUC.solution($('#so'), [['Answer: <b style="color:var(--ok)">C</b>'], ['Monocotyledonae: <b style="color:var(--ok)">class</b>'], ['Poales: order, not family'], ['Poaceae: family, not order'], ['Angiospermae: division']], { y0: 100, dy: 100 });
 const tSo = [wt('A1', 3) + 0.1, wt('A1', 'Monocotyledonae'), wt('A2', 'Poales'), wt('A2', 'Poaceae'), wt('A3', 'Angiospermae')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 262, w: 1200, h: 470, title: 'Recap · taxonomic hierarchy', y0: 100, dy: 70, txt: [1, 1, 1, 1, 1],

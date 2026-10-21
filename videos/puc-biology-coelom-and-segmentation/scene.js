@@ -8,7 +8,7 @@ const txt = (p, x, y, s, a = {}) => { const e = mk(p, 'text', Object.assign({ x,
 const attr = PUC.attr;
 const POP = { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 };
 const BR = AN.BR, GRN = C.ac, ECTO = AN.ECTO, MESO = AN.MESO, ENDO = AN.ENDO, COEL = AN.COEL, NOTO = '#3D7A8C', RED = '#C0392B', ECf = '#DCE6F5', MEf = '#F1D2CA', ENf = '#F6E5B5', WORM = AN.COL.worm;
-Object.assign(M.IC, AN.IC);
+Object.assign(M.IC, AN.IC, { drop: ['M12 2.7 6.3 9.6a7 7 0 1 0 11.4 0Z'] });
 const lab = (g, px, py, lx, ly, s, an = 'start') => { const ln = mk(g, 'path', { d: `M${px.toFixed(1)},${py.toFixed(1)} L${lx},${ly}`, stroke: C.ink, 'stroke-width': 2.5, fill: 'none' }), dot = mk(g, 'circle', { cx: px, cy: py, r: 6, fill: C.ink });
   const tx = mk(g, 'text', { x: lx + (an === 'start' ? 12 : -12), y: ly + 9, 'text-anchor': an, class: 'zl' }); tx.textContent = s; return { ln, dot, tx }; };
 const labT = (l, t, t0) => { M.draw(l.ln, t, t0, 0.4); M.vis(l.dot, t, t0 - 0.1, 1e9, { ...POP, sc: 0.2 }); l.tx.style.opacity = M.clamp((t - t0 - 0.3) / 0.25).toFixed(3); };

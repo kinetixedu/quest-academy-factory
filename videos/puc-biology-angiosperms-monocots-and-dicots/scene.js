@@ -67,10 +67,10 @@ mk(dw, 'path', { d: 'M86,402 C170,352 430,344 532,378', stroke: '#6E9C55', 'stro
 const seeds = [170, 250, 330, 410].map((x, i) => mk(dw, 'circle', { cx: x, cy: 400 - i * 3, r: 30, fill: '#C8DD8E', stroke: BR, 'stroke-width': 3 }));
 const dLab = [lab(dw, 540, 372, 600, 330, 'Fruit wall'), lab(dw, 434, 400, 600, 440, 'Seed')];
 const dr = $('#drS');
-mk(dr, 'line', { x1: 36, y1: 450, x2: 300, y2: 450, stroke: WAT, 'stroke-width': 4, 'stroke-linecap': 'round' });
+mk(dr, 'line', { x1: 36, y1: 450, x2: 216, y2: 450, stroke: WAT, 'stroke-width': 4, 'stroke-linecap': 'round' });
 const wolf = mk(dr, 'circle', { cx: 120, cy: 446, r: 5, fill: CHL }), wolfR = mk(dr, 'circle', { cx: 120, cy: 446, r: 20, fill: 'none', stroke: C.ac, 'stroke-width': 3, 'stroke-dasharray': '7 6' });
 const tree = mk(dr, 'g', {});
-mk(tree, 'line', { x1: 220, y1: 520, x2: 420, y2: 520, stroke: C.dim, 'stroke-width': 3 });
+mk(tree, 'line', { x1: 236, y1: 520, x2: 460, y2: 520, stroke: C.dim, 'stroke-width': 3 });
 mk(tree, 'path', { d: 'M310,520 L314,330 L326,330 L330,520 Z', fill: '#B08A5A', stroke: BR, 'stroke-width': 3 });
 mk(tree, 'path', { d: 'M320,186 C380,190 392,250 380,290 C400,320 370,360 330,350 C300,370 250,346 262,310 C236,280 256,220 290,214 C292,196 304,186 320,186 Z', fill: LEAF, stroke: BR, 'stroke-width': 3.5 });
 const hBar = mk(dr, 'path', { d: 'M430,520 L430,186 M420,196 L430,186 L440,196 M420,510 L430,520 L440,510', stroke: C.ink, 'stroke-width': 2.5, fill: 'none' });
@@ -202,7 +202,7 @@ const cs = $('#clS'), CL = {};
   mk(CL.pea, 'path', { d: 'M616,170 C700,166 750,230 746,300 C742,370 680,410 616,404 Z', fill: '#C8DD8E', stroke: BR, 'stroke-width': 3.5 });
   mk(CL.pea, 'ellipse', { cx: 610, cy: 196, rx: 11, ry: 32, fill: '#7FB069', stroke: BR, 'stroke-width': 2 });
   CL.lab = [lab(cs, 172, 340, 172, 492, 'Cotyledon (1)', 'middle'), lab(cs, 236, 140, 300, 84, 'Endosperm'), lab(cs, 540, 330, 610, 492, 'Cotyledons (2)', 'middle'), lab(cs, 680, 330, 610, 492, '', 'middle'), lab(cs, 606, 200, 560, 128, 'Embryo axis', 'end')];
-  CL.cap = [txt(cs, 210, 90, 'MAIZE GRAIN', { 'text-anchor': 'middle', 'font-size': 16, 'letter-spacing': 1.5 }), txt(cs, 610, 140, 'PEA SEED, OPENED', { 'text-anchor': 'middle', 'font-size': 16, 'letter-spacing': 1.5 })];
+  CL.cap = [txt(cs, 210, 562, 'MAIZE GRAIN', { 'text-anchor': 'middle', 'font-size': 16, 'letter-spacing': 1.5 }), txt(cs, 610, 562, 'PEA SEED, OPENED', { 'text-anchor': 'middle', 'font-size': 16, 'letter-spacing': 1.5 })];
 }
 const avC = PUC.avatar($('#sC'), { x: 976 + 36, y: 270 + 450, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'Maize: one. Pea: two.' });
 
@@ -456,7 +456,7 @@ M.on(t => {
   const xOn = t >= tX1 - 0.1 && t < tQ + 0.05; M.hide($('#sX'), !xOn);
   if (xOn) {
     M.vis($('#trap'), t, tX1 + 0.05, 1e9, { dy: 36 }); M.vis($('#wa'), t, T0('E1') - 0.1, 1e9, { dy: 36 });
-    trap(t, { tin: tX1, tWrong: wt('X2', 'dicot') - 0.2, tStrike: wt('X3', 'But') - 0.05, tRight: wt('X3', 'cotyledons') - 0.1 });
+    trap(t, { tin: tX1, tWrong: T0('X2') + 0.1, tStrike: wt('X3', 'But') - 0.05, tRight: wt('X3', 'cotyledons') - 0.1 });
     M.vis(TP.pea, t, wt('X3', 'pea') - 0.1, 1e9, { ...POP, sc: 0.5 }); M.vis(TP.peaT, t, wt('X3', 'pea'), 1e9, { dy: 6 });
     M.vis(TP.mz, t, wt('X3', 'maize') - 0.1, 1e9, { ...POP, sc: 0.5 }); M.vis(TP.mzT, t, wt('X3', 'maize'), 1e9, { dy: 6 });
     where(t, { tin: T0('E1'), tLight: [], tType: wt('E1', 'feature') });

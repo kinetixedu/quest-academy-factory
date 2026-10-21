@@ -201,7 +201,7 @@ for (let k = 0; k < 10; k++) { const e = mk(tS, 'g', { transform: `translate(${6
 const tEq = txt(tS, 170, 214, '10 ANTS = 1 KIND', { 'text-anchor': 'middle', 'font-size': 18, fill: GRN, 'letter-spacing': 1.5, 'font-weight': 600 });
 const where = PUC.where($('#wa'), { on: [], type: 'One line: the meaning of biodiversity, the number of species known' });
 const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', qW: 800,
-  q: 'Which of these statements are correct?<div class="sl"><b>I</b>Classification groups organisms into convenient categories.</div><div class="sl"><b>II</b>About 1.7 to 1.8 million species are known and described.</div><div class="sl"><b>III</b>Biodiversity counts the individuals of a species.</div><div class="sl"><b>IV</b>Classification uses easily observable characters.</div>',
+  q: 'Which of these statements are correct?<div class="sl"><b>I</b>Classification groups organisms into categories.</div><div class="sl"><b>II</b>About 1.7 to 1.8 million species are known and described.</div><div class="sl"><b>III</b>Biodiversity counts the individuals of a species.</div><div class="sl"><b>IV</b>Classification uses easily observable characters.</div>',
   opts: ['I and II only', 'II, III and IV only', 'I, II and IV only', 'I, II, III and IV'], right: 2, optW: 474, optY: 400 });
 const so = PUC.solution($('#so'), [['Answer: <b style="color:var(--ok)">C</b> (I, II, IV)'], ['<b style="color:var(--red)">III</b> is false'], ['It counts kinds, not individuals'], ['<b style="color:var(--ok)">I, IV</b>: classification'], ['<b style="color:var(--ok)">II</b>: species described']], { y0: 100, dy: 100 });
 const tSo = [wt('A1', 3) + 0.1, wt('A2', 'Three'), wt('A2', 'kinds'), wt('A3', 'One'), wt('A3', 'Two')];
@@ -318,7 +318,7 @@ M.on(t => {
     M.vis($('#bnPool'), t, tS1 + 0.3, 1e9, { dy: 10 });
     BIN.forEach((_, i) => M.vis($('#bn' + i), t, [tQ1 + 0.4, tQ2 + 0.6, tQ3 + 0.4, tQ3 + 0.5][i], 1e9, { dy: 10 }));
     const arT = [tQ1 + 0.5, tQ2 - 0.3, tQ2 + 0.5, tAside - 0.2, tQ3 + 0.5, tQ3 + 0.6]; SK.ar.forEach((a, i) => M.draw(a, t, arT[i], 0.4)); SK.yn.forEach((y, i) => M.vis(y, t, arT[i] + 0.3, 1e9, { dy: 0, fade: 0.2 }));
-    M.setT($('#poolH'), t < tPl ? 'GARDEN · 9 KINDS' : 'ANIMALS LEFT');
+    M.setT($('#poolH'), t < tPl ? 'GARDEN · 9 KINDS' : t < tIn + 1.2 ? 'ANIMALS LEFT' : 'ALL SORTED');
     ORG.forEach((g, i) => { const el = $('#tk' + i), u = M.io((t - tMove[i]) / 0.8);
       const rank = ORG.slice(0, i).reduce((acc, _, j) => acc + (1 - M.io((t - tMove[j]) / 0.8)), 0);
       const x = M.lerp(52, DEST[i][0], u), y = M.lerp(120 + rank * 48, DEST[i][1], u);

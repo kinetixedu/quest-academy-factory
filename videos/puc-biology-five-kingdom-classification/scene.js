@@ -114,7 +114,7 @@ const pLB = [];
   mk(g, 'rect', { x: 166, y: 206, width: 438, height: 168, rx: 84, fill: '#F3F7EA', stroke: GRN, 'stroke-width': 3 });
   mk(g, 'path', { d: 'M270,290 c16,-36 40,30 60,0 s40,30 60,-6 s36,26 52,0 s30,24 44,4 c-6,-20 -30,-30 -56,-20 s-60,-12 -90,4 s-52,-6 -70,18', stroke: NUC, 'stroke-width': 4, fill: 'none' });
   for (let k = 0; k < 14; k++) mk(g, 'circle', { cx: 210 + (k * 67) % 360, cy: 236 + (k * 41) % 110, r: 5, fill: '#8E7AB0' });
-  pLB.push(labels(g, [[160, 290, 120, 120, 'Cell wall', 'start'], [420, 300, 520, 460, 'DNA (no membrane)', 'start'], [300, 206, 330, 120, 'Cell membrane', 'start']])); }
+  pLB.push(labels(g, [[160, 290, 120, 120, 'Cell wall', 'start'], [420, 300, 460, 460, 'DNA (no membrane)', 'start'], [300, 206, 330, 120, 'Cell membrane', 'start']])); }
 const amb = { };
 { const s = $('#pbS'), g = mk(s, 'g', {});
   amb.b = mk(g, 'path', { fill: '#E9DDF0', stroke: BR, 'stroke-width': 4, 'stroke-linejoin': 'round' });

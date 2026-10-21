@@ -160,7 +160,7 @@ const fc = PUC.fcard($('#sF'), { x: 260, y: 262, w: 1400, h: 470, title: 'Recap 
 const YQ = ['Which phylum has a water canal system?', 'Name two examples of Aschelminthes.', 'Why is the leech an annelid and not a flatworm?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="n">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
-const nx = PUC.next($('#sF'), { label: 'NEXT · EP 36', topic: 'What do a fish embryo and a human embryo share? Chordate Characteristics', y: 764 });
+const nx = PUC.next($('#sF'), { label: 'NEXT · EP 36', topic: 'A rod along the back: Chordate Characteristics', y: 764 });
 
 /* ---------- helpers ---------- */
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });

@@ -98,7 +98,7 @@ const yB = {};
   mk(g, 'ellipse', { cx: 430, cy: 290, rx: 140, ry: 126, fill: '#F3EBD3', stroke: BR, 'stroke-width': 4.5 });
   mk(g, 'circle', { cx: 410, cy: 300, r: 34, fill: '#D7C3E6', stroke: NUC, 'stroke-width': 3 }); mk(g, 'circle', { cx: 414, cy: 296, r: 11, fill: NUC });
   mk(g, 'circle', { cx: 480, cy: 340, r: 26, fill: '#D6E9F5', stroke: WAT, 'stroke-width': 2.5 });
-  lab(g, 320, 300, 200, 300, 'Parent cell', 'end'); lab(g, 410, 300, 300, 440, 'Nucleus', 'end'); lab(g, 600, 120, 720, 92, 'Bud', 'start'); lab(g, 480, 340, 620, 420, 'Vacuole', 'start');
+  lab(g, 320, 300, 200, 300, 'Parent cell', 'end'); lab(g, 410, 300, 300, 440, 'Nucleus', 'end'); lab(g, 566, 160, 720, 100, 'Bud', 'start'); lab(g, 480, 340, 620, 420, 'Vacuole', 'start');
 }
 // mode 1: Planaria cut into three, each regrows
 const PL = 'M0,0 C10,-30 40,-42 70,-36 C150,-30 300,-26 420,-18 C470,-14 500,-6 510,0 C500,6 470,14 420,18 C300,26 150,30 70,36 C40,42 10,30 0,0 Z';
@@ -348,14 +348,14 @@ M.on(t => {
   const cOn = t >= tC1 - 0.1 && t < tV1 + 0.1; M.hide($('#sC'), !cOn);
   if (cOn) {
     const out = OUT('V1');
-    M.vis($('#ca'), t, tC1 + 0.05, out, { dx: -60, dy: 0, ...o });
-    caC.forEach((c, i) => M.vis(c, t, wt('C1', 'cellular') + (i % 6) * 0.05 + Math.floor(i / 6) * 0.08, 1e9, { dy: 14, fade: 0.2 }));
+    M.vis($('#ca'), t, wt('C1', 'four') - 0.4, out, { dx: -60, dy: 0, ...o });
+    caC.forEach((c, i) => M.vis(c, t, wt('C1', 'four') - 0.1 + (i % 6) * 0.05 + Math.floor(i / 6) * 0.08, 1e9, { dy: 14, fade: 0.2 }));
     M.draw(caH, t, wt('C1', 'organised', 1) - 0.1, 0.5); M.vis($('#caP'), t, wt('C1', 'Life') - 0.1, 1e9, POP);
     M.vis($('#cb'), t, T0('C2') - 0.1, out, { dx: 60, dy: 0, ...o });
     const bn = M.io((t - wt('C3', 'shoot')) / 1.6), sw = Math.sin(t * 1.2) * 2 * bn, top = [160 + 70 * bn + sw, 160 + 10 * bn];
     attr(cbSt, 'd', `M160,300 C160,240 ${160 + 20 * bn},${200 + 10 * bn} ${top[0].toFixed(1)},${top[1].toFixed(1)}`);
     cbLf.forEach((l, i) => attr(l, 'transform', `translate(${(160 + 8 * bn).toFixed(1)} ${(250 - 6 * i).toFixed(1)}) rotate(${i ? -30 - 20 * bn : 200 - 10 * bn})`));
-    M.vis(cbSt, t, T0('C2') + 0.2, 1e9, { dy: 10 }); cbLf.forEach(l => M.vis(l, t, T0('C2') + 0.3, 1e9, { dy: 10 })); M.vis(cbSun, t, wt('C3', 'light') - 0.1, 1e9, POP);
+    [cbSt, ...cbLf].forEach(e => { e.style.opacity = M.clamp((t - T0('C2') - 0.2) / 0.3).toFixed(3); }); M.vis(cbSun, t, wt('C3', 'light') - 0.1, 1e9, POP);
     const tDl = wt('C3', 'Day'), hrs = 11 + 3 * (0.5 - 0.5 * Math.cos(Math.max(0, t - tDl) * 1.4)), L = 2 * Math.PI * 90;
     cbDay.style.strokeDasharray = `${(L * hrs / 24).toFixed(1)} ${L.toFixed(1)}`; M.setT(cbH, `${hrs.toFixed(1)} h of light`);
     [cbDay, cbH].forEach(e => M.vis(e, t, tDl - 0.1, 1e9, { dy: 0, fade: 0.3 }));
@@ -393,7 +393,6 @@ M.on(t => {
     M.vis($('#wb'), t, tW1 + 0.05, OUT('X1'), { dy: 36, ...o });
     $('#gws').querySelectorAll('.gh').forEach((h, j) => M.vis(h, t, tW1 + 0.4 + j * 0.08, 1e9, { dy: 8 }));
     WR.forEach((w, i) => { M.vis($('#gr' + i), t, T0(w[4][0]) - 0.1, 1e9, { dx: -20, dy: 0 }); [0, 1, 2, 3].forEach(j => M.vis($('#gc' + i + j), t, tWr[i][j], 1e9, { ...POP, sc: 0.3 })); M.vis($('#gv' + i), t, tWr[i][4] - 0.05, 1e9, POP); });
-    avW(t, T1('W4') - 0.3, OUT('X1'));
   }
 
   /* X */
