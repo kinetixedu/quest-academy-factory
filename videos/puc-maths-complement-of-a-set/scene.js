@@ -136,7 +136,7 @@ const ts = $('#tS'), tP = uPic(ts, { x: 30, y: 52, w: 500, h: 190, cx: 170, cy: 
 const tTk = [[1, 140, 128], [2, 200, 128], [3, 170, 180], [4, 340, 152], [5, 430, 152]].map(([n, x, y]) => tok(ts, n, x, y, { mono: 1, fs: 28, rr: 22 }));
 const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'PUC BOARDS'], type: 'Find A′ for a given U, often mixed with intervals and integers.' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 800,
-  q: `${K(`U = \\{1, 2, 3, \\dots, 100\\}`)}<br>${K(`${ac('A')} = \\{\\, n \\in U : n \\text{ is a perfect square or a perfect cube} \\,\\}`)}<br>How many elements does ${K(AP)} have?`,
+  q: `${K(`U = \\{1, 2, 3, \\dots, 100\\}`)}<br>${K(`${ac('A')} = \\{\\, n \\in U : n \\text{ is a perfect square or cube} \\,\\}`)}<br>How many elements does ${K(AP)} have?`,
   opts: ['88', '86', '90', '12'], right: 0, optW: 474, optY: 330 });
 const so = PUC.solution($('#so'), [[K(`\\text{squares}: 1, 4, \\dots, 100 \\Rightarrow 10`)], [K(`\\text{cubes}: 1, 8, 27, 64`)], ['1 and 64 are already squares'], [K(`n(${ac('A')}) = 10 + 2 = 12`)], [K(`n(${AP}) = 100 - 12 = 88`)]], { y0: 100, dy: 96 });
 const tSo = [wt('A2', 'squares'), wt('A3', 'cubes'), wt('A3', 'already'), wt('A4', 'twelve'), wt('A4', 'eighty')];
@@ -155,7 +155,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 10', topic: 'Biology, Maths o
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('C3') - 0.2, 1.06, 1300, 560], [T0('C6'), 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('C3') - 0.2, 1.04, 960, 560], [T0('C6'), 1, 960, 540]]);
 
 /* ---------- frame ---------- */
 M.on(t => {

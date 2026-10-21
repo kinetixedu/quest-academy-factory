@@ -132,7 +132,7 @@ const tChk = txt(ts, 24, 150, '3 + 1/2 = 7/2', { 'font-size': 32, fill: C.ok, 'f
 const where = PUC.where($('#wa'), { on: ['JEE MAIN'], type: 'Find expressions like 1/α² + 1/β² from the sum and product (JEE Main, 24 June 2022, Shift 1)' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 780,
   q: `${K('\\alpha, \\beta')} are the roots of ${K('2x^2 - 6x + 3 = 0')}.<br>Find ${K('\\dfrac{1}{\\alpha^2} + \\dfrac{1}{\\beta^2}')}`,
-  opts: [K('\\dfrac{4}{3}'), K('2'), K('\\dfrac{8}{3}'), K('4')], right: 2, optW: 474, optY: 316 });
+  opts: [K('4/3'), K('2'), K('8/3'), K('4')], right: 2, optW: 474, optY: 316 });
 const so = PUC.solution($('#so'), [[K(`${SUM} = 3,\\ \\ ${PRO} = \\tfrac{3}{2}`)], [K(`\\alpha^2 + \\beta^2 = 9 - 3 = 6`)], [K(`\\tfrac{1}{\\alpha^2} + \\tfrac{1}{\\beta^2} = \\tfrac{\\alpha^2 + \\beta^2}{(${PRO})^2}`)], [K(`= 6 \\div \\tfrac{9}{4} = \\tfrac{8}{3}`)]], { y0: 100, dy: 110 });
 const tSo = [wt('A2', 'Alpha'), wt('A3', 'Nine'), wt('A4', 'common'), wt('A4', 'six')];
 const fc = PUC.fcard($('#sF'), { x: 330, y: 252, w: 1260, h: 492, title: 'Recap · roots and coefficients', y0: 98, dy: 80, txt: [1, 0, 0, 0, 1],

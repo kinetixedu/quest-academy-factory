@@ -103,7 +103,7 @@ const dTurn = mk(mk(dS, 'g', {}), 'g', {}); mk(dTurn, 'path', { d: `M${DCX + DR 
 mk(dTurn, 'path', { d: `M${DCX + DR + 22},${DCY + 24} l2,-20 l14,14 z`, fill: XC });
 const dTurnT = txt(dTurn, 470, DCY - 40, '+ 2π: same heights again', { 'font-size': 20, fill: XC, 'font-weight': 600 });
 const NS = [['n = 0', `0\\pi ${okc('+\\,\\alpha')}`], ['n = 1', `1\\pi ${red('-\\,\\alpha')}`], ['n = 2', `2\\pi ${okc('+\\,\\alpha')}`], ['n = 3', `3\\pi ${red('-\\,\\alpha')}`]];
-$('#dNs').innerHTML = NS.map(([a, b], i) => `<div class="nc" id="dn${i}" style="left:${36 + i * 178}px;top:440px"><div class="a">${a}</div><div class="b">${K(b)}</div></div>`).join('');
+$('#dNs').innerHTML = NS.map(([a, b], i) => `<div class="ncc" id="dn${i}" style="left:${36 + i * 178}px;top:440px"><div class="a">${a}</div><div class="b">${K(b)}</div></div>`).join('');
 const tDn = [wt('D4', 'So'), wt('D4', 'So') + 0.3, wt('D4', 'or') - 0.1, wt('D4', 'or') + 0.2];
 
 /* ---------- C: cos, tan, zeros ---------- */

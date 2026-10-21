@@ -145,7 +145,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 13', topic: 'Three snacks, tw
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('L4') - 0.2, 1.06, 1300, 560], [tL5 + 0.8, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('L4') - 0.2, 1.04, 960, 560], [tL5 + 0.8, 1, 960, 540]]);
 
 M.on(t => {
   camF(t); head(t); sweep(t);

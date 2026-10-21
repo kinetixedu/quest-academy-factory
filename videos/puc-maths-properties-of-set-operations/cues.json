@@ -1,0 +1,3987 @@
+{
+ "lines": {
+  "H1": {
+   "t0": 0.45,
+   "t1": 9.333,
+   "text": "In ordinary numbers, two plus three is the same as three plus two. But five minus two is not two minus five. Sometimes order matters.",
+   "words": [
+    {
+     "w": "In",
+     "t": 0.45
+    },
+    {
+     "w": "ordinary",
+     "t": 0.66
+    },
+    {
+     "w": "numbers,",
+     "t": 1.169
+    },
+    {
+     "w": "two",
+     "t": 1.777
+    },
+    {
+     "w": "plus",
+     "t": 2.037
+    },
+    {
+     "w": "three",
+     "t": 2.346
+    },
+    {
+     "w": "is",
+     "t": 2.706
+    },
+    {
+     "w": "the",
+     "t": 2.915
+    },
+    {
+     "w": "same",
+     "t": 3.175
+    },
+    {
+     "w": "as",
+     "t": 3.484
+    },
+    {
+     "w": "three",
+     "t": 3.694
+    },
+    {
+     "w": "plus",
+     "t": 4.053
+    },
+    {
+     "w": "two.",
+     "t": 4.362
+    },
+    {
+     "w": "But",
+     "t": 4.871
+    },
+    {
+     "w": "five",
+     "t": 5.131
+    },
+    {
+     "w": "minus",
+     "t": 5.44
+    },
+    {
+     "w": "two",
+     "t": 5.8
+    },
+    {
+     "w": "is",
+     "t": 6.059
+    },
+    {
+     "w": "not",
+     "t": 6.269
+    },
+    {
+     "w": "two",
+     "t": 6.528
+    },
+    {
+     "w": "minus",
+     "t": 6.788
+    },
+    {
+     "w": "five.",
+     "t": 7.147
+    },
+    {
+     "w": "Sometimes",
+     "t": 7.706
+    },
+    {
+     "w": "order",
+     "t": 8.265
+    },
+    {
+     "w": "matters.",
+     "t": 8.624
+    }
+   ]
+  },
+  "H2": {
+   "t0": 9.733,
+   "t1": 13.506,
+   "text": "So what about sets? Does the order ever change the answer?",
+   "words": [
+    {
+     "w": "So",
+     "t": 9.733
+    },
+    {
+     "w": "what",
+     "t": 9.93
+    },
+    {
+     "w": "about",
+     "t": 10.222
+    },
+    {
+     "w": "sets?",
+     "t": 10.561
+    },
+    {
+     "w": "Does",
+     "t": 11.088
+    },
+    {
+     "w": "the",
+     "t": 11.379
+    },
+    {
+     "w": "order",
+     "t": 11.624
+    },
+    {
+     "w": "ever",
+     "t": 11.963
+    },
+    {
+     "w": "change",
+     "t": 12.254
+    },
+    {
+     "w": "the",
+     "t": 12.64
+    },
+    {
+     "w": "answer?",
+     "t": 12.885
+    }
+   ]
+  },
+  "H3": {
+   "t0": 13.956,
+   "t1": 17.152,
+   "text": "Aarav asked this while revising sets after class.",
+   "words": [
+    {
+     "w": "Aarav",
+     "t": 13.956
+    },
+    {
+     "w": "asked",
+     "t": 14.318
+    },
+    {
+     "w": "this",
+     "t": 14.68
+    },
+    {
+     "w": "while",
+     "t": 14.991
+    },
+    {
+     "w": "revising",
+     "t": 15.353
+    },
+    {
+     "w": "sets",
+     "t": 15.866
+    },
+    {
+     "w": "after",
+     "t": 16.177
+    },
+    {
+     "w": "class.",
+     "t": 16.539
+    }
+   ]
+  },
+  "H4": {
+   "t0": 17.502,
+   "t1": 23.375,
+   "text": "Is A union B the same as B union A? And what happens when he mixes union with intersection?",
+   "words": [
+    {
+     "w": "Is",
+     "t": 17.502
+    },
+    {
+     "w": "A",
+     "t": 17.703
+    },
+    {
+     "w": "union",
+     "t": 17.856
+    },
+    {
+     "w": "B",
+     "t": 18.2
+    },
+    {
+     "w": "the",
+     "t": 18.354
+    },
+    {
+     "w": "same",
+     "t": 18.602
+    },
+    {
+     "w": "as",
+     "t": 18.899
+    },
+    {
+     "w": "B",
+     "t": 19.1
+    },
+    {
+     "w": "union",
+     "t": 19.253
+    },
+    {
+     "w": "A?",
+     "t": 19.597
+    },
+    {
+     "w": "And",
+     "t": 19.989
+    },
+    {
+     "w": "what",
+     "t": 20.238
+    },
+    {
+     "w": "happens",
+     "t": 20.534
+    },
+    {
+     "w": "when",
+     "t": 20.974
+    },
+    {
+     "w": "he",
+     "t": 21.271
+    },
+    {
+     "w": "mixes",
+     "t": 21.472
+    },
+    {
+     "w": "union",
+     "t": 21.816
+    },
+    {
+     "w": "with",
+     "t": 22.161
+    },
+    {
+     "w": "intersection?",
+     "t": 22.457
+    }
+   ]
+  },
+  "H5": {
+   "t0": 23.875,
+   "t1": 29.451,
+   "text": "Sets follow a short list of laws. Learn them once, and long set expressions become short.",
+   "words": [
+    {
+     "w": "Sets",
+     "t": 23.875
+    },
+    {
+     "w": "follow",
+     "t": 24.165
+    },
+    {
+     "w": "a",
+     "t": 24.549
+    },
+    {
+     "w": "short",
+     "t": 24.699
+    },
+    {
+     "w": "list",
+     "t": 25.036
+    },
+    {
+     "w": "of",
+     "t": 25.326
+    },
+    {
+     "w": "laws.",
+     "t": 25.522
+    },
+    {
+     "w": "Learn",
+     "t": 26.046
+    },
+    {
+     "w": "them",
+     "t": 26.383
+    },
+    {
+     "w": "once,",
+     "t": 26.673
+    },
+    {
+     "w": "and",
+     "t": 27.103
+    },
+    {
+     "w": "long",
+     "t": 27.346
+    },
+    {
+     "w": "set",
+     "t": 27.636
+    },
+    {
+     "w": "expressions",
+     "t": 27.88
+    },
+    {
+     "w": "become",
+     "t": 28.497
+    },
+    {
+     "w": "short.",
+     "t": 28.881
+    }
+   ]
+  },
+  "C1": {
+   "t0": 30.101,
+   "t1": 37.652,
+   "text": "First, order. A union B collects everything in A or in B. B union A collects exactly the same elements.",
+   "words": [
+    {
+     "w": "First,",
+     "t": 30.101
+    },
+    {
+     "w": "order.",
+     "t": 30.644
+    },
+    {
+     "w": "A",
+     "t": 31.293
+    },
+    {
+     "w": "union",
+     "t": 31.463
+    },
+    {
+     "w": "B",
+     "t": 31.846
+    },
+    {
+     "w": "collects",
+     "t": 32.016
+    },
+    {
+     "w": "everything",
+     "t": 32.558
+    },
+    {
+     "w": "in",
+     "t": 33.207
+    },
+    {
+     "w": "A",
+     "t": 33.43
+    },
+    {
+     "w": "or",
+     "t": 33.6
+    },
+    {
+     "w": "in",
+     "t": 33.824
+    },
+    {
+     "w": "B.",
+     "t": 34.047
+    },
+    {
+     "w": "B",
+     "t": 34.483
+    },
+    {
+     "w": "union",
+     "t": 34.653
+    },
+    {
+     "w": "A",
+     "t": 35.036
+    },
+    {
+     "w": "collects",
+     "t": 35.206
+    },
+    {
+     "w": "exactly",
+     "t": 35.749
+    },
+    {
+     "w": "the",
+     "t": 36.238
+    },
+    {
+     "w": "same",
+     "t": 36.514
+    },
+    {
+     "w": "elements.",
+     "t": 36.844
+    }
+   ]
+  },
+  "C2": {
+   "t0": 38.052,
+   "t1": 44.865,
+   "text": "So union is commutative. The order of the two sets does not matter. Intersection is commutative too.",
+   "words": [
+    {
+     "w": "So",
+     "t": 38.052
+    },
+    {
+     "w": "union",
+     "t": 38.267
+    },
+    {
+     "w": "is",
+     "t": 38.635
+    },
+    {
+     "w": "commutative.",
+     "t": 38.849
+    },
+    {
+     "w": "The",
+     "t": 39.779
+    },
+    {
+     "w": "order",
+     "t": 40.044
+    },
+    {
+     "w": "of",
+     "t": 40.412
+    },
+    {
+     "w": "the",
+     "t": 40.626
+    },
+    {
+     "w": "two",
+     "t": 40.892
+    },
+    {
+     "w": "sets",
+     "t": 41.157
+    },
+    {
+     "w": "does",
+     "t": 41.474
+    },
+    {
+     "w": "not",
+     "t": 41.791
+    },
+    {
+     "w": "matter.",
+     "t": 42.056
+    },
+    {
+     "w": "Intersection",
+     "t": 42.73
+    },
+    {
+     "w": "is",
+     "t": 43.456
+    },
+    {
+     "w": "commutative",
+     "t": 43.67
+    },
+    {
+     "w": "too.",
+     "t": 44.344
+    }
+   ]
+  },
+  "C3": {
+   "t0": 45.265,
+   "t1": 52.78,
+   "text": "Now grouping. Take three sets. Join A and B first, then add C. Or join B and C first, then add A.",
+   "words": [
+    {
+     "w": "Now",
+     "t": 45.265
+    },
+    {
+     "w": "grouping.",
+     "t": 45.536
+    },
+    {
+     "w": "Take",
+     "t": 46.327
+    },
+    {
+     "w": "three",
+     "t": 46.65
+    },
+    {
+     "w": "sets.",
+     "t": 47.024
+    },
+    {
+     "w": "Join",
+     "t": 47.607
+    },
+    {
+     "w": "A",
+     "t": 47.93
+    },
+    {
+     "w": "and",
+     "t": 48.096
+    },
+    {
+     "w": "B",
+     "t": 48.367
+    },
+    {
+     "w": "first,",
+     "t": 48.534
+    },
+    {
+     "w": "then",
+     "t": 49.064
+    },
+    {
+     "w": "add",
+     "t": 49.387
+    },
+    {
+     "w": "C.",
+     "t": 49.658
+    },
+    {
+     "w": "Or",
+     "t": 50.084
+    },
+    {
+     "w": "join",
+     "t": 50.303
+    },
+    {
+     "w": "B",
+     "t": 50.626
+    },
+    {
+     "w": "and",
+     "t": 50.792
+    },
+    {
+     "w": "C",
+     "t": 51.063
+    },
+    {
+     "w": "first,",
+     "t": 51.229
+    },
+    {
+     "w": "then",
+     "t": 51.76
+    },
+    {
+     "w": "add",
+     "t": 52.083
+    },
+    {
+     "w": "A.",
+     "t": 52.354
+    }
+   ]
+  },
+  "C4": {
+   "t0": 53.18,
+   "t1": 62.131,
+   "text": "Either way, you collect every element of all three. So union is associative. The brackets can move. Intersection is associative too.",
+   "words": [
+    {
+     "w": "Either",
+     "t": 53.18
+    },
+    {
+     "w": "way,",
+     "t": 53.597
+    },
+    {
+     "w": "you",
+     "t": 54.013
+    },
+    {
+     "w": "collect",
+     "t": 54.278
+    },
+    {
+     "w": "every",
+     "t": 54.745
+    },
+    {
+     "w": "element",
+     "t": 55.111
+    },
+    {
+     "w": "of",
+     "t": 55.578
+    },
+    {
+     "w": "all",
+     "t": 55.791
+    },
+    {
+     "w": "three.",
+     "t": 56.056
+    },
+    {
+     "w": "So",
+     "t": 56.675
+    },
+    {
+     "w": "union",
+     "t": 56.889
+    },
+    {
+     "w": "is",
+     "t": 57.254
+    },
+    {
+     "w": "associative.",
+     "t": 57.468
+    },
+    {
+     "w": "The",
+     "t": 58.392
+    },
+    {
+     "w": "brackets",
+     "t": 58.656
+    },
+    {
+     "w": "can",
+     "t": 59.174
+    },
+    {
+     "w": "move.",
+     "t": 59.439
+    },
+    {
+     "w": "Intersection",
+     "t": 60.008
+    },
+    {
+     "w": "is",
+     "t": 60.729
+    },
+    {
+     "w": "associative",
+     "t": 60.942
+    },
+    {
+     "w": "too.",
+     "t": 61.613
+    }
+   ]
+  },
+  "C5": {
+   "t0": 62.781,
+   "t1": 70.023,
+   "text": "But recall episode eight. Difference is not commutative. A minus B and B minus A are different sets.",
+   "words": [
+    {
+     "w": "But",
+     "t": 62.781
+    },
+    {
+     "w": "recall",
+     "t": 63.061
+    },
+    {
+     "w": "episode",
+     "t": 63.502
+    },
+    {
+     "w": "eight.",
+     "t": 63.997
+    },
+    {
+     "w": "Difference",
+     "t": 64.653
+    },
+    {
+     "w": "is",
+     "t": 65.31
+    },
+    {
+     "w": "not",
+     "t": 65.536
+    },
+    {
+     "w": "commutative.",
+     "t": 65.816
+    },
+    {
+     "w": "A",
+     "t": 66.795
+    },
+    {
+     "w": "minus",
+     "t": 66.967
+    },
+    {
+     "w": "B",
+     "t": 67.355
+    },
+    {
+     "w": "and",
+     "t": 67.527
+    },
+    {
+     "w": "B",
+     "t": 67.807
+    },
+    {
+     "w": "minus",
+     "t": 67.979
+    },
+    {
+     "w": "A",
+     "t": 68.366
+    },
+    {
+     "w": "are",
+     "t": 68.538
+    },
+    {
+     "w": "different",
+     "t": 68.818
+    },
+    {
+     "w": "sets.",
+     "t": 69.421
+    }
+   ]
+  },
+  "I1": {
+   "t0": 70.673,
+   "t1": 76.284,
+   "text": "Next, the special sets. The empty set adds nothing, so A union the empty set is A.",
+   "words": [
+    {
+     "w": "Next,",
+     "t": 70.673
+    },
+    {
+     "w": "the",
+     "t": 71.121
+    },
+    {
+     "w": "special",
+     "t": 71.373
+    },
+    {
+     "w": "sets.",
+     "t": 71.821
+    },
+    {
+     "w": "The",
+     "t": 72.365
+    },
+    {
+     "w": "empty",
+     "t": 72.618
+    },
+    {
+     "w": "set",
+     "t": 72.968
+    },
+    {
+     "w": "adds",
+     "t": 73.221
+    },
+    {
+     "w": "nothing,",
+     "t": 73.522
+    },
+    {
+     "w": "so",
+     "t": 74.116
+    },
+    {
+     "w": "A",
+     "t": 74.32
+    },
+    {
+     "w": "union",
+     "t": 74.475
+    },
+    {
+     "w": "the",
+     "t": 74.825
+    },
+    {
+     "w": "empty",
+     "t": 75.078
+    },
+    {
+     "w": "set",
+     "t": 75.428
+    },
+    {
+     "w": "is",
+     "t": 75.681
+    },
+    {
+     "w": "A.",
+     "t": 75.885
+    }
+   ]
+  },
+  "I2": {
+   "t0": 76.684,
+   "t1": 80.334,
+   "text": "And A union U is U, because U already holds everything.",
+   "words": [
+    {
+     "w": "And",
+     "t": 76.684
+    },
+    {
+     "w": "A",
+     "t": 76.936
+    },
+    {
+     "w": "union",
+     "t": 77.092
+    },
+    {
+     "w": "U",
+     "t": 77.441
+    },
+    {
+     "w": "is",
+     "t": 77.597
+    },
+    {
+     "w": "U,",
+     "t": 77.8
+    },
+    {
+     "w": "because",
+     "t": 78.101
+    },
+    {
+     "w": "U",
+     "t": 78.548
+    },
+    {
+     "w": "already",
+     "t": 78.703
+    },
+    {
+     "w": "holds",
+     "t": 79.15
+    },
+    {
+     "w": "everything.",
+     "t": 79.499
+    }
+   ]
+  },
+  "I3": {
+   "t0": 80.734,
+   "t1": 87.207,
+   "text": "For intersection, it flips. A intersection the empty set is the empty set. A intersection U is A.",
+   "words": [
+    {
+     "w": "For",
+     "t": 80.734
+    },
+    {
+     "w": "intersection,",
+     "t": 80.986
+    },
+    {
+     "w": "it",
+     "t": 81.819
+    },
+    {
+     "w": "flips.",
+     "t": 82.023
+    },
+    {
+     "w": "A",
+     "t": 82.614
+    },
+    {
+     "w": "intersection",
+     "t": 82.769
+    },
+    {
+     "w": "the",
+     "t": 83.457
+    },
+    {
+     "w": "empty",
+     "t": 83.709
+    },
+    {
+     "w": "set",
+     "t": 84.058
+    },
+    {
+     "w": "is",
+     "t": 84.31
+    },
+    {
+     "w": "the",
+     "t": 84.513
+    },
+    {
+     "w": "empty",
+     "t": 84.765
+    },
+    {
+     "w": "set.",
+     "t": 85.114
+    },
+    {
+     "w": "A",
+     "t": 85.608
+    },
+    {
+     "w": "intersection",
+     "t": 85.763
+    },
+    {
+     "w": "U",
+     "t": 86.452
+    },
+    {
+     "w": "is",
+     "t": 86.607
+    },
+    {
+     "w": "A.",
+     "t": 86.81
+    }
+   ]
+  },
+  "I4": {
+   "t0": 87.607,
+   "t1": 96.302,
+   "text": "And a set with itself. A union A is A, and A intersection A is A. Doing it twice changes nothing. These are called the idempotent laws.",
+   "words": [
+    {
+     "w": "And",
+     "t": 87.607
+    },
+    {
+     "w": "a",
+     "t": 87.85
+    },
+    {
+     "w": "set",
+     "t": 87.999
+    },
+    {
+     "w": "with",
+     "t": 88.242
+    },
+    {
+     "w": "itself.",
+     "t": 88.531
+    },
+    {
+     "w": "A",
+     "t": 89.147
+    },
+    {
+     "w": "union",
+     "t": 89.296
+    },
+    {
+     "w": "A",
+     "t": 89.632
+    },
+    {
+     "w": "is",
+     "t": 89.781
+    },
+    {
+     "w": "A,",
+     "t": 89.977
+    },
+    {
+     "w": "and",
+     "t": 90.266
+    },
+    {
+     "w": "A",
+     "t": 90.509
+    },
+    {
+     "w": "intersection",
+     "t": 90.658
+    },
+    {
+     "w": "A",
+     "t": 91.32
+    },
+    {
+     "w": "is",
+     "t": 91.47
+    },
+    {
+     "w": "A.",
+     "t": 91.666
+    },
+    {
+     "w": "Doing",
+     "t": 92.048
+    },
+    {
+     "w": "it",
+     "t": 92.384
+    },
+    {
+     "w": "twice",
+     "t": 92.58
+    },
+    {
+     "w": "changes",
+     "t": 92.916
+    },
+    {
+     "w": "nothing.",
+     "t": 93.345
+    },
+    {
+     "w": "These",
+     "t": 94.007
+    },
+    {
+     "w": "are",
+     "t": 94.343
+    },
+    {
+     "w": "called",
+     "t": 94.586
+    },
+    {
+     "w": "the",
+     "t": 94.968
+    },
+    {
+     "w": "idempotent",
+     "t": 95.211
+    },
+    {
+     "w": "laws.",
+     "t": 95.78
+    }
+   ]
+  },
+  "D1": {
+   "t0": 96.952,
+   "t1": 101.608,
+   "text": "Now the big one, where union and intersection mix. The distributive law.",
+   "words": [
+    {
+     "w": "Now",
+     "t": 96.952
+    },
+    {
+     "w": "the",
+     "t": 97.201
+    },
+    {
+     "w": "big",
+     "t": 97.449
+    },
+    {
+     "w": "one,",
+     "t": 97.698
+    },
+    {
+     "w": "where",
+     "t": 98.09
+    },
+    {
+     "w": "union",
+     "t": 98.434
+    },
+    {
+     "w": "and",
+     "t": 98.778
+    },
+    {
+     "w": "intersection",
+     "t": 99.027
+    },
+    {
+     "w": "mix.",
+     "t": 99.706
+    },
+    {
+     "w": "The",
+     "t": 100.193
+    },
+    {
+     "w": "distributive",
+     "t": 100.442
+    },
+    {
+     "w": "law.",
+     "t": 101.121
+    }
+   ]
+  },
+  "D2": {
+   "t0": 102.008,
+   "t1": 108.044,
+   "text": "It says: A intersection, B union C, equals A intersection B, union A intersection C.",
+   "words": [
+    {
+     "w": "It",
+     "t": 102.008
+    },
+    {
+     "w": "says:",
+     "t": 102.229
+    },
+    {
+     "w": "A",
+     "t": 102.712
+    },
+    {
+     "w": "intersection,",
+     "t": 102.88
+    },
+    {
+     "w": "B",
+     "t": 103.782
+    },
+    {
+     "w": "union",
+     "t": 103.95
+    },
+    {
+     "w": "C,",
+     "t": 104.328
+    },
+    {
+     "w": "equals",
+     "t": 104.654
+    },
+    {
+     "w": "A",
+     "t": 105.084
+    },
+    {
+     "w": "intersection",
+     "t": 105.252
+    },
+    {
+     "w": "B,",
+     "t": 105.997
+    },
+    {
+     "w": "union",
+     "t": 106.323
+    },
+    {
+     "w": "A",
+     "t": 106.701
+    },
+    {
+     "w": "intersection",
+     "t": 106.869
+    },
+    {
+     "w": "C.",
+     "t": 107.614
+    }
+   ]
+  },
+  "D3": {
+   "t0": 108.444,
+   "t1": 115.622,
+   "text": "Let's test it with shading. Left side first. Shade B union C. Then keep only the part inside A.",
+   "words": [
+    {
+     "w": "Let's",
+     "t": 108.444
+    },
+    {
+     "w": "test",
+     "t": 108.777
+    },
+    {
+     "w": "it",
+     "t": 109.109
+    },
+    {
+     "w": "with",
+     "t": 109.335
+    },
+    {
+     "w": "shading.",
+     "t": 109.667
+    },
+    {
+     "w": "Left",
+     "t": 110.429
+    },
+    {
+     "w": "side",
+     "t": 110.762
+    },
+    {
+     "w": "first.",
+     "t": 111.094
+    },
+    {
+     "w": "Shade",
+     "t": 111.749
+    },
+    {
+     "w": "B",
+     "t": 112.135
+    },
+    {
+     "w": "union",
+     "t": 112.307
+    },
+    {
+     "w": "C.",
+     "t": 112.693
+    },
+    {
+     "w": "Then",
+     "t": 113.133
+    },
+    {
+     "w": "keep",
+     "t": 113.465
+    },
+    {
+     "w": "only",
+     "t": 113.798
+    },
+    {
+     "w": "the",
+     "t": 114.13
+    },
+    {
+     "w": "part",
+     "t": 114.409
+    },
+    {
+     "w": "inside",
+     "t": 114.742
+    },
+    {
+     "w": "A.",
+     "t": 115.182
+    }
+   ]
+  },
+  "D4": {
+   "t0": 116.372,
+   "t1": 121.423,
+   "text": "Now the right side. Shade A intersection B. Then add A intersection C.",
+   "words": [
+    {
+     "w": "Now",
+     "t": 116.372
+    },
+    {
+     "w": "the",
+     "t": 116.638
+    },
+    {
+     "w": "right",
+     "t": 116.905
+    },
+    {
+     "w": "side.",
+     "t": 117.273
+    },
+    {
+     "w": "Shade",
+     "t": 117.847
+    },
+    {
+     "w": "A",
+     "t": 118.216
+    },
+    {
+     "w": "intersection",
+     "t": 118.38
+    },
+    {
+     "w": "B.",
+     "t": 119.108
+    },
+    {
+     "w": "Then",
+     "t": 119.528
+    },
+    {
+     "w": "add",
+     "t": 119.845
+    },
+    {
+     "w": "A",
+     "t": 120.112
+    },
+    {
+     "w": "intersection",
+     "t": 120.276
+    },
+    {
+     "w": "C.",
+     "t": 121.003
+    }
+   ]
+  },
+  "D5": {
+   "t0": 122.173,
+   "t1": 129.633,
+   "text": "Both sides shade exactly the same three pieces. The picture works for any A, B and C, so the law always holds.",
+   "words": [
+    {
+     "w": "Both",
+     "t": 122.173
+    },
+    {
+     "w": "sides",
+     "t": 122.483
+    },
+    {
+     "w": "shade",
+     "t": 122.842
+    },
+    {
+     "w": "exactly",
+     "t": 123.202
+    },
+    {
+     "w": "the",
+     "t": 123.661
+    },
+    {
+     "w": "same",
+     "t": 123.921
+    },
+    {
+     "w": "three",
+     "t": 124.231
+    },
+    {
+     "w": "pieces.",
+     "t": 124.59
+    },
+    {
+     "w": "The",
+     "t": 125.249
+    },
+    {
+     "w": "picture",
+     "t": 125.509
+    },
+    {
+     "w": "works",
+     "t": 125.968
+    },
+    {
+     "w": "for",
+     "t": 126.328
+    },
+    {
+     "w": "any",
+     "t": 126.588
+    },
+    {
+     "w": "A,",
+     "t": 126.847
+    },
+    {
+     "w": "B",
+     "t": 127.157
+    },
+    {
+     "w": "and",
+     "t": 127.317
+    },
+    {
+     "w": "C,",
+     "t": 127.576
+    },
+    {
+     "w": "so",
+     "t": 127.886
+    },
+    {
+     "w": "the",
+     "t": 128.096
+    },
+    {
+     "w": "law",
+     "t": 128.355
+    },
+    {
+     "w": "always",
+     "t": 128.615
+    },
+    {
+     "w": "holds.",
+     "t": 129.024
+    }
+   ]
+  },
+  "D6": {
+   "t0": 130.284,
+   "t1": 137.477,
+   "text": "It works the other way round too. A union, B intersection C, equals A union B, intersection A union C.",
+   "words": [
+    {
+     "w": "It",
+     "t": 130.284
+    },
+    {
+     "w": "works",
+     "t": 130.498
+    },
+    {
+     "w": "the",
+     "t": 130.865
+    },
+    {
+     "w": "other",
+     "t": 131.13
+    },
+    {
+     "w": "way",
+     "t": 131.498
+    },
+    {
+     "w": "round",
+     "t": 131.763
+    },
+    {
+     "w": "too.",
+     "t": 132.13
+    },
+    {
+     "w": "A",
+     "t": 132.651
+    },
+    {
+     "w": "union,",
+     "t": 132.814
+    },
+    {
+     "w": "B",
+     "t": 133.334
+    },
+    {
+     "w": "intersection",
+     "t": 133.497
+    },
+    {
+     "w": "C,",
+     "t": 134.222
+    },
+    {
+     "w": "equals",
+     "t": 134.538
+    },
+    {
+     "w": "A",
+     "t": 134.956
+    },
+    {
+     "w": "union",
+     "t": 135.12
+    },
+    {
+     "w": "B,",
+     "t": 135.487
+    },
+    {
+     "w": "intersection",
+     "t": 135.803
+    },
+    {
+     "w": "A",
+     "t": 136.528
+    },
+    {
+     "w": "union",
+     "t": 136.691
+    },
+    {
+     "w": "C.",
+     "t": 137.058
+    }
+   ]
+  },
+  "K1": {
+   "t0": 138.077,
+   "t1": 146.999,
+   "text": "Side by side. In numbers, multiplication spreads over addition. Two times, three plus four, is two times three, plus two times four.",
+   "words": [
+    {
+     "w": "Side",
+     "t": 138.077
+    },
+    {
+     "w": "by",
+     "t": 138.385
+    },
+    {
+     "w": "side.",
+     "t": 138.594
+    },
+    {
+     "w": "In",
+     "t": 139.151
+    },
+    {
+     "w": "numbers,",
+     "t": 139.36
+    },
+    {
+     "w": "multiplication",
+     "t": 139.966
+    },
+    {
+     "w": "spreads",
+     "t": 140.772
+    },
+    {
+     "w": "over",
+     "t": 141.23
+    },
+    {
+     "w": "addition.",
+     "t": 141.538
+    },
+    {
+     "w": "Two",
+     "t": 142.294
+    },
+    {
+     "w": "times,",
+     "t": 142.553
+    },
+    {
+     "w": "three",
+     "t": 143.06
+    },
+    {
+     "w": "plus",
+     "t": 143.418
+    },
+    {
+     "w": "four,",
+     "t": 143.727
+    },
+    {
+     "w": "is",
+     "t": 144.184
+    },
+    {
+     "w": "two",
+     "t": 144.393
+    },
+    {
+     "w": "times",
+     "t": 144.652
+    },
+    {
+     "w": "three,",
+     "t": 145.01
+    },
+    {
+     "w": "plus",
+     "t": 145.517
+    },
+    {
+     "w": "two",
+     "t": 145.825
+    },
+    {
+     "w": "times",
+     "t": 146.084
+    },
+    {
+     "w": "four.",
+     "t": 146.442
+    }
+   ]
+  },
+  "K2": {
+   "t0": 147.399,
+   "t1": 156.195,
+   "text": "But addition does not spread over multiplication. Two plus, three times four, is fourteen. Two plus three, times two plus four, is thirty.",
+   "words": [
+    {
+     "w": "But",
+     "t": 147.399
+    },
+    {
+     "w": "addition",
+     "t": 147.644
+    },
+    {
+     "w": "does",
+     "t": 148.125
+    },
+    {
+     "w": "not",
+     "t": 148.417
+    },
+    {
+     "w": "spread",
+     "t": 148.662
+    },
+    {
+     "w": "over",
+     "t": 149.049
+    },
+    {
+     "w": "multiplication.",
+     "t": 149.341
+    },
+    {
+     "w": "Two",
+     "t": 150.34
+    },
+    {
+     "w": "plus,",
+     "t": 150.585
+    },
+    {
+     "w": "three",
+     "t": 151.019
+    },
+    {
+     "w": "times",
+     "t": 151.358
+    },
+    {
+     "w": "four,",
+     "t": 151.698
+    },
+    {
+     "w": "is",
+     "t": 152.131
+    },
+    {
+     "w": "fourteen.",
+     "t": 152.329
+    },
+    {
+     "w": "Two",
+     "t": 153.046
+    },
+    {
+     "w": "plus",
+     "t": 153.291
+    },
+    {
+     "w": "three,",
+     "t": 153.583
+    },
+    {
+     "w": "times",
+     "t": 154.064
+    },
+    {
+     "w": "two",
+     "t": 154.403
+    },
+    {
+     "w": "plus",
+     "t": 154.648
+    },
+    {
+     "w": "four,",
+     "t": 154.941
+    },
+    {
+     "w": "is",
+     "t": 155.374
+    },
+    {
+     "w": "thirty.",
+     "t": 155.572
+    }
+   ]
+  },
+  "K3": {
+   "t0": 156.794,
+   "t1": 165.31,
+   "text": "Now you try. For sets, does union spread over intersection, the same way intersection spreads over union? Pause and decide.",
+   "words": [
+    {
+     "w": "Now",
+     "t": 156.794
+    },
+    {
+     "w": "you",
+     "t": 157.064
+    },
+    {
+     "w": "try.",
+     "t": 157.334
+    },
+    {
+     "w": "For",
+     "t": 157.864
+    },
+    {
+     "w": "sets,",
+     "t": 158.134
+    },
+    {
+     "w": "does",
+     "t": 158.612
+    },
+    {
+     "w": "union",
+     "t": 158.934
+    },
+    {
+     "w": "spread",
+     "t": 159.308
+    },
+    {
+     "w": "over",
+     "t": 159.733
+    },
+    {
+     "w": "intersection,",
+     "t": 160.055
+    },
+    {
+     "w": "the",
+     "t": 160.948
+    },
+    {
+     "w": "same",
+     "t": 161.218
+    },
+    {
+     "w": "way",
+     "t": 161.54
+    },
+    {
+     "w": "intersection",
+     "t": 161.81
+    },
+    {
+     "w": "spreads",
+     "t": 162.548
+    },
+    {
+     "w": "over",
+     "t": 163.025
+    },
+    {
+     "w": "union?",
+     "t": 163.347
+    },
+    {
+     "w": "Pause",
+     "t": 163.981
+    },
+    {
+     "w": "and",
+     "t": 164.354
+    },
+    {
+     "w": "decide.",
+     "t": 164.624
+    }
+   ]
+  },
+  "K4": {
+   "t0": 168.51,
+   "t1": 175.349,
+   "text": "Yes! With sets, both distributive laws are true. That is one way sets are friendlier than numbers.",
+   "words": [
+    {
+     "w": "Yes!",
+     "t": 168.51
+    },
+    {
+     "w": "With",
+     "t": 169.033
+    },
+    {
+     "w": "sets,",
+     "t": 169.351
+    },
+    {
+     "w": "both",
+     "t": 169.822
+    },
+    {
+     "w": "distributive",
+     "t": 170.14
+    },
+    {
+     "w": "laws",
+     "t": 170.868
+    },
+    {
+     "w": "are",
+     "t": 171.186
+    },
+    {
+     "w": "true.",
+     "t": 171.453
+    },
+    {
+     "w": "That",
+     "t": 172.027
+    },
+    {
+     "w": "is",
+     "t": 172.345
+    },
+    {
+     "w": "one",
+     "t": 172.56
+    },
+    {
+     "w": "way",
+     "t": 172.827
+    },
+    {
+     "w": "sets",
+     "t": 173.093
+    },
+    {
+     "w": "are",
+     "t": 173.411
+    },
+    {
+     "w": "friendlier",
+     "t": 173.678
+    },
+    {
+     "w": "than",
+     "t": 174.303
+    },
+    {
+     "w": "numbers.",
+     "t": 174.621
+    }
+   ]
+  },
+  "T1": {
+   "t0": 175.999,
+   "t1": 182.594,
+   "text": "Remember this. For union and intersection, order and brackets never matter, and each one spreads over the other.",
+   "words": [
+    {
+     "w": "Remember",
+     "t": 175.999
+    },
+    {
+     "w": "this.",
+     "t": 176.458
+    },
+    {
+     "w": "For",
+     "t": 176.962
+    },
+    {
+     "w": "union",
+     "t": 177.196
+    },
+    {
+     "w": "and",
+     "t": 177.52
+    },
+    {
+     "w": "intersection,",
+     "t": 177.754
+    },
+    {
+     "w": "order",
+     "t": 178.527
+    },
+    {
+     "w": "and",
+     "t": 178.851
+    },
+    {
+     "w": "brackets",
+     "t": 179.085
+    },
+    {
+     "w": "never",
+     "t": 179.544
+    },
+    {
+     "w": "matter,",
+     "t": 179.868
+    },
+    {
+     "w": "and",
+     "t": 180.372
+    },
+    {
+     "w": "each",
+     "t": 180.605
+    },
+    {
+     "w": "one",
+     "t": 180.884
+    },
+    {
+     "w": "spreads",
+     "t": 181.118
+    },
+    {
+     "w": "over",
+     "t": 181.532
+    },
+    {
+     "w": "the",
+     "t": 181.811
+    },
+    {
+     "w": "other.",
+     "t": 182.045
+    }
+   ]
+  },
+  "M1": {
+   "t0": 183.294,
+   "t1": 188.763,
+   "text": "Last, the laws for complements, named after the mathematician Augustus De Morgan.",
+   "words": [
+    {
+     "w": "Last,",
+     "t": 183.294
+    },
+    {
+     "w": "the",
+     "t": 183.776
+    },
+    {
+     "w": "laws",
+     "t": 184.048
+    },
+    {
+     "w": "for",
+     "t": 184.373
+    },
+    {
+     "w": "complements,",
+     "t": 184.645
+    },
+    {
+     "w": "named",
+     "t": 185.494
+    },
+    {
+     "w": "after",
+     "t": 185.871
+    },
+    {
+     "w": "the",
+     "t": 186.249
+    },
+    {
+     "w": "mathematician",
+     "t": 186.521
+    },
+    {
+     "w": "Augustus",
+     "t": 187.317
+    },
+    {
+     "w": "De",
+     "t": 187.852
+    },
+    {
+     "w": "Morgan.",
+     "t": 188.072
+    }
+   ]
+  },
+  "M2": {
+   "t0": 189.163,
+   "t1": 194.612,
+   "text": "Step one. The complement of A union B is everything outside both circles.",
+   "words": [
+    {
+     "w": "Step",
+     "t": 189.163
+    },
+    {
+     "w": "one.",
+     "t": 189.51
+    },
+    {
+     "w": "The",
+     "t": 190.079
+    },
+    {
+     "w": "complement",
+     "t": 190.369
+    },
+    {
+     "w": "of",
+     "t": 191.05
+    },
+    {
+     "w": "A",
+     "t": 191.285
+    },
+    {
+     "w": "union",
+     "t": 191.464
+    },
+    {
+     "w": "B",
+     "t": 191.866
+    },
+    {
+     "w": "is",
+     "t": 192.044
+    },
+    {
+     "w": "everything",
+     "t": 192.279
+    },
+    {
+     "w": "outside",
+     "t": 192.96
+    },
+    {
+     "w": "both",
+     "t": 193.473
+    },
+    {
+     "w": "circles.",
+     "t": 193.819
+    }
+   ]
+  },
+  "M3": {
+   "t0": 195.362,
+   "t1": 203.075,
+   "text": "Step two. Outside A is A complement. Outside B is B complement. Outside both is where these two overlap.",
+   "words": [
+    {
+     "w": "Step",
+     "t": 195.362
+    },
+    {
+     "w": "two.",
+     "t": 195.695
+    },
+    {
+     "w": "Outside",
+     "t": 196.242
+    },
+    {
+     "w": "A",
+     "t": 196.735
+    },
+    {
+     "w": "is",
+     "t": 196.907
+    },
+    {
+     "w": "A",
+     "t": 197.132
+    },
+    {
+     "w": "complement.",
+     "t": 197.304
+    },
+    {
+     "w": "Outside",
+     "t": 198.226
+    },
+    {
+     "w": "B",
+     "t": 198.72
+    },
+    {
+     "w": "is",
+     "t": 198.891
+    },
+    {
+     "w": "B",
+     "t": 199.117
+    },
+    {
+     "w": "complement.",
+     "t": 199.288
+    },
+    {
+     "w": "Outside",
+     "t": 200.211
+    },
+    {
+     "w": "both",
+     "t": 200.704
+    },
+    {
+     "w": "is",
+     "t": 201.037
+    },
+    {
+     "w": "where",
+     "t": 201.262
+    },
+    {
+     "w": "these",
+     "t": 201.648
+    },
+    {
+     "w": "two",
+     "t": 202.034
+    },
+    {
+     "w": "overlap.",
+     "t": 202.313
+    }
+   ]
+  },
+  "M4": {
+   "t0": 203.825,
+   "t1": 210.012,
+   "text": "Step three. So the complement of A union B equals A complement intersection B complement.",
+   "words": [
+    {
+     "w": "Step",
+     "t": 203.825
+    },
+    {
+     "w": "three.",
+     "t": 204.156
+    },
+    {
+     "w": "So",
+     "t": 204.806
+    },
+    {
+     "w": "the",
+     "t": 205.03
+    },
+    {
+     "w": "complement",
+     "t": 205.308
+    },
+    {
+     "w": "of",
+     "t": 205.958
+    },
+    {
+     "w": "A",
+     "t": 206.183
+    },
+    {
+     "w": "union",
+     "t": 206.353
+    },
+    {
+     "w": "B",
+     "t": 206.737
+    },
+    {
+     "w": "equals",
+     "t": 206.908
+    },
+    {
+     "w": "A",
+     "t": 207.345
+    },
+    {
+     "w": "complement",
+     "t": 207.516
+    },
+    {
+     "w": "intersection",
+     "t": 208.167
+    },
+    {
+     "w": "B",
+     "t": 208.924
+    },
+    {
+     "w": "complement.",
+     "t": 209.095
+    }
+   ]
+  },
+  "M5": {
+   "t0": 210.762,
+   "t1": 219.286,
+   "text": "In the same way, the complement of A intersection B equals A complement union B complement. The complement flips union into intersection.",
+   "words": [
+    {
+     "w": "In",
+     "t": 210.762
+    },
+    {
+     "w": "the",
+     "t": 210.968
+    },
+    {
+     "w": "same",
+     "t": 211.222
+    },
+    {
+     "w": "way,",
+     "t": 211.525
+    },
+    {
+     "w": "the",
+     "t": 211.926
+    },
+    {
+     "w": "complement",
+     "t": 212.18
+    },
+    {
+     "w": "of",
+     "t": 212.776
+    },
+    {
+     "w": "A",
+     "t": 212.981
+    },
+    {
+     "w": "intersection",
+     "t": 213.138
+    },
+    {
+     "w": "B",
+     "t": 213.832
+    },
+    {
+     "w": "equals",
+     "t": 213.988
+    },
+    {
+     "w": "A",
+     "t": 214.389
+    },
+    {
+     "w": "complement",
+     "t": 214.545
+    },
+    {
+     "w": "union",
+     "t": 215.141
+    },
+    {
+     "w": "B",
+     "t": 215.493
+    },
+    {
+     "w": "complement.",
+     "t": 215.65
+    },
+    {
+     "w": "The",
+     "t": 216.49
+    },
+    {
+     "w": "complement",
+     "t": 216.745
+    },
+    {
+     "w": "flips",
+     "t": 217.341
+    },
+    {
+     "w": "union",
+     "t": 217.693
+    },
+    {
+     "w": "into",
+     "t": 218.045
+    },
+    {
+     "w": "intersection.",
+     "t": 218.348
+    }
+   ]
+  },
+  "M6": {
+   "t0": 219.936,
+   "t1": 227.238,
+   "text": "Quick one. Is the complement of A union B the same as A complement union B complement? Pause and think.",
+   "words": [
+    {
+     "w": "Quick",
+     "t": 219.936
+    },
+    {
+     "w": "one.",
+     "t": 220.311
+    },
+    {
+     "w": "Is",
+     "t": 220.843
+    },
+    {
+     "w": "the",
+     "t": 221.062
+    },
+    {
+     "w": "complement",
+     "t": 221.334
+    },
+    {
+     "w": "of",
+     "t": 221.97
+    },
+    {
+     "w": "A",
+     "t": 222.189
+    },
+    {
+     "w": "union",
+     "t": 222.356
+    },
+    {
+     "w": "B",
+     "t": 222.731
+    },
+    {
+     "w": "the",
+     "t": 222.898
+    },
+    {
+     "w": "same",
+     "t": 223.17
+    },
+    {
+     "w": "as",
+     "t": 223.493
+    },
+    {
+     "w": "A",
+     "t": 223.712
+    },
+    {
+     "w": "complement",
+     "t": 223.879
+    },
+    {
+     "w": "union",
+     "t": 224.515
+    },
+    {
+     "w": "B",
+     "t": 224.891
+    },
+    {
+     "w": "complement?",
+     "t": 225.058
+    },
+    {
+     "w": "Pause",
+     "t": 225.955
+    },
+    {
+     "w": "and",
+     "t": 226.33
+    },
+    {
+     "w": "think.",
+     "t": 226.601
+    }
+   ]
+  },
+  "M7": {
+   "t0": 230.438,
+   "t1": 239.255,
+   "text": "No! A complement union B complement is the complement of A intersection B. It also covers the parts inside only one circle.",
+   "words": [
+    {
+     "w": "No!",
+     "t": 230.438
+    },
+    {
+     "w": "A",
+     "t": 230.937
+    },
+    {
+     "w": "complement",
+     "t": 231.111
+    },
+    {
+     "w": "union",
+     "t": 231.773
+    },
+    {
+     "w": "B",
+     "t": 232.164
+    },
+    {
+     "w": "complement",
+     "t": 232.338
+    },
+    {
+     "w": "is",
+     "t": 233.0
+    },
+    {
+     "w": "the",
+     "t": 233.228
+    },
+    {
+     "w": "complement",
+     "t": 233.511
+    },
+    {
+     "w": "of",
+     "t": 234.173
+    },
+    {
+     "w": "A",
+     "t": 234.401
+    },
+    {
+     "w": "intersection",
+     "t": 234.575
+    },
+    {
+     "w": "B.",
+     "t": 235.346
+    },
+    {
+     "w": "It",
+     "t": 235.791
+    },
+    {
+     "w": "also",
+     "t": 236.019
+    },
+    {
+     "w": "covers",
+     "t": 236.356
+    },
+    {
+     "w": "the",
+     "t": 236.801
+    },
+    {
+     "w": "parts",
+     "t": 237.083
+    },
+    {
+     "w": "inside",
+     "t": 237.474
+    },
+    {
+     "w": "only",
+     "t": 237.919
+    },
+    {
+     "w": "one",
+     "t": 238.256
+    },
+    {
+     "w": "circle.",
+     "t": 238.538
+    }
+   ]
+  },
+  "W1": {
+   "t0": 239.905,
+   "t1": 241.641,
+   "text": "Now, one worked example.",
+   "words": [
+    {
+     "w": "Now,",
+     "t": 239.905
+    },
+    {
+     "w": "one",
+     "t": 240.302
+    },
+    {
+     "w": "worked",
+     "t": 240.555
+    },
+    {
+     "w": "example.",
+     "t": 240.952
+    }
+   ]
+  },
+  "W2": {
+   "t0": 241.991,
+   "t1": 249.643,
+   "text": "U is one to eight. A is one, two, three and four. B is three, four, five and six. Check De Morgan's first law.",
+   "words": [
+    {
+     "w": "U",
+     "t": 241.991
+    },
+    {
+     "w": "is",
+     "t": 242.141
+    },
+    {
+     "w": "one",
+     "t": 242.338
+    },
+    {
+     "w": "to",
+     "t": 242.583
+    },
+    {
+     "w": "eight.",
+     "t": 242.78
+    },
+    {
+     "w": "A",
+     "t": 243.354
+    },
+    {
+     "w": "is",
+     "t": 243.504
+    },
+    {
+     "w": "one,",
+     "t": 243.701
+    },
+    {
+     "w": "two,",
+     "t": 244.087
+    },
+    {
+     "w": "three",
+     "t": 244.472
+    },
+    {
+     "w": "and",
+     "t": 244.811
+    },
+    {
+     "w": "four.",
+     "t": 245.055
+    },
+    {
+     "w": "B",
+     "t": 245.582
+    },
+    {
+     "w": "is",
+     "t": 245.732
+    },
+    {
+     "w": "three,",
+     "t": 245.929
+    },
+    {
+     "w": "four,",
+     "t": 246.409
+    },
+    {
+     "w": "five",
+     "t": 246.841
+    },
+    {
+     "w": "and",
+     "t": 247.133
+    },
+    {
+     "w": "six.",
+     "t": 247.377
+    },
+    {
+     "w": "Check",
+     "t": 247.856
+    },
+    {
+     "w": "De",
+     "t": 248.195
+    },
+    {
+     "w": "Morgan's",
+     "t": 248.392
+    },
+    {
+     "w": "first",
+     "t": 248.825
+    },
+    {
+     "w": "law.",
+     "t": 249.163
+    }
+   ]
+  },
+  "W3": {
+   "t0": 250.143,
+   "t1": 254.056,
+   "text": "Step one. A union B is the numbers one up to six.",
+   "words": [
+    {
+     "w": "Step",
+     "t": 250.143
+    },
+    {
+     "w": "one.",
+     "t": 250.478
+    },
+    {
+     "w": "A",
+     "t": 251.029
+    },
+    {
+     "w": "union",
+     "t": 251.202
+    },
+    {
+     "w": "B",
+     "t": 251.591
+    },
+    {
+     "w": "is",
+     "t": 251.764
+    },
+    {
+     "w": "the",
+     "t": 251.991
+    },
+    {
+     "w": "numbers",
+     "t": 252.272
+    },
+    {
+     "w": "one",
+     "t": 252.77
+    },
+    {
+     "w": "up",
+     "t": 253.051
+    },
+    {
+     "w": "to",
+     "t": 253.278
+    },
+    {
+     "w": "six.",
+     "t": 253.505
+    }
+   ]
+  },
+  "W4": {
+   "t0": 254.806,
+   "t1": 258.421,
+   "text": "Step two. Its complement in U is seven and eight.",
+   "words": [
+    {
+     "w": "Step",
+     "t": 254.806
+    },
+    {
+     "w": "two.",
+     "t": 255.126
+    },
+    {
+     "w": "Its",
+     "t": 255.653
+    },
+    {
+     "w": "complement",
+     "t": 255.922
+    },
+    {
+     "w": "in",
+     "t": 256.552
+    },
+    {
+     "w": "U",
+     "t": 256.769
+    },
+    {
+     "w": "is",
+     "t": 256.934
+    },
+    {
+     "w": "seven",
+     "t": 257.151
+    },
+    {
+     "w": "and",
+     "t": 257.523
+    },
+    {
+     "w": "eight.",
+     "t": 257.791
+    }
+   ]
+  },
+  "W5": {
+   "t0": 259.171,
+   "t1": 265.878,
+   "text": "Step three. A complement is five, six, seven and eight. B complement is one, two, seven and eight.",
+   "words": [
+    {
+     "w": "Step",
+     "t": 259.171
+    },
+    {
+     "w": "three.",
+     "t": 259.467
+    },
+    {
+     "w": "A",
+     "t": 260.049
+    },
+    {
+     "w": "complement",
+     "t": 260.202
+    },
+    {
+     "w": "is",
+     "t": 260.784
+    },
+    {
+     "w": "five,",
+     "t": 260.984
+    },
+    {
+     "w": "six,",
+     "t": 261.423
+    },
+    {
+     "w": "seven",
+     "t": 261.814
+    },
+    {
+     "w": "and",
+     "t": 262.158
+    },
+    {
+     "w": "eight.",
+     "t": 262.406
+    },
+    {
+     "w": "B",
+     "t": 262.988
+    },
+    {
+     "w": "complement",
+     "t": 263.14
+    },
+    {
+     "w": "is",
+     "t": 263.722
+    },
+    {
+     "w": "one,",
+     "t": 263.923
+    },
+    {
+     "w": "two,",
+     "t": 264.314
+    },
+    {
+     "w": "seven",
+     "t": 264.705
+    },
+    {
+     "w": "and",
+     "t": 265.048
+    },
+    {
+     "w": "eight.",
+     "t": 265.296
+    }
+   ]
+  },
+  "W6": {
+   "t0": 266.628,
+   "t1": 270.547,
+   "text": "Step four. The numbers in both of them are seven and eight.",
+   "words": [
+    {
+     "w": "Step",
+     "t": 266.628
+    },
+    {
+     "w": "four.",
+     "t": 266.923
+    },
+    {
+     "w": "The",
+     "t": 267.456
+    },
+    {
+     "w": "numbers",
+     "t": 267.703
+    },
+    {
+     "w": "in",
+     "t": 268.141
+    },
+    {
+     "w": "both",
+     "t": 268.34
+    },
+    {
+     "w": "of",
+     "t": 268.635
+    },
+    {
+     "w": "them",
+     "t": 268.835
+    },
+    {
+     "w": "are",
+     "t": 269.13
+    },
+    {
+     "w": "seven",
+     "t": 269.377
+    },
+    {
+     "w": "and",
+     "t": 269.719
+    },
+    {
+     "w": "eight.",
+     "t": 269.966
+    }
+   ]
+  },
+  "W7": {
+   "t0": 271.297,
+   "t1": 276.228,
+   "text": "Step five. Both sides give seven and eight. De Morgan's law checks out.",
+   "words": [
+    {
+     "w": "Step",
+     "t": 271.297
+    },
+    {
+     "w": "five.",
+     "t": 271.607
+    },
+    {
+     "w": "Both",
+     "t": 272.167
+    },
+    {
+     "w": "sides",
+     "t": 272.477
+    },
+    {
+     "w": "give",
+     "t": 272.837
+    },
+    {
+     "w": "seven",
+     "t": 273.147
+    },
+    {
+     "w": "and",
+     "t": 273.507
+    },
+    {
+     "w": "eight.",
+     "t": 273.767
+    },
+    {
+     "w": "De",
+     "t": 274.378
+    },
+    {
+     "w": "Morgan's",
+     "t": 274.588
+    },
+    {
+     "w": "law",
+     "t": 275.048
+    },
+    {
+     "w": "checks",
+     "t": 275.308
+    },
+    {
+     "w": "out.",
+     "t": 275.718
+    }
+   ]
+  },
+  "X1": {
+   "t0": 276.878,
+   "t1": 278.344,
+   "text": "Now, the exam trap.",
+   "words": [
+    {
+     "w": "Now,",
+     "t": 276.878
+    },
+    {
+     "w": "the",
+     "t": 277.269
+    },
+    {
+     "w": "exam",
+     "t": 277.516
+    },
+    {
+     "w": "trap.",
+     "t": 277.811
+    }
+   ]
+  },
+  "X2": {
+   "t0": 278.694,
+   "t1": 288.895,
+   "text": "Many students move brackets freely, even when union and intersection are mixed. They write A union, B intersection C, as A union B, then intersection C.",
+   "words": [
+    {
+     "w": "Many",
+     "t": 278.694
+    },
+    {
+     "w": "students",
+     "t": 279.01
+    },
+    {
+     "w": "move",
+     "t": 279.53
+    },
+    {
+     "w": "brackets",
+     "t": 279.846
+    },
+    {
+     "w": "freely,",
+     "t": 280.365
+    },
+    {
+     "w": "even",
+     "t": 280.936
+    },
+    {
+     "w": "when",
+     "t": 281.252
+    },
+    {
+     "w": "union",
+     "t": 281.568
+    },
+    {
+     "w": "and",
+     "t": 281.935
+    },
+    {
+     "w": "intersection",
+     "t": 282.2
+    },
+    {
+     "w": "are",
+     "t": 282.923
+    },
+    {
+     "w": "mixed.",
+     "t": 283.188
+    },
+    {
+     "w": "They",
+     "t": 283.81
+    },
+    {
+     "w": "write",
+     "t": 284.126
+    },
+    {
+     "w": "A",
+     "t": 284.493
+    },
+    {
+     "w": "union,",
+     "t": 284.656
+    },
+    {
+     "w": "B",
+     "t": 285.175
+    },
+    {
+     "w": "intersection",
+     "t": 285.339
+    },
+    {
+     "w": "C,",
+     "t": 286.062
+    },
+    {
+     "w": "as",
+     "t": 286.378
+    },
+    {
+     "w": "A",
+     "t": 286.592
+    },
+    {
+     "w": "union",
+     "t": 286.755
+    },
+    {
+     "w": "B,",
+     "t": 287.122
+    },
+    {
+     "w": "then",
+     "t": 287.438
+    },
+    {
+     "w": "intersection",
+     "t": 287.754
+    },
+    {
+     "w": "C.",
+     "t": 288.477
+    }
+   ]
+  },
+  "X3": {
+   "t0": 289.295,
+   "t1": 299.819,
+   "text": "Test it. A is one, B is two, C is three. The left side is one. The right side is the empty set. Brackets move freely only when the operation is the same.",
+   "words": [
+    {
+     "w": "Test",
+     "t": 289.295
+    },
+    {
+     "w": "it.",
+     "t": 289.595
+    },
+    {
+     "w": "A",
+     "t": 290.04
+    },
+    {
+     "w": "is",
+     "t": 290.195
+    },
+    {
+     "w": "one,",
+     "t": 290.398
+    },
+    {
+     "w": "B",
+     "t": 290.794
+    },
+    {
+     "w": "is",
+     "t": 290.949
+    },
+    {
+     "w": "two,",
+     "t": 291.152
+    },
+    {
+     "w": "C",
+     "t": 291.549
+    },
+    {
+     "w": "is",
+     "t": 291.704
+    },
+    {
+     "w": "three.",
+     "t": 291.907
+    },
+    {
+     "w": "The",
+     "t": 292.497
+    },
+    {
+     "w": "left",
+     "t": 292.748
+    },
+    {
+     "w": "side",
+     "t": 293.048
+    },
+    {
+     "w": "is",
+     "t": 293.348
+    },
+    {
+     "w": "one.",
+     "t": 293.551
+    },
+    {
+     "w": "The",
+     "t": 294.044
+    },
+    {
+     "w": "right",
+     "t": 294.296
+    },
+    {
+     "w": "side",
+     "t": 294.644
+    },
+    {
+     "w": "is",
+     "t": 294.944
+    },
+    {
+     "w": "the",
+     "t": 295.147
+    },
+    {
+     "w": "empty",
+     "t": 295.399
+    },
+    {
+     "w": "set.",
+     "t": 295.747
+    },
+    {
+     "w": "Brackets",
+     "t": 296.24
+    },
+    {
+     "w": "move",
+     "t": 296.733
+    },
+    {
+     "w": "freely",
+     "t": 297.033
+    },
+    {
+     "w": "only",
+     "t": 297.43
+    },
+    {
+     "w": "when",
+     "t": 297.73
+    },
+    {
+     "w": "the",
+     "t": 298.029
+    },
+    {
+     "w": "operation",
+     "t": 298.281
+    },
+    {
+     "w": "is",
+     "t": 298.823
+    },
+    {
+     "w": "the",
+     "t": 299.026
+    },
+    {
+     "w": "same.",
+     "t": 299.277
+    }
+   ]
+  },
+  "J1": {
+   "t0": 300.469,
+   "t1": 311.834,
+   "text": "Where is this asked? In PUC board exams, as: verify a law, or prove an identity like De Morgan's. And in JEE Main, as: which set statement is not true.",
+   "words": [
+    {
+     "w": "Where",
+     "t": 300.469
+    },
+    {
+     "w": "is",
+     "t": 300.86
+    },
+    {
+     "w": "this",
+     "t": 301.089
+    },
+    {
+     "w": "asked?",
+     "t": 301.426
+    },
+    {
+     "w": "In",
+     "t": 302.089
+    },
+    {
+     "w": "PUC",
+     "t": 302.318
+    },
+    {
+     "w": "board",
+     "t": 302.6
+    },
+    {
+     "w": "exams,",
+     "t": 302.992
+    },
+    {
+     "w": "as:",
+     "t": 303.547
+    },
+    {
+     "w": "verify",
+     "t": 303.938
+    },
+    {
+     "w": "a",
+     "t": 304.384
+    },
+    {
+     "w": "law,",
+     "t": 304.558
+    },
+    {
+     "w": "or",
+     "t": 305.004
+    },
+    {
+     "w": "prove",
+     "t": 305.232
+    },
+    {
+     "w": "an",
+     "t": 305.624
+    },
+    {
+     "w": "identity",
+     "t": 305.852
+    },
+    {
+     "w": "like",
+     "t": 306.407
+    },
+    {
+     "w": "De",
+     "t": 306.744
+    },
+    {
+     "w": "Morgan's.",
+     "t": 306.972
+    },
+    {
+     "w": "And",
+     "t": 307.744
+    },
+    {
+     "w": "in",
+     "t": 308.027
+    },
+    {
+     "w": "JEE",
+     "t": 308.256
+    },
+    {
+     "w": "Main,",
+     "t": 308.538
+    },
+    {
+     "w": "as:",
+     "t": 309.039
+    },
+    {
+     "w": "which",
+     "t": 309.43
+    },
+    {
+     "w": "set",
+     "t": 309.822
+    },
+    {
+     "w": "statement",
+     "t": 310.104
+    },
+    {
+     "w": "is",
+     "t": 310.713
+    },
+    {
+     "w": "not",
+     "t": 310.942
+    },
+    {
+     "w": "true.",
+     "t": 311.225
+    }
+   ]
+  },
+  "Q1": {
+   "t0": 312.434,
+   "t1": 316.573,
+   "text": "Exam level now. Simplify this set. Pause and solve.",
+   "words": [
+    {
+     "w": "Exam",
+     "t": 312.434
+    },
+    {
+     "w": "level",
+     "t": 312.777
+    },
+    {
+     "w": "now.",
+     "t": 313.175
+    },
+    {
+     "w": "Simplify",
+     "t": 313.74
+    },
+    {
+     "w": "this",
+     "t": 314.304
+    },
+    {
+     "w": "set.",
+     "t": 314.647
+    },
+    {
+     "w": "Pause",
+     "t": 315.212
+    },
+    {
+     "w": "and",
+     "t": 315.61
+    },
+    {
+     "w": "solve.",
+     "t": 315.898
+    }
+   ]
+  },
+  "A1": {
+   "t0": 321.973,
+   "t1": 324.336,
+   "text": "The answer is C. Just B.",
+   "words": [
+    {
+     "w": "The",
+     "t": 321.973
+    },
+    {
+     "w": "answer",
+     "t": 322.279
+    },
+    {
+     "w": "is",
+     "t": 322.761
+    },
+    {
+     "w": "C.",
+     "t": 323.008
+    },
+    {
+     "w": "Just",
+     "t": 323.489
+    },
+    {
+     "w": "B.",
+     "t": 323.854
+    }
+   ]
+  },
+  "A2": {
+   "t0": 324.836,
+   "t1": 331.317,
+   "text": "Both brackets contain union B. So use the distributive law in reverse, and take B outside.",
+   "words": [
+    {
+     "w": "Both",
+     "t": 324.836
+    },
+    {
+     "w": "brackets",
+     "t": 325.17
+    },
+    {
+     "w": "contain",
+     "t": 325.72
+    },
+    {
+     "w": "union",
+     "t": 326.216
+    },
+    {
+     "w": "B.",
+     "t": 326.604
+    },
+    {
+     "w": "So",
+     "t": 327.046
+    },
+    {
+     "w": "use",
+     "t": 327.273
+    },
+    {
+     "w": "the",
+     "t": 327.553
+    },
+    {
+     "w": "distributive",
+     "t": 327.833
+    },
+    {
+     "w": "law",
+     "t": 328.599
+    },
+    {
+     "w": "in",
+     "t": 328.88
+    },
+    {
+     "w": "reverse,",
+     "t": 329.106
+    },
+    {
+     "w": "and",
+     "t": 329.764
+    },
+    {
+     "w": "take",
+     "t": 330.044
+    },
+    {
+     "w": "B",
+     "t": 330.378
+    },
+    {
+     "w": "outside.",
+     "t": 330.551
+    }
+   ]
+  },
+  "A3": {
+   "t0": 331.817,
+   "t1": 334.716,
+   "text": "That leaves A intersection A complement, union B.",
+   "words": [
+    {
+     "w": "That",
+     "t": 331.817
+    },
+    {
+     "w": "leaves",
+     "t": 332.091
+    },
+    {
+     "w": "A",
+     "t": 332.453
+    },
+    {
+     "w": "intersection",
+     "t": 332.595
+    },
+    {
+     "w": "A",
+     "t": 333.222
+    },
+    {
+     "w": "complement,",
+     "t": 333.364
+    },
+    {
+     "w": "union",
+     "t": 334.035
+    },
+    {
+     "w": "B.",
+     "t": 334.354
+    }
+   ]
+  },
+  "A4": {
+   "t0": 335.216,
+   "t1": 340.782,
+   "text": "A intersection A complement is the empty set. And the empty set union B is just B.",
+   "words": [
+    {
+     "w": "A",
+     "t": 335.216
+    },
+    {
+     "w": "intersection",
+     "t": 335.376
+    },
+    {
+     "w": "A",
+     "t": 336.085
+    },
+    {
+     "w": "complement",
+     "t": 336.245
+    },
+    {
+     "w": "is",
+     "t": 336.855
+    },
+    {
+     "w": "the",
+     "t": 337.065
+    },
+    {
+     "w": "empty",
+     "t": 337.324
+    },
+    {
+     "w": "set.",
+     "t": 337.684
+    },
+    {
+     "w": "And",
+     "t": 338.194
+    },
+    {
+     "w": "the",
+     "t": 338.454
+    },
+    {
+     "w": "empty",
+     "t": 338.713
+    },
+    {
+     "w": "set",
+     "t": 339.073
+    },
+    {
+     "w": "union",
+     "t": 339.333
+    },
+    {
+     "w": "B",
+     "t": 339.693
+    },
+    {
+     "w": "is",
+     "t": 339.853
+    },
+    {
+     "w": "just",
+     "t": 340.063
+    },
+    {
+     "w": "B.",
+     "t": 340.372
+    }
+   ]
+  },
+  "F1": {
+   "t0": 341.382,
+   "t1": 344.344,
+   "text": "Here is your recap. Screenshot this card.",
+   "words": [
+    {
+     "w": "Here",
+     "t": 341.382
+    },
+    {
+     "w": "is",
+     "t": 341.696
+    },
+    {
+     "w": "your",
+     "t": 341.91
+    },
+    {
+     "w": "recap.",
+     "t": 342.224
+    },
+    {
+     "w": "Screenshot",
+     "t": 342.843
+    },
+    {
+     "w": "this",
+     "t": 343.461
+    },
+    {
+     "w": "card.",
+     "t": 343.776
+    }
+   ]
+  },
+  "Y1": {
+   "t0": 347.544,
+   "t1": 350.381,
+   "text": "Can you answer these three questions without help?",
+   "words": [
+    {
+     "w": "Can",
+     "t": 347.544
+    },
+    {
+     "w": "you",
+     "t": 347.772
+    },
+    {
+     "w": "answer",
+     "t": 348.001
+    },
+    {
+     "w": "these",
+     "t": 348.361
+    },
+    {
+     "w": "three",
+     "t": 348.677
+    },
+    {
+     "w": "questions",
+     "t": 348.993
+    },
+    {
+     "w": "without",
+     "t": 349.485
+    },
+    {
+     "w": "help?",
+     "t": 349.889
+    }
+   ]
+  },
+  "Y2": {
+   "t0": 350.781,
+   "t1": 354.733,
+   "text": "One. Which law says A union B equals B union A?",
+   "words": [
+    {
+     "w": "One.",
+     "t": 350.781
+    },
+    {
+     "w": "Which",
+     "t": 351.363
+    },
+    {
+     "w": "law",
+     "t": 351.774
+    },
+    {
+     "w": "says",
+     "t": 352.071
+    },
+    {
+     "w": "A",
+     "t": 352.426
+    },
+    {
+     "w": "union",
+     "t": 352.608
+    },
+    {
+     "w": "B",
+     "t": 353.02
+    },
+    {
+     "w": "equals",
+     "t": 353.202
+    },
+    {
+     "w": "B",
+     "t": 353.671
+    },
+    {
+     "w": "union",
+     "t": 353.853
+    },
+    {
+     "w": "A?",
+     "t": 354.265
+    }
+   ]
+  },
+  "Y3": {
+   "t0": 355.633,
+   "t1": 358.565,
+   "text": "Two. What is A intersection the empty set?",
+   "words": [
+    {
+     "w": "Two.",
+     "t": 355.633
+    },
+    {
+     "w": "What",
+     "t": 356.127
+    },
+    {
+     "w": "is",
+     "t": 356.427
+    },
+    {
+     "w": "A",
+     "t": 356.63
+    },
+    {
+     "w": "intersection",
+     "t": 356.785
+    },
+    {
+     "w": "the",
+     "t": 357.472
+    },
+    {
+     "w": "empty",
+     "t": 357.723
+    },
+    {
+     "w": "set?",
+     "t": 358.072
+    }
+   ]
+  },
+  "Y4": {
+   "t0": 359.465,
+   "t1": 364.322,
+   "text": "Three. Write the complement of A intersection B, using De Morgan's law.",
+   "words": [
+    {
+     "w": "Three.",
+     "t": 359.465
+    },
+    {
+     "w": "Write",
+     "t": 360.086
+    },
+    {
+     "w": "the",
+     "t": 360.453
+    },
+    {
+     "w": "complement",
+     "t": 360.717
+    },
+    {
+     "w": "of",
+     "t": 361.338
+    },
+    {
+     "w": "A",
+     "t": 361.552
+    },
+    {
+     "w": "intersection",
+     "t": 361.715
+    },
+    {
+     "w": "B,",
+     "t": 362.438
+    },
+    {
+     "w": "using",
+     "t": 362.754
+    },
+    {
+     "w": "De",
+     "t": 363.12
+    },
+    {
+     "w": "Morgan's",
+     "t": 363.334
+    },
+    {
+     "w": "law.",
+     "t": 363.802
+    }
+   ]
+  },
+  "N1": {
+   "t0": 365.422,
+   "t1": 373.943,
+   "text": "Next time: twenty five students like tea, eighteen like coffee, and ten like both. So how many students are there? We count it with sets.",
+   "words": [
+    {
+     "w": "Next",
+     "t": 365.422
+    },
+    {
+     "w": "time:",
+     "t": 365.706
+    },
+    {
+     "w": "twenty",
+     "t": 366.127
+    },
+    {
+     "w": "five",
+     "t": 366.503
+    },
+    {
+     "w": "students",
+     "t": 366.787
+    },
+    {
+     "w": "like",
+     "t": 367.254
+    },
+    {
+     "w": "tea,",
+     "t": 367.538
+    },
+    {
+     "w": "eighteen",
+     "t": 367.914
+    },
+    {
+     "w": "like",
+     "t": 368.381
+    },
+    {
+     "w": "coffee,",
+     "t": 368.665
+    },
+    {
+     "w": "and",
+     "t": 369.178
+    },
+    {
+     "w": "ten",
+     "t": 369.417
+    },
+    {
+     "w": "like",
+     "t": 369.655
+    },
+    {
+     "w": "both.",
+     "t": 369.939
+    },
+    {
+     "w": "So",
+     "t": 370.452
+    },
+    {
+     "w": "how",
+     "t": 370.644
+    },
+    {
+     "w": "many",
+     "t": 370.883
+    },
+    {
+     "w": "students",
+     "t": 371.167
+    },
+    {
+     "w": "are",
+     "t": 371.634
+    },
+    {
+     "w": "there?",
+     "t": 371.872
+    },
+    {
+     "w": "We",
+     "t": 372.431
+    },
+    {
+     "w": "count",
+     "t": 372.624
+    },
+    {
+     "w": "it",
+     "t": 372.953
+    },
+    {
+     "w": "with",
+     "t": 373.146
+    },
+    {
+     "w": "sets.",
+     "t": 373.43
+    }
+   ]
+  }
+ },
+ "order": [
+  "H1",
+  "H2",
+  "H3",
+  "H4",
+  "H5",
+  "C1",
+  "C2",
+  "C3",
+  "C4",
+  "C5",
+  "I1",
+  "I2",
+  "I3",
+  "I4",
+  "D1",
+  "D2",
+  "D3",
+  "D4",
+  "D5",
+  "D6",
+  "K1",
+  "K2",
+  "K3",
+  "K4",
+  "T1",
+  "M1",
+  "M2",
+  "M3",
+  "M4",
+  "M5",
+  "M6",
+  "M7",
+  "W1",
+  "W2",
+  "W3",
+  "W4",
+  "W5",
+  "W6",
+  "W7",
+  "X1",
+  "X2",
+  "X3",
+  "J1",
+  "Q1",
+  "A1",
+  "A2",
+  "A3",
+  "A4",
+  "F1",
+  "Y1",
+  "Y2",
+  "Y3",
+  "Y4",
+  "N1"
+ ],
+ "dur": 374.243
+}

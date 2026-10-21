@@ -125,7 +125,7 @@ const tRect = mk(ts, 'path', { d: rectP(24, 36, 512, 222, 14), fill: 'none', str
 const tOut = [[1, 76, 100], [5, 76, 200], [7, 486, 150]].map(([n, x, y]) => tok(ts, n, x, y, { mono: 1, fs: 28, rr: 22, col: C.red }));
 const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'PUC BOARDS'], type: 'Draw or shade a Venn diagram, or pick the diagram that fits a statement.' });
 const PT = `P = (A \\cap B) \\cup (B \\cap C) \\cup (C \\cap A)`;
-const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 560,
+const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 660,
   q: `Let ${K(PT)}.<br>Which set is shaded?`,
   opts: [K('P'), K('P - (A \\cap B \\cap C)'), K('(A \\cup B \\cup C) - P'), K('A \\cap B \\cap C')], right: 1, cols: 1, optW: 540, optH: 76, optY: 214, optFs: 28 });
 const ms = $('#mS');
@@ -152,7 +152,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 11', topic: 'Does the order e
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('V5') - 0.2, 1.06, 1300, 560], [T0('R1') - 0.4, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('V5') - 0.2, 1.04, 960, 560], [T0('R1') - 0.4, 1, 960, 540]]);
 
 M.on(t => {
   camF(t); head(t); sweep(t);
@@ -207,6 +207,7 @@ M.on(t => {
     const out = OUT('K5');
     [0, 1, 2].forEach(i => { M.vis($('#k' + i), t, tK1 + 0.2 + i * 0.15, out, { dy: 30, ...o });
       kC[i].forEach((c, j) => { M.draw(c.c, t, tK[i] + j * 0.25, 0.6); M.vis(c.lb, t, tK[i] + j * 0.25 + 0.2, 1e9, POP); });
+      M.vis($(`#k${i} .cap2`), t, tK[i] + 0.3, 1e9, { dy: 10 }); M.vis($(`#k${i} .sub2`), t, tK[i] + 0.5, 1e9, { dy: 10 });
       M.vis($(`#k${i} .ex`), t, tK[i] + 0.8, 1e9, POP); });
     M.vis($('#th1'), t, T0('K5') + 0.05, OUT('T1') + 0.2, { dy: 36, ...o });
     th1(t, { tin: T0('K5'), tOpts: wt('K5', 'How') - 0.1, tCount: T1('K5') + 0.05, dur: 3, tAns: T0('K6') - 0.02, tWhy: wt('K6', 'Every') });

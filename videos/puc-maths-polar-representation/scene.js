@@ -119,7 +119,7 @@ const tPs = [wt('P1', 'Multiply'), wt('P2', 'which'), wt('P2', 'turns')];
 const pS = $('#pS'), PP = plane(pS, { ox: 410, oy: 300, s: 48, x0: -6.6, x1: 7, y0: -4.6, y1: 5.2 });
 const pGhost = seg(pS, MO, 3, '6 6'); setL(pGhost, PP.ox, PP.oy, PP.X(4), PP.Y(3));
 const pRad = seg(pS, MO, 6), pTurn = mk(pS, 'path', { d: '', fill: 'none', stroke: IV, 'stroke-width': 4.5 });
-const pZ0 = zpt(pS, true, 'z', C.ink2); pZ0.set(PP.X(4), PP.Y(3));
+const pZ0 = zpt(pS, false, 'z', C.ink2); pZ0.set(PP.X(4), PP.Y(3));
 const pZ = zpt(pS, false, 'iz'); const pTL = txt(pS, PP.X(0) + 70, PP.Y(0) - 92, '+90°', { 'font-size': 22, fill: IV, 'font-weight': 600 });
 const pZL = txt(pS, PP.X(-3) - 18, PP.Y(4) - 2, '-3 + 4i', { 'text-anchor': 'end', 'font-size': 20, fill: C.ink, 'font-weight': 600 });
 const th2 = PUC.think($('#th2'), { q: 'Is 2(cos 60° - i sin 60°) in polar form?', opts: ['Yes', 'No'], right: 1, why: 'Polar form needs a plus sign: 2(cos(-60°) + i sin(-60°)). The angle is -60°.' });
@@ -156,11 +156,11 @@ const tVd = mk(tS, 'circle', { cx: TP.X(-2 * Math.cos(TA)), cy: TP.Y(-2 * Math.s
 const tVa = mk(tS, 'path', { d: arcD(TP.ox, TP.oy, 34, TA, TA + Math.PI), fill: 'none', stroke: C.ok, 'stroke-width': 4 });
 const tVL = txt(tS, TP.X(-2 * Math.cos(TA)) - 14, TP.Y(-2 * Math.sin(TA)) + 30, 'θ + π, r = 2', { 'text-anchor': 'start', 'font-size': 18, fill: C.ok, 'font-weight': 600 });
 const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'JEE ADVANCED'], type: 'Powers and products of complex numbers, easy only in polar form' });
-const OP = (r, a) => K(`${r}\\left(\\cos\\tfrac{${a}}{12} + i\\sin\\tfrac{${a}}{12}\\right)`);
+const OP = (r, a) => K(`${r}\\,(\\cos ${a}^\\circ + i\\sin ${a}^\\circ)`);
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 760, cols: 1, optW: 800, optH: 70, optY: 222, optFs: 30,
   q: `${K(`z = (1 + i)(\\sqrt3 + i)`)}<br>Which is the polar form of z?`,
-  opts: [OP('2\\sqrt2', '5\\pi'), OP('2\\sqrt2', '\\pi'), OP('2', '5\\pi'), OP('4', '5\\pi')], right: 0 });
-const so = PUC.solution($('#so'), [[K(`1 + i:\\ ${R} = \\sqrt2,\\ ${TH} = \\tfrac{\\pi}{4}`)], [K(`\\sqrt3 + i:\\ ${R} = 2,\\ ${TH} = \\tfrac{\\pi}{6}`)], [K(`${R} = \\sqrt2 \\times 2 = 2\\sqrt2`)], [K(`${TH} = \\tfrac{\\pi}{4} + \\tfrac{\\pi}{6} = \\tfrac{5\\pi}{12}`)]], { y0: 100, dy: 100 });
+  opts: [OP('2\\sqrt2', '75'), OP('2\\sqrt2', '15'), OP('2', '75'), OP('4', '75')], right: 0 });
+const so = PUC.solution($('#so'), [[K(`1 + i:\\ ${R} = \\sqrt2,\\ ${TH} = \\tfrac{\\pi}{4}`)], [K(`\\sqrt3 + i:\\ ${R} = 2,\\ ${TH} = \\tfrac{\\pi}{6}`)], [K(`${R} = \\sqrt2 \\times 2 = 2\\sqrt2`)], [K(`${TH} = \\tfrac{\\pi}{4} + \\tfrac{\\pi}{6} = \\tfrac{5\\pi}{12} = 75^\\circ`)]], { y0: 100, dy: 100 });
 const tSo = [wt('A2', 'One'), wt('A3', 'Root'), wt('A4', 'Multiply'), wt('A4', 'Add')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · polar form', y0: 100, dy: 78, txt: [0, 0, 0, 0, 1],
   lines: [K(`z = ${R}\\,(\\cos${TH} + ${iv('i')}\\sin${TH}), \\quad ${R} > 0`),

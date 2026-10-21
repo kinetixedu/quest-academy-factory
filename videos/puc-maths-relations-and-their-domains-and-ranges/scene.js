@@ -131,8 +131,8 @@ const tDots = []; [0, 1, 2].forEach(i => [0, 1].forEach(j => { const g = pin(ts,
 const tLb = txt(ts, 250, 236, '6 pairs: each kept or left', { 'font-size': 20, 'font-weight': 600, fill: C.ink2 });
 const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'PUC BOARDS'], type: 'Find the domain and range · count the pairs in a relation · count relations' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 860,
-  q: `${K(`A = \\{1, 2, \\dots, 10\\},\\ \\ R = \\{(x, y) \\in A \\times A : x + 2y = 12\\}`)}<br>How many elements does ${K(`\\text{Domain} \\cup \\text{Range}`)} have?`,
-  opts: ['10', '8', '6', '5'], right: 1, optW: 474, optY: 290 });
+  q: `${K(`A = \\{1, 2, \\dots, 10\\}`)}<br>${K(`R = \\{(x, y) \\in A \\times A : x + 2y = 12\\}`)}<br>How many elements does ${K(`\\text{Domain} \\cup \\text{Range}`)} have?`,
+  opts: ['10', '8', '6', '5'], right: 1, optW: 474, optY: 330 });
 const so = PUC.solution($('#so'), [
   [K(`x = 12 - 2y,\\ \\ y = 1, \\dots, 5`)],
   [K(`y = 6 \\Rightarrow x = 0 \\notin A`)],

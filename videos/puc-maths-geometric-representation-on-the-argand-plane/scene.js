@@ -96,7 +96,7 @@ const gmS = $('#gmS'), GM = plane(gmS, { ox: 150, oy: 480, s: 64, x0: -0.5, x1: 
 const gmR = seg(gmS, MO, 6); setL(gmR, GM.ox, GM.oy, GM.X(4), GM.Y(3)); const gmZ = zpt(gmS, false, 'P'); gmZ.set(GM.X(4), GM.Y(3));
 const gmL = txt(gmS, GM.X(2) - 16, GM.Y(1.5) - 14, '|z| = 5', { 'text-anchor': 'end', 'font-size': 24, fill: MO, 'font-weight': 600 });
 const gmZL = txt(gmS, GM.X(4) + 22, GM.Y(3) + 34, '4 + 3i', { 'font-size': 20, fill: C.ink, 'font-weight': 600 });
-const gcS = $('#gcS'), GC = plane(gcS, { ox: 180, oy: 340, s: 48, x0: -0.5, x1: 11.5, y0: -4.2, y1: 4.2 });
+const gcS = $('#gcS'), GC = plane(gcS, { ox: 180, oy: 370, s: 44, x0: -0.5, x1: 11.5, y0: -4.2, y1: 4.2 });
 const gcM = mk(gcS, 'line', { x1: GC.X(-0.5), y1: GC.oy, x2: GC.X(11.5), y2: GC.oy, stroke: RE, 'stroke-width': 7, 'stroke-linecap': 'round', opacity: 0.85 });
 const gcL = seg(gcS, IM, 4, '7 6'); setL(gcL, GC.X(4), GC.Y(3) + 14, GC.X(4), GC.Y(-3) - 14);
 const gcZ = zpt(gcS, false), gcB = zpt(gcS, true); gcZ.set(GC.X(4), GC.Y(3)); gcB.set(GC.X(4), GC.Y(-3));
@@ -141,8 +141,8 @@ const wS = $('#wS'), WP = plane(wS, { ox: 230, oy: 330, s: 66, x0: -1, x1: 7, y0
 const wA = seg(wS, RE, 6), wB = seg(wS, IM, 6), wH = seg(wS, MO, 6);
 setL(wA, WP.X(1), WP.Y(2), WP.X(4), WP.Y(2)); setL(wB, WP.X(4), WP.Y(2), WP.X(4), WP.Y(-2)); setL(wH, WP.X(1), WP.Y(2), WP.X(4), WP.Y(-2));
 const w1 = zpt(wS, false, null), w2 = zpt(wS, false, null); w1.set(WP.X(1), WP.Y(2)); w2.set(WP.X(4), WP.Y(-2));
-const w1L = txt(wS, WP.X(1) - 16, WP.Y(2) - 14, 'z₁ = 1 + 2i', { 'text-anchor': 'end', 'font-size': 20, fill: C.ink, 'font-weight': 600 });
-const w2L = txt(wS, WP.X(4) + 16, WP.Y(-2) + 32, 'z₂ = 4 - 2i', { 'font-size': 20, fill: C.ink, 'font-weight': 600 });
+const w1L = txt(wS, WP.X(1) - 16, WP.Y(2) - 14, 'z₁', { 'text-anchor': 'end', 'font-size': 20, fill: C.ink, 'font-weight': 600 });
+const w2L = txt(wS, WP.X(4) + 16, WP.Y(-2) + 32, 'z₂', { 'font-size': 20, fill: C.ink, 'font-weight': 600 });
 const wAL = txt(wS, WP.X(2.5), WP.Y(2) - 14, '3', { 'text-anchor': 'middle', 'font-size': 24, fill: RE, 'font-weight': 600 });
 const wBL = txt(wS, WP.X(4) + 14, WP.Y(0) - 10, '4', { 'font-size': 24, fill: IM, 'font-weight': 600 });
 const wHL = txt(wS, WP.X(2.5) - 18, WP.Y(0) + 10, '5', { 'text-anchor': 'end', 'font-size': 26, fill: MO, 'font-weight': 700 });
@@ -157,7 +157,7 @@ const tWx = txt(tS, TP.X(0) + 2, TP.Y(2) + 9, '✗', { 'text-anchor': 'middle', 
 const tWL = txt(tS, TP.X(0) + 18, TP.Y(2) + 6, 'not 2i', { 'font-size': 18, fill: C.red, 'font-weight': 600 });
 const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'PUC BOARDS'], type: 'What an equation in z draws; plotting points and conjugates' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 760,
-  q: `${K(`|z - 2| = |z + 4i|`)}<br>Every z = x + iy that satisfies this lies on the line`,
+  q: `${K(`|z - 2| = |z + 4i|`)}<br>All such z = x + iy lie on which line?`,
   opts: [K('x + 2y + 3 = 0'), K('x - 2y + 3 = 0'), K('2x + y + 3 = 0'), K('x + 2y - 3 = 0')], right: 0, optW: 474, optY: 316 });
 const so = PUC.solution($('#so'), [[K(`z = x + iy`)], [K(`(x - 2)^2 + y^2 = x^2 + (y + 4)^2`)], [K(`-4x + 4 = 8y + 16`)], [K(`x + 2y + 3 = 0`)]], { y0: 100, dy: 100 });
 const tSo = [wt('A2', 'Let'), wt('A2', 'left'), wt('A4', 'Expand'), wt('A4', 'So')];

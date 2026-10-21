@@ -118,9 +118,9 @@ const sAng = t => SEG.reduce((a, [s, e]) => a + PI / 2 * M.io((t - s) / (e - s))
 const tQs = [wt('S2', 'Cosine'), wt('S3', 'Cosine'), wt('S4', 'Cosine'), wt('S5', 'Cosine')];
 
 /* ---------- D: the other four signs ---------- */
-const DS = [[`${TAN} = ${SIN}\\,/\\,${COS}`, 'tangent is sine divided by cosine'], ['(+)/(+) = +,\\ \\ (-)/(-) = +,\\ \\ (+)/(-) = -', 'same signs give plus, opposite signs give minus'],
+const DS = [[`${TAN} = ${SIN}\\,/\\,${COS}`, 'tangent is sine divided by cosine'], ['\\tfrac{+}{+} = +,\\quad \\tfrac{-}{-} = +,\\quad \\tfrac{+}{-} = -', 'same signs give plus, opposite signs give minus'],
   [`${TAN} > 0 \\text{ in I and III}`, 'only there do sin θ and cos θ agree'], [`\\operatorname{cosec}\\theta = 1/${SIN},\\ \\ \\sec\\theta = 1/${COS}`, 'each copies its partner; cot θ copies tan θ']];
-$('#dSt').innerHTML = DS.map(([f, w], i) => `<div class="st" id="ds${i}" style="top:${84 + i * 104}px"><div class="n">${i + 1}</div><div class="sx" style="font-size:${i === 1 ? 32 : 36}px">${K(f)}</div><div class="why" style="top:56px">${w}</div></div>`).join('');
+$('#dSt').innerHTML = DS.map(([f, w], i) => `<div class="st" id="ds${i}" style="top:${84 + i * 104}px"><div class="n">${i + 1}</div><div class="sx" style="font-size:${i === 1 ? 38 : 36}px">${K(f)}</div><div class="why" style="top:56px">${w}</div></div>`).join('');
 const tDs = [wt('D2', 'Tangent'), wt('D3', 'same'), wt('D4', 'Sine'), wt('D5', 'Cosecant')];
 const TB = [[SIN, [1, 1, 0, 0]], [COS, [1, 0, 0, 1]], [TAN, [1, 0, 1, 0]], ['\\operatorname{cosec}\\theta', [1, 1, 0, 0]], ['\\sec\\theta', [1, 0, 0, 1]], ['\\cot\\theta', [1, 0, 1, 0]]];
 $('#tb').innerHTML = ['I', 'II', 'III', 'IV'].map((s, j) => `<div class="tbH" style="left:${236 + j * 130}px">${s}</div>`).join('') +
@@ -169,7 +169,7 @@ $('#wl .lbl').style.top = '30px';
 const tW = [wt('W3', 'cosine'), wt('W4', 'So'), wt('W5', 'So'), wt('W6', 'Tangent')];
 const wsv = $('#wS'), WA = PI - Math.asin(0.6);
 const wu = UC(wsv, { cx: 392, cy: 320, R: 186, ax: 40, r0: 40 }); wu.lit(1, 1); wu.set(WA);
-attr(wu.cosT, 'fill-opacity', 1); M.setT(wu.cosT, 'cos θ = ' + MIN + '4/5'); M.setT(wu.sinT, 'sin θ = 3/5');
+attr(wu.cosT, 'fill-opacity', 1); M.setT(wu.cosT, 'cos θ = ' + MIN + '4/5'); M.setT(wu.sinT, 'sin θ = 3/5'); attr(wu.cosT, 'text-anchor', 'end'); attr(wu.cosT, 'x', 380); attr(wu.cosT, 'y', 360);
 const wLine = mk(wsv, 'line', { x1: 392 - 230, y1: 320 - 0.6 * 186, x2: 392 + 230, y2: 320 - 0.6 * 186, stroke: SI, 'stroke-width': 2, 'stroke-dasharray': '6 6' });
 const wLT = txt(wsv, 392 + 236, 320 - 0.6 * 186 + 6, 'y = 3/5', { 'font-size': 20, 'font-weight': 600, fill: SI });
 const wCand = mk(mk(wsv, 'g', { transform: `translate(${392 + 0.8 * 186},${320 - 0.6 * 186})` }), 'g', {});
