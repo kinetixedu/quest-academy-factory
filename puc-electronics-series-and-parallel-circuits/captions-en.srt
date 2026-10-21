@@ -1,0 +1,369 @@
+1
+00:00:00,450 --> 00:00:05,396
+One tiny bulb fails on Aarav's old
+string of festival lights, and the whole
+
+2
+00:00:05,396 --> 00:00:06,746
+string goes dark.
+
+3
+00:00:07,096 --> 00:00:11,006
+But when one bulb fails at home,
+every other light stays on.
+
+4
+00:00:11,006 --> 00:00:11,906
+Why?
+
+5
+00:00:11,996 --> 00:00:14,584
+The answer is how the parts are connected.
+
+6
+00:00:14,584 --> 00:00:16,229
+There are two basic ways.
+
+7
+00:00:16,229 --> 00:00:17,674
+Series, and parallel.
+
+8
+00:00:18,024 --> 00:00:22,001
+In series, the parts sit one
+after another, in a single path.
+
+9
+00:00:22,001 --> 00:00:23,697
+Like beads on one thread.
+
+10
+00:00:24,047 --> 00:00:28,518
+In parallel, each part gets its own
+path, connected across the same two
+
+11
+00:00:28,518 --> 00:00:29,418
+points.
+
+12
+00:00:29,162 --> 00:00:30,724
+Like lanes on a road.
+
+13
+00:00:31,374 --> 00:00:33,673
+Let's build both on the breadboard.
+
+14
+00:00:33,673 --> 00:00:38,171
+A twelve volt supply, and two
+resistors, four ohms and twelve ohms.
+
+15
+00:00:38,521 --> 00:00:39,905
+First, in series.
+
+16
+00:00:39,905 --> 00:00:44,138
+There is only one path, so the
+same current flows through both.
+
+17
+00:00:44,138 --> 00:00:46,195
+Zero point seven five amperes.
+
+18
+00:00:46,545 --> 00:00:48,411
+But the voltage is shared.
+
+19
+00:00:48,411 --> 00:00:52,819
+Three volts across the four ohm
+resistor, nine volts across the twelve
+
+20
+00:00:52,819 --> 00:00:53,848
+ohm resistor.
+
+21
+00:00:54,198 --> 00:00:55,876
+Now break one resistor.
+
+22
+00:00:55,876 --> 00:00:57,514
+The only path is cut.
+
+23
+00:00:57,514 --> 00:00:58,762
+Everything stops.
+
+24
+00:00:58,762 --> 00:01:00,757
+That is the festival string.
+
+25
+00:01:01,407 --> 00:01:03,415
+Now rebuild them in parallel.
+
+26
+00:01:03,415 --> 00:01:06,969
+Each resistor sits right
+across the twelve volt supply.
+
+27
+00:01:07,319 --> 00:01:09,798
+Three amperes take the four ohm path.
+
+28
+00:01:09,798 --> 00:01:12,277
+One ampere takes the twelve ohm path.
+
+29
+00:01:12,277 --> 00:01:14,855
+The supply gives four amperes in total.
+
+30
+00:01:15,205 --> 00:01:16,780
+Break one resistor now.
+
+31
+00:01:16,780 --> 00:01:19,987
+Its path stops, but the
+other path keeps flowing.
+
+32
+00:01:19,987 --> 00:01:23,348
+On the scope, the total
+drops, but never to zero.
+
+33
+00:01:23,998 --> 00:01:25,601
+Series shares the voltage.
+
+34
+00:01:25,601 --> 00:01:27,294
+Parallel shares the current.
+
+35
+00:01:28,094 --> 00:01:31,589
+Now let's find the total
+resistance, starting with series.
+
+36
+00:01:31,939 --> 00:01:34,054
+The supply voltage is shared.
+
+37
+00:01:34,054 --> 00:01:36,137
+V equals V one plus V two.
+
+38
+00:01:36,837 --> 00:01:39,366
+The current I is the same in both.
+
+39
+00:01:39,366 --> 00:01:41,969
+So V equals IR one plus IR two.
+
+40
+00:01:42,669 --> 00:01:43,874
+Divide by I.
+
+41
+00:01:43,874 --> 00:01:46,962
+The series total is R one plus R two.
+
+42
+00:01:46,962 --> 00:01:48,810
+Resistances simply add.
+
+43
+00:01:49,510 --> 00:01:50,550
+Now parallel.
+
+44
+00:01:50,550 --> 00:01:53,496
+The voltage V is the same across each one.
+
+45
+00:01:53,846 --> 00:01:55,181
+The currents add.
+
+46
+00:01:55,181 --> 00:01:57,237
+I equals I one plus I two.
+
+47
+00:01:57,937 --> 00:02:00,227
+Each current is V over R.
+
+48
+00:02:00,227 --> 00:02:04,832
+So V over R equals V over
+R one, plus V over R two.
+
+49
+00:02:05,532 --> 00:02:06,689
+Divide by V.
+
+50
+00:02:06,689 --> 00:02:10,993
+One over R equals one over
+R one, plus one over R two.
+
+51
+00:02:10,993 --> 00:02:14,970
+The total is always smaller
+than the smallest resistor.
+
+52
+00:02:15,620 --> 00:02:16,756
+Worked example.
+
+53
+00:02:16,756 --> 00:02:21,197
+A six ohm and a three ohm resistor,
+with an eighteen volt supply.
+
+54
+00:02:21,547 --> 00:02:24,662
+In series, R is six plus three, nine ohms.
+
+55
+00:02:24,662 --> 00:02:27,768
+The current is eighteen
+by nine, two amperes.
+
+56
+00:02:28,118 --> 00:02:33,276
+In parallel, one over R is one sixth
+plus one third, which is one half.
+
+57
+00:02:33,276 --> 00:02:34,750
+So R is two ohms.
+
+58
+00:02:35,100 --> 00:02:38,351
+The supply then gives
+eighteen by two, nine amperes.
+
+59
+00:02:38,351 --> 00:02:42,896
+Three through the six ohm resistor,
+and six through the three ohm resistor.
+
+60
+00:02:43,546 --> 00:02:45,530
+Homes are wired in parallel.
+
+61
+00:02:45,530 --> 00:02:50,658
+Every appliance gets the full mains
+voltage, and each one has its own switch.
+
+62
+00:02:51,308 --> 00:02:52,773
+Now, the exam trap.
+
+63
+00:02:53,123 --> 00:02:56,027
+Many students work out
+one over R, and stop.
+
+64
+00:02:56,027 --> 00:02:57,625
+They write half an ohm.
+
+65
+00:02:57,975 --> 00:02:59,919
+Always flip it at the end.
+
+66
+00:02:59,919 --> 00:03:03,034
+One over R is one half, so R is two ohms.
+
+67
+00:03:03,684 --> 00:03:05,300
+Where is this asked?
+
+68
+00:03:05,300 --> 00:03:10,151
+In PUC board papers, as problems on
+combinations of resistors, and the
+
+69
+00:03:10,151 --> 00:03:12,918
+differences between series and parallel.
+
+70
+00:03:13,568 --> 00:03:14,468
+Try this.
+
+71
+00:03:14,383 --> 00:03:16,631
+Three resistors of six ohms each.
+
+72
+00:03:16,631 --> 00:03:21,197
+Two are joined in parallel, and this
+pair is in series with the third,
+
+73
+00:03:21,197 --> 00:03:22,938
+across a nine volt cell.
+
+74
+00:03:22,938 --> 00:03:26,559
+What current flows through
+one of the parallel resistors?
+
+75
+00:03:31,959 --> 00:03:32,859
+A.
+
+76
+00:03:32,468 --> 00:03:34,567
+Zero point five amperes.
+
+77
+00:03:34,917 --> 00:03:38,083
+The parallel pair is
+six by two, three ohms.
+
+78
+00:03:38,083 --> 00:03:39,763
+Add the third resistor.
+
+79
+00:03:39,763 --> 00:03:41,238
+Nine ohms in total.
+
+80
+00:03:41,588 --> 00:03:44,829
+The current from the cell
+is nine by nine, one ampere.
+
+81
+00:03:45,179 --> 00:03:48,366
+It splits equally between
+two equal resistors.
+
+82
+00:03:48,366 --> 00:03:51,509
+So each one carries
+zero point five amperes.
+
+83
+00:03:52,159 --> 00:03:53,681
+Screenshot this card.
+
+84
+00:03:56,881 --> 00:03:59,622
+Next, Kirchhoff's
+current and voltage laws.
+
+85
+00:03:59,622 --> 00:04:02,870
+Two rules that solve any
+circuit, however tangled.

@@ -1,0 +1,421 @@
+1
+00:00:00,450 --> 00:00:03,942
+Aarav reads the tiny print
+on his phone charger.
+
+2
+00:00:03,942 --> 00:00:04,950
+Five volts.
+
+3
+00:00:04,950 --> 00:00:06,012
+Two amperes.
+
+4
+00:00:06,362 --> 00:00:08,209
+Two numbers on every charger.
+
+5
+00:00:08,209 --> 00:00:10,111
+But what do they really mean?
+
+6
+00:00:10,611 --> 00:00:13,513
+To answer that, we start
+with electric charge.
+
+7
+00:00:13,863 --> 00:00:16,854
+Charge is a property of tiny particles.
+
+8
+00:00:16,854 --> 00:00:19,127
+Protons carry positive charge.
+
+9
+00:00:19,127 --> 00:00:21,513
+Electrons carry negative charge.
+
+10
+00:00:21,863 --> 00:00:24,114
+Like charges push each other away.
+
+11
+00:00:24,114 --> 00:00:26,004
+Unlike charges pull together.
+
+12
+00:00:26,654 --> 00:00:30,354
+Charge is measured in coulombs,
+written with a capital C.
+
+13
+00:00:30,704 --> 00:00:33,057
+And charge comes in fixed packets.
+
+14
+00:00:33,057 --> 00:00:36,722
+The smallest packet is the
+charge of one electron, e.
+
+15
+00:00:36,722 --> 00:00:40,918
+That is one point six times ten
+to the minus nineteen coulombs.
+
+16
+00:00:41,268 --> 00:00:44,649
+So any charge Q is a
+whole number of packets.
+
+17
+00:00:44,649 --> 00:00:46,285
+Q equals n times e.
+
+18
+00:00:46,285 --> 00:00:51,619
+One coulomb is about six point two five
+times ten to the eighteen electrons.
+
+19
+00:00:52,269 --> 00:00:53,318
+Now, current.
+
+20
+00:00:53,668 --> 00:00:57,312
+When charge moves along a wire,
+we get an electric current.
+
+21
+00:00:57,662 --> 00:01:01,488
+Stand at one point and count the
+charge that passes every second.
+
+22
+00:01:01,488 --> 00:01:03,120
+That rate is the current.
+
+23
+00:01:03,470 --> 00:01:05,939
+So I equals Q divided by t.
+
+24
+00:01:06,639 --> 00:01:08,799
+Current is measured in amperes.
+
+25
+00:01:08,799 --> 00:01:12,122
+One ampere means one coulomb
+passing every second.
+
+26
+00:01:12,772 --> 00:01:14,552
+Remember from episode one.
+
+27
+00:01:14,552 --> 00:01:16,899
+Electrons drift from minus to plus.
+
+28
+00:01:16,899 --> 00:01:19,754
+Conventional current I
+points the other way.
+
+29
+00:01:20,404 --> 00:01:22,625
+But why do the charges move at all?
+
+30
+00:01:22,625 --> 00:01:23,826
+They need a push.
+
+31
+00:01:24,176 --> 00:01:26,895
+Think of two water tanks joined by a pipe.
+
+32
+00:01:26,895 --> 00:01:30,387
+Water flows only when one
+tank is higher than the other.
+
+33
+00:01:30,737 --> 00:01:33,746
+In a circuit, the height
+is electric potential.
+
+34
+00:01:33,746 --> 00:01:37,872
+Charges flow when there is a potential
+difference between two points.
+
+35
+00:01:38,222 --> 00:01:42,249
+Potential difference is the work done
+to move one coulomb of charge from
+
+36
+00:01:42,249 --> 00:01:43,794
+one point to the other.
+
+37
+00:01:44,144 --> 00:01:47,089
+So V equals W divided by Q.
+
+38
+00:01:47,789 --> 00:01:49,518
+It is measured in volts.
+
+39
+00:01:49,518 --> 00:01:52,876
+One volt means one joule
+of work for every coulomb.
+
+40
+00:01:53,526 --> 00:01:57,534
+And voltage is simply the everyday
+name for potential difference.
+
+41
+00:01:58,183 --> 00:02:00,197
+Let's watch both on the breadboard.
+
+42
+00:02:00,547 --> 00:02:03,091
+One cell, one switch, and a resistor.
+
+43
+00:02:03,091 --> 00:02:05,926
+A voltmeter reads the
+voltage across the cell.
+
+44
+00:02:06,276 --> 00:02:10,871
+With the switch open, the cell still
+has one point five volts across it.
+
+45
+00:02:10,871 --> 00:02:12,348
+But no current flows.
+
+46
+00:02:12,698 --> 00:02:14,037
+Close the switch.
+
+47
+00:02:14,037 --> 00:02:15,648
+Now the charges move.
+
+48
+00:02:15,648 --> 00:02:18,713
+The meter reads zero
+point one five amperes.
+
+49
+00:02:19,363 --> 00:02:20,690
+Add a second cell.
+
+50
+00:02:20,690 --> 00:02:22,800
+The push doubles to three volts.
+
+51
+00:02:23,150 --> 00:02:24,363
+Watch the scope.
+
+52
+00:02:24,363 --> 00:02:26,336
+Both traces step up together.
+
+53
+00:02:26,336 --> 00:02:31,100
+The electrons speed up, and the current
+rises to zero point three amperes.
+
+54
+00:02:31,450 --> 00:02:32,869
+More push, more flow.
+
+55
+00:02:32,869 --> 00:02:35,508
+And with no push, there is no flow at all.
+
+56
+00:02:36,158 --> 00:02:37,743
+Voltage is the push.
+
+57
+00:02:37,743 --> 00:02:39,328
+Current is the flow.
+
+58
+00:02:40,128 --> 00:02:42,890
+Now, how much energy does the source give?
+
+59
+00:02:43,240 --> 00:02:46,576
+From the volt, the work
+W equals V times Q.
+
+60
+00:02:47,276 --> 00:02:49,977
+And the charge Q equals I times t.
+
+61
+00:02:50,677 --> 00:02:52,267
+Put them together.
+
+62
+00:02:52,267 --> 00:02:54,683
+W equals V times I times t.
+
+63
+00:02:55,383 --> 00:02:59,958
+Volts times amperes times seconds
+gives joules, the unit of energy.
+
+64
+00:03:00,608 --> 00:03:01,729
+Worked example.
+
+65
+00:03:01,729 --> 00:03:05,795
+Aarav's charger gives five volts
+and two amperes for one minute.
+
+66
+00:03:06,145 --> 00:03:07,571
+First, the charge.
+
+67
+00:03:07,571 --> 00:03:11,978
+Q equals two times sixty, which is
+one hundred and twenty coulombs.
+
+68
+00:03:12,328 --> 00:03:13,660
+Then the energy.
+
+69
+00:03:13,660 --> 00:03:18,785
+W equals five times one hundred and
+twenty, which is six hundred joules.
+
+70
+00:03:19,135 --> 00:03:20,506
+And the electrons?
+
+71
+00:03:20,506 --> 00:03:25,189
+One hundred and twenty, divided by
+one point six times ten to the minus
+
+72
+00:03:25,189 --> 00:03:26,089
+nineteen.
+
+73
+00:03:25,973 --> 00:03:29,954
+That is seven point five times
+ten to the twenty electrons.
+
+74
+00:03:30,604 --> 00:03:32,069
+Now, the exam trap.
+
+75
+00:03:32,419 --> 00:03:35,750
+Many students say voltage
+flows through a resistor.
+
+76
+00:03:35,750 --> 00:03:36,796
+It does not.
+
+77
+00:03:37,146 --> 00:03:39,304
+Current flows through a component.
+
+78
+00:03:39,304 --> 00:03:42,402
+Voltage is always across
+it, between two points.
+
+79
+00:03:43,052 --> 00:03:44,721
+Where is this asked?
+
+80
+00:03:44,721 --> 00:03:46,390
+In PUC board papers.
+
+81
+00:03:46,390 --> 00:03:51,609
+Define current, potential difference
+and the volt, and solve short problems
+
+82
+00:03:51,609 --> 00:03:55,159
+with I equals Q by t, and V equals W by Q.
+
+83
+00:03:55,809 --> 00:03:56,709
+Try this.
+
+84
+00:03:56,618 --> 00:04:01,241
+A current of zero point five amperes
+flows through a lamp for six seconds,
+
+85
+00:04:01,241 --> 00:04:04,287
+and the source does
+thirty six joules of work.
+
+86
+00:04:04,287 --> 00:04:07,422
+What is the potential
+difference across the lamp?
+
+87
+00:04:12,822 --> 00:04:13,722
+C.
+
+88
+00:04:13,317 --> 00:04:14,549
+Twelve volts.
+
+89
+00:04:14,899 --> 00:04:16,490
+First, the charge.
+
+90
+00:04:16,490 --> 00:04:18,159
+Q equals I times t.
+
+91
+00:04:18,159 --> 00:04:21,419
+Zero point five times
+six is three coulombs.
+
+92
+00:04:21,769 --> 00:04:23,800
+Then V equals W by Q.
+
+93
+00:04:23,800 --> 00:04:27,384
+Thirty six divided by
+three is twelve volts.
+
+94
+00:04:28,034 --> 00:04:29,555
+Screenshot this card.
+
+95
+00:04:32,755 --> 00:04:35,471
+Next, direct current
+and alternating current.
+
+96
+00:04:35,471 --> 00:04:39,307
+Why does a cell give one kind,
+and the wall socket the other?

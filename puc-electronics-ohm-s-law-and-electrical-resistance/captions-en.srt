@@ -1,0 +1,373 @@
+1
+00:00:00,450 --> 00:00:03,808
+Aarav charges his phone
+with a long, thin cable.
+
+2
+00:00:03,808 --> 00:00:05,165
+It charges slowly.
+
+3
+00:00:05,515 --> 00:00:08,321
+A short, thick cable charges it faster.
+
+4
+00:00:08,321 --> 00:00:09,374
+Same charger.
+
+5
+00:00:09,374 --> 00:00:11,715
+So what is the thin cable doing?
+
+6
+00:00:12,215 --> 00:00:14,085
+It is resisting the current.
+
+7
+00:00:14,085 --> 00:00:17,777
+Every material pushes back a
+little on the moving electrons.
+
+8
+00:00:18,127 --> 00:00:22,351
+Inside a wire, electrons keep
+bumping into the vibrating atoms.
+
+9
+00:00:22,351 --> 00:00:24,256
+Each bump slows them down.
+
+10
+00:00:24,606 --> 00:00:28,512
+This opposition to the flow of
+current is called resistance, R.
+
+11
+00:00:29,162 --> 00:00:32,225
+So how are voltage, current
+and resistance linked?
+
+12
+00:00:32,225 --> 00:00:34,212
+Let's test it on the breadboard.
+
+13
+00:00:34,562 --> 00:00:37,917
+A variable supply, an
+ammeter, and one resistor.
+
+14
+00:00:37,917 --> 00:00:40,396
+A voltmeter sits across the resistor.
+
+15
+00:00:40,746 --> 00:00:42,813
+Set the supply to two volts.
+
+16
+00:00:42,813 --> 00:00:45,506
+The current is zero point five amperes.
+
+17
+00:00:45,856 --> 00:00:47,669
+Four volts, one ampere.
+
+18
+00:00:47,669 --> 00:00:50,180
+Six volts, one point five amperes.
+
+19
+00:00:50,180 --> 00:00:52,098
+Eight volts, two amperes.
+
+20
+00:00:52,448 --> 00:00:53,638
+Plot each reading.
+
+21
+00:00:53,638 --> 00:00:56,493
+The points fall on a
+straight line through zero.
+
+22
+00:00:57,143 --> 00:01:00,257
+Now swap in a resistor
+twice as big, and repeat.
+
+23
+00:01:00,607 --> 00:01:03,370
+At every voltage, the current is now half.
+
+24
+00:01:03,370 --> 00:01:05,464
+The new line is twice as steep.
+
+25
+00:01:05,814 --> 00:01:10,188
+On a graph of V against I, the
+slope of the line is the resistance.
+
+26
+00:01:10,838 --> 00:01:12,211
+This is Ohm's law.
+
+27
+00:01:12,211 --> 00:01:17,251
+Georg Simon Ohm, a German physicist,
+published it in eighteen twenty seven.
+
+28
+00:01:17,601 --> 00:01:22,129
+At a steady temperature, the current
+through a conductor is directly proportional
+
+29
+00:01:22,129 --> 00:01:23,786
+to the voltage across it.
+
+30
+00:01:24,486 --> 00:01:26,555
+So V is proportional to I.
+
+31
+00:01:26,555 --> 00:01:30,194
+Put in a constant, R,
+and V equals I times R.
+
+32
+00:01:30,894 --> 00:01:34,483
+Turn it around, and R
+equals V divided by I.
+
+33
+00:01:35,183 --> 00:01:39,606
+Resistance is measured in ohms,
+written with the Greek letter omega.
+
+34
+00:01:39,606 --> 00:01:41,832
+One ohm is one volt per ampere.
+
+35
+00:01:42,482 --> 00:01:45,352
+Metals obey this law at
+a steady temperature.
+
+36
+00:01:45,352 --> 00:01:47,778
+Some parts, like a diode, do not.
+
+37
+00:01:47,778 --> 00:01:49,415
+We call them non ohmic.
+
+38
+00:01:50,065 --> 00:01:52,353
+Double the push, double the flow.
+
+39
+00:01:52,353 --> 00:01:54,088
+Resistance stays the same.
+
+40
+00:01:54,888 --> 00:01:57,679
+So what decides the resistance of a wire?
+
+41
+00:01:57,679 --> 00:01:58,703
+Three things.
+
+42
+00:01:59,053 --> 00:01:59,953
+Length.
+
+43
+00:01:59,703 --> 00:02:01,833
+A longer wire means more bumps.
+
+44
+00:02:01,833 --> 00:02:04,318
+R is proportional to the length, L.
+
+45
+00:02:05,018 --> 00:02:05,918
+Thickness.
+
+46
+00:02:05,876 --> 00:02:08,111
+A wider wire gives more paths.
+
+47
+00:02:08,111 --> 00:02:12,358
+R is inversely proportional to
+the area of cross section, A.
+
+48
+00:02:13,058 --> 00:02:14,389
+And the material.
+
+49
+00:02:14,389 --> 00:02:15,772
+Put them together.
+
+50
+00:02:15,772 --> 00:02:18,455
+R equals rho times L, divided by A.
+
+51
+00:02:19,155 --> 00:02:22,871
+Rho is the resistivity of
+the material, in ohm metres.
+
+52
+00:02:22,871 --> 00:02:27,166
+Copper has a very low resistivity,
+so wires are made of copper.
+
+53
+00:02:27,816 --> 00:02:30,932
+That is why the long,
+thin cable charges slowly.
+
+54
+00:02:30,932 --> 00:02:33,594
+More length, less area, more resistance.
+
+55
+00:02:34,244 --> 00:02:35,423
+Worked example.
+
+56
+00:02:35,423 --> 00:02:40,846
+A resistor has six volts across it, and
+a current of zero point three amperes.
+
+57
+00:02:41,196 --> 00:02:42,813
+R equals V by I.
+
+58
+00:02:42,813 --> 00:02:46,573
+Six divided by zero point
+three is twenty ohms.
+
+59
+00:02:46,923 --> 00:02:49,864
+Now raise the voltage to nine volts.
+
+60
+00:02:49,864 --> 00:02:51,471
+I equals V by R.
+
+61
+00:02:51,471 --> 00:02:55,757
+Nine divided by twenty is
+zero point four five amperes.
+
+62
+00:02:56,407 --> 00:02:57,870
+Now, the exam trap.
+
+63
+00:02:58,220 --> 00:03:03,019
+Many students read R equals V by I,
+and think a bigger voltage makes a
+
+64
+00:03:03,019 --> 00:03:04,358
+bigger resistance.
+
+65
+00:03:04,708 --> 00:03:05,659
+It does not.
+
+66
+00:03:05,659 --> 00:03:09,875
+R depends on the material, the
+length, the area and the temperature.
+
+67
+00:03:09,875 --> 00:03:11,545
+V by I only measures it.
+
+68
+00:03:12,195 --> 00:03:13,937
+Where is this asked?
+
+69
+00:03:13,937 --> 00:03:15,678
+In PUC board papers.
+
+70
+00:03:15,678 --> 00:03:20,703
+State Ohm's law, define resistance
+and resistivity, and solve problems
+
+71
+00:03:20,703 --> 00:03:24,290
+with V equals IR and R equals rho L by A.
+
+72
+00:03:24,940 --> 00:03:25,840
+Try this.
+
+73
+00:03:25,774 --> 00:03:30,744
+A wire of resistance ten ohms is stretched
+evenly to three times its length.
+
+74
+00:03:30,744 --> 00:03:33,631
+It is then connected to a nine volt cell.
+
+75
+00:03:33,631 --> 00:03:35,034
+What current flows?
+
+76
+00:03:40,434 --> 00:03:41,334
+C.
+
+77
+00:03:40,950 --> 00:03:43,017
+Zero point one amperes.
+
+78
+00:03:43,367 --> 00:03:45,638
+Stretching keeps the volume the same.
+
+79
+00:03:45,638 --> 00:03:48,775
+Three times the length
+means one third of the area.
+
+80
+00:03:49,125 --> 00:03:52,789
+So R becomes three times
+three, nine times bigger.
+
+81
+00:03:52,789 --> 00:03:53,837
+Ninety ohms.
+
+82
+00:03:54,187 --> 00:03:56,163
+Then I equals V by R.
+
+83
+00:03:56,163 --> 00:04:00,020
+Nine divided by ninety is
+zero point one amperes.
+
+84
+00:04:00,671 --> 00:04:02,192
+Screenshot this card.
+
+85
+00:04:05,392 --> 00:04:07,573
+Next, series and parallel circuits.
+
+86
+00:04:07,573 --> 00:04:11,337
+Why do all the lights in a house
+stay on when one bulb fails?

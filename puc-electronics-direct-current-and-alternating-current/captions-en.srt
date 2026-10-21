@@ -1,0 +1,378 @@
+1
+00:00:00,450 --> 00:00:02,491
+Aarav's torch runs on a cell.
+
+2
+00:00:02,491 --> 00:00:05,264
+His table fan runs from the wall socket.
+
+3
+00:00:05,614 --> 00:00:07,341
+Both use electric current.
+
+4
+00:00:07,341 --> 00:00:10,042
+So why can't the fan just run on a cell?
+
+5
+00:00:10,542 --> 00:00:11,893
+Start with the cell.
+
+6
+00:00:11,893 --> 00:00:14,040
+It gives direct current, or DC.
+
+7
+00:00:14,390 --> 00:00:16,879
+Direct current flows
+in one direction only.
+
+8
+00:00:16,879 --> 00:00:21,458
+Out of the plus terminal, round the
+circuit, and back into the minus terminal.
+
+9
+00:00:21,808 --> 00:00:25,016
+Draw current against time,
+and you get a flat line.
+
+10
+00:00:25,016 --> 00:00:27,647
+Same size, same direction, all the time.
+
+11
+00:00:27,997 --> 00:00:32,998
+DC can also rise and fall in size,
+like the output of a rectifier, which
+
+12
+00:00:32,998 --> 00:00:34,480
+we will meet later.
+
+13
+00:00:34,480 --> 00:00:36,384
+But it never turns around.
+
+14
+00:00:37,034 --> 00:00:40,591
+Cells, batteries and solar
+cells all give direct current.
+
+15
+00:00:41,241 --> 00:00:42,681
+Now the wall socket.
+
+16
+00:00:42,681 --> 00:00:45,214
+It gives alternating current, or AC.
+
+17
+00:00:45,564 --> 00:00:48,499
+Alternating current keeps
+changing its direction.
+
+18
+00:00:48,499 --> 00:00:52,556
+It rises to a peak, falls to
+zero, then flows the other way.
+
+19
+00:00:52,906 --> 00:00:57,143
+Draw it against time, and you get
+a smooth wave called a sine wave.
+
+20
+00:00:57,493 --> 00:01:00,426
+Power stations make it with AC generators.
+
+21
+00:01:00,426 --> 00:01:05,661
+A coil turns inside a magnetic field,
+and every half turn, the push reverses.
+
+22
+00:01:06,311 --> 00:01:08,448
+Let's see both on the breadboard.
+
+23
+00:01:08,448 --> 00:01:11,175
+One resistor, and a small indicator lamp.
+
+24
+00:01:11,525 --> 00:01:13,089
+First, connect a cell.
+
+25
+00:01:13,089 --> 00:01:16,088
+The electrons march one
+way, at a steady speed.
+
+26
+00:01:16,438 --> 00:01:20,772
+The scope draws a flat line, and the
+current reads plus zero point two
+
+27
+00:01:20,772 --> 00:01:22,404
+amperes, all the time.
+
+28
+00:01:23,054 --> 00:01:24,847
+Now switch to an AC source.
+
+29
+00:01:24,847 --> 00:01:27,577
+We have slowed it right
+down so you can watch.
+
+30
+00:01:27,927 --> 00:01:32,238
+The electrons move forward, slow
+down, stop, and then move backward.
+
+31
+00:01:32,588 --> 00:01:34,547
+The scope draws a sine wave.
+
+32
+00:01:34,547 --> 00:01:38,923
+The reading swings from plus to
+minus, and the lamp dims each time the
+
+33
+00:01:38,923 --> 00:01:40,317
+current passes zero.
+
+34
+00:01:40,667 --> 00:01:44,062
+In AC, the electrons do not
+travel round the circuit.
+
+35
+00:01:44,062 --> 00:01:46,971
+They rock back and forth,
+passing energy along.
+
+36
+00:01:47,621 --> 00:01:49,161
+DC flows one way.
+
+37
+00:01:49,161 --> 00:01:50,965
+AC keeps turning back.
+
+38
+00:01:51,765 --> 00:01:53,956
+So how fast does AC turn back?
+
+39
+00:01:53,956 --> 00:01:55,387
+Two numbers tell us.
+
+40
+00:01:55,737 --> 00:01:59,289
+One full forward and backward
+swing is called a cycle.
+
+41
+00:01:59,289 --> 00:02:03,002
+The time for one cycle is
+the period, T, in seconds.
+
+42
+00:02:03,702 --> 00:02:07,478
+The number of cycles in one
+second is the frequency, f.
+
+43
+00:02:07,478 --> 00:02:09,136
+Its unit is the hertz.
+
+44
+00:02:09,136 --> 00:02:11,516
+One hertz is one cycle per second.
+
+45
+00:02:12,216 --> 00:02:13,328
+They are linked.
+
+46
+00:02:13,328 --> 00:02:14,728
+f equals one over T.
+
+47
+00:02:15,428 --> 00:02:18,978
+And in every cycle, the current
+changes direction twice.
+
+48
+00:02:19,628 --> 00:02:20,731
+Worked example.
+
+49
+00:02:20,731 --> 00:02:25,447
+In India, the mains supply is about
+two hundred and thirty volts, at fifty
+
+50
+00:02:25,447 --> 00:02:26,347
+hertz.
+
+51
+00:02:26,397 --> 00:02:28,549
+The period is one over fifty.
+
+52
+00:02:28,549 --> 00:02:32,675
+That is zero point zero two
+seconds, or twenty milliseconds.
+
+53
+00:02:33,025 --> 00:02:36,131
+Two reversals per cycle,
+times fifty cycles.
+
+54
+00:02:36,131 --> 00:02:40,366
+So the current changes direction
+one hundred times every second.
+
+55
+00:02:41,016 --> 00:02:42,763
+So why do homes get AC?
+
+56
+00:02:43,113 --> 00:02:48,229
+AC voltage can be raised or lowered easily
+with a transformer, and a transformer
+
+57
+00:02:48,229 --> 00:02:49,784
+works only with AC.
+
+58
+00:02:50,134 --> 00:02:55,119
+Power is sent over long distances at
+very high voltage, because that wastes
+
+59
+00:02:55,119 --> 00:02:57,313
+far less energy in the wires.
+
+60
+00:02:57,663 --> 00:03:00,278
+But phones and laptops need steady DC.
+
+61
+00:03:00,278 --> 00:03:02,902
+So their chargers change AC into DC.
+
+62
+00:03:02,902 --> 00:03:03,907
+And the fan?
+
+63
+00:03:03,907 --> 00:03:07,947
+It is built to run on AC, at
+two hundred and thirty volts.
+
+64
+00:03:07,947 --> 00:03:09,655
+A cell cannot give that.
+
+65
+00:03:10,305 --> 00:03:11,770
+Now, the exam trap.
+
+66
+00:03:12,120 --> 00:03:16,277
+Many students think fifty hertz means
+the current reverses fifty times
+
+67
+00:03:16,277 --> 00:03:17,177
+a second.
+
+68
+00:03:17,437 --> 00:03:19,735
+But each cycle has two reversals.
+
+69
+00:03:19,735 --> 00:03:23,385
+So fifty hertz means one
+hundred reversals every second.
+
+70
+00:03:24,035 --> 00:03:25,641
+Where is this asked?
+
+71
+00:03:25,641 --> 00:03:27,248
+In PUC board papers.
+
+72
+00:03:27,248 --> 00:03:32,627
+Differences between AC and DC, and
+short problems on frequency and period.
+
+73
+00:03:33,277 --> 00:03:34,177
+Try this.
+
+74
+00:03:34,077 --> 00:03:37,248
+An AC source has a period
+of four milliseconds.
+
+75
+00:03:37,248 --> 00:03:41,209
+How many times does its current
+change direction in one second?
+
+76
+00:03:46,609 --> 00:03:47,509
+C.
+
+77
+00:03:47,118 --> 00:03:48,832
+Five hundred times.
+
+78
+00:03:49,182 --> 00:03:50,853
+First, the frequency.
+
+79
+00:03:50,853 --> 00:03:55,432
+f equals one over T, one over
+zero point zero zero four seconds.
+
+80
+00:03:55,432 --> 00:03:58,044
+That is two hundred and fifty hertz.
+
+81
+00:03:58,394 --> 00:04:00,316
+Each cycle has two reversals.
+
+82
+00:04:00,316 --> 00:04:03,383
+Two times two hundred and
+fifty is five hundred.
+
+83
+00:04:04,033 --> 00:04:05,554
+Screenshot this card.
+
+84
+00:04:08,754 --> 00:04:11,441
+Next, Ohm's law and electrical resistance.
+
+85
+00:04:11,441 --> 00:04:16,086
+Why does the same push give a big
+current in one wire, and a tiny one in
+
+86
+00:04:16,086 --> 00:04:16,986
+another?
