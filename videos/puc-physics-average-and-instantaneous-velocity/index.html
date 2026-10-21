@@ -1,0 +1,158 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 22 - Average and Instantaneous Velocity</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 22: average and instantaneous velocity (Motion notebook, bicycle on a straight road) ===== */
+:root{--vb:#7A4FE0;--v:#2F6FEB}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.vb{color:var(--vb)}.vv{color:var(--v)}
+/* title card tiles */
+.job{position:absolute;top:724px;width:480px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 26px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.job .jv{position:absolute;right:24px;top:30px;font:600 40px/1 'IBM Plex Mono';white-space:nowrap}
+.job .jv small{font-size:20px;color:var(--mute)}
+/* hook rows */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .jv{position:absolute;right:28px;top:30px;font:600 52px/1 'IBM Plex Mono';white-space:nowrap}
+.jr .jv small{font-size:24px;color:var(--mute)}
+#note{position:absolute;left:400px;top:318px;width:330px;height:150px;background:#FFFDF6;border-radius:6px;box-shadow:0 8px 20px rgba(22,33,62,.22);padding:16px 22px}
+#note .nt1{font:600 15px 'IBM Plex Mono';letter-spacing:.1em;color:var(--mute)}
+#note .nt2{font:700 38px/1.05 Caveat;color:var(--ink);margin-top:6px}
+.wq{position:absolute;top:494px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:116px}
+.st .n{position:absolute;left:0;top:30px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:4px;font-size:34px;white-space:nowrap}
+.st .why{position:absolute;right:0;top:38px;text-align:right;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.fl2{position:absolute;left:36px;white-space:nowrap}
+/* zoom table */
+.zh{position:absolute;top:84px;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap;text-align:right}
+.zr{position:absolute;left:36px;width:712px;height:56px;border-radius:12px;background:var(--soft)}
+.zr span{position:absolute;top:9px;font:600 30px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.c0{left:0;width:170px}.c1{left:206px;width:220px}.c2{left:462px;width:220px}
+/* chips on graphs */
+.gchip{position:absolute;height:44px;padding:0 16px;border-radius:10px;display:inline-flex;align-items:center;gap:8px;font:600 22px 'IBM Plex Mono';white-space:nowrap;background:#fff;border:2px solid var(--line)}
+/* side by side */
+.sbl{position:absolute;left:36px;font:500 24px Poppins;color:var(--ink2);white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+#wl .sol .sx{font-size:32px}
+#sF .fcard .fl{font-size:38px}
+#sF .fcard .fl.txt{font-size:32px}
+.flc{font:500 24px Poppins;color:var(--mute);margin-left:18px}
+#wq{position:absolute;left:36px;top:70px;font:600 27px/1.35 Poppins;width:712px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 2 MOTION IN A STRAIGHT LINE</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Average vs <span class="acc">Instantaneous</span> Velocity</div>
+    <div id="sub">Found on one bicycle ride</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: three readings + Aarav's question -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">ONE RIDE · THREE READINGS</div><div class="ghost" id="exH" style="right:36px;top:18px">EXAMPLE FIGURES</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">All three are true</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV'S RIDE TO COLLEGE</div>
+        <div id="hdF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg" style="position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px">
+        <div id="note"><div class="nt1">AARAV ASKS</div><div class="nt2">Which one is my real velocity?</div></div>
+        <div id="wqs"></div></div>
+    </div>
+
+    <!-- A: average velocity over the whole trip -->
+    <div id="sA">
+      <div class="card full" id="am"><div class="lbl" style="left:36px;top:30px">THE WHOLE TRIP · HOME TO COLLEGE</div><div class="ghost" id="exA" style="right:36px;top:18px">EXAMPLE FIGURES</div><svg id="amS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="af"><div class="lbl" style="left:36px;top:30px">AVERAGE VELOCITY</div>
+        <div class="fl2" id="af0" style="top:96px;font-size:50px"></div>
+        <div class="fl2" id="af1" style="top:250px;font-size:44px"></div>
+        <div class="fl2" id="af2" style="top:370px;font-size:44px"></div>
+        <div class="pillp ink" id="afP" style="left:36px;top:470px">One number for the whole trip</div></div>
+    </div>
+
+    <!-- S: the sim, bicycle from rest, x = t^2 -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">SIMULATION · FROM REST</div><div class="tag" id="slow" style="right:36px;top:22px">SLOW-MO REPLAY · 0.25x</div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="fl2" id="simF" style="top:96px;font-size:40px"></div></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro" id="roG" style="left:36px;top:74px;width:712px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">POSITION VS TIME</div><svg id="grS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- Z: shrink the interval -->
+    <div id="sZ">
+      <div class="card full" id="zt"><div class="lbl" style="left:36px;top:30px">AVERAGES FROM t = 2 s · SHRINK THE GAP</div><div id="zrs"></div></div>
+      <div class="card rf" id="zg"><div class="lbl" style="left:36px;top:30px">CHORD ON THE x-t GRAPH</div><svg id="zgS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="gchip" id="zch" style="right:36px;top:18px"><span id="zchK">slope</span><span id="zchV">6.00</span><span style="color:var(--mute);font-size:18px">m/s</span></div></div>
+    </div>
+
+    <!-- D: the rule in 4 steps -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE RULE · 4 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">CHORD TO TANGENT</div><svg id="drS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- K: side by side + pause and think -->
+    <div id="sK">
+      <div class="card full" id="kb"><div class="lbl" style="left:36px;top:30px">AVERAGE · A WHOLE INTERVAL</div><svg id="kbS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="fl2" id="kbF" style="top:300px;font-size:44px"></div>
+        <div class="pillp" id="kbC" style="left:36px;top:490px">Needs a start and an end</div></div>
+      <div class="card rf" id="kd"><div class="lbl" style="left:36px;top:30px">INSTANTANEOUS · ONE INSTANT</div><svg id="kdS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="fl2" id="kdF" style="top:300px;font-size:44px"></div>
+        <div class="pillp" id="kdC" style="left:36px;top:490px">Speedometer shows its size</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- G: reading velocity off an x-t graph -->
+    <div id="sG">
+      <div class="card full" id="gg"><div class="lbl" style="left:36px;top:30px">SLOPE OF THE TANGENT = VELOCITY</div><svg id="ggS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="gchip" id="gch" style="right:36px;top:18px"><span class="vv" style="font-style:italic;font-family:Poppins">v</span><span id="gchV">0.0</span><span style="color:var(--mute);font-size:18px">m/s</span></div></div>
+      <div class="card rf" id="gr2"><div class="lbl" style="left:36px;top:30px">ON THE ROAD</div><svg id="grdS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="ro" id="groG" style="left:36px;top:300px;width:712px"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">x = 4t² + 2t · CHORD AND TANGENT</div><svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tb" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Chord: the <span class="acc">average</span>. Tangent: the <span class="acc">instant</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

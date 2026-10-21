@@ -1,0 +1,56 @@
+H1|0.4|A trip app says Aarav's ride averaged twelve kilometres per hour. His speedometer showed twenty five on the slope, and zero at the signal.
+H2|0.45|Three different numbers. And all three are true.
+H3|0.35|So Aarav wonders. Which one is his real velocity?
+H4|0.5|It depends on one thing. A whole trip, or one single instant?
+H5|0.65|By the end of this video, you will find the velocity at one instant.
+B1|0.35|Start with the whole trip.
+B2|0.4|Average velocity is the displacement divided by the time taken.
+B3|0.4|Aarav's college is three kilometres east of his home. He gets there in fifteen minutes.
+B4|0.45|Three kilometres divided by a quarter of an hour. Twelve kilometres per hour, east.
+B5|0.65|But it hides the stops and the fast bits. One number for the whole trip.
+S1|0.35|Now let's zoom into five seconds on our motion notebook.
+S2|0.4|Aarav starts from rest at the signal. His position is x equals t squared, in metres.
+S3|0.4|Every second he covers more ground than the second before. So the graph curves upward.
+S4|0.5|Slow motion replay. Freeze at t equals two seconds.
+S5|0.65|How fast is he going at exactly this instant?
+Z1|0.45|Try an average. From two seconds to four seconds he moves twelve metres. Six metres per second.
+Z2|0.45|Shrink the gap to one second. He moves five metres. Five metres per second.
+Z3|0.45|Half a second. Four point five metres per second.
+Z4|0.45|A tenth of a second. Four point one.
+Z5|0.45|A hundredth of a second. Four point zero one. The answers close in on four.
+Z6|0.65|On the graph, the chord turns into a line that just touches the curve. The tangent.
+D1|0.35|Let's write this as a rule, one step at a time.
+D2|0.75|Step one. Average velocity, v bar, equals delta x over delta t.
+D3|0.75|Step two. Let delta t shrink towards zero. The velocity at an instant is the limit of delta x over delta t.
+D4|0.75|Step three. This limit is written d x by d t. How fast the position changes, right now.
+D5|0.75|Step four. For x equals t squared, d x by d t is two t. At two seconds, four metres per second.
+T1|0.7|Remember this. The chord's slope is the average velocity. The tangent's slope is the velocity at an instant.
+K1|0.4|Side by side. Average velocity needs a whole interval. Total displacement over total time.
+K2|0.6|Instantaneous velocity needs only one instant. A speedometer shows its size.
+K3|3.2|Now you try. Aarav rides three hundred metres to a shop and straight back home, in ten minutes. What is his average velocity? Pause and decide.
+K4|0.65|Zero! He ends where he started, so his displacement is zero. His average speed is one metre per second, but his average velocity is zero.
+G1|0.35|Now read velocities straight off a position time graph.
+G2|0.4|Where the curve climbs steeply, the velocity is large and positive.
+G3|0.4|Where it slopes down, the velocity is negative. He is coming back.
+G4|3.2|Your turn. At the very top of the hump, the graph is flat for an instant. What is the velocity there? Pause and think.
+G5|0.65|Zero! The tangent at the top is flat, so its slope is zero. He is turning around.
+W1|0.35|Now, one worked example.
+W2|0.5|A cyclist moves so that x equals four t squared plus two t, in metres. Find the average velocity in the first two seconds, and the velocity at two seconds.
+W3|0.75|At t equals zero, x is zero. At t equals two, x is sixteen plus four. Twenty metres.
+W4|0.75|Average velocity is twenty metres over two seconds. Ten metres per second.
+W5|0.75|For the instant, find d x by d t. v equals eight t plus two.
+W6|0.65|At two seconds, v is eighteen metres per second. Almost double the average, because he keeps speeding up.
+X1|0.35|Now, the exam trap.
+X2|0.4|Aarav rides six kilometres at ten kilometres per hour, then six more at fifteen. Many students take the mean, and say twelve point five.
+X3|0.65|Wrong. He spends more time on the slow half. Twelve kilometres in one hour. Twelve kilometres per hour.
+E1|0.6|Where is this asked? Usually like this. Given x as a function of t, find the average velocity over an interval, and the velocity at one instant.
+Q1|5.4|Exam level now. x equals t cubed, minus three t squared, plus four. Find the average velocity from zero to three seconds, and the velocity at three seconds. Pause and solve.
+A1|0.5|The answer is A. Zero, and nine metres per second.
+A2|0.5|x at zero is four. x at three is twenty seven, minus twenty seven, plus four. Also four. So the average velocity is zero.
+A3|0.6|Now differentiate. v equals three t squared minus six t. At three seconds, twenty seven minus eighteen. Nine metres per second.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why can a round trip have zero average velocity?
+Y3|0.9|Two. Does a speedometer show an average or an instantaneous value?
+Y4|1.1|Three. How do you read the velocity at one instant from a position time graph?
+N1|0.3|Next time: velocity tells how fast position changes. So what tells how fast velocity changes? Average and instantaneous acceleration.
