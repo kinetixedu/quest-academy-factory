@@ -1,0 +1,382 @@
+1
+00:00:00,450 --> 00:00:02,685
+Aarav opens an old speaker box.
+
+2
+00:00:02,685 --> 00:00:06,316
+Inside are two speakers,
+a big one and a tiny one.
+
+3
+00:00:06,666 --> 00:00:09,292
+The tiny one only plays the high notes.
+
+4
+00:00:09,292 --> 00:00:12,330
+And the only part in
+its path is a capacitor.
+
+5
+00:00:12,680 --> 00:00:15,604
+How can one small part
+sort sounds by pitch?
+
+6
+00:00:16,204 --> 00:00:20,226
+A resistor opposes current the
+same way at every frequency.
+
+7
+00:00:20,575 --> 00:00:23,107
+But coils and capacitors are different.
+
+8
+00:00:23,107 --> 00:00:25,629
+Their opposition changes with frequency.
+
+9
+00:00:25,979 --> 00:00:28,352
+This opposition is called reactance.
+
+10
+00:00:28,352 --> 00:00:31,461
+It is measured in ohms,
+just like resistance.
+
+11
+00:00:32,111 --> 00:00:33,833
+Let's see it on the breadboard.
+
+12
+00:00:34,183 --> 00:00:39,205
+Here is an inductor, a coil of wire,
+on an alternating supply of ten volts.
+
+13
+00:00:39,555 --> 00:00:43,598
+At fifty hertz, about three hundred
+and eighteen milliamperes flow.
+
+14
+00:00:43,948 --> 00:00:45,737
+Now turn the frequency up.
+
+15
+00:00:45,737 --> 00:00:47,024
+The current falls.
+
+16
+00:00:47,374 --> 00:00:51,193
+At five hundred hertz, only
+about thirty two milliamperes.
+
+17
+00:00:51,193 --> 00:00:53,209
+The coil fights fast changes.
+
+18
+00:00:53,859 --> 00:00:55,474
+Look at the scope too.
+
+19
+00:00:55,474 --> 00:00:58,792
+The current peaks a quarter
+cycle after the voltage.
+
+20
+00:00:58,792 --> 00:01:02,355
+In an inductor, current lags
+voltage by ninety degrees.
+
+21
+00:01:03,005 --> 00:01:04,750
+Now swap in a capacitor.
+
+22
+00:01:04,750 --> 00:01:08,428
+At fifty hertz, only about
+thirty one milliamperes flow.
+
+23
+00:01:08,778 --> 00:01:11,615
+Turn the frequency up,
+and the current rises.
+
+24
+00:01:11,615 --> 00:01:14,545
+Ten times the frequency,
+ten times the current.
+
+25
+00:01:14,895 --> 00:01:18,936
+And here, the current peaks a
+quarter cycle before the voltage.
+
+26
+00:01:18,936 --> 00:01:22,520
+In a capacitor, current leads
+voltage by ninety degrees.
+
+27
+00:01:23,170 --> 00:01:24,926
+Coils fight fast changes.
+
+28
+00:01:24,926 --> 00:01:26,833
+Capacitors let them through.
+
+29
+00:01:27,633 --> 00:01:29,478
+Now let's find the formulas.
+
+30
+00:01:29,828 --> 00:01:33,182
+A coil makes a back voltage
+when its current changes.
+
+31
+00:01:33,182 --> 00:01:36,392
+v equals L, times the
+rate of change of current.
+
+32
+00:01:37,092 --> 00:01:41,294
+For a sine wave, that rate grows
+with omega, which is two pi f.
+
+33
+00:01:41,994 --> 00:01:46,030
+So the peak voltage is omega
+L times the peak current.
+
+34
+00:01:46,030 --> 00:01:49,015
+This omega L is the inductive reactance.
+
+35
+00:01:49,015 --> 00:01:50,994
+XL equals two pi f L.
+
+36
+00:01:51,694 --> 00:01:53,597
+A capacitor stores charge.
+
+37
+00:01:53,597 --> 00:01:54,809
+q equals C v.
+
+38
+00:01:54,809 --> 00:01:59,688
+Current is how fast that charge
+changes, so i equals C, times the rate
+
+39
+00:01:59,688 --> 00:02:01,006
+of change of v.
+
+40
+00:02:01,706 --> 00:02:03,988
+Faster changes push more current.
+
+41
+00:02:03,988 --> 00:02:07,732
+So the peak current is omega
+C times the peak voltage.
+
+42
+00:02:08,432 --> 00:02:12,007
+The capacitive reactance
+is one over omega C.
+
+43
+00:02:12,007 --> 00:02:14,814
+XC equals one over two pi f C.
+
+44
+00:02:15,514 --> 00:02:18,349
+L in henry, C in farad, f in hertz.
+
+45
+00:02:18,349 --> 00:02:20,688
+Both reactances come out in ohms.
+
+46
+00:02:21,338 --> 00:02:23,454
+Now plot them against frequency.
+
+47
+00:02:23,804 --> 00:02:25,512
+XL is a straight line.
+
+48
+00:02:25,512 --> 00:02:28,287
+Double the frequency,
+double the reactance.
+
+49
+00:02:28,637 --> 00:02:30,552
+XC is a curve that falls.
+
+50
+00:02:30,552 --> 00:02:33,234
+Double the frequency, half the reactance.
+
+51
+00:02:33,584 --> 00:02:35,982
+For DC, the frequency is zero.
+
+52
+00:02:35,982 --> 00:02:41,124
+So a coil acts like a plain wire,
+and a capacitor blocks DC completely.
+
+53
+00:02:41,774 --> 00:02:43,393
+Back to the speaker box.
+
+54
+00:02:43,393 --> 00:02:46,382
+For low notes, the
+capacitor's reactance is high.
+
+55
+00:02:46,382 --> 00:02:50,008
+For high notes it is low, so
+they reach the tiny speaker.
+
+56
+00:02:50,658 --> 00:02:51,851
+Worked example.
+
+57
+00:02:51,851 --> 00:02:56,834
+A ten microfarad capacitor is connected
+to the two hundred and thirty volt,
+
+58
+00:02:56,834 --> 00:02:58,250
+fifty hertz mains.
+
+59
+00:02:58,600 --> 00:03:03,481
+XC equals one, over two pi, times
+fifty, times ten to the minus five.
+
+60
+00:03:03,481 --> 00:03:06,469
+That is about three
+hundred and eighteen ohms.
+
+61
+00:03:07,069 --> 00:03:11,845
+The current is two hundred and thirty
+divided by three hundred and eighteen.
+
+62
+00:03:11,845 --> 00:03:14,179
+About zero point seven two amperes.
+
+63
+00:03:14,829 --> 00:03:16,295
+Now, the exam trap.
+
+64
+00:03:16,645 --> 00:03:21,615
+Many students think every reactance
+rises with frequency, like XL does.
+
+65
+00:03:21,965 --> 00:03:22,891
+Not XC.
+
+66
+00:03:22,891 --> 00:03:27,454
+It is one over two pi f C, so
+it falls as frequency rises.
+
+67
+00:03:27,454 --> 00:03:30,031
+And for DC, it becomes infinite.
+
+68
+00:03:30,681 --> 00:03:32,352
+Where is this asked?
+
+69
+00:03:32,352 --> 00:03:35,358
+In PUC board papers, and in JEE Main.
+
+70
+00:03:35,358 --> 00:03:40,810
+Find XL or XC, see how the current
+changes with frequency, or state the
+
+71
+00:03:40,810 --> 00:03:41,710
+phase.
+
+72
+00:03:42,144 --> 00:03:43,044
+Try this.
+
+73
+00:03:43,013 --> 00:03:48,088
+At fifty hertz, an inductor has a
+reactance of forty ohms, and a capacitor
+
+74
+00:03:48,088 --> 00:03:51,362
+has a reactance of one
+hundred and sixty ohms.
+
+75
+00:03:51,362 --> 00:03:54,731
+At what frequency will
+their reactances be equal?
+
+76
+00:04:00,131 --> 00:04:01,031
+B.
+
+77
+00:04:00,621 --> 00:04:02,209
+One hundred hertz.
+
+78
+00:04:02,559 --> 00:04:04,446
+XL grows with frequency.
+
+79
+00:04:04,446 --> 00:04:07,474
+At f, it is forty, times f over fifty.
+
+80
+00:04:07,824 --> 00:04:09,667
+XC falls with frequency.
+
+81
+00:04:09,667 --> 00:04:13,631
+At f, it is one hundred and
+sixty, times fifty over f.
+
+82
+00:04:13,981 --> 00:04:15,187
+Set them equal.
+
+83
+00:04:15,187 --> 00:04:19,662
+f squared is four times fifty
+squared, so f is one hundred hertz.
+
+84
+00:04:20,312 --> 00:04:21,836
+Screenshot this card.
+
+85
+00:04:25,036 --> 00:04:27,001
+Next, impedance and resonance.
+
+86
+00:04:27,001 --> 00:04:30,630
+What happens when a coil and
+a capacitor share one circuit?

@@ -1,0 +1,394 @@
+1
+00:00:00,450 --> 00:00:02,906
+Aarav pulls his charger out of the wall.
+
+2
+00:00:02,906 --> 00:00:06,279
+But its little indicator light
+keeps glowing for a moment.
+
+3
+00:00:06,629 --> 00:00:07,967
+The power is gone.
+
+4
+00:00:07,967 --> 00:00:10,991
+So where is that light
+getting its energy from?
+
+5
+00:00:10,991 --> 00:00:11,925
+A capacitor.
+
+6
+00:00:12,425 --> 00:00:17,097
+A capacitor is two metal plates,
+facing each other, with an insulator in
+
+7
+00:00:17,097 --> 00:00:17,997
+between.
+
+8
+00:00:18,164 --> 00:00:20,647
+The insulator is called the dielectric.
+
+9
+00:00:20,647 --> 00:00:23,984
+It can be air, paper,
+mica, plastic or ceramic.
+
+10
+00:00:24,334 --> 00:00:25,922
+Its symbol is just that.
+
+11
+00:00:25,922 --> 00:00:28,999
+Two short parallel lines,
+with a gap between them.
+
+12
+00:00:29,649 --> 00:00:31,749
+Let's charge one on the breadboard.
+
+13
+00:00:31,749 --> 00:00:34,831
+A battery, a switch, a
+resistor and a capacitor.
+
+14
+00:00:35,181 --> 00:00:36,363
+Close the switch.
+
+15
+00:00:36,363 --> 00:00:39,585
+Electrons rush from the
+battery onto the bottom plate.
+
+16
+00:00:39,935 --> 00:00:44,294
+At the same time, electrons leave the
+top plate and flow to the battery.
+
+17
+00:00:44,294 --> 00:00:46,304
+So the top plate turns positive.
+
+18
+00:00:46,654 --> 00:00:49,602
+Notice that no electron
+jumps across the gap.
+
+19
+00:00:49,602 --> 00:00:52,291
+The dielectric does not let them through.
+
+20
+00:00:52,641 --> 00:00:53,908
+Watch the scope.
+
+21
+00:00:53,908 --> 00:00:58,714
+The capacitor voltage climbs fast,
+then slower and slower, until it equals
+
+22
+00:00:58,714 --> 00:01:00,186
+the battery voltage.
+
+23
+00:01:00,186 --> 00:01:01,874
+Then the current stops.
+
+24
+00:01:02,524 --> 00:01:05,030
+Now flip the switch over to a small lamp.
+
+25
+00:01:05,380 --> 00:01:08,401
+The stored charge flows
+back out through the lamp.
+
+26
+00:01:08,401 --> 00:01:11,899
+The lamp glows, and the voltage
+on the scope falls away.
+
+27
+00:01:11,899 --> 00:01:14,066
+That is the charger's glowing light.
+
+28
+00:01:14,716 --> 00:01:17,356
+So how much charge can a capacitor hold?
+
+29
+00:01:17,706 --> 00:01:20,835
+Double the voltage, and
+you double the charge.
+
+30
+00:01:20,835 --> 00:01:22,534
+Q is proportional to V.
+
+31
+00:01:23,234 --> 00:01:25,185
+So Q equals C times V.
+
+32
+00:01:25,185 --> 00:01:27,820
+The constant C is the capacitance.
+
+33
+00:01:28,520 --> 00:01:30,121
+C equals Q over V.
+
+34
+00:01:30,121 --> 00:01:33,577
+Capacitance is the charge
+stored for every volt.
+
+35
+00:01:34,277 --> 00:01:36,912
+Charge in coulombs, voltage in volts.
+
+36
+00:01:36,912 --> 00:01:41,565
+So capacitance is in coulombs per
+volt, called the farad, after Michael
+
+37
+00:01:41,565 --> 00:01:42,465
+Faraday.
+
+38
+00:01:42,945 --> 00:01:44,626
+One farad is huge.
+
+39
+00:01:44,626 --> 00:01:49,996
+Real capacitors are measured in
+microfarads, nanofarads and picofarads.
+
+40
+00:01:50,646 --> 00:01:52,665
+What decides the capacitance?
+
+41
+00:01:52,665 --> 00:01:55,121
+Look at a parallel plate capacitor.
+
+42
+00:01:55,471 --> 00:01:58,924
+Make the plates bigger, and
+there is room for more charge.
+
+43
+00:01:58,924 --> 00:02:00,522
+C grows with the area A.
+
+44
+00:02:00,872 --> 00:02:05,574
+Bring the plates closer, and the opposite
+charges pull harder on each other.
+
+45
+00:02:05,574 --> 00:02:07,596
+C grows as the gap d shrinks.
+
+46
+00:02:07,946 --> 00:02:12,020
+In air, C equals epsilon
+nought times A, divided by d.
+
+47
+00:02:12,720 --> 00:02:17,231
+Epsilon nought is the permittivity
+of free space, eight point eight five
+
+48
+00:02:17,231 --> 00:02:20,401
+times ten to the minus
+twelve farads per metre.
+
+49
+00:02:21,101 --> 00:02:23,212
+Now slide in a dielectric.
+
+50
+00:02:23,212 --> 00:02:27,652
+It multiplies the capacitance
+by K, the dielectric constant.
+
+51
+00:02:27,652 --> 00:02:30,722
+So C equals K epsilon nought A over d.
+
+52
+00:02:31,372 --> 00:02:34,366
+Bigger plates, closer
+together, more capacitance.
+
+53
+00:02:35,166 --> 00:02:36,333
+Worked example.
+
+54
+00:02:36,333 --> 00:02:41,033
+Two plates, ten centimetres by ten
+centimetres, are one millimetre apart
+
+55
+00:02:41,033 --> 00:02:41,933
+in air.
+
+56
+00:02:42,134 --> 00:02:45,414
+The area is zero point
+zero one square metres.
+
+57
+00:02:45,414 --> 00:02:49,087
+The gap is one times ten
+to the minus three metres.
+
+58
+00:02:49,437 --> 00:02:54,285
+C equals eight point eight five times
+ten to the minus twelve, times zero
+
+59
+00:02:54,285 --> 00:02:57,514
+point zero one, over
+ten to the minus three.
+
+60
+00:02:58,214 --> 00:03:02,724
+That is eight point eight five times
+ten to the minus eleven farads.
+
+61
+00:03:02,724 --> 00:03:04,750
+About eighty eight picofarads.
+
+62
+00:03:05,450 --> 00:03:10,518
+Fill the gap with a dielectric of K
+equals five, and it becomes about four
+
+63
+00:03:10,518 --> 00:03:12,589
+hundred and forty picofarads.
+
+64
+00:03:13,239 --> 00:03:14,704
+Now, the exam trap.
+
+65
+00:03:15,054 --> 00:03:19,213
+Many students think a higher
+voltage gives a bigger capacitance.
+
+66
+00:03:19,213 --> 00:03:20,271
+It does not.
+
+67
+00:03:20,621 --> 00:03:23,704
+Double the voltage,
+and the charge doubles.
+
+68
+00:03:23,704 --> 00:03:25,615
+Q over V stays the same.
+
+69
+00:03:25,615 --> 00:03:28,549
+Capacitance depends only on A, d and K.
+
+70
+00:03:29,199 --> 00:03:30,762
+Where is this asked?
+
+71
+00:03:30,762 --> 00:03:35,848
+JEE Main and NEET ask for the new
+capacitance when plates move or a dielectric
+
+72
+00:03:35,848 --> 00:03:36,748
+goes in.
+
+73
+00:03:37,005 --> 00:03:42,408
+PUC board papers ask you to define
+capacitance and its unit, and to use
+
+74
+00:03:42,408 --> 00:03:45,360
+C equals K epsilon nought A over d.
+
+75
+00:03:46,010 --> 00:03:46,911
+Try this.
+
+76
+00:03:46,911 --> 00:03:51,781
+A parallel plate capacitor has plates
+of area zero point zero two square
+
+77
+00:03:51,781 --> 00:03:57,255
+metres, half a millimetre apart, filled
+with a dielectric of K equals four.
+
+78
+00:03:57,255 --> 00:03:59,519
+It is charged to fifty volts.
+
+79
+00:03:59,519 --> 00:04:01,553
+What charge does it store?
+
+80
+00:04:06,953 --> 00:04:07,853
+B.
+
+81
+00:04:07,452 --> 00:04:09,939
+About seventy one nanocoulombs.
+
+82
+00:04:10,289 --> 00:04:13,556
+First, C equals K epsilon nought A over d.
+
+83
+00:04:13,556 --> 00:04:16,758
+That is about one point
+four two nanofarads.
+
+84
+00:04:17,108 --> 00:04:19,247
+Then Q equals C times V.
+
+85
+00:04:19,597 --> 00:04:24,464
+One point four two nanofarads times
+fifty volts is about seventy point
+
+86
+00:04:24,464 --> 00:04:25,968
+eight nanocoulombs.
+
+87
+00:04:26,618 --> 00:04:28,140
+Screenshot this card.
+
+88
+00:04:31,340 --> 00:04:33,710
+Next, capacitor types and ratings.
+
+89
+00:04:33,710 --> 00:04:37,088
+Why does a capacitor carry
+a voltage on its label?

@@ -1,0 +1,388 @@
+1
+00:00:00,450 --> 00:00:03,817
+Aarav's ceiling fan hums, but
+it will not start spinning.
+
+2
+00:00:03,817 --> 00:00:06,000
+Give it a push, and off it goes.
+
+3
+00:00:06,350 --> 00:00:08,804
+The electrician swaps one small box.
+
+4
+00:00:08,804 --> 00:00:13,561
+Its label says two point five
+microfarads, four hundred and forty volts.
+
+5
+00:00:13,561 --> 00:00:15,496
+What do those numbers mean?
+
+6
+00:00:15,996 --> 00:00:18,393
+Capacitors come in two big families.
+
+7
+00:00:18,393 --> 00:00:19,765
+Fixed and variable.
+
+8
+00:00:20,115 --> 00:00:23,633
+A fixed capacitor has one
+value that never changes.
+
+9
+00:00:23,633 --> 00:00:26,444
+Each type is named after its dielectric.
+
+10
+00:00:26,794 --> 00:00:29,489
+Ceramic capacitors are small and cheap.
+
+11
+00:00:29,489 --> 00:00:34,301
+They hold small values, in picofarads
+and nanofarads, and they work well
+
+12
+00:00:34,301 --> 00:00:35,806
+at high frequencies.
+
+13
+00:00:36,156 --> 00:00:40,676
+Mica capacitors are very stable and
+accurate, so they are used where the
+
+14
+00:00:40,676 --> 00:00:42,212
+value must not drift.
+
+15
+00:00:42,562 --> 00:00:47,098
+Paper and plastic film capacitors
+are long sheets, rolled up tight.
+
+16
+00:00:47,098 --> 00:00:50,197
+They hold nanofarads up
+to a few microfarads.
+
+17
+00:00:50,547 --> 00:00:53,155
+Electrolytic capacitors hold the most.
+
+18
+00:00:53,155 --> 00:00:58,018
+From about one microfarad to thousands
+of microfarads, in a small can.
+
+19
+00:00:58,368 --> 00:01:02,342
+But an electrolytic capacitor
+has a plus lead and a minus lead.
+
+20
+00:01:02,342 --> 00:01:04,687
+It must go in the right way round.
+
+21
+00:01:05,337 --> 00:01:08,365
+A variable capacitor lets
+you change the value.
+
+22
+00:01:08,715 --> 00:01:13,424
+In a gang capacitor, one set of metal
+plates turns into the gaps of another
+
+23
+00:01:13,424 --> 00:01:14,324
+set.
+
+24
+00:01:13,925 --> 00:01:15,485
+Air is the dielectric.
+
+25
+00:01:15,835 --> 00:01:19,172
+Remember, C equals K
+epsilon nought A over d.
+
+26
+00:01:19,172 --> 00:01:23,881
+Turning the knob changes the overlap
+area A, so C changes with it.
+
+27
+00:01:24,581 --> 00:01:27,024
+A trimmer is a tiny variable capacitor.
+
+28
+00:01:27,024 --> 00:01:30,335
+You set it once, with a
+screwdriver, and leave it.
+
+29
+00:01:30,985 --> 00:01:33,231
+Let's tune a radio on the breadboard.
+
+30
+00:01:33,231 --> 00:01:36,695
+The gang capacitor sits with
+a coil, in a tuned circuit.
+
+31
+00:01:37,045 --> 00:01:38,137
+Turn the knob.
+
+32
+00:01:38,137 --> 00:01:41,065
+The plates overlap more,
+and the area grows.
+
+33
+00:01:41,415 --> 00:01:45,595
+The capacitance climbs from
+fifty to four hundred picofarads.
+
+34
+00:01:45,945 --> 00:01:47,193
+Watch the scope.
+
+35
+00:01:47,193 --> 00:01:50,127
+As C goes up, the tuned wave slows down.
+
+36
+00:01:50,127 --> 00:01:54,959
+Its frequency falls, from about fourteen
+hundred to five hundred kilohertz.
+
+37
+00:01:55,309 --> 00:01:58,290
+That is how one knob picks
+one station at a time.
+
+38
+00:01:58,940 --> 00:02:01,367
+Now, the ratings printed on a capacitor.
+
+39
+00:02:01,717 --> 00:02:04,275
+First, the capacitance and its tolerance.
+
+40
+00:02:04,275 --> 00:02:08,568
+Just like a resistor, the real value
+can differ from the marked value.
+
+41
+00:02:08,918 --> 00:02:10,832
+Second, the working voltage.
+
+42
+00:02:10,832 --> 00:02:14,391
+It is the highest voltage the
+dielectric can safely take.
+
+43
+00:02:14,391 --> 00:02:17,508
+Go above it, and the
+dielectric can break down.
+
+44
+00:02:17,858 --> 00:02:22,320
+So always choose a working voltage
+higher than the voltage in your circuit.
+
+45
+00:02:22,970 --> 00:02:26,048
+Third, polarity, for
+electrolytic capacitors.
+
+46
+00:02:26,048 --> 00:02:29,423
+A stripe with minus signs
+marks the negative lead.
+
+47
+00:02:29,423 --> 00:02:31,424
+The longer lead is positive.
+
+48
+00:02:31,774 --> 00:02:35,297
+Fit it backwards, and it can
+heat up, leak, or even burst.
+
+49
+00:02:35,947 --> 00:02:40,858
+So the fan label means two point five
+microfarads, safe up to four hundred
+
+50
+00:02:40,858 --> 00:02:42,147
+and forty volts.
+
+51
+00:02:42,797 --> 00:02:44,768
+Value, voltage, polarity.
+
+52
+00:02:44,768 --> 00:02:46,058
+Check all three.
+
+53
+00:02:46,858 --> 00:02:52,663
+Small ceramic and film capacitors often
+carry a three digit code, in picofarads.
+
+54
+00:02:53,013 --> 00:02:55,329
+The first two digits are the value.
+
+55
+00:02:55,329 --> 00:02:57,894
+The third digit is the number of zeros.
+
+56
+00:02:58,594 --> 00:03:01,156
+A letter after it gives the tolerance.
+
+57
+00:03:01,156 --> 00:03:05,424
+J is five percent, K is ten
+percent, and M is twenty percent.
+
+58
+00:03:06,074 --> 00:03:07,294
+Worked example.
+
+59
+00:03:07,294 --> 00:03:10,824
+A ceramic capacitor is
+marked four seven three J.
+
+60
+00:03:11,174 --> 00:03:13,632
+Four, seven, then three zeros.
+
+61
+00:03:13,632 --> 00:03:15,916
+Forty seven thousand picofarads.
+
+62
+00:03:16,616 --> 00:03:19,829
+A thousand picofarads make one nanofarad.
+
+63
+00:03:19,829 --> 00:03:25,844
+So that is forty seven nanofarads, or
+zero point zero four seven microfarads.
+
+64
+00:03:26,544 --> 00:03:29,296
+And J means plus or minus five percent.
+
+65
+00:03:29,946 --> 00:03:31,411
+Now, the exam trap.
+
+66
+00:03:31,761 --> 00:03:36,778
+Many students read one zero four
+as one hundred and four picofarads.
+
+67
+00:03:36,778 --> 00:03:37,678
+Wrong.
+
+68
+00:03:37,828 --> 00:03:40,342
+The last digit counts the zeros.
+
+69
+00:03:40,342 --> 00:03:43,448
+One zero four is ten, with four zeros.
+
+70
+00:03:43,448 --> 00:03:45,712
+A hundred thousand picofarads.
+
+71
+00:03:45,712 --> 00:03:50,319
+That is one hundred nanofarads,
+or zero point one microfarads.
+
+72
+00:03:50,969 --> 00:03:52,547
+Where is this asked?
+
+73
+00:03:52,547 --> 00:03:54,125
+In PUC board papers.
+
+74
+00:03:54,125 --> 00:03:58,964
+Name and compare the types, explain
+the working voltage and polarity, or
+
+75
+00:03:58,964 --> 00:04:00,754
+decode a capacitor code.
+
+76
+00:04:01,404 --> 00:04:02,304
+Try this.
+
+77
+00:04:02,276 --> 00:04:05,564
+A ceramic capacitor is
+marked two two three K.
+
+78
+00:04:05,564 --> 00:04:07,043
+What is its value?
+
+79
+00:04:12,443 --> 00:04:13,343
+B.
+
+80
+00:04:12,896 --> 00:04:16,521
+Twenty two nanofarads,
+plus or minus ten percent.
+
+81
+00:04:16,871 --> 00:04:19,076
+Two, two, then three zeros.
+
+82
+00:04:19,076 --> 00:04:21,218
+Twenty two thousand picofarads.
+
+83
+00:04:21,568 --> 00:04:24,531
+A thousand picofarads make one nanofarad.
+
+84
+00:04:24,531 --> 00:04:27,048
+So that is twenty two nanofarads.
+
+85
+00:04:27,398 --> 00:04:29,958
+And K means plus or minus ten percent.
+
+86
+00:04:30,608 --> 00:04:32,130
+Screenshot this card.
+
+87
+00:04:35,330 --> 00:04:37,384
+Next, inductors and inductance.
+
+88
+00:04:37,384 --> 00:04:40,350
+Why does a coil fight
+every change in current?

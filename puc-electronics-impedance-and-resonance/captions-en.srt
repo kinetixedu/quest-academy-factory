@@ -1,0 +1,374 @@
+1
+00:00:00,450 --> 00:00:03,882
+Aarav turns the dial on his
+grandfather's old radio.
+
+2
+00:00:03,882 --> 00:00:06,482
+The air is full of stations at once.
+
+3
+00:00:06,832 --> 00:00:10,810
+Yet with one small turn, he hears
+just one of them, loud and clear.
+
+4
+00:00:11,160 --> 00:00:14,259
+How does the radio pick
+one station out of so many?
+
+5
+00:00:14,859 --> 00:00:19,641
+The secret is a circuit with a resistor,
+a coil and a capacitor in series.
+
+6
+00:00:19,991 --> 00:00:22,029
+Each one opposes the current.
+
+7
+00:00:22,029 --> 00:00:25,055
+The total opposition
+is called impedance, Z.
+
+8
+00:00:25,405 --> 00:00:27,237
+It is measured in ohms.
+
+9
+00:00:27,237 --> 00:00:30,535
+But you cannot simply add R, XL and XC.
+
+10
+00:00:30,535 --> 00:00:31,699
+Let's see why.
+
+11
+00:00:32,349 --> 00:00:36,601
+Here is the circuit on the breadboard,
+on a ten volt supply whose frequency
+
+12
+00:00:36,601 --> 00:00:37,525
+we can turn.
+
+13
+00:00:37,875 --> 00:00:40,158
+At fifty hertz, XC is large.
+
+14
+00:00:40,158 --> 00:00:41,998
+Very little current flows.
+
+15
+00:00:42,348 --> 00:00:43,898
+Turn the frequency up.
+
+16
+00:00:43,898 --> 00:00:47,214
+XL grows, XC shrinks,
+and the current climbs.
+
+17
+00:00:47,564 --> 00:00:52,379
+At about one hundred and fifty
+nine hertz, XL and XC become equal.
+
+18
+00:00:52,379 --> 00:00:53,383
+They cancel.
+
+19
+00:00:53,733 --> 00:00:54,989
+Only R is left.
+
+20
+00:00:54,989 --> 00:00:58,475
+The current jumps to its
+biggest value, one ampere.
+
+21
+00:00:59,125 --> 00:01:01,422
+Keep going, and XL takes over.
+
+22
+00:01:01,422 --> 00:01:03,095
+The current falls again.
+
+23
+00:01:03,445 --> 00:01:06,882
+The graph of current against
+frequency has a sharp peak.
+
+24
+00:01:06,882 --> 00:01:08,813
+This peak is called resonance.
+
+25
+00:01:09,463 --> 00:01:11,426
+Watch the scope at the peak.
+
+26
+00:01:11,426 --> 00:01:14,180
+Voltage and current
+rise and fall together.
+
+27
+00:01:14,180 --> 00:01:15,538
+They are in phase.
+
+28
+00:01:16,188 --> 00:01:19,427
+At resonance, the coil
+and the capacitor cancel.
+
+29
+00:01:19,427 --> 00:01:20,671
+Only R is left.
+
+30
+00:01:21,471 --> 00:01:24,549
+Now the formula for
+impedance, in small steps.
+
+31
+00:01:24,899 --> 00:01:28,068
+In the resistor, voltage
+and current are in step.
+
+32
+00:01:28,068 --> 00:01:31,674
+In the coil, voltage leads
+the current by ninety degrees.
+
+33
+00:01:32,374 --> 00:01:35,890
+In the capacitor, voltage
+lags by ninety degrees.
+
+34
+00:01:35,890 --> 00:01:40,232
+So the coil and capacitor voltages
+point in opposite directions.
+
+35
+00:01:40,932 --> 00:01:42,059
+They subtract.
+
+36
+00:01:42,059 --> 00:01:45,671
+The net push from them
+is I times XL minus XC.
+
+37
+00:01:46,371 --> 00:01:48,604
+This is at right angles to IR.
+
+38
+00:01:48,604 --> 00:01:50,768
+So we join them with Pythagoras.
+
+39
+00:01:51,468 --> 00:01:56,558
+Z equals the square root of R
+squared, plus XL minus XC, squared.
+
+40
+00:01:57,258 --> 00:02:03,101
+The phase angle, phi, follows from
+tan phi equals XL minus XC, over R.
+
+41
+00:02:03,801 --> 00:02:06,795
+For resonance, set XL equal to XC.
+
+42
+00:02:06,795 --> 00:02:09,922
+Two pi f L equals one over two pi f C.
+
+43
+00:02:10,622 --> 00:02:15,464
+So the resonant frequency is f naught
+equals one over two pi, root LC.
+
+44
+00:02:15,464 --> 00:02:18,581
+There, Z equals R, the smallest it can be.
+
+45
+00:02:19,231 --> 00:02:20,480
+Worked example.
+
+46
+00:02:20,480 --> 00:02:26,432
+R is thirty ohms, XL is eighty ohms,
+and XC is forty ohms, on a one hundred
+
+47
+00:02:26,432 --> 00:02:27,513
+volt supply.
+
+48
+00:02:27,863 --> 00:02:29,852
+XL minus XC is forty.
+
+49
+00:02:29,852 --> 00:02:33,567
+Z is the root of thirty
+squared plus forty squared.
+
+50
+00:02:33,567 --> 00:02:35,141
+That is fifty ohms.
+
+51
+00:02:35,741 --> 00:02:38,983
+The current is one
+hundred divided by fifty.
+
+52
+00:02:38,983 --> 00:02:40,057
+Two amperes.
+
+53
+00:02:40,657 --> 00:02:45,429
+And tan phi is forty over thirty,
+so phi is about fifty three degrees.
+
+54
+00:02:45,429 --> 00:02:48,839
+XL is bigger, so the
+voltage leads the current.
+
+55
+00:02:49,489 --> 00:02:50,858
+Back to the radio.
+
+56
+00:02:50,858 --> 00:02:53,852
+Its tuning circuit is
+a coil and a capacitor.
+
+57
+00:02:54,202 --> 00:02:56,833
+Turning the dial changes the capacitance.
+
+58
+00:02:56,833 --> 00:03:00,800
+Only the station at the resonant
+frequency gets a big current.
+
+59
+00:03:00,800 --> 00:03:02,580
+All the others stay tiny.
+
+60
+00:03:03,230 --> 00:03:04,696
+Now, the exam trap.
+
+61
+00:03:05,046 --> 00:03:09,200
+Many students say that at resonance,
+the impedance becomes zero and the
+
+62
+00:03:09,200 --> 00:03:10,779
+current becomes infinite.
+
+63
+00:03:11,129 --> 00:03:12,029
+No.
+
+64
+00:03:11,654 --> 00:03:13,754
+Only the reactances cancel.
+
+65
+00:03:13,754 --> 00:03:18,639
+Z becomes R, its smallest value,
+and the current is V over R.
+
+66
+00:03:19,289 --> 00:03:20,809
+Where is this asked?
+
+67
+00:03:20,809 --> 00:03:23,543
+In PUC board papers, and in JEE Main.
+
+68
+00:03:23,543 --> 00:03:28,042
+Find Z, the current, the phase
+angle, or the resonant frequency.
+
+69
+00:03:28,692 --> 00:03:29,592
+Try this.
+
+70
+00:03:29,570 --> 00:03:34,952
+A series circuit has L equals forty
+millihenry, C equals twenty five microfarad,
+
+71
+00:03:34,952 --> 00:03:38,975
+and R equals twenty ohms, on
+a one hundred volt supply.
+
+72
+00:03:38,975 --> 00:03:42,763
+At resonance, what are the
+frequency and the current?
+
+73
+00:03:48,163 --> 00:03:49,063
+C.
+
+74
+00:03:48,579 --> 00:03:52,074
+One hundred and fifty nine
+hertz, and five amperes.
+
+75
+00:03:52,424 --> 00:03:54,969
+L times C is ten to the minus six.
+
+76
+00:03:54,969 --> 00:03:57,924
+Its square root is ten to the minus three.
+
+77
+00:03:58,274 --> 00:04:01,764
+So omega naught is one
+thousand radians per second.
+
+78
+00:04:01,764 --> 00:04:06,885
+Divide by two pi, and f naught is
+about one hundred and fifty nine hertz.
+
+79
+00:04:07,235 --> 00:04:09,148
+At resonance, Z equals R.
+
+80
+00:04:09,148 --> 00:04:13,287
+The current is one hundred over
+twenty, which is five amperes.
+
+81
+00:04:13,937 --> 00:04:15,459
+Screenshot this card.
+
+82
+00:04:18,659 --> 00:04:20,146
+Next, transformers.
+
+83
+00:04:20,146 --> 00:04:24,849
+How does the grey box on an electric
+pole change thousands of volts into
+
+84
+00:04:24,849 --> 00:04:26,735
+the supply for our homes?

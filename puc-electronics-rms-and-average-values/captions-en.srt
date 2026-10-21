@@ -1,0 +1,401 @@
+1
+00:00:00,450 --> 00:00:03,177
+Aarav reads the label on his room heater.
+
+2
+00:00:03,177 --> 00:00:05,138
+Two hundred and thirty volts.
+
+3
+00:00:05,488 --> 00:00:09,652
+But on a scope, the mains voltage
+swings up to about three hundred and
+
+4
+00:00:09,652 --> 00:00:13,796
+twenty five volts, then down to
+minus three hundred and twenty five.
+
+5
+00:00:14,146 --> 00:00:16,577
+So which number is the real voltage?
+
+6
+00:00:17,177 --> 00:00:19,142
+It starts with one problem.
+
+7
+00:00:19,142 --> 00:00:21,841
+An alternating voltage never sits still.
+
+8
+00:00:22,191 --> 00:00:25,215
+Its highest point is
+called the peak value, V m.
+
+9
+00:00:25,565 --> 00:00:28,947
+From the top to the bottom
+is the peak to peak value.
+
+10
+00:00:28,947 --> 00:00:30,208
+That is two V m.
+
+11
+00:00:30,558 --> 00:00:32,585
+Now try to find its average.
+
+12
+00:00:32,585 --> 00:00:35,793
+Every positive half has
+a matching negative half.
+
+13
+00:00:36,143 --> 00:00:38,507
+Over one full cycle, they cancel.
+
+14
+00:00:38,507 --> 00:00:39,999
+The average is zero.
+
+15
+00:00:39,999 --> 00:00:42,673
+Yet this voltage clearly heats a heater.
+
+16
+00:00:42,673 --> 00:00:44,475
+So we need better values.
+
+17
+00:00:45,125 --> 00:00:46,948
+Let's test it on the breadboard.
+
+18
+00:00:47,298 --> 00:00:52,016
+Here is a heater coil on an alternating
+supply with a peak of ten volts.
+
+19
+00:00:52,366 --> 00:00:53,744
+Watch the electrons.
+
+20
+00:00:53,744 --> 00:00:55,777
+They just rock back and forth.
+
+21
+00:00:55,777 --> 00:00:57,714
+But the coil still gets hot.
+
+22
+00:00:58,064 --> 00:01:00,861
+Below it, the same coil on a DC battery.
+
+23
+00:01:00,861 --> 00:01:02,999
+Let's turn the battery up slowly.
+
+24
+00:01:03,349 --> 00:01:06,413
+At five volts, it makes
+less heat than the top coil.
+
+25
+00:01:06,763 --> 00:01:10,037
+At ten volts, the peak value,
+it makes twice as much.
+
+26
+00:01:10,387 --> 00:01:15,137
+At seven point zero seven volts,
+both coils make exactly the same heat
+
+27
+00:01:15,137 --> 00:01:16,230
+every second.
+
+28
+00:01:16,580 --> 00:01:22,246
+So this alternating voltage is worth
+seven point zero seven volts of DC.
+
+29
+00:01:22,246 --> 00:01:24,767
+That number is its RMS value.
+
+30
+00:01:25,417 --> 00:01:29,699
+The RMS value is the steady
+DC that gives the same heat.
+
+31
+00:01:30,499 --> 00:01:32,467
+Why seven point zero seven?
+
+32
+00:01:32,467 --> 00:01:33,854
+Let's work it out.
+
+33
+00:01:34,204 --> 00:01:36,181
+Heat every second is power.
+
+34
+00:01:36,181 --> 00:01:39,292
+For a resistor, P equals v squared over R.
+
+35
+00:01:39,992 --> 00:01:42,847
+Here, v equals V m sine omega t.
+
+36
+00:01:42,847 --> 00:01:48,122
+So the power is V m squared, times
+sine squared omega t, over R.
+
+37
+00:01:48,822 --> 00:01:51,131
+Squaring makes every value positive.
+
+38
+00:01:51,131 --> 00:01:54,411
+And on average, sine
+squared is exactly one half.
+
+39
+00:01:55,111 --> 00:01:58,631
+So the average power is
+V m squared over two R.
+
+40
+00:01:59,331 --> 00:02:02,761
+A battery of voltage V
+gives V squared over R.
+
+41
+00:02:02,761 --> 00:02:04,274
+Set the two equal.
+
+42
+00:02:04,974 --> 00:02:07,657
+V equals V m divided by root two.
+
+43
+00:02:07,657 --> 00:02:11,489
+That is zero point seven
+zero seven times the peak.
+
+44
+00:02:12,189 --> 00:02:14,720
+Square it, take the mean, then the root.
+
+45
+00:02:14,720 --> 00:02:17,751
+That is why it is called
+the root mean square value.
+
+46
+00:02:17,751 --> 00:02:19,521
+Current follows the same rule.
+
+47
+00:02:20,171 --> 00:02:21,891
+Now, the average value.
+
+48
+00:02:21,891 --> 00:02:26,230
+Over a full cycle it is zero, so
+we average over one half cycle.
+
+49
+00:02:26,580 --> 00:02:28,360
+Take one hump of the wave.
+
+50
+00:02:28,360 --> 00:02:32,394
+Flatten it into a rectangle with
+the same area and the same width.
+
+51
+00:02:32,744 --> 00:02:36,178
+The height of that rectangle
+is the average value.
+
+52
+00:02:36,178 --> 00:02:41,094
+It is two V m over pi, or zero point
+six three seven times the peak.
+
+53
+00:02:41,794 --> 00:02:44,332
+Two more numbers link these values.
+
+54
+00:02:44,332 --> 00:02:47,375
+The form factor is RMS divided by average.
+
+55
+00:02:47,375 --> 00:02:50,600
+For a sine wave, it is one point one one.
+
+56
+00:02:51,300 --> 00:02:54,243
+The peak factor is peak divided by RMS.
+
+57
+00:02:54,243 --> 00:02:57,922
+That is root two, about
+one point four one four.
+
+58
+00:02:58,572 --> 00:02:59,829
+Worked example.
+
+59
+00:02:59,829 --> 00:03:01,671
+Back to Aarav's charger.
+
+60
+00:03:01,671 --> 00:03:05,140
+Two hundred and thirty
+volts is the RMS value.
+
+61
+00:03:05,490 --> 00:03:08,485
+The peak is two hundred
+and thirty times root two.
+
+62
+00:03:08,485 --> 00:03:11,427
+That is about three hundred
+and twenty five volts.
+
+63
+00:03:12,027 --> 00:03:16,563
+The half cycle average is zero point
+six three seven times the peak.
+
+64
+00:03:16,563 --> 00:03:18,928
+About two hundred and seven volts.
+
+65
+00:03:19,528 --> 00:03:23,237
+And peak to peak, it is about
+six hundred and fifty volts.
+
+66
+00:03:23,237 --> 00:03:24,966
+So both numbers were real.
+
+67
+00:03:24,966 --> 00:03:27,115
+They just measure different things.
+
+68
+00:03:27,765 --> 00:03:29,230
+Now, the exam trap.
+
+69
+00:03:29,580 --> 00:03:34,119
+Many students write that the average
+value of a sine wave is zero point
+
+70
+00:03:34,119 --> 00:03:35,703
+six three seven V m.
+
+71
+00:03:35,703 --> 00:03:38,177
+Over a full cycle, that is wrong.
+
+72
+00:03:38,527 --> 00:03:41,343
+Over a full cycle the average is zero.
+
+73
+00:03:41,343 --> 00:03:45,938
+Zero point six three seven V m
+is the average over half a cycle.
+
+74
+00:03:46,588 --> 00:03:48,219
+Where is this asked?
+
+75
+00:03:48,219 --> 00:03:51,152
+In PUC board papers, and in JEE Main.
+
+76
+00:03:51,152 --> 00:03:56,328
+Convert peak, RMS and average values,
+find form factor, or find the heat
+
+77
+00:03:56,328 --> 00:03:57,565
+in a resistor.
+
+78
+00:03:58,215 --> 00:03:59,115
+Try this.
+
+79
+00:03:59,044 --> 00:04:03,481
+A sine wave voltage with a peak of
+two hundred volts is applied across
+
+80
+00:04:03,481 --> 00:04:05,037
+a fifty ohm resistor.
+
+81
+00:04:05,037 --> 00:04:07,797
+How much heat is produced in one minute?
+
+82
+00:04:13,197 --> 00:04:14,097
+B.
+
+83
+00:04:13,687 --> 00:04:15,578
+Twenty four kilojoules.
+
+84
+00:04:15,928 --> 00:04:20,210
+First, the RMS voltage squared
+is the peak squared over two.
+
+85
+00:04:20,210 --> 00:04:22,015
+That is twenty thousand.
+
+86
+00:04:22,365 --> 00:04:25,041
+Power is that divided by fifty ohms.
+
+87
+00:04:25,041 --> 00:04:26,537
+Four hundred watts.
+
+88
+00:04:26,887 --> 00:04:28,773
+Heat is power times time.
+
+89
+00:04:28,773 --> 00:04:33,017
+Four hundred times sixty seconds
+is twenty four thousand joules.
+
+90
+00:04:33,667 --> 00:04:35,189
+Screenshot this card.
+
+91
+00:04:38,389 --> 00:04:41,309
+Next, inductive and capacitive reactance.
+
+92
+00:04:41,309 --> 00:04:46,026
+Why does a capacitor block DC, but
+let alternating current through?

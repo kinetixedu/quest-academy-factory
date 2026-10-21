@@ -1,0 +1,419 @@
+1
+00:00:00,450 --> 00:00:05,256
+Aarav cycles past a grey box on
+an electric pole near his college.
+
+2
+00:00:05,256 --> 00:00:06,566
+It hums softly.
+
+3
+00:00:06,916 --> 00:00:10,405
+The wires going in carry
+about eleven thousand volts.
+
+4
+00:00:10,405 --> 00:00:14,633
+The wires going out to homes carry
+about two hundred and thirty.
+
+5
+00:00:14,983 --> 00:00:18,500
+How does a box with no moving
+parts change the voltage?
+
+6
+00:00:19,100 --> 00:00:20,974
+That box is a transformer.
+
+7
+00:00:20,974 --> 00:00:24,680
+Inside are two coils of
+wire, wound on one iron core.
+
+8
+00:00:25,030 --> 00:00:28,080
+The coil that takes in
+the supply is the primary.
+
+9
+00:00:28,080 --> 00:00:31,028
+The coil that gives the
+output is the secondary.
+
+10
+00:00:31,378 --> 00:00:33,225
+The two coils never touch.
+
+11
+00:00:33,225 --> 00:00:35,531
+They are linked only by magnetism.
+
+12
+00:00:35,531 --> 00:00:37,676
+This is called mutual induction.
+
+13
+00:00:38,326 --> 00:00:40,313
+Let's build one on the breadboard.
+
+14
+00:00:40,663 --> 00:00:45,218
+An alternating current in the primary
+makes a magnetic flux in the core.
+
+15
+00:00:45,218 --> 00:00:46,880
+The flux keeps changing.
+
+16
+00:00:47,230 --> 00:00:51,274
+That changing flux passes through
+the secondary, and induces a voltage
+
+17
+00:00:51,274 --> 00:00:52,174
+there.
+
+18
+00:00:52,197 --> 00:00:55,498
+The output has the same
+frequency as the input.
+
+19
+00:00:55,498 --> 00:00:57,170
+Only its size changes.
+
+20
+00:00:57,820 --> 00:01:02,462
+Here the primary has five hundred turns,
+and the secondary has one hundred.
+
+21
+00:01:02,462 --> 00:01:05,886
+Two hundred and thirty volts
+in, forty six volts out.
+
+22
+00:01:06,236 --> 00:01:10,530
+Now give the secondary one thousand
+turns, more than the primary.
+
+23
+00:01:10,530 --> 00:01:13,797
+The output rises to four
+hundred and sixty volts.
+
+24
+00:01:14,147 --> 00:01:17,901
+Fewer turns on the secondary
+makes a step down transformer.
+
+25
+00:01:17,901 --> 00:01:20,489
+More turns makes a step up transformer.
+
+26
+00:01:21,139 --> 00:01:22,434
+Now try a battery.
+
+27
+00:01:22,434 --> 00:01:25,164
+The flux builds up once, then stays still.
+
+28
+00:01:25,514 --> 00:01:27,697
+A steady flux induces nothing.
+
+29
+00:01:27,697 --> 00:01:29,455
+So the output is zero.
+
+30
+00:01:29,455 --> 00:01:32,724
+A transformer works only
+on alternating current.
+
+31
+00:01:33,374 --> 00:01:35,576
+No change in flux, no output.
+
+32
+00:01:36,376 --> 00:01:38,332
+Now the transformer equation.
+
+33
+00:01:38,682 --> 00:01:43,285
+Every turn of wire, on either coil,
+gets the same voltage from the changing
+
+34
+00:01:43,285 --> 00:01:44,185
+flux.
+
+35
+00:01:44,517 --> 00:01:48,900
+So the voltage across a coil is
+proportional to its number of turns.
+
+36
+00:01:49,600 --> 00:01:52,623
+V s over V p equals N s over N p.
+
+37
+00:01:52,623 --> 00:01:55,174
+This is called the turns ratio.
+
+38
+00:01:55,874 --> 00:01:59,291
+In an ideal transformer,
+no energy is lost.
+
+39
+00:01:59,291 --> 00:02:01,413
+Power in equals power out.
+
+40
+00:02:01,413 --> 00:02:03,879
+So V p I p equals V s I s.
+
+41
+00:02:04,579 --> 00:02:07,846
+That means I s over I
+p equals N p over N s.
+
+42
+00:02:07,846 --> 00:02:12,479
+When the voltage steps up, the
+current steps down by the same factor.
+
+43
+00:02:13,129 --> 00:02:14,245
+Worked example.
+
+44
+00:02:14,245 --> 00:02:18,557
+A transformer has two thousand turns
+on the primary and one hundred on
+
+45
+00:02:18,557 --> 00:02:19,623
+the secondary.
+
+46
+00:02:19,623 --> 00:02:22,441
+The input is two hundred and thirty volts.
+
+47
+00:02:22,791 --> 00:02:27,071
+The turns ratio is one hundred
+over two thousand, one twentieth.
+
+48
+00:02:27,071 --> 00:02:30,578
+So the output is two hundred
+and thirty over twenty.
+
+49
+00:02:30,578 --> 00:02:32,296
+Eleven point five volts.
+
+50
+00:02:32,896 --> 00:02:37,369
+If the secondary gives two amperes,
+the primary takes only one twentieth
+
+51
+00:02:37,369 --> 00:02:38,269
+of that.
+
+52
+00:02:38,140 --> 00:02:39,781
+Zero point one amperes.
+
+53
+00:02:40,431 --> 00:02:43,191
+Real transformers do lose a little energy.
+
+54
+00:02:43,541 --> 00:02:45,851
+Copper loss, as heat in the coils.
+
+55
+00:02:45,851 --> 00:02:49,544
+Eddy current loss, from small
+swirling currents in the core.
+
+56
+00:02:49,894 --> 00:02:54,598
+That is why the core is made of thin
+insulated sheets, called laminations.
+
+57
+00:02:54,948 --> 00:02:58,843
+Hysteresis loss, as the core
+is magnetised back and forth.
+
+58
+00:02:58,843 --> 00:03:02,474
+And flux leakage, when some
+flux misses the secondary.
+
+59
+00:03:02,824 --> 00:03:06,285
+Efficiency is output power
+divided by input power.
+
+60
+00:03:06,285 --> 00:03:11,001
+Large transformers are very efficient,
+but never one hundred percent.
+
+61
+00:03:11,651 --> 00:03:13,958
+So why send power at high voltage?
+
+62
+00:03:13,958 --> 00:03:17,912
+For the same power, a higher
+voltage needs a smaller current.
+
+63
+00:03:18,262 --> 00:03:21,260
+The heat lost in the wires is I squared R.
+
+64
+00:03:21,260 --> 00:03:25,020
+Ten times less current means
+one hundred times less loss.
+
+65
+00:03:25,670 --> 00:03:30,073
+So power stations step the voltage
+up, and transformers near our homes
+
+66
+00:03:30,073 --> 00:03:31,161
+step it down.
+
+67
+00:03:31,161 --> 00:03:35,794
+Transformers also work in power
+supplies, welding machines and doorbells.
+
+68
+00:03:36,444 --> 00:03:37,908
+Now, the exam trap.
+
+69
+00:03:38,258 --> 00:03:42,308
+Many students think a step up
+transformer also steps up the power.
+
+70
+00:03:42,658 --> 00:03:43,633
+It does not.
+
+71
+00:03:43,633 --> 00:03:46,700
+The voltage goes up, but
+the current goes down.
+
+72
+00:03:46,700 --> 00:03:49,190
+Power out is never more than power in.
+
+73
+00:03:49,840 --> 00:03:51,446
+Where is this asked?
+
+74
+00:03:51,446 --> 00:03:54,334
+In PUC board papers, and in JEE Main.
+
+75
+00:03:54,334 --> 00:03:58,645
+Use the turns ratio, find
+currents, or find the efficiency.
+
+76
+00:03:59,295 --> 00:04:00,195
+Try this.
+
+77
+00:04:00,118 --> 00:04:04,393
+A transformer has four hundred primary
+turns and two thousand secondary
+
+78
+00:04:04,393 --> 00:04:07,645
+turns, on a two hundred
+and thirty volt supply.
+
+79
+00:04:07,645 --> 00:04:09,752
+It is ninety percent efficient.
+
+80
+00:04:09,752 --> 00:04:14,339
+If the primary current is five
+amperes, what is the secondary current?
+
+81
+00:04:19,739 --> 00:04:20,639
+A.
+
+82
+00:04:20,233 --> 00:04:22,270
+Zero point nine amperes.
+
+83
+00:04:22,620 --> 00:04:27,125
+The turns ratio is five, so the
+output is one thousand one hundred and
+
+84
+00:04:27,125 --> 00:04:28,098
+fifty volts.
+
+85
+00:04:28,448 --> 00:04:32,862
+Input power is two hundred and thirty
+times five, which is one thousand
+
+86
+00:04:32,862 --> 00:04:34,783
+one hundred and fifty watts.
+
+87
+00:04:34,783 --> 00:04:38,684
+Ninety percent of that is one
+thousand and thirty five watts.
+
+88
+00:04:39,034 --> 00:04:42,474
+Divide by one thousand one
+hundred and fifty volts.
+
+89
+00:04:42,474 --> 00:04:45,749
+The secondary current is
+zero point nine amperes.
+
+90
+00:04:46,399 --> 00:04:47,920
+Screenshot this card.
+
+91
+00:04:51,120 --> 00:04:52,619
+Next, a new chapter.
+
+92
+00:04:52,619 --> 00:04:56,227
+Voltmeters and ammeters, for
+direct and alternating current.
+
+93
+00:04:56,227 --> 00:04:59,384
+How does a meter know how
+much current is flowing?
