@@ -114,7 +114,7 @@ const bBr = PUC.arrow(b, FC, 6, 18), bBrl = lab(b, 0, 0, '', FC, { 'text-anchor'
 const bFt = PUC.arrow(b, FC, 5, 14), bFtl = lab(b, 0, 0, 'friction on feet', FC, { 'text-anchor': 'middle', 'font-size': 17 });
 const bBv = PUC.arrow(b, VC, 5, 16), bBvl = lab(b, 0, 0, 'keeps moving', VC, { 'font-size': 17 });
 // bus speed: cruise 8 m/s, brake at -4 m/s^2 to rest, then start at +3 m/s^2 to 6 m/s
-const tBr = wt('B2', 'brakes'), tSt = wt('B6', 'starts'), VB0 = 8, AB = Math.round(10 * VB0 / (wt('B5', 'lurch') + 0.6 - wt('B2', 'brakes'))) / 10, AS = 3;
+const tBr = wt('B2', 'brakes'), tSt = wt('B6', 'starts'), VB0 = 8, AB = Math.round(10 * VB0 / (wt('B5', 'lurch') + 0.6 - wt('B2', 'brakes'))) / 10, AS = 1.5;
 const bv = t => { if (t < tBr) return VB0; if (t < tBr + VB0 / AB) return VB0 - AB * (t - tBr); if (t < tSt) return 0; return Math.min(6, AS * (t - tSt)); };
 const ba = t => { if (t >= tBr && t < tBr + VB0 / AB) return -AB; if (t >= tSt && t < tSt + 2) return AS; return 0; };
 const bx = t => { const t0 = tB1 - 0.5; let x = 0; const n = 400; const T = t - t0; if (T <= 0) return 0; for (let i = 0; i < n; i++) x += bv(t0 + T * (i + 0.5) / n) * T / n; return x; };
