@@ -221,7 +221,7 @@ txt(van, 58, WG - 44, '1200 kg', { 'text-anchor': 'middle', fill: C.ink, 'font-w
 [34, 128].forEach(x => { mk(van, 'circle', { cx: x, cy: WG - 16, r: 16, fill: C.ink }); mk(van, 'circle', { cx: x, cy: WG - 16, r: 6, fill: '#fff' }); });
 const wAv = PUC.arrow(w, VC, 6, 16), wAp = PUC.arrow(w, PC, 8, 20);
 const wLv = it(w, 0, 0, 'v', VC, { 'font-size': 26 }), wLp = it(w, 0, 0, 'p', PC, { 'font-size': 26 });
-const wg = PUC.graph(w, { x: 160, y: 292, w: 500, h: 180, xmax: 5, ymax: 32000, xt: [0, 1, 2, 3, 4, 5], yt: [0, 10000, 20000, 30000], xl: 't (s)', yl: 'p (kg m/s)' });
+const wg = PUC.graph(w, { x: 160, y: 292, w: 500, h: 180, xmax: 5.4, ymax: 32000, xt: [0, 1, 2, 3, 4, 5], yt: [0, 10000, 20000, 30000], xl: 't (s)', yl: 'p (kg m/s)' });
 [...w.querySelectorAll('text')].forEach(e => { if (/^\d{5}$/.test(e.textContent)) e.textContent = ind(+e.textContent); });
 const wCv = wg.curve(PC, 6), wDot = wg.dot(PC, 10);
 const wP1 = txt(w, wg.X(0) + 14, wg.Y(12000) + 30, 'p₁', { fill: PC, 'font-weight': 700, 'font-size': 22, 'font-family': 'Poppins', 'font-style': 'italic' });
