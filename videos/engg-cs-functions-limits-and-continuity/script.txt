@@ -1,0 +1,49 @@
+H1|0.3|Two friends order the same lunch on Kavya's app.
+H2|0.5|Rohan lives one point nine kilometres away. He pays nothing.
+C2|0.6|Fatima lives two point one kilometres away. She pays thirty rupees. Fair?
+L1|0.3|Meet Dabba Dash. Kavya, a student in Pune, built it to deliver lunch around her college.
+L2|0.55|The food comes from Joseph uncle's canteen. Rohan runs the servers, and Fatima checks every number.
+F2|0.3|The delivery fee is a function: a rule where each input gives exactly one output.
+F3|0.3|Here, the input is distance, and the output is the fee.
+F4|0.55|All the allowed inputs are the domain. All the possible outputs are the range.
+D1|0.3|The trouble is at two kilometres. To see it, we need limits.
+D2|0.3|In 1821, a French mathematician wrote down the idea.
+D3|0.3|When values come closer and closer to a fixed value, that value is their limit.
+D5|0.55|Simply put, a limit is where a function is heading as the input gets close to a point.
+M1|0.3|Watch the fee near two kilometres, from below.
+M2|0.3|One point nine, one point nine nine, one point nine nine nine. The fee stays at zero.
+M3|0.3|The left limit is zero.
+M4|0.3|Now from above. Two point one, two point zero one, two point zero zero one.
+M5|0.3|The fee stays at thirty. The right limit is thirty.
+M6|0.55|The two sides disagree, so the limit does not exist. That is a jump.
+I2|0.3|Professor Iyer shows something stranger. x squared minus one, over x minus one. At x equals one, it gives zero over zero.
+I3|0.3|No value there. A program would crash. But look nearby.
+I4|0.3|At zero point nine nine, it gives one point nine nine. At one point zero one, two point zero one.
+I5|0.55|Both sides head to two. The limit is two, though the function never gets there.
+T1|0.65|A limit is about where you are heading, not where you are.
+C1|0.3|A function is continuous at a point if it passes three checks.
+C2b|0.3|One. It has a value there.
+C3|0.3|Two. The limit exists. Left and right agree.
+C4|0.3|Three. The limit equals the value.
+C5|0.55|So you can draw through that point without lifting your pen.
+R1|0.3|So Kavya fixes the fee. The first kilometre is free, then fifteen rupees per kilometre.
+R3|0.3|At two kilometres, it is fifteen from the left, from the right, and at the point.
+R4|0.55|All three checks pass. Rohan pays thirteen fifty, and Fatima sixteen fifty. No jump.
+K0|0.3|Where is this used at work today?
+K1|0.3|Functions. A bank turns a loan amount into one monthly payment.
+K2|0.3|Limits. In a hospital, a steady drip brings a medicine's level in the blood closer and closer to one steady value.
+K3|0.55|Continuity. Tax slabs charge a higher rate only above each limit, so tax never jumps.
+X1|0.3|But is the real world always continuous?
+X2|0.3|The good side. Continuous rules are fair, and calculus is built on them.
+X3|0.3|The hard side. Real life moves in steps, like whole orders and rounded prices.
+X4|0.3|And no jumps is not smooth. In 1872, a German mathematician found a curve with no breaks, jagged everywhere.
+X5|0.3|So Kavya rounds the fees up, to fourteen and seventeen rupees.
+X6|0.3|Tiny one rupee steps that nobody minds.
+X7|0.6|The lesson? Use smooth rules, but know where life moves in steps.
+Q1|1.9|Quick check. The fee is zero just below two kilometres, and thirty just above. Is it continuous there?
+A1|0.55|No! The left and right limits are different, so the graph jumps.
+S1|0.3|So, remember.
+S2|0.3|A function gives exactly one output for each input.
+S3|0.3|A limit is where a function is heading, from both sides.
+S4|0.55|A function is continuous when its value and its limit match.
+N1|0.2|Next time, we'll explore sequences and series.
