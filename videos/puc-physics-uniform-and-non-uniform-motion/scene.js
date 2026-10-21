@@ -81,7 +81,7 @@ const aA = PUC.arrow(s, AC, 4, 12), aL = txt(s, 0, 0, 'a', { 'font-family': 'Pop
 // position ruler 0 - 40 m
 mk(s, 'line', { x1: RX0, y1: 500, x2: RX0 + 40 * RPX, y2: 500, stroke: C.ink, 'stroke-width': 2 });
 for (let m = 0; m <= 40; m += 5) { mk(s, 'line', { x1: RX0 + m * RPX, y1: 500, x2: RX0 + m * RPX, y2: 510, stroke: C.ink, 'stroke-width': 2 }); txt(s, RX0 + m * RPX, 530, m, { 'text-anchor': 'middle', fill: C.ink, 'font-weight': 600 }); }
-txt(s, 744, 530, 'm', { 'text-anchor': 'end', fill: C.mute });
+txt(s, RX0 + 40 * RPX + 16, 530, 'm', { fill: C.mute });
 const gapT = [txt(s, 744, 98, 'GAPS: EQUAL', { 'text-anchor': 'end', 'font-weight': 600, fill: B1 }), txt(s, 744, 290, 'GAPS: GROWING', { 'text-anchor': 'end', 'font-weight': 600, fill: B2 })];
 // readout (two columns, one per bicycle)
 $('#roG').innerHTML = `<span></span><span class="u" style="color:${B1};font-weight:600">BIKE A</span><span class="u" style="color:${B2};font-weight:600">BIKE B</span>
