@@ -333,7 +333,7 @@ M.on(t => {
   if (stOn) {
     const sx = PUC.sweep(SW)(t); stmt.style.transform = t > tK1 ? `translateX(${(sx ?? -1980).toFixed(1)}px)` : 'none';
     M.rise($('#st1'), t, tT + 0.08, { st: 0.05 }); M.rise($('#st2'), t, wt('T1', 'Vectors') - 0.05, { st: 0.07, sp: M.HEAVY });
-    PUC.write($('#stF'), t, wt('T1', 'triangle', 0) + 0.3, 0.8);
+    PUC.write($('#stF'), t, wt('T1', 'Scalars') + 0.2, 0.8);
   }
 
   /* K */

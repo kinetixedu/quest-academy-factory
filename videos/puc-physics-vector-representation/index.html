@@ -1,0 +1,127 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 33 - Vector Representation</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 33: vector representation (Motion notebook, the arrow bench) ===== */
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.job{position:absolute;top:724px;width:340px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.chipk{position:absolute;height:64px;padding:0 22px;border-radius:12px;display:flex;align-items:center;gap:12px;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+.chipk small{font:600 16px 'IBM Plex Mono';letter-spacing:.08em;opacity:.8}
+.ptag{position:absolute;height:44px;padding:0 16px;border-radius:10px;display:inline-flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap;background:var(--soft)}
+.st{position:absolute;left:36px;width:712px;height:110px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:36px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:58px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+.nbig{position:absolute;font-size:120px;white-space:nowrap}
+.nlab{position:absolute;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+#wq{position:absolute;left:36px;top:70px;font:600 30px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:32px}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#wa .wat{font-size:26px !important}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#mq .mq{font-size:30px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 24px Poppins}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:31px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#st2{font-size:66px !important}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 3 MOTION IN A PLANE</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Vector <span class="acc">Representation</span></div>
+    <div id="sub">Explained with one arrow</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: the wrong library -->
+    <div id="sH">
+      <div class="card full" id="hm"><div class="lbl" style="left:36px;top:30px">AARAV'S RIDE · 2 KM FROM THE GATE</div><div class="ghost" id="exH" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <svg id="hmS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="chipk" id="hm0" style="left:36px;top:494px;background:var(--ink);color:#fff"><small>DISTANCE</small>2 km</div>
+        <div class="pillp bad" id="hm1" style="left:330px;top:502px">Wrong direction, no library</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · THE PUZZLE</div>
+        <div id="hkF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg" style="position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px">
+        <div class="pillp ac" id="hkP" style="left:36px;top:502px">"The library is 2 km from the gate"</div></div>
+    </div>
+
+    <!-- R: anatomy of an arrow -->
+    <div id="sR"><div class="card wide" id="an"><div class="lbl" style="left:36px;top:30px">A VECTOR IS DRAWN AS AN ARROW</div><svg id="anS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg></div></div>
+
+    <!-- B: arrow bench sim -->
+    <div id="sB">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">MOTION NOTEBOOK · THE ARROW BENCH</div>
+        <div class="tag" id="slo" style="right:36px;top:22px">SLOW-MO REPLAY · 0.25x</div>
+        <div class="ptag" id="scl" style="left:36px;top:76px">Scale: <b class="mono">1 cm = 1 km</b></div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro" id="roG" style="left:36px;top:70px;width:712px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">ARROW LENGTH VS MAGNITUDE</div><svg id="grS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- L: one number leaves a circle -->
+    <div id="sL">
+      <div class="card full" id="lc"><div class="lbl" style="left:36px;top:30px">ONLY THE MAGNITUDE · 2 KM</div><svg id="lcS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="lr"><div class="lbl" style="left:36px;top:30px">FOLLOW THE LINKS</div><div id="lks"></div></div>
+    </div>
+
+    <!-- D: notation rules -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE RULES · 4 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">HOW TO WRITE IT</div><div id="nots"></div><svg id="drS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- K: A and -A -->
+    <div id="sK">
+      <div class="card full" id="ka"><div class="lbl" style="left:36px;top:30px">VECTOR A</div><svg id="kaS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="kaC" style="left:36px;top:494px">3 km, pointing east</div></div>
+      <div class="card rf" id="kn"><div class="lbl" style="left:36px;top:30px">VECTOR MINUS A</div><svg id="knS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="knC" style="left:36px;top:494px">3 km, pointing west</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- M: slide vs turn -->
+    <div id="sM">
+      <div class="card full" id="ms"><div class="lbl" style="left:36px;top:30px">SLIDE IT · SAME VECTOR</div><svg id="msS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp good" id="msP" style="left:36px;top:494px">Same length + same direction</div></div>
+      <div class="card rf" id="mt"><div class="lbl" style="left:36px;top:30px">TURN IT · NEW VECTOR</div><svg id="mtS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp bad" id="mtP" style="left:36px;top:494px">New direction: a new vector</div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">Scale 1 cm = 5 N. Draw a force of 20 N at 60° from the floor.</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">MOTION NOTEBOOK · DRAW IT</div><svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="rtS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Length is the size. The <span class="acc">head</span> is the direction.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

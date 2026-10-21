@@ -1,0 +1,56 @@
+H1|0.4|A sailor, a pilot and a map maker all draw the same simple thing. An arrow.
+H2|0.45|Why an arrow, and not just a number?
+H3|0.35|Aarav found out the hard way.
+H4|0.4|A friend told him the library is two kilometres from the college gate. So he rode two kilometres. No library.
+H5|0.65|He rode the right distance, in the wrong direction. Let's learn the one drawing that would have saved him.
+R1|0.35|A vector is drawn as an arrow.
+R2|0.4|The length of the arrow shows its size, called the magnitude.
+R3|0.4|The arrowhead shows its direction.
+R4|0.65|The starting end is called the tail. The pointed end is called the head.
+B1|0.35|Let's draw one on our motion notebook.
+B2|0.4|First, choose a scale. One centimetre on paper stands for one kilometre.
+B3|0.4|The library is two kilometres away. So the arrow grows to two centimetres.
+B4|0.4|Now the direction. We measure the angle from east, turning towards north.
+B5|0.4|Watch it in slow motion. The arrow turns to thirty degrees north of east, and stops.
+B6|0.5|Now stretch it to four kilometres. The arrow doubles in length, but the angle stays the same.
+B7|0.65|On the graph, paper length grows in a straight line with the real size. That straight line is the scale.
+L1|0.35|So why did Aarav miss the library? Follow the links.
+L2|0.4|Two kilometres is only the magnitude.
+L3|0.4|Every point on this circle is exactly two kilometres from the gate.
+L4|0.65|So one number leaves a whole circle of places. Add the angle, and only one point is left. That is the library.
+D1|0.35|Now the rules, one step at a time.
+D2|0.75|Step one. In print, a vector is written in bold, like bold A. By hand, we draw a small arrow on top.
+D3|0.75|Step two. Its magnitude is written between two bars, mod A, or as A in plain type. A magnitude is never negative.
+D4|0.75|Step three. Arrow length equals magnitude divided by the scale. Two kilometres, at one kilometre per centimetre, is two centimetres.
+D5|0.75|Step four. In a plane, two numbers fix a vector. Its magnitude, and its angle theta from a fixed line.
+T1|0.7|Remember this. The length of the arrow is the size. The arrowhead is the direction.
+K1|0.4|Side by side. Here is vector A. Three kilometres, pointing east.
+K2|0.6|And here is minus A. The same length, but the head points the other way. West.
+K3|3.2|Now you try. A and minus A have the same magnitude. Are they equal vectors? Pause and decide.
+K4|0.65|No! Equal vectors need the same size and the same direction. Minus A points the opposite way.
+M1|0.4|Here is a surprise. Slide an arrow across the page without turning it.
+M2|0.4|Its length did not change. Its direction did not change. So it is still the same vector.
+M3|0.6|But turn it, even a little, and you get a new vector. Where you draw it does not matter. Length and direction do.
+Z1|3.2|Your turn. An arrow two centimetres long stands for six newtons. What does a five centimetre arrow stand for? Pause and decide.
+Z2|0.65|Fifteen newtons! Six newtons for two centimetres is three newtons per centimetre. Five times three is fifteen.
+W1|0.35|Now, one worked example.
+W2|0.5|One centimetre stands for five newtons. Draw a force of twenty newtons, at sixty degrees from the floor.
+W3|0.75|Arrow length equals force divided by scale. Twenty divided by five is four centimetres.
+W4|0.75|Draw a line four centimetres long from the tail, along the floor.
+W5|0.75|Place a protractor at the tail. Turn the line sixty degrees up from the floor.
+W6|0.65|Put the arrowhead at the far end. Four centimetres, at sixty degrees. That is twenty newtons, drawn exactly.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think that minus A has a negative size.
+X3|0.65|Wrong. A magnitude is never negative. Minus A has the same size as A. Only the direction flips.
+E1|0.6|Where is this asked? As quick questions on notation, magnitude, and equal or negative vectors, and inside longer vector problems.
+Q1|5.4|Exam level now. On a scale of one centimetre to two newtons, vector A is an arrow four point five centimetres long, pointing thirty degrees north of east. Which describes minus A? Pause and solve.
+A1|0.5|The answer is A. Nine newtons, thirty degrees south of west.
+A2|0.5|Size first. Four point five times two is nine newtons, and minus A has the same size.
+A3|0.5|Direction next. Minus A points exactly opposite. Thirty degrees north of east flips to thirty degrees south of west.
+A4|0.6|B has a negative size, which is impossible. C flips only half the direction. D forgets the scale.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why is two kilometres from the gate not enough to find the library?
+Y3|0.9|Two. On a scale of one centimetre to ten newtons, how long is the arrow for thirty five newtons?
+Y4|1.1|Three. Are A and minus A equal vectors, and why?
+N1|0.3|Next time: two ropes pull one box. How do two arrows join into one, and what does it mean to subtract an arrow? We find out in vector addition and subtraction.
