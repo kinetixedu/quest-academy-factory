@@ -1,0 +1,55 @@
+H1|0.4|Push an empty trolley, and it shoots ahead. Push a full one just as hard, and it barely moves.
+H2|0.45|Kick a ball softly, then hard. One rule decides all of this.
+H3|0.35|Aarav pushes his bicycle out of the college gate. Then a friend sits on the carrier, and he pushes just as hard.
+H4|0.5|Empty, the bike leaps forward. With his friend, it crawls. Exactly how much slower?
+H5|0.65|One rule answers that, to the decimal. Let's build it.
+P1|0.35|Newton's second law links three things.
+P2|0.4|The net force on a body, its mass, and its acceleration.
+P3|0.4|Net force means all the pushes and pulls, added with their directions.
+P4|0.4|Push a box with thirty newtons to the right, while friction pulls back with ten. The net force is twenty newtons, right.
+P5|0.65|Mass is how much matter a body has, in kilograms. More mass is harder to speed up.
+S1|0.35|To the motion notebook. A two kilogram cart on a smooth track, no friction.
+S2|0.4|Pull it with two newtons. Its velocity grows steadily. The acceleration is one metre per second squared.
+S3|0.4|Double the pull to four newtons. The acceleration doubles too, to two.
+S4|0.4|Six newtons gives three. On the graph, the dots sit on a straight line through zero. a is proportional to F.
+S5|0.4|Now keep six newtons, and add mass. At four kilograms, the acceleration halves, to one point five.
+S6|0.4|At six kilograms, just one. Three times the mass, one third of the acceleration.
+S7|0.35|Slow-mo replay. Freeze, and draw the arrows.
+S8|0.6|The orange force arrow and the red acceleration arrow point the same way. The blue velocity arrow grows along them.
+S9|0.4|One last run. Six newtons on the bare cart. Watch the moment we let go.
+S10|3.0|Your turn. The moment the push stops, what is the cart's acceleration? Pause and decide.
+S11|0.5|Zero, at once! No net force, no acceleration. The cart does not stop.
+S12|0.65|Watch. The force goes, a drops to zero, and v stays at three metres per second.
+D1|0.35|Now let's write the rule, one step at a time.
+D2|0.75|Step one. Keep the mass fixed. a is proportional to F.
+D3|0.75|Step two. Keep the force fixed. a is proportional to one over m.
+D4|0.75|Step three. Together, a is proportional to F over m. So F equals k, m, a, with k a constant.
+D5|0.75|Step four. We pick the unit of force so that k is exactly one. So F equals m a.
+D6|0.75|Step five. One newton gives one kilogram an acceleration of one metre per second squared. So one newton is one kilogram metre per second squared.
+D7|0.6|F is the net force, and a points along it. Newton first wrote this law with momentum. That form comes in episode fifty four.
+T1|0.7|Remember this. Net force equals mass times acceleration.
+K1|0.4|Side by side. The same five kilogram box. Ten newtons gives two metres per second squared. Twenty gives four.
+K2|0.6|Now ten newtons on a ten kilogram box. The acceleration drops to one. More mass, less acceleration.
+K3|3.0|Now you try. Double the force, and double the mass too. What happens to the acceleration? Pause and decide.
+K4|0.65|It stays the same! a is F over m. Twice the force over twice the mass is the same ratio.
+W1|0.35|Now, one worked example.
+W2|0.5|Aarav and his bike have a mass of eighty kilograms. He pedals with one sixty newtons, and friction and air push back with forty. Find his acceleration, and his speed after four seconds.
+W3|0.75|First, the net force. One sixty forward, minus forty back. One hundred and twenty newtons, forward.
+W4|0.75|Then a equals F over m. One twenty divided by eighty is one point five metres per second squared.
+W5|0.75|From rest, v equals a t. One point five times four is six metres per second.
+W6|0.65|Now the hook. With his seventy kilogram friend, the mass is one fifty. The same net force gives only zero point eight.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students put the push alone into F equals m a. Fifty newtons on a ten kilogram box gives five.
+X3|0.65|But friction pulls back with twenty. F in this law is the net force. Thirty newtons over ten kilograms gives three.
+E1|0.6|Where is this asked? In questions that find acceleration from the net force, on blocks, ropes and lifts.
+Q1|5.4|Exam level now. A constant force acts on a two kilogram body for four seconds. Its velocity goes from four i plus three j, to minus four i minus three j. Find the size of the force. Pause and solve.
+A1|0.5|The answer is C. Five newtons.
+A2|0.5|The change in velocity is minus eight i, minus six j. Its size is ten metres per second.
+A3|0.5|So the acceleration is ten over four, two point five metres per second squared.
+A4|0.6|F equals m a, two times two point five, five newtons. The speed stayed five, but the velocity reversed.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. The same push on an empty bike and a loaded bike. Which speeds up more, and why?
+Y3|0.9|Two. What is one newton, in base units?
+Y4|0.9|Three. Why must F in F equals m a be the net force?
+N1|0.3|Next time: Aarav pushes his study table, and he rolls backwards. Who pushed him? Newton's third law.
