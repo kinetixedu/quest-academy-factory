@@ -1,0 +1,59 @@
+H1|0.4|A shopkeeper adds kilograms to kilograms. A clock adds minutes to minutes.
+H2|0.45|But nobody adds kilograms to minutes. Why not? That one rule can catch a wrong formula.
+H3|0.35|Aarav's classmate writes: distance equals speed times time, plus acceleration times time.
+H4|0.5|Is it even possible? Aarav wants to know before doing a single experiment.
+H5|0.6|Today: a ten-second test.
+P1|0.4|Quick reminder. Length is L. Time is T. Mass is M.
+P3|0.4|Speed is L T to the minus one.
+P4|0.65|Acceleration is L T to the minus two.
+R1|0.35|Now the big rule. It is called the principle of homogeneity of dimensions.
+T1|0.7|Here it is. In a correct equation, every term must have the same dimensions.
+R3|0.4|You can only add, subtract or equate things of the same kind.
+R4|0.65|Three metres plus two metres is five metres. But three metres plus two seconds is nothing at all.
+S1|0.35|Let's test this on Aarav's bicycle. It starts at two metres per second and speeds up.
+S2|0.4|Watch. Speed times time grows in metres. Half a t squared also grows in metres.
+S3|0.4|Add them, and you get x, the distance gone, also in metres. The graph curves upward.
+S4|0.4|Slow-mo replay. Velocity, in blue, keeps growing. Acceleration, in red, stays the same.
+S5|0.4|Now his last term, a times t. It comes out in metres per second.
+S6|0.65|Metres plus metres per second? That is like adding kilograms to minutes. It cannot be done.
+D1|0.35|Let's check the correct formula properly, one step at a time.
+D2|0.75|Step one. The left side, x, is a length. Its dimensions are L.
+D3|0.75|Step two. u t is velocity times time. L T to the minus one, times T, gives L.
+D4|0.75|Step three. The half is a pure number. L T to the minus two, times T squared, gives L.
+D5|0.7|Step four. Every term is L. So the equation is dimensionally consistent.
+B1|0.4|Now the classmate's formula. Its last term is acceleration times time.
+B2|0.65|That is L T to the minus one. A speed, not a length. So the formula is surely wrong.
+L1|0.35|But why must every term match? Follow the links.
+L2|0.4|A true law must stay true in any unit. Let's run the bicycle for two seconds.
+L3|0.4|In seconds, both formulas give six. His formula even looks right!
+L4|0.4|Now measure the same time in minutes. The correct formula still gives six metres.
+L5|0.4|But his last term jumps to one hundred and twenty. Now his formula says one hundred and twenty four.
+L6|0.65|Same ride, two answers. A mixed formula changes with the unit, so it can never be a law of nature.
+K1|0.4|Side by side. With a half, the formula passes. It gives six metres, just like the real ride.
+K2|0.6|With a two, it still passes, since a number has no dimensions. But it says twelve metres. Wrong.
+K3|3.2|Now you try. If a formula passes the dimension check, is it surely correct? Pause the video and decide.
+K4|0.65|No! Fails means surely wrong. Passes means only possibly right. Numbers like a half slip through.
+G1|0.4|One more rule. Whatever goes inside sine, cosine, log or e to the power must be a pure number.
+G3|0.6|An angle is arc length divided by radius. Length over length. So an angle has no dimensions.
+G4|3.2|Your turn. In y equals A sine omega t, t is time. What must the dimensions of omega be? Pause and decide.
+G5|0.65|T to the minus one! Omega times t must be a pure number, so omega has to cancel the T.
+W1|0.35|Now, one worked example.
+W2|0.5|Check the formula v squared equals u squared plus two a s. Then use it.
+W3|0.75|v squared and u squared both have dimensions L squared T to the minus two.
+W4|0.75|Two a s is L T to the minus two, times L. Also L squared T to the minus two. It passes.
+W5|0.75|Now a cycle starts at three metres per second, and speeds up at two metres per second squared, over four metres.
+W6|0.65|v squared is nine plus sixteen, which is twenty five. So the final speed is five metres per second.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students think every quantity in an equation must have the same dimensions.
+X3|0.65|Not true. Only terms that are added or equated must match. In F equals m a, mass and acceleration differ, and that is fine.
+E1|0.6|Where is this asked? As questions on the dimensions of constants, or on the formula that is wrong.
+Q1|5.4|Exam level now. x equals alpha sine beta t, plus gamma t squared. What are the dimensions of alpha beta over gamma? Pause and solve.
+A1|0.5|The answer is C. The dimensions of time.
+A2|0.5|Alpha is a length. Beta t must be a pure number, so beta is T to the minus one.
+A3|0.6|Gamma t squared is a length, so gamma is L T to the minus two. Divide, and only T is left.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why can distance never be u t plus a t?
+Y3|0.9|Two. If a formula passes the dimension check, is it surely correct?
+Y4|1.1|Three. In y equals A sine omega t, what are the dimensions of omega?
+N1|0.3|Next time: can this rule build a formula from nothing? Applications of dimensional analysis.

@@ -1,0 +1,189 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 8 - Principle of Dimensional Homogeneity</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 08: principle of dimensional homogeneity (Motion notebook) ===== */
+:root{--u:#7A4FE0;--f:#D9731A;--v:#2F6FEB;--g:#D64545}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.sm{position:absolute;font:500 26px Poppins;white-space:nowrap;color:var(--ink2)}
+/* title card tiles */
+.job{position:absolute;top:724px;width:380px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:66px;font:600 22px 'IBM Plex Mono';color:var(--ink2);white-space:nowrap}
+/* rows with a value and a mark */
+.jr{position:absolute;left:36px;width:712px;height:104px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:20px;width:64px;height:64px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:108px;top:30px;font:600 34px/1.2 'IBM Plex Mono';white-space:nowrap}
+.jr .jv{position:absolute;right:92px;top:30px;font:600 34px/1.2 'IBM Plex Mono';white-space:nowrap}
+.jr .mk{position:absolute;right:24px;top:32px;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+/* hook */
+#note{position:absolute;left:446px;top:300px;width:270px;height:128px;background:#FFFDF6;border-radius:6px;box-shadow:0 8px 20px rgba(22,33,62,.22);padding:16px 22px}
+#note .nt1{font:600 15px 'IBM Plex Mono';letter-spacing:.1em;color:var(--mute)}
+#note .nt2{font:700 46px Caveat;color:var(--ink);margin-top:4px;white-space:nowrap}
+.wq{position:absolute;top:494px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap}
+/* recap of dimensions */
+.bt{position:absolute;left:36px;width:330px;height:132px;border-radius:14px;background:var(--soft)}
+.bt .bl{position:absolute;left:24px;top:14px;font:600 84px/1.2 'IBM Plex Mono'}
+.bt .bn{position:absolute;left:118px;top:34px;font:700 32px Poppins;white-space:nowrap}
+.bt .bs{position:absolute;left:118px;top:76px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.dr{position:absolute;left:430px;width:1134px;height:200px;border-radius:14px;background:var(--soft)}
+.dr .fx{left:36px;top:52px;font-size:50px}
+.dr .lbl{left:36px;top:20px}
+/* like with like */
+.opc{position:absolute;top:84px;height:56px;padding:0 22px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+.opc b{font:600 32px 'IBM Plex Mono';color:var(--ac)}
+.bar{position:absolute;height:64px;border-radius:10px;display:flex;align-items:center;justify-content:center;font:600 28px 'IBM Plex Mono';color:#fff;white-space:nowrap}
+.clk{position:absolute;height:64px;padding:0 20px;border-radius:12px;background:#fff;border:3px solid var(--ink);display:flex;align-items:center;gap:10px;font:600 28px 'IBM Plex Mono';white-space:nowrap}
+/* sim */
+#tpill{position:absolute;right:36px;top:18px;height:44px;padding:0 16px;border-radius:10px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:8px;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+.ro .k .katex{font-size:34px}
+.chipS{position:absolute;height:60px;padding:0 20px;border-radius:12px;display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:110px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:38px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:60px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+.eqp{position:absolute;font-size:52px;white-space:nowrap;line-height:1.2}
+.dtag{position:absolute;height:44px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;font-size:24px;white-space:nowrap;background:var(--soft)}
+.verd{position:absolute;right:36px;height:44px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;gap:8px;font:600 19px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap;color:#fff}
+/* unit change */
+.uc{position:absolute;top:80px;height:52px;padding:0 16px;border-radius:10px;background:var(--soft);display:flex;align-items:center;font-size:26px;white-space:nowrap}
+.fr{position:absolute;left:36px;width:712px;height:128px;border-radius:14px;background:var(--soft)}
+.fr .lbl{left:24px;top:16px}
+.fr .fx{left:24px;top:52px;font-size:42px}
+.fr .mk{position:absolute;right:24px;top:44px;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+/* side by side */
+.cmpF{position:absolute;left:36px;top:84px;font-size:50px;white-space:nowrap}
+.barL{position:absolute;left:36px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.hb{position:absolute;left:36px;height:52px;border-radius:10px}
+.hbv{position:absolute;font:600 28px 'IBM Plex Mono';white-space:nowrap}
+/* special functions */
+.sf{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--soft)}
+.sf .fx{left:24px;top:14px;font-size:38px}
+.sf .pn{position:absolute;right:20px;top:16px;height:44px;padding:0 14px;border-radius:9px;background:var(--ac2);color:var(--ac);display:flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+/* worked */
+#wq{position:absolute;left:36px;top:70px;font:600 30px/1.35 Poppins;width:712px}
+#vC{position:absolute;top:436px;height:64px;padding:0 22px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#fma{position:absolute;left:1040px;top:70px;width:520px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 25px Poppins}
+#wl .sol .sx{font-size:34px}
+#sF .fcard .fl{font-size:46px}
+#sF .fcard .fl.txt{font-size:33px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 1 UNITS AND MEASUREMENT</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Dimensional <span class="acc">Homogeneity</span></div>
+    <div id="sub">One rule that catches a wrong formula</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: same kind only + Aarav's puzzle -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">ADD ONLY THE SAME KIND</div><div class="ghost" id="exH" style="right:36px;top:18px">EXAMPLE FIGURES</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:470px">One rule can catch a wrong formula</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV'S CLASSMATE · A FORMULA</div>
+        <div id="haF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg" style="position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px">
+        <div id="note"><div class="nt1">DISTANCE GONE</div><div class="nt2">x = ut + at</div></div>
+        <div id="wqs"></div></div>
+    </div>
+
+    <!-- P: recap of dimensions -->
+    <div id="sP"><div class="card wide" id="pc"><div class="lbl" style="left:36px;top:30px">DIMENSIONS · A QUICK RECAP</div><div id="bts"></div>
+      <div class="dr" id="dr0" style="top:84px"><div class="lbl">SPEED</div><div class="fx" id="drF0"></div></div>
+      <div class="dr" id="dr1" style="top:316px"><div class="lbl">ACCELERATION</div><div class="fx" id="drF1"></div></div></div></div>
+
+    <!-- R: like with like -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">ONLY LIKE WITH LIKE</div>
+        <div class="opc" id="op0" style="left:36px"><b>+</b>add</div><div class="opc" id="op1" style="left:212px"><b>-</b>subtract</div><div class="opc" id="op2" style="left:430px"><b>=</b>equate</div>
+        <div id="rrs"></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">ON THE BENCH · JOIN THE BARS</div><svg id="rrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="bar" id="b3" style="top:150px;width:300px;background:var(--ac)">3 m</div><div class="bar" id="b2" style="top:150px;width:200px;background:#5B8DF0">2 m</div>
+        <div class="clk" id="clk" style="top:390px"><span id="clkI"></span>2 s</div>
+        <div class="pillp bad" id="rrP" style="left:36px;top:490px">Metres and seconds cannot join</div></div>
+    </div>
+
+    <!-- S: the bicycle sim + readout + graph -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">SIMULATION · THE BICYCLE</div><div id="tpill"><i style="font-family:Poppins">t</i>&nbsp;=<span id="tV">0.00</span><span style="color:#C9B6F5">s</span></div>
+        <div class="tag" id="slo" style="left:36px;top:70px">SLOW-MO REPLAY · 0.25x</div>
+        <div class="ghost" id="exS" style="left:36px;top:70px">EXAMPLE FIGURES · u = 2 m/s · a = 1 m/s²</div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="chipS" id="sc0" style="left:36px;top:490px;background:var(--redBg);color:var(--red)"></div></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT · EVERY TERM IN METRES</div><div class="ro" id="roG" style="left:36px;top:70px;width:712px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">x VS t</div><svg id="grS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- D: check term by term -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">CHECK THE REAL FORMULA · 4 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dt"><div class="lbl" style="left:36px;top:30px">TERM BY TERM</div>
+        <div class="lbl" id="eqAL" style="left:36px;top:84px">THE REAL FORMULA</div><div id="eqA"></div>
+        <div class="lbl" id="eqBL" style="left:36px;top:326px">THE CLASSMATE'S FORMULA</div><div id="eqB"></div></div>
+    </div>
+
+    <!-- L: why must every term match? change the unit -->
+    <div id="sL">
+      <div class="card full" id="ls"><div class="lbl" style="left:36px;top:30px">SAME RIDE · TIME IN SECONDS</div><div id="lsC"></div></div>
+      <div class="card rf" id="lm"><div class="lbl" style="left:36px;top:30px">SAME RIDE · TIME IN MINUTES</div><div id="lmC"></div></div>
+    </div>
+
+    <!-- K: side by side + think -->
+    <div id="sK">
+      <div class="card full" id="ka"><div class="lbl" style="left:36px;top:30px">WITH A HALF</div><div id="kaC"></div></div>
+      <div class="card rf" id="kb"><div class="lbl" style="left:36px;top:30px">WITH A TWO</div><div id="kbC"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- G: special functions -->
+    <div id="sG">
+      <div class="card full" id="gl"><div class="lbl" style="left:36px;top:30px">INSIDE A SPECIAL FUNCTION</div><div id="sfs"></div></div>
+      <div class="card rf" id="gr2"><div class="lbl" style="left:36px;top:30px">WHY AN ANGLE IS A PURE NUMBER</div><svg id="angS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="fx" id="angF" style="left:36px;top:470px;font-size:44px"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">SIMULATION · 4 METRES</div><div class="ghost" id="exW" style="right:36px;top:18px">EXAMPLE FIGURES</div><svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="vC"><i style="font-family:Poppins;color:#9DBBF7">v</i><span id="vN">3.0</span><span style="color:#C9B6F5">m/s</span></div></div>
+    </div>
+
+    <!-- X: exam trap + where -->
+    <div id="sX"><div class="card red" id="trap"><div id="fma"></div></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card + questions + NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">The principle of homogeneity of dimensions</div><div id="st2">Every term must have the <span class="acc">same</span> dimensions.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
