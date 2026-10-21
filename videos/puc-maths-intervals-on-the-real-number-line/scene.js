@@ -196,7 +196,7 @@ M.on(t => {
     const dg = Math.max(1, Math.ceil(s - 1e-6)); M.setT(lbL, (+left.toFixed(Math.max(1, dg))).toString());
     $('#lbR').innerHTML = `<i class="x" style="font-family:Poppins">x</i> = ${xr.toFixed(Math.min(4, dg))}`; M.vis($('#lbR'), t, tB0 + 0.2, 1e9, { dy: 10 });
     $('#lbV').innerHTML = M.icon('check', 26, '#fff', 3) + 'IN'; $('#lbV').style.background = C.ok; M.vis($('#lbV'), t, tB0 + 0.4, 1e9, POP);
-    M.setT(lbW, t < tB1 - 0.8 ? '' : `zoom: the window is now ${w < 0.01 ? w.toExponential(0) : +w.toPrecision(2)} wide`); M.vis(lbW, t, tB1 - 0.6, 1e9, { dy: 0 });
+    M.setT(lbW, t < tB1 - 0.8 ? '' : `zoom: the window is now ${+w.toPrecision(2)} wide`); M.vis(lbW, t, tB1 - 0.6, 1e9, { dy: 0 });
     const pb = M.io((t - wt('L4', 'forty') + 0.1) / 0.25); attr(lbE, 'stroke', mix(RC, C.red, pb)); attr(lbE, 'r', (12 + 4 * pb).toFixed(1));
     M.vis($('#lbP'), t, wt('L4', 'forty') - 0.1, 1e9, POP);
     M.vis($('#th1'), t, tK1 + 0.05, OUT('G1'), { dy: 36, ...o });
