@@ -1,0 +1,62 @@
+H1|0.4|Two friends pull a cart. A swimmer crosses a river. The wind and a string pull one kite.
+H2|0.45|Two pulls act together. And the answer is not just one plus the other.
+H3|0.35|Aarav rides three kilometres east, then four north, to reach college.
+H4|0.5|His trip meter says seven. But college is only five kilometres from home.
+H5|0.65|By the end of this video, that strange sum will make perfect sense.
+P1|0.35|So how do you add two vectors?
+P2|0.4|Numbers add in a line. Three kilograms plus four is always seven.
+P3|0.4|Vectors have a direction, so we add them as arrows. This is the triangle law.
+P4|0.4|Draw the first arrow. Start the second arrow at its head. Head to tail.
+P5|0.65|The resultant runs from the first tail to the last head. One arrow that does the job of both.
+S1|0.35|Let's ride Aarav's route on our motion notebook.
+S2|0.4|Three kilometres east. That is vector A.
+S3|0.4|Then four kilometres north. That is vector B, starting where A ends.
+S4|0.5|Slow motion replay. Watch the straight arrow from home. At college, this resultant R is five kilometres.
+S5|0.4|Now keep both lengths, and change only the angle.
+S6|0.5|Same direction: seven. A right angle: five. Opposite directions: just one.
+S7|0.65|The graph shows it. The resultant always stays between one and seven.
+D1|0.35|Now the size of R for any angle, in small steps.
+D2|0.75|Step one. Put B at the head of A, at an angle theta. Part of B lies along A. That part is B cosine theta.
+D3|0.75|Step two. The rest of B points straight across. That part is B sine theta.
+D4|0.75|Step three. R is the long side of a right triangle. So R squared is the along part squared, plus the across part squared.
+D5|0.75|Step four. Sine squared plus cosine squared is one. So R squared equals A squared plus B squared plus two A B cosine theta.
+D6|0.65|Check it. Zero degrees gives seven. Ninety gives five. One eighty gives one.
+T1|0.7|Remember this. Vectors add head to tail, and the angle between them decides the answer.
+C1|0.35|There is a second way to draw the same sum.
+C2|0.4|Or put both arrows tail to tail, and complete a parallelogram. Its diagonal is the resultant.
+C3|0.4|A then B, or B then A. Both reach the same corner. So A plus B equals B plus A.
+C4|0.65|Add a vector to its exact opposite, and you are back at the start: the zero vector, or null vector.
+R1|0.35|Now subtraction. What is A minus B?
+R2|0.4|Minus B is the same arrow as B, pointing the opposite way.
+R3|0.4|So A minus B is just A plus minus B. Flip B, then add head to tail.
+R4|0.6|Same rule, one extra step.
+K1|0.4|Side by side. Three east plus four north gives five, north of east.
+K2|0.6|Subtracting: flip four north into four south, then add. Still five, but south of east.
+K3|3.2|Now you try. Forces of three newtons and four newtons act on a box. Can the resultant be eight newtons? Pause and decide.
+K4|0.65|No! The most is seven, when both point the same way. The least is one, when they point opposite ways.
+V1|0.35|Here is where subtraction really matters: change in velocity.
+V2|0.4|Aarav cruises east at six metres per second, turns a corner, and rides north, still at six.
+V3|0.4|His speed is the same. But change in velocity is final minus initial.
+V4|0.6|Flip v one and add it to v two. The change is about eight point five metres per second, pointing north west.
+V5|3.2|Your turn. Is A minus B the same as B minus A? Pause and decide.
+V6|0.65|No. Same length, but opposite directions. B minus A is the negative of A minus B.
+W1|0.35|Now, one worked example.
+W2|0.5|Forces of five newtons and three newtons act at sixty degrees. Find the resultant.
+W3|0.75|Use the rule. R squared equals A squared plus B squared plus two A B cosine theta.
+W4|0.75|Here A is five, B is three, and cosine sixty is one half.
+W5|0.75|So R squared is twenty five plus nine plus fifteen. That is forty nine.
+W6|0.65|So R is seven newtons. It sits between two and eight, as the rule says.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students take theta as the angle inside the triangle.
+X3|0.65|But theta is the angle between A and B placed tail to tail. Inside the triangle, it is one eighty minus theta.
+E1|0.6|Where is this asked? As short numericals: the resultant, the angle between two vectors, or the size of A minus B.
+Q1|5.4|Exam level now. Vectors of sizes six and four have a resultant of eight. What is the size of their difference? Pause and solve.
+A1|0.5|The answer is B. Two root ten units.
+A2|0.5|Sixty four equals thirty six plus sixteen plus two A B cosine theta. So two A B cosine theta is twelve.
+A3|0.6|For the difference, the sign flips. Fifty two minus twelve is forty. Root forty is two root ten.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. How can three kilometres plus four give a displacement of five?
+Y3|0.9|Two. What is the smallest resultant of six newtons and eight newtons?
+Y4|1.1|Three. Turning a corner at a steady speed, does your velocity change?
+N1|0.3|Next time: what does multiplying an arrow by minus one do? Multiplication of vectors by scalars.
