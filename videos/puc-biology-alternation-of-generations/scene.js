@@ -164,7 +164,7 @@ const NODES = [['Gametophyte (n)', -90, 'up'], ['Gametes (n)', -20, 'up'], ['Zyg
   [[-12, -12], [12, -12], [-12, 12], [12, 12]].forEach(([dx, dy]) => mk(g4.G, 'circle', { cx: g4.x + dx, cy: g4.y + dy, r: 9, fill: HNL, stroke: HN, 'stroke-width': 2 })); }
 const TAG = (s, th, col, w) => { const [x, y] = PT(th), G = mk(ps, 'g', {}); const r = mk(G, 'rect', { x: x - w / 2, y: y - 20, width: w, height: 40, rx: 9, fill: col });
   txt(G, x, y + 6, s, { 'text-anchor': 'middle', 'font-size': 16, 'letter-spacing': 1.5, fill: '#FFFFFF', 'font-weight': 600 }); return { G, r }; };
-const TG = { fert: TAG('FERTILISATION', 10, C.ink, 190), mei: TAG('MEIOSIS', 170, C.ink, 120), mit1: TAG('MITOSIS', 235, '#9AA0AC', 116), mit2: TAG('MITOSIS', 90, '#9AA0AC', 116) };
+const TG = { fert: TAG('FERTILISATION', 10, C.ink, 190), mei: TAG('MEIOSIS', 170, C.ink, 120), mit1: TAG('MITOSIS', 250, '#9AA0AC', 116), mit2: TAG('MITOSIS', 90, '#9AA0AC', 116) };
 const DOT = mk(ps, 'circle', { r: 11, fill: HN, stroke: '#FFFFFF', 'stroke-width': 3 });
 const avP = PUC.avatar($('#sP'), { x: 1248 + 28, y: 324 + 526 - 112, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'Two switches, one loop.' });
 

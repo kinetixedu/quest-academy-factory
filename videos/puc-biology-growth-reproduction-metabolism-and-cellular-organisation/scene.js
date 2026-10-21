@@ -182,7 +182,6 @@ $('#gws').innerHTML = GHD.map((h, j) => `<div class="gh" style="left:${GCX[j] + 
   ${ck.map((s, j) => `<div class="gc" id="gc${i}${j}" style="left:${GCX[j] - 36}px;background:${s === 1 ? 'var(--ok)' : s === 2 ? GOLD : 'var(--red)'}">${s ? TICK : CROSS}</div>`).join('')}
   <div class="gv" id="gv${i}" style="background:${v === 'LIVING' ? 'var(--ac)' : v === 'NON LIVING' ? 'var(--redBg)' : 'var(--ink)'};color:${v === 'NON LIVING' ? 'var(--red)' : '#fff'}">${v}</div></div>`).join('');
 const tWr = WR.map(([, , , , [id, ws]]) => ws.map((w, j) => wt(id, w) + (j > 0 && ws[j - 1] === w ? 0.25 * j : 0)));
-const avW = PUC.avatar($('#sW'), { x: 160 + 1600 - 520, y: 270 + 494, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'So the test tube is neither!' });
 
 /* ---------- X / Q / F ---------- */
 const trap = PUC.trap($('#trap'), { wrong: 'A metabolic reaction in a test tube is living', right: 'No cells: neither living nor non living, a living reaction' });
@@ -289,7 +288,7 @@ M.on(t => {
     RN.forEach((_, i) => { const el = $('#rc' + i), on = i === cur ? 1 : 0, done = i < cur ? 1 : 0;
       el.style.background = on ? C.ac : '#FFFFFF'; el.style.color = on ? '#FFFFFF' : done ? C.ac : '#9AA0AC'; el.style.borderColor = on || done ? C.ac : '#CBD0DA'; });
     const tX = T0('R6') + 0.1;
-    RI.forEach((_, i) => M.vis($('#ri' + i), t, tRm[i] + 0.1, i < 3 ? tRm[i + 1] : tX, { dy: 16, outDur: 0.25, ody: -10 }));
+    RI.forEach((_, i) => M.vis($('#ri' + i), t, tRm[i] + (i ? 0.4 : 0.1), i < 3 ? tRm[i + 1] : tX, { dy: 16, outDur: 0.25, ody: -10 }));
     RG.forEach((g, i) => { const on = M.clamp((t - tRm[i]) / 0.4) * (1 - M.clamp((t - (tRm[i + 1] ?? 1e9) + 0.1) / 0.3)); g.style.opacity = on.toFixed(3); M.hide(g, on <= 0); });
     // budding loop (4 s): bud grows, gets a nucleus, separates
     { const p = ((t - tRm[0]) / 4) % 1, gr = M.io(p / 0.55), sep = M.io((p - 0.6) / 0.3), a = -0.85, R = 140, r = 70 * gr, d = R + r * 0.55 + sep * 60;

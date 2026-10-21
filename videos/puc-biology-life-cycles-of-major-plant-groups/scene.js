@@ -124,11 +124,11 @@ $('#stF').innerHTML = `<span style="font:600 30px 'IBM Plex Mono';color:var(--mu
 
 /* ---------- W: which phase do we see ---------- */
 const FPN = [['THE MOSS ON THE WALL', 'We see the gametophyte', 'WE SEE · n', HN, 'W2'], ['THE FERN IN THE POT', 'We see the sporophyte', 'WE SEE · 2n', DN, 'W3'],
-  ['THE MANGO TREE', 'The whole tree is the sporophyte', 'WE SEE · 2n', DN, 'W4'], ['SPIROGYRA IN A POND', 'Every thread is haploid', 'WE SEE · n', HN, 'W5']];
+  ['THE MANGO TREE', 'The tree is the sporophyte', 'WE SEE · 2n', DN, 'W4'], ['SPIROGYRA IN A POND', 'Every thread is haploid', 'WE SEE · n', HN, 'W5']];
 $('#fps').innerHTML = FPN.map(([h, s, g, c], i) => `<div class="fp" id="fp${i}" style="left:${36 + i * 388}px"><div class="fh">${h}</div><svg id="fs${i}" width="356" height="320" style="position:absolute;left:0;top:44px"></svg><div class="ft">${s}</div><div class="fg" style="background:${c}">${g}</div></div>`).join('');
 const FW = {};
 { const S = i => $('#fs' + i);
-  FW.d0 = moss(S(0), 178, 170, 2.6, true); FW.r0 = mk(S(0), 'ellipse', { cx: 178, cy: 210, rx: 70, ry: 100, fill: 'none', stroke: HN, 'stroke-width': 3.5, 'stroke-dasharray': '10 8' });
+  FW.d0 = moss(S(0), 178, 200, 2.2, true); FW.r0 = mk(S(0), 'ellipse', { cx: 178, cy: 236, rx: 70, ry: 100, fill: 'none', stroke: HN, 'stroke-width': 3.5, 'stroke-dasharray': '10 8' });
   FW.d1 = frond(S(1), 178, 170, 1.2, true); FW.r1 = mk(S(1), 'ellipse', { cx: 186, cy: 170, rx: 120, ry: 150, fill: 'none', stroke: DN, 'stroke-width': 3.5, 'stroke-dasharray': '10 8' });
   FW.d2 = tree(S(2), 178, 170, 1.45); FW.r2 = mk(S(2), 'ellipse', { cx: 178, cy: 160, rx: 130, ry: 152, fill: 'none', stroke: DN, 'stroke-width': 3.5, 'stroke-dasharray': '10 8' });
   FW.g2 = mk(S(2), 'g', {}); mk(FW.g2, 'rect', { x: 34, y: 280, width: 288, height: 34, rx: 8, fill: '#E1F4F2' }); txt(FW.g2, 178, 303, 'POLLEN + EMBRYO SAC = n', { 'text-anchor': 'middle', 'font-size': 15, 'letter-spacing': 1, fill: HN, 'font-weight': 600 });
@@ -233,7 +233,7 @@ M.on(t => {
     attr(TG.mei.P, 'transform', `translate(${PT(aM).map(v => v.toFixed(1)).join(' ')})`);
     const dn = st === 1 || st === 3 ? 3 : 0, dr0 = dn === 3 ? rS : rG, dxy = dn === 3 ? [ND[3].x - dr0 - 80, ND[3].y - 20] : [ND[0].x + dr0 + 82, ND[0].y];
     M.vis(TG.dom.G, t, wt('L2', 'dominant') - 0.1, 1e9, POP); attr(TG.dom.P, 'transform', `translate(${dxy[0].toFixed(1)} ${dxy[1].toFixed(1)})`);
-    const subS = st === 0 ? '' : st === 1 ? '1 TO FEW CELLS' : st === 2 ? 'DEPENDS ON IT' : 'SMALL · INDEPENDENT', subXY = st === 1 ? [ND[0].x + rG + 120, ND[0].y] : st === 2 ? [ND[3].x - rS - 114, ND[3].y - 20] : [ND[0].x + rG + 120, ND[0].y];
+    const subS = st === 0 ? '' : st === 1 ? '1 TO FEW CELLS' : st === 2 ? 'DEPENDS ON IT' : 'SMALL · INDEPENDENT', subXY = st === 2 ? [ND[3].x + rS + 112, ND[3].y] : [ND[0].x, ND[0].y + rG + 72];
     M.setT(TG.sub.tx, subS); M.hide(TG.sub.G, !subS || t < (st === 1 ? wt('M3', 'tiny') : st === 2 ? wt('B3', 'depends') : wt('B4', 'small')) - 0.1); attr(TG.sub.P, 'transform', `translate(${subXY[0].toFixed(1)} ${subXY[1].toFixed(1)})`);
     // looping dot around the cycle
     const ang = -90 + (((t - tL1 - 1.5) / 7) % 1) * 360; const [dx, dy] = PT(ang); attr(DOT, 'cx', dx.toFixed(1)); attr(DOT, 'cy', dy.toFixed(1));

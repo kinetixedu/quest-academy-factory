@@ -255,7 +255,7 @@ M.on(t => {
     let cur = -1; tGt.forEach((tt, k) => { if (t >= tt) cur = k; }); if (t >= T0('G6')) cur = 4;
     GT.forEach((_, i) => { const el = $('#gt' + i), on = i === cur, done = i < cur;
       M.vis(el, t, tG1 + 0.3 + i * 0.1, 1e9, { dy: 16 });
-      const red = i === 2 ? pulse(t, tStop + 0.6, 1.4) : 0;
+      const red = i === 2 ? pulse(t, tStop - 0.2, 1.6) : 0;
       el.style.background = red > 0.01 ? mix(C.ac2, '#FBE6E6', red) : on ? C.ac2 : C.soft;
       const n = $('#gn' + i); n.style.background = on || done ? C.ac : '#fff'; n.style.color = on || done ? '#fff' : '#9AA0AC'; n.style.borderColor = on || done ? C.ac : '#CBD0DA';
       $('#gh' + i).style.color = on || done ? '#1F6B3F' : C.mute;
@@ -266,12 +266,12 @@ M.on(t => {
       if (i === 3) { const u = on ? M.clamp((ph - 0.1) / 0.5) : 1; M.drawU(d.u1, u); M.drawU(d.u2, M.clamp(u * 1.6 - 0.6)); }
     });
     // tokens
-    const tw = $('#tk0').offsetWidth, mv1 = M.io((t - tPass) / 1.8), mv2 = M.io((t - tStop) / 1.0);
-    M.vis($('#tk0'), t, tTok1 - 0.1, 1e9, POP); $('#tk0').style.left = (36 + mv1 * (GX(3) + 280 - tw - 36 - 60)).toFixed(1) + 'px';
+    const tw = $('#tk0').offsetWidth, mv1 = M.io((t - tPass) / 1.8), mv2 = M.io((t - tTok2 - 0.4) / 2.2);
+    M.vis($('#tk0'), t, tTok1 - 0.1, 1e9, POP); $('#tk0').style.left = (36 + mv1 * (GX(3) + 362 - tw - 36)).toFixed(1) + 'px';
     M.vis($('#tk1'), t, tTok2 - 0.1, 1e9, POP); $('#tk1').style.left = (36 + mv2 * (GX(2) - 36 - 20)).toFixed(1) + 'px';
-    [0, 1].forEach(i => $('#bad' + i).style.background = mix('#FFFFFF', '#FBE6E6', M.io((t - tStop - 0.4) / 0.3)));
+    [0, 1].forEach(i => $('#bad' + i).style.background = mix('#FFFFFF', '#FBE6E6', M.io((t - tStop + 0.3) / 0.3)));
     [0, 1, 2, 3].forEach(g => { M.vis($('#gk0' + g), t, tPass + 0.2 + g * 0.42, 1e9, { ...POP, sc: 0.3 }); M.hide($('#gk1' + g), true);
-      if (g < 3) M.vis($('#gk1' + g), t, tStop - 0.3 + g * 0.25, 1e9, { ...POP, sc: 0.3 }); });
+      if (g < 3) M.vis($('#gk1' + g), t, tTok2 + 0.4 + (g + 1) * 0.68, 1e9, { ...POP, sc: 0.3 }); });
   }
 
   /* R: rule books */

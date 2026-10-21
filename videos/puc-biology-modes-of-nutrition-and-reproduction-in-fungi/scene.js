@@ -281,7 +281,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 17', topic: 'One patch, two l
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('S5') - 0.3, 1.05, 960, 600], [T0('C1') - 0.6, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('S5') - 0.3, 1.05, 960, 540], [T0('C1') - 0.6, 1, 960, 540]]);
 
 let geo = null;
 function measure() { geo = 1; P3.forEach((p, i) => { let x = 32; p[3].forEach((_, k) => { const e = $('#pe' + i + k); e.style.left = x + 'px'; x += e.offsetWidth + 12; }); }); }

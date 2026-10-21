@@ -72,7 +72,7 @@ const spindle = (g, cx, cy, L, H) => mk(g, 'path', { d: `M${cx - L / 2},${cy} C$
   [[470, 180], [590, 160], [500, 130], [540, 150], [450, 210], [610, 200]].forEach(([x, y], k) => mk(g, 'ellipse', { cx: x, cy: y, rx: 34, ry: 18, fill: '#A9C48C', stroke: BR, 'stroke-width': 3, transform: `rotate(${k * 30 - 40} ${x} ${y})` }));
   mk(g, 'path', { d: 'M528,300 C520,340 470,380 420,400 M528,300 C540,350 580,380 640,400', stroke: '#8A6A3A', 'stroke-width': 4, fill: 'none' });
   spindle(g, 400, 410, 170, 34); spindle(g, 660, 405, 190, 36); spindle(g, 530, 450, 160, 30);
-  LAB[0] = [[528, 200, 380, 90, 'Weak plant', 'end'], [700, 405, 860, 470, 'Spindle-shaped tubers', 'end']];
+  LAB[0] = [[528, 200, 380, 90, 'Weak plant', 'end'], [700, 405, 700, 490, 'Spindle-shaped tubers', 'start']];
 }
 { const g = ZG[1];
   mk(g, 'ellipse', { cx: 528, cy: 263, rx: 190, ry: 150, fill: 'none', stroke: C.dim, 'stroke-width': 3, 'stroke-dasharray': '10 10' });
@@ -153,7 +153,7 @@ $('#wks').innerHTML = KQ.map(([q, x, y], i) => `<div class="kq" id="kq${i}" styl
 const kLines = ['M220,184 L220,340', 'M720,184 L720,340', 'M420,152 L600,152', 'M920,152 L1260,152 L1260,340'].map(d => mk(wS, 'path', { d, stroke: C.dim, 'stroke-width': 4, fill: 'none' }));
 const AG = [['BSE agent', 0, wt('W2', 'BSE')], ['Potato spindle tuber agent', 1, wt('W3', 'potato')], ['Tobacco mosaic virus', 2, wt('W4', 'tobacco')], ['Bacteriophage', 2, wt('W4', 'bacteriophage')]];
 $('#wks').insertAdjacentHTML('beforeend', AG.map(([n], i) => `<div class="kag" id="ag${i}">${n}</div>`).join(''));
-const agPos = (i, u) => { const bin = AG[i][1], start = [40, 40], q1 = [130, 200], q2 = [630, 200], end = [KB2[bin][1] - 4, KB2[bin][2] + 50 + (i === 3 ? 50 : 0)];
+const agPos = (i, u) => { const bin = AG[i][1], start = [1180, 40], q1 = [130, 200], q2 = [630, 200], end = [KB2[bin][1] - 4, KB2[bin][2] + 50 + (i === 3 ? 50 : 0)];
   const pts = bin === 0 ? [start, q1, end] : bin === 1 ? [start, q1, [400, 160], q2, end] : [start, q1, [400, 160], q2, [900, 160], end];
   const n = pts.length - 1, f = M.clamp(u) * n, k = Math.min(n - 1, Math.floor(f)), r = f - k; return [pts[k][0] + (pts[k + 1][0] - pts[k][0]) * r, pts[k][1] + (pts[k + 1][1] - pts[k][1]) * r]; };
 
@@ -179,7 +179,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 20', topic: 'Curd, idli and c
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('P4') - 0.3, 1.05, 960, 600], [T0('B1') - 0.6, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('P4') - 0.3, 1.05, 960, 540], [T0('B1') - 0.6, 1, 960, 540]]);
 let geo = null;
 function measure() { geo = 1; let x = 36; ['bw0', 'bw1'].forEach(id => { const e = $('#' + id); e.style.left = x + 'px'; x += e.offsetWidth + 20; });
   [['bm0', 'bw0', 206], ['bm1', 'bw1', 206], ['bm2', 'bw2', 390]].forEach(([m, b, y]) => { const e = $('#' + m), bb = $('#' + b); e.style.left = (bb.offsetLeft) + 'px'; e.style.top = y + 'px'; }); }
@@ -211,7 +211,7 @@ M.on(t => {
   const dOn = t >= tD1 - 0.1 && t < tZ1 + 0.1; M.hide($('#sD'), !dOn);
   if (dOn) {
     M.vis($('#dw'), t, tD1 + 0.05, OUT('Z1'), { dy: 36, ...o });
-    M.vis(dV, t, T0('D2') - 0.1, 1e9, { dy: 0, sc: 0.6, sp: M.SOFT, fade: 0.15 }); dVt.forEach((e, i) => M.vis(e, t, wt('D2', 'protein') - 0.1 + i * 0.2, 1e9, { dy: 6 }));
+    M.vis(dV, t, tD1 + 0.4, 1e9, { dy: 0, sc: 0.6, sp: M.SOFT, fade: 0.15 }); dVt.forEach((e, i) => M.vis(e, t, wt('D2', 'protein') - 0.1 + i * 0.2, 1e9, { dy: 6 }));
     const tv = wt('D3', 'viroid'), tp = wt('D3', 'prion');
     { const u = M.io((t - wt('D3', 'RNA') + 0.2) / 0.6); if (u <= 0) dA1.set(0, 0, 0, 0); else dA1.set(420, 270, 420 + 200 * u, 270); M.vis(dMinus[0], t, wt('D3', 'coat') - 0.1, 1e9, { dy: 6 }); }
     M.vis(dR, t, tv - 0.2, 1e9, { ...POP, sc: 0.5 });
@@ -269,11 +269,11 @@ M.on(t => {
     const s2 = t >= tSt[1] - 0.2;
     const Aat = s2 ? [250, 270] : [392, 270], Bat = [540, 270];
     const A = s2 ? lerpP(coil(Aat[0], Aat[1], 1.2), zig(Aat[0], Aat[1], 1.2), conv) : lerpP(line(392, 270, 1), coil(392, 270, 1.4), fold);
-    attr(pA, 'd', pd(A)); pA.setAttribute('stroke', mix(PRO, PRI, conv)); M.hide(pA, t < tSt[0] - 0.3 || dmg > 0.3); pA.style.opacity = (1 - chain * 1.2).toFixed(2);
+    attr(pA, 'd', pd(A)); pA.setAttribute('stroke', mix(PRO, PRI, conv)); M.hide(pA, t < tP1 + 0.6 || dmg > 0.3); pA.style.opacity = (1 - chain * 1.2).toFixed(2);
     const Bx = Bat[0] - 120 * M.io((t - wt('P4', 'meets') + 0.2) / 0.8) * (1 - conv);
     attr(pB, 'd', pd(zig(Bx, Bat[1], 1.2))); M.hide(pB, mis <= 0 || dmg > 0.3); pB.style.opacity = (mis * (1 - chain * 1.2)).toFixed(2);
     attr(pLbl[0], 'x', Aat[0]); attr(pLbl[0], 'y', 360); attr(pLbl[1], 'x', Bx); attr(pLbl[1], 'y', 360); M.setT(pLbl[0], conv > 0.5 ? 'NOW A PRION' : 'NORMAL PROTEIN'); pLbl[0].setAttribute('fill', conv > 0.5 ? PRI : PRO);
-    M.vis(pLbl[0], t, tSt[0] + 0.6, tSt[3], { dy: 6 }); M.vis(pLbl[1], t, tSt[1] + 0.3, tSt[3], { dy: 6 });
+    M.vis(pLbl[0], t, tP1 + 0.8, tSt[3], { dy: 6 }); if (t < tSt[0] + 0.6) M.setT(pLbl[0], 'A PROTEIN CHAIN'); M.vis(pLbl[1], t, tSt[1] + 0.3, tSt[3], { dy: 6 });
     const n = chain <= 0 ? 0 : chain < 0.33 ? 2 : chain < 0.66 ? 4 : 8;
     many.forEach((m, k) => { const col = k % 4, row = Math.floor(k / 4); attr(m, 'd', pd(zig(170 + col * 150, 220 + row * 130, 0.85))); M.hide(m, k >= n || dmg > 0.5); m.style.opacity = (1 - dmg * 2).toFixed(2); });
     M.setT($('#pcN'), String(t < tSt[1] ? 0 : t < wt('P4', 'too') ? 1 : n < 2 ? 2 : n)); M.vis($('#pcnt'), t, tSt[1], 1e9, POP);
@@ -287,11 +287,11 @@ M.on(t => {
   const bOn = t >= tB1 - 0.1 && t < tC1 + 0.1; M.hide($('#sB'), !bOn);
   if (bOn) {
     const out = OUT('C1');
-    M.vis($('#ba'), t, tB1 + 0.1, out, { dx: -60, dy: 0, ...o }); M.vis($('#bb'), t, T0('B3') - 0.2, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#ba'), t, tB1 + 0.1, out, { dx: -60, dy: 0, ...o }); M.vis($('#bb'), t, T0('B2') + 0.3, out, { dx: 60, dy: 0, ...o });
     const tw = [wt('B2', 'bovine'), wt('B2', 'spongiform'), wt('B2', 'encephalopathy')], tm = [wt('B3', 'cattle'), wt('B3', 'sponge'), wt('B3', 'brain')];
     [0, 1, 2].forEach(i => { M.vis($('#bw' + i), t, tw[i] - 0.1, 1e9, POP); M.vis($('#bm' + i), t, tm[i] - 0.2, 1e9, POP); });
     M.vis($('#bP'), t, wt('B2', 'mad') - 0.1, 1e9, POP);
-    M.vis(brain, t, T0('B3') + 0.1, 1e9, { dy: 0, sc: 0.8, sp: M.SOFT, fade: 0.15 });
+    M.vis(brain, t, T0('B2') + 0.6, 1e9, { dy: 0, sc: 0.8, sp: M.SOFT, fade: 0.15 });
     const th = wt('B3', 'holes'); holes.forEach((h, k) => attr(h, 'r', (11 * M.io((t - th + 0.3 - k * 0.07) / 0.3)).toFixed(1)));
     M.vis($('#bQ'), t, wt('B4', 'CJD') - 0.2, 1e9, POP); M.vis($('#bR'), t, wt('B4', 'size') - 0.2, 1e9, POP);
   }

@@ -191,7 +191,7 @@ const th1 = PUC.think($('#th1'), { q: 'A teacher wants students to watch one tre
 
 /* ---------- K: the key ---------- */
 const CPL = [['1a', 'Backbone present', '→ go to couplet 2'], ['1b', 'No backbone', '→ it is the housefly']];
-$('#kS').insertAdjacentHTML('afterend', `<div class="pillp" id="kSep" style="left:36px;top:470px">Separate keys for each rank: family, genus, species</div>`);
+$('#kS').insertAdjacentHTML('afterend', `<div class="pillp" id="kSep" style="left:36px;top:432px">Separate keys for each rank: family, genus, species</div>`);
 $('#cpls').innerHTML = CPL.map(([n, a, b], i) => `<div class="cpl" id="cp${i}" style="top:${96 + i * 116}px;width:860px"><b>${n}</b>${a}<em>${b}</em></div>`).join('');
 const kS = $('#kS'), kBr = mk(kS, 'path', { d: 'M1110,96 h24 v212 h-24', stroke: C.ac, 'stroke-width': 4, fill: 'none' });
 const kBl = txt(kS, 1158, 196, 'Couplet', { 'font-family': 'Poppins', 'font-size': 30, 'font-weight': 700, fill: C.ac }), kBl2 = txt(kS, 1158, 232, 'a pair of opposite leads', { 'font-family': 'Poppins', 'font-size': 22, 'font-weight': 500, fill: C.ink2 || '#3A4560' });
@@ -284,7 +284,7 @@ M.on(t => {
     M.vis($('#bl'), t, tB1 + 0.1, out, { dx: -60, dy: 0, ...o }); M.vis($('#bgh'), t, tB1 + 0.5, 1e9, { dy: 8 });
     M.vis(unk, t, T0('B2') - 0.1, 1e9, { dy: 16 });
     REF.forEach((r, i) => M.vis(r.g, t, wt('B2', 'already') + i * 0.15, 1e9, { dy: 16 }));
-    const ts = wt('B2', 'compare'), u = M.clamp((t - ts) / 2.4), lx = 320 + 344 * Math.min(1, u * 1.25) - (u > 0.8 ? 172 * M.io((u - 0.8) / 0.2) : 0);
+    const ts = wt('B2', 'named') + 0.1, u = M.clamp((t - ts) / 2.4), lx = 320 + 344 * Math.min(1, u * 1.25) - (u > 0.8 ? 172 * M.io((u - 0.8) / 0.2) : 0);
     M.vis(lensW, t, ts - 0.1, 1e9, { dy: 0, fade: 0.2 }); attr(lens, 'transform', `translate(${lx.toFixed(1)} 250)`);
     const tm = ts + 2.3; M.draw(match, t, tm, 0.5); REF[1].nm.textContent = t > tm + 0.3 ? 'MATCH' : 'SPECIES B'; REF[1].nm.setAttribute('fill', t > tm + 0.3 ? GRN : C.mute);
     M.vis($('#blP'), t, wt('B3', 'Taxonomic') - 0.1, 1e9, POP);

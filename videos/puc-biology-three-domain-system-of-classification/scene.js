@@ -137,7 +137,7 @@ const tNote = txt(sS2, 1120, 500, '', { 'font-family': 'Poppins', 'font-size': 2
 
 /* ---------- D: three domains ---------- */
 const LADR = ['DOMAIN', 'KINGDOM', 'PHYLUM', 'CLASS', 'ORDER', 'FAMILY', 'GENUS', 'SPECIES'];
-$('#lad').innerHTML = LADR.map((n, i) => `<span id="ld${i}">${n}</span>${i < 7 ? M.icon('arrowR', 18, C.dim, 2.4) : ''}`).join('');
+$('#lad').innerHTML = LADR.map((n, i) => `<span id="ld${i}">${n}</span>${i < 7 ? `<i id="la${i}" style="display:flex">${M.icon('arrowR', 18, C.dim, 2.4)}</i>` : ''}`).join('');
 const DM = [['Bacteria', 'The true bacteria, like the ones that turn milk into curd.', 'NO NUCLEUS', BA, 'D3'], ['Archaea', 'Microbes of harsh places: salty water, hot springs, marshes.', 'NO NUCLEUS', AR, 'D4'], ['Eukarya', 'Every organism with a nucleus: protists, fungi, plants, animals.', 'NUCLEUS', EU, 'D5']];
 $('#dms').innerHTML = DM.map(([n, q, c, col], i) => `<div class="card dm" id="dm${i}" style="left:${160 + i * 544}px;border-top-color:${col}"><svg id="dmS${i}" width="512" height="200" style="position:absolute;left:0;top:0"></svg><div class="dn" style="color:${col}">${n}</div><div class="dq">${q}</div><div class="nuc" style="background:${mix('#FFFFFF', col, 0.15)};color:${col}">${c}</div></div>`).join('');
 rod($('#dmS0'), 120, 60, 200, 90, mix('#FFFFFF', BA, 0.6), BA, 2, 9); rod($('#dmS0'), 330, 110, 110, 50, mix('#FFFFFF', BA, 0.6), BA, 4, 4);
@@ -294,7 +294,7 @@ M.on(t => {
   if (dOn) {
     const out = OUT('C1');
     M.vis($('#dst'), t, tD1 + 0.05, out, { dy: 30, ...o });
-    LADR.forEach((_, i) => { const el = $('#ld' + i); M.vis(el, t, T0('D2') + i * 0.06, 1e9, POP); const on = i === 0 ? M.io((t - wt('D2', 'domain')) / 0.3) : 0;
+    LADR.forEach((_, i) => { const el = $('#ld' + i); M.vis(el, t, T0('D2') + i * 0.06, 1e9, POP); if (i < 7) M.vis($('#la' + i), t, T0('D2') + i * 0.06 + 0.03, 1e9, { dy: 0, fade: 0.15 }); const on = i === 0 ? M.io((t - wt('D2', 'domain')) / 0.3) : 0;
       el.style.background = mix('#FFFFFF', C.ac, on); el.style.color = i === 0 ? mix('#9AA0AC', '#FFFFFF', on) : '#6B7280'; el.style.borderColor = i === 0 ? mix('#CBD0DA', C.ac, on) : '#CBD0DA'; });
     DM.forEach((d, i) => { const c = $('#dm' + i), ti = T0(d[4]) - 0.1; M.vis(c, t, T0('D1') + 1.2 + i * 0.15, out, { dy: 36, ...o });
       [c.querySelector('svg'), c.querySelector('.dq'), c.querySelector('.nuc')].forEach((e, k) => M.vis(e, t, ti + k * 0.2, 1e9, { dy: 12 }));

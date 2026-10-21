@@ -342,7 +342,7 @@ M.on(t => {
     M.vis($('#vc'), t, tC1 + 0.05, OUT('C4'), { dy: 36, ...o });
     M.vis($('#vh0'), t, wt('C1', 'bryophytes') - 0.1, 1e9, POP); M.vis($('#vh1'), t, wt('C1', 'pteridophytes') - 0.1, 1e9, POP);
     let cur = -1; VR.forEach((v, i) => { if (t >= v[4] - 0.1) cur = i; });
-    VR.forEach((v, i) => { const r = $('#vr' + i); M.vis(r, t, v[4] - 0.15, 1e9, { dy: 14 }); r.style.background = i === cur ? C.ac3 : 'transparent';
+    VR.forEach((v, i) => { const r = $('#vr' + i); M.vis(r, t, tC1 + 0.6 + i * 0.12, 1e9, { dy: 14 }); r.style.background = i === cur ? C.ac3 : 'transparent';
       M.vis($('#vt' + i + 'a'), t, v[4], 1e9, { dx: -12, dy: 0 }); M.vis($('#vt' + i + 'b'), t, v[5], 1e9, { dx: -12, dy: 0 }); M.vis($('#eq' + i), t, v[5] + 0.3, 1e9, POP); });
     M.vis($('#th1'), t, tC4 + 0.05, OUT('T1') + 0.3, { dy: 36, ...o });
     th1(t, { tin: tC4, tOpts: wt('C4', 'moss') - 0.1, tCount: T1('C4') + 0.05, dur: 3, tAns: T0('C5') - 0.02, tWhy: wt('C5', 'Its') - 0.2 });

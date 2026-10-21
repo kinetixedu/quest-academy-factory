@@ -130,9 +130,9 @@ const L2 = { m: cellG('2n', SET2, 48), a: cellG('2n', [[-6, 40, NUC], [7, 24, NU
   q: [[[-6, 40, NUC], [7, 24, NUL]], [[-6, 40, NUC], [7, 24, NUL]], [[-6, 40, NUL], [7, 24, NUC]], [[-6, 40, NUL], [7, 24, NUC]]].map(s => cellG('n', s, 38)) };
 const L3 = { a: cellG('n', [[-6, 40, NUC], [7, 24, NUC]], 40), b: cellG('n', [[-6, 40, NUL], [7, 24, NUL]], 40), z: cellG('2n', SET2, 48) };
 L2.a.G.querySelector('circle').setAttribute('fill', '#EEF0F8'); L2.b.G.querySelector('circle').setAttribute('fill', '#EEF0F8');
-const PT = { r1: txt(ps, 466, 152, '2n → 2n', { 'font-size': 24, 'font-weight': 600, fill: DN }), h1: txt(ps, 900, 152, 'n → n', { 'font-size': 24, 'font-weight': 600, fill: HN }),
-  r2: txt(ps, 920, 300, '2n → n', { 'font-size': 24, 'font-weight': 600, fill: HN }), r3: txt(ps, 640, 448, 'n + n → 2n', { 'font-size': 24, 'font-weight': 600, fill: DN }) };
-const AR = [[200, 144, 230], [560, 144, 590], [200, 292, 230], [490, 292, 520], [430, 440, 470]].map(([x, y]) => mk(ps, 'path', { d: `M${x - 10},${y - 10} L${x},${y} L${x - 10},${y + 10}`, stroke: C.dim, 'stroke-width': 3, fill: 'none', 'stroke-linecap': 'round' }));
+const PT = { r1: txt(ps, 516, 152, '2n → 2n', { 'font-size': 24, 'font-weight': 600, fill: DN }), h1: txt(ps, 940, 152, 'n → n', { 'font-size': 24, 'font-weight': 600, fill: HN }),
+  r2: txt(ps, 930, 300, '2n → n', { 'font-size': 24, 'font-weight': 600, fill: HN }), r3: txt(ps, 670, 448, 'n + n → 2n', { 'font-size': 24, 'font-weight': 600, fill: DN }) };
+const AR = [[255, 144, 0], [610, 144, 0], [255, 292, 0], [530, 292, 0], [460, 440, 0]].map(([x, y]) => mk(ps, 'path', { d: `M${x - 10},${y - 10} L${x},${y} L${x - 10},${y + 10}`, stroke: C.dim, 'stroke-width': 3, fill: 'none', 'stroke-linecap': 'round' }));
 const avP = PUC.avatar($('#sP'), { x: 1248 + 28, y: 324 + 526 - 104, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'Halve, double, copy. Easy maths!' });
 
 /* ---------- V: the plant twist ---------- */
@@ -147,7 +147,7 @@ $('#stF').innerHTML = `<span style="font-size:44px">${K(`\\text{meiosis } ${dc('
 
 /* ---------- W: the onion flower, filled in ---------- */
 const BX = [['leaf', 'Leaf cell', 16, '2n', DN, 50, 236, wt('W1', 'sixteen')], ['pol', 'Pollen grain', 8, 'n', HN, 420, 96, wt('W2', 'eight')], ['egg', 'Egg', 8, 'n', HN, 420, 236, wt('W3', 'eight')],
-  ['pn', 'Polar nuclei', '8 + 8', 'n + n', HN, 420, 376, wt('W5', 'polar')], ['zyg', 'Zygote', 16, '2n', DN, 800, 166, wt('W4', 'sixteen')], ['emb', 'Embryo', 16, '2n', DN, 1160, 166, wt('W4', 'embryo')],
+  ['pn', 'Polar nuclei', '8 + 8', '', HN, 420, 376, wt('W5', 'polar')], ['zyg', 'Zygote', 16, '2n', DN, 800, 166, wt('W4', 'sixteen')], ['emb', 'Embryo', 16, '2n', DN, 1160, 166, wt('W4', 'embryo')],
   ['end', 'Endosperm', 24, '3n', TN, 800, 376, wt('W5', 'twenty')]];
 $('#bxs').innerHTML = BX.map(([id, n, v, p, c, x, y]) => `<div class="bx" id="bx${id}" style="left:${x}px;top:${y}px;border-color:${c}"><div class="bn">${n}</div><div class="bv" style="color:${c}"><span id="bv${id}">${v}</span></div><div class="bt" style="color:${c}">${p}</div></div>`).join('');
 const ws = $('#wS'), WA = [[300, 292, 420, 152, 'W2', 'meiosis'], [300, 292, 420, 292, 'W3', 'Meiosis'], [300, 300, 420, 432, 'W5', 'polar'], [670, 152, 800, 210, 'W4', 'male'], [670, 292, 800, 222, 'W4', 'joins'], [1050, 222, 1160, 222, 'W4', 'embryo'], [670, 432, 800, 432, 'W5', 'joins'], [670, 160, 800, 410, 'W5', 'other']]
@@ -278,25 +278,25 @@ M.on(t => {
     const dupA = M.io((t - wt('P2', 'copy') + 0.1) / 0.6), spA = M.io((t - wt('P2', 'splits') + 0.1) / 0.9);
     [L1.m, L1.a, L1.b].forEach(c => c.sis.forEach(s => attr(s, 'transform', `translate(${(4 * (c === L1.m ? dupA : 1 - M.io((t - wt('P2', 'splits') - 0.9) / 0.5))).toFixed(2)} 0)`)));
     L1.m.sis.forEach(s => s.style.opacity = dupA > 0 ? 1 : 0); [L1.a, L1.b].forEach(c => c.sis.forEach(s => s.style.opacity = '0'));
-    const on1 = t >= tP1 + 0.8; place(L1.m, 120, 144, on1 ? pul(0) : 0, on1 ? (spA > 0 ? 1 - 0.65 * spA : 1) : 0);
-    place(L1.a, 120 + 170 * spA, 144, spA > 0 ? pul(1) : 0, spA > 0 ? 1 : 0); place(L1.b, 120 + 280 * spA, 144, spA > 0 ? pul(2) : 0, spA > 0 ? 1 : 0);
+    const on1 = t >= tP1 + 0.8; place(L1.m, 170, 144, on1 ? pul(0) : 0, on1 ? (spA > 0 ? 1 - 0.65 * spA : 1) : 0);
+    place(L1.a, 170 + 170 * spA, 144, spA > 0 ? pul(1) : 0, spA > 0 ? 1 : 0); place(L1.b, 170 + 280 * spA, 144, spA > 0 ? pul(2) : 0, spA > 0 ? 1 : 0);
     M.vis(PT.r1, t, wt('P3', 'same') - 0.1, 1e9, { dy: 6 }); M.vis(AR[0], t, wt('P2', 'splits'), 1e9, { dy: 0, fade: 0.2 });
     const tH = wt('P3', 'haploid'), spH = M.io((t - tH - 0.6) / 0.9);
-    place(L1.hm, 640, 144, t > tH - 0.1 ? pul(3) : 0, t > tH - 0.1 ? 1 - 0.65 * spH : 0); L1.hm.sis.forEach(s => s.style.opacity = M.io((t - tH - 0.1) / 0.4));
+    place(L1.hm, 680, 144, t > tH - 0.1 ? pul(3) : 0, t > tH - 0.1 ? 1 - 0.65 * spH : 0); L1.hm.sis.forEach(s => s.style.opacity = M.io((t - tH - 0.1) / 0.4));
     [L1.ha, L1.hb].forEach(c => c.sis.forEach(s => s.style.opacity = '0'));
-    place(L1.ha, 640 + 100 * spH, 144, spH > 0 ? pul(4) : 0, spH > 0 ? 1 : 0); place(L1.hb, 640 + 200 * spH, 144, spH > 0 ? pul(5) : 0, spH > 0 ? 1 : 0);
+    place(L1.ha, 680 + 100 * spH, 144, spH > 0 ? pul(4) : 0, spH > 0 ? 1 : 0); place(L1.hb, 680 + 200 * spH, 144, spH > 0 ? pul(5) : 0, spH > 0 ? 1 : 0);
     M.vis(PT.h1, t, wt('P3', 'stays', 1) - 0.1, 1e9, { dy: 6 }); M.vis(AR[1], t, tH + 0.6, 1e9, { dy: 0, fade: 0.2 });
     // lane 2: meiosis
     const on2 = t >= tPs[2] - 0.2, d1 = M.io((t - wt('P4', 'twice') + 0.2) / 0.9), d2 = M.io((t - wt('P5', 'Four') + 0.1) / 0.9);
-    L2.m.sis.forEach(s => s.style.opacity = M.io((t - wt('P4', 'copies')) / 0.4)); place(L2.m, 120, 292, on2 ? pul(6) : 0, on2 ? 1 - 0.65 * d1 : 0);
-    [L2.a, L2.b].forEach((c, i) => { c.sis.forEach(s => s.style.opacity = d2 > 0 ? 0 : 1); place(c, 120 + (170 + i * 120) * d1, 292, d1 > 0 ? pul(7 + i) : 0, d1 > 0 ? 1 - 0.65 * d2 : 0); });
-    L2.q.forEach((c, i) => { c.sis.forEach(s => s.style.opacity = '0'); const x0 = i < 2 ? 290 : 410; place(c, x0 + (560 + i * 100 - x0) * d2, 292, d2 > 0 ? pul(9 + i) : 0, d2 > 0 ? 1 : 0); });
+    L2.m.sis.forEach(s => s.style.opacity = M.io((t - wt('P4', 'copies')) / 0.4)); place(L2.m, 170, 292, on2 ? pul(6) : 0, on2 ? 1 - 0.65 * d1 : 0);
+    [L2.a, L2.b].forEach((c, i) => { c.sis.forEach(s => s.style.opacity = d2 > 0 ? 0 : 1); place(c, 170 + (170 + i * 120) * d1, 292, d1 > 0 ? pul(7 + i) : 0, d1 > 0 ? 1 - 0.65 * d2 : 0); });
+    L2.q.forEach((c, i) => { c.sis.forEach(s => s.style.opacity = '0'); const x0 = i < 2 ? 340 : 460; place(c, x0 + (590 + i * 90 - x0) * d2, 292, d2 > 0 ? pul(9 + i) : 0, d2 > 0 ? 1 : 0); });
     M.vis(AR[2], t, wt('P4', 'twice'), 1e9, { dy: 0, fade: 0.2 }); M.vis(AR[3], t, wt('P5', 'Four'), 1e9, { dy: 0, fade: 0.2 }); M.vis(PT.r2, t, wt('P5', 'becomes') - 0.1, 1e9, { dy: 6 });
     // lane 3: fertilisation
     const on3 = t >= tPs[4] - 0.1, fz = M.io((t - wt('P6', 'joins') + 0.1) / 1.0);
     [L3.a, L3.b, L3.z].forEach(c => c.sis.forEach(s => s.style.opacity = '0'));
-    place(L3.a, 140 + (560 - 140) * fz, 440, on3 ? pul(13) : 0, on3 && fz < 1 ? 1 : 0); place(L3.b, 260 + (560 - 260) * fz, 440, on3 ? pul(14) : 0, on3 && fz < 1 ? 1 : 0);
-    place(L3.z, 560, 440, fz >= 1 ? pul(15) : 0, fz >= 1 ? 1 : 0); M.vis(PT.r3, t, wt('P6', 'plus') - 0.1, 1e9, { dy: 6 }); M.vis(AR[4], t, wt('P6', 'plus'), 1e9, { dy: 0, fade: 0.2 });
+    place(L3.a, 170 + (590 - 170) * fz, 440, on3 ? pul(13) : 0, on3 && fz < 1 ? 1 : 0); place(L3.b, 290 + (590 - 290) * fz, 440, on3 ? pul(14) : 0, on3 && fz < 1 ? 1 : 0);
+    place(L3.z, 590, 440, fz >= 1 ? pul(15) : 0, fz >= 1 ? 1 : 0); M.vis(PT.r3, t, wt('P6', 'plus') - 0.1, 1e9, { dy: 6 }); M.vis(AR[4], t, wt('P6', 'plus'), 1e9, { dy: 0, fade: 0.2 });
     // rules panel
     const swOn = M.vis($('#sws'), t, tS1 + 0.2, 1e9, { dy: 16 });
     if (swOn) [0, 1, 2].forEach(i => { const tt = T0('S' + (i + 2)); M.vis($('#sw' + i), t, tt - 0.1, 1e9, { dx: -16, dy: 0 }); PUC.write($('#swk' + i), t, tt + 0.4, 0.5); $('#sw' + i).style.background = t >= tt - 0.1 && t < (i < 2 ? T0('S' + (i + 3)) : tC1) - 0.1 ? C.ac2 : C.soft; });

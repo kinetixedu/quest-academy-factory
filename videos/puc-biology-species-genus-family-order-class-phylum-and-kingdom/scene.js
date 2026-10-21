@@ -120,9 +120,9 @@ const ZV = ['Mangifera indica', 'Mangifera', 'Anacardiaceae', 'Sapindales', 'Dic
 const ZLB = [0, 1, 2, 3, 4, 5, 6].map(k => { const e = mk(gR, 'text', { x: ZC[0], y: ZC[1] - ZH(k) / 2 + 21, 'text-anchor': 'middle', class: 'rk', fill: '#3B7A52' });
   const a = mk(e, 'tspan', {}); a.textContent = RK[k] + ' · '; const b = mk(e, 'tspan', { 'font-family': 'Poppins', 'font-size': 17, 'font-style': k < 2 ? 'italic' : 'normal', 'letter-spacing': 0, fill: C.ink }); b.textContent = k ? ZV[k] : 'one kind'; return e; });
 const ZDOT = [1, 2, 3, 4, 5, 6].map(k => { const n = 2 * k + 1, y = ZC[1] + ZH(k) / 2 - 14; return Array.from({ length: n }, (_, j) => mk(gR, 'circle', { cx: ZC[0] + (j - (n - 1) / 2) * 24, cy: y, r: 6, fill: '#8CC48F' })); });
-const gMw = mk(gR, 'g', { transform: 'translate(14 2)' }), gM = mk(gMw, 'g', { class: 'pp' }); // mini mango at the centre
+const gMw = mk(gR, 'g', { transform: 'translate(14 4)' }), gM = mk(gMw, 'g', { class: 'pp' }); // mini mango at the centre
 mk(gM, 'path', { d: 'M418,296 C446,292 456,320 444,338 C432,356 400,354 392,336 C384,318 396,298 418,296 Z', fill: '#F2C96B', stroke: BR, 'stroke-width': 3 });
-mk(gM, 'path', { d: 'M418,296 Q424,282 438,276', stroke: '#6B5B3A', 'stroke-width': 4, fill: 'none' }); leaf(gM, 438, 276, -20, 46, 11, 'net');
+mk(gM, 'path', { d: 'M418,296 Q424,282 438,276', stroke: '#6B5B3A', 'stroke-width': 4, fill: 'none' });
 const zName = txt(gR, 480, 344, 'Mangifera indica', { 'font-family': 'Poppins', 'font-size': 24, 'font-style': 'italic', 'font-weight': 600, fill: C.ink });
 
 /* ---------- V: the housefly, labelled ---------- */

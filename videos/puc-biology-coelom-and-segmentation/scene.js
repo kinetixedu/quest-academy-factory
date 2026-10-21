@@ -120,7 +120,7 @@ const cLy = txt(cw, 0, 186, 'OUTSIDE', { 'font-size': 16, 'letter-spacing': 1.4,
 /* ---------- D: notochord ---------- */
 const da = $('#daS'); AN.draw('fish', da, 392, 270, 2.3);
 const dRod = mk(da, 'path', { d: `M${392 - 66 * 2.3},${270 - 14 * 2.3} L${392 + 72 * 2.3},${270 - 14 * 2.3}`, stroke: NOTO, 'stroke-width': 12, 'stroke-linecap': 'round', fill: 'none' });
-const Ld = [lab(da, 392 + 30 * 2.3, 270 - 14 * 2.3, 560, 410, 'Notochord'), lab(da, 392 - 20 * 2.3, 270 - 44 * 2.3, 210, 100, 'Dorsal side (back)', 'start')];
+const Ld = [lab(da, 392 + 30 * 2.3, 270 - 14 * 2.3, 560, 410, 'Notochord'), lab(da, 392 + 40 * 2.3, 270 - 40 * 2.3, 560, 100, 'Dorsal side (back)', 'start')];
 const dSub = txt(da, 572, 448, 'FORMS IN THE EMBRYO', { 'font-size': 15, 'letter-spacing': 1.2, 'font-weight': 600, fill: NOTO });
 const db = $('#dbS'), dw = AN.draw('worm', db, 392, 280, 1, { n: 20, L: 620, clit: 1 });
 const dSlot = mk(db, 'path', { d: 'M100,240 L690,240', stroke: C.dim, 'stroke-width': 10, 'stroke-dasharray': '14 12', 'stroke-linecap': 'round', fill: 'none' });
@@ -132,7 +132,7 @@ const avD = PUC.avatar($('#sD'), { x: 976 + 400, y: 270 + 410, who: 'Diya', face
 const uA = sec($('#uaS'), 290, 290, 196, 'c'), uB = sec($('#ubS'), 290, 290, 196, 'p');
 const LuA = [lab($('#uaS'), ...pol(290, 290, 192, -1.0), 520, 100, 'Body wall'), lab($('#uaS'), ...pol(290, 290, 125, -0.3), 520, 200, 'Coelom'), lab($('#uaS'), ...pol(290, 290, 162, 0.35), 520, 300, 'Mesoderm lining'), lab($('#uaS'), ...pol(290, 290, 70, 1.0), 520, 430, 'Gut')];
 const pp = uB.pou[1], ppx = +pp.getAttribute('cx'), ppy = +pp.getAttribute('cy');
-const LuB = [lab($('#ubS'), ...pol(290, 290, 192, -1.0), 520, 100, 'Body wall'), lab($('#ubS'), ...pol(290, 290, 125, -0.3), 520, 200, 'Pseudocoelom'), lab($('#ubS'), ppx, ppy, 520, 300, 'Mesoderm pouches'), lab($('#ubS'), ...pol(290, 290, 70, 1.0), 520, 430, 'Gut')];
+const LuB = [lab($('#ubS'), ...pol(290, 290, 192, -1.0), 496, 100, 'Body wall'), lab($('#ubS'), ...pol(290, 290, 125, -0.3), 496, 200, 'Pseudocoelom'), lab($('#ubS'), ppx, ppy, 496, 300, 'Mesoderm pouches'), lab($('#ubS'), ...pol(290, 290, 70, 1.0), 496, 430, 'Gut')];
 const th1 = PUC.think($('#th1'), { q: 'In a hookworm, the body cavity is not lined by mesoderm. True coelom, or pseudocoelom?', opts: ['True coelom', 'Pseudocoelom'], right: 1, why: 'Pseudocoelom. The hookworm (Ancylostoma) is an aschelminth, a roundworm.' });
 
 /* ---------- W: sort three sections ---------- */
@@ -164,7 +164,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 35', topic: 'Ten jars, one ke
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('C4', 'waves') - 0.3, 1.06, 960, 560], [T1('C4') + 0.3, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]]]);
 let geo = null; function measure() { geo = 1; }
 const crawl = (segs, t, on, n, w0, x0, y, h0) => { let x = x0; segs.forEach((s, k) => { const ph = on * Math.sin(t * 3 - k * 0.55), w = w0 * (1 + 0.26 * ph), h = h0 * (1 - 0.2 * ph);
   attr(s, 'x', x.toFixed(1)); attr(s, 'width', (w + 1).toFixed(1)); attr(s, 'y', (y - h).toFixed(1)); attr(s, 'height', (2 * h).toFixed(1)); s._x = x; s._w = w; x += w; }); return x; };

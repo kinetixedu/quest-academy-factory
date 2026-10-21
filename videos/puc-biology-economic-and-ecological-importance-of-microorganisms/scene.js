@@ -81,7 +81,7 @@ const LAB = [];
   [[240, 160, 80], [760, 140, 90], [380, 400, 70], [820, 400, 80]].forEach(([x, y, s]) => mk(g, 'circle', { cx: x, cy: y, r: s, fill: PROT, stroke: PROTD, 'stroke-width': 4 }));
   for (let k = 0; k < 22; k++) { const x = 120 + r() * 820, y = 60 + r() * 420; if ([[240, 160, 80], [760, 140, 90], [380, 400, 70], [820, 400, 80]].some(([a, b, s]) => Math.hypot(x - a, y - b) < s + 30)) continue; rod(g, x, y, r() * 180, 1.4); }
   rod(g, 560, 250, 20, 1.6);
-  LAB[2] = [[560, 250, 640, 80, 'Lactobacillus (rod-shaped)', 'start'], [760, 210, 900, 300, 'Milk protein', 'start']];
+  LAB[2] = [[560, 250, 640, 470, 'Lactobacillus (rod-shaped)', 'start'], [760, 210, 640, 60, 'Milk protein', 'end']];
 }
 { const g = ZG[3];
   const A = { C1: [340, 300], C2: [528, 230], C3: [716, 300], O1: [528, 90], O2: [716, 440], O3: [880, 230], H: [[200, 250], [300, 440], [390, 160]], H2: [470, 330] };
@@ -97,7 +97,7 @@ const LB = LAB.map((L, lv) => L.map(([px, py, lx, ly, s, an]) => {
   const tx = mk(g, 'text', { x: lx + (an === 'start' ? 12 : -12), y: ly + 9, 'text-anchor': an, class: 'zl' }); tx.textContent = s; return { ln, dot, tx }; }));
 const FR = FOC.map((f, lv) => f && mk(ZG[lv], 'circle', { cx: f[0], cy: f[1], r: f[2], fill: 'none', stroke: C.ac, 'stroke-width': 4, 'stroke-dasharray': '10 8' }));
 const tLab = [[wt('Z2', 'thick'), wt('Z2', 'runny')], [wt('Z3', 'proteins'), wt('Z3', 'mesh')], [wt('Z4', 'Lactobacillus'), wt('Z4', 'clumps')], [wt('Z5', 'sour'), wt('Z5', 'Lactic')]];
-const zFx = document.createElement('div'); zFx.className = 'pillp'; zFx.style.cssText = 'left:28px;top:446px;height:52px;font-size:22px';
+const zFx = document.createElement('div'); zFx.className = 'pillp'; zFx.style.cssText = 'left:776px;top:446px;height:52px;font-size:22px';
 zFx.innerHTML = `Lactic acid &nbsp;<span style="font-size:26px">${K('\\mathrm{C_{3}H_{6}\\textcolor{' + ACID + '}{O_{3}}}')}</span>`; $('#zd').appendChild(zFx);
 const avZ = PUC.avatar($('#sZ'), { x: 1248 + 28, y: 324 + 526 - 112, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'Millions of tiny cooks!' });
 
@@ -203,7 +203,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 21', topic: 'Moss, fern, pine
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('M5') - 0.3, 1.05, 960, 600], [T0('U1') - 0.6, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('M5') - 0.3, 1.05, 960, 540], [T0('U1') - 0.6, 1, 960, 540]]);
 
 /* ---------- frame ---------- */
 M.on(t => {
@@ -233,7 +233,7 @@ M.on(t => {
     const out = OUT('Z1');
     M.vis($('#dl'), t, tD1 + 0.1, out, { dx: -60, dy: 0, ...o }); M.vis($('#dr'), t, T0('D3') - 0.2, out, { dx: 60, dy: 0, ...o });
     M.vis($('#dP'), t, wt('D2', 'microscope') - 0.2, 1e9, POP);
-    M.vis(dB, t, wt('D2', 'Bacteria') - 0.1, 1e9, { ...POP, sc: 0.5 }); M.vis(dY, t, wt('D2', 'yeast') - 0.2, 1e9, { ...POP, sc: 0.5 }); M.vis(dPr, t, wt('D2', 'protists') - 0.1, 1e9, { ...POP, sc: 0.5 });
+    M.vis(dB, t, T0('D2') + 0.3, 1e9, { ...POP, sc: 0.5 }); M.vis(dY, t, wt('D2', 'yeast') - 0.2, 1e9, { ...POP, sc: 0.5 }); M.vis(dPr, t, wt('D2', 'protists') - 0.1, 1e9, { ...POP, sc: 0.5 });
     M.vis($('#dhs .lbl'), t, T0('D3'), 1e9, { dy: 8 }); DH.forEach(([, w], i) => M.vis($('#dh' + i), t, wt('D3', w) - 0.1, 1e9, POP));
     M.vis($('#dhU'), t, wt('D3', 'useful') - 0.2, 1e9, { dy: 8 }); [0, 1, 2, 3, 4].forEach(i => M.vis($('#du' + i), t, wt('D3', 'useful') + i * 0.12, 1e9, POP));
   }
@@ -302,10 +302,10 @@ M.on(t => {
   if (cOn) {
     const out = OUT('C4');
     M.vis($('#ca'), t, tC1 + 0.1, out, { dx: -60, dy: 0, ...o }); M.vis($('#cb'), t, T0('C3') - 0.2, out, { dx: 60, dy: 0, ...o });
-    M.vis(cA, t, wt('C2', 'penicillin') - 0.2, 1e9, { ...POP, sc: 0.5 });
+    M.vis(cA, t, tC1 + 0.5, 1e9, { ...POP, sc: 0.5 });
     CA.forEach((_, i) => M.vis($('#ka' + i), t, [wt('C2', 'useful'), wt('C2', 'food'), wt('C2', 'penicillin')][i] - 0.15, 1e9, { dx: -16, dy: 0 }));
     CB.forEach((_, i) => M.vis($('#kb' + i), t, [wt('C3', 'nature'), wt('C3', 'people'), wt('C3', 'bacteria')][i] - 0.15, 1e9, { dx: -16, dy: 0 }));
-    M.vis(cB, t, wt('C3', 'bacteria') - 0.3, 1e9, { dy: 10 }); const dec = M.io((t - wt('C3', 'breaking')) / 2.5); cLv.forEach((l, k) => { l.style.opacity = (1 - dec * 0.85).toFixed(2); attr(l, 'ry', (18 * (1 - dec * 0.6)).toFixed(1)); });
+    M.vis(cB, t, T0('C3') + 0.2, 1e9, { dy: 10 }); const dec = M.io((t - wt('C3', 'breaking')) / 2.5); cLv.forEach((l, k) => { l.style.opacity = (1 - dec * 0.85).toFixed(2); attr(l, 'ry', (18 * (1 - dec * 0.6)).toFixed(1)); });
     cRods.forEach((r, k) => attr(r, 'transform', `rotate(10 ${[260, 390, 500, 610][k]} 212) translate(${(6 * Math.sin(t * 2 + k)).toFixed(1)} 0)`));
     M.vis($('#th1'), t, T0('C4') + 0.05, OUT('L1'), { dy: 36, ...o });
     th1(t, { tin: T0('C4'), tOpts: wt('C4', 'Economic') - 0.1, tCount: T1('C4') + 0.05, dur: 3, tAns: T0('C5') - 0.02, tWhy: wt('C5', 'Diatoms') });
@@ -317,7 +317,7 @@ M.on(t => {
     const out = OUT('T1');
     M.vis($('#la'), t, tL1 + 0.1, out, { dx: -60, dy: 0, ...o }); M.vis($('#lb'), t, T0('L2') + 0.4, out, { dx: 60, dy: 0, ...o });
     const dec = M.io((t - wt('L2', 'compost')) / 3);
-    peels.forEach(p => { M.vis(p.e, t, tL1 + 0.3, 1e9, { dy: 0, fade: 0.2 }); attr(p.e, 'transform', `translate(${p.x} ${(p.y + dec * (430 - p.y) * 0.6).toFixed(1)}) rotate(${p.a}) scale(${(1 - dec * 0.75).toFixed(3)})`); });
+    peels.forEach(p => { p.e.style.opacity = M.clamp((t - tL1 - 0.3) / 0.3).toFixed(2); attr(p.e, 'transform', `translate(${p.x} ${(p.y + dec * (430 - p.y) * 0.6).toFixed(1)}) rotate(${p.a}) scale(${(1 - dec * 0.75).toFixed(3)})`); });
     lRods.forEach(r => { M.hide(r.e, t < wt('L2', 'decomposers') - 0.2); attr(r.e, 'transform', `translate(${(r.x + 10 * Math.sin(t * 1.4 + r.ph)).toFixed(1)} ${(r.y + 8 * Math.cos(t * 1.1 + r.ph)).toFixed(1)}) rotate(${(r.ph * 30).toFixed(0)})`); });
     attr(soil, 'd', `M${(110 - 30 * dec).toFixed(1)},${(440 - 140 * dec).toFixed(1)} L${(674 + 30 * dec).toFixed(1)},${(440 - 140 * dec).toFixed(1)} L660,520 L124,520 Z`);
     laT.forEach((e, i) => M.vis(e, t, tL1 + 0.5 + i * 0.3, 1e9, { dy: 6 }));
