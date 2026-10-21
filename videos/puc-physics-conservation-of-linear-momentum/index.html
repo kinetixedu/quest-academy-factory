@@ -1,0 +1,154 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 56 - Conservation of Linear Momentum</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 56: conservation of linear momentum (Motion notebook) ===== */
+:root{--fo:#D9731A;--ar:#D64545;--vb:#2F6FEB;--pm:#B8327E;--cb:#5B6B8C}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.fo{color:var(--fo)}.ar{color:var(--ar)}.vb{color:var(--vb)}.pm{color:var(--pm)}.cb{color:var(--cb)}
+/* title tiles */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr svg{position:absolute;right:20px;top:20px}
+.wq{position:absolute;top:476px;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 25px Poppins;white-space:nowrap}
+/* momentum rows */
+.qr{position:absolute;left:36px;width:712px;height:116px;border-radius:14px;background:var(--soft)}
+.qr .qs{position:absolute;left:28px;top:18px;width:80px;font:600 64px/1 Poppins;font-style:italic;text-align:center}
+.qr .qn{position:absolute;left:136px;top:22px;font:700 32px Poppins;white-space:nowrap}
+.qr .qd{position:absolute;left:136px;top:70px;font:500 22px Poppins;color:var(--ink2);white-space:nowrap}
+.qr .qu{position:absolute;right:28px;top:34px;height:46px;padding:0 16px;border-radius:10px;background:#fff;display:flex;align-items:center;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+.lawP{position:absolute;left:36px;top:470px;width:712px;height:84px;border-radius:14px;background:var(--ink);color:#fff;display:flex;align-items:center;padding:0 24px;font:600 27px Poppins;white-space:nowrap;box-sizing:border-box}
+/* sim + readout */
+.ro2{position:absolute;display:grid;grid-template-columns:auto 1fr auto;column-gap:14px;row-gap:6px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .v{font:600 34px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 20px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+.smo{position:absolute;right:36px;top:18px;height:44px;padding:0 16px;border-radius:9px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.frz{position:absolute;right:36px;top:18px;height:44px;padding:0 16px;border-radius:9px;background:var(--redBg);color:var(--red);display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.rdy{position:absolute;right:36px;top:18px;height:44px;padding:0 16px;border-radius:9px;background:var(--soft);color:var(--ink2);display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+#simEq{position:absolute;left:36px;top:80px;height:60px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 28px 'IBM Plex Mono';white-space:nowrap}
+.leg{position:absolute;top:22px;display:flex;gap:18px;font:600 18px 'IBM Plex Mono';white-space:nowrap}
+.leg span{display:flex;align-items:center;gap:8px}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:92px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:-2px;font-size:36px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:52px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+/* recoil chain */
+.lk{position:absolute;left:36px;width:712px;height:84px;border-radius:14px;background:var(--soft)}
+.lk .n{position:absolute;left:20px;top:19px;width:46px;height:46px;border-radius:50%;background:var(--ac);color:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.lk .lt{position:absolute;left:86px;top:0;height:84px;display:flex;align-items:center;font:600 26px Poppins;white-space:nowrap}
+.lkA{position:absolute;left:51px;width:16px;height:20px}
+/* side by side */
+.kp{position:absolute;left:36px;top:490px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+#wkq{position:absolute;left:36px;top:70px;font:600 27px/1.38 Poppins;width:712px}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font-size:27px}
+#wl .sol .sx{font-size:30px}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 32px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 4 LAWS OF MOTION</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Conservation of <span class="acc">Momentum</span></div>
+    <div id="sub">Two carts, one total that never changes</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: three cases, one law + the bike -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE CASES · ONE LAW</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Something passes on, and none of it is lost</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV COASTING HOME · ONE BIKE</div>
+        <div style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)" id="hdF"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg" style="position:absolute;left:152px;top:84px;width:480px;height:360px;border-radius:12px">
+        <div id="wqs"></div></div>
+    </div>
+
+    <!-- P: momentum + system + the law -->
+    <div id="sP">
+      <div class="card full" id="pq"><div class="lbl" style="left:36px;top:30px">MOMENTUM · FROM EP 54</div><div id="qrs"></div></div>
+      <div class="card rf" id="pm"><div class="lbl" style="left:36px;top:30px">THE SYSTEM · INSIDE VS OUTSIDE</div>
+        <svg id="pmS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="lawP" id="lawP"></div></div>
+    </div>
+
+    <!-- S: two carts sim + readout + p-t graph -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">SMOOTH TRACK · TWO CARTS</div>
+        <div class="rdy" id="rdy">PAUSED · t = 0</div><div class="smo" id="smo">SLOW-MO REPLAY · 0.25x</div><div class="frz" id="frz">FROZEN · MID-CRASH</div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="simEq"></div></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div>
+        <div class="ro2" id="roA" style="left:36px;top:70px;width:320px"></div><div class="ro2" id="roB" style="left:412px;top:70px;width:336px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">MOMENTUM VS TIME</div>
+        <div class="leg" id="leg" style="right:36px"></div>
+        <svg id="grS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- D: the proof in 5 steps -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE PROOF · 5 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">THE CRASH, ZOOMED IN</div>
+        <svg id="drS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- R: the gun, link by link -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">WHY A GUN KICKS BACK · LINK BY LINK</div><div id="lks"></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">GUN + BULLET · ONE SYSTEM</div><div class="ghost" id="exR" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <svg id="rrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- K: side by side + pause and think -->
+    <div id="sK">
+      <div class="card full" id="ki"><div class="lbl" style="left:36px;top:30px">INTERNAL FORCES ONLY</div><svg id="kiS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="kp" id="kiP"></div></div>
+      <div class="card rf" id="ke"><div class="lbl" style="left:36px;top:30px">AN EXTERNAL FORCE</div><svg id="keS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="kp" id="keP"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wkq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">AARAV + FRIEND · BEFORE AND AFTER</div><div class="ghost" id="exW" style="right:36px;top:18px">EXAMPLE FIGURES</div><svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tpS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this. No net external force?</div><div id="st2">Total <span class="acc">momentum</span> never changes.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

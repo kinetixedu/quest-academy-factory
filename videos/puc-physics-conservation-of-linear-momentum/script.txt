@@ -1,0 +1,59 @@
+H1|0.4|A carrom striker hits a still coin. The striker slows, the coin shoots away. A gun kicks back as it fires.
+H2|0.45|Something passes from one body to the other. And none of it is lost.
+H3|0.35|Aarav coasts home on his bike. His friend, on a skateboard, grabs the carrier.
+H4|0.5|Nobody brakes. But now they both roll slower. Can we predict the new speed, with no speedometer?
+H5|0.65|One law answers it. Let us find it.
+P1|0.35|Start with momentum, from episode fifty four. p equals m v.
+P2|0.4|It is a vector, along the velocity. Its unit is kilogram metre per second.
+P3|0.4|A system is the group of bodies we watch. Here, two carts. Forces between them are internal. A push from outside is external.
+P5|0.65|The law: if no net external force acts on a system, its total momentum stays constant.
+S1|0.35|Cart A, three kilograms, rolls at four metres per second. Cart B, one kilogram, is at rest.
+S2|0.4|A has twelve units of momentum. B has zero. The total is twelve.
+S3|0.4|They hit, and stick together. Now they share one speed, three metres per second.
+S4|0.4|A drops to nine. B rises to three. The total? Still twelve.
+S5|0.4|On the graph, A's line falls, B's line rises, and the total stays flat.
+S6|0.35|Slow-mo replay. Freeze in the middle of the crash.
+S7|0.4|B pushes A back. A pushes B forward. Equal forces, opposite ways, for the same time.
+S8|0.6|So whatever momentum A loses, B gains. Nothing leaks out.
+S9|0.4|Now fit a spring bumper on B. This time A slows to two, and B shoots off at six.
+S10|0.6|A loses six, B gains six. Twelve again.
+S11|3.0|Your turn. Both carts start at rest, a squeezed spring between them. Let go. What is the total momentum now? Pause and decide.
+S12|0.65|Zero! It was zero before. A carries minus three, B plus three. They cancel.
+D1|0.35|Now let's prove it, one step at a time.
+D2|0.75|Step one. In the crash, B pushes A with a force F A B. A pushes B with F B A.
+D3|0.75|Step two. By the third law, F A B equals minus F B A.
+D4|0.75|Step three. Both act for the same time, delta t. Force times time is the change in momentum.
+D5|0.75|Step four. Add the two changes. The forces cancel, so delta p A plus delta p B is zero.
+D6|0.75|Step five. So the total after equals the total before. p A plus p B stays constant.
+D7|0.6|It works for every collision, sticky or bouncy.
+T1|0.7|Remember this. No net external force, no change in total momentum.
+R1|0.35|Now, why does a gun kick back? Link by link.
+R2|0.4|Before firing, both are at rest. Total momentum, zero.
+R3|0.4|Gases push the bullet forward and the gun back. Internal forces, so the total stays zero.
+R4|0.6|The bullet carries momentum forward, so the gun carries the same amount back.
+R5|0.6|Light bullet, huge speed. Heavy gun, small speed. That is the recoil.
+K1|0.4|Side by side. Left: two carts push each other. Internal forces only, so the total stays the same.
+K2|0.6|Right: your hand pushes both carts. An external force, so the total grows.
+K3|3.2|Now you try. A ball falls freely toward the ground. Is the ball's momentum conserved? Pause and decide.
+K4|0.65|No! Gravity is an external force on the ball. Take ball plus Earth as the system, and the total is conserved.
+W1|0.35|Now, one worked example.
+W2|0.5|Aarav and his bike, eighty kilograms, coast at five metres per second. His friend on a skateboard, forty five kilograms, grabs on. Find their shared speed.
+W3|0.75|Before: Aarav has eighty times five, four hundred. The friend has zero. Total, four hundred.
+W4|0.75|After: one body of one hundred and twenty five kilograms, moving at v.
+W5|0.75|Momentum is conserved. So one twenty five times v equals four hundred.
+W6|0.65|v is three point two metres per second. Not lost, just shared with more mass.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students add momenta as plain numbers. After the spring push, three plus three is six.
+X3|0.65|But momentum is a vector. Left is negative. Minus three plus three is zero, the same as before.
+E1|0.6|Where is this asked? In recoil, explosion and collision numericals.
+Q1|5.4|Exam level now. A six kilogram shell moves at ten i metres per second, and bursts in two. The two kilogram piece flies off at thirty j. Find the speed of the other piece. Pause and solve.
+A1|0.5|The answer is B. Fifteen root two metres per second.
+A2|0.5|The burst forces are internal. So the total momentum stays sixty i.
+A3|0.5|The small piece carries sixty j. So the four kilogram piece carries sixty i minus sixty j.
+A4|0.6|So v two is fifteen i minus fifteen j. Its speed is fifteen root two, about twenty one.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. Aarav's friend grabs his bike. Why do they both slow down?
+Y3|0.9|Two. Why can forces inside a crash never change the total momentum?
+Y4|0.9|Three. Why does a gun kick back when it fires?
+N1|0.3|Next time: a block on a rough floor has four forces on it. Can you find them all? Free-body diagrams.
