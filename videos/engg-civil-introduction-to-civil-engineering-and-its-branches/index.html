@@ -1,0 +1,293 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Engg Civil - Introduction to Civil Engineering and Its Branches (Civil Engineering Ep 1)</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<style>
+/* ===== engg-civil world: Blueprint to site (series reference components, Ep 01) ===== */
+:root{--bp:#0F3B6E;--grid:#1D4E85;--grid2:#174578;--white:#FFFFFF;--soft:#B9CCE3;--yel:#FFD400;--con:#C9CED6;--panel:#123F73;--row:#1A4B80;--line:#2C5F96;--dim:#7C93B0;--plate:#F4F1EA}
+#stage{background:var(--bp);font-family:Archivo;font-stretch:100%;color:var(--white)}
+#grid{position:absolute;left:0;top:0}
+#prog{position:absolute;left:0;top:0;height:6px;width:1920px;background:var(--grid);z-index:60}
+#prog i{display:block;height:6px;background:var(--yel);width:0}
+#cam{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.hd{font-family:Archivo;font-stretch:100%;font-weight:700;letter-spacing:-.01em}
+.hand{font-family:'Architects Daughter'}
+.mono{font-family:'IBM Plex Mono'}
+.abs{position:absolute}
+.acc{color:var(--yel)}
+.chip{position:absolute;display:inline-flex;align-items:center;gap:14px;height:44px;padding:0 18px;border:2px solid var(--white);color:var(--white);font:600 19px 'IBM Plex Mono';letter-spacing:.14em;white-space:nowrap;background:var(--bp)}
+.chip i{width:10px;height:10px;background:var(--yel)}
+#title{position:absolute;left:0;top:0;line-height:1.05;white-space:nowrap;transform-origin:0 0}
+#sub{position:absolute;left:0;top:650px;width:1920px;text-align:center;font:400 36px 'Architects Daughter';color:var(--soft)}
+#tline{position:absolute;left:0;top:0}
+/* cards: solid blueprint panels */
+.card{position:absolute;background:var(--panel);border:2px solid var(--soft)}
+.lbl{position:absolute;font:600 18px 'IBM Plex Mono';letter-spacing:.14em;color:var(--soft);white-space:nowrap}
+.note{position:absolute;font:400 26px 'Architects Daughter';white-space:nowrap;line-height:1;color:var(--white)}
+.plate{position:absolute;background:var(--plate);border:3px solid var(--white);border-radius:12px;object-fit:cover}
+.pill{position:absolute;height:52px;padding:0 22px;display:flex;align-items:center;gap:12px;font:700 24px Archivo;white-space:nowrap;background:var(--row);color:var(--white);border:2px solid var(--line)}
+.pill.y{background:var(--yel);color:var(--bp);border-color:var(--yel)}
+.av{position:absolute;width:72px;height:72px;border-radius:50%;background-size:cover;background-position:center;box-shadow:0 0 0 4px var(--soft)}
+/* scene A: the old school */
+#hero{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+#oe{left:976px;top:270px;width:784px;height:274px}
+#lq{left:976px;top:576px;width:784px;height:274px}
+.pr{position:absolute;left:400px;width:348px;height:92px;background:var(--row);border:2px solid var(--line)}
+.pr i{position:absolute;left:16px;top:16px;width:56px;height:56px;border:2px solid var(--line);background:var(--panel);display:flex;align-items:center;justify-content:center}
+.pr .kl{position:absolute;left:88px;top:14px;font:600 16px 'IBM Plex Mono';letter-spacing:.12em;color:var(--soft);white-space:nowrap}
+.pr .kt{position:absolute;left:88px;top:40px;font:700 28px Archivo;white-space:nowrap}
+#lqA{left:36px;top:36px;width:96px;height:96px}
+#lqN{position:absolute;left:160px;top:44px;font-size:40px;white-space:nowrap}
+#lqR{left:160px;top:96px}
+#lqQ{position:absolute;left:36px;top:170px;font-size:48px;white-space:nowrap}
+/* scene L: the brief + the team */
+#ill{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+.brief{left:48px}
+#ana{left:976px;top:270px;width:784px;height:274px;overflow:hidden}
+#team{left:976px;top:576px;width:784px;height:274px}
+.tav{top:76px}
+.tnm{position:absolute;width:176px;text-align:center;top:164px;font:700 23px Archivo;white-space:nowrap}
+.trl{position:absolute;width:176px;text-align:center;top:202px;font:600 15px 'IBM Plex Mono';letter-spacing:.12em;color:var(--soft);white-space:nowrap}
+/* scene D: definition */
+#dq{position:absolute;left:0;width:1920px;top:470px;text-align:center;font-size:88px;white-space:nowrap}
+#kq{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+.ql{position:absolute;left:48px;font:500 32px Archivo;white-space:nowrap;color:var(--white)}
+.ql .hl{font-weight:700}
+#nat{left:976px;top:270px;width:784px;height:274px}
+#sw{left:976px;top:576px;width:784px;height:274px}
+.zs{position:absolute;top:76px;height:150px;background:var(--row);border:2px solid var(--line)}
+.zs .zn{position:absolute;left:0;right:0;top:16px;text-align:center;font:600 15px 'IBM Plex Mono';letter-spacing:.12em;color:var(--soft);white-space:nowrap}
+.zs .zi{position:absolute;left:50%;top:46px;width:40px;height:40px;margin-left:-20px}
+.zs .zt{position:absolute;left:0;right:0;top:98px;text-align:center;font:700 26px Archivo;white-space:nowrap}
+/* scene M: the build-up on one drawing */
+#pd{left:160px;top:270px;width:1056px;height:580px;overflow:hidden}
+#pl{left:1248px;top:270px;width:512px;height:580px}
+.sr{position:absolute;left:30px;width:448px;height:62px;background:var(--row);border:2px solid var(--line)}
+.sr .rn{position:absolute;left:16px;top:17px;font:600 20px 'IBM Plex Mono'}
+.sr .ri{position:absolute;left:62px;top:9px;width:40px;height:40px;display:flex;align-items:center;justify-content:center}
+.sr .rt{position:absolute;left:116px;top:16px;font:700 25px Archivo;white-space:nowrap}
+/* statement on the sheet */
+.sheet{position:absolute;left:0;top:0;width:1920px;height:1080px}
+#stmt{position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:41}
+#st1{position:absolute;left:0;width:1920px;top:364px;text-align:center;font:400 52px 'Architects Daughter';color:var(--soft);white-space:nowrap}
+#st2{position:absolute;left:0;width:1920px;top:452px;text-align:center;font-size:76px;white-space:nowrap}
+#st3{position:absolute;left:0;width:1920px;top:552px;text-align:center;font-size:104px;white-space:nowrap;color:var(--yel)}
+/* scene B: seven branches */
+.bc{position:absolute;width:376px;height:274px}
+.bc .bg{position:absolute;inset:0;background:var(--panel);border:2px solid var(--line)}
+.bc .bi{position:absolute;left:32px;top:30px;width:64px;height:64px;border:2px solid var(--line);display:flex;align-items:center;justify-content:center}
+.bc .bn{position:absolute;right:32px;top:30px;font:600 22px 'IBM Plex Mono'}
+.bc .bt{position:absolute;left:32px;top:118px;width:312px;font:700 34px/1.1 Archivo}
+.bc .bd{position:absolute;left:32px;top:210px;font:500 22px Archivo;white-space:nowrap}
+#ball{left:1384px;top:576px;width:376px;height:274px;background:var(--bp);border:3px solid var(--yel)}
+#ballT{position:absolute;left:32px;top:96px;width:312px;font:700 34px/1.12 Archivo}
+.bd7{position:absolute;top:218px;width:28px;height:28px;border:2px solid var(--yel)}
+/* scene K: at work today */
+#kl{left:160px;top:270px;width:624px;height:580px}
+#kp{left:816px;top:270px;width:944px;height:580px}
+.kr{position:absolute;left:24px;width:572px;height:80px}
+.kr .bg{position:absolute;inset:0;background:var(--row);border:2px solid var(--line)}
+.kr .rn{position:absolute;left:24px;top:26px;font:600 22px 'IBM Plex Mono'}
+.kr .ri{position:absolute;left:76px;top:12px;width:56px;height:56px;border:2px solid var(--line);display:flex;align-items:center;justify-content:center}
+.kr .rt{position:absolute;left:156px;top:22px;font:700 28px Archivo;white-space:nowrap}
+.pn{position:absolute;inset:0}
+.pn .ps{position:absolute;left:48px;top:48px;font:600 20px 'IBM Plex Mono';letter-spacing:.14em;color:var(--yel);white-space:nowrap}
+.pn .pt{position:absolute;left:48px;top:88px;font-size:80px;line-height:1.1;white-space:nowrap}
+.pn .pm{position:absolute;left:48px;top:200px;font:400 34px 'Architects Daughter';color:var(--soft);white-space:nowrap}
+.pn .hr{position:absolute;left:48px;right:48px;top:282px;height:2px;background:var(--line)}
+.ka{position:absolute;left:48px;width:848px;height:96px}
+.ka .ki{position:absolute;left:0;top:12px;width:72px;height:72px;border:2px solid var(--line);display:flex;align-items:center;justify-content:center;background:var(--row)}
+.ka .av{left:0;top:12px}
+.ka .kl{position:absolute;left:100px;top:12px;font:600 17px 'IBM Plex Mono';letter-spacing:.14em;color:var(--soft);white-space:nowrap}
+.ka .kt{position:absolute;left:100px;top:42px;font:700 30px Archivo;white-space:nowrap}
+/* scene X: the human side */
+#xs{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
+#xw{left:976px;top:270px;width:784px;height:580px}
+.xc{position:absolute;height:44px;padding:0 18px;display:flex;align-items:center;gap:10px;font:700 22px Archivo;white-space:nowrap}
+.xr{position:absolute;left:48px;width:688px;height:64px}
+.xr .av{left:0;top:0;width:64px;height:64px}
+.xr .bb{position:absolute;left:88px;top:8px;height:48px;padding:0 18px;display:flex;align-items:center;gap:10px;font:700 23px Archivo;white-space:nowrap;background:var(--row);color:var(--white);border:2px solid var(--line)}
+.xr .sx{position:absolute;left:100px;top:31px;height:3px;background:var(--soft)}
+#fact{position:absolute;left:48px;top:380px;width:688px;height:156px;background:var(--row);border:2px solid var(--line)}
+#fact .fi{position:absolute;left:22px;top:40px;width:72px;height:72px;border:2px solid var(--yel);display:flex;align-items:center;justify-content:center}
+#fact .kl{position:absolute;left:118px;top:24px;font:600 16px 'IBM Plex Mono';letter-spacing:.12em;color:var(--yel);white-space:nowrap}
+#fact .kt{position:absolute;left:118px;top:56px;font:700 30px Archivo;white-space:nowrap}
+#fact .kt2{position:absolute;left:118px;top:102px;font:500 24px Archivo;color:var(--soft);white-space:nowrap}
+#both{position:absolute;left:160px;top:470px;width:1600px;height:140px;background:var(--yel);color:var(--bp);display:flex;align-items:center;justify-content:center;gap:22px}
+#both .tx{font-size:52px;white-space:nowrap}
+/* quiz (on the sheet) */
+#quiz,#recap{position:absolute;left:0;top:0;width:1920px;height:1080px}
+#quiz{z-index:41}#recap{z-index:43}
+#sheetA{z-index:40}#sheetB{z-index:42}
+.qq{position:absolute;left:160px;font-size:68px;line-height:1.18;white-space:nowrap}
+.opt{position:absolute;top:470px;width:376px;height:230px}
+.opt .bg{position:absolute;inset:0;background:var(--panel);border:2px solid var(--soft)}
+.opt .lt{position:absolute;left:32px;top:30px;width:56px;height:56px;border:2px solid var(--white);display:flex;align-items:center;justify-content:center;font:600 26px 'IBM Plex Mono'}
+.opt .ot{position:absolute;left:32px;top:138px;font-size:40px;white-space:nowrap}
+.opt .ok{position:absolute;right:30px;top:30px;width:56px;height:56px;background:var(--yel);display:flex;align-items:center;justify-content:center}
+#ring{position:absolute;left:1610px;top:236px;width:150px;height:150px}
+#ringN{position:absolute;left:1610px;top:236px;width:150px;height:150px;display:flex;align-items:center;justify-content:center;font:600 64px 'IBM Plex Mono'}
+#take{position:absolute;left:160px;top:748px;width:1600px;height:96px;background:var(--yel);color:var(--bp);display:flex;align-items:center;gap:22px;padding:0 36px}
+#take .tx{font-size:40px;white-space:nowrap}
+/* recap */
+#rh{position:absolute;left:160px;top:142px;font-size:64px;white-space:nowrap}
+.rw{position:absolute;left:160px;width:1600px;height:128px;background:var(--panel);border:2px solid var(--soft)}
+.rw .rn{position:absolute;left:40px;top:42px;font:600 30px 'IBM Plex Mono';color:var(--yel)}
+.rw .ri{position:absolute;left:112px;top:26px;width:72px;height:72px;border:2px solid var(--line);display:flex;align-items:center;justify-content:center}
+.rw .rt{position:absolute;left:216px;top:36px;font:700 38px Archivo;white-space:nowrap}
+.fp{position:absolute;top:34px;height:56px;padding:0 22px;display:flex;align-items:center;font:700 24px Archivo;white-space:nowrap;background:var(--row);color:var(--white);border:2px solid var(--line)}
+#next{position:absolute;left:160px;top:762px;width:1600px;height:96px;background:var(--white);color:var(--bp);display:flex;align-items:center;gap:24px;padding:0 32px}
+#next .nc{height:44px;padding:0 18px;background:var(--bp);display:flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.14em;color:var(--yel);white-space:nowrap}
+#next .nt{font:700 34px Archivo;white-space:nowrap;flex:1}
+.cap{font:600 38px Archivo;color:var(--bp);background:var(--white);padding:12px 30px}
+.cap .cw{color:#7C93B0}.cap .cw.on{color:var(--bp)}.cap .cw.act{color:#C79A00}
+</style></head><body>
+<div id="stage">
+  <svg id="grid" width="1920" height="1080"><defs>
+    <pattern id="g8" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0V32H0" fill="none" stroke="#174578" stroke-width="1"/></pattern>
+    <pattern id="g40" width="160" height="160" patternUnits="userSpaceOnUse"><rect width="160" height="160" fill="url(#g8)"/><path d="M160 0V160H0" fill="none" stroke="#1D4E85" stroke-width="1.5"/></pattern>
+  </defs><rect width="1920" height="1080" fill="url(#g40)"/></svg>
+  <div id="cam">
+    <!-- title + header (shared elements) -->
+    <div class="chip" id="eyebrow"><i></i>EP 01 · CIVIL ENGINEERING</div>
+    <div class="hd" id="title">Introduction to <span class="acc">Civil Engineering</span></div>
+    <svg id="tline" width="1920" height="1080"><g id="tlG" fill="none" stroke="#FFD400" stroke-width="3"></g></svg>
+    <div id="sub">explained with one school building</div>
+
+    <!-- scene A: the old school -->
+    <div id="sA">
+      <div class="card" id="hero">
+        <div class="lbl" style="left:48px;top:40px">HOSAHALLI · THE OLD GOVERNMENT SCHOOL</div>
+        <img class="plate" id="hImg" src="../../assets/illustrations/engg-civil/eciv-scene-old-school.png" style="left:92px;top:96px;width:600px;height:450px">
+      </div>
+      <div class="card" id="oe"><div class="lbl" style="left:36px;top:30px">ELEVATION · OLD BLOCK</div>
+        <svg id="oeS" width="380" height="220" style="position:absolute;left:16px;top:50px"></svg>
+        <div class="pr" id="pr0" style="top:30px"><i id="pr0I"></i><div class="kl">EVERY MONSOON</div><div class="kt">The roof leaks</div></div>
+        <div class="pr" id="pr1" style="top:144px"><i id="pr1I"></i><div class="kl">OVER A CLASS DOOR</div><div class="kt">A wall cracks</div></div>
+      </div>
+      <div class="card" id="lq">
+        <div class="av" id="lqA"></div>
+        <div class="hd" id="lqN">Mrs. Lakshmi</div>
+        <div class="lbl" id="lqR">HEADMISTRESS · THE CLIENT</div>
+        <div class="hd" id="lqQ">"Will my children be <span class="acc">safe?"</span></div>
+      </div>
+    </div>
+
+    <!-- scene L: the brief and the team -->
+    <div id="sL">
+      <div class="card" id="ill"><div class="abs" id="illIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:48px;top:40px">THE EMPTY PLOT · NEXT TO THE OLD SCHOOL</div>
+        <img class="plate" id="illImg" src="../../assets/illustrations/engg-civil/eciv-scene-plot.png" style="left:92px;top:96px;width:600px;height:450px">
+      </div>
+        <div class="lbl brief" id="brL" style="top:170px">THE BRIEF</div>
+        <div class="pill brief" id="br0" style="top:210px"><span id="br0I"></span>A new school</div>
+        <div class="pill brief" id="br1" style="top:282px"><span id="br1I"></span>Two storeys</div>
+        <div class="pill brief y" id="br2" style="top:354px"><span id="br2I"></span>600 children</div>
+      </div>
+      <div class="card" id="ana">
+        <img class="plate" src="../../assets/illustrations/engg-civil/eciv-ananya.png" id="anaImg" style="left:36px;top:30px;width:170px;height:212px;object-position:center top">
+        <div class="lbl" id="anaL" style="left:240px;top:44px">SITE ENGINEER · AGE 24</div>
+        <div class="hd" id="anaN" style="position:absolute;left:240px;top:80px;font-size:64px;white-space:nowrap">Ananya</div>
+        <div class="pill y" id="anaP" style="left:240px;top:178px"><span id="anaPI"></span>Her first big project</div>
+      </div>
+      <div class="card" id="team"><div class="lbl" style="left:36px;top:30px">THE TEAM</div><div id="tRow"></div></div>
+    </div>
+
+    <!-- scene D: what is civil engineering -->
+    <div id="sD">
+      <div class="hd" id="dq">So what is <span class="acc">civil engineering?</span></div>
+      <div class="card" id="kq"><div class="abs" id="kqIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:48px;top:40px">THE FIRST DEFINITION</div>
+        <svg id="chS" width="124" height="166" style="position:absolute;left:48px;top:88px">
+          <rect x="8" y="10" width="108" height="140" fill="#F4F1EA" stroke="#FFFFFF" stroke-width="3"/>
+          <rect x="0" y="0" width="124" height="18" rx="9" fill="#C9CED6" stroke="#FFFFFF" stroke-width="3"/>
+          <rect x="0" y="142" width="124" height="18" rx="9" fill="#C9CED6" stroke="#FFFFFF" stroke-width="3"/>
+          <rect id="cl1" x="24" y="34" width="76" height="6" fill="#0F3B6E"/><rect id="cl2" x="24" y="52" width="60" height="6" fill="#0F3B6E"/><rect id="cl3" x="24" y="70" width="70" height="6" fill="#0F3B6E"/><rect id="cl4" x="24" y="88" width="50" height="6" fill="#0F3B6E"/>
+          <circle id="seal" cx="88" cy="118" r="15" fill="#FFD400" stroke="#0F3B6E" stroke-width="3"/>
+        </svg>
+        <div class="hd" id="kot1" style="position:absolute;left:204px;top:92px;font-size:46px;white-space:nowrap">Thomas Tredgold</div>
+        <div class="hand" id="kot2" style="position:absolute;left:204px;top:152px;font-size:30px;color:#B9CCE3;white-space:nowrap">English engineer, 1788 - 1829</div>
+        <div class="lbl" id="kbk" style="left:204px;top:214px;color:#FFD400">ICE ROYAL CHARTER · 1828</div>
+        <div id="kqHr" style="position:absolute;left:48px;right:48px;top:282px;height:2px;background:#2C5F96"></div>
+        <div class="ql" id="ql0" style="top:310px">Civil engineering is "the art of</div>
+        <div class="ql" id="ql1" style="top:362px"><span class="hl" id="hl0">directing</span> the great sources of</div>
+        <div class="ql" id="ql2" style="top:414px"><span class="hl" id="hl1">power in Nature</span> for the</div>
+        <div class="ql" id="ql3" style="top:466px"><span class="hl" id="hl2">use and convenience</span> of man."</div>
+      </div></div>
+      <div class="card" id="nat"><div class="lbl" style="left:36px;top:30px">NATURE GIVES US</div><div id="natRow"></div></div>
+      <div class="card" id="sw"><div class="lbl" style="left:36px;top:30px">IN SIMPLE WORDS</div><div id="swRow"></div></div>
+    </div>
+
+    <!-- scene M: the school built up on one drawing, branch by branch -->
+    <div id="sM">
+      <div class="card" id="pd">
+        <div class="lbl" style="left:32px;top:28px">DWG CE-01 · NEW SCHOOL · SECTION</div>
+        <svg id="pdS" width="1056" height="580" style="position:absolute;left:-2px;top:-2px"></svg>
+      </div>
+      <div class="card" id="pl"><div class="lbl" style="left:30px;top:30px">SIX BRANCHES, IN ORDER</div><div id="plRows"></div></div>
+    </div>
+
+    <!-- scene B: the seven branches -->
+    <div id="sB">
+      <div id="bRow"></div>
+      <div class="abs" id="ball"><div class="lbl" style="left:32px;top:32px;color:#FFD400">ONE REAL PROJECT</div><div class="hd" id="ballT">Needs all seven, working together</div><div id="b7"></div></div>
+    </div>
+
+    <!-- scene K: at work today -->
+    <div id="sK">
+      <div class="card" id="kl"><div class="lbl" style="left:48px;top:40px">AT WORK TODAY</div><div id="kRows"></div></div>
+      <div class="card" id="kp"><div id="kPans"></div></div>
+    </div>
+
+    <!-- scene X: the human side -->
+    <div id="sX">
+      <div class="card" id="xs"><div class="abs" id="xsIn" style="left:0;top:0;width:784px;height:580px">
+        <div class="lbl" style="left:48px;top:40px">IS IT ALWAYS GOOD?</div>
+        <svg id="scl" width="688" height="250" style="position:absolute;left:48px;top:84px">
+          <rect x="254" y="226" width="180" height="16" fill="#FFFFFF"/>
+          <rect x="339" y="40" width="10" height="190" fill="#FFFFFF"/>
+          <g id="panL"></g><g id="panR"></g>
+          <g id="beam"><rect x="64" y="35" width="560" height="10" fill="#FFFFFF"/></g>
+          <circle cx="344" cy="40" r="14" fill="#FFD400" stroke="#0F3B6E" stroke-width="3"/>
+        </svg>
+        <div class="lbl" id="xgL" style="left:48px;top:350px;color:#FFD400">THE GOOD SIDE</div>
+        <div class="lbl" id="xhL" style="left:408px;top:350px">THE HARD SIDE</div>
+        <div id="xChips"></div>
+      </div></div>
+      <div class="card" id="xw">
+        <div class="lbl" style="left:48px;top:40px">BEFORE THE FIRST SPADE</div>
+        <div class="xr" id="xr0" style="top:96px"><div class="av" id="xa0"></div><div class="bb" id="bb0">Start digging tomorrow?</div><div class="sx" id="sx0"></div></div>
+        <div class="xr" id="xr1" style="top:184px"><div class="av" id="xa1"></div><div class="bb" id="bb1">Survey and soil test first</div></div>
+        <div class="xr" id="xr2" style="top:272px"><div class="av" id="xa2"></div><div class="bb" id="bb2" style="background:#FFD400;color:#0F3B6E;border-color:#FFD400"><span id="bb2I"></span>A few days of tests can save a school</div></div>
+        <div id="fact"><div class="fi" id="factI"></div><div class="kl">ENGINEERS' DAY IN INDIA · 15 SEPTEMBER</div><div class="kt">Birthday of Sir M. Visvesvaraya</div><div class="kt2">Born 1861 · chief engineer of the KRS Dam</div></div>
+      </div>
+      <div class="chip" id="lesson" style="left:160px;top:390px"><i></i>THE LESSON</div>
+      <div id="both"><span id="bothI"></span><span class="hd tx">Check first, then build.</span><span class="hand tx" style="font-size:48px">Safety before speed</span></div>
+    </div>
+  </div>
+
+  <!-- the blueprint sheets (statement, quiz, recap) -->
+  <svg class="sheet" id="sheetA" width="1920" height="1080"></svg>
+  <div id="stmt"><div id="st1">Every building starts as a problem.</div><div class="hd" id="st2">Civil engineers turn it into</div><div class="hd" id="st3">a plan that stands.</div></div>
+  <div id="quiz">
+    <div class="chip" id="qchip" style="left:160px;top:120px"><i></i>QUICK CHECK</div>
+    <div class="hd qq" id="qq1" style="top:224px">Which branch checks if the soil</div><div class="hd qq acc" id="qq2" style="top:304px">can carry the school?</div>
+    <svg id="ring" viewBox="0 0 150 150"><circle cx="75" cy="75" r="66" fill="#0F3B6E" stroke="#2C5F96" stroke-width="8"/><circle id="ringA" cx="75" cy="75" r="66" fill="none" stroke="#FFD400" stroke-width="8" transform="rotate(-90 75 75)"/></svg>
+    <div id="ringN"></div>
+    <div id="opts"></div>
+    <div id="take"><span id="takeI"></span><span class="hd tx" id="takeT">Soil and rock under the footings = Geotechnical</span></div>
+  </div>
+  <svg class="sheet" id="sheetB" width="1920" height="1080"></svg>
+  <div id="recap">
+    <div class="chip" id="rchip" style="left:160px;top:84px"><i></i>RECAP</div>
+    <div class="hd" id="rh">Remember these <span class="acc">three things</span></div>
+    <div id="rRows"></div>
+    <div id="next"><span class="nc">NEXT · EP 02</span><span class="nt">Building Components - Substructure and Superstructure</span><span id="nextI"></span></div>
+  </div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
