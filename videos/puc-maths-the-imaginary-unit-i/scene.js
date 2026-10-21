@@ -265,7 +265,7 @@ M.on(t => {
     M.vis($('#trap'), t, tX1 + 0.05, 1e9, { dy: 36 }); M.vis($('#wa'), t, T0('J1') - 0.1, 1e9, { dy: 36 });
     trap(t, { tin: tX1, tWrong: wt('X2', 'Many') - 0.1, tStrike: wt('X3', 'But') - 0.1, tRight: wt('X3', 'two') - 0.1 });
     M.vis(tQ0, t, wt('X3', 'rule'), 1e9, { dy: 0 }); M.vis(tQ1, t, wt('X3', 'breaks'), 1e9, { dy: 0 }); M.vis(tQ2, t, wt('X3', 'negative'), 1e9, { dy: 0 });
-    where(t, { tin: T0('J1'), tLight: [wt('J1', 'JEE'), wt('J1', 'PUC')], tType: wt('J1', 'simplify') });
+    where(t, { tin: T0('J1'), tLight: [wt('J1', 'JEE'), wt('J1', 'PUC')], tType: wt('J1', 'power') });
   }
 
   /* Q */

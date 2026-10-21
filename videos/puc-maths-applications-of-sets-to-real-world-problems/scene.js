@@ -125,7 +125,7 @@ const trap = PUC.trap($('#trap'), { wrong: K(`n(${Cr} \\cup ${Fo}) = 35 + 28 = 6
 const ts = $('#tS'), BX = v => 40 + v * 7;
 const bar1 = mk(ts, 'rect', { x: 40, y: 70, width: BX(63) - 40, height: 44, rx: 8, fill: C.redBg, stroke: C.red, 'stroke-width': 2.5 });
 const bar2 = mk(ts, 'rect', { x: 40, y: 160, width: BX(53) - 40, height: 44, rx: 8, fill: C.okBg, stroke: C.ok, 'stroke-width': 2.5 });
-const b1t = txt(ts, BX(63) - 14, 100, '63', { ...NUM, 'text-anchor': 'end', 'font-size': 24, fill: C.red }), b2t = txt(ts, BX(53) - 14, 190, '53', { ...NUM, 'text-anchor': 'end', 'font-size': 24, fill: C.ok });
+const b1t = txt(ts, BX(63) + 10, 100, '63', { ...NUM, 'text-anchor': 'start', 'font-size': 24, fill: C.red }), b2t = txt(ts, BX(53) + 10, 190, '53', { ...NUM, 'text-anchor': 'start', 'font-size': 24, fill: C.ok });
 const lim = mk(ts, 'line', { x1: BX(60), y1: 44, x2: BX(60), y2: 236, stroke: C.ink, 'stroke-width': 3, 'stroke-dasharray': '7 6' });
 const limT = txt(ts, BX(60), 34, '60 students', { 'text-anchor': 'middle', 'font-size': 18, fill: C.ink, 'font-weight': 600 });
 const where = PUC.where($('#wa'), { on: ['JEE MAIN'], type: 'Survey problems with numbers or percentages: find the overlap, or its least and greatest value.' });
