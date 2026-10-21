@@ -118,7 +118,7 @@ const pLink = mk(ps, 'line', { stroke: SI, 'stroke-width': 2, 'stroke-dasharray'
 const pDot = mk(ps, 'circle', { r: 10, fill: SI });
 const KP = [[0, 0], [PI / 2, 1], [PI, 0], [3 * PI / 2, -1], [2 * PI, 0]];
 const pKey = KP.map(([a, v]) => { const g = mk(mk(ps, 'g', { transform: `translate(${pg.X(a).toFixed(1)},${pg.Y(v).toFixed(1)})` }), 'g', {}); mk(g, 'circle', { r: 11, fill: '#fff', stroke: C.ink, 'stroke-width': 3.5 });
-  txt(g, a > 6 ? -14 : 14, v > 0 ? -16 : v < 0 ? 32 : -16, `(${PIL[Math.round(a / (PI / 2))]}, ${v < 0 ? MIN + '1' : v})`, { 'text-anchor': a > 6 ? 'end' : 'start', 'font-size': 18, 'font-weight': 700, fill: C.ink }); return g; });
+  txt(g, a > 6 ? -14 : 18, v < 0 ? 8 : -16, `(${PIL[Math.round(a / (PI / 2))]}, ${v < 0 ? MIN + '1' : v})`, { 'text-anchor': a > 6 ? 'end' : 'start', 'font-size': 18, 'font-weight': 700, fill: C.ink }); return g; });
 const PSEG = [[T0('P3') + 0.2, wt('P3', 'reaches') + 0.3, 0, PI / 2], [T0('P4') + 0.1, wt('P4', 'zero') + 0.3, PI / 2, PI], [wt('P4', 'three') - 0.1, wt('P4', 'bottom') + 0.1, PI, 3 * PI / 2], [T0('P5') + 0.1, wt('P5', 'home') + 0.3, 3 * PI / 2, 2 * PI]];
 const segAng = (S, t) => { let a = S[0][2]; for (const [s, e, a0, a1] of S) if (t >= s) a = a0 + (a1 - a0) * M.io((t - s) / (e - s)); return a; };
 const tKey = [T0('P3') + 0.15, wt('P3', 'reaches') + 0.3, wt('P4', 'zero') + 0.3, wt('P4', 'bottom') + 0.1, wt('P5', 'home') + 0.3];
@@ -261,7 +261,7 @@ M.on(t => {
   if (pOn) {
     M.vis($('#pc'), t, tP1 + 0.05, OUT('D1'), { dy: 36, ...o });
     const a = segAng(PSEG, t), r = pu.set(a);
-    pv([pu.xa, pu.ya, pu.circ, pu.rad, pu.P, pu.pT, pu.cosL, pu.sinL, pu.cosT, pu.sinT, pu.arc, pu.thT], t, wt('P2', 'turn') - 0.2, 0.02);
+    pv([pu.xa, pu.ya, pu.circ, pu.rad, pu.P, pu.pT, pu.cosL, pu.sinL, pu.cosT, pu.sinT, pu.arc, pu.thT], t, tP1 + 0.3, 0.02);
     M.vis(pAx, t, wt('P1', 'angle') - 0.1, 1e9, { dy: 0, fade: 0.3 }); M.vis(pGhost, t, wt('P1', 'value'), 1e9, { dy: 0, fade: 0.4 });
     wave(pCur, pg, Math.sin, a); attr(pDot, 'cx', pg.X(a).toFixed(1)); attr(pDot, 'cy', pg.Y(r.s).toFixed(1));
     attr(pLink, 'x1', r.px.toFixed(1)); attr(pLink, 'y1', r.py.toFixed(1)); attr(pLink, 'x2', pg.X(a).toFixed(1)); attr(pLink, 'y2', pg.Y(r.s).toFixed(1));
