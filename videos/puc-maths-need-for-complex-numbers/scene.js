@@ -176,7 +176,7 @@ const wg = plot($('#wS'), { x: 60, y: 96, w: 664, h: 370, xmin: -5.2, xmax: 1.4,
 const wC = wg.curve(C.ink, 5);
 const wGap = gap($('#wS'), wg.X, wg.Y, -2, 1, '1', RC);
 const wV = mk($('#wS'), 'circle', { cx: wg.X(-2), cy: wg.Y(1), r: 12, fill: RC, stroke: '#fff', 'stroke-width': 3 });
-const wVT = txt($('#wS'), wg.X(-2) + 22, wg.Y(1) - 18, 'lowest point (-2, 1)', { 'font-size': 20, fill: RC, 'font-weight': 600 });
+const wVT = txt($('#wS'), wg.X(-2), wg.Y(2.4), '(-2, 1)', { 'font-size': 20, fill: RC, 'font-weight': 600, 'text-anchor': 'middle' });
 
 /* ---------- X / Q / F: exam segment ---------- */
 const trap = PUC.trap($('#trap'), { wrong: K(`(-1)^2 = -1 \\;\\Rightarrow\\; x = -1 \\text{ works}`), right: K(`(-1)^2 = (-1)(-1) = +1 \\ne -1`) + '&nbsp; so -1 is not a solution' });

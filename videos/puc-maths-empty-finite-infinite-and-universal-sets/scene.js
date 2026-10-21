@@ -136,7 +136,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 05', topic: 'Every NEET subje
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tEt[2] - 0.3, 1.07, 1368, 560], [T0('E5') + 0.8, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tEt[2] - 0.3, 1.05, 960, 560], [T0('E5') + 0.8, 1, 960, 540]]);
 
 /* ---------- frame ---------- */
 M.on(t => {
