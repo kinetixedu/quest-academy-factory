@@ -213,7 +213,7 @@ const ts = $('#tS'), xg = GG(60, 560, -PI, PI, 137, 90);
 const tAx = axes(ts, xg, 40, 580, 30, 250, [[-PI / 6, MIN + '30°'], [PI / 6, '30°']], 168);
 const tCur = mk(ts, 'path', { d: xg.path(Math.sin, -PI, PI), fill: 'none', stroke: SI, 'stroke-width': 4 });
 const tPt = [[PI / 6, 0.5, C.ok, '+1/2'], [-PI / 6, -0.5, C.red, MIN + '1/2']].map(([a, v, col, l]) => { const g = mk(ts, 'g', {}); mk(g, 'line', { x1: xg.X(a), y1: xg.Y(0), x2: xg.X(a), y2: xg.Y(v), stroke: col, 'stroke-width': 3, 'stroke-dasharray': '4 4' }); mk(g, 'circle', { cx: xg.X(a), cy: xg.Y(v), r: 9, fill: col }); txt(g, xg.X(a) + (a > 0 ? 16 : -16), xg.Y(v) + 7, l, { 'text-anchor': a > 0 ? 'start' : 'end', 'font-size': 20, 'font-weight': 700, fill: col }); return g; });
-const where = PUC.where($('#wa'), { on: ['PUC BOARDS'], type: 'Values of large or negative angles; the period of a function.' });
+const where = PUC.where($('#wa'), { on: [], type: 'Values of large or negative angles; the period of a function.' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 780,
   q: `Find the value of<br>${K(`\\sin(-750^\\circ) + \\cos(-420^\\circ) + \\tan 1125^\\circ`)}`, opts: ['0', '1', '2', '-1'].map(s => K(s)), right: 1, optW: 474, optY: 300 });
 const so = PUC.solution($('#so'), [[K(`\\sin(-750^\\circ) = -\\sin 30^\\circ = -\\tfrac{1}{2}`)], [K(`\\cos(-420^\\circ) = \\cos 60^\\circ = \\tfrac{1}{2}`)], [K(`1125^\\circ = 6 \\times 180^\\circ + 45^\\circ`)], [K(`\\tan 1125^\\circ = \\tan 45^\\circ = 1`)], [K(`-\\tfrac{1}{2} + \\tfrac{1}{2} + 1 = 1`)]], { y0: 100, dy: 96 });
@@ -375,7 +375,7 @@ M.on(t => {
     trap(t, { tin: tX1, tWrong: wt('X2', 'Many') - 0.1, tStrike: wt('X3', 'only') - 0.1, tRight: wt('X3', 'flips') - 0.1 });
     M.vis(tAx, t, wt('X2', 'sine'), 1e9, { dy: 0 }); M.draw(tCur, t, wt('X2', 'sine') + 0.1, 0.8);
     M.vis(tPt[0], t, wt('X3', 'Sine') , 1e9, { dy: 0, fade: 0.3 }); M.vis(tPt[1], t, wt('X3', 'minus') - 0.1, 1e9, { dy: 0, fade: 0.3 });
-    where(t, { tin: T0('J1'), tLight: [wt('J1', 'PUC')], tType: wt('J1', 'Entrance') });
+    where(t, { tin: T0('J1'), tLight: [], tType: wt('J1', 'questions') });
   }
 
   /* Q */

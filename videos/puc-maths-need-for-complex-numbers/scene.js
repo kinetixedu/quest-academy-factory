@@ -187,7 +187,7 @@ const tArc = mk(ts, 'path', { d: `M${TXv(-1)},${TYl - 14} Q${TXv(0)},${TYl - 120
 const tHead = mk(ts, 'path', { d: `M${TXv(1)},${TYl - 12} l-14,-8 l3,14 z`, fill: C.ok });
 const tDa = mk(ts, 'circle', { cx: TXv(-1), cy: TYl, r: 12, fill: C.red }), tDb = mk(ts, 'circle', { cx: TXv(1), cy: TYl, r: 12, fill: C.ok });
 const tNote = txt(ts, TXv(0), TYl - 84, '(-1) × (-1) = +1', { 'text-anchor': 'middle', 'font-size': 20, fill: C.ok, 'font-weight': 600 });
-const where = PUC.where($('#wa'), { on: ['PUC BOARDS'], type: 'Show that an equation has no real solution, then solve it using i.' });
+const where = PUC.where($('#wa'), { on: [], type: 'Not asked on its own: the reason behind every question in this chapter.' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 780,
   q: `${K(`x^2 - 4x + ${rc('c')} = 0, \\quad ${rc('c')} \\in \\{1, 2, 3, \\dots, 20\\}`)}<br>For how many integers c is there no real solution?`,
   opts: ['4', '15', '16', '17'], right: 2, optW: 474, optY: 300 });
@@ -403,7 +403,7 @@ M.on(t => {
     M.vis(tDa, t, wt('X3', 'brackets') - 0.1, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 });
     M.draw(tArc, t, wt('X3', 'times'), 0.6); M.vis(tHead, t, wt('X3', 'times') + 0.55, 1e9, { dy: 0, fade: 0.1 });
     M.vis(tDb, t, wt('X3', 'plus') - 0.1, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 }); M.vis(tNote, t, wt('X3', 'plus'), 1e9, { dy: 0 });
-    where(t, { tin: T0('J1'), tLight: [wt('J1', 'PUC')], tType: wt('J1', 'Show') });
+    where(t, { tin: T0('J1'), tLight: [], tType: wt('J1', 'reason') });
   }
 
   /* Q: practice question */

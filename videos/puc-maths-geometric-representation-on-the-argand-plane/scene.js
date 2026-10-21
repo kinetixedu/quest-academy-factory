@@ -155,7 +155,7 @@ const tCd = mk(tS, 'circle', { cx: TP.X(0), cy: TP.Y(-2), r: 7, fill: C.ok });
 const tCL = txt(tS, TP.X(0) + 14, TP.Y(-2) + 6, 'centre -2i', { 'font-size': 18, fill: C.ok, 'font-weight': 600 });
 const tWx = txt(tS, TP.X(0) + 2, TP.Y(2) + 9, '✗', { 'text-anchor': 'middle', 'font-family': 'Poppins', 'font-size': 26, fill: C.red, 'font-weight': 700 });
 const tWL = txt(tS, TP.X(0) + 18, TP.Y(2) + 6, 'not 2i', { 'font-size': 18, fill: C.red, 'font-weight': 600 });
-const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'PUC BOARDS'], type: 'What an equation in z draws; plotting points and conjugates' });
+const where = PUC.where($('#wa'), { on: ['JEE MAIN'], type: 'What an equation in z draws: a line or a circle' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 760,
   q: `${K(`|z - 2| = |z + 4i|`)}<br>All such z = x + iy lie on which line?`,
   opts: [K('x + 2y + 3 = 0'), K('x - 2y + 3 = 0'), K('2x + y + 3 = 0'), K('x + 2y - 3 = 0')], right: 0, optW: 474, optY: 316 });
@@ -316,7 +316,7 @@ M.on(t => {
     M.vis(TP.g, t, tX1 + 0.4, 1e9, { dy: 0, fade: 0.3 });
     M.vis(tWx, t, wt('X2', 'centre') - 0.1, 1e9, PT); M.vis(tWL, t, wt('X2', 'centre') + 0.1, 1e9, { dy: 0 });
     M.vis(tCd, t, wt('X3', 'centre') - 0.1, 1e9, PT); M.vis(tCL, t, wt('X3', 'centre'), 1e9, { dy: 0 }); M.draw(tC, t, wt('X3', 'radius') - 0.2, 0.7);
-    where(t, { tin: T0('J1'), tLight: [wt('J1', 'JEE'), wt('J1', 'PUC')], tType: wt('J1', 'equations') });
+    where(t, { tin: T0('J1'), tLight: [wt('J1', 'JEE')], tType: wt('J1', 'equations') });
   }
 
   /* Q */

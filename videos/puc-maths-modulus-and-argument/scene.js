@@ -175,7 +175,7 @@ const tRt = mk(ts, 'line', { x1: TP.X(0), y1: TP.Y(0), x2: TP.X(-1), y2: TP.Y(-1
 const tArc = mk(ts, 'path', { d: arcD(TP.ox, TP.oy, 30, 0, -3 * Math.PI / 4), fill: 'none', stroke: C.ok, 'stroke-width': 4 });
 const tPt = mk(ts, 'circle', { cx: TP.X(-1), cy: TP.Y(-1), r: 9, fill: C.ink });
 const tRtL = txt(ts, TP.X(-1) - 14, TP.Y(-1) + 30, '-1 - i', { 'text-anchor': 'end', 'font-size': 18, fill: C.ink, 'font-weight': 600 });
-const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'JEE ADVANCED'], type: 'Modulus and principal argument, with quadrant traps' });
+const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'JEE ADVANCED', 'PUC BOARDS'], type: 'Modulus and principal argument, with quadrant traps; boards: the modulus' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 760,
   q: `${K(`z = \\dfrac{(1 + i)^2}{1 - i}`)}<br>The modulus and the principal argument of z are`,
   opts: [K(`\\sqrt2,\\ \\tfrac{3\\pi}{4}`), K(`\\sqrt2,\\ \\tfrac{\\pi}{4}`), K(`2,\\ \\tfrac{3\\pi}{4}`), K(`\\sqrt2,\\ -\\tfrac{\\pi}{4}`)], right: 0, optW: 474, optY: 316 });
@@ -348,7 +348,7 @@ M.on(t => {
     M.draw(tWr, t, wt('X2', 'pi') - 0.1, 0.4); M.vis(tWrL, t, wt('X3', 'first') - 0.1, 1e9, { dy: 0 });
     M.vis(tPt, t, wt('X3', 'sits') - 0.2, 1e9, PT); M.vis(tRtL, t, wt('X3', 'sits'), 1e9, { dy: 0 });
     M.draw(tRt, t, wt('X3', 'right') - 0.1, 0.4); M.draw(tArc, t, wt('X3', 'minus') - 0.1, 0.6);
-    where(t, { tin: T0('J1'), tLight: [wt('J1', 'JEE'), wt('J1', 'Advanced')], tType: wt('J1', 'modulus') });
+    where(t, { tin: T0('J1'), tLight: [wt('J1', 'JEE'), wt('J1', 'Advanced'), wt('J1', 'PUC')], tType: wt('J1', 'modulus') });
   }
 
   /* Q */

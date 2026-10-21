@@ -204,7 +204,7 @@ const tAs = mk(ts, 'line', { x1: tg.X(PI / 2), y1: 12, x2: tg.X(PI / 2), y2: 262
 const tPcs = [mk(ts, 'path', { d: tg.path(tan, 0, PI / 2 - 0.02, 80, 4.3), fill: 'none', stroke: TA, 'stroke-width': 4.5 }), mk(ts, 'path', { d: tg.path(tan, PI / 2 + 0.02, PI, 80, 4.3), fill: 'none', stroke: TA, 'stroke-width': 4.5 })];
 const tWrong = mk(ts, 'path', { d: `M${tg.X(PI / 2 - 0.23)},${tg.Y(4.3)} C${tg.X(PI / 2 + 0.05)},${tg.Y(5.5)} ${tg.X(PI / 2 - 0.05)},${tg.Y(-5.5)} ${tg.X(PI / 2 + 0.23)},${tg.Y(-4.3)}`, fill: 'none', stroke: C.red, 'stroke-width': 4, 'stroke-dasharray': '3 6', 'stroke-linecap': 'round' });
 const tAsT = txt(ts, tg.X(PI / 2) + 12, 30, 'x = π/2', { 'font-size': 18, 'font-weight': 700, fill: C.red });
-const where = PUC.where($('#wa'), { on: ['JEE MAIN', 'PUC BOARDS'], type: 'Use graphs to count the solutions of an equation.' });
+const where = PUC.where($('#wa'), { on: ['JEE MAIN'], type: 'Use graphs to count the solutions of an equation.' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 780,
   q: `How many solutions does ${K('|\\sin x| = \\tfrac{1}{2}')}<br>have in ${K('[0,\\ 2\\pi]')}?`, opts: ['2', '3', '4', '6'].map(s => K(s)), right: 2, optW: 474, optY: 300 });
 const so = PUC.solution($('#so'), [[K(`|\\sin x|:\\ \\text{lower half flips up}`)], [K(`\\text{two humps on } [0,\\ 2\\pi]`)], [K(`y = \\tfrac{1}{2}\\ \\text{cuts each twice}`)], [K(`2 \\times 2 = 4`)]], { y0: 100, dy: 100 });
@@ -362,7 +362,7 @@ M.on(t => {
     tPcs.forEach(p => M.vis(p, t, wt('X2', 'tangent'), 1e9, { dy: 0, fade: 0.3 }));
     M.vis(tWrong, t, wt('X2', 'joined') - 0.1, wt('X3', 'breaks') - 0.1, { dy: 0, fade: 0.3, outDur: 0.3, ody: 0 });
     M.vis(tAs, t, wt('X3', 'asymptote') - 0.2, 1e9, { dy: 0, fade: 0.3 }); M.vis(tAsT, t, wt('X3', 'asymptote'), 1e9, { dy: 0 });
-    where(t, { tin: T0('J1'), tLight: [wt('J1', 'JEE'), wt('J1', 'PUC')], tType: wt('J1', 'graphs') });
+    where(t, { tin: T0('J1'), tLight: [wt('J1', 'JEE')], tType: wt('J1', 'graphs') });
   }
 
   /* Q */
