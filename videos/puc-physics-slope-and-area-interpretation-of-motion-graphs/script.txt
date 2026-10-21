@@ -1,0 +1,57 @@
+H1|0.4|A coach reads a runner's graph. An engineer reads a car's graph. A doctor reads a heartbeat graph.
+H2|0.45|All of them ask two questions. How steep is the line? And how much space is under it?
+H3|0.35|Aarav's bicycle meter shows only his speed. It never shows how far he went.
+H4|0.5|Yet he says he can find the distance from the speed graph alone. Is that even possible?
+H5|0.65|It is. By the end, you will read any motion graph with two tools.
+P1|0.35|Tool one is the slope.
+P2|0.4|Slope means steepness. How much the line rises, divided by how much time passes. Rise over run.
+P3|0.35|Tool two is the area.
+P4|0.5|Area means the space between the line and the time axis. We find it like a rectangle or a triangle.
+P5|0.65|Slope tells you a rate, how fast something changes. Area tells you a total, how much piles up.
+S1|0.35|Let's watch Aarav's ride on our motion notebook.
+S2|0.4|He starts from rest and speeds up for four seconds, to six metres per second.
+S3|0.4|Then he rides steady at six metres per second for four seconds.
+S4|0.4|Then he brakes, and stops in two seconds.
+S5|0.5|Slow motion replay. While braking, velocity points forward, but acceleration points backward.
+S6|0.4|Now watch the blue space under the velocity graph. It grows exactly as his distance grows.
+S7|0.65|At the end, the area is forty two. He rode forty two metres. The area is the distance.
+D1|0.35|Now let's see why, step by step.
+D2|0.75|Step one. On a position time graph, slope is the change in position over the change in time. That is velocity.
+D3|0.75|Step two. On a velocity time graph, slope is the change in velocity over the change in time. That is acceleration.
+D4|0.75|Step three. The area under a velocity time graph is velocity times time. That is displacement.
+D5|0.75|Step four. The area under an acceleration time graph is acceleration times time. That is the change in velocity.
+D6|0.7|Check the units. Metres per second, times seconds, gives metres. This area really is a length.
+T1|0.7|Remember this. Slope gives the rate. Area gives the total.
+R1|0.35|But why does area give distance, even when the speed keeps changing?
+R2|0.4|Cut the time into thin slices, each just a tiny bit of time.
+R3|0.4|In one thin slice, the speed hardly changes. So the distance in it is speed times that tiny time.
+R4|0.4|And speed times that tiny time is the area of that thin strip.
+R5|0.65|Add up all the strips, and you add up all the little distances. Total area, total displacement.
+K1|0.4|Side by side. Here is a straight rising line on a position time graph.
+K2|0.4|Its slope is steady, so the velocity is steady. Constant velocity.
+K3|0.6|Now the same straight line on a velocity time graph. Here a steady slope means constant acceleration.
+K4|3.2|Your turn. A velocity time graph is a flat line. What is the acceleration? Pause and decide.
+K5|0.65|Zero! A flat line has no slope. The velocity is not changing, so the acceleration is zero.
+B1|0.4|One more pair. The area under a velocity time graph gives displacement, in metres.
+B2|3.2|So what does the area under an acceleration time graph give? Distance, or change in velocity? Pause and think.
+B3|0.65|Change in velocity! Metres per second squared, times seconds, gives metres per second. A velocity.
+W1|0.35|Now, one worked example, from Aarav's ride.
+W2|0.5|Find his acceleration in the first four seconds, and his total displacement.
+W3|0.75|Acceleration is the slope. The rise is six metres per second. The run is four seconds.
+W4|0.75|Six divided by four is one point five. So a is one point five metres per second squared.
+W5|0.75|Displacement is the area. A trapezium, with parallel sides of ten seconds and four seconds, and a height of six.
+W6|0.65|Half of ten plus four, times six, is forty two. Aarav rode forty two metres.
+X1|0.35|Now, the exam trap.
+X2|0.35|Some velocity graphs dip below the time axis. That part means moving backward.
+X3|0.65|Many students add all the area. But for displacement, area below the axis counts as negative. Only for distance do you add the sizes.
+E1|0.6|Where is this asked? Usually as a graph question: find the acceleration, displacement or distance.
+Q1|5.4|Exam level now. A velocity changes uniformly from plus eight to minus four metres per second in six seconds. Find the displacement and the distance. Pause and solve.
+Z1|0.5|The answer is A. Twelve metres and twenty metres.
+Z2|0.5|The velocity is zero at four seconds. The triangle above the axis has area half times four times eight, sixteen.
+Z3|0.6|The triangle below has area half times two times four, four. Displacement is sixteen minus four, twelve. Distance is sixteen plus four, twenty.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What does the slope of a position time graph tell you?
+Y3|0.9|Two. Why does the area under a velocity time graph give displacement?
+Y4|1.1|Three. When does the area below the time axis count as negative?
+N1|0.3|Next time: two buses side by side look still to each other. Why? Find out in relative motion in one dimension.
