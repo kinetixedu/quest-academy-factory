@@ -40,11 +40,11 @@ $('#pexs').innerHTML = PEX.map(([h, d], i) => `<div class="pex" id="px${i}" styl
 
 /* ---------- S: the cooker lid ---------- */
 const s = $('#simS');
-const CX = 300, POT = { x: 110, y: 250, w: 380, h: 230 };
+const CX = 300, POT = { x: 110, y: 330, w: 380, h: 200 };
 const pot = mk(s, 'path', { d: `M${POT.x},${POT.y} v${POT.h - 30} q0,30 30,30 h${POT.w - 60} q30,0 30,-30 v${-(POT.h - 30)}`, fill: '#DDE2EA', stroke: C.ink, 'stroke-width': 3.5, 'stroke-linejoin': 'round' });
 mk(s, 'rect', { x: POT.x + POT.w, y: POT.y + 30, width: 150, height: 18, rx: 9, fill: C.ink });     // handle
 const steamFill = mk(s, 'rect', { x: POT.x + 4, y: POT.y + 4, width: POT.w - 8, height: POT.h - 8, fill: '#F0F4FB' });
-const steamL = [0, 1, 2, 3].map(i => mk(s, 'path', { d: `M${POT.x + 60 + i * 86},${POT.y + 190} q-14,-22 0,-44 q14,-22 0,-44`, fill: 'none', stroke: '#A9B8D3', 'stroke-width': 3, 'stroke-linecap': 'round' }));
+const steamL = [0, 1, 2, 3].map(i => mk(s, 'path', { d: `M${POT.x + 60 + i * 86},${POT.y + 160} q-14,-22 0,-44 q14,-22 0,-44`, fill: 'none', stroke: '#A9B8D3', 'stroke-width': 3, 'stroke-linecap': 'round' }));
 mk(s, 'rect', { x: POT.x - 16, y: POT.y - 16, width: POT.w + 32, height: 20, rx: 8, fill: '#C8CFDA', stroke: C.ink, 'stroke-width': 3.5 });   // lid
 mk(s, 'rect', { x: CX - 9, y: POT.y - 52, width: 18, height: 38, fill: '#C8CFDA', stroke: C.ink, 'stroke-width': 3 });     // vent pipe
 const wgt = mk(s, 'g', {});
@@ -63,9 +63,9 @@ const sc = t => { let v = t - tS2; if (t > tRep) v -= Math.min(t - tRep, REP); r
 const sL = sc(tL), sJ = sc(tJump), sP2 = sc(tPk2), PMAX = 98, PLOW = 80;
 const Pof = x => { if (x <= sL) return PMAX * x / sL; if (x <= sJ) return PMAX; if (x <= sJ + 0.6) return M.lerp(PMAX, PLOW, M.io((x - sJ) / 0.6)); if (x <= sP2) return M.lerp(PLOW, PMAX, (x - sJ - 0.6) / Math.max(0.1, sP2 - sJ - 0.6)); if (x <= sP2 + 0.6) return M.lerp(PMAX, PLOW, M.io((x - sP2) / 0.6)); return PLOW + (PMAX - PLOW) * M.clamp((x - sP2 - 0.6) / (sP2 - sJ)); };
 const SX = sc(T1('S6') + 0.6);
-$('#roG').innerHTML = `<span class="k" style="color:${FC}">F</span><span class="v" id="rF" style="color:${FC}">0.00</span><span class="u">N (push on the vent)</span>
+$('#roG').innerHTML = `<span class="k" style="color:${FC}">F</span><span class="v" id="roF" style="color:${FC}">0.00</span><span class="u">N (push on the vent)</span>
   <span class="k">A</span><span class="v">10</span><span class="u">mm² (vent hole)</span>
-  <span class="k">P</span><span class="v" id="rP">0</span><span class="u">kPa (above air)</span>`;
+  <span class="k">P</span><span class="v" id="roP">0</span><span class="u">kPa (above air)</span>`;
 const G = PUC.graph($('#grS'), { x: 100, y: 78, w: 610, h: 132, xmax: SX, ymin: 0, ymax: 100, xt: [], yt: [0, 50, 100], xl: 't', yl: '' });
 const gC = G.curve(C.ink, 5), gD = G.dot(C.ink);
 const gLine = G.mk('line', { x1: G.X(0), y1: G.Y(PMAX), x2: G.X(SX), y2: G.Y(PMAX), stroke: AC, 'stroke-width': 2, 'stroke-dasharray': '6 6' });
@@ -107,7 +107,7 @@ const th1 = PUC.think($('#th1'), { q: 'A pin and a plate get the same push. Whic
 
 /* ---------- G: work and energy ---------- */
 const EQ = [['WORK = FORCE × DISTANCE', `[W] = ${D('[MLT^{-2}]')}\\,${D('[L]')} = \\textcolor{${EC}}{[ML^2T^{-2}]}`], ['KINETIC ENERGY = ½ m v²', `[\\tfrac12 m\\textcolor{${VC}}{v}^2] = ${D('[M]')}\\,${D('[LT^{-1}]')}^2 = \\textcolor{${EC}}{[ML^2T^{-2}]}`], ['THE ½', `\\tfrac12 \\;\\text{is a pure number: no dimension}`]];
-$('#eqs').innerHTML = EQ.map(([h, f], i) => `<div class="eq" id="eq${i}" style="top:${84 + i * 134}px"><div class="h">${h}</div><div class="f">${K(f)}</div></div>`).join('');
+$('#eqs').innerHTML = EQ.map(([h, f], i) => `<div class="eq" id="eq${i}" style="top:${84 + i * 134}px"><div class="h">${h}</div><div class="ef">${K(f)}</div></div>`).join('');
 const gS = $('#gS'), GY0 = 360;
 mk(gS, 'line', { x1: 40, y1: GY0, x2: 744, y2: GY0, stroke: C.ink, 'stroke-width': 3 });
 for (let x = 52; x < 744; x += 28) mk(gS, 'line', { x1: x, y1: GY0 + 4, x2: x - 14, y2: GY0 + 18, stroke: C.dim, 'stroke-width': 2 });
@@ -130,7 +130,7 @@ const wBars = []; for (let i = 0; i < 3; i++) { wBars.push(mk(wS, 'rect', { x: 1
 mk(wS, 'line', { x1: 100, y1: 310, x2: 690, y2: 310, stroke: C.ink, 'stroke-width': 2.5 });
 const wBT = [0, 1, 2].map(i => txt(wS, 195 + i * 190, 290, '10 J', { 'text-anchor': 'middle', 'font-size': 26, fill: EC, 'font-weight': 600 }));
 const wSum = txt(wS, 392, 400, '30 J in 3 s = 10 J every second = 10 W', { 'text-anchor': 'middle', 'font-size': 22, fill: C.ink, 'font-weight': 600 });
-$('#wc').innerHTML = K(`P = \\dfrac{W}{t} \\;\\to\\; [ML^2T^{-3}]`);
+$('#wc').innerHTML = K(`P = W/t \\;\\to\\; [ML^2T^{-3}]`);
 const tW = [wt('W3', 'Work'), wt('W4', 'Time'), wt('W5', 'Divide'), wt('W6', 'So')];
 
 /* ---------- exam ---------- */
@@ -216,15 +216,15 @@ M.on(t => {
     const wy = POT.y - 52 - lift;
     // F up on the vent (grows with P), W down (weight, constant 0.98 N)
     const fScale = 130 / PMAX, fl = P * fScale * (slow ? M.io((t - tRep - 0.2) / 0.6) : 1), wl = 128 * M.io((t - wt('S4', 'weight') + 0.1) / 0.4) * (slow ? M.io((t - tRep - 0.2) / 0.6) : 1);
-    fA.set(CX - 60, wy + 30 + fl * 0.0 + 70, CX - 60, wy + 30 + 70 - fl); attr(fL, 'x', CX - 100); attr(fL, 'y', (wy + 100 - fl / 2).toFixed(1)); fL.style.opacity = fl > 20 ? 1 : 0;
-    wA.set(CX + 60, wy - 30, CX + 60, wy - 30 + wl); attr(wL, 'x', CX + 74); attr(wL, 'y', (wy - 30 + wl / 2 + 10).toFixed(1)); wL.style.opacity = wl > 20 ? 1 : 0;
+    const fl2 = fl * 0.9; fA.set(CX, POT.y + 170, CX, POT.y + 170 - fl2 * 0.95); attr(fL, 'x', CX - 34); attr(fL, 'y', (POT.y + 180 - fl2 / 2).toFixed(1)); fL.style.opacity = fl > 20 ? 1 : 0;
+    const wl2 = wl * 0.6; wA.set(CX, wy - 156, CX, wy - 156 + wl2); attr(wL, 'x', CX + 16); attr(wL, 'y', (wy - 120).toFixed(1)); wL.style.opacity = wl > 20 ? 1 : 0;
     M.hide(fA.g, t < tS2); M.vis(aBr, t, wt('S2', 'area') - 0.1, 1e9, { dy: 0 }); M.vis(aT, t, wt('S2', 'area'), 1e9, { dy: 0 });
     steamFill.setAttribute('fill', mix('#F0F4FB', '#D3E0F5', P / PMAX));
     steamL.forEach((l, i) => { l.style.opacity = (M.clamp(P / 40 - i * 0.4)).toFixed(3); });
     const pf = t >= tJump ? M.clamp(1 - Math.abs(t - tJump - 0.5) / 0.6) + M.clamp(1 - Math.abs(t - tPk2 - 0.3) / 0.6) : 0;
     puff.forEach((p2, i) => { p2.style.opacity = (pf * [0.5, 0.35, 0.22][i]).toFixed(3); M.hide(p2, pf <= 0.01); });
     M.vis($('#slo'), t, tRep, tJump, { dy: 0, sc: 0.8, sp: M.POP, outDur: 0.2, ody: 0 });
-    M.setT($('#rP'), Math.round(P).toString()); M.setT($('#rF'), (P * 1e3 * 1e-5).toFixed(2));
+    M.setT($('#roP'), Math.round(P).toString()); M.setT($('#roF'), (P * 1e3 * 1e-5).toFixed(2));
     gC((u2) => [u2, Pof(u2)], 0, Math.min(x, SX), 160); gD(Math.min(x, SX), P, t >= tS2);
     avD(t, wt('S6', 'whistle') - 0.1, out);
   }
@@ -279,7 +279,7 @@ M.on(t => {
     const tBack = T0('G5'), out = OUT('G4'), out2 = OUT('W1'), second = t >= tBack + 2.2;
     M.vis($('#gl'), t, second ? tBack + 2.4 : tG1 + 0.1, second ? out2 : out, { dx: -60, dy: 0, ...o });
     M.vis($('#eq0'), t, T0('G2') - 0.1, 1e9, { dy: 16 }); M.vis($('#eq1'), t, T0('G3') - 0.1, 1e9, { dy: 16 }); M.vis($('#eq2'), t, wt('G3', 'pure') - 0.1, 1e9, { dy: 16 });
-    PUC.write($('#eq0 .f'), t, wt('G2', 'gives') - 0.6, 0.8); PUC.write($('#eq1 .f'), t, second ? tBack + 2.6 : 1e9, 0.8);
+    PUC.write($('#eq0 .ef'), t, wt('G2', 'gives') - 0.6, 0.8); PUC.write($('#eq1 .ef'), t, second ? tBack + 2.6 : 1e9, 0.8);
     M.vis($('#gP'), t, tBack + 3.0, 1e9, POP);
     M.vis($('#gr2'), t, tG1 + 0.25, second ? out2 : out, { dx: 60, dy: 0, ...o });
     const bx = gPos(t); attr(gBox, 'x', bx.toFixed(1));
