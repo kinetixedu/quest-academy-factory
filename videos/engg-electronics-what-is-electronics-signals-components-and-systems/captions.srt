@@ -1,0 +1,342 @@
+1
+00:00:00,450 --> 00:00:03,492
+Mahadev's ragi field dried out last week.
+
+2
+00:00:03,792 --> 00:00:07,332
+He was away for three days, and
+nobody switched on the pump.
+
+3
+00:00:07,682 --> 00:00:10,415
+Could a small circuit do the job for him?
+
+4
+00:00:10,415 --> 00:00:12,984
+That is exactly what electronics is for.
+
+5
+00:00:13,584 --> 00:00:14,983
+Meet Project Neeru.
+
+6
+00:00:14,983 --> 00:00:19,616
+Tanvi, a first-year engineering student
+in Mandya, wants to build a smart
+
+7
+00:00:19,616 --> 00:00:22,110
+water controller for her uncle's farm.
+
+8
+00:00:22,460 --> 00:00:24,326
+Imran builds the circuits.
+
+9
+00:00:24,326 --> 00:00:26,244
+Lakshmi measures and codes.
+
+10
+00:00:26,594 --> 00:00:30,450
+And Doctor Shabana, their lab
+teacher, asks the hard questions.
+
+11
+00:00:31,100 --> 00:00:32,739
+So what is electronics?
+
+12
+00:00:33,039 --> 00:00:34,922
+Electricity is moving charge.
+
+13
+00:00:34,922 --> 00:00:37,386
+It can light a bulb or run a motor.
+
+14
+00:00:37,736 --> 00:00:42,410
+Electronics uses that current to
+carry information and make decisions.
+
+15
+00:00:42,760 --> 00:00:45,985
+In simple words: electrical
+power does the work.
+
+16
+00:00:45,985 --> 00:00:48,182
+Electronics decides when and how.
+
+17
+00:00:48,832 --> 00:00:51,321
+The information travels as a signal.
+
+18
+00:00:51,321 --> 00:00:55,101
+A signal is a quantity that
+changes to carry a message.
+
+19
+00:00:55,451 --> 00:00:59,976
+An analog signal changes smoothly,
+like the soil getting drier hour by
+
+20
+00:00:59,976 --> 00:01:00,876
+hour.
+
+21
+00:01:00,906 --> 00:01:04,122
+A digital signal has only
+two levels, on and off.
+
+22
+00:01:04,122 --> 00:01:06,175
+We write them as one and zero.
+
+23
+00:01:06,825 --> 00:01:08,780
+Signals flow through components.
+
+24
+00:01:09,130 --> 00:01:13,535
+Passive components, like resistors
+and capacitors, cannot add energy.
+
+25
+00:01:13,535 --> 00:01:15,777
+They resist, store or guide it.
+
+26
+00:01:16,127 --> 00:01:20,186
+Active components, like transistors
+and chips, can control the current
+
+27
+00:01:20,186 --> 00:01:21,866
+and make a signal bigger.
+
+28
+00:01:22,516 --> 00:01:26,068
+Put components together for a
+purpose, and you get a system.
+
+29
+00:01:26,068 --> 00:01:27,928
+Every system does three things.
+
+30
+00:01:28,278 --> 00:01:29,178
+Sense.
+
+31
+00:01:28,900 --> 00:01:31,950
+A sensor turns the real
+world into a signal.
+
+32
+00:01:32,250 --> 00:01:33,150
+Decide.
+
+33
+00:01:32,891 --> 00:01:35,638
+A circuit compares the signal with a rule.
+
+34
+00:01:35,938 --> 00:01:36,838
+Act.
+
+35
+00:01:36,393 --> 00:01:39,567
+An output, like a pump or
+a light, does the work.
+
+36
+00:01:40,217 --> 00:01:42,286
+Let's watch Project Neeru do it.
+
+37
+00:01:42,636 --> 00:01:44,590
+At sunrise the soil is wet.
+
+38
+00:01:44,590 --> 00:01:46,175
+The sensor reads high.
+
+39
+00:01:46,175 --> 00:01:47,611
+The pump stays off.
+
+40
+00:01:47,961 --> 00:01:51,490
+By noon the soil dries, and
+the signal falls, slowly.
+
+41
+00:01:51,840 --> 00:01:53,576
+It crosses the dry line.
+
+42
+00:01:53,576 --> 00:01:55,760
+The circuit decides: water now.
+
+43
+00:01:56,110 --> 00:01:59,689
+The relay clicks, the pump runs,
+and the green light comes on.
+
+44
+00:02:00,039 --> 00:02:04,493
+Water soaks in, the signal climbs
+back, and the pump switches off on its
+
+45
+00:02:04,493 --> 00:02:05,393
+own.
+
+46
+00:02:04,977 --> 00:02:06,592
+Nobody had to be there.
+
+47
+00:02:07,242 --> 00:02:09,265
+Electrical power does the work.
+
+48
+00:02:09,265 --> 00:02:11,181
+Electronics does the thinking.
+
+49
+00:02:11,881 --> 00:02:13,849
+Where do we see this at work today?
+
+50
+00:02:14,199 --> 00:02:15,099
+Sense.
+
+51
+00:02:14,814 --> 00:02:19,523
+A hospital monitor reads a patient's
+heartbeat through sensors on the skin.
+
+52
+00:02:19,873 --> 00:02:20,773
+Decide.
+
+53
+00:02:20,587 --> 00:02:25,664
+A car's airbag circuit decides in a
+split second whether a crash is real.
+
+54
+00:02:26,014 --> 00:02:26,914
+Act.
+
+55
+00:02:26,537 --> 00:02:30,974
+A phone screen turns a signal into
+millions of tiny dots of light.
+
+56
+00:02:31,624 --> 00:02:33,925
+But is more electronics always better?
+
+57
+00:02:34,275 --> 00:02:35,403
+The good side.
+
+58
+00:02:35,403 --> 00:02:38,118
+It saves water, time, and even lives.
+
+59
+00:02:38,468 --> 00:02:39,625
+The hard side.
+
+60
+00:02:39,625 --> 00:02:43,781
+It needs power, it can fail,
+and old gadgets become e-waste.
+
+61
+00:02:44,131 --> 00:02:48,746
+In twenty twenty two, the world threw
+away about sixty two million tonnes
+
+62
+00:02:48,746 --> 00:02:50,187
+of electronic waste.
+
+63
+00:02:50,187 --> 00:02:52,979
+Less than a quarter was properly recycled.
+
+64
+00:02:53,329 --> 00:02:57,300
+Mahadev asks: what if the sensor
+breaks, and the pump never stops?
+
+65
+00:02:57,650 --> 00:02:59,612
+So Tanvi adds a safety timer.
+
+66
+00:02:59,612 --> 00:03:03,261
+The pump can never run for
+more than one hour at a time.
+
+67
+00:03:03,611 --> 00:03:04,562
+The lesson?
+
+68
+00:03:04,562 --> 00:03:08,116
+Good electronics also plans
+for when things go wrong.
+
+69
+00:03:08,766 --> 00:03:09,702
+Quick check.
+
+70
+00:03:09,702 --> 00:03:12,239
+A soil sensor, a circuit and a pump.
+
+71
+00:03:12,239 --> 00:03:13,522
+Which one decides?
+
+72
+00:03:15,422 --> 00:03:16,322
+The circuit!
+
+73
+00:03:16,311 --> 00:03:19,932
+The sensor senses, the circuit
+decides, and the pump acts.
+
+74
+00:03:20,532 --> 00:03:21,544
+So, remember.
+
+75
+00:03:21,844 --> 00:03:26,075
+Electronics uses current to carry
+information and make decisions.
+
+76
+00:03:26,425 --> 00:03:28,558
+Signals are analog or digital.
+
+77
+00:03:28,558 --> 00:03:30,848
+Components are passive or active.
+
+78
+00:03:31,198 --> 00:03:34,035
+And every system senses, decides and acts.
+
+79
+00:03:34,635 --> 00:03:37,812
+Next time: voltage,
+current, power and energy.
