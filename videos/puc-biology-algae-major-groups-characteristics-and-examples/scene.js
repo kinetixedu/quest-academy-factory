@@ -2,6 +2,8 @@
 (() => {
 const { $ } = M, C = PUC.init({ subject: 'biology' }), K = PUC.K, wt = M.wt, T0 = M.t0, T1 = M.t1, mix = M.mix;
 const IMG = '../../assets/illustrations/puc/';
+// SVG pops scale about their own centre (not the svg origin)
+const _vis = M.vis; M.vis = (el, t, a, b, o = {}) => { if (o.sc != null && el instanceof SVGElement && !el.hasAttribute('transform') && !el._tb) { el._tb = 1; el.style.transformBox = 'fill-box'; el.style.transformOrigin = 'center'; } return _vis(el, t, a, b, o); };
 const nsv = 'http://www.w3.org/2000/svg';
 const mk = (p, tag, a) => { const e = document.createElementNS(nsv, tag); for (const k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e; };
 const txt = (p, x, y, s, a = {}) => { const e = mk(p, 'text', Object.assign({ x, y, 'font-family': 'IBM Plex Mono', 'font-size': 18, fill: C.mute }, a)); e.textContent = s; return e; };
@@ -56,7 +58,9 @@ mk(gs, 'rect', { x: 90, y: 70, width: 300, height: 250, rx: 10, fill: '#D6D3CC',
 mk(gs, 'rect', { x: 78, y: 58, width: 324, height: 22, rx: 6, fill: '#C7C3BA', stroke: BR, 'stroke-width': 3.5 });
 for (let k = 0; k < 4; k++) mk(gs, 'line', { x1: 90, y1: 130 + k * 50, x2: 390, y2: 130 + k * 50, stroke: '#BDB8AE', 'stroke-width': 2 });
 const SLM = [];
-[[110, 230, 60, 90], [170, 250, 50, 70], [230, 220, 70, 100], [300, 246, 46, 74], [350, 232, 30, 88]].forEach(([x, y, w, h]) => SLM.push(mk(gs, 'path', { d: `M${x},${y + h} C${x - 6},${y + h * 0.4} ${x + w * 0.2},${y} ${x + w * 0.5},${y} C${x + w * 0.8},${y} ${x + w + 6},${y + h * 0.5} ${x + w},${y + h} Z`, fill: '#6DB27A', stroke: DARK, 'stroke-width': 2.5, opacity: 0.92 })));
+[[130, 280, 40, 26], [200, 296, 36, 20], [270, 270, 44, 30], [340, 292, 34, 22], [230, 236, 26, 16], [320, 240, 22, 14]].forEach(([x, y, rx, ry], k) => { let d = '';
+  for (let j = 0; j <= 16; j++) { const a = j / 16 * Math.PI * 2, rr = 1 + 0.18 * Math.sin(3 * a + k) + 0.1 * Math.sin(5 * a + 2 * k); d += (j ? ' L' : 'M') + (x + rx * rr * Math.cos(a)).toFixed(1) + ',' + (y + ry * rr * Math.sin(a)).toFixed(1); }
+  SLM.push(mk(gs, 'path', { d: d + ' Z', fill: '#6DB27A', stroke: DARK, 'stroke-width': 2.5, opacity: 0.92 })); });
 [[130, 200], [260, 190], [330, 214]].forEach(([x, y]) => SLM.push(mk(gs, 'path', { d: `M${x},${y} q4,30 -2,60`, stroke: '#6DB27A', 'stroke-width': 8, 'stroke-linecap': 'round', fill: 'none' })));
 // tap with a drip
 mk(gs, 'path', { d: 'M390,270 H430 V290', stroke: '#8A8F99', 'stroke-width': 10, fill: 'none', 'stroke-linejoin': 'round' }); mk(gs, 'rect', { x: 404, y: 256, width: 16, height: 14, rx: 3, fill: '#8A8F99' });
@@ -344,7 +348,7 @@ M.on(t => {
     // way 1
     const b = M.io((t - tBreak) / 0.8), gr = M.io((t - tGrow) / 1.4);
     FCELL.forEach((c, k) => { const p = Math.floor(k / 4), j = k % 4, cw = 70 + 25 * gr, off = (p - 1) * (80 * b + 100 * gr), x = 520 + p * 280 + off - 2 * cw + j * cw;
-      attr(c, 'transform', `translate(${(800 + (x - 800) * 1.35).toFixed(1)} 300) scale(${(cw / 70 * 1.35).toFixed(3)} 1.35)`); });
+      attr(c, 'transform', `translate(${(800 + (x - 800) * 1.22).toFixed(1)} 300) scale(${(cw / 70 * 1.22).toFixed(3)} 1.22)`); });
     // way 2
     ZSP.forEach((z, k) => { const a = k * Math.PI / 3 + 0.4, d = 100 + 520 * M.clamp((t - tZsp - k * 0.12) / 3.4), wob = Math.sin((t - tZsp) * 6 + k) * 10;
       const x = 400 + Math.cos(a) * d * (Math.cos(a) > 0 ? 1.2 : 0.55), y = 340 + Math.sin(a) * Math.min(d, 150) + wob;
@@ -374,7 +378,7 @@ M.on(t => {
   const stOn = t >= tT && t < tG1 + 0.5; const stmt = $('#stmt'); M.hide(stmt, !stOn);
   if (stOn) {
     const sx = PUC.sweep(SW)(t); stmt.style.transform = t > tG1 ? `translateX(${(sx ?? -1980).toFixed(1)}px)` : 'none';
-    M.rise($('#st1'), t, tT + 0.08, { st: 0.05 }); M.rise($('#st2'), t, wt('T1', 'pigments') - 0.2, { st: 0.07, sp: M.HEAVY });
+    M.rise($('#st1'), t, tT + 0.08, { st: 0.05 }); M.rise($('#st2'), t, wt('T1', 'Algae') - 0.2, { st: 0.07, sp: M.HEAVY });
     PUC.write($('#stF'), t, wt('T1', 'wall') - 0.1, 0.8);
   }
 

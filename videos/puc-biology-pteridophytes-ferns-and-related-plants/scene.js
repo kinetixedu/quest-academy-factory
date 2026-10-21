@@ -2,6 +2,8 @@
 (() => {
 const { $ } = M, C = PUC.init({ subject: 'biology' }), K = PUC.K, wt = M.wt, T0 = M.t0, T1 = M.t1, mix = M.mix;
 const IMG = '../../assets/illustrations/puc/';
+// SVG pops scale about their own centre (not the svg origin)
+const _vis = M.vis; M.vis = (el, t, a, b, o = {}) => { if (o.sc != null && el instanceof SVGElement && !el.hasAttribute('transform') && !el._tb) { el._tb = 1; el.style.transformBox = 'fill-box'; el.style.transformOrigin = 'center'; } return _vis(el, t, a, b, o); };
 const nsv = 'http://www.w3.org/2000/svg';
 const mk = (p, tag, a) => { const e = document.createElementNS(nsv, tag); for (const k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e; };
 const txt = (p, x, y, s, a = {}) => { const e = mk(p, 'text', Object.assign({ x, y, 'font-family': 'IBM Plex Mono', 'font-size': 18, fill: C.mute }, a)); e.textContent = s; return e; };
@@ -170,8 +172,8 @@ $('#stF').innerHTML = '<span class="lad">moss: gametophyte · <b>fern: sporophyt
 /* ---------- L: leaves ---------- */
 const la = $('#laS'), SEL = mk(la, 'g', {});
 const sp = []; for (let k = 0; k <= 30; k++) { const u = k / 30; sp.push([140 + u * 480, 470 - 230 * u + 60 * Math.sin(u * 3)]); }
-mk(SEL, 'path', { d: 'M' + sp.map(p => p.map(v => v.toFixed(1)).join(',')).join(' L'), stroke: '#4E7A34', 'stroke-width': 6, fill: 'none', 'stroke-linecap': 'round' });
-sp.forEach(([x, y], k) => { if (k > 25 || k < 1) return; [-1, 1].forEach(s => mk(SEL, 'ellipse', { cx: x, cy: y + s * 12, rx: 9, ry: 5, fill: MOSS, stroke: DARK, 'stroke-width': 1.5, transform: `rotate(${s * 40} ${x} ${y + s * 12})` })); });
+mk(SEL, 'path', { d: 'M' + sp.map(p => p.map(v => v.toFixed(1)).join(',')).join(' L'), stroke: '#4E7A34', 'stroke-width': 9, fill: 'none', 'stroke-linecap': 'round' });
+sp.forEach(([x, y], k) => { if (k > 25 || k < 1) return; [-1, 1].forEach(s => mk(SEL, 'ellipse', { cx: x, cy: y + s * 16, rx: 15, ry: 8, fill: MOSS, stroke: DARK, 'stroke-width': 1.5, transform: `rotate(${s * 40} ${x} ${y + s * 16})` })); });
 const STR = mk(la, 'g', {}); { const [x, y] = sp[28]; for (let k = 0; k < 6; k++) mk(STR, 'path', { d: `M${x + k * 12},${y - k * 6 - 10} l12,6 l-12,6 l-12,-6 Z`, fill: '#C9D9A0', stroke: DARK, 'stroke-width': 2 }); }
 const LAL = [LBL(la, sp[14][0], sp[14][1] + 12, 300, 500, 'Microphylls (small leaves)', 'start'), LBL(la, sp[28][0] + 30, sp[28][1] - 30, 560, 220, 'Strobilus (cone)', 'end')];
 const lm = $('#lmS'), FRD = mk(lm, 'g', {}); frond(FRD, 392, 540, 360, 0.05, 1.3);
@@ -200,7 +202,7 @@ const tFl = txt(tS, 150, 30, 'SPOROPHYTE', { 'text-anchor': 'middle', 'font-size
 const where = PUC.where($('#wa'), { on: [], type: 'Assertion and reason, and match the class with its example' });
 const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ASSERTION AND REASON', qW: 900,
   q: '<div class="sl"><b>A</b>The spread of living pteridophytes is limited to<br><span style="margin-left:56px"></span>narrow geographical regions.</div><div class="sl"><b>R</b>Their gametophytes need cool, damp, shady places,<br><span style="margin-left:56px"></span>and fertilisation needs water.</div>',
-  opts: ['Both true; R explains A', 'Both true; R does not explain A', 'A true; R false', 'A false; R true'], right: 0, optW: 474, optY: 380, optFs: 26 });
+  opts: ['Both true; R explains A', 'Both true; R does not explain A', 'A true; R false', 'A false; R true'], right: 0, optW: 474, optY: 380, optFs: 22 });
 const so = PUC.solution($('#so'), [['Answer: <b style="color:var(--ok)">A</b>'], ['<b style="color:var(--ok)">A</b> and <b style="color:var(--ok)">R</b> are both true'], ['Prothallus: cool, damp shade'], ['Gametes swim in water'], ['So: narrow regions only']], { y0: 100, dy: 100 });
 const tSo = [wt('A1', 'A') + 0.05, wt('A1', 'Both'), wt('A2', 'prothallus'), wt('A2', 'water'), wt('A3', 'narrow')];
 const fc = PUC.fcard($('#sF'), { x: 280, y: 262, w: 1360, h: 470, title: 'Recap · pteridophytes', y0: 100, dy: 70, txt: [1, 1, 1, 1, 1],
@@ -215,7 +217,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 25', topic: 'A pine cone from
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const capsF = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tR1 + 0.1, 1, 960, 540], [tRs[2] - 0.3, 1.06, 760, 640], [tRs[4] - 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tR1 + 0.1, 1, 960, 540]]);
 
 /* ---------- frame ---------- */
 M.on(t => {
@@ -250,7 +252,7 @@ M.on(t => {
     WD.forEach((d, k) => { const u = ((t - tXw) * 0.35 + k / 5) % 1; attr(d, 'transform', `translate(335 ${(500 - u * 380).toFixed(1)})`); d.style.opacity = t > tXw ? Math.min(1, (1 - u) * 4, u * 6).toFixed(2) : 0; });
     SG.forEach((d, k) => { const u = ((t - tPf) * 0.3 + k / 5) % 1; attr(d, 'transform', `translate(445 ${(120 + u * 380).toFixed(1)})`); d.style.opacity = t > tPf ? Math.min(1, (1 - u) * 4, u * 6).toFixed(2) : 0; });
     runL(DL[0], t, tXy); runL(DL[1], t, tPh); M.vis(dX1, t, tXw + 0.2, 1e9, { dy: 6 }); M.vis(dP1, t, tPf + 0.2, 1e9, { dy: 6 });
-    M.vis($('#dh'), t, T0('D3') - 0.15, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#dh'), t, tPf + 0.8, out, { dx: 60, dy: 0, ...o });
     DR.forEach((d, i) => M.vis($('#dr' + i), t, d[3] - 0.15, 1e9, { dy: 16 }));
     USE.forEach((_, i) => M.vis($('#us' + i), t, tUse[i] - 0.1, 1e9, POP));
   }
@@ -320,7 +322,7 @@ M.on(t => {
     M.vis($('#sb'), t, T0('S3') - 0.15, out, { dx: 60, dy: 0, ...o });
     M.vis(MEG, t, wt('S3', 'megaspores') - 0.1, 1e9, { dy: 16 }); M.vis(MIC, t, wt('S3', 'microspores') - 0.1, 1e9, { dy: 16 });
     M.vis(megT, t, wt('S4', 'female'), 1e9, { dy: 6 }); M.vis(micT, t, wt('S4', 'male'), 1e9, { dy: 6 });
-    M.vis(emb, t, wt('S4', 'embryo'), 1e9, { ...POP, sc: 0.3 }); M.vis(embT, t, wt('S4', 'parent'), 1e9, { dy: 6 });
+    M.vis(emb, t, wt('S4', 'embryo'), 1e9, { dy: 0, fade: 0.3 }); M.vis(embT, t, wt('S4', 'parent'), 1e9, { dy: 6 });
     M.vis($('#sbP'), t, wt('S5', 'seed') - 0.2, 1e9, POP);
     M.vis($('#th1'), t, tS6 + 0.05, tL1 - 0.05, { dy: 36, outDur: 0.01 });
     th1(t, { tin: tS6, tOpts: wt('S6', 'Homosporous') - 0.1, tCount: T1('S6') + 0.05, dur: 3, tAns: T0('S7') - 0.02, tWhy: wt('S7', 'Hetero') });

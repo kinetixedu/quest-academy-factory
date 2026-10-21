@@ -2,6 +2,8 @@
 (() => {
 const { $ } = M, C = PUC.init({ subject: 'biology' }), K = PUC.K, wt = M.wt, T0 = M.t0, T1 = M.t1, mix = M.mix;
 const IMG = '../../assets/illustrations/puc/';
+// SVG pops scale about their own centre (not the svg origin)
+const _vis = M.vis; M.vis = (el, t, a, b, o = {}) => { if (o.sc != null && el instanceof SVGElement && !el.hasAttribute('transform') && !el._tb) { el._tb = 1; el.style.transformBox = 'fill-box'; el.style.transformOrigin = 'center'; } return _vis(el, t, a, b, o); };
 const nsv = 'http://www.w3.org/2000/svg';
 const mk = (p, tag, a) => { const e = document.createElementNS(nsv, tag); for (const k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e; };
 const txt = (p, x, y, s, a = {}) => { const e = mk(p, 'text', Object.assign({ x, y, 'font-family': 'IBM Plex Mono', 'font-size': 18, fill: C.mute }, a)); e.textContent = s; return e; };
@@ -76,8 +78,7 @@ mk(RP2, 'path', { d: 'M580,156 L580,470 M580,260 L650,340', stroke: BARK, 'strok
 const COR = mk(RP2, 'g', {}); [[520, 190], [640, 200], [560, 230]].forEach(([x, y]) => { for (let k = 0; k < 5; k++) { const a = -Math.PI / 2 + (k - 2) * 0.45; mk(COR, 'path', { d: `M${x},${y} l${(Math.cos(a) * 26).toFixed(1)},${(Math.sin(a) * 26).toFixed(1)}`, stroke: '#D9A060', 'stroke-width': 9, 'stroke-linecap': 'round' }); mk(COR, 'circle', { cx: x + Math.cos(a) * 28, cy: y + Math.sin(a) * 28, r: 6, fill: '#E9BB7A', stroke: BARK, 'stroke-width': 1.5 }); } });
 const CYD = []; for (let k = 0; k < 9; k++) CYD.push(mk(RP2, 'circle', { cx: 520 + (k % 3) * 60 + (k > 5 ? 20 : 0), cy: 186 + Math.floor(k / 3) * 12 - 20, r: 4, fill: CYA }));
 const rT2 = txt(dh, 580, 120, 'CYCAS · CORALLOID ROOTS', { 'text-anchor': 'middle', 'font-size': 16, 'font-weight': 600, 'letter-spacing': 1.2 });
-const DL = [LBL(dh, 250, 330, 330, 510, 'Fungus threads', 'start'), LBL(dh, 620, 176, 520, 300, 'Cyanobacteria', 'end'), LBL(dh, 650, 196, 700, 260, 'Coralloid', 'end')];
-DL[2] = LBL(dh, 664, 176, 700, 430, 'Fix nitrogen', 'end');
+const DL = [LBL(dh, 250, 330, 330, 510, 'Fungus threads', 'start'), LBL(dh, 520, 176, 500, 300, 'Cyanobacteria', 'end'), LBL(dh, 640, 186, 700, 520, 'Fix nitrogen', 'end')];
 
 /* ---------- Z: zoom ladder ---------- */
 const ZN = ['PINE TREE', 'FEMALE CONE', 'SCALE', 'OVULE'], ZS = ['x1', 'x20', 'x60', 'x400'];
@@ -103,7 +104,7 @@ const LAB = [];
 { const g = ZG[1];
   mk(g, 'path', { d: 'M528,40 L528,500', stroke: BARK, 'stroke-width': 10 });
   cone(g, 528, 270, 300, 420, 9);
-  LAB[1] = [[540, 250, 800, 190, 'Scale (megasporophyll)', 'start'], [528, 470, 760, 470, 'Axis', 'start']]; }
+  LAB[1] = [[540, 250, 660, 120, 'Scale (megasporophyll)', 'start'], [528, 470, 760, 470, 'Axis', 'start']]; }
 { const g = ZG[2];
   mk(g, 'path', { d: 'M180,380 C300,300 540,180 860,150 C880,190 860,240 820,260 C600,330 360,400 220,440 Z', fill: CONEF, stroke: BR, 'stroke-width': 5 });
   [[420, 260], [520, 228]].forEach(([x, y]) => { mk(g, 'ellipse', { cx: x, cy: y, rx: 44, ry: 30, fill: '#F3E6C4', stroke: SPO, 'stroke-width': 3.5, transform: `rotate(-20 ${x} ${y})` }); mk(g, 'ellipse', { cx: x, cy: y, rx: 24, ry: 15, fill: '#D7ECCF', stroke: DARK, 'stroke-width': 2, transform: `rotate(-20 ${x} ${y})` }); });
@@ -114,7 +115,7 @@ const ARCH = [];
   mk(g, 'path', { d: 'M528,440 C380,440 350,320 366,236 C380,160 450,122 520,118 L536,118 C606,122 676,160 690,236 C706,320 676,440 528,440 Z', fill: '#DCEFD3', stroke: DARK, 'stroke-width': 3 });
   mk(g, 'path', { d: 'M528,410 C420,410 400,330 410,270 C420,220 470,196 528,196 C586,196 636,220 646,270 C656,330 636,410 528,410 Z', fill: '#F6E7C4', stroke: GOLD, 'stroke-width': 3 });
   [[490, 236], [566, 236]].forEach(([x, y]) => { const a = mk(g, 'g', {}); mk(a, 'path', { d: `M${x - 16},${y + 46} C${x - 20},${y + 20} ${x - 6},${y + 6} ${x - 5},${y - 14} L${x + 5},${y - 14} C${x + 6},${y + 6} ${x + 20},${y + 20} ${x + 16},${y + 46} Z`, fill: '#FFF7E3', stroke: BR, 'stroke-width': 2.5 }); mk(a, 'circle', { cx: x, cy: y + 30, r: 10, fill: NUC }); ARCH.push(a); });
-  LAB[3] = [[528, 62, 700, 50, 'Opening of the ovule', 'start'], [330, 300, 200, 300, 'Envelope', 'end'], [380, 380, 200, 420, 'Nucellus', 'end'], [620, 360, 780, 420, 'Female gametophyte', 'start'], [566, 230, 780, 220, 'Archegonium with egg', 'start']]; }
+  LAB[3] = [[528, 62, 380, 50, 'Opening of the ovule', 'end'], [330, 300, 200, 300, 'Envelope', 'end'], [380, 380, 200, 420, 'Nucellus', 'end'], [620, 360, 730, 440, 'Female gametophyte', 'start'], [566, 230, 780, 220, 'Archegonium with egg', 'start']]; }
 const LB = LAB.map((L, lv) => L.map(([px, py, lx, ly, s, an, el]) => LBL(ZG[lv], px, py, lx, ly, s, an, el)));
 const FR = FOC.map((f, lv) => f && mk(ZG[lv], 'circle', { cx: f[0], cy: f[1], r: f[2], fill: 'none', stroke: C.ac, 'stroke-width': 4, 'stroke-dasharray': '10 8' }));
 const tLab = [[wt('Z2', 'needle'), wt('Z2', 'branched'), wt('Z2', 'male'), wt('Z2', 'female')], [wt('Z3', 'scales'), wt('Z3', 'spiral')], [wt('Z4', 'scale'), wt('Z4', 'ovules'), wt('Z4', 'naked')],
@@ -142,8 +143,8 @@ const RAR = [[676, 290], [724, 290]].map(([x, y]) => { const a = mk(rs, 'g', {})
 const tube = mk(rs, 'path', { d: 'M700,176 C700,210 690,240 676,262', stroke: POL, 'stroke-width': 6, fill: 'none', 'stroke-linecap': 'round' });
 const MG = [0, 1].map(() => mk(rs, 'circle', { cx: 0, cy: 0, r: 6, fill: BR }));
 const EMB = mk(rs, 'g', {}); mk(EMB, 'ellipse', { cx: 700, cy: 340, rx: 34, ry: 60, fill: '#B9DDA8', stroke: DARK, 'stroke-width': 3 }); mk(EMB, 'path', { d: 'M700,300 L700,380 M700,300 l-14,-14 M700,300 l14,-14', stroke: DARK, 'stroke-width': 3, fill: 'none' });
-const RL = [LBL(rs, 176, 300, 300, 120, 'Male cone', 'start'), LBL(rs, 700, 230, 860, 120, 'Ovule', 'start'), LBL(rs, 716, 320, 880, 260, 'Four megaspores', 'start'), LBL(rs, 776, 340, 880, 260, 'Female gametophyte', 'start'),
-  LBL(rs, 700, 186, 860, 140, 'Pollen tube', 'start'), LBL(rs, 734, 340, 880, 300, 'Embryo', 'start'), LBL(rs, 820, 400, 880, 450, 'Seed coat', 'start')];
+const RL = [LBL(rs, 176, 300, 240, 470, 'Male cone', 'start'), LBL(rs, 590, 260, 540, 180, 'Ovule', 'end'), LBL(rs, 684, 330, 540, 260, 'Four megaspores', 'end'), LBL(rs, 626, 350, 540, 330, 'Female gametophyte', 'end'),
+  LBL(rs, 700, 186, 540, 100, 'Pollen tube', 'end'), LBL(rs, 668, 340, 540, 330, 'Embryo', 'end'), LBL(rs, 580, 410, 540, 430, 'Seed coat', 'end')];
 RL.forEach(l => l.tx.setAttribute('class', 'zl'));
 const tPol = wt('R2', 'pollen'), tMei = wt('R3', 'meiosis'), tOne = wt('R3', 'One'), tAir = wt('R4', 'Air'), tTube = wt('R5', 'tube'), tFuse = wt('R5', 'fuses'), tEmb = wt('R6', 'embryo'), tSeed = wt('R6', 'seed');
 
@@ -155,8 +156,7 @@ mk(ND, 'circle', { cx: 392, cy: 360, r: 46, fill: '#F6E7C4', stroke: GOLD, 'stro
 const pits = [[-0.6], [0.0], [0.6]].map(([a]) => { const ang = -Math.PI / 2 + a, x = 392 + 272 * Math.cos(ang), y = 420 + 272 * Math.sin(ang); const g = mk(ns, 'g', {});
   mk(g, 'path', { d: `M${x - 18 * Math.cos(ang + Math.PI / 2)},${y - 18 * Math.sin(ang + Math.PI / 2)} L${x - 30 * Math.cos(ang)},${y - 30 * Math.sin(ang)} L${x + 18 * Math.cos(ang + Math.PI / 2)},${y + 18 * Math.sin(ang + Math.PI / 2)} Z`, fill: '#FFFFFF', stroke: BR, 'stroke-width': 3 }); return { g, x, y, ang }; });
 const NDR = [0, 1, 2].map(() => mk(ns, 'path', { d: 'M0,-10 l-7,10 a8 8 0 1 0 14 0 Z', fill: WAT }));
-const NL = [LBL(ns, 120, 420, 90, 520, 'Small surface', 'start'), LBL(ns, 600, 250, 660, 150, 'Thick cuticle', 'end'), LBL(ns, pits[1].x, pits[1].y + 26, 520, 110, 'Sunken stoma', 'start')];
-NL[2] = LBL(ns, pits[1].x, pits[1].y + 30, 300, 110, 'Sunken stoma', 'end');
+const NL = [LBL(ns, 120, 420, 90, 520, 'Small surface', 'start'), LBL(ns, 600, 250, 660, 150, 'Thick cuticle', 'end'), LBL(ns, pits[1].x, pits[1].y + 30, 300, 110, 'Sunken stoma', 'end')];
 const STEPS = [['A needle shape', 'a small surface, so less water escapes'], ['A thick cuticle', 'a waxy coat that holds the water in'], ['Sunken stomata', 'pores in pits, out of the dry wind']];
 $('#st5s').innerHTML = STEPS.map(([s, w], i) => `<div class="st5" id="s5${i}" style="top:${84 + i * 136}px"><div class="n">${i + 1}</div><div class="sx">${s}</div><div class="why">${w}</div></div>`).join('');
 const tSt = ['N3', 'N4', 'N5'].map(id => T0(id) + 0.35);
@@ -216,7 +216,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 26', topic: 'A grass blade an
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const capsF = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tR1 + 0.1, 1, 960, 540], [tTube - 0.4, 1.06, 900, 600], [tSeed + 1.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tR1 + 0.1, 1, 960, 540]]);
 let geo = null;
 const measure = () => { geo = 1; let x = 36; ['wb0', 'wop', 'wb1'].forEach(id => { const e = $('#' + id); e.style.left = x + 'px'; x += e.offsetWidth + 24; });
   [['wm0', 'wb0'], ['wm1', 'wb1']].forEach(([m, b]) => { const e = $('#' + m), bb = $('#' + b); e.style.left = (bb.offsetLeft + bb.offsetWidth / 2 - e.offsetWidth / 2) + 'px'; }); };

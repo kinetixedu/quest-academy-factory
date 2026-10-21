@@ -2,6 +2,8 @@
 (() => {
 const { $ } = M, C = PUC.init({ subject: 'biology' }), K = PUC.K, wt = M.wt, T0 = M.t0, T1 = M.t1, mix = M.mix;
 const IMG = '../../assets/illustrations/puc/';
+// SVG pops scale about their own centre (not the svg origin)
+const _vis = M.vis; M.vis = (el, t, a, b, o = {}) => { if (o.sc != null && el instanceof SVGElement && !el.hasAttribute('transform') && !el._tb) { el._tb = 1; el.style.transformBox = 'fill-box'; el.style.transformOrigin = 'center'; } return _vis(el, t, a, b, o); };
 const nsv = 'http://www.w3.org/2000/svg';
 const mk = (p, tag, a) => { const e = document.createElementNS(nsv, tag); for (const k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e; };
 const txt = (p, x, y, s, a = {}) => { const e = mk(p, 'text', Object.assign({ x, y, 'font-family': 'IBM Plex Mono', 'font-size': 18, fill: C.mute }, a)); e.textContent = s; return e; };
@@ -157,7 +159,7 @@ const seta = mk(SPg, 'path', { d: 'M700,380 L700,120', stroke: SPO, 'stroke-widt
 const caps = mk(SPg, 'ellipse', { cx: 706, cy: 96, rx: 22, ry: 40, fill: SPOF, stroke: SPO, 'stroke-width': 4, transform: 'rotate(18 706 96)' });
 const RS = []; for (let k = 0; k < 14; k++) RS.push(mk(rs, 'circle', { cx: 0, cy: 0, r: 7, fill: '#8FC994', stroke: DARK, 'stroke-width': 1.8 }));
 const RL = [LBL(rs, 240, 300, 120, 200, 'Antheridium', 'start'), LBL(rs, 700, 340, 790, 290, 'Archegonium', 'start'), LBL(rs, 700, 395, 790, 380, 'Egg', 'start'),
-  LBL(rs, 470, 438, 420, 360, 'Antherozoid', 'end'), LBL(rs, 712, 398, 790, 380, 'Zygote', 'start'), LBL(rs, 726, 404, 790, 450, 'Foot', 'start'), LBL(rs, 700, 250, 790, 250, 'Seta', 'start'), LBL(rs, 724, 96, 790, 120, 'Capsule', 'start')];
+  LBL(rs, 470, 438, 420, 360, 'Antherozoid', 'end'), LBL(rs, 712, 398, 790, 380, 'Zygote', 'start'), LBL(rs, 726, 404, 790, 450, 'Foot', 'start'), LBL(rs, 700, 200, 790, 190, 'Seta', 'start'), LBL(rs, 724, 96, 790, 120, 'Capsule', 'start')];
 RL.forEach(l => { l.tx.setAttribute('class', 'zl'); });
 const tSwim = wt('R3', 'swim'), tFuse = wt('R4', 'fuses'), tGrowS = wt('R5', 'foot') - 0.6, tMei = wt('R6', 'meiosis');
 const avR = PUC.avatar($('#sR'), { x: 160 + 1000, y: 324 + 410, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'So that is why it needs rain.' });
@@ -172,7 +174,7 @@ const CUPS = [[300, 400], [480, 400], [392, 300]].map(([x, y]) => { const g = mk
   [-10, 0, 10].forEach(d => mk(g, 'circle', { cx: x + d, cy: y - 10, r: 6, fill: '#B9DDA8', stroke: DARK, 'stroke-width': 1.8 })); return g; });
 const gem = mk(la, 'circle', { cx: 0, cy: 0, r: 7, fill: '#B9DDA8', stroke: DARK, 'stroke-width': 2 });
 const baby = mk(la, 'path', { d: 'M650,520 C630,520 610,512 604,500 C600,490 612,486 620,492 C626,480 640,478 650,486 C660,478 674,480 680,492 C688,486 700,490 696,500 C690,512 670,520 650,520 Z', fill: '#8FC994', stroke: DARK, 'stroke-width': 3 });
-const LAL = [LBL(la, 550, 330, 600, 230, 'Thallus', 'start'), LBL(la, 480, 400, 560, 470, 'Gemma cup', 'start'), LBL(la, 392, 290, 250, 230, 'Gemmae', 'end'), LBL(la, 240, 478, 140, 520, 'Rhizoids', 'end')];
+const LAL = [LBL(la, 550, 330, 600, 230, 'Thallus', 'start'), LBL(la, 480, 400, 600, 440, 'Gemma cup', 'start'), LBL(la, 392, 290, 250, 230, 'Gemmae', 'end'), LBL(la, 240, 478, 140, 520, 'Rhizoids', 'end')];
 const lm = $('#lmS'), PRO = mk(lm, 'g', {});
 const pth = 'M80,440 C160,430 200,452 280,440 C360,428 420,452 500,440 C580,428 640,450 720,440';
 mk(PRO, 'path', { d: pth, stroke: DARK, 'stroke-width': 12, fill: 'none', 'stroke-linecap': 'round' }); mk(PRO, 'path', { d: pth, stroke: '#8FC994', 'stroke-width': 7, fill: 'none', 'stroke-linecap': 'round' });
@@ -215,9 +217,8 @@ const avW = PUC.avatar($('#sW'), { x: 160 + 36, y: 270 + 494, who: 'Diya', face:
 
 /* ---------- X / Q / F ---------- */
 const trap = PUC.trap($('#trap'), { wrong: 'The green moss plant is the sporophyte', right: 'It is the gametophyte; the sporophyte is foot, seta and capsule' });
-const tS = $('#tS'), TG = mk(tS, 'g', {}); mossPlant(TG, 230, 230, 110, 1.6, false);
-const TSP = mk(tS, 'g', {}); mk(TSP, 'path', { d: 'M230,54 Q234,20 240,0', stroke: SPO, 'stroke-width': 4, fill: 'none' });
-const tB1 = mk(tS, 'path', { d: 'M330,230 L344,230 L344,120 L330,120', stroke: GAM, 'stroke-width': 4, fill: 'none' }), tB1t = txt(tS, 352, 180, 'GAMETOPHYTE', { 'font-size': 15, fill: GAM, 'font-weight': 600, 'letter-spacing': 1 });
+const tS = $('#tS'), TG = mk(tS, 'g', {}); mossPlant(TG, 230, 196, 110, 1.5, false);
+const tB1 = mk(tS, 'path', { d: 'M300,196 L314,196 L314,60 L300,60', stroke: GAM, 'stroke-width': 4, fill: 'none' }), tB1t = txt(tS, 230, 258, 'GAMETOPHYTE', { 'text-anchor': 'middle', 'font-size': 15, fill: GAM, 'font-weight': 600, 'letter-spacing': 1 });
 const where = PUC.where($('#wa'), { on: [], type: 'Statements on the gametophyte, the sporophyte, gemmae and protonema' });
 const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', qW: 860,
   q: 'Which of these statements are correct?<div class="sl"><b>I</b>The main plant body of a bryophyte is diploid.</div><div class="sl"><b>II</b>Antherozoids of bryophytes are biflagellate.</div><div class="sl"><b>III</b>In mosses, the leafy stage grows from the protonema as a bud.</div><div class="sl"><b>IV</b>Gemmae are sexual structures formed in gemma cups.</div>',
@@ -236,7 +237,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 24', topic: 'Brown dots under
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const capsF = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tR1 + 0.1, 1, 960, 540], [tGrowS - 0.3, 1.06, 900, 560], [tMei + 1.6, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tR1 + 0.1, 1, 960, 540]]);
 const flag = (x, y, ang, len, ph) => { let d = `M${x},${y}`; for (let k = 1; k <= 8; k++) { const u = k / 8, px = x + Math.cos(ang) * len * u - Math.sin(ang) * 5 * Math.sin(u * 7 + ph), py = y + Math.sin(ang) * len * u + Math.cos(ang) * 5 * Math.sin(u * 7 + ph); d += ` L${px.toFixed(1)},${py.toFixed(1)}`; } return d; };
 
 /* ---------- frame ---------- */
@@ -271,8 +272,8 @@ M.on(t => {
     const out = OUT('Z1');
     M.vis($('#dl'), t, tD1 + 0.1, out, { dx: -60, dy: 0, ...o });
     DR.forEach((d, i) => M.vis($('#dr' + i), t, d[3] - 0.15, 1e9, { dy: 16 }));
-    M.vis($('#dh'), t, T0('D4') - 0.15, out, { dx: 60, dy: 0, ...o });
-    M.vis(HC, t, T0('D4') + 0.1, 1e9, { dy: 16 });
+    M.vis($('#dh'), t, T0('D2') + 0.3, out, { dx: 60, dy: 0, ...o });
+    M.vis(HC, t, T0('D2') + 0.5, 1e9, { dy: 16 });
     CHRS.forEach((g, k) => M.vis(g, t, wt('D4', 'chromosomes') + k * 0.12, 1e9, { ...POP, sc: 0.3 })); M.vis(nTag, t, wt('D4', 'one') , 1e9, POP); M.vis(nCap, t, wt('D4', 'set'), 1e9, { dy: 6 });
     HP.forEach((h, i) => M.vis($('#hp' + i), t, h[2] - 0.1, 1e9, { dy: 16 }));
   }
@@ -346,10 +347,11 @@ M.on(t => {
     const gu = M.clamp((t - tGem) / 1.2); attr(gem, 'cx', (480 + gu * 170).toFixed(1)); attr(gem, 'cy', (388 + gu * 110 - 90 * Math.sin(Math.PI * gu)).toFixed(1)); gem.style.opacity = t > tGem - 0.05 && gu < 1 ? 1 : 0;
     M.vis(baby, t, tGem + 1.1, 1e9, { ...POP, sc: 0.2, sp: M.SOFT });
     [wt('L2', 'flat'), wt('L3', 'cups'), wt('L3', 'gemmae'), wt('L2', 'ground')].forEach((tt, i) => runL(LAL[i], t, tt));
-    M.vis($('#lm'), t, T0('L4') - 0.15, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#lm'), t, wt('L1', 'mosses') - 0.1, out, { dx: 60, dy: 0, ...o });
     PUC.write(PRO, t, tPro, 1.2);
     M.vis(bud, t, tBud - 0.1, 1e9, { ...POP, sc: 0.2 });
-    const lg = M.io((t - tLeafy) / 1.0); M.hide(LEAFY, lg <= 0); attr(LEAFY, 'transform', `translate(440 432) scale(${(0.05 + 0.95 * lg).toFixed(3)}) translate(-440 -432)`);
+    const lg = M.io((t - tLeafy) / 1.0), pre = t < tPro - 0.2; M.hide(LEAFY, !pre && lg <= 0); LEAFY.style.opacity = pre ? (0.3 * M.clamp((t - wt('L1', 'mosses')) / 0.4)).toFixed(2) : '';
+    attr(LEAFY, 'transform', pre ? '' : `translate(440 432) scale(${(0.05 + 0.95 * lg).toFixed(3)}) translate(-440 -432)`);
     [tPro + 0.6, tBud, tLeafy + 0.6].forEach((tt, i) => runL(LML[i], t, tt));
     ['Funaria', 'Polytrichum', 'Sphagnum'].forEach((w, i) => M.vis($('#mx' + i), t, wt('L5', w) - 0.1, 1e9, POP));
     M.vis($('#th1'), t, tL6 + 0.05, tU1 - 0.05, { dy: 36, outDur: 0.01 });
