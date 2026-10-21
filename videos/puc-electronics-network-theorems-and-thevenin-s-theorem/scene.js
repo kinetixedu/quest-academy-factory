@@ -141,8 +141,8 @@ const bR = [W(ck, 'M70,262 V150 H130'), W(ck, zigH(150, 130, 250)), W(ck, 'M250,
 const bRn = [node(ck, 300, 150), node(ck, 300, 440)];
 // copy: battery x=540, RTH top 600-720, load x=860
 const bC = [W(ck, 'M540,262 V150 H600'), W(ck, zigH(150, 600, 720)), W(ck, 'M720,150 H860 V235'), W(ck, zigV(860, 235, 355), { stroke: AM }), W(ck, 'M860,355 V440 H540 V298'), ...cellV(ck, 540, 262)];
-const bLab = [lab(ck, 190, 118, '6 Ω', { 'text-anchor': 'middle' }), lab(ck, 324, 300, '3 Ω'), lab(ck, 96, 300, '12 V', { fill: TE, 'font-size': 18 }),
-  lab(ck, 660, 118, '2 Ω', { 'text-anchor': 'middle' }), lab(ck, 566, 300, '4 V', { fill: TE, 'font-size': 18 })];
+const bLab = [lab(ck, 190, 118, '6 Ω', { 'text-anchor': 'middle' }), lab(ck, 326, 300, '3 Ω'), lab(ck, 114, 300, '12 V', { fill: TE, 'font-size': 18 }),
+  lab(ck, 660, 118, '2 Ω', { 'text-anchor': 'middle' }), lab(ck, 584, 300, '4 V', { fill: TE, 'font-size': 18 })];
 const bRL = [lab(ck, 414, 300, '2 Ω', { fill: '#B7791F', 'font-size': 18 }), lab(ck, 884, 300, '2 Ω', { fill: '#B7791F', 'font-size': 18 })];
 const bKn = [PUC.arrow(ck, INK, 3, 12), PUC.arrow(ck, INK, 3, 12)];
 const tB2 = wt('B2', 'Connect'), tKn = wt('B3', 'turn');

@@ -123,11 +123,11 @@ const tId = [wt('I1', 'Amplitude'), wt('I1', 'period'), wt('I1', 'frequency'), w
 
 /* ================= B: breadboard ================= */
 const ck = $('#ckS');
-const ckW = [W(ck, 'M120,150 V80 H470 V140'), W(ck, zigV(470, 140, 260)), W(ck, 'M470,260 V320 H120 V250')];
-const src = [mk(ck, 'circle', { cx: 120, cy: 200, r: 50, fill: '#fff', stroke: INK, 'stroke-width': 4 }), W(ck, 'M92,200 C102,176 112,176 120,200 S138,224 148,200')];
-const ckL = [tx(ck, 186, 206, 'AC source'), tx(ck, 498, 206, 'R', { 'font-style': 'italic' })];
-const skB = (x, y) => Math.abs(x - 470) < 3 && y > 134 && y < 266 || (Math.abs(x - 120) < 3 && y > 146 && y < 254);
-const eB = flow(ck, [[120, 250], [120, 320], [470, 320], [470, 80], [120, 80], [120, 150]], 0, { skip: skB });
+const ckW = [W(ck, 'M120,180 V110 H470 V170'), W(ck, zigV(470, 170, 290)), W(ck, 'M470,290 V350 H120 V280')];
+const src = [mk(ck, 'circle', { cx: 120, cy: 230, r: 50, fill: '#fff', stroke: INK, 'stroke-width': 4 }), W(ck, 'M92,230 C102,206 112,206 120,230 S138,254 148,230')];
+const ckL = [tx(ck, 186, 236, 'AC source'), tx(ck, 498, 236, 'R', { 'font-style': 'italic' })];
+const skB = (x, y) => Math.abs(x - 470) < 3 && y > 164 && y < 296 || (Math.abs(x - 120) < 3 && y > 176 && y < 284);
+const eB = flow(ck, [[120, 280], [120, 350], [470, 350], [470, 110], [120, 110], [120, 180]], 0, { skip: skB });
 const iArr = PUC.arrow(ck, VI); const iLab = tx(ck, 288, 52, 'I', { fill: VI, 'font-style': 'italic', 'font-size': 28, 'text-anchor': 'middle' });
 const P1 = wavePanel($('#wv'));
 const tRot = wt('G1', 'Watch') - 0.2, tTr = wt('G3', 'scope') - 0.2;
@@ -142,7 +142,7 @@ const thB = t => { // angle of the arm, integral of 2 pi f (slow-motion view)
   return th0 + (w0 + w1) * D / 2 + w1 * (t - tF1); };
 const fB = t => t <= tF0 ? f0 : t >= tF1 ? f1 : f0 + (f1 - f0) * (t - tF0) / (tF1 - tF0);
 const wB = [{ A: Apx, th: thB }];
-const pLab = [P1.lab(342, 122, 'CH1 · V ACROSS R', CH1)];
+const pLab = [P1.lab(342, 484, 'CH1 · V ACROSS R', CH1)];
 const ampL = [W(P1.sv, '', { stroke: '#7FD1D1', 'stroke-width': 2, 'stroke-dasharray': '8 8' }), W(P1.sv, '', { stroke: '#7FD1D1', 'stroke-width': 2, 'stroke-dasharray': '8 8' })];
 const ampT = [P1.lab(924, 0, '+Vm', '#7FD1D1', { 'text-anchor': 'end', 'font-size': 20, 'font-weight': 600 }), P1.lab(924, 0, '-Vm', '#7FD1D1', { 'text-anchor': 'end', 'font-size': 20, 'font-weight': 600 })];
 const perB = bracketH(P1.sv, '#FFFFFF'), perT = P1.lab(0, 0, 'T', '#FFFFFF', { 'font-size': 22, 'font-weight': 600, 'text-anchor': 'middle' });
@@ -181,7 +181,7 @@ const P2 = wavePanel($('#wv2'), 2);
 const tPh2 = wt('PH2', 'second') - 0.2;
 const thP = t => TAU * 0.5 * (t - tPh);
 const wP = [{ A: () => 130, th: thP }, { A: () => 130, th: t => thP(t) + Math.PI / 2 }];
-const phLab = [P2.lab(342, 122, 'CH1 · WAVE 1', CH1), P2.lab(924, 122, 'CH2 · WAVE 2, AHEAD', AM, { 'text-anchor': 'end' })];
+const phLab = [P2.lab(342, 484, 'CH1 · WAVE 1', CH1), P2.lab(924, 484, 'CH2 · WAVE 2, AHEAD', AM, { 'text-anchor': 'end' })];
 const gapB = bracketH(P2.sv, '#FFFFFF'), gapT = P2.lab(0, 0, '90° = T/4', '#FFFFFF', { 'font-size': 20, 'font-weight': 600, 'text-anchor': 'middle' });
 const phE = [html($('#phL'), 36, 250, K(`${tc('#5F7399', 'v_1')} = ${kE('V_m')} \\sin \\omega t`), 34), html($('#phL'), 36, 318, K(`${tc('#B7791F', 'v_2')} = ${kE('V_m')} \\sin(\\omega t + 90^\\circ)`), 34)];
 const phBox = document.createElement('div'); phBox.className = 'hbox'; phBox.style.cssText = 'left:24px;top:420px;width:552px;height:96px'; $('#phL').appendChild(phBox);
@@ -235,7 +235,7 @@ const tSol = [wt('A2', 'So'), wt('A3', 'Omega'), wt('A3', 'so'), wt('A4', 'T')];
 /* ================= F: formula card + next ================= */
 const fc = PUC.fcard($('#sF'), { x: 410, y: 248, w: 1100, h: 492, y0: 92, dy: 104, title: 'AC waveform · formula card', txt: [0, 0, 1, 1],
   lines: [K(`${kE('v')} = ${kE('V_m')} \\sin(\\omega t + \\phi)`),
-    K(`\\omega = 2\\pi f \\qquad f = \\dfrac{1}{T}`),
+    K(`\\omega = 2\\pi f \\qquad f = 1/T`),
     'Amplitude <b>V<sub>m</sub></b>: the peak · Period <b>T</b>: one cycle · <b>f</b>: cycles per second (Hz)',
     'Mains in India: 230 V, 50 Hz, so T = 20 ms'] });
 const nx = PUC.next($('#sF'), { label: 'NEXT · EP 14', topic: 'RMS and average values', y: 764 });
@@ -294,8 +294,8 @@ M.on(t => {
     fadeAt(ckL, t, wt('G1', 'source'), 0.3);
     const th = thB(t), A = Apx(t), v = A * Math.sin(th);
     eB.set(-(A / 3) * Math.cos(th) + (A / 3), t >= tRot);
-    const L = 1.1 * v; iArr.set(288 - L / 2, 52 + 0, 288 + L / 2, 52); iLab.style.opacity = M.clamp((t - tRot) / 0.3) * M.clamp(Math.abs(L) / 20);
-    PUC.attr(iLab, 'y', 36);
+    const L = 1.1 * v; iArr.set(288 - L / 2, 84, 288 + L / 2, 84); iLab.style.opacity = M.clamp((t - tRot) / 0.3) * M.clamp(Math.abs(L) / 20);
+    PUC.attr(iLab, 'y', 72);
     M.vis($('#ro1'), t, wt('G1', 'drives'), 1e9, { dy: 12 });
     const Vm = A / 11, f = 100 * fB(t);
     M.setT($('#rA'), Vm.toFixed(1)); M.setT($('#rF'), f.toFixed(0)); M.setT($('#rT'), (1000 / f).toFixed(1));
