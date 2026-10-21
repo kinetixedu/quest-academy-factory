@@ -1,0 +1,42 @@
+H1|0.35|Aarav pulls his charger out of the wall. But its little indicator light keeps glowing for a moment.
+H2|0.5|The power is gone. So where is that light getting its energy from? A capacitor.
+I1|0.35|A capacitor is two metal plates, facing each other, with an insulator in between.
+I2|0.35|The insulator is called the dielectric. It can be air, paper, mica, plastic or ceramic.
+I3|0.65|Its symbol is just that. Two short parallel lines, with a gap between them.
+B1|0.35|Let's charge one on the breadboard. A battery, a switch, a resistor and a capacitor.
+B2|0.35|Close the switch. Electrons rush from the battery onto the bottom plate.
+B3|0.35|At the same time, electrons leave the top plate and flow to the battery. So the top plate turns positive.
+B4|0.35|Notice that no electron jumps across the gap. The dielectric does not let them through.
+B5|0.65|Watch the scope. The capacitor voltage climbs fast, then slower and slower, until it equals the battery voltage. Then the current stops.
+B6|0.35|Now flip the switch over to a small lamp.
+B7|0.65|The stored charge flows back out through the lamp. The lamp glows, and the voltage on the scope falls away. That is the charger's glowing light.
+C1|0.35|So how much charge can a capacitor hold?
+C2|0.7|Double the voltage, and you double the charge. Q is proportional to V.
+C3|0.7|So Q equals C times V. The constant C is the capacitance.
+C4|0.7|C equals Q over V. Capacitance is the charge stored for every volt.
+C5|0.65|Charge in coulombs, voltage in volts. So capacitance is in coulombs per volt, called the farad, after Michael Faraday.
+C6|0.65|One farad is huge. Real capacitors are measured in microfarads, nanofarads and picofarads.
+P1|0.35|What decides the capacitance? Look at a parallel plate capacitor.
+P2|0.35|Make the plates bigger, and there is room for more charge. C grows with the area A.
+P3|0.35|Bring the plates closer, and the opposite charges pull harder on each other. C grows as the gap d shrinks.
+P4|0.7|In air, C equals epsilon nought times A, divided by d.
+P5|0.7|Epsilon nought is the permittivity of free space, eight point eight five times ten to the minus twelve farads per metre.
+P6|0.65|Now slide in a dielectric. It multiplies the capacitance by K, the dielectric constant. So C equals K epsilon nought A over d.
+ST|0.8|Bigger plates, closer together, more capacitance.
+W1|0.35|Worked example. Two plates, ten centimetres by ten centimetres, are one millimetre apart in air.
+W2|0.35|The area is zero point zero one square metres. The gap is one times ten to the minus three metres.
+W3|0.7|C equals eight point eight five times ten to the minus twelve, times zero point zero one, over ten to the minus three.
+W4|0.7|That is eight point eight five times ten to the minus eleven farads. About eighty eight picofarads.
+W5|0.65|Fill the gap with a dielectric of K equals five, and it becomes about four hundred and forty picofarads.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think a higher voltage gives a bigger capacitance. It does not.
+X3|0.65|Double the voltage, and the charge doubles. Q over V stays the same. Capacitance depends only on A, d and K.
+X4|0.35|Where is this asked? JEE Main and NEET ask for the new capacitance when plates move or a dielectric goes in.
+X5|0.65|PUC board papers ask you to define capacitance and its unit, and to use C equals K epsilon nought A over d.
+Q1|5.4|Try this. A parallel plate capacitor has plates of area zero point zero two square metres, half a millimetre apart, filled with a dielectric of K equals four. It is charged to fifty volts. What charge does it store?
+A1|0.35|B. About seventy one nanocoulombs.
+A2|0.35|First, C equals K epsilon nought A over d. That is about one point four two nanofarads.
+A3|0.35|Then Q equals C times V.
+A4|0.65|One point four two nanofarads times fifty volts is about seventy point eight nanocoulombs.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, capacitor types and ratings. Why does a capacitor carry a voltage on its label?

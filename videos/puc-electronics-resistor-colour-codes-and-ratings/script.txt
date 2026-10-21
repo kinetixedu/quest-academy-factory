@@ -1,0 +1,55 @@
+H1|0.35|Aarav opens an old radio. Inside are tiny beads with coloured stripes, and not a single number.
+H2|0.5|So how do you know what each one is? The stripes are the label.
+I1|0.35|These beads are resistors. A resistor's job is to limit the current in a circuit.
+I2|0.35|They are too small for printed numbers, and printed numbers can rub off or hide on the far side.
+I3|0.65|Colour bands go all the way around, so you can read them from any side. This is the resistor colour code.
+D1|0.35|Ten colours stand for the ten digits.
+D2|0.35|Black is zero, brown one, red two, orange three, yellow four.
+D3|0.35|Green five, blue six, violet seven, grey eight, white nine.
+D4|0.65|To remember the order, say: B, B, Roy of Great Britain had a Very Good Wife. Each capital letter starts a colour.
+D5|0.35|Two more colours are never digits. Gold and silver.
+D6|0.65|They show up only as a multiplier, or as the tolerance.
+R1|0.35|Now, how do you read a four band resistor?
+R2|0.35|First, turn it so the gold or silver band is on the right. It usually sits a little apart from the others.
+R3|0.7|The first band is the first digit. The second band is the second digit.
+R4|0.7|The third band is the multiplier. It tells you how many zeros to add.
+R5|0.7|The fourth band is the tolerance. It tells you how close the real value can be to the marked value.
+R6|0.65|So R equals the two digits, times ten to the power of the multiplier, plus or minus the tolerance. Resistance is in ohms.
+B1|0.35|Let's test one on the breadboard.
+B2|0.35|Yellow, violet, red, gold.
+B3|0.35|Yellow is four, violet is seven. Red means two zeros.
+B4|0.65|That is four thousand seven hundred ohms, or four point seven kilo ohms, plus or minus five percent.
+B5|0.35|Connect it to a nine volt battery. The meter shows about one point nine milliamperes.
+B6|0.35|Now swap in brown, black, orange. One, zero, and three zeros. Ten kilo ohms.
+B7|0.65|The current drops to zero point nine milliamperes. Watch the scope step down as the resistance goes up.
+T1|0.35|So what does plus or minus five percent really mean?
+T2|0.35|Five percent of four thousand seven hundred is two hundred and thirty five ohms.
+T3|0.35|So the real value can be anywhere from four thousand four hundred and sixty five, to four thousand nine hundred and thirty five ohms.
+T4|0.65|Measure a batch, and each one should land inside that window. Gold means five percent, silver ten percent, and no band at all means twenty percent.
+ST|0.8|The first two bands are digits. The third band counts the zeros.
+V1|0.35|Precise circuits use five band resistors.
+V2|0.35|Here the first three bands are digits, the fourth is the multiplier, and the fifth is the tolerance.
+V3|0.65|Brown, black, black, red, brown. One, zero, zero, times one hundred. Ten kilo ohms, plus or minus one percent.
+P1|0.35|There is one more rating, and it is not in the colours. The power rating.
+P2|0.35|Current through a resistor makes heat. Too much heat, and it burns out.
+P3|0.7|Power is voltage times current. P equals V times I.
+P4|0.7|By Ohm's law, V equals I times R.
+P5|0.7|So P equals I squared R. Or, using the voltage, P equals V squared over R.
+P6|0.65|Power is in watts. Common ratings are one eighth, one quarter, one half, one and two watts. A bigger body can get rid of more heat.
+W1|0.35|Worked example. A brown, black, red resistor is rated one quarter of a watt.
+W2|0.35|Brown one, black zero, red two zeros. That is one thousand ohms.
+W3|0.7|For the largest current, I squared R equals P. So I equals the square root of P over R.
+W4|0.7|That is the square root of zero point two five, over one thousand.
+W5|0.65|About fifteen point eight milliamperes. Push more current than that, and the resistor overheats.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students read the third band as a third digit. Red, violet, orange becomes two seven three ohms. Wrong.
+X3|0.65|In a four band resistor, the third band is the multiplier. Red, violet, orange is twenty seven times ten cubed. Twenty seven kilo ohms.
+X4|0.35|Where is this asked? JEE Main and NEET have asked students to decode colour bands, and to find a safe current from the power rating.
+X5|0.65|PUC board papers ask for the colour table, decoding a resistor, and the meaning of tolerance and power rating.
+Q1|5.4|Try this. A resistor has bands green, blue, red, gold, and is rated half a watt. What is the largest current it can safely carry?
+A1|0.35|B. About nine point four milliamperes.
+A2|0.35|Green five, blue six, red two zeros. That is five thousand six hundred ohms.
+A3|0.35|I equals the square root of P over R.
+A4|0.65|The square root of zero point five, over five thousand six hundred, is about nine point four five milliamperes.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, capacitors and capacitance. How does a tiny part store charge, and let it out later?

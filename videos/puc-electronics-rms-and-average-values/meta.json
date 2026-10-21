@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "RMS and Average Values",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 14
+ },
+ "class": "11",
+ "title": "RMS and Average Values Explained Simply | PUC Electronics Class 11",
+ "description": "Aarav's room heater is labelled 230 V, but on a scope the mains voltage swings up to about 325 V and down to -325 V. So which number is the real voltage? Both are real. They are different kinds of values, and this animated lesson shows exactly what each one means.\n\nOn a live breadboard, the same heater coil runs on an alternating supply and on a battery. We turn the battery up until both coils make the same heat every second: that steady DC is the RMS value, 0.707 of the peak. We derive Vrms = Vm/root 2 step by step (square, mean, root), flatten one hump of the wave to find the half-cycle average 2Vm/pi = 0.637 Vm, and meet the form factor (1.11) and the peak factor (1.414). Then a worked example on the 230 V mains (325 V peak, 207 V average, 650 V peak to peak), the exam trap (full-cycle average is zero), where it is asked, an original JEE Main pattern practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 14 of PUC Electronics, Class 11, Chapter 2: Principles of Electricity, Network Theorems and AC Principles (Karnataka PUC Electronics).\n\nIn this video:\n0:00 230 V on the label, 325 V on the scope\n0:17 Peak, peak to peak and the zero average\n0:45 Breadboard: alternating supply vs battery, same heat\n1:25 RMS is the steady DC that gives the same heat\n1:30 Deriving Vrms = Vm/root 2\n2:20 Average value, form factor and peak factor\n2:58 Worked example: the 230 V mains\n3:27 Exam trap: full cycle vs half cycle\n3:46 Where it is asked\n3:58 Practice question\n4:33 Formula card\n\nNext episode: Inductive and Capacitive Reactance.\n\nVideo by Quest Academy.",
+ "tags": [
+  "rms value",
+  "average value of ac",
+  "rms and average values",
+  "peak value",
+  "form factor",
+  "peak factor",
+  "Vrms = Vm/root 2",
+  "0.707 and 0.637",
+  "230 V mains peak voltage",
+  "PUC electronics",
+  "1st PUC electronics chapter 2",
+  "Karnataka PUC electronics",
+  "AC principles",
+  "class 11 electronics"
+ ],
+ "thumb": {
+  "title": "RMS Value Made Simple",
+  "accent_word": "RMS",
+  "frame_t": 78.1
+ }
+}

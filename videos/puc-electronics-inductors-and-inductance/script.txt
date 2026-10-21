@@ -1,0 +1,45 @@
+H1|0.35|Aarav pulls the plug of a running mixer. A tiny blue spark jumps at the socket.
+H2|0.5|Where did a spark strong enough to jump through air come from? From a coil inside the motor.
+I1|0.35|A coil of wire is called an inductor. Its value is called inductance.
+I2|0.35|Its symbol is a row of loops. Two straight lines beside it mean it has an iron core.
+I3|0.65|Current through a coil makes a magnetic field, and that field passes through every turn of the coil.
+B1|0.35|Let's compare two lamps on the breadboard. One lamp has a resistor in series. The other has a coil.
+B2|0.35|Close the switch. The resistor lamp lights at once.
+B3|0.35|But the coil lamp brightens slowly. On the scope, its current rises in a smooth curve.
+B4|0.65|The coil is fighting the change. As the current grows, its magnetic field grows, and the changing field pushes back.
+B5|0.35|Now open the switch. The current tries to drop to zero in an instant. The coil fights again.
+B6|0.65|The scope shows a sharp spike of voltage across the coil. That spike is the spark at Aarav's socket.
+D1|0.35|So how strong is that push back?
+D2|0.7|The flux through the coil is proportional to the current. So N times phi equals L times I.
+D3|0.7|L is the self inductance. L equals N phi over I.
+D4|0.7|By Faraday's law, a changing flux induces an E M F. So the E M F equals minus L times d I by d t.
+D5|0.7|The minus sign is Lenz's law. The induced E M F always opposes the change in current.
+D6|0.65|E M F in volts, rate of change in amperes per second. So L is in volt seconds per ampere, called the henry, after Joseph Henry.
+D7|0.65|One henry means one volt is induced, when the current changes by one ampere every second.
+S1|0.35|What decides the inductance of a coil?
+S2|0.7|For a long coil, L equals mu nought, times N squared, times A, divided by l.
+S3|0.7|N is the number of turns. A is the area of each turn. And l is the length of the coil.
+S4|0.7|Mu nought is the permeability of free space, four pi times ten to the minus seven henry per metre.
+S5|0.65|Put an iron core inside, and L is multiplied by mu r, the relative permeability of the core. That can be hundreds of times larger.
+T1|0.35|That gives us the main types of inductors.
+T2|0.35|Air core inductors have small inductance, and suit high frequencies, like radio circuits.
+T3|0.35|Iron core inductors, often called chokes, have large inductance, and suit low frequencies, like power supplies.
+T4|0.35|Ferrite core inductors use a magnetic ceramic. They pack more inductance into a small size, and still work at high frequencies.
+T5|0.65|Variable inductors have a core that screws in and out, to tune the value.
+ST|0.8|An inductor does not stop current. It fights sudden changes in current.
+W1|0.35|Worked example. An air core coil has five hundred turns. It is twenty five centimetres long, and each turn has an area of four square centimetres.
+W2|0.7|N squared is two point five times ten to the five. A is four times ten to the minus four square metres. And l is zero point two five metres.
+W3|0.7|L equals four pi times ten to the minus seven, times two point five times ten to the five, times four times ten to the minus four, over zero point two five.
+W4|0.65|That is about five times ten to the minus four henry. Half a millihenry.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think doubling the turns doubles the inductance. It does not.
+X3|0.65|L depends on N squared. Double the turns, keep the same length and area, and L becomes four times larger.
+X4|0.35|Where is this asked? JEE Main and NEET ask for L from N phi equals L I, or from the E M F when the current changes.
+X5|0.65|PUC board papers ask you to define self inductance and the henry, and to describe the types of inductors.
+Q1|5.4|Try this. The current in a forty millihenry coil falls steadily from three amperes to one ampere in four milliseconds. What E M F is induced?
+A1|0.35|B. Twenty volts.
+A2|0.35|The current changes by two amperes, in four times ten to the minus three seconds.
+A3|0.35|So d I by d t is five hundred amperes per second.
+A4|0.65|The E M F is L times d I by d t. Zero point zero four times five hundred is twenty volts.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, energy storage in passive components. Where does the energy hide, in a capacitor and in a coil?

@@ -1,0 +1,44 @@
+H1|0.35|Aarav cycles past a grey box on an electric pole near his college. It hums softly.
+H2|0.35|The wires going in carry about eleven thousand volts. The wires going out to homes carry about two hundred and thirty.
+H3|0.6|How does a box with no moving parts change the voltage?
+I1|0.35|That box is a transformer. Inside are two coils of wire, wound on one iron core.
+I2|0.35|The coil that takes in the supply is the primary. The coil that gives the output is the secondary.
+I3|0.65|The two coils never touch. They are linked only by magnetism. This is called mutual induction.
+B1|0.35|Let's build one on the breadboard.
+B2|0.35|An alternating current in the primary makes a magnetic flux in the core. The flux keeps changing.
+B3|0.35|That changing flux passes through the secondary, and induces a voltage there.
+B4|0.65|The output has the same frequency as the input. Only its size changes.
+B5|0.35|Here the primary has five hundred turns, and the secondary has one hundred. Two hundred and thirty volts in, forty six volts out.
+B6|0.35|Now give the secondary one thousand turns, more than the primary. The output rises to four hundred and sixty volts.
+B7|0.65|Fewer turns on the secondary makes a step down transformer. More turns makes a step up transformer.
+B8|0.35|Now try a battery. The flux builds up once, then stays still.
+B9|0.65|A steady flux induces nothing. So the output is zero. A transformer works only on alternating current.
+T1|0.8|No change in flux, no output.
+D1|0.35|Now the transformer equation.
+D2|0.7|Every turn of wire, on either coil, gets the same voltage from the changing flux.
+D3|0.7|So the voltage across a coil is proportional to its number of turns.
+D4|0.7|V s over V p equals N s over N p. This is called the turns ratio.
+D5|0.7|In an ideal transformer, no energy is lost. Power in equals power out. So V p I p equals V s I s.
+D6|0.65|That means I s over I p equals N p over N s. When the voltage steps up, the current steps down by the same factor.
+W1|0.35|Worked example. A transformer has two thousand turns on the primary and one hundred on the secondary. The input is two hundred and thirty volts.
+W2|0.6|The turns ratio is one hundred over two thousand, one twentieth. So the output is two hundred and thirty over twenty. Eleven point five volts.
+W3|0.65|If the secondary gives two amperes, the primary takes only one twentieth of that. Zero point one amperes.
+L1|0.35|Real transformers do lose a little energy.
+L2|0.35|Copper loss, as heat in the coils. Eddy current loss, from small swirling currents in the core.
+L3|0.35|That is why the core is made of thin insulated sheets, called laminations.
+L4|0.35|Hysteresis loss, as the core is magnetised back and forth. And flux leakage, when some flux misses the secondary.
+L5|0.65|Efficiency is output power divided by input power. Large transformers are very efficient, but never one hundred percent.
+P1|0.35|So why send power at high voltage? For the same power, a higher voltage needs a smaller current.
+P2|0.65|The heat lost in the wires is I squared R. Ten times less current means one hundred times less loss.
+P3|0.65|So power stations step the voltage up, and transformers near our homes step it down. Transformers also work in power supplies, welding machines and doorbells.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think a step up transformer also steps up the power.
+X3|0.65|It does not. The voltage goes up, but the current goes down. Power out is never more than power in.
+X4|0.65|Where is this asked? In PUC board papers, and in JEE Main. Use the turns ratio, find currents, or find the efficiency.
+Q1|5.4|Try this. A transformer has four hundred primary turns and two thousand secondary turns, on a two hundred and thirty volt supply. It is ninety percent efficient. If the primary current is five amperes, what is the secondary current?
+A1|0.35|A. Zero point nine amperes.
+A2|0.35|The turns ratio is five, so the output is one thousand one hundred and fifty volts.
+A3|0.35|Input power is two hundred and thirty times five, which is one thousand one hundred and fifty watts. Ninety percent of that is one thousand and thirty five watts.
+A4|0.65|Divide by one thousand one hundred and fifty volts. The secondary current is zero point nine amperes.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, a new chapter. Voltmeters and ammeters, for direct and alternating current. How does a meter know how much current is flowing?

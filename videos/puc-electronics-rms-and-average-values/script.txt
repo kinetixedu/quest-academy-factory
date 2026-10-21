@@ -1,0 +1,45 @@
+H1|0.35|Aarav reads the label on his room heater. Two hundred and thirty volts.
+H2|0.35|But on a scope, the mains voltage swings up to about three hundred and twenty five volts, then down to minus three hundred and twenty five.
+H3|0.6|So which number is the real voltage?
+P1|0.35|It starts with one problem. An alternating voltage never sits still.
+P2|0.35|Its highest point is called the peak value, V m.
+P3|0.35|From the top to the bottom is the peak to peak value. That is two V m.
+P4|0.35|Now try to find its average. Every positive half has a matching negative half.
+P5|0.65|Over one full cycle, they cancel. The average is zero. Yet this voltage clearly heats a heater. So we need better values.
+B1|0.35|Let's test it on the breadboard.
+B2|0.35|Here is a heater coil on an alternating supply with a peak of ten volts.
+B3|0.35|Watch the electrons. They just rock back and forth. But the coil still gets hot.
+B4|0.35|Below it, the same coil on a DC battery. Let's turn the battery up slowly.
+B5|0.35|At five volts, it makes less heat than the top coil.
+B6|0.35|At ten volts, the peak value, it makes twice as much.
+B7|0.35|At seven point zero seven volts, both coils make exactly the same heat every second.
+B8|0.65|So this alternating voltage is worth seven point zero seven volts of DC. That number is its RMS value.
+T1|0.8|The RMS value is the steady DC that gives the same heat.
+R1|0.35|Why seven point zero seven? Let's work it out.
+R2|0.7|Heat every second is power. For a resistor, P equals v squared over R.
+R3|0.7|Here, v equals V m sine omega t. So the power is V m squared, times sine squared omega t, over R.
+R4|0.7|Squaring makes every value positive. And on average, sine squared is exactly one half.
+R5|0.7|So the average power is V m squared over two R.
+R6|0.7|A battery of voltage V gives V squared over R. Set the two equal.
+R7|0.7|V equals V m divided by root two. That is zero point seven zero seven times the peak.
+R8|0.65|Square it, take the mean, then the root. That is why it is called the root mean square value. Current follows the same rule.
+G1|0.35|Now, the average value. Over a full cycle it is zero, so we average over one half cycle.
+G2|0.35|Take one hump of the wave. Flatten it into a rectangle with the same area and the same width.
+G3|0.7|The height of that rectangle is the average value. It is two V m over pi, or zero point six three seven times the peak.
+G4|0.7|Two more numbers link these values. The form factor is RMS divided by average. For a sine wave, it is one point one one.
+G5|0.65|The peak factor is peak divided by RMS. That is root two, about one point four one four.
+W1|0.35|Worked example. Back to Aarav's charger. Two hundred and thirty volts is the RMS value.
+W2|0.6|The peak is two hundred and thirty times root two. That is about three hundred and twenty five volts.
+W3|0.6|The half cycle average is zero point six three seven times the peak. About two hundred and seven volts.
+W4|0.65|And peak to peak, it is about six hundred and fifty volts. So both numbers were real. They just measure different things.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students write that the average value of a sine wave is zero point six three seven V m. Over a full cycle, that is wrong.
+X3|0.65|Over a full cycle the average is zero. Zero point six three seven V m is the average over half a cycle.
+X4|0.65|Where is this asked? In PUC board papers, and in JEE Main. Convert peak, RMS and average values, find form factor, or find the heat in a resistor.
+Q1|5.4|Try this. A sine wave voltage with a peak of two hundred volts is applied across a fifty ohm resistor. How much heat is produced in one minute?
+A1|0.35|B. Twenty four kilojoules.
+A2|0.35|First, the RMS voltage squared is the peak squared over two. That is twenty thousand.
+A3|0.35|Power is that divided by fifty ohms. Four hundred watts.
+A4|0.65|Heat is power times time. Four hundred times sixty seconds is twenty four thousand joules.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, inductive and capacitive reactance. Why does a capacitor block DC, but let alternating current through?

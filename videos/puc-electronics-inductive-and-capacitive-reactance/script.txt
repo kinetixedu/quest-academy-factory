@@ -1,0 +1,43 @@
+H1|0.35|Aarav opens an old speaker box. Inside are two speakers, a big one and a tiny one.
+H2|0.35|The tiny one only plays the high notes. And the only part in its path is a capacitor.
+H3|0.6|How can one small part sort sounds by pitch?
+I1|0.35|A resistor opposes current the same way at every frequency.
+I2|0.35|But coils and capacitors are different. Their opposition changes with frequency.
+I3|0.65|This opposition is called reactance. It is measured in ohms, just like resistance.
+B1|0.35|Let's see it on the breadboard.
+B2|0.35|Here is an inductor, a coil of wire, on an alternating supply of ten volts.
+B3|0.35|At fifty hertz, about three hundred and eighteen milliamperes flow.
+B4|0.35|Now turn the frequency up. The current falls.
+B5|0.65|At five hundred hertz, only about thirty two milliamperes. The coil fights fast changes.
+B6|0.65|Look at the scope too. The current peaks a quarter cycle after the voltage. In an inductor, current lags voltage by ninety degrees.
+B7|0.35|Now swap in a capacitor. At fifty hertz, only about thirty one milliamperes flow.
+B8|0.35|Turn the frequency up, and the current rises. Ten times the frequency, ten times the current.
+B9|0.65|And here, the current peaks a quarter cycle before the voltage. In a capacitor, current leads voltage by ninety degrees.
+T1|0.8|Coils fight fast changes. Capacitors let them through.
+D1|0.35|Now let's find the formulas.
+D2|0.7|A coil makes a back voltage when its current changes. v equals L, times the rate of change of current.
+D3|0.7|For a sine wave, that rate grows with omega, which is two pi f.
+D4|0.7|So the peak voltage is omega L times the peak current. This omega L is the inductive reactance. X L equals two pi f L.
+D5|0.7|A capacitor stores charge. q equals C v. Current is how fast that charge changes, so i equals C, times the rate of change of v.
+D6|0.7|Faster changes push more current. So the peak current is omega C times the peak voltage.
+D7|0.7|The capacitive reactance is one over omega C. X C equals one over two pi f C.
+D8|0.65|L in henry, C in farad, f in hertz. Both reactances come out in ohms.
+G1|0.35|Now plot them against frequency.
+G2|0.35|X L is a straight line. Double the frequency, double the reactance.
+G3|0.35|X C is a curve that falls. Double the frequency, half the reactance.
+G4|0.65|For DC, the frequency is zero. So a coil acts like a plain wire, and a capacitor blocks DC completely.
+G5|0.65|Back to the speaker box. For low notes, the capacitor's reactance is high. For high notes it is low, so they reach the tiny speaker.
+W1|0.35|Worked example. A ten microfarad capacitor is connected to the two hundred and thirty volt, fifty hertz mains.
+W2|0.6|X C equals one, over two pi, times fifty, times ten to the minus five. That is about three hundred and eighteen ohms.
+W3|0.65|The current is two hundred and thirty divided by three hundred and eighteen. About zero point seven two amperes.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think every reactance rises with frequency, like X L does.
+X3|0.65|Not X C. It is one over two pi f C, so it falls as frequency rises. And for DC, it becomes infinite.
+X4|0.65|Where is this asked? In PUC board papers, and in JEE Main. Find X L or X C, see how the current changes with frequency, or state the phase.
+Q1|5.4|Try this. At fifty hertz, an inductor has a reactance of forty ohms, and a capacitor has a reactance of one hundred and sixty ohms. At what frequency will their reactances be equal?
+A1|0.35|B. One hundred hertz.
+A2|0.35|X L grows with frequency. At f, it is forty, times f over fifty.
+A3|0.35|X C falls with frequency. At f, it is one hundred and sixty, times fifty over f.
+A4|0.65|Set them equal. f squared is four times fifty squared, so f is one hundred hertz.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, impedance and resonance. What happens when a coil and a capacitor share one circuit?

@@ -1,0 +1,44 @@
+H1|0.35|Aarav's ceiling fan hums, but it will not start spinning. Give it a push, and off it goes.
+H2|0.5|The electrician swaps one small box. Its label says two point five microfarads, four hundred and forty volts. What do those numbers mean?
+T1|0.35|Capacitors come in two big families. Fixed and variable.
+T2|0.35|A fixed capacitor has one value that never changes. Each type is named after its dielectric.
+T3|0.35|Ceramic capacitors are small and cheap. They hold small values, in picofarads and nanofarads, and they work well at high frequencies.
+T4|0.35|Mica capacitors are very stable and accurate, so they are used where the value must not drift.
+T5|0.35|Paper and plastic film capacitors are long sheets, rolled up tight. They hold nanofarads up to a few microfarads.
+T6|0.35|Electrolytic capacitors hold the most. From about one microfarad to thousands of microfarads, in a small can.
+T7|0.65|But an electrolytic capacitor has a plus lead and a minus lead. It must go in the right way round.
+V1|0.35|A variable capacitor lets you change the value.
+V2|0.35|In a gang capacitor, one set of metal plates turns into the gaps of another set. Air is the dielectric.
+V3|0.7|Remember, C equals K epsilon nought A over d. Turning the knob changes the overlap area A, so C changes with it.
+V4|0.65|A trimmer is a tiny variable capacitor. You set it once, with a screwdriver, and leave it.
+B1|0.35|Let's tune a radio on the breadboard. The gang capacitor sits with a coil, in a tuned circuit.
+B2|0.35|Turn the knob. The plates overlap more, and the area grows.
+B3|0.35|The capacitance climbs from fifty to four hundred picofarads.
+B4|0.35|Watch the scope. As C goes up, the tuned wave slows down. Its frequency falls, from about fourteen hundred to five hundred kilohertz.
+B5|0.65|That is how one knob picks one station at a time.
+R1|0.35|Now, the ratings printed on a capacitor.
+R2|0.35|First, the capacitance and its tolerance. Just like a resistor, the real value can differ from the marked value.
+R3|0.35|Second, the working voltage. It is the highest voltage the dielectric can safely take. Go above it, and the dielectric can break down.
+R4|0.65|So always choose a working voltage higher than the voltage in your circuit.
+R5|0.35|Third, polarity, for electrolytic capacitors. A stripe with minus signs marks the negative lead. The longer lead is positive.
+R6|0.65|Fit it backwards, and it can heat up, leak, or even burst.
+R7|0.65|So the fan label means two point five microfarads, safe up to four hundred and forty volts.
+ST|0.8|Value, voltage, polarity. Check all three.
+D1|0.35|Small ceramic and film capacitors often carry a three digit code, in picofarads.
+D2|0.7|The first two digits are the value. The third digit is the number of zeros.
+D3|0.65|A letter after it gives the tolerance. J is five percent, K is ten percent, and M is twenty percent.
+W1|0.35|Worked example. A ceramic capacitor is marked four seven three J.
+W2|0.7|Four, seven, then three zeros. Forty seven thousand picofarads.
+W3|0.7|A thousand picofarads make one nanofarad. So that is forty seven nanofarads, or zero point zero four seven microfarads.
+W4|0.65|And J means plus or minus five percent.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students read one zero four as one hundred and four picofarads. Wrong.
+X3|0.65|The last digit counts the zeros. One zero four is ten, with four zeros. A hundred thousand picofarads. That is one hundred nanofarads, or zero point one microfarads.
+X4|0.65|Where is this asked? In PUC board papers. Name and compare the types, explain the working voltage and polarity, or decode a capacitor code.
+Q1|5.4|Try this. A ceramic capacitor is marked two two three K. What is its value?
+A1|0.35|B. Twenty two nanofarads, plus or minus ten percent.
+A2|0.35|Two, two, then three zeros. Twenty two thousand picofarads.
+A3|0.35|A thousand picofarads make one nanofarad. So that is twenty two nanofarads.
+A4|0.65|And K means plus or minus ten percent.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, inductors and inductance. Why does a coil fight every change in current?

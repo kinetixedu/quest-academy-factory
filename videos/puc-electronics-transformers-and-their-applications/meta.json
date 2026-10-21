@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "Transformers and Their Applications",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 17
+ },
+ "class": "11",
+ "title": "How a Transformer Works Explained Simply | PUC Electronics Class 11",
+ "description": "Aarav cycles past a grey box on an electric pole. About 11,000 volts go in, about 230 volts go out to homes, and nothing inside moves. How? It is a transformer: two coils on one iron core, linked only by magnetism (mutual induction).\n\nOn a live breadboard an alternating current in the primary makes a changing magnetic flux that induces a voltage in the secondary, while the oscilloscope shows the same frequency in and out. With 500 and 100 turns, 230 V becomes 46 V; with 1000 secondary turns it becomes 460 V (step down and step up). Then we try a battery: a steady flux induces nothing, so a transformer works only on alternating current. We derive Vs/Vp = Ns/Np and Is/Ip = Np/Ns step by step, work out a 2000 to 100 turn transformer (230 V to 11.5 V), see the energy losses (copper, eddy current and why the core is laminated, hysteresis, flux leakage) and efficiency, and why power is sent at high voltage (ten times the voltage, one hundredth of the heat loss). Then the exam trap (a step up transformer does not step up power), where it is asked, an original JEE Main pattern practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 17 of PUC Electronics, Class 11, Chapter 2: Principles of Electricity, Network Theorems and AC Principles (Karnataka PUC Electronics).\n\nIn this video:\n0:00 The humming box on the pole\n0:19 Inside a transformer: primary, secondary, core\n0:38 Breadboard: step down, step up and a battery\n1:33 No change in flux, no output\n1:36 The transformer equation\n2:13 Worked example: 230 V to 11.5 V\n2:40 Energy losses and efficiency\n3:11 Why power travels at high voltage\n3:36 Exam trap: voltage up, power not\n3:49 Where it is asked\n3:59 Practice question\n4:46 Formula card\n\nNext episode: AC and DC Voltmeters and Ammeters.\n\nVideo by Quest Academy.",
+ "tags": [
+  "transformer",
+  "how a transformer works",
+  "mutual induction",
+  "turns ratio",
+  "step up and step down transformer",
+  "Vs/Vp = Ns/Np",
+  "transformer efficiency",
+  "eddy current loss laminated core",
+  "power transmission high voltage",
+  "transformer works only on AC",
+  "PUC electronics",
+  "1st PUC electronics chapter 2",
+  "Karnataka PUC electronics",
+  "class 11 electronics"
+ ],
+ "thumb": {
+  "title": "How a Transformer Works",
+  "accent_word": "Transformer",
+  "frame_t": 69.3
+ }
+}

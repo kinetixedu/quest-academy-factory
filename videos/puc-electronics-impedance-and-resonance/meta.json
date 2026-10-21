@@ -1,0 +1,31 @@
+{
+ "world": "puc-electronics",
+ "topic": "Impedance and Resonance",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 16
+ },
+ "class": "11",
+ "title": "Impedance and Resonance Explained Simply | PUC Electronics Class 11",
+ "description": "Aarav turns the dial of his grandfather's old radio. The air is full of stations at once, yet one small turn brings in just one of them. How does the radio pick? The answer is a series circuit of a resistor, a coil and a capacitor, and the idea of resonance.\n\nOn a live breadboard we sweep the frequency of a series R L C circuit (10 ohm, 0.1 H, 10 microfarad) and watch XL rise, XC fall and the current peak at about 159 Hz, where the two reactances cancel and only R is left. The current-frequency graph draws itself live while the oscilloscope shows voltage and current coming into phase. We build impedance from voltage arrows (phasors): Z = root of R squared plus (XL - XC) squared, the phase angle tan phi = (XL - XC)/R, and the resonant frequency f0 = 1/(2 pi root LC). Then a worked example (R = 30, XL = 80, XC = 40: Z = 50 ohm, I = 2 A, phi about 53 degrees), how a radio tunes, the exam trap (Z is R at resonance, not zero), where it is asked, an original JEE Main pattern practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 16 of PUC Electronics, Class 11, Chapter 2: Principles of Electricity, Network Theorems and AC Principles (Karnataka PUC Electronics).\n\nIn this video:\n0:00 How does a radio pick one station?\n0:14 Series R L C and impedance\n0:32 Breadboard: sweeping the frequency to resonance\n1:16 At resonance only R is left\n1:21 Deriving Z, the phase angle and f0\n2:19 Worked example: Z = 50 ohm\n2:49 How a radio tunes\n3:03 Exam trap: Z = R, not zero\n3:19 Where it is asked\n3:28 Practice question\n4:14 Formula card\n\nNext episode: Transformers and Their Applications.\n\nVideo by Quest Academy.",
+ "tags": [
+  "impedance",
+  "series LCR circuit",
+  "resonance",
+  "resonant frequency",
+  "f0 = 1/2 pi root LC",
+  "impedance triangle",
+  "phase angle tan phi",
+  "phasor diagram",
+  "radio tuning circuit",
+  "PUC electronics",
+  "1st PUC electronics chapter 2",
+  "Karnataka PUC electronics",
+  "class 11 electronics"
+ ],
+ "thumb": {
+  "title": "How Radios Pick One Station",
+  "accent_word": "One Station",
+  "frame_t": 75.3
+ }
+}

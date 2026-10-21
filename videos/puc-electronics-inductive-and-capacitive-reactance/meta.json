@@ -1,0 +1,31 @@
+{
+ "world": "puc-electronics",
+ "topic": "Inductive and Capacitive Reactance",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 15
+ },
+ "class": "11",
+ "title": "Reactance of L and C Explained Simply | PUC Electronics Class 11",
+ "description": "Aarav opens an old speaker box. The tiny speaker plays only the high notes, and the only part in its path is a capacitor. How can one small part sort sound by pitch? The answer is reactance: the opposition of a coil or a capacitor to alternating current, measured in ohms.\n\nOn a live breadboard we turn up the frequency through a 0.1 H coil and watch the current fall, then swap in a 10 microfarad capacitor and watch it rise, while the oscilloscope shows the current lagging the voltage by 90 degrees in the coil and leading it in the capacitor. We derive XL = 2 pi f L and XC = 1/(2 pi f C) step by step from the slope of the wave, plot both against frequency, see why a coil is a plain wire for DC and a capacitor blocks DC, and work out the current of a 10 microfarad capacitor on the 230 V, 50 Hz mains. Then the exam trap (XC falls as frequency rises), where it is asked, an original JEE Main pattern practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 15 of PUC Electronics, Class 11, Chapter 2: Principles of Electricity, Network Theorems and AC Principles (Karnataka PUC Electronics).\n\nIn this video:\n0:00 The speaker box puzzle\n0:16 What is reactance?\n0:32 Breadboard: a coil and a capacitor as frequency rises\n1:23 Coils fight fast changes, capacitors let them through\n1:27 Deriving XL = 2 pi f L and XC = 1/(2 pi f C)\n2:21 Reactance against frequency, and DC\n2:50 Worked example: a capacitor on the mains\n3:14 Exam trap: XC falls with frequency\n3:30 Where it is asked\n3:42 Practice question\n4:20 Formula card\n\nNext episode: Impedance and Resonance.\n\nVideo by Quest Academy.",
+ "tags": [
+  "inductive reactance",
+  "capacitive reactance",
+  "XL = 2 pi f L",
+  "XC = 1/2 pi f C",
+  "reactance and frequency",
+  "current lags voltage in inductor",
+  "current leads voltage in capacitor",
+  "capacitor blocks DC",
+  "PUC electronics",
+  "1st PUC electronics chapter 2",
+  "Karnataka PUC electronics",
+  "AC principles",
+  "class 11 electronics"
+ ],
+ "thumb": {
+  "title": "Why Capacitors Pick High Notes",
+  "accent_word": "High Notes",
+  "frame_t": 76.9
+ }
+}

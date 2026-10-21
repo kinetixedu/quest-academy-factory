@@ -1,0 +1,146 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Electronics Ep 28 - Capacitor Types and Ratings</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== Breadboard (PUC Electronics) layout ===== */
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.card svg.full{position:absolute;left:0;top:0}
+.big{position:absolute;font:600 56px 'IBM Plex Mono';white-space:nowrap}
+.sm{position:absolute;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.txt{position:absolute;font:500 30px/1.35 Poppins;white-space:nowrap}
+#ghost{top:168px}
+.ro2{position:absolute;left:32px;top:76px;width:576px;display:grid;grid-template-columns:auto 1fr auto;column-gap:18px;row-gap:14px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .k.n{font-style:normal;font-size:24px;font-family:'IBM Plex Mono';letter-spacing:.06em}
+.ro2 .v{font:600 38px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 22px 'IBM Plex Mono';color:var(--mute);white-space:nowrap;min-width:52px}
+.st2{position:absolute;left:36px;display:flex;align-items:center;gap:22px;white-space:nowrap}
+.st2 .n{flex:none;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st2 .sx{font-size:36px}
+.st2 .sx.t{font:600 28px Poppins}
+.st2 .why{font:500 22px Poppins;color:var(--mute)}
+.hb{position:absolute;left:24px;width:736px;border-radius:14px;background:var(--ac2)}
+/* hook */
+#aC{left:160px;top:260px;width:784px;height:600px;overflow:hidden}
+#aImg{position:absolute;left:24px;top:84px;height:516px}
+#thC{left:976px;top:260px;width:784px;height:284px}
+#nwC{left:976px;top:576px;width:784px;height:284px}
+/* types */
+#tree{position:absolute;left:160px;top:256px;width:1600px;height:88px}
+.tt{position:absolute;top:396px;width:376px;height:464px}
+.tt .nm{position:absolute;left:28px;top:236px;font:700 32px Poppins;white-space:nowrap}
+.tt .rg{position:absolute;left:28px;top:290px;font:600 22px 'IBM Plex Mono';color:var(--ink);white-space:nowrap}
+.tt .nt{position:absolute;left:28px;top:330px;width:320px;font:500 22px/1.35 Poppins;color:var(--mute)}
+.tt svg{position:absolute;left:0;top:0}
+/* variable */
+#vL{left:160px;top:260px;width:784px;height:600px}
+#vR{left:976px;top:260px;width:784px;height:600px}
+/* breadboard */
+#ck{left:160px;top:260px;width:928px;height:600px}
+#sc{left:1120px;top:260px;width:640px;height:300px}
+#rb{left:1120px;top:592px;width:640px;height:268px}
+#scS{position:absolute;left:24px;top:76px}
+/* ratings */
+#rL{left:160px;top:260px;width:784px;height:600px}
+#rR{left:976px;top:260px;width:784px;height:600px}
+.rr{position:absolute;left:32px;width:720px;height:104px;border-radius:14px;background:var(--soft);border:2.5px solid var(--soft)}
+.rr .n{position:absolute;left:22px;top:28px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.rr .a{position:absolute;left:90px;top:16px;font:700 28px Poppins;color:var(--ink);white-space:nowrap}
+.rr .b{position:absolute;left:90px;top:58px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+#fanL{position:absolute;left:32px;top:484px;width:720px;height:84px;border-radius:14px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:18px;padding:0 24px;box-sizing:border-box;font:600 26px Poppins;white-space:nowrap}
+#fanL .m{font-family:'IBM Plex Mono';color:var(--ac)}
+/* code */
+#dL{left:160px;top:260px;width:784px;height:600px}
+#dR{left:976px;top:260px;width:784px;height:600px}
+.lc{position:absolute;top:96px;height:56px;padding:0 16px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 26px 'IBM Plex Mono';color:var(--ink);white-space:nowrap}
+.cl{position:absolute;text-align:center;width:150px}
+.cl .a{font:600 18px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.cl .b{font:600 32px 'IBM Plex Mono';color:var(--ink);white-space:nowrap;margin-top:4px}
+/* exam */
+#trap{left:160px;top:260px;width:784px;height:300px}
+#tc{left:976px;top:260px;width:784px;height:300px}
+#wa{left:160px;top:592px;width:1600px;height:268px}
+#mq{left:160px;top:260px;width:1040px;height:600px}
+#so{left:1232px;top:260px;width:528px;height:600px}
+#so .sol{left:32px}
+.fcard .fl{font-size:38px}
+.fcard .fl.txt{font:500 27px Poppins}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · ELECTRONICS · CH 4 PASSIVE ELECTRONIC COMPONENTS</div>
+    <div class="subj" id="subj">BREADBOARD</div>
+    <div id="title">What the capacitor <span class="acc">label</span> says</div>
+    <div id="sub">Capacitor types and ratings</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E8A317" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="ghost" id="ghost">EXAMPLE FIGURES</div>
+
+    <!-- A: hook -->
+    <div class="sc" id="sA">
+      <div class="card" id="aC"><div class="lbl" style="left:32px;top:28px">AARAV · PCME · JEE</div>
+        <img id="aImg" src="../../assets/illustrations/puc/aarav.png" alt="">
+        <svg id="fanS" width="300" height="320" style="position:absolute;left:460px;top:110px"></svg>
+        <div class="pillp bad" id="aPill" style="left:500px;top:480px">Hums, won't start</div><div class="pillp good" id="aPill2" style="left:500px;top:480px">After a push: spins</div></div>
+      <div class="card" id="thC"><div class="lbl" style="left:32px;top:28px">THE PART THE ELECTRICIAN SWAPS</div>
+        <svg id="boxS" width="720" height="200" style="position:absolute;left:32px;top:64px"></svg></div>
+      <div class="card" id="nwC"><div class="lbl" style="left:32px;top:28px">WHAT DO THEY MEAN?</div>
+        <div class="pillp" id="q1" style="left:32px;top:96px;font-family:'IBM Plex Mono'">2.5 µF = ?</div><div class="pillp" id="q2" style="left:32px;top:172px;font-family:'IBM Plex Mono'">440 V = ?</div>
+        <div class="txt" id="qT" style="left:330px;top:120px;color:var(--mute)">Two numbers, two jobs.</div></div>
+    </div>
+
+    <!-- T: types -->
+    <div class="sc" id="sT">
+      <svg id="tree" width="1600" height="88"></svg>
+      <div id="tts"></div>
+    </div>
+
+    <!-- V: variable -->
+    <div class="sc" id="sV">
+      <div class="card" id="vL"><div class="lbl" style="left:32px;top:28px">GANG CAPACITOR · TOP VIEW</div><svg class="full" id="vS" width="784" height="600"></svg></div>
+      <div class="card" id="vR"><div class="lbl" style="left:36px;top:28px">WHY THE VALUE CHANGES</div><div class="hb" id="vBox" style="top:76px;height:120px"></div><div id="vSteps"></div><svg class="full" id="trS" width="784" height="600"></svg></div>
+    </div>
+
+    <!-- B: breadboard -->
+    <div class="sc" id="sB">
+      <div class="card" id="ck"><div class="lbl" style="left:32px;top:28px">TUNED CIRCUIT · RADIO</div><svg class="full" id="ckS" width="928" height="600"></svg></div>
+      <div class="card" id="sc"><div class="lbl" style="left:32px;top:28px">OSCILLOSCOPE</div><div class="tag" id="slowT" style="right:24px;top:22px">SLOW-MOTION VIEW</div><svg id="scS" width="592" height="200"></svg></div>
+      <div class="card" id="rb"><div class="lbl" style="left:32px;top:28px">LIVE READOUT</div><div class="ro2" id="ro1"></div></div>
+    </div>
+
+    <!-- R: ratings -->
+    <div class="sc" id="sR">
+      <div class="card" id="rL"><div class="lbl" style="left:32px;top:28px">THE THREE RATINGS</div><div id="rRows"></div><div id="fanL">Fan label: <span class="m">2.5 µF</span> value · <span class="m">440 V</span> working voltage</div></div>
+      <div class="card" id="rR"><div class="lbl" style="left:32px;top:28px">WORKING VOLTAGE TEST</div><div class="lbl" id="rPl" style="left:32px;top:310px">POLARITY</div><svg class="full" id="rS" width="784" height="600"></svg></div>
+    </div>
+
+    <!-- D: code + worked example -->
+    <div class="sc" id="sD">
+      <div class="card" id="dL"><div class="lbl" style="left:32px;top:28px">READING THE CODE</div><svg class="full" id="dS" width="784" height="600"></svg><div id="dLab"></div></div>
+      <div class="card" id="dR"><div class="lbl" id="dRL1" style="left:36px;top:28px">THE THREE DIGIT CODE</div><div class="lbl" id="dRL2" style="left:36px;top:28px">WORKED EXAMPLE</div>
+        <div id="dSteps"></div><div id="lets"></div><div class="hb" id="wBox" style="top:260px;height:100px"></div><div id="wSteps"></div><div class="sm" id="dU" style="left:36px;top:520px;font-family:'IBM Plex Mono'">1000 pF = 1 nF   ·   1000 nF = 1 µF</div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div class="sc" id="sX"><div class="card red" id="trap"></div>
+      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">104, STEP BY STEP</div><svg class="full" id="tcS" width="784" height="300"></svg></div>
+      <div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div class="sc" id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + next -->
+    <div class="sc" id="sF"></div>
+  </div>
+  <div id="stmt"><div id="st1">Value, voltage, polarity.</div><div id="st2">Check all <span class="acc">three.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

@@ -1,0 +1,151 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Electronics Ep 14 - RMS and Average Values</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== Breadboard (PUC Electronics) layout ===== */
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.card svg.full{position:absolute;left:0;top:0}
+.big{position:absolute;font:600 56px 'IBM Plex Mono';white-space:nowrap}
+.sm{position:absolute;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.txt{position:absolute;font:500 30px/1.35 Poppins;white-space:nowrap}
+#ghost{top:168px}
+/* hook */
+#aC{left:160px;top:260px;width:784px;height:600px;overflow:hidden}
+#aImg{position:absolute;left:24px;top:84px;height:516px}
+#hS{left:976px;top:260px;width:784px;height:600px}
+#hScope{position:absolute;left:32px;top:76px}
+#hQ{position:absolute;left:32px;top:520px;width:720px;height:56px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;gap:14px;font:600 28px Poppins;white-space:nowrap}
+#hQ .acc{color:var(--ac)}
+/* problem */
+#pL{left:160px;top:260px;width:1040px;height:600px}
+#pR{left:1232px;top:260px;width:528px;height:600px}
+#pStrip{position:absolute;left:36px;top:500px;width:968px;height:68px;border-radius:14px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:16px;padding:0 26px;box-sizing:border-box;font:600 26px Poppins;white-space:nowrap}
+#pStrip .acc{color:var(--ac)}
+.vr{position:absolute;left:32px;width:464px;height:84px;border-radius:14px;background:var(--soft);border:2.5px solid var(--soft);box-sizing:border-box}
+.vr .vl{position:absolute;left:20px;top:28px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.vr .vv{position:absolute;right:22px;top:0;height:80px;display:flex;align-items:center;font-size:34px;white-space:nowrap}
+.vr .vv.q{font:700 38px 'IBM Plex Mono';color:var(--ac)}
+/* breadboard */
+#ck{left:160px;top:260px;width:928px;height:600px}
+#sc{left:1120px;top:260px;width:640px;height:300px}
+#rb{left:1120px;top:592px;width:640px;height:268px}
+#scS{position:absolute;left:24px;top:76px}
+.hr{position:absolute;left:32px;width:576px;height:44px}
+.hr .k{position:absolute;left:0;top:6px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.hr .bar{position:absolute;left:176px;top:8px;width:250px;height:28px;border-radius:8px;background:var(--soft);overflow:hidden}
+.hr .bar i{position:absolute;left:0;top:0;height:28px;border-radius:8px;background:#B7791F;width:0}
+.hr .v{position:absolute;right:42px;top:-4px;font:600 34px 'IBM Plex Mono';color:#B7791F;white-space:nowrap}
+.hr .u{position:absolute;right:0;top:8px;font:400 22px 'IBM Plex Mono';color:var(--mute)}
+.hr .k2{position:absolute;left:0;top:-2px;font:600 30px Poppins;font-style:italic;color:#0E8F8F;white-space:nowrap}
+.hr .k2 sub{font-size:.55em;font-style:normal;font-family:'IBM Plex Mono'}
+#same{right:24px;top:22px;background:var(--ok)}
+/* derivation */
+#rL{left:160px;top:260px;width:784px;height:600px}
+#rR{left:976px;top:260px;width:784px;height:600px}
+.st2{position:absolute;left:36px;display:flex;align-items:center;gap:20px;white-space:nowrap}
+.st2 .n{flex:none;width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 21px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st2 .sx{font-size:31px}
+.st2 .why{font:500 21px Poppins;color:var(--mute)}
+.box{position:absolute;left:24px;width:736px;border-radius:14px;background:var(--ac2)}
+.chips{position:absolute;left:36px;top:510px;display:flex;align-items:center;gap:14px}
+.chips .pillp{position:static}
+.chips .ar{display:flex}
+/* average */
+#gL{left:160px;top:260px;width:784px;height:600px}
+#gR{left:976px;top:260px;width:784px;height:600px}
+/* worked example */
+#wL{left:160px;top:260px;width:784px;height:600px}
+#wR{left:976px;top:260px;width:784px;height:600px}
+/* exam */
+#trap{left:160px;top:260px;width:784px;height:300px}
+#tc{left:976px;top:260px;width:784px;height:300px}
+#wa{left:160px;top:592px;width:1600px;height:268px}
+#mq{left:160px;top:260px;width:1040px;height:600px}
+#so{left:1232px;top:260px;width:528px;height:600px}
+#so .sol{left:32px}
+.fcard .fl{font-size:42px}
+.fcard .fl.txt{font:500 28px Poppins}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · ELECTRONICS · CH 2 PRINCIPLES OF ELECTRICITY</div>
+    <div class="subj" id="subj">BREADBOARD</div>
+    <div id="title">What does <span class="acc">230 V</span> really mean?</div>
+    <div id="sub">RMS and average values</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E8A317" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="ghost" id="ghost">EXAMPLE FIGURES</div>
+
+    <!-- A: hook -->
+    <div class="sc" id="sA">
+      <div class="card" id="aC"><div class="lbl" style="left:32px;top:28px">AARAV · PCME · JEE</div>
+        <img id="aImg" src="../../assets/illustrations/puc/aarav.png" alt="">
+        <svg id="htS" width="300" height="440" style="position:absolute;left:452px;top:84px"></svg>
+        <div class="pillp ac" id="aPill" style="left:470px;top:520px">Label: 230 V</div></div>
+      <div class="card" id="hS"><div class="lbl" style="left:32px;top:28px">THE MAINS ON A SCOPE</div><div class="tag" id="hSlow" style="right:24px;top:22px">SLOW-MOTION VIEW</div>
+        <svg id="hScope" width="720" height="420"></svg>
+        <div id="hQ"><span>325 V or 230 V?</span><span class="acc">Which is real?</span></div></div>
+    </div>
+
+    <!-- P: the problem -->
+    <div class="sc" id="sP">
+      <div class="card" id="pL"><div class="lbl" style="left:36px;top:28px">AN ALTERNATING VOLTAGE</div>
+        <svg class="full" id="pS" width="1040" height="600"></svg>
+        <div id="pStrip"><span id="pZ"></span><span>Full cycle: plus and minus cancel, so the <span class="acc">average is 0</span></span></div></div>
+      <div class="card" id="pR"><div class="lbl" style="left:32px;top:28px">VALUES OF ONE WAVE</div><div id="pRows"></div></div>
+    </div>
+
+    <!-- B: breadboard -->
+    <div class="sc" id="sB">
+      <div class="card" id="ck"><div class="lbl" style="left:32px;top:28px">SAME HEATER COIL · TWO SUPPLIES</div>
+        <div class="tag" id="ckE" style="right:32px;top:22px"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="#E8A317" stroke="#16213E" stroke-width="1.5"/></svg>ELECTRONS</div>
+        <svg class="full" id="ckS" width="928" height="600"></svg></div>
+      <div class="card" id="sc"><div class="lbl" style="left:32px;top:28px">OSCILLOSCOPE</div><div class="tag" id="slowT" style="right:24px;top:22px">SLOW-MOTION VIEW</div><svg id="scS" width="592" height="200"></svg></div>
+      <div class="card" id="rb"><div class="lbl" style="left:32px;top:28px">LIVE READOUT · HEAT EVERY SECOND</div><div class="tag" id="same">SAME HEAT</div><div id="rbRows"></div></div>
+    </div>
+
+    <!-- R: rms derivation -->
+    <div class="sc" id="sR">
+      <div class="card" id="rL"><div class="lbl" style="left:32px;top:28px">SQUARE THE WAVE</div>
+        <svg class="full" id="rS" width="784" height="600"></svg>
+        <div class="chips" id="rChips"></div></div>
+      <div class="card" id="rR"><div class="lbl" style="left:36px;top:28px">DERIVATION · RMS VALUE</div><div class="box" id="rBox"></div><div id="rSteps"></div></div>
+    </div>
+
+    <!-- G: average value + factors -->
+    <div class="sc" id="sG">
+      <div class="card" id="gL"><div class="lbl" style="left:32px;top:28px">ONE HUMP, FLATTENED</div>
+        <svg class="full" id="gS" width="784" height="600"></svg></div>
+      <div class="card" id="gR"><div class="lbl" style="left:36px;top:28px">AVERAGE VALUE AND FACTORS</div><div class="box" id="gBox"></div><div id="gSteps"></div></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div class="sc" id="sW">
+      <div class="card" id="wL"><div class="lbl" style="left:32px;top:28px">THE MAINS · 230 V RMS</div>
+        <svg class="full" id="wS" width="784" height="600"></svg></div>
+      <div class="card" id="wR"><div class="lbl" style="left:36px;top:28px">WORKED EXAMPLE</div><div class="box" id="wBox"></div><div id="wSteps"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div class="sc" id="sX"><div class="card red" id="trap"></div>
+      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">FULL CYCLE VS HALF CYCLE</div><svg class="full" id="tcS" width="784" height="300"></svg></div>
+      <div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div class="sc" id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + next -->
+    <div class="sc" id="sF"></div>
+  </div>
+  <div id="stmt"><div id="st1">The RMS value is the steady DC</div><div id="st2">that gives the <span class="acc">same heat.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

@@ -1,0 +1,174 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Electronics Ep 26 - Resistor Colour Codes and Ratings</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== Breadboard (PUC Electronics) layout ===== */
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.card svg.full{position:absolute;left:0;top:0}
+.big{position:absolute;font:600 56px 'IBM Plex Mono';white-space:nowrap}
+.sm{position:absolute;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.txt{position:absolute;font:500 30px/1.35 Poppins;white-space:nowrap}
+#ghost{top:168px}
+.ro2{position:absolute;left:32px;top:76px;width:576px;display:grid;grid-template-columns:auto 1fr auto;column-gap:18px;row-gap:14px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .k.n{font-style:normal;font-size:24px;font-family:'IBM Plex Mono';letter-spacing:.06em}
+.ro2 .v{font:600 38px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 22px 'IBM Plex Mono';color:var(--mute);white-space:nowrap;min-width:52px}
+.st2{position:absolute;left:36px;display:flex;align-items:center;gap:22px;white-space:nowrap}
+.st2 .n{flex:none;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st2 .sx{font-size:36px}
+.st2 .why{font:500 22px Poppins;color:var(--mute)}
+.hb{position:absolute;left:24px;width:736px;border-radius:14px;background:var(--ac2)}
+/* hook */
+#aC{left:160px;top:260px;width:784px;height:600px;overflow:hidden}
+#aImg{position:absolute;left:24px;top:84px;height:516px}
+#bdC{left:976px;top:260px;width:784px;height:284px}
+#qC{left:976px;top:576px;width:784px;height:284px}
+/* why colours */
+#iL{left:160px;top:260px;width:784px;height:600px}
+#iR{left:976px;top:260px;width:784px;height:600px}
+.tile{position:absolute;left:32px;width:720px;height:236px;border-radius:14px;background:var(--soft);border:2.5px solid var(--soft)}
+.tile .tl{position:absolute;left:24px;top:22px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.tile .tn{position:absolute;left:24px;top:186px;font:600 24px Poppins;color:var(--ink2);white-space:nowrap}
+/* code ladder */
+#cC{left:160px;top:260px;width:1600px;height:600px}
+.chp{position:absolute;top:84px;width:104px;text-align:center}
+.chp .sw{width:104px;height:120px;border-radius:12px;border:2.5px solid var(--ink);box-sizing:border-box}
+.chp .dg{font:600 48px 'IBM Plex Mono';color:var(--ink);margin-top:10px;white-space:nowrap}
+.chp .cn{font:600 20px Poppins;color:var(--mute);white-space:nowrap}
+.chp .ml{font:600 20px 'IBM Plex Mono';color:var(--ink);white-space:nowrap;margin-top:2px}
+#mn{position:absolute;left:40px;top:420px;width:1520px;height:96px;border-radius:14px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;gap:14px;font:600 34px Poppins;white-space:nowrap}
+#mn b{color:var(--ac);font-weight:700}
+#gsL{position:absolute;left:1270px;top:540px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+/* read rules */
+#rL{left:160px;top:260px;width:784px;height:600px}
+#rR{left:976px;top:260px;width:784px;height:600px}
+.bl{position:absolute;text-align:center;width:150px}
+.bl .a{font:700 22px Poppins;color:var(--ink);white-space:nowrap}
+.bl .b{font:500 18px 'IBM Plex Mono';color:var(--mute);white-space:nowrap;margin-top:2px}
+/* breadboard */
+#ck{left:160px;top:260px;width:928px;height:600px}
+#sc{left:1120px;top:260px;width:640px;height:300px}
+#rb{left:1120px;top:592px;width:640px;height:268px}
+#scS{position:absolute;left:24px;top:76px}
+.dgl{position:absolute;font:600 30px 'IBM Plex Mono';color:var(--ink);text-align:center;width:80px;white-space:nowrap}
+/* tolerance */
+#tL{left:160px;top:260px;width:1040px;height:600px}
+#tR{left:1232px;top:260px;width:528px;height:600px}
+.tr{position:absolute;left:32px;width:464px;height:72px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:18px;padding:0 20px;box-sizing:border-box}
+.tr .s{width:44px;height:44px;border-radius:8px;border:2px solid var(--ink);box-sizing:border-box;flex:none}
+.tr .n{font:600 26px Poppins;color:var(--ink);white-space:nowrap}
+.tr .p{margin-left:auto;font:600 30px 'IBM Plex Mono';color:var(--ink);white-space:nowrap}
+/* five band */
+#vL{left:160px;top:260px;width:1040px;height:600px}
+#vR{left:1232px;top:260px;width:528px;height:600px}
+/* power */
+#pL{left:160px;top:260px;width:784px;height:600px}
+#pR{left:976px;top:260px;width:784px;height:600px}
+#hotP{position:absolute;right:32px;top:22px}
+/* exam */
+#trap{left:160px;top:260px;width:784px;height:300px}
+#tc{left:976px;top:260px;width:784px;height:300px}
+#wa{left:160px;top:592px;width:1600px;height:268px}
+#mq{left:160px;top:260px;width:1040px;height:600px}
+#so{left:1232px;top:260px;width:528px;height:600px}
+#so .sol{left:32px}
+.fcard .fl{font-size:40px}
+.fcard .fl.txt{font:500 28px Poppins}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · ELECTRONICS · CH 4 PASSIVE ELECTRONIC COMPONENTS</div>
+    <div class="subj" id="subj">BREADBOARD</div>
+    <div id="title">What do the <span class="acc">stripes</span> mean?</div>
+    <div id="sub">Resistor colour codes and ratings</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E8A317" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="ghost" id="ghost">EXAMPLE FIGURES</div>
+
+    <!-- A: hook -->
+    <div class="sc" id="sA">
+      <div class="card" id="aC"><div class="lbl" style="left:32px;top:28px">AARAV · PCME · JEE</div>
+        <img id="aImg" src="../../assets/illustrations/puc/aarav.png" alt="">
+        <svg id="magS" width="300" height="300" style="position:absolute;left:452px;top:150px"></svg>
+        <div class="pillp ac" id="aPill" style="left:470px;top:500px">The stripes are the label</div></div>
+      <div class="card" id="bdC"><div class="lbl" style="left:32px;top:28px">INSIDE AN OLD RADIO</div><svg class="full" id="bdS" width="784" height="284"></svg></div>
+      <div class="card" id="qC"><div class="lbl" style="left:32px;top:28px">PRINTED VALUE</div><svg class="full" id="qS" width="784" height="284"></svg>
+        <div class="big" id="qN" style="left:520px;top:96px;color:var(--ac)">? Ω</div><div class="sm" id="qL" style="left:520px;top:172px">no number anywhere</div></div>
+    </div>
+
+    <!-- I: why colours -->
+    <div class="sc" id="sI">
+      <div class="card" id="iL"><div class="lbl" style="left:32px;top:28px">WHAT IS A RESISTOR</div><svg class="full" id="iLS" width="784" height="600"></svg>
+        <div class="pillp ink" id="iPill" style="left:32px;top:500px">Its job: limit the current</div></div>
+      <div class="card" id="iR"><div class="lbl" style="left:32px;top:28px">NUMBERS OR COLOURS?</div>
+        <div class="tile" id="it0" style="top:76px"><div class="tl">PRINTED NUMBERS</div><svg width="720" height="236" style="position:absolute;left:0;top:0"></svg><div class="tn">Tiny, rub off, hide on the far side</div></div>
+        <div class="tile" id="it1" style="top:332px"><div class="tl">COLOUR BANDS</div><svg width="720" height="236" style="position:absolute;left:0;top:0"></svg><div class="tn">Go all the way around: read from any side</div></div></div>
+    </div>
+
+    <!-- D: code ladder -->
+    <div class="sc" id="sD">
+      <div class="card" id="cC"><div class="lbl" style="left:40px;top:28px">THE COLOUR CODE</div><div class="lbl" id="cGS" style="left:1290px;top:28px">NEVER DIGITS</div>
+        <div id="chips"></div>
+        <div id="mn"></div>
+        <div id="gsL">only a multiplier or a tolerance</div></div>
+    </div>
+
+    <!-- R: reading rules -->
+    <div class="sc" id="sR">
+      <div class="card" id="rL"><div class="lbl" style="left:32px;top:28px">A FOUR BAND RESISTOR</div><svg class="full" id="rS" width="784" height="600"></svg><div id="rLab"></div></div>
+      <div class="card" id="rR"><div class="lbl" style="left:36px;top:28px">HOW TO READ IT</div><div class="hb" id="rBox" style="top:410px;height:110px"></div><div id="rSteps"></div></div>
+    </div>
+
+    <!-- B: breadboard -->
+    <div class="sc" id="sB">
+      <div class="card" id="ck"><div class="lbl" style="left:32px;top:28px">DECODE · THEN MEASURE</div>
+        <div class="tag" id="ckE" style="right:32px;top:22px"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="#E8A317" stroke="#16213E" stroke-width="1.5"/></svg>ELECTRONS</div>
+        <svg class="full" id="ckS" width="928" height="600"></svg><div id="dgls"></div></div>
+      <div class="card" id="sc"><div class="lbl" style="left:32px;top:28px">OSCILLOSCOPE</div><svg id="scS" width="592" height="200"></svg></div>
+      <div class="card" id="rb"><div class="lbl" style="left:32px;top:28px">LIVE READOUT</div><div class="ro2" id="ro1"></div></div>
+    </div>
+
+    <!-- T: tolerance -->
+    <div class="sc" id="sT">
+      <div class="card" id="tL"><div class="lbl" style="left:36px;top:28px">4.7 kΩ ± 5% · THE TOLERANCE WINDOW</div><svg class="full" id="tS" width="1040" height="600"></svg></div>
+      <div class="card" id="tR"><div class="lbl" style="left:32px;top:28px">TOLERANCE BAND</div><div id="tRows"></div></div>
+    </div>
+
+    <!-- V: five band -->
+    <div class="sc" id="sV">
+      <div class="card" id="vL"><div class="lbl" style="left:36px;top:28px">A FIVE BAND RESISTOR</div><svg class="full" id="vS" width="1040" height="600"></svg><div id="vLab"></div></div>
+      <div class="card" id="vR"><div class="lbl" style="left:32px;top:28px">DECODE IT</div><div id="vSteps"></div></div>
+    </div>
+
+    <!-- P: power rating + worked example -->
+    <div class="sc" id="sP">
+      <div class="card" id="pL"><div class="lbl" style="left:32px;top:28px">HEAT TEST · 1 kΩ · ¼ W</div><div class="pillp bad" id="hotP" style="height:40px;font-size:20px">TOO HOT</div>
+        <svg class="full" id="pS" width="784" height="600"></svg><div class="ro2" id="pRo" style="top:332px;width:720px"></div></div>
+      <div class="card" id="pR"><div class="lbl" id="pRL1" style="left:36px;top:28px">DERIVATION</div><div class="lbl" id="pRL2" style="left:36px;top:28px">WORKED EXAMPLE</div>
+        <div class="hb" id="pBox" style="top:300px;height:100px"></div><div id="pSteps"></div><svg class="full" id="szS" width="784" height="600"></svg><div id="wBox" class="hb" style="top:424px;height:104px"></div><div id="wSteps"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div class="sc" id="sX"><div class="card red" id="trap"></div>
+      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">RED · VIOLET · ORANGE · GOLD</div><svg class="full" id="tcS" width="784" height="300"></svg></div>
+      <div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div class="sc" id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + next -->
+    <div class="sc" id="sF"></div>
+  </div>
+  <div id="stmt"><div id="st1">The first two bands are digits.</div><div id="st2">The third band counts the <span class="acc">zeros.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

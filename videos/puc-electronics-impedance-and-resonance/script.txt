@@ -1,0 +1,41 @@
+H1|0.35|Aarav turns the dial on his grandfather's old radio. The air is full of stations at once.
+H2|0.35|Yet with one small turn, he hears just one of them, loud and clear.
+H3|0.6|How does the radio pick one station out of so many?
+I1|0.35|The secret is a circuit with a resistor, a coil and a capacitor in series.
+I2|0.35|Each one opposes the current. The total opposition is called impedance, Z.
+I3|0.65|It is measured in ohms. But you cannot simply add R, X L and X C. Let's see why.
+B1|0.35|Here is the circuit on the breadboard, on a ten volt supply whose frequency we can turn.
+B2|0.35|At fifty hertz, X C is large. Very little current flows.
+B3|0.35|Turn the frequency up. X L grows, X C shrinks, and the current climbs.
+B4|0.35|At about one hundred and fifty nine hertz, X L and X C become equal. They cancel.
+B5|0.65|Only R is left. The current jumps to its biggest value, one ampere.
+B6|0.35|Keep going, and X L takes over. The current falls again.
+B7|0.65|The graph of current against frequency has a sharp peak. This peak is called resonance.
+B8|0.65|Watch the scope at the peak. Voltage and current rise and fall together. They are in phase.
+T1|0.8|At resonance, the coil and the capacitor cancel. Only R is left.
+D1|0.35|Now the formula for impedance, in small steps.
+D2|0.7|In the resistor, voltage and current are in step. In the coil, voltage leads the current by ninety degrees.
+D3|0.7|In the capacitor, voltage lags by ninety degrees. So the coil and capacitor voltages point in opposite directions.
+D4|0.7|They subtract. The net push from them is I times X L minus X C.
+D5|0.7|This is at right angles to I R. So we join them with Pythagoras.
+D6|0.7|Z equals the square root of R squared, plus X L minus X C, squared.
+D7|0.7|The phase angle, phi, follows from tan phi equals X L minus X C, over R.
+D8|0.7|For resonance, set X L equal to X C. Two pi f L equals one over two pi f C.
+D9|0.65|So the resonant frequency is f naught equals one over two pi, root L C. There, Z equals R, the smallest it can be.
+W1|0.35|Worked example. R is thirty ohms, X L is eighty ohms, and X C is forty ohms, on a one hundred volt supply.
+W2|0.6|X L minus X C is forty. Z is the root of thirty squared plus forty squared. That is fifty ohms.
+W3|0.6|The current is one hundred divided by fifty. Two amperes.
+W4|0.65|And tan phi is forty over thirty, so phi is about fifty three degrees. X L is bigger, so the voltage leads the current.
+R1|0.35|Back to the radio. Its tuning circuit is a coil and a capacitor.
+R2|0.65|Turning the dial changes the capacitance. Only the station at the resonant frequency gets a big current. All the others stay tiny.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students say that at resonance, the impedance becomes zero and the current becomes infinite.
+X3|0.65|No. Only the reactances cancel. Z becomes R, its smallest value, and the current is V over R.
+X4|0.65|Where is this asked? In PUC board papers, and in JEE Main. Find Z, the current, the phase angle, or the resonant frequency.
+Q1|5.4|Try this. A series circuit has L equals forty millihenry, C equals twenty five microfarad, and R equals twenty ohms, on a one hundred volt supply. At resonance, what are the frequency and the current?
+A1|0.35|C. One hundred and fifty nine hertz, and five amperes.
+A2|0.35|L times C is ten to the minus six. Its square root is ten to the minus three.
+A3|0.35|So omega naught is one thousand radians per second. Divide by two pi, and f naught is about one hundred and fifty nine hertz.
+A4|0.65|At resonance, Z equals R. The current is one hundred over twenty, which is five amperes.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, transformers. How does the grey box on an electric pole change thousands of volts into the supply for our homes?
