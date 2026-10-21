@@ -52,16 +52,16 @@ const rowEls = ROWS.map(([dt, a, b, y]) => {
 });
 const NU = [['up', 'Speeding up', 'GAPS GROW', [0, 8, 24, 48, 80, 120]], ['down', 'Slowing down', 'GAPS SHRINK', [0, 40, 72, 96, 112, 120]], ['turn', 'Turning a corner', 'DIRECTION CHANGES', null]];
 $('#nus').innerHTML = NU.map(([ic, n, w], i) => `<div class="nu" id="nu${i}" style="top:${150 + i * 104}px"><i>${M.icon(ic, 28, C.red, 2.4)}</i><div class="nn">${n}</div><div class="nw">${w}</div><svg class="nd" width="150" height="88" style="position:absolute;left:400px;top:0"></svg><div class="nk">${'a ≠ 0'}</div></div>`).join('');
-NU.forEach(([, , , xs], i) => { const s = $('#nu' + i).querySelector('svg');
+NU.forEach(([, , , xs], i) => { const s = $('#nu' + i).querySelector('.nd');
   if (xs) xs.forEach(x => mk(s, 'circle', { cx: 15 + x, cy: 44, r: 6, fill: B2 }));
   else for (let k = 0; k <= 5; k++) { const th = Math.PI / 2 * k / 5; mk(s, 'circle', { cx: 15 + 100 * Math.sin(th), cy: 74 - 60 * (1 - Math.cos(th)), r: 6, fill: B2 }); } });
 const tNu = [wt('P5', 'Speeding'), wt('P5', 'slowing'), wt('P5', 'turning')];
 
 /* ---------- S: motion bench, two bicycles ---------- */
 const s = $('#simS'), RX0 = 80, RPX = 16, AY = 1.25;          // 16 px per metre, road 0 - 40 m; B: a = 1.25 m/s^2 from rest
-const LANE = [{ y: 196, col: B1, x: tt => 5 * tt, v: () => 5 }, { y: 376, col: B2, x: tt => 0.5 * AY * tt * tt, v: tt => AY * tt }];
+const LANE = [{ y: 210, col: B1, x: tt => 5 * tt, v: () => 5 }, { y: 404, col: B2, x: tt => 0.5 * AY * tt * tt, v: tt => AY * tt }];
 txt(s, 40, 98, 'A · STEADY 5 m/s', { 'font-weight': 600, fill: B1, 'letter-spacing': 1 });
-txt(s, 40, 278, 'B · FROM REST, SPEEDING UP', { 'font-weight': 600, fill: B2, 'letter-spacing': 1 });
+txt(s, 40, 290, 'B · FROM REST, SPEEDING UP', { 'font-weight': 600, fill: B2, 'letter-spacing': 1 });
 const bikeG = (p, col, op) => { const g = mk(p, 'g', { opacity: op });
   mk(g, 'circle', { cx: -20, cy: -16, r: 15, fill: 'none', stroke: col, 'stroke-width': 4 }); mk(g, 'circle', { cx: 20, cy: -16, r: 15, fill: 'none', stroke: col, 'stroke-width': 4 });
   mk(g, 'path', { d: 'M-20,-16 L-6,-40 L14,-40 L20,-16 M-6,-40 L2,-16 L-20,-16 M14,-40 L10,-50 M-10,-44 L-2,-44', fill: 'none', stroke: col, 'stroke-width': 4, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' });
@@ -79,10 +79,10 @@ const lanes = LANE.map(L => {
 });
 const aA = PUC.arrow(s, AC, 4, 12), aL = txt(s, 0, 0, 'a', { 'font-family': 'Poppins', 'font-style': 'italic', 'font-weight': 600, 'font-size': 24, fill: AC });
 // position ruler 0 - 40 m
-mk(s, 'line', { x1: RX0, y1: 452, x2: RX0 + 40 * RPX, y2: 452, stroke: C.ink, 'stroke-width': 2 });
-for (let m = 0; m <= 40; m += 5) { mk(s, 'line', { x1: RX0 + m * RPX, y1: 452, x2: RX0 + m * RPX, y2: 462, stroke: C.ink, 'stroke-width': 2 }); txt(s, RX0 + m * RPX, 482, m, { 'text-anchor': 'middle', fill: C.ink, 'font-weight': 600 }); }
-txt(s, 744, 482, 'm', { 'text-anchor': 'end', fill: C.mute });
-const gapT = [txt(s, 744, 98, 'GAPS: EQUAL', { 'text-anchor': 'end', 'font-weight': 600, fill: B1 }), txt(s, 744, 278, 'GAPS: GROWING', { 'text-anchor': 'end', 'font-weight': 600, fill: B2 })];
+mk(s, 'line', { x1: RX0, y1: 500, x2: RX0 + 40 * RPX, y2: 500, stroke: C.ink, 'stroke-width': 2 });
+for (let m = 0; m <= 40; m += 5) { mk(s, 'line', { x1: RX0 + m * RPX, y1: 500, x2: RX0 + m * RPX, y2: 510, stroke: C.ink, 'stroke-width': 2 }); txt(s, RX0 + m * RPX, 530, m, { 'text-anchor': 'middle', fill: C.ink, 'font-weight': 600 }); }
+txt(s, 744, 530, 'm', { 'text-anchor': 'end', fill: C.mute });
+const gapT = [txt(s, 744, 98, 'GAPS: EQUAL', { 'text-anchor': 'end', 'font-weight': 600, fill: B1 }), txt(s, 744, 290, 'GAPS: GROWING', { 'text-anchor': 'end', 'font-weight': 600, fill: B2 })];
 // readout (two columns, one per bicycle)
 $('#roG').innerHTML = `<span></span><span class="u" style="color:${B1};font-weight:600">BIKE A</span><span class="u" style="color:${B2};font-weight:600">BIKE B</span>
   <span class="k" style="color:${XC}">x</span><span class="v" id="rx1" style="font-size:30px"></span><span class="v" id="rx2" style="font-size:30px"></span>
@@ -103,9 +103,9 @@ const replay = t => t >= tR0 - 0.05;
 
 /* ---------- D: the reasoning, link by link ---------- */
 const STEPS = [[`${K(kv('v'))} never changes`, 'equal gaps in equal times'],
-  [K(`${ka('a')} = \\dfrac{\\Delta ${kv('v')}}{\\Delta t} = 0`), 'velocity never changes'],
+  [K(`${ka('a')} = \\Delta ${kv('v')} / \\Delta t = 0`), 'velocity never changes'],
   [K(`x = x_0 + ${kv('v')}\\,t`), 'the same step is added every second'],
-  [K(`\\text{slope} = \\dfrac{\\Delta x}{\\Delta t} = ${kv('v')}`), 'a straight line on the x-t graph'],
+  [K(`\\text{slope} = \\Delta x / \\Delta t = ${kv('v')}`), 'a straight line on the x-t graph'],
   [K(`${ka('a')} \\neq 0 \\;\\Rightarrow\\; \\text{curved } x\\text{-}t`), 'non-uniform: the velocity changes']];
 $('#steps').innerHTML = `<div class="hiBox" id="hiB" style="left:20px;width:744px;height:92px"></div>` + STEPS.map(([f, w], i) => `<div class="st" id="dst${i}" style="top:${80 + i * 98}px"><div class="n"${i === 4 ? ' style="border-color:var(--red);color:var(--red)"' : ''}>${i === 4 ? '!' : i + 1}</div><div class="sx">${f}</div><div class="why">${w}</div></div>`).join('');
 const tStep = [wt('D2', 'Equal'), wt('D3', 'Velocity'), wt('D4', 'x'), wt('D5', 'straight'), wt('D6', 'velocity')];
@@ -118,8 +118,8 @@ for (let k = 0; k < 8; k++) {
   const x0 = 0.625 * k * k, x1 = 0.625 * (k + 1) * (k + 1);
   stair[1].push(mk(ds, 'path', { d: `M${DG.X(k)},${DG.Y(x0)} H${DG.X(k + 1)} V${DG.Y(x1)}`, fill: 'none', stroke: B2, 'stroke-width': 2, 'stroke-dasharray': '5 5', opacity: 0.7 }));
 }
-const sl = document.createElement('div'); sl.className = 'fx'; sl.style.cssText = 'left:150px;top:96px;font-size:30px'; sl.innerHTML = K(`\\dfrac{\\Delta x}{\\Delta t} = \\dfrac{5\\,\\text{m}}{1\\,\\text{s}} = ${kv('5\\,\\text{m/s}')}`); $('#dr').appendChild(sl);
-const sl2 = document.createElement('div'); sl2.className = 'pillp'; sl2.style.cssText = 'left:420px;top:330px;color:#7A4FE0'; sl2.innerHTML = 'steps grow: curve'; $('#dr').appendChild(sl2);
+const sl = document.createElement('div'); sl.className = 'fx'; sl.style.cssText = 'left:420px;top:372px;font-size:28px'; sl.innerHTML = K(`\\dfrac{\\Delta x}{\\Delta t} = \\dfrac{5\\,\\text{m}}{1\\,\\text{s}} = ${kv('5\\,\\text{m/s}')}`); $('#dr').appendChild(sl);
+const sl2 = document.createElement('div'); sl2.className = 'pillp'; sl2.style.cssText = 'left:430px;top:290px;color:#7A4FE0'; sl2.innerHTML = 'steps grow: curve'; $('#dr').appendChild(sl2);
 
 /* ---------- statement ---------- */
 $('#stF').innerHTML = K(`${kv('v')} = \\text{constant} \\qquad ${ka('a')} = 0`);
@@ -242,6 +242,7 @@ M.on(t => {
     });
     M.vis($('#puP'), t, wt('P3', 'however') - 0.1, 1e9, POP);
     M.vis($('#pn'), t, tP4 - 0.05, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#pnQ'), t, wt('P5', 'non') - 0.1, 1e9, POP);
     M.vis($('#pnP'), t, wt('P4', 'not') - 0.1, 1e9, POP);
     NU.forEach((_, i) => { const el = $('#nu' + i); M.vis(el, t, tNu[i] - 0.1, 1e9, POP); M.vis(el.querySelector('.nk'), t, tNu[i] + 0.4, 1e9, { ...POP, sc: 0.4 }); });
   }
@@ -267,12 +268,12 @@ M.on(t => {
       L.marks.forEach((m, k) => M.hide(m, k > st + 1e-6 || t < tA - 0.05 || (rp && t < tR0)));
       // gap labels during the replay, when the voice reads them
       const tg = li ? wt('S8', 'gaps') : wt('S7', 'equal');
-      L.gl.forEach((g, k) => { g.style.opacity = (rp ? M.io((t - Math.max(tg, tR0 + (k + 1) / 8 * (tR1 - tR0))) / 0.3) : 0).toFixed(3); });
+      L.gl.forEach((g, k) => { g.style.opacity = (rp && (li === 0 || k >= 2) ? M.io((t - Math.max(tg, tR0 + (k + 1) / 8 * (tR1 - tR0))) / 0.3) : 0).toFixed(3); });
       M.vis(gapT[li], t, tg - 0.1, 1e9, { dy: 0, dx: 16 });
       // velocity arrows grow in the replay (blue = v for both bikes)
       const vOn = rp ? M.io((t - tR0 - 0.1) / 0.4) : 0, vv = L.v(st), len = 12 * vv * vOn;
-      L.va.set(bx, L.y - 74, bx + len, L.y - 74); attr(L.vl, 'x', (bx + len / 2 - 6).toFixed(1)); attr(L.vl, 'y', L.y - 84); L.vl.style.opacity = (vOn * M.clamp(len / 20)).toFixed(3);
-      if (li === 1) { const al = 22 * AY * vOn; aA.set(bx - 30, L.y - 104, bx - 30 + al, L.y - 104); attr(aL, 'x', (bx - 54).toFixed(1)); attr(aL, 'y', L.y - 96); aL.style.opacity = vOn.toFixed(3); }
+      L.va.set(bx, L.y - 70, bx + len, L.y - 70); attr(L.vl, 'x', (bx + len + 8).toFixed(1)); attr(L.vl, 'y', L.y - 62); L.vl.style.opacity = (vOn * M.clamp(len / 20)).toFixed(3);
+      if (li === 1) { const al = 22 * AY * vOn; aA.set(bx, L.y - 100, bx + al, L.y - 100); attr(aL, 'x', (bx + al + 8).toFixed(1)); attr(aL, 'y', L.y - 92); aL.style.opacity = vOn.toFixed(3); }
       // readout
       M.setT($('#rx' + (li + 1)), f1(xm) + ' m'); M.setT($('#rv' + (li + 1)), f1(vv) + ' m/s'); M.setT($('#ra' + (li + 1)), li ? '1.25 m/s²' : '0 m/s²');
       // graph: curve draws on the first run, dot follows the bike
@@ -280,7 +281,7 @@ M.on(t => {
     });
     M.setT($('#tR'), 't = ' + f1(st) + ' s');
     M.vis($('#tR'), t, tA - 0.2, 1e9, { dy: 0 });
-    attr(gT[0], 'x', G.X(4.6)); attr(gT[0], 'y', G.Y(23) - 14); attr(gT[1], 'x', G.X(6.2)); attr(gT[1], 'y', G.Y(10));
+    attr(gT[0], 'x', G.X(1.0)); attr(gT[0], 'y', G.Y(24)); attr(gT[1], 'x', G.X(6.2)); attr(gT[1], 'y', G.Y(10));
     M.vis(gT[0], t, wt('S9', 'straight') - 0.1, 1e9, { dy: 0 }); M.vis(gT[1], t, wt('S9', 'curve') - 0.1, 1e9, { dy: 0 });
     avA(t, wt('S5', 'Same') + 0.2, tR0 - 0.4);
   }
