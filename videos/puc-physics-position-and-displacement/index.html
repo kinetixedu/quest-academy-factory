@@ -1,0 +1,136 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 19 - Position and Displacement</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 19: position and displacement (Motion notebook, home -> shop -> home) ===== */
+:root{--dx:#7A4FE0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.dxc{color:var(--dx)}.a{color:var(--ac)}
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.qr{position:absolute;left:36px;width:712px;height:150px;border-radius:14px;background:var(--soft)}
+.qr i{position:absolute;left:22px;top:39px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.qr .w{position:absolute;left:120px;top:30px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.qr .q{position:absolute;left:120px;top:62px;font:600 56px/1 'IBM Plex Mono';white-space:nowrap}
+.fr{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.fr i{position:absolute;left:20px;top:16px;width:64px;height:64px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.fr .fn{position:absolute;left:104px;top:28px;font:700 30px Poppins;white-space:nowrap}
+.fr .fv{position:absolute;right:28px;top:24px;font:600 40px 'IBM Plex Mono';white-space:nowrap}
+.lk{position:absolute;left:36px;width:712px;height:84px;border-radius:14px;background:var(--soft)}
+.lk .n{position:absolute;left:20px;top:19px;width:46px;height:46px;border-radius:50%;background:#fff;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.lk .lt{position:absolute;left:86px;top:22px;font:600 27px Poppins;white-space:nowrap}
+.ld{position:absolute;left:58px}
+.st{position:absolute;left:36px;width:712px;height:110px}
+.st .n{position:absolute;left:0;top:6px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:42px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:64px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+.fx{position:absolute;left:36px;white-space:nowrap;font-size:44px}
+#wq{position:absolute;left:36px;top:70px;font:600 26px/1.35 Poppins;width:712px}
+.chipd{position:absolute;height:64px;padding:0 22px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 32px 'IBM Plex Mono';white-space:nowrap}
+#roG .v{font-size:30px}#roG .k{font-size:27px}#roG .u{font-size:20px}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 28px Poppins}
+#wl .sol .sx{font-size:32px}
+#sF .fcard .fl{font-size:50px}
+#sF .fcard .fl.txt{font-size:32px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 2 MOTION IN A STRAIGHT LINE</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Position and <span class="acc">Displacement</span></div>
+    <div id="sub">Explained with one trip to the shop</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H -->
+    <div id="sH">
+      <div class="card full" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV'S RIDE · HOME TO SHOP AND BACK</div>
+        <div id="hkF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg" style="position:absolute;left:72px;top:84px;width:640px;height:480px;border-radius:12px"></div>
+      <div class="card rf" id="hq"><div class="lbl" style="left:36px;top:30px">SAME RIDE · TWO NUMBERS</div>
+        <div class="qr" id="qr0" style="top:84px"><i id="qi0"></i><div class="w">WHEELS ROLLED (PATH)</div><div class="q">400 <span style="font-size:32px;color:var(--mute)">m</span></div></div>
+        <div class="qr" id="qr1" style="top:254px"><i id="qi1"></i><div class="w">DISPLACEMENT</div><div class="q dxc">0 <span style="font-size:32px;color:var(--mute)">m</span></div></div>
+        <div class="pillp ac" id="hqP" style="left:36px;top:450px">Both are true. How?</div></div>
+    </div>
+
+    <!-- P: position -->
+    <div id="sP">
+      <div class="card full" id="pl"><div class="lbl" style="left:36px;top:30px">POSITION x · ORIGIN AT HOME</div><svg id="plS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="pr"><div class="lbl" style="left:36px;top:30px">POSITION = DISTANCE FROM O + A SIGN</div><div id="frs"></div>
+        <div class="pillp ink" id="prP" style="left:36px;top:490px">The sign tells you the side of the origin</div></div>
+    </div>
+
+    <!-- S: the sim -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">SIMULATION · HOME, SHOP, HOME</div>
+        <div class="tag" id="smo" style="right:36px;top:22px;background:var(--red)">SLOW-MO REPLAY · 0.25x</div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro" id="roG" style="left:36px;top:70px;width:712px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">POSITION x VS TIME</div><svg id="grS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- L: reasoning -->
+    <div id="sL">
+      <div class="card full" id="ll"><div class="lbl" style="left:36px;top:30px">WHY THE DISPLACEMENT IS ZERO</div><div id="lks"></div></div>
+      <div class="card rf" id="lr"><div class="lbl" style="left:36px;top:30px">THREE ROADS · ONE START · ONE END</div><svg id="lrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="lrP" style="left:36px;top:490px">Different paths, same displacement</div></div>
+    </div>
+
+    <!-- D: the rule -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE RULE · 3 STEPS + UNITS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">FINAL MINUS INITIAL</div><svg id="drS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- K: side by side + think -->
+    <div id="sK">
+      <div class="card full" id="kl"><div class="lbl" style="left:36px;top:30px">HOME TO SHOP</div><svg id="klS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="fx" id="klF" style="top:340px"></div>
+        <div class="pillp good" id="klP" style="left:36px;top:490px">Moved the positive way</div></div>
+      <div class="card rf" id="kr"><div class="lbl" style="left:36px;top:30px">SHOP TO HOME</div><svg id="krS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="fx" id="krF" style="top:340px"></div>
+        <div class="pillp bad" id="krP" style="left:36px;top:490px">Same road, opposite sign</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- O: move the origin -->
+    <div id="sO">
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+      <div class="card full" id="ol"><div class="lbl" style="left:36px;top:30px">MOVE THE ORIGIN TO THE SHOP</div><svg id="olS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="or"><div class="lbl" style="left:36px;top:30px">BOTH POSITIONS SHIFT · THE DIFFERENCE STAYS</div><div id="ors"></div></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">Aarav starts <span class="mono">12 m</span> from the stairs, walks to the library at <span class="mono">47 m</span>, then back to the water cooler at <span class="mono">30 m</span>. Find his displacement.</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">SIMULATION · THE COLLEGE CORRIDOR</div><svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tpS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Only the <span class="acc">start</span> and the <span class="acc">end</span> matter.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
