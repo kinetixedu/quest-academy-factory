@@ -229,7 +229,7 @@ M.on(t => {
     M.vis($('#cr0'), t, wt('D4', 'haploid') - 0.2, 1e9, { dy: 20 }); M.vis($('#cr1'), t, wt('D4', 'diploid') - 0.2, 1e9, { dy: 20 });
     [...$('#cs0').children].forEach((c, i) => M.vis(c, t, wt('D4', 'one') + i * 0.1, 1e9, { ...POP, sc: 0.3 }));
     [...$('#cs1').children].forEach((c, i) => M.vis(c, t, wt('D4', 'two') + i * 0.08, 1e9, { ...POP, sc: 0.3 }));
-    const tHu = wt('D4', 'humans'); M.vis($('#hum'), t, tHu - 0.1, 1e9, { dy: 10 }); M.count($('#hn'), t, tHu, 1.0, 0, 23); M.count($('#hd'), t, wt('D4', 'forty'), 1.0, 0, 46);
+    const tHu = wt('D4', 'humans'); M.vis($('#hum'), t, tHu - 0.1, 1e9, { dy: 10 }); M.count($('#hn'), t, tHu, 1.0, 0, 23); M.count($('#hd'), t, wt('D4', 'forty'), 1.0, 0, 46); M.hide($('#hd'), t < wt('D4', 'forty') - 0.05);
   }
 
   /* Z */
