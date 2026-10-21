@@ -35,7 +35,7 @@ const SW = [[tT, tR1], [tQ, tQ + 0.06], [tF, tF + 0.06]];
 const OUT = id => T0(id) - 0.32;
 
 /* ---------- title card: three arcs ---------- */
-const JOBS = [['fountain', 'Fountain jet', 'WATER', 'fountain'], ['jump', 'Long jump', 'ATHLETE', 'long'], ['ball', 'Ball toss', 'TO A FRIEND', 'ball']];
+const JOBS = [['fountain', 'Fountain jet', 'WATER', 'fountain'], ['jump', 'Long jump', 'ATHLETE', 'long'], ['ball', 'Volleyball serve', 'OVER THE NET', 'volleyball']];
 $('#jobs').innerHTML = JOBS.map(([ic, n, w], i) => `<div class="job" id="jb${i}" style="left:${390 + i * 390}px"><i>${M.icon(ic, 32, C.ac, 2.2)}</i><div class="jn">${n}</div><div class="jw">${w}</div></div>`).join('');
 const tJob = JOBS.map(j => wt('H1', j[3]));
 /* ---------- H ---------- */
@@ -120,7 +120,7 @@ const simT = t => {
   const d = t - tRp; return d < 1 ? d : Math.min(TT, 1 + (d - 1) * 0.25);
 };
 const tFrz = tSlow + (TT - 1) * 4;
-const th1 = PUC.think($('#th1'), { q: 'At the very top of its flight, is the ball’s speed zero?', opts: ['Yes, zero', `No, ${K('u\\cos\\theta')}`], right: 1, why: `Only ${K(vy_)} is zero. ${K(`${vx_} = ${ucos}`)} never changes.` });
+const th1 = PUC.think($('#th1'), { q: 'Halfway to the top in time, has the ball risen half of H?', opts: ['Yes, half', 'No, more than half'], right: 1, why: 'Fastest early: 6.4 m + 4.6 m = 11.0 m, three quarters of H.' });
 
 /* ---------- D ---------- */
 const STEPS = [[`${vy_}\\text{ starts at } ${usin},\\;\\; ${a_} = -${g_}`, 'look only up and down; up is positive'],
@@ -261,7 +261,7 @@ M.on(t => {
   if (hOn) {
     const out = OUT('P1');
     M.vis($('#hj'), t, tMorph + 0.1, out, { dx: -60, dy: 0, ...o });
-    JOBS.forEach((_, i) => { const el = $('#jr' + i); M.vis(el, t, tMorph + 0.3 + i * 0.12, 1e9, { dy: 16 }); M.draw(el.querySelector('.ja'), t, wt('H2', 'rise') - 0.1 + i * 0.12, 0.6); M.vis(el.querySelector('.jd'), t, wt('H2', 'highest') - 0.1 + i * 0.1, 1e9, { ...POP, sc: 0.3 }); });
+    JOBS.forEach((_, i) => { const el = $('#jr' + i); M.vis(el, t, tMorph + 0.3 + i * 0.12, 1e9, { dy: 16 }); M.draw(el.querySelector('.ja'), t, wt('H2', 'rise') - 0.1 + i * 0.12, 0.6); el.querySelector('.jd').style.opacity = M.clamp((t - wt('H2', 'highest') + 0.1 - i * 0.1) / 0.25); });
     M.vis($('#hjP'), t, wt('H2', 'point') - 0.1, 1e9, POP);
     M.vis($('#hk'), t, tH3 - 0.1, out, { dx: 60, dy: 0, ...o });
     M.vis($('#hkImg'), t, tH3 + 0.2, 1e9, { dx: -30, dy: 0 }); M.vis($('#aaF'), t, tH3 + 0.2, 1e9, { ...POP, sc: 0.5 });
@@ -282,7 +282,7 @@ M.on(t => {
     const out = OUT('S1');
     M.vis($('#pl'), t, tP1 + 0.1, out, { dx: -60, dy: 0, ...o });
     M.draw(plPath, t, tP1 + 0.4, 1.2);
-    M.vis(plTop, t, wt('P2', 'greatest') - 0.1, 1e9, { ...POP, sc: 0.4 });
+    plTop.style.opacity = M.clamp((t - wt('P2', 'greatest') + 0.1) / 0.25);
     M.draw(plH, t, wt('P2', 'height') - 0.1, 0.5); plHl.style.opacity = M.clamp((t - wt('P2', 'height') - 0.3) / 0.3);
     M.vis($('#plD'), t, wt('P2', 'above') - 0.1, 1e9, POP);
     [0, 1 / 3, 2 / 3].forEach((sv, k) => { const [x, y] = pxy(sv), L = 120 * (1 - sv) * M.io((t - tVy[k] + 0.1) / 0.4); plV[k].set(x, y, x, y - L); });
@@ -333,7 +333,7 @@ M.on(t => {
     const zt = wt('S4', 'zero') - 0.1; sZ.style.opacity = M.clamp((t - zt) / 0.3); sZl.style.opacity = sZ.style.opacity;
     sTri.style.opacity = M.clamp((t - wt('S8', 'shaded') + 0.1) / 0.4); sAr.style.opacity = M.clamp((t - wt('S8', 'triangle')) / 0.3);
     M.vis($('#th1'), t, tS9 + 0.05, outT, { dy: 36, ...o });
-    th1(t, { tin: tS9, tOpts: wt('S9', 'is') - 0.1, tCount: T1('S9') + 0.05, dur: 3, tAns: T0('S10') - 0.02, tWhy: wt('S10', 'Only') });
+    th1(t, { tin: tS9, tOpts: wt('S9', 'has') - 0.1, tCount: T1('S9') + 0.05, dur: 3, tAns: T0('S10') - 0.02, tWhy: wt('S10', 'already') });
   }
 
   /* D */

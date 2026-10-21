@@ -1,0 +1,53 @@
+H1|0.4|A shot put. A long jump. A fielder's throw from the boundary.
+H2|0.45|In all three, the goal is the same: land as far away as possible.
+H3|0.35|On the college ground, Aarav throws a ball at fourteen metres per second. Once at fifteen degrees, once at seventy five.
+H4|0.5|His puzzle: the flat throw or the high throw, which one lands farther?
+H5|0.65|Most people pick one. By the end, you will see why neither wins.
+P1|0.35|So what is horizontal range?
+P2|0.4|It is the horizontal distance a projectile covers before it comes back to its launch level.
+P3|0.4|Only the horizontal part of the velocity, u cos theta, carries the ball forward. And gravity never changes it.
+P4|0.65|So the range is simply that horizontal speed, times the whole time in the air. A good throw needs both.
+S1|0.35|Let's launch a ball at fourteen metres per second, forty five degrees up.
+S2|0.4|Watch the readout. The horizontal velocity stays at nine point nine metres per second.
+S3|0.4|So x grows by the same amount every second. On the graph, x against t is a straight line.
+S4|0.5|The ball lands after two point zero two seconds, twenty metres away. That is the range.
+S5|0.4|Slow-motion replay. Freeze halfway.
+S6|0.5|The red arrow g only bends the path down. The blue arrow, v x, keeps the same length all the way.
+S7|0.65|Now the ghost copies, at equal times. Every step across is the same. So range equals v x, times the time of flight.
+D1|0.35|Now the formula, step by step.
+D2|0.75|Step one. The time of flight is the time up plus the time down. T equals two u sine theta, over g.
+D3|0.75|Step two. Range is the horizontal speed times T. So R equals u cos theta, times two u sine theta over g.
+D4|0.75|Step three. Two sine theta cos theta is the same as sine two theta.
+D5|0.75|Step four. So R equals u squared sine two theta, over g. The units work out to metres.
+T1|0.7|Remember this. Range is the horizontal speed, times the whole time in the air.
+G1|0.35|Now, Aarav's puzzle. Same speed, many angles.
+G2|0.4|Fifteen degrees: fast across, but it lands too soon. Ten metres.
+G3|0.4|Seventy five degrees: a long time in the air, but it barely moves forward. Also ten metres!
+G4|3.2|Your turn. Which angle in between goes the farthest? Pause and decide.
+G5|0.65|Forty five degrees! It shares the speed equally between up and across. Sine two theta is one, so R is u squared over g. Twenty metres.
+G6|0.6|On the graph, range follows sine two theta. It peaks at forty five, and falls the same way on both sides.
+K1|0.4|Side by side. Twenty degrees and seventy degrees, same speed.
+K2|0.6|Twenty is faster across, but shorter in the air. Seventy is slower across, but longer in the air.
+K3|3.2|Now you try. Which one lands farther? Pause and decide.
+K4|0.65|The same spot! Sine forty equals sine one forty. Two angles that add up to ninety always share a range.
+W1|0.35|Now, one worked example.
+W2|0.5|Back to Aarav. He throws at fourteen metres per second, fifteen degrees up. How far away does it land?
+W3|0.75|Use R equals u squared sine two theta, over g.
+W4|0.75|u squared is one hundred and ninety six. Two theta is thirty degrees, and sine thirty is one half.
+W5|0.75|So R is one ninety six times one half, over nine point eight.
+W6|0.65|That is exactly ten metres. And seventy five degrees lands at the very same spot. Neither throw wins.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students multiply the horizontal speed by the time to the top only.
+X3|0.65|That gives just half the range. Use the whole time of flight, up and down.
+E1|0.6|Where is this asked? As numericals on the range, the best angle, and angles that share a range.
+Q1|5.4|Exam level now. A ball lands at the same spot for two launch angles, at the same speed. The times of flight are two seconds and three seconds. Take g as ten. Find the range. Pause and solve.
+A1|0.5|The answer is B. Thirty metres.
+A2|0.5|The same range means the two angles are theta, and ninety minus theta.
+A3|0.5|So the times are two u sine theta over g, and two u cos theta over g.
+A4|0.6|Multiply them. T one times T two is two R over g. So R is ten times six, over two. Thirty metres.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why does forty five degrees give the greatest range?
+Y3|0.9|Two. Which angle has the same range as thirty five degrees?
+Y4|1.1|Three. If g were half as big, how far would the same throw go?
+N1|0.3|Next time: a mixer jar spins at a steady speed, yet everything inside is accelerating. How? We find out in uniform circular motion.
