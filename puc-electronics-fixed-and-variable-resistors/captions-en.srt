@@ -1,0 +1,363 @@
+1
+00:00:00,450 --> 00:00:03,145
+Aarav turns the volume knob on a speaker.
+
+2
+00:00:03,145 --> 00:00:06,373
+The music grows louder,
+smoothly, with no steps.
+
+3
+00:00:06,723 --> 00:00:08,284
+What is behind that knob?
+
+4
+00:00:08,784 --> 00:00:09,700
+A resistor.
+
+5
+00:00:09,700 --> 00:00:12,419
+A part that opposes the flow of current.
+
+6
+00:00:12,769 --> 00:00:15,209
+Its resistance is measured in ohms.
+
+7
+00:00:15,209 --> 00:00:18,611
+More ohms means less current
+for the same voltage.
+
+8
+00:00:18,961 --> 00:00:20,839
+There are two big families.
+
+9
+00:00:20,839 --> 00:00:23,666
+Fixed resistors, whose
+value never changes.
+
+10
+00:00:23,666 --> 00:00:27,007
+And variable resistors,
+whose value you can change.
+
+11
+00:00:27,657 --> 00:00:30,002
+Fixed resistors come in a few kinds.
+
+12
+00:00:30,352 --> 00:00:34,997
+Carbon composition resistors are made
+of carbon powder mixed with a binder.
+
+13
+00:00:34,997 --> 00:00:37,576
+They are cheap, but not very precise.
+
+14
+00:00:37,926 --> 00:00:42,789
+Carbon film and metal film resistors
+have a thin layer coated on a ceramic
+
+15
+00:00:42,789 --> 00:00:43,689
+rod.
+
+16
+00:00:43,330 --> 00:00:46,604
+Metal film is the more
+precise and stable one.
+
+17
+00:00:46,954 --> 00:00:51,631
+Wire wound resistors use a long wire,
+often nichrome, wound on a ceramic
+
+18
+00:00:51,631 --> 00:00:52,531
+core.
+
+19
+00:00:52,196 --> 00:00:55,358
+They can handle large
+power without burning out.
+
+20
+00:00:56,008 --> 00:00:57,599
+Now the variable ones.
+
+21
+00:00:57,949 --> 00:01:00,233
+A potentiometer has three terminals.
+
+22
+00:01:00,233 --> 00:01:04,734
+Two ends of a resistive track, and
+a sliding contact called the wiper.
+
+23
+00:01:05,084 --> 00:01:09,759
+A rheostat uses only two terminals,
+one end and the wiper, to change the
+
+24
+00:01:09,759 --> 00:01:10,659
+current.
+
+25
+00:01:10,817 --> 00:01:13,286
+A preset, or trimmer, is a tiny one.
+
+26
+00:01:13,286 --> 00:01:16,685
+It is set once with a
+screwdriver, and then left alone.
+
+27
+00:01:17,335 --> 00:01:20,346
+Let's build the volume
+control on the breadboard.
+
+28
+00:01:20,346 --> 00:01:24,097
+A potentiometer, with the music
+signal across its two ends.
+
+29
+00:01:24,447 --> 00:01:28,051
+The wiper picks off part of the
+signal and sends it to the speaker.
+
+30
+00:01:28,401 --> 00:01:29,618
+Watch the scope.
+
+31
+00:01:29,618 --> 00:01:31,705
+Channel one is the full input.
+
+32
+00:01:31,705 --> 00:01:34,346
+Channel two is what reaches the speaker.
+
+33
+00:01:34,696 --> 00:01:35,989
+Turn the knob up.
+
+34
+00:01:35,989 --> 00:01:38,914
+The wiper slides, and
+the output wave grows.
+
+35
+00:01:38,914 --> 00:01:40,449
+The music gets louder.
+
+36
+00:01:40,799 --> 00:01:43,044
+Turn it down, and the output shrinks.
+
+37
+00:01:43,044 --> 00:01:45,074
+At the bottom end, it is silent.
+
+38
+00:01:45,724 --> 00:01:47,695
+Fixed resistors set a value.
+
+39
+00:01:47,695 --> 00:01:50,183
+Variable resistors let you choose it.
+
+40
+00:01:50,983 --> 00:01:53,309
+So how much does the wiper pick off?
+
+41
+00:01:53,309 --> 00:01:54,542
+Let's work it out.
+
+42
+00:01:54,892 --> 00:01:58,686
+The resistance of a uniform
+track grows with its length.
+
+43
+00:01:58,686 --> 00:02:00,671
+So R is proportional to L.
+
+44
+00:02:01,371 --> 00:02:06,592
+If the wiper sits a length x from the
+bottom, the lower part has a resistance
+
+45
+00:02:06,592 --> 00:02:08,992
+R x equals x over L, times R.
+
+46
+00:02:09,692 --> 00:02:13,434
+The current through the whole
+track is I equals V in over R.
+
+47
+00:02:14,134 --> 00:02:17,617
+The output is that current
+times the lower part.
+
+48
+00:02:17,617 --> 00:02:20,684
+So V out equals V in times R x over R.
+
+49
+00:02:21,384 --> 00:02:23,641
+This is called a voltage divider.
+
+50
+00:02:23,641 --> 00:02:27,754
+Volts in volts, ohms in ohms,
+and the fraction has no unit.
+
+51
+00:02:28,404 --> 00:02:29,711
+Worked example.
+
+52
+00:02:29,711 --> 00:02:34,202
+A ten kilo ohm potentiometer
+is connected across nine volts.
+
+53
+00:02:34,552 --> 00:02:39,381
+The wiper is at thirty percent of
+the track, so R x is three kilo ohms.
+
+54
+00:02:39,731 --> 00:02:42,763
+The current is nine
+divided by ten thousand.
+
+55
+00:02:42,763 --> 00:02:45,309
+That is zero point nine milliamperes.
+
+56
+00:02:45,909 --> 00:02:48,500
+V out is nine times three over ten.
+
+57
+00:02:48,500 --> 00:02:50,162
+Two point seven volts.
+
+58
+00:02:50,812 --> 00:02:52,277
+Now, the exam trap.
+
+59
+00:02:52,627 --> 00:02:57,108
+Many students think a potentiometer
+and a rheostat are connected the same
+
+60
+00:02:57,108 --> 00:02:58,008
+way.
+
+61
+00:02:57,625 --> 00:02:58,719
+They are not.
+
+62
+00:02:59,069 --> 00:03:03,572
+A potentiometer uses all three
+terminals and divides the voltage.
+
+63
+00:03:03,572 --> 00:03:07,406
+A rheostat uses two terminals
+and changes the current.
+
+64
+00:03:08,056 --> 00:03:09,701
+Where is this asked?
+
+65
+00:03:09,701 --> 00:03:11,347
+In PUC board papers.
+
+66
+00:03:11,347 --> 00:03:16,493
+Classify resistors, describe a wire
+wound resistor, or tell a potentiometer
+
+67
+00:03:16,493 --> 00:03:17,852
+from a rheostat.
+
+68
+00:03:18,502 --> 00:03:19,402
+Try this.
+
+69
+00:03:19,355 --> 00:03:23,620
+A twenty kilo ohm potentiometer
+is connected across twelve volts.
+
+70
+00:03:23,620 --> 00:03:27,386
+The wiper is a quarter of
+the way up from the bottom.
+
+71
+00:03:27,386 --> 00:03:31,942
+A five kilo ohm load is connected
+between the wiper and the bottom.
+
+72
+00:03:31,942 --> 00:03:33,700
+Find the output voltage.
+
+73
+00:03:39,300 --> 00:03:40,200
+B.
+
+74
+00:03:39,767 --> 00:03:42,283
+About one point seven one volts.
+
+75
+00:03:42,633 --> 00:03:46,743
+The lower part is five kilo ohms,
+and the upper part is fifteen.
+
+76
+00:03:47,093 --> 00:03:50,299
+The load sits in parallel
+with the lower part.
+
+77
+00:03:50,299 --> 00:03:54,148
+Five and five in parallel
+make two point five kilo ohms.
+
+78
+00:03:54,498 --> 00:03:58,895
+V out is twelve times two point
+five over seventeen point five.
+
+79
+00:03:58,895 --> 00:04:01,809
+That is about one point seven one volts.
+
+80
+00:04:02,459 --> 00:04:03,980
+Screenshot this card.
+
+81
+00:04:07,180 --> 00:04:09,805
+Next, resistor colour codes and ratings.
+
+82
+00:04:09,805 --> 00:04:12,797
+How do four coloured
+bands tell you the value?
