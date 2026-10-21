@@ -177,7 +177,7 @@ mk(tG, 'line', { x1: f2(q1x), y1: f2(q1y), x2: f2(q5x), y2: f2(q5y), stroke: C.i
 mk(tG, 'circle', { cx: f2(q1x), cy: f2(q1y), r: 9, fill: C.ink }); mk(tG, 'circle', { cx: f2(q5x), cy: f2(q5y), r: 9, fill: C.red });
 txt(tG, f2(q1x + 14), f2(q1y - 8), 'π/4', { 'font-size': 20, fill: C.ink, 'font-weight': 600 }); txt(tG, f2(q5x - 14), f2(q5y + 30), '5π/4', { 'text-anchor': 'end', 'font-size': 20, fill: C.red, 'font-weight': 600 });
 txt(tG, 290, 132, 'differ by π:', { 'font-size': 22, fill: C.ink2, 'font-weight': 600 }); txt(tG, 290, 166, 'opposite sides', { 'font-size': 22, fill: C.ink2, 'font-weight': 600 });
-const where = PUC.where($('#wa'), { on: ['PUC BOARDS'], type: 'Find the quadrant of an angle, or the angle in [0, 2π) with the same end point.' });
+const where = PUC.where($('#wa'), { on: [], type: 'Find the quadrant of an angle, or the angle in [0, 2π) with the same end point.' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 800,
   q: `How many of these angles end at the same point as ${K(th('\\pi/3'))} on the unit circle?<br>${K('7\\pi/3,\\quad -5\\pi/3,\\quad 4\\pi/3,\\quad 13\\pi/3,\\quad -\\pi/3')}`,
   opts: ['1', '2', '3', '4'], right: 2, optW: 474, optY: 316 });
@@ -199,7 +199,7 @@ const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
 const tR4 = T0('R4');
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tR4 - 0.1, 1.08, 1330, 540], [T0('R5') + 0.4, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tR4 - 0.1, 1.05, 960, 545], [T0('R5') + 0.4, 1, 960, 540]]);
 
 M.on(t => {
   camF(t); head(t); sweep(t);
@@ -332,7 +332,7 @@ M.on(t => {
     M.vis($('#trap'), t, tX1 + 0.05, 1e9, { dy: 36 }); M.vis($('#wa'), t, T0('J1') - 0.1, 1e9, { dy: 36 });
     trap(t, { tin: tX1, tWrong: wt('X2', 'Many') - 0.1, tStrike: wt('X3', 'half') - 0.1, tRight: wt('X3', 'opposite') - 0.1 });
     M.vis(tG, t, wt('X3', 'half'), 1e9, { dy: 0, fade: 0.25 });
-    where(t, { tin: T0('J1'), tLight: [wt('J1', 'PUC')], tType: wt('J1', 'find') });
+    where(t, { tin: T0('J1'), tLight: [wt('J1', 'trigonometry')], tType: wt('J1', 'find') });
   }
 
   /* Q */

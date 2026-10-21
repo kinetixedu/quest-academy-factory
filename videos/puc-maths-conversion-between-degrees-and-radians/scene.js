@@ -162,7 +162,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 26', topic: 'The valve turns 
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tVs[1] + 0.2, 1.08, 1368, 560], [tVs[2] - 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tVs[1] + 0.2, 1.05, 960, 545], [tVs[2] - 0.2, 1, 960, 540]]);
 
 M.on(t => {
   camF(t); head(t); sweep(t);

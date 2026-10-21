@@ -139,7 +139,7 @@ const ts = $('#tS'), ta = axes(ts, { ox: 250, oy: 200, sx: 52, sy: 30, x0: -3.6,
 const tParab = mk(ts, 'path', { d: ta.path(x => x * x, -2.2, 2.2), fill: 'none', stroke: C.red, 'stroke-width': 3, 'stroke-dasharray': '6 6' });
 const tLin = mk(ts, 'path', { d: ta.path(x => 2 * x + 1, -0.9, 2), fill: 'none', stroke: C.ok, 'stroke-width': 4, 'stroke-linecap': 'round' });
 const tLt = txt(ts, ta.X(2) + 12, ta.Y(4.6), 'a straight line', { 'font-size': 18, fill: C.ok, 'font-weight': 700 });
-const where = PUC.where($('#wa'), { on: ['PUC BOARDS'], type: 'Define constant, identity and polynomial functions, and draw their graphs.' });
+const where = PUC.where($('#wa'), { on: [], type: 'Spot constant, identity and polynomial functions inside bigger function questions.' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 800,
   q: `${K(`f \\text{ is a polynomial with } f(x + 1) - f(x) = 2x + 3`)}<br>for all x, and ${K('f(0) = 1')}. Find ${K('f(2)')}.`,
   opts: ['6', '8', '9', '10'], right: 2, optW: 474, optY: 300 });
@@ -160,7 +160,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 20', topic: 'Distance is neve
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('G4') - 0.2, 1.04, 1010, 550], [T0('G6') + 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('G4') - 0.2, 1.04, 960, 540], [T0('G6') + 0.2, 1, 960, 540]]);
 
 /* ---------- frame ---------- */
 M.on(t => {
@@ -306,7 +306,7 @@ M.on(t => {
     trap(t, { tin: tX1, tWrong: wt('X2', 'Many') - 0.1, tStrike: wt('X3', 'expand') - 0.1, tRight: wt('X3', 'leaves') - 0.1 });
     M.draw(tParab, t, wt('X2', 'squares') - 0.1, 0.7); tParab.style.opacity = (1 - 0.7 * M.io((t - wt('X3', 'leaves')) / 0.3)).toFixed(3);
     M.draw(tLin, t, wt('X3', 'leaves'), 0.7); M.vis(tLt, t, wt('X3', 'degree'), 1e9, { dy: 0 });
-    where(t, { tin: T0('J1'), tLight: [wt('J1', 'PUC')], tType: wt('J1', 'define') });
+    where(t, { tin: T0('J1'), tLight: [], tType: wt('J1', 'building') - 0.6 });
   }
 
   /* Q */

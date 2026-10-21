@@ -195,7 +195,7 @@ const tB = wt('W4', 'Multiply'), tA = wt('W5', 'Add');
 const trap = PUC.trap($('#trap'), { wrong: K(`-1 \\le \\cos\\theta \\le 1 \;\\Rightarrow\; -1 \\le \\sec\\theta \\le 1`), right: K(`\\sec\\theta \\le -1\\ \\ \\text{or}\\ \\ \\sec\\theta \\ge 1`) + '&nbsp; (cos θ = 1/2 gives sec θ = 2)' });
 const ts = $('#tS'), XX = a => 40 + 520 * a / (2 * PI), XY = v => 137 - 38 * v;
 const tBand = mk(ts, 'rect', { x: 40, y: XY(1), width: 520, height: XY(-1) - XY(1), fill: C.redBg });
-const tBandT = txt(ts, 300, XY(0) - 8, 'sec θ never here', { 'text-anchor': 'middle', 'font-size': 20, 'font-weight': 700, fill: C.red });
+const tBandT = txt(ts, 300, XY(0.45), 'sec θ never here', { 'text-anchor': 'middle', 'font-size': 20, 'font-weight': 700, fill: C.red });
 mk(ts, 'line', { x1: 30, y1: XY(0), x2: 570, y2: XY(0), stroke: C.ink, 'stroke-width': 2 });
 const tCos = mk(ts, 'path', { d: '', fill: 'none', stroke: CO, 'stroke-width': 3.5 });
 { let d = ''; for (let i = 0; i <= 80; i++) { const x = 2 * PI * i / 80; d += (i ? 'L' : 'M') + XX(x).toFixed(1) + ',' + XY(Math.cos(x)).toFixed(1); } attr(tCos, 'd', d); }
@@ -222,7 +222,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 30', topic: 'Trace the valve 
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('G3', 'Five') - 0.3, 1.08, 600, 500], [T0('G5') - 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]]]);
 const pv = (els, t, t0, gap = 0.08) => els.forEach((e, i) => M.vis(e, t, t0 + i * gap, 1e9, { dy: 0, fade: 0.2 }));
 const steps = (pre, n, ts, t, dy) => { for (let i = 0; i < n; i++) { const el = $('#' + pre + i); M.vis(el.querySelector('.n'), t, ts[i] - 0.2, 1e9, { ...POP, sc: 0.4 }); PUC.write(el.querySelector('.sx'), t, ts[i], 0.8); M.vis(el.querySelector('.why'), t, ts[i] + 0.6, 1e9, { dx: -12, dy: 0 }); } };
 

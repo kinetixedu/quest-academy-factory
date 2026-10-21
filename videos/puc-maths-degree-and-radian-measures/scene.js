@@ -198,7 +198,7 @@ const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
 const tR4 = T0('R4'), tR5 = T0('R5');
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tR4 - 0.1, 1.08, 1368, 560], [tR5 + 0.3, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tR4 - 0.1, 1.05, 960, 545], [tR5 + 0.3, 1, 960, 540]]);
 
 /* ---------- frame ---------- */
 M.on(t => {

@@ -199,7 +199,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 37', topic: 'x² + 1 = 0 has 
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('G5', 'touches') - 0.3, 1.06, 700, 540], [T0('G6') + 0.1, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [wt('G5', 'touches') - 0.3, 1.05, 960, 545], [T0('G6') + 0.1, 1, 960, 540]]);
 
 /* ---------- frame ---------- */
 M.on(t => {

@@ -139,7 +139,7 @@ const wH = [2, 6].map(v => mk(wsv, 'circle', { cx: WX(v), cy: wNy, r: 12, fill: 
 const wNl = txt(wsv, 740, wNy - 24, 'DOMAIN: ALL REAL x EXCEPT 2 AND 6', { 'text-anchor': 'end', 'font-size': 17, fill: AC, 'font-weight': 600, 'letter-spacing': 1 });
 
 /* ---------- X / Q / F: exam segment ---------- */
-const trap = PUC.trap($('#trap'), { wrong: K(`\\dfrac{x^2 - 4}{x - 2} = x + 2 \\;\\Rightarrow\\; \\text{domain} = \\mathbb{R}`), right: K(`\\text{domain} = \\mathbb{R} - \\{2\\}`) + '&nbsp; at 2 the bottom is 0', y0: 76, y1: 182 });
+const trap = PUC.trap($('#trap'), { wrong: K(`(x^2 - 4)/(x - 2) = x + 2 \\;\\Rightarrow\\; \\text{domain} = \\mathbb{R}`), right: K(`\\text{domain} = \\mathbb{R} - \\{2\\}`) + '&nbsp; at 2 the bottom is 0', y0: 76, y1: 182 });
 const ts = $('#tS'), TX = v => 120 + v * 70, TY = v => 236 - v * 32;
 mk(ts, 'line', { x1: 40, y1: TY(0), x2: 540, y2: TY(0), stroke: C.ink, 'stroke-width': 2 }); mk(ts, 'line', { x1: TX(0), y1: 250, x2: TX(0), y2: 40, stroke: C.ink, 'stroke-width': 2 });
 [1, 2, 3, 4].forEach(v => txt(ts, TX(v), TY(0) + 24, v, { 'text-anchor': 'middle', 'font-size': 16, fill: C.ink, 'font-weight': 600 }));
@@ -166,7 +166,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 19', topic: 'A bus fare, a mi
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('L3') - 0.2, 1.04, 1010, 550], [T0('L4') + 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('L3') - 0.2, 1.04, 960, 540], [T0('L4') + 0.2, 1, 960, 540]]);
 
 /* ---------- frame ---------- */
 M.on(t => {
