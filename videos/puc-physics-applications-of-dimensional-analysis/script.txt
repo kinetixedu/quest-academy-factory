@@ -1,0 +1,54 @@
+H1|0.4|A swing in a park. A clock pendulum. A bob on a string in the physics lab.
+H2|0.45|They all swing back and forth in a fixed time. What decides that time?
+H3|0.35|Aarav ties his keys to a string in the college corridor and lets it swing.
+H4|0.5|No formula, no textbook. Can he still guess the formula for one swing?
+H5|0.6|Yes. Using only dimensions. Today we see how.
+P1|0.4|Last time we learned: every term in a correct equation has the same dimensions. That rule has three big uses.
+P3|0.4|One. Check whether a formula can be right.
+P4|0.4|Two. Convert a quantity from one system of units to another.
+P5|0.65|Three. Guess the form of a formula, before any experiment. Let us start with the swing.
+S1|0.35|Here is the corridor pendulum. The time for one full swing is the time period, T.
+S2|0.4|Watch the graph. The angle goes back and forth, and the dot follows the bob.
+S3|0.4|Slow-mo replay. Gravity, in red, pulls the bob down. The velocity, in blue, is biggest at the bottom.
+S4|0.4|What could the period depend on? Only three things are here.
+S5|0.65|The mass of the bob, m. The length of the string, l. And gravity, g.
+D1|0.35|Let's build the formula, one step at a time.
+D2|0.75|Step one. Guess T equals k, times m to the x, l to the y, g to the z. k is a pure number.
+D3|0.75|Step two. Dimensions. T on the left. M to the x, L to the y, and L T to the minus two, to the z.
+D4|0.75|Step three. Match the powers of M. There is no M on the left, so x is zero.
+D5|0.75|Step four. Match the powers of T. One equals minus two z. So z is minus one half.
+D6|0.75|Step five. Match the powers of L. Zero equals y plus z. So y is plus one half.
+D7|0.7|So T equals k times the square root of l over g. We found it without a single experiment.
+R1|0.35|Now read what this formula is telling us. Follow the links.
+R2|0.4|x is zero, so mass has no power. So the mass of the bob does not matter.
+R3|0.4|y is one half, so T grows with the square root of the length.
+R4|0.65|z is minus one half. So stronger gravity means a faster swing.
+K1|0.4|Side by side. Two one metre strings. A light key ring, and a heavy steel ball.
+K2|0.6|Both take about two seconds for a full swing. The heavy one does not swing faster.
+K3|3.2|Now you try. Aarav makes the string four times longer. What happens to the period? Pause the video and decide.
+K4|0.65|It doubles! T goes as the square root of l, and the square root of four is two. Two seconds becomes four.
+C1|0.35|Now the second use. Converting units.
+C2|0.4|In the SI system, energy is measured in joules. The older CGS system uses ergs.
+C3|0.4|Energy has dimensions M L squared T to the minus two.
+C4|0.75|So the number changes by the mass ratio, times the length ratio squared, times the time ratio to the minus two.
+C5|3.2|Your turn. Which ratio goes in: old unit over new unit, or new over old? Pause and decide.
+C6|0.65|Old over new! n two equals n one times u one over u two. A bigger old unit gives a bigger new number.
+W1|0.35|Now, one worked example.
+W2|0.5|How many ergs make one joule?
+W3|0.75|One kilogram is one thousand grams. One metre is one hundred centimetres. The second stays the same.
+W4|0.75|n two equals one, times one thousand, times one hundred squared, times one.
+W5|0.65|That is one thousand times ten thousand. Ten to the power seven. So one joule is ten to the seven ergs.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students flip the ratio, and get one newton equals ten to the minus five dynes.
+X3|0.65|But a dyne is a much smaller force. Smaller unit, bigger number. One newton is ten to the power five dynes.
+E1|0.6|Where is this asked? As questions that build a formula from what a quantity depends on, or convert units.
+Q1|5.4|Exam level now. Ripple speed depends on surface tension S, density rho, and wavelength lambda. Which formula fits? Pause and solve.
+A1|0.5|The answer is B. The square root of S over rho lambda.
+A2|0.5|Surface tension is force per length, M T to the minus two. Matching T gives the power of S as one half.
+A3|0.6|Matching M gives rho the power minus one half. Matching L gives lambda minus one half too.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why does the mass of the bob not appear in the formula for the period?
+Y3|0.9|Two. If the string is made nine times longer, what happens to the period?
+Y4|1.1|Three. How many ergs make one joule, and why?
+N1|0.3|Next time: our formula had a mystery number k. Can dimensions find it? Limitations of dimensional analysis.
