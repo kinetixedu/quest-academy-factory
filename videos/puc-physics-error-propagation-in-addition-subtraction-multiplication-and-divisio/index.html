@@ -1,0 +1,185 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 16 - Error Propagation</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 16: error propagation (Motion notebook, measuring bench + live error bars) ===== */
+:root{--u:#7A4FE0;--f:#D9731A}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.u{color:var(--u)}.f{color:var(--f)}.a{color:var(--ac)}
+.svgA{position:absolute;left:0;top:0}
+/* title card jobs */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .jv{position:absolute;right:28px;top:20px;font:600 34px/1 'IBM Plex Mono';white-space:nowrap}
+.jr .je{position:absolute;right:28px;top:66px;height:34px;padding:0 12px;border-radius:8px;background:#FCEBDC;color:var(--f);font:600 18px 'IBM Plex Mono';display:flex;align-items:center;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#note{position:absolute;left:402px;top:300px;width:300px;height:140px;background:#FFFDF6;border-radius:6px;box-shadow:0 8px 20px rgba(22,33,62,.22);padding:16px 22px}
+#note .nt1{font:600 15px 'IBM Plex Mono';letter-spacing:.1em;color:var(--mute)}
+#note .nt2{font:700 40px Caveat;color:var(--ink);margin-top:4px;white-space:nowrap}
+#note .nt3{font:700 30px Caveat;color:var(--f);white-space:nowrap}
+.wq{position:absolute;top:494px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap}
+/* P: flow */
+.chipQ{position:absolute;height:72px;padding:0 22px;border-radius:14px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 32px 'IBM Plex Mono';white-space:nowrap}
+.chipQ.ink{background:var(--ink);color:#fff}
+.boxC{position:absolute;height:72px;padding:0 22px;border-radius:14px;border:2.5px dashed var(--dim);display:flex;align-items:center;font:600 24px Poppins;color:var(--ink2);white-space:nowrap}
+/* readouts: compact variant */
+.ro.sm .k{font-size:26px}.ro.sm .v{font-size:30px}.ro.sm .u{font-size:20px}
+.ro.sm{row-gap:4px}
+/* derivation steps */
+.st{position:absolute;left:36px;width:712px;height:136px}
+.st .n{position:absolute;left:0;top:6px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:42px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:72px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+.rs{position:absolute;left:36px;width:968px;height:110px}
+.rs .n{position:absolute;left:0;top:50%;margin-top:-23px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.rs .sx{position:absolute;left:70px;top:50%;transform:translateY(-50%);font-size:36px;white-space:nowrap}
+.rs .why{position:absolute;left:660px;top:50%;margin-top:-17px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+/* side by side */
+.sbv{position:absolute;left:36px;top:96px;font:600 64px/1 'IBM Plex Mono';white-space:nowrap}
+.sbv .pm{color:var(--f)}
+.fBig{position:absolute;left:36px;font-size:54px;white-space:nowrap}
+/* worked */
+#wq{position:absolute;left:36px;top:70px;font:600 28px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:28px}
+#resC{position:absolute;top:470px;height:64px;padding:0 22px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+#resC .pm{color:#F6B57A}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font-size:26px}
+#mq .mq{font-size:32px}
+#sF .fcard .fl{font-size:38px}
+#sF .fcard .fl.txt{font-size:32px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+.tagS{position:absolute;display:inline-flex;align-items:center;height:36px;padding:0 12px;border-radius:8px;background:var(--ink);color:#fff;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 1 UNITS AND MEASUREMENT</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Error <span class="acc">Propagation</span></div>
+    <div id="sub">How small errors grow inside a result</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: three jobs + Aarav's table -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE JOBS · ONE HIDDEN PROBLEM</div><div class="ghost" id="exH" style="right:36px;top:18px">EXAMPLE FIGURES</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Every length hides a small error</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV'S STUDY TABLE</div>
+        <div id="hdF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div id="note"><div class="nt1">TABLE TOP</div><div class="nt2">120 cm × 60 cm</div><div class="nt3" id="nt3">± 1 mm on each side</div></div>
+        <div class="wq" id="wq0" style="left:36px"><span class="f">Error in the area:</span><span class="mono">1 mm²</span><span>?</span></div>
+        <div class="pillp ink" id="wq1" style="left:470px;top:498px">Much bigger. Watch.</div></div>
+    </div>
+
+    <!-- P: what is error propagation -->
+    <div id="sP">
+      <div class="card full" id="pf"><div class="lbl" style="left:36px;top:30px">ERRORS TRAVEL INTO THE RESULT</div>
+        <svg id="pfS" class="svgA" width="784" height="580"></svg>
+        <div class="chipQ" id="pA" style="left:36px;top:110px"><span class="a">A</span><span class="f">± ΔA</span></div>
+        <div class="chipQ" id="pB" style="left:36px;top:290px"><span class="u">B</span><span class="f">± ΔB</span></div>
+        <div class="boxC" id="pC" style="left:322px;top:200px">calculate</div>
+        <div class="chipQ ink" id="pZ" style="left:548px;top:200px"><span>Z</span><span style="color:#F6B57A">± ΔZ</span></div>
+        <div class="pillp" id="pP" style="left:36px;top:470px">Propagate = <b>&nbsp;spread</b></div></div>
+      <div class="card rf" id="pw"><div class="lbl" style="left:36px;top:30px">ALWAYS TAKE THE WORST CASE</div>
+        <svg id="pwS" class="svgA" width="784" height="580"></svg>
+        <div class="pillp good" id="pwP" style="left:36px;top:470px">The true value is surely inside the range</div></div>
+    </div>
+
+    <!-- S: measuring bench, add then subtract (sim + readout + live error bar) -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">MEASURING BENCH · TWO RODS</div>
+        <div class="ghost" id="exS" style="right:36px;top:18px">ERROR DRAWN 10x LARGER</div>
+        <svg id="simS" class="svgA" width="784" height="580"></svg>
+        <div class="tagS" id="slo" style="left:36px;top:76px">SLOW-MO REPLAY · 0.25x</div></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro sm" id="roG" style="left:36px;top:66px;width:712px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" id="grL" style="left:36px;top:30px">LIVE ERROR BAR · A + B</div><svg id="grS" class="svgA" width="784" height="274"></svg></div>
+    </div>
+
+    <!-- D: the rule for + and - -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE RULE · 3 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">WORST CASE, DRAWN</div><svg id="drS" class="svgA" width="784" height="580"></svg></div>
+    </div>
+
+    <!-- K: side by side + think -->
+    <div id="sK">
+      <div class="card full" id="ka"><div class="lbl" style="left:36px;top:30px">ADDING · A + B</div><div class="sbv" id="kaV">35.0 <span class="pm">± 0.2</span> <span class="u" style="font-size:40px">cm</span></div>
+        <svg id="kaS" class="svgA" width="784" height="580"></svg>
+        <div class="pillp" id="kaC" style="left:36px;top:470px">Relative: 0.2 ÷ 35 ≈ <b class="mono">&nbsp;0.6 %</b></div></div>
+      <div class="card rf" id="kb"><div class="lbl" style="left:36px;top:30px">SUBTRACTING · A − B</div><div class="sbv" id="kbV">5.0 <span class="pm">± 0.2</span> <span class="u" style="font-size:40px">cm</span></div>
+        <svg id="kbS" class="svgA" width="784" height="580"></svg>
+        <div class="pillp bad" id="kbC" style="left:36px;top:470px">Relative: 0.2 ÷ 5 = <b class="mono">&nbsp;4 %</b></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- M: the table area sim -->
+    <div id="sM">
+      <div class="card full" id="msim"><div class="lbl" style="left:36px;top:30px">MEASURING BENCH · TABLE TOP</div>
+        <div class="ghost" id="exM" style="right:36px;top:18px">STRIPS DRAWN 50x THICKER</div>
+        <svg id="mS" class="svgA" width="784" height="580"></svg>
+        <div class="tagS" id="slo2" style="left:36px;top:76px">SLOW-MO REPLAY · 0.25x</div></div>
+      <div class="card rt" id="mro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro sm" id="mroG" style="left:36px;top:62px;width:712px"></div></div>
+      <div class="card rb" id="mgr"><div class="lbl" style="left:36px;top:30px">% ERROR IN AREA VS WIDTH <i style="font-family:Poppins;text-transform:none">W</i></div><svg id="mgS" class="svgA" width="784" height="274"></svg></div>
+    </div>
+
+    <!-- R: the rule for x and / -->
+    <div id="sR">
+      <div class="card" id="rl" style="left:160px;top:270px;width:1040px;height:580px"><div class="lbl" style="left:36px;top:30px">THE RULE FOR × AND ÷ · 4 STEPS</div><div id="rsteps"></div></div>
+      <div class="card" id="rr" style="left:1232px;top:270px;width:528px;height:580px"><div class="lbl" style="left:36px;top:30px">WHERE THE TERMS COME FROM</div><svg id="rrS" class="svgA" width="528" height="580"></svg></div>
+    </div>
+
+    <!-- C: side by side rules + think -->
+    <div id="sC">
+      <div class="card full" id="ca"><div class="lbl" style="left:36px;top:30px">ADD OR SUBTRACT</div><div class="fBig" id="caF" style="top:120px"></div>
+        <div class="pillp" id="caC" style="left:36px;top:290px">Add the <b>&nbsp;absolute&nbsp;</b> errors</div><div class="pillp" id="caU" style="left:36px;top:360px">Unit: <b class="mono">&nbsp;cm</b>, same as the reading</div></div>
+      <div class="card rf" id="cb"><div class="lbl" style="left:36px;top:30px">MULTIPLY OR DIVIDE</div><div class="fBig" id="cbF" style="top:96px"></div>
+        <div class="pillp ac" id="cbC" style="left:36px;top:290px">Add the <b>&nbsp;relative&nbsp;</b> errors</div><div class="pillp" id="cbU" style="left:36px;top:360px">No unit · or add the percentages</div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">Table: <span class="a">L</span> = (120.0 ± 0.1) cm, <span class="u">W</span> = (60.0 ± 0.1) cm. Find the area and its error.</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">AARAV'S TABLE · DONE FULLY</div><svg id="wrS" class="svgA" width="784" height="580"></svg>
+        <div class="pillp ac" id="wP" style="left:36px;top:390px">Relative error 0.0025 = <b class="mono">&nbsp;0.25 %</b></div>
+        <div id="resC"><span>A = 7200</span><span class="pm">± 18</span><span>cm²</span></div></div>
+    </div>
+
+    <!-- X: exam trap + where -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tr" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap, questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Add or subtract: the <span class="acc">errors add</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

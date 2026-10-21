@@ -1,0 +1,67 @@
+H1|0.35|A tailor measures cloth. A builder measures a floor. A painter, a wall.
+H2|0.45|All three combine lengths. And every length hides a small error.
+H3|0.35|Aarav measures his study table. One hundred and twenty centimetres, by sixty.
+H4|0.35|His ruler can be off by one millimetre on each side.
+H5|0.55|So how far off is the area? One square millimetre? It is much bigger.
+P1|0.35|So what is error propagation?
+P2|0.35|When we calculate with measured values, their errors travel into the result.
+P3|0.6|Propagation simply means spreading.
+P4|0.55|We always take the worst case, so the true value surely lies inside our range.
+S1|0.35|First, adding. Two rods on our measuring bench.
+S2|0.35|Rod A is twenty centimetres, plus or minus zero point one.
+S3|0.35|Rod B is fifteen, plus or minus zero point one.
+S4|0.35|End to end, the total is thirty five centimetres.
+S5|0.35|Let both rods be at their longest. The total grows by zero point two.
+S6|0.35|Both at their shortest, it shrinks by zero point two.
+S7|0.55|So it is thirty five, plus or minus zero point two. The errors added up.
+B1|0.35|Now subtract. Lay rod B along rod A. Five centimetres stick out.
+B3|0.35|Longest case: A at its longest, B at its shortest. Five point two.
+B4|0.35|Shortest case: the other way round. Four point eight.
+B5|0.55|So it is five, plus or minus zero point two. Even when we subtract, the errors add.
+D1|0.35|Let's write this as a rule, one step at a time.
+D2|0.65|Step one. Z equals A plus B, with errors delta A and delta B.
+D3|0.65|Step two. The biggest Z is A plus delta A, plus B plus delta B.
+D4|0.65|Step three. So the error in Z is delta A plus delta B. The same holds for A minus B.
+T1|0.7|Remember this. When you add or subtract, the absolute errors add.
+K1|0.35|Side by side. Adding gave thirty five, plus or minus zero point two.
+K2|0.6|Subtracting gave five. The same error, on a much smaller answer.
+K3|3.2|Now you try. Fifty plus or minus one, minus thirty plus or minus one. Is the error zero, or two? Pause and decide.
+K4|0.55|Two! Errors never cancel. One reading can be high while the other is low.
+M1|0.35|Now multiply. Back to Aarav's table.
+M2|0.35|One twenty by sixty is seven thousand two hundred square centimetres.
+M3|0.35|Now stretch both sides by one millimetre. Two thin strips appear.
+M5|0.35|The long strip is one hundred and twenty times zero point one. Twelve square centimetres.
+M6|0.35|The short strip is sixty times zero point one. Six. The tiny corner is too small to count.
+M8|0.55|So the area can be off by eighteen square centimetres, not one square millimetre!
+M9|0.55|Make the table narrower, and the percentage error climbs. A short side brings more error.
+R1|0.35|Now the rule for multiplying, step by step.
+R2|0.65|Step one. Z equals A times B. The extra area is A delta B, plus B delta A.
+R3|0.65|Step two. Divide both sides by Z, which is A times B.
+R4|0.65|Step three. Delta Z over Z equals delta A over A, plus delta B over B. The relative errors add.
+R5|0.65|Step four. For Z equals A over B, the rule is the same.
+C1|0.35|Side by side. Adding or subtracting: add the absolute errors, in centimetres.
+C2|0.6|Multiplying or dividing: add the relative errors, which have no unit. Or the percentages.
+C3|3.2|Your turn. Speed is distance over time. Distance has one percent error, time has two. Is the speed error one percent, or three? Pause.
+C4|0.55|Three percent! Division still adds the relative errors. They never subtract.
+W1|0.35|Now, one worked example. Aarav's table, done fully.
+W2|0.45|Length one twenty, width sixty, each plus or minus zero point one centimetres.
+W3|0.65|Relative error in length: zero point one over one hundred and twenty.
+W4|0.65|Relative error in width: zero point one over sixty.
+W5|0.65|Add them. Zero point zero zero two five, or zero point two five percent.
+W6|0.65|Seven thousand two hundred times zero point zero zero two five gives eighteen.
+W7|0.55|So the area is seven thousand two hundred, plus or minus eighteen square centimetres.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students subtract the errors when they subtract values.
+X3|0.55|But errors always add. Delta Z is still delta A plus delta B.
+E1|0.6|Where is this asked? As numericals on the maximum percentage error in a result.
+Q1|5.4|Exam level now. Find the maximum percentage error in the trolley's average speed. Pause and solve.
+A1|0.45|The answer is C. One point four percent.
+A2|0.45|The distance is fifty centimetres. Its error is zero point one plus zero point one, zero point two.
+A3|0.45|That is zero point four percent. The time error is zero point zero two over two, one percent.
+A4|0.6|Speed is a division, so add them. One point four percent.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.35|Can you answer these three questions without help?
+Y2|0.9|One. Why do errors add, even when you subtract?
+Y3|0.9|Two. When do you add percentage errors instead?
+Y4|1.1|Three. What is the error in the perimeter of Aarav's table?
+N1|0.3|Next time: your calculator shows eight digits. Which ones do you keep? Measurement uncertainty.
