@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "Integrated Circuits, Microprocessors and Microcontrollers",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 3
+ },
+ "class": "11",
+ "title": "A Computer on One Chip Explained Simply | PUC Electronics Class 11",
+ "description": "Aarav opens a broken TV remote and finds no tubes and no tangle of wires, just a flat board and one small chip. How can one chip run everything? In this animated lesson we go from separate parts soldered by hand to Jack Kilby's integrated circuit (1958) and Robert Noyce's mass-produced silicon chips (1959): what an IC contains, why it is called monolithic, the levels of integration (SSI, MSI, LSI, VLSI), and the advantages and limits of ICs.\n\nThen we build a microprocessor block by block (ALU, control unit, registers, buses) and watch the fetch, decode, execute cycle, before memory, input output ports and timers move onto the same chip to make a microcontroller. On a live breadboard a microcontroller blinks a lamp while the program steps line by line and the oscilloscope draws the square wave. We show why n address lines give 2^n addresses, work out that 16 lines reach 64 KB, compare microprocessors and microcontrollers, and finish with the exam trap, where it is asked, an original PUC board pattern practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 3 of PUC Electronics, Class 11, Chapter 1: Introduction to Electronics (Karnataka PUC Electronics).\n\nIn this video:\n0:00 One chip inside a TV remote\n0:12 From separate parts to one piece\n0:31 What is an integrated circuit?\n1:18 Inside a microprocessor\n2:04 The microcontroller: a whole computer on one chip\n2:20 Blink a lamp on the breadboard\n3:04 Address lines: 2 to the power n\n3:26 Worked example: 16 lines, 64 KB\n3:44 Microprocessor vs microcontroller\n4:09 Exam trap\n4:24 Where it is asked\n4:35 Practice question\n5:05 Formula card\n\nNext episode: Applications of Electronics.\n\nVideo by Quest Academy.",
+ "tags": [
+  "integrated circuit",
+  "what is an IC",
+  "monolithic IC",
+  "SSI MSI LSI VLSI",
+  "microprocessor",
+  "microcontroller",
+  "microprocessor vs microcontroller",
+  "ALU control unit registers",
+  "address lines 2^n",
+  "PUC electronics",
+  "1st PUC electronics chapter 1",
+  "Karnataka PUC electronics",
+  "class 11 electronics",
+  "introduction to electronics"
+ ],
+ "thumb": {
+  "title": "Computer on One Chip",
+  "accent_word": "Chip",
+  "frame_t": 166
+ }
+}

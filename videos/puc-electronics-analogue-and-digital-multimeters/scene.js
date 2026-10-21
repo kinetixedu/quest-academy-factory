@@ -272,7 +272,7 @@ M.on(t => {
     const out = tG - 0.32;
     M.vis($('#nL'), t, tN + 0.1, out, { dx: -60, dy: 0, ...o }); M.vis($('#nR'), t, tN + 0.25, out, { dx: 60, dy: 0, ...o }); const tSw = tNs[0] - 0.4;
     M.vis(nRL0, t, tN + 0.4, tSw, { dy: 10, outDur: 0.25 }); M.vis($('#nR > .lbl'), t, tSw + 0.3, 1e9, { dy: 10 });
-    nJob.forEach((j, i) => { M.vis(j, t, tCh[i] - 0.15, tSw, { dx: -20, dy: 0, outDur: 0.25, ody: -10 }); const u = M.io((t - tCh[i]) / 0.25) * (1 - M.io((t - (tCh[i + 1] ?? T0('N3'))) / 0.25)); j.style.background = M.mix(C.soft, C.ac2, u); });
+    nJob.forEach((j, i) => { M.vis(j, t, tN + 0.6 + i * 0.12, tSw, { dx: -20, dy: 0, outDur: 0.25, ody: -10 }); const u = M.io((t - tCh[i]) / 0.25) * (1 - M.io((t - (tCh[i + 1] ?? T0('N3'))) / 0.25)); j.style.background = M.mix(C.soft, C.ac2, u); });
     drawSeq(nDial.parts, t, tN + 0.3, 0.12, 0.01); fadeAt([...nDial.lt, nDial.nd, nDial.pv, nDl], t, tN + 0.5, 0.03);
     M.vis(nSw, t, wt('N2', 'switch') - 0.1, 1e9, { dy: 16 });
     nCh.forEach((c, i) => { M.vis(c, t, tCh[i] - 0.15, 1e9, { dy: 16 }); const u = M.io((t - tCh[i]) / 0.25) * (1 - M.io((t - (tCh[i + 1] ?? T0('N3'))) / 0.25)); c.style.background = M.mix(C.soft, C.ac2, u); c.style.borderColor = M.mix(C.soft, AM, u); M.draw(nLn[i], t, tCh[i] - 0.2, 0.3); M.draw(nLn[i + 4], t, tCh[i], 0.3); });

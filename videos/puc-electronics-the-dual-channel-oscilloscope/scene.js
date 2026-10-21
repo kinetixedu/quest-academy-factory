@@ -226,7 +226,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 22', topic: 'Measuring voltag
 const head = PUC.header({ tMorph });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const cam = M.camera($('#cam'), [[0, 1, 960, 540], [tR2 - 0.2, 1.12, 640, 560], [tR5 - 0.4, 1, 960, 540]]);
+const cam = M.camera($('#cam'), [[0, 1, 960, 540], [tR2 - 0.2, 1.12, 640, 560], [tR4 - 0.2, 1, 960, 540]]);
 const ghost = $('#ghost'); let gw = 0;
 
 M.on(t => {

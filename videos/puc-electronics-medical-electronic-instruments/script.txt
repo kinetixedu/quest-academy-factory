@@ -1,0 +1,38 @@
+H1|0.35|At the clinic, a nurse clips a small device onto Diya's finger. In a few seconds, two numbers appear on its screen.
+H2|0.5|How can light read your blood?
+I1|0.35|Medical electronic instruments measure signals from the human body.
+I2|0.35|Almost every one is a chain of three blocks. First, a sensor called a transducer turns a body signal into an electrical signal.
+I3|0.65|Then an amplifier makes that tiny signal bigger. And a display shows the result as a number or a graph.
+M1|0.35|Let's meet the common ones.
+M2|0.35|A digital thermometer uses a thermistor, a part whose resistance changes with temperature. Normal body temperature is about thirty seven degrees Celsius.
+M3|0.35|A sphygmomanometer measures blood pressure in the arteries, in millimetres of mercury. For a healthy adult it is about one twenty over eighty.
+M4|0.35|A pulse oximeter shines red light and infrared light through the finger. A light sensor on the other side measures how much gets through.
+M5|0.35|Blood rich in oxygen absorbs more infrared. Blood with less oxygen absorbs more red. Comparing the two gives the oxygen level, and the pulses give the heart rate.
+M6|0.65|An E C G records the electrical signals of the heart. An E E G records the much weaker electrical signals of the brain.
+B1|0.35|Let's build the E C G on the breadboard.
+B2|0.35|Electrodes on the skin pick up the heart's signal. It is tiny, only about one millivolt.
+B3|0.35|An amplifier with a gain of one thousand makes it about one volt, big enough to display.
+B4|0.35|Watch the scope. Channel one shows the tiny input. Channel two shows the same shape, a thousand times bigger.
+B5|0.35|Each beat draws the same pattern. A small P wave, a tall spike called the Q R S complex, and a T wave.
+B6|0.65|The P wave comes from the upper chambers, the atria. The Q R S complex comes from the lower chambers, the ventricles, just before they squeeze. The T wave shows the ventricles returning to rest.
+S1|0.8|Sensor, amplifier, display. That is every medical instrument.
+D1|0.35|So how does the machine count your heart rate? From the gap between two R peaks.
+D2|0.7|The time between two R peaks is called the R R interval, in seconds.
+D3|0.7|One beat takes that much time. So in one second, there are one over R R beats.
+D4|0.7|A minute has sixty seconds. So the heart rate is sixty divided by the R R interval, in beats per minute.
+D5|0.65|And the gain of the amplifier is the output voltage divided by the input voltage. It has no unit.
+W1|0.35|Worked example. On the scope, two R peaks are four divisions apart, at zero point two seconds per division.
+W2|0.6|The R R interval is four times zero point two. That is zero point eight seconds.
+W3|0.6|The heart rate is sixty divided by zero point eight. Seventy five beats per minute.
+W4|0.65|And the gain is one volt divided by one millivolt. One thousand.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think an E C G measures blood pressure. It does not.
+X3|0.65|An E C G records the heart's electrical signals. Blood pressure is measured by a sphygmomanometer, in millimetres of mercury.
+X4|0.65|Where is this asked? In PUC board papers. Name the instrument for a quantity, give its use, or draw the blocks of a medical instrument.
+Q1|5.6|Try this. An E C G is recorded on paper that moves at twenty five millimetres per second. Two R peaks are fifteen millimetres apart. What is the heart rate?
+A1|0.35|C. One hundred beats per minute.
+A2|0.35|The R R interval is fifteen millimetres divided by twenty five millimetres per second.
+A3|0.35|That is zero point six seconds.
+A4|0.65|The heart rate is sixty divided by zero point six. One hundred beats per minute.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, fixed and variable resistors. How does turning a volume knob change the sound?

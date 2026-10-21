@@ -303,7 +303,7 @@ M.on(t => {
     ladA.forEach((a, i) => M.vis(a, t, tDer[3] + 0.3 + i * 0.2, 1e9, { dy: 0, fade: 0.2 }));
     M.vis($('#nRL1'), t, tN + 0.4, tW - 0.3, { dy: 10, outDur: 0.25 }); M.vis($('#nRL2'), t, tW + 0.1, 1e9, { dy: 10 });
     dRows.forEach((r, i) => { M.vis(r, t, tDer[i] - 0.1, tW - 0.3, { dy: 0, fade: 0.12, outDur: 0.25, ody: -10 }); if (t < tW) { M.vis(r.querySelector('.n'), t, tDer[i] - 0.1, 1e9, { dy: 0, sc: 0.4, sp: M.POP, fade: 0.08 }); PUC.write(r.querySelector('.sx'), t, tDer[i], 0.6); const w = r.querySelector('.why'); if (w) M.vis(w, t, tDer[i] + 0.5, 1e9, { dx: -10, dy: 0 }); } });
-    M.vis($('#nBox'), t, tDer[3] + 0.6, 1e9, { dy: 0, sc: 0.96, fade: 0.2 });
+    if (t < tW) M.vis($('#nBox'), t, tDer[3] + 0.6, tW - 0.3, { dy: 0, sc: 0.96, fade: 0.2, outDur: 0.25, ody: 0 }); else M.vis($('#nBox'), t, tWr[3] - 0.1, 1e9, { dy: 0, sc: 0.96, fade: 0.2 });
     wR.forEach((r, i) => { M.vis(r.querySelector('.n'), t, tWr[i] - 0.1, 1e9, { dy: 0, sc: 0.4, sp: M.POP, fade: 0.08 }); PUC.write(r.querySelector('.sx'), t, tWr[i], 0.7); const w = r.querySelector('.why'); if (w) M.vis(w, t, tWr[i] + 0.6, 1e9, { dx: -10, dy: 0 }); M.hide(r, t < tWr[i] - 0.15); });
     avN(t, wt('W4', 'famous') - 0.2, out);
   }
