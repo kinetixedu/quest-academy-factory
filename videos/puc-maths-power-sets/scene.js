@@ -105,7 +105,7 @@ const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW
   opts: ['4', '8', '16', '32'], right: 2, optW: 474, optY: 260 });
 const so = PUC.solution($('#so'), [[K(`n(${ac('A')}) = 2`)], [K(`n(P(${ac('A')})) = 2^2 = 4`)], [K(`P(P(${ac('A')})):\\ \\text{4-element set}`)], [K(`n(P(P(${ac('A')}))) = 2^4 = 16`)]], { y0: 100, dy: 100 });
 const tSo = [wt('A2', 'A'), wt('A2', 'squared'), wt('A3', 'power'), wt('A4', 'sixteen') - 0.6];
-const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · power sets', y0: 96, dy: 84, txt: [1, 0, 0, 0, 1],
+const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · power sets', y0: 88, dy: 80, txt: [1, 0, 0, 0, 1],
   lines: ['<b>Power set</b> P(A): the set of all the subsets of A',
     K(`n(${ac('A')}) = n \\;\\Rightarrow\\; n(P(${ac('A')})) = 2^{n}`),
     K(`P(\\{${xc('1')}, ${xc('2')}\\}) = \\{${PHI},\\ \\{${xc('1')}\\},\\ \\{${xc('2')}\\},\\ \\{${xc('1')}, ${xc('2')}\\}\\}`),
