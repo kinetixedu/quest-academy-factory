@@ -30,7 +30,7 @@ const arr = (svg, c, sw = 6) => PUC.arrow(svg, c, sw, 18);
 
 /* ---------- beats ---------- */
 const tMorph = T0('H3') + 0.02;
-const tA1 = T0('A1'), tL1 = T0('L1'), tS1 = T0('S1'), tS3 = T0('S3'), tM1 = T0('M1'), tT = T0('T1'), tR1 = T0('R1'), tR3 = T0('R3'), tV1 = T0('V1');
+const tA1 = T0('B1'), tL1 = T0('L1'), tS1 = T0('S1'), tS3 = T0('S3'), tM1 = T0('M1'), tT = T0('T1'), tR1 = T0('R1'), tR3 = T0('R3'), tV1 = T0('V1');
 const tW1 = T0('W1'), tX1 = T0('X1'), tQ = T0('Q1'), tF = T0('F1'), tY = T0('Y1'), tN = T0('N1');
 const tCount = T1('Q1') + 0.05, tAns = T0('A1') - 0.02;
 const SW = [[tT, tR1], [tQ, tQ + 0.06], [tF, tF + 0.06]];
@@ -50,7 +50,7 @@ const hEnd = txt($('#hS'), hb.X(4) + 18, hb.Y(6) + 8, '4 east, 6 north', { 'font
 /* ---------- A: addition steps ---------- */
 $('#aG').innerHTML = K(`z_1 = ${A('a')} + ${I}\\,${B('b')}, \\qquad z_2 = ${A('c')} + ${I}\\,${B('d')}`);
 const aEl = steps($('#aSt'), [[`\\text{real: } ${A('a + c')}`, 'add the real parts'], [`\\text{imaginary: } ${B('b + d')}`, 'add the imaginary parts'], [`z_1 + z_2 = (${A('a + c')}) + ${I}\\,(${B('b + d')})`, 'put them together']], 170, 110);
-const tAs = [wt('A2', 'Add'), wt('A3', 'Add'), wt('A4', 'Put')];
+const tAs = [wt('B2', 'Add'), wt('B3', 'Add'), wt('B4', 'Put')];
 $('#aC0').innerHTML = K(`\\phantom{+}\\ ${cx(3, 2)}`); $('#aC1').innerHTML = K(`+\\ ${cx(1, 4)}`); $('#aC2').innerHTML = K(`\\phantom{+}\\ ${cx(4, 6)}`);
 
 /* ---------- L: tip to tail ---------- */
@@ -156,7 +156,7 @@ M.on(t => {
   /* H */
   const hOn = t >= tMorph && t < tA1 + 0.1; M.hide($('#sH'), !hOn);
   if (hOn) {
-    const out = OUT('A1');
+    const out = OUT('B1');
     M.vis($('#hl'), t, tMorph + 0.1, out, { dx: -60, dy: 0, ...o });
     M.vis(hb.g, t, tMorph + 0.3, 1e9, { dy: 0, fade: 0.3 });
     grow(hR1, t, tMorph + 0.6, hb.X(0), hb.Y(0), hb.X(3), hb.Y(2), 0.8); grow(hR2, t, tMorph + 1.5, hb.X(3), hb.Y(2), hb.X(4), hb.Y(6), 0.8);
@@ -172,7 +172,7 @@ M.on(t => {
   if (aOn) {
     const out = OUT('L1');
     M.vis($('#al'), t, tA1 + 0.1, out, { dx: -60, dy: 0, ...o });
-    PUC.write($('#aG'), t, wt('A1', 'Take'), 1.0);
+    PUC.write($('#aG'), t, wt('B1', 'Take'), 1.0);
     runSteps(aEl, t, tAs); hiMove($('#aHi'), t, tAs, 170, 110, 8);
     M.vis($('#ar'), t, tA1 + 0.4, out, { dx: 60, dy: 0, ...o });
     PUC.write($('#aC0'), t, tA1 + 0.8, 0.6); PUC.write($('#aC1'), t, tA1 + 1.4, 0.6);

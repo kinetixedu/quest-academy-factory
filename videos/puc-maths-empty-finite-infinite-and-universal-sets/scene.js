@@ -87,8 +87,8 @@ const uR = mk(us, 'rect', { x: 40, y: 84, width: 704, height: 400, rx: 10, fill:
 const uRL = txt(us, 60, 118, 'U', { 'font-family': 'Poppins', 'font-style': 'italic', 'font-size': 34, 'font-weight': 700, fill: C.ink });
 const uA = mk(us, 'circle', { cx: 250, cy: 290, r: 130, fill: ACB, stroke: AC, 'stroke-width': 3.5 });
 const uB = mk(us, 'circle', { cx: 540, cy: 290, r: 112, fill: BCB, stroke: BC, 'stroke-width': 3.5 });
-const uAL = txt(us, 250, 196, 'RIDE A BICYCLE', { 'text-anchor': 'middle', 'font-size': 17, fill: AC, 'font-weight': 600, 'letter-spacing': 1 });
-const uBL = txt(us, 540, 212, 'WALK', { 'text-anchor': 'middle', 'font-size': 17, fill: BC, 'font-weight': 600, 'letter-spacing': 1 });
+const uAL = txt(us, 250, 148, 'RIDE A BICYCLE', { 'text-anchor': 'middle', 'font-size': 17, fill: AC, 'font-weight': 600, 'letter-spacing': 1 });
+const uBL = txt(us, 540, 166, 'WALK', { 'text-anchor': 'middle', 'font-size': 17, fill: BC, 'font-weight': 600, 'letter-spacing': 1 });
 const SP = [[210, 280, 0], [270, 250, 0], [300, 320, 0], [200, 340, 0], [250, 380, 0], [520, 280, 1], [570, 330, 1], [500, 345, 1], [580, 260, 1], [110, 170, 2], [400, 150, 2], [680, 160, 2], [400, 440, 2], [690, 440, 2], [110, 440, 2]];
 const uDots = SP.map(([x, y, s]) => mk(us, 'circle', { cx: x, cy: y, r: 10, fill: [AC, BC, C.ink2][s] }));
 const uOther = txt(us, 392, 470, '', { 'text-anchor': 'middle', 'font-size': 17, fill: C.mute, 'font-weight': 600 });
@@ -117,7 +117,7 @@ const tBox = (x, lab, inner) => { const g = mk(ts, 'g', {}); mk(g, 'path', { d: 
 const tbA = tBox(130, 'φ: no element', ''), tbB = tBox(400, '{0}: one element', '0');
 const where = PUC.where($('#wa'), { on: [], type: 'Which of these sets are empty? Which are finite, and which infinite?' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 800,
-  q: `${K(`A = \\{${xc('x')} \\in \\mathbb{R} : ${xc('x')}^2 + 1 = 0\\}, \\quad B = \\{${xc('x')} \\in \\mathbb{N} : ${xc('x')}^2 - 3${xc('x')} + 2 = 0\\}`)}<br>${K(`C = \\{${xc('x')} \\in \\mathbb{Z} : 1 < ${xc('x')} < 2\\}, \\quad D = \\{${xc('x')} \\in \\mathbb{Q} : ${xc('x')}^2 = 2\\}, \\quad E = \\{${PHI}\\}`)}<br>How many of these five sets are empty?`,
+  q: `${K(`A = \\{${xc('x')} \\in \\mathbb{R} : ${xc('x')}^2 + 1 = 0\\}, \\quad C = \\{${xc('x')} \\in \\mathbb{Z} : 1 < ${xc('x')} < 2\\}`)}<br>${K(`B = \\{${xc('x')} \\in \\mathbb{N} : ${xc('x')}^2 - 3${xc('x')} + 2 = 0\\}, \\quad D = \\{${xc('x')} \\in \\mathbb{Q} : ${xc('x')}^2 = 2\\}`)}<br>${K(`E = \\{${PHI}\\}`)}. How many of these five sets are empty?`,
   opts: ['2', '3', '4', '5'], right: 1, optW: 474, optY: 330 });
 const so = PUC.solution($('#so'), [[K(`A:\\ ${xc('x')}^2 = -1 \\Rightarrow ${PHI}`)], [K(`B = \\{1, 2\\}`)], [K(`C = ${PHI},\\ \\ D = ${PHI}`)], [K(`E = \\{${PHI}\\}:\\ \\text{1 element}`)], [K(`\\text{empty: } A, C, D \\Rightarrow 3`)]], { y0: 100, dy: 96 });
 const tSo = [wt('A2', 'real'), wt('A3', 0), wt('A4', 0), wt('A5', 0), wt('A5', 'three')];

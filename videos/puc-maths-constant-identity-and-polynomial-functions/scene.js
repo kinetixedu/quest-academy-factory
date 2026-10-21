@@ -126,7 +126,7 @@ const wsol = PUC.solution($('#wl'), [
   [K(`f(${xc('-1')}) = -1 - 1 + 2 = ${rc('0')}`)],
   [K(`f(${xc('0')}) = ${rc('2')}`)],
   [K(`f(${xc('2')}) = 8 - 4 + 2 = ${rc('6')}`)],
-  ['Points ' + K(`(${xc('-1')}, ${rc('0')}),\\ (${xc('0')}, ${rc('2')}),\\ (${xc('2')}, ${rc('6')})`)]], { label: 'WORKED EXAMPLE', y0: 210, dy: 74 });
+  ['Points ' + K(`(${xc('-1')}, ${rc('0')}),\\ (${xc('0')}, ${rc('2')}),\\ (${xc('2')}, ${rc('6')})`)]], { label: 'WORKED EXAMPLE', y0: 262, dy: 70 });
 $('#wl .lbl').style.top = '30px';
 const tW = [wt('W3', 'powers'), wt('W4', 'minus'), wt('W5', 'zero'), wt('W6', 'two'), wt('W7', 'graph')];
 const ws = $('#wS'), wa = axes(ws, { ox: 330, oy: 470, sx: 120, sy: 48, x0: -2, x1: 3.3, y0: -1.8, y1: 8, xt: [-1, 1, 2], yt: [2, 4, 6] });
