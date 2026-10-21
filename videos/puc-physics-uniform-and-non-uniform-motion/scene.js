@@ -90,8 +90,8 @@ $('#roG').innerHTML = `<span></span><span class="u" style="color:${B1};font-weig
   <span class="k" style="color:${AC}">a</span><span class="v" id="ra1" style="color:${AC};font-size:30px"></span><span class="v" id="ra2" style="color:${AC};font-size:30px"></span>`;
 $('#roG').style.gridTemplateColumns = '60px 1fr 1fr';
 // live x-t graph
-const gs = $('#grS'), G = PUC.graph(gs, { x: 110, y: 64, w: 540, h: 150, xmax: 8, ymax: 40, xt: [0, 2, 4, 6, 8], yt: [0, 20, 40] });
-txt(gs, 664, 222, 't (s)', {}); txt(gs, 60, 56, 'x (m)', {});
+const gs = $('#grS'), G = PUC.graph(gs, { x: 110, y: 80, w: 540, h: 136, xmax: 8, ymax: 40, xt: [0, 2, 4, 6, 8], yt: [0, 20, 40] });
+txt(gs, 664, 222, 't (s)', {}); txt(gs, 36, 86, 'm', {});
 const gc = [G.curve(B1), G.curve(B2)], gd = [G.dot(B1), G.dot(B2)];
 const gT = [txt(gs, 0, 0, 'straight line', { 'font-weight': 600, fill: B1, 'font-size': 20 }), txt(gs, 0, 0, 'curves up', { 'font-weight': 600, fill: B2, 'font-size': 20 })];
 const avA = PUC.avatar($('#sS'), { x: 160 + 36, y: 270 + 486, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'Same 40 m, same 8 s. So the same motion?' });
@@ -240,6 +240,7 @@ M.on(t => {
       r.marks.forEach((m, k) => M.hide(m, k * 5 * r.dt > xm + 1e-6 || u <= 0));
       r.lab.style.opacity = M.io((t - t0 - 1.3) / 0.3).toFixed(3);
     });
+    M.vis($('#puP'), t, wt('P3', 'however') - 0.1, 1e9, POP);
     M.vis($('#pn'), t, tP4 - 0.05, out, { dx: 60, dy: 0, ...o });
     M.vis($('#pnP'), t, wt('P4', 'not') - 0.1, 1e9, POP);
     NU.forEach((_, i) => { const el = $('#nu' + i); M.vis(el, t, tNu[i] - 0.1, 1e9, POP); M.vis(el.querySelector('.nk'), t, tNu[i] + 0.4, 1e9, { ...POP, sc: 0.4 }); });
