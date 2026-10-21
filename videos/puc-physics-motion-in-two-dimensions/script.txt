@@ -1,0 +1,58 @@
+H1|0.4|A kite drifts across the sky. A ball curves to a friend. A bicycle swings around a bend.
+H2|0.45|None moves in a straight line. So how do we describe motion that bends?
+H3|0.35|Aarav cuts across an empty road at a slant. Each second, four metres east and three metres north.
+H4|0.5|So is he going seven metres per second? Most people say yes. They are wrong.
+H5|0.65|By the end, you will know his real speed, and the trick behind it.
+P1|0.35|First, where is he? On a straight road, one number was enough.
+P2|0.4|On flat ground, we need two. x, how far east. And y, how far north.
+P3|0.4|The arrow from the start to Aarav is his position vector, r.
+P4|0.65|In symbols, r equals x i hat plus y j hat. i hat points along x, and j hat along y.
+S1|0.35|Now, onto the motion notebook.
+S2|0.4|Watch his two shadows. The x shadow slides four metres every second. The y shadow climbs three.
+S4|0.4|Two straight line motions. Two straight lines on the graph.
+S5|0.35|Slow-mo replay. Freeze him, and draw his velocity.
+S6|0.4|The blue arrow is v x, four metres per second. The violet arrow is v y, three.
+S7|0.65|His real velocity is the diagonal that joins them. Its length is root four squared plus three squared. Five metres per second, not seven.
+S8|3.2|Your turn. Six metres per second east, and eight north. What is the real speed? Pause and decide.
+S9|0.65|Ten! Root of one hundred. Never just add the two numbers.
+D1|0.35|Now the rules, one step at a time.
+D2|0.75|Step one. In a short time, delta t, the position changes by delta r. That is delta x i hat plus delta y j hat.
+D3|0.75|Step two. Divide by delta t. The velocity is v x i hat plus v y j hat.
+D4|0.75|Step three. The speed is the length of this arrow. Root v x squared plus v y squared.
+D5|0.75|Step four. The direction is the angle theta, where tan theta equals v y divided by v x.
+T1|0.7|Remember this. Motion in a plane is just two straight line motions, happening at the same time.
+C1|0.35|Now add acceleration.
+C2|0.4|Aarav flicks a marble sideways, along x, across a tilted board.
+C3|0.4|The slope pulls it down the board, along y, with a steady acceleration. Watch the path bend.
+C5|0.4|Across the board, the speed stays the same. The blue line on the graph is flat.
+C6|0.4|Down the slope, it keeps speeding up. The violet line climbs.
+C7|0.65|And the velocity arrow always follows the path, not the pull of the slope.
+R1|0.35|So we use the straight line equations twice. Once for x, once for y.
+R2|0.75|Along x. v x equals u x plus a x t. And x equals u x t plus half a x t squared.
+R3|0.75|Along y. v y equals u y plus a y t. And y equals u y t plus half a y t squared.
+R4|0.75|Together, the vector form. v equals u plus a t. And r equals u t plus half a t squared.
+K1|0.4|Side by side. Along x, no acceleration. Equal distances in equal times.
+K2|0.6|Along y, there is acceleration. The gaps grow, in the ratio one, three, five.
+K3|3.2|Now you try. Aarav flicks the marble twice as fast. Does it take longer to reach the bottom? Pause and decide.
+K4|0.65|No! Same time. The flick changes only the x motion. The time down depends only on y.
+W1|0.35|Now, one worked example.
+W2|0.5|A particle starts at the origin with velocity four i hat, and acceleration two j hat. Find its position and speed at three seconds.
+W3|0.75|Along x, u x is four and a x is zero. So x is four times three, twelve metres.
+W4|0.75|Along y, u y is zero and a y is two. So y is half times two times three squared, nine metres.
+W5|0.75|Now velocity. v x stays four. v y is two times three, six metres per second.
+W6|0.65|Speed is root four squared plus six squared. Root fifty two, about seven point two metres per second.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students put plain numbers into v equals u plus a t. Four plus two times three, ten.
+X3|0.65|But u and a point in different directions. Solve along x and y separately, then combine. The real answer is seven point two.
+E1|0.6|Where is this asked? In questions giving u and a as vectors, asking for position or speed.
+Q1|5.4|Exam level now. A particle starts at the origin with velocity six i hat, and acceleration four j hat. When y is eight metres, find x and the speed. Pause and solve.
+A1|0.5|The answer is B. Twelve metres, and ten metres per second.
+A2|0.5|Along y, eight equals half times four times t squared. So t is two seconds.
+A3|0.5|So x is six times two, twelve metres. And v y is four times two, eight.
+A4|0.6|Speed is root six squared plus eight squared, ten. Option A just added six and eight. That is the trap.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why is four east plus three north not seven?
+Y3|0.9|Two. How do you find the speed from v x and v y?
+Y4|1.1|Three. Does a faster flick change the time down a slope? Why?
+N1|0.3|Next time: throw one ball sideways and drop another. Which lands first? Projectile motion.

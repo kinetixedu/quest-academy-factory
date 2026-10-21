@@ -1,0 +1,149 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 40 - Motion in Two Dimensions</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 40: motion in two dimensions (Motion notebook) ===== */
+:root{--vx:#2F6FEB;--vy:#7A4FE0;--a:#D64545}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.vx{color:var(--vx)}.vy{color:var(--vy)}.ra{color:var(--a)}
+/* title tiles */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr svg{position:absolute;right:20px;top:14px}
+.wq{position:absolute;top:490px;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 25px Poppins;white-space:nowrap}
+/* plane / sims */
+.ro2{position:absolute;display:grid;grid-template-columns:auto 1fr auto;column-gap:14px;row-gap:6px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .v{font:600 34px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 20px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+.smo{position:absolute;right:36px;top:18px;height:44px;padding:0 16px;border-radius:9px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.fx{position:absolute;white-space:nowrap}
+.pl{position:absolute;left:36px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.chip2{position:absolute;height:60px;padding:0 22px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:104px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:-2px;font-size:38px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:58px;font:500 23px Poppins;color:var(--mute);white-space:nowrap}
+/* equations twice */
+.eqh{position:absolute;top:40px;height:48px;padding:0 18px;border-radius:10px;display:inline-flex;align-items:center;font:600 20px 'IBM Plex Mono';letter-spacing:.08em;color:#fff;white-space:nowrap}
+.eq{position:absolute;font-size:44px;white-space:nowrap}
+.vrow{position:absolute;left:48px;top:356px;width:1504px;height:180px;border-radius:14px;background:var(--soft)}
+/* side by side */
+.gp{position:absolute;height:40px;padding:0 12px;border-radius:8px;background:var(--soft);display:inline-flex;align-items:center;font:600 22px 'IBM Plex Mono';white-space:nowrap}
+#wkq{position:absolute;left:36px;top:70px;font:600 27px/1.38 Poppins;width:712px}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font-size:25px}
+#wl .sol .sx{font-size:30px}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:32px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 32px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 3 MOTION IN A PLANE</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="title">Motion in <span class="acc">Two Dimensions</span></div>
+    <div id="sub">Two straight line motions, at the same time</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE PATHS THAT BEND</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Not one straight line: motion in a plane</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · CROSSING AN EMPTY ROAD</div>
+        <div style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)" id="hdF"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg" style="position:absolute;left:152px;top:76px;width:480px;height:360px;border-radius:12px">
+        <svg id="hkS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="wqs"></div></div>
+    </div>
+
+    <!-- P: position in a plane -->
+    <div id="sP">
+      <div class="card full" id="pq"><div class="lbl" style="left:36px;top:30px">WHERE IS AARAV? · FLAT GROUND</div><svg id="pqS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="pm">
+        <div class="lbl" id="pm0" style="left:36px;top:30px">STRAIGHT ROAD · ONE NUMBER</div><svg id="pmS" width="784" height="140" style="position:absolute;left:0;top:60px"></svg>
+        <div class="lbl" id="pm1" style="left:36px;top:214px">FLAT GROUND · TWO NUMBERS</div>
+        <div class="chip2" id="px0" style="left:36px;top:256px"><span class="vx"><i style="font-family:Poppins">x</i> = 8 m</span><span style="font:500 20px Poppins;color:var(--mute)">east</span></div>
+        <div class="chip2" id="px1" style="left:330px;top:256px"><span class="vy"><i style="font-family:Poppins">y</i> = 6 m</span><span style="font:500 20px Poppins;color:var(--mute)">north</span></div>
+        <div class="fx" id="pF" style="left:36px;top:356px;font-size:56px"></div>
+        <div class="pillp" id="pi" style="left:36px;top:470px"></div><div class="pillp" id="pj" style="left:300px;top:470px"></div></div>
+    </div>
+
+    <!-- S: sim + readout + graph -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">SIMULATION · 4 M/S E + 3 M/S N</div><div class="smo" id="smo">SLOW-MO REPLAY · 0.25x</div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div>
+        <div class="ro2" id="roA" style="left:36px;top:70px;width:320px"></div><div class="ro2" id="roB" style="left:412px;top:70px;width:336px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">POSITION VS TIME</div><svg id="grS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- D: the rules -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE RULES · 4 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">ONE SMALL STEP, ZOOMED IN</div><svg id="drS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- C: marble on a tilted board -->
+    <div id="sC">
+      <div class="card full" id="msim"><div class="lbl" style="left:36px;top:30px">SIMULATION · MARBLE ON A TILTED BOARD</div><div class="smo" id="smo2">SLOW-MO REPLAY · 0.25x</div>
+        <svg id="mS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rt" id="mro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ghost" id="exC" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <div class="ro2" id="mA" style="left:36px;top:70px;width:320px"></div><div class="ro2" id="mB" style="left:412px;top:70px;width:336px"></div></div>
+      <div class="card rb" id="mgr"><div class="lbl" style="left:36px;top:30px">VELOCITY VS TIME</div><svg id="mgS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- R: the equations twice -->
+    <div id="sR"><div class="card" id="req" style="left:160px;top:270px;width:1600px;height:580px"><div id="eqs"></div></div></div>
+
+    <!-- K: side by side + think -->
+    <div id="sK">
+      <div class="card full" id="kx"><div class="lbl" style="left:36px;top:30px">ALONG x · NO ACCELERATION</div><svg id="kxS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="kxP" style="left:36px;top:490px">Equal distances in equal times</div></div>
+      <div class="card rf" id="ky"><div class="lbl" style="left:36px;top:30px">ALONG y · STEADY ACCELERATION</div><svg id="kyS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="kyP" style="left:36px;top:490px">Distances grow: 1 : 3 : 5</div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wkq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">THE PATH · x = 4t, y = t²</div><svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tpS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Two <span class="acc">straight line</span> motions at once.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
