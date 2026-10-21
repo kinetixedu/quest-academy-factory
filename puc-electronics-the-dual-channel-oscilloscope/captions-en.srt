@@ -1,0 +1,376 @@
+1
+00:00:00,450 --> 00:00:03,822
+Aarav's meter reads seven
+volts from a small adapter.
+
+2
+00:00:03,822 --> 00:00:07,354
+But is that voltage steady,
+or wobbling up and down?
+
+3
+00:00:07,704 --> 00:00:09,591
+A meter gives just one number.
+
+4
+00:00:09,591 --> 00:00:12,256
+To see the shape, he
+needs an oscilloscope.
+
+5
+00:00:12,756 --> 00:00:15,775
+An oscilloscope draws
+a voltage as a picture.
+
+6
+00:00:15,775 --> 00:00:18,278
+Voltage goes up and down the screen.
+
+7
+00:00:18,278 --> 00:00:19,787
+Time runs across it.
+
+8
+00:00:20,437 --> 00:00:23,667
+The classic one is the
+cathode ray oscilloscope.
+
+9
+00:00:23,667 --> 00:00:26,113
+Its heart is the cathode ray tube.
+
+10
+00:00:26,463 --> 00:00:28,817
+At the back sits the electron gun.
+
+11
+00:00:28,817 --> 00:00:31,261
+A heated cathode gives off electrons.
+
+12
+00:00:31,611 --> 00:00:34,086
+The control grid sets
+how many get through.
+
+13
+00:00:34,086 --> 00:00:35,581
+That sets the brightness.
+
+14
+00:00:35,931 --> 00:00:39,798
+Anodes speed the electrons up
+and focus them into a thin beam.
+
+15
+00:00:40,148 --> 00:00:44,599
+The beam hits a screen coated with
+phosphor, which glows as a bright spot.
+
+16
+00:00:45,249 --> 00:00:47,985
+Two pairs of deflection
+plates steer the beam.
+
+17
+00:00:47,985 --> 00:00:51,794
+The vertical plates move it up
+and down, with the input signal.
+
+18
+00:00:52,144 --> 00:00:56,301
+The horizontal plates sweep it from
+left to right at a steady speed, then
+
+19
+00:00:56,301 --> 00:00:57,269
+snap it back.
+
+20
+00:00:57,269 --> 00:00:59,617
+That sawtooth comes from the time base.
+
+21
+00:00:59,967 --> 00:01:03,092
+Put the two together, and
+the spot draws the waveform.
+
+22
+00:01:03,442 --> 00:01:07,329
+A trigger circuit starts every sweep
+at the same point on the wave, so
+
+23
+00:01:07,329 --> 00:01:08,835
+the picture stands still.
+
+24
+00:01:09,486 --> 00:01:14,084
+A dual channel oscilloscope shows two
+signals at once, on channel one and
+
+25
+00:01:14,084 --> 00:01:15,058
+channel two.
+
+26
+00:01:15,408 --> 00:01:18,388
+Most use one beam and
+an electronic switch.
+
+27
+00:01:18,738 --> 00:01:23,137
+In alternate mode, it draws channel
+one on one sweep, and channel two on
+
+28
+00:01:23,137 --> 00:01:24,037
+the next.
+
+29
+00:01:23,906 --> 00:01:25,490
+This suits fast signals.
+
+30
+00:01:25,840 --> 00:01:30,228
+In chop mode, it hops between the
+two many times during every sweep.
+
+31
+00:01:30,228 --> 00:01:31,865
+This suits slow signals.
+
+32
+00:01:32,515 --> 00:01:34,407
+Let's use it on the breadboard.
+
+33
+00:01:34,757 --> 00:01:37,964
+An AC signal feeds a
+resistor and a capacitor.
+
+34
+00:01:37,964 --> 00:01:40,040
+Channel one probes the input.
+
+35
+00:01:40,040 --> 00:01:42,323
+Channel two probes the capacitor.
+
+36
+00:01:42,673 --> 00:01:43,978
+Watch both traces.
+
+37
+00:01:43,978 --> 00:01:47,463
+The output is smaller, and
+it lags behind the input.
+
+38
+00:01:48,113 --> 00:01:49,632
+Turn up the frequency.
+
+39
+00:01:49,632 --> 00:01:52,968
+The output shrinks even
+more, and lags even further.
+
+40
+00:01:53,618 --> 00:01:55,619
+Now, how do we read the screen?
+
+41
+00:01:55,619 --> 00:01:56,990
+Two knobs matter most.
+
+42
+00:01:57,340 --> 00:02:00,235
+Volts per division sets
+the vertical scale.
+
+43
+00:02:00,235 --> 00:02:03,182
+Time per division sets
+the horizontal scale.
+
+44
+00:02:03,832 --> 00:02:08,445
+Peak to peak voltage equals the number
+of vertical divisions, times volts
+
+45
+00:02:08,445 --> 00:02:09,486
+per division.
+
+46
+00:02:10,186 --> 00:02:15,144
+The time period equals the divisions
+in one cycle, times time per division.
+
+47
+00:02:15,144 --> 00:02:17,704
+And frequency is one over the period.
+
+48
+00:02:18,404 --> 00:02:21,972
+With two channels, you can
+read the phase difference too.
+
+49
+00:02:21,972 --> 00:02:26,469
+It is the shift in divisions, over the
+divisions in one cycle, times three
+
+50
+00:02:26,469 --> 00:02:28,149
+hundred and sixty degrees.
+
+51
+00:02:28,849 --> 00:02:29,986
+Worked example.
+
+52
+00:02:29,986 --> 00:02:34,898
+A wave is four divisions tall, peak
+to peak, at two volts per division.
+
+53
+00:02:35,248 --> 00:02:39,599
+So the peak to peak voltage is eight
+volts, and the peak is four volts.
+
+54
+00:02:40,199 --> 00:02:45,545
+One cycle spans five divisions, at zero
+point two milliseconds per division.
+
+55
+00:02:45,545 --> 00:02:47,466
+So T is one millisecond.
+
+56
+00:02:48,066 --> 00:02:50,826
+The frequency is one over one millisecond.
+
+57
+00:02:50,826 --> 00:02:52,720
+That is one thousand hertz.
+
+58
+00:02:53,370 --> 00:02:55,094
+A meter gives you a number.
+
+59
+00:02:55,094 --> 00:02:57,620
+An oscilloscope gives
+you the whole picture.
+
+60
+00:02:58,420 --> 00:02:59,885
+Now, the exam trap.
+
+61
+00:03:00,235 --> 00:03:04,382
+Many students read the full height
+of the wave as the peak voltage.
+
+62
+00:03:04,732 --> 00:03:05,661
+It is not.
+
+63
+00:03:05,661 --> 00:03:08,449
+Top to bottom is the peak to peak value.
+
+64
+00:03:08,449 --> 00:03:10,207
+The peak is half of it.
+
+65
+00:03:10,857 --> 00:03:12,364
+Where is this asked?
+
+66
+00:03:12,364 --> 00:03:13,871
+In PUC board papers.
+
+67
+00:03:13,871 --> 00:03:18,595
+The block diagram, what each control
+does, chop and alternate modes, and
+
+68
+00:03:18,595 --> 00:03:21,599
+reading voltage and
+frequency from the screen.
+
+69
+00:03:22,249 --> 00:03:23,149
+Try this.
+
+70
+00:03:23,085 --> 00:03:27,072
+A scope is set to zero point
+five milliseconds per division.
+
+71
+00:03:27,072 --> 00:03:31,742
+One cycle of each wave covers eight
+divisions, and channel two is shifted
+
+72
+00:03:31,742 --> 00:03:33,934
+one division behind channel one.
+
+73
+00:03:33,934 --> 00:03:36,861
+Find the frequency and
+the phase difference.
+
+74
+00:03:42,261 --> 00:03:43,161
+A.
+
+75
+00:03:42,677 --> 00:03:46,215
+Two hundred and fifty hertz,
+and forty five degrees.
+
+76
+00:03:46,565 --> 00:03:50,932
+The period is eight divisions
+times zero point five milliseconds.
+
+77
+00:03:50,932 --> 00:03:52,839
+That is four milliseconds.
+
+78
+00:03:53,189 --> 00:03:57,968
+So the frequency is one over four
+milliseconds, two hundred and fifty hertz.
+
+79
+00:03:58,318 --> 00:04:00,878
+The shift is one division out of eight.
+
+80
+00:04:00,878 --> 00:04:05,417
+So the phase is one eighth of three
+hundred and sixty, which is forty five
+
+81
+00:04:05,417 --> 00:04:06,317
+degrees.
+
+82
+00:04:06,745 --> 00:04:08,269
+Screenshot this card.
+
+83
+00:04:11,469 --> 00:04:15,132
+Next, measuring voltage, current,
+resistance and waveforms.
+
+84
+00:04:15,132 --> 00:04:17,141
+Every instrument, put to work.

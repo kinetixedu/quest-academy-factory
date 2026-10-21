@@ -1,0 +1,388 @@
+1
+00:00:00,450 --> 00:00:03,466
+Aarav checks the same
+resistor with two meters.
+
+2
+00:00:03,466 --> 00:00:05,679
+The needle meter says four volts.
+
+3
+00:00:06,029 --> 00:00:08,918
+The digital meter says
+four point nine seven.
+
+4
+00:00:08,918 --> 00:00:10,798
+Same resistor, same moment.
+
+5
+00:00:10,798 --> 00:00:12,892
+Which one is telling the truth?
+
+6
+00:00:13,392 --> 00:00:15,025
+Both are multimeters.
+
+7
+00:00:15,025 --> 00:00:19,957
+One box that measures voltage, current
+and resistance, for both AC and
+
+8
+00:00:19,957 --> 00:00:20,857
+DC.
+
+9
+00:00:20,814 --> 00:00:23,866
+A rotary switch picks the
+quantity and the range.
+
+10
+00:00:23,866 --> 00:00:27,699
+Two probes plug in, and the
+black one always goes to common.
+
+11
+00:00:28,349 --> 00:00:32,554
+Inside an analogue multimeter
+sits a single moving coil meter.
+
+12
+00:00:32,904 --> 00:00:37,934
+The switch connects shunts to make an
+ammeter, multipliers to make a voltmeter,
+
+13
+00:00:37,934 --> 00:00:40,854
+a rectifier for AC, and a cell for ohms.
+
+14
+00:00:41,204 --> 00:00:44,413
+You read the answer from the
+needle, on the matching scale.
+
+15
+00:00:44,763 --> 00:00:48,698
+Its sensitivity is one divided
+by the full scale current.
+
+16
+00:00:48,698 --> 00:00:53,059
+A fifty microampere movement gives
+twenty thousand ohms per volt.
+
+17
+00:00:53,709 --> 00:00:56,419
+A digital multimeter
+works in a different way.
+
+18
+00:00:56,769 --> 00:01:00,973
+First, the input stage scales the
+signal down to a small voltage.
+
+19
+00:01:01,323 --> 00:01:04,745
+Converters turn every
+quantity into a DC voltage.
+
+20
+00:01:04,745 --> 00:01:06,069
+AC is rectified.
+
+21
+00:01:06,069 --> 00:01:09,212
+Current flows through
+a small known resistor.
+
+22
+00:01:09,212 --> 00:01:12,031
+A resistor gets a steady known current.
+
+23
+00:01:12,381 --> 00:01:16,404
+Then an analogue to digital converter
+measures that voltage, and turns
+
+24
+00:01:16,404 --> 00:01:17,655
+it into a number.
+
+25
+00:01:18,005 --> 00:01:22,726
+A counter and decoder drive the
+display, so the digits appear directly.
+
+26
+00:01:22,726 --> 00:01:26,864
+Its input resistance is very
+high, typically ten million ohms.
+
+27
+00:01:27,514 --> 00:01:30,231
+Now back to Aarav's
+puzzle on the breadboard.
+
+28
+00:01:30,581 --> 00:01:34,513
+Two resistors of one hundred
+kilo ohms each share ten volts.
+
+29
+00:01:34,513 --> 00:01:36,684
+Each one should get five volts.
+
+30
+00:01:37,034 --> 00:01:40,371
+Connect the analogue meter
+on its ten volt range.
+
+31
+00:01:40,371 --> 00:01:45,088
+Its two hundred kilo ohms now sits
+in parallel with the lower resistor.
+
+32
+00:01:45,438 --> 00:01:46,779
+Watch the electrons.
+
+33
+00:01:46,779 --> 00:01:51,215
+Some current leaks through the meter,
+and on the scope, the voltage across
+
+34
+00:01:51,215 --> 00:01:53,334
+the resistor drops to four volts.
+
+35
+00:01:53,984 --> 00:01:55,859
+Swap in the digital meter.
+
+36
+00:01:55,859 --> 00:02:00,387
+Ten million ohms draws almost nothing,
+and the voltage climbs back close
+
+37
+00:02:00,387 --> 00:02:01,287
+to five.
+
+38
+00:02:01,817 --> 00:02:03,218
+Let's check the numbers.
+
+39
+00:02:03,568 --> 00:02:08,774
+One hundred kilo ohms in parallel with
+two hundred kilo ohms is sixty six
+
+40
+00:02:08,774 --> 00:02:10,597
+point seven kilo ohms.
+
+41
+00:02:11,297 --> 00:02:16,181
+So the analogue meter reads ten times
+sixty six point seven, divided by
+
+42
+00:02:16,181 --> 00:02:18,983
+one hundred and sixty six point seven.
+
+43
+00:02:18,983 --> 00:02:20,553
+That is four volts.
+
+44
+00:02:21,253 --> 00:02:26,023
+With the digital meter, one hundred
+kilo ohms in parallel with ten mega
+
+45
+00:02:26,023 --> 00:02:28,653
+ohms is about ninety nine kilo ohms.
+
+46
+00:02:28,653 --> 00:02:32,049
+The reading is four point
+nine seven five volts.
+
+47
+00:02:32,749 --> 00:02:35,087
+This error is called the loading effect.
+
+48
+00:02:35,087 --> 00:02:38,319
+The higher the meter's
+resistance, the smaller the error.
+
+49
+00:02:38,969 --> 00:02:43,135
+A good voltmeter is almost invisible
+to the circuit it measures.
+
+50
+00:02:43,934 --> 00:02:45,618
+So how do the two compare?
+
+51
+00:02:45,968 --> 00:02:50,450
+An analogue meter shows changes
+smoothly as a moving needle, and needs
+
+52
+00:02:50,450 --> 00:02:53,189
+no battery to measure volts and amperes.
+
+53
+00:02:53,539 --> 00:02:57,248
+But you must pick the right scale,
+and if you look at the needle from an
+
+54
+00:02:57,248 --> 00:02:59,067
+angle, you get a parallax error.
+
+55
+00:02:59,717 --> 00:03:04,158
+A digital meter is more accurate, has
+a much higher input resistance, and
+
+56
+00:03:04,158 --> 00:03:05,857
+shows the number directly.
+
+57
+00:03:05,857 --> 00:03:08,058
+Many even pick the range for you.
+
+58
+00:03:08,408 --> 00:03:12,917
+But it needs a battery, and a quickly
+changing value makes its digits flicker.
+
+59
+00:03:13,567 --> 00:03:14,635
+One more term.
+
+60
+00:03:14,635 --> 00:03:18,787
+A three and a half digit display
+shows up to one thousand nine hundred
+
+61
+00:03:18,787 --> 00:03:19,950
+and ninety nine.
+
+62
+00:03:19,950 --> 00:03:24,149
+The half digit is the leading one,
+which can only be zero or one.
+
+63
+00:03:24,799 --> 00:03:26,265
+Now, the exam trap.
+
+64
+00:03:26,615 --> 00:03:30,879
+Many students think a voltmeter never
+changes the circuit it measures.
+
+65
+00:03:31,229 --> 00:03:32,129
+It does.
+
+66
+00:03:31,914 --> 00:03:35,992
+Its resistance sits in parallel with
+the part, and pulls the reading down
+
+67
+00:03:35,992 --> 00:03:36,892
+a little.
+
+68
+00:03:36,722 --> 00:03:38,414
+That is the loading effect.
+
+69
+00:03:39,064 --> 00:03:40,713
+Where is this asked?
+
+70
+00:03:40,713 --> 00:03:44,963
+In PUC board papers, comparing
+analogue and digital meters.
+
+71
+00:03:44,963 --> 00:03:49,933
+And in JEE Main, as numericals on
+what a real voltmeter reads across a
+
+72
+00:03:49,933 --> 00:03:50,833
+resistor.
+
+73
+00:03:51,424 --> 00:03:52,324
+Try this.
+
+74
+00:03:52,280 --> 00:03:56,567
+Two twenty kilo ohm resistors are
+in series across twelve volts.
+
+75
+00:03:56,567 --> 00:04:01,553
+A voltmeter of resistance twenty kilo
+ohms is connected across one of them.
+
+76
+00:04:01,553 --> 00:04:03,002
+What does it read?
+
+77
+00:04:08,402 --> 00:04:09,302
+B.
+
+78
+00:04:08,939 --> 00:04:10,142
+Four volts.
+
+79
+00:04:10,492 --> 00:04:14,498
+The meter and the resistor in
+parallel make ten kilo ohms.
+
+80
+00:04:14,848 --> 00:04:20,095
+The total is thirty kilo ohms, so the
+current is twelve divided by thirty
+
+81
+00:04:20,095 --> 00:04:23,159
+kilo ohms, zero point four milliamperes.
+
+82
+00:04:23,510 --> 00:04:27,951
+The reading is zero point four
+milliamperes times ten kilo ohms.
+
+83
+00:04:27,951 --> 00:04:29,507
+That is four volts.
+
+84
+00:04:30,157 --> 00:04:31,678
+Screenshot this card.
+
+85
+00:04:34,879 --> 00:04:37,257
+Next, the dual channel oscilloscope.
+
+86
+00:04:37,257 --> 00:04:40,159
+A meter that draws the
+voltage as a picture.

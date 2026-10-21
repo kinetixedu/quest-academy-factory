@@ -1,0 +1,443 @@
+1
+00:00:00,450 --> 00:00:02,198
+Aarav finds an old meter.
+
+2
+00:00:02,198 --> 00:00:05,693
+Its needle swings all the
+way for just one milliampere.
+
+3
+00:00:06,043 --> 00:00:10,332
+So how can the same kind of meter
+read ten amperes, or two hundred and
+
+4
+00:00:10,332 --> 00:00:12,123
+thirty volts from the wall?
+
+5
+00:00:12,623 --> 00:00:16,907
+Inside every analogue meter
+sits a moving coil galvanometer.
+
+6
+00:00:17,257 --> 00:00:21,379
+A small coil of wire sits between
+the poles of a strong magnet.
+
+7
+00:00:21,729 --> 00:00:26,598
+Send current through the coil, and the
+magnet pushes its two sides in opposite
+
+8
+00:00:26,598 --> 00:00:27,498
+directions.
+
+9
+00:00:27,455 --> 00:00:28,630
+The coil turns.
+
+10
+00:00:28,980 --> 00:00:30,615
+A tiny spring pulls back.
+
+11
+00:00:30,615 --> 00:00:32,996
+The needle stops where the two balance.
+
+12
+00:00:33,346 --> 00:00:36,697
+Double the current, and the
+needle turns twice as far.
+
+13
+00:00:36,697 --> 00:00:39,424
+The deflection is
+proportional to the current.
+
+14
+00:00:40,074 --> 00:00:42,598
+Two numbers describe every galvanometer.
+
+15
+00:00:42,598 --> 00:00:44,321
+The coil resistance, G.
+
+16
+00:00:44,321 --> 00:00:48,914
+And the full scale current, I g, the
+current that swings the needle all
+
+17
+00:00:48,914 --> 00:00:49,814
+the way.
+
+18
+00:00:50,327 --> 00:00:53,325
+Now let's turn it into an
+ammeter on the breadboard.
+
+19
+00:00:53,675 --> 00:00:56,144
+A big current would burn the thin coil.
+
+20
+00:00:56,144 --> 00:00:59,323
+So we connect a tiny
+resistance in parallel with it.
+
+21
+00:00:59,323 --> 00:01:00,890
+This is called a shunt.
+
+22
+00:01:01,240 --> 00:01:02,545
+Watch the electrons.
+
+23
+00:01:02,545 --> 00:01:06,961
+At the junction, almost all of them
+take the easy path through the shunt.
+
+24
+00:01:06,961 --> 00:01:09,079
+Only a few pass through the coil.
+
+25
+00:01:09,429 --> 00:01:10,732
+Turn up the current.
+
+26
+00:01:10,732 --> 00:01:15,150
+The coil still gets only its small
+share, and the needle stays on the scale.
+
+27
+00:01:15,500 --> 00:01:20,037
+An ammeter is connected in series,
+and its resistance must be very low,
+
+28
+00:01:20,037 --> 00:01:23,097
+so it does not change
+the current it measures.
+
+29
+00:01:23,747 --> 00:01:25,692
+So how big should the shunt be?
+
+30
+00:01:25,692 --> 00:01:26,866
+Let's work it out.
+
+31
+00:01:27,216 --> 00:01:31,507
+The coil and the shunt are in parallel,
+so they have the same voltage across
+
+32
+00:01:31,507 --> 00:01:32,407
+them.
+
+33
+00:01:32,702 --> 00:01:35,913
+The voltage across the
+coil is I g times G.
+
+34
+00:01:36,613 --> 00:01:41,080
+The rest of the current, I minus
+I g, flows through the shunt S.
+
+35
+00:01:41,080 --> 00:01:43,964
+So its voltage is I minus I g, times S.
+
+36
+00:01:44,664 --> 00:01:50,441
+Set the two equal, and S equals I
+g times G, divided by I minus I g.
+
+37
+00:01:51,141 --> 00:01:54,019
+Resistances in ohms, currents in amperes.
+
+38
+00:01:54,019 --> 00:01:56,095
+Bigger range, smaller shunt.
+
+39
+00:01:56,745 --> 00:01:58,022
+Now a voltmeter.
+
+40
+00:01:58,022 --> 00:01:59,942
+Here we need the opposite.
+
+41
+00:02:00,292 --> 00:02:03,572
+We add a large resistance
+in series with the coil.
+
+42
+00:02:03,572 --> 00:02:05,481
+This is called a multiplier.
+
+43
+00:02:05,832 --> 00:02:09,834
+A voltmeter is connected in
+parallel, across the part we test.
+
+44
+00:02:09,834 --> 00:02:13,992
+Its resistance must be very high,
+so it draws almost no current.
+
+45
+00:02:14,642 --> 00:02:19,249
+At full scale, the current I g
+flows through G and R together.
+
+46
+00:02:19,249 --> 00:02:21,799
+So V equals I g times G plus R.
+
+47
+00:02:22,499 --> 00:02:27,072
+Rearrange it, and R equals
+V divided by I g, minus G.
+
+48
+00:02:27,722 --> 00:02:28,984
+Worked example.
+
+49
+00:02:28,984 --> 00:02:34,618
+A galvanometer has G equal to fifty
+ohms, and I g equal to one milliampere.
+
+50
+00:02:34,968 --> 00:02:37,158
+First, an ammeter for one ampere.
+
+51
+00:02:37,508 --> 00:02:42,634
+S equals one times ten to the minus
+three, times fifty, divided by one
+
+52
+00:02:42,634 --> 00:02:45,046
+minus zero point zero zero one.
+
+53
+00:02:45,646 --> 00:02:48,589
+That is about zero point zero five ohms.
+
+54
+00:02:48,589 --> 00:02:49,753
+A tiny shunt.
+
+55
+00:02:50,403 --> 00:02:52,735
+Next, a voltmeter for ten volts.
+
+56
+00:02:53,085 --> 00:02:58,087
+R equals ten divided by one times
+ten to the minus three, minus fifty.
+
+57
+00:02:58,686 --> 00:03:02,295
+That is nine thousand, nine
+hundred and fifty ohms.
+
+58
+00:03:02,295 --> 00:03:03,638
+A big multiplier.
+
+59
+00:03:04,288 --> 00:03:06,669
+But what about AC from the wall socket?
+
+60
+00:03:07,019 --> 00:03:11,689
+At fifty hertz, the current changes
+direction a hundred times every second.
+
+61
+00:03:12,039 --> 00:03:14,297
+The needle cannot follow that fast.
+
+62
+00:03:14,297 --> 00:03:17,894
+The average push is zero, so
+it just shivers near zero.
+
+63
+00:03:18,544 --> 00:03:20,907
+So an AC meter adds a rectifier.
+
+64
+00:03:20,907 --> 00:03:24,811
+Four diodes flip every negative
+half to the positive side.
+
+65
+00:03:25,161 --> 00:03:26,372
+Watch the scope.
+
+66
+00:03:26,372 --> 00:03:28,244
+The input swings both ways.
+
+67
+00:03:28,244 --> 00:03:31,071
+After the rectifier, every hump points up.
+
+68
+00:03:31,421 --> 00:03:35,869
+Now the needle settles at the average
+value, zero point six three seven
+
+69
+00:03:35,869 --> 00:03:37,040
+times the peak.
+
+70
+00:03:37,390 --> 00:03:42,124
+But the scale is marked to show the
+RMS value, zero point seven zero
+
+71
+00:03:42,124 --> 00:03:43,705
+seven times the peak.
+
+72
+00:03:43,705 --> 00:03:47,822
+Their ratio, one point one
+one, is called the form factor.
+
+73
+00:03:48,472 --> 00:03:53,532
+So when a meter reads two hundred and
+thirty volts, that is the RMS value.
+
+74
+00:03:53,532 --> 00:03:57,006
+The peak is about three
+hundred and twenty five volts.
+
+75
+00:03:57,656 --> 00:04:00,699
+An ammeter goes in
+series with a tiny shunt.
+
+76
+00:04:00,699 --> 00:04:03,935
+A voltmeter goes across,
+with a big multiplier.
+
+77
+00:04:04,735 --> 00:04:06,199
+Now, the exam trap.
+
+78
+00:04:06,549 --> 00:04:10,304
+Many students think a shunt goes
+in series to make an ammeter.
+
+79
+00:04:10,654 --> 00:04:11,641
+It does not.
+
+80
+00:04:11,641 --> 00:04:14,305
+The shunt goes in parallel with the coil.
+
+81
+00:04:14,305 --> 00:04:17,600
+The multiplier goes in
+series, to make a voltmeter.
+
+82
+00:04:18,250 --> 00:04:19,842
+Where is this asked?
+
+83
+00:04:19,842 --> 00:04:23,518
+In PUC board papers, as
+short answers and problems.
+
+84
+00:04:23,518 --> 00:04:28,412
+And in JEE Main, as numericals on
+the shunt or the series resistance.
+
+85
+00:04:29,062 --> 00:04:29,962
+Try this.
+
+86
+00:04:29,937 --> 00:04:34,432
+A galvanometer of resistance forty
+ohms gives full scale deflection at
+
+87
+00:04:34,432 --> 00:04:35,734
+two milliamperes.
+
+88
+00:04:35,734 --> 00:04:40,741
+What should you connect to make a
+voltmeter of range zero to five volts?
+
+89
+00:04:46,141 --> 00:04:47,041
+B.
+
+90
+00:04:46,569 --> 00:04:50,216
+Two thousand four hundred
+and sixty ohms, in series.
+
+91
+00:04:50,566 --> 00:04:54,179
+A voltmeter needs a multiplier
+in series with the coil.
+
+92
+00:04:54,529 --> 00:04:57,342
+The total resistance is V over I g.
+
+93
+00:04:57,342 --> 00:05:02,787
+Five divided by two times ten to the
+minus three is two thousand five hundred
+
+94
+00:05:02,787 --> 00:05:03,687
+ohms.
+
+95
+00:05:03,773 --> 00:05:08,138
+Take away the coil's forty ohms, and
+R is two thousand four hundred and
+
+96
+00:05:08,138 --> 00:05:09,038
+sixty ohms.
+
+97
+00:05:09,682 --> 00:05:11,204
+Screenshot this card.
+
+98
+00:05:14,404 --> 00:05:15,663
+Next, ohmmeters.
+
+99
+00:05:15,663 --> 00:05:19,332
+How can a meter with a battery
+inside measure resistance?
