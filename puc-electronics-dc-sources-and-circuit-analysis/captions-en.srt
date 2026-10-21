@@ -1,0 +1,396 @@
+1
+00:00:00,450 --> 00:00:03,503
+Aarav presses the start
+button on his dad's scooter.
+
+2
+00:00:03,503 --> 00:00:05,897
+For a moment, the headlight goes dim.
+
+3
+00:00:06,247 --> 00:00:07,993
+The battery is the same.
+
+4
+00:00:07,993 --> 00:00:09,320
+Nothing is broken.
+
+5
+00:00:09,670 --> 00:00:11,965
+So where did the missing voltage go?
+
+6
+00:00:12,465 --> 00:00:14,560
+First, what is a DC source?
+
+7
+00:00:14,560 --> 00:00:18,884
+It is anything that pushes current
+in one direction only, with a steady
+
+8
+00:00:18,884 --> 00:00:19,784
+voltage.
+
+9
+00:00:19,920 --> 00:00:21,845
+A cell makes it from chemicals.
+
+10
+00:00:21,845 --> 00:00:24,600
+A battery is a group of
+cells joined together.
+
+11
+00:00:24,950 --> 00:00:27,126
+A solar cell makes it from light.
+
+12
+00:00:27,126 --> 00:00:30,971
+And a DC power supply makes
+it from the AC mains at home.
+
+13
+00:00:31,321 --> 00:00:35,033
+Each one has two terminals,
+plus and minus, that never swap.
+
+14
+00:00:35,683 --> 00:00:38,329
+Every source has an EMF, written E.
+
+15
+00:00:38,329 --> 00:00:42,161
+It is the voltage the source
+gives when no current is drawn.
+
+16
+00:00:42,511 --> 00:00:47,512
+But inside every real cell, the chemicals
+and plates also resist the current.
+
+17
+00:00:47,512 --> 00:00:50,343
+This is the internal resistance, small r.
+
+18
+00:00:50,693 --> 00:00:55,352
+So a real source is like a perfect
+EMF, with a small resistor hidden
+
+19
+00:00:55,352 --> 00:00:56,252
+inside it.
+
+20
+00:00:56,882 --> 00:00:58,884
+Let's test it on the breadboard.
+
+21
+00:00:58,884 --> 00:01:02,936
+A twelve volt battery, with an
+internal resistance of half an ohm.
+
+22
+00:01:03,286 --> 00:01:05,962
+With the switch open, no current flows.
+
+23
+00:01:05,962 --> 00:01:09,307
+The voltmeter reads twelve
+volts, the full EMF.
+
+24
+00:01:09,657 --> 00:01:13,140
+Now close the switch, with
+a five and a half ohm load.
+
+25
+00:01:13,140 --> 00:01:14,323
+Two amperes flow.
+
+26
+00:01:14,673 --> 00:01:16,960
+The meter drops to eleven volts.
+
+27
+00:01:16,960 --> 00:01:20,156
+One volt is used up
+inside the battery itself.
+
+28
+00:01:20,506 --> 00:01:24,237
+Now make the load much heavier,
+like the scooter's starter motor.
+
+29
+00:01:24,237 --> 00:01:26,471
+The current shoots up to six amperes.
+
+30
+00:01:26,821 --> 00:01:28,105
+Watch the scope.
+
+31
+00:01:28,105 --> 00:01:32,845
+The EMF stays flat, but the terminal
+voltage sinks to nine volts.
+
+32
+00:01:32,845 --> 00:01:35,100
+That is why the headlight dims.
+
+33
+00:01:35,750 --> 00:01:37,181
+Let's write it down.
+
+34
+00:01:37,531 --> 00:01:40,927
+Walk around the loop with
+Kirchhoff's voltage law.
+
+35
+00:01:40,927 --> 00:01:43,906
+E minus I r, minus IR, equals zero.
+
+36
+00:01:44,606 --> 00:01:48,472
+So the current is I equals
+E, divided by R plus r.
+
+37
+00:01:49,172 --> 00:01:52,721
+The terminal voltage is
+the drop across the load.
+
+38
+00:01:52,721 --> 00:01:53,969
+V equals IR.
+
+39
+00:01:54,669 --> 00:01:59,261
+And since IR is E minus I
+r, V equals E minus I r.
+
+40
+00:01:59,961 --> 00:02:03,659
+I r is the lost voltage,
+used up inside the source.
+
+41
+00:02:03,659 --> 00:02:06,317
+Volts, amperes and ohms, as always.
+
+42
+00:02:06,967 --> 00:02:09,508
+Now plot V against I for this battery.
+
+43
+00:02:09,508 --> 00:02:11,101
+It is a straight line.
+
+44
+00:02:11,451 --> 00:02:15,044
+It starts at E when the current
+is zero, and slopes down.
+
+45
+00:02:15,044 --> 00:02:17,124
+The steepness of the slope is r.
+
+46
+00:02:17,474 --> 00:02:21,300
+An ideal voltage source has
+zero internal resistance.
+
+47
+00:02:21,300 --> 00:02:22,987
+Its line stays flat.
+
+48
+00:02:22,987 --> 00:02:24,900
+The voltage never drops.
+
+49
+00:02:25,250 --> 00:02:27,810
+An ideal current source is the opposite.
+
+50
+00:02:27,810 --> 00:02:30,475
+It pushes the same current into any load.
+
+51
+00:02:30,475 --> 00:02:32,345
+Its line stands straight up.
+
+52
+00:02:32,695 --> 00:02:36,131
+Real voltage sources
+have a small r in series.
+
+53
+00:02:36,131 --> 00:02:40,023
+Real current sources have
+a very large r in parallel.
+
+54
+00:02:40,673 --> 00:02:42,960
+EMF is what a source can give.
+
+55
+00:02:42,960 --> 00:02:45,419
+Terminal voltage is what it does give.
+
+56
+00:02:46,219 --> 00:02:47,468
+Worked example.
+
+57
+00:02:47,468 --> 00:02:52,606
+A cell of EMF one point five volts
+and internal resistance half an ohm
+
+58
+00:02:52,606 --> 00:02:55,259
+lights a two and a half ohm lamp.
+
+59
+00:02:55,609 --> 00:02:58,054
+Find the current, and
+the terminal voltage.
+
+60
+00:02:58,404 --> 00:03:00,563
+I equals E over R plus r.
+
+61
+00:03:00,563 --> 00:03:02,644
+One point five over three.
+
+62
+00:03:02,644 --> 00:03:05,129
+That is zero point five amperes.
+
+63
+00:03:05,829 --> 00:03:10,896
+The lost voltage, I r, is zero
+point five times zero point five.
+
+64
+00:03:10,896 --> 00:03:13,012
+Zero point two five volts.
+
+65
+00:03:13,712 --> 00:03:17,704
+So V equals one point five
+minus zero point two five.
+
+66
+00:03:17,704 --> 00:03:19,723
+One point two five volts.
+
+67
+00:03:20,373 --> 00:03:21,838
+Now, the exam trap.
+
+68
+00:03:22,188 --> 00:03:26,659
+Many students think the terminal
+voltage always equals the EMF.
+
+69
+00:03:27,009 --> 00:03:28,982
+Only when no current flows.
+
+70
+00:03:28,982 --> 00:03:32,524
+When a cell gives current,
+V equals E minus I r.
+
+71
+00:03:32,524 --> 00:03:35,962
+When it is being charged,
+V equals E plus I r.
+
+72
+00:03:36,612 --> 00:03:38,251
+Where is this asked?
+
+73
+00:03:38,251 --> 00:03:42,256
+In PUC board papers, as
+definitions and short problems.
+
+74
+00:03:42,256 --> 00:03:47,615
+In JEE Main and NEET, as terminal voltage
+and internal resistance questions.
+
+75
+00:03:48,265 --> 00:03:49,165
+Try this.
+
+76
+00:03:49,139 --> 00:03:54,130
+A battery reads eleven volts at its
+terminals when it supplies two amperes,
+
+77
+00:03:54,130 --> 00:03:57,255
+and ten volts when it
+supplies four amperes.
+
+78
+00:03:57,255 --> 00:04:00,113
+Find its EMF and internal resistance.
+
+79
+00:04:05,513 --> 00:04:06,413
+A.
+
+80
+00:04:05,934 --> 00:04:08,049
+Twelve volts and half an ohm.
+
+81
+00:04:08,399 --> 00:04:12,014
+Use V equals E minus I
+r, for both readings.
+
+82
+00:04:12,364 --> 00:04:14,749
+Eleven equals E minus two r.
+
+83
+00:04:14,749 --> 00:04:17,324
+And ten equals E minus four r.
+
+84
+00:04:17,674 --> 00:04:19,047
+Subtract the two.
+
+85
+00:04:19,047 --> 00:04:22,105
+One equals two r, so r is half an ohm.
+
+86
+00:04:22,455 --> 00:04:25,432
+Then E equals eleven, plus two times half.
+
+87
+00:04:25,432 --> 00:04:26,468
+Twelve volts.
+
+88
+00:04:27,118 --> 00:04:28,639
+Screenshot this card.
+
+89
+00:04:31,839 --> 00:04:34,637
+Next, network theorems
+and Thevenin's theorem.
+
+90
+00:04:34,637 --> 00:04:38,579
+How to shrink a whole circuit
+into one battery and one resistor.

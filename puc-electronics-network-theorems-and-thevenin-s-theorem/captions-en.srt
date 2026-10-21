@@ -1,0 +1,396 @@
+1
+00:00:00,450 --> 00:00:03,660
+Aarav has a circuit with a
+battery and two resistors.
+
+2
+00:00:03,660 --> 00:00:06,402
+He wants to test five
+different loads on it.
+
+3
+00:00:06,752 --> 00:00:09,794
+Must he solve the whole
+circuit again, five times?
+
+4
+00:00:10,144 --> 00:00:11,537
+There is a shortcut.
+
+5
+00:00:11,537 --> 00:00:15,137
+Squeeze the whole circuit into
+one battery and one resistor.
+
+6
+00:00:15,637 --> 00:00:18,605
+Shortcuts like this are
+called network theorems.
+
+7
+00:00:18,955 --> 00:00:23,065
+Superposition says, when there are
+many sources, find the effect of each
+
+8
+00:00:23,065 --> 00:00:24,963
+one alone, then add them up.
+
+9
+00:00:25,313 --> 00:00:29,808
+Norton's theorem turns a circuit into
+one current source, with one resistor
+
+10
+00:00:29,808 --> 00:00:30,762
+in parallel.
+
+11
+00:00:31,112 --> 00:00:35,292
+Maximum power transfer tells you
+which load gets the most power.
+
+12
+00:00:35,642 --> 00:00:38,451
+And the most used of all
+is Thevenin's theorem.
+
+13
+00:00:39,101 --> 00:00:43,140
+It was first found by Hermann von
+Helmholtz in eighteen fifty three.
+
+14
+00:00:43,140 --> 00:00:47,262
+Leon Thevenin, a French engineer,
+published it again in eighteen eighty
+
+15
+00:00:47,262 --> 00:00:48,162
+three.
+
+16
+00:00:48,176 --> 00:00:49,754
+Here is what it says.
+
+17
+00:00:49,754 --> 00:00:54,477
+Any linear circuit, seen from two
+terminals A and B, acts like one voltage
+
+18
+00:00:54,477 --> 00:00:56,903
+source in series with one resistance.
+
+19
+00:00:57,553 --> 00:00:59,935
+We call them VTH and RTH.
+
+20
+00:00:59,935 --> 00:01:03,322
+The Thevenin voltage, and
+the Thevenin resistance.
+
+21
+00:01:03,972 --> 00:01:05,958
+Let's find them in four steps.
+
+22
+00:01:05,958 --> 00:01:10,276
+Our circuit is a twelve volt battery,
+with six ohms and three ohms.
+
+23
+00:01:10,626 --> 00:01:11,526
+Step one.
+
+24
+00:01:11,349 --> 00:01:14,805
+Take the load out, and mark
+the two terminals, A and B.
+
+25
+00:01:15,505 --> 00:01:16,405
+Step two.
+
+26
+00:01:16,353 --> 00:01:20,233
+Find the voltage across A and
+B, with nothing connected.
+
+27
+00:01:20,233 --> 00:01:23,967
+Three ohms out of nine gets
+one third of twelve volts.
+
+28
+00:01:23,967 --> 00:01:25,850
+So VTH is four volts.
+
+29
+00:01:26,550 --> 00:01:27,511
+Step three.
+
+30
+00:01:27,511 --> 00:01:30,194
+Replace the battery with a plain wire.
+
+31
+00:01:30,194 --> 00:01:32,198
+Now look in from A and B.
+
+32
+00:01:32,198 --> 00:01:35,048
+Six ohms and three ohms are in parallel.
+
+33
+00:01:35,048 --> 00:01:36,625
+RTH is two ohms.
+
+34
+00:01:37,325 --> 00:01:38,225
+Step four.
+
+35
+00:01:38,194 --> 00:01:41,592
+Draw a four volt source,
+in series with two ohms.
+
+36
+00:01:41,592 --> 00:01:43,290
+Then put the load back.
+
+37
+00:01:43,990 --> 00:01:48,648
+The load current is VTH,
+divided by RTH plus RL.
+
+38
+00:01:49,298 --> 00:01:51,348
+Now let's check it on the breadboard.
+
+39
+00:01:51,348 --> 00:01:54,766
+The real circuit on the left,
+the Thevenin copy on the right.
+
+40
+00:01:55,116 --> 00:01:57,299
+Connect a two ohm load to both.
+
+41
+00:01:57,299 --> 00:01:59,669
+Each one carries exactly one ampere.
+
+42
+00:02:00,019 --> 00:02:02,296
+Now turn the knob, and change the load.
+
+43
+00:02:02,646 --> 00:02:05,743
+The scope shows the load
+voltage of both circuits.
+
+44
+00:02:05,743 --> 00:02:07,673
+The two traces never separate.
+
+45
+00:02:07,673 --> 00:02:10,582
+For the load, the two
+circuits are the same.
+
+46
+00:02:11,232 --> 00:02:15,249
+Thevenin also tells us how to
+get the most power into a load.
+
+47
+00:02:15,599 --> 00:02:19,085
+Plot the load power, as the
+load resistance changes.
+
+48
+00:02:19,435 --> 00:02:22,353
+Too small a load, and
+little voltage reaches it.
+
+49
+00:02:22,353 --> 00:02:24,908
+Too big a load, and little current flows.
+
+50
+00:02:25,258 --> 00:02:28,166
+The peak comes when the load equals RTH.
+
+51
+00:02:28,166 --> 00:02:29,635
+Here, at two ohms.
+
+52
+00:02:30,335 --> 00:02:35,351
+Then the maximum power is VTH
+squared, divided by four RTH.
+
+53
+00:02:35,351 --> 00:02:37,277
+Four squared over eight.
+
+54
+00:02:37,277 --> 00:02:38,269
+Two watts.
+
+55
+00:02:38,919 --> 00:02:43,208
+From any two points, a circuit is
+just one battery and one resistor.
+
+56
+00:02:44,008 --> 00:02:45,143
+Worked example.
+
+57
+00:02:45,143 --> 00:02:49,842
+A twenty four volt battery feeds four
+ohms, then twelve ohms across A and
+
+58
+00:02:49,842 --> 00:02:50,742
+B.
+
+59
+00:02:50,257 --> 00:02:52,769
+Find the current in a six ohm load.
+
+60
+00:02:53,119 --> 00:02:56,752
+VTH is twenty four, times
+twelve over sixteen.
+
+61
+00:02:56,752 --> 00:02:57,967
+Eighteen volts.
+
+62
+00:02:58,667 --> 00:03:02,930
+With the battery shorted, RTH
+is four and twelve in parallel.
+
+63
+00:03:02,930 --> 00:03:05,479
+Forty eight over sixteen, three ohms.
+
+64
+00:03:06,179 --> 00:03:09,662
+So the load current is
+eighteen, over three plus six.
+
+65
+00:03:09,662 --> 00:03:10,601
+Two amperes.
+
+66
+00:03:11,251 --> 00:03:12,714
+Now, the exam trap.
+
+67
+00:03:13,064 --> 00:03:17,977
+To find RTH, many students just take
+the battery out, and leave a gap.
+
+68
+00:03:18,327 --> 00:03:19,227
+Wrong.
+
+69
+00:03:18,923 --> 00:03:23,041
+Replace every voltage source with
+a short circuit, a plain wire.
+
+70
+00:03:23,041 --> 00:03:26,758
+Replace every current source
+with an open circuit, a gap.
+
+71
+00:03:27,408 --> 00:03:28,969
+Where is this asked?
+
+72
+00:03:28,969 --> 00:03:33,611
+In PUC board papers, to state the
+theorem and find a load current.
+
+73
+00:03:33,611 --> 00:03:37,069
+JEE Main asks when a load
+gets the maximum power.
+
+74
+00:03:37,719 --> 00:03:38,619
+Try this.
+
+75
+00:03:38,564 --> 00:03:43,240
+A nine volt battery feeds three
+ohms, then six ohms across A and B.
+
+76
+00:03:43,240 --> 00:03:48,235
+Which load across AB takes the maximum
+power, and how much power is it?
+
+77
+00:03:53,635 --> 00:03:54,535
+A.
+
+78
+00:03:54,066 --> 00:03:56,769
+Two ohms, and four point five watts.
+
+79
+00:03:57,119 --> 00:04:00,252
+VTH is nine, times six over nine.
+
+80
+00:04:00,252 --> 00:04:01,284
+Six volts.
+
+81
+00:04:01,634 --> 00:04:04,345
+RTH is three and six in parallel.
+
+82
+00:04:04,345 --> 00:04:06,586
+Eighteen over nine, two ohms.
+
+83
+00:04:06,936 --> 00:04:10,499
+Maximum power needs a load equal to RTH.
+
+84
+00:04:10,499 --> 00:04:11,489
+Two ohms.
+
+85
+00:04:11,839 --> 00:04:15,077
+And the power is six
+squared, over four times two.
+
+86
+00:04:15,077 --> 00:04:17,968
+Thirty six over eight,
+four point five watts.
+
+87
+00:04:18,618 --> 00:04:20,139
+Screenshot this card.
+
+88
+00:04:23,339 --> 00:04:25,153
+Next, the AC waveform.
+
+89
+00:04:25,153 --> 00:04:29,072
+Frequency, period, phase and
+amplitude, on a live scope.

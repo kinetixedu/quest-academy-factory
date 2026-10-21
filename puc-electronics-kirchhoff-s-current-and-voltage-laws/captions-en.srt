@@ -1,0 +1,473 @@
+1
+00:00:00,450 --> 00:00:04,963
+Aarav plugs a desk lamp and a phone
+charger into one extension board.
+
+2
+00:00:05,313 --> 00:00:07,312
+One wire brings the current in.
+
+3
+00:00:07,312 --> 00:00:08,932
+Then it splits two ways.
+
+4
+00:00:09,282 --> 00:00:10,923
+So how much goes each way?
+
+5
+00:00:10,923 --> 00:00:12,701
+And does any of it get lost?
+
+6
+00:00:13,201 --> 00:00:15,901
+Two simple rules answer
+this, for any circuit.
+
+7
+00:00:16,251 --> 00:00:17,847
+They are Kirchhoff's laws.
+
+8
+00:00:17,847 --> 00:00:21,855
+Gustav Kirchhoff wrote them in
+eighteen forty five, while he was still
+
+9
+00:00:21,855 --> 00:00:22,755
+a student.
+
+10
+00:00:23,003 --> 00:00:25,210
+The first rule is about junctions.
+
+11
+00:00:25,210 --> 00:00:27,275
+The second rule is about loops.
+
+12
+00:00:27,925 --> 00:00:30,058
+Let's build it on the breadboard.
+
+13
+00:00:30,058 --> 00:00:33,678
+A twelve volt battery feeds
+two resistors, side by side.
+
+14
+00:00:34,028 --> 00:00:37,167
+The point where the wire
+splits is called a junction.
+
+15
+00:00:37,167 --> 00:00:38,468
+We will call it P.
+
+16
+00:00:38,818 --> 00:00:40,471
+Follow the current arrows.
+
+17
+00:00:40,471 --> 00:00:42,744
+Three amperes arrive at the junction.
+
+18
+00:00:43,094 --> 00:00:45,234
+One ampere takes the first path.
+
+19
+00:00:45,234 --> 00:00:47,422
+Two amperes take the second path.
+
+20
+00:00:47,772 --> 00:00:49,359
+One plus two is three.
+
+21
+00:00:49,359 --> 00:00:51,927
+Nothing is lost, and nothing is added.
+
+22
+00:00:52,277 --> 00:00:55,677
+Now turn the knob, and make
+the second resistor smaller.
+
+23
+00:00:56,027 --> 00:00:59,672
+Its current jumps up, and the current
+from the battery jumps with it.
+
+24
+00:01:00,022 --> 00:01:04,247
+On the scope, the current going in
+and the total current coming out stay
+
+25
+00:01:04,247 --> 00:01:06,050
+right on top of each other.
+
+26
+00:01:06,050 --> 00:01:06,950
+Always.
+
+27
+00:01:07,308 --> 00:01:09,155
+This is Kirchhoff's current law.
+
+28
+00:01:09,505 --> 00:01:13,608
+At any junction, the total current
+flowing in equals the total current
+
+29
+00:01:13,608 --> 00:01:14,518
+flowing out.
+
+30
+00:01:15,218 --> 00:01:16,118
+Why?
+
+31
+00:01:15,721 --> 00:01:19,883
+Because charge cannot pile up at
+a point, and it cannot vanish.
+
+32
+00:01:19,883 --> 00:01:21,293
+Charge is conserved.
+
+33
+00:01:21,993 --> 00:01:25,940
+Call currents coming in positive,
+and currents going out negative.
+
+34
+00:01:25,940 --> 00:01:29,153
+Then all the currents at
+a junction add up to zero.
+
+35
+00:01:29,853 --> 00:01:33,396
+Here, I minus I one
+minus I two equals zero.
+
+36
+00:01:33,396 --> 00:01:35,848
+So I equals I one plus I two.
+
+37
+00:01:36,498 --> 00:01:37,982
+Now the second law.
+
+38
+00:01:37,982 --> 00:01:39,568
+Take one closed loop.
+
+39
+00:01:39,568 --> 00:01:44,183
+A twelve volt battery, and two
+resistors of two ohms and four ohms.
+
+40
+00:01:44,533 --> 00:01:49,044
+Twelve volts across six ohms in
+total gives a current of two amperes.
+
+41
+00:01:49,394 --> 00:01:53,513
+Now walk a probe around the loop,
+and let the scope draw the voltage at
+
+42
+00:01:53,513 --> 00:01:54,413
+every point.
+
+43
+00:01:54,731 --> 00:01:59,339
+Through the battery, from minus to plus,
+the voltage climbs by twelve volts.
+
+44
+00:01:59,689 --> 00:02:03,182
+Across the two ohm resistor,
+it drops by four volts.
+
+45
+00:02:03,182 --> 00:02:05,621
+That is I times R, two times two.
+
+46
+00:02:05,971 --> 00:02:09,552
+Across the four ohm resistor,
+it drops by eight volts.
+
+47
+00:02:09,902 --> 00:02:13,639
+Back at the start, the voltage
+is exactly where it began.
+
+48
+00:02:13,639 --> 00:02:16,214
+Plus twelve, minus four, minus eight.
+
+49
+00:02:16,214 --> 00:02:17,114
+Zero.
+
+50
+00:02:17,406 --> 00:02:19,528
+This is Kirchhoff's voltage law.
+
+51
+00:02:19,878 --> 00:02:24,438
+Around any closed loop, the voltage
+rises add up to the same amount as
+
+52
+00:02:24,438 --> 00:02:25,789
+the voltage drops.
+
+53
+00:02:26,489 --> 00:02:27,389
+Why?
+
+54
+00:02:26,984 --> 00:02:31,539
+A charge that goes once round the loop
+comes back to the same point, with
+
+55
+00:02:31,539 --> 00:02:32,731
+the same energy.
+
+56
+00:02:32,731 --> 00:02:34,116
+Energy is conserved.
+
+57
+00:02:34,816 --> 00:02:40,568
+So around a loop, the sum of the EM
+Fs equals the sum of all the IR drops.
+
+58
+00:02:41,268 --> 00:02:42,456
+Two sign rules.
+
+59
+00:02:42,456 --> 00:02:45,729
+Cross a cell from minus
+to plus, write plus E.
+
+60
+00:02:45,729 --> 00:02:49,303
+Cross a resistor along the
+current, write minus IR.
+
+61
+00:02:49,953 --> 00:02:51,610
+Junctions keep charge.
+
+62
+00:02:51,610 --> 00:02:53,050
+Loops keep energy.
+
+63
+00:02:53,850 --> 00:02:55,045
+Worked example.
+
+64
+00:02:55,045 --> 00:03:00,115
+A twelve volt battery and a two ohm
+resistor, then six ohms and three ohms
+
+65
+00:03:00,115 --> 00:03:01,268
+side by side.
+
+66
+00:03:01,618 --> 00:03:03,684
+Find the current in each resistor.
+
+67
+00:03:04,034 --> 00:03:08,498
+At junction P, the current law
+gives I equals I two plus I three.
+
+68
+00:03:09,198 --> 00:03:10,126
+Left loop.
+
+69
+00:03:10,126 --> 00:03:13,699
+Twelve equals two times
+I, plus six times I two.
+
+70
+00:03:14,399 --> 00:03:17,906
+Right loop, around the two
+side by side resistors.
+
+71
+00:03:17,906 --> 00:03:20,947
+Six times I two equals
+three times I three.
+
+72
+00:03:20,947 --> 00:03:22,985
+So I three is twice I two.
+
+73
+00:03:23,685 --> 00:03:25,770
+That makes I three times I two.
+
+74
+00:03:25,770 --> 00:03:27,470
+Put it in the left loop.
+
+75
+00:03:27,470 --> 00:03:29,593
+Twelve equals twelve times I two.
+
+76
+00:03:30,293 --> 00:03:35,030
+So I two is one ampere, I three is two
+amperes, and the battery gives three
+
+77
+00:03:35,030 --> 00:03:35,930
+amperes.
+
+78
+00:03:36,358 --> 00:03:37,824
+Now, the exam trap.
+
+79
+00:03:38,174 --> 00:03:42,981
+Many students write minus IR for every
+resistor, whichever way they walk.
+
+80
+00:03:43,331 --> 00:03:45,616
+The sign depends on your direction.
+
+81
+00:03:45,616 --> 00:03:48,356
+Walk along the current, write minus IR.
+
+82
+00:03:48,356 --> 00:03:50,651
+Walk against it, write plus IR.
+
+83
+00:03:51,301 --> 00:03:54,560
+And if a current comes out
+negative, nothing is wrong.
+
+84
+00:03:54,560 --> 00:03:56,444
+It simply flows the other way.
+
+85
+00:03:57,094 --> 00:03:58,566
+Where is this asked?
+
+86
+00:03:58,566 --> 00:04:01,508
+In PUC board papers,
+as five mark problems.
+
+87
+00:04:01,508 --> 00:04:06,446
+In JEE Main and NEET, as circuits where
+you find the current in one branch.
+
+88
+00:04:07,096 --> 00:04:07,996
+Try this.
+
+89
+00:04:07,925 --> 00:04:12,567
+Two cells of twelve volts and six
+volts, each with a two ohm resistor,
+
+90
+00:04:12,567 --> 00:04:15,894
+are joined in parallel
+across a four ohm resistor.
+
+91
+00:04:15,894 --> 00:04:19,110
+What current flows through
+the four ohm resistor?
+
+92
+00:04:24,510 --> 00:04:25,410
+B.
+
+93
+00:04:24,978 --> 00:04:26,905
+One point eight amperes.
+
+94
+00:04:27,255 --> 00:04:30,225
+Let I one and I two flow
+up through the cells.
+
+95
+00:04:30,225 --> 00:04:34,758
+By the current law, I one plus I two
+flows through the four ohm resistor.
+
+96
+00:04:35,108 --> 00:04:36,012
+Left loop.
+
+97
+00:04:36,012 --> 00:04:39,646
+Twelve equals two I one,
+plus four times the total.
+
+98
+00:04:39,646 --> 00:04:40,601
+Right loop.
+
+99
+00:04:40,601 --> 00:04:44,079
+Six equals two I two,
+plus four times the total.
+
+100
+00:04:44,429 --> 00:04:45,768
+Add the two loops.
+
+101
+00:04:45,768 --> 00:04:49,821
+Eighteen equals two times the
+total, plus eight times the total.
+
+102
+00:04:49,821 --> 00:04:51,756
+That is ten times the total.
+
+103
+00:04:52,106 --> 00:04:55,943
+So the current is eighteen over
+ten, one point eight amperes.
+
+104
+00:04:55,943 --> 00:05:00,282
+And I two comes out negative, so
+the six volt cell is being charged.
+
+105
+00:05:00,932 --> 00:05:02,453
+Screenshot this card.
+
+106
+00:05:05,653 --> 00:05:08,543
+Next, DC sources and circuit analysis.
+
+107
+00:05:08,543 --> 00:05:12,209
+Why does a battery's voltage
+drop when it works hard?

@@ -1,0 +1,368 @@
+1
+00:00:00,450 --> 00:00:03,556
+Aarav plugs his table
+fan into the wall socket.
+
+2
+00:00:03,556 --> 00:00:06,207
+The voltage there is not steady at all.
+
+3
+00:00:06,557 --> 00:00:10,612
+It swings from plus to minus and
+back, fifty times every second.
+
+4
+00:00:10,962 --> 00:00:14,464
+So how do we describe a
+voltage that never sits still?
+
+5
+00:00:14,964 --> 00:00:16,284
+With four ideas.
+
+6
+00:00:16,284 --> 00:00:19,181
+Amplitude, period, frequency and phase.
+
+7
+00:00:19,531 --> 00:00:22,160
+Let's build them one at
+a time, on the scope.
+
+8
+00:00:22,810 --> 00:00:26,132
+On the breadboard, an AC
+source drives a resistor.
+
+9
+00:00:26,132 --> 00:00:27,489
+Watch the electrons.
+
+10
+00:00:27,489 --> 00:00:29,102
+They do not flow round.
+
+11
+00:00:29,102 --> 00:00:30,810
+They rock back and forth.
+
+12
+00:00:31,160 --> 00:00:35,650
+Inside the source, picture an arm
+turning in a circle at a steady speed.
+
+13
+00:00:35,650 --> 00:00:38,255
+Its height at each moment is the voltage.
+
+14
+00:00:38,605 --> 00:00:41,354
+As the arm turns, the
+scope draws its height.
+
+15
+00:00:41,354 --> 00:00:43,385
+That smooth shape is a sine wave.
+
+16
+00:00:44,035 --> 00:00:45,331
+First, amplitude.
+
+17
+00:00:45,331 --> 00:00:48,767
+It is the highest value
+the wave reaches, its peak.
+
+18
+00:00:48,767 --> 00:00:50,092
+We write it V m.
+
+19
+00:00:50,442 --> 00:00:53,527
+Turn up the amplitude,
+and the wave grows taller.
+
+20
+00:00:53,527 --> 00:00:55,282
+The arm simply gets longer.
+
+21
+00:00:55,932 --> 00:00:57,570
+Next, the period, T.
+
+22
+00:00:57,570 --> 00:01:01,827
+It is the time for one complete
+cycle, one full turn of the arm.
+
+23
+00:01:02,177 --> 00:01:06,255
+And the frequency, f, is how
+many cycles happen in one second.
+
+24
+00:01:06,255 --> 00:01:07,927
+It is measured in hertz.
+
+25
+00:01:08,277 --> 00:01:10,071
+So f equals one over T.
+
+26
+00:01:10,071 --> 00:01:14,149
+Turn the frequency up, and the
+waves squeeze closer together.
+
+27
+00:01:14,149 --> 00:01:16,238
+The electrons rock faster too.
+
+28
+00:01:16,888 --> 00:01:19,390
+Now let's write the wave as an equation.
+
+29
+00:01:19,740 --> 00:01:24,415
+One full turn is three hundred and
+sixty degrees, or two pi radians.
+
+30
+00:01:25,115 --> 00:01:27,741
+The arm makes f turns every second.
+
+31
+00:01:27,741 --> 00:01:32,776
+So its angular speed is omega equals
+two pi f, in radians per second.
+
+32
+00:01:33,476 --> 00:01:37,924
+After a time t, the arm has
+turned through an angle omega t.
+
+33
+00:01:37,924 --> 00:01:41,273
+Its height is V m times
+the sine of omega t.
+
+34
+00:01:41,973 --> 00:01:44,874
+So small v equals V m sine omega t.
+
+35
+00:01:44,874 --> 00:01:47,764
+Small v is the value at any instant.
+
+36
+00:01:48,414 --> 00:01:50,061
+The last idea is phase.
+
+37
+00:01:50,061 --> 00:01:54,316
+Phase tells you where in its cycle
+a wave is, at a given moment.
+
+38
+00:01:54,666 --> 00:01:58,955
+Now put a second wave on the scope,
+with the same frequency, but a quarter
+
+39
+00:01:58,955 --> 00:01:59,855
+turn ahead.
+
+40
+00:02:00,118 --> 00:02:01,655
+Its peaks come first.
+
+41
+00:02:01,655 --> 00:02:04,020
+We say it leads by ninety degrees.
+
+42
+00:02:04,020 --> 00:02:06,274
+That gap is the phase difference.
+
+43
+00:02:06,624 --> 00:02:10,848
+We write it as v equals V
+m sine of omega t plus phi.
+
+44
+00:02:10,848 --> 00:02:12,767
+Phi is the phase angle.
+
+45
+00:02:13,417 --> 00:02:15,180
+Amplitude says how big.
+
+46
+00:02:15,180 --> 00:02:17,049
+Frequency says how often.
+
+47
+00:02:17,049 --> 00:02:18,371
+Phase says when.
+
+48
+00:02:19,171 --> 00:02:20,326
+Worked example.
+
+49
+00:02:20,326 --> 00:02:25,370
+The mains supply in India is two hundred
+and thirty volts, at fifty hertz.
+
+50
+00:02:25,720 --> 00:02:27,873
+The period is one over fifty.
+
+51
+00:02:27,873 --> 00:02:32,002
+That is zero point zero two
+seconds, or twenty milliseconds.
+
+52
+00:02:32,702 --> 00:02:34,792
+Omega is two pi times fifty.
+
+53
+00:02:34,792 --> 00:02:38,254
+About three hundred and
+fourteen radians per second.
+
+54
+00:02:38,954 --> 00:02:42,071
+And two hundred and thirty
+volts is not the peak.
+
+55
+00:02:42,071 --> 00:02:45,424
+The peak is about three
+hundred and twenty five volts.
+
+56
+00:02:45,424 --> 00:02:47,955
+We will see why, in the next episode.
+
+57
+00:02:48,605 --> 00:02:50,071
+Now, the exam trap.
+
+58
+00:02:50,421 --> 00:02:53,149
+Many students mix up omega and f.
+
+59
+00:02:53,149 --> 00:02:58,699
+In v equals V m sine of one hundred
+pi t, they say the frequency is one
+
+60
+00:02:58,699 --> 00:02:59,781
+hundred pi.
+
+61
+00:03:00,131 --> 00:03:03,773
+One hundred pi is omega,
+the angular frequency.
+
+62
+00:03:03,773 --> 00:03:05,308
+Divide by two pi.
+
+63
+00:03:05,308 --> 00:03:07,599
+The frequency is fifty hertz.
+
+64
+00:03:08,249 --> 00:03:09,922
+Where is this asked?
+
+65
+00:03:09,922 --> 00:03:15,042
+In PUC board papers, as definitions
+of frequency, period, amplitude and
+
+66
+00:03:15,042 --> 00:03:15,942
+phase.
+
+67
+00:03:15,727 --> 00:03:19,342
+In JEE Main, inside
+alternating current problems.
+
+68
+00:03:19,992 --> 00:03:20,914
+Try this.
+
+69
+00:03:20,914 --> 00:03:26,241
+An alternating voltage is v equals one
+hundred and twenty sine of two hundred
+
+70
+00:03:26,241 --> 00:03:27,141
+pi t.
+
+71
+00:03:26,937 --> 00:03:30,162
+Find its peak value, frequency and period.
+
+72
+00:03:35,562 --> 00:03:36,462
+C.
+
+73
+00:03:35,970 --> 00:03:40,555
+One hundred and twenty volts, one
+hundred hertz, and ten milliseconds.
+
+74
+00:03:40,905 --> 00:03:44,069
+Compare with v equals V m sine omega t.
+
+75
+00:03:44,069 --> 00:03:47,234
+So V m is one hundred and twenty volts.
+
+76
+00:03:47,584 --> 00:03:49,606
+Omega is two hundred pi.
+
+77
+00:03:49,606 --> 00:03:53,374
+Omega is two pi f, so
+f is one hundred hertz.
+
+78
+00:03:53,724 --> 00:03:55,231
+T is one over f.
+
+79
+00:03:55,231 --> 00:03:59,082
+One over one hundred is
+zero point zero one seconds.
+
+80
+00:03:59,082 --> 00:04:00,444
+Ten milliseconds.
+
+81
+00:04:01,094 --> 00:04:02,615
+Screenshot this card.
+
+82
+00:04:05,815 --> 00:04:08,119
+Next, RMS and average values.
+
+83
+00:04:08,119 --> 00:04:12,668
+Why the two hundred and thirty volt
+mains actually peaks near three hundred
+
+84
+00:04:12,668 --> 00:04:13,889
+and twenty five.
