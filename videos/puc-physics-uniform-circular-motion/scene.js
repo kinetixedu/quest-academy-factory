@@ -8,7 +8,7 @@ const mk = (p, tag, a) => { const e = document.createElementNS(nsv, tag); for (c
 const txt = (p, x, y, s, a = {}) => { const e = mk(p, 'text', Object.assign({ x, y, 'font-family': 'IBM Plex Mono', 'font-size': 18, fill: C.mute }, a)); e.textContent = s; return e; };
 const sym = (p, x, y, b, sub, col, fs = 30, a = {}) => { const e = mk(p, 'text', Object.assign({ x, y, 'font-family': 'Poppins', 'font-style': 'italic', 'font-weight': 600, 'font-size': fs, fill: col }, a)); e.textContent = b; if (sub) { const s = mk(e, 'tspan', { dy: fs * 0.28, 'font-size': fs * 0.66 }); s.textContent = sub; } return e; };
 const attr = PUC.attr;
-const POP = { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 };
+const POP = { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 }, FS = { dy: 0, fade: 0.25 };   // FS: fade only, for svg parts (no scale about the svg origin)
 const tx = (c, s) => `\\textcolor{${c}}{${s}}`;
 const vK = tx(VC, 'v'), vvec = tx(VC, '\\vec{v}'), dv = tx(AC, '\\Delta\\vec{v}'), aK = tx(AC, '\\vec{a}'), nuK = '\\nu', TK = 'T', rK = 'r';
 const rad = d => d * Math.PI / 180, PI = Math.PI;
@@ -239,7 +239,7 @@ M.on(t => {
     M.vis($('#mix'), t, wt('H3', 'mixer') - 0.2, 1e9, { dy: -30, sp: M.SOFT });
     const ma = mixW * Math.max(0, t - wt('H3', 'mixer')), mp = P(MO, MR, ma);
     attr(blade, 'transform', `translate(${MO[0]},${MO[1]}) rotate(${(-ma * 180 / PI).toFixed(2)})`);
-    ballAt(drop, mp); M.vis(drop, t, wt('H3', 'drop') - 0.1, 1e9, POP);
+    ballAt(drop, mp); M.vis(drop, t, wt('H3', 'drop') - 0.1, 1e9, FS);
     const dvOn = M.clamp((t - wt('H3', 'rides')) / 0.3); if (dvOn > 0) vArrow(dropV, mp, ma, 40 * dvOn, 10); else dropV.set(0, 0, 0, 0);
     TILES.forEach((_, i) => { const el = $('#wq' + i); M.vis(el, t, tTile[i] - 0.1, 1e9, POP); el.style.background = mix(C.soft, i ? C.redBg : C.ac2, M.io((t - tTile[i]) / 0.25)); });
   }
@@ -322,7 +322,7 @@ M.on(t => {
     ballAt(uBall, bp); attr(uArc, 'd', u < 0.003 ? '' : (u > 0.999 ? `M${UO[0] + UR},${UO[1]} A${UR},${UR} 0 1 0 ${UO[0] - UR},${UO[1]} A${UR},${UR} 0 1 0 ${UO[0] + UR},${UO[1]}` : arcD(UO, UR, 0, a)));
     attr(uBar, 'x2', (UX + UL * u).toFixed(1)); M.hide(uBar, u < 0.003);
     uEnds.forEach((e, i) => M.vis(e, t, i ? tUn + 2.2 : tUn, 1e9, { dy: 0, fade: 0.2 }));
-    M.vis(uBl, t, wt('D2', 'two') - 0.1, 1e9, POP);
+    M.vis(uBl, t, wt('D2', 'two') - 0.1, 1e9, FS);
     M.vis($('#dc0'), t, wt('D3', 'One') - 0.1, 1e9, POP); M.vis($('#dc1'), t, wt('D4', 'Frequency') - 0.1, 1e9, POP);
   }
 
@@ -399,8 +399,8 @@ M.on(t => {
   if (xOn) {
     M.vis($('#trap'), t, tX1 + 0.05, 1e9, { dy: 36 }); M.vis($('#wa'), t, T0('E1') - 0.1, 1e9, { dy: 36 });
     trap(t, { tin: tX1, tWrong: wt('X2', 'speed') - 0.3, tStrike: wt('X3', 'But') - 0.1, tRight: wt('X3', 'not') - 0.2 });
-    M.draw(tgC, t, tJn - 0.4, 0.6); M.vis(tgO, t, tJn, 1e9, POP);
-    const th = tgTh(t), bp = P(GO, GR, th), uT = Tg(th); ballAt(tgB, bp); M.vis(tgB, t, tJn, 1e9, POP);
+    M.draw(tgC, t, tJn - 0.4, 0.6); M.vis(tgO, t, tJn, 1e9, FS);
+    const th = tgTh(t), bp = P(GO, GR, th), uT = Tg(th); ballAt(tgB, bp); M.vis(tgB, t, tJn, 1e9, FS);
     const gv = M.o3((t - wt('X3', 'direction')) / 0.5); vArrow(tgV, bp, th, 70 * gv, 0); attr(tgVl, 'x', (bp[0] + uT[0] * 88 - 6).toFixed(1)); attr(tgVl, 'y', (bp[1] + uT[1] * 88 + 8).toFixed(1)); tgVl.style.opacity = gv.toFixed(3);
     const ga = M.o3((t - wt('X3', 'points') + 0.1) / 0.5), ui = [-Math.cos(th), Math.sin(th)];
     if (ga > 0) tgA.set(bp[0] + ui[0] * 14, bp[1] + ui[1] * 14, bp[0] + ui[0] * (14 + 58 * ga), bp[1] + ui[1] * (14 + 58 * ga)); else tgA.set(0, 0, 0, 0);

@@ -1,0 +1,54 @@
+H1|0.4|A merry-go-round: the outer horse races, the inner one strolls. A fan: the tip blurs, the centre barely moves.
+H2|0.45|Each one turns as a single piece. So what do all its parts share?
+H3|0.35|Aarav spins his upside-down bicycle wheel. The valve near the rim and the reflector near the hub go round together.
+H4|0.5|The valve covers far more distance. So which one is turning faster?
+H5|0.65|To answer that, we measure turning by angle, not by distance.
+P1|0.35|Let's start with angular position.
+P2|0.4|Draw a line from the centre to the point. Its angle from a fixed reference line is the angular position, theta.
+P3|0.4|As the wheel turns, theta changes. The change, delta theta, is the angular displacement. Anticlockwise counts as positive.
+P4|0.4|We measure it in radians. One radian is the angle where the arc is exactly as long as the radius.
+P5|0.6|One full turn is two pi radians. That is three hundred and sixty degrees.
+S1|0.35|Let's spin Aarav's wheel in our motion notebook. It makes one full turn every two seconds.
+S2|0.4|The reflector sits ten centimetres from the centre. The valve sits thirty centimetres out.
+S3|0.4|Start the clock. After half a second, both have turned through the same angle. A quarter turn, pi by two radians.
+S4|0.5|But the valve's arc is three times longer than the reflector's arc.
+S5|0.4|Keep it spinning. On the graph, the angle grows along one straight line, for both points.
+S6|0.35|Let's slow it down.
+S7|0.4|The valve's velocity arrow is three times longer. But both arrows turn together, through the same angle.
+S8|0.65|So the angle is what they share. How fast the angle grows is called angular velocity.
+D1|0.35|Let's write it down, one step at a time.
+D2|0.75|Step one. Angular velocity, omega, is angular displacement over time. Omega equals delta theta over delta t, in radians per second.
+D3|0.75|Step two. For a point at radius r, the arc it covers is s equals r theta, with theta in radians.
+D4|0.75|Step three. Divide both sides by the time. s over t is the speed v, and theta over t is omega.
+D5|0.75|So v equals r omega. The same omega, a bigger radius, a bigger speed.
+D6|0.75|Step four. One full turn is two pi radians in one period T. So omega equals two pi over T, which is two pi nu.
+D7|0.65|For Aarav's wheel, two pi over two seconds is pi radians per second.
+T1|0.7|Remember this. Every point on a turning wheel has the same omega. And v equals r omega.
+C1|0.35|Side by side now.
+C2|0.4|The reflector. Radius ten centimetres, omega pi radians per second, so v is zero point three one metres per second.
+C3|0.6|The valve. Radius thirty centimetres, the same omega, so v is zero point nine four. Three times the radius, three times the speed.
+C4|3.2|Now you try. On a clock, the second hand's tip, or a point halfway along it. Which has the bigger angular velocity? Pause and decide.
+C5|0.65|The same! Both sweep three hundred and sixty degrees in sixty seconds. Only their speeds differ.
+K1|3.2|One more. Aarav spins the wheel twice as fast. What happens to the valve's speed? Pause and think.
+K2|0.65|It doubles! v equals r omega. The radius stays the same, so double omega gives double speed.
+W1|0.35|Now, one worked example.
+W2|0.5|A ceiling fan makes three hundred turns a minute. Its blade tip is zero point six metres out. Find omega and the tip's speed.
+W3|0.75|Three hundred turns a minute is five turns each second. So nu is five hertz.
+W4|0.75|Omega equals two pi nu. That is ten pi, about thirty one point four radians per second.
+W5|0.75|v equals r omega. That is zero point six times ten pi, which is six pi.
+W6|0.65|About eighteen point eight metres per second at the tip. Every point on the blade has the same omega.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students put degrees straight into v equals r omega.
+X3|0.65|But s equals r theta works only in radians. One eighty degrees per second is pi radians per second. So the valve moves at zero point nine four metres per second, not fifty four.
+E1|0.6|Where is this asked? As quick numericals: clock hands, fan blades, and r p m to radians per second.
+Q1|5.4|Exam level now. A clock's minute hand is six centimetres long. Find its angular velocity, and the speed of its tip. Pause and solve.
+A1|0.5|The answer is B.
+A2|0.5|The minute hand turns two pi radians in one hour, three thousand six hundred seconds.
+A3|0.5|So omega is two pi over thirty six hundred, which is pi over eighteen hundred radians per second.
+A4|0.6|The tip's speed is r omega. Six times pi over eighteen hundred is pi over three hundred centimetres per second.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. On a turning wheel, which is the same for every point: omega, or the speed?
+Y3|0.9|Two. Why must theta be in radians when you use s equals r theta?
+Y4|1.1|Three. How do you turn sixty turns a minute into radians per second?
+N1|0.3|Next time: why does a salad spinner fling water off the leaves? We meet centripetal acceleration.
