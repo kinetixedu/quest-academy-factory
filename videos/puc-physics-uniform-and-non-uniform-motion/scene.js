@@ -194,7 +194,7 @@ const nx = PUC.next($('#sF'), { label: 'NEXT · EP 25', topic: 'Predict where Aa
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tS9 + 0.1, 1.12, 1368, 713], [tD1 - 0.5, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tS9 + 0.1, 1.08, 1150, 620], [tD1 - 0.5, 1, 960, 540]]);
 const f1 = v => v.toFixed(1);
 let geo = null;
 function measure() {
@@ -341,7 +341,7 @@ M.on(t => {
     M.vis($('#wr'), t, T0('W2') + 0.2, out, { dx: 60, dy: 0, ...o });
     M.vis(wL[0], t, wt('W2', 'five') - 0.1, 1e9, { dy: 8 }); M.vis(wL[1], t, wt('W2', 'three') - 0.1, 1e9, { dy: 8 });
     const ts = 320 * M.clamp((t - tWa) / (tWb - tWa)), wx = wPos(ts);
-    wBike.setAttribute('transform', `translate(${(WX0 + wx * WPX).toFixed(1)},150)`); M.vis(wBike, t, T0('W2') + 0.4, 1e9, { dy: 0 });
+    wBike.setAttribute('transform', `translate(${(WX0 + wx * WPX).toFixed(1)},150)`); wBike.style.opacity = M.clamp((t - T0('W2') - 0.4) / 0.3).toFixed(3);
     M.setT(wClock, 't = ' + Math.round(ts) + ' s'); M.vis(wClock, t, tWa - 0.2, 1e9, { dy: 0 });
     attr(tb[0], 'width', (249 * Math.min(ts, 120) / 120).toFixed(1)); attr(tb[1], 'x', WX0 + 249); attr(tb[1], 'width', (415 * M.clamp((ts - 120) / 200)).toFixed(1));
     tbT[0].style.opacity = M.clamp((ts - 100) / 20).toFixed(3); tbT[1].style.opacity = M.clamp((ts - 300) / 20).toFixed(3);
