@@ -1,0 +1,560 @@
+1
+00:00:00,450 --> 00:00:03,725
+The college canteen sells
+three snacks and two drinks.
+
+2
+00:00:03,725 --> 00:00:07,835
+How many different combos of one
+snack and one drink can you order?
+
+3
+00:00:08,235 --> 00:00:09,730
+Most people say five.
+
+4
+00:00:09,730 --> 00:00:10,874
+Three plus two.
+
+5
+00:00:10,874 --> 00:00:13,174
+But count them, and you get six.
+
+6
+00:00:13,174 --> 00:00:16,027
+Add one more drink, and it jumps to nine.
+
+7
+00:00:16,477 --> 00:00:18,884
+Diya spotted this at the canteen today.
+
+8
+00:00:19,234 --> 00:00:22,102
+Why do the choices multiply, and not add?
+
+9
+00:00:22,602 --> 00:00:26,392
+The answer opens a new chapter,
+Relations and Functions.
+
+10
+00:00:26,392 --> 00:00:29,135
+Its first idea is the Cartesian product.
+
+11
+00:00:29,785 --> 00:00:32,476
+Let us build every combo, one at a time.
+
+12
+00:00:32,826 --> 00:00:36,088
+Set S holds the snacks:
+samosa, vada and puff.
+
+13
+00:00:36,088 --> 00:00:38,795
+Set D holds the drinks: tea and juice.
+
+14
+00:00:39,195 --> 00:00:40,404
+Pick the samosa.
+
+15
+00:00:40,404 --> 00:00:42,891
+It can go with tea, or with juice.
+
+16
+00:00:42,891 --> 00:00:44,454
+That makes two combos.
+
+17
+00:00:44,854 --> 00:00:45,927
+Pick the vada.
+
+18
+00:00:45,927 --> 00:00:48,414
+Two drinks again, so two more combos.
+
+19
+00:00:48,814 --> 00:00:49,928
+Pick the puff.
+
+20
+00:00:49,928 --> 00:00:50,828
+Two more.
+
+21
+00:00:50,737 --> 00:00:52,857
+Three snacks, two drinks each.
+
+22
+00:00:52,857 --> 00:00:54,228
+Six combos in all.
+
+23
+00:00:54,878 --> 00:00:57,173
+Now put the six combos on a grid.
+
+24
+00:00:57,173 --> 00:00:59,005
+Snacks go along the bottom.
+
+25
+00:00:59,005 --> 00:01:00,596
+Drinks go up the side.
+
+26
+00:01:00,996 --> 00:01:04,540
+Each dot, where a column
+meets a row, is one combo.
+
+27
+00:01:04,540 --> 00:01:06,969
+Three columns, two rows, six dots.
+
+28
+00:01:07,369 --> 00:01:09,469
+Now the canteen adds a drink.
+
+29
+00:01:09,469 --> 00:01:10,723
+Coffee comes in.
+
+30
+00:01:10,723 --> 00:01:13,189
+One more row, so three more dots.
+
+31
+00:01:13,589 --> 00:01:15,603
+Then lemonade, then buttermilk.
+
+32
+00:01:15,603 --> 00:01:18,322
+Every new drink adds a whole row of three.
+
+33
+00:01:18,722 --> 00:01:22,803
+So the number of combos is always
+three, times the number of drinks.
+
+34
+00:01:23,453 --> 00:01:25,695
+This set of all combos has a name.
+
+35
+00:01:26,045 --> 00:01:31,087
+In NCERT words: the Cartesian product
+of two non empty sets P and Q is
+
+36
+00:01:31,087 --> 00:01:35,155
+the set of all ordered pairs
+of elements from P and Q.
+
+37
+00:01:35,555 --> 00:01:37,231
+We write it P cross Q.
+
+38
+00:01:37,231 --> 00:01:39,956
+Each element is a pair in round brackets.
+
+39
+00:01:39,956 --> 00:01:43,377
+First comes something from
+P, then something from Q.
+
+40
+00:01:43,777 --> 00:01:48,976
+In set builder form, P cross Q is
+the set of all pairs p comma q, such
+
+41
+00:01:48,976 --> 00:01:52,190
+that p belongs to P, and q belongs to Q.
+
+42
+00:01:52,940 --> 00:01:55,266
+Now, why do the choices multiply?
+
+43
+00:01:55,266 --> 00:01:57,759
+Let us prove it in four small steps.
+
+44
+00:01:58,109 --> 00:01:59,009
+Step one.
+
+45
+00:01:58,937 --> 00:02:02,594
+Say set A has p elements,
+and set B has q elements.
+
+46
+00:02:03,344 --> 00:02:04,244
+Step two.
+
+47
+00:02:04,208 --> 00:02:05,895
+Fix one element of A.
+
+48
+00:02:05,895 --> 00:02:09,005
+It pairs with each of the q elements of B.
+
+49
+00:02:09,005 --> 00:02:10,523
+That gives q pairs.
+
+50
+00:02:11,273 --> 00:02:12,202
+Step three.
+
+51
+00:02:12,202 --> 00:02:15,647
+Every element of A gets
+its own column of q pairs.
+
+52
+00:02:15,647 --> 00:02:19,526
+No pair repeats, because their
+first entries are different.
+
+53
+00:02:20,276 --> 00:02:21,184
+Step four.
+
+54
+00:02:21,184 --> 00:02:24,084
+p columns, with q pairs in each column.
+
+55
+00:02:24,084 --> 00:02:27,432
+That is q added p times,
+which is p times q.
+
+56
+00:02:28,182 --> 00:02:31,484
+So n of A cross B equals
+n of A times n of B.
+
+57
+00:02:31,484 --> 00:02:34,272
+Three snacks, times two drinks, is six.
+
+58
+00:02:34,922 --> 00:02:36,032
+Side by side.
+
+59
+00:02:36,032 --> 00:02:38,784
+The union puts every item into one set.
+
+60
+00:02:38,784 --> 00:02:42,071
+S and D share nothing,
+so that is five items.
+
+61
+00:02:42,471 --> 00:02:46,431
+The Cartesian product pairs
+every snack with every drink.
+
+62
+00:02:46,431 --> 00:02:48,607
+Three times two, six pairs.
+
+63
+00:02:48,607 --> 00:02:49,608
+Union adds.
+
+64
+00:02:49,608 --> 00:02:51,327
+The product multiplies.
+
+65
+00:02:51,927 --> 00:02:52,974
+Now you try.
+
+66
+00:02:52,974 --> 00:02:56,277
+The canteen runs out of
+drinks, so D is empty.
+
+67
+00:02:56,277 --> 00:02:58,106
+How many combos are left?
+
+68
+00:02:58,106 --> 00:02:59,356
+Pause and think.
+
+69
+00:03:02,556 --> 00:03:03,456
+Zero!
+
+70
+00:03:03,143 --> 00:03:05,902
+A combo needs one snack and one drink.
+
+71
+00:03:05,902 --> 00:03:09,468
+If either set is empty,
+the product is empty too.
+
+72
+00:03:10,118 --> 00:03:11,190
+Remember this.
+
+73
+00:03:11,190 --> 00:03:15,820
+In a Cartesian product, every element
+meets every element, so the choices
+
+74
+00:03:15,820 --> 00:03:16,720
+multiply.
+
+75
+00:03:17,282 --> 00:03:19,017
+Now, one worked example.
+
+76
+00:03:19,367 --> 00:03:22,378
+A is the set of natural
+numbers less than three.
+
+77
+00:03:22,378 --> 00:03:25,296
+B is the set of integers
+whose square is four.
+
+78
+00:03:25,296 --> 00:03:28,354
+Find A cross B, and the
+number of its elements.
+
+79
+00:03:28,854 --> 00:03:29,754
+Step one.
+
+80
+00:03:29,657 --> 00:03:31,028
+A is one and two.
+
+81
+00:03:31,028 --> 00:03:33,634
+Remember, natural numbers start at one.
+
+82
+00:03:34,384 --> 00:03:35,284
+Step two.
+
+83
+00:03:35,209 --> 00:03:39,045
+Two squared is four, and minus
+two squared is also four.
+
+84
+00:03:39,045 --> 00:03:41,029
+So B is minus two and two.
+
+85
+00:03:41,779 --> 00:03:42,717
+Step three.
+
+86
+00:03:42,717 --> 00:03:46,033
+Pair every element of A
+with every element of B.
+
+87
+00:03:46,033 --> 00:03:47,339
+Watch the arrows.
+
+88
+00:03:48,089 --> 00:03:48,989
+Step four.
+
+89
+00:03:48,980 --> 00:03:54,061
+A cross B is one comma minus two, one
+comma two, two comma minus two, and
+
+90
+00:03:54,061 --> 00:03:55,219
+two comma two.
+
+91
+00:03:55,969 --> 00:03:56,869
+Step five.
+
+92
+00:03:56,840 --> 00:03:58,071
+Check the count.
+
+93
+00:03:58,071 --> 00:04:01,425
+Two times two is four
+pairs, and we listed four.
+
+94
+00:04:02,075 --> 00:04:03,541
+Now, the exam trap.
+
+95
+00:04:03,891 --> 00:04:05,209
+A is one and two.
+
+96
+00:04:05,209 --> 00:04:06,667
+B is three and four.
+
+97
+00:04:06,667 --> 00:04:10,931
+Many students pair them like a
+zip: one with three, two with four.
+
+98
+00:04:10,931 --> 00:04:12,042
+Only two pairs.
+
+99
+00:04:12,442 --> 00:04:15,083
+But every element must meet every element.
+
+100
+00:04:15,083 --> 00:04:17,830
+One also meets four, and two meets three.
+
+101
+00:04:17,830 --> 00:04:19,155
+Four pairs in all.
+
+102
+00:04:19,805 --> 00:04:21,374
+Where is this asked?
+
+103
+00:04:21,374 --> 00:04:26,426
+In PUC exams and in JEE Main, often
+as: find the number of elements, or
+
+104
+00:04:26,426 --> 00:04:29,195
+the number of subsets, of A cross B.
+
+105
+00:04:29,795 --> 00:04:31,019
+Exam level now.
+
+106
+00:04:31,019 --> 00:04:33,541
+A is the set of factors of twelve.
+
+107
+00:04:33,541 --> 00:04:37,453
+B is the set of integers whose
+square is less than five.
+
+108
+00:04:37,453 --> 00:04:40,088
+A cross B has two to the k subsets.
+
+109
+00:04:40,088 --> 00:04:40,988
+Find k.
+
+110
+00:04:40,836 --> 00:04:42,112
+Pause and solve.
+
+111
+00:04:47,512 --> 00:04:48,711
+The answer is C.
+
+112
+00:04:48,711 --> 00:04:49,611
+Thirty.
+
+113
+00:04:49,825 --> 00:04:53,708
+Twelve has six factors: one,
+two, three, four, six and twelve.
+
+114
+00:04:54,208 --> 00:04:57,243
+For B, do not forget
+zero and the negatives.
+
+115
+00:04:57,243 --> 00:04:59,924
+Minus two up to two gives five integers.
+
+116
+00:05:00,424 --> 00:05:04,155
+So A cross B has six times
+five, which is thirty elements.
+
+117
+00:05:04,655 --> 00:05:08,816
+A set with thirty elements has
+two to the power thirty subsets.
+
+118
+00:05:08,816 --> 00:05:10,068
+So k is thirty.
+
+119
+00:05:10,668 --> 00:05:12,132
+Here is your recap.
+
+120
+00:05:12,132 --> 00:05:13,637
+Screenshot this card.
+
+121
+00:05:16,837 --> 00:05:19,674
+Can you answer these three
+questions without help?
+
+122
+00:05:20,074 --> 00:05:20,974
+One.
+
+123
+00:05:20,565 --> 00:05:22,955
+A has four elements and B has five.
+
+124
+00:05:22,955 --> 00:05:25,489
+How many elements does A cross B have?
+
+125
+00:05:26,389 --> 00:05:27,289
+Two.
+
+126
+00:05:26,853 --> 00:05:31,190
+Write A cross B, when A is x and
+y, and B is one, two and three.
+
+127
+00:05:32,090 --> 00:05:32,990
+Three.
+
+128
+00:05:32,713 --> 00:05:35,665
+Why is A cross the empty set always empty?
+
+129
+00:05:36,765 --> 00:05:41,655
+Next time: exam hall seat three comma
+five is not seat five comma three.
+
+130
+00:05:41,655 --> 00:05:44,167
+Why does the order change everything?
+
+131
+00:05:44,167 --> 00:05:46,270
+We find out in Ordered Pairs.

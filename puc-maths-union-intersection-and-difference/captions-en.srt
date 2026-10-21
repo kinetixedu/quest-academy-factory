@@ -1,0 +1,615 @@
+1
+00:00:00,450 --> 00:00:02,338
+Put two lists side by side.
+
+2
+00:00:02,338 --> 00:00:06,963
+You can ask for everything on them,
+for only what they share, or for what
+
+3
+00:00:06,963 --> 00:00:08,302
+only one list has.
+
+4
+00:00:08,702 --> 00:00:09,912
+Same two lists.
+
+5
+00:00:09,912 --> 00:00:11,112
+Three questions.
+
+6
+00:00:11,112 --> 00:00:12,784
+Three different answers.
+
+7
+00:00:13,234 --> 00:00:17,090
+Diya hit this today, planning a
+fruit salad with her friend Meera.
+
+8
+00:00:17,440 --> 00:00:20,439
+Diya likes mango, apple, guava and banana.
+
+9
+00:00:20,439 --> 00:00:22,973
+Meera likes apple, mango and grapes.
+
+10
+00:00:23,373 --> 00:00:24,580
+Buy every fruit?
+
+11
+00:00:24,580 --> 00:00:26,600
+Only the ones they both like?
+
+12
+00:00:26,600 --> 00:00:28,572
+Or the ones only Diya likes?
+
+13
+00:00:29,072 --> 00:00:31,338
+Each question is a set operation.
+
+14
+00:00:31,338 --> 00:00:35,389
+Today we build all three: union,
+intersection and difference.
+
+15
+00:00:36,039 --> 00:00:39,132
+Call Diya's fruits set A,
+and Meera's fruits set B.
+
+16
+00:00:39,482 --> 00:00:44,380
+The union of A and B is the set of
+all elements that are in A, or in B,
+
+17
+00:00:44,380 --> 00:00:45,351
+or in both.
+
+18
+00:00:45,751 --> 00:00:47,716
+Its symbol looks like a cup.
+
+19
+00:00:47,716 --> 00:00:49,543
+We read it as A union B.
+
+20
+00:00:49,943 --> 00:00:51,060
+Watch it build.
+
+21
+00:00:51,060 --> 00:00:53,302
+First, every fruit of A goes in.
+
+22
+00:00:53,302 --> 00:00:55,374
+Mango, apple, guava, banana.
+
+23
+00:00:55,774 --> 00:00:56,674
+Now B.
+
+24
+00:00:56,494 --> 00:00:58,308
+Apple is already inside.
+
+25
+00:00:58,308 --> 00:01:00,123
+Mango is already inside.
+
+26
+00:01:00,123 --> 00:01:03,440
+In a set, each element
+is written only once.
+
+27
+00:01:03,840 --> 00:01:05,245
+Only grapes is new.
+
+28
+00:01:05,245 --> 00:01:08,065
+So A union B has five fruits, not seven.
+
+29
+00:01:08,715 --> 00:01:14,099
+In set builder form, A union B is the
+set of all x, such that x is in A,
+
+30
+00:01:14,099 --> 00:01:15,369
+or x is in B.
+
+31
+00:01:16,119 --> 00:01:17,446
+Now Meera's question.
+
+32
+00:01:17,446 --> 00:01:19,933
+Only the fruits that both of them like.
+
+33
+00:01:20,283 --> 00:01:24,708
+The intersection of A and B is the
+set of elements that belong to both
+
+34
+00:01:24,708 --> 00:01:25,608
+A and B.
+
+35
+00:01:25,533 --> 00:01:28,298
+Its symbol is the cup turned upside down.
+
+36
+00:01:28,698 --> 00:01:29,696
+Run the test.
+
+37
+00:01:29,696 --> 00:01:32,767
+Take each fruit of A
+and ask: is it in B too?
+
+38
+00:01:33,167 --> 00:01:34,067
+Mango?
+
+39
+00:01:33,675 --> 00:01:34,575
+Yes.
+
+40
+00:01:34,101 --> 00:01:35,001
+Apple?
+
+41
+00:01:34,609 --> 00:01:35,509
+Yes.
+
+42
+00:01:35,035 --> 00:01:35,935
+Guava?
+
+43
+00:01:35,543 --> 00:01:36,443
+No.
+
+44
+00:01:35,927 --> 00:01:36,827
+Banana?
+
+45
+00:01:36,477 --> 00:01:37,377
+No.
+
+46
+00:01:37,261 --> 00:01:40,035
+So A intersection B is mango and apple.
+
+47
+00:01:40,035 --> 00:01:43,224
+It lives exactly where
+the two circles overlap.
+
+48
+00:01:43,874 --> 00:01:48,989
+In set builder form, it is the set
+of all x, such that x is in A, and x
+
+49
+00:01:48,989 --> 00:01:49,889
+is in B.
+
+50
+00:01:50,582 --> 00:01:52,957
+What if two sets share nothing at all?
+
+51
+00:01:52,957 --> 00:01:55,514
+Take the odd numbers and the even numbers.
+
+52
+00:01:55,914 --> 00:01:57,663
+Pull their circles apart.
+
+53
+00:01:57,663 --> 00:02:01,555
+No number is both odd and
+even, so the overlap is empty.
+
+54
+00:02:01,955 --> 00:02:06,183
+When the intersection is the empty
+set, we call the two sets disjoint.
+
+55
+00:02:06,833 --> 00:02:08,458
+Now Diya's last question.
+
+56
+00:02:08,458 --> 00:02:10,582
+Which fruits does only she like?
+
+57
+00:02:10,932 --> 00:02:15,226
+The difference A minus B is the set
+of elements that are in A, but not
+
+58
+00:02:15,226 --> 00:02:16,126
+in B.
+
+59
+00:02:16,203 --> 00:02:17,428
+Start with A.
+
+60
+00:02:17,428 --> 00:02:20,354
+Remove every fruit that is also in B.
+
+61
+00:02:20,354 --> 00:02:21,397
+Mango goes.
+
+62
+00:02:21,397 --> 00:02:22,440
+Apple goes.
+
+63
+00:02:22,840 --> 00:02:24,735
+Guava and banana are left.
+
+64
+00:02:24,735 --> 00:02:28,063
+That is A minus B, the
+fruits only Diya likes.
+
+65
+00:02:28,713 --> 00:02:33,849
+In set builder form, it is the set
+of all x, such that x is in A, and x
+
+66
+00:02:33,849 --> 00:02:34,960
+is not in B.
+
+67
+00:02:35,710 --> 00:02:36,914
+Side by side.
+
+68
+00:02:36,914 --> 00:02:39,512
+A minus B keeps what only A has.
+
+69
+00:02:39,512 --> 00:02:40,939
+Guava and banana.
+
+70
+00:02:41,339 --> 00:02:44,018
+B minus A keeps what only B has.
+
+71
+00:02:44,018 --> 00:02:45,133
+Just grapes.
+
+72
+00:02:45,733 --> 00:02:48,834
+So, is A minus B the same as B minus A?
+
+73
+00:02:48,834 --> 00:02:50,175
+Pause and decide.
+
+74
+00:02:53,375 --> 00:02:54,275
+No!
+
+75
+00:02:53,830 --> 00:02:55,146
+The order matters.
+
+76
+00:02:55,146 --> 00:03:00,202
+A minus B and B minus A are different
+sets, and they never share an element.
+
+77
+00:03:00,852 --> 00:03:01,946
+Remember this.
+
+78
+00:03:01,946 --> 00:03:03,367
+Or joins the sets.
+
+79
+00:03:03,367 --> 00:03:05,258
+And keeps what they share.
+
+80
+00:03:05,258 --> 00:03:06,567
+Minus takes away.
+
+81
+00:03:07,267 --> 00:03:09,099
+Look at circle A once more.
+
+82
+00:03:09,099 --> 00:03:10,837
+It is made of two pieces.
+
+83
+00:03:11,237 --> 00:03:14,034
+The part outside B, which is A minus B.
+
+84
+00:03:14,034 --> 00:03:16,969
+And the overlap, which
+is A intersection B.
+
+85
+00:03:17,369 --> 00:03:20,081
+Join the two pieces, and
+you get all of A back.
+
+86
+00:03:20,681 --> 00:03:21,581
+Quick one.
+
+87
+00:03:21,535 --> 00:03:24,636
+If A and B are disjoint,
+what is A minus B?
+
+88
+00:03:24,636 --> 00:03:25,843
+Pause and think.
+
+89
+00:03:29,043 --> 00:03:30,225
+It is A itself!
+
+90
+00:03:30,225 --> 00:03:33,159
+There is no overlap, so
+nothing gets removed.
+
+91
+00:03:33,809 --> 00:03:35,545
+Now, one worked example.
+
+92
+00:03:35,895 --> 00:03:38,143
+A is the set of factors of twelve.
+
+93
+00:03:38,143 --> 00:03:40,483
+B is the set of factors of eighteen.
+
+94
+00:03:40,483 --> 00:03:43,888
+Find the union, the intersection,
+and both differences.
+
+95
+00:03:44,388 --> 00:03:45,288
+Step one.
+
+96
+00:03:45,128 --> 00:03:48,143
+A is one, two, three,
+four, six and twelve.
+
+97
+00:03:48,893 --> 00:03:49,793
+Step two.
+
+98
+00:03:49,668 --> 00:03:52,919
+B is one, two, three,
+six, nine and eighteen.
+
+99
+00:03:53,669 --> 00:03:54,572
+Step three.
+
+100
+00:03:54,572 --> 00:03:57,852
+The common factors are
+one, two, three and six.
+
+101
+00:03:57,852 --> 00:03:59,619
+That is A intersection B.
+
+102
+00:04:00,369 --> 00:04:01,269
+Step four.
+
+103
+00:04:01,250 --> 00:04:03,792
+Join them, writing each factor once.
+
+104
+00:04:03,792 --> 00:04:05,879
+A union B has eight elements.
+
+105
+00:04:06,629 --> 00:04:07,564
+Step five.
+
+106
+00:04:07,564 --> 00:04:09,844
+A minus B is four and twelve.
+
+107
+00:04:09,844 --> 00:04:12,231
+B minus A is nine and eighteen.
+
+108
+00:04:12,981 --> 00:04:13,881
+And look.
+
+109
+00:04:13,745 --> 00:04:18,049
+The biggest number in the intersection,
+six, is the highest common factor
+
+110
+00:04:18,049 --> 00:04:19,577
+of twelve and eighteen.
+
+111
+00:04:20,227 --> 00:04:21,692
+Now, the exam trap.
+
+112
+00:04:22,042 --> 00:04:23,462
+A is five and seven.
+
+113
+00:04:23,462 --> 00:04:24,836
+B is two and three.
+
+114
+00:04:24,836 --> 00:04:29,315
+Many students subtract the numbers,
+and write A minus B as three and four.
+
+115
+00:04:29,715 --> 00:04:32,215
+But set difference never does arithmetic.
+
+116
+00:04:32,215 --> 00:04:34,235
+It only removes shared elements.
+
+117
+00:04:34,235 --> 00:04:38,172
+A and B share nothing, so A
+minus B is still five and seven.
+
+118
+00:04:38,822 --> 00:04:40,407
+Where is this asked?
+
+119
+00:04:40,407 --> 00:04:44,568
+In PUC board exams, as direct
+questions on two given sets.
+
+120
+00:04:44,568 --> 00:04:49,707
+And in JEE Main, where union and
+intersection are mixed with number rules.
+
+121
+00:04:50,307 --> 00:04:51,564
+Exam level now.
+
+122
+00:04:51,564 --> 00:04:54,205
+How many elements are in A minus B?
+
+123
+00:04:54,205 --> 00:04:55,515
+Pause and solve.
+
+124
+00:05:00,915 --> 00:05:02,329
+The answer is B.
+
+125
+00:05:02,329 --> 00:05:03,448
+Twenty seven.
+
+126
+00:05:03,948 --> 00:05:06,733
+A is the multiples of
+three up to one hundred.
+
+127
+00:05:06,733 --> 00:05:10,146
+That is three up to ninety
+nine, so thirty three numbers.
+
+128
+00:05:10,646 --> 00:05:13,598
+We must remove the ones
+that are also in B.
+
+129
+00:05:13,598 --> 00:05:18,499
+Those are multiples of both three and
+five, which means multiples of fifteen.
+
+130
+00:05:18,999 --> 00:05:23,041
+Fifteen, thirty, forty five,
+sixty, seventy five and ninety.
+
+131
+00:05:23,041 --> 00:05:24,478
+That is six numbers.
+
+132
+00:05:24,478 --> 00:05:27,198
+Thirty three minus six
+leaves twenty seven.
+
+133
+00:05:27,798 --> 00:05:29,258
+Here is your recap.
+
+134
+00:05:29,258 --> 00:05:30,759
+Screenshot this card.
+
+135
+00:05:33,959 --> 00:05:36,795
+Can you answer these three
+questions without help?
+
+136
+00:05:37,195 --> 00:05:38,095
+One.
+
+137
+00:05:37,628 --> 00:05:40,908
+What is the union of the
+sets one, two and two, three?
+
+138
+00:05:41,808 --> 00:05:42,708
+Two.
+
+139
+00:05:42,317 --> 00:05:44,620
+When are two sets called disjoint?
+
+140
+00:05:45,520 --> 00:05:46,420
+Three.
+
+141
+00:05:46,069 --> 00:05:50,502
+If A is one, two, three and B is
+three and four, what is B minus A?
+
+142
+00:05:51,602 --> 00:05:55,593
+Next time: everyone in class who
+did not ride a bicycle today.
+
+143
+00:05:55,593 --> 00:05:57,421
+That set has its own name.
+
+144
+00:05:57,421 --> 00:05:59,288
+It is called the complement.

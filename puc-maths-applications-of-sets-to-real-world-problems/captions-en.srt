@@ -1,0 +1,451 @@
+1
+00:00:00,450 --> 00:00:02,198
+Ask a class two questions.
+
+2
+00:00:02,198 --> 00:00:03,266
+Who likes tea?
+
+3
+00:00:03,266 --> 00:00:04,476
+Who likes coffee?
+
+4
+00:00:04,476 --> 00:00:08,908
+Add the two answers, and you can get
+more students than the class has.
+
+5
+00:00:09,308 --> 00:00:10,271
+Nobody lied.
+
+6
+00:00:10,271 --> 00:00:12,862
+Some students were simply counted twice.
+
+7
+00:00:13,312 --> 00:00:15,824
+Diya ran this survey for the class trip.
+
+8
+00:00:16,174 --> 00:00:18,169
+Twenty five students like tea.
+
+9
+00:00:18,169 --> 00:00:19,609
+Eighteen like coffee.
+
+10
+00:00:19,609 --> 00:00:20,709
+Ten like both.
+
+11
+00:00:20,709 --> 00:00:23,161
+And every student likes at least one.
+
+12
+00:00:23,161 --> 00:00:25,262
+So how many students are there?
+
+13
+00:00:25,762 --> 00:00:26,918
+Not forty three.
+
+14
+00:00:26,918 --> 00:00:29,388
+Sets give the right count in one line.
+
+15
+00:00:30,038 --> 00:00:31,256
+First, a symbol.
+
+16
+00:00:31,256 --> 00:00:34,674
+n of A means the number of
+elements in a finite set A.
+
+17
+00:00:35,074 --> 00:00:38,269
+Let T be the tea lovers,
+and C the coffee lovers.
+
+18
+00:00:38,269 --> 00:00:39,645
+Now watch the count.
+
+19
+00:00:40,045 --> 00:00:41,972
+Count every student in T.
+
+20
+00:00:41,972 --> 00:00:43,011
+Twenty five.
+
+21
+00:00:43,411 --> 00:00:46,150
+Now count every student in C, and add.
+
+22
+00:00:46,150 --> 00:00:47,123
+Forty three.
+
+23
+00:00:47,523 --> 00:00:49,131
+But look at the overlap.
+
+24
+00:00:49,131 --> 00:00:52,780
+Those ten students were counted
+once in T, and again in C.
+
+25
+00:00:53,180 --> 00:00:54,695
+Take them away once.
+
+26
+00:00:54,695 --> 00:00:57,826
+Forty three minus ten is
+thirty three students.
+
+27
+00:00:58,476 --> 00:01:00,592
+Now let's turn this into a formula.
+
+28
+00:01:00,942 --> 00:01:01,842
+Step one.
+
+29
+00:01:01,810 --> 00:01:06,150
+Adding n of A and n of B counts
+every element of A union B.
+
+30
+00:01:06,900 --> 00:01:07,800
+Step two.
+
+31
+00:01:07,685 --> 00:01:12,315
+But the elements of A intersection B
+get counted twice, once in each set.
+
+32
+00:01:13,065 --> 00:01:14,043
+Step three.
+
+33
+00:01:14,043 --> 00:01:15,732
+So subtract them once.
+
+34
+00:01:15,732 --> 00:01:21,193
+n of A union B equals n of A, plus
+n of B, minus n of A intersection B.
+
+35
+00:01:21,943 --> 00:01:22,852
+Step four.
+
+36
+00:01:22,852 --> 00:01:26,248
+If A and B are disjoint,
+the overlap is empty.
+
+37
+00:01:26,248 --> 00:01:30,009
+Then n of A union B is
+simply n of A plus n of B.
+
+38
+00:01:30,759 --> 00:01:31,910
+Side by side.
+
+39
+00:01:31,910 --> 00:01:34,594
+Likes tea means everyone in circle T.
+
+40
+00:01:34,594 --> 00:01:36,181
+That is twenty five.
+
+41
+00:01:36,581 --> 00:01:40,941
+Likes only tea means T minus C,
+the part outside the overlap.
+
+42
+00:01:40,941 --> 00:01:43,333
+Twenty five minus ten is fifteen.
+
+43
+00:01:43,933 --> 00:01:45,008
+Now you try.
+
+44
+00:01:45,008 --> 00:01:47,470
+How many students like only coffee?
+
+45
+00:01:47,470 --> 00:01:48,806
+Pause and decide.
+
+46
+00:01:52,006 --> 00:01:52,906
+Eight!
+
+47
+00:01:52,616 --> 00:01:56,168
+Eighteen like coffee, but
+ten of them also like tea.
+
+48
+00:01:56,168 --> 00:01:58,120
+Eighteen minus ten is eight.
+
+49
+00:01:58,770 --> 00:01:59,820
+Remember this.
+
+50
+00:01:59,820 --> 00:02:03,099
+Add the two sets, then
+subtract the overlap once.
+
+51
+00:02:03,799 --> 00:02:05,995
+Check it with the three pieces.
+
+52
+00:02:05,995 --> 00:02:07,612
+Fifteen like only tea.
+
+53
+00:02:07,612 --> 00:02:08,760
+Ten like both.
+
+54
+00:02:08,760 --> 00:02:10,428
+Eight like only coffee.
+
+55
+00:02:10,828 --> 00:02:13,700
+Fifteen plus ten plus
+eight is thirty three.
+
+56
+00:02:13,700 --> 00:02:16,816
+The same answer, counted
+with no student twice.
+
+57
+00:02:17,466 --> 00:02:19,202
+Now, one worked example.
+
+58
+00:02:19,552 --> 00:02:23,839
+In a group of sixty students, thirty
+five play cricket, twenty eight play
+
+59
+00:02:23,839 --> 00:02:25,717
+football, and ten play both.
+
+60
+00:02:25,717 --> 00:02:27,174
+How many play neither?
+
+61
+00:02:27,674 --> 00:02:28,574
+Step one.
+
+62
+00:02:28,526 --> 00:02:31,103
+Let C be cricket and F be football.
+
+63
+00:02:31,103 --> 00:02:36,059
+n of C is thirty five, n of F is
+twenty eight, and n of C intersection
+
+64
+00:02:36,059 --> 00:02:36,974
+F is ten.
+
+65
+00:02:37,724 --> 00:02:38,624
+Step two.
+
+66
+00:02:38,528 --> 00:02:42,678
+n of C union F is thirty five,
+plus twenty eight, minus ten.
+
+67
+00:02:42,678 --> 00:02:44,140
+That is fifty three.
+
+68
+00:02:44,890 --> 00:02:45,790
+Step three.
+
+69
+00:02:45,785 --> 00:02:48,838
+So fifty three students
+play at least one game.
+
+70
+00:02:49,588 --> 00:02:50,497
+Step four.
+
+71
+00:02:50,497 --> 00:02:53,455
+Neither means the complement of C union F.
+
+72
+00:02:53,455 --> 00:02:55,817
+Sixty minus fifty three is seven.
+
+73
+00:02:56,567 --> 00:02:58,660
+So seven students play neither game.
+
+74
+00:02:59,310 --> 00:03:00,775
+Now, the exam trap.
+
+75
+00:03:01,125 --> 00:03:02,644
+Many students just add.
+
+76
+00:03:02,644 --> 00:03:05,403
+Thirty five plus twenty
+eight is sixty three.
+
+77
+00:03:05,403 --> 00:03:08,505
+That is more than the sixty
+students in the group!
+
+78
+00:03:08,905 --> 00:03:11,507
+The ten who play both were counted twice.
+
+79
+00:03:11,507 --> 00:03:14,634
+Subtract them once, and
+the union is fifty three.
+
+80
+00:03:15,284 --> 00:03:16,781
+Where is this asked?
+
+81
+00:03:16,781 --> 00:03:21,322
+In JEE Main, as survey questions with
+numbers or percentages, where you
+
+82
+00:03:21,322 --> 00:03:25,239
+find the overlap, or its least
+and greatest possible value.
+
+83
+00:03:25,839 --> 00:03:27,125
+Exam level now.
+
+84
+00:03:27,125 --> 00:03:29,534
+Between which values must x lie?
+
+85
+00:03:29,534 --> 00:03:30,874
+Pause and solve.
+
+86
+00:03:36,274 --> 00:03:37,576
+The answer is A.
+
+87
+00:03:37,576 --> 00:03:39,756
+From thirty seven to sixty two.
+
+88
+00:03:40,256 --> 00:03:43,332
+The union can be at most
+one hundred percent.
+
+89
+00:03:43,332 --> 00:03:47,967
+So sixty two, plus seventy five,
+minus x, is at most one hundred.
+
+90
+00:03:48,467 --> 00:03:50,490
+That gives x at least thirty seven.
+
+91
+00:03:50,990 --> 00:03:54,476
+And the overlap can never be
+bigger than the smaller set.
+
+92
+00:03:54,476 --> 00:03:56,302
+So x is at most sixty two.
+
+93
+00:03:56,902 --> 00:03:58,359
+Here is your recap.
+
+94
+00:03:58,359 --> 00:03:59,856
+Screenshot this card.
+
+95
+00:04:03,056 --> 00:04:05,892
+Can you answer these three
+questions without help?
+
+96
+00:04:06,292 --> 00:04:07,192
+One.
+
+97
+00:04:06,854 --> 00:04:09,760
+Write the formula for n of A union B.
+
+98
+00:04:10,660 --> 00:04:11,560
+Two.
+
+99
+00:04:11,186 --> 00:04:14,832
+If A and B are disjoint,
+what is n of A union B?
+
+100
+00:04:15,732 --> 00:04:16,632
+Three.
+
+101
+00:04:16,360 --> 00:04:21,767
+If n of A is twelve, n of B is nine,
+and n of A union B is seventeen, what
+
+102
+00:04:21,767 --> 00:04:23,682
+is n of A intersection B?
+
+103
+00:04:24,782 --> 00:04:28,287
+Next time: the canteen has
+three snacks and two drinks.
+
+104
+00:04:28,287 --> 00:04:30,769
+How many different combos can you pick?
+
+105
+00:04:30,769 --> 00:04:33,545
+We find out with Cartesian
+products of sets.

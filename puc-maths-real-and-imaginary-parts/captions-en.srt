@@ -1,0 +1,518 @@
+1
+00:00:00,450 --> 00:00:04,287
+Tell a friend to meet you in room
+three, and they may still end up in the
+
+2
+00:00:04,287 --> 00:00:05,187
+wrong place.
+
+3
+00:00:05,459 --> 00:00:06,649
+Which room three?
+
+4
+00:00:06,649 --> 00:00:07,746
+On which floor?
+
+5
+00:00:07,746 --> 00:00:12,024
+A full address needs two parts, and
+one part can never stand in for the
+
+6
+00:00:12,024 --> 00:00:12,924
+other.
+
+7
+00:00:13,041 --> 00:00:15,821
+Diya learnt this in the
+college corridor today.
+
+8
+00:00:15,821 --> 00:00:18,566
+She waited in room three
+on the second floor.
+
+9
+00:00:18,566 --> 00:00:21,680
+Her friend waited in room
+three on the ground floor.
+
+10
+00:00:22,030 --> 00:00:24,295
+Complex numbers work the same way.
+
+11
+00:00:24,295 --> 00:00:27,678
+Each one is a single number
+with two separate parts.
+
+12
+00:00:28,178 --> 00:00:30,417
+Today we learn to read both parts.
+
+13
+00:00:31,067 --> 00:00:33,657
+First, the definition,
+straight from NCERT.
+
+14
+00:00:34,007 --> 00:00:38,771
+A complex number is a number of the
+form a plus i b, where a and b are
+
+15
+00:00:38,771 --> 00:00:39,798
+real numbers.
+
+16
+00:00:40,198 --> 00:00:41,710
+We often call it z.
+
+17
+00:00:41,710 --> 00:00:44,998
+The real number a is
+called the real part of z.
+
+18
+00:00:44,998 --> 00:00:46,772
+We write Re z equals a.
+
+19
+00:00:47,172 --> 00:00:50,862
+The real number b is called
+the imaginary part of z.
+
+20
+00:00:50,862 --> 00:00:52,712
+We write Im z equals b.
+
+21
+00:00:52,712 --> 00:00:55,193
+Notice: b alone, without the i.
+
+22
+00:00:55,843 --> 00:00:59,206
+For example, take z
+equals two plus five i.
+
+23
+00:00:59,206 --> 00:01:00,976
+Its real part is two.
+
+24
+00:01:00,976 --> 00:01:03,078
+Its imaginary part is five.
+
+25
+00:01:03,478 --> 00:01:05,915
+Now picture the two parts as an address.
+
+26
+00:01:06,265 --> 00:01:09,618
+The real part a tells you
+how far along the street.
+
+27
+00:01:09,618 --> 00:01:12,865
+The imaginary part b tells
+you how many floors up.
+
+28
+00:01:13,265 --> 00:01:14,165
+Watch.
+
+29
+00:01:13,846 --> 00:01:16,355
+Let a count from minus three to three.
+
+30
+00:01:16,355 --> 00:01:20,524
+The point slides along the street,
+and only the real part changes.
+
+31
+00:01:20,924 --> 00:01:22,463
+Now let b count up.
+
+32
+00:01:22,463 --> 00:01:26,146
+The point climbs, and only
+the imaginary part changes.
+
+33
+00:01:26,546 --> 00:01:29,703
+Two numbers, two directions,
+one complex number.
+
+34
+00:01:29,703 --> 00:01:32,541
+A later episode turns
+this into a full map.
+
+35
+00:01:33,191 --> 00:01:34,309
+Side by side.
+
+36
+00:01:34,309 --> 00:01:37,892
+If b is zero, the point
+sits right on the street.
+
+37
+00:01:37,892 --> 00:01:40,553
+z equals a, an ordinary real number.
+
+38
+00:01:40,553 --> 00:01:42,313
+We call it purely real.
+
+39
+00:01:42,713 --> 00:01:47,496
+If a is zero and b is not zero, the
+point sits straight above or below
+
+40
+00:01:47,496 --> 00:01:48,399
+the start.
+
+41
+00:01:48,399 --> 00:01:49,581
+z equals i b.
+
+42
+00:01:49,581 --> 00:01:51,604
+We call it purely imaginary.
+
+43
+00:01:52,204 --> 00:01:55,620
+So every real number is
+also a complex number.
+
+44
+00:01:55,620 --> 00:01:57,786
+Seven is seven plus zero i.
+
+45
+00:01:58,436 --> 00:01:59,531
+Now you try.
+
+46
+00:01:59,531 --> 00:02:02,858
+Is i squared purely real,
+or purely imaginary?
+
+47
+00:02:02,858 --> 00:02:04,165
+Pause and think.
+
+48
+00:02:07,365 --> 00:02:08,409
+Purely real!
+
+49
+00:02:08,409 --> 00:02:12,518
+i squared is minus one, which
+is minus one plus zero i.
+
+50
+00:02:13,168 --> 00:02:17,622
+Before you read the parts, always
+tidy the number into a plus i b.
+
+51
+00:02:17,622 --> 00:02:18,522
+Watch.
+
+52
+00:02:18,577 --> 00:02:19,494
+Step one.
+
+53
+00:02:19,494 --> 00:02:23,129
+Take z equals three plus
+five i minus i squared.
+
+54
+00:02:23,879 --> 00:02:24,779
+Step two.
+
+55
+00:02:24,686 --> 00:02:28,449
+i squared is minus one, so
+minus i squared is plus one.
+
+56
+00:02:29,199 --> 00:02:30,137
+Step three.
+
+57
+00:02:30,137 --> 00:02:32,226
+Group the real terms together.
+
+58
+00:02:32,226 --> 00:02:33,958
+Three plus one is four.
+
+59
+00:02:34,708 --> 00:02:35,668
+Step four.
+
+60
+00:02:35,668 --> 00:02:38,008
+So z equals four plus five i.
+
+61
+00:02:38,008 --> 00:02:40,700
+Re z is four, and Im z is five.
+
+62
+00:02:41,450 --> 00:02:42,724
+Remember this.
+
+63
+00:02:42,724 --> 00:02:43,902
+Re z is a.
+
+64
+00:02:43,902 --> 00:02:45,080
+Im z is b.
+
+65
+00:02:45,080 --> 00:02:46,972
+Both are real numbers.
+
+66
+00:02:47,672 --> 00:02:49,408
+Now, one worked example.
+
+67
+00:02:49,758 --> 00:02:55,380
+z equals k minus two, plus k squared
+minus nine, times i, where k is real.
+
+68
+00:02:55,380 --> 00:02:57,667
+For which k is z purely real?
+
+69
+00:02:57,667 --> 00:03:00,278
+For which k is it purely imaginary?
+
+70
+00:03:00,778 --> 00:03:01,693
+Step one.
+
+71
+00:03:01,693 --> 00:03:03,009
+Read the parts.
+
+72
+00:03:03,009 --> 00:03:04,804
+Re z is k minus two.
+
+73
+00:03:04,804 --> 00:03:07,168
+Im z is k squared minus nine.
+
+74
+00:03:07,918 --> 00:03:08,818
+Step two.
+
+75
+00:03:08,813 --> 00:03:11,236
+Purely real means Im z is zero.
+
+76
+00:03:11,236 --> 00:03:15,177
+k squared equals nine, so
+k is three or minus three.
+
+77
+00:03:15,927 --> 00:03:17,030
+Step three.
+
+78
+00:03:17,030 --> 00:03:19,993
+Purely imaginary means Re z is zero.
+
+79
+00:03:19,993 --> 00:03:21,541
+So k equals two.
+
+80
+00:03:22,291 --> 00:03:23,301
+Step four.
+
+81
+00:03:23,301 --> 00:03:26,123
+Check that Im z is not zero there.
+
+82
+00:03:26,123 --> 00:03:28,573
+Four minus nine is minus five.
+
+83
+00:03:28,573 --> 00:03:30,733
+So z equals minus five i.
+
+84
+00:03:31,483 --> 00:03:33,942
+On the address board, watch k slide.
+
+85
+00:03:33,942 --> 00:03:37,874
+The point crosses the street
+twice, and the upright line once.
+
+86
+00:03:38,524 --> 00:03:39,990
+Now, the exam trap.
+
+87
+00:03:40,340 --> 00:03:45,186
+Many students say the imaginary part
+of three minus four i is minus four
+
+88
+00:03:45,186 --> 00:03:46,086
+i.
+
+89
+00:03:46,029 --> 00:03:50,045
+But the imaginary part is the
+real number in front of i.
+
+90
+00:03:50,045 --> 00:03:52,964
+Im of three minus four i is minus four.
+
+91
+00:03:52,964 --> 00:03:53,864
+No i.
+
+92
+00:03:54,274 --> 00:03:55,801
+Where is this asked?
+
+93
+00:03:55,801 --> 00:04:00,595
+In JEE Main, for example in January
+twenty nineteen: find the angles that
+
+94
+00:04:00,595 --> 00:04:02,746
+make a number purely imaginary.
+
+95
+00:04:02,746 --> 00:04:05,799
+And in PUC boards, from
+this NCERT section.
+
+96
+00:04:06,399 --> 00:04:07,718
+Exam level now.
+
+97
+00:04:07,718 --> 00:04:11,797
+For how many integers k is
+this number purely imaginary?
+
+98
+00:04:11,797 --> 00:04:13,171
+Pause and solve.
+
+99
+00:04:18,571 --> 00:04:20,047
+The answer is B.
+
+100
+00:04:20,047 --> 00:04:20,986
+Just one.
+
+101
+00:04:21,486 --> 00:04:24,963
+Purely imaginary needs
+the real part to be zero.
+
+102
+00:04:24,963 --> 00:04:29,192
+k squared minus four is zero,
+so k is two or minus two.
+
+103
+00:04:29,692 --> 00:04:33,242
+It also needs the imaginary
+part to be non zero.
+
+104
+00:04:33,242 --> 00:04:37,196
+At k equal to two, four
+minus ten plus six is zero.
+
+105
+00:04:37,196 --> 00:04:39,567
+So z is zero, and two fails.
+
+106
+00:04:40,067 --> 00:04:44,058
+At k equal to minus two, the
+imaginary part is twenty.
+
+107
+00:04:44,058 --> 00:04:45,940
+So only minus two works.
+
+108
+00:04:46,540 --> 00:04:47,996
+Here is your recap.
+
+109
+00:04:47,996 --> 00:04:49,493
+Screenshot this card.
+
+110
+00:04:52,693 --> 00:04:55,530
+Can you answer these three
+questions without help?
+
+111
+00:04:55,930 --> 00:04:56,830
+One.
+
+112
+00:04:56,511 --> 00:05:01,122
+What are Re z and Im z for z
+equals minus five plus two i?
+
+113
+00:05:02,022 --> 00:05:02,922
+Two.
+
+114
+00:05:02,507 --> 00:05:04,856
+Is the number nine a complex number?
+
+115
+00:05:04,856 --> 00:05:05,756
+Why?
+
+116
+00:05:06,241 --> 00:05:07,141
+Three.
+
+117
+00:05:06,911 --> 00:05:11,962
+For which k is k minus one, plus
+k plus one times i, purely real?
+
+118
+00:05:13,062 --> 00:05:16,663
+Next time: two moves on a
+map, one after the other.
+
+119
+00:05:16,663 --> 00:05:20,235
+We add, subtract, multiply
+and divide complex numbers.

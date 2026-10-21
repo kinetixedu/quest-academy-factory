@@ -1,0 +1,541 @@
+1
+00:00:00,450 --> 00:00:02,429
+Diya is preparing for NEET.
+
+2
+00:00:02,429 --> 00:00:05,730
+Its subjects are Physics,
+Chemistry and Biology.
+
+3
+00:00:06,130 --> 00:00:11,038
+Her PUC science subjects are Physics,
+Chemistry, Maths and Biology.
+
+4
+00:00:11,488 --> 00:00:14,678
+She noticed something while
+filling in her study timetable.
+
+5
+00:00:15,028 --> 00:00:18,066
+Every NEET subject is also a PUC subject.
+
+6
+00:00:18,066 --> 00:00:21,957
+But Maths is a PUC subject,
+and not a NEET subject.
+
+7
+00:00:21,957 --> 00:00:23,760
+It only works one way.
+
+8
+00:00:24,260 --> 00:00:27,416
+That one way link between
+two sets has a name.
+
+9
+00:00:27,416 --> 00:00:28,316
+A subset.
+
+10
+00:00:28,888 --> 00:00:30,241
+So what is a subset?
+
+11
+00:00:30,591 --> 00:00:35,249
+A set A is a subset of a set B if
+every element of A is also an element
+
+12
+00:00:35,249 --> 00:00:36,149
+of B.
+
+13
+00:00:36,258 --> 00:00:39,398
+We write A, then this
+sideways U symbol, then B.
+
+14
+00:00:39,398 --> 00:00:41,472
+It reads: A is a subset of B.
+
+15
+00:00:41,872 --> 00:00:43,247
+Watch the check run.
+
+16
+00:00:43,247 --> 00:00:47,444
+Take each element of the NEET set,
+and look for it in the PUC set.
+
+17
+00:00:47,844 --> 00:00:48,744
+Physics?
+
+18
+00:00:48,554 --> 00:00:49,454
+Found.
+
+19
+00:00:49,165 --> 00:00:50,065
+Chemistry?
+
+20
+00:00:49,975 --> 00:00:50,875
+Found.
+
+21
+00:00:50,585 --> 00:00:51,485
+Biology?
+
+22
+00:00:51,296 --> 00:00:52,196
+Found.
+
+23
+00:00:51,906 --> 00:00:55,308
+Every element passed, so
+NEET is a subset of PUC.
+
+24
+00:00:55,708 --> 00:00:57,120
+Now the other way.
+
+25
+00:00:57,120 --> 00:00:58,358
+Physics, found.
+
+26
+00:00:58,358 --> 00:00:59,698
+Chemistry, found.
+
+27
+00:00:59,698 --> 00:01:00,598
+Maths?
+
+28
+00:01:00,318 --> 00:01:01,892
+Not in the NEET set.
+
+29
+00:01:01,892 --> 00:01:03,506
+One failure is enough.
+
+30
+00:01:03,506 --> 00:01:05,608
+PUC is not a subset of NEET.
+
+31
+00:01:06,258 --> 00:01:08,862
+Two facts follow straight
+from the definition.
+
+32
+00:01:09,262 --> 00:01:10,162
+First.
+
+33
+00:01:09,825 --> 00:01:11,921
+Every set is a subset of itself.
+
+34
+00:01:11,921 --> 00:01:14,589
+Each element of A is, of course, in A.
+
+35
+00:01:15,339 --> 00:01:16,239
+Second.
+
+36
+00:01:15,970 --> 00:01:18,590
+The empty set is a subset of every set.
+
+37
+00:01:18,590 --> 00:01:21,449
+It has no element that
+could fail the check.
+
+38
+00:01:22,199 --> 00:01:23,536
+Now, equal sets.
+
+39
+00:01:23,536 --> 00:01:27,367
+Two sets are equal if they
+have exactly the same elements.
+
+40
+00:01:27,767 --> 00:01:29,310
+Here is a neat test.
+
+41
+00:01:29,310 --> 00:01:34,066
+A equals B exactly when A is a
+subset of B, and B is a subset of A.
+
+42
+00:01:34,066 --> 00:01:35,588
+Check both directions.
+
+43
+00:01:36,338 --> 00:01:39,134
+The letters of ALLOY and
+the letters of LOYAL.
+
+44
+00:01:39,134 --> 00:01:40,908
+Both give A, L, O, Y.
+
+45
+00:01:40,908 --> 00:01:44,310
+Order and repeats do not
+matter, so the sets are equal.
+
+46
+00:01:44,910 --> 00:01:50,345
+If A is a subset of B, but A is not
+equal to B, A is called a proper subset
+
+47
+00:01:50,345 --> 00:01:51,245
+of B.
+
+48
+00:01:50,993 --> 00:01:53,313
+NEET is a proper subset of PUC.
+
+49
+00:01:53,913 --> 00:01:56,673
+Our number sets fit inside
+each other like this.
+
+50
+00:01:57,073 --> 00:01:58,505
+N is inside Z.
+
+51
+00:01:58,505 --> 00:01:59,936
+Z is inside Q.
+
+52
+00:01:59,936 --> 00:02:01,367
+Q is inside R.
+
+53
+00:02:01,367 --> 00:02:07,188
+And T, the irrational numbers like
+root two and pi, also sits inside R.
+
+54
+00:02:07,788 --> 00:02:10,057
+But N is not a subset of T.
+
+55
+00:02:10,057 --> 00:02:12,402
+No natural number is irrational.
+
+56
+00:02:13,002 --> 00:02:14,135
+Side by side.
+
+57
+00:02:14,135 --> 00:02:16,507
+Two symbols that students mix up.
+
+58
+00:02:16,907 --> 00:02:19,229
+Belongs to joins an element to a set.
+
+59
+00:02:19,229 --> 00:02:21,822
+One belongs to the set one, two, three.
+
+60
+00:02:22,422 --> 00:02:24,403
+Subset joins a set to a set.
+
+61
+00:02:24,403 --> 00:02:28,050
+The set containing one is a
+subset of one, two, three.
+
+62
+00:02:28,050 --> 00:02:29,965
+Curly brackets on both sides.
+
+63
+00:02:30,565 --> 00:02:31,504
+Now you try.
+
+64
+00:02:31,504 --> 00:02:35,405
+Is it correct to write: one is
+a subset of one, two, three?
+
+65
+00:02:35,405 --> 00:02:36,571
+Pause and decide.
+
+66
+00:02:39,771 --> 00:02:40,671
+No!
+
+67
+00:02:40,205 --> 00:02:42,295
+One is an element, not a set.
+
+68
+00:02:42,295 --> 00:02:44,236
+Write one belongs to the set.
+
+69
+00:02:44,236 --> 00:02:47,485
+Or put one in curly brackets,
+and then use subset.
+
+70
+00:02:48,135 --> 00:02:49,232
+Remember this.
+
+71
+00:02:49,232 --> 00:02:52,963
+A is a subset of B when
+every element of A is in B.
+
+72
+00:02:52,963 --> 00:02:55,279
+Equal sets are subsets both ways.
+
+73
+00:02:55,979 --> 00:02:57,715
+Now, one worked example.
+
+74
+00:02:58,065 --> 00:02:59,335
+A is one, three.
+
+75
+00:02:59,335 --> 00:03:00,981
+B is one, five, nine.
+
+76
+00:03:00,981 --> 00:03:03,559
+C is one, three, five, seven, nine.
+
+77
+00:03:03,559 --> 00:03:06,467
+Put subset, or not
+subset, between each pair.
+
+78
+00:03:06,967 --> 00:03:07,867
+One.
+
+79
+00:03:07,487 --> 00:03:09,067
+The empty set and B.
+
+80
+00:03:09,067 --> 00:03:13,034
+Phi is a subset of every
+set, so phi is a subset of B.
+
+81
+00:03:13,784 --> 00:03:14,684
+Two.
+
+82
+00:03:14,315 --> 00:03:15,215
+A and B.
+
+83
+00:03:15,179 --> 00:03:18,092
+Three is in A, but three is not in B.
+
+84
+00:03:18,092 --> 00:03:20,204
+So A is not a subset of B.
+
+85
+00:03:20,954 --> 00:03:21,854
+Three.
+
+86
+00:03:21,595 --> 00:03:22,495
+A and C.
+
+87
+00:03:22,467 --> 00:03:24,641
+One and three are both in C.
+
+88
+00:03:24,641 --> 00:03:26,500
+So A is a subset of C.
+
+89
+00:03:27,250 --> 00:03:28,150
+Four.
+
+90
+00:03:27,850 --> 00:03:28,750
+B and C.
+
+91
+00:03:28,740 --> 00:03:31,344
+One, five and nine are all in C.
+
+92
+00:03:31,344 --> 00:03:33,242
+So B is a subset of C.
+
+93
+00:03:33,892 --> 00:03:35,357
+Now, the exam trap.
+
+94
+00:03:35,707 --> 00:03:37,657
+A is the set one, two, three.
+
+95
+00:03:37,657 --> 00:03:40,170
+Many students write: one is a subset of A.
+
+96
+00:03:40,570 --> 00:03:42,216
+But one is an element.
+
+97
+00:03:42,216 --> 00:03:45,128
+Elements belong, and
+only sets are subsets.
+
+98
+00:03:45,128 --> 00:03:49,716
+Write one belongs to A, or the set
+containing one is a subset of A.
+
+99
+00:03:50,366 --> 00:03:51,880
+Where is this asked?
+
+100
+00:03:51,880 --> 00:03:56,656
+In PUC board exams, as fill in subset
+or not subset, and which of these
+
+101
+00:03:56,656 --> 00:03:57,855
+sets are equal.
+
+102
+00:03:58,455 --> 00:03:59,657
+Exam level now.
+
+103
+00:03:59,657 --> 00:04:02,540
+How many of these six statements are true?
+
+104
+00:04:02,540 --> 00:04:03,792
+Pause and solve.
+
+105
+00:04:09,192 --> 00:04:10,455
+The answer is C.
+
+106
+00:04:10,455 --> 00:04:11,355
+Four.
+
+107
+00:04:11,504 --> 00:04:15,378
+A has three elements: one, the
+set containing two, and three.
+
+108
+00:04:15,378 --> 00:04:19,133
+Two on its own is not an element,
+so statement one is false.
+
+109
+00:04:19,633 --> 00:04:23,405
+The set containing two is an
+element, so statement two is true.
+
+110
+00:04:23,405 --> 00:04:26,488
+Statement three is false,
+because two is not in A.
+
+111
+00:04:26,988 --> 00:04:30,185
+One and three are in A,
+so statement four is true.
+
+112
+00:04:30,185 --> 00:04:34,557
+The set holding the set two is a
+subset too, so statement five is true.
+
+113
+00:04:35,057 --> 00:04:37,378
+And phi is a subset of every set.
+
+114
+00:04:37,378 --> 00:04:39,075
+Four statements are true.
+
+115
+00:04:39,675 --> 00:04:41,134
+Here is your recap.
+
+116
+00:04:41,134 --> 00:04:42,634
+Screenshot this card.
+
+117
+00:04:45,834 --> 00:04:48,671
+Can you answer these three
+questions without help?
+
+118
+00:04:49,071 --> 00:04:49,971
+One.
+
+119
+00:04:49,545 --> 00:04:53,256
+Is the set of vowels a
+subset of the set a, b, c, d?
+
+120
+00:04:54,156 --> 00:04:55,056
+Two.
+
+121
+00:04:54,643 --> 00:04:58,579
+Are the letters of LISTEN and
+the letters of SILENT equal sets?
+
+122
+00:04:59,479 --> 00:05:00,379
+Three.
+
+123
+00:05:00,085 --> 00:05:03,068
+Why is the empty set
+a subset of every set?
+
+124
+00:05:04,168 --> 00:05:06,850
+Next time: three snacks for a tiffin box.
+
+125
+00:05:06,850 --> 00:05:10,826
+How many different ways can you
+pack it, including an empty box?
+
+126
+00:05:10,826 --> 00:05:12,363
+We meet the power set.

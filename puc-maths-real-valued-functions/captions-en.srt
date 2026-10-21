@@ -1,0 +1,553 @@
+1
+00:00:00,450 --> 00:00:02,606
+Your body temperature is not fixed.
+
+2
+00:00:02,606 --> 00:00:07,118
+It is lowest around four in the morning,
+and highest in the late afternoon.
+
+3
+00:00:07,518 --> 00:00:11,032
+Across a day it shifts by
+about half a degree Celsius.
+
+4
+00:00:11,032 --> 00:00:13,427
+Every hour gives exactly one reading.
+
+5
+00:00:13,877 --> 00:00:16,461
+Diya tracked this for her biology notes.
+
+6
+00:00:16,811 --> 00:00:21,210
+One hour in, one number out, and the
+number can be thirty six point eight.
+
+7
+00:00:21,210 --> 00:00:23,048
+What kind of function is that?
+
+8
+00:00:23,548 --> 00:00:25,973
+It has a name: a real valued function.
+
+9
+00:00:25,973 --> 00:00:28,904
+Let us see why, and what
+makes a real function.
+
+10
+00:00:29,554 --> 00:00:33,741
+Recall: a function sends each
+input to exactly one output.
+
+11
+00:00:34,091 --> 00:00:38,627
+If every output is a real number,
+the function is called real valued.
+
+12
+00:00:38,627 --> 00:00:41,044
+Its range is R, or a part of R.
+
+13
+00:00:41,444 --> 00:00:46,406
+If its inputs are real numbers too,
+so its domain is also R or a part of
+
+14
+00:00:46,406 --> 00:00:48,871
+R, it is called a real function.
+
+15
+00:00:49,521 --> 00:00:51,263
+Watch Diya's function run.
+
+16
+00:00:51,263 --> 00:00:53,225
+The input is the hour, h.
+
+17
+00:00:53,225 --> 00:00:55,587
+The output is the temperature, T.
+
+18
+00:00:55,987 --> 00:00:58,991
+The hour counts up, and
+the curve draws itself.
+
+19
+00:00:58,991 --> 00:01:01,328
+One dot for each moment, never two.
+
+20
+00:01:01,728 --> 00:01:04,923
+At four in the morning, the
+curve hits its lowest point.
+
+21
+00:01:04,923 --> 00:01:06,985
+In the late afternoon, its highest.
+
+22
+00:01:07,385 --> 00:01:09,817
+Inputs are real numbers of hours.
+
+23
+00:01:09,817 --> 00:01:12,409
+Outputs are real numbers of degrees.
+
+24
+00:01:12,409 --> 00:01:14,518
+So this is a real function.
+
+25
+00:01:15,168 --> 00:01:16,373
+Side by side.
+
+26
+00:01:16,373 --> 00:01:19,629
+Diya's function takes
+hours and gives degrees.
+
+27
+00:01:19,629 --> 00:01:21,057
+Both are numbers.
+
+28
+00:01:21,057 --> 00:01:22,428
+A real function.
+
+29
+00:01:22,828 --> 00:01:24,312
+Now a different rule.
+
+30
+00:01:24,312 --> 00:01:27,377
+Each student goes to their
+height in centimetres.
+
+31
+00:01:27,377 --> 00:01:30,749
+The outputs are real numbers,
+so it is real valued.
+
+32
+00:01:30,749 --> 00:01:33,467
+But the inputs are students, not numbers.
+
+33
+00:01:34,067 --> 00:01:36,736
+So, is the height rule a real function?
+
+34
+00:01:36,736 --> 00:01:37,965
+Pause and decide.
+
+35
+00:01:41,165 --> 00:01:42,065
+No!
+
+36
+00:01:41,614 --> 00:01:45,343
+Its range is real, but its
+domain is a set of students.
+
+37
+00:01:45,343 --> 00:01:48,310
+It is real valued, but
+not a real function.
+
+38
+00:01:48,960 --> 00:01:50,213
+Remember this.
+
+39
+00:01:50,213 --> 00:01:52,674
+Real valued means real outputs.
+
+40
+00:01:52,674 --> 00:01:56,399
+Real function means real
+inputs and real outputs.
+
+41
+00:01:57,099 --> 00:02:02,081
+A real function from your NCERT book:
+t of C equals nine C over five, plus
+
+42
+00:02:02,081 --> 00:02:03,014
+thirty two.
+
+43
+00:02:03,014 --> 00:02:05,246
+It turns Celsius into Fahrenheit.
+
+44
+00:02:05,646 --> 00:02:06,567
+Step one.
+
+45
+00:02:06,567 --> 00:02:07,723
+Put in zero.
+
+46
+00:02:07,723 --> 00:02:10,383
+Nine times zero over five is zero.
+
+47
+00:02:10,383 --> 00:02:11,708
+Add thirty two.
+
+48
+00:02:11,708 --> 00:02:14,582
+Water freezes at thirty two Fahrenheit.
+
+49
+00:02:15,332 --> 00:02:16,232
+Step two.
+
+50
+00:02:16,164 --> 00:02:19,441
+Put in thirty seven, a
+typical body temperature.
+
+51
+00:02:19,441 --> 00:02:22,780
+That gives sixty six point
+six, plus thirty two.
+
+52
+00:02:22,780 --> 00:02:24,444
+Ninety eight point six.
+
+53
+00:02:25,194 --> 00:02:26,094
+Step three.
+
+54
+00:02:26,065 --> 00:02:27,429
+Put in one hundred.
+
+55
+00:02:27,429 --> 00:02:30,005
+That gives one eighty, plus thirty two.
+
+56
+00:02:30,005 --> 00:02:32,723
+Two hundred and twelve, where water boils.
+
+57
+00:02:33,473 --> 00:02:34,835
+Watch C count up.
+
+58
+00:02:34,835 --> 00:02:38,321
+Each Celsius value gives
+exactly one Fahrenheit value.
+
+59
+00:02:38,321 --> 00:02:40,994
+The points line up in a straight line.
+
+60
+00:02:41,644 --> 00:02:44,132
+Often a question gives only the rule.
+
+61
+00:02:44,132 --> 00:02:48,524
+Then the domain is every real number
+x for which the rule gives a real
+
+62
+00:02:48,524 --> 00:02:49,424
+number.
+
+63
+00:02:49,575 --> 00:02:52,665
+Take f of x equals one over x minus two.
+
+64
+00:02:52,665 --> 00:02:54,898
+Scan x along the number line.
+
+65
+00:02:55,298 --> 00:02:57,278
+Every x works, except two.
+
+66
+00:02:57,278 --> 00:03:01,829
+At two, the bottom becomes zero,
+and we can never divide by zero.
+
+67
+00:03:01,829 --> 00:03:03,982
+So the domain is R minus two.
+
+68
+00:03:04,382 --> 00:03:07,121
+Now take the square root of x minus one.
+
+69
+00:03:07,121 --> 00:03:10,203
+The number under the root
+must not be negative.
+
+70
+00:03:10,203 --> 00:03:12,088
+So x must be one or more.
+
+71
+00:03:12,738 --> 00:03:13,655
+Quick one.
+
+72
+00:03:13,655 --> 00:03:17,483
+Is x equal to one in the
+domain of root x minus one?
+
+73
+00:03:17,483 --> 00:03:18,780
+Pause and think.
+
+74
+00:03:21,980 --> 00:03:22,880
+Yes!
+
+75
+00:03:22,498 --> 00:03:26,799
+The root of one minus one is
+the root of zero, which is zero.
+
+76
+00:03:26,799 --> 00:03:28,635
+So one is in the domain.
+
+77
+00:03:29,285 --> 00:03:31,020
+Now, one worked example.
+
+78
+00:03:31,370 --> 00:03:36,482
+Find the domain of f of x equals x
+squared plus two x plus one, over x
+
+79
+00:03:36,482 --> 00:03:39,011
+squared minus eight x plus twelve.
+
+80
+00:03:39,511 --> 00:03:40,411
+Step one.
+
+81
+00:03:40,344 --> 00:03:42,448
+The top is fine for every x.
+
+82
+00:03:42,448 --> 00:03:44,796
+Only the bottom can cause trouble.
+
+83
+00:03:45,546 --> 00:03:46,446
+Step two.
+
+84
+00:03:46,436 --> 00:03:47,878
+Factor the bottom.
+
+85
+00:03:47,878 --> 00:03:53,030
+x squared minus eight x plus twelve
+is x minus two, times x minus six.
+
+86
+00:03:53,780 --> 00:03:54,721
+Step three.
+
+87
+00:03:54,721 --> 00:03:57,639
+The bottom is zero when x is two or six.
+
+88
+00:03:58,389 --> 00:03:59,303
+Step four.
+
+89
+00:03:59,303 --> 00:04:01,456
+Remove only those two numbers.
+
+90
+00:04:01,456 --> 00:04:04,439
+The domain is R minus the set two, six.
+
+91
+00:04:05,189 --> 00:04:07,275
+Notice: we never needed the top.
+
+92
+00:04:07,275 --> 00:04:09,352
+With fractions, watch the bottom.
+
+93
+00:04:10,002 --> 00:04:11,467
+Now, the exam trap.
+
+94
+00:04:11,817 --> 00:04:15,847
+Find the domain of x squared
+minus four, over x minus two.
+
+95
+00:04:15,847 --> 00:04:17,715
+Many students cancel first.
+
+96
+00:04:17,715 --> 00:04:21,501
+They get x plus two, and
+say the domain is all of R.
+
+97
+00:04:21,901 --> 00:04:25,174
+But the domain belongs to
+the rule as it is given.
+
+98
+00:04:25,174 --> 00:04:29,388
+At x equals two the bottom is
+zero, so two is still not allowed.
+
+99
+00:04:29,388 --> 00:04:31,222
+The domain is R minus two.
+
+100
+00:04:31,872 --> 00:04:33,350
+Where is this asked?
+
+101
+00:04:33,350 --> 00:04:37,954
+In JEE Main, as find the domain of
+a function with fractions, roots and
+
+102
+00:04:37,954 --> 00:04:38,854
+logs.
+
+103
+00:04:38,509 --> 00:04:42,756
+In PUC boards, as find the domain
+and range of a real function.
+
+104
+00:04:43,356 --> 00:04:44,570
+Exam level now.
+
+105
+00:04:44,570 --> 00:04:48,171
+How many integers are in
+the domain of this function?
+
+106
+00:04:48,171 --> 00:04:49,437
+Pause and solve.
+
+107
+00:04:54,837 --> 00:04:56,010
+The answer is B.
+
+108
+00:04:56,010 --> 00:04:56,910
+Five.
+
+109
+00:04:57,020 --> 00:05:00,961
+Under the root, nine minus x
+squared must be zero or more.
+
+110
+00:05:00,961 --> 00:05:03,472
+So x runs from minus three to three.
+
+111
+00:05:03,972 --> 00:05:07,607
+The bottom, x squared minus
+one, must not be zero.
+
+112
+00:05:07,607 --> 00:05:09,992
+So x cannot be one or minus one.
+
+113
+00:05:10,492 --> 00:05:13,842
+The integers from minus three
+to three are seven numbers.
+
+114
+00:05:14,342 --> 00:05:16,198
+Remove minus one and one.
+
+115
+00:05:16,198 --> 00:05:17,889
+Five integers are left.
+
+116
+00:05:18,489 --> 00:05:19,950
+Here is your recap.
+
+117
+00:05:19,950 --> 00:05:21,451
+Screenshot this card.
+
+118
+00:05:24,651 --> 00:05:27,488
+Can you answer these three
+questions without help?
+
+119
+00:05:27,888 --> 00:05:28,788
+One.
+
+120
+00:05:28,386 --> 00:05:33,004
+What is the difference between a real
+valued function and a real function?
+
+121
+00:05:33,904 --> 00:05:34,804
+Two.
+
+122
+00:05:34,469 --> 00:05:39,684
+Find t of minus forty, for t of C
+equals nine C over five, plus thirty
+
+123
+00:05:39,684 --> 00:05:40,584
+two.
+
+124
+00:05:41,148 --> 00:05:42,048
+Three.
+
+125
+00:05:41,777 --> 00:05:45,179
+Find the domain of one
+over x squared minus nine.
+
+126
+00:05:46,279 --> 00:05:51,236
+Next time: a fixed bus fare, a
+mirror, and the area of a square plot.
+
+127
+00:05:51,236 --> 00:05:53,563
+Three rules, three famous graphs.
+
+128
+00:05:53,563 --> 00:05:56,446
+Constant, identity and
+polynomial functions.

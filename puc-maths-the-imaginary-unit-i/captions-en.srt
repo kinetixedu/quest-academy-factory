@@ -1,0 +1,568 @@
+1
+00:00:00,450 --> 00:00:03,419
+What is i to the power
+one hundred and three?
+
+2
+00:00:03,419 --> 00:00:05,095
+It looks like a monster.
+
+3
+00:00:05,095 --> 00:00:08,255
+i times i times i, one
+hundred and three times.
+
+4
+00:00:08,655 --> 00:00:12,178
+You can answer it in three
+seconds, without a calculator.
+
+5
+00:00:12,628 --> 00:00:15,629
+Aarav found the secret in
+his notebook last night.
+
+6
+00:00:15,629 --> 00:00:18,412
+He wrote down the powers of i, one by one.
+
+7
+00:00:18,762 --> 00:00:20,915
+i, minus one, minus i, one.
+
+8
+00:00:20,915 --> 00:00:23,020
+Then i again, minus one again.
+
+9
+00:00:23,020 --> 00:00:25,954
+After four lines, the
+list started to repeat.
+
+10
+00:00:26,454 --> 00:00:27,676
+Why every four?
+
+11
+00:00:27,676 --> 00:00:29,012
+Let us find out.
+
+12
+00:00:29,662 --> 00:00:33,240
+Last time we met i, the number
+whose square is minus one.
+
+13
+00:00:33,590 --> 00:00:38,668
+In symbols, i is the square root of
+minus one, so i squared is minus one.
+
+14
+00:00:38,668 --> 00:00:40,887
+It is called the imaginary unit.
+
+15
+00:00:41,287 --> 00:00:43,163
+Imaginary is only a name.
+
+16
+00:00:43,163 --> 00:00:44,884
+It does not mean fake.
+
+17
+00:00:44,884 --> 00:00:49,013
+The symbol i was first used by
+the great mathematician Euler.
+
+18
+00:00:49,663 --> 00:00:52,350
+Now build the powers, one step at a time.
+
+19
+00:00:52,350 --> 00:00:54,991
+Each new power is the last one, times i.
+
+20
+00:00:55,341 --> 00:00:56,241
+Step one.
+
+21
+00:00:56,086 --> 00:00:58,068
+i to the power one is just i.
+
+22
+00:00:58,818 --> 00:00:59,718
+Step two.
+
+23
+00:00:59,622 --> 00:01:01,291
+i squared is minus one.
+
+24
+00:01:01,291 --> 00:01:02,900
+That is the definition.
+
+25
+00:01:03,650 --> 00:01:04,661
+Step three.
+
+26
+00:01:04,661 --> 00:01:06,990
+i cubed is i squared times i.
+
+27
+00:01:06,990 --> 00:01:09,320
+Minus one times i is minus i.
+
+28
+00:01:10,070 --> 00:01:10,970
+Step four.
+
+29
+00:01:10,964 --> 00:01:14,045
+i to the four is i
+squared times i squared.
+
+30
+00:01:14,045 --> 00:01:16,428
+Minus one times minus one is one.
+
+31
+00:01:17,178 --> 00:01:18,078
+Step five.
+
+32
+00:01:18,043 --> 00:01:20,889
+i to the five is i to the four times i.
+
+33
+00:01:20,889 --> 00:01:22,282
+One times i is i.
+
+34
+00:01:22,282 --> 00:01:24,132
+We are back at the start.
+
+35
+00:01:24,882 --> 00:01:27,170
+Now watch the same thing as a picture.
+
+36
+00:01:27,520 --> 00:01:30,392
+Put one on the right and
+minus one on the left.
+
+37
+00:01:30,392 --> 00:01:33,157
+Put i straight up, and
+minus i straight down.
+
+38
+00:01:33,557 --> 00:01:37,952
+Multiplying by i turns a point
+a quarter turn, anticlockwise.
+
+39
+00:01:38,352 --> 00:01:41,459
+Start at one, and let
+the power n count up.
+
+40
+00:01:41,459 --> 00:01:43,634
+A quarter turn takes one to i.
+
+41
+00:01:43,634 --> 00:01:45,698
+Another takes i to minus one.
+
+42
+00:01:45,698 --> 00:01:46,781
+Then minus i.
+
+43
+00:01:46,781 --> 00:01:48,124
+Then home to one.
+
+44
+00:01:48,524 --> 00:01:51,046
+Four quarter turns make one full turn.
+
+45
+00:01:51,046 --> 00:01:53,774
+That is why the powers repeat every four.
+
+46
+00:01:54,424 --> 00:01:56,141
+So here is the shortcut.
+
+47
+00:01:56,141 --> 00:01:57,908
+Divide the power by four.
+
+48
+00:01:57,908 --> 00:01:59,714
+Only the remainder matters.
+
+49
+00:02:00,114 --> 00:02:01,985
+Remainder zero gives one.
+
+50
+00:02:01,985 --> 00:02:03,694
+Remainder one gives i.
+
+51
+00:02:03,694 --> 00:02:05,898
+Remainder two gives minus one.
+
+52
+00:02:05,898 --> 00:02:08,102
+Remainder three gives minus i.
+
+53
+00:02:08,702 --> 00:02:10,000
+Back to the hook.
+
+54
+00:02:10,000 --> 00:02:13,885
+One hundred and three is four
+times twenty five, plus three.
+
+55
+00:02:13,885 --> 00:02:17,982
+Remainder three, so i to the one
+hundred and three is minus i.
+
+56
+00:02:18,632 --> 00:02:20,261
+It even works backwards.
+
+57
+00:02:20,261 --> 00:02:23,654
+i to the minus one is a
+quarter turn the other way.
+
+58
+00:02:23,654 --> 00:02:24,801
+It is minus i.
+
+59
+00:02:25,451 --> 00:02:26,351
+Your turn.
+
+60
+00:02:26,313 --> 00:02:30,208
+Is i to the power twenty two
+equal to one, or minus one?
+
+61
+00:02:30,208 --> 00:02:31,427
+Pause and think.
+
+62
+00:02:34,627 --> 00:02:35,554
+Minus one!
+
+63
+00:02:35,554 --> 00:02:38,568
+Twenty two is four times five, plus two.
+
+64
+00:02:38,568 --> 00:02:40,751
+Remainder two gives minus one.
+
+65
+00:02:41,401 --> 00:02:42,536
+Remember this.
+
+66
+00:02:42,536 --> 00:02:47,404
+The powers of i go round in
+fours: i, minus one, minus i, one.
+
+67
+00:02:48,104 --> 00:02:50,864
+Now, square roots of negative numbers.
+
+68
+00:02:50,864 --> 00:02:55,708
+Minus i squared is also minus one,
+because minus times minus is plus.
+
+69
+00:02:56,108 --> 00:02:59,628
+So minus one has two square
+roots, i and minus i.
+
+70
+00:03:00,028 --> 00:03:03,754
+But the symbol, root minus
+one, means just one of them: i.
+
+71
+00:03:03,754 --> 00:03:07,068
+In the same way, root four
+means two, not minus two.
+
+72
+00:03:07,668 --> 00:03:12,105
+So for any positive number a,
+root minus a is root a times i.
+
+73
+00:03:12,105 --> 00:03:14,156
+Root minus nine is three i.
+
+74
+00:03:14,756 --> 00:03:15,775
+Quick check.
+
+75
+00:03:15,775 --> 00:03:17,225
+Root minus sixteen.
+
+76
+00:03:17,225 --> 00:03:19,673
+Is it four i, or minus four i?
+
+77
+00:03:19,673 --> 00:03:20,966
+Pause and think.
+
+78
+00:03:24,166 --> 00:03:25,066
+Four i!
+
+79
+00:03:24,887 --> 00:03:28,752
+The root symbol picks the one
+root: root sixteen times i.
+
+80
+00:03:29,402 --> 00:03:31,138
+Now, one worked example.
+
+81
+00:03:31,488 --> 00:03:36,501
+Find i to the ten, plus i to the
+eleven, plus i to the twelve, plus i to
+
+82
+00:03:36,501 --> 00:03:37,518
+the thirteen.
+
+83
+00:03:38,018 --> 00:03:38,918
+Step one.
+
+84
+00:03:38,864 --> 00:03:42,805
+Ten leaves remainder two, so
+i to the ten is minus one.
+
+85
+00:03:43,555 --> 00:03:44,455
+Step two.
+
+86
+00:03:44,430 --> 00:03:48,828
+Eleven leaves remainder three,
+so i to the eleven is minus i.
+
+87
+00:03:49,578 --> 00:03:50,486
+Step three.
+
+88
+00:03:50,486 --> 00:03:54,522
+Twelve leaves remainder zero, and
+thirteen leaves remainder one.
+
+89
+00:03:54,522 --> 00:03:56,200
+They give one, and i.
+
+90
+00:03:56,950 --> 00:03:57,855
+Step four.
+
+91
+00:03:57,855 --> 00:03:58,755
+Add them.
+
+92
+00:03:58,709 --> 00:04:01,707
+Minus one, minus i, plus one, plus i.
+
+93
+00:04:01,707 --> 00:04:03,081
+Everything cancels.
+
+94
+00:04:03,081 --> 00:04:04,424
+The sum is zero.
+
+95
+00:04:05,174 --> 00:04:09,707
+On the picture, the four moves go round
+a square and end where they began.
+
+96
+00:04:09,707 --> 00:04:12,124
+Any four powers in a row add to zero.
+
+97
+00:04:12,774 --> 00:04:14,239
+Now, the exam trap.
+
+98
+00:04:14,589 --> 00:04:19,183
+Many students write root minus four
+times root minus nine as root thirty
+
+99
+00:04:19,183 --> 00:04:20,728
+six, which is six.
+
+100
+00:04:21,128 --> 00:04:26,028
+But the rule root a times root b equals
+root a b breaks when both numbers
+
+101
+00:04:26,028 --> 00:04:27,101
+are negative.
+
+102
+00:04:27,101 --> 00:04:32,379
+Root minus four is two i, root minus
+nine is three i, and two i times three
+
+103
+00:04:32,379 --> 00:04:33,957
+i is six i squared.
+
+104
+00:04:33,957 --> 00:04:35,418
+That is minus six.
+
+105
+00:04:36,068 --> 00:04:37,625
+Where is this asked?
+
+106
+00:04:37,625 --> 00:04:42,743
+In JEE Main, in September twenty
+twenty, a power of i had to equal one.
+
+107
+00:04:42,743 --> 00:04:44,519
+And in PUC board exams.
+
+108
+00:04:45,119 --> 00:04:46,285
+Exam level now.
+
+109
+00:04:46,285 --> 00:04:51,056
+What is the sum of i to the n, for n
+from one to two thousand and twenty
+
+110
+00:04:51,056 --> 00:04:51,956
+six?
+
+111
+00:04:51,560 --> 00:04:52,775
+Pause and solve.
+
+112
+00:04:58,175 --> 00:04:59,606
+The answer is C.
+
+113
+00:04:59,606 --> 00:05:01,092
+Minus one plus i.
+
+114
+00:05:01,592 --> 00:05:04,228
+Any four powers in a row add to zero.
+
+115
+00:05:04,728 --> 00:05:09,641
+Two thousand and twenty six is four
+times five hundred and six, plus two.
+
+116
+00:05:09,641 --> 00:05:13,923
+So the first two thousand and
+twenty four terms make full cycles.
+
+117
+00:05:13,923 --> 00:05:15,283
+They add to zero.
+
+118
+00:05:15,783 --> 00:05:17,229
+Two terms are left.
+
+119
+00:05:17,229 --> 00:05:22,068
+i to the two thousand and twenty five
+is i, and i to the two thousand and
+
+120
+00:05:22,068 --> 00:05:23,825
+twenty six is minus one.
+
+121
+00:05:23,825 --> 00:05:25,903
+The sum is minus one plus i.
+
+122
+00:05:26,503 --> 00:05:27,967
+Here is your recap.
+
+123
+00:05:27,967 --> 00:05:29,472
+Screenshot this card.
+
+124
+00:05:32,672 --> 00:05:35,509
+Can you answer these three
+questions without help?
+
+125
+00:05:35,909 --> 00:05:36,809
+One.
+
+126
+00:05:36,415 --> 00:05:38,518
+What is i to the power fifty?
+
+127
+00:05:39,418 --> 00:05:40,318
+Two.
+
+128
+00:05:40,002 --> 00:05:44,724
+Why is root minus four times
+root minus nine not equal to six?
+
+129
+00:05:45,624 --> 00:05:46,524
+Three.
+
+130
+00:05:46,230 --> 00:05:48,237
+What is i to the minus two?
+
+131
+00:05:49,337 --> 00:05:53,699
+Next time: an address with two
+parts, which street and which floor.
+
+132
+00:05:53,699 --> 00:05:57,423
+Every complex number has a real
+part and an imaginary part.

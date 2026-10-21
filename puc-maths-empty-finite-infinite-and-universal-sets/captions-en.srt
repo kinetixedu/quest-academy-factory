@@ -1,0 +1,590 @@
+1
+00:00:00,450 --> 00:00:01,962
+Here is a strange set.
+
+2
+00:00:01,962 --> 00:00:04,600
+All the even prime
+numbers bigger than two.
+
+3
+00:00:05,000 --> 00:00:05,900
+Four?
+
+4
+00:00:05,564 --> 00:00:07,690
+Two times two, so not prime.
+
+5
+00:00:07,690 --> 00:00:08,590
+Six?
+
+6
+00:00:08,204 --> 00:00:09,443
+Two times three.
+
+7
+00:00:09,443 --> 00:00:10,343
+Eight?
+
+8
+00:00:10,058 --> 00:00:11,247
+Two times four.
+
+9
+00:00:11,247 --> 00:00:14,098
+Every even number after two splits by two.
+
+10
+00:00:14,548 --> 00:00:18,515
+Aarav checked a long list at his
+study table and found none at all.
+
+11
+00:00:18,865 --> 00:00:20,388
+So is this set nothing?
+
+12
+00:00:20,388 --> 00:00:21,678
+Or is it something?
+
+13
+00:00:22,178 --> 00:00:23,412
+It is something.
+
+14
+00:00:23,412 --> 00:00:25,268
+A set with nothing inside.
+
+15
+00:00:25,268 --> 00:00:30,153
+And it opens a whole family: empty,
+finite, infinite and universal sets.
+
+16
+00:00:30,803 --> 00:00:32,353
+Start with the empty set.
+
+17
+00:00:32,703 --> 00:00:36,119
+A set that has no element at
+all is called the empty set.
+
+18
+00:00:36,119 --> 00:00:39,122
+It is also called the
+null set, or the void set.
+
+19
+00:00:39,522 --> 00:00:41,755
+We write it with this symbol, phi.
+
+20
+00:00:41,755 --> 00:00:44,774
+Or as two curly brackets
+with nothing between them.
+
+21
+00:00:45,174 --> 00:00:48,450
+Watch the test run on even
+primes bigger than two.
+
+22
+00:00:48,450 --> 00:00:49,457
+Four is out.
+
+23
+00:00:49,457 --> 00:00:50,357
+Six, out.
+
+24
+00:00:50,356 --> 00:00:52,556
+Eight, ten, twelve, all out.
+
+25
+00:00:52,956 --> 00:00:56,244
+The bag stays empty, and
+the count stays at zero.
+
+26
+00:00:56,244 --> 00:00:58,787
+The number of elements in phi is zero.
+
+27
+00:00:59,437 --> 00:01:03,050
+More empty sets: the natural
+numbers between one and two.
+
+28
+00:01:03,050 --> 00:01:05,446
+The odd numbers whose square is four.
+
+29
+00:01:05,446 --> 00:01:07,538
+Every test, and nothing passes.
+
+30
+00:01:08,138 --> 00:01:09,378
+Side by side.
+
+31
+00:01:09,378 --> 00:01:11,871
+The empty set is an empty box.
+
+32
+00:01:11,871 --> 00:01:13,157
+Nothing inside.
+
+33
+00:01:13,557 --> 00:01:18,233
+The set containing zero is a box with
+one thing inside: the number zero.
+
+34
+00:01:18,233 --> 00:01:21,249
+Zero is something, so
+this set is not empty.
+
+35
+00:01:21,849 --> 00:01:23,010
+Now you try.
+
+36
+00:01:23,010 --> 00:01:24,858
+The set containing phi.
+
+37
+00:01:24,858 --> 00:01:26,875
+Phi inside curly brackets.
+
+38
+00:01:26,875 --> 00:01:28,036
+Is it empty?
+
+39
+00:01:28,036 --> 00:01:29,478
+Pause and decide.
+
+40
+00:01:32,678 --> 00:01:33,593
+Not empty!
+
+41
+00:01:33,593 --> 00:01:36,904
+It is a box holding one
+thing, an empty box.
+
+42
+00:01:36,904 --> 00:01:39,122
+So it has exactly one element.
+
+43
+00:01:39,772 --> 00:01:41,922
+Next, finite and infinite sets.
+
+44
+00:01:42,272 --> 00:01:46,565
+A set is finite if it is empty, or
+if you can count its elements and the
+
+45
+00:01:46,565 --> 00:01:48,184
+counting comes to an end.
+
+46
+00:01:48,584 --> 00:01:50,112
+The days of the week.
+
+47
+00:01:50,112 --> 00:01:51,916
+Seven elements, so finite.
+
+48
+00:01:51,916 --> 00:01:53,434
+The letters of SCHOOL.
+
+49
+00:01:53,434 --> 00:01:54,990
+Five elements, finite.
+
+50
+00:01:55,390 --> 00:01:58,820
+We write n of S for the number
+of different elements in S.
+
+51
+00:01:59,220 --> 00:02:01,251
+Now watch the natural numbers.
+
+52
+00:02:01,251 --> 00:02:02,668
+One, two, three.
+
+53
+00:02:02,668 --> 00:02:03,729
+Keep counting.
+
+54
+00:02:04,129 --> 00:02:05,161
+A thousand.
+
+55
+00:02:05,161 --> 00:02:06,137
+A million.
+
+56
+00:02:06,137 --> 00:02:07,114
+A billion.
+
+57
+00:02:07,114 --> 00:02:09,650
+The counter never reaches an end.
+
+58
+00:02:10,050 --> 00:02:12,768
+A set that is not finite
+is called infinite.
+
+59
+00:02:12,768 --> 00:02:17,441
+The natural numbers, the integers, and
+all the points on a line are infinite.
+
+60
+00:02:18,091 --> 00:02:21,498
+In roster form we show the
+pattern and add three dots.
+
+61
+00:02:21,498 --> 00:02:25,735
+But the real numbers have no pattern
+to list, so they need set builder
+
+62
+00:02:25,735 --> 00:02:26,635
+form.
+
+63
+00:02:26,863 --> 00:02:27,763
+Quick one.
+
+64
+00:02:27,762 --> 00:02:30,519
+The natural numbers less than one crore.
+
+65
+00:02:30,519 --> 00:02:32,099
+Finite, or infinite?
+
+66
+00:02:32,099 --> 00:02:33,370
+Pause and think.
+
+67
+00:02:36,570 --> 00:02:37,470
+Finite!
+
+68
+00:02:37,268 --> 00:02:41,678
+The set is huge, but the counting
+stops just before one crore.
+
+69
+00:02:41,678 --> 00:02:44,026
+Big is not the same as endless.
+
+70
+00:02:44,676 --> 00:02:46,299
+Last, the universal set.
+
+71
+00:02:46,649 --> 00:02:51,366
+In any problem, all the sets we talk
+about come from one big basic set.
+
+72
+00:02:51,366 --> 00:02:54,549
+That basic set is the
+universal set, written U.
+
+73
+00:02:54,949 --> 00:02:59,454
+If our sets are the students who ride
+a bicycle and the students who walk,
+
+74
+00:02:59,454 --> 00:03:02,679
+the universal set is all
+the students in the class.
+
+75
+00:03:03,079 --> 00:03:06,946
+We draw U as a rectangle, and
+every other set sits inside it.
+
+76
+00:03:07,596 --> 00:03:09,392
+U depends on the problem.
+
+77
+00:03:09,392 --> 00:03:14,422
+For sets of integers, U could be the
+rational numbers, or the real numbers.
+
+78
+00:03:15,022 --> 00:03:16,159
+Remember this.
+
+79
+00:03:16,159 --> 00:03:18,114
+Empty means nothing inside.
+
+80
+00:03:18,114 --> 00:03:20,346
+Finite means the counting ends.
+
+81
+00:03:20,346 --> 00:03:22,471
+Infinite means it never does.
+
+82
+00:03:23,171 --> 00:03:24,906
+Now, one worked example.
+
+83
+00:03:25,256 --> 00:03:29,685
+Which of these sets are empty, which
+are finite, and which are infinite?
+
+84
+00:03:29,685 --> 00:03:31,518
+All four use natural numbers.
+
+85
+00:03:32,018 --> 00:03:32,918
+One.
+
+86
+00:03:32,552 --> 00:03:36,226
+Two x minus one equals zero
+gives x equals one half.
+
+87
+00:03:36,226 --> 00:03:39,953
+That is not a natural
+number, so this set is empty.
+
+88
+00:03:40,703 --> 00:03:41,603
+Two.
+
+89
+00:03:41,230 --> 00:03:44,527
+x minus one, times x
+minus two, equals zero.
+
+90
+00:03:44,527 --> 00:03:46,140
+So x is one or two.
+
+91
+00:03:46,140 --> 00:03:48,093
+Finite, with two elements.
+
+92
+00:03:48,843 --> 00:03:49,743
+Three.
+
+93
+00:03:49,403 --> 00:03:53,599
+The factors of twelve are one,
+two, three, four, six and twelve.
+
+94
+00:03:53,599 --> 00:03:55,334
+Finite, with six elements.
+
+95
+00:03:56,084 --> 00:03:56,984
+Four.
+
+96
+00:03:56,594 --> 00:04:00,111
+The prime numbers never run
+out, so this set is infinite.
+
+97
+00:04:00,761 --> 00:04:02,226
+Now, the exam trap.
+
+98
+00:04:02,576 --> 00:04:06,683
+Many students write that the set
+containing zero is the empty set.
+
+99
+00:04:07,083 --> 00:04:08,778
+But zero is an element.
+
+100
+00:04:08,778 --> 00:04:11,441
+The set containing zero has one element.
+
+101
+00:04:11,441 --> 00:04:13,446
+Only the empty set has none.
+
+102
+00:04:13,446 --> 00:04:16,218
+The same goes for the set containing phi.
+
+103
+00:04:16,868 --> 00:04:18,228
+Where is this asked?
+
+104
+00:04:18,228 --> 00:04:22,544
+Expect questions like: which of these
+sets are empty, and which are finite
+
+105
+00:04:22,544 --> 00:04:23,444
+or infinite?
+
+106
+00:04:24,029 --> 00:04:25,265
+Exam level now.
+
+107
+00:04:25,265 --> 00:04:28,022
+How many of these five sets are empty?
+
+108
+00:04:28,022 --> 00:04:29,311
+Pause and solve.
+
+109
+00:04:34,711 --> 00:04:35,936
+The answer is B.
+
+110
+00:04:35,936 --> 00:04:36,836
+Three.
+
+111
+00:04:37,016 --> 00:04:37,916
+A.
+
+112
+00:04:37,494 --> 00:04:40,555
+No real number squared gives minus one.
+
+113
+00:04:40,555 --> 00:04:41,455
+Empty.
+
+114
+00:04:41,767 --> 00:04:42,667
+B.
+
+115
+00:04:42,229 --> 00:04:47,406
+x squared minus three x plus two
+is x minus one, times x minus two.
+
+116
+00:04:47,406 --> 00:04:49,218
+So B is one and two.
+
+117
+00:04:49,218 --> 00:04:50,197
+Not empty.
+
+118
+00:04:50,697 --> 00:04:51,597
+C.
+
+119
+00:04:51,144 --> 00:04:54,399
+No integer lies strictly
+between one and two.
+
+120
+00:04:54,399 --> 00:04:55,299
+Empty.
+
+121
+00:04:55,065 --> 00:04:55,965
+D.
+
+122
+00:04:55,513 --> 00:04:58,440
+The square root of two is not rational.
+
+123
+00:04:58,440 --> 00:04:59,340
+Empty.
+
+124
+00:04:59,606 --> 00:05:02,576
+E holds one element, the empty set itself.
+
+125
+00:05:02,576 --> 00:05:03,476
+Not empty.
+
+126
+00:05:03,458 --> 00:05:06,286
+So three sets are empty: A, C and D.
+
+127
+00:05:06,886 --> 00:05:08,345
+Here is your recap.
+
+128
+00:05:08,345 --> 00:05:09,844
+Screenshot this card.
+
+129
+00:05:13,044 --> 00:05:15,881
+Can you answer these three
+questions without help?
+
+130
+00:05:16,281 --> 00:05:17,181
+One.
+
+131
+00:05:16,797 --> 00:05:19,247
+Give two examples of the empty set.
+
+132
+00:05:20,147 --> 00:05:21,047
+Two.
+
+133
+00:05:20,637 --> 00:05:24,164
+Is the set of all points on
+a line finite or infinite?
+
+134
+00:05:25,064 --> 00:05:25,964
+Three.
+
+135
+00:05:25,693 --> 00:05:28,560
+Why is the set containing zero not empty?
+
+136
+00:05:29,660 --> 00:05:32,880
+Next time: Diya studies
+three subjects for NEET.
+
+137
+00:05:32,880 --> 00:05:37,256
+Every one of them is a PUC subject,
+but not the other way round.
+
+138
+00:05:37,256 --> 00:05:39,409
+We meet subsets and equal sets.

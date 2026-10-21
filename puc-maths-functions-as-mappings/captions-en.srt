@@ -1,0 +1,555 @@
+1
+00:00:00,450 --> 00:00:03,737
+Read out roll number twelve
+from the class register.
+
+2
+00:00:03,737 --> 00:00:05,483
+You get exactly one name.
+
+3
+00:00:05,483 --> 00:00:07,927
+Never two names, and never no name.
+
+4
+00:00:08,327 --> 00:00:11,110
+Now ask the blood group
+list: who is group O?
+
+5
+00:00:11,110 --> 00:00:13,623
+You might get two names, or none at all.
+
+6
+00:00:14,073 --> 00:00:17,075
+Aarav noticed this while
+his teacher took attendance.
+
+7
+00:00:17,425 --> 00:00:21,482
+Why does one list always give a single
+answer, while the other does not?
+
+8
+00:00:21,982 --> 00:00:26,186
+Because the register is a function:
+a relation with one strict promise.
+
+9
+00:00:26,836 --> 00:00:32,281
+In NCERT words: a relation f from a
+set A to a set B is a function if every
+
+10
+00:00:32,281 --> 00:00:35,695
+element of A has one
+and only one image in B.
+
+11
+00:00:36,095 --> 00:00:37,730
+So there are two checks.
+
+12
+00:00:37,730 --> 00:00:40,663
+First, every element of
+A must have an image.
+
+13
+00:00:40,663 --> 00:00:42,971
+No element is left without an arrow.
+
+14
+00:00:43,371 --> 00:00:46,576
+Second, each element of
+A has only one image.
+
+15
+00:00:46,576 --> 00:00:48,832
+No element sends out two arrows.
+
+16
+00:00:49,482 --> 00:00:53,286
+Let us run the function test
+on three relations from A to B.
+
+17
+00:00:53,636 --> 00:00:54,853
+The first one.
+
+18
+00:00:54,853 --> 00:00:56,296
+One goes to four.
+
+19
+00:00:56,296 --> 00:00:57,740
+Two goes to five.
+
+20
+00:00:57,740 --> 00:00:59,625
+Three also goes to five.
+
+21
+00:00:59,625 --> 00:01:02,275
+Each element sends exactly one arrow.
+
+22
+00:01:02,275 --> 00:01:03,212
+It passes.
+
+23
+00:01:03,212 --> 00:01:04,655
+It is a function.
+
+24
+00:01:05,055 --> 00:01:06,255
+The second one.
+
+25
+00:01:06,255 --> 00:01:09,243
+One sends two arrows, to four and to six.
+
+26
+00:01:09,243 --> 00:01:11,063
+One element, two images.
+
+27
+00:01:11,063 --> 00:01:11,963
+It fails.
+
+28
+00:01:12,296 --> 00:01:13,468
+The third one.
+
+29
+00:01:13,468 --> 00:01:15,449
+Two sends no arrow at all.
+
+30
+00:01:15,449 --> 00:01:17,316
+An element with no image.
+
+31
+00:01:17,316 --> 00:01:18,436
+It fails too.
+
+32
+00:01:19,086 --> 00:01:21,074
+There is a grid picture as well.
+
+33
+00:01:21,074 --> 00:01:23,746
+Put A along the bottom, and B up the side.
+
+34
+00:01:23,746 --> 00:01:25,060
+Each pair is a dot.
+
+35
+00:01:25,460 --> 00:01:28,630
+A function puts exactly
+one dot in every column.
+
+36
+00:01:28,630 --> 00:01:33,400
+Two dots in one column, or an empty
+column, and it is not a function.
+
+37
+00:01:34,050 --> 00:01:35,125
+Side by side.
+
+38
+00:01:35,125 --> 00:01:38,617
+Many arrows out of one
+element of A are not allowed.
+
+39
+00:01:38,617 --> 00:01:40,966
+That element would have two images.
+
+40
+00:01:41,366 --> 00:01:44,316
+But many arrows into one
+element of B are fine.
+
+41
+00:01:44,316 --> 00:01:48,547
+In the first test, one and two point
+to different numbers, but two and
+
+42
+00:01:48,547 --> 00:01:50,299
+three share the image five.
+
+43
+00:01:50,299 --> 00:01:51,479
+Still a function.
+
+44
+00:01:52,079 --> 00:01:53,027
+Now you try.
+
+45
+00:01:53,027 --> 00:01:55,772
+Every student is linked
+to their birth month.
+
+46
+00:01:55,772 --> 00:01:57,521
+Two students share a month.
+
+47
+00:01:57,521 --> 00:01:59,087
+Is it still a function?
+
+48
+00:01:59,087 --> 00:02:00,220
+Pause and think.
+
+49
+00:02:03,420 --> 00:02:04,320
+Yes!
+
+50
+00:02:03,905 --> 00:02:06,836
+Each student still has
+exactly one birth month.
+
+51
+00:02:06,836 --> 00:02:08,692
+Sharing an image is allowed.
+
+52
+00:02:08,692 --> 00:02:12,412
+Only a student with two months,
+or none, would break it.
+
+53
+00:02:13,062 --> 00:02:14,115
+Remember this.
+
+54
+00:02:14,115 --> 00:02:17,962
+In a function, every element
+of A sends exactly one arrow.
+
+55
+00:02:18,662 --> 00:02:20,955
+Functions have their own way of writing.
+
+56
+00:02:21,305 --> 00:02:23,269
+We write f colon A arrow B.
+
+57
+00:02:23,269 --> 00:02:26,042
+It reads: f is a function from A to B.
+
+58
+00:02:26,442 --> 00:02:29,980
+If a comma b is in f, we
+write f of a equals b.
+
+59
+00:02:29,980 --> 00:02:34,338
+Here b is the image of a under
+f, and a is the preimage of b.
+
+60
+00:02:34,988 --> 00:02:38,239
+Now, how many functions
+can we make from A to B?
+
+61
+00:02:38,239 --> 00:02:41,929
+This counting is not in the
+NCERT text, but JEE asks it.
+
+62
+00:02:42,279 --> 00:02:43,179
+Step one.
+
+63
+00:02:43,106 --> 00:02:46,232
+Say A has p elements,
+and B has q elements.
+
+64
+00:02:46,982 --> 00:02:47,882
+Step two.
+
+65
+00:02:47,856 --> 00:02:51,149
+Each element of A must
+pick exactly one image.
+
+66
+00:02:51,149 --> 00:02:52,577
+It has q choices.
+
+67
+00:02:53,327 --> 00:02:54,239
+Step three.
+
+68
+00:02:54,239 --> 00:02:58,067
+The choices are made one after
+another, and each is free.
+
+69
+00:02:58,067 --> 00:02:59,693
+So the counts multiply.
+
+70
+00:03:00,443 --> 00:03:01,343
+Step four.
+
+71
+00:03:01,313 --> 00:03:04,624
+q times q times q, once
+for each element of A.
+
+72
+00:03:04,624 --> 00:03:07,105
+That is q to the power p functions.
+
+73
+00:03:07,755 --> 00:03:09,490
+Now, one worked example.
+
+74
+00:03:09,840 --> 00:03:11,517
+A is one, two, three.
+
+75
+00:03:11,517 --> 00:03:13,669
+B is four, five, six, seven.
+
+76
+00:03:13,669 --> 00:03:17,898
+Is f, with one to four, two to
+six, three to six, a function?
+
+77
+00:03:17,898 --> 00:03:19,007
+Find f of two.
+
+78
+00:03:19,507 --> 00:03:20,407
+Step one.
+
+79
+00:03:20,297 --> 00:03:23,312
+List the first elements:
+one, two and three.
+
+80
+00:03:23,312 --> 00:03:25,143
+Every element of A appears.
+
+81
+00:03:25,893 --> 00:03:26,793
+Step two.
+
+82
+00:03:26,761 --> 00:03:29,364
+Each first element appears only once.
+
+83
+00:03:29,364 --> 00:03:31,598
+So each element has one image.
+
+84
+00:03:32,348 --> 00:03:33,248
+Step three.
+
+85
+00:03:33,224 --> 00:03:35,480
+Two and three share the image six.
+
+86
+00:03:35,480 --> 00:03:36,651
+That is allowed.
+
+87
+00:03:37,401 --> 00:03:38,315
+Step four.
+
+88
+00:03:38,315 --> 00:03:41,688
+So f is a function, and
+f of two equals six.
+
+89
+00:03:42,438 --> 00:03:43,351
+Step five.
+
+90
+00:03:43,351 --> 00:03:45,669
+Five and seven have no preimage.
+
+91
+00:03:45,669 --> 00:03:47,232
+That is allowed too.
+
+92
+00:03:47,232 --> 00:03:49,571
+B does not need to be used up.
+
+93
+00:03:50,221 --> 00:03:51,684
+Now, the exam trap.
+
+94
+00:03:52,034 --> 00:03:56,907
+Many students say f is not a function
+because five and seven in B get no
+
+95
+00:03:56,907 --> 00:03:57,807
+arrows.
+
+96
+00:03:58,004 --> 00:04:00,776
+But the rule only checks
+the elements of A.
+
+97
+00:04:00,776 --> 00:04:04,717
+Every element of A has exactly
+one image, so f is a function.
+
+98
+00:04:05,367 --> 00:04:06,751
+Where is this asked?
+
+99
+00:04:06,751 --> 00:04:10,520
+In JEE Main, as: count the
+functions that obey a condition.
+
+100
+00:04:11,120 --> 00:04:12,291
+Exam level now.
+
+101
+00:04:12,291 --> 00:04:14,077
+A is one, two, three.
+
+102
+00:04:14,077 --> 00:04:16,319
+B is one, two, three, four.
+
+103
+00:04:16,319 --> 00:04:21,061
+How many functions f from A to B
+have f of one not equal to f of two?
+
+104
+00:04:21,061 --> 00:04:22,281
+Pause and solve.
+
+105
+00:04:27,681 --> 00:04:29,075
+The answer is A.
+
+106
+00:04:29,075 --> 00:04:30,124
+Forty eight.
+
+107
+00:04:30,624 --> 00:04:34,802
+With no condition, each of the
+three elements has four choices.
+
+108
+00:04:34,802 --> 00:04:37,173
+Four cubed is sixty four functions.
+
+109
+00:04:37,673 --> 00:04:42,121
+Now count the ones we do not want,
+where f of one equals f of two.
+
+110
+00:04:42,621 --> 00:04:47,758
+f of one has four choices, f of two
+must copy it, and f of three has four
+
+111
+00:04:47,758 --> 00:04:48,658
+choices.
+
+112
+00:04:48,490 --> 00:04:49,759
+That is sixteen.
+
+113
+00:04:50,259 --> 00:04:53,033
+Sixty four minus sixteen
+leaves forty eight.
+
+114
+00:04:53,633 --> 00:04:55,093
+Here is your recap.
+
+115
+00:04:55,093 --> 00:04:56,594
+Screenshot this card.
+
+116
+00:04:59,794 --> 00:05:02,631
+Can you answer these three
+questions without help?
+
+117
+00:05:03,031 --> 00:05:03,931
+One.
+
+118
+00:05:03,532 --> 00:05:08,192
+Is the relation one comma two, one
+comma three, two comma four a function
+
+119
+00:05:08,192 --> 00:05:10,818
+from one, two to two, three, four?
+
+120
+00:05:11,718 --> 00:05:12,618
+Two.
+
+121
+00:05:12,168 --> 00:05:16,286
+How many functions are there from a
+set of two elements to a set of three
+
+122
+00:05:16,286 --> 00:05:17,186
+elements?
+
+123
+00:05:17,858 --> 00:05:18,758
+Three.
+
+124
+00:05:18,459 --> 00:05:23,093
+If f of three equals seven, which
+number is the image, and which is the
+
+125
+00:05:23,093 --> 00:05:23,993
+preimage?
+
+126
+00:05:24,942 --> 00:05:29,648
+Next time: marks can be anything
+from zero to a hundred, but the class
+
+127
+00:05:29,648 --> 00:05:32,180
+only scored forty one to ninety six.
+
+128
+00:05:32,180 --> 00:05:34,548
+That gap is codomain versus range.

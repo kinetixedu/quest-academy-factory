@@ -1,0 +1,477 @@
+1
+00:00:00,450 --> 00:00:05,211
+A ship radios the harbour: we are
+five kilometres out, at thirty seven
+
+2
+00:00:05,211 --> 00:00:06,111
+degrees.
+
+3
+00:00:05,957 --> 00:00:06,857
+No east.
+
+4
+00:00:06,766 --> 00:00:07,666
+No north.
+
+5
+00:00:07,628 --> 00:00:09,793
+Just a distance and an angle.
+
+6
+00:00:10,193 --> 00:00:12,252
+And that is enough to find the ship.
+
+7
+00:00:12,252 --> 00:00:14,505
+Two numbers again, but a different pair.
+
+8
+00:00:14,955 --> 00:00:17,662
+Aarav noticed the same
+thing on his ride today.
+
+9
+00:00:18,012 --> 00:00:21,632
+His map could say four
+kilometres east and three north.
+
+10
+00:00:21,632 --> 00:00:25,816
+Or it could say five kilometres,
+at about thirty seven degrees.
+
+11
+00:00:25,816 --> 00:00:26,741
+Same place.
+
+12
+00:00:27,141 --> 00:00:29,974
+Complex numbers can be
+written both ways too.
+
+13
+00:00:29,974 --> 00:00:31,581
+Today: the polar form.
+
+14
+00:00:32,231 --> 00:00:33,410
+A quick note.
+
+15
+00:00:33,410 --> 00:00:36,960
+The polar form is not in
+the current NCERT text.
+
+16
+00:00:36,960 --> 00:00:42,082
+But the JEE Main syllabus lists the
+modulus and the argument, and JEE uses
+
+17
+00:00:42,082 --> 00:00:43,938
+this form all the time.
+
+18
+00:00:44,538 --> 00:00:46,430
+Recall episode forty two.
+
+19
+00:00:46,430 --> 00:00:51,940
+z equals a plus i b has a modulus r,
+how far, and an argument theta, which
+
+20
+00:00:51,940 --> 00:00:52,840
+way.
+
+21
+00:00:52,895 --> 00:00:53,795
+Step one.
+
+22
+00:00:53,759 --> 00:00:56,814
+Drop a line from P down to the real axis.
+
+23
+00:00:56,814 --> 00:01:00,449
+You get a right angled
+triangle, with long side r.
+
+24
+00:01:01,199 --> 00:01:02,142
+Step two.
+
+25
+00:01:02,142 --> 00:01:03,510
+The base is a.
+
+26
+00:01:03,510 --> 00:01:08,144
+Cos theta is base over long
+side, so a equals r cos theta.
+
+27
+00:01:08,894 --> 00:01:09,898
+Step three.
+
+28
+00:01:09,898 --> 00:01:11,305
+The height is b.
+
+29
+00:01:11,305 --> 00:01:15,811
+Sin theta is height over long
+side, so b equals r sin theta.
+
+30
+00:01:16,561 --> 00:01:17,534
+Step four.
+
+31
+00:01:17,534 --> 00:01:20,030
+Put both back into a plus i b.
+
+32
+00:01:20,030 --> 00:01:23,388
+z equals r cos theta, plus i r sin theta.
+
+33
+00:01:24,138 --> 00:01:25,172
+Take r out.
+
+34
+00:01:25,172 --> 00:01:28,548
+z equals r, times cos
+theta plus i sin theta.
+
+35
+00:01:28,548 --> 00:01:30,342
+That is the polar form.
+
+36
+00:01:30,992 --> 00:01:32,428
+Now watch it live.
+
+37
+00:01:32,428 --> 00:01:36,747
+Theta counts up, and z swings
+around O at a fixed distance r.
+
+38
+00:01:37,147 --> 00:01:41,556
+Now r grows, and z slides
+outward along the same direction.
+
+39
+00:01:41,556 --> 00:01:43,159
+r controls how far.
+
+40
+00:01:43,159 --> 00:01:45,096
+Theta controls which way.
+
+41
+00:01:45,496 --> 00:01:51,049
+And the mirror, z bar, is r, times
+cos of minus theta plus i sin of minus
+
+42
+00:01:51,049 --> 00:01:51,949
+theta.
+
+43
+00:01:51,724 --> 00:01:53,648
+Same r, opposite angle.
+
+44
+00:01:54,298 --> 00:01:55,216
+Quick one.
+
+45
+00:01:55,216 --> 00:01:56,850
+Add two pi to theta.
+
+46
+00:01:56,850 --> 00:01:57,936
+Does z move?
+
+47
+00:01:57,936 --> 00:01:59,233
+Pause and think.
+
+48
+00:02:02,433 --> 00:02:03,333
+No!
+
+49
+00:02:02,891 --> 00:02:05,931
+A full turn brings z
+back to the same point.
+
+50
+00:02:05,931 --> 00:02:10,544
+That is why we pick one value, the
+principal argument, above minus pi,
+
+51
+00:02:10,544 --> 00:02:11,444
+up to pi.
+
+52
+00:02:12,071 --> 00:02:13,180
+Side by side.
+
+53
+00:02:13,180 --> 00:02:16,622
+Cartesian form, a plus
+i b, says along and up.
+
+54
+00:02:16,622 --> 00:02:18,317
+It is best for adding.
+
+55
+00:02:18,717 --> 00:02:21,270
+Polar form says how far and which way.
+
+56
+00:02:21,270 --> 00:02:23,114
+It is best for multiplying.
+
+57
+00:02:23,714 --> 00:02:24,817
+Here is why.
+
+58
+00:02:24,817 --> 00:02:29,607
+Multiply two numbers in polar form,
+and the compound angle formulas from
+
+59
+00:02:29,607 --> 00:02:32,028
+episode thirty three do the work.
+
+60
+00:02:32,028 --> 00:02:34,782
+The r's multiply, and the angles add.
+
+61
+00:02:35,182 --> 00:02:40,268
+So multiplying by i, which is one
+unit at ninety degrees, simply turns
+
+62
+00:02:40,268 --> 00:02:42,222
+z through ninety degrees.
+
+63
+00:02:42,222 --> 00:02:43,122
+Watch.
+
+64
+00:02:43,507 --> 00:02:44,734
+Now you try.
+
+65
+00:02:44,734 --> 00:02:50,618
+Is two, times cos sixty degrees minus
+i sin sixty degrees, in polar form?
+
+66
+00:02:50,618 --> 00:02:52,143
+Pause and decide.
+
+67
+00:02:55,343 --> 00:02:56,243
+No!
+
+68
+00:02:55,851 --> 00:02:58,129
+Polar form needs a plus sign.
+
+69
+00:02:58,129 --> 00:03:03,437
+Write it as two, times cos of minus
+sixty, plus i sin of minus sixty.
+
+70
+00:03:03,437 --> 00:03:05,935
+The angle is minus sixty degrees.
+
+71
+00:03:06,585 --> 00:03:07,800
+Remember this.
+
+72
+00:03:07,800 --> 00:03:12,260
+Every non zero z is r, times
+cos theta plus i sin theta.
+
+73
+00:03:12,960 --> 00:03:14,695
+Now, one worked example.
+
+74
+00:03:15,045 --> 00:03:17,889
+Write one plus root three i in polar form.
+
+75
+00:03:18,389 --> 00:03:19,289
+Step one.
+
+76
+00:03:19,081 --> 00:03:21,878
+r is the root of one
+plus three, which is two.
+
+77
+00:03:22,628 --> 00:03:23,528
+Step two.
+
+78
+00:03:23,396 --> 00:03:27,265
+cos theta is one half, and sin
+theta is root three over two.
+
+79
+00:03:28,015 --> 00:03:28,983
+Step three.
+
+80
+00:03:28,983 --> 00:03:32,768
+Both are positive, so theta
+is in the first quadrant.
+
+81
+00:03:32,768 --> 00:03:34,450
+Theta is pi by three.
+
+82
+00:03:35,200 --> 00:03:40,041
+So z equals two, times cos pi
+by three plus i sin pi by three.
+
+83
+00:03:40,691 --> 00:03:42,156
+Now, the exam trap.
+
+84
+00:03:42,506 --> 00:03:47,107
+Is minus two, times cos theta
+plus i sin theta, in polar form?
+
+85
+00:03:47,107 --> 00:03:50,720
+Many students say yes,
+with r equal to minus two.
+
+86
+00:03:51,120 --> 00:03:54,483
+But r is a distance, so
+it is never negative.
+
+87
+00:03:54,483 --> 00:03:59,695
+Turn the angle by pi instead: two,
+times cos of theta plus pi, plus i sin
+
+88
+00:03:59,695 --> 00:04:01,104
+of theta plus pi.
+
+89
+00:04:01,754 --> 00:04:03,478
+Where is this asked?
+
+90
+00:04:03,478 --> 00:04:08,664
+In JEE Main and JEE Advanced, as
+powers and products of complex numbers
+
+91
+00:04:08,664 --> 00:04:11,350
+that are easy only in polar form.
+
+92
+00:04:11,950 --> 00:04:13,153
+Exam level now.
+
+93
+00:04:13,153 --> 00:04:15,935
+Which is the polar form of this product?
+
+94
+00:04:15,935 --> 00:04:17,188
+Pause and solve.
+
+95
+00:04:22,588 --> 00:04:23,949
+The answer is A.
+
+96
+00:04:24,449 --> 00:04:28,661
+One plus i has r equal to root
+two, and angle pi by four.
+
+97
+00:04:29,161 --> 00:04:33,646
+Root three plus i has r equal
+to two, and angle pi by six.
+
+98
+00:04:34,146 --> 00:04:36,550
+Multiply the r's: two root two.
+
+99
+00:04:36,550 --> 00:04:41,337
+Add the angles: pi by four plus
+pi by six is five pi by twelve.
+
+100
+00:04:41,937 --> 00:04:43,396
+Here is your recap.
+
+101
+00:04:43,396 --> 00:04:44,895
+Screenshot this card.
+
+102
+00:04:48,095 --> 00:04:50,932
+Can you answer these three
+questions without help?
+
+103
+00:04:51,332 --> 00:04:52,232
+One.
+
+104
+00:04:51,890 --> 00:04:54,201
+Write minus one in polar form.
+
+105
+00:04:55,101 --> 00:04:56,001
+Two.
+
+106
+00:04:55,607 --> 00:04:57,967
+What are r and theta for three i?
+
+107
+00:04:58,867 --> 00:04:59,767
+Three.
+
+108
+00:04:59,562 --> 00:05:01,850
+Why can r never be negative?
+
+109
+00:05:02,950 --> 00:05:07,735
+Next time: a ball thrown up reaches
+some heights twice, and some never.
+
+110
+00:05:07,735 --> 00:05:10,808
+Quadratic equations with
+real and complex roots.

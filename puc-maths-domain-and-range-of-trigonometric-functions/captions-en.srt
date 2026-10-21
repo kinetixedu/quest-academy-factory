@@ -1,0 +1,494 @@
+1
+00:00:00,450 --> 00:00:03,227
+Spin a bicycle wheel as fast as you like.
+
+2
+00:00:03,227 --> 00:00:05,398
+How high can the tyre valve go?
+
+3
+00:00:05,798 --> 00:00:08,525
+Above the hub, never more than one radius.
+
+4
+00:00:08,525 --> 00:00:11,541
+Below the hub, never more
+than one radius down.
+
+5
+00:00:11,941 --> 00:00:15,333
+Aarav checked this with a
+measuring tape on his front wheel.
+
+6
+00:00:15,683 --> 00:00:20,115
+However hard he spun it, the height
+stayed between minus one radius and
+
+7
+00:00:20,115 --> 00:00:21,331
+plus one radius.
+
+8
+00:00:21,831 --> 00:00:24,956
+In maths, that limit is
+called the range of sine.
+
+9
+00:00:24,956 --> 00:00:28,026
+Today, the domain and
+range of all six functions.
+
+10
+00:00:28,676 --> 00:00:30,906
+Two words from the functions chapter.
+
+11
+00:00:30,906 --> 00:00:34,087
+The domain is every input
+you are allowed to put in.
+
+12
+00:00:34,487 --> 00:00:37,540
+The range is every output
+that actually comes out.
+
+13
+00:00:38,190 --> 00:00:42,366
+Now let P go round the unit circle,
+and track sine theta on a meter.
+
+14
+00:00:42,766 --> 00:00:45,025
+Sine theta is the height of P.
+
+15
+00:00:45,025 --> 00:00:47,543
+It climbs to one at ninety degrees.
+
+16
+00:00:47,943 --> 00:00:51,754
+It falls to minus one at two
+hundred and seventy degrees.
+
+17
+00:00:52,154 --> 00:00:55,944
+P keeps going round and round,
+but the height only repeats.
+
+18
+00:00:55,944 --> 00:00:58,901
+It never goes above
+one, or below minus one.
+
+19
+00:00:59,551 --> 00:01:01,629
+Here is the proof, in four steps.
+
+20
+00:01:01,979 --> 00:01:02,879
+Step one.
+
+21
+00:01:02,860 --> 00:01:05,311
+P is on a circle of radius one.
+
+22
+00:01:05,311 --> 00:01:09,600
+So its x and its y are never
+more than one away from zero.
+
+23
+00:01:10,350 --> 00:01:11,250
+Step two.
+
+24
+00:01:11,250 --> 00:01:16,237
+So cosine theta lies from minus
+one to one, and so does sine theta.
+
+25
+00:01:16,987 --> 00:01:17,941
+Step three.
+
+26
+00:01:17,941 --> 00:01:22,362
+Every real number theta, positive
+or negative, gives a point P.
+
+27
+00:01:22,362 --> 00:01:26,056
+So the domain of sine and
+cosine is all real numbers.
+
+28
+00:01:26,806 --> 00:01:27,706
+Step four.
+
+29
+00:01:27,631 --> 00:01:30,560
+Every height from minus
+one to one is reached.
+
+30
+00:01:30,560 --> 00:01:34,571
+So the range of both is the
+closed interval, minus one to one.
+
+31
+00:01:35,221 --> 00:01:36,934
+Tangent is different.
+
+32
+00:01:36,934 --> 00:01:40,857
+Tangent theta is sine theta
+divided by cosine theta.
+
+33
+00:01:41,257 --> 00:01:44,159
+Let theta creep up towards ninety degrees.
+
+34
+00:01:44,159 --> 00:01:46,139
+Cosine shrinks towards zero.
+
+35
+00:01:46,539 --> 00:01:48,112
+And tangent shoots up.
+
+36
+00:01:48,112 --> 00:01:52,674
+Five point six, eleven, fifty seven,
+five hundred and seventy three.
+
+37
+00:01:53,074 --> 00:01:58,601
+At exactly ninety degrees, cosine is
+zero, and we can never divide by zero.
+
+38
+00:01:58,601 --> 00:02:00,794
+Tangent is not defined there.
+
+39
+00:02:01,444 --> 00:02:05,209
+Cosine is zero at every
+odd multiple of pi by two.
+
+40
+00:02:05,209 --> 00:02:09,405
+So tangent's domain is all real
+numbers except those points.
+
+41
+00:02:09,405 --> 00:02:12,022
+But its range is all real numbers.
+
+42
+00:02:12,772 --> 00:02:17,063
+Secant is one over cosine, so it
+skips the same points as tangent.
+
+43
+00:02:17,463 --> 00:02:20,268
+Cosine is never bigger than one in size.
+
+44
+00:02:20,268 --> 00:02:23,926
+So one over cosine is never
+smaller than one in size.
+
+45
+00:02:23,926 --> 00:02:27,214
+Secant is at least one,
+or at most minus one.
+
+46
+00:02:27,864 --> 00:02:30,698
+Cosecant and cotangent
+have sine underneath.
+
+47
+00:02:30,698 --> 00:02:34,228
+They skip every multiple
+of pi, where sine is zero.
+
+48
+00:02:34,878 --> 00:02:36,002
+Side by side.
+
+49
+00:02:36,002 --> 00:02:40,715
+Sine accepts every real number, but
+its range is small, only minus one
+
+50
+00:02:40,715 --> 00:02:41,615
+to one.
+
+51
+00:02:41,864 --> 00:02:43,992
+Tangent is the other way round.
+
+52
+00:02:43,992 --> 00:02:47,744
+Its domain has gaps, but its
+range is every real number.
+
+53
+00:02:48,344 --> 00:02:49,472
+Now you try.
+
+54
+00:02:49,472 --> 00:02:52,462
+Can sine theta ever equal one point two?
+
+55
+00:02:52,462 --> 00:02:53,865
+Pause and decide.
+
+56
+00:02:57,065 --> 00:02:57,965
+No!
+
+57
+00:02:57,535 --> 00:03:02,248
+One point two is more than one, and
+sine theta is a height on a circle
+
+58
+00:03:02,248 --> 00:03:03,404
+of radius one.
+
+59
+00:03:04,054 --> 00:03:05,116
+Remember this.
+
+60
+00:03:05,116 --> 00:03:09,615
+Sine and cosine take any angle, but
+their answers stay between minus one
+
+61
+00:03:09,615 --> 00:03:10,515
+and one.
+
+62
+00:03:11,080 --> 00:03:12,021
+Quick one.
+
+63
+00:03:12,021 --> 00:03:14,799
+Is tangent defined at theta equals pi?
+
+64
+00:03:14,799 --> 00:03:16,129
+Pause and think.
+
+65
+00:03:19,329 --> 00:03:20,229
+Yes!
+
+66
+00:03:19,911 --> 00:03:22,672
+Cosine pi is minus one, not zero.
+
+67
+00:03:22,672 --> 00:03:24,555
+So tangent pi is zero.
+
+68
+00:03:24,555 --> 00:03:28,263
+Only the odd multiples
+of pi by two are missing.
+
+69
+00:03:28,913 --> 00:03:30,649
+Now, one worked example.
+
+70
+00:03:30,999 --> 00:03:33,812
+Find the range of three
+plus two sine theta.
+
+71
+00:03:34,312 --> 00:03:35,212
+Step one.
+
+72
+00:03:35,212 --> 00:03:38,097
+Sine theta lies from minus one to one.
+
+73
+00:03:38,847 --> 00:03:39,778
+Step two.
+
+74
+00:03:39,778 --> 00:03:41,175
+Multiply by two.
+
+75
+00:03:41,175 --> 00:03:44,458
+Two sine theta lies from minus two to two.
+
+76
+00:03:45,208 --> 00:03:46,205
+Step three.
+
+77
+00:03:46,205 --> 00:03:47,148
+Add three.
+
+78
+00:03:47,148 --> 00:03:50,669
+Three plus two sine theta
+lies from one to five.
+
+79
+00:03:51,419 --> 00:03:53,414
+So the range is one to five.
+
+80
+00:03:53,414 --> 00:03:56,284
+The wave is squeezed
+between those two lines.
+
+81
+00:03:56,934 --> 00:03:58,400
+Now, the exam trap.
+
+82
+00:03:58,750 --> 00:04:03,208
+Many students think: cosine lies
+from minus one to one, so secant does
+
+83
+00:04:03,208 --> 00:04:04,108
+too.
+
+84
+00:04:04,109 --> 00:04:07,155
+But one over a small
+number is a big number.
+
+85
+00:04:07,155 --> 00:04:09,930
+When cosine is one half, secant is two.
+
+86
+00:04:09,930 --> 00:04:13,365
+Secant never lies strictly
+between minus one and one.
+
+87
+00:04:14,014 --> 00:04:15,634
+Where is this asked?
+
+88
+00:04:15,634 --> 00:04:20,690
+In PUC exams and in JEE Main: find
+the range of an expression built from
+
+89
+00:04:20,690 --> 00:04:22,027
+sine and cosine.
+
+90
+00:04:22,627 --> 00:04:23,818
+Exam level now.
+
+91
+00:04:23,818 --> 00:04:27,301
+How many integers are in
+the range of this function?
+
+92
+00:04:27,301 --> 00:04:28,543
+Pause and solve.
+
+93
+00:04:33,943 --> 00:04:35,175
+The answer is B.
+
+94
+00:04:35,175 --> 00:04:36,075
+Nine.
+
+95
+00:04:36,209 --> 00:04:40,517
+Sine theta lies from minus one
+to one, and it reaches both ends.
+
+96
+00:04:41,017 --> 00:04:42,479
+Multiply by four.
+
+97
+00:04:42,479 --> 00:04:45,951
+Four sine theta lies
+from minus four to four.
+
+98
+00:04:46,451 --> 00:04:47,616
+Subtract three.
+
+99
+00:04:47,616 --> 00:04:50,559
+The function lies from minus seven to one.
+
+100
+00:04:51,059 --> 00:04:54,418
+The integers from minus
+seven to one are nine in all.
+
+101
+00:04:55,018 --> 00:04:56,480
+Here is your recap.
+
+102
+00:04:56,480 --> 00:04:57,983
+Screenshot this card.
+
+103
+00:05:01,183 --> 00:05:04,020
+Can you answer these three
+questions without help?
+
+104
+00:05:04,420 --> 00:05:05,320
+One.
+
+105
+00:05:04,945 --> 00:05:07,386
+What is the range of cosine theta?
+
+106
+00:05:08,286 --> 00:05:09,186
+Two.
+
+107
+00:05:08,858 --> 00:05:12,600
+Name two angles where
+tangent theta is not defined.
+
+108
+00:05:13,500 --> 00:05:14,400
+Three.
+
+109
+00:05:14,198 --> 00:05:16,726
+Can secant theta equal one half?
+
+110
+00:05:16,726 --> 00:05:17,626
+Why not?
+
+111
+00:05:18,707 --> 00:05:22,720
+Next time: trace the valve's height
+over time, and a wave appears.
+
+112
+00:05:22,720 --> 00:05:25,661
+We draw the graphs of
+sine, cosine and tangent.

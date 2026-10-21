@@ -1,0 +1,532 @@
+1
+00:00:00,450 --> 00:00:02,920
+Aarav lives on a long, straight road.
+
+2
+00:00:02,920 --> 00:00:06,937
+Ride three kilometres east, and
+he is three kilometres from home.
+
+3
+00:00:07,337 --> 00:00:11,782
+Ride three kilometres west, and he
+is still three kilometres from home.
+
+4
+00:00:11,782 --> 00:00:12,965
+Not minus three.
+
+5
+00:00:13,415 --> 00:00:16,091
+Aarav noticed this on his ride to college.
+
+6
+00:00:16,441 --> 00:00:18,227
+Direction can be negative.
+
+7
+00:00:18,227 --> 00:00:19,555
+Distance never is.
+
+8
+00:00:19,555 --> 00:00:21,899
+Which function knows the difference?
+
+9
+00:00:22,399 --> 00:00:23,769
+The modulus function.
+
+10
+00:00:23,769 --> 00:00:28,062
+And with it today, the rational
+function, which has a gap you can never
+
+11
+00:00:28,062 --> 00:00:28,962
+cross.
+
+12
+00:00:29,276 --> 00:00:31,716
+Put home at zero on a number line.
+
+13
+00:00:31,716 --> 00:00:34,185
+East is positive, west is negative.
+
+14
+00:00:34,185 --> 00:00:35,680
+Call his position x.
+
+15
+00:00:36,081 --> 00:00:40,333
+His distance from home is written
+as x between two straight bars.
+
+16
+00:00:40,333 --> 00:00:41,955
+We read it as mod x.
+
+17
+00:00:42,355 --> 00:00:44,244
+The rule has two parts.
+
+18
+00:00:44,244 --> 00:00:47,478
+If x is zero or more, mod x is just x.
+
+19
+00:00:47,478 --> 00:00:50,413
+If x is negative, mod x is minus x.
+
+20
+00:00:51,163 --> 00:00:53,077
+Minus x for a negative x?
+
+21
+00:00:53,077 --> 00:00:53,977
+Yes.
+
+22
+00:00:53,602 --> 00:00:57,688
+If x is minus three, then
+minus x is minus, minus three.
+
+23
+00:00:57,688 --> 00:00:59,170
+That is plus three.
+
+24
+00:00:59,170 --> 00:01:01,290
+The minus sign flips it back.
+
+25
+00:01:02,040 --> 00:01:04,183
+So mod x is never negative.
+
+26
+00:01:04,183 --> 00:01:08,971
+Its domain is R, and its range is
+zero and every positive number.
+
+27
+00:01:09,621 --> 00:01:14,589
+Now watch the graph draw, as Aarav
+rides from four kilometres west to four
+
+28
+00:01:14,589 --> 00:01:15,829
+kilometres east.
+
+29
+00:01:16,228 --> 00:01:19,767
+On the west side, his distance
+falls as he gets closer.
+
+30
+00:01:19,767 --> 00:01:21,555
+At home, it touches zero.
+
+31
+00:01:21,555 --> 00:01:23,832
+On the east side, it rises again.
+
+32
+00:01:24,232 --> 00:01:28,006
+The result is a V, with
+its corner at the origin.
+
+33
+00:01:28,006 --> 00:01:30,602
+The left arm is y equals minus x.
+
+34
+00:01:30,602 --> 00:01:32,860
+The right arm is y equals x.
+
+35
+00:01:33,510 --> 00:01:36,617
+Now measure from a friend's
+house at k instead.
+
+36
+00:01:36,617 --> 00:01:39,011
+The distance is mod of x minus k.
+
+37
+00:01:39,011 --> 00:01:42,279
+Watch k slide, and the
+whole V slides with it.
+
+38
+00:01:42,929 --> 00:01:44,089
+Side by side.
+
+39
+00:01:44,089 --> 00:01:47,290
+The identity, y equals x, keeps the sign.
+
+40
+00:01:47,290 --> 00:01:49,492
+Minus three stays minus three.
+
+41
+00:01:49,892 --> 00:01:53,321
+The modulus, y equals
+mod x, removes the sign.
+
+42
+00:01:53,321 --> 00:01:55,187
+Minus three becomes three.
+
+43
+00:01:55,187 --> 00:01:57,751
+For positive inputs, the two agree.
+
+44
+00:01:58,351 --> 00:01:59,534
+Now you try.
+
+45
+00:01:59,534 --> 00:02:03,104
+Is mod x equal to x for
+every real number x?
+
+46
+00:02:03,104 --> 00:02:04,574
+Pause and decide.
+
+47
+00:02:07,774 --> 00:02:08,674
+No!
+
+48
+00:02:08,281 --> 00:02:10,560
+Only when x is zero or more.
+
+49
+00:02:10,560 --> 00:02:14,844
+If x is minus two, mod x
+is two, but x is minus two.
+
+50
+00:02:15,494 --> 00:02:16,599
+Remember this.
+
+51
+00:02:16,599 --> 00:02:20,047
+Modulus keeps the size,
+and throws away the sign.
+
+52
+00:02:20,747 --> 00:02:22,733
+Now, rational functions.
+
+53
+00:02:22,733 --> 00:02:27,946
+A rational function is one polynomial
+divided by another, f of x over g
+
+54
+00:02:27,946 --> 00:02:30,748
+of x, where g of x is not zero.
+
+55
+00:02:31,148 --> 00:02:33,324
+The simplest is one over x.
+
+56
+00:02:33,324 --> 00:02:38,353
+Its domain is every real number except
+zero, because we can never divide
+
+57
+00:02:38,353 --> 00:02:39,253
+by zero.
+
+58
+00:02:39,608 --> 00:02:42,564
+Watch x come closer to
+zero from the right.
+
+59
+00:02:42,564 --> 00:02:44,122
+One over one is one.
+
+60
+00:02:44,122 --> 00:02:45,942
+One over a tenth is ten.
+
+61
+00:02:45,942 --> 00:02:48,325
+One over a hundredth is a hundred.
+
+62
+00:02:48,725 --> 00:02:52,121
+The curve shoots upward, but
+it never touches the y axis.
+
+63
+00:02:52,121 --> 00:02:54,927
+Come in from the left,
+and it shoots downward.
+
+64
+00:02:55,327 --> 00:02:58,189
+And when x is huge, one over x is tiny.
+
+65
+00:02:58,189 --> 00:03:01,496
+The curve hugs the x axis,
+but never reaches it.
+
+66
+00:03:02,146 --> 00:03:03,078
+Quick one.
+
+67
+00:03:03,078 --> 00:03:05,800
+Is zero in the range of one over x?
+
+68
+00:03:05,800 --> 00:03:07,118
+Pause and think.
+
+69
+00:03:10,318 --> 00:03:11,218
+No!
+
+70
+00:03:10,836 --> 00:03:13,904
+One divided by any number is never zero.
+
+71
+00:03:13,904 --> 00:03:17,513
+So the range of one
+over x is R, minus zero.
+
+72
+00:03:18,163 --> 00:03:19,898
+Now, one worked example.
+
+73
+00:03:20,248 --> 00:03:23,040
+Solve mod of x minus two equals five.
+
+74
+00:03:23,540 --> 00:03:24,440
+Step one.
+
+75
+00:03:24,396 --> 00:03:27,967
+Mod of x minus two is the
+distance of x from two.
+
+76
+00:03:27,967 --> 00:03:30,662
+So we want points five away from two.
+
+77
+00:03:31,412 --> 00:03:32,341
+Step two.
+
+78
+00:03:32,341 --> 00:03:36,798
+If x minus two is zero or
+more, x minus two equals five.
+
+79
+00:03:36,798 --> 00:03:38,147
+So x is seven.
+
+80
+00:03:38,897 --> 00:03:39,944
+Step three.
+
+81
+00:03:39,944 --> 00:03:44,700
+If x minus two is negative,
+minus of x minus two equals five.
+
+82
+00:03:44,700 --> 00:03:46,464
+So x is minus three.
+
+83
+00:03:47,214 --> 00:03:48,114
+Step four.
+
+84
+00:03:48,093 --> 00:03:48,993
+Check.
+
+85
+00:03:48,709 --> 00:03:50,477
+Seven minus two is five.
+
+86
+00:03:50,477 --> 00:03:54,438
+Minus three minus two is minus
+five, and its mod is five.
+
+87
+00:03:55,188 --> 00:03:57,534
+Two answers: seven and minus three.
+
+88
+00:03:57,534 --> 00:04:01,092
+One on each side of two,
+like the two arms of the V.
+
+89
+00:04:01,742 --> 00:04:03,208
+Now, the exam trap.
+
+90
+00:04:03,558 --> 00:04:05,824
+What is the square root of x squared?
+
+91
+00:04:05,824 --> 00:04:09,260
+Many students cancel the root
+and the square, and write x.
+
+92
+00:04:09,660 --> 00:04:11,663
+But try x equals minus four.
+
+93
+00:04:11,663 --> 00:04:16,288
+x squared is sixteen, and the square
+root of sixteen is four, not minus
+
+94
+00:04:16,288 --> 00:04:17,188
+four.
+
+95
+00:04:16,846 --> 00:04:19,527
+The square root of x squared is mod x.
+
+96
+00:04:20,177 --> 00:04:21,690
+Where is this asked?
+
+97
+00:04:21,690 --> 00:04:26,229
+In JEE Main, as equations with
+mod, where you count the solutions.
+
+98
+00:04:26,229 --> 00:04:31,357
+And in PUC board papers, as find the
+domain and range of a modulus function.
+
+99
+00:04:31,957 --> 00:04:33,262
+Exam level now.
+
+100
+00:04:33,262 --> 00:04:36,722
+How many real solutions
+does this equation have?
+
+101
+00:04:36,722 --> 00:04:38,082
+Pause and solve.
+
+102
+00:04:43,482 --> 00:04:44,948
+The answer is D.
+
+103
+00:04:44,948 --> 00:04:46,277
+Infinitely many.
+
+104
+00:04:46,777 --> 00:04:48,433
+Read it as distances.
+
+105
+00:04:48,433 --> 00:04:51,488
+Mod x minus one is the distance from one.
+
+106
+00:04:51,488 --> 00:04:54,758
+Mod x minus three is
+the distance from three.
+
+107
+00:04:55,258 --> 00:04:58,397
+The two points, one and
+three, are exactly two apart.
+
+108
+00:04:58,897 --> 00:05:03,773
+For any x between one and three, the
+two distances add up to exactly two.
+
+109
+00:05:04,273 --> 00:05:07,412
+Outside that stretch,
+the sum is more than two.
+
+110
+00:05:07,412 --> 00:05:09,814
+So every x from one to three works.
+
+111
+00:05:09,814 --> 00:05:11,489
+Infinitely many solutions.
+
+112
+00:05:12,089 --> 00:05:13,553
+Here is your recap.
+
+113
+00:05:13,553 --> 00:05:15,058
+Screenshot this card.
+
+114
+00:05:18,258 --> 00:05:21,095
+Can you answer these three
+questions without help?
+
+115
+00:05:21,495 --> 00:05:22,395
+One.
+
+116
+00:05:22,011 --> 00:05:23,997
+What is mod of minus seven?
+
+117
+00:05:24,897 --> 00:05:25,797
+Two.
+
+118
+00:05:25,432 --> 00:05:28,629
+What is the domain of
+one over x minus four?
+
+119
+00:05:29,529 --> 00:05:30,429
+Three.
+
+120
+00:05:30,203 --> 00:05:33,050
+Solve mod of x plus one equals three.
+
+121
+00:05:34,150 --> 00:05:37,368
+Next time: age is counted
+in completed years.
+
+122
+00:05:37,368 --> 00:05:40,533
+Sixteen point nine years
+old is still sixteen.
+
+123
+00:05:40,533 --> 00:05:43,687
+Meet the signum and
+greatest integer functions.

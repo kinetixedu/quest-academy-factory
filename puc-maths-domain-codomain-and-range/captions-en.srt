@@ -1,0 +1,565 @@
+1
+00:00:00,450 --> 00:00:03,296
+A maths test is marked out of one hundred.
+
+2
+00:00:03,296 --> 00:00:06,289
+Any mark from zero to
+one hundred is allowed.
+
+3
+00:00:06,689 --> 00:00:10,832
+But when the results go up, the
+lowest mark in the class is forty one,
+
+4
+00:00:10,832 --> 00:00:12,712
+and the highest is ninety six.
+
+5
+00:00:13,162 --> 00:00:16,357
+Aarav noticed this on the
+college notice board today.
+
+6
+00:00:16,707 --> 00:00:19,410
+So which is the real answer for the marks?
+
+7
+00:00:19,410 --> 00:00:22,543
+Zero to one hundred, or
+forty one to ninety six?
+
+8
+00:00:23,043 --> 00:00:24,154
+Both are right.
+
+9
+00:00:24,154 --> 00:00:27,636
+Maths gives them two names:
+the codomain and the range.
+
+10
+00:00:27,636 --> 00:00:30,055
+Today we meet both, with the domain.
+
+11
+00:00:30,705 --> 00:00:31,757
+Quick recall.
+
+12
+00:00:31,757 --> 00:00:36,545
+A function sends every element of one
+set to exactly one element of another
+
+13
+00:00:36,545 --> 00:00:37,445
+set.
+
+14
+00:00:37,421 --> 00:00:39,180
+We write f, from A to B.
+
+15
+00:00:39,180 --> 00:00:41,207
+A is where the inputs come from.
+
+16
+00:00:41,207 --> 00:00:43,002
+B is where the outputs land.
+
+17
+00:00:43,402 --> 00:00:45,151
+The domain is the set A.
+
+18
+00:00:45,151 --> 00:00:47,730
+It holds every input the function takes.
+
+19
+00:00:48,130 --> 00:00:50,002
+The codomain is the set B.
+
+20
+00:00:50,002 --> 00:00:53,480
+It holds every output the
+function is allowed to give.
+
+21
+00:00:53,880 --> 00:00:57,908
+The range is the set of outputs
+the function actually gives.
+
+22
+00:00:57,908 --> 00:01:00,123
+These outputs are called images.
+
+23
+00:01:00,773 --> 00:01:01,885
+Watch one run.
+
+24
+00:01:01,885 --> 00:01:04,111
+A is one, two, three, four.
+
+25
+00:01:04,111 --> 00:01:06,553
+B is the numbers from one to eight.
+
+26
+00:01:06,553 --> 00:01:08,906
+The rule is f of x equals two x.
+
+27
+00:01:09,306 --> 00:01:10,632
+One goes to two.
+
+28
+00:01:10,632 --> 00:01:12,008
+Two goes to four.
+
+29
+00:01:12,008 --> 00:01:13,437
+Three goes to six.
+
+30
+00:01:13,437 --> 00:01:14,916
+Four goes to eight.
+
+31
+00:01:15,316 --> 00:01:17,656
+Every input got exactly one arrow.
+
+32
+00:01:17,656 --> 00:01:20,016
+So the whole of A is the domain.
+
+33
+00:01:20,416 --> 00:01:21,502
+Now look at B.
+
+34
+00:01:21,502 --> 00:01:23,800
+Two, four, six and eight are hit.
+
+35
+00:01:23,800 --> 00:01:26,519
+One, three, five and seven are never hit.
+
+36
+00:01:26,919 --> 00:01:29,446
+So the range is two, four, six, eight.
+
+37
+00:01:29,446 --> 00:01:32,240
+It sits inside the
+codomain, but it is smaller.
+
+38
+00:01:32,891 --> 00:01:35,400
+Two words you will meet in every exam.
+
+39
+00:01:35,400 --> 00:01:36,784
+f of three is six.
+
+40
+00:01:36,784 --> 00:01:40,926
+So six is the image of three,
+and three is the preimage of six.
+
+41
+00:01:41,676 --> 00:01:44,767
+Every element of the domain
+has exactly one image.
+
+42
+00:01:44,767 --> 00:01:49,173
+But an element of the codomain can
+have no preimage at all, like five.
+
+43
+00:01:49,823 --> 00:01:50,899
+Side by side.
+
+44
+00:01:50,899 --> 00:01:55,400
+The codomain is chosen when we write
+the function: the allowed outputs,
+
+45
+00:01:55,400 --> 00:01:57,861
+like marks from zero to one hundred.
+
+46
+00:01:58,261 --> 00:02:02,668
+The range is found by running the
+function: the outputs that really appear,
+
+47
+00:02:02,668 --> 00:02:04,567
+like forty one to ninety six.
+
+48
+00:02:04,967 --> 00:02:08,063
+So the range is always a
+subset of the codomain.
+
+49
+00:02:08,063 --> 00:02:11,550
+They can be equal, but the
+range can never be bigger.
+
+50
+00:02:12,150 --> 00:02:13,216
+Now you try.
+
+51
+00:02:13,216 --> 00:02:16,664
+f goes from N to N, and
+f of x equals two x.
+
+52
+00:02:16,664 --> 00:02:18,807
+Is the range the whole of N?
+
+53
+00:02:18,807 --> 00:02:20,133
+Pause and decide.
+
+54
+00:02:23,333 --> 00:02:24,233
+No!
+
+55
+00:02:23,793 --> 00:02:26,989
+The outputs are two, four, six, and so on.
+
+56
+00:02:26,989 --> 00:02:31,839
+Odd numbers are never hit, so the
+range is only the even natural numbers.
+
+57
+00:02:32,489 --> 00:02:33,572
+Remember this.
+
+58
+00:02:33,572 --> 00:02:35,809
+The codomain is what is allowed.
+
+59
+00:02:35,809 --> 00:02:38,198
+The range is what actually happens.
+
+60
+00:02:38,898 --> 00:02:41,196
+Now let us see this on a graph.
+
+61
+00:02:41,196 --> 00:02:45,115
+Take f of x equals x squared,
+for x from minus a to a.
+
+62
+00:02:45,515 --> 00:02:48,682
+The domain is a stretch
+of the x axis, in blue.
+
+63
+00:02:48,682 --> 00:02:51,849
+The range is a stretch
+of the y axis, in coral.
+
+64
+00:02:52,249 --> 00:02:54,389
+Watch a grow from one to three.
+
+65
+00:02:54,389 --> 00:02:57,060
+The domain widens, and the range climbs.
+
+66
+00:02:57,060 --> 00:03:00,540
+Zero to one, then zero to
+four, then zero to nine.
+
+67
+00:03:00,940 --> 00:03:05,428
+To read a range from any graph, slide
+every point of the curve across to
+
+68
+00:03:05,428 --> 00:03:06,374
+the y axis.
+
+69
+00:03:06,374 --> 00:03:08,661
+The shadow it leaves is the range.
+
+70
+00:03:09,311 --> 00:03:10,211
+Quick one.
+
+71
+00:03:10,185 --> 00:03:14,918
+If x can be any real number, is
+minus one in the range of x squared?
+
+72
+00:03:14,918 --> 00:03:16,154
+Pause and think.
+
+73
+00:03:19,354 --> 00:03:20,254
+No!
+
+74
+00:03:19,832 --> 00:03:21,805
+A square is never negative.
+
+75
+00:03:21,805 --> 00:03:26,736
+The curve never goes below the x
+axis, so the range is zero and above.
+
+76
+00:03:27,386 --> 00:03:29,122
+Now, one worked example.
+
+77
+00:03:29,472 --> 00:03:32,897
+A is minus two, minus one, zero, one, two.
+
+78
+00:03:32,897 --> 00:03:37,166
+f goes from A to Z, and f of
+x equals x squared plus one.
+
+79
+00:03:37,166 --> 00:03:39,779
+Find the domain, codomain and range.
+
+80
+00:03:40,279 --> 00:03:41,179
+Step one.
+
+81
+00:03:41,092 --> 00:03:45,685
+The domain is A itself: minus
+two, minus one, zero, one and two.
+
+82
+00:03:46,435 --> 00:03:47,335
+Step two.
+
+83
+00:03:47,297 --> 00:03:50,494
+The codomain is Z, the
+set of all integers.
+
+84
+00:03:51,244 --> 00:03:52,144
+Step three.
+
+85
+00:03:52,141 --> 00:03:53,389
+Find every image.
+
+86
+00:03:53,389 --> 00:03:55,583
+Five, two, one, two, five.
+
+87
+00:03:56,333 --> 00:03:57,233
+Step four.
+
+88
+00:03:57,229 --> 00:03:58,867
+Write each image once.
+
+89
+00:03:58,867 --> 00:04:01,256
+The range is one, two and five.
+
+90
+00:04:02,006 --> 00:04:05,580
+Notice that two has two
+preimages, minus one and one.
+
+91
+00:04:05,580 --> 00:04:06,801
+That is allowed.
+
+92
+00:04:06,801 --> 00:04:09,044
+Many inputs may share one output.
+
+93
+00:04:09,694 --> 00:04:11,160
+Now, the exam trap.
+
+94
+00:04:11,510 --> 00:04:15,139
+Find the range of x squared,
+for x from minus two to one.
+
+95
+00:04:15,139 --> 00:04:17,583
+Many students put in only the two ends.
+
+96
+00:04:17,583 --> 00:04:20,501
+They get one and four,
+and write one to four.
+
+97
+00:04:20,901 --> 00:04:24,938
+But zero lies inside the domain,
+and zero squared is zero.
+
+98
+00:04:24,938 --> 00:04:27,385
+The curve dips to zero in between.
+
+99
+00:04:27,385 --> 00:04:29,832
+The correct range is zero to four.
+
+100
+00:04:30,482 --> 00:04:31,964
+Where is this asked?
+
+101
+00:04:31,964 --> 00:04:36,726
+In JEE Main, as find the range, or
+the codomain that equals the range.
+
+102
+00:04:36,726 --> 00:04:40,057
+And in PUC boards, as
+find the domain and range.
+
+103
+00:04:40,657 --> 00:04:41,826
+Exam level now.
+
+104
+00:04:41,826 --> 00:04:44,224
+What is the range of this function?
+
+105
+00:04:44,224 --> 00:04:45,443
+Pause and solve.
+
+106
+00:04:50,843 --> 00:04:52,202
+The answer is B.
+
+107
+00:04:52,202 --> 00:04:53,499
+Three to twelve.
+
+108
+00:04:53,999 --> 00:04:55,382
+Complete the square.
+
+109
+00:04:55,382 --> 00:05:00,362
+x squared minus four x plus seven is x
+minus two, whole squared, plus three.
+
+110
+00:05:00,862 --> 00:05:05,596
+x runs from minus one to four, so x
+minus two runs from minus three to
+
+111
+00:05:05,596 --> 00:05:06,496
+two.
+
+112
+00:05:06,620 --> 00:05:09,042
+Its square runs from zero to nine.
+
+113
+00:05:09,042 --> 00:05:11,831
+Zero, because x minus two can be zero.
+
+114
+00:05:11,831 --> 00:05:13,609
+Nine, from minus three.
+
+115
+00:05:14,109 --> 00:05:15,009
+Add three.
+
+116
+00:05:14,943 --> 00:05:16,918
+The range is three to twelve.
+
+117
+00:05:16,918 --> 00:05:20,915
+The two ends alone give seven
+to twelve: option A, the trap.
+
+118
+00:05:21,515 --> 00:05:22,974
+Here is your recap.
+
+119
+00:05:22,974 --> 00:05:24,474
+Screenshot this card.
+
+120
+00:05:27,674 --> 00:05:30,672
+Can you answer these three
+questions without help?
+
+121
+00:05:31,072 --> 00:05:31,972
+One.
+
+122
+00:05:31,547 --> 00:05:35,153
+f of x equals x squared,
+on the set one, two, three.
+
+123
+00:05:35,153 --> 00:05:36,449
+What is the range?
+
+124
+00:05:37,349 --> 00:05:38,249
+Two.
+
+125
+00:05:37,821 --> 00:05:40,731
+Can the range ever be
+bigger than the codomain?
+
+126
+00:05:41,631 --> 00:05:42,531
+Three.
+
+127
+00:05:42,221 --> 00:05:46,164
+Find the range of x squared,
+for x from minus three to two.
+
+128
+00:05:47,264 --> 00:05:51,729
+Next time: Diya's body temperature
+gives one number for every hour of the
+
+129
+00:05:51,729 --> 00:05:52,629
+day.
+
+130
+00:05:52,231 --> 00:05:54,863
+Functions like that have a special name.
+
+131
+00:05:54,863 --> 00:05:56,370
+Real valued functions.

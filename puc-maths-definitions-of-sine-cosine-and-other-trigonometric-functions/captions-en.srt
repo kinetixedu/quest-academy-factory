@@ -1,0 +1,490 @@
+1
+00:00:00,450 --> 00:00:04,409
+Turn a bicycle wheel slowly and
+follow the valve with your finger.
+
+2
+00:00:04,409 --> 00:00:07,413
+It rises, it falls, it
+swings left and right.
+
+3
+00:00:07,813 --> 00:00:12,258
+At every moment it has a height above
+the hub, and a distance to the side.
+
+4
+00:00:12,708 --> 00:00:16,976
+Aarav wondered about this as he
+lifted his bicycle to fix the chain.
+
+5
+00:00:17,326 --> 00:00:20,496
+For any angle the wheel
+turns, how high is the valve?
+
+6
+00:00:20,996 --> 00:00:25,030
+Those two numbers, the height and
+the sideways distance, have names.
+
+7
+00:00:25,030 --> 00:00:26,640
+They are sine and cosine.
+
+8
+00:00:27,290 --> 00:00:29,801
+Let's make it exact on the unit circle.
+
+9
+00:00:30,151 --> 00:00:32,403
+Turn an angle x from the point A.
+
+10
+00:00:32,403 --> 00:00:36,699
+The terminal side meets the circle
+at a point P, with coordinates a and
+
+11
+00:00:36,699 --> 00:00:37,599
+b.
+
+12
+00:00:37,487 --> 00:00:41,356
+NCERT defines cos x as
+a, the x coordinate of P.
+
+13
+00:00:41,356 --> 00:00:44,589
+And sin x as b, the y coordinate of P.
+
+14
+00:00:44,989 --> 00:00:50,053
+So cosine tells how far P is to the
+side, and sine tells how high P is.
+
+15
+00:00:50,053 --> 00:00:54,623
+On a wheel of radius one, sine is
+exactly the valve's height above the
+
+16
+00:00:54,623 --> 00:00:55,523
+hub.
+
+17
+00:00:55,798 --> 00:00:59,014
+Now let x count up, and
+watch both values change.
+
+18
+00:00:59,414 --> 00:01:01,091
+At zero, P is at A.
+
+19
+00:01:01,091 --> 00:01:03,910
+Cos zero is one, and sin zero is zero.
+
+20
+00:01:04,309 --> 00:01:06,566
+At pi by two, P is at the top.
+
+21
+00:01:06,566 --> 00:01:08,614
+Cos is zero, and sin is one.
+
+22
+00:01:09,014 --> 00:01:11,225
+At pi, P is on the far left.
+
+23
+00:01:11,225 --> 00:01:13,734
+Cos is minus one, and sin is zero.
+
+24
+00:01:14,134 --> 00:01:16,884
+At three pi by two, P is at the bottom.
+
+25
+00:01:16,884 --> 00:01:19,283
+Cos is zero, and sin is minus one.
+
+26
+00:01:19,283 --> 00:01:21,303
+At two pi, P is back at A.
+
+27
+00:01:21,953 --> 00:01:25,901
+So exactly where is sine zero,
+and where is cosine zero?
+
+28
+00:01:25,901 --> 00:01:27,279
+Three small steps.
+
+29
+00:01:27,629 --> 00:01:28,529
+Step one.
+
+30
+00:01:28,460 --> 00:01:31,035
+Sin x is zero when P has no height.
+
+31
+00:01:31,035 --> 00:01:34,979
+Then P sits on the x axis:
+at A, or at the far left.
+
+32
+00:01:35,729 --> 00:01:36,629
+Step two.
+
+33
+00:01:36,621 --> 00:01:41,775
+P lands there at zero, pi, two
+pi, and so on, in both directions.
+
+34
+00:01:41,775 --> 00:01:46,342
+So sin x is zero exactly when
+x is n pi, for any integer n.
+
+35
+00:01:47,092 --> 00:01:48,106
+Step three.
+
+36
+00:01:48,106 --> 00:01:53,258
+Cos x is zero when P sits on the
+y axis, at the top or the bottom.
+
+37
+00:01:53,258 --> 00:01:56,500
+That happens at odd
+multiples of pi by two.
+
+38
+00:01:57,250 --> 00:02:00,668
+We write that as two n
+plus one, times pi by two.
+
+39
+00:02:01,318 --> 00:02:02,428
+Side by side.
+
+40
+00:02:02,428 --> 00:02:05,058
+Cosine is sideways, the x coordinate.
+
+41
+00:02:05,058 --> 00:02:10,000
+At sixty degrees, P is half a unit
+to the right, so cos sixty degrees is
+
+42
+00:02:10,000 --> 00:02:10,900
+one half.
+
+43
+00:02:11,243 --> 00:02:13,530
+Sine is height, the y coordinate.
+
+44
+00:02:13,530 --> 00:02:18,481
+At thirty degrees, P is half a unit
+up, so sin thirty degrees is one half.
+
+45
+00:02:19,081 --> 00:02:20,103
+Now you try.
+
+46
+00:02:20,103 --> 00:02:23,734
+At pi by two, which one
+is zero: sine, or cosine?
+
+47
+00:02:23,734 --> 00:02:24,954
+Pause and think.
+
+48
+00:02:28,155 --> 00:02:29,055
+Cosine!
+
+49
+00:02:28,819 --> 00:02:33,241
+At pi by two, P is at the very
+top, with no sideways distance.
+
+50
+00:02:33,241 --> 00:02:35,889
+Its height, sin pi by two, is one.
+
+51
+00:02:36,539 --> 00:02:39,255
+Now the other four
+trigonometric functions.
+
+52
+00:02:39,255 --> 00:02:41,891
+Each one is built from sine and cosine.
+
+53
+00:02:42,241 --> 00:02:44,808
+Cosecant x is one over sin x.
+
+54
+00:02:44,808 --> 00:02:47,254
+Secant x is one over cos x.
+
+55
+00:02:48,004 --> 00:02:50,836
+Tangent x is sin x over cos x.
+
+56
+00:02:50,836 --> 00:02:53,794
+Cotangent x is cos x over sin x.
+
+57
+00:02:54,544 --> 00:02:57,101
+Division by zero is never allowed.
+
+58
+00:02:57,101 --> 00:03:02,338
+So tan and sec need cos x to be non
+zero, and cot and cosec need sin x
+
+59
+00:03:02,338 --> 00:03:03,711
+to be non zero.
+
+60
+00:03:04,361 --> 00:03:05,499
+Remember this.
+
+61
+00:03:05,499 --> 00:03:10,635
+On the unit circle, cos x is the x
+coordinate of P, and sin x is the y
+
+62
+00:03:10,635 --> 00:03:11,550
+coordinate.
+
+63
+00:03:12,250 --> 00:03:13,157
+Quick one.
+
+64
+00:03:13,157 --> 00:03:15,314
+Is tan of pi by two defined?
+
+65
+00:03:15,314 --> 00:03:16,597
+Pause and think.
+
+66
+00:03:19,797 --> 00:03:20,697
+No!
+
+67
+00:03:20,317 --> 00:03:24,184
+Tan is sin over cos, and
+cos pi by two is zero.
+
+68
+00:03:24,184 --> 00:03:26,276
+You cannot divide by zero.
+
+69
+00:03:26,926 --> 00:03:28,789
+Now, one worked example.
+
+70
+00:03:28,789 --> 00:03:31,474
+Find all six functions at pi by four.
+
+71
+00:03:31,824 --> 00:03:32,746
+Step one.
+
+72
+00:03:32,746 --> 00:03:38,054
+Pi by four cuts the right angle in
+half, so P lies on the line y equals
+
+73
+00:03:38,054 --> 00:03:38,954
+x.
+
+74
+00:03:38,515 --> 00:03:39,854
+So a equals b.
+
+75
+00:03:40,604 --> 00:03:41,504
+Step two.
+
+76
+00:03:41,380 --> 00:03:45,349
+P is on the unit circle, so a
+squared plus b squared is one.
+
+77
+00:03:45,349 --> 00:03:48,976
+Then two a squared is one,
+and a is one over root two.
+
+78
+00:03:49,726 --> 00:03:50,729
+Step three.
+
+79
+00:03:50,729 --> 00:03:55,535
+So cos pi by four and sin pi by
+four are both one over root two.
+
+80
+00:03:56,285 --> 00:03:57,190
+Step four.
+
+81
+00:03:57,190 --> 00:03:59,126
+Tan and cot are both one.
+
+82
+00:03:59,126 --> 00:04:01,488
+Sec and cosec are both root two.
+
+83
+00:04:02,238 --> 00:04:03,704
+Now, the exam trap.
+
+84
+00:04:04,054 --> 00:04:07,858
+Many students read cosec
+x as sine inverse of x.
+
+85
+00:04:08,258 --> 00:04:11,490
+But cosec x is one over
+sin x, a reciprocal.
+
+86
+00:04:11,490 --> 00:04:15,718
+Sine inverse is a different
+idea, which you meet in Class 12.
+
+87
+00:04:16,368 --> 00:04:17,921
+Where is this asked?
+
+88
+00:04:17,921 --> 00:04:22,852
+In the PUC board exams: find the
+trigonometric functions at a given angle,
+
+89
+00:04:22,852 --> 00:04:25,438
+or from a point on the unit circle.
+
+90
+00:04:26,038 --> 00:04:27,461
+Exam level now.
+
+91
+00:04:27,461 --> 00:04:29,643
+Find cot x plus cosec x.
+
+92
+00:04:29,643 --> 00:04:31,126
+Pause and solve.
+
+93
+00:04:36,526 --> 00:04:38,006
+The answer is A.
+
+94
+00:04:38,006 --> 00:04:39,359
+Minus one half.
+
+95
+00:04:39,859 --> 00:04:43,590
+P is the point minus three
+fifths, minus four fifths.
+
+96
+00:04:43,590 --> 00:04:48,088
+So cos x is minus three fifths,
+and sin x is minus four fifths.
+
+97
+00:04:48,588 --> 00:04:50,329
+Cot x is cos over sin.
+
+98
+00:04:50,329 --> 00:04:54,248
+Minus three fifths over minus
+four fifths is three quarters.
+
+99
+00:04:54,748 --> 00:04:58,940
+Cosec x is one over sin x,
+which is minus five quarters.
+
+100
+00:04:58,940 --> 00:05:02,665
+Three quarters minus five
+quarters is minus one half.
+
+101
+00:05:03,265 --> 00:05:04,726
+Here is your recap.
+
+102
+00:05:04,726 --> 00:05:06,227
+Screenshot this card.
+
+103
+00:05:09,427 --> 00:05:12,426
+Can you answer these three
+questions without help?
+
+104
+00:05:12,826 --> 00:05:13,726
+One.
+
+105
+00:05:13,363 --> 00:05:15,492
+What are cos pi and sin pi?
+
+106
+00:05:16,392 --> 00:05:17,292
+Two.
+
+107
+00:05:16,965 --> 00:05:19,874
+Why is sec of pi by two not defined?
+
+108
+00:05:20,774 --> 00:05:21,674
+Three.
+
+109
+00:05:21,426 --> 00:05:25,011
+P is the point zero point
+six, zero point eight.
+
+110
+00:05:25,011 --> 00:05:26,285
+What is tan x?
+
+111
+00:05:27,385 --> 00:05:31,779
+Next time: the valve can be above
+or below the hub, left or right.
+
+112
+00:05:31,779 --> 00:05:35,130
+Which signs do sine and
+cosine take in each quadrant?

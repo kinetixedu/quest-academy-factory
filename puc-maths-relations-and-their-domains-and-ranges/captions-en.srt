@@ -1,0 +1,523 @@
+1
+00:00:00,450 --> 00:00:04,203
+Five classmates and four
+blood groups: A, B, AB and O.
+
+2
+00:00:04,203 --> 00:00:08,041
+Pair every student with every
+group, and you get twenty pairs.
+
+3
+00:00:08,441 --> 00:00:10,998
+But only a few of those pairs are true.
+
+4
+00:00:10,998 --> 00:00:13,351
+Ravi has one blood group, not four.
+
+5
+00:00:13,351 --> 00:00:15,955
+And Joel has not even done his test yet.
+
+6
+00:00:16,405 --> 00:00:19,616
+Diya is making the list
+for a blood donation camp.
+
+7
+00:00:19,966 --> 00:00:23,671
+How do we keep just the true
+pairs, and describe them in maths?
+
+8
+00:00:24,171 --> 00:00:26,780
+We pick them out of the Cartesian product.
+
+9
+00:00:26,780 --> 00:00:28,965
+The pairs we keep form a relation.
+
+10
+00:00:29,615 --> 00:00:32,103
+Start with the full Cartesian product.
+
+11
+00:00:32,103 --> 00:00:34,254
+S is the set of five students.
+
+12
+00:00:34,254 --> 00:00:36,662
+G is the set of four blood groups.
+
+13
+00:00:37,012 --> 00:00:40,151
+S cross G has five times
+four, twenty pairs.
+
+14
+00:00:40,151 --> 00:00:42,345
+Every possible link is in here.
+
+15
+00:00:42,745 --> 00:00:46,925
+Now test each pair with one rule:
+student x has blood group y.
+
+16
+00:00:46,925 --> 00:00:49,317
+Pairs that fail the rule fade away.
+
+17
+00:00:49,717 --> 00:00:51,193
+Four pairs survive.
+
+18
+00:00:51,193 --> 00:00:54,957
+This chosen set of pairs
+is a relation from S to G.
+
+19
+00:00:55,607 --> 00:01:00,958
+In NCERT words: a relation R from a
+non empty set A to a non empty set
+
+20
+00:01:00,958 --> 00:01:04,809
+B is a subset of the
+Cartesian product A cross B.
+
+21
+00:01:05,209 --> 00:01:09,252
+The subset is picked by a relationship
+between the first element and the
+
+22
+00:01:09,252 --> 00:01:11,032
+second element of each pair.
+
+23
+00:01:11,432 --> 00:01:15,850
+If x comma y is in R, then
+y is called the image of x.
+
+24
+00:01:15,850 --> 00:01:17,349
+Ravi's image is O.
+
+25
+00:01:17,999 --> 00:01:20,378
+Every relation comes with three sets.
+
+26
+00:01:20,378 --> 00:01:21,615
+Watch the arrows.
+
+27
+00:01:21,965 --> 00:01:26,085
+The domain is the set of all
+first elements of the pairs in R.
+
+28
+00:01:26,085 --> 00:01:28,760
+Only students with an arrow leaving them.
+
+29
+00:01:28,760 --> 00:01:32,015
+Joel has no arrow, so
+he is not in the domain.
+
+30
+00:01:32,765 --> 00:01:35,637
+The range is the set
+of all second elements.
+
+31
+00:01:35,637 --> 00:01:38,913
+Only the groups an arrow
+lands on: O, A and B.
+
+32
+00:01:39,663 --> 00:01:42,467
+The codomain is the whole second set, G.
+
+33
+00:01:42,467 --> 00:01:45,985
+All four groups, even AB,
+which no arrow reached.
+
+34
+00:01:46,735 --> 00:01:47,835
+Side by side.
+
+35
+00:01:47,835 --> 00:01:50,717
+The range is what the arrows actually hit.
+
+36
+00:01:50,717 --> 00:01:52,224
+Here, three groups.
+
+37
+00:01:52,624 --> 00:01:55,334
+The codomain is everything they could hit.
+
+38
+00:01:55,334 --> 00:01:56,733
+Here, four groups.
+
+39
+00:01:56,733 --> 00:01:59,649
+So the range always sits
+inside the codomain.
+
+40
+00:02:00,249 --> 00:02:01,276
+Now you try.
+
+41
+00:02:01,276 --> 00:02:04,364
+Joel's test comes back,
+and he is group AB.
+
+42
+00:02:04,364 --> 00:02:05,949
+Does the range change?
+
+43
+00:02:05,949 --> 00:02:07,174
+Pause and think.
+
+44
+00:02:10,374 --> 00:02:11,274
+Yes!
+
+45
+00:02:10,914 --> 00:02:15,626
+A new arrow lands on AB, so the
+range grows to all four groups.
+
+46
+00:02:15,626 --> 00:02:17,743
+The codomain does not change.
+
+47
+00:02:17,743 --> 00:02:19,109
+It was always G.
+
+48
+00:02:19,759 --> 00:02:20,825
+Remember this.
+
+49
+00:02:20,825 --> 00:02:23,348
+A relation is a chosen set of pairs.
+
+50
+00:02:23,348 --> 00:02:25,700
+Its first elements make the domain.
+
+51
+00:02:25,700 --> 00:02:28,053
+Its second elements make the range.
+
+52
+00:02:28,753 --> 00:02:32,071
+Now, how many different relations
+can we make from A to B?
+
+53
+00:02:32,421 --> 00:02:33,321
+Step one.
+
+54
+00:02:33,304 --> 00:02:36,200
+A relation is any subset of A cross B.
+
+55
+00:02:36,950 --> 00:02:37,890
+Step two.
+
+56
+00:02:37,890 --> 00:02:43,654
+If A has p elements and B has q
+elements, A cross B has p times q pairs.
+
+57
+00:02:44,404 --> 00:02:45,304
+Step three.
+
+58
+00:02:45,262 --> 00:02:48,721
+Each pair has two choices:
+keep it, or leave it out.
+
+59
+00:02:49,471 --> 00:02:50,371
+Step four.
+
+60
+00:02:50,355 --> 00:02:55,223
+Two choices for every pair means two
+times two times two, once per pair.
+
+61
+00:02:55,223 --> 00:02:57,439
+That is two to the power p q.
+
+62
+00:02:58,189 --> 00:03:00,491
+Watch it with two times two pairs.
+
+63
+00:03:00,491 --> 00:03:04,978
+Four switches, sixteen different
+relations, from no pairs at all to every
+
+64
+00:03:04,978 --> 00:03:05,878
+pair.
+
+65
+00:03:06,171 --> 00:03:07,906
+Now, one worked example.
+
+66
+00:03:08,256 --> 00:03:09,670
+A is one to six.
+
+67
+00:03:09,670 --> 00:03:13,083
+R is the relation on A,
+where y equals two x.
+
+68
+00:03:13,083 --> 00:03:17,710
+Write R in roster form, then find
+its domain, range and codomain.
+
+69
+00:03:18,210 --> 00:03:19,110
+Step one.
+
+70
+00:03:19,032 --> 00:03:20,065
+Test each x.
+
+71
+00:03:20,065 --> 00:03:24,828
+Two times one is two, two times two
+is four, two times three is six.
+
+72
+00:03:24,828 --> 00:03:27,937
+Two times four is eight,
+which is not in A.
+
+73
+00:03:28,687 --> 00:03:29,587
+Step two.
+
+74
+00:03:29,520 --> 00:03:33,763
+So R is one comma two, two
+comma four, and three comma six.
+
+75
+00:03:34,513 --> 00:03:35,413
+Step three.
+
+76
+00:03:35,377 --> 00:03:38,853
+The domain is the first
+elements: one, two and three.
+
+77
+00:03:39,603 --> 00:03:40,503
+Step four.
+
+78
+00:03:40,447 --> 00:03:43,992
+The range is the second
+elements: two, four and six.
+
+79
+00:03:44,742 --> 00:03:45,642
+Step five.
+
+80
+00:03:45,596 --> 00:03:48,285
+The codomain is all of A, one to six.
+
+81
+00:03:48,285 --> 00:03:51,887
+A relation from A to itself
+is called a relation on A.
+
+82
+00:03:52,537 --> 00:03:54,003
+Now, the exam trap.
+
+83
+00:03:54,353 --> 00:03:56,728
+A has three elements and B has two.
+
+84
+00:03:56,728 --> 00:04:00,961
+Many students count the relations as
+two cubed times two squared, which
+
+85
+00:04:00,961 --> 00:04:02,043
+is thirty two.
+
+86
+00:04:02,443 --> 00:04:06,325
+But relations are subsets of A
+cross B, which has six pairs.
+
+87
+00:04:06,325 --> 00:04:09,626
+So the count is two to
+the power six, sixty four.
+
+88
+00:04:10,276 --> 00:04:11,815
+Where is this asked?
+
+89
+00:04:11,815 --> 00:04:15,109
+In PUC exams, as: find
+the domain and range.
+
+90
+00:04:15,109 --> 00:04:20,211
+In JEE Main, as: count the pairs in
+a relation, or count the relations.
+
+91
+00:04:20,811 --> 00:04:22,060
+Exam level now.
+
+92
+00:04:22,060 --> 00:04:24,250
+A is the numbers one to ten.
+
+93
+00:04:24,250 --> 00:04:29,330
+R is the set of pairs x comma y in
+A cross A with x plus two y equal to
+
+94
+00:04:29,330 --> 00:04:30,230
+twelve.
+
+95
+00:04:30,028 --> 00:04:34,621
+How many elements are in the
+domain of R, union the range of R?
+
+96
+00:04:34,621 --> 00:04:35,923
+Pause and solve.
+
+97
+00:04:41,323 --> 00:04:42,486
+The answer is B.
+
+98
+00:04:42,486 --> 00:04:43,386
+Eight.
+
+99
+00:04:43,535 --> 00:04:45,528
+x equals twelve minus two y.
+
+100
+00:04:45,528 --> 00:04:49,931
+For y from one to five, x is
+ten, eight, six, four and two.
+
+101
+00:04:50,431 --> 00:04:54,331
+y equals six would make x
+zero, which is not in A.
+
+102
+00:04:54,331 --> 00:04:56,024
+So R has five pairs.
+
+103
+00:04:56,524 --> 00:04:59,469
+The domain is two, four, six, eight, ten.
+
+104
+00:04:59,469 --> 00:05:01,192
+The range is one to five.
+
+105
+00:05:01,192 --> 00:05:02,813
+They share two and four.
+
+106
+00:05:03,313 --> 00:05:07,562
+So the union has five plus five
+minus two, which is eight elements.
+
+107
+00:05:08,162 --> 00:05:09,621
+Here is your recap.
+
+108
+00:05:09,621 --> 00:05:11,120
+Screenshot this card.
+
+109
+00:05:14,320 --> 00:05:17,157
+Can you answer these three
+questions without help?
+
+110
+00:05:17,557 --> 00:05:18,457
+One.
+
+111
+00:05:18,088 --> 00:05:22,971
+For R equal to one comma three, two
+comma five, two comma seven, write
+
+112
+00:05:22,971 --> 00:05:24,846
+the domain and the range.
+
+113
+00:05:25,746 --> 00:05:26,646
+Two.
+
+114
+00:05:26,201 --> 00:05:30,364
+How many relations are there from a
+set of two elements to a set of three
+
+115
+00:05:30,364 --> 00:05:31,264
+elements?
+
+116
+00:05:31,942 --> 00:05:32,842
+Three.
+
+117
+00:05:32,581 --> 00:05:35,650
+Why is the range always
+inside the codomain?
+
+118
+00:05:36,750 --> 00:05:40,596
+Next time: every roll number
+points to exactly one student.
+
+119
+00:05:40,596 --> 00:05:45,251
+When every element gets exactly one
+arrow, a relation becomes a function.

@@ -1,0 +1,499 @@
+1
+00:00:00,450 --> 00:00:03,284
+Watch a heart monitor in a biology video.
+
+2
+00:00:03,284 --> 00:00:04,184
+Beep.
+
+3
+00:00:03,855 --> 00:00:04,755
+Beep.
+
+4
+00:00:04,426 --> 00:00:05,326
+Beep.
+
+5
+00:00:05,397 --> 00:00:09,163
+The line draws a spike, then
+the same spike again, and again.
+
+6
+00:00:09,163 --> 00:00:10,948
+The same shape, every beat.
+
+7
+00:00:11,348 --> 00:00:15,336
+Diya saw this while studying at her
+desk, and thought of the sine wave.
+
+8
+00:00:15,686 --> 00:00:16,618
+Both repeat.
+
+9
+00:00:16,618 --> 00:00:20,992
+But how long is one repeat of sine,
+and why does it repeat at all?
+
+10
+00:00:21,492 --> 00:00:25,870
+Today, periodicity, and the hidden
+mirror symmetry of the trigonometric
+
+11
+00:00:25,870 --> 00:00:26,770
+graphs.
+
+12
+00:00:27,177 --> 00:00:29,637
+Turn P once round the unit circle.
+
+13
+00:00:29,637 --> 00:00:33,749
+That is two pi radians, or
+three hundred and sixty degrees.
+
+14
+00:00:34,149 --> 00:00:35,382
+Now keep turning.
+
+15
+00:00:35,382 --> 00:00:39,727
+Thirty degrees, then thirty plus
+three sixty, which is three ninety.
+
+16
+00:00:40,127 --> 00:00:42,726
+P lands on exactly the same point.
+
+17
+00:00:42,726 --> 00:00:44,634
+Same height, same side.
+
+18
+00:00:44,634 --> 00:00:48,132
+So sine and cosine give
+exactly the same values.
+
+19
+00:00:48,782 --> 00:00:49,950
+Watch the graph.
+
+20
+00:00:49,950 --> 00:00:54,148
+Every two pi, the same wave is
+printed again, like the heartbeat.
+
+21
+00:00:54,798 --> 00:00:56,253
+Let us write it down.
+
+22
+00:00:56,603 --> 00:00:57,503
+Step one.
+
+23
+00:00:57,418 --> 00:01:01,624
+Adding two pi turns P one full
+circle, back to the same point.
+
+24
+00:01:02,374 --> 00:01:03,410
+Step two.
+
+25
+00:01:03,410 --> 00:01:09,645
+So sine of two pi plus x equals sine
+x, and cosine of two pi plus x equals
+
+26
+00:01:09,645 --> 00:01:10,682
+cosine x.
+
+27
+00:01:11,432 --> 00:01:12,431
+Step three.
+
+28
+00:01:12,431 --> 00:01:14,559
+Add two pi again and again.
+
+29
+00:01:14,559 --> 00:01:18,945
+For any integer n, sine of
+two n pi plus x equals sine x.
+
+30
+00:01:18,945 --> 00:01:20,953
+The same holds for cosine.
+
+31
+00:01:21,703 --> 00:01:22,603
+Step four.
+
+32
+00:01:22,595 --> 00:01:27,594
+The smallest positive gap after which
+the values repeat is called the period.
+
+33
+00:01:27,594 --> 00:01:30,657
+For sine and cosine, the period is two pi.
+
+34
+00:01:31,407 --> 00:01:33,406
+Tangent repeats even sooner.
+
+35
+00:01:33,406 --> 00:01:34,824
+Its period is pi.
+
+36
+00:01:35,224 --> 00:01:38,095
+Half a turn sends P to the opposite point.
+
+37
+00:01:38,095 --> 00:01:42,844
+Sine and cosine both flip their signs,
+so their ratio, tangent, stays the
+
+38
+00:01:42,844 --> 00:01:43,744
+same.
+
+39
+00:01:44,050 --> 00:01:45,154
+Side by side.
+
+40
+00:01:45,154 --> 00:01:48,945
+Sine and cosine need a full
+turn, two pi, to repeat.
+
+41
+00:01:49,345 --> 00:01:51,890
+Tangent needs only half a turn, pi.
+
+42
+00:01:51,890 --> 00:01:54,385
+So its graph repeats twice as often.
+
+43
+00:01:54,985 --> 00:01:56,072
+Now you try.
+
+44
+00:01:56,072 --> 00:02:01,401
+Is sine of seven hundred and fifty degrees
+the same as sine of thirty degrees?
+
+45
+00:02:01,401 --> 00:02:02,751
+Pause and decide.
+
+46
+00:02:05,951 --> 00:02:06,851
+Yes!
+
+47
+00:02:06,465 --> 00:02:10,393
+Seven fifty is two full turns,
+seven twenty, plus thirty.
+
+48
+00:02:10,393 --> 00:02:14,130
+So sine seven fifty is sine
+thirty, which is one half.
+
+49
+00:02:14,780 --> 00:02:15,970
+Now symmetry.
+
+50
+00:02:15,970 --> 00:02:20,159
+Turn P by minus x, clockwise
+instead of anticlockwise.
+
+51
+00:02:20,559 --> 00:02:24,125
+The new point is the mirror
+image of P in the x axis.
+
+52
+00:02:24,125 --> 00:02:27,002
+Same side to side
+position, opposite height.
+
+53
+00:02:27,402 --> 00:02:33,184
+So cosine of minus x equals cosine
+x, and sine of minus x equals minus
+
+54
+00:02:33,184 --> 00:02:34,098
+sine x.
+
+55
+00:02:34,748 --> 00:02:38,525
+On the graph, cosine is a
+mirror image about the y axis.
+
+56
+00:02:38,525 --> 00:02:42,399
+Fold the paper along the y
+axis, and the two halves match.
+
+57
+00:02:43,049 --> 00:02:44,992
+Sine has a different symmetry.
+
+58
+00:02:44,992 --> 00:02:49,343
+Spin its graph half a turn about
+the origin, and it lands on itself.
+
+59
+00:02:49,993 --> 00:02:52,518
+A function like cosine is called even.
+
+60
+00:02:52,518 --> 00:02:54,896
+A function like sine is called odd.
+
+61
+00:02:55,496 --> 00:02:56,692
+Remember this.
+
+62
+00:02:56,692 --> 00:02:59,455
+Sine and cosine repeat every two pi.
+
+63
+00:02:59,455 --> 00:03:01,401
+Tangent repeats every pi.
+
+64
+00:03:02,101 --> 00:03:03,001
+Quick one.
+
+65
+00:03:03,000 --> 00:03:07,370
+Is cosine of minus sixty degrees
+plus a half, or minus a half?
+
+66
+00:03:07,370 --> 00:03:08,640
+Pause and think.
+
+67
+00:03:11,840 --> 00:03:13,066
+Plus a half!
+
+68
+00:03:13,066 --> 00:03:18,958
+Cosine of minus x equals cosine x, so
+cosine of minus sixty is cosine sixty,
+
+69
+00:03:18,958 --> 00:03:19,934
+one half.
+
+70
+00:03:20,584 --> 00:03:22,319
+Now, one worked example.
+
+71
+00:03:22,669 --> 00:03:26,846
+Find the value of sine of minus
+one thousand and fifty degrees.
+
+72
+00:03:27,346 --> 00:03:28,301
+Step one.
+
+73
+00:03:28,301 --> 00:03:29,501
+Sine is odd.
+
+74
+00:03:29,501 --> 00:03:34,963
+So sine of minus one thousand fifty
+is minus sine of one thousand fifty.
+
+75
+00:03:35,713 --> 00:03:36,613
+Step two.
+
+76
+00:03:36,550 --> 00:03:41,518
+One thousand fifty is three full turns,
+one thousand eighty, minus thirty.
+
+77
+00:03:41,518 --> 00:03:43,038
+Drop the full turns.
+
+78
+00:03:43,038 --> 00:03:45,089
+We get sine of minus thirty.
+
+79
+00:03:45,839 --> 00:03:46,798
+Step three.
+
+80
+00:03:46,798 --> 00:03:51,466
+Sine of minus thirty is minus sine
+thirty, which is minus one half.
+
+81
+00:03:52,216 --> 00:03:54,918
+So the answer is minus, minus one half.
+
+82
+00:03:54,918 --> 00:03:56,521
+That is plus one half.
+
+83
+00:03:57,171 --> 00:03:58,637
+Now, the exam trap.
+
+84
+00:03:58,987 --> 00:04:03,883
+Many students write: sine of minus
+x equals sine x, just like cosine.
+
+85
+00:04:04,283 --> 00:04:06,183
+But only cosine is even.
+
+86
+00:04:06,183 --> 00:04:07,181
+Sine flips.
+
+87
+00:04:07,181 --> 00:04:11,990
+Sine of minus thirty degrees is
+minus one half, not plus one half.
+
+88
+00:04:12,640 --> 00:04:14,054
+Where is this asked?
+
+89
+00:04:14,054 --> 00:04:18,459
+As questions on the values of large
+or negative angles, and on the period
+
+90
+00:04:18,459 --> 00:04:19,532
+of a function.
+
+91
+00:04:20,132 --> 00:04:21,348
+Exam level now.
+
+92
+00:04:21,348 --> 00:04:23,728
+Find the value of this expression.
+
+93
+00:04:23,728 --> 00:04:24,995
+Pause and solve.
+
+94
+00:04:30,395 --> 00:04:31,623
+The answer is B.
+
+95
+00:04:31,623 --> 00:04:32,523
+One.
+
+96
+00:04:32,609 --> 00:04:36,585
+Sine is odd, and seven fifty
+is seven twenty plus thirty.
+
+97
+00:04:36,585 --> 00:04:39,778
+So sine of minus seven
+fifty is minus a half.
+
+98
+00:04:40,278 --> 00:04:44,327
+Cosine is even, and four twenty
+is three sixty plus sixty.
+
+99
+00:04:44,327 --> 00:04:47,588
+So cosine of minus four
+twenty is plus a half.
+
+100
+00:04:48,088 --> 00:04:50,809
+Tangent repeats every one eighty degrees.
+
+101
+00:04:50,809 --> 00:04:54,909
+Eleven twenty five is six times
+one eighty, plus forty five.
+
+102
+00:04:54,909 --> 00:04:57,762
+So it is tan forty five, which is one.
+
+103
+00:04:58,362 --> 00:05:00,856
+Minus a half, plus a half, plus one.
+
+104
+00:05:00,856 --> 00:05:02,081
+The total is one.
+
+105
+00:05:02,581 --> 00:05:04,042
+Here is your recap.
+
+106
+00:05:04,042 --> 00:05:05,544
+Screenshot this card.
+
+107
+00:05:08,744 --> 00:05:11,743
+Can you answer these three
+questions without help?
+
+108
+00:05:12,143 --> 00:05:13,043
+One.
+
+109
+00:05:12,649 --> 00:05:14,744
+What is the period of tangent?
+
+110
+00:05:15,644 --> 00:05:16,544
+Two.
+
+111
+00:05:16,236 --> 00:05:19,188
+Is sine of minus x equal to sine x?
+
+112
+00:05:20,088 --> 00:05:20,988
+Three.
+
+113
+00:05:20,846 --> 00:05:23,790
+Simplify cosine of x plus four pi.
+
+114
+00:05:24,890 --> 00:05:29,335
+Next time: three different looking
+expressions always give the same number.
+
+115
+00:05:29,335 --> 00:05:31,576
+We meet the trigonometric identities.

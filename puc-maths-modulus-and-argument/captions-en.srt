@@ -1,0 +1,540 @@
+1
+00:00:00,450 --> 00:00:02,606
+Two cyclists leave the same gate.
+
+2
+00:00:02,606 --> 00:00:04,762
+Both end up five kilometres away.
+
+3
+00:00:04,762 --> 00:00:06,632
+Are they in the same place?
+
+4
+00:00:07,032 --> 00:00:07,994
+Not always.
+
+5
+00:00:07,994 --> 00:00:11,057
+One went north east, the other south west.
+
+6
+00:00:11,057 --> 00:00:12,771
+Distance is not enough.
+
+7
+00:00:12,771 --> 00:00:14,705
+You also need a direction.
+
+8
+00:00:15,155 --> 00:00:17,755
+Aarav thought about
+this on his ride today.
+
+9
+00:00:18,105 --> 00:00:21,666
+He rode four kilometres east,
+then three kilometres north.
+
+10
+00:00:21,666 --> 00:00:24,814
+How far is he from home,
+and in which direction?
+
+11
+00:00:25,214 --> 00:00:27,443
+A complex number answers both.
+
+12
+00:00:27,443 --> 00:00:29,291
+How far is the modulus.
+
+13
+00:00:29,291 --> 00:00:31,302
+Which way is the argument.
+
+14
+00:00:31,952 --> 00:00:33,126
+First, the picture.
+
+15
+00:00:33,476 --> 00:00:38,503
+Think of z, a plus i b, as a trip
+from the origin O: a steps along the
+
+16
+00:00:38,503 --> 00:00:41,766
+real axis, then b steps
+up, to the point P.
+
+17
+00:00:42,166 --> 00:00:44,901
+Episode forty three
+builds this map in full.
+
+18
+00:00:44,901 --> 00:00:46,768
+Today, we measure the trip.
+
+19
+00:00:47,368 --> 00:00:48,268
+How far?
+
+20
+00:00:48,146 --> 00:00:52,619
+That is the modulus of z, written
+with two straight bars around z.
+
+21
+00:00:52,969 --> 00:00:53,869
+Step one.
+
+22
+00:00:53,779 --> 00:00:56,368
+The trip makes a right angled triangle.
+
+23
+00:00:56,368 --> 00:00:58,720
+The base is a, the height is b.
+
+24
+00:00:59,470 --> 00:01:00,370
+Step two.
+
+25
+00:01:00,359 --> 00:01:04,597
+Pythagoras says OP squared
+equals a squared plus b squared.
+
+26
+00:01:05,347 --> 00:01:06,271
+Step three.
+
+27
+00:01:06,271 --> 00:01:07,818
+Take the square root.
+
+28
+00:01:07,818 --> 00:01:12,126
+The modulus of z is the square
+root of a squared plus b squared.
+
+29
+00:01:12,876 --> 00:01:16,482
+For Aarav: four squared plus
+three squared is twenty five.
+
+30
+00:01:16,482 --> 00:01:18,121
+Its square root is five.
+
+31
+00:01:18,121 --> 00:01:20,192
+He is five kilometres from home.
+
+32
+00:01:20,842 --> 00:01:26,106
+And recall: z times z bar is a squared
+plus b squared, which is the modulus,
+
+33
+00:01:26,106 --> 00:01:27,006
+squared.
+
+34
+00:01:27,437 --> 00:01:28,705
+Now, which way?
+
+35
+00:01:28,705 --> 00:01:30,598
+That is the argument of z.
+
+36
+00:01:30,948 --> 00:01:35,983
+The argument is the angle from the
+positive real axis to the line OP.
+
+37
+00:01:35,983 --> 00:01:38,300
+Anticlockwise counts as positive.
+
+38
+00:01:38,700 --> 00:01:40,663
+Clockwise counts as negative.
+
+39
+00:01:40,663 --> 00:01:44,061
+We pick the one angle
+above minus pi, up to pi.
+
+40
+00:01:44,061 --> 00:01:46,185
+That is the principal argument.
+
+41
+00:01:46,585 --> 00:01:47,882
+Watch a trip run.
+
+42
+00:01:47,882 --> 00:01:49,672
+z moves around the origin.
+
+43
+00:01:49,672 --> 00:01:52,208
+Its distance and its angle update live.
+
+44
+00:01:52,608 --> 00:01:55,779
+Below the real axis, the
+angle turns negative.
+
+45
+00:01:55,779 --> 00:02:00,672
+And z bar, the mirror, keeps the same
+modulus but the opposite argument.
+
+46
+00:02:01,072 --> 00:02:04,059
+Zero is the only number with no argument.
+
+47
+00:02:04,059 --> 00:02:06,166
+It has no direction at all.
+
+48
+00:02:06,816 --> 00:02:07,716
+Quick one.
+
+49
+00:02:07,708 --> 00:02:12,244
+One plus i, and minus one minus
+i: same argument, or different?
+
+50
+00:02:12,244 --> 00:02:13,507
+Pause and think.
+
+51
+00:02:16,707 --> 00:02:17,607
+Different!
+
+52
+00:02:17,519 --> 00:02:21,348
+b over a is one for both,
+but they point opposite ways.
+
+53
+00:02:21,348 --> 00:02:24,194
+Pi by four, and minus three pi by four.
+
+54
+00:02:24,844 --> 00:02:28,112
+So how do we find the
+argument without a protractor?
+
+55
+00:02:28,462 --> 00:02:29,362
+Step one.
+
+56
+00:02:29,298 --> 00:02:34,116
+Find the reference angle, alpha: the
+sharp angle whose tangent is the size
+
+57
+00:02:34,116 --> 00:02:35,226
+of b over a.
+
+58
+00:02:35,976 --> 00:02:36,876
+Step two.
+
+59
+00:02:36,817 --> 00:02:40,109
+Use the signs of a and
+b to find the quadrant.
+
+60
+00:02:40,859 --> 00:02:41,840
+Step three.
+
+61
+00:02:41,840 --> 00:02:44,185
+First quadrant, theta is alpha.
+
+62
+00:02:44,185 --> 00:02:46,584
+Second quadrant, pi minus alpha.
+
+63
+00:02:47,334 --> 00:02:49,884
+Third quadrant, minus pi plus alpha.
+
+64
+00:02:49,884 --> 00:02:51,957
+Fourth quadrant, minus alpha.
+
+65
+00:02:52,707 --> 00:02:55,484
+For Aarav, tan alpha is three over four.
+
+66
+00:02:55,484 --> 00:02:58,860
+Alpha is about thirty seven
+degrees, north of east.
+
+67
+00:02:59,460 --> 00:03:00,646
+Side by side.
+
+68
+00:03:00,646 --> 00:03:05,279
+Three plus four i, and three
+minus four i, are mirror images.
+
+69
+00:03:05,279 --> 00:03:06,904
+Same modulus, five.
+
+70
+00:03:06,904 --> 00:03:08,353
+Opposite arguments.
+
+71
+00:03:08,753 --> 00:03:13,567
+Three plus four i, and minus three
+minus four i, also share the modulus
+
+72
+00:03:13,567 --> 00:03:16,120
+five, but they point opposite ways.
+
+73
+00:03:16,720 --> 00:03:17,878
+Now you try.
+
+74
+00:03:17,878 --> 00:03:21,478
+Is the modulus of three
+minus four i also five?
+
+75
+00:03:21,478 --> 00:03:22,917
+Pause and decide.
+
+76
+00:03:26,117 --> 00:03:27,017
+Yes!
+
+77
+00:03:26,622 --> 00:03:30,078
+Square both parts: nine
+plus sixteen is twenty five.
+
+78
+00:03:30,078 --> 00:03:32,929
+A minus sign disappears
+when you square it.
+
+79
+00:03:33,579 --> 00:03:34,643
+Remember this.
+
+80
+00:03:34,643 --> 00:03:36,741
+The modulus tells you how far.
+
+81
+00:03:36,741 --> 00:03:38,988
+The argument tells you which way.
+
+82
+00:03:39,688 --> 00:03:41,423
+Now, one worked example.
+
+83
+00:03:41,773 --> 00:03:46,471
+Find the modulus and the principal
+argument of minus one, minus root three
+
+84
+00:03:46,471 --> 00:03:47,371
+i.
+
+85
+00:03:47,387 --> 00:03:48,287
+Step one.
+
+86
+00:03:48,192 --> 00:03:52,394
+The modulus is the square root
+of one plus three, which is two.
+
+87
+00:03:53,144 --> 00:03:54,044
+Step two.
+
+88
+00:03:53,917 --> 00:03:57,718
+tan alpha is root three over
+one, so alpha is pi by three.
+
+89
+00:03:58,468 --> 00:03:59,368
+Step three.
+
+90
+00:03:59,299 --> 00:04:02,894
+a and b are both negative, so
+z is in the third quadrant.
+
+91
+00:04:03,644 --> 00:04:04,608
+Step four.
+
+92
+00:04:04,608 --> 00:04:09,705
+Theta is minus pi plus pi by three,
+which is minus two pi by three.
+
+93
+00:04:10,455 --> 00:04:15,567
+So the modulus is two, and the principal
+argument is minus two pi by three.
+
+94
+00:04:16,217 --> 00:04:17,682
+Now, the exam trap.
+
+95
+00:04:18,032 --> 00:04:20,868
+Find the argument of minus one minus i.
+
+96
+00:04:20,868 --> 00:04:25,175
+Many students take tan inverse
+of one, and write pi by four.
+
+97
+00:04:25,575 --> 00:04:28,677
+But pi by four points
+into the first quadrant.
+
+98
+00:04:28,677 --> 00:04:31,217
+Minus one minus i sits in the third.
+
+99
+00:04:31,217 --> 00:04:34,169
+The right answer is
+minus three pi by four.
+
+100
+00:04:34,819 --> 00:04:36,517
+Where is this asked?
+
+101
+00:04:36,517 --> 00:04:41,907
+In JEE Main and JEE Advanced, on the
+modulus and the principal argument.
+
+102
+00:04:41,907 --> 00:04:45,074
+And in PUC board exams, on the modulus.
+
+103
+00:04:45,674 --> 00:04:46,964
+Exam level now.
+
+104
+00:04:46,964 --> 00:04:50,506
+Find the modulus and the
+principal argument of z.
+
+105
+00:04:50,506 --> 00:04:51,850
+Pause and solve.
+
+106
+00:04:57,250 --> 00:04:58,592
+The answer is A.
+
+107
+00:04:58,592 --> 00:05:01,005
+Root two, and three pi by four.
+
+108
+00:05:01,505 --> 00:05:04,201
+First, one plus i, squared, is two i.
+
+109
+00:05:04,701 --> 00:05:08,528
+Multiply top and bottom by
+the conjugate, one plus i.
+
+110
+00:05:08,528 --> 00:05:12,525
+The bottom becomes two, and
+z becomes minus one plus i.
+
+111
+00:05:13,025 --> 00:05:14,793
+The modulus is root two.
+
+112
+00:05:14,793 --> 00:05:19,703
+z is in the second quadrant with alpha
+pi by four, so the argument is three
+
+113
+00:05:19,703 --> 00:05:20,693
+pi by four.
+
+114
+00:05:21,293 --> 00:05:22,752
+Here is your recap.
+
+115
+00:05:22,752 --> 00:05:24,252
+Screenshot this card.
+
+116
+00:05:27,452 --> 00:05:30,450
+Can you answer these three
+questions without help?
+
+117
+00:05:30,850 --> 00:05:31,750
+One.
+
+118
+00:05:31,406 --> 00:05:34,948
+What is the modulus of
+minus five plus twelve i?
+
+119
+00:05:35,848 --> 00:05:36,748
+Two.
+
+120
+00:05:36,421 --> 00:05:40,241
+What is the principal
+argument of minus one plus i?
+
+121
+00:05:41,141 --> 00:05:42,041
+Three.
+
+122
+00:05:41,849 --> 00:05:45,693
+Why do z and z bar always
+have the same modulus?
+
+123
+00:05:46,793 --> 00:05:51,305
+Next time: Diya gives every complex
+number its own address on a map.
+
+124
+00:05:51,305 --> 00:05:53,356
+That map is the Argand plane.

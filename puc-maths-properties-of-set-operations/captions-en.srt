@@ -1,0 +1,574 @@
+1
+00:00:00,450 --> 00:00:03,547
+Two plus three is the
+same as three plus two.
+
+2
+00:00:03,547 --> 00:00:06,384
+But five minus two is not two minus five.
+
+3
+00:00:06,784 --> 00:00:08,139
+So what about sets?
+
+4
+00:00:08,139 --> 00:00:10,558
+Does the order ever change the answer?
+
+5
+00:00:11,008 --> 00:00:14,211
+Aarav asked this while
+revising sets after class.
+
+6
+00:00:14,561 --> 00:00:17,019
+Is A union B the same as B union A?
+
+7
+00:00:17,019 --> 00:00:19,837
+And what if he mixes
+union with intersection?
+
+8
+00:00:20,337 --> 00:00:22,468
+Sets follow a short list of laws.
+
+9
+00:00:22,468 --> 00:00:25,572
+Learn them once, and long
+expressions become short.
+
+10
+00:00:26,222 --> 00:00:27,420
+First, order.
+
+11
+00:00:27,420 --> 00:00:30,627
+A union B collects
+everything in A or in B.
+
+12
+00:00:30,627 --> 00:00:33,814
+B union A collects
+exactly the same elements.
+
+13
+00:00:34,214 --> 00:00:36,010
+So union is commutative.
+
+14
+00:00:36,010 --> 00:00:37,976
+The order does not matter.
+
+15
+00:00:37,976 --> 00:00:40,197
+Intersection is commutative too.
+
+16
+00:00:40,597 --> 00:00:41,653
+Now grouping.
+
+17
+00:00:41,653 --> 00:00:44,118
+Join A and B first, then add C.
+
+18
+00:00:44,118 --> 00:00:46,800
+Or join B and C first, then add A.
+
+19
+00:00:47,200 --> 00:00:50,692
+Either way, you collect
+every element of all three.
+
+20
+00:00:50,692 --> 00:00:52,407
+So union is associative.
+
+21
+00:00:52,407 --> 00:00:54,021
+The brackets can move.
+
+22
+00:00:54,021 --> 00:00:56,142
+Intersection is associative too.
+
+23
+00:00:56,792 --> 00:00:58,602
+But recall episode eight.
+
+24
+00:00:58,602 --> 00:01:01,721
+A minus B and B minus
+A are different sets.
+
+25
+00:01:02,371 --> 00:01:04,064
+Next, the special sets.
+
+26
+00:01:04,064 --> 00:01:07,984
+The empty set adds nothing,
+so A union the empty set is A.
+
+27
+00:01:08,384 --> 00:01:12,035
+And A union U is U, because
+U already holds everything.
+
+28
+00:01:12,435 --> 00:01:14,315
+For intersection, it flips.
+
+29
+00:01:14,315 --> 00:01:17,310
+A intersection the empty
+set is the empty set.
+
+30
+00:01:17,310 --> 00:01:18,909
+A intersection U is A.
+
+31
+00:01:19,309 --> 00:01:20,848
+And a set with itself.
+
+32
+00:01:20,848 --> 00:01:23,749
+A union A is A, and A intersection A is A.
+
+33
+00:01:23,749 --> 00:01:25,708
+Doing it twice changes nothing.
+
+34
+00:01:25,708 --> 00:01:28,003
+These are called the idempotent laws.
+
+35
+00:01:28,653 --> 00:01:31,898
+Now the big one, where
+union and intersection mix.
+
+36
+00:01:31,898 --> 00:01:33,315
+The distributive law.
+
+37
+00:01:33,715 --> 00:01:39,317
+It says: A intersection, B union C, equals
+A intersection B, union A intersection
+
+38
+00:01:39,317 --> 00:01:40,217
+C.
+
+39
+00:01:40,147 --> 00:01:42,134
+Let's test it with shading.
+
+40
+00:01:42,134 --> 00:01:43,454
+Left side first.
+
+41
+00:01:43,454 --> 00:01:44,839
+Shade B union C.
+
+42
+00:01:44,839 --> 00:01:47,330
+Then keep only the part inside A.
+
+43
+00:01:48,080 --> 00:01:49,554
+Now the right side.
+
+44
+00:01:49,554 --> 00:01:51,233
+Shade A intersection B.
+
+45
+00:01:51,233 --> 00:01:53,127
+Then add A intersection C.
+
+46
+00:01:53,877 --> 00:01:56,294
+Both sides shade the same three pieces.
+
+47
+00:01:56,294 --> 00:01:59,809
+The picture works for any
+sets, so the law always holds.
+
+48
+00:02:00,459 --> 00:02:02,826
+It works the other way round too.
+
+49
+00:02:02,826 --> 00:02:07,652
+A union, B intersection C, equals
+A union B, intersection A union C.
+
+50
+00:02:08,252 --> 00:02:09,326
+Side by side.
+
+51
+00:02:09,326 --> 00:02:12,469
+In numbers, multiplication
+spreads over addition.
+
+52
+00:02:12,469 --> 00:02:17,174
+Two times, three plus four, is two
+times three, plus two times four.
+
+53
+00:02:17,574 --> 00:02:20,515
+But addition does not
+spread over multiplication.
+
+54
+00:02:20,515 --> 00:02:23,221
+Two plus, three times four, is fourteen.
+
+55
+00:02:23,221 --> 00:02:26,370
+Two plus three, times
+two plus four, is thirty.
+
+56
+00:02:26,970 --> 00:02:28,039
+Now you try.
+
+57
+00:02:28,039 --> 00:02:32,723
+For sets, does union spread over
+intersection, the same way intersection
+
+58
+00:02:32,723 --> 00:02:34,156
+spreads over union?
+
+59
+00:02:34,156 --> 00:02:35,486
+Pause and decide.
+
+60
+00:02:38,686 --> 00:02:39,586
+Yes!
+
+61
+00:02:39,209 --> 00:02:42,203
+With sets, both
+distributive laws are true.
+
+62
+00:02:42,203 --> 00:02:45,525
+That is one way sets are
+friendlier than numbers.
+
+63
+00:02:46,175 --> 00:02:47,179
+Remember this.
+
+64
+00:02:47,179 --> 00:02:51,698
+Order and brackets never matter, and
+each operation spreads over the other.
+
+65
+00:02:52,398 --> 00:02:56,936
+Last, the laws for complements, named
+after the mathematician Augustus
+
+66
+00:02:56,936 --> 00:02:57,843
+De Morgan.
+
+67
+00:02:58,243 --> 00:02:59,158
+Step one.
+
+68
+00:02:59,158 --> 00:03:03,686
+The complement of A union B is
+everything outside both circles.
+
+69
+00:03:04,436 --> 00:03:05,336
+Step two.
+
+70
+00:03:05,315 --> 00:03:07,300
+Outside A is A complement.
+
+71
+00:03:07,300 --> 00:03:09,284
+Outside B is B complement.
+
+72
+00:03:09,284 --> 00:03:12,148
+Outside both is where these two overlap.
+
+73
+00:03:12,898 --> 00:03:13,863
+Step three.
+
+74
+00:03:13,863 --> 00:03:18,979
+So the complement of A union B equals
+A complement intersection B complement.
+
+75
+00:03:19,729 --> 00:03:24,109
+In the same way, the complement of
+A intersection B equals A complement
+
+76
+00:03:24,109 --> 00:03:25,458
+union B complement.
+
+77
+00:03:25,458 --> 00:03:28,253
+The complement flips
+union into intersection.
+
+78
+00:03:28,903 --> 00:03:29,811
+Quick one.
+
+79
+00:03:29,811 --> 00:03:34,925
+Is the complement of A union B the same
+as A complement union B complement?
+
+80
+00:03:34,925 --> 00:03:36,208
+Pause and think.
+
+81
+00:03:39,408 --> 00:03:40,308
+No!
+
+82
+00:03:39,909 --> 00:03:44,774
+A complement union B complement is
+the complement of A intersection B.
+
+83
+00:03:44,774 --> 00:03:48,245
+It also covers the parts
+inside only one circle.
+
+84
+00:03:48,895 --> 00:03:50,631
+Now, one worked example.
+
+85
+00:03:50,981 --> 00:03:52,343
+U is one to eight.
+
+86
+00:03:52,343 --> 00:03:54,568
+A is one, two, three and four.
+
+87
+00:03:54,568 --> 00:03:56,841
+B is three, four, five and six.
+
+88
+00:03:56,841 --> 00:03:58,625
+Check De Morgan's first law.
+
+89
+00:03:59,125 --> 00:04:00,025
+Step one.
+
+90
+00:04:00,012 --> 00:04:03,039
+A union B is the numbers one up to six.
+
+91
+00:04:03,789 --> 00:04:04,689
+Step two.
+
+92
+00:04:04,636 --> 00:04:07,405
+Its complement in U is seven and eight.
+
+93
+00:04:08,155 --> 00:04:09,055
+Step three.
+
+94
+00:04:09,029 --> 00:04:11,958
+A complement is five,
+six, seven and eight.
+
+95
+00:04:11,958 --> 00:04:14,840
+B complement is one, two, seven and eight.
+
+96
+00:04:15,590 --> 00:04:16,490
+Step four.
+
+97
+00:04:16,417 --> 00:04:19,508
+The numbers in both of
+them are seven and eight.
+
+98
+00:04:20,258 --> 00:04:21,158
+Step five.
+
+99
+00:04:21,128 --> 00:04:23,339
+Both sides give seven and eight.
+
+100
+00:04:23,339 --> 00:04:25,190
+De Morgan's law checks out.
+
+101
+00:04:25,840 --> 00:04:27,306
+Now, the exam trap.
+
+102
+00:04:27,656 --> 00:04:31,936
+Many students move brackets freely,
+even when union and intersection are
+
+103
+00:04:31,936 --> 00:04:32,836
+mixed.
+
+104
+00:04:32,928 --> 00:04:33,828
+Test it.
+
+105
+00:04:33,681 --> 00:04:36,167
+A is one, B is two, C is three.
+
+106
+00:04:36,167 --> 00:04:37,733
+The left side is one.
+
+107
+00:04:37,733 --> 00:04:39,446
+The right side is empty.
+
+108
+00:04:39,446 --> 00:04:43,066
+Brackets move freely only when
+the operation is the same.
+
+109
+00:04:43,716 --> 00:04:45,334
+Where is this asked?
+
+110
+00:04:45,334 --> 00:04:50,980
+In PUC board exams, as: verify a law,
+or prove an identity like De Morgan's.
+
+111
+00:04:50,980 --> 00:04:55,062
+And in JEE Main, as: which
+set statement is not true.
+
+112
+00:04:55,662 --> 00:04:56,967
+Exam level now.
+
+113
+00:04:56,967 --> 00:04:58,438
+Simplify this set.
+
+114
+00:04:58,438 --> 00:04:59,799
+Pause and solve.
+
+115
+00:05:05,199 --> 00:05:06,718
+The answer is C.
+
+116
+00:05:06,718 --> 00:05:07,618
+Just B.
+
+117
+00:05:08,066 --> 00:05:10,328
+Both brackets contain union B.
+
+118
+00:05:10,328 --> 00:05:14,520
+So take B outside, using the
+distributive law in reverse.
+
+119
+00:05:15,020 --> 00:05:17,918
+That leaves A intersection
+A complement, union B.
+
+120
+00:05:18,418 --> 00:05:21,398
+A intersection A complement
+is the empty set.
+
+121
+00:05:21,398 --> 00:05:23,989
+And the empty set union B is just B.
+
+122
+00:05:24,589 --> 00:05:26,050
+Here is your recap.
+
+123
+00:05:26,050 --> 00:05:27,551
+Screenshot this card.
+
+124
+00:05:30,751 --> 00:05:33,588
+Can you answer these three
+questions without help?
+
+125
+00:05:33,988 --> 00:05:34,888
+One.
+
+126
+00:05:34,570 --> 00:05:37,940
+Which law says A union B equals B union A?
+
+127
+00:05:38,840 --> 00:05:39,740
+Two.
+
+128
+00:05:39,334 --> 00:05:41,772
+What is A intersection the empty set?
+
+129
+00:05:42,672 --> 00:05:43,572
+Three.
+
+130
+00:05:43,293 --> 00:05:47,522
+Write the complement of A
+intersection B, using De Morgan's law.
+
+131
+00:05:48,622 --> 00:05:53,220
+Next time: twenty five like tea,
+eighteen like coffee, and ten like both.
+
+132
+00:05:53,220 --> 00:05:55,214
+So how many students are there?
+
+133
+00:05:55,214 --> 00:05:56,737
+We count it with sets.

@@ -1,0 +1,525 @@
+1
+00:00:00,450 --> 00:00:03,667
+Every real number has a
+home on the number line.
+
+2
+00:00:03,667 --> 00:00:05,192
+Minus two lives here.
+
+3
+00:00:05,192 --> 00:00:06,509
+Three lives there.
+
+4
+00:00:06,909 --> 00:00:09,216
+But where does three plus two i live?
+
+5
+00:00:09,216 --> 00:00:11,478
+Not left of zero, not right of it.
+
+6
+00:00:11,478 --> 00:00:13,087
+The line is already full.
+
+7
+00:00:13,537 --> 00:00:16,845
+Diya found the answer as she
+walked into college today.
+
+8
+00:00:17,195 --> 00:00:20,903
+In Bengaluru, an address can
+be fourth main, second cross.
+
+9
+00:00:20,903 --> 00:00:22,537
+Two numbers, one house.
+
+10
+00:00:22,937 --> 00:00:25,703
+Complex numbers get the
+same kind of address.
+
+11
+00:00:25,703 --> 00:00:28,423
+Today we draw their map: the Argand plane.
+
+12
+00:00:29,073 --> 00:00:30,435
+Here is the idea.
+
+13
+00:00:30,785 --> 00:00:33,920
+Keep the real number line,
+flat, from left to right.
+
+14
+00:00:33,920 --> 00:00:37,098
+Then add a second line through
+zero, going straight up.
+
+15
+00:00:37,498 --> 00:00:39,924
+The flat line is the real axis.
+
+16
+00:00:39,924 --> 00:00:42,788
+The upright line is the imaginary axis.
+
+17
+00:00:43,188 --> 00:00:47,715
+Now the complex number x plus
+i y sits at the point x, y.
+
+18
+00:00:47,715 --> 00:00:49,744
+Go x along, then y up.
+
+19
+00:00:50,344 --> 00:00:55,013
+Every complex number gets exactly one
+point, and every point gets exactly
+
+20
+00:00:55,013 --> 00:00:56,438
+one complex number.
+
+21
+00:00:56,438 --> 00:00:59,785
+This is the complex plane,
+or the Argand plane.
+
+22
+00:01:00,385 --> 00:01:05,309
+It is named after Jean Robert Argand,
+who described it in an essay in eighteen
+
+23
+00:01:05,309 --> 00:01:06,209
+oh six.
+
+24
+00:01:06,025 --> 00:01:10,263
+Caspar Wessel had published the
+same idea in seventeen ninety nine.
+
+25
+00:01:10,863 --> 00:01:14,262
+Watch the map fill up, with
+points from the NCERT figure.
+
+26
+00:01:14,612 --> 00:01:15,917
+Two plus four i.
+
+27
+00:01:15,917 --> 00:01:17,474
+Two along, four up.
+
+28
+00:01:17,874 --> 00:01:19,467
+Minus two plus three i.
+
+29
+00:01:19,467 --> 00:01:21,349
+Two to the left, three up.
+
+30
+00:01:21,749 --> 00:01:23,599
+Minus five minus two i.
+
+31
+00:01:23,599 --> 00:01:25,329
+Five left, two down.
+
+32
+00:01:25,329 --> 00:01:26,732
+One minus two i.
+
+33
+00:01:26,732 --> 00:01:28,462
+One right, two down.
+
+34
+00:01:28,862 --> 00:01:32,023
+Two plus zero i lands on the real axis.
+
+35
+00:01:32,023 --> 00:01:35,471
+Zero plus one i lands
+on the imaginary axis.
+
+36
+00:01:35,471 --> 00:01:37,432
+That point is i itself.
+
+37
+00:01:37,832 --> 00:01:43,147
+So real numbers live on the real axis,
+and purely imaginary numbers live
+
+38
+00:01:43,147 --> 00:01:45,012
+on the imaginary axis.
+
+39
+00:01:45,662 --> 00:01:46,562
+Quick one.
+
+40
+00:01:46,507 --> 00:01:48,508
+Where does minus four i live?
+
+41
+00:01:48,508 --> 00:01:49,702
+Pause and think.
+
+42
+00:01:52,902 --> 00:01:56,070
+On the imaginary axis,
+four steps below zero.
+
+43
+00:01:56,070 --> 00:02:00,204
+Its real part is zero, so it
+never leaves the upright line.
+
+44
+00:02:00,854 --> 00:02:03,676
+The map also shows two
+old friends for free.
+
+45
+00:02:04,026 --> 00:02:08,802
+The distance from O to the point is
+the modulus: root of x squared plus
+
+46
+00:02:08,802 --> 00:02:09,705
+y squared.
+
+47
+00:02:10,105 --> 00:02:15,012
+And the conjugate, x minus i y, is
+the mirror image of the point in the
+
+48
+00:02:15,012 --> 00:02:15,912
+real axis.
+
+49
+00:02:16,509 --> 00:02:20,104
+Now the map's superpower: the
+distance between two numbers.
+
+50
+00:02:20,454 --> 00:02:21,441
+Step one.
+
+51
+00:02:21,441 --> 00:02:22,355
+Subtract.
+
+52
+00:02:22,355 --> 00:02:28,422
+z one minus z two is x one minus x
+two, plus i times y one minus y two.
+
+53
+00:02:29,172 --> 00:02:30,072
+Step two.
+
+54
+00:02:29,988 --> 00:02:34,437
+Its modulus is the root of those
+two differences, squared and added.
+
+55
+00:02:35,187 --> 00:02:36,099
+Step three.
+
+56
+00:02:36,099 --> 00:02:39,919
+That is exactly the distance
+formula between the two points.
+
+57
+00:02:40,669 --> 00:02:45,597
+So the modulus of z one minus z two
+is the distance between them on the
+
+58
+00:02:45,597 --> 00:02:46,497
+map.
+
+59
+00:02:46,798 --> 00:02:48,869
+Now watch a rule draw a shape.
+
+60
+00:02:48,869 --> 00:02:52,087
+Fix the real part of z
+at two, and let z move.
+
+61
+00:02:52,087 --> 00:02:54,292
+It traces a straight upright line.
+
+62
+00:02:54,692 --> 00:02:57,665
+Now fix the modulus of z at two instead.
+
+63
+00:02:57,665 --> 00:02:59,870
+z must stay two away from O.
+
+64
+00:02:59,870 --> 00:03:01,404
+It traces a circle.
+
+65
+00:03:02,004 --> 00:03:03,140
+Side by side.
+
+66
+00:03:03,140 --> 00:03:05,412
+Real part equals two: a line.
+
+67
+00:03:05,412 --> 00:03:07,621
+Modulus equals two: a circle.
+
+68
+00:03:07,621 --> 00:03:10,744
+One small change, a
+totally different shape.
+
+69
+00:03:11,144 --> 00:03:12,263
+Now you try.
+
+70
+00:03:12,263 --> 00:03:15,228
+The modulus of z minus one equals three.
+
+71
+00:03:15,228 --> 00:03:17,019
+A line, or a circle?
+
+72
+00:03:17,019 --> 00:03:18,410
+Pause and decide.
+
+73
+00:03:21,610 --> 00:03:22,510
+A circle!
+
+74
+00:03:22,450 --> 00:03:25,681
+Every such z is three
+away from the point one.
+
+75
+00:03:25,681 --> 00:03:27,567
+Centre one, radius three.
+
+76
+00:03:28,217 --> 00:03:29,282
+Remember this.
+
+77
+00:03:29,282 --> 00:03:31,970
+x plus i y lives at the point x, y.
+
+78
+00:03:31,970 --> 00:03:35,614
+And distance on the map is
+the modulus of a difference.
+
+79
+00:03:36,314 --> 00:03:38,049
+Now, one worked example.
+
+80
+00:03:38,399 --> 00:03:43,166
+Find the distance between z one, one
+plus two i, and z two, four minus
+
+81
+00:03:43,166 --> 00:03:44,066
+two i.
+
+82
+00:03:44,339 --> 00:03:45,239
+Step one.
+
+83
+00:03:45,195 --> 00:03:48,496
+z one minus z two is
+minus three plus four i.
+
+84
+00:03:49,246 --> 00:03:50,149
+Step two.
+
+85
+00:03:50,149 --> 00:03:53,496
+Its modulus is the root
+of nine plus sixteen.
+
+86
+00:03:54,246 --> 00:03:55,210
+Step three.
+
+87
+00:03:55,210 --> 00:03:57,098
+Root twenty five is five.
+
+88
+00:03:57,848 --> 00:04:00,320
+So the two points are five units apart.
+
+89
+00:04:00,320 --> 00:04:03,641
+On the map, that is a
+three, four, five triangle.
+
+90
+00:04:04,291 --> 00:04:05,757
+Now, the exam trap.
+
+91
+00:04:06,107 --> 00:04:09,021
+The modulus of z plus two i equals three.
+
+92
+00:04:09,021 --> 00:04:12,038
+Many students put the
+centre at plus two i.
+
+93
+00:04:12,438 --> 00:04:15,662
+But z plus two i is z minus, minus two i.
+
+94
+00:04:15,662 --> 00:04:19,255
+So the centre is minus
+two i, two steps below O.
+
+95
+00:04:19,255 --> 00:04:20,825
+The radius is three.
+
+96
+00:04:21,475 --> 00:04:22,918
+Where is this asked?
+
+97
+00:04:22,918 --> 00:04:26,974
+In JEE Main, as equations in z
+that draw a line or a circle.
+
+98
+00:04:27,574 --> 00:04:28,812
+Exam level now.
+
+99
+00:04:28,812 --> 00:04:31,572
+On which line do all these points lie?
+
+100
+00:04:31,572 --> 00:04:32,863
+Pause and solve.
+
+101
+00:04:38,263 --> 00:04:39,515
+The answer is A.
+
+102
+00:04:39,515 --> 00:04:41,972
+x plus two y plus three equals zero.
+
+103
+00:04:42,472 --> 00:04:44,238
+Let z be x plus i y.
+
+104
+00:04:44,238 --> 00:04:49,072
+The left side, squared, is x minus
+two, squared, plus y squared.
+
+105
+00:04:49,572 --> 00:04:53,893
+The right side, squared, is x
+squared, plus y plus four, squared.
+
+106
+00:04:54,393 --> 00:04:56,772
+Expand, and the squares cancel.
+
+107
+00:04:56,772 --> 00:05:00,450
+Minus four x plus four
+equals eight y plus sixteen.
+
+108
+00:05:00,450 --> 00:05:03,198
+So x plus two y plus three is zero.
+
+109
+00:05:03,798 --> 00:05:05,256
+Here is your recap.
+
+110
+00:05:05,256 --> 00:05:06,756
+Screenshot this card.
+
+111
+00:05:09,956 --> 00:05:12,954
+Can you answer these three
+questions without help?
+
+112
+00:05:13,354 --> 00:05:14,254
+One.
+
+113
+00:05:13,909 --> 00:05:15,813
+Plot minus three plus i.
+
+114
+00:05:15,813 --> 00:05:17,716
+Which quadrant is it in?
+
+115
+00:05:18,616 --> 00:05:19,516
+Two.
+
+116
+00:05:19,156 --> 00:05:22,140
+Where do the purely
+imaginary numbers live?
+
+117
+00:05:23,040 --> 00:05:23,940
+Three.
+
+118
+00:05:23,693 --> 00:05:27,278
+What shape does the modulus
+of z equals four draw?
+
+119
+00:05:28,378 --> 00:05:32,550
+Next time: what if every address
+were a distance and an angle, instead
+
+120
+00:05:32,550 --> 00:05:33,739
+of along and up?
+
+121
+00:05:33,739 --> 00:05:35,304
+That is the polar form.
