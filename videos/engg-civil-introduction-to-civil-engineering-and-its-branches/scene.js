@@ -110,7 +110,7 @@ $('#lqA').style.cssText += ';' + FACE('lakshmi');
 
 // L: the brief, Ananya, the team
 $('#br0I').innerHTML = M.icon('home', 26, C.acct, 2.4); $('#br1I').innerHTML = M.icon('layers', 26, C.acct, 2.4); $('#br2I').innerHTML = M.icon('pin', 26, C.acct, 2.4);
-$('#anaPI').innerHTML = M.icon('hardhat' in M.IC ? 'hardhat' : 'shield', 24, C.bp, 2.4);
+$('#anaPI').innerHTML = M.icon('hardhat' in M.IC ? 'hardhat' : 'shield', 24, C.onacc, 2.4);
 const TEAM = [['raghu', 'Raghu', 'HEAD MASON'], ['farhan', 'Farhan', 'SURVEYOR'], ['deshpande', 'Prof. Deshpande', 'CHECKER'], ['lakshmi', 'Mrs. Lakshmi', 'CLIENT']];
 $('#tRow').innerHTML = TEAM.map(([fc, n, r], i) => { const cx = 124 + i * 178; return `<div class="av tav" id="tv${i}" style="left:${cx - 36}px;${FACE(fc)}"></div><div class="tnm" id="tn${i}" style="left:${cx - 88}px">${n}</div><div class="trl" id="tr${i}" style="left:${cx - 88}px">${r}</div>`; }).join('');
 // name pills on the plot scene (beside figures, never on faces)
@@ -236,13 +236,13 @@ const pan = (col, n) => `<line x1="-70" y1="86" x2="0" y2="0" stroke="#5D6269" s
   `<path d="M-84 86 H84 C84 112 50 122 0 122 C-50 122 -84 112 -84 86Z" fill="#F6F6F3" stroke="#1C1F23" stroke-width="2.5"/>`;
 $('#panL').innerHTML = pan('#FFC20E', 'L'); $('#panR').innerHTML = pan('#B3B6B9', 'R');
 ['raghu', 'ananya', 'deshpande'].forEach((n, i) => { $('#xa' + i).style.cssText += ';' + FACE(n); });
-$('#bb2I').innerHTML = M.icon('check', 22, C.bp, 3); $('#factI').innerHTML = M.icon('cake', 36, C.yel, 2);
-$('#bothI').innerHTML = M.icon('shield', 52, C.bp, 2.4);
+$('#bb2I').innerHTML = M.icon('check', 22, C.onacc, 3); $('#factI').innerHTML = M.icon('cake', 36, C.yel, 2);
+$('#bothI').innerHTML = M.icon('shield', 52, C.onacc, 2.4);
 
 // quiz
 const OPTS = ['Structural', 'Geotechnical', 'Transportation', 'Surveying'], RIGHT = 1;
-$('#opts').innerHTML = OPTS.map((o, i) => `<div class="opt" id="o${i}" style="left:${160 + i * 408}px"><div class="bg"></div><div class="lt">${'ABCD'[i]}</div><div class="ot hd">${o}</div><div class="ok">${M.icon('check', 30, C.bp, 3)}</div></div>`).join('');
-$('#takeI').innerHTML = M.icon('layers', 44, C.bp, 2.4);
+$('#opts').innerHTML = OPTS.map((o, i) => `<div class="opt" id="o${i}" style="left:${160 + i * 408}px"><div class="bg"></div><div class="lt">${'ABCD'[i]}</div><div class="ot hd">${o}</div><div class="ok">${M.icon('check', 30, C.onacc, 3)}</div></div>`).join('');
+$('#takeI').innerHTML = M.icon('layers', 44, C.onacc, 2.4);
 // recap
 const ROWS = [['frame', 'Plan, build and care for what we share', ['For everyone']], ['layers', 'Seven main branches', ['Structures and soil', 'Water and roads']], ['shield', 'Safety first', ['Check', 'Then build']]];
 $('#rRows').innerHTML = ROWS.map(([ic, tx, ps], i) => `<div class="rw" id="rw${i}" style="top:${280 + i * 152}px"><div class="rn">0${i + 1}</div><div class="ri">${M.icon(ic, 34, C.acct, 2.2)}</div><div class="rt">${tx}</div>${ps.map((p, k) => `<div class="fp" id="fp${i}${k}">${p}</div>`).join('')}</div>`).join('');
@@ -275,7 +275,7 @@ const rowState = (e, t, ta, td, ic) => {
   bg.style.background = mix(C.row, C.yel, act); bg.style.borderColor = mix(C.line, C.yel, act);
   e.querySelector('.rt').style.color = fut ? C.dim : mix(C.white, C.onacc, act);
   e.querySelector('.rn').style.color = fut ? C.dim : mix(C.acct, C.onacc, act);
-  setIco(e.querySelector('.ri'), ic, fut ? C.dim : (act > 0.5 ? C.bp : (t > td ? C.yel : C.yel)), 28, 2.2);
+  setIco(e.querySelector('.ri'), ic, fut ? C.dim : (act > 0.5 ? C.onacc : (t > td ? C.yel : C.yel)), 28, 2.2);
 };
 // partial polyline for a path that draws on while its dashes keep flowing
 const partial = (pts, u) => {
@@ -405,7 +405,7 @@ M.on(t => {
       const on = M.io((t - tNat[i]) / 0.25) * (1 - (i < 3 ? M.io((t - tNat[i + 1]) / 0.25) : M.io((t - tD5) / 0.25)));
       e.style.background = mix(C.row, C.yel, on); e.style.borderColor = mix(C.line, C.yel, on);
       e.querySelector('.zt').style.color = mix(C.white, C.onacc, on); e.querySelector('.zn').style.color = mix(C.soft, C.onacc, on);
-      setIco(e.querySelector('.zi'), ic, on > 0.5 ? C.bp : C.yel, 40, 2.2);
+      setIco(e.querySelector('.zi'), ic, on > 0.5 ? C.onacc : C.yel, 40, 2.2);
     });
     M.vis($('#sw'), t, tD5 + 0.05, tDout, { dy: 36, ...o });
     SWT.forEach(([ic], i) => {
@@ -413,7 +413,7 @@ M.on(t => {
       const on = M.io((t - tSw[i]) / 0.25) * (1 - (i < 2 ? M.io((t - tSw[i + 1]) / 0.25) : 0));
       e.style.background = mix(C.row, C.yel, on); e.style.borderColor = mix(C.line, C.yel, on);
       e.querySelector('.zt').style.color = mix(C.white, C.onacc, on); e.querySelector('.zn').style.color = mix(C.soft, C.onacc, on);
-      setIco(e.querySelector('.zi'), ic, on > 0.5 ? C.bp : C.yel, 40, 2.2);
+      setIco(e.querySelector('.zi'), ic, on > 0.5 ? C.onacc : C.yel, 40, 2.2);
     });
   }
 
@@ -497,7 +497,7 @@ M.on(t => {
       e.querySelector('.bd').style.color = fut ? C.dim : mix(C.soft, C.onacc, act);
       e.querySelector('.bn').style.color = fut ? C.dim : mix(C.acct, C.onacc, act);
       e.querySelector('.bi').style.borderColor = fut ? C.line : mix(C.line, C.onacc, act);
-      setIco(e.querySelector('.bi'), ic, fut ? C.dim : (act > 0.5 ? C.bp : C.yel), 36, 2.2);
+      setIco(e.querySelector('.bi'), ic, fut ? C.dim : (act > 0.5 ? C.onacc : C.yel), 36, 2.2);
     });
     M.vis($('#ball'), t, tB0 + 0.6, tBout, { dy: 36, ...o });
     M.rise($('#ballT'), t, tB8 + 0.05, { st: 0.05, rot: 0 });
@@ -566,10 +566,10 @@ M.on(t => {
     OPTS.forEach((_, i) => {
       const e = $('#o' + i); M.vis(e, t, tQ + 1.5 + i * 0.08, 1e9, { dy: 40 });
       const right = i === RIGHT, r = M.io((t - tAns) / 0.3), bg = e.querySelector('.bg');
-      bg.style.background = right ? mix(C.panel, C.white, r) : mix(C.panel, C.bp, r);
+      bg.style.background = right ? mix(C.panel, C.yel, r) : mix(C.panel, C.bp, r);
       bg.style.borderColor = right ? mix(C.soft, C.white, r) : mix(C.soft, C.line, r);
       e.querySelector('.ot').style.color = right ? mix(C.white, C.onacc, r) : mix(C.white, C.dim, r);
-      const lt = e.querySelector('.lt'); lt.style.background = right ? mix(C.panel, C.yel, r) : C.panel; lt.style.borderColor = right ? mix(C.white, C.acct, r) : mix(C.white, C.dim, r); lt.style.color = right ? mix(C.white, C.onacc, r) : mix(C.white, C.dim, r);
+      const lt = e.querySelector('.lt'); lt.style.background = right ? mix(C.panel, C.yel, r) : C.panel; lt.style.borderColor = right ? mix(C.white, C.onacc, r) : mix(C.white, C.dim, r); lt.style.color = right ? mix(C.white, C.onacc, r) : mix(C.white, C.dim, r);
       const ok = e.querySelector('.ok'); if (right) M.vis(ok, t, tAns + 0.1, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 }); else M.hide(ok, true);
       if (right && t > tAns && t < tAns + 0.45) e.style.transform = `scale(${(1 + 0.04 * Math.sin(PI * (t - tAns) / 0.45)).toFixed(4)})`;
       else if (right && t >= tAns + 0.45 && e.style.transform !== 'none') e.style.transform = 'none';
@@ -597,7 +597,7 @@ M.on(t => {
         const a = tp - 0.05, b = k < ps.length - 1 ? tPill[i][k + 1] - 0.05 : (i < 2 ? tRow[i + 1] - 0.2 : tN - 0.4);
         const g = M.io((t - a) / 0.2), d = M.io((t - b) / 0.3);
         e.style.background = mix(mix(C.row, C.yel, g), C.row, d); e.style.borderColor = mix(mix(C.line, C.yel, g), C.line, d);
-        e.style.color = g > 0.5 && d < 0.5 ? C.bp : C.white;
+        e.style.color = g > 0.5 && d < 0.5 ? C.onacc : C.white;
       });
     });
     M.vis($('#next'), t, tN - 0.05, 1e9, { dy: 40 });
