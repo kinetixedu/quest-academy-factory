@@ -3,7 +3,7 @@
 // balance scale, blueprint-sheet sweeps, quiz, recap, NEXT strip). Later episodes copy these helpers as they are.
 (() => {
 const { $ } = M;
-const C = { bp: '#0F3B6E', grid: '#1D4E85', panel: '#123F73', row: '#1A4B80', line: '#2C5F96', white: '#FFFFFF', soft: '#B9CCE3', dim: '#7C93B0', yel: '#FFD400', con: '#C9CED6', plate: '#F4F1EA', deep: '#0B2F59' };
+const C = { onacc: '#1C1F23', acct: '#9A6F00', bp: '#E4E4DF', grid: '#D2D2CB', panel: '#F6F6F3', row: '#ECECE7', line: '#CBCCC5', white: '#1C1F23', soft: '#5D6269', dim: '#9EA2A6', yel: '#FFC20E', con: '#B3B6B9', plate: '#FFFFFF', deep: '#D5D5CF' };
 const wt = M.wt, T0 = M.t0, T1 = M.t1, mix = M.mix, PI = Math.PI;
 const NS = 'http://www.w3.org/2000/svg';
 const f = v => (Math.abs(v) < 0.005 ? 0 : v).toFixed(2);
@@ -77,15 +77,15 @@ const SW = { S: [tT - 0.42, tTb], A: [tQ - 0.42, 1e9], B: [tS - 0.42, 1e9] };
 /* ---------- build ---------- */
 // blueprint sheet: blue + grid + double border + title block (the world transition)
 const sheetSVG = (svg, title, dwg, no, note) => {
-  svg.innerHTML = `<g class="sg"><rect width="1920" height="1080" fill="#0F3B6E"/><rect width="1920" height="1080" fill="url(#g40)"/>
-    <rect class="shB" x="40" y="40" width="1840" height="1000" fill="none" stroke="#FFFFFF" stroke-width="4"/>
-    <rect x="56" y="56" width="1808" height="968" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
-    <g stroke="#FFFFFF" stroke-width="2" fill="none"><rect x="1504" y="880" width="360" height="144" fill="#123F73"/><line x1="1504" y1="932" x2="1864" y2="932"/><line x1="1504" y1="978" x2="1864" y2="978"/><line x1="1684" y1="932" x2="1684" y2="1024"/></g>
-    <text x="1522" y="916" font-family="Archivo" font-weight="700" font-size="26" fill="#FFFFFF" letter-spacing="1">${title}</text>
-    <text x="1522" y="962" font-family="IBM Plex Mono" font-size="18" fill="#B9CCE3">${dwg}</text>
-    <text x="1702" y="962" font-family="IBM Plex Mono" font-size="18" fill="#B9CCE3">${no}</text>
-    <text x="1522" y="1008" font-family="IBM Plex Mono" font-size="18" fill="#B9CCE3">HOSAHALLI SCHOOL</text>
-    <text x="1702" y="1008" font-family="Architects Daughter" font-size="22" fill="#FFD400">${note}</text></g>`;
+  svg.innerHTML = `<g class="sg"><rect width="1920" height="1080" fill="#E4E4DF"/><rect width="1920" height="1080" fill="url(#g40)"/>
+    <rect class="shB" x="40" y="40" width="1840" height="1000" fill="none" stroke="#1C1F23" stroke-width="4"/>
+    <rect x="56" y="56" width="1808" height="968" fill="none" stroke="#1C1F23" stroke-width="1.5"/>
+    <g stroke="#1C1F23" stroke-width="2" fill="none"><rect x="1504" y="880" width="360" height="144" fill="#F6F6F3"/><line x1="1504" y1="932" x2="1864" y2="932"/><line x1="1504" y1="978" x2="1864" y2="978"/><line x1="1684" y1="932" x2="1684" y2="1024"/></g>
+    <text x="1522" y="916" font-family="Archivo" font-weight="700" font-size="26" fill="#1C1F23" letter-spacing="1">${title}</text>
+    <text x="1522" y="962" font-family="IBM Plex Mono" font-size="18" fill="#5D6269">${dwg}</text>
+    <text x="1702" y="962" font-family="IBM Plex Mono" font-size="18" fill="#5D6269">${no}</text>
+    <text x="1522" y="1008" font-family="IBM Plex Mono" font-size="18" fill="#5D6269">HOSAHALLI SCHOOL</text>
+    <text x="1702" y="1008" font-family="Architects Daughter" font-size="22" fill="#9A6F00">${note}</text></g>`;
 };
 sheetSVG($('#sheetS'), 'THE BIG IDEA', 'DWG CE-01', 'SHEET 1/3', 'noted');
 sheetSVG($('#sheetA'), 'QUICK CHECK', 'DWG CE-01', 'SHEET 2/3', 'checked');
@@ -95,21 +95,21 @@ sheetSVG($('#sheetB'), 'RECAP', 'DWG CE-01', 'SHEET 3/3', 'approved');
 const oe = $('#oeS');
 oe.innerHTML = `<defs><clipPath id="skyC"><path d="M0 0H380V76H320L160 22L20 76H0Z"/></clipPath></defs>
   <g id="rainG" clip-path="url(#skyC)"></g>
-  <path id="oeRoof" d="M16 76 L160 22 L324 76" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
-  <rect id="oeWall" x="40" y="76" width="260" height="128" fill="#123F73" stroke="#FFFFFF" stroke-width="3"/>
-  <rect id="oeDoor" x="120" y="124" width="56" height="80" fill="#0F3B6E" stroke="#FFFFFF" stroke-width="2.5"/>
-  <rect id="oeWin" x="216" y="112" width="52" height="44" fill="#0F3B6E" stroke="#FFFFFF" stroke-width="2.5"/>
-  <path id="oeCrack" d="M180 120 L190 110 L186 102 L198 92 L196 84 L210 78" fill="none" stroke="#FFD400" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path id="oeBkt" d="M78 186 h28 l-4 18 h-20 Z" fill="none" stroke="#B9CCE3" stroke-width="2.5"/>
-  <circle id="oeDrip" cx="92" cy="80" r="4" fill="#B9CCE3"/>
-  <line x1="0" y1="204" x2="380" y2="204" stroke="#FFFFFF" stroke-width="3"/>
-  <path d="${Array.from({ length: 23 }, (_, k) => `M${8 + k * 16} 208 l-10 12`).join(' ')}" stroke="#B9CCE3" stroke-width="2" fill="none"/>`;
-$('#rainG').innerHTML = Array.from({ length: 12 }, (_, k) => `<line class="rd" x1="0" y1="0" x2="-6" y2="16" stroke="#B9CCE3" stroke-width="2.5" stroke-linecap="round"/>`).join('');
-$('#pr0I').innerHTML = M.icon('rain', 30, C.yel, 2.2); $('#pr1I').innerHTML = M.icon('alert', 30, C.yel, 2.2);
+  <path id="oeRoof" d="M16 76 L160 22 L324 76" fill="none" stroke="#1C1F23" stroke-width="3" stroke-linejoin="round"/>
+  <rect id="oeWall" x="40" y="76" width="260" height="128" fill="#F6F6F3" stroke="#1C1F23" stroke-width="3"/>
+  <rect id="oeDoor" x="120" y="124" width="56" height="80" fill="#E4E4DF" stroke="#1C1F23" stroke-width="2.5"/>
+  <rect id="oeWin" x="216" y="112" width="52" height="44" fill="#E4E4DF" stroke="#1C1F23" stroke-width="2.5"/>
+  <path id="oeCrack" d="M180 120 L190 110 L186 102 L198 92 L196 84 L210 78" fill="none" stroke="#9A6F00" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path id="oeBkt" d="M78 186 h28 l-4 18 h-20 Z" fill="none" stroke="#5D6269" stroke-width="2.5"/>
+  <circle id="oeDrip" cx="92" cy="80" r="4" fill="#5D6269"/>
+  <line x1="0" y1="204" x2="380" y2="204" stroke="#1C1F23" stroke-width="3"/>
+  <path d="${Array.from({ length: 23 }, (_, k) => `M${8 + k * 16} 208 l-10 12`).join(' ')}" stroke="#5D6269" stroke-width="2" fill="none"/>`;
+$('#rainG').innerHTML = Array.from({ length: 12 }, (_, k) => `<line class="rd" x1="0" y1="0" x2="-6" y2="16" stroke="#5D6269" stroke-width="2.5" stroke-linecap="round"/>`).join('');
+$('#pr0I').innerHTML = M.icon('rain', 30, C.acct, 2.2); $('#pr1I').innerHTML = M.icon('alert', 30, C.acct, 2.2);
 $('#lqA').style.cssText += ';' + FACE('lakshmi');
 
 // L: the brief, Ananya, the team
-$('#br0I').innerHTML = M.icon('home', 26, C.yel, 2.4); $('#br1I').innerHTML = M.icon('layers', 26, C.yel, 2.4); $('#br2I').innerHTML = M.icon('pin', 26, C.yel, 2.4);
+$('#br0I').innerHTML = M.icon('home', 26, C.acct, 2.4); $('#br1I').innerHTML = M.icon('layers', 26, C.acct, 2.4); $('#br2I').innerHTML = M.icon('pin', 26, C.acct, 2.4);
 $('#anaPI').innerHTML = M.icon('hardhat' in M.IC ? 'hardhat' : 'shield', 24, C.bp, 2.4);
 const TEAM = [['raghu', 'Raghu', 'HEAD MASON'], ['farhan', 'Farhan', 'SURVEYOR'], ['deshpande', 'Prof. Deshpande', 'CHECKER'], ['lakshmi', 'Mrs. Lakshmi', 'CLIENT']];
 $('#tRow').innerHTML = TEAM.map(([fc, n, r], i) => { const cx = 124 + i * 178; return `<div class="av tav" id="tv${i}" style="left:${cx - 36}px;${FACE(fc)}"></div><div class="tnm" id="tn${i}" style="left:${cx - 88}px">${n}</div><div class="trl" id="tr${i}" style="left:${cx - 88}px">${r}</div>`; }).join('');
@@ -128,32 +128,32 @@ const PS = [['tripod', 'Surveying'], ['layers', 'Geotechnical'], ['frame', 'Stru
 $('#plRows').innerHTML = PS.map(([ic, t], i) => `<div class="sr" id="pr${i}x" style="top:${80 + i * 80}px"><div class="rn">0${i + 1}</div><div class="ri"></div><div class="rt">${t}</div></div>`).join('');
 const S = $('#pdS'), GY = 372, CX = [150, 350, 550], FT = 416, FB = 442, L1 = 262, RF = 152;
 S.innerHTML = `<defs>
-  <pattern id="pTop" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#164A80"/><circle cx="4" cy="5" r="1.6" fill="#B9CCE3"/><circle cx="12" cy="12" r="1.6" fill="#B9CCE3"/></pattern>
-  <pattern id="pClay" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#123F73"/><path d="M-2 16 L16 -2" stroke="#2C5F96" stroke-width="2"/></pattern>
-  <pattern id="pRock" width="20" height="20" patternUnits="userSpaceOnUse"><rect width="20" height="20" fill="#0D3563"/><path d="M0 20 L20 0 M0 0 L20 20" stroke="#2C5F96" stroke-width="1.6"/></pattern>
+  <pattern id="pTop" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#D9CFB8"/><circle cx="4" cy="5" r="1.6" fill="#5D6269"/><circle cx="12" cy="12" r="1.6" fill="#5D6269"/></pattern>
+  <pattern id="pClay" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#F6F6F3"/><path d="M-2 16 L16 -2" stroke="#CBCCC5" stroke-width="2"/></pattern>
+  <pattern id="pRock" width="20" height="20" patternUnits="userSpaceOnUse"><rect width="20" height="20" fill="#BDB8AE"/><path d="M0 20 L20 0 M0 0 L20 20" stroke="#CBCCC5" stroke-width="1.6"/></pattern>
   <clipPath id="soilC"><rect id="soilR" x="32" y="${GY}" width="0" height="190"/></clipPath>
   <clipPath id="pdC"><rect x="2" y="2" width="1052" height="576"/></clipPath>
 </defs><g clip-path="url(#pdC)">
   <g id="soilG" clip-path="url(#soilC)">
     <rect x="32" y="${GY}" width="992" height="58" fill="url(#pTop)"/><rect x="32" y="430" width="992" height="70" fill="url(#pClay)"/><rect x="32" y="500" width="992" height="62" fill="url(#pRock)"/>
-    <path d="M32 430H1024M32 500H1024" stroke="#B9CCE3" stroke-width="1.5" stroke-dasharray="8 6"/>
+    <path d="M32 430H1024M32 500H1024" stroke="#5D6269" stroke-width="1.5" stroke-dasharray="8 6"/>
   </g>
   <g id="axG"></g>
-  <path id="gl" d="M32 ${GY} H1024" stroke="#FFFFFF" stroke-width="3"/>
-  <g id="lvl0"><path d="M62 ${GY - 14} h20 l-10 14z" fill="#FFD400"/><text x="40" y="${GY - 22}" font-family="IBM Plex Mono" font-size="17" fill="#FFFFFF">GL +0.00</text></g>
-  <g id="lvl1"><path d="M62 ${L1 - 14} h20 l-10 14z" fill="#FFFFFF"/><text x="40" y="${L1 - 22}" font-family="IBM Plex Mono" font-size="17" fill="#FFFFFF">+3.60</text></g>
-  <g id="lvl2"><path d="M62 ${RF - 14} h20 l-10 14z" fill="#FFFFFF"/><text x="40" y="${RF - 22}" font-family="IBM Plex Mono" font-size="17" fill="#FFFFFF">+7.20</text></g>
-  <g id="dimG" stroke="#B9CCE3" stroke-width="2" fill="none"></g>
-  <g id="instG"><line id="sight" x1="686" y1="296" x2="150" y2="282" stroke="#FFD400" stroke-width="2.5" stroke-dasharray="10 7"/>
-    <rect x="146" y="250" width="8" height="122" fill="#FFFFFF"/><path d="M146 270h8M146 300h8M146 330h8" stroke="#0F3B6E" stroke-width="3"/>
-    <path d="M686 304 L660 ${GY} M686 304 L712 ${GY} M686 304 V${GY}" stroke="#FFFFFF" stroke-width="3" fill="none"/>
-    <rect x="670" y="284" width="32" height="20" fill="#123F73" stroke="#FFFFFF" stroke-width="2.5"/></g>
+  <path id="gl" d="M32 ${GY} H1024" stroke="#1C1F23" stroke-width="3"/>
+  <g id="lvl0"><path d="M62 ${GY - 14} h20 l-10 14z" fill="#FFC20E"/><text x="40" y="${GY - 22}" font-family="IBM Plex Mono" font-size="17" fill="#1C1F23">GL +0.00</text></g>
+  <g id="lvl1"><path d="M62 ${L1 - 14} h20 l-10 14z" fill="#1C1F23"/><text x="40" y="${L1 - 22}" font-family="IBM Plex Mono" font-size="17" fill="#1C1F23">+3.60</text></g>
+  <g id="lvl2"><path d="M62 ${RF - 14} h20 l-10 14z" fill="#1C1F23"/><text x="40" y="${RF - 22}" font-family="IBM Plex Mono" font-size="17" fill="#1C1F23">+7.20</text></g>
+  <g id="dimG" stroke="#5D6269" stroke-width="2" fill="none"></g>
+  <g id="instG"><line id="sight" x1="686" y1="296" x2="150" y2="282" stroke="#9A6F00" stroke-width="2.5" stroke-dasharray="10 7"/>
+    <rect x="146" y="250" width="8" height="122" fill="#1C1F23"/><path d="M146 270h8M146 300h8M146 330h8" stroke="#1C1F23" stroke-width="3"/>
+    <path d="M686 304 L660 ${GY} M686 304 L712 ${GY} M686 304 V${GY}" stroke="#1C1F23" stroke-width="3" fill="none"/>
+    <rect x="670" y="284" width="32" height="20" fill="#F6F6F3" stroke="#1C1F23" stroke-width="2.5"/></g>
   <g id="pegG"></g>
-  <rect id="bore" x="640" y="${GY}" width="18" height="0" fill="#0F3B6E" stroke="#FFFFFF" stroke-width="2.5"/>
+  <rect id="bore" x="640" y="${GY}" width="18" height="0" fill="#E4E4DF" stroke="#1C1F23" stroke-width="2.5"/>
   <g id="footG"></g>
   <g id="frameG"></g>
   <g id="pipeG"></g>
-  <g id="tankG"><rect x="572" y="104" width="62" height="48" fill="#123F73" stroke="#FFFFFF" stroke-width="2.5"/><rect id="tankW" x="575" y="149" width="56" height="0" fill="#B9CCE3"/></g>
+  <g id="tankG"><rect x="572" y="104" width="62" height="48" fill="#F6F6F3" stroke="#1C1F23" stroke-width="2.5"/><rect id="tankW" x="575" y="149" width="56" height="0" fill="#5D6269"/></g>
   <g id="roadG"></g>
   <g id="busV"><g id="bus"></g></g>
   <g id="loadG"></g>
@@ -161,13 +161,13 @@ S.innerHTML = `<defs>
   <g id="tagG"></g>
 </g>`;
 // survey: grid axes with bubbles + bay dimensions
-$('#axG').innerHTML = CX.map((x, i) => `<path class="ax" d="M${x} 92 V560" stroke="#2C5F96" stroke-width="2" stroke-dasharray="14 6 3 6" fill="none"/><g class="axb"><circle cx="${x}" cy="76" r="16" fill="#0F3B6E" stroke="#FFFFFF" stroke-width="2.5"/><text x="${x}" y="83" text-anchor="middle" font-family="IBM Plex Mono" font-weight="600" font-size="19" fill="#FFFFFF">${'ABC'[i]}</text></g>`).join('');
+$('#axG').innerHTML = CX.map((x, i) => `<path class="ax" d="M${x} 92 V560" stroke="#CBCCC5" stroke-width="2" stroke-dasharray="14 6 3 6" fill="none"/><g class="axb"><circle cx="${x}" cy="76" r="16" fill="#E4E4DF" stroke="#1C1F23" stroke-width="2.5"/><text x="${x}" y="83" text-anchor="middle" font-family="IBM Plex Mono" font-weight="600" font-size="19" fill="#1C1F23">${'ABC'[i]}</text></g>`).join('');
 $('#dimG').innerHTML = [0, 1].map(i => `<path class="dm" d="M${CX[i]} 122 H${CX[i + 1]} M${CX[i] - 8} 130 l16 -16 M${CX[i + 1] - 8} 130 l16 -16"/>`).join('') +
-  [0, 1].map(i => `<text class="dmt" x="${(CX[i] + CX[i + 1]) / 2}" y="114" text-anchor="middle" font-family="IBM Plex Mono" font-size="18" fill="#FFFFFF" stroke="none">4.0 m</text>`).join('');
-$('#pegG').innerHTML = CX.map(x => `<g class="peg" transform="translate(${x} ${GY})"><path d="M-7 -26 h14 l-7 34 z" fill="#FFD400" stroke="#0F3B6E" stroke-width="1.5"/></g>`).join('');
+  [0, 1].map(i => `<text class="dmt" x="${(CX[i] + CX[i + 1]) / 2}" y="114" text-anchor="middle" font-family="IBM Plex Mono" font-size="18" fill="#1C1F23" stroke="none">4.0 m</text>`).join('');
+$('#pegG').innerHTML = CX.map(x => `<g class="peg" transform="translate(${x} ${GY})"><path d="M-7 -26 h14 l-7 34 z" fill="#FFC20E" stroke="#1C1F23" stroke-width="1.5"/></g>`).join('');
 // geotech: footings + size dimension
-$('#footG').innerHTML = CX.map(x => `<rect class="ft" x="${x - 48}" y="${FT}" width="96" height="${FB - FT}" fill="#C9CED6" stroke="#FFFFFF" stroke-width="2"/>`).join('') +
-  `<g id="ftDim"><path d="M102 456 H198 M94 464 l16 -16 M190 464 l16 -16" stroke="#FFFFFF" stroke-width="2" fill="none"/><rect x="104" y="466" width="92" height="26" fill="#0F3B6E"/><text x="150" y="485" text-anchor="middle" font-family="IBM Plex Mono" font-size="17" fill="#FFFFFF">1.5 m</text></g>`;
+$('#footG').innerHTML = CX.map(x => `<rect class="ft" x="${x - 48}" y="${FT}" width="96" height="${FB - FT}" fill="#B3B6B9" stroke="#1C1F23" stroke-width="2"/>`).join('') +
+  `<g id="ftDim"><path d="M102 456 H198 M94 464 l16 -16 M190 464 l16 -16" stroke="#1C1F23" stroke-width="2" fill="none"/><rect x="104" y="466" width="92" height="26" fill="#E4E4DF"/><text x="150" y="485" text-anchor="middle" font-family="IBM Plex Mono" font-size="17" fill="#1C1F23">1.5 m</text></g>`;
 // structural: columns, plinth, slabs + beams
 const colEls = CX.map(x => el('rect', { x: x - 10, y: FT, width: 20, height: 0, fill: C.con, stroke: C.white, 'stroke-width': 2 }, $('#frameG')));
 const plinth = el('rect', { x: 140, y: GY - 14, width: 420, height: 14, fill: C.con, stroke: C.white, 'stroke-width': 2 }, $('#frameG'));
@@ -176,34 +176,34 @@ const slabClip = el('clipPath', { id: 'slabC' }, S.querySelector('defs')), slabC
 slabs.forEach(g => g.setAttribute('clip-path', 'url(#slabC)'));
 // load: arrow on the roof + load path (flowing dashes) + pressure bulb under footing B
 const LP = [[250, 82], [250, 150], [250, 160], [340, 160], [340, 272], [340, 410], [350, 444], [350, 470]];
-$('#loadG').innerHTML = `<g id="ldA"><line x1="250" y1="40" x2="250" y2="122" stroke="#FFD400" stroke-width="8" stroke-linecap="round"/><path d="M250 150 L234 118 H266 Z" fill="#FFD400"/></g>
-  <path id="ldP" d="" fill="none" stroke="#FFD400" stroke-width="4" stroke-dasharray="12 9" stroke-linecap="round"/>
-  <path id="bulb" d="M298 446 C298 500 402 500 402 446" fill="none" stroke="#FFD400" stroke-width="3" stroke-dasharray="6 6"/>`;
+$('#loadG').innerHTML = `<g id="ldA"><line x1="250" y1="40" x2="250" y2="122" stroke="#9A6F00" stroke-width="8" stroke-linecap="round"/><path d="M250 150 L234 118 H266 Z" fill="#FFC20E"/></g>
+  <path id="ldP" d="" fill="none" stroke="#9A6F00" stroke-width="4" stroke-dasharray="12 9" stroke-linecap="round"/>
+  <path id="bulb" d="M298 446 C298 500 402 500 402 446" fill="none" stroke="#9A6F00" stroke-width="3" stroke-dasharray="6 6"/>`;
 // water: supply main from the left up to the roof tank, drain from the building to the road sewer
-$('#pipeG').innerHTML = `<path id="supB" d="M1024 404 H664 V128 H634" fill="none" stroke="#2C5F96" stroke-width="9" stroke-linejoin="round"/>
-  <path id="supF" d="M1024 404 H664 V128 H634" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="10 10"/>
-  <path id="drB" d="M592 386 L1024 392" fill="none" stroke="#2C5F96" stroke-width="9"/>
-  <path id="drF" d="M592 386 L1024 392" fill="none" stroke="#C9CED6" stroke-width="3" stroke-dasharray="10 10"/>`;
+$('#pipeG').innerHTML = `<path id="supB" d="M1024 404 H664 V128 H634" fill="none" stroke="#CBCCC5" stroke-width="9" stroke-linejoin="round"/>
+  <path id="supF" d="M1024 404 H664 V128 H634" fill="none" stroke="#1C1F23" stroke-width="3" stroke-dasharray="10 10"/>
+  <path id="drB" d="M592 386 L1024 392" fill="none" stroke="#CBCCC5" stroke-width="9"/>
+  <path id="drF" d="M592 386 L1024 392" fill="none" stroke="#B3B6B9" stroke-width="3" stroke-dasharray="10 10"/>`;
 // transport: road section with camber and kerb, bus stop pole, the bus
-$('#roadG').innerHTML = `<path id="rdS" d="M772 ${GY} V356 Q896 346 1024 356 V${GY} Z" fill="#C9CED6" stroke="#FFFFFF" stroke-width="2"/>
-  <rect id="kerb" x="756" y="344" width="16" height="28" fill="#C9CED6" stroke="#FFFFFF" stroke-width="2"/>
+$('#roadG').innerHTML = `<path id="rdS" d="M772 ${GY} V356 Q896 346 1024 356 V${GY} Z" fill="#B3B6B9" stroke="#1C1F23" stroke-width="2"/>
+  <rect id="kerb" x="756" y="344" width="16" height="28" fill="#B3B6B9" stroke="#1C1F23" stroke-width="2"/>
   <g id="pole"></g>`;
-$('#bus').innerHTML = `<rect x="0" y="-66" width="170" height="52" fill="#123F73" stroke="#FFFFFF" stroke-width="2.5"/>
-  ${[0, 1, 2, 3].map(k => `<rect x="${14 + k * 36}" y="-58" width="28" height="18" fill="#B9CCE3"/>`).join('')}
-  <rect x="152" y="-58" width="12" height="30" fill="#B9CCE3"/><rect x="0" y="-34" width="170" height="6" fill="#FFD400"/>
-  ${[34, 136].map(x => `<circle cx="${x}" cy="-12" r="12" fill="#0F3B6E" stroke="#FFFFFF" stroke-width="2.5"/>`).join('')}`;
+$('#bus').innerHTML = `<rect x="0" y="-66" width="170" height="52" fill="#F6F6F3" stroke="#1C1F23" stroke-width="2.5"/>
+  ${[0, 1, 2, 3].map(k => `<rect x="${14 + k * 36}" y="-58" width="28" height="18" fill="#5D6269"/>`).join('')}
+  <rect x="152" y="-58" width="12" height="30" fill="#5D6269"/><rect x="0" y="-34" width="170" height="6" fill="#FFC20E"/>
+  ${[34, 136].map(x => `<circle cx="${x}" cy="-12" r="12" fill="#E4E4DF" stroke="#1C1F23" stroke-width="2.5"/>`).join('')}`;
 // construction management: a bar-chart schedule
 const SCH = [['SURVEY', 0, 0.14], ['SOIL', 0.1, 0.28], ['FRAME', 0.28, 0.72], ['WATER', 0.55, 0.86], ['ROAD', 0.7, 1]];
 const SX = 850, SWd = 166;
-$('#schG').innerHTML = `<rect x="760" y="48" width="272" height="176" fill="#0F3B6E" stroke="#2C5F96" stroke-width="2"/><text x="776" y="74" font-family="IBM Plex Mono" font-weight="600" font-size="15" letter-spacing="2" fill="#FFD400">SCHEDULE</text>` +
-  SCH.map(([n], i) => `<text x="776" y="${104 + i * 26}" font-family="IBM Plex Mono" font-size="14" fill="#B9CCE3">${n}</text><rect x="${SX}" y="${92 + i * 26}" width="${SWd}" height="14" fill="#1A4B80"/><rect class="sb" x="${SX}" y="${92 + i * 26}" width="0" height="14" fill="#FFD400"/>`).join('') +
-  `<line id="today" x1="${SX}" y1="86" x2="${SX}" y2="220" stroke="#FFFFFF" stroke-width="2"/>`;
+$('#schG').innerHTML = `<rect x="760" y="48" width="272" height="176" fill="#E4E4DF" stroke="#CBCCC5" stroke-width="2"/><text x="776" y="74" font-family="IBM Plex Mono" font-weight="600" font-size="15" letter-spacing="2" fill="#9A6F00">SCHEDULE</text>` +
+  SCH.map(([n], i) => `<text x="776" y="${104 + i * 26}" font-family="IBM Plex Mono" font-size="14" fill="#5D6269">${n}</text><rect x="${SX}" y="${92 + i * 26}" width="${SWd}" height="14" fill="#ECECE7"/><rect class="sb" x="${SX}" y="${92 + i * 26}" width="0" height="14" fill="#FFC20E"/>`).join('') +
+  `<line id="today" x1="${SX}" y1="86" x2="${SX}" y2="220" stroke="#1C1F23" stroke-width="2"/>`;
 // small label tags on the drawing (mono, solid backing)
 const TG = [['tgSv', 'LEVELS PEGGED', 560, 236], ['tgBh', 'BOREHOLE', 728, 336], ['tgL1', 'topsoil', 674, 420], ['tgL2', 'stiff clay', 674, 476], ['tgL3', 'weathered rock', 674, 540],
   ['tgLp', 'LOAD PATH', 362, 214], ['tgTk', 'TANK', 676, 120], ['tgSp', 'CLEAN WATER', 680, 262], ['tgDr', 'DRAIN', 900, 446], ['tgBb', 'BUS BAY', 878, 270]];
 $('#tagG').innerHTML = TG.map(([id, tx, x, y]) => /[a-z]/.test(tx)
-  ? `<g id="${id}"><text x="${x}" y="${y}" font-family="Architects Daughter" font-size="22" fill="#FFFFFF">${tx}</text></g>`
-  : `<g id="${id}"><rect x="${x}" y="${y - 22}" width="${tx.length * 10.4 + 20}" height="30" fill="#0F3B6E" stroke="#FFD400" stroke-width="1.5"/><text x="${x + 10}" y="${y - 1}" font-family="IBM Plex Mono" font-weight="600" font-size="16" letter-spacing="1" fill="#FFD400">${tx}</text></g>`).join('');
+  ? `<g id="${id}"><text x="${x}" y="${y}" font-family="Architects Daughter" font-size="22" fill="#1C1F23">${tx}</text></g>`
+  : `<g id="${id}"><rect x="${x}" y="${y - 22}" width="${tx.length * 10.4 + 20}" height="30" fill="#E4E4DF" stroke="#9A6F00" stroke-width="1.5"/><text x="${x + 10}" y="${y - 1}" font-family="IBM Plex Mono" font-weight="600" font-size="16" letter-spacing="1" fill="#9A6F00">${tx}</text></g>`).join('');
 
 // B: the seven branches
 const BR = [['frame', 'Structural', 'Frames that carry loads'], ['layers', 'Geotechnical', 'Soil and rock below'], ['road', 'Transportation', 'Roads, rails, airports'],
@@ -222,19 +222,19 @@ $('#kRows').innerHTML = KA.map(([ic, t], i) => `<div class="kr" id="kr${i}" styl
 const KP = [['AT WORK TODAY', 'Four branches', 'on our site, and in your city', null]].concat(KA.map((a, i) => [`IN PRACTICE 0${i + 1} / 04`, a[1], a[2], a]));
 $('#kPans').innerHTML = KP.map(([s, t, m, a], i) => `<div class="pn" id="kn${i}"><div class="ps">${s}</div><div class="hd pt">${t}</div><div class="pm">${m}</div><div class="hr"></div>` +
   (a ? `<div class="ka" id="ka${i}0" style="top:318px"><div class="av" style="${FACE(a[3])}"></div><div class="kl">AT HOSAHALLI</div><div class="kt">${a[4]}</div></div>
-        <div class="ka" id="ka${i}1" style="top:438px"><div class="ki">${M.icon(a[5], 34, C.yel, 2.2)}</div><div class="kl">AT WORK TODAY</div><div class="kt">${a[6]}</div></div>`
-     : `<div class="ka" id="ka00" style="top:318px"><div class="ki">${M.icon('home', 34, C.yel, 2.2)}</div><div class="kl">AT HOSAHALLI</div><div class="kt">One school, one branch at a time</div></div>
-        <div class="ka" id="ka01" style="top:438px"><div class="ki">${M.icon('city', 34, C.yel, 2.2)}</div><div class="kl">AT WORK TODAY</div><div class="kt">Hospitals, metros, water, highways</div></div>`) + `</div>`).join('');
+        <div class="ka" id="ka${i}1" style="top:438px"><div class="ki">${M.icon(a[5], 34, C.acct, 2.2)}</div><div class="kl">AT WORK TODAY</div><div class="kt">${a[6]}</div></div>`
+     : `<div class="ka" id="ka00" style="top:318px"><div class="ki">${M.icon('home', 34, C.acct, 2.2)}</div><div class="kl">AT HOSAHALLI</div><div class="kt">One school, one branch at a time</div></div>
+        <div class="ka" id="ka01" style="top:438px"><div class="ki">${M.icon('city', 34, C.acct, 2.2)}</div><div class="kl">AT WORK TODAY</div><div class="kt">Hospitals, metros, water, highways</div></div>`) + `</div>`).join('');
 
 // X: the human side
 const XG = [['home', 'Safe homes'], ['drop', 'Clean water'], ['road', 'Roads that connect']];
 const XH = [['coin', 'High cost'], ['clock', 'Delays'], ['alert', 'Failures hurt people']];
-$('#xChips').innerHTML = XG.map(([ic, t], i) => `<div class="xc" id="xg${i}" style="left:48px;top:${384 + i * 60}px;background:#FFD400;color:#0F3B6E">${M.icon(ic, 22, C.bp, 2.4)}<span>${t}</span></div>`).join('') +
-  XH.map(([ic, t], i) => `<div class="xc" id="xh${i}" style="left:408px;top:${384 + i * 60}px;background:#1A4B80;color:#FFFFFF;border:2px solid #2C5F96">${M.icon(ic, 22, C.soft, 2.4)}<span>${t}</span></div>`).join('');
-const pan = (col, n) => `<line x1="-70" y1="86" x2="0" y2="0" stroke="#B9CCE3" stroke-width="2.5"/><line x1="70" y1="86" x2="0" y2="0" stroke="#B9CCE3" stroke-width="2.5"/>` +
-  Array.from({ length: 3 }, (_, i) => `<rect id="wt${n}${i}" x="${-50 + i * 34}" y="56" width="30" height="30" fill="${col}" stroke="#0F3B6E" stroke-width="2"/>`).join('') +
-  `<path d="M-84 86 H84 C84 112 50 122 0 122 C-50 122 -84 112 -84 86Z" fill="#123F73" stroke="#FFFFFF" stroke-width="2.5"/>`;
-$('#panL').innerHTML = pan('#FFD400', 'L'); $('#panR').innerHTML = pan('#C9CED6', 'R');
+$('#xChips').innerHTML = XG.map(([ic, t], i) => `<div class="xc" id="xg${i}" style="left:48px;top:${384 + i * 60}px;background:#FFC20E;color:#1C1F23">${M.icon(ic, 22, C.onacc, 2.4)}<span>${t}</span></div>`).join('') +
+  XH.map(([ic, t], i) => `<div class="xc" id="xh${i}" style="left:408px;top:${384 + i * 60}px;background:#ECECE7;color:#1C1F23;border:2px solid #CBCCC5">${M.icon(ic, 22, C.soft, 2.4)}<span>${t}</span></div>`).join('');
+const pan = (col, n) => `<line x1="-70" y1="86" x2="0" y2="0" stroke="#5D6269" stroke-width="2.5"/><line x1="70" y1="86" x2="0" y2="0" stroke="#5D6269" stroke-width="2.5"/>` +
+  Array.from({ length: 3 }, (_, i) => `<rect id="wt${n}${i}" x="${-50 + i * 34}" y="56" width="30" height="30" fill="${col}" stroke="#1C1F23" stroke-width="2"/>`).join('') +
+  `<path d="M-84 86 H84 C84 112 50 122 0 122 C-50 122 -84 112 -84 86Z" fill="#F6F6F3" stroke="#1C1F23" stroke-width="2.5"/>`;
+$('#panL').innerHTML = pan('#FFC20E', 'L'); $('#panR').innerHTML = pan('#B3B6B9', 'R');
 ['raghu', 'ananya', 'deshpande'].forEach((n, i) => { $('#xa' + i).style.cssText += ';' + FACE(n); });
 $('#bb2I').innerHTML = M.icon('check', 22, C.bp, 3); $('#factI').innerHTML = M.icon('cake', 36, C.yel, 2);
 $('#bothI').innerHTML = M.icon('shield', 52, C.bp, 2.4);
@@ -245,7 +245,7 @@ $('#opts').innerHTML = OPTS.map((o, i) => `<div class="opt" id="o${i}" style="le
 $('#takeI').innerHTML = M.icon('layers', 44, C.bp, 2.4);
 // recap
 const ROWS = [['frame', 'Plan, build and care for what we share', ['For everyone']], ['layers', 'Seven main branches', ['Structures and soil', 'Water and roads']], ['shield', 'Safety first', ['Check', 'Then build']]];
-$('#rRows').innerHTML = ROWS.map(([ic, tx, ps], i) => `<div class="rw" id="rw${i}" style="top:${280 + i * 152}px"><div class="rn">0${i + 1}</div><div class="ri">${M.icon(ic, 34, C.yel, 2.2)}</div><div class="rt">${tx}</div>${ps.map((p, k) => `<div class="fp" id="fp${i}${k}">${p}</div>`).join('')}</div>`).join('');
+$('#rRows').innerHTML = ROWS.map(([ic, tx, ps], i) => `<div class="rw" id="rw${i}" style="top:${280 + i * 152}px"><div class="rn">0${i + 1}</div><div class="ri">${M.icon(ic, 34, C.acct, 2.2)}</div><div class="rt">${tx}</div>${ps.map((p, k) => `<div class="fp" id="fp${i}${k}">${p}</div>`).join('')}</div>`).join('');
 $('#nextI').innerHTML = M.icon('arrowR', 40, C.bp, 2.4);
 
 /* ---------- helpers (copy these into every later episode) ---------- */
@@ -273,8 +273,8 @@ const rowState = (e, t, ta, td, ic) => {
   const on = M.io((t - ta) / 0.3), off = M.io((t - td) / 0.35), act = on * (1 - off), fut = t < ta;
   const bg = e.querySelector('.bg') || e;
   bg.style.background = mix(C.row, C.yel, act); bg.style.borderColor = mix(C.line, C.yel, act);
-  e.querySelector('.rt').style.color = fut ? C.dim : mix(C.white, C.bp, act);
-  e.querySelector('.rn').style.color = fut ? C.dim : mix(C.yel, C.bp, act);
+  e.querySelector('.rt').style.color = fut ? C.dim : mix(C.white, C.onacc, act);
+  e.querySelector('.rn').style.color = fut ? C.dim : mix(C.acct, C.onacc, act);
   setIco(e.querySelector('.ri'), ic, fut ? C.dim : (act > 0.5 ? C.bp : (t > td ? C.yel : C.yel)), 28, 2.2);
 };
 // partial polyline for a path that draws on while its dashes keep flowing
@@ -293,7 +293,7 @@ function measure() {
   const w = ti.offsetWidth, h = ti.offsetHeight;
   geo = { sx: 960 - w / 2, sy: 540 - h / 2 - 20, ex: 160, ey: 152, es: 60 / fs, cw: $('#eyebrow').offsetWidth, cy: 540 - h / 2 - 112, w };
   const x0 = Math.round(geo.sx), x1 = Math.round(geo.sx + w), y = Math.round(geo.sy + h + 26);
-  $('#tlG').innerHTML = `<line id="tl0" x1="${x0}" y1="${y}" x2="${x1}" y2="${y}"/><path id="tl1" d="M${x0 + 40} ${y} l-18 28 h36 z" stroke="#FFFFFF" stroke-width="2.5"/><path id="tl2" d="M${x1 - 40} ${y} l-18 28 h36 z" stroke="#FFFFFF" stroke-width="2.5"/>`;
+  $('#tlG').innerHTML = `<line id="tl0" x1="${x0}" y1="${y}" x2="${x1}" y2="${y}"/><path id="tl1" d="M${x0 + 40} ${y} l-18 28 h36 z" stroke="#1C1F23" stroke-width="2.5"/><path id="tl2" d="M${x1 - 40} ${y} l-18 28 h36 z" stroke="#1C1F23" stroke-width="2.5"/>`;
   $('#sub').style.top = (y + 52) + 'px';
   const ex = $('#exChip'); ex.style.left = (1760 - ex.offsetWidth) + 'px'; ex.style.top = '170px';
   // plot tags centred on their x
@@ -350,7 +350,7 @@ M.on(t => {
     M.vis($('#pr1'), t, tCrack, 1e9, { dx: 24, dy: 0 });
     M.vis($('#lq'), t, tC2 + 0.05, tAout, { dy: 36, ...o });
     const la = M.vis($('#lqA'), t, tLak - 0.1, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.08 });
-    $('#lqA').style.boxShadow = '0 0 0 4px ' + mix(C.soft, C.yel, M.io((t - tSafe) / 0.3));
+    $('#lqA').style.boxShadow = '0 0 0 4px ' + mix(C.soft, C.acct, M.io((t - tSafe) / 0.3));
     M.rise($('#lqN'), t, tLak, { st: 0.06, sp: M.HEAVY, rot: 0 }); M.vis($('#lqR'), t, tLak + 0.2, 1e9, { dy: 10 });
     M.rise($('#lqQ'), t, wt('C2', 'Will') - 0.05, { st: 0.07, sp: M.HEAVY, rot: 0 });
   }
@@ -377,7 +377,7 @@ M.on(t => {
       M.vis($('#tn' + i), t, tTv[i] + 0.08, 1e9, { dy: 10 }); M.vis($('#tr' + i), t, tTv[i] + 0.14, 1e9, { dy: 8 });
       const nx = i < 2 ? tTv[i + 1] : (i === 2 ? T1('L3') + 0.2 : 0);
       const on = i < 3 ? M.io((t - tTv[i]) / 0.25) * (1 - M.io((t - nx) / 0.25)) : 0;
-      $('#tv' + i).style.boxShadow = '0 0 0 4px ' + mix(C.soft, C.yel, on);
+      $('#tv' + i).style.boxShadow = '0 0 0 4px ' + mix(C.soft, C.acct, on);
     });
     // name pills on the plot, once the card has settled
     const tgT = [tFar, tAna, tRag];
@@ -398,13 +398,13 @@ M.on(t => {
     M.vis($('#kbk'), t, wt('D2', '1828') - 0.05, 1e9, { dy: 10 });
     M.vis($('#kqHr'), t, wt('D3', 'art') - 0.3, 1e9, { dy: 0 });
     for (let i = 0; i < 4; i++) { const q = $('#ql' + i); M.vis(q, t, wt('D3', 'art') - 0.2 + i * 0.1, 1e9, { dy: 14 }); q.style.color = mix(C.dim, C.white, M.io((t - wt('D3', 'art') - i * 0.9) / 0.3)); }
-    tHl.forEach((th, i) => { const u = M.io((t - th + 0.05) / 0.3); $('#hl' + i).style.color = u <= 0 ? '' : mix(C.white, C.yel, u); });
+    tHl.forEach((th, i) => { const u = M.io((t - th + 0.05) / 0.3); $('#hl' + i).style.color = u <= 0 ? '' : mix(C.white, C.acct, u); });
     M.vis($('#nat'), t, tD4 + 0.12, tDout, { dx: 60, dy: 0, ...o });
     NAT.forEach(([ic], i) => {
       const e = $('#nt' + i); M.vis(e, t, tNat[i] - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
       const on = M.io((t - tNat[i]) / 0.25) * (1 - (i < 3 ? M.io((t - tNat[i + 1]) / 0.25) : M.io((t - tD5) / 0.25)));
       e.style.background = mix(C.row, C.yel, on); e.style.borderColor = mix(C.line, C.yel, on);
-      e.querySelector('.zt').style.color = mix(C.white, C.bp, on); e.querySelector('.zn').style.color = mix(C.soft, C.bp, on);
+      e.querySelector('.zt').style.color = mix(C.white, C.onacc, on); e.querySelector('.zn').style.color = mix(C.soft, C.onacc, on);
       setIco(e.querySelector('.zi'), ic, on > 0.5 ? C.bp : C.yel, 40, 2.2);
     });
     M.vis($('#sw'), t, tD5 + 0.05, tDout, { dy: 36, ...o });
@@ -412,7 +412,7 @@ M.on(t => {
       const e = $('#sw' + i); M.vis(e, t, tSw[i] - 0.05, 1e9, { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 });
       const on = M.io((t - tSw[i]) / 0.25) * (1 - (i < 2 ? M.io((t - tSw[i + 1]) / 0.25) : 0));
       e.style.background = mix(C.row, C.yel, on); e.style.borderColor = mix(C.line, C.yel, on);
-      e.querySelector('.zt').style.color = mix(C.white, C.bp, on); e.querySelector('.zn').style.color = mix(C.soft, C.bp, on);
+      e.querySelector('.zt').style.color = mix(C.white, C.onacc, on); e.querySelector('.zn').style.color = mix(C.soft, C.onacc, on);
       setIco(e.querySelector('.zi'), ic, on > 0.5 ? C.bp : C.yel, 40, 2.2);
     });
   }
@@ -493,10 +493,10 @@ M.on(t => {
       M.vis(e, t, tB0 + 0.1 + i * 0.07, tBout, { dy: 36, ...o });
       const on = M.io((t - ta) / 0.3), off = M.io((t - td) / 0.35), act = on * (1 - off), fut = t < ta;
       const bg = e.querySelector('.bg'); bg.style.background = mix(C.panel, C.yel, act); bg.style.borderColor = fut ? C.line : mix(C.yel, C.soft, off);
-      e.querySelector('.bt').style.color = fut ? C.dim : mix(C.white, C.bp, act);
-      e.querySelector('.bd').style.color = fut ? C.dim : mix(C.soft, C.bp, act);
-      e.querySelector('.bn').style.color = fut ? C.dim : mix(C.yel, C.bp, act);
-      e.querySelector('.bi').style.borderColor = fut ? C.line : mix(C.line, C.bp, act);
+      e.querySelector('.bt').style.color = fut ? C.dim : mix(C.white, C.onacc, act);
+      e.querySelector('.bd').style.color = fut ? C.dim : mix(C.soft, C.onacc, act);
+      e.querySelector('.bn').style.color = fut ? C.dim : mix(C.acct, C.onacc, act);
+      e.querySelector('.bi').style.borderColor = fut ? C.line : mix(C.line, C.onacc, act);
       setIco(e.querySelector('.bi'), ic, fut ? C.dim : (act > 0.5 ? C.bp : C.yel), 36, 2.2);
     });
     M.vis($('#ball'), t, tB0 + 0.6, tBout, { dy: 36, ...o });
@@ -545,8 +545,8 @@ M.on(t => {
     const tx = [tRagX, tAnaX, tDesX];
     for (let i = 0; i < 3; i++) M.vis($('#xr' + i), t, tx[i] - 0.1, 1e9, { dx: 24, dy: 0 });
     $('#xa0').style.boxShadow = '0 0 0 4px ' + mix(C.soft, C.dim, M.io((t - tAnaX) / 0.3));
-    $('#xa1').style.boxShadow = '0 0 0 4px ' + mix(C.soft, C.yel, M.io((t - tAnaX) / 0.3));
-    $('#xa2').style.boxShadow = '0 0 0 4px ' + mix(C.soft, C.yel, M.io((t - tDesX) / 0.3));
+    $('#xa1').style.boxShadow = '0 0 0 4px ' + mix(C.soft, C.acct, M.io((t - tAnaX) / 0.3));
+    $('#xa2').style.boxShadow = '0 0 0 4px ' + mix(C.soft, C.acct, M.io((t - tDesX) / 0.3));
     M.draw($('#sx0'), t, tAnaX + 0.4, 0.35, M.o3);
     { const sxe = $('#sx0'), u = M.o3((t - tAnaX - 0.4) / 0.35); sxe.style.transformOrigin = '0 0'; sxe.style.transform = `scaleX(${u.toFixed(3)})`; M.hide(sxe, u <= 0); }
     $('#bb0').style.color = mix(C.white, C.dim, M.io((t - tAnaX - 0.4) / 0.3));
@@ -568,8 +568,8 @@ M.on(t => {
       const right = i === RIGHT, r = M.io((t - tAns) / 0.3), bg = e.querySelector('.bg');
       bg.style.background = right ? mix(C.panel, C.white, r) : mix(C.panel, C.bp, r);
       bg.style.borderColor = right ? mix(C.soft, C.white, r) : mix(C.soft, C.line, r);
-      e.querySelector('.ot').style.color = right ? mix(C.white, C.bp, r) : mix(C.white, C.dim, r);
-      const lt = e.querySelector('.lt'); lt.style.background = right ? mix(C.panel, C.yel, r) : C.panel; lt.style.borderColor = right ? mix(C.white, C.yel, r) : mix(C.white, C.dim, r); lt.style.color = right ? mix(C.white, C.bp, r) : mix(C.white, C.dim, r);
+      e.querySelector('.ot').style.color = right ? mix(C.white, C.onacc, r) : mix(C.white, C.dim, r);
+      const lt = e.querySelector('.lt'); lt.style.background = right ? mix(C.panel, C.yel, r) : C.panel; lt.style.borderColor = right ? mix(C.white, C.acct, r) : mix(C.white, C.dim, r); lt.style.color = right ? mix(C.white, C.onacc, r) : mix(C.white, C.dim, r);
       const ok = e.querySelector('.ok'); if (right) M.vis(ok, t, tAns + 0.1, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 }); else M.hide(ok, true);
       if (right && t > tAns && t < tAns + 0.45) e.style.transform = `scale(${(1 + 0.04 * Math.sin(PI * (t - tAns) / 0.45)).toFixed(4)})`;
       else if (right && t >= tAns + 0.45 && e.style.transform !== 'none') e.style.transform = 'none';
@@ -609,5 +609,5 @@ M.on(t => {
 M.sfx(tT - 0.38, 'whoosh', 0.22); M.sfx(tQ - 0.38, 'whoosh', 0.22); M.sfx(tS - 0.38, 'whoosh', 0.22);
 [0, 1, 2].forEach(k => M.sfx(tCount + k * (tAns - tCount) / 3, 'tick', 0.28));
 M.sfx(tAns + 0.05, 'correct', 0.32);
-M.outro({ bg: '#0F3B6E', ink: '#FFFFFF', accent: '#FFD400', sub: 'rgba(255,255,255,.66)', font: 'Archivo' });
+M.outro({ bg: '#E4E4DF', ink: '#1C1F23', accent: '#FFC20E', sub: 'rgba(28,31,35,.62)', font: 'Archivo' });
 })();

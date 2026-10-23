@@ -1,8 +1,8 @@
-<!doctype html><html><head><meta charset="utf-8"><title>Engg Civil - Introduction to Civil Engineering and Its Branches (Civil Engineering Ep 1)</title>
+<!doctype html><html><head><meta charset="utf-8"><title>Engg Civil (Concrete and Hi-vis) - Introduction to Civil Engineering and Its Branches (Civil Engineering Ep 1)</title>
 <link rel="stylesheet" href="../../engine/base.css">
 <style>
 /* ===== engg-civil world: Blueprint to site (series reference components, Ep 01) ===== */
-:root{--bp:#0F3B6E;--grid:#1D4E85;--grid2:#174578;--white:#FFFFFF;--soft:#B9CCE3;--yel:#FFD400;--con:#C9CED6;--panel:#123F73;--row:#1A4B80;--line:#2C5F96;--dim:#7C93B0;--plate:#F4F1EA}
+:root{--onacc:#1C1F23;--acct:#9A6F00;--bp:#E4E4DF;--grid:#D2D2CB;--grid2:#CACAC3;--white:#1C1F23;--soft:#5D6269;--yel:#FFC20E;--con:#B3B6B9;--panel:#F6F6F3;--row:#ECECE7;--line:#CBCCC5;--dim:#9EA2A6;--plate:#FFFFFF}
 #stage{background:var(--bp);font-family:Archivo;font-stretch:100%;color:var(--white)}
 #grid{position:absolute;left:0;top:0}
 #prog{position:absolute;left:0;top:0;height:6px;width:1920px;background:var(--grid);z-index:60}
@@ -12,7 +12,7 @@
 .hand{font-family:'Architects Daughter'}
 .mono{font-family:'IBM Plex Mono'}
 .abs{position:absolute}
-.acc{color:var(--yel)}
+.acc{color:var(--acct)}
 .chip{position:absolute;display:inline-flex;align-items:center;gap:14px;height:44px;padding:0 18px;border:2px solid var(--white);color:var(--white);font:600 19px 'IBM Plex Mono';letter-spacing:.14em;white-space:nowrap;background:var(--bp)}
 .chip i{width:10px;height:10px;background:var(--yel)}
 .chip.ghost{background:var(--bp);color:var(--soft);border:2px solid var(--line);height:40px;font-size:16px}
@@ -25,7 +25,7 @@
 .note{position:absolute;font:400 26px 'Architects Daughter';white-space:nowrap;line-height:1;color:var(--white)}
 .plate{position:absolute;background:var(--plate);border:3px solid var(--white);border-radius:12px;object-fit:cover}
 .pill{position:absolute;height:52px;padding:0 22px;display:flex;align-items:center;gap:12px;font:700 24px Archivo;white-space:nowrap;background:var(--row);color:var(--white);border:2px solid var(--line)}
-.pill.y{background:var(--yel);color:var(--bp);border-color:var(--yel)}
+.pill.y{background:var(--yel);color:var(--onacc);border-color:var(--acct)}
 .av{position:absolute;width:72px;height:72px;border-radius:50%;background-size:cover;background-position:center;box-shadow:0 0 0 4px var(--soft)}
 /* scene A: the old school */
 #hero{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
@@ -70,7 +70,7 @@
 #stmt{position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:41}
 #st1{position:absolute;left:0;width:1920px;top:364px;text-align:center;font:400 52px 'Architects Daughter';color:var(--soft);white-space:nowrap}
 #st2{position:absolute;left:0;width:1920px;top:452px;text-align:center;font-size:76px;white-space:nowrap}
-#st3{position:absolute;left:0;width:1920px;top:552px;text-align:center;font-size:104px;white-space:nowrap;color:var(--yel)}
+#st3{position:absolute;left:0;width:1920px;top:552px;text-align:center;font-size:104px;white-space:nowrap;color:var(--acct)}
 /* scene B: seven branches */
 .bc{position:absolute;width:376px;height:274px}
 .bc .bg{position:absolute;inset:0;background:var(--panel);border:2px solid var(--line)}
@@ -90,7 +90,7 @@
 .kr .ri{position:absolute;left:76px;top:12px;width:56px;height:56px;border:2px solid var(--line);display:flex;align-items:center;justify-content:center}
 .kr .rt{position:absolute;left:156px;top:22px;font:700 28px Archivo;white-space:nowrap}
 .pn{position:absolute;inset:0}
-.pn .ps{position:absolute;left:48px;top:48px;font:600 20px 'IBM Plex Mono';letter-spacing:.14em;color:var(--yel);white-space:nowrap}
+.pn .ps{position:absolute;left:48px;top:48px;font:600 20px 'IBM Plex Mono';letter-spacing:.14em;color:var(--acct);white-space:nowrap}
 .pn .pt{position:absolute;left:48px;top:88px;font-size:80px;line-height:1.1;white-space:nowrap}
 .pn .pm{position:absolute;left:48px;top:200px;font:400 34px 'Architects Daughter';color:var(--soft);white-space:nowrap}
 .pn .hr{position:absolute;left:48px;right:48px;top:282px;height:2px;background:var(--line)}
@@ -109,10 +109,10 @@
 .xr .sx{position:absolute;left:100px;top:31px;height:3px;background:var(--soft)}
 #fact{position:absolute;left:48px;top:380px;width:688px;height:156px;background:var(--row);border:2px solid var(--line)}
 #fact .fi{position:absolute;left:22px;top:40px;width:72px;height:72px;border:2px solid var(--yel);display:flex;align-items:center;justify-content:center}
-#fact .kl{position:absolute;left:118px;top:24px;font:600 16px 'IBM Plex Mono';letter-spacing:.12em;color:var(--yel);white-space:nowrap}
+#fact .kl{position:absolute;left:118px;top:24px;font:600 16px 'IBM Plex Mono';letter-spacing:.12em;color:var(--acct);white-space:nowrap}
 #fact .kt{position:absolute;left:118px;top:56px;font:700 30px Archivo;white-space:nowrap}
 #fact .kt2{position:absolute;left:118px;top:102px;font:500 24px Archivo;color:var(--soft);white-space:nowrap}
-#both{position:absolute;left:160px;top:470px;width:1600px;height:140px;background:var(--yel);color:var(--bp);display:flex;align-items:center;justify-content:center;gap:22px}
+#both{position:absolute;left:160px;top:470px;width:1600px;height:140px;background:var(--yel);color:var(--onacc);display:flex;align-items:center;justify-content:center;gap:22px}
 #both .tx{font-size:52px;white-space:nowrap}
 /* quiz (on the sheet) */
 #quiz,#recap{position:absolute;left:0;top:0;width:1920px;height:1080px}
@@ -126,31 +126,37 @@
 .opt .ok{position:absolute;right:30px;top:30px;width:56px;height:56px;background:var(--yel);display:flex;align-items:center;justify-content:center}
 #ring{position:absolute;left:1610px;top:236px;width:150px;height:150px}
 #ringN{position:absolute;left:1610px;top:236px;width:150px;height:150px;display:flex;align-items:center;justify-content:center;font:600 64px 'IBM Plex Mono'}
-#take{position:absolute;left:160px;top:748px;width:1600px;height:96px;background:var(--yel);color:var(--bp);display:flex;align-items:center;gap:22px;padding:0 36px}
+#take{position:absolute;left:160px;top:748px;width:1600px;height:96px;background:var(--yel);color:var(--onacc);display:flex;align-items:center;gap:22px;padding:0 36px}
 #take .tx{font-size:40px;white-space:nowrap}
 /* recap */
 #rh{position:absolute;left:160px;top:142px;font-size:64px;white-space:nowrap}
 .rw{position:absolute;left:160px;width:1600px;height:128px;background:var(--panel);border:2px solid var(--soft)}
-.rw .rn{position:absolute;left:40px;top:42px;font:600 30px 'IBM Plex Mono';color:var(--yel)}
+.rw .rn{position:absolute;left:40px;top:42px;font:600 30px 'IBM Plex Mono';color:var(--acct)}
 .rw .ri{position:absolute;left:112px;top:26px;width:72px;height:72px;border:2px solid var(--line);display:flex;align-items:center;justify-content:center}
 .rw .rt{position:absolute;left:216px;top:36px;font:700 38px Archivo;white-space:nowrap}
 .fp{position:absolute;top:34px;height:56px;padding:0 22px;display:flex;align-items:center;font:700 24px Archivo;white-space:nowrap;background:var(--row);color:var(--white);border:2px solid var(--line)}
 #next{position:absolute;left:160px;top:762px;width:1600px;height:96px;background:var(--white);color:var(--bp);display:flex;align-items:center;gap:24px;padding:0 32px}
-#next .nc{height:44px;padding:0 18px;background:var(--bp);display:flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.14em;color:var(--yel);white-space:nowrap}
+#next .nc{height:44px;padding:0 18px;background:var(--bp);display:flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.14em;color:var(--acct);white-space:nowrap}
 #next .nt{font:700 34px Archivo;white-space:nowrap;flex:1}
 .cap{font:600 38px Archivo;color:var(--bp);background:var(--white);padding:12px 30px}
-.cap .cw{color:#7C93B0}.cap .cw.on{color:var(--bp)}.cap .cw.act{color:#C79A00}
+.cap .cw{color:#8F949A}.cap .cw.on{color:var(--bp)}.cap .cw.act{color:#FFC20E}
+.plate{border:2px solid var(--line)}
+.card,.opt .bg,.rw{border-color:var(--line)}
+.card{box-shadow:0 2px 0 rgba(0,0,0,.04)}
+.acc,#st3{color:var(--white);background:linear-gradient(transparent 60%,var(--yel) 60%,var(--yel) 94%,transparent 94%)}
+#ball,.bd7,#fact .fi{border-color:#E0A800}
+#next .nc{color:var(--white);background:var(--yel)}
 </style></head><body>
 <div id="stage">
   <svg id="grid" width="1920" height="1080"><defs>
-    <pattern id="g8" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0V32H0" fill="none" stroke="#174578" stroke-width="1"/></pattern>
-    <pattern id="g40" width="160" height="160" patternUnits="userSpaceOnUse"><rect width="160" height="160" fill="url(#g8)"/><path d="M160 0V160H0" fill="none" stroke="#1D4E85" stroke-width="1.5"/></pattern>
+    <pattern id="g8" width="80" height="80" patternUnits="userSpaceOnUse"><circle cx="40" cy="40" r="3.2" fill="#CACAC3"/></pattern>
+    <pattern id="g40" width="320" height="160" patternUnits="userSpaceOnUse"><rect width="320" height="160" fill="url(#g8)"/><path d="M320 0V160H0" fill="none" stroke="#D2D2CB" stroke-width="2"/></pattern>
   </defs><rect width="1920" height="1080" fill="url(#g40)"/></svg>
   <div id="cam">
     <!-- title + header (shared elements) -->
     <div class="chip" id="eyebrow"><i></i>EP 01 · CIVIL ENGINEERING</div>
     <div class="hd" id="title">Introduction to <span class="acc">Civil Engineering</span></div>
-    <svg id="tline" width="1920" height="1080"><g id="tlG" fill="none" stroke="#FFD400" stroke-width="3"></g></svg>
+    <svg id="tline" width="1920" height="1080"><g id="tlG" fill="none" stroke="#9A6F00" stroke-width="3"></g></svg>
     <div id="sub">explained with one school building</div>
     <div class="chip ghost" id="exChip">EXAMPLE FIGURES</div>
 
@@ -184,8 +190,8 @@
         <div class="pill brief" id="br1" style="top:282px"><span id="br1I"></span>Two storeys</div>
         <div class="pill brief" id="br2" style="top:354px"><span id="br2I"></span>Hosahalli, Karnataka</div>
         <div class="lbl" id="chL" style="left:1172px;top:170px">FOR CHILDREN</div>
-        <div id="chN" style="position:absolute;left:1164px;top:200px;font:600 128px/1 'IBM Plex Mono';color:#FFD400;white-space:nowrap">0</div>
-        <div class="note" id="chT" style="left:1172px;top:348px;color:#B9CCE3">in one new building</div>
+        <div id="chN" style="position:absolute;left:1164px;top:200px;font:600 128px/1 'IBM Plex Mono';color:#9A6F00;white-space:nowrap">0</div>
+        <div class="note" id="chT" style="left:1172px;top:348px;color:#5D6269">in one new building</div>
       </div>
       <div class="card" id="ana">
         <img class="plate" src="../../assets/illustrations/engg-civil/eciv-ananya.png" id="anaImg" style="left:36px;top:30px;width:170px;height:212px;object-position:center top">
@@ -202,16 +208,16 @@
       <div class="card" id="kq"><div class="abs" id="kqIn" style="left:0;top:0;width:784px;height:580px">
         <div class="lbl" style="left:48px;top:40px">THE FIRST DEFINITION</div>
         <svg id="chS" width="124" height="166" style="position:absolute;left:48px;top:88px">
-          <rect x="8" y="10" width="108" height="140" fill="#F4F1EA" stroke="#FFFFFF" stroke-width="3"/>
-          <rect x="0" y="0" width="124" height="18" rx="9" fill="#C9CED6" stroke="#FFFFFF" stroke-width="3"/>
-          <rect x="0" y="142" width="124" height="18" rx="9" fill="#C9CED6" stroke="#FFFFFF" stroke-width="3"/>
-          <rect id="cl1" x="24" y="34" width="76" height="6" fill="#0F3B6E"/><rect id="cl2" x="24" y="52" width="60" height="6" fill="#0F3B6E"/><rect id="cl3" x="24" y="70" width="70" height="6" fill="#0F3B6E"/><rect id="cl4" x="24" y="88" width="50" height="6" fill="#0F3B6E"/>
-          <circle id="seal" cx="88" cy="118" r="15" fill="#FFD400" stroke="#0F3B6E" stroke-width="3"/>
+          <rect x="8" y="10" width="108" height="140" fill="#FFFFFF" stroke="#1C1F23" stroke-width="3"/>
+          <rect x="0" y="0" width="124" height="18" rx="9" fill="#B3B6B9" stroke="#1C1F23" stroke-width="3"/>
+          <rect x="0" y="142" width="124" height="18" rx="9" fill="#B3B6B9" stroke="#1C1F23" stroke-width="3"/>
+          <rect id="cl1" x="24" y="34" width="76" height="6" fill="#E4E4DF"/><rect id="cl2" x="24" y="52" width="60" height="6" fill="#E4E4DF"/><rect id="cl3" x="24" y="70" width="70" height="6" fill="#E4E4DF"/><rect id="cl4" x="24" y="88" width="50" height="6" fill="#E4E4DF"/>
+          <circle id="seal" cx="88" cy="118" r="15" fill="#FFC20E" stroke="#1C1F23" stroke-width="3"/>
         </svg>
         <div class="hd" id="kot1" style="position:absolute;left:204px;top:92px;font-size:46px;white-space:nowrap">Thomas Tredgold</div>
-        <div class="hand" id="kot2" style="position:absolute;left:204px;top:152px;font-size:30px;color:#B9CCE3;white-space:nowrap">English engineer, 1788 - 1829</div>
-        <div class="lbl" id="kbk" style="left:204px;top:214px;color:#FFD400">ICE ROYAL CHARTER · 1828</div>
-        <div id="kqHr" style="position:absolute;left:48px;right:48px;top:282px;height:2px;background:#2C5F96"></div>
+        <div class="hand" id="kot2" style="position:absolute;left:204px;top:152px;font-size:30px;color:#5D6269;white-space:nowrap">English engineer, 1788 - 1829</div>
+        <div class="lbl" id="kbk" style="left:204px;top:214px;color:#9A6F00">ICE ROYAL CHARTER · 1828</div>
+        <div id="kqHr" style="position:absolute;left:48px;right:48px;top:282px;height:2px;background:#CBCCC5"></div>
         <div class="ql" id="ql0" style="top:310px">Civil engineering is "the art of</div>
         <div class="ql" id="ql1" style="top:362px"><span class="hl" id="hl0">directing</span> the great sources of</div>
         <div class="ql" id="ql2" style="top:414px"><span class="hl" id="hl1">power in Nature</span> for the</div>
@@ -233,7 +239,7 @@
     <!-- scene B: the seven branches -->
     <div id="sB">
       <div id="bRow"></div>
-      <div class="abs" id="ball"><div class="lbl" style="left:32px;top:32px;color:#FFD400">ONE REAL PROJECT</div><div class="hd" id="ballT">Needs all seven, working together</div><div id="b7"></div></div>
+      <div class="abs" id="ball"><div class="lbl" style="left:32px;top:32px;color:#9A6F00">ONE REAL PROJECT</div><div class="hd" id="ballT">Needs all seven, working together</div><div id="b7"></div></div>
     </div>
 
     <!-- scene K: at work today -->
@@ -247,13 +253,13 @@
       <div class="card" id="xs"><div class="abs" id="xsIn" style="left:0;top:0;width:784px;height:580px">
         <div class="lbl" style="left:48px;top:40px">IS IT ALWAYS GOOD?</div>
         <svg id="scl" width="688" height="250" style="position:absolute;left:48px;top:84px">
-          <rect x="254" y="226" width="180" height="16" fill="#FFFFFF"/>
-          <rect x="339" y="40" width="10" height="190" fill="#FFFFFF"/>
+          <rect x="254" y="226" width="180" height="16" fill="#1C1F23"/>
+          <rect x="339" y="40" width="10" height="190" fill="#1C1F23"/>
           <g id="panL"></g><g id="panR"></g>
-          <g id="beam"><rect x="64" y="35" width="560" height="10" fill="#FFFFFF"/></g>
-          <circle cx="344" cy="40" r="14" fill="#FFD400" stroke="#0F3B6E" stroke-width="3"/>
+          <g id="beam"><rect x="64" y="35" width="560" height="10" fill="#1C1F23"/></g>
+          <circle cx="344" cy="40" r="14" fill="#FFC20E" stroke="#1C1F23" stroke-width="3"/>
         </svg>
-        <div class="lbl" id="xgL" style="left:48px;top:350px;color:#FFD400">THE GOOD SIDE</div>
+        <div class="lbl" id="xgL" style="left:48px;top:350px;color:#9A6F00">THE GOOD SIDE</div>
         <div class="lbl" id="xhL" style="left:408px;top:350px">THE HARD SIDE</div>
         <div id="xChips"></div>
       </div></div>
@@ -261,7 +267,7 @@
         <div class="lbl" style="left:48px;top:40px">BEFORE THE FIRST SPADE</div>
         <div class="xr" id="xr0" style="top:96px"><div class="av" id="xa0"></div><div class="bb" id="bb0">Start digging tomorrow?</div><div class="sx" id="sx0"></div></div>
         <div class="xr" id="xr1" style="top:184px"><div class="av" id="xa1"></div><div class="bb" id="bb1">Survey and soil test first</div></div>
-        <div class="xr" id="xr2" style="top:272px"><div class="av" id="xa2"></div><div class="bb" id="bb2" style="background:#FFD400;color:#0F3B6E;border-color:#FFD400"><span id="bb2I"></span>A few days of tests can save a school</div></div>
+        <div class="xr" id="xr2" style="top:272px"><div class="av" id="xa2"></div><div class="bb" id="bb2" style="background:#FFC20E;color:#1C1F23;border-color:#9A6F00"><span id="bb2I"></span>A few days of tests can save a school</div></div>
         <div id="fact"><div class="fi" id="factI"></div><div class="kl">ENGINEERS' DAY IN INDIA · 15 SEPTEMBER</div><div class="kt">Birthday of Sir M. Visvesvaraya</div><div class="kt2">Born 1861 · chief engineer of the KRS Dam</div></div>
       </div>
       <div class="chip" id="lesson" style="left:160px;top:390px"><i></i>THE LESSON</div>
@@ -276,7 +282,7 @@
   <div id="quiz">
     <div class="chip" id="qchip" style="left:160px;top:120px"><i></i>QUICK CHECK</div>
     <div class="hd qq" id="qq1" style="top:224px">Which branch checks if the soil</div><div class="hd qq acc" id="qq2" style="top:304px">can carry the school?</div>
-    <svg id="ring" viewBox="0 0 150 150"><circle cx="75" cy="75" r="66" fill="#0F3B6E" stroke="#2C5F96" stroke-width="8"/><circle id="ringA" cx="75" cy="75" r="66" fill="none" stroke="#FFD400" stroke-width="8" transform="rotate(-90 75 75)"/></svg>
+    <svg id="ring" viewBox="0 0 150 150"><circle cx="75" cy="75" r="66" fill="#E4E4DF" stroke="#CBCCC5" stroke-width="8"/><circle id="ringA" cx="75" cy="75" r="66" fill="none" stroke="#9A6F00" stroke-width="8" transform="rotate(-90 75 75)"/></svg>
     <div id="ringN"></div>
     <div id="opts"></div>
     <div id="take"><span id="takeI"></span><span class="hd tx" id="takeT">Soil and rock under the footings = Geotechnical</span></div>
