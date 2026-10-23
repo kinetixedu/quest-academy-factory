@@ -9,380 +9,380 @@ Rohan lives one point
 nine kilometres away.
 
 3
-00:00:06,832 --> 00:00:08,119
+00:00:06,832 --> 00:00:08,120
 He pays nothing.
 
 4
-00:00:08,619 --> 00:00:11,440
+00:00:08,620 --> 00:00:11,424
 Fatima lives two point
 one kilometres away.
 
 5
-00:00:11,440 --> 00:00:13,081
+00:00:11,424 --> 00:00:13,055
 She pays thirty rupees.
 
 6
-00:00:13,081 --> 00:00:13,981
+00:00:13,055 --> 00:00:13,955
 Fair?
 
 7
-00:00:14,241 --> 00:00:15,512
+00:00:14,211 --> 00:00:15,482
 Meet Dabba Dash.
 
 8
-00:00:15,512 --> 00:00:20,450
+00:00:15,482 --> 00:00:20,421
 Kavya, a student in Pune, built it
 to deliver lunch around her college.
 
 9
-00:00:20,750 --> 00:00:23,455
+00:00:20,721 --> 00:00:23,426
 The food comes from
 Joseph uncle's canteen.
 
 10
-00:00:23,455 --> 00:00:27,010
+00:00:23,426 --> 00:00:26,980
 Rohan runs the servers, and
 Fatima checks every number.
 
 11
-00:00:27,560 --> 00:00:32,182
+00:00:27,530 --> 00:00:32,156
 The delivery fee is a function: a rule
 where each input gives exactly one
 
 12
-00:00:32,182 --> 00:00:33,082
+00:00:32,156 --> 00:00:33,056
 output.
 
 13
-00:00:33,140 --> 00:00:36,504
+00:00:33,114 --> 00:00:36,460
 Here, the input is distance,
 and the output is the fee.
 
 14
-00:00:36,804 --> 00:00:39,207
+00:00:36,760 --> 00:00:39,163
 All the allowed inputs are the domain.
 
 15
-00:00:39,207 --> 00:00:41,656
+00:00:39,163 --> 00:00:41,612
 All the possible outputs are the range.
 
 16
-00:00:42,206 --> 00:00:44,298
+00:00:42,162 --> 00:00:44,253
 The trouble is at two kilometres.
 
 17
-00:00:44,298 --> 00:00:46,158
+00:00:44,253 --> 00:00:46,114
 To see it, we need limits.
 
 18
-00:00:46,458 --> 00:00:51,777
+00:00:46,414 --> 00:00:51,734
 In 1821, a French mathematician
 wrote down the idea.
 
 19
-00:00:52,077 --> 00:00:56,418
+00:00:52,034 --> 00:00:56,375
 When values come closer and closer
 to a fixed value, that value is their
 
 20
-00:00:56,418 --> 00:00:57,318
+00:00:56,375 --> 00:00:57,275
 limit.
 
 21
-00:00:57,295 --> 00:01:01,590
+00:00:57,252 --> 00:01:01,554
 Simply put, a limit is where a function
 is heading as the input gets close
 
 22
-00:01:01,590 --> 00:01:02,490
+00:01:01,554 --> 00:01:02,454
 to a point.
 
 23
-00:01:03,026 --> 00:01:05,931
+00:01:02,991 --> 00:01:05,900
 Watch the fee near two
 kilometres, from below.
 
 24
-00:01:06,231 --> 00:01:10,318
+00:01:06,200 --> 00:01:10,287
 One point nine, one point nine
 nine, one point nine nine nine.
 
 25
-00:01:10,318 --> 00:01:11,898
+00:01:10,287 --> 00:01:11,867
 The fee stays at zero.
 
 26
-00:01:12,198 --> 00:01:13,829
+00:01:12,167 --> 00:01:13,799
 The left limit is zero.
 
 27
-00:01:14,129 --> 00:01:15,307
+00:01:14,099 --> 00:01:15,276
 Now from above.
 
 28
-00:01:15,307 --> 00:01:19,419
+00:01:15,276 --> 00:01:19,388
 Two point one, two point zero
 one, two point zero zero one.
 
 29
-00:01:19,719 --> 00:01:21,316
+00:01:19,688 --> 00:01:21,285
 The fee stays at thirty.
 
 30
-00:01:21,316 --> 00:01:23,004
+00:01:21,285 --> 00:01:22,973
 The right limit is thirty.
 
 31
-00:01:23,304 --> 00:01:26,743
+00:01:23,273 --> 00:01:26,715
 The two sides disagree, so
 the limit does not exist.
 
 32
-00:01:26,743 --> 00:01:27,945
+00:01:26,715 --> 00:01:27,917
 That is a jump.
 
 33
-00:01:28,495 --> 00:01:31,229
+00:01:28,467 --> 00:01:31,199
 Professor Iyer shows something stranger.
 
 34
-00:01:31,229 --> 00:01:34,156
+00:01:31,199 --> 00:01:34,123
 x squared minus one, over x minus one.
 
 35
-00:01:34,156 --> 00:01:37,308
+00:01:34,123 --> 00:01:37,273
 At x equals one, it gives zero over zero.
 
 36
-00:01:37,608 --> 00:01:38,834
+00:01:37,573 --> 00:01:38,799
 No value there.
 
 37
-00:01:38,834 --> 00:01:40,486
+00:01:38,799 --> 00:01:40,451
 A program would crash.
 
 38
-00:01:40,486 --> 00:01:41,764
+00:01:40,451 --> 00:01:41,729
 But look nearby.
 
 39
-00:01:42,064 --> 00:01:45,699
+00:01:42,029 --> 00:01:45,664
 At zero point nine nine, it
 gives one point nine nine.
 
 40
-00:01:45,699 --> 00:01:48,628
+00:01:45,664 --> 00:01:48,594
 At one point zero one, two point zero one.
 
 41
-00:01:48,928 --> 00:01:50,420
+00:01:48,894 --> 00:01:50,384
 Both sides head to two.
 
 42
-00:01:50,420 --> 00:01:53,668
+00:01:50,384 --> 00:01:53,629
 The limit is two, though the
 function never gets there.
 
 43
-00:01:54,218 --> 00:01:57,265
+00:01:54,178 --> 00:01:57,226
 A limit is about where you are
 heading, not where you are.
 
 44
-00:01:57,915 --> 00:02:01,665
+00:01:57,876 --> 00:02:01,626
 A function is continuous at a
 point if it passes three checks.
 
 45
-00:02:01,965 --> 00:02:02,865
+00:02:01,926 --> 00:02:02,826
 One.
 
 46
-00:02:02,467 --> 00:02:04,042
+00:02:02,431 --> 00:02:04,015
 It has a value there.
 
 47
-00:02:04,342 --> 00:02:05,242
+00:02:04,315 --> 00:02:05,215
 Two.
 
 48
-00:02:04,887 --> 00:02:06,255
+00:02:04,859 --> 00:02:06,226
 The limit exists.
 
 49
-00:02:06,255 --> 00:02:07,902
+00:02:06,226 --> 00:02:07,870
 Left and right agree.
 
 50
-00:02:08,202 --> 00:02:09,102
+00:02:08,170 --> 00:02:09,070
 Three.
 
 51
-00:02:08,805 --> 00:02:10,686
+00:02:08,775 --> 00:02:10,659
 The limit equals the value.
 
 52
-00:02:10,986 --> 00:02:14,210
+00:02:10,959 --> 00:02:14,183
 So you can draw through that
 point without lifting your pen.
 
 53
-00:02:14,760 --> 00:02:16,515
+00:02:14,733 --> 00:02:16,489
 So Kavya fixes the fee.
 
 54
-00:02:16,515 --> 00:02:20,749
+00:02:16,489 --> 00:02:20,723
 The first kilometre is free, then
 fifteen rupees per kilometre.
 
 55
-00:02:21,049 --> 00:02:24,730
+00:02:21,023 --> 00:02:24,703
 At two kilometres, it is fifteen
 from the left, from the right, and at
 
 56
-00:02:24,730 --> 00:02:25,630
+00:02:24,703 --> 00:02:25,603
 the point.
 
 57
-00:02:25,713 --> 00:02:27,477
+00:02:25,686 --> 00:02:27,449
 All three checks pass.
 
 58
-00:02:27,477 --> 00:02:31,282
+00:02:27,449 --> 00:02:31,252
 Rohan pays thirteen fifty,
 and Fatima sixteen fifty.
 
 59
-00:02:31,282 --> 00:02:32,182
+00:02:31,252 --> 00:02:32,152
 No jump.
 
 60
-00:02:32,686 --> 00:02:34,718
+00:02:32,655 --> 00:02:34,687
 Where is this used at work today?
 
 61
-00:02:35,018 --> 00:02:35,918
+00:02:34,987 --> 00:02:35,887
 Functions.
 
 62
-00:02:35,857 --> 00:02:39,433
+00:02:35,827 --> 00:02:39,403
 A bank turns a loan amount
 into one monthly payment.
 
 63
-00:02:39,733 --> 00:02:40,633
+00:02:39,703 --> 00:02:40,603
 Limits.
 
 64
-00:02:40,411 --> 00:02:45,176
+00:02:40,380 --> 00:02:45,146
 In a hospital, a steady drip brings a
 medicine's level in the blood closer
 
 65
-00:02:45,176 --> 00:02:47,394
+00:02:45,146 --> 00:02:47,364
 and closer to one steady value.
 
 66
-00:02:47,694 --> 00:02:48,639
+00:02:47,664 --> 00:02:48,609
 Continuity.
 
 67
-00:02:48,639 --> 00:02:53,957
+00:02:48,609 --> 00:02:53,929
 Tax slabs charge a higher rate only
 above each limit, so tax never jumps.
 
 68
-00:02:54,507 --> 00:02:57,223
+00:02:54,479 --> 00:02:57,194
 But is the real world always continuous?
 
 69
-00:02:57,523 --> 00:02:58,647
+00:02:57,494 --> 00:02:58,616
 The good side.
 
 70
-00:02:58,647 --> 00:03:02,427
+00:02:58,616 --> 00:03:02,388
 Continuous rules are fair,
 and calculus is built on them.
 
 71
-00:03:02,727 --> 00:03:03,946
+00:03:02,688 --> 00:03:03,907
 The hard side.
 
 72
-00:03:03,946 --> 00:03:08,433
+00:03:03,907 --> 00:03:08,394
 Real life moves in steps, like
 whole orders and rounded prices.
 
 73
-00:03:08,733 --> 00:03:11,282
+00:03:08,694 --> 00:03:11,242
 And no jumps is not smooth.
 
 74
-00:03:11,282 --> 00:03:18,085
+00:03:11,242 --> 00:03:18,042
 In 1872, a German mathematician found a
 curve with no breaks, jagged everywhere.
 
 75
-00:03:18,385 --> 00:03:22,494
+00:03:18,342 --> 00:03:22,451
 So Kavya rounds the fees up, to
 fourteen and seventeen rupees.
 
 76
-00:03:22,794 --> 00:03:25,794
+00:03:22,751 --> 00:03:25,751
 Tiny one rupee steps that nobody minds.
 
 77
-00:03:26,094 --> 00:03:26,996
+00:03:26,051 --> 00:03:26,952
 The lesson?
 
 78
-00:03:26,996 --> 00:03:30,528
+00:03:26,952 --> 00:03:30,480
 Use smooth rules, but know
 where life moves in steps.
 
 79
-00:03:31,128 --> 00:03:32,095
+00:03:31,080 --> 00:03:32,047
 Quick check.
 
 80
-00:03:32,095 --> 00:03:36,398
+00:03:32,047 --> 00:03:36,353
 The fee is zero just below two
 kilometres, and thirty just above.
 
 81
-00:03:36,398 --> 00:03:38,032
+00:03:36,353 --> 00:03:37,987
 Is it continuous there?
 
 82
-00:03:39,932 --> 00:03:40,832
+00:03:39,887 --> 00:03:40,787
 No!
 
 83
-00:03:40,345 --> 00:03:43,943
+00:03:40,301 --> 00:03:43,904
 The left and right limits are
 different, so the graph jumps.
 
 84
-00:03:44,493 --> 00:03:45,506
+00:03:44,454 --> 00:03:45,464
 So, remember.
 
 85
-00:03:45,806 --> 00:03:49,014
+00:03:45,764 --> 00:03:48,971
 A function gives exactly
 one output for each input.
 
 86
-00:03:49,314 --> 00:03:52,548
+00:03:49,271 --> 00:03:52,505
 A limit is where a function
 is heading, from both sides.
 
 87
-00:03:52,848 --> 00:03:56,602
+00:03:52,805 --> 00:03:56,559
 A function is continuous when
 its value and its limit match.
 
 88
-00:03:57,152 --> 00:04:00,135
+00:03:57,109 --> 00:04:00,090
 Next time, we'll explore
 sequences and series.
