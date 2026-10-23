@@ -1,7 +1,7 @@
 // Engg CS - Engineering Mathematics, Ep 01: Functions, Limits and Continuity (Dabba Dash)
 (() => {
 const { $ } = M;
-const C = { bg: '#0A1022', pan: '#101A33', pan2: '#0D1630', ln: '#22305A', cy: '#38D9F5', cyd: '#123A52', tx: '#FFFFFF', mut: '#6F7FA6', ink: '#C9D3EC', dim: '#3A4A75', soft: '#9FB3D9' };
+const C = { bg: '#F7F7F2', pan: '#FFFFFF', pan2: '#F3F3EE', ln: '#DCDCD3', cy: '#3B5BFD', cyd: '#E8ECFF', tx: '#14171C', mut: '#6B6F76', ink: '#2E3238', dim: '#BDBDB5', soft: '#5B6068' };
 const wt = M.wt, T0 = M.t0, T1 = M.t1, mix = M.mix;
 Object.assign(M.IC, {
   target: ['M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z', 'M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z', 'M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z'],
@@ -52,7 +52,7 @@ const T = (x, y, s, txt, o = '') => `<text x="${x}" y="${y}" font-size="${s}" fo
 
 // A
 $('#kitI').innerHTML = M.icon('store', 28, C.cy, 2.2);
-$('#ticks').innerHTML = [1, 2, 3].map(k => `<line x1="${92 + k * 208}" y1="336" x2="${92 + k * 208}" y2="356" stroke="#3A4A75" stroke-width="3"/>` + T(92 + k * 208, 398, 16, k + ' KM', 'text-anchor="middle" letter-spacing="2" fill="#6F7FA6"')).join('');
+$('#ticks').innerHTML = [1, 2, 3].map(k => `<line x1="${92 + k * 208}" y1="336" x2="${92 + k * 208}" y2="356" stroke="#BDBDB5" stroke-width="3"/>` + T(92 + k * 208, 398, 16, k + ' KM', 'text-anchor="middle" letter-spacing="2" fill="#6B6F76"')).join('');
 $('#faR').style.cssText += ';' + FACE('rohan'); $('#faF').style.cssText += ';' + FACE('fatima'); $('#faK').style.cssText += ';' + FACE('kavya');
 // L
 const TILES = [['store', '1', 'KITCHEN'], ['cap', '1', 'COLLEGE'], ['pin', '3 km', 'DELIVERY RADIUS']];
@@ -63,7 +63,7 @@ wrap($('#ill'), 'illOut', 784, 580);
 // F
 const FIN = [['0.5 km', '₹0'], ['1.9 km', '₹0'], ['2.1 km', '₹30'], ['2.8 km', '₹30']];
 const tFc = [tF2 + 0.5, tF2 + 2.6, tF3 + 0.15, tF3 + 2.0];
-$('#logs').innerHTML = FIN.map(([a, b], i) => `<div class="lg" id="lg${i}">${a} → <span style="color:#38D9F5;margin-left:8px">${b}</span></div>`).join('');
+$('#logs').innerHTML = FIN.map(([a, b], i) => `<div class="lg" id="lg${i}">${a} → <span style="color:#3B5BFD;margin-left:8px">${b}</span></div>`).join('');
 wrap($('#fm'), 'fmOut', 784, 580);
 // D
 $('#st3s').innerHTML = [['STEP 1', 'x gets close<br>to a'], ['STEP 2', 'f(x) gets<br>close to L'], ['STEP 3', 'L is the<br>limit']].map(([n, t], i) => `<div class="st3" id="s3${i}" style="left:${48 + i * 243}px"><div class="zn">${n}</div><div class="zt">${t}</div></div>`).join('') +
@@ -71,30 +71,30 @@ $('#st3s').innerHTML = [['STEP 1', 'x gets close<br>to a'], ['STEP 2', 'f(x) get
 wrap($('#kq'), 'kqOut', 784, 580);
 // M: zoomed graph near 2 km
 const mx = d => 104 + (d - 1.5) * 560, my = f => 390 - f * 8.7;
-$('#mgS').innerHTML = `<line x1="104" y1="420" x2="700" y2="420" stroke="#22305A" stroke-width="3"/><line x1="104" y1="110" x2="104" y2="420" stroke="#22305A" stroke-width="3"/>` +
-  [1.5, 2, 2.5].map(d => T(mx(d), 452, 18, d.toFixed(1) + ' km', 'text-anchor="middle" fill="#6F7FA6"')).join('') +
-  T(90, 396, 18, '₹0', 'text-anchor="end" fill="#6F7FA6"') + T(90, my(30) + 6, 18, '₹30', 'text-anchor="end" fill="#6F7FA6"') +
-  `<line x1="${mx(2)}" y1="104" x2="${mx(2)}" y2="420" stroke="#3A4A75" stroke-width="2" stroke-dasharray="6 8"/>` +
-  `<path id="mLo" d="M104 390 H${mx(2)}" stroke="#38D9F5" stroke-width="6" fill="none"/><path id="mHi" d="M${mx(2)} ${my(30)} H700" stroke="#38D9F5" stroke-width="6" fill="none"/>` +
-  `<circle id="mDot0" cx="${mx(2)}" cy="390" r="10" fill="#38D9F5"/><circle id="mDot1" cx="${mx(2)}" cy="${my(30)}" r="10" fill="#101A33" stroke="#38D9F5" stroke-width="4"/>` +
-  `<g id="pL"><line id="pLv" y1="0" y2="420" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="4 6"/><circle id="pLc" r="13" fill="#FFFFFF"/></g>` +
-  `<g id="pR"><line id="pRv" y1="0" y2="420" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="4 6"/><circle id="pRc" r="13" fill="#FFFFFF"/></g>` +
-  `<g id="jmp"><path d="M${mx(2) + 30} 396 V${my(30) - 6}" stroke="#38D9F5" stroke-width="3"/><path d="M${mx(2) + 22} 380 l8 12 8 -12 M${mx(2) + 22} ${my(30) + 12} l8 -12 8 12" stroke="#38D9F5" stroke-width="3" fill="none"/>` + T(mx(2) + 48, 270, 20, 'JUMP OF ₹30', 'fill="#38D9F5" letter-spacing="2"') + `</g>`;
+$('#mgS').innerHTML = `<line x1="104" y1="420" x2="700" y2="420" stroke="#DCDCD3" stroke-width="3"/><line x1="104" y1="110" x2="104" y2="420" stroke="#DCDCD3" stroke-width="3"/>` +
+  [1.5, 2, 2.5].map(d => T(mx(d), 452, 18, d.toFixed(1) + ' km', 'text-anchor="middle" fill="#6B6F76"')).join('') +
+  T(90, 396, 18, '₹0', 'text-anchor="end" fill="#6B6F76"') + T(90, my(30) + 6, 18, '₹30', 'text-anchor="end" fill="#6B6F76"') +
+  `<line x1="${mx(2)}" y1="104" x2="${mx(2)}" y2="420" stroke="#BDBDB5" stroke-width="2" stroke-dasharray="6 8"/>` +
+  `<path id="mLo" d="M104 390 H${mx(2)}" stroke="#3B5BFD" stroke-width="6" fill="none"/><path id="mHi" d="M${mx(2)} ${my(30)} H700" stroke="#3B5BFD" stroke-width="6" fill="none"/>` +
+  `<circle id="mDot0" cx="${mx(2)}" cy="390" r="10" fill="#3B5BFD"/><circle id="mDot1" cx="${mx(2)}" cy="${my(30)}" r="10" fill="#FFFFFF" stroke="#3B5BFD" stroke-width="4"/>` +
+  `<g id="pL"><line id="pLv" y1="0" y2="420" stroke="#14171C" stroke-width="2" stroke-dasharray="4 6"/><circle id="pLc" r="13" fill="#14171C"/></g>` +
+  `<g id="pR"><line id="pRv" y1="0" y2="420" stroke="#14171C" stroke-width="2" stroke-dasharray="4 6"/><circle id="pRc" r="13" fill="#14171C"/></g>` +
+  `<g id="jmp"><path d="M${mx(2) + 30} 396 V${my(30) - 6}" stroke="#3B5BFD" stroke-width="3"/><path d="M${mx(2) + 22} 380 l8 12 8 -12 M${mx(2) + 22} ${my(30) + 12} l8 -12 8 12" stroke="#3B5BFD" stroke-width="3" fill="none"/>` + T(mx(2) + 48, 270, 20, 'JUMP OF ₹30', 'fill="#3B5BFD" letter-spacing="2"') + `</g>`;
 const VL = ['1.9', '1.99', '1.999'], VR = ['2.1', '2.01', '2.001'];
 $('#colL').innerHTML += VL.map((v, i) => `<div class="vr" id="vl${i}" style="top:${44 + i * 64}px"><div class="a">d = ${v}</div><div class="b">₹0</div></div>`).join('') + `<div class="lim" id="limL">LEFT LIMIT = <span class="acc" style="margin-left:12px">0</span></div>`;
 $('#colR').innerHTML += VR.map((v, i) => `<div class="vr" id="vr${i}" style="top:${44 + i * 64}px"><div class="a">d = ${v}</div><div class="b">₹30</div></div>`).join('') + `<div class="lim" id="limR">RIGHT LIMIT = <span class="acc" style="margin-left:12px">30</span></div>`;
 $('#vI').innerHTML = M.icon('x', 34, C.cy, 2.6);
 // I: hole graph
 const hx = v => 104 + v * 290, hy = v => 430 - v * 100;
-$('#hS').innerHTML = `<line x1="104" y1="430" x2="720" y2="430" stroke="#22305A" stroke-width="3"/><line x1="104" y1="110" x2="104" y2="430" stroke="#22305A" stroke-width="3"/>` +
-  T(hx(1), 462, 18, 'x = 1', 'text-anchor="middle" fill="#6F7FA6"') + T(hx(2), 462, 18, '2', 'text-anchor="middle" fill="#6F7FA6"') + T(90, hy(2) + 6, 18, '2', 'text-anchor="end" fill="#6F7FA6"') +
-  `<line x1="${hx(1)}" y1="${hy(2)}" x2="${hx(1)}" y2="430" stroke="#3A4A75" stroke-width="2" stroke-dasharray="6 8"/><line x1="104" y1="${hy(2)}" x2="${hx(1)}" y2="${hy(2)}" stroke="#3A4A75" stroke-width="2" stroke-dasharray="6 8"/>` +
-  `<path id="hLine" d="M${hx(0)} ${hy(1)} L${hx(2)} ${hy(3)}" stroke="#38D9F5" stroke-width="6" fill="none"/>` +
-  `<circle id="hHole" cx="${hx(1)}" cy="${hy(2)}" r="12" fill="#101A33" stroke="#FFFFFF" stroke-width="4"/><circle id="hRing" cx="${hx(1)}" cy="${hy(2)}" r="26" fill="none" stroke="#38D9F5" stroke-width="3"/>` +
-  `<circle id="hL" r="11" fill="#FFFFFF"/><circle id="hR" r="11" fill="#FFFFFF"/>` +
-  `<g id="hLt"><rect x="150" y="120" width="230" height="44" rx="4" fill="#0D1630" stroke="#22305A" stroke-width="2"/>` + T(265, 150, 22, 'f(0.99) = 1.99', 'text-anchor="middle" fill="#FFFFFF"') + `</g>` +
-  `<g id="hRt"><rect x="452" y="300" width="230" height="44" rx="4" fill="#0D1630" stroke="#22305A" stroke-width="2"/>` + T(567, 330, 22, 'f(1.01) = 2.01', 'text-anchor="middle" fill="#FFFFFF"') + `</g>` +
-  `<g id="hLim"><rect x="150" y="${hy(2) - 56}" width="196" height="44" rx="4" fill="#123A52" stroke="#38D9F5" stroke-width="2"/>` + T(248, hy(2) - 26, 22, 'LIMIT = 2', 'text-anchor="middle" fill="#38D9F5"') + `</g>`;
+$('#hS').innerHTML = `<line x1="104" y1="430" x2="720" y2="430" stroke="#DCDCD3" stroke-width="3"/><line x1="104" y1="110" x2="104" y2="430" stroke="#DCDCD3" stroke-width="3"/>` +
+  T(hx(1), 462, 18, 'x = 1', 'text-anchor="middle" fill="#6B6F76"') + T(hx(2), 462, 18, '2', 'text-anchor="middle" fill="#6B6F76"') + T(90, hy(2) + 6, 18, '2', 'text-anchor="end" fill="#6B6F76"') +
+  `<line x1="${hx(1)}" y1="${hy(2)}" x2="${hx(1)}" y2="430" stroke="#BDBDB5" stroke-width="2" stroke-dasharray="6 8"/><line x1="104" y1="${hy(2)}" x2="${hx(1)}" y2="${hy(2)}" stroke="#BDBDB5" stroke-width="2" stroke-dasharray="6 8"/>` +
+  `<path id="hLine" d="M${hx(0)} ${hy(1)} L${hx(2)} ${hy(3)}" stroke="#3B5BFD" stroke-width="6" fill="none"/>` +
+  `<circle id="hHole" cx="${hx(1)}" cy="${hy(2)}" r="12" fill="#FFFFFF" stroke="#14171C" stroke-width="4"/><circle id="hRing" cx="${hx(1)}" cy="${hy(2)}" r="26" fill="none" stroke="#3B5BFD" stroke-width="3"/>` +
+  `<circle id="hL" r="11" fill="#14171C"/><circle id="hR" r="11" fill="#14171C"/>` +
+  `<g id="hLt"><rect x="150" y="120" width="230" height="44" rx="4" fill="#F3F3EE" stroke="#DCDCD3" stroke-width="2"/>` + T(265, 150, 22, 'f(0.99) = 1.99', 'text-anchor="middle" fill="#14171C"') + `</g>` +
+  `<g id="hRt"><rect x="452" y="300" width="230" height="44" rx="4" fill="#F3F3EE" stroke="#DCDCD3" stroke-width="2"/>` + T(567, 330, 22, 'f(1.01) = 2.01', 'text-anchor="middle" fill="#14171C"') + `</g>` +
+  `<g id="hLim"><rect x="150" y="${hy(2) - 56}" width="196" height="44" rx="4" fill="#E8ECFF" stroke="#3B5BFD" stroke-width="2"/>` + T(248, hy(2) - 26, 22, 'LIMIT = 2', 'text-anchor="middle" fill="#3B5BFD"') + `</g>`;
 // C: three checks + graph
 const CK = [['dot', 'f(a) has a value'], ['arrows', 'The limit exists'], ['equal', 'Limit = f(a)']];
 $('#cRows').innerHTML = CK.map(([ic, t], i) => `<div class="kr" id="ck_${i}" style="top:${100 + i * 120}px"><div class="bg"></div><div class="rn">0${i + 1}</div><div class="ri"></div><div class="rt">${t}</div><div class="ok">${M.icon('check', 26, C.bg, 3)}</div></div>`).join('');
@@ -102,23 +102,23 @@ $('#cPenI').innerHTML = M.icon('pen', 22, C.cy, 2.2);
 const cxu = u => 104 + u * 776, cyu = u => 420 - 70 - 230 * (u * u * (3 - 2 * u)) + 20 * Math.sin(u * Math.PI * 2);
 let cpth = ''; for (let i = 0; i <= 80; i++) { const u = i / 80; cpth += (i ? 'L' : 'M') + cxu(u).toFixed(1) + ' ' + cyu(u).toFixed(1); }
 const ax = cxu(0.5), ay = cyu(0.5);
-$('#cS').innerHTML = `<line x1="104" y1="440" x2="900" y2="440" stroke="#22305A" stroke-width="3"/><line x1="104" y1="110" x2="104" y2="440" stroke="#22305A" stroke-width="3"/>` +
-  `<path id="cBase" d="${cpth}" stroke="#3A4A75" stroke-width="6" fill="none"/><path id="cDraw" d="${cpth}" stroke="#38D9F5" stroke-width="6" fill="none"/>` +
-  `<g id="cG1"><line x1="${ax}" y1="${ay}" x2="${ax}" y2="440" stroke="#3A4A75" stroke-width="2" stroke-dasharray="6 8"/>` + T(ax, 472, 20, 'a', 'text-anchor="middle" fill="#6F7FA6"') + `<circle cx="${ax}" cy="${ay}" r="12" fill="#FFFFFF"/>` + T(ax - 26, ay - 20, 22, 'f(a)', 'text-anchor="end" fill="#FFFFFF"') + `</g>` +
-  `<g id="cAL"><path d="M-12 -10 L10 0 L-12 10 Z" fill="#38D9F5"/></g><g id="cAR"><path d="M12 -10 L-10 0 L12 10 Z" fill="#38D9F5"/></g>` +
-  `<g id="cG2"><rect x="${ax - 120}" y="${ay + 40}" width="240" height="44" rx="4" fill="#0D1630" stroke="#22305A" stroke-width="2"/>` + T(ax, ay + 70, 20, 'LEFT = RIGHT', 'text-anchor="middle" fill="#38D9F5" letter-spacing="2"') + `</g>` +
-  `<g id="cG3"><circle cx="${ax}" cy="${ay}" r="28" fill="none" stroke="#38D9F5" stroke-width="3"/><rect x="${ax - 120}" y="${ay + 96}" width="240" height="44" rx="4" fill="#123A52" stroke="#38D9F5" stroke-width="2"/>` + T(ax, ay + 126, 20, 'LIMIT = f(a)', 'text-anchor="middle" fill="#FFFFFF" letter-spacing="2"') + `</g>` +
-  `<g id="cPenT"><g transform="translate(-4 -28)">${M.icon('pen', 30, '#FFFFFF', 2.2).replace('<svg', '<svg x="0" y="0"')}</g><circle r="7" fill="#FFFFFF"/></g>`;
+$('#cS').innerHTML = `<line x1="104" y1="440" x2="900" y2="440" stroke="#DCDCD3" stroke-width="3"/><line x1="104" y1="110" x2="104" y2="440" stroke="#DCDCD3" stroke-width="3"/>` +
+  `<path id="cBase" d="${cpth}" stroke="#BDBDB5" stroke-width="6" fill="none"/><path id="cDraw" d="${cpth}" stroke="#3B5BFD" stroke-width="6" fill="none"/>` +
+  `<g id="cG1"><line x1="${ax}" y1="${ay}" x2="${ax}" y2="440" stroke="#BDBDB5" stroke-width="2" stroke-dasharray="6 8"/>` + T(ax, 472, 20, 'a', 'text-anchor="middle" fill="#6B6F76"') + `<circle cx="${ax}" cy="${ay}" r="12" fill="#14171C"/>` + T(ax - 26, ay - 20, 22, 'f(a)', 'text-anchor="end" fill="#14171C"') + `</g>` +
+  `<g id="cAL"><path d="M-12 -10 L10 0 L-12 10 Z" fill="#3B5BFD"/></g><g id="cAR"><path d="M12 -10 L-10 0 L12 10 Z" fill="#3B5BFD"/></g>` +
+  `<g id="cG2"><rect x="${ax - 120}" y="${ay + 40}" width="240" height="44" rx="4" fill="#F3F3EE" stroke="#DCDCD3" stroke-width="2"/>` + T(ax, ay + 70, 20, 'LEFT = RIGHT', 'text-anchor="middle" fill="#3B5BFD" letter-spacing="2"') + `</g>` +
+  `<g id="cG3"><circle cx="${ax}" cy="${ay}" r="28" fill="none" stroke="#3B5BFD" stroke-width="3"/><rect x="${ax - 120}" y="${ay + 96}" width="240" height="44" rx="4" fill="#E8ECFF" stroke="#3B5BFD" stroke-width="2"/>` + T(ax, ay + 126, 20, 'LIMIT = f(a)', 'text-anchor="middle" fill="#14171C" letter-spacing="2"') + `</g>` +
+  `<g id="cPenT"><g transform="translate(-4 -28)">${M.icon('pen', 30, '#14171C', 2.2).replace('<svg', '<svg x="0" y="0"')}</g><circle r="7" fill="#14171C"/></g>`;
 // R: before / after
 const rx = d => 104 + d * 190, ry = f => 400 - f * 8;
-const axes = `<line x1="104" y1="420" x2="700" y2="420" stroke="#22305A" stroke-width="3"/><line x1="104" y1="130" x2="104" y2="420" stroke="#22305A" stroke-width="3"/>` +
-  [1, 2, 3].map(k => T(rx(k), 452, 18, k + ' km', 'text-anchor="middle" fill="#6F7FA6"')).join('') + [0, 15, 30].map(f => T(90, ry(f) + 6, 18, '₹' + f, 'text-anchor="end" fill="#6F7FA6"')).join('') +
-  `<line x1="${rx(2)}" y1="140" x2="${rx(2)}" y2="420" stroke="#3A4A75" stroke-width="2" stroke-dasharray="6 8"/>`;
-const mk = (id, face, x, y, lx, ly, txt, anc) => `<g id="${id}"><circle cx="${x}" cy="${y}" r="9" fill="#FFFFFF"/><clipPath id="${id}c"><circle cx="${lx}" cy="${ly}" r="20"/></clipPath><circle cx="${lx}" cy="${ly}" r="22" fill="#22305A"/><image href="${IMG}ecs-${face}-face.jpg" x="${lx - 20}" y="${ly - 20}" width="40" height="40" clip-path="url(#${id}c)"/>` + T(anc === 'end' ? lx - 30 : lx + 30, ly + 8, 22, txt, `text-anchor="${anc}" fill="#FFFFFF"`) + `</g>`;
-$('#rbS').innerHTML = axes + `<path id="v1a" d="M104 400 H${rx(2)}" stroke="#38D9F5" stroke-width="6" fill="none"/><path id="v1b" d="M${rx(2)} ${ry(30)} H${rx(3)}" stroke="#38D9F5" stroke-width="6" fill="none"/><circle cx="${rx(2)}" cy="400" r="9" fill="#38D9F5"/><circle cx="${rx(2)}" cy="${ry(30)}" r="9" fill="#101A33" stroke="#38D9F5" stroke-width="4"/>` +
-  `<circle id="rbD" r="12" fill="#FFFFFF"/>` + mk('mkR1', 'rohan', rx(1.9), 400, 290, 340, 'Rohan ₹0', 'end') + mk('mkF1', 'fatima', rx(2.1), ry(30), 600, 236, 'Fatima ₹30', 'start');
-$('#raS').innerHTML = axes + `<path id="v2" d="M104 400 H${rx(1)} L${rx(3)} ${ry(30)}" stroke="#38D9F5" stroke-width="6" fill="none"/><circle id="raP" cx="${rx(2)}" cy="${ry(15)}" r="12" fill="#101A33" stroke="#38D9F5" stroke-width="4"/>` +
-  `<circle id="raD" r="12" fill="#FFFFFF"/>` + mk('mkR2', 'rohan', rx(1.9), ry(13.5), 250, 250, 'Rohan ₹13.50', 'start') + mk('mkF2', 'fatima', rx(2.1), ry(16.5), 560, 360, 'Fatima ₹16.50', 'start');
+const axes = `<line x1="104" y1="420" x2="700" y2="420" stroke="#DCDCD3" stroke-width="3"/><line x1="104" y1="130" x2="104" y2="420" stroke="#DCDCD3" stroke-width="3"/>` +
+  [1, 2, 3].map(k => T(rx(k), 452, 18, k + ' km', 'text-anchor="middle" fill="#6B6F76"')).join('') + [0, 15, 30].map(f => T(90, ry(f) + 6, 18, '₹' + f, 'text-anchor="end" fill="#6B6F76"')).join('') +
+  `<line x1="${rx(2)}" y1="140" x2="${rx(2)}" y2="420" stroke="#BDBDB5" stroke-width="2" stroke-dasharray="6 8"/>`;
+const mk = (id, face, x, y, lx, ly, txt, anc) => `<g id="${id}"><circle cx="${x}" cy="${y}" r="9" fill="#14171C"/><clipPath id="${id}c"><circle cx="${lx}" cy="${ly}" r="20"/></clipPath><circle cx="${lx}" cy="${ly}" r="22" fill="#DCDCD3"/><image href="${IMG}ecs-${face}-face.jpg" x="${lx - 20}" y="${ly - 20}" width="40" height="40" clip-path="url(#${id}c)"/>` + T(anc === 'end' ? lx - 30 : lx + 30, ly + 8, 22, txt, `text-anchor="${anc}" fill="#14171C"`) + `</g>`;
+$('#rbS').innerHTML = axes + `<path id="v1a" d="M104 400 H${rx(2)}" stroke="#3B5BFD" stroke-width="6" fill="none"/><path id="v1b" d="M${rx(2)} ${ry(30)} H${rx(3)}" stroke="#3B5BFD" stroke-width="6" fill="none"/><circle cx="${rx(2)}" cy="400" r="9" fill="#3B5BFD"/><circle cx="${rx(2)}" cy="${ry(30)}" r="9" fill="#FFFFFF" stroke="#3B5BFD" stroke-width="4"/>` +
+  `<circle id="rbD" r="12" fill="#14171C"/>` + mk('mkR1', 'rohan', rx(1.9), 400, 290, 340, 'Rohan ₹0', 'end') + mk('mkF1', 'fatima', rx(2.1), ry(30), 600, 236, 'Fatima ₹30', 'start');
+$('#raS').innerHTML = axes + `<path id="v2" d="M104 400 H${rx(1)} L${rx(3)} ${ry(30)}" stroke="#3B5BFD" stroke-width="6" fill="none"/><circle id="raP" cx="${rx(2)}" cy="${ry(15)}" r="12" fill="#FFFFFF" stroke="#3B5BFD" stroke-width="4"/>` +
+  `<circle id="raD" r="12" fill="#14171C"/>` + mk('mkR2', 'rohan', rx(1.9), ry(13.5), 250, 250, 'Rohan ₹13.50', 'start') + mk('mkF2', 'fatima', rx(2.1), ry(16.5), 560, 360, 'Fatima ₹16.50', 'start');
 // K: at work today
 const KA = [
   ['code', 'Functions', 'One input, exactly one output', 'Distance in, one delivery fee out', 'bank', 'A bank: loan amount in, one monthly payment out'],
@@ -128,18 +128,18 @@ const KA = [
 $('#kRows').innerHTML = KA.map(([ic, t], i) => `<div class="kr2" id="kr${i}" style="top:${100 + i * 130}px"><div class="bg"></div><div class="rn">0${i + 1}</div><div class="ri"></div><div class="rt">${t}</div></div>`).join('');
 const KP = [['ENGINEERING TODAY', 'Three ideas', 'You will meet them everywhere', null]].concat(KA.map((a, i) => [`IN PRACTICE 0${i + 1} / 03`, a[1], a[2], a]));
 $('#kPans').innerHTML = KP.map(([s, t, m, a], i) => `<div class="pn" id="kn${i}"><div class="ps">${s}</div><div class="h pt">${t}</div><div class="pm">${m}</div><div class="hr"></div>` +
-  (a ? `<div class="ka" id="ka${i}0" style="top:322px"><i style="${FACE('kavya')};border-color:#38D9F5"></i><div class="kl">AT DABBA DASH</div><div class="kt">${a[3]}</div></div>
+  (a ? `<div class="ka" id="ka${i}0" style="top:322px"><i style="${FACE('kavya')};border-color:#3B5BFD"></i><div class="kl">AT DABBA DASH</div><div class="kt">${a[3]}</div></div>
         <div class="ka" id="ka${i}1" style="top:442px"><i>${M.icon(a[4], 34, C.cy, 2.2)}</i><div class="kl">AT WORK TODAY</div><div class="kt">${a[5]}</div></div>`
      : `<div class="px">FROM A CANTEEN APP TO A HOSPITAL</div><div class="pe"><i>${M.icon('cpu', 34, C.cy, 2.2)}</i><span>Same maths, any size of system</span></div>`) + `</div>`).join('');
 // X
 const XG = [['check', 'Fair and predictable'], ['chart', 'Calculus needs it']];
 const XH = [['minus', 'Whole orders'], ['coin', 'Rounded prices']];
-$('#xChips').innerHTML = XG.map(([ic, t], i) => `<div class="xc" id="xg${i}" style="left:48px;top:${392 + i * 60}px;background:#123A52;color:#38D9F5">${M.icon(ic, 22, C.cy, 2.4)}<span>${t}</span></div>`).join('') +
-  XH.map(([ic, t], i) => `<div class="xc" id="xh${i}" style="left:408px;top:${392 + i * 60}px;background:#0D1630;border:2px solid #22305A;color:#C9D3EC">${M.icon(ic, 22, C.ink, 2.4)}<span>${t}</span></div>`).join('');
-const pan = (col, n) => `<line x1="-70" y1="86" x2="0" y2="0" stroke="#6F7FA6" stroke-width="3"/><line x1="70" y1="86" x2="0" y2="0" stroke="#6F7FA6" stroke-width="3"/>` +
+$('#xChips').innerHTML = XG.map(([ic, t], i) => `<div class="xc" id="xg${i}" style="left:48px;top:${392 + i * 60}px;background:#E8ECFF;color:#3B5BFD">${M.icon(ic, 22, C.cy, 2.4)}<span>${t}</span></div>`).join('') +
+  XH.map(([ic, t], i) => `<div class="xc" id="xh${i}" style="left:408px;top:${392 + i * 60}px;background:#F3F3EE;border:2px solid #DCDCD3;color:#2E3238">${M.icon(ic, 22, C.ink, 2.4)}<span>${t}</span></div>`).join('');
+const pan = (col, n) => `<line x1="-70" y1="86" x2="0" y2="0" stroke="#6B6F76" stroke-width="3"/><line x1="70" y1="86" x2="0" y2="0" stroke="#6B6F76" stroke-width="3"/>` +
   Array.from({ length: 2 }, (_, i) => `<rect id="wt${n}${i}" x="${-40 + i * 44}" y="52" width="36" height="34" rx="4" fill="${col}"/>`).join('') +
-  `<path d="M-84 86 H84 C84 112 50 122 0 122 C-50 122 -84 112 -84 86Z" fill="#0D1630" stroke="#6F7FA6" stroke-width="3"/>`;
-$('#panL').innerHTML = pan('#38D9F5', 'L'); $('#panR').innerHTML = pan('#9FB3D9', 'R');
+  `<path d="M-84 86 H84 C84 112 50 122 0 122 C-50 122 -84 112 -84 86Z" fill="#F3F3EE" stroke="#6B6F76" stroke-width="3"/>`;
+$('#panL').innerHTML = pan('#3B5BFD', 'L'); $('#panR').innerHTML = pan('#5B6068', 'R');
 { let p = ''; const N = 1376; for (let i = 0; i <= N; i++) { const x = i / N; let w = 0; for (let n = 0; n < 4; n++) w += Math.pow(0.6, n) * Math.cos(Math.pow(11, n) * Math.PI * x * 1.3); p += (i ? 'L' : 'M') + (i * 688 / N).toFixed(1) + ' ' + (70 - w * 26).toFixed(1); } $('#wP').setAttribute('d', p); }
 $('#xrF0').style.cssText += ';' + FACE('fatima'); $('#xrF1').style.cssText += ';' + FACE('kavya');
 $('#bb1I').innerHTML = M.icon('check', 22, C.cy, 3); $('#bothI').innerHTML = M.icon('trendUp', 52, C.cy, 2.2);
@@ -486,5 +486,5 @@ M.on(t => {
 M.sfx(tT - 0.38, 'whoosh', 0.22); M.sfx(tQ - 0.38, 'whoosh', 0.22); M.sfx(tS - 0.38, 'whoosh', 0.22);
 [0, 1, 2].forEach(k => M.sfx(tCount + k * (tAns - tCount) / 3, 'tick', 0.28));
 M.sfx(tAns + 0.05, 'correct', 0.32);
-M.outro({ bg: '#0A1022', ink: '#FFFFFF', accent: '#38D9F5', sub: 'rgba(201,211,236,.75)', font: 'IBM Plex Sans' });
+M.outro({ bg: '#F7F7F2', ink: '#14171C', accent: '#3B5BFD', sub: 'rgba(20,23,28,.6)', font: 'Space Grotesk' });
 })();

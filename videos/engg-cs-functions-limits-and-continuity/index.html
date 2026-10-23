@@ -2,30 +2,30 @@
 <link rel="stylesheet" href="../../engine/base.css">
 <style>
 /* ===== Engg CS world: Under the hood (blueprint systems) - v2 episode layout ===== */
-:root{--bg:#0A1022;--grid:#14203D;--pan:#101A33;--pan2:#0D1630;--ln:#22305A;--cy:#38D9F5;--cyd:#123A52;--tx:#FFFFFF;--mut:#6F7FA6;--ink:#C9D3EC;--dim:#3A4A75;--plate:#F4F1EA}
-#stage{background:var(--bg);font-family:'IBM Plex Sans';color:var(--tx)}
+:root{--bg:#F7F7F2;--grid:#DADAD0;--pan:#FFFFFF;--pan2:#F3F3EE;--ln:#DCDCD3;--cy:#3B5BFD;--cyd:#E8ECFF;--tx:#14171C;--mut:#6B6F76;--ink:#2E3238;--dim:#BDBDB5;--plate:#F4F1EA}
+#stage{background:var(--bg);font-family:'Space Grotesk';color:var(--tx)}
 #gridbg{position:absolute;inset:0;background-image:linear-gradient(var(--grid) 2px,transparent 2px),linear-gradient(90deg,var(--grid) 2px,transparent 2px);background-size:40px 40px;background-position:-1px -1px}
-#prog{position:absolute;left:0;top:0;height:6px;width:1920px;background:#14203D;z-index:60}
+#prog{position:absolute;left:0;top:0;height:6px;width:1920px;background:#DADAD0;z-index:60}
 #prog i{display:block;height:6px;background:var(--cy);width:0}
 #cam{position:absolute;left:0;top:0;width:1920px;height:1080px}
-.h{font-family:'IBM Plex Sans';font-weight:600;letter-spacing:-.02em}
+.h{font-family:'Space Grotesk';font-weight:600;letter-spacing:-.02em}
 .mono{font-family:'IBM Plex Mono'}
 .acc{color:var(--cy)}
 .chip{position:absolute;display:inline-flex;align-items:center;gap:14px;height:44px;padding:0 18px;border:2px solid var(--cy);border-radius:4px;background:var(--bg);color:var(--cy);font:600 18px 'IBM Plex Mono';letter-spacing:.14em;white-space:nowrap}
 .chip i{width:8px;height:8px;background:var(--cy)}
 .chip.ghost{border-color:var(--ln);color:var(--mut);height:40px;font-size:16px}
 #title{position:absolute;left:0;top:0;line-height:1.08;white-space:nowrap;transform-origin:0 0}
-#sub{position:absolute;left:0;top:640px;width:1920px;text-align:center;font:400 32px 'IBM Plex Sans';color:var(--mut)}
+#sub{position:absolute;left:0;top:640px;width:1920px;text-align:center;font:400 32px 'Space Grotesk';color:var(--mut)}
 #rule{position:absolute;left:840px;top:612px}
 .card{position:absolute;background:var(--pan);border:2px solid var(--ln);border-radius:8px}
 .lbl{position:absolute;font:600 18px 'IBM Plex Mono';letter-spacing:.14em;color:var(--mut);white-space:nowrap}
 .abs{position:absolute}
-.pill{position:absolute;height:48px;padding:0 18px;border-radius:4px;display:flex;align-items:center;gap:10px;font:600 22px 'IBM Plex Sans';white-space:nowrap;background:var(--pan2);border:2px solid var(--ln);color:var(--tx)}
+.pill{position:absolute;height:48px;padding:0 18px;border-radius:4px;display:flex;align-items:center;gap:10px;font:600 22px 'Space Grotesk';white-space:nowrap;background:var(--pan2);border:2px solid var(--ln);color:var(--tx)}
 .pill.on{background:var(--cyd);border-color:var(--cy);color:var(--cy)}
 .av{position:absolute;width:72px;height:72px;border-radius:36px;background-size:cover;background-position:center;box-shadow:0 0 0 4px var(--ln)}
 .plate{position:absolute;background:var(--plate);border-radius:6px;overflow:hidden}
 .plate img{position:absolute;left:0;top:0;width:100%;height:100%}
-.tagp{position:absolute;height:48px;padding:0 20px;border-radius:4px;background:var(--cy);color:var(--bg);display:flex;align-items:center;font:600 22px 'IBM Plex Sans';white-space:nowrap}
+.tagp{position:absolute;height:48px;padding:0 20px;border-radius:4px;background:var(--cy);color:var(--bg);display:flex;align-items:center;font:600 22px 'Space Grotesk';white-space:nowrap}
 .big{position:absolute;font:600 64px 'IBM Plex Mono';line-height:1;white-space:nowrap}
 .rd{position:absolute;height:56px;padding:0 22px;border-radius:4px;background:var(--pan2);border:2px solid var(--ln);display:flex;align-items:center;gap:18px;font:600 26px 'IBM Plex Mono';white-space:nowrap;color:var(--ink)}
 .rd b{color:var(--cy);font-weight:600}
@@ -35,7 +35,7 @@ svg text{font-family:'IBM Plex Mono'}
 #rule1{left:976px;top:270px;width:784px;height:274px}
 #fair{left:976px;top:576px;width:784px;height:274px}
 .rr{position:absolute;left:140px;width:596px;height:68px;border-radius:4px;background:var(--pan2);border:2px solid var(--ln)}
-.rr .a{position:absolute;left:24px;top:16px;font:500 26px 'IBM Plex Sans';color:var(--ink);white-space:nowrap}
+.rr .a{position:absolute;left:24px;top:16px;font:500 26px 'Space Grotesk';color:var(--ink);white-space:nowrap}
 .rr .b{position:absolute;right:24px;top:14px;font:600 28px 'IBM Plex Mono';white-space:nowrap}
 .nm{position:absolute;width:200px;text-align:center;font:600 16px 'IBM Plex Mono';letter-spacing:.12em;color:var(--mut);white-space:nowrap}
 /* scene L */
@@ -46,7 +46,7 @@ svg text{font-family:'IBM Plex Mono'}
 .tile .ti{position:absolute;left:24px;top:22px}
 .tile .tv{position:absolute;left:24px;top:66px;font:600 40px 'IBM Plex Mono';white-space:nowrap}
 .tile .tl{position:absolute;left:24px;top:116px;font:600 15px 'IBM Plex Mono';letter-spacing:.14em;color:var(--mut);white-space:nowrap}
-.tnm{position:absolute;width:170px;text-align:center;top:168px;font:600 26px 'IBM Plex Sans';white-space:nowrap}
+.tnm{position:absolute;width:170px;text-align:center;top:168px;font:600 26px 'Space Grotesk';white-space:nowrap}
 .trl{position:absolute;width:170px;text-align:center;top:206px;font:600 15px 'IBM Plex Mono';letter-spacing:.14em;color:var(--mut);white-space:nowrap}
 /* scene F */
 #fm{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
@@ -61,11 +61,11 @@ svg text{font-family:'IBM Plex Mono'}
 #dq{position:absolute;left:0;width:1920px;top:470px;text-align:center;font-size:88px;white-space:nowrap}
 #kq{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
 #ls{left:976px;top:270px;width:784px;height:580px}
-.ql{position:absolute;left:48px;font:500 30px 'IBM Plex Sans';white-space:nowrap;color:var(--tx)}
+.ql{position:absolute;left:48px;font:500 30px 'Space Grotesk';white-space:nowrap;color:var(--tx)}
 .ql .hl{font-weight:600}
 .st3{position:absolute;top:356px;width:202px;height:150px;border-radius:4px;background:var(--pan2);border:2px solid var(--ln)}
 .st3 .zn{position:absolute;left:20px;top:18px;font:600 15px 'IBM Plex Mono';letter-spacing:.14em;color:var(--mut);white-space:nowrap}
-.st3 .zt{position:absolute;left:20px;top:56px;font:600 25px/1.25 'IBM Plex Sans';white-space:nowrap}
+.st3 .zt{position:absolute;left:20px;top:56px;font:600 25px/1.25 'Space Grotesk';white-space:nowrap}
 /* scene M */
 #mg{left:160px;top:270px;width:784px;height:580px}
 #mt{left:976px;top:270px;width:784px;height:580px}
@@ -81,11 +81,11 @@ svg text{font-family:'IBM Plex Mono'}
 #ie{left:976px;top:576px;width:784px;height:274px}
 .term{position:absolute;left:48px;font:600 26px 'IBM Plex Mono';white-space:nowrap}
 /* statement + sweep */
-#stmt{position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:41;background:#0E2440}
-#stmt .g{position:absolute;inset:0;background-image:linear-gradient(#173356 2px,transparent 2px),linear-gradient(90deg,#173356 2px,transparent 2px);background-size:40px 40px;background-position:-1px -1px}
-#st1{position:absolute;left:0;width:1920px;top:404px;text-align:center;font:500 52px 'IBM Plex Sans';color:#9FB3D9;white-space:nowrap}
-#st2{position:absolute;left:0;width:1920px;top:494px;text-align:center;font-size:88px;color:#fff;white-space:nowrap}
-#sweep{position:absolute;left:0;top:0;width:1920px;height:1080px;background:#0E2440;z-index:40}
+#stmt{position:absolute;left:0;top:0;width:1920px;height:1080px;z-index:41;background:#14171C}
+#stmt .g{position:absolute;inset:0;background-image:linear-gradient(#1E2228 2px,transparent 2px),linear-gradient(90deg,#1E2228 2px,transparent 2px);background-size:40px 40px;background-position:-1px -1px}
+#st1{position:absolute;left:0;width:1920px;top:404px;text-align:center;font:500 52px 'Space Grotesk';color:#5B6068;white-space:nowrap}
+#st2{position:absolute;left:0;width:1920px;top:494px;text-align:center;font-size:88px;color:#14171C;white-space:nowrap}
+#sweep{position:absolute;left:0;top:0;width:1920px;height:1080px;background:#14171C;z-index:40}
 #sweep b{position:absolute;left:0;top:0;width:8px;height:1080px;background:var(--cy)}
 /* scene C */
 #cl{left:160px;top:270px;width:624px;height:580px}
@@ -94,7 +94,7 @@ svg text{font-family:'IBM Plex Mono'}
 .kr .bg{position:absolute;inset:0;border-radius:4px;background:var(--pan2);border:2px solid var(--ln)}
 .kr .rn{position:absolute;left:24px;top:34px;font:600 22px 'IBM Plex Mono';letter-spacing:.04em}
 .kr .ri{position:absolute;left:76px;top:20px;width:56px;height:56px;border-radius:4px;background:var(--bg);display:flex;align-items:center;justify-content:center}
-.kr .rt{position:absolute;left:156px;top:28px;font:600 30px 'IBM Plex Sans';white-space:nowrap}
+.kr .rt{position:absolute;left:156px;top:28px;font:600 30px 'Space Grotesk';white-space:nowrap}
 .kr .ok{position:absolute;right:24px;top:28px;width:40px;height:40px;border-radius:4px;background:var(--cy);display:flex;align-items:center;justify-content:center}
 /* scene R */
 #rb{left:160px;top:270px;width:784px;height:580px}
@@ -107,28 +107,28 @@ svg text{font-family:'IBM Plex Mono'}
 .kr2 .bg{position:absolute;inset:0;border-radius:4px;background:var(--pan2);border:2px solid var(--ln)}
 .kr2 .rn{position:absolute;left:24px;top:36px;font:600 22px 'IBM Plex Mono'}
 .kr2 .ri{position:absolute;left:76px;top:22px;width:56px;height:56px;border-radius:4px;background:var(--bg);display:flex;align-items:center;justify-content:center}
-.kr2 .rt{position:absolute;left:156px;top:30px;font:600 30px 'IBM Plex Sans';white-space:nowrap}
+.kr2 .rt{position:absolute;left:156px;top:30px;font:600 30px 'Space Grotesk';white-space:nowrap}
 .pn{position:absolute;inset:0}
 .pn .ps{position:absolute;left:48px;top:48px;font:600 20px 'IBM Plex Mono';letter-spacing:.14em;color:var(--cy);white-space:nowrap}
 .pn .pt{position:absolute;left:48px;top:88px;font-size:80px;line-height:1.1;white-space:nowrap}
-.pn .pm{position:absolute;left:48px;top:202px;font:400 34px 'IBM Plex Sans';color:var(--ink);white-space:nowrap}
+.pn .pm{position:absolute;left:48px;top:202px;font:400 34px 'Space Grotesk';color:var(--ink);white-space:nowrap}
 .pn .hr{position:absolute;left:48px;right:48px;top:290px;height:2px;background:var(--ln)}
 .pn .px{position:absolute;left:48px;top:326px;font:600 17px 'IBM Plex Mono';letter-spacing:.14em;color:var(--mut);white-space:nowrap}
 .pn .pe{position:absolute;left:48px;top:372px;width:848px;display:flex;align-items:center;gap:24px}
 .pn .pe i{flex:0 0 72px;height:72px;border-radius:4px;background:var(--pan2);border:2px solid var(--ln);display:flex;align-items:center;justify-content:center}
-.pn .pe span{font:600 32px 'IBM Plex Sans';white-space:nowrap}
+.pn .pe span{font:600 32px 'Space Grotesk';white-space:nowrap}
 .ka{position:absolute;left:48px;width:848px;height:96px}
 .ka i{position:absolute;left:0;top:12px;width:72px;height:72px;border-radius:4px;background:var(--pan2);border:2px solid var(--ln);display:flex;align-items:center;justify-content:center;background-size:cover;background-position:center}
 .ka .kl{position:absolute;left:100px;top:12px;font:600 17px 'IBM Plex Mono';letter-spacing:.14em;color:var(--mut);white-space:nowrap}
-.ka .kt{position:absolute;left:100px;top:42px;font:600 30px 'IBM Plex Sans';white-space:nowrap}
+.ka .kt{position:absolute;left:100px;top:42px;font:600 30px 'Space Grotesk';white-space:nowrap}
 /* scene X */
 #xs{left:160px;top:270px;width:784px;height:580px;overflow:hidden}
 #xw{left:976px;top:270px;width:784px;height:580px}
-.xc{position:absolute;height:48px;padding:0 18px;border-radius:4px;display:flex;align-items:center;gap:10px;font:600 22px 'IBM Plex Sans';white-space:nowrap}
+.xc{position:absolute;height:48px;padding:0 18px;border-radius:4px;display:flex;align-items:center;gap:10px;font:600 22px 'Space Grotesk';white-space:nowrap}
 .xr{position:absolute;left:48px;width:688px;height:64px}
 .xr .fa{position:absolute;left:0;top:0;width:64px;height:64px;border-radius:32px;background-size:cover;background-position:center;box-shadow:0 0 0 3px var(--ln)}
-.xr .bb{position:absolute;left:88px;top:8px;height:48px;padding:0 18px;border-radius:4px;display:flex;align-items:center;gap:8px;font:600 22px 'IBM Plex Sans';white-space:nowrap;background:var(--pan2);border:2px solid var(--ln);color:var(--tx)}
-#both{position:absolute;left:160px;top:470px;width:1600px;height:140px;border-radius:8px;background:var(--cyd);border:2px solid var(--cy);color:#fff;display:flex;align-items:center;justify-content:center;gap:22px}
+.xr .bb{position:absolute;left:88px;top:8px;height:48px;padding:0 18px;border-radius:4px;display:flex;align-items:center;gap:8px;font:600 22px 'Space Grotesk';white-space:nowrap;background:var(--pan2);border:2px solid var(--ln);color:var(--tx)}
+#both{position:absolute;left:160px;top:470px;width:1600px;height:140px;border-radius:8px;background:var(--cyd);border:2px solid var(--cy);color:#14171C;display:flex;align-items:center;justify-content:center;gap:22px}
 #both .tx{font-size:48px;white-space:nowrap}
 /* quiz */
 .opt{position:absolute;top:470px;width:376px;height:230px;border-radius:8px}
@@ -139,20 +139,46 @@ svg text{font-family:'IBM Plex Mono'}
 .qq{position:absolute;left:160px;font-size:64px;line-height:1.18;white-space:nowrap}
 #ring{position:absolute;left:1610px;top:236px;width:150px;height:150px}
 #ringN{position:absolute;left:1610px;top:236px;width:150px;height:150px;display:flex;align-items:center;justify-content:center;font:600 64px 'IBM Plex Mono'}
-#take{position:absolute;left:160px;top:748px;width:1600px;height:96px;border-radius:8px;background:var(--cyd);border:2px solid var(--cy);color:#fff;display:flex;align-items:center;gap:22px;padding:0 36px}
+#take{position:absolute;left:160px;top:748px;width:1600px;height:96px;border-radius:8px;background:var(--cyd);border:2px solid var(--cy);color:#14171C;display:flex;align-items:center;gap:22px;padding:0 36px}
 #take .tx{font-size:38px;white-space:nowrap}
 /* recap */
 #rh{position:absolute;left:160px;top:142px;font-size:64px;white-space:nowrap}
 .rw{position:absolute;left:160px;width:1600px;height:128px}
 .rw .rn{position:absolute;left:40px;top:44px;font:600 30px 'IBM Plex Mono';color:var(--cy)}
 .rw .ri{position:absolute;left:112px;top:26px;width:72px;height:72px;border-radius:4px;background:var(--pan2);border:2px solid var(--ln);display:flex;align-items:center;justify-content:center}
-.rw .rt{position:absolute;left:216px;top:38px;font:600 38px 'IBM Plex Sans';white-space:nowrap}
+.rw .rt{position:absolute;left:216px;top:38px;font:600 38px 'Space Grotesk';white-space:nowrap}
 .fp{position:absolute;top:36px;height:56px;padding:0 20px;border-radius:4px;display:flex;align-items:center;font:600 22px 'IBM Plex Mono';white-space:nowrap;background:var(--pan2);border:2px solid var(--ln);color:var(--tx)}
-#next{position:absolute;left:160px;top:762px;width:1600px;height:96px;border-radius:8px;background:var(--cyd);border:2px solid var(--cy);color:#fff;display:flex;align-items:center;gap:24px;padding:0 32px}
+#next{position:absolute;left:160px;top:762px;width:1600px;height:96px;border-radius:8px;background:var(--cyd);border:2px solid var(--cy);color:#14171C;display:flex;align-items:center;gap:24px;padding:0 32px}
 #next .nc{height:44px;padding:0 16px;border-radius:4px;background:var(--cy);display:flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.14em;color:var(--bg);white-space:nowrap}
-#next .nt{font:600 34px 'IBM Plex Sans';white-space:nowrap;flex:1}
-.cap{font:600 38px 'IBM Plex Sans';color:#fff;background:#101A33;border:2px solid #22305A;padding:10px 28px;border-radius:6px}
-.cap .cw{color:#6F7FA6}.cap .cw.on{color:#FFFFFF}.cap .cw.act{color:var(--cy)}
+#next .nt{font:600 34px 'Space Grotesk';white-space:nowrap;flex:1}
+.cap{font:600 38px 'Space Grotesk';color:#14171C;background:#FFFFFF;border:2px solid #DCDCD3;padding:10px 28px;border-radius:6px}
+.cap .cw{color:#6B6F76}.cap .cw.on{color:#14171C}.cap .cw.act{color:var(--cy)}
+
+/* ===== CS theme "Source": dot-grid paper, code windows, highlighter, terminal ===== */
+#stage{font-family:'Space Grotesk'}
+#gridbg{background-image:radial-gradient(#D3D3C8 2px,transparent 2.4px)!important;background-size:32px 32px!important;background-position:0 0!important}
+.h,#title{font-family:'Space Grotesk'!important;font-weight:700!important;letter-spacing:-.03em!important}
+#title .acc,#rh .acc,.pn .pt .acc{color:#14171C!important;background:linear-gradient(transparent 58%,#FFE15A 58%,#FFE15A 92%,transparent 92%)}
+.card{border:2.5px solid #14171C!important;border-radius:10px!important;box-shadow:6px 6px 0 #14171C}
+.card:not(.rw)::after{content:'';position:absolute;right:22px;top:24px;width:58px;height:14px;background:radial-gradient(circle at 7px 7px,#FF6B5A 6px,transparent 6.5px),radial-gradient(circle at 29px 7px,#FFC53D 6px,transparent 6.5px),radial-gradient(circle at 51px 7px,#2BC48A 6px,transparent 6.5px)}
+.lbl::before{content:'// ';color:#3B5BFD}
+.nm::before,.trl::before,.tl::before,.zn::before,.kl::before,.lg::before,.dtag::before,.chip::before,.ps::before,.px::before{content:none}
+.chip{background:#14171C!important;border-color:#14171C!important;color:#F7F7F2!important;border-radius:6px!important}
+.chip i{background:#2BC48A!important}
+.chip.ghost{background:#FFFFFF!important;color:#6B6F76!important;border:2px solid #14171C!important}
+.opt .bg{border:2.5px solid #14171C!important;border-radius:10px!important;box-shadow:5px 5px 0 #14171C}
+.opt .ok,.kr .ok{background:#2BC48A!important}
+#take,#next,#both,#verdict{border:2.5px solid #14171C!important;box-shadow:5px 5px 0 #14171C;border-radius:10px!important}
+.cap{background:#FFFFFF!important;border:2.5px solid #14171C!important;color:#14171C!important;box-shadow:4px 4px 0 #14171C;font-family:'Space Grotesk'!important;font-weight:700!important}
+.cap .cw.act{color:#14171C!important;background:#FFE15A;border-radius:3px}
+#stmt .g{background-image:none!important}
+#st1{color:#8D939C!important;font-family:'IBM Plex Mono'!important;font-size:40px!important}
+#st1::before{content:'$ ';color:#2BC48A}
+#st2{color:#FFFFFF!important}
+#st2::after{content:'';display:inline-block;width:.42em;height:.9em;margin-left:.15em;vertical-align:-.08em;background:#2BC48A}
+#stmt .acc{color:#2BC48A!important}
+#sweep b{background:#2BC48A!important}
+.tagp{border-radius:6px!important}
 </style></head><body>
 <div id="stage">
   <div id="gridbg"></div>
@@ -161,7 +187,7 @@ svg text{font-family:'IBM Plex Mono'}
     <div class="chip" id="eyebrow"><i></i>EP 01 · ENGINEERING MATHEMATICS</div>
     <div class="h" id="title">Functions, <span class="acc">Limits</span> and Continuity</div>
     <div id="sub">Explained with one food-ordering app</div>
-    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#38D9F5" stroke-width="4"/></svg>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#3B5BFD" stroke-width="4"/></svg>
     <div class="chip ghost" id="exChip">EXAMPLE FIGURES</div>
 
     <!-- A: two friends, two fees -->
@@ -169,16 +195,16 @@ svg text{font-family:'IBM Plex Mono'}
       <div class="card" id="route">
         <div class="lbl" style="left:48px;top:40px">DABBA DASH · DELIVERY DISTANCE</div>
         <svg id="rsv" width="784" height="580" style="position:absolute;left:0;top:0">
-          <rect id="freeZ" x="92" y="356" width="416" height="10" fill="#123A52"/>
-          <line x1="92" y1="346" x2="716" y2="346" stroke="#22305A" stroke-width="4"/>
-          <path id="trail" d="M92 346 H716" fill="none" stroke="#38D9F5" stroke-width="4"/>
+          <rect id="freeZ" x="92" y="356" width="416" height="10" fill="#E8ECFF"/>
+          <line x1="92" y1="346" x2="716" y2="346" stroke="#DCDCD3" stroke-width="4"/>
+          <path id="trail" d="M92 346 H716" fill="none" stroke="#3B5BFD" stroke-width="4"/>
           <g id="ticks"></g>
-          <line id="bound" x1="508" y1="120" x2="508" y2="346" stroke="#38D9F5" stroke-width="3" stroke-dasharray="8 8"/>
-          <text id="boundT" x="508" y="108" text-anchor="middle" font-size="16" font-weight="600" letter-spacing="2" fill="#38D9F5">FREE ZONE ENDS · 2 KM</text>
-          <line id="stR" x1="380" y1="282" x2="487" y2="346" stroke="#6F7FA6" stroke-width="3"/>
-          <line id="stF" x1="640" y1="282" x2="529" y2="346" stroke="#6F7FA6" stroke-width="3"/>
-          <g id="kitchen" transform="translate(92 346)"><rect x="-30" y="-30" width="60" height="60" rx="4" fill="#0D1630" stroke="#38D9F5" stroke-width="3"/><g transform="translate(-14 -14)" id="kitI"></g></g>
-          <g id="rider" transform="translate(92 346)"><rect id="riderR" x="-11" y="-11" width="22" height="22" fill="#38D9F5"/></g>
+          <line id="bound" x1="508" y1="120" x2="508" y2="346" stroke="#3B5BFD" stroke-width="3" stroke-dasharray="8 8"/>
+          <text id="boundT" x="508" y="108" text-anchor="middle" font-size="16" font-weight="600" letter-spacing="2" fill="#3B5BFD">FREE ZONE ENDS · 2 KM</text>
+          <line id="stR" x1="380" y1="282" x2="487" y2="346" stroke="#6B6F76" stroke-width="3"/>
+          <line id="stF" x1="640" y1="282" x2="529" y2="346" stroke="#6B6F76" stroke-width="3"/>
+          <g id="kitchen" transform="translate(92 346)"><rect x="-30" y="-30" width="60" height="60" rx="4" fill="#F3F3EE" stroke="#3B5BFD" stroke-width="3"/><g transform="translate(-14 -14)" id="kitI"></g></g>
+          <g id="rider" transform="translate(92 346)"><rect id="riderR" x="-11" y="-11" width="22" height="22" fill="#3B5BFD"/></g>
         </svg>
         <div class="nm" id="nmK" style="left:-8px;top:398px">CANTEEN</div>
         <div class="av" id="faR" style="left:344px;top:210px"></div>
@@ -216,13 +242,13 @@ svg text{font-family:'IBM Plex Mono'}
       <div class="card" id="fm"><div class="abs" id="fmIn" style="left:0;top:0;width:784px;height:580px">
         <div class="lbl" style="left:48px;top:40px">A FUNCTION · ONE INPUT, ONE OUTPUT</div>
         <svg id="mach" width="784" height="580" style="position:absolute;left:0;top:0">
-          <path d="M210 270 H286" stroke="#22305A" stroke-width="4"/><path d="M498 270 H574" stroke="#22305A" stroke-width="4"/>
-          <path id="pin0" d="M210 270 H286" stroke="#38D9F5" stroke-width="4"/><path id="pin1" d="M498 270 H574" stroke="#38D9F5" stroke-width="4"/>
-          <rect id="mbox" x="286" y="170" width="212" height="200" rx="6" fill="#0D1630" stroke="#38D9F5" stroke-width="3"/>
-          <text x="392" y="262" text-anchor="middle" font-size="60" font-weight="600" fill="#FFFFFF">f(d)</text>
-          <text x="392" y="314" text-anchor="middle" font-size="16" font-weight="600" letter-spacing="2" fill="#6F7FA6">FEE RULE</text>
-          <text x="148" y="214" text-anchor="middle" font-size="16" font-weight="600" letter-spacing="2" fill="#6F7FA6">INPUT d</text>
-          <text x="636" y="214" text-anchor="middle" font-size="16" font-weight="600" letter-spacing="2" fill="#6F7FA6">OUTPUT</text>
+          <path d="M210 270 H286" stroke="#DCDCD3" stroke-width="4"/><path d="M498 270 H574" stroke="#DCDCD3" stroke-width="4"/>
+          <path id="pin0" d="M210 270 H286" stroke="#3B5BFD" stroke-width="4"/><path id="pin1" d="M498 270 H574" stroke="#3B5BFD" stroke-width="4"/>
+          <rect id="mbox" x="286" y="170" width="212" height="200" rx="6" fill="#F3F3EE" stroke="#3B5BFD" stroke-width="3"/>
+          <text x="392" y="262" text-anchor="middle" font-size="60" font-weight="600" fill="#14171C">f(d)</text>
+          <text x="392" y="314" text-anchor="middle" font-size="16" font-weight="600" letter-spacing="2" fill="#6B6F76">FEE RULE</text>
+          <text x="148" y="214" text-anchor="middle" font-size="16" font-weight="600" letter-spacing="2" fill="#6B6F76">INPUT d</text>
+          <text x="636" y="214" text-anchor="middle" font-size="16" font-weight="600" letter-spacing="2" fill="#6B6F76">OUTPUT</text>
         </svg>
         <div class="rd" id="inC" style="top:242px"><b id="inT">1.9 km</b></div>
         <div class="rd" id="outC" style="top:242px"><b id="outT">₹0</b></div>
@@ -237,7 +263,7 @@ svg text{font-family:'IBM Plex Mono'}
       <div class="card" id="fdr">
         <div class="lbl" style="left:48px;top:34px">DOMAIN AND RANGE</div>
         <div class="dtag" id="dt0" style="top:94px">DOMAIN</div>
-        <svg id="dbar" width="540" height="44" style="position:absolute;left:196px;top:94px"><line x1="14" y1="22" x2="380" y2="22" stroke="#38D9F5" stroke-width="4"/><circle cx="14" cy="22" r="9" fill="#38D9F5"/><circle cx="380" cy="22" r="9" fill="#38D9F5"/><text x="402" y="30" font-size="24" font-weight="600" fill="#FFFFFF">0 to 3 km</text></svg>
+        <svg id="dbar" width="540" height="44" style="position:absolute;left:196px;top:94px"><line x1="14" y1="22" x2="380" y2="22" stroke="#3B5BFD" stroke-width="4"/><circle cx="14" cy="22" r="9" fill="#3B5BFD"/><circle cx="380" cy="22" r="9" fill="#3B5BFD"/><text x="402" y="30" font-size="24" font-weight="600" fill="#14171C">0 to 3 km</text></svg>
         <div class="dtag" id="dt1" style="top:178px">RANGE</div>
         <div class="pill on" id="rg0" style="left:196px;top:176px">₹0</div>
         <div class="pill on" id="rg1" style="left:292px;top:176px">₹30</div>
@@ -251,16 +277,16 @@ svg text{font-family:'IBM Plex Mono'}
       <div class="card" id="kq"><div class="abs" id="kqIn" style="left:0;top:0;width:784px;height:580px">
         <div class="lbl" style="left:48px;top:40px">THE FIRST CAREFUL DEFINITION</div>
         <svg id="bookS" width="124" height="166" style="position:absolute;left:48px;top:88px">
-          <rect x="10" y="8" width="112" height="156" rx="6" fill="#22305A"/>
-          <rect x="0" y="0" width="112" height="156" rx="6" fill="#0D1630" stroke="#38D9F5" stroke-width="2"/>
-          <rect x="0" y="0" width="14" height="156" rx="4" fill="#38D9F5"/>
-          <rect id="bl1" x="30" y="36" width="62" height="8" rx="2" fill="#6F7FA6"/><rect id="bl2" x="30" y="54" width="46" height="8" rx="2" fill="#6F7FA6"/><rect id="bl3" x="30" y="72" width="56" height="8" rx="2" fill="#6F7FA6"/>
-          <text x="62" y="130" text-anchor="middle" font-size="20" font-weight="600" fill="#38D9F5">1821</text>
+          <rect x="10" y="8" width="112" height="156" rx="6" fill="#DCDCD3"/>
+          <rect x="0" y="0" width="112" height="156" rx="6" fill="#F3F3EE" stroke="#3B5BFD" stroke-width="2"/>
+          <rect x="0" y="0" width="14" height="156" rx="4" fill="#3B5BFD"/>
+          <rect id="bl1" x="30" y="36" width="62" height="8" rx="2" fill="#6B6F76"/><rect id="bl2" x="30" y="54" width="46" height="8" rx="2" fill="#6B6F76"/><rect id="bl3" x="30" y="72" width="56" height="8" rx="2" fill="#6B6F76"/>
+          <text x="62" y="130" text-anchor="middle" font-size="20" font-weight="600" fill="#3B5BFD">1821</text>
         </svg>
         <div class="h" id="kot1" style="position:absolute;left:204px;top:92px;font-size:44px;white-space:nowrap">Augustin-Louis</div>
         <div class="h" id="kot2" style="position:absolute;left:204px;top:144px;font-size:44px;white-space:nowrap"><span class="acc">Cauchy</span></div>
         <div class="lbl" id="kbk" style="left:204px;top:214px">FRENCH · COURS D'ANALYSE, 1821</div>
-        <div id="kqHr" style="position:absolute;left:48px;right:48px;top:290px;height:2px;background:#22305A"></div>
+        <div id="kqHr" style="position:absolute;left:48px;right:48px;top:290px;height:2px;background:#DCDCD3"></div>
         <div class="ql" id="ql0" style="top:314px">"When the values successively given to a</div>
         <div class="ql" id="ql1" style="top:362px">variable <span class="hl" id="hl0">approach indefinitely to a fixed</span></div>
         <div class="ql" id="ql2" style="top:410px"><span class="hl" id="hl1">value</span> ... the latter is called</div>
@@ -270,7 +296,7 @@ svg text{font-family:'IBM Plex Mono'}
         <div class="lbl" style="left:48px;top:40px">IN SIMPLE WORDS</div>
         <div id="nota" class="mono" style="position:absolute;left:48px;top:104px;white-space:nowrap">
           <span style="font:600 76px 'IBM Plex Mono'">lim f(x) = <span class="acc">L</span></span>
-          <div style="position:absolute;left:4px;top:92px;font:600 26px 'IBM Plex Mono';color:#C9D3EC">x → a</div>
+          <div style="position:absolute;left:4px;top:92px;font:600 26px 'IBM Plex Mono';color:#2E3238">x → a</div>
         </div>
         <div id="st3s"></div>
       </div>
@@ -281,7 +307,7 @@ svg text{font-family:'IBM Plex Mono'}
       <div class="card" id="mg">
         <div class="lbl" style="left:48px;top:40px">ZOOMED IN NEAR 2 KM · FEE V1</div>
         <svg id="mgS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
-        <div class="rd" id="mRd" style="left:48px;top:494px">d = <b id="mD">1.9</b> km<span style="color:#3A4A75">|</span>fee = <b id="mF">₹0</b></div>
+        <div class="rd" id="mRd" style="left:48px;top:494px">d = <b id="mD">1.9</b> km<span style="color:#BDBDB5">|</span>fee = <b id="mF">₹0</b></div>
       </div>
       <div class="card" id="mt">
         <div class="lbl" style="left:48px;top:40px">THE VALUES, CLOSER AND CLOSER</div>
@@ -310,8 +336,8 @@ svg text{font-family:'IBM Plex Mono'}
       </div>
       <div class="card" id="ie">
         <div class="lbl" style="left:48px;top:34px">WHAT A PROGRAM SAYS</div>
-        <div class="term" id="te0" style="top:84px;color:#C9D3EC">&gt;&gt;&gt; f(1)</div>
-        <div class="term" id="te1" style="top:128px;color:#9FB3D9">ZeroDivisionError: division by zero</div>
+        <div class="term" id="te0" style="top:84px;color:#2E3238">&gt;&gt;&gt; f(1)</div>
+        <div class="term" id="te1" style="top:128px;color:#5B6068">ZeroDivisionError: division by zero</div>
         <div class="pill on" id="ilim" style="left:48px;top:190px;font-family:'IBM Plex Mono'">But the limit as x → 1 is 2</div>
       </div>
     </div>
@@ -343,23 +369,23 @@ svg text{font-family:'IBM Plex Mono'}
       <div class="card" id="xs"><div class="abs" id="xsIn" style="left:0;top:0;width:784px;height:580px">
         <div class="lbl" style="left:48px;top:40px">IS THE REAL WORLD CONTINUOUS?</div>
         <svg id="scl" width="688" height="250" style="position:absolute;left:48px;top:84px">
-          <rect x="254" y="226" width="180" height="20" rx="4" fill="#22305A"/>
-          <rect x="338" y="40" width="12" height="190" fill="#22305A"/>
+          <rect x="254" y="226" width="180" height="20" rx="4" fill="#DCDCD3"/>
+          <rect x="338" y="40" width="12" height="190" fill="#DCDCD3"/>
           <g id="panL"></g><g id="panR"></g>
-          <g id="beam"><rect x="64" y="34" width="560" height="12" rx="3" fill="#6F7FA6"/></g>
-          <circle cx="344" cy="40" r="14" fill="#38D9F5"/>
+          <g id="beam"><rect x="64" y="34" width="560" height="12" rx="3" fill="#6B6F76"/></g>
+          <circle cx="344" cy="40" r="14" fill="#3B5BFD"/>
         </svg>
-        <div class="lbl" id="xgL" style="left:48px;top:352px;color:#38D9F5">THE GOOD SIDE</div>
-        <div class="lbl" id="xhL" style="left:408px;top:352px;color:#C9D3EC">THE HARD SIDE</div>
+        <div class="lbl" id="xgL" style="left:48px;top:352px;color:#3B5BFD">THE GOOD SIDE</div>
+        <div class="lbl" id="xhL" style="left:408px;top:352px;color:#2E3238">THE HARD SIDE</div>
         <div id="xChips"></div>
       </div></div>
       <div class="card" id="xw">
         <div class="lbl" style="left:48px;top:40px">BERLIN ACADEMY · 18 JULY 1872</div>
         <div class="h" id="wN" style="position:absolute;left:48px;top:80px;font-size:40px;white-space:nowrap">Karl <span class="acc">Weierstrass</span></div>
-        <svg id="wS" width="688" height="140" style="position:absolute;left:48px;top:140px"><path id="wP" fill="none" stroke="#38D9F5" stroke-width="2.5" stroke-linejoin="round"/></svg>
+        <svg id="wS" width="688" height="140" style="position:absolute;left:48px;top:140px"><path id="wP" fill="none" stroke="#3B5BFD" stroke-width="2.5" stroke-linejoin="round"/></svg>
         <div class="lbl" id="wC" style="left:48px;top:288px">NO BREAKS ANYWHERE, JAGGED EVERYWHERE</div>
         <div class="xr" id="xr0" style="top:338px"><div class="fa" id="xrF0"></div><div class="bb" id="bb0">Charge ₹13.50 and ₹16.50?</div></div>
-        <div class="xr" id="xr1" style="top:418px"><div class="fa" id="xrF1"></div><div class="bb" id="bb1" style="background:#123A52;border-color:#38D9F5"><span id="bb1I"></span>Round up: ₹14 and ₹17</div></div>
+        <div class="xr" id="xr1" style="top:418px"><div class="fa" id="xrF1"></div><div class="bb" id="bb1" style="background:#E8ECFF;border-color:#3B5BFD"><span id="bb1I"></span>Round up: ₹14 and ₹17</div></div>
         <div class="pill" id="xstep" style="left:136px;top:500px">Tiny ₹1 steps, nobody minds</div>
       </div>
       <div class="chip ghost" id="lesson" style="left:160px;top:390px">THE LESSON</div>
@@ -370,7 +396,7 @@ svg text{font-family:'IBM Plex Mono'}
     <div id="quiz">
       <div class="chip" id="qchip" style="left:160px;top:120px"><i></i>QUICK CHECK</div>
       <div class="h qq" id="qq1" style="top:224px">Fee: ₹0 just below 2 km, ₹30 just above.</div><div class="h qq acc" id="qq2" style="top:304px">Is it continuous at 2 km?</div>
-      <svg id="ring" viewBox="0 0 150 150"><circle cx="75" cy="75" r="66" fill="#101A33" stroke="#22305A" stroke-width="8"/><circle id="ringA" cx="75" cy="75" r="66" fill="none" stroke="#38D9F5" stroke-width="8" transform="rotate(-90 75 75)"/></svg>
+      <svg id="ring" viewBox="0 0 150 150"><circle cx="75" cy="75" r="66" fill="#FFFFFF" stroke="#DCDCD3" stroke-width="8"/><circle id="ringA" cx="75" cy="75" r="66" fill="none" stroke="#3B5BFD" stroke-width="8" transform="rotate(-90 75 75)"/></svg>
       <div id="ringN"></div>
       <div id="opts"></div>
       <div id="take"><span id="takeI"></span><span class="h tx" id="takeT">Left limit 0, right limit 30: <span class="acc">no limit, no continuity</span></span></div>
