@@ -118,6 +118,36 @@ Syllabus notes (verified 20 Oct 2026): relative velocity (1D and 2D) is not in t
 | 69 | Banking of Roads | CH 4 LAWS OF MOTION | Aarav | agent picks a bicycle, road, corridor, college or study-table moment (no brands) |
 | 70 | Apparent Weight and Weightlessness | CH 4 LAWS OF MOTION | Diya | a hospital lift makes her feel heavier, then lighter |
 
+## Episodes - Chapter 5 Work, Energy and Power (Eps 71-90, Amjad 4 Nov 2026) - ALL BOARDS
+Binding for Eps 71+:
+- Boards: every episode serves NCERT, CBSE, ISC (CISCE Class 11) and PUC. NCERT chip `CLASS 11 · PHYSICS · CH 5 WORK, ENERGY AND POWER`; add a small board pill `NCERT · CBSE · ISC · PUC` beside the subject pill. Title: `<Hook> Explained Simply | Class 11 Physics` (<= 70 chars). Description names all four boards plus JEE/NEET. Tags include CBSE, ISC, ICSE board, NCERT, PUC.
+- Content must fit all boards: check the topic against the rationalised NCERT Ch 5 and the ISC Class 11 physics syllabus (CISCE). If one board drops a topic, say so plainly ("not in the current NCERT book, but in the ISC and JEE syllabus") and never say "NCERT says" for it.
+- Language: a 10-12 year old must follow every line. Open each idea with an everyday picture (pushing a cart, a swing, a cricket ball, a ball on a slope), then plain words, then the term, then the formula. No jargon before its meaning. One idea per line.
+- Colours: work W and energy E/K/U teal #0E8F8F; power violet; force orange; displacement violet; v blue; theta gold; momentum plum #A23B72.
+
+| Ep | Topic | Lead | Hook idea |
+|---|---|---|---|
+| 71 | Scalar (Dot) Product | Aarav | pulling a suitcase by its handle at an angle |
+| 72 | Work Done by a Constant Force | Diya | carrying a heavy bag vs lifting it |
+| 73 | Positive, Negative and Zero Work | Aarav | brakes, a fan, carrying books along a corridor |
+| 74 | Work Done by a Variable Force | Aarav | stretching a rubber band harder and harder |
+| 75 | Kinetic Energy | Aarav | a slow vs fast cricket ball hitting the pads |
+| 76 | Work-Energy Theorem | Aarav | a bike that needs a longer stopping distance when fast |
+| 77 | Work-Energy Theorem for a Variable Force | Diya | a pressure-cooker lid spring pushing back |
+| 78 | Potential Energy | Diya | a stretched catapult and a raised water tank |
+| 79 | Gravitational Potential Energy | Diya | water from a rooftop tank |
+| 80 | Conservative and Non-Conservative Forces | Aarav | two paths up a hill, same height gained |
+| 81 | Conservation of Mechanical Energy | Diya | a playground swing |
+| 82 | Potential Energy of a Spring | Aarav | a toy spring gun |
+| 83 | Motion in a Vertical Circle | Aarav | a bucket of water swung over the head |
+| 84 | Power | Aarav | two friends climbing the same stairs, one faster |
+| 85 | Forms of Energy and Conservation of Energy | Diya | a kitchen: gas, heat, light, sound |
+| 86 | Collisions: Elastic and Inelastic | Aarav | carrom striker vs a clay ball |
+| 87 | Elastic Collision in One Dimension | Aarav | Newton's cradle style steel balls |
+| 88 | Perfectly Inelastic Collision | Aarav | two trolleys that stick together |
+| 89 | Coefficient of Restitution | Diya | balls dropped on the floor bounce to different heights |
+| 90 | Collisions in Two Dimensions | Aarav | a carrom shot at an angle; NEXT teases Ch 6 System of Particles and Rotational Motion |
+
 ## Canon added by episodes
 Binding for Eps 38 onward (earlier episodes stay as made):
 - Colours: velocity v, v-bar and speed-type readouts on a v graph = blue #2F6FEB; displacement, position x, distance travelled and area under a v-t graph = violet #7A4FE0; acceleration a, g, change in velocity = red #D64545; force F and every error term (delta) = orange #D9731A; energy/work = teal #0E8F8F; time t, numbers, magnitudes = ink #16213E; angle theta = gold #B7791F.
