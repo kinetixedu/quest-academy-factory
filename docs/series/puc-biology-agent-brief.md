@@ -39,3 +39,9 @@ Amjad wants this fast. Start voicing an episode as soon as its script is ready, 
 
 ## Report back (short, per episode)
 Ep + slug, voice duration, diagrams and the process animated, facts verified (source), where-asked decision (and source if lit), MCQ answer, any compromise or unsure point, any recurring canon (colours, notation) the lead should add to the bible.
+
+## Eps 40-59 additions (Nov 2026) - token-lean mode
+- Audience is 10-12 years old: everyday picture first, one new word at a time, explained at once. Exam part stays NEET level.
+- Boards and *I rows: see "Episodes 40-59" in docs/series/puc-biology.md.
+- Reference: copy the closest finished sibling episode (e.g. Ep 30 for plants, Ep 33/34 for animals) plus Ep 1; reuse its CSS/helpers verbatim, change content only.
+- Be economical: read only what you need, 2-3 stills rounds (fix only real defects: overlap, clipping, empty frame, wrong fact), 18-still final sheet, report max 6 lines per episode. Ep 59 strip: `NEXT · EP 60` with "Next: Cell - The Unit of Life".

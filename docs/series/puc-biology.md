@@ -92,3 +92,30 @@ Chips: Eps 2-10 `CH 1 THE LIVING WORLD` · Eps 11-20 `CH 2 BIOLOGICAL CLASSIFICA
 - Eps 2-39 colours (from the batch agents): kingdoms Monera teal #0F8F8F, Protista coral #D0632F, Fungi chitin brown #8C6D4F, Plantae green #3E9B5F, Animalia rose #B5476E; algae green #3E9B5F, brown #9A6B2F, red #C2445A; n teal #0E8F8F, 2n indigo #4A5FC1, 3n gold #C9962B; gametophyte green, sporophyte tan #A8742A; ectoderm #4A78C2, mesoderm #C8553D, endoderm #E2B33C, coelom #D6E9F5; notochord teal #2A9D8F, nerve cord indigo #4C5FD5, gill slits coral #E4572E; RNA teal, capsid #D9CFC0, prion rose #C0587E; domains Bacteria #4F7CAC, Archaea #B5525C, Eukarya violet.
 - Engine gotchas: M.vis overwrites an SVG element's transform attribute (wrap in a plain group); pop-ins need `#stage svg *:not([transform]){transform-box:fill-box;transform-origin:center}`; camera push-in max ~1.05x around (960,540) or it cuts the header.
 - Status 21 Oct 2026: all 39 episodes ready; delivered to Amjad via kit-puc-biology .. kit-puc-biology-8.
+
+## Episodes 40-59 (Amjad, 4 Nov 2026) - Class 11 Chapters 5-7, all boards (NCERT, CBSE, ISC/CISCE, PUC)
+Audience: explain so a 10-12 year old follows every line (simpler than before: everyday picture first, one new word at a time, each explained the moment it appears); exam substance stays.
+Boards: NCERT/CBSE/PUC follow the rationalised NCERT text; ISC (CISCE) Class 11 still teaches root/stem/leaf modifications, Fabaceae and Liliaceae, meristems, secondary growth, animal tissues and cockroach (shaalaa ISC syllabus). Rows marked *I are not in the current NCERT text but ARE in ISC: ghost chip `NOT IN CURRENT NCERT · IN ISC SYLLABUS`, light no exam chips, never say "NCERT says".
+Description of every episode adds: "Made for NCERT, CBSE, ISC (CISCE), PUC (Karnataka) and NEET students." Tags add: CBSE class 11 biology, ISC class 11 biology.
+| ep | topic | chip | hook lead |
+|---|---|---|---|
+| 40 | The Root: Types and Modifications *I | `CLASS 11 · BIOLOGY · CH 5 MORPHOLOGY OF FLOWERING PLANTS` | Diya |
+| 41 | The Stem and its Modifications *I | `CLASS 11 · BIOLOGY · CH 5 MORPHOLOGY OF FLOWERING PLANTS` | Diya |
+| 42 | The Leaf: Venation, Phyllotaxy and Modifications *I | `CLASS 11 · BIOLOGY · CH 5 MORPHOLOGY OF FLOWERING PLANTS` | Diya |
+| 43 | Inflorescence: Racemose and Cymose  | `CLASS 11 · BIOLOGY · CH 5 MORPHOLOGY OF FLOWERING PLANTS` | Diya |
+| 44 | The Flower: Symmetry, Whorls and Ovary Position  | `CLASS 11 · BIOLOGY · CH 5 MORPHOLOGY OF FLOWERING PLANTS` | Diya |
+| 45 | Aestivation and Placentation  | `CLASS 11 · BIOLOGY · CH 5 MORPHOLOGY OF FLOWERING PLANTS` | Aarav |
+| 46 | Fruits and Seeds  | `CLASS 11 · BIOLOGY · CH 5 MORPHOLOGY OF FLOWERING PLANTS` | Diya |
+| 47 | Floral Formula and Family Solanaceae  | `CLASS 11 · BIOLOGY · CH 5 MORPHOLOGY OF FLOWERING PLANTS` | Aarav |
+| 48 | Families Fabaceae and Liliaceae *I | `CLASS 11 · BIOLOGY · CH 5 MORPHOLOGY OF FLOWERING PLANTS` | Diya |
+| 49 | Meristematic Tissues *I | `CLASS 11 · BIOLOGY · CH 6 ANATOMY OF FLOWERING PLANTS` | Diya |
+| 50 | Simple and Complex Permanent Tissues  | `CLASS 11 · BIOLOGY · CH 6 ANATOMY OF FLOWERING PLANTS` | Diya |
+| 51 | Tissue Systems in Plants  | `CLASS 11 · BIOLOGY · CH 6 ANATOMY OF FLOWERING PLANTS` | Diya |
+| 52 | Anatomy of Dicot and Monocot Roots  | `CLASS 11 · BIOLOGY · CH 6 ANATOMY OF FLOWERING PLANTS` | Aarav |
+| 53 | Anatomy of Dicot and Monocot Stems  | `CLASS 11 · BIOLOGY · CH 6 ANATOMY OF FLOWERING PLANTS` | Aarav |
+| 54 | Dorsiventral and Isobilateral Leaves  | `CLASS 11 · BIOLOGY · CH 6 ANATOMY OF FLOWERING PLANTS` | Diya |
+| 55 | Secondary Growth: Cambium, Annual Rings and Bark *I | `CLASS 11 · BIOLOGY · CH 6 ANATOMY OF FLOWERING PLANTS` | Aarav |
+| 56 | Epithelial Tissue *I | `CLASS 11 · BIOLOGY · CH 7 STRUCTURAL ORGANISATION IN ANIMALS` | Diya |
+| 57 | Connective and Muscular Tissue *I | `CLASS 11 · BIOLOGY · CH 7 STRUCTURAL ORGANISATION IN ANIMALS` | Aarav |
+| 58 | Frog: Morphology and Anatomy  | `CLASS 11 · BIOLOGY · CH 7 STRUCTURAL ORGANISATION IN ANIMALS` | Diya |
+| 59 | Cockroach: Body and Organ Systems *I | `CLASS 11 · BIOLOGY · CH 7 STRUCTURAL ORGANISATION IN ANIMALS` | Aarav |
