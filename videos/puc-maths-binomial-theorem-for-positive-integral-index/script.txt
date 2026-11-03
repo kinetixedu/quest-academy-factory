@@ -1,0 +1,61 @@
+H1|0.4|Multiply a plus b by itself. Easy. You get three terms.
+H2|0.45|Multiply it three times, and it takes longer. Now there are four terms.
+H3|0.35|Aarav's homework tonight asks for a plus b, to the power ten.
+H4|0.5|Ten brackets, multiplied one by one. That is a whole page of work. Is there a shortcut?
+H5|0.65|There is. One line gives the whole answer. It is called the binomial theorem.
+D1|0.35|First, two small words.
+D2|0.4|A binomial is an expression with two parts, like a plus b. Bi means two.
+D3|0.6|The power tells you how many brackets to multiply. a plus b, to the power three, means three brackets side by side.
+P1|0.4|Now watch the brackets multiply. From each bracket, you pick one part: a or b.
+P2|0.4|Pick a, a, a, and you get a cubed. Pick a, a, b, and you get a squared b.
+P3|0.4|Every different pick makes one piece. Three brackets, two choices each. That makes eight picks.
+P4|0.65|Now sort the pieces. One pick gives a cubed. Three picks give a squared b. Three give a b squared. One gives b cubed.
+P5|0.65|So a plus b, cubed, is a cubed, plus three a squared b, plus three a b squared, plus b cubed.
+C1|0.4|Here is the key question. Why are there three picks that give a squared b?
+C2|0.4|Because you only decide which bracket gives the b. It can be the first, the second, or the third.
+C3|0.75|Choosing r things out of n is exactly n C r, from the combinations episode. Here, three C one is three.
+C4|0.65|So every number in front of a term is an n C r. It simply counts the ways to choose the brackets that give b.
+L1|0.4|Now let the power grow. Watch n count up from one to ten.
+L2|0.4|Each new power adds one more term. The numbers in front grow fast, and they always rise and fall evenly, like a hill.
+L3|0.6|At n equals ten, they are one, ten, forty five, one hundred twenty, two hundred ten, two hundred fifty two, and then back down.
+L4|0.65|Add them all, and you get one thousand and twenty four. That is two to the power ten.
+G1|0.35|Now we can write the theorem in one line.
+G2|0.75|Step one. The first term is a to the power n. Its number is n C zero, which is one.
+G3|0.75|Step two. Each next term swaps one a for one b. The power of a goes down by one. The power of b goes up by one.
+G4|0.75|Step three. In front of a to the n minus r, times b to the r, sits n C r. That is the number of ways to choose r brackets for b.
+G5|0.75|Step four. The last term is b to the power n, with n C n, which is also one.
+G6|0.65|So there are n plus one terms. And in every term, the two powers add up to n.
+S1|0.4|Side by side. Many people think a plus b, squared, is just a squared plus b squared.
+S2|0.4|Look at a square with side a plus b. It splits into four pieces. a squared, b squared, and two rectangles, each a times b.
+S3|0.6|So a plus b, squared, is a squared, plus two a b, plus b squared. The middle term is what the shortcut forgets.
+S4|3.2|Now you try. Is a plus b, cubed, equal to a cubed plus b cubed? Pause and decide.
+S5|0.65|No! The middle terms, three a squared b and three a b squared, are missing. Only the first and the last terms match.
+T1|0.7|Remember this. Pick one part from every bracket, and n C r counts the ways.
+V1|0.35|Two quick tricks come straight out of the theorem.
+V2|0.4|Trick one. a minus b is a plus minus b. Odd powers of minus b are negative, so the signs go plus, minus, plus, minus.
+V3|0.4|Trick two. Put a equal to one, and b equal to x. You get one plus x, to the power n.
+V4|0.6|Now put x equal to one. The left side becomes two to the n. The right side becomes all the n C r added up. So every row adds up to two to the n.
+V5|3.2|Quick one. How many terms does a plus b, to the power ten, have? Ten, or eleven? Pause and think.
+V6|0.65|Eleven! There is always one more term than the power, because r runs from zero all the way up to n.
+W1|0.35|Now, one worked example.
+W2|0.5|Expand x plus two, to the power four.
+W3|0.75|Step one. n is four, so the numbers are four C zero up to four C four. One, four, six, four, one.
+W4|0.75|Step two. The powers of x go down from four to zero. The powers of two go up from zero to four.
+W5|0.75|Step three. Multiply each column. One x to the four. Four times x cubed times two, eight x cubed. Six times x squared times four, twenty four x squared.
+W6|0.75|Then four times x times eight, thirty two x. And one times sixteen, sixteen.
+W7|0.65|Check it with x equal to one. Three to the four is eighty one, and one plus eight plus twenty four plus thirty two plus sixteen is also eighty one.
+X1|0.35|Now, the exam trap.
+X2|0.4|Expand x minus two, to the power four. Many students copy the last answer and turn every plus into a minus.
+X3|0.65|But only odd powers of minus two are negative. Minus two, squared, is plus four. So the signs alternate: plus, minus, plus, minus, plus.
+J1|0.6|Where is this asked? In JEE Main, as questions that ask for an expansion, or for the sum of all the coefficients, which you get by putting x equal to one.
+Q1|5.4|Exam level now. How many terms does this expansion have? Pause and solve.
+A1|0.5|The answer is B. Nine.
+A2|0.5|Put x equal to one. The coefficients add up to one plus two, to the power n. That is three to the n.
+A3|0.5|Three to the n is six thousand five hundred sixty one. Three to the eight is exactly that, so n is eight.
+A4|0.6|There is always one more term than the power. So the expansion has nine terms, not eight.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why is a plus b, squared, not just a squared plus b squared?
+Y3|0.9|Two. How many terms does a plus b, to the power seven, have?
+Y4|1.1|Three. What do the coefficients of one plus x, to the power five, add up to?
+N1|0.3|Next time: you need only the seventh term of a long expansion. Can you jump straight to it? We find out with the general term.
