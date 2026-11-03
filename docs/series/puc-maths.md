@@ -104,3 +104,29 @@ Light PUC BOARDS ONLY for these episodes (question that proves it in brackets):
 - Ep 24 arc length l = r theta (A-2023 Q24) · Ep 25 radian measure of 240 degrees (M-2024 Q3, A-2023 Q16) · Ep 27 standard values (M-2024 Q23) · Ep 28 signs by quadrant (M-2024 Q36, A-2023 Q25) · Ep 29 domain of sec x (A-2023 Q3) · Ep 32 identities (M-2024 Q36) · Ep 33 cos(x + y) geometric proof (M-2024 Q51, A-2023 Q59) · Ep 34 sin 3x (M-2024 Q34) · Ep 35 sum to product (M-2024 Q44, A-2023 Q50)
 - Ep 38 powers of i (M-2024 Q4) · Ep 39 a + ib form (M-2024 Q25) · Ep 40 inverses, (1 - i)^4 (M-2024 Q24, A-2023 Q4, Q26) · Ep 41 division by a conjugate (M-2024 Q35) · Ep 42 modulus, x^2 + y^2 = 1 (M-2024 Q35) · Ep 45 complex roots of 2x^2 + x + 1 = 0 (A-2023 Q39, only if still in current NCERT text)
 All other episodes: PUC BOARDS stays unlit (no verified question, or the topic left the current syllabus: power sets, n(A U B) applications, trig equations, polar form).
+
+## Episodes batch 2 (Amjad, 4 Nov 2026) - Chapters 5-8, for all boards (NCERT, CBSE, ICSE/ISC, PUC)
+| Ep | Topic | Chapter | Lead | Hook |
+|---|---|---|---|---|
+| 49 | Introduction to Linear Inequalities | CH 5 LINEAR INEQUALITIES | Aarav | the lift says max 8 people: is 8 allowed, is 9? |
+| 50 | Solving Linear Inequalities in One Variable | CH 5 LINEAR INEQUALITIES | Diya | multiply both sides by minus one and the arrow flips |
+| 51 | Graphical Solution of Inequalities in Two Variables | CH 5 LINEAR INEQUALITIES | Aarav | a line splits the whole field in two: which side wins? |
+| 52 | Fundamental Principle of Counting | CH 6 PERMUTATIONS AND COMBINATIONS | Diya | 3 shirts and 4 pants: how many outfits? |
+| 53 | Factorial Notation | CH 6 PERMUTATIONS AND COMBINATIONS | Aarav | line up 5 friends for a photo: why so many ways? |
+| 54 | Permutations of Distinct Objects | CH 6 PERMUTATIONS AND COMBINATIONS | Diya | choose a captain and a vice captain: order matters |
+| 55 | Permutations with Repeated Objects | CH 6 PERMUTATIONS AND COMBINATIONS | Aarav | rearrange the letters of APPLE: why fewer words? |
+| 56 | Combinations | CH 6 PERMUTATIONS AND COMBINATIONS | Diya | pick 2 friends for a team: order does not matter |
+| 57 | Permutations vs Combinations Problems | CH 6 PERMUTATIONS AND COMBINATIONS | Aarav | arrange or choose? the one question that decides |
+| 58 | Pascal's Triangle and Binomial Expansion | CH 7 BINOMIAL THEOREM | Diya | a triangle of numbers that expands (a + b) to any power |
+| 59 | Binomial Theorem for Positive Integral Index | CH 7 BINOMIAL THEOREM | Aarav | (a + b)^10 without multiplying ten times |
+| 60 | General Term of a Binomial Expansion | CH 7 BINOMIAL THEOREM | Diya | jump straight to the 7th term |
+| 61 | Middle Term and Applications of the Binomial Theorem | CH 7 BINOMIAL THEOREM | Aarav | which is bigger: 1.01^1000 or 10000? |
+| 62 | Sequences and Series | CH 8 SEQUENCES AND SERIES | Diya | a number pattern with a rule: what comes next? |
+| 63 | Arithmetic Progression | CH 8 SEQUENCES AND SERIES | Aarav | saving the same amount every week |
+| 64 | Sum of an AP and Arithmetic Mean | CH 8 SEQUENCES AND SERIES | Diya | add 1 to 100 in seconds, like young Gauss |
+| 65 | Geometric Progression | CH 8 SEQUENCES AND SERIES | Aarav | a rumour that doubles every hour |
+| 66 | Sum of a GP | CH 8 SEQUENCES AND SERIES | Diya | grains on a chessboard: 1, 2, 4, 8 ... |
+| 67 | Geometric Mean and the AM-GM Inequality | CH 8 SEQUENCES AND SERIES | Aarav | two averages: which is never smaller? |
+| 68 | Sum of Special Series | CH 8 SEQUENCES AND SERIES | Diya | 1 + 4 + 9 + ... in one formula |
+
+Batch 2 rules: language a 10-year-old follows (everyday analogy before every symbol, one idea per line, explain every word). Title suffix "| Class 11 Maths" (all boards). Description says: follows the NCERT book; for CBSE, ICSE/ISC, state boards (Karnataka PUC) and JEE. Header class chip unchanged.
