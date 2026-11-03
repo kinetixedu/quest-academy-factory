@@ -74,6 +74,29 @@ Ep 13 "Limiting reagent and numerical calculations (supplementary extension wher
 Ep 37 is the last of this batch: NEXT strip teases Chapter 4, Chemical Bonding and Molecular Structure.
 Reference episode: videos/puc-chemistry-importance-and-scope-of-chemistry/ (Ep 2, style approved by Amjad's go-ahead on 20 Oct 2026).
 
+### Batch 2 (4 Nov 2026): Ch 4 and Ch 5. Amjad: cover all boards (NCERT, CBSE, ICSE/ISC) and explain so a 10-12 year old understands.
+38 Kossel-Lewis Approach and Octet Rule · Class 11 · CH 4 CHEMICAL BONDING AND MOLECULAR STRUCTURE · hook Diya · `puc-chemistry-kossel-lewis-approach-and-octet-rule`
+39 Ionic Bond and Lattice Enthalpy · Class 11 · CH 4 CHEMICAL BONDING AND MOLECULAR STRUCTURE · hook Diya · `puc-chemistry-ionic-bond-and-lattice-enthalpy`
+40 Covalent Bond and Lewis Structures · Class 11 · CH 4 CHEMICAL BONDING AND MOLECULAR STRUCTURE · hook Diya · `puc-chemistry-covalent-bond-and-lewis-structures`
+41 Formal Charge · Class 11 · CH 4 CHEMICAL BONDING AND MOLECULAR STRUCTURE · hook Aarav · `puc-chemistry-formal-charge`
+42 Limitations of the Octet Rule · Class 11 · CH 4 CHEMICAL BONDING AND MOLECULAR STRUCTURE · hook Aarav · `puc-chemistry-limitations-of-the-octet-rule`
+43 Bond Parameters · Class 11 · CH 4 CHEMICAL BONDING AND MOLECULAR STRUCTURE · hook Aarav · `puc-chemistry-bond-parameters`
+44 Resonance Structures · Class 11 · CH 4 CHEMICAL BONDING AND MOLECULAR STRUCTURE · hook Diya · `puc-chemistry-resonance-structures`
+45 Polarity of Bonds and Dipole Moment · Class 11 · CH 4 CHEMICAL BONDING AND MOLECULAR STRUCTURE · hook Diya · `puc-chemistry-polarity-of-bonds-and-dipole-moment`
+46 VSEPR Theory and Shapes of Molecules · Class 11 · CH 4 CHEMICAL BONDING AND MOLECULAR STRUCTURE · hook Diya · `puc-chemistry-vsepr-theory-and-shapes-of-molecules`
+47 Valence Bond Theory and Orbital Overlap · Class 11 · CH 4 CHEMICAL BONDING AND MOLECULAR STRUCTURE · hook Aarav · `puc-chemistry-valence-bond-theory-and-orbital-overlap`
+48 Hybridisation · Class 11 · CH 4 CHEMICAL BONDING AND MOLECULAR STRUCTURE · hook Diya · `puc-chemistry-hybridisation`
+49 Molecular Orbital Theory · Class 11 · CH 4 CHEMICAL BONDING AND MOLECULAR STRUCTURE · hook Aarav · `puc-chemistry-molecular-orbital-theory`
+50 Hydrogen Bonding · Class 11 · CH 4 CHEMICAL BONDING AND MOLECULAR STRUCTURE · hook Diya · `puc-chemistry-hydrogen-bonding`
+51 System, Surroundings and State Functions · Class 11 · CH 5 THERMODYNAMICS · hook Aarav · `puc-chemistry-system-surroundings-and-state-functions`
+52 First Law of Thermodynamics · Class 11 · CH 5 THERMODYNAMICS · hook Aarav · `puc-chemistry-first-law-of-thermodynamics`
+53 Enthalpy and Heat Capacity · Class 11 · CH 5 THERMODYNAMICS · hook Diya · `puc-chemistry-enthalpy-and-heat-capacity`
+54 Enthalpy Changes of Reactions · Class 11 · CH 5 THERMODYNAMICS · hook Diya · `puc-chemistry-enthalpy-changes-of-reactions`
+55 Hess's Law · Class 11 · CH 5 THERMODYNAMICS · hook Aarav · `puc-chemistry-hess-s-law`
+56 Entropy and Spontaneity · Class 11 · CH 5 THERMODYNAMICS · hook Diya · `puc-chemistry-entropy-and-spontaneity`
+57 Gibbs Energy and Equilibrium · Class 11 · CH 5 THERMODYNAMICS · hook Aarav · `puc-chemistry-gibbs-energy-and-equilibrium`
+Ep 57 NEXT strip teases Ch 6 Equilibrium.
+
 ## Canon added by episodes
 (lead adds recurring facts reported by subagents here)
 - Colours: O violet #7A4FE0; coefficients and n gold #B7791F; Cl blue #2F6FEB (Ep 11); limiting reagent = red chip, excess = ink chip on the counter (Ep 13).

@@ -12,6 +12,11 @@ Run every CPU-heavy command through the slot wrapper so at most 2 run at once:
 Never run tools/build.sh, tools/render.js or tools/audio.py (GitHub Actions renders). Never git add/commit/push (the lead commits after review). Never edit engine/, tools/, worlds/, assets/, docs/, queue/, config/ or any folder that is not yours.
 Your scratch dir for sheets: /tmp/claude-0/-home-claude/e2cd1df4-98e6-569a-93b1-4b388df2cb07/scratchpad/<slug>/
 
+## Batch 2 rules (Eps 38-57, Amjad 4 Nov 2026)
+- Boards: content must serve NCERT, CBSE and ICSE/ISC (CISCE) students. Keep the NCERT chip. Cover every sub-point the NCERT section and the ISC Class 11 syllabus list for the topic (if ISC adds a point NCERT lacks, include it briefly). meta.json title ends "| PUC Chemistry Class 11"; description adds "For NCERT, CBSE, ICSE/ISC, PUC, NEET and JEE students."; tags add "CBSE class 11 chemistry", "ISC class 11 chemistry".
+- Kid level: a 10-12 year old must follow every line. Before each new word, give an everyday picture first (tug of war, sharing toys, magnets, Lego, money). Short sentences, one idea per line, no unexplained term.
+- Tokens: Amjad wants low token use. Reuse reference code heavily, keep reports short (5-8 lines per episode: slug, voice length, MCQ answer, where-asked decision, any doubt).
+
 ## Read first (fully, once)
 1. docs/series/PUC.md (standard, "Every PUC episode must have", ending order, puc-chemistry "Molecule bench").
 2. docs/series/puc-chemistry.md (bible: chapters, Amjad's feedback rules 1-6, cast, Molecule bench canon, episode list with ep number, chip, hook lead, slug).
