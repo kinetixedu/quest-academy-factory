@@ -226,7 +226,7 @@ M.on(t => {
     M.vis($('#ib'), t, tI1 + 0.3, z, { dx: 60, dy: 0, ...o });
     M.vis($('#io0'), t, wt('I4', 'Copper') - 0.1, 1e9, { dy: 16 }); M.vis($('#io1'), t, wt('I4', 'thiosulphate') - 0.1, 1e9, { dy: 16 });
     fade(iF.g, t, tI1 + 0.5);
-    const PH = [[tI1, PALE, PINK, wt('I1', 'self'), 'KMnO₄: PINK AT THE END', '#C2338A'], [T0('I2'), ORNG, GRN, wt('I2', 'green'), 'Cr₂O₇²⁻ ORANGE → Cr³⁺ GREEN', GRN], [T0('I3'), GRN, BLUE, wt('I3', 'intense'), 'DIPHENYLAMINE: INTENSE BLUE', BLUE], [T0('I4'), PALE, '#A0522D', wt('I4', 'iodine', 1), 'IODINE MADE: BROWN', '#A0522D'], [T0('I5'), '#A0522D', BLUE, wt('I5', 'blue'), 'STARCH + I₂: DEEP BLUE', BLUE], [wt('I5', 'disappears') - 0.2, BLUE, CLR, wt('I5', 'disappears'), 'LAST I₂ USED: BLUE GONE', OK]];
+    const PH = [[tI1, PALE, PINK, wt('I1', 'self'), 'KMnO₄: PINK AT THE END', '#C2338A'], [T0('I2'), ORNG, GRN, wt('I2', 'green'), 'Cr₂O₇²⁻ ORANGE → Cr³⁺ GREEN', GRN], [T0('I3'), GRN, BLUE, wt('I3', 'intense'), 'DIPHENYLAMINE: INTENSE BLUE', BLUE], [T0('I4'), PALE, '#A0522D', wt('I4', 'iodine', 1), 'IODINE MADE: BROWN', '#A0522D'], [T0('I5'), '#A0522D', BLUE, wt('I5', 'Starch', 1), 'STARCH + I₂: DEEP BLUE', BLUE], [wt('I5', 'disappears') - 0.2, BLUE, CLR, wt('I5', 'disappears'), 'LAST I₂ USED: BLUE GONE', OK]];
     let ph = PH[0]; for (const q of PH) if (t >= q[0]) ph = q;
     fillC(iF.liq, mix(ph[1], ph[2], M.io((t - ph[3]) / 0.5))); M.setT(iTx, ph[4]); attr(iTx, 'fill', ph[5]); fade(iTx, t, tI1 + 0.8);
   }
