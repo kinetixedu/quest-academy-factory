@@ -1,0 +1,53 @@
+H1|0.4|Stretch a rubber band. Pull a spring. Draw back a bow string.
+H2|0.45|In all three, the further you pull, the harder it pulls back.
+H3|0.35|Aarav stretches a rubber band by ten centimetres. At the end, it pulls back with twenty newtons.
+H4|0.5|So how much work did he do? W equals F d. But which F? Zero? Twenty? It kept changing.
+P1|0.35|So what do we do when the force is not steady?
+P2|0.4|Up to now, the force stayed the same. Work was just force times distance.
+P3|0.4|On a force and distance graph, a steady force is a flat line. Force times distance is the area of the rectangle under it.
+P4|0.65|When the force changes, the line is not flat. But the idea stays. Work is still the area under the force graph.
+S1|0.35|Let's test it live. Aarav stretches the band ten centimetres, slowly.
+S2|0.4|For this band, the pull grows evenly. At five centimetres, ten newtons. At ten centimetres, twenty.
+S3|0.4|Now cut the stretch into four steps. In each step, use the force at its start. Four strips give point seven five joules.
+S4|0.4|Ten thinner steps give point nine joules. Forty steps, point nine seven five.
+S5|0.5|The thinner the strips, the closer we get. The answer settles at exactly one joule.
+S6|0.35|Slow-mo replay, one strip.
+S7|0.5|Over a tiny step, delta x, the force hardly changes. So the work is F times delta x. That is the strip's area.
+S8|0.65|On the graph, the strips fill the space under the line. Their total is the work.
+D1|0.35|Now the formula, one step at a time.
+D2|0.75|Step one. Over a tiny step, the force is nearly steady. Delta W equals F of x, times delta x.
+D3|0.75|Step two. Add all the strips. W is the sum of F delta x.
+D4|0.75|Step three. Make the strips thinner and thinner, and the sum becomes exact. We write it with a long S, for sum. W equals the integral of F d x.
+D5|0.75|Step four. On a graph, that is the area under the force curve, from start to end. Newtons times metres, so joules.
+T1|0.7|Remember this. When the force keeps changing, work is the area under the force and distance graph.
+C1|0.35|Now, side by side. Two pulls, both from zero to twenty newtons, over ten centimetres.
+C2|0.4|Pull A grows fast at first, then levels off. Its curve bulges up.
+C3|0.6|Pull B stays small, then shoots up at the end. Its curve sags low.
+C4|3.2|Now you try. Which pull does more work, A or B? Pause and think.
+C5|0.65|A! It has more area under its curve. Same start, same end, but more work.
+R1|0.35|What if the force points backward for part of the way? Follow the links.
+R2|0.4|One. A backward force is a negative F.
+R3|0.4|Two. Its strips hang below the distance axis.
+R4|0.4|Three. A negative force times a forward step gives negative work.
+R5|0.65|Four. So the total work is the area above the axis, minus the area below.
+W1|0.35|Now, one worked example.
+W2|0.5|A force grows from zero to ten newtons over the first two metres. It stays at ten newtons up to five metres, then falls to zero at six metres. Find the work.
+W3|0.75|Split the area. The first triangle: half, times two, times ten. Ten joules.
+W4|0.75|The rectangle: three metres times ten newtons. Thirty joules.
+W5|0.75|The last triangle: half, times one, times ten. Five joules.
+W6|0.65|Total area, forty five joules. That is the work.
+X1|0.35|Now, the exam trap.
+X2|0.35|For F equals three x squared, from zero to two metres, many students average the end forces. Zero and twelve make six. Six times two, twelve joules.
+X3|0.65|But averaging works only for a straight line. The real area is x cubed, from zero to two. Eight joules.
+E1|0.6|Where is this asked? Reading work as area from force and distance graphs, and integrating a given force.
+Q1|5.4|Exam level now. A force F equals five minus two x newtons acts on a body. It moves along x from zero to four metres. Find the work done. Pause and solve.
+A1|0.5|The answer is A. Four joules.
+A2|0.5|W is the integral of five minus two x, from zero to four. That is five x minus x squared.
+A3|0.5|At four metres, twenty minus sixteen. At zero, zero. So four joules.
+A4|0.6|On the graph, six point two five joules sit above the axis, and two point two five below. The difference is four.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why can you not just use W equals F d for a stretched band?
+Y3|0.9|Two. What does the area under a force and distance graph tell you?
+Y4|1.1|Three. What does area below the distance axis mean?
+N1|0.3|Next time: a slow ball taps the pads, a fast ball stings. Where does the sting come from? We find out in kinetic energy.
