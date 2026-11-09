@@ -54,7 +54,7 @@ $('#lRows').innerHTML = LR.map(([k, f, x], i) => `<div class="trw" id="lw${i}" s
 let nLast = -1;
 
 /* ---------- G ---------- */
-const GS = [[`${an(1)} = ${ac('a')}`, 'the first term: no steps yet'], [`${an(2)} = ${ac('a')} + ${dc('d')},\\ \\ ${an(3)} = ${ac('a')} + 2${dc('d')}`, 'one more d each time'], [`${an('n')}:\\ (${rc('n')} - 1) \\text{ steps of } ${dc('d')}`, 'n terms have n - 1 gaps'], [NTH, 'the general term of an A P']];
+const GS = [[`${an(1)} = ${ac('a')}`, 'the first term: no steps yet'], [`${an(2)} = ${ac('a')} + ${dc('d')},\\ \\ ${an(3)} = ${ac('a')} + 2${dc('d')}`, 'one more d each time'], [`${an('n')}:\\ (${rc('n')} - 1) \\text{ steps of } ${dc('d')}`, 'n terms have n - 1 gaps'], [NTH, 'the general term of an A P']];
 $('#gSt').innerHTML = GS.map(([f, w], i) => `<div class="st" id="gs${i}" style="top:${84 + i * 118}px"><div class="n">${i + 1}</div><div class="sx">${K(f)}</div><div class="why">${w}</div></div>`).join('');
 $('#gs3 .n').style.background = 'var(--ac)'; $('#gs3 .n').innerHTML = M.icon('check', 22, '#fff', 3);
 const gs = $('#gS'), PX = i => 90 + i * 150, PY = 150;
@@ -75,7 +75,7 @@ const th1 = PUC.think($('#th1'), { q: `In 10, 7, 4, 1, is ${K(dc('d'))} equal to
 const CV = [10, 7, 4, 1];
 $('#cCh').innerHTML = CV.map((x, i) => `<div class="ch" id="cc${i}" style="left:${36 + i * 184}px;top:110px;width:160px">${x}</div>`).join('') + [0, 1, 2].map(i => `<div class="stp" id="cs${i}" style="left:${150 + i * 184}px;top:236px;width:88px">-3</div>`).join('');
 $('#cF').innerHTML = K(`${dc('d')} = ${v('a_2')} - ${v('a_1')} = ${v('a_3')} - ${v('a_2')} = \\dots`);
-const th2 = PUC.think($('#th2'), { q: 'Is 3, 6, 12, 24 an A P?', opts: ['Yes', 'No'], right: 1, why: 'No: the differences are 3, 6 and 12. They are not the same, so it is not an A P.' });
+const th2 = PUC.think($('#th2'), { q: 'Is 3, 6, 12, 24 an A P?', opts: ['Yes', 'No'], right: 1, why: 'No: the differences are 3, 6 and 12. They are not the same, so it is not an A P.' });
 
 /* ---------- statement ---------- */
 $('#stF').innerHTML = K(NTH);
@@ -98,22 +98,22 @@ const ts = $('#tS');
 const tPosts = Array.from({ length: 10 }, (_, i) => { const g = mk(mk(ts, 'g', {}), 'g', {}); mk(g, 'rect', { x: 40 + i * 60, y: 100, width: 16, height: 70, rx: 4, fill: VBG, stroke: VC, 'stroke-width': 2 }); txt(g, 48 + i * 60, 90, String(i + 1), { 'text-anchor': 'middle', 'font-size': 16, fill: VC, 'font-weight': 600 }); return g; });
 const tGaps = Array.from({ length: 9 }, (_, i) => mk(ts, 'line', { x1: 60 + i * 60, y1: 135, x2: 96 + i * 60, y2: 135, stroke: DC, 'stroke-width': 4 }));
 const tCap = txt(ts, 320, 216, '10 TERMS · 9 STEPS OF +3', { 'text-anchor': 'middle', 'font-size': 18, fill: C.ink2, 'font-weight': 600, 'letter-spacing': 1 });
-const where = PUC.where($('#wa'), { on: ['JEE MAIN'], type: 'Terms and sums of an A P: find a, d, or which term it is' });
+const where = PUC.where($('#wa'), { on: ['JEE MAIN'], type: 'Terms and sums of an A P: find a, d, or which term it is' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 780,
-  q: `In an A P, the 5th term is 23 and the 12th term is 51.<br>Which term of the A P is 99?`,
+  q: `In an A P, the 5th term is 23 and the 12th term is 51.<br>Which term of the A P is 99?`,
   opts: ['24th', '23rd', '25th', '22nd'], right: 0, optW: 474, optY: 300 });
 const so = PUC.solution($('#so'), [[K(`7d = 51 - 23 = 28 \\Rightarrow d = 4`)], [K(`a = 23 - 4d = 7`)], [K(`7 + (n - 1)\\,4 = 99`)], [K(`n - 1 = 23 \\Rightarrow n = 24`)]], { y0: 100, dy: 100 });
 const tSo = [wt('A2', 'From'), wt('A3', 'fifth'), wt('A4', 'Now'), wt('A4', 'twenty')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · arithmetic progression', y0: 100, dy: 76, txt: [1, 0, 0, 1, 1],
-  lines: ['<b>A P</b>: each term = the term before it + the same fixed number',
+  lines: ['<b>A P</b>: each term = the term before it + the same fixed number',
     K(`${dc('d')} = ${v('a_2')} - ${v('a_1')} = ${v('a_3')} - ${v('a_2')} = \\dots`),
     K(NTH),
     'Term n is <b>n - 1</b> steps from the first term',
-    'A P test: subtract; every difference must be the same'] });
-const YQ = ['What is the common difference of 20, 15, 10?', 'Find the 15th term of 2, 5, 8.', 'Is 1, 4, 9, 16 an A P? Why?'];
+    'A P test: subtract; every difference must be the same'] });
+const YQ = ['What is the common difference of 20, 15, 10?', 'Find the 15th term of 2, 5, 8.', 'Is 1, 4, 9, 16 an A P? Why?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="n">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
-const nx = PUC.next($('#sF'), { label: 'NEXT · EP 64', topic: 'Add 1 to 100 in seconds, like young Gauss: Sum of an A P', y: 764 });
+const nx = PUC.next($('#sF'), { label: 'NEXT · EP 64', topic: 'Add 1 to 100 in seconds, like young Gauss: Sum of an A P', y: 764 });
 
 /* ---------- helpers ---------- */
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });

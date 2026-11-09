@@ -1,0 +1,121 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 53 - Factorial Notation</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 53: factorial notation (Proof board) ===== */
+:root{--x:#7A4FE0;--k:#0E8F8F}
+#stage svg circle,#stage svg g{transform-box:fill-box;transform-origin:center}
+#stage .ringW svg circle{transform-box:view-box;transform-origin:0 0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.sv{position:absolute;left:0;top:0}
+/* title card */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:54px;font:700 30px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.big{position:absolute;font-size:56px;white-space:nowrap}
+.mid{position:absolute;font-size:44px;white-space:nowrap}
+.rd{position:absolute;font:600 50px/1 'IBM Plex Mono';white-space:nowrap}
+.txt2{position:absolute;left:36px;font:600 28px/1.4 Poppins;width:712px}
+.txt2 b{color:var(--ac)}
+.cell{position:absolute;width:104px;height:72px;border-radius:12px;background:var(--soft);display:flex;align-items:center;justify-content:center;font:600 22px 'IBM Plex Mono';white-space:nowrap}
+.box{position:absolute;width:120px;height:120px;border-radius:16px;border:3px dashed var(--dim);background:#fff;display:flex;align-items:center;justify-content:center;font:700 64px Poppins}
+.bn{position:absolute;width:120px;text-align:center;font:600 40px 'IBM Plex Mono';white-space:nowrap}
+.tile{position:absolute;width:84px;height:84px;border-radius:14px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font:700 46px Poppins}
+#wl .sol .sx{font-size:27px}
+#wl .sol .sx .katex{font-size:1.2em}
+#wq{position:absolute;left:36px;top:70px;font-size:44px;white-space:nowrap}
+.nb{position:absolute;border-radius:16px;border:3px solid;background:rgba(255,255,255,.6)}
+.nb b{position:absolute;left:14px;top:8px;font:700 26px 'IBM Plex Mono'}
+.why2{color:var(--mute);font:500 22px Poppins}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.15em}
+#mq .mq .katex{font-size:1.2em}
+.trapL .tx .katex{font-size:1.2em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:46px}
+#sF .fcard .fl.txt{font-size:32px}
+#sF .fcard .fl.txt .katex{font-size:1.3em}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 6 PERMUTATIONS AND COMBINATIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">5 Friends, 1 Photo: Why <span class="acc">120</span> Ways?</div>
+    <div id="sub">Factorial notation, one spot at a time</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">THE PHOTO ROW · EVERY ORDER IS NEW</div><svg id="hS" class="sv" width="784" height="580"></svg>
+        <div class="lbl" style="left:36px;top:400px">PHOTOS NEEDED</div><div class="rd" id="hN" style="left:36px;top:436px;font-size:72px">1</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · THE PHOTOGRAPHER</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-corridor.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">120 photos? Why so many?</div></div>
+    </div>
+
+    <div id="sC">
+      <div class="card full" id="cl"><div class="lbl" style="left:36px;top:30px">FIVE SPOTS · FILL THEM ONE BY ONE</div><div id="cB"></div><svg id="cS" class="sv" width="784" height="580"></svg></div>
+      <div class="card rf" id="cr"><div class="lbl" style="left:36px;top:30px">THE COUNTING RULE</div><div class="mid" id="cF" style="left:36px;top:110px"></div><div class="big" id="cF2" style="left:36px;top:230px"></div>
+        <div class="pillp ac" id="cP" style="left:36px;top:470px">One long product</div></div>
+    </div>
+
+    <div id="sL">
+      <div class="card" id="lc" style="left:160px;top:270px;width:1600px;height:580px"><div class="lbl" style="left:36px;top:30px">LIVE · ADD ONE MORE FRIEND</div><svg id="lS" class="sv" width="1600" height="580"></svg>
+        <div class="rd" id="lN" style="left:1200px;top:120px"></div><div class="lbl" style="left:1200px;top:220px">WAYS TO LINE THEM UP</div><div class="rd" id="lV" style="left:1200px;top:256px;color:var(--ac)"></div>
+        <div class="pillp" id="lP" style="left:1200px;top:470px">Each grid line is ten times bigger</div></div>
+    </div>
+
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">DEFINITION · NCERT</div>
+        <div class="txt2" id="dT" style="top:80px"></div><div class="mid" id="d0" style="left:36px;top:250px"></div><div class="mid" id="d1" style="left:36px;top:360px;font-size:38px"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">BOXES INSIDE BOXES</div><div id="dN"></div><div class="mid" id="d2" style="left:36px;top:470px"></div></div>
+    </div>
+
+    <div id="sZ">
+      <div class="card full" id="zl"><div class="lbl" style="left:36px;top:30px">ZERO FACTORIAL</div><div class="big" id="zF" style="left:36px;top:90px;font-size:80px"></div>
+        <div class="box" id="zB" style="left:36px;top:250px;width:300px;height:120px;font:600 24px 'IBM Plex Mono';color:var(--mute)">nobody</div>
+        <div class="pillp ac" id="zP" style="left:36px;top:470px">One way to line up nobody: do nothing</div></div>
+      <div class="card rf" id="zr"><div class="lbl" style="left:36px;top:30px">THE RULE NEEDS IT</div><div id="zL"></div></div>
+    </div>
+
+    <div id="sK">
+      <div class="card full" id="ka"><div class="lbl" style="left:36px;top:30px;color:var(--ok)">SUBTRACT FIRST, THEN FACTORIAL</div><div class="big" id="kaF" style="left:36px;top:120px"></div><div class="pillp good" id="kaP" style="left:36px;top:470px">(5 - 3)! = 2</div></div>
+      <div class="card rf" id="kb"><div class="lbl" style="left:36px;top:30px;color:var(--ac)">FACTORIALS FIRST, THEN SUBTRACT</div><div class="big" id="kbF" style="left:36px;top:120px"></div><div class="mid" id="kbF2" style="left:36px;top:250px"></div><div class="pillp ac" id="kbP" style="left:36px;top:470px">5! - 3! = 114</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">CANCEL THE SHARED 8!</div><div class="mid" id="w0" style="left:36px;top:100px"></div><div class="mid" id="w1" style="left:36px;top:220px"></div><div class="mid" id="w2" style="left:36px;top:340px"></div>
+        <div class="pillp ac" id="wP" style="left:36px;top:480px">x = 100</div></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><div class="big" id="tZ" style="right:60px;top:90px;font-size:84px"></div></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Multiply every number up to n. And <span class="acc">0! = 1</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
