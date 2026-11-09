@@ -1,0 +1,153 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Electronics Ep 50 - Transistor as a Switch and an Amplifier</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== Breadboard (PUC Electronics) layout ===== */
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.card svg.full{position:absolute;left:0;top:0}
+.big{position:absolute;font:600 56px 'IBM Plex Mono';white-space:nowrap}
+.sm{position:absolute;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.txt{position:absolute;font:500 30px/1.35 Poppins;white-space:nowrap}
+#ghost{top:168px}
+.L2{left:160px;top:260px;width:784px;height:600px}.R2{left:976px;top:260px;width:784px;height:600px}
+.strip{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:18px;padding:0 28px;box-sizing:border-box;font:600 28px Poppins;white-space:nowrap}
+.strip .acc{color:var(--ac)}
+.st2{position:absolute;left:36px;display:flex;align-items:center;gap:22px;white-space:nowrap}
+.st2 .n{flex:none;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st2 .sx{font-size:34px}
+.st2 .why{font:500 22px Poppins;color:var(--mute)}
+.hbox{position:absolute;left:24px;width:736px;border-radius:14px;background:var(--ac2)}
+.tile{position:absolute;left:32px;width:720px;height:120px;border-radius:14px;background:var(--soft);border:2.5px solid var(--soft)}
+.tile .tl{position:absolute;left:24px;top:24px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.tile .tn{position:absolute;left:24px;top:56px;font:700 30px Poppins;color:var(--ink2);white-space:nowrap}
+.bar2{position:absolute;height:28px;border-radius:14px;background:var(--soft);overflow:hidden}.bar2 i{position:absolute;left:0;top:0;height:28px;border-radius:14px}
+/* hook */
+#aC{left:160px;top:260px;width:784px;height:600px;overflow:hidden}
+#aImg{position:absolute;left:24px;top:84px;height:516px}
+#h1C{left:976px;top:260px;width:784px;height:284px}
+#h2C{left:976px;top:576px;width:784px;height:284px}
+/* breadboard */
+#ck{left:160px;top:260px;width:928px;height:600px}
+#sc{left:1120px;top:260px;width:640px;height:300px}
+#rb{left:1120px;top:592px;width:640px;height:268px}
+#scS{position:absolute;left:24px;top:76px}
+.ro2{position:absolute;left:32px;top:76px;width:576px;display:grid;grid-template-columns:auto 1fr auto;column-gap:18px;row-gap:14px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .k.n{font-style:normal;font-size:24px;font-family:'IBM Plex Mono';letter-spacing:.06em}
+.ro2 .v{font:600 38px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 22px 'IBM Plex Mono';color:var(--mute);white-space:nowrap;min-width:52px}
+.tg{position:absolute;left:32px;top:76px;width:250px;height:64px;border-radius:14px;background:var(--soft);display:flex;align-items:center;gap:14px;padding:0 16px;box-sizing:border-box}
+.tg .tr{position:relative;flex:none;width:64px;height:34px;border-radius:17px;background:#CBD0DA}
+.tg .tr i{position:absolute;top:4px;left:4px;width:26px;height:26px;border-radius:50%;background:#fff}
+.tg .tv{font:600 28px 'IBM Plex Mono';white-space:nowrap}
+.tg .tk{font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* exam */
+#trap{left:160px;top:260px;width:784px;height:300px}
+#tc{left:976px;top:260px;width:784px;height:300px}
+#wa{left:160px;top:592px;width:1600px;height:268px}
+#mq{left:160px;top:260px;width:1040px;height:600px}
+#so{left:1232px;top:260px;width:528px;height:600px}
+#so .sol{left:32px}
+.fcard .fl{font-size:40px}
+.fcard .fl.txt{font:500 28px Poppins}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · ELECTRONICS · CH 7 BIPOLAR JUNCTION TRANSISTOR</div>
+    <div class="subj" id="subj">BREADBOARD</div>
+    <div id="title">Switch or <span class="acc">amplifier?</span></div>
+    <div id="sub">Transistor as a switch and an amplifier</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E8A317" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="ghost" id="ghost">EXAMPLE FIGURES</div>
+
+    <!-- A: hook -->
+    <div class="sc" id="sA">
+      <div class="card" id="aC"><div class="lbl" style="left:32px;top:28px">AARAV · PCME · JEE</div>
+        <img id="aImg" src="../../assets/illustrations/puc/aarav.png" alt="">
+        <svg id="tpS" width="300" height="400" style="position:absolute;left:460px;top:84px"></svg>
+        <div class="pillp ac" id="aPill" style="left:496px;top:500px">One tiny part</div></div>
+      <div class="card" id="h1C"><div class="lbl" style="left:32px;top:28px">AT THE FEST</div>
+        <div class="tag" id="h1T" style="right:28px;top:22px">AMPLIFIER</div>
+        <svg class="full" id="h1S" width="784" height="284"></svg></div>
+      <div class="card" id="h2C"><div class="lbl" style="left:32px;top:28px">AT DUSK</div>
+        <div class="tag" id="h2T" style="right:28px;top:22px">SWITCH</div>
+        <svg class="full" id="h2S" width="784" height="284"></svg>
+        <div class="txt" id="h2X" style="left:330px;top:120px;font-weight:600">Switches on by itself</div></div>
+    </div>
+
+    <!-- P: the tap idea -->
+    <div class="sc" id="sP">
+      <div class="card L2" id="pL"><div class="lbl" style="left:32px;top:28px">THE TAP IDEA</div>
+        <svg class="full" id="pS" width="784" height="600"></svg>
+        <div class="sm" id="pH1" style="left:36px;top:428px">HANDLE TWIST</div><div class="bar2" id="pH" style="left:260px;top:428px;width:120px"><i style="background:#16213E"></i></div>
+        <div class="sm" id="pF1" style="left:36px;top:488px">WATER FLOW</div><div class="bar2" id="pF" style="left:260px;top:488px;width:480px"><i style="background:#8FA3C8"></i></div></div>
+      <div class="card R2" id="pR"><div class="lbl" style="left:32px;top:28px">THE TRANSISTOR · NPN</div>
+        <svg class="full" id="tS" width="784" height="600"></svg>
+        <div class="strip" id="pStrip" style="top:500px"><span id="pZ"></span><span>Small base current, <span class="acc">big collector current</span></span></div></div>
+    </div>
+
+    <!-- B: breadboard -->
+    <div class="sc" id="sB">
+      <div class="card" id="ck"><div class="lbl" id="ckL1" style="left:32px;top:28px">CIRCUIT · TRANSISTOR AS A SWITCH</div><div class="lbl" id="ckL2" style="left:32px;top:28px">CIRCUIT · TRANSISTOR AS AN AMPLIFIER</div>
+        <div class="tag" id="ckE" style="right:32px;top:22px"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="#E8A317" stroke="#16213E" stroke-width="1.5"/></svg>ELECTRONS</div>
+        <div class="tg" id="tg"><div class="tr"><i></i></div><div><div class="tk">INPUT</div><div class="tv" id="tgV">0 V</div></div></div>
+        <div class="tg" id="tg2" style="width:300px"><div><div class="tk">INPUT</div><div class="tv" style="font-size:22px">BIAS + 10 mV WAVE</div></div></div>
+        <svg class="full" id="ckS" width="928" height="600"></svg></div>
+      <div class="card" id="sc"><div class="lbl" style="left:32px;top:28px">OSCILLOSCOPE</div><div class="tag" id="slowT" style="right:24px;top:22px">SLOW-MOTION VIEW</div><svg id="scS" width="592" height="200"></svg></div>
+      <div class="card" id="rb"><div class="lbl" style="left:32px;top:28px">LIVE READOUT</div><div class="tag" id="rgT" style="right:24px;top:22px">CUT-OFF</div>
+        <div class="ro2" id="ro1"></div><div class="ro2" id="ro2"></div></div>
+    </div>
+
+    <!-- G: regions -->
+    <div class="sc" id="sG">
+      <div class="card L2" id="gL"><div class="lbl" style="left:32px;top:28px">OUTPUT AGAINST INPUT</div><svg class="full" id="gS" width="784" height="600"></svg></div>
+      <div class="card R2" id="gR"><div class="lbl" style="left:32px;top:28px">THREE REGIONS</div>
+        <div class="tile" id="gt0" style="top:76px"><div class="tl">CUT-OFF · INPUT LOW</div><div class="tn">Switch OFF · lamp dark</div></div>
+        <div class="tile" id="gt1" style="top:212px"><div class="tl">SATURATION · INPUT HIGH</div><div class="tn">Switch ON · lamp bright</div></div>
+        <div class="tile" id="gt2" style="top:348px"><div class="tl">ACTIVE · IN BETWEEN</div><div class="tn">Amplifier</div></div>
+        <div class="strip" id="gStrip" style="top:496px"><span id="gZ"></span><span>Small change in, <span class="acc">big change out</span></span></div></div>
+    </div>
+
+    <!-- D: derivation -->
+    <div class="sc" id="sD">
+      <div class="card L2" id="dL"><div class="lbl" style="left:32px;top:28px">CURRENTS AND VOLTAGES</div><svg class="full" id="dS" width="784" height="600"></svg>
+        <div id="dUnit" style="position:absolute;left:36px;top:528px;font:500 24px 'IBM Plex Mono';color:var(--ink2);white-space:nowrap">β and A<sub>v</sub> are ratios → no unit</div></div>
+      <div class="card R2" id="dR"><div class="lbl" style="left:36px;top:28px">DERIVATION</div><div class="hbox" id="dBox" style="top:452px;height:104px"></div><div id="dSteps"></div></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div class="sc" id="sW">
+      <div class="card L2" id="wL"><div class="lbl" style="left:32px;top:28px">WORKED EXAMPLE · IS THE LAMP FULLY ON?</div>
+        <div id="wGiven"></div>
+        <div class="sm" id="wA1" style="left:36px;top:262px">BASE ASKS FOR · β I<sub>B</sub></div><div class="bar2" id="wA" style="left:36px;top:300px;width:600px"><i style="background:#7A4FE0"></i></div><div class="big" id="wAv" style="left:652px;top:288px;font-size:30px;color:#7A4FE0">43 mA</div>
+        <div class="sm" id="wB1" style="left:36px;top:362px">CIRCUIT CAN GIVE · V<sub>CC</sub> / R<sub>C</sub></div><div class="bar2" id="wB" style="left:36px;top:400px;width:600px"><i style="background:#16213E"></i></div><div class="big" id="wBv" style="left:120px;top:388px;font-size:30px;color:#16213E">5 mA</div>
+        <div class="pillp good" id="wV" style="left:36px;top:480px">Saturated · lamp fully ON</div>
+        <svg id="wLmp" width="120" height="120" style="position:absolute;left:620px;top:450px"></svg></div>
+      <div class="card R2" id="wR"><div class="lbl" style="left:36px;top:28px">SOLUTION STEPS</div><div class="hbox" id="wBox" style="top:378px;height:104px"></div><div id="wSteps"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div class="sc" id="sX"><div class="card red" id="trap"></div>
+      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">COMMON EMITTER · IN VS OUT</div><svg id="tcS" width="420" height="190" style="position:absolute;left:32px;top:76px"></svg>
+        <div class="pillp" id="tcP" style="left:476px;top:96px">180° apart</div><div class="pillp good" id="tcQ" style="left:476px;top:176px">Power: from the supply</div></div>
+      <div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div class="sc" id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + next -->
+    <div class="sc" id="sF"></div>
+  </div>
+  <div id="stmt"><div id="st1">A switch at the two ends.</div><div id="st2">An amplifier in the <span class="acc">middle.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

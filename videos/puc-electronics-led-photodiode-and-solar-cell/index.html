@@ -1,0 +1,160 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Electronics Ep 46 - LED, Photodiode and Solar Cell</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== Breadboard (PUC Electronics) layout ===== */
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.card svg.full{position:absolute;left:0;top:0}
+.big{position:absolute;font:600 56px 'IBM Plex Mono';white-space:nowrap}
+.sm{position:absolute;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.txt{position:absolute;font:500 30px/1.35 Poppins;white-space:nowrap}
+#ghost{top:168px}
+.nchip2{position:absolute;top:96px}
+#aC{left:160px;top:260px;width:784px;height:600px;overflow:hidden}
+#aImg{position:absolute;left:24px;top:84px;height:516px}
+#lmC{left:976px;top:260px;width:784px;height:600px;overflow:hidden}
+.hq{position:absolute;right:40px;top:92px;width:100px;height:100px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 56px Poppins;color:#fff;background:var(--ac)}
+.strip{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:18px;padding:0 28px;box-sizing:border-box;font:600 28px Poppins;white-space:nowrap}
+.strip .acc{color:var(--ac)}
+.hbox{position:absolute;left:24px;width:736px;border-radius:14px;background:var(--ac2)}
+.st2{position:absolute;left:36px;display:flex;align-items:center;gap:22px;white-space:nowrap}
+.st2 .n{flex:none;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st2 .sx{font-size:36px}
+.st2 .why{font:500 22px Poppins;color:var(--mute)}
+.st2 .tt{font:600 30px Poppins;color:var(--ink)}
+.L2{left:160px;top:260px;width:784px;height:600px}.R2{left:976px;top:260px;width:784px;height:600px}
+.tile{position:absolute;left:32px;width:720px;height:152px;border-radius:14px;background:var(--soft)}
+.tile svg{position:absolute;left:16px;top:16px}
+.tile .tl{position:absolute;left:200px;top:30px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.tile .tn{position:absolute;left:200px;top:62px;font:700 32px Poppins;color:var(--ink);white-space:nowrap}
+.tile .tw{position:absolute;left:200px;top:108px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.ftile{position:absolute;left:32px;width:720px;height:76px;border-radius:14px;background:var(--soft);display:flex;align-items:center;gap:16px;padding:0 24px;box-sizing:border-box;font:600 26px Poppins;white-space:nowrap}
+.ftile .k2{font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+#ck{left:160px;top:260px;width:928px;height:600px}
+#sc2{left:1120px;top:260px;width:640px;height:300px}
+#rb{left:1120px;top:592px;width:640px;height:268px}
+.ro2{position:absolute;left:32px;top:76px;width:576px;display:grid;grid-template-columns:auto 1fr auto;column-gap:18px;row-gap:14px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .k.n{font-style:normal;font-size:22px;font-family:'IBM Plex Mono';letter-spacing:.06em}
+.ro2 .v{font:600 38px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 22px 'IBM Plex Mono';color:var(--mute);white-space:nowrap;min-width:52px}
+.pills{position:absolute;display:flex;gap:12px}
+.pills span{height:48px;display:inline-flex;align-items:center;gap:10px;padding:0 16px;border-radius:10px;border:2px solid var(--line);background:#fff;font:600 19px 'IBM Plex Mono';letter-spacing:.05em;color:var(--mute);white-space:nowrap}
+.pills span b{display:inline-flex;width:28px;height:28px;border-radius:50%;align-items:center;justify-content:center;background:var(--soft);color:var(--ink);font:700 16px Poppins}
+#trap{left:160px;top:260px;width:784px;height:300px}
+#tc{left:976px;top:260px;width:784px;height:300px}
+#wa{left:160px;top:592px;width:1600px;height:268px}
+#mq{left:160px;top:260px;width:1040px;height:600px}
+#so{left:1232px;top:260px;width:528px;height:600px}
+#so .sol{left:32px}
+.fcard .fl{font-size:40px}
+.fcard .fl.txt{font:500 28px Poppins}
+.btab{position:absolute;left:36px;top:84px;width:712px;display:grid;grid-template-columns:1fr auto;row-gap:16px;column-gap:20px;align-items:center}
+.btab div{font:600 26px Poppins;white-space:nowrap}
+.btab .bb{font:600 20px 'IBM Plex Mono';letter-spacing:.06em;padding:6px 12px;border-radius:8px;color:#fff;text-align:center}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · ELECTRONICS · CH 6 SEMICONDUCTORS, DIODES</div>
+    <div class="subj" id="subj">BREADBOARD</div>
+    <div id="title">Diodes that play with <span class="acc">light</span></div>
+    <div id="sub">LED, photodiode and solar cell</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E8A317" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="ghost" id="ghost">EXAMPLE FIGURES</div>
+
+    <!-- A: hook -->
+    <div class="sc" id="sA">
+      <div class="card" id="aC"><div class="lbl" style="left:32px;top:28px">AARAV · PCME · JEE</div>
+        <img id="aImg" src="../../assets/illustrations/puc/aarav.png" alt=""></div>
+      <div class="card" id="lmC"><div class="lbl" style="left:32px;top:28px">SOLAR LAMP · COLLEGE GATE</div>
+        <svg class="full" id="lmS" width="784" height="600"></svg>
+        <div class="hq" id="hQ" style="top:96px;right:56px">?</div></div>
+    </div>
+
+    <!-- I: three diodes -->
+    <div class="sc" id="sI">
+      <div class="card L2" id="iL"><div class="lbl" style="left:32px;top:28px">A DIODE · A ONE WAY GATE</div>
+        <svg class="full" id="iS" width="784" height="600"></svg>
+        <div class="strip" id="iStrip" style="top:492px"><span id="iZ"></span><span>Current flows <span class="acc">one way only.</span></span></div></div>
+      <div class="card R2" id="iR"><div class="lbl" style="left:36px;top:28px">THREE DIODES THAT WORK WITH LIGHT</div>
+        <div class="tile" id="it0" style="top:72px"><svg width="170" height="120"></svg><div class="tl">1 · LIGHT EMITTING DIODE</div><div class="tn">Electricity in, light out</div><div class="tw">glows when current flows</div></div>
+        <div class="tile" id="it1" style="top:240px"><svg width="170" height="120"></svg><div class="tl">2 · PHOTODIODE</div><div class="tn">Light in, signal out</div><div class="tw">a light sensor</div></div>
+        <div class="tile" id="it2" style="top:408px"><svg width="170" height="120"></svg><div class="tl">3 · SOLAR CELL</div><div class="tn">Light in, power out</div><div class="tw">a source of electricity</div></div></div>
+    </div>
+
+    <!-- L: LED, slide + breadboard -->
+    <div class="sc" id="sL">
+      <div class="card L2" id="lL"><div class="lbl" style="left:32px;top:28px">THE SLIDE · AT THE JUNCTION</div>
+        <div class="tag" id="lE" style="right:32px;top:22px"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="#E8A317" stroke="#16213E" stroke-width="1.5"/></svg>ELECTRON <svg width="14" height="14"><circle cx="7" cy="7" r="5.5" fill="none" stroke="#D9731A" stroke-width="2.5"/></svg>HOLE</div>
+        <svg class="full" id="lS" width="784" height="600"></svg>
+        <div class="strip" id="lStrip" style="top:492px"><span id="lZ"></span><span>Slide down, <span class="acc">give out light.</span></span></div></div>
+      <div class="card R2" id="lR"><div class="lbl" style="left:36px;top:28px">BREADBOARD · CELL, RESISTOR, DIODE</div>
+        <div class="tag" id="lBias" style="right:32px;top:22px">FORWARD BIAS</div>
+        <svg class="full" id="lcS" width="784" height="600"></svg>
+        <div class="ro2" id="lRo" style="top:452px;width:700px"></div></div>
+    </div>
+
+    <!-- D: derivation + colour -->
+    <div class="sc" id="sD">
+      <div class="card L2" id="dL"><div class="lbl" style="left:32px;top:28px">COLOUR FROM THE GAP</div>
+        <svg class="full" id="dS" width="784" height="600"></svg>
+        <div class="ro2" id="dRo" style="top:416px;width:700px"></div></div>
+      <div class="card R2" id="dR"><div class="lbl" style="left:36px;top:28px">WAVELENGTH OF THE LIGHT</div>
+        <div class="hbox" id="dBox" style="top:280px;height:104px"></div><div id="dSteps"></div></div>
+    </div>
+
+    <!-- P: photodiode breadboard + scope -->
+    <div class="sc" id="sP">
+      <div class="card" id="ck"><div class="lbl" style="left:32px;top:28px">CIRCUIT · PHOTODIODE IN REVERSE BIAS</div>
+        <div class="tag" id="ckE" style="right:32px;top:22px"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="#E8A317" stroke="#16213E" stroke-width="1.5"/></svg>ELECTRONS</div>
+        <svg class="full" id="ckS" width="928" height="600"></svg>
+        <div class="strip" id="pStrip" style="top:500px;left:32px;width:864px"><span id="pZ"></span><span id="pTx"></span></div></div>
+      <div class="card" id="sc2"><div class="lbl" style="left:32px;top:28px">SCOPE · LIGHT AND CURRENT</div><svg class="full" id="scS" width="640" height="300"></svg></div>
+      <div class="card" id="rb"><div class="lbl" style="left:32px;top:28px">LIVE READOUT</div><div class="ro2" id="ro1"></div></div>
+    </div>
+
+    <!-- S: solar cell -->
+    <div class="sc" id="sS">
+      <div class="card L2" id="sL2"><div class="lbl" style="left:32px;top:28px">SOLAR CELL · NO BATTERY</div>
+        <svg class="full" id="sS2" width="784" height="600"></svg>
+        <div class="pills" id="sPills" style="left:32px;top:520px"><span><b>1</b>GENERATION</span><span><b>2</b>SEPARATION</span><span><b>3</b>COLLECTION</span></div></div>
+      <div class="card R2" id="sR"><div class="lbl" style="left:36px;top:28px">I AGAINST V · SOLAR CELL</div>
+        <svg class="full" id="sG2" width="784" height="600"></svg>
+        <div class="ftile" id="sf1" style="top:420px"><span class="k2">AREA</span><span>Large junction, catches more light</span></div>
+        <div class="ftile" id="sf2" style="top:508px"><span class="k2">BEST GAP</span><span id="sf2t"></span></div></div>
+    </div>
+
+    <!-- G: lamp payoff + worked example -->
+    <div class="sc" id="sG">
+      <div class="card L2" id="gL"><div class="lbl" id="gLL1" style="left:32px;top:28px">THE SOLAR LAMP</div><div class="lbl" id="gLL2" style="left:32px;top:28px">WORKED EXAMPLE · ONE GLOWING DIODE</div>
+        <svg class="full" id="gS" width="784" height="600"></svg>
+        <div class="ro2" id="wRo" style="top:400px;width:700px"></div></div>
+      <div class="card R2" id="gR"><div class="lbl" id="gRL1" style="left:36px;top:28px">DAY AND NIGHT</div><div class="lbl" id="gRL2" style="left:36px;top:28px">WORKED EXAMPLE</div>
+        <div id="gSteps"></div>
+        <div class="hbox" id="wBox" style="top:284px;height:104px"></div><div id="wSteps"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div class="sc" id="sX"><div class="card red" id="trap"></div>
+      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">WHICH BIAS?</div><div class="btab" id="btab"></div></div>
+      <div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div class="sc" id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + next -->
+    <div class="sc" id="sF"></div>
+  </div>
+  <div id="stmt"><div id="st1">Light out: forward bias. Light in: reverse bias.</div><div id="st2">Power out: <span class="acc">no bias.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

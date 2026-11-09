@@ -1,0 +1,69 @@
+H1|0.3|Aarav spots a small solar lamp at the college gate.
+H2|0.3|All day, it just sits in the sun.
+H3|0.5|At night, it lights up by itself. How does it do that?
+I1|0.3|The trick uses special diodes that work with light.
+I2|0.3|A diode is a one way gate for current, made of p and n material.
+I3|0.3|The first one turns electricity into light. It is a light emitting diode.
+I4|0.3|The second one turns light into a signal. It is a photodiode.
+I5|0.6|The third one turns light into power. It is a solar cell.
+L1|0.3|Let's start with the light emitting diode. Picture a playground slide.
+L2|0.3|Electrons wait at the top. Holes, the empty seats, wait at the bottom.
+L3|0.35|When an electron slides down into a hole, its extra energy comes out as light.
+L4|0.35|On the breadboard: a cell, a resistor and our diode.
+L5|0.35|Forward bias means the plus side of the cell meets the p side.
+L6|0.35|Current flows. Electrons meet holes at the junction, and the diode glows.
+L7|0.35|Now flip the cell. This is reverse bias. No current, no light.
+L8|0.6|So a light emitting diode glows only in forward bias.
+D1|0.35|How tall is the slide? That height is the energy gap, E g.
+D2|0.7|Each flash of light is a photon. Its energy equals the gap.
+D3|0.7|Photon energy is also h c over lambda. Lambda is the wavelength.
+D4|0.7|So lambda equals h c divided by E g.
+D5|0.7|Shortcut: lambda in nanometres equals twelve forty divided by E g in electron volts.
+D6|0.35|Watch the colour as the gap grows. One point eight electron volts gives red.
+D7|0.35|Two point three gives green. Three gives violet.
+D8|0.6|Bigger gap, shorter wavelength, bluer light.
+D8b|0.6|For visible light, the gap must be at least one point eight electron volts.
+D9|0.6|These diodes are heavily doped. They use little power, switch fast and last long.
+P1|0.3|Now the second job. A photodiode turns light into a signal.
+P2|0.3|Think of a door that light can knock open.
+P3|0.35|We connect it in reverse bias. In the dark, almost no current flows.
+P4|0.35|Now shine a little light. Each photon frees an electron and leaves a hole.
+P5|0.35|The junction field pulls the pair apart. A small current flows.
+P6|0.6|More light, more pairs, more current. Watch the scope climb.
+P7|0.35|Why reverse bias? In the dark, the current is tiny.
+P7b|0.6|So the extra current from light is easy to see.
+P8|0.6|The photon must carry at least E g of energy, or nothing happens.
+P9|0.35|Photodiodes sit inside remote control receivers and light sensors.
+S1|0.3|The third job. A solar cell turns light into electric power.
+S2|0.3|It is like a water wheel that sunlight turns on its own.
+S3|0.35|There is no battery here. The cell itself is the source.
+S4|0.35|Three steps. Generation: light makes electron hole pairs.
+S5|0.35|Separation: the field at the junction pushes them apart.
+S6|0.6|Collection: the contacts gather them, and current flows through the load.
+S7|0.35|Its graph sits in the fourth quadrant.
+S7b|0.6|That means the cell gives power. It does not take it.
+S8|0.35|With no load connected, we read the open circuit voltage, V o c.
+S9|0.6|With the leads shorted, we read the short circuit current, I s c.
+S10|0.6|The junction area is made large, to catch more light.
+S11|0.6|A gap near one point five electron volts works best. Silicon has about one point one.
+T1|0.8|Light out needs forward bias. Light in needs reverse bias. Power out needs no bias.
+G1|0.35|Back to the lamp. By day, the solar cell charges a small battery.
+G2|0.6|At dusk, the cell's voltage falls. The circuit senses dark and lights the diode.
+W1|0.35|Worked example. A diode glows with light of wavelength six hundred and twenty nanometres.
+W2|0.35|What is its energy gap?
+W3|0.7|E g equals twelve forty divided by six twenty.
+W4|0.65|That is two electron volts. In joules, three point two times ten to the minus nineteen.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think every diode works in forward bias.
+X3|0.65|Not these. A photodiode works in reverse bias. A solar cell needs no bias at all.
+X4|0.65|And a solar cell has a wide junction area, not a narrow one.
+X5|0.35|Where is it asked? JEE Main asks statement questions on all three.
+X5b|0.65|For example, in January twenty twenty five.
+X6|0.65|PUC and I S C board papers ask you to explain each device with its diagram.
+Q1|5.4|Try this. Light of six hundred nanometres falls on three photodiodes, with gaps one point eight, two point two and two point six electron volts. Which give a current?
+A1|0.35|A. Only the one point eight electron volt diode.
+A2|0.35|Photon energy is twelve forty divided by six hundred. About two point zero seven electron volts.
+A3|0.35|A current flows only if the photon energy is more than the gap.
+A4|0.65|Only one point eight is below two point zero seven. So only that diode responds.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, clippers and clampers. How can a diode cut or lift a wave?

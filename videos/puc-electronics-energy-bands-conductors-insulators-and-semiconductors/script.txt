@@ -1,0 +1,59 @@
+H1|0.35|Aarav cuts open an old charger cable.
+H2|0.35|Inside is shiny copper. Around it is soft plastic.
+H3|0.5|Both are full of electrons. So why does only the copper carry current?
+I1|0.35|And the chip in his phone is made of silicon.
+I2|0.65|Silicon carries current only sometimes. Let's find out why.
+L1|0.35|Picture a building with two floors.
+L2|0.35|The ground floor is packed with people. Nobody can move.
+L3|0.35|The upper floor is empty. Up there, anyone can run freely.
+L4|0.65|Between the floors is a jump. Its height decides everything.
+L5|0.35|Electrons in a solid live in a building just like this.
+L6|0.6|In a single atom, an electron can sit only on fixed energy steps.
+L7|0.6|Pack billions of atoms into a crystal, and each step spreads into a band.
+L8|0.6|A band is a crowd of energy levels, packed very close together.
+L9|0.6|The lower band is the valence band. It holds the outer electrons, and it is full.
+L10|0.6|The upper band is the conduction band. Electrons up there are free to move.
+L11|0.6|Between them is the forbidden energy gap, E g. No electron can stay inside it.
+L12|0.35|We measure the gap in electron volts, a tiny energy unit.
+L13|0.65|One electron volt is one point six times ten to the minus nineteen joules.
+K1|0.35|Now, three kinds of solids.
+K2|0.35|In a conductor, like copper, the two bands overlap.
+K3|0.6|There is no gap at all. Electrons just walk up and move.
+K4|0.35|In an insulator, like diamond, the gap is huge.
+K5|0.6|Diamond's gap is five point four electron volts. Almost no electron can jump it.
+K6|0.6|Any gap bigger than about three electron volts makes an insulator.
+K7|0.35|In a semiconductor, the gap is small, less than three electron volts.
+K8|0.65|Silicon's gap is one point one. Germanium's is about zero point seven.
+K9|0.65|That is why resistivity is tiny in metals, middling in semiconductors, and enormous in insulators.
+T1|0.8|The size of the gap decides who conducts.
+B1|0.35|Let's test this on the breadboard.
+B2|0.35|A battery pushes current through a sample. A heater warms it up.
+B3|0.35|First, a copper wire. Watch the current on the scope.
+B4|0.65|As the copper warms, its current drops a little. Hot metal resists more.
+B5|0.35|Now swap in a piece of pure silicon.
+B6|0.35|Cold silicon. Very few electrons have made the jump, so the current is tiny.
+B7|0.35|Turn up the heat. Electrons gain energy and jump the gap.
+B8|0.35|Each jump leaves an empty spot, a hole, in the valence band.
+B9|0.65|More jumpers, more current. The scope trace climbs.
+B10|0.65|So a semiconductor's resistance falls as it warms. That is the opposite of a metal.
+B11|0.65|At absolute zero, the coldest possible temperature, nobody jumps. Pure silicon behaves like an insulator.
+W1|0.35|Worked example. Light can also give electrons the push.
+W2|0.35|What is the longest wavelength of light that can lift an electron across silicon's gap?
+W3|0.7|First, the gap in joules. One point one times one point six times ten to the minus nineteen.
+W4|0.7|That is one point seven six times ten to the minus nineteen joules.
+W5|0.7|The energy of light is h c over lambda. So lambda equals h c divided by the energy.
+W6|0.7|h c is about one point nine nine times ten to the minus twenty five.
+W7|0.65|Lambda comes out near one thousand one hundred and thirty nanometres. That is infrared light.
+W8|0.65|A handy shortcut: lambda in nanometres is about twelve forty, divided by the gap in electron volts.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think heating always raises resistance. That is true only for metals.
+X3|0.65|Heat a semiconductor, and more electrons jump the gap. Its resistance goes down.
+X4|0.35|Where is this asked? PUC, CBSE and ISC boards ask you to draw and compare band diagrams.
+X5|0.65|JEE Main links band gap with light, as in September twenty twenty.
+Q1|5.4|Try this. Light of wavelength six hundred and twenty nanometres falls on three materials. Their gaps are one point one, two point five and five point four electron volts. Which can it push electrons across?
+A1|0.35|A. Only the one point one electron volt material.
+A2|0.35|Photon energy is twelve forty divided by six twenty. That is two electron volts.
+A3|0.35|An electron jumps only if the light's energy is at least the gap.
+A4|0.65|Two is more than one point one, but less than two point five and five point four.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, intrinsic and extrinsic semiconductors. How can one impurity atom in a million change silicon so much?

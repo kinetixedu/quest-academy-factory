@@ -1,0 +1,50 @@
+H1|0.3|Aarav shouts into a cheap microphone.
+H2|0.3|On the screen, the tops of his voice wave look cut flat.
+H3|0.5|Who cut them? Circuits can do this on purpose too.
+I1|0.3|Two simple diode circuits change a wave.
+I2|0.3|A clipper cuts off the part of a wave above or below a level.
+I3|0.3|Think of a low ceiling over a jumping kid. The high jumps get flattened.
+I4|0.3|A clamper lifts or lowers the whole wave, without changing its shape.
+I5|0.6|Think of putting the trampoline on a stage. Same jumps, higher floor.
+C1|0.3|Let's build a clipper on the breadboard.
+C2|0.35|An A C source, a resistor in series, and a diode across the output.
+C3|0.35|The scope shows the input in grey and the output in amber.
+C4|0.35|In the negative half, the diode is reverse biased. It acts like an open switch.
+C5|0.35|So the output simply follows the input.
+C6|0.35|In the positive half, the input crosses zero point seven volts. The diode turns on.
+C7|0.35|Now the diode holds the output at about zero point seven volts.
+C8|0.35|The extra voltage drops across the resistor instead.
+C9|0.6|The top is cut off. This is a positive shunt clipper.
+C10|0.6|Flip the diode, and it cuts the negative half instead.
+B1|0.35|Want a different cut level? Add a small battery in series with the diode.
+B2|0.7|Now the diode turns on only when the input beats the battery plus zero point seven.
+B3|0.7|So the clip level is V B plus zero point seven volts.
+B4|0.6|With a three volt battery, the wave is cut at three point seven volts.
+B5|0.6|Clippers protect circuits from sudden spikes, and they shape waves.
+K1|0.3|Now the clamper. It needs a capacitor, a diode and a resistor.
+K2|0.35|The capacitor sits in series. The diode sits across the output.
+K3|0.35|In the first negative half, the diode conducts. The capacitor charges to the peak, V m.
+K4|0.35|After that, the capacitor acts like a small battery of V m volts.
+K5|0.35|It adds V m to every point of the input.
+K6|0.6|Watch the output trace lift. Its lowest point now sits at zero.
+K7|0.6|The peak to peak size stays the same. Only the level moves.
+K8|0.6|This is a positive clamper. Flip the diode for a negative clamper.
+K9|0.6|R C must be much larger than the period, so the capacitor stays charged.
+K10|0.6|Clampers are also called D C restorers.
+T1|0.8|A clipper cuts the wave. A clamper lifts the wave.
+W1|0.35|Worked example. A sine wave of peak five volts feeds an ideal positive clamper.
+W2|0.35|The capacitor charges to the peak, five volts.
+W3|0.7|Output equals input plus five. The lowest point goes from minus five to zero.
+W4|0.65|The highest point goes from five to ten. So the output swings from zero to ten volts.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think a clamper changes the shape of the wave.
+X3|0.65|It does not. A clamper only shifts the wave. A clipper changes the shape.
+X4|0.35|Where is it asked? PUC board papers ask you to draw the circuit and its waveforms.
+X5|0.65|JEE Main asks for clipped diode outputs, as in June twenty twenty two.
+Q1|5.4|Try this. A ten volt peak sine wave feeds a shunt clipper. A silicon diode is in series with a three volt battery. What are the output limits?
+A1|0.35|B. Plus three point seven volts and minus ten volts.
+A2|0.35|The diode turns on when the output tries to rise above three plus zero point seven.
+A3|0.35|So the top is held at three point seven volts.
+A4|0.65|In the negative half, the diode is off. The output follows the input down to minus ten.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, the bipolar junction transistor. How do three thin layers control a big current?

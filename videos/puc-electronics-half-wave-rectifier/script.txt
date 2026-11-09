@@ -1,0 +1,53 @@
+H1|0.35|Aarav plugs his phone charger into the wall socket.
+H2|0.35|The socket gives alternating current, or AC. It flips direction fifty times a second.
+H3|0.35|But a phone battery needs direct current, or DC. It must flow one way only.
+H4|0.6|So how does the charger turn AC into DC?
+P1|0.35|Start with a water pipe that has a one-way flap inside.
+P2|0.35|Push the water forward, and the flap swings open. Water flows.
+P3|0.6|Push it backward, and the flap slams shut. Nothing flows.
+P4|0.35|A diode is that one-way flap, but for electric current.
+P5|0.35|The arrow in its symbol shows the only way current can go.
+P6|0.35|When the diode lets current through, we say it is forward biased.
+P7|0.6|When it blocks current, we say it is reverse biased.
+P8|0.65|Changing AC into one-way current is called rectification. The circuit that does it is a rectifier.
+B1|0.35|Let's build the simplest one on the breadboard.
+B2|0.35|An AC supply, one diode, and a load resistor, R L.
+B3|0.35|The load is the thing we want to power.
+B4|0.35|Watch the positive half cycle. The diode is forward biased.
+B5|0.35|Electrons flow, and the output copies the input hump.
+B6|0.35|Now the negative half cycle. The diode is reverse biased.
+B7|0.35|It blocks the current. The output stays at zero.
+B8|0.35|So the output is a row of humps, with gaps in between.
+B9|0.35|It never goes negative. It flows one way, but it pulses.
+B10|0.65|We call it pulsating DC. Only half of each wave gets through, so this is a half-wave rectifier.
+T1|0.8|A diode is a one-way gate. It lets only half the wave through.
+R1|0.35|So how much DC do we really get? Let's work it out.
+R2|0.7|Call the peak of the input V m.
+R3|0.7|In the positive half, the output follows the input. Its peak is also V m.
+R4|0.7|In the negative half, the output is zero.
+R5|0.7|One hump has an average of two V m over pi. We met this with average values.
+R6|0.7|But the humps fill only half the time. So the average is cut in half.
+R7|0.7|V d c equals V m over pi. That is about zero point three one eight V m.
+R8|0.65|Current follows the same rule. I d c equals I m over pi.
+K1|0.35|Now three numbers every exam loves.
+K2|0.35|In the negative half, the blocked diode faces the full peak, backwards.
+K3|0.6|That is called the peak inverse voltage. For a half-wave rectifier, it equals V m.
+K4|0.6|One hump comes out for each input cycle. So the output frequency equals the input frequency.
+K5|0.65|At best, only forty point six percent of the power becomes DC power. That is its efficiency.
+W1|0.35|Worked example. The input has a peak of twenty volts, at fifty hertz.
+W2|0.35|The load is one kilo-ohm, and the diode is ideal.
+W3|0.6|V d c equals twenty over pi. That is about six point three seven volts.
+W4|0.6|I d c equals six point three seven volts over one thousand ohms. About six point three seven milliamperes.
+W5|0.6|The diode must survive a peak inverse voltage of twenty volts.
+W6|0.65|And the output humps arrive fifty times a second.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students say a half-wave output has a frequency of one hundred hertz.
+X3|0.65|It does not. One hump per input cycle. Fifty hertz in, fifty hertz out.
+X4|0.65|Where is this asked? In PUC, CBSE and ISC board papers, and in NEET. Draw the circuit and waveforms, or find the DC value and output frequency.
+Q1|5.4|Try this. The voltage thirty sine one hundred pi t volts feeds a half-wave rectifier with a two kilo-ohm load. Find the DC load current and the output frequency.
+A1|0.35|B. Four point seven seven milliamperes, at fifty hertz.
+A2|0.35|The peak is thirty volts. So V d c is thirty over pi, about nine point five five volts.
+A3|0.35|Divide by two thousand ohms. That gives four point seven seven milliamperes.
+A4|0.65|Omega is one hundred pi, so f is fifty hertz. A half-wave rectifier keeps that frequency.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, full-wave and bridge rectifiers. How do we use both halves of the wave?

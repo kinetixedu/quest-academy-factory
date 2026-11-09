@@ -1,0 +1,67 @@
+H1|0.3|At the college fest, Aarav whispers into a microphone.
+H2|0.3|The speakers boom across the whole ground.
+H3|0.3|Walking home, a street lamp switches on by itself at dusk.
+H4|0.5|Two very different jobs. One tiny part does both. A transistor.
+P1|0.35|Think of a water tap on a big pipe.
+P2|0.35|A small twist of the handle controls a big flow of water.
+P3|0.35|Close it fully, and no water flows. Open it fully, and you get full flow.
+P4|0.65|Wiggle the handle a little, and the big flow wiggles too.
+P5|0.35|A transistor is a tap for current. It has three legs.
+P6|0.35|The base is the handle. A tiny current goes in here.
+P7|0.35|The collector is where the big current comes in.
+P8|0.35|The emitter is where both currents leave together.
+P9|0.65|A small base current controls a big collector current. That is the whole trick.
+S1|0.35|Let's build the switch on the breadboard.
+S2|0.35|A five volt supply, a lamp, and an n p n transistor.
+S3|0.35|A resistor feeds the base from an input switch.
+S4|0.35|Input at zero volts. No base current flows.
+S5|0.35|So no collector current either. The lamp stays off. This is called cut off.
+S6|0.35|Now flip the input to five volts. A small base current flows.
+S7|0.35|The tap opens fully. Electrons rush through, and the lamp lights up.
+S8|0.65|This fully on state is called saturation. The transistor acts like a closed switch.
+S9|0.35|Watch the scope. When the input goes high, the output goes low.
+S10|0.65|The output is taken across the transistor. So this switch also flips the signal.
+M1|0.35|Now the amplifier. We give the base a small, steady current.
+M2|0.35|The tap is now half open. The lamp glows half bright.
+M3|0.35|Then we add a tiny wave from a microphone, just ten millivolts.
+M4|0.35|The base current wiggles a little. The collector current wiggles a lot.
+M5|0.35|Watch the scope. The output wave is a hundred times bigger.
+M6|0.35|But look closely. When the input goes up, the output goes down.
+M7|0.65|The output is upside down. We call this one eighty degrees out of phase.
+G1|0.35|So when is it a switch, and when is it an amplifier?
+G2|0.35|Plot the output voltage against the input voltage.
+G3|0.35|Below about zero point seven volts, the base is shut. The output stays high.
+G4|0.35|That flat part is cut off. The switch is off.
+G5|0.35|At a high input, the transistor is fully on. The output is nearly zero.
+G6|0.35|That flat part is saturation. The switch is on.
+G7|0.65|In between is the steep active region. A small input change makes a big output change.
+T1|0.8|A switch at the two ends. An amplifier in the middle.
+D1|0.35|Now the maths, one small step at a time.
+D2|0.7|Both currents leave through the emitter. So I E equals I B plus I C.
+D3|0.7|The collector current is beta times the base current. Beta is the current gain.
+D4|0.7|The output is the supply, minus the drop on the collector resistor.
+D5|0.7|So V out equals V C C, minus I C times R C.
+D6|0.7|Divide the output change by the input change. That is the voltage gain.
+D7|0.7|A V equals minus beta, times R C, divided by R in, the input resistance.
+D8|0.65|Beta has no unit. It is a ratio of two currents. The minus sign means upside down.
+W1|0.35|Worked example. Is the lamp fully on?
+W2|0.35|The supply is five volts. The lamp is one kilo ohm. Beta is one hundred.
+W3|0.35|The input is five volts, through a base resistor of ten kilo ohms.
+W4|0.7|The base current is five minus zero point seven, over ten kilo ohms.
+W5|0.7|That is zero point four three milliamperes.
+W6|0.7|Beta times this asks for forty three milliamperes.
+W7|0.7|But the lamp circuit can carry at most five volts over one kilo ohm. Just five milliamperes.
+W8|0.65|The base asks for more than the circuit can give. So the transistor is saturated. The lamp is fully on.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think the amplified output moves in step with the input.
+X3|0.65|In a common emitter amplifier, it does not. The output is one eighty degrees out of phase.
+X4|0.35|And the transistor does not make energy. The extra power comes from the supply.
+X5|0.65|Where is this asked? In P U C and I S C board papers.
+X6|0.65|Draw the circuit, explain the switch and the amplifier, and find the currents and the gain.
+Q1|5.4|Try this. A common emitter amplifier has beta fifty, an input resistance of one kilo ohm, and a collector resistance of five kilo ohms. A ten millivolt signal goes in. What comes out?
+A1|0.35|C. Two point five volts, one eighty degrees out of phase.
+A2|0.35|The voltage gain is beta times R C, divided by R in.
+A3|0.35|Fifty times five, divided by one. That is a gain of two hundred and fifty.
+A4|0.65|Two hundred and fifty times ten millivolts is two point five volts. And the output is upside down.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, number systems. Why do computers count with only two digits?
