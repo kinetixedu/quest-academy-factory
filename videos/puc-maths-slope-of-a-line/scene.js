@@ -191,6 +191,7 @@ const fc = PUC.fcard($('#sF'), { x: 300, y: 236, w: 1320, h: 524, title: 'Recap 
     K(`${rc('m')} = \\tan ${tc('\\theta')}, \\quad ${tc('\\theta')} \\ne 90^\\circ`),
     '<b>Up</b> to the right: m &gt; 0 &nbsp;·&nbsp; <b>down</b> to the right: m &lt; 0',
     '<b>Flat</b> line: m = 0 &nbsp;·&nbsp; <b>standing</b> line: not defined'] });
+[...document.querySelectorAll('#sF .fcard .fl')].forEach((e, i) => { if (i >= 2) e.style.top = (parseFloat(e.style.top) + 22) + 'px'; });
 const YQ = ['What is the slope of a line that goes up 3 for every 2 across?', 'Why is the slope of the y-axis not defined?', 'A line has inclination 60°. What is its slope?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="n">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
