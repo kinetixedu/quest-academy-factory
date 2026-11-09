@@ -1,0 +1,58 @@
+H1|0.4|Ice melts on a warm afternoon. The same water freezes in a freezer. One change, two directions.
+H2|0.45|Only the temperature changed. So temperature must have a vote.
+H3|0.35|Aarav drops ice into his water bottle in the college corridor. In minutes, it melts.
+H4|0.5|Last time, we had to count the surroundings too. That is hard.
+H5|0.65|By the end, you will know one number about the reaction alone that predicts its direction, and where it stops.
+P1|0.35|Think of a tug of war with two teams.
+P2|0.4|Team one is enthalpy. Giving out heat pulls a change forward.
+P3|0.4|Team two is entropy. More disorder pulls it forward too.
+P4|0.6|Temperature is a booster for team two. The hotter it gets, the harder entropy pulls.
+S1|0.35|Let's put ice on our molecule bench and turn the temperature knob.
+S2|0.4|Melting takes heat in. Plus six kilojoules per mole. Team enthalpy pulls back.
+S3|0.4|But melting makes the water messier. Plus twenty two joules per kelvin per mole. Team entropy pulls forward.
+S4|0.4|At minus ten degrees, enthalpy wins. The ice stays.
+S5|0.4|Turn the knob up. At zero degrees, two seventy three kelvin, the teams are exactly equal. Ice and water sit together.
+S6|0.6|At twenty five degrees, entropy wins. The ice melts.
+L1|0.35|The score of this tug of war is the Gibbs energy, named after Josiah Willard Gibbs.
+L2|0.4|Delta G equals delta H minus T delta S.
+L3|0.65|If delta G is negative, the change is spontaneous. If positive, it is not. If zero, the system is at equilibrium.
+D1|0.35|Why does this work? Step by step.
+D2|0.75|Step one. The total entropy is the system's change plus the surroundings' change.
+D3|0.75|Step two. The surroundings gain the heat the system gives out. Their change is minus delta H over T.
+D4|0.75|Step three. Multiply everything by minus T. Minus T delta S total equals delta H minus T delta S. That is delta G.
+D5|0.75|So total entropy going up means delta G going down. One rule, seen from the system.
+G1|0.35|Now the four cases.
+G2|0.4|Heat out and more disorder. Both teams pull forward. Spontaneous at every temperature.
+G3|0.4|Heat in and less disorder. Both pull back. Never spontaneous.
+G4|0.4|Heat out but less disorder. Spontaneous only when cold, like freezing.
+G5|0.6|Heat in but more disorder. Spontaneous only when hot, like melting.
+C1|0.4|Compare. Freezing water: heat out, less disorder. Melting ice: heat in, more disorder.
+K1|3.2|Pause and think. Melting ice at fifty degrees Celsius. Is delta G positive or negative?
+K2|0.65|Negative. Fifty degrees is above two seventy three kelvin, so the entropy team wins.
+R1|0.35|Now, equilibrium.
+R2|0.4|The standard Gibbs energy change tells us how far a reaction goes, through the equilibrium constant K.
+R3|0.4|Delta G naught equals minus R T times the natural log of K. Or minus two point three oh three R T log K, in base ten.
+R4|0.4|R is the gas constant, eight point three one four joules per kelvin per mole.
+R5|0.6|A big negative delta G naught means a huge K. Mostly products. A big positive one means a tiny K. Mostly reactants.
+T1|0.7|Remember this. Negative delta G, spontaneous. Zero, equilibrium.
+W1|0.3|Now, one worked example.
+W2|0.5|Oxygen turning into ozone at two ninety eight kelvin has K equal to two point four seven times ten to the minus twenty nine. Find delta G naught.
+W3|0.75|Log of K is about minus twenty eight point six oh seven.
+W4|0.75|Two point three oh three, times eight point three one four, times two ninety eight. About five seven oh six joules per mole.
+W5|0.75|Multiply by minus twenty eight point six oh seven, with the minus sign in front. Plus one sixty three kilojoules per mole.
+W6|0.65|Hugely positive, so K is tiny. Oxygen hardly turns into ozone on its own.
+X1|0.35|Now, the exam trap.
+X2|0.4|Students put delta H in kilojoules and delta S in joules straight into the formula.
+X3|0.65|Convert first. Six kilojoules is six thousand joules. Then subtract.
+E1|0.6|Where is this asked? Boards ask what the sign of delta G means. Entrance tests ask the temperature where a reaction turns spontaneous, or ask for K.
+Q1|5.4|Exam level now. A reaction has delta H plus one seventy eight kilojoules per mole and delta S plus one sixty joules per kelvin per mole. Above what temperature is it spontaneous? Pause and solve.
+A1|0.5|The answer is B. About eleven hundred thirteen kelvin.
+A2|0.5|It becomes spontaneous when delta G drops below zero. Set delta H equal to T delta S.
+A3|0.5|Convert. One seventy eight kilojoules is one lakh seventy eight thousand joules.
+A4|0.6|T equals one seventy eight thousand divided by one sixty. Eleven twelve point five kelvin. A forgot to convert.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.8|One. What does a negative delta G tell you?
+Y3|0.8|Two. Why does melting ice need a high enough temperature?
+Y4|0.9|Three. If delta G naught is large and negative, is K big or small?
+N1|0.3|Next time: a reaction reaches equilibrium. Does it really stop, or keep running both ways? We find out in Chapter six, Equilibrium.
