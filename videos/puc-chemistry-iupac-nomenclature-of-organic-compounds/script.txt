@@ -1,0 +1,57 @@
+H1|0.4|A home address gives a house number, a street and a city. A cinema ticket gives a row and a seat. And a chemical name can give the whole drawing of a molecule.
+H2|0.45|Three codes. Read each one in parts, and you find the exact spot.
+H3|0.35|Aarav sees it in the college corridor. The lab list says propanone. His friend calls the same bottle acetone.
+H4|0.5|Two names, one bottle. And across the world, there are millions of compounds to name.
+H5|0.65|So chemists agreed on one rule book. By the end, you will build a name from a drawing, and a drawing from a name.
+P1|0.35|The rule book is IUPAC. The International Union of Pure and Applied Chemistry.
+P2|0.35|An IUPAC name is built in parts, like a train with coaches.
+P3|0.35|The middle coach is the word root. It tells the number of carbons in the main chain. Meth is one, eth two, prop three, but four, pent five, hex six.
+P4|0.4|Next comes the primary suffix. A n e means only single bonds. E n e means a double bond. Y n e means a triple bond.
+P5|0.4|Then the secondary suffix, for the functional group. O l for an alcohol, a l for an aldehyde, o n e for a ketone.
+P6|0.65|And in front, the prefix, for side groups like methyl or chloro. Prefix, word root, suffix. That is the whole name.
+S1|0.35|Let's name a branched molecule, on our molecule bench.
+S2|0.4|Rule one. Find the longest chain of carbons. Here it has five carbons. So the word root is pent.
+S3|0.4|One carbon hangs off the side. A C H three side group is called methyl.
+S4|0.4|Rule two. Number the chain from the end nearer the branch. From the left, the methyl sits on carbon two.
+S5|0.4|From the right, it would sit on carbon four. Two is lower, so we number from the left. This is the lowest locant rule. A locant is just the position number.
+S6|0.65|Now join the parts. Two, dash, methyl, pentane. Two methyl pentane.
+B1|0.4|More side groups? More rules.
+B2|0.4|If the same group appears twice, we add di. Three times, tri. Like two, three, dimethyl butane.
+B3|0.4|Different side groups are written in alphabetical order. Ethyl comes before methyl. Di and tri are ignored when sorting.
+B4|0.65|Rings get the prefix cyclo. A ring of six carbons is cyclohexane.
+D1|0.35|Now molecules with a functional group. Link by link.
+D2|0.75|Link one. Find the main functional group. It gives the suffix.
+D3|0.75|Link two. The main chain must include the carbon of that group.
+D4|0.75|Link three. Number the chain so that group gets the lowest number.
+D5|0.75|Link four. If there are many groups, the one with higher priority wins the suffix. Acids sit near the top. Lower down come aldehydes, then ketones, alcohols and amines.
+D6|0.75|Link five. Some groups are always prefixes. Halogens, like chloro and bromo, and nitro, never become a suffix.
+C1|0.35|Now compare two names side by side.
+C2|0.4|Propane plus o l becomes propan two o l. The final e of propane drops, because o l starts with a vowel.
+C3|0.4|Propane plus o n e becomes propanone. For three carbons, the ketone can only sit on carbon two, so no number is needed.
+C4|3.2|Pause and think. A chain of four carbons has an O H on carbon two. What is its name?
+C5|0.65|Butan two o l! But for four carbons, an O H on carbon two. The e of butane drops before o l.
+T1|0.7|Remember this. Longest chain, lowest numbers, then read the parts in order.
+W1|0.3|Now, one worked example. Name this alcohol.
+W2|0.75|Step one. The main chain must hold the carbon with O H. The longest such chain has four carbons. But.
+W3|0.75|Step two. Number from the O H end. The O H sits on carbon one.
+W4|0.75|Step three. A methyl group sits on carbon three.
+W5|0.75|Step four. Join the parts. Three methyl, butan, one o l.
+W6|0.65|Three methyl butan one o l. The name rebuilds the drawing exactly.
+G1|0.35|Benzene compounds have their own short rules.
+G2|0.4|With one group, just add it in front. Chlorobenzene. Nitrobenzene. Some keep old names too. Methylbenzene is toluene. Hydroxybenzene is phenol.
+G3|0.65|With two groups, number the ring. One, two is ortho. One, three is meta. One, four is para. So one, four dichlorobenzene is para dichlorobenzene.
+X1|0.35|Now, the exam trap.
+X2|0.4|Students take the chain that is drawn in a straight line. A chain with an ethyl on carbon two becomes two ethyl butane.
+X3|0.65|Wrong. The longest chain can bend into the side group. Follow it, and you find five carbons. The real name is three methyl pentane.
+E1|0.6|Where is this asked? Boards and entrance tests ask for the IUPAC name of a given structure, or for the structure from a name.
+Q1|5.4|Exam level now. What is the correct IUPAC name of this ketone? Pause and solve.
+A1|0.5|The answer is B. Four methyl pentan two one.
+A2|0.5|The longest chain holding the ketone carbon has five carbons. Pent.
+A3|0.5|Number from the end nearer the C O. The ketone sits on carbon two, and the methyl on carbon four.
+A4|0.6|A numbers from the wrong end. C calls it an aldehyde. D picks a chain that is too short.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.8|One. What does the word root but tell you?
+Y3|0.8|Two. Name C H three C H two C H O.
+Y4|0.9|Three. What does para mean in a benzene name?
+N1|0.3|Next time: how can two molecules have the very same formula, yet be different? We find out in isomerism.
