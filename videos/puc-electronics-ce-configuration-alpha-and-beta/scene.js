@@ -214,7 +214,7 @@ const trap = PUC.trap($('#trap'), { wrong: 'Alpha can be more than 1', right: 'A
 const CM = [['GAIN', 'FORMULA', 'SIZE'], ['ALPHA', 'IC / IE', 'just below 1'], ['BETA', 'IC / IB', 'large']];
 $('#cmp').innerHTML = CM.map((r, i) => r.map((s, j) => `<div class="${i === 0 ? 'hd' : j === 0 ? 'k3' : ''}"${i > 0 && j > 0 ? ` style="color:${j === 1 ? VI : GD}"` : ''}>${s}</div>`).join('')).join('');
 const cmEls = [...$('#cmp').children];
-const where = PUC.where($('#wa'), { on: ['PUC BOARDS', 'ISC BOARDS'], type: 'Numericals on alpha and beta · prove the relation · draw the input and output curves' });
+const where = PUC.where($('#wa'), { on: ['PUC BOARDS'], type: 'Numericals on alpha and beta · prove the relation · draw the input and output curves' });
 
 /* ================= Q ================= */
 const mcq = PUC.mcq($('#mq'), { pat: 'PUC BOARD PATTERN · ORIGINAL QUESTION', q: 'A transistor in common emitter mode has β&nbsp;=&nbsp;99. The emitter current is 5&nbsp;mA. What is the base current?', qW: 760,

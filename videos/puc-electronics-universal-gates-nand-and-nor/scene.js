@@ -189,8 +189,8 @@ const sol = PUC.solution($('#so'), [[K('\\text{NOR: } \\overline{A + B}')], [K('
 const tSol = [wt('A2', 'NOR'), wt('A3', 'NAND'), wt('A3', 'removes'), wt('A4', 'What')];
 
 /* ================= F: formula card + next ================= */
-const fc = PUC.fcard($('#sF'), { x: 410, y: 238, w: 1100, h: 504, y0: 100, dy: 78, title: 'Universal gates · fact card', txt: [0, 0, 1, 1, 1],
-  lines: [K('\\text{NAND: } Y = \\overline{A \\cdot B}'), K('\\text{NOR: } Y = \\overline{A + B}'), 'NAND: 0 only if all inputs are 1 · NOR: 1 only if all inputs are 0',
+const fc = PUC.fcard($('#sF'), { x: 410, y: 238, w: 1100, h: 504, y0: 100, dy: 78, title: 'Universal gates · fact card', txt: [1, 1, 1, 1, 1],
+  lines: ['NAND: ' + K('Y = \\overline{A \\cdot B}') + ' · 0 only if all inputs are 1', 'NOR: ' + K('Y = \\overline{A + B}') + ' · 1 only if all inputs are 0', 'A bubble on a symbol means NOT',
     'From NAND: NOT = 1 gate · AND = 2 · OR = 3', 'From NOR: NOT = 1 gate · OR = 2 · AND = 3'] });
 const nx = PUC.next($('#sF'), { label: 'COMING UP', topic: 'More PUC Electronics soon - follow the playlist', y: 774 });
 

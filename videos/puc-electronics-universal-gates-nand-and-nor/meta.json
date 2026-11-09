@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "Universal Gates: NAND and NOR",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 53
+ },
+ "class": "11",
+ "title": "Universal Gates NAND and NOR Explained Simply | PUC and ISC",
+ "description": "Aarav opens a robot kit and finds only one kind of chip: NAND gates. But his plan needs AND, OR and NOT. Can one kind of gate do every job? In this animated lesson we meet the two universal gates, NAND and NOR, and build every basic gate from them.\n\nFirst we see that NAND is an AND gate followed by a NOT gate (the bubble on the symbol means NOT). On a live breadboard the truth table fills row by row as the switch tiles toggle, the lamp shows the output and an oscilloscope traces inputs A and B and output Y together, first for NAND, then for NOR. Then we build NOT, AND and OR from NAND alone (1, 2 and 3 gates) and see that NOR works the same way with AND and OR swapped. A worked example builds an AND gate from three NOR gates, followed by the exam trap (the NAND bar covers the whole product, not each input), where it is asked, an original JEE Main pattern practice question with a full solution, and a fact card to screenshot.\n\nThis is Episode 53 of PUC Electronics, Class 11, Chapter 8: Introduction to Digital Electronics (Karnataka I PUC Electronics) | ISC Class 12 Computer Science: NAND and NOR as universal gates. Logic gates are no longer in the rationalised NCERT/CBSE Physics book.\n\nIn this video:\n0:00 One kind of chip, three jobs\n0:13 NAND = NOT AND\n0:32 NAND and NOR truth tables on a breadboard\n1:30 Why they are universal gates\n2:27 Worked example: AND from NOR gates\n2:59 Exam trap: one bar over the whole\n3:16 Where it is asked\n3:31 Practice question\n3:59 Fact card\n\nMore PUC Electronics episodes are coming soon. Follow the playlist.\n\nVideo by Quest Academy.",
+ "tags": [
+  "universal gates",
+  "NAND gate",
+  "NOR gate",
+  "NAND as universal gate",
+  "NOR as universal gate",
+  "NOT gate from NAND",
+  "AND gate from NOR",
+  "logic gates truth table",
+  "digital electronics",
+  "JEE Main logic gates",
+  "PUC electronics",
+  "1st PUC electronics chapter 8",
+  "ISC computer science logic gates",
+  "Karnataka PUC electronics"
+ ],
+ "thumb": {
+  "title": "One Gate Builds All",
+  "accent_word": "All",
+  "frame_t": 60
+ }
+}

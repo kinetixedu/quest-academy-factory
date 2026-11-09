@@ -246,7 +246,7 @@ const trap = PUC.trap($('#trap'), { wrong: 'The base is thick and heavily doped'
 const CM = [['LAYER', 'DOPING', 'SIZE'], ['EMITTER', 'heavy', 'medium'], ['BASE', 'light', 'thinnest'], ['COLLECTOR', 'moderate', 'largest']];
 $('#cmp').innerHTML = CM.map((r, i) => r.map((s, j) => `<div class="${i === 0 ? 'hd' : j === 0 ? 'k3' : ''}"${(i === 2 && j > 0) || (i === 3 && j === 2) ? ` style="color:${AM}"` : ''}>${s}</div>`).join('')).join('');
 const cmEls = [...$('#cmp').children];
-const where = PUC.where($('#wa'), { on: ['PUC BOARDS', 'ISC BOARDS'], type: 'Draw npn and pnp structures and symbols · explain transistor action · use I<sub>E</sub> = I<sub>B</sub> + I<sub>C</sub>' });
+const where = PUC.where($('#wa'), { on: ['PUC BOARDS'], type: 'Draw npn and pnp structures and symbols · explain transistor action · use I<sub>E</sub> = I<sub>B</sub> + I<sub>C</sub>' });
 
 /* ================= Q ================= */
 const mcq = PUC.mcq($('#mq'), { pat: 'PUC BOARD PATTERN · ORIGINAL QUESTION', q: 'In a transistor, the emitter current is 5&nbsp;mA. 2% of the electrons recombine in the base. What is the collector current?', qW: 760,
