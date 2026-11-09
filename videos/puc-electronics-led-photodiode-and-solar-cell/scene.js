@@ -216,7 +216,6 @@ $('#ro1').innerHTML = `<span class="k n">LIGHT</span><span class="v" id="pLv">0<
 $('#pZ').innerHTML = M.icon('zap', 32, AM, 2.4);
 const pTx = [[T0('P2'), 'Light <span class="acc">knocks the door open.</span>'], [wt('P3', 'dark'), 'Reverse bias: <span class="acc">almost no dark current.</span>'], [wt('P4', 'frees'), 'Each photon <span class="acc">frees an electron and a hole.</span>'],
   [wt('P6', 'More'), 'More light, <span class="acc">more current.</span>'], [T0('P7b'), 'Tiny dark current, <span class="acc">easy to see the change.</span>'], [T0('P8'), 'Photon energy must be <span class="acc">at least E<sub>g</sub>.</span>'], [T0('P9'), 'Inside <span class="acc">remote receivers and light sensors.</span>']];
-const avP = PUC.avatar($('#sP'), { x: 1144, y: 168, who: 'Aarav', face: FACE + 'aarav-face.jpg', text: 'Light in, current out!' });
 
 /* ================= S: solar cell ================= */
 const s2 = $('#sS2');
@@ -294,17 +293,17 @@ const sol = PUC.solution($('#so'), [[K('E = \\dfrac{1240}{600}\\,\\text{eV}')], 
 const tSol = [wt('A2', 'twelve'), wt('A2', 'About'), wt('A3', 'only'), wt('A4', 'Only')];
 
 /* ================= F: formula card + next ================= */
-const fc = PUC.fcard($('#sF'), { x: 400, y: 236, w: 1120, h: 500, y0: 96, dy: 64, title: 'Light emitting diode, photodiode, solar cell · formula card', txt: [0, 0, 1, 1, 1, 1],
-  lines: [K(`${Eg} = \\dfrac{h\\,c}{\\lambda} \\qquad \\lambda = \\dfrac{h\\,c}{${Eg}}`), K(`\\lambda\\,(\\text{nm}) = 1240 / ${Eg}\\,(\\text{eV})`),
-    'Light emitting diode: forward bias, heavily doped', 'Photodiode: reverse bias, current grows with light', 'Solar cell: no bias, large area, I-V in 4th quadrant',
-    `Visible light: ${K(`${Eg} \\geq 1.8\\,\\text{eV}`)} · best solar gap near 1.5 eV`] });
+const fc = PUC.fcard($('#sF'), { x: 400, y: 236, w: 1120, h: 500, y0: 104, dy: 74, title: 'Light emitting diode, photodiode, solar cell · formula card', txt: [0, 1, 1, 1, 1],
+  lines: [K(`${Eg} = h\\,c/\\lambda \\qquad \\lambda\\,(\\text{nm}) = 1240 / ${Eg}\\,(\\text{eV})`),
+    `Light emitting diode: forward bias · visible needs ${K(`${Eg} \\geq 1.8\\,\\text{eV}`)}`, 'Photodiode: reverse bias, current grows with light', 'Solar cell: no bias, large area, I-V in 4th quadrant',
+    'Best solar gap near 1.5 eV · silicon about 1.1 eV'] });
 const nx = PUC.next($('#sF'), { label: 'NEXT · EP 47', topic: 'Clippers and clampers', y: 764 });
 
 /* ================= run ================= */
 const head = PUC.header({ tMorph });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const cam = M.camera($('#cam'), [[0, 1, 960, 540], [wt('P6', 'scope'), 1.1, 1400, 430], [T1('P7b'), 1, 960, 540]]);
+const cam = M.camera($('#cam'), [[0, 1, 960, 540]]);
 const ghost = $('#ghost'); let gw = 0;
 const GH = [[T0('L4'), tD - 0.32], [tPS, tS - 0.32], [tW + 0.2, tX - 0.32]];
 
@@ -351,9 +350,10 @@ M.on(t => {
   const lOn = t >= tL - 0.05 && t < tD + 0.1; M.hide($('#sL'), !lOn);
   if (lOn) {
     const out = tD - 0.32;
-    M.vis($('#lL'), t, tL + 0.1, out, { dx: -60, dy: 0, ...o }); M.vis($('#lR'), t, tL + 0.25, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#lL'), t, tL + 0.1, out, { dx: -60, dy: 0, ...o }); M.vis($('#lR'), t, T0('L4') - 0.3, out, { dx: 60, dy: 0, ...o });
+    $('#lL').style.left = (160 + 408 * (1 - M.io((t - T0('L4') + 0.6) / 0.5))).toFixed(1) + 'px';
     const tb = wt('L1', 'slide');
-    [bandT, bTL].forEach(e => M.vis(e, t, wt('L2', 'Electrons') - 0.2, 1e9, { dy: 0, fade: 0.2 })); [bandB, bBL].forEach(e => M.vis(e, t, wt('L2', 'Holes') - 0.2, 1e9, { dy: 0, fade: 0.2 }));
+    [bandT, bTL].forEach(e => M.vis(e, t, tb - 0.4, 1e9, { dy: 0, fade: 0.2 })); [bandB, bBL].forEach(e => M.vis(e, t, tb + 0.2, 1e9, { dy: 0, fade: 0.2 }));
     M.draw(slide, t, tb, 0.6); M.vis($('#lE'), t, wt('L2', 'Holes'), 1e9, { dy: 0, fade: 0.2 });
     sE.forEach((e, i) => M.vis(e, t, wt('L2', 'Electrons') + i * 0.08, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 }));
     // looping slide: one electron slides into the first hole, the hole fills, a photon leaves
@@ -420,14 +420,14 @@ M.on(t => {
     M.vis(scS, t, tP + 0.4, 1e9, { dy: 0, fade: 0.2 });
     trL(x => 22 * lvl(x), t, tP + 0.6, 6, 92, t >= tP + 0.6); trI(x => 22 * lvl(x) + 0.6, t, tP + 0.6, 6, 196, t >= tP + 0.6);
     M.vis($('#ro1'), t, tP + 0.7, 1e9, { dy: 12 }); M.setT($('#pLv'), Math.round(L).toString()); M.setT($('#pI'), Iua(t) < 0.5 ? '0.01' : Iua(t).toFixed(1));
-    avP(t, wt('P6', 'scope') + 0.4, T1('P7b'));
   }
 
   /* S: solar cell */
   const sOn = t >= tS - 0.05 && t < tT + 0.05; M.hide($('#sS'), !sOn);
   if (sOn) {
     const out = tT - 0.3;
-    M.vis($('#sL2'), t, tS + 0.1, out, { dx: -60, dy: 0, ...o }); M.vis($('#sR'), t, tS + 0.25, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#sL2'), t, tS + 0.1, out, { dx: -60, dy: 0, ...o }); M.vis($('#sR'), t, T0('S7') - 0.3, out, { dx: 60, dy: 0, ...o });
+    $('#sL2').style.left = (160 + 408 * (1 - M.io((t - T0('S7') + 0.6) / 0.5))).toFixed(1) + 'px';
     [sN, sP, sJ, ...sFing, sBack].forEach(e => M.vis(e, t, wt('S1', 'solar'), 1e9, { dy: 0, fade: 0.25 })); fadeAt(sLbl, t, wt('S1', 'cell'), 0.1);
     sRays.forEach((r, i) => { const t0 = wt('S2', 'sunlight') - 0.3 + i * 0.15; M.hide(r.g, t < t0); r.set(M.clamp((t - t0) / 0.5)); });
     drawSeq(sWire, t, wt('S3', 'source') - 0.3, 0.4, 0.15); M.draw(sLoad, t, wt('S3', 'source'), 0.4); M.vis(sLoadL, t, wt('S3', 'source') + 0.3, 1e9, { dy: 0, fade: 0.2 });

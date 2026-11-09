@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "CE Configuration, Alpha and Beta",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 49
+ },
+ "class": "11",
+ "title": "What Alpha and Beta Really Mean Explained Simply | PUC and ISC",
+ "description": "Aarav's lab manual says a transistor has a current gain of one hundred. Can one small part really make current a hundred times bigger, and what do alpha and beta mean? A transistor has three legs but a circuit needs two wires in and two out, so one leg is shared: common base, common collector or common emitter, the one used most.\n\nOn a live breadboard we build the common emitter circuit (input between base and emitter, output between collector and emitter). A hundred runners leave the emitter: 99 reach the collector and 1 is stuck in the base, so alpha = 99/100 and beta = 99. Then the formulas alpha = IC/IE and beta = IC/IB, and step by step from IE = IB + IC to beta = alpha/(1 - alpha) and alpha = beta/(1 + beta), plus ac beta. The scope draws the input curve (base current shoots up past about 0.7 V, like a diode) and the output curves (flat in the active region, higher for a bigger base current). Worked example: alpha = 0.98 gives beta = 49. Then the exam trap, where it is asked, an original board pattern practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 49 of PUC Electronics. Karnataka I PUC Electronics Ch 7: Bipolar Junction Transistor | ISC Class 12 Physics: Electronic Devices (common emitter configuration, characteristics, current gains and their relation).\n\nIn this video:\n0:00 Current gain one hundred?\n0:11 Three legs, two ports: CB, CC and CE\n0:32 The common emitter circuit\n0:56 100 runners: alpha and beta\n1:26 Formulas and the alpha beta relation\n2:07 Input and output curves on the scope\n2:39 The one line to remember\n2:46 Worked example: alpha 0.98\n3:06 Exam trap: alpha above 1?\n3:22 Where it is asked\n3:33 Practice question\n4:08 Formula card\n\nNext episode: Transistor as a Switch and an Amplifier.\n\nVideo by Quest Academy.",
+ "tags": [
+  "alpha and beta of transistor",
+  "CE configuration",
+  "common emitter configuration",
+  "current gain of transistor",
+  "relation between alpha and beta",
+  "beta = alpha/(1 - alpha)",
+  "transistor input and output characteristics",
+  "active region",
+  "PUC electronics",
+  "1st PUC electronics chapter 7",
+  "Karnataka PUC electronics",
+  "ISC physics",
+  "CB CE CC configurations",
+  "transistor numericals"
+ ],
+ "thumb": {
+  "title": "Alpha and Beta",
+  "accent_word": "Beta",
+  "frame_t": 157
+ }
+}

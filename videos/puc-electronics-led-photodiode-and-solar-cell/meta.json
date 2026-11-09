@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "LED, Photodiode and Solar Cell",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 46
+ },
+ "class": "11",
+ "title": "Diodes That Play With Light Explained Simply | PUC and ISC",
+ "description": "Aarav spots a small solar lamp at the college gate. All day it sits in the sun, and at night it lights up by itself. How? Three special diodes that work with light: the light emitting diode (electricity in, light out), the photodiode (light in, signal out) and the solar cell (light in, power out).\n\nA playground slide shows why a light emitting diode glows: electrons slide down the energy gap into holes and give out light. On a live breadboard the diode glows only in forward bias. We derive the colour rule step by step (E = hc/lambda, lambda in nm = 1240 / Eg in eV) and watch the colour move from red to violet as the gap grows. Then a photodiode in reverse bias, with the scope showing the current climb as the light gets brighter, and a solar cell with no battery at all: generation, separation, collection, and its I-V graph in the fourth quadrant. Worked example: the gap of a diode that glows at 620 nm. Then the exam trap, where it is asked, an original JEE Main pattern practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 46 of PUC Electronics. Karnataka I PUC Electronics Ch 6: Semiconductors, Diodes and Applications of Diodes | ISC Class 12 Physics: Electronic Devices (special junction diodes: LED, photodiode, solar cell).\n\nIn this video:\n0:00 The solar lamp puzzle\n0:10 Three diodes that work with light\n0:31 Light emitting diode on a breadboard\n1:09 Colour from the energy gap\n1:58 Photodiode in reverse bias\n2:41 Solar cell: power from light\n3:32 One line: which bias for which diode\n3:39 How the solar lamp works\n3:50 Worked example: a 620 nm diode\n4:09 Exam trap: which bias?\n4:26 Where it is asked\n4:42 Practice question\n5:21 Formula card\n\nNext episode: Clippers and Clampers.\n\nVideo by Quest Academy.",
+ "tags": [
+  "LED photodiode solar cell",
+  "light emitting diode",
+  "photodiode working",
+  "solar cell working",
+  "special purpose diodes",
+  "band gap and wavelength",
+  "1240 by Eg",
+  "solar cell I-V characteristics",
+  "PUC electronics",
+  "1st PUC electronics chapter 6",
+  "Karnataka PUC electronics",
+  "ISC physics",
+  "optoelectronic devices JEE",
+  "photodiode reverse bias"
+ ],
+ "thumb": {
+  "title": "Diodes and Light",
+  "accent_word": "Light",
+  "frame_t": 142
+ }
+}

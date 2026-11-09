@@ -1,0 +1,66 @@
+H1|0.3|At the college fest, Aarav taps a tiny microphone.
+H2|0.3|The huge speakers boom across the whole ground.
+H3|0.5|How can such a tiny signal control such a big current?
+I1|0.3|The secret is a transistor. Its full name is bipolar junction transistor.
+I2|0.3|Think of a big water pipe with a small control tap.
+I3|0.3|A gentle turn of the small tap controls the big flow.
+I4|0.6|In a transistor, a small current controls a big current.
+C1|0.3|Let's build one. A transistor is a sandwich of three layers.
+C2|0.35|The first layer is the emitter. It sends out the charge carriers.
+C3|0.35|The middle layer is the base. It controls the flow.
+C4|0.35|The last layer is the collector. It collects the carriers.
+C5|0.35|Where two layers meet, we get a junction. So there are two.
+C6|0.6|The emitter base junction, and the collector base junction.
+C7|0.35|Each layer is built for its job.
+C8|0.35|The emitter is heavily doped. It has lots of carriers to send.
+C9|0.35|The base is very thin and lightly doped.
+C10|0.35|So very few carriers get lost inside it.
+C11|0.6|The collector is the largest layer. It must get rid of heat.
+N1|0.3|There are two kinds of transistor.
+N2|0.35|N P N has a thin p base between two n layers.
+N3|0.35|P N P has a thin n base between two p layers.
+N4|0.35|In the symbol, an arrow sits on the emitter.
+N5|0.35|It points the way conventional current flows.
+N6|0.6|For N P N, the arrow points out. For P N P, it points in.
+N7|0.6|A handy trick: N P N means not pointing in.
+B1|0.3|Now let's look inside an N P N transistor at work.
+B2|0.35|We bias the two junctions in different ways.
+B3|0.35|The emitter base junction is forward biased. Its gate is open.
+B4|0.6|The collector base junction is reverse biased. It pulls carriers across.
+M1|0.35|Electrons rush from the emitter into the thin base.
+M2|0.35|Picture runners crossing a thin, almost empty field.
+M3|0.35|A few runners meet holes in the base and pair up.
+M3b|0.35|This is called recombination. It makes the small base current, I B.
+M5|0.35|Most runners shoot straight across into the collector.
+M6|0.6|They make the big collector current, I C.
+M7|0.35|Now on the breadboard. Watch the meters and the scope.
+M8|0.35|Raise the base current a little. The collector current rises a lot.
+M9|0.6|Now let the base current wiggle. The collector current wiggles much bigger.
+D1|0.35|Now the rule. Every electron enters through the emitter.
+D2|0.7|So the emitter current, I E, is the biggest current.
+D3|0.7|It splits into two parts: the base current and the collector current.
+D4|0.7|So I E equals I B plus I C.
+D5|0.7|This is Kirchhoff's current law, used on the transistor.
+D6|0.6|The base current is tiny. So I C is almost equal to I E.
+D7|0.6|It is called bipolar because both electrons and holes take part.
+T1|0.8|A thin base lets a small current control a big one.
+G1|0.35|Back to the fest. The microphone sends a tiny signal to the base.
+G2|0.6|The collector current copies it, much bigger, and the speakers boom.
+W1|0.35|Worked example. A transistor has an emitter current of ten milliamps.
+W2|0.35|The base current is zero point two milliamps. Find the collector current.
+W3|0.7|I C equals I E minus I B.
+W4|0.7|Ten minus zero point two is nine point eight milliamps.
+W5|0.65|So ninety eight percent of the emitter current reaches the collector.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think the base is a thick, heavily doped layer.
+X3|0.65|It is the opposite. The base is the thinnest and most lightly doped.
+X4|0.65|And the collector, not the emitter, is the largest layer.
+X5|0.35|Where is it asked? PUC and I S C board papers ask this often.
+X6|0.65|Draw both structures and symbols, then explain transistor action.
+Q1|5.4|Try this. In a transistor, the emitter current is five milliamps. Two percent of the electrons recombine in the base. What is the collector current?
+A1|0.35|A. Four point nine milliamps.
+A2|0.35|The base current is two percent of five milliamps.
+A3|0.35|That is zero point one milliamps.
+A4|0.65|I C equals five minus zero point one. That is four point nine milliamps.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, the common emitter setup, alpha and beta. How much does a transistor amplify?

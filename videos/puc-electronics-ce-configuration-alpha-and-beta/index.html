@@ -1,0 +1,160 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Electronics Ep 49 - CE Configuration, Alpha and Beta</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== Breadboard (PUC Electronics) layout ===== */
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.card svg.full{position:absolute;left:0;top:0}
+.big{position:absolute;font:600 56px 'IBM Plex Mono';white-space:nowrap}
+.sm{position:absolute;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.txt{position:absolute;font:500 30px/1.35 Poppins;white-space:nowrap}
+#ghost{top:168px}
+.nchip2{position:absolute;top:96px}
+#aC{left:160px;top:260px;width:784px;height:600px;overflow:hidden}
+#aImg{position:absolute;left:24px;top:84px;height:516px}
+#lmC{left:976px;top:260px;width:784px;height:600px;overflow:hidden}
+.hq{position:absolute;right:40px;top:92px;width:100px;height:100px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 56px Poppins;color:#fff;background:var(--ac)}
+.strip{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:18px;padding:0 28px;box-sizing:border-box;font:600 28px Poppins;white-space:nowrap}
+.strip .acc{color:var(--ac)}
+.hbox{position:absolute;left:24px;width:736px;border-radius:14px;background:var(--ac2)}
+.st2{position:absolute;left:36px;display:flex;align-items:center;gap:22px;white-space:nowrap}
+.st2 .n{flex:none;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st2 .sx{font-size:36px}
+.st2 .why{font:500 22px Poppins;color:var(--mute)}
+.st2 .tt{font:600 30px Poppins;color:var(--ink)}
+.L2{left:160px;top:260px;width:784px;height:600px}.R2{left:976px;top:260px;width:784px;height:600px}
+.tile{position:absolute;left:32px;width:720px;height:152px;border-radius:14px;background:var(--soft)}
+.tile svg{position:absolute;left:16px;top:16px}
+.tile .tl{position:absolute;left:200px;top:30px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.tile .tn{position:absolute;left:200px;top:62px;font:700 32px Poppins;color:var(--ink);white-space:nowrap}
+.tile .tw{position:absolute;left:200px;top:108px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.ftile{position:absolute;left:32px;width:720px;height:76px;border-radius:14px;background:var(--soft);display:flex;align-items:center;gap:16px;padding:0 24px;box-sizing:border-box;font:600 26px Poppins;white-space:nowrap}
+.ftile .k2{font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+#ck,#kk{left:160px;top:260px;width:928px;height:600px}
+#sc2,#ks{left:1120px;top:260px;width:640px;height:300px}
+#rb,#kb{left:1120px;top:592px;width:640px;height:268px}
+.ro2{position:absolute;left:32px;top:76px;width:576px;display:grid;grid-template-columns:auto 1fr auto;column-gap:18px;row-gap:14px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .k.n{font-style:normal;font-size:22px;font-family:'IBM Plex Mono';letter-spacing:.06em}
+.ro2 .v{font:600 38px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 22px 'IBM Plex Mono';color:var(--mute);white-space:nowrap;min-width:52px}
+.pills{position:absolute;display:flex;gap:12px}
+.pills span{height:48px;display:inline-flex;align-items:center;gap:10px;padding:0 16px;border-radius:10px;border:2px solid var(--line);background:#fff;font:600 19px 'IBM Plex Mono';letter-spacing:.05em;color:var(--mute);white-space:nowrap}
+.pills span b{display:inline-flex;width:28px;height:28px;border-radius:50%;align-items:center;justify-content:center;background:var(--soft);color:var(--ink);font:700 16px Poppins}
+#trap{left:160px;top:260px;width:784px;height:300px}
+#tc{left:976px;top:260px;width:784px;height:300px}
+#wa{left:160px;top:592px;width:1600px;height:268px}
+#mq{left:160px;top:260px;width:1040px;height:600px}
+#so{left:1232px;top:260px;width:528px;height:600px}
+#so .sol{left:32px}
+.fcard .fl{font-size:40px}
+.fcard .fl.txt{font:500 28px Poppins}
+.btab{position:absolute;left:36px;top:84px;width:712px;display:grid;grid-template-columns:1fr auto;row-gap:16px;column-gap:20px;align-items:center}
+.btab div{font:600 26px Poppins;white-space:nowrap}
+.btab .bb{font:600 20px 'IBM Plex Mono';letter-spacing:.06em;padding:6px 12px;border-radius:8px;color:#fff;text-align:center}
+
+.strip.s26{font-size:26px}
+.wv{position:absolute;left:32px;top:76px}
+.flab{position:absolute;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.cmp{position:absolute;left:36px;top:76px;width:712px;display:grid;grid-template-columns:200px 1fr 1fr;row-gap:12px;column-gap:16px;align-items:center}
+.cmp div{font:600 24px Poppins;white-space:nowrap}
+.cmp .hd{font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.cmp .k3{font:600 18px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute)}
+
+.bigv{position:absolute;font:600 64px 'IBM Plex Mono';color:var(--ac);white-space:nowrap}
+.defb{position:absolute;left:32px;width:720px;height:150px;border-radius:14px;background:var(--soft)}
+.defb .tl{position:absolute;left:28px;top:20px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.defb .fx{position:absolute;left:28px;top:52px;font-size:40px}
+.defb .tw{position:absolute;left:330px;top:74px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · ELECTRONICS · CH 7 BIPOLAR JUNCTION TRANSISTOR</div>
+    <div class="subj" id="subj">BREADBOARD</div>
+    <div id="title">What alpha and <span class="acc">beta</span> really mean</div>
+    <div id="sub">CE configuration, alpha and beta</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E8A317" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="ghost" id="ghost">EXAMPLE FIGURES</div>
+
+    <div class="sc" id="sA">
+      <div class="card" id="aC"><div class="lbl" style="left:32px;top:28px">AARAV · PCME · JEE</div>
+        <img id="aImg" src="../../assets/illustrations/puc/aarav.png" alt=""></div>
+      <div class="card" id="lmC"><div class="lbl" style="left:32px;top:28px">LAB MANUAL · TRANSISTOR</div>
+        <svg class="full" id="hS" width="784" height="600"></svg>
+        <div class="hq" id="hQ" style="top:452px;right:40px">?</div></div>
+    </div>
+
+    <div class="sc" id="sI">
+      <div class="card L2" id="iL"><div class="lbl" style="left:32px;top:28px">THREE LEGS · TWO PORTS</div>
+        <svg class="full" id="iS1" width="784" height="600"></svg>
+        <div class="strip" id="iSt1" style="top:492px"><span id="iZ1"></span><span>One leg <span class="acc">is shared.</span></span></div></div>
+      <div class="card R2" id="iR"><div class="lbl" style="left:36px;top:28px">THREE WAYS TO CONNECT</div>
+        <div class="tile" id="it0" style="top:72px"><svg width="170" height="120"></svg><div class="tl">SHARED: BASE</div><div class="tn">Common base</div><div class="tw">CB</div></div>
+        <div class="tile" id="it1" style="top:240px"><svg width="170" height="120"></svg><div class="tl">SHARED: COLLECTOR</div><div class="tn">Common collector</div><div class="tw">CC</div></div>
+        <div class="tile" id="it2" style="top:408px"><svg width="170" height="120"></svg><div class="tl">SHARED: EMITTER</div><div class="tn">Common emitter</div><div class="tw">CE · used the most</div></div></div>
+    </div>
+
+    <div class="sc" id="sC">
+      <div class="card L2" id="cL"><div class="lbl" style="left:32px;top:28px">BREADBOARD · COMMON EMITTER</div>
+        <div class="tag" id="cE" style="right:32px;top:22px"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="#E8A317" stroke="#16213E" stroke-width="1.5"/></svg>ELECTRONS</div>
+        <svg class="full" id="cS" width="784" height="600"></svg>
+        <div class="strip" id="cSt" style="top:492px"><span id="cZ"></span><span id="cTx"></span></div></div>
+      <div class="card R2" id="cR"><div class="lbl" style="left:36px;top:28px">INPUT AND OUTPUT</div><div id="cRows"></div></div>
+    </div>
+
+    <div class="sc" id="sR">
+      <div class="card L2" id="rL"><div class="lbl" style="left:32px;top:28px">100 RUNNERS LEAVE THE EMITTER</div>
+        <svg class="full" id="rS" width="784" height="600"></svg></div>
+      <div class="card R2" id="rR"><div class="lbl" style="left:36px;top:28px">TWO WAYS TO COUNT</div>
+        <div class="defb" id="ra" style="top:72px"><div class="tl">ALPHA · WHAT FRACTION ARRIVED?</div><div class="fx" id="raF"></div></div>
+        <div class="defb" id="rb2" style="top:250px"><div class="tl">BETA · ARRIVED PER ONE STUCK</div><div class="fx" id="rbF"></div></div>
+        <div class="pills" id="rP" style="left:36px;top:450px"><span>ALPHA: JUST BELOW 1</span><span>BETA: BIG</span></div></div>
+    </div>
+
+    <div class="sc" id="sD">
+      <div class="card L2" id="dL"><div class="lbl" style="left:32px;top:28px">TWO CURRENT GAINS</div>
+        <div class="defb" id="da" style="top:72px"><div class="tl">ALPHA · COMMON BASE GAIN</div><div class="fx" id="daF"></div><div class="tw">just below 1</div></div>
+        <div class="defb" id="db" style="top:250px"><div class="tl">BETA · COMMON EMITTER GAIN</div><div class="fx" id="dbF"></div><div class="tw">large</div></div>
+        <div class="defb" id="dc" style="top:428px"><div class="tl">AC BETA · SMALL CHANGES</div><div class="fx" id="dcF"></div><div class="tw">at fixed V<sub>CE</sub></div></div></div>
+      <div class="card R2" id="dR"><div class="lbl" style="left:36px;top:28px">LINKING ALPHA AND BETA</div>
+        <div class="hbox" id="dBox" style="top:488px;height:104px"></div><div id="dSteps"></div></div>
+    </div>
+
+    <div class="sc" id="sG">
+      <div class="card L2" id="gL"><div class="lbl" style="left:32px;top:28px">BREADBOARD · COMMON EMITTER</div>
+        <div class="tag" id="gE" style="right:32px;top:22px"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="#E8A317" stroke="#16213E" stroke-width="1.5"/></svg>ELECTRONS</div>
+        <svg class="full" id="gS" width="784" height="600"></svg>
+        <div class="ro2" id="gRo1" style="top:470px;left:32px;width:340px;row-gap:8px"></div><div class="ro2" id="gRo2" style="top:470px;left:412px;width:340px;row-gap:8px"></div></div>
+      <div class="card R2" id="gR"><div class="lbl" id="gRL1" style="left:36px;top:28px">SCOPE · INPUT CURVE</div><div class="lbl" id="gRL2" style="left:36px;top:28px">SCOPE · OUTPUT CURVES</div>
+        <svg class="full" id="gP" width="784" height="600"></svg></div>
+    </div>
+
+    <div class="sc" id="sW">
+      <div class="card L2" id="wL"><div class="lbl" style="left:32px;top:28px">WORKED EXAMPLE · ALPHA = 0.98</div>
+        <svg class="full" id="wS" width="784" height="600"></svg>
+        <div class="ro2" id="wRo" style="top:452px;width:700px;row-gap:8px"></div></div>
+      <div class="card R2" id="wR"><div class="lbl" style="left:36px;top:28px">WORKED EXAMPLE</div>
+        <div class="hbox" id="wBox" style="top:384px;height:104px"></div><div id="wSteps"></div></div>
+    </div>
+
+    <div class="sc" id="sX"><div class="card red" id="trap"></div>
+      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">ALPHA OR BETA?</div><div class="cmp" id="cmp"></div></div>
+      <div class="card" id="wa"></div></div>
+    <div class="sc" id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div class="sc" id="sF"></div>
+  </div>
+  <div id="stmt"><div id="st1">Alpha is just below one. Beta is big.</div><div id="st2">β = <span class="acc">α / (1 - α)</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

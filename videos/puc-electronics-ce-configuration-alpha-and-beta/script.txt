@@ -1,0 +1,57 @@
+H1|0.3|Aarav reads a line in his lab manual. Current gain, one hundred.
+H2|0.3|Can one small part really make current a hundred times bigger?
+H3|0.5|And what do alpha and beta mean?
+I1|0.3|A transistor has three legs: emitter, base and collector.
+I2|0.3|But a circuit needs two wires in and two wires out.
+I3|0.3|So one leg must be shared by the input and the output.
+I4|0.35|Share the base, and it is common base. Share the collector, common collector.
+I5|0.6|Share the emitter, and it is common emitter. This is the one used most.
+C1|0.3|Let's build the common emitter setup on the breadboard.
+C2|0.35|The input goes between the base and the emitter.
+C3|0.35|The output comes from the collector and the emitter.
+C4|0.35|The emitter is shared by both sides. That is why it is called common.
+C5|0.35|A small battery forward biases the base. A bigger battery feeds the collector.
+C6|0.6|The input current is I B. The output current is I C.
+R1|0.3|Now picture one hundred runners leaving the emitter.
+R2|0.35|Ninety nine of them reach the collector.
+R3|0.6|Only one gets stuck in the base.
+R4|0.35|Alpha asks: what fraction of runners reached the collector?
+R5|0.6|Ninety nine out of one hundred. Alpha is zero point nine nine.
+R6|0.35|Beta asks: how many reach the collector for each one stuck in the base?
+R7|0.6|Ninety nine for every one. Beta is ninety nine.
+R8|0.6|So alpha is always a bit less than one. Beta is big.
+D1|0.35|Now the formulas. Alpha equals I C divided by I E.
+D2|0.7|It is the current gain of the common base setup.
+D3|0.7|Beta equals I C divided by I B. It is the common emitter current gain.
+D4|0.7|Start from the current rule. I E equals I B plus I C.
+D5|0.7|Divide every term by I C.
+D6|0.7|One over alpha equals one over beta, plus one.
+D7|0.7|Rearrange it. Alpha equals beta over one plus beta.
+D8|0.7|Or beta equals alpha over one minus alpha.
+D9|0.6|Small changes work the same way. A C beta is change in I C over change in I B.
+G1|0.35|Now the breadboard graphs. First the input side.
+G2|0.35|Raise V B E slowly. Almost nothing flows at first.
+G3|0.6|Past about zero point seven volts, the base current shoots up. Just like a diode.
+G4|0.35|Now the output side. Keep I B fixed and raise V C E.
+G5|0.35|I C climbs quickly, then goes almost flat.
+G6|0.35|The flat part is the active region. Here I C hardly depends on V C E.
+G7|0.6|Give a bigger I B, and the flat line sits higher. Beta times bigger.
+T1|0.8|Alpha is just below one. Beta is big. And beta equals alpha over one minus alpha.
+W1|0.35|Worked example. A transistor has alpha equal to zero point nine eight.
+W2|0.35|Find beta.
+W3|0.7|Beta equals alpha over one minus alpha.
+W4|0.7|That is zero point nine eight over zero point zero two.
+W5|0.65|Beta equals forty nine. So I C is forty nine times I B.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think alpha can be more than one.
+X3|0.65|It cannot. I C is always a little less than I E, so alpha stays below one.
+X4|0.65|And never mix them up. Alpha uses I E. Beta uses I B.
+X5|0.35|Where is it asked? PUC and I S C board papers ask for these relations.
+X6|0.65|Expect numericals on alpha and beta, and the characteristic curves.
+Q1|5.4|Try this. A transistor in common emitter mode has beta equal to ninety nine. The emitter current is five milliamps. What is the base current?
+A1|0.35|B. Fifty microamps.
+A2|0.35|First, alpha equals ninety nine over one hundred. That is zero point nine nine.
+A3|0.35|So I C equals zero point nine nine times five. Four point nine five milliamps.
+A4|0.65|I B equals five minus four point nine five. That is fifty microamps.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, the transistor as a switch and an amplifier. How does it turn a whisper into a shout?

@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "Clippers and Clampers",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 47
+ },
+ "class": "11",
+ "title": "Clippers and Clampers Explained Simply | PUC Electronics Class 11",
+ "description": "Aarav shouts into a cheap microphone and the tops of his voice wave come out cut flat. Circuits can do this on purpose. A clipper cuts off the part of a wave above or below a level (a low ceiling over a jumping kid). A clamper lifts or lowers the whole wave without changing its shape (a trampoline on a stage).\n\nOn a live breadboard we build a shunt clipper and watch the oscilloscope: the diode stays off in one half, turns on above 0.7 V and holds the output there. Flip the diode and the other half is cut; add a battery and the clip level becomes VB + 0.7 V. Then a positive clamper: in the first negative half the capacitor charges to the peak, acts like a small battery and lifts every point of the wave, while the peak to peak size stays the same (RC much bigger than T, also called a DC restorer). Worked example: a 5 V peak wave through an ideal positive clamper swings from 0 to 10 V. Then the exam trap, where it is asked, an original JEE Main pattern practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 47 of PUC Electronics. Karnataka I PUC Electronics Ch 6: Semiconductors, Diodes and Applications of Diodes.\n\nIn this video:\n0:00 The cut-flat voice wave\n0:10 Clipper vs clamper\n0:31 A shunt clipper on the breadboard\n1:13 Biased clipper: VB + 0.7 V\n1:39 The positive clamper\n2:26 Clipper cuts, clamper lifts\n2:30 Worked example: 0 to 10 V\n2:51 Exam trap: shape or level?\n3:03 Where it is asked\n3:15 Practice question\n3:49 Formula card\n\nNext episode: BJT Construction and Working.\n\nVideo by Quest Academy.",
+ "tags": [
+  "clippers and clampers",
+  "clipper circuit",
+  "clamper circuit",
+  "positive clipper",
+  "negative clipper",
+  "biased clipper",
+  "positive clamper",
+  "DC restorer",
+  "diode wave shaping",
+  "PUC electronics",
+  "1st PUC electronics chapter 6",
+  "Karnataka PUC electronics",
+  "diode circuits JEE",
+  "clipper vs clamper"
+ ],
+ "thumb": {
+  "title": "Clippers and Clampers",
+  "accent_word": "Clampers",
+  "frame_t": 77.3
+ }
+}
