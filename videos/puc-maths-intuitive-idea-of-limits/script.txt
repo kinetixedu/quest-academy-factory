@@ -1,0 +1,52 @@
+H1|0.4|Stand eight metres from a wall. Walk half the way. Now walk half of what is left. Again, and again.
+H2|0.45|Four metres left. Two. One. Half a metre. A quarter.
+H3|0.35|Diya tried this game in the college corridor.
+H4|0.5|After twenty moves the gap is thinner than a hair. But there is always half left. Does she ever touch the wall?
+H5|0.65|She never lands on it, yet the gap gets as close to zero as you like. That idea has a name. It is called a limit.
+P1|0.35|So what is a limit?
+P2|0.4|A limit asks one question. When the input gets closer and closer to a number, what does the output get close to?
+P3|0.4|We write it like this. The limit, as x tends to a, of f of x, equals l.
+P4|0.4|x tends to a means x creeps towards a, as close as we like. But x never has to equal a.
+P5|0.65|And l is the value that f of x settles near. For Diya, the moves keep going and the gap tends to zero.
+L1|0.35|Now watch a real function do this. Take h of x equals x squared minus four, over x minus two.
+L2|0.4|Try x equals two. The top is zero and the bottom is zero. Zero over zero has no value, so h of two does not exist.
+L3|0.4|So we creep up on two instead. From the left: one point nine, then one point nine nine, then one point nine nine nine.
+L4|0.4|h gives three point nine, then three point nine nine, then three point nine nine nine. It is closing in on four.
+L5|0.65|From the right: two point one, two point zero one, two point zero zero one. h gives four point one, four point zero one, four point zero zero one. Also closing in on four.
+D1|0.35|Why four? Here is the reason, in small steps.
+D2|0.75|Step one. The top, x squared minus four, splits into x minus two, times x plus two.
+D3|0.75|Step two. While x is not two, x minus two is not zero. So we can cancel it, top and bottom.
+D4|0.75|Step three. What is left is just x plus two. A straight line, with one tiny hole at x equals two.
+D5|0.65|Step four. As x tends to two, x plus two tends to four. So the limit is four, even though h of two does not exist.
+S1|0.4|Side by side. The value at a point is what the function gives exactly at that point. Here, there is none.
+S2|0.6|The limit is what the function gets close to near that point. Here, it is four. A limit looks near a, never at a.
+S3|3.2|Now you try. Can a function have a limit at a point where it has no value at all? Pause and decide.
+S4|0.65|Yes! h has no value at two, but its limit there is four. The hole does not stop the limit.
+R1|0.4|Notice we came from two sides. Coming from numbers just below a gives the left hand limit.
+R2|0.4|Coming from numbers just above a gives the right hand limit.
+R3|0.6|The rule from NCERT: the limit exists only when the left hand limit and the right hand limit are the same number.
+R4|3.2|Test it. The greatest integer function, square bracket x, at x equals one. Does the limit exist? Pause and think.
+R5|0.65|No! Just below one, like zero point nine nine, it gives zero. Just above one, it gives one. Zero and one do not match, so there is no limit.
+T1|0.7|Remember this. A limit looks near the point, from both sides, and both sides must agree.
+W1|0.35|Now, one worked example.
+W2|0.5|f of x is x squared for x less than two, and three x minus two for x more than two. And f of two is seven. Find the limit as x tends to two.
+W3|0.75|Step one. From the left, f of x is x squared. As x tends to two, it tends to four.
+W4|0.75|Step two. From the right, f of x is three x minus two. As x tends to two, it tends to six minus two, four.
+W5|0.75|Step three. Both sides give four. So the limit exists, and it equals four.
+W6|0.75|Step four. f of two is seven, but that does not matter. The limit never looks at the point itself.
+W7|0.65|So the limit is four, and the value is seven. They can be different.
+X1|0.35|Now, the exam trap.
+X2|0.4|Find the limit of mod x over x, as x tends to zero. Many students try x equals zero point one and zero point zero one, get one each time, and write one.
+X3|0.65|But they only checked one side. From the left, mod x over x is minus one. Minus one and one do not match, so the limit does not exist.
+J1|0.6|Where is this asked? In JEE Main, as functions defined in pieces, or with square bracket x, where you check both sides of a point.
+Q1|5.4|Exam level now. If the limit exists, what is its value? Pause and solve.
+A1|0.5|The answer is B. Five.
+A2|0.5|From the left, a x plus three tends to two a plus three.
+A3|0.5|From the right, x squared plus a tends to four plus a.
+A4|0.6|For the limit to exist, both sides must match. Two a plus three equals four plus a, so a is one. Then the limit is four plus one, which is five.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What does x tends to a mean, in plain words?
+Y3|0.9|Two. h of two does not exist. So why is the limit of h at two equal to four?
+Y4|1.1|Three. When does a limit fail to exist?
+N1|0.3|Next time: a big limit full of sums, products and fractions. Can you break it into small ones? We find out in the algebra of limits.
