@@ -1,0 +1,507 @@
+1
+00:00:00,450 --> 00:00:01,350
+Five friends.
+
+2
+00:00:01,229 --> 00:00:03,519
+Diya must pick two of
+them for a quiz team.
+
+3
+00:00:03,919 --> 00:00:07,624
+Last time, a captain and a
+vice captain gave twenty ways.
+
+4
+00:00:07,624 --> 00:00:09,304
+Now there are no badges.
+
+5
+00:00:09,304 --> 00:00:10,687
+Is it still twenty?
+
+6
+00:00:11,137 --> 00:00:13,873
+Diya has to make this choice
+for the class quiz today.
+
+7
+00:00:14,223 --> 00:00:16,083
+Meera and Sana, or Sana and Meera.
+
+8
+00:00:16,083 --> 00:00:17,250
+It is the same team.
+
+9
+00:00:17,250 --> 00:00:18,764
+So should we count it twice?
+
+10
+00:00:19,264 --> 00:00:20,164
+No.
+
+11
+00:00:19,630 --> 00:00:22,599
+When order does not matter,
+we are counting combinations.
+
+12
+00:00:23,250 --> 00:00:24,913
+So what is a combination?
+
+13
+00:00:25,263 --> 00:00:29,856
+A combination is a selection of some
+or all of the objects, where the order
+
+14
+00:00:29,856 --> 00:00:31,032
+does not matter.
+
+15
+00:00:31,432 --> 00:00:34,065
+Selection means we only ask who is in.
+
+16
+00:00:34,065 --> 00:00:35,407
+Not who is first.
+
+17
+00:00:35,807 --> 00:00:38,007
+An arrangement asks who goes where.
+
+18
+00:00:38,007 --> 00:00:40,123
+A selection asks only who is in.
+
+19
+00:00:40,773 --> 00:00:43,337
+Let us bring back the grid from last time.
+
+20
+00:00:43,337 --> 00:00:44,330
+Twenty squares.
+
+21
+00:00:44,330 --> 00:00:46,849
+Each one is a captain and a vice captain.
+
+22
+00:00:47,249 --> 00:00:48,953
+Look at Meera captain, Sana vice.
+
+23
+00:00:48,953 --> 00:00:50,469
+And Sana captain, Meera vice.
+
+24
+00:00:50,469 --> 00:00:52,072
+As a team, they are the same.
+
+25
+00:00:52,472 --> 00:00:55,749
+Every square has a mirror
+twin across the diagonal.
+
+26
+00:00:55,749 --> 00:00:59,134
+Fold the grid, and each
+twin lands on its partner.
+
+27
+00:00:59,734 --> 00:01:01,912
+Twenty squares become ten teams.
+
+28
+00:01:01,912 --> 00:01:04,150
+Each team was counted two times.
+
+29
+00:01:04,800 --> 00:01:05,721
+Side by side.
+
+30
+00:01:05,721 --> 00:01:08,697
+Arrangement: Meera then
+Sana is not Sana then Meera.
+
+31
+00:01:08,697 --> 00:01:09,840
+That is two ways.
+
+32
+00:01:10,240 --> 00:01:14,083
+Selection: Meera and Sana is one
+team, whichever way you say it.
+
+33
+00:01:14,083 --> 00:01:15,217
+That is one way.
+
+34
+00:01:15,817 --> 00:01:16,729
+Now you try.
+
+35
+00:01:16,729 --> 00:01:18,862
+Choosing three toppings for a pizza.
+
+36
+00:01:18,862 --> 00:01:20,481
+Arrangement, or selection?
+
+37
+00:01:20,481 --> 00:01:21,614
+Pause and decide.
+
+38
+00:01:24,814 --> 00:01:25,714
+Selection!
+
+39
+00:01:25,602 --> 00:01:29,398
+The pizza tastes the same,
+whichever topping goes on first.
+
+40
+00:01:30,048 --> 00:01:31,084
+Now the rule.
+
+41
+00:01:31,434 --> 00:01:33,800
+Choose r things from n different things.
+
+42
+00:01:33,800 --> 00:01:35,652
+First, count the arrangements.
+
+43
+00:01:35,652 --> 00:01:36,760
+That is n P r.
+
+44
+00:01:37,510 --> 00:01:41,880
+But each chosen group can be arranged
+among itself in r factorial ways.
+
+45
+00:01:42,630 --> 00:01:45,980
+So every group was
+counted r factorial times.
+
+46
+00:01:45,980 --> 00:01:48,003
+We divide by r factorial.
+
+47
+00:01:48,753 --> 00:01:50,566
+This is written n C r.
+
+48
+00:01:50,566 --> 00:01:52,687
+The C stands for combination.
+
+49
+00:01:53,437 --> 00:01:56,726
+n C r equals n P r over r factorial.
+
+50
+00:01:56,726 --> 00:02:02,026
+That is n factorial, over r
+factorial times n minus r factorial.
+
+51
+00:02:02,776 --> 00:02:03,676
+Check it.
+
+52
+00:02:03,594 --> 00:02:05,758
+Five C two is twenty over two.
+
+53
+00:02:05,758 --> 00:02:06,658
+Ten teams.
+
+54
+00:02:07,275 --> 00:02:10,074
+Watch the count change as the team grows.
+
+55
+00:02:10,074 --> 00:02:11,101
+Five friends.
+
+56
+00:02:11,501 --> 00:02:14,326
+A team of zero: one way, pick nobody.
+
+57
+00:02:14,326 --> 00:02:16,318
+A team of one: five ways.
+
+58
+00:02:16,318 --> 00:02:17,945
+A team of two: ten.
+
+59
+00:02:18,345 --> 00:02:20,367
+A team of three: ten again.
+
+60
+00:02:20,367 --> 00:02:21,673
+Four: five ways.
+
+61
+00:02:21,673 --> 00:02:23,136
+All five: one way.
+
+62
+00:02:23,736 --> 00:02:24,636
+Quick one.
+
+63
+00:02:24,571 --> 00:02:27,308
+Why is five C two equal to five C three?
+
+64
+00:02:27,308 --> 00:02:28,489
+Pause and think.
+
+65
+00:02:31,689 --> 00:02:35,940
+Picking two to play is the same
+as picking three to sit out.
+
+66
+00:02:35,940 --> 00:02:38,578
+So n C r equals n C, n minus r.
+
+67
+00:02:39,227 --> 00:02:40,145
+Remember this.
+
+68
+00:02:40,145 --> 00:02:43,885
+When order does not matter, divide
+the arrangements by r factorial.
+
+69
+00:02:44,585 --> 00:02:46,274
+Now, one worked example.
+
+70
+00:02:46,624 --> 00:02:47,544
+Eight friends.
+
+71
+00:02:47,544 --> 00:02:49,323
+Only three can go on a trip.
+
+72
+00:02:49,323 --> 00:02:51,764
+In how many ways can the three be chosen?
+
+73
+00:02:52,264 --> 00:02:53,164
+Step one.
+
+74
+00:02:53,062 --> 00:02:55,523
+A trip group has no first or second.
+
+75
+00:02:55,523 --> 00:02:57,069
+Order does not matter.
+
+76
+00:02:57,069 --> 00:02:58,616
+This is a combination.
+
+77
+00:02:59,366 --> 00:03:00,266
+Step two.
+
+78
+00:03:00,178 --> 00:03:01,604
+n is eight friends.
+
+79
+00:03:01,604 --> 00:03:02,981
+r is three places.
+
+80
+00:03:03,731 --> 00:03:04,664
+Step three.
+
+81
+00:03:04,664 --> 00:03:09,602
+Eight C three is eight factorial, over
+three factorial times five factorial.
+
+82
+00:03:10,352 --> 00:03:11,252
+Step four.
+
+83
+00:03:11,206 --> 00:03:15,851
+That leaves eight times seven times
+six, over three times two times one.
+
+84
+00:03:15,851 --> 00:03:18,374
+Three hundred and thirty six over six.
+
+85
+00:03:19,124 --> 00:03:21,018
+So there are fifty six ways.
+
+86
+00:03:21,668 --> 00:03:23,129
+Now, the exam trap.
+
+87
+00:03:23,479 --> 00:03:27,567
+Many students use n P r here, and
+write three hundred and thirty six.
+
+88
+00:03:27,967 --> 00:03:31,993
+But that counts every group
+six times, once for each order.
+
+89
+00:03:31,993 --> 00:03:33,833
+A group is just a group.
+
+90
+00:03:33,833 --> 00:03:37,594
+Divide by three factorial,
+and the answer is fifty six.
+
+91
+00:03:38,244 --> 00:03:39,439
+Where is this asked?
+
+92
+00:03:39,439 --> 00:03:43,528
+In JEE Main, as questions on choosing
+a team or a committee with a condition.
+
+93
+00:03:44,128 --> 00:03:45,260
+Exam level now.
+
+94
+00:03:45,260 --> 00:03:48,782
+A team of four is chosen
+from six boys and four girls.
+
+95
+00:03:48,782 --> 00:03:50,960
+It must have at least two girls.
+
+96
+00:03:50,960 --> 00:03:52,093
+How many teams?
+
+97
+00:03:52,093 --> 00:03:53,273
+Pause and solve.
+
+98
+00:03:58,673 --> 00:04:00,014
+The answer is A.
+
+99
+00:04:00,014 --> 00:04:01,771
+One hundred and fifteen.
+
+100
+00:04:02,271 --> 00:04:04,165
+Two girls and two boys.
+
+101
+00:04:04,165 --> 00:04:07,853
+Four C two times six C
+two is six times fifteen.
+
+102
+00:04:07,853 --> 00:04:08,753
+Ninety.
+
+103
+00:04:09,088 --> 00:04:10,948
+Three girls and one boy.
+
+104
+00:04:10,948 --> 00:04:14,412
+Four C three times six
+C one is four times six.
+
+105
+00:04:14,412 --> 00:04:15,443
+Twenty four.
+
+106
+00:04:15,943 --> 00:04:16,843
+Four girls.
+
+107
+00:04:16,791 --> 00:04:18,173
+Four C four is one.
+
+108
+00:04:18,673 --> 00:04:22,556
+Ninety plus twenty four plus
+one is one hundred and fifteen.
+
+109
+00:04:23,156 --> 00:04:24,697
+Here is your recap.
+
+110
+00:04:24,697 --> 00:04:26,279
+Screenshot this card.
+
+111
+00:04:29,479 --> 00:04:31,666
+Can you answer these three
+questions without help?
+
+112
+00:04:32,066 --> 00:04:32,966
+One.
+
+113
+00:04:32,382 --> 00:04:35,098
+Why is choosing Meera and Sana the
+same as choosing Sana and Meera?
+
+114
+00:04:35,998 --> 00:04:36,898
+Two.
+
+115
+00:04:36,461 --> 00:04:37,587
+Find six C two.
+
+116
+00:04:38,487 --> 00:04:39,387
+Three.
+
+117
+00:04:39,147 --> 00:04:42,697
+Why is n C r equal to
+n P r over r factorial?
+
+118
+00:04:43,797 --> 00:04:45,876
+Next time: arrange, or choose?
+
+119
+00:04:45,876 --> 00:04:48,057
+One question decides it every time.
+
+120
+00:04:48,057 --> 00:04:49,776
+We put them side by side.

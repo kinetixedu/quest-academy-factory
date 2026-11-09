@@ -1,0 +1,498 @@
+1
+00:00:00,450 --> 00:00:03,696
+At nine in the morning,
+one student hears a rumour.
+
+2
+00:00:03,696 --> 00:00:07,322
+Every hour, each person who
+knows it tells one new friend.
+
+3
+00:00:07,722 --> 00:00:09,944
+Aarav worked it out on his bicycle.
+
+4
+00:00:09,944 --> 00:00:12,911
+One person, then two,
+then four, then eight.
+
+5
+00:00:13,361 --> 00:00:17,741
+By seven in the evening, ten hours
+later, one thousand and twenty four
+
+6
+00:00:17,741 --> 00:00:18,679
+people know.
+
+7
+00:00:19,029 --> 00:00:21,401
+Adding the same number grows slowly.
+
+8
+00:00:21,401 --> 00:00:23,261
+Multiplying grows like this.
+
+9
+00:00:23,761 --> 00:00:27,665
+A list that multiplies by the same
+number every time is called a geometric
+
+10
+00:00:27,665 --> 00:00:28,565
+progression.
+
+11
+00:00:29,089 --> 00:00:30,542
+Compare it with an AP.
+
+12
+00:00:30,542 --> 00:00:32,877
+There, we add the same number each time.
+
+13
+00:00:32,877 --> 00:00:34,437
+Two, four, six, eight.
+
+14
+00:00:34,837 --> 00:00:39,348
+In a geometric progression, or GP,
+we multiply by the same number each
+
+15
+00:00:39,348 --> 00:00:40,248
+time.
+
+16
+00:00:39,893 --> 00:00:41,924
+Two, four, eight, sixteen.
+
+17
+00:00:42,324 --> 00:00:43,727
+Here is the test.
+
+18
+00:00:43,727 --> 00:00:46,803
+Divide any term by the
+term just before it.
+
+19
+00:00:46,803 --> 00:00:50,329
+If the answer is always
+the same, it is a GP.
+
+20
+00:00:50,729 --> 00:00:52,378
+Four over two is two.
+
+21
+00:00:52,378 --> 00:00:54,130
+Eight over four is two.
+
+22
+00:00:54,130 --> 00:00:56,037
+Sixteen over eight is two.
+
+23
+00:00:56,437 --> 00:00:59,603
+That fixed answer is
+called the common ratio, r.
+
+24
+00:00:59,603 --> 00:01:01,489
+The first term is called a.
+
+25
+00:01:01,489 --> 00:01:03,481
+Neither a nor r can be zero.
+
+26
+00:01:04,131 --> 00:01:05,850
+Now watch what r does.
+
+27
+00:01:05,850 --> 00:01:08,653
+We keep a as one, and change r live.
+
+28
+00:01:09,053 --> 00:01:12,293
+When r is two, each bar
+is double the one before.
+
+29
+00:01:12,293 --> 00:01:13,641
+The list shoots up.
+
+30
+00:01:14,041 --> 00:01:16,345
+When r is one, nothing changes.
+
+31
+00:01:16,345 --> 00:01:17,701
+One, one, one.
+
+32
+00:01:18,101 --> 00:01:21,508
+When r is a half, each bar
+is half the one before.
+
+33
+00:01:21,508 --> 00:01:24,838
+The list shrinks towards
+zero, but never reaches it.
+
+34
+00:01:25,238 --> 00:01:28,561
+And when r is minus two,
+the sign flips every time.
+
+35
+00:01:28,561 --> 00:01:31,529
+Up, down, up, down, and bigger each time.
+
+36
+00:01:32,179 --> 00:01:34,447
+Now, how do we jump straight to any term?
+
+37
+00:01:34,847 --> 00:01:35,747
+Step one.
+
+38
+00:01:35,509 --> 00:01:36,760
+The first term is a.
+
+39
+00:01:37,510 --> 00:01:38,410
+Step two.
+
+40
+00:01:38,215 --> 00:01:40,039
+The second term is a times r.
+
+41
+00:01:40,789 --> 00:01:41,689
+Step three.
+
+42
+00:01:41,639 --> 00:01:44,033
+The third term is a times r times r.
+
+43
+00:01:44,033 --> 00:01:45,465
+That is a r squared.
+
+44
+00:01:46,215 --> 00:01:47,115
+Step four.
+
+45
+00:01:47,036 --> 00:01:50,105
+Each term has one r fewer
+than its place number.
+
+46
+00:01:50,105 --> 00:01:53,343
+So term n is a times r
+to the power n minus one.
+
+47
+00:01:54,093 --> 00:01:56,874
+For the rumour, a is one and r is two.
+
+48
+00:01:56,874 --> 00:01:58,582
+Hour ten is term eleven.
+
+49
+00:01:58,582 --> 00:02:01,998
+Two to the power ten, one
+thousand and twenty four.
+
+50
+00:02:02,648 --> 00:02:03,689
+Side by side.
+
+51
+00:02:03,689 --> 00:02:05,492
+An AP adds d each time.
+
+52
+00:02:05,492 --> 00:02:07,874
+Its bars climb like a straight ramp.
+
+53
+00:02:08,274 --> 00:02:10,270
+AGP multiplies by r each time.
+
+54
+00:02:10,270 --> 00:02:13,577
+Its bars climb along a curve
+that gets steeper and steeper.
+
+55
+00:02:14,177 --> 00:02:15,077
+Your turn.
+
+56
+00:02:15,022 --> 00:02:18,789
+Is three, six, twelve,
+twenty four an AP or a GP?
+
+57
+00:02:18,789 --> 00:02:19,984
+Pause and think.
+
+58
+00:02:23,184 --> 00:02:24,084
+AGP.
+
+59
+00:02:23,921 --> 00:02:27,465
+Six over three is two, and
+twelve over six is two.
+
+60
+00:02:27,465 --> 00:02:30,535
+The gaps are not equal,
+but the ratios are.
+
+61
+00:02:31,185 --> 00:02:32,330
+Remember this.
+
+62
+00:02:32,330 --> 00:02:37,692
+In a GP, every term divided by the
+one before gives the same number, r.
+
+63
+00:02:38,392 --> 00:02:40,082
+Now, one worked example.
+
+64
+00:02:40,432 --> 00:02:44,746
+Which term of three, six, twelve,
+and so on, is seven hundred and sixty
+
+65
+00:02:44,746 --> 00:02:45,646
+eight?
+
+66
+00:02:45,790 --> 00:02:46,690
+Step one.
+
+67
+00:02:46,642 --> 00:02:47,661
+a is three.
+
+68
+00:02:47,661 --> 00:02:50,290
+r is six over three, which is two.
+
+69
+00:02:51,040 --> 00:02:51,940
+Step two.
+
+70
+00:02:51,797 --> 00:02:55,045
+Term n is three times two
+to the power n minus one.
+
+71
+00:02:55,045 --> 00:02:57,896
+Set it equal to seven
+hundred and sixty eight.
+
+72
+00:02:58,646 --> 00:02:59,576
+Step three.
+
+73
+00:02:59,576 --> 00:03:00,821
+Divide by three.
+
+74
+00:03:00,821 --> 00:03:04,797
+Two to the power n minus one
+is two hundred and fifty six.
+
+75
+00:03:05,547 --> 00:03:06,447
+Step four.
+
+76
+00:03:06,352 --> 00:03:09,599
+Two hundred and fifty six
+is two to the power eight.
+
+77
+00:03:09,599 --> 00:03:11,274
+So n minus one is eight.
+
+78
+00:03:12,024 --> 00:03:13,166
+So n is nine.
+
+79
+00:03:13,166 --> 00:03:16,363
+Seven hundred and sixty
+eight is the ninth term.
+
+80
+00:03:17,013 --> 00:03:18,475
+Now, the exam trap.
+
+81
+00:03:18,825 --> 00:03:21,417
+Find the sixth term of five, ten, twenty.
+
+82
+00:03:21,417 --> 00:03:24,419
+Many students write five
+times two to the power six.
+
+83
+00:03:24,819 --> 00:03:27,248
+But the first term has no r at all.
+
+84
+00:03:27,248 --> 00:03:29,074
+Term six has only five r's.
+
+85
+00:03:29,074 --> 00:03:32,077
+Five times thirty two is
+one hundred and sixty.
+
+86
+00:03:32,727 --> 00:03:34,166
+Where is this asked?
+
+87
+00:03:34,166 --> 00:03:35,161
+In JEE Main.
+
+88
+00:03:35,161 --> 00:03:39,962
+In April twenty sixteen, three terms
+of an AP formed a GP, and the paper
+
+89
+00:03:39,962 --> 00:03:41,798
+asked for its common ratio.
+
+90
+00:03:42,398 --> 00:03:43,554
+Exam level now.
+
+91
+00:03:43,554 --> 00:03:48,161
+In a GP of positive terms, the
+second plus the third term is twelve.
+
+92
+00:03:48,161 --> 00:03:51,190
+The fourth plus the fifth
+term is forty eight.
+
+93
+00:03:51,190 --> 00:03:52,749
+Find the seventh term.
+
+94
+00:03:52,749 --> 00:03:53,955
+Pause and solve.
+
+95
+00:03:59,355 --> 00:04:00,730
+The answer is B.
+
+96
+00:04:00,730 --> 00:04:02,863
+One hundred and twenty eight.
+
+97
+00:04:03,363 --> 00:04:08,212
+The fourth and fifth terms are the
+second and third terms, times r squared.
+
+98
+00:04:08,212 --> 00:04:11,903
+So r squared is forty eight
+over twelve, which is four.
+
+99
+00:04:12,403 --> 00:04:14,741
+The terms are positive, so r is two.
+
+100
+00:04:15,241 --> 00:04:19,689
+Then a r plus a r squared is two
+a plus four a, which is six a.
+
+101
+00:04:19,689 --> 00:04:21,933
+Six a is twelve, so a is two.
+
+102
+00:04:21,933 --> 00:04:26,540
+The seventh term is two times sixty
+four, one hundred and twenty eight.
+
+103
+00:04:27,140 --> 00:04:28,680
+Here is your recap.
+
+104
+00:04:28,680 --> 00:04:30,262
+Screenshot this card.
+
+105
+00:04:33,462 --> 00:04:35,648
+Can you answer these three
+questions without help?
+
+106
+00:04:36,048 --> 00:04:36,948
+One.
+
+107
+00:04:36,482 --> 00:04:38,746
+How do you test if a list is a GP?
+
+108
+00:04:39,646 --> 00:04:40,546
+Two.
+
+109
+00:04:40,079 --> 00:04:43,316
+Find the eighth term of
+one, three, nine, and so on.
+
+110
+00:04:44,216 --> 00:04:45,116
+Three.
+
+111
+00:04:44,790 --> 00:04:48,941
+Why does the n th term have r
+to the power n minus one, not n?
+
+112
+00:04:50,041 --> 00:04:52,330
+Next time: grains on a chessboard.
+
+113
+00:04:52,330 --> 00:04:54,125
+One, two, four, eight.
+
+114
+00:04:54,125 --> 00:04:55,740
+How many grains in all?
+
+115
+00:04:55,740 --> 00:04:57,126
+The sum of a GP.

@@ -1,0 +1,596 @@
+1
+00:00:00,450 --> 00:00:01,387
+Five friends.
+
+2
+00:00:01,387 --> 00:00:02,287
+Two badges.
+
+3
+00:00:02,232 --> 00:00:03,408
+One says captain.
+
+4
+00:00:03,408 --> 00:00:05,200
+The other says vice captain.
+
+5
+00:00:05,600 --> 00:00:08,658
+How many ways can the
+two badges be given out?
+
+6
+00:00:08,658 --> 00:00:10,202
+Most people guess ten.
+
+7
+00:00:10,202 --> 00:00:11,998
+The real answer is twenty.
+
+8
+00:00:12,448 --> 00:00:15,212
+Diya watched this happen at
+her class election today.
+
+9
+00:00:15,562 --> 00:00:17,321
+Meera as captain, Sana as vice.
+
+10
+00:00:17,321 --> 00:00:19,244
+Or Sana as captain, Meera as vice.
+
+11
+00:00:19,244 --> 00:00:20,163
+Same two girls.
+
+12
+00:00:20,163 --> 00:00:21,525
+So why count them twice?
+
+13
+00:00:22,025 --> 00:00:23,859
+Because the two badges are different.
+
+14
+00:00:23,859 --> 00:00:25,954
+When order matters, we count permutations.
+
+15
+00:00:26,604 --> 00:00:28,349
+So what is a permutation?
+
+16
+00:00:28,699 --> 00:00:33,529
+A permutation is an arrangement in a
+definite order of a number of objects,
+
+17
+00:00:33,529 --> 00:00:35,638
+taken some or all at a time.
+
+18
+00:00:36,038 --> 00:00:38,755
+Arrangement means putting
+things into places.
+
+19
+00:00:38,755 --> 00:00:42,601
+Definite order means first place
+and second place are different.
+
+20
+00:00:43,001 --> 00:00:47,216
+Some or all means we may fill
+a few places, or every place.
+
+21
+00:00:47,816 --> 00:00:48,853
+Side by side.
+
+22
+00:00:48,853 --> 00:00:51,465
+Meera is captain, Sana is vice captain.
+
+23
+00:00:51,465 --> 00:00:52,895
+Now swap the badges.
+
+24
+00:00:53,295 --> 00:00:55,859
+Same two people, but
+each has a different job.
+
+25
+00:00:55,859 --> 00:00:57,956
+So these are two different arrangements.
+
+26
+00:00:58,556 --> 00:00:59,491
+Now you try.
+
+27
+00:00:59,491 --> 00:01:03,645
+A lock code one, two, three,
+and a lock code three, two, one.
+
+28
+00:01:03,645 --> 00:01:04,987
+Same, or different?
+
+29
+00:01:04,987 --> 00:01:06,148
+Pause and decide.
+
+30
+00:01:09,348 --> 00:01:10,248
+Different!
+
+31
+00:01:10,061 --> 00:01:12,421
+The lock opens only in the right order.
+
+32
+00:01:12,421 --> 00:01:14,421
+So a lock code is a permutation.
+
+33
+00:01:15,071 --> 00:01:16,446
+Let us count every way.
+
+34
+00:01:16,446 --> 00:01:18,815
+Five friends down the
+side are the captains.
+
+35
+00:01:19,215 --> 00:01:22,025
+The same five across the
+top are the vice captains.
+
+36
+00:01:22,425 --> 00:01:23,991
+Each square is one pair.
+
+37
+00:01:23,991 --> 00:01:26,425
+Ravi captain, Meera vice is one square.
+
+38
+00:01:26,925 --> 00:01:29,346
+But one person cannot wear both badges.
+
+39
+00:01:29,346 --> 00:01:32,294
+So the squares on this
+diagonal are crossed out.
+
+40
+00:01:32,894 --> 00:01:36,220
+Five rows, and four good
+squares in each row.
+
+41
+00:01:36,220 --> 00:01:37,523
+Five times four.
+
+42
+00:01:37,523 --> 00:01:39,261
+Twenty ways, not ten.
+
+43
+00:01:39,911 --> 00:01:41,147
+Now the shortcut.
+
+44
+00:01:41,147 --> 00:01:42,935
+Think of two empty places.
+
+45
+00:01:42,935 --> 00:01:44,422
+The first is captain.
+
+46
+00:01:44,422 --> 00:01:46,867
+Any of the five friends can take it.
+
+47
+00:01:46,867 --> 00:01:47,852
+Five choices.
+
+48
+00:01:48,602 --> 00:01:50,941
+The second place is vice captain.
+
+49
+00:01:50,941 --> 00:01:53,125
+One friend is already used up.
+
+50
+00:01:53,125 --> 00:01:54,989
+So four choices are left.
+
+51
+00:01:55,739 --> 00:01:59,990
+The fundamental principle of
+counting says: multiply the choices.
+
+52
+00:01:59,990 --> 00:02:01,890
+Five times four is twenty.
+
+53
+00:02:02,640 --> 00:02:04,122
+Now make it general.
+
+54
+00:02:04,122 --> 00:02:07,762
+Say we have n different
+things, and r places to fill.
+
+55
+00:02:08,512 --> 00:02:10,746
+The first place has n choices.
+
+56
+00:02:10,746 --> 00:02:12,822
+The second has n minus one.
+
+57
+00:02:12,822 --> 00:02:14,845
+The third has n minus two.
+
+58
+00:02:15,595 --> 00:02:17,794
+Each place uses up one thing.
+
+59
+00:02:17,794 --> 00:02:22,694
+So the last place, place number
+r, has n minus r plus one choices.
+
+60
+00:02:23,444 --> 00:02:24,813
+Multiply them all.
+
+61
+00:02:24,813 --> 00:02:27,048
+This product is written n P r.
+
+62
+00:02:27,048 --> 00:02:29,107
+The P stands for permutation.
+
+63
+00:02:29,857 --> 00:02:30,934
+Watch it grow.
+
+64
+00:02:30,934 --> 00:02:33,584
+Five friends, one more place at a time.
+
+65
+00:02:33,984 --> 00:02:35,746
+One place, five ways.
+
+66
+00:02:35,746 --> 00:02:37,337
+Two places, twenty.
+
+67
+00:02:37,337 --> 00:02:38,981
+Three places, sixty.
+
+68
+00:02:39,381 --> 00:02:41,895
+Four places, one hundred and twenty.
+
+69
+00:02:41,895 --> 00:02:44,770
+Five places, still one hundred and twenty.
+
+70
+00:02:45,370 --> 00:02:46,270
+Quick one.
+
+71
+00:02:46,106 --> 00:02:48,900
+Why did the count stop
+growing at the last place?
+
+72
+00:02:48,900 --> 00:02:49,941
+Pause and think.
+
+73
+00:02:53,141 --> 00:02:56,644
+When four places are filled,
+only one friend is left.
+
+74
+00:02:56,644 --> 00:02:57,544
+One choice.
+
+75
+00:02:57,539 --> 00:02:59,534
+And times one changes nothing.
+
+76
+00:03:00,184 --> 00:03:03,648
+There is a neater way to
+write it, with factorials.
+
+77
+00:03:03,998 --> 00:03:08,707
+n factorial means n times every
+whole number below it, down to one.
+
+78
+00:03:08,707 --> 00:03:11,566
+Five factorial is one hundred and twenty.
+
+79
+00:03:12,316 --> 00:03:15,701
+Our product stops early,
+at n minus r plus one.
+
+80
+00:03:15,701 --> 00:03:19,034
+The part that is missing
+is n minus r factorial.
+
+81
+00:03:19,784 --> 00:03:21,691
+So we divide it away.
+
+82
+00:03:21,691 --> 00:03:25,933
+n P r equals n factorial,
+over n minus r factorial.
+
+83
+00:03:26,683 --> 00:03:27,583
+Check it.
+
+84
+00:03:27,510 --> 00:03:32,336
+Five P two is one hundred and twenty
+over three factorial, which is six.
+
+85
+00:03:32,336 --> 00:03:33,676
+That gives twenty.
+
+86
+00:03:34,326 --> 00:03:35,422
+Remember this.
+
+87
+00:03:35,422 --> 00:03:40,404
+When order matters, n P r counts the
+ways to fill r places from n different
+
+88
+00:03:40,404 --> 00:03:41,304
+things.
+
+89
+00:03:41,780 --> 00:03:43,471
+Now, one worked example.
+
+90
+00:03:43,821 --> 00:03:45,137
+Eight runners race.
+
+91
+00:03:45,137 --> 00:03:48,179
+Gold, silver and bronze
+go to the first three.
+
+92
+00:03:48,179 --> 00:03:50,888
+In how many ways can the medals be given?
+
+93
+00:03:51,388 --> 00:03:52,288
+Step one.
+
+94
+00:03:52,177 --> 00:03:55,450
+Gold is not the same as
+silver, so order matters.
+
+95
+00:03:55,450 --> 00:03:56,981
+This is a permutation.
+
+96
+00:03:57,731 --> 00:03:58,631
+Step two.
+
+97
+00:03:58,540 --> 00:03:59,960
+n is eight runners.
+
+98
+00:03:59,960 --> 00:04:01,331
+r is three medals.
+
+99
+00:04:02,081 --> 00:04:03,038
+Step three.
+
+100
+00:04:03,038 --> 00:04:06,616
+Eight P three is eight
+factorial over five factorial.
+
+101
+00:04:07,366 --> 00:04:08,266
+Step four.
+
+102
+00:04:08,262 --> 00:04:12,957
+Everything from five down cancels,
+leaving eight times seven times six.
+
+103
+00:04:13,707 --> 00:04:16,446
+So there are three hundred
+and thirty six ways.
+
+104
+00:04:17,096 --> 00:04:18,557
+Now, the exam trap.
+
+105
+00:04:18,907 --> 00:04:21,557
+Many students write eight
+times eight times eight.
+
+106
+00:04:21,557 --> 00:04:23,370
+That is five hundred and twelve.
+
+107
+00:04:23,770 --> 00:04:26,075
+But one runner cannot win two medals.
+
+108
+00:04:26,075 --> 00:04:28,489
+n to the power r is only for repeats.
+
+109
+00:04:28,489 --> 00:04:30,939
+Here it is eight times seven times six.
+
+110
+00:04:31,589 --> 00:04:32,811
+Where is this asked?
+
+111
+00:04:32,811 --> 00:04:36,567
+In JEE Main, as questions that build
+numbers from given digits, with no
+
+112
+00:04:36,567 --> 00:04:37,485
+digit repeated.
+
+113
+00:04:38,085 --> 00:04:39,078
+Exam level now.
+
+114
+00:04:39,078 --> 00:04:42,941
+How many four digit even numbers can
+be made from these six digits, with
+
+115
+00:04:42,941 --> 00:04:43,841
+no repeats?
+
+116
+00:04:43,715 --> 00:04:44,750
+Pause and solve.
+
+117
+00:04:50,150 --> 00:04:51,545
+The answer is B.
+
+118
+00:04:51,545 --> 00:04:53,545
+One hundred and fifty six.
+
+119
+00:04:54,045 --> 00:04:57,361
+Even means the last digit
+is zero, two or four.
+
+120
+00:04:57,361 --> 00:05:01,130
+Zero last: the rest take
+five, four and three choices.
+
+121
+00:05:01,130 --> 00:05:02,030
+Sixty.
+
+122
+00:05:02,243 --> 00:05:04,116
+Now put two or four last.
+
+123
+00:05:04,116 --> 00:05:05,616
+That is two choices.
+
+124
+00:05:06,116 --> 00:05:09,301
+The first digit cannot be
+zero or the last digit.
+
+125
+00:05:09,301 --> 00:05:10,285
+Four choices.
+
+126
+00:05:10,285 --> 00:05:11,723
+Then four and three.
+
+127
+00:05:11,723 --> 00:05:14,455
+Two times four times twelve is ninety six.
+
+128
+00:05:14,955 --> 00:05:18,547
+Sixty plus ninety six is
+one hundred and fifty six.
+
+129
+00:05:19,147 --> 00:05:20,687
+Here is your recap.
+
+130
+00:05:20,687 --> 00:05:22,270
+Screenshot this card.
+
+131
+00:05:25,470 --> 00:05:27,656
+Can you answer these three
+questions without help?
+
+132
+00:05:28,056 --> 00:05:28,956
+One.
+
+133
+00:05:28,498 --> 00:05:30,955
+Why is swapping the two badges a new way?
+
+134
+00:05:31,855 --> 00:05:32,755
+Two.
+
+135
+00:05:32,350 --> 00:05:33,652
+Find seven P two.
+
+136
+00:05:34,552 --> 00:05:35,452
+Three.
+
+137
+00:05:35,129 --> 00:05:37,828
+Why is five P four equal to five P five?
+
+138
+00:05:38,928 --> 00:05:40,982
+Next time: APPLE has two P's.
+
+139
+00:05:40,982 --> 00:05:43,125
+Swap them, and nothing changes.
+
+140
+00:05:43,125 --> 00:05:45,783
+So how many words can APPLE really make?

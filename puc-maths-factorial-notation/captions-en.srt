@@ -1,0 +1,475 @@
+1
+00:00:00,450 --> 00:00:03,839
+Five friends want one
+photo, standing in a row.
+
+2
+00:00:04,239 --> 00:00:05,388
+Who stands first?
+
+3
+00:00:05,388 --> 00:00:06,582
+Who stands second?
+
+4
+00:00:06,582 --> 00:00:08,575
+Every new order is a new photo.
+
+5
+00:00:09,025 --> 00:00:11,492
+Aarav offered to take
+every possible photo.
+
+6
+00:00:11,842 --> 00:00:14,103
+He thought it would take a few minutes.
+
+7
+00:00:14,103 --> 00:00:16,314
+It takes one hundred and twenty photos!
+
+8
+00:00:16,314 --> 00:00:17,214
+Why so many?
+
+9
+00:00:17,683 --> 00:00:20,009
+The answer hides in a long product.
+
+10
+00:00:20,009 --> 00:00:22,593
+And maths has a short way to write it.
+
+11
+00:00:22,593 --> 00:00:23,493
+Factorial.
+
+12
+00:00:24,022 --> 00:00:27,012
+Let us count with the
+counting rule from last time.
+
+13
+00:00:27,012 --> 00:00:29,009
+There are five spots in the row.
+
+14
+00:00:29,409 --> 00:00:32,208
+The first spot can take
+any of the five friends.
+
+15
+00:00:32,608 --> 00:00:34,712
+The second spot has four left.
+
+16
+00:00:34,712 --> 00:00:35,629
+Then three.
+
+17
+00:00:35,629 --> 00:00:36,529
+Then two.
+
+18
+00:00:36,447 --> 00:00:37,573
+Then just one.
+
+19
+00:00:37,973 --> 00:00:41,133
+Five times four times
+three times two times one.
+
+20
+00:00:41,133 --> 00:00:43,164
+One hundred and twenty photos.
+
+21
+00:00:43,814 --> 00:00:46,397
+Now watch the count grow
+as the row gets longer.
+
+22
+00:00:46,797 --> 00:00:48,312
+One friend: one way.
+
+23
+00:00:48,312 --> 00:00:49,922
+Two friends: two ways.
+
+24
+00:00:50,322 --> 00:00:52,031
+Three friends: six ways.
+
+25
+00:00:52,031 --> 00:00:53,837
+Four friends: twenty four.
+
+26
+00:00:54,237 --> 00:00:56,402
+Five friends: one hundred and twenty.
+
+27
+00:00:56,402 --> 00:00:57,302
+Ten friends?
+
+28
+00:00:57,222 --> 00:00:59,269
+More than three and a half million.
+
+29
+00:00:59,669 --> 00:01:03,794
+The numbers grow so fast that this
+product needs its own short name.
+
+30
+00:01:04,444 --> 00:01:05,820
+NCERT gives it one.
+
+31
+00:01:05,820 --> 00:01:09,108
+n factorial, written as n
+with an exclamation mark.
+
+32
+00:01:09,508 --> 00:01:13,041
+It means the product of the
+first n natural numbers.
+
+33
+00:01:13,041 --> 00:01:16,481
+One times two times three,
+all the way up to n.
+
+34
+00:01:17,231 --> 00:01:21,992
+So five factorial is one times two
+times three times four times five.
+
+35
+00:01:21,992 --> 00:01:23,735
+One hundred and twenty.
+
+36
+00:01:24,485 --> 00:01:26,915
+Now the trick that makes it powerful.
+
+37
+00:01:26,915 --> 00:01:29,683
+Five factorial is five
+times four factorial.
+
+38
+00:01:30,433 --> 00:01:34,825
+In general, n factorial is n
+times n minus one factorial.
+
+39
+00:01:34,825 --> 00:01:39,615
+Each factorial holds the one
+before it, like boxes inside boxes.
+
+40
+00:01:40,365 --> 00:01:42,426
+But what about zero factorial?
+
+41
+00:01:42,426 --> 00:01:44,436
+There is nothing to multiply.
+
+42
+00:01:44,836 --> 00:01:47,143
+NCERT defines zero factorial as one.
+
+43
+00:01:47,143 --> 00:01:50,560
+Think of it as the number
+of ways to line up nobody.
+
+44
+00:01:50,560 --> 00:01:53,068
+There is exactly one way: do nothing.
+
+45
+00:01:53,668 --> 00:01:55,974
+It also keeps the rule working.
+
+46
+00:01:55,974 --> 00:01:58,930
+One factorial is one times zero factorial.
+
+47
+00:01:58,930 --> 00:02:01,897
+That only works if zero factorial is one.
+
+48
+00:02:02,547 --> 00:02:03,645
+Side by side.
+
+49
+00:02:03,645 --> 00:02:06,250
+Five minus three, then the factorial.
+
+50
+00:02:06,250 --> 00:02:07,867
+That is two factorial.
+
+51
+00:02:07,867 --> 00:02:08,767
+Just two.
+
+52
+00:02:09,101 --> 00:02:11,856
+Now five factorial minus three factorial.
+
+53
+00:02:11,856 --> 00:02:14,196
+One hundred and twenty minus six.
+
+54
+00:02:14,196 --> 00:02:15,998
+One hundred and fourteen.
+
+55
+00:02:15,998 --> 00:02:18,111
+The brackets change everything.
+
+56
+00:02:18,711 --> 00:02:19,646
+Your turn.
+
+57
+00:02:19,646 --> 00:02:24,224
+Is six factorial divided by three
+factorial equal to two factorial?
+
+58
+00:02:24,224 --> 00:02:25,600
+Pause and decide.
+
+59
+00:02:28,800 --> 00:02:29,700
+No!
+
+60
+00:02:29,297 --> 00:02:33,733
+Six factorial over three factorial
+is six times five times four.
+
+61
+00:02:33,733 --> 00:02:35,503
+One hundred and twenty.
+
+62
+00:02:35,503 --> 00:02:38,159
+You cannot divide the numbers inside.
+
+63
+00:02:38,808 --> 00:02:39,810
+Remember this.
+
+64
+00:02:39,810 --> 00:02:43,424
+n factorial multiplies every
+whole number from one up to n.
+
+65
+00:02:43,424 --> 00:02:45,156
+And zero factorial is one.
+
+66
+00:02:45,856 --> 00:02:48,031
+Now, a worked example from the NCERT book.
+
+67
+00:02:48,381 --> 00:02:53,931
+Find x, if one over eight factorial,
+plus one over nine factorial, equals
+
+68
+00:02:53,931 --> 00:02:55,719
+x over ten factorial.
+
+69
+00:02:56,219 --> 00:02:57,119
+Step one.
+
+70
+00:02:57,076 --> 00:03:00,232
+Write the big factorials
+using eight factorial.
+
+71
+00:03:00,232 --> 00:03:03,283
+Nine factorial is nine
+times eight factorial.
+
+72
+00:03:03,283 --> 00:03:06,929
+Ten factorial is ten times
+nine times eight factorial.
+
+73
+00:03:07,679 --> 00:03:08,579
+Step two.
+
+74
+00:03:08,548 --> 00:03:11,154
+Multiply every term by ten factorial.
+
+75
+00:03:11,154 --> 00:03:14,248
+Ten factorial over eight
+factorial is ninety.
+
+76
+00:03:14,248 --> 00:03:17,129
+Ten factorial over nine factorial is ten.
+
+77
+00:03:17,879 --> 00:03:18,821
+Step three.
+
+78
+00:03:18,821 --> 00:03:20,877
+So ninety plus ten equals x.
+
+79
+00:03:21,627 --> 00:03:23,069
+x is one hundred.
+
+80
+00:03:23,719 --> 00:03:25,180
+Now, the exam trap.
+
+81
+00:03:25,530 --> 00:03:28,674
+Many students write zero
+factorial equals zero.
+
+82
+00:03:28,674 --> 00:03:32,734
+Then five factorial over zero
+factorial looks like it breaks.
+
+83
+00:03:33,134 --> 00:03:36,200
+But zero factorial is one, by definition.
+
+84
+00:03:36,200 --> 00:03:41,114
+So five factorial over zero factorial
+is simply one hundred and twenty.
+
+85
+00:03:41,764 --> 00:03:43,351
+Where is this asked?
+
+86
+00:03:43,351 --> 00:03:48,505
+We found no past paper question on
+just this notation, so no chip lights.
+
+87
+00:03:48,505 --> 00:03:54,032
+The type: simplify a ratio of factorials,
+or find n from a factorial equation.
+
+88
+00:03:54,632 --> 00:03:55,909
+Exam level now.
+
+89
+00:03:55,909 --> 00:03:56,809
+Find n.
+
+90
+00:03:56,689 --> 00:03:58,021
+Pause and solve.
+
+91
+00:04:03,421 --> 00:04:04,920
+The answer is C.
+
+92
+00:04:04,920 --> 00:04:05,820
+Seven.
+
+93
+00:04:06,129 --> 00:04:09,573
+Expand the bigger factorial
+down to n factorial.
+
+94
+00:04:09,573 --> 00:04:15,020
+n plus two factorial is n plus two,
+times n plus one, times n factorial.
+
+95
+00:04:15,520 --> 00:04:16,972
+Cancel n factorial.
+
+96
+00:04:16,972 --> 00:04:20,874
+So n plus two, times n plus
+one, equals seventy two.
+
+97
+00:04:21,374 --> 00:04:25,330
+Seventy two is nine times
+eight, two numbers in a row.
+
+98
+00:04:25,330 --> 00:04:28,369
+So n plus two is nine, and n is seven.
+
+99
+00:04:28,969 --> 00:04:30,509
+Here is your recap.
+
+100
+00:04:30,509 --> 00:04:32,092
+Screenshot this card.
+
+101
+00:04:35,292 --> 00:04:37,478
+Can you answer these three
+questions without help?
+
+102
+00:04:37,878 --> 00:04:38,778
+One.
+
+103
+00:04:38,333 --> 00:04:40,165
+What does five factorial mean?
+
+104
+00:04:41,065 --> 00:04:41,965
+Two.
+
+105
+00:04:41,540 --> 00:04:43,796
+Why is zero factorial equal to one?
+
+106
+00:04:44,696 --> 00:04:45,596
+Three.
+
+107
+00:04:45,345 --> 00:04:48,385
+Simplify seven factorial
+over five factorial.
+
+108
+00:04:49,485 --> 00:04:53,042
+Next time: choose a captain and
+a vice captain from your team.
+
+109
+00:04:53,042 --> 00:04:53,955
+Order matters.
+
+110
+00:04:53,955 --> 00:04:56,710
+We count it with permutations
+of distinct objects.

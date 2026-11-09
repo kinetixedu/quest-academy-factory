@@ -1,0 +1,525 @@
+1
+00:00:00,450 --> 00:00:03,919
+One point zero one is only
+a tiny bit more than one.
+
+2
+00:00:04,319 --> 00:00:07,063
+Multiply it by itself a thousand times.
+
+3
+00:00:07,063 --> 00:00:09,000
+Will it beat ten thousand?
+
+4
+00:00:09,450 --> 00:00:10,671
+Aarav guessed no.
+
+5
+00:00:10,671 --> 00:00:14,354
+A tiny step, even a thousand
+times, cannot go that far.
+
+6
+00:00:14,354 --> 00:00:15,254
+Can it?
+
+7
+00:00:15,391 --> 00:00:18,223
+His calculator would
+need a thousand presses.
+
+8
+00:00:18,223 --> 00:00:20,474
+Is there a smarter way to decide?
+
+9
+00:00:20,974 --> 00:00:21,874
+There is.
+
+10
+00:00:21,775 --> 00:00:25,982
+Today the binomial theorem compares
+huge numbers, and finds the middle
+
+11
+00:00:25,982 --> 00:00:26,882
+term.
+
+12
+00:00:27,178 --> 00:00:31,134
+Write one point zero one as
+one plus zero point zero one.
+
+13
+00:00:31,134 --> 00:00:33,909
+Now it is a binomial, with two parts.
+
+14
+00:00:34,309 --> 00:00:39,337
+So one point zero one, to the power
+one thousand, is one plus zero point
+
+15
+00:00:39,337 --> 00:00:42,058
+zero one, to the power one thousand.
+
+16
+00:00:42,458 --> 00:00:45,035
+Every term of this expansion is positive.
+
+17
+00:00:45,035 --> 00:00:47,915
+So adding terms can only
+make the total grow.
+
+18
+00:00:48,565 --> 00:00:51,333
+Watch the terms add up, one by one.
+
+19
+00:00:51,733 --> 00:00:53,427
+The first term is one.
+
+20
+00:00:53,427 --> 00:00:58,028
+The second is one thousand times
+zero point zero one, which is ten.
+
+21
+00:00:58,428 --> 00:01:00,298
+The third is about fifty.
+
+22
+00:01:00,298 --> 00:01:02,646
+Then about one hundred sixty six.
+
+23
+00:01:02,646 --> 00:01:04,350
+The terms keep growing.
+
+24
+00:01:04,750 --> 00:01:07,890
+By the eleventh term, the
+total passes ten thousand.
+
+25
+00:01:07,890 --> 00:01:10,715
+And there are still more
+positive terms to add.
+
+26
+00:01:11,365 --> 00:01:16,640
+So one point zero one, to the power one
+thousand, is bigger than ten thousand.
+
+27
+00:01:16,640 --> 00:01:19,534
+In fact, it is about twenty one thousand.
+
+28
+00:01:20,184 --> 00:01:22,791
+Here is the example from the NCERT book.
+
+29
+00:01:22,791 --> 00:01:27,947
+Which is larger: one point zero one, to
+the power one million, or ten thousand?
+
+30
+00:01:28,347 --> 00:01:29,247
+Step one.
+
+31
+00:01:29,112 --> 00:01:33,348
+Write it as one plus zero point
+zero one, to the power one million.
+
+32
+00:01:34,098 --> 00:01:34,998
+Step two.
+
+33
+00:01:34,899 --> 00:01:38,574
+The second term is one million
+times zero point zero one.
+
+34
+00:01:38,574 --> 00:01:40,529
+That is exactly ten thousand.
+
+35
+00:01:41,279 --> 00:01:42,179
+Step three.
+
+36
+00:01:42,175 --> 00:01:45,322
+One plus ten thousand,
+plus more positive terms.
+
+37
+00:01:45,322 --> 00:01:47,631
+So it is bigger than ten thousand.
+
+38
+00:01:47,631 --> 00:01:49,180
+Two terms were enough.
+
+39
+00:01:49,830 --> 00:01:50,867
+Now you try.
+
+40
+00:01:50,867 --> 00:01:55,631
+Is one point one, to the power ten
+thousand, bigger than one thousand?
+
+41
+00:01:55,631 --> 00:01:56,869
+Pause and think.
+
+42
+00:02:00,069 --> 00:02:00,969
+Yes!
+
+43
+00:02:00,568 --> 00:02:05,444
+The second term is ten thousand times
+zero point one, which is one thousand.
+
+44
+00:02:05,444 --> 00:02:07,858
+Add one, and it is already bigger.
+
+45
+00:02:08,508 --> 00:02:09,839
+Now, the middle term.
+
+46
+00:02:09,839 --> 00:02:11,941
+Think of a row of seats in a cinema.
+
+47
+00:02:12,341 --> 00:02:15,034
+Seven seats have one
+middle seat, the fourth.
+
+48
+00:02:15,034 --> 00:02:18,542
+Eight seats have two middle
+seats, the fourth and the fifth.
+
+49
+00:02:18,942 --> 00:02:20,882
+An expansion is the same.
+
+50
+00:02:20,882 --> 00:02:24,676
+a plus b, to the power
+n, has n plus one terms.
+
+51
+00:02:25,326 --> 00:02:26,767
+So the rule depends on n.
+
+52
+00:02:27,117 --> 00:02:29,659
+If n is even, n plus one is odd.
+
+53
+00:02:29,659 --> 00:02:31,497
+There is one middle term.
+
+54
+00:02:31,497 --> 00:02:34,397
+It is term number n over two, plus one.
+
+55
+00:02:35,147 --> 00:02:37,644
+If n is odd, n plus one is even.
+
+56
+00:02:37,644 --> 00:02:39,549
+There are two middle terms.
+
+57
+00:02:39,549 --> 00:02:43,541
+Term n plus one over two, and
+term n plus three over two.
+
+58
+00:02:44,291 --> 00:02:47,402
+And the middle term has the
+biggest number in front.
+
+59
+00:02:47,402 --> 00:02:50,080
+It sits at the top of the hill of n C r.
+
+60
+00:02:50,730 --> 00:02:51,785
+Side by side.
+
+61
+00:02:51,785 --> 00:02:54,161
+Take a plus b, to the power six.
+
+62
+00:02:54,161 --> 00:02:58,394
+That is seven terms, so the fourth
+term is the only middle term.
+
+63
+00:02:58,794 --> 00:03:01,051
+Now a plus b, to the power seven.
+
+64
+00:03:01,051 --> 00:03:05,364
+That is eight terms, so the fourth
+and the fifth are both middle terms.
+
+65
+00:03:05,965 --> 00:03:06,865
+Quick one.
+
+66
+00:03:06,765 --> 00:03:10,705
+How many middle terms does a
+plus b, to the power nine, have?
+
+67
+00:03:10,705 --> 00:03:11,883
+Pause and decide.
+
+68
+00:03:15,083 --> 00:03:15,983
+Two!
+
+69
+00:03:15,550 --> 00:03:17,954
+Nine is odd, so there are ten terms.
+
+70
+00:03:17,954 --> 00:03:20,734
+The fifth and the sixth
+are the middle terms.
+
+71
+00:03:21,384 --> 00:03:22,464
+Remember this.
+
+72
+00:03:22,464 --> 00:03:23,818
+n plus one terms.
+
+73
+00:03:23,818 --> 00:03:25,687
+Even n, one middle term.
+
+74
+00:03:25,687 --> 00:03:27,556
+Odd n, two middle terms.
+
+75
+00:03:28,256 --> 00:03:29,946
+Now, one worked example.
+
+76
+00:03:30,296 --> 00:03:33,834
+Find the middle term of x
+plus two, to the power eight.
+
+77
+00:03:34,334 --> 00:03:35,234
+Step one.
+
+78
+00:03:35,093 --> 00:03:36,955
+n is eight, which is even.
+
+79
+00:03:36,955 --> 00:03:39,909
+So there is one middle
+term, term number five.
+
+80
+00:03:40,659 --> 00:03:41,559
+Step two.
+
+81
+00:03:41,460 --> 00:03:43,325
+Term five means r is four.
+
+82
+00:03:43,325 --> 00:03:47,925
+So it is eight C four, times x to
+the four, times two to the four.
+
+83
+00:03:48,675 --> 00:03:49,575
+Step three.
+
+84
+00:03:49,551 --> 00:03:51,219
+Eight C four is seventy.
+
+85
+00:03:51,219 --> 00:03:53,086
+Two to the four is sixteen.
+
+86
+00:03:53,086 --> 00:03:57,364
+So the middle term is one thousand
+one hundred twenty x to the four.
+
+87
+00:03:58,014 --> 00:03:59,475
+Now, the exam trap.
+
+88
+00:03:59,825 --> 00:04:03,294
+Find the middle term of x
+plus one, to the power seven.
+
+89
+00:04:03,294 --> 00:04:05,719
+Many students give only the fourth term.
+
+90
+00:04:06,119 --> 00:04:10,384
+But seven is odd, so there are
+eight terms and two middle terms.
+
+91
+00:04:10,384 --> 00:04:14,965
+The fourth and the fifth: thirty
+five x to the four, and thirty five x
+
+92
+00:04:14,965 --> 00:04:15,865
+cubed.
+
+93
+00:04:16,216 --> 00:04:17,502
+Where is this asked?
+
+94
+00:04:17,502 --> 00:04:19,765
+Comparing numbers is in the NCERT book.
+
+95
+00:04:19,765 --> 00:04:23,824
+The middle term is not in the current
+NCERT text, but JEE Main asks it,
+
+96
+00:04:23,824 --> 00:04:26,968
+for example comparing the
+middle terms of two expansions.
+
+97
+00:04:27,568 --> 00:04:28,733
+Exam level now.
+
+98
+00:04:28,733 --> 00:04:31,319
+Find the middle term of this expansion.
+
+99
+00:04:31,319 --> 00:04:32,533
+Pause and solve.
+
+100
+00:04:37,933 --> 00:04:39,248
+The answer is A.
+
+101
+00:04:39,248 --> 00:04:41,440
+One thousand one hundred twenty.
+
+102
+00:04:41,940 --> 00:04:45,210
+n is eight, so there is
+one middle term, the fifth.
+
+103
+00:04:45,210 --> 00:04:46,229
+So r is four.
+
+104
+00:04:46,729 --> 00:04:51,919
+The term is eight C four, times two
+x, to the four, times minus one over
+
+105
+00:04:51,919 --> 00:04:53,336
+x, to the four.
+
+106
+00:04:53,336 --> 00:04:54,530
+The x's cancel.
+
+107
+00:04:55,030 --> 00:05:00,248
+Seventy, times sixteen, times plus one,
+is one thousand one hundred twenty.
+
+108
+00:05:00,248 --> 00:05:03,096
+Minus one to an even power is plus one.
+
+109
+00:05:03,696 --> 00:05:05,236
+Here is your recap.
+
+110
+00:05:05,236 --> 00:05:06,819
+Screenshot this card.
+
+111
+00:05:10,019 --> 00:05:12,205
+Can you answer these three
+questions without help?
+
+112
+00:05:12,605 --> 00:05:13,505
+One.
+
+113
+00:05:13,101 --> 00:05:17,782
+Why does every extra term make one
+plus x, to the n, bigger, when x is
+
+114
+00:05:17,782 --> 00:05:18,682
+positive?
+
+115
+00:05:19,422 --> 00:05:20,322
+Two.
+
+116
+00:05:19,857 --> 00:05:23,595
+How many middle terms does a plus
+b, to the power twelve, have?
+
+117
+00:05:24,495 --> 00:05:25,395
+Three.
+
+118
+00:05:25,043 --> 00:05:29,074
+Which terms are the middle terms
+of a plus b, to the power eleven?
+
+119
+00:05:30,174 --> 00:05:32,762
+Next time: a number pattern with a rule.
+
+120
+00:05:32,762 --> 00:05:34,691
+Can you guess what comes next?
+
+121
+00:05:34,691 --> 00:05:36,566
+We start sequences and series.

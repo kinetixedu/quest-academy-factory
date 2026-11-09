@@ -1,0 +1,574 @@
+1
+00:00:00,450 --> 00:00:01,392
+Two questions.
+
+2
+00:00:01,392 --> 00:00:04,888
+Pick three of five friends for
+a photo, standing in a row.
+
+3
+00:00:04,888 --> 00:00:07,292
+Pick three of five friends for a picnic.
+
+4
+00:00:07,692 --> 00:00:09,426
+Same friends, same number.
+
+5
+00:00:09,426 --> 00:00:12,499
+But one answer is six times
+bigger than the other.
+
+6
+00:00:12,949 --> 00:00:15,130
+Aarav noticed this while
+planning the class trip.
+
+7
+00:00:15,480 --> 00:00:17,852
+How do you know which formula to use?
+
+8
+00:00:17,852 --> 00:00:19,212
+Arrange, or choose?
+
+9
+00:00:19,712 --> 00:00:22,280
+There is one question that
+decides it every time.
+
+10
+00:00:22,280 --> 00:00:23,262
+Let us find it.
+
+11
+00:00:23,912 --> 00:00:25,838
+Here is the deciding question.
+
+12
+00:00:26,188 --> 00:00:29,162
+Pick any two of the chosen
+things, and swap them.
+
+13
+00:00:29,162 --> 00:00:30,736
+Do you get something new?
+
+14
+00:00:31,136 --> 00:00:33,020
+If yes, order matters.
+
+15
+00:00:33,020 --> 00:00:34,736
+It is an arrangement.
+
+16
+00:00:34,736 --> 00:00:35,839
+Use n P r.
+
+17
+00:00:36,239 --> 00:00:38,616
+If no, order does not matter.
+
+18
+00:00:38,616 --> 00:00:40,145
+It is a selection.
+
+19
+00:00:40,145 --> 00:00:41,234
+Use n C r.
+
+20
+00:00:41,884 --> 00:00:44,759
+Let us run the swap test on six problems.
+
+21
+00:00:45,159 --> 00:00:46,681
+A four digit lock code.
+
+22
+00:00:46,681 --> 00:00:49,448
+Swap two digits, and
+the lock will not open.
+
+23
+00:00:49,448 --> 00:00:50,406
+Something new.
+
+24
+00:00:50,406 --> 00:00:51,306
+Arrange.
+
+25
+00:00:51,441 --> 00:00:53,384
+Three toppings on a pizza.
+
+26
+00:00:53,384 --> 00:00:56,094
+Swap two, and it is the same pizza.
+
+27
+00:00:56,094 --> 00:00:56,994
+Choose.
+
+28
+00:00:57,187 --> 00:00:59,699
+Three friends in a row for a photo.
+
+29
+00:00:59,699 --> 00:01:02,040
+Swap two, and the photo changes.
+
+30
+00:01:02,040 --> 00:01:02,940
+Arrange.
+
+31
+00:01:03,159 --> 00:01:04,059
+A handshake.
+
+32
+00:01:03,949 --> 00:01:06,459
+Ravi shakes Sana's hand,
+or Sana shakes Ravi's.
+
+33
+00:01:06,459 --> 00:01:07,583
+The same handshake.
+
+34
+00:01:07,583 --> 00:01:08,483
+Choose.
+
+35
+00:01:08,521 --> 00:01:10,434
+A president and a secretary.
+
+36
+00:01:10,434 --> 00:01:12,650
+Swap them, and the jobs change.
+
+37
+00:01:12,650 --> 00:01:13,550
+Arrange.
+
+38
+00:01:13,347 --> 00:01:14,857
+A committee of three.
+
+39
+00:01:14,857 --> 00:01:16,917
+Swap two, the same committee.
+
+40
+00:01:16,917 --> 00:01:17,817
+Choose.
+
+41
+00:01:18,215 --> 00:01:19,315
+Side by side.
+
+42
+00:01:19,315 --> 00:01:22,086
+The photo row: three friends from five.
+
+43
+00:01:22,086 --> 00:01:23,186
+Five P three.
+
+44
+00:01:23,186 --> 00:01:24,086
+Sixty.
+
+45
+00:01:24,208 --> 00:01:26,891
+The picnic group: three friends from five.
+
+46
+00:01:26,891 --> 00:01:27,901
+Five C three.
+
+47
+00:01:27,901 --> 00:01:28,801
+Ten.
+
+48
+00:01:28,978 --> 00:01:29,954
+Now you try.
+
+49
+00:01:29,954 --> 00:01:31,519
+Five people in a room.
+
+50
+00:01:31,519 --> 00:01:33,369
+Each pair shakes hands once.
+
+51
+00:01:33,369 --> 00:01:34,772
+Arrange, or choose?
+
+52
+00:01:34,772 --> 00:01:35,986
+Pause and decide.
+
+53
+00:01:39,186 --> 00:01:40,086
+Choose!
+
+54
+00:01:39,752 --> 00:01:41,647
+A handshake has no first person.
+
+55
+00:01:41,647 --> 00:01:43,413
+Five C two is ten handshakes.
+
+56
+00:01:44,063 --> 00:01:46,999
+Now, why is sixty exactly six times ten?
+
+57
+00:01:47,349 --> 00:01:51,090
+To make a photo row, first
+choose the three friends.
+
+58
+00:01:51,090 --> 00:01:53,534
+That is five C three, ten ways.
+
+59
+00:01:54,284 --> 00:01:56,625
+Then arrange the three you chose.
+
+60
+00:01:56,625 --> 00:01:59,815
+Three people can stand
+in three factorial ways.
+
+61
+00:01:59,815 --> 00:02:00,715
+Six.
+
+62
+00:02:01,093 --> 00:02:03,766
+So the photo count is ten times six.
+
+63
+00:02:03,766 --> 00:02:04,666
+Sixty.
+
+64
+00:02:05,161 --> 00:02:09,186
+In general, n P r equals
+n C r times r factorial.
+
+65
+00:02:09,186 --> 00:02:11,405
+Choose first, then arrange.
+
+66
+00:02:12,155 --> 00:02:14,472
+This is the tool for mixed problems.
+
+67
+00:02:14,472 --> 00:02:17,361
+Choose with C, then
+arrange with a factorial.
+
+68
+00:02:18,011 --> 00:02:21,877
+Watch both counts for a group
+of size r, from five friends.
+
+69
+00:02:22,277 --> 00:02:24,688
+Size one: five groups, five rows.
+
+70
+00:02:24,688 --> 00:02:27,148
+Size two: ten groups, twenty rows.
+
+71
+00:02:27,548 --> 00:02:29,988
+Size three: ten groups, sixty rows.
+
+72
+00:02:29,988 --> 00:02:33,563
+The rows grow faster, because
+every group gets lined up.
+
+73
+00:02:34,163 --> 00:02:35,063
+Quick one.
+
+74
+00:02:35,027 --> 00:02:38,967
+Is five C three times three
+factorial equal to five P three?
+
+75
+00:02:38,967 --> 00:02:40,188
+Pause and think.
+
+76
+00:02:43,388 --> 00:02:44,288
+Yes!
+
+77
+00:02:43,922 --> 00:02:47,920
+Ten times six is sixty, and
+five P three is also sixty.
+
+78
+00:02:47,920 --> 00:02:49,573
+Choose, then arrange.
+
+79
+00:02:50,223 --> 00:02:51,190
+Remember this.
+
+80
+00:02:51,190 --> 00:02:52,090
+Swap two.
+
+81
+00:02:51,931 --> 00:02:52,897
+Something new?
+
+82
+00:02:52,897 --> 00:02:53,797
+Arrange.
+
+83
+00:02:53,539 --> 00:02:54,439
+Nothing new?
+
+84
+00:02:54,415 --> 00:02:55,315
+Choose.
+
+85
+00:02:55,711 --> 00:02:57,401
+Now, one worked example.
+
+86
+00:02:57,751 --> 00:03:02,596
+From five boys and four girls, choose
+two boys and one girl, and seat them
+
+87
+00:03:02,596 --> 00:03:04,454
+on three chairs in a row.
+
+88
+00:03:04,454 --> 00:03:05,583
+How many ways?
+
+89
+00:03:06,083 --> 00:03:06,983
+Step one.
+
+90
+00:03:06,892 --> 00:03:08,104
+Choose the boys.
+
+91
+00:03:08,104 --> 00:03:10,638
+The order of choosing does not matter.
+
+92
+00:03:10,638 --> 00:03:12,067
+Five C two is ten.
+
+93
+00:03:12,817 --> 00:03:13,717
+Step two.
+
+94
+00:03:13,564 --> 00:03:14,684
+Choose the girl.
+
+95
+00:03:14,684 --> 00:03:16,050
+Four C one is four.
+
+96
+00:03:16,800 --> 00:03:17,700
+Step three.
+
+97
+00:03:17,672 --> 00:03:19,426
+Now seat the three people.
+
+98
+00:03:19,426 --> 00:03:21,662
+Swapping seats gives a new seating.
+
+99
+00:03:21,662 --> 00:03:23,217
+Three factorial is six.
+
+100
+00:03:23,967 --> 00:03:24,867
+Step four.
+
+101
+00:03:24,863 --> 00:03:25,763
+Multiply.
+
+102
+00:03:25,647 --> 00:03:27,502
+Ten times four times six.
+
+103
+00:03:28,252 --> 00:03:30,589
+So there are two hundred and forty ways.
+
+104
+00:03:31,239 --> 00:03:32,701
+Now, the exam trap.
+
+105
+00:03:33,051 --> 00:03:35,051
+Many students stop after choosing.
+
+106
+00:03:35,051 --> 00:03:36,607
+Ten times four is forty.
+
+107
+00:03:37,007 --> 00:03:41,304
+But the question also asks to seat
+them, and chairs have an order.
+
+108
+00:03:41,304 --> 00:03:45,688
+Multiply by three factorial, and
+the answer is two hundred and forty.
+
+109
+00:03:46,338 --> 00:03:47,616
+Where is this asked?
+
+110
+00:03:47,616 --> 00:03:51,674
+In JEE Main, as word problems that mix
+choosing and arranging, like making
+
+111
+00:03:51,674 --> 00:03:53,210
+words from chosen letters.
+
+112
+00:03:53,810 --> 00:03:54,877
+Exam level now.
+
+113
+00:03:54,877 --> 00:03:55,889
+Seven students.
+
+114
+00:03:55,889 --> 00:03:59,052
+First, second and third
+prizes go to three of them.
+
+115
+00:03:59,052 --> 00:04:00,823
+Meera must win one of them.
+
+116
+00:04:00,823 --> 00:04:01,844
+How many ways?
+
+117
+00:04:01,844 --> 00:04:02,956
+Pause and solve.
+
+118
+00:04:08,356 --> 00:04:09,833
+The answer is C.
+
+119
+00:04:09,833 --> 00:04:10,733
+Ninety.
+
+120
+00:04:11,088 --> 00:04:13,774
+The prizes are different,
+so order matters.
+
+121
+00:04:13,774 --> 00:04:17,050
+With no rule, seven P three
+is two hundred and ten.
+
+122
+00:04:17,550 --> 00:04:20,442
+Now remove the ways
+where Meera wins nothing.
+
+123
+00:04:20,442 --> 00:04:22,898
+Then the prizes go to the other six.
+
+124
+00:04:22,898 --> 00:04:25,450
+Six P three is one hundred and twenty.
+
+125
+00:04:25,950 --> 00:04:29,954
+Two hundred and ten minus one
+hundred and twenty is ninety.
+
+126
+00:04:30,554 --> 00:04:32,094
+Here is your recap.
+
+127
+00:04:32,094 --> 00:04:33,677
+Screenshot this card.
+
+128
+00:04:36,877 --> 00:04:39,062
+Can you answer these three
+questions without help?
+
+129
+00:04:39,462 --> 00:04:40,362
+One.
+
+130
+00:04:39,902 --> 00:04:41,326
+What is the swap test?
+
+131
+00:04:42,226 --> 00:04:43,126
+Two.
+
+132
+00:04:42,647 --> 00:04:44,596
+Eight people each shake hands once.
+
+133
+00:04:44,596 --> 00:04:45,777
+How many handshakes?
+
+134
+00:04:46,677 --> 00:04:47,577
+Three.
+
+135
+00:04:47,333 --> 00:04:50,913
+Why is n P r equal to n
+C r times r factorial?
+
+136
+00:04:52,013 --> 00:04:55,963
+Next time: a triangle of numbers
+that expands a plus b to any power.
+
+137
+00:04:55,963 --> 00:04:57,279
+Meet Pascal's triangle.

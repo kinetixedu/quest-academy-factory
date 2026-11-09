@@ -1,0 +1,589 @@
+1
+00:00:00,450 --> 00:00:05,391
+Can you add every number from one to
+one hundred, in less than ten seconds?
+
+2
+00:00:05,791 --> 00:00:08,008
+Diya tried it at the study table.
+
+3
+00:00:08,008 --> 00:00:09,681
+One plus two plus three.
+
+4
+00:00:09,681 --> 00:00:11,057
+It was taking ages.
+
+5
+00:00:11,507 --> 00:00:15,086
+A famous story says young Carl Friedrich
+Gauss did a sum like this in moments.
+
+6
+00:00:15,436 --> 00:00:16,610
+No calculator.
+
+7
+00:00:16,610 --> 00:00:19,088
+Just one clever idea about pairs.
+
+8
+00:00:19,588 --> 00:00:23,203
+That idea gives us the sum
+of an arithmetic progression.
+
+9
+00:00:23,853 --> 00:00:24,973
+Quick reminder.
+
+10
+00:00:24,973 --> 00:00:29,493
+An arithmetic progression, or AP,
+adds the same number every time.
+
+11
+00:00:29,893 --> 00:00:31,960
+Like saving twenty rupees every week.
+
+12
+00:00:31,960 --> 00:00:33,843
+Twenty, forty, sixty, eighty.
+
+13
+00:00:34,243 --> 00:00:36,048
+The first term is called a.
+
+14
+00:00:36,048 --> 00:00:39,409
+The number we keep adding
+is d, the common difference.
+
+15
+00:00:39,809 --> 00:00:43,502
+To reach term n, we add
+d only n minus one times.
+
+16
+00:00:43,502 --> 00:00:46,177
+So term n is a plus n minus one d.
+
+17
+00:00:46,777 --> 00:00:50,811
+This sum is a Class 10 topic, so the
+Class 11 NCERT text now skips it.
+
+18
+00:00:50,811 --> 00:00:52,237
+JEE Main still asks it.
+
+19
+00:00:52,837 --> 00:00:53,877
+Now the trick.
+
+20
+00:00:53,877 --> 00:00:57,097
+Write the sum forwards,
+from one up to one hundred.
+
+21
+00:00:57,497 --> 00:01:01,782
+Under it, write the same sum backwards,
+from one hundred down to one.
+
+22
+00:01:02,182 --> 00:01:03,339
+Add each column.
+
+23
+00:01:03,339 --> 00:01:06,152
+One plus one hundred
+is one hundred and one.
+
+24
+00:01:06,152 --> 00:01:09,248
+Two plus ninety nine,
+again one hundred and one.
+
+25
+00:01:09,648 --> 00:01:13,428
+Every column makes one hundred and
+one, and there are one hundred columns.
+
+26
+00:01:13,828 --> 00:01:17,616
+So both rows make one hundred
+times one hundred and one.
+
+27
+00:01:17,616 --> 00:01:19,393
+Ten thousand one hundred.
+
+28
+00:01:19,793 --> 00:01:21,769
+But we wrote the sum twice.
+
+29
+00:01:21,769 --> 00:01:23,281
+So one sum is half.
+
+30
+00:01:23,281 --> 00:01:24,984
+Five thousand and fifty.
+
+31
+00:01:25,634 --> 00:01:28,054
+Here is the same trick as a picture.
+
+32
+00:01:28,054 --> 00:01:30,846
+A staircase of blocks: one, two, three.
+
+33
+00:01:31,246 --> 00:01:34,352
+Turn a copy upside down and fit it on top.
+
+34
+00:01:34,352 --> 00:01:38,110
+Now it is a rectangle, n
+wide and n plus one tall.
+
+35
+00:01:38,510 --> 00:01:39,578
+Watch n grow.
+
+36
+00:01:39,578 --> 00:01:42,369
+One staircase is always
+half the rectangle.
+
+37
+00:01:42,769 --> 00:01:47,876
+So one plus two, up to n, is
+n times n plus one, over two.
+
+38
+00:01:48,526 --> 00:01:49,665
+Now any AP.
+
+39
+00:01:49,665 --> 00:01:52,216
+Its sum of n terms is called S n.
+
+40
+00:01:52,216 --> 00:01:54,213
+Its last term is called l.
+
+41
+00:01:54,613 --> 00:01:55,513
+Step one.
+
+42
+00:01:55,481 --> 00:01:57,004
+Write S n forwards.
+
+43
+00:01:57,004 --> 00:01:59,363
+a, then a plus d, up to l.
+
+44
+00:02:00,113 --> 00:02:01,013
+Step two.
+
+45
+00:02:00,952 --> 00:02:02,364
+Write it backwards.
+
+46
+00:02:02,364 --> 00:02:04,800
+l, then l minus d, down to a.
+
+47
+00:02:05,550 --> 00:02:06,494
+Step three.
+
+48
+00:02:06,494 --> 00:02:07,602
+Add the rows.
+
+49
+00:02:07,602 --> 00:02:11,163
+One term goes up by d,
+the other goes down by d.
+
+50
+00:02:11,163 --> 00:02:13,287
+So every column is a plus l.
+
+51
+00:02:14,037 --> 00:02:14,937
+Step four.
+
+52
+00:02:14,840 --> 00:02:16,214
+There are n columns.
+
+53
+00:02:16,214 --> 00:02:18,612
+So two S n equals n times a plus l.
+
+54
+00:02:19,362 --> 00:02:20,343
+Step five.
+
+55
+00:02:20,343 --> 00:02:21,618
+Divide by two.
+
+56
+00:02:21,618 --> 00:02:24,832
+S n equals n over two, times a plus l.
+
+57
+00:02:25,582 --> 00:02:28,043
+And l is a plus n minus one d.
+
+58
+00:02:28,043 --> 00:02:33,500
+Put that in, and S n equals n over
+two, times two a plus n minus one d.
+
+59
+00:02:34,250 --> 00:02:35,276
+Side by side.
+
+60
+00:02:35,276 --> 00:02:37,575
+The first form needs the last term.
+
+61
+00:02:37,975 --> 00:02:41,128
+The second form needs the
+common difference instead.
+
+62
+00:02:41,728 --> 00:02:42,628
+Your turn.
+
+63
+00:02:42,561 --> 00:02:45,298
+Three, seven, eleven, for twenty terms.
+
+64
+00:02:45,298 --> 00:02:46,819
+Which form is quicker?
+
+65
+00:02:46,819 --> 00:02:47,997
+Pause and think.
+
+66
+00:02:51,197 --> 00:02:52,219
+The second one.
+
+67
+00:02:52,219 --> 00:02:55,674
+We know d is four, but we do
+not know the last term yet.
+
+68
+00:02:56,324 --> 00:02:57,315
+Remember this.
+
+69
+00:02:57,315 --> 00:03:01,526
+The sum is the number of terms, times
+the average of the first and the
+
+70
+00:03:01,526 --> 00:03:02,426
+last.
+
+71
+00:03:02,744 --> 00:03:04,505
+That average has a name.
+
+72
+00:03:04,505 --> 00:03:06,628
+The arithmetic mean, or AM.
+
+73
+00:03:07,028 --> 00:03:10,750
+The arithmetic mean of a
+and b is a plus b, over two.
+
+74
+00:03:10,750 --> 00:03:13,172
+It sits exactly halfway between them.
+
+75
+00:03:13,572 --> 00:03:15,535
+Like meeting a friend halfway.
+
+76
+00:03:15,535 --> 00:03:18,292
+You stand at four, she stands at sixteen.
+
+77
+00:03:18,292 --> 00:03:19,527
+You meet at ten.
+
+78
+00:03:19,527 --> 00:03:21,997
+And four, ten, sixteen is an AP.
+
+79
+00:03:22,597 --> 00:03:24,620
+We can fit in more numbers.
+
+80
+00:03:24,620 --> 00:03:29,751
+To put k means between a and b, cut
+the gap into k plus one equal steps.
+
+81
+00:03:30,151 --> 00:03:31,467
+One mean gives ten.
+
+82
+00:03:31,467 --> 00:03:33,488
+Two means give eight and twelve.
+
+83
+00:03:33,488 --> 00:03:36,065
+Three means give seven, ten and thirteen.
+
+84
+00:03:36,715 --> 00:03:37,615
+Quick one.
+
+85
+00:03:37,497 --> 00:03:40,273
+What is the arithmetic
+mean of six and twenty?
+
+86
+00:03:40,273 --> 00:03:41,378
+Pause and think.
+
+87
+00:03:44,578 --> 00:03:45,478
+Thirteen.
+
+88
+00:03:45,307 --> 00:03:49,210
+Six plus twenty is twenty six,
+and half of that is thirteen.
+
+89
+00:03:49,860 --> 00:03:51,550
+Now, one worked example.
+
+90
+00:03:51,900 --> 00:03:56,122
+Find the sum of the first twenty
+terms of three, seven, eleven, and so
+
+91
+00:03:56,122 --> 00:03:57,022
+on.
+
+92
+00:03:57,036 --> 00:03:57,936
+Step one.
+
+93
+00:03:57,871 --> 00:03:58,869
+a is three.
+
+94
+00:03:58,869 --> 00:04:01,649
+d is seven minus three, which is four.
+
+95
+00:04:01,649 --> 00:04:02,963
+And n is twenty.
+
+96
+00:04:03,713 --> 00:04:04,613
+Step two.
+
+97
+00:04:04,557 --> 00:04:08,637
+S twenty is twenty over two,
+times six plus nineteen fours.
+
+98
+00:04:09,387 --> 00:04:10,287
+Step three.
+
+99
+00:04:10,243 --> 00:04:12,244
+Nineteen fours make seventy six.
+
+100
+00:04:12,244 --> 00:04:14,311
+So we get ten times eighty two.
+
+101
+00:04:15,061 --> 00:04:15,961
+Step four.
+
+102
+00:04:15,783 --> 00:04:17,835
+The sum is eight hundred and twenty.
+
+103
+00:04:18,585 --> 00:04:19,485
+Check.
+
+104
+00:04:19,194 --> 00:04:23,919
+Twenty times forty one, the average
+of three and seventy nine, gives eight
+
+105
+00:04:23,919 --> 00:04:25,297
+hundred and twenty.
+
+106
+00:04:25,947 --> 00:04:27,409
+Now, the exam trap.
+
+107
+00:04:27,759 --> 00:04:30,480
+Add the odd numbers
+from one to ninety nine.
+
+108
+00:04:30,480 --> 00:04:32,728
+Many students take n as ninety nine.
+
+109
+00:04:33,128 --> 00:04:35,419
+Only every second number is odd.
+
+110
+00:04:35,419 --> 00:04:40,302
+Ninety nine is one plus forty nine
+twos, so n is fifty, and the sum is
+
+111
+00:04:40,302 --> 00:04:42,158
+two thousand five hundred.
+
+112
+00:04:42,808 --> 00:04:44,252
+Where is this asked?
+
+113
+00:04:44,252 --> 00:04:48,797
+JEE Main, January twenty nineteen:
+two sums of an AP are linked, find
+
+114
+00:04:48,797 --> 00:04:49,941
+its tenth term.
+
+115
+00:04:50,541 --> 00:04:51,784
+Exam level now.
+
+116
+00:04:51,784 --> 00:04:56,169
+The sum of n terms of an AP
+is three n squared plus two n.
+
+117
+00:04:56,169 --> 00:04:57,740
+Find the tenth term.
+
+118
+00:04:57,740 --> 00:04:59,036
+Pause and solve.
+
+119
+00:05:04,436 --> 00:05:05,956
+The answer is B.
+
+120
+00:05:05,956 --> 00:05:07,040
+Fifty nine.
+
+121
+00:05:07,540 --> 00:05:12,234
+The tenth term is the sum of ten
+terms, minus the sum of nine terms.
+
+122
+00:05:12,734 --> 00:05:15,155
+S ten is three hundred and twenty.
+
+123
+00:05:15,155 --> 00:05:17,739
+S nine is two hundred and sixty one.
+
+124
+00:05:18,239 --> 00:05:19,691
+Subtract: fifty nine.
+
+125
+00:05:19,691 --> 00:05:21,161
+Option D is the trap.
+
+126
+00:05:21,161 --> 00:05:23,248
+That is the sum, not the term.
+
+127
+00:05:23,848 --> 00:05:25,388
+Here is your recap.
+
+128
+00:05:25,388 --> 00:05:26,970
+Screenshot this card.
+
+129
+00:05:30,170 --> 00:05:32,356
+Can you answer these three
+questions without help?
+
+130
+00:05:32,756 --> 00:05:33,656
+One.
+
+131
+00:05:33,211 --> 00:05:36,067
+Why does every column
+add up to the same total?
+
+132
+00:05:36,967 --> 00:05:37,867
+Two.
+
+133
+00:05:37,416 --> 00:05:40,229
+Find the sum of the first
+fifty natural numbers.
+
+134
+00:05:41,129 --> 00:05:42,029
+Three.
+
+135
+00:05:41,681 --> 00:05:44,832
+Insert two arithmetic means
+between three and eighteen.
+
+136
+00:05:45,932 --> 00:05:48,772
+Next time: a rumour
+that doubles every hour.
+
+137
+00:05:48,772 --> 00:05:50,394
+Multiplying, not adding.
+
+138
+00:05:50,394 --> 00:05:52,016
+The geometric progression.

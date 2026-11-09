@@ -1,0 +1,515 @@
+1
+00:00:00,450 --> 00:00:03,165
+One, plus four, plus nine, plus sixteen.
+
+2
+00:00:03,165 --> 00:00:04,993
+These are the square numbers.
+
+3
+00:00:05,393 --> 00:00:08,357
+Diya was laying square
+tiles at the study table.
+
+4
+00:00:08,357 --> 00:00:12,195
+A one by one square, then two
+by two, then three by three.
+
+5
+00:00:12,645 --> 00:00:15,221
+How many tiles for the first ten squares?
+
+6
+00:00:15,221 --> 00:00:16,648
+Or the first hundred?
+
+7
+00:00:16,998 --> 00:00:19,046
+Adding them one by one is slow.
+
+8
+00:00:19,046 --> 00:00:21,667
+But one formula does it in a single step.
+
+9
+00:00:22,167 --> 00:00:24,274
+Today: the sum of special series.
+
+10
+00:00:24,274 --> 00:00:27,193
+Natural numbers, their
+squares, and their cubes.
+
+11
+00:00:27,843 --> 00:00:29,987
+First, a short sign for adding.
+
+12
+00:00:29,987 --> 00:00:33,708
+The Greek letter sigma, a
+big S, means add them all up.
+
+13
+00:00:34,108 --> 00:00:39,157
+Sigma k, from one to n, means one,
+plus two, plus three, all the way to
+
+14
+00:00:39,157 --> 00:00:40,057
+n.
+
+15
+00:00:39,967 --> 00:00:41,836
+We already know this one.
+
+16
+00:00:41,836 --> 00:00:45,739
+The staircase trick gives n
+times n plus one, over two.
+
+17
+00:00:46,340 --> 00:00:47,240
+One note.
+
+18
+00:00:46,969 --> 00:00:49,572
+These sums were dropped
+from the current NCERT text.
+
+19
+00:00:49,572 --> 00:00:50,717
+JEE still asks them.
+
+20
+00:00:51,317 --> 00:00:52,512
+Now the squares.
+
+21
+00:00:52,512 --> 00:00:55,466
+Watch the tiles grow,
+one square at a time.
+
+22
+00:00:55,866 --> 00:00:56,766
+One tile.
+
+23
+00:00:56,568 --> 00:00:57,886
+Four more makes five.
+
+24
+00:00:57,886 --> 00:00:59,376
+Nine more makes fourteen.
+
+25
+00:00:59,376 --> 00:01:00,908
+Sixteen more makes thirty.
+
+26
+00:01:01,308 --> 00:01:02,221
+Keep going.
+
+27
+00:01:02,221 --> 00:01:04,255
+Fifty five, then ninety one.
+
+28
+00:01:04,655 --> 00:01:06,065
+Is there a rule?
+
+29
+00:01:06,065 --> 00:01:10,413
+Try n times n plus one, times
+two n plus one, over six.
+
+30
+00:01:10,413 --> 00:01:12,544
+It hits every total exactly.
+
+31
+00:01:13,194 --> 00:01:14,970
+Why does that rule work?
+
+32
+00:01:14,970 --> 00:01:17,641
+Here is a neat trick, in five steps.
+
+33
+00:01:18,041 --> 00:01:18,941
+Step one.
+
+34
+00:01:18,918 --> 00:01:23,848
+For any number k, k cubed minus k
+minus one cubed works out to three k
+
+35
+00:01:23,848 --> 00:01:26,480
+squared, minus three k, plus one.
+
+36
+00:01:27,230 --> 00:01:28,130
+Step two.
+
+37
+00:01:27,994 --> 00:01:32,229
+Write this line for k equals one,
+two, three, all the way to n.
+
+38
+00:01:32,229 --> 00:01:33,815
+Then add all the lines.
+
+39
+00:01:34,565 --> 00:01:35,530
+Step three.
+
+40
+00:01:35,530 --> 00:01:38,445
+On the left, the cubes cancel in pairs.
+
+41
+00:01:38,445 --> 00:01:40,113
+Only n cubed survives.
+
+42
+00:01:40,863 --> 00:01:41,763
+Step four.
+
+43
+00:01:41,732 --> 00:01:46,320
+On the right, we get three times the
+sum of squares, minus three times
+
+44
+00:01:46,320 --> 00:01:48,079
+the sum of k, plus n.
+
+45
+00:01:48,829 --> 00:01:49,729
+Step five.
+
+46
+00:01:49,723 --> 00:01:52,170
+Put in the sum of k, and solve.
+
+47
+00:01:52,170 --> 00:01:57,434
+The sum of squares is n times n plus
+one, times two n plus one, over six.
+
+48
+00:01:58,184 --> 00:01:59,234
+Now the cubes.
+
+49
+00:01:59,234 --> 00:02:01,613
+One, plus eight, plus twenty seven.
+
+50
+00:02:01,613 --> 00:02:03,472
+Watch what the totals become.
+
+51
+00:02:03,872 --> 00:02:04,772
+One.
+
+52
+00:02:04,313 --> 00:02:05,213
+Nine.
+
+53
+00:02:04,798 --> 00:02:05,698
+Thirty six.
+
+54
+00:02:05,593 --> 00:02:06,493
+One hundred.
+
+55
+00:02:06,432 --> 00:02:08,344
+Every total is a perfect square!
+
+56
+00:02:08,744 --> 00:02:12,017
+And look at the sides:
+one, three, six, ten.
+
+57
+00:02:12,017 --> 00:02:13,765
+Those are the sums of k.
+
+58
+00:02:13,765 --> 00:02:16,913
+So the sum of cubes is
+the sum of k, squared.
+
+59
+00:02:17,513 --> 00:02:18,571
+Side by side.
+
+60
+00:02:18,571 --> 00:02:23,344
+The sum of squares has a six at the
+bottom, and two n plus one on top.
+
+61
+00:02:23,744 --> 00:02:25,917
+The sum of cubes is simpler.
+
+62
+00:02:25,917 --> 00:02:29,094
+Just square n times n plus one, over two.
+
+63
+00:02:29,694 --> 00:02:30,594
+Your turn.
+
+64
+00:02:30,506 --> 00:02:34,022
+Is the sum of the first n
+cubes always a perfect square?
+
+65
+00:02:34,022 --> 00:02:35,170
+Pause and think.
+
+66
+00:02:38,370 --> 00:02:39,270
+Yes.
+
+67
+00:02:38,901 --> 00:02:42,134
+It is n times n plus
+one over two, squared.
+
+68
+00:02:42,134 --> 00:02:46,179
+And n times n plus one over
+two is always a whole number.
+
+69
+00:02:46,829 --> 00:02:47,816
+Remember this.
+
+70
+00:02:47,816 --> 00:02:52,177
+Three sums, three formulas: for
+k, for k squared, and for k cubed.
+
+71
+00:02:52,877 --> 00:02:54,568
+Now, one worked example.
+
+72
+00:02:54,918 --> 00:02:57,581
+Find the sum of the
+first ten square numbers.
+
+73
+00:02:57,581 --> 00:02:59,834
+One, plus four, up to one hundred.
+
+74
+00:03:00,334 --> 00:03:01,234
+Step one.
+
+75
+00:03:01,052 --> 00:03:02,095
+Here n is ten.
+
+76
+00:03:02,845 --> 00:03:03,745
+Step two.
+
+77
+00:03:03,670 --> 00:03:04,606
+Put it in.
+
+78
+00:03:04,606 --> 00:03:07,958
+Ten, times eleven, times
+twenty one, over six.
+
+79
+00:03:08,708 --> 00:03:09,608
+Step three.
+
+80
+00:03:09,553 --> 00:03:12,060
+Ten times eleven is one hundred and ten.
+
+81
+00:03:12,060 --> 00:03:15,503
+Times twenty one gives two
+thousand three hundred and ten.
+
+82
+00:03:16,253 --> 00:03:17,153
+Step four.
+
+83
+00:03:17,046 --> 00:03:18,075
+Divide by six.
+
+84
+00:03:18,075 --> 00:03:20,607
+The sum is three hundred and eighty five.
+
+85
+00:03:21,357 --> 00:03:22,988
+And the first ten cubes?
+
+86
+00:03:22,988 --> 00:03:26,138
+Fifty five squared, three
+thousand and twenty five.
+
+87
+00:03:26,788 --> 00:03:28,249
+Now, the exam trap.
+
+88
+00:03:28,599 --> 00:03:32,425
+Many students think the sum of
+squares is the sum of k, squared.
+
+89
+00:03:32,425 --> 00:03:33,697
+Try n equals three.
+
+90
+00:03:34,097 --> 00:03:37,774
+The sum of k, squared, is
+six squared, thirty six.
+
+91
+00:03:37,774 --> 00:03:40,837
+But one plus four plus
+nine is only fourteen.
+
+92
+00:03:40,837 --> 00:03:44,252
+Squaring the sum gives the
+cubes, not the squares.
+
+93
+00:03:44,902 --> 00:03:46,358
+Where is this asked?
+
+94
+00:03:46,358 --> 00:03:47,365
+In JEE Main.
+
+95
+00:03:47,365 --> 00:03:51,890
+In April twenty nineteen, a paper
+asked for one, plus two times three,
+
+96
+00:03:51,890 --> 00:03:54,754
+plus three times five, up to eleven terms.
+
+97
+00:03:55,354 --> 00:03:56,595
+Exam level now.
+
+98
+00:03:56,595 --> 00:04:00,957
+Find the sum of k times k plus
+one, for k from one to ten.
+
+99
+00:04:00,957 --> 00:04:02,250
+Pause and solve.
+
+100
+00:04:07,650 --> 00:04:09,062
+The answer is B.
+
+101
+00:04:09,062 --> 00:04:10,858
+Four hundred and forty.
+
+102
+00:04:11,358 --> 00:04:12,726
+Open the bracket.
+
+103
+00:04:12,726 --> 00:04:15,880
+k times k plus one is k squared, plus k.
+
+104
+00:04:16,380 --> 00:04:18,184
+So the sum splits in two.
+
+105
+00:04:18,184 --> 00:04:21,987
+The squares up to ten add to
+three hundred and eighty five.
+
+106
+00:04:21,987 --> 00:04:23,947
+The sum of k is fifty five.
+
+107
+00:04:24,447 --> 00:04:26,683
+Add them: four hundred and forty.
+
+108
+00:04:26,683 --> 00:04:28,200
+Option A is the trap.
+
+109
+00:04:28,200 --> 00:04:29,764
+It forgets the plus k.
+
+110
+00:04:30,364 --> 00:04:31,904
+Here is your recap.
+
+111
+00:04:31,904 --> 00:04:33,486
+Screenshot this card.
+
+112
+00:04:36,686 --> 00:04:38,872
+Can you answer these three
+questions without help?
+
+113
+00:04:39,272 --> 00:04:40,172
+One.
+
+114
+00:04:39,683 --> 00:04:41,383
+What does the sigma sign mean?
+
+115
+00:04:42,283 --> 00:04:43,183
+Two.
+
+116
+00:04:42,728 --> 00:04:46,179
+Find one, plus four, plus
+nine, up to the fifth square.
+
+117
+00:04:47,079 --> 00:04:47,979
+Three.
+
+118
+00:04:47,594 --> 00:04:50,338
+Why is the sum of cubes
+always a perfect square?
+
+119
+00:04:51,438 --> 00:04:54,349
+That completes Chapter
+8, sequences and series.
+
+120
+00:04:54,349 --> 00:04:57,755
+Every episode is in the PUC
+Maths Class eleven playlist.

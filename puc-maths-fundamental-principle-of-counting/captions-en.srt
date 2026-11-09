@@ -1,0 +1,545 @@
+1
+00:00:00,450 --> 00:00:03,363
+Diya has three shirts and
+four pants in her cupboard.
+
+2
+00:00:03,763 --> 00:00:06,912
+Every morning she picks one
+shirt and one pair of pants.
+
+3
+00:00:07,362 --> 00:00:10,521
+Today she wonders how many different
+outfits she can really make.
+
+4
+00:00:10,871 --> 00:00:11,771
+Seven?
+
+5
+00:00:11,379 --> 00:00:12,279
+Twelve?
+
+6
+00:00:11,929 --> 00:00:14,894
+Is there a way to know,
+without trying them all on?
+
+7
+00:00:15,394 --> 00:00:16,294
+Yes.
+
+8
+00:00:15,859 --> 00:00:20,222
+It is the first rule of counting, and
+every counting problem in this chapter
+
+9
+00:00:20,222 --> 00:00:21,352
+is built on it.
+
+10
+00:00:22,002 --> 00:00:23,865
+First, let us just try them.
+
+11
+00:00:23,865 --> 00:00:26,134
+Call the shirts red, blue and green.
+
+12
+00:00:26,534 --> 00:00:27,752
+Pick the red shirt.
+
+13
+00:00:27,752 --> 00:00:29,985
+It can go with any of the four pants.
+
+14
+00:00:29,985 --> 00:00:30,885
+Four outfits.
+
+15
+00:00:31,248 --> 00:00:33,121
+The blue shirt also gets four.
+
+16
+00:00:33,121 --> 00:00:34,586
+So does the green one.
+
+17
+00:00:34,986 --> 00:00:36,601
+Four, plus four, plus four.
+
+18
+00:00:36,601 --> 00:00:37,501
+Twelve outfits.
+
+19
+00:00:37,462 --> 00:00:38,846
+That is three times four.
+
+20
+00:00:39,496 --> 00:00:41,666
+Here is a picture that shows why.
+
+21
+00:00:41,666 --> 00:00:43,545
+It is called a tree diagram.
+
+22
+00:00:43,945 --> 00:00:47,947
+The first choice splits into three
+branches, one for each shirt.
+
+23
+00:00:48,347 --> 00:00:52,378
+Each branch splits again into
+four, one for each pair of pants.
+
+24
+00:00:52,778 --> 00:00:54,483
+Count the tips at the end.
+
+25
+00:00:54,483 --> 00:00:55,383
+Twelve.
+
+26
+00:00:55,072 --> 00:00:56,635
+Every tip is one outfit.
+
+27
+00:00:57,235 --> 00:00:58,904
+Now add a third choice.
+
+28
+00:00:58,904 --> 00:01:00,318
+Two pairs of shoes.
+
+29
+00:01:00,318 --> 00:01:02,135
+Every tip splits into two.
+
+30
+00:01:02,535 --> 00:01:04,122
+Twelve becomes twenty four.
+
+31
+00:01:04,122 --> 00:01:05,762
+Three times four times two.
+
+32
+00:01:06,412 --> 00:01:09,188
+This is the fundamental
+principle of counting.
+
+33
+00:01:09,188 --> 00:01:10,823
+NCERT says it like this.
+
+34
+00:01:11,223 --> 00:01:15,935
+If one event can happen in m different
+ways, and after it another event
+
+35
+00:01:15,935 --> 00:01:20,917
+can happen in n different ways, then
+the two together can happen in m times
+
+36
+00:01:20,917 --> 00:01:21,817
+n ways.
+
+37
+00:01:22,414 --> 00:01:23,905
+And it keeps going.
+
+38
+00:01:23,905 --> 00:01:25,882
+A third event with p ways?
+
+39
+00:01:25,882 --> 00:01:27,041
+Multiply again.
+
+40
+00:01:27,041 --> 00:01:28,542
+m times n times p.
+
+41
+00:01:29,292 --> 00:01:31,064
+Why multiply, and not add?
+
+42
+00:01:31,064 --> 00:01:35,463
+Because every choice of the first pairs
+up with every choice of the second.
+
+43
+00:01:36,113 --> 00:01:37,109
+Side by side.
+
+44
+00:01:37,109 --> 00:01:39,018
+A shirt and a pair of pants.
+
+45
+00:01:39,018 --> 00:01:40,485
+You make both choices.
+
+46
+00:01:40,485 --> 00:01:41,385
+So multiply.
+
+47
+00:01:41,380 --> 00:01:43,132
+Three times four is twelve.
+
+48
+00:01:43,532 --> 00:01:44,641
+Tea or coffee.
+
+49
+00:01:44,641 --> 00:01:46,514
+You pick only one of them.
+
+50
+00:01:46,514 --> 00:01:47,414
+So add.
+
+51
+00:01:47,220 --> 00:01:51,409
+Three kinds of tea, or two kinds
+of coffee, gives five drinks.
+
+52
+00:01:52,009 --> 00:01:52,909
+Your turn.
+
+53
+00:01:52,858 --> 00:01:55,670
+A canteen has four
+snacks and three drinks.
+
+54
+00:01:55,670 --> 00:01:57,885
+You buy one snack and one drink.
+
+55
+00:01:57,885 --> 00:01:59,633
+Seven combos, or twelve?
+
+56
+00:01:59,633 --> 00:02:00,882
+Pause and decide.
+
+57
+00:02:04,082 --> 00:02:04,982
+Twelve!
+
+58
+00:02:04,693 --> 00:02:07,173
+You choose a snack and a drink, both.
+
+59
+00:02:07,173 --> 00:02:08,073
+So multiply.
+
+60
+00:02:08,071 --> 00:02:09,255
+Four times three.
+
+61
+00:02:09,905 --> 00:02:10,930
+Remember this.
+
+62
+00:02:10,930 --> 00:02:14,759
+When one choice follows another,
+multiply the number of ways.
+
+63
+00:02:15,459 --> 00:02:17,631
+Now, a worked example from the NCERT book.
+
+64
+00:02:17,981 --> 00:02:22,505
+How many four letter words, with or
+without meaning, can be made from the
+
+65
+00:02:22,505 --> 00:02:25,302
+letters of ROSE, if no letter is repeated?
+
+66
+00:02:25,802 --> 00:02:26,702
+Step one.
+
+67
+00:02:26,569 --> 00:02:27,916
+Four boxes to fill.
+
+68
+00:02:27,916 --> 00:02:30,908
+The first box can take
+any of the four letters.
+
+69
+00:02:31,658 --> 00:02:32,558
+Step two.
+
+70
+00:02:32,447 --> 00:02:36,312
+One letter is used up, so the
+second box has three choices.
+
+71
+00:02:37,062 --> 00:02:37,962
+Step three.
+
+72
+00:02:37,935 --> 00:02:41,903
+The third box has two choices,
+and the last box has just one.
+
+73
+00:02:42,653 --> 00:02:43,553
+Step four.
+
+74
+00:02:43,540 --> 00:02:44,440
+Multiply.
+
+75
+00:02:44,314 --> 00:02:46,882
+Four times three times two times one.
+
+76
+00:02:46,882 --> 00:02:48,238
+Twenty four words.
+
+77
+00:02:48,888 --> 00:02:50,641
+What if letters may repeat?
+
+78
+00:02:50,641 --> 00:02:53,298
+Then every box gets
+all four letters again.
+
+79
+00:02:53,698 --> 00:02:56,006
+Four times four times four times four.
+
+80
+00:02:56,006 --> 00:02:57,667
+Two hundred and fifty six.
+
+81
+00:02:57,667 --> 00:03:00,801
+When repeats are allowed,
+the choices do not shrink.
+
+82
+00:03:01,401 --> 00:03:02,301
+Quick one.
+
+83
+00:03:02,281 --> 00:03:04,455
+Four flags of different colours.
+
+84
+00:03:04,455 --> 00:03:07,631
+A signal uses two flags,
+one below the other.
+
+85
+00:03:07,631 --> 00:03:09,592
+Sixteen signals, or twelve?
+
+86
+00:03:09,592 --> 00:03:10,836
+Pause and think.
+
+87
+00:03:14,036 --> 00:03:14,936
+Twelve!
+
+88
+00:03:14,688 --> 00:03:19,421
+A flag cannot be used twice, so the
+second place has only three choices.
+
+89
+00:03:19,421 --> 00:03:20,686
+Four times three.
+
+90
+00:03:21,336 --> 00:03:22,797
+Now, the exam trap.
+
+91
+00:03:23,147 --> 00:03:27,173
+How many three digit numbers can be
+made from zero, one, two and three,
+
+92
+00:03:27,173 --> 00:03:28,218
+with no repeats?
+
+93
+00:03:28,218 --> 00:03:30,834
+Many students write four
+times three times two.
+
+94
+00:03:30,834 --> 00:03:31,734
+Twenty four.
+
+95
+00:03:32,058 --> 00:03:34,501
+But a number cannot start with zero.
+
+96
+00:03:34,501 --> 00:03:37,301
+So the first place has only three choices.
+
+97
+00:03:37,301 --> 00:03:38,924
+Then three, then two.
+
+98
+00:03:38,924 --> 00:03:39,824
+Eighteen.
+
+99
+00:03:40,325 --> 00:03:41,821
+Where is this asked?
+
+100
+00:03:41,821 --> 00:03:46,480
+We found no past paper question on
+just this rule, so no chip lights.
+
+101
+00:03:46,480 --> 00:03:51,339
+The type: count numbers, words or
+codes with a rule for each place, often
+
+102
+00:03:51,339 --> 00:03:53,518
+with a zero or a repeat twist.
+
+103
+00:03:54,118 --> 00:03:55,253
+Exam level now.
+
+104
+00:03:55,253 --> 00:03:58,225
+How many four digit even
+numbers can you make?
+
+105
+00:03:58,225 --> 00:03:59,408
+Pause and solve.
+
+106
+00:04:04,808 --> 00:04:06,194
+The answer is B.
+
+107
+00:04:06,194 --> 00:04:07,956
+One hundred and eighty.
+
+108
+00:04:08,456 --> 00:04:10,340
+Fill the fussy place first.
+
+109
+00:04:10,340 --> 00:04:14,745
+The number must be even, so the
+last digit is two, four or six.
+
+110
+00:04:14,745 --> 00:04:15,657
+Three ways.
+
+111
+00:04:16,157 --> 00:04:18,798
+That leaves five digits
+for the first place.
+
+112
+00:04:18,798 --> 00:04:21,068
+Then four for the next, then three.
+
+113
+00:04:21,568 --> 00:04:22,468
+Multiply.
+
+114
+00:04:22,311 --> 00:04:24,918
+Three times five times four times three.
+
+115
+00:04:24,918 --> 00:04:26,520
+One hundred and eighty.
+
+116
+00:04:27,120 --> 00:04:28,660
+Here is your recap.
+
+117
+00:04:28,660 --> 00:04:30,243
+Screenshot this card.
+
+118
+00:04:33,443 --> 00:04:35,629
+Can you answer these three
+questions without help?
+
+119
+00:04:36,029 --> 00:04:36,929
+One.
+
+120
+00:04:36,474 --> 00:04:38,813
+When do we multiply the number of ways?
+
+121
+00:04:39,713 --> 00:04:40,613
+Two.
+
+122
+00:04:40,105 --> 00:04:42,558
+How many outfits from
+five shirts and two pants?
+
+123
+00:04:43,458 --> 00:04:44,358
+Three.
+
+124
+00:04:43,953 --> 00:04:47,260
+Why does a zero cause trouble
+in the first place of a number?
+
+125
+00:04:48,360 --> 00:04:51,275
+Next time: five friends
+line up for a photo.
+
+126
+00:04:51,275 --> 00:04:54,284
+Five times four times
+three times two times one.
+
+127
+00:04:54,284 --> 00:04:56,529
+There is a short way to write it.
+
+128
+00:04:56,529 --> 00:04:58,265
+We meet factorial notation.

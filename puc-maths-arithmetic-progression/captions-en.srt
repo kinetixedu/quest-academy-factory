@@ -1,0 +1,463 @@
+1
+00:00:00,450 --> 00:00:02,542
+In week one, Aarav puts
+fifty rupees in a jar.
+
+2
+00:00:02,942 --> 00:00:05,754
+Every week after that, he
+adds twenty rupees more.
+
+3
+00:00:05,754 --> 00:00:07,795
+The same amount, every single week.
+
+4
+00:00:08,245 --> 00:00:12,327
+He wants to know how much will be
+in the jar after one whole year.
+
+5
+00:00:12,327 --> 00:00:13,932
+That is fifty two weeks.
+
+6
+00:00:14,282 --> 00:00:18,548
+Does he have to add twenty, fifty
+one times, one week at a time?
+
+7
+00:00:19,048 --> 00:00:19,948
+No.
+
+8
+00:00:19,498 --> 00:00:22,777
+This pattern has a name,
+and a one line formula.
+
+9
+00:00:22,777 --> 00:00:25,283
+It is called an arithmetic progression.
+
+10
+00:00:25,933 --> 00:00:27,667
+Look at the jar each week.
+
+11
+00:00:27,667 --> 00:00:30,308
+Fifty, seventy, ninety, one hundred ten.
+
+12
+00:00:30,708 --> 00:00:34,382
+Each total is the one before
+it, plus the same twenty.
+
+13
+00:00:34,382 --> 00:00:35,808
+Twenty is the step.
+
+14
+00:00:36,208 --> 00:00:40,759
+A sequence like this is an arithmetic
+progression, or AP for short.
+
+15
+00:00:40,759 --> 00:00:44,435
+Each term is the term before
+it, plus a fixed number.
+
+16
+00:00:45,085 --> 00:00:46,966
+The first term is called a.
+
+17
+00:00:46,966 --> 00:00:50,220
+The fixed step is called
+d, the common difference.
+
+18
+00:00:50,220 --> 00:00:52,600
+Here, a is fifty and d is twenty.
+
+19
+00:00:53,250 --> 00:00:55,061
+Now watch the weeks go by.
+
+20
+00:00:55,061 --> 00:00:58,341
+n counts up, and each new
+bar is one step taller.
+
+21
+00:00:58,741 --> 00:01:01,059
+Week two is fifty plus one step.
+
+22
+00:01:01,059 --> 00:01:03,530
+Week three is fifty plus two steps.
+
+23
+00:01:03,530 --> 00:01:05,991
+Week four, fifty plus three steps.
+
+24
+00:01:06,391 --> 00:01:07,409
+See the pattern?
+
+25
+00:01:07,409 --> 00:01:10,698
+The number of steps is always
+one less than the week number.
+
+26
+00:01:10,698 --> 00:01:13,217
+Join the tops, and you
+get a straight line.
+
+27
+00:01:13,867 --> 00:01:16,720
+Now let us build the
+formula in small steps.
+
+28
+00:01:17,070 --> 00:01:17,970
+Step one.
+
+29
+00:01:17,830 --> 00:01:19,266
+The first term is a.
+
+30
+00:01:19,266 --> 00:01:20,267
+No steps yet.
+
+31
+00:01:21,017 --> 00:01:21,917
+Step two.
+
+32
+00:01:21,772 --> 00:01:23,676
+The second term is a plus d.
+
+33
+00:01:23,676 --> 00:01:25,488
+The third is a plus two d.
+
+34
+00:01:26,238 --> 00:01:27,175
+Step three.
+
+35
+00:01:27,175 --> 00:01:30,381
+To reach term n, you
+take n minus one steps.
+
+36
+00:01:30,381 --> 00:01:32,855
+So you add d, n minus one times.
+
+37
+00:01:33,605 --> 00:01:38,050
+So the nth term is a n equals
+a, plus n minus one, times d.
+
+38
+00:01:38,050 --> 00:01:40,676
+That is the general term of an AP.
+
+39
+00:01:41,326 --> 00:01:42,367
+Side by side.
+
+40
+00:01:42,367 --> 00:01:46,129
+When d is positive, the terms
+climb, like Aarav's savings.
+
+41
+00:01:46,129 --> 00:01:47,846
+Fifty, seventy, ninety.
+
+42
+00:01:48,246 --> 00:01:50,478
+When d is negative, the terms fall.
+
+43
+00:01:50,478 --> 00:01:54,978
+Spending ten rupees a day from one
+hundred gives one hundred, ninety, eighty.
+
+44
+00:01:54,978 --> 00:01:56,350
+Here d is minus ten.
+
+45
+00:01:56,950 --> 00:01:57,912
+Now you try.
+
+46
+00:01:57,912 --> 00:02:01,702
+In ten, seven, four, one,
+is d three, or minus three?
+
+47
+00:02:01,702 --> 00:02:02,897
+Pause and decide.
+
+48
+00:02:06,097 --> 00:02:07,074
+Minus three!
+
+49
+00:02:07,074 --> 00:02:10,146
+d is always a term minus
+the term before it.
+
+50
+00:02:10,146 --> 00:02:12,321
+Seven minus ten is minus three.
+
+51
+00:02:12,971 --> 00:02:15,862
+How do you check if a sequence is an AP?
+
+52
+00:02:15,862 --> 00:02:18,324
+Subtract each term from the next one.
+
+53
+00:02:18,324 --> 00:02:21,558
+If every difference is
+the same, it is an AP.
+
+54
+00:02:21,958 --> 00:02:22,858
+Quick one.
+
+55
+00:02:22,773 --> 00:02:25,761
+Is three, six, twelve, twenty four an AP?
+
+56
+00:02:25,761 --> 00:02:26,913
+Pause and think.
+
+57
+00:02:30,113 --> 00:02:31,013
+No!
+
+58
+00:02:30,497 --> 00:02:32,897
+The differences are three, six and twelve.
+
+59
+00:02:32,897 --> 00:02:35,589
+They are not the same, so it is not an AP.
+
+60
+00:02:36,239 --> 00:02:37,408
+Remember this.
+
+61
+00:02:37,408 --> 00:02:40,467
+In an AP, add the same d every time.
+
+62
+00:02:40,467 --> 00:02:43,974
+The nth term is a plus
+n minus one, times d.
+
+63
+00:02:44,674 --> 00:02:45,867
+Now, Aarav's question.
+
+64
+00:02:45,867 --> 00:02:47,499
+How much after fifty two weeks?
+
+65
+00:02:47,849 --> 00:02:48,749
+Step one.
+
+66
+00:02:48,689 --> 00:02:52,083
+a is fifty, d is twenty,
+and n is fifty two.
+
+67
+00:02:52,833 --> 00:02:53,733
+Step two.
+
+68
+00:02:53,684 --> 00:02:57,468
+a fifty two equals fifty,
+plus fifty one times twenty.
+
+69
+00:02:58,218 --> 00:02:59,118
+Step three.
+
+70
+00:02:59,111 --> 00:03:02,303
+Fifty one times twenty is
+one thousand and twenty.
+
+71
+00:03:03,053 --> 00:03:07,172
+So after one year, the jar holds
+fifty plus one thousand and twenty.
+
+72
+00:03:07,172 --> 00:03:09,599
+That is one thousand and seventy rupees.
+
+73
+00:03:10,249 --> 00:03:11,713
+Now, the exam trap.
+
+74
+00:03:12,063 --> 00:03:14,766
+Find the tenth term of
+five, eight, eleven.
+
+75
+00:03:14,766 --> 00:03:18,645
+Many students write five plus ten
+times three, and get thirty five.
+
+76
+00:03:19,045 --> 00:03:22,565
+But the tenth term takes only
+nine steps from the first.
+
+77
+00:03:22,565 --> 00:03:26,285
+So it is five plus nine times
+three, which is thirty two.
+
+78
+00:03:26,935 --> 00:03:28,291
+Where is this asked?
+
+79
+00:03:28,291 --> 00:03:32,313
+Arithmetic progressions are taught
+in the NCERT Class ten book, and are
+
+80
+00:03:32,313 --> 00:03:34,606
+not in the current Class eleven text.
+
+81
+00:03:34,606 --> 00:03:38,510
+JEE Main asks them, for example
+with terms and sums of an AP.
+
+82
+00:03:39,110 --> 00:03:40,254
+Exam level now.
+
+83
+00:03:40,254 --> 00:03:42,862
+Which term of this AP is ninety nine?
+
+84
+00:03:42,862 --> 00:03:44,055
+Pause and solve.
+
+85
+00:03:49,455 --> 00:03:50,706
+The answer is A.
+
+86
+00:03:50,706 --> 00:03:52,296
+The twenty fourth term.
+
+87
+00:03:52,796 --> 00:03:56,330
+From the fifth term to the
+twelfth term is seven steps.
+
+88
+00:03:56,330 --> 00:03:59,206
+Fifty one minus twenty
+three is twenty eight.
+
+89
+00:03:59,206 --> 00:04:02,151
+So seven d is twenty eight, and d is four.
+
+90
+00:04:02,651 --> 00:04:04,981
+The fifth term is a plus four d.
+
+91
+00:04:04,981 --> 00:04:08,482
+So a is twenty three minus
+sixteen, which is seven.
+
+92
+00:04:08,982 --> 00:04:13,419
+Now seven plus n minus one,
+times four, equals ninety nine.
+
+93
+00:04:13,419 --> 00:04:17,484
+So n minus one is twenty
+three, and n is twenty four.
+
+94
+00:04:18,084 --> 00:04:19,624
+Here is your recap.
+
+95
+00:04:19,624 --> 00:04:21,207
+Screenshot this card.
+
+96
+00:04:24,407 --> 00:04:26,588
+Can you answer these three
+questions without help?
+
+97
+00:04:26,988 --> 00:04:27,888
+One.
+
+98
+00:04:27,482 --> 00:04:31,063
+What is the common difference
+of twenty, fifteen, ten?
+
+99
+00:04:31,963 --> 00:04:32,863
+Two.
+
+100
+00:04:32,439 --> 00:04:35,360
+Find the fifteenth term
+of two, five, eight.
+
+101
+00:04:36,260 --> 00:04:37,160
+Three.
+
+102
+00:04:36,862 --> 00:04:39,607
+Is one, four, nine, sixteen an AP?
+
+103
+00:04:39,607 --> 00:04:40,507
+Why?
+
+104
+00:04:41,210 --> 00:04:45,586
+Next time: can you add all the numbers
+from one to one hundred in seconds?
+
+105
+00:04:45,586 --> 00:04:46,673
+Young Gauss did.
+
+106
+00:04:46,673 --> 00:04:48,971
+We find out with the sum of an AP.

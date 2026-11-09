@@ -1,0 +1,528 @@
+1
+00:00:00,450 --> 00:00:04,284
+Multiply a plus b by itself,
+and you get three terms.
+
+2
+00:00:04,684 --> 00:00:07,768
+Multiply it three times,
+and you get four terms.
+
+3
+00:00:07,768 --> 00:00:09,455
+It already takes a while.
+
+4
+00:00:09,905 --> 00:00:13,576
+Aarav's homework tonight asks
+for a plus b, to the power ten.
+
+5
+00:00:13,926 --> 00:00:15,896
+Ten brackets, multiplied one by one.
+
+6
+00:00:15,896 --> 00:00:17,560
+That is a whole page of work.
+
+7
+00:00:17,560 --> 00:00:18,729
+Is there a shortcut?
+
+8
+00:00:19,229 --> 00:00:20,129
+There is.
+
+9
+00:00:19,949 --> 00:00:21,888
+One line gives the whole answer.
+
+10
+00:00:21,888 --> 00:00:23,915
+It is called the binomial theorem.
+
+11
+00:00:24,565 --> 00:00:26,197
+Start at the canteen.
+
+12
+00:00:26,197 --> 00:00:29,790
+Three friends each order
+one drink, tea or coffee.
+
+13
+00:00:30,190 --> 00:00:34,498
+Each friend has two choices, so there
+are two times two times two, eight
+
+14
+00:00:34,498 --> 00:00:35,619
+different orders.
+
+15
+00:00:36,019 --> 00:00:38,428
+In maths, tea is a and coffee is b.
+
+16
+00:00:38,428 --> 00:00:40,161
+Each friend is one bracket.
+
+17
+00:00:40,161 --> 00:00:43,254
+A plus b, cubed, is just
+three friends choosing.
+
+18
+00:00:43,854 --> 00:00:45,845
+Now watch all eight orders appear.
+
+19
+00:00:45,845 --> 00:00:47,750
+Tea, tea, tea gives a cubed.
+
+20
+00:00:47,750 --> 00:00:50,008
+Tea, tea, coffee gives a squared b.
+
+21
+00:00:50,408 --> 00:00:52,984
+Now sort them by how
+many coffees there are.
+
+22
+00:00:53,384 --> 00:00:55,007
+No coffee: one order.
+
+23
+00:00:55,007 --> 00:00:56,828
+One coffee: three orders.
+
+24
+00:00:56,828 --> 00:00:58,698
+Two coffees: three orders.
+
+25
+00:00:58,698 --> 00:01:00,518
+Three coffees: one order.
+
+26
+00:01:01,168 --> 00:01:06,514
+So a plus b, cubed, is a cubed, plus
+three a squared b, plus three a b
+
+27
+00:01:06,514 --> 00:01:08,331
+squared, plus b cubed.
+
+28
+00:01:08,981 --> 00:01:10,643
+Here is the key question.
+
+29
+00:01:10,643 --> 00:01:13,728
+Why are there exactly three
+orders with one coffee?
+
+30
+00:01:14,128 --> 00:01:16,836
+Because you only decide
+who gets the coffee.
+
+31
+00:01:16,836 --> 00:01:19,683
+The first friend, the
+second, or the third.
+
+32
+00:01:20,083 --> 00:01:24,243
+Choosing r things out of n is n C
+r, from the combinations episode.
+
+33
+00:01:24,243 --> 00:01:26,130
+Here, three C one is three.
+
+34
+00:01:26,880 --> 00:01:29,824
+So every number in front
+of a term is an n C r.
+
+35
+00:01:29,824 --> 00:01:32,786
+It counts the ways to choose
+which brackets give b.
+
+36
+00:01:33,436 --> 00:01:35,701
+Now let the number of friends grow.
+
+37
+00:01:35,701 --> 00:01:37,928
+Watch n count up from one to ten.
+
+38
+00:01:38,328 --> 00:01:40,682
+Each new power adds one more term.
+
+39
+00:01:40,682 --> 00:01:45,181
+The numbers grow fast, and they
+rise and fall evenly, like a hill.
+
+40
+00:01:45,581 --> 00:01:49,964
+At n equals ten, the numbers add
+up to one thousand and twenty four.
+
+41
+00:01:49,964 --> 00:01:54,347
+That is two to the ten, because
+each of ten friends had two choices.
+
+42
+00:01:54,997 --> 00:01:57,524
+Now we can write the theorem in one line.
+
+43
+00:01:57,874 --> 00:01:58,774
+Step one.
+
+44
+00:01:58,649 --> 00:02:00,710
+The first term is a to the n.
+
+45
+00:02:00,710 --> 00:02:03,253
+Nobody picks b, and n C zero is one.
+
+46
+00:02:04,003 --> 00:02:04,903
+Step two.
+
+47
+00:02:04,778 --> 00:02:07,459
+In each next term, one a becomes one b.
+
+48
+00:02:07,459 --> 00:02:11,915
+The power of a goes down by one,
+and the power of b goes up by one.
+
+49
+00:02:12,665 --> 00:02:13,565
+Step three.
+
+50
+00:02:13,535 --> 00:02:17,869
+In front of a to the n minus r,
+times b to the r, sits n C r.
+
+51
+00:02:17,869 --> 00:02:21,341
+That is the number of ways
+to choose r brackets for b.
+
+52
+00:02:22,091 --> 00:02:22,991
+Step four.
+
+53
+00:02:22,940 --> 00:02:27,195
+The last term is b to the n,
+with n C n, which is also one.
+
+54
+00:02:27,945 --> 00:02:29,975
+So there are n plus one terms.
+
+55
+00:02:29,975 --> 00:02:33,071
+And in every term, the
+two powers add up to n.
+
+56
+00:02:33,721 --> 00:02:34,787
+Side by side.
+
+57
+00:02:34,787 --> 00:02:39,511
+Many people think a plus b, squared,
+is just a squared plus b squared.
+
+58
+00:02:39,911 --> 00:02:42,266
+Look at a square with side a plus b.
+
+59
+00:02:42,266 --> 00:02:43,994
+It splits into four pieces.
+
+60
+00:02:43,994 --> 00:02:47,686
+a squared, b squared, and two
+rectangles, each a times b.
+
+61
+00:02:48,086 --> 00:02:52,667
+So a plus b, squared, is a squared,
+plus two a b, plus b squared.
+
+62
+00:02:52,667 --> 00:02:55,511
+The middle term is what
+the shortcut forgets.
+
+63
+00:02:56,111 --> 00:02:57,139
+Now you try.
+
+64
+00:02:57,139 --> 00:03:00,800
+Is a plus b, cubed, equal
+to a cubed plus b cubed?
+
+65
+00:03:00,800 --> 00:03:02,077
+Pause and decide.
+
+66
+00:03:05,277 --> 00:03:06,177
+No!
+
+67
+00:03:05,707 --> 00:03:10,241
+The middle terms, three a squared b
+and three a b squared, are missing.
+
+68
+00:03:10,241 --> 00:03:12,555
+Only the first and last terms match.
+
+69
+00:03:13,205 --> 00:03:14,234
+Remember this.
+
+70
+00:03:14,234 --> 00:03:18,205
+Pick one part from every bracket,
+and n C r counts the ways.
+
+71
+00:03:18,905 --> 00:03:20,595
+Now, one worked example.
+
+72
+00:03:20,945 --> 00:03:23,615
+Expand x plus two, to the power four.
+
+73
+00:03:24,115 --> 00:03:25,015
+Step one.
+
+74
+00:03:24,899 --> 00:03:28,967
+n is four, so the numbers are
+four C zero up to four C four.
+
+75
+00:03:28,967 --> 00:03:31,120
+One, four, six, four, one.
+
+76
+00:03:31,870 --> 00:03:32,770
+Step two.
+
+77
+00:03:32,655 --> 00:03:35,478
+The powers of x go down from four to zero.
+
+78
+00:03:35,478 --> 00:03:38,301
+The powers of two go up from zero to four.
+
+79
+00:03:39,051 --> 00:03:39,987
+Step three.
+
+80
+00:03:39,987 --> 00:03:41,492
+Multiply each column.
+
+81
+00:03:41,492 --> 00:03:42,702
+x to the four.
+
+82
+00:03:42,702 --> 00:03:43,851
+Eight x cubed.
+
+83
+00:03:43,851 --> 00:03:45,468
+Twenty four x squared.
+
+84
+00:03:45,468 --> 00:03:46,567
+Thirty two x.
+
+85
+00:03:46,567 --> 00:03:47,467
+Sixteen.
+
+86
+00:03:48,039 --> 00:03:49,888
+Check with x equal to one.
+
+87
+00:03:49,888 --> 00:03:54,437
+Three to the four is eighty one, and
+one plus eight plus twenty four plus
+
+88
+00:03:54,437 --> 00:03:57,224
+thirty two plus sixteen
+is also eighty one.
+
+89
+00:03:57,874 --> 00:03:59,338
+Now, the exam trap.
+
+90
+00:03:59,688 --> 00:04:02,374
+Expand x minus two, to the power four.
+
+91
+00:04:02,374 --> 00:04:05,207
+Many students turn
+every plus into a minus.
+
+92
+00:04:05,607 --> 00:04:08,677
+But only odd powers of
+minus two are negative.
+
+93
+00:04:08,677 --> 00:04:11,121
+Minus two, squared, is plus four.
+
+94
+00:04:11,121 --> 00:04:15,134
+So the signs alternate: plus,
+minus, plus, minus, plus.
+
+95
+00:04:15,784 --> 00:04:16,902
+Where is this asked?
+
+96
+00:04:16,902 --> 00:04:20,383
+In JEE Main, as questions on the sum
+of all the coefficients, which you
+
+97
+00:04:20,383 --> 00:04:22,010
+get by putting x equal to one.
+
+98
+00:04:22,610 --> 00:04:23,825
+Exam level now.
+
+99
+00:04:23,825 --> 00:04:26,574
+How many terms does this expansion have?
+
+100
+00:04:26,574 --> 00:04:27,840
+Pause and solve.
+
+101
+00:04:33,240 --> 00:04:34,826
+The answer is B.
+
+102
+00:04:34,826 --> 00:04:35,726
+Nine.
+
+103
+00:04:36,015 --> 00:04:37,419
+Put x equal to one.
+
+104
+00:04:37,419 --> 00:04:41,043
+The coefficients add up to
+one plus two, to the power n.
+
+105
+00:04:41,043 --> 00:04:42,691
+That is three to the n.
+
+106
+00:04:43,191 --> 00:04:47,967
+Three to the eight is exactly six
+thousand five hundred sixty one, so n
+
+107
+00:04:47,967 --> 00:04:48,867
+is eight.
+
+108
+00:04:49,330 --> 00:04:52,308
+There is always one more
+term than the power.
+
+109
+00:04:52,308 --> 00:04:55,228
+So the expansion has
+nine terms, not eight.
+
+110
+00:04:55,828 --> 00:04:57,368
+Here is your recap.
+
+111
+00:04:57,368 --> 00:04:58,951
+Screenshot this card.
+
+112
+00:05:02,151 --> 00:05:04,337
+Can you answer these three
+questions without help?
+
+113
+00:05:04,737 --> 00:05:05,637
+One.
+
+114
+00:05:05,199 --> 00:05:09,032
+Why is a plus b, squared, not
+just a squared plus b squared?
+
+115
+00:05:09,932 --> 00:05:10,832
+Two.
+
+116
+00:05:10,399 --> 00:05:13,984
+How many terms does a plus
+b, to the power seven, have?
+
+117
+00:05:14,884 --> 00:05:15,784
+Three.
+
+118
+00:05:15,391 --> 00:05:19,378
+What do the coefficients of one plus
+x, to the power five, add up to?
+
+119
+00:05:20,478 --> 00:05:24,293
+Next time: you need only the
+seventh term of a long expansion.
+
+120
+00:05:24,293 --> 00:05:26,132
+Can you jump straight to it?
+
+121
+00:05:26,132 --> 00:05:28,301
+We find out with the general term.

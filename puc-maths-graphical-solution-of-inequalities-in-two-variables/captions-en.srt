@@ -1,0 +1,540 @@
+1
+00:00:00,450 --> 00:00:04,184
+A coach draws one straight chalk
+line across the college ground.
+
+2
+00:00:04,584 --> 00:00:08,996
+Now every spot on the ground is on
+one side, on the other side, or right
+
+3
+00:00:08,996 --> 00:00:09,941
+on the line.
+
+4
+00:00:10,391 --> 00:00:14,079
+Aarav is standing at one spot,
+and wonders which side he is on.
+
+5
+00:00:14,429 --> 00:00:16,963
+One line splits the whole field in two.
+
+6
+00:00:16,963 --> 00:00:19,591
+So how does maths decide which side wins?
+
+7
+00:00:20,091 --> 00:00:23,169
+The answer is an inequality
+in two variables.
+
+8
+00:00:23,169 --> 00:00:25,783
+And its answer is not a few numbers.
+
+9
+00:00:25,783 --> 00:00:27,436
+It is a whole region.
+
+10
+00:00:28,086 --> 00:00:30,955
+First, think of the ground as graph paper.
+
+11
+00:00:30,955 --> 00:00:32,816
+Every spot has two numbers.
+
+12
+00:00:32,816 --> 00:00:36,106
+x tells how far across,
+and y tells how far up.
+
+13
+00:00:36,506 --> 00:00:40,412
+An equation like x plus y
+equals six is a straight line.
+
+14
+00:00:40,412 --> 00:00:43,355
+Every point on it adds up to exactly six.
+
+15
+00:00:43,755 --> 00:00:44,735
+Zero and six.
+
+16
+00:00:44,735 --> 00:00:45,715
+Two and four.
+
+17
+00:00:45,715 --> 00:00:46,695
+Six and zero.
+
+18
+00:00:46,695 --> 00:00:47,866
+All on the line.
+
+19
+00:00:48,466 --> 00:00:50,649
+Now change equals to less than.
+
+20
+00:00:50,649 --> 00:00:52,640
+x plus y is less than six.
+
+21
+00:00:53,040 --> 00:00:57,016
+The points that add up to less than
+six are not on the line any more.
+
+22
+00:00:57,016 --> 00:00:58,962
+They all sit on one side of it.
+
+23
+00:00:59,612 --> 00:01:01,122
+Watch the test run.
+
+24
+00:01:01,122 --> 00:01:04,152
+We drop points on the plane, one by one.
+
+25
+00:01:04,552 --> 00:01:05,452
+One and one.
+
+26
+00:01:05,443 --> 00:01:06,828
+Two is less than six.
+
+27
+00:01:06,828 --> 00:01:07,728
+True.
+
+28
+00:01:07,312 --> 00:01:08,688
+The point turns green.
+
+29
+00:01:09,088 --> 00:01:10,151
+Five and four.
+
+30
+00:01:10,151 --> 00:01:11,948
+Nine is not less than six.
+
+31
+00:01:11,948 --> 00:01:12,848
+False.
+
+32
+00:01:12,522 --> 00:01:13,422
+Red.
+
+33
+00:01:13,402 --> 00:01:14,302
+Keep going.
+
+34
+00:01:14,254 --> 00:01:16,681
+Every green point lands below the line.
+
+35
+00:01:16,681 --> 00:01:18,681
+Every red point lands above it.
+
+36
+00:01:19,282 --> 00:01:23,260
+So the line cuts the plane into
+two halves, called half planes.
+
+37
+00:01:23,260 --> 00:01:25,984
+One half is the answer, and we shade it.
+
+38
+00:01:26,634 --> 00:01:28,199
+Here is the shortcut.
+
+39
+00:01:28,199 --> 00:01:31,299
+Pick one test point
+that is not on the line.
+
+40
+00:01:31,299 --> 00:01:34,227
+The easiest is the origin, zero and zero.
+
+41
+00:01:34,627 --> 00:01:36,334
+Zero plus zero is zero.
+
+42
+00:01:36,334 --> 00:01:37,991
+Zero is less than six.
+
+43
+00:01:37,991 --> 00:01:38,891
+True.
+
+44
+00:01:38,553 --> 00:01:41,295
+So shade the side that holds the origin.
+
+45
+00:01:41,895 --> 00:01:45,691
+If the test comes out false,
+shade the other side instead.
+
+46
+00:01:46,341 --> 00:01:47,357
+Side by side.
+
+47
+00:01:47,357 --> 00:01:50,753
+With less than, the points
+on the line do not count.
+
+48
+00:01:50,753 --> 00:01:52,597
+So we draw the line dashed.
+
+49
+00:01:52,997 --> 00:01:56,394
+With less than or equal
+to, the line counts too.
+
+50
+00:01:56,394 --> 00:01:57,966
+So we draw it solid.
+
+51
+00:01:58,566 --> 00:01:59,466
+Your turn.
+
+52
+00:01:59,405 --> 00:02:01,997
+Two x plus three y is at least twelve.
+
+53
+00:02:01,997 --> 00:02:03,182
+Test the origin.
+
+54
+00:02:03,182 --> 00:02:05,958
+Shade the origin side, or the other side?
+
+55
+00:02:05,958 --> 00:02:07,191
+Pause and decide.
+
+56
+00:02:10,391 --> 00:02:11,568
+The other side!
+
+57
+00:02:11,568 --> 00:02:15,270
+Zero is not at least twelve,
+so the origin side fails.
+
+58
+00:02:15,270 --> 00:02:18,552
+And the line is solid,
+because equal is allowed.
+
+59
+00:02:19,202 --> 00:02:20,175
+Remember this.
+
+60
+00:02:20,175 --> 00:02:22,104
+A line cuts the plane in two.
+
+61
+00:02:22,104 --> 00:02:24,632
+One test point tells you which half wins.
+
+62
+00:02:25,333 --> 00:02:27,390
+Some inequalities have only one letter.
+
+63
+00:02:27,390 --> 00:02:28,965
+Take x is greater than two.
+
+64
+00:02:29,365 --> 00:02:31,578
+On a number line, that was a ray.
+
+65
+00:02:31,578 --> 00:02:35,872
+On the plane, it is every point to
+the right of the line x equals two.
+
+66
+00:02:35,872 --> 00:02:37,157
+A whole half plane.
+
+67
+00:02:37,757 --> 00:02:38,657
+Quick one.
+
+68
+00:02:38,560 --> 00:02:40,038
+y is less than three.
+
+69
+00:02:40,038 --> 00:02:43,177
+Shade above the line y
+equals three, or below it?
+
+70
+00:02:43,177 --> 00:02:44,313
+Pause and think.
+
+71
+00:02:47,513 --> 00:02:48,413
+Below!
+
+72
+00:02:48,069 --> 00:02:51,581
+Every point lower than height
+three works, whatever its x.
+
+73
+00:02:52,231 --> 00:02:53,921
+Now, one worked example.
+
+74
+00:02:54,271 --> 00:02:58,261
+Shade the region where three x
+plus two y is greater than six.
+
+75
+00:02:58,761 --> 00:02:59,661
+Step one.
+
+76
+00:02:59,583 --> 00:03:02,643
+Draw the line three x
+plus two y equals six.
+
+77
+00:03:02,643 --> 00:03:06,385
+It meets the x axis at two,
+and the y axis at three.
+
+78
+00:03:07,135 --> 00:03:08,035
+Step two.
+
+79
+00:03:07,875 --> 00:03:10,473
+The sign is greater than, with no equals.
+
+80
+00:03:10,473 --> 00:03:11,962
+So the line is dashed.
+
+81
+00:03:12,712 --> 00:03:13,678
+Step three.
+
+82
+00:03:13,678 --> 00:03:14,970
+Test the origin.
+
+83
+00:03:14,970 --> 00:03:17,134
+Zero is not greater than six.
+
+84
+00:03:17,134 --> 00:03:18,034
+False.
+
+85
+00:03:18,525 --> 00:03:19,425
+Step four.
+
+86
+00:03:19,307 --> 00:03:21,715
+So shade the side away from the origin.
+
+87
+00:03:21,715 --> 00:03:23,611
+That half plane is the answer.
+
+88
+00:03:24,261 --> 00:03:25,723
+Now, the exam trap.
+
+89
+00:03:26,073 --> 00:03:28,391
+Two x minus y is greater than four.
+
+90
+00:03:28,391 --> 00:03:31,942
+Many students see greater
+than, and shade above the line.
+
+91
+00:03:32,342 --> 00:03:33,883
+But test the origin.
+
+92
+00:03:33,883 --> 00:03:36,064
+Zero is not greater than four.
+
+93
+00:03:36,064 --> 00:03:36,964
+False.
+
+94
+00:03:36,695 --> 00:03:40,748
+The origin is above this line,
+so the answer is below it.
+
+95
+00:03:40,748 --> 00:03:42,288
+Always test a point.
+
+96
+00:03:42,288 --> 00:03:44,356
+Never trust the symbol alone.
+
+97
+00:03:45,006 --> 00:03:46,418
+Where is this asked?
+
+98
+00:03:46,418 --> 00:03:51,101
+This part was removed from the current
+NCERT text, so no board chip lights.
+
+99
+00:03:51,101 --> 00:03:55,849
+The same test, which side of a line a
+point is on, still helps in coordinate
+
+100
+00:03:55,849 --> 00:03:57,053
+geometry problems.
+
+101
+00:03:57,653 --> 00:03:58,814
+Exam level now.
+
+102
+00:03:58,814 --> 00:04:03,153
+How many points with positive whole
+number coordinates make this true?
+
+103
+00:04:03,153 --> 00:04:04,364
+Pause and solve.
+
+104
+00:04:09,764 --> 00:04:11,350
+The answer is B.
+
+105
+00:04:11,350 --> 00:04:12,250
+Nine.
+
+106
+00:04:12,539 --> 00:04:14,564
+Take each height y in turn.
+
+107
+00:04:14,564 --> 00:04:17,240
+When y is one, x is less than six.
+
+108
+00:04:17,240 --> 00:04:18,904
+So x is one to five.
+
+109
+00:04:18,904 --> 00:04:19,907
+Five points.
+
+110
+00:04:20,407 --> 00:04:23,112
+When y is two, x is less than four.
+
+111
+00:04:23,112 --> 00:04:24,158
+Three points.
+
+112
+00:04:24,158 --> 00:04:26,914
+When y is three, x is less than two.
+
+113
+00:04:26,914 --> 00:04:27,814
+Just one.
+
+114
+00:04:28,255 --> 00:04:31,373
+When y is four, x would
+have to be less than zero.
+
+115
+00:04:31,373 --> 00:04:32,273
+None.
+
+116
+00:04:31,862 --> 00:04:34,203
+So five plus three plus one makes nine.
+
+117
+00:04:34,803 --> 00:04:36,343
+Here is your recap.
+
+118
+00:04:36,343 --> 00:04:37,926
+Screenshot this card.
+
+119
+00:04:41,126 --> 00:04:43,312
+Can you answer these three
+questions without help?
+
+120
+00:04:43,712 --> 00:04:44,612
+One.
+
+121
+00:04:44,103 --> 00:04:45,879
+What does a dashed line tell you?
+
+122
+00:04:46,779 --> 00:04:47,679
+Two.
+
+123
+00:04:47,221 --> 00:04:49,545
+Which test point is the easiest to use?
+
+124
+00:04:50,445 --> 00:04:51,345
+Three.
+
+125
+00:04:51,020 --> 00:04:55,699
+For y is greater than x, which side
+of the line y equals x do you shade?
+
+126
+00:04:56,799 --> 00:04:59,161
+Next time: three shirts and four pants.
+
+127
+00:04:59,161 --> 00:05:00,993
+How many outfits can you make?
+
+128
+00:05:00,993 --> 00:05:04,458
+We start counting, with the
+fundamental principle of counting.
