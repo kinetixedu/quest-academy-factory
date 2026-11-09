@@ -160,7 +160,7 @@ const fc = PUC.fcard($('#sF'), { x: 300, y: 252, w: 1320, h: 492, title: 'Recap 
 const YQ = ['What does a dashed line tell you?', 'Which test point is the easiest to use?', 'For y > x, which side of the line y = x do you shade?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="n">${i + 1}</div><div class="q">${q.replace('>', '&gt;')}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
-const nx = PUC.next($('#sF'), { label: 'NEXT · EP 52', topic: '3 shirts and 4 pants: how many outfits? Fundamental Principle of Counting', y: 764 });
+const nx = PUC.next($('#sF'), { label: 'NEXT · EP 52', topic: '3 shirts, 4 pants: how many outfits? Fundamental Principle of Counting', y: 764 });
 
 /* ---------- helpers ---------- */
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
