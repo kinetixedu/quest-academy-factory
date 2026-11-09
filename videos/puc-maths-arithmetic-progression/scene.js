@@ -100,7 +100,7 @@ const tGaps = Array.from({ length: 9 }, (_, i) => mk(ts, 'line', { x1: 60 + i * 
 const tCap = txt(ts, 320, 216, '10 TERMS · 9 STEPS OF +3', { 'text-anchor': 'middle', 'font-size': 18, fill: C.ink2, 'font-weight': 600, 'letter-spacing': 1 });
 const where = PUC.where($('#wa'), { on: ['JEE MAIN'], type: 'Terms and sums of an A P: find a, d, or which term it is' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 780,
-  q: `In an A P, the 5th term is 23 and the 12th term is 51.<br>Which term of the A P is 99?`,
+  q: `In an A P, the 5th term is 23<br>and the 12th term is 51.<br>Which term of the A P is 99?`,
   opts: ['24th', '23rd', '25th', '22nd'], right: 0, optW: 474, optY: 300 });
 const so = PUC.solution($('#so'), [[K(`7d = 51 - 23 = 28 \\Rightarrow d = 4`)], [K(`a = 23 - 4d = 7`)], [K(`7 + (n - 1)\\,4 = 99`)], [K(`n - 1 = 23 \\Rightarrow n = 24`)]], { y0: 100, dy: 100 });
 const tSo = [wt('A2', 'From'), wt('A3', 'fifth'), wt('A4', 'Now'), wt('A4', 'twenty')];
@@ -204,7 +204,7 @@ M.on(t => {
     [0, 1, 2].forEach(i => M.vis($('#cs' + i), t, wt('C1', 'Subtract') + i * 0.3, 1e9, POP));
     M.vis($('#cP'), t, wt('C1', 'same') - 0.1, 1e9, POP);
     M.vis($('#cr'), t, wt('C1', 'If') - 0.2, out, { dx: 60, dy: 0, ...o });
-    M.rise($('#cR'), t, wt('C1', 'If'), { st: 0.05, sp: M.HEAVY }); PUC.write($('#cF'), t, wt('C1', 'same') + 0.2, 1.0);
+    M.vis($('#cR'), t, wt('C1', 'If'), 1e9, { dy: 14 }); PUC.write($('#cF'), t, wt('C1', 'same') + 0.2, 1.0);
     M.vis($('#th2'), t, tC2 + 0.05, OUT('T1'), { dy: 36, ...o });
     th2(t, { tin: tC2, tOpts: wt('C2', 'A') - 0.1, tCount: T1('C2') + 0.05, dur: 3, tAns: T0('C3') - 0.02, tWhy: wt('C3', 'differences') });
   }
