@@ -1,0 +1,49 @@
+H1|0.4|Diya has three shirts and four pants in her cupboard.
+H2|0.45|Every morning she picks one shirt and one pair of pants.
+H3|0.35|Today she wonders how many different outfits she can really make.
+H4|0.5|Seven? Twelve? Is there a way to know, without trying them all on?
+H5|0.65|Yes. It is the first rule of counting, and every counting problem in this chapter is built on it.
+D1|0.4|First, let us just try them. Call the shirts red, blue and green.
+D2|0.4|Pick the red shirt. It can go with any of the four pants. Four outfits.
+D3|0.4|The blue shirt also gets four. So does the green one.
+D4|0.65|Four, plus four, plus four. Twelve outfits. That is three times four.
+G1|0.4|Here is a picture that shows why. It is called a tree diagram.
+G2|0.4|The first choice splits into three branches, one for each shirt.
+G3|0.4|Each branch splits again into four, one for each pair of pants.
+G4|0.6|Count the tips at the end. Twelve. Every tip is one outfit.
+G5|0.4|Now add a third choice. Two pairs of shoes. Every tip splits into two.
+G6|0.65|Twelve becomes twenty four. Three times four times two.
+R1|0.4|This is the fundamental principle of counting. NCERT says it like this.
+R2|0.75|If one event can happen in m different ways, and after it another event can happen in n different ways, then the two together can happen in m times n ways.
+R3|0.75|And it keeps going. A third event with p ways? Multiply again. m times n times p.
+R4|0.65|Why multiply, and not add? Because every choice of the first pairs up with every choice of the second.
+S1|0.4|Side by side. A shirt and a pair of pants. You make both choices. So multiply. Three times four is twelve.
+S2|0.6|Tea or coffee. You pick only one of them. So add. Three kinds of tea, or two kinds of coffee, gives five drinks.
+S3|3.2|Your turn. A canteen has four snacks and three drinks. You buy one snack and one drink. Seven combos, or twelve? Pause and decide.
+S4|0.65|Twelve! You choose a snack and a drink, both. So multiply. Four times three.
+T1|0.7|Remember this. When one choice follows another, multiply the number of ways.
+W1|0.35|Now, a worked example from the NCERT book.
+W2|0.5|How many four letter words, with or without meaning, can be made from the letters of ROSE, if no letter is repeated?
+W3|0.75|Step one. Four boxes to fill. The first box can take any of the four letters.
+W4|0.75|Step two. One letter is used up, so the second box has three choices.
+W5|0.75|Step three. The third box has two choices, and the last box has just one.
+W6|0.65|Step four. Multiply. Four times three times two times one. Twenty four words.
+V1|0.4|What if letters may repeat? Then every box gets all four letters again.
+V2|0.6|Four times four times four times four. Two hundred and fifty six. When repeats are allowed, the choices do not shrink.
+V3|3.2|Quick one. Four flags of different colours. A signal uses two flags, one below the other. Sixteen signals, or twelve? Pause and think.
+V4|0.65|Twelve! A flag cannot be used twice, so the second place has only three choices. Four times three.
+X1|0.35|Now, the exam trap.
+X2|0.4|How many three digit numbers can be made from zero, one, two and three, with no repeats? Many students write four times three times two. Twenty four.
+X3|0.65|But a number cannot start with zero. So the first place has only three choices. Then three, then two. Eighteen.
+J1|0.6|Where is this asked? We found no past paper question on just this rule, so no chip lights. The type: count numbers, words or codes with a rule for each place, often with a zero or a repeat twist.
+Q1|5.4|Exam level now. How many four digit even numbers can you make? Pause and solve.
+A1|0.5|The answer is B. One hundred and eighty.
+A2|0.5|Fill the fussy place first. The number must be even, so the last digit is two, four or six. Three ways.
+A3|0.5|That leaves five digits for the first place. Then four for the next, then three.
+A4|0.6|Multiply. Three times five times four times three. One hundred and eighty.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. When do we multiply the number of ways?
+Y3|0.9|Two. How many outfits from five shirts and two pants?
+Y4|1.1|Three. Why does a zero cause trouble in the first place of a number?
+N1|0.3|Next time: five friends line up for a photo. Five times four times three times two times one. There is a short way to write it. We meet factorial notation.

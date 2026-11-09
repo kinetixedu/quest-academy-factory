@@ -1,0 +1,147 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 62 - Sequences and Series</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 62: sequences and series (Proof board) ===== */
+/* colour-coding (Ch 8): place n coral, term a_n violet, sum S_n teal */
+:root{--v:#7A4FE0;--vBg:#EDE6FC;--t:#0E8F8F;--tBg:#DDF1F1}
+#stage svg circle,#stage svg g{transform-box:fill-box;transform-origin:center}
+#stage .ringW svg circle{transform-box:view-box;transform-origin:0 0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:48px;font:600 34px 'IBM Plex Mono';white-space:nowrap;color:var(--v)}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.ch{position:absolute;height:96px;border-radius:14px;background:var(--vBg);color:var(--v);display:flex;align-items:center;justify-content:center;font:600 40px 'IBM Plex Mono';border:3px solid transparent;box-sizing:border-box}
+.chL{position:absolute;font:600 16px 'IBM Plex Mono';letter-spacing:.06em;color:var(--ac);text-align:center;white-space:nowrap}
+.gu{position:absolute;top:330px;width:340px;height:110px;border-radius:14px;background:var(--soft)}
+.gu .k{position:absolute;left:22px;top:16px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.gu .v{position:absolute;left:22px;top:44px;font:600 36px 'IBM Plex Mono';white-space:nowrap}
+.bigR{position:absolute;left:36px;font:700 40px/1.3 Poppins;width:712px}
+.bigR b{color:var(--ac)}
+.fx2{position:absolute;left:36px;font-size:44px;white-space:nowrap}
+.mp{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.mp .k{position:absolute;left:24px;top:14px;font-size:44px;white-space:nowrap}
+.mp .v{position:absolute;left:180px;top:30px;font:600 26px Poppins;white-space:nowrap;color:var(--ink2)}
+.rd{position:absolute;height:100px;border-radius:14px;background:var(--soft)}
+.rd .k{position:absolute;left:22px;top:14px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.rd .v{position:absolute;left:22px;top:40px;font:600 40px 'IBM Plex Mono';white-space:nowrap}
+.trw{position:absolute;left:36px;width:712px;height:60px;border-radius:12px;background:var(--soft);border:2.5px solid transparent;box-sizing:border-box}
+.trw .k{position:absolute;left:22px;top:12px;font:600 24px 'IBM Plex Mono';color:var(--ac);white-space:nowrap}
+.trw .f{position:absolute;left:150px;top:8px;font-size:32px;white-space:nowrap}
+.trw .v{position:absolute;right:22px;top:10px;font:600 28px 'IBM Plex Mono';color:var(--v);white-space:nowrap}
+.sm{position:absolute;height:76px;border-radius:12px;background:var(--vBg);color:var(--v);display:flex;align-items:center;justify-content:center;font:600 30px 'IBM Plex Mono'}
+.pl{position:absolute;font:600 30px Poppins;color:var(--t)}
+#wq{position:absolute;left:36px;top:70px;font:600 30px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.2em}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.12em}
+#mq .mq .katex{font-size:1.2em}
+#wl .sol .sx{font-size:32px}
+#wl .sol .sx .katex{font-size:1.12em}
+.trapL .tx .katex{font-size:1.2em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:30px}
+#sF .fcard .fl.txt .katex{font-size:1.15em}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 8 SEQUENCES AND SERIES</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title"><span class="acc">Sequences</span> and Series</div>
+    <div id="sub">Explained with a canteen queue and a dot square</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">WHAT COMES NEXT?</div><div id="hCh"></div>
+        <div class="gu" id="hg0" style="left:36px"><div class="k">FRIEND 1 GUESSES</div><div class="v">24</div></div>
+        <div class="gu" id="hg1" style="left:408px"><div class="k">FRIEND 2 GUESSES</div><div class="v">26</div></div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA · A QUIZ CARD</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-corridor.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">The next term? The 100th term?</div></div>
+    </div>
+
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">A QUEUE AT THE COUNTER</div><svg id="dS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">DEFINITION · NCERT</div>
+        <div class="bigR" id="dR" style="top:96px">A <b>sequence</b> is numbers arranged in a definite order, by a rule.</div>
+        <div class="pillp" id="dP" style="left:36px;top:470px">order matters, like places in a queue</div></div>
+    </div>
+
+    <div id="sN">
+      <div class="card full" id="nl"><div class="lbl" style="left:36px;top:30px">EACH NUMBER IS A TERM</div><div id="nCh"></div></div>
+      <div class="card rf" id="nr"><div class="lbl" style="left:36px;top:30px">TWO WORDS TO KNOW</div>
+        <div class="mp" id="np0" style="top:96px"><div class="k" id="npk0"></div><div class="v">the place in the queue</div></div>
+        <div class="mp" id="np1" style="top:212px"><div class="k" id="npk1"></div><div class="v">the number in that place</div></div>
+        <div class="pillp ac" id="nP" style="left:36px;top:470px">a n = the nth term, or general term</div></div>
+    </div>
+
+    <div id="sL">
+      <div class="card full" id="ll"><div class="lbl" style="left:36px;top:30px">LIVE · n COUNTS UP</div><svg id="lS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="rd" id="lr0" style="left:500px;top:100px;width:248px"><div class="k">PLACE n</div><div class="v" id="lN" style="color:var(--ac)"></div></div>
+        <div class="rd" id="lr1" style="left:500px;top:220px;width:248px"><div class="k">TERM</div><div class="v" id="lA" style="color:var(--v)"></div></div></div>
+      <div class="card rf" id="lr"><div class="lbl" style="left:36px;top:30px">THE RULE APPEARS</div><div id="lRows"></div><div class="fx2" id="lF" style="top:420px"></div></div>
+    </div>
+
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">FORMULA RULE · ANY TERM FROM ITS PLACE</div><div class="fx2" id="rlF" style="top:96px"></div><div id="rlM"></div>
+        <div class="pillp ac" id="rlP" style="left:36px;top:470px">Jump to any place</div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">STEP RULE · FIBONACCI</div><div class="fx2" id="rrF" style="top:96px"></div><div id="rrM"></div><svg id="rrS" width="784" height="580" style="position:absolute;left:0;top:0;pointer-events:none"></svg>
+        <div class="pillp" id="rrP" style="left:36px;top:470px">Build it one term at a time</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sI">
+      <div class="card full" id="il"><div class="lbl" style="left:36px;top:30px">FINITE · IT STOPS</div><div id="ilC"></div><div class="lbl" id="ilT" style="left:36px;top:250px">AGES OF FIVE FRIENDS · 5 TERMS</div></div>
+      <div class="card rf" id="ir"><div class="lbl" style="left:36px;top:30px">INFINITE · IT NEVER STOPS</div><div id="irC"></div><div class="lbl" id="irT" style="left:36px;top:250px">ALL THE EVEN NUMBERS · NO LAST TERM</div></div>
+    </div>
+
+    <div id="sS">
+      <div class="card full" id="sl"><div class="lbl" style="left:36px;top:30px">SEQUENCE VS SERIES</div>
+        <div class="lbl" style="left:36px;top:84px">SEQUENCE · A LIST</div><div class="fx2" id="slA" style="top:116px"></div>
+        <div class="lbl" style="left:36px;top:204px">SERIES · ADD THE LIST</div><div class="fx2" id="slB" style="top:236px"></div>
+        <div class="hiBox" id="sHi" style="left:20px;top:330px;width:744px;height:160px"></div>
+        <div class="fx2" id="slC" style="top:350px"></div><div class="lbl" id="slD" style="left:36px;top:450px;text-transform:none">Σ = sigma, the Greek S: "add up"</div></div>
+      <div class="card rf" id="sr"><div class="lbl" style="left:36px;top:30px">LIVE · ODD NUMBERS BUILD SQUARES</div><svg id="sS2" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="rd" id="sr0" style="left:500px;top:100px;width:248px"><div class="k">ADDED</div><div class="v" id="sAd" style="color:var(--v)"></div></div>
+        <div class="rd" id="sr1" style="left:500px;top:220px;width:248px"><div class="k">TOTAL</div><div class="v" id="sTo" style="color:var(--t)"></div></div>
+        <div class="pillp" id="sP" style="left:500px;top:350px;background:var(--tBg);color:var(--t)">always a square</div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">THE FIRST FIVE TERMS</div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="wP" style="left:36px;top:480px;background:var(--tBg);color:var(--t)">Series of 5 terms: 3 + 8 + 15 + 24 + 35 = 85</div></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">A sequence lists. A series <span class="acc">adds</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
