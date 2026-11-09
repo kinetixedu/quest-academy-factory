@@ -1,0 +1,57 @@
+H1|0.4|Pull a suitcase by its handle. Tow a toy car on a string. Push a lawn mower by its long handle.
+H2|0.45|In all three, you pull at a slant, but the thing moves along the ground.
+H3|0.35|Aarav drags his suitcase to the bus stop. He pulls with forty newtons, along a slanted handle.
+H4|0.5|How much of his forty newtons really moves it forward? All forty, or less?
+H5|0.65|By the end, you will answer it with one small tool, the dot product.
+P1|0.35|So what is the dot product?
+P2|0.4|Shine a torch straight down on a slanted stick. Its shadow on the floor is shorter than the stick.
+P3|0.4|That shadow is the part of the stick that points along the floor.
+P4|0.4|Now take two arrows, A and B. Find the shadow of A on B, and multiply it by the length of B.
+P5|0.65|That is the dot product. The answer is just a number, so it is also called the scalar product.
+S1|0.35|Let's run it on Aarav's suitcase. He pulls with a force F of forty newtons.
+S2|0.4|First, the handle is flat, so theta is zero. The shadow of F on the floor is all forty newtons.
+S3|0.4|Now he raises the handle to sixty degrees. The shadow shrinks to just twenty newtons.
+S4|0.4|The rest of his pull only lifts the handle. It does not roll the suitcase forward.
+S5|0.5|At ninety degrees, he pulls straight up. The shadow is zero. The suitcase does not roll.
+S6|0.35|Slow-mo replay, at sixty degrees.
+S7|0.5|F points along the handle. Its shadow on the floor is F cos theta. The suitcase moves along d.
+S8|0.65|On the graph, as theta grows, the forward part falls. It follows cos theta.
+D1|0.35|Now the formula, one small step at a time.
+D2|0.75|Step one. Theta is the angle between A and B, measured tail to tail.
+D3|0.75|Step two. The shadow of A on B is A cos theta. Cos theta is the fraction the shadow keeps. One at zero degrees, a half at sixty, zero at ninety.
+D4|0.75|Step three. Multiply by the length of B. A dot B equals A B cos theta.
+D5|0.75|Step four. The shadow of B on A, times A, gives the same number. So A dot B equals B dot A.
+T1|0.7|Remember this. A dot B is one arrow times the shadow of the other. A number, not an arrow.
+C1|0.35|Now, side by side. The angle decides the sign.
+C2|0.4|At sixty degrees, the shadow of A falls forward, along B. The dot product is positive.
+C3|0.6|At one hundred and twenty degrees, the shadow falls backward. The dot product is negative.
+C4|3.2|Now you try. Theta is exactly ninety degrees. Is the dot product positive, negative, or zero? Pause and decide.
+C5|0.65|Zero! At ninety degrees, the shadow shrinks to a single point. And cos ninety is zero.
+R1|0.35|Now, a shortcut exams love. Follow the links.
+R2|0.4|One. i hat and i hat point the same way. Theta is zero, so i dot i is one.
+R3|0.4|Two. i hat and j hat are at ninety degrees, so i dot j is zero. Same for j and k, and k and i.
+R4|0.4|Three. Write A and B in i, j and k, and multiply out. Every mixed pair gives zero.
+R5|0.6|Four. Only matching pairs survive. A dot B equals A x B x, plus A y B y, plus A z B z.
+K1|3.2|Your turn. A is three i plus four j. B is four i minus three j. Are they at right angles? Pause and think.
+K2|0.65|Yes! Twelve minus twelve is zero. A zero dot product means ninety degrees.
+W1|0.35|Now, one worked example.
+W2|0.5|A is two i, plus two j, plus k. B is three i, plus four k. Find A dot B, and the angle between them.
+W3|0.75|Multiply matching parts. Six, plus zero, plus four. That is ten.
+W4|0.75|Now the sizes. A is the root of four plus four plus one, so three. B is the root of nine plus sixteen, so five.
+W5|0.75|Cos theta equals A dot B, over A times B. Ten over fifteen, which is two thirds.
+W6|0.65|So theta is cos inverse of two thirds, about forty eight degrees.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students multiply matching parts, but keep the i, j and k. They write six i plus four k.
+X3|0.65|But a dot product is a scalar. Add the parts into one number, ten. No i, no j, no k.
+E1|0.6|Where is this asked? The angle between two vectors, checking for right angles, and work as F dot d.
+Q1|5.4|Exam level now. A is four i, minus two j, plus four k. B is three j, plus four k. What is the component of A along B? Pause and solve.
+A1|0.5|The answer is A. Two.
+A2|0.5|A dot B is zero, minus six, plus sixteen. That is ten.
+A3|0.5|The size of B is the root of nine plus sixteen, which is five.
+A4|0.6|The shadow of A on B is A dot B over B. Ten over five is two.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why is the dot product a scalar, and not a vector?
+Y3|0.9|Two. When is the dot product of two vectors zero?
+Y4|1.1|Three. Why does a lower handle help Aarav pull his suitcase forward?
+N1|0.3|Next time: carry a heavy bag across a room, and physics says you did no work on it. Really? We find out in work done by a constant force.
