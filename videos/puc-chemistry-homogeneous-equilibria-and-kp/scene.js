@@ -79,10 +79,10 @@ $('#eP').innerHTML = `Also in solution: ${K('\\mathrm{Fe^{3+}(aq) + SCN^{-}(aq) 
 const avA = PUC.avatar($('#sS'), { x: 160 + 36, y: 270 + 470, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'Like my tyre: every hit on the wall adds up.' });
 
 /* ---------- L: Kp ---------- */
-$('#lEq0').innerHTML = K(`\\text{Before: } ${Kc} = \\dfrac{[\\mathrm{NH_3}]^{2}}{[\\mathrm{N_2}][\\mathrm{H_2}]^{3}}`);
+$('#lEq0').innerHTML = K(`\\text{Before: } ${Kc} = [\\mathrm{NH_3}]^{2} \\,/\\, [\\mathrm{N_2}][\\mathrm{H_2}]^{3}`);
 $('#lEq').innerHTML = K(KPNH3);
 const GT = [[tB('p'), 'PARTIAL PRESSURE', 'IN BAR', BC, wt('L1', 'partial')], ['\\tfrac{\\text{products}}{\\text{reactants}}', 'TOP AND BOTTOM', 'SAME AS Kc', OC, wt('L2', 'Products')], ['x^{n}', 'POWERS', 'FROM THE EQUATION', XC, wt('L2', 'power')]];
-$('#gts').innerHTML = GT.map(([k, v, s, c], i) => `<div class="gt" id="gt${i}" style="left:${36 + i * 512}px;top:300px;height:240px"><div class="gk" style="top:30px;font-size:40px">${K(k)}</div><div class="gv" style="color:${c};top:124px">${v}</div><div class="gs" style="top:176px">${s}</div></div>`).join('');
+$('#gts').innerHTML = GT.map(([k, v, s, c], i) => `<div class="gt" id="gt${i}" style="left:${36 + i * 512}px;top:330px;height:220px"><div class="gk" style="top:24px;font-size:38px">${K(k)}</div><div class="gv" style="color:${c};top:112px">${v}</div><div class="gs" style="top:164px">${s}</div></div>`).join('');
 
 /* ---------- D: derivation ---------- */
 const MS = [[K(`${tB('p')}V = nRT`), 'D2'], [K(`${tB('p')} = \\dfrac{n}{V}\\,${RT} = c\\,${RT}`), 'D3'], [K(`${pp('i')} = [\\mathrm{i}]\\,${RT}`), 'D4'], [K(`${Kp} = ${Kc}\\,(${RT})^{${dn}}`), 'D5']];
@@ -95,8 +95,8 @@ $('#dLs').innerHTML = DL.map((s, i) => `<div class="fx fxc" id="dl${i}" style="t
 const GR = [[K(`${dn} = n_{\\text{gas, products}} - n_{\\text{gas, reactants}}`), wt('G2', 'moles')], [K(`\\mathrm{NH_3}:\\ 2 - 4 = ${tG('-2')}`), wt('G3', 'ammonia')], [K(`\\mathrm{HI}:\\ 2 - 2 = ${tG('0')} \\Rightarrow ${Kp} = ${Kc}`), wt('G4', 'hydrogen')], [K(`R = 0.0831\\ \\text{bar L mol}^{-1}\\text{K}^{-1}`), wt('G5', 'zero')]];
 $('#grs').innerHTML = GR.map(([s], i) => `<div class="rl" id="gr${i}" style="top:${96 + i * 100}px"><div class="nn">${i + 1}</div><div class="rt2" style="font-size:28px">${s}</div></div>`).join('');
 const gs = $('#gS');
-const row = (y, lefts, rights, lab) => { const g = mk(gs, 'g', {}); txt(g, 36, y - 52, lab, { 'font-size': 18, fill: HC, 'font-weight': 600 }); const L = lefts.map((c, i) => mk(g, 'rect', { x: 36 + i * 54, y: y - 30, width: 44, height: 44, rx: 8, fill: c })); txt(g, 36 + lefts.length * 54 + 30, y + 2, '⇌', { 'text-anchor': 'middle', 'font-size': 34, fill: HC }); const R = rights.map((c, i) => mk(g, 'rect', { x: 36 + lefts.length * 54 + 70 + i * 54, y: y - 30, width: 44, height: 44, rx: 8, fill: c })); const v = txt(g, 748, y + 2, '', { 'text-anchor': 'end', 'font-size': 26, fill: GC, 'font-weight': 700 }); return { g, L, R, v }; };
-const gNH = row(200, [NC, HC, HC, HC], [OC, OC], 'N₂ + 3H₂ ⇌ 2NH₃ · GAS MOLES'), gHI = row(380, [HC, OC], [OC, OC], 'H₂ + I₂ ⇌ 2HI · GAS MOLES');
+const row = (y, lefts, rights, lab) => { const g = mk(gs, 'g', {}); txt(g, 36, y - 52, lab, { 'font-size': 20, fill: HC, 'font-weight': 600 }); const L = lefts.map((c, i) => mk(g, 'rect', { x: 36 + i * 72, y: y - 30, width: 60, height: 60, rx: 10, fill: c })); txt(g, 36 + lefts.length * 72 + 34, y + 12, '⇌', { 'text-anchor': 'middle', 'font-size': 40, fill: HC }); const R = rights.map((c, i) => mk(g, 'rect', { x: 36 + lefts.length * 72 + 80 + i * 72, y: y - 30, width: 60, height: 60, rx: 10, fill: c })); const v = txt(g, 748, y + 90, '', { 'text-anchor': 'end', 'font-size': 30, fill: GC, 'font-weight': 700 }); return { g, L, R, v }; };
+const gNH = row(170, [NC, HC, HC, HC], [OC, OC], 'N₂ + 3H₂ ⇌ 2NH₃ · GAS MOLES'), gHI = row(370, [HC, OC], [OC, OC], 'H₂ + I₂ ⇌ 2HI · GAS MOLES');
 const gR = txt(gs, 392, 500, 'R = 0.0831 bar L mol⁻¹ K⁻¹ · T in kelvin', { 'text-anchor': 'middle', 'font-size': 18, fill: XC, 'font-weight': 600 });
 
 /* ---------- C ---------- */
@@ -126,9 +126,9 @@ const wsol = PUC.solution($('#wl'), [
 $('#wl .lbl').style.top = '30px';
 const tWs = [T0('W3'), T0('W4'), T0('W5'), T0('W6')];
 const ws = $('#wS');
-const chip = (x, y, lab, col) => { const g = mk(ws, 'g', {}); mk(g, 'rect', { x: x - 130, y: y - 50, width: 260, height: 100, rx: 16, fill: C.soft, stroke: col, 'stroke-width': 3 }); const v = txt(g, x, y + 12, lab, { 'text-anchor': 'middle', 'font-size': 32, fill: col, 'font-weight': 600 }); return { g, v }; };
-const wKc = chip(200, 300, 'Kc = 0.040', NC), wKp = chip(590, 300, 'Kp = 1.66 bar', BC);
-const wAr = mk(ws, 'g', {}); mk(wAr, 'path', { d: 'M340 300 H440', stroke: XC, 'stroke-width': 6, 'stroke-linecap': 'round' }); mk(wAr, 'path', { d: 'M452 300 L432 288 L432 312 Z', fill: XC }); txt(wAr, 395, 270, '× RT¹', { 'text-anchor': 'middle', 'font-size': 22, fill: XC, 'font-weight': 600 }); txt(wAr, 395, 345, '× 41.55', { 'text-anchor': 'middle', 'font-size': 20, fill: XC, 'font-weight': 600 });
+const chip = (x, y, lab, col, w = 260) => { const g = mk(ws, 'g', {}); mk(g, 'rect', { x: x - w / 2, y: y - 50, width: w, height: 100, rx: 16, fill: C.soft, stroke: col, 'stroke-width': 3 }); const v = txt(g, x, y + 12, lab, { 'text-anchor': 'middle', 'font-size': 32, fill: col, 'font-weight': 600 }); return { g, v }; };
+const wKc = chip(185, 300, 'Kc = 0.040', NC), wKp = chip(590, 300, 'Kp = 1.66 bar', BC, 300);
+const wAr = mk(ws, 'g', {}); mk(wAr, 'path', { d: 'M328 300 H410', stroke: XC, 'stroke-width': 6, 'stroke-linecap': 'round' }); mk(wAr, 'path', { d: 'M428 300 L408 288 L408 312 Z', fill: XC }); txt(wAr, 378, 270, '× RT¹', { 'text-anchor': 'middle', 'font-size': 22, fill: XC, 'font-weight': 600 }); txt(wAr, 378, 345, '× 41.55', { 'text-anchor': 'middle', 'font-size': 20, fill: XC, 'font-weight': 600 });
 const wMol = mk(ws, 'g', {}); txt(wMol, 392, 150, 'GAS MOLES: 1 → 2', { 'text-anchor': 'middle', 'font-size': 22, fill: GC, 'font-weight': 600 }); txt(wMol, 392, 186, 'Δn = +1', { 'text-anchor': 'middle', 'font-size': 22, fill: GC, 'font-weight': 700 });
 
 /* ---------- X / Q / F ---------- */
@@ -145,7 +145,7 @@ const fc = PUC.fcard($('#sF'), { x: 360, y: 262, w: 1200, h: 470, title: 'Recap 
   lines: [K(`${Kp} = ${pp('NH_3')}^{2} \\,/\\, ${pp('N_2')}\\,${pp('H_2')}^{3}`), K(`${Kp} = ${Kc}\\,(${RT})^{${dn}},\\quad R = 0.0831\\ \\text{bar L mol}^{-1}\\text{K}^{-1}`),
     '<b>Homogeneous</b>: all reactants and products in one phase',
     '<b>Δn</b> = gas moles of products - gas moles of reactants',
-    '<b>Units</b>: Kc (mol L⁻¹)^Δn · Kp bar^Δn · none when Δn = 0'] });
+    '<b>Units</b>: Kc in (mol L⁻¹)<sup>Δn</sup> · Kp in bar<sup>Δn</sup>'] });
 const YQ = ['What makes an equilibrium homogeneous?', 'What is Δn when nitrogen and hydrogen make ammonia?', 'When does Kp equal Kc?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="nn">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
