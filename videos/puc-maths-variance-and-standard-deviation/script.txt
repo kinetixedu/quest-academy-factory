@@ -1,0 +1,45 @@
+H1|0.4|Two batsmen play ten matches each. Both score five hundred and thirty runs. Both average fifty three.
+H2|0.45|But batsman A swings from zero to one hundred and seventeen. Batsman B stays between forty six and sixty.
+H3|0.35|Aarav found these scores in our NCERT book, and asked a simple question.
+H4|0.5|Which batsman is more consistent? And can one number prove it?
+H5|0.65|That number is the standard deviation. To find it, we first meet the variance.
+P1|0.4|Quick reminder. Last time, we measured spread with distances from the mean, using absolute values.
+P2|0.65|Today there is another way to stop the minus signs from cancelling. Square every deviation. A square is never negative.
+S1|0.4|Watch it on eight small numbers: two, four, four, four, five, five, seven and nine. Their mean is five.
+S2|0.4|Each gap from five becomes the side of a real square. A gap of three makes a square of nine. A gap of four makes a square of sixteen.
+S3|0.4|Now add all the square areas. Nine, one, one, one, zero, zero, four and sixteen. The total is thirty two.
+S4|0.4|Share it among the eight numbers. Thirty two over eight is four. That is the variance: the average square.
+S5|0.65|Now take the side of that average square. The square root of four is two. That is the standard deviation.
+D1|0.4|Now the rule, step by step.
+D2|0.75|Step one. Find the mean, x bar.
+D3|0.75|Step two. Find each deviation, x minus x bar, and square it.
+D4|0.75|Step three. Add the squares, and divide by n. This is the variance, written sigma squared.
+D5|0.75|Step four. Take the positive square root. This is the standard deviation, sigma.
+D6|0.65|A useful shortcut. The variance is also the mean of the squares, minus the square of the mean.
+C1|0.4|Side by side. The variance squares the gaps, so its unit is squared too. For runs, that is runs squared, which is hard to picture.
+C2|0.6|The standard deviation takes the square root, so it is back in runs. Batsman A has about thirty six. Batsman B has about four point two.
+C3|3.2|Your turn. Which batsman is more consistent? Pause and think.
+C4|0.65|Batsman B! A smaller standard deviation means the scores stay close to the mean. Batsman A's scores jump around.
+T1|0.7|Remember this. Square the gaps, average them, then take the square root.
+W1|0.35|Now, one worked example.
+W2|0.5|Find the variance and the standard deviation of six, eight, ten, and so on, up to twenty four.
+W3|0.75|Step one. There are ten numbers, and the mean is fifteen.
+W4|0.75|Step two. The deviations run from minus nine to nine. Their squares are eighty one, forty nine, twenty five, nine and one, twice each.
+W5|0.75|Step three. The squares add up to three hundred and thirty.
+W6|0.75|Step four. Divide by ten. The variance is thirty three.
+W7|0.65|Step five. The standard deviation is the square root of thirty three, about five point seven four.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students stop at the variance, and write the standard deviation as thirty three.
+X3|0.65|But the standard deviation is the square root of the variance. Here it is about five point seven four, not thirty three.
+J1|0.6|Where is this asked? In JEE Main. In February twenty twenty three, a paper gave the mean and variance of five observations, and asked about the two missing ones.
+Q1|5.4|Exam level now. A sixth observation, four, is added. Find the new variance. Pause and solve.
+A1|0.5|The answer is B. Five over three.
+A2|0.5|Use the shortcut backwards. The sum is five times four, which is twenty. The sum of squares is five times, two plus sixteen, which is ninety.
+A3|0.5|Add the four. Now the sum is twenty four, the sum of squares is one hundred and six, and there are six numbers. The mean stays four.
+A4|0.6|The new variance is one hundred and six over six, minus sixteen. That is five over three.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why do we square the deviations?
+Y3|0.9|Two. If the variance is twenty five, what is the standard deviation?
+Y4|1.1|Three. Heights are measured in centimetres. What is the unit of their variance?
+N1|0.3|Next time: the weather report says seventy percent chance of rain tomorrow. What does that number really mean? Probability, events and axioms.
