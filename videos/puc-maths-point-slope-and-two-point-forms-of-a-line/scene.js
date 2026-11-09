@@ -167,8 +167,8 @@ const ws = $('#wS'), WP = PL(ws, WO);
 const wL = fline(ws, WP, 1, -1, 3, 5);
 const wRu = seg(ws, WP, 1, -1, 3, -1, XC, 6), wRi = seg(ws, WP, 3, -1, 3, 5, YC, 6);
 const wA = dotG(ws, WP.X(1), WP.Y(-1), 11, P0C, '#fff'), wB = dotG(ws, WP.X(3), WP.Y(5), 11, C.ink, '#fff');
-const wAt = lbl(ws, WP.X(1) - 14, WP.Y(-1) + 8, '(1, −1)', P0C, { 'text-anchor': 'end' }), wBt = lbl(ws, WP.X(3) + 18, WP.Y(5) + 8, '(3, 5)', C.ink);
-const wRut = lbl(ws, WP.X(2), WP.Y(-1) + 30, 'run 2', XC, { 'text-anchor': 'middle' }), wRit = lbl(ws, WP.X(3) + 14, WP.Y(2) + 7, 'rise 6', YC);
+const wAt = lbl(ws, WP.X(1), WP.Y(-1) + 34, '(1, −1)', P0C, { 'text-anchor': 'middle' }), wBt = lbl(ws, WP.X(3) + 18, WP.Y(5) + 8, '(3, 5)', C.ink);
+const wRut = lbl(ws, WP.X(2.5), WP.Y(-1) + 34, 'run 2', XC, { 'text-anchor': 'middle' }), wRit = lbl(ws, WP.X(3) + 14, WP.Y(2) + 7, 'rise 6', YC);
 const wEq = lbl(ws, WP.X(3.7) + 10, WP.Y(4.2), 'y = 3x − 4', RC, { 'font-size': 24, 'font-weight': 700 });
 
 /* ---------- X / Q / F ---------- */
@@ -194,7 +194,7 @@ const fc = PUC.fcard($('#sF'), { x: 300, y: 226, w: 1320, h: 540, title: 'Recap 
 const YQ = ['Write the line through the origin with slope 2.', 'Which line can the point-slope form not describe, and why?', 'What is the slope of the line through (1, 1) and (2, 3)?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="n">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
-const nx = PUC.next($('#sF'), { label: 'NEXT · EP 72', topic: 'Where the road crosses the main streets: Slope-Intercept and Intercept Forms', y: 764 });
+const nx = PUC.next($('#sF'), { label: 'NEXT · EP 72', topic: 'Crossing the main streets: Slope-Intercept and Intercept Forms', y: 764 });
 
 /* ---------- helpers ---------- */
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
