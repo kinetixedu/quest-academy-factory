@@ -268,6 +268,7 @@ CL.a1 = mk(cl, 'path', { d: 'M300,170 L230,250 M232,232 L230,250 L246,242 M484,1
 CL.a2 = mk(cl, 'path', { d: 'M230,362 L300,430 M284,426 L300,430 L298,414 M554,362 L484,430 M500,426 L484,430 L486,414', stroke: C.ink, 'stroke-width': 3.5, fill: 'none', 'stroke-linecap': 'round' });
 CL.m = txt(cl, 392, 228, 'MEIOSIS · HALF', { 'text-anchor': 'middle', 'font-size': 16, 'letter-spacing': 1.3, fill: C.ac, 'font-weight': 600 }); CL.f = txt(cl, 392, 390, 'FERTILISATION · JOIN', { 'text-anchor': 'middle', 'font-size': 14, 'letter-spacing': 1.3, fill: C.ac, 'font-weight': 600 });
 const cr = sv('crS'), CR = {};
+CR.sum = mk(cr, 'g', {}); txt(CR.sum, 392, 250, '23 + 23 = 46', { 'text-anchor': 'middle', 'font-size': 72, 'font-weight': 600, fill: VIO }); txt(CR.sum, 392, 310, 'SPERM + EGG = BABY · SAME AS EACH PARENT', { 'text-anchor': 'middle', 'font-size': 18, 'letter-spacing': 1.4, fill: C.mute, 'font-weight': 600 });
 CR.g = [[[VIO, LIL], [VIO, LIL]], [[VIO, null], [VIO, null]], [[LIL, null], [LIL, null]], [[LIL, VIO], [LIL, VIO]]].map((m, i) => { const g = mk(cr, 'g', {}), x = 120 + i * 182, y = 230; mk(g, 'circle', { cx: x, cy: y, r: 74, fill: CYF, stroke: C.ink, 'stroke-width': 3 });
   rod(g, x - 18, y, 80, m[0][0], m[0][1], 10); rod(g, x + 20, y, 50, m[1][0], m[1][1], 10); return g; });
 CR.t = txt(cr, 392, 360, '4 GAMETES · 4 DIFFERENT MIXES', { 'text-anchor': 'middle', 'font-size': 22, 'letter-spacing': 1.5, fill: C.ink, 'font-weight': 600 });
@@ -278,7 +279,7 @@ const cV = cmp($('#vc'), ['MEIOSIS I', 'MEIOSIS II'], [
   ['', 'Separates', 'Homologous chromosomes', 'Sister chromatids', wt('V1', 'homologous'), wt('V1', 'sister'), s => { xch(s, 42, 50, 70, VIO); xch(s, 88, 50, 70, LIL); }, s => { rod(s, 46, 50, 70, VIO); rod(s, 84, 50, 70, VIO); }],
   ['', 'Number', '2n → n · halves', 'n → n · stays the same', wt('V2', 'halves'), wt('V2', 'keeps'), s => txt(s, 65, 62, '2n→n', { 'text-anchor': 'middle', 'font-size': 26, 'font-weight': 600, fill: VIO }), s => txt(s, 65, 62, 'n→n', { 'text-anchor': 'middle', 'font-size': 26, 'font-weight': 600, fill: VIO })],
   ['', 'Prophase', 'Long: five substages, crossing over', 'Short and simple', wt('V3', 'long'), wt('V3', 'short'), s => [0, 1, 2, 3, 4].forEach(k => mk(s, 'rect', { x: 14 + k * 21, y: 40, width: 17, height: 20, rx: 4, fill: C.ac })), s => mk(s, 'rect', { x: 50, y: 40, width: 30, height: 20, rx: 4, fill: C.ac })]], 'v');
-const th1 = PUC.think($('#th1'), { q: 'In a haploid cell, the centromeres split and the sister chromatids move apart. Meiosis I, or meiosis II?', opts: ['Meiosis I', 'Meiosis II'], right: 1, why: 'Meiosis II. In meiosis, the centromeres split only in anaphase II, never in anaphase I.' });
+const th1 = PUC.think($('#th1'), { q: 'In a haploid cell, the centromeres split and the sister chromatids move apart. Meiosis I, or meiosis II?', opts: ['Meiosis I', 'Meiosis II'], right: 1, why: 'Meiosis II. Centromeres split only in anaphase II, never in anaphase I.' });
 
 /* ---------- W: worked example ---------- */
 const sortW = sortB($('#wbd'), [['MEIOSIS I · HALVES', 'background:var(--ac2);color:#1F6B3F'], ['MEIOSIS II · SEPARATES SISTERS', 'background:var(--ink);color:#fff']], [
@@ -318,7 +319,7 @@ const EP = {
       M.vis($('#cl'), t, T0('C1') + 0.1, out, { dx: -60, dy: 0, ...o }); M.vis(CL.p, t, wt('C2', 'same') - 0.2, 1e9, { dy: 16 }); M.draw(CL.a1, t, wt('C2', 'Gametes') - 0.3, 0.5); M.vis(CL.m, t, wt('C2', 'half') - 0.2, 1e9, POP);
       M.vis(CL.g, t, wt('C2', 'Gametes'), 1e9, { dy: 16 }); M.draw(CL.a2, t, wt('C2', 'fertilisation') - 0.2, 0.5); M.vis(CL.f, t, wt('C2', 'fertilisation'), 1e9, POP); M.vis(CL.z, t, wt('C2', 'joins'), 1e9, { dy: 16 });
       [CL.p, CL.g, CL.z].forEach(g => attr(g, 'transform', t > wt('C3', 'twenty') - 0.2 && t < T0('C4') ? `translate(0 ${(-3 * Math.abs(Math.sin(t * 3))).toFixed(2)})` : ''));
-      M.vis($('#cr'), t, T0('C4') - 0.15, out, { dx: 60, dy: 0, ...o }); CR.g.forEach((g, i) => M.vis(g, t, T0('C4') + 0.3 + i * 0.25, 1e9, { ...POP, sc: 0.6 })); M.vis(CR.t, t, wt('C4', 'variety'), 1e9, POP);
+      M.vis($('#cr'), t, T0('C3') - 0.15, out, { dx: 60, dy: 0, ...o }); M.vis(CR.sum, t, wt('C3', 'Sperm') - 0.1, T0('C4') - 0.1, { ...POP, outDur: 0.25 }); $('#crL').textContent = t < T0('C4') - 0.1 ? 'IN HUMANS' : '2 · VARIETY'; CR.g.forEach((g, i) => M.vis(g, t, T0('C4') + 0.3 + i * 0.25, 1e9, { ...POP, sc: 0.6 })); M.vis(CR.t, t, wt('C4', 'variety'), 1e9, POP);
       M.vis(CR.k[0], t, wt('C4', 'Crossing') - 0.1, 1e9, { dy: 12 }); M.vis(CR.k[1], t, wt('C5', 'random') - 0.2, 1e9, { dy: 12 }); M.vis($('#crP'), t, wt('C5', 'evolution') - 0.2, 1e9, POP); }],
     ['#sV', T0('V1'), T0('T1') + 0.1, t => {
       M.vis($('#vc'), t, T0('V1') + 0.05, OUT('V4'), { dy: 36, ...o }); cV(t);

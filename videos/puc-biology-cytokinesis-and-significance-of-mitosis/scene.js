@@ -294,7 +294,7 @@ const cV = cmp($('#vc'), ['ANIMAL CELL · FURROW', 'PLANT CELL · CELL PLATE'], 
     s => mk(s, 'path', { d: 'M65,40 L65,12 M55,22 L65,12 L75,22 M65,60 L65,88 M55,78 L65,88 L75,78', stroke: C.ac, 'stroke-width': 4, fill: 'none', 'stroke-linecap': 'round' })],
   ['', 'Why', 'A soft membrane can pinch in', 'A stiff wall cannot pinch', wt('V3', 'soft'), wt('V3', 'stiff'), s => mk(s, 'circle', { cx: 65, cy: 50, r: 34, fill: CYF, stroke: C.ink, 'stroke-width': 3 }),
     s => mk(s, 'rect', { x: 28, y: 16, width: 74, height: 68, rx: 6, fill: CYF, stroke: WLF, 'stroke-width': 9 })]], 'v');
-const th1 = PUC.think($('#th1'), { q: 'You see a new wall growing from the middle of a dividing cell, toward its sides. Plant cell or animal cell?', opts: ['Animal cell', 'Plant cell'], right: 1, why: 'Plant cell. The cell plate grows from the centre outward, because the stiff wall cannot be pinched.' });
+const th1 = PUC.think($('#th1'), { q: 'You see a new wall growing from the middle of a dividing cell, toward its sides. Plant cell or animal cell?', opts: ['Animal cell', 'Plant cell'], right: 1, why: 'Plant cell. The cell plate grows from the centre outward.' });
 
 /* ---------- W: worked example ---------- */
 const sortW = sortB($('#wbd'), [['FURROW · ANIMAL CELLS', 'background:var(--ac2);color:#1F6B3F'], ['CELL PLATE · PLANT CELLS', 'background:var(--ink);color:#fff']], [
