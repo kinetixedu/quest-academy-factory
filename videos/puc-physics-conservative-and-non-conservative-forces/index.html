@@ -1,0 +1,174 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 80 - Conservative and Non-Conservative Forces</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 80: conservative and non-conservative forces (Motion notebook, a box taken up three paths + work by gravity against path length) ===== */
+:root{--v:#2F6FEB;--f:#D9731A;--e:#0E8F8F;--d:#7A4FE0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.vv{color:var(--v)}.ff{color:var(--f)}.ee{color:var(--e)}.dd{color:var(--d)}
+.sv{position:absolute;left:0;top:0;overflow:hidden}
+.bpill{position:absolute;display:inline-flex;align-items:center;height:48px;padding:0 16px;border-radius:10px;background:#fff;border:2px solid var(--ink);color:var(--ink);font:600 18px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+/* title card cases */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft);overflow:hidden}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr svg{position:absolute;right:12px;top:0}
+.wq{position:absolute;top:494px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap}
+#house{position:absolute;left:36px;top:84px;width:712px;height:390px;border-radius:12px;overflow:hidden;background:#EAF1FB}
+#aaravC{position:absolute;left:452px;top:150px;width:240px;height:298px}
+/* P rows */
+.dr{position:absolute;left:36px;width:712px;height:104px;border-radius:14px;background:var(--soft)}
+.dr i{position:absolute;left:20px;top:20px;width:64px;height:64px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.dr .dn{position:absolute;left:104px;top:16px;font:700 28px Poppins;white-space:nowrap}
+.dr .dw{position:absolute;left:104px;top:60px;font:500 22px Poppins;color:var(--ink2);white-space:nowrap}
+/* sim */
+#roG{row-gap:4px}
+#roG .v{font-size:32px}
+#roG .k{font-size:28px}
+.stag{position:absolute;height:40px;padding:0 14px;border-radius:8px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:92px}
+.st .n{position:absolute;left:0;top:2px;width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 21px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:66px;top:0;font-size:32px;white-space:nowrap}
+.st .why{position:absolute;left:66px;top:52px;font:500 20px Poppins;color:var(--mute);white-space:nowrap}
+.chipd{position:absolute;height:56px;padding:0 18px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:10px;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+/* reasoning */
+.lk{position:absolute;left:36px;width:712px;height:88px;border-radius:14px;background:var(--soft)}
+.lk .n{position:absolute;left:18px;top:21px;width:46px;height:46px;border-radius:50%;background:var(--ac);color:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.lk .lt{position:absolute;left:84px;top:24px;font:600 26px/1.3 Poppins;white-space:nowrap}
+/* side by side */
+.sbv{position:absolute;left:36px;top:84px;width:712px;height:340px;border-radius:14px;background:var(--soft);overflow:hidden}
+.sbl{position:absolute;left:36px;font-size:34px;white-space:nowrap}
+/* worked */
+#wq{position:absolute;left:36px;top:70px;font:600 26px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:30px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#mq .mq{font-size:28px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 24px Poppins}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:29px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+.kc{position:absolute;top:84px;width:340px;height:380px;border-radius:14px;background:var(--soft)}
+.kc .h{position:absolute;left:24px;top:20px;font:700 28px Poppins;white-space:nowrap}
+.kc .s{position:absolute;left:24px;top:60px;font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.kc .b{position:absolute;left:24px;top:100px;width:292px;font:500 22px/1.35 Poppins;color:var(--ink2)}
+.kc .f{position:absolute;left:24px;top:300px;font-size:30px;white-space:nowrap}
+.kc i.ic{position:absolute;right:20px;top:18px;width:52px;height:52px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 5 WORK, ENERGY AND POWER</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div class="bpill" id="bpill">NCERT · CBSE · ISC · PUC</div>
+    <div id="title">Conservative <span class="acc">Forces</span></div>
+    <div id="sub">Does gravity care which path you take?</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: two ways up + Aarav's hill -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">TWO WAYS UP · SAME HEIGHT</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Does gravity care which way you went?</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · TWO WAYS TO THE HILLTOP</div>
+        <div id="hdF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <div id="house"><svg class="sv" id="hoS" width="712" height="390"></svg><img id="aaravC" src="../../assets/illustrations/puc/aarav.png"></div>
+        <div id="wqs"></div></div>
+    </div>
+
+    <!-- P: what it is -->
+    <div id="sP">
+      <div class="card full" id="pd"><div class="lbl" style="left:36px;top:30px">TWO KINDS OF FORCE</div>
+        <div class="dr" id="dr0" style="top:84px"><i id="dr0I"></i><div class="dn">Gravity checks only two things</div><div class="dw">where you start, and where you end</div></div>
+        <div class="dr" id="dr1" style="top:208px"><i id="dr1I"></i><div class="dn">The path does not change its work</div><div class="dw">so gravity is a conservative force</div></div>
+        <div class="dr" id="dr2" style="top:332px"><i id="dr2I"></i><div class="dn">Friction takes more every metre</div><div class="dw">its work depends on the path</div></div>
+        <div class="pillp ac" id="pdP" style="left:36px;top:490px">Friction is a non-conservative force</div></div>
+      <div class="card rf" id="pt"><div class="lbl" style="left:36px;top:30px">START AND END · OR THE WHOLE PATH?</div>
+        <div class="kc" id="kc0" style="left:36px"><i class="ic" id="kc0I"></i><div class="h">Conservative</div><div class="s">E.G. GRAVITY</div><div class="b">Work depends only on the start and the end</div><svg class="sv" id="kc0S" width="340" height="380"></svg><div class="f" id="kc0F"></div></div>
+        <div class="kc" id="kc1" style="left:408px"><i class="ic" id="kc1I"></i><div class="h">Non-conservative</div><div class="s">E.G. FRICTION</div><div class="b">Work grows with every metre of the path</div><svg class="sv" id="kc1S" width="340" height="380"></svg><div class="f" id="kc1F"></div></div>
+      </div>
+    </div>
+
+    <!-- S: the sim -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">A 3 kg BOX · FLOOR TO SHELF · 3 PATHS</div>
+        <div class="stag" id="slo" style="right:36px;top:20px">SLOW-MO REPLAY · 0.25x</div>
+        <div class="stag" id="pau" style="right:36px;top:68px;background:#6B7280">PAUSED</div>
+        <svg class="sv" id="simS" width="784" height="580"></svg></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT · <span style="text-transform:none">m = 3 kg · g = 9.8 m/s²</span></div><div class="ro" id="roG" style="left:36px;top:66px;width:712px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">WORK BY GRAVITY VS PATH LENGTH <i style="font-family:Poppins;text-transform:none">s</i></div>
+        <div class="pillp" id="grP" style="right:36px;top:18px;height:40px;font-size:19px">every path ends at -58.8 J</div>
+        <svg class="sv" id="grS" width="784" height="274"></svg></div>
+    </div>
+
+    <!-- D: the reason -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">WHY ONLY HEIGHT COUNTS · 5 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">ANY PATH = TINY STEPS</div>
+        <svg class="sv" id="drS" width="784" height="580"></svg></div>
+    </div>
+
+    <!-- R: friction link by link -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">SLIDE A BOX · THERE AND BACK</div>
+        <svg class="sv" id="rlS" width="784" height="580"></svg></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">FRICTION · LINK BY LINK</div><div id="lks"></div>
+        <div class="pillp ink" id="rrP" style="left:36px;top:490px">No potential energy for friction</div></div>
+    </div>
+
+    <!-- C: side by side + two thinks -->
+    <div id="sC">
+      <div class="card full" id="c0"><div class="lbl" style="left:36px;top:30px">FLOOR PLAN · THE SHORT WAY · 6 m</div><div class="ghost" id="exC" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <div class="sbv"><svg class="sv" id="c0S" width="712" height="340"></svg></div>
+        <div class="sbl" id="c0a" style="top:454px"></div></div>
+      <div class="card rf" id="c1"><div class="lbl" style="left:36px;top:30px">FLOOR PLAN · THE LONG WAY · 12 m</div>
+        <div class="sbv"><svg class="sv" id="c1S" width="712" height="340"></svg></div>
+        <div class="sbl" id="c1a" style="top:454px"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">Aarav + bicycle = 70 kg. Resistance = 20 N. Both paths climb 60 m: steep path 300 m, winding road 1200 m.</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">THE HILL · TWO PATHS</div><div class="ghost" id="exW" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <svg class="sv" id="wrS" width="784" height="580"></svg>
+        <div class="chipd" id="wc0" style="left:36px;top:492px"><span style="color:#7FD1D1">gravity</span><span>same on both</span></div>
+        <div class="chipd" id="wc1" style="left:380px;top:492px"><span style="color:#F2B37A">resistance</span><span>4x on the road</span></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tg" width="420" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + questions + NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Only the <span class="acc">start</span> and the <span class="acc">end</span> count.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

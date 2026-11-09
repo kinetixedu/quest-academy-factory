@@ -1,0 +1,60 @@
+H1|0.4|Carry a bag up the stairs, or up a long ramp. Ride up a steep road, or a winding one.
+H2|0.45|You end at the same height. So does gravity care which way you went?
+H3|0.35|Aarav wants to ride to the hilltop. A steep path climbs sixty metres in just three hundred metres.
+H4|0.5|The winding road reaches the same top, but it is one point two kilometres long. Where does gravity take more energy from him?
+H5|0.65|By the end, you will know. And you will see why friction is different.
+P1|0.35|So what is a conservative force?
+P2|0.4|Gravity only checks two things. Where you start, and where you end.
+P3|0.4|The path in between does not change its work. A force like this is called conservative.
+P4|0.4|Friction is different. Every metre you slide, it takes away more energy.
+P5|0.65|Its work depends on the path. A force like this is called non-conservative.
+S1|0.35|Let's test it. A three kilogram box goes from the floor to a shelf, two metres up.
+S2|0.4|Path one. Straight up, then across. Gravity does minus fifty eight point eight joules of work.
+S3|0.4|Path two. Push it up a ramp, four metres long.
+S4|0.4|Gravity's work is again minus fifty eight point eight joules.
+S5|0.4|Path three, a staircase. Same answer again. Three paths, one finish line.
+S6|0.4|Now slide it back down the ramp. Gravity gives back fifty eight point eight.
+S7|0.6|Round trip total: zero.
+S8|0.35|Slow-mo replay, on the ramp.
+S9|0.65|Gravity points straight down. Only the up and down part of the motion counts. Sideways gets no work.
+D1|0.35|Now the reason, step by step.
+D2|0.75|Step one. Break any path into tiny steps. Each step has a sideways part and an up part.
+D3|0.75|Step two. Sideways, gravity is at ninety degrees to the motion. So its work is zero.
+D4|0.75|Step three. Going up by a tiny height, delta y, gravity does minus m g delta y.
+D5|0.75|Step four. Add all the steps. The work is minus m g, times y two minus y one.
+D6|0.75|Step five. Come back to the start, and y two equals y one. The round trip work is zero.
+T1|0.7|Remember this. A conservative force does the same work on every path, and zero work on a round trip.
+R1|0.35|Now friction. Follow the links.
+R2|0.4|One. Friction always points against the motion.
+R3|0.4|Two. So on every bit of the path, its work is negative.
+R4|0.4|Three. Negative bits never cancel. The longer the path, the more energy it takes.
+R5|0.6|Four. So the round trip work is not zero. The energy turns into heat.
+C1|0.35|Now, side by side.
+C2|0.4|Slide the box six metres, against ten newtons of friction. Minus sixty joules.
+C3|0.6|The long way round is twelve metres. Minus one hundred and twenty joules. Twice as much.
+C4|3.2|Now you try. Carry a bag up to the third floor and back down to the start. Total work done by gravity? Pause and decide.
+C5|0.65|Zero! It is back at the same height. Gravity took energy going up, and gave it all back coming down.
+C6|3.2|One more. A ball is thrown up and falls back to your hand. Is the total work by air drag zero? Pause and think.
+C7|0.65|No! Drag points down on the way up, and up on the way down. Both bits are negative.
+W1|0.35|Now, one worked example.
+W2|0.5|Aarav and his bicycle have a mass of seventy kilograms. Air and road push back with twenty newtons.
+W3|0.75|Gravity first. Seventy times nine point eight times sixty. Minus forty one thousand one hundred and sixty joules, on both paths.
+W4|0.75|Now the resistance on the steep path. Twenty newtons times three hundred metres. Minus six thousand joules.
+W5|0.75|On the winding road, twenty times twelve hundred. Minus twenty four thousand joules.
+W6|0.65|Gravity does not care about the path. Resistance does, four times more on the road.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students say a conservative force always does zero work.
+X3|0.65|But it is zero only on a closed path. Floor to shelf, gravity did minus fifty eight point eight joules.
+E1|0.6|Where is this asked? In one mark questions on conservative forces, and round trip numericals.
+Q1|5.4|Exam level now. A two kilogram block is pulled up a rough incline, five metres long and three metres high, then slides back down. mu is zero point five, g is ten. Total work by gravity and by friction over the round trip? Pause and solve.
+A1|0.5|The answer is A. Zero, and minus eighty joules.
+A2|0.5|Gravity is conservative. The block ends where it started, so its work is zero.
+A3|0.5|The incline has sine three fifths, so cos four fifths. Normal force: two times ten times zero point eight. Sixteen newtons.
+A4|0.5|Friction is zero point five times sixteen. Eight newtons, against the motion both ways.
+A5|0.6|Over ten metres, it does minus eight times ten. Minus eighty joules.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What makes a force conservative?
+Y3|0.9|Two. Why is the round trip work of friction never zero?
+Y4|1.1|Three. Why does gravity do the same work on the steep path and the winding road?
+N1|0.3|Next time: a swing slows, stops and comes back. Where does its speed go? Find out in conservation of mechanical energy.
