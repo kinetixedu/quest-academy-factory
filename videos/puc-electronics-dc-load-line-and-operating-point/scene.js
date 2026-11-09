@@ -137,7 +137,7 @@ const offCC = t => { let s = 0; const dt = 0.05; for (let x = T0('C4'); x < t; x
 const dS = $('#dS'), gd = PUC.graph(dS, { x: 110, y: 90, w: 600, h: 360, xmax: 13, ymax: 7, xt: [2, 4, 6, 8, 10, 12], yt: [1, 2, 3, 4, 5, 6, 7], xl: 'V CE (V)', yl: 'I C (mA)' });
 gd.xlab.setAttribute('fill', TE); gd.ylab.setAttribute('fill', VI); gd.xlab.setAttribute('y', 512);
 const dLL = gd.curve(INK, 5), dP1 = gd.mk('circle', { cx: gd.X(12), cy: gd.Y(0), r: 11, fill: AM, stroke: INK, 'stroke-width': 1.5 }), dP2 = gd.mk('circle', { cx: gd.X(0), cy: gd.Y(6), r: 11, fill: AM, stroke: INK, 'stroke-width': 1.5 });
-const dP1L = mono(dS, gd.X(12) - 8, gd.Y(0) - 22, 'cut-off (12 V, 0)', { 'text-anchor': 'end', fill: INK, 'font-weight': 600 }), dP2L = mono(dS, gd.X(0) + 22, gd.Y(6) - 14, 'saturation (0, 6 mA)', { fill: INK, 'font-weight': 600 });
+const dP1L = mono(dS, gd.X(10.6), gd.Y(0) - 8, 'cut-off (12 V, 0)', { 'text-anchor': 'end', fill: INK, 'font-weight': 600 }), dP2L = mono(dS, gd.X(0) + 22, gd.Y(6) - 14, 'saturation (0, 6 mA)', { fill: INK, 'font-weight': 600 });
 const dLLL = mono(dS, gd.X(6.6), gd.Y(3.3) - 16, 'DC LOAD LINE', { fill: '#B7791F', 'font-weight': 600, 'font-size': 22 });
 const dRows = rows($('#dSteps'), [
   [K(`${VBB} = ${IB} R_B + ${VBE}`), 'base loop', 84],
@@ -157,7 +157,7 @@ const ocT = mono(grS, gp.X(12.9), gp.Y(8) - 14, 'I B', { 'text-anchor': 'end', f
 const bLL = gp.mk('line', { x1: gp.X(0), y1: gp.Y(6), x2: gp.X(12), y2: gp.Y(0), stroke: INK, 'stroke-width': 5, 'stroke-linecap': 'round' });
 const bSwing = gp.mk('line', { stroke: AM, 'stroke-width': 12, 'stroke-linecap': 'round', opacity: 0.55 });
 const bEnds = [gp.mk('circle', { cx: gp.X(12), cy: gp.Y(0), r: 8, fill: INK }), gp.mk('circle', { cx: gp.X(0), cy: gp.Y(6), r: 8, fill: INK })];
-const bEndL = [mono(grS, gp.X(12) - 6, gp.Y(0) - 16, 'cut-off', { 'text-anchor': 'end', fill: INK, 'font-weight': 600, 'font-size': 18 }), mono(grS, gp.X(0.3), gp.Y(6.75), 'saturation', { fill: INK, 'font-weight': 600, 'font-size': 18 })];
+const bEndL = [mono(grS, gp.X(11.2), gp.Y(0) - 8, 'cut-off', { 'text-anchor': 'end', fill: INK, 'font-weight': 600, 'font-size': 18 }), mono(grS, gp.X(0.3), gp.Y(6.75), 'saturation', { fill: INK, 'font-weight': 600, 'font-size': 18 })];
 const qDot = gp.mk('circle', { r: 13, fill: AM, stroke: INK, 'stroke-width': 2 }), qL = tx(grS, 0, 0, 'Q', { 'font-size': 26 });
 const tb4 = wt('B4', 'signal'), tb6 = wt('B6', 'Move'), tb8 = wt('B8', 'Move'), tb9 = wt('B9', 'keep');
 const icq = t => { let q = 3; q = M.lerp(q, 5.4, M.io((t - tb6) / 0.8)); q = M.lerp(q, 0.6, M.io((t - tb8) / 0.8)); q = M.lerp(q, 3, M.io((t - tb9) / 0.8)); return q; };

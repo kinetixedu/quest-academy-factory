@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "DC Load Line and Operating Point",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 65
+ },
+ "class": "12",
+ "title": "DC Load Line and Q Point Explained Simply | PUC Electronics Class 12",
+ "description": "Aarav turns up the amplifier at the fest and the loud parts sound harsh: on the scope, the tops of the wave are sliced flat. The transistor is resting in the wrong place. We start with a swing between two walls (hang it near a wall and it bangs, hang it in the middle and it swings fully), then build the common emitter circuit with V_BB, R_B, V_CC and R_C on a live breadboard and watch I_B, I_C and V_CE change as R_B turns.\n\nStep by step we write the base loop and the collector loop, get V_CE = V_CC - I_C R_C, find the cut-off point (V_CC, 0) and the saturation point (0, V_CC / R_C), and join them into the DC load line. On the output characteristics the Q point (quiescent point) swings along the load line with a signal while the oscilloscope shows a clean output in the middle, and clipping when Q sits near saturation or cut-off. A worked example finds the Q point, followed by the exam trap (the middle gives the biggest clean swing), where it is asked, an original practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 65 of PUC Electronics, Class 12, Chapter 2: Transistor Biasing (Karnataka II PUC Electronics). Transistor biasing is not in the rationalised NCERT/CBSE Class 12 Physics book or the ISC Physics syllabus, so this lesson follows the Karnataka PUC Electronics syllabus.\n\nIn this video:\n0:00 Why the sound breaks up\n0:14 The swing between two walls\n0:35 The common emitter circuit, DC condition\n1:06 Building the DC load line\n1:53 The Q point and clipping\n2:34 Worked example: find the Q point\n3:15 Exam trap: keep Q in the middle\n3:32 Where it is asked\n3:41 Practice question\n4:21 Formula card\n\nNext episode: Voltage Divider Bias and Stability.\n\nVideo by Quest Academy.",
+ "tags": [
+  "DC load line",
+  "operating point",
+  "Q point",
+  "quiescent point",
+  "transistor biasing",
+  "need for biasing",
+  "cut-off and saturation",
+  "clipping",
+  "common emitter circuit",
+  "output characteristics",
+  "2nd PUC electronics",
+  "2nd PUC electronics chapter 2",
+  "Karnataka PUC electronics",
+  "class 12 electronics"
+ ],
+ "thumb": {
+  "title": "Where Should It Rest?",
+  "accent_word": "Rest?",
+  "frame_t": 131
+ }
+}
