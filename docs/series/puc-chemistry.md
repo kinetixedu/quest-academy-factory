@@ -102,3 +102,26 @@ Ep 57 NEXT strip teases Ch 6 Equilibrium.
 - Colours: O violet #7A4FE0; coefficients and n gold #B7791F; Cl blue #2F6FEB (Ep 11); limiting reagent = red chip, excess = ink chip on the counter (Ep 13).
 - Molarity written M or mol L^-1; NCERT example 4 g NaOH in 250 mL = 0.4 M (Ep 12). Gas volumes at STP 22.7 L mol^-1 (NCERT, 1 bar).
 - Ep 13 practice numericals are labelled PRACTICE · NOT FROM NCERT on screen and in the voice.
+
+### Batch 3 (10 Nov 2026): Ch 6 Equilibrium and Ch 7 Redox Reactions. Same rules as batch 2 (all boards, 10-12 year old level).
+- Ep 58 | Equilibrium in Physical Processes | CLASS 11 · CHEMISTRY · CH 6 EQUILIBRIUM | hook Diya | puc-chemistry-equilibrium-in-physical-processes
+- Ep 59 | Equilibrium in Chemical Processes | CLASS 11 · CHEMISTRY · CH 6 EQUILIBRIUM | hook Aarav | puc-chemistry-equilibrium-in-chemical-processes
+- Ep 60 | Law of Chemical Equilibrium and Equilibrium Constant | CLASS 11 · CHEMISTRY · CH 6 EQUILIBRIUM | hook Diya | puc-chemistry-law-of-chemical-equilibrium-and-equilibrium-constant
+- Ep 61 | Homogeneous Equilibria and Kp | CLASS 11 · CHEMISTRY · CH 6 EQUILIBRIUM | hook Aarav | puc-chemistry-homogeneous-equilibria-and-kp
+- Ep 62 | Heterogeneous Equilibria | CLASS 11 · CHEMISTRY · CH 6 EQUILIBRIUM | hook Diya | puc-chemistry-heterogeneous-equilibria
+- Ep 63 | Applications of Equilibrium Constants | CLASS 11 · CHEMISTRY · CH 6 EQUILIBRIUM | hook Aarav | puc-chemistry-applications-of-equilibrium-constants
+- Ep 64 | Le Chatelier's Principle | CLASS 11 · CHEMISTRY · CH 6 EQUILIBRIUM | hook Diya | puc-chemistry-le-chatelier-s-principle
+- Ep 65 | Acids, Bases and Salts | CLASS 11 · CHEMISTRY · CH 6 EQUILIBRIUM | hook Aarav | puc-chemistry-acids-bases-and-salts
+- Ep 66 | Ionization of Water and the pH Scale | CLASS 11 · CHEMISTRY · CH 6 EQUILIBRIUM | hook Diya | puc-chemistry-ionization-of-water-and-the-ph-scale
+- Ep 67 | Ionization of Weak Acids and Bases | CLASS 11 · CHEMISTRY · CH 6 EQUILIBRIUM | hook Aarav | puc-chemistry-ionization-of-weak-acids-and-bases
+- Ep 68 | Common Ion Effect and Hydrolysis of Salts | CLASS 11 · CHEMISTRY · CH 6 EQUILIBRIUM | hook Diya | puc-chemistry-common-ion-effect-and-hydrolysis-of-salts
+- Ep 69 | Buffer Solutions | CLASS 11 · CHEMISTRY · CH 6 EQUILIBRIUM | hook Aarav | puc-chemistry-buffer-solutions
+- Ep 70 | Solubility Product | CLASS 11 · CHEMISTRY · CH 6 EQUILIBRIUM | hook Diya | puc-chemistry-solubility-product
+- Ep 71 | Oxidation and Reduction | CLASS 11 · CHEMISTRY · CH 7 REDOX REACTIONS | hook Aarav | puc-chemistry-oxidation-and-reduction
+- Ep 72 | Oxidation Number | CLASS 11 · CHEMISTRY · CH 7 REDOX REACTIONS | hook Diya | puc-chemistry-oxidation-number
+- Ep 73 | Types of Redox Reactions | CLASS 11 · CHEMISTRY · CH 7 REDOX REACTIONS | hook Aarav | puc-chemistry-types-of-redox-reactions
+- Ep 74 | Balancing Redox Reactions: Oxidation Number Method | CLASS 11 · CHEMISTRY · CH 7 REDOX REACTIONS | hook Diya | puc-chemistry-balancing-redox-reactions-oxidation-number-method
+- Ep 75 | Balancing Redox Reactions: Half Reaction Method | CLASS 11 · CHEMISTRY · CH 7 REDOX REACTIONS | hook Aarav | puc-chemistry-balancing-redox-reactions-half-reaction-method
+- Ep 76 | Redox Titrations | CLASS 11 · CHEMISTRY · CH 7 REDOX REACTIONS | hook Diya | puc-chemistry-redox-titrations
+- Ep 77 | Redox Reactions and Electrode Processes | CLASS 11 · CHEMISTRY · CH 7 REDOX REACTIONS | hook Aarav | puc-chemistry-redox-reactions-and-electrode-processes
+- Ep 77 NEXT strip teases Ch 8 Organic Chemistry: Some Basic Principles and Techniques.
