@@ -1,0 +1,50 @@
+H1|0.4|Push two pins into a board. Loop a string around them, and pull it tight with a pencil.
+H2|0.45|Now move the pencil all the way round, keeping the string tight. It draws a perfect oval.
+H3|0.35|Diya tried it at her study desk tonight.
+H4|0.5|The pencil keeps changing its distance from each pin. So why is the curve so neat?
+H5|0.65|Because one thing never changes. That curve is the ellipse, and today we find its rule.
+P1|0.4|The two pins are called the foci. One pin is a focus.
+P2|0.4|An ellipse is the set of all points where the sum of the distances from the two foci is a constant.
+P3|0.4|Watch the pencil P run round. Its distance to one focus is in blue, to the other in gold.
+P4|0.4|Seven and three. Four and six. Each one keeps changing.
+P5|0.65|But add them, and you get ten, every single time. That fixed sum is the string.
+T1|0.7|Remember this. On an ellipse, the two distances to the foci always add up to the same number.
+G1|0.4|Now the parts. The midpoint between the foci is the centre.
+G2|0.4|The long line through the foci is the major axis. Call its length two a.
+G3|0.4|The short line across, through the centre, is the minor axis, of length two b. The foci are two c apart.
+G4|0.75|Put the pencil at the end of the major axis. The two distances add up to two a. So the fixed sum is two a.
+G5|0.75|Now put it at the top. The two distances are equal, so each one is a.
+G6|0.65|That makes a right triangle with sides b and c, and long side a. So a squared equals b squared plus c squared.
+R1|0.4|Now the equation. Put the foci at minus c, zero and c, zero.
+R2|0.75|Step one. The two distances add up to two a.
+R3|0.75|Step two. Move one root across and square both sides.
+R4|0.75|Step three. Tidy up, and square once more.
+R5|0.75|Step four. Swap a squared minus c squared for b squared.
+R6|0.65|Divide through, and there it is. x squared over a squared, plus y squared over b squared, equals one.
+E1|0.4|One number tells you how flat an ellipse is. The eccentricity, e, is c over a.
+E2|0.65|Watch e grow. The foci slide apart, and the ellipse gets flatter. For an ellipse, e always stays between zero and one.
+K1|0.4|Side by side. If the bigger number is under x squared, the major axis lies along the x axis.
+K2|0.6|If the bigger number is under y squared, the major axis stands along the y axis. The bigger number is always a squared.
+K3|3.2|Your turn. x squared over nine, plus y squared over twenty five, equals one. Which axis is major, and where are the foci? Pause and decide.
+K4|0.65|The y axis, with foci at zero, plus or minus four! Twenty five is bigger, so a is five, b is three, and c is four.
+W1|0.35|Now, one worked example.
+W2|0.5|For four x squared plus nine y squared equals thirty six, find a, b, c, the eccentricity and the latus rectum.
+W3|0.75|Step one. Divide everything by thirty six. x squared over nine, plus y squared over four, equals one.
+W4|0.75|Step two. So a is three and b is two. Then c is the root of nine minus four, which is root five.
+W5|0.75|Step three. The eccentricity is root five over three.
+W6|0.65|Step four. The latus rectum is two b squared over a. That is eight over three.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students write c squared equals a squared plus b squared for an ellipse.
+X3|0.65|But the foci sit inside the ellipse, so c is smaller than a. For an ellipse, c squared is a squared minus b squared.
+J1|0.6|Where is this asked? In JEE Main. In January twenty twenty four, a question gave an ellipse's foci and its latus rectum, and built on them.
+Q1|5.4|Exam level now. An ellipse has foci at plus or minus four, zero, and every point on it has distances to the foci that add up to ten. Find its latus rectum. Pause and solve.
+A1|0.5|The answer is B. Eighteen over five.
+A2|0.5|The sum is two a, so two a is ten, and a is five. The foci give c equals four.
+A3|0.5|b squared is a squared minus c squared. Twenty five minus sixteen is nine.
+A4|0.6|The latus rectum is two b squared over a. Two times nine over five is eighteen over five.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What stays the same for every point on an ellipse?
+Y3|0.9|Two. For x squared over sixteen, plus y squared over seven, equals one, find c.
+Y4|1.1|Three. Why is the eccentricity of an ellipse always less than one?
+N1|0.3|Next time: a lamp throws a curved shadow on the wall. It is a different kind of curve. The hyperbola.

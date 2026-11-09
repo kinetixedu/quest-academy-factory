@@ -107,7 +107,7 @@ const DU = [`\\dfrac{(${PF})(${PO})}{${PG}}`,
   `\\dfrac{${ub(`(${PF})`, fb('10'))}(${PO})}{${PG}}`,
   `\\dfrac{${ub(`(${PF})`, fb('10'))}${ub(`(${PO})`, or('1'))}}{${PG}}`,
   `\\dfrac{${ub(`(${PF})`, fb('10'))}${ub(`(${PO})`, or('1'))}}{${ub(PG, gt('4'))}}`,
-  `\\dfrac{${ub(`(${PF})`, fb('10'))}${ub(`(${PO})`, or('1'))}}{${ub(PG, gt('4'))}} \\to \\dfrac{10}{4} = ${lc('2.5')}`];
+  `\\dfrac{${ub(`(${PF})`, fb('10'))}${ub(`(${PO})`, or('1'))}}{${ub(PG, gt('4'))}}`];
 let dLast = -1;
 
 /* ---------- statement ---------- */
@@ -128,7 +128,7 @@ const WU = [`\\dfrac{${WT}}{${WB}}`, `\\dfrac{${ub(WT, fb('3'))}}{${WB}}`, `\\df
 let wLast = -1;
 
 /* ---------- X / Q / F: exam segment ---------- */
-const trap = PUC.trap($('#trap'), { wrong: K(`\\dfrac{\\lim (x^2 - 9)}{\\lim (x - 3)} = \\dfrac{0}{0} \\Rightarrow \\text{no limit}`), right: K(`\\dfrac{(x - 3)(x + 3)}{x - 3} = x + 3 \\to ${lc('6')}`) });
+const trap = PUC.trap($('#trap'), { wrong: K(`\\lim (x^2 - 9) \\,/\\, \\lim (x - 3) = 0/0 \\Rightarrow \\text{no limit}`), right: K(`(x - 3)(x + 3)/(x - 3) = x + 3 \\to ${lc('6')}`) });
 const tp = plot($('#tS'), { x0: 0, x1: 5, y0: 0, y1: 9, px: 70, pw: 440, py: 30, ph: 200, xt: [0, 1, 2, 3, 4, 5], yt: [0, 3, 6, 9] });
 const tLn = tp.curve(x => x + 3, 0, 5, C.ink, 4), tHo = tp.hole(3, 6, C.ink, 9);
 const t6 = mk($('#tS'), 'line', { x1: tp.X(0), y1: tp.Y(6), x2: tp.X(3) - 10, y2: tp.Y(6), stroke: LC, 'stroke-width': 3.5, 'stroke-dasharray': '7 6' });
@@ -234,7 +234,7 @@ M.on(t => {
     M.vis($('#sw1'), t, wt('S1', 'quotient') - 0.1, 1e9, POP); M.vis($('#sw1L'), t, wt('S1', 'works') - 0.1, 1e9, { dx: -12, dy: 0 }); M.vis($('#s1P'), t, wt('S1', 'works') + 0.4, 1e9, POP);
     M.vis($('#s2'), t, T0('S2') - 0.1, out, { dx: 60, dy: 0, ...o });
     PUC.write($('#s2F'), t, T0('S2') + 0.3, 0.8);
-    const x2 = creep(t, wt('S2', 'bottom'), wt('S2', 'zero') + 0.6); const bv = x2 - 2; M.setT($('#s2V'), (bv < 0 ? '-' : '') + f3(Math.abs(bv) + 1e-9));
+    const x2 = creep(t, wt('S2', 'bottom'), wt('S2', 'zero') + 0.6); const bv = x2 - 2; M.setT($('#s2V'), (-Math.ceil(Math.abs(bv) * 1000 - 1e-6) / 1000).toFixed(3));
     M.vis($('#s2R'), t, wt('S2', 'bottom') - 0.1, 1e9, { dy: 12 });
     M.vis($('#sw2'), t, wt('S2', 'switched') - 0.1, 1e9, POP); M.vis($('#sw2L'), t, wt('S2', 'switched'), 1e9, { dx: -12, dy: 0 }); M.vis($('#s2P'), t, wt('S2', 'off'), 1e9, POP);
     M.vis($('#th2'), t, tS3 + 0.05, OUT('D1'), { dy: 36, ...o });

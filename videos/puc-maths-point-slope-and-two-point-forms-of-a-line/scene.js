@@ -95,7 +95,7 @@ const lL = fline(ls, LP, 1, 2, 5, 4);
 const lRu = mk(ls, 'line', { stroke: XC, 'stroke-width': 6, 'stroke-linecap': 'round' }), lRi = mk(ls, 'line', { stroke: YC, 'stroke-width': 6, 'stroke-linecap': 'round' });
 const lP0 = dotG(ls, LP.X(1), LP.Y(2), 12, P0C, '#fff'), lP0t = lbl(ls, LP.X(1) - 6, LP.Y(2) + 36, 'P₀(1, 2)', P0C, { 'font-size': 22 });
 const lPg = mk(ls, 'g', {}), lP = mk(lPg, 'g', {}); const lPc = mk(lP, 'circle', { r: 12, fill: C.ink, stroke: '#fff', 'stroke-width': 3 });
-const lPt = lbl(ls, 0, 0, 'P(x, y)', C.ink, { 'font-size': 22 });
+const lPt = lbl(ls, 0, 0, 'P(x, y)', C.ink, { 'font-size': 22, 'text-anchor': 'end' });
 const xK = ramp(3, [[wt('L2', 'slide'), 7, 2.6], [wt('L3', 'Still') - 0.3, 3.5, 1.8]]);
 const offK = ramp(0, [[wt('L4', 'push'), 0.8, 0.8], [wt('L5', 'So'), 0, 0.8]]);
 let lLast = '';
@@ -113,7 +113,7 @@ const dL = fline(ds, DP, 1, 2, 5, 4);
 const dRu = seg(ds, DP, 1, 2, 6, 2, XC, 6), dRi = seg(ds, DP, 6, 2, 6, 4.5, YC, 6);
 const dP0 = dotG(ds, DP.X(1), DP.Y(2), 12, P0C, '#fff'), dP = dotG(ds, DP.X(6), DP.Y(4.5), 12, C.ink, '#fff');
 const dP0t = lbl(ds, DP.X(1) - 6, DP.Y(2) + 36, 'P₀(x₀, y₀)', P0C, { 'font-size': 22 }), dPt = lbl(ds, DP.X(6) - 16, DP.Y(4.5) - 20, 'P(x, y)', C.ink, { 'font-size': 22, 'text-anchor': 'end' });
-const dRut = lbl(ds, DP.X(3.5), DP.Y(2) + 34, 'x − x₀', XC, { 'font-size': 22, 'text-anchor': 'middle' }), dRit = lbl(ds, DP.X(6) + 16, DP.Y(3.25) + 8, 'y − y₀', YC, { 'font-size': 22 });
+const dRut = lbl(ds, DP.X(4.3), DP.Y(2) + 34, 'x − x₀', XC, { 'font-size': 22, 'text-anchor': 'middle' }), dRit = lbl(ds, DP.X(6) + 16, DP.Y(3.25) + 8, 'y − y₀', YC, { 'font-size': 22 });
 $('#dP').innerHTML = K(`${Y_} - ${pc('2')} = ${rc('\\tfrac{1}{2}')}\\,(${X_} - ${pc('1')})`);
 
 /* ---------- P: two-point form ---------- */
@@ -127,7 +127,7 @@ const pL = fline(ps, PP, 1, 2, 5, 4);
 const pRu = seg(ps, PP, 1, 2, 5, 2, XC, 6), pRi = seg(ps, PP, 5, 2, 5, 4, YC, 6);
 const pA = dotG(ps, PP.X(1), PP.Y(2), 12, C.ink, '#fff'), pB = dotG(ps, PP.X(5), PP.Y(4), 12, C.ink, '#fff');
 const pAt = lbl(ps, PP.X(1) - 6, PP.Y(2) + 36, '(x₁, y₁)', C.ink, { 'font-size': 22 }), pBt = lbl(ps, PP.X(5) - 16, PP.Y(4) - 20, '(x₂, y₂)', C.ink, { 'font-size': 22, 'text-anchor': 'end' });
-const pRut = lbl(ps, PP.X(3), PP.Y(2) + 34, 'x₂ − x₁', XC, { 'font-size': 22, 'text-anchor': 'middle' }), pRit = lbl(ps, PP.X(5) + 16, PP.Y(3) + 8, 'y₂ − y₁', YC, { 'font-size': 22 });
+const pRut = lbl(ps, PP.X(3.6), PP.Y(2) + 34, 'x₂ − x₁', XC, { 'font-size': 22, 'text-anchor': 'middle' }), pRit = lbl(ps, PP.X(5) + 16, PP.Y(3) + 8, 'y₂ − y₁', YC, { 'font-size': 22 });
 
 /* ---------- K: side by side ---------- */
 $('#kpF').innerHTML = K(PSF);
@@ -242,7 +242,7 @@ M.on(t => {
     lL.run(t, wt('L1', 'slope') - 0.1, 0.8); M.vis($('#lW'), t, wt('L1', 'slope'), 1e9, { dy: 8 });
     const tp = wt('L2', 'point'), x = xK(t), off = offK(t), y = 0.5 * x + 1.5 + off, sl = (y - 2) / (x - 1), on = off < 0.02;
     attr(lPg, 'transform', `translate(${LP.X(x).toFixed(1)},${LP.Y(y).toFixed(1)})`); M.vis(lP, t, tp, 1e9, DOT);
-    attr(lPt, 'x', (LP.X(x) + 18).toFixed(1)); attr(lPt, 'y', (LP.Y(y) - 16).toFixed(1)); M.vis(lPt, t, tp + 0.1, 1e9, { dy: 0 });
+    attr(lPt, 'x', (LP.X(x) - 16).toFixed(1)); attr(lPt, 'y', (LP.Y(y) - 18).toFixed(1)); M.vis(lPt, t, tp + 0.1, 1e9, { dy: 0 });
     attr(lPc, 'fill', on ? C.ink : C.red);
     const triOn = t >= wt('L3', 'Watch');
     attr(lRu, 'x1', LP.X(1)); attr(lRu, 'y1', LP.Y(2)); attr(lRu, 'x2', LP.X(x).toFixed(1)); attr(lRu, 'y2', LP.Y(2));
