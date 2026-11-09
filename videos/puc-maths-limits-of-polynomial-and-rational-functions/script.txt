@@ -22,11 +22,11 @@ D4|0.75|Step three. Near one, x is not one, so x minus one is not zero. We can c
 D5|0.65|Step four. What is left is x plus one. Now plug in. One plus one is two.
 S1|3.2|Now you try. x squared minus four, over x minus two, as x tends to two. Is it stuck? Pause and decide.
 S2|0.65|Not stuck! Cancel x minus two. Then x plus two tends to four.
-N1|0.4|NCERT also gives a shortcut that saves a lot of factoring.
-N2|0.75|The limit of x to the n, minus a to the n, over x minus a, as x tends to a, equals n times a to the power n minus one.
-N3|0.65|Check it with n equals two and a equals one. Two times one is two. That matches our answer.
-N4|3.2|Quick one. x cubed minus eight, over x minus two, as x tends to two. Six, or twelve? Pause and think.
-N5|0.65|Twelve! Here n is three and a is two. Three times two squared is twelve.
+K1|0.4|NCERT also gives a shortcut that saves a lot of factoring.
+K2|0.75|The limit of x to the n, minus a to the n, over x minus a, as x tends to a, equals n times a to the power n minus one.
+K3|0.65|Check it with n equals two and a equals one. Two times one is two. That matches our answer.
+K4|3.2|Quick one. x cubed minus eight, over x minus two, as x tends to two. Six, or twelve? Pause and think.
+K5|0.65|Twelve! Here n is three and a is two. Three times two squared is twelve.
 T1|0.7|Remember this. Zero over zero is not stuck. Factor, cancel, then plug in.
 W1|0.35|Now, one worked example.
 W2|0.5|Find the limit of x squared minus five x plus six, over x squared minus nine, as x tends to three.
@@ -48,4 +48,4 @@ Y1|0.4|Can you answer these three questions without help?
 Y2|0.9|One. What is the limit of x cubed plus one, as x tends to two?
 Y3|0.9|Two. What should you do when you get zero over zero?
 Y4|1.1|Three. What is the limit of x to the five minus one, over x minus one, as x tends to one?
-N6|0.3|Next time: sine x over x, when x is tiny. Why does it close in on exactly one? We find out with limits of trigonometric functions.
+N1|0.3|Next time: sine x over x, when x is tiny. Why does it close in on exactly one? We find out with limits of trigonometric functions.
