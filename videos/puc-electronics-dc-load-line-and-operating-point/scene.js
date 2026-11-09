@@ -96,7 +96,7 @@ const hW = mk(h1S, 'path', { fill: 'none', stroke: AM, 'stroke-width': 5, 'strok
 const hNote = mono(h1S, 470, 248, 'loud parts break up', { 'text-anchor': 'middle', fill: INK, 'font-weight': 600 });
 const h2S = $('#h2S'), hsc = mk(h2S, 'g', { transform: 'translate(40,70)' }); scope(hsc, 520, 180);
 const hTr = mk(hsc, 'path', { fill: 'none', stroke: AM, 'stroke-width': 4, 'stroke-linecap': 'round' });
-const hCut = W(hsc, 'M8,30 H512', { stroke: C.red, 'stroke-width': 2, 'stroke-dasharray': '6 6' }), hCutL = mono(h2S, 580, 106, 'tops cut', { fill: C.red, 'font-weight': 600 });
+const hCut = W(hsc, 'M8,50 H512', { stroke: C.red, 'stroke-width': 2, 'stroke-dasharray': '6 6' }), hCutL = mono(h2S, 580, 126, 'tops cut', { fill: C.red, 'font-weight': 600 });
 
 /* ================= P: swing ================= */
 const pS = $('#pS');
@@ -119,7 +119,7 @@ const rC = W(ck, 'M541,262 L527,254 L555,240 L527,226 L555,212 L527,198 L555,184
 const cBat = [W(ck, 'M772,284 H828', { 'stroke-width': 5 }), W(ck, 'M786,306 H814', { 'stroke-width': 9 }), W(ck, 'M172,404 H228', { 'stroke-width': 5 }), W(ck, 'M186,426 H214', { 'stroke-width': 9 })];
 const cNode = mk(ck, 'circle', { cx: 541, cy: 470, r: 7, fill: INK });
 const cLb = [tx(ck, 840, 300, 'V CC', { fill: TE, 'font-family': 'IBM Plex Mono' }), tx(ck, 836, 276, '+', { 'font-size': 24 }), tx(ck, 160, 422, 'V BB', { 'text-anchor': 'end', fill: TE, 'font-family': 'IBM Plex Mono' }), tx(ck, 236, 398, '+', { 'font-size': 24 }),
-  sub(tx(ck, 350, 392, 'R', { 'text-anchor': 'middle', 'font-style': 'italic' }), 'B'), sub(tx(ck, 504, 224, 'R', { 'text-anchor': 'end', 'font-style': 'italic' }), 'C'), mono(ck, 420, 300, 'base', { fill: INK, 'font-weight': 600, 'font-size': 18 }), mono(ck, 560, 290, 'C', { fill: INK, 'font-weight': 600 }), mono(ck, 560, 404, 'E', { fill: INK, 'font-weight': 600 })];
+  sub(tx(ck, 350, 392, 'R', { 'text-anchor': 'middle', 'font-style': 'italic' }), 'B'), sub(tx(ck, 504, 224, 'R', { 'text-anchor': 'end', 'font-style': 'italic' }), 'C'), mono(ck, 452, 312, 'B', { fill: INK, 'font-weight': 600, 'font-size': 18 }), mono(ck, 560, 290, 'C', { fill: INK, 'font-weight': 600 }), mono(ck, 560, 404, 'E', { fill: INK, 'font-weight': 600 })];
 const cVce = [W(ck, 'M610,300 V380', { stroke: TE, 'stroke-width': 3 }), sub(tx(ck, 622, 348, 'V', { fill: TE, 'font-style': 'italic' }), 'CE'), mono(ck, 604, 298, '+', { fill: TE, 'font-weight': 600 })];
 const aIB = PUC.arrow(ck, VI, 4, 12), aIC = PUC.arrow(ck, VI, 6, 16), lIB = sub(tx(ck, 440, 372, 'I', { fill: VI, 'font-style': 'italic' }), 'B'), lIC = sub(tx(ck, 580, 160, 'I', { fill: VI, 'font-style': 'italic' }), 'C');
 const eCC = flow(ck, [[800, 310], [800, 470], [541, 470], [541, 385], [541, 295], [541, 130], [800, 130], [800, 280]], 24, { skip: (x, y) => Math.hypot(x - 520, y - 340) < 54 || (Math.abs(x - 800) < 3 && y > 278 && y < 312) });
@@ -153,11 +153,11 @@ const grS = $('#grS'), gp = PUC.graph(grS, { x: 110, y: 80, w: 740, h: 400, xmax
 gp.xlab.setAttribute('fill', TE); gp.ylab.setAttribute('fill', VI); gp.xlab.setAttribute('y', 540);
 const IBs = [10, 20, 30, 40, 50], oc = IBs.map(ib => { const p = gp.mk('path', { fill: 'none', stroke: '#B9A6EF', 'stroke-width': 3 }); let d = ''; for (let i = 0; i <= 60; i++) { const v = 12.4 * i / 60; d += (i ? 'L' : 'M') + gp.X(v).toFixed(1) + ',' + gp.Y(icOut(v, ib)).toFixed(1); } p.setAttribute('d', d); return p; });
 const ocL = IBs.map(ib => mono(grS, gp.X(12.5), gp.Y(icOut(12.4, ib)) + 6, ib + ' μA', { fill: VI, 'font-size': 16, 'font-weight': 600 }));
-const ocT = mono(grS, gp.X(12.9), gp.Y(8) + 4, 'I B', { 'text-anchor': 'end', fill: VI, 'font-size': 16, 'font-weight': 600 });
+const ocT = mono(grS, gp.X(12.9), gp.Y(8) - 14, 'I B', { 'text-anchor': 'end', fill: VI, 'font-size': 16, 'font-weight': 600 });
 const bLL = gp.mk('line', { x1: gp.X(0), y1: gp.Y(6), x2: gp.X(12), y2: gp.Y(0), stroke: INK, 'stroke-width': 5, 'stroke-linecap': 'round' });
 const bSwing = gp.mk('line', { stroke: AM, 'stroke-width': 12, 'stroke-linecap': 'round', opacity: 0.55 });
 const bEnds = [gp.mk('circle', { cx: gp.X(12), cy: gp.Y(0), r: 8, fill: INK }), gp.mk('circle', { cx: gp.X(0), cy: gp.Y(6), r: 8, fill: INK })];
-const bEndL = [mono(grS, gp.X(12) - 6, gp.Y(0) - 16, 'cut-off', { 'text-anchor': 'end', fill: INK, 'font-weight': 600, 'font-size': 18 }), mono(grS, gp.X(0) + 16, gp.Y(6) + 26, 'saturation', { fill: INK, 'font-weight': 600, 'font-size': 18 })];
+const bEndL = [mono(grS, gp.X(12) - 6, gp.Y(0) - 16, 'cut-off', { 'text-anchor': 'end', fill: INK, 'font-weight': 600, 'font-size': 18 }), mono(grS, gp.X(0.3), gp.Y(6.75), 'saturation', { fill: INK, 'font-weight': 600, 'font-size': 18 })];
 const qDot = gp.mk('circle', { r: 13, fill: AM, stroke: INK, 'stroke-width': 2 }), qL = tx(grS, 0, 0, 'Q', { 'font-size': 26 });
 const tb4 = wt('B4', 'signal'), tb6 = wt('B6', 'Move'), tb8 = wt('B8', 'Move'), tb9 = wt('B9', 'keep');
 const icq = t => { let q = 3; q = M.lerp(q, 5.4, M.io((t - tb6) / 0.8)); q = M.lerp(q, 0.6, M.io((t - tb8) / 0.8)); q = M.lerp(q, 3, M.io((t - tb9) / 0.8)); return q; };
@@ -236,7 +236,7 @@ M.on(t => {
     M.vis(hW, t, t1 + 0.5, 1e9, { dy: 0, fade: 0.2 }); PUC.attr(hW, 'd', sine(260, 740, 150, 40 + 30 * loud, ph, 1e9 - loud * 1e9 + 46, -1e9 + loud * 1e9 - 46, 16));
     M.vis(hNote, t, wt('H2', 'harsh'), 1e9, { dy: 0, fade: 0.2 }); M.vis($('#h1T'), t, wt('H2', 'harsh'), 1e9, { dy: 0, sc: 0.8, sp: M.POP, fade: 0.1 });
     const t2 = wt('H3', 'scope') - 0.3;
-    M.vis($('#h2C'), t, t2, out, { dx: 60, dy: 0, ...o }); PUC.attr(hTr, 'd', sine(8, 512, 90, 76, -5 * (t - t2), 60, -1e9, 22));
+    M.vis($('#h2C'), t, t2, out, { dx: 60, dy: 0, ...o }); PUC.attr(hTr, 'd', sine(8, 512, 90, 76, -5 * (t - t2), 40, -1e9, 22));
     M.draw(hCut, t, wt('H3', 'sliced'), 0.5); M.vis(hCutL, t, wt('H3', 'sliced') + 0.3, 1e9, { dy: 0, fade: 0.2 }); M.vis($('#h2T'), t, wt('H3', 'flat'), 1e9, { dy: 0, sc: 0.8, sp: M.POP, fade: 0.1 });
     M.vis($('#aPill'), t, wt('H4', 'wrong'), 1e9, { dy: 0, sc: 0.8, sp: M.POP, fade: 0.1 });
   }
