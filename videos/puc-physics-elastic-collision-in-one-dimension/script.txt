@@ -1,0 +1,56 @@
+H1|0.4|A marble hits a still marble, and stops dead. A ball hits a wall, and bounces straight back.
+H2|0.45|And a heavy ball can send a light one off faster than it came in.
+H3|0.35|Aarav has a desk toy, a row of hanging steel balls. Swing one in, and exactly one flies out.
+H4|0.5|Swing two, and two fly out. Why never one ball, twice as fast?
+H5|0.6|One kind of collision explains all of this.
+P1|0.35|In every collision, the total momentum stays the same. The pushes are internal.
+P2|0.4|In an elastic collision, one more thing is saved: the total kinetic energy.
+P3|0.6|The balls squash a little, like a spring, then spring back. Nothing is lost as heat, sound or a dent.
+S1|0.35|Our motion notebook. Ball A, two kilograms, rolls at three metres per second. Ball B, also two kilograms, is at rest.
+S2|3.2|You predict. After the hit, does A stop dead, or bounce back? Pause and decide.
+S3|0.4|It stops dead! B moves off at three. The balls swap velocities.
+S4|0.5|Momentum, six before and six after. Kinetic energy, nine joules before and after.
+S5|0.35|Slow-mo replay. Freeze at the biggest squash.
+S6|0.5|Both move together at one point five. Kinetic energy dips to four point five joules. The rest is stored in the squash.
+S7|0.6|Then it springs back, and every joule returns. The total on the graph comes back to the same line.
+S8|0.4|Now A is four kilograms. A keeps going at one. B shoots off at four.
+S9|0.4|Flip it. A is two kilograms, B is four. A bounces back at one, and B moves off at two.
+S10|0.6|Three different results. Momentum and kinetic energy both kept, every time.
+D1|0.35|Now the formulas, one step at a time. Ball two starts at rest.
+D2|0.75|Step one. Momentum: m one u one equals m one v one plus m two v two.
+D3|0.75|Step two. Kinetic energy: half m one u one squared equals half m one v one squared, plus half m two v two squared.
+D4|0.75|Step three. Group ball one's terms on the left, in both lines.
+D5|0.75|Step four. Divide one line by the other. u one plus v one equals v two. So they move apart as fast as they came together.
+D6|0.75|Step five. Put that back into step one. v one is m one minus m two, over m one plus m two, times u one. v two is two m one over m one plus m two, times u one.
+D7|0.6|Our three runs give zero and three, one and four, minus one and two. Just like the sim.
+T1|0.7|Remember this. In an elastic collision, the bodies move apart as fast as they came together.
+R1|0.35|Now Aarav's puzzle, link by link. Each ball has mass m.
+R2|0.4|Two balls come in at speed v. Momentum two m v. Kinetic energy m v squared.
+R3|0.4|Suppose one ball flew out at two v. Momentum, two m v. That works.
+R4|0.4|But its kinetic energy is half m times two v squared. Two m v squared. Double!
+R5|0.6|Energy cannot appear from nothing. So two balls must fly out, at speed v.
+K1|0.4|Side by side. A very heavy ball hits a light one. The heavy one barely slows. The light one leaves at nearly twice its speed.
+K2|0.6|A light ball hits a very heavy one. It bounces back at nearly the same speed, like a ball off a wall.
+K3|3.2|Now you try. A bus at ten metres per second hits a still rubber ball, head on and elastically. Does the ball leave at about ten, or about twenty? Pause and decide.
+K4|0.65|About twenty! The bus keeps nearly ten, and they must separate as fast as they approached.
+W1|0.35|Now, one worked example.
+W2|0.5|A three kilogram block slides at five metres per second on smooth ice into a two kilogram block at rest. The hit is elastic. Find both velocities.
+W3|0.75|v one is three minus two, over five, times five. One metre per second, still forward.
+W4|0.75|v two is six over five, times five. Six metres per second.
+W5|0.75|Check. Momentum, fifteen before, and three plus twelve after. Kinetic energy, thirty seven point five, both times.
+W6|0.65|And six minus one is five, the speed of approach.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students think elastic bodies always swap velocities.
+X3|0.65|They swap only when the masses are equal. With four and two kilograms, A kept moving at one.
+E1|0.6|Where is this asked? In numericals on final velocities, energy passed on, and the heavy and light limits.
+Q1|5.4|Exam level now. Ball A, mass m, hits ball B at rest, head on and elastically. A keeps moving forward at one third of its speed. What is the mass of B? Pause and solve.
+A1|0.5|The answer is A. m by two.
+A2|0.5|v one equals m minus M, over m plus M, times u.
+A3|0.5|Set this to u by three. Three m minus three M equals m plus M.
+A4|0.6|So two m equals four M, and M is m by two.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. Why does only one steel ball fly out when one swings in?
+Y3|0.9|Two. When do two bodies swap velocities?
+Y4|0.9|Three. A ball hits a wall elastically at five metres per second. How fast does it come back?
+N1|0.3|Next time: two trolleys crash and stick together. Where does the lost energy go? Perfectly inelastic collision.
