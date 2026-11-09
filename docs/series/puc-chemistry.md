@@ -125,3 +125,26 @@ Ep 57 NEXT strip teases Ch 6 Equilibrium.
 - Ep 76 | Redox Titrations | CLASS 11 · CHEMISTRY · CH 7 REDOX REACTIONS | hook Diya | puc-chemistry-redox-titrations
 - Ep 77 | Redox Reactions and Electrode Processes | CLASS 11 · CHEMISTRY · CH 7 REDOX REACTIONS | hook Aarav | puc-chemistry-redox-reactions-and-electrode-processes
 - Ep 77 NEXT strip teases Ch 8 Organic Chemistry: Some Basic Principles and Techniques.
+
+### Batch 4 (10 Nov 2026): Ch 8 Organic Chemistry: Some Basic Principles and Techniques, Ch 9 Hydrocarbons. Same rules (all boards, 10-12 year old level). Ends NCERT Class 11.
+- Ep 78 | Tetravalence of Carbon and Shapes of Organic Compounds | CLASS 11 · CHEMISTRY · CH 8 ORGANIC CHEMISTRY: BASIC PRINCIPLES | hook Diya | puc-chemistry-tetravalence-of-carbon-and-shapes-of-organic-compounds
+- Ep 79 | Structural Representations of Organic Compounds | CLASS 11 · CHEMISTRY · CH 8 ORGANIC CHEMISTRY: BASIC PRINCIPLES | hook Aarav | puc-chemistry-structural-representations-of-organic-compounds
+- Ep 80 | Classification of Organic Compounds | CLASS 11 · CHEMISTRY · CH 8 ORGANIC CHEMISTRY: BASIC PRINCIPLES | hook Diya | puc-chemistry-classification-of-organic-compounds
+- Ep 81 | IUPAC Nomenclature of Organic Compounds | CLASS 11 · CHEMISTRY · CH 8 ORGANIC CHEMISTRY: BASIC PRINCIPLES | hook Aarav | puc-chemistry-iupac-nomenclature-of-organic-compounds
+- Ep 82 | Isomerism in Organic Compounds | CLASS 11 · CHEMISTRY · CH 8 ORGANIC CHEMISTRY: BASIC PRINCIPLES | hook Diya | puc-chemistry-isomerism-in-organic-compounds
+- Ep 83 | Bond Fission, Nucleophiles and Electrophiles | CLASS 11 · CHEMISTRY · CH 8 ORGANIC CHEMISTRY: BASIC PRINCIPLES | hook Aarav | puc-chemistry-bond-fission-nucleophiles-and-electrophiles
+- Ep 84 | Inductive and Electromeric Effects | CLASS 11 · CHEMISTRY · CH 8 ORGANIC CHEMISTRY: BASIC PRINCIPLES | hook Diya | puc-chemistry-inductive-and-electromeric-effects
+- Ep 85 | Resonance and Hyperconjugation | CLASS 11 · CHEMISTRY · CH 8 ORGANIC CHEMISTRY: BASIC PRINCIPLES | hook Aarav | puc-chemistry-resonance-and-hyperconjugation
+- Ep 86 | Purification of Organic Compounds | CLASS 11 · CHEMISTRY · CH 8 ORGANIC CHEMISTRY: BASIC PRINCIPLES | hook Diya | puc-chemistry-purification-of-organic-compounds
+- Ep 87 | Qualitative Analysis of Organic Compounds | CLASS 11 · CHEMISTRY · CH 8 ORGANIC CHEMISTRY: BASIC PRINCIPLES | hook Aarav | puc-chemistry-qualitative-analysis-of-organic-compounds
+- Ep 88 | Quantitative Analysis of Organic Compounds | CLASS 11 · CHEMISTRY · CH 8 ORGANIC CHEMISTRY: BASIC PRINCIPLES | hook Diya | puc-chemistry-quantitative-analysis-of-organic-compounds
+- Ep 89 | Alkanes: Classification and Preparation | CLASS 11 · CHEMISTRY · CH 9 HYDROCARBONS | hook Aarav | puc-chemistry-alkanes-classification-and-preparation
+- Ep 90 | Properties of Alkanes | CLASS 11 · CHEMISTRY · CH 9 HYDROCARBONS | hook Diya | puc-chemistry-properties-of-alkanes
+- Ep 91 | Conformations of Ethane | CLASS 11 · CHEMISTRY · CH 9 HYDROCARBONS | hook Aarav | puc-chemistry-conformations-of-ethane
+- Ep 92 | Alkenes: Structure, Isomerism and Preparation | CLASS 11 · CHEMISTRY · CH 9 HYDROCARBONS | hook Diya | puc-chemistry-alkenes-structure-isomerism-and-preparation
+- Ep 93 | Reactions of Alkenes and Markovnikov's Rule | CLASS 11 · CHEMISTRY · CH 9 HYDROCARBONS | hook Aarav | puc-chemistry-reactions-of-alkenes-and-markovnikov-s-rule
+- Ep 94 | Alkynes | CLASS 11 · CHEMISTRY · CH 9 HYDROCARBONS | hook Diya | puc-chemistry-alkynes
+- Ep 95 | Benzene and Aromaticity | CLASS 11 · CHEMISTRY · CH 9 HYDROCARBONS | hook Aarav | puc-chemistry-benzene-and-aromaticity
+- Ep 96 | Electrophilic Substitution in Benzene | CLASS 11 · CHEMISTRY · CH 9 HYDROCARBONS | hook Diya | puc-chemistry-electrophilic-substitution-in-benzene
+- Ep 97 | Directive Influence and Carcinogenicity | CLASS 11 · CHEMISTRY · CH 9 HYDROCARBONS | hook Aarav | puc-chemistry-directive-influence-and-carcinogenicity
+- Ep 97 NEXT strip: `NEXT · CLASS 12` teasing Solutions (Class 12 Ch 1).
