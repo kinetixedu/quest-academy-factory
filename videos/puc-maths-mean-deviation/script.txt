@@ -1,0 +1,44 @@
+H1|0.4|Two classes write the same test. Both classes have an average of fifty marks.
+H2|0.45|But in one class, everyone scored close to fifty. In the other, marks run from ten all the way to ninety.
+H3|0.35|Diya spotted this on the college notice board today.
+H4|0.5|Same average, very different marks. How do we put that difference into one number?
+H5|0.65|That number is called the mean deviation. It measures how spread out the marks are.
+L1|0.4|Let us put the marks on a number line. Class A first: forty eight, forty nine, fifty, fifty one and fifty two.
+L2|0.4|Now measure how far each mark is from the average, fifty. Two, one, zero, one, two. In total, six.
+L3|0.4|Share that total among five students. Six over five is one point two. On average, a mark is just one point two away.
+L4|0.4|Class B: ten, thirty, fifty, seventy and ninety. The gaps are forty, twenty, zero, twenty, forty. In total, one hundred and twenty.
+L5|0.65|One hundred and twenty over five is twenty four. Same average, but the spread is twenty times bigger.
+D1|0.4|Now the rule, for any list of numbers.
+D2|0.75|Step one. Find the centre. The mean, x bar, is the sum of all the values, divided by how many there are.
+D3|0.75|Step two. For each value, find its deviation, x minus x bar. That is how far it is from the centre, with a plus or a minus sign.
+D4|0.75|Step three. Here is a problem. Add the deviations, and the pluses and minuses always cancel to zero.
+D5|0.75|Step four. So we ignore the sign. These bars mean absolute value: the distance, which is never negative.
+D6|0.75|Step five. Add the distances, and divide by n. That is the mean deviation about the mean.
+D7|0.65|We can also measure from the median, the middle value. Then we write x minus M inside the bars.
+C1|0.4|Side by side. Take two, four, six, eight and thirty. The mean is ten. Measured from ten, the mean deviation is eight.
+C2|0.6|The median, the middle value, is six. Measured from six, the mean deviation is six point four.
+C3|3.2|Your turn. One big value, thirty, sits far away. Which centre does it pull more, the mean or the median? Pause and think.
+C4|0.65|The mean! Thirty drags the mean up to ten. The median only looks at the middle value, so it stays at six.
+T1|0.7|Remember this. Mean deviation is the average distance from the centre.
+W1|0.35|Now, one worked example from the NCERT book.
+W2|0.5|Find the mean deviation about the mean for six, seven, ten, twelve, thirteen, four, eight and twelve.
+W3|0.75|Step one. The sum is seventy two, and there are eight values. So the mean is nine.
+W4|0.75|Step two. Find each distance from nine. Three, two, one, three, four, five, one and three.
+W5|0.75|Step three. Add the distances. The total is twenty two.
+W6|0.75|Step four. Divide by eight. The mean deviation is two point seven five.
+W7|0.65|So on average, each value sits about two point seven five away from nine.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students forget the bars. They add x minus x bar, with the signs, and get zero.
+X3|0.65|But zero would mean every value equals the mean, which is false here. Every gap must count as positive. The answer is two point seven five.
+J1|0.6|Where is this asked? In JEE Main. In April twenty twenty three, a paper gave six observations with their mean and variance, and asked for the mean deviation about the mean.
+Q1|5.4|Exam level now. Each number is multiplied by three, then five is added. Find the new mean deviation. Pause and solve.
+A1|0.5|The answer is B. Seven point two.
+A2|0.5|First, the old data. The mean is six, and the distances are four, two, zero, two and four. So the mean deviation is two point four.
+A3|0.5|Adding five moves every value and the mean together. The distances do not change.
+A4|0.6|Multiplying by three stretches every distance three times. So the new mean deviation is three times two point four, which is seven point two.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why do we take the absolute value of each deviation?
+Y3|0.9|Two. Find the mean deviation about the mean of one, three and five.
+Y4|1.1|Three. What does a mean deviation of zero tell you?
+N1|0.3|Next time: two batsmen with the same average. Which one is more consistent? We square the gaps, and meet the variance and the standard deviation.

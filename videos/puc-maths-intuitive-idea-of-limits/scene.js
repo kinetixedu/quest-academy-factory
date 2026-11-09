@@ -67,8 +67,11 @@ const wall = mk(hs, 'rect', { x: 718, y: 180, width: 26, height: 200, rx: 4, fil
 txt(hs, 731, 404, 'WALL', { 'text-anchor': 'middle', 'font-size': 16, fill: C.ink, 'font-weight': 600, 'letter-spacing': 1.5 });
 [8, 4, 2, 1].forEach(g => { mk(hs, 'line', { x1: HX(g), y1: HY - 9, x2: HX(g), y2: HY + 9, stroke: C.ink, 'stroke-width': 2 }); txt(hs, HX(g), HY + 40, g + ' m', { 'text-anchor': 'middle', 'font-size': 18, fill: C.ink, 'font-weight': 600 }); });
 const hGap = mk(hs, 'line', { y1: HY + 70, y2: HY + 70, stroke: LC, 'stroke-width': 5, 'stroke-linecap': 'round' });
-const hGapL = txt(hs, 0, HY + 104, 'gap', { 'text-anchor': 'middle', 'font-size': 20, fill: LC, 'font-weight': 600 });
+const hGapL = txt(hs, 0, HY + 100, 'gap', { 'text-anchor': 'middle', 'font-size': 20, fill: LC, 'font-weight': 600 });
 const hMark = mk(hs, 'circle', { cy: HY, r: 8, fill: LC });
+const hBL = txt(hs, 36, 398, 'GAP AFTER EACH MOVE', { 'font-size': 16, fill: C.mute, 'font-weight': 600, 'letter-spacing': 1.5 });
+mk(hs, 'line', { x1: 36, y1: 462, x2: 748, y2: 462, stroke: C.ink, 'stroke-width': 2 });
+const hBars = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(k => { const h = Math.max(1.5, 8 / Math.pow(2, k) * 7); const x = 300 + k * 46; const r = mk(hs, 'rect', { x, y: 462 - h, width: 32, height: h, rx: 3, fill: LC, opacity: 0.85 }); const l = txt(hs, x + 16, 482, k, { 'text-anchor': 'middle', 'font-size': 14, fill: C.mute }); return [r, l]; });
 const tMv = [wt('H2', 'Four'), wt('H2', 'Two'), wt('H2', 'One'), wt('H2', 'Half'), wt('H2', 'quarter')];
 const tFast0 = wt('H4', 'After'), tFast1 = wt('H4', 'moves');
 const kOf = t => tMv.reduce((s, tt) => s + M.io((t - tt) / 0.45), 0) + 15 * M.clamp((t - tFast0) / Math.max(0.5, tFast1 - tFast0));
@@ -93,13 +96,13 @@ const xOf = t => 2 - 0.5 * Math.pow(10, -3 * M.io((t - tXa) / Math.max(0.5, tXb 
 /* ---------- L: live table + graph ---------- */
 const lp = drawH($('#lS'), { px: 96, pw: 620, py: 96, ph: 380 });
 const lL = mover($('#lS'), lp, LB), lR = mover($('#lS'), lp, RT);
-const lHole = txt($('#lS'), lp.X(2) + 22, lp.Y(4) - 18, 'hole at x = 2', { 'font-size': 20, fill: C.ink, 'font-weight': 600 });
+const lHole = txt($('#lS'), lp.X(2) + 20, lp.Y(4) + 40, 'hole at x = 2', { 'font-size': 20, fill: C.ink, 'font-weight': 600 });
 const lFn = txt($('#lS'), lp.X(3.2), lp.Y(5.2) - 30, 'y = h(x)', { 'text-anchor': 'middle', 'font-size': 22, fill: C.ink, 'font-weight': 600 });
 $('#lF').innerHTML = K(`h(${xv('x')}) = \\dfrac{${xv('x')}^2 - 4}{${xv('x')} - 2}`);
 const TL = [['1.9', '3.9'], ['1.99', '3.99'], ['1.999', '3.999']], TR = [['2.1', '4.1'], ['2.01', '4.01'], ['2.001', '4.001']];
 const tab = (id, head, rows, col) => { $(id).innerHTML = `<div class="th" style="color:${col}">${head}</div><div class="tr" style="background:#fff;height:40px;font:600 18px 'IBM Plex Mono';color:var(--mute)"><span>x</span>h(x)</div>` + rows.map(([a, b], i) => `<div class="tr" id="${id.slice(1)}${i}"><span style="color:${XV}">${a}</span><b class="hv" style="color:${col}">${b}</b></div>`).join(''); };
 tab('#tL', 'FROM THE LEFT', TL, LB); tab('#tR', 'FROM THE RIGHT', TR, RT);
-$('#tL').style.top = $('#tR').style.top = '170px';
+$('#tL').style.top = $('#tR').style.top = '186px';
 const tLx = [wt('L3', 'one'), wt('L3', 'then'), wt('L3', 'then', 1)], tLh = [wt('L4', 'three'), wt('L4', 'three', 1), wt('L4', 'three', 2)];
 const tRx = [wt('L5', 'two'), wt('L5', 'two', 1), wt('L5', 'two', 2)], tRh = [wt('L5', 'four'), wt('L5', 'four', 1), wt('L5', 'four', 2)];
 const xL = stepper(1, [[tLx[0], 1.9], [tLx[1], 1.99], [tLx[2], 1.999]]), xR = stepper(3, [[tRx[0], 2.1], [tRx[1], 2.01], [tRx[2], 2.001]]);
@@ -110,7 +113,7 @@ const DS = [[`${xv('x')}^2 - 4 = (${xv('x')} - 2)(${xv('x')} + 2)`, 'split the t
   [`h(${xv('x')}) = ${xv('x')} + 2, \\ \\ ${xv('x')} \\ne 2`, 'a straight line with one hole'],
   [`${LIM('2', `(${xv('x')} + 2)`, lc('4'))}`, 'even though h(2) does not exist']];
 $('#dSt').innerHTML = DS.map(([f, w], i) => `<div class="st" id="ds${i}" style="top:${[84, 196, 334, 446][i]}px"><div class="n">${i + 1}</div><div class="sx">${K(f)}</div><div class="why">${w}</div></div>`).join('');
-$('#ds1 .why').innerHTML = ''; $('#ds1').insertAdjacentHTML('beforeend', `<div class="why" style="left:420px;top:26px;white-space:normal;width:280px;line-height:1.3">x ≠ 2, so x - 2 ≠ 0: cancel it</div>`);
+$('#ds1 .why').innerHTML = ''; $('#ds1').insertAdjacentHTML('beforeend', `<div class="why" style="left:470px;top:26px;white-space:normal;width:240px;line-height:1.3">x ≠ 2, so x - 2 ≠ 0: cancel it</div>`);
 const tDs = [wt('D2', 'splits'), wt('D3', 'cancel'), wt('D4', 'left'), wt('D5', 'tends')];
 const DY = [84, 196, 334, 446];
 const dp = drawH($('#dS'), { px: 96, pw: 620, py: 96, ph: 380 });
@@ -129,7 +132,7 @@ const s1V = mk($('#s1S'), 'line', { x1: sp1.X(2), y1: sp1.Y(0), x2: sp1.X(2), y2
 const sp2 = drawH($('#s2S'), { px: 120, pw: 560, py: 210, ph: 260, y1: 6.5, yt: [0, 2, 4, 6] });
 const s2L = mover($('#s2S'), sp2, LB), s2R = mover($('#s2S'), sp2, RT);
 const s24 = mk($('#s2S'), 'line', { x1: sp2.X(0), y1: sp2.Y(4), x2: sp2.X(2) - 12, y2: sp2.Y(4), stroke: LC, 'stroke-width': 4, 'stroke-dasharray': '8 6' });
-const th1 = PUC.think($('#th1'), { q: 'Can a function have a limit where it has no value?', opts: ['Yes', 'No'], right: 0, why: 'h(2) does not exist, but h(x) gets close to 4 near 2. The hole does not stop the limit.' });
+const th1 = PUC.think($('#th1'), { q: 'A limit at a point where f has no value: possible?', opts: ['Yes', 'No'], right: 0, why: 'No value at 2, yet h(x) gets close to 4 near 2. The hole does not stop it.' });
 
 /* ---------- R: two sides ---------- */
 const RS = [[`\\lim_{${xv('x')} \\to a^-} f(${xv('x')})`, 'left hand limit: x just below a', LB], [`\\lim_{${xv('x')} \\to a^+} f(${xv('x')})`, 'right hand limit: x just above a', RT], [`\\text{${'LHL'}} = \\text{${'RHL'}} = ${lc('l')}`, 'only then does the limit exist: it is l', LC]];
@@ -143,7 +146,7 @@ const rLab = txt($('#rS'), rp.X(2.5), rp.Y(2) - 24, 'y = [x]', { 'text-anchor': 
 const rLd = mk($('#rS'), 'circle', { r: 12, fill: LB }), rRd = mk($('#rS'), 'circle', { r: 12, fill: RT });
 const rLt = txt($('#rS'), rp.X(0.75), rp.Y(0) - 26, 'just below 1: 0', { 'text-anchor': 'middle', 'font-size': 20, fill: LB, 'font-weight': 600 });
 const rRt = txt($('#rS'), rp.X(1.3), rp.Y(1) - 26, 'just above 1: 1', { 'text-anchor': 'start', 'font-size': 20, fill: RT, 'font-weight': 600 });
-const th2 = PUC.think($('#th2'), { q: 'Greatest integer function [x] at x = 1: does the limit exist?', opts: ['Yes', 'No'], right: 1, why: 'Just below 1, [x] = 0. Just above 1, [x] = 1. Left and right do not match: no limit.' });
+const th2 = PUC.think($('#th2'), { q: '[x] at x = 1: does the limit exist?', opts: ['Yes', 'No'], right: 1, why: 'Just below 1, [x] = 0. Just above 1, [x] = 1. Left and right do not match: no limit.' });
 const tR5 = T0('R5');
 
 /* ---------- statement ---------- */
@@ -158,7 +161,7 @@ const wsol = PUC.solution($('#wl'), [
   [K(`f(2) = 7: \\text{ not used}`)],
   [K(`\\lim_{x \\to 2} f(x) = ${lc('4')} \\ne f(2) = 7`)]], { label: 'WORKED EXAMPLE', y0: 196, dy: 74 });
 $('#wl .lbl').style.top = '30px';
-const wp = plot($('#wS'), { x0: 0, x1: 3.2, y0: 0, y1: 8, px: 96, pw: 620, py: 90, ph: 380, xt: [0, 1, 2, 3], yt: [0, 2, 4, 6, 8] });
+const wp = plot($('#wS'), { x0: 0, x1: 3.2, y0: 0, y1: 8, px: 96, pw: 620, py: 90, ph: 356, xt: [0, 1, 2, 3], yt: [0, 2, 4, 6, 8] });
 const wC1 = wp.curve(x => x * x, 0, 2, LB), wC2 = wp.curve(x => 3 * x - 2, 2, 3, RT);
 const wH = wp.hole(2, 4, C.ink, 10), wD = wp.dot(2, 7, C.ink, 10);
 const wDl = txt($('#wS'), wp.X(2) - 16, wp.Y(7) + 6, 'f(2) = 7', { 'text-anchor': 'end', 'font-size': 22, fill: C.ink, 'font-weight': 600 });
@@ -217,7 +220,8 @@ M.on(t => {
     M.setT($('#hN'), String(Math.round(k))); M.setT($('#hG'), fmtG(g));
     $('#hD').style.left = (x - 62).toFixed(1) + 'px'; attr(hMark, 'cx', x.toFixed(1));
     attr(hGap, 'x1', x.toFixed(1)); attr(hGap, 'x2', '716'); attr(hGapL, 'x', ((x + 716) / 2).toFixed(1));
-    M.vis($('#hD'), t, tMorph + 0.4, 1e9, { ...POP, sc: 0.5 }); M.vis(hGap, t, tMorph + 0.5, 1e9, { dy: 0 }); M.vis(hGapL, t, tMorph + 0.5, wt('H4', 'After'), { dy: 0 });
+    M.vis($('#hD'), t, tMorph + 0.4, 1e9, { ...POP, sc: 0.5 }); M.vis(hGap, t, tMorph + 0.5, 1e9, { dy: 0 }); M.vis(hGapL, t, tMorph + 0.5, tMv[2], { dy: 0 });
+    M.vis(hBL, t, tMorph + 0.5, 1e9, { dy: 0 }); hBars.forEach(([r, l], i) => { const tt = i === 0 ? tMorph + 0.6 : i <= 5 ? tMv[i - 1] + 0.2 : tFast0 + (i - 5) * 0.15; M.vis(r, t, tt, 1e9, { dy: 0, fade: 0.12 }); M.vis(l, t, tt, 1e9, { dy: 0 }); });
     M.vis($('#hP'), t, wt('H5', 'zero') - 0.2, 1e9, POP);
     M.vis($('#hk'), t, tH3 - 0.1, out, { dx: 60, dy: 0, ...o });
     M.vis($('#hkImg'), t, tH3 + 0.1, 1e9, { dy: 20 }); M.vis($('#hkF'), t, tH3 + 0.2, 1e9, { ...POP, sc: 0.5 });
@@ -232,7 +236,7 @@ M.on(t => {
     PUC.write($('#dfF'), t, wt('P3', 'limit') - 0.1, 1.0);
     DR.forEach((_, i) => M.vis($('#dr' + i), t, tDr[i] - 0.1, 1e9, { dy: 14 }));
     M.vis($('#pb'), t, wt('P3', 'tends') - 0.2, out, { dx: 60, dy: 0, ...o });
-    const xv_ = xOf(t); attr(pDotG, 'transform', `translate(${PX(xv_).toFixed(1)},0)`); M.setT($('#pXv'), xv_.toFixed(3));
+    const xv_ = xOf(t); attr(pDotG, 'transform', `translate(${PX(xv_).toFixed(1)},0)`); M.setT($('#pXv'), (Math.floor(xv_ * 1000) / 1000).toFixed(3));
     M.vis($('#pX'), t, wt('P3', 'tends'), 1e9, { dy: 14 }); M.vis(pDot, t, wt('P3', 'tends') + 0.1, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 });
     M.vis(pA, t, wt('P3', 'a', 1), 1e9, { dy: 0 }); M.draw(pArr, t, tXa, 0.5); M.vis(pArrH, t, tXa + 0.4, 1e9, { dy: 0 });
     M.vis($('#pP1'), t, wt('P4', 'never') - 0.1, 1e9, POP);

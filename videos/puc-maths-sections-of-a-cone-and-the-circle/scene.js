@@ -320,7 +320,7 @@ M.on(t => {
     attr(dP, 'cx', Px.toFixed(1)); attr(dP, 'cy', Py.toFixed(1)); M.vis(dP, t, tRun - 0.2, 1e9, { dy: 0, fade: 0.2 });
     attr(dPt, 'x', (DC[0] + (DRr + 28) * Math.cos(th) - 8).toFixed(1)); attr(dPt, 'y', (DC[1] - (DRr + 28) * Math.sin(th) + 9).toFixed(1)); M.vis(dPt, t, tRun, 1e9, { dy: 0 });
     M.vis(dCg, t, tRun - 0.3, 1e9, DOT); M.vis(dCt, t, wt('D4', 'centre'), 1e9, { dy: 0 });
-    const mx = (DC[0] + Px) / 2, my = (DC[1] + Py) / 2, ux = (Px - DC[0]) / DRr, uy = (Py - DC[1]) / DRr, hx = mx - uy * 80, hy = my + ux * 80;
+    const mx = (DC[0] + Px) / 2, my = (DC[1] + Py) / 2, ux = (Px - DC[0]) / DRr, uy = (Py - DC[1]) / DRr, hx = mx - uy * 110, hy = my + ux * 110;
     attr(dLeg1, 'x1', DC[0]); attr(dLeg1, 'y1', DC[1]); attr(dLeg1, 'x2', hx.toFixed(1)); attr(dLeg1, 'y2', hy.toFixed(1));
     attr(dLeg2, 'x1', Px.toFixed(1)); attr(dLeg2, 'y1', Py.toFixed(1)); attr(dLeg2, 'x2', hx.toFixed(1)); attr(dLeg2, 'y2', hy.toFixed(1));
     attr(dHand, 'x1', hx.toFixed(1)); attr(dHand, 'y1', hy.toFixed(1)); attr(dHand, 'x2', (hx - uy * 34).toFixed(1)); attr(dHand, 'y2', (hy + ux * 34).toFixed(1));
