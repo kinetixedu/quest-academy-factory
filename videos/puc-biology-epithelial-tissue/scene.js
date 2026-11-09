@@ -21,7 +21,7 @@ S.push(EP.hook({ label: 'AFTER A FALL', face: 'diya', pill: ['A covering that he
     const mg = mk(s, 'g', {}); circ(mg, 600, 210, 118, '#fff', '#2E2A24', 5); mk(mg, 'line', { x1: 518, y1: 296, x2: 430, y2: 252, stroke: '#2E2A24', 'stroke-width': 9, 'stroke-linecap': 'round' });
     const cl = mk(mg, 'clipPath', { id: 'hkc' }); circ(cl, 600, 210, 112, '#fff', 'none', 0); const inn = mk(mg, 'g', { 'clip-path': 'url(#hkc)' });
     mk(inn, 'rect', { x: 480, y: 90, width: 240, height: 240, fill: '#F6E7DC' }); const st = CE.strat(inn, 484, 300, 236);
-    cap(s, 600, 362, 'SKIN · MANY LAYERS', { fill: C.ink });
+    mk(s, 'rect', { x: 500, y: 338, width: 200, height: 34, rx: 8, fill: '#fff', stroke: '#CBD0DA', 'stroke-width': 2 }); cap(s, 600, 361, 'SKIN · MANY LAYERS', { fill: C.ink });
     return { els: [[mg, ['H2', 'sheet', -0.1], { ...POP, sc: 0.6 }]], anim: t => { const h = M.io((t - tm(['H3', 'heal'])) / 2.2); sc.setAttribute('fill', mix(RED, SK, h)); sc.setAttribute('stroke', mix('#8A1C1C', SK, h)); } };
   } }));
 
@@ -63,7 +63,7 @@ const LT = ['L2', 'L3', 'L4', 'L5', 'L6'].map(id => [id, null, 0.45]);
 S.push({ id: 'L', from: 'L1', to: 'T1', keep: 1, cards: [
   { pos: 'L', label: 'SIMPLE EPITHELIUM · STEP BY STEP', svg: false, build: el => ({ anim: EP.steps(el, [['Simple = one layer', 'lines body cavities, ducts and tubes'], ['Squamous', 'thin, flat · blood vessels, air sacs of lungs'], ['Cuboidal', 'cube-shaped · gland ducts, kidney tubules'], ['Columnar', 'tall, nucleus at base · stomach, intestine'], ['Ciliated', 'cilia move mucus · bronchioles, fallopian tubes']], LT) }) },
   { pos: 'R', label: 'FOUR SIMPLE EPITHELIA · ONE LAYER EACH', build: (el, s) => {
-    const R = [['SQUAMOUS', 'sq', 9, 0.9, 150], ['CUBOIDAL', 'cu', 12, 0.9, 260], ['COLUMNAR', 'co', 16, 0.85, 400], ['CILIATED', 'ci', 16, 0.85, 540]].map(([n, k, c, sc, y]) => { const g = mk(s, 'g', {}), r = CE.row(g, k, 250, y, c, { s: sc }); cap(g, 130, y - 8, n, { fill: C.ink, 'font-size': 17 }); return { g, r }; });
+    const R = [['SQUAMOUS', 'sq', 7, 0.9, 150], ['CUBOIDAL', 'cu', 12, 0.9, 260], ['COLUMNAR', 'co', 16, 0.85, 400], ['CILIATED', 'ci', 16, 0.85, 540]].map(([n, k, c, sc, y]) => { const g = mk(s, 'g', {}), r = CE.row(g, k, 250, y, c, { s: sc }); cap(g, 130, y - 8, n, { fill: C.ink, 'font-size': 17 }); return { g, r }; });
     const pt = []; for (let k = 0; k < 5; k++) pt.push(circ(s, 0, 0, 6, MU, MUs, 2));
     return { anim: t => { const ts = LT.map(tm); let c = -1; ts.forEach((tt, i) => { if (t >= tt - 0.2) c = i; });
       R.forEach((o, i) => { const on = c <= 0 ? 1 : c - 1 === i ? 1 : 0.28; o.g.style.opacity = (t < ts[0] - 0.2 ? 0.25 : on).toFixed(2); });

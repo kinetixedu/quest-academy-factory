@@ -182,7 +182,7 @@ const EP = { who: 'Diya',
       if (i === 0) { [S.hyp, S.cor, S.end, S.pith, S.ray].forEach(dim); S.bun.forEach(B => dim(B.g)); }
       if (i === 1) { dim(S.epi); dim(S.cut); S.bun.forEach(B => dim(B.g)); }
       if (i === 2) { [S.epi, S.cut, S.hyp, S.cor, S.end, S.pith, S.ray].forEach(dim); } return []; }]) },
-  Z: { av: { text: 'So the shine is the cuticle!', in: 'Z3:shine+0.3', out: 'Z4-0.2' }, push: ['Z4:pore-0.2', 490, 590, 'Z5-0.2'],
+  Z: { av: { text: 'So the shine is the cuticle!', in: 'Z3:shine+0.3', out: 'Z4-0.2' }, push: ['Z4:pore-0.2', 990, 530, 'Z5-0.2'],
     levels: [
       { chip: 'LEAF', at: 'Z1', tag: 'LEAF x1', info: ['ZOOM INTO THE SKIN', 'A leaf', 'Its outer layer is the epidermis.', ''],
         draw: g => { const L = leafShape(g, 300, 263, 2.0, '#6FAE5E', -30); return { labs: [[lab(g, 380, 196, 640, 120, 'Epidermis'), 'Z1:skin']] }; } },
@@ -195,7 +195,7 @@ const EP = { who: 'Diya',
           const tD = cue('Z3:stops');
           return { labs: [[lab(g, 152, 250, 640, 300, 'Epidermal cell', 'start', [560, 300]), 'Z2:layer'], [lab(g, 400, 240, 640, 220, 'Vacuole'), 'Z2:vacuole'], [lab(g, 492, 205, 640, 370, 'Cytoplasm', 'start', [610, 370]), 'Z2:cytoplasm'], [lab(g, 560, 178, 640, 90, 'Cuticle'), 'Z3:cuticle']],
             items: [[cl, 'Z2+0.2', { dy: 16 }], [meso, 'Z2+0.4', { dy: 10 }], [cu, 'Z3:cuticle-0.2', { dy: -20, fade: 0.2 }], [rt, 'Z3:Roots-0.1', POP]],
-            anim: t => drops.forEach((d, k) => { const u = ((t - tD) * 0.8 + k * 0.33) % 1; d.style.visibility = t > tD ? 'visible' : 'hidden'; d.setAttribute('transform', `translate(${(160 + k * 160 + (u > 0.5 ? (u - 0.5) * 80 : 0)).toFixed(1)} ${(60 + (u < 0.5 ? u * 200 : 100 - (u - 0.5) * 120)).toFixed(1)})`); }) }; } },
+            anim: t => drops.forEach((d, k) => { const u = ((t - tD) * 0.8 + k * 0.33) % 1; d.style.visibility = t > tD ? 'inherit' : 'hidden'; d.setAttribute('transform', `translate(${(160 + k * 160 + (u > 0.5 ? (u - 0.5) * 80 : 0)).toFixed(1)} ${(60 + (u < 0.5 ? u * 200 : 100 - (u - 0.5) * 120)).toFixed(1)})`); }) }; } },
       { chip: 'STOMA', at: 'Z4', tag: 'x400', ring: [330, 230, 50], info: ['EPIDERMAL SYSTEM', 'A stoma', 'Two bean-shaped guard cells around a pore.', 'They open and close the pore.'],
         draw: g => { const ep = mk(g, 'g', {}); for (let k = 0; k < 14; k++) { const a = k * 0.449, r = 190 + (k % 2) * 30; cell(ep, 330 + Math.cos(a) * r, 263 + Math.sin(a) * r * 0.9, 70, 58, { f: '#F6F1E2', w: 2.5, n: 7, j: 0.18 }); }
           const sub = mk(g, 'g', {}); cell(sub, 196, 263, 62, 118, { f: '#EFEAD6', w: 2.5, n: 8, j: 0.06 }); cell(sub, 464, 263, 62, 118, { f: '#EFEAD6', w: 2.5, n: 8, j: 0.06 });
