@@ -1,0 +1,138 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 50 - Solving Linear Inequalities in One Variable</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 50: solving linear inequalities in one variable (Proof board) ===== */
+:root{--x:#7A4FE0;--k:#0E8F8F}
+#stage svg circle,#stage svg g{transform-box:fill-box;transform-origin:center}
+#stage .ringW svg circle{transform-box:view-box;transform-origin:0 0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.sv{position:absolute;left:0;top:0}
+/* title card */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:54px;font:700 30px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.fx{position:absolute;white-space:nowrap}
+.hf{position:absolute;left:440px;font-size:54px;white-space:nowrap}
+/* rules */
+#rT{position:absolute;left:36px;top:80px;width:712px;font:700 36px/1.3 Poppins}
+#rT b{color:var(--ac)}
+.rr{position:absolute;left:36px;width:712px;height:104px;border-radius:14px;background:var(--soft)}
+.rr .rn{position:absolute;left:22px;top:16px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.rr .rt{position:absolute;left:22px;top:44px;font:600 26px Poppins;white-space:nowrap}
+.rr .rc{position:absolute;right:20px;top:30px}
+.rr.gh{background:transparent;border:2px dashed var(--dim)}
+.cl{position:absolute;left:452px;font-size:38px;white-space:nowrap}
+/* live k */
+.rd{position:absolute;font:600 56px/1 'IBM Plex Mono';white-space:nowrap}
+.rdS{position:absolute;font:600 30px/1 'IBM Plex Mono';white-space:nowrap;color:var(--ink2)}
+#mCmp{position:absolute;left:36px;top:360px;font-size:84px;white-space:nowrap}
+/* side by side */
+.pc{position:absolute;left:36px;font-size:46px;white-space:nowrap}
+/* derivation */
+#dq{position:absolute;left:36px;top:70px;font-size:44px;white-space:nowrap}
+#dl .sol .sx,#wl .sol .sx{font-size:28px}
+#dl .sol .sx .katex,#wl .sol .sx .katex{font-size:1.2em}
+.why2{color:var(--mute);font:500 22px Poppins}
+#wq{position:absolute;left:36px;top:64px;font-size:44px;white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.15em}
+#mq .mq .katex{font-size:1.2em}
+.trapL .tx .katex{font-size:1.2em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:46px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 5 LINEAR INEQUALITIES</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Why Does the Arrow <span class="acc">Flip</span>?</div>
+    <div id="sub">Solving linear inequalities, one safe move at a time</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: freezer + Diya -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">THE FREEZER · WHICH IS COLDER?</div>
+        <svg id="hS" class="sv" width="784" height="580"></svg>
+        <div class="hf" id="hf0" style="top:120px"></div><div class="hf" id="hf1" style="top:230px"></div><div class="hf" id="hf2" style="top:340px"></div>
+        <div class="pillp ac" id="hP" style="left:440px;top:470px">The arrow flips</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA · THE KITCHEN</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-kitchen.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">Why does a minus sign flip it?</div></div>
+    </div>
+
+    <!-- B: what solving means + rule 1 and rule 2 -->
+    <div id="sB">
+      <div class="card full" id="bl"><div class="lbl" style="left:36px;top:30px">HOW TO SOLVE</div>
+        <div id="rT">To solve: find <b>every value of x</b> that keeps it true.</div><div id="bR"></div></div>
+      <div class="card rf" id="br"><div class="lbl" style="left:36px;top:30px">SAFE MOVES · THE ORDER STAYS</div>
+        <svg id="bS" class="sv" width="784" height="580"></svg><div id="bC"></div></div>
+    </div>
+
+    <!-- M: live multiplier k from 1 to -1 -->
+    <div id="sM">
+      <div class="card full" id="ml"><div class="lbl" style="left:36px;top:30px">LIVE · MULTIPLY BOTH BY k</div>
+        <div class="rd" id="mK" style="left:36px;top:84px"><i style="font-family:Poppins;color:var(--k)">k</i> = <span id="mKv">1.00</span></div>
+        <div class="rdS" id="mA" style="left:36px;top:190px"></div><div class="rdS" id="mB" style="left:36px;top:250px"></div>
+        <div id="mCmp"></div>
+        <div class="pillp bad" id="mP" style="left:36px;top:490px">Times a negative: flip the sign</div></div>
+      <div class="card rf" id="mr"><div class="lbl" style="left:36px;top:30px">A MIRROR AROUND ZERO</div>
+        <svg id="mS" class="sv" width="784" height="580"></svg>
+        <div class="pillp" id="mP2" style="left:36px;top:490px">5 was on the right. Now it is on the left.</div></div>
+    </div>
+
+    <!-- K: divide by +2 vs -2 + think -->
+    <div id="sK">
+      <div class="card full" id="kp"><div class="lbl" style="left:36px;top:30px;color:var(--ok)">DIVIDE BY +2 · ARROW STAYS</div><div id="kpC"></div><svg id="kpS" class="sv" width="784" height="580"></svg>
+        <div class="pillp good" id="kpP" style="left:36px;top:490px">Positive: the arrow stays</div></div>
+      <div class="card rf" id="kn"><div class="lbl" style="left:36px;top:30px;color:var(--red)">DIVIDE BY -2 · ARROW FLIPS</div><div id="knC"></div><svg id="knS" class="sv" width="784" height="580"></svg>
+        <div class="pillp bad" id="knP" style="left:36px;top:490px">Negative: the arrow flips</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- D: solve step by step -->
+    <div id="sD">
+      <div class="card full" id="dl"><div id="dq"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">THE ANSWER ON THE NUMBER LINE</div>
+        <svg id="dS" class="sv" width="784" height="580"></svg><div class="pillp bad" id="dFl" style="left:36px;top:96px"></div>
+        <div class="pillp" id="dP" style="left:36px;top:490px"></div></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">EVERY REAL NUMBER BELOW -6</div>
+        <svg id="wS" class="sv" width="784" height="580"></svg><div class="pillp good" id="wP" style="left:36px;top:490px"></div></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Times a negative? The arrow <span class="acc">flips</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
