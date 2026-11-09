@@ -130,3 +130,29 @@ All other episodes: PUC BOARDS stays unlit (no verified question, or the topic l
 | 68 | Sum of Special Series | CH 8 SEQUENCES AND SERIES | Diya | 1 + 4 + 9 + ... in one formula |
 
 Batch 2 rules: language a 10-year-old follows (everyday analogy before every symbol, one idea per line, explain every word). Title suffix "| Class 11 Maths" (all boards). Description says: follows the NCERT book; for CBSE, ICSE/ISC, state boards (Karnataka PUC) and JEE. Header class chip unchanged.
+
+## Episodes batch 3 (Amjad, 10 Nov 2026) - Chapters 9-14, rest of Class 11, all boards
+| Ep | Topic | Chapter | Lead | Hook |
+|---|---|---|---|---|
+| 69 | Slope of a Line | CH 9 STRAIGHT LINES | Aarav | which road is steeper? one number decides |
+| 70 | Parallel and Perpendicular Lines and the Angle Between Them | CH 9 STRAIGHT LINES | Diya | two roads that never meet, two that cross square |
+| 71 | Point-Slope and Two-Point Forms of a Line | CH 9 STRAIGHT LINES | Aarav | two dots on a map: draw the road between them |
+| 72 | Slope-Intercept and Intercept Forms of a Line | CH 9 STRAIGHT LINES | Diya | where the road crosses the two main streets |
+| 73 | Distance of a Point from a Line | CH 9 STRAIGHT LINES | Aarav | the shortest walk from a house to the road |
+| 74 | Sections of a Cone and the Circle | CH 10 CONIC SECTIONS | Diya | slice an ice cream cone four ways |
+| 75 | The Parabola | CH 10 CONIC SECTIONS | Aarav | a cricket ball's path and a dish antenna |
+| 76 | The Ellipse | CH 10 CONIC SECTIONS | Diya | a loop of string, two pins and a pencil |
+| 77 | The Hyperbola | CH 10 CONIC SECTIONS | Aarav | the shadow a lamp throws on a wall |
+| 78 | Coordinate Axes and Planes in Three Dimensions | CH 11 INTRODUCTION TO THREE DIMENSIONAL GEOMETRY | Diya | where exactly is the fan in the room? |
+| 79 | Distance Formula in Three Dimensions | CH 11 INTRODUCTION TO THREE DIMENSIONAL GEOMETRY | Aarav | corner to corner through a box |
+| 80 | Intuitive Idea of Limits | CH 12 LIMITS AND DERIVATIVES | Diya | walk halfway to the wall, again and again |
+| 81 | Algebra of Limits | CH 12 LIMITS AND DERIVATIVES | Aarav | break a big limit into small ones |
+| 82 | Limits of Polynomial and Rational Functions | CH 12 LIMITS AND DERIVATIVES | Diya | zero over zero: stuck or not? |
+| 83 | Limits of Trigonometric Functions | CH 12 LIMITS AND DERIVATIVES | Aarav | sin x over x when x is tiny |
+| 84 | Derivative from First Principles | CH 12 LIMITS AND DERIVATIVES | Diya | the speedometer: speed at one instant |
+| 85 | Algebra of Derivatives | CH 12 LIMITS AND DERIVATIVES | Aarav | derivative of a sum, a product, a fraction |
+| 86 | Mean Deviation | CH 13 STATISTICS | Diya | two classes, same average, very different marks |
+| 87 | Variance and Standard Deviation | CH 13 STATISTICS | Aarav | which batsman is more consistent? |
+| 88 | Probability: Events and Axioms | CH 14 PROBABILITY | Diya | rain tomorrow: 70 percent, what does it mean? |
+
+Batch 3 follows the batch 2 rules above.
