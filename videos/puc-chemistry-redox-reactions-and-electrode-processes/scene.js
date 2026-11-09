@@ -54,9 +54,9 @@ $('#qrs').innerHTML = QR.map(([q, k, , , c], i) => `<div class="qr" id="qr${i}" 
 const tQr = QR.map(q => wt(q[2], q[3]));
 $('#pEq').innerHTML = K(`\\mathrm{${tO('Zn')}} + \\mathrm{${tR('Cu^{2+}')}} \\rightarrow \\mathrm{${tO('Zn^{2+}')}} + \\mathrm{${tR('Cu')}}`);
 const ps = $('#pS');
-const pBk = beaker(ps, 232, 552, 170, 540, BLUS);
-const pRod = mk(ps, 'rect', { x: 372, y: 150, width: 40, height: 330, rx: 6, fill: ZNC });
-const pRl = txt(ps, 392, 140, 'Zn', { 'text-anchor': 'middle', 'font-size': 22, fill: HC, 'font-weight': 700, 'font-family': 'Poppins' });
+const pBk = beaker(ps, 232, 552, 210, 540, BLUS);
+const pRod = mk(ps, 'rect', { x: 372, y: 190, width: 40, height: 300, rx: 6, fill: ZNC });
+const pRl = txt(ps, 356, 230, 'Zn', { 'text-anchor': 'end', 'font-size': 24, fill: OX, 'font-weight': 700, 'font-family': 'Poppins' });
 const pCo = [[372, 300, 14, 40], [398, 340, 14, 50], [372, 400, 16, 46], [398, 430, 14, 40], [372, 250, 12, 30]].map(([x, y, w, h]) => mk(ps, 'rect', { x: x - 4 + (x > 380 ? 18 : 0), y, width: w, height: h, rx: 5, fill: CUC }));
 const pE = [0, 1, 2, 3].map(() => mk(ps, 'circle', { r: 8, fill: XC }));
 const pIons = [[290, 300], [480, 360], [300, 450], [490, 470], [280, 380], [470, 280]].map(([x, y]) => atom(ps, x, y, 16, RE, 'Cu²⁺', 9));
@@ -71,14 +71,14 @@ const rodA = mk(b, 'rect', { x: 260, y: 140, width: 44, height: 340, rx: 6, fill
 const rlA = txt(b, 220, 200, 'Zn', { 'text-anchor': 'end', 'font-size': 26, fill: OX, 'font-weight': 700, 'font-family': 'Poppins' }), rlB = txt(b, 912, 200, 'Cu', { 'font-size': 26, fill: RE, 'font-weight': 700, 'font-family': 'Poppins' });
 const slA = txt(b, 200, 512, 'ZnSO₄', { 'font-size': 18, fill: HC, 'font-weight': 600 }), slB = txt(b, 900, 512, 'CuSO₄', { 'font-size': 18, fill: HC, 'font-weight': 600 });
 const wire = mk(b, 'path', { d: 'M282 140 V90 H850 V140', stroke: HC, 'stroke-width': 5, fill: 'none', 'stroke-linejoin': 'round' });
-const vm = mk(b, 'g', {}); mk(vm, 'circle', { cx: 570, cy: 90, r: 46, fill: '#fff', stroke: HC, 'stroke-width': 4 }); const vmT = txt(vm, 570, 100, '0.00 V', { 'text-anchor': 'middle', 'font-size': 22, fill: GC, 'font-weight': 700 });
 const wE = [0, 1, 2, 3, 4, 5, 6, 7].map(() => mk(b, 'circle', { r: 9, fill: XC }));
+const vm = mk(b, 'g', {}); mk(vm, 'circle', { cx: 570, cy: 90, r: 46, fill: '#fff', stroke: HC, 'stroke-width': 4 }); const vmT = txt(vm, 570, 100, '0.00 V', { 'text-anchor': 'middle', 'font-size': 22, fill: GC, 'font-weight': 700 });
 const eArr = txt(b, 420, 72, 'e⁻ →', { 'font-size': 22, fill: XC, 'font-weight': 700 });
 const ionA = [0, 1, 2].map(() => atom(b, 0, 0, 13, OX, '', 9)), ionB = [0, 1, 2].map(() => atom(b, 0, 0, 13, RE, '', 9));
 const anL = txt(b, 290, 566, 'ANODE (-) · OXIDATION', { 'text-anchor': 'middle', 'font-size': 18, fill: OX, 'font-weight': 700 }), caL = txt(b, 850, 566, 'CATHODE (+) · REDUCTION', { 'text-anchor': 'middle', 'font-size': 18, fill: RE, 'font-weight': 700 });
 const RR = [['ANODE · Zn GIVES', `\\mathrm{${tO('Zn')}} \\rightarrow \\mathrm{${tO('Zn^{2+}')}} + ${E(2)}`, OX], ['CATHODE · Cu²⁺ TAKES', `\\mathrm{${tR('Cu^{2+}')}} + ${E(2)} \\rightarrow \\mathrm{${tR('Cu')}}`, RE], ['ELECTRONS', '\\text{Zn} \\rightarrow \\text{Cu, through the wire}', XC], ['DANIELL CELL', `${tG('1.1\\ \\text{V}')}`, GC]];
 $('#rrs').innerHTML = RR.map(([k, v, c], i) => `<div class="rr" id="rr${i}" style="top:${84 + i * 112}px"><div class="ck" style="color:${c}">${k}</div><div class="cv">${K(v)}</div></div>`).join('');
-const btag = document.createElement('div'); btag.className = 'btag'; btag.style.cssText = 'left:440px;top:18px;background:var(--ink);color:#fff'; $('#bn').appendChild(btag);
+const btag = document.createElement('div'); btag.className = 'btag'; btag.style.cssText = 'right:36px;top:18px;background:var(--ink);color:#fff'; $('#bn').appendChild(btag);
 
 /* ---------- L: electrode potential + zero ---------- */
 $('#hcI').innerHTML = M.icon('battery', 26, '#fff', 2.4);
@@ -152,7 +152,7 @@ const YQ = ['What is the E° of the standard hydrogen electrode?', 'In a Daniell
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="nn">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
 const nx = PUC.next($('#sF'), { label: 'NEXT · CHAPTER 8', topic: 'What is a carbon compound made of? Organic Chemistry: Some Basic Principles', y: 764 });
-const avA = PUC.avatar($('#sS'), { x: 160 + 1146, y: 270 + 520, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'So my bicycle lamp runs on redox!' });
+const avA = PUC.avatar($('#sS'), { x: 160 + 1110, y: 270 + 524, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'My bike lamp runs on redox!' });
 
 /* ---------- helpers ---------- */
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
@@ -277,8 +277,8 @@ M.on(t => {
     M.draw(rDn, t, wt('R2', 'reducing'), 0.6); fade(rDnh, t, wt('R2', 'reducing') + 0.5); fade(rT2, t, wt('R2', 'reducing'));
     M.draw(rUp, t, wt('R3', 'oxidising'), 0.6); fade(rUph, t, wt('R3', 'oxidising') + 0.5); fade(rT1, t, wt('R3', 'oxidising'));
     M.vis($('#rb'), t, T0('R4') - 0.1, z, { dx: 60, dy: 0, ...o });
-    rowsOn(['#rb0', '#rb1', '#rb2'], [wt('R4', 'zinc'), wt('R4', 'zinc') + 0.5, wt('R4', 'zinc') + 1.0], T1('R4') + 0.3, t);
-    M.vis($('#rP'), t, wt('R4', 'salt') - 0.1, 1e9, POP);
+    rowsOn(['#rb0', '#rb1', '#rb2'], [T0('R4') + 0.4, wt('R4', 'positive'), wt('R4', 'salt')], T1('R4') + 0.3, t);
+    M.vis($('#rP'), t, wt('R4', 'zinc') - 0.1, 1e9, POP);
   }
 
   /* C + think */
