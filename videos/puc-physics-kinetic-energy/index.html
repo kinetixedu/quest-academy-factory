@@ -1,0 +1,157 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 75 - Kinetic Energy</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 75: kinetic energy (Motion notebook) ===== */
+:root{--en:#0E8F8F;--f:#D9731A;--d:#7A4FE0;--v:#2F6FEB;--p:#A23B72}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.en{color:var(--en)}.fo{color:var(--f)}.dv{color:var(--d)}.vb{color:var(--v)}.pp{color:var(--p)}
+.bpill{position:absolute;display:inline-flex;align-items:center;height:48px;padding:0 16px;border-radius:10px;background:#fff;border:2px solid var(--ink);color:var(--ink);font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* title tiles */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr svg{position:absolute;right:20px;top:20px}
+.wq{position:absolute;top:494px;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 25px Poppins;white-space:nowrap}
+/* P */
+.mt{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.mt i{position:absolute;left:18px;top:18px;width:60px;height:60px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.mt .mn{position:absolute;left:98px;top:16px;font:600 27px Poppins;white-space:nowrap}
+.mt .mi{position:absolute;left:98px;top:56px;font:500 16px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap;text-transform:uppercase}
+.mt .mw{position:absolute;right:20px;top:26px;height:44px;padding:0 14px;border-radius:9px;background:var(--en);color:#fff;display:flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+#kBig{position:absolute;left:36px;top:84px;font:700 64px Poppins;letter-spacing:-.02em;white-space:nowrap}
+#kSub{position:absolute;left:36px;top:178px;font:500 30px Poppins;color:var(--ink2);white-space:nowrap}
+.dch{position:absolute;left:36px;height:60px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+/* sim */
+.ro2{position:absolute;display:grid;grid-template-columns:auto 1fr auto;column-gap:14px;row-gap:6px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .v{font:600 34px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 20px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+.smo{position:absolute;right:36px;top:18px;height:44px;padding:0 16px;border-radius:9px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.gtag{position:absolute;right:36px;top:18px;height:40px;padding:0 14px;border-radius:9px;background:#E3F3F3;color:var(--en);display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:104px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:-2px;font-size:38px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:58px;font:500 23px Poppins;color:var(--mute);white-space:nowrap}
+.kbox{position:absolute;left:36px;width:712px;border-radius:14px;background:#E3F3F3}
+/* side by side */
+.sbn{position:absolute;left:36px;top:76px;font:600 26px Poppins;color:var(--ink2);white-space:nowrap}
+.res{position:absolute;left:36px;top:490px;height:56px;padding:0 20px;border-radius:12px;background:var(--en);color:#fff;display:flex;align-items:center;font:600 26px Poppins;white-space:nowrap}
+/* reasoning chain */
+.lk{position:absolute;left:36px;width:712px;height:100px;border-radius:14px;background:var(--soft)}
+.lk .n{position:absolute;left:20px;top:26px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.lk .fx2{position:absolute;left:92px;top:22px;font-size:36px;white-space:nowrap}
+.lk .tg{position:absolute;right:20px;top:28px;height:44px;padding:0 14px;border-radius:9px;background:#fff;display:flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.lkar{position:absolute;left:58px}
+/* worked */
+#wkq{position:absolute;left:36px;top:70px;font:600 27px/1.38 Poppins;width:712px}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font-size:26px}
+#wl .sol .sx{font-size:30px}
+#sF .fcard .fl{font-size:42px}
+#sF .fcard .fl.txt{font-size:32px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 32px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 5 WORK, ENERGY AND POWER</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div class="bpill" id="bpill">NCERT · CBSE · ISC · PUC</div>
+    <div id="title">Kinetic <span class="acc">Energy</span></div>
+    <div id="sub">Why speed counts twice</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: moving things carry something + Aarav at the nets -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE HITS · ONE IDEA</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Moving things can push, hit and break</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV AT THE COLLEGE NETS</div>
+        <div id="hdF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <svg id="hkS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <img id="hkA" src="../../assets/illustrations/puc/aarav.png" style="position:absolute;left:520px;top:110px;width:250px;height:310px;object-fit:contain">
+        <div id="wqs"></div></div>
+    </div>
+
+    <!-- P: energy, then kinetic energy -->
+    <div id="sP">
+      <div class="card full" id="pq"><div class="lbl" style="left:36px;top:30px">FIRST, WHAT IS ENERGY?</div><div id="pdef" style="position:absolute;left:36px;top:78px;font:600 34px Poppins;white-space:nowrap">Energy = the ability to <span class="en">do work</span></div><div id="mts"></div>
+        <div class="pillp ink" id="pqP" style="left:36px;top:490px">Each does work, just because it moves</div></div>
+      <div class="card rf" id="pm"><div class="lbl" style="left:36px;top:30px">THE NAME</div>
+        <div id="kBig">Kinetic energy <span class="en" style="font-style:italic">K</span></div>
+        <div id="kSub">the energy a body has because it moves</div>
+        <div class="dch" id="pc0" style="top:262px"><span class="mono" style="color:var(--mute);font-size:18px;letter-spacing:.08em">WORD</span>Kinetic: from the Greek for <b>motion</b></div>
+        <div class="dch" id="pc1" style="top:342px"><span class="mono" style="color:var(--mute);font-size:18px;letter-spacing:.08em">SYMBOL</span><span class="en" style="font-style:italic;font-weight:700">K</span></div>
+        <div class="dch" id="pc2" style="top:422px"><span class="mono" style="color:var(--mute);font-size:18px;letter-spacing:.08em">UNIT</span>joule, J &nbsp;(same as work)</div>
+      </div>
+    </div>
+
+    <!-- S: live track (sim + readout + graph) -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">LIVE TRACK · 2 KG CART · F = 4 N</div><div class="smo" id="smo">SLOW-MO REPLAY · 0.25x</div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div>
+        <div class="ro2" id="roA" style="left:36px;top:68px;width:320px"></div><div class="ro2" id="roB" style="left:412px;top:68px;width:336px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">KINETIC ENERGY VS SPEED</div><div class="gtag" id="gTag">curves up like v²</div><svg id="grS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- D: derivation -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE FORMULA · STEP BY STEP</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">STORED IN THE MOTION</div><svg id="drS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div id="steps2"></div></div>
+    </div>
+
+    <!-- C: mass vs speed + think -->
+    <div id="sC">
+      <div class="card full" id="cm"><div class="lbl" style="left:36px;top:30px">DOUBLE THE MASS</div><div class="sbn">same speed, 2 m/s</div><svg id="cmS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="res" id="cmR">K doubles: × 2</div></div>
+      <div class="card rf" id="cv"><div class="lbl" style="left:36px;top:30px">DOUBLE THE SPEED</div><div class="sbn">same mass, 2 kg</div><svg id="cvS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="res" id="cvR">K becomes × 4</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- R: can K be negative? + think -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">CAN K BE NEGATIVE? · FOLLOW THE LINKS</div><div id="lks"></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">LEFT OR RIGHT · SAME K</div><svg id="rrS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div class="pillp ink" id="rrP" style="left:36px;top:490px">K has no direction: a scalar</div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wkq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">K VS SPEED · THE CRICKET BALL</div><svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tpS" width="640" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2" style="font-size:68px;top:488px">Double the speed, <span class="acc">four times</span> the energy.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
