@@ -84,11 +84,11 @@ const btag = document.createElement('div'); btag.className = 'btag'; btag.style.
 $('#hcI').innerHTML = M.icon('battery', 26, '#fff', 2.4);
 $('#lEq').innerHTML = K(`\\text{standard electrode potential} = ${tG('E^\\circ')}`);
 const hs = $('#hS');
-const zL = mk(hs, 'line', { x1: 40, y1: 300, x2: 744, y2: 300, stroke: HC, 'stroke-width': 3, 'stroke-dasharray': '12 8' }), zT = txt(hs, 744, 330, 'ZERO LEVEL', { 'text-anchor': 'end', 'font-size': 20, fill: HC, 'font-weight': 700 });
+const zL = mk(hs, 'line', { x1: 40, y1: 300, x2: 744, y2: 300, stroke: HC, 'stroke-width': 3, 'stroke-dasharray': '12 8' }), zT = txt(hs, 744, 286, 'ZERO LEVEL', { 'text-anchor': 'end', 'font-size': 20, fill: HC, 'font-weight': 700 });
 const hill = mk(hs, 'path', { d: 'M80 300 C150 300 170 130 240 130 C310 130 330 300 400 300 Z', fill: '#EEF7F4', stroke: C.dim, 'stroke-width': 2 });
 const pit = mk(hs, 'path', { d: 'M460 300 H520 V430 H640 V300 H700', fill: 'none', stroke: C.dim, 'stroke-width': 3 });
 const [hA, hAh] = varrow(hs, 240, 296, 136, RE), hAt = txt(hs, 262, 210, '+ ABOVE', { 'font-size': 22, fill: RE, 'font-weight': 700 });
-const [pA, pAh] = varrow(hs, 580, 304, 424, OX), pAt = txt(hs, 598, 380, '- BELOW', { 'font-size': 22, fill: OX, 'font-weight': 700 });
+const [pA, pAh] = varrow(hs, 580, 304, 424, OX), pAt = txt(hs, 656, 390, '- BELOW', { 'font-size': 22, fill: OX, 'font-weight': 700 });
 
 /* ---------- D: SHE + ladder ---------- */
 const ds = $('#dS');
@@ -132,7 +132,7 @@ const wsol = PUC.solution($('#wl'), [
   [K(`= 0.80 - (-0.76) = ${tK('1.56\\ \\text{V}')}`)]], { label: 'WORKED EXAMPLE', y0: 236, dy: 86 });
 $('#wl .lbl').style.top = '30px';
 const tWs = [T0('W3'), T0('W4'), T0('W5'), wt('W5', 'Point')];
-const ws = $('#wS'), WL = ladder(ws, 240, 300, -1, 1, 0.25);
+const ws = $('#wS'), WL = ladder(ws, 210, 300, -1, 1, 0.25);
 const wAg = lvl(ws, WL.Y, 0.80, 'Ag⁺/Ag · +0.80 · CATHODE', RE), wZn = lvl(ws, WL.Y, -0.76, 'Zn²⁺/Zn · -0.76 · ANODE', OX), wH = lvl(ws, WL.Y, 0, 'SHE · 0.00', C.mute, 520);
 const [wG, wGh] = varrow(ws, 660, WL.Y(-0.76) - 6, WL.Y(0.80) + 4, GC), wGT = txt(ws, 640, WL.Y(0.02) + 8, '1.56 V', { 'font-size': 28, fill: GC, 'font-weight': 700, 'text-anchor': 'end' });
 
@@ -142,7 +142,7 @@ const tsv = $('#tS');
 const tq1 = txt(tsv, 30, 110, 'Ag⁺ + e⁻ → Ag        +0.80', { 'font-size': 24, fill: HC, 'font-weight': 600 }), tq2 = txt(tsv, 30, 170, '2Ag⁺ + 2e⁻ → 2Ag    +0.80', { 'font-size': 24, fill: GC, 'font-weight': 700 });
 const where = PUC.where($('#wa'), { on: [], type: 'Daniell cell and SHE, which metal displaces which, or a cell voltage from E° values' });
 const OPT = ['Fe anode · 0.78 V', 'Cu anode · 0.78 V', 'Fe anode · 0.10 V', 'Cu anode · 0.10 V'];
-const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', q: 'E°(Fe²⁺/Fe) = -0.44 V and E°(Cu²⁺/Cu) = +0.34 V. In a standard cell of these two, the anode and the cell voltage are:', qW: 820,
+const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', q: 'Fe²⁺/Fe: E° = -0.44 V. Cu²⁺/Cu: E° = +0.34 V. In a standard cell of these two, the anode and the cell voltage are:', qW: 820,
   opts: OPT, right: 0, optW: 474, optY: 330, optH: 110, optFs: 28 });
 const so = PUC.solution($('#so'), [[K(`\\mathrm{${tO('Fe')}}\\ \\text{more negative} \\Rightarrow \\text{anode}`)], [K('E^\\circ = 0.34 - (-0.44)')], [K(`= ${tK('0.78\\ \\text{V}')}`)], ['C forgot the minus sign of Fe']], { y0: 100, dy: 112 });
 const tSo = [T0('A2'), T0('A3'), T0('A4'), wt('A4', 'forgot') - 0.2];
@@ -151,7 +151,7 @@ const fc = PUC.fcard($('#sF'), { x: 360, y: 262, w: 1200, h: 470, title: 'Recap 
 const YQ = ['What is the E° of the standard hydrogen electrode?', 'In a Daniell cell, which way do electrons flow in the wire?', 'Will copper push zinc out of zinc sulphate?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="nn">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
-const nx = PUC.next($('#sF'), { label: 'NEXT · CHAPTER 8', topic: 'What is a carbon compound made of? Organic Chemistry: Some Basic Principles', y: 764 });
+const nx = PUC.next($('#sF'), { label: 'NEXT · CHAPTER 8', topic: 'Carbon compounds? Organic Chemistry: Some Basic Principles', y: 764 });
 const avA = PUC.avatar($('#sS'), { x: 160 + 1110, y: 270 + 524, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'My bike lamp runs on redox!' });
 
 /* ---------- helpers ---------- */
@@ -230,7 +230,7 @@ M.on(t => {
     ionB.forEach((g, i) => { const ph = flow ? (((t - wt('S4', 'copper', 1)) / 2.4 + i / 3) % 1) : 0; const on = t >= wt('S4', 'copper', 1); place(g, 980 - ph * 108, 330 + i * 60); g.style.opacity = on ? (ph < 0.8 ? M.clamp(ph * 5) : (1 - ph) * 5).toFixed(2) : 0; M.hide(g, !on); });
     M.setT(vmT, t < tV ? '0.00 V' : (1.1 * M.io((t - tV) / 0.8)).toFixed(2) + ' V');
     fade(anL, t, tGo + 0.3); fade(caL, t, wt('S4', 'take'));
-    rowsOn(['#rr0', '#rr1', '#rr2', '#rr3'], [tGo, wt('S4', 'take'), wt('S5', 'Electrons'), wt('S5', 'Daniell')], T1('S5') + 0.3, t);
+    rowsOn(['#rr0', '#rr1', '#rr2', '#rr3'], [tA + 0.3, tB2 + 0.3, tGo + 0.6, tV], T1('S5') + 0.3, t);
     const TAG = [[tA, 'TWO HALF CELLS'], [tW, 'WIRE + SALT BRIDGE'], [tGo, 'ELECTRONS FLOW'], [tV, 'ELECTRICITY']];
     let tg = null; for (const [tt, s] of TAG) if (t >= tt) tg = s; if (tg) M.setT(btag, tg); M.vis(btag, t, tA, 1e9, POP);
     avA(t, T1('S5') - 0.4, z);
