@@ -1,0 +1,51 @@
+H1|0.4|Two, five, ten, seventeen. What comes next?
+H2|0.45|Some friends guess twenty four. Some guess twenty six. Who is right?
+H3|0.35|Diya found this puzzle on a quiz card in the canteen.
+H4|0.5|Is there a sure way to find the next number, or the hundredth number, without guessing?
+H5|0.65|There is. Find the rule. Today we meet sequences and series.
+D1|0.4|Think of a queue at the canteen counter. Every person stands in a place. First, second, third.
+D2|0.4|Each person holds a token with a number. The place matters. Swap two people, and the queue changes.
+D3|0.65|A sequence is exactly that. Numbers arranged in a definite order, following a rule.
+N1|0.4|Each number is called a term. The first term is a one. The second term is a two.
+N2|0.4|The term in place n is called a n. It is the nth term, or the general term.
+N3|0.65|Here, n is the place, like the place in the queue. And a n is the number standing there.
+L1|0.4|Now let us find the rule for Diya's puzzle. Watch n count up.
+L2|0.4|At place one, draw a square of one dot, and add one extra dot. That makes two.
+L3|0.4|At place two, a two by two square is four dots, plus one. Five. At place three, nine plus one. Ten.
+L4|0.65|So the rule is a n equals n squared plus one. At place five, twenty five plus one. The next number is twenty six, not twenty four.
+L5|0.65|And the hundredth term? One hundred squared, plus one. Ten thousand and one. No guessing needed.
+R1|0.4|Side by side. There are two ways to give a rule.
+R2|0.4|A formula rule gives any term straight from its place. a n equals n squared plus one.
+R3|0.6|A step rule builds each term from the ones before it. In the Fibonacci sequence, each term is the sum of the two terms before it. One, one, two, three, five, eight.
+R4|3.2|Now you try. If a n equals two n plus one, what is the tenth term? Pause and think.
+R5|0.65|Twenty one! Put n equal to ten. Two times ten, plus one.
+F0|0.4|Sequences can also be finite or infinite.
+F1|0.6|A finite sequence stops, like the ages of five friends. An infinite sequence never stops, like all the even numbers.
+S1|0.4|Now, a series. Take the terms of a sequence, and put plus signs between them.
+S2|0.4|One, three, five, seven is a sequence. One plus three plus five plus seven is a series.
+S3|0.6|Watch the odd numbers add up. Each one wraps around a square, like a letter L. The total is always a perfect square.
+S4|0.75|We write a series in short with sigma, the Greek letter S. It means: add up the terms a k, from k equals one, to n.
+S5|3.2|Quick one. Is two plus four plus six a sequence or a series? Pause and think.
+S6|0.65|A series! The plus signs make it a series. Without them, two, four, six is a sequence.
+T1|0.7|Remember this. A sequence is a list in order. A series adds that list up.
+W1|0.35|Now, one worked example. This one is from the NCERT exercise.
+W2|0.5|Write the first five terms of the sequence a n equals n times n plus two.
+W3|0.75|Step one. Put n equal to one. One times three is three.
+W4|0.75|Step two. n equal to two gives eight. n equal to three gives fifteen.
+W5|0.75|Step three. n equal to four gives twenty four. n equal to five gives thirty five.
+W6|0.65|So the sequence starts three, eight, fifteen, twenty four, thirty five. Add them, and the series of five terms is eighty five.
+X1|0.35|Now, the exam trap.
+X2|0.4|For a n equals n squared plus one, many students say the first term is one. They start counting at n equals zero.
+X3|0.65|But places start at one, just like a queue. So the first term is one squared plus one, which is two.
+J1|0.6|Where is this asked? In JEE Main, as a sequence given by a step rule, where you find a pattern for the nth term.
+Q1|5.4|Exam level now. Find the tenth term of this sequence. Pause and solve.
+A1|0.5|The answer is A. One thousand and twenty five.
+A2|0.5|Write the first few terms. Three, five, nine, seventeen.
+A3|0.5|Each one is a power of two, plus one. Two plus one, four plus one, eight plus one, sixteen plus one. So a n is two to the n, plus one.
+A4|0.6|Check it with the step rule. Double it and take away one, and you get the next power of two, plus one. It works. So the tenth term is one thousand and twenty four, plus one.
+F2|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What is the difference between a sequence and a series?
+Y3|0.9|Two. Find the fifth term of a n equals three n minus one.
+Y4|1.1|Three. Write the first four terms of a n equals n squared plus one.
+N0|0.3|Next time: Aarav saves the same amount every week. That makes a very special sequence, the arithmetic progression.

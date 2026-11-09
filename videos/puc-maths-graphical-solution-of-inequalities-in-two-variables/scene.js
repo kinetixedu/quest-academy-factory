@@ -279,7 +279,7 @@ M.on(t => {
     M.vis($('#wr'), t, T0('W2') + 0.2, out, { dx: 60, dy: 0, ...o });
     wLn.run(t, tWs[0], 0.8); wLn.dash(t >= wt('W4', 'dashed') - 0.1);
     wI.forEach(d => M.vis(d.g, t, d.t, 1e9, DOT));
-    M.vis(wO, t, tWs[2], 1e9, DOT); M.vis(wOt, t, wt('W5', 'False') - 0.2, 1e9, { dy: 0 });
+    M.vis(wO, t, tWs[2], 1e9, DOT); M.hide(wOt, true);
     fade(wReg, t, tWs[3], 0.6, 0.85); M.vis(wRt, t, wt('W6', 'half'), 1e9, { dy: 0 });
   }
 

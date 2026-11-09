@@ -1,0 +1,53 @@
+H1|0.4|Two questions. Pick three of five friends for a photo, standing in a row. Pick three of five friends for a picnic.
+H2|0.45|Same friends, same number. But one answer is six times bigger than the other.
+H3|0.35|Aarav noticed this while planning the class trip.
+H4|0.5|How do you know which formula to use? Arrange, or choose?
+H5|0.65|There is one question that decides it every time. Let us find it.
+P1|0.35|Here is the deciding question.
+P2|0.4|Pick any two of the chosen things, and swap them. Do you get something new?
+P3|0.4|If yes, order matters. It is an arrangement. Use n P r.
+P4|0.65|If no, order does not matter. It is a selection. Use n C r.
+L1|0.4|Let us run the swap test on six problems.
+L2|0.4|A four digit lock code. Swap two digits, and the lock will not open. Something new. Arrange.
+L3|0.4|Three toppings on a pizza. Swap two, and it is the same pizza. Choose.
+L4|0.4|Three friends in a row for a photo. Swap two, and the photo changes. Arrange.
+L5|0.4|A handshake. Ravi shakes Sana's hand, or Sana shakes Ravi's. The same handshake. Choose.
+L6|0.65|A president and a secretary. Swap them, and the jobs change. Arrange. A committee of three. Swap two, the same committee. Choose.
+K1|0.4|Side by side. The photo row: three friends from five. Five P three. Sixty.
+K2|0.6|The picnic group: three friends from five. Five C three. Ten.
+K3|3.2|Now you try. Five people in a room. Each pair shakes hands once. Arrange, or choose? Pause and decide.
+K4|0.65|Choose! A handshake has no first person. Five C two is ten handshakes.
+D1|0.35|Now, why is sixty exactly six times ten?
+D2|0.75|To make a photo row, first choose the three friends. That is five C three, ten ways.
+D3|0.75|Then arrange the three you chose. Three people can stand in three factorial ways. Six.
+D4|0.75|So the photo count is ten times six. Sixty.
+D5|0.75|In general, n P r equals n C r times r factorial. Choose first, then arrange.
+D6|0.65|This is the tool for mixed problems. Choose with C, then arrange with a factorial.
+V1|0.4|Watch both counts for a group of size r, from five friends.
+V2|0.4|Size one: five groups, five rows. Size two: ten groups, twenty rows.
+V3|0.6|Size three: ten groups, sixty rows. The rows grow faster, because every group gets lined up.
+V4|3.2|Quick one. Is five C three times three factorial equal to five P three? Pause and think.
+V5|0.65|Yes! Ten times six is sixty, and five P three is also sixty. Choose, then arrange.
+T1|0.7|Remember this. Swap two. Something new? Arrange. Nothing new? Choose.
+W1|0.35|Now, one worked example.
+W2|0.5|From five boys and four girls, choose two boys and one girl, and seat them on three chairs in a row. How many ways?
+W3|0.75|Step one. Choose the boys. The order of choosing does not matter. Five C two is ten.
+W4|0.75|Step two. Choose the girl. Four C one is four.
+W5|0.75|Step three. Now seat the three people. Swapping seats gives a new seating. Three factorial is six.
+W6|0.75|Step four. Multiply. Ten times four times six.
+W7|0.65|So there are two hundred and forty ways.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students stop after choosing. Ten times four is forty.
+X3|0.65|But the question also asks to seat them, and chairs have an order. Multiply by three factorial, and the answer is two hundred and forty.
+J1|0.6|Where is this asked? In JEE Main, as word problems that mix choosing and arranging, like making words from chosen letters.
+Q1|5.4|Exam level now. Seven students. First, second and third prizes go to three of them. Meera must win one of them. How many ways? Pause and solve.
+A1|0.5|The answer is C. Ninety.
+A2|0.5|The prizes are different, so order matters. With no rule, seven P three is two hundred and ten.
+A3|0.5|Now remove the ways where Meera wins nothing. Then the prizes go to the other six. Six P three is one hundred and twenty.
+A4|0.6|Two hundred and ten minus one hundred and twenty is ninety.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What is the swap test?
+Y3|0.9|Two. Eight people each shake hands once. How many handshakes?
+Y4|1.1|Three. Why is n P r equal to n C r times r factorial?
+N1|0.3|Next time: a triangle of numbers that expands a plus b to any power. Meet Pascal's triangle.
