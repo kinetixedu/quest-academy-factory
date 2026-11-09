@@ -1,0 +1,185 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 59 - Binomial Theorem for Positive Integral Index</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 59: binomial theorem (Proof board) ===== */
+/* colour-coding: a (tea) blue, b (coffee) gold, nCr coefficient violet, power n coral */
+:root{--a:#2F6FEB;--aBg:#E7EEFD;--b:#B7791F;--bBg:#F6EAD3;--v:#7A4FE0;--vBg:#EDE6FC}
+/* svg dots and groups scale about their own centre (not the card corner) */
+#stage svg circle,#stage svg g{transform-box:fill-box;transform-origin:center}
+#stage .ringW svg circle{transform-box:view-box;transform-origin:0 0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+/* title card */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:48px;font-size:36px;white-space:nowrap}
+/* hook */
+.hr{position:absolute;left:36px;width:712px;height:92px;border-radius:14px;background:var(--soft)}
+.hr .fx{left:22px;top:22px;font-size:34px}
+.hr .tag{right:18px;top:28px}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* canteen */
+.fr{position:absolute;top:84px;width:224px;height:250px}
+.fr .fh{position:absolute;left:0;top:0;width:224px;text-align:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.dk{position:absolute;left:0;width:224px;height:84px;border-radius:14px;display:flex;align-items:center;justify-content:center;gap:12px;font:700 30px Poppins;border:3px solid transparent}
+.dk i{font:italic 600 30px 'KaTeX_Math',serif}
+#dCnt{position:absolute;left:36px;top:372px;font:600 52px 'IBM Plex Mono';white-space:nowrap}
+.mp{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--soft)}
+.mp .k{position:absolute;left:22px;top:20px;font:600 26px Poppins;white-space:nowrap}
+.mp .v{position:absolute;left:330px;top:14px;font-size:38px;white-space:nowrap}
+#dF{position:absolute;left:36px;top:356px;font-size:40px;white-space:nowrap}
+.fl3{position:absolute;top:430px;font:600 16px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap;text-align:center;width:120px}
+/* orders */
+.ord{position:absolute;left:36px;width:712px;height:52px;border-radius:12px;background:var(--soft);border:2.5px solid transparent}
+.dt{position:absolute;top:6px;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:italic 600 24px 'KaTeX_Math',serif;color:#fff}
+.dt.a{background:var(--a)}.dt.b{background:var(--b)}
+.ord .pr{position:absolute;left:220px;top:6px;font-size:30px;white-space:nowrap}
+.ord .ar{position:absolute;left:172px;top:10px;font:500 24px Poppins;color:var(--mute)}
+.bin{position:absolute;top:84px;width:168px;height:300px;border-radius:14px;background:var(--soft);border:2.5px solid transparent}
+.bin .bh{position:absolute;left:0;width:168px;top:14px;text-align:center;font:600 16px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.bin .bc{position:absolute;left:0;width:168px;top:40px;text-align:center;font:600 52px 'IBM Plex Mono';color:var(--v)}
+.bin .bt{position:absolute;left:0;width:168px;top:236px;text-align:center;font-size:34px;white-space:nowrap}
+.mc{position:absolute;left:30px;width:108px;height:30px}
+.mc b{position:absolute;top:0;width:28px;height:28px;border-radius:50%}
+#pF{position:absolute;left:36px;top:420px;font-size:40px;white-space:nowrap}
+/* who gets the coffee */
+.st{position:absolute;left:36px;width:712px;height:120px}
+.st .n{position:absolute;left:0;top:10px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:4px;font-size:40px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:66px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+/* live n */
+#nRd{position:absolute;left:36px;top:76px;font:600 64px/1 'IBM Plex Mono';white-space:nowrap}
+.lr{position:absolute;left:36px;width:712px;height:80px;border-radius:14px;background:var(--soft)}
+.lr .k{position:absolute;left:22px;top:12px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lr .v{position:absolute;left:22px;top:36px;font:600 28px 'IBM Plex Mono';white-space:nowrap}
+#lP{position:absolute;left:36px;top:470px}
+/* theorem */
+.gl{position:absolute;left:36px;white-space:nowrap}
+.pt{position:absolute;left:36px;width:712px;height:56px;border-radius:12px;background:var(--soft);font:600 24px 'IBM Plex Mono';white-space:nowrap;display:flex;align-items:center;padding-left:20px;box-sizing:border-box}
+/* square */
+.sqF{position:absolute;left:452px;top:236px;font-size:42px;white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:70px;font:600 30px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.2em}
+.wc{position:absolute;width:110px;height:70px;border-radius:12px;background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:30px;white-space:nowrap}
+.wrl{position:absolute;left:36px;font:600 16px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+#wP{position:absolute;left:36px;top:480px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.12em}
+#mq .mq .katex{font-size:1.2em}
+#wl .sol .sx{font-size:32px}
+#wl .sol .sx .katex{font-size:1.12em}
+.trapL .tx .katex{font-size:1.2em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:32px}
+#sF .fcard .fl.txt .katex{font-size:1.15em}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 7 BINOMIAL THEOREM</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">The <span class="acc">Binomial</span> Theorem</div>
+    <div id="sub">Explained with three friends and a canteen order</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: more brackets, more work + Aarav -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">MORE BRACKETS · MORE WORK</div><div id="hrs"></div>
+        <div class="pillp bad" id="hlP" style="left:36px;top:470px">10 brackets, one by one: a whole page</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · HOMEWORK TONIGHT</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px"></div></div>
+    </div>
+
+    <!-- D: canteen picture -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE CANTEEN · ONE DRINK EACH</div><div id="dfr"></div><div id="dCnt"></div>
+        <div class="pillp ac" id="dP" style="left:36px;top:470px">8 different orders</div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">THE SAME THING IN MATHS</div><div id="dmp"></div><div id="dF"></div><div id="dFl"></div></div>
+    </div>
+
+    <!-- P: all 8 orders, sorted -->
+    <div id="sP">
+      <div class="card full" id="pl"><div class="lbl" style="left:36px;top:30px">ALL 8 ORDERS · ONE PICK PER FRIEND</div><div id="pos"></div></div>
+      <div class="card rf" id="pr"><div class="lbl" style="left:36px;top:30px">SORT BY NUMBER OF COFFEES</div><div id="pbs"></div><div id="pF"></div></div>
+    </div>
+
+    <!-- C: who gets the coffee -->
+    <div id="sC">
+      <div class="card full" id="cl"><div class="lbl" style="left:36px;top:30px">ONE COFFEE · WHO GETS IT?</div><svg id="cS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="cP" style="left:36px;top:480px"></div></div>
+      <div class="card rf" id="cr"><div class="lbl" style="left:36px;top:30px">COUNTING = CHOOSING</div><div class="hiBox" id="cHi" style="left:20px;width:744px;height:126px"></div><div id="cSt"></div></div>
+    </div>
+
+    <!-- L: live n -->
+    <div id="sL">
+      <div class="card full" id="ll"><div class="lbl" style="left:36px;top:30px">LIVE · n COUNTS UP</div>
+        <div id="nRd"><i style="font-family:Poppins;color:var(--ac)">n</i> = <span id="nV">1</span></div>
+        <div class="lr" id="lr0" style="top:170px"><div class="k">NUMBER OF TERMS</div><div class="v" id="lT"></div></div>
+        <div class="lr" id="lr1" style="top:262px"><div class="k">THE NUMBERS IN FRONT</div><div class="v" id="lC" style="color:var(--v)"></div></div>
+        <div class="lr" id="lr2" style="top:354px"><div class="k">ADD THEM ALL</div><div class="v" id="lS"></div></div>
+        <div id="lP"></div></div>
+      <div class="card rf" id="lrc"><div class="lbl" style="left:36px;top:30px">THE NUMBERS AS A HILL</div><svg id="lB" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- G: theorem in 4 steps -->
+    <div id="sG">
+      <div class="card full" id="gl"><div class="lbl" style="left:36px;top:30px">BUILD IT · 4 STEPS</div><div class="hiBox" id="gHi" style="left:20px;width:744px;height:116px"></div><div id="gSt"></div></div>
+      <div class="card rf" id="gr"><div class="lbl" style="left:36px;top:30px">THE BINOMIAL THEOREM</div>
+        <div class="gl" id="gL0" style="top:84px;font-size:46px"></div>
+        <div class="gl" id="gL1" style="top:164px;font-size:34px"></div>
+        <div class="gl" id="gL2" style="top:226px;font-size:34px"></div>
+        <div class="pt" id="gA" style="top:306px;color:var(--a)">power of a:&nbsp; n, n-1, n-2, ..., 0</div>
+        <div class="pt" id="gB" style="top:374px;color:var(--b)">power of b:&nbsp; 0, 1, 2, ..., n</div>
+        <div class="pillp ac" id="gP0" style="left:36px;top:470px">n + 1 terms</div><div class="pillp" id="gP1" style="left:240px;top:470px">powers always add up to n</div></div>
+    </div>
+
+    <!-- S: square picture, shortcut vs truth -->
+    <div id="sS">
+      <div class="card full" id="sl"><div class="lbl" style="left:36px;top:30px;color:var(--red)">THE SHORTCUT · ONLY TWO PIECES</div><svg id="slS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="sqF" id="slF"></div>
+        <div class="pillp bad" id="slP" style="left:36px;top:480px">Two pieces of the square are missing</div></div>
+      <div class="card rf" id="sr"><div class="lbl" style="left:36px;top:30px;color:var(--ok)">THE TRUTH · SQUARE OF SIDE a + b</div><svg id="srS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="sqF" id="srF"></div>
+        <div class="pillp good" id="srP" style="left:36px;top:480px">4 pieces: the middle term is 2ab</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">MULTIPLY EACH COLUMN</div><div id="wcs"></div>
+        <div class="pillp good" id="wP">Check: x = 1 gives 81 both ways</div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Pick one part from every <span class="acc">bracket</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

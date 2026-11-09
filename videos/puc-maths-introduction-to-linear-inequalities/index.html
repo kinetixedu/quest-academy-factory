@@ -1,0 +1,180 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 49 - Introduction to Linear Inequalities</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 49: introduction to linear inequalities (Proof board) ===== */
+:root{--x:#7A4FE0}
+#stage svg circle,#stage svg g{transform-box:fill-box;transform-origin:center}
+#stage .ringW svg circle{transform-box:view-box;transform-origin:0 0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.sv{position:absolute;left:0;top:0}
+/* title card */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:54px;font:700 30px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.rd{position:absolute;font:600 60px/1 'IBM Plex Mono';white-space:nowrap}
+.vc{position:absolute;height:52px;padding:0 18px;border-radius:10px;display:inline-flex;align-items:center;gap:8px;font:700 24px Poppins;color:#fff;white-space:nowrap}
+/* definition */
+#dfT{position:absolute;left:36px;top:84px;width:712px;font:700 42px/1.3 Poppins;letter-spacing:-.015em}
+#dfT b{color:var(--ac)}
+.sym{position:absolute;top:400px;width:150px;height:96px;border-radius:14px;background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:56px;color:var(--ac)}
+#pF{position:absolute;left:0;width:784px;top:470px;text-align:center;font-size:54px;white-space:nowrap}
+/* symbols */
+.ss{position:absolute;left:36px;width:712px;height:100px;border-radius:14px;background:var(--soft)}
+.ss .sy{position:absolute;left:18px;top:14px;width:72px;text-align:center;font-size:52px;color:var(--ac)}
+.ss .sn{position:absolute;left:110px;top:16px;font:700 28px Poppins;white-space:nowrap}
+.ss .se{position:absolute;left:110px;top:58px;font:500 20px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+#sBig{position:absolute;left:0;width:784px;top:110px;text-align:center;font:600 120px/1 'IBM Plex Mono';white-space:nowrap}
+#sBig span{display:inline-block;padding:0 14px;border-radius:14px}
+#sBig .o{color:var(--ac);font-family:KaTeX_Main,serif}
+#sBg{position:absolute;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--ac);white-space:nowrap}
+/* live test */
+#lR{position:absolute;left:36px;top:80px;font-size:72px;white-space:nowrap}
+#lP{position:absolute;left:36px;top:208px}
+#lV{position:absolute;left:330px;top:212px}
+#lRo{position:absolute;left:36px;top:420px;font-size:40px;white-space:nowrap}
+/* strict vs slack */
+.bf{position:absolute;left:36px;top:84px;font-size:64px;white-space:nowrap}
+/* kinds */
+.kr{position:absolute;left:36px;width:712px;height:100px;border-radius:14px;background:var(--soft)}
+.kr .kx{position:absolute;right:22px;top:20px;font-size:42px;white-space:nowrap}
+.kr .kn{position:absolute;left:22px;top:18px;font:700 28px Poppins;white-space:nowrap}
+.kr .kw{position:absolute;left:22px;top:60px;font:600 16px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+#gF{position:absolute;left:0;width:784px;top:96px;text-align:center;font-size:64px;white-space:nowrap}
+/* equation vs inequality */
+.ef{position:absolute;left:36px;top:84px;font-size:60px;white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:64px;font:600 26px/1.4 Poppins;width:712px}
+#wl .sol .sx{font-size:28px}
+#wl .sol .sx .katex{font-size:1.15em}
+#bR{position:absolute;right:36px;top:80px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.15em}
+#mq .mq .katex{font-size:1.2em}
+.trapL .tx .katex{font-size:1.2em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:46px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 5 LINEAR INEQUALITIES</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Max 8: Is 8 <span class="acc">Allowed</span>?</div>
+    <div id="sub">Linear inequalities, explained with one lift sign</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: the lift + Aarav -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">THE COLLEGE LIFT · LIVE COUNT</div>
+        <svg id="hS" class="sv" width="784" height="580"></svg>
+        <div class="lbl" style="left:440px;top:120px">PEOPLE INSIDE</div>
+        <div class="rd" id="hRd" style="left:440px;top:156px"><i style="font-family:Poppins" class="x">p</i> = <span id="hV">0</span></div>
+        <div class="vc" id="hOk" style="left:440px;top:262px;background:var(--ok)"></div>
+        <div class="vc" id="hNo" style="left:440px;top:262px;background:var(--red)"></div>
+        <div class="pillp" id="hP" style="left:440px;top:486px">8 fine · 9 not</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · THIS MORNING</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-corridor.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">No equals sign. So what maths is this?</div></div>
+    </div>
+
+    <!-- P: balance scale + definition -->
+    <div id="sP">
+      <div class="card full" id="pb"><div class="lbl" style="left:36px;top:30px">A BALANCE SCALE</div>
+        <svg id="pS" class="sv" width="784" height="580"></svg><div id="pF"></div></div>
+      <div class="card rf" id="pd"><div class="lbl" style="left:36px;top:30px">DEFINITION · NCERT</div>
+        <div id="dfT">Two numbers or two expressions joined by <b>one of four symbols</b> form an inequality.</div>
+        <div id="pSy"></div></div>
+    </div>
+
+    <!-- S: four symbols -->
+    <div id="sS">
+      <div class="card full" id="sl"><div class="lbl" style="left:36px;top:30px">FOUR SYMBOLS</div><div id="sR"></div></div>
+      <div class="card rf" id="sr"><div class="lbl" style="left:36px;top:30px">THE OPEN MOUTH RULE</div>
+        <div id="sBig"><span class="a">3</span><span class="o">&lt;</span><span class="b">5</span></div><div id="sBg">BIGGER NUMBER</div>
+        <svg id="sS2" class="sv" width="784" height="580"></svg>
+        <div class="pillp ac" id="sP6" style="left:36px;top:490px">The open mouth faces the bigger number</div></div>
+    </div>
+
+    <!-- L: live test of the lift rule -->
+    <div id="sL">
+      <div class="card full" id="ll"><div class="lbl" style="left:36px;top:30px">LIVE · TEST EVERY VALUE</div>
+        <div id="lR"></div>
+        <div class="rd" id="lP"><i style="font-family:Poppins" class="x">p</i> = <span id="lPv">0</span></div>
+        <div class="vc" id="lV"></div>
+        <div class="lbl" id="lSL" style="left:36px;top:380px">SOLUTION SET · ALL VALUES THAT MAKE IT TRUE</div>
+        <div id="lRo"></div></div>
+      <div class="card rf" id="lr"><div class="lbl" style="left:36px;top:30px">ON THE NUMBER LINE</div>
+        <svg id="lS" class="sv" width="784" height="580"></svg>
+        <div class="pillp" id="lPl" style="left:36px;top:490px"></div></div>
+    </div>
+
+    <!-- K: strict vs slack + think -->
+    <div id="sK">
+      <div class="card full" id="ks"><div class="lbl" style="left:36px;top:30px;color:var(--red)">STRICT · END NUMBER NOT ALLOWED</div>
+        <div class="bf" id="ksF"></div><svg id="ksS" class="sv" width="784" height="580"></svg>
+        <div class="pillp bad" id="ksP" style="left:36px;top:470px">Empty circle: 8 is out</div></div>
+      <div class="card rf" id="kl"><div class="lbl" style="left:36px;top:30px;color:var(--ok)">SLACK · END NUMBER ALLOWED</div>
+        <div class="bf" id="klF"></div><svg id="klS" class="sv" width="784" height="580"></svg>
+        <div class="pillp good" id="klP" style="left:36px;top:470px">Filled circle: 8 is in</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- G: kinds of inequality -->
+    <div id="sG">
+      <div class="card full" id="gl"><div class="lbl" style="left:36px;top:30px">NCERT NAMES · 4 KINDS</div><div class="hiBox" id="gHi" style="left:20px;width:744px;height:112px"></div><div id="gR"></div></div>
+      <div class="card rf" id="gr"><div class="lbl" style="left:36px;top:30px">WHAT IT LOOKS LIKE</div>
+        <div id="gF"></div><svg id="gS" class="sv" width="784" height="580"></svg></div>
+    </div>
+
+    <!-- E: equation vs inequality + think -->
+    <div id="sE">
+      <div class="card full" id="el"><div class="lbl" style="left:36px;top:30px">EQUATION · ONE ANSWER</div>
+        <div class="ef" id="elF"></div><svg id="elS" class="sv" width="784" height="580"></svg>
+        <div class="pillp" id="elP" style="left:36px;top:470px">Exactly one answer: x = 3</div></div>
+      <div class="card rf" id="er"><div class="lbl" style="left:36px;top:30px">INEQUALITY · A WHOLE STRETCH</div>
+        <div class="ef" id="erF"></div><svg id="erS" class="sv" width="784" height="580"></svg>
+        <div class="pillp ac" id="erP" style="left:36px;top:470px">Every number left of 3</div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">COST OF x PACKETS · 30x RUPEES</div>
+        <svg id="wS" class="sv" width="784" height="580"></svg><div class="tag" id="bR"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">An equation balances. An inequality <span class="acc">tips</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

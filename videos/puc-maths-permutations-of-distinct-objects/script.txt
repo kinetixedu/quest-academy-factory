@@ -2,17 +2,17 @@ H1|0.4|Five friends. Two badges. One says captain. The other says vice captain.
 H2|0.45|How many ways can the two badges be given out? Most people guess ten. The real answer is twenty.
 H3|0.35|Diya watched this happen at her class election today.
 H4|0.5|Meera as captain, Sana as vice. Or Sana as captain, Meera as vice. Same two girls. So why count them twice?
-H5|0.65|Because the two badges are different. When the order matters, we are counting permutations.
+H5|0.65|Because the two badges are different. When order matters, we count permutations.
 P1|0.35|So what is a permutation?
 P3|0.4|A permutation is an arrangement in a definite order of a number of objects, taken some or all at a time.
-P4|0.4|Arrangement means putting things into places. Definite order means first place and second place are not the same.
+P4|0.4|Arrangement means putting things into places. Definite order means first place and second place are different.
 P5|0.6|Some or all means we may fill a few places, or every place.
 K1|0.4|Side by side. Meera is captain, Sana is vice captain. Now swap the badges.
 K2|0.6|Same two people, but each has a different job. So these are two different arrangements.
 K4|3.2|Now you try. A lock code one, two, three, and a lock code three, two, one. Same, or different? Pause and decide.
 K5|0.65|Different! The lock opens only in the right order. So a lock code is a permutation.
-L2|0.4|Let us count every way. Write the five friends down the side. These are the captains.
-L3|0.4|Write them again across the top. These are the vice captains.
+L2|0.4|Let us count every way. Five friends down the side are the captains.
+L3|0.4|The same five across the top are the vice captains.
 L4|0.5|Each square is one pair. Ravi captain, Meera vice is one square.
 L5|0.6|But one person cannot wear both badges. So the squares on this diagonal are crossed out.
 L6|0.65|Five rows, and four good squares in each row. Five times four. Twenty ways, not ten.
@@ -23,12 +23,12 @@ D5|0.75|Now make it general. Say we have n different things, and r places to fil
 D6|0.75|The first place has n choices. The second has n minus one. The third has n minus two.
 D7|0.75|Each place uses up one thing. So the last place, place number r, has n minus r plus one choices.
 D8|0.75|Multiply them all. This product is written n P r. The P stands for permutation.
-V1|0.4|Watch it grow. Five friends, one more place each time.
+V1|0.4|Watch it grow. Five friends, one more place at a time.
 V2|0.4|One place, five ways. Two places, twenty. Three places, sixty.
 V3|0.6|Four places, one hundred and twenty. Five places, still one hundred and twenty.
 V4|3.2|Quick one. Why did the count stop growing at the last place? Pause and think.
 V5|0.65|When four places are filled, only one friend is left. One choice. And times one changes nothing.
-G1|0.35|There is a neater way to write n P r. It uses factorials.
+G1|0.35|There is a neater way to write it, with factorials.
 G2|0.75|n factorial means n times every whole number below it, down to one. Five factorial is one hundred and twenty.
 G3|0.75|Our product stops early, at n minus r plus one. The part that is missing is n minus r factorial.
 G4|0.75|So we divide it away. n P r equals n factorial, over n minus r factorial.
@@ -43,17 +43,17 @@ W6|0.75|Step four. Everything from five down cancels, leaving eight times seven 
 W7|0.65|So there are three hundred and thirty six ways.
 X1|0.35|Now, the exam trap.
 X2|0.4|Many students write eight times eight times eight. That is five hundred and twelve.
-X3|0.65|But one runner cannot win two medals. The rule n to the power r is only for when repeats are allowed. Here, it is eight times seven times six.
+X3|0.65|But one runner cannot win two medals. n to the power r is only for repeats. Here it is eight times seven times six.
 J1|0.6|Where is this asked? In JEE Main, as questions that build numbers from given digits, with no digit repeated.
 Q1|5.4|Exam level now. How many four digit even numbers can be made from these six digits, with no repeats? Pause and solve.
 A1|0.5|The answer is B. One hundred and fifty six.
-A2|0.5|Even means the last digit is zero, two or four. Put zero last. The other three places take five, four and three choices. That is sixty.
+A2|0.5|Even means the last digit is zero, two or four. Zero last: the rest take five, four and three choices. Sixty.
 A3|0.5|Now put two or four last. That is two choices.
-A4|0.5|The first digit cannot be zero, or the last digit. Four choices. The middle two take four and three. Two times four times twelve is ninety six.
+A4|0.5|The first digit cannot be zero or the last digit. Four choices. Then four and three. Two times four times twelve is ninety six.
 A5|0.6|Sixty plus ninety six is one hundred and fifty six.
 F1|3.2|Here is your recap. Screenshot this card.
 Y1|0.4|Can you answer these three questions without help?
-Y2|0.9|One. Why are Meera captain, Sana vice, and Sana captain, Meera vice, two different ways?
+Y2|0.9|One. Why is swapping the two badges a new way?
 Y3|0.9|Two. Find seven P two.
 Y4|1.1|Three. Why is five P four equal to five P five?
-N1|0.3|Next time: the word APPLE has two P's. Swap them, and nothing changes. So how many different words can APPLE really make?
+N1|0.3|Next time: APPLE has two P's. Swap them, and nothing changes. So how many words can APPLE really make?

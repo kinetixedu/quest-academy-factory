@@ -1,62 +1,61 @@
-H1|0.4|Can you add every number from one to one hundred in your head, in less than ten seconds?
-H2|0.45|Diya found this puzzle at the study table today. One by one, it would take ages.
-H3|0.35|But a famous story says a schoolboy named Carl Friedrich Gauss did a sum like this in moments.
+H1|0.4|Can you add every number from one to one hundred, in less than ten seconds?
+H2|0.45|Diya tried it at the study table. One plus two plus three. It was taking ages.
+H3|0.35|A famous story says young Carl Friedrich Gauss did a sum like this in moments.
 H4|0.5|No calculator. Just one clever idea about pairs.
-H5|0.65|That idea gives us the sum of an arithmetic progression. Let us find it.
-P1|0.4|First, a quick reminder. An arithmetic progression, or A P, is a list where you add the same number every time.
+H5|0.65|That idea gives us the sum of an arithmetic progression.
+P1|0.4|Quick reminder. An arithmetic progression, or A P, adds the same number every time.
 P2|0.4|Like saving twenty rupees every week. Twenty, forty, sixty, eighty.
-P3|0.4|The first term is called a. The number you keep adding is called d, the common difference.
-P4|0.6|To reach the tenth term, you add d only nine times. So the n th term is a, plus n minus one times d.
-P5|0.6|One note. Class 10 teaches this sum, so the current Class 11 NCERT text skips it. JEE Main still asks it.
-G1|0.4|Now the trick. Write the sum forwards. One, plus two, plus three, all the way to one hundred.
-G2|0.4|Then write it again, backwards, right under it. One hundred, plus ninety nine, down to one.
-G3|0.4|Now add each column. One plus one hundred is one hundred and one. Two plus ninety nine, again one hundred and one.
-G4|0.4|Every column gives one hundred and one, and there are one hundred columns.
-G5|0.4|So two copies make one hundred times one hundred and one. Ten thousand one hundred.
-G6|0.65|One copy is half of that. Five thousand and fifty.
-L1|0.4|Here is the same trick as a picture. Build a staircase of blocks. One block, then two, then three.
-L2|0.4|Now flip a second staircase upside down and place it on top. Together they make a perfect rectangle.
-L3|0.4|The rectangle is n blocks wide and n plus one blocks tall. Watch n grow.
-L4|0.65|Whatever n is, one staircase is exactly half the rectangle. So the sum is n times n plus one, over two.
-D1|0.4|Now any A P. We call its sum S n, the sum of the first n terms. Its last term is called l.
-D2|0.75|Step one. Write S n forwards. a, then a plus d, and so on, up to l.
-D3|0.75|Step two. Write it backwards. l, then l minus d, and so on, down to a.
-D4|0.75|Step three. Add the two lines. Each column gives a plus l, because one term goes up by d while the other goes down by d.
-D5|0.75|Step four. There are n columns. So two S n equals n times, a plus l.
+P3|0.4|The first term is called a. The number we keep adding is d, the common difference.
+P4|0.6|To reach term n, we add d only n minus one times. So term n is a plus n minus one d.
+P5|0.6|This sum is a Class 10 topic, so the Class 11 NCERT text now skips it. JEE Main still asks it.
+G1|0.4|Now the trick. Write the sum forwards, from one up to one hundred.
+G2|0.4|Under it, write the same sum backwards, from one hundred down to one.
+G3|0.4|Add each column. One plus one hundred is one hundred and one. Two plus ninety nine, again one hundred and one.
+G4|0.4|Every column makes one hundred and one, and there are one hundred columns.
+G5|0.4|So both rows make one hundred times one hundred and one. Ten thousand one hundred.
+G6|0.65|But we wrote the sum twice. So one sum is half. Five thousand and fifty.
+L1|0.4|Here is the same trick as a picture. A staircase of blocks: one, two, three.
+L2|0.4|Turn a copy upside down and fit it on top. Now it is a rectangle, n wide and n plus one tall.
+L3|0.4|Watch n grow. One staircase is always half the rectangle.
+L4|0.65|So one plus two, up to n, is n times n plus one, over two.
+D1|0.4|Now any A P. Its sum of n terms is called S n. Its last term is called l.
+D2|0.75|Step one. Write S n forwards. a, then a plus d, up to l.
+D3|0.75|Step two. Write it backwards. l, then l minus d, down to a.
+D4|0.75|Step three. Add the rows. One term goes up by d, the other goes down by d. So every column is a plus l.
+D5|0.75|Step four. There are n columns. So two S n equals n times a plus l.
 D6|0.75|Step five. Divide by two. S n equals n over two, times a plus l.
-D7|0.75|And l is a plus n minus one times d. Put that in, and S n equals n over two, times two a, plus n minus one d.
-C1|0.4|Side by side. Use n over two, times a plus l, when you know the last term.
-C2|0.6|Use n over two, times two a plus n minus one d, when you know the common difference instead.
-C3|3.2|Your turn. Three, seven, eleven, and so on, for twenty terms. Which formula is quicker? Pause and think.
+D7|0.75|And l is a plus n minus one d. Put that in, and S n equals n over two, times two a plus n minus one d.
+C1|0.4|Side by side. The first form needs the last term.
+C2|0.6|The second form needs the common difference instead.
+C3|3.2|Your turn. Three, seven, eleven, for twenty terms. Which form is quicker? Pause and think.
 C4|0.65|The second one. We know d is four, but we do not know the last term yet.
 T1|0.7|Remember this. The sum is the number of terms, times the average of the first and the last.
 M1|0.4|That average has a name. The arithmetic mean, or A M.
-M2|0.4|The arithmetic mean of two numbers a and b is a plus b, over two. It sits exactly halfway between them.
-M3|0.4|Like meeting a friend halfway. You stand at four, she stands at sixteen. You meet at ten.
-M4|0.6|And four, ten, sixteen is an A P. Each step is six. The mean is the middle term.
-M5|0.4|We can squeeze in more means. To fit k numbers between a and b, cut the gap into k plus one equal steps.
-M6|0.65|One mean gives ten. Two means give eight and twelve. Three means give seven, ten and thirteen.
-M7|3.2|Quick one. What is the arithmetic mean of six and twenty? Pause and think.
-M8|0.65|Thirteen. Six plus twenty is twenty six, and half of twenty six is thirteen.
+M2|0.4|The arithmetic mean of a and b is a plus b, over two. It sits exactly halfway between them.
+M3|0.6|Like meeting a friend halfway. You stand at four, she stands at sixteen. You meet at ten. And four, ten, sixteen is an A P.
+M4|0.4|We can fit in more numbers. To put k means between a and b, cut the gap into k plus one equal steps.
+M5|0.65|One mean gives ten. Two means give eight and twelve. Three means give seven, ten and thirteen.
+M6|3.2|Quick one. What is the arithmetic mean of six and twenty? Pause and think.
+M7|0.65|Thirteen. Six plus twenty is twenty six, and half of that is thirteen.
 W1|0.35|Now, one worked example.
 W2|0.5|Find the sum of the first twenty terms of three, seven, eleven, and so on.
-W3|0.75|Step one. The first term a is three. The common difference d is seven minus three, which is four. And n is twenty.
-W4|0.75|Step two. Put them in. S twenty equals twenty over two, times six, plus nineteen fours.
+W3|0.75|Step one. a is three. d is seven minus three, which is four. And n is twenty.
+W4|0.75|Step two. S twenty is twenty over two, times six plus nineteen fours.
 W5|0.75|Step three. Nineteen fours make seventy six. So we get ten times eighty two.
 W6|0.75|Step four. The sum is eight hundred and twenty.
-W7|0.65|Check with the picture. The last term is seventy nine. Twenty times the average of three and seventy nine, forty one, is again eight hundred and twenty.
+W7|0.65|Check. Twenty times forty one, the average of three and seventy nine, gives eight hundred and twenty.
 X1|0.35|Now, the exam trap.
 X2|0.4|Add the odd numbers from one to ninety nine. Many students take n as ninety nine.
-X3|0.65|But only every second number is odd. Ninety nine is one, plus forty nine steps of two. So n is fifty, and the sum is two thousand five hundred.
-J1|0.6|Where is this asked? In JEE Main. In April twenty nineteen, a paper gave two sums of an A P and asked for a third.
+X3|0.65|Only every second number is odd. Ninety nine is one plus forty nine twos, so n is fifty, and the sum is two thousand five hundred.
+J1|0.6|Where is this asked? JEE Main, January twenty nineteen: two sums of an A P are linked, find its tenth term.
 Q1|5.4|Exam level now. The sum of n terms of an A P is three n squared plus two n. Find the tenth term. Pause and solve.
 A1|0.5|The answer is B. Fifty nine.
 A2|0.5|The tenth term is the sum of ten terms, minus the sum of nine terms.
 A3|0.5|S ten is three hundred and twenty. S nine is two hundred and sixty one.
-A4|0.6|Subtract, and the tenth term is fifty nine. Option D is the trap. It is the sum, not the term.
+A4|0.6|Subtract: fifty nine. Option D is the trap. That is the sum, not the term.
 F1|3.2|Here is your recap. Screenshot this card.
 Y1|0.4|Can you answer these three questions without help?
 Y2|0.9|One. Why does every column add up to the same total?
 Y3|0.9|Two. Find the sum of the first fifty natural numbers.
 Y4|1.1|Three. Insert two arithmetic means between three and eighteen.
-N1|0.3|Next time: a rumour that doubles every hour. Not adding the same number, but multiplying. The geometric progression.
+N1|0.3|Next time: a rumour that doubles every hour. Multiplying, not adding. The geometric progression.
