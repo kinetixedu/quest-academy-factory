@@ -156,7 +156,7 @@ function shapeS(t, k) {
   const cx = 260, cy = 156, L = 104;
   if (k === 'tet') { const u = io(t, tOutc, 0.6), a = io(t, tTet, 0.8), hh = io(t, tHov, 0.5);
     const dirs = GEO.tet.map((d, i) => nrm(d.map((v, q) => v * a + [[0.2, 1, 0.1], [0.5, 0.9, 0.2], [0.8, 0.6, -0.1], [0.3, 0.8, -0.4]][i][q] * (1 - a))));
-    let s = lobes3(cx, cy, dirs, L, u) + dot(cx, cy, 8, NC);
+    let s = G(sBall(cx, cy, 34) + pDb(cx, cy, 0, 78, 26) + pDb(cx, cy, 90, 78, 26) + pDb(cx, cy, 35, 66, 22) + T(560, 150, '1 s + 3 p', { fs: 32, c: C.ink, ls: 0, a: 'start' }) + T(560, 192, 'NOT MIXED YET', { fs: 18, a: 'start' }), 1 - io(t, tBl, 0.8)) + lobes3(cx, cy, dirs, L, u) + dot(cx, cy, 8, NC);
     if (hh > 0.01) s += G(dirs.map(d => { const p = PR(d); return atomC(cx + p[0] * L * 1.02, cy + p[1] * L * 1.02, 15, 'H', HC, 14); }).join(''), hh);
     s += G(T(560, 150, '109.5°', { fs: 46, c: C.ink, ls: 0, a: 'start' }) + T(560, 192, 'TETRAHEDRAL · sp³', { fs: 18, a: 'start' }), a);
     return s; }
@@ -241,7 +241,7 @@ $('#pcs').innerHTML = PCS.map(([n, h], i) => `<div class="pc2" id="pc${i}" style
 const tC2 = T0('C2'), tC3 = T0('C3'), tC4 = T0('C4'), tC5 = T0('C5');
 const NH3K = ['b', 'b', 'l', 'b'], NH3 = sqz(GEO.tet, NH3K, 0.12), H2OK = ['b', 'l', 'b', 'l'], H2O = sqz([[-0.816, -0.577, 0], nrm([-0.78, 0.6, 0.3]), [0.816, -0.577, 0], nrm([0.78, 0.6, -0.3])], H2OK, 0.2);
 function drawC(t) {
-  const a = io(t, wt('C2', 'octahedron') - 0.4, 0.5);
+  const a = io(t, T0('C1') + 0.5, 0.5);
   put($('#cS1'), G(molSVG({ cx: 392, cy: 250, R: 165, cr: 42, ar: 28, fs: 20, cen: 'S', doms: GEO.oct.map(d => ({ d, lab: 'F' })), arcs: [{ i: 2, j: 0, lab: '90°' }] }), a) + G(T(392, 450, '1 s + 3 p + 2 d → 6 sp³d²', { fs: 20, c: C.ink, ls: 0.4 }), io(t, tC2 + 0.3, 0.4)));
   const n = io(t, tC3 - 0.1, 0.4), w = io(t, tC5 - 0.1, 0.4), sq = io(t, tC4, 0.4);
   let s = '';
@@ -342,8 +342,8 @@ M.on(t => {
     M.setT(btg, BT[cur(BT, t)][1]); M.vis(btg, t, tS1 + 0.6, 1e9, POP);
     const k2 = io(t, tSp2 - 0.2, 0.4) * (1 - io(t, tSp - 0.2, 0.4)), k1 = io(t, tSp - 0.2, 0.4), k0 = 1 - io(t, tSp2 - 0.2, 0.4);
     put($('#shS'), G(shapeS(t, 'tet'), k0) + G(shapeS(t, 'tri'), k2) + G(shapeS(t, 'lin'), k1));
-    M.setT($('#shL'), t < tOutc ? 'SHAPE · WAITING FOR THE MIX' : 'SHAPE');
-    const ca = io(t, tBl, 0.4), cp = io(t, tPart - 0.1, 0.3);
+    M.setT($('#shL'), t < tOutc ? 'SHAPE · BEFORE THE MIX' : 'SHAPE');
+    const ca = io(t, tS1 + 0.8, 0.4), cp = io(t, tPart - 0.1, 0.3);
     put($('#chS'), G(G(charS(4, cp > 0.5 ? '25%' : '?'), 1 - io(t, tB1 + 0.3, 0.4)) + G(charS(3, '33%'), b2) + G(charS(2, '50%'), b1), ca));
   }
   M.vis($('#th1'), t, tB4 + 0.05, OUT('D1'), { dy: 36, ...o });

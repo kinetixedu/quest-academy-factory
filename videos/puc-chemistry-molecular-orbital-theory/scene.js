@@ -76,9 +76,9 @@ function drawP(t) {
   if (wv > 0.01) {
     const a1 = io(t, tWav, 0.5), a2 = io(t, tSub, 0.5);
     let g = `<line x1="90" y1="${y + 200}" x2="694" y2="${y + 200}" stroke="${C.line}" stroke-width="2"/>`;
-    g += G(curve(x => 0.75 * (psi(x, XA) + psi(x, XB)), y + 200, 80, NC, 5) + T(700, y + 206, 'ADD', { a: 'end', fs: 18, c: NC }), a1);
+    g += G(curve(x => 0.75 * (psi(x, XA) + psi(x, XB)), y + 200, 80, NC, 5) + T(90, y + 130, 'ADD', { a: 'start', fs: 18, c: NC }), a1);
     g += `<line x1="90" y1="${y + 330}" x2="694" y2="${y + 330}" stroke="${C.line}" stroke-width="2"/>`;
-    g += G(curve(x => psi(x, XA) - psi(x, XB), y + 330, 56, RC, 5) + T(700, y + 300, 'SUBTRACT', { a: 'end', fs: 18, c: RC }), a2);
+    g += G(curve(x => psi(x, XA) - psi(x, XB), y + 330, 56, RC, 5) + T(90, y + 266, 'SUBTRACT', { a: 'start', fs: 18, c: RC }), a2);
     g += G(T(392, y + 380, '2 ATOMIC IN · 2 MOLECULAR OUT', { fs: 18, c: C.ink }), io(t, tTwo, 0.4));
     s += G(g, wv);
   }
@@ -153,14 +153,14 @@ const LK = [['LINK 1', 'Nb: electrons in bonding orbitals', 'Nb', 'D2'], ['LINK 
 $('#lks').innerHTML = LK.map(([l, x, v], i) => `<div class="lk" id="lk${i}" style="top:${84 + i * 92}px"><div class="lt">${l}</div><div class="lx">${x}</div><div class="lv">${v}</div></div>`).join('');
 const tLk = LK.map(l => T0(l[3]));
 $('#dF').innerHTML = K(`\\text{Bond order} = \\tfrac{1}{2}\\,(${B_('N_b')} - ${A_('N_a')})`);
-const mini = (cx, y, nb, na, lab) => lev(cx, y + 70, 90, NC) + lev(cx, y - 70, 90, RC) + T(cx + 58, y + 77, 'σ', { a: 'start', fs: 20, c: NC, ls: 0 }) + T(cx + 58, y - 63, 'σ*', { a: 'start', fs: 20, c: RC, ls: 0 }) +
-  ea(cx - 14, y + 70, 1, nb > 0 ? 1 : 0) + ea(cx + 14, y + 70, 0, nb > 1 ? 1 : 0) + ea(cx - 14, y - 70, 1, na > 0 ? 1 : 0) + ea(cx + 14, y - 70, 0, na > 1 ? 1 : 0) + T(cx, y + 140, lab, { fs: 22, c: C.ink, ls: 0 });
+const mini = (cx, y, nb, na, lab) => `<g transform="translate(${cx} ${y}) scale(1.4) translate(${-cx} ${-y})">` + lev(cx, y + 70, 90, NC) + lev(cx, y - 70, 90, RC) + T(cx + 58, y + 77, 'σ', { a: 'start', fs: 20, c: NC, ls: 0 }) + T(cx + 58, y - 63, 'σ*', { a: 'start', fs: 20, c: RC, ls: 0 }) +
+  ea(cx - 14, y + 70, 1, nb > 0 ? 1 : 0) + ea(cx + 14, y + 70, 0, nb > 1 ? 1 : 0) + ea(cx - 14, y - 70, 1, na > 0 ? 1 : 0) + ea(cx + 14, y - 70, 0, na > 1 ? 1 : 0) + T(cx, y + 120, lab, { fs: 22, c: C.ink, ls: 0 }) + '</g>';
 function drawD(t) {
   const y = 330, k = cur(tLk.map(x => [x - 0.2]), t), a = i => io(t, tLk[i] - 0.2, 0.35) * (i < 4 ? 1 - io(t, tLk[i + 1] - 0.25, 0.3) : 1);
   let s = '';
   const nbH = io(t, tLk[0] + 0.3), naH = io(t, tLk[1] + 0.3);
   const pre = (1 - io(t, tLk[2] - 0.25, 0.3)) * io(t, tLk[0] - 0.2, 0.35);
-  s += G(mini(230, y, 2, 0, 'H₂') + mini(560, y, 2, 2, 'He₂') + G(T(230, 520, 'Nb = 2 · Na = 0', { fs: 20, c: NC }), nbH) + G(T(560, 520, 'Nb = 2 · Na = 2', { fs: 20, c: RC }), naH), pre);
+  s += G(mini(230, y - 10, 2, 0, 'H₂') + mini(560, y - 10, 2, 2, 'He₂') + G(T(230, 540, 'Nb = 2 · Na = 0', { fs: 20, c: NC }), nbH) + G(T(560, 540, 'Nb = 2 · Na = 2', { fs: 20, c: RC }), naH), pre);
   s += G(T(392, 290, 'H₂:  ½ (2 - 0) = 1', { fs: 34, c: NC, ls: 0 }) + T(392, 370, 'He₂: ½ (2 - 2) = 0', { fs: 34, c: RC, ls: 0 }) + T(392, 450, 'ZERO MEANS NO BOND', { fs: 18 }), a(2));
   { let g = `<line x1="110" y1="330" x2="680" y2="330" stroke="${C.ink2}" stroke-width="4"/>`;
     [0, 1, 2, 3].forEach(v => { const x = 110 + v * 190; g += `<line x1="${x}" y1="316" x2="${x}" y2="344" stroke="${C.ink2}" stroke-width="4"/>` + T(x, 384, String(v), { fs: 30, c: v ? NC : RC, ls: 0 }); });
@@ -182,7 +182,7 @@ const wsol = PUC.solution($('#wl'), [
   [K(`\\mathrm{O_2}: 8 + 8 = 16\\ e^-`)],
   [K(`${B_('N_b = 10')},\\quad ${A_('N_a = 6')}`)],
   [K(`\\tfrac{1}{2}(${B_('10')} - ${A_('6')}) = 2`)],
-  [K(`\\pi^*: \\uparrow\\ \\ \\uparrow \\Rightarrow 2\\ \\text{unpaired}`)]], { label: 'WORKED EXAMPLE', y0: 150, dy: 92 });
+  [K(`\\pi^*\\!: 2\\ \\text{unpaired}\\ e^-`)]], { label: 'WORKED EXAMPLE', y0: 150, dy: 92 });
 const tWs = [T0('W2'), T0('W3'), T0('W4'), T0('W5')];
 const wPill = document.createElement('div'); wPill.className = 'pillp ac'; wPill.style.cssText = 'left:36px;top:500px'; wPill.textContent = 'Paramagnetic: a magnet pulls it in'; $('#wl').appendChild(wPill);
 const wtg = tag($('#wr'));
@@ -201,7 +201,7 @@ function drawW(t) {
   [[120, 'O'], [660, 'O']].forEach(([x, n]) => { s += T(x, 110, n + ' ATOM', { fs: 16 }) + lev(x, 460, 70, HC) + T(x, 496, '2s', { fs: 18, c: C.ink, ls: 0 }) + [-1, 0, 1].map(k => lev(x + k * 46, 240, 38, HC)).join('') + T(x, 280, '2p', { fs: 18, c: C.ink, ls: 0 }); });
   SL.forEach(([li, dx, up], k) => { const a = io(t, tWf + 0.2 + k * 0.3, 0.2); s += ea(MXo + dx, OL[li][1], up, a); });
   const hi = io(t, tWp - 0.1, 0.4);
-  if (hi > 0.01) s += G(`<rect x="${MXo - 90}" y="150" width="180" height="60" rx="12" fill="none" stroke="${EC}" stroke-width="3" stroke-dasharray="7 6"/>` + T(MXo, 140, 'SAME SPIN · ONE EACH', { fs: 15, c: EC }), hi);
+  if (hi > 0.01) s += G(`<rect x="${MXo - 90}" y="150" width="180" height="60" rx="12" fill="none" stroke="${EC}" stroke-width="3" stroke-dasharray="7 6"/>` + T(MXo - 100, 186, 'SAME SPIN · ONE EACH', { fs: 15, c: EC, a: 'end' }), hi);
   s += G(T(392, 552, 'INNER: σ1s² σ*1s² (+2 Nb, +2 Na)', { fs: 15 }), io(t, tWb + 0.4, 0.4));
   s += G(T(660, 372, 'Nb 10', { fs: 22, c: NC, ls: 0 }) + T(660, 402, 'Na 6', { fs: 22, c: RC, ls: 0 }), io(t, tWb + 0.8, 0.4) * (1 - io(t, tWm, 0.3)));
   const mg = io(t, tWm, 0.4);
@@ -220,7 +220,7 @@ function drawC(t) {
   const k = cur(tSr.map(x => [x - 0.1]), t), sw = io(t, tC6 - 0.1, 0.5);
   let s = '';
   // magnet test
-  { let g = `<g transform="translate(560 200) rotate(90) scale(5.2)">${M.icon('magnet', 24, RC, 2.2).replace(/<\/?svg[^>]*>/g, '')}</g>`;
+  { let g = `<path d="M530 240 H610 A70 70 0 0 1 610 380 H530" fill="none" stroke="${RC}" stroke-width="44"/><path d="M500 240 H540 M500 380 H540" stroke="${C.ink2}" stroke-width="44"/>` + T(620, 450, 'MAGNET', { fs: 16 });
     g += `<rect x="150" y="80" width="220" height="40" rx="10" fill="${C.soft}" stroke="${C.line}" stroke-width="2"/>`;
     const bend = k === 3 ? 1 : 0, nn = k === 1 ? 0 : 14;
     for (let i = 0; i < nn; i++) { const ph = ((t * 0.55 + i / nn) % 1), yy = 130 + ph * 400, b = bend * M.io(M.clamp((yy - 150) / 200)), x = 260 + b * 200, yv = bend ? Math.min(yy, 130 + 200 + (yy - 330) * 0.15) : yy;
