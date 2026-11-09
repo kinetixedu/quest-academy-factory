@@ -1,0 +1,51 @@
+H1|0.4|Diya has zero rotis to share among zero friends. How many does each friend get?
+H2|0.45|Five? Ten? Any number works, because zero friends times anything is still zero rotis. Zero over zero has no single answer.
+H3|0.35|Diya thought about this in the kitchen, helping with dinner.
+H4|0.5|So when a limit gives zero over zero, is it stuck? Not at all. It is a signal to look closer.
+H5|0.65|Today we learn how, with limits of polynomial and rational functions.
+P1|0.35|Start with the easy kind.
+P2|0.4|A polynomial is made of whole number powers of x, like x squared plus three x minus one.
+P3|0.4|Its graph is one smooth curve. No holes, no jumps, no breaks.
+P4|0.65|So its limit at a is just its value at a. Plug in, and you are done. As x tends to two, this one tends to four plus six minus one, which is nine.
+R1|0.4|A rational function is one polynomial divided by another. g of x, over h of x.
+R2|0.4|If the bottom is not zero at a, plug in again. The limit is g of a, over h of a.
+R3|0.4|If the bottom is zero but the top is not, like one over x minus one at one, the values shoot off. No limit.
+R4|0.65|And if the top is also zero, we get zero over zero. That is where the real work begins.
+L1|0.4|Take x squared minus one, over x minus one, as x tends to one. Plugging in gives zero over zero.
+L2|0.4|Watch both parts as x creeps towards one. The top shrinks towards zero. So does the bottom.
+L3|0.4|But look at their ratio. It settles near two, and stays there.
+L4|0.65|Top and bottom shrink together, at a steady ratio. That is why zero over zero can still have a limit.
+D1|0.35|Why two? Here is the way out, in small steps.
+D2|0.75|Step one. The top is zero at one, so x minus one is a factor of the top. That is the factor theorem.
+D3|0.75|Step two. x squared minus one splits into x minus one, times x plus one.
+D4|0.75|Step three. Near one, x is not one, so x minus one is not zero. We can cancel it.
+D5|0.65|Step four. What is left is x plus one. Now plug in. One plus one is two.
+S1|3.2|Now you try. x squared minus four, over x minus two, as x tends to two. Is it stuck? Pause and decide.
+S2|0.65|Not stuck! Cancel x minus two. Then x plus two tends to four.
+N1|0.4|NCERT also gives a shortcut that saves a lot of factoring.
+N2|0.75|The limit of x to the n, minus a to the n, over x minus a, as x tends to a, equals n times a to the power n minus one.
+N3|0.65|Check it with n equals two and a equals one. Two times one is two. That matches our answer.
+N4|3.2|Quick one. x cubed minus eight, over x minus two, as x tends to two. Six, or twelve? Pause and think.
+N5|0.65|Twelve! Here n is three and a is two. Three times two squared is twelve.
+T1|0.7|Remember this. Zero over zero is not stuck. Factor, cancel, then plug in.
+W1|0.35|Now, one worked example.
+W2|0.5|Find the limit of x squared minus five x plus six, over x squared minus nine, as x tends to three.
+W3|0.75|Step one. Plug in three. The top is nine minus fifteen plus six, zero. The bottom is zero. So we factor.
+W4|0.75|Step two. The top is x minus two, times x minus three. The bottom is x minus three, times x plus three.
+W5|0.75|Step three. Cancel x minus three. We get x minus two, over x plus three.
+W6|0.65|Step four. Plug in three. One over six.
+X1|0.35|Now, the exam trap.
+X2|0.4|x cubed minus eight, over x squared minus four, as x tends to two. Plugging in gives zero over zero, and many students write one.
+X3|0.65|But zero over zero is not a number. Cancel x minus two. The top leaves x squared plus two x plus four, which is twelve. The bottom leaves x plus two, four. The answer is three.
+J1|0.6|Where is this asked? In JEE Main, as in September twenty twenty: a sum of powers of x, over x minus one, as x tends to one.
+Q1|5.4|Exam level now. Find this limit. Pause and solve.
+A1|0.5|The answer is A. Eight.
+A2|0.5|Split the top. x to the five, plus x cubed, minus two, is x to the five minus one, plus x cubed minus one.
+A3|0.5|So the fraction splits into two shortcut limits.
+A4|0.6|The first gives five times one, five. The second gives three times one, three. Five plus three is eight.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What is the limit of x cubed plus one, as x tends to two?
+Y3|0.9|Two. What should you do when you get zero over zero?
+Y4|1.1|Three. What is the limit of x to the five minus one, over x minus one, as x tends to one?
+N6|0.3|Next time: sine x over x, when x is tiny. Why does it close in on exactly one? We find out with limits of trigonometric functions.
