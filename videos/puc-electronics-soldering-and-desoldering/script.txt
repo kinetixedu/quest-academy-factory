@@ -1,0 +1,59 @@
+H1|0.3|Aarav's toy car stops every time it bumps into a wall.
+H2|0.3|He opens it up. A wire has come loose from the board.
+H3|0.5|Tape will not hold it. Glue does not carry current. So how do we join it for good?
+R1|0.35|We solder it. Soldering joins metal parts using a melted metal, called solder.
+R2|0.65|Think of it as a glue made of metal. It holds the parts, and it carries current.
+R3|0.35|Solder is a soft mix of metals, called an alloy.
+R4|0.35|The classic solder is sixty percent tin and forty percent lead.
+R5|0.65|It melts at about one hundred and eighty three to one hundred and ninety degrees Celsius.
+R6|0.65|Lead free solder, made of tin with a little silver and copper, melts higher. About two hundred and twenty degrees.
+R7|0.35|Metal surfaces carry a thin dirty layer, called an oxide.
+R8|0.35|Solder will not stick to it. So we use flux.
+R9|0.65|Flux cleans the oxide away, so the solder flows and grips. Most solder wire has flux inside.
+K1|0.35|The tools are simple.
+K2|0.35|A soldering iron has a hot metal tip. Twenty five watts is common for small circuits.
+K3|0.35|It always rests in a stand. A damp sponge wipes the tip clean.
+K4|0.65|For taking joints apart, we use a desoldering pump, and desoldering wick.
+B1|0.35|Now, let's make one joint on the breadboard.
+B2|0.35|First, wipe the tip, and add a little solder to it. This is called tinning.
+B3|0.35|Next, touch the tip to the copper pad and the wire, both together.
+B4|0.35|Watch the joint temperature climb.
+B5|0.35|When it passes the melting point, feed the solder into the joint, not onto the iron.
+B6|0.35|The solder flows all round, and forms a smooth cone.
+B7|0.65|Take the solder away first. Then the iron. Do not move it while it cools.
+B8|0.35|Now test the joint. A lamp and a scope check if current flows.
+B9|0.35|A bad joint flickers. The voltage keeps dropping out.
+B10|0.65|A good joint is steady. The voltage stays at five volts.
+G1|0.35|So what does a good joint look like?
+G2|0.35|A good joint is shiny, and shaped like a small cone.
+G3|0.35|A dull, lumpy ball is a cold joint. The solder never gripped the pad.
+G4|0.65|A blob joining two pads is a solder bridge. It makes a short circuit.
+D1|0.35|To remove a part, we desolder.
+D2|0.35|Melt the joint. Press the plunger of the pump, then release it.
+D3|0.65|It sucks the hot solder up, like a straw.
+D4|0.65|Or press copper wick on the joint. The braid soaks up the solder, like a sponge soaks water.
+S1|0.35|And always solder safely.
+S2|0.35|Put the iron back in its stand every time.
+S3|0.35|Work in a room with fresh air, and keep the fumes away from your face.
+S4|0.35|Wear safety glasses, because hot solder can spit.
+S5|0.65|And wash your hands after work, especially with lead solder.
+T1|0.8|Heat the joint, not the solder.
+W1|0.35|Worked example. A soldering iron is rated twenty five watts, two hundred and thirty volts.
+W2|0.7|Current, I equals P by V. Twenty five by two thirty. About zero point one one amperes.
+W3|0.7|Element resistance, R equals V squared by P.
+W4|0.7|Two thirty squared is fifty two thousand nine hundred. Divide by twenty five.
+W5|0.7|That is about two thousand one hundred and sixteen ohms.
+W6|0.65|In one minute, energy is twenty five times sixty. Fifteen hundred joules.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students melt solder on the tip, and drip it onto the joint.
+X3|0.65|Wrong. The joint stays cold, and the solder does not grip. That makes a cold joint.
+X4|0.65|Right. Heat the pad and the lead, then feed solder to the joint.
+X5|0.35|Where is this asked? In P U C board papers.
+X6|0.65|Expect the steps of soldering, the role of flux, and desoldering tools.
+Q1|5.4|Try this. A two hundred and thirty volt soldering iron has an element of one thousand and fifty eight ohms. What is its power?
+A1|0.35|B. Fifty watts.
+A2|0.35|P equals V squared by R.
+A3|0.35|Two thirty squared is fifty two thousand nine hundred.
+A4|0.65|Divide by one thousand and fifty eight. That is fifty watts.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, printed circuit boards. How does one flat board replace a nest of wires?

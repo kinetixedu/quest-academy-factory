@@ -1,0 +1,70 @@
+H1|0.3|Aarav plays his favourite song through a small amplifier.
+H2|0.3|The singer sounds loud and clear.
+H3|0.3|But the deep drum beats sound weak. The high whistles fade too.
+H4|0.5|Why does one amplifier boost some sounds better than others?
+P1|0.35|Think of a pipe with a rubber wall stretched across it.
+P2|0.35|Push the water back and forth fast. The wall wiggles, and the wave gets through.
+P3|0.35|Push very slowly, and the wall just stretches and stops the flow.
+P4|0.35|A capacitor acts like this rubber wall.
+P5|0.65|It blocks steady current, but lets a quick wave pass.
+P6|0.35|Now picture tiny holes in the pipe wall.
+P7|0.65|At very fast wiggles, water leaks out through them. Less reaches the end.
+S1|0.35|Let's build a C E amplifier on the breadboard.
+S2|0.35|It starts with the voltage divider bias from the last episode.
+S3|0.35|The signal comes in through a capacitor, C in.
+S4|0.35|It blocks the steady voltage, so the bias stays safe.
+S5|0.35|C out passes the big wave on to the load, R L.
+S6|0.35|And C E sits across R E. It is the bypass capacitor.
+S7|0.65|The wave skips past R E through it, so the gain stays high.
+S8|0.35|Now feed in a ten millivolt wave at one kilohertz.
+S9|0.35|The output is one point five volts. That is a gain of one fifty.
+S10|0.65|And it is upside down. One eighty degrees out of phase.
+S11|0.35|Now turn the frequency knob down, to a deep bass note.
+S12|0.35|At twenty hertz, the output shrinks to about half a volt.
+S13|0.35|Now turn it up, to a very high whistle.
+S14|0.65|At one megahertz, the output shrinks again.
+G1|0.35|Plot the gain at every frequency. This is the frequency response.
+G2|0.35|In the middle, the gain is flat. This is the mid band.
+G3|0.35|At low frequencies, the capacitors fight back.
+G4|0.35|Their opposition, called reactance, grows as the frequency falls.
+G5|0.65|So C in, C out and C E stop passing the wave well.
+G6|0.35|At high frequencies, tiny hidden capacitors inside the transistor take over.
+G7|0.65|Even the wires act like small capacitors. The wave leaks away to ground.
+G8|0.35|Mark where the gain drops to zero point seven zero seven of the middle value.
+G9|0.35|The lower one is f one. The upper one is f two.
+G10|0.65|The band between them is the bandwidth. B W equals f two minus f one.
+T1|0.8|Big in the middle. Weak at both ends.
+D1|0.35|Now the maths, one step at a time.
+D2|0.35|Inside the transistor, the emitter acts like a tiny resistance, r e prime.
+D3|0.7|r e prime equals twenty six millivolts, divided by I E.
+D4|0.35|At the output, R C and R L share the wave side by side.
+D5|0.7|So r c equals R C times R L, over R C plus R L.
+D6|0.7|The voltage gain A V equals r c, divided by r e prime.
+D7|0.7|The minus sign in front means the output is upside down.
+D8|0.7|In decibels, the gain equals twenty times the log of A V.
+D9|0.35|At a cut off, the gain is zero point seven zero seven times its middle value.
+D10|0.65|That is three decibels down. The output power is exactly half.
+D11|0.65|So f one and f two are also called the half power frequencies.
+W1|0.35|Worked example. Find the gain and the bandwidth.
+W2|0.35|The bias sets I E at two milliamperes.
+W3|0.35|R C and R L are both three point nine kilo ohms.
+W4|0.7|r e prime is twenty six over two. That is thirteen ohms.
+W5|0.35|r c is the two three point nine kilo ohms in parallel.
+W5b|0.7|That is one point nine five kilo ohms.
+W6|0.7|A V is one thousand nine fifty over thirteen. That is one hundred fifty.
+W7|0.7|In decibels, twenty log one fifty is about forty three point five.
+W8|0.35|The cut offs are fifty hertz and two hundred kilohertz.
+W9|0.65|So the bandwidth is about two hundred kilohertz.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students say the gain falls to half at the cut off.
+X3|0.65|It does not. The voltage gain falls to zero point seven zero seven times.
+X4|0.65|It is the power that falls to half. That is why it is three decibels down.
+X5|0.65|Where is this asked? In P U C board papers.
+X6|0.65|Draw the C E amplifier and its frequency response, and find the gain.
+Q1|5.4|Try this. An amplifier has a mid band gain of forty decibels. f one is forty hertz, f two is forty kilohertz. Find the gain at f two, and the bandwidth.
+A1|0.35|B. Seventy point seven, and thirty nine point nine six kilohertz.
+A2|0.35|Forty decibels means twenty log A equals forty. So A is one hundred.
+A3|0.35|At f two, the gain is zero point seven zero seven times one hundred. Seventy point seven.
+A4|0.65|The bandwidth is forty kilohertz minus forty hertz. Thirty nine point nine six kilohertz.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, the R C coupled multistage amplifier. How do we get a gain of thousands?

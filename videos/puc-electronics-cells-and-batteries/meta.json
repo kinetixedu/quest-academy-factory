@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "Cells and Batteries",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 59
+ },
+ "class": "11",
+ "title": "What mAh Really Means Explained Simply | PUC, CBSE and ISC",
+ "description": "Aarav reads the back of an old phone battery: 3.7 V and 5000 mAh. And when he plays a heavy game, the battery bar drops fast. What do these numbers really mean? In this animated lesson we open up cells and batteries.\n\nFirst we see what is inside a cell (two electrodes and an electrolyte) and how a chemical reaction pushes electrons round a circuit. We compare primary cells (used once, like a 1.5 V dry cell) with secondary cells (rechargeable, like a 2 V lead acid cell and a 3.7 V lithium ion cell). On a live breadboard a real cell with internal resistance drives smaller and smaller loads while the readout and an oscilloscope show the terminal voltage falling as the current rises. We derive V = E - Ir step by step and plot it as a straight line, then explain capacity in milliampere hours (1 mAh = 3.6 C) and cells in series and in parallel. A worked example finds the charge, energy and battery life of a phone battery, followed by the exam trap (emf is not the terminal voltage), where it is asked, an original JEE Main pattern practice question with a full solution, and a fact card to screenshot.\n\nThis is Episode 59 of PUC Electronics, Class 11, Chapter 9: Practical Electronic Components, their Specifications and PCB (Karnataka I PUC Electronics) | NCERT/CBSE Class 12 Physics Ch 3 Current Electricity: cells, emf, internal resistance, cells in series and parallel | ISC Class 12 Physics: Current Electricity (internal resistance, emf, combination of cells).\n\nIn this video:\n0:00 What do volts and mAh mean?\n0:15 Inside a cell\n0:43 Primary and secondary cells\n1:10 A real cell on the breadboard: internal resistance\n2:07 Deriving V = E - Ir\n2:35 Capacity in milliampere hours\n2:52 Cells in series and parallel\n3:16 Worked example: a phone battery\n3:54 Exam trap: emf vs terminal voltage\n4:08 Where it is asked\n4:23 Practice question\n4:57 Fact card\n\nNext episode: Soldering and Desoldering.\n\nVideo by Quest Academy.",
+ "tags": [
+  "cells and batteries",
+  "emf and internal resistance",
+  "terminal voltage V = E - Ir",
+  "primary and secondary cells",
+  "mAh battery capacity",
+  "cells in series and parallel",
+  "lithium ion battery",
+  "lead acid battery",
+  "JEE Main current electricity",
+  "CBSE class 12 physics",
+  "ISC physics",
+  "PUC electronics",
+  "1st PUC electronics chapter 9",
+  "Karnataka PUC electronics"
+ ],
+ "thumb": {
+  "title": "What mAh Really Means",
+  "accent_word": "mAh",
+  "frame_t": 121
+ }
+}

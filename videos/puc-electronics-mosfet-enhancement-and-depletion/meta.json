@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "MOSFET: Enhancement and Depletion",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 64
+ },
+ "class": "12",
+ "title": "MOSFET: Enhancement vs Depletion Explained Simply | PUC Electronics",
+ "description": "Aarav's phone has a chip with billions of tiny switches, and the control gate of each one does not even touch the part it controls. That switch is a MOSFET. We start with a magnet under a glass table (it lines up iron dust without touching it), then build an n channel enhancement MOSFET: p type substrate, n type source and drain, a thin silicon dioxide layer and a metal gate. Metal, oxide, semiconductor.\n\nOn a live breadboard the gate voltage rises from 0 V: nothing happens until the threshold voltage V_T, then the gate pulls electrons under the oxide into an induced channel, the lamp lights and the oscilloscope shows the drain current rising. Then the depletion MOSFET with its built-in channel: a negative gate thins it (depletion mode), a positive gate thickens it (enhancement mode). We compare the transfer curves and the symbols (broken line vs solid line), write I_D = k(V_GS - V_T)^2 and Shockley's equation, work an example, and finish with the exam trap (an enhancement MOSFET is off at zero gate volts), where it is asked, an original practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 64 of PUC Electronics, Class 12, Chapter 1: Field Effect Transistor (FET) (Karnataka II PUC Electronics). The FET is not in the rationalised NCERT/CBSE Class 12 Physics book or the ISC Physics syllabus, so this lesson follows the Karnataka PUC Electronics syllabus.\n\nIn this video:\n0:00 Billions of switches that never touch\n0:16 The magnet under glass idea\n0:45 Inside an enhancement MOSFET\n1:13 Enhancement MOSFET on a breadboard\n1:54 The depletion MOSFET: two modes\n2:22 Transfer curves and symbols\n2:54 The equations\n3:29 Worked example\n3:58 Exam trap: enhancement is off at 0 V\n4:15 Where it is asked\n4:25 Practice question\n5:04 Formula card\n\nNext episode: DC Load Line and Operating Point.\n\nVideo by Quest Academy.",
+ "tags": [
+  "MOSFET",
+  "enhancement MOSFET",
+  "depletion MOSFET",
+  "MOSFET construction",
+  "threshold voltage",
+  "induced channel",
+  "MOSFET symbol",
+  "MOSFET transfer characteristics",
+  "types of FET",
+  "IGFET",
+  "2nd PUC electronics",
+  "2nd PUC electronics chapter 1",
+  "Karnataka PUC electronics",
+  "class 12 electronics"
+ ],
+ "thumb": {
+  "title": "A Gate That Never Touches",
+  "accent_word": "Touches",
+  "frame_t": 106
+ }
+}

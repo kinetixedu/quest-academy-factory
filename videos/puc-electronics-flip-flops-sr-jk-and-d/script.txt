@@ -1,0 +1,53 @@
+H1|0.3|Aarav taps the button on his desk lamp. It turns on.
+H2|0.3|He lets go, and the lamp stays on. Another tap, and it goes off.
+H3|0.5|The button forgets. The lamp remembers. What does the remembering?
+M1|0.35|The gates we have met so far have no memory.
+M2|0.35|Change the input, and the output changes at once.
+M3|0.35|A flip-flop is different. It stores one bit, a zero or a one.
+M4|0.35|And it keeps that bit, even after the input goes away.
+M5|0.65|It has two outputs, Q and Q bar. They are always opposite.
+S1|0.35|The simplest is the S R flip-flop. S means set. R means reset.
+S2|0.35|Take two NOR gates. Feed each output back into the other gate.
+S3|0.65|That loop is the memory. Each gate holds the other in place.
+S4|0.35|Press set. S is one. Q becomes one.
+S5|0.35|Let go. S is zero again. But Q stays one. It remembers.
+S6|0.35|Press reset. R is one. Q becomes zero.
+S7|0.35|Let go. Q stays zero.
+S8|0.65|So S and R both zero means no change. It holds the last value.
+S9|0.35|But S and R both one is not allowed. Both outputs go to zero.
+S10|0.65|Then Q and Q bar are no longer opposite. This is the invalid state.
+C1|0.35|Most flip-flops also have a clock input. It is a steady beat of pulses.
+C2|0.35|The flip-flop can change only when a clock pulse arrives.
+C3|0.65|This keeps many flip-flops working in step, like dancers on a beat.
+J1|0.35|The J K flip-flop fixes the invalid state.
+J2|0.35|J works like set. K works like reset.
+J3|0.35|J zero, K zero. No change.
+J4|0.35|J one, K zero. Q becomes one. J zero, K one. Q becomes zero.
+J5|0.65|And J one, K one? Now Q flips to the opposite. This is called toggle.
+J6|0.65|Toggle on every press, and you get Aarav's lamp button.
+D1|0.35|The D flip-flop has just one data input, called D.
+D2|0.35|Inside, D goes to S. A NOT gate sends D bar to R.
+D3|0.65|So S and R can never both be one. There is no invalid state.
+D4|0.65|On each clock pulse, Q copies D. Then it holds that value.
+D5|0.65|Groups of D flip-flops store data inside computers. They are called registers.
+T1|0.8|A flip-flop is a one bit memory.
+W1|0.35|Worked example. A J K flip-flop starts with Q equal to zero.
+W2|0.7|Four clock pulses arrive. Find Q after each one.
+W3|0.7|Pulse one. J one, K zero. That is set. Q becomes one.
+W4|0.7|Pulse two. J one, K one. Toggle. Q flips to zero.
+W5|0.7|Pulse three. J zero, K zero. No change. Q stays zero.
+W6|0.7|Pulse four. J one, K one. Toggle again. Q becomes one.
+W7|0.65|So Q goes one, zero, zero, one.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think S and R both one simply sets Q to one.
+X3|0.35|In the NOR S R flip-flop, both outputs go to zero.
+X4|0.65|Then Q equals Q bar. That breaks the rule, so this input is not allowed.
+X5|0.35|Where is this asked? In P U C board papers.
+X6|0.65|Expect the truth tables of S R, J K and D, and the invalid state.
+Q1|5.4|Try this. A J K flip-flop has J and K both tied to one. Q starts at zero. What is Q after five clock pulses?
+A1|0.35|B. Q is one.
+A2|0.35|With J and K both one, every pulse toggles Q.
+A3|0.35|Q goes one, zero, one, zero, one.
+A4|0.65|An odd number of toggles flips it. So Q ends at one.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, switches, relays and connectors. The parts that link circuits to the real world.

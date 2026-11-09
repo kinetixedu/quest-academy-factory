@@ -1,0 +1,61 @@
+H1|0.3|Aarav slowly turns up the supply on a J F E T.
+H2|0.3|At first, the current climbs with the voltage, like a normal resistor.
+H3|0.3|Then it stops climbing. More voltage, same current.
+H4|0.5|Why does it go flat? Today we read the J F E T's curves.
+P1|0.35|Think of a soft hose again, with water pushed in at one end.
+P2|0.35|Push a little harder, and more water flows.
+P3|0.35|But a hard push also pinches the hose near the far end.
+P4|0.65|Harder push, tighter pinch. So the flow settles at a steady value.
+P5|0.35|In a J F E T, the push is the drain voltage, V D S.
+P6|0.65|It pinches the drain end of the channel. So the current goes flat.
+B1|0.35|Let's measure it on the breadboard.
+B2|0.35|The gate is set at zero volts. We slowly raise V D S.
+B3|0.35|From zero, the drain current rises almost in a straight line.
+B4|0.35|Here the channel acts like a resistor. This is the ohmic region.
+B5|0.35|At four volts, the drain end pinches. This is V P, the pinch off voltage.
+B6|0.35|After that, the current stays near ten milliamperes. We call it I D S S.
+B7|0.35|This flat part is the saturation, or constant current, region.
+B8|0.35|Now set the gate to minus one volt, and sweep again.
+B9|0.35|The curve goes flat earlier, and lower. About five point six milliamperes.
+B10|0.35|At minus two volts, it is lower still. Two point five milliamperes.
+B11|0.65|Push V D S too far, and the current shoots up. That is breakdown. Avoid it.
+G1|0.35|Now take the flat values, and plot them against the gate voltage.
+G2|0.35|This is the transfer characteristic. It is a curve, a parabola.
+G3|0.35|At zero gate volts, I D is I D S S, its top value.
+G4|0.35|At V G S off, minus four volts, I D is zero.
+G5|0.35|The curve follows Shockley's equation.
+G6|0.7|I D equals I D S S, times one minus V G S over V P, all squared.
+G7|0.65|Notice, V P and V G S off have the same size. Here, four volts.
+T1|0.8|Past pinch off, the current stays flat. That is where a F E T amplifies.
+D1|0.35|Three numbers describe a J F E T. Let's meet them.
+D2|0.7|One. Drain resistance, r d. Change in V D S, over change in I D.
+D3|0.35|We keep the gate voltage fixed. On the flat part, r d is large.
+D4|0.7|Two. Transconductance, g m. Change in I D, over change in V G S.
+D5|0.35|We keep V D S fixed. Its unit is siemens, also called mho.
+D6|0.7|Three. Amplification factor, mu. Change in V D S, over change in V G S.
+D7|0.35|We keep I D fixed. Mu has no unit.
+D8|0.7|Now multiply and divide mu by the change in I D.
+D9|0.7|Mu becomes delta V D S over delta I D, times delta I D over delta V G S.
+D10|0.65|The first part is r d. The second is g m. So mu equals r d times g m.
+W1|0.35|Worked example. Find r d, g m and mu.
+W2|0.35|With the gate fixed, V D S rises from four to ten volts.
+W3|0.35|I D rises from eight to eight point two milliamperes.
+W4|0.7|So r d is six volts over zero point two milliamperes. Thirty kilo ohms.
+W5|0.35|With V D S fixed, the gate changes by zero point two volts.
+W6|0.7|I D changes by zero point six milliamperes.
+W7|0.7|So g m is zero point six over zero point two. Three milli siemens.
+W8|0.65|Mu is thirty kilo ohms times three milli siemens. That is ninety.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think the current becomes zero at pinch off.
+X3|0.65|It does not. At pinch off, I D stops rising and stays nearly constant.
+X4|0.35|I D becomes zero only when the gate reaches V G S off.
+X5|0.65|Where is this asked? In P U C board papers.
+X6|0.65|Draw the curves, define r d, g m and mu, and prove mu equals r d times g m.
+Q1|5.4|Try this. A J F E T has mu of three hundred, and r d of one hundred kilo ohms. With V D S fixed, the gate changes by zero point one volts. How much does I D change?
+A1|0.35|B. Zero point three milliamperes.
+A2|0.35|First, g m equals mu over r d.
+A3|0.35|Three hundred over one hundred kilo ohms is three milli siemens.
+A4|0.35|Change in I D is g m times change in V G S.
+A5|0.65|Three milli siemens times zero point one volts. That is zero point three milliamperes.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, the MOSFET. A gate that never touches the channel.

@@ -1,0 +1,56 @@
+H1|0.3|Aarav connects a small microphone straight to a big speaker.
+H2|0.3|His voice almost vanishes. The heavy speaker pulls too much from the weak mic.
+H3|0.3|He adds one transistor stage in between, with a voltage gain of only one.
+H4|0.5|Now his voice comes through clearly. Meet the emitter follower.
+P1|0.35|Think of a strong helper who copies your every move.
+P2|0.35|You lift your hand a little. The helper lifts a heavy box the same amount.
+P3|0.35|You use almost no effort. The helper supplies the strength.
+P4|0.65|The movement is the same. But the power is much bigger.
+P5|0.65|An emitter follower is that helper. Its output copies its input.
+S1|0.35|Let's build it on the breadboard.
+S2|0.35|The collector goes straight to the supply.
+S3|0.35|The output is taken from the emitter, across the resistor R E.
+S4|0.35|So it is called a common collector amplifier, or an emitter follower.
+S5|0.35|Now we feed a slow wave into the base.
+S6|0.35|The emitter rises and falls with the base. It follows it.
+S7|0.35|It stays about zero point seven volts below. That is the base emitter drop.
+S8|0.35|On the scope, the input and output move together. They are in phase.
+S9|0.35|The output is almost as big as the input. The voltage gain is about one.
+S10|0.35|But look at the currents. A tiny base current controls a big emitter current.
+S11|0.65|So the current gain is large. It is about beta plus one.
+D1|0.35|Why is the voltage gain about one? Look at the loop.
+D2|0.7|The input voltage is the base emitter voltage, plus the output voltage.
+D3|0.7|So the whole output is fed back, in series with the input. Beta equals one.
+D4|0.65|This is voltage series negative feedback. One hundred percent of it.
+D5|0.7|With beta equal to one, A f equals A, over one plus A.
+D6|0.7|A is large, so A f is just under one. Never above one.
+D7|0.7|More exactly, the voltage gain is R E, over small r e plus R E.
+D8|0.65|Small r e is the tiny resistance inside the emitter. It is about twenty five millivolts over I E.
+T1|0.8|The same voltage out, with far more current. That is a buffer.
+Z1|0.35|Its real superpower is impedance.
+Z2|0.35|Input impedance tells how much a circuit pulls from its source. High means gentle.
+Z3|0.35|An emitter follower has a very high input impedance. About beta times R E.
+Z4|0.35|And a very low output impedance. So it can drive a heavy load.
+Z5|0.65|So it sits between a weak source and a heavy load. We call it a buffer.
+Z6|0.65|This job is called impedance matching.
+W1|0.35|Worked example. A weak source gives one volt, with ten kilo ohms inside it.
+W2|0.35|It must drive a load of one kilo ohm.
+W3|0.7|Connected directly, the load gets one volt times one over eleven. Just zero point zero nine volts.
+W4|0.35|Now add an emitter follower, with beta one hundred. The load is its R E.
+W5|0.7|Its input impedance is about beta times R E. That is one hundred kilo ohms.
+W6|0.7|The source now keeps one hundred over one hundred and ten. About zero point nine one volts.
+W7|0.7|The follower passes this on with a gain of about one. So the load gets about zero point nine volts.
+W8|0.65|Ten times more voltage, from a stage with a gain of one.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think the emitter follower flips the signal, like the common emitter amplifier.
+X3|0.65|Wrong. The output is in phase with the input, and the gain is just under one.
+X4|0.35|And a gain of one is not useless. The current gain and power gain are large.
+X5|0.65|Where is this asked? In P U C board papers.
+X6|0.65|Draw the circuit, explain why the gain is about one, and compare it with C E and C B.
+Q1|5.4|Try this. An emitter follower has beta one hundred and fifty, and R E of two kilo ohms. What are its input impedance and voltage gain, roughly?
+A1|0.35|A. About three hundred kilo ohms, and a gain of about one, in phase.
+A2|0.35|The input impedance is about beta times R E.
+A3|0.35|One hundred and fifty times two kilo ohms is three hundred kilo ohms.
+A4|0.65|The output follows the input. So the gain is just under one, with no phase change.
+F1|3.2|Screenshot this card.
+NX|0.6|That is all for now. More P U C Electronics is coming soon, so follow the playlist.

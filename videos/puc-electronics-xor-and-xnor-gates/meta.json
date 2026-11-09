@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "XOR and XNOR Gates",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 55
+ },
+ "class": "11",
+ "title": "XOR and XNOR Gates Explained Simply | PUC and ISC",
+ "description": "Aarav's staircase light has two switches, and either one can turn it on or off. Which logic gate thinks like this? In this animated lesson we meet the XOR (exclusive OR) gate and its partner, the XNOR gate.\n\nOn a live breadboard the truth table fills row by row as the switch tiles toggle, the lamp shows the output and an oscilloscope traces A, B and Y: XOR gives 1 when the inputs differ, XNOR gives 1 when they are the same. We build the XOR formula from basic gates, see why two-way stair switches work like XOR, and learn two tricks (a switchable NOT and the odd-or-even check). A worked example proves a three-gate circuit is XOR, followed by the exam trap (XOR is not OR in the last row), where it is asked, an original JEE Main pattern practice question with a full solution, and a fact card to screenshot.\n\nThis is Episode 55 of PUC Electronics, Class 11, Chapter 8: Introduction to Digital Electronics. Boards: Karnataka I PUC Electronics Ch 8 Introduction to Digital Electronics | ISC Class 12 Computer Science: elementary logic gates including XOR and XNOR. Logic gates are no longer in the rationalised NCERT/CBSE Physics book.\n\nIn this video:\n0:00 One light, two switches\n0:16 XOR: exclusive OR\n0:38 XOR truth table on a breadboard\n1:06 The XNOR gate\n1:31 Formulas from basic gates\n2:02 The staircase switches\n2:14 Two XOR tricks\n2:38 Worked example: which gate is it?\n3:17 Exam trap: XOR vs OR\n3:31 Where it is asked\n3:49 Practice question\n4:21 Fact card\n\nNext episode: Half Adder and Full Adder.\n\nVideo by Quest Academy.",
+ "tags": [
+  "XOR gate",
+  "XNOR gate",
+  "exclusive OR",
+  "exclusive NOR",
+  "XOR truth table",
+  "XOR boolean expression",
+  "two way switch logic",
+  "logic gates",
+  "digital electronics",
+  "JEE Main logic gates",
+  "PUC electronics",
+  "1st PUC electronics chapter 8",
+  "ISC computer science logic gates",
+  "Karnataka PUC electronics"
+ ],
+ "thumb": {
+  "title": "Same or Different?",
+  "accent_word": "Different",
+  "frame_t": 65.9
+ }
+}

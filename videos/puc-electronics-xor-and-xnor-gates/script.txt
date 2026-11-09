@@ -1,0 +1,61 @@
+H1|0.3|Aarav climbs the stairs at home. One light, but two switches.
+H2|0.3|He flips the switch at the bottom. The light comes on.
+H3|0.3|At the top, he flips the other switch. The light goes off.
+H4|0.5|Either switch can change it. Which logic gate thinks like this?
+I1|0.35|Meet the X O R gate. Its full name is exclusive OR.
+I2|0.35|Exclusive means one or the other, but not both.
+I3|0.35|So the output is one when the two inputs are different.
+I4|0.65|The symbol is the OR shape, with one extra curved line at the inputs.
+I5|0.65|We write Y equals A, circle plus, B. The circled plus means X O R.
+B1|0.35|Let's fill its truth table on the breadboard.
+B2|0.35|Both inputs zero. They are the same. The output is zero.
+B3|0.35|Zero and one. Different. One. One and zero. Different. One.
+B4|0.35|Both inputs one. The same again. The output is zero.
+B5|0.65|So X O R is one only when the inputs differ.
+B6|0.65|Compare it with OR. They differ only in the last row.
+B7|0.65|On the scope, Y goes high only when A and B disagree.
+N1|0.35|Now its partner, the X N O R gate. Exclusive NOR.
+N2|0.35|It is an X O R gate with a NOT gate after it.
+N3|0.35|So its symbol gets a small bubble at the output.
+N4|0.35|Both zero. One. Different inputs. Zero. Both one. One.
+N5|0.65|So X N O R is one when the inputs are the same.
+N6|0.65|It is a sameness checker. We write A X O R B, with a bar on top.
+E1|0.35|Now, the X O R formula, built from basic gates.
+E2|0.35|A one and B zero gives one. We write that as A B bar.
+E3|0.35|A zero and B one also gives one. That is A bar B.
+E4|0.65|Join them with OR. Y equals A B bar, plus A bar B.
+E5|0.65|That needs two NOT gates, two AND gates, and one OR gate.
+E6|0.65|The same job can also be done with just four NAND gates.
+E7|0.65|For X N O R, the same idea gives A B, plus A bar B bar.
+S1|0.35|Back to the stairs. Each switch is one input.
+S2|0.35|Flip either switch, and the inputs change between same and different.
+S3|0.65|So the light flips each time. It works just like an X O R gate.
+U1|0.35|X O R has two neat tricks.
+U2|0.35|A X O R zero gives back A. A X O R one gives A bar.
+U3|0.65|So one input can turn a NOT on and off.
+U4|0.35|And with many inputs, X O R gives one when the number of ones is odd.
+U5|0.65|Computers use this odd or even check to spot errors in data.
+T1|0.8|Different gives one. Same gives zero.
+W1|0.35|Worked example. Find Y for this three gate circuit.
+W2|0.7|The first NOR gate gives A plus B, barred. The AND gate gives A B.
+W3|0.7|The last NOR joins them. One long bar covers both.
+W4|0.7|Break the long bar and change the sign. The two bars on top cancel.
+W5|0.7|We get A plus B, times A B barred. Break that bar too.
+W6|0.7|Multiply out. A A bar and B B bar are both zero.
+W7|0.7|Y equals A B bar, plus A bar B. The circuit is an X O R gate.
+W8|0.65|Check A one, B one. NOR gives zero. AND gives one. Y is zero.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students mix up X O R and OR in the last row.
+X3|0.35|With both inputs one, OR gives one.
+X4|0.65|But X O R gives zero. The inputs are the same, so the output is zero.
+X5|0.35|Where is this asked? In P U C board papers, and in I S C Computer Science.
+X6|0.35|J E E Main has asked which gate a circuit is. The answer was X O R.
+X7|0.65|Expect truth tables, the X O R formula, and circuits that turn out to be X O R.
+Q1|5.4|Try this. A and one go into an X O R gate. That output and B go into a second X O R gate. What is Y?
+A1|0.35|B. A X N O R B.
+A2|0.35|X O R with one flips A. The first output is A bar.
+A3|0.35|So Y is A bar, X O R B.
+A4|0.35|Test both inputs zero. A bar is one. One X O R zero is one.
+A5|0.65|Same inputs give one. That is X N O R.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, the half adder and the full adder. X O R does the adding.

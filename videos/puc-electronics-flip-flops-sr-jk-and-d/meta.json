@@ -1,0 +1,31 @@
+{
+ "world": "puc-electronics",
+ "topic": "Flip-Flops: SR, JK and D",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 57
+ },
+ "class": "11",
+ "title": "Flip-Flops SR, JK and D Explained Simply | PUC Electronics Class 11",
+ "description": "Aarav taps the button on his desk lamp. He lets go, and the lamp stays on. The button forgets, but the lamp remembers. What does the remembering? In this animated lesson we meet the flip-flop, a one-bit memory.\n\nOn a live breadboard, two cross-coupled NOR gates make an SR flip-flop: press set, press reset, let go, and watch Q hold its value while the oscilloscope traces S, R and Q and the truth table fills, including the invalid state. Then the clock, the JK flip-flop (no change, set, reset, toggle) and the D flip-flop (Q copies D on each clock pulse), each with a live timing trace. A worked example finds Q over four JK clock pulses, followed by the exam trap (S = R = 1 in a NOR latch), where it is asked, an original board pattern practice question with a full solution, and a fact card to screenshot.\n\nThis is Episode 57 of PUC Electronics, Class 11, Chapter 8: Introduction to Digital Electronics. Boards: Karnataka I PUC Electronics Ch 8 Introduction to Digital Electronics. Flip-flops are not in the rationalised NCERT/CBSE Physics book or the ISC syllabus.\n\nIn this video:\n0:00 A lamp that remembers\n0:13 Gates with memory\n0:32 SR flip-flop on a breadboard\n1:18 The clock\n1:32 JK flip-flop: toggle\n1:58 D flip-flop\n2:25 Worked example: JK timing\n3:01 Exam trap: S = R = 1\n3:17 Where it is asked\n3:26 Practice question\n3:53 Fact card\n\nNext episode: Switches, Relays and Connectors.\n\nVideo by Quest Academy.",
+ "tags": [
+  "flip flop",
+  "SR flip flop",
+  "JK flip flop",
+  "D flip flop",
+  "SR latch using NOR gates",
+  "flip flop truth table",
+  "invalid state SR flip flop",
+  "toggle",
+  "clock pulse",
+  "digital electronics",
+  "PUC electronics",
+  "1st PUC electronics chapter 8",
+  "Karnataka PUC electronics"
+ ],
+ "thumb": {
+  "title": "Gates That Remember",
+  "accent_word": "Remember",
+  "frame_t": 64.5
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "RC Coupled Multistage Amplifier",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 68
+ },
+ "class": "12",
+ "title": "Multistage RC Coupled Amp Explained Simply | PUC Electronics Class 12",
+ "description": "Aarav builds a radio from a kit. The signal from the aerial is about 1 mV, the speaker needs about 2 V, and one amplifier stage gives a gain of only 50. We start with two magnifying glasses (10 x 10 = 100: gains multiply) and see why two stages must be joined with a capacitor, not a wire.\n\nOn a live breadboard we build a two-stage RC coupled CE amplifier. The coupling capacitor keeps stage one's 6 V collector apart from stage two's 1.8 V base. A 1 mV wave goes in; the oscilloscope probe shows 50 mV, upside down, after stage one, and 2 V, back in phase, after stage two. We compare the frequency response of one stage and two stages (a narrower bandwidth), list where RC coupling is good and where direct coupling is needed, then derive A = A1 x A2 (loaded gains), G = G1 + G2 in decibels and the 360 degree phase. A worked example, the exam trap (plain gains multiply, only decibels add), where it is asked, an original practice question with a full solution and a formula card follow.\n\nThis is Episode 68 of PUC Electronics, Class 12, Chapter 3: Transistor Amplifiers (Karnataka II PUC Electronics). Multistage transistor amplifiers are not in the rationalised NCERT/CBSE Class 12 Physics book or the current ISC Physics syllabus, so this lesson follows the Karnataka PUC Electronics syllabus.\n\nIn this video:\n0:00 1 mV in, 2 V needed\n0:16 Two magnifying glasses: gains multiply\n0:53 A two-stage RC coupled amplifier on a breadboard\n1:47 Phase and frequency response\n2:37 The maths: overall gain, decibels and phase\n3:07 Worked example: overall gain\n3:39 Exam trap: multiply, do not add\n3:57 Where it is asked\n4:07 Practice question\n4:50 Formula card\n\nNext episode: Power Amplifiers: Class A, B and C.\n\nVideo by Quest Academy.",
+ "tags": [
+  "RC coupled amplifier",
+  "multistage amplifier",
+  "two stage RC coupled amplifier",
+  "coupling capacitor",
+  "overall gain",
+  "gain in decibels",
+  "frequency response of RC coupled amplifier",
+  "bandwidth",
+  "CE amplifier",
+  "direct coupled amplifier",
+  "PUC electronics",
+  "2nd PUC electronics chapter 3",
+  "Karnataka PUC electronics",
+  "class 12 electronics"
+ ],
+ "thumb": {
+  "title": "Gain of Thousands",
+  "accent_word": "Thousands",
+  "frame_t": 102
+ }
+}

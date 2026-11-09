@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "JFET Construction and Working",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 62
+ },
+ "class": "12",
+ "title": "How a JFET Works Explained Simply | PUC Electronics Class 12",
+ "description": "Aarav opens a broken earphone mic. Its signal is so weak it can barely push any current, yet a tiny part inside reads it without taking current from it: a field effect transistor. We start with a garden hose (squeeze it and less water flows, while your hand takes no water), then build an n channel JFET piece by piece: the n type channel, the source and the drain, the two p type gate regions and their p n junctions, and the n channel and p channel symbols.\n\nOn a live breadboard the gate goes from 0 V to -1 V, -2 V and -4 V: the grey depletion layers grow, the channel narrows, the electrons slow down and the oscilloscope shows the drain current stepping down to zero at V_GS(off), while the gate current stays near zero. Then the working in five small steps (reverse biased gate, wider depletion layers, R = rho L / A, less drain current, pinch-off), unipolar versus bipolar, a worked example on the huge input resistance of the gate, the exam trap (the gate junction is always reverse biased), where it is asked, an original practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 62 of PUC Electronics, Class 12, Chapter 1: Field Effect Transistor (FET) (Karnataka II PUC Electronics). The FET is not in the rationalised NCERT/CBSE Class 12 Physics book or the ISC Physics syllabus, so this lesson follows the Karnataka PUC Electronics syllabus.\n\nIn this video:\n0:00 One weak signal, one tiny part\n0:18 The hose idea: channel, source, drain, gate\n0:51 Inside a JFET: construction and symbols\n1:34 JFET working on a breadboard\n2:22 The working in five steps\n3:07 Worked example: input resistance\n3:41 Exam trap: the gate is reverse biased\n3:57 Where it is asked\n4:07 Practice question\n4:42 Formula card\n\nNext episode: JFET Characteristics and Parameters.\n\nVideo by Quest Academy.",
+ "tags": [
+  "JFET construction",
+  "JFET working",
+  "field effect transistor",
+  "n channel JFET",
+  "depletion layer",
+  "pinch-off voltage",
+  "VGS off",
+  "unipolar transistor",
+  "JFET vs BJT",
+  "JFET symbol",
+  "2nd PUC electronics",
+  "2nd PUC electronics chapter 1",
+  "Karnataka PUC electronics",
+  "class 12 electronics"
+ ],
+ "thumb": {
+  "title": "A Tap Worked by Voltage",
+  "accent_word": "Voltage",
+  "frame_t": 128
+ }
+}

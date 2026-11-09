@@ -1,0 +1,70 @@
+H1|0.3|Aarav's phone has a chip with billions of tiny switches.
+H2|0.3|Each switch takes almost no current at its control.
+H3|0.3|In fact, its control gate does not even touch the part it controls.
+H4|0.5|This switch is a MOSFET. Let's see how it works.
+P1|0.35|Put a magnet under a glass table.
+P2|0.35|Iron dust on top lines up into a path.
+P3|0.35|The magnet never touches the dust. The glass is in between.
+P4|0.65|Take the magnet away, and the path breaks up.
+P5|0.35|A MOSFET does the same with electrons.
+P6|0.35|Its gate is a metal plate, sitting on a thin layer of glass.
+P7|0.35|That glass is silicon dioxide. It lets no current through.
+P8|0.65|So the gate pulls electrons by its voltage alone, not by current.
+C1|0.35|Let's build an n channel enhancement MOSFET.
+C2|0.35|Start with a block of p type silicon. This is the substrate.
+C3|0.35|Add two n type islands. One is the source, one is the drain.
+C4|0.35|Cover the top with a thin layer of silicon dioxide.
+C5|0.35|Put a metal gate on top. Metal, oxide, semiconductor.
+C6|0.35|That is where the name comes from. M O S.
+C7|0.65|Notice, between source and drain, there is no channel at all.
+B1|0.35|Now the breadboard. A lamp connects the drain to the supply.
+B2|0.35|Gate at zero volts. No channel, so no current. The lamp is off.
+B3|0.35|Raise the gate to one volt. Still nothing.
+B4|0.35|At two volts, the gate pulls enough electrons under the oxide.
+B5|0.35|They form a thin n channel. We call it an induced channel.
+B6|0.35|Current starts. This gate voltage is the threshold voltage, V T.
+B7|0.35|Raise the gate more. The channel grows thicker. More current flows.
+B8|0.35|The gate builds, or enhances, the channel. So it is an enhancement MOSFET.
+B9|0.65|At zero gate volts it is off. So we call it normally off.
+E1|0.35|Now the depletion MOSFET.
+E2|0.35|It is made with a thin n channel already built in.
+E3|0.35|So at zero gate volts, current already flows.
+E4|0.35|Make the gate negative. It pushes electrons away. The channel thins.
+E5|0.35|This is depletion mode. The current falls.
+E6|0.35|Make the gate positive. It pulls in more electrons. The current rises.
+E7|0.65|This is enhancement mode. A depletion MOSFET works both ways.
+G1|0.35|Compare their transfer curves.
+G2|0.35|The enhancement type stays at zero until V T. Then it rises.
+G3|0.35|The depletion type already has I D S S at zero gate volts.
+G4|0.35|It falls to zero at V G S off, and rises for positive gates.
+G5|0.35|In the symbol, a broken channel line means enhancement. No channel yet.
+G6|0.65|A solid line means depletion. The channel is already there.
+T1|0.8|Depletion is on until you squeeze it. Enhancement is off until you build it.
+D1|0.35|Now the maths, one step at a time.
+D2|0.7|For the enhancement type, below V T, I D is zero.
+D3|0.7|Above V T, I D equals k, times V G S minus V T, squared.
+D4|0.7|k is a constant for each device. Its unit is milliamperes per volt squared.
+D5|0.7|For the depletion type, use Shockley's equation, like the J F E T.
+D6|0.7|I D equals I D S S, times one minus V G S over V G S off, squared.
+D7|0.65|And it now works for positive gate voltages too.
+W1|0.35|Worked example. An enhancement MOSFET has V T of two volts.
+W2|0.35|Its k is zero point five milliamperes per volt squared.
+W3|0.35|Find I D when the gate is at five volts.
+W4|0.7|First check. Five volts is above V T. So the channel exists.
+W5|0.7|V G S minus V T is three volts.
+W6|0.7|Three squared is nine.
+W7|0.65|I D is zero point five times nine. Four point five milliamperes.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think every MOSFET conducts at zero gate volts.
+X3|0.65|Only the depletion type does. The enhancement type is off at zero.
+X4|0.35|And handle MOSFETs with care. Static from your fingers can puncture the thin oxide.
+X5|0.65|Where is this asked? In P U C board papers.
+X6|0.65|Name the types of F E T, compare the MOSFET types, and draw their symbols.
+Q1|5.4|Try this. A depletion MOSFET has I D S S of eight milliamperes, and V G S off of minus four volts. Find I D when the gate is at plus two volts.
+A1|0.35|D. Eighteen milliamperes.
+A2|0.35|Use Shockley's equation. Two over minus four is minus one half.
+A3|0.35|One minus minus one half is one point five.
+A4|0.35|One point five squared is two point two five.
+A5|0.65|Eight times two point two five is eighteen milliamperes. More than I D S S, because it is enhancement mode.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, the DC load line. Where should a transistor sit to amplify cleanly?

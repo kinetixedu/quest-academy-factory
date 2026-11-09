@@ -1,0 +1,61 @@
+H1|0.3|Aarav switches on the stair light at the bottom of the stairs.
+H2|0.3|At the top, he flips a different switch. The same light goes off.
+H3|0.5|Two switches, one light. How do they share the job? Let's find out.
+R1|0.35|A switch is like a tap for current.
+R2|0.35|Close the tap, and water stops. Open the switch, and current stops.
+R3|0.65|Inside, a metal contact makes the path, or breaks it.
+R4|0.35|Switches are named by poles and throws.
+R5|0.65|A pole is one separate circuit the switch controls.
+R6|0.65|A throw is one path each pole can connect to.
+R7|0.35|Single pole, single throw. One circuit, one path. Just on or off.
+R8|0.35|Single pole, double throw. One circuit, but two paths to choose from.
+R9|0.35|Double pole, single throw. Two circuits switched on and off together.
+R10|0.65|Double pole, double throw. Two circuits, each with two paths.
+B1|0.35|Now the stair light, on the breadboard.
+B2|0.35|Each switch is single pole, double throw.
+B3|0.35|Two wires join them. We call them the upper wire and the lower wire.
+B4|0.35|Both switches up. The path is complete. The light glows.
+B5|0.35|Flip the top switch down. The path breaks. The light goes dark.
+B6|0.35|Flip the bottom switch down too. The path is complete again.
+B7|0.35|Now flip the top one back up. Dark again.
+B8|0.65|So the light glows when both switches point the same way.
+B9|0.65|Watch the scope. The lamp voltage jumps between zero and five volts.
+U1|0.35|Next, the relay. A relay is a switch worked by electricity.
+U2|0.35|Think of a small child pressing a bell for a strong guard.
+U3|0.35|The guard then opens the heavy gate. Tiny effort, big result.
+U4|0.35|Inside the relay is a coil of wire. It is called the coil.
+U5|0.65|Current in the coil makes it a magnet. That is an electromagnet.
+U6|0.35|The magnet pulls a metal arm, called the armature.
+U7|0.65|The arm moves a contact. Its moving part is called common.
+U8|0.35|With no coil current, common touches the normally closed contact.
+U9|0.65|Turn the coil on. Common jumps to the normally open contact.
+U10|0.35|On the scope, the coil voltage steps up first.
+U11|0.65|A moment later, the load voltage steps up too. The pump runs.
+U12|0.65|The coil circuit and the pump circuit never touch. This keeps the small circuit safe.
+C1|0.35|Last, connectors. They join wires and boards without solder.
+C2|0.35|So a part can be unplugged and replaced in seconds.
+C3|0.35|Pin headers, screw terminals, and plugs with sockets are common types.
+C4|0.65|Many pin headers keep their pins two point five four millimetres apart.
+C5|0.35|Every switch, relay and connector has ratings printed on it.
+C6|0.65|The most important are the maximum current and the maximum voltage.
+T1|0.8|A small current in the coil controls a big current in the load.
+W1|0.35|Worked example. A relay coil is rated twelve volts, with four hundred ohms.
+W2|0.7|Coil current, I equals V by R. Twelve by four hundred.
+W3|0.7|That is zero point zero three amperes, or thirty milliamperes.
+W4|0.7|Coil power is V times I. Twelve times zero point zero three is zero point three six watts.
+W5|0.7|The contacts are rated ten amperes. Can they switch a fifteen hundred watt heater on two thirty volts?
+W6|0.7|Heater current is P by V. Fifteen hundred by two thirty is about six point five amperes.
+W7|0.65|Six point five is less than ten. So yes, the relay can switch it safely.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think normally open means open while the relay is on.
+X3|0.65|Wrong. Normal means the coil has no current. Then the normally open contact is open.
+X4|0.65|When the coil is energised, the normally open contact closes.
+X5|0.35|Where is this asked? In P U C board papers.
+X6|0.65|Expect symbols of switch types, and how a relay works, with a labelled diagram.
+Q1|5.4|Try this. A six volt relay coil has a resistance of one hundred and twenty ohms. It runs from a nine volt supply through a series resistor. What resistor is needed?
+A1|0.35|A. Sixty ohms.
+A2|0.35|Coil current is six by one twenty. That is zero point zero five amperes.
+A3|0.35|The resistor must drop the extra three volts.
+A4|0.65|Three by zero point zero five is sixty ohms.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, cells and batteries. Why does a phone battery say volts and milliampere hours?

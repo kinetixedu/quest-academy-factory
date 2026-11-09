@@ -1,0 +1,181 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Electronics Ep 55 - XOR and XNOR Gates</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== Breadboard (PUC Electronics) layout ===== */
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.card svg.full{position:absolute;left:0;top:0}
+.big{position:absolute;font:600 56px 'IBM Plex Mono';white-space:nowrap}
+.sm{position:absolute;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.txt{position:absolute;font:500 30px/1.35 Poppins;white-space:nowrap}
+#ghost{top:168px}
+.L2{left:160px;top:260px;width:784px;height:600px}.R2{left:976px;top:260px;width:784px;height:600px}
+.strip{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:18px;padding:0 28px;box-sizing:border-box;font:600 28px Poppins;white-space:nowrap}
+.strip .acc{color:var(--ac)}
+.st2{position:absolute;left:36px;display:flex;align-items:center;gap:22px;white-space:nowrap}
+.st2 .n{flex:none;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st2 .sx{font-size:34px}
+.st2 .why{font:500 22px Poppins;color:var(--mute)}
+.hbox{position:absolute;left:24px;width:736px;border-radius:14px;background:var(--ac2)}
+.tile{position:absolute;left:32px;width:720px;height:120px;border-radius:14px;background:var(--soft);border:2.5px solid var(--soft)}
+.tile .tl{position:absolute;left:24px;top:24px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.tile .tn{position:absolute;left:24px;top:56px;font:700 30px Poppins;color:var(--ink2);white-space:nowrap}
+.bar2{position:absolute;height:28px;border-radius:14px;background:var(--soft);overflow:hidden}.bar2 i{position:absolute;left:0;top:0;height:28px;border-radius:14px}
+/* hook */
+#aC{left:160px;top:260px;width:784px;height:600px;overflow:hidden}
+#aImg{position:absolute;left:24px;top:84px;height:516px}
+#h1C{left:976px;top:260px;width:784px;height:284px}
+#h2C{left:976px;top:576px;width:784px;height:284px}
+/* breadboard */
+#ck{left:160px;top:260px;width:928px;height:600px}
+#sc{left:1120px;top:260px;width:640px;height:300px}
+#rb{left:1120px;top:592px;width:640px;height:268px}
+#scS{position:absolute;left:24px;top:76px}
+.ro2{position:absolute;left:32px;top:76px;width:576px;display:grid;grid-template-columns:auto 1fr auto;column-gap:18px;row-gap:14px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .k.n{font-style:normal;font-size:24px;font-family:'IBM Plex Mono';letter-spacing:.06em}
+.ro2 .v{font:600 38px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 22px 'IBM Plex Mono';color:var(--mute);white-space:nowrap;min-width:52px}
+.tg{position:absolute;left:32px;top:76px;width:250px;height:64px;border-radius:14px;background:var(--soft);display:flex;align-items:center;gap:14px;padding:0 16px;box-sizing:border-box}
+.tg .tr{position:relative;flex:none;width:64px;height:34px;border-radius:17px;background:#CBD0DA}
+.tg .tr i{position:absolute;top:4px;left:4px;width:26px;height:26px;border-radius:50%;background:#fff}
+.tg .tv{font:600 28px 'IBM Plex Mono';white-space:nowrap}
+.tg .tk{font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* exam */
+#trap{left:160px;top:260px;width:784px;height:300px}
+#tc{left:976px;top:260px;width:784px;height:300px}
+#wa{left:160px;top:592px;width:1600px;height:268px}
+#mq{left:160px;top:260px;width:1040px;height:600px}
+#so{left:1232px;top:260px;width:528px;height:600px}
+#so .sol{left:32px}
+.fcard .fl{font-size:40px}
+.ro2.six{grid-template-columns:auto 1fr auto auto 1fr auto;column-gap:14px;row-gap:22px;top:92px}
+.ro2.six .u{min-width:40px}
+#wGiven{position:absolute;left:36px;top:80px;width:712px;display:flex;flex-wrap:wrap;gap:14px}#wGiven .pillp{position:static}
+.fcard .fl.txt{font:500 28px Poppins}
+.hq{position:absolute;right:40px;top:92px;width:100px;height:100px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 56px Poppins;color:#fff;background:var(--ac)}
+#tt{left:1120px;top:260px;width:640px;height:600px}
+.tth,.ttr{position:absolute;left:32px;width:576px;height:60px;border-radius:12px;display:flex;align-items:center}
+.tth span,.ttr span{position:absolute;text-align:center;width:120px;font:600 34px 'IBM Plex Mono'}
+.tth span{font:600 22px 'IBM Plex Mono';color:var(--mute);letter-spacing:.08em}
+.ttr{background:var(--soft)}
+#ttX{position:absolute;left:36px;top:452px;width:568px;font-size:44px}
+#ttW{position:absolute;left:36px;top:530px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.cond{position:absolute;left:36px;width:340px;height:64px;border-radius:14px;background:var(--soft);display:flex;align-items:center;gap:14px;padding:0 18px;box-sizing:border-box;font:600 24px Poppins;white-space:nowrap}
+.cond .ck{width:34px;height:34px;border-radius:50%;background:#CBD0DA;display:flex;align-items:center;justify-content:center}
+.chipI{position:absolute;width:150px;height:84px;border-radius:12px;background:var(--ink);color:#fff;font:600 26px 'IBM Plex Mono';display:flex;align-items:center;justify-content:center;letter-spacing:.06em}
+.need{position:absolute;top:96px;width:200px;height:84px;border-radius:14px;background:var(--soft);font:700 32px 'IBM Plex Mono';display:flex;align-items:center;justify-content:center;gap:12px}
+.rc{position:absolute;left:32px;width:720px;height:92px;border-radius:14px;background:var(--soft);border:2.5px solid var(--soft)}
+.rc .a{position:absolute;left:24px;top:24px;font:700 32px 'IBM Plex Mono'}
+.rc .b{position:absolute;left:220px;top:20px;font:600 22px 'IBM Plex Mono';color:var(--mute);letter-spacing:.06em}
+.rc .c{position:absolute;left:220px;top:50px;font:600 22px Poppins;color:var(--ink)}
+.rc .d{position:absolute;left:480px;top:20px;font:600 22px 'IBM Plex Mono';color:var(--mute);letter-spacing:.06em}
+.rc .e{position:absolute;left:480px;top:50px;font:600 22px Poppins;color:var(--ink)}
+/* ep 55 */
+.stt{position:absolute;top:84px;width:224px;height:120px;border-radius:14px;background:var(--soft);border:2.5px solid var(--soft);box-sizing:border-box}
+.stt .l{position:absolute;left:18px;top:14px;font:600 16px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.stt .v{position:absolute;left:18px;top:52px;font:600 28px 'IBM Plex Mono';white-space:nowrap}
+.qline{position:absolute;left:36px;top:226px;font:600 26px Poppins;white-space:nowrap}
+.qline b{color:var(--ac)}
+.xt{position:absolute;left:32px;width:720px;height:112px;border-radius:14px;background:var(--soft);display:flex;align-items:center;gap:22px;padding:0 28px;box-sizing:border-box;font:600 30px Poppins;white-space:nowrap}
+.xt .ck{flex:none;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.big3{position:absolute;left:36px;width:712px;text-align:center;font-size:52px}
+.bits{position:absolute;left:32px;width:720px;height:120px;border-radius:14px;background:var(--soft);box-sizing:border-box}
+.bits .b{position:absolute;top:30px;width:60px;height:60px;border-radius:10px;background:#fff;border:2.5px solid #CBD0DA;display:flex;align-items:center;justify-content:center;font:600 32px 'IBM Plex Mono';box-sizing:border-box}
+.bits .c{position:absolute;left:330px;top:24px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.bits .r{position:absolute;left:330px;top:58px;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+.cf{position:absolute;left:36px;width:712px;text-align:left;font-size:42px}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · ELECTRONICS · CH 8 INTRODUCTION TO DIGITAL ELECTRONICS</div>
+    <div class="subj" id="subj">BREADBOARD</div>
+    <div id="title">The gate that spots <span class="acc">a difference</span></div>
+    <div id="sub">XOR and XNOR gates</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E8A317" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="ghost" id="ghost">EXAMPLE FIGURES</div>
+
+    <!-- A: hook -->
+    <div class="sc" id="sA">
+      <div class="card" id="aC"><div class="lbl" style="left:32px;top:28px">AARAV · PCME · JEE</div>
+        <img id="aImg" src="../../assets/illustrations/puc/aarav.png" alt=""></div>
+      <div class="card" id="h1C"><div class="lbl" style="left:32px;top:28px">THE STAIRCASE LIGHT</div><svg class="full" id="hS" width="784" height="284"></svg></div>
+      <div class="card" id="h2C"><div class="lbl" style="left:32px;top:28px">WHAT HAPPENED</div>
+        <div class="stt" id="hs0" style="left:32px"><div class="l">START</div><div class="v">0 0 → off</div></div>
+        <div class="stt" id="hs1" style="left:280px"><div class="l">FLIP BOTTOM</div><div class="v">1 0 → on</div></div>
+        <div class="stt" id="hs2" style="left:528px"><div class="l">FLIP TOP</div><div class="v">1 1 → off</div></div>
+        <div class="qline" id="hQl">Either switch flips the light. <b>Which gate?</b></div></div>
+    </div>
+
+    <!-- I: XOR intro -->
+    <div class="sc" id="sI">
+      <div class="card L2" id="iL"><div class="lbl" style="left:32px;top:28px">EXCLUSIVE OR</div>
+        <div class="xt" id="x1" style="top:84px"><div class="ck" style="background:var(--ok)" id="x1k"></div><span>One or the other</span></div>
+        <div class="xt" id="x2" style="top:220px"><div class="ck" style="background:var(--red)" id="x2k"></div><span>But not both</span></div>
+        <div class="strip" id="iStrip" style="top:492px"><span>Output 1 when inputs are <span class="acc">different</span></span></div></div>
+      <div class="card R2" id="iR"><div class="lbl" style="left:32px;top:28px">THE XOR SYMBOL</div><svg class="full" id="iS" width="784" height="600"></svg>
+        <div class="big3" id="iX" style="top:380px"></div></div>
+    </div>
+
+    <!-- B: breadboard (XOR then XNOR) -->
+    <div class="sc" id="sB">
+      <div class="card" id="ck"><div class="lbl" id="ckL" style="left:32px;top:28px">XOR ON THE BREADBOARD</div>
+        <svg class="full" id="ckS" width="928" height="600"></svg>
+        <div class="tg" id="tgA" style="left:32px;top:84px;width:200px"><div class="tr"><i></i></div><div><div class="tk">INPUT A</div><div class="tv">0</div></div></div>
+        <div class="tg" id="tgB" style="left:32px;top:172px;width:200px"><div class="tr"><i></i></div><div><div class="tk">INPUT B</div><div class="tv">0</div></div></div></div>
+      <div class="card" id="tt"><div class="lbl" id="ttL" style="left:32px;top:28px">XOR · TRUTH TABLE</div><div id="ttB"></div>
+        <div class="hbox" id="ttBox" style="top:438px;height:136px;width:592px"></div><div id="ttX"></div><div id="ttW"></div></div>
+    </div>
+
+    <!-- E: formula from basic gates -->
+    <div class="sc" id="sE">
+      <div class="card L2" id="eL"><div class="lbl" style="left:32px;top:28px">XOR FROM BASIC GATES</div><svg class="full" id="eS" width="784" height="600"></svg></div>
+      <div class="card R2" id="eR"><div class="lbl" style="left:36px;top:28px">BUILD THE FORMULA</div><div id="eSteps"></div></div>
+    </div>
+
+    <!-- S: back to the stairs -->
+    <div class="sc" id="sS">
+      <div class="card L2" id="sL"><div class="lbl" style="left:32px;top:28px">BACK TO THE STAIRS</div><svg class="full" id="s1S" width="784" height="600"></svg></div>
+      <div class="card R2" id="sR"><div class="lbl" style="left:32px;top:28px">THE SAME AS AN XOR GATE</div><svg class="full" id="s2S" width="784" height="600"></svg>
+        <div class="strip" id="sStrip" style="top:492px"><span>Two-way switches = <span class="acc">XOR</span></span></div></div>
+    </div>
+
+    <!-- U: two tricks -->
+    <div class="sc" id="sU">
+      <div class="card L2" id="uL"><div class="lbl" style="left:32px;top:28px">TRICK 1 · A NOT YOU CAN SWITCH</div><svg class="full" id="uS" width="784" height="600"></svg>
+        <div class="cf" id="uF1" style="top:430px"></div><div class="cf" id="uF2" style="top:500px"></div></div>
+      <div class="card R2" id="uR"><div class="lbl" style="left:32px;top:28px">TRICK 2 · ODD OR EVEN</div>
+        <div class="bits" id="bt0" style="top:84px"></div><div class="bits" id="bt1" style="top:236px"></div>
+        <div class="strip" id="uStrip" style="top:492px"><span>Used to <span class="acc">spot errors</span> in data</span></div></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div class="sc" id="sW">
+      <div class="card L2" id="wL"><div class="lbl" style="left:32px;top:28px">WORKED EXAMPLE · FIND Y</div><svg class="full" id="wS" width="784" height="600"></svg></div>
+      <div class="card R2" id="wR"><div class="lbl" style="left:36px;top:28px">SOLUTION STEPS</div><div class="hbox" id="wBox" style="top:470px;height:96px"></div><div id="wSteps"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div class="sc" id="sX"><div class="card red" id="trap"></div>
+      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">TEST IT · A = 1, B = 1</div><div id="tcA" style="position:absolute;left:36px;top:96px;font-size:36px"></div><div id="tcB" style="position:absolute;left:36px;top:182px;font-size:36px"></div></div>
+      <div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div class="sc" id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + next -->
+    <div class="sc" id="sF"></div>
+  </div>
+  <div id="stmt"><div id="st1">Different gives one.</div><div id="st2">Same gives <span class="acc">zero.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

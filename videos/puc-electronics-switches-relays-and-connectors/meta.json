@@ -1,0 +1,31 @@
+{
+ "world": "puc-electronics",
+ "topic": "Switches, Relays and Connectors",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 58
+ },
+ "class": "11",
+ "title": "Two Switches, One Light Explained Simply | PUC Electronics Class 11",
+ "description": "Aarav switches on the stair light at the bottom of the stairs, then switches it off from the top with a different switch. How can two switches share one light? In this animated lesson we meet switches, relays and connectors, the practical parts that make and break real circuits.\n\nFirst we see a switch as a tap for current and learn poles and throws: SPST, SPDT, DPST and DPDT. On a live breadboard two SPDT switches run a stair light while the truth table fills row by row and an oscilloscope shows the lamp voltage jumping between 0 and 5 V. Then we open a relay: a coil becomes an electromagnet, pulls the armature and moves the common contact from normally closed to normally open, so a small coil current switches a big pump current. We also see why connectors are used (pin headers, screw terminals, plugs and sockets) and the ratings printed on every part. A worked example checks a relay coil current, coil power and whether the contacts can switch a heater, followed by the exam trap (what normally open really means), where it is asked, an original board pattern practice question with a full solution, and a fact card to screenshot.\n\nThis is Episode 58 of PUC Electronics, Class 11, Chapter 9: Practical Electronic Components, their Specifications and PCB (Karnataka I PUC Electronics).\n\nIn this video:\n0:00 Two switches, one light\n0:13 A switch is a tap for current\n0:24 Poles and throws: SPST, SPDT, DPST, DPDT\n0:54 The stair light on a breadboard\n1:31 How a relay works\n2:23 Connectors and ratings\n2:54 Worked example: can this relay do it?\n3:38 Exam trap: normally open\n3:56 Where it is asked\n4:05 Practice question\n4:37 Fact card\n\nNext episode: Cells and Batteries.\n\nVideo by Quest Academy.",
+ "tags": [
+  "switches relays and connectors",
+  "SPST SPDT DPST DPDT",
+  "poles and throws",
+  "two way switch staircase wiring",
+  "how a relay works",
+  "normally open normally closed relay",
+  "relay coil current",
+  "electromagnetic relay",
+  "electronic connectors",
+  "PUC electronics",
+  "1st PUC electronics chapter 9",
+  "practical electronic components",
+  "Karnataka PUC electronics"
+ ],
+ "thumb": {
+  "title": "Two Switches, One Light",
+  "accent_word": "Light",
+  "frame_t": 86.4
+ }
+}

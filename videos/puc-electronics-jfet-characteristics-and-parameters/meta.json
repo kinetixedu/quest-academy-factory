@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "JFET Characteristics and Parameters",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 63
+ },
+ "class": "12",
+ "title": "Why JFET Current Goes Flat Explained Simply | PUC Electronics Class 12",
+ "description": "Aarav slowly turns up the supply on a JFET. At first the current climbs like a normal resistor, then it stops climbing: more voltage, same current. Why? We start with a hose that pinches near the far end when you push harder, then look inside the JFET as V_DS pinches the drain end of the channel.\n\nOn a live breadboard V_DS sweeps from 0 to 12 V while the drain characteristics plot themselves: the ohmic region, pinch-off at V_P, the flat saturation (constant current) region at I_DSS, and breakdown. Then we repeat for V_GS = -1 V and -2 V, build the transfer characteristic from the flat values and meet Shockley's equation. We define drain resistance r_d, transconductance g_m and amplification factor mu, and prove mu = r_d x g_m step by step. A worked example finds all three, followed by the exam trap (pinch-off does not make the current zero), where it is asked, an original practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 63 of PUC Electronics, Class 12, Chapter 1: Field Effect Transistor (FET) (Karnataka II PUC Electronics). The FET is not in the rationalised NCERT/CBSE Class 12 Physics book or the ISC Physics syllabus, so this lesson follows the Karnataka PUC Electronics syllabus.\n\nIn this video:\n0:00 More voltage, same current?\n0:17 The hose idea: pinch-off\n0:41 Drain characteristics on a breadboard\n1:32 Transfer characteristic and Shockley's equation\n2:10 r_d, g_m and mu: prove mu = r_d x g_m\n3:06 Worked example\n3:45 Exam trap: pinch-off is not zero current\n4:01 Where it is asked\n4:12 Practice question\n4:52 Formula card\n\nNext episode: MOSFET: Enhancement and Depletion.\n\nVideo by Quest Academy.",
+ "tags": [
+  "JFET characteristics",
+  "drain characteristics",
+  "transfer characteristics",
+  "pinch-off voltage",
+  "IDSS",
+  "Shockley equation",
+  "drain resistance rd",
+  "transconductance gm",
+  "amplification factor mu",
+  "mu = rd x gm",
+  "2nd PUC electronics",
+  "2nd PUC electronics chapter 1",
+  "Karnataka PUC electronics",
+  "class 12 electronics"
+ ],
+ "thumb": {
+  "title": "Why It Goes Flat",
+  "accent_word": "Flat",
+  "frame_t": 91
+ }
+}

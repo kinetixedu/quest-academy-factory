@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "CE Amplifier and Frequency Response",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 67
+ },
+ "class": "12",
+ "title": "Why Amplifiers Lose Bass Explained Simply | PUC Electronics Class 12",
+ "description": "Aarav plays a song through a small amplifier. The singer is loud, but the deep drums and the high whistles are weak. Why does one amplifier boost some sounds better than others? We start with a rubber wall in a pipe (a capacitor) and a pipe with tiny leaks (hidden capacitance).\n\nOn a live breadboard we build a CE amplifier on voltage divider bias with an input coupling capacitor, an output coupling capacitor, a bypass capacitor and a load. A 10 mV wave at 1 kHz comes out as 1.5 V, upside down. Then we turn the frequency knob: at 20 Hz and at 1 MHz the oscilloscope shows the output shrinking. The frequency response curve shows the flat mid band, the low-frequency drop (capacitor reactance) and the high-frequency drop (junction and wiring capacitance), the 0.707 cut-offs f1 and f2 and the bandwidth. We derive r'e = 26 mV / I_E, r_c = R_C parallel R_L, A_v = -r_c / r'e and gain in decibels, then work an example, followed by the exam trap (at the cut-off the voltage gain falls to 0.707, the power to half), where it is asked, an original practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 67 of PUC Electronics, Class 12, Chapter 3: Transistor Amplifiers (Karnataka II PUC Electronics). Transistor amplifiers are not in the rationalised NCERT/CBSE Class 12 Physics book or the current ISC Physics syllabus, so this lesson follows the Karnataka PUC Electronics syllabus.\n\nIn this video:\n0:00 Loud voice, weak drums\n0:15 The rubber wall and the leaky pipe\n0:42 A CE amplifier on a breadboard\n1:36 The frequency response curve and bandwidth\n2:26 The maths: r'e, voltage gain and decibels\n3:19 Worked example: gain and bandwidth\n4:01 Exam trap: 0.707, not half\n4:18 Where it is asked\n4:27 Practice question\n5:08 Formula card\n\nNext episode: RC Coupled Multistage Amplifier.\n\nVideo by Quest Academy.",
+ "tags": [
+  "CE amplifier",
+  "common emitter amplifier",
+  "frequency response",
+  "bandwidth",
+  "cut-off frequency",
+  "half power frequency",
+  "3 dB bandwidth",
+  "voltage gain in decibels",
+  "coupling capacitor",
+  "bypass capacitor",
+  "PUC electronics",
+  "2nd PUC electronics chapter 3",
+  "Karnataka PUC electronics",
+  "class 12 electronics"
+ ],
+ "thumb": {
+  "title": "Loud in the Middle",
+  "accent_word": "Middle",
+  "frame_t": 88
+ }
+}

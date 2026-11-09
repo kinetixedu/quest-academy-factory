@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "Voltage Divider Bias and Stability",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 66
+ },
+ "class": "12",
+ "title": "Heat-Proof Transistor Bias Explained Simply | PUC Electronics Class 12",
+ "description": "Aarav's little speaker sounds clear in the cool morning and harsh by the hot afternoon. Nobody touched it, only the room got hotter. We start with a tap that must stay half open (the bias, or operating point) and a tank float that corrects itself.\n\nOn a live breadboard we heat a transistor from 25 to 75 degrees. In fixed bias, beta doubles, the collector current doubles and the oscilloscope shows the output wave chopped flat. In voltage divider bias the same heat barely moves the current and the wave stays clean. We follow the negative feedback loop through the emitter resistor, see why leakage current can cause thermal runaway, then derive V_B, V_E, I_E and V_CE step by step and compare the stability factor S. A worked example finds the operating point on the DC load line, followed by the exam trap (subtract the 0.7 V before using R_E), where it is asked, an original practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 66 of PUC Electronics, Class 12, Chapter 2: Transistor Biasing (Karnataka II PUC Electronics). Transistor biasing is not in the rationalised NCERT/CBSE Class 12 Physics book or the current ISC Physics syllabus, so this lesson follows the Karnataka PUC Electronics syllabus.\n\nIn this video:\n0:00 Clear in the morning, harsh in the afternoon\n0:15 The tap idea: bias and the operating point\n0:50 Fixed bias vs voltage divider bias on a breadboard\n1:49 The correcting loop and thermal runaway\n2:37 The maths: V_B, V_E, I_E, V_CE and stability factor S\n3:36 Worked example: find the operating point\n4:23 Exam trap: subtract the 0.7 V\n4:41 Where it is asked\n4:52 Practice question\n5:32 Formula card\n\nNext episode: CE Amplifier and Frequency Response.\n\nVideo by Quest Academy.",
+ "tags": [
+  "voltage divider bias",
+  "transistor biasing",
+  "stability factor",
+  "thermal runaway",
+  "operating point",
+  "Q point",
+  "DC load line",
+  "fixed bias",
+  "negative feedback emitter resistor",
+  "bipolar junction transistor",
+  "PUC electronics",
+  "2nd PUC electronics chapter 2",
+  "Karnataka PUC electronics",
+  "class 12 electronics"
+ ],
+ "thumb": {
+  "title": "Heat vs Transistor",
+  "accent_word": "Heat",
+  "frame_t": 82
+ }
+}

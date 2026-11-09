@@ -1,0 +1,66 @@
+H1|0.3|Aarav builds a radio from a kit.
+H2|0.3|The signal from the aerial is tiny, about one millivolt.
+H3|0.3|The speaker needs about two volts. That is two thousand times bigger.
+H4|0.5|His amplifier gives a gain of only fifty. What can he do?
+P1|0.35|Think of a magnifying glass that makes things ten times bigger.
+P2|0.35|Now hold a second one in front of it.
+P3|0.35|The second glass enlarges the already enlarged picture.
+P4|0.65|Ten times ten. One hundred times bigger. The gains multiply.
+P5|0.35|Amplifiers work the same way. We chain them in stages.
+P6|0.65|This is called a multistage amplifier.
+P7|0.35|But there is a catch. Each stage has its own steady bias voltages.
+P8|0.65|Joining them with a wire would upset the next stage's bias.
+P9|0.65|So we join them with the rubber wall, a capacitor.
+B1|0.35|Let's build a two stage amplifier on the breadboard.
+B2|0.35|Stage one is a C E amplifier, with voltage divider bias.
+B3|0.35|Stage two is another C E amplifier, just like it.
+B4|0.35|Between them sits the coupling capacitor, C C.
+B5|0.35|Its job is simple. Pass the wave. Block the steady voltage.
+B6|0.35|Stage one's collector sits at six volts.
+B7|0.65|Stage two's base sits at one point eight volts. The capacitor keeps them apart.
+B8|0.35|Each stage uses a resistor as its load and a capacitor to couple.
+B9|0.65|That is why it is called R C coupled.
+B10|0.35|Now feed in a one millivolt wave.
+B11|0.35|Probe the output of stage one. Fifty millivolts, and upside down.
+B12|0.35|Move the probe to the output of stage two.
+B13|0.35|Two volts! A gain of two thousand.
+B14|0.65|And look. The final wave is the right way up again.
+G1|0.35|Each C E stage flips the wave by one eighty degrees.
+G2|0.65|Two flips make three sixty degrees. So the output is back in phase.
+G3|0.35|Now plot the gain at every frequency.
+G4|0.35|The gain is flat across the middle, the whole range of sounds we hear.
+G5|0.35|At low frequencies, the coupling capacitors block more of the wave.
+G6|0.65|At high frequencies, hidden capacitance leaks it away.
+G7|0.35|Each stage cuts the ends a little. Two stages cut them more.
+G8|0.65|So the bandwidth of two stages is less than that of one stage.
+G9|0.35|R C coupling is cheap, small, and gives a flat response for sound.
+G10|0.65|But it cannot pass very slow signals, or steady D C. For those, engineers use direct coupling.
+T1|0.8|Gains multiply. Decibels add.
+D1|0.35|Now the maths, one step at a time.
+D2|0.7|The overall gain A equals A one times A two.
+D3|0.65|Measure A one with stage two connected. Stage two loads stage one.
+D4|0.7|For n stages, multiply all n gains together.
+D5|0.7|In decibels, G equals twenty times the log of A.
+D6|0.7|The log of a product is a sum. So G equals G one plus G two.
+D7|0.65|Phase: one eighty plus one eighty is three sixty. Back in phase.
+W1|0.35|Worked example. Find the overall gain.
+W2|0.35|Stage one has a gain of fifty. Stage two has a gain of forty.
+W3|0.35|The input is one millivolt.
+W4|0.7|Overall gain is fifty times forty. That is two thousand.
+W5|0.7|The output is two thousand times one millivolt. Two volts.
+W6|0.7|In decibels, stage one gives thirty four, and stage two gives thirty two.
+W7|0.65|Add them. Sixty six decibels. And twenty log two thousand is sixty six too.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students add the stage gains. Fifty plus forty, ninety.
+X3|0.65|Wrong. Plain gains multiply. Fifty times forty is two thousand.
+X4|0.65|Only gains in decibels add. And two C E stages give an output in phase.
+X5|0.65|Where is this asked? In P U C board papers.
+X6|0.65|Draw and explain a two stage R C coupled amplifier, with its frequency response.
+Q1|5.4|Try this. A three stage R C coupled C E amplifier has stage gains of twenty, twenty six and fourteen decibels. The input is zero point five millivolts. Find the output.
+A1|0.35|B. Zero point five volts, one eighty degrees out of phase.
+A2|0.35|Add the decibels. Twenty plus twenty six plus fourteen is sixty decibels.
+A3|0.35|Sixty decibels means a gain of one thousand.
+A4|0.35|One thousand times zero point five millivolts is zero point five volts.
+A5|0.65|Three flips of one eighty degrees leave the output upside down.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, power amplifiers, class A, B and C. How does an amplifier push a big speaker?

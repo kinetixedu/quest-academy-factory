@@ -1,0 +1,67 @@
+H1|0.3|Aarav finds two rules stuck on the fridge at home.
+H2|0.3|Rule one. No games, unless homework and chores are both done.
+H3|0.3|Rule two. No games if homework is not done, or chores are not done.
+H4|0.5|Different words. Same rule? Boolean algebra can tell us for sure.
+R1|0.35|Boolean algebra is maths with only two values, one and zero.
+R2|0.35|One means true, or on. Zero means false, or off.
+R3|0.35|It is named after George Boole. He wrote its rules in eighteen fifty four.
+R4|0.35|It has just three moves. AND, OR and NOT.
+R5|0.35|AND is written as a dot. OR is written as a plus.
+R6|0.65|NOT is written as a bar on top. A bar means not A.
+R7|0.65|The plus here is not adding. One plus one is just one.
+L1|0.35|Now the main laws. Picture switches and a lamp.
+L2|0.65|A plus zero is A. A gap beside the switch changes nothing.
+L3|0.65|A plus one is one. A wire beside it keeps the lamp on.
+L4|0.65|A dot zero is zero. A gap in line, and the lamp never lights.
+L5|0.65|A dot one is A. A wire in line changes nothing.
+L6|0.65|A plus A is A. And A dot A is also A.
+L7|0.35|Now the second switch is A bar. It is always the opposite of A.
+L7b|0.65|Side by side, one is always closed. So A plus A bar is one.
+L8|0.65|In a line, one is always open. So A dot A bar is zero.
+L9|0.65|And A with two bars is just A. Flip twice, and you are back.
+D1|0.35|Now the stars of this video. De Morgan's theorems.
+D2|0.35|They are named after Augustus De Morgan, a British mathematician.
+D3|0.65|Theorem one. A plus B, under one long bar, equals A bar dot B bar.
+D4|0.35|Break the long bar into two short bars. Then change plus to dot.
+D5|0.65|Theorem two. A dot B, under one long bar, equals A bar plus B bar.
+D6|0.35|Again, break the bar, and change dot to plus.
+D7|0.65|An easy way to remember it. Break the line, change the sign.
+D8|0.65|In gates, a NOR gate equals an AND gate with bubbled inputs.
+D9|0.65|And a NAND gate equals an OR gate with bubbled inputs.
+B1|0.35|Let's prove theorem two on the breadboard. We test every input.
+B2|0.35|On top, a NAND gate. Below, two NOT gates feed an OR gate.
+B3|0.35|Both inputs zero. The top gives one. The bottom gives one.
+B4|0.35|Zero and one. Both give one. One and zero. Both give one.
+B5|0.35|Both inputs one. The top gives zero. The bottom gives zero too.
+B6|0.65|All four rows match. So the two sides are always equal.
+B7|0.65|Watch the scope. The two output traces are exactly the same.
+B8|0.65|The same test proves theorem one, with a NOR gate on top.
+K1|0.35|Now back to the fridge. H means homework done. C means chores done.
+K2|0.35|Rule one is H dot C, with one bar over both.
+K3|0.35|Rule two is H bar plus C bar.
+K4|0.65|By theorem two, these are equal. Both rules mean the same thing.
+T1|0.8|Break the line. Change the sign.
+W1|0.35|Worked example. Simplify this. One long bar covers everything.
+W2|0.7|Step one. Break the long bar, and change the plus to a dot.
+W3|0.7|Step two. Each part now has two bars. Two bars cancel.
+W4|0.7|Step three. Multiply out. A dot A is A. So we get A plus A B.
+W5|0.7|Step four. Take A out. We get A, times one plus B.
+W6|0.7|One plus anything is one. So Y is just A.
+W7|0.65|Check with A one, B zero. The circuit gives one. And A is one.
+W8|0.65|So these three gates do the same job as a plain wire from A.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students break the bar, but forget to change the sign.
+X3|0.35|They write A plus B barred, equals A bar plus B bar.
+X4|0.35|Test it with A one, B zero. The true answer is zero.
+X5|0.65|The wrong form gives one. Change the sign, and it gives zero.
+X6|0.35|Where is this asked? In P U C board papers, and in I S C Computer Science.
+X7|0.35|J E E Main has also used De Morgan's theorem to simplify a gate circuit.
+X8|0.65|Expect questions to state and prove both theorems, and simplify circuits.
+Q1|5.4|Try this. Y is A bar B, barred, times A B bar, barred. Which option equals Y?
+A1|0.35|B. A B, plus A bar B bar.
+A2|0.35|Break each bar, and change each dot to a plus.
+A3|0.35|We get A plus B bar, times A bar plus B.
+A4|0.35|Multiply out. A dot A bar is zero. B dot B bar is zero.
+A5|0.65|What is left is A B, plus A bar B bar.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, X O R and X N O R gates. That answer has its own gate.

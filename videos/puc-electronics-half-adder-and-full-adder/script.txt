@@ -1,0 +1,54 @@
+H1|0.3|Aarav adds seven and five on paper. He writes two, and carries one.
+H2|0.3|His calculator gets twelve at once. Inside, it only has logic gates.
+H3|0.5|How can gates add numbers? They use the same carry trick.
+R1|0.35|Calculators count in binary. Only zeros and ones.
+R2|0.35|Zero plus zero is zero. Zero plus one is one.
+R3|0.35|But one plus one is two. In binary, two is written one zero.
+R4|0.65|So we write zero, and carry one. Just like seven plus five.
+R5|0.65|So every column needs two answers. A sum bit, and a carry bit.
+B1|0.35|A circuit that adds two bits is called a half adder.
+B2|0.35|It has two inputs, A and B. And two outputs, sum and carry.
+B3|0.35|Let's fill its truth table on the breadboard.
+B4|0.35|Zero plus zero. Sum zero. Carry zero.
+B5|0.35|Zero plus one, or one plus zero. Sum one. Carry zero.
+B6|0.35|One plus one. Sum zero. Carry one.
+B7|0.65|Look at the sum column. It is one only when the inputs differ.
+B8|0.65|That is an X O R gate. S equals A X O R B.
+B9|0.65|The carry is one only when both are one. That is AND. C equals A B.
+B10|0.65|So a half adder is just one X O R gate and one AND gate.
+G1|0.35|But why is it called a half adder? It has no input for a carry.
+G2|0.35|In bigger sums, each column can get a carry from the column on its right.
+G3|0.35|So we must add three bits. A, B, and the carry in.
+G4|0.35|That circuit is the full adder. Three inputs, two outputs.
+G5|0.65|The sum is one when an odd number of inputs are one.
+G6|0.65|So S equals A X O R B X O R carry in.
+G7|0.65|The carry out is one when two or more inputs are one.
+G8|0.65|C out equals A B, plus carry in times A X O R B.
+J1|0.35|Here is the neat part. We can build it from two half adders.
+J2|0.35|The first half adder adds A and B.
+J3|0.35|The second adds that sum to the carry in. That gives the final sum.
+J4|0.65|If either half adder makes a carry, an OR gate passes it on.
+J5|0.65|So two half adders and one OR gate make one full adder.
+J6|0.65|Chain four full adders, and you can add two four bit numbers.
+T1|0.8|Sum is X O R. Carry is AND.
+W1|0.35|Worked example. Add one, one and one with a full adder.
+W2|0.7|A is one, B is one, and the carry in is one.
+W3|0.7|First half adder. One plus one gives sum zero, carry one.
+W4|0.7|Second half adder. Zero plus one gives sum one, carry zero.
+W5|0.7|The OR gate. One or zero gives a carry out of one.
+W6|0.7|So the sum is one, and the carry out is one. That reads one one.
+W7|0.65|One one in binary is three. And one plus one plus one is three.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students use an OR gate for the sum of a half adder.
+X3|0.35|Check one plus one. OR would give a sum of one.
+X4|0.65|But the right sum is zero, with a carry of one. The sum needs X O R.
+X5|0.35|Where is this asked? In P U C board papers, and in I S C Computer Science.
+X6|0.65|Expect truth tables, the sum and carry formulas, and a full adder from two half adders.
+Q1|5.4|Try this. Add binary one one and zero one. A half adder adds the right bits. A full adder adds the left bits. What is the answer?
+A1|0.35|B. One zero zero.
+A2|0.35|Right bits. One plus one. Sum zero, carry one.
+A3|0.35|Left bits. One plus zero, plus the carry of one.
+A4|0.35|That gives sum zero, and a carry out of one.
+A5|0.65|So the answer is one zero zero. Three plus one is four.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, flip-flops. S R, J K and D. Gates that can remember.

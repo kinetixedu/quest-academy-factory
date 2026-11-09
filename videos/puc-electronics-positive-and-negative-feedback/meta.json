@@ -1,0 +1,31 @@
+{
+ "world": "puc-electronics",
+ "topic": "Positive and Negative Feedback",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 71
+ },
+ "class": "12",
+ "title": "Why Mics Scream: Feedback Explained Simply | PUC Electronics Class 12",
+ "description": "Aarav walks near the speaker with a microphone and the hall fills with a scream. He steps back and it stops. The sound looped back into the microphone: that loop is feedback. We start with two everyday pictures: steering a drifting bicycle back (negative feedback) and a cheering crowd that keeps getting louder (positive feedback).\n\nOn a live breadboard an amplifier with gain A gets a feedback network of two resistors (feedback ratio beta) and a mixer. With negative feedback the output on the oscilloscope gets smaller but stays clean; flip to positive feedback and it grows, hits the supply limits and keeps going with no input at all. Then we derive the gain with feedback A_f = A/(1 + A beta) and A/(1 - A beta), see why A beta = 1 makes an oscillator, compare uses, and work an example with both kinds. Then the exam trap (negative feedback has 1 + A beta, and this beta is not the transistor's current gain), where it is asked, an original practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 71 of PUC Electronics, Class 12, Chapter 4: Feedback in Amplifiers (Karnataka II PUC Electronics). Feedback amplifiers are not in the rationalised NCERT/CBSE Class 12 Physics book or the current ISC Physics syllabus, so this lesson follows the Karnataka PUC Electronics syllabus.\n\nIn this video:\n0:00 Why the microphone screams\n0:18 The bicycle and the crowd\n0:46 Feedback on a breadboard\n1:32 The maths: A f = A / (1 + A beta)\n2:22 Where each kind is used\n2:46 Worked example\n3:29 Exam trap: 1 + A beta for negative feedback\n3:47 Where it is asked\n3:57 Practice question\n4:29 Formula card\n\nNext episode: Effects of Negative Feedback.\n\nVideo by Quest Academy.",
+ "tags": [
+  "positive and negative feedback",
+  "feedback in amplifiers",
+  "negative feedback amplifier",
+  "positive feedback",
+  "closed loop gain",
+  "open loop gain",
+  "feedback ratio beta",
+  "Af = A/(1+A beta)",
+  "positive feedback oscillator",
+  "2nd PUC electronics",
+  "2nd PUC electronics chapter 4",
+  "Karnataka PUC electronics",
+  "class 12 electronics"
+ ],
+ "thumb": {
+  "title": "Why the Mic Screams",
+  "accent_word": "Screams",
+  "frame_t": 80
+ }
+}

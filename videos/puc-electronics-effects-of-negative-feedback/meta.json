@@ -1,0 +1,31 @@
+{
+ "world": "puc-electronics",
+ "topic": "Effects of Negative Feedback",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 72
+ },
+ "class": "12",
+ "title": "Negative Feedback Effects Explained Simply | PUC Electronics Class 12",
+ "description": "Aarav's fest amplifier sounds perfect in the morning, gets quieter as the room heats up, and turns too loud when a new transistor goes in. How can an amplifier stay steady when its parts keep changing? With negative feedback: a trade where we give up some gain and get a steady gain, a wider bandwidth, less distortion and noise, and better input and output impedance.\n\nOn a live breadboard the open loop gain falls from 1000 to 500 as the amplifier heats up. Without feedback the output on the oscilloscope halves; with negative feedback (beta = 0.1) the gain only moves from 9.90 to 9.80, because A_f is almost 1/beta, set by two resistors. We derive gain stability (dA_f/A_f = (dA/A)/(1 + A beta), the desensitivity factor), watch the frequency response widen by (1 + A beta), see distortion and noise shrink, and compare input and output impedance for voltage series feedback. A worked example, the exam trap (bandwidth widens, it does not shrink), where it is asked, an original practice question with a full solution, and a formula card follow.\n\nThis is Episode 72 of PUC Electronics, Class 12, Chapter 4: Feedback in Amplifiers (Karnataka II PUC Electronics, voltage series negative feedback). Feedback amplifiers are not in the rationalised NCERT/CBSE Class 12 Physics book or the current ISC Physics syllabus, so this lesson follows the Karnataka PUC Electronics syllabus.\n\nIn this video:\n0:00 Why does the music drift?\n0:19 Negative feedback is a trade\n0:39 Gain stability on a breadboard\n1:27 The maths: A f is almost 1 over beta\n2:03 Wider bandwidth\n2:32 Less distortion and noise, better impedance\n3:00 Worked example\n3:39 Exam trap: bandwidth widens\n3:56 Where it is asked\n4:07 Practice question\n4:46 Formula card\n\nNext episode: The Emitter Follower.\n\nVideo by Quest Academy.",
+ "tags": [
+  "effects of negative feedback",
+  "negative feedback amplifier",
+  "gain stability",
+  "desensitivity factor",
+  "bandwidth with feedback",
+  "gain bandwidth product",
+  "voltage series feedback",
+  "input and output impedance",
+  "distortion and noise",
+  "2nd PUC electronics",
+  "2nd PUC electronics chapter 4",
+  "Karnataka PUC electronics",
+  "class 12 electronics"
+ ],
+ "thumb": {
+  "title": "Why Give Up Gain?",
+  "accent_word": "Gain?",
+  "frame_t": 80
+ }
+}

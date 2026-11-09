@@ -1,0 +1,66 @@
+H1|0.3|At the college fest, Aarav touches the big stage amplifier.
+H2|0.3|It is hot, and covered in metal fins.
+H3|0.3|His phone also plays music, but it stays cool.
+H4|0.5|Where does all that heat come from? And how do engineers cut it?
+P1|0.35|So far, our amplifiers made small signals bigger. Those are voltage amplifiers.
+P2|0.35|A power amplifier has a bigger job. It must push real power into a speaker.
+P3|0.35|Now think of pushing a child on a swing.
+P4|0.35|One helper pushes and pulls the whole time. Smooth, but very tiring.
+P5|0.35|Two helpers could share it. Each one works only half the swing.
+P6|0.35|Or one helper gives a short kick at the top of each swing.
+P7|0.65|The swing keeps moving by itself. Very little effort, but only for a swing.
+P8|0.65|These are the three classes of power amplifier. A, B and C.
+B1|0.35|Let's see them on the breadboard.
+B2|0.35|One transistor, a speaker load, and a bias knob that sets the operating point.
+B3|0.35|Watch the collector current on the scope. It is shown in violet.
+B4|0.35|Class A. The operating point sits in the middle.
+B5|0.35|The current flows for the whole cycle, all three sixty degrees.
+B6|0.35|The output is a faithful copy.
+B6b|0.65|But current flows even with no music. That wastes power.
+B7|0.35|Class B. The operating point moves down to cut off.
+B8|0.35|Now current flows only for half the cycle, one eighty degrees.
+B9|0.65|Less waste. But half the wave is missing, so class B transistors work in pairs.
+B10|0.35|Class C. The base is pushed below cut off.
+B11|0.35|Current flows only in short pulses, less than one eighty degrees.
+B12|0.35|A tuned circuit of a coil and a capacitor acts like the swing.
+B13|0.65|It turns the kicks back into a smooth wave, but only at one frequency.
+G1|0.35|Now see all three on the load line.
+G2|0.35|The class depends on where the operating point sits.
+G3|0.35|Class A sits in the middle. The whole input wave gets through.
+G4|0.35|Class B sits at cut off. Only the top half gets through.
+G5|0.65|Class C sits below cut off. Only the very tips get through.
+G6|0.35|The less time current flows, the less power is wasted as heat.
+G7|0.65|But the output looks less like the input. That is called distortion.
+G8|0.65|There is also class A B, in between A and B, used in many music amplifiers.
+T1|0.8|Less time conducting. Less heat. More distortion.
+D1|0.35|Now the maths. Efficiency tells how much supply power reaches the load.
+D2|0.7|Efficiency, eta, equals A C output power, over D C input power, times one hundred.
+D3|0.7|For class A, the supply gives D C power. V C C times I C Q.
+D4|0.7|The best operating point is in the middle, at half of V C C.
+D5|0.35|The biggest swing has a peak current of I C Q.
+D5b|0.7|Its peak voltage is half of V C C.
+D6|0.7|A C power is peak voltage times peak current, divided by two.
+D7|0.7|That gives V C C times I C Q, divided by four.
+D8|0.7|So the best class A efficiency is one quarter. Twenty five percent.
+D9|0.35|With a transformer, class A can reach fifty percent.
+D9b|0.65|Class B can reach seventy eight point five percent.
+D10|0.65|Class C goes higher still. That is why it suits radio transmitters.
+W1|0.35|Worked example. Why is the stage amplifier so hot?
+W2|0.35|It runs from twelve volts, and draws two amperes.
+W3|0.35|It sends six watts of sound power to the speaker.
+W4|0.7|D C input power is twelve times two. Twenty four watts.
+W5|0.7|Efficiency is six over twenty four. That is twenty five percent.
+W6|0.65|The other eighteen watts become heat. That is why it needs metal fins.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think class C is best for music, because it is most efficient.
+X3|0.65|It is not. Its current comes in pulses. The distortion is huge.
+X4|0.65|Class C needs a tuned circuit, so it works at one frequency. Radio transmitters, not music.
+X5|0.65|Where is this asked? In P U C board papers.
+X6|0.65|Classify power amplifiers, compare their efficiency and distortion, and find the efficiency.
+Q1|5.4|Try this. Collector current flows for the full three sixty degrees of the input cycle. The amplifier draws zero point five amperes from a twenty volt supply, and gives two watts to the load. Which class, and what efficiency?
+A1|0.35|B. Class A, twenty percent.
+A2|0.35|Current for the full three sixty degrees means class A.
+A3|0.35|D C input power is twenty times zero point five. Ten watts.
+A4|0.65|Efficiency is two over ten. That is twenty percent, below the twenty five percent limit.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, the push pull amplifier. How do two transistors share one wave?

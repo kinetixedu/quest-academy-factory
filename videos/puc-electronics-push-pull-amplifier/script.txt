@@ -1,0 +1,67 @@
+H1|0.3|Aarav's tiny speaker plays loud music all evening on one small battery.
+H2|0.3|But the old lab amplifier gets hot, even when it plays nothing.
+H3|0.3|Same job. So why does one waste so much power?
+H4|0.5|The secret is two transistors taking turns. A push-pull amplifier.
+P1|0.35|Think of a big saw with two people, one at each end.
+P2|0.35|One person pulls the saw towards herself.
+P3|0.35|Then the other person pulls it back.
+P4|0.65|Each one works half the time, and rests the other half.
+P5|0.35|An ordinary class A amplifier is different. It has one transistor.
+P6|0.35|That transistor stays half on all the time, even in silence.
+P7|0.35|So current flows and heat is made, even with no music.
+P8|0.35|A class B push-pull amplifier has two transistors.
+P9|0.65|In silence, both are off. Almost no current flows. Nothing gets hot.
+S1|0.35|Let's build it on the breadboard.
+S2|0.35|An input transformer splits the signal into two opposite halves.
+S3|0.35|Its middle wire, called the centre tap, goes to ground.
+S4|0.35|Two n p n transistors, Q one on top, Q two below.
+S5|0.35|An output transformer joins their work and drives the speaker.
+S6|0.35|Now a wave comes in. Watch the positive half.
+S7|0.35|Q one turns on. Electrons flow through the top half only.
+S8|0.35|Then the negative half comes. Q one switches off.
+S9|0.35|Now Q two turns on, and current flows through the bottom half.
+S10|0.35|Q one pushes, Q two pulls. That is why we call it push-pull.
+S11|0.65|On the scope, the output is one smooth, complete wave.
+G1|0.35|Let's look at the two currents one by one.
+G2|0.35|Q one carries only the positive humps.
+G3|0.35|Q two carries only the negative humps.
+G4|0.35|Each transistor conducts for one hundred and eighty degrees. Half a cycle.
+G5|0.65|The output transformer adds both halves back into one full wave.
+T1|0.8|Two transistors, taking turns. Each one rests half the time.
+C1|0.35|But there is one small problem.
+C2|0.35|A silicon transistor needs about zero point seven volts before it turns on.
+C3|0.35|So near zero, the input is too small for both transistors.
+C4|0.35|For a moment, neither conducts. The output stays flat.
+C5|0.65|This kink in the wave is called crossover distortion.
+C6|0.35|The fix is simple. Give both bases a tiny forward voltage.
+C7|0.35|Often two diodes do this job. Now each transistor is just on.
+C8|0.65|The kink disappears. This slightly on version is called class A B.
+D1|0.35|Now, how efficient is it? One small step at a time.
+D2|0.7|Efficiency is the useful output power, divided by the power taken from the supply.
+D3|0.7|The output power is V p times I p, divided by two.
+D4|0.7|The supply gives a series of humps. Their average is two I p over pi.
+D5|0.7|So the supply power is V C C, times two I p over pi.
+D6|0.7|Divide the two. Efficiency equals pi over four, times V p over V C C.
+D7|0.7|At full output, V p almost equals V C C.
+D8|0.65|Then the efficiency is pi over four. Seventy eight point five percent.
+D9|0.65|A transformer coupled class A amplifier reaches only fifty percent at best.
+W1|0.35|Worked example. How much of each wave is lost to the kink?
+W2|0.35|The input peak is one point four volts. Each transistor needs zero point seven.
+W3|0.7|The input is V p times sine theta.
+W4|0.7|It reaches zero point seven when sine theta is one half. That is thirty degrees.
+W5|0.7|So the output is flat from minus thirty to plus thirty degrees. That is sixty degrees.
+W6|0.7|A full cycle crosses zero twice. So sixty times two is one hundred and twenty degrees.
+W7|0.65|One hundred and twenty out of three sixty. One third of the wave is lost.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students write that each transistor conducts for the full cycle.
+X3|0.65|Wrong. In class B, each one conducts for only one hundred and eighty degrees.
+X4|0.35|And seventy eight point five percent is the best case, at full output only.
+X5|0.65|Where is this asked? In P U C board papers.
+X6|0.65|Draw the push-pull circuit, explain how it works, and explain crossover distortion.
+Q1|5.4|Try this. A class B push-pull amplifier takes twenty five watts from the supply, at its best efficiency. How much power turns into heat in the transistors?
+A1|0.35|B. About five point four watts, shared by the two transistors.
+A2|0.35|At best, the efficiency is seventy eight point five percent.
+A3|0.35|Useful output is zero point seven eight five times twenty five. About nineteen point six watts.
+A4|0.65|The rest is heat. Twenty five minus nineteen point six is about five point four watts.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, positive and negative feedback. Why does a microphone suddenly scream?

@@ -1,0 +1,63 @@
+H1|0.3|Aarav builds an amplifier for the fest. In the morning, it sounds perfect.
+H2|0.3|By evening the room is hot, and the music slowly gets quieter.
+H3|0.3|A friend swaps in a new transistor. Now it is suddenly too loud.
+H4|0.5|How can an amplifier stay steady when its parts keep changing? Negative feedback.
+P1|0.35|Think of negative feedback as a trade.
+P2|0.35|We give up some gain. Gain is the amount of boost.
+P3|0.35|In return, we buy good things.
+P4|0.35|A steady gain. A wider range of frequencies.
+P5|0.35|Less distortion and less noise.
+P6|0.65|And better input and output impedance. Let's see each one.
+S1|0.35|Let's test it on the breadboard.
+S2|0.35|Here is our amplifier, with an open loop gain of one thousand.
+S3|0.35|First, no feedback. The output is a big, strong wave.
+S4|0.35|Now the room heats up. The transistor changes, and A falls.
+S5|0.35|A drops to five hundred. The output wave shrinks to half.
+S6|0.35|That is a problem. The music gets quieter by itself.
+S7|0.35|Now we switch on negative feedback, with beta equal to zero point one.
+S8|0.35|The output is smaller now. The gain is about ten.
+S9|0.35|Heat it up again. A falls from one thousand to five hundred.
+S10|0.35|But the output hardly moves. A f goes from nine point nine to nine point eight.
+S11|0.65|Now the gain depends on beta, which is just two resistors. Resistors stay steady.
+D1|0.35|Why does this happen? Look at the formula again.
+D2|0.7|A f equals A, over one plus A beta.
+D3|0.7|When A beta is much bigger than one, the one hardly matters.
+D4|0.7|So A f is almost A over A beta. That is one over beta.
+D5|0.7|A has cancelled out. The gain no longer depends on the transistor.
+D6|0.35|For a small change in A, there is a neat rule.
+D7|0.7|The fractional change in A f equals the fractional change in A, over one plus A beta.
+D8|0.65|One plus A beta is called the desensitivity factor. Bigger means steadier.
+G1|0.35|Negative feedback also widens the bandwidth.
+G2|0.35|Bandwidth is the range of frequencies the amplifier boosts evenly.
+G3|0.35|Without feedback, the gain is high, but the range is narrow.
+G4|0.35|With feedback, the gain drops by one plus A beta.
+G5|0.35|But the upper cut off frequency rises by the same factor.
+G6|0.35|And the lower cut off frequency falls by the same factor.
+G7|0.65|Gain times bandwidth stays about the same. We trade gain for range.
+E1|0.35|Feedback also cleans the signal.
+E2|0.35|Distortion and noise made inside the amplifier shrink by one plus A beta.
+E3|0.35|In voltage series feedback, the input impedance rises by one plus A beta.
+E4|0.35|And the output impedance falls by the same factor.
+E5|0.65|A high input impedance takes little from the source. A low output impedance drives the load well.
+T1|0.8|Give up some gain. Get a steady, wide and clean amplifier.
+W1|0.35|Worked example. An amplifier has an open loop gain of one thousand.
+W2|0.35|Beta is zero point zero one nine. The upper cut off is twenty five kilohertz.
+W3|0.7|First, one plus A beta. That is one plus nineteen, which is twenty.
+W4|0.7|The gain with feedback is one thousand over twenty. That is fifty.
+W5|0.35|Now suppose A changes by ten percent.
+W6|0.7|A f changes by ten percent over twenty. Only half a percent.
+W7|0.7|The new upper cut off is twenty five kilohertz, times twenty.
+W8|0.65|That is five hundred kilohertz. Twenty times wider.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think negative feedback shrinks the bandwidth, because the gain falls.
+X3|0.65|Wrong. The gain falls, but the bandwidth widens by one plus A beta.
+X4|0.35|And in voltage series feedback, the input impedance goes up, not down.
+X5|0.65|Where is this asked? In P U C board papers.
+X6|0.65|List the effects of negative feedback, derive gain stability, and solve bandwidth problems.
+Q1|5.4|Try this. An amplifier has a gain of five hundred and an upper cut off of forty kilohertz. Negative feedback with beta zero point zero one eight is added. Find the new gain and upper cut off.
+A1|0.35|B. A gain of fifty, and four hundred kilohertz.
+A2|0.35|A beta is five hundred times zero point zero one eight. That is nine.
+A3|0.35|One plus A beta is ten. So the gain is five hundred over ten, which is fifty.
+A4|0.65|The upper cut off rises ten times. Forty kilohertz becomes four hundred kilohertz.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, the emitter follower. Why would anyone build an amplifier with a gain of one?

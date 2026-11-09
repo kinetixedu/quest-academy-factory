@@ -1,0 +1,177 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Electronics Ep 58 - Switches, Relays and Connectors</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== Breadboard (PUC Electronics) layout ===== */
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.card svg.full{position:absolute;left:0;top:0}
+.sm{position:absolute;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+#ghost{top:168px}
+.L2{left:160px;top:260px;width:784px;height:600px}.R2{left:976px;top:260px;width:784px;height:600px}
+.strip{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:18px;padding:0 28px;box-sizing:border-box;font:600 28px Poppins;white-space:nowrap}
+.strip .acc{color:var(--ac)}
+.st2{position:absolute;left:36px;display:flex;align-items:center;gap:22px;white-space:nowrap}
+.st2 .n{flex:none;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st2 .sx{font-size:32px}
+.st2 .why{font:500 22px Poppins;color:var(--mute)}
+.hbox{position:absolute;left:24px;width:736px;border-radius:14px;background:var(--ac2)}
+.tile{position:absolute;left:32px;width:576px;height:120px;border-radius:14px;background:var(--soft);border:2.5px solid var(--soft);box-sizing:border-box}
+.tile .ic{position:absolute;left:22px;top:28px;width:60px;height:60px;border-radius:14px;background:#fff;display:flex;align-items:center;justify-content:center}
+.tile .tl{position:absolute;left:104px;top:22px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.tile .tn{position:absolute;left:104px;top:52px;font:700 28px Poppins;color:var(--ink2);white-space:nowrap}
+.bar2{position:absolute;height:28px;border-radius:14px;background:var(--soft);overflow:hidden}.bar2 i{position:absolute;left:0;top:0;height:28px;border-radius:14px}
+/* hook */
+#aC{left:160px;top:260px;width:784px;height:600px;overflow:hidden}
+#aImg{position:absolute;left:24px;top:84px;height:516px}
+#hC{left:976px;top:260px;width:784px;height:600px}
+/* R: switch basics */
+.def{position:absolute;left:36px;display:flex;align-items:baseline;gap:16px;white-space:nowrap}
+.def b{font:700 28px Poppins;color:var(--ac)}.def span{font:500 26px Poppins}
+.sym{position:absolute;width:344px;height:168px;border-radius:14px;background:var(--soft);border:2.5px solid var(--soft);box-sizing:border-box}
+.sym .nm{position:absolute;left:18px;top:14px;font:700 24px 'IBM Plex Mono';color:var(--ink)}
+.sym .ds{position:absolute;left:18px;top:134px;font:500 17px Poppins;color:var(--mute);white-space:nowrap}
+.sym svg{position:absolute;left:0;top:0}
+/* breadboard */
+#ck{left:160px;top:260px;width:928px;height:600px}
+#tt{left:1120px;top:260px;width:640px;height:600px}
+.tg{position:absolute;left:32px;width:200px;height:64px;border-radius:14px;background:var(--soft);display:flex;align-items:center;gap:14px;padding:0 16px;box-sizing:border-box}
+.tg .tr{position:relative;flex:none;width:34px;height:52px;border-radius:17px;background:#CBD0DA}
+.tg .tr i{position:absolute;left:4px;top:4px;width:26px;height:26px;border-radius:50%;background:#fff}
+.tg .tv{font:600 26px 'IBM Plex Mono';white-space:nowrap}
+.tg .tk{font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.tth,.ttr{position:absolute;left:32px;width:576px;height:60px;border-radius:12px;display:flex;align-items:center}
+.tth span,.ttr span{position:absolute;text-align:center;width:150px;font:600 30px 'IBM Plex Mono'}
+.tth span{font:600 20px 'IBM Plex Mono';color:var(--mute);letter-spacing:.08em}
+.ttr{background:var(--soft)}
+#ttW{position:absolute;left:44px;top:466px;font:600 28px Poppins;white-space:nowrap}
+#ttW2{position:absolute;left:44px;top:512px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+/* relay */
+#rl{left:160px;top:260px;width:928px;height:600px}
+#rr{left:1120px;top:260px;width:640px;height:600px}
+#rr .strip{left:32px;width:576px;font-size:24px;padding:0 22px}
+/* connectors */
+#cL{left:160px;top:260px;width:784px;height:600px}
+#cR{left:976px;top:260px;width:784px;height:600px}
+.ctile{position:absolute;top:356px;width:224px;height:212px;border-radius:14px;background:var(--soft);border:2.5px solid var(--soft);box-sizing:border-box}
+.ctile svg{position:absolute;left:0;top:0}
+.ctile .nm{position:absolute;left:0;width:224px;top:166px;text-align:center;font:700 19px 'IBM Plex Mono';color:var(--ink);white-space:nowrap}
+.plate{position:absolute;left:36px;top:84px;width:712px;height:300px;border-radius:16px;background:#2A3758}
+.plate .pl{position:absolute;left:28px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:#8FA3C8;white-space:nowrap}
+.plate .pv{position:absolute;left:28px;font:600 40px 'IBM Plex Mono';color:#fff;white-space:nowrap}
+.rt{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--soft);border:2.5px solid var(--soft);box-sizing:border-box;display:flex;align-items:center;gap:18px;padding:0 22px;white-space:nowrap}
+.rt .k{font:600 30px Poppins;font-style:italic}.rt .k sub{font-size:.6em}
+.rt .d{font:500 24px Poppins;color:var(--ink2);flex:1}
+.rt .v{font:600 32px 'IBM Plex Mono'}
+/* worked example */
+#wGiven{position:absolute;left:36px;top:448px;width:712px;display:flex;flex-wrap:wrap;gap:12px}#wGiven .pillp{position:static}
+/* exam */
+#trap{left:160px;top:260px;width:784px;height:300px}
+#tc{left:976px;top:260px;width:784px;height:300px}
+#wa{left:160px;top:592px;width:1600px;height:268px}
+#mq{left:160px;top:260px;width:1040px;height:600px}
+#so{left:1232px;top:260px;width:528px;height:600px}
+#so .sol{left:32px}
+.fcard .fl{font-size:40px}
+.fcard .fl.txt{font:500 28px Poppins}
+.cs{position:absolute;left:36px;display:flex;align-items:center;gap:16px;white-space:nowrap;font:500 26px Poppins}
+.cs .ck{flex:none;width:120px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font:600 18px 'IBM Plex Mono';letter-spacing:.06em}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · ELECTRONICS · CH 9 PRACTICAL ELECTRONIC COMPONENTS</div>
+    <div class="subj" id="subj">BREADBOARD</div>
+    <div id="title">Two switches, <span class="acc">one light</span></div>
+    <div id="sub">Switches, relays and connectors</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E8A317" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="ghost" id="ghost">EXAMPLE FIGURES</div>
+
+    <!-- A: hook -->
+    <div class="sc" id="sA">
+      <div class="card" id="aC"><div class="lbl" style="left:32px;top:28px">AARAV · PCME · JEE</div>
+        <img id="aImg" src="../../assets/illustrations/puc/aarav.png" alt=""></div>
+      <div class="card" id="hC"><div class="lbl" style="left:32px;top:28px">THE STAIR LIGHT</div><svg class="full" id="hS" width="784" height="600"></svg></div>
+    </div>
+
+    <!-- R: switch basics, poles and throws -->
+    <div class="sc" id="sR">
+      <div class="card L2" id="rL"><div class="lbl" id="rLL" style="left:32px;top:28px">A SWITCH IS A TAP FOR CURRENT</div><svg class="full" id="rS" width="784" height="600"></svg></div>
+      <div class="card R2" id="rR"><div class="lbl" style="left:32px;top:28px">POLES AND THROWS</div>
+        <div class="def" id="dP" style="top:76px"><b>Pole</b><span>= one separate circuit it controls</span></div>
+        <div class="def" id="dT" style="top:126px"><b>Throw</b><span>= one path each pole can reach</span></div>
+        <div class="sym" id="y0" style="left:36px;top:196px"><div class="nm">SPST</div><svg width="344" height="168"></svg><div class="ds">single pole, single throw</div></div>
+        <div class="sym" id="y1" style="left:404px;top:196px"><div class="nm">SPDT</div><svg width="344" height="168"></svg><div class="ds">single pole, double throw</div></div>
+        <div class="sym" id="y2" style="left:36px;top:388px"><div class="nm">DPST</div><svg width="344" height="168"></svg><div class="ds">double pole, single throw</div></div>
+        <div class="sym" id="y3" style="left:404px;top:388px"><div class="nm">DPDT</div><svg width="344" height="168"></svg><div class="ds">double pole, double throw</div></div>
+      </div>
+    </div>
+
+    <!-- B: breadboard - staircase circuit -->
+    <div class="sc" id="sB">
+      <div class="card" id="ck"><div class="lbl" style="left:32px;top:28px">STAIR LIGHT · TWO SPDT SWITCHES</div>
+        <svg class="full" id="ckS" width="928" height="600"></svg>
+        <div class="tg" id="tgA" style="top:76px"><div class="tr"><i></i></div><div><div class="tk">S1 · BOTTOM</div><div class="tv">UP</div></div></div>
+        <div class="tg" id="tgB" style="top:160px"><div class="tr"><i></i></div><div><div class="tk">S2 · TOP</div><div class="tv">UP</div></div></div></div>
+      <div class="card" id="tt"><div class="lbl" style="left:32px;top:28px">STAIR LIGHT · TRUTH TABLE</div><div id="ttB"></div>
+        <div class="hbox" id="ttBox" style="top:446px;height:120px;width:592px"></div><div id="ttW">Lamp ON when both <span class="acc">match</span></div><div id="ttW2">up-up or down-down</div></div>
+    </div>
+
+    <!-- U: relay -->
+    <div class="sc" id="sU">
+      <div class="card" id="rl"><div class="lbl" style="left:32px;top:28px">INSIDE A RELAY</div><svg class="full" id="rlS" width="928" height="600"></svg></div>
+      <div class="card" id="rr"><div class="lbl" style="left:32px;top:28px">LIKE A BELL FOR A GUARD</div>
+        <div class="tile" id="t0" style="top:76px"><div class="ic"></div><div class="tl">A CHILD PRESSES A BELL</div><div class="tn">small coil current</div></div>
+        <div class="tile" id="t1" style="top:212px"><div class="ic"></div><div class="tl">THE GUARD HEARS IT</div><div class="tn">electromagnet pulls the arm</div></div>
+        <div class="tile" id="t2" style="top:348px"><div class="ic"></div><div class="tl">THE HEAVY GATE OPENS</div><div class="tn">big pump current flows</div></div>
+        <div class="strip" id="uStrip" style="top:496px"><span>Two circuits, <span class="acc">never touching</span></span></div></div>
+    </div>
+
+    <!-- C: connectors + ratings -->
+    <div class="sc" id="sC">
+      <div class="card L2" id="cL"><div class="lbl" style="left:32px;top:28px">CONNECTORS · PLUG IN, NO SOLDER</div><svg class="full" id="cS" width="784" height="600"></svg>
+        <div class="ctile" id="c0" style="left:36px"><svg width="224" height="212"></svg><div class="nm">PIN HEADER</div></div>
+        <div class="ctile" id="c1" style="left:280px"><svg width="224" height="212"></svg><div class="nm">SCREW TERMINAL</div></div>
+        <div class="ctile" id="c2" style="left:524px"><svg width="224" height="212"></svg><div class="nm">PLUG AND SOCKET</div></div></div>
+      <div class="card R2" id="cR"><div class="lbl" id="cRL" style="left:32px;top:28px">RATINGS PRINTED ON THE PART</div>
+        <div class="rt" id="wy0" style="top:84px"><span class="d" style="font-weight:600">Unplug a part in seconds</span></div>
+        <div class="rt" id="wy1" style="top:180px"><span class="d" style="font-weight:600">Swap in a new one if it fails</span></div>
+        <div class="rt" id="wy2" style="top:276px"><span class="d" style="font-weight:600">No heat, no solder, no damage</span></div>
+        <div class="plate" id="plate"><div class="pl" style="top:26px">RELAY · COIL</div><div class="pv" style="top:56px">12 V DC · 400 Ω</div>
+          <div class="pl" style="top:134px">CONTACTS</div><div class="pv" id="pv2" style="top:164px">10 A · 250 V AC</div>
+          <div class="pl" style="top:236px">SWITCH · CONNECTOR: SAME TWO LIMITS</div></div>
+        <div class="rt" id="rt0" style="top:412px"><span class="k" style="color:#7A4FE0">I<sub>max</sub></span><span class="d">maximum current</span><span class="v" style="color:#7A4FE0">10 A</span></div>
+        <div class="rt" id="rt1" style="top:504px"><span class="k" style="color:#0E8F8F">V<sub>max</sub></span><span class="d">maximum voltage</span><span class="v" style="color:#0E8F8F">250 V</span></div></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div class="sc" id="sW">
+      <div class="card L2" id="wL"><div class="lbl" style="left:32px;top:28px">WORKED EXAMPLE · CAN THIS RELAY DO IT?</div><svg class="full" id="wS" width="784" height="600"></svg>
+        <div id="wGiven"><span class="pillp">contacts: 10 A</span><span class="pillp">heater: 1500 W</span><span class="pillp">mains: 230 V</span></div></div>
+      <div class="card R2" id="wR"><div class="lbl" style="left:36px;top:28px">SOLUTION STEPS</div><div class="hbox" id="wBox" style="top:470px;height:96px"></div><div id="wSteps"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div class="sc" id="sX"><div class="card red" id="trap"></div>
+      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">WHAT NORMAL MEANS</div>
+        <div class="cs" id="cs0" style="top:92px"><span class="ck" style="background:#EEF0F4;color:#3A4560">COIL OFF</span><span>COM touches NC · NO is open</span></div>
+        <div class="cs" id="cs1" style="top:180px"><span class="ck" style="background:#E8A317;color:#fff">COIL ON</span><span>COM touches NO · NC is open</span></div></div>
+      <div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div class="sc" id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + next -->
+    <div class="sc" id="sF"></div>
+  </div>
+  <div id="stmt"><div id="st1">A small current in the coil</div><div id="st2">controls a <span class="acc">big current</span> in the load.</div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

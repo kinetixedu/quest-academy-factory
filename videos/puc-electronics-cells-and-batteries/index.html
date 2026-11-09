@@ -1,0 +1,153 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Electronics Ep 59 - Cells and Batteries</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== Breadboard (PUC Electronics) layout ===== */
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.card svg.full{position:absolute;left:0;top:0}
+.sm{position:absolute;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+#ghost{top:168px}
+.L2{left:160px;top:260px;width:784px;height:600px}.R2{left:976px;top:260px;width:784px;height:600px}
+.strip{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:18px;padding:0 28px;box-sizing:border-box;font:600 28px Poppins;white-space:nowrap}
+.strip .acc{color:var(--ac)}
+.st2{position:absolute;left:36px;display:flex;align-items:center;gap:22px;white-space:nowrap}
+.st2 .n{flex:none;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st2 .sx{font-size:32px}
+.st2 .why{font:500 22px Poppins;color:var(--mute)}
+.hbox{position:absolute;left:24px;width:736px;border-radius:14px;background:var(--ac2)}
+.tile{position:absolute;left:32px;width:576px;height:120px;border-radius:14px;background:var(--soft);border:2.5px solid var(--soft);box-sizing:border-box}
+.tile .ic{position:absolute;left:22px;top:28px;width:60px;height:60px;border-radius:14px;background:#fff;display:flex;align-items:center;justify-content:center}
+.tile .tl{position:absolute;left:104px;top:22px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.tile .tn{position:absolute;left:104px;top:52px;font:700 28px Poppins;color:var(--ink2);white-space:nowrap}
+.bar2{position:absolute;height:28px;border-radius:14px;background:var(--soft);overflow:hidden}.bar2 i{position:absolute;left:0;top:0;height:28px;border-radius:14px}
+/* two board chips travel together as one header chip */
+#nchip{border:none;padding:0;background:none;gap:12px}
+#nchip .cc{display:inline-flex;align-items:center;height:48px;padding:0 20px;border-radius:10px;background:#fff;border:2px solid var(--ac);color:var(--ac);font:600 22px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap;box-sizing:border-box}
+/* hook */
+#aC{left:160px;top:260px;width:784px;height:600px;overflow:hidden}
+#aImg{position:absolute;left:24px;top:84px;height:516px}
+#h1C{left:976px;top:260px;width:784px;height:340px}
+#h2C{left:976px;top:632px;width:784px;height:228px}
+.rt{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--soft);border:2.5px solid var(--soft);box-sizing:border-box;display:flex;align-items:center;gap:18px;padding:0 22px;white-space:nowrap}
+.rt .k{font:700 22px 'IBM Plex Mono';color:var(--ac);letter-spacing:.04em;min-width:44px}
+.rt .d{font:500 26px Poppins;color:var(--ink2);flex:1}
+.rt .v{font:600 30px 'IBM Plex Mono'}
+/* breadboard */
+#ck{left:160px;top:260px;width:928px;height:600px}
+#rb{left:1120px;top:260px;width:640px;height:600px}
+.ro2{position:absolute;left:32px;top:76px;width:576px;display:grid;grid-template-columns:auto 1fr auto;column-gap:18px;row-gap:14px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .v{font:600 38px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 22px 'IBM Plex Mono';color:var(--mute);white-space:nowrap;min-width:52px}
+.ro2 .n{font:500 18px Poppins;color:var(--mute);font-style:normal;grid-column:1/4;margin-top:-10px}
+#sb{position:absolute;left:32px;top:476px;width:576px;height:40px;border-radius:10px;background:var(--soft);overflow:hidden}
+#sb i{position:absolute;top:0;height:40px}
+#sbL{position:absolute;left:32px;top:528px;width:576px;font:500 20px Poppins;color:var(--mute);white-space:nowrap}
+/* families */
+.fam{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft);border:2.5px solid var(--soft);box-sizing:border-box}
+.fam svg{position:absolute;left:0;top:0}
+.fam .tl{position:absolute;left:150px;top:20px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.fam .tn{position:absolute;left:150px;top:48px;font:700 30px Poppins;color:var(--ink2);white-space:nowrap}
+.fam .vv{position:absolute;right:24px;top:34px;font:600 40px 'IBM Plex Mono';color:#0E8F8F;white-space:nowrap}
+/* exam */
+#trap{left:160px;top:260px;width:784px;height:300px}
+#tc{left:976px;top:260px;width:784px;height:300px}
+#wa{left:160px;top:592px;width:1600px;height:268px}
+#mq{left:160px;top:260px;width:1040px;height:600px}
+#so{left:1232px;top:260px;width:528px;height:600px}
+#so .sol{left:32px}
+.fcard .fl{font-size:40px}
+.fcard .fl.txt{font:500 28px Poppins}
+.cs{position:absolute;left:36px;display:flex;align-items:center;gap:16px;white-space:nowrap;font:500 28px Poppins}
+.cs .ck{flex:none;width:140px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;font:600 20px 'IBM Plex Mono';letter-spacing:.04em}
+.cap2{position:absolute;left:36px;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip"><span class="cc">CLASS 11 · ELECTRONICS · CH 9 PRACTICAL ELECTRONIC</span><span class="cc">NCERT · CLASS 12 PHYSICS · CH 3</span></div>
+    <div class="subj" id="subj">BREADBOARD</div>
+    <div id="title">What <span class="acc">mAh</span> really means</div>
+    <div id="sub">Cells and batteries</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E8A317" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="ghost" id="ghost">EXAMPLE FIGURES</div>
+
+    <!-- A: hook -->
+    <div class="sc" id="sA">
+      <div class="card" id="aC"><div class="lbl" style="left:32px;top:28px">AARAV · PCME · JEE</div>
+        <img id="aImg" src="../../assets/illustrations/puc/aarav.png" alt=""></div>
+      <div class="card" id="h1C"><div class="lbl" style="left:32px;top:28px">THE BACK OF THE BATTERY</div><svg class="full" id="h1S" width="784" height="340"></svg></div>
+      <div class="card" id="h2C"><div class="lbl" style="left:32px;top:28px">DURING A HEAVY GAME</div><svg class="full" id="h2S" width="784" height="228"></svg></div>
+    </div>
+
+    <!-- C: what a cell is -->
+    <div class="sc" id="sC">
+      <div class="card L2" id="cL"><div class="lbl" style="left:32px;top:28px">INSIDE A CELL</div><svg class="full" id="cS" width="784" height="600"></svg></div>
+      <div class="card R2" id="cR"><div class="lbl" style="left:32px;top:28px">A PUMP FOR CHARGE</div>
+        <div class="rt" id="cr0" style="top:84px"><span class="k">01</span><span class="d">Two electrodes: + and -</span></div>
+        <div class="rt" id="cr1" style="top:176px"><span class="k">02</span><span class="d">Electrolyte between them</span></div>
+        <div class="rt" id="cr2" style="top:268px"><span class="k">03</span><span class="d">Reaction pushes electrons out of -</span></div>
+        <svg class="full" id="cRS" width="784" height="600"></svg>
+        <div class="strip" id="cStrip" style="top:494px"><span>Chemical energy <span class="acc">→ electrical energy</span></span></div></div>
+    </div>
+
+    <!-- P: primary and secondary -->
+    <div class="sc" id="sP">
+      <div class="card L2" id="pL"><div class="lbl" style="left:32px;top:28px">PRIMARY · USE ONCE</div><svg class="full" id="pLS" width="784" height="600"></svg>
+        <div class="strip" id="pLs" style="top:494px"><span>Reaction <span class="acc">cannot be reversed</span></span></div></div>
+      <div class="card R2" id="pR"><div class="lbl" style="left:32px;top:28px">SECONDARY · RECHARGEABLE</div>
+        <div class="fam" id="f0" style="top:84px"><svg width="712" height="120"></svg><div class="tl">LEAD ACID CELL</div><div class="tn">car battery</div><div class="vv">2 V</div></div>
+        <div class="fam" id="f1" style="top:340px"><svg width="712" height="120"></svg><div class="tl">LITHIUM ION CELL</div><div class="tn">phone battery</div><div class="vv">3.7 V</div></div>
+        <svg class="full" id="pRS" width="784" height="600"></svg></div>
+    </div>
+
+    <!-- B: breadboard - real cell under load -->
+    <div class="sc" id="sB">
+      <div class="card" id="ck"><div class="lbl" style="left:32px;top:28px">A REAL CELL UNDER LOAD</div><svg class="full" id="ckS" width="928" height="600"></svg></div>
+      <div class="card" id="rb"><div class="lbl" style="left:32px;top:28px">LIVE READOUT</div><div class="ro2" id="ro"></div>
+        <div id="sb"><i id="sbV"></i><i id="sbI"></i></div><div id="sbL"></div></div>
+    </div>
+
+    <!-- D: derivation + V-I line -->
+    <div class="sc" id="sD">
+      <div class="card L2" id="dL"><div class="lbl" style="left:36px;top:28px">THE RULE, STEP BY STEP</div><div class="hbox" id="dBox" style="top:368px;height:96px"></div><div id="dSteps"></div></div>
+      <div class="card R2" id="dR"><div class="lbl" style="left:32px;top:28px">TERMINAL VOLTAGE AGAINST CURRENT</div><svg class="full" id="dS" width="784" height="600"></svg></div>
+    </div>
+
+    <!-- S: capacity -->
+    <div class="sc" id="sS">
+      <div class="card L2" id="sL"><div class="lbl" id="sLL" style="left:36px;top:28px">CAPACITY · MILLIAMPERE HOURS</div><div id="sSteps"></div><svg class="full" id="sLS" width="784" height="600"></svg></div>
+      <div class="card R2" id="sR"><div class="lbl" id="sRL" style="left:32px;top:28px">SAME CHARGE, TWO WAYS</div><svg class="full" id="sS2" width="784" height="600"></svg></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div class="sc" id="sW">
+      <div class="card L2" id="wL"><div class="lbl" style="left:32px;top:28px">WORKED EXAMPLE · A PHONE BATTERY</div><svg class="full" id="wS" width="784" height="600"></svg></div>
+      <div class="card R2" id="wR"><div class="lbl" style="left:36px;top:28px">SOLUTION STEPS</div><div class="hbox" id="wBox" style="top:470px;height:96px"></div><div id="wSteps"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div class="sc" id="sX"><div class="card red" id="trap"></div>
+      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">FROM OUR BREADBOARD</div>
+        <div class="cs" id="cs0" style="top:92px"><span class="ck" style="background:#EEF0F4;color:#3A4560">I = 0</span><span>V = E = 1.5 V</span></div>
+        <div class="cs" id="cs1" style="top:184px"><span class="ck" style="background:#7A4FE0;color:#fff">I = 1 A</span><span>V = 1.5 - 1 × 0.5 = 1.0 V</span></div></div>
+      <div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div class="sc" id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + next -->
+    <div class="sc" id="sF"></div>
+  </div>
+  <div id="stmt"><div id="st1">A cell's push is E.</div><div id="st2">Its inside takes away <span class="acc">I r.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

@@ -1,0 +1,63 @@
+H1|0.3|Aarav opens a broken earphone mic. Inside sits a tiny round capsule.
+H2|0.3|Its signal is so weak, it can barely push any current.
+H3|0.3|Yet a part inside reads it, without taking current from it.
+H4|0.5|How? That part is a field effect transistor. An F E T.
+P1|0.35|Think of a soft garden hose with water running through it.
+P2|0.35|Squeeze the hose with your hand. Less water comes out.
+P3|0.35|Squeeze hard enough, and the flow stops.
+P4|0.65|Your hand takes no water at all. It only presses from the sides.
+P5|0.35|An F E T works the same way. Its hose is called the channel.
+P6|0.35|Current flows through the channel, from the source to the drain.
+P7|0.35|The gate is the squeezing hand. It sits on both sides.
+P8|0.65|A voltage on the gate squeezes the channel. Almost no gate current flows.
+C1|0.35|Let's look inside a junction F E T, or J F E T.
+C2|0.35|Start with a bar of n type silicon. This is the channel.
+C3|0.35|N type means it has extra free electrons to carry current.
+C4|0.35|One end is the source. Electrons enter here.
+C5|0.35|The other end is the drain. Electrons leave here.
+C6|0.35|Now add two p type regions, one on each side.
+C7|0.35|They are joined together inside. This pair is the gate.
+C8|0.65|Where p meets n, we get p n junctions. So it is a junction F E T.
+C9|0.35|In the symbol, the gate arrow points in. That means n channel.
+C10|0.65|In a p channel J F E T, everything flips. The arrow points out.
+B1|0.35|Now let's run it on the breadboard.
+B2|0.35|A supply, V D D, pushes electrons from source to drain.
+B3|0.35|A second supply makes the gate negative. This is reverse bias.
+B4|0.35|At zero gate voltage, the channel is wide open. Ten milliamperes flow.
+B5|0.35|Now make the gate minus one volt. The grey layers grow.
+B6|0.35|They are depletion layers. Zones with no free carriers. They block current.
+B7|0.35|The channel gets narrower. The drain current drops.
+B8|0.35|Minus two volts. Narrower still. Watch the scope step down.
+B9|0.35|At minus four volts, the two layers touch. The channel is closed.
+B10|0.65|The drain current is zero. This gate voltage is called V G S off.
+B11|0.65|And the gate current stayed near zero the whole time.
+D1|0.35|Let's write the working in small steps.
+D2|0.7|One. The gate junction is reverse biased. So gate current is almost zero.
+D3|0.7|Two. A more negative gate makes the depletion layers wider.
+D4|0.7|Three. A narrower channel has more resistance. R equals rho L over A.
+D5|0.7|Four. More resistance means less drain current.
+D6|0.7|Five. At V G S off, the channel pinches shut. I D is zero.
+D7|0.35|Only electrons carry this current. So an F E T is unipolar.
+D8|0.65|A B J T needs both electrons and holes. So it is bipolar.
+T1|0.8|A B J T is worked by current. An F E T is worked by voltage.
+W1|0.35|Worked example. How hard is it to push current into the gate?
+W2|0.35|The gate is at minus two volts.
+W3|0.35|A tiny leakage current flows into the gate. Just one nanoampere.
+W4|0.35|A nanoampere is one billionth of an ampere.
+W5|0.7|Input resistance is the gate voltage divided by the gate current.
+W6|0.7|That is two volts over ten to the minus nine amperes.
+W7|0.7|Two times ten to the nine ohms. Two thousand mega ohms.
+W8|0.65|So the gate takes almost nothing from the signal. Perfect for a weak mic.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students forward bias the gate to turn the J F E T on.
+X3|0.65|Wrong. The gate to source junction is always reverse biased.
+X4|0.35|Forward bias lets gate current flow. The huge input resistance is lost.
+X5|0.65|Where is this asked? In P U C board papers.
+X6|0.65|Draw the construction, explain the working, and compare a J F E T with a B J T.
+Q1|5.4|Try this. An n channel J F E T has V G S off of minus four volts. The gate goes from minus one to minus three volts. What happens?
+A1|0.35|B. The depletion layers widen, and the drain current falls.
+A2|0.35|Minus three volts is more reverse bias, so the layers grow.
+A3|0.35|The channel narrows, its resistance rises, and I D falls.
+A4|0.65|But minus three is not yet minus four. So the current is not zero.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, J F E T characteristics. What do the curves and r d, g m and mu tell us?

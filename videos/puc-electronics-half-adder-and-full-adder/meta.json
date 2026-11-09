@@ -1,0 +1,31 @@
+{
+ "world": "puc-electronics",
+ "topic": "Half Adder and Full Adder",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 56
+ },
+ "class": "11",
+ "title": "Half Adder and Full Adder Explained Simply | PUC and ISC",
+ "description": "Aarav adds 7 and 5 on paper: write 2, carry 1. His calculator does the same job with only logic gates inside. How can gates add numbers? In this animated lesson we build the half adder and the full adder.\n\nWe start with binary addition (1 + 1 = 10, sum 0 and carry 1). On a live breadboard a half adder (one XOR gate and one AND gate) fills its truth table row by row while the oscilloscope traces A, B, sum and carry. Then the full adder adds a carry in: its 8-row truth table, its formulas, and how two half adders and one OR gate make it. A worked example adds 1 + 1 + 1, followed by the exam trap (the sum needs XOR, not OR), where it is asked, an original board pattern practice question with a full solution, and a fact card to screenshot.\n\nThis is Episode 56 of PUC Electronics, Class 11, Chapter 8: Introduction to Digital Electronics. Boards: Karnataka I PUC Electronics Ch 8 Introduction to Digital Electronics | ISC Class 12 Computer Science: half adders and full adders. Not in the rationalised NCERT/CBSE Physics book.\n\nIn this video:\n0:00 How can gates add numbers?\n0:14 Adding in binary\n0:36 Half adder on a breadboard\n1:19 The full adder\n1:52 Full adder from two half adders\n2:20 Worked example: 1 + 1 + 1\n2:51 Exam trap: the sum needs XOR\n3:05 Where it is asked\n3:17 Practice question\n3:50 Fact card\n\nNext episode: Flip-Flops: SR, JK and D.\n\nVideo by Quest Academy.",
+ "tags": [
+  "half adder",
+  "full adder",
+  "half adder truth table",
+  "full adder truth table",
+  "full adder using half adders",
+  "binary addition",
+  "sum and carry",
+  "logic gates",
+  "digital electronics",
+  "PUC electronics",
+  "1st PUC electronics chapter 8",
+  "ISC computer science adders",
+  "Karnataka PUC electronics"
+ ],
+ "thumb": {
+  "title": "Gates That Add",
+  "accent_word": "Add",
+  "frame_t": 72
+ }
+}

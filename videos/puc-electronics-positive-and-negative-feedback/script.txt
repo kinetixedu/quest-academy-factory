@@ -1,0 +1,58 @@
+H1|0.3|At the college fest, Aarav walks across the stage with a microphone.
+H2|0.3|He steps near the speaker. Suddenly, a loud scream fills the hall.
+H3|0.3|He steps back, and the scream stops. What just happened?
+H4|0.5|The speaker's sound looped back into the microphone. That loop is called feedback.
+P1|0.35|Feedback means sending part of the output back to the input.
+P2|0.35|Think of riding a bicycle in a straight line.
+P3|0.35|If the bike drifts left, you steer a little right.
+P4|0.65|The correction fights the change. This is negative feedback. It keeps things steady.
+P5|0.35|Now think of a crowd at a cricket match.
+P6|0.35|A few people cheer. Others hear them, and cheer even louder.
+P7|0.65|The change feeds itself and keeps growing. This is positive feedback.
+S1|0.35|Let's build it on the breadboard.
+S2|0.35|Here is an amplifier with gain A. It makes the signal A times bigger.
+S3|0.35|Two resistors take a small part of the output back to the start.
+S4|0.35|That fraction is called the feedback ratio, written beta.
+S5|0.35|This circle is the mixer. It joins the input and the feedback.
+S6|0.35|First, negative feedback. The feedback is subtracted from the input.
+S7|0.35|The output becomes smaller, but it stays clean and steady.
+S8|0.35|Now we flip it to positive feedback. The feedback is added instead.
+S9|0.35|The output grows bigger. We raise beta a little more.
+S10|0.35|Now the loop feeds itself. The output hits the supply limits.
+S11|0.65|It keeps going, even with no input at all. Just like the screaming microphone.
+D1|0.35|Now the maths, one small step at a time.
+D2|0.7|The amplifier sees the input minus the feedback. That is V s minus beta V o.
+D3|0.7|The output is A times what the amplifier sees.
+D4|0.7|So V o equals A, times V s minus beta V o.
+D5|0.7|Bring the V o terms together. V o times one plus A beta equals A V s.
+D6|0.7|So the gain with feedback, A f, equals A over one plus A beta.
+D7|0.65|A is the open loop gain. That is the gain without feedback.
+D8|0.7|For positive feedback, the sign flips. A f equals A over one minus A beta.
+D9|0.65|If A beta becomes one, the bottom becomes zero. The circuit oscillates.
+T1|0.8|Negative feedback calms the signal. Positive feedback feeds it.
+U1|0.35|So which one is useful, and where?
+U2|0.35|Negative feedback lowers the gain. But the gain becomes steady and clean.
+U3|0.35|There is less distortion and less noise. So good amplifiers use it.
+U4|0.35|Positive feedback raises the gain. But the circuit becomes unstable.
+U5|0.65|That is bad for an amplifier, but perfect for an oscillator. An oscillator makes its own wave.
+W1|0.35|Worked example. An amplifier has an open loop gain of one thousand.
+W2|0.35|We add negative feedback, with beta equal to zero point zero one.
+W3|0.7|First, A beta is one thousand times zero point zero one. That is ten.
+W4|0.7|A f equals one thousand, over one plus ten.
+W5|0.7|That is one thousand over eleven. About ninety one.
+W6|0.7|Now positive feedback, with beta equal to zero point zero zero zero five.
+W7|0.7|A beta is zero point five. A f equals one thousand over zero point five.
+W8|0.65|That is two thousand. Negative feedback cut the gain. Positive feedback doubled it.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students write one minus A beta for negative feedback.
+X3|0.65|Wrong. Negative feedback has one plus A beta. So the gain always falls.
+X4|0.35|And beta here is the feedback ratio. It is not the transistor's current gain.
+X5|0.65|Where is this asked? In P U C board papers.
+X6|0.65|Define feedback, draw the block diagram, derive the gain, and solve small problems.
+Q1|5.4|Try this. An amplifier has an open loop gain of two hundred. Negative feedback with beta zero point zero four five is added. What is the new gain?
+A1|0.35|C. Twenty.
+A2|0.35|A beta is two hundred times zero point zero four five. That is nine.
+A3|0.35|A f equals two hundred, over one plus nine.
+A4|0.65|Two hundred over ten is twenty. The gain falls, as negative feedback should.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, the effects of negative feedback. Why do engineers happily give up gain?

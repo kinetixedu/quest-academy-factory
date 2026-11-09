@@ -1,0 +1,78 @@
+H1|0.3|In the cool morning, Aarav's little speaker plays a song clearly.
+H2|0.3|By the hot afternoon, the same song sounds harsh and broken.
+H3|0.3|Nobody touched it. Only the room got hotter.
+H4|0.5|Why does heat spoil the sound? And how do engineers stop it?
+P1|0.35|Think of a water tap that must stay half open.
+P2|0.35|Half open leaves room for the flow to wiggle up and down.
+P3|0.35|This resting point is called the bias, or the operating point.
+P4|0.35|Now imagine heat makes the tap creep open by itself.
+P5|0.35|The flow keeps growing. Soon there is no room left to wiggle.
+P6|0.65|The tops of the waves get cut off. That is the harsh sound.
+P7|0.35|The fix is like the float in a water tank.
+P8|0.35|When the water rises, the float lifts and closes the inlet.
+P9|0.65|It corrects itself. No one has to watch it.
+B1|0.35|Let's test this on the breadboard.
+B2|0.35|First, the simplest way to bias. One big resistor feeds the base.
+B3|0.35|This is called fixed bias. A small wave goes in.
+B4|0.35|The collector current is about one point one milliamperes.
+B5|0.35|The scope shows a clean, upside down copy of the input.
+B6|0.35|Now we heat the transistor, from twenty five to seventy five degrees.
+B7|0.35|Heat raises beta, the current gain. Here it doubles.
+B8|0.35|The collector current doubles too. The output sits near the bottom.
+B9|0.65|Look at the scope. The bottom of the wave is chopped flat.
+B10|0.35|Now the same transistor in voltage divider bias.
+B11|0.35|Two resistors, R one and R two, set the base voltage.
+B12|0.35|And a new resistor, R E, sits below the emitter.
+B13|0.35|Heat it again, from twenty five to seventy five degrees.
+B14|0.35|Beta doubles again. But the current hardly moves.
+B15|0.65|The output wave stays clean. The operating point stays put.
+M1|0.35|Why does it stay put? Follow the loop.
+M2|0.35|Heat pushes the collector current up.
+M3|0.35|More current through R E raises the emitter voltage.
+M4|0.35|But the base voltage is held fixed by the divider.
+M5|0.35|So the voltage between base and emitter shrinks.
+M6|0.35|Less base current flows, and the collector current falls back.
+M7|0.65|R E is the float. It pulls the current back by itself.
+M8|0.35|Engineers call this negative feedback.
+M9|0.35|Without it, heat can feed on itself.
+M10|0.35|More current makes more heat, and the leakage current grows.
+M11|0.35|Leakage roughly doubles for every ten degrees of extra heat.
+M12|0.65|The current runs away until the transistor burns. This is thermal runaway.
+T1|0.8|The base voltage is held. The emitter resistor does the rest.
+D1|0.35|Now the maths, one step at a time.
+D2|0.35|The divider sets the base voltage.
+D3|0.7|V B equals V C C, times R two, over R one plus R two.
+D4|0.7|The emitter sits zero point seven volts lower. V E equals V B minus V B E.
+D5|0.7|Ohm's law on R E gives the current. I E equals V E over R E.
+D6|0.7|Beta is nowhere in this equation. That is why heat cannot move it.
+D7|0.7|The collector current is almost equal to I E.
+D8|0.7|So V C E equals V C C, minus I C, times R C plus R E.
+D9|0.35|Engineers measure stability with the stability factor, S.
+D10|0.7|S tells how much the collector current changes when leakage changes.
+D11|0.35|Fixed bias has S equal to beta plus one.
+D12|0.65|Voltage divider bias keeps S close to one.
+D13|0.65|Smaller S means more stable. One is the best possible value.
+W1|0.35|Worked example. Find the operating point.
+W2|0.35|V C C is ten volts. R one is ten kilo ohms.
+W3|0.35|R two is two point two kilo ohms.
+W4|0.35|R C is three point six kilo ohms. R E is one kilo ohm.
+W5|0.35|V B equals ten, times two point two, over twelve point two.
+W6|0.7|That is one point eight volts.
+W7|0.7|Take away zero point seven. V E is one point one volts.
+W8|0.7|One point one volts across one kilo ohm. I E is one point one milliamperes.
+W9|0.7|V C E is ten, minus one point one milliamperes, times four point six kilo ohms.
+W10|0.65|That is about four point nine volts. The operating point sits near the middle.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students put the whole base voltage across R E.
+X3|0.65|That gives one point eight milliamperes. Wrong. First take away the zero point seven volts.
+X4|0.35|Only V E sits across R E. So I E is one point one milliamperes.
+X5|0.65|Where is this asked? In P U C board papers.
+X6|0.65|List the advantages of voltage divider bias, find the operating point, and derive S.
+Q1|5.4|Try this. V C C is twelve volts, R one forty kilo ohms, R two ten kilo ohms, R C four kilo ohms, R E one kilo ohm. Find V C E.
+A1|0.35|B. Three point five volts.
+A2|0.35|V B is twelve times ten over fifty. That is two point four volts.
+A3|0.35|Take away zero point seven. V E is one point seven volts.
+A4|0.35|So I C is one point seven milliamperes.
+A5|0.65|V C E is twelve, minus one point seven times five. Three point five volts.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, the C E amplifier. Why does an amplifier boost some sounds better than others?

@@ -1,0 +1,31 @@
+{
+ "world": "puc-electronics",
+ "topic": "Boolean Algebra and De Morgan's Theorems",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 54
+ },
+ "class": "11",
+ "title": "Boolean Algebra and De Morgan's Laws Explained Simply | PUC and ISC",
+ "description": "Aarav finds two rules on the fridge. They use different words. Do they mean the same thing? In this animated lesson we learn Boolean algebra, the maths of 1 and 0, and prove De Morgan's two theorems.\n\nWe meet the three moves (AND as a dot, OR as a plus, NOT as a bar) and see each main law with switches and a lamp. Then come De Morgan's theorems: break the line, change the sign. On a live breadboard, a NAND gate and two NOT gates feeding an OR gate get the same inputs, the truth table fills row by row and the oscilloscope shows identical output traces. A worked example simplifies a three-gate circuit to a plain wire, followed by the exam trap (forgetting to change the sign), where it is asked, an original JEE Main pattern practice question with a full solution, and a fact card to screenshot.\n\nThis is Episode 54 of PUC Electronics, Class 11, Chapter 8: Introduction to Digital Electronics. Boards: Karnataka I PUC Electronics Ch 8 Introduction to Digital Electronics | ISC Class 12 Computer Science: Boolean algebra, De Morgan's laws. Logic gates and Boolean algebra are no longer in the rationalised NCERT/CBSE Physics book.\n\nIn this video:\n0:00 Two rules, same meaning?\n0:19 Boolean algebra: 1, 0 and three moves\n0:48 The main laws with switches\n1:33 De Morgan's two theorems\n2:14 Proof on a live breadboard\n2:52 Back to the fridge\n3:12 Worked example: simplify a circuit\n3:51 Exam trap: change the sign\n4:10 Where it is asked\n4:27 Practice question\n4:57 Fact card\n\nNext episode: XOR and XNOR Gates.\n\nVideo by Quest Academy.",
+ "tags": [
+  "boolean algebra",
+  "de morgan's theorem",
+  "de morgan's laws",
+  "boolean algebra laws",
+  "break the line change the sign",
+  "boolean expression simplification",
+  "logic gates",
+  "digital electronics",
+  "JEE Main logic gates",
+  "PUC electronics",
+  "1st PUC electronics chapter 8",
+  "ISC computer science boolean algebra",
+  "Karnataka PUC electronics"
+ ],
+ "thumb": {
+  "title": "Break the Line",
+  "accent_word": "Line",
+  "frame_t": 166
+ }
+}

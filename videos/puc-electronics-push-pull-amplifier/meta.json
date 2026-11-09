@@ -1,0 +1,31 @@
+{
+ "world": "puc-electronics",
+ "topic": "Push-Pull Amplifier",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 70
+ },
+ "class": "12",
+ "title": "Push-Pull Amplifier Explained Simply | PUC Electronics Class 12",
+ "description": "Aarav's tiny speaker plays loud music all evening on one small battery, while the old lab amplifier gets hot even in silence. The secret is two transistors taking turns: the class B push-pull amplifier. We start with a two-person saw, then compare class A (one transistor, half on all the time) with class B (both off in silence).\n\nOn a live breadboard an input transformer splits the signal, Q1 conducts on the positive half and Q2 on the negative half, and the output transformer joins them into one full wave on the oscilloscope. Then we see crossover distortion (both transistors off below about 0.7 V) and the class AB fix with two diodes, derive the efficiency eta = (pi/4)(V_p/V_CC) with its 78.5% maximum, and work out how much of each wave the crossover kink removes. Then the exam trap (each transistor conducts for 180 degrees, not 360), where it is asked, an original practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 70 of PUC Electronics, Class 12, Chapter 3: Transistor Amplifiers (Karnataka II PUC Electronics, 3.5 Power amplifiers: class B push-pull). Transistor amplifiers are not in the rationalised NCERT/CBSE Class 12 Physics book or the current ISC Physics syllabus, so this lesson follows the Karnataka PUC Electronics syllabus.\n\nIn this video:\n0:00 Cool speaker, hot amplifier\n0:18 The two-person saw: class A vs class B\n0:54 Push-pull on a breadboard\n1:37 Two halves, 180 degrees each\n2:01 Crossover distortion and class AB\n2:35 The maths: efficiency and 78.5%\n3:22 Worked example: how much is lost to the kink?\n4:00 Exam trap: 180 degrees, not 360\n4:18 Where it is asked\n4:27 Practice question\n5:06 Formula card\n\nNext episode: Positive and Negative Feedback.\n\nVideo by Quest Academy.",
+ "tags": [
+  "push-pull amplifier",
+  "class B push-pull amplifier",
+  "class B power amplifier",
+  "crossover distortion",
+  "class AB amplifier",
+  "push-pull efficiency 78.5%",
+  "power amplifier",
+  "transistor amplifiers",
+  "2nd PUC electronics",
+  "2nd PUC electronics chapter 3",
+  "Karnataka PUC electronics",
+  "class 12 electronics",
+  "PUC electronics"
+ ],
+ "thumb": {
+  "title": "Two Transistors, Taking Turns",
+  "accent_word": "Turns",
+  "frame_t": 96
+ }
+}

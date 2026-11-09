@@ -1,0 +1,142 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Electronics Ep 63 - JFET Characteristics and Parameters</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== Breadboard (PUC Electronics) layout ===== */
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.card svg.full{position:absolute;left:0;top:0}
+.big{position:absolute;font:600 56px 'IBM Plex Mono';white-space:nowrap}
+.sm{position:absolute;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.txt{position:absolute;font:500 30px/1.35 Poppins;white-space:nowrap}
+#ghost{top:168px}
+.L2{left:160px;top:260px;width:784px;height:600px}.R2{left:976px;top:260px;width:784px;height:600px}
+.strip{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:18px;padding:0 28px;box-sizing:border-box;font:600 28px Poppins;white-space:nowrap}
+.strip .acc{color:var(--ac)}
+.st2{position:absolute;left:36px;display:flex;align-items:center;gap:22px;white-space:nowrap}
+.st2 .n{flex:none;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st2 .sx{font-size:34px}
+.st2 .why{font:500 22px Poppins;color:var(--mute)}
+.hbox{position:absolute;left:24px;width:736px;border-radius:14px;background:var(--ac2)}
+.tile{position:absolute;left:32px;width:720px;height:120px;border-radius:14px;background:var(--soft);border:2.5px solid var(--soft)}
+.tile .tl{position:absolute;left:24px;top:24px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.tile .tn{position:absolute;left:24px;top:56px;font:700 30px Poppins;color:var(--ink2);white-space:nowrap}
+.bar2{position:absolute;height:28px;border-radius:14px;background:var(--soft);overflow:hidden}.bar2 i{position:absolute;left:0;top:0;height:28px;border-radius:14px}
+/* hook */
+#aC{left:160px;top:260px;width:784px;height:600px;overflow:hidden}
+#aImg{position:absolute;left:24px;top:84px;height:516px}
+#h1C{left:976px;top:260px;width:784px;height:284px}
+#h2C{left:976px;top:576px;width:784px;height:284px}
+/* breadboard */
+#ck{left:160px;top:260px;width:640px;height:600px}
+#gr{left:832px;top:260px;width:928px;height:600px}
+.ro3{position:absolute;left:32px;top:500px;width:576px;display:grid;grid-template-columns:auto auto auto auto auto auto auto auto auto;column-gap:8px;align-items:baseline}
+.ro3 .k{font:600 26px Poppins;font-style:italic}.ro3 .k sub{font-size:.6em}
+.ro3 .v{font:600 30px 'IBM Plex Mono';text-align:right;white-space:nowrap;min-width:70px}
+.ro3 .u{font:400 18px 'IBM Plex Mono';color:var(--mute);white-space:nowrap;margin-right:14px}
+#gC{left:160px;top:260px;width:1600px;height:600px}
+.gstrip{position:absolute;left:36px;width:1528px;height:84px;border-radius:14px;background:var(--ac2);display:flex;align-items:center;gap:40px;padding:0 32px;box-sizing:border-box;white-space:nowrap;font-size:34px}
+.gstrip .m{font:600 22px 'IBM Plex Mono';color:var(--ink2)}
+.mt{position:absolute;width:340px;height:104px;border-radius:14px;background:var(--soft)}
+.mt .tl{position:absolute;left:22px;top:18px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.mt .tn{position:absolute;left:22px;top:48px;font:600 24px 'IBM Plex Mono';color:var(--ink2);white-space:nowrap}
+/* exam */
+#trap{left:160px;top:260px;width:784px;height:300px}
+#tc{left:976px;top:260px;width:784px;height:300px}
+#wa{left:160px;top:592px;width:1600px;height:268px}
+#mq{left:160px;top:260px;width:1040px;height:600px}
+#so{left:1232px;top:260px;width:528px;height:600px}
+#so .sol{left:32px}
+.fcard .fl{font-size:38px}
+#wGiven{position:absolute;left:36px;top:80px;width:712px;display:flex;flex-wrap:wrap;gap:14px}#wGiven .pillp{position:static}
+.fcard .fl.txt{font:500 28px Poppins}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 12 · ELECTRONICS · CH 1 FIELD EFFECT TRANSISTOR (FET)</div>
+    <div class="subj" id="subj">BREADBOARD</div>
+    <div id="title">Why the current goes <span class="acc">flat</span></div>
+    <div id="sub">JFET characteristics and parameters</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E8A317" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="ghost" id="ghost">EXAMPLE FIGURES</div>
+
+    <!-- A: hook -->
+    <div class="sc" id="sA">
+      <div class="card" id="aC"><div class="lbl" style="left:32px;top:28px">AARAV · PCME · JEE</div>
+        <img id="aImg" src="../../assets/illustrations/puc/aarav.png" alt="">
+        <div class="pillp ac" id="aPill" style="left:460px;top:500px">Why flat?</div></div>
+      <div class="card" id="h1C"><div class="lbl" style="left:32px;top:28px">THE SUPPLY KNOB</div>
+        <svg class="full" id="h1S" width="784" height="284"></svg>
+        <div class="big" id="h1V" style="left:330px;top:110px;color:#0E8F8F">0.0 V</div><div class="sm" id="h1L" style="left:330px;top:190px">VOLTAGE ACROSS THE JFET</div></div>
+      <div class="card" id="h2C"><div class="lbl" style="left:32px;top:28px">THE CURRENT</div>
+        <div class="tag" id="h2T" style="right:28px;top:22px">GOES FLAT</div>
+        <svg class="full" id="h2S" width="784" height="284"></svg></div>
+    </div>
+
+    <!-- P: the hose idea -->
+    <div class="sc" id="sP">
+      <div class="card L2" id="pL"><div class="lbl" style="left:32px;top:28px">PUSH HARDER, PINCH TIGHTER</div>
+        <svg class="full" id="pS" width="784" height="600"></svg>
+        <div class="sm" id="pH1" style="left:36px;top:428px">PUSH</div><div class="bar2" id="pH" style="left:260px;top:428px;width:480px"><i style="background:#16213E"></i></div>
+        <div class="sm" id="pF1" style="left:36px;top:488px">WATER FLOW</div><div class="bar2" id="pF" style="left:260px;top:488px;width:480px"><i style="background:#8FA3C8"></i></div></div>
+      <div class="card R2" id="pR"><div class="lbl" style="left:32px;top:28px">INSIDE THE JFET</div>
+        <div class="tag" id="pT" style="right:28px;top:22px">DRAIN END PINCHES</div>
+        <svg class="full" id="pX" width="784" height="600"></svg>
+        <div class="strip" id="pStrip" style="top:496px"><span id="pZ"></span><span>More <span class="acc">V</span><span class="acc" style="font-size:.6em">DS</span>, tighter pinch, <span class="acc">flat current</span></span></div></div>
+    </div>
+
+    <!-- B: breadboard -->
+    <div class="sc" id="sB">
+      <div class="card" id="ck"><div class="lbl" style="left:32px;top:28px">CIRCUIT · N CHANNEL JFET</div>
+        <div class="tag" id="ckE" style="right:32px;top:22px"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="#E8A317" stroke="#16213E" stroke-width="1.5"/></svg>ELECTRONS</div>
+        <svg class="full" id="ckS" width="640" height="600"></svg>
+        <div class="ro3" id="ro"></div></div>
+      <div class="card" id="gr"><div class="lbl" style="left:32px;top:28px">DRAIN CHARACTERISTICS · LIVE</div><svg class="full" id="grS" width="928" height="600"></svg></div>
+    </div>
+
+    <!-- G: transfer characteristic -->
+    <div class="sc" id="sG">
+      <div class="card" id="gC"><div class="lbl" style="left:32px;top:28px">TRANSFER CHARACTERISTIC</div><div class="lbl" style="left:900px;top:28px">DRAIN CHARACTERISTICS</div>
+        <svg class="full" id="gS" width="1600" height="600"></svg>
+        <div class="gstrip" id="gStrip" style="top:494px"><span class="m">SHOCKLEY'S EQUATION</span><span id="gEq"></span><span class="m" id="gNote"></span></div></div>
+    </div>
+
+    <!-- D: parameters -->
+    <div class="sc" id="sD">
+      <div class="card L2" id="dL"><div class="lbl" style="left:32px;top:28px">READ THE SLOPES</div><svg class="full" id="dS" width="784" height="600"></svg></div>
+      <div class="card R2" id="dR"><div class="lbl" style="left:36px;top:28px">THREE PARAMETERS</div><div class="hbox" id="dBox" style="top:464px;height:96px"></div><div id="dSteps"></div></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div class="sc" id="sW">
+      <div class="card L2" id="wL"><div class="lbl" style="left:32px;top:28px">WORKED EXAMPLE · FIND r<sub>d</sub>, g<sub>m</sub>, μ</div>
+        <div class="mt" id="wT1" style="left:36px;top:84px;width:712px"><div class="tl">TEST 1 · GATE FIXED</div><div class="tn">V<sub>DS</sub>: 4 → 10 V &nbsp;·&nbsp; I<sub>D</sub>: 8.0 → 8.2 mA</div></div>
+        <div class="mt" id="wT2" style="left:36px;top:212px;width:712px"><div class="tl">TEST 2 · V<sub>DS</sub> FIXED</div><div class="tn">ΔV<sub>GS</sub> = 0.2 V &nbsp;·&nbsp; ΔI<sub>D</sub> = 0.6 mA</div></div>
+        <div class="pillp" id="wP1" style="left:36px;top:380px"></div><div class="pillp" id="wP2" style="left:286px;top:380px"></div><div class="pillp ac" id="wP3" style="left:516px;top:380px"></div>
+        <div class="pillp good" id="wV" style="left:36px;top:480px">μ = 90 · no unit</div></div>
+      <div class="card R2" id="wR"><div class="lbl" style="left:36px;top:28px">SOLUTION STEPS</div><div class="hbox" id="wBox" style="top:384px;height:96px"></div><div id="wSteps"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div class="sc" id="sX"><div class="card red" id="trap"></div>
+      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">AT PINCH-OFF</div><svg id="tcS" width="720" height="210" style="position:absolute;left:32px;top:70px"></svg></div>
+      <div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div class="sc" id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + next -->
+    <div class="sc" id="sF"></div>
+  </div>
+  <div id="stmt"><div id="st1">Past pinch-off, the current stays flat.</div><div id="st2">That is where a FET <span class="acc">amplifies.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

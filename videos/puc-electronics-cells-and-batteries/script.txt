@@ -1,0 +1,63 @@
+H1|0.3|Aarav reads the back of an old phone battery.
+H2|0.3|Three point seven volts. Five thousand milliampere hours.
+H3|0.3|And when he plays a heavy game, the battery bar drops fast.
+H4|0.5|What do these numbers really mean? Let's find out.
+C1|0.35|A cell is like a small pump for electric charge.
+C2|0.35|Inside are two metal plates, called electrodes.
+C3|0.35|Between them is a chemical paste or liquid, called the electrolyte.
+C4|0.65|A chemical reaction pushes electrons out of the negative terminal.
+C5|0.35|They travel round the circuit, and come back in at the positive terminal.
+C6|0.65|So a cell turns chemical energy into electrical energy.
+C7|0.65|Join two or more cells together, and you get a battery.
+P1|0.35|Cells come in two families.
+P2|0.35|Primary cells are used once. Their reaction cannot be reversed.
+P3|0.65|A torch dry cell is primary. It gives about one point five volts.
+P4|0.35|Secondary cells can be recharged again and again.
+P5|0.35|A lead acid cell gives about two volts. Six of them make a twelve volt car battery.
+P6|0.65|A lithium ion cell, like a phone battery, gives about three point seven volts.
+B1|0.35|Now, why does the battery bar drop during a heavy game?
+B2|0.35|Every cell has a little resistance inside it. We call it internal resistance, small r.
+B3|0.65|It is like a narrow pipe inside the pump. Some push is lost there.
+B4|0.35|Let's test a cell on the breadboard. E M F one point five volts, r half an ohm.
+B5|0.35|With no load, no current flows. The meter reads the full one point five volts.
+B6|0.65|This full push, with no current, is called the E M F, capital E.
+B7|0.35|Now connect a two point five ohm load. The current is half an ampere.
+B8|0.35|The meter drops to one point two five volts.
+B9|0.35|A one ohm load. More current, one ampere. The voltage falls to one volt.
+B10|0.65|A half ohm load. One and a half amperes. Only zero point seven five volts left.
+B11|0.65|Watch the scope. More current, lower voltage at the terminals.
+D1|0.35|Let's write the rule step by step.
+D2|0.7|The E M F drives current through both resistances. E equals I times R plus r.
+D3|0.7|So the current I equals E divided by R plus r.
+D4|0.7|The voltage at the terminals is V equals I R.
+D5|0.7|Put them together. V equals E minus I r.
+D6|0.65|I r is the voltage lost inside the cell. A heavy game draws more current, so more is lost.
+S1|0.35|Now the milliampere hours. This is the capacity of the battery.
+S2|0.35|It tells how much charge the battery can deliver.
+S3|0.65|Current times time. Milliamperes multiplied by hours.
+S4|0.65|One milliampere hour is three point six coulombs.
+S5|0.35|Cells can also be joined. In series, the E M Fs add up.
+S6|0.65|The internal resistances add up too. So n cells give n E, and n r.
+S7|0.35|In parallel, identical cells keep the same E M F.
+S8|0.65|But the internal resistance becomes r by n. And they last longer.
+T1|0.8|A cell's push is E. Its inside takes away I r.
+W1|0.35|Worked example. A phone battery is three point seven volts, five thousand milliampere hours.
+W2|0.7|Five thousand milliampere hours is five ampere hours.
+W3|0.7|Charge equals five amperes, times thirty six hundred seconds. That is eighteen thousand coulombs.
+W4|0.7|Energy equals voltage times charge. Three point seven times eighteen thousand.
+W5|0.7|That is sixty six thousand six hundred joules, or eighteen point five watt hours.
+W6|0.65|If the phone draws two hundred fifty milliamperes, it lasts five thousand by two fifty. Twenty hours.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think E M F and terminal voltage are the same.
+X3|0.65|They are not. V equals E minus I r.
+X4|0.65|They are equal only when no current flows.
+X5|0.35|Where is this asked? In P U C, C B S E and I S C board papers.
+X6|0.35|J E E Main asks it too, with cells in series and in parallel.
+X7|0.65|Expect terminal voltage, internal resistance, and combinations of cells.
+Q1|5.4|Try this. Four identical cells, each one point five volts with a quarter ohm inside, are in series with a five ohm resistor. What is the terminal voltage?
+A1|0.35|B. Five volts.
+A2|0.35|In series, E is four times one point five, six volts. And r is one ohm.
+A3|0.35|The current is six by five plus one. One ampere.
+A4|0.65|So V equals six minus one times one. Five volts.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, soldering and desoldering. How do you join parts so they never come loose?

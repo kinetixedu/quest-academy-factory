@@ -1,0 +1,197 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Electronics Ep 54 - Boolean Algebra and De Morgan's Theorems</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== Breadboard (PUC Electronics) layout ===== */
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.card svg.full{position:absolute;left:0;top:0}
+.big{position:absolute;font:600 56px 'IBM Plex Mono';white-space:nowrap}
+.sm{position:absolute;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.txt{position:absolute;font:500 30px/1.35 Poppins;white-space:nowrap}
+#ghost{top:168px}
+.L2{left:160px;top:260px;width:784px;height:600px}.R2{left:976px;top:260px;width:784px;height:600px}
+.strip{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:18px;padding:0 28px;box-sizing:border-box;font:600 28px Poppins;white-space:nowrap}
+.strip .acc{color:var(--ac)}
+.st2{position:absolute;left:36px;display:flex;align-items:center;gap:22px;white-space:nowrap}
+.st2 .n{flex:none;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st2 .sx{font-size:34px}
+.st2 .why{font:500 22px Poppins;color:var(--mute)}
+.hbox{position:absolute;left:24px;width:736px;border-radius:14px;background:var(--ac2)}
+.tile{position:absolute;left:32px;width:720px;height:120px;border-radius:14px;background:var(--soft);border:2.5px solid var(--soft)}
+.tile .tl{position:absolute;left:24px;top:24px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.tile .tn{position:absolute;left:24px;top:56px;font:700 30px Poppins;color:var(--ink2);white-space:nowrap}
+.bar2{position:absolute;height:28px;border-radius:14px;background:var(--soft);overflow:hidden}.bar2 i{position:absolute;left:0;top:0;height:28px;border-radius:14px}
+/* hook */
+#aC{left:160px;top:260px;width:784px;height:600px;overflow:hidden}
+#aImg{position:absolute;left:24px;top:84px;height:516px}
+#h1C{left:976px;top:260px;width:784px;height:284px}
+#h2C{left:976px;top:576px;width:784px;height:284px}
+/* breadboard */
+#ck{left:160px;top:260px;width:928px;height:600px}
+#sc{left:1120px;top:260px;width:640px;height:300px}
+#rb{left:1120px;top:592px;width:640px;height:268px}
+#scS{position:absolute;left:24px;top:76px}
+.ro2{position:absolute;left:32px;top:76px;width:576px;display:grid;grid-template-columns:auto 1fr auto;column-gap:18px;row-gap:14px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .k.n{font-style:normal;font-size:24px;font-family:'IBM Plex Mono';letter-spacing:.06em}
+.ro2 .v{font:600 38px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 22px 'IBM Plex Mono';color:var(--mute);white-space:nowrap;min-width:52px}
+.tg{position:absolute;left:32px;top:76px;width:250px;height:64px;border-radius:14px;background:var(--soft);display:flex;align-items:center;gap:14px;padding:0 16px;box-sizing:border-box}
+.tg .tr{position:relative;flex:none;width:64px;height:34px;border-radius:17px;background:#CBD0DA}
+.tg .tr i{position:absolute;top:4px;left:4px;width:26px;height:26px;border-radius:50%;background:#fff}
+.tg .tv{font:600 28px 'IBM Plex Mono';white-space:nowrap}
+.tg .tk{font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* exam */
+#trap{left:160px;top:260px;width:784px;height:300px}
+#tc{left:976px;top:260px;width:784px;height:300px}
+#wa{left:160px;top:592px;width:1600px;height:268px}
+#mq{left:160px;top:260px;width:1040px;height:600px}
+#so{left:1232px;top:260px;width:528px;height:600px}
+#so .sol{left:32px}
+.fcard .fl{font-size:40px}
+.ro2.six{grid-template-columns:auto 1fr auto auto 1fr auto;column-gap:14px;row-gap:22px;top:92px}
+.ro2.six .u{min-width:40px}
+#wGiven{position:absolute;left:36px;top:80px;width:712px;display:flex;flex-wrap:wrap;gap:14px}#wGiven .pillp{position:static}
+.fcard .fl.txt{font:500 28px Poppins}
+.hq{position:absolute;right:40px;top:92px;width:100px;height:100px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 56px Poppins;color:#fff;background:var(--ac)}
+#tt{left:1120px;top:260px;width:640px;height:600px}
+.tth,.ttr{position:absolute;left:32px;width:576px;height:60px;border-radius:12px;display:flex;align-items:center}
+.tth span,.ttr span{position:absolute;text-align:center;width:120px;font:600 34px 'IBM Plex Mono'}
+.tth span{font:600 22px 'IBM Plex Mono';color:var(--mute);letter-spacing:.08em}
+.ttr{background:var(--soft)}
+#ttX{position:absolute;left:36px;top:452px;width:568px;font-size:44px}
+#ttW{position:absolute;left:36px;top:530px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.cond{position:absolute;left:36px;width:340px;height:64px;border-radius:14px;background:var(--soft);display:flex;align-items:center;gap:14px;padding:0 18px;box-sizing:border-box;font:600 24px Poppins;white-space:nowrap}
+.cond .ck{width:34px;height:34px;border-radius:50%;background:#CBD0DA;display:flex;align-items:center;justify-content:center}
+.chipI{position:absolute;width:150px;height:84px;border-radius:12px;background:var(--ink);color:#fff;font:600 26px 'IBM Plex Mono';display:flex;align-items:center;justify-content:center;letter-spacing:.06em}
+.need{position:absolute;top:96px;width:200px;height:84px;border-radius:14px;background:var(--soft);font:700 32px 'IBM Plex Mono';display:flex;align-items:center;justify-content:center;gap:12px}
+.rc{position:absolute;left:32px;width:720px;height:92px;border-radius:14px;background:var(--soft);border:2.5px solid var(--soft)}
+.rc .a{position:absolute;left:24px;top:24px;font:700 32px 'IBM Plex Mono'}
+.rc .b{position:absolute;left:220px;top:20px;font:600 22px 'IBM Plex Mono';color:var(--mute);letter-spacing:.06em}
+.rc .c{position:absolute;left:220px;top:50px;font:600 22px Poppins;color:var(--ink)}
+.rc .d{position:absolute;left:480px;top:20px;font:600 22px 'IBM Plex Mono';color:var(--mute);letter-spacing:.06em}
+.rc .e{position:absolute;left:480px;top:50px;font:600 22px Poppins;color:var(--ink)}
+/* ep 54 */
+.rtx{position:absolute;left:36px;top:84px;width:712px;font:500 32px/1.4 Poppins;white-space:normal}
+.rtx b{color:var(--ac);font-weight:700}
+.bv{position:absolute;top:84px;width:340px;height:200px;border-radius:16px;background:var(--soft);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+.bv .d{font:700 96px 'IBM Plex Mono';line-height:1}.bv .w{font:600 24px Poppins;color:var(--mute)}
+.who{position:absolute;left:36px;top:330px;width:712px;height:120px;border-radius:14px;border:2.5px dashed var(--line);box-sizing:border-box;padding:18px 26px}
+.who .a{font:700 30px Poppins}.who .b{font:500 22px Poppins;color:var(--mute);margin-top:6px}
+.opr{position:absolute;left:32px;width:720px;height:112px;border-radius:14px;background:var(--soft)}
+.opr .k{position:absolute;left:28px;top:34px;font:700 32px 'IBM Plex Mono'}
+.opr .s{position:absolute;left:250px;top:24px;font-size:46px}
+.opr .m{position:absolute;left:470px;top:38px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+.lw{position:absolute;width:224px;height:132px;border-radius:14px;background:var(--soft);border:2.5px solid var(--soft);display:flex;align-items:center;justify-content:center;font-size:36px;box-sizing:border-box}
+.big2{position:absolute;left:0;width:784px;text-align:center;font-size:58px}
+.tag{position:absolute;font:600 20px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.rdo{position:absolute;height:52px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:12px;padding:0 18px;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+.fr{position:absolute;left:32px;width:720px;border-radius:14px;background:var(--soft);padding:22px 28px;box-sizing:border-box}
+.fr .t{font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}.fr .x{font-size:52px;margin-top:10px}
+.eqb{position:absolute;left:32px;top:110px;width:720px;height:140px;border-radius:16px;background:var(--ac2);display:flex;align-items:center;justify-content:center;font-size:56px}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · ELECTRONICS · CH 8 INTRODUCTION TO DIGITAL ELECTRONICS</div>
+    <div class="subj" id="subj">BREADBOARD</div>
+    <div id="title">Break the line, <span class="acc">change the sign</span></div>
+    <div id="sub">Boolean algebra and De Morgan's theorems</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E8A317" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="ghost" id="ghost">EXAMPLE FIGURES</div>
+
+    <!-- A: hook -->
+    <div class="sc" id="sA">
+      <div class="card" id="aC"><div class="lbl" style="left:32px;top:28px">AARAV · PCME · JEE</div>
+        <img id="aImg" src="../../assets/illustrations/puc/aarav.png" alt=""></div>
+      <div class="card" id="h1C"><div class="lbl" style="left:32px;top:28px">RULE ONE · ON THE FRIDGE</div>
+        <div class="rtx" id="h1T" style="width:590px">No games, unless homework <b>and</b> chores are <b>both</b> done.</div><div class="hq" id="hQ">?</div></div>
+      <div class="card" id="h2C"><div class="lbl" style="left:32px;top:28px">RULE TWO</div>
+        <div class="rtx" id="h2T" style="width:590px">No games if homework is <b>not</b> done, <b>or</b> chores are <b>not</b> done.</div></div>
+    </div>
+
+    <!-- R: Boolean algebra -->
+    <div class="sc" id="sR">
+      <div class="card L2" id="rL"><div class="lbl" style="left:32px;top:28px">BOOLEAN ALGEBRA · ONLY TWO VALUES</div>
+        <div class="bv" id="bv1" style="left:36px"><div class="d" style="color:var(--ac)">1</div><div class="w">true · on · high</div></div>
+        <div class="bv" id="bv0" style="left:408px"><div class="d">0</div><div class="w">false · off · low</div></div>
+        <div class="who" id="who"><div class="a">George Boole · 1854</div><div class="b">wrote the rules of this two-value algebra</div></div>
+        <div class="strip" id="rStrip" style="top:492px"><span>Here <span class="acc">1 + 1 = 1</span> &nbsp;(plus means OR)</span></div></div>
+      <div class="card R2" id="rR"><div class="lbl" style="left:32px;top:28px">THREE MOVES</div>
+        <div class="opr" id="op0" style="top:84px"><div class="k">AND</div><div class="s" id="ops0"></div><div class="m">dot</div></div>
+        <div class="opr" id="op1" style="top:220px"><div class="k">OR</div><div class="s" id="ops1"></div><div class="m">plus</div></div>
+        <div class="opr" id="op2" style="top:356px"><div class="k">NOT</div><div class="s" id="ops2"></div><div class="m">bar on top</div></div></div>
+    </div>
+
+    <!-- L: laws with switches -->
+    <div class="sc" id="sL">
+      <div class="card L2" id="lL"><div class="lbl" id="lLL" style="left:32px;top:28px">THE SWITCH PICTURE</div><svg class="full" id="lS" width="784" height="600"></svg>
+        <div class="rdo" id="lrA" style="left:36px;top:456px"><span style="color:var(--mute);font-size:20px">A</span><span id="lrAv">0</span></div>
+        <div class="rdo" id="lrY" style="left:176px;top:456px"><span style="color:var(--mute);font-size:20px">LAMP</span><span id="lrYv">0</span></div>
+        <div id="lX" style="position:absolute;left:330px;top:446px;width:420px;text-align:center;font-size:52px"></div></div>
+      <div class="card R2" id="lR"><div class="lbl" style="left:32px;top:28px">THE MAIN LAWS</div><div id="laws"></div></div>
+    </div>
+
+    <!-- D: De Morgan -->
+    <div class="sc" id="sD">
+      <div class="card L2" id="dL"><div class="lbl" style="left:32px;top:28px">DE MORGAN · THEOREM 1</div>
+        <div class="who" id="dWho" style="top:96px"><div class="a">Augustus De Morgan</div><div class="b">British mathematician · his two rules for NOT</div></div><div class="big2" id="d1a" style="top:96px"></div><div class="big2" id="d1b" style="top:96px"></div>
+        <div class="tag" id="d1t" style="left:36px;top:200px">break the bar · + becomes ·</div>
+        <svg class="full" id="d1S" width="784" height="600"></svg>
+        <div class="strip" id="dS1" style="top:492px"><span>NOR = AND with <span class="acc">bubbled inputs</span></span></div></div>
+      <div class="card R2" id="dR"><div class="lbl" style="left:32px;top:28px">DE MORGAN · THEOREM 2</div>
+        <div class="big2" id="d2a" style="top:96px"></div><div class="big2" id="d2b" style="top:96px"></div>
+        <div class="tag" id="d2t" style="left:36px;top:200px">break the bar · · becomes +</div>
+        <svg class="full" id="d2S" width="784" height="600"></svg>
+        <div class="strip" id="dS2" style="top:492px"><span>NAND = OR with <span class="acc">bubbled inputs</span></span></div></div>
+    </div>
+
+    <!-- B: breadboard proof -->
+    <div class="sc" id="sB">
+      <div class="card" id="ck"><div class="lbl" id="ckL" style="left:32px;top:28px">TWO CIRCUITS · SAME INPUTS</div>
+        <svg class="full" id="ckS" width="928" height="600"></svg>
+        <div class="tg" id="tgA" style="left:32px;top:92px;width:200px"><div class="tr"><i></i></div><div><div class="tk">INPUT A</div><div class="tv">0</div></div></div>
+        <div class="tg" id="tgB" style="left:32px;top:212px;width:200px"><div class="tr"><i></i></div><div><div class="tk">INPUT B</div><div class="tv">0</div></div></div></div>
+      <div class="card" id="tt"><div class="lbl" id="ttL" style="left:32px;top:28px">TRUTH TABLE · THEOREM 2</div><div id="ttB"></div>
+        <div class="hbox" id="ttBox" style="top:438px;height:136px;width:592px"></div><div id="ttX"></div><div id="ttW"></div></div>
+    </div>
+
+    <!-- K: back to the fridge -->
+    <div class="sc" id="sK">
+      <div class="card L2" id="kL"><div class="lbl" style="left:32px;top:28px">BACK TO THE FRIDGE</div>
+        <div class="fr" id="kH" style="top:84px"><div class="t">H = HOMEWORK DONE · C = CHORES DONE</div></div>
+        <div class="fr" id="k1" style="top:200px"><div class="t">RULE ONE</div><div class="x" id="k1x"></div></div>
+        <div class="fr" id="k2" style="top:370px"><div class="t">RULE TWO</div><div class="x" id="k2x"></div></div></div>
+      <div class="card R2" id="kR"><div class="lbl" style="left:32px;top:28px">BY THEOREM 2</div>
+        <div class="eqb" id="kEq"></div><div class="strip" id="kStrip" style="top:492px"><span>Same truth table = <span class="acc">same rule</span></span></div></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div class="sc" id="sW">
+      <div class="card L2" id="wL"><div class="lbl" style="left:32px;top:28px">WORKED EXAMPLE · SIMPLIFY</div><svg class="full" id="wS" width="784" height="600"></svg></div>
+      <div class="card R2" id="wR"><div class="lbl" style="left:36px;top:28px">SOLUTION STEPS</div><div class="hbox" id="wBox" style="top:470px;height:96px"></div><div id="wSteps"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div class="sc" id="sX"><div class="card red" id="trap"></div>
+      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">TEST IT · A = 1, B = 0</div><div id="tcA" style="position:absolute;left:36px;top:92px;font-size:36px"></div><div id="tcB" style="position:absolute;left:36px;top:160px;font-size:36px"></div><div id="tcC" style="position:absolute;left:36px;top:224px;font-size:36px"></div></div>
+      <div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div class="sc" id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + next -->
+    <div class="sc" id="sF"></div>
+  </div>
+  <div id="stmt"><div id="st1">Break the line.</div><div id="st2"><span class="acc">Change the sign.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

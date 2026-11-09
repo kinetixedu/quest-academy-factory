@@ -1,0 +1,174 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Electronics Ep 56 - Half Adder and Full Adder</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== Breadboard (PUC Electronics) layout ===== */
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.card svg.full{position:absolute;left:0;top:0}
+.big{position:absolute;font:600 56px 'IBM Plex Mono';white-space:nowrap}
+.sm{position:absolute;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.txt{position:absolute;font:500 30px/1.35 Poppins;white-space:nowrap}
+#ghost{top:168px}
+.L2{left:160px;top:260px;width:784px;height:600px}.R2{left:976px;top:260px;width:784px;height:600px}
+.strip{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:18px;padding:0 28px;box-sizing:border-box;font:600 28px Poppins;white-space:nowrap}
+.strip .acc{color:var(--ac)}
+.st2{position:absolute;left:36px;display:flex;align-items:center;gap:22px;white-space:nowrap}
+.st2 .n{flex:none;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st2 .sx{font-size:34px}
+.st2 .why{font:500 22px Poppins;color:var(--mute)}
+.hbox{position:absolute;left:24px;width:736px;border-radius:14px;background:var(--ac2)}
+.tile{position:absolute;left:32px;width:720px;height:120px;border-radius:14px;background:var(--soft);border:2.5px solid var(--soft)}
+.tile .tl{position:absolute;left:24px;top:24px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.tile .tn{position:absolute;left:24px;top:56px;font:700 30px Poppins;color:var(--ink2);white-space:nowrap}
+.bar2{position:absolute;height:28px;border-radius:14px;background:var(--soft);overflow:hidden}.bar2 i{position:absolute;left:0;top:0;height:28px;border-radius:14px}
+/* hook */
+#aC{left:160px;top:260px;width:784px;height:600px;overflow:hidden}
+#aImg{position:absolute;left:24px;top:84px;height:516px}
+#h1C{left:976px;top:260px;width:784px;height:284px}
+#h2C{left:976px;top:576px;width:784px;height:284px}
+/* breadboard */
+#ck{left:160px;top:260px;width:928px;height:600px}
+#sc{left:1120px;top:260px;width:640px;height:300px}
+#rb{left:1120px;top:592px;width:640px;height:268px}
+#scS{position:absolute;left:24px;top:76px}
+.ro2{position:absolute;left:32px;top:76px;width:576px;display:grid;grid-template-columns:auto 1fr auto;column-gap:18px;row-gap:14px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .k.n{font-style:normal;font-size:24px;font-family:'IBM Plex Mono';letter-spacing:.06em}
+.ro2 .v{font:600 38px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 22px 'IBM Plex Mono';color:var(--mute);white-space:nowrap;min-width:52px}
+.tg{position:absolute;left:32px;top:76px;width:250px;height:64px;border-radius:14px;background:var(--soft);display:flex;align-items:center;gap:14px;padding:0 16px;box-sizing:border-box}
+.tg .tr{position:relative;flex:none;width:64px;height:34px;border-radius:17px;background:#CBD0DA}
+.tg .tr i{position:absolute;top:4px;left:4px;width:26px;height:26px;border-radius:50%;background:#fff}
+.tg .tv{font:600 28px 'IBM Plex Mono';white-space:nowrap}
+.tg .tk{font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* exam */
+#trap{left:160px;top:260px;width:784px;height:300px}
+#tc{left:976px;top:260px;width:784px;height:300px}
+#wa{left:160px;top:592px;width:1600px;height:268px}
+#mq{left:160px;top:260px;width:1040px;height:600px}
+#so{left:1232px;top:260px;width:528px;height:600px}
+#so .sol{left:32px}
+.fcard .fl{font-size:40px}
+.ro2.six{grid-template-columns:auto 1fr auto auto 1fr auto;column-gap:14px;row-gap:22px;top:92px}
+.ro2.six .u{min-width:40px}
+#wGiven{position:absolute;left:36px;top:80px;width:712px;display:flex;flex-wrap:wrap;gap:14px}#wGiven .pillp{position:static}
+.fcard .fl.txt{font:500 28px Poppins}
+.hq{position:absolute;right:40px;top:92px;width:100px;height:100px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 56px Poppins;color:#fff;background:var(--ac)}
+#tt{left:1120px;top:260px;width:640px;height:600px}
+.tth,.ttr{position:absolute;left:32px;width:576px;height:60px;border-radius:12px;display:flex;align-items:center}
+.tth span,.ttr span{position:absolute;text-align:center;width:120px;font:600 34px 'IBM Plex Mono'}
+.tth span{font:600 22px 'IBM Plex Mono';color:var(--mute);letter-spacing:.08em}
+.ttr{background:var(--soft)}
+#ttX{position:absolute;left:36px;top:452px;width:568px;font-size:44px}
+#ttW{position:absolute;left:36px;top:530px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.cond{position:absolute;left:36px;width:340px;height:64px;border-radius:14px;background:var(--soft);display:flex;align-items:center;gap:14px;padding:0 18px;box-sizing:border-box;font:600 24px Poppins;white-space:nowrap}
+.cond .ck{width:34px;height:34px;border-radius:50%;background:#CBD0DA;display:flex;align-items:center;justify-content:center}
+.chipI{position:absolute;width:150px;height:84px;border-radius:12px;background:var(--ink);color:#fff;font:600 26px 'IBM Plex Mono';display:flex;align-items:center;justify-content:center;letter-spacing:.06em}
+.need{position:absolute;top:96px;width:200px;height:84px;border-radius:14px;background:var(--soft);font:700 32px 'IBM Plex Mono';display:flex;align-items:center;justify-content:center;gap:12px}
+.rc{position:absolute;left:32px;width:720px;height:92px;border-radius:14px;background:var(--soft);border:2.5px solid var(--soft)}
+.rc .a{position:absolute;left:24px;top:24px;font:700 32px 'IBM Plex Mono'}
+.rc .b{position:absolute;left:220px;top:20px;font:600 22px 'IBM Plex Mono';color:var(--mute);letter-spacing:.06em}
+.rc .c{position:absolute;left:220px;top:50px;font:600 22px Poppins;color:var(--ink)}
+.rc .d{position:absolute;left:480px;top:20px;font:600 22px 'IBM Plex Mono';color:var(--mute);letter-spacing:.06em}
+.rc .e{position:absolute;left:480px;top:50px;font:600 22px Poppins;color:var(--ink)}
+/* ep 56 */
+.col{position:absolute;font:600 64px 'IBM Plex Mono';text-align:right;white-space:pre;line-height:1}
+.cy{position:absolute;font:600 32px 'IBM Plex Mono';color:var(--ac)}
+.hr{position:absolute;height:5px;border-radius:3px;background:var(--ink)}
+.disp{position:absolute;left:36px;top:84px;width:300px;height:150px;border-radius:14px;background:var(--ink);color:#fff;font:600 84px 'IBM Plex Mono';display:flex;align-items:center;justify-content:flex-end;padding-right:28px;box-sizing:border-box}
+.gchip{position:absolute;width:120px;height:56px;border-radius:12px;background:var(--soft);font:600 22px 'IBM Plex Mono';display:flex;align-items:center;justify-content:center;letter-spacing:.06em}
+.bin{position:absolute;left:32px;width:720px;height:84px;border-radius:14px;background:var(--soft);display:flex;align-items:center;padding:0 28px;box-sizing:border-box;font:600 36px 'IBM Plex Mono';white-space:nowrap}
+.bin .nt{margin-left:auto;font:500 22px Poppins;color:var(--mute)}
+.anno{position:absolute;font:600 22px 'IBM Plex Mono';white-space:nowrap}
+.tt5 .tth,.tt5 .ttr{height:50px}
+.tt5 .tth span,.tt5 .ttr span{width:96px;font-size:30px}
+.tt5 .tth span{font-size:18px}
+.fx{position:absolute;left:36px;width:712px;text-align:center;font-size:40px}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · ELECTRONICS · CH 8 INTRODUCTION TO DIGITAL ELECTRONICS</div>
+    <div class="subj" id="subj">BREADBOARD</div>
+    <div id="title">How logic gates <span class="acc">add numbers</span></div>
+    <div id="sub">Half adder and full adder</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E8A317" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="ghost" id="ghost">EXAMPLE FIGURES</div>
+
+    <!-- A: hook -->
+    <div class="sc" id="sA">
+      <div class="card" id="aC"><div class="lbl" style="left:32px;top:28px">AARAV · PCME · JEE</div>
+        <img id="aImg" src="../../assets/illustrations/puc/aarav.png" alt=""></div>
+      <div class="card" id="h1C"><div class="lbl" style="left:32px;top:28px">ON PAPER</div>
+        <div class="cy" id="hCy" style="left:385px;top:70px">1</div>
+        <div class="col" id="hN1" style="left:60px;top:112px;text-align:left">7 + 5</div>
+        <div class="col" id="hRs" style="left:300px;top:112px;text-align:left">= 12</div>
+        <div class="anno" id="hAn" style="left:80px;top:212px;color:var(--mute)">write 2, carry 1 to the next column</div></div>
+      <div class="card" id="h2C"><div class="lbl" style="left:32px;top:28px">THE CALCULATOR</div>
+        <div class="disp" id="hDp">12</div>
+        <div class="gchip" id="g0" style="left:380px;top:96px">AND</div><div class="gchip" id="g1" style="left:520px;top:96px">OR</div>
+        <div class="gchip" id="g2" style="left:380px;top:170px">XOR</div><div class="gchip" id="g3" style="left:520px;top:170px">NOT</div>
+        <div class="anno" id="hG" style="left:380px;top:240px;color:var(--mute)">only logic gates inside</div></div>
+    </div>
+
+    <!-- R: binary addition -->
+    <div class="sc" id="sR">
+      <div class="card L2" id="rL"><div class="lbl" style="left:32px;top:28px">ADDING IN BINARY</div>
+        <div class="bin" id="b0" style="top:84px">0 + 0 = 0</div><div class="bin" id="b1" style="top:184px">0 + 1 = 1</div>
+        <div class="bin" id="b2" style="top:284px">1 + 1 = 10<span class="nt">two, written in binary</span></div>
+        <div class="strip" id="rStrip" style="top:492px"><span>Each column: a <span class="acc">sum</span> bit and a <span class="acc">carry</span> bit</span></div></div>
+      <div class="card R2" id="rR"><div class="lbl" style="left:32px;top:28px">ONE COLUMN</div><svg class="full" id="rS" width="784" height="600"></svg></div>
+    </div>
+
+    <!-- B: half adder breadboard -->
+    <div class="sc" id="sB">
+      <div class="card" id="ck"><div class="lbl" style="left:32px;top:28px">HALF ADDER ON THE BREADBOARD</div>
+        <svg class="full" id="ckS" width="928" height="600"></svg>
+        <div class="tg" id="tgA" style="left:32px;top:84px;width:200px"><div class="tr"><i></i></div><div><div class="tk">INPUT A</div><div class="tv">0</div></div></div>
+        <div class="tg" id="tgB" style="left:32px;top:172px;width:200px"><div class="tr"><i></i></div><div><div class="tk">INPUT B</div><div class="tv">0</div></div></div></div>
+      <div class="card" id="tt"><div class="lbl" style="left:32px;top:28px">HALF ADDER · TRUTH TABLE</div><div id="ttB"></div>
+        <div class="hbox" id="ttBox" style="top:438px;height:136px;width:592px"></div><div id="ttX"></div><div id="ttW"></div></div>
+    </div>
+
+    <!-- G: full adder -->
+    <div class="sc" id="sG">
+      <div class="card L2" id="gL"><div class="lbl" id="gLL" style="left:32px;top:28px">ONE INPUT MISSING</div><svg class="full" id="gS" width="784" height="600"></svg>
+        <div class="fx" id="gF1" style="top:372px"></div><div class="fx" id="gF2" style="top:460px"></div></div>
+      <div class="card R2 tt5" id="gR"><div class="lbl" style="left:32px;top:28px">FULL ADDER · TRUTH TABLE</div><div id="gT"></div></div>
+    </div>
+
+    <!-- J: full adder from half adders -->
+    <div class="sc" id="sJ">
+      <div class="card L2" id="jL"><div class="lbl" style="left:32px;top:28px">FULL ADDER = 2 HALF ADDERS + OR</div><svg class="full" id="jS" width="784" height="600"></svg></div>
+      <div class="card R2" id="jR"><div class="lbl" style="left:36px;top:28px">HOW IT WORKS</div><div id="jSteps"></div></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div class="sc" id="sW">
+      <div class="card L2" id="wL"><div class="lbl" style="left:32px;top:28px">WORKED EXAMPLE · 1 + 1 + 1</div><svg class="full" id="wS" width="784" height="600"></svg></div>
+      <div class="card R2" id="wR"><div class="lbl" style="left:36px;top:28px">SOLUTION STEPS</div><div class="hbox" id="wBox" style="top:470px;height:96px"></div><div id="wSteps"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div class="sc" id="sX"><div class="card red" id="trap"></div>
+      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">TEST IT · A = 1, B = 1</div><div id="tcA" style="position:absolute;left:36px;top:96px;font-size:36px"></div><div id="tcB" style="position:absolute;left:36px;top:182px;font-size:36px"></div></div>
+      <div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div class="sc" id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + next -->
+    <div class="sc" id="sF"></div>
+  </div>
+  <div id="stmt"><div id="st1">Sum is XOR.</div><div id="st2">Carry is <span class="acc">AND.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
