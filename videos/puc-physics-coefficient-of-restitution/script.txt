@@ -1,0 +1,53 @@
+H1|0.4|A rubber ball bounces back high. A cricket ball bounces less. A lump of dough just goes splat.
+H2|0.45|Same floor, same drop. Very different bounces.
+H3|0.35|Diya drops three balls from one metre onto the kitchen floor. A rubber ball, a cloth ball, and a lump of dough.
+H4|0.5|The rubber ball comes back to eighty one centimetres. The cloth ball, to thirty six. The dough, to zero. Can one number describe each bounce?
+H5|0.6|It can. It is called the coefficient of restitution.
+P1|0.35|Restitution means giving back. How much speed does a collision give back?
+P2|0.4|We compare two speeds. The speed of separation: how fast the bodies move apart after the hit. And the speed of approach: how fast they came together.
+P3|0.6|e equals the speed of separation divided by the speed of approach. Both are speeds, so e has no unit.
+S1|0.35|Our motion notebook. The rubber ball falls from one metre. g is nine point eight.
+S2|0.4|It hits the floor at four point four three metres per second.
+S3|0.4|It leaves at three point nine eight. The floor does not move, so e is three point nine eight over four point four three. Zero point nine.
+S4|0.5|It rises to eighty one centimetres. Every new bounce is lower, by the same factor each time.
+S5|0.35|Slow-mo replay. Freeze at the floor.
+S6|0.4|Coming in, four point four three, downward. Going out, three point nine eight, upward.
+S7|0.6|The ball squashes and springs back, but not all the way. A little energy stays behind as heat and sound.
+S8|0.4|Now the cloth ball. e is zero point six. It rises to only thirty six centimetres.
+S9|0.6|And the dough. e is zero. It hits, and stays. Nothing is given back.
+D1|0.35|Why do the heights follow e squared? Step by step.
+D2|0.75|Step one. Falling from height h, the ball hits the floor at v equals root two g h.
+D3|0.75|Step two. It bounces off at e times v.
+D4|0.75|Step three. It rises to height h one, where e v equals root two g h one.
+D5|0.75|Step four. Divide the two. e equals root of h one over h. So h one equals e squared times h.
+D6|0.6|For the rubber ball, zero point nine squared is zero point eight one. Eighty one centimetres.
+T1|0.7|Remember this. e is the speed apart, divided by the speed of approach. It lies between zero and one.
+R1|0.35|Now, how does e connect the collisions we know? Link by link.
+R2|0.4|e equals one: they part as fast as they met. Kinetic energy is kept. That is an elastic collision.
+R3|0.4|e equals zero: they do not part at all. They stick. That is perfectly inelastic.
+R4|0.6|Between zero and one: some bounce, some energy lost. Almost every real collision lives here.
+K1|0.4|Side by side. On the left, a ball hits a still wall at ten metres per second, and comes back at five. e is five over ten, one half.
+K2|0.6|On the right, cart A at six chases cart B at two. They close in at four. After the hit, A has three and B has five. They part at two. e is two over four, one half again.
+K3|3.2|Now you try. A ball hits the floor, and rises to one quarter of the height it fell from. Is e one quarter, or one half? Pause and decide.
+K4|0.65|One half! Height goes as e squared. One half squared is one quarter.
+W1|0.35|Now, one worked example.
+W2|0.5|A two kilogram ball at six metres per second hits a still one kilogram ball, head on. e is zero point five. Find both velocities.
+W3|0.75|Momentum: twelve equals two v one, plus v two.
+W4|0.75|Restitution: v two minus v one equals zero point five times six. That is three.
+W5|0.75|Put v two equals v one plus three into the first line. Three v one plus three equals twelve. So v one is three, and v two is six.
+W6|0.65|Check the energy. Thirty six joules before, nine plus eighteen after. Nine joules lost, because e is less than one.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students take e as one ball's speed after, divided by its speed before.
+X3|0.65|That works only when the other body stays still, like a floor. In general, use the speed apart over the speed of approach.
+E1|0.6|Where is this asked? In bouncing ball numericals, heights after many bounces, and two equation collision problems.
+Q1|5.4|Exam level now. A ball is dropped from five metres. e is zero point five. What total distance does it travel before it comes to rest? Pause and solve.
+A1|0.5|The answer is B. Eight point three three metres.
+A2|0.5|The first fall is five metres. After that, each bounce goes up and down, and each rise is a quarter of the one before.
+A3|0.5|The rises add up: one point two five, plus a quarter of that, and so on. That is five thirds of a metre.
+A4|0.6|Up and down doubles it, to three point three three. Add the first five. Eight point three three metres.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. Why does a lump of dough not bounce at all?
+Y3|0.9|Two. What does e equal to one tell you about a collision?
+Y4|0.9|Three. A ball hits a floor at ten metres per second, and e is zero point six. How fast does it leave?
+N1|0.3|Next time: a carrom striker hits a coin off centre, and they fly apart at an angle. Collisions in two dimensions.
