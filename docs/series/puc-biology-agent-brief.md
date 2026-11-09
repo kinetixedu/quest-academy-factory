@@ -45,3 +45,9 @@ Ep + slug, voice duration, diagrams and the process animated, facts verified (so
 - Boards and *I rows: see "Episodes 40-59" in docs/series/puc-biology.md.
 - Reference: copy the closest finished sibling episode (e.g. Ep 30 for plants, Ep 33/34 for animals) plus Ep 1; reuse its CSS/helpers verbatim, change content only.
 - Be economical: read only what you need, 2-3 stills rounds (fix only real defects: overlap, clipping, empty frame, wrong fact), 18-still final sheet, report max 6 lines per episode. Ep 59 strip: `NEXT · EP 60` with "Next: Cell - The Unit of Life".
+
+## Eps 60-79 additions (10 Nov 2026)
+- Same token-lean mode as Eps 40-59. Table, chips and slugs: "Episodes 60-79" in docs/series/puc-biology.md.
+- Cell canon colours (Ep 1 palette, keep): nucleus violet, mitochondrion orange, chloroplast green, vacuole sky, cell wall tan; add ER #C77DA0 (rose), Golgi #D9A23B (amber), ribosome #2E2A24 dots, lysosome #8E5BB5, membrane lipid head #5AA0C8 / tail #E8D9A8, protein #D0632F, chromosome/DNA violet #7B4B94, spindle #4A78C2.
+- Ch 9: never teach deleted sec 9.8-9.11. Ch 10: phases in NCERT order and names.
+- Reference siblings: Ep 1 (cell zoom ladder) for Ch 8-9, Ep 28 (n/2n) and Ep 49 for Ch 10. Ep 79 strip `NEXT · EP 80` "Photosynthesis in Higher Plants".

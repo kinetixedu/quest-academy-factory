@@ -119,3 +119,29 @@ Description of every episode adds: "Made for NCERT, CBSE, ISC (CISCE), PUC (Karn
 | 57 | Connective and Muscular Tissue *I | `CLASS 11 · BIOLOGY · CH 7 STRUCTURAL ORGANISATION IN ANIMALS` | Aarav |
 | 58 | Frog: Morphology and Anatomy  | `CLASS 11 · BIOLOGY · CH 7 STRUCTURAL ORGANISATION IN ANIMALS` | Diya |
 | 59 | Cockroach: Body and Organ Systems *I | `CLASS 11 · BIOLOGY · CH 7 STRUCTURAL ORGANISATION IN ANIMALS` | Aarav |
+
+## Episodes 60-79 (10 Nov 2026) - Class 11 Chapters 8-10, all boards
+Same rules as Eps 40-59 (10-12 year old language, all-boards description and tags). Rationalised NCERT deleted only Ch 9 sec 9.8-9.11 (bond nature, metabolism, metabolic basis, living state; MTG list): do not teach those. Ch 8 and Ch 10: no deletions. No *I rows in this batch.
+Ep 79 NEXT strip: `NEXT · EP 80` "Photosynthesis in Higher Plants".
+| ep | topic | chip | hook lead | slug |
+|---|---|---|---|---|
+| 60 | Cell: Discovery and Cell Theory | `CLASS 11 · BIOLOGY · CH 8 CELL: THE UNIT OF LIFE` | Diya | puc-biology-cell-discovery-and-cell-theory |
+| 61 | Prokaryotic and Eukaryotic Cells | `CLASS 11 · BIOLOGY · CH 8 CELL: THE UNIT OF LIFE` | Aarav | puc-biology-prokaryotic-and-eukaryotic-cells |
+| 62 | The Prokaryotic Cell: Envelope, Mesosome and Ribosomes | `CLASS 11 · BIOLOGY · CH 8 CELL: THE UNIT OF LIFE` | Diya | puc-biology-the-prokaryotic-cell-envelope-mesosome-and-ribosomes |
+| 63 | Cell Membrane: The Fluid Mosaic Model | `CLASS 11 · BIOLOGY · CH 8 CELL: THE UNIT OF LIFE` | Diya | puc-biology-cell-membrane-the-fluid-mosaic-model |
+| 64 | Cell Wall and the Endomembrane System | `CLASS 11 · BIOLOGY · CH 8 CELL: THE UNIT OF LIFE` | Aarav | puc-biology-cell-wall-and-the-endomembrane-system |
+| 65 | Mitochondria and Plastids | `CLASS 11 · BIOLOGY · CH 8 CELL: THE UNIT OF LIFE` | Diya | puc-biology-mitochondria-and-plastids |
+| 66 | Ribosomes, Cytoskeleton, Cilia, Flagella and Centrosome | `CLASS 11 · BIOLOGY · CH 8 CELL: THE UNIT OF LIFE` | Aarav | puc-biology-ribosomes-cytoskeleton-cilia-flagella-and-centrosome |
+| 67 | The Nucleus and Chromosomes | `CLASS 11 · BIOLOGY · CH 8 CELL: THE UNIT OF LIFE` | Diya | puc-biology-the-nucleus-and-chromosomes |
+| 68 | How to Analyse Chemical Composition | `CLASS 11 · BIOLOGY · CH 9 BIOMOLECULES` | Diya | puc-biology-how-to-analyse-chemical-composition |
+| 69 | Primary and Secondary Metabolites | `CLASS 11 · BIOLOGY · CH 9 BIOMOLECULES` | Aarav | puc-biology-primary-and-secondary-metabolites |
+| 70 | Biomacromolecules and Proteins | `CLASS 11 · BIOLOGY · CH 9 BIOMOLECULES` | Diya | puc-biology-biomacromolecules-and-proteins |
+| 71 | Polysaccharides and Nucleic Acids | `CLASS 11 · BIOLOGY · CH 9 BIOMOLECULES` | Aarav | puc-biology-polysaccharides-and-nucleic-acids |
+| 72 | Structure of Proteins | `CLASS 11 · BIOLOGY · CH 9 BIOMOLECULES` | Diya | puc-biology-structure-of-proteins |
+| 73 | Enzymes: How They Work | `CLASS 11 · BIOLOGY · CH 9 BIOMOLECULES` | Diya | puc-biology-enzymes-how-they-work |
+| 74 | Factors Affecting Enzyme Activity, Classification and Cofactors | `CLASS 11 · BIOLOGY · CH 9 BIOMOLECULES` | Aarav | puc-biology-factors-affecting-enzyme-activity-classification-and-cofactors |
+| 75 | The Cell Cycle and its Phases | `CLASS 11 · BIOLOGY · CH 10 CELL CYCLE AND CELL DIVISION` | Diya | puc-biology-the-cell-cycle-and-its-phases |
+| 76 | Mitosis: Prophase to Telophase | `CLASS 11 · BIOLOGY · CH 10 CELL CYCLE AND CELL DIVISION` | Diya | puc-biology-mitosis-prophase-to-telophase |
+| 77 | Cytokinesis and Significance of Mitosis | `CLASS 11 · BIOLOGY · CH 10 CELL CYCLE AND CELL DIVISION` | Aarav | puc-biology-cytokinesis-and-significance-of-mitosis |
+| 78 | Meiosis I | `CLASS 11 · BIOLOGY · CH 10 CELL CYCLE AND CELL DIVISION` | Diya | puc-biology-meiosis-i |
+| 79 | Meiosis II and Significance of Meiosis | `CLASS 11 · BIOLOGY · CH 10 CELL CYCLE AND CELL DIVISION` | Aarav | puc-biology-meiosis-ii-and-significance-of-meiosis |
