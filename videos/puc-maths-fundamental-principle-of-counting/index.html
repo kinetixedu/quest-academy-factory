@@ -1,0 +1,120 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 52 - Fundamental Principle of Counting</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 52: fundamental principle of counting (Proof board) ===== */
+:root{--x:#7A4FE0;--k:#0E8F8F}
+#stage svg circle,#stage svg g{transform-box:fill-box;transform-origin:center}
+#stage .ringW svg circle{transform-box:view-box;transform-origin:0 0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.sv{position:absolute;left:0;top:0}
+/* title card */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:54px;font:700 30px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.big{position:absolute;font-size:56px;white-space:nowrap}
+.mid{position:absolute;font-size:44px;white-space:nowrap}
+.rd{position:absolute;font:600 50px/1 'IBM Plex Mono';white-space:nowrap}
+.txt2{position:absolute;left:36px;font:600 28px/1.4 Poppins;width:712px}
+.txt2 b{color:var(--ac)}
+.cell{position:absolute;width:104px;height:72px;border-radius:12px;background:var(--soft);display:flex;align-items:center;justify-content:center;font:600 22px 'IBM Plex Mono';white-space:nowrap}
+.box{position:absolute;width:120px;height:120px;border-radius:16px;border:3px dashed var(--dim);background:#fff;display:flex;align-items:center;justify-content:center;font:700 64px Poppins}
+.bn{position:absolute;width:120px;text-align:center;font:600 40px 'IBM Plex Mono';white-space:nowrap}
+.tile{position:absolute;width:84px;height:84px;border-radius:14px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font:700 46px Poppins}
+#wl .sol .sx{font-size:27px}
+#wl .sol .sx .katex{font-size:1.2em}
+#wq{position:absolute;left:36px;top:64px;width:712px;font:600 25px/1.4 Poppins}
+.why2{color:var(--mute);font:500 22px Poppins}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.15em}
+#mq .mq .katex{font-size:1.2em}
+.trapL .tx .katex{font-size:1.2em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:46px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 6 PERMUTATIONS AND COMBINATIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">3 Shirts, 4 Pants: How Many <span class="acc">Outfits</span>?</div>
+    <div id="sub">The fundamental principle of counting</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">DIYA'S CUPBOARD</div><svg id="hS" class="sv" width="784" height="580"></svg>
+        <div class="big" id="hQ" style="left:500px;top:250px"></div>
+        <div class="pillp ac" id="hP" style="left:500px;top:470px">7? 12?</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA · GETTING READY</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">Can we count without trying them all?</div></div>
+    </div>
+
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">TRY THEM ALL · ONE BY ONE</div><svg id="dS" class="sv" width="784" height="580"></svg><div id="dC"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">COUNT THE OUTFITS</div>
+        <div class="rd" id="dN" style="left:36px;top:90px"></div><div class="big" id="d0" style="left:36px;top:200px"></div><div class="big" id="d1" style="left:36px;top:310px"></div>
+        <div class="pillp ac" id="dP" style="left:36px;top:470px">Adding the same 4, three times</div></div>
+    </div>
+
+    <div id="sG">
+      <div class="card" id="gc" style="left:160px;top:270px;width:1600px;height:580px"><div class="lbl" style="left:36px;top:30px">LIVE · A TREE DIAGRAM</div><svg id="gS" class="sv" width="1600" height="580"></svg>
+        <div class="lbl" style="left:1290px;top:110px">TIPS · OUTFITS</div><div class="rd" id="gN" style="left:1290px;top:150px;font-size:80px">0</div>
+        <div class="mid" id="gF" style="left:1290px;top:290px"></div><div class="mid" id="gF2" style="left:1290px;top:380px"></div></div>
+    </div>
+
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">THE RULE · NCERT</div>
+        <div class="txt2" id="rT" style="top:80px"></div>
+        <div class="big" id="r0" style="left:36px;top:330px"></div><div class="mid" id="r1" style="left:36px;top:430px"></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">EVERY CHOICE PAIRS WITH EVERY CHOICE</div><svg id="rS" class="sv" width="784" height="580"></svg>
+        <div class="pillp" id="rP" style="left:36px;top:496px"></div></div>
+    </div>
+
+    <div id="sS">
+      <div class="card full" id="sa"><div class="lbl" style="left:36px;top:30px;color:var(--ok)">AND · BOTH CHOICES · MULTIPLY</div><svg id="saS" class="sv" width="784" height="580"></svg><div class="big" id="saF" style="left:36px;top:390px"></div></div>
+      <div class="card rf" id="so2"><div class="lbl" style="left:36px;top:30px;color:var(--ac)">OR · ONLY ONE · ADD</div><svg id="soS" class="sv" width="784" height="580"></svg><div class="big" id="soF" style="left:36px;top:390px"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">FILL 4 BOXES · NO REPEATS</div><div id="wB"></div><div class="pillp ac" id="wP" style="left:36px;top:496px">4 × 3 × 2 × 1 = 24 words</div></div>
+    </div>
+
+    <div id="sV">
+      <div class="card full" id="vl"><div class="lbl" style="left:36px;top:30px;color:var(--ok)">REPEATS ALLOWED · CHOICES STAY</div><div id="vB1"></div><div class="big" id="vF1" style="left:36px;top:380px"></div></div>
+      <div class="card rf" id="vr"><div class="lbl" style="left:36px;top:30px;color:var(--red)">NO REPEATS · CHOICES SHRINK</div><div id="vB2"></div><div class="big" id="vF2" style="left:36px;top:380px"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><div id="tB" style="position:absolute;right:40px;top:40px;width:520px;height:200px"></div></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">One choice after another? <span class="acc">Multiply</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

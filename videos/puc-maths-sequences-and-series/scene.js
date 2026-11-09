@@ -75,8 +75,8 @@ const tFb = i => i < 2 ? wt('R3', 'One') + i * 0.3 : wt('R3', 'One') + 0.3 + (i 
 const th1 = PUC.think($('#th1'), { q: `If ${K(`${an('n')} = 2${rc('n')} + 1`)}, what is the 10th term?`, opts: ['21', '20'], right: 0, why: 'Twenty one: put n = 10. Two times ten, plus one.' });
 
 /* ---------- I: finite / infinite ---------- */
-$('#ilC').innerHTML = [16, 17, 17, 16, 18].map((x, i) => `<div class="sm" id="ic${i}" style="left:${36 + i * 116}px;top:120px;width:100px">${x}</div>`).join('') + `<div class="sm" id="icE" style="left:620px;top:120px;width:128px;background:var(--ink);color:#fff;font-size:20px;letter-spacing:.1em">END</div>`;
-$('#irC').innerHTML = [2, 4, 6, 8, 10].map((x, i) => `<div class="sm" id="jc${i}" style="left:${36 + i * 116}px;top:120px;width:100px">${x}</div>`).join('') + `<div class="sm" id="jcE" style="left:620px;top:120px;width:128px;background:#fff;border:2.5px dashed var(--v);box-sizing:border-box">...</div>`;
+$('#ilC').innerHTML = [16, 17, 17, 16, 18].map((x, i) => `<div class="sm" id="ic${i}" style="left:${36 + i * 116}px;top:190px;width:100px;height:96px;font-size:36px">${x}</div>`).join('') + `<div class="sm" id="icE" style="left:620px;top:190px;height:96px;width:128px;background:var(--ink);color:#fff;font-size:20px;letter-spacing:.1em">END</div>`;
+$('#irC').innerHTML = [2, 4, 6, 8, 10].map((x, i) => `<div class="sm" id="jc${i}" style="left:${36 + i * 116}px;top:190px;width:100px;height:96px;font-size:36px">${x}</div>`).join('') + `<div class="sm" id="jcE" style="left:620px;top:190px;height:96px;width:128px;background:#fff;border:2.5px dashed var(--v);box-sizing:border-box">...</div>`;
 
 /* ---------- S: series ---------- */
 $('#slA').innerHTML = K(v('1,\\ 3,\\ 5,\\ 7'));
@@ -117,7 +117,7 @@ const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW
   opts: ['1025', '1024', '513', '2049'], right: 0, optW: 474, optY: 300 });
 const so = PUC.solution($('#so'), [[K(`3,\\ 5,\\ 9,\\ 17,\\ \\dots`)], [K(`= 2^1{+}1,\\ 2^2{+}1,\\ 2^3{+}1,\\ 2^4{+}1`)], [K(`a_n = 2^{n} + 1`)], [K(`2(2^n{+}1) - 1 = 2^{n+1} + 1\\ \\checkmark`)], [K(`a_{10} = 1024 + 1 = 1025`)]], { y0: 100, dy: 92 });
 const tSo = [wt('A2', 'Write'), wt('A3', 'power'), wt('A3', 'So'), wt('A4', 'Check'), wt('A4', 'tenth')];
-const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · sequences and series', y0: 100, dy: 76, txt: [1, 1, 1, 0, 1],
+const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · sequences and series', y0: 100, dy: 76, txt: [1, 1, 1, 1, 1],
   lines: ['<b>Sequence</b>: numbers in a definite order, by a rule',
     `${K(an('n'))} = the nth (general) term · places ${K(rc('n'))} = 1, 2, 3, ...`,
     `Formula rule ${K(`${an('n')} = ${rc('n')}^2 + 1`)} · step rule ${K(`${an('n')} = ${an('n-1')} + ${an('n-2')}`)}`,
