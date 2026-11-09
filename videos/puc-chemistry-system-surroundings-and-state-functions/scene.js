@@ -123,6 +123,7 @@ const Q_ = `\\textcolor{${PF}}{q}`, W_ = `\\textcolor{${PF}}{w}`;
 // wavy heat arrow from (x,y) in direction d (1 right, -1 left), length L
 const wave = (p, col) => { const g = mk(p, 'g', {}); const pa = mk(g, 'path', { fill: 'none', stroke: col, 'stroke-width': 5, 'stroke-linecap': 'round', 'stroke-dasharray': '16 10' }); const hd = mk(g, 'path', { fill: 'none', stroke: col, 'stroke-width': 5, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }); return { g, pa, hd }; };
 const waveAt = (w, x, y, d, L) => { let s = `M${x} ${y}`; const n = 4, st = L / n; for (let k = 0; k < n; k++) s += ` q${(d * st / 2).toFixed(1)} ${k % 2 ? 12 : -12} ${(d * st).toFixed(1)} 0`; attr(w.pa, 'd', s); const ex = x + d * L; attr(w.hd, 'd', `M${ex - d * 14} ${y - 12} L${ex + d * 4} ${y} L${ex - d * 14} ${y + 12}`); };
+const phase = (f, ta, t) => { if (t <= ta) return (t - ta) * f(ta); const n = Math.ceil((t - ta) / 0.05), dt = (t - ta) / n; let s = 0; for (let i = 0; i < n; i++) s += f(ta + (i + 0.5) * dt) * dt; return s; };
 const tri = (v, L) => { const m = ((v % (2 * L)) + 2 * L) % (2 * L); return m < L ? m : 2 * L - m; };
 
 /* ---------- beats ---------- */
@@ -169,7 +170,7 @@ const boxes = BXC.map((x, i) => { const g = mk(bs, 'g', {}); const l = x - BW / 
   mk(g, 'path', { d: i === 0 ? `M${l} ${BT} V${BB} H${r} V${BT}` : `M${l} ${BT} H${r} V${BB} H${l} Z`, fill: 'none', stroke: C.ink2, 'stroke-width': 6, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' });
   return g; });
 const adL = txt(bs, BXC[2], BT - 30, 'ADIABATIC WALL', { 'text-anchor': 'middle', fill: C.ink, 'font-weight': 600 });
-const MOL = BXC.map((x, i) => [0, 1, 2, 3, 4, 5, 6].map(k => ({ c: mk(bs, 'circle', { r: 10, fill: SY }), vx: 70 + 23 * ((k * 5 + i) % 7), vy: 60 + 19 * ((k * 3 + i * 2) % 7), ox: 37 * k + 11 * i, oy: 53 * k + 7 * i })));
+const MOL = BXC.map((x, i) => { const rn = M.rng(31 + i); return [0, 1, 2, 3, 4, 5, 6].map(k => ({ c: mk(bs, 'circle', { r: 10, fill: SY }), vx: 60 + 80 * rn(), vy: 50 + 70 * rn(), ox: 900 * rn(), oy: 900 * rn() })); });
 const heat = [0, 1].map(i => [wave(bs, HO), wave(bs, HO)]);
 heat.forEach((pr, i) => { waveAt(pr[0], BXC[i] - BW / 2 - 14, 300, -1, 70); waveAt(pr[1], BXC[i] + BW / 2 + 14, 300, 1, 70); });
 const isoX = mk(bs, 'g', {}); [-1, 1].forEach(d => { const x = BXC[2] + d * (BW / 2 + 52); mk(isoX, 'path', { d: `M${x - 14} 286 l28 28 M${x + 14} 286 l-28 28`, stroke: HO, 'stroke-width': 5, 'stroke-linecap': 'round', opacity: 0.5 }); });
@@ -299,8 +300,8 @@ M.on(t => {
     BX.forEach((b, i) => { M.vis($('#bx' + i), t, tBox[i] - 0.1, 1e9, { dy: 14 }); const nx = i < 2 ? tBox[i + 1] : wt('S7', 'flask'); hl[i].setAttribute('opacity', (0.6 * M.io((t - tBox[i]) / 0.3) * (1 - M.io((t - nx) / 0.3))).toFixed(3)); });
     fade(adL, t, wt('S7', 'adiabatic'));
     MOL.forEach((ms, i) => { const l = BXC[i] - BW / 2 + 14, wI = BW - 28 - 40, tp = BT + 14, hI = BB - BT - 28;
-      const leak = M.io((t - tLeak[i]) / 6); const sp = 1 - 0.45 * leak; // cooling slows the molecules
-      ms.forEach((m, k) => { const tt = t * sp; let x = l + tri(m.ox + m.vx * tt, wI), y = tp + tri(m.oy + m.vy * tt, hI), a = 1;
+      const tt = phase(u => 1 - 0.45 * M.io((u - tLeak[i]) / 6), tS1 - 1, t); // cooling slows the molecules
+      ms.forEach((m, k) => { let x = l + tri(m.ox + m.vx * tt, wI), y = tp + tri(m.oy + m.vy * tt, hI), a = 1;
         if (i === 0 && k < 3) { const te = tSteam + k * 0.9; if (t > te) { const u = t - te; y = M.lerp(y, BT - 40 - 90 * u, M.io(u / 0.4)); a = 1 - M.clamp(u / 1.4); } }
         attr(m.c, 'cx', x.toFixed(1)); attr(m.c, 'cy', y.toFixed(1)); m.c.style.opacity = (a * M.io((t - tS1 - 0.3) / 0.3)).toFixed(3); }); });
     heat.forEach((pr, i) => pr.forEach(w => { fade(w.g, t, tLeak[i] - 0.1); attr(w.pa, 'stroke-dashoffset', (-t * 40).toFixed(1)); }));

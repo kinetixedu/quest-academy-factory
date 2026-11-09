@@ -127,12 +127,12 @@ const waveV = (w, x, y, d, L) => { let s = `M${x} ${y}`; const n = 4, st = L / n
 const arrowP = (p, col, w = 6) => { const g = mk(p, 'g', {}); const l = mk(g, 'line', { stroke: col, 'stroke-width': w, 'stroke-linecap': 'round' }); const h = mk(g, 'path', { fill: 'none', stroke: col, 'stroke-width': w, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' });
   g.set = (x1, y1, x2, y2) => { attr(l, 'x1', x1); attr(l, 'y1', y1); attr(l, 'x2', x2); attr(l, 'y2', y2); const a = Math.atan2(y2 - y1, x2 - x1), s = 16; attr(h, 'd', `M${(x2 - s * Math.cos(a - 0.5)).toFixed(1)} ${(y2 - s * Math.sin(a - 0.5)).toFixed(1)} L${x2} ${y2} L${(x2 - s * Math.cos(a + 0.5)).toFixed(1)} ${(y2 - s * Math.sin(a + 0.5)).toFixed(1)}`); return g; }; return g; };
 // cylinder with piston and bouncing molecules
-const cyl = (p, x0, x1, yb, n = 9) => { const g = mk(p, 'g', {});
-  mk(g, 'rect', { x: x0, y: 60, width: x1 - x0, height: yb - 60, fill: '#FFF7F2' });
+const cyl = (p, x0, x1, yt, yb, n = 9) => { const g = mk(p, 'g', {});
+  mk(g, 'rect', { x: x0, y: yt, width: x1 - x0, height: yb - yt, fill: '#FFF7F2' });
   const gas = mk(g, 'rect', { x: x0, width: x1 - x0, fill: '#FDEBDD' });
-  mk(g, 'path', { d: `M${x0} 70 V${yb} H${x1} V70`, fill: 'none', stroke: C.ink2, 'stroke-width': 7, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' });
-  const ms = [...Array(n)].map((_, k) => ({ c: mk(g, 'circle', { r: 10, fill: UC }), vx: 80 + 21 * ((k * 5) % 7), vy: 70 + 17 * ((k * 3 + 1) % 7), ox: 41 * k, oy: 67 * k }));
-  const pis = mk(g, 'g', {}); mk(pis, 'rect', { x: x0 + 5, y: -16, width: x1 - x0 - 10, height: 22, rx: 4, fill: '#8A93A6', stroke: C.ink2, 'stroke-width': 3 }); mk(pis, 'rect', { x: (x0 + x1) / 2 - 8, y: -120, width: 16, height: 106, fill: '#8A93A6', stroke: C.ink2, 'stroke-width': 3 });
+  mk(g, 'path', { d: `M${x0} ${yt + 10} V${yb} H${x1} V70`, fill: 'none', stroke: C.ink2, 'stroke-width': 7, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' });
+  const rn = M.rng(n * 13 + x0); const ms = [...Array(n)].map((_, k) => ({ c: mk(g, 'circle', { r: 10, fill: UC }), vx: 60 + 90 * rn(), vy: 55 + 85 * rn(), ox: 900 * rn(), oy: 900 * rn() }));
+  const pis = mk(g, 'g', {}); mk(pis, 'rect', { x: x0 + 5, y: -16, width: x1 - x0 - 10, height: 22, rx: 4, fill: '#8A93A6', stroke: C.ink2, 'stroke-width': 3 }); mk(pis, 'rect', { x: (x0 + x1) / 2 - 8, y: -96, width: 16, height: 82, fill: '#8A93A6', stroke: C.ink2, 'stroke-width': 3 });
   return { g, ms, pis, upd: (py, ph, sz = 1) => { place(pis, 0, py); attr(gas, 'y', py + 6); attr(gas, 'height', Math.max(0, yb - py - 6)); const l = x0 + 18, w = x1 - x0 - 36, h = yb - py - 36;
     ms.forEach(m => { attr(m.c, 'cx', (l + tri(m.ox + m.vx * ph, w)).toFixed(1)); attr(m.c, 'cy', (py + 24 + tri(m.oy + m.vy * ph, Math.max(10, h))).toFixed(1)); }); } }; };
 
@@ -169,20 +169,20 @@ const setMol = (m, cx, cy, ang, d) => { const dx = Math.cos(ang) * d / 2, dy = M
 const bondGlow = mk($('#mS3'), 'circle', { cx: 172, cy: 130, r: 30, fill: '#E8B23A', opacity: 0.35 });
 
 /* ---------- S: bench ---------- */
-const bs = $('#bS'), CY = cyl(bs, 232, 552, 470);
-const flame = mk(bs, 'g', {}); [312, 392, 472].forEach(x => mk(flame, 'path', { d: `M${x} 540 c-18 -14 -14 -34 0 -52 c14 18 18 38 0 52z`, fill: '#E8742A', stroke: C.red, 'stroke-width': 3 }));
-const hIn = [312, 472].map(x => { const w = wave(bs, HI); waveV(w, x - 60 + (x > 400 ? 120 : 0), 540, -1, 56); return w; });
+const bs = $('#bS'), CY = cyl(bs, 232, 552, 130, 500);
+const flame = mk(bs, 'g', {}); [312, 392, 472].forEach(x => mk(flame, 'path', { d: `M${x} 562 c-18 -14 -14 -34 0 -52 c14 18 18 38 0 52z`, fill: '#E8742A', stroke: C.red, 'stroke-width': 3 }));
+const hIn = [312, 472].map(x => { const w = wave(bs, HI); waveV(w, x - 80 + (x > 400 ? 160 : 0), 560, -1, 60); return w; });
 const wDn = arrowP(bs, WC).set(392, -40, 392, 0), wUp = arrowP(bs, WC);
 const wL = txt(bs, 440, 0, '', { fill: WC, 'font-weight': 600, 'font-size': 20 });
-const PYk = M.keys([[0, 180], [wt('S2', 'Push') - 0.1, 180], [wt('S2', 'Push') + 1.1, 260], [wt('S5', 'push') - 0.2, 260], [wt('S5', 'push') + 2.2, 120]], 1);
-const SPk = M.keys([[0, 1], [wt('S2', 'Push'), 1], [wt('S2', 'Push') + 1.2, 1.5], [wt('S4', 'flows'), 1.5], [wt('S4', 'flows') + 1.5, 2.0], [wt('S5', 'push'), 2.0], [wt('S5', 'push') + 2.2, 1.3]], 1);
+const PYk = M.keys([[0, 230], [wt('S2', 'Push') + 0.2, 320], [wt('S5', 'push') + 0.2, 240]], 1.4);
+const SPk = M.keys([[0, 1], [wt('S2', 'Push') + 0.2, 1.5], [wt('S4', 'flows'), 2.0], [wt('S5', 'push') + 0.2, 1.3]], 1.4);
 const us = $('#uS'), UX = 110, UT = 90, UB = 470;
 mk(us, 'rect', { x: UX, y: UT, width: 90, height: UB - UT, rx: 14, fill: '#fff', stroke: C.ink2, 'stroke-width': 4 });
 const uf = mk(us, 'rect', { x: UX + 8, width: 74, rx: 8, fill: UC });
 txt(us, UX + 45, UB + 40, 'U', { 'text-anchor': 'middle', fill: UC, 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 32 });
 const UR = [[`${w_} > 0`, 'WORK ON THE GAS · U UP', WC, 'arrowU', wt('S2', 'Push')], [`${q_} > 0`, 'HEAT FLOWS IN · U UP', HI, 'arrowU', wt('S4', 'heat')], [`${w_} < 0`, 'GAS DOES WORK · U DOWN', WC, 'arrowD', wt('S5', 'work')]];
 $('#urs').innerHTML = UR.map(([k, w, c, ic], i) => `<div class="ur" id="ur${i}" style="top:${84 + i * 100}px"><div class="uk">${K(k)}</div><div class="uw">${w}</div><div class="ua" style="background:${c}">${M.icon(ic, 22, '#fff', 3)}</div></div>`).join('');
-$('#twoP').innerHTML = `Only two ways in or out: heat ${K(q_)} and work ${K(w_)}`;
+$('#twoP').classList.remove('ac'); $('#twoP').innerHTML = `Only two ways in or out: heat ${K(q_)} and work ${K(w_)}`;
 const tS6 = wt('S6', 'two');
 
 /* ---------- V: signs ---------- */
@@ -198,7 +198,7 @@ $('#eqF').innerHTML = K(`${U_} = ${q_} + ${w_}`);
 const tSA = [wt('V2', 'in'), wt('V2', 'out'), wt('V3', 'on'), wt('V3', 'by')];
 
 /* ---------- B: first law in words, isolated, think ---------- */
-const FL = [['hand', 'Work → heat', 'THE WARM PUMP', wt('B1', 'changes')], ['flame', 'Heat → work', 'THE COOKER WEIGHT', wt('B1', 'form')], ['check', 'Total stays the same', 'NEVER MADE OR DESTROYED', wt('B1', 'destroyed')]];
+const FL = [['check', 'Total stays the same', 'NEVER MADE OR DESTROYED', wt('B1', 'made')], ['hand', 'Work → heat', 'THE WARM PUMP', wt('B1', 'changes')], ['flame', 'Heat → work', 'THE COOKER WEIGHT', wt('B1', 'form')]];
 $('#fls').innerHTML = FL.map(([ic, b, s], i) => `<div class="fl3" id="fl${i}" style="top:${84 + i * 116}px"><i>${M.icon(ic, 28, C.ac, 2.2)}</i><b>${b}</b><span>${s}</span></div>`).join('');
 const is = $('#iS');
 mk(is, 'rect', { x: 222, y: 96, width: 340, height: 300, rx: 16, fill: '#EEF2F6', stroke: C.ink2, 'stroke-width': 4 });
@@ -209,14 +209,14 @@ $('#isoK').innerHTML = K(`${q_} = 0,\\ ${w_} = 0 \;\\Rightarrow\; ${U_} = 0`);
 const th1 = PUC.think($('#th1'), { q: 'A piston squeezes a gas. Is w plus or minus?', opts: ['Plus', 'Minus'], right: 0, why: 'Work is done on the system, so energy goes into the bank.' });
 
 /* ---------- D: work of expansion ---------- */
-const ds = $('#dS'), DC = cyl(ds, 232, 552, 470, 8);
-const pex = [292, 392, 492].map(() => arrowP(ds, C.ink, 5));
-const pexL = txt(ds, 580, 70, 'p ex · OUTSIDE', { fill: C.ink, 'font-weight': 600 });
-const vac = txt(ds, 392, 60, 'VACUUM · NOTHING PUSHES BACK', { 'text-anchor': 'middle', fill: C.red, 'font-weight': 600 });
-const DPk = M.keys([[0, 330], [wt('D3', 'grows') - 0.1, 330], [wt('D3', 'grows') + 1.4, 200], [T0('D6'), 200], [T0('D6') + 0.6, 330], [wt('D6', 'vacuum'), 330], [wt('D6', 'vacuum') + 1.4, 200]], 1);
-const viL = mk(ds, 'line', { x1: 196, x2: 600, y1: 330, y2: 330, stroke: C.mute, 'stroke-width': 2, 'stroke-dasharray': '6 6' }), vfL = mk(ds, 'line', { x1: 196, x2: 600, y1: 200, y2: 200, stroke: C.mute, 'stroke-width': 2, 'stroke-dasharray': '6 6' });
-const viT = txt(ds, 188, 336, 'Vi', { 'text-anchor': 'end', fill: C.ink, 'font-weight': 600, 'font-size': 22 }), vfT = txt(ds, 188, 206, 'Vf', { 'text-anchor': 'end', fill: C.ink, 'font-weight': 600, 'font-size': 22 });
-const dvA = arrowP(ds, UC, 4).set(620, 330, 620, 204); const dvT = txt(ds, 636, 272, 'ΔV > 0', { fill: UC, 'font-weight': 600, 'font-size': 22 });
+const ds = $('#dS'), DC = cyl(ds, 232, 552, 130, 500, 8);
+const pex = [300, 484].map(() => arrowP(ds, C.ink, 5));
+const pexL = txt(ds, 572, 70, 'p ex · OUTSIDE', { fill: C.ink, 'font-weight': 600 });
+const vac = txt(ds, 392, 112, 'VACUUM · NOTHING PUSHES BACK', { 'text-anchor': 'middle', fill: C.red, 'font-weight': 600 });
+const DPk = M.keys([[0, 360], [wt('D3', 'grows'), 230], [T0('D6'), 360], [wt('D6', 'vacuum') + 0.2, 230]], 1.2);
+const viL = mk(ds, 'line', { x1: 196, x2: 600, y1: 360, y2: 360, stroke: C.mute, 'stroke-width': 2, 'stroke-dasharray': '6 6' }), vfL = mk(ds, 'line', { x1: 196, x2: 600, y1: 230, y2: 230, stroke: C.mute, 'stroke-width': 2, 'stroke-dasharray': '6 6' });
+const viT = txt(ds, 188, 366, 'Vi', { 'text-anchor': 'end', fill: C.ink, 'font-weight': 600, 'font-size': 22 }), vfT = txt(ds, 188, 236, 'Vf', { 'text-anchor': 'end', fill: C.ink, 'font-weight': 600, 'font-size': 22 });
+const dvA = arrowP(ds, UC, 4).set(620, 360, 620, 234); const dvT = txt(ds, 636, 302, 'ΔV > 0', { fill: UC, 'font-weight': 600, 'font-size': 22 });
 const DR = [[`p_{\\text{ex}}`, 'PRESSURE OUTSIDE', 'D2'], [`\\Delta V = V_{\\text{f}} - V_{\\text{i}}`, 'CHANGE IN VOLUME', 'D3'], [`${w_} = -\\,p_{\\text{ex}}\\,\\Delta V`, 'WORK', 'D4'], [`\\Delta V > 0 \\Rightarrow ${w_} < 0`, 'GAS SPENDS ENERGY', 'D5'], [`p_{\\text{ex}} = 0 \\Rightarrow ${w_} = 0`, 'FREE EXPANSION', 'D6']];
 $('#drs').innerHTML = DR.map(([k, w], i) => `<div class="dr" id="dr${i}" style="top:${76 + i * 96}px"><div class="nn">${i + 1}</div><div class="dk">${K(k)}</div><div class="dw">${w}</div></div>`).join('');
 
@@ -225,7 +225,7 @@ $('#stF').innerHTML = K(`${U_} = ${q_} + ${w_}`);
 const stmt = statement(SW, [wt('T1', 'Delta'), wt('T1', 'Plus'), wt('T1', 'into')]);
 
 /* ---------- W ---------- */
-$('#wq').innerHTML = `Heat in 300 J · gas grows 2 L → 4 L · against p<sub>ex</sub> = 1 bar · find ${K(U_)}`;
+$('#wq').innerHTML = `Heat in 300 J · 2 L → 4 L against p<sub>ex</sub> = 1 bar`;
 const WR = [[`${q_} = +300\\ ${tx('J')}`, 'W3'], [`${w_} = -(1\\ ${tx('bar')})(4 - 2)\\ ${tx('L')} = -2\\ ${tx('L bar')}`, 'W4'], [`1\\ ${tx('L bar')} = 100\\ ${tx('J')} \\Rightarrow ${w_} = -200\\ ${tx('J')}`, 'W5'], [`${U_} = 300 + (-200) = \\textcolor{${UC}}{+100\\ ${tx('J')}}`, 'W6'], [`${tx('Kept 100 J, spent 200 J pushing the piston')}`, 'W7']];
 $('#wrs').innerHTML = WR.map(([k], i) => `<div class="wr5" id="w5${i}" style="top:${132 + i * 84}px"><div class="nn">${i + 1}</div><div class="wf">${K(k)}</div></div>`).join('');
 const tWr = WR.map(r => T0(r[1]));
@@ -236,13 +236,13 @@ const WB = [[200, 0, 300, HI, 'q = +300', 'HEAT IN', 'W3'], [392, 300, 100, WC, 
 const conn = mk(gs, 'path', { d: `M270 ${G0 - 300 * GS} H322 M462 ${G0 - 100 * GS} H514`, stroke: C.mute, 'stroke-width': 2, 'stroke-dasharray': '5 5', fill: 'none' });
 
 /* ---------- exam + ending ---------- */
-const ts = $('#tS'), TC2 = cyl(ts, 160, 330, 240, 5); TC2.upd(110, 0); attr(TC2.g, 'transform', 'translate(0 0)');
-const tWa = arrowP(ts, WC).set(245, -10, 245, 0);
-const tl1 = txt(ts, 360, 120, 'WORK ON THE GAS', { fill: WC, 'font-weight': 600, 'font-size': 16 }), tl2 = txt(ts, 360, 150, 'NCERT: w > 0', { fill: WC, 'font-weight': 600, 'font-size': 16 });
+const ts = $('#tS'), TC2 = cyl(ts, 160, 330, 60, 240, 5); TC2.upd(110, 0); attr(TC2.g, 'transform', 'translate(0 0)');
+const tWa = arrowP(ts, WC).set(300, -10, 300, 0);
+const tl1 = txt(ts, 350, 120, 'WORK ON THE GAS', { fill: WC, 'font-weight': 600, 'font-size': 16 }), tl2 = txt(ts, 350, 150, 'NCERT: w > 0', { fill: WC, 'font-weight': 600, 'font-size': 16 });
 const end = endBuild({
   wrong: 'ΔU = q - w (with w as work done on the system)', right: 'NCERT: w is work done on the system, so ΔU = q + w',
   tWrong: wt('X2', 'Some') - 0.1, tStrike: wt('X3', 'NCERT') - 0.1, tRight: wt('X3', 'plus') - 0.3,
-  trapArt: t => { fade(TC2.g, t, wt('X2', 'books')); TC2.upd(110 + 30 * M.io((t - wt('X3', 'work')) / 1.2), t * 1.6); tWa.set(245, 30, 245, 100 + 30 * M.io((t - wt('X3', 'work')) / 1.2)); fade(tWa, t, wt('X3', 'work') - 0.1); fade(tl1, t, wt('X3', 'work')); fade(tl2, t, wt('X3', 'plus')); },
+  trapArt: t => { fade(TC2.g, t, wt('X2', 'books')); TC2.upd(110 + 30 * M.io((t - wt('X3', 'work')) / 1.2), t * 1.6); tWa.set(290, 20, 290, 96 + 30 * M.io((t - wt('X3', 'work')) / 1.2)); fade(tWa, t, wt('X3', 'work') - 0.1); fade(tl1, t, wt('X3', 'work')); fade(tl2, t, wt('X3', 'plus')); },
   on: [], tLight: [], tType: wt('E1', 'Expect'), type: 'Sign questions, and short numericals that find ΔU, q or w',
   pat: 'NEET PATTERN · ORIGINAL QUESTION', ans: 0,
   mcq: { q: 'A system gives out 120 J of heat while 200 J of work is done on it. ΔU = ?', opts: [K(`+80\\ ${tx('J')}`), K(`-80\\ ${tx('J')}`), K(`+320\\ ${tx('J')}`), K(`-320\\ ${tx('J')}`)] },
@@ -292,9 +292,9 @@ M.on(t => {
     const out = OUT('V1'), tPu = wt('S2', 'Push'), tFl = wt('S4', 'flame'), tUp = wt('S5', 'push');
     M.vis($('#bn'), t, tS1 + 0.05, out, { dy: 36, ...o }); M.vis($('#ub'), t, T0('S2') - 0.1, out, { dx: 60, dy: 0, ...o });
     const py = PYk(t); CY.upd(py, phase(SPk, tS1, t)); fade(CY.g, t, tS1 + 0.2);
-    wDn.set(392, py - 190, 392, py - 132); fade(wDn, t, tPu - 0.3, tPu + 2.0);
-    wUp.set(470, py - 60, 470, py - 140); fade(wUp, t, tUp - 0.2, out);
-    M.setT(wL, t < tUp - 0.3 ? 'PUSH · WORK ON GAS' : 'GAS PUSHES · WORK BY GAS'); attr(wL, 'x', t < tUp - 0.3 ? 412 : 490); attr(wL, 'y', (t < tUp - 0.3 ? py - 170 : py - 100).toFixed(1));
+    wDn.set(470, py - 150, 470, py - 70); fade(wDn, t, tPu - 0.3, tPu + 2.0);
+    wUp.set(470, py - 50, 470, py - 130); fade(wUp, t, tUp - 0.2, out);
+    M.setT(wL, t < tUp - 0.3 ? 'PUSH · WORK ON GAS' : 'GAS PUSHES · WORK BY GAS'); attr(wL, 'x', 490); attr(wL, 'y', (py - 84).toFixed(1));
     fade(wL, t, tPu - 0.2, tPu + 2.0); if (t > tUp - 0.3) fade(wL, t, tUp - 0.1, out);
     fade(flame, t, tFl - 0.1, wt('S5', 'Now')); hIn.forEach(w => { fade(w.g, t, wt('S4', 'flows') - 0.2, wt('S5', 'Now')); attr(w.pa, 'stroke-dashoffset', (t * 40).toFixed(1)); });
     const lv = M.lerp(0.3, 0.2, 0) + 0.3 * (SPk(t) - 1); const h = (UB - UT - 16) * M.clamp(lv); attr(uf, 'y', (UB - 8 - h).toFixed(1)); attr(uf, 'height', h.toFixed(1));
@@ -333,8 +333,8 @@ M.on(t => {
     M.vis($('#dl'), t, tD1 + 0.05, out, { dy: 36, ...o }); M.vis($('#dr'), t, T0('D2') - 0.1, out, { dx: 60, dy: 0, ...o });
     M.setT($('#dlL'), t < tVac - 0.2 ? 'MOLECULE BENCH · GAS EXPANDS' : 'MOLECULE BENCH · FREE EXPANSION');
     const py = DPk(t); DC.upd(py, t * 1.4); fade(DC.g, t, tD1 + 0.2);
-    pex.forEach((a, i) => { a.set([292, 392, 492][i] + (i === 1 ? 60 : 0), py - 150, [292, 392, 492][i] + (i === 1 ? 60 : 0), py - 24); fade(a, t, wt('D2', 'outside') - 0.2, T0('D6') + 0.3); });
-    fade(pexL, t, wt('D2', 'outside'), T0('D6') + 0.3); attr(pexL, 'y', (py - 120).toFixed(1));
+    pex.forEach((a, i) => { a.set([300, 484][i], py - 110, [300, 484][i], py - 24); fade(a, t, wt('D2', 'outside') - 0.2, T0('D6') + 0.3); });
+    fade(pexL, t, wt('D2', 'outside'), T0('D6') + 0.3); attr(pexL, 'y', (py - 80).toFixed(1));
     fade(vac, t, tVac - 0.1);
     [viL, viT].forEach(e => fade(e, t, wt('D3', 'V') - 0.1)); [vfL, vfT].forEach(e => fade(e, t, wt('D3', 'V', 2) - 0.1));
     fade(dvA, t, wt('D3', 'change'), T0('D6')); fade(dvT, t, wt('D3', 'change') + 0.1, T0('D6'));
@@ -350,7 +350,7 @@ M.on(t => {
     M.vis($('#wl'), t, tW1 + 0.05, out, { dy: 36, ...o }); grow($('#wl'), null, t, tWr[0] - 0.2);
     M.vis($('#wq'), t, T0('W2') - 0.1, 1e9, { dy: 14 });
     WR.forEach((r, i) => { const el = $('#w5' + i); M.vis(el, t, tWr[i] - 0.1, 1e9, { dx: -16, dy: 0 }); setBg(el, mix(C.soft, C.ac2, M.io((t - tWr[i]) / 0.25) * (1 - M.io((t - (i < 4 ? tWr[i + 1] : 1e9)) / 0.25)))); });
-    M.vis($('#wr'), t, tWr[0] - 0.1, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#wr'), t, tWr[0] + 0.4, out, { dx: 60, dy: 0, ...o });
     WB.forEach(b => { const u = M.io((t - T0(b.id) - 0.2) / 0.7), y1 = G0 - b.a * GS, y2 = G0 - M.lerp(b.a, b.b, u) * GS, top = Math.min(y1, y2), h = Math.abs(y2 - y1);
       attr(b.r, 'y', top.toFixed(1)); attr(b.r, 'height', h.toFixed(1)); M.hide(b.r, u <= 0.01); attr(b.vl, 'y', (b.b < b.a ? y1 - 14 : top - 14).toFixed(1)); fade(b.vl, t, T0(b.id) + 0.6); fade(b.kl, t, T0(b.id) + 0.3); });
     fade(conn, t, T0('W6'));
