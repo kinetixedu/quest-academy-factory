@@ -1,0 +1,172 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 84 - Power</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 84: power (Motion notebook, two climbers on one staircase + work against time, crane, hill, lift) ===== */
+:root{--v:#2F6FEB;--f:#D9731A;--w:#0E8F8F;--p:#7A4FE0;--th:#B7791F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.vv{color:var(--v)}.ff{color:var(--f)}.ww{color:var(--w)}.pp{color:var(--p)}
+.sv{position:absolute;left:0;top:0;overflow:hidden}
+.bpill{position:absolute;display:inline-flex;align-items:center;height:48px;padding:0 16px;border-radius:10px;background:#fff;border:2px solid var(--ac);color:var(--ac);font:600 18px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr .jt{position:absolute;right:24px;top:30px;height:56px;padding:0 16px;border-radius:12px;background:#fff;display:flex;align-items:center;gap:8px;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+.wq{position:absolute;top:494px;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#stair{position:absolute;left:452px;top:236px;width:250px;height:240px;background:#fff;border-radius:12px;box-shadow:0 8px 20px rgba(22,33,62,.22)}
+#stair .ml{position:absolute;left:16px;top:12px;font:600 14px 'IBM Plex Mono';letter-spacing:.1em;color:var(--mute);white-space:nowrap}
+/* P */
+.ck{position:absolute;left:36px;width:712px;height:104px;border-radius:14px;background:var(--soft)}
+.ck .cf{position:absolute;left:24px;top:28px;font-size:36px;white-space:nowrap}
+.ck .ct{position:absolute;right:20px;top:34px;height:36px;padding:0 12px;border-radius:8px;background:#fff;display:inline-flex;align-items:center;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.dn{position:absolute;left:356px;font:600 30px 'IBM Plex Mono';color:var(--mute)}
+.jrow{position:absolute;left:36px;width:712px;height:150px;border-radius:14px;background:var(--soft)}
+.jrow .jl{position:absolute;left:24px;top:18px;font:700 28px Poppins;white-space:nowrap}
+.jrow .js{position:absolute;left:24px;top:58px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jrow .jc{position:absolute;right:24px;top:18px;font:600 30px 'IBM Plex Mono';color:var(--w);white-space:nowrap}
+.blk{position:absolute;width:26px;height:26px;border-radius:5px;background:var(--w)}
+/* sim readout */
+#roG{row-gap:2px}
+#roG .v{font-size:30px}
+#roG .k{font-size:26px}
+#roG .u{font-size:19px}
+.stag{position:absolute;height:40px;padding:0 14px;border-radius:8px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:96px}
+.st .n{position:absolute;left:0;top:2px;width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 21px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:66px;top:0;font-size:34px;white-space:nowrap}
+.st .why{position:absolute;left:66px;top:52px;font:500 21px Poppins;color:var(--mute);white-space:nowrap}
+.chipd{position:absolute;height:56px;padding:0 18px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:10px;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+/* bars */
+.bar{position:absolute;left:36px;width:712px;height:40px}
+.bar .bk{position:absolute;left:0;top:0;width:150px;font:600 18px 'IBM Plex Mono';letter-spacing:.04em;line-height:40px;white-space:nowrap}
+.bar .bt{position:absolute;left:160px;top:6px;width:380px;height:28px;border-radius:6px;background:var(--soft)}
+.bar .bf{position:absolute;left:0;top:0;height:28px;border-radius:6px}
+.bar .bv{position:absolute;left:556px;top:0;font:600 26px 'IBM Plex Mono';line-height:40px;white-space:nowrap}
+.sbl{position:absolute;left:36px;font-size:36px;white-space:nowrap}
+/* links */
+.lk{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.lk .n{position:absolute;left:18px;top:25px;width:46px;height:46px;border-radius:50%;background:var(--ac);color:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.lk .lt{position:absolute;left:84px;top:28px;font:600 25px/1.3 Poppins;white-space:nowrap}
+/* worked */
+#wq{position:absolute;left:36px;top:70px;font:600 28px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:30px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#mq .mq{font-size:30px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 24px Poppins}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 5 WORK, ENERGY AND POWER</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div class="bpill" id="bpill">NCERT · CBSE · ISC · PUC</div>
+    <div id="title"><span class="acc">Power</span></div>
+    <div id="sub">Same stairs, one friend faster</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">ALL DO WORK · SOME FASTER</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">The speed of doing work has a name</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV AND DIYA · THE COLLEGE STAIRS</div>
+        <div id="hdF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-corridor.jpg" style="position:absolute;left:112px;top:84px;width:520px;height:390px;border-radius:12px">
+        <div id="stair"><div class="ml">THE RACE · SIDE VIEW</div><svg class="sv" id="hsS" width="250" height="240"></svg></div>
+        <div id="wqs"></div></div>
+    </div>
+
+    <!-- P -->
+    <div id="sP">
+      <div class="card full" id="pc"><div class="lbl" style="left:36px;top:30px">FROM WORK TO POWER</div><div id="cks"></div></div>
+      <div class="card rf" id="pu"><div class="lbl" style="left:36px;top:30px">ONE WATT = ONE JOULE EVERY SECOND</div><div id="jrows"></div>
+        <div class="chipd" id="puT" style="left:36px;top:492px"><span>t =</span><span id="puTv">0</span><span>s</span></div></div>
+    </div>
+
+    <!-- S -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">ONE STAIRCASE · TWO CLIMBERS</div><div class="ghost" id="exS" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <div class="stag" id="slo" style="right:36px;top:20px">SLOW-MO REPLAY · 0.25x</div>
+        <svg class="sv" id="simS" width="784" height="580"></svg>
+        <div class="chipd" id="pfv" style="left:36px;top:492px"><span class="pp" style="color:#C8B2F6">P</span><span>= F v = 490 × 0.6 = 294 W</span></div></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro" id="roG" style="left:36px;top:66px;width:712px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">WORK <i style="font-family:Poppins;text-transform:none">W</i> VS TIME <i style="font-family:Poppins;text-transform:none">t</i></div>
+        <div class="pillp" id="grP" style="right:36px;top:18px;height:40px;font-size:19px;color:var(--p)">steeper line = more power</div>
+        <svg class="sv" id="grS" width="784" height="274"></svg></div>
+    </div>
+
+    <!-- D -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">FROM W/t TO F · v · 5 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">A PULL AT AN ANGLE</div>
+        <svg class="sv" id="drS" width="784" height="580"></svg>
+        <div class="chipd" id="drC" style="left:36px;top:492px"><span>P = F v cos θ =</span><span id="drCv" style="color:#C8B2F6">20.0 W</span></div></div>
+    </div>
+
+    <!-- C -->
+    <div id="sC">
+      <div class="card full" id="c0"><div class="lbl" style="left:36px;top:30px">WORK · HOW MUCH?</div><svg class="sv" id="c0S" width="784" height="580"></svg>
+        <div class="bar" id="c0a" style="top:300px"><div class="bk">DIYA</div><div class="bt"><div class="bf" id="c0af" style="background:var(--w)"></div></div><div class="bv ww">1470 J</div></div>
+        <div class="bar" id="c0b" style="top:360px"><div class="bk">AARAV</div><div class="bt"><div class="bf" id="c0bf" style="background:var(--w)"></div></div><div class="bv ww">1470 J</div></div>
+        <div class="sbl" id="c0F" style="top:430px"></div></div>
+      <div class="card rf" id="c1"><div class="lbl" style="left:36px;top:30px">POWER · HOW FAST?</div><svg class="sv" id="c1S" width="784" height="580"></svg>
+        <div class="bar" id="c1a" style="top:300px"><div class="bk">DIYA · 10 s</div><div class="bt"><div class="bf" id="c1af" style="background:var(--p)"></div></div><div class="bv pp">147 W</div></div>
+        <div class="bar" id="c1b" style="top:360px"><div class="bk">AARAV · 5 s</div><div class="bt"><div class="bf" id="c1bf" style="background:var(--p)"></div></div><div class="bv pp">294 W</div></div>
+        <div class="sbl" id="c1F" style="top:430px"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- R -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">AARAV'S RIDE · FLAT, THEN A HILL</div><div class="ghost" id="exR" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <svg class="sv" id="rlS" width="784" height="580"></svg>
+        <div class="bar" id="bP" style="top:404px"><div class="bk pp">POWER P</div><div class="bt"><div class="bf" id="bPf" style="background:var(--p)"></div></div><div class="bv pp" id="bPv">150 W</div></div>
+        <div class="bar" id="bF" style="top:456px"><div class="bk ff">FORCE F</div><div class="bt"><div class="bf" id="bFf" style="background:var(--f)"></div></div><div class="bv ff" id="bFv">25 N</div></div>
+        <div class="bar" id="bV" style="top:508px"><div class="bk vv">SPEED v</div><div class="bt"><div class="bf" id="bVf" style="background:var(--v)"></div></div><div class="bv vv" id="bVv">6 m/s</div></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">LINK BY LINK</div><div id="lks"></div></div>
+    </div>
+
+    <!-- W -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">Lift + passengers 800 kg, up at a steady 1.5 m/s, friction 1000 N. Motor power?</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">THE LIFT · FORCES ON THE CABIN</div>
+        <svg class="sv" id="wrS" width="784" height="580"></svg>
+        <div class="chipd" id="wC" style="left:36px;top:492px"><span>motor</span><span style="color:#C8B2F6">P ≈ 13.3 kW ≈ 17.8 hp</span></div></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tg" width="420" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Power is how <span class="acc">fast</span> work is done.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
