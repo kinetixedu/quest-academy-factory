@@ -91,7 +91,7 @@ const cross = (P0, d0, P1, d1) => { const det = d0[0] * -d1[1] - d0[1] * -d1[0],
 const xA = cross([392, 230], dA, [420, 315], dB), xB = cross([392, 400], dA, [420, 315], dB);
 const hm = [xA, xB].map(([x, y]) => { const s = 22; return mk(hs, 'path', { d: `M${x + dA[0] * s},${y + dA[1] * s} L${x + dA[0] * s + dB[0] * s},${y + dA[1] * s + dB[1] * s} L${x + dB[0] * s},${y + dB[1] * s}`, fill: 'none', stroke: TC, 'stroke-width': 3.5 }); });
 const hT1 = txt(hs, 120, 410, 'never meet', { fill: C.ink, 'font-weight': 700, 'font-size': 22, 'font-family': 'Poppins', transform: 'rotate(-20 120 410)' });
-const hT2 = txt(hs, xA[0] + 34, xA[1] - 34, 'cross square', { fill: TC, 'font-weight': 700, 'font-size': 22, 'font-family': 'Poppins' });
+const hT2 = txt(hs, xA[0] + 50, (xA[1] + xB[1]) / 2 + 40, 'cross square', { fill: TC, 'font-weight': 700, 'font-size': 22, 'font-family': 'Poppins' });
 
 /* ---------- P: parallel ---------- */
 $('#p1').innerHTML = `<span class="a">line 1</span>: up 1 for every 2 across`;
@@ -122,23 +122,23 @@ let lLast = '';
 const rsol = PUC.solution($('#rl'), [
   ['Turn the picture 90° anticlockwise'],
   [K(`${xc('\\text{run } 2')} \\to ${yc('\\text{rise } 2')}`)],
-  [K(`${yc('\\text{rise } 1')} \\to ${xc('\\text{run } -1')}`)],
+  [K(`${yc('\\text{rise } 1')} \\to ${xc('\\text{run } {-1}')}`)],
   [K(`${m2} = \\frac{2}{-1} = -2, \\quad \\tfrac{1}{2} \\times (-2) = -1`)],
   [K(`${m1} \\cdot ${m2} = -1`) + '<span class="why2">&nbsp; flip, change sign</span>']], { label: 'WHY THE PRODUCT IS −1', y0: 100, dy: 96 });
 const tRs = [wt('R2', 'Turn'), wt('R3', 'run'), wt('R4', 'rise'), wt('R5', 'new'), wt('R6', 'perpendicular')];
-const RO = { ox: 370, oy: 330, s: 54, x0: -4, x1: 5, y0: -3, y1: 4 };
+const RO = { ox: 370, oy: 380, s: 52, x0: -4, x1: 5, y0: -3, y1: 5 };
 const rs = $('#rS'), RP = PL(rs, RO);
 const rG1 = mk(rs, 'g', {}); // ghost original
 const rL0 = mk(rG1, 'line', { x1: RP.X(-3.5), y1: RP.Y(-1.75), x2: RP.X(5), y2: RP.Y(2.5), stroke: RC, 'stroke-width': 5, 'stroke-linecap': 'round' });
-const rRu0 = seg(rG1, RP, 1, 0.5, 3, 0.5, XC, 6), rRi0 = seg(rG1, RP, 3, 0.5, 3, 1.5, YC, 6);
+const rRu0 = seg(rG1, RP, 2, 1, 4, 1, XC, 6), rRi0 = seg(rG1, RP, 4, 1, 4, 2, YC, 6);
 const rRot = mk(rs, 'g', {}), rIn = mk(rRot, 'g', {});
 rRot.style.transformBox = 'view-box'; rRot.style.transformOrigin = `${RP.X(0)}px ${RP.Y(0)}px`;
-const rL = mk(rIn, 'line', { x1: RP.X(-3), y1: RP.Y(-1.5), x2: RP.X(3.2), y2: RP.Y(1.6), stroke: RC, 'stroke-width': 6, 'stroke-linecap': 'round' });
-const rRu = seg(rIn, RP, 1, 0.5, 3, 0.5, XC, 6), rRi = seg(rIn, RP, 3, 0.5, 3, 1.5, YC, 6);
+const rL = mk(rIn, 'line', { x1: RP.X(-3.4), y1: RP.Y(-1.7), x2: RP.X(4.6), y2: RP.Y(2.3), stroke: RC, 'stroke-width': 6, 'stroke-linecap': 'round' });
+const rRu = seg(rIn, RP, 2, 1, 4, 1, XC, 6), rRi = seg(rIn, RP, 4, 1, 4, 2, YC, 6);
 const rO = dotG(rs, RP.X(0), RP.Y(0), 7, C.ink);
-const rT = { ru: txt(rs, RP.X(2), RP.Y(0.5) + 30, 'run 2', { ...LAB, 'text-anchor': 'middle', fill: XC }), ri: txt(rs, RP.X(3) + 12, RP.Y(1) + 7, 'rise 1', { ...LAB, fill: YC }),
-  ri2: txt(rs, RP.X(-0.5) - 12, RP.Y(2) + 7, 'rise 2', { ...LAB, 'text-anchor': 'end', fill: YC }), ru2: txt(rs, RP.X(-1), RP.Y(3) - 14, 'run −1', { ...LAB, 'text-anchor': 'middle', fill: XC }),
-  m1: txt(rs, RP.X(3.6), RP.Y(1.8) - 6, 'slope 1/2', { fill: RC, 'font-weight': 700, 'font-size': 20 }), m2: txt(rs, RP.X(-2.2) + 0, RP.Y(3.8), 'slope −2', { fill: M2, 'font-weight': 700, 'font-size': 20, 'text-anchor': 'end' }) };
+const rT = { ru: txt(rs, RP.X(3), RP.Y(1) + 30, 'run 2', { ...LAB, 'text-anchor': 'middle', fill: XC }), ri: txt(rs, RP.X(4) + 12, RP.Y(1.5) + 7, 'rise 1', { ...LAB, fill: YC }),
+  ri2: txt(rs, RP.X(-1) - 12, RP.Y(3) + 7, 'rise 2', { ...LAB, 'text-anchor': 'end', fill: YC }), ru2: txt(rs, RP.X(-1.2), RP.Y(4) - 16, 'run −1', { ...LAB, 'text-anchor': 'middle', fill: XC }),
+  m1: txt(rs, RP.X(4.1), RP.Y(2.7), 'slope 1/2', { fill: RC, 'font-weight': 700, 'font-size': 20 }), m2: txt(rs, RP.X(1.2) + 14, RP.Y(-2.3), 'slope −2', { fill: M2, 'font-weight': 700, 'font-size': 20 }) };
 const rArc = arc(rs, RP.X(0), RP.Y(0), 40, 26.57, 116.57, TC, 3);
 const rMk = rmark(rs, RP, 0, 0, U(2, 1), U(-1, 2), 16);
 
@@ -173,7 +173,7 @@ const gTht = txt(gs, GP.X(gc[0]) + 52, GP.Y(gc[1]) - 46, 'θ', { fill: TC, 'font
 const gOb = arc(gs, GP.X(gc[0]), GP.Y(gc[1]), 30, 71.57, 206.57, C.ink2, 3.5);
 const gObt = txt(gs, GP.X(gc[0]) - 40, GP.Y(gc[1]) - 46, '180° − θ', { fill: C.ink2, 'font-weight': 700, 'font-size': 20, 'text-anchor': 'end' });
 const gM = [txt(gs, GP.X(5.4), GP.Y(2.7) + 30, 'm₁ = 1/2', { fill: RC, 'font-weight': 700, 'font-size': 20 }), txt(gs, GP.X(3.75) + 14, GP.Y(5) + 22, 'm₂ = 3', { fill: M2, 'font-weight': 700, 'font-size': 20 })];
-$('#gP').innerHTML = K(`\\tan ${TH} = \\left|\\frac{3 - \\frac{1}{2}}{1 + \\frac{3}{2}}\\right| = 1 \\;\\Rightarrow\\; ${tc('\\theta = 45^\\circ')}`);
+$('#gP').innerHTML = K(`\\tan ${TH} = (3 - 0.5) \\div (1 + 1.5) = 1 \\;\\Rightarrow\\; ${tc('\\theta = 45^\\circ')}`);
 const th2 = PUC.think($('#th2'), { q: 'Can this formula find the angle between two perpendicular lines?', opts: ['Yes', 'No'], right: 1, why: 'For perpendicular lines 1 + m₁m₂ = 0, and we cannot divide by 0. That angle is 90°.' });
 
 /* ---------- W: worked example ---------- */
@@ -182,7 +182,7 @@ const wsol = PUC.solution($('#wl'), [
   [K(`${m2} - ${m1} = -3 - 2 = -5`)],
   [K(`1 + ${m1} ${m2} = 1 + (-6) = -5`)],
   [K(`\\tan ${TH} = \\left| \\dfrac{-5}{-5} \\right| = 1`)],
-  [K(`${tc('\\theta = 45^\\circ')}`)]], { label: 'WORKED EXAMPLE', y0: 186, dy: 96 });
+  [K(`${tc('\\theta = 45^\\circ')}`)]], { label: 'WORKED EXAMPLE', y0: 176, dy: 104 });
 $('#wl .lbl').style.top = '30px';
 const tWs = [wt('W3', 'Top'), wt('W4', 'Bottom'), wt('W5', 'tan'), wt('W6', 'theta', 1)];
 const WO = { ox: 240, oy: 470, s: 70, x0: -1, x1: 5, y0: -1, y1: 5 };
@@ -191,7 +191,7 @@ const wL1 = fline(ws, WP, 0, 0, 1, 2), wL2 = fline(ws, WP, 0, 5, 1, 2, M2);
 const wX = dotG(ws, WP.X(1), WP.Y(2), 9, C.ink);
 const wTh = arc(ws, WP.X(1), WP.Y(2), 50, 63.43, 108.43, TC, 4.5);
 const wTht = txt(ws, WP.X(1) + 4, WP.Y(2) - 62, '45°', { fill: TC, 'font-weight': 700, 'font-size': 24, 'text-anchor': 'middle' });
-const wM = [txt(ws, WP.X(2.1) + 16, WP.Y(4.2), 'm₁ = 2', { fill: RC, 'font-weight': 700, 'font-size': 22 }), txt(ws, WP.X(1.9) + 18, WP.Y(-0.7), 'm₂ = −3', { fill: M2, 'font-weight': 700, 'font-size': 22 })];
+const wM = [txt(ws, WP.X(2.1) + 16, WP.Y(4.2), 'm₁ = 2', { fill: RC, 'font-weight': 700, 'font-size': 22 }), txt(ws, WP.X(2.05) + 18, WP.Y(-0.95), 'm₂ = −3', { fill: M2, 'font-weight': 700, 'font-size': 22 })];
 
 /* ---------- X / Q / F ---------- */
 const trap = PUC.trap($('#trap'), { wrong: K(`${m2} = -2:\\quad 2 \\times (-2) = -4`) + '<span class="why2">&nbsp; only the sign changed</span>', right: K(`${m2} = -\\tfrac{1}{2}:\\quad 2 \\times \\left(-\\tfrac{1}{2}\\right) = -1`) + '<span class="why2">&nbsp; flip and change sign</span>' });
@@ -271,7 +271,7 @@ M.on(t => {
     attr(lMeet.parentNode, 'transform', `translate(${LP.X(M.clamp(mx, -7, 7)).toFixed(1)},${LP.Y(M.clamp(my, -5, 5)).toFixed(1)})`);
     M.hide(lMeet, !(inW && u >= 1)); M.hide(lFar, !(u >= 1 && !inW && !par && t < T0('L5')));
     M.vis($('#l1'), t, wt('L2', 'one'), 1e9, { dy: 10 }); M.vis($('#l2'), t, wt('L2', 'Line', 1), 1e9, { dy: 10 });
-    M.setT($('#l2v'), mm.toFixed(2));
+    M.setT($('#l2v'), mm.toFixed(2).replace('-', '−'));
     M.vis($('#l3'), t, T0('L3') - 0.2, 1e9, { dy: 10 });
     const l3 = par ? 'never' : Math.abs(mx) > 999 ? (mx > 0 ? '> 999' : '< −999') : mx.toFixed(1).replace('-', '−'); M.setT($('#l3v'), l3);
     const d = Math.abs(ph - A1), th = Math.min(d, 180 - d);

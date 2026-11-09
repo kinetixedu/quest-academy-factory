@@ -1,0 +1,55 @@
+H1|0.4|Here is a limit that looks scary. As x tends to two, x squared plus three x, times x minus one, all over x plus two.
+H2|0.45|Creeping up on two with a table, value by value, would take ages.
+H3|0.35|Aarav thought about this while cleaning his bicycle chain. He takes the chain apart, link by link.
+H4|0.5|Each link is easy to clean. Then he puts them back together. Can we do the same with a limit?
+H5|0.65|Yes, we can. The rules that let us do it are called the algebra of limits.
+B1|0.35|First, two tiny limits. They are the building blocks.
+B2|0.4|The limit of x, as x tends to a, is just a. If x creeps towards two, then x itself gets close to two.
+B3|0.65|The limit of a constant is that constant. If a function always gives five, it stays five, near every point.
+L1|0.35|Now watch two pieces at work.
+L2|0.4|Let f of x be x squared plus three x. And let g of x be x plus two.
+L3|0.4|As x creeps towards two, f closes in on ten. And g closes in on four.
+L4|0.4|Add them. f plus g closes in on fourteen. Exactly ten plus four.
+L5|0.4|Multiply them. f times g closes in on forty. Exactly ten times four.
+L6|0.65|Divide them. f over g closes in on two point five. Exactly ten over four.
+R1|0.4|This always works. NCERT gives it as a theorem. Suppose the limits of f and g at a both exist.
+R2|0.75|Rule one. The limit of a sum is the sum of the limits.
+R3|0.75|Rule two. The limit of a difference is the difference of the limits.
+R4|0.75|Rule three. The limit of a product is the product of the limits.
+R5|0.75|Rule four. The limit of a quotient is the quotient of the limits. But only when the limit of the bottom is not zero.
+R6|0.65|And a number in front just comes along. The limit of k times f is k times the limit of f.
+K1|3.2|Quick one. What is the limit of five x squared, as x tends to three? Forty five, or two hundred and twenty five? Pause and think.
+K2|0.65|Forty five! x squared tends to nine, and the five just comes along. Five times nine is forty five.
+S1|0.4|Side by side. In our example the bottom, x plus two, tends to four. Four is not zero, so the quotient rule works.
+S2|0.6|But look at x squared minus four, over x minus two, as x tends to two. The bottom tends to zero. Here the quotient rule is switched off.
+S3|3.2|Now you try. For one over x, as x tends to zero, can we use the quotient rule? Pause and decide.
+S4|0.65|No! The bottom tends to zero, so the rule is switched off. We must think about it another way.
+D1|0.35|Now let us crack the scary limit, one small step at a time.
+D2|0.75|Step one. x squared is x times x. So it tends to two times two, which is four.
+D3|0.75|Step two. So x squared plus three x tends to four plus six, which is ten.
+D4|0.75|Step three. x minus one tends to one. By the product rule, the top tends to ten times one, which is ten.
+D5|0.75|Step four. The bottom, x plus two, tends to four. Four is not zero, so we may divide.
+D6|0.65|Step five. The limit is ten over four, which is two point five. No table needed.
+T1|0.7|Remember this. Break it up, find each small limit, and put them back together.
+W1|0.35|Now, one worked example.
+W2|0.5|Find the limit, as x tends to one, of two x cubed minus three x plus four, all over x squared plus one.
+W3|0.75|Step one. x tends to one, so x cubed and x squared both tend to one.
+W4|0.75|Step two. The top tends to two minus three plus four, which is three.
+W5|0.75|Step three. The bottom tends to one plus one, which is two.
+W6|0.75|Step four. Two is not zero, so the quotient rule works.
+W7|0.65|Step five. The limit is three over two. One point five.
+X1|0.35|Now, the exam trap.
+X2|0.4|Find the limit of x squared minus nine, over x minus three, as x tends to three. Many students split it, get zero over zero, and write: no limit.
+X3|0.65|But zero over zero only switches the rule off. It does not kill the limit. Factor the top, cancel x minus three, and x plus three tends to six.
+J1|0.6|Where is this asked? We found no past paper question on just these rules, so no chip lights. But they are a step inside most limit questions.
+Q1|5.4|Exam level now. Use the limits of f and g to find this limit. Pause and solve.
+A1|0.5|The answer is A. Seventeen over four.
+A2|0.5|The top. Two f squared tends to two times nine, which is eighteen. Plus g, which tends to minus one. So the top tends to seventeen.
+A3|0.5|The bottom. f minus g tends to three minus minus one, which is four.
+A4|0.6|Four is not zero, so the quotient rule works. The answer is seventeen over four.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What is the limit of x plus seven, as x tends to three?
+Y3|0.9|Two. When is the quotient rule switched off?
+Y4|1.1|Three. Why is the limit of four x squared, as x tends to two, equal to sixteen?
+N1|0.3|Next time: zero over zero. Is the limit stuck, or is there a way out? We find out with limits of polynomial and rational functions.

@@ -1,0 +1,52 @@
+H1|0.4|Aarav puts two dots on a map. One is his home. The other is his college.
+H2|0.45|A straight road joins them. He wants one rule that says, for any spot on the map: is it on this road, or not?
+H3|0.35|He has only the two dots to go on.
+H4|0.5|Can two dots really describe a road that goes on forever?
+H5|0.65|Yes. Two dots, or even one dot and a slope, are enough. Let us see how.
+E1|0.4|First, what is the equation of a line? It is a rule that links x and y.
+E2|0.6|Every point on the line obeys the rule. Every point off the line breaks it. Like a password for the line.
+L1|0.4|Start with one fixed point, P zero, at one, two. And a slope of one half.
+L2|0.4|Now let a point P, with coordinates x and y, slide along the line.
+L3|0.4|Watch the slope from P zero to P. Rise over run. Zero point five. Still zero point five. It never changes.
+L4|0.4|Now push P off the line. The slope changes at once. Zero point eight. Not one half.
+L5|0.65|So a point is on the line exactly when the slope from P zero to it equals m. That is our rule.
+D1|0.4|Let us write that rule down, in small steps.
+D2|0.75|Step one. The slope from P zero to P is y minus y zero, over x minus x zero.
+D3|0.75|Step two. For P to be on the line, this slope must equal m.
+D4|0.75|Step three. Multiply both sides by x minus x zero.
+D5|0.75|Step four. y minus y zero equals m times, x minus x zero. This is the point slope form.
+D6|0.65|For our line, y minus two equals one half times, x minus one.
+P1|0.4|Now, what if we know two points, and no slope?
+P2|0.75|Step one. Find the slope from the two points. y two minus y one, over x two minus x one.
+P3|0.75|Step two. Put that slope into the point slope form, at the first point.
+P4|0.65|This is the two point form. It needs nothing but the two points.
+K1|0.4|Side by side. Point slope form needs one point and the slope.
+K2|0.6|Two point form needs two points. It finds the slope for you, then does the same job.
+K3|3.2|Your turn. A line passes through two, three with slope minus one. Which form fits best? Pause and decide.
+K4|0.65|Point slope! One point and a slope. y minus three equals minus one times, x minus two.
+T1|0.7|Remember this. One point and a slope fix a line. y minus y zero equals m times, x minus x zero.
+V1|0.4|One kind of line breaks this form. A vertical line has no slope.
+V2|0.6|Every point on it has the same x, so its rule is just x equals a number. A horizontal line has rule y equals a number.
+V3|3.2|Quick one. A line passes through four, one and four, six. What is its equation? Pause and think.
+V4|0.65|x equals four! Both points have x equal to four, so the line is vertical. The slope formula would divide by zero.
+W1|0.35|Now, one worked example.
+W2|0.5|Find the equation of the line through one, minus one, and three, five.
+W3|0.75|Step one. The slope is five minus minus one, over three minus one. Six over two. Three.
+W4|0.75|Step two. Use the point one, minus one. y minus minus one equals three times, x minus one.
+W5|0.75|Step three. So y plus one equals three x minus three. That is y equals three x minus four.
+W6|0.65|Step four. Check with three, five. Three times three, minus four, is five. It works.
+X1|0.35|Now, the exam trap.
+X2|0.4|A line through minus two, five with slope four. Many students write y minus five equals four times, x minus two.
+X3|0.65|But x zero is minus two. x minus minus two is x plus two. The right form is y minus five equals four times, x plus two.
+J1|0.6|Where is this asked? In JEE Main, for example in January twenty nineteen: find a line's equation from the points where it meets the axes.
+Q1|5.4|Exam level now. The line through A and B meets the y axis at zero, k, and passes through a, fifteen. Find k plus a. Pause and solve.
+A1|0.5|The answer is B. Seven.
+A2|0.5|The slope is eleven minus three, over six minus two. Eight over four. Two.
+A3|0.5|Point slope at A. y minus three equals two times, x minus two. So y equals two x minus one.
+A4|0.6|At x equals zero, y is minus one, so k is minus one. Fifteen equals two a minus one, so a is eight. k plus a is seven.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Write the line through the origin with slope two.
+Y3|0.9|Two. Which line can the point slope form not describe, and why?
+Y4|1.1|Three. What is the slope of the line through one, one and two, three?
+N1|0.3|Next time: where does the road cross the two main streets? Slope intercept and intercept forms.
