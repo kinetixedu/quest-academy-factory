@@ -1,0 +1,140 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 85 - Algebra of Derivatives</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 85: algebra of derivatives (Proof board) ===== */
+:root{--u:#2F6FEB;--ub:#E7EEFD;--v:#0E8F8F;--vb:#DDF1F1;--x:#7A4FE0}
+/* svg dots and groups scale about their own centre (not the card corner) */
+#stage svg circle,#stage svg g{transform-box:fill-box;transform-origin:center}
+#stage .ringW svg circle{transform-box:view-box;transform-origin:0 0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+/* title card */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:50px;font:600 32px 'IBM Plex Mono';white-space:nowrap}
+/* hook */
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px;object-fit:cover}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.ro{position:absolute;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.ro b{display:block;margin-top:4px;font:600 34px/1 'IBM Plex Mono';letter-spacing:0}
+/* steps */
+.st{position:absolute;left:36px;width:712px}
+.st .n{position:absolute;left:0;top:8px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:66px;top:4px;font-size:34px;white-space:nowrap}
+.st .why{position:absolute;left:66px;top:58px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.st.tall .n{top:30px}
+.kk{position:absolute;left:36px;font-size:38px;white-space:nowrap}
+.cf{position:absolute;left:36px;top:84px;font-size:44px;white-space:nowrap}
+#wq{position:absolute;left:36px;top:64px;font:600 30px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.2em}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.2em}
+#mq .mq .katex{font-size:1.2em}
+#wl .sol .sx{font-size:30px}
+#wl .sol .sx .katex{font-size:1.15em}
+.trapL .tx .katex{font-size:1.2em}
+.trapL{gap:16px}
+#tR{position:absolute;left:1040px;width:520px}
+#tR .k{font-size:30px;white-space:nowrap;margin-top:6px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 12 LIMITS AND DERIVATIVES</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">The Growing <span class="acc">Rectangle</span></div>
+    <div id="sub">Explained with tanks, a rectangle and a pizza</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">LIVE · THE RECTANGLE GROWS</div>
+        <svg id="hG" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="ro" style="left:500px;top:92px">TIME<b id="hT">0.0 s</b></div>
+        <div class="ro" style="left:500px;top:172px">WIDTH<b id="hW" style="color:var(--u)">4.0</b></div>
+        <div class="ro" style="left:500px;top:252px">HEIGHT<b id="hH" style="color:var(--v)">3.0</b></div>
+        <div class="ro" id="hRr" style="left:500px;top:332px">AREA GROWS AT<b id="hR" style="color:var(--ac)">18.0</b></div>
+        <div class="pillp bad" id="hP" style="left:500px;top:440px">Not 6 per second</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · THE STUDY TABLE</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">Why not 2 × 3 = 6?</div></div>
+    </div>
+
+    <!-- S: sum rule -->
+    <div id="sS">
+      <div class="card full" id="sl"><div class="lbl" style="left:36px;top:30px">SUM RULE · TWO TANKS</div><svg id="sG" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="sr"><div class="lbl" style="left:36px;top:30px">THE EASY RULES</div><div class="hiBox" id="sHi" style="left:20px;width:744px;height:104px"></div><div id="sSt"></div></div>
+    </div>
+
+    <!-- P: product picture -->
+    <div id="sP">
+      <div class="card full" id="pl"><div class="lbl" style="left:36px;top:30px">LIVE · WIDTH u, HEIGHT v</div><svg id="pG" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="ro" id="pD" style="left:560px;top:84px">TINY MOMENT<b id="pDv" style="color:var(--ac)">0.80</b></div></div>
+      <div class="card rf" id="pr"><div class="lbl" style="left:36px;top:30px">THE NEW AREA · 3 PIECES</div><div id="pRows"></div><div class="kk" id="pRes" style="top:440px"></div></div>
+    </div>
+
+    <!-- D: the rule -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">PRODUCT RULE · 4 STEPS</div><div class="hiBox" id="dHi" style="left:20px;width:744px;height:100px"></div><div id="dSt"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">BACK TO AARAV'S RECTANGLE</div><div id="dRows"></div></div>
+    </div>
+
+    <!-- R: quotient -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">SHARING A PIZZA</div><svg id="rG" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="ro" style="left:36px;top:430px">SLICES EACH<b id="rS">4</b></div><div class="pillp" id="rP" style="left:260px;top:450px"></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">QUOTIENT RULE</div><div class="cf" id="rF"></div>
+        <div class="pillp" id="rP1" style="left:36px;top:250px;background:var(--ub);color:#1D4FB8">top's change: plus</div>
+        <div class="pillp bad" id="rP2" style="left:300px;top:250px">bottom's change: minus</div>
+        <div class="pillp ac" id="rP3" style="left:36px;top:330px">Only when v ≠ 0</div>
+        <div class="kk" id="rTr" style="top:420px;font:600 28px/1.4 Poppins;white-space:normal;width:712px">Low d high, minus high d low,<br>over the square of what is below</div></div>
+    </div>
+
+    <!-- C: sum vs product + think -->
+    <div id="sC">
+      <div class="card full" id="c1"><div class="lbl" style="left:36px;top:30px">SUM · DERIVATIVES ADD</div><div class="cf" id="c1F"></div><div class="kk" id="c1E" style="top:200px;font-size:34px"></div>
+        <div class="pillp" id="c1P" style="left:36px;top:300px;background:var(--okBg);color:#1F6B3F">Just add them</div></div>
+      <div class="card rf" id="c2"><div class="lbl" style="left:36px;top:30px">PRODUCT · EACH TAKES A TURN</div><div class="cf" id="c2F"></div><div class="kk" id="c2E" style="top:200px;font-size:34px"></div>
+        <div class="pillp ac" id="c2P" style="left:36px;top:300px">One changes, the other stays still</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">CHECK ON THE GRAPH · x = 1</div><svg id="wG" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="ro" id="wRh" style="left:150px;top:84px">STEP h<b id="wHv" style="color:var(--mute)">1.000</b></div>
+        <div class="ro" id="wRs" style="left:410px;top:84px">SLOPE<b id="wSv" style="color:var(--ac)">0.833</b></div></div>
+    </div>
+
+    <!-- X / Q / F -->
+    <div id="sX"><div class="card red" id="trap"><div id="tR"></div></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Each part takes a <span class="acc">turn</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

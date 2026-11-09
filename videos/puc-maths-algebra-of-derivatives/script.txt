@@ -6,7 +6,6 @@ H5|0.65|Today we learn the algebra of derivatives: the derivative of a sum, a pr
 S1|0.4|Quick reminder. A derivative tells us how fast something changes. We write u dash for how fast u changes.
 S2|0.4|Start easy. Two tanks fill with water at the same time. One gains two litres a minute, the other three. Together, five litres a minute.
 S3|0.75|That is the sum rule. The derivative of u plus v is u dash plus v dash. For a difference, use a minus.
-S4|0.75|A fixed number in front just comes along. The derivative of five times u is five times u dash.
 S5|0.75|One more tool from the NCERT book. The derivative of x to the power n is n times x to the power n minus one. So x cubed gives three x squared.
 P1|0.4|Now the product. Let the rectangle have width u and height v. Its area is u times v.
 P2|0.4|In a tiny moment, the width grows by a small bit, delta u. The height grows by delta v.
@@ -26,7 +25,7 @@ R4|0.65|A memory trick. Low d high, minus high d low, over the square of what is
 C1|0.4|Side by side. For a sum, the derivatives just add. u plus v gives u dash plus v dash.
 C2|0.6|For a product, they do not multiply. Each part takes a turn to change, while the other stays still.
 C3|3.2|Your turn. Is the derivative of x squared times x cubed equal to two x times three x squared? Pause and think.
-C4|0.65|No! That gives six x cubed. The product is x to the power five, so the derivative is five x to the power four. The product rule agrees: two x times x cubed, plus x squared times three x squared.
+C4|0.65|No! That gives six x cubed. But x squared times x cubed is x to the power five, so its derivative is five x to the power four.
 T1|0.7|Remember this. A product does not give the product of derivatives. Each part takes a turn.
 W1|0.35|Now, one worked example.
 W2|0.5|Find the derivative of x squared, over x plus one. Then find its value at x equal to one.
@@ -37,7 +36,7 @@ W6|0.75|Step four. Tidy the top. We get x squared plus two x, over x plus one, s
 W7|0.65|Step five. At x equal to one, that is three over four. A tiny step of one thousandth on the graph gives the same slope.
 X1|0.35|Now, the exam trap.
 X2|0.4|In the quotient rule, many students start with u v dash. The order flips the sign.
-X3|0.65|For our example, the wrong order gives minus three over four. But the graph is going up at x equal to one, so the slope must be positive. Always start with the bottom times the top's change.
+X3|0.65|For our example, the wrong order gives minus three over four. But the graph is going up at x equal to one, so the slope must be positive.
 J1|0.6|Where is this asked? These rules are tools. Exam questions use them as one step inside a bigger calculus problem.
 Q1|5.4|Exam level now. Use the product rule, then the quotient rule. Pause and solve.
 A1|0.5|The answer is C. Two.

@@ -185,13 +185,13 @@ const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW
   opts: [K('7/3'), K('-1'), K('1'), K('-7/3')], right: 1, optW: 474, optY: 300 });
 const so = PUC.solution($('#so'), [[K(`${rc('m')} = \\tan 135^\\circ = -1`)], [K(`${rc('m')} = \\dfrac{${yc('2k - 3')}}{${xc('4 - k')}}`)], [K(`2k - 3 = k - 4`)], [K(`k = -1`)], [K(`\\text{check: } \\tfrac{-2 - 3}{4 + 1} = -1`)]], { y0: 100, dy: 96 });
 const tSo = [wt('A2', 'tan'), wt('A3', 'From'), wt('A4', 'So'), wt('A4', 'and'), wt('A4', 'Check')];
-const fc = PUC.fcard($('#sF'), { x: 300, y: 236, w: 1320, h: 524, title: 'Recap · slope of a line', y0: 96, dy: 86, txt: [1, 0, 0, 1, 1],
+const fc = PUC.fcard($('#sF'), { x: 300, y: 226, w: 1320, h: 540, title: 'Recap · slope of a line', y0: 96, dy: 80, txt: [1, 0, 0, 1, 1],
   lines: ['<b>Slope</b> m = rise ÷ run: how far up for one step across',
     K(`${rc('m')} = \\dfrac{${yc('y_2 - y_1')}}{${xc('x_2 - x_1')}}, \\quad ${xc('x_1')} \\ne ${xc('x_2')}`),
     K(`${rc('m')} = \\tan ${tc('\\theta')}, \\quad ${tc('\\theta')} \\ne 90^\\circ`),
     '<b>Up</b> to the right: m &gt; 0 &nbsp;·&nbsp; <b>down</b> to the right: m &lt; 0',
     '<b>Flat</b> line: m = 0 &nbsp;·&nbsp; <b>standing</b> line: not defined'] });
-[...document.querySelectorAll('#sF .fcard .fl')].forEach((e, i) => { if (i >= 2) e.style.top = (parseFloat(e.style.top) + 22) + 'px'; });
+[...document.querySelectorAll('#sF .fcard .fl')].forEach((e, i) => { if (i >= 2) e.style.top = (parseFloat(e.style.top) + 36) + 'px'; });
 const YQ = ['What is the slope of a line that goes up 3 for every 2 across?', 'Why is the slope of the y-axis not defined?', 'A line has inclination 60°. What is its slope?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="n">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
