@@ -1,0 +1,31 @@
+{
+ "world": "puc-electronics",
+ "topic": "Printed Circuit Boards (PCB)",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 61
+ },
+ "class": "11",
+ "title": "Where Did the Wires Go? PCB Explained Simply | PUC Electronics",
+ "description": "Aarav opens an old remote control and expects a nest of wires. Instead he finds a flat green board covered in thin copper lines. Where did all the wires go? In this animated lesson we open up printed circuit boards (PCBs).\n\nFirst we build a PCB layer by layer: the insulating board, copper tracks, pads, the green solder mask and the white silkscreen. We compare single sided, double sided (with vias) and multilayer boards, and watch a simple PCB being made: copper clad board, layout printed in ink, etching in ferric chloride, cleaning, drilling and soldering. On a live breadboard two amperes flow through a 10 cm copper track while the readout and an oscilloscope show how much voltage a thin track loses compared with a wide one, using R = ρL / (w t). We list five advantages of PCBs, then a worked example finds the resistance of a real-size track, followed by the exam trap (A is the cross section, not the top area), where it is asked, an original JEE Main pattern practice question with a full solution, and a fact card to screenshot.\n\nThis is Episode 61 of PUC Electronics, Class 11, Chapter 9: Practical Electronic Components, their Specifications and PCB (Karnataka I PUC Electronics). It is the last episode of Class 11.\n\nIn this video:\n0:00 Where did the wires go?\n0:13 Anatomy of a PCB\n0:48 Single, double sided and multilayer\n1:07 How a PCB is made\n1:35 A track has resistance (breadboard and scope)\n2:21 Five advantages of PCBs\n2:44 Worked example: one copper track\n3:22 Exam trap: which area?\n3:36 Where it is asked\n3:47 Practice question\n4:21 Fact card\n\nNext episode: JFET Construction and Working (Class 12).\n\nVideo by Quest Academy.",
+ "tags": [
+  "printed circuit board",
+  "PCB explained",
+  "types of PCB",
+  "single sided double sided multilayer PCB",
+  "how PCB is made",
+  "PCB etching ferric chloride",
+  "solder mask and silkscreen",
+  "advantages of PCB",
+  "PCB track resistance",
+  "resistivity R = rho L by A",
+  "PUC electronics",
+  "1st PUC electronics chapter 9",
+  "Karnataka PUC electronics"
+ ],
+ "thumb": {
+  "title": "Where Did the Wires Go?",
+  "accent_word": "Wires",
+  "frame_t": 46
+ }
+}

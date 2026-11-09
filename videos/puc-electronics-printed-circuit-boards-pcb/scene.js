@@ -135,7 +135,7 @@ const vT = ['#v0', '#v1', '#v2', '#v3', '#v4'].map(s => $(s));
 const wS = $('#wS');
 const blk = [mk(wS, 'path', { d: 'M120,170 L560,170 L660,110 L220,110 Z', fill: CU, stroke: INK, 'stroke-width': 3 }), mk(wS, 'path', { d: 'M120,170 L560,170 L560,200 L120,200 Z', fill: '#C48A2A', stroke: INK, 'stroke-width': 3 }), mk(wS, 'path', { d: 'M560,170 L660,110 L660,140 L560,200 Z', fill: '#9E6E1F', stroke: INK, 'stroke-width': 3 })];
 const wDim = [mono(wS, 340, 230, 'L = 10 cm', { 'text-anchor': 'middle', fill: INK, 'font-weight': 600 }), mono(wS, 640, 96, 'w = 1 mm', { 'text-anchor': 'middle', fill: INK, 'font-weight': 600 }), mono(wS, 676, 186, 't = 35 µm', { fill: INK, 'font-weight': 600 })];
-const wNote = mono(wS, 392, 262, '(thickness drawn much bigger than real)', { 'text-anchor': 'middle', 'font-size': 16 });
+const wNote = mono(wS, 392, 290, '(thickness drawn much bigger than real)', { 'text-anchor': 'middle', 'font-size': 16 });
 const wHi = mk(wS, 'path', { d: 'M560,170 L660,110 L660,140 L560,200 Z', fill: 'none', stroke: AM, 'stroke-width': 5 });
 const wIa = PUC.arrow(wS, VI, 5, 16);
 const wR = [['A', '3.5 × 10⁻⁸ m²', INK], ['R', '0.049 Ω', INK], ['IR', '0.097 V ≈ 0.1 V', TE]].map(([k, v, col], i) => { const g = mk(wS, 'g'); mk(g, 'rect', { x: 36, y: 310 + i * 84, width: 712, height: 68, rx: 14, fill: SOFT }); tx(g, 64, 354 + i * 84, k, { 'font-style': 'italic', 'font-size': 30, fill: col }); tx(g, 720, 354 + i * 84, v, { 'text-anchor': 'end', 'font-family': 'IBM Plex Mono', 'font-size': 30, fill: col }); return g; });
@@ -185,7 +185,7 @@ M.on(t => {
     M.vis($('#aC'), t, tMorph + 0.2, out, { dx: -60, dy: 0, ...o });
     M.vis($('#aImg'), t, tMorph + 0.35, 1e9, { dy: 30, sp: M.SOFT });
     M.vis($('#hC'), t, tMorph + 0.35, out, { dx: 60, dy: 0, ...o });
-    M.vis(nest, t, wt('H1', 'nest') - 0.3, 1e9, { dy: 0, fade: 0.3 }); M.vis(nestL, t, wt('H1', 'expects') - 0.2, 1e9, { dy: 8 });
+    M.vis(nest, t, tMorph + 0.7, 1e9, { dy: 0, fade: 0.4 }); M.vis(nestL, t, tMorph + 0.7, 1e9, { dy: 8 });
     M.draw(nestX, t, wt('H2', 'Instead') - 0.1, 0.5);
     M.vis(found, t, wt('H2', 'flat') - 0.2, 1e9, { dy: 20 }); M.vis(foundL, t, wt('H2', 'flat') - 0.2, 1e9, { dy: 8 });
   }
