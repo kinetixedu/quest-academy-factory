@@ -1,0 +1,47 @@
+H1|0.4|Hit a cricket ball high. It rises, slows, and falls back along one smooth curve.
+H2|0.45|Now look at a dish antenna on a roof. Its metal bowl has the very same curve, and it sends every signal to one point in front of it.
+H3|0.35|Aarav spotted both on his ride to college.
+H4|0.5|A flying ball and a metal dish. Why do they share one curve?
+H5|0.65|That curve is the parabola. And one simple rule builds all of it.
+P1|0.4|Here is the rule. Take a fixed point, called the focus, and a fixed line, called the directrix.
+P2|0.4|A parabola is the set of all points that are the same distance from the focus and from the directrix.
+P3|0.4|Watch the test run. A point moves so that its distance to the focus always equals its distance to the line.
+P4|0.4|Five and five. Eight and eight. Every point that passes leaves a dot, and the dots trace the curve.
+P5|0.65|The line through the focus, square to the directrix, is the axis. The curve meets the axis at the vertex, halfway between the two.
+T1|0.7|Remember this. Every point on a parabola is as far from the focus as from the directrix.
+R1|0.4|Now the equation. Put the vertex at the origin, the focus at a, zero, and the directrix at x equals minus a.
+R2|0.75|Step one. The distance from P to the focus is the square root of, x minus a all squared, plus y squared.
+R3|0.75|Step two. The distance from P to the directrix is straight across: x plus a.
+R4|0.75|Step three. Set them equal, and square both sides to remove the root.
+R5|0.75|Step four. Open the brackets on each side.
+R6|0.65|Step five. x squared and a squared appear on both sides, so they cancel. What is left is y squared equals four a x.
+M1|0.4|Now the live part. a is the distance from the vertex to the focus.
+M2|0.65|Grow a from one to three. The focus moves out, and the parabola opens wider and wider.
+M3|0.4|One more length. The latus rectum is the chord through the focus, square to the axis.
+M4|0.75|Put x equals a. Then y squared is four a squared, so y is plus or minus two a.
+M5|0.65|From minus two a up to two a, its length is four a.
+K1|0.4|Side by side. In y squared equals four a x, the letter x is not squared. So the axis is the x axis, and the curve opens to the right.
+K2|0.6|In x squared equals four a y, y is not squared. The axis is the y axis, and it opens up. A minus sign flips each one, to the left, or down.
+K3|3.2|Your turn. x squared equals minus eight y. Which way does it open, and where is the focus? Pause and decide.
+K4|0.65|Down, with the focus at zero, minus two! y is not squared, so the axis is the y axis. The minus means down. And four a is eight, so a is two.
+W1|0.35|Now, one worked example.
+W2|0.5|For y squared equals twelve x, find the focus, the directrix and the latus rectum.
+W3|0.75|Step one. Match it with y squared equals four a x. Four a is twelve, so a is three.
+W4|0.75|Step two. The focus is three, zero. The directrix is x equals minus three.
+W5|0.75|Step three. The latus rectum is four a, which is twelve.
+W6|0.65|Check: the point three, six is on the curve, since six squared and twelve times three are both thirty six. It is one end of the latus rectum.
+X1|0.35|Now, the exam trap.
+X2|0.4|y squared equals eight x. Many students say the focus is at eight, zero.
+X3|0.65|But eight is four a, not a. So a is two, and the focus is at two, zero.
+J1|0.6|Where is this asked? In JEE Main. In August twenty twenty one, a question gave the vertex and the focus of a parabola, and asked for its latus rectum.
+Q1|5.4|Exam level now. On y squared equals four a x, a point P has x equal to four, and its distance from the focus is six. Find the latus rectum. Pause and solve.
+A1|0.5|The answer is C. Eight.
+A2|0.5|By the rule, P is as far from the focus as from the directrix.
+A3|0.5|The directrix is x equals minus a, so that distance is four plus a.
+A4|0.6|Four plus a equals six, so a is two. The latus rectum is four a, which is eight.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Every point on a parabola is equally far from which two things?
+Y3|0.9|Two. Where is the focus of x squared equals twenty y?
+Y4|1.1|Three. Which way does y squared equals minus six x open?
+N1|0.3|Next time: a loop of string, two pins and a pencil draw a perfect oval. How? The ellipse.
