@@ -1,0 +1,51 @@
+H1|0.4|Take two numbers, four and nine. There are two different ways to find a middle value.
+H2|0.45|Aarav tried both in the study room. Add and halve: six and a half. Multiply, then take the square root: six.
+H3|0.35|He tried more pairs. Two and eight. One and one hundred. The first way always won, or tied.
+H4|0.5|Is that luck, or a rule that never breaks?
+H5|0.65|It is a rule. Today we meet the geometric mean, and the A M G M inequality.
+G1|0.4|First, what is a geometric mean? Think of a rectangle, four wide and nine tall. Its area is thirty six.
+G2|0.4|Now find a square with the same area. Its side is six, because six times six is thirty six.
+G3|0.6|That side is the geometric mean. For two positive numbers a and b, G is the square root of a b.
+G4|0.6|And a, G, b make a G P. Four, six, nine. Six over four and nine over six are both one and a half.
+G5|0.4|We can fit in more than one. To put n geometric means between a and b, we need n plus one equal jumps of r.
+G6|0.6|NCERT's example: three means between one and two hundred and fifty six. That is four jumps, so r to the four is two hundred and fifty six, and r is four.
+G7|0.65|The means are four, sixteen and sixty four.
+G8|3.2|Quick one. What is the geometric mean of two and eighteen? Pause and think.
+G9|0.65|Six. Two times eighteen is thirty six, and the square root of thirty six is six.
+L1|0.4|Now the big race. Keep the total fixed at ten, so the A M stays at five. Change a, and watch G.
+L2|0.4|When a is one and b is nine, G is three. When a is two and b is eight, G is four.
+L3|0.4|As the two numbers come closer, G climbs towards A.
+L4|0.65|At five and five, they meet. G equals A. But G never gets past A.
+D1|0.4|Why can G never win? Here is the proof, in four small steps.
+D2|0.75|Step one. A minus G is a plus b over two, minus the square root of a b.
+D3|0.75|Step two. Put it all over two. The top is a plus b, minus two root a b.
+D4|0.75|Step three. That top is a perfect square. It is root a minus root b, the whole squared.
+D5|0.75|Step four. A square is never negative. So A minus G is zero or more. A is at least G.
+D6|0.65|And A equals G only when root a equals root b. That means a equals b.
+C1|0.4|Side by side. The arithmetic mean adds, then halves. For four and nine, six and a half.
+C2|0.6|The geometric mean multiplies, then takes the square root. For four and nine, six. Numbers far apart make a big gap between them.
+C3|3.2|Your turn. Two positive numbers have an A M of ten. Can their G M be twelve? Pause and think.
+C4|0.65|No. G can never be bigger than A. Their G M must be ten or less.
+T1|0.7|Remember this. For positive numbers, the A M is never smaller than the G M.
+W1|0.35|Now, one worked example.
+W2|0.5|The A M of two positive numbers is ten, and their G M is eight. Find the numbers.
+W3|0.75|Step one. The A M is ten, so a plus b is twenty.
+W4|0.75|Step two. The G M is eight, so a b is sixty four.
+W5|0.75|Step three. They are the roots of x squared, minus twenty x, plus sixty four, equals zero.
+W6|0.75|Step four. This factors as x minus four, times x minus sixteen.
+W7|0.65|So the numbers are four and sixteen. Check: their average is ten, and the square root of sixty four is eight.
+X1|0.35|Now, the exam trap.
+X2|0.4|Students use A M G M on any numbers. Try minus two and minus eight.
+X3|0.65|Their A M is minus five, but the square root of their product is four. Four is bigger! The rule only works for positive numbers.
+J1|0.6|Where is this asked? In JEE Main. In April twenty twenty three, a paper inserted arithmetic and geometric means between two numbers and linked them.
+Q1|5.4|Exam level now. For x greater than zero, what is the smallest value of x plus sixteen over x? Pause and solve.
+A1|0.5|The answer is B. Eight.
+A2|0.5|x and sixteen over x are both positive, so A M is at least G M.
+A3|0.5|Their G M is the square root of x times sixteen over x. That is root sixteen, which is four.
+A4|0.6|So their sum is at least two times four, eight. It is exactly eight when x equals sixteen over x, at x equals four.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Find the geometric mean of three and twenty seven.
+Y3|0.9|Two. Why must both numbers be positive?
+Y4|1.1|Three. When is the A M equal to the G M?
+N1|0.3|Next time: one, plus four, plus nine, and on. Can one formula add all the squares? The sum of special series.

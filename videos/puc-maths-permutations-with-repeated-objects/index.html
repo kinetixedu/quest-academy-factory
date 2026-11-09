@@ -1,0 +1,140 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 55 - Permutations with Repeated Objects</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 55: permutations with repeated objects (Proof board) ===== */
+:root{--x:#7A4FE0;--o:#D9731A;--nb:#2F6FEB;--res:#0E8F8F}
+#stage svg circle,#stage svg g{transform-box:fill-box;transform-origin:center}
+#stage .ringW svg circle{transform-box:view-box;transform-origin:0 0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+/* title card */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:54px;font:600 30px 'IBM Plex Mono';letter-spacing:.12em;white-space:nowrap}
+/* letter tiles */
+.lt{position:absolute;width:84px;height:84px;border-radius:12px;background:#fff;border:3px solid var(--ink);display:flex;align-items:center;justify-content:center;font:700 44px Poppins;color:var(--ink)}
+.lt sub{position:absolute;right:8px;bottom:4px;font:600 16px 'IBM Plex Mono'}
+.lt.sm{width:64px;height:64px;font-size:32px;border-radius:10px}
+.lt.sm sub{font-size:13px;right:5px;bottom:2px}
+/* hook */
+.gb{position:absolute;top:84px;width:340px;height:160px;border-radius:14px;background:var(--soft)}
+.gb .gl{position:absolute;left:24px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.gb .gv{position:absolute;left:24px;top:48px;font:600 80px/1 'IBM Plex Mono'}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* live paint test */
+.rd{position:absolute;left:36px;font-size:46px;white-space:nowrap}
+#pCnt{position:absolute;left:36px;top:420px;height:64px;padding:0 22px;border-radius:12px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+.pr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.pr .wl{position:absolute;right:24px;top:42px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--res);white-space:nowrap}
+/* side by side */
+.sym{position:absolute;left:0;width:784px;text-align:center;top:236px;font:600 64px/1 'IBM Plex Mono'}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:92px}
+.st .n{position:absolute;left:0;top:6px;width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 21px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:68px;top:0;font-size:36px;white-space:nowrap}
+.st .why{position:absolute;left:68px;top:56px;font:500 21px Poppins;color:var(--mute);white-space:nowrap}
+#dSw{position:absolute;left:36px;top:222px;font:600 22px Poppins;color:var(--ink2);white-space:nowrap}
+/* live shrink */
+#vK{position:absolute;left:36px;top:76px;font:600 26px Poppins;color:var(--ac);white-space:nowrap}
+#vP{position:absolute;left:36px;top:300px;font-size:52px;white-space:nowrap}
+/* worked */
+#wq{position:absolute;left:36px;top:64px;font:600 28px/1.4 Poppins;width:712px}
+.gp{position:absolute;font:600 22px 'IBM Plex Mono';white-space:nowrap}
+#wTot{position:absolute;left:36px;top:470px;font-size:48px;white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.12em}
+#mq .mq .katex{font-size:1.2em}
+#wl .sol .sx{font-size:30px}
+.trapL .tx .katex{font-size:1.2em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:34px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 6 PERMUTATIONS AND COMBINATIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">When Letters <span class="acc">Repeat</span></div>
+    <div id="sub">Explained with the five tiles of APPLE</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">SAME FIVE TILES · TWO COUNTS</div>
+        <div class="gb" id="gb0" style="left:36px"><div class="gl">5 DIFFERENT LETTERS</div><div class="gv">120</div></div>
+        <div class="gb" id="gb1" style="left:408px;background:var(--ac2)"><div class="gl" style="color:var(--ac)">THE LETTERS OF APPLE</div><div class="gv" style="color:var(--ac)">60</div></div>
+        <div id="hT"></div>
+        <div class="pillp ac" id="hP" style="left:36px;top:490px">Swap the two P's: the same word</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · A WORD GAME AFTER CLASS</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">Same tiles. Where did half go?</div></div>
+    </div>
+
+    <!-- P: the paint test (live) -->
+    <div id="sP">
+      <div class="card full" id="pl"><div class="lbl" style="left:36px;top:30px">PAINT THE TWO P'S</div><div id="pT"></div>
+        <div class="rd" id="pF1" style="top:236px"></div><div class="rd" id="pF2" style="top:316px"></div><div id="pCnt"></div></div>
+      <div class="card rf" id="pr"><div class="lbl" style="left:36px;top:30px">ALL THE ARRANGEMENTS</div><div id="pR"></div></div>
+    </div>
+
+    <!-- K: side by side + think -->
+    <div id="sK">
+      <div class="card full" id="kw"><div class="lbl" style="left:36px;top:30px">WITH PAINT · DIFFERENT OBJECTS</div><div id="kwT"></div><div class="sym" id="kwS" style="color:var(--ok)">≠</div>
+        <div class="pillp good" id="kwP" style="left:36px;top:490px">Swap: a new arrangement</div></div>
+      <div class="card rf" id="kn"><div class="lbl" style="left:36px;top:30px">WITHOUT PAINT · THE SAME OBJECT</div><div id="knT"></div><div class="sym" id="knS" style="color:var(--red)">=</div>
+        <div class="pillp bad" id="knP" style="left:36px;top:490px">Swap: nothing changes</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- D: derivation -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">APPLE · PRETEND ALL DIFFERENT</div><div id="dT"></div>
+        <div id="dSw"></div>
+        <div class="rd" id="dF1" style="top:280px"></div><div class="rd" id="dF2" style="top:356px"></div>
+        <div class="pillp" id="dN" style="left:36px;top:440px;background:#E7EEFD;color:var(--nb)"></div>
+        <div class="pillp" id="dP" style="left:36px;top:504px;background:var(--ac2);color:var(--ac)"></div></div>
+      <div class="card rf" id="dp"><div class="lbl" style="left:36px;top:30px">THE RULE · 5 STEPS</div><div id="dSt"></div></div>
+    </div>
+
+    <!-- V: live shrink -->
+    <div id="sV">
+      <div class="card full" id="vl"><div class="lbl" style="left:36px;top:30px">LIVE · MAKE MORE LETTERS THE SAME</div><div id="vK"></div><div id="vT"></div><div id="vP"></div></div>
+      <div class="card rf" id="vr"><div class="lbl" style="left:36px;top:30px">DIFFERENT WORDS</div><svg id="vB" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">BANANA · SORT THE REPEATS</div><div id="wT"></div><div id="wTot"></div></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">When letters <span class="acc">repeat</span>, divide.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

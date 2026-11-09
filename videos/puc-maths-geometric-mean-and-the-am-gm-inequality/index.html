@@ -1,0 +1,130 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 67 - Geometric Mean and the AM-GM Inequality</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 67: geometric mean and the AM-GM inequality (Proof board) ===== */
+:root{--x:#7A4FE0;--sa:#2F6FEB;--sab:#E7EEFD;--tl:#0E8F8F;--gd:#B7791F;--mg:#C2378A}
+/* svg dots and groups scale about their own centre (not the card corner) */
+#stage svg circle,#stage svg g{transform-box:fill-box;transform-origin:center}
+#stage .ringW svg circle{transform-box:view-box;transform-origin:0 0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+/* title card */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:50px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+/* hook table */
+.hh{position:absolute;top:84px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.hc{position:absolute;height:84px;border-radius:14px;background:var(--soft);display:flex;align-items:center;justify-content:center;font:600 32px 'IBM Plex Mono';white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px;object-fit:cover}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* GM definition */
+.fx2{position:absolute;left:36px;white-space:nowrap}
+.ct{position:absolute;width:104px;height:76px;border-radius:12px;background:var(--soft);display:flex;align-items:center;justify-content:center;font:600 32px 'IBM Plex Mono';border:2.5px solid transparent;box-sizing:border-box}
+.cj{position:absolute;width:56px;text-align:center;font:600 20px 'IBM Plex Mono';color:#D9731A}
+/* race */
+.rd{position:absolute;top:84px;font:600 34px/1 'IBM Plex Mono';white-space:nowrap}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:84px}
+.st .n{position:absolute;left:0;top:12px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:66px;top:4px;font-size:36px;white-space:nowrap}
+.ck{position:absolute;left:36px;font-size:40px;white-space:nowrap}
+/* compare */
+.bf{position:absolute;left:36px;top:96px;font-size:56px;white-space:nowrap}
+/* worked */
+#wq{position:absolute;left:36px;top:64px;font:600 30px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.2em}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.2em}
+#mq .mq .katex{font-size:1.2em}
+#wl .sol .sx{font-size:30px}
+#wl .sol .sx .katex{font-size:1.15em}
+.trapL .tx .katex{font-size:1.2em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:34px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 8 SEQUENCES AND SERIES</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Which Average <span class="acc">Wins</span>?</div>
+    <div id="sub">Explained with a rectangle and a square</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">AARAV · TWO WAYS TO FIND THE MIDDLE</div><div id="hT"></div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · THE STUDY ROOM</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">Luck, or a rule that never breaks?</div></div>
+    </div>
+
+    <!-- G: geometric mean -->
+    <div id="sG">
+      <div class="card full" id="gl"><div class="lbl" style="left:36px;top:30px">SAME AREA · RECTANGLE AND SQUARE</div><svg id="gS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="gr"><div class="lbl" style="left:36px;top:30px">GEOMETRIC MEAN · NCERT</div>
+        <div class="fx2" id="gD" style="top:84px;font-size:56px"></div>
+        <div class="fx2" id="gP" style="top:200px;font-size:36px"></div>
+        <div class="lbl" id="gIl" style="left:36px;top:296px">3 MEANS BETWEEN 1 AND 256 · 4 EQUAL JUMPS</div><div id="gCh"></div>
+        <div class="fx2" id="gR" style="top:466px;font-size:38px"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- L: the race (live) -->
+    <div id="sL">
+      <div class="card full" id="ll"><div class="lbl" style="left:36px;top:30px">LIVE · TOTAL FIXED AT 10</div>
+        <div class="rd" style="left:36px" id="lAB"></div><div class="rd" style="left:420px;color:var(--gd)" id="lA">A = 5</div><div class="rd" style="left:590px;color:var(--mg)" id="lG"></div>
+        <svg id="lS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="lr"><div class="lbl" style="left:36px;top:30px">G AGAINST a · A STAYS AT 5</div><svg id="lP" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- D: proof -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">WHY A IS NEVER LESS THAN G · 4 STEPS</div>
+        <div class="hiBox" id="dHi" style="left:20px;width:744px;height:84px"></div><div id="dSt"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">CHECK WITH 4 AND 9</div><div id="dCk"></div>
+        <div class="pillp ac" id="dEq" style="left:36px;top:470px">A = G only when a = b</div></div>
+    </div>
+
+    <!-- C: side by side + think -->
+    <div id="sC">
+      <div class="card full" id="c1"><div class="lbl" style="left:36px;top:30px">ARITHMETIC MEAN · ADD, THEN HALVE</div><div class="bf" id="c1F"></div><svg id="c1S" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="c2"><div class="lbl" style="left:36px;top:30px">GEOMETRIC MEAN · MULTIPLY, THEN ROOT</div><div class="bf" id="c2F"></div><svg id="c2S" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">ON THE NUMBER LINE</div><svg id="wS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- X / Q / F -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="600" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">A M is <span class="acc">never</span> smaller.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
