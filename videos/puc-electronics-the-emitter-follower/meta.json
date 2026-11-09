@@ -1,0 +1,31 @@
+{
+ "world": "puc-electronics",
+ "topic": "The Emitter Follower",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 73
+ },
+ "class": "12",
+ "title": "The Emitter Follower Explained Simply | PUC Electronics Class 12",
+ "description": "Aarav connects a small microphone straight to a big speaker and his voice almost vanishes. He adds one transistor stage with a voltage gain of only one, and now his voice comes through clearly. Meet the emitter follower (common collector amplifier). We start with a strong helper who copies your every move, but with far more strength.\n\nOn a live breadboard the collector goes to the supply and the output is taken across R_E at the emitter. A slow wave goes into the base and the oscilloscope shows the emitter following it, about 0.7 V lower and in phase, while the readout shows a tiny base current controlling a big emitter current. Then we see why the gain is about one (the whole output is fed back: voltage series negative feedback with beta = 1, A_v = R_E/(r_e + R_E)), why the input impedance is high (about beta R_E) and the output impedance low, and how it works as a buffer for impedance matching. A worked example shows a weak source delivering ten times more voltage to a heavy load. Then the exam trap (no phase flip, and a gain of one is not useless), where it is asked, an original practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 73 of PUC Electronics, Class 12, Chapter 4: Feedback in Amplifiers (Karnataka II PUC Electronics; the CC amplifier also appears in Chapter 3, Transistor Amplifiers). Transistor amplifiers are not in the rationalised NCERT/CBSE Class 12 Physics book or the current ISC Physics syllabus, so this lesson follows the Karnataka PUC Electronics syllabus.\n\nIn this video:\n0:00 A gain of one that helps\n0:19 The strong helper\n0:40 The emitter follower on a breadboard\n1:26 Why the gain is about one\n2:13 High input, low output impedance\n2:40 Worked example: weak source, heavy load\n3:26 Exam trap: no phase flip\n3:45 Where it is asked\n3:55 Practice question\n4:31 Formula card\n\nMore PUC Electronics episodes are coming soon. Follow the playlist.\n\nVideo by Quest Academy.",
+ "tags": [
+  "emitter follower",
+  "common collector amplifier",
+  "CC amplifier",
+  "voltage gain of emitter follower",
+  "buffer amplifier",
+  "impedance matching",
+  "high input impedance",
+  "voltage series negative feedback",
+  "current gain beta plus one",
+  "2nd PUC electronics",
+  "2nd PUC electronics chapter 4",
+  "Karnataka PUC electronics",
+  "class 12 electronics"
+ ],
+ "thumb": {
+  "title": "A Gain of One?",
+  "accent_word": "One?",
+  "frame_t": 74
+ }
+}

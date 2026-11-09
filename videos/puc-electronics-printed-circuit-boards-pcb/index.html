@@ -1,0 +1,135 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Electronics Ep 61 - Printed Circuit Boards (PCB)</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== Breadboard (PUC Electronics) layout ===== */
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.card svg.full{position:absolute;left:0;top:0}
+.sm{position:absolute;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+#ghost{top:168px}
+.L2{left:160px;top:260px;width:784px;height:600px}.R2{left:976px;top:260px;width:784px;height:600px}
+.strip{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:18px;padding:0 28px;box-sizing:border-box;font:600 28px Poppins;white-space:nowrap}
+.strip .acc{color:var(--ac)}
+.st2{position:absolute;left:36px;display:flex;align-items:center;gap:22px;white-space:nowrap}
+.st2 .n{flex:none;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st2 .sx{font-size:32px}
+.st2 .why{font:500 22px Poppins;color:var(--mute)}
+.hbox{position:absolute;left:24px;width:736px;border-radius:14px;background:var(--ac2)}
+.tile{position:absolute;left:32px;width:576px;height:120px;border-radius:14px;background:var(--soft);border:2.5px solid var(--soft);box-sizing:border-box}
+.tile .ic{position:absolute;left:22px;top:28px;width:60px;height:60px;border-radius:14px;background:#fff;display:flex;align-items:center;justify-content:center}
+.tile .tl{position:absolute;left:104px;top:22px;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.tile .tn{position:absolute;left:104px;top:52px;font:700 28px Poppins;color:var(--ink2);white-space:nowrap}
+.bar2{position:absolute;height:28px;border-radius:14px;background:var(--soft);overflow:hidden}.bar2 i{position:absolute;left:0;top:0;height:28px;border-radius:14px}
+/* hook */
+#aC{left:160px;top:260px;width:784px;height:600px;overflow:hidden}
+#aImg{position:absolute;left:24px;top:84px;height:516px}
+#hC{left:976px;top:260px;width:784px;height:600px}
+.rt{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--soft);border:2.5px solid var(--soft);box-sizing:border-box;display:flex;align-items:center;gap:18px;padding:0 22px;white-space:nowrap}
+.rt .k{font:700 22px 'IBM Plex Mono';color:var(--ac);letter-spacing:.04em;min-width:36px}
+.rt .d{font:600 26px Poppins;color:var(--ink2)}
+.rt .e{font:500 20px Poppins;color:var(--mute)}
+.ro2{position:absolute;left:32px;top:76px;width:576px;display:grid;grid-template-columns:auto 1fr auto;column-gap:18px;row-gap:12px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .v{font:600 36px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 22px 'IBM Plex Mono';color:var(--mute);white-space:nowrap;min-width:52px}
+.jc{position:absolute;top:260px;width:512px;height:600px}
+.jc .nm{position:absolute;left:0;width:512px;top:420px;text-align:center;font:700 34px Poppins;white-space:nowrap}
+.jc .ds{position:absolute;left:0;width:512px;top:474px;text-align:center;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+#ck{left:160px;top:260px;width:928px;height:600px}
+#rb{left:1120px;top:260px;width:640px;height:600px}
+#rFx{position:absolute;left:32px;top:76px;width:576px;text-align:center;font-size:40px}
+#vf{left:160px;top:260px;width:1600px;height:600px}
+.sft{position:absolute;width:496px;height:236px;border-radius:16px;background:var(--soft);border:2.5px solid var(--soft);box-sizing:border-box}
+.sft .ic{position:absolute;left:28px;top:28px;width:88px;height:88px;border-radius:18px;background:#fff;display:flex;align-items:center;justify-content:center}
+.sft .no{position:absolute;right:28px;top:30px;font:700 40px 'IBM Plex Mono';color:var(--ac)}
+.sft .nm{position:absolute;left:28px;top:138px;font:700 30px Poppins;color:var(--ink);white-space:nowrap}
+.sft .ds{position:absolute;left:28px;top:184px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+#trap{left:160px;top:260px;width:784px;height:300px}
+#tc{left:976px;top:260px;width:784px;height:300px}
+#wa{left:160px;top:592px;width:1600px;height:268px}
+#mq{left:160px;top:260px;width:1040px;height:600px}
+#so{left:1232px;top:260px;width:528px;height:600px}
+#so .sol{left:32px}
+.fcard .fl{font-size:40px}
+.fcard .fl.txt{font:500 28px Poppins}
+.cs{position:absolute;left:36px;display:flex;align-items:center;gap:16px;white-space:nowrap;font:500 26px Poppins}
+.cs .ck{flex:none;width:200px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;font:600 18px 'IBM Plex Mono';letter-spacing:.04em}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · ELECTRONICS · CH 9 PRACTICAL ELECTRONIC COMPONENTS</div>
+    <div class="subj" id="subj">BREADBOARD</div>
+    <div id="title">Where did <span class="acc">the wires go?</span></div>
+    <div id="sub">Printed circuit boards (PCB)</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E8A317" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="ghost" id="ghost">EXAMPLE FIGURES</div>
+
+    <div class="sc" id="sA">
+      <div class="card" id="aC"><div class="lbl" style="left:32px;top:28px">AARAV · PCME · JEE</div>
+        <img id="aImg" src="../../assets/illustrations/puc/aarav.png" alt=""></div>
+      <div class="card" id="hC"><div class="lbl" style="left:32px;top:28px">INSIDE THE REMOTE</div><svg class="full" id="hS" width="784" height="600"></svg></div>
+    </div>
+
+    <div class="sc" id="sP">
+      <div class="card L2" id="pL"><div class="lbl" style="left:32px;top:28px">ANATOMY OF A PCB</div><svg class="full" id="pS" width="784" height="600"></svg></div>
+      <div class="card R2" id="pR"><div class="lbl" style="left:32px;top:28px">FIVE PARTS TO KNOW</div>
+        <div class="rt" id="pr0" style="top:84px"><span class="k">01</span><span class="d">Board</span><span class="e" id="pr0e">an insulator</span></div>
+        <div class="rt" id="pr1" style="top:180px"><span class="k">02</span><span class="d">Tracks</span><span class="e">copper paths, like wires</span></div>
+        <div class="rt" id="pr2" style="top:276px"><span class="k">03</span><span class="d">Pads</span><span class="e">where legs are soldered</span></div>
+        <div class="rt" id="pr3" style="top:372px"><span class="k">04</span><span class="d">Solder mask</span><span class="e">protects, stops bridges</span></div>
+        <div class="rt" id="pr4" style="top:468px"><span class="k">05</span><span class="d">Silkscreen</span><span class="e">labels for each part</span></div></div>
+    </div>
+
+    <div class="sc" id="sY">
+      <div class="card jc" id="y0" style="left:160px"><div class="lbl" style="left:32px;top:28px">TYPE 1</div><svg class="full" width="512" height="600"></svg><div class="nm">Single sided</div><div class="ds">copper on one side</div></div>
+      <div class="card jc" id="y1" style="left:704px"><div class="lbl" style="left:32px;top:28px">TYPE 2</div><svg class="full" width="512" height="600"></svg><div class="nm">Double sided</div><div class="ds">both sides, joined by vias</div></div>
+      <div class="card jc" id="y2" style="left:1248px"><div class="lbl" style="left:32px;top:28px">TYPE 3</div><svg class="full" width="512" height="600"></svg><div class="nm">Multilayer</div><div class="ds">many copper layers inside</div></div>
+    </div>
+
+    <div class="sc" id="sM">
+      <div class="card L2" id="mL"><div class="lbl" id="mLL" style="left:32px;top:28px">MAKING A PCB</div><svg class="full" id="mS" width="784" height="600"></svg></div>
+      <div class="card R2" id="mR"><div class="lbl" style="left:36px;top:28px">STEP BY STEP</div><div id="mSteps"></div></div>
+    </div>
+
+    <div class="sc" id="sB">
+      <div class="card" id="ck"><div class="lbl" style="left:32px;top:28px">A TRACK HAS RESISTANCE</div><svg class="full" id="ckS" width="928" height="600"></svg></div>
+      <div class="card" id="rb"><div class="lbl" style="left:32px;top:28px">LIVE READOUT</div><div id="rFx"></div><div class="ro2" id="ro" style="top:176px"></div></div>
+    </div>
+
+    <div class="sc" id="sV">
+      <div class="card" id="vf"><div class="lbl" style="left:32px;top:28px">WHY WE USE PCBs</div>
+        <div class="sft" id="v0" style="left:32px;top:76px"><div class="ic"></div><div class="no">01</div><div class="nm">Small and compact</div><div class="ds">many parts in a tiny space</div></div>
+        <div class="sft" id="v1" style="left:552px;top:76px"><div class="ic"></div><div class="no">02</div><div class="nm">Fewer mistakes</div><div class="ds">no loose wires to mix up</div></div>
+        <div class="sft" id="v2" style="left:1072px;top:76px"><div class="ic"></div><div class="no">03</div><div class="nm">Cheap to copy</div><div class="ds">thousands of identical boards</div></div>
+        <div class="sft" id="v3" style="left:292px;top:336px"><div class="ic"></div><div class="no">04</div><div class="nm">Reliable</div><div class="ds">parts held firmly in place</div></div>
+        <div class="sft" id="v4" style="left:812px;top:336px"><div class="ic"></div><div class="no">05</div><div class="nm">Easy to test and repair</div><div class="ds">labelled parts, clear tracks</div></div></div>
+    </div>
+
+    <div class="sc" id="sW">
+      <div class="card L2" id="wL"><div class="lbl" style="left:32px;top:28px">WORKED EXAMPLE · ONE COPPER TRACK</div><svg class="full" id="wS" width="784" height="600"></svg></div>
+      <div class="card R2" id="wR"><div class="lbl" style="left:36px;top:28px">SOLUTION STEPS</div><div class="hbox" id="wBox" style="top:470px;height:96px"></div><div id="wSteps"></div></div>
+    </div>
+
+    <div class="sc" id="sX"><div class="card red" id="trap"></div>
+      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">CURRENT FLOWS ALONG L</div>
+        <div class="cs" id="cs0" style="top:92px"><span class="ck" style="background:#FBE6E6;color:#D64545">TOP AREA</span><span>w × L: not crossed by current</span></div>
+        <div class="cs" id="cs1" style="top:184px"><span class="ck" style="background:#E2F3E9;color:#1F6B3F">CROSS SECTION</span><span>w × t: what current passes</span></div></div>
+      <div class="card" id="wa"></div></div>
+    <div class="sc" id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div class="sc" id="sF"></div>
+  </div>
+  <div id="stmt"><div id="st1">A track is a wire,</div><div id="st2"><span class="acc">printed flat.</span></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

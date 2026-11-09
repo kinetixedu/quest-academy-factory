@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "Soldering and Desoldering",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 60
+ },
+ "class": "11",
+ "title": "Glue That Carries Current Explained Simply | PUC Electronics Class 11",
+ "description": "Aarav's toy car stops every time it bumps into a wall. Inside, a wire has come loose from the board. Tape will not hold it and glue does not carry current. In this animated lesson we learn soldering and desoldering, the safe way.\n\nFirst we see what solder is (an alloy, classic 60/40 tin lead melting at about 183 to 190 °C, lead free at about 217 to 220 °C) and why flux is needed to clean the oxide. We meet the tools: the soldering iron, its stand and sponge, the desoldering pump and wick. On a live breadboard we make one joint step by step while the joint temperature climbs past the melting point on a live graph, then a continuity test with a lamp and an oscilloscope shows a bad joint flickering and a good joint holding steady. We compare a good joint, a cold joint and a solder bridge, desolder with a pump and with wick, and go through the safety rules. A worked example finds the current, element resistance and energy of a 25 W iron, followed by the exam trap (never drip solder from the tip), where it is asked, an original JEE Main pattern practice question with a full solution, and a fact card to screenshot.\n\nThis is Episode 60 of PUC Electronics, Class 11, Chapter 9: Practical Electronic Components, their Specifications and PCB (Karnataka I PUC Electronics).\n\nIn this video:\n0:00 A wire came loose\n0:14 What solder is\n0:47 Why flux is needed\n1:01 The tools\n1:19 One joint, step by step (live temperature graph)\n1:47 Testing the joint on a scope\n2:00 Good joint, cold joint, solder bridge\n2:16 Desoldering: pump and wick\n2:32 Solder safely\n2:51 Worked example: the iron's element\n3:25 Exam trap: heat the joint, not the solder\n3:42 Where it is asked\n3:50 Practice question\n4:18 Fact card\n\nNext episode: Printed Circuit Boards (PCB).\n\nVideo by Quest Academy.",
+ "tags": [
+  "soldering and desoldering",
+  "how to solder",
+  "soldering iron",
+  "solder flux",
+  "tin lead solder melting point",
+  "lead free solder",
+  "cold solder joint",
+  "solder bridge",
+  "desoldering pump and wick",
+  "soldering safety",
+  "PUC electronics",
+  "1st PUC electronics chapter 9",
+  "practical electronic components",
+  "Karnataka PUC electronics"
+ ],
+ "thumb": {
+  "title": "Glue That Carries Current",
+  "accent_word": "Current",
+  "frame_t": 100.5
+ }
+}

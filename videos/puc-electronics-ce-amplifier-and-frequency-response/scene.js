@@ -153,7 +153,7 @@ const dLb = [tx(dS, 130, 156, 'v in', { 'text-anchor': 'middle', fill: TE }), su
 const dRe = tx(dS, 372, 300, "r′", { 'font-style': 'italic', 'font-size': 26 }); sub(dRe, 'e');
 const dRc = mono(dS, 570, 88, 'r c = R C ∥ R L', { 'text-anchor': 'middle', fill: INK, 'font-weight': 600 });
 const dHl = [mk(dS, 'rect', { x: 359, y: 262, width: 70, height: 52, rx: 10, fill: 'none', stroke: AM, 'stroke-width': 3 }), mk(dS, 'rect', { x: 490, y: 64, width: 162, height: 270, rx: 12, fill: 'none', stroke: AM, 'stroke-width': 3 })];
-$('#dbt').innerHTML = [['× 10', '20 dB'], ['× 100', '40 dB'], ['× 150', '43.5 dB'], ['× 0.707', '−3 dB']].map(([a, d]) => `<span class="a">${a}</span><span class="r">→</span><span class="d">${d}</span>`).join('');
+$('#dbt').innerHTML = [['× 10', '20 dB'], ['× 100', '40 dB'], ['× 150', '43.5 dB'], ['× 0.707', '-3 dB']].map(([a, d]) => `<span class="a">${a}</span><span class="r">→</span><span class="d">${d}</span>`).join('');
 const dbC = [...$('#dbt').children];
 const gBars = mk(dS, 'g');
 mono(gBars, 36, 420, 'r c · kilo-ohms', { fill: INK, 'font-weight': 600 }); mk(gBars, 'rect', { x: 260, y: 400, width: 470, height: 30, rx: 10, fill: INK });

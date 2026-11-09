@@ -122,9 +122,9 @@ const vin = t => t < tIn ? 0 : Math.sin(Math.PI * (t - tIn));
 const sc = scope($('#scS'), 592, 184), tr1 = sc.tr(CH1), tr2 = sc.tr(AM);
 const scL = [mono($('#scS'), 4, 212, 'CH1 IN · 1 mV/div', { fill: CH1, 'font-weight': 600, 'font-size': 18 }), mono($('#scS'), 588, 212, '', { fill: GOLD, 'font-weight': 600, 'font-size': 18, 'text-anchor': 'end' })];
 $('#ro1').innerHTML = `<span class="k" style="color:${TE}">v<sub>in</sub></span><span class="v" id="rVi" style="color:${TE}">1.0</span><span class="u">mV</span>
-  <span class="k" style="color:${TE}">v<sub>1</sub></span><span class="v" id="rV1" style="color:${TE}">–</span><span class="u">mV</span>
-  <span class="k" style="color:${TE}">v<sub>out</sub></span><span class="v" id="rVo" style="color:${TE}">–</span><span class="u">V</span>
-  <span class="k">|A|</span><span class="v" id="rA">–</span><span class="u"></span>`;
+  <span class="k" style="color:${TE}">v<sub>1</sub></span><span class="v" id="rV1" style="color:${TE}">-</span><span class="u">mV</span>
+  <span class="k" style="color:${TE}">v<sub>out</sub></span><span class="v" id="rVo" style="color:${TE}">-</span><span class="u">V</span>
+  <span class="k">|A|</span><span class="v" id="rA">-</span><span class="u"></span>`;
 
 /* ================= G: phase + frequency response ================= */
 const phS = $('#phS');
@@ -266,7 +266,7 @@ M.on(t => {
     M.vis(prb1, t, tIn - 0.2, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.1 }); M.vis(prb2, t, wt('B11', 'Probe') - 0.1, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.1 }); M.vis(prbT, t, wt('B11', 'Probe'), 1e9, { dy: 0, fade: 0.2 });
     const st2 = t >= tP2 + 0.8;
     M.vis($('#ro1'), t, tIn - 0.2, 1e9, { dy: 12 });
-    M.setT($('#rV1'), t >= wt('B11', 'Fifty') ? '50' : '–'); M.setT($('#rVo'), t >= wt('B13', 'Two') ? '2.00' : '–'); M.setT($('#rA'), t >= wt('B13', 'gain') ? '2000' : '–');
+    M.setT($('#rV1'), t >= wt('B11', 'Fifty') ? '50' : '-'); M.setT($('#rVo'), t >= wt('B13', 'Two') ? '2.00' : '-'); M.setT($('#rA'), t >= wt('B13', 'gain') ? '2000' : '-');
     M.vis($('#rgT'), t, wt('B11', 'Probe'), 1e9, { dy: 0, sc: 0.8, sp: M.POP, fade: 0.1 }); M.setT($('#rgT'), st2 ? 'PROBE: STAGE 2' : 'PROBE: STAGE 1'); $('#rgT').style.background = st2 ? AM : INK;
     M.vis($('#slowT'), t, tIn, 1e9, { dy: 0, fade: 0.2 });
     const on2 = t >= wt('B11', 'Probe');

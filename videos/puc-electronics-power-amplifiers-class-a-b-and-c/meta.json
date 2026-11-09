@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "Power Amplifiers: Class A, B and C",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 69
+ },
+ "class": "12",
+ "title": "Why Amplifiers Get Hot Explained Simply | PUC Electronics Class 12",
+ "description": "At the college fest Aarav touches the big stage amplifier: it is hot and covered in metal fins, while his phone stays cool. Where does the heat come from? We compare voltage amplifiers with power amplifiers, then use a swing: one helper pushing all the time, two helpers sharing, or one short kick at the top.\n\nOn a live breadboard we turn a bias knob on a one-transistor power stage while the oscilloscope shows the collector current: class A conducts for the full 360 degrees, class B for 180 degrees, and class C in short pulses that a tuned circuit turns back into a smooth wave. The load line shows where each Q point sits, and a table compares conduction angle, maximum efficiency and distortion (with class AB in between). We derive the 25 percent maximum efficiency of a class A amplifier step by step and compare it with 50 percent (transformer coupled) and 78.5 percent (class B). A worked example shows where the heat comes from, followed by the exam trap (class C is not for music), where it is asked, an original practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 69 of PUC Electronics, Class 12, Chapter 3: Transistor Amplifiers (Karnataka II PUC Electronics). Power amplifiers are not in the rationalised NCERT/CBSE Class 12 Physics book or the current ISC Physics syllabus, so this lesson follows the Karnataka PUC Electronics syllabus.\n\nIn this video:\n0:00 A hot stage amplifier, a cool phone\n0:15 Voltage vs power amplifiers and the swing idea\n0:53 Class A, B and C on a breadboard\n1:52 Q points on the load line and the comparison table\n2:30 The maths: class A efficiency is at most 25%\n3:26 Worked example: where the power goes\n3:52 Exam trap: class C is not for music\n4:11 Where it is asked\n4:22 Practice question\n5:00 Formula card\n\nNext episode: Push-Pull Amplifier.\n\nVideo by Quest Academy.",
+ "tags": [
+  "power amplifiers",
+  "class A amplifier",
+  "class B amplifier",
+  "class C amplifier",
+  "class AB amplifier",
+  "efficiency of class A amplifier",
+  "conduction angle",
+  "operating point load line",
+  "tuned amplifier",
+  "voltage amplifier vs power amplifier",
+  "PUC electronics",
+  "2nd PUC electronics chapter 3",
+  "Karnataka PUC electronics",
+  "class 12 electronics"
+ ],
+ "thumb": {
+  "title": "Class A, B or C?",
+  "accent_word": "C?",
+  "frame_t": 92
+ }
+}

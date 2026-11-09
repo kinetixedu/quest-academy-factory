@@ -1,0 +1,58 @@
+H1|0.3|At the fest, Aarav turns up the amplifier for a song.
+H2|0.3|The loud parts sound harsh and broken.
+H3|0.3|On a scope, the tops of the wave are sliced flat.
+H4|0.5|The transistor is resting in the wrong place. Let's find the right one.
+P1|0.35|Think of a swing, hanging between two walls.
+P2|0.35|Hang it close to one wall, and push.
+P3|0.35|It bangs into the wall. Part of each swing is cut off.
+P4|0.35|Now hang it right in the middle.
+P5|0.65|It swings fully both ways, without touching either wall.
+P6|0.65|A transistor amplifier is the same. It needs a good resting place.
+C1|0.35|Here is the common emitter circuit on the breadboard.
+C2|0.35|A small supply, V B B, drives the base through R B.
+C3|0.35|A bigger supply, V C C, feeds the collector through R C.
+C4|0.35|With no signal, steady currents flow. This is the D C condition.
+C5|0.35|Turn R B down. The base current rises.
+C6|0.35|The collector current rises too, beta times more. Here beta is one fifty.
+C7|0.65|And V C E falls, because more voltage drops across R C.
+D1|0.35|Let's turn this into a graph, step by step.
+D2|0.7|Base loop. V B B equals I B R B, plus V B E.
+D3|0.7|So I B equals V B B minus V B E, over R B.
+D4|0.7|Then I C equals beta times I B.
+D5|0.7|Collector loop. V C C equals I C R C, plus V C E.
+D6|0.7|So V C E equals V C C minus I C R C. That is a straight line.
+D7|0.7|Set I C to zero. V C E equals V C C, twelve volts. The cut off point.
+D8|0.7|Set V C E to zero. I C is V C C over R C, six milliamperes. The saturation point.
+D9|0.65|Join the two points. This straight line is the D C load line.
+B1|0.35|Every resting state of this circuit sits on this line.
+B2|0.35|Where it actually rests is the operating point, or Q point.
+B3|0.35|Q stands for quiescent. It means quiet, with no signal.
+B4|0.35|Now add a small signal at the base. The Q point swings along the line.
+B5|0.35|With Q in the middle, the output wave is clean.
+B6|0.35|Move Q close to saturation. The swing hits the end.
+B7|0.35|The bottom of the output wave is sliced off. That is clipping.
+B8|0.35|Move Q close to cut off. Now the top gets sliced.
+B9|0.65|So for the biggest clean swing, keep Q near the middle of the load line.
+T1|0.8|The load line is the road. The Q point is where you park.
+W1|0.35|Worked example. Find the Q point.
+W2|0.35|V C C is twelve volts. R C is two kilo ohms. Beta is one fifty.
+W3|0.35|V B B is three volts. R B is one hundred fifteen kilo ohms.
+W4|0.35|I B is three minus zero point seven, over one hundred fifteen kilo ohms.
+W5|0.7|That is twenty microamperes.
+W6|0.7|I C is one fifty times twenty microamperes. Three milliamperes.
+W7|0.35|V C E is twelve, minus three milliamperes times two kilo ohms.
+W8|0.7|That is six volts.
+W9|0.65|So Q is at six volts and three milliamperes. Right in the middle of the load line.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think a Q point near saturation gives a bigger output.
+X3|0.65|It does not. The wave clips. The middle gives the biggest clean swing.
+X4|0.35|Also, the load line ends use R C only. R B is not in them.
+X5|0.65|Where is this asked? In P U C board papers.
+X6|0.65|Draw the load line, mark the Q point, and find I B, I C and V C E.
+Q1|5.4|Try this. V C C is ten volts, R C is one kilo ohm, V B B is four point seven volts, R B is one hundred kilo ohms, and beta is one hundred. Where is the Q point?
+A1|0.35|C. Six volts and four milliamperes.
+A2|0.35|I B is four volts over one hundred kilo ohms. Forty microamperes.
+A3|0.35|I C is one hundred times forty microamperes. Four milliamperes.
+A4|0.65|V C E is ten, minus four milliamperes times one kilo ohm. Six volts.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, voltage divider bias. How do we stop the Q point drifting with heat?

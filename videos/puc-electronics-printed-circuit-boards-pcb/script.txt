@@ -1,0 +1,57 @@
+H1|0.3|Aarav opens an old remote control. He expects a nest of wires.
+H2|0.3|Instead, he finds a flat green board, covered in thin copper lines.
+H3|0.5|Where did all the wires go? Let's find out.
+P1|0.35|This is a printed circuit board, or P C B.
+P2|0.35|The board itself is an insulator. Current cannot flow through it.
+P3|0.65|Common boards are glass fibre with epoxy, or a cheaper paper board with phenolic resin.
+P4|0.35|On top are thin copper paths, called tracks. They do the job of wires.
+P5|0.65|At each part, a track ends in a copper pad. The part's leg is soldered there.
+P6|0.35|The green coat is the solder mask. It protects the copper, and stops solder bridges.
+P7|0.65|The white letters are the silkscreen. They show where each part goes.
+Y1|0.35|P C Bs come in three types.
+Y2|0.35|Single sided boards have copper on one side only.
+Y3|0.65|Double sided boards have copper on both sides. Small plated holes, called vias, join the two sides.
+Y4|0.65|Multilayer boards hide many copper layers inside. Phones use them.
+M1|0.35|So how is a simple P C B made? Step by step.
+M2|0.35|Start with a copper clad board. Copper covers one whole side.
+M3|0.35|Draw the circuit layout, and print it onto the copper with a protective ink.
+M4|0.35|Dip the board in an etching solution, such as ferric chloride. It eats away the bare copper.
+M5|0.65|The copper under the ink stays. Clean off the ink, and the tracks appear.
+M6|0.65|Drill holes for the parts. Then place the parts, and solder them.
+B1|0.35|But a track is not a perfect wire. It has a small resistance.
+B2|0.35|Remember, R equals rho L by A.
+B3|0.65|For a track, A is the width times the copper thickness.
+B4|0.65|The copper is very thin, often thirty five micrometres. That is thinner than a hair.
+B5|0.35|Let's push two amperes from a five volt supply, through a ten centimetre track.
+B6|0.35|First, a thin track, a quarter of a millimetre wide.
+B7|0.35|The part at the end receives only four point six one volts.
+B8|0.35|Now make the track one millimetre wide.
+B9|0.65|The part now receives about four point nine volts.
+B10|0.65|Watch the scope. The wider track loses less voltage.
+B11|0.65|So tracks that carry big currents are made wide.
+V1|0.35|Why do we use P C Bs? Five big advantages.
+V2|0.35|They are small and compact.
+V3|0.35|There are no loose wires, so fewer wiring mistakes.
+V4|0.35|The same board can be copied thousands of times, cheaply.
+V5|0.35|Parts are held firmly, so the circuit is reliable.
+V6|0.65|And they are easy to test and repair.
+T1|0.8|A track is a wire, printed flat.
+W1|0.35|Worked example. A copper track is one millimetre wide, thirty five micrometres thick, and ten centimetres long.
+W2|0.7|Area A is width times thickness. Ten to the minus three, times thirty five times ten to the minus six.
+W3|0.7|That is three point five times ten to the minus eight square metres.
+W4|0.7|Copper's resistivity is about one point seven times ten to the minus eight ohm metres.
+W5|0.7|R equals rho L by A. That gives about zero point zero four nine ohms.
+W6|0.65|At two amperes, the drop is I times R. About zero point one volts.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students take A as the top area of the track. Width times length.
+X3|0.65|Wrong. Current flows along the track, so A is the cross section.
+X4|0.65|A equals width times thickness.
+X5|0.35|Where is this asked? In P U C board papers.
+X6|0.65|The model paper asks for the advantages of P C Bs. Expect types and steps of making too.
+Q1|5.4|Try this. A copper track has a resistance of zero point zero eight ohms. A second track is twice as wide and half as long. What is its resistance?
+A1|0.35|A. Zero point zero two ohms.
+A2|0.35|R equals rho L by A. Halving L halves R.
+A3|0.35|Doubling the width doubles A. That halves R again.
+A4|0.65|So R becomes one quarter. Zero point zero eight by four is zero point zero two ohms.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, Class twelve begins with the J F E T. A transistor controlled by voltage.
