@@ -1,0 +1,140 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 61 - Middle Term and Applications of the Binomial Theorem</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 61: middle term and applications (Proof board) ===== */
+/* colour-coding (Ch 7): a (here 1) blue, b (here 0.01) gold, nCr violet, middle term coral */
+:root{--a:#2F6FEB;--aBg:#E7EEFD;--b:#B7791F;--bBg:#F6EAD3;--v:#7A4FE0;--vBg:#EDE6FC}
+#stage svg circle,#stage svg g{transform-box:fill-box;transform-origin:center}
+#stage .ringW svg circle{transform-box:view-box;transform-origin:0 0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:48px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+#hQ{position:absolute;left:0;width:784px;top:150px;text-align:center;font-size:76px;white-space:nowrap}
+.gs{position:absolute;top:330px;width:340px;height:110px;border-radius:14px;background:var(--soft)}
+.gs .k{position:absolute;left:22px;top:16px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.gs .v{position:absolute;left:22px;top:44px;font:700 32px Poppins;white-space:nowrap}
+.fx2{position:absolute;left:36px;font-size:44px;white-space:nowrap}
+.st{position:absolute;left:36px;width:712px;height:116px}
+.st .n{position:absolute;left:0;top:10px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:4px;font-size:38px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:64px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+.rd{position:absolute;left:36px;width:420px;height:104px;border-radius:14px;background:var(--soft)}
+.rd .k{position:absolute;left:24px;top:14px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.rd .v{position:absolute;left:24px;top:40px;font:600 44px 'IBM Plex Mono';white-space:nowrap}
+.tb{position:absolute;height:84px;border-radius:12px;background:var(--soft);border:3px solid transparent;box-sizing:border-box;display:flex;align-items:center;justify-content:center;font:600 24px 'IBM Plex Mono';color:var(--ink2)}
+.pc{position:absolute;height:120px;border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+.pc .k{font:600 16px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.pc .v{font-size:38px;white-space:nowrap}
+.ml{position:absolute;font:600 34px Poppins;color:var(--mute)}
+#wq{position:absolute;left:36px;top:70px;font:600 30px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.2em}
+.gh{right:36px;top:22px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.12em}
+#mq .mq .katex{font-size:1.2em}
+#el .sol .sx,#wl .sol .sx{font-size:32px}
+#el .sol .sx .katex,#wl .sol .sx .katex{font-size:1.12em}
+.trapL .tx .katex{font-size:1.2em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 32px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:30px}
+#sF .fcard .fl.txt .katex{font-size:1.15em}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 7 BINOMIAL THEOREM</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">The <span class="acc">Middle</span> Term and Big Numbers</div>
+    <div id="sub">Explained with a cinema row and a tiny step</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">WHICH IS BIGGER?</div><div id="hQ"></div>
+        <div class="gs" id="hg0" style="left:36px"><div class="k">AARAV'S GUESS</div><div class="v" style="color:var(--red)">10000 wins</div></div>
+        <div class="gs" id="hg1" style="left:408px"><div class="k">CALCULATOR</div><div class="v">1000 presses</div></div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · A TINY STEP</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">A smarter way to decide?</div></div>
+    </div>
+
+    <div id="sB">
+      <div class="card full" id="bl"><div class="lbl" style="left:36px;top:30px">MAKE IT A BINOMIAL</div><div id="bSt"></div></div>
+      <div class="card rf" id="br"><div class="lbl" style="left:36px;top:30px">EVERY TERM IS POSITIVE</div>
+        <div class="fx2" id="bF" style="top:120px;font-size:46px"></div><div class="fx2" id="bF2" style="top:250px;font-size:30px;color:var(--ink2)"></div>
+        <div class="pillp ac" id="bP" style="left:36px;top:470px">Adding terms can only grow the total</div></div>
+    </div>
+
+    <div id="sR">
+      <div class="card wide" id="rw"><div class="lbl" style="left:36px;top:30px">LIVE · ADD THE TERMS OF (1 + 0.01)¹⁰⁰⁰</div>
+        <div class="rd" id="rd0" style="top:90px"><div class="k">TERM NUMBER</div><div class="v" id="rN"></div></div>
+        <div class="rd" id="rd1" style="top:210px"><div class="k">THIS TERM (ABOUT)</div><div class="v" id="rT" style="color:var(--b)"></div></div>
+        <div class="rd" id="rd2" style="top:330px"><div class="k">RUNNING TOTAL (ABOUT)</div><div class="v" id="rS"></div></div>
+        <div class="pillp good" id="rP" style="left:36px;top:470px">Real value: about 20959</div>
+        <svg id="rC" width="1600" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sE">
+      <div class="card full" id="el"><div id="eq" style="position:absolute;left:36px;top:70px;font:600 30px/1.4 Poppins;width:712px"></div></div>
+      <div class="card rf" id="er"><div class="lbl" style="left:36px;top:30px">TWO TERMS ARE ENOUGH</div>
+        <div class="fx2" id="eA" style="top:120px"></div><div class="fx2" id="eB" style="top:230px"></div>
+        <div class="pillp good" id="eP" style="left:36px;top:470px">Bigger than 10000</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sM">
+      <div class="card full" id="ml"><div class="lbl" style="left:36px;top:30px">A ROW OF CINEMA SEATS</div><svg id="mS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="mr"><div class="lbl" style="left:36px;top:30px">AN EXPANSION IS THE SAME</div><div class="fx2" id="mF" style="top:150px;font-size:56px"></div>
+        <div class="pillp" id="mP" style="left:36px;top:470px">terms = seats</div></div>
+    </div>
+
+    <div id="sG">
+      <div class="card full" id="gl"><div class="lbl" style="left:36px;top:30px">THE RULE · 3 STEPS</div><div class="hiBox" id="gHi" style="left:20px;width:744px;height:124px"></div><div id="gSt"></div></div>
+      <div class="card rf" id="gr"><div class="lbl" style="left:36px;top:30px">THE HILL OF nCr</div><div class="ghost gh">NOT IN CURRENT NCERT TEXT · JEE</div><svg id="gS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <div id="sS">
+      <div class="card full" id="sl"><div class="lbl" style="left:36px;top:30px">n = 6 · EVEN · 7 TERMS</div><div id="slB"></div><div class="fx2" id="slF" style="top:300px"></div>
+        <div class="pillp ac" id="slP" style="left:36px;top:470px">One middle term</div></div>
+      <div class="card rf" id="sr"><div class="lbl" style="left:36px;top:30px">n = 7 · ODD · 8 TERMS</div><div id="srB"></div><div class="fx2" id="srF" style="top:300px"></div>
+        <div class="pillp ac" id="srP" style="left:36px;top:470px">Two middle terms</div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">9 TERMS · THE 5TH IS THE MIDDLE</div><div id="wB"></div><div id="wPc"></div><div class="fx2" id="wRes" style="top:440px;font-size:48px"></div></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"><div class="ghost gh">MIDDLE TERM: NOT IN CURRENT NCERT TEXT · JEE</div></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Even n: one middle. Odd n: <span class="acc">two</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

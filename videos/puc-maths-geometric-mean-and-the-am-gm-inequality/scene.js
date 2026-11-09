@@ -45,7 +45,7 @@ const gEq = txt(gs, 392, 100, '4 × 9 = 36 = 6 × 6', { 'text-anchor': 'middle',
 $('#gD').innerHTML = K(`${GM('G')} = \\sqrt{${A('a')}\\,${B('b')}}\\quad (${A('a')}, ${B('b')} > 0)`);
 $('#gP').innerHTML = K(`${A('4')},\\ ${GM('6')},\\ ${B('9')}:\\quad \\tfrac{6}{4} = \\tfrac{9}{6} = 1.5`);
 const GCH = [1, 4, 16, 64, 256];
-$('#gCh').innerHTML = GCH.map((v, i) => `<div class="ct" id="gc${i}" style="left:${36 + i * 150}px;top:334px;${i && i < 4 ? `color:${MG}` : ''}">${v}</div>`).join('') + [0, 1, 2, 3].map(i => `<div class="cj" id="gj${i}" style="left:${36 + i * 150 + 120}px;top:420px">×4</div>`).join('');
+$('#gCh').innerHTML = GCH.map((v, i) => `<div class="ct" id="gc${i}" style="left:${36 + i * 150}px;top:334px;${i && i < 4 ? `color:${MG}` : ''}">${v}</div>`).join('') + [0, 1, 2, 3].map(i => `<div class="cj" id="gj${i}" style="left:${135 + i * 150}px;top:358px">×4</div>`).join('');
 $('#gR').innerHTML = K(`${R('r')}^{\\,n+1} = \\tfrac{b}{a}:\\ \\ ${R('r')}^{4} = 256,\\ ${R('r')} = 4`);
 const th1 = PUC.think($('#th1'), { q: 'What is the geometric mean of 2 and 18?', opts: ['6', '10'], right: 0, why: '2 × 18 = 36, and √36 = 6. (10 is the arithmetic mean.)' });
 
@@ -68,9 +68,9 @@ const meet = txt($('#lP'), gp.X(5), gp.Y(5) - 46, 'G = A', { 'text-anchor': 'mid
 
 /* ---------- D: proof ---------- */
 const DS = [
-  `${AM('A')} - ${GM('G')} = \\tfrac{${A('a')} + ${B('b')}}{2} - \\sqrt{${A('a')}${B('b')}}`,
-  `= \\tfrac{${A('a')} + ${B('b')} - 2\\sqrt{${A('a')}${B('b')}}}{2}`,
-  `= \\tfrac{(\\sqrt{${A('a')}} - \\sqrt{${B('b')}})^2}{2}`,
+  `${AM('A')} - ${GM('G')} = \\dfrac{${A('a')} + ${B('b')}}{2} - \\sqrt{${A('a')}${B('b')}}`,
+  `= \\dfrac{${A('a')} + ${B('b')} - 2\\sqrt{${A('a')}${B('b')}}}{2}`,
+  `= \\dfrac{(\\sqrt{${A('a')}} - \\sqrt{${B('b')}})^2}{2}`,
   `\\ge 0 \\;\\Rightarrow\\; ${AM('A')} \\ge ${GM('G')}`];
 $('#dSt').innerHTML = DS.map((f, i) => `<div class="st" id="ds${i}" style="top:${84 + i * 104}px"><div class="n">${i + 1}</div><div class="sx">${K(f)}</div></div>`).join('');
 const tDs = [T0('D2'), T0('D3'), T0('D4'), T0('D5')];

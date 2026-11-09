@@ -75,6 +75,7 @@ const bars = VAL.map((v, i) => { const r = mk(vb, 'rect', { x: BX(i), y: BY0, wi
   const lv = txt(vb, BX(i) + 42, BY0 - BH(v) - 16, v, { 'text-anchor': 'middle', 'font-size': 26, fill: PC, 'font-weight': 600 });
   const lw = txt(vb, BX(i) + 42, BY0 + 38, VW[i], { 'text-anchor': 'middle', 'font-size': 17, fill: C.ink2, 'font-weight': 600 }); return { r, lv, lw, v }; });
 let vLast = -1;
+const avD = PUC.avatar($('#sV'), { x: 160 + 36, y: 270 + 486, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'More repeats, fewer different words.' });
 const th2 = PUC.think($('#th2'), { q: 'A A A A A: how many different words?', opts: ['1', '120'], right: 0, why: 'Every swap gives the same word: 5! ÷ 5! = 1.' });
 
 /* ---------- statement ---------- */
@@ -211,6 +212,7 @@ M.on(t => {
     M.vis($('#vr'), t, tV1 + 0.3, out, { dx: 60, dy: 0, ...o });
     bars.forEach((b, i) => { const g = M.spring(t - tR[i], M.SOFT), h = BH(b.v) * Math.max(0, g); attr(b.r, 'y', (BY0 - h).toFixed(1)); attr(b.r, 'height', h.toFixed(1));
       M.vis(b.lv, t, tR[i] + 0.25, 1e9, { dy: 0 }); M.vis(b.lw, t, tR[i] - 0.1, 1e9, { dy: 0 }); });
+    avD(t, wt('V3', 'Only') + 0.3, out);
     M.vis($('#th2'), t, tV4 + 0.05, OUT('T1'), { dy: 36, ...o });
     th2(t, { tin: tV4, tOpts: wt('V4', 'How') - 0.1, tCount: T1('V4') + 0.05, dur: 3, tAns: T0('V5') - 0.02, tWhy: wt('V5', 'Every') });
   }

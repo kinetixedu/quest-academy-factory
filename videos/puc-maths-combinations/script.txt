@@ -1,0 +1,53 @@
+H1|0.4|Five friends. Diya must pick two of them for a quiz team.
+H2|0.45|Last time, a captain and a vice captain gave twenty ways. Now there are no badges. Is it still twenty?
+H3|0.35|Diya has to make this choice for the class quiz today.
+H4|0.5|Meera and Sana, or Sana and Meera. It is the same team. So should we count it twice?
+H5|0.65|No. When order does not matter, we are counting combinations.
+P1|0.35|So what is a combination?
+P2|0.4|A combination is a selection of some or all of the objects, where the order does not matter.
+P3|0.4|Selection means we only ask who is in. Not who is first.
+P4|0.65|An arrangement asks who goes where. A selection asks only who is in.
+L1|0.4|Let us bring back the grid from last time. Twenty squares. Each one is a captain and a vice captain.
+L2|0.4|Look at Meera captain, Sana vice. And Sana captain, Meera vice. As a team, they are the same.
+L3|0.6|Every square has a mirror twin across the diagonal. Fold the grid, and each twin lands on its partner.
+L4|0.65|Twenty squares become ten teams. Each team was counted two times.
+K1|0.4|Side by side. Arrangement: Meera then Sana is not Sana then Meera. That is two ways.
+K2|0.6|Selection: Meera and Sana is one team, whichever way you say it. That is one way.
+K3|3.2|Now you try. Choosing three toppings for a pizza. Arrangement, or selection? Pause and decide.
+K4|0.65|Selection! The pizza tastes the same, whichever topping goes on first.
+D1|0.35|Now the rule.
+D2|0.75|Choose r things from n different things. First, count the arrangements. That is n P r.
+D3|0.75|But each chosen group can be arranged among itself in r factorial ways.
+D4|0.75|So every group was counted r factorial times. We divide by r factorial.
+D5|0.75|This is written n C r. The C stands for combination.
+D6|0.75|n C r equals n P r over r factorial. That is n factorial, over r factorial times n minus r factorial.
+D7|0.65|Check it. Five C two is twenty over two. Ten teams.
+V1|0.4|Watch the count change as the team grows. Five friends.
+V2|0.4|A team of zero: one way, pick nobody. A team of one: five ways. A team of two: ten.
+V3|0.6|A team of three: ten again. Four: five ways. All five: one way.
+V4|3.2|Quick one. Why is five C two equal to five C three? Pause and think.
+V5|0.65|Picking two to play is the same as picking three to sit out. So n C r equals n C, n minus r.
+T1|0.7|Remember this. When order does not matter, divide the arrangements by r factorial.
+W1|0.35|Now, one worked example.
+W2|0.5|Eight friends. Only three can go on a trip. In how many ways can the three be chosen?
+W3|0.75|Step one. A trip group has no first or second. Order does not matter. This is a combination.
+W4|0.75|Step two. n is eight friends. r is three places.
+W5|0.75|Step three. Eight C three is eight factorial, over three factorial times five factorial.
+W6|0.75|Step four. That leaves eight times seven times six, over three times two times one. Three hundred and thirty six over six.
+W7|0.65|So there are fifty six ways.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students use n P r here, and write three hundred and thirty six.
+X3|0.65|But that counts every group six times, once for each order. A group is just a group. Divide by three factorial, and the answer is fifty six.
+J1|0.6|Where is this asked? In JEE Main, as questions on choosing a team or a committee with a condition.
+Q1|5.4|Exam level now. A team of four is chosen from six boys and four girls. It must have at least two girls. How many teams? Pause and solve.
+A1|0.5|The answer is A. One hundred and fifteen.
+A2|0.5|Two girls and two boys. Four C two times six C two is six times fifteen. Ninety.
+A3|0.5|Three girls and one boy. Four C three times six C one is four times six. Twenty four.
+A4|0.5|Four girls. Four C four is one.
+A5|0.6|Ninety plus twenty four plus one is one hundred and fifteen.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why is choosing Meera and Sana the same as choosing Sana and Meera?
+Y3|0.9|Two. Find six C two.
+Y4|1.1|Three. Why is n C r equal to n P r over r factorial?
+N1|0.3|Next time: arrange, or choose? One question decides it every time. We put them side by side.

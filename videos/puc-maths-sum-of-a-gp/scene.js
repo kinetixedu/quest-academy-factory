@@ -57,9 +57,10 @@ const DS = [
 $('#dSt').innerHTML = DS.map((f, i) => `<div class="st" id="ds${i}" style="top:${84 + i * 96}px"><div class="n">${i + 1}</div><div class="sx">${K(f)}</div></div>`).join('');
 const tDs = [T0('D2'), T0('D3'), T0('D5'), T0('D6'), T0('D7')];
 const DX = i => 40 + i * 102, Y1 = 140, Y2 = 270;
-const R1 = ['a', 'ar', 'ar^2', 'ar^3', '\\cdots', 'ar^{n-1}'], R2 = ['ar', 'ar^2', 'ar^3', '\\cdots', 'ar^{n-1}', 'ar^{n}'];
-const tex = s => s === '\\cdots' ? '\\cdots' : s.replace(/^a/, A('a')).replace(/r/, R('r')).replace(/n/, N('n'));
-$('#dRows').innerHTML = `<div class="rlb" id="dL1" style="top:${Y1 - 44}px">${K(SN)}</div><div class="rlb" id="dL2" style="top:${Y2 - 44}px">${K(R('r') + SN)}</div>` +
+const ar = p => `${A('a')}${R('r')}${p ? '^{' + p + '}' : ''}`;
+const R1 = [A('a'), ar(''), ar('2'), ar('3'), '\\cdots', ar(N('n') + '-1')], R2 = [ar(''), ar('2'), ar('3'), '\\cdots', ar(N('n') + '-1'), ar(N('n'))];
+const tex = s => s;
+$('#dRows').innerHTML = `<div class="rlb" id="dL1" style="top:${Y1 - 50}px">${K(SN)}</div><div class="rlb" id="dL2" style="top:${Y2 - 50}px">${K(R('r') + SN)}</div>` +
   R1.map((s, i) => `<div class="tt ${s === '\\cdots' ? 'gh' : 'r1'}" id="dt1${i}" style="left:${DX(i)}px;top:${Y1}px">${K(tex(s))}</div>`).join('') +
   R2.map((s, i) => `<div class="tt ${s === '\\cdots' ? 'gh' : 'r2'}" id="dt2${i}" style="left:${DX(i + 1)}px;top:${Y2}px">${K(tex(s))}</div>`).join('') +
   [1, 2, 3, 5].map(i => `<div class="sk" id="dk${i}" style="left:${DX(i) + 44}px;top:${Y1 - 8}px;height:0"></div>`).join('');
@@ -82,7 +83,7 @@ $('#stF').innerHTML = K(`${SN} = \\dfrac{${A('a')}\\,(${R('r')}^{${N('n')}} - 1)
 $('#wq').innerHTML = `Find the sum of the first 6 terms of<br>${K(`${A('2')} + 6 + 18 + \\cdots`)}`;
 const wsol = PUC.solution($('#wl'), [
   [K(`${A('a')} = 2,\\ \\ ${R('r')} = 6 \\div 2 = 3,\\ \\ ${N('n')} = 6`)],
-  [K(`S_6 = \\dfrac{${A('2')}\\,(${R('3')}^{${N('6')}} - 1)}{${R('3')} - 1}`)],
+  [K(`S_6 = \\tfrac{${A('2')}\\,(${R('3')}^{${N('6')}} - 1)}{${R('3')} - 1}`)],
   [K(`= \\tfrac{2 \\times (729 - 1)}{2} = \\tfrac{2 \\times 728}{2}`)],
   [K(`S_6 = \\mathbf{728}`)],
   [K(`\\text{check: } 2 + 6 + 18 + 54 + 162 + 486 = 728`)]], { label: 'WORKED EXAMPLE', y0: 196, dy: 76 });
@@ -94,7 +95,7 @@ const wBars = WV.map((v, i) => { const g = mk(mk(ws, 'g', {}), 'g', {}); const h
 const tWb = [wt('W7', 'two'), wt('W7', 'six'), wt('W7', 'eighteen'), wt('W7', 'fifty'), wt('W7', 'sixty'), wt('W7', 'eighty')];
 
 /* ---------- X / Q / F ---------- */
-const trap = PUC.trap($('#trap'), { wrong: K(`S_6 = \\tfrac{2\\,(3^{${red('5')}} - 1)}{3 - 1} = 242`), right: K(`S_6 = \\tfrac{2\\,(3^{${N('6')}} - 1)}{3 - 1} = 728`) });
+const trap = PUC.trap($('#trap'), { wrong: K(`S_6 = \\dfrac{2\\,(3^{${red('5')}} - 1)}{3 - 1} = 242`), right: K(`S_6 = \\dfrac{2\\,(3^{${N('6')}} - 1)}{3 - 1} = 728`), y0: 70, y1: 168 });
 $('#tR').innerHTML = `<div class="lbl" style="position:static">KEEP THEM APART</div><div class="k" id="tR1">${K(`\\text{one term: } a_{${N('n')}} = ${A('a')}${R('r')}^{${N('n')} - 1}`)}</div><div class="k" id="tR2">${K(`\\text{the sum: } ${R('r')}^{${N('n')}} \\text{ on top}`)}</div>`;
 $('#tR').style.top = '40px';
 const where = PUC.where($('#wa'), { on: ['JEE MAIN'], type: 'Sums of a G P: find a sum of many terms, or how many terms.' });
@@ -137,7 +138,7 @@ M.on(t => {
     M.vis($('#hB'), t, tMorph + 0.3, 1e9, { dy: 0, fade: 0.3 });
     const n = Math.max(4, t >= T0('H3') ? 4 : 4); // the first four squares (the story so far)
     if (hLast < 0) { hLast = 1; paint(hCells, 4); }
-    M.setT($('#hS'), t < wt('H3', 'sixty') ? '4' : '64'); M.setT($('#hO'), t < wt('H3', 'sixty') ? '8' : '2⁶³'); M.setT($('#hT'), t < wt('H3', 'sixty') ? '15' : '?');
+    M.setT($('#hS'), t < wt('H3', 'sixty') ? '4' : '64'); { const v = t < wt('H3', 'sixty') ? '8' : '2<sup>63</sup>'; if ($('#hO')._h !== v) { $('#hO')._h = v; $('#hO').innerHTML = v; } } M.setT($('#hT'), t < wt('H3', 'sixty') ? '15' : '?');
     hTxt.forEach(e => M.vis(e, t, tMorph + 0.4, 1e9, { dy: 0 }));
     M.vis($('#hBig'), t, wt('H4', 'twenty') - 0.1, 1e9, { dy: 10 });
     M.vis($('#hk'), t, tMorph + 0.3, out, { dx: 60, dy: 0, ...o });

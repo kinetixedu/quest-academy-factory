@@ -1,0 +1,30 @@
+{
+ "world": "puc-maths",
+ "topic": "Sum of a GP",
+ "series": {
+  "name": "PUC Maths",
+  "ep": 66
+ },
+ "title": "Chessboard Rice Puzzle: Sum of a GP Explained Simply | Class 11 Maths",
+ "description": "One grain of rice on the first square of a chessboard, two on the next, then four, then eight. How many grains on all 64 squares? In this animated lesson for Class 11 Maths (NCERT Chapter 8, Sequences and Series) we find the sum of a geometric progression with one shift-and-subtract trick.\n\nYou will watch the chessboard fill live while the totals 1, 3, 7, 15 reveal their pattern, then see the sum written twice, shifted one place, and almost every term cancel. Step by step we reach Sn = a(r^n - 1)/(r - 1), compare it with the form for r < 1, and see why the formula fails when r = 1. Then a worked example, the exam trap about r^n and r^(n - 1), an original JEE Main pattern question with a full solution, a recap card and three questions to check yourself.\n\nFollows the NCERT book. Useful for CBSE, ICSE (ISC), Karnataka PUC and other state boards, and JEE.\n\nIn this video:\n0:00 The chessboard rice puzzle\n0:27 Live: fill the board, spot the pattern\n0:55 Shift, subtract, cancel: the sum formula\n1:55 r > 1, r < 1 and r = 1\n2:40 Worked example: 2 + 6 + 18 + ...\n3:24 Exam trap: r^n, not r^(n - 1)\n3:43 Where it is asked\n3:54 Practice question (JEE Main pattern)\n4:33 Recap and three questions to answer\n\nNext episode (Ep 67): Geometric Mean and the AM-GM Inequality. Two averages: which one is never smaller?\n\nVideo by Quest Academy.",
+ "tags": [
+  "sum of GP",
+  "sum of n terms of a GP",
+  "geometric series",
+  "chessboard rice problem",
+  "2^64 - 1",
+  "geometric progression class 11",
+  "sequences and series class 11",
+  "NCERT class 11 maths chapter 8",
+  "JEE Main sequences and series",
+  "class 11 maths",
+  "PUC maths",
+  "first PUC maths",
+  "GP formula derivation"
+ ],
+ "thumb": {
+  "title": "Rice on a Chessboard",
+  "accent_word": "Chessboard",
+  "frame_t": 54
+ }
+}

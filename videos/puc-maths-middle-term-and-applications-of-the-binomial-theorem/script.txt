@@ -1,0 +1,51 @@
+H1|0.4|One point zero one is only a tiny bit more than one.
+H2|0.45|Multiply it by itself a thousand times. Will it beat ten thousand?
+H3|0.35|Aarav guessed no. A tiny step, even a thousand times, cannot go that far. Can it?
+H4|0.5|His calculator would need a thousand presses. Is there a smarter way to decide?
+H5|0.65|There is. Today the binomial theorem compares huge numbers, and finds the middle term.
+B1|0.4|Write one point zero one as one plus zero point zero one. Now it is a binomial, with two parts.
+B2|0.4|So one point zero one, to the power one thousand, is one plus zero point zero one, to the power one thousand.
+B3|0.65|Every term of this expansion is positive. So adding terms can only make the total grow.
+R1|0.4|Watch the terms add up, one by one.
+R2|0.4|The first term is one. The second is one thousand times zero point zero one, which is ten.
+R3|0.4|The third is about fifty. Then about one hundred sixty six. The terms keep growing.
+R4|0.65|By the eleventh term, the total passes ten thousand. And there are still more positive terms to add.
+R5|0.65|So one point zero one, to the power one thousand, is bigger than ten thousand. In fact, it is about twenty one thousand.
+E1|0.4|Here is the example from the NCERT book. Which is larger: one point zero one, to the power one million, or ten thousand?
+E2|0.75|Step one. Write it as one plus zero point zero one, to the power one million.
+E3|0.75|Step two. The second term is one million times zero point zero one. That is exactly ten thousand.
+E4|0.65|Step three. One plus ten thousand, plus more positive terms. So it is bigger than ten thousand. Two terms were enough.
+E5|3.2|Now you try. Is one point one, to the power ten thousand, bigger than one thousand? Pause and think.
+E6|0.65|Yes! The second term is ten thousand times zero point one, which is one thousand. Add one, and it is already bigger.
+M1|0.4|Now, the middle term. Think of a row of seats in a cinema.
+M2|0.4|Seven seats have one middle seat, the fourth. Eight seats have two middle seats, the fourth and the fifth.
+M3|0.65|An expansion is the same. a plus b, to the power n, has n plus one terms.
+G1|0.35|So the rule depends on n.
+G2|0.75|If n is even, n plus one is odd. There is one middle term. It is term number n over two, plus one.
+G3|0.75|If n is odd, n plus one is even. There are two middle terms. Term n plus one over two, and term n plus three over two.
+G4|0.65|And the middle term has the biggest number in front. It sits at the top of the hill of n C r.
+S1|0.4|Side by side. Take a plus b, to the power six. That is seven terms, so the fourth term is the only middle term.
+S2|0.6|Now a plus b, to the power seven. That is eight terms, so the fourth and the fifth are both middle terms.
+S3|3.2|Quick one. How many middle terms does a plus b, to the power nine, have? Pause and decide.
+S4|0.65|Two! Nine is odd, so there are ten terms. The fifth and the sixth are the middle terms.
+T1|0.7|Remember this. n plus one terms. Even n, one middle term. Odd n, two middle terms.
+W1|0.35|Now, one worked example.
+W2|0.5|Find the middle term of x plus two, to the power eight.
+W3|0.75|Step one. n is eight, which is even. So there is one middle term, term number five.
+W4|0.75|Step two. Term five means r is four. So it is eight C four, times x to the four, times two to the four.
+W5|0.65|Step three. Eight C four is seventy. Two to the four is sixteen. So the middle term is one thousand one hundred twenty x to the four.
+X1|0.35|Now, the exam trap.
+X2|0.4|Find the middle term of x plus one, to the power seven. Many students give only the fourth term.
+X3|0.65|But seven is odd, so there are eight terms and two middle terms. The fourth and the fifth: thirty five x to the four, and thirty five x cubed.
+J1|0.6|Where is this asked? Comparing numbers is in the NCERT book. The middle term is not in the current NCERT text, but JEE Main asks it, for example comparing the middle terms of two expansions.
+Q1|5.4|Exam level now. Find the middle term of this expansion. Pause and solve.
+A1|0.5|The answer is A. One thousand one hundred twenty.
+A2|0.5|n is eight, so there is one middle term, the fifth. So r is four.
+A3|0.5|The term is eight C four, times two x, to the four, times minus one over x, to the four. The x's cancel.
+A4|0.6|Seventy, times sixteen, times plus one, is one thousand one hundred twenty. Minus one to an even power is plus one.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why does every extra term make one plus x, to the n, bigger, when x is positive?
+Y3|0.9|Two. How many middle terms does a plus b, to the power twelve, have?
+Y4|1.1|Three. Which terms are the middle terms of a plus b, to the power eleven?
+N1|0.3|Next time: a number pattern with a rule. Can you guess what comes next? We start sequences and series.
