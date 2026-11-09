@@ -54,9 +54,9 @@ const gate = (p, type, x, y, s = 90, o = {}) => {
   const ys = type === 'NOT' ? [y] : [y - h / 4, y + h / 4];
   ys.forEach(yy => ins.push(W(g, `M${x - li},${yy} H${type === 'OR' ? x + s * 0.12 : x}`)));
   const body = mk(g, 'path', { d, fill: '#fff', stroke: INK, 'stroke-width': 4, 'stroke-linejoin': 'round' });
-  let bub = null; if (type === 'NOT' || o.bubble) { bub = mk(g, 'circle', { cx: ox - 8, cy: y, r: 8, fill: '#fff', stroke: INK, 'stroke-width': 4 }); }
+  let bub = null; const br = type === 'NOT' ? 8 : Math.max(8, s * 0.07); if (type === 'NOT' || o.bubble) { bub = mk(g, 'circle', { cx: ox - br, cy: y, r: br, fill: '#fff', stroke: INK, 'stroke-width': 4 }); }
   const out = W(g, `M${ox},${y} H${ox + lo}`);
-  return { g, body, ins, out, ox, ys, bub, x0: x - li, x1: ox + lo };
+  return { g, body, ins, out, ox, ys, bub, br, x0: x - li, x1: ox + lo };
 };
 /* two-terminal switch: horizontal (or vertical) between a and b; set(closed) */
 const sw = (p, x1, y1, x2, y2) => {
@@ -74,7 +74,7 @@ const ttable = (host, cols, rows, top = 84, rh = 60, gap = 12) => {
 
 /* NAND / NOR symbol = AND / OR shape with a bubble */
 const ngate = (p, type, x, y, s, o = {}) => gate(p, type === 'NAND' ? 'AND' : 'OR', x, y, s, { ...o, bubble: true });
-const fixOut = G => { const ox = G.ox + 16; PUC.attr(G.bub, 'cx', ox - 8); PUC.attr(G.out, 'd', `M${ox},${G.ys.length > 1 ? (G.ys[0] + G.ys[1]) / 2 : G.ys[0]} H${G.x1 + 16}`); G.x1 += 16; return G; };
+const fixOut = G => { const d2 = 2 * G.br, ox = G.ox + d2; PUC.attr(G.bub, 'cx', ox - G.br); PUC.attr(G.out, 'd', `M${ox},${G.ys.length > 1 ? (G.ys[0] + G.ys[1]) / 2 : G.ys[0]} H${G.x1 + d2}`); G.x1 += d2; return G; };
 /* tie both inputs of a 2-input gate to one input line starting at xs */
 const tie = (p, G, xs) => { const xj = G.x0, ym = (G.ys[0] + G.ys[1]) / 2; return [W(p, `M${xj},${G.ys[0]} V${G.ys[1]}`), W(p, `M${xs},${ym} H${xj}`), mk(p, 'circle', { cx: xj, cy: ym, r: 6, fill: INK })]; };
 
@@ -94,8 +94,9 @@ const rS = $('#rS');
 const rA = gate(rS, 'AND', 170, 250, 110, { lead: 80, leadOut: 70 }), rN = gate(rS, 'NOT', rA.x1 + 70, 250, 90, { lead: 70, leadOut: 70 });
 const rL = [mono(rS, 225, 196, 'AND', { 'text-anchor': 'middle', fill: INK, 'font-weight': 600 }), mono(rS, rN.x0 + 100, 196, 'NOT', { 'text-anchor': 'middle', fill: INK, 'font-weight': 600 }),
   tx(rS, 78, 236, 'A', { 'text-anchor': 'end', 'font-style': 'italic' }), tx(rS, 78, 280, 'B', { 'text-anchor': 'end', 'font-style': 'italic' }), tx(rS, rN.x1 + 12, 258, 'Y', { 'font-style': 'italic' })];
-const rBox = mk(rS, 'rect', { x: 70, y: 150, width: rN.x1 - 50, height: 200, rx: 16, fill: 'none', stroke: AM, 'stroke-width': 3, 'stroke-dasharray': '10 8' });
+const rBox = mk(rS, 'rect', { x: 36, y: 150, width: rN.x1 - 16, height: 200, rx: 16, fill: 'none', stroke: AM, 'stroke-width': 3, 'stroke-dasharray': '10 8' });
 const rBoxL = mono(rS, 92, 386, 'TOGETHER: A NAND GATE', { fill: GD, 'font-weight': 600 });
+const rEx = mk(rS, 'foreignObject', { x: 36, y: 440, width: 712, height: 90 }); rEx.innerHTML = `<div xmlns="http://www.w3.org/1999/xhtml" style="font-size:46px;text-align:center">${K('Y = \\overline{A \\cdot B}')}</div>`;
 const r2S = $('#r2S');
 const rG = fixOut(ngate(r2S, 'NAND', 240, 240, 180, { lead: 120, leadOut: 110 }));
 const rGL = [tx(r2S, 108, 212, 'A', { 'text-anchor': 'end', 'font-style': 'italic', 'font-size': 30 }), tx(r2S, 108, 284, 'B', { 'text-anchor': 'end', 'font-style': 'italic', 'font-size': 30 }), tx(r2S, rG.x1 + 14, 250, 'Y', { 'font-style': 'italic', 'font-size': 30 })];
@@ -151,6 +152,10 @@ W(UG.OR, `M${o1.x1},160 H${o3.x0 - 30} V${o3.ys[0]} H${o3.x0}`); W(UG.OR, `M${o2
   mono(UG.OR, o1.x1 - 4, 136, 'Ā', { fill: INK, 'font-weight': 600, 'font-size': 22 }), mono(UG.OR, o2.x1 - 4, 316, 'B̄', { fill: INK, 'font-weight': 600, 'font-size': 22 })];
 const uOrX = mk(UG.OR, 'foreignObject', { x: 36, y: 420, width: 712, height: 80 }); uOrX.innerHTML = `<div xmlns="http://www.w3.org/1999/xhtml" style="font-size:44px;text-align:center">${K('\\overline{\\overline{A}\\cdot\\overline{B}} = A + B')}</div>`;
 const rcs = ['#rc0', '#rc1', '#rc2'].map(s => $(s));
+const UI = mk(uS, 'g');
+const ui1 = fixOut(ngate(UI, 'NAND', 250, 190, 130, { lead: 70, leadOut: 70 })), ui2 = fixOut(ngate(UI, 'NOR', 250, 370, 130, { lead: 70, leadOut: 56 }));
+const uiL = [tx(UI, 600, 198, 'NAND', { 'font-family': 'IBM Plex Mono', 'font-size': 30 }), tx(UI, 600, 378, 'NOR', { 'font-family': 'IBM Plex Mono', 'font-size': 30 })];
+const uiT = mono(UI, 392, 500, 'each one alone can build AND, OR and NOT', { 'text-anchor': 'middle', fill: INK, 'font-weight': 600, 'font-size': 22 });
 
 /* ================= W: worked example ================= */
 const wS = $('#wS');
@@ -225,7 +230,7 @@ M.on(t => {
     drawSeq([...rG.ins, rG.out], t, T0('R3') + 0.1, 0.3, 0.08); M.vis(rG.body, t, T0('R3') + 0.2, 1e9, { dy: 0, fade: 0.2 }); M.vis(rG.bub, t, wt('R3', 'circle') - 0.1, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 }); fadeAt(rGL, t, T0('R3') + 0.4, 0.1);
     PUC.attr(rG.bub, 'fill', t >= wt('R4', 'bubble') ? C.ac2 : '#fff'); PUC.attr(rG.bub, 'stroke', t >= wt('R4', 'bubble') ? AM : INK);
     const u = M.io((t - wt('R4', 'bubble')) / 0.4); rPt.set(rG.ox + 8, 370, rG.ox + 8, 370 - 100 * u); M.vis(rPtL, t, wt('R4', 'bubble') + 0.2, 1e9, { dy: 0, fade: 0.2 }); PUC.attr(rPtL, 'x', rG.ox + 8);
-    M.vis($('#rStrip'), t, wt('R4', 'means') - 0.2, 1e9, { dy: 24 });
+    M.vis($('#rStrip'), t, wt('R4', 'means') - 0.2, 1e9, { dy: 24 }); M.vis(rEx, t, wt('R3', 'symbol') - 0.1, 1e9, { dy: 10 });
   }
 
   /* B: breadboard */
@@ -258,16 +263,16 @@ M.on(t => {
   if (uOn) {
     const out = tT - 0.3, t3 = T0('U3'), t6 = T0('U6'), t7 = T0('U7'), cur = t < t6 ? 'NOT' : t < t7 ? 'AND' : 'OR';
     M.vis($('#uL'), t, tU + 0.1, out, { dx: -60, dy: 0, ...o }); M.vis($('#uR'), t, tU + 0.25, out, { dx: 60, dy: 0, ...o });
-    M.setT($('#uLL'), `${cur} FROM NAND`); M.vis($('#uLL'), t, t3, 1e9, { dy: 10 });
-    Object.entries(UG).forEach(([kk, g]) => { M.hide(g, kk !== cur); if (kk === cur) M.vis(g, t, { NOT: t3, AND: t6, OR: t7 }[kk] + 0.1, 1e9, { dy: 0, fade: 0.25 }); });
+    M.setT($('#uLL'), t < t3 ? 'THE UNIVERSAL GATES' : `${cur} FROM NAND`); M.vis($('#uLL'), t, tU + 0.2, 1e9, { dy: 10 });
+    M.vis(UI, t, tU + 0.3, t3 - 0.3, { dy: 0, fade: 0.25, outDur: 0.25, ody: 0 }); M.vis(uiT, t, wt('U2', 'alone'), 1e9, { dy: 0, fade: 0.2 });
+    Object.entries(UG).forEach(([kk, g]) => { M.hide(g, kk !== cur || t < t3 - 0.1); if (kk === cur) M.vis(g, t, { NOT: t3, AND: t6, OR: t7 }[kk] + 0.1, 1e9, { dy: 0, fade: 0.25 }); });
     const A = t >= wt('U5', 'one') - 0.2 ? 1 : 0; M.vis(uChipA, t, wt('U4', 'zero') - 0.2, 1e9, { dy: 0, fade: 0.2 }); M.vis(uChipY, t, wt('U4', 'one') - 0.1, 1e9, { dy: 0, fade: 0.2 });
     M.setT(uChipAV, String(A)); M.setT(uChipYV, String(1 - A)); [...u1.ins, u1.out].forEach((p, i) => wireC(p, i < 2 ? A : 1 - A));
     M.vis(uNotX, t, wt('U5', 'NOT') - 0.2, 1e9, { dy: 10 }); M.vis(uAndX, t, wt('U6', 'cancel') - 0.2, 1e9, { dy: 10 }); M.vis(uOrX, t, T0('U8') + 0.1, 1e9, { dy: 10 });
-    const tr = [wt('U5', 'NOT') + 0.2, wt('U6', 'cancel'), wt('U8b', 'OR')];
-    rcs.forEach((e, i) => { if (i === 0) M.vis(e, t, tr[0], 1e9, { dy: 16 }); const hl = (i === 0 && t < t6) || (i === 1 && t >= t6 && t < t7) || (i === 2 && t >= t7 && t < T0('U9')); e.style.borderColor = hl ? AM : SOFT; e.style.background = hl ? C.ac2 : SOFT;
-      [e.querySelector('.d'), e.querySelector('.e')].forEach(q => M.vis(q, t, i === 0 ? T0('U9') + 0.3 : wt('U9b', ['OR', 'OR', 'AND'][i]) - 0.1, 1e9, { dy: 0, fade: 0.2 })); });
+    const tr = [wt('U5', 'NOT') + 0.2, wt('U6', 'cancel'), wt('U8', 'Out')];
+    rcs.forEach((e, i) => { M.vis(e, t, wt('U2', 'NAND') + i * 0.15, 1e9, { dy: 16 }); [e.querySelector('.b'), e.querySelector('.c')].forEach(q => M.vis(q, t, tr[i] - 0.1, 1e9, { dy: 0, fade: 0.2 })); const hl = (i === 0 && t < t6) || (i === 1 && t >= t6 && t < t7) || (i === 2 && t >= t7 && t < T0('U9')); e.style.borderColor = hl ? AM : SOFT; e.style.background = hl ? C.ac2 : SOFT;
+      [e.querySelector('.d'), e.querySelector('.e')].forEach(q => M.vis(q, t, i === 0 ? T0('U9') + 0.3 : wt('U9b', ['OR', 'AND', 'OR'][i]) - 0.1, 1e9, { dy: 0, fade: 0.2 })); });
     // the hidden rc rows before U8b keep only their first two cells visible when they first appear
-    M.vis(rcs[1], t, wt('U6', 'cancel') - 0.1, 1e9, { dy: 16 }); M.vis(rcs[2], t, wt('U8b', 'OR') - 0.1, 1e9, { dy: 16 });
     M.vis($('#uStrip'), t, T0('U9') - 0.1, 1e9, { dy: 24 });
   }
 
