@@ -99,13 +99,13 @@ const th1 = PUC.think($('#th1'), { q: 'Is the derivative of x² · x³ equal to 
 $('#stF').innerHTML = K(PROD);
 
 /* ---------- W ---------- */
-$('#wq').innerHTML = `Differentiate ${K(`y = \\dfrac{${U(`${X('x')}^2`)}}{${V(`${X('x')} + 1`)}}`)} and find its value at ${K(`${X('x')} = 1`)}.`;
+$('#wq').innerHTML = `Find ${K("y'")} at ${K(`${X('x')} = 1`)} for ${K(`y = \\dfrac{${U(`${X('x')}^2`)}}{${V(`${X('x')} + 1`)}}`)}`;
 const wsol = PUC.solution($('#wl'), [
   [K(`${U('u')} = ${X('x')}^2,\\ ${U("u'")} = 2${X('x')};\\ \\ ${V('v')} = ${X('x')} + 1,\\ ${V("v'")} = 1`)],
   [K(`y' = \\dfrac{${U("u'")}${V('v')} - ${U('u')}${V("v'")}}{${V('v')}^2}`)],
   [K(`= \\dfrac{2${X('x')}(${X('x')} + 1) - ${X('x')}^2 \\cdot 1}{(${X('x')} + 1)^2}`)],
   [K(`= \\dfrac{${X('x')}^2 + 2${X('x')}}{(${X('x')} + 1)^2}`)],
-  [K(`${X('x')} = 1:\\ \\ y' = \\tfrac{3}{4} = ${D('0.75')}`)]], { label: 'WORKED EXAMPLE', y0: 200, dy: 82 });
+  [K(`${X('x')} = 1:\\ \\ y' = \\tfrac{3}{4} = ${D('0.75')}`)]], { label: 'WORKED EXAMPLE', y0: 164, dy: 88 });
 $('#wl .lbl').style.top = '30px';
 const tW = [T0('W3'), T0('W4'), T0('W5'), T0('W6'), T0('W7')];
 const yq = u => u * u / (u + 1), wg = PUC.graph($('#wG'), { x: 110, y: 120, w: 600, h: 370, xmax: 3.2, ymax: 2.4, xt: [0, 1, 2, 3], yt: [0, 1, 2], xl: 'x' });
@@ -125,7 +125,7 @@ const where = PUC.where($('#wa'), { on: [], type: 'A tool inside bigger calculus
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 900,
   q: `${K(`f(x) = x\\,g(x),\\ \\ g(1) = 2,\\ \\ g'(1) = 3`)}<br>${K(`h(x) = \\dfrac{f(x)}{x + 1}`)}. Find ${K(`h'(1)`)}.`,
   opts: ['5/4', '3/2', '2', '5/2'], right: 2, optW: 474, optY: 316 });
-const so = PUC.solution($('#so'), [[K(`f(1) = 1 \\cdot g(1) = 2`)], [K(`f'(x) = g(x) + x\\,g'(x)`)], [K(`f'(1) = 2 + 3 = 5`)], [K(`h'(1) = \\tfrac{5 \\cdot 2 - 2 \\cdot 1}{2^2}`)], [K(`= \\tfrac{8}{4} = 2`)]], { y0: 100, dy: 96 });
+const so = PUC.solution($('#so'), [[K(`f(1) = 1 \\cdot g(1) = 2`)], [K(`f'(x) = g(x) + x\\,g'(x)`)], [K(`f'(1) = 2 + 3 = 5`)], [K(`h'(1) = \\dfrac{5 \\cdot 2 - 2 \\cdot 1}{2^2}`)], [K(`= \\dfrac{8}{4} = 2`)]], { y0: 100, dy: 96 });
 const tSo = [wt('A2', 'First'), wt('A3', 'By'), wt('A3', 'That'), wt('A4', 'By'), wt('A4', 'Eight')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 230, w: 1200, h: 550, title: 'Recap · algebra of derivatives', y0: 100, dy: 90, txt: [0, 0, 0, 0, 1],
   lines: [K(`(${U('u')} \\pm ${V('v')})' = ${U("u'")} \\pm ${V("v'")}`), K(PROD),
