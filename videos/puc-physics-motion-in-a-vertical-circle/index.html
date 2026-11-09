@@ -1,0 +1,173 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 83 - Motion in a Vertical Circle</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 83: motion in a vertical circle (Motion notebook, ball on a string seen from the side + T against angle, bucket of water) ===== */
+:root{--v:#2F6FEB;--a:#D64545;--f:#D9731A;--th:#B7791F;--h:#7A4FE0;--e:#0E8F8F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.vv{color:var(--v)}.ff{color:var(--f)}.hh{color:var(--h)}
+.sv{position:absolute;left:0;top:0;overflow:hidden}
+.bpill{position:absolute;display:inline-flex;align-items:center;height:48px;padding:0 16px;border-radius:10px;background:#fff;border:2px solid var(--ac);color:var(--ac);font:600 18px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+/* title card cases */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr svg{position:absolute;right:16px;top:0;overflow:hidden}
+.wq{position:absolute;top:494px;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#swing{position:absolute;left:452px;top:236px;width:250px;height:240px;background:#fff;border-radius:12px;box-shadow:0 8px 20px rgba(22,33,62,.22)}
+#swing .ml{position:absolute;left:16px;top:12px;font:600 14px 'IBM Plex Mono';letter-spacing:.1em;color:var(--mute);white-space:nowrap}
+/* P */
+.sp{position:absolute;height:48px;padding:0 16px;border-radius:10px;background:var(--soft);display:inline-flex;align-items:center;gap:8px;font:600 22px Poppins;white-space:nowrap}
+.fx2{position:absolute;left:36px;font-size:40px;white-space:nowrap}
+/* sim readout */
+#roG{row-gap:2px}
+#roG .v{font-size:30px}
+#roG .k{font-size:27px}
+#roG .u{font-size:20px}
+.stag{position:absolute;height:40px;padding:0 14px;border-radius:8px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:110px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:36px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:62px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.chipd{position:absolute;height:56px;padding:0 18px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:10px;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+/* side by side */
+.sbv{position:absolute;left:36px;top:84px;width:712px;height:300px;border-radius:14px;background:var(--soft)}
+.sbl{position:absolute;left:36px;font-size:38px;white-space:nowrap}
+/* reasoning chain + bars */
+.lk{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.lk .n{position:absolute;left:18px;top:25px;width:46px;height:46px;border-radius:50%;background:var(--ac);color:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.lk .lt{position:absolute;left:84px;top:28px;font:600 25px/1.3 Poppins;white-space:nowrap}
+.bar{position:absolute;left:36px;width:712px;height:40px}
+.bar .bk{position:absolute;left:0;top:0;width:190px;font:600 18px 'IBM Plex Mono';letter-spacing:.04em;line-height:40px;white-space:nowrap}
+.bar .bt{position:absolute;left:200px;top:6px;width:360px;height:28px;border-radius:6px;background:var(--soft)}
+.bar .bf{position:absolute;left:0;top:0;height:28px;border-radius:6px;background:var(--f)}
+.bar .bv{position:absolute;left:574px;top:0;font:600 26px 'IBM Plex Mono';line-height:40px;white-space:nowrap}
+/* worked */
+#wq{position:absolute;left:36px;top:70px;font:600 28px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:30px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#mq .mq{font-size:30px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 24px Poppins}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:29px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 5 WORK, ENERGY AND POWER</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div class="bpill" id="bpill">NCERT · CBSE · ISC · PUC</div>
+    <div id="title">Vertical <span class="acc">Circle</span></div>
+    <div id="sub">How slow is too slow?</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: three loops + Aarav's bucket -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">UPSIDE DOWN AT THE TOP</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Upside down, and nothing falls. Why?</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · THE COLLEGE CORRIDOR</div>
+        <div id="hdF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-corridor.jpg" style="position:absolute;left:112px;top:84px;width:520px;height:390px;border-radius:12px">
+        <div id="swing"><div class="ml">THE SWING · SIDE VIEW</div><svg class="sv" id="swS" width="250" height="240"></svg></div>
+        <div id="wqs"></div></div>
+    </div>
+
+    <!-- P: what it is -->
+    <div id="sP">
+      <div class="card full" id="pa"><div class="lbl" style="left:36px;top:30px">A CIRCLE THAT STANDS UP</div><svg class="sv" id="paS" width="784" height="580"></svg>
+        <div class="sp" id="pa0" style="left:36px;top:84px">Going up: <b class="ff">gravity slows it</b></div>
+        <div class="sp" id="pa1" style="left:36px;top:500px">Coming down: <b class="ff">gravity speeds it up</b></div>
+        <div class="pillp ink" id="paP" style="right:36px;top:84px;height:48px;font-size:22px">Speed keeps changing</div></div>
+      <div class="card rf" id="pb"><div class="lbl" style="left:36px;top:30px">TWO FORCES · ONE JOB</div><svg class="sv" id="pbS" width="784" height="580"></svg>
+        <div class="fx2" id="pbF" style="top:396px"></div>
+        <div class="pillp" id="pbP" style="left:36px;top:492px">This pull bends the path into a circle</div></div>
+    </div>
+
+    <!-- S: the sim -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">BALL ON A STRING · SIDE VIEW</div>
+        <div class="ghost" id="half" style="right:36px;top:18px">SHOWN AT 0.5x</div>
+        <div class="stag" id="slo" style="right:36px;top:20px">SLOW-MO REPLAY · 0.25x</div>
+        <svg class="sv" id="simS" width="784" height="580"></svg></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro" id="roG" style="left:36px;top:62px;width:712px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">TENSION <i style="font-family:Poppins;text-transform:none">T</i> VS ANGLE <i style="font-family:Poppins;text-transform:none">θ</i></div>
+        <svg class="sv" id="grS" width="784" height="274"></svg></div>
+    </div>
+
+    <!-- D: the formula -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE SLOWEST SPEED · 4 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">AT THE TOP, THEN DOWN 2r</div>
+        <svg class="sv" id="drS" width="784" height="580"></svg></div>
+    </div>
+
+    <!-- C: bottom vs top + think, rod think -->
+    <div id="sC">
+      <div class="card full" id="c0"><div class="lbl" style="left:36px;top:30px">AT THE BOTTOM</div>
+        <div class="sbv"><svg class="sv" id="c0S" width="712" height="300"></svg></div>
+        <div class="sbl" id="c0a" style="top:410px"></div>
+        <div class="pillp bad" id="c0P" style="left:36px;top:490px">T is biggest here</div></div>
+      <div class="card rf" id="c1"><div class="lbl" style="left:36px;top:30px">AT THE TOP</div>
+        <div class="sbv"><svg class="sv" id="c1S" width="712" height="300"></svg></div>
+        <div class="sbl" id="c1a" style="top:410px"></div>
+        <div class="pillp good" id="c1P" style="left:36px;top:490px">T is smallest here</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"><svg id="rodS" width="300" height="320" style="position:absolute;left:1260px;top:220px;overflow:hidden"></svg></div>
+    </div>
+
+    <!-- R: why the water stays in -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">BUCKET · SIDE VIEW · r = 0.9 m</div><div class="ghost" id="exR" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <svg class="sv" id="rlS" width="784" height="580"></svg>
+        <div class="stag" id="rV" style="left:36px;top:66px">v at top = 4 m/s</div>
+        <div class="bar" id="bN" style="top:452px"><div class="bk ff">NEEDED mv²/r</div><div class="bt"><div class="bf" id="bNf"></div></div><div class="bv ff" id="bNv">17.8 N</div></div>
+        <div class="bar" id="bM" style="top:504px"><div class="bk">WEIGHT mg</div><div class="bt"><div class="bf" id="bMf" style="background:#B8BCC6"></div></div><div class="bv" id="bMv">9.8 N</div></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">LINK BY LINK</div><div id="lks"></div></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq">1 kg of water, circle radius r = 0.9 m. Slowest top speed? Push of the base at the bottom?</div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">THE BUCKET · TOP AND BOTTOM</div>
+        <svg class="sv" id="wrS" width="784" height="580"></svg>
+        <div class="chipd" id="wC" style="left:36px;top:492px"><span>base push</span><span style="color:#F2B482">58.8 N = 6 mg</span></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tg" width="360" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + questions + NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">On a string, the top needs <span class="acc">speed</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
