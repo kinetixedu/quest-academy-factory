@@ -1,0 +1,189 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 56 - Combinations</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 56: combinations (Proof board) ===== */
+:root{--x:#7A4FE0;--nb:#2F6FEB;--res:#0E8F8F}
+#stage svg circle,#stage svg g{transform-box:fill-box;transform-origin:center}
+#stage .ringW svg circle{transform-box:view-box;transform-origin:0 0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.x{color:var(--x)}.a{color:var(--ac)}.nb{color:var(--nb)}.res{color:var(--res)}
+/* title card */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:54px;font:700 30px Poppins;white-space:nowrap}
+/* hook */
+.gb{position:absolute;top:84px;width:340px;height:160px;border-radius:14px;background:var(--soft)}
+.gb .gl{position:absolute;left:24px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.gb .gv{position:absolute;left:24px;top:48px;font:600 80px/1 'IBM Plex Mono'}
+.gb .gk{position:absolute;left:16px;top:92px;height:5px;width:0;background:var(--red);border-radius:3px}
+.sw{position:absolute;left:36px;width:712px;height:84px;border-radius:14px;background:var(--soft)}
+.sw .wn{position:absolute;left:22px;top:30px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.bd{position:absolute;top:18px;height:48px;padding:0 16px;border-radius:10px;display:inline-flex;align-items:center;gap:10px;font:600 23px Poppins;color:#fff;white-space:nowrap}
+.bd i{font:600 15px 'IBM Plex Mono';font-style:normal;letter-spacing:.08em;opacity:.85}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* definition */
+#dfT{position:absolute;left:36px;top:76px;width:712px;font:700 38px/1.3 Poppins;letter-spacing:-.01em}
+#dfT b{color:var(--ac);padding:0 4px;border-radius:8px}
+.gls{position:absolute;left:36px;width:712px;height:66px;border-radius:12px;background:var(--soft)}
+.gls .gk{position:absolute;left:20px;top:22px;font:600 17px 'IBM Plex Mono';letter-spacing:.06em;color:var(--ac);white-space:nowrap}
+.gls .gt{position:absolute;left:240px;top:15px;font:500 24px Poppins;color:var(--ink2);white-space:nowrap}
+/* tokens and slots */
+.tk{position:absolute;width:84px;height:84px;border-radius:50%;background:#fff;border:3px solid var(--x);color:var(--x);display:flex;align-items:center;justify-content:center;font:600 19px Poppins;white-space:nowrap}
+.ps{position:absolute;top:212px;width:120px;height:110px;border-radius:14px;border:3px dashed #CBD0DA;background:#fff}
+.psl{position:absolute;top:338px;width:120px;text-align:center;font:600 18px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+.tag{position:absolute;top:376px;height:40px;padding:0 12px;border-radius:9px;background:var(--ac);color:#fff;display:inline-flex;align-items:center;font:600 16px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+#mR{position:absolute;left:36px;top:470px}
+.ks{position:absolute;top:110px;width:300px;height:250px;border-radius:16px;border:3px solid #CBD0DA;background:var(--soft)}
+.ks .kl{position:absolute;left:0;top:18px;width:100%;text-align:center;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.tk.big{width:130px;height:130px;font-size:26px}
+/* grid */
+.gc{position:absolute;width:104px;height:64px;border-radius:10px;background:var(--soft);border:2.5px solid transparent;display:flex;align-items:center;justify-content:center;font:600 24px 'IBM Plex Mono';color:var(--ac)}
+.gn{position:absolute;font:600 20px Poppins;white-space:nowrap}
+#lcN{position:absolute;left:36px;top:108px;font:600 120px/1 'IBM Plex Mono';color:var(--res)}
+#lcX{position:absolute;left:36px;top:296px;font:600 56px/1 'IBM Plex Mono';color:var(--red)}
+#lcF{position:absolute;left:36px;top:384px;font-size:54px;white-space:nowrap}
+/* derivation slots */
+.bs{position:absolute;top:150px;width:220px;height:200px;border-radius:16px;border:3px solid var(--ac);background:#fff}
+.bs .bl{position:absolute;left:0;top:18px;width:100%;text-align:center;font:600 17px 'IBM Plex Mono';letter-spacing:.08em;color:var(--ac);white-space:nowrap}
+.bs .bv{position:absolute;left:0;top:62px;width:100%;text-align:center;font:600 96px/1 'IBM Plex Mono';color:var(--x)}
+.gs{position:absolute;top:150px;width:130px;height:150px;border-radius:14px;border:3px solid var(--ac);background:#fff}
+.gs .bl{position:absolute;left:0;top:14px;width:100%;text-align:center;font:600 18px 'IBM Plex Mono';color:var(--ac);white-space:nowrap}
+.gs .bv{position:absolute;left:0;top:70px;width:100%;text-align:center;font-size:26px;white-space:nowrap}
+#dX{position:absolute;left:298px;top:210px;font:600 64px/1 'IBM Plex Mono';color:var(--ink)}
+.st{position:absolute;left:36px;width:712px;height:92px}
+.st .n{position:absolute;left:0;top:6px;width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 21px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:68px;top:0;font-size:36px;white-space:nowrap}
+.st .why{position:absolute;left:68px;top:56px;font:500 21px Poppins;color:var(--mute);white-space:nowrap}
+/* live places */
+#vR{position:absolute;left:36px;top:76px;font:600 60px/1 'IBM Plex Mono';color:var(--ac);white-space:nowrap}
+#vV{position:absolute;right:36px;top:70px;font-size:52px;white-space:nowrap}
+#vV b{font:600 60px 'IBM Plex Mono';color:var(--res)}
+.vs{position:absolute;top:200px;width:120px;height:120px;border-radius:14px;border:3px dashed #CBD0DA;background:#fff;display:flex;align-items:center;justify-content:center;font:600 64px 'IBM Plex Mono';color:var(--x)}
+#vP{position:absolute;left:36px;top:420px;font-size:46px;white-space:nowrap}
+/* factorial tiles */
+.tl{position:absolute;top:150px;width:110px;height:110px;border-radius:14px;background:var(--soft);border:3px solid transparent;display:flex;align-items:center;justify-content:center;font:600 56px 'IBM Plex Mono';color:var(--ink)}
+#g5{position:absolute;left:36px;top:78px;font-size:40px;white-space:nowrap}
+#gFr{position:absolute;left:36px;top:356px;font-size:40px;white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:64px;font:600 28px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.2em}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.12em}
+#mq .mq .katex{font-size:1.2em}
+#wl .sol .sx{font-size:30px}
+.trapL .tx .katex{font-size:1.2em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+.yr .q .katex{font-size:1.15em}
+#sF .fcard .fl{font-size:46px}
+#sF .fcard .fl.txt{font-size:34px}
+.tbag{position:absolute;border-radius:60px;border:3px solid var(--res);background:#EAF6F6}
+.sel{position:absolute;left:36px;width:712px;height:220px;border-radius:14px;background:var(--soft)}
+.sel .kl{position:absolute;left:22px;top:18px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.om{position:absolute;font:600 22px 'IBM Plex Mono';color:var(--ink2);white-space:nowrap}
+#dC{position:absolute;left:36px;top:470px}
+#lcN2{position:absolute;left:36px;top:296px;font:600 56px/1 'IBM Plex Mono';color:var(--ink2)}
+.cnt{position:absolute;height:52px;padding:0 18px;border-radius:10px;display:inline-flex;align-items:center;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 6 PERMUTATIONS AND COMBINATIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Pick a <span class="acc">Team</span></div>
+    <div id="sub">Explained with five friends and one quiz team</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">FIVE FRIENDS · A TEAM OF TWO</div>
+        <div class="gb" id="gb0" style="left:36px"><div class="gl">WITH BADGES · EP 54</div><div class="gv" style="color:var(--ink)">20</div></div>
+        <div class="gb" id="gb1" style="left:408px;background:var(--ac2)"><div class="gl" style="color:var(--ac)">NO BADGES</div><div class="gv" style="color:var(--ac)">?</div></div>
+        <div id="sws"></div>
+        <div class="pillp ac" id="hP" style="left:36px;top:490px">Order does not matter: combinations</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA · THE CLASS QUIZ</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-corridor.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">Same team. Count it twice?</div></div>
+    </div>
+
+    <!-- P -->
+    <div id="sP">
+      <div class="card full" id="df"><div class="lbl" style="left:36px;top:30px">DEFINITION · NCERT</div>
+        <div id="dfT">A <b>combination</b> is a selection of some or all of the objects, where the <b id="dfO">order does not matter</b>.</div>
+        <div id="gls"></div></div>
+      <div class="card rf" id="mt"><div class="lbl" style="left:36px;top:30px">SELECTION VS ARRANGEMENT</div><div id="pS"></div></div>
+    </div>
+
+    <!-- L: the fold (live) -->
+    <div id="sL">
+      <div class="card full" id="lg"><div class="lbl" style="left:36px;top:30px">THE EP 54 GRID · FOLD IT</div>
+        <div class="lbl" id="lgV" style="left:160px;top:72px;color:var(--ac)">VICE CAPTAIN →</div>
+        <div class="lbl" id="lgC" style="left:36px;top:110px;color:var(--ac)">CAPTAIN ↓</div>
+        <svg id="lgS" width="784" height="580" style="position:absolute;left:0;top:0;z-index:2;pointer-events:none"></svg>
+        <div id="lgG"></div></div>
+      <div class="card rf" id="lc"><div class="lbl" style="left:36px;top:30px">LIVE COUNT</div>
+        <div class="lbl" id="lcL" style="left:36px;top:76px">ORDERED PAIRS</div><div id="lcN">20</div>
+        <div class="lbl" id="lcXl" style="left:36px;top:262px">EACH TEAM WAS COUNTED</div><div id="lcX">2 times</div>
+        <div id="lcF"></div></div>
+    </div>
+
+    <!-- K -->
+    <div id="sK">
+      <div class="card full" id="kw"><div class="lbl" style="left:36px;top:30px">ARRANGEMENT · ORDER COUNTS</div><div id="kwS"></div>
+        <div class="cnt" id="kwC" style="left:36px;top:420px;background:var(--ink);color:#fff">2 ways</div></div>
+      <div class="card rf" id="kn"><div class="lbl" style="left:36px;top:30px">SELECTION · ORDER DOES NOT COUNT</div><div id="knS"></div>
+        <div class="cnt" id="knC" style="left:36px;top:420px;background:var(--res);color:#fff">1 way</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- D -->
+    <div id="sD">
+      <div class="card full" id="ds"><div class="lbl" style="left:36px;top:30px">ONE TEAM OF 3 · MANY ORDERS</div><div id="dT"></div><div id="dO"></div>
+        <div class="pillp" id="dN" style="left:36px;top:470px;background:#E7EEFD;color:var(--nb)"></div>
+        <div class="pillp" id="dR" style="left:300px;top:470px;background:var(--ac2);color:var(--ac)"></div>
+        <div class="pillp ink" id="dC" style="left:520px;top:470px">C = combination</div></div>
+      <div class="card rf" id="dp"><div class="lbl" style="left:36px;top:30px">THE RULE · 5 STEPS</div><div id="dSt"></div></div>
+    </div>
+
+    <!-- V -->
+    <div id="sV">
+      <div class="card full" id="vl"><div class="lbl" style="left:36px;top:30px">LIVE · MAKE THE TEAM BIGGER</div>
+        <div id="vR"></div><div id="vV"></div><div id="vS"></div></div>
+      <div class="card rf" id="vr"><div class="lbl" style="left:36px;top:30px">TEAMS FOR EACH SIZE r</div><svg id="vB" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">8 FRIENDS · 3 GO ON THE TRIP</div><div id="wT"></div><div id="wTot" style="position:absolute;left:36px;top:490px;font-size:44px;white-space:nowrap"></div></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Order does not <span class="acc">matter</span>? Divide by r!</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

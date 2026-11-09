@@ -1,0 +1,126 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 51 - Graphical Solution of Inequalities in Two Variables</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 51: graphical solution of inequalities in two variables (Proof board) ===== */
+:root{--x:#7A4FE0;--k:#0E8F8F}
+#stage svg circle,#stage svg g{transform-box:fill-box;transform-origin:center}
+#stage .ringW svg circle{transform-box:view-box;transform-origin:0 0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.sv{position:absolute;left:0;top:0}
+/* title card */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:54px;font:700 30px Poppins;white-space:nowrap}
+#gh{top:96px}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.fx{position:absolute;white-space:nowrap}
+.big{position:absolute;left:36px;font-size:56px;white-space:nowrap}
+.txt2{position:absolute;left:36px;font:600 26px/1.35 Poppins;width:712px}
+.mono{position:absolute;left:36px;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+.rd{position:absolute;font:600 50px/1 'IBM Plex Mono';white-space:nowrap}
+.vc{position:absolute;height:52px;padding:0 18px;border-radius:10px;display:inline-flex;align-items:center;gap:8px;font:700 24px Poppins;color:#fff;white-space:nowrap}
+.cnt{position:absolute;height:52px;padding:0 18px;border-radius:10px;display:inline-flex;align-items:center;gap:10px;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+#sl .sol .sx,#wl .sol .sx{font-size:27px}
+#sl .sol .sx .katex,#wl .sol .sx .katex{font-size:1.2em}
+.why2{color:var(--mute);font:500 22px Poppins}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.15em}
+#mq .mq .katex{font-size:1.2em}
+.trapL .tx .katex{font-size:1.2em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:46px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 5 LINEAR INEQUALITIES</div>
+    <div class="ghost" id="gh">NOT IN CURRENT NCERT TEXT · JEE</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Which Side of the Line <span class="acc">Wins</span>?</div>
+    <div id="sub">Inequalities in two variables, solved with one test point</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">THE COLLEGE GROUND · ONE CHALK LINE</div><svg id="hS" class="sv" width="784" height="580"></svg></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · AFTER CLASS</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">One line, two sides. Which side wins?</div></div>
+    </div>
+
+    <div id="sI">
+      <div class="card full" id="il"><div class="lbl" style="left:36px;top:30px">FROM A LINE TO A REGION</div>
+        <div class="txt2" id="i0" style="top:80px"></div>
+        <div class="big" id="i1" style="top:180px"></div><div class="mono" id="i2" style="top:270px"></div>
+        <div class="big" id="i3" style="top:350px"></div>
+        <div class="pillp ac" id="iP" style="left:36px;top:470px">Not on the line: on one side of it</div></div>
+      <div class="card rf" id="ir"><div class="lbl" style="left:36px;top:30px">THE PLANE · x ACROSS, y UP</div><svg id="iS" class="sv" width="784" height="580"></svg></div>
+    </div>
+
+    <div id="sL">
+      <div class="card full" id="ll"><div class="lbl" style="left:36px;top:30px">LIVE · TEST EVERY POINT</div>
+        <div class="big" id="lR" style="top:76px"></div>
+        <div class="rd" id="lP" style="left:36px;top:190px"></div>
+        <div class="mono" id="lS" style="top:268px"></div>
+        <div class="vc" id="lV" style="left:36px;top:326px"></div>
+        <div class="cnt" id="lG" style="left:36px;top:420px;background:var(--okBg);color:#1F6B3F"></div>
+        <div class="cnt" id="lB" style="left:300px;top:420px;background:var(--redBg);color:var(--red)"></div>
+        <div class="pillp ac" id="lPl" style="left:36px;top:496px">Shaded: the half plane x + y &lt; 6</div></div>
+      <div class="card rf" id="lr"><div class="lbl" style="left:36px;top:30px">TRUE BELOW · FALSE ABOVE</div><svg id="lSv" class="sv" width="784" height="580"></svg></div>
+    </div>
+
+    <div id="sS">
+      <div class="card full" id="sl"></div>
+      <div class="card rf" id="sr"><div class="lbl" style="left:36px;top:30px">ONE TEST POINT DECIDES</div><svg id="sSv" class="sv" width="784" height="580"></svg></div>
+    </div>
+
+    <div id="sK">
+      <div class="card full" id="kd"><div class="lbl" style="left:36px;top:30px;color:var(--red)">STRICT · LINE NOT INCLUDED</div><div class="fx" id="kdF" style="right:36px;top:22px;font-size:40px"></div><svg id="kdS" class="sv" width="784" height="580"></svg>
+        <div class="pillp bad" id="kdP" style="left:36px;top:496px">Dashed line</div></div>
+      <div class="card rf" id="ks"><div class="lbl" style="left:36px;top:30px;color:var(--ok)">SLACK · LINE INCLUDED</div><div class="fx" id="ksF" style="right:36px;top:22px;font-size:40px"></div><svg id="ksS" class="sv" width="784" height="580"></svg>
+        <div class="pillp good" id="ksP" style="left:36px;top:496px">Solid line</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sV">
+      <div class="card full" id="vl"><div class="lbl" style="left:36px;top:30px">ON A NUMBER LINE · A RAY</div><div class="big" id="vF" style="top:84px"></div><svg id="vlS" class="sv" width="784" height="580"></svg>
+        <div class="pillp" id="vlP" style="left:36px;top:496px">Only points on one line</div></div>
+      <div class="card rf" id="vr"><div class="lbl" style="left:36px;top:30px">ON THE PLANE · A HALF PLANE</div><svg id="vrS" class="sv" width="784" height="580"></svg>
+        <div class="pillp ac" id="vrP" style="left:36px;top:496px">Every point right of x = 2</div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div class="big" id="wq" style="top:70px;font-size:48px"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">THE ANSWER REGION</div><svg id="wS" class="sv" width="784" height="580"></svg></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">One test point tells you which half <span class="acc">wins</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

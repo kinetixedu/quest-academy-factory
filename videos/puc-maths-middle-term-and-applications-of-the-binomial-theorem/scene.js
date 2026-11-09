@@ -42,19 +42,19 @@ const TV = [1, 10, 50, 166, 414, 825, 1368, 1943, 2412, 2658, 2634], SV = TV.red
 const rc0 = $('#rC'), CX0 = 540, CW = 1000, CB = 520, CH = 400, YM = 14000, CY = val => CB - val / YM * CH;
 mk(rc0, 'line', { x1: CX0 - 10, y1: CB, x2: CX0 + CW + 10, y2: CB, stroke: C.ink, 'stroke-width': 3 });
 const lim = mk(rc0, 'line', { x1: CX0 - 10, y1: CY(10000), x2: CX0 + CW + 10, y2: CY(10000), stroke: C.ink, 'stroke-width': 2.5, 'stroke-dasharray': '10 7' });
-const limT = txt(rc0, CX0 + CW + 10, CY(10000) - 12, '10000', { 'text-anchor': 'end', 'font-size': 20, fill: C.ink, 'font-weight': 600 });
+const limT = txt(rc0, CX0 - 6, CY(10000) - 12, '10000', { 'text-anchor': 'start', 'font-size': 20, fill: C.ink, 'font-weight': 600 });
 const STP = CW / 11, BW = 64;
 const cols = TV.map((_, i) => { const x = CX0 + i * STP + (STP - BW) / 2; const base = mk(rc0, 'rect', { x, y: CB, width: BW, height: 0, rx: 4, fill: C.ac2, stroke: RC, 'stroke-width': 1.5 }); const top = mk(rc0, 'rect', { x, y: CB, width: BW, height: 0, rx: 4, fill: BC }); const lab = txt(rc0, x + BW / 2, CB, String(SV[i]), { 'text-anchor': 'middle', 'font-size': 16, fill: C.ink2, 'font-weight': 600 }); const tn = txt(rc0, x + BW / 2, CB + 28, String(i + 1), { 'text-anchor': 'middle', 'font-size': 16 }); return { base, top, lab, tn }; });
 const axL = txt(rc0, CX0 + CW / 2, CB + 52, 'term number', { 'text-anchor': 'middle', 'font-size': 16 });
 const tCol = i => i === 0 ? wt('R2', 'first') : i === 1 ? wt('R2', 'second') : i === 2 ? wt('R3', 'third') : i === 3 ? wt('R3', 'hundred') : wt('R3', 'growing') + (i - 4) / 6 * (wt('R4', 'passes') - wt('R3', 'growing'));
 
 /* ---------- E: NCERT example ---------- */
-$('#eq').innerHTML = `<span style="font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)">EXAMPLE · NCERT</span><br>Which is larger: ${K('(1.01)^{1000000}')} or 10000?`;
+$('#eq').innerHTML = `Which is larger: ${K('(1.01)^{1000000}')} or 10000?`;
 $('#eq .katex').style.fontSize = '1.2em';
 const esol = PUC.solution($('#el'), [
   [K(`(1.01)^{1000000} = (${a('1')} + ${b('0.01')})^{1000000}`)],
   [K(`\\text{2nd term} = 1000000 \\times ${b('0.01')} = 10000`)],
-  [K(`= 1 + 10000 + (\\text{positive terms}) > 10000`)]], { label: '', y0: 220, dy: 100 });
+  [K(`= 1 + 10000 + (\\text{positive terms}) > 10000`)]], { label: 'EXAMPLE · NCERT', y0: 200, dy: 100 });
 const es = $('#er');
 const eSv = mk(es, 'svg', { width: 784, height: 580, style: 'position:absolute;left:0;top:0' });
 const EY0 = 170, EY1 = 330;
@@ -77,7 +77,7 @@ const m8L = txt(ms, 392, 438, '8 seats: two middle seats', { 'text-anchor': 'mid
 $('#mF').innerHTML = K(`(${a('a')} + ${b('b')})^{n} \\;\\to\\; n + 1 \\text{ terms}`);
 
 /* ---------- G: rule + hill ---------- */
-const GS = [[`n \\text{ even}:\\ ${rc('T_{\\frac{n}{2}+1}')}`, 'n + 1 is odd: one middle term'], [`n \\text{ odd}:\\ ${rc('T_{\\frac{n+1}{2}}')},\\ ${rc('T_{\\frac{n+3}{2}}')}`, 'n + 1 is even: two middle terms'], [`\\text{middle} = \\text{biggest } ${nC('n', 'r')}`, 'the top of the hill']];
+const GS = [[`n \\text{ even}:\\ ${rc('T_{n/2+1}')}`, 'n + 1 is odd: one middle term'], [`n \\text{ odd}:\\ ${rc('T_{(n+1)/2}')},\\ ${rc('T_{(n+3)/2}')}`, 'n + 1 is even: two middle terms'], [`\\text{middle} = \\text{biggest } ${nC('n', 'r')}`, 'the top of the hill']];
 $('#gSt').innerHTML = GS.map(([f, w], i) => `<div class="st" id="gs${i}" style="top:${90 + i * 140}px"><div class="n">${i + 1}</div><div class="sx">${K(f)}</div><div class="why">${w}</div></div>`).join('');
 const gs = $('#gS'), GB = 470, GX0 = 70, GW = 644;
 mk(gs, 'line', { x1: 50, y1: GB, x2: 734, y2: GB, stroke: C.ink, 'stroke-width': 3 });
@@ -89,11 +89,11 @@ const tGs = [wt('G2', 'If'), wt('G3', 'If'), wt('G4', 'And')];
 /* ---------- S ---------- */
 const boxes = (host, n, mids, w, g, y = 96) => { host.innerHTML = Array.from({ length: n }, (_, i) => `<div class="tb" data-m="${mids.includes(i + 1) ? 1 : 0}" style="left:${36 + i * (w + g)}px;top:${y}px;width:${w}px">T${i + 1}</div>`).join(''); return [...host.querySelectorAll('.tb')]; };
 const sL = boxes($('#slB'), 7, [4], 92, 8), sR = boxes($('#srB'), 8, [4, 5], 80, 8);
-$('#slF').innerHTML = K(`T_{\\frac{6}{2}+1} = ${rc('T_4')}`); $('#srF').innerHTML = K(`T_{\\frac{7+1}{2}} = ${rc('T_4')},\\ \\ T_{\\frac{7+3}{2}} = ${rc('T_5')}`);
+$('#slF').innerHTML = K(`T_{6/2+1} = ${rc('T_4')}`); $('#srF').innerHTML = K(`T_{(7+1)/2} = ${rc('T_4')},\\ \\ T_{(7+3)/2} = ${rc('T_5')}`);
 const th2 = PUC.think($('#th2'), { q: `How many middle terms does ${K('(a + b)^{9}')} have?`, opts: ['One', 'Two'], right: 1, why: 'Two: n = 9 is odd, so there are 10 terms. T5 and T6 are the middle terms.' });
 
 /* ---------- statement ---------- */
-$('#stF').innerHTML = K(`n\\ \\text{even}:\\ ${rc('T_{\\frac{n}{2}+1}')} \\qquad n\\ \\text{odd}:\\ ${rc('T_{\\frac{n+1}{2}}')},\\ ${rc('T_{\\frac{n+3}{2}}')}`);
+$('#stF').innerHTML = K(`n\\ \\text{even}:\\ ${rc('T_{n/2+1}')} \\qquad n\\ \\text{odd}:\\ ${rc('T_{(n+1)/2}')},\\ ${rc('T_{(n+3)/2}')}`);
 
 /* ---------- W ---------- */
 $('#wq').innerHTML = `Find the middle term of ${K(`(${a('x')} + ${b('2')})^{8}`)}`;
@@ -123,8 +123,8 @@ const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap 
   lines: [`${K('(1.01)^{1000000} = 1 + 10000 + \\dots')}: two terms were enough`,
     `${K('(1 + x)^{n}')} with ${K('x > 0')}: every term adds, so the total only grows`,
     `${K('(a+b)^n')} has <b>n + 1</b> terms`,
-    `Even n: one middle term ${K(rc('T_{\\frac{n}{2}+1}'))}`,
-    `Odd n: two middle terms ${K(rc('T_{\\frac{n+1}{2}}'))} and ${K(rc('T_{\\frac{n+3}{2}}'))}`] });
+    `Even n: one middle term ${K(rc('T_{n/2+1}'))}`,
+    `Odd n: two middle terms ${K(rc('T_{(n+1)/2}'))} and ${K(rc('T_{(n+3)/2}'))}`] });
 const YQ = ['Why does every extra term make (1 + x)ⁿ bigger, when x > 0?', 'How many middle terms does (a + b)¹² have?', 'Which terms are the middle terms of (a + b)¹¹?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="n">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];

@@ -230,7 +230,7 @@ M.on(t => {
     [0, 1, 2].forEach(i => M.vis($('#lr' + i), t, tL1 + 0.5 + i * 0.12, 1e9, { dy: 14 }));
     const kv = nTr(t), n = Math.floor(kv + 1e-6);
     if (n !== nLast) { nLast = n; M.setT($('#nV'), String(n)); M.setT($('#lT'), String(n + 1));
-      const row = []; for (let r = 0; r <= n; r++) row.push(comb(n, r)); M.setT($('#lC'), row.join('  ')); M.setT($('#lS'), `${2 ** n} = 2${String(n).split('').map(d => '⁰¹²³⁴⁵⁶⁷⁸⁹'[d]).join('')}`); }
+      const row = []; for (let r = 0; r <= n; r++) row.push(comb(n, r)); M.setT($('#lC'), row.join('  ')); $('#lS').innerHTML = `${2 ** n} = 2<sup style="font-size:.6em">${n}</sup>`; }
     const sh = M.io((t - wt('L3', 'thousand') + 0.1) / 0.3); $('#lr2').style.background = mix(C.soft, C.ac2, sh);
     M.vis($('#lP'), t, wt('L3', 'because') - 0.1, 1e9, POP);
     avD(t, wt('L3', 'friends') + 0.3, out);
