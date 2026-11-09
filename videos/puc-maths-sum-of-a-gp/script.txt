@@ -1,0 +1,44 @@
+H1|0.4|Put one grain of rice on the first square of a chessboard. Two on the next. Then four, then eight.
+H2|0.45|Diya heard this old story in the kitchen, sorting rice. Each square doubles the one before.
+H3|0.35|There are sixty four squares. How many grains in all?
+H4|0.5|The answer is a number with twenty digits. Adding them one by one would take forever.
+H5|0.65|To add a doubling list fast, we need the sum of a geometric progression.
+P1|0.4|Quick reminder. A G P multiplies by the same number, r, each time. Its first term is a.
+P2|0.4|Watch the board fill. After one square, one grain. After two squares, three. After three, seven. After four, fifteen.
+P3|0.6|See the pattern? Each total is just one less than what the next square holds.
+P4|0.65|So after all sixty four squares, the total is two to the power sixty four, minus one.
+D1|0.4|Why does this work? Here is the trick for any G P.
+D2|0.75|Step one. Write the sum. S n is a, plus a r, plus a r squared, up to a r to the power n minus one.
+D3|0.75|Step two. Multiply every term by r. r S n is a r, plus a r squared, up to a r to the power n.
+D4|0.75|Step three. Line them up. Almost every term is in both rows. Subtract, and they cancel in pairs.
+D5|0.75|Only two terms survive. r S n minus S n is a r to the power n, minus a.
+D6|0.75|Step four. Take out S n. S n times r minus one is a times r to the power n, minus one.
+D7|0.75|Step five. Divide by r minus one. S n is a times r to the power n minus one, over r minus one.
+D8|0.65|Check the chessboard. a is one and r is two. We get two to the power sixty four, minus one. It matches.
+C1|0.4|Side by side. When r is bigger than one, use r to the power n minus one, over r minus one. Top and bottom stay positive.
+C2|0.6|When r is smaller than one, use one minus r to the power n, over one minus r. Same value, just tidier.
+C3|3.2|Your turn. Five, plus five, plus five, ten times. Here r is one. Can we use the formula? Pause and think.
+C4|0.65|No. r minus one would be zero, and we cannot divide by zero. When r is one, every term is a, so the sum is n times a. Here, fifty.
+T1|0.7|Remember this. Multiply by r, subtract, and almost everything cancels.
+W1|0.35|Now, one worked example.
+W2|0.5|Find the sum of the first six terms of two, plus six, plus eighteen, and so on.
+W3|0.75|Step one. a is two. r is six over two, which is three. And n is six.
+W4|0.75|Step two. S six is two, times three to the power six minus one, over three minus one.
+W5|0.75|Step three. Three to the power six is seven hundred and twenty nine. So the top is two times seven hundred and twenty eight.
+W6|0.75|Step four. Divide by two. The sum is seven hundred and twenty eight.
+W7|0.65|Check: two, six, eighteen, fifty four, one hundred and sixty two, four hundred and eighty six. They add to seven hundred and twenty eight.
+X1|0.35|Now, the exam trap.
+X2|0.4|In the sum formula, many students write r to the power n minus one, like the formula for one term.
+X3|0.65|But the sum uses r to the power n. For our six terms, three to the five gives only two hundred and forty two. The right sum is seven hundred and twenty eight.
+J1|0.6|Where is this asked? In JEE Main. In September twenty twenty, a paper gave sums of a few terms of a G P, and asked for the sum of its first fifty terms.
+Q1|5.4|Exam level now. How many terms of three, plus six, plus twelve, and so on, add up to seven hundred and sixty five? Pause and solve.
+A1|0.5|The answer is B. Eight terms.
+A2|0.5|Here a is three and r is two. So S n is three times, two to the power n, minus one.
+A3|0.5|Set it equal to seven hundred and sixty five, and divide by three. Two to the power n, minus one, is two hundred and fifty five.
+A4|0.6|So two to the power n is two hundred and fifty six. That is two to the eight, so n is eight.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why do almost all the terms cancel when we subtract?
+Y3|0.9|Two. Find the sum of one, plus three, plus nine, up to six terms.
+Y4|1.1|Three. What is the sum of a G P when r is one?
+N1|0.3|Next time: two kinds of average. Which one is never smaller? The geometric mean, and the A M G M inequality.

@@ -1,0 +1,51 @@
+H1|0.4|Take the five letter tiles of APPLE. Shuffle them to make new words, real or not, like PLAPE or EPLAP.
+H2|0.45|Five different letters make one hundred and twenty words. But APPLE makes only sixty.
+H3|0.35|Aarav found this while playing a word game after class.
+H4|0.5|Same five tiles. So where did half of the words go?
+H5|0.65|The answer is the two P's. Swap them, and the word looks exactly the same.
+P1|0.35|Let us see this on a smaller word first.
+P2|0.4|Take the letters A, P and P. Paint one P orange and the other purple, so we can tell them apart.
+P3|0.4|Now we have three different tiles. They can be arranged in three factorial ways. That is six.
+P4|0.4|Here they are, all six.
+P5|0.4|Now wash off the paint. Both P's look the same again.
+P6|0.65|Watch the pairs. Orange first or purple first, it is now the same word. Each pair melts into one.
+P7|0.65|Six becomes three. A P P, P A P, and P P A.
+K1|0.4|Side by side. With paint, the two P's are different objects. Swapping them makes a new arrangement.
+K2|0.6|Without paint, they are the same object. Swapping them changes nothing.
+K3|3.2|Now you try. In APPLE, swap the two P's. Is it a new word, or the same word? Pause and decide.
+K4|0.65|The same word! Nobody can tell which P went where. So we must not count it twice.
+D1|0.35|Now let us find the rule.
+D2|0.75|Pretend all five tiles of APPLE are different. Then there are five factorial arrangements. That is one hundred and twenty.
+D3|0.75|But every real word was counted more than once. Its two P's can swap in two factorial ways, which is two.
+D4|0.75|So each real word was counted two times. We divide by two factorial.
+D5|0.75|One hundred and twenty over two is sixty.
+D6|0.75|In general: n objects, where p of them are the same. The number of arrangements is n factorial over p factorial.
+D7|0.75|If more groups repeat, divide by the factorial of each group. n factorial over p one factorial times p two factorial, and so on.
+V1|0.4|Watch the count shrink. Start with five different letters. One hundred and twenty words.
+V2|0.4|Make two letters the same. Sixty. Make three the same. Twenty.
+V3|0.6|Four the same. Just five. All five the same. Only one.
+V4|3.2|Quick one. A A A A A. How many different words? Pause and think.
+V5|0.65|Just one! Every swap gives the same word. Five factorial over five factorial is one.
+T1|0.7|Remember this. When letters repeat, divide by the factorial of each repeat.
+W1|0.35|Now, one worked example.
+W2|0.5|How many different words can be made from all the letters of BANANA?
+W3|0.75|Step one. Count the letters. Six in all. Three A's, two N's and one B.
+W4|0.75|Step two. If all six were different, there would be six factorial, which is seven hundred and twenty.
+W5|0.75|Step three. Divide by three factorial for the A's, and two factorial for the N's.
+W6|0.75|Step four. Seven hundred and twenty over six times two. That is seven hundred and twenty over twelve.
+W7|0.65|So there are sixty different words.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students add the repeats first. They write six factorial over five factorial, and get six.
+X3|0.65|But each group swaps on its own. So we multiply: three factorial times two factorial. The answer is sixty.
+J1|0.6|Where is this asked? In JEE Main, as questions on arranging the letters of a word with repeated letters.
+Q1|5.4|Exam level now. In how many arrangements of the letters of SUCCESS are all three S's together? Pause and solve.
+A1|0.5|The answer is A. Sixty.
+A2|0.5|Glue the three S's into one block. Now we arrange five things.
+A3|0.5|The block, U, C, C and E. The two C's repeat.
+A4|0.6|So the count is five factorial over two factorial. One hundred and twenty over two is sixty.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why does APPLE give sixty words, not one hundred and twenty?
+Y3|0.9|Two. How many words can be made from the letters of TOOT?
+Y4|1.1|Three. Why do we divide by three factorial for three A's?
+N1|0.3|Next time: pick two friends for a team. Does the order still matter? Not anymore. Meet combinations.
