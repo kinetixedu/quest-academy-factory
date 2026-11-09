@@ -1,0 +1,54 @@
+H1|0.4|Pool balls split apart at an angle. Two players collide, and both are knocked sideways.
+H2|0.45|Not every hit is a straight line. Most hits happen at an angle.
+H3|0.35|Aarav hits a carrom coin, a little off centre. The striker goes one way, the coin goes another.
+H4|0.5|With two equal coins, they always seem to split at a right angle. Ninety degrees. Why that angle, every time?
+H5|0.6|To find out, we take momentum into two dimensions.
+P1|0.35|A collision in two dimensions is a hit that is not head on. After it, the bodies move off at angles.
+P2|0.4|Momentum is a vector. So it is kept in each direction separately. Once along x, and once along y.
+P3|0.6|Before the hit, coin A moves only along x. So the total y momentum is zero, before and after.
+S1|0.35|Our motion notebook, seen from above. Coin A moves at four metres per second. Coin B, the same mass, is at rest.
+S2|0.4|A hits B off centre. A moves off at thirty degrees above its old line, at three point four six. B moves off at sixty degrees below, at two.
+S3|0.4|Along x: three point four six times cos thirty is three. Two times cos sixty is one. Three plus one is four. Kept.
+S4|0.5|Along y: A carries plus one point seven three. B carries minus one point seven three. They cancel. Zero, kept.
+S5|0.35|Slow-mo replay. Freeze at the touch.
+S6|0.4|The push acts along the line joining the two centres. So B shoots off along that line.
+S7|0.6|And A is pushed away from it. Thirty plus sixty. They split at exactly ninety degrees.
+S8|3.1|Now aim again, closer to the edge. Will the angle between the coins still be ninety degrees? Pause and decide.
+S9|0.4|Yes! A turns by only fifteen degrees. B leaves at seventy five. Fifteen plus seventy five is ninety.
+S10|0.6|Equal masses, an elastic hit, one at rest. The split is always ninety degrees.
+D1|0.35|Now let's prove it, one step at a time.
+D2|0.75|Step one. Momentum, as vectors: m u equals m v one plus m v two. Cancel m. u equals v one plus v two.
+D3|0.75|Step two. Kinetic energy is kept: u squared equals v one squared plus v two squared.
+D4|0.75|Step three. Square step one: u squared equals v one squared plus v two squared, plus two v one dot v two.
+D5|0.75|Step four. Compare the two. Two v one dot v two must be zero. So v one is at right angles to v two.
+D6|0.6|The three velocities form a right triangle. Four, three point four six, and two.
+T1|0.7|Remember this. In two dimensions, momentum is kept along x, and along y, separately.
+R1|0.35|Now the carrom board, link by link.
+R2|0.4|A real striker is heavier than a coin.
+R3|0.4|A heavy striker keeps more of its forward motion after the hit.
+R4|0.6|So it turns less, and the split is smaller than ninety degrees. The right angle needs equal masses.
+K1|0.4|Side by side. Equal coins, elastic: they split at ninety degrees.
+K2|0.6|A heavy striker into a light coin: the split is less than ninety.
+K3|3.2|Now you try. A light coin hits a heavy still disc, off centre. Is the split less than ninety degrees, or more? Pause and decide.
+K4|0.65|More than ninety! The light coin turns through a big angle, almost like a ball off a wall, while the disc moves forward.
+W1|0.35|Now, one worked example. This time, the bodies stick.
+W2|0.5|A two kilogram ball moves east at three metres per second. Another two kilogram ball moves north at four. They collide and stick. Find their velocity.
+W3|0.75|Along x: two times three. Six kilogram metres per second.
+W4|0.75|Along y: two times four. Eight.
+W5|0.75|Total momentum: root of six squared plus eight squared. Ten. Divide by four kilograms. Two point five metres per second.
+W6|0.65|The direction: tan theta is eight over six. About fifty three degrees north of east.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students use the ninety degree rule for every collision in two dimensions.
+X3|0.65|It works only for equal masses, an elastic hit, and one body at rest. Otherwise, solve x and y separately.
+E1|0.6|Where is this asked? In glancing collisions, the ninety degree split, and bodies that stick at an angle.
+Q1|5.4|Exam level now. A one kilogram ball at ten metres per second hits an identical still ball elastically, off centre. The first ball leaves at six metres per second. Find the speed of the second ball, and the angle between their paths. Pause and solve.
+A1|0.5|The answer is B. Eight metres per second, at ninety degrees.
+A2|0.5|Kinetic energy is kept. One hundred equals thirty six plus v two squared.
+A3|0.5|So v two squared is sixty four, and v two is eight.
+A4|0.6|Equal masses, elastic, one at rest. So the paths are at ninety degrees.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. Why must momentum be kept along x and along y separately?
+Y3|0.9|Two. When do two coins split at exactly ninety degrees?
+Y4|0.9|Three. Why does a heavy striker split from a coin at less than ninety degrees?
+N1|0.3|Next chapter: throw a spinning hammer, and one point on it still flies in a perfect curve. Which point? System of particles and rotational motion.
