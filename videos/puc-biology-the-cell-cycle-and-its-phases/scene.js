@@ -363,7 +363,7 @@ const EP = {
       M.draw(CL.br1, t, wt('C2', 'G') - 0.1, 0.6); M.vis(CL.t1, t, wt('C2', 'G'), 1e9, POP); M.draw(CL.br2, t, wt('C3', 'hour') - 0.4, 0.4); M.vis(CL.t2, t, wt('C3', 'hour') - 0.2, 1e9, POP);
       [CL.ax, CL.ax2].forEach(e => M.vis(e, t, tb, 1e9, { dy: 0, fade: 0.3 })); M.vis(CL.big, t, wt('C4', 'ninety') - 0.2, 1e9, POP); M.vis(CL.big2, t, wt('C4', 'ninety') + 0.3, 1e9, POP);
       attr(CL.b[23], 'fill', mix(PH.M, '#F6B37A', Math.abs(Math.sin(t * 3)) * (t > wt('C3', 'hour') ? 1 : 0)));
-      M.vis($('#cr'), t, T0('C5') - 0.15, out, { dx: 60, dy: 0, ...o }); M.vis(CR.w, t, T0('C5') + 0.1, 1e9, { ...POP, sc: 0.8 }); M.draw(CR.ex, t, wt('C5', 'leave') - 0.1, 0.6);
+      M.vis($('#cr'), t, T0('C2') + 0.4, out, { dx: 60, dy: 0, ...o }); M.vis(CR.w, t, T0('C2') + 0.6, 1e9, { ...POP, sc: 0.8 }); M.draw(CR.ex, t, wt('C5', 'leave') - 0.1, 0.6);
       M.vis(CR.box, t, wt('C5', 'quiet') - 0.2, 1e9, { ...POP, sc: 0.8 }); attr(CR.qc, 'transform', `translate(0 ${(3 * Math.sin(t * 2)).toFixed(2)})`); labRun(CR.L[0], t, wt('C5', 'alive')); }],
     ['#sV', T0('V1'), T0('T1') + 0.1, t => {
       M.vis($('#vc'), t, T0('V1') + 0.05, OUT('V4'), { dy: 36, ...o }); cV(t);

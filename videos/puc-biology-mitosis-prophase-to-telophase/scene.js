@@ -297,7 +297,7 @@ const EP = {
   learn: [['find', 'Name', 'name'], ['order', 'In order', 'order'], ['scope', 'Spot each', 'spot']],
   hookW: 'doctor', split: ['process', 'mitosis'], st: ['P', 'telophase'],
   cam: [[tPs[2] - 0.3, 1.03, 960, 560], [T0('C1') - 0.7, 1, 960, 540]],
-  hook: t => { M.vis(HL.fld, t, tMorph + 0.4, 1e9, { ...POP, sc: 0.85 }); const tw = [wt('H2', 'plain'), wt('H2', 'lined'), wt('H2', 'pulled'), wt('H2', 'groups')];
+  hook: t => { M.vis(HL.fld, t, tMorph + 0.4, 1e9, { ...POP, sc: 0.85 }); const tw = [wt('H2', 'slide') + 0.3, wt('H2', 'lined'), wt('H2', 'pulled'), wt('H2', 'groups')];
     HL.c.forEach((c, i) => { M.vis(c.G, t, tw[i] - 0.2, 1e9, { ...POP, sc: 0.5 }); c.set(c.st, t); });
     M.vis($('#hlt0'), t, tw[0], 1e9, POP); M.vis($('#hlt1'), t, tw[3], 1e9, POP); M.vis($('#hlP'), t, T0('H3') + 0.4, 1e9, POP); },
   measure: () => { [['hlt0', 190, 432], ['hlt1', 594, 432]].forEach(([id, cx, y]) => { const e = $('#' + id); e.style.left = (cx - e.offsetWidth / 2) + 'px'; e.style.top = y + 'px'; }); },
