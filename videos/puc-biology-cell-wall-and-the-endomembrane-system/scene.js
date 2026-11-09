@@ -12,7 +12,7 @@ const cist = (g, cx, cy, h, w = 16) => P(g, `M${cx + 20},${cy - h} Q${cx - 40},$
 const S = [];
 /* ---------- H: the canteen ---------- */
 S.push(EP.hook({ label: 'THE COLLEGE CANTEEN', face: 'aarav', pill: ['Cook · pack · send out', ['H3', 'sent', -0.1]], rlabel: "AARAV'S TWO QUESTIONS",
-  q: [['What keeps a plant cell firm?', ['H3', 'firm']], ['How does a cell pack and ship?', ['H3', 'pack']]],
+  q: [['What keeps a plant cell firm?', ['H3', 'firm']], ['How does a cell pack and ship?', ['H3', 'send']]],
   a: [['ANSWER 1', 'A rigid cell wall', ['H4', 'rigid']], ['ANSWER 2', 'The endomembrane system', ['H4', 'endomembrane']]],
   chips: [['Cell wall', ['H5', 'wall']], ['ER', ['H5', 'endoplasmic']], ['Golgi', ['H5', 'Golgi']], ['Lysosomes', ['H5', 'lysosomes']], ['Vacuoles', ['H5', 'vacuoles']]],
   build: (el, s) => {
@@ -86,7 +86,7 @@ S.push({ id: 'C', from: 'C1', to: 'D1', cards: [{ pos: 'W', label: 'THE GOLGI AP
   const vin = [0, 1, 2].map(() => CC(s, 0, 0, 11, K8.GOf, K8.GO, 2.5)), vout = [0, 1, 2].map(() => CC(s, 0, 0, 12, K8.GOf, K8.GO, 2.5));
   const sz = div(el, 'chp', { left: '1150px', top: '150px' }, 'Each sac: 0.5 to 1.0 µm across'), chg = div(el, 'chp', { left: '1150px', top: '250px' }, 'Proteins are changed here'), gl = div(el, 'chp', { left: '1150px', top: '350px', background: 'var(--ac2)', color: '#1F6B3F' }, 'Makes glycoproteins, glycolipids');
   return { els: [[nm, ['C2', 'Camillo', -0.2], { dy: 10 }], [stk, ['C2', 'stack', -0.3], { ...POP, sc: 0.7 }], [er, ['C4', 'Vesicles', -0.6], { dx: -20, dy: 0 }], [sz, ['C2', 'zero', -0.1]], [chg, ['C4', 'changed', -0.1]], [gl, ['C4', 'glycoproteins', -0.1]]],
-    labs: [[lab(s, 622, 170, 560, 110, 'Cis face · forming · convex', 'end'), ['C3', 'cis']], [lab(s, 796, 170, 860, 110, 'Trans face · maturing · concave'), ['C3', 'trans']], [lab(s, 708, 440, 708, 500, 'Cisternae', 'middle'), ['C2', 'cisternae']]],
+    labs: [[lab(s, 618, 400, 560, 520, 'Cis face · forming · convex', 'end'), ['C3', 'cis']], [lab(s, 790, 400, 860, 520, 'Trans face · maturing · concave'), ['C3', 'trans']], [lab(s, 708, 168, 708, 112, 'Cisternae', 'middle'), ['C2', 'cisternae']]],
     anim: t => { const t0 = tm(['C4', 'Vesicles']);
       vin.forEach((e, k) => { const v = ((t - t0) * 0.4 + k / 3) % 1; mv(e, 0, 0); attr(e, 'cx', (450 + 160 * v).toFixed(1)); attr(e, 'cy', (220 + k * 70).toFixed(1)); e.style.opacity = t > t0 ? Math.min(1, 4 * (1 - v)) : 0; });
       vout.forEach((e, k) => { const v = ((t - t0 - 0.6) * 0.4 + k / 3) % 1; attr(e, 'cx', (820 + 260 * v).toFixed(1)); attr(e, 'cy', (200 + k * 90).toFixed(1)); e.style.opacity = t > t0 + 0.6 ? Math.min(1, 4 * v, 4 * (1 - v)) : 0; });
@@ -97,16 +97,16 @@ S.push({ id: 'D', from: 'D1', to: 'U4', cards: [
   { pos: 'L', label: 'LYSOSOME · A DIGESTIVE BAG', tout: 'U1', pill: ['Formed by packing in the Golgi', ['D2', 'Golgi', -0.1], 'ac'], build: (el, s) => {
     CC(s, 392, 250, 150, K8.LYf, K8.LY, 5); const pm = [0, 1, 2, 3, 4, 5].map(() => P(s, '', '#8E5BB5', '#5A3A7A', 2));
     const fo = [0, 1, 2, 3].map(k => mk(s, 'rect', { x: -7, y: -7, width: 14, height: 14, rx: 3, fill: ['#C9962B', K8.PRO, '#B9A36A', K8.DNA][k] }));
-    const ac = cap(s, 392, 120, 'ACID INSIDE', { fill: K8.LY, 'font-size': 16 });
+    const ac = cap(s, 392, 84, 'ACID INSIDE', { fill: K8.LY, 'font-size': 16 });
     const M4 = [['CARBOHYDRATES', 110, 90], ['PROTEINS', 674, 90], ['LIPIDS', 110, 430], ['NUCLEIC ACIDS', 674, 430]].map(([n, x, y], i) => [cap(s, x, y, n, { fill: ['#8A6A1E', K8.PRO, '#8A7A4A', K8.DNA][i], 'font-size': 15 }), ['D3', ['carbohydrates', 'proteins', 'lipids', 'nucleic'][i], -0.1], { dy: 8 }]);
     const en = cap(s, 392, 446, 'LIPASES · PROTEASES · CARBOHYDRASES', { fill: C.ink, 'font-size': 16 });
     return { els: [[ac, ['D2', 'acid', -0.1], { dy: 8 }], [en, ['D3', 'lipases', -0.1], { dy: 8 }], ...M4],
       anim: t => { const on = t > tm(['D2', 'enzymes']) - 0.2; pm.forEach((e, k) => { const a = t * 0.6 + k * Math.PI / 3, x = 392 + 90 * Math.cos(a), y = 250 + 90 * Math.sin(a), mo = 0.25 + 0.25 * Math.abs(Math.sin(t * 6 + k)); attr(e, 'd', `M${x},${y} L${x + 18 * Math.cos(a + mo)},${y + 18 * Math.sin(a + mo)} A18,18 0 1 1 ${x + 18 * Math.cos(a - mo)},${y + 18 * Math.sin(a - mo)} Z`); e.style.opacity = on ? 1 : 0; });
         fo.forEach((e, k) => { const a = t * 0.6 + k * Math.PI / 2 + 0.5; mv(e, 392 + 40 * Math.cos(a), 250 + 40 * Math.sin(a)); e.style.opacity = t > tm(['D3', 'digest']) ? Math.max(0.15, 1 - ((t - tm(['D3', 'digest'])) * 0.2 + k * 0.1) % 1) : 0; }); } }; } },
-  { pos: 'L', label: 'AMOEBA AND PROTISTS', tin: ['U3', null, -0.1], svg: true, build: (el, s) => {
+  { pos: 'L', label: 'AMOEBA AND PROTISTS', tin: ['U1', null, 0.1], build: (el, s) => {
     const am = P(s, '', '#E3EFD6', '#5A8F4E', 3.5); const n = CC(s, 0, 0, 22, K8.NUf, K8.NU, 2.5), cv = CC(s, 0, 0, 30, K8.VAf, K8.VA, 3), fv = CC(s, 0, 0, 24, '#F6E7B8', '#C9962B', 3);
     const fd = []; for (let k = 0; k < 3; k++) fd.push(CC(s, 0, 0, 6, '#C9962B', 'none', 0));
-    return { labs: [[lab(s, 470, 200, 600, 120, 'Contractile vacuole'), ['U3', 'contractile']], [lab(s, 330, 370, 180, 470, 'Food vacuole', 'start'), ['U3', 'food']]],
+    return { labs: [[sl(s, 470, 200, 520, 110, 'Contractile vacuole'), ['U3', 'contractile']], [lab(s, 330, 370, 180, 470, 'Food vacuole', 'start'), ['U3', 'food']]],
       anim: t => { const pts = []; for (let k = 0; k < 12; k++) { const a = k / 12 * Math.PI * 2, r = 1 + 0.16 * Math.sin(3 * a + t * 1.5) + 0.08 * Math.cos(5 * a - t); pts.push([392 + 230 * r * Math.cos(a), 290 + 160 * r * Math.sin(a)]); }
         let d = `M${pts[0][0].toFixed(1)},${pts[0][1].toFixed(1)}`; for (let k = 0; k < 12; k++) { const p1 = pts[k], p2 = pts[(k + 1) % 12]; d += ` Q${p1[0].toFixed(1)},${p1[1].toFixed(1)} ${((p1[0] + p2[0]) / 2).toFixed(1)},${((p1[1] + p2[1]) / 2).toFixed(1)}`; } attr(am, 'd', d + ' Z');
         attr(n, 'cx', 380); attr(n, 'cy', 290); attr(cv, 'cx', 470); attr(cv, 'cy', 220); attr(cv, 'r', (18 + 14 * Math.abs(Math.sin(t * 1.2))).toFixed(1)); attr(fv, 'cx', 330); attr(fv, 'cy', 360);
@@ -116,7 +116,7 @@ S.push({ id: 'D', from: 'D1', to: 'U4', cards: [
     const tv = mk(s, 'rect', { x: 176, y: 120, width: 432, height: 300, rx: 60, fill: K8.VAf, stroke: K8.VA, 'stroke-width': 4 }); K8.nuc(s, 172, 432, 16);
     const io = []; for (let k = 0; k < 6; k++) io.push(CC(s, 0, 0, 6, '#F6E7B8', '#C9962B', 2));
     const ct = cap(s, 392, 280, 'WATER · SAP · WASTE', { fill: K8.VA, 'font-size': 18 });
-    return { labs: [[lab(s, 608, 200, 690, 150, 'Tonoplast', 'end'), ['D4', 'tonoplast']]], els: [[ct, ['D4', 'water', -0.1], { dy: 8 }]],
+    return { labs: [[lab(s, 500, 120, 560, 60, 'Tonoplast'), ['D4', 'tonoplast']]], els: [[ct, ['D4', 'water', -0.1], { dy: 8 }]],
       anim: t => { attr(tv, 'stroke-width', t > tm(['D4', 'tonoplast']) ? 7 : 4); const t0 = tm(['U2', 'ions']); io.forEach((e, k) => { const v = ((t - t0) * 0.35 + k / 6) % 1; attr(e, 'cx', (190 + k * 75).toFixed(1)); attr(e, 'cy', (108 + 70 * v).toFixed(1)); e.style.opacity = t > t0 ? Math.min(1, 5 * (1 - v)) : 0; }); } }; } }] });
 // the ions on the right card run upward from the cytoplasm band into the vacuole (against the gradient)
 
