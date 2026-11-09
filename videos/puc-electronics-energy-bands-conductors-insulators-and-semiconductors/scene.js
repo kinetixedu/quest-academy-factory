@@ -198,7 +198,7 @@ const trap = PUC.trap($('#trap'), { wrong: 'Heating always raises resistance', r
 const tcS = $('#tcS'), G = PUC.graph(tcS, { x: 90, y: 70, w: 600, h: 170, xmax: 100, ymin: 0, ymax: 10, xl: 'θ →', yl: 'R' });
 G.ylab.setAttribute('fill', INK); G.ylab.setAttribute('font-style', 'italic');
 const cMet = G.curve(INK, 4), cSem = G.curve(AM, 5);
-const lMet = tx(tcS, 560, 110, 'metal', { fill: INK, 'font-size': 22 }), lSem = tx(tcS, 560, 228, 'semiconductor', { fill: '#B7791F', 'font-size': 22 });
+const lMet = tx(tcS, 560, 110, 'metal', { fill: INK, 'font-size': 22 }), lSem = tx(tcS, 470, 196, 'semiconductor', { fill: '#B7791F', 'font-size': 22 });
 PUC.WA = ['JEE MAIN', 'NEET', 'PUC BOARDS', 'CBSE BOARDS', 'ISC BOARDS'];
 const where = PUC.where($('#wa'), { on: ['PUC BOARDS', 'CBSE BOARDS', 'ISC BOARDS', 'JEE MAIN'], type: 'Draw and compare band diagrams · band gap and light (JEE Main, 3 Sep 2020, Shift 2)' });
 $('#wa').querySelector('.wat') && ($('#wa').querySelector('.wat').style.fontSize = '25px');
@@ -211,13 +211,13 @@ const sol = PUC.solution($('#so'), [[K(`E = \\dfrac{1240}{620} = 2.0\\,\\text{eV
 const tSol = [wt('A2', 'Photon'), wt('A3', 'An'), wt('A4', 'Two'), wt('A4', 'less')];
 
 /* ================= F: formula card + next ================= */
-const fc = PUC.fcard($('#sF'), { x: 410, y: 236, w: 1100, h: 508, y0: 92, dy: 80, title: 'Energy bands · fact card', txt: [1, 0, 1, 0, 1],
+const fc = PUC.fcard($('#sF'), { x: 410, y: 214, w: 1100, h: 552, y0: 90, dy: 88, title: 'Energy bands · fact card', txt: [1, 0, 1, 1, 0],
   lines: ['Conductor: bands overlap, no gap. Insulator: gap above 3 eV.',
     K(`\\textcolor{${GO}}{E_g}:\\;\\; \\text{C (diamond) } 5.4 \\quad \\text{Si } 1.1 \\quad \\text{Ge } 0.7\\;\\text{eV}`),
     'Semiconductor: gap below 3 eV, an insulator at 0 K',
-    K(`\\lambda_{max} = \\dfrac{hc}{\\textcolor{${GO}}{E_g}} \\approx \\dfrac{1240}{\\textcolor{${GO}}{E_g}(\\text{eV})}\\,\\text{nm} \\qquad 1\\,\\text{eV} = 1.6\\times10^{-19}\\,\\text{J}`),
-    'Heat it: metal R goes up, semiconductor R goes down'] });
-const nx = PUC.next($('#sF'), { label: 'NEXT · EP 39', topic: 'Intrinsic and extrinsic semiconductors', y: 776 });
+    'Heat it: metal R goes up, semiconductor R goes down',
+    K(`\\lambda_{max} = \\dfrac{hc}{\\textcolor{${GO}}{E_g}} \\approx \\dfrac{1240}{\\textcolor{${GO}}{E_g}(\\text{eV})}\\,\\text{nm} \\qquad 1\\,\\text{eV} = 1.6\\times10^{-19}\\,\\text{J}`)] });
+const nx = PUC.next($('#sF'), { label: 'NEXT · EP 39', topic: 'Intrinsic and extrinsic semiconductors', y: 796 });
 
 /* ================= run ================= */
 const head = PUC.header({ tMorph });

@@ -1,0 +1,61 @@
+H1|0.35|Aarav watches a pump fill the overhead water tank in spurts.
+H2|0.35|Spurt, gap, spurt, gap. Yet the tap below flows smooth and steady.
+H3|0.35|The tank stores water in the spurts and gives it out in the gaps.
+H4|0.6|Our rectifier gives spurts too, the humps. Can we smooth them?
+P1|0.35|First, what is wrong with humps?
+P2|0.35|A phone or a radio wants steady DC, a flat line.
+P3|0.35|Humps keep rising and falling. That wobble is called ripple.
+P4|0.6|Ripple is the leftover AC riding on top of the DC.
+P5|0.35|A circuit that removes ripple is called a filter.
+P6|0.35|The simplest filter is one capacitor, placed across the load.
+P7|0.65|A capacitor stores charge, just like the tank stores water.
+B1|0.35|Let's add one to our full-wave rectifier on the breadboard.
+B2|0.35|The capacitor C sits in parallel with the load, R L.
+B3|0.35|As the input rises, the diodes conduct and charge the capacitor.
+B4|0.35|It fills up to the peak, V m.
+B5|0.35|Now the input falls below the capacitor voltage.
+B6|0.35|The diodes switch off. The supply is cut away.
+B7|0.35|But the capacitor keeps feeding the load. It slowly drains.
+B8|0.35|Then the next hump arrives and tops it up again.
+B9|0.65|So the output is nearly flat, with a small sawtooth ripple.
+B10|0.65|Now swap in a bigger capacitor. Watch the ripple shrink.
+T1|0.8|A filter capacitor fills at the peaks and feeds the load in the gaps.
+R1|0.35|How big is the ripple? Let's find it step by step.
+R2|0.7|Between humps, the load current I drains the capacitor.
+R3|0.7|Charge lost equals current times time. Delta Q equals I times T.
+R4|0.7|Here T is the gap between humps. For full-wave, one over two f.
+R5|0.7|A capacitor's voltage drop is charge over capacitance.
+R6|0.7|So the ripple, V r, equals I over two f C.
+R7|0.7|The current I is about V m over R L.
+R8|0.65|So V r equals V m over two f R L C.
+R9|0.35|For half-wave, the gap is twice as long.
+R10|0.65|So V r equals V m over f R L C.
+K1|0.35|Three ideas exams love.
+K2|0.35|One. Bigger C or bigger R L means less ripple.
+K3|0.6|The time R L C must be much longer than the gap.
+K4|0.35|Two. For the same parts, full-wave ripple is half the half-wave ripple.
+K5|0.6|Its gaps are only half as long.
+K6|0.35|Three. Ripple factor compares the leftover AC to the DC.
+K7|0.35|Without a filter, half-wave has a ripple factor of one point two one.
+K8|0.65|Full-wave has zero point four eight. A good filter makes it far smaller.
+W1|0.35|Worked example. A full-wave rectifier gives a twenty volt peak at fifty hertz.
+W2|0.35|The load is one kilo-ohm. The capacitor is one thousand microfarads.
+W3|0.6|The humps come at two f, one hundred hertz.
+W4|0.6|Multiply two f, R L and C. That gives one hundred.
+W5|0.6|So V r is twenty over one hundred. Just zero point two volts.
+W6|0.6|The DC sits near the peak, about nineteen point nine volts.
+W7|0.65|Without the filter, it was only twelve point seven volts.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students put f equals fifty hertz into the full-wave ripple formula.
+X3|0.65|Wrong. Full-wave humps come at two f. Use one hundred hertz.
+X4|0.35|Where is this asked? PUC and CBSE board papers.
+X5|0.35|JEE Main twenty twenty one asked how to get steady DC from a rectifier.
+X6|0.65|Expect to draw the filtered output, or find the ripple.
+Q0|0.35|Try this. A full-wave rectifier gives a fifteen volt peak at fifty hertz.
+Q1|5.6|The load is five hundred ohms, with two thousand microfarads. Find the ripple.
+A1|0.35|B. About zero point one five volts.
+A2|0.35|The ripple frequency is two f, so one hundred hertz.
+A3|0.35|One hundred times five hundred times zero point zero zero two is one hundred.
+A4|0.65|So V r is fifteen over one hundred. Zero point one five volts.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, the Zener diode. How does it hold a voltage steady?

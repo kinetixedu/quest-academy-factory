@@ -1,0 +1,62 @@
+H1|0.35|Aarav opens a dead phone charger.
+H2|0.35|He finds tiny black parts, each with a stripe at one end.
+H3|0.5|Inside each one is just p-type silicon joined to n-type silicon.
+I1|0.35|Yet together they act like a one-way gate for current.
+I2|0.65|Where does that gate come from? It builds itself, at the joint.
+R1|0.35|Picture two rooms joined by an open door.
+R2|0.35|One room is packed with people. The other is nearly empty.
+R3|0.6|People drift through the door to where it is less crowded.
+R4|0.65|Spreading from crowded to empty is called diffusion. Smells spread the same way.
+J1|0.35|Now the real thing. One silicon crystal, doped two ways.
+J2|0.6|The left side is p-type, full of holes.
+J3|0.6|The right side is n-type, full of free electrons.
+J4|0.65|The boundary between them is the p-n junction.
+J5|0.35|Free electrons diffuse from n into p.
+J6|0.6|Holes diffuse the other way, from p into n.
+J7|0.6|Near the junction they meet, and electrons fill holes. Both disappear.
+J8|0.35|But each electron left behind a donor atom.
+J9|0.6|That donor is now a fixed positive ion. It cannot move.
+J10|0.6|Each filled hole leaves a fixed negative acceptor ion on the p side.
+J11|0.6|So a thin layer forms with ions but no free carriers.
+J12|0.65|It has been emptied, or depleted, of carriers. This is the depletion layer.
+J13|0.65|It is very thin, often less than a thousandth of a millimetre.
+E1|0.35|Now the ions start pushing back.
+E2|0.6|Plus ions on the n side, minus ions on the p side.
+E3|0.6|Together they make an electric field, pointing from n to p.
+E4|0.6|This field pushes stray electrons back to the n side.
+E5|0.6|Carriers moved by a field make a drift current.
+E6|0.6|Drift flows opposite to diffusion.
+E7|0.35|At first diffusion wins, and the layer grows.
+E8|0.65|The wider it grows, the stronger the push back.
+E9|0.65|Soon drift equals diffusion. They cancel, and no net current flows.
+T1|0.8|The junction builds its own wall, and then stops.
+B1|0.35|Let's watch it settle on the breadboard.
+B2|0.35|We join the two sides and connect a current meter across them.
+B3|0.35|The scope shows two currents. Grey is diffusion. Amber is drift.
+B4|0.35|At the instant of joining, diffusion is large.
+B5|0.65|The layer widens, the field grows, and drift rises to meet it.
+B6|0.65|Now they are equal. The meter reads zero. Equilibrium.
+B7|0.35|The ions leave a potential difference across the layer.
+B8|0.65|It is called the barrier potential, V naught.
+B9|0.65|In silicon it is about point seven volts.
+B10|0.65|An electron must climb this energy hill to cross, like a ball rolling up a slope.
+W1|0.35|Worked example. How strong is that field?
+W2|0.6|Take a barrier of point seven volts.
+W3|0.6|And a depletion layer half a micrometre wide.
+W4|0.7|For a nearly uniform field, E equals V naught divided by d.
+W5|0.7|Point seven divided by point five times ten to the minus six.
+W6|0.7|E is one point four times ten to the six volts per metre.
+W7|0.7|To cross, an electron needs at least point seven electron volts.
+W8|0.65|That is one point one two times ten to the minus nineteen joules.
+X1|0.35|Now, the exam trap.
+X2|0.35|Can a voltmeter read the barrier potential? Many students say yes.
+X3|0.65|It reads zero. Contact voltages at the metal leads cancel it exactly.
+X4|0.35|Where is this asked? PUC, CBSE and ISC boards ask how the junction forms.
+X5|0.65|JEE Main asks for the field in the depletion layer, as in July twenty twenty two.
+Q1|5.4|Try this. A junction's depletion layer is two micrometres wide. Its field is three point five times ten to the five volts per metre. Find the barrier, and the least energy for an electron to cross.
+A1|0.35|A. Point seven volts, and one point one two times ten to the minus nineteen joules.
+A2|0.35|Barrier V naught equals E times d.
+A3|0.35|Three point five times ten to the five, times two times ten to the minus six. That is point seven volts.
+A4|0.65|The energy is e times V naught. That is point seven electron volts, or one point one two times ten to the minus nineteen joules.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, diode V-I characteristics. What happens when a battery pushes on the wall?

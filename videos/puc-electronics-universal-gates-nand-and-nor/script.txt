@@ -1,0 +1,50 @@
+H1|0.3|Aarav opens a robot kit. The box has only one kind of chip.
+H2|0.3|Every chip is a NAND gate. But his plan needs AND, OR and NOT.
+H3|0.5|Can one kind of gate do every job? Let's find out.
+R1|0.35|First, NAND. The name is short for NOT AND.
+R2|0.35|Take an AND gate, and put a NOT gate right after it.
+R3|0.35|The symbol is the AND shape, with a small circle at the output.
+R4|0.65|That small circle is called a bubble. It means NOT.
+B1|0.35|Let's fill its truth table on the breadboard.
+B2|0.35|Both inputs zero. AND gives zero. NOT flips it. The output is one.
+B3|0.35|Zero and one. Output one. One and zero. Output one.
+B4|0.35|Both inputs one. AND gives one. NOT flips it. The output is zero.
+B5|0.35|So NAND is zero only when all its inputs are one.
+B6|0.65|We write Y equals A dot B, with one bar over the whole thing.
+R5|0.35|Next, NOR. It is short for NOT OR. An OR gate, then a NOT.
+B7|0.35|Both inputs zero. OR gives zero. Flip it. The output is one.
+B8|0.35|If any input is one, OR gives one. Flip it, and the output is zero.
+B9|0.35|So NOR is one only when all its inputs are zero.
+B10|0.65|We write Y equals A plus B, with one bar over the whole thing.
+U1|0.35|Now the big idea. Why are these called universal gates?
+U2|0.65|Because NAND gates alone can build every other gate. So can NOR gates alone.
+U3|0.35|First, NOT. Join both inputs of a NAND gate together.
+U4|0.35|If A is zero, both inputs are zero. The output is one.
+U5|0.65|If A is one, both inputs are one. The output is zero. That is a NOT gate.
+U6|0.65|Next, AND. Use a NAND gate, then a NAND as NOT. The two bars cancel.
+U7|0.35|Then OR. Flip each input with a NAND. Then feed both into one more NAND.
+U8|0.35|Out comes A plus B.
+U8b|0.65|So NAND gives NOT with one gate, AND with two, and OR with three.
+U9|0.35|NOR works the same way, with AND and OR swapped.
+U9b|0.65|OR needs two NOR gates. AND needs three.
+T1|0.8|One kind of gate can build them all.
+W1|0.35|Worked example. Build an AND gate using only NOR gates.
+W2|0.7|First, flip A with a NOR gate whose inputs are joined. Out comes A bar.
+W3|0.7|Flip B the same way. Out comes B bar.
+W4|0.7|Now feed A bar and B bar into a third NOR gate.
+W5|0.7|Check with A one and B one. A bar and B bar are both zero.
+W6|0.65|NOR of zero and zero is one. Just like AND. Three NOR gates in all.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students write NAND as A bar dot B bar. A separate bar on each input.
+X3|0.35|Test it with A one, and B zero. A bar dot B bar gives zero.
+X4|0.65|But NAND gives one. The bar must cover the whole product, A dot B.
+X5|0.35|Where is this asked? In P U C board papers, and in I S C Computer Science.
+X6|0.35|J E E Main papers have also asked for the output of a NAND gate.
+X7|0.65|Expect truth tables, and building other gates from NAND or NOR.
+Q1|5.4|Try this. A and B go into a NOR gate. Its output goes to both inputs of a NAND gate. Which single gate is the whole circuit?
+A1|0.35|C. An OR gate.
+A2|0.35|The NOR gate gives A plus B, with a bar.
+A3|0.35|A NAND with joined inputs is a NOT gate. It removes the bar.
+A4|0.65|What is left is A plus B. That is an OR gate.
+F1|3.2|Screenshot this card.
+NX|0.6|More P U C Electronics is coming soon. Follow the playlist, so you don't miss it.

@@ -1,0 +1,31 @@
+{
+ "world": "puc-electronics",
+ "topic": "Capacitor Filter and Ripple",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 44
+ },
+ "class": "11",
+ "title": "How a Capacitor Smooths DC Explained Simply | PUC and CBSE",
+ "description": "Aarav watches a pump fill the overhead tank in spurts, yet the tap below flows steady. The tank stores water in the spurts and gives it out in the gaps. A rectifier also gives spurts, the humps. Can a capacitor smooth them the same way?\n\nOn a live breadboard a capacitor sits across the load of a full-wave rectifier. The oscilloscope shows the input (CH1) and the output (CH2): the diodes charge the capacitor near each peak, switch off, and the capacitor feeds the load in the gap, leaving a small sawtooth ripple. Swap in a bigger capacitor and the ripple shrinks. We derive the ripple voltage V_r = V_m/(2fR_LC) for full-wave and V_m/(fR_LC) for half-wave, then the ideas exams love: R_LC much longer than the gap, full-wave ripple is half, and the ripple factor (1.21 half-wave, 0.48 full-wave, no filter). A worked example, the exam trap (use 2f = 100 Hz for full-wave), where it is asked, an original JEE Main pattern practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 44 of PUC Electronics. Karnataka I PUC Electronics Ch 6: Semiconductors, Diodes and Applications of Diodes | NCERT/CBSE Class 12 Physics Ch 14: Semiconductor Electronics: Materials, Devices and Simple Circuits (rectifier with capacitor filter).\n\nIn this video:\n0:00 A tank that smooths spurts\n0:17 What ripple is, and what a filter does\n0:44 Capacitor filter on a breadboard\n1:27 Deriving the ripple voltage\n2:09 What shrinks the ripple, ripple factor\n2:42 Worked example\n3:15 Exam trap: use 2f for full-wave\n3:27 Where it is asked\n3:41 Practice question\n4:17 Formula card\n\nNext episode: Zener Diode as a Voltage Regulator.\n\nVideo by Quest Academy.",
+ "tags": [
+  "capacitor filter",
+  "ripple voltage",
+  "ripple factor",
+  "filter circuit",
+  "rectifier with capacitor filter",
+  "Vr = Vm/2fRC",
+  "smoothing capacitor",
+  "pulsating DC to steady DC",
+  "full wave rectifier",
+  "CBSE class 12 physics",
+  "JEE Main semiconductor",
+  "Karnataka PUC electronics",
+  "1st PUC electronics chapter 6"
+ ],
+ "thumb": {
+  "title": "Smooth the Humps",
+  "accent_word": "Smooth",
+  "frame_t": 81.0
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "world": "puc-electronics",
+ "topic": "RL Circuit and Time Constant",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 35
+ },
+ "class": "11",
+ "title": "RL Circuit Time Constant Explained Simply | PUC Electronics Class 11",
+ "description": "Aarav switches off an old table fan and a tiny spark jumps inside the switch. Why? In this animated lesson a heavy water wheel in a pipe shows the idea: slow to start, slow to stop. A coil of wire, an inductor, behaves the same way: it fights every change in current (self induction).\n\nOn a live breadboard (10 V battery, 100 Ω resistor, 0.5 H coil and a two way switch), the oscilloscope shows the current growing slowly while the coil's voltage fades, then the current dying away through the resistor after the battery is switched out, still flowing the same way. We see why the current rises slowly, meet the time constant tau = L/R and the 63% rule, write the growth and decay formulas step by step, check why L/R is in seconds, and work an example (tau = 5 ms). Then the exam trap (tau is L divided by R, not L times R), where it is asked, an original JEE Main pattern practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 35 of PUC Electronics, Class 11, Chapter 5: Application of D.C and A.C to Passive Components (Karnataka I PUC Electronics). Growth and decay of current in an RL circuit is also asked in JEE Main.\n\nIn this video:\n0:00 Why switching off a fan makes a spark\n0:09 The heavy water wheel idea\n0:36 Growth and decay on a breadboard\n1:19 Why the current rises slowly\n1:47 The time constant: tau = L/R\n2:18 Growth and decay formulas\n3:06 Worked example\n3:42 Exam trap: L divided by R\n3:58 Where it is asked\n4:10 Practice question\n4:55 Formula card\n\nNext episode: Series RC and RL Circuits on AC.\n\nVideo by Quest Academy.",
+ "tags": [
+  "RL circuit",
+  "time constant L/R",
+  "inductor",
+  "self induction",
+  "growth of current in RL circuit",
+  "decay of current",
+  "inductive time constant",
+  "back emf",
+  "switch spark",
+  "PUC electronics",
+  "1st PUC electronics chapter 5",
+  "Karnataka PUC electronics",
+  "class 11 electronics"
+ ],
+ "thumb": {
+  "title": "Why Switches Spark",
+  "accent_word": "Spark",
+  "frame_t": 58
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "Intrinsic and Extrinsic Semiconductors",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 39
+ },
+ "class": "11",
+ "title": "Why Chips Need Impurity Explained Simply | PUC, CBSE and ISC",
+ "description": "Aarav reads how chips are made: silicon is cleaned until it is purer than almost anything, then impurity is added back on purpose. Why? In pure silicon every atom holds hands with four neighbours (covalent bonds), so almost nothing can move. Heat frees a few electrons and leaves holes behind, always in equal numbers (ne = nh = ni, about 1.5 x 10^16 per cubic metre for silicon at room temperature). That is an intrinsic semiconductor.\n\nDoping changes everything. Arsenic (pentavalent, a donor) makes n-type silicon with electrons as the majority carriers; indium (trivalent, an acceptor) makes p-type silicon with holes as the majority. On a live breadboard an arsenic dial dopes a silicon block while the oscilloscope shows the current jump and the readout shows electrons rising, holes falling and their product staying fixed: the mass action law, ne x nh = ni^2. Worked example: one arsenic atom per ten million silicon atoms. Then the exam trap (n-type is neutral, not negative), where it is asked, an original JEE Main pattern practice question with a full solution, and a fact card to screenshot.\n\nThis is Episode 39 of PUC Electronics. Karnataka I PUC Electronics Ch 6: Semiconductors, Diodes and Applications of Diodes | NCERT/CBSE Class 12 Physics Ch 14: Semiconductor Electronics: Materials, Devices and Simple Circuits | ISC Class 12 Physics: Electronic Devices (intrinsic and extrinsic semiconductors, p and n type).\n\nIn this video:\n0:00 Why chips add impurity on purpose\n0:18 Pure silicon: bonds, electrons and holes\n1:03 Intrinsic semiconductors: ne = nh = ni\n1:47 Doping: n-type (arsenic) and p-type (indium)\n2:50 Breadboard: doping test\n3:17 Mass action law\n3:37 Worked example: doped silicon\n4:22 Exam trap: is n-type charged?\n4:36 Where it is asked\n4:48 Practice question\n5:30 Fact card\n\nNext episode: The p-n Junction and Depletion Layer.\n\nVideo by Quest Academy.",
+ "tags": [
+  "intrinsic and extrinsic semiconductors",
+  "intrinsic semiconductor",
+  "extrinsic semiconductor",
+  "n-type and p-type semiconductor",
+  "doping in semiconductors",
+  "donor and acceptor impurity",
+  "majority and minority carriers",
+  "mass action law ne nh = ni2",
+  "holes in semiconductors",
+  "PUC electronics",
+  "1st PUC electronics chapter 6",
+  "Karnataka PUC electronics",
+  "CBSE class 12 physics",
+  "ISC physics"
+ ],
+ "thumb": {
+  "title": "Why Chips Need Impurity",
+  "accent_word": "Impurity",
+  "frame_t": 165
+ }
+}

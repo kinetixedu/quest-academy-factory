@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "The p-n Junction and Depletion Layer",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 40
+ },
+ "class": "11",
+ "title": "The Wall That Builds Itself Explained Simply | PUC, CBSE and ISC",
+ "description": "Aarav opens a dead phone charger and finds tiny black parts with a stripe at one end. Inside each is just p-type silicon joined to n-type silicon, yet together they act like a one-way gate. Where does the gate come from? It builds itself at the joint. We start with two rooms and an open door (diffusion), then watch the real crystal: electrons diffuse from n to p, holes from p to n, they meet and fill each other, and the fixed donor and acceptor ions they leave behind form the depletion layer.\n\nThose ions make an electric field from n to p that drives a drift current against diffusion, until the two are equal and no net current flows. On a live breadboard the oscilloscope shows the diffusion and drift currents settling to equilibrium while the readout tracks the layer width and the barrier potential (about 0.7 V in silicon), drawn as an energy hill an electron must climb. Worked example: the field in a 0.5 micrometre layer and the least energy to cross. Then the exam trap (a voltmeter cannot read the barrier), where it is asked, an original JEE Main pattern practice question with a full solution, and a fact card to screenshot.\n\nThis is Episode 40 of PUC Electronics. Karnataka I PUC Electronics Ch 6: Semiconductors, Diodes and Applications of Diodes | NCERT/CBSE Class 12 Physics Ch 14: Semiconductor Electronics: Materials, Devices and Simple Circuits | ISC Class 12 Physics: Electronic Devices (p-n junction).\n\nIn this video:\n0:00 A one-way gate inside a charger\n0:20 Diffusion: two rooms, one door\n0:36 How the p-n junction forms\n1:03 Fixed ions and the depletion layer\n1:30 The field, drift current and equilibrium\n2:08 Breadboard: watch the junction settle\n2:32 Barrier potential and the energy hill\n2:48 Worked example: field in the layer\n3:23 Exam trap: can a voltmeter read it?\n3:35 Where it is asked\n3:47 Practice question\n4:33 Fact card\n\nNext episode: Diode V-I Characteristics.\n\nVideo by Quest Academy.",
+ "tags": [
+  "p-n junction",
+  "p-n junction formation",
+  "depletion layer",
+  "depletion region",
+  "barrier potential",
+  "diffusion and drift current",
+  "electric field in depletion region",
+  "p-n junction class 12",
+  "PUC electronics",
+  "1st PUC electronics chapter 6",
+  "Karnataka PUC electronics",
+  "CBSE class 12 physics",
+  "ISC physics",
+  "semiconductor electronics JEE"
+ ],
+ "thumb": {
+  "title": "The Wall That Builds Itself",
+  "accent_word": "Wall",
+  "frame_t": 88
+ }
+}

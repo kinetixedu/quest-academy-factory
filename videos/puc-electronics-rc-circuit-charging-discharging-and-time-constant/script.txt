@@ -1,16 +1,17 @@
-H1|0.3|Aarav takes a photo with the camera flash. It fires in a blink.
-H2|0.3|But then it needs a few seconds before it can flash again.
-H3|0.5|Why does the flash make him wait?
-I1|0.35|Picture a water tank, filled from a tap through a thin pipe.
+H1|0.3|Aarav clicks a photo. The camera flash fires in a blink.
+H2|0.3|He clicks again. Nothing. The flash is not ready yet.
+H3|0.5|Why does the flash make him wait a few seconds?
+I1|0.35|Think of a water tank, filled from a tap through a thin pipe.
 I2|0.35|At first, the water rushes in fast.
-I3|0.35|As the tank fills up, the water pushes back. The flow slows down.
-I4|0.35|A circuit can do the same thing.
-I5|0.35|The tank is a capacitor. It stores electric charge.
-I6|0.35|The thin pipe is a resistor. It slows the flow of charge.
-I7|0.65|Put them together, and you get an R C circuit.
+I3|0.35|As the tank fills, the water inside pushes back.
+I4|0.35|So the flow gets slower and slower.
+I5|0.35|A circuit can do exactly the same thing.
+I6|0.35|The tank is a capacitor. It stores electric charge.
+I7|0.35|The thin pipe is a resistor. It slows the flow of charge.
+I8|0.65|A resistor and a capacitor together make an R C circuit.
 B1|0.35|Let's build one on the breadboard.
-B2|0.35|A ten volt battery, a resistor, a capacitor, and a two way switch.
-B3|0.35|Flip the switch to the battery. Electrons start to flow.
+B2|0.35|A ten volt battery, a resistor, a capacitor and a two way switch.
+B3|0.35|Flip the switch to charge. Electrons start to flow.
 B4|0.35|Watch the scope. The capacitor voltage shoots up fast at first.
 B5|0.35|Then it slows down, and creeps up towards ten volts.
 B6|0.35|The current does the opposite. It starts big, then dies away.
@@ -18,7 +19,7 @@ B7|0.65|When the capacitor is full, the current stops.
 B8|0.35|Now flip the switch the other way. The battery is out of the loop.
 B9|0.35|The capacitor pushes its charge back out through the resistor.
 B10|0.65|Its voltage falls fast, then slower and slower, down to zero.
-M1|0.35|But why does the filling slow down? Look at the two voltages.
+M1|0.35|But why does the filling slow down?
 M2|0.35|The battery's ten volts are shared by the resistor and the capacitor.
 M3|0.35|At the start, the capacitor is empty. The resistor gets all ten volts.
 M4|0.35|So the current is big.
@@ -26,42 +27,46 @@ M5|0.35|As charge piles up, the capacitor voltage rises. It pushes back.
 M6|0.35|Less voltage is left for the resistor. So the current shrinks.
 M7|0.65|Less current means slower filling. That is why the curve bends.
 C1|0.35|So how fast does it fill? One number decides it.
-C2|0.7|Multiply the resistance R by the capacitance C. We call it the time constant.
-C3|0.7|We write it with the Greek letter tau. Tau equals R times C.
+C2|0.7|Multiply the resistance R by the capacitance C.
+C3|0.7|This is the time constant. We write it as tau, a Greek letter.
 C4|0.7|After one tau, the capacitor is about sixty three percent full.
 C5|0.35|After two tau, about eighty six percent.
-C6|0.7|After five tau, more than ninety nine percent. We call that fully charged.
+C6|0.7|After five tau, more than ninety nine percent. We call that full.
 C7|0.65|Bigger R or bigger C means a bigger tau. The tank fills slower.
 D1|0.35|Now the rules, step by step. Charging first.
-D2|0.7|V C equals V, times one minus e to the power minus t over tau.
-D3|0.35|Here, e is not the electron's charge.
+D2|0.7|V C equals V, times one minus e to the minus t over tau.
+D3|0.35|Here, e is not the charge of an electron.
 D3b|0.7|It is a special number, about two point seven one eight.
 D4|0.35|Put t equal to tau. You get one minus one over e.
-D4b|0.7|That is zero point six three two.
-D5|0.7|The current: I equals V over R, times e to the minus t over tau.
+D4b|0.7|That is zero point six three two. Sixty three percent.
+D5|0.7|The current is I nought, times e to the minus t over tau.
+D5b|0.7|I nought is V over R, the current at the very start.
 D6|0.7|Discharging: V C equals V nought, times e to the minus t over tau.
 D7|0.7|After one tau, only thirty seven percent of the voltage is left.
 D8|0.35|Why is tau in seconds? An ohm is a volt per ampere.
 D8b|0.7|A farad is a coulomb per volt.
 D9|0.65|Multiply them. The volts cancel. A coulomb per ampere is one second.
 T1|0.8|R times C sets the pace. One tau, sixty three percent full.
-W1|0.35|Worked example. Our breadboard had ten kilo ohms and two hundred twenty microfarads.
-W2|0.35|Tau equals R times C. Ten thousand, times two hundred twenty millionths.
+W1|0.35|Worked example. Our breadboard used ten kilo ohms.
+W1b|0.35|And two hundred and twenty microfarads.
+W2|0.35|Tau equals R times C. Ten thousand times two hundred twenty millionths.
 W3|0.65|That is two point two seconds.
 W4|0.35|After one tau, the voltage is zero point six three two times ten.
 W4b|0.65|That is about six point three volts.
-W5|0.65|Fully charged takes about five tau. Five times two point two is eleven seconds.
-W6|0.65|That is the flash's wait. Its capacitor needs a few tau to recharge.
+W5|0.65|Full takes about five tau. Five times two point two is eleven seconds.
+W6|0.65|The flash works like this. Its capacitor needs a few tau to refill.
 X1|0.35|Now, the exam trap.
 X2|0.35|Many students think the capacitor is full after one tau.
-X3|0.35|It is not. After one tau, it is only about sixty three percent full.
+X3|0.35|It is not. After one tau, it is only sixty three percent full.
 X4|0.65|Full takes about five tau.
-X5|0.65|Where is this asked? In PUC board papers, and in JEE Main, for example in July twenty twenty one. Find tau, the voltage after a time, or the time to reach a voltage.
-Q1|5.4|Try this. A four microfarad capacitor, charged to twelve volts, discharges through a five hundred kilo ohm resistor. How long until its voltage is three volts? Take the natural log of two as zero point six nine three.
+X5|0.35|Where is this asked? In PUC board papers.
+X6|0.35|And in JEE Main, for example in April twenty eighteen.
+X7|0.65|Find tau, the voltage after some time, or the time to reach a voltage.
+Q1|5.4|Try this. A four microfarad capacitor at twelve volts discharges through five hundred kilo ohms. When does it reach three volts? Take the natural log of two as zero point six nine three.
 A1|0.35|C. About two point seven seven seconds.
 A2|0.35|First, tau equals R C. Five hundred thousand times four millionths is two seconds.
 A3|0.35|Twelve volts down to three volts is one quarter. That is two halvings.
-A4|0.35|Each halving takes tau times the natural log of two. That is one point three nine seconds.
+A4|0.35|Each halving takes tau times the natural log of two. About one point three nine seconds.
 A5|0.65|So two halvings take about two point seven seven seconds.
 F1|3.2|Screenshot this card.
 NX|0.6|Next, R L circuits. What happens when a coil fights a sudden change in current?

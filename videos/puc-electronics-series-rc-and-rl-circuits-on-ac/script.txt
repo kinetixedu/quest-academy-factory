@@ -1,0 +1,63 @@
+H1|0.3|In the lab, Aarav joins a resistor and a capacitor to an A C supply.
+H2|0.3|The resistor shows six volts. The capacitor shows eight volts.
+H3|0.5|But the supply is only ten volts. Why not fourteen?
+I1|0.35|Think of two friends pulling a box with ropes.
+I2|0.35|One pulls east with a force of six. The other pulls north with eight.
+I3|0.35|The box does not feel fourteen. It moves along the slant.
+I4|0.65|Six and eight at right angles make ten. Like a right triangle.
+I5|0.35|In A C, voltages do the same. They peak at different times.
+I6|0.65|The resistor's voltage peaks first. The capacitor's peaks a quarter cycle later.
+P1|0.35|First, how each part behaves on A C. Watch voltage and current.
+P2|0.35|In a resistor, voltage and current rise and fall together. They are in phase.
+P3|0.35|In a capacitor, the current peaks a quarter cycle before the voltage.
+P4|0.35|Current leads voltage by ninety degrees.
+P5|0.35|In an inductor, it is the other way round.
+P6|0.65|Current lags voltage by ninety degrees.
+B1|0.35|Now let's build a series R C circuit on the breadboard.
+B2|0.35|An A C supply of ten volts, a resistor and a capacitor in a loop.
+B3|0.35|We slow the wave down so we can watch it.
+B4|0.35|The scope shows the resistor voltage, the capacitor voltage and the supply.
+B5|0.35|Look. The capacitor voltage peaks a quarter cycle after the resistor voltage.
+B6|0.35|At every instant, the two do add up to the supply.
+B7|0.65|But their peaks never line up. So their sizes do not simply add.
+B8|0.35|Now swap the capacitor for a coil. That makes a series R L circuit.
+B9|0.65|Now the coil's voltage peaks a quarter cycle before the resistor's.
+M1|0.35|To add voltages that peak at different times, we use arrows.
+M2|0.35|These arrows are called phasors. Their length is the size of the voltage.
+M3|0.35|Draw the current as a flat arrow. It is the same in every part.
+M4|0.7|The resistor's voltage, V R, points the same way as the current.
+M5|0.7|The capacitor's voltage, V C, points straight down. Ninety degrees behind.
+M6|0.7|Add the arrows tip to tail. The total is the slanted side.
+M7|0.7|By Pythagoras, V equals the square root of V R squared plus V C squared.
+M8|0.65|Root of thirty six plus sixty four is root of hundred. Ten volts.
+Z1|0.35|Now divide every side by the current. Volts per ampere are ohms.
+Z2|0.7|V R over I is R. V C over I is the capacitive reactance, X C.
+Z3|0.7|The total opposition is the impedance, Z. Z equals root of R squared plus X C squared.
+Z4|0.7|The angle phi tells how far the current is ahead. Tan phi equals X C over R.
+Z5|0.35|For an R L circuit, use the inductive reactance, X L.
+Z6|0.7|Z equals root of R squared plus X L squared. Tan phi equals X L over R.
+Z7|0.7|But here the current lags behind the voltage.
+Z8|0.65|Cos phi equals R over Z. We call it the power factor.
+T1|0.8|In A C, voltages add like arrows, not like plain numbers.
+W1|0.35|Worked example. A sixty ohm resistor in series with a capacitor.
+W1b|0.35|Its reactance is eighty ohms. The supply is ten volts.
+W2|0.35|Z equals root of sixty squared plus eighty squared.
+W3|0.65|That is one hundred ohms.
+W4|0.65|Current equals V over Z. Ten over one hundred is zero point one amperes.
+W5|0.65|V R is zero point one times sixty, six volts. V C is eight volts.
+W6|0.65|Tan phi is eighty over sixty. Phi is about fifty three degrees.
+W7|0.65|The power factor is sixty over one hundred, zero point six.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students add the voltages like numbers. Six plus eight is fourteen.
+X3|0.65|That is wrong. They are at right angles. Use Pythagoras. Ten volts.
+X4|0.35|Where is this asked? In PUC, C B S E and I S C board papers.
+X5|0.35|And in JEE Main, for example in April twenty nineteen, second shift.
+X6|0.65|Find the impedance, the current, the phase angle or the power factor.
+Q1|5.4|Try this. A fifty ohm resistor and a coil are in series across a hundred volt, fifty hertz supply. The current is one ampere. Find the coil's reactance and the phase.
+A1|0.35|B. Eighty six point six ohms, with the current lagging by sixty degrees.
+A2|0.35|First, Z equals V over I. A hundred over one is a hundred ohms.
+A3|0.35|X L equals root of Z squared minus R squared. That is eighty six point six ohms.
+A4|0.35|Cos phi equals R over Z. Fifty over a hundred is one half. So phi is sixty degrees.
+A5|0.65|It is a coil, so the current lags the voltage.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, low pass and high pass R C filters. How does a circuit pick out the bass?

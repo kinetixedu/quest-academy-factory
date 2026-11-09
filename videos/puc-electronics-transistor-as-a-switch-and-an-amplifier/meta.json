@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "Transistor as a Switch and an Amplifier",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 50
+ },
+ "class": "11",
+ "title": "Transistor: Switch or Amplifier? Explained Simply | PUC Electronics",
+ "description": "Aarav whispers into a microphone and the speakers boom. A street lamp switches on by itself at dusk. Two very different jobs, one tiny part: the transistor. We start with a water tap (a small twist controls a big flow), then meet the base, collector and emitter of an npn transistor.\n\nOn a live breadboard the input flips from 0 V to 5 V: the lamp goes from dark (cut-off) to fully on (saturation) while the oscilloscope shows the output going low when the input goes high. Then we bias it half on, add a tiny 10 mV wave, and watch a big, upside-down wave come out: a common emitter amplifier. The output against input graph shows the three regions, then we derive I_E = I_B + I_C, I_C = beta I_B, V_out = V_CC - I_C R_C and the voltage gain A_v = -beta R_C / R_in. A worked example checks whether a transistor is saturated, followed by the exam trap (the CE output is 180 degrees out of phase, and the extra power comes from the supply), where it is asked, an original practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 50 of PUC Electronics, Class 11, Chapter 7: Bipolar Junction Transistor (Karnataka I PUC Electronics). Transistors are no longer in the rationalised NCERT/CBSE Class 12 Physics book or the current ISC Physics syllabus, so this lesson follows the Karnataka PUC Electronics syllabus.\n\nIn this video:\n0:00 One part, two jobs\n0:16 The tap idea: base, collector, emitter\n0:51 Transistor as a switch on a breadboard\n1:36 Transistor as an amplifier\n2:07 Cut-off, active and saturation regions\n2:43 The maths: currents and voltage gain\n3:25 Worked example: is the lamp fully on?\n4:07 Exam trap: 180 degrees out of phase\n4:25 Where it is asked\n4:35 Practice question\n5:15 Formula card\n\nNext episode: Number Systems: Binary, Octal and Hexadecimal.\n\nVideo by Quest Academy.",
+ "tags": [
+  "transistor as a switch",
+  "transistor as an amplifier",
+  "common emitter amplifier",
+  "npn transistor",
+  "cut-off and saturation",
+  "active region",
+  "current gain beta",
+  "voltage gain",
+  "180 degree phase shift",
+  "bipolar junction transistor",
+  "PUC electronics",
+  "1st PUC electronics chapter 7",
+  "Karnataka PUC electronics",
+  "class 11 electronics"
+ ],
+ "thumb": {
+  "title": "One Part, Two Jobs",
+  "accent_word": "Two",
+  "frame_t": 92
+ }
+}

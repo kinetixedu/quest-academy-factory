@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "Number Systems: Binary, Octal and Hexadecimal",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 51
+ },
+ "class": "11",
+ "title": "Binary, Octal and Hex: Counting With Two Digits | PUC and ISC",
+ "description": "Aarav picks a colour in a drawing app and the code reads FF 88 00. Letters inside a number? And his phone only knows two digits, 0 and 1. In this animated lesson we find out why computers count in binary and how octal and hexadecimal make long rows of bits easy to read.\n\nWe start with base 10 and a light switch (off = 0, on = 1, low voltage = 0, high voltage = 1). On a live breadboard four switches drive four lamps while the readout and the oscilloscope show the same bits: place values 8, 4, 2, 1, the most and least significant bit, and why 4 bits count from 0 to 15. Then decimal to binary by repeated division by 2, octal (3 bits per digit), hexadecimal (4 bits per digit, A = 10 to F = 15), nibbles and bytes, and why FF is 255. A worked example converts 156 to binary, octal and hex, followed by the exam trap (read the remainders upward, group bits from the right), where it is asked, an original practice question with a full solution, and a fact card to screenshot.\n\nThis is Episode 51 of PUC Electronics, Class 11, Chapter 8: Introduction to Digital Electronics (Karnataka I PUC Electronics) | ISC Class 11 Computer Science: Numbers (representation in different bases and interconversion).\n\nIn this video:\n0:00 Letters inside a colour code\n0:13 Base 10 and the binary system\n0:50 Counting with four switches\n1:37 Decimal to binary: divide by 2\n2:10 Octal and hexadecimal\n3:01 Worked example: 156 in binary, octal and hex\n3:35 Exam trap: read the remainders upward\n3:52 Where it is asked\n4:04 Practice question\n4:35 Fact card\n\nNext episode: Basic Logic Gates: AND, OR and NOT.\n\nVideo by Quest Academy.",
+ "tags": [
+  "number systems",
+  "binary number system",
+  "octal number system",
+  "hexadecimal number system",
+  "decimal to binary conversion",
+  "binary to decimal",
+  "binary to hexadecimal",
+  "bit nibble byte",
+  "MSB and LSB",
+  "PUC electronics",
+  "1st PUC electronics chapter 8",
+  "introduction to digital electronics",
+  "ISC computer science class 11",
+  "Karnataka PUC electronics"
+ ],
+ "thumb": {
+  "title": "Counting With Two Digits",
+  "accent_word": "Two",
+  "frame_t": 80
+ }
+}

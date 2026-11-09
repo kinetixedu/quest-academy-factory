@@ -1,0 +1,31 @@
+{
+ "world": "puc-electronics",
+ "topic": "Full-Wave and Bridge Rectifiers",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 43
+ },
+ "class": "11",
+ "title": "How to Use Both Halves of AC Explained Simply | PUC, CBSE and ISC",
+ "description": "Aarav pedals to college with both legs pushing, one after the other. A half-wave rectifier is like a one-legged rider: it throws away half of every wave. How do we use both halves?\n\nOn live breadboards we build the centre-tap full-wave rectifier (two diodes taking turns) and the bridge rectifier (four diodes in a diamond, two working at a time), with the oscilloscope showing the input (CH1) and the output (CH2) and electrons crossing the load the same way in both halves. We derive V_dc = 2V_m/π (about 0.637 V_m, double the half-wave value), then compare centre tap and bridge: output frequency 2f, peak inverse voltage 2V_m vs V_m, diodes, centre tap, diode drops and the 81.2% maximum efficiency. A worked example, the exam trap (centre-tap PIV is 2V_m), where it is asked, an original JEE Main pattern practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 43 of PUC Electronics. Karnataka I PUC Electronics Ch 6: Semiconductors, Diodes and Applications of Diodes | NCERT/CBSE Class 12 Physics Ch 14: Semiconductor Electronics: Materials, Devices and Simple Circuits | ISC Class 12 Physics: Semiconductor Electronics (diode as a rectifier).\n\nIn this video:\n0:00 Two legs on the pedals\n0:20 Half the wave is wasted\n0:40 Centre-tap full-wave rectifier\n1:17 Bridge rectifier: four diodes\n1:46 Deriving V_dc = 2V_m/π\n2:13 Centre tap vs bridge: frequency, PIV, efficiency\n2:46 Worked example\n3:18 Exam trap: centre-tap PIV\n3:29 Where it is asked\n3:44 Practice question\n4:24 Formula card\n\nNext episode: Capacitor Filter and Ripple.\n\nVideo by Quest Academy.",
+ "tags": [
+  "full wave rectifier",
+  "bridge rectifier",
+  "centre tap rectifier",
+  "Vdc = 2Vm/pi",
+  "peak inverse voltage 2Vm",
+  "full wave rectifier output frequency",
+  "rectifier efficiency 81.2%",
+  "diode as a rectifier",
+  "CBSE class 12 physics",
+  "ISC physics",
+  "NEET physics semiconductor",
+  "Karnataka PUC electronics",
+  "1st PUC electronics chapter 6"
+ ],
+ "thumb": {
+  "title": "Both Halves Used",
+  "accent_word": "Both",
+  "frame_t": 93.6
+ }
+}

@@ -1,0 +1,66 @@
+H1|0.3|Aarav picks a colour in a drawing app on his phone.
+H2|0.3|The colour code reads F F, eight eight, zero zero.
+H3|0.5|Letters inside a number? And his phone only knows two digits, zero and one.
+C1|0.35|Let's start with how we count. We use ten digits, zero to nine.
+C2|0.35|After nine, we run out of digits. So we write one, zero. Ten.
+C3|0.65|The number of digits a system uses is called its base. Ours is base ten.
+C4|0.35|Now think of a light switch. It has only two states.
+C5|0.35|Off, or on. Zero, or one.
+C6|0.35|A wire in a computer works the same way. Low voltage is zero.
+C6b|0.35|High voltage is one.
+C7|0.65|So computers count in base two. This is the binary system.
+C8|0.65|One binary digit is called a bit. Bit is short for binary digit.
+B1|0.35|Let's count on the breadboard. Four switches, and four lamps.
+B2|0.35|Each switch is one bit. On means one. Off means zero.
+B3|0.35|In decimal, each place is worth ten times the place on its right.
+B4|0.35|In binary, each place is worth two times. One, two, four, eight.
+B5|0.35|Switch on the first bit. The value is one.
+B6|0.35|Now the two and the one. Two plus one is three.
+B7|0.35|Now eight, two and one. Eight plus two plus one is eleven.
+B8|0.35|The scope shows the same bits as high and low pulses.
+B9|0.65|All four on gives fifteen. So four bits count from zero to fifteen.
+B10|0.35|The left bit has the biggest weight. It is the most significant bit.
+B11|0.65|The right bit has the smallest weight. It is the least significant bit.
+D1|0.35|Now the other way. How do we turn thirteen into binary?
+D2|0.7|Divide by two again and again. Write down each remainder.
+D3|0.7|Thirteen divided by two is six, remainder one.
+D4|0.7|Six divided by two is three, remainder zero.
+D5|0.7|Three divided by two is one, remainder one.
+D6|0.7|One divided by two is zero, remainder one. Stop at zero.
+D7|0.7|Now read the remainders from the bottom up. One, one, zero, one.
+D8|0.65|Check it. Eight plus four plus one is thirteen.
+O1|0.35|Long rows of ones and zeros are hard to read. So we use shortcuts.
+O2|0.35|Octal is base eight. It uses the digits zero to seven.
+O3|0.65|Eight is two times two times two. So one octal digit holds three bits.
+O4|0.35|Hexadecimal is base sixteen. It needs sixteen digits.
+O5|0.35|After nine, it borrows letters. A is ten, B is eleven, and so on.
+O6|0.35|F is fifteen. Sixteen is two to the power four.
+O6b|0.65|So one hex digit holds four bits.
+O7|0.35|Four bits make a nibble. Eight bits make a byte.
+O8|0.35|So F F is one one one one, one one one one.
+O8b|0.35|That is two hundred and fifty five.
+O9|0.65|That is why the colour code has letters. Each pair is one byte, in hex.
+T1|0.8|Two digits can count anything. Groups make them easy to read.
+W1|0.35|Worked example. Write one hundred and fifty six in binary, octal and hex.
+W2|0.35|Divide by two again and again, and read the remainders upward.
+W3|0.7|We get one zero zero one, one one zero zero.
+W4|0.7|Check the weights. One twenty eight, plus sixteen, plus eight, plus four. One fifty six.
+W5|0.7|For octal, group three bits from the right. Two, three, four.
+W6|0.7|For hex, group four bits from the right. Nine, and C.
+W7|0.65|So one fifty six is two three four in octal, and nine C in hex.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students read the remainders from top to bottom.
+X3|0.65|For thirteen, that gives one zero one one. That is eleven, not thirteen.
+X4|0.65|Always read the remainders upward. And always group bits from the right side.
+X5|0.35|Where is this asked? In P U C board papers.
+X5b|0.35|And in I S C Computer Science, in class eleven.
+X6|0.65|Expect quick conversions between binary, octal, decimal and hex.
+Q1|5.4|Try this. What is the hexadecimal number two F, written in octal?
+A1|0.35|C. Five seven.
+A2|0.35|Write each hex digit as four bits.
+A2b|0.35|Two is zero zero one zero. F is one one one one.
+A3|0.35|Now regroup in threes from the right. One zero one, and one one one.
+A4|0.35|That is five and seven.
+A5|0.65|Check: five eights plus seven is forty seven. Two F is forty seven too.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, logic gates. How does a chip decide yes or no?

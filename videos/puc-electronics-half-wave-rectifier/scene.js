@@ -52,7 +52,7 @@ const Vm = `\\textcolor{${TE}}{V_m}`, Vdc = `\\textcolor{${TE}}{V_{dc}}`, Vo = `
 
 /* ---------------- beats ---------------- */
 const tMorph = wt('H1', 'charger') - 0.2;
-const tP = T0('P1'), tB = T0('B1'), tT = T0('T1'), tR = T0('R1'), tK = T0('K1'), tW = T0('W1'), tX = T0('X1'), tQ = T0('Q1'), tF = T0('F1'), tNX = T0('NX');
+const tP = T0('P1'), tB = T0('B1'), tT = T0('T1'), tR = T0('R1'), tK = T0('K1'), tW = T0('W1'), tX = T0('X1'), tQ = T0('Q0'), tF = T0('F1'), tNX = T0('NX');
 const tCount = T1('Q1') + 0.05, tAns = T0('A1');
 const SW = [[tT, tR], [tX, tX + 0.06], [tQ, tQ + 0.06], [tF, tF + 0.06]];
 
@@ -96,7 +96,7 @@ const dLead = [W(dS, `M120,${DY} H332`), W(dS, `M452,${DY} H664`)];
 const dD = diode(dS, 392, DY, 58); dD.tri.setAttribute('stroke-width', 5);
 const dLab = [mono(dS, 226, DY - 22, 'ANODE', { 'text-anchor': 'middle', 'font-weight': 600, 'font-size': 18, 'letter-spacing': '.08em' }), mono(dS, 558, DY - 22, 'CATHODE', { 'text-anchor': 'middle', 'font-weight': 600, 'font-size': 18, 'letter-spacing': '.08em' })];
 const dI = PUC.arrow(dS, VI, 5, 16), dIL = tx(dS, 512, 238, 'I  only this way', { fill: VI, 'font-size': 22 });
-const dX = mk(dS, 'g'); W(dX, 'M180,226 l20,20 m0,-20 l-20,20', { stroke: RED, 'stroke-width': 4 }); mono(dX, 212, 244, 'never backwards', { fill: RED, 'font-weight': 600, 'font-size': 18 });
+const dX = mk(dS, 'g'); W(dX, 'M60,226 l20,20 m0,-20 l-20,20', { stroke: RED, 'stroke-width': 4 }); mono(dX, 92, 244, 'never backwards', { fill: RED, 'font-weight': 600, 'font-size': 18 });
 const pb = [$('#pb0'), $('#pb1')];
 pb[0].querySelector('.v').textContent = 'ON · current flows'; pb[1].querySelector('.v').textContent = 'OFF · current blocked';
 const tDi = wt('P4', 'diode'), tArr = wt('P5', 'arrow'), tFB = wt('P6', 'forward'), tRB = wt('P7', 'reverse');
@@ -149,8 +149,8 @@ const rRows = steps($('#rSteps'), [
   [K(`${Vdc} = \\dfrac{1}{2}\\cdot\\dfrac{2${Vm}}{\\pi} = \\dfrac{${Vm}}{\\pi} \\approx 0.318\\,${Vm}`), '', 344],
   [K(`${Idc} = \\dfrac{${Im}}{\\pi}`), 'same rule for current', 448]]);
 const rBox = $('#rBox'); rBox.style.top = '330px'; rBox.style.height = '100px';
-const tRs = [wt('R3', 'In'), wt('R4', 'In'), wt('R5', 'One'), wt('R7', 'V'), wt('R8', 'I')];
-const tSquash = wt('R6', 'cut') - 0.3;
+const tRs = [wt('R3', 'In'), wt('R4', 'In'), wt('R6', 'Its'), wt('R8', 'V'), wt('R9', 'I')];
+const tSquash = wt('R7', 'halve') - 0.3, tBox = T0('R5');
 const avR = PUC.avatar($('#sR'), { x: 1008, y: 770, who: 'Diya', face: FACE + 'diya-face.jpg', text: 'Less than a third of the peak? That is not much DC!' });
 
 /* ================= K: key numbers ================= */
@@ -173,7 +173,7 @@ const KT = [['PEAK INVERSE VOLTAGE', K(`\\text{PIV} = ${Vm}`), 'the blocked diod
   ['MAXIMUM EFFICIENCY', K('\\eta_{max} = 40.6\\%'), '']];
 $('#kTiles').innerHTML = KT.map(([k, f, w], i) => `<div class="kt" style="top:${76 + i * 170}px"><div class="k">${k}</div><div class="f">${f}</div>${w ? `<div class="w">${w}</div>` : '<div class="bar"><i></i></div><div class="w">of the power</div>'}</div>`).join('');
 const kT = [...$('#kTiles').children];
-const tKt = [wt('K3', 'peak'), wt('K4', 'output'), wt('K5', 'forty')];
+const tKt = [wt('K3', 'peak'), wt('K5', 'output'), wt('K6', 'forty')];
 
 /* ================= W: worked example ================= */
 const wS = $('#wS'), WX = 70, WWd = 560, WY = 300, WA = 180, WC = 2.5;
@@ -194,7 +194,7 @@ const wRows = steps($('#wSteps'), [
   [K(`\\text{PIV} = ${Vm} = 20\\,\\text{V}`), '', 374],
   [K(`f_{out} = f_{in} = 50\\,\\text{Hz}`), 'one hump per cycle', 460]], { fs: 30 });
 const wBox = $('#wBox'); wBox.style.top = '156px'; wBox.style.height = '96px';
-const tWs = [wt('W1', 'The'), wt('W3', 'V'), wt('W4', 'I'), wt('W5', 'The'), wt('W6', 'And')];
+const tWs = [wt('W1', 'The'), wt('W3', 'V'), wt('W5', 'That'), wt('W6', 'The'), wt('W7', 'And')];
 
 /* ================= X: exam trap + where it is asked ================= */
 const trap = PUC.trap($('#trap'), { wrong: 'Half-wave output frequency = 100 Hz', right: 'One hump per cycle: 50 Hz in, 50 Hz out', y0: 96, y1: 184 });
@@ -213,7 +213,7 @@ const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW
   opts: [K('9.55\\,\\text{mA},\\ 100\\,\\text{Hz}'), K('4.77\\,\\text{mA},\\ 50\\,\\text{Hz}'), K('4.77\\,\\text{mA},\\ 100\\,\\text{Hz}'), K('7.5\\,\\text{mA},\\ 50\\,\\text{Hz}')], right: 1, optW: 474, optY: 344 });
 const sol = PUC.solution($('#so'), [[K(`${Vm} = 30\\,\\text{V},\\ \\omega = 100\\pi`)], [K(`${Vdc} = \\dfrac{30}{\\pi} \\approx 9.55\\,\\text{V}`)],
   [K(`${Idc} = \\dfrac{9.55}{2000} \\approx 4.77\\,\\text{mA}`)], [K(`f = \\dfrac{\\omega}{2\\pi} = 50\\,\\text{Hz}`)]], { dy: 116, y0: 100 });
-const tSol = [wt('A2', 'The'), wt('A2', 'So'), wt('A3', 'Divide'), wt('A4', 'Omega')];
+const tSol = [wt('A2', 'The'), wt('A2', 'So'), wt('A4', 'Divide'), wt('A5', 'Omega')];
 
 /* ================= F: formula card + next ================= */
 const fc = PUC.fcard($('#sF'), { x: 410, y: 236, w: 1100, h: 504, y0: 90, dy: 112, title: 'Half-wave rectifier · formula card', txt: [0, 0, 1, 1],
@@ -228,7 +228,7 @@ const head = PUC.header({ tMorph });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
 const tB6 = T0('B6'), tB8 = T0('B8');
-const cam = M.camera($('#cam'), [[0, 1, 960, 540], [tB6, 1.08, 600, 430], [tB8, 1, 960, 540]]);
+const cam = M.camera($('#cam'), [[0, 1, 960, 540], [tB6, 1.08, 960, 540], [tB8, 1, 960, 540]]);
 const ghost = $('#ghost'); let gw = 0;
 const pLw = document.createElement('div'); pLw.style.cssText = 'position:absolute;left:0;top:0;width:1920px;height:1080px'; $('#sP').insertBefore(pLw, $('#pL')); pLw.appendChild($('#pL'));
 
@@ -325,13 +325,13 @@ M.on(t => {
     M.vis(rFill, t, tRs[0] + 0.8, 1e9, { dy: 0, fade: 0.3 });
     fadeAt(rZero, t, tRs[1] + 0.1, 0.2);
     // hump average, then spread over the whole cycle
-    M.vis(rRect, t, tRs[2] + 0.1, 1e9, { dy: 0, fade: 0.25 }); M.vis(rRectL, t, tRs[2] + 0.3, tSquash, { dy: 0, fade: 0.2, outDur: 0.2, ody: 0 });
+    M.vis(rRect, t, tBox + 0.3, 1e9, { dy: 0, fade: 0.25 }); M.vis(rRectL, t, tRs[2] + 0.2, tSquash, { dy: 0, fade: 0.2, outDur: 0.2, ody: 0 });
     const sq = M.io((t - tSquash) / 1.2);
     PUC.attr(rRect, 'width', (HWd * (1 + sq)).toFixed(1)); PUC.attr(rRect, 'height', (RA * HUMP * (1 - sq / 2)).toFixed(1)); PUC.attr(rRect, 'y', (RY - RA * HUMP * (1 - sq / 2)).toFixed(1));
     M.draw(rAvg, t, tRs[3] - 0.2, 0.7); fadeAt(rAvgL, t, tRs[3] + 0.3, 0.15);
     runSteps(rRows, t, tRs);
     M.vis(rBox, t, tRs[3] + 0.6, 1e9, { dy: 0, sc: 0.96, fade: 0.2 });
-    avR(t, wt('R8', 'Current') - 0.2, out);
+    avR(t, wt('R9', 'Current') - 0.2, out);
   }
 
   /* K: key numbers */
@@ -378,7 +378,7 @@ M.on(t => {
     M.draw(tcOut, t, wt('X3', 'One') - 0.1, 1.2, M.clamp);
     tcN.forEach((e, i) => M.vis(e, t, wt('X3', 'One') + 0.1 + i * 0.6, 1e9, { dy: 0, sc: 0.5, sp: M.POP, fade: 0.1 }));
     fadeAt(tcL.slice(1), t, wt('X3', 'Fifty') - 0.1, 0.3);
-    where(t, { tin: wt('X4', 'Where') - 0.2, tLight: [wt('X4', 'NEET'), wt('X4', 'PUC'), wt('X4', 'CBSE'), wt('X4', 'ISC')], tType: wt('X4', 'Draw') - 0.2 });
+    where(t, { tin: wt('X4', 'Where') - 0.2, tLight: [wt('X5', 'NEET'), wt('X4', 'PUC'), wt('X4', 'CBSE'), wt('X4', 'ISC')], tType: T0('X6') - 0.1 });
   }
 
   /* Q: practice question */

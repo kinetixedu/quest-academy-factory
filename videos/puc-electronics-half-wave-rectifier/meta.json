@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "Half-Wave Rectifier",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 42
+ },
+ "class": "11",
+ "title": "How a Diode Turns AC Into DC Explained Simply | PUC, CBSE and ISC",
+ "description": "Aarav plugs in his phone charger. The wall socket gives AC that flips 50 times a second, but the battery needs one-way DC. How does the charger fix that? We start with a water pipe and a one-way flap, then meet the real part: the diode, forward biased and reverse biased.\n\nOn a live breadboard an AC supply, one diode and a load run in slow motion while the oscilloscope shows the input (CH1) and the output (CH2): humps in the positive half, zero in the negative half. We derive V_dc = V_m/π (about 0.318 V_m) and I_dc = I_m/π, then the three numbers exams love: peak inverse voltage = V_m, output frequency = input frequency, maximum efficiency 40.6%. A worked example, the exam trap (50 Hz in gives 50 Hz out, not 100 Hz), where it is asked, an original JEE Main pattern practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 42 of PUC Electronics. Karnataka I PUC Electronics Ch 6: Semiconductors, Diodes and Applications of Diodes | NCERT/CBSE Class 12 Physics Ch 14: Semiconductor Electronics: Materials, Devices and Simple Circuits | ISC Class 12 Physics: Semiconductor Electronics (diode as a rectifier).\n\nIn this video:\n0:00 A charger turns AC into DC\n0:18 The one-way flap: what a diode does\n0:54 Half-wave rectifier on a breadboard\n1:40 Deriving V_dc = V_m/π\n2:18 PIV, output frequency and efficiency\n2:43 Worked example\n3:14 Exam trap: output frequency\n3:28 Where it is asked\n3:42 Practice question\n4:22 Formula card\n\nNext episode: Full-Wave and Bridge Rectifiers.\n\nVideo by Quest Academy.",
+ "tags": [
+  "half wave rectifier",
+  "diode as a rectifier",
+  "rectification",
+  "pulsating DC",
+  "Vdc = Vm/pi",
+  "peak inverse voltage",
+  "rectifier efficiency 40.6%",
+  "half wave rectifier output frequency",
+  "p-n junction diode",
+  "CBSE class 12 physics",
+  "ISC physics",
+  "NEET physics semiconductor",
+  "Karnataka PUC electronics",
+  "1st PUC electronics chapter 6"
+ ],
+ "thumb": {
+  "title": "AC Into DC",
+  "accent_word": "DC",
+  "frame_t": 84.2
+ }
+}

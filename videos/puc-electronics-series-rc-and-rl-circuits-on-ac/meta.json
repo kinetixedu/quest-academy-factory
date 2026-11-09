@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "Series RC and RL Circuits on AC",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 36
+ },
+ "class": "11",
+ "title": "Series RC and RL Circuits Explained Simply | PUC, CBSE and ISC",
+ "description": "In the lab, Aarav's resistor shows 6 V and his capacitor shows 8 V on an AC supply of only 10 V. Why not 14? In this animated lesson two ropes pulling a box at right angles show the idea, and then we see how a resistor, a capacitor and an inductor each shift the current against the voltage on AC.\n\nOn a live breadboard the oscilloscope draws the resistor voltage, the capacitor voltage and the supply together: they add at every instant, but their peaks never line up. Swap the capacitor for a coil and the phase flips. We add voltages as phasors (arrows), build the impedance triangle, and get Z = √(R² + X²), tan φ = X/R and the power factor cos φ = R/Z for series RC (current leads) and series RL (current lags). Then a worked example (60 Ω and 80 Ω give Z = 100 Ω), the exam trap, where it is asked, an original JEE Main pattern practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 36 of PUC Electronics. Karnataka I PUC Electronics Ch 5: Application of D.C and A.C to Passive Components | NCERT/CBSE Class 12 Physics Ch 7: Alternating Current | ISC Class 12 Physics: Alternating Current (L-R and C-R series circuits).\n\nIn this video:\n0:00 Why 6 V + 8 V gives 10 V\n0:14 Two ropes, one box\n0:40 Phase in a resistor, capacitor and inductor\n1:05 Series RC and RL on a breadboard\n1:44 Adding voltages as phasors\n2:25 Impedance, phase angle and power factor\n3:14 Worked example\n3:52 Exam trap: add as arrows\n4:05 Where it is asked\n4:20 Practice question\n5:05 Formula card\n\nNext episode: Low-Pass and High-Pass RC Filters.\n\nVideo by Quest Academy.",
+ "tags": [
+  "series RC circuit",
+  "series RL circuit",
+  "impedance",
+  "phasor diagram",
+  "phase angle",
+  "power factor",
+  "capacitive reactance",
+  "inductive reactance",
+  "alternating current",
+  "CBSE class 12 physics",
+  "ISC physics",
+  "PUC electronics",
+  "1st PUC electronics chapter 5",
+  "class 12 physics alternating current"
+ ],
+ "thumb": {
+  "title": "Volts Add as Arrows",
+  "accent_word": "Arrows",
+  "frame_t": 92
+ }
+}

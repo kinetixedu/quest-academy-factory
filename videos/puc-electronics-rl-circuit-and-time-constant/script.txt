@@ -1,0 +1,69 @@
+H1|0.3|Aarav switches off the old table fan.
+H2|0.3|Inside the switch, a tiny spark jumps across.
+H3|0.5|Why does switching off a fan make a spark?
+I1|0.35|Think of a heavy water wheel inside a pipe.
+I2|0.35|Open the tap. The heavy wheel is slow to get moving.
+I3|0.35|So the flow builds up slowly, not all at once.
+I4|0.35|Close the tap. The spinning wheel keeps the water moving for a while.
+I5|0.35|A coil of wire, an inductor, behaves like that wheel.
+I6|0.35|It fights any change in current. This is called self induction.
+I7|0.65|A resistor and an inductor together make an R L circuit.
+B1|0.35|Let's build one on the breadboard.
+B2|0.35|A ten volt battery, a resistor, a coil and a two way switch.
+B3|0.35|This change is very fast, so we watch it in slow motion.
+B4|0.35|Flip the switch. The current does not jump up.
+B5|0.35|It rises fast at first, then creeps up to its full value.
+B6|0.35|The coil's voltage does the opposite. It starts at ten volts, then fades.
+B7|0.65|Once the current is steady, the coil has nothing left to fight.
+B8|0.35|Now flip the switch the other way. The battery is out.
+B9|0.35|The current does not stop at once. It keeps flowing the same way.
+B10|0.65|It dies away slowly, through the resistor.
+B11|0.65|Without that path, it has nowhere to go. That is the spark.
+M1|0.35|But why does the current rise slowly?
+M2|0.35|The battery's ten volts are shared by the coil and the resistor.
+M3|0.35|At the start, the current is trying to change fast.
+M4|0.35|So the coil pushes back with all ten volts. The resistor gets none.
+M5|0.35|As the current grows, it changes more slowly.
+M6|0.35|So the coil pushes back less. More voltage reaches the resistor.
+M7|0.65|The closer it gets to full, the slower it climbs. So the curve bends.
+C1|0.35|How fast does the current grow? Again, one number decides it.
+C2|0.7|Divide the inductance L by the resistance R.
+C3|0.7|This is the time constant of an R L circuit. Tau equals L over R.
+C4|0.7|After one tau, the current reaches about sixty three percent of its full value.
+C5|0.7|After five tau, it is practically full.
+C6|0.35|A bigger L means a bigger tau. A heavier wheel.
+C7|0.65|But a bigger R means a smaller tau. The current settles sooner.
+D1|0.35|Now the rules, step by step. Growth first.
+D2|0.7|The full current, I nought, is V over R.
+D3|0.7|I equals I nought, times one minus e to the minus t over tau.
+D4|0.35|Again, e is the special number, about two point seven one eight.
+D4b|0.7|At t equal to tau, I is zero point six three two times I nought.
+D5|0.7|Decay: I equals I nought, times e to the minus t over tau.
+D6|0.7|After one tau, thirty seven percent of the current is left.
+D7|0.35|Why is L over R in seconds? A henry is a volt second per ampere.
+D7b|0.7|An ohm is a volt per ampere.
+D8|0.65|Divide them. Volts and amperes cancel. Only seconds are left.
+T1|0.8|A coil fights every change. Tau equals L over R.
+W1|0.35|Worked example. A coil of zero point five henry.
+W1b|0.35|A resistor of one hundred ohms, and a ten volt battery.
+W2|0.35|Tau equals L over R. Zero point five divided by one hundred.
+W3|0.65|That is zero point zero zero five seconds. Five milliseconds.
+W4|0.65|The full current is ten over one hundred. Zero point one amperes.
+W5|0.35|After one tau, the current is zero point six three two times that.
+W5b|0.65|About sixty three milliamperes.
+W6|0.65|After five tau, twenty five milliseconds, it is practically full.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students copy R C, and write tau equals L times R.
+X3|0.35|That is wrong. For a coil, tau equals L divided by R.
+X4|0.65|Check the units. Henry divided by ohm gives seconds.
+X5|0.35|Where is this asked? In PUC board papers.
+X6|0.35|And in JEE Main, for example in the twenty fifteen paper.
+X7|0.65|Find tau, or the current at some time after the switch moves.
+Q1|5.4|Try this. A two henry coil and a ten ohm resistor are joined to a twenty volt battery. When does the current reach half its full value? Take the natural log of two as zero point six nine three.
+A1|0.35|C. About zero point one three nine seconds.
+A2|0.35|Tau equals L over R. Two divided by ten is zero point two seconds.
+A3|0.35|The full current is twenty over ten. Two amperes. Half of it is one ampere.
+A4|0.35|So one minus e to the minus t over tau equals one half.
+A5|0.65|That gives t equals tau times the natural log of two. About zero point one three nine seconds.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, series R C and R L circuits on A C. Why does current race ahead of voltage?

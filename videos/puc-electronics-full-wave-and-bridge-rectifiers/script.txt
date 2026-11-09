@@ -1,0 +1,61 @@
+H1|0.35|Aarav pedals to college. His two legs push, one after the other.
+H2|0.35|Left leg, then right leg. The bike gets a push every half turn.
+H3|0.35|Now imagine only one leg could push. The ride would jerk and crawl.
+H4|0.6|A half-wave rectifier is that one-legged rider. Can we use both halves?
+P1|0.35|Remember the one-way flap from the last episode.
+P2|0.35|It throws away every backward push. Half the wave is wasted.
+P3|0.35|The fix is to add more one-way flaps, in a clever pattern.
+P4|0.6|Then the backward push gets turned around, instead of thrown away.
+P5|0.65|Using both halves of the wave is called full-wave rectification.
+C1|0.35|The first way uses a special transformer, with a wire from its middle.
+C2|0.35|That middle wire is called a centre tap.
+C3|0.35|It splits the coil into two equal halves, top and bottom.
+C4|0.35|Add two diodes, D one and D two, and a load.
+C5|0.35|Positive half cycle. D one is forward biased, so it conducts.
+C6|0.35|D two is reverse biased. It rests.
+C7|0.35|Negative half cycle. Now D two conducts, and D one rests.
+C8|0.35|Watch the load. Current goes through it the same way both times.
+C9|0.65|So every half cycle makes a hump. No more gaps.
+B1|0.35|The second way needs no centre tap. It uses four diodes.
+B2|0.35|They sit in a diamond, called a bridge.
+B3|0.35|Positive half. D one and D three conduct, in series with the load.
+B4|0.35|Negative half. D two and D four take over.
+B5|0.35|Either way, current crosses the load in the same direction.
+B6|0.65|Two diodes work at a time, while the other two rest.
+T1|0.8|Full-wave means no half is wasted. Every half cycle becomes a hump.
+R1|0.35|So how much DC do we get now?
+R2|0.7|Call the input peak V m. The humps now fill the whole time.
+R3|0.7|One hump averages two V m over pi.
+R4|0.7|No gaps to share it with. So V d c is two V m over pi.
+R5|0.7|That is about zero point six three seven V m. Double the half-wave value.
+R6|0.65|Current follows the same rule. I d c equals two I m over pi.
+K1|0.35|Now compare the two circuits on the numbers exams love.
+K2|0.35|First, output frequency. Two humps come out for every input cycle.
+K3|0.6|So fifty hertz in gives one hundred hertz out, for both circuits.
+K4|0.35|Next, peak inverse voltage.
+K5|0.35|In the centre-tap circuit, a resting diode faces two V m.
+K6|0.6|In the bridge, each resting diode faces only V m.
+K7|0.35|But the bridge current passes two diodes, so it loses two diode drops.
+K8|0.65|And the best efficiency doubles too, to eighty one point two percent.
+W1|0.35|Worked example. A bridge rectifier gets twenty volts peak, at fifty hertz.
+W2|0.35|The load is one kilo-ohm. The diodes are ideal.
+W3|0.6|V d c equals two times twenty over pi. About twelve point seven volts.
+W4|0.6|I d c is twelve point seven volts over one thousand ohms.
+W5|0.6|That is about twelve point seven milliamperes.
+W6|0.6|Each resting diode must survive twenty volts backwards.
+W7|0.65|And the humps arrive one hundred times a second.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students say the centre-tap diode faces only V m backwards.
+X3|0.65|It does not. It faces the whole coil, so two V m.
+X4|0.35|Where is this asked? PUC, CBSE and ISC board papers.
+X5|0.35|NEET twenty twenty five asked which diode conducts at a given instant.
+X6|0.65|Expect to draw both circuits, compare them, or find the DC value.
+Q0|0.35|Try this. Thirty sine one hundred pi t volts feeds a bridge rectifier.
+Q1|5.6|The load is two kilo-ohms. Find the DC load current and output frequency.
+A1|0.35|C. Nine point five five milliamperes, at one hundred hertz.
+A2|0.35|The peak is thirty volts. So V d c is sixty over pi.
+A3|0.35|That is about nineteen point one volts.
+A4|0.35|Divide by two thousand ohms. That gives nine point five five milliamperes.
+A5|0.65|The input is fifty hertz. Full-wave doubles it to one hundred hertz.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, the capacitor filter. How do we smooth these humps into steady DC?

@@ -1,0 +1,59 @@
+H1|0.35|Aarav puts new batteries into his bike lamp.
+H2|0.35|He clicks the switch. Nothing happens.
+H3|0.5|He flips the batteries around. Now it shines!
+I1|0.35|Inside the lamp is a diode, a p-n junction.
+I2|0.65|It lets current through one way only. Let's see exactly how.
+G1|0.35|Think of a heavy swing door with a strong spring.
+G2|0.35|Push it gently from the front. It does not move.
+G3|0.6|Push harder, past a certain point, and it swings wide open.
+G4|0.6|Push from the back, and it stays shut.
+G5|0.65|Unless you push so hard that you break it.
+F1|0.35|Now the real diode.
+F2|0.6|Connect p to the plus side of a battery, n to the minus side.
+F3|0.6|This is called forward bias.
+F4|0.6|The battery pushes against the barrier, so the wall gets lower.
+F5|0.6|The depletion layer gets thinner.
+F6|0.65|Once the push beats the barrier, carriers flood across.
+R1|0.35|Now flip the battery. p to minus, n to plus.
+R2|0.6|This is reverse bias.
+R3|0.6|Now the battery pulls carriers away from the junction.
+R4|0.6|The depletion layer gets wider, and the wall gets higher.
+R5|0.65|Only a tiny leak gets through, carried by the few minority carriers.
+B1|0.35|Let's measure it on the breadboard.
+B2|0.35|A variable supply, a resistor to protect the diode, and the diode.
+B3|0.35|A voltmeter across the diode. A meter for the current.
+B4|0.35|Turn the knob up slowly, in forward bias.
+B5|0.6|Point two, point four volts. Almost no current.
+B6|0.6|Near point seven volts, the current shoots up.
+B7|0.6|This bend is the knee. The voltage there is the threshold, or cut-in voltage.
+B8|0.65|For silicon it is about point seven volts. For germanium, about point two.
+B9|0.35|Now reverse the supply and turn it up.
+B10|0.6|The current stays tiny, just microamperes, and almost flat.
+B11|0.6|Then, at the breakdown voltage, it suddenly shoots up.
+B12|0.65|Ordinary diodes are not meant to work there. Too much heat can destroy them.
+S1|0.35|Look at the scales on the graph.
+S2|0.65|Forward current is in milliamperes. Reverse current is in microamperes. A thousand times smaller.
+T1|0.8|A diode is a one-way door with a doorstep.
+D1|0.35|The curve is not a straight line. So a diode does not obey Ohm's law.
+D2|0.35|So we use dynamic resistance.
+D3|0.6|It is a small change in voltage divided by the change in current.
+D4|0.65|r d equals delta V divided by delta I.
+W1|0.35|Worked example. Two readings above the knee.
+W2|0.6|At point seven two volts, the current is twelve milliamperes.
+W3|0.6|At point seven six volts, it is twenty milliamperes.
+W4|0.7|Delta V is point zero four volts. Delta I is eight milliamperes.
+W5|0.7|r d equals point zero four divided by point zero zero eight.
+W6|0.7|That is just five ohms. Forward, the door is wide open.
+W7|0.65|In reverse, ten volts drives only one microampere. That is ten million ohms!
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students treat a diode like a fixed resistor. It is not.
+X3|0.65|Its resistance changes along the curve. Always use delta V over delta I.
+X4|0.35|Where is this asked? PUC, CBSE and ISC boards ask you to draw and explain this curve.
+X5|0.65|JEE Main asks for dynamic resistance from the graph, as in June twenty twenty two.
+Q1|5.4|Try this. A five volt battery, a silicon diode in forward bias, and a four hundred thirty ohm resistor are in series. The diode drops point seven volts. Find the current.
+A1|0.35|A. Ten milliamperes.
+A2|0.35|The diode takes point seven volts.
+A3|0.35|So the resistor gets five minus point seven, which is four point three volts.
+A4|0.65|Current is four point three divided by four hundred thirty. That is ten milliamperes.
+FC|3.2|Screenshot this card.
+NX|0.6|Next, the half-wave rectifier. How does a one-way door turn AC into DC?

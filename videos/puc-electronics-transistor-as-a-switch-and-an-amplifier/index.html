@@ -50,6 +50,9 @@
 #so{left:1232px;top:260px;width:528px;height:600px}
 #so .sol{left:32px}
 .fcard .fl{font-size:40px}
+.ro2.six{grid-template-columns:auto 1fr auto auto 1fr auto;column-gap:14px;row-gap:22px;top:92px}
+.ro2.six .u{min-width:40px}
+#wGiven{position:absolute;left:36px;top:80px;width:712px;display:flex;flex-wrap:wrap;gap:14px}#wGiven .pillp{position:static}
 .fcard .fl.txt{font:500 28px Poppins}
 </style></head><body>
 <div id="stage">
@@ -97,7 +100,7 @@
         <svg class="full" id="ckS" width="928" height="600"></svg></div>
       <div class="card" id="sc"><div class="lbl" style="left:32px;top:28px">OSCILLOSCOPE</div><div class="tag" id="slowT" style="right:24px;top:22px">SLOW-MOTION VIEW</div><svg id="scS" width="592" height="200"></svg></div>
       <div class="card" id="rb"><div class="lbl" style="left:32px;top:28px">LIVE READOUT</div><div class="tag" id="rgT" style="right:24px;top:22px">CUT-OFF</div>
-        <div class="ro2" id="ro1"></div><div class="ro2" id="ro2"></div></div>
+        <div class="ro2 six" id="ro1"></div><div class="ro2 six" id="ro2"></div></div>
     </div>
 
     <!-- G: regions -->
@@ -125,13 +128,13 @@
         <div class="sm" id="wB1" style="left:36px;top:362px">CIRCUIT CAN GIVE · V<sub>CC</sub> / R<sub>C</sub></div><div class="bar2" id="wB" style="left:36px;top:400px;width:600px"><i style="background:#16213E"></i></div><div class="big" id="wBv" style="left:120px;top:388px;font-size:30px;color:#16213E">5 mA</div>
         <div class="pillp good" id="wV" style="left:36px;top:480px">Saturated · lamp fully ON</div>
         <svg id="wLmp" width="120" height="120" style="position:absolute;left:620px;top:450px"></svg></div>
-      <div class="card R2" id="wR"><div class="lbl" style="left:36px;top:28px">SOLUTION STEPS</div><div class="hbox" id="wBox" style="top:378px;height:104px"></div><div id="wSteps"></div></div>
+      <div class="card R2" id="wR"><div class="lbl" style="left:36px;top:28px">SOLUTION STEPS</div><div class="hbox" id="wBox" style="top:470px;height:96px"></div><div id="wSteps"></div></div>
     </div>
 
     <!-- X: exam trap + where it is asked -->
     <div class="sc" id="sX"><div class="card red" id="trap"></div>
-      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">COMMON EMITTER · IN VS OUT</div><svg id="tcS" width="420" height="190" style="position:absolute;left:32px;top:76px"></svg>
-        <div class="pillp" id="tcP" style="left:476px;top:96px">180° apart</div><div class="pillp good" id="tcQ" style="left:476px;top:176px">Power: from the supply</div></div>
+      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">COMMON EMITTER · IN VS OUT</div><svg id="tcS" width="380" height="190" style="position:absolute;left:32px;top:76px"></svg>
+        <div class="pillp" id="tcP" style="left:428px;top:96px">180° apart</div><div class="pillp good" id="tcQ" style="left:428px;top:176px">Power: from the supply</div></div>
       <div class="card" id="wa"></div></div>
     <!-- Q: practice question -->
     <div class="sc" id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>

@@ -1,0 +1,31 @@
+{
+ "world": "puc-electronics",
+ "topic": "RC Circuit: Charging, Discharging and Time Constant",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 34
+ },
+ "class": "11",
+ "title": "RC Time Constant Explained Simply | PUC Electronics Class 11",
+ "description": "Aarav's camera flash fires in a blink, then makes him wait a few seconds before it can fire again. Why? In this animated lesson we fill a water tank through a thin pipe, then build the same idea on a live breadboard: a 10 V battery, a resistor, a capacitor and a two way switch, with the oscilloscope drawing the capacitor voltage and the current as the capacitor charges and then discharges.\n\nWe see why the filling slows down (the 10 V is shared by the resistor and the capacitor), meet the time constant tau = RC, and learn the 63% rule: after one tau the capacitor is about 63% charged, and after five tau it is practically full. Then the charging and discharging formulas step by step, why RC is in seconds, a worked example (10 kΩ and 220 μF give tau = 2.2 s), the exam trap, where it is asked, an original JEE Main pattern practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 34 of PUC Electronics, Class 11, Chapter 5: Application of D.C and A.C to Passive Components (Karnataka I PUC Electronics). RC charging and discharging is also asked in JEE Main.\n\nIn this video:\n0:00 Why the camera flash makes you wait\n0:11 The water tank idea\n0:39 Charging and discharging on a breadboard\n1:19 Why the filling slows down\n1:46 The time constant: tau = RC\n2:17 Charging and discharging formulas\n3:18 Worked example\n3:52 Exam trap: one tau is not full\n4:05 Where it is asked\n4:18 Practice question\n5:01 Formula card\n\nNext episode: RL Circuit and Time Constant.\n\nVideo by Quest Academy.",
+ "tags": [
+  "RC circuit",
+  "time constant",
+  "tau = RC",
+  "charging of capacitor",
+  "discharging of capacitor",
+  "63 percent rule",
+  "capacitor charging curve",
+  "exponential decay",
+  "RC circuit JEE Main",
+  "PUC electronics",
+  "1st PUC electronics chapter 5",
+  "Karnataka PUC electronics",
+  "class 11 electronics"
+ ],
+ "thumb": {
+  "title": "Why the Flash Waits",
+  "accent_word": "Waits",
+  "frame_t": 62
+ }
+}

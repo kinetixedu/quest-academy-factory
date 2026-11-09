@@ -1,0 +1,168 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Electronics Ep 43 - Full-Wave and Bridge Rectifiers</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== Breadboard (PUC Electronics) layout ===== */
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.card svg.full{position:absolute;left:0;top:0}
+.big{position:absolute;font:600 56px 'IBM Plex Mono';white-space:nowrap}
+.sm{position:absolute;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.txt{position:absolute;font:500 30px/1.35 Poppins;white-space:nowrap}
+#ghost{top:168px}
+/* two board chips travel together as one header chip */
+#nchip{border:none;padding:0;background:none;gap:12px}
+#nchip .cc{display:inline-flex;align-items:center;height:48px;padding:0 20px;border-radius:10px;background:#fff;border:2px solid var(--ac);color:var(--ac);font:600 22px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap;box-sizing:border-box}
+/* hook */
+#aC{left:160px;top:260px;width:784px;height:600px;overflow:hidden}
+#aImg{position:absolute;left:24px;top:84px;height:516px}
+#hS{left:976px;top:260px;width:784px;height:600px}
+#hs1{position:absolute;left:32px;top:76px}
+#hs2{position:absolute;left:32px;top:292px}
+#hQ{position:absolute;left:32px;top:510px;width:720px;height:60px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;gap:14px;font:600 28px Poppins;white-space:nowrap}
+#hQ .acc{color:var(--ac)}
+/* recap + idea */
+#pL{left:160px;top:260px;width:784px;height:600px}
+#pR{left:976px;top:260px;width:784px;height:600px}
+.ph{position:absolute;left:32px;width:720px;height:84px;border-radius:14px;background:var(--soft);border:2.5px solid var(--soft);box-sizing:border-box}
+.ph .k{position:absolute;left:22px;top:28px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.ph .v{position:absolute;right:22px;top:0;height:80px;display:flex;align-items:center;gap:10px;font:700 28px Poppins;white-space:nowrap;color:var(--ink2)}
+#pStrip{position:absolute;left:32px;top:500px;width:720px;height:68px;border-radius:14px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:14px;padding:0 24px;box-sizing:border-box;font:600 25px Poppins;white-space:nowrap}
+#pStrip .acc{color:var(--ac)}
+/* breadboards */
+.ck{left:160px;top:260px;width:928px;height:600px}
+.scc{left:1120px;top:260px;width:640px;height:300px}
+.rb{left:1120px;top:592px;width:640px;height:268px}
+.scS{position:absolute;left:24px;top:76px}
+.ro2{position:absolute;left:32px;top:76px;width:576px;display:grid;grid-template-columns:auto 1fr auto;column-gap:18px;row-gap:12px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .v{font:600 38px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 22px 'IBM Plex Mono';color:var(--mute);white-space:nowrap;min-width:52px}
+/* derivation */
+#rL{left:160px;top:260px;width:784px;height:600px}
+#rR{left:976px;top:260px;width:784px;height:600px}
+.st2{position:absolute;left:36px;display:flex;align-items:center;gap:20px;white-space:nowrap}
+.st2 .n{flex:none;width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 21px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st2 .sx{font-size:31px}
+.st2 .why{font:500 21px Poppins;color:var(--mute)}
+.box{position:absolute;left:24px;width:736px;border-radius:14px;background:var(--ac2)}
+/* compare */
+#kL{left:160px;top:260px;width:784px;height:600px}
+#kR{left:976px;top:260px;width:784px;height:600px}
+#kScope{position:absolute;left:32px;top:76px}
+.tb{position:absolute;left:32px;width:720px;height:66px;border-radius:12px;background:var(--soft);border:2.5px solid var(--soft);box-sizing:border-box}
+.tb .k{position:absolute;left:20px;top:22px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.tb .a,.tb .b{position:absolute;top:0;height:62px;display:flex;align-items:center;justify-content:center;width:190px;font:600 26px 'IBM Plex Mono';white-space:nowrap;color:var(--ink)}
+.tb .a{left:310px}.tb .b{left:510px}
+.th{position:absolute;top:84px;font:700 20px Poppins;white-space:nowrap;width:190px;text-align:center}
+/* worked example */
+#wL{left:160px;top:260px;width:784px;height:600px}
+#wR{left:976px;top:260px;width:784px;height:600px}
+.wt{position:absolute;width:348px;height:96px;border-radius:14px;background:var(--soft);box-sizing:border-box}
+.wt .k{position:absolute;left:20px;top:14px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.wt .v{position:absolute;left:20px;top:38px;font:600 36px 'IBM Plex Mono';white-space:nowrap}
+.wt .v small{font:400 22px 'IBM Plex Mono';color:var(--mute);margin-left:8px}
+/* exam */
+#trap{left:160px;top:260px;width:784px;height:300px}
+#tc{left:976px;top:260px;width:784px;height:300px}
+#wa{left:160px;top:592px;width:1600px;height:268px}
+#mq{left:160px;top:260px;width:1040px;height:600px}
+#so{left:1232px;top:260px;width:528px;height:600px}
+#so .sol{left:32px}
+.fcard .fl{font-size:40px}
+.fcard .fl.txt{font:500 28px Poppins}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip"><span class="cc">CLASS 11 · ELECTRONICS · CH 6 SEMICONDUCTORS, DIODES</span><span class="cc">NCERT · CLASS 12 PHYSICS · CH 14</span></div>
+    <div class="subj" id="subj">BREADBOARD</div>
+    <div id="title">How to use <span class="acc">both</span> halves of AC</div>
+    <div id="sub">Full-wave and bridge rectifiers</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E8A317" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="ghost" id="ghost">EXAMPLE FIGURES</div>
+
+    <!-- A: hook -->
+    <div class="sc" id="sA">
+      <div class="card" id="aC"><div class="lbl" style="left:32px;top:28px">AARAV · PCME · JEE</div>
+        <img id="aImg" src="../../assets/illustrations/puc/aarav.png" alt="">
+        <svg id="chS" width="300" height="420" style="position:absolute;left:452px;top:84px"></svg>
+        <div class="pillp ac" id="aPill" style="left:470px;top:510px">A push every half turn</div></div>
+      <div class="card" id="hS"><div class="lbl" style="left:32px;top:28px">PUSHES ON THE PEDALS</div>
+        <svg id="hs1" width="720" height="196"></svg><svg id="hs2" width="720" height="196"></svg>
+        <div id="hQ"><span>Can a rectifier use</span><span class="acc">both halves?</span></div></div>
+    </div>
+
+    <!-- P: recap + idea -->
+    <div class="sc" id="sP">
+      <div class="card" id="pL"><div class="lbl" style="left:32px;top:28px">HALF-WAVE · HALF IS WASTED</div>
+        <svg class="full" id="pS" width="784" height="600"></svg></div>
+      <div class="card" id="pR"><div class="lbl" style="left:32px;top:28px">THE FIX · MORE ONE-WAY FLAPS</div>
+        <svg class="full" id="pRS" width="784" height="600"></svg>
+        <div class="ph" id="ph0" style="top:262px"><div class="k">HALF-WAVE</div><div class="v"></div></div>
+        <div class="ph" id="ph1" style="top:362px"><div class="k">FULL-WAVE</div><div class="v"></div></div>
+        <div id="pStrip"><span>Both halves used =</span><span class="acc">FULL-WAVE RECTIFICATION</span></div></div>
+    </div>
+
+    <!-- C: centre-tap breadboard -->
+    <div class="sc" id="sC">
+      <div class="card ck" id="ckC"><div class="lbl" style="left:32px;top:28px">CENTRE-TAP FULL-WAVE RECTIFIER</div>
+        <div class="tag" id="ckCE" style="right:32px;top:22px"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="#E8A317" stroke="#16213E" stroke-width="1.5"/></svg>ELECTRONS</div>
+        <svg class="full" id="cS" width="928" height="600"></svg></div>
+      <div class="card scc" id="scC"><div class="lbl" style="left:32px;top:28px">OSCILLOSCOPE</div><div class="tag" id="slowC" style="right:24px;top:22px">SLOW-MOTION VIEW</div><svg class="scS" id="scCS" width="592" height="200"></svg></div>
+      <div class="card rb" id="rbC"><div class="lbl" style="left:32px;top:28px">LIVE READOUT</div><div class="ro2" id="roC"></div></div>
+    </div>
+
+    <!-- B: bridge breadboard -->
+    <div class="sc" id="sB">
+      <div class="card ck" id="ckB"><div class="lbl" style="left:32px;top:28px">BRIDGE RECTIFIER</div>
+        <div class="tag" id="ckBE" style="right:32px;top:22px"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="#E8A317" stroke="#16213E" stroke-width="1.5"/></svg>ELECTRONS</div>
+        <svg class="full" id="bS" width="928" height="600"></svg></div>
+      <div class="card scc" id="scB"><div class="lbl" style="left:32px;top:28px">OSCILLOSCOPE</div><div class="tag" id="slowB" style="right:24px;top:22px">SLOW-MOTION VIEW</div><svg class="scS" id="scBS" width="592" height="200"></svg></div>
+      <div class="card rb" id="rbB"><div class="lbl" style="left:32px;top:28px">WHICH DIODES CONDUCT</div><svg class="full" id="bDS" width="640" height="268"></svg></div>
+    </div>
+
+    <!-- R: derivation -->
+    <div class="sc" id="sR">
+      <div class="card" id="rL"><div class="lbl" style="left:32px;top:28px">INPUT AND OUTPUT</div>
+        <svg class="full" id="rS" width="784" height="600"></svg></div>
+      <div class="card" id="rR"><div class="lbl" style="left:36px;top:28px">DERIVATION · DC VALUE</div><div class="box" id="rBox"></div><div id="rSteps"></div></div>
+    </div>
+
+    <!-- K: compare -->
+    <div class="sc" id="sK">
+      <div class="card" id="kL"><div class="lbl" style="left:32px;top:28px">TWO HUMPS PER CYCLE · PIV</div>
+        <svg id="kScope" width="720" height="220"></svg><svg class="full" id="kS" width="784" height="600" style="pointer-events:none"></svg></div>
+      <div class="card" id="kR"><div class="lbl" style="left:36px;top:28px">CENTRE TAP VS BRIDGE</div>
+        <div class="th" id="thA" style="left:342px">Centre tap</div><div class="th" id="thB" style="left:542px">Bridge</div><div id="kTb"></div></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div class="sc" id="sW">
+      <div class="card" id="wL"><div class="lbl" style="left:32px;top:28px">BRIDGE OUTPUT · 20 V PEAK, 1 kΩ</div>
+        <svg class="full" id="wS" width="784" height="600"></svg><div id="wTiles"></div></div>
+      <div class="card" id="wR"><div class="lbl" style="left:36px;top:28px">WORKED EXAMPLE</div><div class="box" id="wBox"></div><div id="wSteps"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div class="sc" id="sX"><div class="card red" id="trap"></div>
+      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">REVERSE VOLTAGE ON A RESTING DIODE</div><svg class="full" id="tcS" width="784" height="300"></svg></div>
+      <div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div class="sc" id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + next -->
+    <div class="sc" id="sF"></div>
+  </div>
+  <div id="stmt"><div id="st1">Full-wave means no half is wasted.</div><div id="st2">Every half cycle becomes <span class="acc">a hump</span>.</div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

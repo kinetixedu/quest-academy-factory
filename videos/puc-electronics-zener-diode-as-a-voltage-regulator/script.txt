@@ -1,0 +1,60 @@
+H1|0.35|Aarav's bicycle has a small dynamo that powers its lamp.
+H2|0.35|Pedal fast, and the lamp blazes. Pedal slow, and it fades.
+H3|0.35|The dynamo voltage keeps changing with his speed.
+H4|0.6|A phone would hate that. How do we hold a voltage steady?
+P1|0.35|Think of a water tank with an overflow pipe near the top.
+P2|0.35|Pour in more water, and the extra just spills out of the overflow.
+P3|0.6|Pour in less, and less spills. The water level stays the same.
+P4|0.35|In electronics, that overflow pipe is a Zener diode.
+P5|0.35|Its symbol is a diode with a bent bar, like a Z.
+P6|0.35|We connect it backwards, in reverse bias, on purpose.
+P7|0.35|A normal diode can be damaged if pushed too hard backwards.
+P8|0.65|A Zener is built for it. It is very heavily doped.
+G1|0.35|Look at its graph. Forward, it acts like a normal diode.
+G2|0.35|Backwards, almost no current flows, until one special voltage.
+G3|0.35|That is the Zener voltage, V z. The breakdown point.
+G4|0.35|Past V z, the current can shoot up a lot.
+G5|0.65|But the voltage barely moves. It stays stuck at V z.
+B1|0.35|Now build a regulator on the breadboard.
+B2|0.35|A changing input, a series resistor R, and the Zener across the load.
+B3|0.35|The load gets whatever voltage the Zener holds. That is V z.
+B4|0.35|Let the input rise. More current flows through R.
+B5|0.35|The Zener soaks up the extra current, like the overflow pipe.
+B6|0.35|Now let the input fall. The Zener takes less current.
+B7|0.65|Through it all, the load voltage stays at V z.
+T1|0.8|A Zener in breakdown holds its voltage. Extra current spills through it.
+R1|0.35|Let's find every current, step by step.
+R2|0.7|The resistor R takes the leftover voltage, V in minus V z.
+R3|0.7|So the current through R is V in minus V z, over R.
+R4|0.7|The load current, I L, is V z over R L.
+R5|0.7|The Zener takes the rest. I z equals I minus I L.
+R6|0.65|Zener power is V z times I z. Keep it below the rating.
+K1|0.35|Two rules keep the regulator working.
+K2|0.35|One. The input must stay above V z, or the Zener switches off.
+K3|0.6|Two. Zener current must stay between a small minimum and a safe maximum.
+K4|0.65|Too little, and it stops holding. Too much, and it overheats.
+W1|0.35|Worked example. The input is fifteen volts. The Zener is nine volts.
+W2|0.35|R is two hundred ohms. The load is one kilo-ohm.
+W3|0.6|I is fifteen minus nine, over two hundred. That is thirty milliamperes.
+W4|0.6|I L is nine over one thousand. Nine milliamperes.
+W5|0.6|So I z is thirty minus nine. Twenty one milliamperes.
+W6|0.6|Zener power is nine volts times twenty one milliamperes.
+W7|0.6|That is about zero point one nine watts.
+W8|0.65|At eighteen volts in, I z grows. The load still gets nine.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students assume the Zener is always at V z.
+X3|0.35|First check it. Remove the Zener and find the load voltage.
+X4|0.65|Only if that is above V z does the Zener break down and regulate.
+X5|0.35|Where is this asked? PUC board papers.
+X6|0.35|JEE Main asks Zener regulator currents often, like January twenty twenty four.
+X7|0.65|Expect to find the Zener current, the series resistor, or the power.
+Q0|0.35|Try this. A six volt Zener has a hundred ohm series resistor.
+Q1|5.6|The input is ten volts, the load three hundred ohms. Find the Zener current.
+A1|0.35|B. Twenty milliamperes.
+A2|0.35|First check. Without the Zener, the load gets seven point five volts.
+A3|0.35|That is above six, so the Zener regulates at six volts.
+A4|0.35|I is ten minus six, over one hundred. Forty milliamperes.
+A5|0.35|I L is six over three hundred. Twenty milliamperes.
+A6|0.65|So I z is forty minus twenty. Twenty milliamperes.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, diodes that work with light: the light emitting diode, photodiode and solar cell.

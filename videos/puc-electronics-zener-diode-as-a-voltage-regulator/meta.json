@@ -1,0 +1,31 @@
+{
+ "world": "puc-electronics",
+ "topic": "Zener Diode as a Voltage Regulator",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 45
+ },
+ "class": "11",
+ "title": "How a Zener Holds Voltage Explained Simply | PUC Electronics Class 11",
+ "description": "Aarav's bicycle dynamo makes the lamp blaze when he pedals fast and fade when he slows down. A phone cannot live with a voltage like that. How do we hold a voltage steady? We start with a water tank and an overflow pipe, then meet the real part: the Zener diode, heavily doped and connected in reverse bias on purpose.\n\nWe read the Zener V-I characteristic (almost no reverse current until breakdown at V_z, then the current shoots up while the voltage stays stuck). On a live breadboard the input rises and falls while the oscilloscope shows the changing input (CH1) and a steady 9 V across the load (CH2), and the Zener soaks up the extra current. We find every current step by step: I = (V_in - V_z)/R, I_L = V_z/R_L, I_z = I - I_L and P_z = V_z I_z, then the rules for a working regulator. A worked example, the exam trap (check that the Zener actually breaks down before using V_z), where it is asked, an original JEE Main pattern practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 45 of PUC Electronics. Karnataka I PUC Electronics Ch 6: Semiconductors, Diodes and Applications of Diodes.\n\nIn this video:\n0:00 A dynamo whose voltage keeps changing\n0:16 The overflow pipe and the Zener diode\n0:48 Zener V-I characteristic and breakdown\n1:09 Zener regulator on a breadboard\n1:42 Finding I, I_L and I_z\n2:08 Rules for a working regulator\n2:25 Worked example\n3:02 Exam trap: check before you assume V_z\n3:16 Where it is asked\n3:31 Practice question\n4:10 Formula card\n\nNext episode: LED, Photodiode and Solar Cell.\n\nVideo by Quest Academy.",
+ "tags": [
+  "Zener diode",
+  "Zener diode as a voltage regulator",
+  "Zener breakdown",
+  "Zener V-I characteristic",
+  "voltage regulator",
+  "Zener current calculation",
+  "series resistor Zener",
+  "Zener power rating",
+  "JEE Main semiconductor",
+  "JEE Main Zener questions",
+  "Karnataka PUC electronics",
+  "1st PUC electronics chapter 6",
+  "class 11 electronics"
+ ],
+ "thumb": {
+  "title": "Hold the Voltage",
+  "accent_word": "Hold",
+  "frame_t": 86.8
+ }
+}

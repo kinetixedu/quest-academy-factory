@@ -50,13 +50,13 @@ W3|0.35|The input is five volts, through a base resistor of ten kilo ohms.
 W4|0.7|The base current is five minus zero point seven, over ten kilo ohms.
 W5|0.7|That is zero point four three milliamperes.
 W6|0.7|Beta times this asks for forty three milliamperes.
-W7|0.7|But the lamp circuit can carry at most five volts over one kilo ohm. Just five milliamperes.
-W8|0.65|The base asks for more than the circuit can give. So the transistor is saturated. The lamp is fully on.
+W7|0.7|But the lamp circuit can carry at most five volts over one kilo ohm. That is five milliamperes.
+W8|0.65|The base asks for more than the circuit can give. So the transistor is saturated, and the lamp is fully on.
 X1|0.35|Now, the exam trap.
 X2|0.35|Many students think the amplified output moves in step with the input.
 X3|0.65|In a common emitter amplifier, it does not. The output is one eighty degrees out of phase.
 X4|0.35|And the transistor does not make energy. The extra power comes from the supply.
-X5|0.65|Where is this asked? In P U C and I S C board papers.
+X5|0.65|Where is this asked? In P U C board papers.
 X6|0.65|Draw the circuit, explain the switch and the amplifier, and find the currents and the gain.
 Q1|5.4|Try this. A common emitter amplifier has beta fifty, an input resistance of one kilo ohm, and a collector resistance of five kilo ohms. A ten millivolt signal goes in. What comes out?
 A1|0.35|C. Two point five volts, one eighty degrees out of phase.

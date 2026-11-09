@@ -1,0 +1,57 @@
+H1|0.3|Aarav turns up the bass knob on his music speaker.
+H2|0.3|The deep drums get louder. The high cymbals stay the same.
+H3|0.5|How can a circuit pick out only the low notes?
+I1|0.35|Think of a sieve. Pour in sand and pebbles together.
+I2|0.35|The fine sand slips through. The pebbles stay behind.
+I3|0.65|A filter does this with signals. It passes some frequencies and blocks others.
+I4|0.35|Frequency means how many times a wave shakes each second.
+I5|0.65|Low notes shake slowly. High notes shake fast.
+K1|0.35|The secret part is the capacitor.
+K2|0.35|Its opposition to A C is called reactance, X C.
+K3|0.7|X C equals one over two pi f C.
+K4|0.35|At low frequency, X C is huge. The capacitor acts like a wall.
+K5|0.65|At high frequency, X C is tiny. It acts like a shortcut.
+B1|0.35|Let's build a low pass filter on the breadboard.
+B2|0.35|A signal generator, a resistor in series, and a capacitor across the output.
+B3|0.35|The scope shows the input in blue, and the output in amber. In slow motion.
+B4|0.35|At one hundred hertz, the output is almost the full input.
+B5|0.35|Turn up to one kilohertz. The output drops to about seventy one percent.
+B6|0.35|At ten kilohertz, only about ten percent gets through.
+B7|0.65|Low notes pass. High notes are shorted away by the capacitor.
+B8|0.35|Now swap the resistor and the capacitor. Take the output across the resistor.
+B9|0.35|This is a high pass filter. Watch the same three frequencies.
+B10|0.65|Now low notes are blocked, and high notes pass.
+D1|0.35|Why? Each filter is a voltage divider.
+D2|0.7|For the low pass, V out over V in equals X C over Z.
+D3|0.7|Z is the impedance, root of R squared plus X C squared.
+D4|0.35|There is one special frequency, where X C equals R.
+D5|0.7|There, V out is one over root two times V in. About seventy point seven percent.
+D6|0.7|This is the cut off frequency, f c. Half the power gets through.
+D7|0.7|Set one over two pi f C equal to R.
+D8|0.7|You get f c equals one over two pi R C.
+G1|0.35|Now plot the output against frequency. This is the frequency response.
+G2|0.35|The low pass curve stays flat, then falls after f c.
+G3|0.35|The high pass curve rises, then stays flat after f c.
+G4|0.65|Both cross at seventy point seven percent, right at the cut off frequency.
+T1|0.8|Low pass keeps the slow waves. High pass keeps the fast ones.
+W1|0.35|Worked example. Our breadboard used one point six kilo ohms.
+W1b|0.35|And a capacitor of zero point one microfarad.
+W2|0.7|f c equals one over two pi R C.
+W3|0.35|Two pi times sixteen hundred times zero point one millionth.
+W3b|0.65|That is about one point zero zero five times ten to the minus three.
+W4|0.65|One over that is about nine hundred ninety five hertz. Nearly one kilohertz.
+W5|0.65|That is why the output fell to seventy one percent at one kilohertz.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students say that at cut off, the output is half the input.
+X3|0.35|It is not. The output voltage is seventy point seven percent.
+X4|0.65|It is the power that falls to half.
+X5|0.35|Where is this asked? In PUC board papers.
+X6|0.65|Draw the low pass or high pass circuit, its response curve, and find f c.
+Q1|5.4|Try this. A high pass filter has R equal to two kilo ohms and C equal to zero point zero five microfarad. A ten volt signal comes in at the cut off frequency. Find f c and the output. Take pi as three point one four.
+A1|0.35|B. About one point five nine kilohertz, and seven point zero seven volts.
+A2|0.35|f c equals one over two pi R C.
+A3|0.35|Two pi times two thousand times zero point zero five millionth is six point two eight times ten to the minus four.
+A4|0.35|One over that is about fifteen hundred and ninety hertz.
+A5|0.65|At cut off, V out is ten over root two. About seven point zero seven volts.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, energy bands. Why does copper carry current, but glass does not?

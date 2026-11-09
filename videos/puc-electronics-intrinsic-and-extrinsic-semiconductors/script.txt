@@ -1,0 +1,74 @@
+H1|0.35|Aarav reads how chips are made.
+H2|0.35|First, silicon is cleaned until it is purer than almost anything.
+H3|0.5|Then the factory adds impurity back in. On purpose!
+I1|0.35|Why clean it, just to make it dirty again?
+I2|0.65|Because the right impurity turns silicon into a useful conductor.
+L1|0.35|Think of a class where every student holds hands with four friends.
+L2|0.35|Nobody is free to walk around. Everyone is busy holding hands.
+L3|0.6|That is pure silicon. Each atom has four outer electrons.
+L4|0.6|It shares them with four neighbours. Each shared pair is a covalent bond.
+L5|0.35|Now warm the crystal a little, to room temperature.
+L6|0.6|Heat shakes one bond loose. An electron breaks free and wanders off.
+L7|0.6|It leaves behind an empty spot. We call it a hole.
+L8|0.35|A hole acts like a positive charge.
+L9|0.35|A neighbour's electron hops into the hole.
+L10|0.6|Now the hole has moved one step the other way.
+L11|0.6|Like an empty seat moving down a cinema row as people shift.
+P1|0.35|Every free electron made this way leaves exactly one hole.
+P2|0.6|So in pure silicon, electrons and holes are always equal in number.
+P3|0.6|We write n e equals n h equals n i.
+P4|0.6|n i is the intrinsic carrier concentration. Intrinsic means pure, with nothing added.
+P5|0.35|For silicon at room temperature, n i is tiny.
+P5b|0.65|About one point five times ten to the sixteen per cubic metre.
+P6|0.6|That sounds big. But a cubic metre of silicon has far more atoms.
+P6b|0.65|Five times ten to the twenty eight of them.
+P7|0.6|So only about one atom in three trillion frees an electron.
+P7b|0.65|That is why pure silicon is a poor conductor.
+D1|0.35|Now we add impurity. This is called doping.
+D2|0.35|Silicon with impurity added is an extrinsic semiconductor.
+D3|0.35|First, add a few arsenic atoms.
+D4|0.6|Arsenic is pentavalent. That means it has five outer electrons.
+D5|0.6|Four of them join bonds with silicon. The fifth one has no partner.
+D6|0.6|A tiny push, about point zero five electron volts, sets it free.
+D7|0.6|Arsenic donates an electron, so it is called a donor.
+D8|0.65|Now electrons far outnumber holes. This is n-type. Electrons are the majority carriers.
+D9|0.35|Next, add indium instead.
+D10|0.6|Indium is trivalent. It has only three outer electrons.
+D11|0.6|One bond is left with a missing electron. That is a ready-made hole.
+D12|0.6|Indium accepts an electron to fill it, so it is called an acceptor.
+D13|0.65|Now holes are the majority. This is p-type. Electrons become the minority.
+T1|0.8|A pinch of impurity brings a flood of carriers.
+B1|0.35|Let's see it on the breadboard.
+B2|0.35|A battery drives current through a small block of silicon.
+B3|0.35|Pure silicon first. The current on the scope is tiny.
+B4|0.35|Now dope it. One arsenic atom for every ten million silicon atoms.
+B5|0.65|Watch the scope jump. Free electrons pour into the circuit.
+B6|0.35|Look at the readout. Electrons went up hugely.
+B7|0.65|But holes went down. Why would holes drop?
+M1|0.35|Think of a seesaw.
+M2|0.6|More free electrons means more of them fall into holes and fill them.
+M3|0.6|This filling is called recombination. So the holes get fewer.
+M4|0.6|The rule is n e times n h equals n i squared.
+M5|0.65|It is called the mass action law. It holds in pure and doped crystals alike.
+W1|0.35|Worked example. Our doped silicon block.
+W2|0.6|Silicon has five times ten to the twenty eight atoms per cubic metre.
+W3|0.7|One arsenic per ten million gives five times ten to the twenty one donors.
+W4|0.7|Each donor gives one electron. So n e is five times ten to the twenty one.
+W5|0.7|Holes: n h equals n i squared divided by n e.
+W6|0.7|Square one point five times ten to the sixteen.
+W6b|0.7|That gives two point two five times ten to the thirty two.
+W7|0.7|Divide by five times ten to the twenty one.
+W7b|0.7|n h is four point five times ten to the ten.
+W8|0.65|Electrons now beat holes by about a hundred billion to one.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students say n-type silicon is negatively charged. It is not.
+X3|0.65|Each extra electron leaves behind a fixed positive arsenic ion. The crystal stays neutral.
+X4|0.35|Where is this asked? PUC, CBSE and ISC boards ask about doping and carriers.
+X5|0.65|JEE Main uses the mass action law, as in July twenty twenty one.
+Q1|5.4|Try this. Germanium has n i of two point four times ten to the nineteen. It is doped with indium, four point eight times ten to the twenty one per cubic metre. Which is correct?
+A1|0.35|A. It is p-type, with electrons at one point two times ten to the seventeen.
+A2|0.35|Indium is trivalent, an acceptor. So holes are the majority, and it is p-type.
+A3|0.35|n h is about equal to the acceptor count, four point eight times ten to the twenty one.
+A4|0.65|n e is n i squared over n h. That gives one point two times ten to the seventeen.
+F1|3.2|Screenshot this card.
+NX|0.6|Next, the p-n junction. What happens where p-type silicon meets n-type?

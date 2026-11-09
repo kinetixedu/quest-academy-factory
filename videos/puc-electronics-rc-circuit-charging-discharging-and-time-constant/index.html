@@ -71,11 +71,11 @@
     <div class="sc" id="sA">
       <div class="card" id="aC"><div class="lbl" style="left:32px;top:28px">AARAV · PCME · JEE</div>
         <img id="aImg" src="../../assets/illustrations/puc/aarav.png" alt=""></div>
-      <div class="card" id="h1C"><div class="lbl" style="left:32px;top:28px">PHOTO 1 · FLASH</div>
+      <div class="card" id="h1C"><div class="lbl" style="left:32px;top:28px">PHOTO 1 · THE FLASH FIRES</div>
         <svg id="h1S" width="290" height="190" style="position:absolute;left:24px;top:72px"></svg>
         <div class="txt" id="h1T" style="left:330px;top:92px;font-weight:600">Fires in a blink</div>
         <div class="sm" id="h1M" style="left:330px;top:150px">a big burst of light</div></div>
-      <div class="card" id="h2C"><div class="lbl" style="left:32px;top:28px">PHOTO 2 · FLASH NOT READY</div>
+      <div class="card" id="h2C"><div class="lbl" style="left:32px;top:28px">PHOTO 2 · NOT READY YET</div>
         <svg id="h2S" width="290" height="190" style="position:absolute;left:24px;top:72px"></svg>
         <div class="txt" id="h2T" style="left:330px;top:92px;font-weight:600">Wait a few seconds</div><div class="bar" id="h2B"><i></i></div>
         <div class="sm" id="h2M" style="left:330px;top:150px">charging the flash</div>
@@ -86,7 +86,8 @@
     <div class="sc" id="sI">
       <div class="card L2" id="iL"><div class="lbl" style="left:32px;top:28px">LIKE FILLING A WATER TANK</div>
         <svg class="full" id="iS" width="784" height="600"></svg></div>
-      <div class="card R2" id="iR"><div class="lbl" style="left:36px;top:28px">IN A CIRCUIT</div>
+      <div class="card R2" id="iR"><div class="lbl" id="iRL1" style="left:36px;top:28px">LEVEL AND FLOW · LIVE</div><div class="lbl" id="iRL2" style="left:36px;top:28px">IN A CIRCUIT</div>
+        <svg class="full" id="iG" width="784" height="600"></svg>
         <div class="tile" id="it0" style="top:76px"><div class="tl">THE TANK</div><div class="tn">is a capacitor, C</div><svg width="150" height="80"></svg></div>
         <div class="tile" id="it1" style="top:228px"><div class="tl">THE THIN PIPE</div><div class="tn">is a resistor, R</div><svg width="150" height="80"></svg></div>
         <div class="strip" id="iStrip" style="top:404px"><span id="iZ"></span><span>R + C together: <span class="acc">an RC circuit</span></span></div>
@@ -98,14 +99,15 @@
       <div class="card" id="ck"><div class="lbl" style="left:32px;top:28px">CIRCUIT · CHARGE, THEN DISCHARGE</div>
         <div class="tag" id="ckE" style="right:32px;top:22px"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="#E8A317" stroke="#16213E" stroke-width="1.5"/></svg>ELECTRONS</div>
         <svg class="full" id="ckS" width="928" height="600"></svg></div>
-      <div class="card" id="sc"><div class="lbl" style="left:32px;top:28px">OSCILLOSCOPE</div><div class="tag" id="slowT" style="right:24px;top:22px">SLOW-MOTION VIEW</div><svg id="scS" width="592" height="200"></svg></div>
+      <div class="card" id="sc"><div class="lbl" style="left:32px;top:28px">OSCILLOSCOPE</div><div class="tag" id="slowT" style="right:24px;top:22px">REAL TIME · 2 s / DIV</div><svg id="scS" width="592" height="200"></svg></div>
       <div class="card" id="rb"><div class="lbl" style="left:32px;top:28px">LIVE READOUT</div><div class="ro2" id="ro1"></div></div>
     </div>
 
     <!-- M: why it slows down -->
     <div class="sc" id="sM">
       <div class="card L2" id="mL"><div class="lbl" style="left:32px;top:28px">THE 10 V IS SHARED</div>
-        <svg class="full" id="mS" width="784" height="600"></svg></div>
+        <svg class="full" id="mS" width="784" height="600"></svg>
+        <div class="tag" id="mT" style="left:32px;top:520px">CHARGING · LIVE</div></div>
       <div class="card R2" id="mR"><div class="lbl" style="left:36px;top:28px">WHY THE FILLING SLOWS</div>
         <div id="mSteps"></div>
         <div class="strip" id="mStrip" style="top:494px"><span id="mZ"></span><span>Less current, <span class="acc">slower filling.</span></span></div></div>
@@ -119,7 +121,8 @@
         <div class="hbox" id="cBox" style="top:76px;height:120px"></div>
         <div id="cF" style="position:absolute;left:56px;top:96px;font-size:52px"></div>
         <div class="sm" id="cFu" style="left:420px;top:122px;font-size:24px">in seconds</div>
-        <div class="tb" id="cTb" style="top:226px"></div></div>
+        <div class="tb" id="cTb" style="top:226px"></div>
+        <div class="strip" id="cStrip" style="top:494px"><span id="cZ"></span><span>Bigger R or C: <span class="acc">slower filling</span></span></div></div>
     </div>
 
     <!-- D: the rules -->
@@ -134,7 +137,8 @@
     <!-- W: worked example -->
     <div class="sc" id="sW">
       <div class="card L2" id="wL"><div class="lbl" style="left:32px;top:28px">WORKED EXAMPLE · OUR BREADBOARD</div>
-        <svg class="full" id="wS" width="784" height="600"></svg></div>
+        <svg class="full" id="wS" width="784" height="600"></svg>
+        <div class="strip" id="wStrip" style="top:496px"><span id="wZ"></span><span>The flash: <span class="acc">a few τ to refill</span></span></div></div>
       <div class="card R2" id="wR"><div class="lbl" style="left:36px;top:28px">WORKED EXAMPLE</div>
         <div class="hbox" id="wBox" style="top:268px;height:96px"></div><div id="wSteps"></div></div>
     </div>
