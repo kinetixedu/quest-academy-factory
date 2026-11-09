@@ -1,0 +1,131 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Electronics Ep 41 - Diode V-I Characteristics</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== Breadboard (PUC Electronics) layout ===== */
+.sc{position:absolute;left:0;top:0;width:1920px;height:1080px}
+.card svg.full{position:absolute;left:0;top:0}
+.big{position:absolute;font:600 56px 'IBM Plex Mono';white-space:nowrap}
+.sm{position:absolute;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.txt{position:absolute;font:500 30px/1.35 Poppins;white-space:nowrap}
+#ghost{top:168px}
+/* hook */
+#aC{left:160px;top:260px;width:784px;height:600px;overflow:hidden}
+#aImg{position:absolute;left:24px;top:84px;height:516px}
+#h1C{left:976px;top:260px;width:784px;height:284px}
+#h2C{left:976px;top:576px;width:784px;height:284px}
+.L2{left:160px;top:260px;width:784px;height:600px}.R2{left:976px;top:260px;width:784px;height:600px}
+.tile{position:absolute;left:32px;width:720px;height:132px;border-radius:14px;background:var(--soft)}
+.tile .tl{position:absolute;left:24px;top:24px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.tile .tn{position:absolute;left:24px;top:58px;font:700 34px Poppins;color:var(--ink);white-space:nowrap}
+.hbox{position:absolute;left:24px;width:736px;border-radius:14px;background:var(--ac2)}
+.fx{position:absolute;white-space:nowrap}
+/* breadboard */
+#ck{left:160px;top:260px;width:928px;height:600px}
+#sc{left:1120px;top:260px;width:640px;height:300px}
+#rb{left:1120px;top:592px;width:640px;height:268px}
+#scS{position:absolute;left:24px;top:76px}
+.ro2{position:absolute;left:32px;top:76px;width:576px;display:grid;grid-template-columns:auto 1fr auto;column-gap:18px;row-gap:14px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .v{font:600 38px 'IBM Plex Mono';text-align:right;white-space:nowrap}.ro2 .v sup{font-size:.55em}
+.ro2 .u{font:400 22px 'IBM Plex Mono';color:var(--mute);white-space:nowrap;min-width:52px}
+#ro1{top:72px;row-gap:8px}
+#ro1 .v{font-size:34px}
+/* worked example */
+.st2{position:absolute;left:36px;display:flex;align-items:center;gap:22px;white-space:nowrap}
+.st2 .n{flex:none;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st2 .sx{font-size:32px}
+.st2 .why{font:500 22px Poppins;color:var(--mute)}
+/* exam */
+#trap{left:160px;top:260px;width:784px;height:300px}
+#tc{left:976px;top:260px;width:784px;height:300px}
+#wa{left:160px;top:592px;width:1600px;height:268px}
+#mq{left:160px;top:260px;width:1040px;height:600px}
+#so{left:1232px;top:260px;width:528px;height:600px}
+#so .sol{left:32px}
+.fcard .fl{font-size:36px}
+.fcard .fl.txt{font:500 27px Poppins}
+
+#gc{left:1120px;top:260px;width:640px;height:300px}
+</style></head><body>
+<div id="stage">
+  <div class="edge"></div>
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · ELECTRONICS · CH 6 SEMICONDUCTORS, DIODES</div>
+    <div class="nchip" id="nchip2">NCERT · CLASS 12 PHYSICS · CH 14</div>
+    <div class="subj" id="subj">BREADBOARD</div>
+    <div id="title">The <span class="acc">one-way</span> door</div>
+    <div id="sub">Diode V-I characteristics</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E8A317" stroke-width="4" stroke-linecap="round"/></svg>
+    <div class="ghost" id="ghost">EXAMPLE FIGURES</div>
+
+    <!-- A: hook -->
+    <div class="sc" id="sA">
+      <div class="card" id="aC"><div class="lbl" style="left:32px;top:28px">AARAV · PCME · JEE</div>
+        <img id="aImg" src="../../assets/illustrations/puc/aarav.png" alt="">
+        <div class="pillp ac" id="aPill" style="left:470px;top:500px">His bike lamp</div></div>
+      <div class="card" id="h1C"><div class="lbl" style="left:32px;top:28px">BATTERIES IN ONE WAY</div>
+        <svg id="h1S" width="736" height="200" style="position:absolute;left:24px;top:66px"></svg></div>
+      <div class="card" id="h2C"><div class="lbl" style="left:32px;top:28px">BATTERIES FLIPPED</div>
+        <svg id="h2S" width="736" height="200" style="position:absolute;left:24px;top:66px"></svg></div>
+    </div>
+
+    <!-- G: swing door analogy -->
+    <div class="sc" id="sG">
+      <div class="card L2" id="gL"><div class="lbl" style="left:32px;top:28px">A HEAVY SWING DOOR · SEEN FROM ABOVE</div><svg class="full" id="gS" width="784" height="600"></svg></div>
+      <div class="card R2" id="gR"><div class="lbl" style="left:36px;top:28px">THE DIODE IS THE SAME</div>
+        <div class="tile" id="gt0" style="height:108px;top:76px"><div class="tl">PUSH FROM THE FRONT</div><div class="tn" style="font-size:30px">= forward bias</div></div>
+        <div class="tile" id="gt1" style="height:108px;top:200px"><div class="tl">THE SPRING YOU MUST BEAT</div><div class="tn" style="font-size:30px">= the barrier, about 0.7 V</div></div>
+        <div class="tile" id="gt2" style="height:108px;top:324px"><div class="tl">PUSH FROM THE BACK</div><div class="tn" style="font-size:30px">= reverse bias</div></div>
+        <div class="tile" id="gt3" style="height:108px;top:448px"><div class="tl">PUSH SO HARD IT BREAKS</div><div class="tn" style="font-size:30px">= breakdown</div></div></div>
+    </div>
+
+    <!-- F: forward and reverse bias -->
+    <div class="sc" id="sF2">
+      <div class="card L2" id="fL"><div class="lbl" style="left:32px;top:28px">FORWARD BIAS · p TO +</div><svg class="full" id="fS" width="784" height="600"></svg></div>
+      <div class="card R2" id="fR"><div class="lbl" style="left:36px;top:28px">REVERSE BIAS · p TO -</div><svg class="full" id="rS" width="784" height="600"></svg></div>
+    </div>
+
+    <!-- B: breadboard -->
+    <div class="sc" id="sB">
+      <div class="card" id="ck"><div class="lbl" style="left:32px;top:28px">MEASURE THE CURVE</div>
+        <div class="tag" id="ckE" style="right:32px;top:22px"><svg width="14" height="14"><circle cx="7" cy="7" r="6" fill="#E8A317" stroke="#16213E" stroke-width="1.5"/></svg>ELECTRONS</div>
+        <svg class="full" id="ckS" width="928" height="600"></svg>
+        <div class="pillp" id="mode" style="left:560px;top:470px;height:44px;font-size:21px"></div></div>
+      <div class="card" id="gc"><div class="lbl" style="left:32px;top:28px">V-I CURVE · LIVE PLOT</div><svg class="full" id="gcS" width="640" height="300"></svg></div>
+      <div class="card" id="rb"><div class="lbl" style="left:32px;top:28px">LIVE READOUT</div><div class="ro2" id="ro1"></div>
+        <div class="tag" id="zone" style="left:32px;top:196px"></div></div>
+    </div>
+
+    <!-- W: dynamic resistance + worked example -->
+    <div class="sc" id="sW">
+      <div class="card L2" id="wL"><div class="lbl" style="left:32px;top:28px">ZOOM ABOVE THE KNEE</div><svg class="full" id="wS" width="784" height="600"></svg>
+        <div class="pillp ink" id="wRev" style="left:32px;top:530px;height:44px;font-size:21px">Reverse: 10 V drives only 1 µA</div></div>
+      <div class="card R2" id="wR"><div class="lbl" style="left:36px;top:28px">DYNAMIC RESISTANCE</div>
+        <div class="hbox" id="dBox" style="top:76px;height:104px"></div><div class="txt" id="dDef" style="left:56px;top:88px;font-weight:600;white-space:normal;width:680px;font-size:27px">A small change in voltage divided by the change in current</div>
+        <div class="hbox" id="wBox"></div><div id="wSteps"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div class="sc" id="sX"><div class="card red" id="trap"></div>
+      <div class="card" id="tc"><div class="lbl" style="left:32px;top:28px">SLOPE CHANGES ALONG THE CURVE</div><svg class="full" id="tcS" width="784" height="300"></svg></div>
+      <div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div class="sc" id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + next -->
+    <div class="sc" id="sF"></div>
+  </div>
+  <div id="stmt"><div id="st1">A diode is a <span class="acc">one-way door</span></div><div id="st2">with a doorstep.</div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

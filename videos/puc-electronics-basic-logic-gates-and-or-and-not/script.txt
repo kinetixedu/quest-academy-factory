@@ -5,6 +5,7 @@ I1|0.35|Digital circuits use only two levels. One means high. Zero means low.
 I2|0.35|A logic gate takes one or more inputs, and gives one output.
 I3|0.35|Its rule is written in a truth table. It lists every input, and the output.
 I4|0.65|With two inputs, there are four rows. Zero zero, zero one, one zero, one one.
+I5|0.65|Three inputs give eight rows. In general, n inputs give two to the power n rows.
 D1|0.35|First, the AND gate. Think of two switches in a line, one after the other.
 D2|0.35|Current flows only if switch A and switch B are both closed.
 D3|0.35|Let's fill the truth table on the breadboard. Both off. The lamp is off. Zero.
@@ -13,20 +14,24 @@ D5|0.35|A off, B on. Zero again.
 D6|0.35|Both on. The lamp lights up. One.
 D7|0.35|So the output is one only when all the inputs are one.
 D8|0.65|We write Y equals A dot B. The dot means AND.
+D9|0.65|An AND gate can have three or more inputs. It still gives one only when every input is one.
 O1|0.35|Next, the OR gate. Now the two switches sit side by side.
 O2|0.35|Current can take either path.
 O3|0.35|Both off. Zero. A on. One. B on. One. Both on. One.
 O4|0.35|So the output is one when at least one input is one.
 O5|0.65|We write Y equals A plus B. Here, plus means OR. It does not mean adding.
+O6|0.65|Think of a doorbell with two buttons. Press either one, and it rings. That is OR.
 N1|0.35|Last, the NOT gate. It has only one input.
 N2|0.35|Here the switch sits across the lamp. Open the switch, and the lamp glows.
 N3|0.35|Close it, and the current skips the lamp. The lamp goes dark.
 N4|0.35|So the NOT gate flips the input. Zero becomes one. One becomes zero.
 N5|0.65|We write Y equals A bar. The bar means NOT. It is also called an inverter.
+N6|0.65|A NOT gate always has just one input. AND and OR can have two or more.
 S1|0.35|Now let's feed changing inputs, and watch the scope.
 S2|0.35|Input A switches slowly. Input B switches twice as fast.
 S3|0.35|The AND output is high only where both inputs are high.
 S4|0.65|Swap in an OR gate. Now the output is high wherever either input is high.
+S5|0.65|The gate follows its truth table, moment by moment.
 T1|0.8|AND needs all. OR needs any. NOT flips.
 W1|0.35|Worked example. A and B go into an OR gate. C goes into a NOT gate.
 W2|0.7|Both results go into an AND gate. So Y equals A plus B, dot C bar.

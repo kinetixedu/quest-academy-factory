@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "Basic Logic Gates: AND, OR and NOT",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 52
+ },
+ "class": "11",
+ "title": "Logic Gates AND, OR, NOT Explained Simply | PUC and ISC",
+ "description": "Aarav presses start on the microwave and nothing happens: the door is open. It runs only when the door is shut AND start is pressed. Two conditions, one decision, made by a logic gate. In this animated lesson we meet the three basic gates and their truth tables.\n\nOn a live breadboard, two switches in a line make an AND gate, two switches side by side make an OR gate, and a switch across a lamp makes a NOT gate. The truth table fills row by row as the switch tiles toggle, the lamp lights for every 1, and an oscilloscope shows inputs A and B and the output Y switching together. We write Y = A·B, Y = A + B and Y = A bar, see why n inputs give 2^n rows, and solve a three-gate circuit step by step. Then the exam trap (in an OR gate 1 + 1 = 1, not 2), where it is asked, an original JEE Main pattern practice question with a full solution, and a fact card to screenshot.\n\nThis is Episode 52 of PUC Electronics, Class 11, Chapter 8: Introduction to Digital Electronics (Karnataka I PUC Electronics) | ISC Class 12 Computer Science: logic gates (NOT, AND, OR) and truth tables. Logic gates are no longer in the rationalised NCERT/CBSE Physics book.\n\nIn this video:\n0:00 The microwave puzzle\n0:14 Two levels and the truth table\n0:41 AND gate on a breadboard\n1:18 OR gate\n1:45 NOT gate\n2:14 Watching the gates on a scope\n2:40 Worked example: three gates\n3:05 Exam trap: 1 + 1 = 1\n3:17 Where it is asked\n3:34 Practice question\n4:03 Fact card\n\nNext episode: Universal Gates: NAND and NOR.\n\nVideo by Quest Academy.",
+ "tags": [
+  "logic gates",
+  "AND gate",
+  "OR gate",
+  "NOT gate",
+  "truth table",
+  "Boolean expression",
+  "logic gates truth table",
+  "digital electronics basics",
+  "JEE Main logic gates",
+  "NEET logic gates",
+  "PUC electronics",
+  "1st PUC electronics chapter 8",
+  "ISC computer science logic gates",
+  "Karnataka PUC electronics"
+ ],
+ "thumb": {
+  "title": "Who Decides Yes or No?",
+  "accent_word": "Yes",
+  "frame_t": 100
+ }
+}

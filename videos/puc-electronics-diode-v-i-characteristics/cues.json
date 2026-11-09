@@ -1,0 +1,2851 @@
+{
+ "lines": {
+  "H1": {
+   "t0": 0.45,
+   "t1": 3.168,
+   "text": "Aarav puts new batteries into his bike lamp.",
+   "words": [
+    {
+     "w": "Aarav",
+     "t": 0.45
+    },
+    {
+     "w": "puts",
+     "t": 0.784
+    },
+    {
+     "w": "new",
+     "t": 1.071
+    },
+    {
+     "w": "batteries",
+     "t": 1.313
+    },
+    {
+     "w": "into",
+     "t": 1.832
+    },
+    {
+     "w": "his",
+     "t": 2.119
+    },
+    {
+     "w": "bike",
+     "t": 2.361
+    },
+    {
+     "w": "lamp.",
+     "t": 2.648
+    }
+   ]
+  },
+  "H2": {
+   "t0": 3.518,
+   "t1": 6.085,
+   "text": "He clicks the switch. Nothing happens.",
+   "words": [
+    {
+     "w": "He",
+     "t": 3.518
+    },
+    {
+     "w": "clicks",
+     "t": 3.717
+    },
+    {
+     "w": "the",
+     "t": 4.105
+    },
+    {
+     "w": "switch.",
+     "t": 4.351
+    },
+    {
+     "w": "Nothing",
+     "t": 4.977
+    },
+    {
+     "w": "happens.",
+     "t": 5.413
+    }
+   ]
+  },
+  "H3": {
+   "t0": 6.435,
+   "t1": 9.482,
+   "text": "He flips the batteries around. Now it shines!",
+   "words": [
+    {
+     "w": "He",
+     "t": 6.435
+    },
+    {
+     "w": "flips",
+     "t": 6.636
+    },
+    {
+     "w": "the",
+     "t": 6.981
+    },
+    {
+     "w": "batteries",
+     "t": 7.231
+    },
+    {
+     "w": "around.",
+     "t": 7.767
+    },
+    {
+     "w": "Now",
+     "t": 8.4
+    },
+    {
+     "w": "it",
+     "t": 8.649
+    },
+    {
+     "w": "shines!",
+     "t": 8.85
+    }
+   ]
+  },
+  "I1": {
+   "t0": 9.982,
+   "t1": 12.933,
+   "text": "Inside the lamp is a diode, a p-n junction.",
+   "words": [
+    {
+     "w": "Inside",
+     "t": 9.982
+    },
+    {
+     "w": "the",
+     "t": 10.387
+    },
+    {
+     "w": "lamp",
+     "t": 10.643
+    },
+    {
+     "w": "is",
+     "t": 10.949
+    },
+    {
+     "w": "a",
+     "t": 11.156
+    },
+    {
+     "w": "diode,",
+     "t": 11.314
+    },
+    {
+     "w": "a",
+     "t": 11.818
+    },
+    {
+     "w": "p-n",
+     "t": 11.976
+    },
+    {
+     "w": "junction.",
+     "t": 12.183
+    }
+   ]
+  },
+  "I2": {
+   "t0": 13.283,
+   "t1": 17.133,
+   "text": "It lets current through one way only. Let's see exactly how.",
+   "words": [
+    {
+     "w": "It",
+     "t": 13.283
+    },
+    {
+     "w": "lets",
+     "t": 13.482
+    },
+    {
+     "w": "current",
+     "t": 13.776
+    },
+    {
+     "w": "through",
+     "t": 14.212
+    },
+    {
+     "w": "one",
+     "t": 14.648
+    },
+    {
+     "w": "way",
+     "t": 14.895
+    },
+    {
+     "w": "only.",
+     "t": 15.141
+    },
+    {
+     "w": "Let's",
+     "t": 15.673
+    },
+    {
+     "w": "see",
+     "t": 15.967
+    },
+    {
+     "w": "exactly",
+     "t": 16.213
+    },
+    {
+     "w": "how.",
+     "t": 16.649
+    }
+   ]
+  },
+  "G1": {
+   "t0": 17.783,
+   "t1": 20.494,
+   "text": "Think of a heavy swing door with a strong spring.",
+   "words": [
+    {
+     "w": "Think",
+     "t": 17.783
+    },
+    {
+     "w": "of",
+     "t": 18.079
+    },
+    {
+     "w": "a",
+     "t": 18.251
+    },
+    {
+     "w": "heavy",
+     "t": 18.383
+    },
+    {
+     "w": "swing",
+     "t": 18.678
+    },
+    {
+     "w": "door",
+     "t": 18.974
+    },
+    {
+     "w": "with",
+     "t": 19.229
+    },
+    {
+     "w": "a",
+     "t": 19.484
+    },
+    {
+     "w": "strong",
+     "t": 19.615
+    },
+    {
+     "w": "spring.",
+     "t": 19.952
+    }
+   ]
+  },
+  "G2": {
+   "t0": 20.844,
+   "t1": 24.045,
+   "text": "Push it gently from the front. It does not move.",
+   "words": [
+    {
+     "w": "Push",
+     "t": 20.844
+    },
+    {
+     "w": "it",
+     "t": 21.132
+    },
+    {
+     "w": "gently",
+     "t": 21.326
+    },
+    {
+     "w": "from",
+     "t": 21.707
+    },
+    {
+     "w": "the",
+     "t": 21.994
+    },
+    {
+     "w": "front.",
+     "t": 22.236
+    },
+    {
+     "w": "It",
+     "t": 22.801
+    },
+    {
+     "w": "does",
+     "t": 22.996
+    },
+    {
+     "w": "not",
+     "t": 23.284
+    },
+    {
+     "w": "move.",
+     "t": 23.525
+    }
+   ]
+  },
+  "G3": {
+   "t0": 24.395,
+   "t1": 27.974,
+   "text": "Push harder, past a certain point, and it swings wide open.",
+   "words": [
+    {
+     "w": "Push",
+     "t": 24.395
+    },
+    {
+     "w": "harder,",
+     "t": 24.668
+    },
+    {
+     "w": "past",
+     "t": 25.162
+    },
+    {
+     "w": "a",
+     "t": 25.435
+    },
+    {
+     "w": "certain",
+     "t": 25.576
+    },
+    {
+     "w": "point,",
+     "t": 25.982
+    },
+    {
+     "w": "and",
+     "t": 26.431
+    },
+    {
+     "w": "it",
+     "t": 26.661
+    },
+    {
+     "w": "swings",
+     "t": 26.846
+    },
+    {
+     "w": "wide",
+     "t": 27.207
+    },
+    {
+     "w": "open.",
+     "t": 27.481
+    }
+   ]
+  },
+  "G4": {
+   "t0": 28.574,
+   "t1": 30.45,
+   "text": "Push from the back, and it stays shut.",
+   "words": [
+    {
+     "w": "Push",
+     "t": 28.574
+    },
+    {
+     "w": "from",
+     "t": 28.787
+    },
+    {
+     "w": "the",
+     "t": 29.0
+    },
+    {
+     "w": "back,",
+     "t": 29.179
+    },
+    {
+     "w": "and",
+     "t": 29.495
+    },
+    {
+     "w": "it",
+     "t": 29.674
+    },
+    {
+     "w": "stays",
+     "t": 29.818
+    },
+    {
+     "w": "shut.",
+     "t": 30.065
+    }
+   ]
+  },
+  "G5": {
+   "t0": 31.05,
+   "t1": 33.366,
+   "text": "Unless you push so hard that you break it.",
+   "words": [
+    {
+     "w": "Unless",
+     "t": 31.05
+    },
+    {
+     "w": "you",
+     "t": 31.379
+    },
+    {
+     "w": "push",
+     "t": 31.587
+    },
+    {
+     "w": "so",
+     "t": 31.836
+    },
+    {
+     "w": "hard",
+     "t": 32.004
+    },
+    {
+     "w": "that",
+     "t": 32.252
+    },
+    {
+     "w": "you",
+     "t": 32.501
+    },
+    {
+     "w": "break",
+     "t": 32.709
+    },
+    {
+     "w": "it.",
+     "t": 32.997
+    }
+   ]
+  },
+  "F1": {
+   "t0": 34.016,
+   "t1": 35.498,
+   "text": "Now the real diode.",
+   "words": [
+    {
+     "w": "Now",
+     "t": 34.016
+    },
+    {
+     "w": "the",
+     "t": 34.283
+    },
+    {
+     "w": "real",
+     "t": 34.551
+    },
+    {
+     "w": "diode.",
+     "t": 34.87
+    }
+   ]
+  },
+  "F2": {
+   "t0": 35.848,
+   "t1": 39.458,
+   "text": "Connect p to the plus side of a battery, n to the minus side.",
+   "words": [
+    {
+     "w": "Connect",
+     "t": 35.848
+    },
+    {
+     "w": "p",
+     "t": 36.24
+    },
+    {
+     "w": "to",
+     "t": 36.376
+    },
+    {
+     "w": "the",
+     "t": 36.555
+    },
+    {
+     "w": "plus",
+     "t": 36.776
+    },
+    {
+     "w": "side",
+     "t": 37.04
+    },
+    {
+     "w": "of",
+     "t": 37.304
+    },
+    {
+     "w": "a",
+     "t": 37.483
+    },
+    {
+     "w": "battery,",
+     "t": 37.619
+    },
+    {
+     "w": "n",
+     "t": 38.138
+    },
+    {
+     "w": "to",
+     "t": 38.275
+    },
+    {
+     "w": "the",
+     "t": 38.453
+    },
+    {
+     "w": "minus",
+     "t": 38.675
+    },
+    {
+     "w": "side.",
+     "t": 38.981
+    }
+   ]
+  },
+  "F3": {
+   "t0": 40.058,
+   "t1": 41.864,
+   "text": "This is called forward bias.",
+   "words": [
+    {
+     "w": "This",
+     "t": 40.058
+    },
+    {
+     "w": "is",
+     "t": 40.345
+    },
+    {
+     "w": "called",
+     "t": 40.54
+    },
+    {
+     "w": "forward",
+     "t": 40.919
+    },
+    {
+     "w": "bias.",
+     "t": 41.345
+    }
+   ]
+  },
+  "F4": {
+   "t0": 42.464,
+   "t1": 45.929,
+   "text": "The battery pushes against the barrier, so the wall gets lower.",
+   "words": [
+    {
+     "w": "The",
+     "t": 42.464
+    },
+    {
+     "w": "battery",
+     "t": 42.68
+    },
+    {
+     "w": "pushes",
+     "t": 43.063
+    },
+    {
+     "w": "against",
+     "t": 43.405
+    },
+    {
+     "w": "the",
+     "t": 43.788
+    },
+    {
+     "w": "barrier,",
+     "t": 44.005
+    },
+    {
+     "w": "so",
+     "t": 44.513
+    },
+    {
+     "w": "the",
+     "t": 44.688
+    },
+    {
+     "w": "wall",
+     "t": 44.904
+    },
+    {
+     "w": "gets",
+     "t": 45.163
+    },
+    {
+     "w": "lower.",
+     "t": 45.421
+    }
+   ]
+  },
+  "F5": {
+   "t0": 46.529,
+   "t1": 48.407,
+   "text": "The depletion layer gets thinner.",
+   "words": [
+    {
+     "w": "The",
+     "t": 46.529
+    },
+    {
+     "w": "depletion",
+     "t": 46.751
+    },
+    {
+     "w": "layer",
+     "t": 47.229
+    },
+    {
+     "w": "gets",
+     "t": 47.536
+    },
+    {
+     "w": "thinner.",
+     "t": 47.801
+    }
+   ]
+  },
+  "F6": {
+   "t0": 49.007,
+   "t1": 52.172,
+   "text": "Once the push beats the barrier, carriers flood across.",
+   "words": [
+    {
+     "w": "Once",
+     "t": 49.007
+    },
+    {
+     "w": "the",
+     "t": 49.277
+    },
+    {
+     "w": "push",
+     "t": 49.503
+    },
+    {
+     "w": "beats",
+     "t": 49.772
+    },
+    {
+     "w": "the",
+     "t": 50.085
+    },
+    {
+     "w": "barrier,",
+     "t": 50.311
+    },
+    {
+     "w": "carriers",
+     "t": 50.842
+    },
+    {
+     "w": "flood",
+     "t": 51.285
+    },
+    {
+     "w": "across.",
+     "t": 51.598
+    }
+   ]
+  },
+  "R1": {
+   "t0": 52.822,
+   "t1": 55.819,
+   "text": "Now flip the battery. p to minus, n to plus.",
+   "words": [
+    {
+     "w": "Now",
+     "t": 52.822
+    },
+    {
+     "w": "flip",
+     "t": 53.054
+    },
+    {
+     "w": "the",
+     "t": 53.332
+    },
+    {
+     "w": "battery.",
+     "t": 53.564
+    },
+    {
+     "w": "p",
+     "t": 54.2
+    },
+    {
+     "w": "to",
+     "t": 54.343
+    },
+    {
+     "w": "minus,",
+     "t": 54.531
+    },
+    {
+     "w": "n",
+     "t": 54.987
+    },
+    {
+     "w": "to",
+     "t": 55.13
+    },
+    {
+     "w": "plus.",
+     "t": 55.318
+    }
+   ]
+  },
+  "R2": {
+   "t0": 56.169,
+   "t1": 57.853,
+   "text": "This is reverse bias.",
+   "words": [
+    {
+     "w": "This",
+     "t": 56.169
+    },
+    {
+     "w": "is",
+     "t": 56.508
+    },
+    {
+     "w": "reverse",
+     "t": 56.738
+    },
+    {
+     "w": "bias.",
+     "t": 57.241
+    }
+   ]
+  },
+  "R3": {
+   "t0": 58.453,
+   "t1": 61.343,
+   "text": "Now the battery pulls carriers away from the junction.",
+   "words": [
+    {
+     "w": "Now",
+     "t": 58.453
+    },
+    {
+     "w": "the",
+     "t": 58.669
+    },
+    {
+     "w": "battery",
+     "t": 58.884
+    },
+    {
+     "w": "pulls",
+     "t": 59.265
+    },
+    {
+     "w": "carriers",
+     "t": 59.563
+    },
+    {
+     "w": "away",
+     "t": 59.985
+    },
+    {
+     "w": "from",
+     "t": 60.242
+    },
+    {
+     "w": "the",
+     "t": 60.498
+    },
+    {
+     "w": "junction.",
+     "t": 60.713
+    }
+   ]
+  },
+  "R4": {
+   "t0": 61.943,
+   "t1": 65.171,
+   "text": "The depletion layer gets wider, and the wall gets higher.",
+   "words": [
+    {
+     "w": "The",
+     "t": 61.943
+    },
+    {
+     "w": "depletion",
+     "t": 62.164
+    },
+    {
+     "w": "layer",
+     "t": 62.639
+    },
+    {
+     "w": "gets",
+     "t": 62.945
+    },
+    {
+     "w": "wider,",
+     "t": 63.209
+    },
+    {
+     "w": "and",
+     "t": 63.642
+    },
+    {
+     "w": "the",
+     "t": 63.863
+    },
+    {
+     "w": "wall",
+     "t": 64.084
+    },
+    {
+     "w": "gets",
+     "t": 64.347
+    },
+    {
+     "w": "higher.",
+     "t": 64.611
+    }
+   ]
+  },
+  "R5": {
+   "t0": 65.771,
+   "t1": 70.063,
+   "text": "Only a tiny leak gets through, carried by the few minority carriers.",
+   "words": [
+    {
+     "w": "Only",
+     "t": 65.771
+    },
+    {
+     "w": "a",
+     "t": 66.069
+    },
+    {
+     "w": "tiny",
+     "t": 66.223
+    },
+    {
+     "w": "leak",
+     "t": 66.52
+    },
+    {
+     "w": "gets",
+     "t": 66.818
+    },
+    {
+     "w": "through,",
+     "t": 67.116
+    },
+    {
+     "w": "carried",
+     "t": 67.701
+    },
+    {
+     "w": "by",
+     "t": 68.143
+    },
+    {
+     "w": "the",
+     "t": 68.344
+    },
+    {
+     "w": "few",
+     "t": 68.594
+    },
+    {
+     "w": "minority",
+     "t": 68.844
+    },
+    {
+     "w": "carriers.",
+     "t": 69.333
+    }
+   ]
+  },
+  "B1": {
+   "t0": 70.713,
+   "t1": 72.724,
+   "text": "Let's measure it on the breadboard.",
+   "words": [
+    {
+     "w": "Let's",
+     "t": 70.713
+    },
+    {
+     "w": "measure",
+     "t": 70.983
+    },
+    {
+     "w": "it",
+     "t": 71.383
+    },
+    {
+     "w": "on",
+     "t": 71.566
+    },
+    {
+     "w": "the",
+     "t": 71.749
+    },
+    {
+     "w": "breadboard.",
+     "t": 71.975
+    }
+   ]
+  },
+  "B2": {
+   "t0": 73.074,
+   "t1": 77.418,
+   "text": "A variable supply, a resistor to protect the diode, and the diode.",
+   "words": [
+    {
+     "w": "A",
+     "t": 73.074
+    },
+    {
+     "w": "variable",
+     "t": 73.229
+    },
+    {
+     "w": "supply,",
+     "t": 73.725
+    },
+    {
+     "w": "a",
+     "t": 74.269
+    },
+    {
+     "w": "resistor",
+     "t": 74.425
+    },
+    {
+     "w": "to",
+     "t": 74.92
+    },
+    {
+     "w": "protect",
+     "t": 75.124
+    },
+    {
+     "w": "the",
+     "t": 75.571
+    },
+    {
+     "w": "diode,",
+     "t": 75.824
+    },
+    {
+     "w": "and",
+     "t": 76.32
+    },
+    {
+     "w": "the",
+     "t": 76.572
+    },
+    {
+     "w": "diode.",
+     "t": 76.825
+    }
+   ]
+  },
+  "B3": {
+   "t0": 77.768,
+   "t1": 81.408,
+   "text": "A voltmeter across the diode. A meter for the current.",
+   "words": [
+    {
+     "w": "A",
+     "t": 77.768
+    },
+    {
+     "w": "voltmeter",
+     "t": 77.923
+    },
+    {
+     "w": "across",
+     "t": 78.467
+    },
+    {
+     "w": "the",
+     "t": 78.865
+    },
+    {
+     "w": "diode.",
+     "t": 79.117
+    },
+    {
+     "w": "A",
+     "t": 79.709
+    },
+    {
+     "w": "meter",
+     "t": 79.864
+    },
+    {
+     "w": "for",
+     "t": 80.214
+    },
+    {
+     "w": "the",
+     "t": 80.466
+    },
+    {
+     "w": "current.",
+     "t": 80.719
+    }
+   ]
+  },
+  "B4": {
+   "t0": 81.758,
+   "t1": 84.457,
+   "text": "Turn the knob up slowly, in forward bias.",
+   "words": [
+    {
+     "w": "Turn",
+     "t": 81.758
+    },
+    {
+     "w": "the",
+     "t": 82.048
+    },
+    {
+     "w": "knob",
+     "t": 82.292
+    },
+    {
+     "w": "up",
+     "t": 82.583
+    },
+    {
+     "w": "slowly,",
+     "t": 82.779
+    },
+    {
+     "w": "in",
+     "t": 83.304
+    },
+    {
+     "w": "forward",
+     "t": 83.501
+    },
+    {
+     "w": "bias.",
+     "t": 83.932
+    }
+   ]
+  },
+  "B5": {
+   "t0": 84.807,
+   "t1": 88.136,
+   "text": "Point two, point four volts. Almost no current.",
+   "words": [
+    {
+     "w": "Point",
+     "t": 84.807
+    },
+    {
+     "w": "two,",
+     "t": 85.162
+    },
+    {
+     "w": "point",
+     "t": 85.566
+    },
+    {
+     "w": "four",
+     "t": 85.92
+    },
+    {
+     "w": "volts.",
+     "t": 86.225
+    },
+    {
+     "w": "Almost",
+     "t": 86.826
+    },
+    {
+     "w": "no",
+     "t": 87.23
+    },
+    {
+     "w": "current.",
+     "t": 87.436
+    }
+   ]
+  },
+  "B6": {
+   "t0": 88.736,
+   "t1": 91.554,
+   "text": "Near point seven volts, the current shoots up.",
+   "words": [
+    {
+     "w": "Near",
+     "t": 88.736
+    },
+    {
+     "w": "point",
+     "t": 89.015
+    },
+    {
+     "w": "seven",
+     "t": 89.339
+    },
+    {
+     "w": "volts,",
+     "t": 89.663
+    },
+    {
+     "w": "the",
+     "t": 90.122
+    },
+    {
+     "w": "current",
+     "t": 90.356
+    },
+    {
+     "w": "shoots",
+     "t": 90.77
+    },
+    {
+     "w": "up.",
+     "t": 91.14
+    }
+   ]
+  },
+  "B7": {
+   "t0": 92.154,
+   "t1": 97.232,
+   "text": "This bend is the knee. The voltage there is the threshold, or cut-in voltage.",
+   "words": [
+    {
+     "w": "This",
+     "t": 92.154
+    },
+    {
+     "w": "bend",
+     "t": 92.457
+    },
+    {
+     "w": "is",
+     "t": 92.76
+    },
+    {
+     "w": "the",
+     "t": 92.966
+    },
+    {
+     "w": "knee.",
+     "t": 93.22
+    },
+    {
+     "w": "The",
+     "t": 93.768
+    },
+    {
+     "w": "voltage",
+     "t": 94.023
+    },
+    {
+     "w": "there",
+     "t": 94.473
+    },
+    {
+     "w": "is",
+     "t": 94.825
+    },
+    {
+     "w": "the",
+     "t": 95.03
+    },
+    {
+     "w": "threshold,",
+     "t": 95.285
+    },
+    {
+     "w": "or",
+     "t": 95.98
+    },
+    {
+     "w": "cut-in",
+     "t": 96.185
+    },
+    {
+     "w": "voltage.",
+     "t": 96.537
+    }
+   ]
+  },
+  "B8": {
+   "t0": 97.832,
+   "t1": 103.052,
+   "text": "For silicon it is about point seven volts. For germanium, about point two.",
+   "words": [
+    {
+     "w": "For",
+     "t": 97.832
+    },
+    {
+     "w": "silicon",
+     "t": 98.102
+    },
+    {
+     "w": "it",
+     "t": 98.579
+    },
+    {
+     "w": "is",
+     "t": 98.797
+    },
+    {
+     "w": "about",
+     "t": 99.015
+    },
+    {
+     "w": "point",
+     "t": 99.389
+    },
+    {
+     "w": "seven",
+     "t": 99.762
+    },
+    {
+     "w": "volts.",
+     "t": 100.136
+    },
+    {
+     "w": "For",
+     "t": 100.769
+    },
+    {
+     "w": "germanium,",
+     "t": 101.039
+    },
+    {
+     "w": "about",
+     "t": 101.775
+    },
+    {
+     "w": "point",
+     "t": 102.149
+    },
+    {
+     "w": "two.",
+     "t": 102.523
+    }
+   ]
+  },
+  "B9": {
+   "t0": 103.702,
+   "t1": 106.069,
+   "text": "Now reverse the supply and turn it up.",
+   "words": [
+    {
+     "w": "Now",
+     "t": 103.702
+    },
+    {
+     "w": "reverse",
+     "t": 103.936
+    },
+    {
+     "w": "the",
+     "t": 104.35
+    },
+    {
+     "w": "supply",
+     "t": 104.584
+    },
+    {
+     "w": "and",
+     "t": 104.953
+    },
+    {
+     "w": "turn",
+     "t": 105.187
+    },
+    {
+     "w": "it",
+     "t": 105.466
+    },
+    {
+     "w": "up.",
+     "t": 105.655
+    }
+   ]
+  },
+  "B10": {
+   "t0": 106.419,
+   "t1": 110.266,
+   "text": "The current stays tiny, just microamperes, and almost flat.",
+   "words": [
+    {
+     "w": "The",
+     "t": 106.419
+    },
+    {
+     "w": "current",
+     "t": 106.673
+    },
+    {
+     "w": "stays",
+     "t": 107.122
+    },
+    {
+     "w": "tiny,",
+     "t": 107.473
+    },
+    {
+     "w": "just",
+     "t": 107.923
+    },
+    {
+     "w": "microamperes,",
+     "t": 108.225
+    },
+    {
+     "w": "and",
+     "t": 109.065
+    },
+    {
+     "w": "almost",
+     "t": 109.319
+    },
+    {
+     "w": "flat.",
+     "t": 109.719
+    }
+   ]
+  },
+  "B11": {
+   "t0": 110.866,
+   "t1": 113.99,
+   "text": "Then, at the breakdown voltage, it suddenly shoots up.",
+   "words": [
+    {
+     "w": "Then,",
+     "t": 110.866
+    },
+    {
+     "w": "at",
+     "t": 111.255
+    },
+    {
+     "w": "the",
+     "t": 111.433
+    },
+    {
+     "w": "breakdown",
+     "t": 111.653
+    },
+    {
+     "w": "voltage,",
+     "t": 112.127
+    },
+    {
+     "w": "it",
+     "t": 112.644
+    },
+    {
+     "w": "suddenly",
+     "t": 112.821
+    },
+    {
+     "w": "shoots",
+     "t": 113.253
+    },
+    {
+     "w": "up.",
+     "t": 113.6
+    }
+   ]
+  },
+  "B12": {
+   "t0": 114.59,
+   "t1": 119.237,
+   "text": "Ordinary diodes are not meant to work there. Too much heat can destroy them.",
+   "words": [
+    {
+     "w": "Ordinary",
+     "t": 114.59
+    },
+    {
+     "w": "diodes",
+     "t": 115.055
+    },
+    {
+     "w": "are",
+     "t": 115.43
+    },
+    {
+     "w": "not",
+     "t": 115.667
+    },
+    {
+     "w": "meant",
+     "t": 115.904
+    },
+    {
+     "w": "to",
+     "t": 116.233
+    },
+    {
+     "w": "work",
+     "t": 116.425
+    },
+    {
+     "w": "there.",
+     "t": 116.708
+    },
+    {
+     "w": "Too",
+     "t": 117.265
+    },
+    {
+     "w": "much",
+     "t": 117.502
+    },
+    {
+     "w": "heat",
+     "t": 117.785
+    },
+    {
+     "w": "can",
+     "t": 118.068
+    },
+    {
+     "w": "destroy",
+     "t": 118.306
+    },
+    {
+     "w": "them.",
+     "t": 118.726
+    }
+   ]
+  },
+  "S1": {
+   "t0": 119.887,
+   "t1": 121.634,
+   "text": "Look at the scales on the graph.",
+   "words": [
+    {
+     "w": "Look",
+     "t": 119.887
+    },
+    {
+     "w": "at",
+     "t": 120.126
+    },
+    {
+     "w": "the",
+     "t": 120.287
+    },
+    {
+     "w": "scales",
+     "t": 120.487
+    },
+    {
+     "w": "on",
+     "t": 120.803
+    },
+    {
+     "w": "the",
+     "t": 120.965
+    },
+    {
+     "w": "graph.",
+     "t": 121.165
+    }
+   ]
+  },
+  "S2": {
+   "t0": 121.984,
+   "t1": 128.978,
+   "text": "Forward current is in milliamperes. Reverse current is in microamperes. A thousand times smaller.",
+   "words": [
+    {
+     "w": "Forward",
+     "t": 121.984
+    },
+    {
+     "w": "current",
+     "t": 122.492
+    },
+    {
+     "w": "is",
+     "t": 122.999
+    },
+    {
+     "w": "in",
+     "t": 123.231
+    },
+    {
+     "w": "milliamperes.",
+     "t": 123.463
+    },
+    {
+     "w": "Reverse",
+     "t": 124.522
+    },
+    {
+     "w": "current",
+     "t": 125.029
+    },
+    {
+     "w": "is",
+     "t": 125.536
+    },
+    {
+     "w": "in",
+     "t": 125.768
+    },
+    {
+     "w": "microamperes.",
+     "t": 126.0
+    },
+    {
+     "w": "A",
+     "t": 127.059
+    },
+    {
+     "w": "thousand",
+     "t": 127.235
+    },
+    {
+     "w": "times",
+     "t": 127.798
+    },
+    {
+     "w": "smaller.",
+     "t": 128.195
+    }
+   ]
+  },
+  "T1": {
+   "t0": 129.628,
+   "t1": 132.361,
+   "text": "A diode is a one-way door with a doorstep.",
+   "words": [
+    {
+     "w": "A",
+     "t": 129.628
+    },
+    {
+     "w": "diode",
+     "t": 129.782
+    },
+    {
+     "w": "is",
+     "t": 130.128
+    },
+    {
+     "w": "a",
+     "t": 130.33
+    },
+    {
+     "w": "one-way",
+     "t": 130.484
+    },
+    {
+     "w": "door",
+     "t": 130.879
+    },
+    {
+     "w": "with",
+     "t": 131.177
+    },
+    {
+     "w": "a",
+     "t": 131.476
+    },
+    {
+     "w": "doorstep.",
+     "t": 131.63
+    }
+   ]
+  },
+  "D1": {
+   "t0": 133.161,
+   "t1": 137.703,
+   "text": "The curve is not a straight line. So a diode does not obey Ohm's law.",
+   "words": [
+    {
+     "w": "The",
+     "t": 133.161
+    },
+    {
+     "w": "curve",
+     "t": 133.409
+    },
+    {
+     "w": "is",
+     "t": 133.754
+    },
+    {
+     "w": "not",
+     "t": 133.955
+    },
+    {
+     "w": "a",
+     "t": 134.203
+    },
+    {
+     "w": "straight",
+     "t": 134.356
+    },
+    {
+     "w": "line.",
+     "t": 134.844
+    },
+    {
+     "w": "So",
+     "t": 135.379
+    },
+    {
+     "w": "a",
+     "t": 135.58
+    },
+    {
+     "w": "diode",
+     "t": 135.733
+    },
+    {
+     "w": "does",
+     "t": 136.077
+    },
+    {
+     "w": "not",
+     "t": 136.374
+    },
+    {
+     "w": "obey",
+     "t": 136.622
+    },
+    {
+     "w": "Ohm's",
+     "t": 136.919
+    },
+    {
+     "w": "law.",
+     "t": 137.215
+    }
+   ]
+  },
+  "D2": {
+   "t0": 138.053,
+   "t1": 140.239,
+   "text": "So we use dynamic resistance.",
+   "words": [
+    {
+     "w": "So",
+     "t": 138.053
+    },
+    {
+     "w": "we",
+     "t": 138.283
+    },
+    {
+     "w": "use",
+     "t": 138.512
+    },
+    {
+     "w": "dynamic",
+     "t": 138.796
+    },
+    {
+     "w": "resistance.",
+     "t": 139.299
+    }
+   ]
+  },
+  "D3": {
+   "t0": 140.589,
+   "t1": 144.949,
+   "text": "It is a small change in voltage divided by the change in current.",
+   "words": [
+    {
+     "w": "It",
+     "t": 140.589
+    },
+    {
+     "w": "is",
+     "t": 140.803
+    },
+    {
+     "w": "a",
+     "t": 141.017
+    },
+    {
+     "w": "small",
+     "t": 141.18
+    },
+    {
+     "w": "change",
+     "t": 141.547
+    },
+    {
+     "w": "in",
+     "t": 141.965
+    },
+    {
+     "w": "voltage",
+     "t": 142.178
+    },
+    {
+     "w": "divided",
+     "t": 142.647
+    },
+    {
+     "w": "by",
+     "t": 143.116
+    },
+    {
+     "w": "the",
+     "t": 143.33
+    },
+    {
+     "w": "change",
+     "t": 143.594
+    },
+    {
+     "w": "in",
+     "t": 144.012
+    },
+    {
+     "w": "current.",
+     "t": 144.226
+    }
+   ]
+  },
+  "D4": {
+   "t0": 145.549,
+   "t1": 149.159,
+   "text": "r d equals delta V divided by delta I.",
+   "words": [
+    {
+     "w": "r",
+     "t": 145.549
+    },
+    {
+     "w": "d",
+     "t": 145.764
+    },
+    {
+     "w": "equals",
+     "t": 145.979
+    },
+    {
+     "w": "delta",
+     "t": 146.529
+    },
+    {
+     "w": "V",
+     "t": 147.012
+    },
+    {
+     "w": "divided",
+     "t": 147.227
+    },
+    {
+     "w": "by",
+     "t": 147.844
+    },
+    {
+     "w": "delta",
+     "t": 148.126
+    },
+    {
+     "w": "I.",
+     "t": 148.609
+    }
+   ]
+  },
+  "W1": {
+   "t0": 149.809,
+   "t1": 152.834,
+   "text": "Worked example. Two readings above the knee.",
+   "words": [
+    {
+     "w": "Worked",
+     "t": 149.809
+    },
+    {
+     "w": "example.",
+     "t": 150.213
+    },
+    {
+     "w": "Two",
+     "t": 150.913
+    },
+    {
+     "w": "readings",
+     "t": 151.169
+    },
+    {
+     "w": "above",
+     "t": 151.672
+    },
+    {
+     "w": "the",
+     "t": 152.026
+    },
+    {
+     "w": "knee.",
+     "t": 152.282
+    }
+   ]
+  },
+  "W2": {
+   "t0": 153.184,
+   "t1": 156.906,
+   "text": "At point seven two volts, the current is twelve milliamperes.",
+   "words": [
+    {
+     "w": "At",
+     "t": 153.184
+    },
+    {
+     "w": "point",
+     "t": 153.38
+    },
+    {
+     "w": "seven",
+     "t": 153.715
+    },
+    {
+     "w": "two",
+     "t": 154.05
+    },
+    {
+     "w": "volts,",
+     "t": 154.291
+    },
+    {
+     "w": "the",
+     "t": 154.766
+    },
+    {
+     "w": "current",
+     "t": 155.008
+    },
+    {
+     "w": "is",
+     "t": 155.436
+    },
+    {
+     "w": "twelve",
+     "t": 155.631
+    },
+    {
+     "w": "milliamperes.",
+     "t": 156.013
+    }
+   ]
+  },
+  "W3": {
+   "t0": 157.506,
+   "t1": 160.831,
+   "text": "At point seven six volts, it is twenty milliamperes.",
+   "words": [
+    {
+     "w": "At",
+     "t": 157.506
+    },
+    {
+     "w": "point",
+     "t": 157.706
+    },
+    {
+     "w": "seven",
+     "t": 158.049
+    },
+    {
+     "w": "six",
+     "t": 158.392
+    },
+    {
+     "w": "volts,",
+     "t": 158.64
+    },
+    {
+     "w": "it",
+     "t": 159.125
+    },
+    {
+     "w": "is",
+     "t": 159.326
+    },
+    {
+     "w": "twenty",
+     "t": 159.526
+    },
+    {
+     "w": "milliamperes.",
+     "t": 159.916
+    }
+   ]
+  },
+  "W4": {
+   "t0": 161.431,
+   "t1": 166.413,
+   "text": "Delta V is point zero four volts. Delta I is eight milliamperes.",
+   "words": [
+    {
+     "w": "Delta",
+     "t": 161.431
+    },
+    {
+     "w": "V",
+     "t": 161.841
+    },
+    {
+     "w": "is",
+     "t": 162.023
+    },
+    {
+     "w": "point",
+     "t": 162.263
+    },
+    {
+     "w": "zero",
+     "t": 162.673
+    },
+    {
+     "w": "four",
+     "t": 163.027
+    },
+    {
+     "w": "volts.",
+     "t": 163.38
+    },
+    {
+     "w": "Delta",
+     "t": 164.076
+    },
+    {
+     "w": "I",
+     "t": 164.486
+    },
+    {
+     "w": "is",
+     "t": 164.668
+    },
+    {
+     "w": "eight",
+     "t": 164.908
+    },
+    {
+     "w": "milliamperes.",
+     "t": 165.318
+    }
+   ]
+  },
+  "W5": {
+   "t0": 167.113,
+   "t1": 171.987,
+   "text": "r d equals point zero four divided by point zero zero eight.",
+   "words": [
+    {
+     "w": "r",
+     "t": 167.113
+    },
+    {
+     "w": "d",
+     "t": 167.309
+    },
+    {
+     "w": "equals",
+     "t": 167.506
+    },
+    {
+     "w": "point",
+     "t": 168.009
+    },
+    {
+     "w": "zero",
+     "t": 168.451
+    },
+    {
+     "w": "four",
+     "t": 168.832
+    },
+    {
+     "w": "divided",
+     "t": 169.212
+    },
+    {
+     "w": "by",
+     "t": 169.777
+    },
+    {
+     "w": "point",
+     "t": 170.035
+    },
+    {
+     "w": "zero",
+     "t": 170.477
+    },
+    {
+     "w": "zero",
+     "t": 170.858
+    },
+    {
+     "w": "eight.",
+     "t": 171.238
+    }
+   ]
+  },
+  "W6": {
+   "t0": 172.687,
+   "t1": 176.422,
+   "text": "That is just five ohms. Forward, the door is wide open.",
+   "words": [
+    {
+     "w": "That",
+     "t": 172.687
+    },
+    {
+     "w": "is",
+     "t": 172.98
+    },
+    {
+     "w": "just",
+     "t": 173.178
+    },
+    {
+     "w": "five",
+     "t": 173.47
+    },
+    {
+     "w": "ohms.",
+     "t": 173.763
+    },
+    {
+     "w": "Forward,",
+     "t": 174.291
+    },
+    {
+     "w": "the",
+     "t": 174.866
+    },
+    {
+     "w": "door",
+     "t": 175.111
+    },
+    {
+     "w": "is",
+     "t": 175.404
+    },
+    {
+     "w": "wide",
+     "t": 175.602
+    },
+    {
+     "w": "open.",
+     "t": 175.894
+    }
+   ]
+  },
+  "W7": {
+   "t0": 177.122,
+   "t1": 182.51,
+   "text": "In reverse, ten volts drives only one microampere. That is ten million ohms!",
+   "words": [
+    {
+     "w": "In",
+     "t": 177.122
+    },
+    {
+     "w": "reverse,",
+     "t": 177.343
+    },
+    {
+     "w": "ten",
+     "t": 177.984
+    },
+    {
+     "w": "volts",
+     "t": 178.257
+    },
+    {
+     "w": "drives",
+     "t": 178.635
+    },
+    {
+     "w": "only",
+     "t": 179.065
+    },
+    {
+     "w": "one",
+     "t": 179.391
+    },
+    {
+     "w": "microampere.",
+     "t": 179.664
+    },
+    {
+     "w": "That",
+     "t": 180.62
+    },
+    {
+     "w": "is",
+     "t": 180.945
+    },
+    {
+     "w": "ten",
+     "t": 181.166
+    },
+    {
+     "w": "million",
+     "t": 181.439
+    },
+    {
+     "w": "ohms!",
+     "t": 181.922
+    }
+   ]
+  },
+  "X1": {
+   "t0": 183.16,
+   "t1": 184.625,
+   "text": "Now, the exam trap.",
+   "words": [
+    {
+     "w": "Now,",
+     "t": 183.16
+    },
+    {
+     "w": "the",
+     "t": 183.55
+    },
+    {
+     "w": "exam",
+     "t": 183.797
+    },
+    {
+     "w": "trap.",
+     "t": 184.092
+    }
+   ]
+  },
+  "X2": {
+   "t0": 184.975,
+   "t1": 189.37,
+   "text": "Many students treat a diode like a fixed resistor. It is not.",
+   "words": [
+    {
+     "w": "Many",
+     "t": 184.975
+    },
+    {
+     "w": "students",
+     "t": 185.298
+    },
+    {
+     "w": "treat",
+     "t": 185.829
+    },
+    {
+     "w": "a",
+     "t": 186.204
+    },
+    {
+     "w": "diode",
+     "t": 186.371
+    },
+    {
+     "w": "like",
+     "t": 186.745
+    },
+    {
+     "w": "a",
+     "t": 187.068
+    },
+    {
+     "w": "fixed",
+     "t": 187.235
+    },
+    {
+     "w": "resistor.",
+     "t": 187.61
+    },
+    {
+     "w": "It",
+     "t": 188.401
+    },
+    {
+     "w": "is",
+     "t": 188.62
+    },
+    {
+     "w": "not.",
+     "t": 188.838
+    }
+   ]
+  },
+  "X3": {
+   "t0": 189.72,
+   "t1": 195.262,
+   "text": "Its resistance changes along the curve. Always use delta V over delta I.",
+   "words": [
+    {
+     "w": "Its",
+     "t": 189.72
+    },
+    {
+     "w": "resistance",
+     "t": 190.018
+    },
+    {
+     "w": "changes",
+     "t": 190.718
+    },
+    {
+     "w": "along",
+     "t": 191.246
+    },
+    {
+     "w": "the",
+     "t": 191.659
+    },
+    {
+     "w": "curve.",
+     "t": 191.957
+    },
+    {
+     "w": "Always",
+     "t": 192.657
+    },
+    {
+     "w": "use",
+     "t": 193.128
+    },
+    {
+     "w": "delta",
+     "t": 193.426
+    },
+    {
+     "w": "V",
+     "t": 193.839
+    },
+    {
+     "w": "over",
+     "t": 194.023
+    },
+    {
+     "w": "delta",
+     "t": 194.379
+    },
+    {
+     "w": "I.",
+     "t": 194.792
+    }
+   ]
+  },
+  "X4": {
+   "t0": 195.912,
+   "t1": 202.199,
+   "text": "Where is this asked? PUC, CBSE and ISC boards ask you to draw and explain this curve.",
+   "words": [
+    {
+     "w": "Where",
+     "t": 195.912
+    },
+    {
+     "w": "is",
+     "t": 196.301
+    },
+    {
+     "w": "this",
+     "t": 196.528
+    },
+    {
+     "w": "asked?",
+     "t": 196.863
+    },
+    {
+     "w": "PUC,",
+     "t": 197.522
+    },
+    {
+     "w": "CBSE",
+     "t": 197.965
+    },
+    {
+     "w": "and",
+     "t": 198.299
+    },
+    {
+     "w": "ISC",
+     "t": 198.58
+    },
+    {
+     "w": "boards",
+     "t": 198.861
+    },
+    {
+     "w": "ask",
+     "t": 199.304
+    },
+    {
+     "w": "you",
+     "t": 199.585
+    },
+    {
+     "w": "to",
+     "t": 199.866
+    },
+    {
+     "w": "draw",
+     "t": 200.093
+    },
+    {
+     "w": "and",
+     "t": 200.427
+    },
+    {
+     "w": "explain",
+     "t": 200.708
+    },
+    {
+     "w": "this",
+     "t": 201.205
+    },
+    {
+     "w": "curve.",
+     "t": 201.54
+    }
+   ]
+  },
+  "X5": {
+   "t0": 202.549,
+   "t1": 208.402,
+   "text": "JEE Main asks for dynamic resistance from the graph, as in June twenty twenty two.",
+   "words": [
+    {
+     "w": "JEE",
+     "t": 202.549
+    },
+    {
+     "w": "Main",
+     "t": 202.833
+    },
+    {
+     "w": "asks",
+     "t": 203.172
+    },
+    {
+     "w": "for",
+     "t": 203.512
+    },
+    {
+     "w": "dynamic",
+     "t": 203.796
+    },
+    {
+     "w": "resistance",
+     "t": 204.299
+    },
+    {
+     "w": "from",
+     "t": 204.967
+    },
+    {
+     "w": "the",
+     "t": 205.306
+    },
+    {
+     "w": "graph,",
+     "t": 205.59
+    },
+    {
+     "w": "as",
+     "t": 206.148
+    },
+    {
+     "w": "in",
+     "t": 206.378
+    },
+    {
+     "w": "June",
+     "t": 206.608
+    },
+    {
+     "w": "twenty",
+     "t": 206.947
+    },
+    {
+     "w": "twenty",
+     "t": 207.395
+    },
+    {
+     "w": "two.",
+     "t": 207.844
+    }
+   ]
+  },
+  "Q1": {
+   "t0": 209.052,
+   "t1": 221.295,
+   "text": "Try this. A five volt battery, a silicon diode in forward bias, and a four hundred thirty ohm resistor are in series. The diode drops point seven volts. Find the current.",
+   "words": [
+    {
+     "w": "Try",
+     "t": 209.052
+    },
+    {
+     "w": "this.",
+     "t": 209.331
+    },
+    {
+     "w": "A",
+     "t": 209.932
+    },
+    {
+     "w": "five",
+     "t": 210.103
+    },
+    {
+     "w": "volt",
+     "t": 210.436
+    },
+    {
+     "w": "battery,",
+     "t": 210.769
+    },
+    {
+     "w": "a",
+     "t": 211.423
+    },
+    {
+     "w": "silicon",
+     "t": 211.595
+    },
+    {
+     "w": "diode",
+     "t": 212.088
+    },
+    {
+     "w": "in",
+     "t": 212.475
+    },
+    {
+     "w": "forward",
+     "t": 212.7
+    },
+    {
+     "w": "bias,",
+     "t": 213.193
+    },
+    {
+     "w": "and",
+     "t": 213.687
+    },
+    {
+     "w": "a",
+     "t": 213.966
+    },
+    {
+     "w": "four",
+     "t": 214.138
+    },
+    {
+     "w": "hundred",
+     "t": 214.47
+    },
+    {
+     "w": "thirty",
+     "t": 214.964
+    },
+    {
+     "w": "ohm",
+     "t": 215.404
+    },
+    {
+     "w": "resistor",
+     "t": 215.683
+    },
+    {
+     "w": "are",
+     "t": 216.23
+    },
+    {
+     "w": "in",
+     "t": 216.509
+    },
+    {
+     "w": "series.",
+     "t": 216.734
+    },
+    {
+     "w": "The",
+     "t": 217.443
+    },
+    {
+     "w": "diode",
+     "t": 217.722
+    },
+    {
+     "w": "drops",
+     "t": 218.108
+    },
+    {
+     "w": "point",
+     "t": 218.494
+    },
+    {
+     "w": "seven",
+     "t": 218.88
+    },
+    {
+     "w": "volts.",
+     "t": 219.267
+    },
+    {
+     "w": "Find",
+     "t": 219.921
+    },
+    {
+     "w": "the",
+     "t": 220.254
+    },
+    {
+     "w": "current.",
+     "t": 220.533
+    }
+   ]
+  },
+  "A1": {
+   "t0": 226.695,
+   "t1": 228.695,
+   "text": "A. Ten milliamperes.",
+   "words": [
+    {
+     "w": "A.",
+     "t": 226.695
+    },
+    {
+     "w": "Ten",
+     "t": 227.198
+    },
+    {
+     "w": "milliamperes.",
+     "t": 227.517
+    }
+   ]
+  },
+  "A2": {
+   "t0": 229.045,
+   "t1": 231.275,
+   "text": "The diode takes point seven volts.",
+   "words": [
+    {
+     "w": "The",
+     "t": 229.045
+    },
+    {
+     "w": "diode",
+     "t": 229.296
+    },
+    {
+     "w": "takes",
+     "t": 229.643
+    },
+    {
+     "w": "point",
+     "t": 229.991
+    },
+    {
+     "w": "seven",
+     "t": 230.338
+    },
+    {
+     "w": "volts.",
+     "t": 230.686
+    }
+   ]
+  },
+  "A3": {
+   "t0": 231.625,
+   "t1": 236.547,
+   "text": "So the resistor gets five minus point seven, which is four point three volts.",
+   "words": [
+    {
+     "w": "So",
+     "t": 231.625
+    },
+    {
+     "w": "the",
+     "t": 231.83
+    },
+    {
+     "w": "resistor",
+     "t": 232.084
+    },
+    {
+     "w": "gets",
+     "t": 232.582
+    },
+    {
+     "w": "five",
+     "t": 232.884
+    },
+    {
+     "w": "minus",
+     "t": 233.187
+    },
+    {
+     "w": "point",
+     "t": 233.539
+    },
+    {
+     "w": "seven,",
+     "t": 233.89
+    },
+    {
+     "w": "which",
+     "t": 234.388
+    },
+    {
+     "w": "is",
+     "t": 234.74
+    },
+    {
+     "w": "four",
+     "t": 234.945
+    },
+    {
+     "w": "point",
+     "t": 235.248
+    },
+    {
+     "w": "three",
+     "t": 235.599
+    },
+    {
+     "w": "volts.",
+     "t": 235.951
+    }
+   ]
+  },
+  "A4": {
+   "t0": 236.897,
+   "t1": 242.702,
+   "text": "Current is four point three divided by four hundred thirty. That is ten milliamperes.",
+   "words": [
+    {
+     "w": "Current",
+     "t": 236.897
+    },
+    {
+     "w": "is",
+     "t": 237.379
+    },
+    {
+     "w": "four",
+     "t": 237.599
+    },
+    {
+     "w": "point",
+     "t": 237.924
+    },
+    {
+     "w": "three",
+     "t": 238.301
+    },
+    {
+     "w": "divided",
+     "t": 238.678
+    },
+    {
+     "w": "by",
+     "t": 239.16
+    },
+    {
+     "w": "four",
+     "t": 239.38
+    },
+    {
+     "w": "hundred",
+     "t": 239.705
+    },
+    {
+     "w": "thirty.",
+     "t": 240.187
+    },
+    {
+     "w": "That",
+     "t": 240.878
+    },
+    {
+     "w": "is",
+     "t": 241.203
+    },
+    {
+     "w": "ten",
+     "t": 241.423
+    },
+    {
+     "w": "milliamperes.",
+     "t": 241.696
+    }
+   ]
+  },
+  "FC": {
+   "t0": 243.352,
+   "t1": 244.873,
+   "text": "Screenshot this card.",
+   "words": [
+    {
+     "w": "Screenshot",
+     "t": 243.352
+    },
+    {
+     "w": "this",
+     "t": 243.979
+    },
+    {
+     "w": "card.",
+     "t": 244.297
+    }
+   ]
+  },
+  "NX": {
+   "t0": 248.073,
+   "t1": 253.351,
+   "text": "Next, the half-wave rectifier. How does a one-way door turn AC into DC?",
+   "words": [
+    {
+     "w": "Next,",
+     "t": 248.073
+    },
+    {
+     "w": "the",
+     "t": 248.581
+    },
+    {
+     "w": "half-wave",
+     "t": 248.868
+    },
+    {
+     "w": "rectifier.",
+     "t": 249.431
+    },
+    {
+     "w": "How",
+     "t": 250.326
+    },
+    {
+     "w": "does",
+     "t": 250.613
+    },
+    {
+     "w": "a",
+     "t": 250.955
+    },
+    {
+     "w": "one-way",
+     "t": 251.132
+    },
+    {
+     "w": "door",
+     "t": 251.585
+    },
+    {
+     "w": "turn",
+     "t": 251.927
+    },
+    {
+     "w": "AC",
+     "t": 252.269
+    },
+    {
+     "w": "into",
+     "t": 252.501
+    },
+    {
+     "w": "DC?",
+     "t": 252.843
+    }
+   ]
+  }
+ },
+ "order": [
+  "H1",
+  "H2",
+  "H3",
+  "I1",
+  "I2",
+  "G1",
+  "G2",
+  "G3",
+  "G4",
+  "G5",
+  "F1",
+  "F2",
+  "F3",
+  "F4",
+  "F5",
+  "F6",
+  "R1",
+  "R2",
+  "R3",
+  "R4",
+  "R5",
+  "B1",
+  "B2",
+  "B3",
+  "B4",
+  "B5",
+  "B6",
+  "B7",
+  "B8",
+  "B9",
+  "B10",
+  "B11",
+  "B12",
+  "S1",
+  "S2",
+  "T1",
+  "D1",
+  "D2",
+  "D3",
+  "D4",
+  "W1",
+  "W2",
+  "W3",
+  "W4",
+  "W5",
+  "W6",
+  "W7",
+  "X1",
+  "X2",
+  "X3",
+  "X4",
+  "X5",
+  "Q1",
+  "A1",
+  "A2",
+  "A3",
+  "A4",
+  "FC",
+  "NX"
+ ],
+ "dur": 253.951
+}

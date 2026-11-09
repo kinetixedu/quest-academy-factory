@@ -1,0 +1,32 @@
+{
+ "world": "puc-electronics",
+ "topic": "Diode V-I Characteristics",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 41
+ },
+ "class": "11",
+ "title": "The One-Way Door Explained Simply | PUC, CBSE and ISC",
+ "description": "Aarav puts batteries into his bike lamp and nothing happens. He flips them and it shines. Inside is a diode, a p-n junction that lets current through one way only. We start with a heavy swing door with a strong spring and a doorstep, then see the real thing: in forward bias (p to +) the barrier gets lower and the depletion layer thinner; in reverse bias (p to -) the barrier gets higher, the layer wider, and only a tiny minority-carrier current leaks through.\n\nOn a live breadboard a supply knob sweeps the voltage while the readout and the live V-I plot trace the full curve: almost no current below the knee, a sharp rise near the cut-in voltage (about 0.7 V for silicon, about 0.2 V for germanium), a flat microampere leak in reverse and the sudden rise at breakdown. Then dynamic resistance, r_d = delta V / delta I, with a worked example above the knee (5 ohms forward vs ten million ohms reverse), the exam trap, where it is asked, an original JEE Main pattern practice question with a full solution, and a fact card to screenshot.\n\nThis is Episode 41 of PUC Electronics. Karnataka I PUC Electronics Ch 6: Semiconductors, Diodes and Applications of Diodes | NCERT/CBSE Class 12 Physics Ch 14: Semiconductor Electronics: Materials, Devices and Simple Circuits | ISC Class 12 Physics: Electronic Devices (semiconductor diode, I-V characteristics in forward and reverse bias).\n\nIn this video:\n0:00 A bike lamp that works one way\n0:17 A heavy swing door with a spring\n0:34 Forward bias\n0:52 Reverse bias\n1:10 Breadboard: plotting the V-I curve\n1:59 mA forward, µA reverse\n2:13 Dynamic resistance\n2:29 Worked example: r_d above the knee\n3:03 Exam trap: a diode is not a fixed resistor\n3:15 Where it is asked\n3:29 Practice question\n4:03 Fact card\n\nNext episode: Half-Wave Rectifier.\n\nVideo by Quest Academy.",
+ "tags": [
+  "diode V-I characteristics",
+  "p-n junction diode characteristics",
+  "forward bias and reverse bias",
+  "knee voltage",
+  "cut-in voltage",
+  "reverse saturation current",
+  "breakdown voltage",
+  "dynamic resistance of diode",
+  "PUC electronics",
+  "1st PUC electronics chapter 6",
+  "Karnataka PUC electronics",
+  "CBSE class 12 physics",
+  "ISC physics",
+  "diode circuit JEE"
+ ],
+ "thumb": {
+  "title": "The One-Way Door",
+  "accent_word": "One-Way",
+  "frame_t": 113
+ }
+}

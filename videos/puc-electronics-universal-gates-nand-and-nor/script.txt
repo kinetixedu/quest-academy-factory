@@ -5,19 +5,23 @@ R1|0.35|First, NAND. The name is short for NOT AND.
 R2|0.35|Take an AND gate, and put a NOT gate right after it.
 R3|0.35|The symbol is the AND shape, with a small circle at the output.
 R4|0.65|That small circle is called a bubble. It means NOT.
+R4b|0.65|Without the bubble, it would just be an AND gate.
 B1|0.35|Let's fill its truth table on the breadboard.
 B2|0.35|Both inputs zero. AND gives zero. NOT flips it. The output is one.
 B3|0.35|Zero and one. Output one. One and zero. Output one.
 B4|0.35|Both inputs one. AND gives one. NOT flips it. The output is zero.
 B5|0.35|So NAND is zero only when all its inputs are one.
+B5b|0.35|It is the exact opposite of AND, row by row.
 B6|0.65|We write Y equals A dot B, with one bar over the whole thing.
 R5|0.35|Next, NOR. It is short for NOT OR. An OR gate, then a NOT.
 B7|0.35|Both inputs zero. OR gives zero. Flip it. The output is one.
 B8|0.35|If any input is one, OR gives one. Flip it, and the output is zero.
 B9|0.35|So NOR is one only when all its inputs are zero.
 B10|0.65|We write Y equals A plus B, with one bar over the whole thing.
+B11|0.65|The NOR symbol is the OR shape, with the same small bubble.
 U1|0.35|Now the big idea. Why are these called universal gates?
 U2|0.65|Because NAND gates alone can build every other gate. So can NOR gates alone.
+U2b|0.65|So a whole circuit can be made from one simple gate, copied many times.
 U3|0.35|First, NOT. Join both inputs of a NAND gate together.
 U4|0.35|If A is zero, both inputs are zero. The output is one.
 U5|0.65|If A is one, both inputs are one. The output is zero. That is a NOT gate.
@@ -34,6 +38,7 @@ W3|0.7|Flip B the same way. Out comes B bar.
 W4|0.7|Now feed A bar and B bar into a third NOR gate.
 W5|0.7|Check with A one and B one. A bar and B bar are both zero.
 W6|0.65|NOR of zero and zero is one. Just like AND. Three NOR gates in all.
+W7|0.65|With NAND gates, the same AND job takes only two gates.
 X1|0.35|Now, the exam trap.
 X2|0.35|Many students write NAND as A bar dot B bar. A separate bar on each input.
 X3|0.35|Test it with A one, and B zero. A bar dot B bar gives zero.

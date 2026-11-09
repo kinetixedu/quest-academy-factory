@@ -1,0 +1,31 @@
+{
+ "world": "puc-electronics",
+ "topic": "Low-Pass and High-Pass RC Filters",
+ "series": {
+  "name": "PUC Electronics",
+  "ep": 37
+ },
+ "class": "11",
+ "title": "RC Filters Explained Simply | PUC Electronics Class 11",
+ "description": "Aarav turns up the bass knob on his speaker: the deep drums get louder, the high cymbals stay the same. How does a circuit pick out only the low notes? In this animated lesson a sieve shows the idea of a filter, and we see why a capacitor acts like a wall at low frequency and a shortcut at high frequency (X_C = 1/2πfC).\n\nOn a live breadboard a signal generator drives a low-pass RC filter (1.6 kΩ and 0.1 μF) while the oscilloscope shows the input and output at 100 Hz, 1 kHz and 10 kHz. Then we swap the parts to make a high-pass filter and the result flips. We treat each filter as a voltage divider, find the cut-off frequency f_c = 1/(2πRC) where the output is 70.7% of the input (half the power), draw the frequency response of both filters, and work an example (f_c ≈ 995 Hz). Then the exam trap (at cut-off the voltage is not half), where it is asked, an original board pattern practice question with a full solution, and a formula card to screenshot.\n\nThis is Episode 37 of PUC Electronics, Class 11, Chapter 5: Application of D.C and A.C to Passive Components (Karnataka I PUC Electronics).\n\nIn this video:\n0:00 How a bass knob picks the low notes\n0:11 A filter is like a sieve\n0:32 The capacitor on AC: wall or shortcut\n0:51 Low-pass and high-pass on a breadboard\n1:35 Voltage divider and cut-off frequency\n2:11 Frequency response curves\n2:35 Worked example\n3:08 Exam trap: 70.7%, not half\n3:21 Where it is asked\n3:30 Practice question\n4:20 Formula card\n\nNext episode: Energy Bands: Conductors, Insulators and Semiconductors.\n\nVideo by Quest Academy.",
+ "tags": [
+  "RC filter",
+  "low pass filter",
+  "high pass filter",
+  "cut off frequency",
+  "fc = 1/2πRC",
+  "frequency response",
+  "capacitive reactance",
+  "half power point",
+  "70.7 percent",
+  "PUC electronics",
+  "1st PUC electronics chapter 5",
+  "Karnataka PUC electronics",
+  "class 11 electronics"
+ ],
+ "thumb": {
+  "title": "How Circuits Pick the Bass",
+  "accent_word": "Bass",
+  "frame_t": 76
+ }
+}

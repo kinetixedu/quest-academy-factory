@@ -108,7 +108,7 @@ W(MG.OR, 'M140,150 H340 M420,150 H760 M220,150 V240 H340 M420,240 H540 V150'); c
 tx(MG.OR, 380, 196, 'A', { 'text-anchor': 'middle', 'font-size': 26 }); tx(MG.OR, 380, 286, 'B', { 'text-anchor': 'middle', 'font-size': 26 });
 W(MG.NOT, 'M140,150 H300 M420,150 H760 M760,200 H620 V262 M620,338 V400 H760'); W(MG.NOT, 'M300,150 L310,136 L326,164 L342,136 L358,164 L374,136 L390,164 L406,136 L420,150');
 const sA3 = sw(MG.NOT, 620, 262, 620, 338); [[760, 200], [760, 400]].forEach(([x, y]) => mk(MG.NOT, 'circle', { cx: x, cy: y, r: 7, fill: INK }));
-tx(MG.NOT, 360, 196, 'R', { 'text-anchor': 'middle', 'font-size': 26, 'font-style': 'italic' }); tx(MG.NOT, 590, 308, 'A', { 'text-anchor': 'end', 'font-size': 26 });
+tx(MG.NOT, 360, 196, 'R', { 'text-anchor': 'middle', 'font-size': 26, 'font-style': 'italic' }); tx(MG.NOT, 640, 308, 'A', { 'font-size': 26 });
 const lampSk = (x, y) => Math.hypot(x - 760, y - 300) < 38 || (Math.abs(x - 140) < 2 && y > 280 && y < 320);
 const FP = {
   top: flow(ck, [[140, 310], [140, 450], [760, 450], [760, 150], [140, 150], [140, 290]], 24, { skip: lampSk }),
@@ -126,7 +126,10 @@ const ev = {
   NOT: [[wt('N2', 'Open'), 0, 0], [wt('N3', 'Close'), 1, 0]]
 };
 const modeAt = t => t < tOr ? 'AND' : t < tNo ? 'OR' : 'NOT';
-const inAt = (m, t) => { let a = 0, b = 0, k = -1; ev[m].forEach(([tt, x, y], i) => { if (t >= tt) { a = x; b = y; k = i; } }); return { a, b, k }; };
+const RP = { AND: [T0('D9'), tOr], OR: [T0('O6'), tNo], NOT: [T0('N6'), tS] };
+const RO = { AND: [[0, 0], [0, 1], [1, 0], [1, 1]], OR: [[0, 0], [0, 1], [1, 0], [1, 1]], NOT: [[0, 0], [1, 0]] };
+const inAt = (m, t) => { let a = 0, b = 0, k = -1; ev[m].forEach(([tt, x, y], i) => { if (t >= tt) { a = x; b = y; k = i; } });
+  const [r0, r1] = RP[m]; if (t >= r0 + 0.3 && t < r1 - 0.3) { const q = RO[m][Math.floor((t - r0 - 0.3) / 1.1) % RO[m].length]; a = q[0]; b = q[1]; } return { a, b, k }; };
 const fn = { AND: (a, b) => a & b, OR: (a, b) => a | b, NOT: a => 1 - a };
 const TT = {
   AND: { cols: ['A', 'B', 'Y'], rows: [[0, 0, 0], [0, 1, 0], [1, 0, 0], [1, 1, 1]], x: K('Y = A \\cdot B'), w: '1 only when all inputs are 1', tx: wt('D8', 'We'), tw: wt('D7', 'So') },
@@ -190,9 +193,9 @@ const sol = PUC.solution($('#so'), [[K('C = 1 \\Rightarrow Y = 1'), '4 rows'], [
 const tSol = [wt('A2', 'When'), wt('A3', 'When'), wt('A4', 'That'), wt('A5', 'Four')];
 
 /* ================= F: formula card + next ================= */
-const fc = PUC.fcard($('#sF'), { x: 410, y: 238, w: 1100, h: 504, y0: 100, dy: 78, title: 'Basic logic gates · fact card', txt: [0, 0, 0, 1, 1],
-  lines: [K('\\text{AND: } Y = A\\cdot B \\quad \\text{(1 only if all inputs are 1)}'), K('\\text{OR: } Y = A + B \\quad \\text{(1 if any input is 1)}'), K('\\text{NOT: } Y = \\overline{A} \\quad \\text{(flips the input)}'),
-    'In logic, 1 + 1 = 1 (OR) · there is no 2', 'n inputs → 2<sup>n</sup> rows in the truth table'] });
+const fc = PUC.fcard($('#sF'), { x: 410, y: 238, w: 1100, h: 504, y0: 100, dy: 78, title: 'Basic logic gates · fact card', txt: [1, 1, 1, 1, 1],
+  lines: ['AND: ' + K('Y = A\\cdot B') + ' · 1 only if all inputs are 1', 'OR: ' + K('Y = A + B') + ' · 1 if any input is 1', 'NOT: ' + K('Y = \\overline{A}') + ' · flips the input (inverter)',
+    'In logic, 1 + 1 = 1 for OR · there is no 2', 'n inputs → 2<sup>n</sup> rows in the truth table'] });
 const nx = PUC.next($('#sF'), { label: 'NEXT · EP 53', topic: 'Universal gates: NAND and NOR', y: 774 });
 
 /* ================= run ================= */
@@ -242,7 +245,7 @@ M.on(t => {
     M.vis(iT.head, t, T0('I3'), 1e9, { dy: 10 });
     const tr = [wt('I4', 'zero', 0), wt('I4', 'zero', 2), wt('I4', 'one', 1), wt('I4', 'one', 2)];
     iT.rows.forEach((r, k) => M.vis(r, t, tr[k] - 0.1, 1e9, { dy: 14 }));
-    M.vis($('#iTag'), t, wt('I4', 'four') - 0.1, 1e9, { dy: 0, sc: 0.8, sp: M.POP, fade: 0.1 });
+    M.vis($('#iTag'), t, wt('I4', 'four') - 0.1, 1e9, { dy: 0, sc: 0.8, sp: M.POP, fade: 0.1 }); M.setT($('#iTag'), t < wt('I5', 'general') ? '2 INPUTS → 4 ROWS · 3 INPUTS → 8 ROWS' : 'n INPUTS → 2ⁿ ROWS');
   }
 
   /* B: breadboard */
