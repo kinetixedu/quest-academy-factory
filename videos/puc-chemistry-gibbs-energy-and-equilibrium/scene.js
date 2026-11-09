@@ -103,7 +103,7 @@ $('#grs').innerHTML = GR.map(([k, v, c], i) => `<div class="qr" id="gr${i}" styl
 const tGr = GR.map(g => T0(g[3]) + 0.1);
 const gs = $('#gS'), GX0 = 90, GX1 = 720, GY = 290;
 const gZone = mk(gs, 'rect', { x: GX0, y: GY, width: GX1 - GX0, height: 190, fill: '#E6F4EC' });
-const gZt = txt(gs, GX1 - 10, 470, 'SPONTANEOUS: ΔG < 0', { 'text-anchor': 'end', 'font-size': 18, fill: OK, 'font-weight': 600 });
+const gZt = txt(gs, GX0 + 14, 470, 'SPONTANEOUS: ΔG < 0', { 'font-size': 18, fill: OK, 'font-weight': 600 });
 mk(gs, 'line', { x1: GX0, y1: 90, x2: GX0, y2: 490, stroke: C.ink2, 'stroke-width': 3 }); mk(gs, 'line', { x1: GX0, y1: GY, x2: GX1, y2: GY, stroke: C.ink2, 'stroke-width': 3 });
 txt(gs, GX0 - 12, 104, 'ΔG', { 'text-anchor': 'end', 'font-size': 22, fill: HC, 'font-weight': 600 }); txt(gs, GX1, GY - 12, 'T →', { 'text-anchor': 'end', 'font-size': 22, fill: BC, 'font-weight': 600 }); txt(gs, GX0 - 12, GY + 6, '0', { 'text-anchor': 'end', 'font-size': 20, fill: HC, 'font-weight': 600 });
 const GL = [[350, 460, OK], [230, 110, RD], [380, 150, BC], [200, 440, XC]].map(([y0, y1, c]) => mk(gs, 'path', { d: `M${GX0} ${y0} L${GX1 - 20} ${y1}`, stroke: c, 'stroke-width': 6, fill: 'none', 'stroke-linecap': 'round' }));
@@ -114,7 +114,7 @@ $('#car').innerHTML = eqr('ca0', 84, `\\text{Heat out: } ${dH} < 0`, 'PULLS FORW
 $('#cfr').innerHTML = eqr('cf0', 84, `\\text{Heat in: } ${dH} > 0`, 'PULLS BACK', RD) + eqr('cf1', 172, `\\text{More disorder: } ${dS} > 0`, 'PULLS FORWARD', OK);
 const strip = (p, left) => { const g = mk(p, 'g', {}); mk(g, 'rect', { x: 36, y: 290, width: 712, height: 50, rx: 10, fill: C.soft }); const z = mk(g, 'rect', { x: left ? 36 : 392, y: 290, width: 356, height: 50, rx: 10, fill: OKT }); mk(g, 'line', { x1: 392, y1: 280, x2: 392, y2: 350, stroke: HC, 'stroke-width': 4 }); txt(g, 392, 378, '273 K · 0 °C', { 'text-anchor': 'middle', 'font-size': 18, fill: HC, 'font-weight': 600 }); txt(g, left ? 214 : 570, 322, left ? 'SPONTANEOUS' : 'SPONTANEOUS', { 'text-anchor': 'middle', 'font-size': 18, fill: OK, 'font-weight': 600 }); txt(g, 56, 378, 'COLD', { 'font-size': 16, fill: BC, 'font-weight': 600 }); txt(g, 728, 378, 'HOT', { 'text-anchor': 'end', 'font-size': 16, fill: XC, 'font-weight': 600 }); return g; };
 const sA = strip($('#caS'), true), sB = strip($('#cfS'), false);
-$('#caV').innerHTML = `<span style="color:${BC}">BELOW 273 K</span><span>only</span>`; $('#cfV').innerHTML = `<span style="color:${XC}">ABOVE 273 K</span><span>only</span>`;
+$('#caV').innerHTML = `<span style="color:${OK}">GOES</span><span>only</span><span style="color:${BC}">BELOW 273 K</span>`; $('#cfV').innerHTML = `<span style="color:${OK}">GOES</span><span>only</span><span style="color:${XC}">ABOVE 273 K</span>`;
 const th1 = PUC.think($('#th1'), { q: 'Ice melting at 50 °C (323 K). Is ΔG positive or negative?', opts: ['Positive', 'Negative'], right: 1, why: 'Negative. 323 K is above 273 K, so the entropy team wins.' });
 
 /* ---------- R: equilibrium ---------- */
@@ -224,7 +224,7 @@ M.on(t => {
     M.vis($('#pw'), t, wt('P1', 'tug') - 0.1, out, { dx: 60, dy: 0, ...o });
     [pC, pB, pF].forEach(e => fade(e, t, wt('P1', 'teams') - 0.2));
     const th = wt('P2', 'Giving'); fade(pHl, t, tQr[0]); M.draw(pHa.l, t, th, 0.6); fade(pHa.h, t, th + 0.5);
-    const ts = wt('P3', 'More'); fade(pSl, t, tQr[1]); M.draw(pSa.l, t, ts, 0.6); fade(pSa.h, t, ts + 0.5);
+    const ts = wt('P3', 'More'); fade(pSl, t, tQr[1]); fade(pSa.l, t, ts, 1e9, 0.4); fade(pSa.h, t, ts + 0.5);
     fade(thP, t, tQr[2] - 0.2); const boost = M.io((t - wt('P4', 'hotter')) / 1.4); pSa.set(220, 400 + 300 * boost); attr(thPm, 'y', (380 - 90 * boost).toFixed(1)); attr(thPm, 'height', (44 + 90 * boost).toFixed(1));
     M.vis($('#pP'), t, wt('P4', 'harder') - 0.2, 1e9, POP);
   }
@@ -275,7 +275,7 @@ M.on(t => {
     [dSys, dSysT].forEach(e => fade(e, t, wt('D2', 'system'))); [dSur, dSurT].forEach(e => fade(e, t, wt('D2', 'surroundings') - 0.2));
     const th = wt('D3', 'heat'); M.draw(dHa.l, t, th, 0.6); fade(dHa.h, t, th + 0.5); fade(dHt, t, th + 0.3); fade(dSt, t, wt('D3', 'minus'));
     const u = M.io((t - wt('D5', 'total')) / 1.2); [dB1.g, dB2.g].forEach(g => fade(g, t, T0('D4') + 0.5)); fade(dX, t, wt('D4', 'Multiply'));
-    const h1 = 30 + 80 * u, h2 = 30 + 80 * u; attr(dB1.r, 'y', (DB - h1).toFixed(1)); attr(dB1.r, 'height', h1.toFixed(1)); attr(dB2.r, 'y', DB); attr(dB2.r, 'height', h2.toFixed(1));
+    const h1 = 30 + 60 * u, h2 = 30 + 60 * u; attr(dB1.r, 'y', (DB - h1).toFixed(1)); attr(dB1.r, 'height', h1.toFixed(1)); attr(dB2.r, 'y', DB); attr(dB2.r, 'height', h2.toFixed(1));
   }
 
   /* G */
