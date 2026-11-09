@@ -1,0 +1,29 @@
+{
+ "world": "puc-maths",
+ "topic": "General Term of a Binomial Expansion",
+ "series": {
+  "name": "PUC Maths",
+  "ep": 60
+ },
+ "title": "Jump to the 7th Term! General Term Explained Simply | Class 11 Maths",
+ "description": "(x + 2)^9 has ten long terms, but the question only wants the seventh. Do you really have to write out all ten? In this animated lesson on the binomial theorem (NCERT Chapter 7) a row of lockers shows the one rule that lets you jump straight to any term: the general term.\n\nYou will watch a pointer walk along all 11 terms of (a + b)^10 while r counts up, build T(r+1) = nCr a^(n-r) b^r in three small steps, and see why the 7th term uses r = 6, not 7. Then r counts up live to hunt down the constant term of (x + 1/x)^6, a worked example finds the 7th term of (x + 2)^9, the exam trap keeps the minus sign inside b, and an original JEE Main pattern question asks for the term independent of x. A recap card and three questions to check yourself close the lesson.\n\nNote: the general term is not in the current (rationalised) NCERT text, but it is in the JEE Main syllabus.\n\nFollows the NCERT book. Useful for CBSE, ICSE (ISC), Karnataka PUC and other state boards, and JEE.\n\nIn this video:\n0:00 Ten terms, only one wanted\n0:24 A row of lockers\n0:43 Terms follow the same rule\n1:02 Live: walk along the terms\n1:21 Build the general term in 3 steps\n1:55 Term number vs r\n2:36 Hunt the constant term\n3:24 Worked example: 7th term of (x + 2)^9\n4:01 Exam trap: b keeps its sign\n4:19 Where it is asked\n4:31 Practice question (JEE Main pattern)\n5:09 Recap and three questions to answer\n\nNext episode (Ep 61): Middle Term and Applications of the Binomial Theorem. Which is bigger: 1.01^1000 or 10000?\n\nVideo by Quest Academy.",
+ "tags": [
+  "general term binomial expansion",
+  "binomial theorem general term",
+  "T r+1 formula",
+  "constant term binomial expansion",
+  "term independent of x",
+  "binomial theorem class 11",
+  "class 11 maths chapter 7",
+  "JEE Main binomial theorem",
+  "PUC maths binomial theorem",
+  "first PUC maths",
+  "nCr binomial coefficient",
+  "binomial theorem explained simply"
+ ],
+ "thumb": {
+  "title": "Jump to Term 7",
+  "accent_word": "Term 7",
+  "frame_t": 78
+ }
+}
