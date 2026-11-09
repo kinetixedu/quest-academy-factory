@@ -1,0 +1,58 @@
+H1|0.4|A bow pulled back. A wound-up toy car. A rock at a cliff edge.
+H2|0.45|None of them is moving. Yet each one is ready to make something move.
+H3|0.35|Diya holds a stretched catapult, perfectly still. On the roof, a full water tank sits perfectly still.
+H4|0.5|Let go, and the stone flies. Open a tap, and water gushes. Where was that energy?
+H5|0.65|It was stored. Today we meet the energy that waits: potential energy.
+P1|0.35|So what is potential energy?
+P2|0.4|It is energy stored because of where a body is, or the shape it is in.
+P3|0.4|The tank stores it by its position, high up. The catapult stores it by its shape, stretched.
+P4|0.4|Potential means possible. The energy is not moving yet, but it can come out as motion.
+P5|0.65|Its symbol is U, and like all energy, it is measured in joules.
+S1|0.35|Let's run Diya's catapult. The band behaves like a spring of two hundred newtons per metre.
+S2|0.4|She pulls the pouch back slowly, twenty centimetres. The band pulls harder and harder, up to forty newtons.
+S3|0.4|Her hand does work against the band. That work is stored as U: four joules.
+S4|0.4|She lets go. The band pulls the eighty gram stone forward, and the stone flies off.
+S5|0.35|Slow-mo replay, a hundred times slower.
+S6|0.4|Now the band's force and the motion point the same way. The band does positive work.
+S7|0.4|As the band shortens, U drains away, and the stone's kinetic energy grows.
+S8|0.65|At the end, U is zero, and K is four joules. The stone leaves at ten metres per second.
+C1|0.35|So a force can fill U, or empty it. Side by side.
+C2|0.4|Lifting a ball. Gravity pulls down, the ball moves up. Gravity does negative work, and U goes up.
+C3|0.6|Dropping the ball. Gravity pulls down, the ball moves down. Gravity does positive work, and U goes down.
+C4|3.2|Now you try. A falling ball. Gravity does plus five joules of work on it. Does U go up or down, and by how much? Pause and decide.
+C5|0.65|Down, by five joules! The force's work comes out of the store. W equals minus delta U.
+D1|0.35|Now the rule, one step at a time.
+D2|0.75|Step one. To fill the store slowly, your push balances the force. Your force is minus F.
+D3|0.75|Step two. Your work is stored. So delta U equals minus the integral of F d x.
+D4|0.75|Step three. For one tiny step, d U equals minus F d x.
+D5|0.75|Step four. Divide by d x. F equals minus d U by d x.
+D6|0.75|Check with gravity, up positive. U equals m g h, so d U by d h is m g, and F is minus m g. Downwards. It works.
+T1|0.7|Remember this. The force is minus the slope of U. It always pushes toward lower U.
+R1|0.35|Why the minus sign? Follow the links.
+R2|0.4|One. Where U rises as x increases, the slope is positive.
+R3|0.4|Two. The minus sign makes F negative there. The force points back, toward lower U.
+R4|0.4|Three. Where U falls as x increases, F is positive. Again toward lower U.
+R5|0.6|Four. Where the slope is flat, the force is zero. Like a ball resting at the bottom of a bowl.
+K1|3.2|Your turn. On a U against x graph, U drops steeply as x increases. Which way does the force point? Pause and think.
+K2|0.65|Along plus x! Toward lower U. And steeper means a bigger force.
+W1|0.35|Now, one worked example.
+W2|0.5|A particle has U equals three x squared minus twelve x joules. Find the force at one metre, and where the force is zero.
+W3|0.75|F is minus d U by d x. d U by d x is six x minus twelve.
+W4|0.75|So F equals twelve minus six x.
+W5|0.75|At one metre, F is twelve minus six, six newtons, along plus x.
+W6|0.65|F is zero when six x equals twelve. At two metres, the bottom of the U curve.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students drop the minus sign. They write F equals d U by d x, and get minus six newtons.
+X3|0.65|But the force points toward lower U. Keep the minus sign: F equals minus d U by d x.
+E1|0.6|Where is this asked? In questions that give U as a formula or a graph, and ask for the force or the work.
+Q1|5.4|Exam level now. U equals x squared minus four x joules. A particle moves from x equals one to x equals four metres. Find the work done by the force, and the force at four metres. Pause and solve.
+A1|0.5|The answer is A. Minus three joules, and minus four newtons.
+A2|0.5|U at one metre is minus three, at four metres zero. So delta U is plus three.
+A3|0.5|Work by the force is minus delta U. Minus three joules.
+A4|0.6|F is minus d U by d x, minus two x plus four. At four metres, minus four newtons.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. Where is the energy in a stretched catapult that is not moving?
+Y3|0.9|Two. Gravity does ten joules of work on a falling ball. What happens to its U?
+Y4|1.1|Three. Why does F equals minus d U by d x carry a minus sign?
+N1|0.3|Next time: water from a rooftop tank gushes out of a tap. How much energy does height give it? Gravitational potential energy.
