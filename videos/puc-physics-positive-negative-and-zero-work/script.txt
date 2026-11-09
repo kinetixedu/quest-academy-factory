@@ -1,0 +1,55 @@
+H1|0.4|Aarav brakes his bike. A ceiling fan spins above his desk. He carries his books down the corridor.
+H2|0.45|Three forces, three moving things. But very different work.
+H3|0.35|The fan's motor pushes each blade along its circle. The brakes push back on the bike. His hands hold the books up as he walks.
+H4|0.5|One force does positive work, one does negative work, and one does none. Can you match them?
+P1|0.35|Work is F d cos theta.
+P2|0.4|F and d are sizes, never negative. So the sign comes only from cos theta.
+P3|0.4|Force along the motion: theta is under ninety, cos theta is positive, so the work is positive. The force helps.
+P4|0.4|Force against the motion: theta is over ninety, cos theta is negative, so the work is negative. The force fights.
+P5|0.65|At exactly ninety degrees, cos theta is zero. No work at all.
+S1|0.35|Let's see all three on Aarav's bike ride. Aarav and his bike: eighty kilograms.
+S2|0.4|First, he pedals. A forward push of forty newtons, over sixteen metres. Along the motion, so plus six hundred and forty joules.
+S3|0.4|Then he cruises at four metres per second. No push, no brakes, so no work.
+S4|0.4|Now he brakes. A backward force of eighty newtons, over eight metres. Minus six hundred and forty joules.
+S5|0.5|All along, the road pushes up and gravity pulls down, at ninety degrees to the motion. Zero work.
+S6|0.35|Slow-mo replay of the braking.
+S7|0.5|The bike moves forward along d. The brake force points backward. Theta is one eighty, and cos one eighty is minus one.
+S8|0.65|On the graph, the push line climbs, the brake line falls, and the up and down forces stay at zero.
+D1|0.35|Now the rule, one step at a time.
+D2|0.75|Step one. W equals F d cos theta, with F and d always positive.
+D3|0.75|Step two. Theta under ninety degrees. Cos theta is positive, so W is positive.
+D4|0.75|Step three. Theta exactly ninety. Cos theta is zero, so W is zero.
+D5|0.75|Step four. Theta over ninety. Cos theta is negative, so W is negative. At one eighty, W is minus F d.
+T1|0.7|Remember this. Positive work helps the motion. Negative work fights it. Zero work does neither.
+C1|0.35|Now, side by side.
+C2|0.4|Push a moving swing forward, along its motion. Theta is zero. Positive work.
+C3|0.6|Catch a fast ball. It moves toward you, your hands push back. Theta is one eighty. Negative work on the ball.
+C4|3.2|Now you try. Diya lowers a bucket into a well, slowly, on a rope. The rope pulls up, the bucket moves down. Is the rope's work positive, negative, or zero? Pause and think.
+C5|0.65|Negative! The rope pulls up, the bucket moves down. Theta is one eighty degrees.
+R1|0.35|Now the fan. Why does the pull that keeps a blade on its circle do no work? Follow the links.
+R2|0.4|One. The blade tip moves along the edge of its circle.
+R3|0.4|Two. The pull that keeps it on the circle points to the centre.
+R4|0.4|Three. A line to the centre is always at ninety degrees to the edge. So theta is ninety, every instant.
+R5|0.4|Four. Cos ninety is zero, so the inward pull does no work, all the way round.
+R6|0.65|So, Aarav's three forces. The fan motor, positive. The brakes, negative. His hands on the books, zero.
+W1|0.35|Now, one worked example.
+W2|0.5|A box is pulled three metres across a floor, by a ten newton force at sixty degrees. Friction is three newtons. Find the work done by each force.
+W3|0.75|The pull. Ten, times three, times cos sixty, a half. Plus fifteen joules.
+W4|0.75|Friction points backward, theta one eighty. Three times three, times minus one. Minus nine joules.
+W5|0.75|Gravity and the normal force are at ninety degrees. Zero, and zero.
+W6|0.65|In total, fifteen minus nine, six joules.
+X1|0.35|Now, the exam trap.
+X2|0.35|Many students think negative work means work done backwards, as if work had a direction.
+X3|0.65|But work is a scalar. The minus sign only says the force opposes the motion.
+E1|0.6|Where is this asked? The sign of the work done by gravity, friction, the normal force and tension, often on a slope.
+Q1|5.4|Exam level now. A two kilogram block slides five metres down a rough thirty seven degree slope. Mu is point five, g is ten, sine thirty seven is point six. Find the work done by gravity, friction and the normal force. Pause and solve.
+A1|0.5|The answer is A. Sixty, minus forty, and zero joules.
+A2|0.5|Gravity along the slope is m g sine theta, twelve newtons, along the motion. Plus sixty joules.
+A3|0.5|Friction is mu m g cos theta, eight newtons, against the motion. Minus forty joules.
+A4|0.6|The normal force is at ninety degrees. Zero.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. F and d are never negative. So what makes work negative?
+Y3|0.9|Two. Why does the inward pull on a fan blade do no work?
+Y4|1.1|Three. When Diya lowers the bucket, what is the sign of the work done by gravity?
+N1|0.3|Next time: stretch a rubber band, and it pulls back harder and harder. How do we find work when the force keeps changing? We find out in work done by a variable force.
