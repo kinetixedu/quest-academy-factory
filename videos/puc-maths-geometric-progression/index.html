@@ -1,0 +1,149 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 65 - Geometric Progression</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 65: geometric progression (Proof board) ===== */
+:root{--x:#7A4FE0;--sa:#2F6FEB;--sab:#E7EEFD;--rr:#D9731A}
+/* svg dots and groups scale about their own centre (not the card corner) */
+#stage svg circle,#stage svg g{transform-box:fill-box;transform-origin:center}
+#stage .ringW svg circle{transform-box:view-box;transform-origin:0 0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+/* title card */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:50px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+/* hook */
+.hv{position:absolute;left:36px}
+.hv .lb{font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.hv .vv{margin-top:6px;font:600 64px/1 'IBM Plex Mono';white-space:nowrap}
+#hX{position:absolute;left:36px;top:420px}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px;object-fit:cover}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* AP vs GP rows */
+.tl{position:absolute;width:104px;height:80px;border-radius:12px;background:var(--soft);display:flex;align-items:center;justify-content:center;font:600 36px 'IBM Plex Mono'}
+.ar{position:absolute;font:600 22px 'IBM Plex Mono';white-space:nowrap;text-align:center;width:104px}
+.rl{position:absolute;left:36px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.nm{position:absolute;left:36px;width:712px;height:84px}
+.nm .n{position:absolute;left:0;top:8px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.nm .sx{position:absolute;left:70px;top:0;font-size:46px;white-space:nowrap}
+/* live r */
+#rRd{position:absolute;left:36px;top:84px;font:600 64px/1 'IBM Plex Mono';white-space:nowrap}
+#rA{position:absolute;left:400px;top:96px;font:600 40px/1 'IBM Plex Mono';color:var(--sa);white-space:nowrap}
+#rL{position:absolute;left:36px;top:200px;font-size:40px;white-space:nowrap}
+#rP{position:absolute;left:36px;top:300px}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:84px}
+.st .n{position:absolute;left:0;top:12px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:66px;top:6px;font-size:40px;white-space:nowrap}
+.bx{position:absolute;height:84px;padding:0 16px;min-width:84px;border-radius:14px;background:var(--sab);border:3px solid var(--sa);display:flex;align-items:center;justify-content:center;font-size:36px;white-space:nowrap;box-sizing:border-box}
+.ax{position:absolute;font-size:28px;white-space:nowrap}
+#dNote{position:absolute;left:36px;top:420px;font-size:40px;white-space:nowrap}
+/* compare */
+.cf{position:absolute;left:36px;top:84px;font-size:46px;white-space:nowrap}
+/* worked */
+#wq{position:absolute;left:36px;top:64px;font:600 30px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.2em}
+.wc{position:absolute;width:212px;height:118px;border-radius:14px;background:var(--soft);border:2.5px solid transparent;text-align:center}
+.wc .lb{margin-top:14px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.wc .vv{margin-top:6px;font:600 46px/1 'IBM Plex Mono'}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.2em}
+#mq .mq{font-size:30px}
+#mq .mq .katex{font-size:1.2em}
+#wl .sol .sx{font-size:30px}
+#wl .sol .sx .katex{font-size:1.15em}
+.trapL .tx .katex{font-size:1.2em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:46px}
+#sF .fcard .fl.txt{font-size:34px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 8 SEQUENCES AND SERIES</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">The Rumour That <span class="acc">Doubles</span></div>
+    <div id="sub">Explained with one multiply rule</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: the rumour, live -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">THE RUMOUR · HOUR BY HOUR</div>
+        <div class="hv" style="top:90px"><div class="lb">HOUR</div><div class="vv" id="hH">0</div></div>
+        <div class="hv" style="top:230px"><div class="lb">PEOPLE WHO KNOW</div><div class="vv" id="hN" style="color:var(--ac)">1</div></div>
+        <div class="pillp ac" id="hX">× 2 every hour</div>
+        <svg id="hS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · ON HIS BICYCLE</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">1 person to 1024 in 10 hours</div></div>
+    </div>
+
+    <!-- P: AP vs GP + ratio test -->
+    <div id="sP">
+      <div class="card full" id="pa"><div class="lbl" style="left:36px;top:30px">ADD OR MULTIPLY?</div><div id="pRows"></div></div>
+      <div class="card rf" id="pb"><div class="lbl" style="left:36px;top:30px">THE TEST · DIVIDE BY THE TERM BEFORE</div>
+        <div class="hiBox" id="pHi" style="left:20px;width:744px;height:84px"></div><div id="pN"></div>
+        <div class="pillp" id="pR" style="left:36px;top:400px"></div>
+        <div class="ghost" id="pZ" style="left:36px;top:480px">a ≠ 0 · r ≠ 0</div></div>
+    </div>
+
+    <!-- R: live r -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">LIVE · CHANGE r</div>
+        <div id="rRd"><i style="font-family:Poppins;color:var(--rr)">r</i> = <span id="rV">2</span></div><div id="rA"><i style="font-family:Poppins">a</i> = 1</div>
+        <div id="rL"></div><div class="pillp" id="rP"></div></div>
+      <div class="card rf" id="rb"><div class="lbl" style="left:36px;top:30px">FIRST 6 TERMS AS BARS</div><svg id="rS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- D: general term -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">ANY TERM · 4 STEPS</div>
+        <div class="hiBox" id="dHi" style="left:20px;width:744px;height:84px"></div><div id="dSt"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">EACH JUMP MULTIPLIES BY r</div><div id="dCh"></div><svg id="dS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div id="dNote"></div></div>
+    </div>
+
+    <!-- C: AP ramp vs GP curve + think -->
+    <div id="sC">
+      <div class="card full" id="c1"><div class="lbl" style="left:36px;top:30px">A P · ADD d</div><div class="cf" id="c1F"></div><svg id="c1S" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp" id="c1P" style="left:36px;top:500px">Equal gaps: a straight ramp</div></div>
+      <div class="card rf" id="c2"><div class="lbl" style="left:36px;top:30px">G P · MULTIPLY BY r</div><div class="cf" id="c2F"></div><svg id="c2S" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ac" id="c2P" style="left:36px;top:500px">Equal ratios: a steepening curve</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">COUNT THE TERMS · × 2 EACH TIME</div><div id="wcs"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="620" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Same <span class="acc">ratio</span>, every step.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

@@ -1,0 +1,179 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 60 - General Term of a Binomial Expansion</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 60: general term (Proof board) ===== */
+/* colour-coding (Ch 7): a blue, b gold, nCr violet, r and the term pointer coral */
+:root{--a:#2F6FEB;--aBg:#E7EEFD;--b:#B7791F;--bBg:#F6EAD3;--v:#7A4FE0;--vBg:#EDE6FC}
+/* svg dots and groups scale about their own centre (not the card corner) */
+#stage svg circle,#stage svg g{transform-box:fill-box;transform-origin:center}
+#stage .ringW svg circle{transform-box:view-box;transform-origin:0 0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+/* title card */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:50px;font:700 30px Poppins;white-space:nowrap}
+/* hook */
+.tb{position:absolute;width:128px;height:96px;border-radius:14px;background:var(--soft);border:3px solid transparent;box-sizing:border-box;display:flex;align-items:center;justify-content:center;font:600 30px 'IBM Plex Mono';color:var(--ink2)}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* rules */
+.bigR{position:absolute;left:36px;font:700 40px/1.25 Poppins;width:712px}
+.bigR b{color:var(--ac)}
+.fx2{position:absolute;left:36px;font-size:44px;white-space:nowrap}
+/* term rows */
+.trw{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--soft)}
+.trw .k{position:absolute;left:22px;top:22px;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+.trw .v{position:absolute;left:180px;top:14px;font-size:36px;white-space:nowrap}
+.trw .w{position:absolute;right:22px;top:24px;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;color:var(--b);white-space:nowrap}
+/* live walk */
+.lt{position:absolute;top:150px;width:128px;height:110px;border-radius:14px;background:var(--soft);border:3px solid transparent;box-sizing:border-box}
+.lt .f{position:absolute;left:0;width:122px;top:30px;text-align:center;font-size:30px;white-space:nowrap}
+.lt .tn{position:absolute;left:0;width:122px;top:-36px;text-align:center;font:600 18px 'IBM Plex Mono';color:var(--mute)}
+.lt .rn{position:absolute;left:0;width:122px;top:116px;text-align:center;font:600 18px 'IBM Plex Mono';color:var(--ac)}
+#lPt{position:absolute;top:66px;width:0;height:0;border-left:16px solid transparent;border-right:16px solid transparent;border-top:20px solid var(--ac)}
+.rd{position:absolute;top:340px;height:110px;border-radius:14px;background:var(--soft)}
+.rd .k{position:absolute;left:24px;top:16px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.rd .v{position:absolute;left:24px;top:44px;font:600 44px 'IBM Plex Mono';white-space:nowrap}
+#lF{position:absolute;left:24px;top:40px;font-size:44px;white-space:nowrap}
+/* steps */
+.st{position:absolute;left:36px;width:712px;height:116px}
+.st .n{position:absolute;left:0;top:10px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:4px;font-size:38px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:64px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+.an{position:absolute;height:48px;padding:0 16px;border-radius:10px;background:var(--soft);display:inline-flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap}
+.gh{right:36px;top:22px}
+/* side by side */
+.mt{position:absolute;top:110px;width:84px;height:84px;border-radius:12px;background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:30px}
+.mtl{position:absolute;top:206px;width:84px;text-align:center;font:600 16px 'IBM Plex Mono';color:var(--mute)}
+.sbF{position:absolute;left:36px;top:290px;font-size:44px;white-space:nowrap}
+/* hunt */
+#kRd{position:absolute;left:36px;top:76px;font:600 56px/1 'IBM Plex Mono';white-space:nowrap}
+#kPw{position:absolute;right:36px;top:84px;height:52px;padding:0 18px;border-radius:10px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+/* worked */
+#wq{position:absolute;left:36px;top:70px;font:600 30px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.2em}
+.pc{position:absolute;top:200px;height:120px;border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+.pc .k{font:600 16px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute)}
+.pc .v{font-size:40px;white-space:nowrap}
+.ml{position:absolute;top:240px;font:600 34px Poppins;color:var(--mute)}
+#wRes{position:absolute;left:36px;top:400px;font-size:52px;white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.12em}
+#mq .mq .katex{font-size:1.2em}
+#wl .sol .sx{font-size:32px}
+#wl .sol .sx .katex{font-size:1.12em}
+#kl .sol .sx{font-size:32px}
+#kl .sol .sx .katex{font-size:1.12em}
+.trapL .tx .katex{font-size:1.2em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:32px}
+#sF .fcard .fl.txt .katex{font-size:1.15em}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 7 BINOMIAL THEOREM</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">The <span class="acc">General</span> Term</div>
+    <div id="sub">Explained with a row of lockers</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">TEN TERMS · ONLY ONE WANTED</div><div id="hb"></div>
+        <div class="pillp bad" id="hlP" style="left:36px;top:470px">Writing all ten: slow and risky</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA · TONIGHT'S QUESTION</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">Jump straight to term 7?</div></div>
+    </div>
+
+    <!-- D: lockers -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">A ROW OF LOCKERS</div><svg id="dS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">THE PATTERN</div>
+        <div class="bigR" id="dR" style="top:96px">coins = locker number <b>- 1</b></div>
+        <div class="fx2" id="dR2" style="top:270px"></div>
+        <div class="pillp ac" id="dP" style="left:36px;top:470px">No need to open the first six</div></div>
+    </div>
+
+    <!-- E: terms follow the same rule -->
+    <div id="sE">
+      <div class="card full" id="el"><div class="lbl" style="left:36px;top:30px">THE TERMS OF (A + B)ⁿ</div><div id="eR"></div></div>
+      <div class="card rf" id="er"><div class="lbl" style="left:36px;top:30px">SAME RULE AS THE LOCKERS</div>
+        <div class="bigR" id="eB" style="top:96px">term number = power of b <b>+ 1</b></div>
+        <div class="fx2" id="eF" style="top:280px"></div>
+        <div class="pillp" id="eP" style="left:36px;top:470px">locker = term · coins = power of b</div></div>
+    </div>
+
+    <!-- L: live pointer -->
+    <div id="sL">
+      <div class="card wide" id="lw"><div class="lbl" style="left:36px;top:30px">LIVE · ALL 11 TERMS OF (A + B)¹⁰</div><div id="lts"></div><div id="lPt"></div>
+        <div class="rd" id="lr0" style="left:36px;width:300px"><div class="k">TERM NUMBER</div><div class="v" id="lN"></div></div>
+        <div class="rd" id="lr1" style="left:360px;width:240px"><div class="k">r</div><div class="v" id="lR" style="color:var(--ac)"></div></div>
+        <div class="rd" id="lr2" style="left:624px;width:940px"><div id="lF"></div></div></div>
+    </div>
+
+    <!-- G: build the formula -->
+    <div id="sG">
+      <div class="card full" id="gl"><div class="lbl" style="left:36px;top:30px">BUILD IT · 3 STEPS</div><div class="hiBox" id="gHi" style="left:20px;width:744px;height:112px"></div><div id="gSt"></div></div>
+      <div class="card rf" id="gr"><div class="lbl" style="left:36px;top:30px">THE GENERAL TERM</div><div class="ghost gh">NOT IN CURRENT NCERT TEXT · JEE</div>
+        <div class="fx2" id="gF" style="top:130px;font-size:54px"></div><div id="gAn"></div></div>
+    </div>
+
+    <!-- S: term number vs r -->
+    <div id="sS">
+      <div class="card full" id="sl"><div class="lbl" style="left:36px;top:30px;color:var(--red)">WRONG · r = TERM NUMBER</div><div id="slM"></div><div class="sbF" id="slF"></div>
+        <div class="pillp bad" id="slP" style="left:36px;top:470px">b⁷ belongs to the 8th term</div></div>
+      <div class="card rf" id="sr"><div class="lbl" style="left:36px;top:30px;color:var(--ok)">RIGHT · r = TERM NUMBER - 1</div><div id="srM"></div><div class="sbF" id="srF"></div>
+        <div class="pillp good" id="srP" style="left:36px;top:470px">Subtract one first</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- K: hunt a power of x -->
+    <div id="sK">
+      <div class="card full" id="kl"></div>
+      <div class="card rf" id="kr"><div class="lbl" style="left:36px;top:30px">LIVE · r COUNTS UP</div>
+        <div id="kRd"><i style="font-family:Poppins;color:var(--ac)">r</i> = <span id="kV">0</span></div><div id="kPw"></div>
+        <svg id="kS" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">THE 7TH TERM · PIECE BY PIECE</div><div id="wPc"></div><div id="wRes"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="460" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"><div class="ghost gh">NOT IN CURRENT NCERT TEXT · JEE</div></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Term number = <span class="acc">r + 1</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

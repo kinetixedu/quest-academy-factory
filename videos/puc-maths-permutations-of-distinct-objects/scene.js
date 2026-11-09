@@ -97,8 +97,8 @@ const brM = mk(gs, 'path', { d: `M316,280 v14 h390 v-14`, fill: 'none', stroke: 
 const brMt = txt(gs, 511, 324, 'missing part: 3! = 6', { 'text-anchor': 'middle', 'font-size': 20, fill: C.red, 'font-weight': 600 });
 $('#gFr').innerHTML = K(`\\dfrac{5 \\times 4 \\times ${red('3 \\times 2 \\times 1')}}{${red('3 \\times 2 \\times 1')}} = ${xc('5')} \\times ${xc('4')} = ${pc('20')}`);
 const GS = [[`${nc('n')}! = ${nc('n')}(${nc('n')}-1)(${nc('n')}-2)\\cdots 1`, 'multiply all the way down to 1'], ['5! = 120', '5 × 4 × 3 × 2 × 1'],
-  [`\\text{missing part} = (${nc('n')}-${rc('r')})!`, 'the product stopped early'], [`${nPr()} = \\frac{${nc('n')}!}{(${nc('n')}-${rc('r')})!}`, 'divide the missing part away'],
-  [`${nPr('5', '2')} = \\frac{120}{3!} = \\frac{120}{6} = ${pc('20')}`, 'matches the grid']];
+  [`\\text{missing part} = (${nc('n')}-${rc('r')})!`, 'the product stopped early'], [`${nPr()} = ${nc('n')}! \\div (${nc('n')}-${rc('r')})!`, 'divide the missing part away'],
+  [`${nPr('5', '2')} = 120 \\div 3! = 120 \\div 6 = ${pc('20')}`, 'matches the grid']];
 $('#gSt').innerHTML = `<div class="hiBox" id="gHi" style="left:20px;width:744px;height:96px"></div>` + GS.map(([f, w], i) => `<div class="st" id="gs${i}x" style="top:${80 + i * 96}px"><div class="n">${i + 1}</div><div class="sx">${K(f)}</div><div class="why">${w}</div></div>`).join('');
 const tGst = [wt('G2', 'factorial'), wt('G2', 'Five'), wt('G3', 'missing'), wt('G4', 'equals'), wt('G5', 'Check')];
 const avA = PUC.avatar($('#sG'), { x: 160 + 36, y: 270 + 486, who: 'Aarav', face: IMG + 'aarav-face.jpg', text: 'So nPr is a factorial with its tail cut off.' });
@@ -107,11 +107,11 @@ const avA = PUC.avatar($('#sG'), { x: 160 + 36, y: 270 + 486, who: 'Aarav', face
 $('#stF').innerHTML = K(`${nPr()} = \\dfrac{${nc('n')}!}{(${nc('n')}-${rc('r')})!}`);
 
 /* ---------- W: worked example ---------- */
-$('#wq').innerHTML = `8 runners race. Gold, silver and bronze go to the first three. In how many ways can the medals be given?`;
+$('#wq').innerHTML = `8 runners race. Gold, silver and bronze go to the first three. How many ways can the medals go?`;
 const wsol = PUC.solution($('#wl'), [
-  ['Gold is not silver: order matters, a permutation'],
+  ['Gold is not silver: order matters'],
   [K(`${nc('n')} = ${nc('8')} \\text{ runners},\\ \\ ${rc('r')} = ${rc('3')} \\text{ medals}`)],
-  [K(`${nPr('8', '3')} = \\dfrac{8!}{5!}`)],
+  [K(`${nPr('8', '3')} = 8! \\div 5!`)],
   [K(`= ${xc('8')} \\times ${xc('7')} \\times ${xc('6')}`)],
   [K(`= ${pc('336')} \\text{ ways}`)]], { label: 'WORKED EXAMPLE', y0: 210, dy: 74 });
 $('#wl .lbl').style.top = '30px';
@@ -134,7 +134,7 @@ const tSl = [0, 1, 2].map(i => { const g = mk(mk(ts, 'g', { transform: `translat
   txt(ts, 120 + i * 150, 214, ['GOLD', 'SILVER', 'BRONZE'][i], { 'text-anchor': 'middle', 'font-size': 17, fill: C.mute, 'font-weight': 600, 'letter-spacing': 1 }); return { g, c, a, b }; });
 const where = PUC.where($('#wa'), { on: ['JEE MAIN'], type: 'Make numbers from given digits, no digit repeated: how many?' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 780,
-  q: `Using the digits ${K('0, 1, 2, 3, 4, 5')} with no digit repeated,<br>how many 4-digit even numbers can be made?`,
+  q: `Digits ${K('0, 1, 2, 3, 4, 5')}, no digit repeated.<br>How many 4-digit even numbers can be made?`,
   opts: ['120', '156', '180', '300'], right: 1, optW: 474, optY: 300 });
 const so = PUC.solution($('#so'), [[K(`\\text{last} = 0:\\ 5 \\times 4 \\times 3 = 60`)], [K(`\\text{last} = 2 \\text{ or } 4:\\ 2 \\text{ ways}`)], [K(`\\text{first: not } 0,\\ \\text{not last}: 4`)], [K(`2 \\times 4 \\times 4 \\times 3 = 96`)], [K(`60 + 96 = ${pc('156')}`)]], { y0: 100, dy: 96 });
 const tSo = [wt('A2', 'Zero'), wt('A3', 'two'), wt('A4', 'first'), wt('A4', 'Two'), wt('A5', 'Sixty')];
