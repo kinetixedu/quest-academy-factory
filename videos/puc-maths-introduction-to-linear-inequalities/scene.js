@@ -140,7 +140,7 @@ const e29 = txt(ers, RX(2.9) - 6, 280, '2.9', { 'text-anchor': 'end', fill: XC, 
 const eRay = mk(ers, 'line', { x1: RX(3), y1: 320, x2: 38, y2: 320, stroke: XC, 'stroke-width': 10, 'stroke-linecap': 'round' });
 const eO = mk(ers, 'circle', { cx: RX(3), cy: 320, r: 15, fill: '#fff', stroke: XC, 'stroke-width': 4 });
 const eNat = [1, 2].map(v => { const g = mk(mk(ers, 'g', { transform: `translate(${RX(v)},320)` }), 'g', {}); mk(g, 'circle', { r: 17, fill: RC, stroke: '#fff', 'stroke-width': 3 }); return g; });
-const th2 = PUC.think($('#th2'), { q: `${K(`${xc('x')} + 2 < 5`)}: how many real answers?`, opts: ['Just one', 'Endless'], right: 1, why: 'Every real number below 3 works: 2.9, 0, -100 ... Natural x: only 1 and 2.' });
+const th2 = PUC.think($('#th2'), { q: `${K(`${xc('x')} + 2 < 5`)}: how many real answers?`, opts: ['Just one', 'Endless'], right: 1, why: 'Every real number below 3 works. Natural x: only 1 and 2.' });
 const tThOut = wt('E5', 'But') - 0.3;
 
 /* ---------- W: worked example ---------- */

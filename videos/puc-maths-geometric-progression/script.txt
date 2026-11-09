@@ -1,0 +1,48 @@
+H1|0.4|At nine in the morning, one student hears a rumour. Every hour, each person who knows it tells one new friend.
+H2|0.45|Aarav worked it out on his bicycle. One person, then two, then four, then eight.
+H3|0.35|By seven in the evening, ten hours later, one thousand and twenty four people know.
+H4|0.5|Adding the same number grows slowly. Multiplying grows like this.
+H5|0.65|A list that multiplies by the same number every time is called a geometric progression.
+P1|0.4|Compare it with an A P. There, we add the same number each time. Two, four, six, eight.
+P2|0.4|In a geometric progression, or G P, we multiply by the same number each time. Two, four, eight, sixteen.
+P3|0.4|Here is the test. Divide any term by the term just before it. If the answer is always the same, it is a G P.
+P4|0.4|Four over two is two. Eight over four is two. Sixteen over eight is two.
+P5|0.65|That fixed answer is called the common ratio, r. The first term is called a. Neither a nor r can be zero.
+R1|0.4|Now watch what r does. We keep a as one, and change r live.
+R2|0.4|When r is two, each bar is double the one before. The list shoots up.
+R3|0.4|When r is one, nothing changes. One, one, one.
+R4|0.4|When r is a half, each bar is half the one before. The list shrinks towards zero, but never reaches it.
+R5|0.65|And when r is minus two, the sign flips every time. Up, down, up, down, and bigger each time.
+D1|0.4|Now, how do we jump straight to any term?
+D2|0.75|Step one. The first term is a.
+D3|0.75|Step two. The second term is a times r.
+D4|0.75|Step three. The third term is a times r times r. That is a r squared.
+D5|0.75|Step four. Each term has one r fewer than its place number. So term n is a times r to the power n minus one.
+D6|0.65|For the rumour, a is one and r is two. Hour ten is term eleven. Two to the power ten, one thousand and twenty four.
+C1|0.4|Side by side. An A P adds d each time. Its bars climb like a straight ramp.
+C2|0.6|A G P multiplies by r each time. Its bars climb along a curve that gets steeper and steeper.
+C3|3.2|Your turn. Is three, six, twelve, twenty four an A P or a G P? Pause and think.
+C4|0.65|A G P. Six over three is two, and twelve over six is two. The gaps are not equal, but the ratios are.
+T1|0.7|Remember this. In a G P, every term divided by the one before gives the same number, r.
+W1|0.35|Now, one worked example.
+W2|0.5|Which term of three, six, twelve, and so on, is seven hundred and sixty eight?
+W3|0.75|Step one. a is three. r is six over three, which is two.
+W4|0.75|Step two. Term n is three times two to the power n minus one. Set it equal to seven hundred and sixty eight.
+W5|0.75|Step three. Divide by three. Two to the power n minus one is two hundred and fifty six.
+W6|0.75|Step four. Two hundred and fifty six is two to the power eight. So n minus one is eight.
+W7|0.65|So n is nine. Seven hundred and sixty eight is the ninth term.
+X1|0.35|Now, the exam trap.
+X2|0.4|Find the sixth term of five, ten, twenty. Many students write five times two to the power six.
+X3|0.65|But the first term has no r at all. Term six has only five r's. Five times thirty two is one hundred and sixty.
+J1|0.6|Where is this asked? In JEE Main. In April twenty sixteen, three terms of an A P formed a G P, and the paper asked for its common ratio.
+Q1|5.4|Exam level now. In a G P of positive terms, the second plus the third term is twelve. The fourth plus the fifth term is forty eight. Find the seventh term. Pause and solve.
+A1|0.5|The answer is B. One hundred and twenty eight.
+A2|0.5|The fourth and fifth terms are the second and third terms, times r squared. So r squared is forty eight over twelve, which is four.
+A3|0.5|The terms are positive, so r is two.
+A4|0.6|Then a r plus a r squared is two a plus four a, which is six a. Six a is twelve, so a is two. The seventh term is two times sixty four, one hundred and twenty eight.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. How do you test if a list is a G P?
+Y3|0.9|Two. Find the eighth term of one, three, nine, and so on.
+Y4|1.1|Three. Why does the n th term have r to the power n minus one, not n?
+N1|0.3|Next time: grains on a chessboard. One, two, four, eight. How many grains in all? The sum of a G P.

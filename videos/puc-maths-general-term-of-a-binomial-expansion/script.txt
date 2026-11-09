@@ -1,0 +1,53 @@
+H1|0.4|Expand x plus two, to the power nine, and you get ten long terms.
+H2|0.45|But the question only wants one of them. The seventh term.
+H3|0.35|Diya is about to write out all ten terms, just to reach number seven.
+H4|0.5|Is there a way to jump straight to the seventh term, and skip the other nine?
+H5|0.65|There is. It is called the general term. One formula for any term you want.
+D1|0.4|Start with a row of lockers. Locker one is empty. Locker two has one coin. Locker three has two coins.
+D2|0.4|See the pattern? Each locker has one coin less than its number.
+D3|0.65|So locker seven has six coins. You do not need to open the first six lockers to know that.
+E1|0.4|An expansion works the same way. Look at a plus b, to the power n.
+E2|0.4|Term one has b to the power zero. Term two has b to the power one. Term three has b squared.
+E3|0.65|So the term in place r plus one has b to the power r. Term number is always one more than the power of b.
+L1|0.4|Watch it run. Here are all eleven terms of a plus b, to the power ten.
+L2|0.4|Now the pointer walks along the terms. As the term number goes up by one, r goes up by one.
+L3|0.65|At term seven, r is six. So the seventh term has b to the power six, and a to the power four.
+G1|0.35|Now let us build the formula in three small steps.
+G2|0.75|Step one. The term in place r plus one has b to the power r. That is the locker rule.
+G3|0.75|Step two. The two powers always add up to n. So the power of a is n minus r.
+G4|0.75|Step three. The number in front is n C r, the ways to choose the r brackets that give b.
+G5|0.65|Put it together. T r plus one equals n C r, times a to the n minus r, times b to the r. That is the general term.
+S1|0.4|Side by side. Many people mix up the term number with r.
+S2|0.4|The seventh term is T seven. To write it as T r plus one, r must be six, not seven.
+S3|0.6|So always subtract one first. Term number minus one gives you r.
+S4|3.2|Now you try. In a plus b, to the power ten, does the seventh term have b to the power six, or seven? Pause and decide.
+S5|0.65|Six! The first term has b to the zero, so the seventh term has b to the six.
+T1|0.7|Remember this. The term in place r plus one is n C r, times a to the n minus r, times b to the r.
+K1|0.35|The general term can also hunt down a power of x.
+K2|0.4|Take x plus one over x, to the power six. Which term has no x at all? That is called the constant term.
+K3|0.75|In the general term, x to the six minus r, times one over x to the r, gives x to the six minus two r.
+K4|0.75|No x means the power is zero. Six minus two r equals zero, so r is three.
+K5|0.65|So the fourth term is the constant term. Six C three is twenty.
+K6|3.2|Quick one. Does x plus one over x, to the power six, have a term in x to the power one? Pause and think.
+K7|0.65|No! The power is six minus two r. That is always even, so it can never be one.
+W1|0.35|Now, one worked example.
+W2|0.5|Find the seventh term of x plus two, to the power nine. Diya's question from the start.
+W3|0.75|Step one. Seventh term means r plus one is seven. So r is six.
+W4|0.75|Step two. n is nine. So we need nine C six, times x to the three, times two to the six.
+W5|0.75|Step three. Nine C six is eighty four. Two to the six is sixty four.
+W6|0.65|Eighty four times sixty four is five thousand three hundred seventy six. So the seventh term is five thousand three hundred seventy six x cubed.
+X1|0.35|Now, the exam trap.
+X2|0.4|Find the fourth term of x minus two, to the power six. Many students use b equals two and get plus one sixty x cubed.
+X3|0.65|But b is minus two, with the sign. Minus two, cubed, is minus eight. So the fourth term is minus one sixty x cubed.
+J1|0.6|Where is this asked? The general term is not in the current NCERT text, but it is in the JEE Main syllabus. JEE Main asks it, for example to find the constant term.
+Q1|5.4|Exam level now. Find the term that has no x. Pause and solve.
+A1|0.5|The answer is A. Sixty.
+A2|0.5|The general term is six C r, times two x squared to the six minus r, times minus one over x, to the r.
+A3|0.5|The power of x is twelve minus two r, minus r. That is twelve minus three r. Set it to zero, so r is four.
+A4|0.6|Six C four is fifteen. Two squared is four. Minus one to the four is plus one. Fifteen times four is sixty.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. For the tenth term, what is r?
+Y3|0.9|Two. Write the general term of a plus b, to the power n.
+Y4|1.1|Three. Find the constant term of x plus one over x, to the power four.
+N1|0.3|Next time: which is bigger, one point zero one to the power one thousand, or ten thousand? The binomial theorem settles it, along with the middle term.
