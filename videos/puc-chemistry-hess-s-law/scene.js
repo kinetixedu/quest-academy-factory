@@ -61,7 +61,7 @@ const bA = box(b, 392, 110, 380, 'C(graphite) + O₂(g)', HC), bB = box(b, 600, 
 const r1 = mk(b, 'path', { d: 'M300 142 L320 426', stroke: C.ink2, 'stroke-width': 6, fill: 'none', 'stroke-linecap': 'round' }), r1h = head2(b, 300, 142, 321, 430, C.ink2);
 const r2a = mk(b, 'path', { d: 'M470 142 L566 256', stroke: XC, 'stroke-width': 6, fill: 'none', 'stroke-linecap': 'round', 'stroke-dasharray': '12 8' }), r2ah = head2(b, 470, 142, 570, 260, XC);
 const r2b = mk(b, 'path', { d: 'M560 322 L436 446', stroke: NC, 'stroke-width': 6, fill: 'none', 'stroke-linecap': 'round' }), r2bh = head2(b, 560, 322, 432, 450, NC);
-const r1t = txt(b, 120, 300, 'ROAD 1: -393.5', { 'font-size': 22, fill: OK, 'font-weight': 600 });
+const r1t = txt(b, 286, 300, 'ROAD 1: -393.5', { 'text-anchor': 'end', 'font-size': 22, fill: OK, 'font-weight': 600 });
 const r2at = txt(b, 548, 180, 'x = ?', { 'font-size': 24, fill: XC, 'font-weight': 600 }), r2bt = txt(b, 520, 420, '-283.0', { 'font-size': 24, fill: OK, 'font-weight': 600 });
 const bike = mk(b, 'circle', { r: 11, fill: XC });
 const btag = document.createElement('div'); btag.className = 'btag'; btag.style.cssText = 'right:36px;top:18px;background:var(--ink);color:#fff'; $('#bn').appendChild(btag);
@@ -86,7 +86,7 @@ const hDot = mk(hs, 'circle', { r: 11, fill: XC });
 
 /* ---------- D: solve x + rules ---------- */
 const MS = [[K(`-393.5 = ${tX('x')} + (-283.0)`), 'D2'], [K(`${tX('x')} = -393.5 + 283.0`), 'D3'], [K(`${tX('x')} = ${tO('-110.5')}\\ \\text{kJ mol}^{-1}`), 'D4']];
-$('#mss').innerHTML = MS.map(([s], i) => `<div class="ms" id="ms${i}" style="top:${110 + i * 110}px"><div class="sn">${i + 1}</div><div class="stx" style="font-size:36px">${s}</div></div>`).join('');
+$('#mss').innerHTML = MS.map(([s], i) => `<div class="ms" id="ms${i}" style="top:${100 + i * 120}px"><div class="sn">${i + 1}</div><div class="stx" style="font-size:44px">${s}</div></div>`).join('');
 const tMs = MS.map(m => T0(m[1]) + 0.3);
 $('#dP').innerHTML = `${K('\\mathrm{C(graphite)} + \\tfrac{1}{2}\\mathrm{O_2} \\rightarrow \\mathrm{CO(g)}')}&nbsp; ΔH = -110.5`;
 const RL = [['Flip it: flip the sign', K(`\\mathrm{A \\rightarrow B}:\\ ${dH} \\;\\Rightarrow\\; \\mathrm{B \\rightarrow A}:\\ -${dH}`), 'R2'], ['Multiply by 2: ΔH doubles', K(`\\times 2 \\;\\Rightarrow\\; 2\\,${dH}`), 'R3'], ['Add equations: add ΔH', K(`${dH}_1 + ${dH}_2`), 'R4'], ['Write every state', K('\\mathrm{(s)},\\ \\mathrm{(l)},\\ \\mathrm{(g)}'), 'R4']];
@@ -142,7 +142,7 @@ const avA = PUC.avatar($('#sS'), { x: 160 + 36, y: 270 + 70, who: 'Aarav', face:
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('L3') - 0.2, 1.08, 1368, 560], [T1('L3') + 0.2, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [T0('L3') - 0.2, 1.05, 960, 560], [T1('L3') + 0.2, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};
@@ -265,9 +265,9 @@ M.on(t => {
     M.vis($('#wl'), t, tW1 + 0.05, out, { dx: -60, dy: 0, ...o });
     M.vis($('#wq'), t, T0('W2') - 0.1, 1e9, { dy: 14 });
     wsol(t, tW1, tWs);
-    M.vis($('#wr'), t, T0('W3') - 0.2, out, { dx: 60, dy: 0, ...o });
+    M.vis($('#wr'), t, T0('W2') + 0.3, out, { dx: 60, dy: 0, ...o });
     WR.forEach(([, a, b2, ti, tc], i) => { const el = $('#wr' + i); M.vis(el, t, ti - 0.1, 1e9, { dy: 16 }); const tg = el.querySelector('.tg'); M.setT(tg, t >= tc ? b2 : a); tg.style.color = t >= tc && i === 2 ? RD : OK; const fl = M.io((t - tc) / 0.2) * (1 - M.io((t - tc - 0.8) / 0.4)); setBg(el, mix(C.soft, C.ac2, fl)); });
-    M.vis($('#wr3'), t, T0('W7') - 0.1, 1e9, { dy: 16 }); setBg($('#wr3'), mix(C.soft, C.okBg, M.io((t - T0('W7')) / 0.3)));
+    M.vis($('#wr3'), t, wt('W2', 'gives') - 0.1, 1e9, { dy: 16 }); setBg($('#wr3'), mix(C.soft, C.okBg, M.io((t - T0('W7')) / 0.3))); { const g3 = $('#wr3 .tg'); M.setT(g3, t >= T0('W7') ? '-74.8' : 'TARGET: ?'); g3.style.color = t >= T0('W7') ? OK : GC; }
     M.vis($('#wG'), t, wt('W7', 'cancel') - 0.1, 1e9, POP);
   }
 

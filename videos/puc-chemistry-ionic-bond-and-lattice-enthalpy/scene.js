@@ -180,7 +180,7 @@ const rope = mk(ps, 'line', { x1: 196, y1: 250, x2: 684, y2: 250, stroke: GC, 's
 const kNa = ion(ps, 150, 250, 46, NC, 'Na', 30), kCl = ion(ps, 730, 250, 46, HC, 'Cl', 30);
 const kE = mk(ps, 'circle', { cx: 440, cy: 250, r: 13, fill: EC });
 const kEl = txt(ps, 440, 214, 'e⁻', { 'text-anchor': 'middle', fill: EC, 'font-weight': 600, 'font-size': 24 });
-const PL = [[150, 350, 'WEAK PULL', C.mute, ['P2', 'weak']], [730, 350, 'STRONG PULL', C.ink, ['P2', 'strong']], [150, 392, 'LOW IONIZATION ENTHALPY', NC, ['P3', 'low']], [730, 392, 'LARGE NEGATIVE ΔegH', HC, ['P4', 'negative']]].map(([x, y, s, f, w]) => ({ e: txt(ps, x, y, s, { 'text-anchor': 'middle', fill: f, 'font-weight': 600, 'font-size': 19 }), t: wt(w[0], w[1]) }));
+const PL = [[150, 350, 'WEAK PULL', C.mute, ['P2', 'weak']], [730, 350, 'STRONG PULL', C.ink, ['P2', 'strong']], [170, 392, 'LOW IONIZATION ENTHALPY', NC, ['P3', 'low']], [710, 392, 'BIG NEGATIVE ΔegH', HC, ['P4', 'negative']]].map(([x, y, s, f, w]) => ({ e: txt(ps, x, y, s, { 'text-anchor': 'middle', fill: f, 'font-weight': 600, 'font-size': 19 }), t: wt(w[0], w[1]) }));
 const PT = [['Li', 0, 0], ['Be', 1, 0], ['O', 2, 0], ['F', 3, 0], ['Na', 0, 1], ['Mg', 1, 1], ['S', 2, 1], ['Cl', 3, 1]];
 const PX = c => 900 + c * 130 + (c > 1 ? 120 : 0), PY = r => 150 + r * 100;
 $('#pT').innerHTML = PT.map(([e, c, r]) => `<div class="kt" id="p_${e}" style="left:${PX(c)}px;top:${PY(r)}px">${e}</div>`).join('') +
@@ -189,7 +189,7 @@ $('#pT').innerHTML = PT.map(([e, c, r]) => `<div class="kt" id="p_${e}" style="l
 const pArr = PUC.arrow(ps, EC, 5, 16);
 sec('sP', tP1 - 0.1, T0('S1') + 0.1, t => {
   M.vis($('#pw'), t, tP1 + 0.05, OUT('S1'), { dy: 36, ...O });
-  [kNa, kCl, kE].forEach((g, i) => fade(g, t, wt('P2', 'tug') - 0.1 + i * 0.15)); fade(kEl, t, wt('P2', 'tug') + 0.3); M.draw(rope, t, wt('P2', 'tug'), 0.5);
+  [kNa, kCl, kE].forEach((g, i) => fade(g, t, [T0('P1') + 0.3, T0('P1') + 0.6, wt('P1', 'gives')][i] - 0.1)); fade(kEl, t, wt('P1', 'electrons')); M.draw(rope, t, wt('P2', 'tug'), 0.5);
   const ug = M.io((t - wt('P4', 'grabs')) / 0.9), wob = t < wt('P4', 'grabs') ? 12 * Math.sin((t - tP1) * 5) * M.clamp((t - wt('P2', 'kids')) / 0.5) : 0, ex = M.lerp(440, 668, ug) + wob;
   mv(kE, ex, 250); attr(kEl, 'x', ex.toFixed(1));
   PL.forEach(p => fade(p.e, t, p.t - 0.1));
@@ -202,7 +202,7 @@ sec('sP', tP1 - 0.1, T0('S1') + 0.1, t => {
 /* ---------- S: energy ledger + lattice ---------- */
 const es = $('#eS'), Y0 = 280, SC = 0.25, yIE = Y0 - 495.8 * SC, yEG = yIE + 348.7 * SC, yL = yEG + 788 * SC;
 const zero = mk(es, 'line', { x1: 60, y1: Y0, x2: 724, y2: Y0, stroke: C.dim, 'stroke-width': 2, 'stroke-dasharray': '6 8' });
-const zl = txt(es, 60, Y0 - 10, 'START: Na(g) + Cl(g)', { fill: C.mute, 'font-weight': 600, 'font-size': 16 });
+const zl = txt(es, 60, Y0 + 28, 'START: Na(g) + Cl(g)', { fill: C.mute, 'font-weight': 600, 'font-size': 16 });
 const varr = (x, y1, y2, col) => mk(es, 'path', { d: `M${x} ${y1} V${y2} M${x - 10} ${y2 + (y2 < y1 ? 14 : -14)} L${x} ${y2} L${x + 10} ${y2 + (y2 < y1 ? 14 : -14)}`, stroke: col, 'stroke-width': 6, fill: 'none', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' });
 const lev = (x1, x2, y) => mk(es, 'line', { x1, y1: y, x2, y2: y, stroke: C.ink, 'stroke-width': 3 });
 const EL = [
@@ -245,8 +245,8 @@ const dsol = stepCard($('#dl'), 'LATTICE ENTHALPY · STEP BY STEP', '', [
   ['Smaller ions sit closer, so they pull harder too']], 110, 110);
 $('#dl').querySelectorAll('.sol .sx').forEach((e, i) => { if (i !== 1) e.style.font = '600 25px Poppins'; });
 const dS = $('#dS'), DL = [];
-for (let r = 0; r < 3; r++) for (let c = 0; c < 3; c++) { const na = (r + c) % 2 === 0, x = 392 + (c - 1) * 56, y = 170 + (r - 1) * 56; DL.push({ g: na ? ion(dS, x, y, 15, NC, '+', 18) : ion(dS, x, y, 22, HC, '−', 22), x, y }); }
-const dNeed = chip($('#dr'), 520, 100, '788 kJ/mol NEEDED', GC);
+for (let r = 0; r < 3; r++) for (let c = 0; c < 3; c++) { const na = (r + c) % 2 === 0, x = 392 + (c - 1) * 56, y = 200 + (r - 1) * 50; DL.push({ g: na ? ion(dS, x, y, 15, NC, '+', 18) : ion(dS, x, y, 22, HC, '−', 22), x, y }); }
+const dNeed = chip($('#dr'), 500, 22, '788 kJ/mol NEEDED', GC);
 const pairRow = (y, a, b, w, la, lb) => { const g = mk(dS, 'g', {}); mk(g, 'line', { x1: a[0], y1: y, x2: b[0], y2: y, stroke: C.ink2, 'stroke-width': w }); ion(g, a[0], y, a[1], NC, a[2], a[3]); ion(g, b[0], y, b[1], HC, b[2], b[3]); return g; };
 const dQ = [pairRow(340, [110, 22, '+', 20], [260, 30, '−', 24], 3), pairRow(340, [470, 22, '2+', 18], [620, 30, '2−', 18], 12)];
 const dQl = [txt(dS, 185, 404, 'WEAK PULL', { 'text-anchor': 'middle', fill: C.mute, 'font-weight': 600, 'font-size': 17 }), txt(dS, 545, 404, 'STRONG PULL', { 'text-anchor': 'middle', fill: NC, 'font-weight': 600, 'font-size': 17 })];
@@ -258,7 +258,7 @@ sec('sD', T0('D1') - 0.1, tT + 0.1, t => {
   M.vis($('#dl'), t, T0('D1') + 0.05, z, { dx: -60, dy: 0, ...O }); M.vis($('#dr'), t, T0('D1') + 0.2, z, { dx: 60, dy: 0, ...O });
   dsol(t, T0('D1'), tDs);
   const ue = M.io((t - wt('D2', 'separate')) / 1.0);
-  DL.forEach(o => { at(o.g, M.lerp(o.x, 392 + (o.x - 392) * 2.6, ue), M.lerp(o.y, 170 + (o.y - 170) * 1.9, ue)); fade(o.g, t, T0('D1') + 0.4); });
+  DL.forEach(o => { at(o.g, M.lerp(o.x, 392 + (o.x - 392) * 2.2, ue), M.lerp(o.y, 200 + (o.y - 200) * 1.6, ue)); fade(o.g, t, T0('D1') + 0.4); });
   M.vis(dNeed, t, wt('D3', 'seven') - 0.1, 1e9, POP);
   dQ.forEach((g, i) => fade(g, t, wt('D4', i ? 'two' : 'Bigger') - 0.1)); dQl.forEach((g, i) => fade(g, t, wt('D4', i ? 'far' : 'pull') - 0.1));
   dR.forEach((g, i) => fade(g, t, wt('D5', i ? 'closer' : 'Smaller') - 0.1)); dRl.forEach((g, i) => fade(g, t, wt('D5', i ? 'harder' : 'closer') + 0.2));
@@ -285,7 +285,7 @@ sec('sW', tW1 - 0.1, T0('C1') + 0.1, t => {
   M.vis($('#wl'), t, tW1 + 0.05, out, { dx: -60, dy: 0, ...O }); M.vis($('#wlq'), t, tW1 + 0.4, 1e9, { dy: 14 });
   wsol(t, tW1, tWs);
   M.vis($('#wr'), t, tW1 + 0.3, out, { dx: 60, dy: 0, ...O });
-  wp.forEach((g, i) => fade(g, t, i ? T0('W3') : T0('W2'))); M.vis(wTag, t, wt('W4', 'smaller') - 0.1, 1e9, POP);
+  wp.forEach((g, i) => fade(g, t, wt('W1', i ? 'magnesium' : 'sodium') - 0.1)); M.vis(wTag, t, wt('W4', 'smaller') - 0.1, 1e9, POP);
   fade(wMp, t, T0('W6')); mp.forEach((m, i) => { const u = M.io((t - wt('W6', i ? 'magnesium' : 'salt') + 0.1) / 0.8); fade(m.g, t, T0('W6') + i * 0.2); attr(m.b, 'width', (m.w * u).toFixed(1)); attr(m.tl, 'x', (130 + m.w * u).toFixed(1)); });
 });
 
@@ -298,7 +298,7 @@ MEAS.push(() => document.querySelectorAll('.bh span').forEach(s => { if (s.offse
 const cS = $('#cS'), bhA = [0, 1, 2, 3].map(i => mk(cS, 'path', { d: `M${48 + i * 306 + 284} 170 h18 M${48 + i * 306 + 294} 162 l8 8 l-8 8`, stroke: C.dim, 'stroke-width': 3, fill: 'none' }));
 sec('sC', T0('C1') - 0.1, tX1 + 0.1, t => {
   M.vis($('#cw'), t, T0('C1') + 0.05, OUT('X1'), { dy: 36, ...O });
-  BH.forEach((b, i) => { M.vis($('#bh' + i), t, wt(...b[2]) - 0.1, 1e9, { dx: -16, dy: 0 }); if (i) M.draw(bhA[i - 1], t, wt(...b[2]) - 0.2, 0.3); });
+  BH.forEach((b, i) => { const el = $('#bh' + i), tm = wt(...b[2]); M.vis(el, t, wt('C1', 'cycle') - 0.1 + i * 0.1, 1e9, { dx: -16, dy: 0 }); if (t < tm - 0.1) el.style.opacity = Math.min(el.style.opacity === '' ? 1 : +el.style.opacity, 0.3).toFixed(3); if (i) M.draw(bhA[i - 1], t, wt(...b[2]) - 0.2, 0.3); });
   PR.forEach((p, i) => M.vis($('#pr' + i), t, wt(...p[2]) - 0.1, 1e9, { dy: 20 }));
 });
 
@@ -316,7 +316,7 @@ endSec({
     K(`\\Delta_{\\text{lattice}}H\\ (${N_('Na')}${H_('Cl')}) = ${G_('788')}\\ \\text{kJ mol}^{-1}`),
     '<b>Bigger charge, smaller ions</b> = bigger lattice enthalpy · MgO ≫ NaCl'] },
   yq: ['What is lattice enthalpy?', 'Why do ionization and electron gain alone not explain why salt forms?', 'Which has the higher lattice enthalpy, NaCl or MgO, and why?'],
-  next: ['NEXT · EP 40', 'What if neither atom gives up an electron? Covalent Bond and Lewis Structures'],
+  next: ['NEXT · EP 40', 'Neither gives an electron? Covalent Bond and Lewis Structures'],
 });
 
 run();

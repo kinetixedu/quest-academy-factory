@@ -56,7 +56,7 @@ $('#mdefI').innerHTML = M.icon('ruler', 28, '#fff', 2.2);
 const QR = [['Bond length', 'DISTANCE', T0('P2')], ['Bond angle', 'ANGLE', T0('P3')], ['Bond enthalpy', 'ENERGY TO BREAK', T0('P4')], ['Bond order', 'NUMBER OF BONDS', T0('P5')]];
 $('#qrs').innerHTML = QR.map(([q, k], i) => `<div class="qr" id="qr${i}" style="top:${170 + i * 96}px"><div class="nn">${i + 1}</div><div class="qt">${q}</div><div class="qk">${k}</div></div>`).join('');
 const ps = $('#nS'), pW = water(ps, 392, 170, 200);
-const pR = mk(ps, 'g', {}); { const [x, y] = pW.hp[0], ux = (x - 392) / 200, uy = (y - 170) / 200, nx = uy * 44, ny = -ux * 44;
+const pR = mk(ps, 'g', {}); { const [x, y] = pW.hp[0], ux = (x - 392) / 200, uy = (y - 170) / 200, nx = -uy * 44, ny = ux * 44;
   mk(pR, 'line', { x1: 392 + nx, y1: 170 + ny, x2: x + nx, y2: y + ny, stroke: NC, 'stroke-width': 4 }); [[392, 170], [x, y]].forEach(([a, b2]) => mk(pR, 'line', { x1: a + nx * 0.7, y1: b2 + ny * 0.7, x2: a + nx * 1.3, y2: b2 + ny * 1.3, stroke: NC, 'stroke-width': 4 }));
   txt(pR, (392 + x) / 2 + nx * 1.9, (170 + y) / 2 + ny * 1.9 + 6, 'LENGTH', { 'text-anchor': 'middle', 'font-weight': 600, fill: NC }); }
 const pArc = mk(ps, 'path', { d: arcP(392, 170, 90), fill: 'none', stroke: GC, 'stroke-width': 5, 'stroke-linecap': 'round' });
@@ -143,7 +143,7 @@ const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN / NEET PATTERN · ORIGINAL QUESTI
 const so = PUC.solution($('#so'), [[K(`2\\ \\text{mol}\\ \\mathrm{H_2O} \\to 4\\ \\text{mol}\\ \\mathrm{O{-}H}`)], [K(`4 \\times 464.5 = \\textcolor{${C.ok}}{1858\\ \\text{kJ}}`)], [K(`\\text{A: 1 mol only}`)], [K(`\\text{C: } 4 \\times 502 \\text{ (not equal)}`)]], { y0: 100, dy: 112 });
 const tSo = [T0('A2'), T0('A3'), T0('A4'), wt('A4', 'C')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 500, title: 'Recap · bond parameters', y0: 100, dy: 76, txt: [1, 1, 1, 1, 1],
-  lines: ['<b>Length</b>: distance between nuclei · O-O 148 pm, O=O 121 pm', '<b>Radius</b>: H₂ is 74 pm, so r(H) = 37 pm · van der Waals radius is bigger', '<b>Angle</b>: H-O-H in water is 104.5°', '<b>Enthalpy</b> (kJ mol⁻¹): H₂ 435.8 · O₂ 498 · N₂ 946 · water O-H avg 464.5', '<b>Order</b> ↑: enthalpy ↑, length ↓ · N₂, CO, NO⁺ all order 3'] });
+  lines: ['<b>Length</b>: distance between nuclei · O-O 148 pm, O=O 121 pm', '<b>Radius</b>: H₂ is 74 pm, so r(H) = 37 pm · van der Waals radius is bigger', '<b>Angle</b>: H-O-H in water is 104.5° · average O-H enthalpy 464.5 kJ mol⁻¹', '<b>Enthalpy</b> (kJ mol⁻¹): H₂ 435.8 · O₂ 498 · N₂ 946', '<b>Order</b> ↑: enthalpy ↑, length ↓ · N₂, CO, NO⁺ all order 3'] });
 const YQ = ['What is the bond order of N₂, and of CO?', 'Why is the O=O double bond shorter than the O-O single bond?', 'If H₂ is 74 pm long, what is the covalent radius of hydrogen?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="nn">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
@@ -220,7 +220,7 @@ M.on(t => {
       op(rul, M.io((t - wt('S2', 'ruler') + 0.1) / 0.3)); M.setT(rV, `${Math.round(tSep(t))} pm`);
     }
     if (p2 > 0) {
-      dis.forEach(({ d, y, bar, bt }, i) => { const [, , , , n, pm, kj, tt] = DI[i], s = pm * 1.6; d.set(240 - s / 2, 240 + s / 2, y, n); op(d.g, M.io((t - tt + 0.3) / 0.3));
+      dis.forEach(({ d, y, bar, bt }, i) => { const [, , , , n, pm, kj, tt] = DI[i], s = pm * 1.6; d.set(266 - s / 2, 266 + s / 2, y, n); op(d.g, M.io((t - tt + 0.3) / 0.3));
         const u = M.io((t - tt - 0.6) / 0.8); attr(bar, 'width', (Math.max(0.1, 0.27 * kj * u)).toFixed(1)); op(bar, u > 0 ? 1 : 0); attr(bt, 'x', (480 + 0.27 * kj * u).toFixed(1)); M.setT(bt, u > 0.95 ? String(kj) : ''); });
       op(eLab, M.io((t - DI[0][7] - 0.4) / 0.3)); M.vis(rulePill, t, T0('S7') - 0.1, 1e9, POP);
     } else M.hide(rulePill, true);

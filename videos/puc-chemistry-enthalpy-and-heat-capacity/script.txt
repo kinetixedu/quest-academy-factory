@@ -1,0 +1,56 @@
+H1|0.4|Beach sand burns your feet by noon, but the sea stays cool. A steel pan gets hot in a minute, but the water in it takes much longer.
+H2|0.45|Same sun, same flame. So why such different speeds?
+H3|0.35|Diya puts a pan of water on the stove.
+H4|0.5|In a minute, the rim of the pan is too hot to touch. The water is only just warm.
+H5|0.65|By the end, you will know why. It is all about enthalpy and heat capacity.
+P1|0.35|Last time we learnt, delta U equals q plus w.
+P2|0.4|In a sealed steel box, the volume cannot change. So the gas does no work, and all the heat goes into U.
+P3|0.4|But in a kitchen, the pressure stays steady and the volume can change.
+P4|0.4|A gas that forms must push the air away, like making room in a crowded bus. That push costs energy.
+P5|0.4|So chemists use a new state function, enthalpy, H. H equals U plus p V.
+P6|0.65|At constant pressure, the heat taken in equals delta H.
+S1|0.35|Now the link between delta H and delta U, step by step.
+S2|0.75|At constant pressure, delta H equals delta U plus p delta V.
+S3|0.75|For gases, p V equals n R T. So p delta V equals delta n g R T.
+S4|0.75|Delta n g is the moles of gas in the products, minus the moles of gas in the reactants.
+S5|0.75|So delta H equals delta U plus delta n g R T.
+S6|0.65|If delta H is minus, heat comes out. That is exothermic. If delta H is plus, heat goes in. That is endothermic.
+V1|0.35|Now, back to the pan and the water, on our molecule bench.
+V2|0.4|Heat capacity, C, is the heat needed to warm something by one degree. q equals C times delta T.
+V3|0.4|A big heat capacity is like a wide bucket. Pour in lots, and the level rises only a little.
+V4|0.4|Specific heat capacity is the heat for one gram, by one kelvin. For water, about four point one eight joules.
+V5|0.4|So q equals m c delta T. Mass, times specific heat, times the rise.
+V6|0.4|To warm one hundred grams of water by ten kelvin, you need four thousand one hundred eighty joules.
+V7|0.65|Steel needs far less heat per gram. So the pan races ahead, and the water lags behind. Sand and sea work the same way.
+C1|0.35|For one mole of an ideal gas, there are two heat capacities.
+C2|0.4|C v, at constant volume. All the heat warms the gas.
+C3|0.4|C p, at constant pressure. Some heat is spent pushing the piston up. So C p is bigger.
+C4|0.65|The gap is exactly R. C p minus C v equals R.
+K1|0.4|We measure these heats with a calorimeter. A bomb calorimeter is a sealed steel vessel in water. Its volume is fixed.
+K2|0.4|A coffee cup calorimeter is open to the air, at steady pressure.
+K3|0.4|In both, we read how much the water warms, and use q equals C delta T.
+B1|3.2|Pause and think. A reaction runs in a sealed bomb calorimeter. Does it give delta U or delta H?
+B2|0.65|Delta U! The volume cannot change, so no work is done, and the heat equals delta U.
+T1|0.7|Remember this. Constant volume gives delta U. Constant pressure gives delta H.
+W1|0.3|Now, one worked example, in NCERT style.
+W2|0.4|Water boils at one bar and three seventy three kelvin. Delta H for one mole is forty one kilojoules. Find delta U.
+W3|0.75|Liquid water turns into water vapour. One mole of gas forms. The liquid counts as zero.
+W4|0.75|So delta n g is one minus zero, which is one.
+W5|0.75|Delta U equals delta H minus delta n g R T.
+W6|0.75|R T is eight point three one four times ten to the minus three, times three seventy three. About three point one kilojoules.
+W7|0.65|Delta U is forty one minus three point one. About thirty seven point nine kilojoules per mole.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students count liquids and solids in delta n g.
+X3|0.65|No. Only gas moles count. Liquids and solids barely change the volume.
+E1|0.6|Where is this asked? Expect numericals linking delta H and delta U, and questions on C p minus C v.
+Q1|5.4|Exam level now. Nitrogen plus three hydrogen gives two ammonia. Delta H is minus ninety two point four kilojoules, at two ninety eight kelvin. Find delta U. Pause and solve.
+A1|0.5|The answer is A. Minus eighty seven point four.
+A2|0.5|Gas moles: two minus four. Delta n g is minus two.
+A3|0.5|Delta n g R T is minus two, times eight point three one four times ten to the minus three, times two ninety eight. Minus four point nine five.
+A4|0.6|Delta U is minus ninety two point four, plus four point nine five. Minus eighty seven point four. C is the trap, from delta n g of minus one.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.8|One. Does a bomb calorimeter measure delta U or delta H?
+Y3|0.8|Two. Why does water warm up so slowly?
+Y4|0.9|Three. What is C p minus C v, for one mole of an ideal gas?
+N1|0.3|Next time: how much heat does one mole of cooking gas give out when it burns? We find out in Enthalpy Changes of Reactions.

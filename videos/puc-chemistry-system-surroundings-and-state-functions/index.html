@@ -1,0 +1,177 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Chemistry Ep 51 - System, Surroundings and State Functions</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Chemistry Ep 51: System, Surroundings and State Functions (Molecule bench) ===== */
+/* ===== PUC Chemistry Ep 50: hydrogen bonding (Molecule bench) ===== */
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.wide{left:160px;top:270px;width:1600px;height:580px}
+/* title card stories */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr{position:absolute;left:36px;right:36px;height:112px;border-radius:14px;background:var(--soft)}
+.jr i{position:absolute;left:20px;top:20px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:22px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:66px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.elw{position:absolute;right:24px;top:30px;display:flex;align-items:center;gap:12px}
+.elw span{font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.elw b{height:52px;padding:0 16px;border-radius:12px;background:var(--ac);color:#fff;display:flex;align-items:center;font:600 22px Poppins;white-space:nowrap}
+.wq{position:absolute;top:494px;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hdF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.btag{position:absolute;height:40px;padding:0 14px;border-radius:9px;display:inline-flex;align-items:center;gap:8px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.pt{position:absolute;display:flex;gap:10px}
+.pt span{width:58px;height:58px;border-radius:10px;border:2px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;font:600 24px Poppins;color:var(--dim)}
+.cr{position:absolute;left:36px;right:36px;height:72px;border-radius:14px;background:var(--soft)}
+.cr .ce{position:absolute;left:24px;top:14px;font-size:34px;white-space:nowrap}
+.cr .cn{position:absolute;left:220px;top:22px;font:500 24px Poppins;color:var(--ink2);white-space:nowrap}
+.cr .cv{position:absolute;right:96px;top:14px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+.cr .cm{position:absolute;right:20px;top:14px;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.rl{position:absolute;left:36px;right:36px;height:56px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:14px;padding:0 16px;font:600 25px Poppins;white-space:nowrap}
+.rl .nn{flex:none;width:36px;height:36px;border-radius:50%;background:var(--ac);color:#fff;font:700 18px Poppins;display:flex;align-items:center;justify-content:center}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font-size:28px}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:29px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .nn{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#ruleTxt{position:absolute;left:36px;top:400px;font:600 30px Poppins;white-space:nowrap}
+#enP{position:absolute;left:36px;top:388px}
+#hfF{position:absolute;left:0;width:784px;top:420px;text-align:center;font-size:56px}
+#dPill{left:36px;top:500px}
+#eqH{position:absolute;left:36px;top:84px;font-size:40px;white-space:nowrap}
+#eqK{position:absolute;left:36px;top:150px;display:flex;gap:28px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+#eqK span{display:flex;align-items:center;gap:10px;white-space:nowrap}
+#eqK i{display:inline-block;width:44px;height:0;border-top:5px solid var(--ink2)}
+#eqK i.d{border-top:5px dotted #B7791F}
+
+/* ===== Ep 51 extras ===== */
+.df{position:absolute;left:36px;right:36px;height:96px;border-radius:14px;background:var(--soft)}
+.df .nn{position:absolute;left:20px;top:26px;width:44px;height:44px;border-radius:50%;background:var(--ac);color:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.df .dt{position:absolute;left:84px;top:14px;font:700 28px Poppins;white-space:nowrap}
+.df .dd{position:absolute;left:84px;top:54px;font:500 22px Poppins;color:var(--ink2);white-space:nowrap}
+#lgd{position:absolute;right:36px;top:24px;display:flex;gap:28px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+#lgd span{display:flex;align-items:center;gap:10px;white-space:nowrap}
+#lgd i.m{width:18px;height:18px;border-radius:50%;background:#0FA3A3}
+#lgd i.h{width:40px;height:0;border-top:5px dashed #2F6FEB}
+.bx{position:absolute;top:440px;width:440px;text-align:center}
+.bx .bn{font:700 32px Poppins;white-space:nowrap}
+.bx .bw{font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);margin-top:2px;white-space:nowrap}
+.bx .bt{display:flex;justify-content:center;gap:10px;margin-top:12px}
+.bx .bt span{height:36px;padding:0 12px;border-radius:9px;display:inline-flex;align-items:center;gap:6px;font:600 16px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+.bt .y{background:var(--okBg);color:#1F6B3F}.bt .n{background:var(--redBg);color:var(--red)}
+.vt{position:absolute;top:76px;width:158px;height:118px;border-radius:14px;background:var(--soft);text-align:center}
+.vt .vs{margin-top:10px;font-size:46px}
+.vt .vn{font:600 15px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+#ph{position:absolute;left:36px;top:222px;width:712px;height:146px;border-radius:14px;background:#fff;border:2px solid var(--line);box-shadow:0 8px 20px rgba(22,33,62,.06)}
+#phv{position:absolute;left:24px;top:62px;display:flex;gap:40px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+.col{position:absolute;top:76px;width:344px;height:470px;border-radius:14px;background:var(--soft)}
+.col b{position:absolute;left:24px;top:20px;font:700 28px Poppins}
+.col span{position:absolute;left:24px;top:62px;font:600 15px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap;text-transform:uppercase}
+.it{position:absolute;width:296px;height:64px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 18px;box-sizing:border-box;font:600 26px Poppins;white-space:nowrap}
+.it i{font:600 22px 'IBM Plex Mono';font-style:normal;color:var(--mute)}
+#wq{position:absolute;left:36px;top:76px;font:600 30px Poppins;white-space:nowrap}
+.wr5{position:absolute;left:36px;right:36px;height:70px;border-radius:14px;background:var(--soft)}
+.wr5 .wk{position:absolute;left:20px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.wr5 .wf{position:absolute;left:150px;top:12px;font-size:30px;white-space:nowrap}
+.wr5 .wb{position:absolute;right:16px;top:15px;height:40px;padding:0 12px;border-radius:9px;background:var(--okBg);color:#1F6B3F;display:flex;align-items:center;font:600 16px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+.pt5{position:absolute;top:84px;width:286px;height:380px;border-radius:16px;background:var(--soft);text-align:center}
+.pt5 i{position:absolute;left:107px;top:28px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.pt5 .pn{position:absolute;left:0;right:0;top:124px;font:700 30px Poppins;white-space:nowrap}
+.pt5 .pk{position:absolute;left:0;right:0;top:186px;font-size:38px;white-space:nowrap}
+.pt5 .pw{position:absolute;left:0;right:0;top:268px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+#p1v{position:absolute;left:0;top:0;width:784px;height:580px}
+.p1t{position:absolute;top:150px;width:220px;height:200px;border-radius:18px;background:var(--soft);text-align:center}
+#p1t0{left:96px}#p1t1{left:468px}
+.p1t i{display:block;margin:40px auto 0;width:48px}.p1t b{display:block;margin-top:22px;font:700 34px Poppins}
+.p1a{position:absolute;left:316px;top:206px;width:152px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.p1a span{font:600 14px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);text-align:center;white-space:normal;line-height:1.3}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · CHEMISTRY · CH 5 THERMODYNAMICS</div>
+    <div class="subj" id="subj">MOLECULE BENCH</div>
+    <div id="title">System, Surroundings and <span class="acc">State Functions</span></div>
+    <div id="sub">Explained on one molecule bench</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#0FA3A3" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+    <!-- H: three containers + Aarav's tiffin -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE CONTAINERS · WHAT ESCAPES?</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Each lets a different thing escape</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV'S LUNCH · COLLEGE CORRIDOR</div>
+        <div id="hdF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-corridor.jpg">
+        <div id="wqs"></div>
+        <div class="pillp ink" id="hTz" style="left:36px;top:494px">Nothing got out. Where did the heat go?</div></div>
+    </div>
+    <!-- P: system, surroundings, boundary, universe -->
+    <div id="sP">
+      <div class="card full" id="pa"><div class="lbl" style="left:36px;top:30px" id="paL">PICK THE PART YOU STUDY</div>
+        <svg id="pS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="pillp ink" id="thP" style="left:36px;top:500px">Thermodynamics = energy on the move, as heat and work</div></div>
+      <div class="card rf" id="pb"><div class="lbl" style="left:36px;top:30px">FOUR WORDS</div><div id="dfs"></div></div>
+    </div>
+    <!-- S: the bench: open, closed, isolated -->
+    <div id="sS">
+      <div class="card wide" id="bn"><div class="lbl" style="left:36px;top:30px">MOLECULE BENCH · HOT GAS IN THREE BOXES</div>
+        <div id="lgd"><span><i class="m"></i>MATTER</span><span><i class="h"></i>HEAT OUT</span></div>
+        <svg id="bS" width="1600" height="580" style="position:absolute;left:0;top:0"></svg><div id="bxs"></div></div>
+    </div>
+    <!-- V: state, state functions, the hill -->
+    <div id="sV">
+      <div class="card full" id="vl"><div class="lbl" style="left:36px;top:30px">STATE VARIABLES</div><div id="vts"></div>
+        <div id="ph"><div class="lbl" style="left:24px;top:18px">STATE · ONE MOMENT</div><div id="phv"></div></div>
+        <div class="pillp ink" id="sfP" style="left:36px;top:400px">State function: depends only on the state now</div>
+        <div class="pillp" id="bin1" style="left:36px;top:476px"></div><div class="pillp" id="bin2" style="left:400px;top:476px"></div></div>
+      <div class="card rf" id="vr"><div class="lbl" style="left:36px;top:30px">TWO PATHS UP ONE HILL</div><svg id="hS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="ghost" id="vG" style="right:36px;top:18px">EXAMPLE FIGURES</div></div>
+    </div>
+    <!-- B: extensive vs intensive, think -->
+    <div id="sB">
+      <div class="card full" id="tl"><div class="lbl" style="left:36px;top:30px">ONE CUP · TWO HALF CUPS</div><svg id="cS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="ghost" id="cG" style="right:36px;top:18px">EXAMPLE FIGURES</div></div>
+      <div class="card rf" id="tr"><div class="lbl" style="left:36px;top:30px">DEPENDS ON AMOUNT?</div>
+        <div class="col" id="col1" style="left:36px"><b>EXTENSIVE</b><span>changes with amount</span></div><div class="col" id="col2" style="left:404px"><b>INTENSIVE</b><span>same for any amount</span></div><div id="its"></div></div>
+      <div class="card wide" id="th1"></div>
+    </div>
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card wide" id="wl"><div class="lbl" style="left:36px;top:30px">WORKED EXAMPLE</div><div id="wq">Start: 300 K, 2 L · End: 350 K, 5 L</div><div id="wrs"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">SAME START · SAME END</div><svg id="gS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="ghost" id="wG" style="right:36px;top:18px">EXAMPLE FIGURES</div></div>
+    </div>
+    <!-- C: names of processes -->
+    <div id="sC">
+      <div class="card wide" id="pc"><div class="lbl" style="left:36px;top:30px">FIVE WAYS TO CHANGE</div><div id="pts"></div>
+        <div class="pillp ac" id="isoP" style="right:36px;top:494px">Iso = same</div></div>
+    </div>
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+
+  </div>
+  <div id="stmt"><div id="st1">A state function cares only about</div><div id="st2">the <span class="acc">start</span> and the <span class="acc">end</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
