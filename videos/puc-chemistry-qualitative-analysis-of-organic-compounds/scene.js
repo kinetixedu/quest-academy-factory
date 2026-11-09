@@ -52,12 +52,12 @@ const tQr = QR.map(q => wt(q[2], q[3]));
 const ps = $('#pS');
 const pA = tube(ps, 150, 110, 300, 60); pA._lv(240); fillC(pA._liq, '#3A3A3A');
 const pFl = flame(ps, 150, 344);
-const pPipe = mk(ps, 'path', { d: 'M150 96 V76 H540 V170', stroke: C.ink2, 'stroke-width': 8, fill: 'none', 'stroke-linejoin': 'round' });
-mk(ps, 'path', { d: 'M150 96 V76 H540 V170', stroke: '#fff', 'stroke-width': 3, fill: 'none', 'stroke-linejoin': 'round' });
-const pBulb = mk(ps, 'circle', { cx: 330, cy: 76, r: 26, fill: WHT, stroke: C.ink2, 'stroke-width': 4 });
+const pPipe = mk(ps, 'path', { d: 'M150 96 V92 H540 V170', stroke: C.ink2, 'stroke-width': 8, fill: 'none', 'stroke-linejoin': 'round' });
+mk(ps, 'path', { d: 'M150 96 V92 H540 V170', stroke: '#fff', 'stroke-width': 3, fill: 'none', 'stroke-linejoin': 'round' });
+const pBulb = mk(ps, 'circle', { cx: 330, cy: 92, r: 24, fill: WHT, stroke: C.ink2, 'stroke-width': 4 });
 const pB = tube(ps, 540, 130, 330, 64); pB._lv(200); fillC(pB._liq, '#E3EEF8');
 const pBub = Array.from({ length: 5 }, () => mk(ps, 'circle', { r: 5, fill: 'none', stroke: C.ink2, 'stroke-width': 2 }));
-const pL = [lab(ps, 190, 250, '← COMPOUND + CuO', HC, { 'font-size': 17 }), lab(ps, 360, 126, 'ANHYDROUS CuSO₄', HC, { 'font-size': 17 }), lab(ps, 600, 250, 'LIME', HC, { 'font-size': 17 }), lab(ps, 600, 274, 'WATER', HC, { 'font-size': 17 })];
+const pL = [lab(ps, 190, 250, '← COMPOUND + CuO', HC, { 'font-size': 17 }), lab(ps, 360, 136, 'ANHYDROUS CuSO₄', HC, { 'font-size': 17 }), lab(ps, 600, 250, 'LIME', HC, { 'font-size': 17 }), lab(ps, 600, 274, 'WATER', HC, { 'font-size': 17 })];
 const pTag = [lab(ps, 330, 160, '', XC2, { 'font-size': 17, 'text-anchor': 'middle', 'font-weight': 700 }), lab(ps, 540, 364, '', HC, { 'font-size': 17, 'text-anchor': 'middle', 'font-weight': 700 })];
 $('#pes').innerHTML = eqrow('pe0', 392, '\\mathrm{C} + 2\\mathrm{CuO} \\rightarrow 2\\mathrm{Cu} + \\mathrm{CO_2}', 'LIME WATER MILKY', HC) + eqrow('pe1', 482, '2\\mathrm{H} + \\mathrm{CuO} \\rightarrow \\mathrm{Cu} + \\mathrm{H_2O}', 'CuSO₄ TURNS BLUE', XC2);
 

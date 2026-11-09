@@ -70,41 +70,41 @@ const z2a = carrow(z2, 214, 386, 330, 404, -30);
 const b = $('#bS');
 // phase 1: aniline ring
 const ph1 = mk(b, 'g', {});
-const RC = [392, 330], RR = 100, V = [0, 1, 2, 3, 4, 5].map(i => { const a = (-90 + 60 * i) * Math.PI / 180; return [RC[0] + RR * Math.cos(a), RC[1] + RR * Math.sin(a)]; });
-const NP = [392, 146], mid = (p, q) => [(p[0] + q[0]) / 2, (p[1] + q[1]) / 2], ME = V.map((v, i) => mid(v, V[(i + 1) % 6]));
+const RC = [392, 350], RR = 136, V = [0, 1, 2, 3, 4, 5].map(i => { const a = (-90 + 60 * i) * Math.PI / 180; return [RC[0] + RR * Math.cos(a), RC[1] + RR * Math.sin(a)]; });
+const NP = [392, 132], mid = (p, q) => [(p[0] + q[0]) / 2, (p[1] + q[1]) / 2], ME = V.map((v, i) => mid(v, V[(i + 1) % 6]));
 V.forEach((v, i) => { const w = V[(i + 1) % 6]; mk(ph1, 'line', { x1: v[0], y1: v[1], x2: w[0], y2: w[1], stroke: C.ink2, 'stroke-width': 6, 'stroke-linecap': 'round' }); });
 mk(ph1, 'line', { x1: V[0][0], y1: V[0][1], x2: NP[0], y2: NP[1], stroke: C.ink2, 'stroke-width': 6 });
 const PI = V.map((v, i) => { const w = V[(i + 1) % 6], ix = (q) => [q[0] + (RC[0] - q[0]) * 0.16, q[1] + (RC[1] - q[1]) * 0.16], a = ix(v), c = ix(w); return mk(ph1, 'line', { x1: a[0] + (c[0] - a[0]) * 0.14, y1: a[1] + (c[1] - a[1]) * 0.14, x2: c[0] - (c[0] - a[0]) * 0.14, y2: c[1] - (c[1] - a[1]) * 0.14, stroke: C.ink2, 'stroke-width': 6, 'stroke-linecap': 'round' }); });
 PI.push(mk(ph1, 'line', { x1: 406, y1: V[0][1] - 14, x2: 406, y2: NP[1] + 30, stroke: C.ink2, 'stroke-width': 6, 'stroke-linecap': 'round' }));
 const nB = ball(ph1, 40, OC, 'NH₂', 22); tr(nB, NP[0], NP[1]);
-const nLp = [dot(ph1), dot(ph1)]; pos(nLp[0], 383, 94); pos(nLp[1], 401, 94);
-const nPl = lab(ph1, 448, 120, '+', OC, 32);
+const nLp = [dot(ph1), dot(ph1)]; pos(nLp[0], 383, 80); pos(nLp[1], 401, 80);
+const nPl = lab(ph1, 448, 108, '+', OC, 32);
 const out = i => [V[i][0] + (V[i][0] - RC[0]) * 0.36, V[i][1] + (V[i][1] - RC[1]) * 0.36 + 8];
-const CH = [1, 3, 5].reduce((o, i) => { const [x, y] = out(i); o[i] = lab(ph1, x, y, '−', EC, 34); return o; }, {});
+const CH = [1, 3, 5].reduce((o, i) => { const [x, y] = out(i); o[i] = lab(ph1, x, y + 4, '−', EC, 44); return o; }, {});
 const DL = [1, 3, 5].reduce((o, i) => { const [x, y] = out(i); o[i] = lab(ph1, x, y, '', EC, 26); return o; }, {});
 const ST = [[1, 3, 5], [6, 1, 3], [6, 1, 4], [6, 2, 4]], SM = [null, 5, 3, 1];
 const off = (p, q, k) => [p[0] + (q[0] - p[0]) * k, p[1] + (q[1] - p[1]) * k];
-const AR = [[carrow(ph1, 392, 84, 420, 176, -40), carrow(ph1, ME[5][0], ME[5][1], ...off(V[5], RC, -0.22), 26)],
+const AR = [[carrow(ph1, 410, 74, 420, 184, -44), carrow(ph1, ME[5][0], ME[5][1], ...off(V[5], RC, -0.22), 26)],
   [carrow(ph1, ...off(V[5], RC, -0.22), ...ME[4], 26), carrow(ph1, ME[3][0], ME[3][1], ...off(V[3], RC, -0.22), 26)],
   [carrow(ph1, ...off(V[3], RC, -0.22), ...ME[2], 26), carrow(ph1, ME[1][0], ME[1][1], ...off(V[1], RC, -0.22), 26)]];
-const oLab = [1, 5].map(i => txt(ph1, V[i][0] + (i === 1 ? 64 : -64), V[i][1] - 22, 'ORTHO', { 'text-anchor': 'middle', 'font-size': 16, 'font-weight': 600, fill: C.mute }));
-const pLab = txt(ph1, V[3][0], V[3][1] + 70, 'PARA', { 'text-anchor': 'middle', 'font-size': 16, 'font-weight': 600, fill: C.mute });
+const oLab = [1, 5].map(i => txt(ph1, V[i][0] + (V[i][0] - RC[0]) * 0.95, V[i][1] + (V[i][1] - RC[1]) * 0.95 + 6, 'ORTHO', { 'text-anchor': 'middle', 'font-size': 16, 'font-weight': 600, fill: C.mute }));
+const pLab = txt(ph1, V[3][0] + 70, V[3][1] + 30, 'PARA', { 'text-anchor': 'middle', 'font-size': 16, 'font-weight': 600, fill: C.mute });
 // phase D: ethyl cation hyperconjugation
 const phD = mk(b, 'g', {});
-const CP = [480, 300], CM = [300, 300];
+const CP = [500, 290], CM = [290, 290];
 const lob = [mk(phD, 'ellipse', { cx: CP[0], cy: CP[1] - 74, rx: 28, ry: 52, fill: NC, 'fill-opacity': 0, stroke: NC, 'stroke-width': 3, 'stroke-dasharray': '7 6' }), mk(phD, 'ellipse', { cx: CP[0], cy: CP[1] + 74, rx: 28, ry: 52, fill: NC, 'fill-opacity': 0, stroke: NC, 'stroke-width': 3, 'stroke-dasharray': '7 6' })];
-const HS = [[CM[0], 176], [212, 352], [300, 418]], HP = [[570, 250], [570, 350]];
+const HS = [[CM[0], 166], [190, 350], [290, 410]], HP = [[612, 240], [612, 340]];
 HS.forEach(h => mk(phD, 'line', { x1: CM[0], y1: CM[1], x2: h[0], y2: h[1], stroke: C.ink2, 'stroke-width': 6 }));
 HP.forEach(h => mk(phD, 'line', { x1: CP[0], y1: CP[1], x2: h[0], y2: h[1], stroke: C.ink2, 'stroke-width': 6 }));
 mk(phD, 'line', { x1: CM[0], y1: CM[1], x2: CP[0], y2: CP[1], stroke: C.ink2, 'stroke-width': 6 });
 const hBalls = HS.map(h => { const g = ball(phD, 24, HG, 'H', 18); tr(g, ...h); return g; }); HP.forEach(h => tr(ball(phD, 24, HG, 'H', 18), ...h));
 const hRing = HS.map(h => mk(phD, 'circle', { cx: h[0], cy: h[1], r: 32, fill: 'none', stroke: GD, 'stroke-width': 4 }));
 tr(ball(phD, 40, HC, 'C', 28), ...CM); tr(ball(phD, 40, NC, 'C', 28), ...CP);
-const cPl = lab(phD, CP[0] + 52, CP[1] - 30, '+', NC, 36), hDl = lab(phD, CM[0] + 44, 176, 'δ+', NC, 24), cDl = lab(phD, CP[0] + 56, CP[1] - 30, 'δ+', NC, 26);
+const cPl = lab(phD, CP[0] + 52, CP[1] - 30, '+', NC, 36), hDl = lab(phD, CM[0] + 52, 160, 'δ+', NC, 24), cDl = lab(phD, CP[0] + 58, CP[1] - 34, 'δ+', NC, 26);
 const hPr = [dot(phD), dot(phD)];
-const hArr = carrow(phD, 318, 230, 452, 226, -50);
-const empT = txt(phD, CP[0], CP[1] + 160, 'EMPTY p ORBITAL', { 'text-anchor': 'middle', 'font-size': 17, 'font-weight': 600, fill: NC });
-const alT = txt(phD, 150, 470, 'ALPHA HYDROGENS · ON THE NEXT CARBON', { 'font-size': 17, 'font-weight': 600, fill: GD });
+const hArr = carrow(phD, 310, 222, 470, 214, -56);
+const empT = txt(phD, CP[0], CP[1] + 172, 'EMPTY p ORBITAL', { 'text-anchor': 'middle', 'font-size': 17, 'font-weight': 600, fill: NC });
+const alT = txt(phD, 36, 530, 'ALPHA HYDROGENS · ON THE NEXT CARBON', { 'font-size': 17, 'font-weight': 600, fill: GD });
 // phase K: count the helpers
 const phK = mk(b, 'g', {});
 const KN = [['CH₃⁺', 'METHYL', 0], ['CH₃CH₂⁺', 'ETHYL', 3], ['(CH₃)₂CH⁺', 'ISOPROPYL', 6], ['(CH₃)₃C⁺', 'TERT-BUTYL', 9]];
@@ -152,17 +152,17 @@ const wrow = (y, labs, ac, nums) => {
   labs.forEach((l, i) => { const isP = l.includes('⁺'); tr(ball(g, 44, isP ? NC : nums[i] ? HC : C.dim, l, 22), xs[i], y); if (nums[i]) { rings.push(mk(g, 'circle', { cx: xs[i], cy: y, r: 54, fill: 'none', stroke: GD, 'stroke-width': 4 })); nm.push(lab(g, xs[i], y - 70, `${nums[i]} α-H`, GD, 22)); } });
   return { g, rings, nm };
 };
-const wA = wrow(200, ['CH₃', 'CH⁺', 'CH₂', 'CH₃'], 1, [3, 0, 2, 0]), wB = wrow(430, ['CH₃', 'CH⁺', 'CH₃'], 1, [3, 0, 3]);
-const wAt = lab(ws, 392, 296, 'α-H = 3 + 2 = 5', GD, 26), wBt = lab(ws, 392, 526, 'ISOPROPYL · α-H = 3 + 3 = 6', GD, 26);
-const wAn = txt(ws, 36, 112, '2-BUTYL CATION', { 'font-size': 18, 'font-weight': 600, fill: HC }), wBn = txt(ws, 36, 352, 'ISOPROPYL CATION', { 'font-size': 18, 'font-weight': 600, fill: HC });
+const wA = wrow(210, ['CH₃', 'CH⁺', 'CH₂', 'CH₃'], 1, [3, 0, 2, 0]), wB = wrow(440, ['CH₃', 'CH⁺', 'CH₃'], 1, [3, 0, 3]);
+const wAt = lab(ws, 392, 306, '2-BUTYL · α-H = 3 + 2 = 5', GD, 26), wBt = lab(ws, 392, 536, 'ISOPROPYL · α-H = 3 + 3 = 6', GD, 26);
+const wAn = txt(ws, -400, 112, '2-BUTYL CATION', { 'font-size': 18, 'font-weight': 600, fill: HC }), wBn = txt(ws, -400, 352, 'ISOPROPYL CATION', { 'font-size': 18, 'font-weight': 600, fill: HC });
 
 /* ---------- X / Q / F ---------- */
 const trap = PUC.trap($('#trap'), { wrong: 'Count every hydrogen in the cation', right: 'Count only H on carbons joined to the plus carbon' });
 const tsv = $('#tS');
 const tG = mk(tsv, 'g', {}); [[90, 'CH₃', 1], [200, 'CH⁺', 0], [310, 'CH₃', 1]].forEach(([x, l, a], i) => { if (i) mk(tG, 'line', { x1: x - 110, y1: 120, x2: x, y2: 120, stroke: C.ink2, 'stroke-width': 5 }); });
 [[90, 'CH₃', 1], [200, 'CH⁺', 0], [310, 'CH₃', 1]].forEach(([x, l, a]) => tr(ball(tG, 34, a ? HC : NC, l, 18), x, 120));
-const tWr = lab(tsv, 470, 112, 'ALL H: 7', RD, 24), tRt = lab(tsv, 470, 176, 'α-H: 6', OK, 26);
-const tSk = mk(tsv, 'line', { x1: 410, y1: 104, x2: 530, y2: 104, stroke: RD, 'stroke-width': 4 });
+const tWr = lab(tsv, 450, 112, 'ALL H: 7', RD, 24), tRt = lab(tsv, 450, 176, 'α-H: 6', OK, 26);
+const tSk = mk(tsv, 'line', { x1: 392, y1: 104, x2: 508, y2: 104, stroke: RD, 'stroke-width': 4 });
 const where = PUC.where($('#wa'), { on: [], type: 'Sort +R and −R groups, count alpha hydrogens, order carbocation stability' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN / NEET PATTERN · ORIGINAL QUESTION', q: `In which compound does resonance make the ortho and para carbons richer in electrons?`, qW: 760,
   opts: ['Nitrobenzene', 'Benzaldehyde', 'Aniline', 'Benzonitrile'], right: 2, optW: 474, optY: 330, optH: 110, optFs: 30 });
@@ -180,7 +180,7 @@ const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
 const sweep = PUC.sweepRun(SW);
 const caps = M.captions($('#cap'), M.CUES.order);
 const tSw = [wt('S3', 'moves') - 0.2, T0('S4') + 0.2, wt('S4', 'Then') - 0.1], tHy = T0('S5') + 0.6;
-const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tSw[0] - 0.5, 1.08, 560, 580], [T0('S5') + 0.8, 1, 960, 540]]);
+const camF = M.camera($('#cam'), [[0, 1.05, 960, 520], [0.15, 1, 960, 540, [4.5, 1]], [tSw[0] - 0.5, 1.08, 560, 580], [T0('S4') + 0.3, 1, 960, 540]]);
 let geo = null;
 function measure() {
   geo = {};
@@ -246,7 +246,7 @@ M.on(t => {
       [1, 3, 5].forEach(i => { op(CH[i], !back && SM[k] === i ? M.clamp((t - tSw[k - 1] - 0.4) / 0.3) : 0); });
       op(nPl, !back && k > 0 ? 1 : 0);
       [1, 3, 5].forEach(i => { M.setT(DL[i], nitro ? 'δ+' : 'δ−'); attr(DL[i], 'fill', nitro ? NC : EC); op(DL[i], back ? M.io((t - tHy - 0.3) / 0.3) : 0); });
-      M.setT(nB._t, nitro ? 'NO₂' : 'NH₂'); nLp.forEach(d => op(d, nitro ? 0 : 1));
+      M.setT(nB._t, nitro ? 'NO₂' : 'NH₂'); nLp.forEach(d => op(d, nitro || (k > 0 && !back) ? 0 : 1));
       oLab.forEach(e => op(e, M.io((t - wt('S3', 'ortho')) / 0.3))); op(pLab, M.io((t - wt('S4', 'para')) / 0.3));
       lb = nitro ? 'MOLECULE BENCH · NITROBENZENE' : 'MOLECULE BENCH · ANILINE';
       tags = [[T0('S1'), 'C₆H₅NH₂'], [T0('S2'), 'LONE PAIR'], [tSw[0], '− AT ORTHO'], [tSw[1], '− AT PARA'], [tSw[2], '− AT ORTHO'], [tHy, 'HYBRID · o, p RICHER'], [T0('S6'), '+R GROUP'], [T0('S7'), '−R · o, p POORER']];
@@ -254,7 +254,7 @@ M.on(t => {
       const lean = uu(t, wt('D4', 'leans') - 0.2, 1.2);
       lob.forEach(l => attr(l, 'fill-opacity', (0.28 * lean).toFixed(3))); op(lob[0], M.io((t - wt('D2', 'empty')) / 0.3) || 0); op(lob[1], M.io((t - wt('D2', 'empty')) / 0.3) || 0);
       op(empT, M.io((t - wt('D2', 'empty')) / 0.3)); hRing.forEach(r => op(r, M.io((t - wt('D3', 'alpha')) / 0.3))); op(alT, M.io((t - wt('D3', 'alpha')) / 0.3));
-      hPr.forEach((d, j) => pos(d, M.lerp(318, 360, lean) + (j ? 0 : 0), M.lerp(230 + j * 18, 220 + j * 14, lean)));
+      hPr.forEach((d, j) => pos(d, M.lerp(304, 350, lean), M.lerp(220 + j * 18, 210 + j * 14, lean)));
       hArr.run(uu(t, wt('D4', 'leans') - 0.4, 0.9));
       op(cPl, 1 - lean); op(cDl, M.clamp((lean - 0.5) * 2)); op(hDl, M.clamp((lean - 0.5) * 2));
       lb = 'MOLECULE BENCH · ETHYL CATION';
