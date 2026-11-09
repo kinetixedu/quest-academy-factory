@@ -48,7 +48,7 @@ const KX = [60 + 85, 424 + 85], KY = 170;
 const place = (el, x, y) => { el.style.left = x.toFixed(1) + 'px'; el.style.top = y.toFixed(1) + 'px'; };
 place($('#kwTa'), KX[0], KY); place($('#kwTb'), KX[1], KY);
 const tSwap = wt('K1', 'swap') + 0.3;
-const th1 = PUC.think($('#th1'), { q: 'Lock code 1-2-3 and lock code 3-2-1: same, or different?', opts: ['Same', 'Different'], right: 1, why: 'The lock opens only in the right order. Order matters, so a lock code is a permutation.' });
+const th1 = PUC.think($('#th1'), { q: 'Lock code 1-2-3 and lock code 3-2-1: same, or different?', opts: ['Same', 'Different'], right: 1, why: 'The lock opens only in the right order: a lock code is a permutation.' });
 
 /* ---------- L: the 5 x 5 grid ---------- */
 const GX = j => 160 + j * 112, GY = i => 150 + i * 72;
@@ -283,7 +283,7 @@ M.on(t => {
     M.vis($('#gl'), t, tG1 + 0.1, out, { dx: -60, dy: 0, ...o });
     PUC.write($('#g5'), t, tGst[1] - 0.1, 0.9);
     const tStop = wt('G3', 'stops'), tMiss = wt('G3', 'missing');
-    for (let i = 0; i < 5; i++) { const el = $('#tl' + i); M.vis(el, t, tGst[1] + i * 0.12, 1e9, { ...POP, sc: 0.6 });
+    for (let i = 0; i < 5; i++) { const el = $('#tl' + i); M.vis(el, t, tG1 + 0.6 + i * 0.12, 1e9, { ...POP, sc: 0.6 });
       const k = M.io((t - tStop) / 0.3), m = M.io((t - tMiss - (i - 2) * 0.1) / 0.3);
       if (i < 2) { el.style.background = mix(C.soft, C.ac2, k); el.style.borderColor = mix(C.soft, RC, k); el.style.color = mix(C.ink, RC, k); }
       else { el.style.background = mix(C.soft, C.redBg, m); el.style.borderColor = mix(C.soft, C.red, m); el.style.color = mix(C.ink, C.red, m); } }

@@ -1,0 +1,31 @@
+{
+ "world": "puc-maths",
+ "topic": "Permutations of Distinct Objects",
+ "series": {
+  "name": "PUC Maths",
+  "ep": 54
+ },
+ "title": "Why 20, Not 10? Permutations Explained Simply | Class 11 Maths",
+ "description": "Five friends, two badges: captain and vice captain. Most people guess 10 ways to hand them out. The real answer is 20. Why? Because the two badges are different, and when order matters we count permutations. This animated lesson follows NCERT Chapter 6, Permutations and Combinations (Class 11).\n\nYou will watch a live 5 x 5 grid count every captain and vice captain pair, cross out the impossible ones and land on 20. Then we fill places one by one to build the formula nPr = n(n-1)(n-2)...(n-r+1), watch the count grow as we add one place at a time, and rewrite it with factorials as nPr = n! / (n-r)!. Two pause-and-think questions, a worked example with 8 runners and 3 medals, the exam trap of n to the power r, an original JEE Main pattern question on making even numbers from digits, a recap card and three questions to check yourself.\n\nFollows the NCERT book. Useful for CBSE, ICSE (ISC), Karnataka PUC and other state boards, and JEE.\n\nIn this video:\n0:00 Two badges: 10 ways or 20?\n0:30 What is a permutation?\n0:51 Swap the badges: a new arrangement\n1:20 Live: count every pair on a grid\n1:46 Fill the places one by one: the nPr formula\n2:36 Live: add one place at a time\n3:07 The factorial form n!/(n-r)!\n3:48 Worked example: 8 runners, 3 medals\n4:24 Exam trap: 8 x 8 x 8 is wrong\n4:39 Where it is asked\n4:47 Practice question (JEE Main pattern)\n5:30 Recap and three questions to answer\n\nNext episode (Ep 55): Permutations with Repeated Objects. APPLE has two P's: how many words can it really make?\n\nVideo by Quest Academy.",
+ "tags": [
+  "permutations class 11",
+  "permutation formula",
+  "nPr formula",
+  "nPr = n!/(n-r)!",
+  "permutations of distinct objects",
+  "when order matters",
+  "permutations and combinations",
+  "class 11 maths chapter 6",
+  "NCERT maths class 11",
+  "JEE Main permutations",
+  "digit problems permutations",
+  "PUC maths",
+  "first PUC maths",
+  "factorial and permutations"
+ ],
+ "thumb": {
+  "title": "Order Matters",
+  "accent_word": "Order",
+  "frame_t": 104
+ }
+}

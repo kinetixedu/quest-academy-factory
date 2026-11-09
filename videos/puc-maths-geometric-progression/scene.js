@@ -10,7 +10,7 @@ const txt = (p, x, y, s, a = {}) => { const e = mk(p, 'text', Object.assign({ x,
 const attr = PUC.attr;
 const POP = { dy: 0, sc: 0.7, sp: M.POP, fade: 0.1 };
 const A = s => `\\textcolor{${AC}}{${s}}`, R = s => `\\textcolor{${RC}}{${s}}`, N = s => `\\textcolor{${NC}}{${s}}`, D = s => `\\textcolor{${DC}}{${s}}`, red = s => `\\textcolor{${C.red}}{${s}}`;
-const fmt = v => { const r = Math.round(v * 100) / 100; return (Object.is(r, -0) ? 0 : r).toString(); };
+const fmt = v => { const r = Math.round(v * 1000) / 1000; return (Object.is(r, -0) ? 0 : r).toString(); };
 
 /* ---------- beats ---------- */
 const tMorph = T0('H2') + 0.02;
@@ -220,7 +220,7 @@ M.on(t => {
   if (stOn) {
     const sx = PUC.sweep(SW)(t); stmt.style.transform = t > tW1 ? `translateX(${(sx ?? -1980).toFixed(1)}px)` : 'none';
     M.rise($('#st1'), t, tT + 0.08, { st: 0.05 }); M.rise($('#st2'), t, wt('T1', 'every') - 0.05, { st: 0.07, sp: M.HEAVY });
-    PUC.write($('#stF'), t, wt('T1', 'same') - 0.2, 0.9);
+    PUC.write($('#stF'), t, wt('T1', 'divided') - 0.2, 0.9);
   }
 
   /* W */
