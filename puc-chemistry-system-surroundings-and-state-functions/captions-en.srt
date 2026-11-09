@@ -1,0 +1,529 @@
+1
+00:00:00,450 --> 00:00:02,265
+A cup of tea with no lid.
+
+2
+00:00:02,265 --> 00:00:04,505
+Hot food in a closed steel tiffin.
+
+3
+00:00:04,505 --> 00:00:07,048
+Tea in a flask that stays hot all day.
+
+4
+00:00:07,448 --> 00:00:08,478
+Three containers.
+
+5
+00:00:08,478 --> 00:00:10,690
+Each one lets a different thing escape.
+
+6
+00:00:11,140 --> 00:00:14,232
+Aarav opens his tiffin at
+lunch, in the college corridor.
+
+7
+00:00:14,582 --> 00:00:16,879
+He shut it tight at seven in the morning.
+
+8
+00:00:16,879 --> 00:00:17,874
+Nothing got out.
+
+9
+00:00:17,874 --> 00:00:19,168
+But the food is cold.
+
+10
+00:00:19,668 --> 00:00:22,412
+By the end, you will
+know where the heat went.
+
+11
+00:00:22,412 --> 00:00:24,438
+We begin Chapter 5, Thermodynamics.
+
+12
+00:00:25,088 --> 00:00:29,954
+Thermodynamics is the study of energy,
+as heat and work, moving from place
+
+13
+00:00:29,954 --> 00:00:30,854
+to place.
+
+14
+00:00:31,148 --> 00:00:33,549
+First, pick the part you want to study.
+
+15
+00:00:33,549 --> 00:00:36,840
+Like drawing a chalk circle
+around your toys on the floor.
+
+16
+00:00:37,240 --> 00:00:39,839
+The part inside the circle is the system.
+
+17
+00:00:39,839 --> 00:00:41,858
+Here, the food in the tiffin.
+
+18
+00:00:42,258 --> 00:00:44,582
+Everything outside it is the surroundings.
+
+19
+00:00:44,582 --> 00:00:46,821
+The air, the corridor, Aarav's hands.
+
+20
+00:00:47,221 --> 00:00:49,722
+The line between them is the boundary.
+
+21
+00:00:49,722 --> 00:00:53,839
+It can be a real wall, like the
+steel, or an imaginary line.
+
+22
+00:00:54,239 --> 00:00:57,469
+System plus surroundings
+together make the universe.
+
+23
+00:00:58,119 --> 00:01:01,812
+Now put a hot gas in a
+box, on our molecule bench.
+
+24
+00:01:02,162 --> 00:01:04,274
+Two things can cross the boundary.
+
+25
+00:01:04,274 --> 00:01:06,613
+Matter, which means the stuff itself.
+
+26
+00:01:06,613 --> 00:01:08,158
+And energy, like heat.
+
+27
+00:01:08,558 --> 00:01:10,798
+An open system lets both cross.
+
+28
+00:01:10,798 --> 00:01:14,157
+Steam leaves the open
+cup, and heat leaves too.
+
+29
+00:01:14,558 --> 00:01:17,922
+A closed system stops matter,
+but lets energy through.
+
+30
+00:01:17,922 --> 00:01:19,413
+That is Aarav's tiffin.
+
+31
+00:01:19,813 --> 00:01:23,849
+The steel keeps the food in,
+but heat flows out into the air.
+
+32
+00:01:23,849 --> 00:01:25,192
+So the food cools.
+
+33
+00:01:25,592 --> 00:01:27,697
+An isolated system stops both.
+
+34
+00:01:27,697 --> 00:01:29,545
+A good flask comes close.
+
+35
+00:01:29,545 --> 00:01:32,030
+No steam out, almost no heat out.
+
+36
+00:01:32,430 --> 00:01:35,516
+A wall that stops heat
+is called adiabatic.
+
+37
+00:01:35,516 --> 00:01:38,152
+The flask has nearly adiabatic walls.
+
+38
+00:01:38,802 --> 00:01:40,879
+Next, how do we describe a system?
+
+39
+00:01:41,229 --> 00:01:43,393
+We use a few things we can measure.
+
+40
+00:01:43,393 --> 00:01:46,691
+Pressure, volume, temperature,
+and the amount in moles.
+
+41
+00:01:47,091 --> 00:01:49,663
+Together they fix the state of the system.
+
+42
+00:01:49,663 --> 00:01:51,826
+Like a photo of it at one moment.
+
+43
+00:01:52,226 --> 00:01:56,260
+A state function depends only on the
+state right now, not on how the system
+
+44
+00:01:56,260 --> 00:01:57,160
+got there.
+
+45
+00:01:57,391 --> 00:01:59,048
+Think of climbing a hill.
+
+46
+00:01:59,048 --> 00:02:03,432
+Your height at the top is the same,
+by the steep path or the long winding
+
+47
+00:02:03,432 --> 00:02:04,332
+path.
+
+48
+00:02:04,347 --> 00:02:06,112
+Height is like a state function.
+
+49
+00:02:06,112 --> 00:02:08,660
+But the distance you
+walked depends on the path.
+
+50
+00:02:09,060 --> 00:02:12,416
+Pressure, volume and
+temperature are state functions.
+
+51
+00:02:12,416 --> 00:02:14,693
+Heat and work depend on the path.
+
+52
+00:02:14,693 --> 00:02:16,352
+They are path functions.
+
+53
+00:02:17,002 --> 00:02:17,949
+One more pair.
+
+54
+00:02:17,949 --> 00:02:20,381
+Pour a cup of hot tea into two half cups.
+
+55
+00:02:20,731 --> 00:02:21,899
+The volume halves.
+
+56
+00:02:21,899 --> 00:02:22,979
+The mass halves.
+
+57
+00:02:22,979 --> 00:02:25,332
+They depend on how much stuff there is.
+
+58
+00:02:25,332 --> 00:02:26,544
+They are extensive.
+
+59
+00:02:26,944 --> 00:02:29,351
+But each half is still just as hot.
+
+60
+00:02:29,351 --> 00:02:31,787
+Temperature does not depend on amount.
+
+61
+00:02:31,787 --> 00:02:32,981
+It is intensive.
+
+62
+00:02:33,381 --> 00:02:34,706
+Pause and think.
+
+63
+00:02:34,706 --> 00:02:37,194
+Density is mass divided by volume.
+
+64
+00:02:37,194 --> 00:02:39,618
+Is density extensive or intensive?
+
+65
+00:02:42,818 --> 00:02:43,718
+Intensive!
+
+66
+00:02:43,598 --> 00:02:47,507
+Mass halves and volume halves,
+so their ratio stays the same.
+
+67
+00:02:48,157 --> 00:02:49,189
+Remember this.
+
+68
+00:02:49,189 --> 00:02:53,567
+A state function cares only about
+the start and the end, never the road
+
+69
+00:02:53,567 --> 00:02:54,467
+between.
+
+70
+00:02:54,952 --> 00:02:56,642
+Now, one worked example.
+
+71
+00:02:56,942 --> 00:03:00,372
+A gas starts at three hundred
+kelvin and two litres.
+
+72
+00:03:00,372 --> 00:03:03,445
+It ends at three fifty
+kelvin and five litres.
+
+73
+00:03:03,845 --> 00:03:04,745
+Path one.
+
+74
+00:03:04,570 --> 00:03:08,761
+Warm it straight to three fifty
+kelvin, and let it grow to five litres.
+
+75
+00:03:09,511 --> 00:03:10,411
+Path two.
+
+76
+00:03:10,259 --> 00:03:14,591
+Cool it to two fifty kelvin, let it
+swell to eight litres, then bring it
+
+77
+00:03:14,591 --> 00:03:15,767
+to the same end.
+
+78
+00:03:16,517 --> 00:03:20,454
+Change in temperature, delta
+T, is final minus initial.
+
+79
+00:03:20,454 --> 00:03:22,718
+Three fifty minus three hundred.
+
+80
+00:03:22,718 --> 00:03:25,202
+Plus fifty kelvin, on both paths.
+
+81
+00:03:25,952 --> 00:03:27,198
+Change in volume.
+
+82
+00:03:27,198 --> 00:03:28,346
+Five minus two.
+
+83
+00:03:28,346 --> 00:03:30,641
+Plus three litres, on both paths.
+
+84
+00:03:31,391 --> 00:03:33,622
+Same start, same end, same change.
+
+85
+00:03:33,622 --> 00:03:36,511
+But the heat used on the
+two paths is different.
+
+86
+00:03:37,161 --> 00:03:39,867
+The ways a system changes have names too.
+
+87
+00:03:40,217 --> 00:03:42,610
+Isothermal means constant temperature.
+
+88
+00:03:42,610 --> 00:03:45,334
+Iso means same, and thermal means heat.
+
+89
+00:03:45,734 --> 00:03:48,058
+Isobaric means constant pressure.
+
+90
+00:03:48,058 --> 00:03:50,327
+Isochoric means constant volume.
+
+91
+00:03:50,727 --> 00:03:53,529
+Adiabatic means no heat goes in or out.
+
+92
+00:03:53,929 --> 00:03:57,705
+And cyclic means the system
+comes back to where it started.
+
+93
+00:03:57,705 --> 00:04:00,317
+So every state function changes by zero.
+
+94
+00:04:00,967 --> 00:04:02,429
+Now, the exam trap.
+
+95
+00:04:02,779 --> 00:04:06,085
+Many students say a closed
+system cannot exchange anything.
+
+96
+00:04:06,485 --> 00:04:07,385
+No.
+
+97
+00:04:06,957 --> 00:04:08,744
+Closed stops only matter.
+
+98
+00:04:08,744 --> 00:04:10,264
+Energy still crosses.
+
+99
+00:04:10,264 --> 00:04:12,688
+Only an isolated system stops both.
+
+100
+00:04:13,338 --> 00:04:14,760
+Where is this asked?
+
+101
+00:04:14,760 --> 00:04:18,961
+Expect quick questions that classify
+systems, pick out state functions,
+
+102
+00:04:18,961 --> 00:04:21,596
+or sort intensive and
+extensive properties.
+
+103
+00:04:22,196 --> 00:04:23,400
+Exam level now.
+
+104
+00:04:23,400 --> 00:04:26,064
+Which set contains only state functions?
+
+105
+00:04:26,064 --> 00:04:27,319
+Pause and solve.
+
+106
+00:04:32,719 --> 00:04:34,014
+The answer is B.
+
+107
+00:04:34,014 --> 00:04:36,264
+Pressure, volume and temperature.
+
+108
+00:04:36,764 --> 00:04:38,524
+Heat, q, depends on the path.
+
+109
+00:04:38,524 --> 00:04:39,739
+So A and C are out.
+
+110
+00:04:40,239 --> 00:04:42,627
+Work, w, also depends on the path.
+
+111
+00:04:42,627 --> 00:04:43,640
+So D is out.
+
+112
+00:04:44,140 --> 00:04:46,453
+Only B has state functions alone.
+
+113
+00:04:46,453 --> 00:04:50,833
+Heat and work are energy on the
+move, never stored in a system.
+
+114
+00:04:51,433 --> 00:04:52,973
+Here is your recap.
+
+115
+00:04:52,973 --> 00:04:54,556
+Screenshot this card.
+
+116
+00:04:57,756 --> 00:04:59,942
+Can you answer these three
+questions without help?
+
+117
+00:05:00,342 --> 00:05:01,242
+One.
+
+118
+00:05:00,862 --> 00:05:05,276
+Why is a closed tiffin a closed
+system, and not an isolated one?
+
+119
+00:05:06,076 --> 00:05:06,976
+Two.
+
+120
+00:05:06,497 --> 00:05:10,116
+Is your height on a hill like a
+state function or a path function?
+
+121
+00:05:10,916 --> 00:05:11,816
+Three.
+
+122
+00:05:11,469 --> 00:05:13,689
+Is temperature extensive or intensive?
+
+123
+00:05:14,589 --> 00:05:18,726
+Next time: why does a bicycle
+pump get hot when you pump a tyre?
+
+124
+00:05:18,726 --> 00:05:21,685
+We find out in the First
+Law of Thermodynamics.
