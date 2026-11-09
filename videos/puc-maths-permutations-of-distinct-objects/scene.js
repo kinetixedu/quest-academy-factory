@@ -134,14 +134,14 @@ const tSl = [0, 1, 2].map(i => { const g = mk(mk(ts, 'g', { transform: `translat
   txt(ts, 120 + i * 150, 214, ['GOLD', 'SILVER', 'BRONZE'][i], { 'text-anchor': 'middle', 'font-size': 17, fill: C.mute, 'font-weight': 600, 'letter-spacing': 1 }); return { g, c, a, b }; });
 const where = PUC.where($('#wa'), { on: ['JEE MAIN'], type: 'Make numbers from given digits, no digit repeated: how many?' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', qW: 780,
-  q: `Digits ${K('0, 1, 2, 3, 4, 5')}, no digit repeated.<br>How many 4-digit even numbers can be made?`,
+  q: `Digits ${K('0, 1, 2, 3, 4, 5')}, no digit repeated.<br>How many 4-digit even numbers are there?`,
   opts: ['120', '156', '180', '300'], right: 1, optW: 474, optY: 300 });
 const so = PUC.solution($('#so'), [[K(`\\text{last} = 0:\\ 5 \\times 4 \\times 3 = 60`)], [K(`\\text{last} = 2 \\text{ or } 4:\\ 2 \\text{ ways}`)], [K(`\\text{first: not } 0,\\ \\text{not last}: 4`)], [K(`2 \\times 4 \\times 4 \\times 3 = 96`)], [K(`60 + 96 = ${pc('156')}`)]], { y0: 100, dy: 96 });
 const tSo = [wt('A2', 'Zero'), wt('A3', 'two'), wt('A4', 'first'), wt('A4', 'Two'), wt('A5', 'Sixty')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 252, w: 1200, h: 492, title: 'Recap · permutations', y0: 98, dy: 80, txt: [1, 0, 0, 0, 1],
   lines: ['<b>Permutation</b>: an arrangement where order matters',
     K(`${nPr()} = ${nc('n')}(${nc('n')}-1)(${nc('n')}-2)\\cdots(${nc('n')}-${rc('r')}+1)`),
-    K(`${nPr()} = \\frac{${nc('n')}!}{(${nc('n')}-${rc('r')})!}`),
+    K(`${nPr()} = ${nc('n')}! \\div (${nc('n')}-${rc('r')})!`),
     K(`${nPr('5', '2')} = ${xc('5')} \\times ${xc('4')} = ${pc('20')}`),
     'Repeats allowed: <b>n<sup>r</sup></b> · no repeats: <b>nPr</b>'] });
 const YQ = ['Why is swapping the two badges a new way?', `Find ${K('{}^{7}P_{2}')}.`, `Why is ${K('{}^{5}P_{4}')} equal to ${K('{}^{5}P_{5}')}?`];

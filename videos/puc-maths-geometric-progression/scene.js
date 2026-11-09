@@ -45,13 +45,14 @@ const tPn = [wt('P4', 'Four'), wt('P4', 'Eight'), wt('P4', 'Sixteen')];
 const avD = PUC.avatar($('#sP'), { x: 160 + 36, y: 270 + 486, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'The A P adds. The G P multiplies.' });
 
 /* ---------- R: live r ---------- */
-const rs = $('#rS'), RY = 300, RX = i => 102 + i * 106;
+const rs = $('#rS'), RY = 320, RX = i => 102 + i * 106;
 mk(rs, 'line', { x1: 60, y1: RY, x2: 724, y2: RY, stroke: C.ink, 'stroke-width': 3 });
 const rBars = [0, 1, 2, 3, 4, 5].map(i => ({ r: mk(rs, 'rect', { x: RX(i), width: 72, rx: 6, fill: ACB, stroke: AC, 'stroke-width': 3 }), v: txt(rs, RX(i) + 36, 0, '', { 'text-anchor': 'middle', 'font-size': 22, fill: C.ink, 'font-weight': 600 }), l: txt(rs, RX(i) + 36, 0, 'term ' + (i + 1), { 'text-anchor': 'middle', 'font-size': 15, fill: NC }) }));
 const tRk = [wt('R3', 'When'), wt('R4', 'When'), wt('R5', 'when')];
 const rOf = t => { let r = 2; const tg = [1, 0.5, -2]; tRk.forEach((tt, i) => { const u = M.io((t - tt) / 0.9); r = r + (tg[i] - r) * u; }); return r; };
 const phase = r => r > 1.001 ? ['r > 1: it grows', ''] : Math.abs(r - 1) < 0.001 ? ['r = 1: it stays the same', ''] : r > 0 ? ['0 < r < 1: it shrinks', ''] : ['r < 0: the sign flips', 'bad'];
 let rLast = '';
+$('#rG').innerHTML = K(`${A('a')},\\ ${A('a')}${R('r')},\\ ${A('a')}${R('r')}^2,\\ ${A('a')}${R('r')}^3,\\ \\dots`);
 
 /* ---------- D: general term ---------- */
 const DS = [`a_1 = ${A('a')}`, `a_2 = ${A('a')}\\,${R('r')}`, `a_3 = ${A('a')}\\,${R('r')}\\,${R('r')} = ${A('a')}\\,${R('r')}^2`, `a_{${N('n')}} = ${A('a')}\\,${R('r')}^{\\,${N('n')} - 1}`, `a_{11} = 1 \\times ${R('2')}^{10} = 1024`];
@@ -170,7 +171,7 @@ M.on(t => {
     M.vis($('#rl'), t, tR1 + 0.1, out, { dx: -60, dy: 0, ...o });
     M.vis($('#rRd'), t, tR1 + 0.3, 1e9, { dy: 12 }); M.vis($('#rA'), t, wt('R1', 'keep'), 1e9, { dy: 12 });
     M.vis($('#rb'), t, tR1 + 0.3, out, { dx: 60, dy: 0, ...o });
-    const r = rOf(t), vals = [0, 1, 2, 3, 4, 5].map(i => Math.pow(r, i)), mx = Math.max(...vals.map(Math.abs)), sc = 230 / mx;
+    const r = rOf(t), vals = [0, 1, 2, 3, 4, 5].map(i => Math.pow(r, i)), mx = Math.max(...vals.map(Math.abs)), sc = 200 / mx;
     rBars.forEach((b, i) => {
       M.vis(b.r, t, wt('R1', 'change') + i * 0.08, 1e9, { dy: 0, fade: 0.15 }); M.vis(b.v, t, wt('R1', 'change') + i * 0.08 + 0.1, 1e9, { dy: 0 }); M.vis(b.l, t, wt('R1', 'change') + i * 0.08, 1e9, { dy: 0 });
       const v = vals[i], h = Math.max(2, Math.abs(v) * sc);
@@ -181,7 +182,7 @@ M.on(t => {
     });
     const key = fmt(r);
     if (key !== rLast) { rLast = key; M.setT($('#rV'), key); $('#rL').innerHTML = K(vals.slice(0, 5).map(v => fmt(v)).join(',\\ ') + ',\\ \\dots'); const [ph, cls] = phase(r); M.setT($('#rP'), ph); $('#rP').className = 'pillp' + (cls ? ' bad' : ' ac'); }
-    M.vis($('#rL'), t, wt('R1', 'change') + 0.3, 1e9, { dy: 10 }); M.vis($('#rP'), t, T0('R2'), 1e9, POP);
+    M.vis($('#rL'), t, wt('R1', 'change') + 0.3, 1e9, { dy: 10 }); M.vis($('#rPl'), t, T0('R2') + 0.5, 1e9, { dy: 8 }); PUC.write($('#rG'), t, T0('R2') + 0.7, 0.9); M.vis($('#rP'), t, T0('R2'), 1e9, POP);
   }
 
   /* D */
