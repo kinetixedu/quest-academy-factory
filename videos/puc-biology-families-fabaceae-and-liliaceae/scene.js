@@ -290,11 +290,11 @@ const EP = {
     ['#sP', T0('P1'), T0('V1') + 0.1, t => { const out = OUT('V1');
       M.vis($('#pch'), t, T0('P1'), out, { dy: 12, ...o }); M.vis($('#pd'), t, T0('P1') + 0.05, out, { dx: -60, dy: 0, ...o }); M.vis($('#pe'), t, T0('P1') + 0.2, out, { dx: 60, dy: 0, ...o });
       const st = curOf(t, tPs); pSet(st); pStack(t, [T0('P1') + 0.4, ...tPs]);
-      M.vis(PF.pl, t, tPs[0] + 0.1, tPs[1] - 0.1, { dy: 20, outDur: 0.3 }); labRun(PF.plL[0], t, wt('P2', 'bulbs'), tPs[1] - 0.3); labRun(PF.plL[1], t, wt('P2', 'parallel'), tPs[1] - 0.3);
+      M.vis(PF.pl, t, T0('P1') + 0.5, tPs[1] - 0.1, { dy: 20, outDur: 0.3 }); labRun(PF.plL[0], t, wt('P2', 'bulbs'), tPs[1] - 0.3); labRun(PF.plL[1], t, wt('P2', 'parallel'), tPs[1] - 0.3);
       M.vis(PF.ax, t, tPs[1] + 0.2, 1e9, { ...POP, sc: 0.2 }); labRun(PF.L[0], t, tPs[1] + 0.4, tPs[4] - 0.2);
       PT.forEach((e, i) => { const s = tokStage[i], tin = i === 0 ? wt('P3', 'actinomorphic') : i === 1 ? wt('P3', 'bisexual') : i === 2 ? wt('P3', 'tepals') : tPs[s] + 0.1; M.vis(e, t, tin, 1e9, { ...POP, sc: 0.5 }); e.style.color = st === s ? C.ac : C.ink; });
       PADH.style.borderTopColor = t > wt('P4', 'fixed') ? (st === 2 ? C.ac : C.ink) : 'transparent';
-      ringOf.forEach((g, i) => { if (!g) return; M.vis(g, t, tPs[i] + (i === 1 ? wt('P3', 'six') - tPs[1] : 0.2), 1e9, { ...POP, sc: 0.85 });
+      ringOf.forEach((g, i) => { if (!g) return; M.vis(g, t, tPs[i] + (i === 1 ? wt('P3', 'sepals') - 0.2 - tPs[1] : 0.2), 1e9, { ...POP, sc: 0.85 });
         const on = st === i, w = on ? 3 + 2 * (0.5 + 0.5 * Math.sin((t - tPs[i]) * 5)) : 3; g.querySelectorAll('path,ellipse,circle').forEach(e => { if (e.getAttribute('fill') !== 'none') attr(e, 'stroke-width', w.toFixed(2)); }); });
       M.vis(PF.tR, t, wt('P3', 'tube'), 1e9, { dy: 0, fade: 0.3 }); M.vis(PF.epi, t, wt('P4', 'fixed'), 1e9, { dy: 0, fade: 0.3 });
       labRun(PF.L[1], t, wt('P3', 'six') + 0.3, tPs[4] - 0.2); labRun(PF.L[2], t, wt('P4', 'fixed') + 0.2, tPs[4] - 0.2); labRun(PF.L[3], t, wt('P5', 'rooms'), tPs[4] - 0.2);
