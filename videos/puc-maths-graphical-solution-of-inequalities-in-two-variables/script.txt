@@ -1,0 +1,48 @@
+H1|0.4|A coach draws one straight chalk line across the college ground.
+H2|0.45|Now every spot on the ground is on one side, on the other side, or right on the line.
+H3|0.35|Aarav is standing at one spot, and wonders which side he is on.
+H4|0.5|One line splits the whole field in two. So how does maths decide which side wins?
+H5|0.65|The answer is an inequality in two variables. And its answer is not a few numbers. It is a whole region.
+I1|0.4|First, think of the ground as graph paper. Every spot has two numbers. x tells how far across, and y tells how far up.
+I2|0.4|An equation like x plus y equals six is a straight line. Every point on it adds up to exactly six.
+I3|0.6|Zero and six. Two and four. Six and zero. All on the line.
+I4|0.4|Now change equals to less than. x plus y is less than six.
+I5|0.65|The points that add up to less than six are not on the line any more. They all sit on one side of it.
+L1|0.4|Watch the test run. We drop points on the plane, one by one.
+L2|0.4|One and one. Two is less than six. True. The point turns green.
+L3|0.4|Five and four. Nine is not less than six. False. Red.
+L4|0.6|Keep going. Every green point lands below the line. Every red point lands above it.
+L5|0.65|So the line cuts the plane into two halves, called half planes. One half is the answer, and we shade it.
+S1|0.4|Here is the shortcut. Pick one test point that is not on the line. The easiest is the origin, zero and zero.
+S2|0.6|Zero plus zero is zero. Zero is less than six. True. So shade the side that holds the origin.
+S3|0.65|If the test comes out false, shade the other side instead.
+K1|0.4|Side by side. With less than, the points on the line do not count. So we draw the line dashed.
+K2|0.6|With less than or equal to, the line counts too. So we draw it solid.
+K3|3.2|Your turn. Two x plus three y is at least twelve. Test the origin. Shade the origin side, or the other side? Pause and decide.
+K4|0.65|The other side! Zero is not at least twelve, so the origin side fails. And the line is solid, because equal is allowed.
+T1|0.7|Remember this. A line cuts the plane in two. One test point tells you which half wins.
+V1|0.4|Some inequalities have only one letter. Take x is greater than two.
+V2|0.6|On a number line, that was a ray. On the plane, it is every point to the right of the line x equals two. A whole half plane.
+V3|3.2|Quick one. y is less than three. Shade above the line y equals three, or below it? Pause and think.
+V4|0.65|Below! Every point lower than height three works, whatever its x.
+W1|0.35|Now, one worked example.
+W2|0.5|Shade the region where three x plus two y is greater than six.
+W3|0.75|Step one. Draw the line three x plus two y equals six. It meets the x axis at two, and the y axis at three.
+W4|0.75|Step two. The sign is greater than, with no equals. So the line is dashed.
+W5|0.75|Step three. Test the origin. Zero is not greater than six. False.
+W6|0.65|Step four. So shade the side away from the origin. That half plane is the answer.
+X1|0.35|Now, the exam trap.
+X2|0.4|Two x minus y is greater than four. Many students see greater than, and shade above the line.
+X3|0.65|But test the origin. Zero is not greater than four. False. The origin is above this line, so the answer is below it. Always test a point. Never trust the symbol alone.
+J1|0.6|Where is this asked? This part was removed from the current NCERT text, so no board chip lights. The same test, which side of a line a point is on, still helps in coordinate geometry problems.
+Q1|5.4|Exam level now. How many points with positive whole number coordinates make this true? Pause and solve.
+A1|0.5|The answer is B. Nine.
+A2|0.5|Take each height y in turn. When y is one, x is less than six. So x is one to five. Five points.
+A3|0.5|When y is two, x is less than four. Three points. When y is three, x is less than two. Just one.
+A4|0.6|When y is four, x would have to be less than zero. None. So five plus three plus one makes nine.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What does a dashed line tell you?
+Y3|0.9|Two. Which test point is the easiest to use?
+Y4|1.1|Three. For y is greater than x, which side of the line y equals x do you shade?
+N1|0.3|Next time: three shirts and four pants. How many outfits can you make? We start counting, with the fundamental principle of counting.
