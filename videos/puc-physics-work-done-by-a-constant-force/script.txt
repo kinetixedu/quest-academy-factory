@@ -1,0 +1,55 @@
+H1|0.4|Lift a bucket of water. Push a cupboard across the room. Pull a cart of books.
+H2|0.45|In daily life, we call all three hard work. But physics is stricter.
+H3|0.35|Diya lifts her eight kilogram bag onto a shelf, one metre up. Then she carries it ten metres down the corridor.
+H4|0.5|Her arms ache both times. But physics says she did work on the bag only once. Which time?
+H5|0.65|One small formula will tell us.
+P1|0.35|So what is work in physics?
+P2|0.4|Work is done when a force moves something. A force must act, and the thing must move.
+P3|0.4|Push a wall all day. It does not move. So you do no work on it, however tired you feel.
+P4|0.4|And only the part of the force along the motion counts. That is the shadow from the last episode.
+P5|0.65|So work is force, times displacement, times cos theta.
+S1|0.35|Let's measure work live. Diya drags a box of books with a rope. She pulls with fifty newtons.
+S2|0.4|First, the rope is flat, so theta is zero. Watch the work meter.
+S3|0.4|One metre, fifty joules. Two metres, one hundred. Four metres, two hundred joules.
+S4|0.4|Now she pulls at sixty degrees. The same fifty newtons, the same four metres.
+S5|0.5|This time the meter stops at one hundred joules. Only half her pull is along the floor.
+S6|0.35|Slow-mo replay.
+S7|0.5|F is along the rope. Its forward part is F cos theta, twenty five newtons. The box moves along d.
+S8|0.65|On the graph, work grows in a straight line. The flat rope gives the steeper line.
+D1|0.35|Now the formula, one small step at a time.
+D2|0.75|Step one. Work is the forward part of the force, times the displacement. W equals F cos theta, times d.
+D3|0.75|Step two. That is exactly a dot product. W equals F dot d.
+D4|0.75|Step three. Force and displacement are vectors, but their dot product is a number. So work is a scalar. A size, no direction.
+D5|0.75|Step four. One newton, moving something one metre along it, does one joule of work. Its dimensions are M L squared T to the minus two.
+T1|0.7|Remember this. Work needs a force and a displacement. Only the part of the force along the motion counts.
+C1|0.35|Now, back to Diya's bag. Side by side.
+C2|0.4|Lifting. Her force is up, the bag moves up, so theta is zero. Work is m g h. Eight, times nine point eight, times one, about seventy eight joules.
+C3|0.6|Carrying. Her hand still pushes up, but the bag moves sideways. Theta is ninety degrees, and cos ninety is zero. So her work on the bag is zero.
+C4|3.2|Now you try. Diya holds the bag still, for five minutes. Her arms ache. How much work does she do on the bag? Pause and think.
+C5|0.65|Zero! The bag does not move, so d is zero. Her muscles use energy inside her body, but she does no work on the bag.
+R1|0.35|So how do you know if a force does work? Check three links.
+R2|0.4|Is there a force? Did the object move? Is some of the force along the motion?
+R3|0.4|Pushing a wall. Force, yes. Moved, no. No work.
+R4|0.4|Carrying the bag sideways. Force, yes. Moved, yes. Along the motion, no. No work.
+R5|0.65|Dragging the box. Yes, yes, and yes. Work is done.
+W1|0.35|Now, one worked example.
+W2|0.5|A force of six i plus two j newtons moves a box from the point one, two, to the point five, five, in metres. Find the work done.
+W3|0.75|First, the displacement. Final minus initial. Five minus one is four, five minus two is three. So d is four i plus three j.
+W4|0.75|Now, W equals F dot d. Six times four is twenty four. Two times three is six.
+W5|0.65|Add them. The work done is thirty joules.
+X1|0.35|Now, the exam trap.
+X2|0.35|A rope makes thirty degrees with the vertical. Many students write W equals F d cos thirty.
+X3|0.65|But theta is measured from the motion. The box moves along the floor, so theta is sixty degrees. W equals F d cos sixty.
+E1|0.6|Where is this asked? Work as F dot d with vectors, a pull at an angle, and the unit and dimensions of work.
+Q1|5.4|Exam level now. A ten kilogram box is pulled five metres at a steady speed on a rough floor, by a rope at thirty seven degrees above the floor. Mu is point seven five and g is ten. Cos thirty seven is point eight, sine thirty seven is point six. Find the work done by the rope. Pause and solve.
+A1|0.5|The answer is B. Two hundred and forty joules.
+A2|0.5|Steady speed, so the forces balance. F cos theta equals friction.
+A3|0.5|Friction is mu N, and N is m g minus F sin theta.
+A4|0.5|So point eight F equals point seven five, times one hundred minus point six F. F is sixty newtons.
+A5|0.6|The forward part is forty eight newtons. Times five metres, that is two hundred and forty joules.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why does pushing a wall all day do no work on it?
+Y3|0.9|Two. Why is work a scalar, though force and displacement are vectors?
+Y4|1.1|Three. What is one joule, in your own words?
+N1|0.3|Next time: brakes, a ceiling fan, and books carried down a corridor. Positive work, negative work, and no work at all. We find out in positive, negative and zero work.

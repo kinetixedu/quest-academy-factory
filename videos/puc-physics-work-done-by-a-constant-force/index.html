@@ -1,0 +1,173 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 72 - Work Done by a Constant Force</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 72: work done by a constant force (Motion notebook, Diya drags a box of books: the work rectangle) ===== */
+:root{--w:#0E8F8F;--f:#D9731A;--th:#B7791F;--d:#7A4FE0;--g:#D64545}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.cw{color:var(--w)}.ff{color:var(--f)}.th{color:var(--th)}.cd{color:var(--d)}
+.sv{position:absolute;left:0;top:0;overflow:hidden}
+.bpill{position:absolute;display:inline-flex;align-items:center;height:48px;padding:0 16px;border-radius:10px;background:#fff;border:2px solid var(--ac);color:var(--ac);font:600 18px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap;left:0;top:96px}
+/* title card cases */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft);overflow:hidden}
+.jr i{position:absolute;left:20px;top:24px;width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.jr .jn{position:absolute;left:116px;top:26px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:116px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr svg{position:absolute;right:12px;top:0}
+.wq{position:absolute;top:494px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 26px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:28px;top:84px;width:290px;height:360px;border-radius:12px;background:#F7F5EF;object-fit:cover}
+#hkSk{position:absolute;left:338px;top:84px;width:410px;height:360px;border-radius:12px;background:#FBFAF6;border:2px solid var(--line);overflow:hidden}
+/* sim readout */
+#roG{row-gap:6px}
+#roG .v{font-size:32px}
+#roG .k{font-size:28px}
+.stag{position:absolute;height:40px;padding:0 14px;border-radius:8px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* derivation */
+.st{position:absolute;left:36px;width:712px;height:110px}
+.st .n{position:absolute;left:0;top:2px;width:44px;height:44px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 21px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:66px;top:-4px;font-size:40px;white-space:nowrap}
+.st .why{position:absolute;left:66px;top:56px;font:500 21px Poppins;color:var(--mute);white-space:nowrap}
+.chipd{position:absolute;height:56px;padding:0 18px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:10px;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+/* side by side */
+.sbv{position:absolute;left:36px;top:84px;width:712px;height:330px;border-radius:14px;background:var(--soft);overflow:hidden}
+.sbl{position:absolute;left:36px;font-size:40px;white-space:nowrap}
+.sgn{position:absolute;right:36px;top:18px;height:40px;padding:0 14px;border-radius:8px;display:inline-flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+/* unit vector grid */
+.gc{position:absolute;width:104px;height:92px;border-radius:12px;background:var(--soft);display:flex;align-items:center;justify-content:center;font:600 40px 'IBM Plex Mono'}
+.gh{position:absolute;width:104px;height:52px;display:flex;align-items:center;justify-content:center;font-size:34px}
+/* reasoning */
+.lk{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.lk .n{position:absolute;left:18px;top:25px;width:46px;height:46px;border-radius:50%;background:var(--ac);color:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.lk .lt{position:absolute;left:84px;top:24px;font:600 28px/1.3 Poppins;white-space:nowrap}
+/* worked */
+#wq{position:absolute;left:36px;top:70px;font:600 28px/1.35 Poppins;width:712px}
+#wl .sol .sx{font-size:34px}
+.tb{position:absolute;height:64px;display:flex;align-items:center;justify-content:center;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+.tbh{position:absolute;height:40px;display:flex;align-items:center;justify-content:center;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+.tr{position:absolute;left:24px;width:736px;height:72px;border-radius:12px;background:var(--soft)}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#mq .mq{font-size:30px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 26px Poppins}
+#st2{font-size:68px}
+#sF .fcard .fl{font-size:42px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+.cond{position:absolute;top:84px;width:340px;height:76px;border-radius:14px;background:var(--soft);display:flex;align-items:center;gap:14px;padding:0 20px;font:600 26px Poppins;white-space:nowrap}
+.cond i{width:44px;height:44px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.rt3{position:absolute;left:24px;width:736px;height:96px;border-radius:14px;background:var(--soft)}
+.rt3 .nm{position:absolute;left:20px;top:30px;font:600 25px Poppins;white-space:nowrap}
+.ck{position:absolute;top:26px;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.rh3{position:absolute;top:80px;width:110px;text-align:center;font:600 15px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute);white-space:nowrap}
+.res{position:absolute;right:20px;top:26px;height:44px;padding:0 14px;border-radius:9px;display:flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 5 WORK, ENERGY AND POWER</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div class="bpill" id="bpill">NCERT · CBSE · ISC · PUC</div>
+    <div id="title">Work Done by a <span class="acc">Force</span></div>
+    <div id="sub">When does a force really do work?</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: three hard jobs + Diya's bag -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE HARD JOBS</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Daily life: all three are hard work</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA · HER COLLEGE BAG</div>
+        <div id="hdF" style="position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/diya.png">
+        <div id="hkSk"><svg class="sv" id="hkS" width="410" height="360"></svg></div>
+        <div id="wqs"></div></div>
+    </div>
+
+    <!-- P: what is work -->
+    <div id="sP">
+      <div class="card full" id="pl"><div class="lbl" style="left:36px;top:30px">TWO THINGS MUST HAPPEN</div>
+        <div class="cond" id="cd0" style="left:36px"><i></i>A force acts</div><div class="cond" id="cd1" style="left:408px"><i></i>The thing moves</div>
+        <svg class="sv" id="plS" width="784" height="580"></svg>
+        <div class="pillp bad" id="plP" style="left:36px;top:490px">Tired, but no work on the wall</div></div>
+      <div class="card rf" id="pr"><div class="lbl" style="left:36px;top:30px">ONLY THE PART ALONG THE MOTION</div>
+        <svg class="sv" id="prS" width="784" height="580"></svg>
+        <div class="fx" id="prF" style="left:36px;top:420px;font-size:48px"></div></div>
+    </div>
+
+    <!-- S: the sim (box of books + readout + graph) -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">DIYA'S BOX OF BOOKS · <span style="text-transform:none">F = 50 N</span></div>
+        <div class="stag" id="slo" style="right:36px;top:20px">SLOW-MO REPLAY · 0.25x</div>
+        <svg class="sv" id="simS" width="784" height="580"></svg></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ro" id="roG" style="left:36px;top:70px;width:712px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">WORK <i style="font-family:Poppins;text-transform:none">W</i> VS DISTANCE <i style="font-family:Poppins;text-transform:none">d</i></div>
+        <div class="pillp" id="grP" style="right:36px;top:18px;height:40px;font-size:19px">straight lines</div>
+        <svg class="sv" id="grS" width="784" height="274"></svg></div>
+    </div>
+
+    <!-- D: the formula -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE FORMULA · 4 STEPS</div><div id="steps"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">FORCE, DISPLACEMENT, ANGLE</div>
+        <svg class="sv" id="drS" width="784" height="580"></svg>
+        <div class="chipd" id="dc0" style="left:36px;top:340px"></div><div class="chipd" id="dc1" style="left:36px;top:414px"></div><div class="chipd" id="dc2" style="left:36px;top:488px;background:var(--w)"></div></div>
+    </div>
+
+    <!-- C: lift vs carry + think -->
+    <div id="sC">
+      <div class="card full" id="c0"><div class="lbl" style="left:36px;top:30px">LIFTING · ONE METRE UP</div><div class="sgn" id="sg0" style="background:var(--okBg);color:#1F6B3F">WORK DONE</div>
+        <div class="sbv"><svg class="sv" id="c0S" width="712" height="330"></svg></div>
+        <div class="sbl" id="c0a" style="top:440px"></div></div>
+      <div class="card rf" id="c1"><div class="lbl" style="left:36px;top:30px">CARRYING · TEN METRES SIDEWAYS</div><div class="sgn" id="sg1" style="background:var(--redBg);color:var(--red)">ZERO WORK</div>
+        <div class="sbv"><svg class="sv" id="c1S" width="712" height="330"></svg></div>
+        <div class="sbl" id="c1a" style="top:440px"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- R: three links -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">DOES THIS FORCE DO WORK?</div><div id="lks"></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">CHECK THE THREE LINKS</div><div id="rtab"></div></div>
+    </div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">ON A GRID · METRES</div>
+        <svg class="sv" id="wrS" width="784" height="580"></svg>
+        <div class="chipd" id="wc2" style="left:560px;top:96px;background:var(--w)"></div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tg" width="420" height="274" style="position:absolute;right:0;top:0;overflow:hidden"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: formula card + questions + NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Only the part <span class="acc">along the motion</span> counts.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
