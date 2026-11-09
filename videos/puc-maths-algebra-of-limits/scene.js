@@ -49,9 +49,9 @@ const tLs = [wt('H1', 'squared') - 0.1, wt('H1', 'minus') - 0.1, wt('H1', 'over'
 
 /* ---------- H: the scary limit, as chain links ---------- */
 $('#hX').innerHTML = K(BIG);
-const LK = [[PF, 250, 36, 36], [PO, 190, 230, 330], [PG, 190, 364, 560]];
+const LK = [[PF, 250, 36, 36], [PO, 190, 266, 322], [PG, 190, 436, 548]];
 $('#hLk').innerHTML = LK.map(([s, w], i) => `<div class="lk" id="lk${i}" style="width:${w}px;border-color:${[FB, OR, GT][i]}">${K(s)}</div>`).join('') +
-  `<div class="op" id="op0" style="left:${292}px">×</div><div class="op" id="op1" style="left:${522}px">÷</div>`;
+  `<div class="op" id="op0" style="left:291px">×</div><div class="op" id="op1" style="left:517px">÷</div>`;
 const tApart = wt('H3', 'apart'), tTog = wt('H4', 'together');
 
 /* ---------- B: building blocks ---------- */
@@ -60,7 +60,7 @@ $('#bF2').innerHTML = K(`\\lim_{${X} \\to a} ${kg('c')} = ${kg('c')}`);
 const b1 = $('#b1S'), BX = v => 92 + (v - 1) * 300, BY = 300;
 mk(b1, 'line', { x1: 60, y1: BY, x2: 724, y2: BY, stroke: C.ink, 'stroke-width': 3 });
 [1, 1.5, 2, 2.5, 3].forEach(v => { mk(b1, 'line', { x1: BX(v), y1: BY - 9, x2: BX(v), y2: BY + 9, stroke: C.ink, 'stroke-width': 2 }); if (v % 1 === 0) txt(b1, BX(v), BY + 40, v, { 'text-anchor': 'middle', 'font-size': 22, fill: C.ink, 'font-weight': 600 }); });
-const b1D = mk(mk(b1, 'g', {}), 'g', {}); mk(b1D, 'circle', { cx: 0, cy: BY, r: 12, fill: XV });
+const b1P = mk(b1, 'g', {}), b1D = mk(b1P, 'g', {}); mk(b1D, 'circle', { cx: 0, cy: BY, r: 12, fill: XV });
 const b1A = mk(b1, 'line', { x1: BX(2), y1: BY - 60, x2: BX(2), y2: BY + 12, stroke: C.ink, 'stroke-width': 3, 'stroke-dasharray': '6 6' });
 const tB2c = wt('B2', 'creeps'), tB2e = T1('B2');
 const bp = plot($('#b2S'), { x0: 0, x1: 4, y0: 0, y1: 6.5, px: 96, pw: 620, py: 170, ph: 280, xt: [0, 1, 2, 3, 4], yt: [0, 5] });
@@ -80,7 +80,7 @@ const tC0 = wt('L3', 'creeps'), tC1 = T0('L5');
 
 /* ---------- R: the theorem ---------- */
 const RS = [`\\lim (${fb('f')} + ${gt('g')}) = \\lim ${fb('f')} + \\lim ${gt('g')}`, `\\lim (${fb('f')} - ${gt('g')}) = \\lim ${fb('f')} - \\lim ${gt('g')}`, `\\lim (${fb('f')}\\,${gt('g')}) = \\lim ${fb('f')} \\cdot \\lim ${gt('g')}`, `\\lim \\dfrac{${fb('f')}}{${gt('g')}} = \\dfrac{\\lim ${fb('f')}}{\\lim ${gt('g')}}, \\ \\lim ${gt('g')} \\ne 0`, `\\lim (${kg('k')}\\,${fb('f')}) = ${kg('k')} \\lim ${fb('f')}`];
-const RY = [84, 172, 260, 348, 452];
+const RY = [84, 166, 248, 330, 430];
 $('#rSt').innerHTML = RS.map((f, i) => `<div class="st" id="rs${i}" style="top:${RY[i]}px;height:84px"><div class="n">${i + 1}</div><div class="sx" style="font-size:32px;top:${i === 3 ? -12 : 4}px">${K(f)}</div></div>`).join('');
 const RN = [[`${fb('10')} + ${gt('4')} = ${lc('14')}`], [`${fb('10')} - ${gt('4')} = ${lc('6')}`], [`${fb('10')} \\times ${gt('4')} = ${lc('40')}`], [`${fb('10')} \\div ${gt('4')} = ${lc('2.5')}`], [`${kg('3')} \\times ${fb('10')} = ${lc('30')} \\ (k = 3)`]];
 $('#rNs').innerHTML = RN.map(([f], i) => `<div class="lr" id="rn${i}" style="top:${RY[i] - 4}px;height:72px"><div class="sy" style="top:14px">${K(f)}</div></div>`).join('');
@@ -90,7 +90,7 @@ const th1 = PUC.think($('#th1'), { q: 'The limit of 5x², as x tends to 3?', opt
 /* ---------- S: rule on vs rule off ---------- */
 $('#s1F').innerHTML = K(`\\lim_{${X} \\to 2} \\dfrac{${PF}}{${PG}}`);
 $('#s2F').innerHTML = K(`\\lim_{${X} \\to 2} \\dfrac{${X}^2 - 4}{${red(`${X} - 2`)}}`);
-const th2 = PUC.think($('#th2'), { q: '1/x, as x tends to 0: can we use the quotient rule?', opts: ['Yes', 'No'], right: 1, why: 'The bottom tends to 0, so the rule is switched off. Think another way.' });
+const th2 = PUC.think($('#th2'), { q: '1/x as x tends to 0: is the quotient rule allowed?', opts: ['Yes', 'No'], right: 1, why: 'The bottom tends to 0, so the rule is switched off. Think another way.' });
 
 /* ---------- D: crack the scary limit ---------- */
 const dsol = PUC.solution($('#da'), [
@@ -99,6 +99,7 @@ const dsol = PUC.solution($('#da'), [
   [K(`${PO} \\to ${or('1')}; \\ \\text{top} \\to ${fb('10')} \\times ${or('1')} = 10`)],
   [K(`${PG} \\to ${gt('4')} \\ne 0`)],
   [K(`\\text{limit} = \\dfrac{10}{${gt('4')}} = ${lc('2.5')}`)]], { label: '', y0: 92, dy: 92 });
+[...$('#da').querySelectorAll('.lbl')].slice(1).forEach(e => e.remove());
 const tD = [wt('D2', 'times'), wt('D3', 'ten'), wt('D4', 'product'), wt('D5', 'bottom'), wt('D6', 'ten')];
 const ub = (s, v) => `\\underbrace{${s}}_{\\to ${v}}`;
 const DU = [`\\dfrac{(${PF})(${PO})}{${PG}}`,
@@ -185,7 +186,7 @@ M.on(t => {
     const out = OUT('L1');
     M.vis($('#ba'), t, tB1 + 0.1, out, { dx: -60, dy: 0, ...o });
     PUC.write($('#bF1'), t, T0('B2') + 0.1, 0.8);
-    const x = creep(t, tB2c, tB2e); attr(b1D, 'transform', `translate(${BX(x).toFixed(1)},0)`); M.setT($('#b1V'), f3(x));
+    const x = creep(t, tB2c, tB2e); attr(b1P, 'transform', `translate(${BX(x).toFixed(1)},0)`); M.setT($('#b1V'), f3(x));
     M.vis(b1D, t, wt('B2', 'If') - 0.1, 1e9, { dy: 0, sc: 0.3, sp: M.POP, fade: 0.08 }); M.vis(b1A, t, wt('B2', 'If'), 1e9, { dy: 0 }); M.vis($('#b1R'), t, wt('B2', 'If'), 1e9, { dy: 12 });
     M.vis($('#bb'), t, T0('B3') - 0.1, out, { dx: 60, dy: 0, ...o });
     PUC.write($('#bF2'), t, T0('B3') + 0.2, 0.8);
@@ -230,12 +231,12 @@ M.on(t => {
     PUC.write($('#s1F'), t, wt('S1', 'bottom') - 0.2, 0.8);
     const x1 = creep(t, wt('S1', 'tends'), wt('S1', 'four') + 0.6); M.setT($('#s1V'), f3(G(x1)));
     M.vis($('#s1R'), t, wt('S1', 'tends') - 0.1, 1e9, { dy: 12 });
-    M.vis($('#sw1'), t, wt('S1', 'quotient') - 0.1, 1e9, POP); M.vis($('#sw1L'), t, wt('S1', 'works') - 0.1, 1e9, { dx: -12, dy: 0 });
+    M.vis($('#sw1'), t, wt('S1', 'quotient') - 0.1, 1e9, POP); M.vis($('#sw1L'), t, wt('S1', 'works') - 0.1, 1e9, { dx: -12, dy: 0 }); M.vis($('#s1P'), t, wt('S1', 'works') + 0.4, 1e9, POP);
     M.vis($('#s2'), t, T0('S2') - 0.1, out, { dx: 60, dy: 0, ...o });
     PUC.write($('#s2F'), t, T0('S2') + 0.3, 0.8);
     const x2 = creep(t, wt('S2', 'bottom'), wt('S2', 'zero') + 0.6); const bv = x2 - 2; M.setT($('#s2V'), (bv < 0 ? '-' : '') + f3(Math.abs(bv) + 1e-9));
     M.vis($('#s2R'), t, wt('S2', 'bottom') - 0.1, 1e9, { dy: 12 });
-    M.vis($('#sw2'), t, wt('S2', 'switched') - 0.1, 1e9, POP); M.vis($('#sw2L'), t, wt('S2', 'switched'), 1e9, { dx: -12, dy: 0 });
+    M.vis($('#sw2'), t, wt('S2', 'switched') - 0.1, 1e9, POP); M.vis($('#sw2L'), t, wt('S2', 'switched'), 1e9, { dx: -12, dy: 0 }); M.vis($('#s2P'), t, wt('S2', 'off'), 1e9, POP);
     M.vis($('#th2'), t, tS3 + 0.05, OUT('D1'), { dy: 36, ...o });
     th2(t, { tin: tS3, tOpts: wt('S3', 'can') - 0.1, tCount: T1('S3') + 0.05, dur: 3, tAns: T0('S4') - 0.02, tWhy: wt('S4', 'bottom') });
   }

@@ -65,7 +65,7 @@ const pDirT = lab(ps, PP.X(-A2) - 10, PP.Y(7) + 4, 'directrix', C.ink, { 'text-a
 const pCurve = mk(ps, 'path', { d: parD(PP, A2, 7.2), fill: 'none', stroke: RC, 'stroke-width': 5 });
 const pAx = mk(ps, 'line', { x1: PP.X(-3), y1: PP.Y(0), x2: PP.X(8), y2: PP.Y(0), stroke: LT, 'stroke-width': 5, opacity: 0.8 });
 const pAxT = lab(ps, PP.X(6.4), PP.Y(0) - 12, 'axis', LT);
-const pV = dotG(ps, PP.X(0), PP.Y(0), 9, C.ink); const pVT = lab(ps, PP.X(0) + 12, PP.Y(0) + 28, 'vertex', C.ink);
+const pV = dotG(ps, PP.X(0), PP.Y(0), 9, C.ink); const pVT = lab(ps, PP.X(0) - 10, PP.Y(0) - 14, 'vertex', C.ink, { 'text-anchor': 'end' });
 const pHalf = [mk(ps, 'line', { x1: PP.X(-A2), y1: PP.Y(0) + 40, x2: PP.X(0), y2: PP.Y(0) + 40, stroke: AO, 'stroke-width': 3 }), mk(ps, 'line', { x1: PP.X(0), y1: PP.Y(0) + 40, x2: PP.X(A2), y2: PP.Y(0) + 40, stroke: AO, 'stroke-width': 3 })];
 const pPF = mk(ps, 'line', { stroke: PB, 'stroke-width': 4, 'stroke-linecap': 'round' }), pPM = mk(ps, 'line', { stroke: PG, 'stroke-width': 4, 'stroke-linecap': 'round' });
 const pM = mk(ps, 'circle', { r: 6, fill: PG });
