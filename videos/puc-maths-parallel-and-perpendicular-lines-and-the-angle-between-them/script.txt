@@ -1,0 +1,56 @@
+H1|0.4|Look at a town map. Some roads run side by side, and never meet, however far they go.
+H2|0.45|Other roads cross each other perfectly square, like the corner of a page.
+H3|0.35|Diya spots both kinds on the map of her college town.
+H4|0.5|How can you tell, without drawing them forever?
+H5|0.65|The secret is hiding in their slopes. Let us find it.
+P1|0.4|Start with parallel lines. Parallel means they stay the same distance apart, and never meet.
+P2|0.4|Here are two lines on graph paper. Each one climbs one step up for every two steps across.
+P3|0.6|Same rise, same run, same slope. They lean by the same amount, so one never catches the other.
+P4|0.65|The rule: two non vertical lines are parallel exactly when their slopes are equal. m one equals m two.
+L1|0.4|Now let us turn one line, and watch where the two lines meet.
+L2|0.4|Line one has slope one half. Line two starts steep, and slowly turns.
+L3|0.4|As the two slopes get closer, the meeting point runs further and further away.
+L4|0.6|When the slopes are equal, there is no meeting point at all. The lines are parallel.
+L5|0.4|Keep turning. Watch the crossing angle, and the two slopes multiplied.
+L6|0.65|At exactly ninety degrees, the slopes are one half and minus two. Their product is minus one.
+R1|0.4|Why minus one? Take line one, with a right triangle under it. Run two, rise one. Slope one half.
+R2|0.75|Step one. Turn the picture a quarter turn, anticlockwise.
+R3|0.75|Step two. The run of two now points up. It becomes a rise of two.
+R4|0.75|Step three. The rise of one now points left. It becomes a run of minus one.
+R5|0.75|Step four. The new slope is two over minus one, which is minus two. And one half times minus two is minus one.
+R6|0.65|So two non vertical lines are perpendicular exactly when m one times m two is minus one. Flip the slope, and change its sign.
+K1|0.4|Side by side. Parallel lines have the same slope. Two, and two.
+K2|0.6|Perpendicular lines: flip the slope and change its sign. Two, and minus one half.
+K3|3.2|Your turn. One line has slope three. Another has slope minus one third. Parallel, perpendicular, or neither? Pause and decide.
+K4|0.65|Perpendicular! Three times minus one third is minus one.
+T1|0.7|Remember this. Parallel lines have equal slopes. Perpendicular slopes multiply to minus one.
+G1|0.4|Most lines are neither. They cross at some other angle. How big?
+G2|0.4|Each line makes its own angle with the x axis, alpha one and alpha two. Their slopes are tan alpha one and tan alpha two.
+G3|0.75|Step one. The angle between the lines is the difference, alpha two minus alpha one.
+G4|0.75|Step two. Use the tan of a difference, from chapter three.
+G5|0.75|Step three. Put in the slopes. tan theta is m two minus m one, over one plus m one times m two.
+G6|0.65|Step four. Take the size, with a modulus. That gives the sharp angle, less than ninety degrees.
+G7|0.6|Side by side. Where two lines cross, they make a sharp angle, theta, and a wide angle, one eighty minus theta.
+G8|3.2|Quick one. Can this formula find the angle between two perpendicular lines? Pause and think.
+G9|0.65|No! For perpendicular lines, one plus m one m two is zero, and we cannot divide by zero. But that angle is ninety degrees.
+W1|0.35|Now, one worked example.
+W2|0.5|Find the sharp angle between two lines with slopes two and minus three.
+W3|0.75|Step one. Top. m two minus m one is minus three minus two. That is minus five.
+W4|0.75|Step two. Bottom. One plus m one times m two is one plus minus six. That is minus five.
+W5|0.75|Step three. tan theta is the size of minus five over minus five, which is one.
+W6|0.65|Step four. tan theta equals one, so theta is forty five degrees.
+X1|0.35|Now, the exam trap.
+X2|0.4|A line has slope two. Slope of a perpendicular line? Many students just change the sign, and write minus two.
+X3|0.65|But two times minus two is minus four, not minus one. Flip it as well. The answer is minus one half.
+J1|0.6|Where is this asked? In JEE Main, for example in January twenty nineteen: find a missing coordinate so that two lines are perpendicular.
+Q1|5.4|Exam level now. L one passes through the origin and one, three. L two has positive slope m, and makes forty five degrees with L one. Find m. Pause and solve.
+A1|0.5|The answer is C. One half.
+A2|0.5|L one has slope three, and tan forty five is one.
+A3|0.5|Without the modulus, m minus three is plus or minus, one plus three m.
+A4|0.6|Plus gives m equals minus two. Not positive, so reject it. Minus gives four m equals two, so m is one half.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What is the slope of a line parallel to a line of slope minus four?
+Y3|0.9|Two. Lines with slopes one half and minus two meet at what angle?
+Y4|1.1|Three. Why does the angle formula fail for perpendicular lines?
+N1|0.3|Next time: two dots on a map. Draw the road between them, and write its rule. Point slope and two point forms.
