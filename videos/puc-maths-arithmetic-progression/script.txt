@@ -1,0 +1,45 @@
+H1|0.4|In week one, Aarav puts fifty rupees in a jar.
+H2|0.45|Every week after that, he adds twenty rupees more. The same amount, every single week.
+H3|0.35|He wants to know how much will be in the jar after one whole year. That is fifty two weeks.
+H4|0.5|Does he have to add twenty, fifty one times, one week at a time?
+H5|0.65|No. This pattern has a name, and a one line formula. It is called an arithmetic progression.
+D1|0.4|Look at the jar each week. Fifty, seventy, ninety, one hundred ten.
+D2|0.4|Each total is the one before it, plus the same twenty. Twenty is the step.
+D3|0.65|A sequence like this is an arithmetic progression, or A P for short. Each term is the term before it, plus a fixed number.
+D4|0.65|The first term is called a. The fixed step is called d, the common difference. Here, a is fifty and d is twenty.
+L1|0.4|Now watch the weeks go by. n counts up, and each new bar is one step taller.
+L2|0.4|Week two is fifty plus one step. Week three is fifty plus two steps. Week four, fifty plus three steps.
+L3|0.65|See the pattern? The number of steps is always one less than the week number. Join the tops, and you get a straight line.
+G1|0.35|Now let us build the formula in small steps.
+G2|0.75|Step one. The first term is a. No steps yet.
+G3|0.75|Step two. The second term is a plus d. The third is a plus two d.
+G4|0.75|Step three. To reach term n, you take n minus one steps. So you add d, n minus one times.
+G5|0.65|So the nth term is a n equals a, plus n minus one, times d. That is the general term of an A P.
+S1|0.4|Side by side. When d is positive, the terms climb, like Aarav's savings. Fifty, seventy, ninety.
+S2|0.6|When d is negative, the terms fall. Spending ten rupees a day from one hundred gives one hundred, ninety, eighty. Here d is minus ten.
+S3|3.2|Now you try. In ten, seven, four, one, is d three, or minus three? Pause and decide.
+S4|0.65|Minus three! d is always a term minus the term before it. Seven minus ten is minus three.
+C1|0.4|How do you check if a sequence is an A P? Subtract each term from the next one. If every difference is the same, it is an A P.
+C2|3.2|Quick one. Is three, six, twelve, twenty four an A P? Pause and think.
+C3|0.65|No! The differences are three, six and twelve. They are not the same, so it is not an A P.
+T1|0.7|Remember this. In an A P, add the same d every time. The nth term is a plus n minus one, times d.
+W1|0.35|Now, Aarav's question. How much after fifty two weeks?
+W2|0.75|Step one. a is fifty, d is twenty, and n is fifty two.
+W3|0.75|Step two. a fifty two equals fifty, plus fifty one times twenty.
+W4|0.75|Step three. Fifty one times twenty is one thousand and twenty.
+W5|0.65|So after one year, the jar holds fifty plus one thousand and twenty. That is one thousand and seventy rupees.
+X1|0.35|Now, the exam trap.
+X2|0.4|Find the tenth term of five, eight, eleven. Many students write five plus ten times three, and get thirty five.
+X3|0.65|But the tenth term takes only nine steps from the first. So it is five plus nine times three, which is thirty two.
+J1|0.6|Where is this asked? Arithmetic progressions are taught in the NCERT Class ten book, and are not in the current Class eleven text. JEE Main asks them, for example with terms and sums of an A P.
+Q1|5.4|Exam level now. Which term of this A P is ninety nine? Pause and solve.
+A1|0.5|The answer is A. The twenty fourth term.
+A2|0.5|From the fifth term to the twelfth term is seven steps. Fifty one minus twenty three is twenty eight. So seven d is twenty eight, and d is four.
+A3|0.5|The fifth term is a plus four d. So a is twenty three minus sixteen, which is seven.
+A4|0.6|Now seven plus n minus one, times four, equals ninety nine. So n minus one is twenty three, and n is twenty four.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What is the common difference of twenty, fifteen, ten?
+Y3|0.9|Two. Find the fifteenth term of two, five, eight.
+Y4|1.1|Three. Is one, four, nine, sixteen an A P? Why?
+N1|0.3|Next time: can you add all the numbers from one to one hundred in seconds? Young Gauss did. We find out with the sum of an A P.

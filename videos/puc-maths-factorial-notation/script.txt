@@ -1,0 +1,48 @@
+H1|0.4|Five friends want one photo, standing in a row.
+H2|0.45|Who stands first? Who stands second? Every new order is a new photo.
+H3|0.35|Aarav offered to take every possible photo.
+H4|0.5|He thought it would take a few minutes. It takes one hundred and twenty photos! Why so many?
+H5|0.65|The answer hides in a long product. And maths has a short way to write it. Factorial.
+C1|0.4|Let us count with the counting rule from last time. There are five spots in the row.
+C2|0.4|The first spot can take any of the five friends.
+C3|0.4|The second spot has four left. Then three. Then two. Then just one.
+C4|0.65|Five times four times three times two times one. One hundred and twenty photos.
+L1|0.4|Now watch the count grow as the row gets longer.
+L2|0.4|One friend: one way. Two friends: two ways.
+L3|0.4|Three friends: six ways. Four friends: twenty four.
+L4|0.4|Five friends: one hundred and twenty. Ten friends? More than three and a half million.
+L5|0.65|The numbers grow so fast that this product needs its own short name.
+D1|0.4|NCERT gives it one. n factorial, written as n with an exclamation mark.
+D2|0.75|It means the product of the first n natural numbers. One times two times three, all the way up to n.
+D3|0.75|So five factorial is one times two times three times four times five. One hundred and twenty.
+D4|0.75|Now the trick that makes it powerful. Five factorial is five times four factorial.
+D5|0.75|In general, n factorial is n times n minus one factorial. Each factorial holds the one before it, like boxes inside boxes.
+Z1|0.4|But what about zero factorial? There is nothing to multiply.
+Z2|0.6|NCERT defines zero factorial as one. Think of it as the number of ways to line up nobody. There is exactly one way: do nothing.
+Z3|0.65|It also keeps the rule working. One factorial is one times zero factorial. That only works if zero factorial is one.
+K1|0.4|Side by side. Five minus three, then the factorial. That is two factorial. Just two.
+K2|0.6|Now five factorial minus three factorial. One hundred and twenty minus six. One hundred and fourteen. The brackets change everything.
+K3|3.2|Your turn. Is six factorial divided by three factorial equal to two factorial? Pause and decide.
+K4|0.65|No! Six factorial over three factorial is six times five times four. One hundred and twenty. You cannot divide the numbers inside.
+T1|0.7|Remember this. n factorial multiplies every whole number from one up to n. And zero factorial is one.
+W1|0.35|Now, a worked example from the NCERT book.
+W2|0.5|Find x, if one over eight factorial, plus one over nine factorial, equals x over ten factorial.
+W3|0.75|Step one. Write the big factorials using eight factorial. Nine factorial is nine times eight factorial. Ten factorial is ten times nine times eight factorial.
+W4|0.75|Step two. Multiply every term by ten factorial. Ten factorial over eight factorial is ninety. Ten factorial over nine factorial is ten.
+W5|0.75|Step three. So ninety plus ten equals x.
+W6|0.65|x is one hundred.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students write zero factorial equals zero. Then five factorial over zero factorial looks like it breaks.
+X3|0.65|But zero factorial is one, by definition. So five factorial over zero factorial is simply one hundred and twenty.
+J1|0.6|Where is this asked? We found no past paper question on just this notation, so no chip lights. The type: simplify a ratio of factorials, or find n from a factorial equation.
+Q1|5.4|Exam level now. Find n. Pause and solve.
+A1|0.5|The answer is C. Seven.
+A2|0.5|Expand the bigger factorial down to n factorial. n plus two factorial is n plus two, times n plus one, times n factorial.
+A3|0.5|Cancel n factorial. So n plus two, times n plus one, equals seventy two.
+A4|0.6|Seventy two is nine times eight, two numbers in a row. So n plus two is nine, and n is seven.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What does five factorial mean?
+Y3|0.9|Two. Why is zero factorial equal to one?
+Y4|1.1|Three. Simplify seven factorial over five factorial.
+N1|0.3|Next time: choose a captain and a vice captain from your team. Order matters. We count it with permutations of distinct objects.

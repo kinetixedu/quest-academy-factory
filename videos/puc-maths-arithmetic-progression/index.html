@@ -1,0 +1,135 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 63 - Arithmetic Progression</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 63: arithmetic progression (Proof board) ===== */
+/* colour-coding (Ch 8): place n coral, term a_n violet, first term a blue, common difference d gold */
+:root{--v:#7A4FE0;--vBg:#EDE6FC;--a:#2F6FEB;--aBg:#E7EEFD;--d:#B7791F;--dBg:#F6EAD3}
+#stage svg circle,#stage svg g{transform-box:fill-box;transform-origin:center}
+#stage .ringW svg circle{transform-box:view-box;transform-origin:0 0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:48px;font:600 34px 'IBM Plex Mono';white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.ch{position:absolute;height:96px;border-radius:14px;background:var(--vBg);color:var(--v);display:flex;align-items:center;justify-content:center;font:600 36px 'IBM Plex Mono';border:3px solid transparent;box-sizing:border-box}
+.chL{position:absolute;font:600 16px 'IBM Plex Mono';letter-spacing:.06em;color:var(--ac);text-align:center;white-space:nowrap}
+.stp{position:absolute;height:40px;border-radius:10px;background:var(--dBg);color:var(--d);display:flex;align-items:center;justify-content:center;font:600 20px 'IBM Plex Mono'}
+.bigR{position:absolute;left:36px;font:700 34px/1.3 Poppins;width:712px}
+.bigR b{color:var(--ac)}
+.fx2{position:absolute;left:36px;font-size:44px;white-space:nowrap}
+.mp{position:absolute;left:36px;width:712px;height:84px;border-radius:14px;background:var(--soft)}
+.mp .k{position:absolute;left:24px;top:14px;font-size:40px;white-space:nowrap}
+.mp .v{position:absolute;left:240px;top:26px;font:600 26px Poppins;white-space:nowrap;color:var(--ink2)}
+.rd{position:absolute;height:100px;border-radius:14px;background:var(--soft)}
+.rd .k{position:absolute;left:22px;top:14px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.rd .v{position:absolute;left:22px;top:40px;font:600 40px 'IBM Plex Mono';white-space:nowrap}
+.trw{position:absolute;left:36px;width:712px;height:64px;border-radius:12px;background:var(--soft);border:2.5px solid transparent;box-sizing:border-box}
+.trw .k{position:absolute;left:22px;top:14px;font:600 22px 'IBM Plex Mono';color:var(--ac);white-space:nowrap}
+.trw .f{position:absolute;left:190px;top:10px;font-size:32px;white-space:nowrap}
+.trw .v{position:absolute;right:22px;top:12px;font:600 28px 'IBM Plex Mono';color:var(--v);white-space:nowrap}
+.st{position:absolute;left:36px;width:712px;height:110px}
+.st .n{position:absolute;left:0;top:10px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:4px;font-size:38px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:62px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+.gh{right:36px;top:22px}
+.kv{position:absolute;top:96px;height:100px;border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.kv .k{font:600 16px 'IBM Plex Mono';letter-spacing:.06em;color:var(--mute)}
+.kv .v{font:600 40px 'IBM Plex Mono'}
+#wq{position:absolute;left:36px;top:70px;font:600 30px/1.4 Poppins;width:712px}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.12em}
+#mq .mq .katex{font-size:1.2em}
+#wl .sol .sx{font-size:32px}
+#wl .sol .sx .katex{font-size:1.12em}
+.trapL .tx .katex{font-size:1.2em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:30px}
+#sF .fcard .fl.txt .katex{font-size:1.15em}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 8 SEQUENCES AND SERIES</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title"><span class="acc">Arithmetic</span> Progression</div>
+    <div id="sub">Explained with a savings jar</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">THE SAVINGS JAR · RUPEES</div><div id="hCh"></div>
+        <div class="pillp bad" id="hlP" style="left:36px;top:470px">Add 20, fifty one times?</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · ONE YEAR OF SAVING</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">Week 52 in one line?</div></div>
+    </div>
+
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">THE JAR, WEEK BY WEEK</div><div id="dCh"></div>
+        <div class="pillp" id="dP" style="left:36px;top:470px;background:var(--dBg);color:var(--d)">the same step every time</div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">ARITHMETIC PROGRESSION · A P</div><div class="ghost gh">NOT IN CURRENT NCERT TEXT · JEE</div>
+        <div class="bigR" id="dR" style="top:96px">Each term = the term before it <b>+ a fixed number</b></div>
+        <div class="mp" id="dm0" style="top:290px"><div class="k" id="dk0"></div><div class="v">first term · here 50</div></div>
+        <div class="mp" id="dm1" style="top:390px"><div class="k" id="dk1"></div><div class="v">common difference · here 20</div></div></div>
+    </div>
+
+    <div id="sL">
+      <div class="card full" id="ll"><div class="lbl" style="left:36px;top:30px;text-transform:none">LIVE · n COUNTS UP</div><svg id="lS" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="rd" id="lr0" style="left:36px;top:84px;width:200px"><div class="k">WEEK n</div><div class="v" id="lN" style="color:var(--ac)"></div></div>
+        <div class="rd" id="lr1" style="left:256px;top:84px;width:220px"><div class="k">STEPS</div><div class="v" id="lSt" style="color:var(--d)"></div></div></div>
+      <div class="card rf" id="lr"><div class="lbl" style="left:36px;top:30px">STEPS = WEEK - 1</div><div id="lRows"></div></div>
+    </div>
+
+    <div id="sG">
+      <div class="card full" id="gl"><div class="lbl" style="left:36px;top:30px">BUILD IT · 3 STEPS</div><div class="hiBox" id="gHi" style="left:20px;width:744px;height:112px"></div><div id="gSt"></div></div>
+      <div class="card rf" id="gr"><div class="lbl" style="left:36px;top:30px">TERMS ARE POSTS · STEPS ARE GAPS</div><svg id="gS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="fx2" id="gF" style="top:420px;font-size:54px"></div></div>
+    </div>
+
+    <div id="sS">
+      <div class="card full" id="sl"><div class="lbl" style="left:36px;top:30px;text-transform:none">d &gt; 0 · THE TERMS CLIMB</div><svg id="slS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="fx2" id="slF" style="top:470px;font-size:36px"></div></div>
+      <div class="card rf" id="sr"><div class="lbl" style="left:36px;top:30px;text-transform:none">d &lt; 0 · THE TERMS FALL</div><svg id="srS" width="784" height="580" style="position:absolute;left:0;top:0"></svg><div class="fx2" id="srF" style="top:470px;font-size:36px"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sC">
+      <div class="card full" id="cl"><div class="lbl" style="left:36px;top:30px">THE A P TEST · SUBTRACT</div><div id="cCh"></div>
+        <div class="pillp good" id="cP" style="left:36px;top:470px">Every difference is -3: an A P</div></div>
+      <div class="card rf" id="cr"><div class="lbl" style="left:36px;top:30px">THE RULE</div><div class="bigR" id="cR" style="top:96px">If every difference is the <b>same</b>, it is an A P.</div><div class="fx2" id="cF" style="top:300px;font-size:38px"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">52 WEEKS = 51 STEPS</div><div id="wKv"></div><div class="fx2" id="wF" style="top:270px;font-size:40px"></div>
+        <div class="pillp ac" id="wP" style="left:36px;top:470px">1070 rupees after one year</div></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="620" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"><div class="ghost gh">NOT IN CURRENT NCERT TEXT · JEE</div></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Add the <span class="acc">same d</span> every time.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

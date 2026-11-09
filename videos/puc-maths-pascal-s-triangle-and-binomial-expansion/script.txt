@@ -1,0 +1,53 @@
+H1|0.4|Multiply a plus b by itself five times, and you fill a whole page with working.
+H2|0.45|But a triangle of numbers writes the answer in seconds. One, five, ten, ten, five, one.
+H3|0.35|Diya found this triangle in a library book during a free period.
+H4|0.5|How can a simple triangle know the answer to a long multiplication?
+H5|0.65|It is called Pascal's triangle. Let us build it, and see why it works.
+P1|0.35|First, some small powers. Watch the pattern.
+P2|0.4|a plus b to the power zero is one. To the power one, it is just a plus b.
+P3|0.75|Now square it. Picture a square with side a plus b. It splits into an a by a square, two a by b strips, and a b by b square.
+P4|0.75|So a plus b squared is a squared, plus two a b, plus b squared. The numbers in front are one, two, one.
+P5|0.65|Cube it, and the numbers in front are one, three, three, one.
+L1|0.4|Now build the triangle. Write a one at the top, and ones down both edges.
+L2|0.4|Every number inside is the sum of the two numbers just above it.
+L3|0.4|One plus one is two. One plus two is three, and two plus one is three.
+L4|0.6|Keep going. One, four, six, four, one. Then one, five, ten, ten, five, one.
+L5|0.65|Each row gives the numbers in front for the next power of a plus b.
+K1|0.4|Side by side. Multiplying out a plus b to the fourth takes many steps, and many chances to slip.
+K2|0.6|The triangle gives one, four, six, four, one in one line. Then we only fill in the powers.
+K3|3.2|Now you try. How many terms are there in a plus b to the power six? Six, or seven? Pause and decide.
+K4|0.65|Seven! The number of terms is always one more than the power.
+D1|0.35|But why does adding work? Let us see.
+D2|0.75|a plus b cubed is three brackets multiplied together. From each bracket, we pick either a or b.
+D3|0.75|To get a b squared, we pick b from two of the three brackets. That can be done in three C two ways. Three.
+D4|0.75|So the number in front of a b squared is three C two. In general, row n holds n C zero, n C one, and so on, up to n C n.
+D5|0.75|A term in the next row can come from a bracket giving a, or giving b. That is why each number is the sum of the two above it.
+D6|0.65|Look at row five. One, five, ten, ten, five, one. The same counts we got for picking teams from five friends.
+V1|0.4|Watch the expansion grow, one power at a time.
+V2|0.4|Power two, three terms. Power three, four terms. Power four, five terms. Power five, six terms.
+V3|0.6|In every term, the power of a goes down by one, and the power of b goes up by one. The two powers always add up to n.
+V4|3.2|Quick one. Add up row four: one, four, six, four, one. What do you get? Pause and think.
+V5|0.65|Sixteen! That is two to the power four. Put a and b both equal to one, and a plus b to the fourth becomes two to the fourth.
+T1|0.7|Remember this. Each number is the sum of the two above it. Row n gives the numbers in front for a plus b to the power n.
+W1|0.35|Now, one worked example.
+W2|0.5|Expand x plus two, to the power four.
+W3|0.75|Step one. Row four of the triangle is one, four, six, four, one.
+W4|0.75|Step two. The powers of x go down from four to zero. The powers of two go up from zero to four.
+W5|0.75|Step three. Four times x cubed times two is eight x cubed. Six times x squared times four is twenty four x squared.
+W6|0.75|Step four. Four times x times eight is thirty two x. And two to the fourth is sixteen.
+W7|0.65|So the answer is x to the fourth, plus eight x cubed, plus twenty four x squared, plus thirty two x, plus sixteen.
+X1|0.35|Now, the exam trap.
+X2|0.4|Expand a minus b, cubed. Many students write every sign as minus.
+X3|0.65|But minus b, squared, is plus b squared. So the signs take turns. a cubed, minus three a squared b, plus three a b squared, minus b cubed.
+J1|0.6|Where is this asked? In JEE Main, as questions that expand a sum and a difference to the same power and add them, so half the terms cancel.
+Q1|5.4|Exam level now. Find root two plus one, to the power four, plus root two minus one, to the power four. Pause and solve.
+A1|0.5|The answer is B. Thirty four.
+A2|0.5|Use row four: one, four, six, four, one. When we add, the terms with an odd number of ones cancel, because their signs are opposite.
+A3|0.5|What is left is two times: root two to the fourth, plus six times root two squared, plus one.
+A4|0.6|That is two times four plus twelve plus one. Two times seventeen is thirty four.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What is the next row after one, four, six, four, one?
+Y3|0.9|Two. How many terms are in a plus b, to the power ten?
+Y4|1.1|Three. Expand a minus b, squared.
+N1|0.3|Next time: a plus b to the power ten, without multiplying ten times. Meet the binomial theorem.
