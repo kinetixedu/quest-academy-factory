@@ -1,0 +1,56 @@
+H1|0.4|A doctor checks blood pressure. A cyclist checks tyre pressure. A cook watches the gauge on a gas cylinder.
+H2|0.45|For gases, pressure is the easy number to measure. Counting moles in a litre is hard.
+H3|0.35|Aarav pumps his bicycle tyre and reads the gauge. Three bar. Not moles per litre. Bar.
+H4|0.5|Last time, K c used concentrations. For a mixture of gases, can we use pressures instead?
+H5|0.65|By the end, you will have K p, a K made of pressures, and one formula that links it to K c.
+P1|0.35|First, a new word: homogeneous. It means the same all through.
+P2|0.4|Think of a smoothie. Everything is blended into one. You cannot see separate pieces.
+P3|0.6|In a homogeneous equilibrium, every reactant and product is in the same phase. All gases, or all dissolved in one solution.
+S1|0.35|Let's put nitrogen and hydrogen on our molecule bench, in a closed tank, to make ammonia.
+S2|0.4|All three are gases. They mix completely. One phase. A homogeneous equilibrium.
+S3|0.4|Every molecule hits the walls. Those hits make pressure.
+S4|0.4|Each gas pushes with its own share. That share is its partial pressure.
+S5|0.4|Add up all the partial pressures, and you get the total pressure in the tank.
+S6|0.6|The same idea works in a solution, like iron ions and thiocyanate ions, all dissolved in water.
+L1|0.35|Now build K p. Same recipe as K c, but with partial pressures.
+L2|0.4|Products on top, reactants below, each raised to its power.
+L3|0.65|For ammonia, K p is the pressure of ammonia squared, over nitrogen times hydrogen cubed. Pressures in bar.
+D1|0.35|How are K p and K c linked? Step by step.
+D2|0.75|Step one. The ideal gas equation. p V equals n R T.
+D3|0.75|Step two. Divide by V. Pressure equals n over V, times R T. And n over V is the concentration.
+D4|0.75|Step three. So every pressure is its concentration times R T. Put that into K p.
+D5|0.75|Step four. The R T terms collect into one power. K p equals K c times R T, to the power delta n.
+G1|0.35|What is delta n?
+G2|0.4|Delta n is moles of gas on the product side, minus moles of gas on the reactant side.
+G3|0.4|For ammonia: two minus four. Delta n is minus two.
+G4|0.4|For hydrogen iodide: two minus two. Zero. So K p equals K c.
+G5|0.6|Use R equal to zero point zero eight three one bar litre per mole per kelvin, with T in kelvin.
+C1|0.4|Compare. Hydrogen iodide: delta n zero, K p equals K c. Ammonia: delta n minus two, K p is K c divided by R T squared.
+K1|3.2|Pause and think. For two S O two plus O two making two S O three, at five hundred kelvin, is K p bigger or smaller than K c?
+K2|0.65|Smaller. Delta n is minus one, so K p is K c divided by R T, and R T is about forty two.
+R1|0.35|Now, the units of K.
+R2|0.4|K c has units of moles per litre, to the power delta n. K p has units of bar, to the power delta n.
+R3|0.4|When delta n is zero, K has no units at all.
+R4|0.6|In thermodynamics, each value is divided by its standard value, one mole per litre or one bar. Then K has no units.
+T1|0.7|Remember this. K p equals K c times R T, to the power delta n.
+W1|0.3|Now, one worked example.
+W2|0.5|For P C l five breaking into P C l three and chlorine, K c is zero point zero four zero at five hundred kelvin. Find K p.
+W3|0.75|Delta n. Two moles of gas made, one used. Two minus one is plus one.
+W4|0.75|R T is zero point zero eight three one times five hundred. Forty one point five five.
+W5|0.75|K p equals zero point zero four zero times forty one point five five. About one point six six bar.
+W6|0.65|Delta n is plus one, so K p comes out bigger than K c, with the unit bar.
+X1|0.35|Now, the exam trap.
+X2|0.4|Students use R equal to eight point three one four here.
+X3|0.65|That R is for joules. With bar and litres, use zero point zero eight three one. And T always in kelvin.
+E1|0.6|Where is this asked? Boards ask you to derive the link between K p and K c. Entrance tests ask you to find K p, or its units.
+Q1|5.4|Exam level now. For nitrogen plus three hydrogen making two ammonia at five hundred kelvin, K c is sixty one litre squared per mole squared. Find K p. Pause and solve.
+A1|0.5|The answer is A. About zero point zero three five three bar to the minus two.
+A2|0.5|Delta n is two minus four. Minus two.
+A3|0.5|R T is forty one point five five. Squared, about seventeen twenty six.
+A4|0.6|Sixty one divided by seventeen twenty six is zero point zero three five three. C used delta n minus one.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.8|One. What makes an equilibrium homogeneous?
+Y3|0.8|Two. What is delta n when nitrogen and hydrogen make ammonia?
+Y4|0.9|Three. When does K p equal K c?
+N1|0.3|Next time: what if a solid or a pure liquid takes part? Does it go into K? We find out in Heterogeneous Equilibria.

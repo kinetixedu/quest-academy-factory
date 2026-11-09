@@ -1,0 +1,58 @@
+H1|0.4|A final scoreboard tells you who won. A snapshot mid-match tells you who is pulling ahead.
+H2|0.45|Chemistry has both numbers. One tells how far a reaction goes. One tells which way it will move.
+H3|0.35|Aarav sits at his study table with a test paper at night. The question gives him just one number, K.
+H4|0.5|It asks which way the mixture will move, and how much of each gas is left.
+H5|0.65|By the end, you will answer both with one small table.
+P1|0.35|The equilibrium constant has three jobs.
+P2|0.4|Job one. Tell us how far the reaction goes.
+P3|0.4|Job two. Tell us which way a mixture will move.
+P4|0.6|Job three. Help us calculate the amounts left at equilibrium.
+S1|0.35|Let's line up real reactions on our molecule bench, from the smallest K to the biggest.
+S2|0.4|Nitrogen and oxygen making nitric oxide at room temperature. K is four point eight times ten to the minus thirty one. Almost nothing happens.
+S3|0.4|Hydrogen iodide at seven hundred kelvin. K is fifty seven. Plenty of both sides.
+S4|0.4|Water from hydrogen and oxygen at five hundred kelvin. K is two point four times ten to the forty seven. Almost all the way.
+S5|0.4|So, a simple rule. K bigger than a thousand, mostly products.
+S6|0.6|K smaller than one thousandth, mostly reactants. In between, a good amount of both.
+L1|0.35|Now job two. Picture a see-saw that balances only at K.
+L2|0.4|At any moment, we write the same fraction with the amounts right now. This is the reaction quotient, Q.
+L3|0.65|If Q is smaller than K, the reaction moves forward. If Q is bigger, it moves backward. If they are equal, it is at equilibrium.
+D1|0.35|Let's test it, step by step.
+D2|0.75|Step one. For two A going to B plus C, K c is two times ten to the minus three.
+D3|0.75|Step two. Right now, A, B and C are each three times ten to the minus four molar.
+D4|0.75|Step three. Q c equals B times C, over A squared. That is exactly one.
+D5|0.75|Step four. One is much bigger than K. So Q must shrink. The reaction runs backward and makes more A.
+G1|0.35|Now job three, finding the amounts. We use a small table with three rows.
+G2|0.4|Row one, Initial. What we start with.
+G3|0.4|Row two, Change. What reacts, written with x, using the balanced equation.
+G4|0.4|Row three, Equilibrium. Start plus change.
+G5|0.6|Then put the last row into K, and solve for x. Students call it the ICE table.
+C1|0.4|Compare. K is the final score. Q is the live score. K stays fixed at one temperature. Q keeps changing until it equals K.
+K1|3.2|Pause and think. Q is ten, and K is fifty seven. Which way does the reaction move?
+K2|0.65|Forward. Q is smaller than K, so more products form until Q grows to fifty seven.
+R1|0.35|One last link, to Gibbs energy.
+R2|0.4|Delta G equals delta G naught, plus R T times the natural log of Q.
+R3|0.4|At equilibrium, delta G is zero and Q equals K. So delta G naught equals minus R T natural log K.
+R4|0.4|If Q is smaller than K, delta G is negative. The forward reaction is spontaneous.
+R5|0.6|If Q is bigger than K, delta G is positive. The backward reaction goes instead.
+T1|0.7|Remember this. Q smaller than K, forward. Q bigger, backward.
+W1|0.3|Now, one worked example.
+W2|0.5|Three moles of phosphorus pentachloride, P C l five, in a one litre flask at three eighty kelvin, split into P C l three and chlorine. K c is one point eight. Find the amounts.
+W3|0.75|Initial, three molar of P C l five, and zero of the others. Change, minus x, plus x, plus x.
+W4|0.75|Equilibrium, three minus x, x, and x. So x squared over three minus x equals one point eight.
+W5|0.75|Solve. x squared plus one point eight x minus five point four equals zero. x is about one point five nine.
+W6|0.65|So P C l three and chlorine are one point five nine molar each. P C l five is one point four one molar.
+X1|0.35|Now, the exam trap.
+X2|0.4|Students flip the rule. They think a big Q means forward.
+X3|0.65|It is the opposite. A big Q means too much product already. The reaction runs backward.
+E1|0.6|Where is this asked? Boards ask for the direction from Q and K, or the amounts. Entrance tests add a quadratic, or link K to delta G.
+Q1|5.4|Exam level now. For hydrogen and iodine making hydrogen iodide, K c is fifty seven at seven hundred kelvin. A flask has zero point one molar hydrogen, zero point one molar iodine, and zero point seven molar hydrogen iodide. Which way does it move? Pause and solve.
+A1|0.5|The answer is B. Q c is forty nine, so it moves forward.
+A2|0.5|Q c equals hydrogen iodide squared, over hydrogen times iodine.
+A3|0.5|Zero point seven squared is zero point four nine. Divide by zero point zero one. Forty nine.
+A4|0.6|Forty nine is less than fifty seven, so forward. A forgot to square.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.8|One. If K is ten to the fifty, what does the mixture mostly hold?
+Y3|0.8|Two. Q is bigger than K. Which way does the reaction move?
+Y4|0.9|Three. What are the three rows of an ICE table?
+N1|0.3|Next time: what happens when we push an equilibrium, by adding gas or heating it? We find out in Le Chatelier's Principle.

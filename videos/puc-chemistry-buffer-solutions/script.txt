@@ -1,0 +1,53 @@
+H1|0.4|Add one drop of acid to pure water, and its pH crashes. Add the same drop to blood, and the pH barely moves.
+H2|0.45|Why does blood fight back, when water gives up?
+H3|0.35|Aarav races his bicycle up a steep road. His muscles work hard and make acid.
+H4|0.5|Yet his blood stays at about pH seven point four. If it moved much, he would be in danger.
+H5|0.65|By the end, you will know the trick, and calculate the pH of the mixture that does it.
+P1|0.35|Think of a football goal with two goalkeepers.
+P2|0.4|Keeper one catches every acid shot. Keeper two catches every base shot.
+P3|0.4|In chemistry, keeper one is a weak base part, and keeper two is a weak acid part. Both sit in the same solution.
+P4|0.6|A solution with both keepers is a buffer. It resists a change in pH when a little acid or base is added.
+S1|0.35|Let's test it on our molecule bench.
+S2|0.4|On the left, one litre of pure water, pH seven. On the right, one litre of acetic acid and sodium acetate, point one mole of each.
+S3|0.4|Now add point zero one mole of hydrochloric acid to both.
+S4|0.4|In water, nothing catches the protons. The pH crashes from seven to two.
+S5|0.6|In the buffer, acetate ions catch the protons and become acetic acid. The pH only moves from four point seven six to four point six seven.
+L1|0.35|There are two kinds of buffers.
+L2|0.4|An acidic buffer is a weak acid with its salt of a strong base. Acetic acid with sodium acetate works around pH four point seven five.
+L3|0.65|A basic buffer is a weak base with its salt of a strong acid. Ammonium hydroxide with ammonium chloride works around pH nine point two five.
+D1|0.35|So how do we find a buffer's pH? Step by step.
+D2|0.75|Step one. Start from K a. K a equals hydronium times acetate, over acetic acid.
+D3|0.75|Step two. Rearrange. Hydronium equals K a times acid, over acetate.
+D4|0.75|Step three. Take minus log of both sides.
+D5|0.75|Step four. pH equals p K a plus log of salt over acid. This is the Henderson Hasselbalch equation.
+D6|0.75|Step five. When salt and acid are equal, the log is zero. So pH equals p K a.
+G1|0.35|For a basic buffer, use the same idea with K b.
+G2|0.4|pOH equals p K b plus log of salt over base. Then pH is fourteen minus pOH.
+G3|0.4|Now, your blood. Its main buffer is carbonic acid with hydrogen carbonate ions.
+G4|0.4|If acid comes in, hydrogen carbonate catches it. If base comes in, carbonic acid catches it.
+G5|0.6|And adding water to a buffer barely changes its pH, because the ratio of salt to acid stays the same.
+C1|0.4|Compare two buffers. Buffer one, equal acid and salt. Buffer two, twice as much salt as acid.
+K1|3.2|Pause and think. Which buffer has the higher pH?
+K2|0.65|Buffer two. More salt means the log term is positive, so the pH is above p K a.
+T1|0.7|Remember this. pH equals p K a plus log of salt over acid.
+W1|0.3|Now, one worked example.
+W2|0.5|A buffer has point one molar acetic acid and point two molar sodium acetate. p K a is four point seven six. Find its pH.
+W3|0.75|pH equals p K a plus log of salt over acid.
+W4|0.75|Salt over acid is point two over point one. That is two.
+W5|0.75|Log of two is point three zero one. So pH is four point seven six plus point three zero. Five point zero six.
+W6|0.65|More salt than acid, so the pH is just above p K a.
+X1|0.35|Now, the exam trap.
+X2|0.4|Students flip the ratio and write log of acid over salt.
+X3|0.65|It is salt over acid. Flip it and the answer comes out four point four six instead of five point zero six.
+E1|0.6|Where is this asked? Boards ask what a buffer is, with one acidic and one basic example. Entrance tests ask for the pH or the ratio, using Henderson Hasselbalch.
+Q1|5.4|Exam level now. A buffer of ammonia and ammonium chloride must have pH nine point seven five at two ninety eight kelvin. p K b is four point seven five. What ratio of ammonium to ammonia is needed? Pause and solve.
+A1|0.5|The answer is B. About point three one six.
+A2|0.5|pOH equals fourteen minus nine point seven five. Four point two five.
+A3|0.5|Four point two five equals four point seven five plus log of the ratio. So log of the ratio is minus point five.
+A4|0.6|Ratio is ten to the minus point five. About point three one six. A flipped the ratio.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.8|One. What two things make an acidic buffer?
+Y3|0.8|Two. Why does a buffer's pH barely change when you add water?
+Y4|0.9|Three. If salt and acid are equal, what is the pH of the buffer?
+N1|0.3|Next time: sugar keeps dissolving in water, but chalk hardly dissolves at all. Why? We find out in Solubility Product.

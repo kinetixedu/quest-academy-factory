@@ -1,0 +1,57 @@
+H1|0.4|Vinegar goes on a salad. Hydrochloric acid burns skin. Both are acids.
+H2|0.45|Same strength on the label, point one molar. So why is one so gentle?
+H3|0.35|Aarav reads two bottles in the college lab. Point one molar acetic acid has pH two point nine. Point one molar hydrochloric acid has pH one.
+H4|0.5|That is about seventy five times less hydronium in the vinegar acid.
+H5|0.65|By the end, you will know why, and you will calculate how much a weak acid really breaks up.
+P1|0.35|Think of a class where the teacher says, give away one toffee each.
+P2|0.4|In a strong acid class, every student gives a toffee, every molecule its proton.
+P3|0.4|In a weak acid class, only a few students give. Most keep their toffee.
+P4|0.6|And some take toffees back. So a weak acid sits in an equilibrium.
+S1|0.35|Let's put acetic acid on our molecule bench.
+S2|0.4|Each molecule can give its proton to water. That makes hydronium and an acetate ion.
+S3|0.4|Watch one hundred molecules. Only one or two break up. The rest stay whole.
+S4|0.4|The fraction that breaks up is called the degree of ionization, alpha.
+S5|0.6|For point one molar acetic acid, alpha is only about one point three percent. For hydrochloric acid, it is almost one hundred percent.
+L1|0.35|The equilibrium constant for this is the acid ionization constant, K a.
+L2|0.4|K a equals hydronium times acetate, divided by the acid left whole.
+L3|0.4|A bigger K a means a stronger acid. Hydrofluoric acid has K a three point five times ten to the minus four. Hydrocyanic acid has only four point nine times ten to the minus ten.
+L4|0.65|Since these numbers are tiny, we also use p K a, minus the log of K a. A smaller p K a means a stronger acid.
+D1|0.35|Now let's link K a to alpha. Step by step.
+D2|0.75|Step one. Start with c moles per litre of acid, and no ions.
+D3|0.75|Step two. At equilibrium, c alpha breaks up. So we have c times one minus alpha of acid, and c alpha of each ion.
+D4|0.75|Step three. Put these in. K a equals c alpha squared, over one minus alpha.
+D5|0.75|Step four. Alpha is tiny, so one minus alpha is almost one. K a is about c alpha squared.
+D6|0.75|Step five. So alpha equals the square root of K a over c. And hydronium is c alpha.
+G1|0.35|Weak bases work the same way.
+G2|0.4|Ammonia takes a proton from water. That makes ammonium and hydroxide.
+G3|0.4|Its constant is K b. For ammonia, K b is one point seven seven times ten to the minus five. And p K b is minus log K b.
+G4|0.4|An acid and the base it leaves behind are a conjugate pair. For a pair, K a times K b equals K w.
+G5|0.6|Take logs, and p K a plus p K b equals fourteen, at two ninety eight kelvin.
+C1|0.4|Compare hydrofluoric acid and hydrocyanic acid, at point one molar each.
+K1|3.2|Pause and think. At the same concentration, which one gives more hydronium?
+K2|0.65|Hydrofluoric acid. Its K a is about seven hundred thousand times bigger.
+R1|0.35|Some acids have more than one proton to give, like carbonic acid.
+R2|0.4|They give them one at a time. Each step has its own constant, K a one, K a two, and so on.
+R3|0.6|K a two is always smaller. Pulling a positive proton away from a negative ion is harder, like pulling a magnet off a magnet.
+T1|0.7|Remember this. Bigger K a, stronger acid. K a times K b is K w.
+W1|0.3|Now, one worked example.
+W2|0.5|Find the pH of point one molar acetic acid. K a is one point seven four times ten to the minus five, from the textbook table.
+W3|0.75|Alpha equals the square root of K a over c. Square root of one point seven four times ten to the minus four.
+W4|0.75|Alpha is about point zero one three two. That is one point three two percent.
+W5|0.75|Hydronium equals c alpha. Point one times point zero one three two. One point three two times ten to the minus three moles per litre.
+W6|0.65|pH is minus log of that. About two point eight eight. Much higher than hydrochloric acid's pH of one.
+X1|0.35|Now, the exam trap.
+X2|0.4|Students think adding water makes a weak acid break up less.
+X3|0.65|It is the opposite. Alpha is the square root of K a over c. Smaller c, bigger alpha. At point zero zero one molar, about twelve percent breaks up.
+E1|0.6|Where is this asked? Boards ask for alpha or pH of a weak acid. Entrance tests ask for K a from pH.
+Q1|5.4|Exam level now. A point zero one molar solution of a weak monobasic acid has pH four. What is its K a? Pause and solve.
+A1|0.5|The answer is C. One times ten to the minus six.
+A2|0.5|pH four means hydronium is ten to the minus four.
+A3|0.5|K a is about hydronium squared over c.
+A4|0.6|Ten to the minus eight, divided by point zero one. One times ten to the minus six. A forgot to square.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.8|One. What does a small K a tell you about an acid?
+Y3|0.8|Two. Why does a weak acid break up more when you dilute it?
+Y4|0.9|Three. If p K a is four point seven six, what is p K b of its conjugate base?
+N1|0.3|Next time: add a pinch of salt of an acid, and the acid gets weaker. Why? And why is some salt water not neutral? We find out in Common Ion Effect and Hydrolysis of Salts.
