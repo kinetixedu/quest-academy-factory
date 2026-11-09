@@ -1,0 +1,53 @@
+H1|0.4|A box is twelve centimetres long, four wide and three tall. Can a pencil thirteen centimetres long fit inside?
+H2|0.45|Lay it flat on the floor of the box, from corner to corner. The longest flat line is only about twelve point six centimetres. Too short.
+H3|0.35|Aarav hit this puzzle at his study desk, packing his pencil box.
+H4|0.5|Then he tilted the pencil, from a bottom corner up to the opposite top corner. It fit, exactly.
+H5|0.65|How do we measure a line that cuts through space? Today: the distance formula in three dimensions.
+P1|0.35|Quick reminder first.
+P2|0.4|In a room, every point needs three numbers. How far along, how far across, and how far up.
+P3|0.4|These are its coordinates: x, y and z. The corner where all three start is the origin.
+P4|0.4|Now watch the box. We lift its lid slowly, so its height grows from zero to three.
+P5|0.65|The corner to corner line tilts up, and it gets longer. At height zero it is twelve point six. At height three it is exactly thirteen.
+D1|0.35|Why thirteen? We find it in two steps, with a rule you already know.
+D2|0.4|Pythagoras. In a right angled triangle, the longest side squared equals the other two sides squared, added.
+D3|0.75|Step one. Walk across the floor. The floor diagonal squared is twelve squared plus four squared. That is one hundred and sixty.
+D4|0.75|Step two. Climb up. The floor diagonal and the height make a new right triangle, standing straight up.
+D5|0.75|So the long diagonal squared is one hundred and sixty, plus three squared. That is one hundred and sixty nine.
+D6|0.65|The square root of one hundred and sixty nine is thirteen. The pencil fits, exactly.
+G1|0.4|Now take any two points. P is x one, y one, z one. Q is x two, y two, z two.
+G2|0.4|Build a box with P and Q at opposite corners. Its edges run along the three axes.
+G3|0.75|The length of the box is the change in x. That is x two minus x one.
+G4|0.75|The width is the change in y, and the height is the change in z.
+G5|0.75|Use Pythagoras twice, just like the pencil. P Q squared is the sum of the three changes, squared.
+G6|0.75|Take the square root. That is the distance formula in three dimensions.
+G7|0.65|If P is the origin, every first number is zero. So the distance of a point from the origin is the root of x squared plus y squared plus z squared.
+S1|0.4|Side by side. On a flat map, a point has two numbers. So the distance has two squares under the root.
+S2|0.6|In a room, a point has three numbers. So the distance has three squares. One square for each direction.
+S3|3.2|Now you try. What is the distance from the origin to the point one, one, one? Root two, or root three? Pause and decide.
+S4|0.65|Root three! There are three changes of one each. One plus one plus one is three.
+O1|0.4|One more question. Does it matter which point you call P?
+O2|3.2|Is the distance from P to Q the same as from Q to P? Pause and think.
+O3|0.65|Yes, always! Minus five squared and five squared are both twenty five. Squaring wipes out the minus sign.
+T1|0.7|Remember this. Three changes, three squares, one square root.
+W1|0.35|Now, one worked example.
+W2|0.5|Find the distance between P, one, minus three, four, and Q, minus four, one, two.
+W3|0.75|Step one. The change in x is minus four minus one. That is minus five.
+W4|0.75|Step two. The change in y is one minus minus three. That is plus four.
+W5|0.75|Step three. The change in z is two minus four. That is minus two.
+W6|0.75|Step four. Square and add. Twenty five plus sixteen plus four is forty five.
+W7|0.65|Step five. The distance is root forty five, which is three root five. About six point seven units.
+X1|0.35|Now, the exam trap.
+X2|0.4|Find the distance between two, minus one, three, and minus two, one, three. Many students write the change in y as one minus one, which is zero.
+X3|0.65|But the first y is minus one. So the change is one minus minus one, which is two. The right answer is root twenty, not four.
+J1|0.6|Where is this asked? In JEE Main, as in January twenty twenty five. A point had to be the same distance from three given points, and you find it.
+Q1|5.4|Exam level now. Find the sum of all possible values of k. Pause and solve.
+A1|0.5|The answer is A. Four.
+A2|0.5|The changes are k minus two, then two, then minus four.
+A3|0.5|So k minus two, squared, plus four, plus sixteen, equals six squared, thirty six.
+A4|0.6|That gives k minus two, squared, equals sixteen. So k minus two is plus four or minus four. k is six or minus two, and their sum is four.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. How far is the point two, three, six from the origin?
+Y3|0.9|Two. Why is the distance from P to Q the same as from Q to P?
+Y4|1.1|Three. How many squares sit under the root in three dimensions, and why?
+N1|0.3|Next time: walk halfway to a wall. Then half of what is left. Again and again. Do you ever touch the wall? We find out with limits.

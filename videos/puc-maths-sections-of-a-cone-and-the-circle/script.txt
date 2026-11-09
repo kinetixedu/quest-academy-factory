@@ -1,0 +1,53 @@
+H1|0.4|Slice an ice cream cone straight across. The cut edge is a perfect circle.
+H2|0.45|Tilt the knife a little, and you get an oval. Tilt it more, and the curve never closes. Cut straight down, and you get another curve.
+H3|0.35|Diya tried it in the kitchen today.
+H4|0.5|One cone, four different curves. How can one shape hide all four?
+H5|0.65|These are conic sections: slices of a cone. Today, all four, and then the circle.
+C1|0.4|First, a cone in maths. Stand one stick straight up. This is the axis.
+C2|0.4|Cross a second stick through it at a point V, at a fixed angle, alpha.
+C3|0.4|Spin the second stick around the axis, keeping alpha the same. It sweeps out a cone.
+C4|0.65|In fact, two cones, tip to tip. V is the vertex, the spinning stick is a generator, each cone a nappe.
+S1|0.4|Now slice it with a flat plane, like a sheet of glass. Beta is the angle between the plane and the axis.
+S2|0.4|At ninety degrees the plane lies flat across. The slice is a circle.
+S3|0.4|Tilt it. With beta between alpha and ninety degrees, the slice is a closed oval, an ellipse.
+S4|0.4|When beta equals alpha, the plane runs along the side. The curve never closes. A parabola.
+S5|0.65|When beta is smaller than alpha, the plane cuts both cones. Two open curves, together a hyperbola.
+S6|0.6|So one comparison decides it: beta against alpha.
+S7|3.2|Your turn. Keep beta at ninety degrees, but push the plane through the vertex. What is the slice? Pause and decide.
+S8|0.65|One point! The circle shrinks to nothing. Slices through the vertex give special cases: a point, a line, or two crossing lines.
+T1|0.7|Remember this. One cone, four slices: a circle, an ellipse, a parabola and a hyperbola.
+D1|0.35|Now the first slice, the circle.
+D2|0.4|Turn a compass on paper. The pencil always stays the same distance from the sharp point.
+D3|0.4|That is the NCERT definition. A circle is the set of all points in a plane at the same distance from one fixed point.
+D4|0.65|The fixed point is the centre. The distance is the radius, r. As the point runs round, r never changes.
+R1|0.4|Now the equation. Put the centre at h, k, and take any point P, x, y, on the circle.
+R2|0.75|Step one. Walk across from the centre to P. Across is x minus h.
+R3|0.75|Step two. Walk up. Up is y minus k.
+R4|0.75|Step three. Across, up and the radius make a right triangle. By Pythagoras, across squared plus up squared equals r squared.
+R5|0.75|That is the equation of a circle. x minus h, all squared, plus y minus k, all squared, equals r squared.
+R6|0.65|If the centre is the origin, h and k are zero. It becomes x squared plus y squared equals r squared.
+K1|0.4|Side by side. To read the centre, flip the signs. x minus two gives plus two. y plus three gives minus three.
+K2|0.6|To read the radius, take a square root. Sixteen is r squared, so the radius is four, not sixteen.
+K3|3.2|Your turn. x squared, plus y minus five all squared, equals nine. Centre and radius? Pause and decide.
+K4|0.65|Centre zero, five, radius three! x squared is x minus zero, all squared, and three squared is nine.
+W1|0.35|Now, one worked example.
+W2|0.5|Find the centre and radius of x squared plus y squared, minus six x, plus four y, minus twelve, equals zero.
+W3|0.75|Step one. Group the x terms, group the y terms, and move the twelve across.
+W4|0.75|Step two. Complete the squares. Half of minus six is minus three: add nine. Half of four is two: add four. Add both on each side.
+W5|0.75|Step three. That gives x minus three all squared, plus y plus two all squared, equals twenty five.
+W6|0.65|So the centre is three, minus two, and the radius is five.
+X1|0.35|Now, the exam trap.
+X2|0.4|x squared minus four x, plus y squared, equals zero. Many students add four on the left only, and say it is a point.
+X3|0.65|But what you add on the left, you add on the right. Zero plus four is four. A real circle: centre two, zero, radius two.
+J1|0.6|Where is this asked? In JEE Main. In January twenty twenty four, a question began with a circle's equation, and you first needed its centre and radius.
+Q1|5.4|Exam level now. A circle touches both axes and passes through the point two, one. What is the sum of all its possible radii? Pause and solve.
+A1|0.5|The answer is C. Six.
+A2|0.5|Two, one is in the top right quarter. A circle there touching both axes is r away from each, so its centre is r, r.
+A3|0.5|It passes through two, one. So two minus r all squared, plus one minus r all squared, equals r squared.
+A4|0.6|That tidies up to r squared minus six r plus five equals zero. So r is one or five. The sum is six.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Which slice of a cone gives a parabola?
+Y3|0.9|Two. Find the centre and radius of x plus one all squared, plus y squared, equals forty nine.
+Y4|1.1|Three. Write the equation of the circle with centre two, zero, and radius three.
+N1|0.3|Next time: a cricket ball's flight and a dish antenna share one secret curve. Why? The parabola.

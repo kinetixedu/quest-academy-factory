@@ -1,0 +1,137 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 79 - Distance Formula in Three Dimensions</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 79: distance formula in three dimensions (Proof board) ===== */
+:root{--dx:#2F6FEB;--dy:#0E8F8F;--dz:#7A4FE0;--fd:#B7791F}
+/* svg dots and groups scale about their own centre (not the card corner) */
+#stage svg circle,#stage svg g{transform-box:fill-box;transform-origin:center}
+#stage .ringW svg circle{transform-box:view-box;transform-origin:0 0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.cs{position:absolute;left:0;top:0}
+/* title card: the three box sizes */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:50px;font:600 36px 'IBM Plex Mono';white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* chips and readouts */
+.an{position:absolute;height:48px;padding:0 16px;border-radius:10px;background:var(--soft);display:inline-flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap}
+.an b{font:italic 700 28px Poppins}
+.rd{position:absolute;font:600 44px/1 'IBM Plex Mono';white-space:nowrap}
+.rd i{font:italic 700 44px Poppins}
+/* proof column rows */
+.st{position:absolute;left:36px;width:712px;height:112px}
+.st .n{position:absolute;left:0;top:6px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:38px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:62px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+#gSt .st .sx{font-size:32px}
+.bf{position:absolute;left:36px;top:96px;font-size:44px;white-space:nowrap}
+/* worked example */
+#wq{position:absolute;left:36px;top:64px;font:600 30px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.2em}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.12em}
+#mq .mq .katex{font-size:1.2em}
+#wl .sol .sx{font-size:30px}
+.trapL .tx .katex{font-size:1.2em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 11 INTRODUCTION TO THREE DIMENSIONAL GEOMETRY</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Distance in <span class="acc">3D</span></div>
+    <div id="sub">Explained with one box and one pencil</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: the box puzzle + Aarav -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">THE BOX · 12 × 4 × 3 CM</div><svg id="hS" class="cs" width="784" height="580"></svg>
+        <div class="pillp bad" id="hP1" style="left:36px;top:496px">Flat: 12.6 cm · too short</div>
+        <div class="pillp ac" id="hP2" style="left:420px;top:496px">Tilted: 13 cm · fits</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · THE STUDY DESK</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">How long is a line through space?</div></div>
+    </div>
+
+    <!-- P: coordinates + live lid -->
+    <div id="sP">
+      <div class="card full" id="pa"><div class="lbl" style="left:36px;top:30px">EVERY POINT · THREE NUMBERS</div><svg id="pS" class="cs" width="784" height="580"></svg>
+        <div class="an" id="pc0" style="left:36px;top:500px"><b style="color:var(--dx)">x</b>along</div>
+        <div class="an" id="pc1" style="left:196px;top:500px"><b style="color:var(--dy)">y</b>across</div>
+        <div class="an" id="pc2" style="left:370px;top:500px"><b style="color:var(--dz)">z</b>up</div></div>
+      <div class="card rf" id="pl"><div class="lbl" style="left:36px;top:30px">LIVE · LIFT THE LID</div>
+        <div class="rd" id="pH" style="left:36px;top:80px"><i style="color:var(--dz)">h</i> = <span id="pHv">0.0</span></div>
+        <div class="rd" id="pD" style="left:360px;top:80px"><i style="color:var(--ac)">d</i> = <span id="pDv">12.65</span></div>
+        <svg id="lS" class="cs" width="784" height="580"></svg>
+        <div class="pillp ac" id="pFit" style="left:36px;top:500px">h = 3: d = 13 exactly</div></div>
+    </div>
+
+    <!-- D: two Pythagoras steps -->
+    <div id="sD">
+      <div class="card full" id="da"><div class="lbl" style="left:36px;top:30px">PYTHAGORAS · TWICE</div>
+        <div class="hiBox" id="dHi" style="left:20px;width:744px;height:112px"></div><div id="dSt"></div></div>
+      <div class="card rf" id="db"><div class="lbl" style="left:36px;top:30px">FLOOR FIRST · THEN UP</div><svg id="dS" class="cs" width="784" height="580"></svg>
+        <div class="pillp" id="dP" style="left:36px;top:500px"><i style="color:var(--fd);font:italic 700 26px Poppins">f</i> floor diagonal &nbsp;·&nbsp; <i style="color:var(--ac);font:italic 700 26px Poppins">d</i> corner to corner</div></div>
+    </div>
+
+    <!-- G: any two points -->
+    <div id="sG">
+      <div class="card full" id="ga"><div class="lbl" style="left:36px;top:30px">ANY TWO POINTS · ONE BOX</div><svg id="gS" class="cs" width="784" height="580"></svg></div>
+      <div class="card rf" id="gb"><div class="lbl" style="left:36px;top:30px">THE DISTANCE FORMULA</div>
+        <div class="hiBox" id="gHi" style="left:20px;width:744px;height:112px"></div><div id="gSt"></div></div>
+    </div>
+
+    <!-- S: 2D vs 3D + think -->
+    <div id="sS">
+      <div class="card full" id="s2"><div class="lbl" style="left:36px;top:30px">FLAT MAP · 2 NUMBERS</div><div class="bf" id="s2F"></div><svg id="s2S" class="cs" width="784" height="580"></svg>
+        <div class="pillp" id="s2P" style="left:36px;top:500px">2 directions: 2 squares</div></div>
+      <div class="card rf" id="s3"><div class="lbl" style="left:36px;top:30px">ROOM · 3 NUMBERS</div><div class="bf" id="s3F"></div><svg id="s3S" class="cs" width="784" height="580"></svg>
+        <div class="pillp ac" id="s3P" style="left:36px;top:500px">3 directions: 3 squares</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- O: does the order matter -->
+    <div id="sO"><div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div></div>
+
+    <!-- W: worked example -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">THE BOX BETWEEN P AND Q</div><svg id="wS" class="cs" width="784" height="580"></svg>
+        <div class="pillp ac" id="wRes" style="left:36px;top:500px">PQ = 3√5 ≈ 6.71 units</div></div>
+    </div>
+
+    <!-- X: exam trap + where it is asked -->
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <!-- Q: practice question -->
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <!-- F: recap card, three questions, NEXT -->
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Three changes, three <span class="acc">squares</span>, one root.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

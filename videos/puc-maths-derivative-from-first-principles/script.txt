@@ -1,0 +1,45 @@
+H1|0.4|A speedometer reads forty kilometres per hour, right now, at this one instant.
+H2|0.45|But speed is distance divided by time. In one instant, no time passes at all.
+H3|0.35|Diya noticed this on the speed meter of her bicycle this morning.
+H4|0.5|Zero distance over zero time. So how can the meter show any speed?
+H5|0.65|The answer is one of the biggest ideas in maths. It is called the derivative, and today we build it from first principles.
+P1|0.4|Let us test it on a falling ball, the example from our NCERT book.
+P2|0.4|A ball dropped from a cliff falls four point nine t squared metres in t seconds.
+P3|0.4|How fast is it going at exactly two seconds? We cannot divide by zero time. So we take a small gap instead.
+P4|0.4|From two seconds to three seconds, the average speed is twenty four point five metres per second.
+P5|0.4|Now shrink the gap. A tenth of a second gives twenty point zero nine. A hundredth gives nineteen point six four nine.
+P6|0.65|Watch the number settle. As the gap shrinks towards zero, the speed gets closer and closer to nineteen point six. That is the speed at one instant.
+D1|0.4|Now let us do this for any curve. Think of the curve as a hill, and you are walking along it.
+D2|0.75|Step one. Stand at a point x. Your height there is f of x.
+D3|0.75|Step two. Take a small step forward, of size h. Your new height is f of x plus h.
+D4|0.75|Step three. The rise is f of x plus h, minus f of x. The run is just h.
+D5|0.75|Step four. Rise over run is the steepness of the line joining the two points. This line is called a secant.
+D6|0.75|Step five. Now let h shrink to zero. The secant turns into the tangent, a line that just touches the curve.
+D7|0.65|The limit of rise over run is the derivative, written f dash of x. Finding it this way is called the first principle.
+C1|0.4|Side by side. Average speed uses a real gap of time. On the graph, it is the slope of a secant.
+C2|0.6|Speed at one instant lets the gap shrink to zero. On the graph, it is the slope of the tangent. That is the derivative.
+C3|3.2|Your turn. In the fraction, can we just put h equal to zero right away? Pause and think.
+C4|0.65|No! The top becomes zero and the bottom becomes zero. Zero over zero tells us nothing. We simplify first, then let h go to zero.
+T1|0.7|Remember this. Take a tiny step, divide by the step, then let the step shrink to zero.
+W1|0.35|Now, one worked example.
+W2|0.5|Find the derivative of x squared from first principles.
+W3|0.75|Step one. f of x plus h is x plus h, all squared. That is x squared, plus two x h, plus h squared.
+W4|0.75|Step two. Subtract f of x. The x squared cancels, and we are left with two x h, plus h squared.
+W5|0.75|Step three. Divide by h. We get two x, plus h.
+W6|0.75|Step four. Now let h go to zero. The derivative of x squared is two x.
+W7|0.65|Check it on the curve. At x equal to three, the tangent climbs six units for every one unit across.
+X1|0.35|Now, the exam trap.
+X2|0.4|For f of x equal to x squared, many students write f of x plus h as x squared plus h.
+X3|0.65|But f of x plus h means we put x plus h in place of x. So it is x plus h, all squared. With x equal to three and h equal to one, that is sixteen, not ten.
+J1|0.6|Where is this asked? In JEE Main. In March twenty twenty one, a paper hid a derivative inside a limit, f of h minus one, over h, and asked for its value.
+Q1|5.4|Exam level now. For f of x equal to x cubed, find this limit. Pause and solve.
+A1|0.5|The answer is C. Twenty four.
+A2|0.5|Expand both cubes. Two plus h, cubed, minus two minus h, cubed, is twenty four h, plus two h cubed.
+A3|0.5|Divide by h. We get twenty four, plus two h squared.
+A4|0.6|Let h go to zero, and the answer is twenty four. That is twice f dash of two, because the gap here is two h, not h.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why can we not put h equal to zero straight away?
+Y3|0.9|Two. Find the derivative of three x from first principles.
+Y4|1.1|Three. What does the slope of the tangent tell us?
+N1|0.3|Next time: the derivative of a sum is easy. But is the derivative of a product just the product of the derivatives? We find out in the algebra of derivatives.

@@ -1,0 +1,129 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 69 - Slope of a Line</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 69: slope of a line (Proof board) ===== */
+:root{--x:#7A4FE0;--y:#2F6FEB;--th:#B7791F}
+#stage svg circle,#stage svg g{transform-box:fill-box;transform-origin:center}
+#stage .ringW svg circle{transform-box:view-box;transform-origin:0 0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.sv{position:absolute;left:0;top:0}
+/* title card */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:54px;font:700 30px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.fx{position:absolute;white-space:nowrap}
+.big{position:absolute;left:36px;font-size:54px;white-space:nowrap}
+.txt2{position:absolute;left:36px;font:600 28px/1.35 Poppins;width:712px;white-space:nowrap}
+.mono{position:absolute;left:36px;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+.rd{position:absolute;left:36px;font:600 56px/1 'IBM Plex Mono';white-space:nowrap}
+.rd i{font-family:Poppins;font-style:italic}
+.why2{color:var(--mute);font:500 22px Poppins}
+.x{color:var(--x)}.y{color:var(--y)}.a{color:var(--ac)}.th{color:var(--th)}
+#dl .sol .sx,#wl .sol .sx{font-size:30px}
+.hc{position:absolute;top:330px;height:44px;width:160px;border-radius:10px;background:var(--soft);display:flex;align-items:center;justify-content:center;font:500 20px 'IBM Plex Mono';white-space:nowrap}.hc b{color:var(--th);font-weight:600;margin-right:6px}
+#dl .sol .sx .katex,#wl .sol .sx .katex{font-size:1.2em}
+#wq{position:absolute;left:36px;top:64px;width:712px;font:600 28px/1.4 Poppins}
+#wq .katex{font-size:1.2em}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.15em}
+#mq .mq .katex{font-size:1.2em}
+.trapL .tx .katex{font-size:1.35em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 9 STRAIGHT LINES</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Which Road Is <span class="acc">Steeper</span>?</div>
+    <div id="sub">The slope of a line, one number that decides</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">TWO ROADS · ONE HILL</div><svg id="hS" class="sv" width="784" height="580"></svg>
+        <div class="ghost" id="hG" style="left:36px;top:510px">EXAMPLE FIGURES</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · ON THE WAY TO COLLEGE</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">Which road is steeper?</div></div>
+    </div>
+
+    <div id="sI">
+      <div class="card full" id="il"><div class="lbl" style="left:36px;top:30px">RISE AND RUN</div>
+        <div class="txt2" id="i0" style="top:78px"></div>
+        <div class="txt2" id="i1" style="top:132px"></div>
+        <div class="big" id="i2" style="top:200px"></div>
+        <div class="mono" id="i3" style="top:350px"></div>
+        <div class="mono" id="i4" style="top:410px"></div>
+        <div class="pillp ac" id="iP" style="left:36px;top:496px">Bigger slope, steeper road: road 2 wins</div></div>
+      <div class="card rf" id="ir"><div class="lbl" style="left:36px;top:30px">SAME SCALE · 10 m ACROSS</div><svg id="iS" class="sv" width="784" height="580"></svg></div>
+    </div>
+
+    <div id="sL">
+      <div class="card full" id="ll"><div class="lbl" style="left:36px;top:30px">LIVE · TURN THE LINE</div>
+        <div class="rd" id="lT" style="top:84px"><i class="th">θ</i> = <span class="th" id="lTv">30</span><span class="th">°</span></div>
+        <div class="rd" id="lM" style="top:168px"><i class="a">m</i> = <span class="a" id="lMv">0.58</span></div>
+        <div class="pillp" id="lSt" style="left:36px;top:256px"></div>
+        <div id="lH"></div>
+        <div class="big" id="lF" style="top:400px;font-size:48px"></div>
+        <div class="why2" id="lW" style="position:absolute;left:36px;top:516px;white-space:nowrap">θ: from the +x axis, turning anticlockwise, 0° ≤ θ &lt; 180°</div></div>
+      <div class="card rf" id="lr"><div class="lbl" style="left:36px;top:30px">INCLINATION θ AND SLOPE m</div><svg id="lS" class="sv" width="784" height="580"></svg></div>
+    </div>
+
+    <div id="sD">
+      <div class="card full" id="dl"></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">ANY TWO POINTS ON THE LINE</div><svg id="dS" class="sv" width="784" height="580"></svg></div>
+    </div>
+
+    <div id="sK">
+      <div class="card full" id="kp"><div class="lbl" style="left:36px;top:30px;color:var(--ok)">UP TO THE RIGHT · POSITIVE</div><div class="fx" id="kpF" style="right:36px;top:20px;font-size:36px"></div><svg id="kpS" class="sv" width="784" height="580"></svg>
+        <div class="pillp good" id="kpP" style="left:36px;top:500px">m &gt; 0 · θ &lt; 90°</div></div>
+      <div class="card rf" id="kn"><div class="lbl" style="left:36px;top:30px;color:var(--red)">DOWN TO THE RIGHT · NEGATIVE</div><div class="fx" id="knF" style="right:36px;top:20px;font-size:36px"></div><svg id="knS" class="sv" width="784" height="580"></svg>
+        <div class="pillp bad" id="knP" style="left:36px;top:500px">m &lt; 0 · θ &gt; 90°</div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sV">
+      <div class="card full" id="vh"><div class="lbl" style="left:36px;top:30px">FLAT LINE · RISE 0</div><div class="fx" id="vhF" style="right:36px;top:18px;font-size:36px"></div><svg id="vhS" class="sv" width="784" height="580"></svg>
+        <div class="pillp" id="vhP" style="left:36px;top:500px">Slope 0</div></div>
+      <div class="card rf" id="vv"><div class="lbl" style="left:36px;top:30px">STANDING LINE · RUN 0</div><div class="fx" id="vvF" style="right:36px;top:18px;font-size:36px"></div><svg id="vvS" class="sv" width="784" height="580"></svg>
+        <div class="pillp bad" id="vvP" style="left:36px;top:500px">Slope not defined</div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">THE LINE AND ITS ANGLE</div><svg id="wS" class="sv" width="784" height="580"></svg></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Slope is <span class="acc">rise</span> over run.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

@@ -1,0 +1,133 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 84 - Derivative from First Principles</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 84: derivative from first principles (Proof board) ===== */
+:root{--fb:#2F6FEB;--fbb:#E7EEFD;--hh:#D9731A;--sc:#0E8F8F;--x:#7A4FE0}
+/* svg dots and groups scale about their own centre (not the card corner) */
+#stage svg circle,#stage svg g{transform-box:fill-box;transform-origin:center}
+#stage .ringW svg circle{transform-box:view-box;transform-origin:0 0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+/* title card */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:50px;font:600 32px 'IBM Plex Mono';white-space:nowrap}
+/* hook */
+#hRd{position:absolute;left:0;width:784px;top:350px;text-align:center;font:600 52px/1 'IBM Plex Mono';white-space:nowrap}
+#hRd small{font-size:26px;color:var(--mute)}
+#hF{position:absolute;left:0;width:784px;top:440px;text-align:center;font-size:38px;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px;object-fit:cover}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* P: shrinking gap table */
+#pS0{position:absolute;left:36px;top:76px;font-size:44px;white-space:nowrap}
+.th{position:absolute;top:178px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.tr{position:absolute;left:36px;width:712px;height:56px;border-radius:12px;background:var(--soft)}
+.tr b{position:absolute;top:10px;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+#pRes{position:absolute;left:36px;top:478px}
+.ro{position:absolute;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.ro b{display:block;margin-top:4px;font:600 34px/1 'IBM Plex Mono';letter-spacing:0}
+/* D: derivation */
+.st{position:absolute;left:36px;width:712px}
+.st .n{position:absolute;left:0;top:8px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:66px;top:4px;font-size:32px;white-space:nowrap}
+.st.tall .n{top:30px}
+/* C: compare */
+.cf{position:absolute;left:36px;top:80px;font-size:40px;white-space:nowrap}
+/* worked */
+#wq{position:absolute;left:36px;top:64px;font:600 30px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.2em}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.2em}
+#mq .mq .katex{font-size:1.2em}
+#wl .sol .sx{font-size:30px}
+#wl .sol .sx .katex{font-size:1.15em}
+.trapL .tx .katex{font-size:1.2em}
+.trapL{gap:16px}
+#tR{position:absolute;left:1040px;width:520px}
+#tR .k{font-size:30px;white-space:nowrap;margin-top:6px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 12 LIMITS AND DERIVATIVES</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Speed at One <span class="acc">Instant</span></div>
+    <div id="sub">Explained with one shrinking gap</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <!-- H: the speedometer puzzle -->
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">THE SPEEDOMETER · ONE INSTANT</div>
+        <svg id="hG" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div id="hRd"><span id="hV">0</span> <small>km/h</small></div><div id="hF"></div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA · THE RIDE TO COLLEGE</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">No time passes. So how can it show a speed?</div></div>
+    </div>
+
+    <!-- P: falling ball, the gap shrinks -->
+    <div id="sP">
+      <div class="card full" id="pa"><div class="lbl" style="left:36px;top:30px">FALLING BALL · NCERT EXAMPLE</div><div id="pS0"></div>
+        <div class="th" style="left:60px">GAP h (SECONDS)</div><div class="th" style="left:420px">AVERAGE SPEED (m/s)</div><div id="pRows"></div>
+        <div class="pillp ac" id="pRes"></div></div>
+      <div class="card rf" id="pb"><div class="lbl" style="left:36px;top:30px">LIVE · SHRINK THE GAP</div><svg id="pG" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="ro" id="pRh" style="left:150px;top:96px">GAP h<b id="pHv" style="color:var(--hh)">1.000</b></div>
+        <div class="ro" id="pRv" style="left:340px;top:96px">AVERAGE SPEED<b id="pVv" style="color:var(--sc)">24.500</b></div></div>
+    </div>
+
+    <!-- D: any curve, five steps -->
+    <div id="sD">
+      <div class="card full" id="dl"><div class="lbl" style="left:36px;top:30px">ANY CURVE · 5 STEPS</div>
+        <div class="hiBox" id="dHi" style="left:20px;width:744px;height:72px"></div><div id="dSt"></div></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">THE HILL · RISE OVER RUN</div><svg id="dG" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="ro" id="dRh" style="left:120px;top:84px">STEP h<b id="dHv" style="color:var(--hh)">2.50</b></div></div>
+    </div>
+
+    <!-- C: average vs instant + think -->
+    <div id="sC">
+      <div class="card full" id="c1"><div class="lbl" style="left:36px;top:30px;color:var(--sc)">AVERAGE · A REAL GAP</div><div class="cf" id="c1F"></div>
+        <div class="pillp" id="c1P" style="left:36px;top:200px;background:#DDF1F1;color:#0B6E6E">Slope of a secant</div><svg id="c1S" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card rf" id="c2"><div class="lbl" style="left:36px;top:30px">ONE INSTANT · GAP SHRINKS TO 0</div><div class="cf" id="c2F"></div>
+        <div class="pillp ac" id="c2P" style="left:36px;top:200px">Slope of the tangent: the derivative</div><svg id="c2S" width="784" height="580" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">LIVE · y = x² AT x = 3</div><svg id="wG" width="784" height="580" style="position:absolute;left:0;top:0"></svg>
+        <div class="ro" id="wRh" style="left:150px;top:84px">GAP h<b id="wHv" style="color:var(--hh)">1.00</b></div>
+        <div class="ro" id="wRs" style="left:320px;top:84px">SLOPE = 6 + h<b id="wSv" style="color:var(--sc)">7.00</b></div></div>
+    </div>
+
+    <!-- X / Q / F -->
+    <div id="sX"><div class="card red" id="trap"><div id="tR"></div></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Tiny step, then <span class="acc">shrink</span> it.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

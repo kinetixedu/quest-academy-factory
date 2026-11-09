@@ -1,0 +1,31 @@
+{
+ "world": "puc-maths",
+ "topic": "Derivative from First Principles",
+ "series": {
+  "name": "PUC Maths",
+  "ep": 84
+ },
+ "title": "Speed at One Instant: Derivatives Explained Simply | Class 11 Maths",
+ "description": "A speedometer shows 40 km/h at one single instant. But speed is distance divided by time, and in one instant no time passes. So how can it show any speed at all? In this animated lesson for Class 11 Maths (NCERT Chapter 12, Limits and Derivatives) we build the derivative from first principles.\n\nYou will watch the NCERT falling ball, s = 4.9t², while the time gap shrinks live from 1 second to 0.001 second and the average speed settles on 19.6 m/s. Then, on a hill-shaped curve, we take a small step h, find the rise over the run, and let h shrink until the secant turns into the tangent: f'(x) = lim (f(x + h) - f(x))/h as h goes to 0. A side-by-side of average and instant speed, a pause-and-think question on 0/0, a worked example (the derivative of x² is 2x), the exam trap about f(x + h), where it is asked, an original JEE Main pattern question with a full solution, a recap card and three questions to check yourself.\n\nFollows the NCERT book. Useful for CBSE, ICSE (ISC), Karnataka PUC and other state boards, and JEE.\n\nIn this video:\n0:00 The speedometer puzzle\n0:29 Live: the falling ball, shrink the gap\n1:12 Rise over run: secant to tangent in 5 steps\n2:01 Average speed vs speed at one instant\n2:43 Worked example: the derivative of x²\n3:24 Exam trap: f(x + h) is not f(x) + h\n3:45 Where it is asked\n3:57 Practice question (JEE Main pattern)\n4:33 Recap and three questions to answer\n\nNext episode (Ep 85): Algebra of Derivatives. The derivative of a sum is easy, but is the derivative of a product just the product of the derivatives?\n\nVideo by Quest Academy.",
+ "tags": [
+  "derivative from first principles",
+  "first principle of derivative",
+  "class 11 maths chapter 12",
+  "limits and derivatives class 11",
+  "what is a derivative",
+  "derivative of x squared",
+  "secant and tangent",
+  "instantaneous speed",
+  "NCERT maths class 11 derivatives",
+  "first PUC maths",
+  "PUC maths",
+  "JEE Main derivatives",
+  "derivative as a limit",
+  "Class 11 Maths"
+ ],
+ "thumb": {
+  "title": "Speed at One Instant",
+  "accent_word": "Instant",
+  "frame_t": 71
+ }
+}

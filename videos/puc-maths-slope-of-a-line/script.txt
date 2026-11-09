@@ -1,0 +1,53 @@
+H1|0.4|Two roads climb the same hill. Road one rises three metres for every ten metres you ride forward.
+H2|0.45|Road two rises one metre for every two metres forward. Which road is steeper?
+H3|0.35|Aarav has to pick one on his bicycle, on the way to college.
+H4|0.5|Just looking is not enough. He needs one number that decides.
+H5|0.65|That one number is called the slope. Let us find it.
+I1|0.4|Think of a ramp. As you move along it, you go across, and you go up.
+I2|0.4|The distance across is called the run. The height you gain is called the rise.
+I3|0.6|Slope is rise divided by run: how much you go up for every one step across.
+I4|0.4|Road one. Three divided by ten is zero point three.
+I5|0.65|Road two. One divided by two is zero point five. Bigger slope, steeper road. Road two wins.
+L1|0.4|Now let us put a line on graph paper, and turn it slowly.
+L2|0.4|The angle the line makes with the x axis, measured anticlockwise, is called its inclination. We call it theta.
+L3|0.4|At zero degrees the line is flat. It does not rise at all. Slope zero.
+L4|0.4|As the line tips up, the slope grows. At forty five degrees, the rise equals the run. Slope one.
+L5|0.4|Near ninety degrees the slope shoots up. Ten. Twenty. Over a hundred. At ninety, the line stands straight up.
+L6|0.6|Now the run is zero, and we can never divide by zero. So the slope is not defined.
+L7|0.6|Past ninety, the line falls as it goes right. Negative rise, so negative slope.
+L8|0.65|In a right triangle, tan theta is the opposite side over the side next to theta. That is rise over run. So m equals tan theta.
+D1|0.4|Now take two points on a line. P is x one, y one. Q is x two, y two.
+D2|0.75|Step one. Draw a right triangle under the line, going across from P, then up to Q.
+D3|0.75|Step two. The run is the change in x. That is x two minus x one.
+D4|0.75|Step three. The rise is the change in y. That is y two minus y one.
+D5|0.75|Step four. So m equals y two minus y one, over x two minus x one, when x one and x two are different.
+K1|0.4|Side by side. This line goes up as you move right. Positive rise, positive slope. Theta is less than ninety.
+K2|0.6|This line goes down as you move right. Negative rise, negative slope. Theta is more than ninety.
+K3|3.2|Your turn. A line passes through two, five and six, one. Is its slope positive or negative? Pause and decide.
+K4|0.65|Negative! As x grows from two to six, y drops from five to one. Rise minus four, run four. Slope minus one.
+T1|0.7|Remember this. Slope is rise over run. Going up to the right means positive. Going down means negative.
+V1|0.4|Two special lines. A flat line, like the x axis, has rise zero. So its slope is zero.
+V2|0.6|A standing line, like the y axis, has run zero. So its slope is not defined.
+V3|3.2|Quick one. A line passes through three, one and three, seven. What is its slope? Pause and think.
+V4|0.65|Not defined! Both points have x equal to three. The line stands straight up, and the run is zero.
+W1|0.35|Now, one worked example.
+W2|0.5|Find the slope and the inclination of the line through minus one, two, and three, minus two.
+W3|0.75|Step one. The rise. y two minus y one is minus two minus two. That is minus four.
+W4|0.75|Step two. The run. x two minus x one is three minus minus one. That is four.
+W5|0.75|Step three. The slope m is minus four over four. That is minus one.
+W6|0.65|Step four. tan theta is minus one, so theta is more than ninety. Theta is one hundred and thirty five degrees.
+X1|0.35|Now, the exam trap.
+X2|0.4|Slope through one, two and four, eight. Many students take y two minus y one on top, but x one minus x two below. Minus two.
+X3|0.65|But the order must match, top and bottom. Six over three. The slope is plus two, and the line clearly goes up.
+J1|0.6|Where is this asked? In JEE Main, for example in January twenty nineteen: find a missing coordinate from the slope through two points.
+Q1|5.4|Exam level now. The line through A and B makes one hundred and thirty five degrees with the x axis. Find k. Pause and solve.
+A1|0.5|The answer is B. Minus one.
+A2|0.5|The slope is tan of one hundred and thirty five degrees, which is minus one.
+A3|0.5|From the two points, the slope is two k minus three, over four minus k. Set that equal to minus one.
+A4|0.6|So two k minus three equals k minus four, and k is minus one. Check: minus five over five is minus one.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What is the slope of a line that goes up three for every two across?
+Y3|0.9|Two. Why is the slope of the y axis not defined?
+Y4|1.1|Three. A line has inclination sixty degrees. What is its slope?
+N1|0.3|Next time: two roads that never meet, and two that cross perfectly square. Their slopes hide a secret. Parallel and perpendicular lines.
