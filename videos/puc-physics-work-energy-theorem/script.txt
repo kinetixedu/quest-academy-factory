@@ -1,0 +1,58 @@
+H1|0.4|A cycle brakes. A car brakes. A runner skids to a stop.
+H2|0.45|Faster things always need more room to stop. But how much more?
+H3|0.35|Aarav tests it on a quiet road. He brakes from four metres per second, and stops in four metres.
+H4|0.5|Now he brakes from eight. Twice as fast, same brakes. Will he stop in eight metres?
+H5|0.65|No. He needs sixteen. Four times the room. Let's find the rule behind it.
+P2|0.4|A force that pushes along the motion puts energy in. The body speeds up.
+P3|0.4|A force that pushes against the motion, like brakes, takes energy out. The body slows down.
+P4|0.4|That energy, put in or taken out by a force, is its work.
+P5|0.65|So the work done on a body changes its kinetic energy. That is the work-energy theorem.
+S1|0.35|Let's test it on Aarav's bike. Aarav and the bike: eighty kilograms.
+S2|0.4|The brakes give a steady backward force of one hundred and sixty newtons.
+S3|0.4|First run, from four metres per second. Kinetic energy, six hundred and forty joules.
+S4|0.4|He stops in four metres. Brake work: one sixty times four, six hundred and forty joules. All of his kinetic energy.
+S5|0.4|Second run, from eight. Two thousand five hundred and sixty joules. Four times as much.
+S6|0.4|The same brakes take out one sixty joules every metre. So, sixteen metres.
+S7|0.35|Slow-mo replay of the second run.
+S8|0.6|The orange brake force points back. The blue velocity points forward. So the work is negative, and K drains away.
+S9|0.65|On the graph, both lines fall with the same slope. That slope is the brake force.
+D1|0.35|Now the proof, one step at a time.
+D2|0.75|Step one. For a steady force, v squared minus u squared equals two a d.
+D3|0.75|Step two. Multiply both sides by half m. Half m v squared, minus half m u squared, equals m a d.
+D4|0.75|Step three. By Newton's second law, m a is the net force F. So the right side is F d, the work done.
+D5|0.75|Step four. The left side is K final minus K initial.
+D6|0.75|So the change in kinetic energy equals the net work done.
+T1|0.7|Remember this. The net work done on a body equals the change in its kinetic energy.
+C1|0.35|Positive work or negative work? Side by side.
+C2|0.4|A trolley pushed forward. Force along the motion. Work is positive, so K goes up.
+C3|0.6|A trolley held back as it rolls. Force against motion. Work is negative, K goes down.
+C4|3.2|Now you try. A ball is thrown straight up. On the way up, is the work done by gravity positive or negative? Pause and decide.
+C5|0.65|Negative! Gravity pulls down while the ball moves up. So it loses kinetic energy and slows.
+R1|0.35|Now, why four times the stopping distance? Follow the links.
+R2|0.4|One. At the end the bike stops, so the final K is zero.
+R3|0.4|Two. The brakes do negative work, minus F d.
+R4|0.4|Three. So F d equals half m u squared, and d equals m u squared over two F.
+R5|0.6|Four. Same bike, same brakes, so d grows with u squared. Twice the speed, four times the distance.
+K1|3.2|Your turn. Aarav triples his speed, same brakes. How many times the stopping distance? Pause and think.
+K2|0.65|Nine times! Three squared is nine. Speed costs a lot of stopping room.
+W1|0.35|Now, one worked example.
+W2|0.5|A two kilogram block at two metres per second is pushed with twelve newtons over four metres, against four newtons of friction. Find its final speed.
+W3|0.75|Net force is twelve minus four, eight newtons. Net work is eight times four, thirty two joules.
+W4|0.75|Starting K is half times two times two squared, four joules.
+W5|0.75|Final K is four plus thirty two, thirty six joules.
+W6|0.65|So half times two times v squared is thirty six. v squared is thirty six, and v is six metres per second.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students use only the push: twelve times four, forty eight joules. That gives the wrong speed.
+X3|0.65|But the theorem needs the net work, the work of every force together. Friction takes sixteen joules out.
+E1|0.6|Where is this asked? In questions finding a speed, a stopping distance or a force from the change in K.
+Q1|5.4|Exam level now. A block slides on a rough floor with constant friction. Its speed falls from ten to six metres per second over eight metres. How much farther will it slide? Pause and solve.
+A1|0.5|The answer is B. Four point five metres.
+A2|0.5|Friction is steady, so the K lost is proportional to the distance.
+A3|0.5|K goes as v squared. Ten to six drops one hundred minus thirty six: sixty four units in eight metres.
+A4|0.6|Thirty six units are left. Thirty six over sixty four, times eight, is four point five metres.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. Why does a bike at twice the speed need four times the distance to stop?
+Y3|0.9|Two. Is the work done by brakes positive or negative, and why?
+Y4|1.1|Three. Does the theorem use the work of one force, or of all forces?
+N1|0.3|Next time: a spring pushes harder the more you squeeze it. Does the rule still work? The work-energy theorem for a variable force.
