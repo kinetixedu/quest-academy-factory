@@ -1,0 +1,157 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 88 - Perfectly Inelastic Collision</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 88: perfectly inelastic collision (Motion notebook) ===== */
+:root{--fo:#D9731A;--vb:#2F6FEB;--pm:#A23B72;--te:#0E8F8F;--cb:#5B6B8C}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.fo{color:var(--fo)}.vb{color:var(--vb)}.pm{color:var(--pm)}.te{color:var(--te)}
+#bpill{position:absolute;display:inline-flex;align-items:center;height:48px;padding:0 16px;border-radius:10px;background:#fff;border:2px solid var(--ac);color:var(--ac);font:600 18px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap;top:96px}
+/* title tiles */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr .jn{position:absolute;left:28px;top:24px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:28px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr svg{position:absolute;right:16px;top:10px}
+.wq{position:absolute;top:490px;height:56px;padding:0 18px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 25px Poppins;white-space:nowrap}
+/* two things kept */
+.qr{position:absolute;left:36px;width:712px;height:150px;border-radius:14px;background:var(--soft)}
+.qr .qs{position:absolute;left:24px;top:30px;width:80px;font:600 72px/1 Poppins;font-style:italic;text-align:center}
+.qr .qn{position:absolute;left:132px;top:26px;font:700 32px Poppins;white-space:nowrap}
+.qr .qd{position:absolute;left:132px;top:76px;font:500 24px Poppins;color:var(--ink2);white-space:nowrap}
+.qr .qu{position:absolute;right:24px;top:22px;height:40px;padding:0 14px;border-radius:9px;background:#fff;display:flex;align-items:center;font:600 18px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+.lawP{position:absolute;left:36px;top:470px;width:712px;height:84px;border-radius:14px;background:var(--ink);color:#fff;display:flex;align-items:center;padding:0 24px;font:600 28px Poppins;white-space:nowrap;box-sizing:border-box;gap:12px}
+.xc{position:absolute;top:480px;height:52px;padding:0 16px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+.xc i{width:30px;height:30px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center}
+.sqc{position:absolute;height:44px;padding:0 14px;border-radius:10px;display:inline-flex;align-items:center;font:600 22px Poppins;white-space:nowrap;background:var(--ac2);color:var(--ac)}
+/* sim + readout */
+.ro2{position:absolute;display:grid;grid-template-columns:auto 1fr auto;column-gap:14px;row-gap:6px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .v{font:600 34px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 20px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+.smo,.frz,.rdy{position:absolute;right:36px;top:18px;height:44px;padding:0 16px;border-radius:9px;display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.smo{background:var(--ink);color:#fff}.frz{background:var(--redBg);color:var(--red)}.rdy{background:var(--soft);color:var(--ink2)}
+.runc{position:absolute;left:36px;top:70px;height:44px;padding:0 16px;border-radius:10px;background:var(--soft);display:inline-flex;align-items:center;font:600 21px 'IBM Plex Mono';white-space:nowrap}
+#simEq{position:absolute;left:36px;top:478px;height:64px;padding:0 22px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:14px;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+#simEq .sm{font:500 18px 'IBM Plex Mono';color:var(--mute)}
+#allP{position:absolute;left:36px;top:478px;height:64px;padding:0 22px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:14px;font:600 26px Poppins;white-space:nowrap}
+.leg{position:absolute;top:22px;display:flex;gap:18px;font:600 18px 'IBM Plex Mono';white-space:nowrap}
+.leg span{display:flex;align-items:center;gap:8px}
+/* derivation */
+.st{position:absolute;left:36px;width:960px;height:92px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:-4px;font-size:34px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:52px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.dpan{position:absolute;left:1040px;top:84px;width:524px;height:460px;border-radius:14px;background:var(--soft)}
+.ctab{position:absolute;left:24px;display:grid;grid-template-columns:150px 110px 110px;column-gap:20px;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+.ctab span{text-align:right}.ctab span:first-child{text-align:left}
+/* chain */
+.lk{position:absolute;left:36px;width:712px;height:92px;border-radius:14px;background:var(--soft)}
+.lk .n{position:absolute;left:20px;top:23px;width:46px;height:46px;border-radius:50%;background:var(--ac);color:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.lk .lt{position:absolute;left:86px;top:0;height:92px;display:flex;align-items:center;font:600 25px Poppins;white-space:nowrap;gap:10px}
+.lk .mk{position:absolute;right:20px;top:26px;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+/* side by side */
+.kp{position:absolute;left:36px;top:478px;height:64px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+.kv{position:absolute;left:36px;top:346px;display:flex;gap:16px}
+.kv>span{height:52px;padding:0 18px;border-radius:12px;background:#fff;border:2px solid var(--line);display:flex;align-items:center;font:600 26px 'IBM Plex Mono';white-space:nowrap;color:var(--vb)}
+#wkq{position:absolute;left:36px;top:70px;font:600 27px/1.38 Poppins;width:712px}
+.wtb{position:absolute;left:36px;top:400px;display:grid;grid-template-columns:120px 200px 200px;column-gap:16px;row-gap:8px;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+.wtb span{text-align:right}.wtb .h{font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute)}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font-size:26px}
+#wl .sol .sx{font-size:30px}
+#sF .fcard .fl{font-size:38px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 32px Poppins;white-space:nowrap}
+.bar{position:absolute;height:40px;border-radius:8px}
+.blab{position:absolute;font:600 22px 'IBM Plex Mono';white-space:nowrap}
+.bigf{position:absolute;left:36px;top:96px;font-size:64px;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 5 WORK, ENERGY AND POWER</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="bpill">NCERT · CBSE · ISC · PUC</div>
+    <div id="title">Perfectly <span class="acc">Inelastic</span></div>
+    <div id="sub">Two trolleys that stick together</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE CRASHES · BODIES JOIN</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">They join, and something seems to vanish</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">COLLEGE LAB · STICKY TROLLEYS</div>
+        <img id="hkA" src="../../assets/illustrations/puc/aarav.png" style="position:absolute;left:556px;top:200px;width:210px;height:260px;object-fit:contain">
+        <svg id="hkS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div id="wqs"></div></div>
+    </div>
+    <div id="sP">
+      <div class="card full" id="pq"><div class="lbl" style="left:36px;top:30px">PERFECTLY INELASTIC</div><div id="qrs"></div>
+        <div class="lawP" id="lawP"></div></div>
+      <div class="card rf" id="pm"><div class="lbl" style="left:36px;top:30px">WHERE THE ENERGY GOES</div>
+        <svg id="pmS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div id="xcs"></div></div>
+    </div>
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">SMOOTH TRACK · STICKY PADS</div>
+        <div class="rdy" id="rdy">PAUSED · t = 0</div><div class="smo" id="smo">SLOW-MO REPLAY · 0.25x</div><div class="frz" id="frz">FROZEN · MID-CRUNCH</div>
+        <div class="runc" id="runc"></div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div id="simEq"></div><div id="allP"></div></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div>
+        <div class="ro2" id="roA" style="left:36px;top:70px;width:300px"></div><div class="ro2" id="roB" style="left:392px;top:70px;width:356px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">KINETIC ENERGY VS TIME</div>
+        <div class="leg" id="leg" style="right:36px"></div>
+        <svg id="grS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+    <div id="sD">
+      <div class="card" id="dl" style="left:160px;top:270px;width:1600px;height:580px"><div class="lbl" style="left:36px;top:30px">THE FORMULAS · 4 STEPS</div><div id="steps"></div>
+        <div class="dpan" id="dpan"><div class="lbl" style="left:24px;top:22px">CHECK · RUN 1</div><div id="ctab"></div></div></div>
+    </div>
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">WHY MUST ENERGY BE LOST?</div><div id="lks"></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">SAME p, BIGGER m</div><div class="ghost" id="exR" style="right:36px;top:18px">RUN 1 FIGURES</div>
+        <div class="bigf" id="rF"></div><div id="rRows"></div></div>
+    </div>
+    <div id="sK">
+      <div class="card full" id="kh"><div class="lbl" style="left:36px;top:30px">ELASTIC · 2 kg + 2 kg</div><svg id="khS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div class="kp" id="khP"></div></div>
+      <div class="card rf" id="kl"><div class="lbl" style="left:36px;top:30px">PERFECTLY INELASTIC · 2 kg + 2 kg</div><svg id="klS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div class="kp" id="klP"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wkq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">PUTTY + TROLLEY · BEFORE AND AFTER</div><svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div class="wtb" id="wtb"></div></div>
+    </div>
+    <div id="sX"><div class="card red" id="trap"><svg id="tpS" width="600" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this. When bodies stick together,</div><div id="st2" style="font-size:72px"><span style="color:#A23B72">momentum</span> is kept, <span style="color:#0E8F8F">kinetic energy</span> is lost.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
