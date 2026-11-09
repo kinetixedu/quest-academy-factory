@@ -254,7 +254,7 @@ const EP = {
       M.vis($('#pch'), t, T0('P1'), out, { dy: 12, ...o }); M.vis($('#pd'), t, T0('P1') + 0.05, out, { dx: -60, dy: 0, ...o }); M.vis($('#pe'), t, T0('P1') + 0.2, out, { dx: 60, dy: 0, ...o });
       const st = curOf(t, tPs); pSet(st); pStack(t, [T0('P1') + 0.4, ...tPs]); const sOut = tPs[3] - 0.05;
       M.vis(PP.soil, t, T0('P1') + 0.3, sOut, { dy: 20, outDur: 0.25 }); M.vis(PP.plw, t, T0('P1') + 0.4, tPs[1] + 0.6, { dy: 20, outDur: 0.3 });
-      attr(PP.pl, 'transform', `translate(0 ${(-90 * M.io((t - wt('P2', 'dig')) / 1.2)).toFixed(1)})`);
+      attr(PP.pl, 'transform', `translate(0 ${(-50 * M.io((t - wt('P2', 'dig')) / 1.2)).toFixed(1)})`);
       M.vis(PP.pile, t, tPs[1] + 0.2, sOut, { ...POP, sc: 0.5, outDur: 0.25 }); PP.mix.forEach((d, k) => attr(d, 'transform', `translate(${(4 * Math.sin(t * 2 + k)).toFixed(1)} ${(4 * Math.cos(t * 2.3 + k)).toFixed(1)})`));
       const pull = M.io((t - wt('P4', 'Isolate') - 0.2) / 1.6); attr(PP.cur, 'cx', (680 + 230 * pull).toFixed(1)); attr(PP.cur, 'cy', (310 - 40 * Math.sin(pull * Math.PI)).toFixed(1)); PP.cur.style.opacity = t > tPs[2] && t < sOut ? 1 : 0;
       M.vis(PP.vial, t, tPs[2] + 0.1, sOut, { dy: 20, outDur: 0.25 }); attr(PP.vf, 'height', (60 * M.io((t - wt('P4', 'curcumin')) / 1)).toFixed(1)); attr(PP.vf, 'y', (330 - 60 * M.io((t - wt('P4', 'curcumin')) / 1)).toFixed(1));
@@ -284,7 +284,7 @@ const EP = {
       '<b>Secondary</b>: mainly plant, fungal, microbial cells · role in the host not fully understood', 'Pigments · alkaloids · terpenoids · essential oils · toxins · lectins · drugs · polymeric substances',
       '<b>Useful</b>: rubber, drugs, spices, scents, pigments · some have ecological importance'],
     yq: ['Give two examples of primary metabolites.', 'Name one toxin and one lectin.', 'Why are rubber and spices called secondary metabolites?'],
-    nextL: 'NEXT · EP 70', nextT: 'Why do some molecules stay on the filter? Biomacromolecules and Proteins' },
+    nextL: 'NEXT · EP 70', nextT: 'What stays on the filter? Biomacromolecules and Proteins' },
 };
 
 /* ---------- shared frame (header travel, hook, scenes, statement, exam, captions) ---------- */

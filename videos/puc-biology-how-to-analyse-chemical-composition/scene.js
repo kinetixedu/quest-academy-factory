@@ -300,7 +300,7 @@ const EP = {
     type: 'Steps of the analysis (boards); statements on the two fractions and the element table (NEET)', tType: wt('E1', 'steps'),
     xRun: t => M.vis(TP, t, wt('X3', 'filtrate') - 0.1, 1e9, { ...POP, sc: 0.5 }),
     mcq: { q: 'Which statement is correct?', cols: 1, optW: 968, optH: 70, optFs: 23, optY: 140, qW: 840,
-      opts: ["Carbon is more abundant in the earth's crust than in the human body", 'The retentate is the acid-soluble pool', 'After complete burning, the ash holds inorganic elements like calcium', 'Silicon is about 27.7 percent of the human body by weight'], right: 2 },
+      opts: ["Carbon is more abundant in the earth's crust than in the human body", 'The retentate is the acid-soluble pool', 'After full burning, the ash holds elements like calcium', 'Silicon is about 27.7 percent of the human body by weight'], right: 2 },
     tOpts: wt('Q1', 'correct') - 0.2,
     sol: [['Answer: <b style="color:var(--ok)">C</b>'], ['Carbon: <b>18.5%</b> body, 0.03% crust'], ['Retentate: acid-<b>insoluble</b>'], ['Silicon: <b>negligible</b> in body']],
     tSo: [wt('A1', 3) + 0.1, wt('A2', 'body'), wt('A2', 'retentate'), wt('A3', 'Silicon')],

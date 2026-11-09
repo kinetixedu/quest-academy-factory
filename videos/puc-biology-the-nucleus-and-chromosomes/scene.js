@@ -274,7 +274,7 @@ const EP = {
     type: 'Labelled nucleus, chromosome types (boards); statement questions (NEET)', tType: wt('E1', 'labelled'),
     xRun: t => M.vis(TP, t, wt('X3', 'mature') - 0.1, 1e9, { ...POP, sc: 0.5 }),
     mcq: { q: 'Which statement is correct?', cols: 1, optW: 968, optH: 70, optFs: 24, optY: 140, qW: 840,
-      opts: ['Nuclear pores let RNA and proteins move only out of the nucleus', 'The outer nuclear membrane is often continuous with the ER and bears ribosomes', 'Chromosomes are clearly seen in non-dividing cells', 'A telocentric chromosome has its centromere in the middle'], right: 1 },
+      opts: ['Nuclear pores let RNA and proteins move only out of the nucleus', 'The outer nuclear membrane often joins the ER and bears ribosomes', 'Chromosomes are clearly seen in non-dividing cells', 'A telocentric chromosome has its centromere in the middle'], right: 1 },
     tOpts: wt('Q1', 'correct') - 0.2,
     sol: [['Answer: <b style="color:var(--ok)">B</b>'], ['Pores: <b>both</b> directions'], ['Chromosomes: <b>dividing</b> cells'], ['Telocentric: at the <b>end</b>']],
     tSo: [wt('A1', 3) + 0.1, wt('A2', 'both'), wt('A2', 'dividing'), wt('A3', 'end')],
