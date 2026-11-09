@@ -1,0 +1,57 @@
+H1|0.4|A trampoline pushes harder the deeper you sink. A rubber band pulls harder the more you stretch it.
+H2|0.45|These forces change at every point. But F times d needs one steady force.
+H3|0.35|Diya squeezes a kitchen spring against a small block. The harder she squeezes, the harder it pushes back.
+H4|0.5|She lets go. The push starts strong and fades to nothing. Which force do we use to find the speed?
+H5|0.65|None of them alone. We add up every tiny push. Let's see how.
+P1|0.35|For a steady force, the change in K was simply F times d.
+P2|0.4|On a force against position graph, F times d is a rectangle. Its area is the work.
+P3|0.4|A changing force makes a slope or a curve, not a rectangle.
+P4|0.65|So cut the path into tiny steps. In each tiny step, the force is almost steady.
+S1|0.35|Let's run it. A two kilogram block, against a spring squeezed by forty centimetres.
+S2|0.4|The spring constant is fifty newtons per metre. So at the start, it pushes with twenty newtons.
+S3|0.4|Release! The push fades to zero as the spring opens. The block shoots off.
+S4|0.35|Slow-mo replay. Cut the push into four steps of ten centimetres.
+S5|0.4|In each step, the force is almost steady. So the work is a thin strip: force times step.
+S6|0.4|One point seven five, one point two five, point seven five, point two five joules. They shrink as the push fades.
+S7|0.4|Add them up. Four joules. That is the area under the force graph.
+S8|0.65|The block leaves at two metres per second. Half times two times two squared: four joules. The area equals the change in K.
+D1|0.35|Now the proof, one step at a time.
+D2|0.75|Step one. K is half m v squared. So the rate of change of K is m v times d v by d t.
+D3|0.75|Step two. m times d v by d t is the force F. So d K by d t equals F v.
+D4|0.75|Step three. v is d x by d t. Cancel the d t, and d K equals F d x.
+D5|0.75|Step four. Add every tiny piece from start to end. The integral sign just means: add them all.
+D6|0.75|So K final minus K initial equals the integral of F d x. The area under the F x graph.
+T1|0.7|Remember this. For any force, the change in K equals the area under the force against position graph.
+C1|0.35|Steady or changing? Side by side.
+C2|0.4|A steady ten newton push over forty centimetres. A rectangle. Area, four joules.
+C3|0.6|The spring push, twenty newtons down to zero, over the same forty centimetres. A triangle. Area, also four joules.
+C4|3.2|Now you try. Which push gives the block more kinetic energy? Pause and decide.
+C5|0.65|The same! Both areas are four joules. Only the area counts, not the shape.
+R1|0.35|What if the force turns around? Follow the links.
+R2|0.4|One. Force along the motion. The strip sits above the axis. Positive work.
+R3|0.4|Two. Force against the motion. The strip sits below the axis. Negative work.
+R4|0.4|Three. The net area is the area above, minus the area below.
+R5|0.6|Four. That net area is the change in K. It can be positive, zero or negative.
+K1|3.2|Your turn. On an F x graph, ten joules sit above the axis and fifteen below. Does the body end up faster or slower? Pause and think.
+K2|0.65|Slower! The net area is minus five joules, so the body loses five joules of kinetic energy.
+W1|0.35|Now, one worked example.
+W2|0.5|A one kilogram body starts at rest. A force F equals four x newtons pushes it from zero to three metres. Find its speed.
+W3|0.75|At three metres, the force is four times three, twelve newtons. The graph is a triangle.
+W4|0.75|Area equals half times three times twelve. Eighteen joules of work.
+W5|0.75|It started at rest, so its final K is eighteen joules.
+W6|0.65|Half times one times v squared equals eighteen. v squared is thirty six. v is six metres per second.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students multiply the final force by the distance. Twelve times three, thirty six joules.
+X3|0.65|But the force was smaller for most of the path. Use the area: eighteen joules.
+E1|0.6|Where is this asked? With a force given as a formula or a graph, asking for the work or the speed.
+Q1|5.4|Exam level now. A two kilogram block moves along x under F equals eight minus four x newtons. At x equals zero, its speed is one metre per second. Find its speed at four metres. Pause and solve.
+A1|0.5|The answer is B. One metre per second.
+A2|0.5|The force is positive up to two metres, then negative.
+A3|0.5|Area from zero to two is plus eight joules. From two to four, it is minus eight.
+A4|0.6|Net work is zero, so K is unchanged: one metre per second. Three is the top speed, at two metres.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. A spring's push fades as it opens. How do we find the work it does?
+Y3|0.9|Two. What does area below the axis on an F x graph mean?
+Y4|1.1|Three. A steady push and a spring push give the same area. Which gives more K?
+N1|0.3|Next time: a stretched catapult and a raised tank hold energy without moving. Where is it hiding? Potential energy.
