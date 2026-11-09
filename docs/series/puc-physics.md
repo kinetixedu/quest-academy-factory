@@ -148,6 +148,35 @@ Binding for Eps 71+:
 | 89 | Coefficient of Restitution | Diya | balls dropped on the floor bounce to different heights |
 | 90 | Collisions in Two Dimensions | Aarav | a carrom shot at an angle; NEXT teases Ch 6 System of Particles and Rotational Motion |
 
+## Episodes - Chapter 6 System of Particles and Rotational Motion (Eps 91-110, Amjad 10 Nov 2026) - ALL BOARDS
+Binding for Eps 91-110: every rule of the Chapter 5 ALL BOARDS section, with NCERT chip `CLASS 11 · PHYSICS · CH 6 SYSTEM OF PARTICLES AND ROTATIONAL MOTION` (shorten to `CH 6 ROTATIONAL MOTION` only if it will not fit the chip) and the same board pill `NCERT · CBSE · ISC · PUC`.
+- Syllabus: rolling motion (Eps 109-110) was removed from the rationalised NCERT book; it is in the ISC Class 11 syllabus. Say so plainly on screen and in the description, never "NCERT says". Check every other topic (axes theorems, centre of gravity, radius of gyration) against the current NCERT Ch 6 text and the CISCE syllabus before writing, and flag any that a board drops in the same way.
+- Colours (add to Ch 5 canon): angular velocity omega blue (same as v), angular acceleration alpha red (same as a), torque tau orange (it is a turning force), angular momentum L plum #A23B72 (same family as momentum p), position vector r violet, moment of inertia I ink, theta gold, centre of mass marker: ink ring with a gold cross.
+- Rotation sims: show the axis as a dashed ink line or dot, a curved arrow for the sense of turning, and right-hand rule hints when a cross product sets a direction.
+
+| Ep | Topic | Lead | Hook idea |
+|---|---|---|---|
+| 91 | Rigid Body: Translation and Rotation | Aarav | a book sliding vs a door swinging vs a rolling wheel |
+| 92 | Centre of Mass | Diya | balancing a ruler with coins on one end on one finger |
+| 93 | Centre of Mass of Common Bodies | Aarav | where a ring, rod and L-shaped plate balance; the ring balances where there is nothing |
+| 94 | Motion of the Centre of Mass | Aarav | a festival rocket that bursts mid-air; the pieces' centre keeps the old curve |
+| 95 | Linear Momentum of a System of Particles | Diya | two skaters push apart; total momentum stays zero |
+| 96 | Vector (Cross) Product | Aarav | turning a screw with a spanner; the screw moves at right angles to both |
+| 97 | Angular Velocity and Linear Velocity | Diya | a merry-go-round: outer horse travels faster though all turn together |
+| 98 | Angular Acceleration and Rotational Kinematics | Aarav | a ceiling fan speeding up after switch-on |
+| 99 | Torque | Aarav | why door handles sit far from the hinge |
+| 100 | Angular Momentum of a Particle | Diya | a ball on a string whirled overhead |
+| 101 | Torque and Angular Momentum | Aarav | pushing a merry-go-round longer spins it faster |
+| 102 | Equilibrium of a Rigid Body | Diya | a see-saw with a heavy and a light friend |
+| 103 | Centre of Gravity | Aarav | finding where a cardboard cut-out balances with a plumb line |
+| 104 | Moment of Inertia | Diya | a rod is easier to spin about its middle than its end |
+| 105 | Radius of Gyration and Moments of Inertia of Common Bodies | Aarav | a ring vs a disc of the same mass spun up by the same push |
+| 106 | Theorems of Perpendicular and Parallel Axes | Diya | spinning a coin flat vs on its edge vs about a point on its rim |
+| 107 | Dynamics of Rotation: Torque, Work and Rotational Kinetic Energy | Aarav | a potter's wheel kept turning with the foot |
+| 108 | Conservation of Angular Momentum | Diya | spinning on a chair, pulling arms in speeds you up |
+| 109 | Rolling Motion | Aarav | a cycle wheel: the bottom point is momentarily at rest |
+| 110 | Kinetic Energy of Rolling Motion | Diya | ring, disc and ball raced down the same slope; NEXT teases Ch 7 Gravitation |
+
 ## Canon added by episodes
 Binding for Eps 38 onward (earlier episodes stay as made):
 - Colours: velocity v, v-bar and speed-type readouts on a v graph = blue #2F6FEB; displacement, position x, distance travelled and area under a v-t graph = violet #7A4FE0; acceleration a, g, change in velocity = red #D64545; force F and every error term (delta) = orange #D9731A; energy/work = teal #0E8F8F; time t, numbers, magnitudes = ink #16213E; angle theta = gold #B7791F.
