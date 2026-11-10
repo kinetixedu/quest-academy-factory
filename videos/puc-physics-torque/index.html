@@ -1,0 +1,164 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 99 - Torque</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 99: torque (Motion notebook, a door seen from above) ===== */
+:root{--fo:#D9731A;--vi:#7A4FE0;--go:#B7791F;--vb:#2F6FEB}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.fo{color:var(--fo)}.vi{color:var(--vi)}.go{color:var(--go)}
+#bpill{position:absolute;display:inline-flex;align-items:center;height:48px;padding:0 16px;border-radius:10px;background:#fff;border:2px solid var(--ac);color:var(--ac);font:600 18px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap;top:96px}
+/* title tiles */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr .jn{position:absolute;left:28px;top:24px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:28px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr svg{position:absolute;right:16px;top:4px}
+.hp{position:absolute;left:36px;height:52px;padding:0 18px;border-radius:12px;display:flex;align-items:center;gap:10px;font:600 25px Poppins;white-space:nowrap}
+/* what is torque */
+.mv{position:absolute;top:80px;height:72px;padding:0 24px;border-radius:14px;display:flex;align-items:center;gap:14px;font:700 30px Poppins;white-space:nowrap}
+.ig{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.ig .s{position:absolute;left:22px;top:14px;width:70px;text-align:center;font:600 54px/1 Poppins;font-style:italic}
+.ig .n{position:absolute;left:112px;top:16px;font:700 28px Poppins;white-space:nowrap}
+.ig .d{position:absolute;left:112px;top:56px;font:500 22px Poppins;color:var(--ink2);white-space:nowrap}
+.ax{position:absolute;left:36px;width:712px;height:144px;border-radius:14px;background:var(--soft)}
+.ax svg{position:absolute;left:12px;top:2px}
+.ax .n{position:absolute;left:300px;top:34px;font:700 30px Poppins;white-space:nowrap}
+.ax .d{position:absolute;left:300px;top:80px;font:600 18px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* sim + readout */
+.ro2{position:absolute;display:grid;grid-template-columns:auto 1fr auto;column-gap:14px;row-gap:6px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .v{font:600 34px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 20px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+.smo,.frz{position:absolute;right:36px;top:18px;height:44px;padding:0 16px;border-radius:9px;display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.smo{background:var(--ink);color:#fff}.frz{background:var(--redBg);color:var(--red)}
+.leg{position:absolute;top:22px;display:flex;gap:18px;font:600 18px 'IBM Plex Mono';white-space:nowrap}
+/* derivation */
+.st{position:absolute;left:36px;width:960px;height:92px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:-4px;font-size:36px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:52px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.dpan{position:absolute;left:1040px;top:84px;width:524px;height:460px;border-radius:14px;background:var(--soft)}
+/* chain */
+.lk{position:absolute;left:36px;width:712px;height:84px;border-radius:14px;background:var(--soft)}
+.lk .n{position:absolute;left:20px;top:19px;width:46px;height:46px;border-radius:50%;background:var(--ac);color:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.lk .lt{position:absolute;left:86px;top:0;height:84px;display:flex;align-items:center;font:600 25px Poppins;white-space:nowrap;gap:10px}
+.bar{position:absolute;height:44px;border-radius:8px}
+.blab{position:absolute;font:600 22px 'IBM Plex Mono';white-space:nowrap}
+/* side by side */
+.kp{position:absolute;left:36px;top:478px;height:64px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+/* worked */
+#wkq{position:absolute;left:36px;top:70px;font:600 27px/1.38 Poppins;width:712px}
+#tqC{position:absolute;left:36px;top:478px;height:64px;padding:0 22px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+#tqC .tu{color:#F2B27A}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font-size:26px}
+#wl .sol .sx{font-size:30px}
+#sF .fcard .fl{font-size:42px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 32px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 6 SYSTEM OF PARTICLES AND ROTATIONAL MOTION</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="bpill">NCERT · CBSE · ISC · PUC</div>
+    <div id="title">What Is <span class="acc">Torque</span>?</div>
+    <div id="sub">Why every door handle sits far from the hinge</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+
+    <!-- H: three pushes + the corridor door -->
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">THREE PUSHES · ONE IDEA</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Every one of them turns about an axis</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV'S COLLEGE CORRIDOR · A HEAVY DOOR</div>
+        <img id="hkI" src="../../assets/illustrations/puc/scene-corridor.jpg" style="position:absolute;left:36px;top:76px;width:456px;height:342px;border-radius:12px">
+        <img id="hkA" src="../../assets/illustrations/puc/aarav.png" style="position:absolute;left:520px;top:190px;width:230px;height:285px;object-fit:contain">
+        <div class="hp" id="hp0" style="top:436px;background:var(--redBg);color:var(--red)">Near the hinges: it barely moves</div>
+        <div class="hp" id="hp1" style="top:500px;background:var(--okBg);color:#1F6B3F">At the handle: it swings open</div>
+        <div class="pillp ink" id="hkQ" style="left:52px;top:92px">Same push. Why?</div></div>
+    </div>
+
+    <!-- P: what torque is -->
+    <div id="sP">
+      <div class="card full" id="pq"><div class="lbl" style="left:36px;top:30px">FORCE MOVES · TORQUE TURNS</div>
+        <div class="mv" id="mv0" style="left:36px;background:var(--soft)">Force <span class="mono" style="color:var(--mute)">&rarr;</span> moves</div>
+        <div class="mv" id="mv1" style="left:384px;background:#FBEBDD;color:var(--fo)">Torque <span class="mono">&rarr;</span> turns</div>
+        <div class="lbl" id="igL" style="left:36px;top:190px">TORQUE DEPENDS ON THREE THINGS</div><div id="igs"></div></div>
+      <div class="card rf" id="pm"><div class="lbl" style="left:36px;top:30px">WHERE IS THE AXIS?</div><div id="axs"></div></div>
+    </div>
+
+    <!-- S: the door sim -->
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">TOP VIEW · AARAV'S DOOR</div><div class="ghost" id="exS" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <div class="smo" id="smo">SLOW-MO REPLAY · 0.25x</div><div class="frz" id="frz">FROZEN · AT THE PUSH</div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="tag" id="roT" style="right:36px;top:22px"></div>
+        <div class="ro2" id="roA" style="left:36px;top:76px;width:300px"></div><div class="ro2" id="roB" style="left:392px;top:76px;width:356px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" id="grL1" style="left:36px;top:30px">TORQUE VS DISTANCE FROM THE HINGE</div><div class="lbl" id="grL2" style="left:36px;top:30px">TORQUE VS ANGLE · PUSH AT THE HANDLE</div>
+        <div class="pillp ac" id="grT" style="right:36px;top:18px;height:40px;font-size:19px">2 &times; distance &rarr; 2 &times; torque</div>
+        <svg id="grS1" width="784" height="274" style="position:absolute;left:0;top:0"></svg><svg id="grS2" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+
+    <!-- D: the formula in four steps -->
+    <div id="sD">
+      <div class="card" id="dl" style="left:160px;top:270px;width:1600px;height:580px"><div class="lbl" style="left:36px;top:30px">THE FORMULA · 4 STEPS</div><div id="steps"></div>
+        <div class="dpan" id="dpan"><div class="lbl" style="left:24px;top:22px">THE MOMENT ARM</div><svg id="dpS" width="524" height="460" style="position:absolute;left:0;top:0"></svg></div></div>
+    </div>
+
+    <!-- R: link by link + flip it around + think -->
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">WHY THE HANDLE IS FAR · LINK BY LINK</div><div id="lks"></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">FORCE NEEDED FOR THE SAME 9 N m</div><div class="ghost" id="exR" style="right:36px;top:18px">EXAMPLE FIGURES</div><div id="bars"></div>
+        <div class="fx" id="rrF" style="left:36px;top:470px;font-size:40px"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- K: side by side + think -->
+    <div id="sK">
+      <div class="card full" id="kl"><div class="lbl" style="left:36px;top:30px">PUSH AT RIGHT ANGLES</div><svg id="klS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div class="fx" id="klF" style="left:36px;top:96px;font-size:36px"></div><div class="kp" id="klP"></div></div>
+      <div class="card rf" id="kr"><div class="lbl" style="left:36px;top:30px">PUSH AT A SLANT</div><svg id="krS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div class="fx" id="krF" style="left:36px;top:96px;font-size:36px"></div><div class="ghost" id="exK" style="right:36px;top:18px">EXAMPLE FIGURES</div><div class="kp" id="krP"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <!-- W: worked example, the pedal -->
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wkq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">AARAV'S PEDAL · SIDE VIEW</div><div class="ghost" id="exW" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div id="tqC"><span id="tqN">34</span><span class="tu">N m</span></div></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tpS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"><svg id="mqS" width="300" height="200" style="position:absolute;right:36px;bottom:30px"></svg></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2" style="font-size:68px"><span style="color:#D9731A">Torque</span> = force &times; perpendicular distance</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>

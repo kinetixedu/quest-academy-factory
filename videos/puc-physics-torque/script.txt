@@ -1,0 +1,56 @@
+H1|0.4|A long spanner loosens a stuck nut. A pedal turns on a long crank. A door opens at its handle.
+H2|0.45|Three different pushes. One same idea.
+H3|0.35|In the college corridor, Aarav pushes a heavy door near its hinges. It barely moves.
+H4|0.5|He pushes just as hard at the handle. It swings open. Same push. Why does the spot matter?
+H5|0.6|The answer is torque. Soon you will know why handles sit far from the hinge.
+P1|0.35|A force makes a thing move. Torque makes a thing turn.
+P2|0.35|Torque is the turning effect of a force about an axis, the line a body turns around.
+P3|0.4|For a door, the axis is the hinge. For a nut, the bolt. For a pedal, the axle.
+P4|0.6|Torque depends on three things. How hard you push. How far from the axis. And at what angle.
+S1|0.35|Let's test it on our motion notebook. Aarav's door, seen from above. The hinge is on the left.
+S2|0.4|Every push is the same: twenty newtons, at right angles.
+S3|0.4|Push at zero point three metres from the hinge. The torque is six newton metres. The door turns a little.
+S4|0.4|Push at zero point six metres. Twice as far, twice the torque. Twelve newton metres.
+S5|0.5|Push at the handle, zero point nine metres. Eighteen newton metres. The door swings the most.
+S6|0.6|On the graph, torque grows in a straight line with distance.
+S7|0.35|Slow-mo replay. Freeze at the push.
+S8|0.4|The arrow from the hinge to the hand is r, the position vector. The push F is at right angles to it.
+S9|0.4|Now push at the handle at a slant, partly toward the hinge. The angle between r and F is one hundred and fifty degrees.
+S10|0.6|The torque drops to nine newton metres. Only part of a slanted push turns the door.
+D1|0.35|Let's build the formula, one step at a time.
+D2|0.75|Step one. Torque is a vector. It is r cross F.
+D3|0.75|Step two. Its size is r F sine theta, where theta is the angle between r and F.
+D4|0.75|Step three. r sine theta is the moment arm: the shortest distance from the axis to the line of the force. So torque is the moment arm times F.
+D5|0.75|Step four. The unit is the newton metre. The dimensions are M L squared T to the minus two.
+D6|0.6|The direction comes from the right hand rule. Curl your fingers from r to F. Your thumb gives the torque, out of the screen.
+T1|0.7|Remember this. Torque is the force times the perpendicular distance from the axis to its line.
+R1|0.35|So why is the handle far from the hinge? Link by link.
+R2|0.4|Your push is about the same every time. But the handle is far, so the moment arm is big.
+R3|0.6|A big arm gives a big torque. So the door turns easily.
+R4|0.6|Flip it around. For the same nine newton metres, at the handle you need ten newtons. Halfway, twenty. Near the hinge, sixty.
+R5|3.1|Now you try. Which turns a stuck bolt more: forty newtons at zero point two metres, or twenty newtons at zero point five? Pause and decide.
+R6|0.65|Twenty at zero point five! That gives ten newton metres. Forty at zero point two gives only eight.
+K1|0.4|Side by side. Push at right angles, and the moment arm is the full distance r.
+K2|0.6|Push at a slant, and the line of the force passes closer to the hinge. The moment arm is shorter.
+K3|3.2|Your turn. Aarav pushes very hard, but straight along the door, toward the hinge. Will it turn? Pause and decide.
+K4|0.65|No! The line of the force passes through the hinge. The moment arm is zero, so the torque is zero.
+W1|0.35|Now, one worked example. Aarav's bicycle pedal.
+W2|0.5|The crank is zero point one seven metres long. He pushes straight down with two hundred newtons.
+W3|0.75|With the crank level, the push is at right angles. Torque is zero point one seven times two hundred. Thirty four newton metres.
+W4|0.75|Lower down, the crank is thirty degrees from the vertical. Now theta is thirty degrees, and sine thirty is one half.
+W5|0.65|So the torque is seventeen newton metres. Half as much. That is why a push does so little near the bottom.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students write torque as F times r, the distance to the point where the force acts.
+X3|0.65|That works only at right angles. Torque is F times the perpendicular distance from the axis to the line of the force.
+E1|0.6|Where is this asked? In torque as r cross F, in moment arm questions, and in the direction of torque.
+Q1|5.4|Exam level now. A ten newton force acts along the line y equals x plus two, with distances in metres. Find the size of its torque about the origin. Pause and solve.
+A1|0.5|The answer is B. Ten root two newton metres.
+A2|0.5|The line makes forty five degrees with the x axis, and crosses the y axis at two.
+A3|0.5|So the moment arm from the origin is two times sine forty five. Root two metres.
+A4|0.6|Torque is ten times root two. About fourteen point one newton metres.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. Why do door handles sit far from the hinge?
+Y3|0.9|Two. Why does a push straight toward the hinge not turn a door?
+Y4|0.9|Three. How is the moment arm different from the distance r?
+N1|0.3|Next time: how can a ball moving in a straight line have angular momentum?
