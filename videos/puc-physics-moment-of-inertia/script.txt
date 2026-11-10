@@ -1,0 +1,55 @@
+H1|0.4|A heavy door is slow to start swinging. A merry-go-round full of children is hard to get turning. But a small top spins up with one flick.
+H2|0.45|Some things fight being turned much more than others.
+H3|0.35|Diya twirls a metre ruler in the lab. Held at its middle, it spins easily.
+H4|0.5|Held at one end, it is suddenly hard to swing. Same ruler. Same mass. So what changed?
+H5|0.6|The answer is called moment of inertia.
+P1|0.35|First, plain inertia. A heavy trolley is hard to start moving. Its mass resists a change in motion.
+P2|0.4|Turning has its own kind of inertia. It tells you how hard it is to start, or stop, something spinning.
+P3|0.4|It depends on the mass, and also on how far that mass sits from the axis, the line it turns about.
+P4|0.6|For tiny bits of mass, moment of inertia, I, equals the sum of m r squared. Its unit is the kilogram metre squared.
+S1|0.35|Our motion notebook, seen from above. A light rod, one metre long, with a one kilogram ball at each end.
+S2|0.4|Spin it about its middle. Each ball is half a metre from the axis. So I is one times point two five, twice. Point five.
+S3|0.4|Give it one joule of energy. It turns at two radians per second.
+S4|0.35|Slow-mo replay. Freeze.
+S5|0.4|Each ball moves along a circle. Its speed is r times omega. Half a metre times two. One metre per second.
+S6|0.4|Now slide the axis toward one end, keeping that one joule. Watch I climb on the graph.
+S7|0.4|At the end, one ball sits on the axis. The other is a full metre away. I is now one. Double.
+S8|0.6|The same one joule now gives only one point four one radians per second. The far ball does all the moving.
+S9|3.1|So, is moment of inertia fixed for a body, like its mass? Pause and decide.
+S10|0.6|No! It depends on the axis. Same rod, same mass, but I doubled when the axis moved.
+D1|0.35|Where does m r squared come from? From kinetic energy, step by step.
+D2|0.75|Step one. A bit of mass m, at a distance r from the axis, moves at speed v equals r omega.
+D3|0.75|Step two. Its kinetic energy is half m v squared. That is half m r squared omega squared.
+D4|0.75|Step three. Add up every bit. All the bits share the same omega, so take it outside the sum.
+D5|0.75|Step four. K equals half, times the sum of m r squared, times omega squared. That sum is I.
+D6|0.6|So K equals half I omega squared. Just like half m v squared, with I in place of mass.
+T1|0.7|Remember this. Moment of inertia is the turning version of mass. I equals the sum of m r squared.
+R1|0.35|Now, why the end is harder, link by link.
+R2|0.4|About the end, the far ball swings round a big circle.
+R3|0.4|A bigger circle in the same time means a bigger speed. v equals r omega.
+R4|0.4|Kinetic energy grows with speed squared. So it grows with r squared.
+R5|0.6|So the same spin needs more energy. That is a bigger moment of inertia.
+K1|0.4|Side by side. Two one kilogram balls, close in, a tenth of a metre from the axis. I is point zero two.
+K2|0.6|The same two balls, pushed out to half a metre. I is point five. Twenty five times bigger, with the same mass.
+K3|3.2|Now you try. If every ball moves twice as far from the axis, does I become two times, or four times bigger? Pause and decide.
+K4|0.65|Four times! r is squared. Twice the distance means four times the moment of inertia.
+W1|0.35|Now, one worked example.
+W2|0.5|A light rod has a one kilogram ball point two metres from the axis, and a two kilogram ball point five metres away. It spins at ten radians per second. Find I, and its kinetic energy.
+W3|0.75|I equals one times point two squared, plus two times point five squared.
+W4|0.75|That is point zero four plus point five. Point five four kilogram metre squared.
+W5|0.65|K equals half, times point five four, times ten squared. Twenty seven joules.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students measure r from the centre of the body.
+X3|0.65|But r is the perpendicular distance from the axis of rotation. Change the axis, and every r changes.
+E1|0.6|Where is this asked? In finding I for a set of point masses, and in using half I omega squared.
+Q1|5.4|Exam level now. Four two kilogram balls sit at the corners of a light square frame of side one metre. Find the moment of inertia about an axis through one corner, at right angles to the square. Pause and solve.
+A1|0.5|The answer is C. Eight kilogram metre squared.
+A2|0.5|The ball on the axis adds nothing.
+A3|0.5|Two balls are one metre away. Each adds two times one squared. Two each.
+A4|0.6|The far ball is root two metres away. It adds two times two, which is four. Total, eight.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. Why is a ruler harder to spin about its end than about its middle?
+Y3|0.9|Two. If every mass moves twice as far from the axis, what happens to I?
+Y4|0.9|Three. Why is moment of inertia not fixed for a body, the way mass is?
+N1|0.3|Next time: a ring and a disc, same mass, same push. Which one spins up faster? Radius of gyration.

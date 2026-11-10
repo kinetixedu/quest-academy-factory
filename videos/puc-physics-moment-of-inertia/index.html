@@ -1,0 +1,135 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 104 - Moment of Inertia</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 104: moment of inertia (Motion notebook) ===== */
+:root{--fo:#D9731A;--vi:#7A4FE0;--go:#B7791F;--rd:#D64545;--te:#0E8F8F;--vb:#2F6FEB}
+.te{color:var(--te)}.vb{color:var(--vb)}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.fo{color:var(--fo)}.vi{color:var(--vi)}.go{color:var(--go)}
+#bpill{position:absolute;display:inline-flex;align-items:center;height:48px;padding:0 16px;border-radius:10px;background:#fff;border:2px solid var(--ac);color:var(--ac);font:600 18px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap;top:96px}
+/* title tiles */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr .jn{position:absolute;left:28px;top:24px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:28px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr svg{position:absolute;right:16px;top:0}
+/* what it is */
+.qr{position:absolute;left:36px;width:712px;height:116px;border-radius:14px;background:var(--soft)}
+.qr .qs{position:absolute;left:20px;top:28px;width:60px;height:60px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.qr .qn{position:absolute;left:100px;top:20px;font:700 30px Poppins;white-space:nowrap}
+.qr .qd{position:absolute;left:100px;top:66px;font:500 23px Poppins;color:var(--ink2);white-space:nowrap}
+.lawP{position:absolute;left:36px;top:478px;width:712px;height:72px;border-radius:14px;background:var(--ink);color:#fff;display:flex;align-items:center;padding:0 24px;font:600 26px Poppins;white-space:nowrap;box-sizing:border-box;gap:12px}
+/* sim + readout */
+.ro2{position:absolute;display:grid;grid-template-columns:auto 1fr auto;column-gap:14px;row-gap:6px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .v{font:600 34px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 20px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+.smo,.frz,.rdy{position:absolute;right:36px;top:18px;height:44px;padding:0 16px;border-radius:9px;display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.smo{background:var(--ink);color:#fff}.frz{background:var(--redBg);color:var(--red)}.rdy{background:var(--soft);color:var(--ink2)}
+.simP{position:absolute;left:36px;top:494px;height:56px;padding:0 20px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 24px Poppins;white-space:nowrap}
+/* derivation */
+.st{position:absolute;left:36px;width:900px;height:84px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:-2px;font-size:36px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:50px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.dpan{position:absolute;left:1000px;top:84px;width:564px;height:460px;border-radius:14px;background:var(--soft)}
+.dres{position:absolute;left:36px;top:494px;height:56px;padding:0 20px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;font:600 24px Poppins;white-space:nowrap}
+/* chain */
+.lk{position:absolute;left:36px;width:712px;height:84px;border-radius:14px;background:var(--soft)}
+.lk .n{position:absolute;left:20px;top:19px;width:46px;height:46px;border-radius:50%;background:var(--ac);color:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.lk .lt{position:absolute;left:86px;top:0;height:84px;display:flex;align-items:center;font:600 25px Poppins;white-space:nowrap;gap:10px}
+/* side by side */
+.kp{position:absolute;left:36px;top:494px;height:56px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:12px;font:600 24px Poppins;white-space:nowrap}
+#wkq{position:absolute;left:36px;top:70px;font:600 27px/1.38 Poppins;width:712px}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font-size:24px}
+#wl .sol .sx{font-size:30px}
+#sF .fcard .fl{font-size:38px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 32px Poppins;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 6 SYSTEM OF PARTICLES AND ROTATIONAL MOTION</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="bpill">NCERT · CBSE · ISC · PUC</div>
+    <div id="title">Moment of <span class="acc">Inertia</span></div>
+    <div id="sub">One rod, two balls, one moving axis</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">SOME THINGS FIGHT BEING TURNED</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Some resist turning far more than others</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA'S METRE RULER</div>
+        <img id="hkA" src="../../assets/illustrations/puc/diya.png" style="position:absolute;left:574px;top:250px;width:200px;height:260px;object-fit:contain">
+        <svg id="hkS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div class="pillp" id="hkQ" style="left:36px;top:490px;background:var(--redBg);color:var(--red)">Same ruler, same mass. What changed?</div></div>
+    </div>
+    <div id="sP">
+      <div class="card full" id="pq"><div class="lbl" style="left:36px;top:30px">TWO KINDS OF INERTIA</div><div id="qrs"></div>
+        <div class="lawP" id="lawP"></div></div>
+      <div class="card rf" id="pm"><div class="lbl" style="left:36px;top:30px">EVERY BIT COUNTS: m TIMES r SQUARED</div>
+        <svg id="pmS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg></div>
+    </div>
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">TOP VIEW · LIGHT 1 m ROD, TWO 1 kg BALLS</div>
+        <div class="rdy" id="rdy">AT REST</div><div class="smo" id="smo">SLOW-MO REPLAY · 0.25x</div><div class="frz" id="frz">FROZEN</div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div class="simP" id="simP">Same rod, same mass: I doubled</div><div class="ghost" id="exS" style="left:36px;top:66px">EXAMPLE FIGURES</div></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT · K = 1 J</div><div class="tag" id="roT" style="right:36px;top:22px"></div>
+        <div class="ro2" id="roA" style="left:36px;top:70px;width:320px"></div><div class="ro2" id="roB" style="left:412px;top:70px;width:336px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">I VS WHERE THE AXIS IS</div>
+        <svg id="grS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+    <div id="sD">
+      <div class="card" id="dl" style="left:160px;top:270px;width:1600px;height:580px"><div class="lbl" style="left:36px;top:30px">WHERE m r² COMES FROM · 4 STEPS</div><div id="steps"></div>
+        <div class="dpan" id="dpan"><div class="lbl" style="left:24px;top:22px">ONE BIT, GOING ROUND</div><svg id="dpS" width="564" height="460" style="position:absolute;left:0;top:0"></svg></div></div>
+    </div>
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">WHY THE END IS HARDER · LINK BY LINK</div><div id="lks"></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">SAME SPIN, ω = 2 rad/s</div>
+        <svg id="rrS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg></div>
+    </div>
+    <div id="sK">
+      <div class="card full" id="kh"><div class="lbl" style="left:36px;top:30px">BALLS CLOSE IN · r = 0.1 m</div><svg id="khS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div class="kp" id="khP"></div></div>
+      <div class="card rf" id="kl"><div class="lbl" style="left:36px;top:30px">SAME BALLS PUSHED OUT · r = 0.5 m</div><svg id="klS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div class="kp" id="klP"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wkq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">TOP VIEW · ω = 10 rad/s</div><svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg></div>
+    </div>
+    <div id="sX"><div class="card red" id="trap"><svg id="tpS" width="600" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"><svg id="mqS" width="260" height="300" style="position:absolute;right:30px;top:250px"></svg></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this. Moment of inertia is</div><div id="st2" style="font-size:76px">the turning version of <span class="acc">mass</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
