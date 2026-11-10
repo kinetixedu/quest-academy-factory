@@ -1,0 +1,593 @@
+1
+00:00:00,450 --> 00:00:03,270
+A trampoline pushes harder
+the deeper you sink.
+
+2
+00:00:03,270 --> 00:00:06,384
+A rubber band pulls harder
+the more you stretch it.
+
+3
+00:00:06,784 --> 00:00:09,250
+These forces change at every point.
+
+4
+00:00:09,250 --> 00:00:11,945
+But F times d needs one steady force.
+
+5
+00:00:12,395 --> 00:00:15,522
+Diya squeezes a kitchen
+spring against a small block.
+
+6
+00:00:15,522 --> 00:00:18,648
+The harder she squeezes,
+the harder it pushes back.
+
+7
+00:00:18,998 --> 00:00:19,921
+She lets go.
+
+8
+00:00:19,921 --> 00:00:22,547
+The push starts strong
+and fades to nothing.
+
+9
+00:00:22,547 --> 00:00:25,047
+Which force do we use to find the speed?
+
+10
+00:00:25,547 --> 00:00:27,033
+None of them alone.
+
+11
+00:00:27,033 --> 00:00:29,003
+We add up every tiny push.
+
+12
+00:00:29,003 --> 00:00:30,117
+Let's see how.
+
+13
+00:00:30,767 --> 00:00:34,659
+For a steady force, the change
+in K was simply F times d.
+
+14
+00:00:35,009 --> 00:00:39,398
+On a force against position
+graph, F times d is a rectangle.
+
+15
+00:00:39,398 --> 00:00:41,124
+Its area is the work.
+
+16
+00:00:41,524 --> 00:00:45,402
+A changing force makes a slope
+or a curve, not a rectangle.
+
+17
+00:00:45,802 --> 00:00:47,987
+So cut the path into tiny steps.
+
+18
+00:00:47,987 --> 00:00:51,058
+In each tiny step, the
+force is almost steady.
+
+19
+00:00:51,708 --> 00:00:52,608
+Let's run it.
+
+20
+00:00:52,544 --> 00:00:56,166
+A two kilogram block, against a
+spring squeezed by forty centimetres.
+
+21
+00:00:56,515 --> 00:00:59,018
+The spring constant is
+fifty newtons per metre.
+
+22
+00:00:59,018 --> 00:01:01,651
+So at the start, it pushes
+with twenty newtons.
+
+23
+00:01:02,051 --> 00:01:02,951
+Release!
+
+24
+00:01:02,659 --> 00:01:05,177
+The push fades to zero
+as the spring opens.
+
+25
+00:01:05,177 --> 00:01:06,495
+The block shoots off.
+
+26
+00:01:06,895 --> 00:01:07,795
+Slow-mo replay.
+
+27
+00:01:07,761 --> 00:01:10,342
+Cut the push into four
+steps of ten centimetres.
+
+28
+00:01:10,692 --> 00:01:13,493
+In each step, the force is almost steady.
+
+29
+00:01:13,493 --> 00:01:16,655
+So the work is a thin
+strip: force times step.
+
+30
+00:01:17,055 --> 00:01:21,993
+One point seven five, one point two
+five, point seven five, point two five
+
+31
+00:01:21,993 --> 00:01:22,893
+joules.
+
+32
+00:01:22,660 --> 00:01:24,791
+They shrink as the push fades.
+
+33
+00:01:25,191 --> 00:01:26,109
+Add them up.
+
+34
+00:01:26,109 --> 00:01:27,009
+Four joules.
+
+35
+00:01:26,974 --> 00:01:29,363
+That is the area under the force graph.
+
+36
+00:01:29,763 --> 00:01:32,482
+The block leaves at two metres per second.
+
+37
+00:01:32,482 --> 00:01:35,489
+Half times two times two
+squared: four joules.
+
+38
+00:01:35,489 --> 00:01:37,670
+The area equals the change in K.
+
+39
+00:01:38,320 --> 00:01:40,691
+Now the proof, one step at a time.
+
+40
+00:01:41,041 --> 00:01:41,941
+Step one.
+
+41
+00:01:41,892 --> 00:01:43,666
+K is half m v squared.
+
+42
+00:01:43,666 --> 00:01:47,566
+So the rate of change of
+K is m v times d v by d t.
+
+43
+00:01:48,316 --> 00:01:49,234
+Step two.
+
+44
+00:01:49,234 --> 00:01:52,155
+m times d v by d t is the force F.
+
+45
+00:01:52,155 --> 00:01:54,437
+So d K by d t equals F v.
+
+46
+00:01:55,187 --> 00:01:56,260
+Step three.
+
+47
+00:01:56,260 --> 00:01:57,973
+v is d x by d t.
+
+48
+00:01:57,973 --> 00:02:01,306
+Cancel the d t, and d K equals F d x.
+
+49
+00:02:02,056 --> 00:02:02,956
+Step four.
+
+50
+00:02:02,920 --> 00:02:05,580
+Add every tiny piece from start to end.
+
+51
+00:02:05,580 --> 00:02:08,538
+The integral sign just
+means: add them all.
+
+52
+00:02:09,288 --> 00:02:13,768
+So K final minus K initial
+equals the integral of F d x.
+
+53
+00:02:13,768 --> 00:02:16,248
+The area under the F x graph.
+
+54
+00:02:16,998 --> 00:02:18,095
+Remember this.
+
+55
+00:02:18,095 --> 00:02:22,697
+For any force, the change in K equals
+the area under the force against
+
+56
+00:02:22,697 --> 00:02:23,845
+position graph.
+
+57
+00:02:24,545 --> 00:02:25,727
+Steady or changing?
+
+58
+00:02:25,727 --> 00:02:26,652
+Side by side.
+
+59
+00:02:27,002 --> 00:02:29,688
+A steady ten newton push
+over forty centimetres.
+
+60
+00:02:29,688 --> 00:02:30,588
+A rectangle.
+
+61
+00:02:30,520 --> 00:02:31,748
+Area, four joules.
+
+62
+00:02:32,148 --> 00:02:36,548
+The spring push, twenty newtons down to
+zero, over the same forty centimetres.
+
+63
+00:02:36,548 --> 00:02:37,448
+A triangle.
+
+64
+00:02:37,338 --> 00:02:38,830
+Area, also four joules.
+
+65
+00:02:39,430 --> 00:02:40,419
+Now you try.
+
+66
+00:02:40,419 --> 00:02:43,376
+Which push gives the
+block more kinetic energy?
+
+67
+00:02:43,376 --> 00:02:44,605
+Pause and decide.
+
+68
+00:02:47,805 --> 00:02:48,705
+The same!
+
+69
+00:02:48,569 --> 00:02:50,339
+Both areas are four joules.
+
+70
+00:02:50,339 --> 00:02:52,734
+Only the area counts, not the shape.
+
+71
+00:02:53,384 --> 00:02:55,380
+What if the force turns around?
+
+72
+00:02:55,380 --> 00:02:56,563
+Follow the links.
+
+73
+00:02:56,913 --> 00:02:57,813
+One.
+
+74
+00:02:57,406 --> 00:02:58,991
+Force along the motion.
+
+75
+00:02:58,991 --> 00:03:01,030
+The strip sits above the axis.
+
+76
+00:03:01,030 --> 00:03:02,065
+Positive work.
+
+77
+00:03:02,465 --> 00:03:03,365
+Two.
+
+78
+00:03:02,949 --> 00:03:04,601
+Force against the motion.
+
+79
+00:03:04,601 --> 00:03:06,605
+The strip sits below the axis.
+
+80
+00:03:06,605 --> 00:03:07,621
+Negative work.
+
+81
+00:03:08,021 --> 00:03:08,921
+Three.
+
+82
+00:03:08,619 --> 00:03:12,209
+The net area is the area
+above, minus the area below.
+
+83
+00:03:12,609 --> 00:03:13,509
+Four.
+
+84
+00:03:13,153 --> 00:03:15,466
+That net area is the change in K.
+
+85
+00:03:15,466 --> 00:03:18,012
+It can be positive, zero or negative.
+
+86
+00:03:18,612 --> 00:03:19,512
+Your turn.
+
+87
+00:03:19,503 --> 00:03:24,054
+On an F x graph, ten joules sit
+above the axis and fifteen below.
+
+88
+00:03:24,054 --> 00:03:26,749
+Does the body end up faster or slower?
+
+89
+00:03:26,749 --> 00:03:28,010
+Pause and think.
+
+90
+00:03:31,210 --> 00:03:32,110
+Slower!
+
+91
+00:03:31,887 --> 00:03:36,815
+The net area is minus five joules, so
+the body loses five joules of kinetic
+
+92
+00:03:36,815 --> 00:03:37,715
+energy.
+
+93
+00:03:38,142 --> 00:03:39,832
+Now, one worked example.
+
+94
+00:03:40,182 --> 00:03:42,648
+A one kilogram body starts at rest.
+
+95
+00:03:42,648 --> 00:03:47,222
+A force F equals four x newtons
+pushes it from zero to three metres.
+
+96
+00:03:47,222 --> 00:03:48,425
+Find its speed.
+
+97
+00:03:48,925 --> 00:03:52,593
+At three metres, the force is
+four times three, twelve newtons.
+
+98
+00:03:52,593 --> 00:03:54,100
+The graph is a triangle.
+
+99
+00:03:54,850 --> 00:03:57,527
+Area equals half times three times twelve.
+
+100
+00:03:57,527 --> 00:03:59,160
+Eighteen joules of work.
+
+101
+00:03:59,910 --> 00:04:03,516
+It started at rest, so its
+final K is eighteen joules.
+
+102
+00:04:04,266 --> 00:04:07,665
+Half times one times v
+squared equals eighteen.
+
+103
+00:04:07,665 --> 00:04:09,596
+v squared is thirty six.
+
+104
+00:04:09,596 --> 00:04:11,760
+v is six metres per second.
+
+105
+00:04:12,410 --> 00:04:13,872
+Now, the exam trap.
+
+106
+00:04:14,222 --> 00:04:17,592
+Many students multiply the
+final force by the distance.
+
+107
+00:04:17,592 --> 00:04:20,076
+Twelve times three, thirty six joules.
+
+108
+00:04:20,476 --> 00:04:23,432
+But the force was smaller
+for most of the path.
+
+109
+00:04:23,432 --> 00:04:25,418
+Use the area: eighteen joules.
+
+110
+00:04:26,068 --> 00:04:27,528
+Where is this asked?
+
+111
+00:04:27,528 --> 00:04:32,045
+With a force given as a formula or
+a graph, asking for the work or the
+
+112
+00:04:32,045 --> 00:04:32,945
+speed.
+
+113
+00:04:33,243 --> 00:04:34,458
+Exam level now.
+
+114
+00:04:34,458 --> 00:04:39,606
+A two kilogram block moves along x under
+F equals eight minus four x newtons.
+
+115
+00:04:39,606 --> 00:04:43,324
+At x equals zero, its speed
+is one metre per second.
+
+116
+00:04:43,324 --> 00:04:45,496
+Find its speed at four metres.
+
+117
+00:04:45,496 --> 00:04:46,763
+Pause and solve.
+
+118
+00:04:52,163 --> 00:04:53,586
+The answer is B.
+
+119
+00:04:53,586 --> 00:04:55,285
+One metre per second.
+
+120
+00:04:55,785 --> 00:04:59,617
+The force is positive up to
+two metres, then negative.
+
+121
+00:05:00,117 --> 00:05:03,023
+Area from zero to two
+is plus eight joules.
+
+122
+00:05:03,023 --> 00:05:05,622
+From two to four, it is minus eight.
+
+123
+00:05:06,122 --> 00:05:10,578
+Net work is zero, so K is
+unchanged: one metre per second.
+
+124
+00:05:10,578 --> 00:05:13,567
+Three is the top speed, at two metres.
+
+125
+00:05:14,167 --> 00:05:15,708
+Here is your recap.
+
+126
+00:05:15,708 --> 00:05:17,292
+Screenshot this card.
+
+127
+00:05:20,492 --> 00:05:22,431
+Can you answer these without help?
+
+128
+00:05:22,831 --> 00:05:23,731
+One.
+
+129
+00:05:23,196 --> 00:05:24,860
+A spring's push fades as it opens.
+
+130
+00:05:24,860 --> 00:05:26,531
+How do we find the work it does?
+
+131
+00:05:27,430 --> 00:05:28,330
+Two.
+
+132
+00:05:27,924 --> 00:05:31,331
+What does area below the
+axis on an F x graph mean?
+
+133
+00:05:32,231 --> 00:05:33,131
+Three.
+
+134
+00:05:32,772 --> 00:05:35,839
+A steady push and a spring
+push give the same area.
+
+135
+00:05:35,839 --> 00:05:37,115
+Which gives more K?
+
+136
+00:05:38,215 --> 00:05:42,996
+Next time: a stretched catapult and a
+raised tank hold energy without moving.
+
+137
+00:05:42,996 --> 00:05:44,378
+Where is it hiding?
+
+138
+00:05:44,378 --> 00:05:45,549
+Potential energy.
