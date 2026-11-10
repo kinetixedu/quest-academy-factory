@@ -1,0 +1,57 @@
+H1|0.4|Look at a photo of a moving bicycle. The spokes at the top are a blur. The spokes at the bottom are sharp.
+H2|0.45|And a rolling tyre leaves a clean print on the road, not a smear.
+H3|0.35|Aarav takes a photo of his friend riding past.
+H4|0.5|The top of the wheel is a blur, but the bottom looks frozen. Is the bottom of a moving wheel really standing still?
+H5|0.6|For an instant, yes. Let's see why.
+P1|0.35|Rolling is two motions at once.
+P2|0.4|The centre of the wheel moves forward. That is translation.
+P3|0.4|At the same time, the wheel turns about its centre. That is rotation.
+P4|0.4|When it rolls without slipping, one rule ties them together. v of the centre equals R omega.
+P5|0.6|Note: rolling is not in the current NCERT book. It is in the JEE Advanced syllabus.
+S1|0.35|Our motion notebook. A wheel of radius a quarter metre rolls along the road.
+S2|0.4|Its centre moves at half a metre per second. So omega is v over R. Two radians per second.
+S3|0.4|Watch the mark on the rim. It touches the road, goes over the top, and comes down again. This path is a cycloid.
+S4|0.5|On the graph, the speed of the mark climbs to one metre per second at the top, and falls to zero at the bottom.
+S5|3.1|Now you try. Which moves faster: the centre of the wheel, or the top of the wheel? Pause and decide.
+S6|0.5|The top! It moves at one metre per second, twice the centre. Let's see why.
+S7|0.35|Slow-mo replay. Freeze.
+S8|0.4|Every point gets the forward velocity of the centre, v. Plus a spin velocity, R omega, along the rim.
+S9|0.4|At the top, both point forward. v plus v. Two v.
+S10|0.4|At the bottom, they point opposite ways. v minus v. Zero. So the bottom spokes look sharp.
+S11|0.6|At the front, they are at right angles. Root two times v.
+R1|0.35|But why must v equal R omega? Link by link.
+R2|0.4|In one full turn, every point of the rim touches the road once.
+R3|0.4|So in one turn, the centre moves forward by one rim length. Two pi R.
+R4|0.6|That takes one turn time, T. So v is two pi R over T, which is R omega.
+D1|0.35|Now the rules, one step at a time.
+D2|0.75|Step one. No slipping: v of the centre equals R omega.
+D3|0.75|Step two. Any point moves with v of the centre, plus its own spin velocity.
+D4|0.75|Step three. At the top: v plus R omega. Two v.
+D5|0.75|Step four. At the bottom: v minus R omega. Zero. The contact point is at rest.
+D6|0.75|Step five. At each instant, the wheel turns about the contact point. Speed is omega times the distance from it.
+T1|0.7|Remember this. In rolling without slipping, the bottom point is at rest, and the top moves at twice the speed of the centre.
+K1|0.4|Side by side. Rolling: the bottom point is at rest, so the tyre grips the road.
+K2|0.6|Skidding, brakes locked: the wheel does not turn. The bottom point slides at v, and scrapes.
+K3|3.2|Now you try. A wheel spins fast on ice, but does not move forward. Is its bottom point at rest? Pause and decide.
+K4|0.65|No! The centre stays still, so the bottom point moves backward at R omega. Only true rolling makes it zero.
+W1|0.35|Now, one worked example.
+W2|0.5|A small cycle moves at five metres per second, on wheels of radius zero point two five metres. Find omega, and the speeds of the top and front points.
+W3|0.75|Omega is v over R. Five over zero point two five. Twenty radians per second.
+W4|0.75|The top moves at two v. Ten metres per second.
+W5|0.75|The front point is root two R from the contact point. So its speed is root two v, about seven point one.
+W6|0.65|And the bottom point? Zero, even at five metres per second.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students say: the bottom point is at rest, so its acceleration is zero too.
+X3|0.65|No. It is at rest only for an instant. Its acceleration is omega squared R, pointing up, towards the centre.
+E1|0.6|Where is this asked? In speeds of points on a rolling wheel, and rolling with or without slipping.
+Q1|5.4|Exam level now. A wheel of radius R rolls without slipping, with its centre moving at v. Find the speed of a point on the rim at a height R over two above the ground. Pause and solve.
+A1|0.5|The answer is A. Just v.
+A2|0.5|The wheel turns about the contact point, with omega equal to v over R.
+A3|0.5|A rim point at height h is root of two R h from the contact point. Here that is R.
+A4|0.6|So the speed is omega times R. v over R, times R. Just v.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. Why is the bottom point of a rolling wheel at rest for an instant?
+Y3|0.9|Two. Why does the top move at twice the speed of the centre?
+Y4|0.9|Three. Why must v equal R omega when a wheel rolls without slipping?
+N1|0.3|Next time: a ring, a disc and a ball race down the same slope. Same height, same start. Who wins, and why? Kinetic energy of rolling motion.
