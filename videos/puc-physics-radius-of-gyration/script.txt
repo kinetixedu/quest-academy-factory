@@ -1,0 +1,58 @@
+H1|0.4|A bicycle wheel keeps most of its weight at the rim. A machine flywheel is heavy at its edge. A grinding stone is solid all the way through.
+H2|0.45|Same idea every time: where the mass sits changes how it spins.
+H3|0.35|Aarav has a ring and a disc. Same mass. Same size. He gives each the same push.
+H4|0.5|The disc whirls faster. The ring is lazier. Same mass, so why?
+H5|0.6|To compare them in one number, we use the radius of gyration.
+P1|0.35|Squeeze all of a body's mass into a thin ring around the axis.
+P2|0.4|Choose the ring's radius so that its moment of inertia matches the body's.
+P3|0.4|That radius is the radius of gyration, k. So I equals M k squared.
+P4|0.6|k tells you how far out the mass sits, on average, in the way that counts for turning.
+S1|0.35|Our motion notebook. A disc of mass two kilograms and radius half a metre. Its I is half M R squared. Point two five.
+S2|0.4|Now take a ring with the same two kilograms, at the full half metre. Its I is M R squared. Point five. Too big.
+S3|0.4|Shrink the ring. Its I falls fast, because r is squared. Watch the dot slide down the curve.
+S4|0.35|Slow-mo replay, near the match.
+S5|0.4|Here the ring's I equals the disc's I. Point two five. The lines cross.
+S6|0.6|The radius is point three five four metres. That is the disc's radius of gyration.
+S7|0.6|It is less than the full radius, because a disc has much of its mass near the centre.
+D1|0.35|Let's find k for a disc, step by step.
+D2|0.75|Step one. By its meaning, I equals M k squared.
+D3|0.75|Step two. So k equals the square root of I over M.
+D4|0.75|Step three. For a disc about its centre, I is half M R squared. Put it in: M k squared equals half M R squared.
+D5|0.75|Step four. Cancel M. k squared is R squared over two. So k is R over root two, about point seven R.
+D6|0.6|Half a metre times point seven zero seven. Point three five four. The same as the sim.
+T1|0.7|Remember this. The radius of gyration is where all the mass could sit and give the same moment of inertia.
+R1|0.35|Now, why the disc's k is smaller, link by link.
+R2|0.4|In a ring, every bit of mass sits at the full radius.
+R3|0.4|In a disc, many bits sit close to the centre.
+R4|0.4|Bits near the axis add very little, because r is squared.
+R5|0.6|So the disc has a smaller I, and its k sits inside the rim.
+C1|0.35|Here are the common bodies you must know, from the NCERT table.
+C2|0.4|A ring about its central axis: M R squared. A disc: half M R squared.
+C3|0.4|A thin rod about its middle: M L squared over twelve.
+C4|0.6|A solid sphere about a diameter: two fifths M R squared.
+K1|0.4|Side by side. Ring and disc, two kilograms, half a metre. Give each one joule of energy.
+K2|0.6|The ring, with I point five, turns at two radians per second. The disc, with half the I, turns at two point eight three.
+K3|3.2|Now you try. A solid sphere and a disc, same mass, same radius. Which has the smaller moment of inertia about a central axis? Pause and decide.
+K4|0.65|The sphere! Two fifths is less than one half. More of a sphere's mass sits close to the axis.
+K5|3.2|One more. A hollow cylinder and a ring, same mass, same radius, about their central axis. Which has the bigger I? Pause and decide.
+K6|0.65|Neither! Both are M R squared. In both, every bit of mass is at the full radius. Length along the axis does not matter.
+W1|0.35|Now, one worked example.
+W2|0.5|A uniform rod is one point two metres long, with a mass of two kilograms. Find its moment of inertia and radius of gyration about its middle.
+W3|0.75|I equals M L squared over twelve. Two times one point four four, over twelve. Point two four.
+W4|0.75|k equals root of I over M. Root of point two four over two. Root of point one two.
+W5|0.65|So k is about point three four six metres.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students write k equals R over two for a disc.
+X3|0.65|About its central axis, k is R over root two. R over two is only for an axis along a diameter. Always check the axis.
+E1|0.6|Where is this asked? In ratio questions between common bodies, and in finding k from I.
+Q1|5.4|Exam level now. A solid sphere about a diameter, and a ring about its central axis, have the same radius of gyration. Find the ratio of the sphere's radius to the ring's radius. Pause and solve.
+A1|0.5|The answer is B. Root of five over two.
+A2|0.5|For the ring, k equals its radius.
+A3|0.5|For the sphere, k squared is two fifths of its radius squared.
+A4|0.6|Set them equal. The sphere's radius over the ring's is root of five over two. About one point five eight.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. What does the radius of gyration of a body mean?
+Y3|0.9|Two. Why is a disc's radius of gyration less than its radius?
+Y4|0.9|Three. Why do a ring and a hollow cylinder of the same mass and radius have the same I?
+N1|0.3|Next time: spin a coin flat, then on its edge, then about a point on its rim. Three different answers from one coin. The theorems of perpendicular and parallel axes.
