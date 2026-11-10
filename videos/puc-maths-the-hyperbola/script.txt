@@ -1,0 +1,49 @@
+H1|0.4|Switch on a lamp with an open shade, and stand it close to a wall.
+H2|0.45|The light on the wall is not a circle. Its edges are two curves, one bending up and one bending down, and they never close.
+H3|0.35|Aarav saw this on his bedroom wall last night.
+H4|0.5|Two open curves from one lamp. What are they?
+H5|0.65|The wall slices the cone of light, just like the plane that cut both cones. The curve is the hyperbola.
+P1|0.4|Like the ellipse, a hyperbola has two fixed points, called the foci.
+P2|0.4|But this time, a hyperbola is the set of all points where the difference of the distances from the two foci is a constant.
+P3|0.4|Watch P move. Its distance to one focus is in blue, to the other in gold.
+P4|0.4|Eight and two. Ten and four. Thirteen and seven.
+P5|0.65|The distances grow, but the bigger one always beats the smaller one by six. On the other branch, it is the other way round. Still six.
+T1|0.7|Remember this. For an ellipse the distances add up to a constant. For a hyperbola, they differ by a constant.
+G1|0.4|Now the parts. The line through the foci is the transverse axis. The midpoint of the foci is the centre.
+G2|0.4|The curve meets the transverse axis at two vertices, two a apart. The foci are two c apart.
+G3|0.75|Put P at a vertex. One distance is c plus a, the other is c minus a. The difference is two a. So the fixed difference is two a.
+G4|0.75|The foci sit outside the vertices, so c is bigger than a. NCERT defines b by b squared equals c squared minus a squared.
+G5|0.65|So for a hyperbola, c squared equals a squared plus b squared. The line through the centre, square to the transverse axis, is the conjugate axis.
+R1|0.4|Now the equation. Put the foci at minus c, zero and c, zero.
+R2|0.75|Step one. The difference of the two distances is two a.
+R3|0.75|Step two. Move one root across and square both sides.
+R4|0.75|Step three. Tidy up, and square once more.
+R5|0.75|Step four. Swap c squared minus a squared for b squared.
+R6|0.65|Divide through. x squared over a squared, minus y squared over b squared, equals one. Just one sign is different from the ellipse.
+E1|0.4|The eccentricity is c over a, just as before.
+E2|0.65|Watch e grow. The foci move out, and the two branches open wider. Since c is bigger than a, e is always more than one.
+K1|0.4|Side by side. Ellipse: the distances add up to two a. c squared is a squared minus b squared, and e is less than one.
+K2|0.6|Hyperbola: the distances differ by two a. c squared is a squared plus b squared, and e is more than one.
+K3|3.2|Your turn. x squared over sixteen, minus y squared over nine, equals one. Where are the foci? Pause and decide.
+K4|0.65|At plus or minus five, zero! It is a hyperbola, so c squared is sixteen plus nine, which is twenty five.
+W1|0.35|Now, one worked example.
+W2|0.5|For nine y squared minus sixteen x squared equals one hundred forty four, find the foci, the eccentricity and the latus rectum.
+W3|0.75|Step one. Divide by one hundred forty four. y squared over sixteen, minus x squared over nine, equals one.
+W4|0.75|Step two. The plus term is y, so the transverse axis is the y axis. a is four, b is three.
+W5|0.75|Step three. c squared is sixteen plus nine, so c is five. The foci are zero, plus or minus five.
+W6|0.65|Step four. The eccentricity is five over four. The latus rectum is two b squared over a, which is nine over two.
+X1|0.35|Now, the exam trap.
+X2|0.4|x squared over nine, minus y squared over sixteen, equals one. Many students say a squared is sixteen, because it is the bigger number.
+X3|0.65|But that rule is only for the ellipse. In a hyperbola, a squared sits under the plus term. So a is three, and c is five.
+J1|0.6|Where is this asked? In JEE Main. In January twenty twenty four, a question asked for the eccentricity of a hyperbola, built from an ellipse.
+Q1|5.4|Exam level now. A hyperbola, x squared over a squared minus y squared over b squared equals one, has eccentricity five over three, and its foci are ten apart. Find its latus rectum. Pause and solve.
+A1|0.5|The answer is B. Thirty two over three.
+A2|0.5|The foci are ten apart, so c is five. e is c over a, so a is three.
+A3|0.5|b squared is c squared minus a squared. Twenty five minus nine is sixteen.
+A4|0.6|The latus rectum is two b squared over a. Two times sixteen over three is thirty two over three.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What stays the same for every point on a hyperbola?
+Y3|0.9|Two. For x squared over nine, minus y squared over seven, equals one, find c.
+Y4|1.1|Three. Why is the eccentricity of a hyperbola always more than one?
+N1|0.3|Next time: where exactly is the fan in your room? Two numbers are not enough. We step into three dimensions.

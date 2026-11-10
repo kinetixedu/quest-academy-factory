@@ -1,0 +1,48 @@
+H1|0.4|Type a tiny angle into a calculator, in radians. Say zero point zero one. Now press sine.
+H2|0.45|You get zero point zero zero nine nine nine nine eight. Almost exactly the number you typed in.
+H3|0.35|Aarav spotted this while checking his trigonometry homework.
+H4|0.5|For tiny angles, sine x and x are nearly equal. So sine x over x gets close to one. But why?
+H5|0.65|Today we find out, with limits of trigonometric functions.
+U1|0.35|First, a picture.
+U2|0.4|Draw a circle of radius one. Mark an angle x at the centre, measured in radians.
+U3|0.65|The arc this angle cuts off has length x. That is what a radian means. And the height of the point on the circle is sine x.
+L1|0.4|Now shrink the angle. Watch the arc and the height together.
+L2|0.4|At x equals one, sine x is zero point eight four. So the ratio, sine x over x, is zero point eight four.
+L3|0.4|At x equals zero point five, the ratio is zero point nine six. At zero point one, it is zero point nine nine eight.
+L4|0.65|The height and the arc almost become the same line. Their ratio closes in on one.
+S1|0.4|But a picture is not a proof. NCERT uses the sandwich theorem.
+S2|0.4|If g is always between f and h, and f and h close in on the same number, then g is trapped. It must close in on that number too.
+S3|0.65|Think of cheese between two slices of bread. Squeeze the bread together, and the cheese goes with it.
+D1|0.35|Here is the proof in small steps, for x between zero and a right angle.
+D2|0.75|Step one. Compare three shapes: a small triangle, the sector, and a big triangle. Each one fits inside the next.
+D3|0.75|Step two. With radius one, their areas are half sine x, half x, and half tan x. So sine x is less than x, which is less than tan x.
+D4|0.75|Step three. Divide by sine x, then flip each part upside down. The signs flip too. We get cos x, less than sine x over x, less than one.
+D5|0.65|Step four. As x tends to zero, cos x tends to one. So sine x over x is squeezed between two things that tend to one. Its limit is one.
+R1|0.4|Side by side. With x in radians, sine x over x tends to one.
+R2|0.6|With x in degrees, it does not. Sine of one degree is about zero point zero one seven five, so the ratio tends to pi over one eighty instead.
+R3|3.2|Now you try. Does sine x over x tend to one when x is in degrees? Pause and decide.
+R4|0.65|No! Only in radians. That is why NCERT measures x in radians here.
+C1|0.4|NCERT gives a second result. The limit of one minus cos x, over x, as x tends to zero, is zero.
+C2|0.65|Why? One minus cos x equals two sine squared of x over two. That splits into sine of x over two, over x over two, which tends to one, times sine of x over two, which tends to zero. One times zero is zero.
+T1|0.7|Remember this. In radians, for tiny x, sine x over x tends to one.
+W1|0.35|Now, one worked example.
+W2|0.5|Find the limit of sine five x, over sine two x, as x tends to zero.
+W3|0.75|Step one. Build the pattern on top. Sine five x is, sine five x over five x, times five x.
+W4|0.75|Step two. Do the same at the bottom. Sine two x is, sine two x over two x, times two x.
+W5|0.75|Step three. Both patterns tend to one, because five x and two x both tend to zero.
+W6|0.65|Step four. What is left is five x over two x, which is five over two.
+X1|0.35|Now, the exam trap.
+X2|0.4|Find the limit of sine three x, over x. Many students see sine over x, and write one.
+X3|0.65|But the angle and the bottom must match. Write it as three, times sine three x over three x. That tends to three times one, which is three.
+J1|0.6|Where is this asked? In JEE Main, as in March twenty twenty one: a tan over a sine, both of tiny angles, as theta tends to zero.
+Q1|5.4|Exam level now. Find this limit. Pause and solve.
+A1|0.5|The answer is A. Two thirds.
+A2|0.5|Use one minus cos two x equals two sine squared x.
+A3|0.5|Rearrange into patterns. Two, times sine x over x, squared, times three x over sine three x, times one third.
+A4|0.6|Each pattern tends to one. So the limit is two times one third, which is two thirds.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Why must x be in radians for sine x over x to tend to one?
+Y3|0.9|Two. What is the limit of sine seven x, over x, as x tends to zero?
+Y4|1.1|Three. Which theorem traps sine x over x between cos x and one?
+N1|0.3|Next time: a speedometer shows your speed at one instant. How can there be a speed at a single moment? We find out with the derivative from first principles.
