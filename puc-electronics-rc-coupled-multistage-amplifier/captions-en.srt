@@ -1,0 +1,448 @@
+1
+00:00:00,450 --> 00:00:02,343
+Aarav builds a radio from a kit.
+
+2
+00:00:02,643 --> 00:00:06,395
+The signal from the aerial
+is tiny, about one millivolt.
+
+3
+00:00:06,695 --> 00:00:08,824
+The speaker needs about two volts.
+
+4
+00:00:08,824 --> 00:00:10,953
+That is two thousand times bigger.
+
+5
+00:00:11,253 --> 00:00:14,226
+His amplifier gives a gain of only fifty.
+
+6
+00:00:14,226 --> 00:00:15,552
+What can he do?
+
+7
+00:00:16,052 --> 00:00:19,393
+Think of a magnifying glass that
+makes things ten times bigger.
+
+8
+00:00:19,743 --> 00:00:21,966
+Now hold a second one in front of it.
+
+9
+00:00:22,316 --> 00:00:25,066
+The second glass enlarges
+the already enlarged picture.
+
+10
+00:00:25,416 --> 00:00:26,610
+Ten times ten.
+
+11
+00:00:26,610 --> 00:00:28,450
+One hundred times bigger.
+
+12
+00:00:28,450 --> 00:00:29,909
+The gains multiply.
+
+13
+00:00:30,559 --> 00:00:32,239
+Amplifiers work the same way.
+
+14
+00:00:32,239 --> 00:00:33,710
+We chain them in stages.
+
+15
+00:00:34,060 --> 00:00:36,777
+This is called a multistage amplifier.
+
+16
+00:00:37,427 --> 00:00:39,073
+But there is a catch.
+
+17
+00:00:39,073 --> 00:00:42,087
+Each stage has its own
+steady bias voltages.
+
+18
+00:00:42,437 --> 00:00:45,538
+Joining them with a wire would
+upset the next stage's bias.
+
+19
+00:00:46,188 --> 00:00:49,519
+So we join them with the
+rubber wall, a capacitor.
+
+20
+00:00:50,169 --> 00:00:53,431
+Let's build a two stage
+amplifier on the breadboard.
+
+21
+00:00:53,781 --> 00:00:58,393
+Stage one is a CE amplifier,
+with voltage divider bias.
+
+22
+00:00:58,743 --> 00:01:02,717
+Stage two is another CE
+amplifier, just like it.
+
+23
+00:01:03,067 --> 00:01:06,771
+Between them sits the
+coupling capacitor, CC.
+
+24
+00:01:07,121 --> 00:01:08,472
+Its job is simple.
+
+25
+00:01:08,472 --> 00:01:09,569
+Pass the wave.
+
+26
+00:01:09,569 --> 00:01:11,260
+Block the steady voltage.
+
+27
+00:01:11,610 --> 00:01:13,983
+Stage one's collector sits at six volts.
+
+28
+00:01:14,333 --> 00:01:17,111
+Stage two's base sits at
+one point eight volts.
+
+29
+00:01:17,111 --> 00:01:18,999
+The capacitor keeps them apart.
+
+30
+00:01:19,649 --> 00:01:24,122
+Each stage uses a resistor as its
+load and a capacitor to couple.
+
+31
+00:01:24,472 --> 00:01:26,843
+That is why it is called RC coupled.
+
+32
+00:01:27,493 --> 00:01:29,842
+Now feed in a one millivolt wave.
+
+33
+00:01:30,192 --> 00:01:32,043
+Probe the output of stage one.
+
+34
+00:01:32,043 --> 00:01:34,103
+Fifty millivolts, and upside down.
+
+35
+00:01:34,453 --> 00:01:36,971
+Move the probe to the output of stage two.
+
+36
+00:01:37,321 --> 00:01:38,221
+Two volts!
+
+37
+00:01:38,083 --> 00:01:39,573
+A gain of two thousand.
+
+38
+00:01:39,923 --> 00:01:40,823
+And look.
+
+39
+00:01:40,593 --> 00:01:42,913
+The final wave is the right way up again.
+
+40
+00:01:43,563 --> 00:01:46,383
+Each CE stage flips the
+wave by one eighty degrees.
+
+41
+00:01:46,733 --> 00:01:48,859
+Two flips make three sixty degrees.
+
+42
+00:01:48,859 --> 00:01:50,859
+So the output is back in phase.
+
+43
+00:01:51,509 --> 00:01:53,996
+Now plot the gain at every frequency.
+
+44
+00:01:54,346 --> 00:01:58,643
+The gain is flat across the middle,
+the whole range of sounds we hear.
+
+45
+00:01:58,993 --> 00:02:01,655
+At low frequencies, the coupling
+capacitors block more of the wave.
+
+46
+00:02:02,005 --> 00:02:04,618
+At high frequencies, hidden
+capacitance leaks it away.
+
+47
+00:02:05,268 --> 00:02:07,446
+Each stage cuts the ends a little.
+
+48
+00:02:07,446 --> 00:02:09,100
+Two stages cut them more.
+
+49
+00:02:09,450 --> 00:02:13,554
+So the bandwidth of two stages
+is less than that of one stage.
+
+50
+00:02:14,204 --> 00:02:18,604
+RC coupling is cheap, small, and
+gives a flat response for sound.
+
+51
+00:02:18,954 --> 00:02:22,392
+But it cannot pass very
+slow signals, or steady DC.
+
+52
+00:02:22,392 --> 00:02:25,021
+For those, engineers use direct coupling.
+
+53
+00:02:25,671 --> 00:02:26,571
+Gains multiply.
+
+54
+00:02:26,543 --> 00:02:27,443
+Decibels add.
+
+55
+00:02:28,137 --> 00:02:30,422
+Now the maths, one step at a time.
+
+56
+00:02:30,772 --> 00:02:33,656
+The overall gain A
+equals A one times A two.
+
+57
+00:02:34,356 --> 00:02:36,826
+Measure A one with stage two connected.
+
+58
+00:02:36,826 --> 00:02:38,570
+Stage two loads stage one.
+
+59
+00:02:39,220 --> 00:02:42,478
+For n stages, multiply
+all n gains together.
+
+60
+00:02:43,178 --> 00:02:45,888
+In decibels, G equals
+twenty times the log of A.
+
+61
+00:02:46,588 --> 00:02:48,954
+The log of a product is a sum.
+
+62
+00:02:48,954 --> 00:02:51,267
+So G equals G one plus G two.
+
+63
+00:02:51,967 --> 00:02:55,196
+Phase: one eighty plus
+one eighty is three sixty.
+
+64
+00:02:55,196 --> 00:02:56,288
+Back in phase.
+
+65
+00:02:56,938 --> 00:02:57,976
+Worked example.
+
+66
+00:02:57,976 --> 00:02:59,450
+Find the overall gain.
+
+67
+00:02:59,800 --> 00:03:01,980
+Stage one has a gain of fifty.
+
+68
+00:03:01,980 --> 00:03:04,160
+Stage two has a gain of forty.
+
+69
+00:03:04,510 --> 00:03:06,590
+The input is one millivolt.
+
+70
+00:03:06,940 --> 00:03:09,396
+Overall gain is fifty times forty.
+
+71
+00:03:09,396 --> 00:03:11,034
+That is two thousand.
+
+72
+00:03:11,734 --> 00:03:15,006
+The output is two thousand
+times one millivolt.
+
+73
+00:03:15,006 --> 00:03:15,930
+Two volts.
+
+74
+00:03:16,630 --> 00:03:20,780
+In decibels, stage one gives thirty
+four, and stage two gives thirty two.
+
+75
+00:03:21,480 --> 00:03:22,380
+Add them.
+
+76
+00:03:22,209 --> 00:03:23,437
+Sixty six decibels.
+
+77
+00:03:23,437 --> 00:03:26,142
+And twenty log two
+thousand is sixty six too.
+
+78
+00:03:26,792 --> 00:03:28,256
+Now, the exam trap.
+
+79
+00:03:28,606 --> 00:03:30,744
+Many students add the stage gains.
+
+80
+00:03:30,744 --> 00:03:32,447
+Fifty plus forty, ninety.
+
+81
+00:03:32,797 --> 00:03:33,697
+Wrong.
+
+82
+00:03:33,417 --> 00:03:34,921
+Plain gains multiply.
+
+83
+00:03:34,921 --> 00:03:37,270
+Fifty times forty is two thousand.
+
+84
+00:03:37,920 --> 00:03:39,723
+Only gains in decibels add.
+
+85
+00:03:39,723 --> 00:03:42,570
+And two CE stages give an output in phase.
+
+86
+00:03:43,220 --> 00:03:44,844
+Where is this asked?
+
+87
+00:03:44,844 --> 00:03:46,708
+In PUC board papers.
+
+88
+00:03:47,358 --> 00:03:52,254
+Draw and explain a two stage RC
+coupled amplifier, with its frequency
+
+89
+00:03:52,254 --> 00:03:53,154
+response.
+
+90
+00:03:53,744 --> 00:03:54,644
+Try this.
+
+91
+00:03:54,534 --> 00:03:59,061
+A three stage RC coupled CE amplifier
+has stage gains of twenty, twenty
+
+92
+00:03:59,061 --> 00:04:00,785
+six and fourteen decibels.
+
+93
+00:04:00,785 --> 00:04:03,357
+The input is zero point five millivolts.
+
+94
+00:04:03,357 --> 00:04:04,542
+Find the output.
+
+95
+00:04:09,942 --> 00:04:10,842
+B.
+
+96
+00:04:10,311 --> 00:04:13,644
+Zero point five volts, one
+eighty degrees out of phase.
+
+97
+00:04:13,994 --> 00:04:14,951
+Add the decibels.
+
+98
+00:04:14,951 --> 00:04:17,599
+Twenty plus twenty six plus
+fourteen is sixty decibels.
+
+99
+00:04:17,949 --> 00:04:20,481
+Sixty decibels means a
+gain of one thousand.
+
+100
+00:04:20,831 --> 00:04:25,018
+One thousand times zero point five
+millivolts is zero point five volts.
+
+101
+00:04:25,368 --> 00:04:28,898
+Three flips of one eighty degrees
+leave the output upside down.
+
+102
+00:04:29,548 --> 00:04:31,094
+Screenshot this card.
+
+103
+00:04:34,294 --> 00:04:36,872
+Next, power amplifiers, class A, B and C.
+
+104
+00:04:36,872 --> 00:04:39,198
+How does an amplifier push a big speaker?

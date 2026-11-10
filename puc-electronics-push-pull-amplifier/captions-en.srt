@@ -1,0 +1,454 @@
+1
+00:00:00,450 --> 00:00:04,866
+Aarav's tiny speaker plays loud music
+all evening on one small battery.
+
+2
+00:00:05,166 --> 00:00:09,033
+But the old lab amplifier gets
+hot, even when it plays nothing.
+
+3
+00:00:09,333 --> 00:00:10,233
+Same job.
+
+4
+00:00:10,050 --> 00:00:12,263
+So why does one waste so much power?
+
+5
+00:00:12,563 --> 00:00:15,672
+The secret is two
+transistors taking turns.
+
+6
+00:00:15,672 --> 00:00:17,304
+A push-pull amplifier.
+
+7
+00:00:17,804 --> 00:00:21,280
+Think of a big saw with two
+people, one at each end.
+
+8
+00:00:21,630 --> 00:00:23,908
+One person pulls the saw towards herself.
+
+9
+00:00:24,258 --> 00:00:26,406
+Then the other person pulls it back.
+
+10
+00:00:26,756 --> 00:00:30,222
+Each one works half the time,
+and rests the other half.
+
+11
+00:00:30,872 --> 00:00:33,769
+An ordinary class A
+amplifier is different.
+
+12
+00:00:33,769 --> 00:00:35,403
+It has one transistor.
+
+13
+00:00:35,753 --> 00:00:39,816
+That transistor stays half on
+all the time, even in silence.
+
+14
+00:00:40,166 --> 00:00:43,912
+So current flows and heat
+is made, even with no music.
+
+15
+00:00:44,262 --> 00:00:47,714
+A class B push-pull amplifier
+has two transistors.
+
+16
+00:00:48,064 --> 00:00:49,934
+In silence, both are off.
+
+17
+00:00:49,934 --> 00:00:51,598
+Almost no current flows.
+
+18
+00:00:51,598 --> 00:00:52,858
+Nothing gets hot.
+
+19
+00:00:53,508 --> 00:00:55,425
+Let's build it on the breadboard.
+
+20
+00:00:55,775 --> 00:01:00,058
+An input transformer splits the
+signal into two opposite halves.
+
+21
+00:01:00,408 --> 00:01:04,050
+Its middle wire, called the
+centre tap, goes to ground.
+
+22
+00:01:04,400 --> 00:01:08,540
+Two n p n transistors, Q
+one on top, Q two below.
+
+23
+00:01:08,890 --> 00:01:12,761
+An output transformer joins their
+work and drives the speaker.
+
+24
+00:01:13,111 --> 00:01:14,648
+Now a wave comes in.
+
+25
+00:01:14,648 --> 00:01:16,324
+Watch the positive half.
+
+26
+00:01:16,674 --> 00:01:17,754
+Q one turns on.
+
+27
+00:01:17,754 --> 00:01:20,122
+Electrons flow through the top half only.
+
+28
+00:01:20,472 --> 00:01:22,456
+Then the negative half comes.
+
+29
+00:01:22,456 --> 00:01:23,884
+Q one switches off.
+
+30
+00:01:24,234 --> 00:01:28,244
+Now Q two turns on, and current
+flows through the bottom half.
+
+31
+00:01:28,594 --> 00:01:30,526
+Q one pushes, Q two pulls.
+
+32
+00:01:30,526 --> 00:01:32,708
+That is why we call it push-pull.
+
+33
+00:01:33,058 --> 00:01:36,656
+On the scope, the output is
+one smooth, complete wave.
+
+34
+00:01:37,306 --> 00:01:39,391
+Let's look at the two currents one by one.
+
+35
+00:01:39,741 --> 00:01:42,007
+Q one carries only the positive humps.
+
+36
+00:01:42,357 --> 00:01:44,683
+Q two carries only the negative humps.
+
+37
+00:01:45,033 --> 00:01:48,393
+Each transistor conducts for
+one hundred and eighty degrees.
+
+38
+00:01:48,393 --> 00:01:49,350
+Half a cycle.
+
+39
+00:01:49,700 --> 00:01:53,903
+The output transformer adds both
+halves back into one full wave.
+
+40
+00:01:54,553 --> 00:01:56,651
+Two transistors, taking turns.
+
+41
+00:01:56,651 --> 00:01:58,720
+Each one rests half the time.
+
+42
+00:01:59,520 --> 00:02:01,403
+But there is one small problem.
+
+43
+00:02:01,753 --> 00:02:06,350
+A silicon transistor needs about zero
+point seven volts before it turns
+
+44
+00:02:06,350 --> 00:02:07,250
+on.
+
+45
+00:02:07,190 --> 00:02:11,017
+So near zero, the input is too
+small for both transistors.
+
+46
+00:02:11,367 --> 00:02:13,500
+For a moment, neither conducts.
+
+47
+00:02:13,500 --> 00:02:15,042
+The output stays flat.
+
+48
+00:02:15,392 --> 00:02:18,570
+This kink in the wave is
+called crossover distortion.
+
+49
+00:02:19,220 --> 00:02:20,793
+The fix is simple.
+
+50
+00:02:20,793 --> 00:02:23,758
+Give both bases a tiny forward voltage.
+
+51
+00:02:24,108 --> 00:02:26,068
+Often two diodes do this job.
+
+52
+00:02:26,068 --> 00:02:28,124
+Now each transistor is just on.
+
+53
+00:02:28,474 --> 00:02:29,797
+The kink disappears.
+
+54
+00:02:29,797 --> 00:02:32,610
+This slightly on version
+is called class AB.
+
+55
+00:02:33,260 --> 00:02:34,942
+Now, how efficient is it?
+
+56
+00:02:34,942 --> 00:02:36,588
+One small step at a time.
+
+57
+00:02:36,938 --> 00:02:41,565
+Efficiency is the useful output
+power, divided by the power taken from
+
+58
+00:02:41,565 --> 00:02:42,539
+the supply.
+
+59
+00:02:43,239 --> 00:02:47,511
+The output power is V p
+times I p, divided by two.
+
+60
+00:02:48,211 --> 00:02:50,620
+The supply gives a series of humps.
+
+61
+00:02:50,620 --> 00:02:52,990
+Their average is two I p over pi.
+
+62
+00:02:53,690 --> 00:02:58,060
+So the supply power is
+VCC, times two I p over pi.
+
+63
+00:02:58,760 --> 00:03:00,085
+Divide the two.
+
+64
+00:03:00,085 --> 00:03:04,261
+Efficiency equals pi over
+four, times V p over VCC.
+
+65
+00:03:04,961 --> 00:03:08,397
+At full output, V p almost equals VCC.
+
+66
+00:03:09,097 --> 00:03:11,559
+Then the efficiency is pi over four.
+
+67
+00:03:11,559 --> 00:03:13,751
+Seventy eight point five percent.
+
+68
+00:03:14,401 --> 00:03:19,446
+A transformer coupled class A amplifier
+reaches only fifty percent at best.
+
+69
+00:03:20,096 --> 00:03:21,056
+Worked example.
+
+70
+00:03:21,056 --> 00:03:23,584
+How much of each wave is lost to the kink?
+
+71
+00:03:23,934 --> 00:03:26,661
+The input peak is one point four volts.
+
+72
+00:03:26,661 --> 00:03:29,265
+Each transistor needs zero point seven.
+
+73
+00:03:29,615 --> 00:03:32,210
+The input is V p times sine theta.
+
+74
+00:03:32,910 --> 00:03:36,287
+It reaches zero point seven
+when sine theta is one half.
+
+75
+00:03:36,287 --> 00:03:37,780
+That is thirty degrees.
+
+76
+00:03:38,480 --> 00:03:41,946
+So the output is flat from minus
+thirty to plus thirty degrees.
+
+77
+00:03:41,946 --> 00:03:43,283
+That is sixty degrees.
+
+78
+00:03:43,983 --> 00:03:46,095
+A full cycle crosses zero twice.
+
+79
+00:03:46,095 --> 00:03:49,438
+So sixty times two is one
+hundred and twenty degrees.
+
+80
+00:03:50,138 --> 00:03:52,932
+One hundred and twenty out of three sixty.
+
+81
+00:03:52,932 --> 00:03:55,074
+One third of the wave is lost.
+
+82
+00:03:55,724 --> 00:03:57,186
+Now, the exam trap.
+
+83
+00:03:57,536 --> 00:04:01,196
+Many students write that each
+transistor conducts for the full cycle.
+
+84
+00:04:01,546 --> 00:04:02,446
+Wrong.
+
+85
+00:04:02,088 --> 00:04:06,196
+In class B, each one conducts for
+only one hundred and eighty degrees.
+
+86
+00:04:06,846 --> 00:04:11,661
+And seventy eight point five percent
+is the best case, at full output only.
+
+87
+00:04:12,011 --> 00:04:13,632
+Where is this asked?
+
+88
+00:04:13,632 --> 00:04:15,492
+In PUC board papers.
+
+89
+00:04:16,142 --> 00:04:20,514
+Draw the push-pull circuit, explain
+how it works, and explain crossover
+
+90
+00:04:20,514 --> 00:04:21,414
+distortion.
+
+91
+00:04:22,016 --> 00:04:22,916
+Try this.
+
+92
+00:04:22,829 --> 00:04:27,113
+A class B push-pull amplifier takes
+twenty five watts from the supply,
+
+93
+00:04:27,113 --> 00:04:28,739
+at its best efficiency.
+
+94
+00:04:28,739 --> 00:04:32,001
+How much power turns into
+heat in the transistors?
+
+95
+00:04:37,401 --> 00:04:38,301
+B.
+
+96
+00:04:37,809 --> 00:04:41,690
+About five point four watts,
+shared by the two transistors.
+
+97
+00:04:42,040 --> 00:04:45,740
+At best, the efficiency is
+seventy eight point five percent.
+
+98
+00:04:46,090 --> 00:04:50,202
+Useful output is zero point seven
+eight five times twenty five.
+
+99
+00:04:50,202 --> 00:04:52,329
+About nineteen point six watts.
+
+100
+00:04:52,679 --> 00:04:54,074
+The rest is heat.
+
+101
+00:04:54,074 --> 00:04:58,625
+Twenty five minus nineteen point
+six is about five point four watts.
+
+102
+00:04:59,275 --> 00:05:00,821
+Screenshot this card.
+
+103
+00:05:04,021 --> 00:05:06,406
+Next, positive and negative feedback.
+
+104
+00:05:06,406 --> 00:05:08,801
+Why does a microphone suddenly scream?

@@ -1,0 +1,417 @@
+1
+00:00:00,450 --> 00:00:03,704
+Aarav connects a small microphone
+straight to a big speaker.
+
+2
+00:00:04,004 --> 00:00:05,683
+His voice almost vanishes.
+
+3
+00:00:05,683 --> 00:00:08,872
+The heavy speaker pulls
+too much from the weak mic.
+
+4
+00:00:09,172 --> 00:00:14,085
+He adds one transistor stage in between,
+with a voltage gain of only one.
+
+5
+00:00:14,385 --> 00:00:16,557
+Now his voice comes through clearly.
+
+6
+00:00:16,557 --> 00:00:18,170
+Meet the emitter follower.
+
+7
+00:00:18,670 --> 00:00:21,303
+Think of a strong helper
+who copies your every move.
+
+8
+00:00:21,653 --> 00:00:23,502
+You lift your hand a little.
+
+9
+00:00:23,502 --> 00:00:26,299
+The helper lifts a heavy
+box the same amount.
+
+10
+00:00:26,649 --> 00:00:28,401
+You use almost no effort.
+
+11
+00:00:28,401 --> 00:00:30,543
+The helper supplies the strength.
+
+12
+00:00:30,893 --> 00:00:32,515
+The movement is the same.
+
+13
+00:00:32,515 --> 00:00:34,372
+But the power is much bigger.
+
+14
+00:00:35,022 --> 00:00:37,130
+An emitter follower is that helper.
+
+15
+00:00:37,130 --> 00:00:38,872
+Its output copies its input.
+
+16
+00:00:39,522 --> 00:00:41,440
+Let's build it on the breadboard.
+
+17
+00:00:41,790 --> 00:00:43,989
+The collector goes straight to the supply.
+
+18
+00:00:44,339 --> 00:00:48,655
+The output is taken from the
+emitter, across the resistor RE.
+
+19
+00:00:49,005 --> 00:00:53,659
+So it is called a common collector
+amplifier, or an emitter follower.
+
+20
+00:00:54,009 --> 00:00:56,449
+Now we feed a slow wave into the base.
+
+21
+00:00:56,799 --> 00:00:59,575
+The emitter rises and falls with the base.
+
+22
+00:00:59,575 --> 00:01:00,684
+It follows it.
+
+23
+00:01:01,034 --> 00:01:03,830
+It stays about zero
+point seven volts below.
+
+24
+00:01:03,830 --> 00:01:05,844
+That is the base emitter drop.
+
+25
+00:01:06,194 --> 00:01:09,135
+On the scope, the input
+and output move together.
+
+26
+00:01:09,135 --> 00:01:10,359
+They are in phase.
+
+27
+00:01:10,709 --> 00:01:13,573
+The output is almost as big as the input.
+
+28
+00:01:13,573 --> 00:01:15,700
+The voltage gain is about one.
+
+29
+00:01:16,050 --> 00:01:17,631
+But look at the currents.
+
+30
+00:01:17,631 --> 00:01:20,564
+A tiny base current controls
+a big emitter current.
+
+31
+00:01:20,914 --> 00:01:22,865
+So the current gain is large.
+
+32
+00:01:22,865 --> 00:01:24,673
+It is about beta plus one.
+
+33
+00:01:25,323 --> 00:01:27,587
+Why is the voltage gain about one?
+
+34
+00:01:27,587 --> 00:01:28,867
+Look at the loop.
+
+35
+00:01:29,217 --> 00:01:34,240
+The input voltage is the base emitter
+voltage, plus the output voltage.
+
+36
+00:01:34,940 --> 00:01:39,030
+So the whole output is fed
+back, in series with the input.
+
+37
+00:01:39,030 --> 00:01:40,297
+Beta equals one.
+
+38
+00:01:40,997 --> 00:01:43,670
+This is voltage series negative feedback.
+
+39
+00:01:43,670 --> 00:01:45,529
+One hundred percent of it.
+
+40
+00:01:46,179 --> 00:01:50,243
+With beta equal to one, A f
+equals A, over one plus A.
+
+41
+00:01:50,943 --> 00:01:53,822
+A is large, so A f is just under one.
+
+42
+00:01:53,822 --> 00:01:55,087
+Never above one.
+
+43
+00:01:55,787 --> 00:02:00,668
+More exactly, the voltage gain
+is RE, over small r e plus RE.
+
+44
+00:02:01,368 --> 00:02:04,631
+Small r e is the tiny
+resistance inside the emitter.
+
+45
+00:02:04,631 --> 00:02:07,458
+It is about twenty five
+millivolts over IE.
+
+46
+00:02:08,108 --> 00:02:10,897
+The same voltage out,
+with far more current.
+
+47
+00:02:10,897 --> 00:02:12,130
+That is a buffer.
+
+48
+00:02:12,930 --> 00:02:15,233
+Its real superpower is impedance.
+
+49
+00:02:15,583 --> 00:02:19,470
+Input impedance tells how much
+a circuit pulls from its source.
+
+50
+00:02:19,470 --> 00:02:20,744
+High means gentle.
+
+51
+00:02:21,094 --> 00:02:24,612
+An emitter follower has a
+very high input impedance.
+
+52
+00:02:24,612 --> 00:02:26,273
+About beta times RE.
+
+53
+00:02:26,623 --> 00:02:28,746
+And a very low output impedance.
+
+54
+00:02:28,746 --> 00:02:30,783
+So it can drive a heavy load.
+
+55
+00:02:31,133 --> 00:02:34,192
+So it sits between a weak
+source and a heavy load.
+
+56
+00:02:34,192 --> 00:02:35,583
+We call it a buffer.
+
+57
+00:02:36,233 --> 00:02:38,577
+This job is called impedance matching.
+
+58
+00:02:39,227 --> 00:02:40,280
+Worked example.
+
+59
+00:02:40,280 --> 00:02:44,060
+A weak source gives one volt,
+with ten kilo ohms inside it.
+
+60
+00:02:44,410 --> 00:02:46,840
+It must drive a load of one kilo ohm.
+
+61
+00:02:47,190 --> 00:02:51,428
+Connected directly, the load gets
+one volt times one over eleven.
+
+62
+00:02:51,428 --> 00:02:53,627
+Just zero point zero nine volts.
+
+63
+00:02:54,327 --> 00:02:57,878
+Now add an emitter follower,
+with beta one hundred.
+
+64
+00:02:57,878 --> 00:02:59,539
+The load is its RE.
+
+65
+00:02:59,889 --> 00:03:03,110
+Its input impedance is
+about beta times RE.
+
+66
+00:03:03,110 --> 00:03:05,383
+That is one hundred kilo ohms.
+
+67
+00:03:06,083 --> 00:03:09,821
+The source now keeps one hundred
+over one hundred and ten.
+
+68
+00:03:09,821 --> 00:03:11,989
+About zero point nine one volts.
+
+69
+00:03:12,689 --> 00:03:15,926
+The follower passes this on
+with a gain of about one.
+
+70
+00:03:15,926 --> 00:03:18,690
+So the load gets about
+zero point nine volts.
+
+71
+00:03:19,390 --> 00:03:22,989
+Ten times more voltage, from
+a stage with a gain of one.
+
+72
+00:03:23,639 --> 00:03:25,103
+Now, the exam trap.
+
+73
+00:03:25,453 --> 00:03:29,675
+Many students think the emitter follower
+flips the signal, like the common
+
+74
+00:03:29,675 --> 00:03:30,849
+emitter amplifier.
+
+75
+00:03:31,199 --> 00:03:32,099
+Wrong.
+
+76
+00:03:31,743 --> 00:03:35,980
+The output is in phase with the
+input, and the gain is just under one.
+
+77
+00:03:36,630 --> 00:03:38,895
+And a gain of one is not useless.
+
+78
+00:03:38,895 --> 00:03:41,589
+The current gain and power gain are large.
+
+79
+00:03:41,939 --> 00:03:43,560
+Where is this asked?
+
+80
+00:03:43,560 --> 00:03:45,420
+In PUC board papers.
+
+81
+00:03:46,070 --> 00:03:50,603
+Draw the circuit, explain why the
+gain is about one, and compare it with
+
+82
+00:03:50,603 --> 00:03:51,714
+CE and CB.
+
+83
+00:03:52,364 --> 00:03:53,264
+Try this.
+
+84
+00:03:53,219 --> 00:03:58,014
+An emitter follower has beta one
+hundred and fifty, and RE of two kilo
+
+85
+00:03:58,014 --> 00:03:58,914
+ohms.
+
+86
+00:03:58,598 --> 00:04:02,392
+What are its input impedance
+and voltage gain, roughly?
+
+87
+00:04:07,792 --> 00:04:08,692
+A.
+
+88
+00:04:08,202 --> 00:04:12,675
+About three hundred kilo ohms,
+and a gain of about one, in phase.
+
+89
+00:04:13,025 --> 00:04:16,120
+The input impedance is
+about beta times RE.
+
+90
+00:04:16,470 --> 00:04:21,330
+One hundred and fifty times two kilo
+ohms is three hundred kilo ohms.
+
+91
+00:04:21,680 --> 00:04:23,709
+The output follows the input.
+
+92
+00:04:23,709 --> 00:04:27,372
+So the gain is just under
+one, with no phase change.
+
+93
+00:04:28,022 --> 00:04:29,568
+Screenshot this card.
+
+94
+00:04:32,768 --> 00:04:34,386
+That is all for now.
+
+95
+00:04:34,386 --> 00:04:38,738
+More PUC Electronics is coming
+soon, so follow the playlist.

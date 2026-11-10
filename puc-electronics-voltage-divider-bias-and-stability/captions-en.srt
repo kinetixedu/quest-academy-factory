@@ -1,0 +1,506 @@
+1
+00:00:00,450 --> 00:00:03,687
+In the cool morning, Aarav's little
+speaker plays a song clearly.
+
+2
+00:00:03,987 --> 00:00:07,789
+By the hot afternoon, the same
+song sounds harsh and broken.
+
+3
+00:00:08,089 --> 00:00:09,162
+Nobody touched it.
+
+4
+00:00:09,162 --> 00:00:10,614
+Only the room got hotter.
+
+5
+00:00:10,914 --> 00:00:12,542
+Why does heat spoil the sound?
+
+6
+00:00:12,542 --> 00:00:14,131
+And how do engineers stop it?
+
+7
+00:00:14,631 --> 00:00:17,333
+Think of a water tap
+that must stay half open.
+
+8
+00:00:17,683 --> 00:00:21,090
+Half open leaves room for the
+flow to wiggle up and down.
+
+9
+00:00:21,440 --> 00:00:25,516
+This resting point is called the
+bias, or the operating point.
+
+10
+00:00:25,866 --> 00:00:28,977
+Now imagine heat makes the
+tap creep open by itself.
+
+11
+00:00:29,327 --> 00:00:30,812
+The flow keeps growing.
+
+12
+00:00:30,812 --> 00:00:33,148
+Soon there is no room left to wiggle.
+
+13
+00:00:33,498 --> 00:00:35,694
+The tops of the waves get cut off.
+
+14
+00:00:35,694 --> 00:00:37,275
+That is the harsh sound.
+
+15
+00:00:37,925 --> 00:00:40,774
+The fix is like the float in a water tank.
+
+16
+00:00:41,124 --> 00:00:44,830
+When the water rises, the float
+lifts and closes the inlet.
+
+17
+00:00:45,180 --> 00:00:46,113
+It corrects itself.
+
+18
+00:00:46,113 --> 00:00:47,303
+No one has to watch it.
+
+19
+00:00:47,953 --> 00:00:49,900
+Let's test this on the breadboard.
+
+20
+00:00:50,250 --> 00:00:52,666
+First, the simplest way to bias.
+
+21
+00:00:52,666 --> 00:00:54,978
+One big resistor feeds the base.
+
+22
+00:00:55,328 --> 00:00:57,162
+This is called fixed bias.
+
+23
+00:00:57,162 --> 00:00:58,749
+A small wave goes in.
+
+24
+00:00:59,099 --> 00:01:01,770
+The collector current is about
+one point one milliamperes.
+
+25
+00:01:02,120 --> 00:01:05,798
+The scope shows a clean,
+upside down copy of the input.
+
+26
+00:01:06,148 --> 00:01:10,136
+Now we heat the transistor, from
+twenty five to seventy five degrees.
+
+27
+00:01:10,486 --> 00:01:12,860
+Heat raises beta, the current gain.
+
+28
+00:01:12,860 --> 00:01:14,047
+Here it doubles.
+
+29
+00:01:14,397 --> 00:01:16,452
+The collector current doubles too.
+
+30
+00:01:16,452 --> 00:01:18,470
+The output sits near the bottom.
+
+31
+00:01:18,820 --> 00:01:20,000
+Look at the scope.
+
+32
+00:01:20,000 --> 00:01:22,274
+The bottom of the wave is chopped flat.
+
+33
+00:01:22,924 --> 00:01:26,467
+Now the same transistor
+in voltage divider bias.
+
+34
+00:01:26,817 --> 00:01:30,340
+Two resistors, R one and R
+two, set the base voltage.
+
+35
+00:01:30,690 --> 00:01:34,194
+And a new resistor, RE,
+sits below the emitter.
+
+36
+00:01:34,544 --> 00:01:37,270
+Heat it again, from twenty
+five to seventy five degrees.
+
+37
+00:01:37,620 --> 00:01:38,922
+Beta doubles again.
+
+38
+00:01:38,922 --> 00:01:40,810
+But the current hardly moves.
+
+39
+00:01:41,160 --> 00:01:43,095
+The output wave stays clean.
+
+40
+00:01:43,095 --> 00:01:45,128
+The operating point stays put.
+
+41
+00:01:45,778 --> 00:01:47,312
+Why does it stay put?
+
+42
+00:01:47,312 --> 00:01:48,491
+Follow the loop.
+
+43
+00:01:48,841 --> 00:01:51,045
+Heat pushes the collector current up.
+
+44
+00:01:51,395 --> 00:01:54,818
+More current through RE
+raises the emitter voltage.
+
+45
+00:01:55,168 --> 00:01:58,292
+But the base voltage is
+held fixed by the divider.
+
+46
+00:01:58,642 --> 00:02:01,588
+So the voltage between
+base and emitter shrinks.
+
+47
+00:02:01,938 --> 00:02:05,670
+Less base current flows, and the
+collector current falls back.
+
+48
+00:02:06,020 --> 00:02:07,381
+RE is the float.
+
+49
+00:02:07,381 --> 00:02:09,781
+It pulls the current back by itself.
+
+50
+00:02:10,431 --> 00:02:12,296
+Engineers call this negative feedback.
+
+51
+00:02:12,646 --> 00:02:14,819
+Without it, heat can feed on itself.
+
+52
+00:02:15,169 --> 00:02:18,507
+More current makes more heat,
+and the leakage current grows.
+
+53
+00:02:18,857 --> 00:02:22,342
+Leakage roughly doubles for
+every ten degrees of extra heat.
+
+54
+00:02:22,692 --> 00:02:26,046
+The current runs away
+until the transistor burns.
+
+55
+00:02:26,046 --> 00:02:27,829
+This is thermal runaway.
+
+56
+00:02:28,479 --> 00:02:30,227
+The base voltage is held.
+
+57
+00:02:30,227 --> 00:02:32,519
+The emitter resistor does the rest.
+
+58
+00:02:33,319 --> 00:02:35,570
+Now the maths, one step at a time.
+
+59
+00:02:35,920 --> 00:02:38,137
+The divider sets the base voltage.
+
+60
+00:02:38,487 --> 00:02:43,247
+VB equals VCC, times R
+two, over R one plus R two.
+
+61
+00:02:43,947 --> 00:02:47,294
+The emitter sits zero
+point seven volts lower.
+
+62
+00:02:47,294 --> 00:02:49,659
+VE equals VB minus VBE.
+
+63
+00:02:50,359 --> 00:02:52,882
+Ohm's law on RE gives the current.
+
+64
+00:02:52,882 --> 00:02:54,886
+IE equals VE over RE.
+
+65
+00:02:55,586 --> 00:02:57,763
+Beta is nowhere in this equation.
+
+66
+00:02:57,763 --> 00:02:59,950
+That is why heat cannot move it.
+
+67
+00:03:00,650 --> 00:03:03,604
+The collector current
+is almost equal to IE.
+
+68
+00:03:04,304 --> 00:03:09,283
+So VCE equals VCC, minus
+IC, times RC plus RE.
+
+69
+00:03:09,983 --> 00:03:13,540
+Engineers measure stability
+with the stability factor, S.
+
+70
+00:03:13,890 --> 00:03:18,004
+S tells how much the collector
+current changes when leakage changes.
+
+71
+00:03:18,704 --> 00:03:21,728
+Fixed bias has S equal to beta plus one.
+
+72
+00:03:22,078 --> 00:03:25,110
+Voltage divider bias keeps S close to one.
+
+73
+00:03:25,760 --> 00:03:27,763
+Smaller S means more stable.
+
+74
+00:03:27,763 --> 00:03:29,981
+One is the best possible value.
+
+75
+00:03:30,631 --> 00:03:31,681
+Worked example.
+
+76
+00:03:31,681 --> 00:03:33,313
+Find the operating point.
+
+77
+00:03:33,663 --> 00:03:35,499
+VCC is ten volts.
+
+78
+00:03:35,499 --> 00:03:37,571
+R one is ten kilo ohms.
+
+79
+00:03:37,921 --> 00:03:40,387
+R two is two point two kilo ohms.
+
+80
+00:03:40,737 --> 00:03:43,414
+RC is three point six kilo ohms.
+
+81
+00:03:43,414 --> 00:03:45,225
+RE is one kilo ohm.
+
+82
+00:03:45,575 --> 00:03:49,896
+VB equals ten, times two point
+two, over twelve point two.
+
+83
+00:03:50,246 --> 00:03:52,043
+That is one point eight volts.
+
+84
+00:03:52,743 --> 00:03:54,818
+Take away zero point seven.
+
+85
+00:03:54,818 --> 00:03:57,025
+VE is one point one volts.
+
+86
+00:03:57,725 --> 00:04:00,291
+One point one volts across one kilo ohm.
+
+87
+00:04:00,291 --> 00:04:02,519
+IE is one point one milliamperes.
+
+88
+00:04:03,219 --> 00:04:08,128
+VCE is ten, minus one point one
+milliamperes, times four point six kilo
+
+89
+00:04:08,128 --> 00:04:09,028
+ohms.
+
+90
+00:04:09,401 --> 00:04:11,571
+That is about four point nine volts.
+
+91
+00:04:11,571 --> 00:04:13,961
+The operating point sits near the middle.
+
+92
+00:04:14,611 --> 00:04:16,075
+Now, the exam trap.
+
+93
+00:04:16,425 --> 00:04:19,527
+Many students put the whole
+base voltage across RE.
+
+94
+00:04:19,877 --> 00:04:21,946
+That gives one point eight milliamperes.
+
+95
+00:04:21,946 --> 00:04:22,846
+Wrong.
+
+96
+00:04:22,430 --> 00:04:24,714
+First take away the
+zero point seven volts.
+
+97
+00:04:25,364 --> 00:04:27,254
+Only VE sits across RE.
+
+98
+00:04:27,254 --> 00:04:29,794
+So IE is one point one milliamperes.
+
+99
+00:04:30,144 --> 00:04:31,765
+Where is this asked?
+
+100
+00:04:31,765 --> 00:04:33,625
+In PUC board papers.
+
+101
+00:04:34,275 --> 00:04:39,309
+List the advantages of voltage divider
+bias, find the operating point,
+
+102
+00:04:39,309 --> 00:04:40,542
+and derive S.
+
+103
+00:04:41,192 --> 00:04:42,207
+Try this.
+
+104
+00:04:42,207 --> 00:04:48,311
+VCC is twelve volts, R one forty
+kilo ohms, R two ten kilo ohms, RC
+
+105
+00:04:48,311 --> 00:04:51,381
+four kilo ohms, RE one kilo ohm.
+
+106
+00:04:51,381 --> 00:04:52,668
+Find VCE.
+
+107
+00:04:58,068 --> 00:04:58,968
+B.
+
+108
+00:04:58,433 --> 00:04:59,892
+Three point five volts.
+
+109
+00:05:00,242 --> 00:05:02,883
+VB is twelve times ten over fifty.
+
+110
+00:05:02,883 --> 00:05:05,076
+That is two point four volts.
+
+111
+00:05:05,426 --> 00:05:07,531
+Take away zero point seven.
+
+112
+00:05:07,531 --> 00:05:09,879
+VE is one point seven volts.
+
+113
+00:05:10,229 --> 00:05:12,439
+So IC is one point seven milliamperes.
+
+114
+00:05:12,789 --> 00:05:16,710
+VCE is twelve, minus one
+point seven times five.
+
+115
+00:05:16,710 --> 00:05:18,542
+Three point five volts.
+
+116
+00:05:19,192 --> 00:05:20,738
+Screenshot this card.
+
+117
+00:05:23,938 --> 00:05:25,742
+Next, the CE amplifier.
+
+118
+00:05:25,742 --> 00:05:29,447
+Why does an amplifier boost
+some sounds better than others?

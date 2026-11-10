@@ -1,0 +1,445 @@
+1
+00:00:00,450 --> 00:00:03,400
+Aarav plays his favourite song
+through a small amplifier.
+
+2
+00:00:03,700 --> 00:00:05,736
+The singer sounds loud and clear.
+
+3
+00:00:06,036 --> 00:00:08,280
+But the deep drum beats sound weak.
+
+4
+00:00:08,280 --> 00:00:10,042
+The high whistles fade too.
+
+5
+00:00:10,342 --> 00:00:13,962
+Why does one amplifier boost
+some sounds better than others?
+
+6
+00:00:14,462 --> 00:00:17,386
+Think of a pipe with a rubber
+wall stretched across it.
+
+7
+00:00:17,736 --> 00:00:19,770
+Push the water back and forth fast.
+
+8
+00:00:19,770 --> 00:00:22,318
+The wall wiggles, and
+the wave gets through.
+
+9
+00:00:22,668 --> 00:00:26,583
+Push very slowly, and the wall
+just stretches and stops the flow.
+
+10
+00:00:26,933 --> 00:00:29,459
+A capacitor acts like this rubber wall.
+
+11
+00:00:29,809 --> 00:00:32,900
+It blocks steady current,
+but lets a quick wave pass.
+
+12
+00:00:33,550 --> 00:00:36,042
+Now picture tiny holes in the pipe wall.
+
+13
+00:00:36,392 --> 00:00:39,597
+At very fast wiggles, water
+leaks out through them.
+
+14
+00:00:39,597 --> 00:00:41,032
+Less reaches the end.
+
+15
+00:00:41,682 --> 00:00:44,759
+Let's build a CE amplifier
+on the breadboard.
+
+16
+00:00:45,109 --> 00:00:49,112
+It starts with the voltage divider
+bias from the last episode.
+
+17
+00:00:49,462 --> 00:00:52,790
+The signal comes in
+through a capacitor, C in.
+
+18
+00:00:53,140 --> 00:00:56,722
+It blocks the steady voltage,
+so the bias stays safe.
+
+19
+00:00:57,072 --> 00:01:00,749
+C out passes the big
+wave on to the load, RL.
+
+20
+00:01:01,099 --> 00:01:03,121
+And CE sits across RE.
+
+21
+00:01:03,121 --> 00:01:05,176
+It is the bypass capacitor.
+
+22
+00:01:05,526 --> 00:01:09,346
+The wave skips past RE through
+it, so the gain stays high.
+
+23
+00:01:09,996 --> 00:01:13,554
+Now feed in a ten millivolt
+wave at one kilohertz.
+
+24
+00:01:13,904 --> 00:01:16,291
+The output is one point five volts.
+
+25
+00:01:16,291 --> 00:01:18,333
+That is a gain of one fifty.
+
+26
+00:01:18,683 --> 00:01:20,114
+And it is upside down.
+
+27
+00:01:20,114 --> 00:01:22,029
+One eighty degrees out of phase.
+
+28
+00:01:22,679 --> 00:01:26,363
+Now turn the frequency knob
+down, to a deep bass note.
+
+29
+00:01:26,713 --> 00:01:30,050
+At twenty hertz, the output
+shrinks to about half a volt.
+
+30
+00:01:30,400 --> 00:01:32,632
+Now turn it up, to a very high whistle.
+
+31
+00:01:32,982 --> 00:01:35,715
+At one megahertz, the
+output shrinks again.
+
+32
+00:01:36,365 --> 00:01:38,748
+Plot the gain at every frequency.
+
+33
+00:01:38,748 --> 00:01:40,963
+This is the frequency response.
+
+34
+00:01:41,313 --> 00:01:43,427
+In the middle, the gain is flat.
+
+35
+00:01:43,427 --> 00:01:44,855
+This is the mid band.
+
+36
+00:01:45,205 --> 00:01:46,685
+At low frequencies, the
+capacitors fight back.
+
+37
+00:01:47,035 --> 00:01:51,280
+Their opposition, called reactance,
+grows as the frequency falls.
+
+38
+00:01:51,630 --> 00:01:55,175
+So C in, C out and CE stop
+passing the wave well.
+
+39
+00:01:55,825 --> 00:01:59,012
+At high frequencies, tiny hidden
+capacitors inside the transistor take
+
+40
+00:01:59,012 --> 00:01:59,912
+over.
+
+41
+00:01:59,782 --> 00:02:02,130
+Even the wires act like small capacitors.
+
+42
+00:02:02,130 --> 00:02:03,951
+The wave leaks away to ground.
+
+43
+00:02:04,601 --> 00:02:08,882
+Mark where the gain drops to zero
+point seven zero seven of the middle
+
+44
+00:02:08,882 --> 00:02:09,782
+value.
+
+45
+00:02:09,827 --> 00:02:11,580
+The lower one is f one.
+
+46
+00:02:11,580 --> 00:02:13,332
+The upper one is f two.
+
+47
+00:02:13,682 --> 00:02:16,589
+The band between them is the bandwidth.
+
+48
+00:02:16,589 --> 00:02:19,008
+BW equals f two minus f one.
+
+49
+00:02:19,658 --> 00:02:21,085
+Big in the middle.
+
+50
+00:02:21,085 --> 00:02:22,512
+Weak at both ends.
+
+51
+00:02:23,312 --> 00:02:25,563
+Now the maths, one step at a time.
+
+52
+00:02:25,913 --> 00:02:31,248
+Inside the transistor, the emitter
+acts like a tiny resistance, r e prime.
+
+53
+00:02:31,598 --> 00:02:35,371
+r e prime equals twenty six
+millivolts, divided by IE.
+
+54
+00:02:36,071 --> 00:02:39,991
+At the output, RC and RL
+share the wave side by side.
+
+55
+00:02:40,341 --> 00:02:44,931
+So r c equals RC times
+RL, over RC plus RL.
+
+56
+00:02:45,631 --> 00:02:50,114
+The voltage gain AV equals
+r c, divided by r e prime.
+
+57
+00:02:50,814 --> 00:02:54,391
+The minus sign in front means
+the output is upside down.
+
+58
+00:02:55,091 --> 00:02:58,251
+In decibels, the gain equals
+twenty times the log of AV.
+
+59
+00:02:58,951 --> 00:03:03,394
+At a cut off, the gain is zero point
+seven zero seven times its middle
+
+60
+00:03:03,394 --> 00:03:04,294
+value.
+
+61
+00:03:04,340 --> 00:03:06,156
+That is three decibels down.
+
+62
+00:03:06,156 --> 00:03:08,260
+The output power is exactly half.
+
+63
+00:03:08,910 --> 00:03:12,295
+So f one and f two are also
+called the half power frequencies.
+
+64
+00:03:12,945 --> 00:03:13,952
+Worked example.
+
+65
+00:03:13,952 --> 00:03:15,940
+Find the gain and the bandwidth.
+
+66
+00:03:16,290 --> 00:03:18,293
+The bias sets IE at two milliamperes.
+
+67
+00:03:18,643 --> 00:03:22,339
+RC and RL are both three
+point nine kilo ohms.
+
+68
+00:03:22,689 --> 00:03:25,181
+r e prime is twenty six over two.
+
+69
+00:03:25,181 --> 00:03:26,845
+That is thirteen ohms.
+
+70
+00:03:27,545 --> 00:03:31,464
+r c is the two three point
+nine kilo ohms in parallel.
+
+71
+00:03:31,814 --> 00:03:34,404
+That is one point nine five kilo ohms.
+
+72
+00:03:35,104 --> 00:03:38,234
+AV is one thousand nine
+fifty over thirteen.
+
+73
+00:03:38,234 --> 00:03:40,138
+That is one hundred fifty.
+
+74
+00:03:40,838 --> 00:03:44,435
+In decibels, twenty log one fifty
+is about forty three point five.
+
+75
+00:03:45,135 --> 00:03:48,488
+The cut offs are fifty hertz
+and two hundred kilohertz.
+
+76
+00:03:48,838 --> 00:03:51,821
+So the bandwidth is about
+two hundred kilohertz.
+
+77
+00:03:52,471 --> 00:03:53,933
+Now, the exam trap.
+
+78
+00:03:54,283 --> 00:03:57,207
+Many students say the gain
+falls to half at the cut off.
+
+79
+00:03:57,557 --> 00:03:58,591
+It does not.
+
+80
+00:03:58,591 --> 00:04:02,516
+The voltage gain falls to zero
+point seven zero seven times.
+
+81
+00:04:03,166 --> 00:04:05,134
+It is the power that falls to half.
+
+82
+00:04:05,134 --> 00:04:07,222
+That is why it is three decibels down.
+
+83
+00:04:07,872 --> 00:04:09,496
+Where is this asked?
+
+84
+00:04:09,496 --> 00:04:11,360
+In PUC board papers.
+
+85
+00:04:12,010 --> 00:04:16,883
+Draw the CE amplifier and its
+frequency response, and find the gain.
+
+86
+00:04:17,533 --> 00:04:18,433
+Try this.
+
+87
+00:04:18,356 --> 00:04:21,767
+An amplifier has a mid band
+gain of forty decibels.
+
+88
+00:04:21,767 --> 00:04:25,078
+f one is forty hertz, f
+two is forty kilohertz.
+
+89
+00:04:25,078 --> 00:04:28,078
+Find the gain at f two, and the bandwidth.
+
+90
+00:04:33,478 --> 00:04:34,378
+B.
+
+91
+00:04:33,879 --> 00:04:37,844
+Seventy point seven, and thirty
+nine point nine six kilohertz.
+
+92
+00:04:38,194 --> 00:04:41,112
+Forty decibels means
+twenty log A equals forty.
+
+93
+00:04:41,112 --> 00:04:42,580
+So A is one hundred.
+
+94
+00:04:42,930 --> 00:04:47,659
+At f two, the gain is zero point
+seven zero seven times one hundred.
+
+95
+00:04:47,659 --> 00:04:49,132
+Seventy point seven.
+
+96
+00:04:49,482 --> 00:04:52,960
+The bandwidth is forty
+kilohertz minus forty hertz.
+
+97
+00:04:52,960 --> 00:04:55,568
+Thirty nine point nine six kilohertz.
+
+98
+00:04:56,218 --> 00:04:57,765
+Screenshot this card.
+
+99
+00:05:00,965 --> 00:05:04,016
+Next, the RC coupled multistage amplifier.
+
+100
+00:05:04,016 --> 00:05:06,555
+How do we get a gain of thousands?

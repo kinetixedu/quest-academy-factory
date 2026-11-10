@@ -1,0 +1,465 @@
+1
+00:00:00,450 --> 00:00:03,438
+At the college fest, Aarav
+touches the big stage amplifier.
+
+2
+00:00:03,738 --> 00:00:06,162
+It is hot, and covered in metal fins.
+
+3
+00:00:06,462 --> 00:00:09,867
+His phone also plays
+music, but it stays cool.
+
+4
+00:00:10,167 --> 00:00:11,913
+Where does all that heat come from?
+
+5
+00:00:11,913 --> 00:00:13,363
+And how do engineers cut it?
+
+6
+00:00:13,863 --> 00:00:16,362
+So far, our amplifiers
+made small signals bigger.
+
+7
+00:00:16,362 --> 00:00:17,840
+Those are voltage amplifiers.
+
+8
+00:00:18,190 --> 00:00:20,592
+A power amplifier has a bigger job.
+
+9
+00:00:20,592 --> 00:00:23,253
+It must push real power into a speaker.
+
+10
+00:00:23,603 --> 00:00:25,944
+Now think of pushing a child on a swing.
+
+11
+00:00:26,294 --> 00:00:29,129
+One helper pushes and
+pulls the whole time.
+
+12
+00:00:29,129 --> 00:00:30,891
+Smooth, but very tiring.
+
+13
+00:00:31,241 --> 00:00:32,861
+Two helpers could share it.
+
+14
+00:00:32,861 --> 00:00:34,924
+Each one works only half the swing.
+
+15
+00:00:35,274 --> 00:00:38,600
+Or one helper gives a short
+kick at the top of each swing.
+
+16
+00:00:38,950 --> 00:00:41,011
+The swing keeps moving by itself.
+
+17
+00:00:41,011 --> 00:00:43,638
+Very little effort, but only for a swing.
+
+18
+00:00:44,288 --> 00:00:47,452
+These are the three
+classes of power amplifier.
+
+19
+00:00:47,452 --> 00:00:48,623
+A, B and C.
+
+20
+00:00:49,273 --> 00:00:51,045
+Let's see them on the breadboard.
+
+21
+00:00:51,395 --> 00:00:56,056
+One transistor, a speaker load, and
+a bias knob that sets the operating
+
+22
+00:00:56,056 --> 00:00:56,956
+point.
+
+23
+00:00:57,027 --> 00:00:59,364
+Watch the collector current on the scope.
+
+24
+00:00:59,364 --> 00:01:00,781
+It is shown in violet.
+
+25
+00:01:01,131 --> 00:01:02,031
+Class A.
+
+26
+00:01:01,730 --> 00:01:03,767
+The operating point sits in the middle.
+
+27
+00:01:04,117 --> 00:01:07,741
+The current flows for the whole
+cycle, all three sixty degrees.
+
+28
+00:01:08,091 --> 00:01:10,311
+The output is a faithful copy.
+
+29
+00:01:10,661 --> 00:01:13,159
+But current flows even with no music.
+
+30
+00:01:13,159 --> 00:01:14,477
+That wastes power.
+
+31
+00:01:15,127 --> 00:01:16,027
+Class B.
+
+32
+00:01:15,845 --> 00:01:18,483
+The operating point moves down to cut off.
+
+33
+00:01:18,833 --> 00:01:22,733
+Now current flows only for half
+the cycle, one eighty degrees.
+
+34
+00:01:23,083 --> 00:01:24,006
+Less waste.
+
+35
+00:01:24,006 --> 00:01:28,500
+But half the wave is missing, so
+class B transistors work in pairs.
+
+36
+00:01:29,150 --> 00:01:30,050
+Class C.
+
+37
+00:01:29,800 --> 00:01:31,756
+The base is pushed below cut off.
+
+38
+00:01:32,106 --> 00:01:35,954
+Current flows only in short pulses,
+less than one eighty degrees.
+
+39
+00:01:36,304 --> 00:01:40,097
+A tuned circuit of a coil and a
+capacitor acts like the swing.
+
+40
+00:01:40,447 --> 00:01:45,095
+It turns the kicks back into a smooth
+wave, but only at one frequency.
+
+41
+00:01:45,745 --> 00:01:47,797
+Now see all three on the load line.
+
+42
+00:01:48,147 --> 00:01:50,921
+The class depends on where
+the operating point sits.
+
+43
+00:01:51,271 --> 00:01:52,905
+Class A sits in the middle.
+
+44
+00:01:52,905 --> 00:01:54,831
+The whole input wave gets through.
+
+45
+00:01:55,181 --> 00:01:56,766
+Class B sits at cut off.
+
+46
+00:01:56,766 --> 00:01:58,658
+Only the top half gets through.
+
+47
+00:01:59,008 --> 00:02:00,890
+Class C sits below cut off.
+
+48
+00:02:00,890 --> 00:02:02,964
+Only the very tips get through.
+
+49
+00:02:03,614 --> 00:02:07,729
+The less time current flows, the
+less power is wasted as heat.
+
+50
+00:02:08,079 --> 00:02:10,498
+But the output looks less like the input.
+
+51
+00:02:10,498 --> 00:02:12,055
+That is called distortion.
+
+52
+00:02:12,705 --> 00:02:17,732
+There is also class AB, in between A
+and B, used in many music amplifiers.
+
+53
+00:02:18,382 --> 00:02:19,827
+Less time conducting.
+
+54
+00:02:19,827 --> 00:02:20,727
+Less heat.
+
+55
+00:02:20,676 --> 00:02:21,819
+More distortion.
+
+56
+00:02:22,619 --> 00:02:23,669
+Now the maths.
+
+57
+00:02:23,669 --> 00:02:27,007
+Efficiency tells how much
+supply power reaches the load.
+
+58
+00:02:27,357 --> 00:02:32,947
+Efficiency, eta, equals AC output
+power, over DC input power, times one
+
+59
+00:02:32,947 --> 00:02:33,847
+hundred.
+
+60
+00:02:34,450 --> 00:02:37,483
+For class A, the supply gives DC power.
+
+61
+00:02:37,483 --> 00:02:39,131
+VCC times ICQ.
+
+62
+00:02:39,831 --> 00:02:43,906
+The best operating point is
+in the middle, at half of VCC.
+
+63
+00:02:44,606 --> 00:02:47,591
+The biggest swing has
+a peak current of ICQ.
+
+64
+00:02:47,941 --> 00:02:50,600
+Its peak voltage is half of VCC.
+
+65
+00:02:51,300 --> 00:02:55,571
+AC power is peak voltage times
+peak current, divided by two.
+
+66
+00:02:56,271 --> 00:03:00,253
+That gives VCC times ICQ, divided by four.
+
+67
+00:03:00,953 --> 00:03:03,956
+So the best class A
+efficiency is one quarter.
+
+68
+00:03:03,956 --> 00:03:05,346
+Twenty five percent.
+
+69
+00:03:06,046 --> 00:03:09,118
+With a transformer, class
+A can reach fifty percent.
+
+70
+00:03:09,468 --> 00:03:12,495
+Class B can reach seventy
+eight point five percent.
+
+71
+00:03:13,145 --> 00:03:14,620
+Class C goes higher still.
+
+72
+00:03:14,620 --> 00:03:16,747
+That is why it suits radio transmitters.
+
+73
+00:03:17,397 --> 00:03:18,446
+Worked example.
+
+74
+00:03:18,446 --> 00:03:20,665
+Why is the stage amplifier so hot?
+
+75
+00:03:21,015 --> 00:03:24,073
+It runs from twelve volts,
+and draws two amperes.
+
+76
+00:03:24,423 --> 00:03:27,424
+It sends six watts of
+sound power to the speaker.
+
+77
+00:03:27,774 --> 00:03:30,474
+DC input power is twelve times two.
+
+78
+00:03:30,474 --> 00:03:31,894
+Twenty four watts.
+
+79
+00:03:32,594 --> 00:03:35,045
+Efficiency is six over twenty four.
+
+80
+00:03:35,045 --> 00:03:37,071
+That is twenty five percent.
+
+81
+00:03:37,771 --> 00:03:40,092
+The other eighteen watts become heat.
+
+82
+00:03:40,092 --> 00:03:42,234
+That is why it needs metal fins.
+
+83
+00:03:42,884 --> 00:03:44,345
+Now, the exam trap.
+
+84
+00:03:44,695 --> 00:03:49,271
+Many students think class C is best for
+music, because it is most efficient.
+
+85
+00:03:49,621 --> 00:03:50,521
+It is not.
+
+86
+00:03:50,505 --> 00:03:52,357
+Its current comes in pulses.
+
+87
+00:03:52,357 --> 00:03:53,915
+The distortion is huge.
+
+88
+00:03:54,565 --> 00:03:58,179
+Class C needs a tuned circuit,
+so it works at one frequency.
+
+89
+00:03:58,179 --> 00:04:00,035
+Radio transmitters, not music.
+
+90
+00:04:00,685 --> 00:04:02,306
+Where is this asked?
+
+91
+00:04:02,306 --> 00:04:04,167
+In PUC board papers.
+
+92
+00:04:04,817 --> 00:04:08,702
+Classify power amplifiers, compare
+their efficiency and distortion, and
+
+93
+00:04:08,702 --> 00:04:09,982
+find the efficiency.
+
+94
+00:04:10,632 --> 00:04:11,532
+Try this.
+
+95
+00:04:11,394 --> 00:04:15,882
+Collector current flows for the full
+three sixty degrees of the input cycle.
+
+96
+00:04:15,882 --> 00:04:19,942
+The amplifier draws zero point five
+amperes from a twenty volt supply,
+
+97
+00:04:19,942 --> 00:04:22,051
+and gives two watts to the load.
+
+98
+00:04:22,051 --> 00:04:24,188
+Which class, and what efficiency?
+
+99
+00:04:29,588 --> 00:04:30,488
+B.
+
+100
+00:04:29,922 --> 00:04:31,378
+Class A, twenty percent.
+
+101
+00:04:31,728 --> 00:04:34,463
+Current for the full three
+sixty degrees means class A.
+
+102
+00:04:34,813 --> 00:04:38,373
+DC input power is twenty
+times zero point five.
+
+103
+00:04:38,373 --> 00:04:39,326
+Ten watts.
+
+104
+00:04:39,676 --> 00:04:41,487
+Efficiency is two over ten.
+
+105
+00:04:41,487 --> 00:04:45,252
+That is twenty percent, below
+the twenty five percent limit.
+
+106
+00:04:45,902 --> 00:04:47,449
+Screenshot this card.
+
+107
+00:04:50,649 --> 00:04:52,776
+Next, the push pull amplifier.
+
+108
+00:04:52,776 --> 00:04:55,319
+How do two transistors share one wave?

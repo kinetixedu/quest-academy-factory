@@ -1,0 +1,449 @@
+1
+00:00:00,450 --> 00:00:02,723
+Aarav builds an amplifier for the fest.
+
+2
+00:00:02,723 --> 00:00:04,814
+In the morning, it sounds perfect.
+
+3
+00:00:05,114 --> 00:00:08,847
+By evening the room is hot, and
+the music slowly gets quieter.
+
+4
+00:00:09,147 --> 00:00:11,394
+A friend swaps in a new transistor.
+
+5
+00:00:11,394 --> 00:00:13,260
+Now it is suddenly too loud.
+
+6
+00:00:13,560 --> 00:00:17,553
+How can an amplifier stay steady
+when its parts keep changing?
+
+7
+00:00:17,553 --> 00:00:18,817
+Negative feedback.
+
+8
+00:00:19,317 --> 00:00:21,720
+Think of negative feedback as a trade.
+
+9
+00:00:22,070 --> 00:00:23,557
+We give up some gain.
+
+10
+00:00:23,557 --> 00:00:25,425
+Gain is the amount of boost.
+
+11
+00:00:25,775 --> 00:00:27,745
+In return, we buy good things.
+
+12
+00:00:28,095 --> 00:00:28,995
+A steady gain.
+
+13
+00:00:28,830 --> 00:00:30,130
+A wider range of frequencies.
+
+14
+00:00:30,480 --> 00:00:32,520
+Less distortion and less noise.
+
+15
+00:00:32,870 --> 00:00:35,425
+And better input and output impedance.
+
+16
+00:00:35,425 --> 00:00:36,840
+Let's see each one.
+
+17
+00:00:37,490 --> 00:00:39,413
+Let's test it on the breadboard.
+
+18
+00:00:39,763 --> 00:00:43,847
+Here is our amplifier, with an
+open loop gain of one thousand.
+
+19
+00:00:44,197 --> 00:00:45,671
+First, no feedback.
+
+20
+00:00:45,671 --> 00:00:48,082
+The output is a big, strong wave.
+
+21
+00:00:48,432 --> 00:00:50,066
+Now the room heats up.
+
+22
+00:00:50,066 --> 00:00:52,552
+The transistor changes, and A falls.
+
+23
+00:00:52,902 --> 00:00:54,609
+A drops to five hundred.
+
+24
+00:00:54,609 --> 00:00:56,766
+The output wave shrinks to half.
+
+25
+00:00:57,116 --> 00:00:58,442
+That is a problem.
+
+26
+00:00:58,442 --> 00:01:00,597
+The music gets quieter by itself.
+
+27
+00:01:00,947 --> 00:01:05,558
+Now we switch on negative feedback,
+with beta equal to zero point one.
+
+28
+00:01:05,908 --> 00:01:07,699
+The output is smaller now.
+
+29
+00:01:07,699 --> 00:01:09,297
+The gain is about ten.
+
+30
+00:01:09,647 --> 00:01:10,885
+Heat it up again.
+
+31
+00:01:10,885 --> 00:01:13,500
+A falls from one thousand to five hundred.
+
+32
+00:01:13,850 --> 00:01:15,677
+But the output hardly moves.
+
+33
+00:01:15,677 --> 00:01:18,872
+A f goes from nine point
+nine to nine point eight.
+
+34
+00:01:19,222 --> 00:01:22,209
+Now the gain depends on beta,
+which is just two resistors.
+
+35
+00:01:22,209 --> 00:01:23,378
+Resistors stay steady.
+
+36
+00:01:24,028 --> 00:01:25,447
+Why does this happen?
+
+37
+00:01:25,447 --> 00:01:27,151
+Look at the formula again.
+
+38
+00:01:27,501 --> 00:01:30,212
+A f equals A, over one plus A beta.
+
+39
+00:01:30,912 --> 00:01:34,931
+When A beta is much bigger than
+one, the one hardly matters.
+
+40
+00:01:35,631 --> 00:01:38,136
+So A f is almost A over A beta.
+
+41
+00:01:38,136 --> 00:01:39,903
+That is one over beta.
+
+42
+00:01:40,603 --> 00:01:41,936
+A has cancelled out.
+
+43
+00:01:41,936 --> 00:01:44,602
+The gain no longer
+depends on the transistor.
+
+44
+00:01:45,302 --> 00:01:48,784
+For a small change in
+A, there is a neat rule.
+
+45
+00:01:49,134 --> 00:01:53,932
+The fractional change in A f equals
+the fractional change in A, over one
+
+46
+00:01:53,932 --> 00:01:55,008
+plus A beta.
+
+47
+00:01:55,708 --> 00:01:58,420
+One plus A beta is called
+the desensitivity factor.
+
+48
+00:01:58,420 --> 00:01:59,662
+Bigger means steadier.
+
+49
+00:02:00,312 --> 00:02:03,454
+Negative feedback also
+widens the bandwidth.
+
+50
+00:02:03,804 --> 00:02:07,518
+Bandwidth is the range of frequencies
+the amplifier boosts evenly.
+
+51
+00:02:07,868 --> 00:02:11,692
+Without feedback, the gain is
+high, but the range is narrow.
+
+52
+00:02:12,042 --> 00:02:15,001
+With feedback, the gain
+drops by one plus A beta.
+
+53
+00:02:15,351 --> 00:02:18,938
+But the upper cut off frequency
+rises by the same factor.
+
+54
+00:02:19,288 --> 00:02:22,679
+And the lower cut off frequency
+falls by the same factor.
+
+55
+00:02:23,029 --> 00:02:25,828
+Gain times bandwidth stays about the same.
+
+56
+00:02:25,828 --> 00:02:27,597
+We trade gain for range.
+
+57
+00:02:28,247 --> 00:02:30,469
+Feedback also cleans the signal.
+
+58
+00:02:30,819 --> 00:02:35,666
+Distortion and noise made inside the
+amplifier shrink by one plus A beta.
+
+59
+00:02:36,016 --> 00:02:40,970
+In voltage series feedback, the input
+impedance rises by one plus A beta.
+
+60
+00:02:41,320 --> 00:02:44,303
+And the output impedance
+falls by the same factor.
+
+61
+00:02:44,653 --> 00:02:47,839
+A high input impedance takes
+little from the source.
+
+62
+00:02:47,839 --> 00:02:50,594
+A low output impedance
+drives the load well.
+
+63
+00:02:51,244 --> 00:02:52,611
+Give up some gain.
+
+64
+00:02:52,611 --> 00:02:55,288
+Get a steady, wide and clean amplifier.
+
+65
+00:02:56,088 --> 00:02:57,249
+Worked example.
+
+66
+00:02:57,249 --> 00:03:00,774
+An amplifier has an open
+loop gain of one thousand.
+
+67
+00:03:01,124 --> 00:03:03,471
+Beta is zero point zero one nine.
+
+68
+00:03:03,471 --> 00:03:06,384
+The upper cut off is
+twenty five kilohertz.
+
+69
+00:03:06,734 --> 00:03:08,653
+First, one plus A beta.
+
+70
+00:03:08,653 --> 00:03:11,830
+That is one plus
+nineteen, which is twenty.
+
+71
+00:03:12,530 --> 00:03:15,889
+The gain with feedback is
+one thousand over twenty.
+
+72
+00:03:15,889 --> 00:03:17,025
+That is fifty.
+
+73
+00:03:17,725 --> 00:03:20,204
+Now suppose A changes by ten percent.
+
+74
+00:03:20,554 --> 00:03:23,372
+A f changes by ten percent over twenty.
+
+75
+00:03:23,372 --> 00:03:24,939
+Only half a percent.
+
+76
+00:03:25,639 --> 00:03:29,876
+The new upper cut off is twenty
+five kilohertz, times twenty.
+
+77
+00:03:30,576 --> 00:03:32,679
+That is five hundred kilohertz.
+
+78
+00:03:32,679 --> 00:03:34,061
+Twenty times wider.
+
+79
+00:03:34,711 --> 00:03:36,173
+Now, the exam trap.
+
+80
+00:03:36,523 --> 00:03:40,611
+Many students think negative feedback
+shrinks the bandwidth, because the
+
+81
+00:03:40,611 --> 00:03:41,511
+gain falls.
+
+82
+00:03:41,826 --> 00:03:42,726
+Wrong.
+
+83
+00:03:42,427 --> 00:03:46,441
+The gain falls, but the bandwidth
+widens by one plus A beta.
+
+84
+00:03:47,091 --> 00:03:52,136
+And in voltage series feedback, the
+input impedance goes up, not down.
+
+85
+00:03:52,486 --> 00:03:54,107
+Where is this asked?
+
+86
+00:03:54,107 --> 00:03:55,967
+In PUC board papers.
+
+87
+00:03:56,617 --> 00:04:01,049
+List the effects of negative feedback,
+derive gain stability, and solve
+
+88
+00:04:01,049 --> 00:04:02,361
+bandwidth problems.
+
+89
+00:04:03,011 --> 00:04:03,911
+Try this.
+
+90
+00:04:03,823 --> 00:04:08,979
+An amplifier has a gain of five hundred
+and an upper cut off of forty kilohertz.
+
+91
+00:04:08,979 --> 00:04:12,996
+Negative feedback with beta zero
+point zero one eight is added.
+
+92
+00:04:12,996 --> 00:04:15,500
+Find the new gain and upper cut off.
+
+93
+00:04:20,900 --> 00:04:21,800
+B.
+
+94
+00:04:21,306 --> 00:04:24,307
+A gain of fifty, and
+four hundred kilohertz.
+
+95
+00:04:24,657 --> 00:04:28,395
+A beta is five hundred times
+zero point zero one eight.
+
+96
+00:04:28,395 --> 00:04:29,498
+That is nine.
+
+97
+00:04:29,848 --> 00:04:31,688
+One plus A beta is ten.
+
+98
+00:04:31,688 --> 00:04:35,515
+So the gain is five hundred
+over ten, which is fifty.
+
+99
+00:04:35,865 --> 00:04:38,122
+The upper cut off rises ten times.
+
+100
+00:04:38,122 --> 00:04:40,942
+Forty kilohertz becomes
+four hundred kilohertz.
+
+101
+00:04:41,592 --> 00:04:43,138
+Screenshot this card.
+
+102
+00:04:46,338 --> 00:04:48,198
+Next, the emitter follower.
+
+103
+00:04:48,198 --> 00:04:51,706
+Why would anyone build an
+amplifier with a gain of one?

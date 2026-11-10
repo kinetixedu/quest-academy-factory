@@ -1,0 +1,425 @@
+1
+00:00:00,450 --> 00:00:03,830
+At the college fest, Aarav walks
+across the stage with a microphone.
+
+2
+00:00:04,130 --> 00:00:05,749
+He steps near the speaker.
+
+3
+00:00:05,749 --> 00:00:08,129
+Suddenly, a loud scream fills the hall.
+
+4
+00:00:08,429 --> 00:00:10,923
+He steps back, and the scream stops.
+
+5
+00:00:10,923 --> 00:00:12,261
+What just happened?
+
+6
+00:00:12,561 --> 00:00:15,419
+The speaker's sound looped
+back into the microphone.
+
+7
+00:00:15,419 --> 00:00:17,161
+That loop is called feedback.
+
+8
+00:00:17,661 --> 00:00:21,123
+Feedback means sending part of
+the output back to the input.
+
+9
+00:00:21,473 --> 00:00:24,092
+Think of riding a bicycle
+in a straight line.
+
+10
+00:00:24,442 --> 00:00:27,559
+If the bike drifts left,
+you steer a little right.
+
+11
+00:00:27,909 --> 00:00:30,026
+The correction fights the change.
+
+12
+00:00:30,026 --> 00:00:31,749
+This is negative feedback.
+
+13
+00:00:31,749 --> 00:00:33,328
+It keeps things steady.
+
+14
+00:00:33,978 --> 00:00:36,409
+Now think of a crowd at a cricket match.
+
+15
+00:00:36,759 --> 00:00:38,045
+A few people cheer.
+
+16
+00:00:38,045 --> 00:00:40,519
+Others hear them, and cheer even louder.
+
+17
+00:00:40,869 --> 00:00:43,600
+The change feeds itself and keeps growing.
+
+18
+00:00:43,600 --> 00:00:45,365
+This is positive feedback.
+
+19
+00:00:46,015 --> 00:00:47,932
+Let's build it on the breadboard.
+
+20
+00:00:48,282 --> 00:00:50,363
+Here is an amplifier with gain A.
+
+21
+00:00:50,363 --> 00:00:52,534
+It makes the signal A times bigger.
+
+22
+00:00:52,884 --> 00:00:55,884
+Two resistors take a small part
+of the output back to the start.
+
+23
+00:00:56,234 --> 00:01:00,021
+That fraction is called the
+feedback ratio, written beta.
+
+24
+00:01:00,371 --> 00:01:02,148
+This circle is the mixer.
+
+25
+00:01:02,148 --> 00:01:04,585
+It joins the input and the feedback.
+
+26
+00:01:04,935 --> 00:01:06,294
+First, negative feedback.
+
+27
+00:01:06,294 --> 00:01:08,408
+The feedback is subtracted from the input.
+
+28
+00:01:08,758 --> 00:01:11,808
+The output becomes smaller,
+but it stays clean and steady.
+
+29
+00:01:12,158 --> 00:01:14,615
+Now we flip it to positive feedback.
+
+30
+00:01:14,615 --> 00:01:16,654
+The feedback is added instead.
+
+31
+00:01:17,004 --> 00:01:18,687
+The output grows bigger.
+
+32
+00:01:18,687 --> 00:01:20,688
+We raise beta a little more.
+
+33
+00:01:21,038 --> 00:01:22,673
+Now the loop feeds itself.
+
+34
+00:01:22,673 --> 00:01:24,713
+The output hits the supply limits.
+
+35
+00:01:25,063 --> 00:01:27,755
+It keeps going, even with no input at all.
+
+36
+00:01:27,755 --> 00:01:29,826
+Just like the screaming microphone.
+
+37
+00:01:30,476 --> 00:01:33,166
+Now the maths, one small step at a time.
+
+38
+00:01:33,516 --> 00:01:36,921
+The amplifier sees the
+input minus the feedback.
+
+39
+00:01:36,921 --> 00:01:39,184
+That is V s minus beta V o.
+
+40
+00:01:39,884 --> 00:01:43,226
+The output is A times
+what the amplifier sees.
+
+41
+00:01:43,925 --> 00:01:47,979
+So V o equals A, times V s minus beta V o.
+
+42
+00:01:48,679 --> 00:01:50,928
+Bring the V o terms together.
+
+43
+00:01:50,928 --> 00:01:54,050
+V o times one plus A beta equals AV s.
+
+44
+00:01:54,750 --> 00:01:59,072
+So the gain with feedback, A f,
+equals A over one plus A beta.
+
+45
+00:01:59,772 --> 00:02:01,458
+A is the open loop gain.
+
+46
+00:02:01,458 --> 00:02:03,610
+That is the gain without feedback.
+
+47
+00:02:04,260 --> 00:02:06,933
+For positive feedback, the sign flips.
+
+48
+00:02:06,933 --> 00:02:09,534
+A f equals A over one minus A beta.
+
+49
+00:02:10,234 --> 00:02:12,777
+If A beta becomes one,
+the bottom becomes zero.
+
+50
+00:02:12,777 --> 00:02:14,018
+The circuit oscillates.
+
+51
+00:02:14,668 --> 00:02:16,958
+Negative feedback calms the signal.
+
+52
+00:02:16,958 --> 00:02:18,790
+Positive feedback feeds it.
+
+53
+00:02:19,590 --> 00:02:22,143
+So which one is useful, and where?
+
+54
+00:02:22,493 --> 00:02:24,501
+Negative feedback lowers the gain.
+
+55
+00:02:24,501 --> 00:02:26,795
+But the gain becomes steady and clean.
+
+56
+00:02:27,145 --> 00:02:29,404
+There is less distortion and less noise.
+
+57
+00:02:29,404 --> 00:02:30,969
+So good amplifiers use it.
+
+58
+00:02:31,319 --> 00:02:33,471
+Positive feedback raises the gain.
+
+59
+00:02:33,471 --> 00:02:35,574
+But the circuit becomes unstable.
+
+60
+00:02:35,924 --> 00:02:39,840
+That is bad for an amplifier,
+but perfect for an oscillator.
+
+61
+00:02:39,840 --> 00:02:42,047
+An oscillator makes its own wave.
+
+62
+00:02:42,697 --> 00:02:43,858
+Worked example.
+
+63
+00:02:43,858 --> 00:02:47,383
+An amplifier has an open
+loop gain of one thousand.
+
+64
+00:02:47,733 --> 00:02:52,084
+We add negative feedback, with
+beta equal to zero point zero one.
+
+65
+00:02:52,434 --> 00:02:56,301
+First, A beta is one thousand
+times zero point zero one.
+
+66
+00:02:56,301 --> 00:02:57,346
+That is ten.
+
+67
+00:02:58,046 --> 00:03:01,449
+A f equals one thousand,
+over one plus ten.
+
+68
+00:03:02,149 --> 00:03:04,299
+That is one thousand over eleven.
+
+69
+00:03:04,299 --> 00:03:05,517
+About ninety one.
+
+70
+00:03:06,217 --> 00:03:11,343
+Now positive feedback, with beta equal
+to zero point zero zero zero five.
+
+71
+00:03:12,043 --> 00:03:14,069
+A beta is zero point five.
+
+72
+00:03:14,069 --> 00:03:17,293
+A f equals one thousand
+over zero point five.
+
+73
+00:03:17,993 --> 00:03:19,556
+That is two thousand.
+
+74
+00:03:19,556 --> 00:03:21,686
+Negative feedback cut the gain.
+
+75
+00:03:21,686 --> 00:03:23,654
+Positive feedback doubled it.
+
+76
+00:03:24,304 --> 00:03:25,766
+Now, the exam trap.
+
+77
+00:03:26,116 --> 00:03:29,518
+Many students write one minus
+A beta for negative feedback.
+
+78
+00:03:29,868 --> 00:03:30,768
+Wrong.
+
+79
+00:03:30,500 --> 00:03:33,165
+Negative feedback has one plus A beta.
+
+80
+00:03:33,165 --> 00:03:35,031
+So the gain always falls.
+
+81
+00:03:35,681 --> 00:03:37,750
+And beta here is the feedback ratio.
+
+82
+00:03:37,750 --> 00:03:39,944
+It is not the transistor's current gain.
+
+83
+00:03:40,294 --> 00:03:41,915
+Where is this asked?
+
+84
+00:03:41,915 --> 00:03:43,775
+In PUC board papers.
+
+85
+00:03:44,425 --> 00:03:49,339
+Define feedback, draw the block diagram,
+derive the gain, and solve small
+
+86
+00:03:49,339 --> 00:03:50,239
+problems.
+
+87
+00:03:50,780 --> 00:03:51,680
+Try this.
+
+88
+00:03:51,611 --> 00:03:55,007
+An amplifier has an open
+loop gain of two hundred.
+
+89
+00:03:55,007 --> 00:03:59,123
+Negative feedback with beta zero
+point zero four five is added.
+
+90
+00:03:59,123 --> 00:04:00,745
+What is the new gain?
+
+91
+00:04:06,145 --> 00:04:07,045
+C.
+
+92
+00:04:06,577 --> 00:04:07,477
+Twenty.
+
+93
+00:04:07,623 --> 00:04:11,342
+A beta is two hundred times
+zero point zero four five.
+
+94
+00:04:11,342 --> 00:04:12,455
+That is nine.
+
+95
+00:04:12,805 --> 00:04:16,056
+A f equals two hundred,
+over one plus nine.
+
+96
+00:04:16,406 --> 00:04:18,583
+Two hundred over ten is twenty.
+
+97
+00:04:18,583 --> 00:04:21,577
+The gain falls, as
+negative feedback should.
+
+98
+00:04:22,227 --> 00:04:23,773
+Screenshot this card.
+
+99
+00:04:26,973 --> 00:04:29,152
+Next, the effects of negative feedback.
+
+100
+00:04:29,152 --> 00:04:31,256
+Why do engineers happily give up gain?
