@@ -144,7 +144,7 @@ function mech(t, o) {
     s += G(T(cx, cy + R + 40, 'sp³ CARBON · RING BROKEN', { fs: 18, c: EC }), hs * (1 - io(t, T_.res - 0.3, 0.3))); }
   // bonds from top carbon
   s += G(bond(p0[0], p0[1], Ex, Ey, 1, C.ink2, 5, 0, o.Er), Math.max(sc, pr)) + G(bond(p0[0], p0[1], Hx, Hy, 1, C.ink2, 5, 0, 16), 1 - pr);
-  s += G(atomC(Hx, Hy, 16, 'H', HC, 15), 1 - pr) + atomC(Ex, Ey, o.Er, o.E, o.Ec, o.E.length > 2 ? o.Er * 0.66 : o.Er * 0.78);
+  s += G(atomC(Hx, Hy, 16, 'H', HC, 15), 1 - pr) + G(atomC(Ex, Ey, o.Er, o.E, o.Ec, o.E.length > 2 ? o.Er * 0.66 : o.Er * 0.78), gen);
   s += G(chg(Ex - o.Er - 4, Ey - 26, '+', EC), gen * (1 - sc));
     // curved arrows
   s += carr(cx - 10, cy - R * 0.56 - 4, Ex + 4, Ey + o.Er - 2, 40, a1 * (1 - sc));
