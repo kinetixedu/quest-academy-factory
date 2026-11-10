@@ -1,0 +1,56 @@
+H1|0.4|A knife sharpener pedals to keep his stone spinning. A child pulls a string to spin a top.
+H2|0.45|Each one gives a push, and the push turns into spin.
+H3|0.35|Aarav watches a potter. She kicks the heavy wheel a few times, and it keeps turning for a long time.
+H4|0.5|Each kick is a push at the rim. Where does the work of that kick go? And how much spin does it buy?
+H5|0.6|To answer that, we need the dynamics of rotation.
+P1|0.35|Push a cart, and three things matter: force, mass and acceleration.
+P2|0.4|A turning wheel has a partner for each. Torque does the job of force.
+P3|0.4|Moment of inertia does the job of mass: how hard the body is to spin.
+P4|0.6|Angular acceleration does the job of acceleration: how fast the spin grows.
+S1|0.35|Our motion notebook. A heavy wheel on a fixed axle. Its moment of inertia is four kilogram metre squared.
+S2|0.4|The foot pushes the rim with twenty newtons, half a metre from the axle. Torque: twenty times half, ten newton metres.
+S3|0.4|Watch it spin up. Alpha is torque over I. Ten over four. Two point five radians per second squared.
+S4|0.5|After two seconds, the push stops. The wheel has turned five radians, and spins at five radians per second.
+S5|3.1|The push is gone. Will the wheel slow down, or keep its spin? Ignore friction. Pause and decide.
+S6|0.5|It keeps its spin! No torque, no angular acceleration. It stays at five radians per second.
+S7|0.35|Slow-mo replay. Freeze in the middle of the push.
+S8|0.4|In a tiny turn, d theta, the rim moves a small arc, r times d theta.
+S9|0.4|The force acts along that arc. So the work is F r d theta. That is torque times d theta.
+S10|0.4|On the graph, energy grows in a straight line with angle. The slope is the torque, ten joules per radian.
+S11|0.6|Fifty joules of work went in. The wheel now holds exactly fifty joules of spin energy.
+R1|0.35|But why does a spinning wheel have kinetic energy? Link by link.
+R2|0.4|Every bit of the wheel moves in a circle. A bit at distance r moves at r omega.
+R3|0.4|Its energy is one half m v squared, so one half m r squared omega squared.
+R4|0.6|Add all the bits. The sum of m r squared is I. So the spin energy is one half I omega squared.
+D1|0.35|Now the rules, one step at a time.
+D2|0.75|Step one. Work in a tiny turn. d W equals F r d theta, which is tau d theta.
+D3|0.75|Step two. For a steady torque, add up the tiny turns. W equals tau theta.
+D4|0.75|Step three. Work per second is power. P equals tau omega.
+D5|0.75|Step four. This power feeds the spin energy. Tau omega equals I omega alpha.
+D6|0.75|Step five. Cancel omega. Tau equals I alpha. Newton's second law, for turning.
+T1|0.7|Remember this. A torque does work as it turns, and that work becomes spin energy.
+K1|0.4|Side by side. The same torque, ten newton metres, over the same five radians.
+K2|0.6|A light wheel, with I equal to one. And a heavy wheel, with I equal to four.
+K3|3.2|Now you try. Which wheel ends up with more spin energy? Pause and decide.
+K4|0.65|The same! Both get fifty joules: the work, tau theta, is the same. The light wheel just spins faster.
+W1|0.35|Now, one worked example.
+W2|0.5|A motor spins a grinding wheel, I equal to zero point five, from rest to twenty radians per second in four seconds. Find torque, work and average power.
+W3|0.75|Angular acceleration is twenty over four. Five radians per second squared.
+W4|0.75|Torque is I alpha. Zero point five times five. Two point five newton metres.
+W5|0.75|Work equals the spin energy gained. One half, times zero point five, times twenty squared. One hundred joules.
+W6|0.65|Average power: one hundred over four. Twenty five watts.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students put omega in r p m straight into one half I omega squared.
+X3|0.65|But omega must be in radians per second. One hundred and twenty r p m is one hundred and twenty times two pi over sixty: four pi.
+E1|0.6|Where is this asked? In torque and work, power, and flywheel energy questions.
+Q1|5.4|Exam level now. A flywheel with I equal to two kilogram metre squared spins at six hundred r p m. A steady brake stops it in ten revolutions. Find the braking torque. Pause and solve.
+A1|0.5|The answer is B. Twenty pi newton metres.
+A2|0.5|Omega: six hundred times two pi over sixty. Twenty pi radians per second.
+A3|0.5|Spin energy: one half times two times twenty pi squared. Four hundred pi squared joules.
+A4|0.6|Ten revolutions is twenty pi radians. Torque times twenty pi equals four hundred pi squared. So torque is twenty pi newton metres.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. Why does the wheel keep spinning after the push stops?
+Y3|0.9|Two. Why do a light and a heavy wheel get the same spin energy from the same push?
+Y4|0.9|Three. Why must omega be in radians per second in one half I omega squared?
+N1|0.3|Next time: spin on a chair and pull your arms in. Nobody pushes you, yet you speed up. How? Conservation of angular momentum.
