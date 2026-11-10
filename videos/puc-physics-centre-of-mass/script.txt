@@ -1,0 +1,56 @@
+H1|0.4|A waiter holds a tray on one hand. A tightrope walker grips a long pole. A crane lifts a load by one hook.
+H2|0.45|Each one finds a special point, where all the mass seems to sit.
+H3|0.35|Diya balances her thirty centimetre ruler on one finger. It balances right at the middle.
+H4|0.5|Then she stacks four coins on one end. Now the middle fails. Where does it balance now, and why?
+H5|0.6|The answer is a point called the centre of mass.
+P1|0.35|The centre of mass is the average position of all the mass in a body.
+P2|0.4|Not a plain average. Each bit counts by its mass, so heavy bits pull the average toward them.
+P3|0.6|A ruler alone has its mass spread evenly. So its centre of mass is at the middle, the fifteen centimetre mark.
+S1|0.35|Let's make it simple. A light rod, one point two metres long, with a ball at each end.
+S2|0.4|Ball one, one kilogram, sits at x equals zero. Ball two sits at one point two metres.
+S3|0.4|With one kilogram each, the centre of mass is right in the middle. Zero point six metres.
+S4|0.4|Now make ball two heavier. Two kilograms. The centre of mass slides to zero point eight.
+S5|0.5|Three kilograms. It slides to zero point nine. Always toward the heavier ball.
+S6|0.6|On the graph, the dot climbs as ball two gets heavier, but it never passes one point two.
+S7|0.35|Let's freeze at three kilograms.
+S8|0.4|Ball one is zero point nine metres from the centre. Ball two is only zero point three.
+S9|0.6|Three times the mass, one third the distance. One times zero point nine equals three times zero point three.
+S10|3.1|Quick check. Double both balls, to two and six kilograms. Does the centre of mass move? Pause and decide.
+S11|0.6|No! The ratio is still one to three. Only the ratio of the masses decides where the centre sits.
+D1|0.35|Let's write the rule, one step at a time.
+D2|0.75|Step one. Count each position by its mass. X equals m one x one, plus m two x two, all over m one plus m two.
+D3|0.75|Step two. Check the units. Kilogram metres over kilograms gives metres. So X is a position.
+D4|0.75|Step three. Equal masses. The m cancels, and X is x one plus x two, over two. The midpoint.
+D5|0.75|Step four. In general, m one times r one equals m two times r two. So the centre sits closer to the heavier mass.
+D6|0.6|For many particles, add every m x, and divide by the total mass. Same for y.
+T1|0.7|Remember this. The centre of mass is the average position of the mass, closer to the heavier part.
+R1|0.35|Now Diya's ruler, link by link.
+R2|0.4|Gravity pulls on every coin, and on every bit of the ruler.
+R3|0.4|Near the Earth, each bit is pulled in proportion to its mass.
+R4|0.5|So the pulls balance at the mass average point. The balance point is the centre of mass.
+R5|0.6|Say the ruler is twenty grams, with four five gram coins at the one centimetre mark. It balances at eight centimetres.
+K1|0.4|Side by side. Equal balls: the centre of mass sits in the middle.
+K2|0.6|One and three kilograms: it sits three quarters of the way across, near the heavy ball.
+K3|3.2|Now you try. Put the zero of the scale at the other end instead. Does the centre of mass move? Pause and decide.
+K4|0.65|No! Every number changes, but the point stays at the same place on the rod.
+W1|0.35|Now, one worked example.
+W2|0.5|One kilogram at the origin. Two kilograms at three metres on x. Three kilograms at four metres on y. Find the centre of mass.
+W3|0.75|Total mass: one plus two plus three. Six kilograms.
+W4|0.75|X: one times zero, plus two times three, plus three times zero. Six, over six. One metre.
+W5|0.75|Y: only the three kilogram mass is off the x axis. Three times four is twelve, over six. Two metres.
+W6|0.65|So the centre of mass is at one, two. It lies inside the triangle the three masses make.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students put the centre of mass halfway between two bodies, every time.
+X3|0.65|That works only for equal masses. Otherwise it sits closer to the heavier one: m one r one equals m two r two.
+E1|0.6|Where is this asked? In two and three particle problems, and in how far the centre shifts.
+Q1|5.4|Exam level now. Two particles, two kilograms and six kilograms, are forty centimetres apart. The two kilogram one moves twelve centimetres toward the centre of mass. How must the six kilogram one move, to keep the centre fixed? Pause and solve.
+A1|0.5|The answer is A. Four centimetres, toward the centre of mass.
+A2|0.5|X must not change. So m one times its shift, plus m two times its shift, is zero.
+A3|0.5|Two times twelve is twenty four. So six times the shift is twenty four, and the shift is four.
+A4|0.6|The two shifts point in opposite directions. So both particles move toward the centre.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. Why do coins on one end move the balance point toward them?
+Y3|0.9|Two. Where is the centre of mass of two equal masses?
+Y4|0.9|Three. Does choosing a different origin move the centre of mass?
+N1|0.3|Next time: a ring balances right at its centre, where there is no metal at all. How? Centre of mass of common bodies.
