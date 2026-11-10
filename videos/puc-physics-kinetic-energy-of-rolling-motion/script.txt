@@ -1,0 +1,54 @@
+H1|0.4|A bowling ball rolls down a lane. A coin rolls off the table. A ring rolls down a slope.
+H2|0.45|They all start from rest, but they do not all roll at the same speed.
+H3|0.35|Diya lets a ring, a disc and a ball go from the same height on the same slope.
+H4|0.5|Same start, same slope. Yet the ball wins and the ring comes last, every time. Why?
+H5|0.6|The answer is hidden in the energy of rolling.
+P1|0.35|A rolling body does two things at once. It moves forward, and it spins.
+P2|0.4|So it has two kinds of kinetic energy. One half m v squared, for moving forward.
+P3|0.4|And one half I omega squared, for spinning. Its total energy is the sum of the two.
+P4|0.6|Note: rolling is not in the current NCERT book. It is in the JEE Advanced syllabus.
+S1|0.35|Our motion notebook. A thirty degree slope, two metres long, one metre high. A ring, a disc and a ball.
+S2|0.4|Let them go. The ball pulls ahead, then the disc. The ring is last.
+S3|0.4|On the graph, each speed grows in a straight line. The ball's line is the steepest.
+S4|0.5|At the bottom: the ball moves at three point seven four metres per second, the disc at three point six two, and the ring at three point one three.
+S5|0.35|Slow-mo replay. Freeze in the middle of the race.
+S6|0.4|Look at the energy bars. Each body turned the same height into energy, but split it in different ways.
+S7|0.4|The ring puts half of its energy into spinning. The disc puts one third. The ball, only two sevenths.
+S8|0.6|Less energy spent on spinning means more for moving forward. So the ball moves fastest.
+S9|3.1|Now you try. A heavy disc and a light disc, the same size, race down the slope. Which one wins? Pause and decide.
+S10|0.6|It is a tie! Mass cancels out. Only the shape decides the speed.
+R1|0.35|Why does the ring lose? Link by link.
+R2|0.4|All of the ring's mass sits at the rim, far from the axis.
+R3|0.4|Mass far from the axis makes spinning cost more energy.
+R4|0.6|So the ring spends the biggest share on spin, and has the least left for speed.
+D1|0.35|Now the rule, one step at a time.
+D2|0.75|Step one. Total energy is one half m v squared, plus one half I omega squared.
+D3|0.75|Step two. Put omega equal to v over R, and I equal to m k squared. K equals one half m v squared, times one plus k squared over R squared.
+D4|0.75|Step three. The bottom point does not slip, so friction does no work. So m g h equals that energy.
+D5|0.75|Step four. v equals root of two g h, over one plus k squared over R squared. The mass cancels.
+D6|0.75|Step five. For a ring, k squared over R squared is one. For a disc, a half. For a ball, two fifths. The smallest value wins.
+T1|0.7|Remember this. A rolling body shares its energy between moving and spinning. The less it spins, the faster it goes.
+K1|0.4|Side by side. A rolling ball must spin, so part of its energy goes into spin.
+K2|0.6|A block slides down a smooth slope of the same height. It does not spin at all.
+K3|3.2|Now you try. Which reaches the bottom first: the rolling ball, or the sliding block? Pause and decide.
+K4|0.65|The sliding block! None of its energy goes into spin, so all of it becomes speed. Four point four three metres per second.
+W1|0.35|Now, one worked example.
+W2|0.5|A solid ball of mass two kilograms rolls without slipping at three metres per second. Find its total kinetic energy, and the part that is spin.
+W3|0.75|Moving forward: one half times two times three squared. Nine joules.
+W4|0.75|For a solid ball, k squared over R squared is two fifths. So spin is two fifths of nine. Three point six joules.
+W5|0.65|Total: nine plus three point six. Twelve point six joules.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students think friction on a rolling body wastes energy, like on a sliding one.
+X3|0.65|In rolling without slipping, the contact point is at rest. So friction does no work. It only moves energy from forward motion into spin.
+E1|0.6|Where is this asked? In races down a slope, energy shares, and how high a rolling body climbs.
+Q1|5.4|Exam level now. A solid cylinder rolls without slipping towards a slope at four metres per second. g is ten. How high up the slope does it climb? Pause and solve.
+A1|0.5|The answer is B. One point two metres.
+A2|0.5|For a solid cylinder, k squared over R squared is one half.
+A3|0.5|Energy: one half m v squared, times one point five, equals m g h. The mass cancels.
+A4|0.6|So h equals sixteen times one point five, over twenty. One point two metres.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. Why does the ring come last in the race?
+Y3|0.9|Two. Why do a heavy disc and a light disc of the same size tie?
+Y4|0.9|Three. Why does friction do no work on a body that rolls without slipping?
+N1|0.3|Next chapter: why do the planets move faster when they come closer to the Sun? Gravitation, starting with Kepler's laws.
