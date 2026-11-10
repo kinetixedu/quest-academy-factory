@@ -1,0 +1,55 @@
+H1|0.4|Jump off a boat, and the boat slides back. Push off a friend on skates, and you both roll away.
+H2|0.45|Nobody pushed from outside, yet everything moves.
+H3|0.35|At the ice rink, Diya sees two skaters at rest, face to face. They push off each other.
+H4|0.5|One glides left, one glides right. Where did all this momentum come from?
+H5|0.6|The answer is: from nowhere. Let's see why.
+P1|0.35|First, a system of particles is a group of bodies we look at together.
+P2|0.4|Here, the system is the two skaters. Each has a momentum: mass times velocity.
+P3|0.4|Add them as vectors, and you get the total momentum, capital P.
+P4|0.6|Forces between the skaters are inside forces. A push from anything else, like a coach, is outside.
+S1|0.35|To the motion notebook. Skater A is forty kilograms, skater B is sixty. Both at rest.
+S2|0.4|So the total momentum is zero. The gold cross marks the centre of mass.
+S3|0.4|They push. A glides left at three metres per second. B glides right at two.
+S4|0.4|A carries minus one hundred and twenty. B carries plus one hundred and twenty. The total is still zero.
+S5|0.5|On the graph, A falls, B rises, and the total stays flat on zero. The gold cross does not move.
+S6|0.35|Slow-mo replay. Freeze in the middle of the push.
+S7|0.4|A pushes B. B pushes A back. Equal forces, opposite ways, for the same time.
+S8|0.6|So whatever momentum B gets, A gets the same, the other way. Inside forces cancel in pairs.
+S9|3.1|Now they pull each other in on a rope. Will the total momentum change? Pause and decide.
+S10|0.6|No! The pull is an inside force too. The total stays zero, and they meet at the centre of mass.
+D1|0.35|Now let's write the law, one step at a time.
+D2|0.75|Step one. Add every momentum as vectors. P equals p one, plus p two, and so on, up to p n.
+D3|0.75|Step two. Each p is m times v. The sum of all the m v is M V: total mass times the velocity of the centre of mass.
+D4|0.75|Step three. How fast P changes each second, d P by d t, equals the sum of all the forces.
+D5|0.75|Inside forces come in equal, opposite pairs, so they add to zero. Only the outside force is left.
+D6|0.6|So d P by d t equals F external. With no outside force, P stays constant, and the centre of mass keeps a steady velocity.
+T1|0.7|Remember this. Only an outside force can change the total momentum of a system.
+R1|0.35|Now, why does the lighter skater glide faster? Link by link.
+R2|0.4|P starts at zero, and no outside force acts. So it stays zero.
+R3|0.4|So A's momentum and B's momentum must be equal in size, and opposite in direction.
+R4|0.6|Forty times three equals sixty times two. Less mass, more speed. That is why a light boat shoots back fast.
+K1|0.4|Side by side. Inside forces: the skaters push each other, and the total stays zero.
+K2|0.6|Outside force: a coach pushes the pair with fifty newtons for two seconds. The total grows to one hundred.
+K3|3.2|Now you try. You sit in a cart and push hard on its front wall. Will the cart roll forward? Pause and decide.
+K4|0.65|No! You and the cart are one system. Your push is an inside force, so the total stays zero.
+W1|0.35|Now, one worked example.
+W2|0.5|Three balls on a smooth floor: one kilogram at six metres per second east, two kilograms at three west, three kilograms at two north. Find P, and the centre of mass velocity.
+W3|0.75|Along x: one times six is plus six. Two times three, west, is minus six. Zero.
+W4|0.75|Along y: three times two. Six kilogram metres per second, north.
+W5|0.75|So P is six, north. The total mass is six kilograms.
+W6|0.65|V equals P over M. Six over six. One metre per second, north.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students think: zero total momentum means nothing is moving.
+X3|0.65|Not true. Both skaters move, but their momenta cancel. Zero total means only that the centre of mass is at rest.
+E1|0.6|Where is this asked? Centre of mass velocity, explosions, and inside versus outside forces.
+Q1|5.4|Exam level now. Two kilograms at three i plus two j metres per second. Three kilograms at minus two j. A spring joins them. An outside force of five j newtons acts for two seconds. Speed of the centre of mass? Pause and solve.
+A1|0.5|The answer is B. Two metres per second.
+A2|0.5|At the start, P is six i plus four j, minus six j. That is six i minus two j.
+A3|0.5|The spring is inside, so ignore it. The outside force adds ten j. P becomes six i plus eight j.
+A4|0.6|Its size is ten. Divide by the total mass, five kilograms. Two metres per second.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. Two skaters at rest push apart. Why does the total momentum stay zero?
+Y3|0.9|Two. How is the total momentum linked to the centre of mass?
+Y4|0.9|Three. Which forces can change the total momentum of a system?
+N1|0.3|Next time: turn a screw with a spanner. You push sideways, yet the screw goes straight in. We meet the vector cross product.

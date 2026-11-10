@@ -1,0 +1,138 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 95 - Linear Momentum of a System of Particles</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 95: linear momentum of a system of particles (Motion notebook) ===== */
+:root{--fo:#D9731A;--vb:#2F6FEB;--pm:#A23B72;--gd:#B7791F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.fo{color:var(--fo)}.vb{color:var(--vb)}.pm{color:var(--pm)}
+#bpill{position:absolute;display:inline-flex;align-items:center;height:48px;padding:0 16px;border-radius:10px;background:#fff;border:2px solid var(--ac);color:var(--ac);font:600 18px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap;top:96px}
+/* title tiles */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr .jn{position:absolute;left:28px;top:24px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:28px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr svg{position:absolute;right:16px;top:10px}
+/* what it is */
+.qr{position:absolute;left:36px;width:712px;height:104px;border-radius:14px;background:var(--soft)}
+.qr .qs{position:absolute;left:20px;top:22px;width:84px;font:600 44px/1 Poppins;font-style:italic;text-align:center;white-space:nowrap}
+.qr .qn{position:absolute;left:124px;top:16px;font:700 28px Poppins;white-space:nowrap}
+.qr .qd{position:absolute;left:124px;top:60px;font:500 22px Poppins;color:var(--ink2);white-space:nowrap}
+.io{position:absolute;top:478px;height:56px;padding:0 18px;border-radius:12px;display:flex;align-items:center;gap:10px;font:600 24px Poppins;white-space:nowrap}
+/* sim + readout */
+.ro2{position:absolute;display:grid;grid-template-columns:auto 1fr auto;column-gap:14px;row-gap:6px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .v{font:600 34px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 20px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+.smo,.frz,.rdy{position:absolute;right:36px;top:18px;height:44px;padding:0 16px;border-radius:9px;display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.smo{background:var(--ink);color:#fff}.frz{background:var(--redBg);color:var(--red)}.rdy{background:var(--soft);color:var(--ink2)}
+#simP{position:absolute;left:36px;top:478px;height:64px;padding:0 22px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:14px;font:600 26px Poppins;white-space:nowrap}
+.leg{position:absolute;top:22px;display:flex;gap:18px;font:600 18px 'IBM Plex Mono';white-space:nowrap}
+.leg span{display:flex;align-items:center;gap:8px}
+/* derivation */
+.st{position:absolute;left:36px;width:960px;height:92px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:-4px;font-size:36px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:52px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.dpan{position:absolute;left:1040px;top:84px;width:524px;height:460px;border-radius:14px;background:var(--soft)}
+/* chain */
+.lk{position:absolute;left:36px;width:712px;height:92px;border-radius:14px;background:var(--soft)}
+.lk .n{position:absolute;left:20px;top:23px;width:46px;height:46px;border-radius:50%;background:var(--ac);color:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.lk .lt{position:absolute;left:86px;top:0;height:92px;display:flex;align-items:center;font:600 25px Poppins;white-space:nowrap;gap:10px}
+/* side by side */
+.kp{position:absolute;left:36px;top:478px;height:64px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+.kc{position:absolute;right:36px;top:76px;height:52px;padding:0 18px;border-radius:12px;background:#fff;border:2px solid var(--line);display:flex;align-items:center;gap:8px;font:600 26px 'IBM Plex Mono';white-space:nowrap}
+#wkq{position:absolute;left:36px;top:70px;font:600 26px/1.38 Poppins;width:712px}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#wl .sol .sx{font-size:30px}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 32px Poppins;white-space:nowrap}
+.bar{position:absolute;height:40px;border-radius:8px}
+.blab{position:absolute;font:600 22px 'IBM Plex Mono';white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 6 SYSTEM OF PARTICLES AND ROTATIONAL MOTION</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="bpill">NCERT · CBSE · ISC · PUC</div>
+    <div id="title">Momentum of a <span class="acc">System</span></div>
+    <div id="sub">Two skaters, one push</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">PUSH OFF · BOTH MOVE</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">No outside push, yet they move</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA AT THE ICE RINK</div>
+        <img id="hkA" src="../../assets/illustrations/puc/diya.png" style="position:absolute;left:566px;top:270px;width:200px;height:280px;object-fit:contain">
+        <svg id="hkS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div class="pillp" id="hkQ" style="left:36px;top:490px;background:var(--redBg);color:var(--red)">Where did the momentum come from?</div></div>
+    </div>
+    <div id="sP">
+      <div class="card full" id="pq"><div class="lbl" style="left:36px;top:30px">A SYSTEM OF PARTICLES</div><div id="qrs"></div></div>
+      <div class="card rf" id="pm"><div class="lbl" style="left:36px;top:30px">INSIDE AND OUTSIDE FORCES</div>
+        <svg id="pmS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div class="io" id="io0" style="left:36px;background:#FBEBDD;color:#A4520F"></div><div class="io" id="io1" style="left:400px;background:var(--soft);color:var(--ink)"></div></div>
+    </div>
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">SIDE VIEW · TWO SKATERS ON ICE</div>
+        <div class="rdy" id="rdy">AT REST · t = 0</div><div class="smo" id="smo">SLOW-MO REPLAY · 0.25x</div><div class="frz" id="frz">FROZEN · MID-PUSH</div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div id="simP">Inside forces cancel in pairs → <i>P</i> stays 0</div></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="tag" id="roT" style="right:36px;top:22px"></div>
+        <div class="ro2" id="roA" style="left:36px;top:70px;width:300px"></div><div class="ro2" id="roB" style="left:392px;top:70px;width:356px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">MOMENTUM VS TIME</div>
+        <div class="leg" id="leg" style="right:36px"></div>
+        <svg id="grS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+    <div id="sD">
+      <div class="card" id="dl" style="left:160px;top:270px;width:1600px;height:580px"><div class="lbl" style="left:36px;top:30px">THE LAW · 4 STEPS</div><div id="steps"></div>
+        <div class="dpan" id="dpan"><div class="lbl" style="left:24px;top:22px">INSIDE FORCES · EQUAL PAIRS</div><svg id="dpS" width="524" height="460" style="position:absolute;left:0;top:0"></svg></div></div>
+    </div>
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">WHY IS THE LIGHT ONE FASTER?</div><div id="lks"></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">MASS × SPEED · AFTER THE PUSH</div>
+        <svg id="rrS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg></div>
+    </div>
+    <div id="sK">
+      <div class="card full" id="kh"><div class="lbl" style="left:36px;top:30px">INSIDE FORCES · THEY PUSH</div><div class="kc" id="khC"></div><svg id="khS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div class="kp" id="khP"></div></div>
+      <div class="card rf" id="kl"><div class="lbl" style="left:36px;top:30px">OUTSIDE FORCE · A COACH PUSHES</div><div class="ghost" id="exK" style="right:36px;top:18px">EXAMPLE FIGURES</div><div class="kc" id="klC" style="top:76px"></div><svg id="klS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div class="kp" id="klP"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wkq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">TOP VIEW · THREE BALLS</div><svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg></div>
+    </div>
+    <div id="sX"><div class="card red" id="trap"><svg id="tpS" width="640" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2" style="font-size:72px">Only an <span style="color:#D9731A">outside force</span> can change <span style="color:#A23B72">P</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
