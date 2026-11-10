@@ -1,0 +1,50 @@
+H1|0.4|A cricket bat. A steel plate. A bangle. Each has one point where its mass is centred.
+H2|0.45|For some bodies that point is easy to find. For others, it is a surprise.
+H3|0.35|Aarav tapes a bangle onto a light, clear plastic square. It balances on his fingertip.
+H4|0.5|But it balances right at the bangle's centre, where there is no metal at all. How?
+H5|0.6|Let's find the centre of mass of common bodies.
+P1|0.35|Start with a uniform rod. Uniform means its mass is spread evenly.
+P2|0.4|Pair up the bits. A bit near the left end matches a bit near the right end.
+P3|0.4|Every pair averages out at the middle. So the rod's centre of mass is at its middle.
+P4|0.6|The same pairing works for a ring, a disc, a sphere and a rectangle. Uniform and symmetric means the centre of mass is at the geometric centre.
+P5|0.6|A uniform triangle plate is different. Its centre of mass is where the three medians meet.
+S1|0.35|Now let's build Aarav's bangle, bit by bit. Radius twenty centimetres.
+S2|0.4|First, a small arc of metal. Its centre of mass sits just inside the arc.
+S3|0.4|Grow the arc. As it bends round, the centre of mass moves in, toward the middle.
+S4|0.5|At a half ring, it is two R over pi from the middle. About twelve point seven centimetres, in empty space.
+S5|0.35|Slow-mo replay. Watch the last gap close.
+S6|0.4|Every new bit now has a partner on the far side.
+S7|0.6|At the full ring, the distance drops to zero. The centre of mass is the ring's centre, with no metal there.
+S8|3.1|Quick check. Cut the ring in half. Is the half ring's centre of mass on the metal, or in empty space? Pause and decide.
+S9|0.6|In empty space! It sits twelve point seven centimetres from the middle, inside the curve.
+D1|0.35|Now the rules, one step at a time.
+D2|0.75|Step one. A bit of mass m at plus x pairs with an equal bit at minus x. m x, plus m times minus x, is zero.
+D3|0.75|Step two. So a uniform, symmetric body has X at its centre. A rod of length L has X equal to L over two.
+D4|0.75|Step three. For a body made of parts, put each part's mass at its own centre. X equals M one X one plus M two X two, over M one plus M two.
+D5|0.75|Step four. For a uniform plate, mass is in proportion to area. So we can use areas instead of masses.
+T1|0.7|Remember this. The centre of mass can sit in empty space. It depends on how the mass is spread.
+K1|0.4|Side by side. A ring: all its mass sits on the rim.
+K2|0.6|A disc: its mass is spread all over. A different spread, but both are symmetric.
+K3|3.2|Now you try. A ring and a disc, same mass, same radius. Whose centre of mass is at the centre? Pause and decide.
+K4|0.65|Both! Each is uniform and symmetric. For the disc, that point has metal. For the ring, it is empty.
+W1|0.35|Now, one worked example.
+W2|0.5|An L-shaped plate is made of two rectangles. One is forty by ten centimetres, lying flat. The other is ten by thirty, standing on its left end. Find the centre of mass.
+W3|0.75|Put the origin at the bottom left corner. The flat part has area four hundred, with its centre at twenty, five.
+W4|0.75|The standing part has area three hundred, with its centre at five, twenty five.
+W5|0.75|X: four hundred times twenty, plus three hundred times five, over seven hundred. About thirteen point six centimetres. Y comes out the same.
+W6|0.65|So the centre is at thirteen point six, thirteen point six. That point is off the plate, in the empty corner.
+X1|0.35|Now, the exam trap.
+X2|0.4|When a piece is cut out of a plate, many students add the piece's mass.
+X3|0.65|But a hole removes mass. Treat the hole as negative mass, and subtract it.
+E1|0.6|Where is this asked? In composite bodies, and in plates or discs with a part cut out.
+Q1|5.4|Exam level now. A uniform square plate has sides of forty centimetres. A square of side twenty centimetres is cut from one corner. How far does the centre of mass move, and which way? Pause and solve.
+A1|0.5|The answer is A. About four point seven centimetres, away from the cut corner.
+A2|0.5|Full plate: mass four m, at the centre. The cut piece: mass m, ten centimetres along x and along y.
+A3|0.5|Subtract it. X equals minus m times ten, over three m. Minus ten over three. Y is the same.
+A4|0.6|Distance: root two times ten over three, about four point seven. The minus sign points away from the cut.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. Why is a uniform rod's centre of mass at its middle?
+Y3|0.9|Two. How can a ring's centre of mass be where there is no metal?
+Y4|0.9|Three. How do you handle a hole cut out of a plate?
+N1|0.3|Next time: a festival rocket bursts in the sky. The pieces fly everywhere, yet one point keeps the old curve. Motion of the centre of mass.
