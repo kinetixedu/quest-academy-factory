@@ -1,0 +1,54 @@
+H1|0.4|A mixer whirs up to speed. A potter's wheel spins faster with each kick. A giant wheel slows to a stop.
+H2|0.45|In each one, the turning itself keeps changing.
+H3|0.35|At home, Aarav switches on the ceiling fan. It starts slowly, then speeds up for a few seconds.
+H4|0.5|How many turns does it make before it reaches full speed? Can we know, without counting?
+H5|0.6|Yes. With angular acceleration.
+P1|0.35|Angular acceleration, alpha, tells how fast omega changes: the change in omega, divided by the time.
+P2|0.4|Its unit is radians per second squared.
+P3|0.4|For a fixed axis, alpha lies along the axis too. Speeding up, it points the same way as omega. Slowing down, the opposite way.
+P4|0.6|And every point of a rigid body has the same alpha, just like the same omega.
+S1|0.35|To the motion notebook. A fan, seen from below, at rest. Switch on.
+S2|0.4|Alpha is four radians per second squared. Every second, omega grows by four.
+S3|0.4|On the graph, omega climbs in a straight line. The slope is alpha.
+S4|0.4|At five seconds, omega reaches twenty radians per second, and stays there.
+S5|0.5|The gold area under the line is the angle turned. Fifty radians in the first five seconds. About eight turns.
+S6|0.35|Slow-mo replay. Freeze at two seconds.
+S7|0.4|Omega is eight. The blade tip, zero point six metres out, moves at four point eight metres per second.
+S8|0.6|Alpha is the same for the whole fan. But the tip speeds up along its circle by r alpha. Two point four metres per second squared.
+S9|3.1|Now switch it off, and it slows down. Does alpha point the same way as omega, or opposite? Pause and decide.
+S10|0.6|Opposite! Omega keeps its direction, but it shrinks. So alpha points the other way. On the graph, the line slopes down.
+D1|0.35|Now the equations. They are old friends in new clothes.
+D2|0.75|Step one. Alpha is d omega by d t, just as a is d v by d t.
+D3|0.75|Step two. With a steady alpha, omega equals omega nought plus alpha t. Like v equals u plus a t.
+D4|0.75|Step three. The angle is the area under the omega line. Theta equals omega nought t, plus half alpha t squared.
+D5|0.75|Step four. Remove t, and you get omega squared equals omega nought squared, plus two alpha theta.
+T1|0.7|Remember this. Swap x for theta, v for omega, and a for alpha. The same equations work for turning.
+R1|0.35|Why does the blade tip speed up more than the middle? Link by link.
+R2|0.4|The whole blade turns as one piece. So every point has the same omega, at every moment.
+R3|0.4|So omega changes by the same amount for every point. Same alpha.
+R4|0.6|But speed is r omega. So the change in speed is r alpha. The tip, farther out, gains speed fastest.
+K1|0.4|Side by side. A bike speeds up at two metres per second squared for five seconds. Ten metres per second, and twenty five metres.
+K2|0.6|The fan: four radians per second squared for five seconds. It reaches twenty radians per second, and turns fifty radians.
+K3|3.2|Now you try. Fan A goes from zero to twenty radians per second in five seconds. Fan B, from ten to thirty in five. Which has the bigger alpha? Pause and decide.
+K4|0.65|The same! Both gain twenty in five seconds, so alpha is four for both. It depends on the change, not the speed.
+W1|0.35|Now, one worked example. Aarav's fan.
+W2|0.5|From rest, it reaches twenty radians per second in five seconds. Find alpha, and the number of turns.
+W3|0.75|Omega equals omega nought plus alpha t. Twenty equals zero plus alpha times five. So alpha is four.
+W4|0.75|Theta equals half alpha t squared. Half of four, times twenty five. Fifty radians.
+W5|0.75|One turn is two pi radians. So fifty, over two pi.
+W6|0.65|That is about seven point nine six. Nearly eight turns before full speed.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students find theta equals fifty, and say: fifty turns.
+X3|0.65|But theta comes out in radians. Divide by two pi. Fifty radians is only about eight turns.
+E1|0.6|Where is this asked? In wheels that speed up or brake, angles and turns in a given time, and with torque later.
+Q1|5.4|Exam level now. A wheel speeds up steadily from ten to thirty radians per second, while turning through eighty radians. Find alpha, and the time taken. Pause and solve.
+A1|0.5|The answer is B. Alpha is five, and the time is four seconds.
+A2|0.5|Use omega squared equals omega nought squared plus two alpha theta. Nine hundred equals one hundred plus one sixty alpha.
+A3|0.5|So eight hundred equals one sixty alpha. Alpha is five radians per second squared.
+A4|0.6|Then omega equals omega nought plus alpha t. Thirty equals ten plus five t. So t is four seconds.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. What does an alpha of four radians per second squared mean?
+Y3|0.9|Two. When does alpha point opposite to omega?
+Y4|0.9|Three. Why must you divide theta by two pi to get turns?
+N1|0.3|Next time: why are door handles always far from the hinge? We meet torque.
