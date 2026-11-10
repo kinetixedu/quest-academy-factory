@@ -51,3 +51,8 @@ Ep + slug, voice duration, diagrams and the process animated, facts verified (so
 - Cell canon colours (Ep 1 palette, keep): nucleus violet, mitochondrion orange, chloroplast green, vacuole sky, cell wall tan; add ER #C77DA0 (rose), Golgi #D9A23B (amber), ribosome #2E2A24 dots, lysosome #8E5BB5, membrane lipid head #5AA0C8 / tail #E8D9A8, protein #D0632F, chromosome/DNA violet #7B4B94, spindle #4A78C2.
 - Ch 9: never teach deleted sec 9.8-9.11. Ch 10: phases in NCERT order and names.
 - Reference siblings: Ep 1 (cell zoom ladder) for Ch 8-9, Ep 28 (n/2n) and Ep 49 for Ch 10. Ep 79 strip `NEXT · EP 80` "Photosynthesis in Higher Plants".
+
+## Eps 80-99 additions (10 Nov 2026)
+- Table, chips, slugs: "Episodes 80-99" in docs/series/puc-biology.md. Build on the shared runner (ep.js/ep.css) like Eps 60-79; reuse their drawing helpers (cell8.js, bio9.js, scratchpad c10/) where useful.
+- Colours: chloroplast/chlorophyll green, mitochondrion orange, ATP orange pills, NADPH #2A9D8F, CO2 grey #6B7280, O2 sky #5AA0C8, glucose/sugar gold #C9962B, H+ #D1495B, electron #4A78C2, RuBisCO protein coral #D0632F; lungs/alveoli pink #E7A3A8, blood O2-rich red #C0392B, O2-poor #7B4B94.
+- MCQ answer letters must vary within your 5 episodes. Sounds/outro/exam honesty as before.

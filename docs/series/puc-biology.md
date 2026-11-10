@@ -145,3 +145,30 @@ Ep 79 NEXT strip: `NEXT · EP 80` "Photosynthesis in Higher Plants".
 | 77 | Cytokinesis and Significance of Mitosis | `CLASS 11 · BIOLOGY · CH 10 CELL CYCLE AND CELL DIVISION` | Aarav | puc-biology-cytokinesis-and-significance-of-mitosis |
 | 78 | Meiosis I | `CLASS 11 · BIOLOGY · CH 10 CELL CYCLE AND CELL DIVISION` | Diya | puc-biology-meiosis-i |
 | 79 | Meiosis II and Significance of Meiosis | `CLASS 11 · BIOLOGY · CH 10 CELL CYCLE AND CELL DIVISION` | Aarav | puc-biology-meiosis-ii-and-significance-of-meiosis |
+
+## Episodes 80-99 (10 Nov 2026) - Class 11 Chapters 11-14, all boards
+Same rules as Eps 40-79. Rationalised NCERT (2024-25, MTG list): Ch 11, 12, 14 no deletions; Ch 13 deleted 13.5 Photoperiodism, 13.6 Vernalisation, 13.7 Seed Dormancy -> Ep 95 is *I (ISC syllabus; ghost chip NOT IN CURRENT NCERT · IN ISC SYLLABUS, no exam chips, never 'NCERT says'). Whole chapters Transport in Plants, Mineral Nutrition, Digestion and Absorption are deleted from NCERT and are not in this batch.
+Vary the MCQ answer letter across each 5-episode block (not all A). Titles end '| PUC Biology Class 11'.
+Ep 99 NEXT strip: `NEXT · EP 100` "Body Fluids and Circulation".
+| ep | topic | chip | hook lead | slug |
+|---|---|---|---|---|
+| 80 | Photosynthesis: Early Experiments | `CLASS 11 · BIOLOGY · CH 11 PHOTOSYNTHESIS IN HIGHER PLANTS` | Diya | puc-biology-photosynthesis-early-experiments |
+| 81 | Where Photosynthesis Takes Place and the Pigments | `CLASS 11 · BIOLOGY · CH 11 PHOTOSYNTHESIS IN HIGHER PLANTS` | Aarav | puc-biology-where-photosynthesis-takes-place-and-the-pigments |
+| 82 | The Light Reaction and Electron Transport | `CLASS 11 · BIOLOGY · CH 11 PHOTOSYNTHESIS IN HIGHER PLANTS` | Diya | puc-biology-the-light-reaction-and-electron-transport |
+| 83 | Photophosphorylation and Chemiosmosis | `CLASS 11 · BIOLOGY · CH 11 PHOTOSYNTHESIS IN HIGHER PLANTS` | Aarav | puc-biology-photophosphorylation-and-chemiosmosis |
+| 84 | The Calvin Cycle | `CLASS 11 · BIOLOGY · CH 11 PHOTOSYNTHESIS IN HIGHER PLANTS` | Diya | puc-biology-the-calvin-cycle |
+| 85 | The C4 Pathway and Photorespiration | `CLASS 11 · BIOLOGY · CH 11 PHOTOSYNTHESIS IN HIGHER PLANTS` | Aarav | puc-biology-the-c4-pathway-and-photorespiration |
+| 86 | Factors Affecting Photosynthesis | `CLASS 11 · BIOLOGY · CH 11 PHOTOSYNTHESIS IN HIGHER PLANTS` | Diya | puc-biology-factors-affecting-photosynthesis |
+| 87 | Do Plants Breathe and Glycolysis | `CLASS 11 · BIOLOGY · CH 12 RESPIRATION IN PLANTS` | Aarav | puc-biology-do-plants-breathe-and-glycolysis |
+| 88 | Fermentation and the Krebs Cycle | `CLASS 11 · BIOLOGY · CH 12 RESPIRATION IN PLANTS` | Diya | puc-biology-fermentation-and-the-krebs-cycle |
+| 89 | Electron Transport System and Oxidative Phosphorylation | `CLASS 11 · BIOLOGY · CH 12 RESPIRATION IN PLANTS` | Aarav | puc-biology-electron-transport-system-and-oxidative-phosphorylation |
+| 90 | Respiratory Balance Sheet, Amphibolic Pathway and Respiratory Quotient | `CLASS 11 · BIOLOGY · CH 12 RESPIRATION IN PLANTS` | Diya | puc-biology-respiratory-balance-sheet-amphibolic-pathway-and-respiratory-quotient |
+| 91 | Plant Growth: Phases, Rates and Conditions | `CLASS 11 · BIOLOGY · CH 13 PLANT GROWTH AND DEVELOPMENT` | Aarav | puc-biology-plant-growth-phases-rates-and-conditions |
+| 92 | Differentiation, Dedifferentiation and Redifferentiation | `CLASS 11 · BIOLOGY · CH 13 PLANT GROWTH AND DEVELOPMENT` | Diya | puc-biology-differentiation-dedifferentiation-and-redifferentiation |
+| 93 | Plant Growth Regulators: Auxins and Gibberellins | `CLASS 11 · BIOLOGY · CH 13 PLANT GROWTH AND DEVELOPMENT` | Aarav | puc-biology-plant-growth-regulators-auxins-and-gibberellins |
+| 94 | Cytokinins, Ethylene and Abscisic Acid | `CLASS 11 · BIOLOGY · CH 13 PLANT GROWTH AND DEVELOPMENT` | Diya | puc-biology-cytokinins-ethylene-and-abscisic-acid |
+| 95 | Photoperiodism, Vernalisation and Seed Dormancy*I | `CLASS 11 · BIOLOGY · CH 13 PLANT GROWTH AND DEVELOPMENT` | Aarav | puc-biology-photoperiodism-vernalisation-and-seed-dormancy |
+| 96 | Respiratory Organs and the Human Respiratory System | `CLASS 11 · BIOLOGY · CH 14 BREATHING AND EXCHANGE OF GASES` | Diya | puc-biology-respiratory-organs-and-the-human-respiratory-system |
+| 97 | Mechanism of Breathing and Respiratory Volumes | `CLASS 11 · BIOLOGY · CH 14 BREATHING AND EXCHANGE OF GASES` | Aarav | puc-biology-mechanism-of-breathing-and-respiratory-volumes |
+| 98 | Exchange and Transport of Gases | `CLASS 11 · BIOLOGY · CH 14 BREATHING AND EXCHANGE OF GASES` | Diya | puc-biology-exchange-and-transport-of-gases |
+| 99 | Regulation of Respiration and Respiratory Disorders | `CLASS 11 · BIOLOGY · CH 14 BREATHING AND EXCHANGE OF GASES` | Aarav | puc-biology-regulation-of-respiration-and-respiratory-disorders |
