@@ -199,12 +199,12 @@ const rise = (t, t0, x0, y0, n, col, lab) => { let s = ''; if (t < t0) return s;
 function elim(t, t0, ord, base) { // ord: 1 -> 2 or 2 -> 3, curved arrows
   const y = 310, X1 = 300, X2 = 490;
   const a1 = io(t, t0 + 0.3, 0.6), a2 = io(t, t0 + 1.1, 0.6), a3 = io(t, t0 + 1.9, 0.6), m = io(t, t0 + 2.8, 0.9);
-  const bx = lerp(120, 170, a1), by = lerp(500, 480, a1);
+  const bx = lerp(120, 170, a1), by = lerp(480, 460, a1);
   const Hy = lerp(420, 450, m), Brx = lerp(570, 660, m), Bry = lerp(220, 200, m);
-  const atoms = [{ x: X1, y, l: 'C' }, { x: X2, y, l: 'C' }, { x: X1, y: Hy, l: 'H' }, { x: Brx, y: Bry, l: 'Br' }, { x: X1 - 100, y: y - 70, l: 'H' }, { x: X2 + 100, y: y - (ord === 1 ? 0 : 0) + 70, l: 'H' }];
-  if (ord === 1) { atoms.push({ x: X1 - 100, y: y + 70, l: 'H', a: 1 }); }
-  let s = bs(atoms, [[0, 1, ord + m], [0, 2, 1, null, 1 - m], [1, 3, 1, null, 1 - m], [0, 4, 1], [1, 5, 1]].concat(ord === 1 ? [[0, 6, 1]] : []));
-  s += G(atomC(bx, by, 22, base === 'OH' ? 'O' : 'N', base === 'OH' ? OV : NB, 18) + lp(bx + 30, by - 10, 0.5, 1 - m), io(t, t0, 0.4)) + G(T(bx, by + 50, base === 'OH' ? 'OH⁻' : 'NH₂⁻', { fs: 18, c: base === 'OH' ? OV : NB, ls: 0 }), io(t, t0, 0.4) * (1 - m));
+  const atoms = [{ x: X1, y, l: 'C' }, { x: X2, y, l: 'C' }, { x: X1, y: Hy, l: 'H' }, { x: Brx, y: Bry, l: 'Br' }, { x: X1 - 100, y: y - 70, l: 'H' }, { x: X2 + 110, y: y + (ord === 1 ? 20 : 70), l: 'H' }];
+  if (ord === 1) { atoms.push({ x: X1 - 100, y: y + 70, l: 'Br' }, { x: X2 + 40, y: y + 110, l: 'H' }); }
+  let s = bs(atoms, [[0, 1, ord + m], [0, 2, 1, null, 1 - m], [1, 3, 1, null, 1 - m], [0, 4, 1], [1, 5, 1]].concat(ord === 1 ? [[0, 6, 1], [1, 7, 1]] : []));
+  s += G(atomC(bx, by, 28, base === 'OH' ? 'O' : 'N', base === 'OH' ? OV : NB, 22) + lp(bx + 30, by - 10, 0.5, 1 - m), io(t, t0, 0.4)) + G(T(bx, by + 50, base === 'OH' ? 'OH⁻' : 'NH₂⁻', { fs: 18, c: base === 'OH' ? OV : NB, ls: 0 }), io(t, t0, 0.4) * (1 - m));
   s += carr(bx + 30, by - 20, X1 + 10, Hy + 10, -40, a1 * (1 - m));
   s += carr(X1 + 14, (y + Hy) / 2, (X1 + X2) / 2, y + 22, 40, a2 * (1 - m));
   s += carr((X1 + X2) / 2 + 60, y - 50, Brx + 10, Bry + 30, -30, a3 * (1 - m));
@@ -300,12 +300,12 @@ function drawC(t) {
 }
 
 /* ---------- X / Q / F ---------- */
-const trap = PUC.trap($('#trap'), { wrong: 'All alkynes give H₂ with Na, so <b>but-2-yne</b> does', right: 'Only <b>terminal</b> alkynes have that H' });
+const trap = PUC.trap($('#trap'), { wrong: 'All alkynes give H₂ with Na, even <b>but-2-yne</b>', right: 'Only <b>terminal</b> alkynes have that H' });
 const t2 = (cx, labs) => bs([{ x: cx - 105, y: 110, l: labs[0], r: 26 }, { x: cx - 30, y: 110, l: 'C', r: 20 }, { x: cx + 45, y: 110, l: 'C', r: 20 }, { x: cx + 120, y: 110, l: labs[1], r: labs[1] === 'H' ? 16 : 26 }], [[0, 1, 1], [1, 2, 3], [2, 3, 1]]);
 $('#tS').innerHTML = `<g id="tM1">${t2(150, ['CH₃', 'CH₃']) + T(158, 200, 'BUT-2-YNE · NO END H', { fs: 18, c: C.red, ls: 0.6 })}</g><g id="tM2">${t2(455, ['CH₃', 'H']) + T(455, 200, 'PROPYNE · END H', { fs: 18, c: C.ok, ls: 0.6 })}</g>`;
 const xM = document.createElementNS('http://www.w3.org/2000/svg', 'path'); attr(xM, 'd', 'M50 60 L270 160 M270 60 L50 160'); attr(xM, 'stroke', C.red); attr(xM, 'stroke-width', 6); attr(xM, 'stroke-linecap', 'round'); attr(xM, 'fill', 'none'); $('#tS').appendChild(xM);
 const where = PUC.where($('#wa'), { on: [], type: 'Acidic terminal alkynes, Markovnikov addition and the carbide method' });
-const mcq = PUC.mcq($('#mq'), { pat: 'JEE / NEET PATTERN · ORIGINAL QUESTION', q: '<b>X</b> (C₃H₄) gives H₂ with Na. With H₂O, Hg²⁺ and H⁺ it gives <b>Y</b>. What is Y?', qW: 920,
+const mcq = PUC.mcq($('#mq'), { pat: 'JEE / NEET PATTERN · ORIGINAL QUESTION', q: '<b>X</b> (C₃H₄) gives H₂ with Na. With H₂O, Hg²⁺ and H⁺ it gives <b>Y</b>. What is Y?', qW: 800,
   opts: [K(mf('CH_3CH_2CHO')), K(mf('CH_3COCH_3')), K(mf('CH_3CH(OH)CH_3')), K(mf('CH_3CH_2COOH'))], right: 1, optW: 474, optY: 330, optH: 110, optFs: 36 });
 const so = PUC.solution($('#so'), [[K(`\\text{Na} \\rightarrow ${E_(mf('H_2'))}: \\text{terminal}`)], [K(`\\text{X} = ${mf('CH_3C{\\equiv}CH')}`)], [K(`${O_(mf('OH'))} \\text{ on the middle C: enol}`)], [K(`\\text{enol} \\rightarrow ${mf('CH_3CO')}${mf('CH_3')}`)]], { y0: 100, dy: 112 });
 const tSo = [T0('A2'), wt('A2', 'propyne'), T0('A3'), T0('A4')];

@@ -67,7 +67,7 @@ const bFun = mk(bs, 'path', { d: 'M272 396 L392 200 L512 396 M380 220 V120 M404 
 const bPlug = mk(bs, 'rect', { x: 378, y: 108, width: 28, height: 18, rx: 6, fill: '#E9E5DA' });
 const bVap = Array.from({ length: 8 }, (_, i) => mk(bs, 'circle', { r: 6, fill: CHL }));
 const bCry = Array.from({ length: 12 }, (_, i) => { const side = i % 2 ? 1 : -1, k = Math.floor(i / 2), y = 360 - k * 26, x = 392 + side * ((396 - y) * 120 / 196 - 14); return mk(bs, 'path', { d: `M${x} ${y - 9} L${x + 7} ${y} L${x} ${y + 9} L${x - 7} ${y} Z`, fill: CHL }); });
-const bL = [lab(bs, 528, 260, '← COLD FUNNEL: PURE SOLID', CHL), lab(bs, 536, 432, '← JUNK STAYS IN DISH', RD), lab(bs, 418, 466, 'HEAT', SOL), lab(bs, 60, 520, 'CAMPHOR · NAPHTHALENE', HC, { 'font-size': 20, 'font-weight': 700 })];
+const bL = [lab(bs, 528, 260, '← COLD: PURE SOLID', CHL), lab(bs, 536, 432, '← JUNK STAYS IN DISH', RD), lab(bs, 418, 466, 'HEAT', SOL), lab(bs, 60, 520, 'CAMPHOR · NAPHTHALENE', HC, { 'font-size': 20, 'font-weight': 700 })];
 const CR = [['Dissolve in hot solvent', 'B3', 'Dissolve'], ['Filter while hot', 'B4', 'Filter'], ['Cool: pure crystals grow', 'B4', 'crystals'], ['Charcoal for colour · repeat', 'B5', 'charcoal']];
 $('#bbs').innerHTML = CR.map(([s], i) => `<div class="rowl" id="cr${i}" style="top:${96 + i * 84}px;width:470px"><span class="sn" style="flex:none;width:36px;height:36px;border-radius:50%;background:var(--ac);color:#fff;font:700 18px Poppins;display:flex;align-items:center;justify-content:center">${i + 1}</span><span>${s}</span></div>`).join('') + `<div class="pillp" id="bbP" style="left:36px;top:478px">Impurities stay dissolved</div>`;
 const tCr = CR.map(r => wt(r[1], r[2]));
@@ -108,7 +108,7 @@ const btag = document.createElement('div'); btag.className = 'btag'; btag.style.
 /* ---------- D: distillation family + steam ---------- */
 const DT = [['Fractional distillation', 'BOILING POINTS CLOSE · TALL COLUMN', 'Crude oil', 'D1', 'fractional'], ['Under reduced pressure', 'BREAKS DOWN BEFORE BOILING', 'Glycerol · spent lye', 'D3', 'Glycerol'], ['Steam distillation', 'NO MIXING WITH WATER · MOVES WITH STEAM', 'Aniline + water', 'D4', 'steam']];
 $('#dts').innerHTML = DT.map(([n, w, ex], i) => `<div class="ind" id="dt${i}" style="top:${96 + i * 140}px"><div class="in">${n}</div><div class="iw" style="color:${C.mute}">${w}</div><div class="iw" style="left:auto;right:24px;top:22px;color:${i === 2 ? ANI : HC};font-size:20px">${ex}</div></div>`).join('') + `<div class="pillp" id="dtP" style="left:36px;top:510px">Lower pressure, lower boiling point</div>`;
-const tDt = DT.map(r => wt(r[3], r[4]));
+const tDt = DT.map((r, i) => i ? wt(r[3], r[4]) : T0('D1') + 0.3);
 const P1 = tc(ANI, 'p_1'), P2 = tc(WAT, 'p_2');
 $('#dss').innerHTML = eqrow('ds0', 96, `${P1}\\ (\\text{aniline}),\\quad ${P2}\\ (\\text{water})`, 'STEP 1', HC) + eqrow('ds1', 186, `${P1} + ${P2} = p\\ \\ (\\text{air})`, 'STEP 2', HC) + eqrow('ds2', 276, `${P1} < p`, 'STEP 3', HC)
   + `<div class="ebar" id="dbar" style="top:380px"><i id="dbA" style="background:${ANI}"></i><i id="dbW" style="background:${WAT}"></i></div><div class="ebk" id="dbk" style="top:446px;left:auto;right:36px">p₁ + p₂ = p → BOILS</div>`;
@@ -198,7 +198,7 @@ const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN PATTERN · ORIGINAL QUESTION', q:
 const so = PUC.solution($('#so'), [[K(`\\text{X}: 0.40 \\times ${tc(SOL, '12.0')} = 4.8`)], [K(`\\text{Y}: 4.8 + 3.6 = ${tc(SPA, '8.4')}`)], [K(`R_f = \\dfrac{${tc(SPA, '8.4')}}{${tc(SOL, '12.0')}} = ${tc(OK, '0.70')}`)], ['B used only 3.6 cm']], { y0: 100, dy: 112 });
 const tSo = [T0('A2'), T0('A3'), T0('A4'), wt('A4', 'used') - 0.2];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 262, w: 1200, h: 470, title: 'Recap · Purification', y0: 96, dy: 74, txt: [0, 1, 1, 1, 1],
-  lines: [K(`R_f = ${RF} \\div ${RS}\\quad (\\text{both from the base line})`), '<b>Sublimation</b>: camphor · <b>Crystallisation</b>: hot solvent, cool, charcoal', '<b>Distillation</b>: simple (334 vs 457 K) · fractional (crude oil) · low pressure (glycerol)', '<b>Steam</b>: aniline + water, p₁ + p₂ = p · <b>Extraction</b>: separating funnel', '<b>Chromatography</b>: adsorption (silica gel, alumina) · partition (paper)']] });
+  lines: [K(`R_f = ${RF} \\div ${RS}\\quad (\\text{both from the base line})`), '<b>Sublimation</b>: camphor · <b>Crystallisation</b>: hot solvent, cool, charcoal', '<b>Distillation</b>: simple (334 vs 457 K) · fractional (crude oil) · low pressure (glycerol)', '<b>Steam</b>: aniline + water, p₁ + p₂ = p · <b>Extraction</b>: separating funnel', '<b>Chromatography</b>: adsorption (silica gel, alumina) · partition (paper)']  });
 const YQ = ['Which method purifies camphor?', 'Why does steam distillation work below the boiling point?', 'What is the stationary phase in paper chromatography?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="nn">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
@@ -265,6 +265,7 @@ M.on(t => {
   if (bOn) {
     const z = OUT('S1');
     M.vis($('#ba'), t, tB1 + 0.05, z, { dy: 36, ...o });
+    { const sh = M.spring(t - T0('B3') + 0.3, M.HEAVY), w = sh >= 1 ? 784 : M.lerp(1600, 784, sh); snap($('#ba'), 'width', w.toFixed(1) + 'px'); snap(bs, 'transform', `translateX(${((w - 784) / 2).toFixed(1)}px)`); }
     const tHeat = wt('B2', 'Heat'), tCold = wt('B2', 'surface'), tEnd = T1('B2');
     [bDish, bMound, ...bJunk].forEach(e => fade(e, t, tB1 + 0.3)); fade(bFun, t, wt('B1', 'solid')); fade(bPlug, t, wt('B1', 'solid'));
     fade(bL[3], t, wt('B2', 'Camphor'));
@@ -318,6 +319,7 @@ M.on(t => {
   if (dOn2) {
     const z = OUT('G1');
     M.vis($('#da'), t, tD1 + 0.05, z, { dy: 36, ...o });
+    { const sh = M.spring(t - T0('D5') + 0.3, M.HEAVY), w = sh >= 1 ? 784 : M.lerp(1600, 784, sh); snap($('#da'), 'width', w.toFixed(1) + 'px'); [0, 1, 2].forEach(i => snap($('#dt' + i), 'width', (w - 72).toFixed(1) + 'px')); }
     rowsOn(['#dt0', '#dt1', '#dt2'], tDt, T1('D7') + 0.3, t);
     M.vis($('#dtP'), t, wt('D3', 'Lower') - 0.1, 1e9, POP);
     M.vis($('#db'), t, T0('D5') - 0.2, z, { dx: 60, dy: 0, ...o });

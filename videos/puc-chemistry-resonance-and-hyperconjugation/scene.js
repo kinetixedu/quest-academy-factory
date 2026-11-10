@@ -154,15 +154,15 @@ const wrow = (y, labs, ac, nums) => {
 };
 const wA = wrow(210, ['CH₃', 'CH⁺', 'CH₂', 'CH₃'], 1, [3, 0, 2, 0]), wB = wrow(440, ['CH₃', 'CH⁺', 'CH₃'], 1, [3, 0, 3]);
 const wAt = lab(ws, 392, 306, '2-BUTYL · α-H = 3 + 2 = 5', GD, 26), wBt = lab(ws, 392, 536, 'ISOPROPYL · α-H = 3 + 3 = 6', GD, 26);
-const wAn = txt(ws, -400, 112, '2-BUTYL CATION', { 'font-size': 18, 'font-weight': 600, fill: HC }), wBn = txt(ws, -400, 352, 'ISOPROPYL CATION', { 'font-size': 18, 'font-weight': 600, fill: HC });
+const wAn = txt(ws, -400, 112, '', { 'font-size': 18, 'font-weight': 600, fill: HC }), wBn = txt(ws, -400, 352, '', { 'font-size': 18, 'font-weight': 600, fill: HC });
 
 /* ---------- X / Q / F ---------- */
 const trap = PUC.trap($('#trap'), { wrong: 'Count every hydrogen in the cation', right: 'Count only H on carbons joined to the plus carbon' });
 const tsv = $('#tS');
-const tG = mk(tsv, 'g', {}); [[90, 'CH₃', 1], [200, 'CH⁺', 0], [310, 'CH₃', 1]].forEach(([x, l, a], i) => { if (i) mk(tG, 'line', { x1: x - 110, y1: 120, x2: x, y2: 120, stroke: C.ink2, 'stroke-width': 5 }); });
-[[90, 'CH₃', 1], [200, 'CH⁺', 0], [310, 'CH₃', 1]].forEach(([x, l, a]) => tr(ball(tG, 34, a ? HC : NC, l, 18), x, 120));
-const tWr = lab(tsv, 450, 112, 'ALL H: 7', RD, 24), tRt = lab(tsv, 450, 176, 'α-H: 6', OK, 26);
-const tSk = mk(tsv, 'line', { x1: 392, y1: 104, x2: 508, y2: 104, stroke: RD, 'stroke-width': 4 });
+const tG = mk(tsv, 'g', {}); [[50, 'CH₃', 1], [150, 'CH⁺', 0], [250, 'CH₃', 1]].forEach(([x, l, a], i) => { if (i) mk(tG, 'line', { x1: x - 100, y1: 120, x2: x, y2: 120, stroke: C.ink2, 'stroke-width': 5 }); });
+[[50, 'CH₃', 1], [150, 'CH⁺', 0], [250, 'CH₃', 1]].forEach(([x, l, a]) => tr(ball(tG, 34, a ? HC : NC, l, 18), x, 120));
+const tWr = lab(tsv, 390, 112, 'ALL H: 7', RD, 24), tRt = lab(tsv, 390, 176, 'α-H: 6', OK, 26);
+const tSk = mk(tsv, 'line', { x1: 334, y1: 104, x2: 446, y2: 104, stroke: RD, 'stroke-width': 4 });
 const where = PUC.where($('#wa'), { on: [], type: 'Sort +R and −R groups, count alpha hydrogens, order carbocation stability' });
 const mcq = PUC.mcq($('#mq'), { pat: 'JEE MAIN / NEET PATTERN · ORIGINAL QUESTION', q: `In which compound does resonance make the ortho and para carbons richer in electrons?`, qW: 760,
   opts: ['Nitrobenzene', 'Benzaldehyde', 'Aniline', 'Benzonitrile'], right: 2, optW: 474, optY: 330, optH: 110, optFs: 30 });

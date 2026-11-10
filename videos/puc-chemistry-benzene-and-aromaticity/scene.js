@@ -129,7 +129,7 @@ $('#qrs').innerHTML = QR.map(([q, k], i) => `<div class="qr" id="qr${i}" style="
 const tQr = QR.map(q => wt(q[2], q[3]));
 const ptag = tag($('#pw'));
 function drawP(t) {
-  const a = io(t, T0('P2') + 0.2, 0.5), sw = io(t, wt('P4', 'swapping') - 0.2, 0.9), st = io(t, wt('P6', 'special') - 0.1, 0.5);
+  const a = io(t, T0('P2') + 0.2, 0.5), sw = io(t, wt('P4', 'swapping') - 0.2, 0.9), st = io(t, wt('P6', 'extra') - 0.1, 0.5);
   const sub = [sw > 0.5 ? 'Br' : 'H'];
   let s = G(ringBS(392, 280, 118, KI, { sub, circ: 0 }), a);
   if (sw > 0.01 && sw < 0.999) { const p = rp(392, 280, 182, 0); s += G(atomC(p[0] + 90 * sw, p[1] - 40 * sw, 17, 'H', HC, 15), 1 - sw) + G(atomC(p[0] - 90 * (1 - sw), p[1] - 40 * (1 - sw), 24, 'Br', BR, 18), sw); }
@@ -139,7 +139,7 @@ function drawP(t) {
 }
 
 /* ---------- S + B ---------- */
-const tKek = wt('S2', 'Kekule'), tMove = wt('S3', 'Move'), tBlend = wt('S4', 'blend'), tSame = wt('S5', 'same'), tXr = wt('S5', 'X'), tCirc = wt('S7', 'circle');
+const tKek = wt('S2', 'Kekule'), tMove = wt('S3', 'Move'), tBlend = wt('S4', 'blend'), tSame = wt('S5', 'equal'), tXr = wt('S5', 'X'), tCirc = wt('S7', 'circle');
 const tPl = wt('B2', 'plane'), tPo = wt('B3', 'orbital'), tOv = wt('B4', 'overlaps'), tSpr = wt('B5', 'spread'), tStab = wt('B6', 'stable'), tSwp = wt('B7', 'swap');
 function benchK(t) {
   const a = io(t, tS1 + 0.2, 0.5), m = io(t, tMove - 0.1, 1.2), b = io(t, tBlend - 0.1, 0.9), c = io(t, tCirc - 0.1, 0.8);
@@ -339,7 +339,7 @@ M.on(t => {
   if (pOn) {
     const out = OUT('S1');
     M.vis($('#pq'), t, tP1 + 0.1, out, { dx: -60, dy: 0, ...o });
-    M.vis($('#mdef'), t, wt('P6', 'special') - 0.1, 1e9, POP);
+    M.vis($('#mdef'), t, wt('P6', 'extra') - 0.1, 1e9, POP);
     QR.forEach((_, i) => { const el = $('#qr' + i); M.vis(el, t, tQr[i] - 0.1, 1e9, { dy: 16 }); const nx2 = i < 4 ? tQr[i + 1] : 1e9; const on = M.io((t - tQr[i]) / 0.25) * (1 - M.io((t - nx2) / 0.25)); setBg(el, mix(C.soft, C.ac2, on)); });
     M.vis($('#pw'), t, T0('P2') - 0.1, out, { dx: 60, dy: 0, ...o });
     drawP(t); M.vis(ptag, t, T0('P2') + 0.3, 1e9, POP);
@@ -403,7 +403,7 @@ M.on(t => {
     M.vis($('#trap'), t, tX1 + 0.05, 1e9, { dy: 36 }); M.vis($('#wa'), t, T0('E1') - 0.1, 1e9, { dy: 36 });
     trap(t, { tin: tX1, tWrong: wt('X2', 'any') - 0.1, tStrike: wt('X3', 'Wrong') - 0.1, tRight: wt('X3', 'eight') - 0.1 });
     attr($('#tM1'), 'opacity', io(t, wt('X2', 'cyclooctatetraene') - 0.1, 0.3).toFixed(3)); M.draw(xM, t, wt('X3', 'Wrong'), 0.4); attr($('#tM2'), 'opacity', io(t, wt('X3', 'tub') - 0.05, 0.3).toFixed(3));
-    where(t, { tin: T0('E1'), tLight: [], tType: wt('E1', 'Questions') });
+    where(t, { tin: T0('E1'), tLight: [], tType: wt('E1', 'Huckel') });
   }
 
   const qOn = t >= tQ && t < tF; M.hide($('#sQ'), !qOn);
