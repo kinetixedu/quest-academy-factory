@@ -1,0 +1,30 @@
+{
+ "world": "puc-maths",
+ "topic": "Limits of Trigonometric Functions",
+ "series": {
+  "name": "PUC Maths",
+  "ep": 83
+ },
+ "title": "Why sin x/x Tends to 1: Trig Limits Explained Simply | Class 11 Maths",
+ "description": "Type 0.01 radians into a calculator and press sine: you get 0.0099998, almost the same number. For tiny angles sin x and x are nearly equal, so sin x over x gets close to 1. But why? In this animated lesson for Class 11 Maths (NCERT Chapter 12, Limits and Derivatives) we find out with the limits of trigonometric functions.\n\nYou will watch an angle shrink live on a circle of radius 1 while the arc x and the height sin x merge and their ratio climbs to 1. We meet the sandwich theorem, prove cos x < sin x / x < 1 with three shapes that fit inside each other, see why x must be in radians, and get the second NCERT result (1 - cos x)/x tends to 0. Then a worked example, the exam trap about matching the angle, an original JEE Main pattern question with a full solution, a recap card and three questions to check yourself.\n\nFollows the NCERT book. Useful for CBSE, ICSE (ISC), Karnataka PUC and other state boards, and JEE.\n\nIn this video:\n0:00 A tiny angle on a calculator\n0:30 The unit circle: arc x, height sin x\n0:46 Live: shrink the angle, watch the ratio\n1:13 The sandwich theorem\n1:33 Proof: three shapes, one squeeze\n2:19 Radians vs degrees\n2:52 The second result: (1 - cos x)/x\n3:22 Worked example\n3:57 Exam trap: match the angle\n4:15 Where it is asked\n4:25 Practice question (JEE Main pattern)\n4:56 Recap and three questions to answer\n\nNext episode (Ep 84): Derivative from First Principles. A speedometer shows your speed at one instant: how can there be a speed at a single moment?\n\nVideo by Quest Academy.",
+ "tags": [
+  "sin x by x limit",
+  "limits of trigonometric functions",
+  "lim sinx/x = 1 proof",
+  "sandwich theorem",
+  "squeeze theorem class 11",
+  "1 - cos x by x limit",
+  "limits class 11",
+  "limits and derivatives class 11",
+  "class 11 maths chapter 12",
+  "NCERT class 11 maths limits",
+  "PUC maths",
+  "first PUC maths",
+  "JEE Main trigonometric limits"
+ ],
+ "thumb": {
+  "title": "sin x over x → 1?",
+  "accent_word": "1?",
+  "frame_t": 62
+ }
+}

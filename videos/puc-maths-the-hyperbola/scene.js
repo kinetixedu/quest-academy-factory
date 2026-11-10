@@ -66,7 +66,7 @@ const pFT = [lab(ps, PCn[0] - Cc * PU, PCn[1] + 32, 'F₁', FV, { 'text-anchor':
 const pP = mk(ps, 'circle', { r: 11, fill: RC, stroke: '#fff', 'stroke-width': 3 }); const pPT = ital(ps, 0, 0, 'P', RC, 24, HALO);
 const tJump = wt('P5', 'other') - 0.1;
 const kY = [[wt('P3', 'Watch'), 0], [wt('P4', 'Eight'), 0], [wt('P4', 'Ten'), 3.919], [wt('P4', 'Eleven'), 5.0], [tJump - 0.3, -5.0]];
-const yR = t => { if (t <= kY[0][0]) return 0; for (let i = 1; i < kY.length; i++) if (t < kY[i][0]) { const [a, ya] = kY[i - 1], [c, yc] = kY[i]; const d = i === 4 ? c - a - 0.5 : Math.max(0.3, Math.min(0.9, c - a - 0.7)); return ya + (yc - ya) * M.io((t - (c - d)) / d); } return kY[kY.length - 1][1]; };
+const yR = t => { if (t <= kY[0][0]) return 0; for (let i = 1; i < kY.length; i++) if (t < kY[i][0]) { const [a, ya] = kY[i - 1], [c, yc] = kY[i]; const d = i === 4 ? c - a - 0.5 : Math.max(0.25, Math.min(0.9, c - a - 0.95)); return ya + (yc - ya) * M.io((t - (c - d)) / d); } return kY[kY.length - 1][1]; };
 const yL = t => 5 - 10 * M.io((t - tJump - 0.3) / Math.max(1, T1('P5') - tJump - 0.6));
 let pLast = '';
 
@@ -87,14 +87,14 @@ const gX = v => GC[0] + v * PU, gY = v => GC[1] - v * PU;
 const gg = clipG(gs, 'gClip', 20, 70, 744, 490);
 [1, -1].forEach(s => mk(gg, 'path', { d: brD(GC, PU, A, Bb, s, 5.6), fill: 'none', stroke: RC, 'stroke-width': 5 }));
 const gTr = ln(gs, gX(-7.6), gY(0), gX(7.6), gY(0), C.ink, 3);
-const gTrT = lab(gs, gX(5.6), gY(0) - 14, 'transverse axis', C.ink2, { 'text-anchor': 'middle', 'font-size': 17 });
+const gTrT = lab(gs, gX(-6.2), gY(0) + 28, 'transverse axis', C.ink2, { 'text-anchor': 'middle', 'font-size': 17 });
 const gO = dotG(gs, GC[0], GC[1], 8, C.ink); const gOT = lab(gs, GC[0] - 10, GC[1] - 14, 'centre', C.ink, { 'text-anchor': 'end' });
 const gV = [-3, 3].map(x => dotG(gs, gX(x), gY(0), 9, AO, '#fff'));
 const gF = [-5, 5].map(x => dotG(gs, gX(x), gY(0), 10, FV, '#fff'));
 const g2a = ln(gs, gX(-3), gY(0) + 40, gX(3), gY(0) + 40, AO, 4); const g2aT = lab(gs, GC[0] + 12, gY(0) + 64, '2a', AO);
 const g2c = ln(gs, gX(-5), gY(0) + 86, gX(5), gY(0) + 86, FV, 4); const g2cT = lab(gs, GC[0] + 12, gY(0) + 110, '2c', FV);
 const gE1 = ln(gs, gX(-5), gY(0) - 8, gX(3), gY(0) - 8, PB, 4), gE2 = ln(gs, gX(5), gY(0) - 16, gX(3), gY(0) - 16, PG, 4);
-const gE1T = lab(gs, gX(-1), gY(0) - 18, 'c + a', PB, { 'text-anchor': 'middle' }), gE2T = lab(gs, gX(4), gY(0) - 28, 'c - a', PG, { 'text-anchor': 'middle' });
+const gE1T = lab(gs, gX(-4), gY(0) - 22, 'c + a', PB, { 'text-anchor': 'middle' }), gE2T = lab(gs, gX(4.3), gY(0) - 32, 'c - a', PG, { 'text-anchor': 'middle' });
 const gBox = mk(gs, 'rect', { x: gX(-3), y: gY(4), width: 6 * PU, height: 8 * PU, fill: 'none', stroke: BT, 'stroke-width': 2.5, 'stroke-dasharray': '8 6' });
 const gConj = ln(gs, gX(0), gY(-4), gX(0), gY(4), BT, 5); const gConjT = lab(gs, gX(0) + 12, gY(3.3), 'conjugate axis', BT, { 'font-size': 17 });
 const gDiag = ln(gs, gX(0), gY(0), gX(3), gY(4), FV, 4); const gDiagT = lab(gs, gX(1.2), gY(2.4), 'c', FV, { 'font-size': 24, 'text-anchor': 'end' });
@@ -165,12 +165,12 @@ const wsol = PUC.solution($('#wl'), [
   [K(`${em('e')} = \\dfrac{5}{4},\\ \\ \\dfrac{2b^2}{a} = ${lg('\\dfrac{9}{2}')}`)]], { label: 'WORKED EXAMPLE', y0: 186, dy: 96 });
 $('#wl .lbl').style.top = '30px';
 const tWs = [wt('W3', 'Divide'), wt('W4', 'plus'), wt('W5', 'c'), wt('W6', 'eccentricity')];
-const ws = $('#wS'), WC = [392, 318], WU = 38;
+const ws = $('#wS'), WC = [392, 318], WU = 26;
 axes(ws, WC, 60, 724, 548, 82);
 const wg = clipG(ws, 'wClip', 20, 70, 744, 490);
 const wBr = [1, -1].map(s => mk(wg, 'path', { d: brD(WC, WU, 4, 3, s, 9, true), fill: 'none', stroke: RC, 'stroke-width': 5 }));
-const wV = [-1, 1].map(s => dotG(ws, WC[0], WC[1] - s * 4 * WU, 8, AO, '#fff')); const wVT = lab(ws, WC[0] + 14, WC[1] - 4 * WU + 26, '(0, 4)', AO);
-const wF = [-1, 1].map(s => dotG(ws, WC[0], WC[1] - s * 5 * WU, 10, FV, '#fff')); const wFT = lab(ws, WC[0] + 14, WC[1] - 5 * WU - 10, '(0, 5)', FV);
+const wV = [-1, 1].map(s => dotG(ws, WC[0], WC[1] - s * 4 * WU, 8, AO, '#fff')); const wVT = lab(ws, WC[0] + 14, WC[1] - 4 * WU + 26, 'vertex (0, 4)', AO);
+const wF = [-1, 1].map(s => dotG(ws, WC[0], WC[1] - s * 5 * WU, 10, FV, '#fff')); const wFT = lab(ws, WC[0] - 2.25 * WU - 12, WC[1] - 5 * WU + 6, 'focus (0, 5)', FV, { 'text-anchor': 'end' });
 const wLR = ln(ws, WC[0] - 2.25 * WU, WC[1] - 5 * WU, WC[0] + 2.25 * WU, WC[1] - 5 * WU, LG, 6); const wLRT = lab(ws, WC[0] + 2.25 * WU + 12, WC[1] - 5 * WU + 6, '9/2', LG);
 const wAx = lab(ws, WC[0] - 14, 100, 'transverse axis: y', C.ink2, { 'text-anchor': 'end', 'font-size': 17 });
 

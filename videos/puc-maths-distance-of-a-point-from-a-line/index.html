@@ -1,0 +1,125 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 73 - Distance of a Point from a Line</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 73: distance of a point from a line (Proof board) ===== */
+:root{--x:#7A4FE0;--y:#2F6FEB;--th:#B7791F;--p0:#B7791F;--d:#0E8F8F}
+#stage svg circle,#stage svg g{transform-box:fill-box;transform-origin:center}
+#stage .ringW svg circle{transform-box:view-box;transform-origin:0 0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.sv{position:absolute;left:0;top:0}
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:54px;font:700 30px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+.fx{position:absolute;white-space:nowrap}
+.big{position:absolute;left:36px;font-size:52px;white-space:nowrap}
+.txt2{position:absolute;left:36px;font:600 28px/1.35 Poppins;width:712px;white-space:nowrap}
+.rd{position:absolute;left:36px;font:600 44px/1 'IBM Plex Mono';white-space:nowrap}
+.rd i{font-family:Poppins;font-style:italic}
+.why2{color:var(--mute);font:500 22px Poppins}
+.a{color:var(--ac)}.t2{color:var(--m2)}.th{color:var(--th)}
+#dl .sol .sx,#wl .sol .sx{font-size:30px}
+#dl .sol .sx .katex,#wl .sol .sx .katex{font-size:1.2em}
+.dd{color:var(--d)}
+.x{color:var(--x)}.y{color:var(--y)}.p0{color:var(--p0)}
+.pk .katex{font-size:1.15em}
+#dP .katex,#gP .katex{font-size:1.3em}
+#so .sol .sx .katex{font-size:1.25em}
+#wq{position:absolute;left:36px;top:64px;width:712px;font:600 28px/1.4 Poppins}
+#wq .katex{font-size:1.2em}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.15em}
+#mq .mq .katex{font-size:1.2em}
+.trapL .tx .katex{font-size:1.3em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:42px}
+#sF .fcard .fl.txt{font-size:32px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 9 STRAIGHT LINES</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">The <span class="acc">Shortest</span> Walk to the Road</div>
+    <div id="sub">Distance of a point from a line</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">A HOUSE AND A STRAIGHT ROAD</div><svg id="hS" class="sv" width="784" height="580"></svg></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · ON THE WAY TO COLLEGE</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-bicycle.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">Which path is shortest, and how long?</div></div>
+    </div>
+
+    <div id="sL">
+      <div class="card full" id="ll"><div class="lbl" style="left:36px;top:30px">LIVE · SLIDE Q ALONG THE ROAD</div>
+        <div class="rd" id="lA" style="top:84px;font-size:36px">Q = (<span class="x" id="lX"></span>, <span class="y" id="lY"></span>)</div>
+        <div class="rd" id="lB" style="top:150px;font-size:60px">PQ = <span class="dd" id="lD"></span></div>
+        <div class="pillp" id="lP" style="left:36px;top:250px"></div>
+        <div class="txt2" id="lW" style="top:340px;white-space:normal;font-weight:500;width:700px"></div></div>
+      <div class="card rf" id="lr"><div class="lbl" style="left:36px;top:30px">ROAD 3x + 4y − 12 = 0 · HOUSE P(5, 4)</div><svg id="lSv" class="sv" width="784" height="580"></svg></div>
+    </div>
+
+    <div id="sG">
+      <div class="card full" id="gl"><div class="lbl" style="left:36px;top:30px">FIRST, EVERYTHING ON ONE SIDE</div>
+        <div class="big pk" id="g0" style="top:96px"></div>
+        <div class="big pk" id="g1" style="top:210px;font-size:46px"></div>
+        <div class="pillp pk" id="gP" style="left:36px;top:340px"></div></div>
+      <div class="card rf" id="gr"><div class="lbl" style="left:36px;top:30px">THE ROAD AND THE HOUSE</div><svg id="gS" class="sv" width="784" height="580"></svg></div>
+    </div>
+
+    <div id="sD">
+      <div class="card full" id="dl"></div>
+      <div class="card rf" id="dr"><div class="lbl" style="left:36px;top:30px">VERTICAL GAP, THEN THE PERPENDICULAR</div><svg id="dS" class="sv" width="784" height="580"></svg>
+        <div class="pillp pk" id="dP" style="left:36px;top:510px"></div></div>
+    </div>
+
+    <div id="sK">
+      <div class="card full" id="kp"><div class="lbl" style="left:36px;top:30px">A POINT AND A LINE</div><div class="fx pk" id="kpF" style="left:36px;top:64px;font-size:30px"></div><svg id="kpS" class="sv" width="784" height="580"></svg></div>
+      <div class="card rf" id="kn"><div class="lbl" style="left:36px;top:30px">TWO PARALLEL LINES</div><div class="fx pk" id="knF" style="left:36px;top:64px;font-size:30px"></div><svg id="knS" class="sv" width="784" height="580"></svg></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sV">
+      <div class="card full" id="vl"><div class="lbl" style="left:36px;top:30px">MAKE THE LINE EQUAL ZERO</div>
+        <div class="big pk" id="v0" style="top:96px"></div>
+        <div class="why2" id="v1" style="position:absolute;left:36px;top:190px">move 10 to the left side</div>
+        <div class="big pk" id="v2" style="top:240px"></div>
+        <div class="pillp bad" id="vP" style="left:36px;top:380px">C = −10, not 10</div></div>
+      <div class="card rf" id="vr"><div class="lbl" style="left:36px;top:30px">3x + 4y = 10</div><svg id="vS" class="sv" width="784" height="580"></svg></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">POINT (3, 1) · LINE 12x − 5y + 8 = 0</div><svg id="wS" class="sv" width="784" height="580"></svg></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">The shortest path is the <span class="acc">perpendicular</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
