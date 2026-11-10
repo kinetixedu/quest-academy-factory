@@ -1,0 +1,129 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 77 - The Hyperbola</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 77: the hyperbola (Proof board) ===== */
+:root{--x:#7A4FE0;--k:#0E8F8F;--b:#2F6FEB;--o:#D9731A}
+#stage svg circle,#stage svg g{transform-box:fill-box;transform-origin:center}
+#stage .ringW svg circle{transform-box:view-box;transform-origin:0 0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.sv{position:absolute;left:0;top:0}
+/* title card */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:54px;font:700 30px Poppins;white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+/* parts list */
+.ss{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.ss .sy{position:absolute;left:18px;top:16px;width:64px;height:64px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:34px}
+.ss .sn{position:absolute;left:104px;top:16px;font:700 28px Poppins;white-space:nowrap}
+.ss .se{position:absolute;left:104px;top:56px;font:500 20px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+/* live readouts */
+.rd{position:absolute;font:600 50px/1 'IBM Plex Mono';white-space:nowrap}
+.chipA{position:absolute;height:48px;padding:0 18px;border-radius:10px;display:inline-flex;align-items:center;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+#sName{position:absolute;right:36px;top:76px;height:56px;padding:0 22px;border-radius:12px;background:var(--ac);color:#fff;display:inline-flex;align-items:center;gap:12px;font:700 28px Poppins;white-space:nowrap}
+#sName i{font:600 22px 'IBM Plex Mono';font-style:normal;opacity:.9}
+/* definition */
+#dfC{position:absolute;left:36px;top:80px;width:712px;font:500 26px/1.4 Poppins;color:var(--ink2)}
+#dfT{position:absolute;left:36px;top:190px;width:712px;font:700 40px/1.3 Poppins;letter-spacing:-.01em}
+#dfT b{color:var(--ac)}
+/* side by side */
+.big{position:absolute;left:36px;font-size:52px;white-space:nowrap}
+.rw{position:absolute;left:36px;height:72px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:14px;font:600 26px Poppins;white-space:nowrap}
+.rw .katex{font-size:1.25em}
+.why2{color:var(--mute);font:500 22px Poppins}
+#rl .sol .sx{font-size:25px}
+#wl .sol .sx{font-size:27px}
+#rl .sol .sx .katex,#wl .sol .sx .katex{font-size:1.25em}
+#wq{position:absolute;left:36px;top:70px;font-size:40px;white-space:nowrap}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.2em}
+#mq .mq .katex{font-size:1.2em}
+.trapL .tx .katex{font-size:1.2em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:44px}
+#sF .fcard .fl.txt{font-size:32px}
+.rdo{position:absolute;left:36px;font:600 44px/1 'IBM Plex Mono';white-space:nowrap}
+.mini{position:absolute;left:36px;font-size:44px;white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 10 CONIC SECTIONS</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Two Foci, One <span class="acc">Hyperbola</span></div>
+    <div id="sub">A fixed difference, two open branches</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">A LAMP · A WALL · TWO EDGES</div><svg id="hS" class="sv" width="784" height="580"></svg></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">AARAV · THE BEDROOM WALL</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/aarav-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-study.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">Two open curves. What are they?</div></div>
+    </div>
+
+    <div id="sP">
+      <div class="card full" id="pl"><div class="lbl" style="left:36px;top:30px">DEFINITION · NCERT</div>
+        <div id="dfT">A hyperbola is the set of all points whose distances from two fixed points <b>differ</b> by a constant.</div>
+        <div class="rdo" id="pR1" style="top:300px"></div><div class="rdo" id="pR2" style="top:362px"></div>
+        <div class="rdo" id="pR3" style="top:436px;padding:10px 16px;margin-left:-16px;border-radius:12px;background:var(--ac2)"></div></div>
+      <div class="card rf" id="pr"><div class="lbl" style="left:36px;top:30px">LIVE · P RUNS ALONG BOTH BRANCHES</div><svg id="pS" class="sv" width="784" height="580"></svg></div>
+    </div>
+
+    <div id="sG">
+      <div class="card full" id="gl"></div>
+      <div class="card rf" id="gr"><div class="lbl" style="left:36px;top:30px">VERTICES, FOCI AND AXES</div><svg id="gS" class="sv" width="784" height="580"></svg></div>
+    </div>
+
+    <div id="sR">
+      <div class="card full" id="rl"><div class="hiBox" id="rHi" style="left:20px;width:744px;height:76px"></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">FOCI (-c, 0) AND (c, 0)</div><svg id="rS" class="sv" width="784" height="580"></svg></div>
+    </div>
+
+    <div id="sE">
+      <div class="card full" id="el"><div class="lbl" style="left:36px;top:30px">LIVE · CHANGE e</div>
+        <div class="rd" id="eV" style="left:36px;top:80px"></div><div class="mini" id="eF" style="top:160px"></div>
+        <svg id="eB" class="sv" width="784" height="580"></svg>
+        <div class="pillp ac" id="eP" style="left:36px;top:496px">For a hyperbola: e &gt; 1</div></div>
+      <div class="card rf" id="er"><div class="lbl" style="left:36px;top:30px">a STAYS 3 · THE FOCI MOVE</div><svg id="eS" class="sv" width="784" height="580"></svg></div>
+    </div>
+
+    <div id="sK">
+      <div class="card full" id="kl"><div class="lbl" style="left:36px;top:30px">ELLIPSE · A FIXED SUM</div><svg id="kS1" class="sv" width="784" height="580"></svg><div id="kR1"></div></div>
+      <div class="card rf" id="kr"><div class="lbl" style="left:36px;top:30px">HYPERBOLA · A FIXED DIFFERENCE</div><svg id="kS2" class="sv" width="784" height="580"></svg><div id="kR2"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">y²/16 - x²/9 = 1 · ITS PARTS</div><svg id="wS" class="sv" width="784" height="580"></svg></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Not a sum: a fixed <span class="acc">difference</span>.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
