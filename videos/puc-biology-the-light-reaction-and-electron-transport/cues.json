@@ -1,0 +1,3291 @@
+{
+ "lines": {
+  "H1": {
+   "t0": 0.45,
+   "t1": 9.454,
+   "text": "Kick a ball up a slope. It rolls back down. A waterfall drops and turns a mill wheel. A solar lamp charges all day and glows at night.",
+   "words": [
+    {
+     "w": "Kick",
+     "t": 0.45
+    },
+    {
+     "w": "a",
+     "t": 0.752
+    },
+    {
+     "w": "ball",
+     "t": 0.908
+    },
+    {
+     "w": "up",
+     "t": 1.211
+    },
+    {
+     "w": "a",
+     "t": 1.416
+    },
+    {
+     "w": "slope.",
+     "t": 1.572
+    },
+    {
+     "w": "It",
+     "t": 2.167
+    },
+    {
+     "w": "rolls",
+     "t": 2.372
+    },
+    {
+     "w": "back",
+     "t": 2.723
+    },
+    {
+     "w": "down.",
+     "t": 3.025
+    },
+    {
+     "w": "A",
+     "t": 3.572
+    },
+    {
+     "w": "waterfall",
+     "t": 3.728
+    },
+    {
+     "w": "drops",
+     "t": 4.274
+    },
+    {
+     "w": "and",
+     "t": 4.625
+    },
+    {
+     "w": "turns",
+     "t": 4.879
+    },
+    {
+     "w": "a",
+     "t": 5.23
+    },
+    {
+     "w": "mill",
+     "t": 5.386
+    },
+    {
+     "w": "wheel.",
+     "t": 5.689
+    },
+    {
+     "w": "A",
+     "t": 6.284
+    },
+    {
+     "w": "solar",
+     "t": 6.44
+    },
+    {
+     "w": "lamp",
+     "t": 6.791
+    },
+    {
+     "w": "charges",
+     "t": 7.093
+    },
+    {
+     "w": "all",
+     "t": 7.542
+    },
+    {
+     "w": "day",
+     "t": 7.796
+    },
+    {
+     "w": "and",
+     "t": 8.049
+    },
+    {
+     "w": "glows",
+     "t": 8.303
+    },
+    {
+     "w": "at",
+     "t": 8.654
+    },
+    {
+     "w": "night.",
+     "t": 8.859
+    }
+   ]
+  },
+  "H2": {
+   "t0": 9.854,
+   "t1": 14.931,
+   "text": "Energy goes up, then comes down and does work. A leaf does the same thing with light.",
+   "words": [
+    {
+     "w": "Energy",
+     "t": 9.854
+    },
+    {
+     "w": "goes",
+     "t": 10.212
+    },
+    {
+     "w": "up,",
+     "t": 10.482
+    },
+    {
+     "w": "then",
+     "t": 10.796
+    },
+    {
+     "w": "comes",
+     "t": 11.067
+    },
+    {
+     "w": "down",
+     "t": 11.381
+    },
+    {
+     "w": "and",
+     "t": 11.651
+    },
+    {
+     "w": "does",
+     "t": 11.878
+    },
+    {
+     "w": "work.",
+     "t": 12.148
+    },
+    {
+     "w": "A",
+     "t": 12.637
+    },
+    {
+     "w": "leaf",
+     "t": 12.776
+    },
+    {
+     "w": "does",
+     "t": 13.047
+    },
+    {
+     "w": "the",
+     "t": 13.317
+    },
+    {
+     "w": "same",
+     "t": 13.544
+    },
+    {
+     "w": "thing",
+     "t": 13.814
+    },
+    {
+     "w": "with",
+     "t": 14.128
+    },
+    {
+     "w": "light.",
+     "t": 14.399
+    }
+   ]
+  },
+  "H3": {
+   "t0": 15.381,
+   "t1": 23.768,
+   "text": "Diya held a leaf up to the sun. She asked: light cannot be held in your hand, so how does a leaf catch it? And where does that energy go?",
+   "words": [
+    {
+     "w": "Diya",
+     "t": 15.381
+    },
+    {
+     "w": "held",
+     "t": 15.655
+    },
+    {
+     "w": "a",
+     "t": 15.928
+    },
+    {
+     "w": "leaf",
+     "t": 16.07
+    },
+    {
+     "w": "up",
+     "t": 16.343
+    },
+    {
+     "w": "to",
+     "t": 16.529
+    },
+    {
+     "w": "the",
+     "t": 16.714
+    },
+    {
+     "w": "sun.",
+     "t": 16.944
+    },
+    {
+     "w": "She",
+     "t": 17.394
+    },
+    {
+     "w": "asked:",
+     "t": 17.623
+    },
+    {
+     "w": "light",
+     "t": 18.074
+    },
+    {
+     "w": "cannot",
+     "t": 18.391
+    },
+    {
+     "w": "be",
+     "t": 18.753
+    },
+    {
+     "w": "held",
+     "t": 18.939
+    },
+    {
+     "w": "in",
+     "t": 19.212
+    },
+    {
+     "w": "your",
+     "t": 19.398
+    },
+    {
+     "w": "hand,",
+     "t": 19.671
+    },
+    {
+     "w": "so",
+     "t": 20.077
+    },
+    {
+     "w": "how",
+     "t": 20.263
+    },
+    {
+     "w": "does",
+     "t": 20.492
+    },
+    {
+     "w": "a",
+     "t": 20.766
+    },
+    {
+     "w": "leaf",
+     "t": 20.907
+    },
+    {
+     "w": "catch",
+     "t": 21.181
+    },
+    {
+     "w": "it?",
+     "t": 21.499
+    },
+    {
+     "w": "And",
+     "t": 21.905
+    },
+    {
+     "w": "where",
+     "t": 22.134
+    },
+    {
+     "w": "does",
+     "t": 22.452
+    },
+    {
+     "w": "that",
+     "t": 22.726
+    },
+    {
+     "w": "energy",
+     "t": 23.0
+    },
+    {
+     "w": "go?",
+     "t": 23.361
+    }
+   ]
+  },
+  "H4": {
+   "t0": 24.118,
+   "t1": 32.8,
+   "text": "Here is the short answer. Pigments catch light and push electrons up to high energy. As the electrons come down, step by step, their energy is stored.",
+   "words": [
+    {
+     "w": "Here",
+     "t": 24.118
+    },
+    {
+     "w": "is",
+     "t": 24.388
+    },
+    {
+     "w": "the",
+     "t": 24.57
+    },
+    {
+     "w": "short",
+     "t": 24.797
+    },
+    {
+     "w": "answer.",
+     "t": 25.11
+    },
+    {
+     "w": "Pigments",
+     "t": 25.685
+    },
+    {
+     "w": "catch",
+     "t": 26.129
+    },
+    {
+     "w": "light",
+     "t": 26.443
+    },
+    {
+     "w": "and",
+     "t": 26.756
+    },
+    {
+     "w": "push",
+     "t": 26.983
+    },
+    {
+     "w": "electrons",
+     "t": 27.253
+    },
+    {
+     "w": "up",
+     "t": 27.74
+    },
+    {
+     "w": "to",
+     "t": 27.923
+    },
+    {
+     "w": "high",
+     "t": 28.106
+    },
+    {
+     "w": "energy.",
+     "t": 28.376
+    },
+    {
+     "w": "As",
+     "t": 28.951
+    },
+    {
+     "w": "the",
+     "t": 29.133
+    },
+    {
+     "w": "electrons",
+     "t": 29.36
+    },
+    {
+     "w": "come",
+     "t": 29.848
+    },
+    {
+     "w": "down,",
+     "t": 30.117
+    },
+    {
+     "w": "step",
+     "t": 30.518
+    },
+    {
+     "w": "by",
+     "t": 30.788
+    },
+    {
+     "w": "step,",
+     "t": 30.971
+    },
+    {
+     "w": "their",
+     "t": 31.371
+    },
+    {
+     "w": "energy",
+     "t": 31.685
+    },
+    {
+     "w": "is",
+     "t": 32.042
+    },
+    {
+     "w": "stored.",
+     "t": 32.225
+    }
+   ]
+  },
+  "H5": {
+   "t0": 33.3,
+   "t1": 39.062,
+   "text": "By the end, you will know the light reaction, the two photosystems, the Z scheme, and the splitting of water.",
+   "words": [
+    {
+     "w": "By",
+     "t": 33.3
+    },
+    {
+     "w": "the",
+     "t": 33.465
+    },
+    {
+     "w": "end,",
+     "t": 33.671
+    },
+    {
+     "w": "you",
+     "t": 33.994
+    },
+    {
+     "w": "will",
+     "t": 34.199
+    },
+    {
+     "w": "know",
+     "t": 34.444
+    },
+    {
+     "w": "the",
+     "t": 34.689
+    },
+    {
+     "w": "light",
+     "t": 34.894
+    },
+    {
+     "w": "reaction,",
+     "t": 35.178
+    },
+    {
+     "w": "the",
+     "t": 35.699
+    },
+    {
+     "w": "two",
+     "t": 35.904
+    },
+    {
+     "w": "photosystems,",
+     "t": 36.11
+    },
+    {
+     "w": "the",
+     "t": 36.789
+    },
+    {
+     "w": "Z",
+     "t": 36.994
+    },
+    {
+     "w": "scheme,",
+     "t": 37.12
+    },
+    {
+     "w": "and",
+     "t": 37.562
+    },
+    {
+     "w": "the",
+     "t": 37.767
+    },
+    {
+     "w": "splitting",
+     "t": 37.973
+    },
+    {
+     "w": "of",
+     "t": 38.415
+    },
+    {
+     "w": "water.",
+     "t": 38.58
+    }
+   ]
+  },
+  "B1": {
+   "t0": 39.712,
+   "t1": 41.776,
+   "text": "First, what is the light reaction?",
+   "words": [
+    {
+     "w": "First,",
+     "t": 39.712
+    },
+    {
+     "w": "what",
+     "t": 40.149
+    },
+    {
+     "w": "is",
+     "t": 40.414
+    },
+    {
+     "w": "the",
+     "t": 40.594
+    },
+    {
+     "w": "light",
+     "t": 40.817
+    },
+    {
+     "w": "reaction?",
+     "t": 41.125
+    }
+   ]
+  },
+  "B2": {
+   "t0": 42.126,
+   "t1": 47.614,
+   "text": "It is the part of photosynthesis that needs light directly. It happens on the thylakoid membranes.",
+   "words": [
+    {
+     "w": "It",
+     "t": 42.126
+    },
+    {
+     "w": "is",
+     "t": 42.308
+    },
+    {
+     "w": "the",
+     "t": 42.491
+    },
+    {
+     "w": "part",
+     "t": 42.717
+    },
+    {
+     "w": "of",
+     "t": 42.987
+    },
+    {
+     "w": "photosynthesis",
+     "t": 43.169
+    },
+    {
+     "w": "that",
+     "t": 43.874
+    },
+    {
+     "w": "needs",
+     "t": 44.144
+    },
+    {
+     "w": "light",
+     "t": 44.457
+    },
+    {
+     "w": "directly.",
+     "t": 44.77
+    },
+    {
+     "w": "It",
+     "t": 45.431
+    },
+    {
+     "w": "happens",
+     "t": 45.613
+    },
+    {
+     "w": "on",
+     "t": 46.014
+    },
+    {
+     "w": "the",
+     "t": 46.196
+    },
+    {
+     "w": "thylakoid",
+     "t": 46.422
+    },
+    {
+     "w": "membranes.",
+     "t": 46.909
+    }
+   ]
+  },
+  "B3": {
+   "t0": 48.064,
+   "t1": 54.764,
+   "text": "It has four events: light is absorbed, water is split, oxygen is released, and two energy carriers, ATP and NADPH, are made.",
+   "words": [
+    {
+     "w": "It",
+     "t": 48.064
+    },
+    {
+     "w": "has",
+     "t": 48.232
+    },
+    {
+     "w": "four",
+     "t": 48.44
+    },
+    {
+     "w": "events:",
+     "t": 48.688
+    },
+    {
+     "w": "light",
+     "t": 49.137
+    },
+    {
+     "w": "is",
+     "t": 49.425
+    },
+    {
+     "w": "absorbed,",
+     "t": 49.593
+    },
+    {
+     "w": "water",
+     "t": 50.121
+    },
+    {
+     "w": "is",
+     "t": 50.409
+    },
+    {
+     "w": "split,",
+     "t": 50.578
+    },
+    {
+     "w": "oxygen",
+     "t": 50.986
+    },
+    {
+     "w": "is",
+     "t": 51.314
+    },
+    {
+     "w": "released,",
+     "t": 51.482
+    },
+    {
+     "w": "and",
+     "t": 52.011
+    },
+    {
+     "w": "two",
+     "t": 52.219
+    },
+    {
+     "w": "energy",
+     "t": 52.427
+    },
+    {
+     "w": "carriers,",
+     "t": 52.755
+    },
+    {
+     "w": "ATP",
+     "t": 53.283
+    },
+    {
+     "w": "and",
+     "t": 53.492
+    },
+    {
+     "w": "NADPH,",
+     "t": 53.7
+    },
+    {
+     "w": "are",
+     "t": 54.108
+    },
+    {
+     "w": "made.",
+     "t": 54.316
+    }
+   ]
+  },
+  "Z1": {
+   "t0": 55.414,
+   "t1": 57.486,
+   "text": "Let's zoom in to where light is caught.",
+   "words": [
+    {
+     "w": "Let's",
+     "t": 55.414
+    },
+    {
+     "w": "zoom",
+     "t": 55.659
+    },
+    {
+     "w": "in",
+     "t": 55.903
+    },
+    {
+     "w": "to",
+     "t": 56.068
+    },
+    {
+     "w": "where",
+     "t": 56.234
+    },
+    {
+     "w": "light",
+     "t": 56.517
+    },
+    {
+     "w": "is",
+     "t": 56.801
+    },
+    {
+     "w": "caught.",
+     "t": 56.966
+    }
+   ]
+  },
+  "Z2": {
+   "t0": 57.836,
+   "t1": 61.647,
+   "text": "Inside a chloroplast, the thylakoid membranes hold groups of pigments.",
+   "words": [
+    {
+     "w": "Inside",
+     "t": 57.836
+    },
+    {
+     "w": "a",
+     "t": 58.187
+    },
+    {
+     "w": "chloroplast,",
+     "t": 58.324
+    },
+    {
+     "w": "the",
+     "t": 59.018
+    },
+    {
+     "w": "thylakoid",
+     "t": 59.241
+    },
+    {
+     "w": "membranes",
+     "t": 59.72
+    },
+    {
+     "w": "hold",
+     "t": 60.2
+    },
+    {
+     "w": "groups",
+     "t": 60.465
+    },
+    {
+     "w": "of",
+     "t": 60.816
+    },
+    {
+     "w": "pigments.",
+     "t": 60.996
+    }
+   ]
+  },
+  "Z3": {
+   "t0": 62.147,
+   "t1": 71.371,
+   "text": "Zoom closer. Each group is a light harvesting complex, inside a photosystem. Most of its pigments act like an antenna, catching light.",
+   "words": [
+    {
+     "w": "Zoom",
+     "t": 62.147
+    },
+    {
+     "w": "closer.",
+     "t": 62.47
+    },
+    {
+     "w": "Each",
+     "t": 63.156
+    },
+    {
+     "w": "group",
+     "t": 63.478
+    },
+    {
+     "w": "is",
+     "t": 63.853
+    },
+    {
+     "w": "a",
+     "t": 64.071
+    },
+    {
+     "w": "light",
+     "t": 64.237
+    },
+    {
+     "w": "harvesting",
+     "t": 64.612
+    },
+    {
+     "w": "complex,",
+     "t": 65.246
+    },
+    {
+     "w": "inside",
+     "t": 65.88
+    },
+    {
+     "w": "a",
+     "t": 66.307
+    },
+    {
+     "w": "photosystem.",
+     "t": 66.473
+    },
+    {
+     "w": "Most",
+     "t": 67.419
+    },
+    {
+     "w": "of",
+     "t": 67.742
+    },
+    {
+     "w": "its",
+     "t": 67.96
+    },
+    {
+     "w": "pigments",
+     "t": 68.23
+    },
+    {
+     "w": "act",
+     "t": 68.761
+    },
+    {
+     "w": "like",
+     "t": 69.031
+    },
+    {
+     "w": "an",
+     "t": 69.353
+    },
+    {
+     "w": "antenna,",
+     "t": 69.572
+    },
+    {
+     "w": "catching",
+     "t": 70.206
+    },
+    {
+     "w": "light.",
+     "t": 70.737
+    }
+   ]
+  },
+  "Z4": {
+   "t0": 71.871,
+   "t1": 79.575,
+   "text": "Zoom to the centre. The antenna passes the energy to just one chlorophyll a molecule. This is the reaction centre.",
+   "words": [
+    {
+     "w": "Zoom",
+     "t": 71.871
+    },
+    {
+     "w": "to",
+     "t": 72.187
+    },
+    {
+     "w": "the",
+     "t": 72.401
+    },
+    {
+     "w": "centre.",
+     "t": 72.667
+    },
+    {
+     "w": "The",
+     "t": 73.34
+    },
+    {
+     "w": "antenna",
+     "t": 73.605
+    },
+    {
+     "w": "passes",
+     "t": 74.075
+    },
+    {
+     "w": "the",
+     "t": 74.493
+    },
+    {
+     "w": "energy",
+     "t": 74.759
+    },
+    {
+     "w": "to",
+     "t": 75.177
+    },
+    {
+     "w": "just",
+     "t": 75.391
+    },
+    {
+     "w": "one",
+     "t": 75.708
+    },
+    {
+     "w": "chlorophyll",
+     "t": 75.973
+    },
+    {
+     "w": "a",
+     "t": 76.646
+    },
+    {
+     "w": "molecule.",
+     "t": 76.81
+    },
+    {
+     "w": "This",
+     "t": 77.585
+    },
+    {
+     "w": "is",
+     "t": 77.901
+    },
+    {
+     "w": "the",
+     "t": 78.116
+    },
+    {
+     "w": "reaction",
+     "t": 78.381
+    },
+    {
+     "w": "centre.",
+     "t": 78.901
+    }
+   ]
+  },
+  "L1": {
+   "t0": 80.225,
+   "t1": 84.053,
+   "text": "Now follow one electron along its path, step by step.",
+   "words": [
+    {
+     "w": "Now",
+     "t": 80.225
+    },
+    {
+     "w": "follow",
+     "t": 80.501
+    },
+    {
+     "w": "one",
+     "t": 80.937
+    },
+    {
+     "w": "electron",
+     "t": 81.214
+    },
+    {
+     "w": "along",
+     "t": 81.756
+    },
+    {
+     "w": "its",
+     "t": 82.139
+    },
+    {
+     "w": "path,",
+     "t": 82.415
+    },
+    {
+     "w": "step",
+     "t": 82.905
+    },
+    {
+     "w": "by",
+     "t": 83.234
+    },
+    {
+     "w": "step.",
+     "t": 83.458
+    }
+   ]
+  },
+  "L2": {
+   "t0": 84.403,
+   "t1": 92.429,
+   "text": "Step one. Photosystem two absorbs red light of six hundred eighty nanometres. An electron in its reaction centre jumps up to high energy.",
+   "words": [
+    {
+     "w": "Step",
+     "t": 84.403
+    },
+    {
+     "w": "one.",
+     "t": 84.683
+    },
+    {
+     "w": "Photosystem",
+     "t": 85.144
+    },
+    {
+     "w": "two",
+     "t": 85.741
+    },
+    {
+     "w": "absorbs",
+     "t": 85.976
+    },
+    {
+     "w": "red",
+     "t": 86.392
+    },
+    {
+     "w": "light",
+     "t": 86.627
+    },
+    {
+     "w": "of",
+     "t": 86.952
+    },
+    {
+     "w": "six",
+     "t": 87.142
+    },
+    {
+     "w": "hundred",
+     "t": 87.377
+    },
+    {
+     "w": "eighty",
+     "t": 87.792
+    },
+    {
+     "w": "nanometres.",
+     "t": 88.163
+    },
+    {
+     "w": "An",
+     "t": 88.94
+    },
+    {
+     "w": "electron",
+     "t": 89.13
+    },
+    {
+     "w": "in",
+     "t": 89.591
+    },
+    {
+     "w": "its",
+     "t": 89.781
+    },
+    {
+     "w": "reaction",
+     "t": 90.016
+    },
+    {
+     "w": "centre",
+     "t": 90.477
+    },
+    {
+     "w": "jumps",
+     "t": 90.847
+    },
+    {
+     "w": "up",
+     "t": 91.173
+    },
+    {
+     "w": "to",
+     "t": 91.363
+    },
+    {
+     "w": "high",
+     "t": 91.552
+    },
+    {
+     "w": "energy.",
+     "t": 91.833
+    }
+   ]
+  },
+  "L3": {
+   "t0": 93.179,
+   "t1": 100.823,
+   "text": "Step two. An electron acceptor catches it and passes it down a chain of cytochromes. Cytochromes are carrier proteins. This is the electron transport chain.",
+   "words": [
+    {
+     "w": "Step",
+     "t": 93.179
+    },
+    {
+     "w": "two.",
+     "t": 93.412
+    },
+    {
+     "w": "An",
+     "t": 93.797
+    },
+    {
+     "w": "electron",
+     "t": 93.955
+    },
+    {
+     "w": "acceptor",
+     "t": 94.339
+    },
+    {
+     "w": "catches",
+     "t": 94.723
+    },
+    {
+     "w": "it",
+     "t": 95.069
+    },
+    {
+     "w": "and",
+     "t": 95.227
+    },
+    {
+     "w": "passes",
+     "t": 95.423
+    },
+    {
+     "w": "it",
+     "t": 95.732
+    },
+    {
+     "w": "down",
+     "t": 95.89
+    },
+    {
+     "w": "a",
+     "t": 96.124
+    },
+    {
+     "w": "chain",
+     "t": 96.244
+    },
+    {
+     "w": "of",
+     "t": 96.515
+    },
+    {
+     "w": "cytochromes.",
+     "t": 96.673
+    },
+    {
+     "w": "Cytochromes",
+     "t": 97.359
+    },
+    {
+     "w": "are",
+     "t": 97.856
+    },
+    {
+     "w": "carrier",
+     "t": 98.051
+    },
+    {
+     "w": "proteins.",
+     "t": 98.398
+    },
+    {
+     "w": "This",
+     "t": 98.97
+    },
+    {
+     "w": "is",
+     "t": 99.204
+    },
+    {
+     "w": "the",
+     "t": 99.362
+    },
+    {
+     "w": "electron",
+     "t": 99.558
+    },
+    {
+     "w": "transport",
+     "t": 99.942
+    },
+    {
+     "w": "chain.",
+     "t": 100.363
+    }
+   ]
+  },
+  "L4": {
+   "t0": 101.573,
+   "t1": 104.66,
+   "text": "Step three. The electron reaches photosystem one.",
+   "words": [
+    {
+     "w": "Step",
+     "t": 101.573
+    },
+    {
+     "w": "three.",
+     "t": 101.861
+    },
+    {
+     "w": "The",
+     "t": 102.428
+    },
+    {
+     "w": "electron",
+     "t": 102.67
+    },
+    {
+     "w": "reaches",
+     "t": 103.144
+    },
+    {
+     "w": "photosystem",
+     "t": 103.572
+    },
+    {
+     "w": "one.",
+     "t": 104.186
+    }
+   ]
+  },
+  "L5": {
+   "t0": 105.41,
+   "t1": 112.695,
+   "text": "Step four. Photosystem one absorbs light of seven hundred nanometres. Its electron jumps up again, to an even higher energy.",
+   "words": [
+    {
+     "w": "Step",
+     "t": 105.41
+    },
+    {
+     "w": "four.",
+     "t": 105.687
+    },
+    {
+     "w": "Photosystem",
+     "t": 106.188
+    },
+    {
+     "w": "one",
+     "t": 106.778
+    },
+    {
+     "w": "absorbs",
+     "t": 107.01
+    },
+    {
+     "w": "light",
+     "t": 107.421
+    },
+    {
+     "w": "of",
+     "t": 107.743
+    },
+    {
+     "w": "seven",
+     "t": 107.931
+    },
+    {
+     "w": "hundred",
+     "t": 108.252
+    },
+    {
+     "w": "nanometres.",
+     "t": 108.664
+    },
+    {
+     "w": "Its",
+     "t": 109.432
+    },
+    {
+     "w": "electron",
+     "t": 109.665
+    },
+    {
+     "w": "jumps",
+     "t": 110.12
+    },
+    {
+     "w": "up",
+     "t": 110.442
+    },
+    {
+     "w": "again,",
+     "t": 110.63
+    },
+    {
+     "w": "to",
+     "t": 111.086
+    },
+    {
+     "w": "an",
+     "t": 111.273
+    },
+    {
+     "w": "even",
+     "t": 111.461
+    },
+    {
+     "w": "higher",
+     "t": 111.738
+    },
+    {
+     "w": "energy.",
+     "t": 112.105
+    }
+   ]
+  },
+  "L6": {
+   "t0": 113.445,
+   "t1": 122.09,
+   "text": "Step five. It moves down to NADP plus, which becomes NADPH. Drawn on an energy scale, this path looks like the letter Z. So it is called the Z scheme.",
+   "words": [
+    {
+     "w": "Step",
+     "t": 113.445
+    },
+    {
+     "w": "five.",
+     "t": 113.703
+    },
+    {
+     "w": "It",
+     "t": 114.171
+    },
+    {
+     "w": "moves",
+     "t": 114.347
+    },
+    {
+     "w": "down",
+     "t": 114.647
+    },
+    {
+     "w": "to",
+     "t": 114.906
+    },
+    {
+     "w": "NADP",
+     "t": 115.082
+    },
+    {
+     "w": "plus,",
+     "t": 115.341
+    },
+    {
+     "w": "which",
+     "t": 115.725
+    },
+    {
+     "w": "becomes",
+     "t": 116.026
+    },
+    {
+     "w": "NADPH.",
+     "t": 116.41
+    },
+    {
+     "w": "Drawn",
+     "t": 116.92
+    },
+    {
+     "w": "on",
+     "t": 117.22
+    },
+    {
+     "w": "an",
+     "t": 117.396
+    },
+    {
+     "w": "energy",
+     "t": 117.571
+    },
+    {
+     "w": "scale,",
+     "t": 117.914
+    },
+    {
+     "w": "this",
+     "t": 118.34
+    },
+    {
+     "w": "path",
+     "t": 118.599
+    },
+    {
+     "w": "looks",
+     "t": 118.858
+    },
+    {
+     "w": "like",
+     "t": 119.158
+    },
+    {
+     "w": "the",
+     "t": 119.417
+    },
+    {
+     "w": "letter",
+     "t": 119.634
+    },
+    {
+     "w": "Z.",
+     "t": 119.977
+    },
+    {
+     "w": "So",
+     "t": 120.319
+    },
+    {
+     "w": "it",
+     "t": 120.495
+    },
+    {
+     "w": "is",
+     "t": 120.67
+    },
+    {
+     "w": "called",
+     "t": 120.846
+    },
+    {
+     "w": "the",
+     "t": 121.188
+    },
+    {
+     "w": "Z",
+     "t": 121.405
+    },
+    {
+     "w": "scheme.",
+     "t": 121.539
+    }
+   ]
+  },
+  "T1": {
+   "t0": 122.84,
+   "t1": 126.173,
+   "text": "Remember this. Up, down, up, down. The Z scheme.",
+   "words": [
+    {
+     "w": "Remember",
+     "t": 122.84
+    },
+    {
+     "w": "this.",
+     "t": 123.277
+    },
+    {
+     "w": "Up,",
+     "t": 123.757
+    },
+    {
+     "w": "down,",
+     "t": 124.065
+    },
+    {
+     "w": "up,",
+     "t": 124.459
+    },
+    {
+     "w": "down.",
+     "t": 124.768
+    },
+    {
+     "w": "The",
+     "t": 125.248
+    },
+    {
+     "w": "Z",
+     "t": 125.47
+    },
+    {
+     "w": "scheme.",
+     "t": 125.607
+    }
+   ]
+  },
+  "C1": {
+   "t0": 126.773,
+   "t1": 131.367,
+   "text": "But wait. Photosystem two gave away an electron. Who refills it?",
+   "words": [
+    {
+     "w": "But",
+     "t": 126.773
+    },
+    {
+     "w": "wait.",
+     "t": 127.038
+    },
+    {
+     "w": "Photosystem",
+     "t": 127.608
+    },
+    {
+     "w": "two",
+     "t": 128.28
+    },
+    {
+     "w": "gave",
+     "t": 128.545
+    },
+    {
+     "w": "away",
+     "t": 128.861
+    },
+    {
+     "w": "an",
+     "t": 129.177
+    },
+    {
+     "w": "electron.",
+     "t": 129.391
+    },
+    {
+     "w": "Who",
+     "t": 130.165
+    },
+    {
+     "w": "refills",
+     "t": 130.43
+    },
+    {
+     "w": "it?",
+     "t": 130.899
+    }
+   ]
+  },
+  "C2": {
+   "t0": 131.717,
+   "t1": 139.984,
+   "text": "Water does. Water splitting is linked to photosystem two. Two water molecules split into four protons, one oxygen molecule and four electrons.",
+   "words": [
+    {
+     "w": "Water",
+     "t": 131.717
+    },
+    {
+     "w": "does.",
+     "t": 132.042
+    },
+    {
+     "w": "Water",
+     "t": 132.547
+    },
+    {
+     "w": "splitting",
+     "t": 132.871
+    },
+    {
+     "w": "is",
+     "t": 133.376
+    },
+    {
+     "w": "linked",
+     "t": 133.565
+    },
+    {
+     "w": "to",
+     "t": 133.935
+    },
+    {
+     "w": "photosystem",
+     "t": 134.124
+    },
+    {
+     "w": "two.",
+     "t": 134.719
+    },
+    {
+     "w": "Two",
+     "t": 135.179
+    },
+    {
+     "w": "water",
+     "t": 135.413
+    },
+    {
+     "w": "molecules",
+     "t": 135.738
+    },
+    {
+     "w": "split",
+     "t": 136.243
+    },
+    {
+     "w": "into",
+     "t": 136.567
+    },
+    {
+     "w": "four",
+     "t": 136.847
+    },
+    {
+     "w": "protons,",
+     "t": 137.126
+    },
+    {
+     "w": "one",
+     "t": 137.676
+    },
+    {
+     "w": "oxygen",
+     "t": 137.911
+    },
+    {
+     "w": "molecule",
+     "t": 138.28
+    },
+    {
+     "w": "and",
+     "t": 138.74
+    },
+    {
+     "w": "four",
+     "t": 138.974
+    },
+    {
+     "w": "electrons.",
+     "t": 139.254
+    }
+   ]
+  },
+  "C3": {
+   "t0": 140.434,
+   "t1": 146.879,
+   "text": "These electrons refill photosystem two. The oxygen is released into the air. That is the oxygen we breathe.",
+   "words": [
+    {
+     "w": "These",
+     "t": 140.434
+    },
+    {
+     "w": "electrons",
+     "t": 140.762
+    },
+    {
+     "w": "refill",
+     "t": 141.271
+    },
+    {
+     "w": "photosystem",
+     "t": 141.645
+    },
+    {
+     "w": "two.",
+     "t": 142.245
+    },
+    {
+     "w": "The",
+     "t": 142.71
+    },
+    {
+     "w": "oxygen",
+     "t": 142.946
+    },
+    {
+     "w": "is",
+     "t": 143.32
+    },
+    {
+     "w": "released",
+     "t": 143.511
+    },
+    {
+     "w": "into",
+     "t": 143.975
+    },
+    {
+     "w": "the",
+     "t": 144.257
+    },
+    {
+     "w": "air.",
+     "t": 144.494
+    },
+    {
+     "w": "That",
+     "t": 144.958
+    },
+    {
+     "w": "is",
+     "t": 145.24
+    },
+    {
+     "w": "the",
+     "t": 145.431
+    },
+    {
+     "w": "oxygen",
+     "t": 145.668
+    },
+    {
+     "w": "we",
+     "t": 146.041
+    },
+    {
+     "w": "breathe.",
+     "t": 146.232
+    }
+   ]
+  },
+  "D1": {
+   "t0": 147.529,
+   "t1": 148.939,
+   "text": "Now compare the two photosystems.",
+   "words": [
+    {
+     "w": "Now",
+     "t": 147.529
+    },
+    {
+     "w": "compare",
+     "t": 147.695
+    },
+    {
+     "w": "the",
+     "t": 147.99
+    },
+    {
+     "w": "two",
+     "t": 148.157
+    },
+    {
+     "w": "photosystems.",
+     "t": 148.324
+    }
+   ]
+  },
+  "D2": {
+   "t0": 149.289,
+   "t1": 157.468,
+   "text": "Photosystem two. Its reaction centre is P six eighty, because it absorbs best at six hundred eighty nanometres. It is linked with splitting water.",
+   "words": [
+    {
+     "w": "Photosystem",
+     "t": 149.289
+    },
+    {
+     "w": "two.",
+     "t": 149.858
+    },
+    {
+     "w": "Its",
+     "t": 150.298
+    },
+    {
+     "w": "reaction",
+     "t": 150.522
+    },
+    {
+     "w": "centre",
+     "t": 150.961
+    },
+    {
+     "w": "is",
+     "t": 151.315
+    },
+    {
+     "w": "P",
+     "t": 151.496
+    },
+    {
+     "w": "six",
+     "t": 151.633
+    },
+    {
+     "w": "eighty,",
+     "t": 151.858
+    },
+    {
+     "w": "because",
+     "t": 152.34
+    },
+    {
+     "w": "it",
+     "t": 152.737
+    },
+    {
+     "w": "absorbs",
+     "t": 152.918
+    },
+    {
+     "w": "best",
+     "t": 153.314
+    },
+    {
+     "w": "at",
+     "t": 153.581
+    },
+    {
+     "w": "six",
+     "t": 153.762
+    },
+    {
+     "w": "hundred",
+     "t": 153.986
+    },
+    {
+     "w": "eighty",
+     "t": 154.383
+    },
+    {
+     "w": "nanometres.",
+     "t": 154.736
+    },
+    {
+     "w": "It",
+     "t": 155.477
+    },
+    {
+     "w": "is",
+     "t": 155.658
+    },
+    {
+     "w": "linked",
+     "t": 155.839
+    },
+    {
+     "w": "with",
+     "t": 156.192
+    },
+    {
+     "w": "splitting",
+     "t": 156.459
+    },
+    {
+     "w": "water.",
+     "t": 156.942
+    }
+   ]
+  },
+  "D3": {
+   "t0": 157.918,
+   "t1": 165.68,
+   "text": "Photosystem one. Its reaction centre is P seven hundred, absorbing best at seven hundred nanometres. It passes electrons to NADP plus.",
+   "words": [
+    {
+     "w": "Photosystem",
+     "t": 157.918
+    },
+    {
+     "w": "one.",
+     "t": 158.506
+    },
+    {
+     "w": "Its",
+     "t": 158.96
+    },
+    {
+     "w": "reaction",
+     "t": 159.192
+    },
+    {
+     "w": "centre",
+     "t": 159.647
+    },
+    {
+     "w": "is",
+     "t": 160.012
+    },
+    {
+     "w": "P",
+     "t": 160.199
+    },
+    {
+     "w": "seven",
+     "t": 160.342
+    },
+    {
+     "w": "hundred,",
+     "t": 160.663
+    },
+    {
+     "w": "absorbing",
+     "t": 161.206
+    },
+    {
+     "w": "best",
+     "t": 161.705
+    },
+    {
+     "w": "at",
+     "t": 161.981
+    },
+    {
+     "w": "seven",
+     "t": 162.169
+    },
+    {
+     "w": "hundred",
+     "t": 162.489
+    },
+    {
+     "w": "nanometres.",
+     "t": 162.899
+    },
+    {
+     "w": "It",
+     "t": 163.666
+    },
+    {
+     "w": "passes",
+     "t": 163.853
+    },
+    {
+     "w": "electrons",
+     "t": 164.218
+    },
+    {
+     "w": "to",
+     "t": 164.717
+    },
+    {
+     "w": "NADP",
+     "t": 164.904
+    },
+    {
+     "w": "plus.",
+     "t": 165.181
+    }
+   ]
+  },
+  "U1": {
+   "t0": 166.33,
+   "t1": 168.633,
+   "text": "Here is a strange fact about the names.",
+   "words": [
+    {
+     "w": "Here",
+     "t": 166.33
+    },
+    {
+     "w": "is",
+     "t": 166.596
+    },
+    {
+     "w": "a",
+     "t": 166.777
+    },
+    {
+     "w": "strange",
+     "t": 166.914
+    },
+    {
+     "w": "fact",
+     "t": 167.309
+    },
+    {
+     "w": "about",
+     "t": 167.576
+    },
+    {
+     "w": "the",
+     "t": 167.885
+    },
+    {
+     "w": "names.",
+     "t": 168.109
+    }
+   ]
+  },
+  "U2": {
+   "t0": 168.983,
+   "t1": 172.983,
+   "text": "The photosystems were numbered in the order they were discovered, not in the order they work.",
+   "words": [
+    {
+     "w": "The",
+     "t": 168.983
+    },
+    {
+     "w": "photosystems",
+     "t": 169.157
+    },
+    {
+     "w": "were",
+     "t": 169.634
+    },
+    {
+     "w": "numbered",
+     "t": 169.842
+    },
+    {
+     "w": "in",
+     "t": 170.184
+    },
+    {
+     "w": "the",
+     "t": 170.325
+    },
+    {
+     "w": "order",
+     "t": 170.5
+    },
+    {
+     "w": "they",
+     "t": 170.741
+    },
+    {
+     "w": "were",
+     "t": 170.949
+    },
+    {
+     "w": "discovered,",
+     "t": 171.157
+    },
+    {
+     "w": "not",
+     "t": 171.667
+    },
+    {
+     "w": "in",
+     "t": 171.842
+    },
+    {
+     "w": "the",
+     "t": 171.983
+    },
+    {
+     "w": "order",
+     "t": 172.157
+    },
+    {
+     "w": "they",
+     "t": 172.399
+    },
+    {
+     "w": "work.",
+     "t": 172.607
+    }
+   ]
+  },
+  "U3": {
+   "t0": 173.433,
+   "t1": 177.882,
+   "text": "So photosystem two works first, and photosystem one works second.",
+   "words": [
+    {
+     "w": "So",
+     "t": 173.433
+    },
+    {
+     "w": "photosystem",
+     "t": 173.655
+    },
+    {
+     "w": "two",
+     "t": 174.354
+    },
+    {
+     "w": "works",
+     "t": 174.63
+    },
+    {
+     "w": "first,",
+     "t": 175.011
+    },
+    {
+     "w": "and",
+     "t": 175.551
+    },
+    {
+     "w": "photosystem",
+     "t": 175.827
+    },
+    {
+     "w": "one",
+     "t": 176.526
+    },
+    {
+     "w": "works",
+     "t": 176.801
+    },
+    {
+     "w": "second.",
+     "t": 177.182
+    }
+   ]
+  },
+  "U4": {
+   "t0": 178.482,
+   "t1": 184.19,
+   "text": "Your turn. Which photosystem is linked with splitting water, one or two? Pause and decide.",
+   "words": [
+    {
+     "w": "Your",
+     "t": 178.482
+    },
+    {
+     "w": "turn.",
+     "t": 178.769
+    },
+    {
+     "w": "Which",
+     "t": 179.289
+    },
+    {
+     "w": "photosystem",
+     "t": 179.623
+    },
+    {
+     "w": "is",
+     "t": 180.236
+    },
+    {
+     "w": "linked",
+     "t": 180.431
+    },
+    {
+     "w": "with",
+     "t": 180.812
+    },
+    {
+     "w": "splitting",
+     "t": 181.099
+    },
+    {
+     "w": "water,",
+     "t": 181.619
+    },
+    {
+     "w": "one",
+     "t": 182.093
+    },
+    {
+     "w": "or",
+     "t": 182.334
+    },
+    {
+     "w": "two?",
+     "t": 182.529
+    },
+    {
+     "w": "Pause",
+     "t": 183.002
+    },
+    {
+     "w": "and",
+     "t": 183.336
+    },
+    {
+     "w": "decide.",
+     "t": 183.578
+    }
+   ]
+  },
+  "U5": {
+   "t0": 187.39,
+   "t1": 190.749,
+   "text": "Photosystem two! Its lost electrons are refilled from water.",
+   "words": [
+    {
+     "w": "Photosystem",
+     "t": 187.39
+    },
+    {
+     "w": "two!",
+     "t": 187.946
+    },
+    {
+     "w": "Its",
+     "t": 188.375
+    },
+    {
+     "w": "lost",
+     "t": 188.594
+    },
+    {
+     "w": "electrons",
+     "t": 188.855
+    },
+    {
+     "w": "are",
+     "t": 189.326
+    },
+    {
+     "w": "refilled",
+     "t": 189.545
+    },
+    {
+     "w": "from",
+     "t": 189.975
+    },
+    {
+     "w": "water.",
+     "t": 190.235
+    }
+   ]
+  },
+  "W1": {
+   "t0": 191.399,
+   "t1": 195.456,
+   "text": "Now, a worked example. Count the electrons for one oxygen molecule.",
+   "words": [
+    {
+     "w": "Now,",
+     "t": 191.399
+    },
+    {
+     "w": "a",
+     "t": 191.764
+    },
+    {
+     "w": "worked",
+     "t": 191.906
+    },
+    {
+     "w": "example.",
+     "t": 192.271
+    },
+    {
+     "w": "Count",
+     "t": 192.903
+    },
+    {
+     "w": "the",
+     "t": 193.223
+    },
+    {
+     "w": "electrons",
+     "t": 193.454
+    },
+    {
+     "w": "for",
+     "t": 193.953
+    },
+    {
+     "w": "one",
+     "t": 194.184
+    },
+    {
+     "w": "oxygen",
+     "t": 194.415
+    },
+    {
+     "w": "molecule.",
+     "t": 194.78
+    }
+   ]
+  },
+  "W2": {
+   "t0": 195.806,
+   "t1": 199.513,
+   "text": "Splitting two water molecules gives one oxygen molecule and four electrons.",
+   "words": [
+    {
+     "w": "Splitting",
+     "t": 195.806
+    },
+    {
+     "w": "two",
+     "t": 196.252
+    },
+    {
+     "w": "water",
+     "t": 196.459
+    },
+    {
+     "w": "molecules",
+     "t": 196.745
+    },
+    {
+     "w": "gives",
+     "t": 197.191
+    },
+    {
+     "w": "one",
+     "t": 197.477
+    },
+    {
+     "w": "oxygen",
+     "t": 197.684
+    },
+    {
+     "w": "molecule",
+     "t": 198.01
+    },
+    {
+     "w": "and",
+     "t": 198.416
+    },
+    {
+     "w": "four",
+     "t": 198.622
+    },
+    {
+     "w": "electrons.",
+     "t": 198.869
+    }
+   ]
+  },
+  "W3": {
+   "t0": 199.963,
+   "t1": 201.994,
+   "text": "Each NADP plus needs two electrons to become NADPH.",
+   "words": [
+    {
+     "w": "Each",
+     "t": 199.963
+    },
+    {
+     "w": "NADP",
+     "t": 200.152
+    },
+    {
+     "w": "plus",
+     "t": 200.34
+    },
+    {
+     "w": "needs",
+     "t": 200.529
+    },
+    {
+     "w": "two",
+     "t": 200.748
+    },
+    {
+     "w": "electrons",
+     "t": 200.906
+    },
+    {
+     "w": "to",
+     "t": 201.246
+    },
+    {
+     "w": "become",
+     "t": 201.374
+    },
+    {
+     "w": "NADPH.",
+     "t": 201.623
+    }
+   ]
+  },
+  "W4": {
+   "t0": 202.444,
+   "t1": 207.119,
+   "text": "Four electrons divided by two is two. So one oxygen released goes with two NADPH made.",
+   "words": [
+    {
+     "w": "Four",
+     "t": 202.444
+    },
+    {
+     "w": "electrons",
+     "t": 202.698
+    },
+    {
+     "w": "divided",
+     "t": 203.156
+    },
+    {
+     "w": "by",
+     "t": 203.533
+    },
+    {
+     "w": "two",
+     "t": 203.705
+    },
+    {
+     "w": "is",
+     "t": 203.918
+    },
+    {
+     "w": "two.",
+     "t": 204.09
+    },
+    {
+     "w": "So",
+     "t": 204.507
+    },
+    {
+     "w": "one",
+     "t": 204.679
+    },
+    {
+     "w": "oxygen",
+     "t": 204.892
+    },
+    {
+     "w": "released",
+     "t": 205.227
+    },
+    {
+     "w": "goes",
+     "t": 205.645
+    },
+    {
+     "w": "with",
+     "t": 205.899
+    },
+    {
+     "w": "two",
+     "t": 206.153
+    },
+    {
+     "w": "NADPH",
+     "t": 206.365
+    },
+    {
+     "w": "made.",
+     "t": 206.66
+    }
+   ]
+  },
+  "X1": {
+   "t0": 207.769,
+   "t1": 209.233,
+   "text": "Now, the exam trap.",
+   "words": [
+    {
+     "w": "Now,",
+     "t": 207.769
+    },
+    {
+     "w": "the",
+     "t": 208.158
+    },
+    {
+     "w": "exam",
+     "t": 208.406
+    },
+    {
+     "w": "trap.",
+     "t": 208.7
+    }
+   ]
+  },
+  "X2": {
+   "t0": 209.583,
+   "t1": 213.983,
+   "text": "Many students think photosystem one works first, because it is number one.",
+   "words": [
+    {
+     "w": "Many",
+     "t": 209.583
+    },
+    {
+     "w": "students",
+     "t": 209.869
+    },
+    {
+     "w": "think",
+     "t": 210.339
+    },
+    {
+     "w": "photosystem",
+     "t": 210.671
+    },
+    {
+     "w": "one",
+     "t": 211.28
+    },
+    {
+     "w": "works",
+     "t": 211.52
+    },
+    {
+     "w": "first,",
+     "t": 211.852
+    },
+    {
+     "w": "because",
+     "t": 212.323
+    },
+    {
+     "w": "it",
+     "t": 212.747
+    },
+    {
+     "w": "is",
+     "t": 212.941
+    },
+    {
+     "w": "number",
+     "t": 213.134
+    },
+    {
+     "w": "one.",
+     "t": 213.513
+    }
+   ]
+  },
+  "X3": {
+   "t0": 214.383,
+   "t1": 220.076,
+   "text": "But the numbers show the order of discovery. In the Z scheme, photosystem two works first.",
+   "words": [
+    {
+     "w": "But",
+     "t": 214.383
+    },
+    {
+     "w": "the",
+     "t": 214.629
+    },
+    {
+     "w": "numbers",
+     "t": 214.876
+    },
+    {
+     "w": "show",
+     "t": 215.311
+    },
+    {
+     "w": "the",
+     "t": 215.605
+    },
+    {
+     "w": "order",
+     "t": 215.851
+    },
+    {
+     "w": "of",
+     "t": 216.192
+    },
+    {
+     "w": "discovery.",
+     "t": 216.391
+    },
+    {
+     "w": "In",
+     "t": 217.158
+    },
+    {
+     "w": "the",
+     "t": 217.357
+    },
+    {
+     "w": "Z",
+     "t": 217.603
+    },
+    {
+     "w": "scheme,",
+     "t": 217.755
+    },
+    {
+     "w": "photosystem",
+     "t": 218.285
+    },
+    {
+     "w": "two",
+     "t": 218.911
+    },
+    {
+     "w": "works",
+     "t": 219.157
+    },
+    {
+     "w": "first.",
+     "t": 219.498
+    }
+   ]
+  },
+  "E1": {
+   "t0": 220.726,
+   "t1": 227.848,
+   "text": "Where is this asked? As assertion reason and statement questions on P six eighty, P seven hundred and water splitting.",
+   "words": [
+    {
+     "w": "Where",
+     "t": 220.726
+    },
+    {
+     "w": "is",
+     "t": 221.061
+    },
+    {
+     "w": "this",
+     "t": 221.256
+    },
+    {
+     "w": "asked?",
+     "t": 221.545
+    },
+    {
+     "w": "As",
+     "t": 222.113
+    },
+    {
+     "w": "assertion",
+     "t": 222.308
+    },
+    {
+     "w": "reason",
+     "t": 222.83
+    },
+    {
+     "w": "and",
+     "t": 223.211
+    },
+    {
+     "w": "statement",
+     "t": 223.454
+    },
+    {
+     "w": "questions",
+     "t": 223.975
+    },
+    {
+     "w": "on",
+     "t": 224.496
+    },
+    {
+     "w": "P",
+     "t": 224.692
+    },
+    {
+     "w": "six",
+     "t": 224.841
+    },
+    {
+     "w": "eighty,",
+     "t": 225.083
+    },
+    {
+     "w": "P",
+     "t": 225.604
+    },
+    {
+     "w": "seven",
+     "t": 225.753
+    },
+    {
+     "w": "hundred",
+     "t": 226.088
+    },
+    {
+     "w": "and",
+     "t": 226.517
+    },
+    {
+     "w": "water",
+     "t": 226.759
+    },
+    {
+     "w": "splitting.",
+     "t": 227.094
+    }
+   ]
+  },
+  "Q1": {
+   "t0": 228.448,
+   "t1": 232.975,
+   "text": "Exam level now. Read the assertion and the reason. Pause and solve.",
+   "words": [
+    {
+     "w": "Exam",
+     "t": 228.448
+    },
+    {
+     "w": "level",
+     "t": 228.745
+    },
+    {
+     "w": "now.",
+     "t": 229.09
+    },
+    {
+     "w": "Read",
+     "t": 229.58
+    },
+    {
+     "w": "the",
+     "t": 229.877
+    },
+    {
+     "w": "assertion",
+     "t": 230.126
+    },
+    {
+     "w": "and",
+     "t": 230.663
+    },
+    {
+     "w": "the",
+     "t": 230.913
+    },
+    {
+     "w": "reason.",
+     "t": 231.162
+    },
+    {
+     "w": "Pause",
+     "t": 231.795
+    },
+    {
+     "w": "and",
+     "t": 232.141
+    },
+    {
+     "w": "solve.",
+     "t": 232.39
+    }
+   ]
+  },
+  "A1": {
+   "t0": 238.375,
+   "t1": 242.35,
+   "text": "The answer is A. Both are true, and the reason explains the assertion.",
+   "words": [
+    {
+     "w": "The",
+     "t": 238.375
+    },
+    {
+     "w": "answer",
+     "t": 238.589
+    },
+    {
+     "w": "is",
+     "t": 238.926
+    },
+    {
+     "w": "A.",
+     "t": 239.099
+    },
+    {
+     "w": "Both",
+     "t": 239.437
+    },
+    {
+     "w": "are",
+     "t": 239.692
+    },
+    {
+     "w": "true,",
+     "t": 239.906
+    },
+    {
+     "w": "and",
+     "t": 240.285
+    },
+    {
+     "w": "the",
+     "t": 240.499
+    },
+    {
+     "w": "reason",
+     "t": 240.713
+    },
+    {
+     "w": "explains",
+     "t": 241.05
+    },
+    {
+     "w": "the",
+     "t": 241.47
+    },
+    {
+     "w": "assertion.",
+     "t": 241.684
+    }
+   ]
+  },
+  "A2": {
+   "t0": 242.85,
+   "t1": 249.012,
+   "text": "Photosystem two loses electrons every time light hits its reaction centre. So it needs a steady supply.",
+   "words": [
+    {
+     "w": "Photosystem",
+     "t": 242.85
+    },
+    {
+     "w": "two",
+     "t": 243.465
+    },
+    {
+     "w": "loses",
+     "t": 243.707
+    },
+    {
+     "w": "electrons",
+     "t": 244.042
+    },
+    {
+     "w": "every",
+     "t": 244.563
+    },
+    {
+     "w": "time",
+     "t": 244.898
+    },
+    {
+     "w": "light",
+     "t": 245.187
+    },
+    {
+     "w": "hits",
+     "t": 245.522
+    },
+    {
+     "w": "its",
+     "t": 245.81
+    },
+    {
+     "w": "reaction",
+     "t": 246.052
+    },
+    {
+     "w": "centre.",
+     "t": 246.527
+    },
+    {
+     "w": "So",
+     "t": 247.141
+    },
+    {
+     "w": "it",
+     "t": 247.337
+    },
+    {
+     "w": "needs",
+     "t": 247.532
+    },
+    {
+     "w": "a",
+     "t": 247.867
+    },
+    {
+     "w": "steady",
+     "t": 248.016
+    },
+    {
+     "w": "supply.",
+     "t": 248.398
+    }
+   ]
+  },
+  "A3": {
+   "t0": 249.512,
+   "t1": 254.565,
+   "text": "Water splitting gives electrons that replace the lost ones. So the reason explains the assertion.",
+   "words": [
+    {
+     "w": "Water",
+     "t": 249.512
+    },
+    {
+     "w": "splitting",
+     "t": 249.806
+    },
+    {
+     "w": "gives",
+     "t": 250.262
+    },
+    {
+     "w": "electrons",
+     "t": 250.555
+    },
+    {
+     "w": "that",
+     "t": 251.012
+    },
+    {
+     "w": "replace",
+     "t": 251.264
+    },
+    {
+     "w": "the",
+     "t": 251.639
+    },
+    {
+     "w": "lost",
+     "t": 251.851
+    },
+    {
+     "w": "ones.",
+     "t": 252.104
+    },
+    {
+     "w": "So",
+     "t": 252.56
+    },
+    {
+     "w": "the",
+     "t": 252.731
+    },
+    {
+     "w": "reason",
+     "t": 252.943
+    },
+    {
+     "w": "explains",
+     "t": 253.277
+    },
+    {
+     "w": "the",
+     "t": 253.693
+    },
+    {
+     "w": "assertion.",
+     "t": 253.905
+    }
+   ]
+  },
+  "F1": {
+   "t0": 255.165,
+   "t1": 258.288,
+   "text": "Here is your recap. Screenshot this card.",
+   "words": [
+    {
+     "w": "Here",
+     "t": 255.165
+    },
+    {
+     "w": "is",
+     "t": 255.497
+    },
+    {
+     "w": "your",
+     "t": 255.721
+    },
+    {
+     "w": "recap.",
+     "t": 256.053
+    },
+    {
+     "w": "Screenshot",
+     "t": 256.705
+    },
+    {
+     "w": "this",
+     "t": 257.357
+    },
+    {
+     "w": "card.",
+     "t": 257.689
+    }
+   ]
+  },
+  "Y1": {
+   "t0": 261.488,
+   "t1": 263.674,
+   "text": "Can you answer these three questions without help?",
+   "words": [
+    {
+     "w": "Can",
+     "t": 261.488
+    },
+    {
+     "w": "you",
+     "t": 261.664
+    },
+    {
+     "w": "answer",
+     "t": 261.84
+    },
+    {
+     "w": "these",
+     "t": 262.117
+    },
+    {
+     "w": "three",
+     "t": 262.361
+    },
+    {
+     "w": "questions",
+     "t": 262.605
+    },
+    {
+     "w": "without",
+     "t": 262.984
+    },
+    {
+     "w": "help?",
+     "t": 263.295
+    }
+   ]
+  },
+  "Y2": {
+   "t0": 264.074,
+   "t1": 266.16,
+   "text": "One. What is a reaction centre?",
+   "words": [
+    {
+     "w": "One.",
+     "t": 264.074
+    },
+    {
+     "w": "What",
+     "t": 264.525
+    },
+    {
+     "w": "is",
+     "t": 264.799
+    },
+    {
+     "w": "a",
+     "t": 264.985
+    },
+    {
+     "w": "reaction",
+     "t": 265.126
+    },
+    {
+     "w": "centre?",
+     "t": 265.577
+    }
+   ]
+  },
+  "Y3": {
+   "t0": 267.06,
+   "t1": 269.204,
+   "text": "Two. Why is it called the Z scheme?",
+   "words": [
+    {
+     "w": "Two.",
+     "t": 267.06
+    },
+    {
+     "w": "Why",
+     "t": 267.468
+    },
+    {
+     "w": "is",
+     "t": 267.676
+    },
+    {
+     "w": "it",
+     "t": 267.844
+    },
+    {
+     "w": "called",
+     "t": 268.012
+    },
+    {
+     "w": "the",
+     "t": 268.34
+    },
+    {
+     "w": "Z",
+     "t": 268.548
+    },
+    {
+     "w": "scheme?",
+     "t": 268.676
+    }
+   ]
+  },
+  "Y4": {
+   "t0": 270.104,
+   "t1": 273.725,
+   "text": "Three. Which photosystem splits water, and what is released?",
+   "words": [
+    {
+     "w": "Three.",
+     "t": 270.104
+    },
+    {
+     "w": "Which",
+     "t": 270.644
+    },
+    {
+     "w": "photosystem",
+     "t": 270.963
+    },
+    {
+     "w": "splits",
+     "t": 271.547
+    },
+    {
+     "w": "water,",
+     "t": 271.91
+    },
+    {
+     "w": "and",
+     "t": 272.361
+    },
+    {
+     "w": "what",
+     "t": 272.592
+    },
+    {
+     "w": "is",
+     "t": 272.866
+    },
+    {
+     "w": "released?",
+     "t": 273.052
+    }
+   ]
+  },
+  "N1": {
+   "t0": 274.825,
+   "t1": 279.78,
+   "text": "Next time: how does a pile of protons spin a tiny machine that makes ATP? We find out in photophosphorylation and chemiosmosis.",
+   "words": [
+    {
+     "w": "Next",
+     "t": 274.825
+    },
+    {
+     "w": "time:",
+     "t": 275.012
+    },
+    {
+     "w": "how",
+     "t": 275.289
+    },
+    {
+     "w": "does",
+     "t": 275.446
+    },
+    {
+     "w": "a",
+     "t": 275.632
+    },
+    {
+     "w": "pile",
+     "t": 275.729
+    },
+    {
+     "w": "of",
+     "t": 275.916
+    },
+    {
+     "w": "protons",
+     "t": 276.042
+    },
+    {
+     "w": "spin",
+     "t": 276.32
+    },
+    {
+     "w": "a",
+     "t": 276.507
+    },
+    {
+     "w": "tiny",
+     "t": 276.603
+    },
+    {
+     "w": "machine",
+     "t": 276.79
+    },
+    {
+     "w": "that",
+     "t": 277.067
+    },
+    {
+     "w": "makes",
+     "t": 277.254
+    },
+    {
+     "w": "ATP?",
+     "t": 277.471
+    },
+    {
+     "w": "We",
+     "t": 277.778
+    },
+    {
+     "w": "find",
+     "t": 277.905
+    },
+    {
+     "w": "out",
+     "t": 278.092
+    },
+    {
+     "w": "in",
+     "t": 278.249
+    },
+    {
+     "w": "photophosphorylation",
+     "t": 278.375
+    },
+    {
+     "w": "and",
+     "t": 279.044
+    },
+    {
+     "w": "chemiosmosis.",
+     "t": 279.201
+    }
+   ]
+  }
+ },
+ "order": [
+  "H1",
+  "H2",
+  "H3",
+  "H4",
+  "H5",
+  "B1",
+  "B2",
+  "B3",
+  "Z1",
+  "Z2",
+  "Z3",
+  "Z4",
+  "L1",
+  "L2",
+  "L3",
+  "L4",
+  "L5",
+  "L6",
+  "T1",
+  "C1",
+  "C2",
+  "C3",
+  "D1",
+  "D2",
+  "D3",
+  "U1",
+  "U2",
+  "U3",
+  "U4",
+  "U5",
+  "W1",
+  "W2",
+  "W3",
+  "W4",
+  "X1",
+  "X2",
+  "X3",
+  "E1",
+  "Q1",
+  "A1",
+  "A2",
+  "A3",
+  "F1",
+  "Y1",
+  "Y2",
+  "Y3",
+  "Y4",
+  "N1"
+ ],
+ "dur": 280.08
+}
