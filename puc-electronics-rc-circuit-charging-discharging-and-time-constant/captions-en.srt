@@ -1,0 +1,478 @@
+1
+00:00:00,450 --> 00:00:01,836
+Aarav clicks a photo.
+
+2
+00:00:01,836 --> 00:00:03,970
+The camera flash fires in a blink.
+
+3
+00:00:04,270 --> 00:00:05,448
+He clicks again.
+
+4
+00:00:05,448 --> 00:00:06,348
+Nothing.
+
+5
+00:00:06,128 --> 00:00:08,005
+The flash is not ready yet.
+
+6
+00:00:08,305 --> 00:00:10,894
+Why does the flash make
+him wait a few seconds?
+
+7
+00:00:11,394 --> 00:00:15,255
+Think of a water tank, filled
+from a tap through a thin pipe.
+
+8
+00:00:15,605 --> 00:00:18,004
+At first, the water rushes in fast.
+
+9
+00:00:18,354 --> 00:00:21,677
+As the tank fills, the
+water inside pushes back.
+
+10
+00:00:22,027 --> 00:00:23,987
+So the flow gets slower and slower.
+
+11
+00:00:24,337 --> 00:00:26,781
+A circuit can do exactly the same thing.
+
+12
+00:00:27,131 --> 00:00:28,940
+The tank is a capacitor.
+
+13
+00:00:28,940 --> 00:00:30,790
+It stores electric charge.
+
+14
+00:00:31,140 --> 00:00:33,082
+The thin pipe is a resistor.
+
+15
+00:00:33,082 --> 00:00:35,023
+It slows the flow of charge.
+
+16
+00:00:35,373 --> 00:00:39,185
+A resistor and a capacitor
+together make an RC circuit.
+
+17
+00:00:39,835 --> 00:00:41,872
+Let's build one on the breadboard.
+
+18
+00:00:42,222 --> 00:00:46,944
+A ten volt battery, a resistor,
+a capacitor and a two way switch.
+
+19
+00:00:47,294 --> 00:00:48,884
+Flip the switch to charge.
+
+20
+00:00:48,884 --> 00:00:50,336
+Electrons start to flow.
+
+21
+00:00:50,686 --> 00:00:51,847
+Watch the scope.
+
+22
+00:00:51,847 --> 00:00:54,708
+The capacitor voltage
+shoots up fast at first.
+
+23
+00:00:55,058 --> 00:00:57,905
+Then it slows down, and
+creeps up towards ten volts.
+
+24
+00:00:58,255 --> 00:01:00,178
+The current does the opposite.
+
+25
+00:01:00,178 --> 00:01:02,251
+It starts big, then dies away.
+
+26
+00:01:02,601 --> 00:01:05,663
+When the capacitor is
+full, the current stops.
+
+27
+00:01:06,313 --> 00:01:08,408
+Now flip the switch the other way.
+
+28
+00:01:08,408 --> 00:01:10,371
+The battery is out of the loop.
+
+29
+00:01:10,721 --> 00:01:14,314
+The capacitor pushes its charge
+back out through the resistor.
+
+30
+00:01:14,664 --> 00:01:19,091
+Its voltage falls fast, then
+slower and slower, down to zero.
+
+31
+00:01:19,741 --> 00:01:21,734
+But why does the filling slow down?
+
+32
+00:01:22,084 --> 00:01:25,835
+The battery's ten volts are shared
+by the resistor and the capacitor.
+
+33
+00:01:26,185 --> 00:01:28,608
+At the start, the capacitor is empty.
+
+34
+00:01:28,608 --> 00:01:30,652
+The resistor gets all ten volts.
+
+35
+00:01:31,002 --> 00:01:32,514
+So the current is big.
+
+36
+00:01:32,864 --> 00:01:36,337
+As charge piles up, the
+capacitor voltage rises.
+
+37
+00:01:36,337 --> 00:01:37,605
+It pushes back.
+
+38
+00:01:37,955 --> 00:01:40,397
+Less voltage is left for the resistor.
+
+39
+00:01:40,397 --> 00:01:41,955
+So the current shrinks.
+
+40
+00:01:42,305 --> 00:01:44,351
+Less current means slower filling.
+
+41
+00:01:44,351 --> 00:01:46,178
+That is why the curve bends.
+
+42
+00:01:46,828 --> 00:01:48,533
+So how fast does it fill?
+
+43
+00:01:48,533 --> 00:01:49,989
+One number decides it.
+
+44
+00:01:50,339 --> 00:01:53,766
+Multiply the resistance
+R by the capacitance C.
+
+45
+00:01:54,466 --> 00:01:56,311
+This is the time constant.
+
+46
+00:01:56,311 --> 00:01:58,884
+We write it as tau, a Greek letter.
+
+47
+00:01:59,584 --> 00:02:03,711
+After one tau, the capacitor is
+about sixty three percent full.
+
+48
+00:02:04,411 --> 00:02:07,040
+After two tau, about eighty six percent.
+
+49
+00:02:07,390 --> 00:02:10,376
+After five tau, more
+than ninety nine percent.
+
+50
+00:02:10,376 --> 00:02:11,702
+We call that full.
+
+51
+00:02:12,402 --> 00:02:15,283
+Bigger R or bigger C means a bigger tau.
+
+52
+00:02:15,283 --> 00:02:16,925
+The tank fills slower.
+
+53
+00:02:17,575 --> 00:02:19,636
+Now the rules, step by step.
+
+54
+00:02:19,636 --> 00:02:20,730
+Charging first.
+
+55
+00:02:21,080 --> 00:02:25,538
+VC equals V, times one minus
+e to the minus t over tau.
+
+56
+00:02:26,238 --> 00:02:28,972
+Here, e is not the charge of an electron.
+
+57
+00:02:29,322 --> 00:02:32,829
+It is a special number, about
+two point seven one eight.
+
+58
+00:02:33,529 --> 00:02:35,077
+Put t equal to tau.
+
+59
+00:02:35,077 --> 00:02:37,265
+You get one minus one over e.
+
+60
+00:02:37,615 --> 00:02:39,972
+That is zero point six three two.
+
+61
+00:02:39,972 --> 00:02:41,425
+Sixty three percent.
+
+62
+00:02:42,125 --> 00:02:46,124
+The current is I nought, times
+e to the minus t over tau.
+
+63
+00:02:46,824 --> 00:02:50,451
+I nought is V over R, the
+current at the very start.
+
+64
+00:02:51,151 --> 00:02:55,896
+Discharging: VC equals V nought,
+times e to the minus t over tau.
+
+65
+00:02:56,596 --> 00:03:00,859
+After one tau, only thirty seven
+percent of the voltage is left.
+
+66
+00:03:01,559 --> 00:03:03,231
+Why is tau in seconds?
+
+67
+00:03:03,231 --> 00:03:05,329
+An ohm is a volt per ampere.
+
+68
+00:03:05,679 --> 00:03:07,842
+A farad is a coulomb per volt.
+
+69
+00:03:08,542 --> 00:03:09,613
+Multiply them.
+
+70
+00:03:09,613 --> 00:03:10,894
+The volts cancel.
+
+71
+00:03:10,894 --> 00:03:13,315
+A coulomb per ampere is one second.
+
+72
+00:03:13,965 --> 00:03:15,849
+R times C sets the pace.
+
+73
+00:03:15,849 --> 00:03:18,358
+One tau, sixty three percent full.
+
+74
+00:03:19,158 --> 00:03:20,302
+Worked example.
+
+75
+00:03:20,302 --> 00:03:22,663
+Our breadboard used ten kilo ohms.
+
+76
+00:03:23,013 --> 00:03:24,826
+And two hundred and twenty microfarads.
+
+77
+00:03:25,176 --> 00:03:26,632
+Tau equals R times C.
+
+78
+00:03:26,632 --> 00:03:29,473
+Ten thousand times two
+hundred twenty millionths.
+
+79
+00:03:29,823 --> 00:03:31,567
+That is two point two seconds.
+
+80
+00:03:32,217 --> 00:03:36,420
+After one tau, the voltage is zero
+point six three two times ten.
+
+81
+00:03:36,770 --> 00:03:38,905
+That is about six point three volts.
+
+82
+00:03:39,555 --> 00:03:41,455
+Full takes about five tau.
+
+83
+00:03:41,455 --> 00:03:44,413
+Five times two point
+two is eleven seconds.
+
+84
+00:03:45,063 --> 00:03:46,909
+The flash works like this.
+
+85
+00:03:46,909 --> 00:03:49,634
+Its capacitor needs a few tau to refill.
+
+86
+00:03:50,284 --> 00:03:51,748
+Now, the exam trap.
+
+87
+00:03:52,098 --> 00:03:55,229
+Many students think the
+capacitor is full after one tau.
+
+88
+00:03:55,579 --> 00:03:56,479
+It is not.
+
+89
+00:03:56,467 --> 00:03:59,808
+After one tau, it is only
+sixty three percent full.
+
+90
+00:04:00,158 --> 00:04:01,992
+Full takes about five tau.
+
+91
+00:04:02,642 --> 00:04:04,020
+Where is this asked?
+
+92
+00:04:04,020 --> 00:04:05,397
+In PUC board papers.
+
+93
+00:04:05,747 --> 00:04:08,802
+And in JEE Main, for example
+in April twenty eighteen.
+
+94
+00:04:09,152 --> 00:04:13,944
+Find tau, the voltage after some
+time, or the time to reach a voltage.
+
+95
+00:04:14,594 --> 00:04:15,494
+Try this.
+
+96
+00:04:15,432 --> 00:04:19,991
+A four microfarad capacitor at twelve
+volts discharges through five hundred
+
+97
+00:04:19,991 --> 00:04:20,891
+kilo ohms.
+
+98
+00:04:20,881 --> 00:04:23,089
+When does it reach three volts?
+
+99
+00:04:23,089 --> 00:04:26,993
+Take the natural log of two
+as zero point six nine three.
+
+100
+00:04:32,393 --> 00:04:33,293
+C.
+
+101
+00:04:32,784 --> 00:04:35,079
+About two point seven seven seconds.
+
+102
+00:04:35,429 --> 00:04:37,035
+First, tau equals RC.
+
+103
+00:04:37,035 --> 00:04:40,469
+Five hundred thousand times
+four millionths is two seconds.
+
+104
+00:04:40,819 --> 00:04:43,746
+Twelve volts down to three
+volts is one quarter.
+
+105
+00:04:43,746 --> 00:04:45,159
+That is two halvings.
+
+106
+00:04:45,509 --> 00:04:48,836
+Each halving takes tau times
+the natural log of two.
+
+107
+00:04:48,836 --> 00:04:51,111
+About one point three nine seconds.
+
+108
+00:04:51,461 --> 00:04:54,503
+So two halvings take about
+two point seven seven seconds.
+
+109
+00:04:55,153 --> 00:04:56,700
+Screenshot this card.
+
+110
+00:04:59,900 --> 00:05:01,184
+Next, RL circuits.
+
+111
+00:05:01,184 --> 00:05:04,403
+What happens when a coil fights
+a sudden change in current?

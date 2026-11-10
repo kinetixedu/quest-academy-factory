@@ -1,0 +1,458 @@
+1
+00:00:00,450 --> 00:00:02,696
+Aarav switches off the old table fan.
+
+2
+00:00:02,996 --> 00:00:06,010
+Inside the switch, a
+tiny spark jumps across.
+
+3
+00:00:06,310 --> 00:00:08,684
+Why does switching off a fan make a spark?
+
+4
+00:00:09,184 --> 00:00:11,757
+Think of a heavy water
+wheel inside a pipe.
+
+5
+00:00:12,107 --> 00:00:13,007
+Open the tap.
+
+6
+00:00:13,004 --> 00:00:15,188
+The heavy wheel is slow to get moving.
+
+7
+00:00:15,538 --> 00:00:18,867
+So the flow builds up
+slowly, not all at once.
+
+8
+00:00:19,217 --> 00:00:20,155
+Close the tap.
+
+9
+00:00:20,155 --> 00:00:23,102
+The spinning wheel keeps the
+water moving for a while.
+
+10
+00:00:23,452 --> 00:00:26,665
+A coil of wire, an inductor,
+behaves like that wheel.
+
+11
+00:00:27,015 --> 00:00:29,037
+It fights any change in current.
+
+12
+00:00:29,037 --> 00:00:30,912
+This is called self induction.
+
+13
+00:00:31,262 --> 00:00:34,901
+A resistor and an inductor
+together make an RL circuit.
+
+14
+00:00:35,551 --> 00:00:37,592
+Let's build one on the breadboard.
+
+15
+00:00:37,942 --> 00:00:42,175
+A ten volt battery, a resistor,
+a coil and a two way switch.
+
+16
+00:00:42,525 --> 00:00:46,325
+This change is very fast, so
+we watch it in slow motion.
+
+17
+00:00:46,675 --> 00:00:47,689
+Flip the switch.
+
+18
+00:00:47,689 --> 00:00:49,388
+The current does not jump up.
+
+19
+00:00:49,738 --> 00:00:53,809
+It rises fast at first, then
+creeps up to its full value.
+
+20
+00:00:54,159 --> 00:00:56,565
+The coil's voltage does the opposite.
+
+21
+00:00:56,565 --> 00:00:59,081
+It starts at ten volts, then fades.
+
+22
+00:00:59,431 --> 00:01:03,393
+Once the current is steady, the
+coil has nothing left to fight.
+
+23
+00:01:04,043 --> 00:01:06,274
+Now flip the switch the other way.
+
+24
+00:01:06,274 --> 00:01:07,630
+The battery is out.
+
+25
+00:01:07,980 --> 00:01:10,078
+The current does not stop at once.
+
+26
+00:01:10,078 --> 00:01:11,946
+It keeps flowing the same way.
+
+27
+00:01:12,296 --> 00:01:14,746
+It dies away slowly, through the resistor.
+
+28
+00:01:15,396 --> 00:01:18,075
+Without that path, it has nowhere to go.
+
+29
+00:01:18,075 --> 00:01:19,391
+That is the spark.
+
+30
+00:01:20,041 --> 00:01:22,029
+But why does the current rise slowly?
+
+31
+00:01:22,379 --> 00:01:25,590
+The battery's ten volts are shared
+by the coil and the resistor.
+
+32
+00:01:25,940 --> 00:01:28,829
+At the start, the current
+is trying to change fast.
+
+33
+00:01:29,179 --> 00:01:31,814
+So the coil pushes back
+with all ten volts.
+
+34
+00:01:31,814 --> 00:01:33,285
+The resistor gets none.
+
+35
+00:01:33,635 --> 00:01:36,418
+As the current grows,
+it changes more slowly.
+
+36
+00:01:36,768 --> 00:01:38,884
+So the coil pushes back less.
+
+37
+00:01:38,884 --> 00:01:41,196
+More voltage reaches the resistor.
+
+38
+00:01:41,546 --> 00:01:44,774
+The closer it gets to
+full, the slower it climbs.
+
+39
+00:01:44,774 --> 00:01:46,141
+So the curve bends.
+
+40
+00:01:46,791 --> 00:01:48,681
+How fast does the current grow?
+
+41
+00:01:48,681 --> 00:01:50,518
+Again, one number decides it.
+
+42
+00:01:50,868 --> 00:01:53,939
+Divide the inductance
+L by the resistance R.
+
+43
+00:01:54,639 --> 00:01:57,769
+This is the time constant
+of an RL circuit.
+
+44
+00:01:57,769 --> 00:01:59,359
+Tau equals L over R.
+
+45
+00:02:00,059 --> 00:02:04,321
+After one tau, the current reaches
+about sixty three percent of its full
+
+46
+00:02:04,321 --> 00:02:05,221
+value.
+
+47
+00:02:05,595 --> 00:02:08,245
+After five tau, it is practically full.
+
+48
+00:02:08,945 --> 00:02:11,065
+A bigger L means a bigger tau.
+
+49
+00:02:11,065 --> 00:02:12,266
+A heavier wheel.
+
+50
+00:02:12,616 --> 00:02:14,864
+But a bigger R means a smaller tau.
+
+51
+00:02:14,864 --> 00:02:16,532
+The current settles sooner.
+
+52
+00:02:17,182 --> 00:02:19,280
+Now the rules, step by step.
+
+53
+00:02:19,280 --> 00:02:20,293
+Growth first.
+
+54
+00:02:20,643 --> 00:02:23,825
+The full current, I nought, is V over R.
+
+55
+00:02:24,525 --> 00:02:28,802
+I equals I nought, times one
+minus e to the minus t over tau.
+
+56
+00:02:29,502 --> 00:02:33,672
+Again, e is the special number,
+about two point seven one eight.
+
+57
+00:02:34,022 --> 00:02:38,615
+At t equal to tau, I is zero point
+six three two times I nought.
+
+58
+00:02:39,315 --> 00:02:43,542
+Decay: I equals I nought, times
+e to the minus t over tau.
+
+59
+00:02:44,242 --> 00:02:47,901
+After one tau, thirty seven
+percent of the current is left.
+
+60
+00:02:48,601 --> 00:02:50,692
+Why is L over R in seconds?
+
+61
+00:02:50,692 --> 00:02:53,312
+A henry is a volt second per ampere.
+
+62
+00:02:53,662 --> 00:02:55,697
+An ohm is a volt per ampere.
+
+63
+00:02:56,397 --> 00:02:57,302
+Divide them.
+
+64
+00:02:57,302 --> 00:02:58,925
+Volts and amperes cancel.
+
+65
+00:02:58,925 --> 00:03:00,408
+Only seconds are left.
+
+66
+00:03:01,058 --> 00:03:03,079
+A coil fights every change.
+
+67
+00:03:03,079 --> 00:03:04,729
+Tau equals L over R.
+
+68
+00:03:05,529 --> 00:03:06,536
+Worked example.
+
+69
+00:03:06,536 --> 00:03:08,579
+A coil of zero point five henry.
+
+70
+00:03:08,929 --> 00:03:12,874
+A resistor of one hundred
+ohms, and a ten volt battery.
+
+71
+00:03:13,224 --> 00:03:14,933
+Tau equals L over R.
+
+72
+00:03:14,933 --> 00:03:17,821
+Zero point five divided by one hundred.
+
+73
+00:03:18,171 --> 00:03:20,687
+That is zero point zero zero five seconds.
+
+74
+00:03:20,687 --> 00:03:21,816
+Five milliseconds.
+
+75
+00:03:22,466 --> 00:03:25,105
+The full current is ten over one hundred.
+
+76
+00:03:25,105 --> 00:03:26,662
+Zero point one amperes.
+
+77
+00:03:27,312 --> 00:03:31,456
+After one tau, the current is zero
+point six three two times that.
+
+78
+00:03:31,806 --> 00:03:33,212
+About sixty three milliamperes.
+
+79
+00:03:33,862 --> 00:03:37,489
+After five tau, twenty five
+milliseconds, it is practically full.
+
+80
+00:03:38,139 --> 00:03:39,601
+Now, the exam trap.
+
+81
+00:03:39,951 --> 00:03:43,812
+Many students copy RC, and
+write tau equals L times R.
+
+82
+00:03:44,162 --> 00:03:45,279
+That is wrong.
+
+83
+00:03:45,279 --> 00:03:48,037
+For a coil, tau equals L divided by R.
+
+84
+00:03:48,387 --> 00:03:49,411
+Check the units.
+
+85
+00:03:49,411 --> 00:03:51,376
+Henry divided by ohm gives seconds.
+
+86
+00:03:52,026 --> 00:03:53,404
+Where is this asked?
+
+87
+00:03:53,404 --> 00:03:54,781
+In PUC board papers.
+
+88
+00:03:55,131 --> 00:03:58,311
+And in JEE Main, for example
+in the twenty fifteen paper.
+
+89
+00:03:58,661 --> 00:04:02,283
+Find tau, or the current at some
+time after the switch moves.
+
+90
+00:04:02,933 --> 00:04:03,833
+Try this.
+
+91
+00:04:03,717 --> 00:04:08,509
+A two henry coil and a ten ohm resistor
+are joined to a twenty volt battery.
+
+92
+00:04:08,509 --> 00:04:11,560
+When does the current
+reach half its full value?
+
+93
+00:04:11,560 --> 00:04:15,214
+Take the natural log of two
+as zero point six nine three.
+
+94
+00:04:20,614 --> 00:04:21,514
+C.
+
+95
+00:04:21,004 --> 00:04:23,545
+About zero point one three nine seconds.
+
+96
+00:04:23,895 --> 00:04:25,626
+Tau equals L over R.
+
+97
+00:04:25,626 --> 00:04:29,022
+Two divided by ten is
+zero point two seconds.
+
+98
+00:04:29,372 --> 00:04:31,431
+The full current is twenty over ten.
+
+99
+00:04:31,431 --> 00:04:32,331
+Two amperes.
+
+100
+00:04:32,239 --> 00:04:33,790
+Half of it is one ampere.
+
+101
+00:04:34,140 --> 00:04:38,458
+So one minus e to the minus
+t over tau equals one half.
+
+102
+00:04:38,808 --> 00:04:42,387
+That gives t equals tau
+times the natural log of two.
+
+103
+00:04:42,387 --> 00:04:45,070
+About zero point one three nine seconds.
+
+104
+00:04:45,720 --> 00:04:47,267
+Screenshot this card.
+
+105
+00:04:50,467 --> 00:04:53,299
+Next, series RC and RL circuits on AC.
+
+106
+00:04:53,299 --> 00:04:55,724
+Why does current race ahead of voltage?

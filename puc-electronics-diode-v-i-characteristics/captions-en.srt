@@ -1,0 +1,378 @@
+1
+00:00:00,450 --> 00:00:02,768
+Aarav puts new batteries
+into his bike lamp.
+
+2
+00:00:03,118 --> 00:00:04,645
+He clicks the switch.
+
+3
+00:00:04,645 --> 00:00:05,804
+Nothing happens.
+
+4
+00:00:06,154 --> 00:00:08,154
+He flips the batteries around.
+
+5
+00:00:08,154 --> 00:00:09,255
+Now it shines!
+
+6
+00:00:09,755 --> 00:00:13,242
+Inside the lamp is a
+diode, a p-n junction.
+
+7
+00:00:13,592 --> 00:00:15,954
+It lets current through one way only.
+
+8
+00:00:15,954 --> 00:00:17,398
+Let's see exactly how.
+
+9
+00:00:18,048 --> 00:00:20,744
+Think of a heavy swing
+door with a strong spring.
+
+10
+00:00:21,094 --> 00:00:23,036
+Push it gently from the front.
+
+11
+00:00:23,036 --> 00:00:24,270
+It does not move.
+
+12
+00:00:24,620 --> 00:00:28,562
+Push harder, past a certain
+point, and it swings wide open.
+
+13
+00:00:29,162 --> 00:00:31,130
+Push from the back, and it stays shut.
+
+14
+00:00:31,730 --> 00:00:33,986
+Unless you push so hard that you break it.
+
+15
+00:00:34,636 --> 00:00:36,100
+Now the real diode.
+
+16
+00:00:36,450 --> 00:00:40,476
+Connect p to the plus side of
+a battery, n to the minus side.
+
+17
+00:00:41,076 --> 00:00:42,909
+This is called forward bias.
+
+18
+00:00:43,509 --> 00:00:47,164
+The battery pushes against the
+barrier, so the wall gets lower.
+
+19
+00:00:47,764 --> 00:00:49,523
+The depletion layer gets thinner.
+
+20
+00:00:50,123 --> 00:00:53,378
+Once the push beats the
+barrier, carriers flood across.
+
+21
+00:00:54,028 --> 00:00:55,684
+Now flip the battery.
+
+22
+00:00:55,684 --> 00:00:57,631
+p to minus, n to plus.
+
+23
+00:00:57,981 --> 00:00:59,697
+This is reverse bias.
+
+24
+00:01:00,297 --> 00:01:02,910
+Now the battery pulls carriers
+away from the junction.
+
+25
+00:01:03,510 --> 00:01:06,632
+The depletion layer gets wider,
+and the wall gets higher.
+
+26
+00:01:07,232 --> 00:01:10,686
+Only a tiny leak gets through,
+carried by the few minority carriers.
+
+27
+00:01:11,336 --> 00:01:13,346
+Let's measure it on the breadboard.
+
+28
+00:01:13,696 --> 00:01:18,313
+A variable supply, a resistor to
+protect the diode, and the diode.
+
+29
+00:01:18,663 --> 00:01:20,645
+A voltmeter across the diode.
+
+30
+00:01:20,645 --> 00:01:22,379
+A meter for the current.
+
+31
+00:01:22,729 --> 00:01:25,703
+Turn the knob up slowly, in forward bias.
+
+32
+00:01:26,053 --> 00:01:28,031
+Point two, point four volts.
+
+33
+00:01:28,031 --> 00:01:29,314
+Almost no current.
+
+34
+00:01:29,914 --> 00:01:32,633
+Near point seven volts,
+the current shoots up.
+
+35
+00:01:33,233 --> 00:01:34,985
+This bend is the knee.
+
+36
+00:01:34,985 --> 00:01:38,744
+The voltage there is the
+threshold, or cut-in voltage.
+
+37
+00:01:39,344 --> 00:01:42,107
+For silicon it is about point seven volts.
+
+38
+00:01:42,107 --> 00:01:44,254
+For germanium, about point two.
+
+39
+00:01:44,904 --> 00:01:47,486
+Now reverse the supply and turn it up.
+
+40
+00:01:47,836 --> 00:01:51,020
+The current stays tiny, just
+microamperes, and almost flat.
+
+41
+00:01:51,620 --> 00:01:55,246
+Then, at the breakdown
+voltage, it suddenly shoots up.
+
+42
+00:01:55,846 --> 00:01:58,151
+Ordinary diodes are not
+meant to work there.
+
+43
+00:01:58,151 --> 00:01:59,850
+Too much heat can destroy them.
+
+44
+00:02:00,500 --> 00:02:02,399
+Look at the scales on the graph.
+
+45
+00:02:02,749 --> 00:02:04,577
+Forward current is in milliamperes.
+
+46
+00:02:04,577 --> 00:02:06,405
+Reverse current is in microamperes.
+
+47
+00:02:06,405 --> 00:02:07,788
+A thousand times smaller.
+
+48
+00:02:08,438 --> 00:02:11,203
+A diode is a one-way door with a doorstep.
+
+49
+00:02:12,003 --> 00:02:14,076
+The curve is not a straight line.
+
+50
+00:02:14,076 --> 00:02:16,248
+So a diode does not obey Ohm's law.
+
+51
+00:02:16,598 --> 00:02:18,773
+So we use dynamic resistance.
+
+52
+00:02:19,123 --> 00:02:23,242
+It is a small change in voltage
+divided by the change in current.
+
+53
+00:02:23,842 --> 00:02:27,094
+r d equals delta V divided by delta I.
+
+54
+00:02:27,744 --> 00:02:28,725
+Worked example.
+
+55
+00:02:28,725 --> 00:02:30,433
+Two readings above the knee.
+
+56
+00:02:30,783 --> 00:02:34,146
+At point seven two volts, the
+current is twelve milliamperes.
+
+57
+00:02:34,746 --> 00:02:37,869
+At point seven six volts,
+it is twenty milliamperes.
+
+58
+00:02:38,469 --> 00:02:40,711
+Delta V is point zero four volts.
+
+59
+00:02:40,711 --> 00:02:42,692
+Delta I is eight milliamperes.
+
+60
+00:02:43,392 --> 00:02:47,526
+r d equals point zero four
+divided by point zero zero eight.
+
+61
+00:02:48,226 --> 00:02:49,910
+That is just five ohms.
+
+62
+00:02:49,910 --> 00:02:52,148
+Forward, the door is wide open.
+
+63
+00:02:52,848 --> 00:02:55,734
+In reverse, ten volts
+drives only one microampere.
+
+64
+00:02:55,734 --> 00:02:57,294
+That is ten million ohms!
+
+65
+00:02:57,944 --> 00:02:59,406
+Now, the exam trap.
+
+66
+00:02:59,756 --> 00:03:02,931
+Many students treat a diode
+like a fixed resistor.
+
+67
+00:03:02,931 --> 00:03:03,831
+It is not.
+
+68
+00:03:04,179 --> 00:03:06,867
+Its resistance changes along the curve.
+
+69
+00:03:06,867 --> 00:03:09,251
+Always use delta V over delta I.
+
+70
+00:03:09,901 --> 00:03:11,041
+Where is this asked?
+
+71
+00:03:11,041 --> 00:03:14,353
+PUC, CBSE and ISC boards ask you
+to draw and explain this curve.
+
+72
+00:03:14,703 --> 00:03:19,137
+JEE Main asks for dynamic resistance
+from the graph, as in June twenty
+
+73
+00:03:19,137 --> 00:03:20,058
+twenty two.
+
+74
+00:03:20,708 --> 00:03:21,608
+Try this.
+
+75
+00:03:21,560 --> 00:03:26,436
+A five volt battery, a silicon diode
+in forward bias, and a four hundred
+
+76
+00:03:26,436 --> 00:03:28,838
+thirty ohm resistor are in series.
+
+77
+00:03:28,838 --> 00:03:31,239
+The diode drops point seven volts.
+
+78
+00:03:31,239 --> 00:03:32,570
+Find the current.
+
+79
+00:03:37,970 --> 00:03:38,870
+A.
+
+80
+00:03:38,147 --> 00:03:39,047
+Ten milliamperes.
+
+81
+00:03:39,024 --> 00:03:41,251
+The diode takes point seven volts.
+
+82
+00:03:41,601 --> 00:03:45,648
+So the resistor gets five minus point
+seven, which is four point three
+
+83
+00:03:45,648 --> 00:03:46,548
+volts.
+
+84
+00:03:46,555 --> 00:03:49,943
+Current is four point three
+divided by four hundred thirty.
+
+85
+00:03:49,943 --> 00:03:51,494
+That is ten milliamperes.
+
+86
+00:03:52,144 --> 00:03:53,691
+Screenshot this card.
+
+87
+00:03:56,891 --> 00:03:58,836
+Next, the half-wave rectifier.
+
+88
+00:03:58,836 --> 00:04:01,448
+How does a one-way door turn AC into DC?

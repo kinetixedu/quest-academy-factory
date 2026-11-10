@@ -1,0 +1,426 @@
+1
+00:00:00,450 --> 00:00:02,636
+Aarav cuts open an old charger cable.
+
+2
+00:00:02,986 --> 00:00:04,703
+Inside is shiny copper.
+
+3
+00:00:04,703 --> 00:00:06,639
+Around it is soft plastic.
+
+4
+00:00:06,989 --> 00:00:08,536
+Both are full of electrons.
+
+5
+00:00:08,536 --> 00:00:10,841
+So why does only the copper carry current?
+
+6
+00:00:11,341 --> 00:00:13,982
+And the chip in his
+phone is made of silicon.
+
+7
+00:00:14,332 --> 00:00:16,689
+Silicon carries current only sometimes.
+
+8
+00:00:16,689 --> 00:00:18,000
+Let's find out why.
+
+9
+00:00:18,650 --> 00:00:20,738
+Picture a building with two floors.
+
+10
+00:00:21,088 --> 00:00:23,576
+The ground floor is packed with people.
+
+11
+00:00:23,576 --> 00:00:24,744
+Nobody can move.
+
+12
+00:00:25,094 --> 00:00:26,862
+The upper floor is empty.
+
+13
+00:00:26,862 --> 00:00:29,131
+Up there, anyone can run freely.
+
+14
+00:00:29,481 --> 00:00:31,232
+Between the floors is a jump.
+
+15
+00:00:31,232 --> 00:00:32,922
+Its height decides everything.
+
+16
+00:00:33,572 --> 00:00:36,432
+Electrons in a solid live in
+a building just like this.
+
+17
+00:00:36,782 --> 00:00:41,351
+In a single atom, an electron can
+sit only on fixed energy steps.
+
+18
+00:00:41,951 --> 00:00:46,629
+Pack billions of atoms into a crystal,
+and each step spreads into a band.
+
+19
+00:00:47,229 --> 00:00:51,489
+A band is a crowd of energy
+levels, packed very close together.
+
+20
+00:00:52,089 --> 00:00:54,324
+The lower band is the valence band.
+
+21
+00:00:54,324 --> 00:00:57,224
+It holds the outer
+electrons, and it is full.
+
+22
+00:00:57,824 --> 00:01:00,051
+The upper band is the conduction band.
+
+23
+00:01:00,051 --> 00:01:02,192
+Electrons up there are free to move.
+
+24
+00:01:02,792 --> 00:01:05,955
+Between them is the
+forbidden energy gap, E g.
+
+25
+00:01:05,955 --> 00:01:08,097
+No electron can stay inside it.
+
+26
+00:01:08,697 --> 00:01:12,778
+We measure the gap in electron
+volts, a tiny energy unit.
+
+27
+00:01:13,128 --> 00:01:18,368
+One electron volt is one point six
+times ten to the minus nineteen joules.
+
+28
+00:01:19,018 --> 00:01:20,397
+Now, three kinds of solids.
+
+29
+00:01:20,747 --> 00:01:24,566
+In a conductor, like copper,
+the two bands overlap.
+
+30
+00:01:24,916 --> 00:01:26,366
+There is no gap at all.
+
+31
+00:01:26,366 --> 00:01:28,188
+Electrons just walk up and move.
+
+32
+00:01:28,788 --> 00:01:32,286
+In an insulator, like
+diamond, the gap is huge.
+
+33
+00:01:32,636 --> 00:01:35,497
+Diamond's gap is five
+point four electron volts.
+
+34
+00:01:35,497 --> 00:01:37,503
+Almost no electron can jump it.
+
+35
+00:01:38,103 --> 00:01:41,913
+Any gap bigger than about three
+electron volts makes an insulator.
+
+36
+00:01:42,513 --> 00:01:47,145
+In a semiconductor, the gap is small,
+less than three electron volts.
+
+37
+00:01:47,495 --> 00:01:49,151
+Silicon's gap is one point one.
+
+38
+00:01:49,151 --> 00:01:51,082
+Germanium's is about zero point seven.
+
+39
+00:01:51,732 --> 00:01:55,746
+That is why resistivity is tiny in
+metals, middling in semiconductors,
+
+40
+00:01:55,746 --> 00:01:57,421
+and enormous in insulators.
+
+41
+00:01:58,071 --> 00:02:00,213
+The size of the gap decides who conducts.
+
+42
+00:02:01,013 --> 00:02:02,959
+Let's test this on the breadboard.
+
+43
+00:02:03,309 --> 00:02:05,833
+A battery pushes current through a sample.
+
+44
+00:02:05,833 --> 00:02:07,291
+A heater warms it up.
+
+45
+00:02:07,641 --> 00:02:09,083
+First, a copper wire.
+
+46
+00:02:09,083 --> 00:02:10,981
+Watch the current on the scope.
+
+47
+00:02:11,331 --> 00:02:14,211
+As the copper warms, its
+current drops a little.
+
+48
+00:02:14,211 --> 00:02:15,646
+Hot metal resists more.
+
+49
+00:02:16,296 --> 00:02:18,631
+Now swap in a piece of pure silicon.
+
+50
+00:02:18,981 --> 00:02:19,881
+Cold silicon.
+
+51
+00:02:19,857 --> 00:02:23,438
+Very few electrons have made the
+jump, so the current is tiny.
+
+52
+00:02:23,788 --> 00:02:24,913
+Turn up the heat.
+
+53
+00:02:24,913 --> 00:02:27,113
+Electrons gain energy and jump the gap.
+
+54
+00:02:27,463 --> 00:02:31,442
+Each jump leaves an empty spot,
+a hole, in the valence band.
+
+55
+00:02:31,792 --> 00:02:33,719
+More jumpers, more current.
+
+56
+00:02:33,719 --> 00:02:35,347
+The scope trace climbs.
+
+57
+00:02:35,997 --> 00:02:38,698
+So a semiconductor's
+resistance falls as it warms.
+
+58
+00:02:38,698 --> 00:02:40,625
+That is the opposite of a metal.
+
+59
+00:02:41,275 --> 00:02:45,347
+At absolute zero, the coldest
+possible temperature, nobody jumps.
+
+60
+00:02:45,347 --> 00:02:47,805
+Pure silicon behaves like an insulator.
+
+61
+00:02:48,455 --> 00:02:49,355
+Worked example.
+
+62
+00:02:49,313 --> 00:02:51,317
+Light can also give electrons the push.
+
+63
+00:02:51,667 --> 00:02:55,418
+What is the longest wavelength of
+light that can lift an electron across
+
+64
+00:02:55,418 --> 00:02:56,318
+silicon's gap?
+
+65
+00:02:56,632 --> 00:02:58,560
+First, the gap in joules.
+
+66
+00:02:58,560 --> 00:03:02,954
+One point one times one point six
+times ten to the minus nineteen.
+
+67
+00:03:03,654 --> 00:03:08,076
+That is one point seven six times
+ten to the minus nineteen joules.
+
+68
+00:03:08,776 --> 00:03:11,668
+The energy of light is h c over lambda.
+
+69
+00:03:11,668 --> 00:03:14,770
+So lambda equals h c
+divided by the energy.
+
+70
+00:03:15,470 --> 00:03:20,126
+h c is about one point nine nine
+times ten to the minus twenty five.
+
+71
+00:03:20,826 --> 00:03:24,626
+Lambda comes out near one thousand
+one hundred and thirty nanometres.
+
+72
+00:03:24,626 --> 00:03:26,056
+That is infrared light.
+
+73
+00:03:26,706 --> 00:03:30,857
+A handy shortcut: lambda in nanometres
+is about twelve forty, divided by
+
+74
+00:03:30,857 --> 00:03:32,538
+the gap in electron volts.
+
+75
+00:03:33,188 --> 00:03:34,650
+Now, the exam trap.
+
+76
+00:03:35,000 --> 00:03:38,208
+Many students think heating
+always raises resistance.
+
+77
+00:03:38,208 --> 00:03:40,199
+That is true only for metals.
+
+78
+00:03:40,549 --> 00:03:43,718
+Heat a semiconductor, and
+more electrons jump the gap.
+
+79
+00:03:43,718 --> 00:03:45,254
+Its resistance goes down.
+
+80
+00:03:45,904 --> 00:03:47,202
+Where is this asked?
+
+81
+00:03:47,202 --> 00:03:51,104
+PUC, CBSE and ISC boards ask you
+to draw and compare band diagrams.
+
+82
+00:03:51,454 --> 00:03:55,675
+JEE Main links band gap with light,
+as in September twenty twenty.
+
+83
+00:03:56,325 --> 00:03:57,225
+Try this.
+
+84
+00:03:57,035 --> 00:04:01,295
+Light of wavelength six hundred and twenty
+nanometres falls on three materials.
+
+85
+00:04:01,295 --> 00:04:05,313
+Their gaps are one point one, two
+point five and five point four electron
+
+86
+00:04:05,313 --> 00:04:06,213
+volts.
+
+87
+00:04:05,842 --> 00:04:07,885
+Which can it push electrons across?
+
+88
+00:04:13,285 --> 00:04:14,185
+A.
+
+89
+00:04:13,677 --> 00:04:16,573
+Only the one point one
+electron volt material.
+
+90
+00:04:16,923 --> 00:04:20,694
+Photon energy is twelve
+forty divided by six twenty.
+
+91
+00:04:20,694 --> 00:04:22,807
+That is two electron volts.
+
+92
+00:04:23,157 --> 00:04:27,101
+An electron jumps only if the
+light's energy is at least the gap.
+
+93
+00:04:27,451 --> 00:04:31,980
+Two is more than one point one, but
+less than two point five and five point
+
+94
+00:04:31,980 --> 00:04:32,880
+four.
+
+95
+00:04:33,152 --> 00:04:34,699
+Screenshot this card.
+
+96
+00:04:37,899 --> 00:04:40,644
+Next, intrinsic and
+extrinsic semiconductors.
+
+97
+00:04:40,644 --> 00:04:44,497
+How can one impurity atom in a
+million change silicon so much?

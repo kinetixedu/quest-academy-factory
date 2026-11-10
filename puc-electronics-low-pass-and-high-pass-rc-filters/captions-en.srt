@@ -1,0 +1,386 @@
+1
+00:00:00,450 --> 00:00:03,354
+Aarav turns up the bass
+knob on his music speaker.
+
+2
+00:00:03,654 --> 00:00:05,351
+The deep drums get louder.
+
+3
+00:00:05,351 --> 00:00:07,333
+The high cymbals stay the same.
+
+4
+00:00:07,633 --> 00:00:10,321
+How can a circuit pick
+out only the low notes?
+
+5
+00:00:10,821 --> 00:00:12,049
+Think of a sieve.
+
+6
+00:00:12,049 --> 00:00:14,167
+Pour in sand and pebbles together.
+
+7
+00:00:14,517 --> 00:00:16,418
+The fine sand slips through.
+
+8
+00:00:16,418 --> 00:00:18,066
+The pebbles stay behind.
+
+9
+00:00:18,416 --> 00:00:20,298
+A filter does this with signals.
+
+10
+00:00:20,298 --> 00:00:22,784
+It passes some frequencies
+and blocks others.
+
+11
+00:00:23,434 --> 00:00:27,015
+Frequency means how many times
+a wave shakes each second.
+
+12
+00:00:27,365 --> 00:00:28,971
+Low notes shake slowly.
+
+13
+00:00:28,971 --> 00:00:30,527
+High notes shake fast.
+
+14
+00:00:31,177 --> 00:00:33,435
+The secret part is the capacitor.
+
+15
+00:00:33,785 --> 00:00:37,591
+Its opposition to AC is
+called reactance, XC.
+
+16
+00:00:37,941 --> 00:00:40,529
+XC equals one over two pi f C.
+
+17
+00:00:41,229 --> 00:00:43,558
+At low frequency, XC is huge.
+
+18
+00:00:43,558 --> 00:00:45,774
+The capacitor acts like a wall.
+
+19
+00:00:46,124 --> 00:00:48,424
+At high frequency, XC is tiny.
+
+20
+00:00:48,424 --> 00:00:50,159
+It acts like a shortcut.
+
+21
+00:00:50,809 --> 00:00:53,878
+Let's build a low pass
+filter on the breadboard.
+
+22
+00:00:54,228 --> 00:00:59,193
+A signal generator, a resistor in series,
+and a capacitor across the output.
+
+23
+00:00:59,543 --> 00:01:03,611
+The scope shows the input in
+blue, and the output in amber.
+
+24
+00:01:03,611 --> 00:01:04,806
+In slow motion.
+
+25
+00:01:05,156 --> 00:01:08,763
+At one hundred hertz, the
+output is almost the full input.
+
+26
+00:01:09,113 --> 00:01:10,841
+Turn up to one kilohertz.
+
+27
+00:01:10,841 --> 00:01:13,750
+The output drops to about
+seventy one percent.
+
+28
+00:01:14,100 --> 00:01:17,232
+At ten kilohertz, only about
+ten percent gets through.
+
+29
+00:01:17,582 --> 00:01:18,573
+Low notes pass.
+
+30
+00:01:18,573 --> 00:01:21,076
+High notes are shorted
+away by the capacitor.
+
+31
+00:01:21,726 --> 00:01:24,333
+Now swap the resistor and the capacitor.
+
+32
+00:01:24,333 --> 00:01:26,687
+Take the output across the resistor.
+
+33
+00:01:27,037 --> 00:01:28,687
+This is a high pass filter.
+
+34
+00:01:28,687 --> 00:01:30,539
+Watch the same three frequencies.
+
+35
+00:01:30,889 --> 00:01:34,064
+Now low notes are blocked,
+and high notes pass.
+
+36
+00:01:34,714 --> 00:01:35,614
+Why?
+
+37
+00:01:35,195 --> 00:01:37,325
+Each filter is a voltage divider.
+
+38
+00:01:37,675 --> 00:01:41,791
+For the low pass, V out
+over V in equals XC over Z.
+
+39
+00:01:42,491 --> 00:01:46,533
+Z is the impedance, root of
+R squared plus XC squared.
+
+40
+00:01:47,233 --> 00:01:51,008
+There is one special
+frequency, where XC equals R.
+
+41
+00:01:51,358 --> 00:01:54,515
+There, V out is one over
+root two times V in.
+
+42
+00:01:54,515 --> 00:01:56,694
+About seventy point seven percent.
+
+43
+00:01:57,394 --> 00:01:59,766
+This is the cut off frequency, f c.
+
+44
+00:01:59,766 --> 00:02:01,559
+Half the power gets through.
+
+45
+00:02:02,259 --> 00:02:05,112
+Set one over two pi f C equal to R.
+
+46
+00:02:05,812 --> 00:02:08,905
+You get f c equals one over two pi RC.
+
+47
+00:02:09,605 --> 00:02:12,217
+Now plot the output against frequency.
+
+48
+00:02:12,217 --> 00:02:14,403
+This is the frequency response.
+
+49
+00:02:14,753 --> 00:02:18,602
+The low pass curve stays
+flat, then falls after f c.
+
+50
+00:02:18,952 --> 00:02:22,789
+The high pass curve rises,
+then stays flat after f c.
+
+51
+00:02:23,139 --> 00:02:27,846
+Both cross at seventy point seven
+percent, right at the cut off frequency.
+
+52
+00:02:28,496 --> 00:02:30,642
+Low pass keeps the slow waves.
+
+53
+00:02:30,642 --> 00:02:32,787
+High pass keeps the fast ones.
+
+54
+00:02:33,587 --> 00:02:34,714
+Worked example.
+
+55
+00:02:34,714 --> 00:02:37,663
+Our breadboard used one
+point six kilo ohms.
+
+56
+00:02:38,013 --> 00:02:41,158
+And a capacitor of zero
+point one microfarad.
+
+57
+00:02:41,508 --> 00:02:44,071
+f c equals one over two pi RC.
+
+58
+00:02:44,771 --> 00:02:48,704
+Two pi times sixteen hundred
+times zero point one millionth.
+
+59
+00:02:49,054 --> 00:02:53,446
+That is about one point zero zero
+five times ten to the minus three.
+
+60
+00:02:54,096 --> 00:02:57,759
+One over that is about nine
+hundred ninety five hertz.
+
+61
+00:02:57,759 --> 00:02:59,286
+Nearly one kilohertz.
+
+62
+00:02:59,936 --> 00:03:04,147
+That is why the output fell to
+seventy one percent at one kilohertz.
+
+63
+00:03:04,797 --> 00:03:06,261
+Now, the exam trap.
+
+64
+00:03:06,611 --> 00:03:10,297
+Many students say that at cut
+off, the output is half the input.
+
+65
+00:03:10,647 --> 00:03:11,547
+It is not.
+
+66
+00:03:11,513 --> 00:03:14,521
+The output voltage is
+seventy point seven percent.
+
+67
+00:03:14,871 --> 00:03:17,044
+It is the power that falls to half.
+
+68
+00:03:17,694 --> 00:03:19,072
+Where is this asked?
+
+69
+00:03:19,072 --> 00:03:20,450
+In PUC board papers.
+
+70
+00:03:20,800 --> 00:03:25,345
+Draw the low pass or high pass
+circuit, its response curve, and find f
+
+71
+00:03:25,345 --> 00:03:26,245
+c.
+
+72
+00:03:26,401 --> 00:03:27,301
+Try this.
+
+73
+00:03:27,269 --> 00:03:32,266
+A high pass filter has R equal to two
+kilo ohms and C equal to zero point
+
+74
+00:03:32,266 --> 00:03:33,833
+zero five microfarad.
+
+75
+00:03:33,833 --> 00:03:37,549
+A ten volt signal comes in
+at the cut off frequency.
+
+76
+00:03:37,549 --> 00:03:39,466
+Find f c and the output.
+
+77
+00:03:39,466 --> 00:03:41,869
+Take pi as three point one four.
+
+78
+00:03:47,269 --> 00:03:48,169
+B.
+
+79
+00:03:47,709 --> 00:03:52,618
+About one point five nine kilohertz,
+and seven point zero seven volts.
+
+80
+00:03:52,968 --> 00:03:55,531
+f c equals one over two pi RC.
+
+81
+00:03:55,881 --> 00:04:00,814
+Two pi times two thousand times zero
+point zero five millionth is six point
+
+82
+00:04:00,814 --> 00:04:03,610
+two eight times ten to the minus four.
+
+83
+00:04:03,960 --> 00:04:07,531
+One over that is about fifteen
+hundred and ninety hertz.
+
+84
+00:04:07,881 --> 00:04:10,860
+At cut off, V out is ten over root two.
+
+85
+00:04:10,860 --> 00:04:13,285
+About seven point zero seven volts.
+
+86
+00:04:13,935 --> 00:04:15,481
+Screenshot this card.
+
+87
+00:04:18,681 --> 00:04:20,046
+Next, energy bands.
+
+88
+00:04:20,046 --> 00:04:23,173
+Why does copper carry
+current, but glass does not?

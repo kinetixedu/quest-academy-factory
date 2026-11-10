@@ -1,0 +1,457 @@
+1
+00:00:00,450 --> 00:00:04,590
+In the lab, Aarav joins a resistor
+and a capacitor to an AC supply.
+
+2
+00:00:04,890 --> 00:00:06,924
+The resistor shows six volts.
+
+3
+00:00:06,924 --> 00:00:09,110
+The capacitor shows eight volts.
+
+4
+00:00:09,410 --> 00:00:11,847
+But the supply is only ten volts.
+
+5
+00:00:11,847 --> 00:00:13,192
+Why not fourteen?
+
+6
+00:00:13,692 --> 00:00:16,368
+Think of two friends
+pulling a box with ropes.
+
+7
+00:00:16,718 --> 00:00:18,939
+One pulls east with a force of six.
+
+8
+00:00:18,939 --> 00:00:20,963
+The other pulls north with eight.
+
+9
+00:00:21,313 --> 00:00:23,455
+The box does not feel fourteen.
+
+10
+00:00:23,455 --> 00:00:25,241
+It moves along the slant.
+
+11
+00:00:25,591 --> 00:00:28,195
+Six and eight at right angles make ten.
+
+12
+00:00:28,195 --> 00:00:29,740
+Like a right triangle.
+
+13
+00:00:30,390 --> 00:00:32,491
+In AC, voltages do the same.
+
+14
+00:00:32,491 --> 00:00:34,384
+They peak at different times.
+
+15
+00:00:34,734 --> 00:00:36,521
+The resistor's voltage peaks first.
+
+16
+00:00:36,521 --> 00:00:38,762
+The capacitor's peaks
+a quarter cycle later.
+
+17
+00:00:39,412 --> 00:00:41,593
+First, how each part behaves on AC.
+
+18
+00:00:41,593 --> 00:00:43,077
+Watch voltage and current.
+
+19
+00:00:43,427 --> 00:00:47,165
+In a resistor, voltage and
+current rise and fall together.
+
+20
+00:00:47,165 --> 00:00:48,514
+They are in phase.
+
+21
+00:00:48,864 --> 00:00:53,182
+In a capacitor, the current peaks
+a quarter cycle before the voltage.
+
+22
+00:00:53,532 --> 00:00:55,577
+Current leads voltage by ninety degrees.
+
+23
+00:00:55,927 --> 00:00:58,526
+In an inductor, it is the other way round.
+
+24
+00:00:58,876 --> 00:01:00,943
+Current lags voltage by ninety degrees.
+
+25
+00:01:01,593 --> 00:01:04,948
+Now let's build a series RC
+circuit on the breadboard.
+
+26
+00:01:05,298 --> 00:01:09,799
+An AC supply of ten volts, a
+resistor and a capacitor in a loop.
+
+27
+00:01:10,149 --> 00:01:12,636
+We slow the wave down so we can watch it.
+
+28
+00:01:12,986 --> 00:01:18,047
+The scope shows the resistor voltage,
+the capacitor voltage and the supply.
+
+29
+00:01:18,397 --> 00:01:19,297
+Look.
+
+30
+00:01:18,952 --> 00:01:23,371
+The capacitor voltage peaks a quarter
+cycle after the resistor voltage.
+
+31
+00:01:23,721 --> 00:01:26,986
+At every instant, the two
+do add up to the supply.
+
+32
+00:01:27,336 --> 00:01:29,310
+But their peaks never line up.
+
+33
+00:01:29,310 --> 00:01:31,481
+So their sizes do not simply add.
+
+34
+00:01:32,131 --> 00:01:34,353
+Now swap the capacitor for a coil.
+
+35
+00:01:34,353 --> 00:01:36,481
+That makes a series RL circuit.
+
+36
+00:01:36,831 --> 00:01:40,041
+Now the coil's voltage peaks a
+quarter cycle before the resistor's.
+
+37
+00:01:40,691 --> 00:01:44,674
+To add voltages that peak at
+different times, we use arrows.
+
+38
+00:01:45,024 --> 00:01:46,740
+These arrows are called phasors.
+
+39
+00:01:46,740 --> 00:01:48,919
+Their length is the size of the voltage.
+
+40
+00:01:49,269 --> 00:01:51,475
+Draw the current as a flat arrow.
+
+41
+00:01:51,475 --> 00:01:53,491
+It is the same in every part.
+
+42
+00:01:53,841 --> 00:01:57,531
+The resistor's voltage, VR, points
+the same way as the current.
+
+43
+00:01:58,231 --> 00:02:00,784
+The capacitor's voltage,
+VC, points straight down.
+
+44
+00:02:00,784 --> 00:02:01,922
+Ninety degrees behind.
+
+45
+00:02:02,622 --> 00:02:04,383
+Add the arrows tip to tail.
+
+46
+00:02:04,383 --> 00:02:06,278
+The total is the slanted side.
+
+47
+00:02:06,978 --> 00:02:12,346
+By Pythagoras, V equals the square
+root of VR squared plus VC squared.
+
+48
+00:02:13,046 --> 00:02:16,779
+Root of thirty six plus sixty
+four is root of hundred.
+
+49
+00:02:16,779 --> 00:02:17,679
+Ten volts.
+
+50
+00:02:18,328 --> 00:02:21,002
+Now divide every side by the current.
+
+51
+00:02:21,002 --> 00:02:22,964
+Volts per ampere are ohms.
+
+52
+00:02:23,314 --> 00:02:25,182
+VR over I is R.
+
+53
+00:02:25,182 --> 00:02:29,355
+VC over I is the capacitive reactance, XC.
+
+54
+00:02:30,055 --> 00:02:33,048
+The total opposition is the impedance, Z.
+
+55
+00:02:33,048 --> 00:02:36,285
+Z equals root of R
+squared plus XC squared.
+
+56
+00:02:36,985 --> 00:02:40,556
+The angle phi tells how
+far the current is ahead.
+
+57
+00:02:40,556 --> 00:02:42,687
+Tan phi equals XC over R.
+
+58
+00:02:43,387 --> 00:02:47,626
+For an RL circuit, use the
+inductive reactance, XL.
+
+59
+00:02:47,976 --> 00:02:51,597
+Z equals root of R
+squared plus XL squared.
+
+60
+00:02:51,597 --> 00:02:53,937
+Tan phi equals XL over R.
+
+61
+00:02:54,637 --> 00:02:57,393
+But here the current
+lags behind the voltage.
+
+62
+00:02:58,093 --> 00:02:59,981
+Cos phi equals R over Z.
+
+63
+00:02:59,981 --> 00:03:02,077
+We call it the power factor.
+
+64
+00:03:02,727 --> 00:03:06,588
+In AC, voltages add like
+arrows, not like plain numbers.
+
+65
+00:03:07,388 --> 00:03:08,512
+Worked example.
+
+66
+00:03:08,512 --> 00:03:11,714
+A sixty ohm resistor in
+series with a capacitor.
+
+67
+00:03:12,064 --> 00:03:14,178
+Its reactance is eighty ohms.
+
+68
+00:03:14,178 --> 00:03:16,027
+The supply is ten volts.
+
+69
+00:03:16,377 --> 00:03:19,789
+Z equals root of sixty
+squared plus eighty squared.
+
+70
+00:03:20,139 --> 00:03:21,847
+That is one hundred ohms.
+
+71
+00:03:22,497 --> 00:03:24,151
+Current equals V over Z.
+
+72
+00:03:24,151 --> 00:03:27,119
+Ten over one hundred is
+zero point one amperes.
+
+73
+00:03:27,769 --> 00:03:31,312
+VR is zero point one
+times sixty, six volts.
+
+74
+00:03:31,312 --> 00:03:32,974
+VC is eight volts.
+
+75
+00:03:33,624 --> 00:03:35,598
+Tan phi is eighty over sixty.
+
+76
+00:03:35,598 --> 00:03:37,765
+Phi is about fifty three degrees.
+
+77
+00:03:38,415 --> 00:03:42,683
+The power factor is sixty over
+one hundred, zero point six.
+
+78
+00:03:43,333 --> 00:03:44,797
+Now, the exam trap.
+
+79
+00:03:45,147 --> 00:03:47,821
+Many students add the
+voltages like numbers.
+
+80
+00:03:47,821 --> 00:03:49,590
+Six plus eight is fourteen.
+
+81
+00:03:49,940 --> 00:03:50,966
+That is wrong.
+
+82
+00:03:50,966 --> 00:03:52,601
+They are at right angles.
+
+83
+00:03:52,601 --> 00:03:53,617
+Use Pythagoras.
+
+84
+00:03:53,617 --> 00:03:54,517
+Ten volts.
+
+85
+00:03:55,057 --> 00:03:56,567
+Where is this asked?
+
+86
+00:03:56,567 --> 00:03:59,627
+In PUC, CBSE and ISC board papers.
+
+87
+00:03:59,977 --> 00:04:04,329
+And in JEE Main, for example in
+April twenty nineteen, second shift.
+
+88
+00:04:04,679 --> 00:04:09,365
+Find the impedance, the current,
+the phase angle or the power factor.
+
+89
+00:04:10,015 --> 00:04:10,915
+Try this.
+
+90
+00:04:10,796 --> 00:04:15,321
+A fifty ohm resistor and a coil are
+in series across a hundred volt, fifty
+
+91
+00:04:15,321 --> 00:04:16,293
+hertz supply.
+
+92
+00:04:16,293 --> 00:04:18,055
+The current is one ampere.
+
+93
+00:04:18,055 --> 00:04:20,551
+Find the coil's reactance and the phase.
+
+94
+00:04:25,951 --> 00:04:26,851
+B.
+
+95
+00:04:26,322 --> 00:04:30,416
+Eighty six point six ohms, with the
+current lagging by sixty degrees.
+
+96
+00:04:30,766 --> 00:04:32,856
+First, Z equals V over I.
+
+97
+00:04:32,856 --> 00:04:35,607
+A hundred over one is a hundred ohms.
+
+98
+00:04:35,957 --> 00:04:39,245
+XL equals root of Z
+squared minus R squared.
+
+99
+00:04:39,245 --> 00:04:41,758
+That is eighty six point six ohms.
+
+100
+00:04:42,108 --> 00:04:44,074
+Cos phi equals R over Z.
+
+101
+00:04:44,074 --> 00:04:46,593
+Fifty over a hundred is one half.
+
+102
+00:04:46,593 --> 00:04:48,493
+So phi is sixty degrees.
+
+103
+00:04:48,843 --> 00:04:51,846
+It is a coil, so the
+current lags the voltage.
+
+104
+00:04:52,496 --> 00:04:54,043
+Screenshot this card.
+
+105
+00:04:57,243 --> 00:05:00,099
+Next, low pass and high pass RC filters.
+
+106
+00:05:00,099 --> 00:05:02,606
+How does a circuit pick out the bass?
