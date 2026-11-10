@@ -74,7 +74,7 @@ const pP = mk(ps, 'circle', { r: 11, fill: RC, stroke: '#fff', 'stroke-width': 3
 const YS = []; for (let v = -7; v <= 7.01; v += 0.7) YS.push(+v.toFixed(2));
 const pDots = YS.map(y => mk(ps, 'circle', { cx: PP.X(y * y / 8), cy: PP.Y(y), r: 6, fill: RC }));
 const kP = [[wt('P3', 'moves'), 0], [wt('P4', 'Five'), Math.sqrt(24)], [wt('P4', 'Eight'), Math.sqrt(48)], [wt('P4', 'Every'), Math.sqrt(48)], [T1('P4') + 0.2, -Math.sqrt(48)]];
-const yAt = t => { if (t <= kP[0][0]) return 0; for (let i = 1; i < kP.length; i++) if (t < kP[i][0]) { const [a, ya] = kP[i - 1], [c, yc] = kP[i]; return ya + (yc - ya) * M.io((t - a) / Math.min(0.9, c - a)); } return kP[kP.length - 1][1]; };
+const yAt = t => { if (t <= kP[0][0]) return 0; for (let i = 1; i < kP.length; i++) if (t < kP[i][0]) { const [a, ya] = kP[i - 1], [c, yc] = kP[i]; const d = i === 4 ? c - a : Math.max(0.3, Math.min(0.9, c - a - 0.7)); return ya + (yc - ya) * M.io((t - (c - d)) / d); } return kP[kP.length - 1][1]; };
 const tDot = YS.map(y => { for (let t = kP[0][0]; t < kP[4][0] + 1; t += 0.02) if (Math.abs(yAt(t) - y) < 0.12) return t; return 1e9; });
 let pLast = '';
 

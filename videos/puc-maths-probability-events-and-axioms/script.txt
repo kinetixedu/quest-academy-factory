@@ -1,0 +1,47 @@
+H1|0.4|The weather report says: seventy percent chance of rain tomorrow.
+H2|0.45|But tomorrow it will either rain, or it will not. So what does seventy percent even mean?
+H3|0.35|Diya heard this in the kitchen this morning, while packing her lunch.
+H4|0.5|And if rain is seventy percent, why is no rain exactly thirty percent?
+H5|0.65|To answer this, we need probability: events, and three simple rules called axioms.
+L1|0.4|First, what does a probability number mean? Throw a die again and again, and count how often you get an even number.
+L2|0.4|After ten throws, the fraction jumps around. After a hundred, it is closer to one half. After six hundred, it hardly moves.
+L3|0.65|So a probability tells us the share of times an event happens, if the same situation repeats many, many times. For tomorrow, it means: on days just like it, rain comes about seven times out of ten.
+E1|0.4|Now some words. All the possible results together are called the sample space, S. For a die, S is one to six.
+E2|0.4|An event is any part of the sample space. Getting an even number is the event E: two, four and six.
+E3|0.4|The event not E is everything else in S: one, three and five.
+E4|0.4|Let F be a number more than three. E or F means at least one of them happens. E and F means both happen together.
+E5|0.65|If two events can never happen together, they are called mutually exclusive. Like even and odd on a single throw.
+G1|0.4|Now the three rules. NCERT calls them the axioms of probability. An axiom is a rule we agree on, and build everything else from.
+G2|0.75|Rule one. For any event E, the probability of E is never negative.
+G3|0.75|Rule two. The probability of the whole sample space is one. Something must happen.
+G4|0.75|Rule three. If E and F are mutually exclusive, the probability of E or F is the probability of E, plus the probability of F.
+G5|0.75|Now the rain. Rain and no rain are mutually exclusive, and together they make the whole sample space.
+G6|0.75|So P of rain, plus P of no rain, equals one. Seventy percent plus thirty percent. That is why no rain is exactly thirty percent.
+G7|0.65|And when every outcome is equally likely, like the faces of a fair die, the probability of E is the number of outcomes in E, divided by the number in S.
+C1|0.4|Side by side. Even and odd never share a number. So P of even or odd is one half plus one half, which is one.
+C2|0.6|Even and more than three do share numbers: four and six. Adding would count them twice, so we subtract the overlap once.
+C3|3.2|Your turn. On one throw, are getting a two and getting an even number mutually exclusive? Pause and think.
+C4|0.65|No! A two is also an even number, so both can happen on the same throw.
+T1|0.7|Remember this. Probabilities are never negative, they add up to one, and an overlap is counted once.
+W1|0.35|Now, one worked example.
+W2|0.5|A die is thrown. A is an even number. B is a number more than three. Find the probability of A or B.
+W3|0.75|Step one. The sample space has six outcomes, all equally likely.
+W4|0.75|Step two. A is two, four and six. B is four, five and six.
+W5|0.75|Step three. They overlap in four and six. So A and B has probability two over six.
+W6|0.75|Step four. P of A or B is three sixths, plus three sixths, minus two sixths.
+W7|0.65|That is four sixths, or two thirds. Check: A or B is two, four, five and six. Four out of six.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students just add. Three sixths plus three sixths gives one, as if A or B were certain.
+X3|0.65|But a throw of one is in neither A nor B, so it cannot be certain. Four and six were counted twice. Subtract the overlap once, and the answer is two thirds.
+J1|0.6|Where is this asked? In JEE Main. In January twenty twenty, a paper gave the chance that exactly one of two events happens, and the chance that at least one happens, and asked for the chance of both.
+Q1|5.4|Exam level now. Find the probability that A happens, but B does not. Pause and solve.
+A1|0.5|The answer is B. Zero point three.
+A2|0.5|First, find the overlap. P of A and B is P of A, plus P of B, minus P of A or B.
+A3|0.5|That is zero point six, plus zero point five, minus zero point eight, which is zero point three.
+A4|0.6|A but not B is A, minus the overlap. Zero point six minus zero point three is zero point three.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. What are the three axioms of probability?
+Y3|0.9|Two. If P of E is zero point four, what is P of not E?
+Y4|1.1|Three. Why can a probability never be more than one?
+N1|0.3|That completes Class eleven maths. Every episode is in the PUC Maths Class eleven playlist. See you in Class twelve.

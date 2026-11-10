@@ -1,0 +1,155 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Maths Ep 82 - Limits of Polynomial and Rational Functions</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Maths Ep 82: limits of polynomial and rational functions (Proof board) ===== */
+:root{--x:#7A4FE0;--tp:#2F6FEB;--bt:#0E8F8F;--fc:#D9731A}
+/* svg dots and groups scale about their own centre (not the card corner) */
+#stage svg circle,#stage svg g{transform-box:fill-box;transform-origin:center}
+#stage .ringW svg circle{transform-box:view-box;transform-origin:0 0}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.cs{position:absolute;left:0;top:0}
+/* title card: the moves */
+.lst{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.lst .ln{position:absolute;left:26px;top:20px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.lst .lv{position:absolute;left:26px;top:50px;font:600 36px 'IBM Plex Mono';white-space:nowrap}
+#hkImg{position:absolute;left:132px;top:84px;width:520px;height:390px;border-radius:12px}
+#hkF{position:absolute;right:36px;top:16px;width:52px;height:52px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac)}
+#hD{position:absolute;width:56px;height:56px;border-radius:50%;background:#fff center/cover;box-shadow:0 0 0 3px var(--ac);top:262px}
+/* readouts */
+.rd{position:absolute;font:600 40px/1 'IBM Plex Mono';white-space:nowrap}
+.rd i{font:italic 700 40px Poppins}
+.rl{position:absolute;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* definition */
+#dfF{position:absolute;left:36px;top:96px;font-size:58px;white-space:nowrap}
+.dr{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.dr .sy{position:absolute;left:20px;top:22px;width:150px;font-size:40px;white-space:nowrap}
+.dr .sn{position:absolute;left:180px;top:18px;font:700 26px Poppins;white-space:nowrap}
+.dr .se{position:absolute;left:180px;top:56px;font:500 20px Poppins;color:var(--mute);white-space:nowrap}
+/* table */
+.tb{position:absolute;width:340px;top:150px}
+.tb .th{font:600 18px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap;margin-bottom:12px}
+.tb .tr{position:relative;height:56px;border-radius:12px;background:var(--soft);margin-bottom:10px;font:600 30px 'IBM Plex Mono';display:flex;align-items:center;padding:0 18px;gap:0;white-space:nowrap}
+.tb .tr span{display:inline-block;width:130px}
+.tb .tr b{font-weight:600}
+/* proof column rows */
+.st{position:absolute;left:36px;width:712px;height:112px}
+.st .n{position:absolute;left:0;top:6px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:0;font-size:36px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:62px;font:500 24px Poppins;color:var(--mute);white-space:nowrap}
+.bf{position:absolute;left:36px;top:96px;font-size:48px;white-space:nowrap}
+#rSt .st .sx{font-size:34px}
+/* worked example */
+#wq{position:absolute;left:36px;top:64px;font:600 26px/1.4 Poppins;width:712px}
+#wq .katex{font-size:1.35em}
+/* exam */
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#so .sol .sx{font:500 27px Poppins}
+#so .sol .sx .katex{font-size:1.12em}
+#mq .mq .katex{font-size:1.2em}
+#wl .sol .sx{font-size:32px}
+.trapL .tx .katex{font-size:1.2em}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 34px Poppins;white-space:nowrap}
+#sF .fcard .fl{font-size:42px}
+#sF .fcard .fl.txt{font-size:32px}
+
+/* Ep 82 */
+.eq{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--soft);display:flex;align-items:center;padding:0 24px;font:600 34px 'IBM Plex Mono';white-space:nowrap;gap:16px}
+.eq b{margin-left:auto;display:inline-flex;align-items:center;gap:8px;font:700 24px Poppins;color:var(--ok)}
+.bf2{position:absolute;left:36px;font-size:44px;white-space:nowrap}
+.ch{position:absolute;height:44px;padding:0 16px;border-radius:10px;background:var(--soft);display:inline-flex;align-items:center;font:600 22px Poppins;white-space:nowrap}
+.cr{position:absolute;left:36px;width:712px;height:104px;border-radius:14px;background:var(--soft)}
+.cr .sy{position:absolute;left:20px;top:14px;font-size:30px;white-space:nowrap}
+.cr .ve{position:absolute;left:20px;top:62px;font:600 22px Poppins;white-space:nowrap}
+.lr{position:absolute;left:36px;width:712px;height:76px;border-radius:14px;background:var(--soft)}
+.lr .sy{position:absolute;left:20px;top:14px;font-size:30px;white-space:nowrap}
+.lr .v{position:absolute;right:150px;top:20px;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+.lr .tg{position:absolute;right:20px;top:20px;font:600 30px 'IBM Plex Mono';white-space:nowrap}
+.dx{position:absolute;left:36px;width:712px;text-align:center;font-size:52px}
+#da .sol .sx{font-size:30px}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · MATHEMATICS · CH 12 LIMITS AND DERIVATIVES</div>
+    <div class="subj" id="subj">PROOF BOARD</div>
+    <div id="title">Zero Over Zero: <span class="acc">Stuck</span>?</div>
+    <div id="sub">Explained with zero rotis and zero friends</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#E4572E" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="lists"></div>
+
+    <div id="sH">
+      <div class="card full" id="hl"><div class="lbl" style="left:36px;top:30px">0 ROTIS ÷ 0 FRIENDS = ?</div><div id="hEq"></div>
+        <div class="pillp bad" id="hP" style="left:36px;top:496px">0/0: every answer fits, so no single answer</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA · THE KITCHEN</div>
+        <div id="hkF" style="background-image:url(../../assets/illustrations/puc/diya-face.jpg)"></div>
+        <img id="hkImg" src="../../assets/illustrations/puc/scene-kitchen.jpg">
+        <div class="pillp ac" id="hkP" style="left:36px;top:496px">In a limit, 0/0 is a signal: look closer</div></div>
+    </div>
+
+    <div id="sP">
+      <div class="card full" id="pa"><div class="lbl" style="left:36px;top:30px">POLYNOMIALS · THE EASY KIND</div>
+        <div class="bf2" id="pF" style="top:84px"></div>
+        <div class="ch" id="pc0" style="left:36px;top:196px">one smooth curve</div><div class="ch" id="pc1" style="left:290px;top:196px">no holes</div><div class="ch" id="pc2" style="left:446px;top:196px">no jumps</div>
+        <div class="bf2" id="pR" style="top:286px;font-size:52px"></div>
+        <div class="bf2" id="pC" style="top:400px;font-size:36px"></div></div>
+      <div class="card rf" id="pb"><div class="lbl" style="left:36px;top:30px">PLUG IN · x = 2</div><svg id="pS" class="cs" width="784" height="580"></svg></div>
+    </div>
+
+    <div id="sR">
+      <div class="card full" id="ra"><div class="lbl" style="left:36px;top:30px">RATIONAL · g(x) OVER h(x)</div><div class="bf2" id="rF" style="top:76px"></div>
+        <div class="hiBox" id="rHi" style="left:20px;width:744px;height:112px"></div><div id="rCs"></div></div>
+      <div class="card rf" id="rb"><div class="lbl" style="left:36px;top:30px;color:var(--red)">TOP 1, BOTTOM 0 · 1/(x - 1) NEAR 1</div><svg id="rS" class="cs" width="784" height="580"></svg>
+        <div class="pillp bad" id="rP" style="left:36px;top:510px">The values shoot off: no limit</div></div>
+    </div>
+
+    <div id="sL">
+      <div class="card full" id="la"><div class="lbl" style="left:36px;top:30px">LIVE · TOP AND BOTTOM NEAR x = 1</div><svg id="lS" class="cs" width="784" height="580"></svg></div>
+      <div class="card rf" id="lb"><div class="lbl" style="left:36px;top:30px">THE RATIO SETTLES</div><div class="bf2" id="lF" style="top:70px;font-size:40px"></div><div id="lRs"></div>
+        <div class="pillp ac" id="lP" style="left:36px;top:510px">Both shrink, but the ratio stays near 2</div></div>
+    </div>
+
+    <div id="sD">
+      <div class="card full" id="da"><div class="lbl" style="left:36px;top:30px">THE WAY OUT · 4 STEPS</div><div id="dSol"></div></div>
+      <div class="card rf" id="db"><div class="lbl" style="left:36px;top:30px">FACTOR, CANCEL, PLUG IN</div><div class="dx" id="dX" style="top:84px"></div><svg id="dS" class="cs" width="784" height="580"></svg></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sK">
+      <div class="card full" id="ka"><div class="lbl" style="left:36px;top:30px">THE SHORTCUT · NCERT</div><div class="dx" id="kF" style="top:110px;font-size:48px"></div>
+        <div class="bf2" id="kC" style="top:330px;font-size:34px"></div>
+        <div class="pillp good" id="kP" style="left:36px;top:430px">n = 2, a = 1: 2 × 1 = 2. It matches</div></div>
+      <div class="card rf" id="kb"><div class="lbl" style="left:36px;top:30px">TEST IT · x = 1.001, a = 1</div><div id="kRs"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">FACTOR BOTH · CANCEL THE SHARED ONE</div><div class="dx" id="wX" style="top:150px"></div>
+        <div class="pillp bad" id="wP" style="left:36px;top:420px">x = 3 gives 0/0: factor</div>
+        <div class="pillp ac" id="wRes" style="left:36px;top:496px">Limit = 1/6</div></div>
+    </div>
+
+    <div id="sX"><div class="card red" id="trap"><svg id="tS" width="560" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2">Zero over zero? <span class="acc">Factor</span>, cancel, plug in.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
