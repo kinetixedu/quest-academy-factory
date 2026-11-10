@@ -1,0 +1,410 @@
+1
+00:00:00,450 --> 00:00:03,154
+At the fest, Aarav turns up
+the amplifier for a song.
+
+2
+00:00:03,454 --> 00:00:05,889
+The loud parts sound harsh and broken.
+
+3
+00:00:06,189 --> 00:00:08,922
+On a scope, the tops of
+the wave are sliced flat.
+
+4
+00:00:09,222 --> 00:00:12,009
+The transistor is resting
+in the wrong place.
+
+5
+00:00:12,009 --> 00:00:13,645
+Let's find the right one.
+
+6
+00:00:14,145 --> 00:00:16,693
+Think of a swing, hanging
+between two walls.
+
+7
+00:00:17,043 --> 00:00:19,665
+Hang it close to one wall, and push.
+
+8
+00:00:20,015 --> 00:00:21,528
+It bangs into the wall.
+
+9
+00:00:21,528 --> 00:00:23,461
+Part of each swing is cut off.
+
+10
+00:00:23,811 --> 00:00:25,557
+Now hang it right in the middle.
+
+11
+00:00:25,907 --> 00:00:29,534
+It swings fully both ways,
+without touching either wall.
+
+12
+00:00:30,184 --> 00:00:32,617
+A transistor amplifier is the same.
+
+13
+00:00:32,617 --> 00:00:34,792
+It needs a good resting place.
+
+14
+00:00:35,442 --> 00:00:38,627
+Here is the common emitter
+circuit on the breadboard.
+
+15
+00:00:38,977 --> 00:00:42,756
+A small supply, VBB,
+drives the base through RB.
+
+16
+00:00:43,106 --> 00:00:47,010
+A bigger supply, VCC, feeds
+the collector through RC.
+
+17
+00:00:47,360 --> 00:00:49,692
+With no signal, steady currents flow.
+
+18
+00:00:49,692 --> 00:00:51,432
+This is the DC condition.
+
+19
+00:00:51,782 --> 00:00:53,082
+Turn RB down.
+
+20
+00:00:53,082 --> 00:00:54,874
+The base current rises.
+
+21
+00:00:55,224 --> 00:00:58,466
+The collector current
+rises too, beta times more.
+
+22
+00:00:58,466 --> 00:01:00,146
+Here beta is one fifty.
+
+23
+00:01:00,496 --> 00:01:04,799
+And VCE falls, because more
+voltage drops across RC.
+
+24
+00:01:05,449 --> 00:01:08,437
+Let's turn this into
+a graph, step by step.
+
+25
+00:01:08,787 --> 00:01:09,841
+Base loop.
+
+26
+00:01:09,841 --> 00:01:13,136
+VBB equals IBRB, plus VBE.
+
+27
+00:01:13,836 --> 00:01:18,201
+So IB equals VBB minus VBE, over RB.
+
+28
+00:01:18,901 --> 00:01:21,479
+Then IC equals beta times IB.
+
+29
+00:01:22,179 --> 00:01:23,543
+Collector loop.
+
+30
+00:01:23,543 --> 00:01:26,856
+VCC equals ICRC, plus VCE.
+
+31
+00:01:27,556 --> 00:01:30,719
+So VCE equals VCC minus ICRC.
+
+32
+00:01:30,719 --> 00:01:32,675
+That is a straight line.
+
+33
+00:01:33,375 --> 00:01:34,893
+Set IC to zero.
+
+34
+00:01:34,893 --> 00:01:37,750
+VCE equals VCC, twelve volts.
+
+35
+00:01:37,750 --> 00:01:39,314
+The cut off point.
+
+36
+00:01:40,014 --> 00:01:41,553
+Set VCE to zero.
+
+37
+00:01:41,553 --> 00:01:44,620
+IC is VCC over RC, six milliamperes.
+
+38
+00:01:44,620 --> 00:01:46,128
+The saturation point.
+
+39
+00:01:46,828 --> 00:01:48,226
+Join the two points.
+
+40
+00:01:48,226 --> 00:01:50,843
+This straight line is the DC load line.
+
+41
+00:01:51,493 --> 00:01:54,633
+Every resting state of this
+circuit sits on this line.
+
+42
+00:01:54,983 --> 00:01:59,071
+Where it actually rests is the
+operating point, or Q point.
+
+43
+00:01:59,421 --> 00:02:01,040
+Q stands for quiescent.
+
+44
+00:02:01,040 --> 00:02:03,272
+It means quiet, with no signal.
+
+45
+00:02:03,622 --> 00:02:05,900
+Now add a small signal at the base.
+
+46
+00:02:05,900 --> 00:02:08,076
+The Q point swings along the line.
+
+47
+00:02:08,426 --> 00:02:11,690
+With Q in the middle,
+the output wave is clean.
+
+48
+00:02:12,040 --> 00:02:13,998
+Move Q close to saturation.
+
+49
+00:02:13,998 --> 00:02:15,750
+The swing hits the end.
+
+50
+00:02:16,100 --> 00:02:18,986
+The bottom of the output
+wave is sliced off.
+
+51
+00:02:18,986 --> 00:02:20,222
+That is clipping.
+
+52
+00:02:20,572 --> 00:02:22,294
+Move Q close to cut off.
+
+53
+00:02:22,294 --> 00:02:23,958
+Now the top gets sliced.
+
+54
+00:02:24,308 --> 00:02:28,624
+So for the biggest clean swing, keep
+Q near the middle of the load line.
+
+55
+00:02:29,274 --> 00:02:31,041
+The load line is the road.
+
+56
+00:02:31,041 --> 00:02:33,047
+The Q point is where you park.
+
+57
+00:02:33,847 --> 00:02:34,966
+Worked example.
+
+58
+00:02:34,966 --> 00:02:36,304
+Find the Q point.
+
+59
+00:02:36,654 --> 00:02:38,723
+VCC is twelve volts.
+
+60
+00:02:38,723 --> 00:02:40,732
+RC is two kilo ohms.
+
+61
+00:02:40,732 --> 00:02:42,414
+Beta is one fifty.
+
+62
+00:02:42,764 --> 00:02:44,715
+VBB is three volts.
+
+63
+00:02:44,715 --> 00:02:47,747
+RB is one hundred fifteen kilo ohms.
+
+64
+00:02:48,097 --> 00:02:53,223
+IB is three minus zero point seven,
+over one hundred fifteen kilo ohms.
+
+65
+00:02:53,573 --> 00:02:54,864
+That is twenty microamperes.
+
+66
+00:02:55,564 --> 00:02:57,794
+IC is one fifty times twenty microamperes.
+
+67
+00:02:57,794 --> 00:02:58,817
+Three milliamperes.
+
+68
+00:02:59,517 --> 00:03:03,631
+VCE is twelve, minus three
+milliamperes times two kilo ohms.
+
+69
+00:03:03,981 --> 00:03:05,365
+That is six volts.
+
+70
+00:03:06,065 --> 00:03:08,533
+So Q is at six volts
+and three milliamperes.
+
+71
+00:03:08,533 --> 00:03:10,662
+Right in the middle of the load line.
+
+72
+00:03:11,312 --> 00:03:12,776
+Now, the exam trap.
+
+73
+00:03:13,126 --> 00:03:16,780
+Many students think a Q point near
+saturation gives a bigger output.
+
+74
+00:03:17,130 --> 00:03:18,030
+It does not.
+
+75
+00:03:18,013 --> 00:03:19,024
+The wave clips.
+
+76
+00:03:19,024 --> 00:03:21,356
+The middle gives the biggest clean swing.
+
+77
+00:03:22,006 --> 00:03:24,880
+Also, the load line ends use RC only.
+
+78
+00:03:24,880 --> 00:03:26,487
+RB is not in them.
+
+79
+00:03:26,837 --> 00:03:28,458
+Where is this asked?
+
+80
+00:03:28,458 --> 00:03:30,319
+In PUC board papers.
+
+81
+00:03:30,969 --> 00:03:36,201
+Draw the load line, mark the Q
+point, and find IB, IC and VCE.
+
+82
+00:03:36,851 --> 00:03:37,805
+Try this.
+
+83
+00:03:37,805 --> 00:03:43,855
+VCC is ten volts, RC is one kilo
+ohm, VBB is four point seven volts,
+
+84
+00:03:43,855 --> 00:03:48,242
+RB is one hundred kilo ohms,
+and beta is one hundred.
+
+85
+00:03:48,242 --> 00:03:50,103
+Where is the Q point?
+
+86
+00:03:55,503 --> 00:03:56,403
+C.
+
+87
+00:03:55,797 --> 00:03:57,334
+Six volts and four milliamperes.
+
+88
+00:03:57,684 --> 00:04:00,844
+IB is four volts over
+one hundred kilo ohms.
+
+89
+00:04:00,844 --> 00:04:02,190
+Forty microamperes.
+
+90
+00:04:02,540 --> 00:04:04,883
+IC is one hundred times
+forty microamperes.
+
+91
+00:04:04,883 --> 00:04:05,898
+Four milliamperes.
+
+92
+00:04:06,248 --> 00:04:10,404
+VCE is ten, minus four
+milliamperes times one kilo ohm.
+
+93
+00:04:10,404 --> 00:04:11,326
+Six volts.
+
+94
+00:04:11,976 --> 00:04:13,523
+Screenshot this card.
+
+95
+00:04:16,723 --> 00:04:18,678
+Next, voltage divider bias.
+
+96
+00:04:18,678 --> 00:04:21,852
+How do we stop the Q
+point drifting with heat?

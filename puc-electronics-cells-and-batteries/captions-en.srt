@@ -1,0 +1,452 @@
+1
+00:00:00,450 --> 00:00:02,912
+Aarav reads the back of
+an old phone battery.
+
+2
+00:00:03,212 --> 00:00:04,978
+Three point seven volts.
+
+3
+00:00:04,978 --> 00:00:07,162
+Five thousand milliampere hours.
+
+4
+00:00:07,462 --> 00:00:11,333
+And when he plays a heavy game,
+the battery bar drops fast.
+
+5
+00:00:11,633 --> 00:00:13,860
+What do these numbers really mean?
+
+6
+00:00:13,860 --> 00:00:14,949
+Let's find out.
+
+7
+00:00:15,449 --> 00:00:18,412
+A cell is like a small
+pump for electric charge.
+
+8
+00:00:18,762 --> 00:00:21,394
+Inside are two metal
+plates, called electrodes.
+
+9
+00:00:21,744 --> 00:00:25,967
+Between them is a chemical paste
+or liquid, called the electrolyte.
+
+10
+00:00:26,317 --> 00:00:29,688
+A chemical reaction pushes electrons
+out of the negative terminal.
+
+11
+00:00:30,338 --> 00:00:34,468
+They travel round the circuit, and
+come back in at the positive terminal.
+
+12
+00:00:34,818 --> 00:00:38,525
+So a cell turns chemical
+energy into electrical energy.
+
+13
+00:00:39,175 --> 00:00:42,776
+Join two or more cells
+together, and you get a battery.
+
+14
+00:00:43,426 --> 00:00:44,804
+Cells come in two families.
+
+15
+00:00:45,154 --> 00:00:47,134
+Primary cells are used once.
+
+16
+00:00:47,134 --> 00:00:49,420
+Their reaction cannot be reversed.
+
+17
+00:00:49,770 --> 00:00:51,739
+A torch dry cell is primary.
+
+18
+00:00:51,739 --> 00:00:54,159
+It gives about one point five volts.
+
+19
+00:00:54,809 --> 00:00:57,943
+Secondary cells can be
+recharged again and again.
+
+20
+00:00:58,293 --> 00:01:00,847
+A lead acid cell gives about two volts.
+
+21
+00:01:00,847 --> 00:01:03,649
+Six of them make a
+twelve volt car battery.
+
+22
+00:01:03,999 --> 00:01:08,453
+A lithium ion cell, like a phone
+battery, gives about three point seven
+
+23
+00:01:08,453 --> 00:01:09,353
+volts.
+
+24
+00:01:09,697 --> 00:01:12,862
+Now, why does the battery
+bar drop during a heavy game?
+
+25
+00:01:13,212 --> 00:01:16,492
+Every cell has a little
+resistance inside it.
+
+26
+00:01:16,492 --> 00:01:19,540
+We call it internal resistance, small r.
+
+27
+00:01:19,890 --> 00:01:22,600
+It is like a narrow pipe inside the pump.
+
+28
+00:01:22,600 --> 00:01:24,270
+Some push is lost there.
+
+29
+00:01:24,920 --> 00:01:27,545
+Let's test a cell on the breadboard.
+
+30
+00:01:27,545 --> 00:01:30,918
+EMF one point five volts, r half an ohm.
+
+31
+00:01:31,268 --> 00:01:33,505
+With no load, no current flows.
+
+32
+00:01:33,505 --> 00:01:36,565
+The meter reads the full
+one point five volts.
+
+33
+00:01:36,915 --> 00:01:41,977
+This full push, with no current,
+is called the EMF, capital E.
+
+34
+00:01:42,627 --> 00:01:45,098
+Now connect a two point five ohm load.
+
+35
+00:01:45,098 --> 00:01:47,080
+The current is half an ampere.
+
+36
+00:01:47,430 --> 00:01:50,254
+The meter drops to one
+point two five volts.
+
+37
+00:01:50,604 --> 00:01:51,859
+A one ohm load.
+
+38
+00:01:51,859 --> 00:01:53,722
+More current, one ampere.
+
+39
+00:01:53,722 --> 00:01:55,859
+The voltage falls to one volt.
+
+40
+00:01:56,209 --> 00:01:57,426
+A half ohm load.
+
+41
+00:01:57,426 --> 00:01:59,030
+One and a half amperes.
+
+42
+00:01:59,030 --> 00:02:01,456
+Only zero point seven five volts left.
+
+43
+00:02:02,106 --> 00:02:03,163
+Watch the scope.
+
+44
+00:02:03,163 --> 00:02:05,757
+More current, lower
+voltage at the terminals.
+
+45
+00:02:06,407 --> 00:02:08,433
+Let's write the rule step by step.
+
+46
+00:02:08,783 --> 00:02:11,891
+The EMF drives current
+through both resistances.
+
+47
+00:02:11,891 --> 00:02:13,752
+E equals I times R plus r.
+
+48
+00:02:14,452 --> 00:02:17,820
+So the current I equals
+E divided by R plus r.
+
+49
+00:02:18,520 --> 00:02:21,146
+The voltage at the
+terminals is V equals IR.
+
+50
+00:02:21,846 --> 00:02:23,190
+Put them together.
+
+51
+00:02:23,190 --> 00:02:24,867
+V equals E minus I r.
+
+52
+00:02:25,567 --> 00:02:28,496
+I r is the voltage lost inside the cell.
+
+53
+00:02:28,496 --> 00:02:32,065
+A heavy game draws more
+current, so more is lost.
+
+54
+00:02:32,715 --> 00:02:34,518
+Now the milliampere hours.
+
+55
+00:02:34,518 --> 00:02:37,005
+This is the capacity of the battery.
+
+56
+00:02:37,355 --> 00:02:40,176
+It tells how much charge
+the battery can deliver.
+
+57
+00:02:40,526 --> 00:02:41,426
+Current times time.
+
+58
+00:02:41,371 --> 00:02:42,682
+Milliamperes multiplied by hours.
+
+59
+00:02:43,332 --> 00:02:45,977
+One milliampere hour is
+three point six coulombs.
+
+60
+00:02:46,627 --> 00:02:48,327
+Cells can also be joined.
+
+61
+00:02:48,327 --> 00:02:50,479
+In series, the EM Fs add up.
+
+62
+00:02:50,829 --> 00:02:53,255
+The internal resistances add up too.
+
+63
+00:02:53,255 --> 00:02:55,610
+So n cells give n E, and n r.
+
+64
+00:02:56,260 --> 00:02:59,809
+In parallel, identical
+cells keep the same EMF.
+
+65
+00:03:00,159 --> 00:03:02,825
+But the internal
+resistance becomes r by n.
+
+66
+00:03:02,825 --> 00:03:04,251
+And they last longer.
+
+67
+00:03:04,901 --> 00:03:06,446
+A cell's push is E.
+
+68
+00:03:06,446 --> 00:03:08,482
+Its inside takes away I r.
+
+69
+00:03:09,282 --> 00:03:10,396
+Worked example.
+
+70
+00:03:10,396 --> 00:03:15,239
+A phone battery is three point seven
+volts, five thousand milliampere hours.
+
+71
+00:03:15,589 --> 00:03:19,296
+Five thousand milliampere
+hours is five ampere hours.
+
+72
+00:03:19,996 --> 00:03:23,316
+Charge equals five amperes,
+times thirty six hundred seconds.
+
+73
+00:03:23,316 --> 00:03:25,255
+That is eighteen thousand coulombs.
+
+74
+00:03:25,955 --> 00:03:28,380
+Energy equals voltage times charge.
+
+75
+00:03:28,380 --> 00:03:31,237
+Three point seven times eighteen thousand.
+
+76
+00:03:31,937 --> 00:03:36,583
+That is sixty six thousand six hundred
+joules, or eighteen point five watt
+
+77
+00:03:36,583 --> 00:03:37,483
+hours.
+
+78
+00:03:37,895 --> 00:03:42,117
+If the phone draws two hundred fifty
+milliamperes, it lasts five thousand
+
+79
+00:03:42,117 --> 00:03:43,125
+by two fifty.
+
+80
+00:03:43,125 --> 00:03:44,078
+Twenty hours.
+
+81
+00:03:44,728 --> 00:03:46,190
+Now, the exam trap.
+
+82
+00:03:46,540 --> 00:03:50,161
+Many students think EMF and
+terminal voltage are the same.
+
+83
+00:03:50,511 --> 00:03:51,512
+They are not.
+
+84
+00:03:51,512 --> 00:03:53,051
+V equals E minus I r.
+
+85
+00:03:53,701 --> 00:03:56,402
+They are equal only when no current flows.
+
+86
+00:03:57,052 --> 00:03:58,722
+Where is this asked?
+
+87
+00:03:58,722 --> 00:04:02,354
+In PUC, CBSE and ISC board papers.
+
+88
+00:04:02,704 --> 00:04:07,273
+JEE Main asks it too, with
+cells in series and in parallel.
+
+89
+00:04:07,623 --> 00:04:11,946
+Expect terminal voltage, internal
+resistance, and combinations of cells.
+
+90
+00:04:12,596 --> 00:04:13,496
+Try this.
+
+91
+00:04:13,418 --> 00:04:18,155
+Four identical cells, each one point
+five volts with a quarter ohm inside,
+
+92
+00:04:18,155 --> 00:04:20,839
+are in series with a five ohm resistor.
+
+93
+00:04:20,839 --> 00:04:22,842
+What is the terminal voltage?
+
+94
+00:04:28,242 --> 00:04:29,142
+B.
+
+95
+00:04:28,651 --> 00:04:29,569
+Five volts.
+
+96
+00:04:29,919 --> 00:04:33,668
+In series, E is four times
+one point five, six volts.
+
+97
+00:04:33,668 --> 00:04:35,064
+And r is one ohm.
+
+98
+00:04:35,414 --> 00:04:38,074
+The current is six by five plus one.
+
+99
+00:04:38,074 --> 00:04:39,041
+One ampere.
+
+100
+00:04:39,391 --> 00:04:42,397
+So V equals six minus one times one.
+
+101
+00:04:42,397 --> 00:04:43,490
+Five volts.
+
+102
+00:04:44,140 --> 00:04:45,686
+Screenshot this card.
+
+103
+00:04:48,886 --> 00:04:50,596
+Next, soldering and desoldering.
+
+104
+00:04:50,596 --> 00:04:53,096
+How do you join parts so
+they never come loose?

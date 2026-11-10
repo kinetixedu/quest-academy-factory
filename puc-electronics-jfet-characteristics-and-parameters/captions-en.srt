@@ -1,0 +1,433 @@
+1
+00:00:00,450 --> 00:00:03,652
+Aarav slowly turns up
+the supply on a JFET.
+
+2
+00:00:03,952 --> 00:00:08,563
+At first, the current climbs with
+the voltage, like a normal resistor.
+
+3
+00:00:08,863 --> 00:00:10,414
+Then it stops climbing.
+
+4
+00:00:10,414 --> 00:00:12,248
+More voltage, same current.
+
+5
+00:00:12,548 --> 00:00:14,102
+Why does it go flat?
+
+6
+00:00:14,102 --> 00:00:16,599
+Today we read the JFET's curves.
+
+7
+00:00:17,099 --> 00:00:21,132
+Think of a soft hose again,
+with water pushed in at one end.
+
+8
+00:00:21,482 --> 00:00:24,053
+Push a little harder,
+and more water flows.
+
+9
+00:00:24,403 --> 00:00:28,006
+But a hard push also pinches
+the hose near the far end.
+
+10
+00:00:28,356 --> 00:00:30,032
+Harder push, tighter pinch.
+
+11
+00:00:30,032 --> 00:00:32,305
+So the flow settles at a steady value.
+
+12
+00:00:32,955 --> 00:00:37,999
+In a JFET, the push is
+the drain voltage, VDS.
+
+13
+00:00:38,349 --> 00:00:40,769
+It pinches the drain end of the channel.
+
+14
+00:00:40,769 --> 00:00:42,365
+So the current goes flat.
+
+15
+00:00:43,015 --> 00:00:45,026
+Let's measure it on the breadboard.
+
+16
+00:00:45,376 --> 00:00:47,672
+The gate is set at zero volts.
+
+17
+00:00:47,672 --> 00:00:49,482
+We slowly raise VDS.
+
+18
+00:00:49,832 --> 00:00:53,477
+From zero, the drain current
+rises almost in a straight line.
+
+19
+00:00:53,827 --> 00:00:56,238
+Here the channel acts like a resistor.
+
+20
+00:00:56,238 --> 00:00:57,927
+This is the ohmic region.
+
+21
+00:00:58,277 --> 00:01:00,995
+At four volts, the drain end pinches.
+
+22
+00:01:00,995 --> 00:01:03,671
+This is VP, the pinch off voltage.
+
+23
+00:01:04,021 --> 00:01:06,791
+After that, the current
+stays near ten milliamperes.
+
+24
+00:01:06,791 --> 00:01:08,100
+We call it IDSS.
+
+25
+00:01:08,450 --> 00:01:12,662
+This flat part is the saturation,
+or constant current, region.
+
+26
+00:01:13,012 --> 00:01:16,570
+Now set the gate to minus
+one volt, and sweep again.
+
+27
+00:01:16,920 --> 00:01:19,166
+The curve goes flat earlier, and lower.
+
+28
+00:01:19,166 --> 00:01:21,024
+About five point six milliamperes.
+
+29
+00:01:21,374 --> 00:01:23,633
+At minus two volts, it is lower still.
+
+30
+00:01:23,633 --> 00:01:25,197
+Two point five milliamperes.
+
+31
+00:01:25,547 --> 00:01:28,771
+Push VDS too far, and
+the current shoots up.
+
+32
+00:01:28,771 --> 00:01:30,066
+That is breakdown.
+
+33
+00:01:30,066 --> 00:01:30,966
+Avoid it.
+
+34
+00:01:31,515 --> 00:01:35,767
+Now take the flat values, and plot
+them against the gate voltage.
+
+35
+00:01:36,117 --> 00:01:38,383
+This is the transfer characteristic.
+
+36
+00:01:38,383 --> 00:01:40,321
+It is a curve, a parabola.
+
+37
+00:01:40,671 --> 00:01:45,148
+At zero gate volts, ID
+is IDSS, its top value.
+
+38
+00:01:45,498 --> 00:01:49,501
+At VGS off, minus four volts, ID is zero.
+
+39
+00:01:49,851 --> 00:01:51,668
+The curve follows Shockley's equation.
+
+40
+00:01:52,018 --> 00:01:58,009
+ID equals IDSS, times one
+minus VGS over VP, all squared.
+
+41
+00:01:58,709 --> 00:02:02,256
+Notice, VP and VGS off have the same size.
+
+42
+00:02:02,256 --> 00:02:03,730
+Here, four volts.
+
+43
+00:02:04,380 --> 00:02:06,606
+Past pinch off, the current stays flat.
+
+44
+00:02:06,606 --> 00:02:08,513
+That is where a FET amplifies.
+
+45
+00:02:09,313 --> 00:02:11,873
+Three numbers describe a JFET.
+
+46
+00:02:11,873 --> 00:02:13,143
+Let's meet them.
+
+47
+00:02:13,493 --> 00:02:14,393
+One.
+
+48
+00:02:14,062 --> 00:02:15,949
+Drain resistance, r d.
+
+49
+00:02:15,949 --> 00:02:19,018
+Change in VDS, over change in ID.
+
+50
+00:02:19,718 --> 00:02:21,758
+We keep the gate voltage fixed.
+
+51
+00:02:21,758 --> 00:02:24,006
+On the flat part, r d is large.
+
+52
+00:02:24,356 --> 00:02:25,256
+Two.
+
+53
+00:02:24,873 --> 00:02:26,526
+Transconductance, g m.
+
+54
+00:02:26,526 --> 00:02:29,315
+Change in ID, over change in VGS.
+
+55
+00:02:30,015 --> 00:02:31,608
+We keep VDS fixed.
+
+56
+00:02:31,608 --> 00:02:34,199
+Its unit is siemens, also called mho.
+
+57
+00:02:34,549 --> 00:02:35,449
+Three.
+
+58
+00:02:35,242 --> 00:02:37,265
+Amplification factor, mu.
+
+59
+00:02:37,265 --> 00:02:40,572
+Change in VDS, over change in VGS.
+
+60
+00:02:41,272 --> 00:02:42,942
+We keep ID fixed.
+
+61
+00:02:42,942 --> 00:02:44,371
+Mu has no unit.
+
+62
+00:02:44,721 --> 00:02:48,244
+Now multiply and divide
+mu by the change in ID.
+
+63
+00:02:48,944 --> 00:02:54,588
+Mu becomes delta VDS over delta
+ID, times delta ID over delta VGS.
+
+64
+00:02:55,288 --> 00:02:57,210
+The first part is r d.
+
+65
+00:02:57,210 --> 00:02:58,840
+The second is g m.
+
+66
+00:02:58,840 --> 00:03:01,178
+So mu equals r d times g m.
+
+67
+00:03:01,828 --> 00:03:03,156
+Worked example.
+
+68
+00:03:03,156 --> 00:03:05,313
+Find r d, g m and mu.
+
+69
+00:03:05,663 --> 00:03:09,715
+With the gate fixed, VDS
+rises from four to ten volts.
+
+70
+00:03:10,065 --> 00:03:12,624
+ID rises from eight to eight
+point two milliamperes.
+
+71
+00:03:12,974 --> 00:03:16,402
+So r d is six volts over
+zero point two milliamperes.
+
+72
+00:03:16,402 --> 00:03:17,634
+Thirty kilo ohms.
+
+73
+00:03:18,334 --> 00:03:22,576
+With VDS fixed, the gate
+changes by zero point two volts.
+
+74
+00:03:22,926 --> 00:03:25,246
+ID changes by zero point six milliamperes.
+
+75
+00:03:25,946 --> 00:03:29,147
+So g m is zero point
+six over zero point two.
+
+76
+00:03:29,147 --> 00:03:30,595
+Three milli siemens.
+
+77
+00:03:31,295 --> 00:03:34,533
+Mu is thirty kilo ohms
+times three milli siemens.
+
+78
+00:03:34,533 --> 00:03:35,711
+That is ninety.
+
+79
+00:03:36,361 --> 00:03:37,823
+Now, the exam trap.
+
+80
+00:03:38,173 --> 00:03:40,634
+Many students think the current
+becomes zero at pinch off.
+
+81
+00:03:40,984 --> 00:03:42,009
+It does not.
+
+82
+00:03:42,009 --> 00:03:45,849
+At pinch off, ID stops rising
+and stays nearly constant.
+
+83
+00:03:46,499 --> 00:03:49,998
+ID becomes zero only when
+the gate reaches VGS off.
+
+84
+00:03:50,348 --> 00:03:51,969
+Where is this asked?
+
+85
+00:03:51,969 --> 00:03:53,829
+In PUC board papers.
+
+86
+00:03:54,479 --> 00:03:59,984
+Draw the curves, define r d, g m and
+mu, and prove mu equals r d times
+
+87
+00:03:59,984 --> 00:04:00,884
+g m.
+
+88
+00:04:01,278 --> 00:04:02,178
+Try this.
+
+89
+00:04:02,145 --> 00:04:07,253
+AJFET has mu of three hundred,
+and r d of one hundred kilo ohms.
+
+90
+00:04:07,253 --> 00:04:11,568
+With VDS fixed, the gate
+changes by zero point one volts.
+
+91
+00:04:11,568 --> 00:04:13,535
+How much does ID change?
+
+92
+00:04:18,935 --> 00:04:19,835
+B.
+
+93
+00:04:19,193 --> 00:04:20,441
+Zero point three milliamperes.
+
+94
+00:04:20,791 --> 00:04:23,447
+First, g m equals mu over r d.
+
+95
+00:04:23,797 --> 00:04:27,562
+Three hundred over one hundred
+kilo ohms is three milli siemens.
+
+96
+00:04:27,912 --> 00:04:31,583
+Change in ID is g m times change in VGS.
+
+97
+00:04:31,933 --> 00:04:34,400
+Three milli siemens times
+zero point one volts.
+
+98
+00:04:34,400 --> 00:04:36,410
+That is zero point three milliamperes.
+
+99
+00:04:37,060 --> 00:04:38,606
+Screenshot this card.
+
+100
+00:04:41,806 --> 00:04:42,965
+Next, the MOSFET.
+
+101
+00:04:42,965 --> 00:04:45,123
+A gate that never touches the channel.

@@ -1,0 +1,418 @@
+1
+00:00:00,450 --> 00:00:03,417
+Aarav's toy car stops every
+time it bumps into a wall.
+
+2
+00:00:03,717 --> 00:00:04,745
+He opens it up.
+
+3
+00:00:04,745 --> 00:00:06,885
+A wire has come loose from the board.
+
+4
+00:00:07,185 --> 00:00:08,664
+Tape will not hold it.
+
+5
+00:00:08,664 --> 00:00:10,413
+Glue does not carry current.
+
+6
+00:00:10,413 --> 00:00:12,413
+So how do we join it for good?
+
+7
+00:00:12,913 --> 00:00:13,979
+We solder it.
+
+8
+00:00:13,979 --> 00:00:18,073
+Soldering joins metal parts using
+a melted metal, called solder.
+
+9
+00:00:18,423 --> 00:00:20,600
+Think of it as a glue made of metal.
+
+10
+00:00:20,600 --> 00:00:23,103
+It holds the parts,
+and it carries current.
+
+11
+00:00:23,753 --> 00:00:27,325
+Solder is a soft mix of
+metals, called an alloy.
+
+12
+00:00:27,675 --> 00:00:31,768
+The classic solder is sixty
+percent tin and forty percent lead.
+
+13
+00:00:32,118 --> 00:00:36,148
+It melts at about one hundred and
+eighty three to one hundred and ninety
+
+14
+00:00:36,148 --> 00:00:37,198
+degrees Celsius.
+
+15
+00:00:37,848 --> 00:00:42,237
+Lead free solder, made of tin with a
+little silver and copper, melts higher.
+
+16
+00:00:42,237 --> 00:00:44,359
+About two hundred and twenty degrees.
+
+17
+00:00:45,009 --> 00:00:48,709
+Metal surfaces carry a thin
+dirty layer, called an oxide.
+
+18
+00:00:49,059 --> 00:00:50,893
+Solder will not stick to it.
+
+19
+00:00:50,893 --> 00:00:52,024
+So we use flux.
+
+20
+00:00:52,374 --> 00:00:56,556
+Flux cleans the oxide away,
+so the solder flows and grips.
+
+21
+00:00:56,556 --> 00:00:58,973
+Most solder wire has flux inside.
+
+22
+00:00:59,623 --> 00:01:01,111
+The tools are simple.
+
+23
+00:01:01,461 --> 00:01:03,720
+A soldering iron has a hot metal tip.
+
+24
+00:01:03,720 --> 00:01:06,416
+Twenty five watts is
+common for small circuits.
+
+25
+00:01:06,766 --> 00:01:08,661
+It always rests in a stand.
+
+26
+00:01:08,661 --> 00:01:10,952
+A damp sponge wipes the tip clean.
+
+27
+00:01:11,302 --> 00:01:14,824
+For taking joints apart, we use a
+desoldering pump, and desoldering wick.
+
+28
+00:01:15,474 --> 00:01:17,937
+Now, let's make one
+joint on the breadboard.
+
+29
+00:01:18,287 --> 00:01:21,333
+First, wipe the tip, and
+add a little solder to it.
+
+30
+00:01:21,333 --> 00:01:22,698
+This is called tinning.
+
+31
+00:01:23,048 --> 00:01:27,278
+Next, touch the tip to the copper
+pad and the wire, both together.
+
+32
+00:01:27,628 --> 00:01:29,590
+Watch the joint temperature climb.
+
+33
+00:01:29,940 --> 00:01:34,637
+When it passes the melting point, feed
+the solder into the joint, not onto
+
+34
+00:01:34,637 --> 00:01:35,537
+the iron.
+
+35
+00:01:35,791 --> 00:01:39,545
+The solder flows all round,
+and forms a smooth cone.
+
+36
+00:01:39,895 --> 00:01:41,559
+Take the solder away first.
+
+37
+00:01:41,559 --> 00:01:42,549
+Then the iron.
+
+38
+00:01:42,549 --> 00:01:44,450
+Do not move it while it cools.
+
+39
+00:01:45,100 --> 00:01:46,407
+Now test the joint.
+
+40
+00:01:46,407 --> 00:01:49,030
+A lamp and a scope check if current flows.
+
+41
+00:01:49,380 --> 00:01:50,825
+A bad joint flickers.
+
+42
+00:01:50,825 --> 00:01:52,797
+The voltage keeps dropping out.
+
+43
+00:01:53,147 --> 00:01:54,856
+A good joint is steady.
+
+44
+00:01:54,856 --> 00:01:57,078
+The voltage stays at five volts.
+
+45
+00:01:57,728 --> 00:01:59,706
+So what does a good joint look like?
+
+46
+00:02:00,056 --> 00:02:03,504
+A good joint is shiny, and
+shaped like a small cone.
+
+47
+00:02:03,854 --> 00:02:06,314
+A dull, lumpy ball is a cold joint.
+
+48
+00:02:06,314 --> 00:02:08,468
+The solder never gripped the pad.
+
+49
+00:02:08,818 --> 00:02:11,461
+A blob joining two pads
+is a solder bridge.
+
+50
+00:02:11,461 --> 00:02:13,079
+It makes a short circuit.
+
+51
+00:02:13,729 --> 00:02:15,618
+To remove a part, we desolder.
+
+52
+00:02:15,968 --> 00:02:17,027
+Melt the joint.
+
+53
+00:02:17,027 --> 00:02:19,933
+Press the plunger of the
+pump, then release it.
+
+54
+00:02:20,283 --> 00:02:23,161
+It sucks the hot solder up, like a straw.
+
+55
+00:02:23,811 --> 00:02:25,986
+Or press copper wick on the joint.
+
+56
+00:02:25,986 --> 00:02:29,529
+The braid soaks up the solder,
+like a sponge soaks water.
+
+57
+00:02:30,179 --> 00:02:31,841
+And always solder safely.
+
+58
+00:02:32,191 --> 00:02:34,727
+Put the iron back in its stand every time.
+
+59
+00:02:35,077 --> 00:02:39,385
+Work in a room with fresh air, and
+keep the fumes away from your face.
+
+60
+00:02:39,735 --> 00:02:42,773
+Wear safety glasses,
+because hot solder can spit.
+
+61
+00:02:43,123 --> 00:02:46,910
+And wash your hands after work,
+especially with lead solder.
+
+62
+00:02:47,560 --> 00:02:49,475
+Heat the joint, not the solder.
+
+63
+00:02:50,275 --> 00:02:51,339
+Worked example.
+
+64
+00:02:51,339 --> 00:02:55,929
+A soldering iron is rated twenty five
+watts, two hundred and thirty volts.
+
+65
+00:02:56,279 --> 00:02:58,132
+Current, I equals P by V.
+
+66
+00:02:58,132 --> 00:02:59,880
+Twenty five by two thirty.
+
+67
+00:02:59,880 --> 00:03:02,016
+About zero point one one amperes.
+
+68
+00:03:02,716 --> 00:03:05,918
+Element resistance, R
+equals V squared by P.
+
+69
+00:03:06,618 --> 00:03:10,185
+Two thirty squared is fifty
+two thousand nine hundred.
+
+70
+00:03:10,185 --> 00:03:11,811
+Divide by twenty five.
+
+71
+00:03:12,511 --> 00:03:16,027
+That is about two thousand
+one hundred and sixteen ohms.
+
+72
+00:03:16,727 --> 00:03:20,088
+In one minute, energy is
+twenty five times sixty.
+
+73
+00:03:20,088 --> 00:03:21,678
+Fifteen hundred joules.
+
+74
+00:03:22,328 --> 00:03:23,789
+Now, the exam trap.
+
+75
+00:03:24,139 --> 00:03:27,834
+Many students melt solder on the
+tip, and drip it onto the joint.
+
+76
+00:03:28,184 --> 00:03:29,084
+Wrong.
+
+77
+00:03:28,750 --> 00:03:31,998
+The joint stays cold, and
+the solder does not grip.
+
+78
+00:03:31,998 --> 00:03:33,622
+That makes a cold joint.
+
+79
+00:03:34,272 --> 00:03:35,172
+Right.
+
+80
+00:03:34,820 --> 00:03:38,338
+Heat the pad and the lead,
+then feed solder to the joint.
+
+81
+00:03:38,988 --> 00:03:40,610
+Where is this asked?
+
+82
+00:03:40,610 --> 00:03:42,470
+In PUC board papers.
+
+83
+00:03:42,820 --> 00:03:46,795
+Expect the steps of soldering, the
+role of flux, and desoldering tools.
+
+84
+00:03:47,445 --> 00:03:48,345
+Try this.
+
+85
+00:03:48,234 --> 00:03:52,697
+A two hundred and thirty volt soldering
+iron has an element of one thousand
+
+86
+00:03:52,697 --> 00:03:54,178
+and fifty eight ohms.
+
+87
+00:03:54,178 --> 00:03:55,515
+What is its power?
+
+88
+00:04:00,915 --> 00:04:01,815
+B.
+
+89
+00:04:01,333 --> 00:04:02,323
+Fifty watts.
+
+90
+00:04:02,673 --> 00:04:04,647
+P equals V squared by R.
+
+91
+00:04:04,997 --> 00:04:08,244
+Two thirty squared is fifty
+two thousand nine hundred.
+
+92
+00:04:08,594 --> 00:04:11,183
+Divide by one thousand and fifty eight.
+
+93
+00:04:11,183 --> 00:04:12,656
+That is fifty watts.
+
+94
+00:04:13,306 --> 00:04:14,852
+Screenshot this card.
+
+95
+00:04:18,052 --> 00:04:20,049
+Next, printed circuit boards.
+
+96
+00:04:20,049 --> 00:04:23,231
+How does one flat board
+replace a nest of wires?

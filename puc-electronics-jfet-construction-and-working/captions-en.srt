@@ -1,0 +1,477 @@
+1
+00:00:00,450 --> 00:00:02,624
+Aarav opens a broken earphone mic.
+
+2
+00:00:02,624 --> 00:00:04,750
+Inside sits a tiny round capsule.
+
+3
+00:00:05,050 --> 00:00:08,589
+Its signal is so weak, it
+can barely push any current.
+
+4
+00:00:08,889 --> 00:00:12,518
+Yet a part inside reads it,
+without taking current from it.
+
+5
+00:00:12,818 --> 00:00:13,718
+How?
+
+6
+00:00:13,309 --> 00:00:15,828
+That part is a field effect transistor.
+
+7
+00:00:15,828 --> 00:00:16,732
+An FET.
+
+8
+00:00:17,232 --> 00:00:20,398
+Think of a soft garden hose
+with water running through it.
+
+9
+00:00:20,748 --> 00:00:22,894
+Squeeze the hose with your hand.
+
+10
+00:00:22,894 --> 00:00:24,390
+Less water comes out.
+
+11
+00:00:24,740 --> 00:00:27,068
+Squeeze hard enough, and the flow stops.
+
+12
+00:00:27,418 --> 00:00:29,471
+Your hand takes no water at all.
+
+13
+00:00:29,471 --> 00:00:31,425
+It only presses from the sides.
+
+14
+00:00:32,075 --> 00:00:34,139
+An FET works the same way.
+
+15
+00:00:34,139 --> 00:00:36,231
+Its hose is called the channel.
+
+16
+00:00:36,581 --> 00:00:40,253
+Current flows through the channel,
+from the source to the drain.
+
+17
+00:00:40,603 --> 00:00:42,719
+The gate is the squeezing hand.
+
+18
+00:00:42,719 --> 00:00:44,335
+It sits on both sides.
+
+19
+00:00:44,685 --> 00:00:47,518
+A voltage on the gate
+squeezes the channel.
+
+20
+00:00:47,518 --> 00:00:49,486
+Almost no gate current flows.
+
+21
+00:00:50,136 --> 00:00:54,336
+Let's look inside a junction FET, or JFET.
+
+22
+00:00:54,686 --> 00:00:57,190
+Start with a bar of n type silicon.
+
+23
+00:00:57,190 --> 00:00:58,694
+This is the channel.
+
+24
+00:00:59,044 --> 00:01:02,268
+N type means it has extra free
+electrons to carry current.
+
+25
+00:01:02,618 --> 00:01:04,062
+One end is the source.
+
+26
+00:01:04,062 --> 00:01:05,358
+Electrons enter here.
+
+27
+00:01:05,708 --> 00:01:07,338
+The other end is the drain.
+
+28
+00:01:07,338 --> 00:01:08,569
+Electrons leave here.
+
+29
+00:01:08,919 --> 00:01:11,844
+Now add two p type
+regions, one on each side.
+
+30
+00:01:12,194 --> 00:01:14,168
+They are joined together inside.
+
+31
+00:01:14,168 --> 00:01:15,683
+This pair is the gate.
+
+32
+00:01:16,033 --> 00:01:18,881
+Where p meets n, we get p n junctions.
+
+33
+00:01:18,881 --> 00:01:20,953
+So it is a junction FET.
+
+34
+00:01:21,603 --> 00:01:24,114
+In the symbol, the gate arrow points in.
+
+35
+00:01:24,114 --> 00:01:25,481
+That means n channel.
+
+36
+00:01:25,831 --> 00:01:28,753
+In a p channel JFET, everything flips.
+
+37
+00:01:28,753 --> 00:01:30,252
+The arrow points out.
+
+38
+00:01:30,902 --> 00:01:32,980
+Now let's run it on the breadboard.
+
+39
+00:01:33,330 --> 00:01:36,879
+A supply, VDD, pushes
+electrons from source to drain.
+
+40
+00:01:37,229 --> 00:01:39,786
+A second supply makes the gate negative.
+
+41
+00:01:39,786 --> 00:01:41,261
+This is reverse bias.
+
+42
+00:01:41,611 --> 00:01:44,579
+At zero gate voltage,
+the channel is wide open.
+
+43
+00:01:44,579 --> 00:01:45,980
+Ten milliamperes flow.
+
+44
+00:01:46,330 --> 00:01:48,626
+Now make the gate minus one volt.
+
+45
+00:01:48,626 --> 00:01:50,151
+The grey layers grow.
+
+46
+00:01:50,501 --> 00:01:52,095
+They are depletion layers.
+
+47
+00:01:52,095 --> 00:01:53,832
+Zones with no free carriers.
+
+48
+00:01:53,832 --> 00:01:55,061
+They block current.
+
+49
+00:01:55,411 --> 00:01:57,023
+The channel gets narrower.
+
+50
+00:01:57,023 --> 00:01:58,546
+The drain current drops.
+
+51
+00:01:58,896 --> 00:02:00,090
+Minus two volts.
+
+52
+00:02:00,090 --> 00:02:01,177
+Narrower still.
+
+53
+00:02:01,177 --> 00:02:02,974
+Watch the scope step down.
+
+54
+00:02:03,324 --> 00:02:06,119
+At minus four volts, the two layers touch.
+
+55
+00:02:06,119 --> 00:02:07,637
+The channel is closed.
+
+56
+00:02:07,987 --> 00:02:09,909
+The drain current is zero.
+
+57
+00:02:09,909 --> 00:02:12,705
+This gate voltage is called VGS off.
+
+58
+00:02:13,355 --> 00:02:16,183
+And the gate current stayed
+near zero the whole time.
+
+59
+00:02:16,833 --> 00:02:19,100
+Let's write the working in small steps.
+
+60
+00:02:19,450 --> 00:02:20,350
+One.
+
+61
+00:02:19,951 --> 00:02:22,317
+The gate junction is reverse biased.
+
+62
+00:02:22,317 --> 00:02:24,437
+So gate current is almost zero.
+
+63
+00:02:25,137 --> 00:02:26,037
+Two.
+
+64
+00:02:25,528 --> 00:02:28,203
+A more negative gate makes
+the depletion layers wider.
+
+65
+00:02:28,903 --> 00:02:29,803
+Three.
+
+66
+00:02:29,477 --> 00:02:31,889
+A narrower channel has more resistance.
+
+67
+00:02:31,889 --> 00:02:33,500
+R equals rho L over A.
+
+68
+00:02:34,200 --> 00:02:35,100
+Four.
+
+69
+00:02:34,679 --> 00:02:36,955
+More resistance means less drain current.
+
+70
+00:02:37,655 --> 00:02:38,555
+Five.
+
+71
+00:02:38,277 --> 00:02:41,432
+At VGS off, the channel pinches shut.
+
+72
+00:02:41,432 --> 00:02:42,642
+ID is zero.
+
+73
+00:02:43,342 --> 00:02:45,398
+Only electrons carry this current.
+
+74
+00:02:45,398 --> 00:02:47,107
+So an FET is unipolar.
+
+75
+00:02:47,457 --> 00:02:50,098
+ABJT needs both electrons and holes.
+
+76
+00:02:50,098 --> 00:02:51,390
+So it is bipolar.
+
+77
+00:02:52,040 --> 00:02:54,522
+ABJT is worked by current.
+
+78
+00:02:54,522 --> 00:02:57,061
+An FET is worked by voltage.
+
+79
+00:02:57,861 --> 00:02:58,808
+Worked example.
+
+80
+00:02:58,808 --> 00:03:01,428
+How hard is it to push
+current into the gate?
+
+81
+00:03:01,778 --> 00:03:03,863
+The gate is at minus two volts.
+
+82
+00:03:04,213 --> 00:03:06,656
+A tiny leakage current
+flows into the gate.
+
+83
+00:03:06,656 --> 00:03:07,869
+Just one nanoampere.
+
+84
+00:03:08,219 --> 00:03:10,428
+A nanoampere is one
+billionth of an ampere.
+
+85
+00:03:10,778 --> 00:03:15,059
+Input resistance is the gate
+voltage divided by the gate current.
+
+86
+00:03:15,759 --> 00:03:18,692
+That is two volts over ten
+to the minus nine amperes.
+
+87
+00:03:19,392 --> 00:03:21,652
+Two times ten to the nine ohms.
+
+88
+00:03:21,652 --> 00:03:23,321
+Two thousand mega ohms.
+
+89
+00:03:24,021 --> 00:03:26,941
+So the gate takes almost
+nothing from the signal.
+
+90
+00:03:26,941 --> 00:03:28,473
+Perfect for a weak mic.
+
+91
+00:03:29,123 --> 00:03:30,586
+Now, the exam trap.
+
+92
+00:03:30,936 --> 00:03:34,662
+Many students forward bias
+the gate to turn the JFET on.
+
+93
+00:03:35,012 --> 00:03:35,912
+Wrong.
+
+94
+00:03:35,550 --> 00:03:38,586
+The gate to source junction
+is always reverse biased.
+
+95
+00:03:39,236 --> 00:03:41,900
+Forward bias lets gate current flow.
+
+96
+00:03:41,900 --> 00:03:44,453
+The huge input resistance is lost.
+
+97
+00:03:44,803 --> 00:03:46,427
+Where is this asked?
+
+98
+00:03:46,427 --> 00:03:48,291
+In PUC board papers.
+
+99
+00:03:48,941 --> 00:03:53,607
+Draw the construction, explain the
+working, and compare a JFET with
+
+100
+00:03:53,607 --> 00:03:54,512
+a BJT.
+
+101
+00:03:55,162 --> 00:03:56,062
+Try this.
+
+102
+00:03:56,037 --> 00:04:00,264
+An n channel JFET has VGS
+off of minus four volts.
+
+103
+00:04:00,264 --> 00:04:03,840
+The gate goes from minus
+one to minus three volts.
+
+104
+00:04:03,840 --> 00:04:04,929
+What happens?
+
+105
+00:04:10,329 --> 00:04:11,229
+B.
+
+106
+00:04:10,747 --> 00:04:14,509
+The depletion layers widen,
+and the drain current falls.
+
+107
+00:04:14,859 --> 00:04:19,178
+Minus three volts is more
+reverse bias, so the layers grow.
+
+108
+00:04:19,528 --> 00:04:23,921
+The channel narrows, its
+resistance rises, and ID falls.
+
+109
+00:04:24,271 --> 00:04:26,798
+But minus three is not yet minus four.
+
+110
+00:04:26,798 --> 00:04:28,682
+So the current is not zero.
+
+111
+00:04:29,332 --> 00:04:30,878
+Screenshot this card.
+
+112
+00:04:34,078 --> 00:04:36,116
+Next, JFET characteristics.
+
+113
+00:04:36,116 --> 00:04:39,324
+What do the curves and
+r d, g m and mu tell us?

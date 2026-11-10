@@ -1,0 +1,443 @@
+1
+00:00:00,450 --> 00:00:03,614
+Aarav switches on the stair light
+at the bottom of the stairs.
+
+2
+00:00:03,914 --> 00:00:06,323
+At the top, he flips a different switch.
+
+3
+00:00:06,323 --> 00:00:07,813
+The same light goes off.
+
+4
+00:00:08,113 --> 00:00:09,788
+Two switches, one light.
+
+5
+00:00:09,788 --> 00:00:11,574
+How do they share the job?
+
+6
+00:00:11,574 --> 00:00:12,631
+Let's find out.
+
+7
+00:00:13,131 --> 00:00:15,299
+A switch is like a tap for current.
+
+8
+00:00:15,649 --> 00:00:17,767
+Close the tap, and water stops.
+
+9
+00:00:17,767 --> 00:00:20,073
+Open the switch, and current stops.
+
+10
+00:00:20,423 --> 00:00:23,940
+Inside, a metal contact
+makes the path, or breaks it.
+
+11
+00:00:24,590 --> 00:00:27,144
+Switches are named by poles and throws.
+
+12
+00:00:27,494 --> 00:00:30,889
+A pole is one separate
+circuit the switch controls.
+
+13
+00:00:31,539 --> 00:00:34,441
+A throw is one path each
+pole can connect to.
+
+14
+00:00:35,091 --> 00:00:37,125
+Single pole, single throw.
+
+15
+00:00:37,125 --> 00:00:38,944
+One circuit, one path.
+
+16
+00:00:38,944 --> 00:00:40,278
+Just on or off.
+
+17
+00:00:40,628 --> 00:00:42,390
+Single pole, double throw.
+
+18
+00:00:42,390 --> 00:00:45,121
+One circuit, but two paths to choose from.
+
+19
+00:00:45,471 --> 00:00:47,121
+Double pole, single throw.
+
+20
+00:00:47,121 --> 00:00:49,540
+Two circuits switched on and off together.
+
+21
+00:00:49,890 --> 00:00:51,455
+Double pole, double throw.
+
+22
+00:00:51,455 --> 00:00:53,451
+Two circuits, each with two paths.
+
+23
+00:00:54,101 --> 00:00:56,137
+Now the stair light, on the breadboard.
+
+24
+00:00:56,487 --> 00:00:59,472
+Each switch is single pole, double throw.
+
+25
+00:00:59,822 --> 00:01:01,178
+Two wires join them.
+
+26
+00:01:01,178 --> 00:01:04,089
+We call them the upper
+wire and the lower wire.
+
+27
+00:01:04,439 --> 00:01:05,614
+Both switches up.
+
+28
+00:01:05,614 --> 00:01:07,028
+The path is complete.
+
+29
+00:01:07,028 --> 00:01:08,156
+The light glows.
+
+30
+00:01:08,506 --> 00:01:10,130
+Flip the top switch down.
+
+31
+00:01:10,130 --> 00:01:11,239
+The path breaks.
+
+32
+00:01:11,239 --> 00:01:12,583
+The light goes dark.
+
+33
+00:01:12,933 --> 00:01:15,056
+Flip the bottom switch down too.
+
+34
+00:01:15,056 --> 00:01:16,881
+The path is complete again.
+
+35
+00:01:17,231 --> 00:01:19,419
+Now flip the top one back up.
+
+36
+00:01:19,419 --> 00:01:20,368
+Dark again.
+
+37
+00:01:20,718 --> 00:01:24,066
+So the light glows when both
+switches point the same way.
+
+38
+00:01:24,716 --> 00:01:25,913
+Watch the scope.
+
+39
+00:01:25,913 --> 00:01:29,162
+The lamp voltage jumps
+between zero and five volts.
+
+40
+00:01:29,812 --> 00:01:31,000
+Next, the relay.
+
+41
+00:01:31,000 --> 00:01:33,526
+A relay is a switch worked by electricity.
+
+42
+00:01:33,876 --> 00:01:37,187
+Think of a small child pressing
+a bell for a strong guard.
+
+43
+00:01:37,537 --> 00:01:39,718
+The guard then opens the heavy gate.
+
+44
+00:01:39,718 --> 00:01:41,298
+Tiny effort, big result.
+
+45
+00:01:41,648 --> 00:01:44,005
+Inside the relay is a coil of wire.
+
+46
+00:01:44,005 --> 00:01:45,573
+It is called the coil.
+
+47
+00:01:45,923 --> 00:01:48,276
+Current in the coil makes it a magnet.
+
+48
+00:01:48,276 --> 00:01:49,832
+That is an electromagnet.
+
+49
+00:01:50,482 --> 00:01:53,852
+The magnet pulls a metal
+arm, called the armature.
+
+50
+00:01:54,202 --> 00:01:55,916
+The arm moves a contact.
+
+51
+00:01:55,916 --> 00:01:58,130
+Its moving part is called common.
+
+52
+00:01:58,780 --> 00:02:03,002
+With no coil current, common
+touches the normally closed contact.
+
+53
+00:02:03,352 --> 00:02:04,726
+Turn the coil on.
+
+54
+00:02:04,726 --> 00:02:07,567
+Common jumps to the normally open contact.
+
+55
+00:02:08,217 --> 00:02:11,062
+On the scope, the coil
+voltage steps up first.
+
+56
+00:02:11,412 --> 00:02:14,574
+A moment later, the load
+voltage steps up too.
+
+57
+00:02:14,574 --> 00:02:15,694
+The pump runs.
+
+58
+00:02:16,344 --> 00:02:19,415
+The coil circuit and the
+pump circuit never touch.
+
+59
+00:02:19,415 --> 00:02:21,572
+This keeps the small circuit safe.
+
+60
+00:02:22,222 --> 00:02:23,377
+Last, connectors.
+
+61
+00:02:23,377 --> 00:02:25,801
+They join wires and boards without solder.
+
+62
+00:02:26,151 --> 00:02:28,909
+So a part can be unplugged
+and replaced in seconds.
+
+63
+00:02:29,259 --> 00:02:32,305
+Pin headers, screw terminals, and
+plugs with sockets are common types.
+
+64
+00:02:32,655 --> 00:02:36,313
+Many pin headers keep their pins two
+point five four millimetres apart.
+
+65
+00:02:36,963 --> 00:02:40,513
+Every switch, relay and connector
+has ratings printed on it.
+
+66
+00:02:40,863 --> 00:02:44,998
+The most important are the maximum
+current and the maximum voltage.
+
+67
+00:02:45,648 --> 00:02:49,232
+A small current in the coil
+controls a big current in the load.
+
+68
+00:02:50,032 --> 00:02:51,078
+Worked example.
+
+69
+00:02:51,078 --> 00:02:54,774
+A relay coil is rated twelve
+volts, with four hundred ohms.
+
+70
+00:02:55,124 --> 00:02:57,395
+Coil current, I equals V by R.
+
+71
+00:02:57,395 --> 00:02:59,036
+Twelve by four hundred.
+
+72
+00:02:59,736 --> 00:03:02,839
+That is zero point zero three
+amperes, or thirty milliamperes.
+
+73
+00:03:03,539 --> 00:03:05,461
+Coil power is V times I.
+
+74
+00:03:05,461 --> 00:03:09,944
+Twelve times zero point zero three
+is zero point three six watts.
+
+75
+00:03:10,644 --> 00:03:12,690
+The contacts are rated ten amperes.
+
+76
+00:03:12,690 --> 00:03:16,393
+Can they switch a fifteen hundred
+watt heater on two thirty volts?
+
+77
+00:03:17,093 --> 00:03:18,833
+Heater current is P by V.
+
+78
+00:03:18,833 --> 00:03:22,585
+Fifteen hundred by two thirty
+is about six point five amperes.
+
+79
+00:03:23,285 --> 00:03:25,489
+Six point five is less than ten.
+
+80
+00:03:25,489 --> 00:03:28,188
+So yes, the relay can switch it safely.
+
+81
+00:03:28,838 --> 00:03:30,299
+Now, the exam trap.
+
+82
+00:03:30,649 --> 00:03:34,394
+Many students think normally open
+means open while the relay is on.
+
+83
+00:03:34,744 --> 00:03:35,644
+Wrong.
+
+84
+00:03:35,340 --> 00:03:37,803
+Normal means the coil has no current.
+
+85
+00:03:37,803 --> 00:03:40,364
+Then the normally open contact is open.
+
+86
+00:03:41,014 --> 00:03:45,295
+When the coil is energised, the
+normally open contact closes.
+
+87
+00:03:45,945 --> 00:03:47,566
+Where is this asked?
+
+88
+00:03:47,566 --> 00:03:49,426
+In PUC board papers.
+
+89
+00:03:49,776 --> 00:03:54,599
+Expect symbols of switch types, and
+how a relay works, with a labelled
+
+90
+00:03:54,599 --> 00:03:55,499
+diagram.
+
+91
+00:03:56,004 --> 00:03:56,904
+Try this.
+
+92
+00:03:56,827 --> 00:04:01,430
+A six volt relay coil has a resistance
+of one hundred and twenty ohms.
+
+93
+00:04:01,430 --> 00:04:05,251
+It runs from a nine volt supply
+through a series resistor.
+
+94
+00:04:05,251 --> 00:04:06,945
+What resistor is needed?
+
+95
+00:04:12,345 --> 00:04:13,245
+A.
+
+96
+00:04:12,715 --> 00:04:13,615
+Sixty ohms.
+
+97
+00:04:13,894 --> 00:04:15,999
+Coil current is six by one twenty.
+
+98
+00:04:15,999 --> 00:04:18,236
+That is zero point zero five amperes.
+
+99
+00:04:18,586 --> 00:04:21,372
+The resistor must drop
+the extra three volts.
+
+100
+00:04:21,722 --> 00:04:24,763
+Three by zero point
+zero five is sixty ohms.
+
+101
+00:04:25,413 --> 00:04:26,959
+Screenshot this card.
+
+102
+00:04:30,159 --> 00:04:32,030
+Next, cells and batteries.
+
+103
+00:04:32,030 --> 00:04:35,693
+Why does a phone battery say
+volts and milliampere hours?

@@ -1,0 +1,415 @@
+1
+00:00:00,450 --> 00:00:02,486
+Aarav opens an old remote control.
+
+2
+00:00:02,486 --> 00:00:04,213
+He expects a nest of wires.
+
+3
+00:00:04,513 --> 00:00:09,107
+Instead, he finds a flat green
+board, covered in thin copper lines.
+
+4
+00:00:09,407 --> 00:00:11,223
+Where did all the wires go?
+
+5
+00:00:11,223 --> 00:00:12,270
+Let's find out.
+
+6
+00:00:12,770 --> 00:00:16,186
+This is a printed circuit board, or PCB.
+
+7
+00:00:16,536 --> 00:00:18,666
+The board itself is an insulator.
+
+8
+00:00:18,666 --> 00:00:20,645
+Current cannot flow through it.
+
+9
+00:00:20,995 --> 00:00:25,581
+Common boards are glass fibre with
+epoxy, or a cheaper paper board with
+
+10
+00:00:25,581 --> 00:00:26,727
+phenolic resin.
+
+11
+00:00:27,377 --> 00:00:30,328
+On top are thin copper
+paths, called tracks.
+
+12
+00:00:30,328 --> 00:00:32,138
+They do the job of wires.
+
+13
+00:00:32,488 --> 00:00:35,011
+At each part, a track
+ends in a copper pad.
+
+14
+00:00:35,011 --> 00:00:36,809
+The part's leg is soldered there.
+
+15
+00:00:37,459 --> 00:00:39,655
+The green coat is the solder mask.
+
+16
+00:00:39,655 --> 00:00:42,694
+It protects the copper,
+and stops solder bridges.
+
+17
+00:00:43,044 --> 00:00:45,276
+The white letters are the silkscreen.
+
+18
+00:00:45,276 --> 00:00:47,236
+They show where each part goes.
+
+19
+00:00:47,886 --> 00:00:49,707
+PC Bs come in three types.
+
+20
+00:00:50,057 --> 00:00:53,419
+Single sided boards have
+copper on one side only.
+
+21
+00:00:53,769 --> 00:00:56,768
+Double sided boards have
+copper on both sides.
+
+22
+00:00:56,768 --> 00:01:00,322
+Small plated holes, called
+vias, join the two sides.
+
+23
+00:01:00,972 --> 00:01:04,305
+Multilayer boards hide
+many copper layers inside.
+
+24
+00:01:04,305 --> 00:01:05,619
+Phones use them.
+
+25
+00:01:06,269 --> 00:01:08,641
+So how is a simple PCB made?
+
+26
+00:01:08,641 --> 00:01:09,760
+Step by step.
+
+27
+00:01:10,110 --> 00:01:12,190
+Start with a copper clad board.
+
+28
+00:01:12,190 --> 00:01:14,117
+Copper covers one whole side.
+
+29
+00:01:14,467 --> 00:01:18,297
+Draw the circuit layout, and print
+it onto the copper with a protective
+
+30
+00:01:18,297 --> 00:01:19,197
+ink.
+
+31
+00:01:19,083 --> 00:01:23,001
+Dip the board in an etching
+solution, such as ferric chloride.
+
+32
+00:01:23,001 --> 00:01:24,964
+It eats away the bare copper.
+
+33
+00:01:25,314 --> 00:01:27,211
+The copper under the ink stays.
+
+34
+00:01:27,211 --> 00:01:29,740
+Clean off the ink, and the tracks appear.
+
+35
+00:01:30,390 --> 00:01:32,086
+Drill holes for the parts.
+
+36
+00:01:32,086 --> 00:01:34,535
+Then place the parts, and solder them.
+
+37
+00:01:35,185 --> 00:01:37,555
+But a track is not a perfect wire.
+
+38
+00:01:37,555 --> 00:01:39,359
+It has a small resistance.
+
+39
+00:01:39,709 --> 00:01:41,979
+Remember, R equals rho L by A.
+
+40
+00:01:42,329 --> 00:01:45,356
+For a track, A is the width
+times the copper thickness.
+
+41
+00:01:46,006 --> 00:01:49,335
+The copper is very thin,
+often thirty five micrometres.
+
+42
+00:01:49,335 --> 00:01:51,174
+That is thinner than a hair.
+
+43
+00:01:51,824 --> 00:01:55,927
+Let's push two amperes from a five
+volt supply, through a ten centimetre
+
+44
+00:01:55,927 --> 00:01:56,827
+track.
+
+45
+00:01:56,836 --> 00:01:59,874
+First, a thin track, a
+quarter of a millimetre wide.
+
+46
+00:02:00,224 --> 00:02:03,443
+The part at the end receives
+only four point six one volts.
+
+47
+00:02:03,793 --> 00:02:06,343
+Now make the track one millimetre wide.
+
+48
+00:02:06,693 --> 00:02:09,492
+The part now receives about
+four point nine volts.
+
+49
+00:02:10,142 --> 00:02:11,305
+Watch the scope.
+
+50
+00:02:11,305 --> 00:02:13,536
+The wider track loses less voltage.
+
+51
+00:02:14,186 --> 00:02:16,666
+So tracks that carry big
+currents are made wide.
+
+52
+00:02:17,316 --> 00:02:19,103
+Why do we use PC Bs?
+
+53
+00:02:19,103 --> 00:02:20,588
+Five big advantages.
+
+54
+00:02:20,938 --> 00:02:22,686
+They are small and compact.
+
+55
+00:02:23,036 --> 00:02:26,147
+There are no loose wires,
+so fewer wiring mistakes.
+
+56
+00:02:26,497 --> 00:02:30,111
+The same board can be copied
+thousands of times, cheaply.
+
+57
+00:02:30,461 --> 00:02:33,669
+Parts are held firmly, so
+the circuit is reliable.
+
+58
+00:02:34,019 --> 00:02:36,251
+And they are easy to test and repair.
+
+59
+00:02:36,901 --> 00:02:39,338
+A track is a wire, printed flat.
+
+60
+00:02:40,138 --> 00:02:41,038
+Worked example.
+
+61
+00:02:41,014 --> 00:02:44,627
+A copper track is one millimetre wide,
+thirty five micrometres thick, and
+
+62
+00:02:44,627 --> 00:02:45,784
+ten centimetres long.
+
+63
+00:02:46,134 --> 00:02:48,394
+Area A is width times thickness.
+
+64
+00:02:48,394 --> 00:02:53,138
+Ten to the minus three, times thirty
+five times ten to the minus six.
+
+65
+00:02:53,838 --> 00:02:57,898
+That is three point five times ten
+to the minus eight square metres.
+
+66
+00:02:58,598 --> 00:03:02,906
+Copper's resistivity is about one point
+seven times ten to the minus eight
+
+67
+00:03:02,906 --> 00:03:03,806
+ohm metres.
+
+68
+00:03:04,491 --> 00:03:06,212
+R equals rho L by A.
+
+69
+00:03:06,212 --> 00:03:09,621
+That gives about zero
+point zero four nine ohms.
+
+70
+00:03:10,322 --> 00:03:12,846
+At two amperes, the drop is I times R.
+
+71
+00:03:12,846 --> 00:03:14,565
+About zero point one volts.
+
+72
+00:03:15,215 --> 00:03:16,677
+Now, the exam trap.
+
+73
+00:03:17,027 --> 00:03:20,027
+Many students take A as
+the top area of the track.
+
+74
+00:03:20,027 --> 00:03:21,240
+Width times length.
+
+75
+00:03:21,590 --> 00:03:22,490
+Wrong.
+
+76
+00:03:22,140 --> 00:03:25,618
+Current flows along the track,
+so A is the cross section.
+
+77
+00:03:26,268 --> 00:03:28,228
+A equals width times thickness.
+
+78
+00:03:28,878 --> 00:03:30,499
+Where is this asked?
+
+79
+00:03:30,499 --> 00:03:32,359
+In PUC board papers.
+
+80
+00:03:32,709 --> 00:03:36,093
+The model paper asks for
+the advantages of PC Bs.
+
+81
+00:03:36,093 --> 00:03:38,594
+Expect types and steps of making too.
+
+82
+00:03:39,244 --> 00:03:40,144
+Try this.
+
+83
+00:03:40,039 --> 00:03:43,986
+A copper track has a resistance
+of zero point zero eight ohms.
+
+84
+00:03:43,986 --> 00:03:47,245
+A second track is twice
+as wide and half as long.
+
+85
+00:03:47,245 --> 00:03:48,835
+What is its resistance?
+
+86
+00:03:54,235 --> 00:03:55,135
+A.
+
+87
+00:03:54,601 --> 00:03:56,208
+Zero point zero two ohms.
+
+88
+00:03:56,558 --> 00:03:58,443
+R equals rho L by A.
+
+89
+00:03:58,443 --> 00:04:00,129
+Halving L halves R.
+
+90
+00:04:00,479 --> 00:04:02,370
+Doubling the width doubles A.
+
+91
+00:04:02,370 --> 00:04:03,779
+That halves R again.
+
+92
+00:04:04,129 --> 00:04:05,922
+So R becomes one quarter.
+
+93
+00:04:05,922 --> 00:04:09,778
+Zero point zero eight by four
+is zero point zero two ohms.
+
+94
+00:04:10,428 --> 00:04:11,974
+Screenshot this card.
+
+95
+00:04:15,174 --> 00:04:18,229
+Next, Class twelve begins with the JFET.
+
+96
+00:04:18,229 --> 00:04:20,495
+A transistor controlled by voltage.
