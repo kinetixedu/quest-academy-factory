@@ -1,0 +1,570 @@
+1
+00:00:00,450 --> 00:00:02,729
+Twist a bottle cap, and it rises.
+
+2
+00:00:02,729 --> 00:00:04,867
+Turn a screw, and it sinks in.
+
+3
+00:00:05,267 --> 00:00:07,006
+Your twist goes round, flat.
+
+4
+00:00:07,006 --> 00:00:09,322
+But the motion goes straight up or down.
+
+5
+00:00:09,772 --> 00:00:12,068
+Aarav fixes his cycle with a spanner.
+
+6
+00:00:12,068 --> 00:00:13,937
+He pushes the handle sideways.
+
+7
+00:00:14,287 --> 00:00:16,511
+But the bolt does not move sideways.
+
+8
+00:00:16,511 --> 00:00:20,644
+It goes straight in, at right angles
+to the spanner and to his push.
+
+9
+00:00:20,644 --> 00:00:21,617
+Why that way?
+
+10
+00:00:22,117 --> 00:00:24,186
+One rule explains it: the cross product.
+
+11
+00:00:24,786 --> 00:00:28,939
+Multiply two vectors with a
+cross, and you get a new vector.
+
+12
+00:00:29,289 --> 00:00:32,188
+Its size is A times B times sine theta.
+
+13
+00:00:32,188 --> 00:00:35,562
+Theta is the angle between
+them, tail to tail.
+
+14
+00:00:35,962 --> 00:00:40,241
+Its direction is at right angles to
+both A and B, straight out of their
+
+15
+00:00:40,241 --> 00:00:41,141
+flat plane.
+
+16
+00:00:41,497 --> 00:00:42,397
+Up or down?
+
+17
+00:00:42,356 --> 00:00:43,794
+Use the right-hand rule.
+
+18
+00:00:43,794 --> 00:00:45,915
+Curl your fingers from A towards B.
+
+19
+00:00:45,915 --> 00:00:47,992
+Your thumb points along A cross B.
+
+20
+00:00:48,592 --> 00:00:50,038
+To the motion notebook.
+
+21
+00:00:50,038 --> 00:00:52,083
+A is three units along the floor.
+
+22
+00:00:52,083 --> 00:00:54,366
+B is two units, lying on top of A.
+
+23
+00:00:54,716 --> 00:00:55,839
+Theta is zero.
+
+24
+00:00:55,839 --> 00:00:57,220
+They make no area.
+
+25
+00:00:57,220 --> 00:00:58,869
+So A cross B is zero.
+
+26
+00:00:59,269 --> 00:01:00,195
+Now turn B.
+
+27
+00:01:00,195 --> 00:01:03,150
+At ninety degrees, the
+shaded area is biggest.
+
+28
+00:01:03,150 --> 00:01:05,775
+A cross B is six, pointing straight up.
+
+29
+00:01:06,175 --> 00:01:07,075
+Keep turning.
+
+30
+00:01:07,058 --> 00:01:10,666
+At one hundred and eighty degrees,
+they lie in one line again.
+
+31
+00:01:10,666 --> 00:01:11,566
+Zero.
+
+32
+00:01:11,551 --> 00:01:14,199
+Past one eighty, B is on the other side.
+
+33
+00:01:14,199 --> 00:01:16,417
+A cross B flips, and points down.
+
+34
+00:01:16,817 --> 00:01:19,842
+On the graph, A cross
+B follows a sine curve.
+
+35
+00:01:19,842 --> 00:01:22,565
+And its size always
+equals the shaded area.
+
+36
+00:01:23,065 --> 00:01:23,965
+Slow-mo replay.
+
+37
+00:01:23,899 --> 00:01:25,255
+Freeze at thirty degrees.
+
+38
+00:01:25,606 --> 00:01:26,961
+The base is three.
+
+39
+00:01:26,961 --> 00:01:30,325
+The height is two times
+sine thirty, which is one.
+
+40
+00:01:30,325 --> 00:01:33,504
+So the area is three,
+and A cross B is three.
+
+41
+00:01:33,904 --> 00:01:36,077
+Curl your right hand from A to B.
+
+42
+00:01:36,077 --> 00:01:37,438
+The thumb points up.
+
+43
+00:01:38,038 --> 00:01:40,313
+Now swap the order: B cross A.
+
+44
+00:01:40,313 --> 00:01:42,306
+Same direction, or opposite?
+
+45
+00:01:42,306 --> 00:01:43,589
+Pause and decide.
+
+46
+00:01:46,689 --> 00:01:47,589
+Opposite!
+
+47
+00:01:47,496 --> 00:01:50,838
+Curl from B to A, and
+the thumb points down.
+
+48
+00:01:50,838 --> 00:01:53,364
+B cross A equals minus A cross B.
+
+49
+00:01:53,964 --> 00:01:56,664
+Now the unit vectors, one step at a time.
+
+50
+00:01:57,014 --> 00:01:57,914
+Step one.
+
+51
+00:01:57,866 --> 00:01:59,371
+i cross i is zero.
+
+52
+00:01:59,371 --> 00:02:03,908
+Any vector crossed with itself is
+zero, because sine zero is zero.
+
+53
+00:02:04,658 --> 00:02:05,558
+Step two.
+
+54
+00:02:05,543 --> 00:02:06,946
+i cross j is k.
+
+55
+00:02:06,946 --> 00:02:08,350
+j cross k is i.
+
+56
+00:02:08,350 --> 00:02:09,753
+k cross i is j.
+
+57
+00:02:09,753 --> 00:02:13,705
+Go round the circle, i,
+j, k, and you get plus.
+
+58
+00:02:14,455 --> 00:02:15,374
+Step three.
+
+59
+00:02:15,374 --> 00:02:18,363
+Go the other way round, and you get minus.
+
+60
+00:02:18,363 --> 00:02:20,022
+j cross i is minus k.
+
+61
+00:02:20,772 --> 00:02:21,679
+Step four.
+
+62
+00:02:21,679 --> 00:02:24,834
+For any two vectors,
+multiply out the parts.
+
+63
+00:02:24,834 --> 00:02:27,448
+It packs neatly into this determinant.
+
+64
+00:02:28,198 --> 00:02:29,238
+Remember this.
+
+65
+00:02:29,238 --> 00:02:32,359
+A cross B is a vector
+at right angles to both.
+
+66
+00:02:32,359 --> 00:02:34,323
+Its size is AB sine theta.
+
+67
+00:02:35,023 --> 00:02:37,089
+Back to Aarav's spanner, link by link.
+
+68
+00:02:37,439 --> 00:02:40,009
+r points from the bolt along the handle.
+
+69
+00:02:40,009 --> 00:02:42,287
+F is his push, across the handle.
+
+70
+00:02:42,687 --> 00:02:45,592
+Both lie flat, in the
+plane of the spanner.
+
+71
+00:02:45,592 --> 00:02:49,445
+So r cross F must point out
+of that plane, along the bolt.
+
+72
+00:02:49,845 --> 00:02:53,443
+Curl from r to F, and the
+thumb points into the wood.
+
+73
+00:02:53,443 --> 00:02:54,942
+So the bolt goes in.
+
+74
+00:02:54,942 --> 00:02:57,390
+This r cross F has a name, torque.
+
+75
+00:02:57,390 --> 00:02:58,637
+We meet it soon.
+
+76
+00:02:59,237 --> 00:03:00,246
+Side by side.
+
+77
+00:03:00,246 --> 00:03:03,608
+The dot product gives a
+plain number, with cos theta.
+
+78
+00:03:03,608 --> 00:03:06,111
+It is biggest when the vectors line up.
+
+79
+00:03:06,511 --> 00:03:09,478
+The cross product gives a
+vector, with sine theta.
+
+80
+00:03:09,478 --> 00:03:13,040
+It is biggest at ninety degrees,
+and zero when they line up.
+
+81
+00:03:13,640 --> 00:03:14,673
+Now you try.
+
+82
+00:03:14,673 --> 00:03:17,934
+A cross B is zero, but
+neither vector is zero.
+
+83
+00:03:17,934 --> 00:03:19,841
+What angle is between them?
+
+84
+00:03:19,841 --> 00:03:21,125
+Pause and decide.
+
+85
+00:03:24,325 --> 00:03:26,225
+Zero, or one eighty degrees!
+
+86
+00:03:26,225 --> 00:03:27,707
+Sine is zero at both.
+
+87
+00:03:27,707 --> 00:03:30,125
+The vectors are parallel, or opposite.
+
+88
+00:03:30,775 --> 00:03:32,465
+Now, one worked example.
+
+89
+00:03:32,815 --> 00:03:34,708
+A is two i plus three j.
+
+90
+00:03:34,708 --> 00:03:36,288
+B is four i plus j.
+
+91
+00:03:36,288 --> 00:03:39,164
+Find A cross B, and the area they make.
+
+92
+00:03:39,664 --> 00:03:40,745
+Multiply out.
+
+93
+00:03:40,745 --> 00:03:45,300
+i cross i and j cross j are
+zero, so only two terms are left.
+
+94
+00:03:46,050 --> 00:03:48,006
+Two i cross j is two k.
+
+95
+00:03:48,006 --> 00:03:51,283
+Three j cross four i is twelve, j cross i.
+
+96
+00:03:51,283 --> 00:03:53,110
+That is minus twelve k.
+
+97
+00:03:53,860 --> 00:03:54,760
+Add them.
+
+98
+00:03:54,605 --> 00:03:56,351
+A cross B is minus ten k.
+
+99
+00:03:56,351 --> 00:03:58,360
+It points down, into the page.
+
+100
+00:03:59,110 --> 00:04:03,030
+The area of the parallelogram
+is its size, ten square units.
+
+101
+00:04:03,680 --> 00:04:05,142
+Now, the exam trap.
+
+102
+00:04:05,492 --> 00:04:08,181
+Many students write i
+cross k equals plus j.
+
+103
+00:04:08,581 --> 00:04:11,338
+But i to k goes against the circle.
+
+104
+00:04:11,338 --> 00:04:13,417
+So i cross k is minus j.
+
+105
+00:04:13,417 --> 00:04:15,551
+Only k cross i is plus j.
+
+106
+00:04:16,201 --> 00:04:17,309
+Where is this asked?
+
+107
+00:04:17,309 --> 00:04:20,886
+Cross products from parts, areas of
+parallelograms and triangles, and parallel
+
+108
+00:04:20,886 --> 00:04:21,786
+vectors.
+
+109
+00:04:22,014 --> 00:04:23,286
+Exam level now.
+
+110
+00:04:23,286 --> 00:04:25,863
+A is two i minus three j plus k.
+
+111
+00:04:25,863 --> 00:04:28,721
+B is four i plus lambda j plus mu k.
+
+112
+00:04:28,721 --> 00:04:30,284
+A cross B is zero.
+
+113
+00:04:30,284 --> 00:04:31,837
+Find lambda and mu.
+
+114
+00:04:31,837 --> 00:04:33,163
+Pause and solve.
+
+115
+00:04:38,563 --> 00:04:39,840
+The answer is A.
+
+116
+00:04:39,840 --> 00:04:42,394
+Lambda is minus six, and mu is two.
+
+117
+00:04:42,894 --> 00:04:45,965
+A cross B is zero, and neither is zero.
+
+118
+00:04:45,965 --> 00:04:47,922
+So A and B are parallel.
+
+119
+00:04:48,422 --> 00:04:50,448
+So B is a number times A.
+
+120
+00:04:50,448 --> 00:04:53,614
+Four is two times two, so B equals two A.
+
+121
+00:04:54,114 --> 00:04:57,354
+Lambda is two times
+minus three, minus six.
+
+122
+00:04:57,354 --> 00:04:59,486
+Mu is two times one, two.
+
+123
+00:05:00,086 --> 00:05:01,626
+Here is your recap.
+
+124
+00:05:01,626 --> 00:05:03,209
+Screenshot this card.
+
+125
+00:05:06,409 --> 00:05:08,347
+Can you answer these without help?
+
+126
+00:05:08,747 --> 00:05:09,647
+One.
+
+127
+00:05:09,243 --> 00:05:12,693
+Why is the cross product of
+two parallel vectors zero?
+
+128
+00:05:13,593 --> 00:05:14,493
+Two.
+
+129
+00:05:13,996 --> 00:05:16,365
+How do you find which
+way A cross B points?
+
+130
+00:05:17,265 --> 00:05:18,165
+Three.
+
+131
+00:05:17,797 --> 00:05:21,092
+Why does B cross A point the
+opposite way to A cross B?
+
+132
+00:05:21,992 --> 00:05:26,834
+Next time: on a merry-go-round, all
+the horses turn together, yet the outer
+
+133
+00:05:26,834 --> 00:05:28,333
+horse travels faster.
+
+134
+00:05:28,333 --> 00:05:29,233
+How?
+
+135
+00:05:28,850 --> 00:05:31,281
+Angular velocity and linear velocity.

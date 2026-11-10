@@ -1,0 +1,530 @@
+1
+00:00:00,450 --> 00:00:04,014
+In a ring game, kids spin
+in a line, holding hands.
+
+2
+00:00:04,014 --> 00:00:05,319
+The end kid runs.
+
+3
+00:00:05,319 --> 00:00:07,120
+The centre kid just turns.
+
+4
+00:00:07,520 --> 00:00:11,058
+Swing a cricket bat, and the tip
+moves faster than the handle.
+
+5
+00:00:11,508 --> 00:00:14,041
+At the fair, Diya rides a merry-go-round.
+
+6
+00:00:14,041 --> 00:00:15,959
+Her horse is near the centre.
+
+7
+00:00:15,959 --> 00:00:17,737
+Her friend is at the edge.
+
+8
+00:00:18,087 --> 00:00:19,301
+They turn together.
+
+9
+00:00:19,301 --> 00:00:22,828
+Yet her friend rushes through
+the air, and Diya just drifts.
+
+10
+00:00:22,828 --> 00:00:23,728
+How?
+
+11
+00:00:23,776 --> 00:00:27,927
+The answer links two speeds:
+angular and linear velocity.
+
+12
+00:00:28,527 --> 00:00:33,378
+Angular velocity, omega, is the angle
+turned each second, in radians per
+
+13
+00:00:33,378 --> 00:00:34,278
+second.
+
+14
+00:00:34,413 --> 00:00:38,660
+In a rigid body, every point turns
+the same angle in the same time.
+
+15
+00:00:38,660 --> 00:00:40,634
+So all points share one omega.
+
+16
+00:00:41,034 --> 00:00:43,343
+Omega is a vector along the axis.
+
+17
+00:00:43,343 --> 00:00:47,693
+Curl your right fingers with the
+turn, and your thumb gives omega.
+
+18
+00:00:48,093 --> 00:00:53,231
+Linear velocity, v, is how fast one
+point moves along its circle, in metres
+
+19
+00:00:53,231 --> 00:00:54,188
+per second.
+
+20
+00:00:54,788 --> 00:00:56,477
+To the motion notebook.
+
+21
+00:00:56,477 --> 00:01:00,493
+The merry-go-round turns at zero
+point five radians per second.
+
+22
+00:01:00,493 --> 00:01:01,759
+Omega points up.
+
+23
+00:01:02,109 --> 00:01:04,936
+The inner horse is one
+metre from the pole.
+
+24
+00:01:04,936 --> 00:01:07,907
+It moves at zero point
+five metres per second.
+
+25
+00:01:08,307 --> 00:01:10,744
+The outer horse is three metres out.
+
+26
+00:01:10,744 --> 00:01:13,744
+Same omega, but it
+moves at one point five.
+
+27
+00:01:13,744 --> 00:01:15,106
+Three times faster.
+
+28
+00:01:15,506 --> 00:01:19,694
+Now a marker walks out along the
+floor, from the pole to the edge.
+
+29
+00:01:20,094 --> 00:01:23,450
+On the graph, its speed
+rises in a straight line.
+
+30
+00:01:23,450 --> 00:01:26,894
+Double the distance from
+the axis, double the speed.
+
+31
+00:01:27,394 --> 00:01:28,423
+Slow-mo replay.
+
+32
+00:01:28,423 --> 00:01:29,999
+Freeze the outer horse.
+
+33
+00:01:30,349 --> 00:01:35,438
+Draw r from a point O, low on the pole,
+to the horse: five metres, at angle
+
+34
+00:01:35,438 --> 00:01:36,793
+theta to the pole.
+
+35
+00:01:37,193 --> 00:01:40,286
+Its distance from the
+axis is r sine theta.
+
+36
+00:01:40,286 --> 00:01:42,232
+Five times zero point six.
+
+37
+00:01:42,232 --> 00:01:43,305
+Three metres.
+
+38
+00:01:43,706 --> 00:01:48,387
+And v is at right angles to both
+omega and r, along the circle.
+
+39
+00:01:48,387 --> 00:01:50,447
+So v equals omega cross r.
+
+40
+00:01:51,047 --> 00:01:52,011
+Now you try.
+
+41
+00:01:52,011 --> 00:01:54,089
+A point sits right on the pole.
+
+42
+00:01:54,089 --> 00:01:55,633
+How fast does it move?
+
+43
+00:01:55,633 --> 00:01:56,831
+Pause and decide.
+
+44
+00:01:59,931 --> 00:02:00,831
+Zero!
+
+45
+00:02:00,475 --> 00:02:04,340
+It is on the axis, so its
+distance from the axis is zero.
+
+46
+00:02:04,340 --> 00:02:06,195
+It just turns on the spot.
+
+47
+00:02:06,795 --> 00:02:09,393
+Now let's derive it, one step at a time.
+
+48
+00:02:09,743 --> 00:02:10,643
+Step one.
+
+49
+00:02:10,614 --> 00:02:15,861
+On a circle, arc length is radius
+times angle, with the angle in radians.
+
+50
+00:02:16,611 --> 00:02:17,511
+Step two.
+
+51
+00:02:17,482 --> 00:02:22,676
+Each second it turns omega radians,
+so the point moves omega times r perp.
+
+52
+00:02:22,676 --> 00:02:24,429
+v equals omega r perp.
+
+53
+00:02:25,179 --> 00:02:26,132
+Step three.
+
+54
+00:02:26,132 --> 00:02:30,372
+With r from any point on the
+axis, r perp is r sine theta.
+
+55
+00:02:30,372 --> 00:02:32,467
+So v is omega r sine theta.
+
+56
+00:02:33,217 --> 00:02:34,117
+Step four.
+
+57
+00:02:34,084 --> 00:02:36,606
+That is the size of a cross product.
+
+58
+00:02:36,606 --> 00:02:39,317
+With direction, v equals omega cross r.
+
+59
+00:02:40,067 --> 00:02:41,101
+Remember this.
+
+60
+00:02:41,101 --> 00:02:43,034
+Every point shares one omega.
+
+61
+00:02:43,034 --> 00:02:46,367
+Its speed is omega times
+its distance from the axis.
+
+62
+00:02:47,067 --> 00:02:49,888
+Back to the two horses, link by link.
+
+63
+00:02:50,238 --> 00:02:54,823
+Both horses finish a turn in the same
+time, about twelve point six seconds.
+
+64
+00:02:55,223 --> 00:02:58,474
+In that turn, each goes
+once round its own circle.
+
+65
+00:02:58,474 --> 00:03:00,943
+The outer circle is three times longer.
+
+66
+00:03:01,343 --> 00:03:05,530
+Three times the distance in the
+same time: three times the speed.
+
+67
+00:03:06,130 --> 00:03:07,291
+Side by side.
+
+68
+00:03:07,291 --> 00:03:12,429
+Inner horse: one metre out, omega
+zero point five, v zero point five.
+
+69
+00:03:12,829 --> 00:03:17,762
+Outer horse: three metres out, the
+same omega, but v is one point five.
+
+70
+00:03:18,362 --> 00:03:19,312
+Now you try.
+
+71
+00:03:19,312 --> 00:03:21,119
+The Earth turns once a day.
+
+72
+00:03:21,119 --> 00:03:24,475
+Who moves faster: someone
+in Bengaluru, or in London?
+
+73
+00:03:24,475 --> 00:03:25,655
+Pause and decide.
+
+74
+00:03:28,855 --> 00:03:29,755
+Bengaluru!
+
+75
+00:03:29,609 --> 00:03:30,509
+Same omega.
+
+76
+00:03:30,465 --> 00:03:34,541
+But Bengaluru is nearer the equator,
+so it is farther from the Earth's
+
+77
+00:03:34,541 --> 00:03:35,441
+axis.
+
+78
+00:03:35,712 --> 00:03:37,402
+Now, one worked example.
+
+79
+00:03:37,752 --> 00:03:42,100
+The Earth's radius is six point three
+seven times ten to the six metres.
+
+80
+00:03:42,100 --> 00:03:46,570
+Find the speed on the equator, and
+in Bengaluru, thirteen degrees north.
+
+81
+00:03:47,070 --> 00:03:51,760
+One turn a day: omega is two pi over
+eighty six thousand four hundred.
+
+82
+00:03:51,760 --> 00:03:55,470
+About seven point two seven
+times ten to the minus five.
+
+83
+00:03:56,220 --> 00:03:59,307
+On the equator, r perp is the full radius.
+
+84
+00:03:59,307 --> 00:04:03,240
+v is about four hundred and
+sixty three metres per second.
+
+85
+00:04:03,990 --> 00:04:09,024
+In Bengaluru, r perp is R cos thirteen,
+about six point two one times ten
+
+86
+00:04:09,024 --> 00:04:10,482
+to the six metres.
+
+87
+00:04:11,232 --> 00:04:15,996
+So v is about four hundred and fifty
+one metres per second, and we never
+
+88
+00:04:15,996 --> 00:04:16,896
+feel it.
+
+89
+00:04:17,435 --> 00:04:18,897
+Now, the exam trap.
+
+90
+00:04:19,247 --> 00:04:24,229
+Many students use the full distance
+r from the origin: v equals omega r.
+
+91
+00:04:24,629 --> 00:04:27,349
+But only the distance
+from the axis counts.
+
+92
+00:04:27,349 --> 00:04:30,266
+For our horse, omega r
+gives two point five.
+
+93
+00:04:30,266 --> 00:04:32,164
+The truth is one point five.
+
+94
+00:04:32,814 --> 00:04:34,389
+Where is this asked?
+
+95
+00:04:34,389 --> 00:04:39,504
+v equals omega cross r, points on
+wheels and on the Earth, and rolling.
+
+96
+00:04:40,104 --> 00:04:41,322
+Exam level now.
+
+97
+00:04:41,322 --> 00:04:46,047
+Omega is four k radians per second,
+about an axis through the origin.
+
+98
+00:04:46,047 --> 00:04:50,792
+Find the speed of the point three
+i plus four j plus twelve k metres.
+
+99
+00:04:50,792 --> 00:04:52,061
+Pause and solve.
+
+100
+00:04:57,461 --> 00:04:58,840
+The answer is B.
+
+101
+00:04:58,840 --> 00:05:00,700
+Twenty metres per second.
+
+102
+00:05:01,200 --> 00:05:02,968
+v is omega cross r.
+
+103
+00:05:02,968 --> 00:05:05,772
+Four k cross three i is twelve j.
+
+104
+00:05:05,772 --> 00:05:09,001
+Four k cross four j is minus sixteen i.
+
+105
+00:05:09,501 --> 00:05:12,466
+So v is minus sixteen i plus twelve j.
+
+106
+00:05:12,466 --> 00:05:15,023
+Its size is root of four hundred.
+
+107
+00:05:15,023 --> 00:05:15,923
+Twenty.
+
+108
+00:05:16,251 --> 00:05:20,026
+Check: r perp is five, and
+four times five is twenty.
+
+109
+00:05:20,026 --> 00:05:22,043
+The twelve k does not count.
+
+110
+00:05:22,644 --> 00:05:24,184
+Here is your recap.
+
+111
+00:05:24,184 --> 00:05:25,766
+Screenshot this card.
+
+112
+00:05:28,966 --> 00:05:30,905
+Can you answer these without help?
+
+113
+00:05:31,305 --> 00:05:32,205
+One.
+
+114
+00:05:31,736 --> 00:05:34,965
+Why do all points of a turning
+body share the same omega?
+
+115
+00:05:35,865 --> 00:05:36,765
+Two.
+
+116
+00:05:36,279 --> 00:05:38,462
+Why does a point on the axis not move?
+
+117
+00:05:39,362 --> 00:05:40,262
+Three.
+
+118
+00:05:40,012 --> 00:05:43,870
+Why use r sine theta, not
+r, in v equals omega r?
+
+119
+00:05:44,770 --> 00:05:49,014
+Next time: a ceiling fan takes a
+few seconds to reach full speed.
+
+120
+00:05:49,014 --> 00:05:51,668
+How many turns does it make on the way?
+
+121
+00:05:51,668 --> 00:05:53,044
+Angular acceleration.

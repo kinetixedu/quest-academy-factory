@@ -1,0 +1,591 @@
+1
+00:00:00,450 --> 00:00:02,491
+A long spanner loosens a stuck nut.
+
+2
+00:00:02,491 --> 00:00:04,321
+A pedal turns on a long crank.
+
+3
+00:00:04,321 --> 00:00:05,974
+A door opens at its handle.
+
+4
+00:00:06,374 --> 00:00:07,850
+Three different pushes.
+
+5
+00:00:07,850 --> 00:00:08,906
+One same idea.
+
+6
+00:00:09,356 --> 00:00:13,264
+In the college corridor, Aarav
+pushes a heavy door near its hinges.
+
+7
+00:00:13,264 --> 00:00:14,351
+It barely moves.
+
+8
+00:00:14,701 --> 00:00:17,200
+He pushes just as hard at the handle.
+
+9
+00:00:17,200 --> 00:00:18,343
+It swings open.
+
+10
+00:00:18,343 --> 00:00:19,243
+Same push.
+
+11
+00:00:19,186 --> 00:00:20,929
+Why does the spot matter?
+
+12
+00:00:21,429 --> 00:00:22,698
+The answer is torque.
+
+13
+00:00:22,698 --> 00:00:25,673
+Soon you will know why handles
+sit far from the hinge.
+
+14
+00:00:26,273 --> 00:00:27,837
+A force makes a thing move.
+
+15
+00:00:27,837 --> 00:00:29,313
+Torque makes a thing turn.
+
+16
+00:00:29,663 --> 00:00:34,127
+Torque is the turning effect of a
+force about an axis, the line a body
+
+17
+00:00:34,127 --> 00:00:35,127
+turns around.
+
+18
+00:00:35,477 --> 00:00:37,825
+For a door, the axis is the hinge.
+
+19
+00:00:37,825 --> 00:00:39,356
+For a nut, the bolt.
+
+20
+00:00:39,356 --> 00:00:40,980
+For a pedal, the axle.
+
+21
+00:00:41,380 --> 00:00:43,294
+Torque depends on three things.
+
+22
+00:00:43,294 --> 00:00:44,561
+How hard you push.
+
+23
+00:00:44,561 --> 00:00:46,065
+How far from the axis.
+
+24
+00:00:46,065 --> 00:00:47,332
+And at what angle.
+
+25
+00:00:47,932 --> 00:00:50,142
+Let's test it on our motion notebook.
+
+26
+00:00:50,142 --> 00:00:52,021
+Aarav's door, seen from above.
+
+27
+00:00:52,021 --> 00:00:53,685
+The hinge is on the left.
+
+28
+00:00:54,035 --> 00:00:57,558
+Every push is the same: twenty
+newtons, at right angles.
+
+29
+00:00:57,958 --> 00:01:00,918
+Push at zero point three
+metres from the hinge.
+
+30
+00:01:00,918 --> 00:01:03,001
+The torque is six newton metres.
+
+31
+00:01:03,001 --> 00:01:04,651
+The door turns a little.
+
+32
+00:01:05,051 --> 00:01:07,142
+Push at zero point six metres.
+
+33
+00:01:07,142 --> 00:01:09,383
+Twice as far, twice the torque.
+
+34
+00:01:09,383 --> 00:01:10,850
+Twelve newton metres.
+
+35
+00:01:11,250 --> 00:01:14,075
+Push at the handle,
+zero point nine metres.
+
+36
+00:01:14,075 --> 00:01:15,573
+Eighteen newton metres.
+
+37
+00:01:15,573 --> 00:01:17,279
+The door swings the most.
+
+38
+00:01:17,779 --> 00:01:21,231
+On the graph, torque grows in
+a straight line with distance.
+
+39
+00:01:21,831 --> 00:01:22,791
+Slow-mo replay.
+
+40
+00:01:22,791 --> 00:01:24,084
+Freeze at the push.
+
+41
+00:01:24,434 --> 00:01:28,235
+The arrow from the hinge to the
+hand is r, the position vector.
+
+42
+00:01:28,235 --> 00:01:30,535
+The push F is at right angles to it.
+
+43
+00:01:30,935 --> 00:01:34,725
+Now push at the handle at a
+slant, partly toward the hinge.
+
+44
+00:01:34,725 --> 00:01:38,421
+The angle between r and F is
+one hundred and fifty degrees.
+
+45
+00:01:38,821 --> 00:01:41,311
+The torque drops to nine newton metres.
+
+46
+00:01:41,311 --> 00:01:44,105
+Only part of a slanted
+push turns the door.
+
+47
+00:01:44,705 --> 00:01:47,506
+Let's build the formula,
+one step at a time.
+
+48
+00:01:47,856 --> 00:01:48,756
+Step one.
+
+49
+00:01:48,647 --> 00:01:50,036
+Torque is a vector.
+
+50
+00:01:50,036 --> 00:01:51,338
+It is r cross F.
+
+51
+00:01:52,088 --> 00:01:52,988
+Step two.
+
+52
+00:01:52,936 --> 00:01:57,861
+Its size is r F sine theta, where
+theta is the angle between r and F.
+
+53
+00:01:58,611 --> 00:01:59,511
+Step three.
+
+54
+00:01:59,485 --> 00:02:03,752
+r sine theta is the moment arm: the
+shortest distance from the axis to
+
+55
+00:02:03,752 --> 00:02:05,320
+the line of the force.
+
+56
+00:02:05,320 --> 00:02:07,724
+So torque is the moment arm times F.
+
+57
+00:02:08,474 --> 00:02:09,374
+Step four.
+
+58
+00:02:09,221 --> 00:02:10,988
+The unit is the newton metre.
+
+59
+00:02:10,988 --> 00:02:13,912
+The dimensions are ML
+squared T to the minus two.
+
+60
+00:02:14,662 --> 00:02:17,453
+The direction comes from
+the right hand rule.
+
+61
+00:02:17,453 --> 00:02:19,485
+Curl your fingers from r to F.
+
+62
+00:02:19,485 --> 00:02:22,518
+Your thumb gives the
+torque, out of the screen.
+
+63
+00:02:23,118 --> 00:02:24,154
+Remember this.
+
+64
+00:02:24,154 --> 00:02:28,490
+Torque is the force times the
+perpendicular distance from the axis to its
+
+65
+00:02:28,490 --> 00:02:29,390
+line.
+
+66
+00:02:29,732 --> 00:02:32,477
+So why is the handle far from the hinge?
+
+67
+00:02:32,477 --> 00:02:33,539
+Link by link.
+
+68
+00:02:33,889 --> 00:02:36,570
+Your push is about the same every time.
+
+69
+00:02:36,570 --> 00:02:39,981
+But the handle is far,
+so the moment arm is big.
+
+70
+00:02:40,381 --> 00:02:42,427
+A big arm gives a big torque.
+
+71
+00:02:42,427 --> 00:02:44,164
+So the door turns easily.
+
+72
+00:02:44,764 --> 00:02:45,859
+Flip it around.
+
+73
+00:02:45,859 --> 00:02:50,059
+For the same nine newton metres,
+at the handle you need ten newtons.
+
+74
+00:02:50,059 --> 00:02:51,237
+Halfway, twenty.
+
+75
+00:02:51,237 --> 00:02:52,804
+Near the hinge, sixty.
+
+76
+00:02:53,404 --> 00:02:54,385
+Now you try.
+
+77
+00:02:54,385 --> 00:02:58,695
+Which turns a stuck bolt more: forty
+newtons at zero point two metres,
+
+78
+00:02:58,695 --> 00:03:01,093
+or twenty newtons at zero point five?
+
+79
+00:03:01,093 --> 00:03:02,311
+Pause and decide.
+
+80
+00:03:05,411 --> 00:03:07,276
+Twenty at zero point five!
+
+81
+00:03:07,276 --> 00:03:09,292
+That gives ten newton metres.
+
+82
+00:03:09,292 --> 00:03:12,095
+Forty at zero point two gives only eight.
+
+83
+00:03:12,745 --> 00:03:13,787
+Side by side.
+
+84
+00:03:13,787 --> 00:03:17,964
+Push at right angles, and the
+moment arm is the full distance r.
+
+85
+00:03:18,364 --> 00:03:22,774
+Push at a slant, and the line of the
+force passes closer to the hinge.
+
+86
+00:03:22,774 --> 00:03:24,491
+The moment arm is shorter.
+
+87
+00:03:25,091 --> 00:03:25,991
+Your turn.
+
+88
+00:03:25,886 --> 00:03:30,155
+Aarav pushes very hard, but straight
+along the door, toward the hinge.
+
+89
+00:03:30,155 --> 00:03:31,142
+Will it turn?
+
+90
+00:03:31,142 --> 00:03:32,311
+Pause and decide.
+
+91
+00:03:35,511 --> 00:03:36,411
+No!
+
+92
+00:03:35,933 --> 00:03:38,807
+The line of the force
+passes through the hinge.
+
+93
+00:03:38,807 --> 00:03:41,783
+The moment arm is zero,
+so the torque is zero.
+
+94
+00:03:42,433 --> 00:03:44,089
+Now, one worked example.
+
+95
+00:03:44,089 --> 00:03:45,458
+Aarav's bicycle pedal.
+
+96
+00:03:45,808 --> 00:03:48,399
+The crank is zero point
+one seven metres long.
+
+97
+00:03:48,399 --> 00:03:51,066
+He pushes straight down
+with two hundred newtons.
+
+98
+00:03:51,566 --> 00:03:54,942
+With the crank level, the
+push is at right angles.
+
+99
+00:03:54,942 --> 00:03:58,111
+Torque is zero point one
+seven times two hundred.
+
+100
+00:03:58,111 --> 00:03:59,863
+Thirty four newton metres.
+
+101
+00:04:00,613 --> 00:04:03,969
+Lower down, the crank is thirty
+degrees from the vertical.
+
+102
+00:04:03,969 --> 00:04:07,333
+Now theta is thirty degrees,
+and sine thirty is one half.
+
+103
+00:04:08,083 --> 00:04:10,493
+So the torque is seventeen newton metres.
+
+104
+00:04:10,493 --> 00:04:11,450
+Half as much.
+
+105
+00:04:11,450 --> 00:04:14,471
+That is why a push does
+so little near the bottom.
+
+106
+00:04:15,121 --> 00:04:16,586
+Now, the exam trap.
+
+107
+00:04:16,936 --> 00:04:20,918
+Many students write torque as F times
+r, the distance to the point where
+
+108
+00:04:20,918 --> 00:04:21,942
+the force acts.
+
+109
+00:04:22,342 --> 00:04:24,562
+That works only at right angles.
+
+110
+00:04:24,562 --> 00:04:28,911
+Torque is F times the perpendicular
+distance from the axis to the line
+
+111
+00:04:28,911 --> 00:04:29,996
+of the force.
+
+112
+00:04:30,646 --> 00:04:31,943
+Where is this asked?
+
+113
+00:04:31,943 --> 00:04:36,077
+In torque as r cross F, in moment arm
+questions, and in the direction of
+
+114
+00:04:36,077 --> 00:04:36,977
+torque.
+
+115
+00:04:37,251 --> 00:04:38,422
+Exam level now.
+
+116
+00:04:38,422 --> 00:04:43,135
+A ten newton force acts along the line
+y equals x plus two, with distances
+
+117
+00:04:43,135 --> 00:04:44,035
+in metres.
+
+118
+00:04:43,999 --> 00:04:47,015
+Find the size of its
+torque about the origin.
+
+119
+00:04:47,015 --> 00:04:48,236
+Pause and solve.
+
+120
+00:04:53,636 --> 00:04:54,988
+The answer is B.
+
+121
+00:04:54,988 --> 00:04:56,979
+Ten root two newton metres.
+
+122
+00:04:57,479 --> 00:05:01,649
+The line makes forty five degrees with
+the x axis, and crosses the y axis
+
+123
+00:05:01,649 --> 00:05:02,549
+at two.
+
+124
+00:05:02,788 --> 00:05:06,997
+So the moment arm from the origin
+is two times sine forty five.
+
+125
+00:05:06,997 --> 00:05:08,235
+Root two metres.
+
+126
+00:05:08,735 --> 00:05:10,673
+Torque is ten times root two.
+
+127
+00:05:10,673 --> 00:05:13,080
+About fourteen point one newton metres.
+
+128
+00:05:13,680 --> 00:05:15,221
+Here is your recap.
+
+129
+00:05:15,221 --> 00:05:16,805
+Screenshot this card.
+
+130
+00:05:20,005 --> 00:05:21,943
+Can you answer these without help?
+
+131
+00:05:22,343 --> 00:05:23,243
+One.
+
+132
+00:05:22,732 --> 00:05:24,972
+Why do door handles
+sit far from the hinge?
+
+133
+00:05:25,873 --> 00:05:26,773
+Two.
+
+134
+00:05:26,257 --> 00:05:29,171
+Why does a push straight toward
+the hinge not turn a door?
+
+135
+00:05:30,071 --> 00:05:30,971
+Three.
+
+136
+00:05:30,570 --> 00:05:33,394
+How is the moment arm
+different from the distance r?
+
+137
+00:05:34,293 --> 00:05:38,955
+Next time: how can a ball moving in a
+straight line have angular momentum?

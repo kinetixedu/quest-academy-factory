@@ -1,0 +1,529 @@
+1
+00:00:00,450 --> 00:00:01,838
+A drawer slides out.
+
+2
+00:00:01,838 --> 00:00:02,798
+A fan spins.
+
+3
+00:00:02,798 --> 00:00:04,671
+A wheel rolls down the road.
+
+4
+00:00:05,071 --> 00:00:06,043
+Three motions.
+
+5
+00:00:06,043 --> 00:00:09,267
+But physics needs just two
+ideas to describe them all.
+
+6
+00:00:09,717 --> 00:00:11,430
+Aarav tries it in his room.
+
+7
+00:00:11,430 --> 00:00:15,117
+He pushes a book, swings his
+door, and rolls his cycle wheel.
+
+8
+00:00:15,467 --> 00:00:19,986
+On the door, the handle edge travels
+farther than a point near the hinge.
+
+9
+00:00:19,986 --> 00:00:22,096
+Yet both start and stop together.
+
+10
+00:00:22,096 --> 00:00:22,996
+How?
+
+11
+00:00:23,072 --> 00:00:25,267
+To see why, meet the rigid body.
+
+12
+00:00:25,867 --> 00:00:27,911
+A rigid body keeps its shape.
+
+13
+00:00:27,911 --> 00:00:31,582
+The distance between any two
+of its points never changes.
+
+14
+00:00:31,932 --> 00:00:36,185
+Real bodies bend a tiny bit, but
+a book or a door is close enough.
+
+15
+00:00:36,685 --> 00:00:39,531
+A rigid body moves in two basic ways.
+
+16
+00:00:39,531 --> 00:00:41,549
+Translation, and rotation.
+
+17
+00:00:41,899 --> 00:00:44,540
+In translation, the whole body shifts.
+
+18
+00:00:44,540 --> 00:00:48,234
+In rotation, it turns about
+a line, called the axis.
+
+19
+00:00:48,834 --> 00:00:51,970
+Let's mark three dots on
+Aarav's book: A, B and C.
+
+20
+00:00:52,320 --> 00:00:55,021
+He pushes it at a steady
+thirty centimetres per second.
+
+21
+00:00:55,421 --> 00:00:59,416
+All three dots have the same
+velocity, at every moment.
+
+22
+00:00:59,816 --> 00:01:02,950
+On the graph, their three
+lines sit on top of each other.
+
+23
+00:01:03,400 --> 00:01:05,197
+This is pure translation.
+
+24
+00:01:05,197 --> 00:01:10,083
+Every point moves the same way, and
+every line stays parallel to itself.
+
+25
+00:01:10,683 --> 00:01:12,605
+Now the door, from above.
+
+26
+00:01:12,605 --> 00:01:15,630
+The hinge is the axis, and it stays fixed.
+
+27
+00:01:15,980 --> 00:01:18,596
+Dot A is thirty
+centimetres from the hinge.
+
+28
+00:01:18,596 --> 00:01:19,496
+B is sixty.
+
+29
+00:01:19,486 --> 00:01:21,775
+C, at the handle edge, is ninety.
+
+30
+00:01:22,175 --> 00:01:24,804
+The door swings through
+ninety degrees in two seconds.
+
+31
+00:01:25,204 --> 00:01:29,088
+Every dot moves on a circle,
+with its centre on the axis.
+
+32
+00:01:29,488 --> 00:01:30,988
+Now the graph splits.
+
+33
+00:01:30,988 --> 00:01:33,600
+C covers three times the distance of A.
+
+34
+00:01:34,100 --> 00:01:35,151
+Slow-mo replay.
+
+35
+00:01:35,151 --> 00:01:36,051
+Freeze.
+
+36
+00:01:36,150 --> 00:01:39,727
+All three dots have turned
+through the same angle, theta.
+
+37
+00:01:40,127 --> 00:01:44,729
+But C is three times farther out,
+so its arc, and its arrow, are three
+
+38
+00:01:44,729 --> 00:01:45,717
+times longer.
+
+39
+00:01:46,317 --> 00:01:47,224
+Quick check.
+
+40
+00:01:47,224 --> 00:01:49,150
+Swing the door twice as fast.
+
+41
+00:01:49,150 --> 00:01:52,235
+Will C still cover three
+times the distance of A?
+
+42
+00:01:52,235 --> 00:01:53,432
+Pause and decide.
+
+43
+00:01:56,532 --> 00:01:57,432
+Yes!
+
+44
+00:01:57,030 --> 00:02:01,597
+The dots always turn together, and
+C is always three times farther out.
+
+45
+00:02:02,197 --> 00:02:04,757
+Let's write this down, one step at a time.
+
+46
+00:02:05,107 --> 00:02:06,007
+Step one.
+
+47
+00:02:05,920 --> 00:02:10,502
+In translation, every point has the
+same displacement in the same time.
+
+48
+00:02:10,502 --> 00:02:12,178
+So, the same velocity.
+
+49
+00:02:12,928 --> 00:02:13,828
+Step two.
+
+50
+00:02:13,757 --> 00:02:18,342
+In rotation about a fixed axis, every
+point turns through the same angle
+
+51
+00:02:18,342 --> 00:02:20,377
+theta, in the same time t.
+
+52
+00:02:21,127 --> 00:02:22,027
+Step three.
+
+53
+00:02:22,022 --> 00:02:25,642
+A point at distance r from
+the axis moves along an arc.
+
+54
+00:02:25,642 --> 00:02:28,396
+s equals r theta, with theta in radians.
+
+55
+00:02:29,146 --> 00:02:30,083
+Step four.
+
+56
+00:02:30,083 --> 00:02:33,379
+Its speed is s over t, or r theta over t.
+
+57
+00:02:33,379 --> 00:02:35,866
+Double r, and the speed doubles.
+
+58
+00:02:36,616 --> 00:02:39,494
+A point on the axis has r equal to zero.
+
+59
+00:02:39,494 --> 00:02:40,847
+It does not move.
+
+60
+00:02:41,447 --> 00:02:42,528
+Remember this.
+
+61
+00:02:42,528 --> 00:02:45,741
+In translation, every
+point moves the same way.
+
+62
+00:02:45,741 --> 00:02:49,369
+In rotation, every point
+turns through the same angle.
+
+63
+00:02:50,069 --> 00:02:52,232
+Now the rolling wheel, link by link.
+
+64
+00:02:52,582 --> 00:02:55,313
+The axle moves forward in a straight line.
+
+65
+00:02:55,313 --> 00:02:56,993
+That part is translation.
+
+66
+00:02:57,393 --> 00:03:00,206
+And every rim point goes round the axle.
+
+67
+00:03:00,206 --> 00:03:01,844
+That part is rotation.
+
+68
+00:03:02,244 --> 00:03:04,324
+So rolling is both together.
+
+69
+00:03:04,324 --> 00:03:08,174
+The axle draws a line, while
+a rim dot draws arches.
+
+70
+00:03:08,774 --> 00:03:09,827
+Side by side.
+
+71
+00:03:09,827 --> 00:03:12,986
+A sliding book: every
+point moves the same way.
+
+72
+00:03:13,386 --> 00:03:17,709
+A swinging door: every point turns
+the same angle, round the hinge.
+
+73
+00:03:18,310 --> 00:03:19,338
+Now you try.
+
+74
+00:03:19,338 --> 00:03:22,724
+A giant wheel turns, and
+each cabin hangs upright.
+
+75
+00:03:22,724 --> 00:03:25,291
+Is a cabin in translation or rotation?
+
+76
+00:03:25,291 --> 00:03:26,569
+Pause and decide.
+
+77
+00:03:29,769 --> 00:03:30,669
+Translation!
+
+78
+00:03:30,627 --> 00:03:34,804
+The cabin stays upright, and every
+point of it moves the same way.
+
+79
+00:03:34,804 --> 00:03:37,416
+Translation does not need a straight line.
+
+80
+00:03:38,066 --> 00:03:39,756
+Now, one worked example.
+
+81
+00:03:40,106 --> 00:03:43,806
+A door eighty centimetres wide swings
+shut through ninety degrees in two
+
+82
+00:03:43,806 --> 00:03:44,706
+seconds.
+
+83
+00:03:44,407 --> 00:03:47,022
+How far, and how fast, does its edge move?
+
+84
+00:03:47,522 --> 00:03:51,666
+Ninety degrees is pi by two, about
+one point five seven radians.
+
+85
+00:03:52,416 --> 00:03:54,526
+Distance: s equals r theta.
+
+86
+00:03:54,526 --> 00:03:59,790
+Zero point eight times one point five
+seven, about one point two six metres.
+
+87
+00:04:00,540 --> 00:04:05,138
+Speed: one point two six over two,
+about zero point six three metres per
+
+88
+00:04:05,138 --> 00:04:06,038
+second.
+
+89
+00:04:06,535 --> 00:04:10,071
+A point twenty centimetres from
+the hinge is a quarter as far out.
+
+90
+00:04:10,071 --> 00:04:11,843
+So it moves a quarter as fast.
+
+91
+00:04:12,493 --> 00:04:13,954
+Now, the exam trap.
+
+92
+00:04:14,304 --> 00:04:18,705
+Many students say a rolling wheel is
+in pure rotation, because it spins.
+
+93
+00:04:19,105 --> 00:04:21,367
+But its axle moves forward too.
+
+94
+00:04:21,367 --> 00:04:23,880
+Rolling is translation plus rotation.
+
+95
+00:04:24,530 --> 00:04:25,834
+Where is this asked?
+
+96
+00:04:25,834 --> 00:04:30,008
+In concept questions: translation,
+rotation or both, and the speed of each
+
+97
+00:04:30,008 --> 00:04:30,908
+point.
+
+98
+00:04:31,142 --> 00:04:32,178
+Exam level now.
+
+99
+00:04:32,178 --> 00:04:35,258
+A door one point two metres
+wide turns on its hinge.
+
+100
+00:04:35,258 --> 00:04:39,278
+In half a second, a point thirty
+centimetres from the hinge moves fifteen
+
+101
+00:04:39,278 --> 00:04:40,849
+centimetres along its arc.
+
+102
+00:04:40,849 --> 00:04:43,921
+How far does the edge move,
+and through what angle?
+
+103
+00:04:43,921 --> 00:04:45,000
+Pause and solve.
+
+104
+00:04:50,400 --> 00:04:51,496
+The answer is A.
+
+105
+00:04:51,496 --> 00:04:53,671
+Sixty centimetres, and half a radian.
+
+106
+00:04:54,171 --> 00:04:55,667
+Theta is s over r.
+
+107
+00:04:55,667 --> 00:04:57,946
+Point one five over point three.
+
+108
+00:04:57,946 --> 00:05:00,278
+Half a radian, for every point.
+
+109
+00:05:00,778 --> 00:05:02,831
+The edge is four times farther out.
+
+110
+00:05:02,831 --> 00:05:05,045
+Four times fifteen is sixty centimetres.
+
+111
+00:05:05,645 --> 00:05:07,185
+Here is your recap.
+
+112
+00:05:07,185 --> 00:05:08,768
+Screenshot this card.
+
+113
+00:05:11,968 --> 00:05:13,906
+Can you answer these without help?
+
+114
+00:05:14,306 --> 00:05:15,206
+One.
+
+115
+00:05:14,774 --> 00:05:17,370
+Why is a giant wheel cabin in translation?
+
+116
+00:05:18,270 --> 00:05:19,170
+Two.
+
+117
+00:05:18,662 --> 00:05:21,833
+Why does a door's edge move faster
+than a point near the hinge?
+
+118
+00:05:22,733 --> 00:05:23,633
+Three.
+
+119
+00:05:23,229 --> 00:05:25,660
+Why is a rolling wheel
+not in pure rotation?
+
+120
+00:05:26,560 --> 00:05:29,725
+Next time: Diya balances
+a ruler on one finger.
+
+121
+00:05:29,725 --> 00:05:33,094
+Add coins to one end, and
+the balance point moves.
+
+122
+00:05:33,094 --> 00:05:34,246
+Centre of mass.

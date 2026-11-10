@@ -1,0 +1,556 @@
+1
+00:00:00,450 --> 00:00:02,204
+A mixer whirs up to speed.
+
+2
+00:00:02,204 --> 00:00:04,894
+A potter's wheel spins
+faster with each kick.
+
+3
+00:00:04,894 --> 00:00:06,887
+A giant wheel slows to a stop.
+
+4
+00:00:07,287 --> 00:00:10,076
+In each one, the turning
+itself keeps changing.
+
+5
+00:00:10,526 --> 00:00:13,083
+At home, Aarav switches
+on the ceiling fan.
+
+6
+00:00:13,083 --> 00:00:16,087
+It starts slowly, then
+speeds up for a few seconds.
+
+7
+00:00:16,437 --> 00:00:19,661
+How many turns does it make
+before it reaches full speed?
+
+8
+00:00:19,661 --> 00:00:21,504
+Can we know, without counting?
+
+9
+00:00:22,004 --> 00:00:22,904
+Yes.
+
+10
+00:00:22,519 --> 00:00:24,267
+With angular acceleration.
+
+11
+00:00:24,867 --> 00:00:29,855
+Angular acceleration, alpha, tells
+how fast omega changes: the change in
+
+12
+00:00:29,855 --> 00:00:32,019
+omega, divided by the time.
+
+13
+00:00:32,369 --> 00:00:35,108
+Its unit is radians per second squared.
+
+14
+00:00:35,508 --> 00:00:38,668
+For a fixed axis, alpha
+lies along the axis too.
+
+15
+00:00:38,668 --> 00:00:41,630
+Speeding up, it points
+the same way as omega.
+
+16
+00:00:41,630 --> 00:00:43,705
+Slowing down, the opposite way.
+
+17
+00:00:44,105 --> 00:00:48,644
+And every point of a rigid body has
+the same alpha, just like the same
+
+18
+00:00:48,644 --> 00:00:49,544
+omega.
+
+19
+00:00:49,852 --> 00:00:51,446
+To the motion notebook.
+
+20
+00:00:51,446 --> 00:00:53,847
+A fan, seen from below, at rest.
+
+21
+00:00:53,847 --> 00:00:54,747
+Switch on.
+
+22
+00:00:55,043 --> 00:00:57,829
+Alpha is four radians per second squared.
+
+23
+00:00:57,829 --> 00:01:00,298
+Every second, omega grows by four.
+
+24
+00:01:00,698 --> 00:01:03,800
+On the graph, omega
+climbs in a straight line.
+
+25
+00:01:03,800 --> 00:01:05,200
+The slope is alpha.
+
+26
+00:01:05,600 --> 00:01:10,659
+At five seconds, omega reaches twenty
+radians per second, and stays there.
+
+27
+00:01:11,059 --> 00:01:14,378
+The gold area under the
+line is the angle turned.
+
+28
+00:01:14,378 --> 00:01:17,063
+Fifty radians in the first five seconds.
+
+29
+00:01:17,063 --> 00:01:18,401
+About eight turns.
+
+30
+00:01:18,901 --> 00:01:19,914
+Slow-mo replay.
+
+31
+00:01:19,914 --> 00:01:21,420
+Freeze at two seconds.
+
+32
+00:01:21,770 --> 00:01:22,894
+Omega is eight.
+
+33
+00:01:22,894 --> 00:01:27,458
+The blade tip, zero point six metres
+out, moves at four point eight metres
+
+34
+00:01:27,458 --> 00:01:28,358
+per second.
+
+35
+00:01:28,734 --> 00:01:31,128
+Alpha is the same for the whole fan.
+
+36
+00:01:31,128 --> 00:01:34,355
+But the tip speeds up along
+its circle by r alpha.
+
+37
+00:01:34,355 --> 00:01:36,928
+Two point four metres per second squared.
+
+38
+00:01:37,528 --> 00:01:40,036
+Now switch it off, and it slows down.
+
+39
+00:01:40,036 --> 00:01:43,357
+Does alpha point the same
+way as omega, or opposite?
+
+40
+00:01:43,357 --> 00:01:44,554
+Pause and decide.
+
+41
+00:01:47,654 --> 00:01:48,554
+Opposite!
+
+42
+00:01:48,342 --> 00:01:50,937
+Omega keeps its direction, but it shrinks.
+
+43
+00:01:50,937 --> 00:01:52,846
+So alpha points the other way.
+
+44
+00:01:52,846 --> 00:01:55,125
+On the graph, the line slopes down.
+
+45
+00:01:55,725 --> 00:01:56,661
+Now the equations.
+
+46
+00:01:56,661 --> 00:01:58,399
+They are old friends in new clothes.
+
+47
+00:01:58,749 --> 00:01:59,661
+Step one.
+
+48
+00:01:59,661 --> 00:02:03,846
+Alpha is d omega by d t,
+just as a is d v by d t.
+
+49
+00:02:04,596 --> 00:02:05,496
+Step two.
+
+50
+00:02:05,483 --> 00:02:09,820
+With a steady alpha, omega
+equals omega nought plus alpha t.
+
+51
+00:02:09,820 --> 00:02:11,897
+Like v equals u plus a t.
+
+52
+00:02:12,647 --> 00:02:13,565
+Step three.
+
+53
+00:02:13,565 --> 00:02:16,500
+The angle is the area
+under the omega line.
+
+54
+00:02:16,500 --> 00:02:20,193
+Theta equals omega nought t,
+plus half alpha t squared.
+
+55
+00:02:20,943 --> 00:02:21,843
+Step four.
+
+56
+00:02:21,840 --> 00:02:26,667
+Remove t, and you get omega squared
+equals omega nought squared, plus two
+
+57
+00:02:26,667 --> 00:02:27,667
+alpha theta.
+
+58
+00:02:28,417 --> 00:02:29,408
+Remember this.
+
+59
+00:02:29,408 --> 00:02:32,611
+Swap x for theta, v for
+omega, and a for alpha.
+
+60
+00:02:32,611 --> 00:02:34,842
+The same equations work for turning.
+
+61
+00:02:35,542 --> 00:02:38,728
+Why does the blade tip speed
+up more than the middle?
+
+62
+00:02:38,728 --> 00:02:39,694
+Link by link.
+
+63
+00:02:40,044 --> 00:02:42,587
+The whole blade turns as one piece.
+
+64
+00:02:42,587 --> 00:02:46,263
+So every point has the same
+omega, at every moment.
+
+65
+00:02:46,663 --> 00:02:50,421
+So omega changes by the
+same amount for every point.
+
+66
+00:02:50,421 --> 00:02:51,423
+Same alpha.
+
+67
+00:02:51,823 --> 00:02:53,435
+But speed is r omega.
+
+68
+00:02:53,435 --> 00:02:55,883
+So the change in speed is r alpha.
+
+69
+00:02:55,883 --> 00:02:58,875
+The tip, farther out, gains speed fastest.
+
+70
+00:02:59,475 --> 00:03:00,537
+Side by side.
+
+71
+00:03:00,537 --> 00:03:04,842
+A bike speeds up at two metres per
+second squared for five seconds.
+
+72
+00:03:04,842 --> 00:03:07,918
+Ten metres per second,
+and twenty five metres.
+
+73
+00:03:08,318 --> 00:03:12,319
+The fan: four radians per
+second squared for five seconds.
+
+74
+00:03:12,319 --> 00:03:16,528
+It reaches twenty radians per
+second, and turns fifty radians.
+
+75
+00:03:17,128 --> 00:03:18,187
+Now you try.
+
+76
+00:03:18,187 --> 00:03:22,639
+Fan A goes from zero to twenty
+radians per second in five seconds.
+
+77
+00:03:22,639 --> 00:03:25,240
+Fan B, from ten to thirty in five.
+
+78
+00:03:25,240 --> 00:03:27,193
+Which has the bigger alpha?
+
+79
+00:03:27,193 --> 00:03:28,509
+Pause and decide.
+
+80
+00:03:31,709 --> 00:03:32,609
+The same!
+
+81
+00:03:32,498 --> 00:03:36,415
+Both gain twenty in five seconds,
+so alpha is four for both.
+
+82
+00:03:36,415 --> 00:03:39,139
+It depends on the change, not the speed.
+
+83
+00:03:39,789 --> 00:03:41,463
+Now, one worked example.
+
+84
+00:03:41,463 --> 00:03:42,363
+Aarav's fan.
+
+85
+00:03:42,673 --> 00:03:46,883
+From rest, it reaches twenty
+radians per second in five seconds.
+
+86
+00:03:46,883 --> 00:03:49,453
+Find alpha, and the number of turns.
+
+87
+00:03:49,953 --> 00:03:52,886
+Omega equals omega nought plus alpha t.
+
+88
+00:03:52,886 --> 00:03:55,930
+Twenty equals zero plus alpha times five.
+
+89
+00:03:55,930 --> 00:03:57,430
+So alpha is four.
+
+90
+00:03:58,180 --> 00:04:00,630
+Theta equals half alpha t squared.
+
+91
+00:04:00,630 --> 00:04:03,080
+Half of four, times twenty five.
+
+92
+00:04:03,080 --> 00:04:04,215
+Fifty radians.
+
+93
+00:04:04,965 --> 00:04:07,097
+One turn is two pi radians.
+
+94
+00:04:07,097 --> 00:04:09,001
+So fifty, over two pi.
+
+95
+00:04:09,751 --> 00:04:12,053
+That is about seven point nine six.
+
+96
+00:04:12,053 --> 00:04:14,393
+Nearly eight turns before full speed.
+
+97
+00:04:15,043 --> 00:04:16,505
+Now, the exam trap.
+
+98
+00:04:16,855 --> 00:04:20,648
+Many students find theta equals
+fifty, and say: fifty turns.
+
+99
+00:04:21,048 --> 00:04:23,387
+But theta comes out in radians.
+
+100
+00:04:23,387 --> 00:04:24,838
+Divide by two pi.
+
+101
+00:04:24,838 --> 00:04:27,730
+Fifty radians is only about eight turns.
+
+102
+00:04:28,380 --> 00:04:29,828
+Where is this asked?
+
+103
+00:04:29,828 --> 00:04:34,397
+In wheels that speed up or brake,
+angles and turns in a given time, and
+
+104
+00:04:34,397 --> 00:04:35,690
+with torque later.
+
+105
+00:04:36,290 --> 00:04:37,479
+Exam level now.
+
+106
+00:04:37,479 --> 00:04:41,997
+A wheel speeds up steadily from ten
+to thirty radians per second, while
+
+107
+00:04:41,997 --> 00:04:44,054
+turning through eighty radians.
+
+108
+00:04:44,054 --> 00:04:46,332
+Find alpha, and the time taken.
+
+109
+00:04:46,332 --> 00:04:47,573
+Pause and solve.
+
+110
+00:04:52,973 --> 00:04:54,253
+The answer is B.
+
+111
+00:04:54,253 --> 00:04:57,321
+Alpha is five, and the
+time is four seconds.
+
+112
+00:04:57,821 --> 00:05:02,446
+Use omega squared equals omega
+nought squared plus two alpha theta.
+
+113
+00:05:02,446 --> 00:05:06,180
+Nine hundred equals one
+hundred plus one sixty alpha.
+
+114
+00:05:06,680 --> 00:05:09,479
+So eight hundred equals one sixty alpha.
+
+115
+00:05:09,479 --> 00:05:12,331
+Alpha is five radians per second squared.
+
+116
+00:05:12,831 --> 00:05:16,079
+Then omega equals omega
+nought plus alpha t.
+
+117
+00:05:16,079 --> 00:05:18,417
+Thirty equals ten plus five t.
+
+118
+00:05:18,417 --> 00:05:20,190
+So t is four seconds.
+
+119
+00:05:20,790 --> 00:05:22,330
+Here is your recap.
+
+120
+00:05:22,330 --> 00:05:23,913
+Screenshot this card.
+
+121
+00:05:27,113 --> 00:05:29,051
+Can you answer these without help?
+
+122
+00:05:29,451 --> 00:05:30,351
+One.
+
+123
+00:05:29,917 --> 00:05:33,442
+What does an alpha of four
+radians per second squared mean?
+
+124
+00:05:34,342 --> 00:05:35,242
+Two.
+
+125
+00:05:34,785 --> 00:05:37,106
+When does alpha point opposite to omega?
+
+126
+00:05:38,006 --> 00:05:38,906
+Three.
+
+127
+00:05:38,532 --> 00:05:41,427
+Why must you divide theta
+by two pi to get turns?
+
+128
+00:05:42,327 --> 00:05:45,652
+Next time: why are door handles
+always far from the hinge?
+
+129
+00:05:45,652 --> 00:05:46,655
+We meet torque.
