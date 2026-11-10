@@ -1,0 +1,58 @@
+H1|0.4|A skater spins faster as she pulls her arms in. A diver curls into a ball and flips faster.
+H2|0.45|Nobody pushes them. Yet their spin speeds up.
+H3|0.35|Diya tries it on a spinning chair. Arms out, she turns slowly.
+H4|0.5|She pulls her arms in, and suddenly she whirls around. Where did the extra spin come from?
+H5|0.6|The answer is one of the biggest rules in physics.
+P1|0.35|Angular momentum is the amount of spin a body carries. We write it as L.
+P2|0.4|For a body turning about a fixed axis, L equals I times omega.
+P3|0.4|I says how the mass is spread around the axis. Omega says how fast it turns.
+P4|0.6|And the rule: if no outside torque acts, L cannot change. It stays the same.
+S1|0.35|Our motion notebook, from above. Diya on the chair, holding a weight in each hand.
+S2|0.4|Arms out, the weights are point eight metres from the axis. I is four point five. She turns at two radians per second.
+S3|0.4|So L is four point five times two. Nine.
+S4|0.4|Now she pulls the weights in, to point two metres. I falls to one point five.
+S5|0.4|Watch omega climb. Two, three, four, and up to six radians per second.
+S6|0.5|And L? One point five times six. Still nine. On the graph, the L line stays flat while omega rises.
+S7|0.35|Slow-mo replay. Freeze in the middle of the pull.
+S8|0.4|Her hands pull each weight straight towards the axis.
+S9|0.4|A pull that points at the axis has no turning effect. Its torque is zero.
+S10|0.6|No outside torque, so L stays fixed. I went down, so omega had to go up.
+R1|0.35|Here is the reasoning, link by link.
+R2|0.4|Nothing outside twists the chair. So L stays the same.
+R3|0.4|L is I times omega. Pulling in the weights makes I three times smaller.
+R4|0.6|To keep the product the same, omega must become three times bigger. Two becomes six.
+D1|0.35|Now the rule, one step at a time.
+D2|0.75|Step one. Each bit carries m r squared omega. Add them all. L equals I omega.
+D3|0.75|Step two. The rate of change of L equals the outside torque.
+D4|0.75|Step three. If the outside torque is zero, d L by d t is zero. So L is constant.
+D5|0.75|Step four. So I one omega one equals I two omega two.
+D6|0.75|Step five. Spin energy can be written as L squared over two I. Same L, smaller I, so more energy.
+T1|0.7|Remember this. With no outside torque, angular momentum stays the same.
+K1|0.4|Side by side. Arms out: I is four point five, omega is two. L is nine.
+K2|0.6|Arms in: I is one point five, omega is six. L is still nine.
+K3|3.2|Now you try. When she pulls her arms in, does her spin energy stay the same, go up, or go down? Pause and decide.
+K4|0.65|It goes up! Nine joules becomes twenty seven. Her arm muscles did eighteen joules of work pulling the weights in.
+V1|0.4|One more twist. Arms out, she simply lets go of both weights.
+V2|3.1|Does she speed up, like when she pulled them in? Pause and decide.
+V3|0.65|No! Each weight flies off with its own share of spin. Her L drops along with her I, so her omega stays at two.
+W1|0.35|Now, one worked example.
+W2|0.5|A disc with I equal to four turns freely at ten radians per second. A ring with I equal to one, not spinning, is dropped onto it. They turn together. Find the new omega, and the energy lost.
+W3|0.75|No outside torque, so L is kept. Four times ten is forty.
+W4|0.75|Together, I is five. So omega is forty over five. Eight radians per second.
+W5|0.75|Energy before: one half times four times ten squared. Two hundred joules.
+W6|0.65|Energy after: one half times five times eight squared. One hundred and sixty. So forty joules are lost, as heat, when they grip.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students think a faster spin always means a torque acted.
+X3|0.65|Not here. No torque acted on Diya. I went down, so omega went up, and L stayed the same.
+E1|0.6|Where is this asked? In skaters and divers, bodies dropped onto turning discs, and a planet or star that shrinks.
+Q1|5.4|Exam level now. Suppose the Earth shrank to half its radius, keeping its mass, and stayed a uniform sphere. How long would one day be? Pause and solve.
+A1|0.5|The answer is A. Six hours.
+A2|0.5|For a uniform sphere, I is two fifths M R squared. Half the radius makes I one quarter.
+A3|0.5|L is kept, so omega becomes four times bigger.
+A4|0.6|The day is the time for one turn. It becomes one quarter of twenty four hours. Six hours.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. Why does Diya spin faster when she pulls her arms in?
+Y3|0.9|Two. Why does her spin energy go up, though L stays the same?
+Y4|0.9|Three. Why does letting go of the weights not speed her up?
+N1|0.3|Next time: a cycle wheel rolls down the road. Its top races ahead, yet its bottom point is not moving at all. How? Rolling motion.

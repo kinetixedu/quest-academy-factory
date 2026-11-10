@@ -1,0 +1,154 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 108 - Conservation of Angular Momentum</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 108: conservation of angular momentum (Motion notebook) ===== */
+:root{--pm:#A23B72;--fo:#D9731A;--vb:#2F6FEB;--te:#0E8F8F;--vi:#7A4FE0;--go:#B7791F;--rd:#D64545}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.fo{color:var(--fo)}.vb{color:var(--vb)}.te{color:var(--te)}.vi{color:var(--vi)}.go{color:var(--go)}.rd{color:var(--rd)}
+#bpill{position:absolute;display:inline-flex;align-items:center;height:48px;padding:0 16px;border-radius:10px;background:#fff;border:2px solid var(--ac);color:var(--ac);font:600 18px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap;top:96px}
+/* title tiles */
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+/* hook rows */
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr .jn{position:absolute;left:28px;top:24px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:28px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr svg{position:absolute;right:16px;top:0}
+/* linear -> rotation rows */
+.qr{position:absolute;left:36px;width:712px;height:116px;border-radius:14px;background:var(--soft)}
+.qr .qa,.qr .qb{position:absolute;top:24px;width:70px;font:600 60px/1 Poppins;font-style:italic;text-align:center}
+.qr .qa{left:20px}.qr .qb{left:150px}
+.qr .qar{position:absolute;left:96px;top:40px}
+.qr .qn{position:absolute;left:250px;top:20px;font:700 28px Poppins;white-space:nowrap}
+.qr .qd{position:absolute;left:250px;top:64px;font:500 22px Poppins;color:var(--ink2);white-space:nowrap}
+/* readout */
+.ro2{position:absolute;display:grid;grid-template-columns:auto 1fr auto;column-gap:14px;row-gap:6px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}
+.ro2 .v{font:600 34px 'IBM Plex Mono';text-align:right;white-space:nowrap;padding:0 4px;border-radius:6px}
+.ro2 .u{font:400 20px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+.smo,.frz,.rdy{position:absolute;right:36px;top:18px;height:44px;padding:0 16px;border-radius:9px;display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.smo{background:var(--ink);color:#fff}.frz{background:var(--redBg);color:var(--red)}.rdy{background:var(--soft);color:var(--ink2)}
+.eqc{position:absolute;left:36px;top:494px;height:60px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:12px;font-size:28px;white-space:nowrap}
+.eqc.ink{background:var(--ink);color:#fff}
+.leg{position:absolute;top:22px;display:flex;gap:18px;font:600 18px 'IBM Plex Mono';white-space:nowrap;color:var(--ink2)}
+.leg span{display:flex;align-items:center;gap:8px}
+/* derivation */
+.st{position:absolute;left:36px;width:960px;height:84px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:-2px;font-size:34px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:50px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.dpan{position:absolute;left:1040px;top:84px;width:524px;height:460px;border-radius:14px;background:var(--soft)}
+.tr{position:absolute;left:16px;width:492px;height:76px;border-radius:12px;background:#fff}
+.tr .a,.tr .b{position:absolute;top:0;height:76px;display:flex;align-items:center;font-size:30px;white-space:nowrap}
+.tr .a{left:20px}.tr .b{left:270px}
+.tr .ar{position:absolute;left:206px;top:22px}
+/* chain */
+.lk{position:absolute;left:36px;width:712px;height:96px;border-radius:14px;background:var(--soft)}
+.lk .n{position:absolute;left:20px;top:25px;width:46px;height:46px;border-radius:50%;background:var(--ac);color:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.lk .lt{position:absolute;left:86px;top:0;height:96px;display:flex;align-items:center;font:600 25px Poppins;white-space:nowrap;gap:10px}
+.lk .lt .katex{font-size:1.1em}
+.kp{position:absolute;left:36px;top:494px;height:60px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:12px;font:600 25px Poppins;white-space:nowrap}
+#wkq{position:absolute;left:36px;top:70px;font:600 27px/1.38 Poppins;width:712px}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#wl .sol .sx{font-size:30px}
+#sF .fcard .fl{font-size:40px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 32px Poppins;white-space:nowrap}
+.cvc{position:absolute;height:52px;padding:0 18px;border-radius:12px;background:var(--soft);display:inline-flex;align-items:center;font-size:26px;white-space:nowrap}
+.pm{color:var(--pm)}
+.qr .qs{position:absolute;left:24px;top:0;height:88px;width:200px;display:flex;align-items:center;font-size:40px;white-space:nowrap}
+.qr .qn{top:12px;left:240px}.qr .qd{top:50px;left:240px}
+.rect{position:absolute}
+.bar{position:absolute;height:44px;border-radius:8px}
+.blab{position:absolute;font:600 22px 'IBM Plex Mono';white-space:nowrap}
+.ochip{position:absolute;height:44px;padding:0 14px;border-radius:9px;background:var(--soft);display:inline-flex;align-items:center;gap:8px;font:600 20px 'IBM Plex Mono';white-space:nowrap}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 6 SYSTEM OF PARTICLES AND ROTATIONAL MOTION</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="bpill">NCERT · CBSE · ISC · PUC</div>
+    <div id="title">Angular Momentum <span class="acc">Conserved</span></div>
+    <div id="sub">One spinning chair, two weights</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">PULL IN, SPIN FASTER</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">Nobody pushes, yet the spin speeds up</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">DIYA'S SPINNING CHAIR · SEEN FROM ABOVE</div>
+        <svg id="hkS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <img id="hkA" src="../../assets/illustrations/puc/diya.png" style="position:absolute;left:566px;top:240px;width:200px;height:250px;object-fit:contain">
+        <div class="pillp" id="hkQ" style="left:36px;top:490px;background:var(--redBg);color:var(--red)">Where did the extra spin come from?</div></div>
+    </div>
+    <div id="sP">
+      <div class="card full" id="pq"><div class="lbl" style="left:36px;top:30px">ANGULAR MOMENTUM · THE AMOUNT OF SPIN</div><div id="qrs"></div></div>
+      <div class="card rf" id="pm"><div class="lbl" style="left:36px;top:30px">L = I × ω · THE AREA STAYS THE SAME</div>
+        <svg id="pmS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg></div>
+    </div>
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">SPINNING CHAIR · TOP VIEW</div>
+        <div class="rdy" id="rdy">READY · ARMS OUT</div><div class="smo" id="smo">SLOW-MO REPLAY · 0.25x</div><div class="frz" id="frz">FROZEN · MID-PULL</div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div class="eqc" id="eq1"></div><div class="eqc ink" id="eq2"></div></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="ghost" id="exS" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <div class="ro2" id="roA" style="left:36px;top:74px;width:320px"></div><div class="ro2" id="roB" style="left:404px;top:74px;width:344px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">ω AND L VS MOMENT OF INERTIA I</div>
+        <div class="leg" id="leg" style="right:36px"></div>
+        <svg id="grS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+    </div>
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">WHY SHE SPEEDS UP · LINK BY LINK</div><div id="lks"></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">KEEP THE PRODUCT THE SAME</div><div id="rbars"></div></div>
+    </div>
+    <div id="sD">
+      <div class="card" id="dl" style="left:160px;top:270px;width:1600px;height:580px"><div class="lbl" style="left:36px;top:30px">THE RULE · 5 STEPS</div><div id="steps"></div>
+        <div class="dpan" id="dpan"><div class="lbl" style="left:24px;top:22px">BEFORE VS AFTER THE PULL</div><svg id="dpS" width="524" height="460" style="position:absolute;left:0;top:0"></svg></div></div>
+    </div>
+    <div id="sK">
+      <div class="card full" id="kh"><div class="lbl" style="left:36px;top:30px">ARMS OUT</div><svg id="khS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div class="kp" id="khP"></div></div>
+      <div class="card rf" id="kl"><div class="lbl" style="left:36px;top:30px">ARMS IN</div><div class="ghost" id="exK" style="right:36px;top:18px">EXAMPLE FIGURES</div><svg id="klS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div class="kp" id="klP"></div></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+    <div id="sV">
+      <div class="card full" id="vs"><div class="lbl" style="left:36px;top:30px">ARMS OUT · SHE LETS GO</div><svg id="vsS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg></div>
+      <div class="card rf" id="vr"><div class="lbl" style="left:36px;top:30px">WHO CARRIES THE SPIN?</div><div class="ro2" id="vro" style="left:36px;top:90px;width:712px"></div>
+        <div class="kp" id="vP"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wkq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">TOP VIEW · RING DROPPED ON A DISC</div><div class="ghost" id="exW" style="right:36px;top:18px">EXAMPLE FIGURES</div>
+        <svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div class="ro2" id="wro" style="left:500px;top:130px;width:248px"></div></div>
+    </div>
+    <div id="sX"><div class="card red" id="trap"><div id="cvs"></div></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this. With no outside torque,</div><div id="st2" style="font-size:76px"><span style="color:#A23B72">angular momentum</span> stays the same.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
