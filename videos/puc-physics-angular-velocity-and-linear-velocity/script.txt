@@ -1,0 +1,55 @@
+H1|0.4|In a ring game, kids spin in a line, holding hands. The end kid runs. The centre kid just turns.
+H2|0.45|Swing a cricket bat, and the tip moves faster than the handle.
+H3|0.35|At the fair, Diya rides a merry-go-round. Her horse is near the centre. Her friend is at the edge.
+H4|0.5|They turn together. Yet her friend rushes through the air, and Diya just drifts. How?
+H5|0.6|The answer links two speeds: angular and linear velocity.
+P1|0.35|Angular velocity, omega, is the angle turned each second, in radians per second.
+P2|0.4|In a rigid body, every point turns the same angle in the same time. So all points share one omega.
+P3|0.4|Omega is a vector along the axis. Curl your right fingers with the turn, and your thumb gives omega.
+P4|0.6|Linear velocity, v, is how fast one point moves along its circle, in metres per second.
+S1|0.35|To the motion notebook. The merry-go-round turns at zero point five radians per second. Omega points up.
+S2|0.4|The inner horse is one metre from the pole. It moves at zero point five metres per second.
+S3|0.4|The outer horse is three metres out. Same omega, but it moves at one point five. Three times faster.
+S4|0.4|Now a marker walks out along the floor, from the pole to the edge.
+S5|0.5|On the graph, its speed rises in a straight line. Double the distance from the axis, double the speed.
+S6|0.35|Slow-mo replay. Freeze the outer horse.
+S7|0.4|Draw r from a point O, low on the pole, to the horse: five metres, at angle theta to the pole.
+S8|0.4|Its distance from the axis is r sine theta. Five times zero point six. Three metres.
+S9|0.6|And v is at right angles to both omega and r, along the circle. So v equals omega cross r.
+S10|3.1|Now you try. A point sits right on the pole. How fast does it move? Pause and decide.
+S11|0.6|Zero! It is on the axis, so its distance from the axis is zero. It just turns on the spot.
+D1|0.35|Now let's derive it, one step at a time.
+D2|0.75|Step one. On a circle, arc length is radius times angle, with the angle in radians.
+D3|0.75|Step two. Each second it turns omega radians, so the point moves omega times r perp. v equals omega r perp.
+D4|0.75|Step three. With r from any point on the axis, r perp is r sine theta. So v is omega r sine theta.
+D5|0.75|Step four. That is the size of a cross product. With direction, v equals omega cross r.
+T1|0.7|Remember this. Every point shares one omega. Its speed is omega times its distance from the axis.
+R1|0.35|Back to the two horses, link by link.
+R2|0.4|Both horses finish a turn in the same time, about twelve point six seconds.
+R3|0.4|In that turn, each goes once round its own circle. The outer circle is three times longer.
+R4|0.6|Three times the distance in the same time: three times the speed.
+K1|0.4|Side by side. Inner horse: one metre out, omega zero point five, v zero point five.
+K2|0.6|Outer horse: three metres out, the same omega, but v is one point five.
+K3|3.2|Now you try. The Earth turns once a day. Who moves faster: someone in Bengaluru, or in London? Pause and decide.
+K4|0.65|Bengaluru! Same omega. But Bengaluru is nearer the equator, so it is farther from the Earth's axis.
+W1|0.35|Now, one worked example.
+W2|0.5|The Earth's radius is six point three seven times ten to the six metres. Find the speed on the equator, and in Bengaluru, thirteen degrees north.
+W3|0.75|One turn a day: omega is two pi over eighty six thousand four hundred. About seven point two seven times ten to the minus five.
+W4|0.75|On the equator, r perp is the full radius. v is about four hundred and sixty three metres per second.
+W5|0.75|In Bengaluru, r perp is R cos thirteen, about six point two one times ten to the six metres.
+W6|0.65|So v is about four hundred and fifty one metres per second, and we never feel it.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students use the full distance r from the origin: v equals omega r.
+X3|0.65|But only the distance from the axis counts. For our horse, omega r gives two point five. The truth is one point five.
+E1|0.6|Where is this asked? v equals omega cross r, points on wheels and on the Earth, and rolling.
+Q1|5.4|Exam level now. Omega is four k radians per second, about an axis through the origin. Find the speed of the point three i plus four j plus twelve k metres. Pause and solve.
+A1|0.5|The answer is B. Twenty metres per second.
+A2|0.5|v is omega cross r. Four k cross three i is twelve j. Four k cross four j is minus sixteen i.
+A3|0.5|So v is minus sixteen i plus twelve j. Its size is root of four hundred. Twenty.
+A4|0.6|Check: r perp is five, and four times five is twenty. The twelve k does not count.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. Why do all points of a turning body share the same omega?
+Y3|0.9|Two. Why does a point on the axis not move?
+Y4|0.9|Three. Why use r sine theta, not r, in v equals omega r?
+N1|0.3|Next time: a ceiling fan takes a few seconds to reach full speed. How many turns does it make on the way? Angular acceleration.
