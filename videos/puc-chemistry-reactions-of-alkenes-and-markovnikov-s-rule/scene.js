@@ -308,7 +308,7 @@ M.on(t => {
     put($('#bS'), G(benchS(t), 1 - b) + G(rule(t), b));
     const b3 = io(t, T0('B3'), 0.4), ans = io(t, T0('B5'), 0.4);
     put($('#shS'), G(shS(t), 1 - b) + G(T(392, 100, 'MARKOVNIKOV\'S RULE', { ff: 'Poppins', fw: 700, fs: 26, c: C.ink, ls: 0.3 }) + T(392, 150, 'NEGATIVE PART → C WITH FEWER H', { fs: 19, c: GC }) + G(T(392, 196, 'H → C WITH MORE H', { fs: 19, c: NC }), io(t, wt('B2', 'hydrogen') - 0.1, 0.4)), b));
-    put($('#chS'), G(chS(t), 1 - b) + G(T(392, 120, 'CH₃CH=CH₂ + HCl → ?', { fs: 26, c: C.ink, ls: 0 }) + G(T(392, 190, 'CH₃CHClCH₃ · 2-CHLOROPROPANE', { fs: 22, c: CL, ls: 0.3 }), ans), b * b3));
+    put($('#chS'), G(chS(t), 1 - b) + G(T(392, 120, 'CH₃CH=CH₂ + HCl → ?', { fs: 26, c: C.ink, ls: 0 }) + G(T(392, 190, 'CH₃CHClCH₃ · 2-CHLOROPROPANE', { fs: 22, c: CL, ls: 0.3 }), ans), b));
     M.setT($('#bnL'), t < tB1 ? 'MOLECULE BENCH · HBr + PROPENE' : 'MOLECULE BENCH · THE RULE'); M.setT($('#shL'), t < tB1 ? (t < tS4 - 0.2 ? 'TWO STEPS' : 'SECONDARY CARBOCATION') : 'IN WORDS'); M.setT($('#chL'), t < tB1 ? (t < tS5 - 0.2 ? 'H-Br IS POLAR' : 'PRIMARY CARBOCATION') : 'TRY ONE');
     M.setT(btg, BT[cur(BT, t)][1]); M.vis(btg, t, tS1 + 0.6, 1e9, POP);
   }
