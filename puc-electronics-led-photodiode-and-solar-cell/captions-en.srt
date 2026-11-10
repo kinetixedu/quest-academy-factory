@@ -1,0 +1,494 @@
+1
+00:00:00,450 --> 00:00:03,163
+Aarav spots a small solar
+lamp at the college gate.
+
+2
+00:00:03,463 --> 00:00:05,536
+All day, it just sits in the sun.
+
+3
+00:00:05,836 --> 00:00:07,941
+At night, it lights up by itself.
+
+4
+00:00:07,941 --> 00:00:09,290
+How does it do that?
+
+5
+00:00:09,790 --> 00:00:12,488
+The trick uses special
+diodes that work with light.
+
+6
+00:00:12,788 --> 00:00:17,483
+A diode is a one way gate for
+current, made of p and n material.
+
+7
+00:00:17,783 --> 00:00:20,604
+The first one turns
+electricity into light.
+
+8
+00:00:20,604 --> 00:00:22,665
+It is a light emitting diode.
+
+9
+00:00:22,965 --> 00:00:25,627
+The second one turns light into a signal.
+
+10
+00:00:25,627 --> 00:00:27,006
+It is a photodiode.
+
+11
+00:00:27,306 --> 00:00:29,685
+The third one turns light into power.
+
+12
+00:00:29,685 --> 00:00:31,101
+It is a solar cell.
+
+13
+00:00:31,701 --> 00:00:34,250
+Let's start with the light emitting diode.
+
+14
+00:00:34,250 --> 00:00:35,975
+Picture a playground slide.
+
+15
+00:00:36,275 --> 00:00:37,757
+Electrons wait at the top.
+
+16
+00:00:37,757 --> 00:00:40,224
+Holes, the empty seats,
+wait at the bottom.
+
+17
+00:00:40,524 --> 00:00:44,843
+When an electron slides down into a
+hole, its extra energy comes out as
+
+18
+00:00:44,843 --> 00:00:45,743
+light.
+
+19
+00:00:45,773 --> 00:00:49,588
+On the breadboard: a cell,
+a resistor and our diode.
+
+20
+00:00:49,938 --> 00:00:53,904
+Forward bias means the plus side
+of the cell meets the p side.
+
+21
+00:00:54,254 --> 00:00:55,162
+Current flows.
+
+22
+00:00:55,162 --> 00:00:58,430
+Electrons meet holes at the
+junction, and the diode glows.
+
+23
+00:00:58,780 --> 00:01:00,221
+Now flip the cell.
+
+24
+00:01:00,221 --> 00:01:01,818
+This is reverse bias.
+
+25
+00:01:01,818 --> 00:01:03,518
+No current, no light.
+
+26
+00:01:03,868 --> 00:01:07,536
+So a light emitting diode
+glows only in forward bias.
+
+27
+00:01:08,136 --> 00:01:09,958
+How tall is the slide?
+
+28
+00:01:09,958 --> 00:01:12,808
+That height is the energy gap, E g.
+
+29
+00:01:13,158 --> 00:01:15,466
+Each flash of light is a photon.
+
+30
+00:01:15,466 --> 00:01:17,347
+Its energy equals the gap.
+
+31
+00:01:18,047 --> 00:01:20,968
+Photon energy is also h c over lambda.
+
+32
+00:01:20,968 --> 00:01:22,901
+Lambda is the wavelength.
+
+33
+00:01:23,601 --> 00:01:26,556
+So lambda equals h c divided by E g.
+
+34
+00:01:27,256 --> 00:01:32,107
+Shortcut: lambda in nanometres equals
+twelve forty divided by E g in electron
+
+35
+00:01:32,107 --> 00:01:33,007
+volts.
+
+36
+00:01:33,426 --> 00:01:35,731
+Watch the colour as the gap grows.
+
+37
+00:01:35,731 --> 00:01:38,376
+One point eight electron volts gives red.
+
+38
+00:01:38,726 --> 00:01:40,592
+Two point three gives green.
+
+39
+00:01:40,592 --> 00:01:41,912
+Three gives violet.
+
+40
+00:01:42,262 --> 00:01:44,970
+Bigger gap, shorter
+wavelength, bluer light.
+
+41
+00:01:45,570 --> 00:01:49,925
+For visible light, the gap must be at
+least one point eight electron volts.
+
+42
+00:01:50,525 --> 00:01:52,367
+These diodes are heavily doped.
+
+43
+00:01:52,367 --> 00:01:55,295
+They use little power,
+switch fast and last long.
+
+44
+00:01:55,895 --> 00:01:57,348
+Now the second job.
+
+45
+00:01:57,348 --> 00:01:59,992
+A photodiode turns light into a signal.
+
+46
+00:02:00,292 --> 00:02:02,619
+Think of a door that light can knock open.
+
+47
+00:02:02,919 --> 00:02:05,026
+We connect it in reverse bias.
+
+48
+00:02:05,026 --> 00:02:07,643
+In the dark, almost no current flows.
+
+49
+00:02:07,993 --> 00:02:09,696
+Now shine a little light.
+
+50
+00:02:09,696 --> 00:02:12,715
+Each photon frees an
+electron and leaves a hole.
+
+51
+00:02:13,065 --> 00:02:15,689
+The junction field pulls the pair apart.
+
+52
+00:02:15,689 --> 00:02:17,252
+A small current flows.
+
+53
+00:02:17,602 --> 00:02:19,900
+More light, more pairs, more current.
+
+54
+00:02:19,900 --> 00:02:21,274
+Watch the scope climb.
+
+55
+00:02:21,874 --> 00:02:23,097
+Why reverse bias?
+
+56
+00:02:23,097 --> 00:02:25,408
+In the dark, the current is tiny.
+
+57
+00:02:25,758 --> 00:02:28,556
+So the extra current from
+light is easy to see.
+
+58
+00:02:29,156 --> 00:02:33,618
+The photon must carry at least E
+g of energy, or nothing happens.
+
+59
+00:02:34,218 --> 00:02:37,363
+Photodiodes sit inside remote
+control receivers and light sensors.
+
+60
+00:02:37,713 --> 00:02:38,805
+The third job.
+
+61
+00:02:38,805 --> 00:02:41,685
+A solar cell turns light
+into electric power.
+
+62
+00:02:41,985 --> 00:02:45,266
+It is like a water wheel that
+sunlight turns on its own.
+
+63
+00:02:45,566 --> 00:02:47,280
+There is no battery here.
+
+64
+00:02:47,280 --> 00:02:49,289
+The cell itself is the source.
+
+65
+00:02:49,639 --> 00:02:50,568
+Three steps.
+
+66
+00:02:50,568 --> 00:02:53,356
+Generation: light makes
+electron hole pairs.
+
+67
+00:02:53,706 --> 00:02:57,042
+Separation: the field at the
+junction pushes them apart.
+
+68
+00:02:57,392 --> 00:03:01,473
+Collection: the contacts gather them,
+and current flows through the load.
+
+69
+00:03:02,073 --> 00:03:04,165
+Its graph sits in the fourth quadrant.
+
+70
+00:03:04,515 --> 00:03:06,474
+That means the cell gives power.
+
+71
+00:03:06,474 --> 00:03:07,848
+It does not take it.
+
+72
+00:03:08,448 --> 00:03:13,423
+With no load connected, we read
+the open circuit voltage, V o c.
+
+73
+00:03:13,773 --> 00:03:17,706
+With the leads shorted, we read
+the short circuit current, I s c.
+
+74
+00:03:18,306 --> 00:03:21,875
+The junction area is made
+large, to catch more light.
+
+75
+00:03:22,475 --> 00:03:26,020
+A gap near one point five
+electron volts works best.
+
+76
+00:03:26,020 --> 00:03:28,290
+Silicon has about one point one.
+
+77
+00:03:28,890 --> 00:03:31,052
+Light out needs forward bias.
+
+78
+00:03:31,052 --> 00:03:33,160
+Light in needs reverse bias.
+
+79
+00:03:33,160 --> 00:03:35,052
+Power out needs no bias.
+
+80
+00:03:35,852 --> 00:03:37,095
+Back to the lamp.
+
+81
+00:03:37,095 --> 00:03:40,100
+By day, the solar cell
+charges a small battery.
+
+82
+00:03:40,450 --> 00:03:42,669
+At dusk, the cell's voltage falls.
+
+83
+00:03:42,669 --> 00:03:45,471
+The circuit senses dark
+and lights the diode.
+
+84
+00:03:46,071 --> 00:03:47,002
+Worked example.
+
+85
+00:03:47,002 --> 00:03:50,842
+A diode glows with light of wavelength
+six hundred and twenty nanometres.
+
+86
+00:03:51,192 --> 00:03:52,839
+What is its energy gap?
+
+87
+00:03:53,190 --> 00:03:56,847
+E g equals twelve forty
+divided by six twenty.
+
+88
+00:03:57,547 --> 00:03:59,410
+That is two electron volts.
+
+89
+00:03:59,410 --> 00:04:03,291
+In joules, three point two
+times ten to the minus nineteen.
+
+90
+00:04:03,941 --> 00:04:05,403
+Now, the exam trap.
+
+91
+00:04:05,753 --> 00:04:08,977
+Many students think every
+diode works in forward bias.
+
+92
+00:04:09,327 --> 00:04:10,227
+Not these.
+
+93
+00:04:10,179 --> 00:04:12,489
+A photodiode works in reverse bias.
+
+94
+00:04:12,489 --> 00:04:14,868
+A solar cell needs no bias at all.
+
+95
+00:04:15,518 --> 00:04:19,824
+And a solar cell has a wide
+junction area, not a narrow one.
+
+96
+00:04:20,474 --> 00:04:21,557
+Where is it asked?
+
+97
+00:04:21,557 --> 00:04:23,958
+JEE Main asks statement
+questions on all three.
+
+98
+00:04:24,308 --> 00:04:27,143
+For example, in January
+twenty twenty five.
+
+99
+00:04:27,793 --> 00:04:33,064
+PUC and ISC board papers ask you to
+explain each device with its diagram.
+
+100
+00:04:33,714 --> 00:04:34,614
+Try this.
+
+101
+00:04:34,409 --> 00:04:38,244
+Light of six hundred nanometres falls
+on three photodiodes, with gaps one
+
+102
+00:04:38,244 --> 00:04:41,646
+point eight, two point two and
+two point six electron volts.
+
+103
+00:04:41,646 --> 00:04:42,953
+Which give a current?
+
+104
+00:04:48,353 --> 00:04:49,253
+A.
+
+105
+00:04:48,738 --> 00:04:51,539
+Only the one point eight
+electron volt diode.
+
+106
+00:04:51,889 --> 00:04:55,794
+Photon energy is twelve
+forty divided by six hundred.
+
+107
+00:04:55,794 --> 00:04:58,938
+About two point zero seven electron volts.
+
+108
+00:04:59,288 --> 00:05:03,479
+A current flows only if the photon
+energy is more than the gap.
+
+109
+00:05:03,829 --> 00:05:06,822
+Only one point eight is
+below two point zero seven.
+
+110
+00:05:06,822 --> 00:05:08,538
+So only that diode responds.
+
+111
+00:05:09,188 --> 00:05:10,735
+Screenshot this card.
+
+112
+00:05:13,935 --> 00:05:15,889
+Next, clippers and clampers.
+
+113
+00:05:15,889 --> 00:05:18,384
+How can a diode cut or lift a wave?

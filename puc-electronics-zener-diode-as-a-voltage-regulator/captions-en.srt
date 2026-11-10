@@ -1,0 +1,403 @@
+1
+00:00:00,450 --> 00:00:03,686
+Aarav's bicycle has a small
+dynamo that powers its lamp.
+
+2
+00:00:04,036 --> 00:00:06,355
+Pedal fast, and the lamp blazes.
+
+3
+00:00:06,355 --> 00:00:08,263
+Pedal slow, and it fades.
+
+4
+00:00:08,613 --> 00:00:11,555
+The dynamo voltage keeps
+changing with his speed.
+
+5
+00:00:11,905 --> 00:00:13,405
+A phone would hate that.
+
+6
+00:00:13,405 --> 00:00:15,350
+How do we hold a voltage steady?
+
+7
+00:00:15,950 --> 00:00:19,727
+Think of a water tank with an
+overflow pipe near the top.
+
+8
+00:00:20,077 --> 00:00:24,013
+Pour in more water, and the extra
+just spills out of the overflow.
+
+9
+00:00:24,363 --> 00:00:26,404
+Pour in less, and less spills.
+
+10
+00:00:26,404 --> 00:00:28,399
+The water level stays the same.
+
+11
+00:00:28,999 --> 00:00:32,728
+In electronics, that overflow
+pipe is a Zener diode.
+
+12
+00:00:33,078 --> 00:00:36,957
+Its symbol is a diode
+with a bent bar, like a Z.
+
+13
+00:00:37,307 --> 00:00:41,240
+We connect it backwards, in
+reverse bias, on purpose.
+
+14
+00:00:41,590 --> 00:00:45,204
+A normal diode can be damaged
+if pushed too hard backwards.
+
+15
+00:00:45,554 --> 00:00:47,214
+A Zener is built for it.
+
+16
+00:00:47,214 --> 00:00:48,866
+It is very heavily doped.
+
+17
+00:00:49,516 --> 00:00:50,921
+Look at its graph.
+
+18
+00:00:50,921 --> 00:00:53,570
+Forward, it acts like a normal diode.
+
+19
+00:00:53,920 --> 00:00:58,346
+Backwards, almost no current
+flows, until one special voltage.
+
+20
+00:00:58,696 --> 00:01:01,120
+That is the Zener voltage, V z.
+
+21
+00:01:01,120 --> 00:01:02,614
+The breakdown point.
+
+22
+00:01:02,964 --> 00:01:05,660
+Past V z, the current can shoot up a lot.
+
+23
+00:01:06,010 --> 00:01:08,044
+But the voltage barely moves.
+
+24
+00:01:08,044 --> 00:01:09,783
+It stays stuck at V z.
+
+25
+00:01:10,433 --> 00:01:13,173
+Now build a regulator on the breadboard.
+
+26
+00:01:13,523 --> 00:01:18,029
+A changing input, a series resistor
+R, and the Zener across the load.
+
+27
+00:01:18,379 --> 00:01:21,509
+The load gets whatever
+voltage the Zener holds.
+
+28
+00:01:21,509 --> 00:01:22,617
+That is V z.
+
+29
+00:01:22,967 --> 00:01:24,431
+Let the input rise.
+
+30
+00:01:24,431 --> 00:01:26,464
+More current flows through R.
+
+31
+00:01:26,814 --> 00:01:30,753
+The Zener soaks up the extra
+current, like the overflow pipe.
+
+32
+00:01:31,103 --> 00:01:32,697
+Now let the input fall.
+
+33
+00:01:32,697 --> 00:01:34,573
+The Zener takes less current.
+
+34
+00:01:34,923 --> 00:01:37,686
+Through it all, the load
+voltage stays at V z.
+
+35
+00:01:38,336 --> 00:01:40,797
+A Zener in breakdown holds its voltage.
+
+36
+00:01:40,797 --> 00:01:42,817
+Extra current spills through it.
+
+37
+00:01:43,617 --> 00:01:46,083
+Let's find every current, step by step.
+
+38
+00:01:46,433 --> 00:01:51,201
+The resistor R takes the
+leftover voltage, V in minus V z.
+
+39
+00:01:51,901 --> 00:01:55,895
+So the current through R
+is V in minus V z, over R.
+
+40
+00:01:56,595 --> 00:02:00,219
+The load current, IL, is V z over RL.
+
+41
+00:02:00,919 --> 00:02:02,790
+The Zener takes the rest.
+
+42
+00:02:02,790 --> 00:02:04,683
+I z equals I minus IL.
+
+43
+00:02:05,383 --> 00:02:07,690
+Zener power is V z times I z.
+
+44
+00:02:07,690 --> 00:02:09,595
+Keep it below the rating.
+
+45
+00:02:10,245 --> 00:02:12,651
+Two rules keep the regulator working.
+
+46
+00:02:13,001 --> 00:02:13,901
+One.
+
+47
+00:02:13,504 --> 00:02:17,371
+The input must stay above V
+z, or the Zener switches off.
+
+48
+00:02:17,721 --> 00:02:18,621
+Two.
+
+49
+00:02:18,190 --> 00:02:22,165
+Zener current must stay between a
+small minimum and a safe maximum.
+
+50
+00:02:22,765 --> 00:02:24,473
+Too little, and it stops holding.
+
+51
+00:02:24,473 --> 00:02:25,921
+Too much, and it overheats.
+
+52
+00:02:26,571 --> 00:02:27,712
+Worked example.
+
+53
+00:02:27,712 --> 00:02:29,649
+The input is fifteen volts.
+
+54
+00:02:29,649 --> 00:02:31,433
+The Zener is nine volts.
+
+55
+00:02:31,783 --> 00:02:33,537
+R is two hundred ohms.
+
+56
+00:02:33,537 --> 00:02:35,396
+The load is one kilo-ohm.
+
+57
+00:02:35,746 --> 00:02:38,198
+I is fifteen minus nine, over two hundred.
+
+58
+00:02:38,198 --> 00:02:39,779
+That is thirty milliamperes.
+
+59
+00:02:40,379 --> 00:02:42,391
+IL is nine over one thousand.
+
+60
+00:02:42,391 --> 00:02:43,568
+Nine milliamperes.
+
+61
+00:02:44,168 --> 00:02:46,029
+So I z is thirty minus nine.
+
+62
+00:02:46,029 --> 00:02:47,495
+Twenty one milliamperes.
+
+63
+00:02:48,095 --> 00:02:51,072
+Zener power is nine volts
+times twenty one milliamperes.
+
+64
+00:02:51,672 --> 00:02:54,164
+That is about zero point one nine watts.
+
+65
+00:02:54,764 --> 00:02:56,974
+At eighteen volts in, I z grows.
+
+66
+00:02:56,974 --> 00:02:58,653
+The load still gets nine.
+
+67
+00:02:59,303 --> 00:03:00,765
+Now, the exam trap.
+
+68
+00:03:01,115 --> 00:03:03,940
+Many students assume the
+Zener is always at V z.
+
+69
+00:03:04,290 --> 00:03:05,310
+First check it.
+
+70
+00:03:05,310 --> 00:03:07,797
+Remove the Zener and
+find the load voltage.
+
+71
+00:03:08,147 --> 00:03:12,404
+Only if that is above V z does
+the Zener break down and regulate.
+
+72
+00:03:13,054 --> 00:03:14,466
+Where is this asked?
+
+73
+00:03:14,466 --> 00:03:15,680
+PUC board papers.
+
+74
+00:03:16,030 --> 00:03:20,441
+JEE Main asks Zener regulator currents
+often, like January twenty twenty
+
+75
+00:03:20,441 --> 00:03:21,341
+four.
+
+76
+00:03:21,351 --> 00:03:25,661
+Expect to find the Zener current,
+the series resistor, or the power.
+
+77
+00:03:26,311 --> 00:03:27,211
+Try this.
+
+78
+00:03:27,099 --> 00:03:30,366
+A six volt Zener has a
+hundred ohm series resistor.
+
+79
+00:03:30,716 --> 00:03:34,392
+The input is ten volts, the
+load three hundred ohms.
+
+80
+00:03:34,392 --> 00:03:36,090
+Find the Zener current.
+
+81
+00:03:41,690 --> 00:03:42,590
+B.
+
+82
+00:03:41,947 --> 00:03:42,847
+Twenty milliamperes.
+
+83
+00:03:43,155 --> 00:03:44,055
+First check.
+
+84
+00:03:44,040 --> 00:03:47,462
+Without the Zener, the load
+gets seven point five volts.
+
+85
+00:03:47,812 --> 00:03:50,948
+That is above six, so the
+Zener regulates at six volts.
+
+86
+00:03:51,298 --> 00:03:53,674
+I is ten minus six, over one hundred.
+
+87
+00:03:53,674 --> 00:03:54,844
+Forty milliamperes.
+
+88
+00:03:55,194 --> 00:03:57,104
+IL is six over three hundred.
+
+89
+00:03:57,104 --> 00:03:58,310
+Twenty milliamperes.
+
+90
+00:03:58,660 --> 00:04:00,686
+So I z is forty minus twenty.
+
+91
+00:04:00,686 --> 00:04:01,994
+Twenty milliamperes.
+
+92
+00:04:02,644 --> 00:04:04,191
+Screenshot this card.
+
+93
+00:04:07,391 --> 00:04:11,428
+Next, diodes that work with light:
+the light emitting diode, photodiode
+
+94
+00:04:11,428 --> 00:04:12,473
+and solar cell.

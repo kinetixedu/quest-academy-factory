@@ -1,0 +1,415 @@
+1
+00:00:00,450 --> 00:00:03,119
+At the college fest, Aarav
+taps a tiny microphone.
+
+2
+00:00:03,419 --> 00:00:06,333
+The huge speakers boom
+across the whole ground.
+
+3
+00:00:06,633 --> 00:00:10,114
+How can such a tiny signal
+control such a big current?
+
+4
+00:00:10,614 --> 00:00:12,659
+The secret is a transistor.
+
+5
+00:00:12,659 --> 00:00:15,802
+Its full name is bipolar
+junction transistor.
+
+6
+00:00:16,102 --> 00:00:19,280
+Think of a big water pipe
+with a small control tap.
+
+7
+00:00:19,580 --> 00:00:23,075
+A gentle turn of the small
+tap controls the big flow.
+
+8
+00:00:23,375 --> 00:00:26,929
+In a transistor, a small
+current controls a big current.
+
+9
+00:00:27,529 --> 00:00:28,669
+Let's build one.
+
+10
+00:00:28,669 --> 00:00:31,449
+A transistor is a
+sandwich of three layers.
+
+11
+00:00:31,749 --> 00:00:33,556
+The first layer is the emitter.
+
+12
+00:00:33,556 --> 00:00:35,447
+It sends out the charge carriers.
+
+13
+00:00:35,797 --> 00:00:37,849
+The middle layer is the base.
+
+14
+00:00:37,849 --> 00:00:39,383
+It controls the flow.
+
+15
+00:00:39,733 --> 00:00:41,520
+The last layer is the collector.
+
+16
+00:00:41,520 --> 00:00:42,927
+It collects the carriers.
+
+17
+00:00:43,277 --> 00:00:45,699
+Where two layers meet, we get a junction.
+
+18
+00:00:45,699 --> 00:00:46,826
+So there are two.
+
+19
+00:00:47,176 --> 00:00:50,552
+The emitter base junction, and
+the collector base junction.
+
+20
+00:00:51,152 --> 00:00:53,220
+Each layer is built for its job.
+
+21
+00:00:53,570 --> 00:00:55,313
+The emitter is heavily doped.
+
+22
+00:00:55,313 --> 00:00:57,291
+It has lots of carriers to send.
+
+23
+00:00:57,641 --> 00:01:00,260
+The base is very thin and lightly doped.
+
+24
+00:01:00,610 --> 00:01:02,953
+So very few carriers get lost inside it.
+
+25
+00:01:03,303 --> 00:01:05,415
+The collector is the largest layer.
+
+26
+00:01:05,415 --> 00:01:07,034
+It must get rid of heat.
+
+27
+00:01:07,634 --> 00:01:09,615
+There are two kinds of transistor.
+
+28
+00:01:09,915 --> 00:01:13,438
+NPN has a thin p base
+between two n layers.
+
+29
+00:01:13,788 --> 00:01:17,387
+PNP has a thin n base
+between two p layers.
+
+30
+00:01:17,737 --> 00:01:20,291
+In the symbol, an arrow
+sits on the emitter.
+
+31
+00:01:20,641 --> 00:01:23,419
+It points the way
+conventional current flows.
+
+32
+00:01:23,769 --> 00:01:26,133
+For NPN, the arrow points out.
+
+33
+00:01:26,133 --> 00:01:28,050
+For PNP, it points in.
+
+34
+00:01:28,650 --> 00:01:31,554
+A handy trick: NPN means not pointing in.
+
+35
+00:01:32,154 --> 00:01:35,682
+Now let's look inside an
+NPN transistor at work.
+
+36
+00:01:35,982 --> 00:01:38,744
+We bias the two junctions
+in different ways.
+
+37
+00:01:39,094 --> 00:01:41,943
+The emitter base junction
+is forward biased.
+
+38
+00:01:41,943 --> 00:01:43,273
+Its gate is open.
+
+39
+00:01:43,623 --> 00:01:46,424
+The collector base
+junction is reverse biased.
+
+40
+00:01:46,424 --> 00:01:48,066
+It pulls carriers across.
+
+41
+00:01:48,666 --> 00:01:51,280
+Electrons rush from the
+emitter into the thin base.
+
+42
+00:01:51,630 --> 00:01:55,308
+Picture runners crossing a
+thin, almost empty field.
+
+43
+00:01:55,658 --> 00:01:58,775
+A few runners meet holes
+in the base and pair up.
+
+44
+00:01:59,125 --> 00:02:01,111
+This is called recombination.
+
+45
+00:02:01,111 --> 00:02:03,855
+It makes the small base current, IB.
+
+46
+00:02:04,205 --> 00:02:07,323
+Most runners shoot straight
+across into the collector.
+
+47
+00:02:07,673 --> 00:02:10,606
+They make the big collector current, IC.
+
+48
+00:02:11,206 --> 00:02:12,687
+Now on the breadboard.
+
+49
+00:02:12,687 --> 00:02:14,700
+Watch the meters and the scope.
+
+50
+00:02:15,050 --> 00:02:17,082
+Raise the base current a little.
+
+51
+00:02:17,082 --> 00:02:19,207
+The collector current rises a lot.
+
+52
+00:02:19,557 --> 00:02:21,566
+Now let the base current wiggle.
+
+53
+00:02:21,566 --> 00:02:24,030
+The collector current wiggles much bigger.
+
+54
+00:02:24,630 --> 00:02:25,582
+Now the rule.
+
+55
+00:02:25,582 --> 00:02:27,972
+Every electron enters through the emitter.
+
+56
+00:02:28,322 --> 00:02:31,880
+So the emitter current,
+IE, is the biggest current.
+
+57
+00:02:32,580 --> 00:02:36,643
+It splits into two parts: the base
+current and the collector current.
+
+58
+00:02:37,343 --> 00:02:39,804
+So IE equals IB plus IC.
+
+59
+00:02:40,504 --> 00:02:43,722
+This is Kirchhoff's current
+law, used on the transistor.
+
+60
+00:02:44,422 --> 00:02:46,311
+The base current is tiny.
+
+61
+00:02:46,311 --> 00:02:48,714
+So IC is almost equal to IE.
+
+62
+00:02:49,314 --> 00:02:52,595
+It is called bipolar because both
+electrons and holes take part.
+
+63
+00:02:53,195 --> 00:02:56,652
+A thin base lets a small
+current control a big one.
+
+64
+00:02:57,452 --> 00:02:58,703
+Back to the fest.
+
+65
+00:02:58,703 --> 00:03:01,636
+The microphone sends a
+tiny signal to the base.
+
+66
+00:03:01,986 --> 00:03:05,589
+The collector current copies it,
+much bigger, and the speakers boom.
+
+67
+00:03:06,189 --> 00:03:07,089
+Worked example.
+
+68
+00:03:07,075 --> 00:03:09,795
+A transistor has an emitter
+current of ten milliamps.
+
+69
+00:03:10,145 --> 00:03:12,561
+The base current is zero
+point two milliamps.
+
+70
+00:03:12,561 --> 00:03:14,053
+Find the collector current.
+
+71
+00:03:14,403 --> 00:03:16,740
+IC equals IE minus IB.
+
+72
+00:03:17,440 --> 00:03:20,204
+Ten minus zero point two is
+nine point eight milliamps.
+
+73
+00:03:20,904 --> 00:03:24,774
+So ninety eight percent of the
+emitter current reaches the collector.
+
+74
+00:03:25,424 --> 00:03:26,886
+Now, the exam trap.
+
+75
+00:03:27,236 --> 00:03:30,725
+Many students think the base is
+a thick, heavily doped layer.
+
+76
+00:03:31,075 --> 00:03:32,407
+It is the opposite.
+
+77
+00:03:32,407 --> 00:03:35,360
+The base is the thinnest
+and most lightly doped.
+
+78
+00:03:36,010 --> 00:03:39,619
+And the collector, not the
+emitter, is the largest layer.
+
+79
+00:03:40,269 --> 00:03:41,604
+Where is it asked?
+
+80
+00:03:41,604 --> 00:03:44,437
+PUC and ISC board papers ask this often.
+
+81
+00:03:44,787 --> 00:03:49,015
+Draw both structures and symbols,
+then explain transistor action.
+
+82
+00:03:49,665 --> 00:03:50,565
+Try this.
+
+83
+00:03:50,355 --> 00:03:53,416
+In a transistor, the emitter
+current is five milliamps.
+
+84
+00:03:53,416 --> 00:03:56,226
+Two percent of the electrons
+recombine in the base.
+
+85
+00:03:56,226 --> 00:03:57,950
+What is the collector current?
+
+86
+00:04:03,350 --> 00:04:04,250
+A.
+
+87
+00:04:03,575 --> 00:04:04,557
+Four point nine milliamps.
+
+88
+00:04:04,907 --> 00:04:07,279
+The base current is two
+percent of five milliamps.
+
+89
+00:04:07,629 --> 00:04:09,255
+That is zero point one milliamps.
+
+90
+00:04:09,605 --> 00:04:11,932
+IC equals five minus zero point one.
+
+91
+00:04:11,932 --> 00:04:14,016
+That is four point nine milliamps.
+
+92
+00:04:14,666 --> 00:04:16,212
+Screenshot this card.
+
+93
+00:04:19,412 --> 00:04:22,683
+Next, the common emitter
+setup, alpha and beta.
+
+94
+00:04:22,683 --> 00:04:25,037
+How much does a transistor amplify?

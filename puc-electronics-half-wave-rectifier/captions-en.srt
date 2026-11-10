@@ -1,0 +1,393 @@
+1
+00:00:00,450 --> 00:00:03,176
+Aarav plugs his phone
+charger into the wall socket.
+
+2
+00:00:03,526 --> 00:00:06,233
+The socket gives
+alternating current, or AC.
+
+3
+00:00:06,233 --> 00:00:08,666
+It flips direction fifty times a second.
+
+4
+00:00:09,016 --> 00:00:11,927
+But a phone battery needs
+direct current, or DC.
+
+5
+00:00:11,927 --> 00:00:12,883
+One way only.
+
+6
+00:00:13,233 --> 00:00:15,332
+So how does the charger turn AC into DC?
+
+7
+00:00:15,932 --> 00:00:19,240
+Start with a water pipe that
+has a one-way flap inside.
+
+8
+00:00:19,590 --> 00:00:22,934
+Push the water forward,
+and the flap swings open.
+
+9
+00:00:22,934 --> 00:00:23,905
+Water flows.
+
+10
+00:00:24,255 --> 00:00:26,979
+Push it backward, and the flap slams shut.
+
+11
+00:00:26,979 --> 00:00:27,974
+Nothing flows.
+
+12
+00:00:28,574 --> 00:00:32,375
+A diode is that one-way flap,
+but for electric current.
+
+13
+00:00:32,725 --> 00:00:36,254
+The arrow in its symbol shows
+the only way current can go.
+
+14
+00:00:36,604 --> 00:00:40,630
+When the diode lets current through,
+we say it is forward biased.
+
+15
+00:00:40,980 --> 00:00:43,927
+When it blocks current, we
+say it is reverse biased.
+
+16
+00:00:44,527 --> 00:00:48,061
+Changing AC into one-way
+current is called rectification.
+
+17
+00:00:48,411 --> 00:00:51,333
+The circuit that does it
+is called a rectifier.
+
+18
+00:00:51,983 --> 00:00:54,892
+Let's build the simplest
+one on the breadboard.
+
+19
+00:00:55,242 --> 00:00:59,197
+An AC supply, one diode,
+and a load resistor, RL.
+
+20
+00:00:59,547 --> 00:01:01,886
+The load is the thing we want to power.
+
+21
+00:01:02,236 --> 00:01:04,315
+Watch the positive half cycle.
+
+22
+00:01:04,315 --> 00:01:06,292
+The diode is forward biased.
+
+23
+00:01:06,642 --> 00:01:09,103
+Electrons flow, and the
+output copies the input hump.
+
+24
+00:01:09,453 --> 00:01:11,470
+Now the negative half cycle.
+
+25
+00:01:11,470 --> 00:01:13,486
+The diode is reverse biased.
+
+26
+00:01:13,836 --> 00:01:15,355
+It blocks the current.
+
+27
+00:01:15,355 --> 00:01:17,076
+The output stays at zero.
+
+28
+00:01:17,426 --> 00:01:21,184
+So the output is a row of
+humps, with gaps in between.
+
+29
+00:01:21,534 --> 00:01:23,201
+It never goes negative.
+
+30
+00:01:23,201 --> 00:01:25,610
+It flows one way, but it pulses.
+
+31
+00:01:25,960 --> 00:01:27,368
+We call it pulsating DC.
+
+32
+00:01:27,718 --> 00:01:30,064
+Only half of each wave gets through.
+
+33
+00:01:30,064 --> 00:01:32,163
+So this is a half-wave rectifier.
+
+34
+00:01:32,813 --> 00:01:34,577
+A diode is a one-way gate.
+
+35
+00:01:34,577 --> 00:01:36,873
+It lets only half the wave through.
+
+36
+00:01:37,673 --> 00:01:39,557
+So how much DC do we really get?
+
+37
+00:01:39,557 --> 00:01:40,641
+Let's work it out.
+
+38
+00:01:40,991 --> 00:01:43,071
+Call the peak of the input V m.
+
+39
+00:01:43,771 --> 00:01:47,163
+In the positive half, the
+output follows the input.
+
+40
+00:01:47,163 --> 00:01:48,495
+Its peak is V m.
+
+41
+00:01:49,195 --> 00:01:51,708
+In the negative half, the output is zero.
+
+42
+00:01:52,408 --> 00:01:55,854
+Squash one hump flat, like
+levelling sand in a box.
+
+43
+00:01:56,204 --> 00:01:59,083
+Its average height is two V m over pi.
+
+44
+00:01:59,783 --> 00:02:02,241
+But the humps fill only half the time.
+
+45
+00:02:02,241 --> 00:02:03,204
+So halve it.
+
+46
+00:02:03,904 --> 00:02:06,053
+V d c equals V m over pi.
+
+47
+00:02:06,053 --> 00:02:08,855
+About zero point three one eight V m.
+
+48
+00:02:09,555 --> 00:02:11,727
+Current follows the same rule.
+
+49
+00:02:11,727 --> 00:02:13,826
+I d c equals I m over pi.
+
+50
+00:02:14,476 --> 00:02:16,997
+Now three numbers every exam loves.
+
+51
+00:02:17,347 --> 00:02:22,068
+In the negative half, the blocked
+diode faces the full peak, backwards.
+
+52
+00:02:22,418 --> 00:02:24,669
+That is the peak inverse voltage.
+
+53
+00:02:24,669 --> 00:02:26,313
+Here, it equals V m.
+
+54
+00:02:26,913 --> 00:02:29,500
+One hump comes out for each input cycle.
+
+55
+00:02:29,850 --> 00:02:33,425
+So the output frequency
+equals the input frequency.
+
+56
+00:02:34,025 --> 00:02:37,702
+At best, forty point six percent of
+the input power becomes DC power.
+
+57
+00:02:38,352 --> 00:02:39,466
+Worked example.
+
+58
+00:02:39,466 --> 00:02:43,106
+The input has a peak of
+twenty volts, at fifty hertz.
+
+59
+00:02:43,456 --> 00:02:47,094
+The load is one kilo-ohm,
+and the diode is ideal.
+
+60
+00:02:47,444 --> 00:02:49,777
+V d c equals twenty over pi.
+
+61
+00:02:49,777 --> 00:02:52,381
+About six point three seven volts.
+
+62
+00:02:52,981 --> 00:02:57,374
+I d c is six point three seven
+volts over one thousand ohms.
+
+63
+00:02:57,974 --> 00:03:00,079
+That is about six point
+three seven milliamperes.
+
+64
+00:03:00,679 --> 00:03:04,865
+The diode must survive a peak
+inverse voltage of twenty volts.
+
+65
+00:03:05,465 --> 00:03:08,278
+And the output humps arrive
+fifty times a second.
+
+66
+00:03:08,928 --> 00:03:10,389
+Now, the exam trap.
+
+67
+00:03:10,739 --> 00:03:15,282
+Many students say a half-wave output
+has a frequency of one hundred hertz.
+
+68
+00:03:15,632 --> 00:03:16,571
+It does not.
+
+69
+00:03:16,571 --> 00:03:18,212
+One hump per input cycle.
+
+70
+00:03:18,212 --> 00:03:20,317
+Fifty hertz in, fifty hertz out.
+
+71
+00:03:20,967 --> 00:03:22,117
+Where is this asked?
+
+72
+00:03:22,117 --> 00:03:23,862
+PUC, CBSE and ISC board papers.
+
+73
+00:03:24,212 --> 00:03:28,095
+NEET twenty twenty two asked
+exactly this frequency question.
+
+74
+00:03:28,445 --> 00:03:32,028
+Expect to draw the circuit and
+waveforms, or find the DC value.
+
+75
+00:03:32,678 --> 00:03:33,578
+Try this.
+
+76
+00:03:33,523 --> 00:03:37,657
+Thirty sine one hundred pi t
+volts feeds a half-wave rectifier.
+
+77
+00:03:38,007 --> 00:03:39,789
+The load is two kilo-ohms.
+
+78
+00:03:39,789 --> 00:03:42,790
+Find the DC load current
+and output frequency.
+
+79
+00:03:48,390 --> 00:03:49,290
+B.
+
+80
+00:03:48,748 --> 00:03:51,746
+Four point seven seven
+milliamperes, at fifty hertz.
+
+81
+00:03:52,096 --> 00:03:54,050
+The peak is thirty volts.
+
+82
+00:03:54,050 --> 00:03:56,309
+So V d c is thirty over pi.
+
+83
+00:03:56,659 --> 00:03:59,278
+That is about nine point five five volts.
+
+84
+00:03:59,628 --> 00:04:01,275
+Divide by two thousand ohms.
+
+85
+00:04:01,275 --> 00:04:03,826
+That gives four point
+seven seven milliamperes.
+
+86
+00:04:04,176 --> 00:04:07,939
+Omega is one hundred
+pi, so f is fifty hertz.
+
+87
+00:04:07,939 --> 00:04:09,620
+The frequency stays.
+
+88
+00:04:10,270 --> 00:04:11,817
+Screenshot this card.
+
+89
+00:04:15,017 --> 00:04:17,054
+Next, full-wave and bridge rectifiers.
+
+90
+00:04:17,054 --> 00:04:19,246
+How do we use both halves of the wave?

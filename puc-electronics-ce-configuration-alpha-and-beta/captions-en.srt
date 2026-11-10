@@ -1,0 +1,397 @@
+1
+00:00:00,450 --> 00:00:02,812
+Aarav reads a line in his lab manual.
+
+2
+00:00:02,812 --> 00:00:04,542
+Current gain, one hundred.
+
+3
+00:00:04,842 --> 00:00:08,283
+Can one small part really make
+current a hundred times bigger?
+
+4
+00:00:08,583 --> 00:00:10,470
+And what do alpha and beta mean?
+
+5
+00:00:10,970 --> 00:00:14,795
+A transistor has three legs:
+emitter, base and collector.
+
+6
+00:00:15,095 --> 00:00:18,195
+But a circuit needs two
+wires in and two wires out.
+
+7
+00:00:18,495 --> 00:00:21,726
+So one leg must be shared
+by the input and the output.
+
+8
+00:00:22,026 --> 00:00:24,314
+Share the base, and it is common base.
+
+9
+00:00:24,314 --> 00:00:26,451
+Share the collector, common collector.
+
+10
+00:00:26,801 --> 00:00:29,446
+Share the emitter, and
+it is common emitter.
+
+11
+00:00:29,446 --> 00:00:31,114
+This is the one used most.
+
+12
+00:00:31,714 --> 00:00:34,955
+Let's build the common emitter
+setup on the breadboard.
+
+13
+00:00:35,255 --> 00:00:38,147
+The input goes between
+the base and the emitter.
+
+14
+00:00:38,497 --> 00:00:41,267
+The output comes from the
+collector and the emitter.
+
+15
+00:00:41,617 --> 00:00:43,782
+The emitter is shared by both sides.
+
+16
+00:00:43,782 --> 00:00:45,772
+That is why it is called common.
+
+17
+00:00:46,122 --> 00:00:48,741
+A small battery forward biases the base.
+
+18
+00:00:48,741 --> 00:00:51,153
+A bigger battery feeds the collector.
+
+19
+00:00:51,503 --> 00:00:53,442
+The input current is IB.
+
+20
+00:00:53,442 --> 00:00:55,433
+The output current is IC.
+
+21
+00:00:56,033 --> 00:00:59,162
+Now picture one hundred
+runners leaving the emitter.
+
+22
+00:00:59,462 --> 00:01:01,687
+Ninety nine of them reach the collector.
+
+23
+00:01:02,037 --> 00:01:03,704
+Only one gets stuck in the base.
+
+24
+00:01:04,304 --> 00:01:07,725
+Alpha asks: what fraction of
+runners reached the collector?
+
+25
+00:01:08,075 --> 00:01:10,227
+Ninety nine out of one hundred.
+
+26
+00:01:10,227 --> 00:01:12,330
+Alpha is zero point nine nine.
+
+27
+00:01:12,930 --> 00:01:17,080
+Beta asks: how many reach the collector
+for each one stuck in the base?
+
+28
+00:01:17,430 --> 00:01:19,285
+Ninety nine for every one.
+
+29
+00:01:19,285 --> 00:01:20,779
+Beta is ninety nine.
+
+30
+00:01:21,379 --> 00:01:24,329
+So alpha is always a bit less than one.
+
+31
+00:01:24,329 --> 00:01:25,438
+Beta is big.
+
+32
+00:01:26,037 --> 00:01:27,132
+Now the formulas.
+
+33
+00:01:27,132 --> 00:01:29,124
+Alpha equals IC divided by IE.
+
+34
+00:01:29,474 --> 00:01:32,353
+It is the current gain
+of the common base setup.
+
+35
+00:01:33,053 --> 00:01:35,415
+Beta equals IC divided by IB.
+
+36
+00:01:35,415 --> 00:01:38,077
+It is the common emitter current gain.
+
+37
+00:01:38,777 --> 00:01:40,716
+Start from the current rule.
+
+38
+00:01:40,716 --> 00:01:42,634
+IE equals IB plus IC.
+
+39
+00:01:43,334 --> 00:01:45,349
+Divide every term by IC.
+
+40
+00:01:46,049 --> 00:01:49,933
+One over alpha equals
+one over beta, plus one.
+
+41
+00:01:50,633 --> 00:01:51,653
+Rearrange it.
+
+42
+00:01:51,653 --> 00:01:54,175
+Alpha equals beta over one plus beta.
+
+43
+00:01:54,875 --> 00:01:57,932
+Or beta equals alpha over one minus alpha.
+
+44
+00:01:58,632 --> 00:02:00,938
+Small changes work the same way.
+
+45
+00:02:00,938 --> 00:02:04,361
+AC beta is change in IC over change in IB.
+
+46
+00:02:04,961 --> 00:02:06,781
+Now the breadboard graphs.
+
+47
+00:02:06,781 --> 00:02:08,346
+First the input side.
+
+48
+00:02:08,697 --> 00:02:10,298
+Raise VBE slowly.
+
+49
+00:02:10,298 --> 00:02:12,487
+Almost nothing flows at first.
+
+50
+00:02:12,837 --> 00:02:16,990
+Past about zero point seven
+volts, the base current shoots up.
+
+51
+00:02:16,990 --> 00:02:18,395
+Just like a diode.
+
+52
+00:02:18,995 --> 00:02:20,552
+Now the output side.
+
+53
+00:02:20,552 --> 00:02:22,998
+Keep IB fixed and raise VCE.
+
+54
+00:02:23,348 --> 00:02:26,137
+IC climbs quickly, then goes almost flat.
+
+55
+00:02:26,487 --> 00:02:28,733
+The flat part is the active region.
+
+56
+00:02:28,733 --> 00:02:30,998
+Here IC hardly depends on VCE.
+
+57
+00:02:31,348 --> 00:02:34,982
+Give a bigger IB, and the
+flat line sits higher.
+
+58
+00:02:34,982 --> 00:02:36,379
+Beta times bigger.
+
+59
+00:02:36,979 --> 00:02:38,864
+Alpha is just below one.
+
+60
+00:02:38,864 --> 00:02:39,974
+Beta is big.
+
+61
+00:02:39,974 --> 00:02:43,077
+And beta equals alpha
+over one minus alpha.
+
+62
+00:02:43,877 --> 00:02:44,924
+Worked example.
+
+63
+00:02:44,924 --> 00:02:48,241
+A transistor has alpha equal
+to zero point nine eight.
+
+64
+00:02:48,591 --> 00:02:49,682
+Find beta.
+
+65
+00:02:50,032 --> 00:02:52,924
+Beta equals alpha over one minus alpha.
+
+66
+00:02:53,624 --> 00:02:56,823
+That is zero point nine eight
+over zero point zero two.
+
+67
+00:02:57,523 --> 00:02:59,458
+Beta equals forty nine.
+
+68
+00:02:59,458 --> 00:03:02,217
+So IC is forty nine times IB.
+
+69
+00:03:02,867 --> 00:03:04,331
+Now, the exam trap.
+
+70
+00:03:04,681 --> 00:03:07,000
+Many students think alpha
+can be more than one.
+
+71
+00:03:07,350 --> 00:03:08,250
+It cannot.
+
+72
+00:03:08,183 --> 00:03:12,401
+IC is always a little less than
+IE, so alpha stays below one.
+
+73
+00:03:13,051 --> 00:03:14,997
+And never mix them up.
+
+74
+00:03:14,997 --> 00:03:16,460
+Alpha uses IE.
+
+75
+00:03:16,460 --> 00:03:17,863
+Beta uses IB.
+
+76
+00:03:18,513 --> 00:03:19,656
+Where is it asked?
+
+77
+00:03:19,656 --> 00:03:22,502
+PUC and ISC board papers
+ask for these relations.
+
+78
+00:03:22,852 --> 00:03:26,733
+Expect numericals on alpha and
+beta, and the characteristic curves.
+
+79
+00:03:27,383 --> 00:03:28,283
+Try this.
+
+80
+00:03:28,131 --> 00:03:32,024
+A transistor in common emitter
+mode has beta equal to ninety nine.
+
+81
+00:03:32,024 --> 00:03:34,312
+The emitter current is five milliamps.
+
+82
+00:03:34,312 --> 00:03:35,954
+What is the base current?
+
+83
+00:03:41,354 --> 00:03:42,254
+B.
+
+84
+00:03:41,638 --> 00:03:42,538
+Fifty microamps.
+
+85
+00:03:42,799 --> 00:03:46,098
+First, alpha equals ninety
+nine over one hundred.
+
+86
+00:03:46,098 --> 00:03:48,169
+That is zero point nine nine.
+
+87
+00:03:48,519 --> 00:03:51,554
+So IC equals zero point
+nine nine times five.
+
+88
+00:03:51,554 --> 00:03:53,577
+Four point nine five milliamps.
+
+89
+00:03:53,927 --> 00:03:56,739
+IB equals five minus four point nine five.
+
+90
+00:03:56,739 --> 00:03:58,356
+That is fifty microamps.
+
+91
+00:03:59,006 --> 00:04:00,552
+Screenshot this card.
+
+92
+00:04:03,752 --> 00:04:06,874
+Next, the transistor as a
+switch and an amplifier.
+
+93
+00:04:06,874 --> 00:04:09,444
+How does it turn a whisper into a shout?

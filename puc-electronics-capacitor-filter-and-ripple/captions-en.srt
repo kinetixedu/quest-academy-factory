@@ -1,0 +1,374 @@
+1
+00:00:00,450 --> 00:00:04,160
+Aarav watches a pump fill the
+overhead water tank in spurts.
+
+2
+00:00:04,510 --> 00:00:06,259
+Spurt, gap, spurt, gap.
+
+3
+00:00:06,259 --> 00:00:08,812
+Yet the tap below flows smooth and steady.
+
+4
+00:00:09,162 --> 00:00:12,766
+The tank stores water in the spurts
+and gives it out in the gaps.
+
+5
+00:00:13,116 --> 00:00:15,768
+Our rectifier gives spurts too, the humps.
+
+6
+00:00:15,768 --> 00:00:17,098
+Can we smooth them?
+
+7
+00:00:17,698 --> 00:00:19,602
+First, what is wrong with humps?
+
+8
+00:00:19,952 --> 00:00:22,864
+A phone or a radio wants
+steady DC, a flat line.
+
+9
+00:00:23,214 --> 00:00:25,133
+Humps keep rising and falling.
+
+10
+00:00:25,133 --> 00:00:27,004
+That wobble is called ripple.
+
+11
+00:00:27,354 --> 00:00:30,335
+Ripple is the leftover AC
+riding on top of the DC.
+
+12
+00:00:30,935 --> 00:00:33,311
+A circuit that removes
+ripple is called a filter.
+
+13
+00:00:33,661 --> 00:00:37,838
+The simplest filter is one
+capacitor, placed across the load.
+
+14
+00:00:38,188 --> 00:00:41,962
+A capacitor stores charge, just
+like the tank stores water.
+
+15
+00:00:42,612 --> 00:00:46,531
+Let's add one to our full-wave
+rectifier on the breadboard.
+
+16
+00:00:46,881 --> 00:00:50,815
+The capacitor C sits in
+parallel with the load, RL.
+
+17
+00:00:51,165 --> 00:00:55,108
+As the input rises, the diodes
+conduct and charge the capacitor.
+
+18
+00:00:55,458 --> 00:00:58,097
+It fills up to the peak, V m.
+
+19
+00:00:58,447 --> 00:01:01,849
+Now the input falls below
+the capacitor voltage.
+
+20
+00:01:02,199 --> 00:01:03,558
+The diodes switch off.
+
+21
+00:01:03,558 --> 00:01:05,011
+The supply is cut away.
+
+22
+00:01:05,361 --> 00:01:07,923
+But the capacitor keeps feeding the load.
+
+23
+00:01:07,923 --> 00:01:09,128
+It slowly drains.
+
+24
+00:01:09,478 --> 00:01:11,791
+Then the next hump arrives
+and tops it up again.
+
+25
+00:01:12,142 --> 00:01:15,903
+So the output is nearly flat,
+with a small sawtooth ripple.
+
+26
+00:01:16,553 --> 00:01:18,688
+Now swap in a bigger capacitor.
+
+27
+00:01:18,688 --> 00:01:20,358
+Watch the ripple shrink.
+
+28
+00:01:21,008 --> 00:01:25,356
+A filter capacitor fills at the
+peaks and feeds the load in the gaps.
+
+29
+00:01:26,156 --> 00:01:27,720
+How big is the ripple?
+
+30
+00:01:27,720 --> 00:01:29,532
+Let's find it step by step.
+
+31
+00:01:29,882 --> 00:01:33,412
+Between humps, the load
+current I drains the capacitor.
+
+32
+00:01:34,112 --> 00:01:36,878
+Charge lost equals current times time.
+
+33
+00:01:36,878 --> 00:01:38,927
+Delta Q equals I times T.
+
+34
+00:01:39,627 --> 00:01:41,999
+Here T is the gap between humps.
+
+35
+00:01:41,999 --> 00:01:44,257
+For full-wave, one over two f.
+
+36
+00:01:44,957 --> 00:01:47,934
+A capacitor's voltage drop
+is charge over capacitance.
+
+37
+00:01:48,634 --> 00:01:52,235
+So the ripple, V r, equals I over two f C.
+
+38
+00:01:52,935 --> 00:01:55,799
+The current I is about V m over RL.
+
+39
+00:01:56,499 --> 00:01:59,863
+So V r equals V m over two f RLC.
+
+40
+00:02:00,513 --> 00:02:03,057
+For half-wave, the gap is twice as long.
+
+41
+00:02:03,407 --> 00:02:06,502
+So V r equals V m over f RLC.
+
+42
+00:02:07,152 --> 00:02:08,646
+Three ideas exams love.
+
+43
+00:02:08,996 --> 00:02:09,896
+One.
+
+44
+00:02:09,519 --> 00:02:12,433
+Bigger C or bigger RL means less ripple.
+
+45
+00:02:12,783 --> 00:02:16,253
+The time RLC must be
+much longer than the gap.
+
+46
+00:02:16,853 --> 00:02:17,753
+Two.
+
+47
+00:02:17,325 --> 00:02:21,220
+For the same parts, full-wave
+ripple is half the half-wave ripple.
+
+48
+00:02:21,570 --> 00:02:23,569
+Its gaps are only half as long.
+
+49
+00:02:24,168 --> 00:02:25,068
+Three.
+
+50
+00:02:24,656 --> 00:02:27,243
+Ripple factor compares
+the leftover AC to the DC.
+
+51
+00:02:27,593 --> 00:02:31,948
+Without a filter, half-wave has a
+ripple factor of one point two one.
+
+52
+00:02:32,298 --> 00:02:34,422
+Full-wave has zero point four eight.
+
+53
+00:02:34,422 --> 00:02:36,601
+A good filter makes it far smaller.
+
+54
+00:02:37,251 --> 00:02:38,319
+Worked example.
+
+55
+00:02:38,319 --> 00:02:42,095
+A full-wave rectifier gives a
+twenty volt peak at fifty hertz.
+
+56
+00:02:42,445 --> 00:02:44,064
+The load is one kilo-ohm.
+
+57
+00:02:44,064 --> 00:02:46,572
+The capacitor is one thousand microfarads.
+
+58
+00:02:46,922 --> 00:02:49,991
+The humps come at two
+f, one hundred hertz.
+
+59
+00:02:50,591 --> 00:02:52,789
+Multiply two f, RL and C.
+
+60
+00:02:52,789 --> 00:02:54,531
+That gives one hundred.
+
+61
+00:02:55,131 --> 00:02:57,775
+So V r is twenty over one hundred.
+
+62
+00:02:57,775 --> 00:02:59,787
+Just zero point two volts.
+
+63
+00:03:00,387 --> 00:03:04,080
+The DC sits near the peak,
+about nineteen point nine volts.
+
+64
+00:03:04,680 --> 00:03:08,120
+Without the filter, it was
+only twelve point seven volts.
+
+65
+00:03:08,770 --> 00:03:10,231
+Now, the exam trap.
+
+66
+00:03:10,581 --> 00:03:15,121
+Many students put f equals fifty hertz
+into the full-wave ripple formula.
+
+67
+00:03:15,471 --> 00:03:16,371
+Wrong.
+
+68
+00:03:16,068 --> 00:03:18,083
+Full-wave humps come at two f.
+
+69
+00:03:18,083 --> 00:03:19,639
+Use one hundred hertz.
+
+70
+00:03:20,289 --> 00:03:21,557
+Where is this asked?
+
+71
+00:03:21,557 --> 00:03:23,132
+PUC and CBSE board papers.
+
+72
+00:03:23,482 --> 00:03:27,578
+JEE Main twenty twenty one asked how
+to get steady DC from a rectifier.
+
+73
+00:03:27,928 --> 00:03:31,595
+Expect to draw the filtered
+output, or find the ripple.
+
+74
+00:03:32,245 --> 00:03:33,145
+Try this.
+
+75
+00:03:33,059 --> 00:03:37,042
+A full-wave rectifier gives a
+fifteen volt peak at fifty hertz.
+
+76
+00:03:37,392 --> 00:03:41,086
+The load is five hundred ohms,
+with two thousand microfarads.
+
+77
+00:03:41,086 --> 00:03:42,222
+Find the ripple.
+
+78
+00:03:47,822 --> 00:03:48,722
+B.
+
+79
+00:03:48,244 --> 00:03:50,514
+About zero point one five volts.
+
+80
+00:03:50,864 --> 00:03:54,543
+The ripple frequency is two
+f, so one hundred hertz.
+
+81
+00:03:54,893 --> 00:04:00,193
+One hundred times five hundred times
+zero point zero zero two is one hundred.
+
+82
+00:04:00,543 --> 00:04:03,307
+So V r is fifteen over one hundred.
+
+83
+00:04:03,307 --> 00:04:05,368
+Zero point one five volts.
+
+84
+00:04:06,018 --> 00:04:07,564
+Screenshot this card.
+
+85
+00:04:10,764 --> 00:04:12,283
+Next, the Zener diode.
+
+86
+00:04:12,283 --> 00:04:14,414
+How does it hold a voltage steady?

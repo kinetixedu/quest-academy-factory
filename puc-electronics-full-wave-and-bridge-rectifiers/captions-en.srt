@@ -1,0 +1,399 @@
+1
+00:00:00,450 --> 00:00:01,946
+Aarav pedals to college.
+
+2
+00:00:01,946 --> 00:00:04,406
+His two legs push, one after the other.
+
+3
+00:00:04,756 --> 00:00:06,381
+Left leg, then right leg.
+
+4
+00:00:06,381 --> 00:00:08,587
+The bike gets a push every half turn.
+
+5
+00:00:08,937 --> 00:00:11,334
+Now imagine only one leg could push.
+
+6
+00:00:11,334 --> 00:00:13,381
+The ride would jerk and crawl.
+
+7
+00:00:13,731 --> 00:00:16,840
+A half-wave rectifier is
+that one-legged rider.
+
+8
+00:00:16,840 --> 00:00:18,650
+Can we use both halves?
+
+9
+00:00:19,250 --> 00:00:22,392
+Remember the one-way flap
+from the last episode.
+
+10
+00:00:22,742 --> 00:00:25,243
+It throws away every backward push.
+
+11
+00:00:25,243 --> 00:00:27,099
+Half the wave is wasted.
+
+12
+00:00:27,449 --> 00:00:31,514
+The fix is to add more one-way
+flaps, in a clever pattern.
+
+13
+00:00:31,864 --> 00:00:35,708
+Then the backward push gets turned
+around, instead of thrown away.
+
+14
+00:00:36,308 --> 00:00:40,413
+Using both halves of the wave is
+called full-wave rectification.
+
+15
+00:00:41,063 --> 00:00:45,654
+The first way uses a special
+transformer, with a wire from its middle.
+
+16
+00:00:46,004 --> 00:00:48,505
+That middle wire is called a centre tap.
+
+17
+00:00:48,855 --> 00:00:52,756
+It splits the coil into two
+equal halves, top and bottom.
+
+18
+00:00:53,106 --> 00:00:56,162
+Add two diodes, D one
+and D two, and a load.
+
+19
+00:00:56,512 --> 00:00:57,989
+Positive half cycle.
+
+20
+00:00:57,989 --> 00:01:00,913
+D one is forward biased, so it conducts.
+
+21
+00:01:01,263 --> 00:01:03,348
+D two is reverse biased.
+
+22
+00:01:03,348 --> 00:01:04,325
+It rests.
+
+23
+00:01:04,675 --> 00:01:06,173
+Negative half cycle.
+
+24
+00:01:06,173 --> 00:01:08,930
+Now D two conducts, and D one rests.
+
+25
+00:01:09,280 --> 00:01:10,304
+Watch the load.
+
+26
+00:01:10,304 --> 00:01:13,074
+Current goes through it
+the same way both times.
+
+27
+00:01:13,424 --> 00:01:15,598
+So every half cycle makes a hump.
+
+28
+00:01:15,598 --> 00:01:16,610
+No more gaps.
+
+29
+00:01:17,260 --> 00:01:19,705
+The second way needs no centre tap.
+
+30
+00:01:19,705 --> 00:01:21,210
+It uses four diodes.
+
+31
+00:01:21,560 --> 00:01:24,374
+They sit in a diamond, called a bridge.
+
+32
+00:01:24,724 --> 00:01:25,805
+Positive half.
+
+33
+00:01:25,805 --> 00:01:29,399
+D one and D three conduct,
+in series with the load.
+
+34
+00:01:29,749 --> 00:01:30,805
+Negative half.
+
+35
+00:01:30,805 --> 00:01:32,800
+D two and D four take over.
+
+36
+00:01:33,150 --> 00:01:36,283
+Either way, current crosses
+the load in the same direction.
+
+37
+00:01:36,633 --> 00:01:39,811
+Two diodes work at a time,
+while the other two rest.
+
+38
+00:01:40,461 --> 00:01:42,580
+Full-wave means no half is wasted.
+
+39
+00:01:42,580 --> 00:01:44,651
+Every half cycle becomes a hump.
+
+40
+00:01:45,451 --> 00:01:47,097
+So how much DC do we get now?
+
+41
+00:01:47,447 --> 00:01:49,211
+Call the input peak V m.
+
+42
+00:01:49,211 --> 00:01:51,520
+The humps now fill the whole time.
+
+43
+00:01:52,220 --> 00:01:54,417
+One hump averages two V m over pi.
+
+44
+00:01:55,117 --> 00:01:57,099
+No gaps to share it with.
+
+45
+00:01:57,099 --> 00:01:59,497
+So V d c is two V m over pi.
+
+46
+00:02:00,197 --> 00:02:03,357
+That is about zero point
+six three seven V m.
+
+47
+00:02:03,357 --> 00:02:05,182
+Double the half-wave value.
+
+48
+00:02:05,882 --> 00:02:08,025
+Current follows the same rule.
+
+49
+00:02:08,025 --> 00:02:10,366
+I d c equals two I m over pi.
+
+50
+00:02:11,016 --> 00:02:13,533
+Now compare the two circuits
+on the numbers exams love.
+
+51
+00:02:13,883 --> 00:02:15,620
+First, output frequency.
+
+52
+00:02:15,620 --> 00:02:18,411
+Two humps come out for every input cycle.
+
+53
+00:02:18,761 --> 00:02:22,654
+So fifty hertz in gives one hundred
+hertz out, for both circuits.
+
+54
+00:02:23,254 --> 00:02:25,192
+Next, peak inverse voltage.
+
+55
+00:02:25,542 --> 00:02:29,242
+In the centre-tap circuit, a
+resting diode faces two V m.
+
+56
+00:02:29,592 --> 00:02:33,051
+In the bridge, each resting
+diode faces only V m.
+
+57
+00:02:33,651 --> 00:02:37,878
+But the bridge current passes two
+diodes, so it loses two diode drops.
+
+58
+00:02:38,228 --> 00:02:42,632
+And the best efficiency doubles too,
+to eighty one point two percent.
+
+59
+00:02:43,282 --> 00:02:44,363
+Worked example.
+
+60
+00:02:44,363 --> 00:02:48,080
+A bridge rectifier gets twenty
+volts peak, at fifty hertz.
+
+61
+00:02:48,430 --> 00:02:50,123
+The load is one kilo-ohm.
+
+62
+00:02:50,123 --> 00:02:51,613
+The diodes are ideal.
+
+63
+00:02:51,963 --> 00:02:54,827
+V d c equals two times twenty over pi.
+
+64
+00:02:54,827 --> 00:02:57,063
+About twelve point seven volts.
+
+65
+00:02:57,663 --> 00:03:01,889
+I d c is twelve point seven
+volts over one thousand ohms.
+
+66
+00:03:02,489 --> 00:03:04,494
+That is about twelve
+point seven milliamperes.
+
+67
+00:03:05,094 --> 00:03:08,699
+Each resting diode must
+survive twenty volts backwards.
+
+68
+00:03:09,299 --> 00:03:12,114
+And the humps arrive one
+hundred times a second.
+
+69
+00:03:12,764 --> 00:03:14,225
+Now, the exam trap.
+
+70
+00:03:14,575 --> 00:03:18,817
+Many students say the centre-tap
+diode faces only V m backwards.
+
+71
+00:03:19,167 --> 00:03:20,203
+It does not.
+
+72
+00:03:20,203 --> 00:03:22,908
+It faces the whole coil, so two V m.
+
+73
+00:03:23,558 --> 00:03:24,708
+Where is this asked?
+
+74
+00:03:24,708 --> 00:03:26,452
+PUC, CBSE and ISC board papers.
+
+75
+00:03:26,802 --> 00:03:31,265
+NEET twenty twenty five asked which
+diode conducts at a given instant.
+
+76
+00:03:31,615 --> 00:03:35,305
+Expect to draw both circuits,
+compare them, or find the DC value.
+
+77
+00:03:35,955 --> 00:03:36,855
+Try this.
+
+78
+00:03:36,785 --> 00:03:40,743
+Thirty sine one hundred pi t
+volts feeds a bridge rectifier.
+
+79
+00:03:41,093 --> 00:03:42,876
+The load is two kilo-ohms.
+
+80
+00:03:42,876 --> 00:03:45,876
+Find the DC load current
+and output frequency.
+
+81
+00:03:51,476 --> 00:03:52,376
+C.
+
+82
+00:03:51,817 --> 00:03:54,879
+Nine point five five milliamperes,
+at one hundred hertz.
+
+83
+00:03:55,229 --> 00:03:57,289
+The peak is thirty volts.
+
+84
+00:03:57,289 --> 00:03:59,613
+So V d c is sixty over pi.
+
+85
+00:03:59,963 --> 00:04:02,384
+That is about nineteen point one volts.
+
+86
+00:04:02,734 --> 00:04:04,430
+Divide by two thousand ohms.
+
+87
+00:04:04,430 --> 00:04:06,970
+That gives nine point
+five five milliamperes.
+
+88
+00:04:07,320 --> 00:04:09,141
+The input is fifty hertz.
+
+89
+00:04:09,141 --> 00:04:11,893
+Full-wave doubles it to one hundred hertz.
+
+90
+00:04:12,543 --> 00:04:14,089
+Screenshot this card.
+
+91
+00:04:17,289 --> 00:04:19,016
+Next, the capacitor filter.
+
+92
+00:04:19,016 --> 00:04:21,677
+How do we smooth these
+humps into steady DC?

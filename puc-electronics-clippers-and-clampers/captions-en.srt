@@ -1,0 +1,345 @@
+1
+00:00:00,450 --> 00:00:02,523
+Aarav shouts into a cheap microphone.
+
+2
+00:00:02,823 --> 00:00:06,224
+On the screen, the tops of
+his voice wave look cut flat.
+
+3
+00:00:06,524 --> 00:00:07,424
+Who cut them?
+
+4
+00:00:07,277 --> 00:00:08,997
+Circuits can do this on purpose too.
+
+5
+00:00:09,497 --> 00:00:11,657
+Two simple diode circuits change a wave.
+
+6
+00:00:11,957 --> 00:00:15,942
+A clipper cuts off the part of
+a wave above or below a level.
+
+7
+00:00:16,242 --> 00:00:18,909
+Think of a low ceiling over a jumping kid.
+
+8
+00:00:18,909 --> 00:00:20,755
+The high jumps get flattened.
+
+9
+00:00:21,055 --> 00:00:25,239
+A clamper lifts or lowers the whole
+wave, without changing its shape.
+
+10
+00:00:25,539 --> 00:00:28,185
+Think of putting the
+trampoline on a stage.
+
+11
+00:00:28,185 --> 00:00:29,876
+Same jumps, higher floor.
+
+12
+00:00:30,476 --> 00:00:32,715
+Let's build a clipper on the breadboard.
+
+13
+00:00:33,015 --> 00:00:37,465
+An AC source, a resistor in series,
+and a diode across the output.
+
+14
+00:00:37,815 --> 00:00:41,483
+The scope shows the input in
+grey and the output in amber.
+
+15
+00:00:41,833 --> 00:00:45,132
+In the negative half, the
+diode is reverse biased.
+
+16
+00:00:45,132 --> 00:00:47,088
+It acts like an open switch.
+
+17
+00:00:47,438 --> 00:00:49,742
+So the output simply follows the input.
+
+18
+00:00:50,092 --> 00:00:54,329
+In the positive half, the input
+crosses zero point seven volts.
+
+19
+00:00:54,329 --> 00:00:55,796
+The diode turns on.
+
+20
+00:00:56,146 --> 00:01:00,214
+Now the diode holds the output
+at about zero point seven volts.
+
+21
+00:01:00,564 --> 00:01:04,017
+The extra voltage drops
+across the resistor instead.
+
+22
+00:01:04,367 --> 00:01:05,790
+The top is cut off.
+
+23
+00:01:05,790 --> 00:01:07,934
+This is a positive shunt clipper.
+
+24
+00:01:08,534 --> 00:01:11,878
+Flip the diode, and it cuts
+the negative half instead.
+
+25
+00:01:12,478 --> 00:01:14,315
+Want a different cut level?
+
+26
+00:01:14,315 --> 00:01:17,254
+Add a small battery in
+series with the diode.
+
+27
+00:01:17,604 --> 00:01:21,930
+Now the diode turns on only when the
+input beats the battery plus zero
+
+28
+00:01:21,930 --> 00:01:22,886
+point seven.
+
+29
+00:01:23,586 --> 00:01:27,281
+So the clip level is VB
+plus zero point seven volts.
+
+30
+00:01:27,981 --> 00:01:32,526
+With a three volt battery, the wave
+is cut at three point seven volts.
+
+31
+00:01:33,126 --> 00:01:36,735
+Clippers protect circuits from
+sudden spikes, and they shape waves.
+
+32
+00:01:37,335 --> 00:01:38,532
+Now the clamper.
+
+33
+00:01:38,532 --> 00:01:41,589
+It needs a capacitor,
+a diode and a resistor.
+
+34
+00:01:41,889 --> 00:01:43,936
+The capacitor sits in series.
+
+35
+00:01:43,936 --> 00:01:46,250
+The diode sits across the output.
+
+36
+00:01:46,600 --> 00:01:50,049
+In the first negative
+half, the diode conducts.
+
+37
+00:01:50,049 --> 00:01:53,065
+The capacitor charges to the peak, V m.
+
+38
+00:01:53,415 --> 00:01:57,916
+After that, the capacitor acts
+like a small battery of V m volts.
+
+39
+00:01:58,266 --> 00:02:01,074
+It adds V m to every point of the input.
+
+40
+00:02:01,424 --> 00:02:03,366
+Watch the output trace lift.
+
+41
+00:02:03,366 --> 00:02:05,725
+Its lowest point now sits at zero.
+
+42
+00:02:06,325 --> 00:02:08,825
+The peak to peak size stays the same.
+
+43
+00:02:08,825 --> 00:02:10,317
+Only the level moves.
+
+44
+00:02:10,917 --> 00:02:12,812
+This is a positive clamper.
+
+45
+00:02:12,812 --> 00:02:15,375
+Flip the diode for a negative clamper.
+
+46
+00:02:15,975 --> 00:02:20,883
+RC must be much larger than the
+period, so the capacitor stays charged.
+
+47
+00:02:21,483 --> 00:02:23,596
+Clampers are also called DC restorers.
+
+48
+00:02:24,196 --> 00:02:25,862
+A clipper cuts the wave.
+
+49
+00:02:25,862 --> 00:02:27,576
+A clamper lifts the wave.
+
+50
+00:02:28,376 --> 00:02:29,479
+Worked example.
+
+51
+00:02:29,479 --> 00:02:33,537
+A sine wave of peak five volts
+feeds an ideal positive clamper.
+
+52
+00:02:33,887 --> 00:02:37,310
+The capacitor charges
+to the peak, five volts.
+
+53
+00:02:37,660 --> 00:02:39,741
+Output equals input plus five.
+
+54
+00:02:39,741 --> 00:02:42,878
+The lowest point goes
+from minus five to zero.
+
+55
+00:02:43,578 --> 00:02:46,238
+The highest point goes from five to ten.
+
+56
+00:02:46,238 --> 00:02:49,151
+So the output swings
+from zero to ten volts.
+
+57
+00:02:49,801 --> 00:02:51,262
+Now, the exam trap.
+
+58
+00:02:51,612 --> 00:02:54,644
+Many students think a clamper
+changes the shape of the wave.
+
+59
+00:02:54,994 --> 00:02:55,910
+It does not.
+
+60
+00:02:55,910 --> 00:02:57,831
+A clamper only shifts the wave.
+
+61
+00:02:57,831 --> 00:02:59,565
+A clipper changes the shape.
+
+62
+00:03:00,215 --> 00:03:01,348
+Where is it asked?
+
+63
+00:03:01,348 --> 00:03:04,707
+PUC board papers ask you to draw
+the circuit and its waveforms.
+
+64
+00:03:05,057 --> 00:03:09,286
+JEE Main asks for clipped diode
+outputs, as in June twenty twenty two.
+
+65
+00:03:09,936 --> 00:03:10,836
+Try this.
+
+66
+00:03:10,700 --> 00:03:13,729
+A ten volt peak sine wave
+feeds a shunt clipper.
+
+67
+00:03:13,729 --> 00:03:17,139
+A silicon diode is in series
+with a three volt battery.
+
+68
+00:03:17,139 --> 00:03:18,909
+What are the output limits?
+
+69
+00:03:24,309 --> 00:03:25,209
+B.
+
+70
+00:03:24,692 --> 00:03:27,718
+Plus three point seven
+volts and minus ten volts.
+
+71
+00:03:28,068 --> 00:03:32,222
+The diode turns on when the output
+tries to rise above three plus zero
+
+72
+00:03:32,222 --> 00:03:33,139
+point seven.
+
+73
+00:03:33,489 --> 00:03:36,358
+So the top is held at
+three point seven volts.
+
+74
+00:03:36,708 --> 00:03:39,327
+In the negative half, the diode is off.
+
+75
+00:03:39,327 --> 00:03:42,286
+The output follows the
+input down to minus ten.
+
+76
+00:03:42,936 --> 00:03:44,482
+Screenshot this card.
+
+77
+00:03:47,682 --> 00:03:50,226
+Next, the bipolar junction transistor.
+
+78
+00:03:50,226 --> 00:03:53,359
+How do three thin layers
+control a big current?
