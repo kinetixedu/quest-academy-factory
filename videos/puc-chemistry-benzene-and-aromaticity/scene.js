@@ -197,7 +197,7 @@ function drawD(t) {
       G(`<rect x="${x - 60}" y="320" width="120" height="110" rx="14" fill="${tint(EC, 0.1)}" stroke="${EC}" stroke-width="3"/>` + T(x, 392, '' + (4 * n + 2), { fs: 44, c: EC, ls: 0 }), io(t, g1 + n * 0.3, 0.3)); });
     b += G(T(392, 500, 'π ELECTRONS: 2, 6, 10, 14 ...', { fs: 20, c: EC }), io(t, g1 + 1.3, 0.4)); s += G(b, f(3)); }
   if (f(4) > 0.01) { const u = io(t, tLk[4] + 0.3, 1.5); let b = poly(392, 290, 140, 6, KI, { w: 6 });
-    [0, 2, 4].forEach((k, j) => { const p = rp(392, 290, 112, k), q = rp(392, 290, 112, k + 1); const mx = (p[0] + q[0]) / 2, my = (p[1] + q[1]) / 2; b += G(dot(mx - (q[1] - p[1]) * 0.12, my + (q[0] - p[0]) * 0.12, 9, EC) + dot(mx + (q[1] - p[1]) * 0.12, my - (q[0] - p[0]) * 0.12, 9, EC), M.clamp(u * 3 - j)); });
+    [0, 2, 4].forEach((k, j) => { const p = rp(392, 290, 80, k), q = rp(392, 290, 80, k + 1); b += G(dot(lerp(p[0], q[0], 0.3), lerp(p[1], q[1], 0.3), 9, EC) + dot(lerp(p[0], q[0], 0.7), lerp(p[1], q[1], 0.7), 9, EC), M.clamp(u * 3 - j)); });
     b += T(392, 300, '6', { fs: 54, c: EC, ls: 0 }) + G(T(392, 520, '6 = 4(1) + 2 · AROMATIC ✓', { fs: 24, c: C.ok }), io(t, wt('D6', 'Aromatic') - 0.1, 0.4)); s += G(b, f(4)); }
   const g = io(t, tD7 - 0.2, 0.4);
   if (g > 0.01) { const sq = io(t, wt('D7', 'four') - 0.1, 0.4);
@@ -247,10 +247,10 @@ const tAd = AD.map(a => T0(a[2]));
 function subRing(t, lab, col, u, rep, tag2) { // ring with a group that leaves and is replaced by H
   const cx = 300, cy = 300, R = 100, p = rp(cx, cy, R, 1), q = rp(cx, cy, R + 70, 1);
   let s = poly(cx, cy, R, 6, [1, 1, 1, 1, 1, 1], { circ: 1 });
-  const gx = lerp(q[0] + 30, q[0] + 200, u), gy = lerp(q[1], q[1] - 120, u);
+  const gx = lerp(q[0] + 30, q[0] + 150, u), gy = lerp(q[1], q[1] - 40, u);
   s += G(`<line x1="${f1(p[0])}" y1="${f1(p[1])}" x2="${f1(q[0])}" y2="${f1(q[1])}" stroke="${C.ink2}" stroke-width="5"/>`, 1 - u) + G(`<rect x="${f1(gx - 30)}" y="${f1(gy - 30)}" width="${lab.length * 22 + 30}" height="60" rx="14" fill="${tint(col, 0.14)}" stroke="${col}" stroke-width="3"/>` + T(gx - 15 + (lab.length * 22 + 30) / 2, gy + 9, lab, { fs: 26, c: col, ls: 0 }), 1 - u * 0.3);
   s += G(`<line x1="${f1(p[0])}" y1="${f1(p[1])}" x2="${f1(q[0] - 30)}" y2="${f1(q[1] + 16)}" stroke="${C.ink2}" stroke-width="4"/>` + atomC(q[0] - 30, q[1] + 16, 16, 'H', HC, 15), u);
-  s += G(T(gx + 60, gy - 50, rep, { fs: 22, c: col, ls: 0 }), u) + T(392, 540, tag2, { fs: 20, c: C.ink, ls: 0.6 });
+  s += G(T(gx + 50, gy + 70, rep, { fs: 22, c: col, ls: 0 }), u) + T(392, 540, tag2, { fs: 20, c: C.ink, ls: 0.6 });
   return s;
 }
 function drawC(t) {

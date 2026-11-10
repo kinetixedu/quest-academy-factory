@@ -163,7 +163,7 @@ const fc = PUC.fcard($('#sF'), { x: 300, y: 252, w: 1320, h: 500, title: 'Recap 
 const YQ = ['What is the difference between homolytic and heterolytic fission?', 'Why is a tertiary carbocation more stable than a primary one?', 'Is water a nucleophile or an electrophile, and why?'];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="nn">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
-const nx = PUC.next($('#sF'), { label: 'NEXT · EP 84', topic: 'How does one Cl atom pull along a whole chain? Inductive and Electromeric Effects', y: 764 });
+const nx = PUC.next($('#sF'), { label: 'NEXT · EP 84', topic: 'One Cl pulling a whole chain? Inductive and Electromeric Effects', y: 764 });
 
 /* ---------- helpers ---------- */
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
