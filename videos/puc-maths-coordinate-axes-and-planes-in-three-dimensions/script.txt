@@ -1,0 +1,44 @@
+H1|0.4|A ceiling fan hangs in Diya's room. How would you tell a friend exactly where it is?
+H2|0.45|Two numbers can find a spot on the floor: so far from one wall, so far from the other. But the fan is up in the air.
+H3|0.35|Diya wondered about this in her room tonight.
+H4|0.5|Floor numbers are not enough. So what is missing?
+H5|0.65|A third number: how high. Welcome to three dimensional geometry.
+G1|0.4|Start at one corner of the room. Three edges meet there, each at right angles to the other two.
+G2|0.4|Turn the edges into number lines. The x axis runs along one wall, the y axis along the other, and the z axis goes straight up.
+G3|0.4|The corner where they meet is the origin, O.
+G4|0.65|Each pair of axes makes a flat sheet, called a coordinate plane. The floor is the X Y plane. The two walls are the Y Z plane and the Z X plane.
+P1|0.4|Now find the fan. Start at the origin.
+P2|0.4|Walk three steps along x, then four steps along y. You are now right under the fan.
+P3|0.6|Now climb two steps up z, and you reach the fan. So the fan is at the point three, four, two.
+P4|0.75|NCERT puts it like this. x is the distance of the point from the Y Z plane. y is its distance from the Z X plane. And z is its distance from the X Y plane.
+S1|0.4|Side by side. On an axis, two of the numbers are zero. A point on the x axis looks like x, zero, zero.
+S2|0.6|On a plane, only one number is zero. Every point on the floor, the X Y plane, has z equal to zero. And the origin is zero, zero, zero.
+S3|3.2|Your turn. Where is the point zero, five, three? On the Y Z plane, or on the y axis? Pause and decide.
+S4|0.65|On the Y Z plane! Only x is zero. For the y axis, x and z would both have to be zero.
+T1|0.7|Remember this. Every point in space needs three numbers, x, y and z, one for each direction.
+O1|0.4|The axes also run backwards, past the origin, into negative numbers.
+O2|0.4|So the three planes cut all of space into eight parts, called octants.
+O3|0.4|The signs tell you which octant. In the first octant, x, y and z are all positive.
+O4|0.4|Make z negative, and the point drops below the floor, into the fifth octant.
+O5|0.65|Make all three negative, and you are in the seventh octant.
+W1|0.35|Now, one worked example.
+W2|0.5|Take the point P, three, minus four, five. Name its octant, find its distance from each plane, and its foot on the floor.
+W3|0.75|Step one. The signs are plus, minus, plus. That is the fourth octant.
+W4|0.75|Step two. Distance from the Y Z plane is three. From the Z X plane, four. From the X Y plane, five.
+W5|0.75|Step three. Drop straight down to the X Y plane. Keep x and y, and make z zero. The foot is three, minus four, zero.
+W6|0.65|So one point gives you three distances and a shadow on the floor.
+X1|0.35|Now, the exam trap.
+X2|0.4|For the point minus three, two, five, many students say its distance from the Y Z plane is minus three.
+X3|0.65|But a distance is never negative. It is three. The minus sign only tells you which side of the plane the point is on.
+J1|0.6|Where is this asked? We found no past paper question on just this idea, so no chip lights. The type: name the octant, or find a foot on an axis or a plane.
+Q1|5.4|Exam level now. A point P, a, b, c, lies in the fourth octant. Its distances from the X Y, Y Z and Z X planes are six, two and three. Find a plus b plus c. Pause and solve.
+A1|0.5|The answer is B. Five.
+A2|0.5|Distance from the Y Z plane is the size of x, so a is two. Distance from the X Y plane is the size of z, so c is six.
+A3|0.5|Distance from the Z X plane is the size of y, which is three. In the fourth octant, y is negative, so b is minus three.
+A4|0.6|Two, minus three and six add up to five.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. Which number is zero for every point on the Z X plane?
+Y3|0.9|Two. Which octant holds the point minus two, five, minus one?
+Y4|1.1|Three. What is the foot of the point four, minus one, six on the X Y plane?
+N1|0.3|Next time: a stick fits corner to corner inside a box. How long is it? The distance formula in three dimensions.
