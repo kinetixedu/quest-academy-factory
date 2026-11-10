@@ -125,7 +125,7 @@ $('#roB').innerHTML = `<span class="k" style="color:${PD}">p<sub>A</sub></span><
   <span class="k" style="color:${PL}">p<sub>B</sub></span><span class="v" id="r_pB" style="color:${PL}">0</span><span class="u">kg m/s</span>
   <span class="k" style="color:${PC}">P</span><span class="v" id="r_P" style="color:${PC}">0</span><span class="u">kg m/s</span>`;
 const gs = $('#grS'), g = PUC.graph(gs, { x: 110, y: 72, w: 560, h: 150, xmax: RD, ymin: -150, ymax: 150, xt: [0, 1, 2, 3, 4, 5], yt: [-120, 0, 120], xl: 't (s)' });
-txt(gs, 122, 78, 'p (kg m/s)', { 'font-size': 18 });
+txt(gs, 122, 78, 'p (kg m/s)', { 'font-size': 18 }); attr(g.xlab, 'x', 696); attr(g.xlab, 'text-anchor', 'start');
 const gT = mk(gs, 'path', { d: '', fill: 'none', stroke: PC, 'stroke-width': 7, 'stroke-linecap': 'round', opacity: 0.85 }), gA = mk(gs, 'path', { d: '', fill: 'none', stroke: PD, 'stroke-width': 4 }), gB = mk(gs, 'path', { d: '', fill: 'none', stroke: PL, 'stroke-width': 4, 'stroke-dasharray': '7 5' });
 const dT = g.dot(PC, 10), dA = g.dot(PD, 8), dB = g.dot(PL, 8);
 $('#leg').innerHTML = [[PD, '', 'A'], [PL, '7 5', 'B'], [PC, '', 'total P']].map(([c, da, n], i) => `<span><svg width="34" height="10"><line x1="2" y1="5" x2="32" y2="5" stroke="${c}" stroke-width="${i === 2 ? 6 : 4}" stroke-dasharray="${da}" stroke-linecap="round"/></svg>${n}</span>`).join('');
@@ -294,8 +294,8 @@ M.on(t => {
     // velocity arrows (blue) from the waist
     const vy = FY - 60;
     aVA.set(k.xA - 18, vy, k.xA - 18 + PVX * k.vA, vy); aVB.set(k.xB + 18, vy, k.xB + 18 + PVX * k.vB, vy);
-    attr(lVA, 'x', (k.xA - 18 + PVX * k.vA / 2).toFixed(1)); attr(lVA, 'y', vy + 30); const far = k.xB - k.xA > 170 && !S.replay ? 1 : 0; M.setT(lVA, Math.abs(k.vA).toFixed(1) + ' m/s'); lVA.style.opacity = Math.abs(k.vA) > 0.6 ? far : 0; aVA.g.style.opacity = S.replay ? 0 : 1; aVB.g.style.opacity = S.replay ? 0 : 1;
-    attr(lVB, 'x', (k.xB + 18 + PVX * k.vB / 2).toFixed(1)); attr(lVB, 'y', vy + 30); M.setT(lVB, Math.abs(k.vB).toFixed(1) + ' m/s'); lVB.style.opacity = Math.abs(k.vB) > 0.6 ? far : 0;
+    attr(lVA, 'x', (k.xA - 6).toFixed(1)); attr(lVA, 'y', FY - 166); attr(lVA, 'text-anchor', 'end'); const far = k.xB - k.xA > 170 && !S.replay ? 1 : 0; M.setT(lVA, Math.abs(k.vA).toFixed(1) + ' m/s'); lVA.style.opacity = Math.abs(k.vA) > 0.6 ? far : 0; aVA.g.style.opacity = S.replay ? 0 : 1; aVB.g.style.opacity = S.replay ? 0 : 1;
+    attr(lVB, 'x', (k.xB + 6).toFixed(1)); attr(lVB, 'y', FY - 166); attr(lVB, 'text-anchor', 'start'); M.setT(lVB, Math.abs(k.vB).toFixed(1) + ' m/s'); lVB.style.opacity = Math.abs(k.vB) > 0.6 ? far : 0;
     // frozen mid-push: equal and opposite forces at the hands, equal and opposite momenta
     const fz = S.r === 0 && S.replay ? 1 - M.io((t - tRes - 0.5) / 0.3) : 0, hx = (k.xA + k.xB) / 2, hy = FY - 74;
     const uFB = fz * M.o3((t - wt('S7', 'pushes') + 0.1) / 0.4), uFA = fz * M.o3((t - wt('S7', 'pushes', 1) + 0.1) / 0.4);
