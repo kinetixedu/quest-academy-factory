@@ -1,0 +1,477 @@
+1
+00:00:00,450 --> 00:00:03,017
+Aarav picks a colour in a
+drawing app on his phone.
+
+2
+00:00:03,317 --> 00:00:06,920
+The colour code reads FF,
+eight eight, zero zero.
+
+3
+00:00:07,220 --> 00:00:08,895
+Letters inside a number?
+
+4
+00:00:08,895 --> 00:00:12,313
+And his phone only knows
+two digits, zero and one.
+
+5
+00:00:12,813 --> 00:00:14,498
+Let's start with how we count.
+
+6
+00:00:14,498 --> 00:00:16,435
+We use ten digits, zero to nine.
+
+7
+00:00:16,785 --> 00:00:18,943
+After nine, we run out of digits.
+
+8
+00:00:18,943 --> 00:00:20,504
+So we write one, zero.
+
+9
+00:00:20,504 --> 00:00:21,404
+Ten.
+
+10
+00:00:21,309 --> 00:00:24,698
+The number of digits a system
+uses is called its base.
+
+11
+00:00:24,698 --> 00:00:25,956
+Ours is base ten.
+
+12
+00:00:26,606 --> 00:00:28,487
+Now think of a light switch.
+
+13
+00:00:28,487 --> 00:00:30,078
+It has only two states.
+
+14
+00:00:30,428 --> 00:00:31,569
+Off, or on.
+
+15
+00:00:31,569 --> 00:00:32,817
+Zero, or one.
+
+16
+00:00:33,167 --> 00:00:36,038
+A wire in a computer works the same way.
+
+17
+00:00:36,038 --> 00:00:37,572
+Low voltage is zero.
+
+18
+00:00:37,922 --> 00:00:39,466
+High voltage is one.
+
+19
+00:00:39,816 --> 00:00:42,048
+So computers count in base two.
+
+20
+00:00:42,048 --> 00:00:43,960
+This is the binary system.
+
+21
+00:00:44,610 --> 00:00:46,805
+One binary digit is called a bit.
+
+22
+00:00:46,805 --> 00:00:48,801
+Bit is short for binary digit.
+
+23
+00:00:49,451 --> 00:00:51,238
+Let's count on the breadboard.
+
+24
+00:00:51,238 --> 00:00:53,160
+Four switches, and four lamps.
+
+25
+00:00:53,510 --> 00:00:55,094
+Each switch is one bit.
+
+26
+00:00:55,094 --> 00:00:56,101
+On means one.
+
+27
+00:00:56,101 --> 00:00:57,200
+Off means zero.
+
+28
+00:00:57,550 --> 00:01:01,378
+In decimal, each place is worth
+ten times the place on its right.
+
+29
+00:01:01,728 --> 00:01:04,198
+In binary, each place is worth two times.
+
+30
+00:01:04,198 --> 00:01:05,819
+One, two, four, eight.
+
+31
+00:01:06,169 --> 00:01:07,886
+Switch on the first bit.
+
+32
+00:01:07,886 --> 00:01:09,200
+The value is one.
+
+33
+00:01:09,550 --> 00:01:11,295
+Now the two and the one.
+
+34
+00:01:11,295 --> 00:01:12,886
+Two plus one is three.
+
+35
+00:01:13,236 --> 00:01:14,910
+Now eight, two and one.
+
+36
+00:01:14,910 --> 00:01:17,114
+Eight plus two plus one is eleven.
+
+37
+00:01:17,464 --> 00:01:20,786
+The scope shows the same
+bits as high and low pulses.
+
+38
+00:01:21,136 --> 00:01:22,965
+All four on gives fifteen.
+
+39
+00:01:22,965 --> 00:01:25,662
+So four bits count from zero to fifteen.
+
+40
+00:01:26,312 --> 00:01:28,506
+The left bit has the biggest weight.
+
+41
+00:01:28,506 --> 00:01:30,424
+It is the most significant bit.
+
+42
+00:01:30,774 --> 00:01:33,000
+The right bit has the smallest weight.
+
+43
+00:01:33,000 --> 00:01:34,915
+It is the least significant bit.
+
+44
+00:01:35,565 --> 00:01:36,917
+Now the other way.
+
+45
+00:01:36,917 --> 00:01:39,318
+How do we turn thirteen into binary?
+
+46
+00:01:39,668 --> 00:01:41,719
+Divide by two again and again.
+
+47
+00:01:41,719 --> 00:01:43,459
+Write down each remainder.
+
+48
+00:01:44,159 --> 00:01:47,582
+Thirteen divided by two
+is six, remainder one.
+
+49
+00:01:48,282 --> 00:01:51,691
+Six divided by two is
+three, remainder zero.
+
+50
+00:01:52,391 --> 00:01:55,631
+Three divided by two
+is one, remainder one.
+
+51
+00:01:56,331 --> 00:01:59,449
+One divided by two is zero, remainder one.
+
+52
+00:01:59,449 --> 00:02:00,598
+Stop at zero.
+
+53
+00:02:01,298 --> 00:02:03,495
+Now read the remainders
+from the bottom up.
+
+54
+00:02:03,495 --> 00:02:04,861
+One, one, zero, one.
+
+55
+00:02:05,561 --> 00:02:06,461
+Check it.
+
+56
+00:02:06,253 --> 00:02:08,380
+Eight plus four plus one is thirteen.
+
+57
+00:02:09,030 --> 00:02:11,670
+Long rows of ones and
+zeros are hard to read.
+
+58
+00:02:11,670 --> 00:02:12,938
+So we use shortcuts.
+
+59
+00:02:13,288 --> 00:02:14,656
+Octal is base eight.
+
+60
+00:02:14,656 --> 00:02:16,785
+It uses the digits zero to seven.
+
+61
+00:02:17,135 --> 00:02:19,440
+Eight is two times two times two.
+
+62
+00:02:19,440 --> 00:02:21,895
+So one octal digit holds three bits.
+
+63
+00:02:22,545 --> 00:02:24,506
+Hexadecimal is base sixteen.
+
+64
+00:02:24,506 --> 00:02:26,260
+It needs sixteen digits.
+
+65
+00:02:26,610 --> 00:02:28,794
+After nine, it borrows letters.
+
+66
+00:02:28,794 --> 00:02:31,415
+A is ten, B is eleven, and so on.
+
+67
+00:02:31,765 --> 00:02:32,829
+F is fifteen.
+
+68
+00:02:32,829 --> 00:02:35,115
+Sixteen is two to the power four.
+
+69
+00:02:35,465 --> 00:02:37,695
+So one hex digit holds four bits.
+
+70
+00:02:38,345 --> 00:02:39,911
+Four bits make a nibble.
+
+71
+00:02:39,911 --> 00:02:41,431
+Eight bits make a byte.
+
+72
+00:02:41,781 --> 00:02:45,535
+So FF is one one one one, one one one one.
+
+73
+00:02:45,885 --> 00:02:47,922
+That is two hundred and fifty five.
+
+74
+00:02:48,272 --> 00:02:51,056
+That is why the colour code has letters.
+
+75
+00:02:51,056 --> 00:02:53,371
+Each pair is one byte, in hex.
+
+76
+00:02:54,021 --> 00:02:55,798
+Two digits can count anything.
+
+77
+00:02:55,798 --> 00:02:57,627
+Groups make them easy to read.
+
+78
+00:02:58,427 --> 00:02:59,544
+Worked example.
+
+79
+00:02:59,544 --> 00:03:03,394
+Write one hundred and fifty
+six in binary, octal and hex.
+
+80
+00:03:03,744 --> 00:03:07,253
+Divide by two again and again,
+and read the remainders upward.
+
+81
+00:03:07,603 --> 00:03:11,147
+We get one zero zero
+one, one one zero zero.
+
+82
+00:03:11,847 --> 00:03:13,106
+Check the weights.
+
+83
+00:03:13,106 --> 00:03:16,696
+One twenty eight, plus
+sixteen, plus eight, plus four.
+
+84
+00:03:16,696 --> 00:03:17,766
+One fifty six.
+
+85
+00:03:18,466 --> 00:03:20,994
+For octal, group three
+bits from the right.
+
+86
+00:03:20,994 --> 00:03:22,250
+Two, three, four.
+
+87
+00:03:22,950 --> 00:03:25,614
+For hex, group four bits from the right.
+
+88
+00:03:25,614 --> 00:03:26,677
+Nine, and C.
+
+89
+00:03:27,377 --> 00:03:31,992
+So one fifty six is two three
+four in octal, and nine C in hex.
+
+90
+00:03:32,642 --> 00:03:34,104
+Now, the exam trap.
+
+91
+00:03:34,454 --> 00:03:36,743
+Many students read the
+remainders from top to bottom.
+
+92
+00:03:37,093 --> 00:03:39,966
+For thirteen, that gives one zero one one.
+
+93
+00:03:39,966 --> 00:03:42,025
+That is eleven, not thirteen.
+
+94
+00:03:42,675 --> 00:03:44,483
+Always read the remainders upward.
+
+95
+00:03:44,483 --> 00:03:46,758
+And always group bits from the right side.
+
+96
+00:03:47,408 --> 00:03:49,031
+Where is this asked?
+
+97
+00:03:49,031 --> 00:03:50,895
+In PUC board papers.
+
+98
+00:03:51,245 --> 00:03:54,938
+And in ISC Computer
+Science, in class eleven.
+
+99
+00:03:55,288 --> 00:03:59,722
+Expect quick conversions between
+binary, octal, decimal and hex.
+
+100
+00:04:00,372 --> 00:04:01,272
+Try this.
+
+101
+00:04:01,208 --> 00:04:04,981
+What is the hexadecimal number
+two F, written in octal?
+
+102
+00:04:10,381 --> 00:04:11,281
+C.
+
+103
+00:04:10,784 --> 00:04:11,690
+Five seven.
+
+104
+00:04:12,040 --> 00:04:14,227
+Write each hex digit as four bits.
+
+105
+00:04:14,577 --> 00:04:16,634
+Two is zero zero one zero.
+
+106
+00:04:16,634 --> 00:04:18,421
+F is one one one one.
+
+107
+00:04:18,771 --> 00:04:21,165
+Now regroup in threes from the right.
+
+108
+00:04:21,165 --> 00:04:23,323
+One zero one, and one one one.
+
+109
+00:04:23,673 --> 00:04:25,198
+That is five and seven.
+
+110
+00:04:25,548 --> 00:04:28,677
+Check: five eights plus
+seven is forty seven.
+
+111
+00:04:28,677 --> 00:04:30,566
+Two F is forty seven too.
+
+112
+00:04:31,216 --> 00:04:32,763
+Screenshot this card.
+
+113
+00:04:35,963 --> 00:04:37,296
+Next, logic gates.
+
+114
+00:04:37,296 --> 00:04:39,515
+How does a chip decide yes or no?

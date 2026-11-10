@@ -1,0 +1,476 @@
+1
+00:00:00,450 --> 00:00:02,345
+Aarav climbs the stairs at home.
+
+2
+00:00:02,345 --> 00:00:04,104
+One light, but two switches.
+
+3
+00:00:04,404 --> 00:00:06,446
+He flips the switch at the bottom.
+
+4
+00:00:06,446 --> 00:00:07,686
+The light comes on.
+
+5
+00:00:07,986 --> 00:00:10,335
+At the top, he flips the other switch.
+
+6
+00:00:10,335 --> 00:00:11,575
+The light goes off.
+
+7
+00:00:11,875 --> 00:00:13,577
+Either switch can change it.
+
+8
+00:00:13,577 --> 00:00:15,594
+Which logic gate thinks like this?
+
+9
+00:00:16,094 --> 00:00:17,857
+Meet the XOR gate.
+
+10
+00:00:17,857 --> 00:00:20,167
+Its full name is exclusive OR.
+
+11
+00:00:20,517 --> 00:00:23,952
+Exclusive means one or
+the other, but not both.
+
+12
+00:00:24,302 --> 00:00:27,221
+So the output is one when
+the two inputs are different.
+
+13
+00:00:27,571 --> 00:00:31,583
+The symbol is the OR shape, with
+one extra curved line at the inputs.
+
+14
+00:00:32,233 --> 00:00:35,104
+We write Y equals A, circle plus, B.
+
+15
+00:00:35,104 --> 00:00:37,334
+The circled plus means XOR.
+
+16
+00:00:37,984 --> 00:00:40,595
+Let's fill its truth
+table on the breadboard.
+
+17
+00:00:40,945 --> 00:00:42,019
+Both inputs zero.
+
+18
+00:00:42,019 --> 00:00:43,185
+They are the same.
+
+19
+00:00:43,185 --> 00:00:44,393
+The output is zero.
+
+20
+00:00:44,743 --> 00:00:45,777
+Zero and one.
+
+21
+00:00:45,777 --> 00:00:46,677
+Different.
+
+22
+00:00:46,552 --> 00:00:47,452
+One.
+
+23
+00:00:47,040 --> 00:00:48,073
+One and zero.
+
+24
+00:00:48,073 --> 00:00:48,973
+Different.
+
+25
+00:00:48,848 --> 00:00:49,748
+One.
+
+26
+00:00:49,686 --> 00:00:50,805
+Both inputs one.
+
+27
+00:00:50,805 --> 00:00:51,879
+The same again.
+
+28
+00:00:51,879 --> 00:00:53,189
+The output is zero.
+
+29
+00:00:53,539 --> 00:00:56,382
+So XOR is one only when the inputs differ.
+
+30
+00:00:57,032 --> 00:00:58,347
+Compare it with OR.
+
+31
+00:00:58,347 --> 00:01:00,467
+They differ only in the last row.
+
+32
+00:01:01,117 --> 00:01:04,416
+On the scope, Y goes high
+only when A and B disagree.
+
+33
+00:01:05,066 --> 00:01:07,919
+Now its partner, the XNOR gate.
+
+34
+00:01:07,919 --> 00:01:09,098
+Exclusive NOR.
+
+35
+00:01:09,448 --> 00:01:12,395
+It is an XOR gate with
+a NOT gate after it.
+
+36
+00:01:12,745 --> 00:01:15,316
+So its symbol gets a small
+bubble at the output.
+
+37
+00:01:15,666 --> 00:01:16,566
+Both zero.
+
+38
+00:01:16,475 --> 00:01:17,375
+One.
+
+39
+00:01:16,949 --> 00:01:18,084
+Different inputs.
+
+40
+00:01:18,084 --> 00:01:18,984
+Zero.
+
+41
+00:01:18,604 --> 00:01:19,504
+Both one.
+
+42
+00:01:19,367 --> 00:01:20,267
+One.
+
+43
+00:01:20,191 --> 00:01:23,215
+So XNOR is one when the
+inputs are the same.
+
+44
+00:01:23,865 --> 00:01:25,713
+It is a sameness checker.
+
+45
+00:01:25,713 --> 00:01:28,762
+We write AXORB, with a bar on top.
+
+46
+00:01:29,412 --> 00:01:33,071
+Now, the XOR formula,
+built from basic gates.
+
+47
+00:01:33,421 --> 00:01:35,390
+A one and B zero gives one.
+
+48
+00:01:35,390 --> 00:01:37,261
+We write that as AB bar.
+
+49
+00:01:37,611 --> 00:01:40,038
+A zero and B one also gives one.
+
+50
+00:01:40,038 --> 00:01:41,444
+That is A bar B.
+
+51
+00:01:41,794 --> 00:01:43,348
+Join them with OR.
+
+52
+00:01:43,348 --> 00:01:46,074
+Y equals AB bar, plus A bar B.
+
+53
+00:01:46,724 --> 00:01:50,350
+That needs two NOT gates, two
+AND gates, and one OR gate.
+
+54
+00:01:51,000 --> 00:01:54,601
+The same job can also be done
+with just four NAND gates.
+
+55
+00:01:55,251 --> 00:02:00,254
+For XNOR, the same idea
+gives AB, plus A bar B bar.
+
+56
+00:02:00,904 --> 00:02:02,277
+Back to the stairs.
+
+57
+00:02:02,277 --> 00:02:03,992
+Each switch is one input.
+
+58
+00:02:04,342 --> 00:02:07,817
+Flip either switch, and the inputs
+change between same and different.
+
+59
+00:02:08,167 --> 00:02:10,084
+So the light flips each time.
+
+60
+00:02:10,084 --> 00:02:12,354
+It works just like an XOR gate.
+
+61
+00:02:13,004 --> 00:02:14,985
+XOR has two neat tricks.
+
+62
+00:02:15,335 --> 00:02:17,540
+AXOR zero gives back A.
+
+63
+00:02:17,540 --> 00:02:19,637
+AXOR one gives A bar.
+
+64
+00:02:19,987 --> 00:02:22,688
+So one input can turn a NOT on and off.
+
+65
+00:02:23,338 --> 00:02:27,472
+And with many inputs, XOR gives
+one when the number of ones is odd.
+
+66
+00:02:27,822 --> 00:02:31,285
+Computers use this odd or even
+check to spot errors in data.
+
+67
+00:02:31,935 --> 00:02:33,242
+Different gives one.
+
+68
+00:02:33,242 --> 00:02:34,365
+Same gives zero.
+
+69
+00:02:35,165 --> 00:02:36,151
+Worked example.
+
+70
+00:02:36,151 --> 00:02:38,279
+Find Y for this three gate circuit.
+
+71
+00:02:38,629 --> 00:02:41,394
+The first NOR gate gives A plus B, barred.
+
+72
+00:02:41,394 --> 00:02:43,021
+The AND gate gives AB.
+
+73
+00:02:43,721 --> 00:02:45,581
+The last NOR joins them.
+
+74
+00:02:45,581 --> 00:02:47,495
+One long bar covers both.
+
+75
+00:02:48,195 --> 00:02:50,764
+Break the long bar and change the sign.
+
+76
+00:02:50,764 --> 00:02:52,644
+The two bars on top cancel.
+
+77
+00:02:53,344 --> 00:02:56,117
+We get A plus B, times AB barred.
+
+78
+00:02:56,117 --> 00:02:57,658
+Break that bar too.
+
+79
+00:02:58,358 --> 00:02:59,332
+Multiply out.
+
+80
+00:02:59,332 --> 00:03:01,766
+AA bar and BB bar are both zero.
+
+81
+00:03:02,466 --> 00:03:05,215
+Y equals AB bar, plus A bar B.
+
+82
+00:03:05,215 --> 00:03:07,672
+The circuit is an XOR gate.
+
+83
+00:03:08,372 --> 00:03:09,979
+Check A one, B one.
+
+84
+00:03:09,979 --> 00:03:11,164
+NOR gives zero.
+
+85
+00:03:11,164 --> 00:03:12,300
+AND gives one.
+
+86
+00:03:12,300 --> 00:03:13,234
+Y is zero.
+
+87
+00:03:13,884 --> 00:03:15,348
+Now, the exam trap.
+
+88
+00:03:15,698 --> 00:03:18,839
+Many students mix up XOR
+and OR in the last row.
+
+89
+00:03:19,189 --> 00:03:21,154
+With both inputs one, OR gives one.
+
+90
+00:03:21,504 --> 00:03:23,159
+But XOR gives zero.
+
+91
+00:03:23,159 --> 00:03:26,450
+The inputs are the same,
+so the output is zero.
+
+92
+00:03:27,100 --> 00:03:28,782
+Where is this asked?
+
+93
+00:03:28,782 --> 00:03:33,049
+In PUC board papers, and
+in ISC Computer Science.
+
+94
+00:03:33,399 --> 00:03:36,717
+JEE Main has asked
+which gate a circuit is.
+
+95
+00:03:36,717 --> 00:03:38,460
+The answer was XOR.
+
+96
+00:03:38,810 --> 00:03:43,484
+Expect truth tables, the XOR formula,
+and circuits that turn out to be
+
+97
+00:03:43,484 --> 00:03:44,384
+XOR.
+
+98
+00:03:44,853 --> 00:03:45,753
+Try this.
+
+99
+00:03:45,665 --> 00:03:48,091
+A and one go into an XOR gate.
+
+100
+00:03:48,091 --> 00:03:51,330
+That output and B go
+into a second XOR gate.
+
+101
+00:03:51,330 --> 00:03:52,251
+What is Y?
+
+102
+00:03:57,651 --> 00:03:58,551
+B.
+
+103
+00:03:58,102 --> 00:03:59,430
+AXNORB.
+
+104
+00:03:59,780 --> 00:04:01,691
+XOR with one flips A.
+
+105
+00:04:01,691 --> 00:04:03,696
+The first output is A bar.
+
+106
+00:04:04,046 --> 00:04:06,737
+So Y is A bar, XORB.
+
+107
+00:04:07,087 --> 00:04:08,768
+Test both inputs zero.
+
+108
+00:04:08,768 --> 00:04:09,974
+A bar is one.
+
+109
+00:04:09,974 --> 00:04:11,846
+One XOR zero is one.
+
+110
+00:04:12,196 --> 00:04:13,771
+Same inputs give one.
+
+111
+00:04:13,771 --> 00:04:15,213
+That is XNOR.
+
+112
+00:04:15,863 --> 00:04:17,409
+Screenshot this card.
+
+113
+00:04:20,609 --> 00:04:23,271
+Next, the half adder and the full adder.
+
+114
+00:04:23,271 --> 00:04:24,879
+XOR does the adding.

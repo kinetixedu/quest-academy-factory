@@ -1,0 +1,537 @@
+1
+00:00:00,450 --> 00:00:03,043
+Aarav finds two rules stuck
+on the fridge at home.
+
+2
+00:00:03,343 --> 00:00:04,243
+Rule one.
+
+3
+00:00:04,121 --> 00:00:07,384
+No games, unless homework
+and chores are both done.
+
+4
+00:00:07,684 --> 00:00:08,584
+Rule two.
+
+5
+00:00:08,452 --> 00:00:12,122
+No games if homework is not
+done, or chores are not done.
+
+6
+00:00:12,422 --> 00:00:13,529
+Different words.
+
+7
+00:00:13,529 --> 00:00:14,429
+Same rule?
+
+8
+00:00:14,351 --> 00:00:16,733
+Boolean algebra can tell us for sure.
+
+9
+00:00:17,233 --> 00:00:21,758
+Boolean algebra is maths with
+only two values, one and zero.
+
+10
+00:00:22,108 --> 00:00:23,858
+One means true, or on.
+
+11
+00:00:23,858 --> 00:00:25,759
+Zero means false, or off.
+
+12
+00:00:26,109 --> 00:00:28,016
+It is named after George Boole.
+
+13
+00:00:28,016 --> 00:00:30,515
+He wrote its rules in eighteen fifty four.
+
+14
+00:00:30,865 --> 00:00:32,504
+It has just three moves.
+
+15
+00:00:32,504 --> 00:00:33,806
+AND, OR and NOT.
+
+16
+00:00:34,156 --> 00:00:35,893
+AND is written as a dot.
+
+17
+00:00:35,893 --> 00:00:37,631
+OR is written as a plus.
+
+18
+00:00:37,981 --> 00:00:40,204
+NOT is written as a bar on top.
+
+19
+00:00:40,204 --> 00:00:41,618
+A bar means not A.
+
+20
+00:00:42,268 --> 00:00:44,271
+The plus here is not adding.
+
+21
+00:00:44,271 --> 00:00:46,125
+One plus one is just one.
+
+22
+00:00:46,775 --> 00:00:48,175
+Now the main laws.
+
+23
+00:00:48,175 --> 00:00:50,141
+Picture switches and a lamp.
+
+24
+00:00:50,491 --> 00:00:51,937
+A plus zero is A.
+
+25
+00:00:51,937 --> 00:00:54,694
+A gap beside the switch changes nothing.
+
+26
+00:00:55,344 --> 00:00:56,734
+A plus one is one.
+
+27
+00:00:56,734 --> 00:00:59,111
+A wire beside it keeps the lamp on.
+
+28
+00:00:59,761 --> 00:01:01,186
+A dot zero is zero.
+
+29
+00:01:01,186 --> 00:01:03,979
+A gap in line, and the lamp never lights.
+
+30
+00:01:04,629 --> 00:01:05,891
+A dot one is A.
+
+31
+00:01:05,891 --> 00:01:07,988
+A wire in line changes nothing.
+
+32
+00:01:08,638 --> 00:01:09,866
+A plus A is A.
+
+33
+00:01:09,866 --> 00:01:11,605
+And A dot A is also A.
+
+34
+00:01:12,255 --> 00:01:14,271
+Now the second switch is A bar.
+
+35
+00:01:14,271 --> 00:01:16,287
+It is always the opposite of A.
+
+36
+00:01:16,637 --> 00:01:19,231
+Side by side, one is always closed.
+
+37
+00:01:19,231 --> 00:01:21,104
+So A plus A bar is one.
+
+38
+00:01:21,754 --> 00:01:23,953
+In a line, one is always open.
+
+39
+00:01:23,953 --> 00:01:25,717
+So A dot A bar is zero.
+
+40
+00:01:26,367 --> 00:01:28,292
+And A with two bars is just A.
+
+41
+00:01:28,292 --> 00:01:30,156
+Flip twice, and you are back.
+
+42
+00:01:30,806 --> 00:01:32,530
+Now the stars of this video.
+
+43
+00:01:32,530 --> 00:01:33,757
+De Morgan's theorems.
+
+44
+00:01:34,107 --> 00:01:38,433
+They are named after Augustus De
+Morgan, a British mathematician.
+
+45
+00:01:38,783 --> 00:01:39,784
+Theorem one.
+
+46
+00:01:39,784 --> 00:01:43,787
+A plus B, under one long
+bar, equals A bar dot B bar.
+
+47
+00:01:44,437 --> 00:01:47,078
+Break the long bar into two short bars.
+
+48
+00:01:47,078 --> 00:01:48,802
+Then change plus to dot.
+
+49
+00:01:49,152 --> 00:01:50,186
+Theorem two.
+
+50
+00:01:50,186 --> 00:01:54,321
+A dot B, under one long bar,
+equals A bar plus B bar.
+
+51
+00:01:54,971 --> 00:01:57,764
+Again, break the bar,
+and change dot to plus.
+
+52
+00:01:58,114 --> 00:01:59,883
+An easy way to remember it.
+
+53
+00:01:59,883 --> 00:02:01,969
+Break the line, change the sign.
+
+54
+00:02:02,619 --> 00:02:05,861
+In gates, a NOR gate equals an
+AND gate with bubbled inputs.
+
+55
+00:02:06,511 --> 00:02:09,408
+And a NAND gate equals an
+OR gate with bubbled inputs.
+
+56
+00:02:10,058 --> 00:02:12,933
+Let's prove theorem two on the breadboard.
+
+57
+00:02:12,933 --> 00:02:14,508
+We test every input.
+
+58
+00:02:14,858 --> 00:02:16,357
+On top, a NAND gate.
+
+59
+00:02:16,357 --> 00:02:18,793
+Below, two NOT gates feed an OR gate.
+
+60
+00:02:19,143 --> 00:02:20,202
+Both inputs zero.
+
+61
+00:02:20,202 --> 00:02:21,352
+The top gives one.
+
+62
+00:02:21,352 --> 00:02:22,627
+The bottom gives one.
+
+63
+00:02:22,977 --> 00:02:23,939
+Zero and one.
+
+64
+00:02:23,939 --> 00:02:24,945
+Both give one.
+
+65
+00:02:24,945 --> 00:02:25,907
+One and zero.
+
+66
+00:02:25,907 --> 00:02:26,913
+Both give one.
+
+67
+00:02:27,263 --> 00:02:28,380
+Both inputs one.
+
+68
+00:02:28,380 --> 00:02:29,687
+The top gives zero.
+
+69
+00:02:29,687 --> 00:02:31,367
+The bottom gives zero too.
+
+70
+00:02:31,717 --> 00:02:33,174
+All four rows match.
+
+71
+00:02:33,174 --> 00:02:35,490
+So the two sides are always equal.
+
+72
+00:02:36,140 --> 00:02:37,299
+Watch the scope.
+
+73
+00:02:37,299 --> 00:02:40,011
+The two output traces
+are exactly the same.
+
+74
+00:02:40,661 --> 00:02:44,438
+The same test proves theorem
+one, with a NOR gate on top.
+
+75
+00:02:45,088 --> 00:02:46,730
+Now back to the fridge.
+
+76
+00:02:46,730 --> 00:02:48,266
+H means homework done.
+
+77
+00:02:48,266 --> 00:02:49,705
+C means chores done.
+
+78
+00:02:50,055 --> 00:02:53,573
+Rule one is H dot C,
+with one bar over both.
+
+79
+00:02:53,923 --> 00:02:56,394
+Rule two is H bar plus C bar.
+
+80
+00:02:56,744 --> 00:02:58,877
+By theorem two, these are equal.
+
+81
+00:02:58,877 --> 00:03:00,871
+Both rules mean the same thing.
+
+82
+00:03:01,521 --> 00:03:02,490
+Break the line.
+
+83
+00:03:02,490 --> 00:03:03,501
+Change the sign.
+
+84
+00:03:04,301 --> 00:03:05,456
+Worked example.
+
+85
+00:03:05,456 --> 00:03:06,560
+Simplify this.
+
+86
+00:03:06,560 --> 00:03:08,726
+One long bar covers everything.
+
+87
+00:03:09,076 --> 00:03:09,976
+Step one.
+
+88
+00:03:09,807 --> 00:03:12,895
+Break the long bar, and
+change the plus to a dot.
+
+89
+00:03:13,595 --> 00:03:14,495
+Step two.
+
+90
+00:03:14,400 --> 00:03:16,325
+Each part now has two bars.
+
+91
+00:03:16,325 --> 00:03:17,532
+Two bars cancel.
+
+92
+00:03:18,232 --> 00:03:19,132
+Step three.
+
+93
+00:03:19,127 --> 00:03:20,118
+Multiply out.
+
+94
+00:03:20,118 --> 00:03:21,285
+A dot A is A.
+
+95
+00:03:21,285 --> 00:03:22,957
+So we get A plus AB.
+
+96
+00:03:23,657 --> 00:03:24,557
+Step four.
+
+97
+00:03:24,411 --> 00:03:25,311
+Take A out.
+
+98
+00:03:25,261 --> 00:03:27,100
+We get A, times one plus B.
+
+99
+00:03:27,800 --> 00:03:29,602
+One plus anything is one.
+
+100
+00:03:29,602 --> 00:03:30,904
+So Y is just A.
+
+101
+00:03:31,604 --> 00:03:33,493
+Check with A one, B zero.
+
+102
+00:03:33,493 --> 00:03:35,025
+The circuit gives one.
+
+103
+00:03:35,025 --> 00:03:36,123
+And A is one.
+
+104
+00:03:36,773 --> 00:03:40,406
+So these three gates do the
+same job as a plain wire from A.
+
+105
+00:03:41,056 --> 00:03:42,520
+Now, the exam trap.
+
+106
+00:03:42,870 --> 00:03:46,300
+Many students break the bar,
+but forget to change the sign.
+
+107
+00:03:46,650 --> 00:03:50,491
+They write A plus B barred,
+equals A bar plus B bar.
+
+108
+00:03:50,841 --> 00:03:52,852
+Test it with A one, B zero.
+
+109
+00:03:52,852 --> 00:03:54,511
+The true answer is zero.
+
+110
+00:03:54,861 --> 00:03:56,563
+The wrong form gives one.
+
+111
+00:03:56,563 --> 00:03:58,945
+Change the sign, and it gives zero.
+
+112
+00:03:59,595 --> 00:04:01,278
+Where is this asked?
+
+113
+00:04:01,278 --> 00:04:05,547
+In PUC board papers, and
+in ISC Computer Science.
+
+114
+00:04:05,897 --> 00:04:10,315
+JEE Main has also used De Morgan's
+theorem to simplify a gate circuit.
+
+115
+00:04:10,665 --> 00:04:14,578
+Expect questions to state and prove
+both theorems, and simplify circuits.
+
+116
+00:04:15,228 --> 00:04:16,128
+Try this.
+
+117
+00:04:16,077 --> 00:04:19,607
+Y is A bar B, barred,
+times AB bar, barred.
+
+118
+00:04:19,607 --> 00:04:21,253
+Which option equals Y?
+
+119
+00:04:26,653 --> 00:04:27,553
+B.
+
+120
+00:04:27,023 --> 00:04:28,711
+AB, plus A bar B bar.
+
+121
+00:04:29,061 --> 00:04:32,075
+Break each bar, and
+change each dot to a plus.
+
+122
+00:04:32,425 --> 00:04:35,658
+We get A plus B bar, times A bar plus B.
+
+123
+00:04:36,008 --> 00:04:37,054
+Multiply out.
+
+124
+00:04:37,054 --> 00:04:38,705
+A dot A bar is zero.
+
+125
+00:04:38,705 --> 00:04:40,356
+B dot B bar is zero.
+
+126
+00:04:40,706 --> 00:04:43,770
+What is left is AB, plus A bar B bar.
+
+127
+00:04:44,420 --> 00:04:45,966
+Screenshot this card.
+
+128
+00:04:49,166 --> 00:04:51,834
+Next, XOR and XNOR gates.
+
+129
+00:04:51,834 --> 00:04:54,077
+That answer has its own gate.

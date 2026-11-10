@@ -1,0 +1,416 @@
+1
+00:00:00,450 --> 00:00:02,358
+Aarav adds seven and five on paper.
+
+2
+00:00:02,358 --> 00:00:04,139
+He writes two, and carries one.
+
+3
+00:00:04,439 --> 00:00:06,780
+His calculator gets twelve at once.
+
+4
+00:00:06,780 --> 00:00:09,072
+Inside, it only has logic gates.
+
+5
+00:00:09,372 --> 00:00:11,123
+How can gates add numbers?
+
+6
+00:00:11,123 --> 00:00:13,121
+They use the same carry trick.
+
+7
+00:00:13,621 --> 00:00:15,120
+Calculators count in binary.
+
+8
+00:00:15,120 --> 00:00:16,303
+Only zeros and ones.
+
+9
+00:00:16,653 --> 00:00:18,546
+Zero plus zero is zero.
+
+10
+00:00:18,546 --> 00:00:20,328
+Zero plus one is one.
+
+11
+00:00:20,678 --> 00:00:22,402
+But one plus one is two.
+
+12
+00:00:22,402 --> 00:00:24,802
+In binary, two is written one zero.
+
+13
+00:00:25,152 --> 00:00:27,302
+So we write zero, and carry one.
+
+14
+00:00:27,302 --> 00:00:28,980
+Just like seven plus five.
+
+15
+00:00:29,630 --> 00:00:31,786
+So every column needs two answers.
+
+16
+00:00:31,786 --> 00:00:33,764
+A sum bit, and a carry bit.
+
+17
+00:00:34,414 --> 00:00:37,439
+A circuit that adds two
+bits is called a half adder.
+
+18
+00:00:37,789 --> 00:00:39,333
+It has two inputs, A and B.
+
+19
+00:00:39,333 --> 00:00:40,978
+And two outputs, sum and carry.
+
+20
+00:00:41,328 --> 00:00:43,940
+Let's fill its truth
+table on the breadboard.
+
+21
+00:00:44,290 --> 00:00:45,569
+Zero plus zero.
+
+22
+00:00:45,569 --> 00:00:46,469
+Sum zero.
+
+23
+00:00:46,457 --> 00:00:47,454
+Carry zero.
+
+24
+00:00:47,804 --> 00:00:50,193
+Zero plus one, or one plus zero.
+
+25
+00:00:50,193 --> 00:00:51,093
+Sum one.
+
+26
+00:00:50,970 --> 00:00:51,897
+Carry zero.
+
+27
+00:00:52,247 --> 00:00:53,416
+One plus one.
+
+28
+00:00:53,416 --> 00:00:54,316
+Sum zero.
+
+29
+00:00:54,304 --> 00:00:55,246
+Carry one.
+
+30
+00:00:55,596 --> 00:00:57,082
+Look at the sum column.
+
+31
+00:00:57,082 --> 00:00:59,382
+It is one only when the inputs differ.
+
+32
+00:01:00,032 --> 00:01:02,088
+That is an XOR gate.
+
+33
+00:01:02,088 --> 00:01:03,970
+S equals AXORB.
+
+34
+00:01:04,620 --> 00:01:07,219
+The carry is one only when both are one.
+
+35
+00:01:07,219 --> 00:01:08,179
+That is AND.
+
+36
+00:01:08,179 --> 00:01:09,241
+C equals AB.
+
+37
+00:01:09,891 --> 00:01:13,605
+So a half adder is just one
+XOR gate and one AND gate.
+
+38
+00:01:14,255 --> 00:01:16,464
+But why is it called a half adder?
+
+39
+00:01:16,464 --> 00:01:18,346
+It has no input for a carry.
+
+40
+00:01:18,696 --> 00:01:22,832
+In bigger sums, each column can get
+a carry from the column on its right.
+
+41
+00:01:23,182 --> 00:01:24,842
+So we must add three bits.
+
+42
+00:01:24,842 --> 00:01:26,546
+A, B, and the carry in.
+
+43
+00:01:26,896 --> 00:01:28,566
+That circuit is the full adder.
+
+44
+00:01:28,566 --> 00:01:30,026
+Three inputs, two outputs.
+
+45
+00:01:30,376 --> 00:01:33,150
+The sum is one when an odd
+number of inputs are one.
+
+46
+00:01:33,800 --> 00:01:37,242
+So S equals AXORBXOR carry in.
+
+47
+00:01:37,892 --> 00:01:40,503
+The carry out is one when
+two or more inputs are one.
+
+48
+00:01:41,153 --> 00:01:45,267
+C out equals AB, plus
+carry in times AXORB.
+
+49
+00:01:45,917 --> 00:01:47,371
+Here is the neat part.
+
+50
+00:01:47,371 --> 00:01:49,646
+We can build it from two half adders.
+
+51
+00:01:49,996 --> 00:01:52,288
+The first half adder adds A and B.
+
+52
+00:01:52,638 --> 00:01:55,317
+The second adds that sum to the carry in.
+
+53
+00:01:55,317 --> 00:01:57,016
+That gives the final sum.
+
+54
+00:01:57,366 --> 00:02:01,061
+If either half adder makes a
+carry, an OR gate passes it on.
+
+55
+00:02:01,711 --> 00:02:05,265
+So two half adders and one
+OR gate make one full adder.
+
+56
+00:02:05,915 --> 00:02:09,724
+Chain four full adders, and you
+can add two four bit numbers.
+
+57
+00:02:10,374 --> 00:02:11,825
+Sum is XOR.
+
+58
+00:02:11,825 --> 00:02:13,130
+Carry is AND.
+
+59
+00:02:13,930 --> 00:02:14,989
+Worked example.
+
+60
+00:02:14,989 --> 00:02:17,673
+Add one, one and one with a full adder.
+
+61
+00:02:18,023 --> 00:02:21,346
+A is one, B is one, and
+the carry in is one.
+
+62
+00:02:22,046 --> 00:02:23,329
+First half adder.
+
+63
+00:02:23,329 --> 00:02:26,115
+One plus one gives sum zero, carry one.
+
+64
+00:02:26,815 --> 00:02:28,167
+Second half adder.
+
+65
+00:02:28,167 --> 00:02:31,044
+Zero plus one gives sum one, carry zero.
+
+66
+00:02:31,744 --> 00:02:32,661
+The OR gate.
+
+67
+00:02:32,661 --> 00:02:35,011
+One or zero gives a carry out of one.
+
+68
+00:02:35,711 --> 00:02:38,880
+So the sum is one, and
+the carry out is one.
+
+69
+00:02:38,880 --> 00:02:40,302
+That reads one one.
+
+70
+00:02:41,002 --> 00:02:42,849
+One one in binary is three.
+
+71
+00:02:42,849 --> 00:02:45,187
+And one plus one plus one is three.
+
+72
+00:02:45,837 --> 00:02:47,300
+Now, the exam trap.
+
+73
+00:02:47,650 --> 00:02:50,869
+Many students use an OR gate
+for the sum of a half adder.
+
+74
+00:02:51,219 --> 00:02:52,505
+Check one plus one.
+
+75
+00:02:52,505 --> 00:02:54,309
+OR would give a sum of one.
+
+76
+00:02:54,659 --> 00:02:58,071
+But the right sum is
+zero, with a carry of one.
+
+77
+00:02:58,071 --> 00:02:59,706
+The sum needs XOR.
+
+78
+00:03:00,356 --> 00:03:02,038
+Where is this asked?
+
+79
+00:03:02,038 --> 00:03:06,305
+In PUC board papers, and
+in ISC Computer Science.
+
+80
+00:03:06,655 --> 00:03:10,653
+Expect truth tables, the sum and
+carry formulas, and a full adder from
+
+81
+00:03:10,653 --> 00:03:11,739
+two half adders.
+
+82
+00:03:12,389 --> 00:03:13,289
+Try this.
+
+83
+00:03:13,170 --> 00:03:15,333
+Add binary one one and zero one.
+
+84
+00:03:15,333 --> 00:03:17,543
+A half adder adds the right bits.
+
+85
+00:03:17,543 --> 00:03:19,706
+A full adder adds the left bits.
+
+86
+00:03:19,706 --> 00:03:21,078
+What is the answer?
+
+87
+00:03:26,478 --> 00:03:27,378
+B.
+
+88
+00:03:26,899 --> 00:03:28,061
+One zero zero.
+
+89
+00:03:28,411 --> 00:03:29,311
+Right bits.
+
+90
+00:03:29,294 --> 00:03:30,332
+One plus one.
+
+91
+00:03:30,332 --> 00:03:31,859
+Sum zero, carry one.
+
+92
+00:03:32,209 --> 00:03:33,109
+Left bits.
+
+93
+00:03:33,100 --> 00:03:35,846
+One plus zero, plus the carry of one.
+
+94
+00:03:36,196 --> 00:03:38,711
+That gives sum zero,
+and a carry out of one.
+
+95
+00:03:39,061 --> 00:03:41,320
+So the answer is one zero zero.
+
+96
+00:03:41,320 --> 00:03:43,050
+Three plus one is four.
+
+97
+00:03:43,700 --> 00:03:45,247
+Screenshot this card.
+
+98
+00:03:48,447 --> 00:03:49,858
+Next, flip-flops.
+
+99
+00:03:49,858 --> 00:03:51,481
+SR, JK and D.
+
+100
+00:03:51,481 --> 00:03:53,359
+Gates that can remember.

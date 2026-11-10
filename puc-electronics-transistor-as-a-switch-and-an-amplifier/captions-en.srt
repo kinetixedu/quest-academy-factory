@@ -1,0 +1,499 @@
+1
+00:00:00,450 --> 00:00:03,180
+At the college fest, Aarav
+whispers into a microphone.
+
+2
+00:00:03,480 --> 00:00:05,997
+The speakers boom across the whole ground.
+
+3
+00:00:06,297 --> 00:00:10,029
+Walking home, a street lamp
+switches on by itself at dusk.
+
+4
+00:00:10,329 --> 00:00:12,171
+Two very different jobs.
+
+5
+00:00:12,171 --> 00:00:14,078
+One tiny part does both.
+
+6
+00:00:14,078 --> 00:00:15,189
+A transistor.
+
+7
+00:00:15,689 --> 00:00:18,083
+Think of a water tap on a big pipe.
+
+8
+00:00:18,433 --> 00:00:22,289
+A small twist of the handle
+controls a big flow of water.
+
+9
+00:00:22,639 --> 00:00:24,941
+Close it fully, and no water flows.
+
+10
+00:00:24,941 --> 00:00:27,390
+Open it fully, and you get full flow.
+
+11
+00:00:27,740 --> 00:00:31,381
+Wiggle the handle a little,
+and the big flow wiggles too.
+
+12
+00:00:32,031 --> 00:00:34,471
+A transistor is a tap for current.
+
+13
+00:00:34,471 --> 00:00:35,902
+It has three legs.
+
+14
+00:00:36,252 --> 00:00:37,860
+The base is the handle.
+
+15
+00:00:37,860 --> 00:00:39,761
+A tiny current goes in here.
+
+16
+00:00:40,111 --> 00:00:42,708
+The collector is where
+the big current comes in.
+
+17
+00:00:43,058 --> 00:00:45,425
+The emitter is where both
+currents leave together.
+
+18
+00:00:45,775 --> 00:00:48,984
+A small base current controls
+a big collector current.
+
+19
+00:00:48,984 --> 00:00:50,594
+That is the whole trick.
+
+20
+00:00:51,244 --> 00:00:53,409
+Let's build the switch on the breadboard.
+
+21
+00:00:53,759 --> 00:00:57,765
+A five volt supply, a lamp,
+and an n p n transistor.
+
+22
+00:00:58,115 --> 00:01:01,062
+A resistor feeds the base
+from an input switch.
+
+23
+00:01:01,412 --> 00:01:03,050
+Input at zero volts.
+
+24
+00:01:03,050 --> 00:01:04,797
+No base current flows.
+
+25
+00:01:05,147 --> 00:01:07,145
+So no collector current either.
+
+26
+00:01:07,145 --> 00:01:08,516
+The lamp stays off.
+
+27
+00:01:08,516 --> 00:01:10,133
+This is called cut off.
+
+28
+00:01:10,483 --> 00:01:12,809
+Now flip the input to five volts.
+
+29
+00:01:12,809 --> 00:01:14,713
+A small base current flows.
+
+30
+00:01:15,063 --> 00:01:16,175
+The tap opens fully.
+
+31
+00:01:16,175 --> 00:01:18,548
+Electrons rush through,
+and the lamp lights up.
+
+32
+00:01:18,898 --> 00:01:21,607
+This fully on state is called saturation.
+
+33
+00:01:21,607 --> 00:01:24,317
+The transistor acts like a closed switch.
+
+34
+00:01:24,967 --> 00:01:26,119
+Watch the scope.
+
+35
+00:01:26,119 --> 00:01:29,105
+When the input goes high,
+the output goes low.
+
+36
+00:01:29,455 --> 00:01:32,218
+The output is taken across the transistor.
+
+37
+00:01:32,218 --> 00:01:34,733
+So this switch also flips the signal.
+
+38
+00:01:35,383 --> 00:01:36,693
+Now the amplifier.
+
+39
+00:01:36,693 --> 00:01:39,530
+We give the base a small, steady current.
+
+40
+00:01:39,880 --> 00:01:41,644
+The tap is now half open.
+
+41
+00:01:41,644 --> 00:01:43,445
+The lamp glows half bright.
+
+42
+00:01:43,795 --> 00:01:47,557
+Then we add a tiny wave from a
+microphone, just ten millivolts.
+
+43
+00:01:47,907 --> 00:01:49,966
+The base current wiggles a little.
+
+44
+00:01:49,966 --> 00:01:52,113
+The collector current wiggles a lot.
+
+45
+00:01:52,463 --> 00:01:53,563
+Watch the scope.
+
+46
+00:01:53,563 --> 00:01:56,092
+The output wave is a hundred times bigger.
+
+47
+00:01:56,442 --> 00:01:57,628
+But look closely.
+
+48
+00:01:57,628 --> 00:02:00,536
+When the input goes up,
+the output goes down.
+
+49
+00:02:00,886 --> 00:02:02,496
+The output is upside down.
+
+50
+00:02:02,496 --> 00:02:05,143
+We call this one eighty
+degrees out of phase.
+
+51
+00:02:05,793 --> 00:02:09,334
+So when is it a switch, and
+when is it an amplifier?
+
+52
+00:02:09,684 --> 00:02:12,989
+Plot the output voltage
+against the input voltage.
+
+53
+00:02:13,339 --> 00:02:17,167
+Below about zero point seven
+volts, the base is shut.
+
+54
+00:02:17,167 --> 00:02:18,857
+The output stays high.
+
+55
+00:02:19,207 --> 00:02:21,024
+That flat part is cut off.
+
+56
+00:02:21,024 --> 00:02:22,346
+The switch is off.
+
+57
+00:02:22,696 --> 00:02:25,771
+At a high input, the
+transistor is fully on.
+
+58
+00:02:25,771 --> 00:02:27,612
+The output is nearly zero.
+
+59
+00:02:27,962 --> 00:02:30,051
+That flat part is saturation.
+
+60
+00:02:30,051 --> 00:02:31,450
+The switch is on.
+
+61
+00:02:31,800 --> 00:02:34,384
+In between is the steep active region.
+
+62
+00:02:34,384 --> 00:02:37,541
+A small input change
+makes a big output change.
+
+63
+00:02:38,191 --> 00:02:39,924
+A switch at the two ends.
+
+64
+00:02:39,924 --> 00:02:41,695
+An amplifier in the middle.
+
+65
+00:02:42,495 --> 00:02:45,185
+Now the maths, one small step at a time.
+
+66
+00:02:45,535 --> 00:02:47,941
+Both currents leave through the emitter.
+
+67
+00:02:47,941 --> 00:02:49,914
+So IE equals IB plus IC.
+
+68
+00:02:50,614 --> 00:02:53,882
+The collector current is
+beta times the base current.
+
+69
+00:02:53,882 --> 00:02:55,591
+Beta is the current gain.
+
+70
+00:02:56,291 --> 00:03:00,780
+The output is the supply, minus
+the drop on the collector resistor.
+
+71
+00:03:01,480 --> 00:03:05,613
+So V out equals VCC, minus IC times RC.
+
+72
+00:03:06,313 --> 00:03:09,298
+Divide the output change
+by the input change.
+
+73
+00:03:09,298 --> 00:03:11,102
+That is the voltage gain.
+
+74
+00:03:11,802 --> 00:03:17,935
+AV equals minus beta, times RC,
+divided by R in, the input resistance.
+
+75
+00:03:18,635 --> 00:03:19,929
+Beta has no unit.
+
+76
+00:03:19,929 --> 00:03:22,024
+It is a ratio of two currents.
+
+77
+00:03:22,024 --> 00:03:24,206
+The minus sign means upside down.
+
+78
+00:03:24,856 --> 00:03:25,869
+Worked example.
+
+79
+00:03:25,869 --> 00:03:27,316
+Is the lamp fully on?
+
+80
+00:03:27,666 --> 00:03:29,605
+The supply is five volts.
+
+81
+00:03:29,605 --> 00:03:31,609
+The lamp is one kilo ohm.
+
+82
+00:03:31,609 --> 00:03:33,214
+Beta is one hundred.
+
+83
+00:03:33,564 --> 00:03:38,223
+The input is five volts, through
+a base resistor of ten kilo ohms.
+
+84
+00:03:38,573 --> 00:03:43,519
+The base current is five minus zero
+point seven, over ten kilo ohms.
+
+85
+00:03:44,219 --> 00:03:46,112
+That is zero point four
+three milliamperes.
+
+86
+00:03:46,812 --> 00:03:49,221
+Beta times this asks for
+forty three milliamperes.
+
+87
+00:03:49,921 --> 00:03:53,911
+But the lamp circuit can carry at
+most five volts over one kilo ohm.
+
+88
+00:03:53,911 --> 00:03:55,502
+That is five milliamperes.
+
+89
+00:03:56,202 --> 00:03:59,331
+The base asks for more
+than the circuit can give.
+
+90
+00:03:59,331 --> 00:04:02,991
+So the transistor is saturated,
+and the lamp is fully on.
+
+91
+00:04:03,641 --> 00:04:05,105
+Now, the exam trap.
+
+92
+00:04:05,455 --> 00:04:09,250
+Many students think the amplified
+output moves in step with the input.
+
+93
+00:04:09,600 --> 00:04:12,226
+In a common emitter
+amplifier, it does not.
+
+94
+00:04:12,226 --> 00:04:14,950
+The output is one eighty
+degrees out of phase.
+
+95
+00:04:15,600 --> 00:04:18,083
+And the transistor does not make energy.
+
+96
+00:04:18,083 --> 00:04:20,474
+The extra power comes from the supply.
+
+97
+00:04:20,824 --> 00:04:22,448
+Where is this asked?
+
+98
+00:04:22,448 --> 00:04:24,312
+In PUC board papers.
+
+99
+00:04:24,962 --> 00:04:29,090
+Draw the circuit, explain the switch
+and the amplifier, and find the currents
+
+100
+00:04:29,090 --> 00:04:30,003
+and the gain.
+
+101
+00:04:30,653 --> 00:04:31,553
+Try this.
+
+102
+00:04:31,532 --> 00:04:36,491
+A common emitter amplifier has beta
+fifty, an input resistance of one kilo
+
+103
+00:04:36,491 --> 00:04:40,121
+ohm, and a collector
+resistance of five kilo ohms.
+
+104
+00:04:40,121 --> 00:04:42,435
+A ten millivolt signal goes in.
+
+105
+00:04:42,435 --> 00:04:43,699
+What comes out?
+
+106
+00:04:49,099 --> 00:04:49,999
+C.
+
+107
+00:04:49,455 --> 00:04:52,622
+Two point five volts, one
+eighty degrees out of phase.
+
+108
+00:04:52,972 --> 00:04:57,186
+The voltage gain is beta
+times RC, divided by R in.
+
+109
+00:04:57,536 --> 00:04:59,788
+Fifty times five, divided by one.
+
+110
+00:04:59,788 --> 00:05:02,451
+That is a gain of two hundred and fifty.
+
+111
+00:05:02,801 --> 00:05:06,788
+Two hundred and fifty times ten
+millivolts is two point five volts.
+
+112
+00:05:06,788 --> 00:05:08,735
+And the output is upside down.
+
+113
+00:05:09,385 --> 00:05:10,932
+Screenshot this card.
+
+114
+00:05:14,132 --> 00:05:15,476
+Next, number systems.
+
+115
+00:05:15,476 --> 00:05:17,970
+Why do computers count
+with only two digits?
