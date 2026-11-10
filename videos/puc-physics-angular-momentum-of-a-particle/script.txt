@@ -1,0 +1,58 @@
+H1|0.4|A ball whirled on a string. A planet circling the Sun. A stone in a sling.
+H2|0.45|All of them go around a point.
+H3|0.35|Diya whirls a ball on a string over her head. Its speed stays the same.
+H4|0.5|But its direction changes every moment, so its momentum keeps changing. Does anything stay the same?
+H5|0.6|Yes. Angular momentum. And even a ball in a straight line can have it.
+P1|0.35|Momentum, p, is mass times velocity.
+P2|0.35|Angular momentum is its turning version: how much a body goes around a point.
+P3|0.4|We write it as L. It always needs a chosen point, like the hand that holds the string.
+P4|0.6|It depends on three things. The momentum p. The distance r from the point. And the angle between them.
+S1|0.35|Our motion notebook, from above. A half kilogram ball on a half metre string, at two metres per second.
+S2|0.4|The position vector r runs from the hand to the ball. The momentum p is along the path, at right angles to r.
+S3|0.4|So L is r times p. Zero point five times one. Zero point five.
+S4|0.5|On the graph, the x part of p swings up and down. But L stays flat.
+S5|0.6|Now a longer string, zero point eight metres, same speed. L grows to zero point eight.
+S6|3.1|Now you try. Diya halves the string, but keeps L the same. Must the ball go slower, or faster? Pause and decide.
+S7|0.65|Faster! L is m v r. Half the r needs twice the v.
+S8|0.35|Now the surprise. A ball rolls in a straight line, past Diya.
+S9|0.4|It moves at one metre per second. Its line passes zero point four metres from her.
+S10|0.35|Slow-mo replay. Freeze.
+S11|0.4|r and the angle keep changing. But the perpendicular from Diya to the line is always zero point four.
+S12|0.6|So L stays at zero point two, the whole way. A straight line, and still angular momentum.
+D1|0.35|Let's build the formula, one step at a time.
+D2|0.75|Step one. Angular momentum is a vector. L equals r cross p.
+D3|0.75|Step two. Its size is r p sine theta.
+D4|0.75|Step three. r sine theta is the perpendicular distance to the line of motion. So L is r perpendicular times p.
+D5|0.75|Step four. In a circle, theta is ninety degrees. So L is m v r, which is m r squared omega.
+D6|0.75|Step five. The unit is kilogram metre squared per second.
+D7|0.6|Curl your right hand fingers from r to p. The thumb gives L, here out of the screen.
+T1|0.7|Remember this. Angular momentum is momentum times the perpendicular distance from the point.
+R1|0.35|So why does the straight ball have angular momentum?
+R2|0.4|L is measured about a point, not a path.
+R3|0.4|The line misses Diya by zero point four metres. So r perpendicular is not zero.
+R4|0.6|And along a straight line, it never changes. So L is not zero, and stays the same.
+K1|0.4|Side by side. In a circle, r is fixed, and the angle stays at ninety degrees.
+K2|0.6|In a straight line, r and the angle change. Only r perpendicular stays fixed.
+K3|3.2|Your turn. Is there any point about which the straight ball has no angular momentum? Pause and decide.
+K4|0.65|Yes, any point on its own line! There, r perpendicular is zero, so L is zero.
+W1|0.35|Now, one worked example.
+W2|0.5|A two kilogram particle at three i plus four j metres moves at two i metres per second. Find L about the origin.
+W3|0.75|First, p is m v. Four i kilogram metres per second.
+W4|0.75|L is r cross p. Three i cross four i is zero. Four j cross four i is minus sixteen k.
+W5|0.75|Size sixteen, pointing into the screen.
+W6|0.65|Check: it moves along y equals four, so r perpendicular is four. Four times four, sixteen.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students think a body moving in a straight line has no angular momentum.
+X3|0.65|Not true. About any point off its line, L is r perpendicular times p.
+E1|0.6|Where is this asked? In L as r cross p, in m v r for circles, and in projectiles.
+Q1|5.4|Exam level now. A zero point one kilogram ball is thrown at twenty metres per second, thirty degrees above the ground. Take g as ten. Find its angular momentum about the launch point, at the highest point.
+A1|0.5|The answer is C. Five root three.
+A2|0.5|At the top, the velocity is horizontal: twenty cos thirty, or ten root three.
+A3|0.5|The height is u squared sine squared theta over two g. Five metres.
+A4|0.6|That height is the moment arm. So L is m v h. Zero point one times ten root three times five.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. How can a ball moving in a straight line have angular momentum?
+Y3|0.9|Two. About which points is it zero?
+Y4|0.9|Three. Why is L equal to m v r for a ball on a string?
+N1|0.3|Next time: push a merry-go-round for longer, and it spins faster. Why?
