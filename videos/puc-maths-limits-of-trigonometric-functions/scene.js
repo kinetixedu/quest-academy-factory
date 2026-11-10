@@ -67,7 +67,7 @@ const setL = x => { const [px, py] = P(x); attr(lOP, 'x1', O[0]); attr(lOP, 'y1'
   const r = 64, ax = O[0] + r * Math.cos(x), ay = O[1] - r * Math.sin(x); attr(lAng, 'd', `M${O[0] + r},${O[1]} A${r},${r} 0 0 0 ${ax.toFixed(1)},${ay.toFixed(1)}`);
   attr(lAx, 'x', (O[0] + 90 * Math.cos(x / 2)).toFixed(1)); attr(lAx, 'y', (O[1] - 90 * Math.sin(x / 2) + 8).toFixed(1));
   attr(lP, 'cx', px.toFixed(1)); attr(lP, 'cy', py.toFixed(1));
-  attr(lSl, 'x', (px - 14).toFixed(1)); attr(lSl, 'y', ((py + O[1]) / 2).toFixed(1)); attr(lSl, 'text-anchor', 'end'); lSl.style.opacity = x > 0.3 ? '1' : '0'; };
+  attr(lSl, 'x', (px - 14).toFixed(1)); attr(lSl, 'y', ((py + O[1]) / 2).toFixed(1)); attr(lSl, 'text-anchor', 'end'); lSl.style.opacity = x > 0.3 ? '1' : '0'; lAx.style.opacity = x > 0.3 ? '1' : '0'; };
 const LR = [[X, x => x.toFixed(3), XV], [SX, x => Math.sin(x).toFixed(3), SN], [`${SX} \\,/\\, ${X}`, x => sinc(x).toFixed(3), LM]];
 $('#lRs').innerHTML = LR.map(([s, , c], i) => `<div class="lr" id="lr${i}" style="top:${128 + i * 80}px"><div class="sy">${K(s)}</div><div class="v" style="color:${c}"></div></div>`).join('');
 const LT = [['x = 1', '0.841', '0.841'], ['x = 0.5', '0.479', '0.959'], ['x = 0.1', '0.0998', '0.998']];
@@ -84,7 +84,7 @@ const sH = sp.curve(() => 1, -1.6, 1.6, LM, 5), sG = sp.curve(sinc, -1.6, 1.6, S
 const sLb = [['h', LM, 1.04], ['g', SN, sinc(1.55) + 0.04], ['f', CS, Math.cos(1.55) + 0.04]].map(([s, c, y]) => txt($('#sS1'), sp.X(1.58), sp.Y(y) - 4, s, { 'text-anchor': 'end', 'font-family': 'Poppins', 'font-style': 'italic', 'font-weight': 700, 'font-size': 26, fill: c }));
 const sDots = [[x => 1, LM], [sinc, SN], [Math.cos, CS]].map(([fn, c]) => ({ fn, c: mk($('#sS1'), 'circle', { r: 9, fill: c }) }));
 const s2 = $('#sS2'), SY = 280;
-const sLine = mk(s2, 'line', { x1: 80, y1: SY, x2: 700, y2: SY, stroke: C.ink, 'stroke-width': 2.5, 'stroke-dasharray': '8 8' });
+const sLine = mk(s2, 'line', { x1: 80, y1: SY, x2: 630, y2: SY, stroke: C.ink, 'stroke-width': 2.5, 'stroke-dasharray': '8 8' });
 const sLl = txt(s2, 716, SY + 8, 'l', { 'font-family': 'Poppins', 'font-style': 'italic', 'font-weight': 700, 'font-size': 28, fill: C.ink });
 const bread = y => mk(s2, 'rect', { x: 150, y, width: 480, height: 56, rx: 26, fill: '#EBC98E', stroke: LM, 'stroke-width': 4 });
 const bT = bread(100), bB = bread(404);
@@ -261,7 +261,7 @@ M.on(t => {
     M.vis($('#r1'), t, tR1 + 0.1, out, { dx: -60, dy: 0, ...o });
     PUC.write($('#r1F'), t, wt('R1', 'radians') - 0.1, 0.7); RT1.forEach((_, i) => M.vis($('#r1T' + i), t, wt('R1', 'tends') + i * 0.3, 1e9, { dx: -12, dy: 0 })); M.vis($('#r1P'), t, wt('R1', 'one') - 0.1, 1e9, POP);
     M.vis($('#r2'), t, T0('R2') - 0.1, out, { dx: 60, dy: 0, ...o });
-    PUC.write($('#r2F'), t, wt('R2', 'degrees'), 0.8); RT2.forEach((_, i) => M.vis($('#r2T' + i), t, wt('R2', 'Sine') + i * 0.6, 1e9, { dx: -12, dy: 0 })); M.vis($('#r2P'), t, wt('R2', 'pi') - 0.1, 1e9, POP);
+    PUC.write($('#r2F'), t, wt('R2', 'degrees'), 0.8); RT2.forEach((_, i) => M.vis($('#r2T' + i), t, wt('R2', 'Sine') + i * 0.6, 1e9, { dx: -12, dy: 0 })); M.vis($('#r2P'), t, wt('R2', 'pi') - 0.1, 1e9, POP); M.vis($('#r2Q'), t, wt('R2', 'Sine') + 1.0, 1e9, POP);
     M.vis($('#th1'), t, tR3 + 0.05, OUT('C1'), { dy: 36, ...o });
     th1(t, { tin: tR3, tOpts: wt('R3', 'degrees') - 0.1, tCount: T1('R3') + 0.05, dur: 3, tAns: T0('R4') - 0.02, tWhy: wt('R4', 'Only') });
   }
