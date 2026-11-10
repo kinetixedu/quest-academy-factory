@@ -1,0 +1,55 @@
+H1|0.4|Two kids balance a see-saw. A beam balance comes to rest. A crowbar lifts a heavy stone.
+H2|0.45|Each one is about the same idea: balance.
+H3|0.35|At the park, Diya sits on a see-saw with a friend twice as heavy.
+H4|0.5|Both sit at the ends. Her side shoots up, and stays there. Where must the heavy friend sit, so they balance?
+H5|0.6|To answer that, we need the rules of equilibrium.
+P1|0.35|A rigid body is in equilibrium when nothing about its motion changes.
+P2|0.35|First, its centre of mass does not speed up. That needs the total force to be zero.
+P3|0.4|Second, it does not start to turn faster. That needs the total torque to be zero.
+P4|0.6|Both rules at once. Zero force, and zero torque.
+S1|0.35|Our motion notebook, side view. A light see-saw, pivoted at the middle, two metres on each side.
+S2|0.4|Diya, thirty kilograms, sits at the right end. Her friend, sixty kilograms, sits at the left end.
+S3|0.4|The friend's weight turns it anticlockwise. Diya's weight turns it clockwise. The friend wins, so the left side goes down.
+S4|0.35|Slow-mo replay. Freeze as it tips.
+S5|0.4|Each weight times its lever arm gives a torque. Sixty g times two is one hundred and twenty g. Thirty g times two is only sixty g.
+S6|0.4|Now the friend moves in. At one point five metres, it still tips left.
+S7|0.6|At one metre, the two torques match. Sixty times one equals thirty times two. The net torque is zero, and the see-saw stays level.
+S8|0.6|On the graph, the net torque falls in a straight line as the friend moves in, and crosses zero at one metre.
+D1|0.35|Let's write the rules, one step at a time.
+D2|0.75|Step one. Translational equilibrium: the vector sum of all forces is zero.
+D3|0.75|Step two. Rotational equilibrium: the vector sum of all torques is zero, about any point.
+D4|0.75|Step three. For the see-saw, the pivot pushes up with N. So N equals the two weights added: ninety g.
+D5|0.75|Step four. Torques about the pivot: W one d one equals W two d two. Anticlockwise equals clockwise.
+D6|0.75|Step five. This is the principle of moments. For a lever, load times load arm equals effort times effort arm.
+T1|0.7|Remember this. Equilibrium needs zero total force, and zero total torque.
+R1|0.35|So where does the heavy friend sit? Link by link.
+R2|0.4|Diya's torque is thirty g times two. Sixty g metres.
+R3|0.4|The friend weighs twice as much, so needs only half the lever arm.
+R4|0.6|Half of two metres is one metre. Twice the weight sits at half the distance.
+R5|3.1|Now you try. They balance at one metre and two metres. Both move halfway in. Does it still balance? Pause and decide.
+R6|0.65|Yes! Sixty times half equals thirty times one. Both torques halve, so they still match.
+K1|0.4|Side by side. Two equal, opposite pushes along the same line. The forces cancel, and nothing turns.
+K2|0.6|Now move them apart, so their lines do not meet. The forces still cancel, but together they turn the body. This pair is called a couple.
+K3|3.2|Your turn. Aarav turns a steering wheel with a couple. Does the wheel also move off sideways? Pause and decide.
+K4|0.65|No! The two forces cancel, so the centre stays put. A couple only turns a body.
+W1|0.35|Now, one worked example.
+W2|0.5|A light rod, one metre long, hangs from two strings at its ends. A sixty newton load hangs zero point two five metres from the left end. Find the two tensions.
+W3|0.75|Take torques about the left end, so the left string has no torque. The right tension times one equals sixty times zero point two five.
+W4|0.75|So the right tension is fifteen newtons.
+W5|0.75|The two tensions add up to sixty. So the left tension is forty five newtons.
+W6|0.65|The string closer to the load carries more.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students think a body is in equilibrium as soon as the forces add to zero.
+X3|0.65|Not enough. A couple has zero total force, yet it turns the body. You need zero torque too.
+E1|0.6|Where is this asked? In planks on two supports, see-saws and levers, and in couples.
+Q1|5.4|Exam level now. A uniform four metre plank weighing two hundred newtons rests on two supports, each half a metre from an end. A six hundred newton man stands one metre from the left end. Find the push of the left support.
+A1|0.5|The answer is A. Six hundred newtons.
+A2|0.5|Take torques about the right support, three and a half metres from the left end.
+A3|0.5|The left push times three equals two hundred times one point five, plus six hundred times two point five. Eighteen hundred.
+A4|0.6|So the left push is eighteen hundred over three. Six hundred newtons. The right support takes the other two hundred.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. What two conditions must a rigid body meet to be in equilibrium?
+Y3|0.9|Two. Why must the heavy friend sit closer to the pivot?
+Y4|0.9|Three. Why is a couple not in equilibrium, though its forces cancel?
+N1|0.3|Next time: a cardboard cut-out of a strange shape. Where is the one point it balances on? Centre of gravity.
