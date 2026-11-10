@@ -93,12 +93,18 @@ S.push({ id: 'U', from: 'U1', to: 'W1', cards: [
 
 /* ---------- W: four clues ---------- */
 S.push({ id: 'W', from: 'W1', to: 'X1', cards: [{ pos: 'W', label: 'WORKED EXAMPLE · FOUR CLUES · CYCLIC OR NON CYCLIC?', svg: false, build: el => {
-  const b1 = div(el, '', { position: 'absolute', left: '836px', top: '96px', width: '340px', height: '440px', borderRadius: '16px', background: '#F1F8F3', border: '2px dashed ' + PS2 }, `<div class="lbl" style="left:24px;top:20px;color:${PS2}">NON CYCLIC</div>`);
-  const b2 = div(el, '', { position: 'absolute', left: '1208px', top: '96px', width: '340px', height: '440px', borderRadius: '16px', background: '#EEF5F7', border: '2px dashed ' + PS1 }, `<div class="lbl" style="left:24px;top:20px;color:${PS1}">CYCLIC</div>`);
-  const clues = [['Oxygen is released', 0, ['W2', 'oxygen']], ['Happens in stroma lamellae', 1, ['W2', 'stroma']], ['Both ATP and NADPH made', 0, ['W3', 'Both']], ['Only light beyond 680 nm', 1, ['W4', 'only']]];
-  const cnt = [0, 0]; const ch = clues.map(([s, bin, sp], i) => { const slot = cnt[bin]++; const e = div(el, 'chp', { left: '60px', top: 120 + i * 100 + 'px', width: '330px' }, s); return { e, bin, slot, sp, y0: 120 + i * 100 }; });
-  return { els: [[b1, ['W1', null, 0.3], { dy: 12 }], [b2, ['W1', null, 0.4], { dy: 12 }], ...ch.map(c => [c.e, [c.sp[0], c.sp[1], -0.3], { dx: -16, dy: 0 }])],
-    anim: t => ch.forEach(c => { const v = M.io((t - tm(c.sp) - 0.9) / 0.8); const x1 = (c.bin ? 1208 : 836) + 5, y1 = 160 + c.slot * 70; c.e.style.left = (60 + (x1 - 60) * v).toFixed(1) + 'px'; c.e.style.top = (c.y0 + (y1 - c.y0) * v).toFixed(1) + 'px'; c.e.style.background = v > 0.99 ? (c.bin ? '#D3E9EE' : '#DCEFD9') : ''; }) }; } }] });
+  const tray = div(el, '', { position: 'absolute', left: '36px', top: '96px', width: '480px', height: '440px', borderRadius: '16px', background: '#F7F9F4', border: '2px solid #CBD0DA' }, `<div class="lbl" style="left:24px;top:20px">THE CLUES</div>`);
+  const b1 = div(el, '', { position: 'absolute', left: '548px', top: '96px', width: '492px', height: '440px', borderRadius: '16px', background: '#F1F8F3', border: '2px dashed ' + PS2 }, `<div class="lbl" style="left:24px;top:20px;color:${PS2}">NON CYCLIC · PS II + PS I</div>`);
+  const b2 = div(el, '', { position: 'absolute', left: '1072px', top: '96px', width: '492px', height: '440px', borderRadius: '16px', background: '#EEF5F7', border: '2px dashed ' + PS1 }, `<div class="lbl" style="left:24px;top:20px;color:${PS1}">CYCLIC · ONLY PS I</div>`);
+  const clues = [['1 · Oxygen is released', 0, ['W2', 'oxygen'], 'Needs water splitting'], ['2 · Happens in stroma lamellae', 1, ['W2', 'stroma'], 'No PS II there'], ['3 · Both ATP and NADPH made', 0, ['W3', 'Both'], 'Electrons reach NADP⁺'], ['4 · Only light beyond 680 nm', 1, ['W4', 'only'], 'PS II cannot work']];
+  const cnt = [0, 0]; const ch = clues.map(([s, bin, sp, w], i) => { const slot = cnt[bin]++; const y0 = 160 + i * 90;
+    const e = div(el, 'chp', { left: '60px', top: y0 + 'px', width: '432px' }, `<span class="tk" style="display:inline-block;width:22px;color:${C.ac};font-weight:700"></span>${s}`);
+    const b = div(el, '', { position: 'absolute', left: '60px', top: y0 + 'px', width: '444px', height: '96px', borderRadius: '12px', background: bin ? '#D3E9EE' : '#DCEFD9', padding: '12px 18px', boxSizing: 'border-box', font: "600 22px Poppins", color: C.ink, whiteSpace: 'nowrap' }, `${s.slice(4)}<div style="font:500 18px Poppins;color:${C.mute};margin-top:6px">${w}</div>`);
+    return { e, b, bin, slot, sp, y0 }; });
+  return { els: [[tray, ['W1', null, 0.2], { dy: 12 }], [b1, ['W1', null, 0.3], { dy: 12 }], [b2, ['W1', null, 0.4], { dy: 12 }], ...ch.map(c => [c.e, [c.sp[0], c.sp[1], -0.3], { dx: -16, dy: 0 }])],
+    anim: t => ch.forEach(c => { const a = tm(c.sp) + 0.9, v = M.io((t - a) / 0.8); const x1 = (c.bin ? 1072 : 548) + 24, y1 = 160 + c.slot * 120;
+      c.b.style.left = (60 + (x1 - 60) * v).toFixed(1) + 'px'; c.b.style.top = (c.y0 + (y1 - c.y0) * v).toFixed(1) + 'px'; c.b.style.opacity = t > a ? 1 : 0;
+      const done = t > a + 0.8; c.e.style.opacity = t < tm(c.sp) - 0.3 ? 0 : done ? 0.55 : 1; c.e.querySelector('.tk').textContent = done ? '✓' : ''; }) }; } }] });
 
 EP.run({
   icons: ICN,

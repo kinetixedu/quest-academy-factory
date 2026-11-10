@@ -43,12 +43,12 @@ S.push(EP.zoom({ to: 'L1', names: ['CELL', 'MITOCHONDRION', 'INNER MEMBRANE'], s
   info: [['RUNG 1 OF 3', 'The cell', 'Mitochondria', 'in the cytoplasm.'], ['RUNG 2 OF 3', 'Mitochondrion', 'Two membranes.', 'The inner one folds into cristae.'], ['RUNG 3 OF 3', 'Inner membrane', 'Protein complexes in a row.', 'Space above, matrix below.']],
   av: { who: 'Aarav', text: 'The dam is in there!', tin: ['Z4', 'matrix', 0.3], tout: ['L1', null, -0.1] },
   rungs: [
-    { focus: [720, 160, 60], build: g => { plantCell(g); return { labs: [[lab(g, 735, 150, 700, 40, 'Mitochondrion', 'end'), ['Z2', 'mitochondria']], [lab(g, 420, 120, 360, 40, 'Cytoplasm', 'end'), ['Z2', 'cytoplasm']]] }; } },
+    { focus: [720, 160, 60], build: g => { plantCell(g); return { labs: [[lab(g, 735, 150, 660, 40, 'Mitochondrion', 'end'), ['Z2', 'mitochondria']], [lab(g, 420, 120, 360, 40, 'Cytoplasm', 'end'), ['Z2', 'cytoplasm']]] }; } },
     { at: 'Z3', focus: [418, 160, 60], build: g => { B.mito(g, 528, 263, 420, 200);
       return { labs: [[lab(g, 250, 112, 330, 40, 'Outer membrane', 'end'), ['Z3', 'two']], [lab(g, 420, 440, 300, 490, 'Inner membrane', 'end'), ['Z3', 'inner']], [lab(g, 655, 200, 790, 490, 'Cristae'), ['Z3', 'cristae']]] }; } },
     { at: 'Z4', build: g => { mk(g, 'rect', { x: 0, y: 0, width: 1056, height: 526, fill: K.mat }); mk(g, 'rect', { x: 0, y: 70, width: 1056, height: 220, fill: IMS }); B.band(g, 0, 1056, 70, 34); B.band(g, 0, 1056, 300, 64);
       [['I', 200, 0], ['II', 330, 1], ['III', 500, 0], ['IV', 690, 0], ['V', 880, 2]].forEach(([n, x, k]) => k === 2 ? synth(g, x, 300, 1.2) : B.cx(g, x, 300 + (k ? 18 : 0), k ? 76 : 96, k ? 76 : 130, CXF, CXS, n, 26));
-      return { labs: [[lab(g, 120, 200, 60, 150, 'Intermembrane space'), ['Z4', 'intermembrane']], [lab(g, 420, 300, 400, 460, 'Inner membrane', 'end'), ['Z4', 'inner']], [lab(g, 690, 250, 600, 150, 'Protein complexes', 'end'), ['Z4', 'complexes']], [lab(g, 120, 430, 60, 490, 'Matrix'), ['Z4', 'matrix']]] }; } }] }));
+      return { labs: [[lab(g, 120, 200, 60, 150, 'Intermembrane space'), ['Z4', 'intermembrane']], [lab(g, 420, 300, 400, 460, 'Inner membrane', 'end'), ['Z4', 'inner']], [lab(g, 715, 250, 820, 160, 'Complexes'), ['Z4', 'complexes']], [lab(g, 120, 430, 60, 490, 'Matrix'), ['Z4', 'matrix']]] }; } }] }));
 
 /* ---------- L: the electron chain ---------- */
 const LT = ['L2', 'L3', 'L4', 'L5', 'L6'].map(id => [id, null, 0.45]);
