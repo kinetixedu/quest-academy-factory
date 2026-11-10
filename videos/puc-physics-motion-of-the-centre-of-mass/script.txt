@@ -1,0 +1,54 @@
+H1|0.4|A diver flips off a board. A thrown hammer spins in the air. A festival rocket bursts into pieces.
+H2|0.45|Messy motion. Yet in each one, a single point moves in a smooth, simple curve.
+H3|0.35|Aarav watches a rocket climb over the college ground. At the very top, it bursts.
+H4|0.5|The pieces fly apart, yet one point keeps the old curve, as if nothing happened. Which point, and why?
+H5|0.6|It is the centre of mass. Let's see how it moves.
+P1|0.35|First, its velocity. Weight each velocity by its mass, just like positions.
+P2|0.4|V equals the sum of m v, over the total mass. Acceleration works the same way.
+P3|0.6|And here is the big result. Total mass times the acceleration of the centre of mass equals the total outside force. Inside forces do not count.
+S1|0.35|Our motion notebook. A rocket is launched at ten metres per second across, and nineteen point six up.
+S2|0.4|Gravity is the only outside force, so it flies on a parabola, with its top at two seconds.
+S3|0.4|At the top, it bursts into two equal halves.
+S4|0.4|One half stops dead, and falls straight down. The other shoots forward at twenty metres per second.
+S5|0.5|Now watch the centre of mass, midway between the halves. It keeps going, on the very same curve.
+S6|0.35|Slow-mo replay. Freeze at the burst.
+S7|0.4|The halves push each other apart. Equal and opposite forces, by Newton's third law.
+S8|0.6|Inside the system, they cancel. The only outside force is still the total weight, M g.
+S9|0.5|Both halves land together, at twenty and sixty metres. Their centre lands at forty, right where the rocket would have.
+S10|3.1|Quick check. Suppose one piece hits the ground before the other. Does the centre of mass still follow the parabola after that? Pause and decide.
+S11|0.6|No! The ground pushes that piece. That is a new outside force, so the centre of mass leaves the old curve.
+D1|0.35|Now the proof, one step at a time.
+D2|0.75|Step one. By definition, M X equals the sum of m x, over every particle.
+D3|0.75|Step two. See how fast each side changes. M V equals the sum of m v. Then M A equals the sum of m a.
+D4|0.75|Step three. For each particle, m a is the total force on it: outside forces plus inside forces.
+D5|0.75|Step four. Inside forces come in equal and opposite pairs, so they cancel. M A equals F outside, in newtons.
+T1|0.7|Remember this. The centre of mass moves as if all the mass were there, pushed only by outside forces.
+R1|0.35|Why does the burst not matter? Link by link.
+R2|0.4|The burst is just the pieces pushing on each other. Those forces are internal.
+R3|0.4|Every push has an equal and opposite partner.
+R4|0.6|So they add up to zero. Only gravity acts on the whole system, and the centre stays on its parabola.
+K1|0.4|Side by side. No burst: the rocket itself lands at forty metres.
+K2|0.6|A burst: the pieces scatter, but their centre of mass still lands at forty.
+K3|3.2|Now you try. Aarav walks along a boat on still water, with no water drag. Does the centre of mass of Aarav and the boat move? Pause and decide.
+K4|0.65|No! His feet and the boat push on each other. Those forces are internal. So as he walks forward, the boat slides back.
+W1|0.35|Now, one worked example.
+W2|0.5|Blocks of two and three kilograms sit on smooth ice, a squeezed spring between them. A ten newton push acts on the two kilogram block. Find the centre of mass acceleration.
+W3|0.75|Only the push is an outside force. The spring is inside the system, so it drops out.
+W4|0.75|A equals F outside over the total mass. Ten over five. Two metres per second squared.
+W5|0.75|At one moment, the two kilogram block accelerates at three point five. What about the other block?
+W6|0.65|M A equals m one a one plus m two a two. Ten equals seven plus three a two. So a two is one metre per second squared.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students think a burst knocks the centre of mass off its curve.
+X3|0.65|But a burst is internal. Its forces cancel, so the centre keeps its parabola, until a piece hits the ground.
+E1|0.6|Where is this asked? In shells that burst in flight, and in people walking on boats or planks.
+Q1|5.4|Exam level now. A three kilogram shell has a range of sixty metres. At the top, it splits into two kilograms and one kilogram. The two kilogram piece falls straight down. Where does the one kilogram piece land? Pause and solve.
+A1|0.5|The answer is B. One hundred and twenty metres.
+A2|0.5|Both pieces land together, so the centre of mass still lands at sixty metres.
+A3|0.5|The two kilogram piece lands below the top, at thirty metres.
+A4|0.6|Sixty equals two times thirty, plus one times x, over three. So x is one hundred and twenty metres.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. Why can inside forces not change how the centre of mass moves?
+Y3|0.9|Two. A shell bursts at its top. What path does its centre of mass follow?
+Y4|0.9|Three. When does the centre of mass leave the parabola?
+N1|0.3|Next time: two skaters push apart from rest and glide off. Yet their total momentum stays zero. Linear momentum of a system of particles.

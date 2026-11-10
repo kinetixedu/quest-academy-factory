@@ -1,0 +1,135 @@
+<!doctype html><html><head><meta charset="utf-8"><title>PUC Physics Ep 94 - Motion of the Centre of Mass</title>
+<link rel="stylesheet" href="../../engine/base.css">
+<link rel="stylesheet" href="../../worlds/puc/katex/katex.min.css">
+<link rel="stylesheet" href="../../worlds/puc/puc.css">
+<style>
+/* ===== PUC Physics Ep 94: motion of the centre of mass (Motion notebook) ===== */
+:root{--vb:#2F6FEB;--vi:#7A4FE0;--go:#B7791F}
+.full{left:160px;top:270px;width:784px;height:580px}
+.rt{left:976px;top:270px;width:784px;height:274px}
+.rb{left:976px;top:576px;width:784px;height:274px}
+.rf{left:976px;top:270px;width:784px;height:580px}
+.vb{color:var(--vb)}.vi{color:var(--vi)}.go{color:var(--go)}
+#bpill{position:absolute;display:inline-flex;align-items:center;height:48px;padding:0 16px;border-radius:10px;background:#fff;border:2px solid var(--ac);color:var(--ac);font:600 18px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap;top:96px}
+.job{position:absolute;top:724px;width:360px;height:120px;border-radius:16px;background:#fff;border-top:6px solid var(--ac);box-shadow:0 10px 30px rgba(22,33,62,.08)}
+.job i{position:absolute;left:24px;top:26px;width:64px;height:64px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.job .jn{position:absolute;left:108px;top:22px;font:700 28px Poppins;white-space:nowrap}
+.job .jw{position:absolute;left:108px;top:64px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr{position:absolute;left:36px;width:712px;height:120px;border-radius:14px;background:var(--soft)}
+.jr .jn{position:absolute;left:28px;top:24px;font:700 30px Poppins;white-space:nowrap}
+.jr .jw{position:absolute;left:28px;top:70px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.jr svg{position:absolute;right:16px;top:0}
+.mbox{position:absolute;top:84px;width:340px;height:376px;border-radius:14px;background:var(--soft)}
+.mbox .h{position:absolute;left:24px;top:20px;font:700 30px Poppins;white-space:nowrap}
+.mbox .s{position:absolute;left:24px;top:62px;font:600 16px 'IBM Plex Mono';letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.mbox svg{position:absolute;left:0;top:96px}
+.ro2{position:absolute;display:grid;grid-template-columns:auto 1fr auto;column-gap:14px;row-gap:6px;align-items:baseline}
+.ro2 .k{font:600 30px Poppins;font-style:italic}.ro2 .k sub{font-size:.6em}
+.ro2 .v{font:600 34px 'IBM Plex Mono';text-align:right;white-space:nowrap}
+.ro2 .u{font:400 20px 'IBM Plex Mono';color:var(--mute);white-space:nowrap}
+.smo,.frz,.rdy{position:absolute;right:36px;top:18px;height:44px;padding:0 16px;border-radius:9px;display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap}
+.smo{background:var(--ink);color:#fff}.frz{background:var(--redBg);color:var(--red)}.rdy{background:var(--soft);color:var(--ink2)}
+.leg{position:absolute;top:22px;display:flex;gap:18px;font:600 18px 'IBM Plex Mono';white-space:nowrap}
+.leg span{display:flex;align-items:center;gap:8px}
+.st{position:absolute;left:36px;width:960px;height:100px}
+.st .n{position:absolute;left:0;top:4px;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ac);color:var(--ac);font:700 22px Poppins;display:flex;align-items:center;justify-content:center;background:#fff}
+.st .sx{position:absolute;left:70px;top:-2px;font-size:38px;white-space:nowrap}
+.st .why{position:absolute;left:70px;top:56px;font:500 22px Poppins;color:var(--mute);white-space:nowrap}
+.dpan{position:absolute;left:1040px;top:84px;width:524px;height:460px;border-radius:14px;background:var(--soft)}
+.lk{position:absolute;left:36px;width:712px;height:92px;border-radius:14px;background:var(--soft)}
+.lk .n{position:absolute;left:20px;top:23px;width:46px;height:46px;border-radius:50%;background:var(--ac);color:#fff;font:700 22px Poppins;display:flex;align-items:center;justify-content:center}
+.lk .lt{position:absolute;left:86px;top:0;height:92px;display:flex;align-items:center;font:600 25px Poppins;white-space:nowrap;gap:10px}
+.lk .tg{position:absolute;right:20px;top:26px;height:40px;padding:0 12px;border-radius:9px;display:inline-flex;align-items:center;font:600 17px 'IBM Plex Mono';letter-spacing:.06em;white-space:nowrap}
+.kp{position:absolute;left:36px;top:478px;height:64px;padding:0 20px;border-radius:12px;background:var(--soft);display:flex;align-items:center;gap:12px;font:600 26px Poppins;white-space:nowrap}
+#wkq{position:absolute;left:36px;top:70px;font:600 27px/1.38 Poppins;width:712px}
+#trap{left:160px;top:270px;width:1600px;height:274px}
+#wa{left:160px;top:576px;width:1600px;height:274px}
+#mq{left:160px;top:236px;width:1040px;height:624px}
+#so{left:1232px;top:236px;width:528px;height:624px}
+#wl .sol .sx{font-size:30px}
+#sF .fcard .fl{font-size:50px}
+#sF .fcard .fl.txt{font-size:30px}
+.yr{position:absolute;left:48px;width:1504px;height:96px;border-radius:14px;background:var(--soft)}
+.yr .n{position:absolute;left:24px;top:24px;width:48px;height:48px;border-radius:50%;background:var(--ac);color:#fff;font:700 24px Poppins;display:flex;align-items:center;justify-content:center}
+.yr .q{position:absolute;left:96px;top:26px;font:600 32px Poppins;white-space:nowrap}
+.dch{position:absolute;height:44px;padding:0 14px;border-radius:10px;background:#fff;display:inline-flex;align-items:center;gap:10px;font:600 22px Poppins;white-space:nowrap}
+.chip2{position:absolute;height:52px;padding:0 18px;border-radius:12px;background:var(--soft);display:inline-flex;align-items:center;gap:10px;font:600 24px 'IBM Plex Mono';white-space:nowrap}
+.sgm{position:absolute;left:24px;bottom:24px;font-size:30px;white-space:nowrap}
+.bigf{position:absolute;left:36px;font-size:60px;white-space:nowrap}
+.smo2{position:absolute;right:36px;top:18px;height:44px;padding:0 16px;border-radius:9px;display:inline-flex;align-items:center;font:600 19px 'IBM Plex Mono';letter-spacing:.08em;white-space:nowrap;background:var(--ink);color:#fff}
+</style></head><body>
+<div id="stage">
+  <div id="cam">
+    <div class="nchip" id="nchip">CLASS 11 · PHYSICS · CH 6 SYSTEM OF PARTICLES AND ROTATIONAL MOTION</div>
+    <div class="subj" id="subj">MOTION NOTEBOOK</div>
+    <div id="bpill">NCERT · CBSE · ISC · PUC</div>
+    <div id="title">Motion of the <span class="acc">Centre of Mass</span></div>
+    <div id="sub">One point that ignores the burst</div>
+    <svg id="rule" width="240" height="8"><line id="ruleL" x1="0" y1="4" x2="240" y2="4" stroke="#2F6FEB" stroke-width="4" stroke-linecap="round"/></svg>
+    <div id="jobs"></div>
+    <div id="sH">
+      <div class="card full" id="hj"><div class="lbl" style="left:36px;top:30px">MESSY MOTION · ONE SMOOTH POINT</div><div id="jrs"></div>
+        <div class="pillp ac" id="hjP" style="left:36px;top:490px">One point moves in a simple curve</div></div>
+      <div class="card rf" id="hk"><div class="lbl" style="left:36px;top:30px">FESTIVAL NIGHT · THE COLLEGE GROUND</div>
+        <svg id="hkS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <img id="hkA" src="../../assets/illustrations/puc/aarav.png" style="position:absolute;left:580px;top:262px;width:180px;height:223px;object-fit:contain">
+        <div class="pillp" id="hkQ" style="left:36px;top:490px;background:var(--redBg);color:var(--red)">Which point keeps the old curve?</div></div>
+    </div>
+    <div id="sP">
+      <div class="card full" id="pq"><div class="lbl" style="left:36px;top:30px">VELOCITY OF THE CENTRE OF MASS</div>
+        <svg id="pqS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div class="fx" id="pqF1" style="left:36px;top:330px;font-size:44px"></div><div class="fx" id="pqF2" style="left:36px;top:420px;font-size:44px"></div></div>
+      <div class="card rf" id="pm"><div class="lbl" style="left:36px;top:30px">THE BIG RESULT</div>
+        <div class="bigf" id="pmF" style="top:140px"></div>
+        <div class="pillp" id="pm0" style="left:36px;top:300px">Outside forces: gravity, a push, the ground</div>
+        <div class="pillp" id="pm1" style="left:36px;top:372px;background:var(--redBg);color:var(--red)">Inside forces: cancel in pairs</div>
+        <div class="pillp ink" id="pmP" style="left:36px;top:470px">The centre moves as if all the mass were there</div></div>
+    </div>
+    <div id="sS">
+      <div class="card full" id="sim"><div class="lbl" style="left:36px;top:30px">SIDE VIEW · THE FESTIVAL ROCKET</div>
+        <div class="smo" id="smo">SLOW-MO REPLAY · 0.25x</div><div class="frz" id="frz">FROZEN · AT THE BURST</div>
+        <svg id="simS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg></div>
+      <div class="card rt" id="ro"><div class="lbl" style="left:36px;top:30px">LIVE READOUT</div><div class="tag" id="roT" style="right:36px;top:22px"></div>
+        <div class="ro2" id="roA" style="left:36px;top:70px;width:330px"></div><div class="ro2" id="roB" style="left:420px;top:70px;width:328px"></div></div>
+      <div class="card rb" id="gr"><div class="lbl" style="left:36px;top:30px">PATH · <i style="font-family:Poppins;text-transform:none">y</i> VS <i style="font-family:Poppins;text-transform:none">x</i></div>
+        <div class="leg" id="leg" style="right:36px"></div>
+        <svg id="grS" width="784" height="274" style="position:absolute;left:0;top:0"></svg></div>
+      <div class="card" id="th1" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+    <div id="sD">
+      <div class="card" id="dl" style="left:160px;top:270px;width:1600px;height:580px"><div class="lbl" style="left:36px;top:30px">THE PROOF · 4 STEPS</div><div id="steps"></div>
+        <div class="dpan" id="dpan"><div class="lbl" style="left:24px;top:22px">INSIDE FORCES CANCEL</div><svg id="dpS" width="524" height="460" style="position:absolute;left:0;top:0"></svg></div></div>
+    </div>
+    <div id="sR">
+      <div class="card full" id="rl"><div class="lbl" style="left:36px;top:30px">WHY THE BURST DOES NOT MATTER</div><div id="lks"></div></div>
+      <div class="card rf" id="rr"><div class="lbl" style="left:36px;top:30px">THE BURST · FORCES ON THE HALVES</div>
+        <svg id="rrS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg></div>
+    </div>
+    <div id="sK">
+      <div class="card full" id="kt"><div class="lbl" style="left:36px;top:30px">NO BURST</div><svg id="ktS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div class="kp" id="ktP"></div></div>
+      <div class="card rf" id="kr"><div class="lbl" style="left:36px;top:30px">A BURST AT THE TOP</div><svg id="krS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg>
+        <div class="kp" id="krP"></div></div>
+      <div class="card" id="th2" style="left:160px;top:270px;width:1600px;height:580px"></div>
+    </div>
+    <div id="sW">
+      <div class="card full" id="wl"><div id="wkq"></div></div>
+      <div class="card rf" id="wr"><div class="lbl" style="left:36px;top:30px">SMOOTH ICE · TWO BLOCKS AND A SPRING</div><svg id="wrS" width="784" height="580" style="position:absolute;left:0;top:0;overflow:hidden"></svg></div>
+    </div>
+    <div id="sX"><div class="card red" id="trap"><svg id="tpS" width="640" height="274" style="position:absolute;right:0;top:0"></svg></div><div class="card" id="wa"></div></div>
+    <div id="sQ"><div class="card" id="mq"></div><div class="card ok" id="so"></div></div>
+    <div id="sF"><div class="card" id="yq" style="left:160px;top:250px;width:1600px;height:480px"><div class="lbl" style="left:48px;top:34px">CAN YOU ANSWER THESE WITHOUT HELP?</div><div id="yrs"></div></div></div>
+  </div>
+  <div id="stmt"><div id="st1">Remember this.</div><div id="st2" style="font-size:70px">Only <span class="acc">outside</span> forces move the centre of mass.</div><div id="stF"></div></div>
+  <div id="sweep"><b></b></div>
+  <div id="prog"><i></i></div>
+  <div class="cap" id="cap"></div>
+</div>
+<script src="cues.js"></script>
+<script src="../../engine/core.js"></script>
+<script src="../../engine/outro.js"></script>
+<script src="../../worlds/puc/katex/katex.min.js"></script>
+<script src="../../worlds/puc/puc.js"></script>
+<script src="scene.js"></script>
+<script>M.start()</script>
+</body></html>
