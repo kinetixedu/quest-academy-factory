@@ -1,0 +1,60 @@
+H1|0.4|A tightrope walker carries a long pole. A truck piled high with hay tips over on a turn. A toy bird balances on its beak.
+H2|0.45|Three different scenes. All three hide one special point.
+H3|0.35|Aarav cuts a funny shape out of cardboard for his science model. He wants to balance it on a pencil tip.
+H4|0.5|He tries here, and there. It keeps falling. So where is the balance point?
+H5|0.6|A plumb line finds it in two tries.
+P1|0.35|Every tiny bit of the cardboard has weight. Gravity pulls each bit down.
+P2|0.4|Bits on the left try to turn the card one way. Bits on the right, the other way.
+P3|0.4|There is one point where all these turning effects cancel out. That point is the centre of gravity, G.
+P4|0.6|Put the pencil right under G, and the card balances.
+S1|0.35|Now hang the cut-out on a pin, through a hole called A, and hold it tilted.
+S2|0.4|Its weight acts at G, straight down. G is off to one side of the pin, so the weight turns the card.
+S3|0.4|It swings past the bottom, and back. Each swing is smaller.
+S4|0.35|Slow-mo replay. Freeze here.
+S5|0.4|The lever arm is the sideways distance from the pin to the line of the weight. Turning effect equals weight times lever arm.
+S6|0.6|As G swings under the pin, the lever arm shrinks to zero. So the card comes to rest there.
+S7|0.4|On the graph, the turning effect swings plus and minus, then dies away to zero.
+S8|0.4|Now hang a plumb line from the same pin, and draw along it. G must be somewhere on this line.
+S9|0.4|Next, hang the card from a second hole, B, and let it settle.
+S10|0.65|Draw the new line. The two lines cross at exactly one point. That point is G.
+D1|0.35|Is G the same point as the centre of mass? Let's check, step by step.
+D2|0.75|Step one. A bit of mass m sits a sideways distance x away. Its weight, m g, turns the body by m g times x.
+D3|0.75|Step two. Add up every bit. The total turning effect is the sum of m g x.
+D4|0.75|Step three. If g is the same for every bit, take it outside. The total becomes g times the sum of m x.
+D5|0.75|Step four. Measured from the centre of mass, the sum of m x is zero. So the turning effect is zero there too.
+D6|0.6|So when g is the same everywhere, the two points are the same.
+T1|0.7|Remember this. The centre of gravity is the point where the total turning effect of gravity is zero.
+R1|0.35|Now the plumb line trick, link by link.
+R2|0.4|The card hangs still, so nothing is turning it.
+R3|0.4|The pin pushes at the pin itself, so its push has no lever arm.
+R4|0.4|The weight has no turning effect only when G is straight below the pin.
+R5|0.6|So the vertical line through the pin must pass through G. Two such lines meet at G.
+K1|0.4|Side by side. In a cardboard cut-out, g is the same at every bit. So G sits at the centre of mass.
+K2|0.6|In a very tall tower, g gets a tiny bit weaker higher up. So each kilogram at the top weighs a little less.
+K3|3.2|Now you try. In a very tall tower, is the centre of gravity slightly above or slightly below the centre of mass? Pause and decide.
+K4|0.65|Slightly below! The lower parts are pulled a bit harder. In everyday objects, the gap is far too small to notice.
+B1|0.35|G also decides when things tip over.
+B2|0.4|Tilt a box. While the line straight down from G stays inside its base, the weight turns it back.
+B3|0.6|Once that line passes the corner, the weight turns it over. It tips.
+B4|3.2|Your turn. A bus with luggage on its roof, or the same luggage packed low. Which tips at a smaller tilt? Pause and decide.
+B5|0.65|The roof luggage! It raises G, so the line from G passes the wheels sooner.
+W1|0.35|Now, one worked example.
+W2|0.5|A box is forty centimetres wide, with its centre of gravity in the middle, sixty centimetres up. At what tilt does it tip?
+W3|0.75|It tips when the line from G reaches the corner.
+W4|0.75|Then tan theta equals half the width over the height. Twenty over sixty. That is one third.
+W5|0.65|So theta is about eighteen point four degrees.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students think G must lie inside the material of the body.
+X3|0.65|Not always. For a boomerang, or a bent wire, G lies in the empty space, outside the material.
+E1|0.6|Where is this asked? In statements on centre of gravity versus centre of mass, the plumb line method, and toppling.
+Q1|5.4|Exam level now. A uniform plate, forty centimetres by thirty, hangs at rest from a pin at one corner. What angle does its forty centimetre side make with the vertical? Pause and solve.
+A1|0.5|The answer is C. About thirty seven degrees.
+A2|0.5|At rest, G is straight below the pin, at the centre of the plate.
+A3|0.5|So the diagonal from the pin hangs straight down.
+A4|0.6|The long side makes an angle theta with the diagonal. Tan theta is thirty over forty, so theta is about thirty seven degrees.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. Why must the plumb line from the pin pass through the centre of gravity?
+Y3|0.9|Two. When are the centre of gravity and the centre of mass not the same point?
+Y4|0.9|Three. Why does roof luggage make a bus tip over more easily?
+N1|0.3|Next time: spin a ruler about its middle, then about its end. Why is one so much harder? Moment of inertia.
