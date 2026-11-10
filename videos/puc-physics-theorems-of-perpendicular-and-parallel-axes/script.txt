@@ -1,0 +1,52 @@
+H1|0.4|A gate swings about its hinge. A wheel turns on its axle. A pendulum swings from near its top.
+H2|0.45|Same kind of object, a different axis, a different moment of inertia.
+H3|0.35|Diya spins a coin flat. Then on its edge. Then on a pin through its rim.
+H4|0.5|One coin, three spins, three answers. Must she start from scratch each time?
+H5|0.6|No. Two shortcuts do it. The theorems of perpendicular and parallel axes.
+P1|0.35|Note: these theorems are not in the current NCERT book. They are in the ISC, JEE and NEET syllabus.
+P2|0.4|The perpendicular axes theorem works only for flat bodies, like a coin or a plate.
+P3|0.6|The parallel axes theorem works for any body, as long as one axis passes through the centre of mass.
+G1|0.35|First, perpendicular axes. Lay the coin flat. Draw x and y in its plane, and z straight up through its centre.
+G2|0.4|A bit of the coin sits at x and y. Its distance from the z axis is r, and r squared equals x squared plus y squared.
+G3|0.4|Multiply by m and add every bit. The sum of m r squared splits in two.
+G4|0.6|Those are I about x, and I about y. So I z equals I x plus I y.
+G5|0.6|For the coin, I z is half M R squared, and by symmetry I x equals I y. So each is a quarter M R squared: the coin spun on its edge.
+G6|3.1|Now you try. A ring has I equal to M R squared about its central axis. About a diameter, is it M R squared, or half? Pause and decide.
+G7|0.6|Half M R squared! The two diameters share the total equally.
+S1|0.35|Now parallel axes, on our motion notebook. A two kilogram disc, radius point two metres, spinning about its centre. I is point zero four.
+S2|0.4|Move the axis point one metres away from the centre. Now the centre of the disc goes round in a circle too.
+S3|0.35|Slow-mo replay. Freeze.
+S4|0.4|The motion has two parts. The centre goes round the axis, like a mass M at distance d. That adds M d squared.
+S5|0.6|And it still turns about its own centre, keeping I c m. Total: point zero six.
+S6|0.4|Slide the axis to the rim. d is point two, M d squared is point zero eight, and I is point one two. Three times as much.
+S7|0.6|On the graph, I against d squared is a straight line. It starts at I c m, and its slope is the mass.
+D1|0.35|Why does this work? Step by step.
+D2|0.75|Step one. Measure each bit from the centre of mass with r. From the new axis, its distance is r plus d.
+D3|0.75|Step two. Square it and add. You get the sum of m r squared, plus two d times the sum of m r, plus M d squared.
+D4|0.75|Step three. Measured from the centre of mass, the sum of m r is zero. So the middle part vanishes.
+D5|0.75|Step four. What is left is I c m plus M d squared.
+T1|0.7|Remember this. Parallel axes: I equals I c m plus M d squared. Perpendicular axes: I z equals I x plus I y, for flat bodies only.
+K1|0.4|Side by side. A thin rod about its middle has M L squared over twelve.
+K2|0.6|Shift the axis to its end, half a length away. Add M times L over two, squared. That is M L squared over three, four times bigger. That is why the ruler was hard to spin by its end.
+K3|3.2|Now you try. Of all the parallel axes through a body, which one gives the smallest moment of inertia? Pause and decide.
+K4|0.65|The one through the centre of mass! Any other axis adds M d squared on top.
+W1|0.35|Now, one worked example.
+W2|0.5|A two kilogram disc of radius point two metres. Find I about a tangent in its plane.
+W3|0.75|First, perpendicular axes. About a diameter, I is half of point zero four. Point zero two.
+W4|0.75|The tangent is parallel to it, a distance R away. Add M R squared: two times point zero four. Point zero eight.
+W5|0.65|So I is point zero two plus point zero eight. Point one kilogram metre squared.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students add M d squared between any two parallel axes.
+X3|0.65|But one axis must pass through the centre of mass. Between two other axes, go through the centre of mass first.
+E1|0.6|Where is this asked? In finding I about an edge, a corner or a tangent, using one or both theorems.
+Q1|5.4|Exam level now. A uniform square plate, mass M, side a, has I equal to M a squared over six about its central axis at right angles to it. Find I about a diagonal. Pause and solve.
+A1|0.5|The answer is B. M a squared over twelve.
+A2|0.5|The two diagonals cross at right angles in the plate, through its centre.
+A3|0.5|So by perpendicular axes, the two diagonal values add up to M a squared over six.
+A4|0.6|By symmetry they are equal. So each is M a squared over twelve.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. Why must one of the axes pass through the centre of mass?
+Y3|0.9|Two. Why does the perpendicular axes theorem work only for flat bodies?
+Y4|0.9|Three. Which parallel axis gives the smallest moment of inertia, and why?
+N1|0.3|Next time: a potter keeps a heavy wheel turning with one foot. How much work does each push do? Torque, work and rotational kinetic energy.
