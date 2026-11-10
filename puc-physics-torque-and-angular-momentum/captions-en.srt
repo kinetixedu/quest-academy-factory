@@ -1,0 +1,543 @@
+1
+00:00:00,450 --> 00:00:02,252
+A kick makes a ball faster.
+
+2
+00:00:02,252 --> 00:00:04,237
+A brake makes a bicycle slower.
+
+3
+00:00:04,237 --> 00:00:05,837
+A force changes momentum.
+
+4
+00:00:06,237 --> 00:00:07,824
+But what changes a spin?
+
+5
+00:00:08,274 --> 00:00:10,622
+In the park, Aarav
+pushes a merry-go-round.
+
+6
+00:00:10,622 --> 00:00:12,678
+A short push, and it turns slowly.
+
+7
+00:00:13,028 --> 00:00:16,082
+He runs alongside and
+keeps pushing for longer.
+
+8
+00:00:16,082 --> 00:00:17,867
+Now it spins much faster.
+
+9
+00:00:17,867 --> 00:00:19,949
+Why does pushing longer matter?
+
+10
+00:00:20,449 --> 00:00:23,195
+The answer links torque
+to angular momentum.
+
+11
+00:00:23,795 --> 00:00:26,998
+Remember, torque is the
+turning effect of a force.
+
+12
+00:00:26,998 --> 00:00:30,938
+Angular momentum, L, is how
+much a body goes around a point.
+
+13
+00:00:31,288 --> 00:00:32,605
+Here is the link.
+
+14
+00:00:32,605 --> 00:00:35,987
+Torque is the rate at which
+angular momentum changes.
+
+15
+00:00:36,387 --> 00:00:41,191
+Just as a force changes momentum,
+a torque changes angular momentum.
+
+16
+00:00:41,791 --> 00:00:44,024
+Our motion notebook, from above.
+
+17
+00:00:44,024 --> 00:00:45,959
+The merry-go-round is at rest.
+
+18
+00:00:45,959 --> 00:00:47,547
+Its axle is the axis.
+
+19
+00:00:47,897 --> 00:00:52,004
+Aarav pushes along the rim with fifty
+newtons, one point five metres from
+
+20
+00:00:52,004 --> 00:00:52,904
+the axle.
+
+21
+00:00:52,740 --> 00:00:53,640
+Watch.
+
+22
+00:00:53,687 --> 00:00:56,582
+The torque is fifty times one point five.
+
+23
+00:00:56,582 --> 00:00:58,498
+Seventy five newton metres.
+
+24
+00:00:58,498 --> 00:01:01,175
+L climbs by seventy five every second.
+
+25
+00:01:01,575 --> 00:01:04,686
+After two seconds, L is
+one hundred and fifty.
+
+26
+00:01:04,686 --> 00:01:06,530
+After four, three hundred.
+
+27
+00:01:06,530 --> 00:01:08,539
+Twice as long, twice the L.
+
+28
+00:01:09,039 --> 00:01:10,017
+Slow-mo replay.
+
+29
+00:01:10,017 --> 00:01:11,516
+Freeze during the push.
+
+30
+00:01:11,866 --> 00:01:14,268
+r runs from the axle to his hands.
+
+31
+00:01:14,268 --> 00:01:15,751
+F is along the rim.
+
+32
+00:01:15,751 --> 00:01:20,012
+Their cross product, the torque,
+points up, out of the screen.
+
+33
+00:01:20,012 --> 00:01:22,058
+And that is the way L grows.
+
+34
+00:01:22,458 --> 00:01:24,180
+At four seconds, Aarav lets go.
+
+35
+00:01:24,580 --> 00:01:25,569
+Now you try.
+
+36
+00:01:25,569 --> 00:01:26,501
+No friction.
+
+37
+00:01:26,501 --> 00:01:30,708
+Once he lets go, will L drop,
+stay the same, or keep growing?
+
+38
+00:01:30,708 --> 00:01:31,938
+Pause and decide.
+
+39
+00:01:35,038 --> 00:01:36,699
+It stays at three hundred!
+
+40
+00:01:36,699 --> 00:01:38,693
+No torque, so no change in L.
+
+41
+00:01:38,693 --> 00:01:42,006
+The graph goes flat, and the
+merry-go-round keeps turning.
+
+42
+00:01:42,606 --> 00:01:45,111
+Let's prove the link, one step at a time.
+
+43
+00:01:45,461 --> 00:01:46,361
+Step one.
+
+44
+00:01:46,341 --> 00:01:49,109
+For a particle, L equals r cross p.
+
+45
+00:01:49,859 --> 00:01:50,800
+Step two.
+
+46
+00:01:50,800 --> 00:01:52,508
+Find how it changes.
+
+47
+00:01:52,508 --> 00:01:57,910
+d L by d t equals d r by d t
+cross p, plus r cross d p by d t.
+
+48
+00:01:58,660 --> 00:01:59,693
+Step three.
+
+49
+00:01:59,693 --> 00:02:03,443
+d r by d t is the
+velocity v, and p is m v.
+
+50
+00:02:03,443 --> 00:02:07,160
+They point the same way,
+so v cross p is zero.
+
+51
+00:02:07,910 --> 00:02:08,888
+Step four.
+
+52
+00:02:08,888 --> 00:02:11,237
+d p by d t is the force F.
+
+53
+00:02:11,237 --> 00:02:15,495
+So d L by d t equals r cross
+F, which is the torque.
+
+54
+00:02:16,245 --> 00:02:17,145
+Step five.
+
+55
+00:02:17,056 --> 00:02:21,372
+For a body made of many particles,
+the inside torques cancel in pairs.
+
+56
+00:02:21,372 --> 00:02:23,861
+Only outside torques change the total L.
+
+57
+00:02:24,611 --> 00:02:25,629
+Remember this.
+
+58
+00:02:25,629 --> 00:02:28,713
+Torque is the rate of
+change of angular momentum.
+
+59
+00:02:29,413 --> 00:02:32,120
+So why does a longer push spin it faster?
+
+60
+00:02:32,120 --> 00:02:33,149
+Link by link.
+
+61
+00:02:33,499 --> 00:02:36,186
+His push makes a torque, r times F.
+
+62
+00:02:36,586 --> 00:02:39,021
+Torque is the rate at which L grows.
+
+63
+00:02:39,021 --> 00:02:41,042
+Every second adds seventy five.
+
+64
+00:02:41,442 --> 00:02:44,424
+A longer push adds more
+seconds, so more L.
+
+65
+00:02:44,424 --> 00:02:46,602
+And more L means a faster spin.
+
+66
+00:02:47,202 --> 00:02:48,304
+Side by side.
+
+67
+00:02:48,304 --> 00:02:51,448
+In a straight line, a
+force changes momentum.
+
+68
+00:02:51,448 --> 00:02:54,031
+Force times time is the change in p.
+
+69
+00:02:54,431 --> 00:02:57,390
+In turning, a torque
+changes angular momentum.
+
+70
+00:02:57,390 --> 00:03:01,555
+Torque times time is the change
+in L, called the angular impulse.
+
+71
+00:03:02,155 --> 00:03:03,055
+Your turn.
+
+72
+00:03:03,013 --> 00:03:06,512
+One push gives a hundred
+newton metres for one second.
+
+73
+00:03:06,512 --> 00:03:09,293
+Another gives twenty
+five for four seconds.
+
+74
+00:03:09,293 --> 00:03:10,663
+Which adds more L?
+
+75
+00:03:10,663 --> 00:03:11,925
+Pause and decide.
+
+76
+00:03:15,125 --> 00:03:16,241
+Both the same!
+
+77
+00:03:16,241 --> 00:03:19,589
+One hundred times one, and
+twenty five times four.
+
+78
+00:03:19,589 --> 00:03:21,159
+Each adds one hundred.
+
+79
+00:03:21,809 --> 00:03:23,499
+Now, one worked example.
+
+80
+00:03:23,849 --> 00:03:28,620
+A zero point two kilogram ball goes
+around on a zero point five metre string
+
+81
+00:03:28,620 --> 00:03:30,428
+at two metres per second.
+
+82
+00:03:30,428 --> 00:03:35,289
+A push gives a torque of zero point
+three newton metres, for two seconds.
+
+83
+00:03:35,289 --> 00:03:36,736
+Find its new speed.
+
+84
+00:03:37,236 --> 00:03:39,011
+First, L is m v r.
+
+85
+00:03:39,011 --> 00:03:42,473
+Zero point two times two
+times zero point five.
+
+86
+00:03:42,473 --> 00:03:43,774
+Zero point two.
+
+87
+00:03:44,524 --> 00:03:47,240
+The change in L is torque times time.
+
+88
+00:03:47,240 --> 00:03:49,241
+Zero point three times two.
+
+89
+00:03:49,241 --> 00:03:50,483
+Zero point six.
+
+90
+00:03:51,233 --> 00:03:53,267
+So the new L is zero point eight.
+
+91
+00:03:54,017 --> 00:03:55,514
+v is L over m r.
+
+92
+00:03:55,514 --> 00:03:58,190
+Zero point eight over zero point one.
+
+93
+00:03:58,190 --> 00:03:59,985
+Eight metres per second.
+
+94
+00:04:00,635 --> 00:04:02,096
+Now, the exam trap.
+
+95
+00:04:02,446 --> 00:04:05,896
+Many students think L stays the
+same only when no force acts.
+
+96
+00:04:06,296 --> 00:04:07,196
+Not true.
+
+97
+00:04:07,111 --> 00:04:10,022
+The string pulls the
+ball toward the centre.
+
+98
+00:04:10,022 --> 00:04:14,643
+That pull is along r, so its torque
+is zero, and L stays the same.
+
+99
+00:04:15,293 --> 00:04:16,829
+Where is this asked?
+
+100
+00:04:16,829 --> 00:04:21,858
+In torque as d L by d t, in angular
+impulse, and in L of a falling body
+
+101
+00:04:21,858 --> 00:04:23,022
+about a point.
+
+102
+00:04:23,622 --> 00:04:24,809
+Exam level now.
+
+103
+00:04:24,809 --> 00:04:29,473
+A half kilogram ball is dropped from
+rest at the point two metres, twenty
+
+104
+00:04:29,473 --> 00:04:30,373
+metres.
+
+105
+00:04:30,136 --> 00:04:31,333
+Take g as ten.
+
+106
+00:04:31,333 --> 00:04:35,203
+Find its angular momentum about
+the origin after one second.
+
+107
+00:04:40,603 --> 00:04:41,964
+The answer is B.
+
+108
+00:04:41,964 --> 00:04:44,611
+Ten kilogram metre squared per second.
+
+109
+00:04:45,111 --> 00:04:49,768
+Gravity is five newtons, straight down,
+and acts two metres from the origin.
+
+110
+00:04:49,768 --> 00:04:52,915
+So the torque is ten newton
+metres, all the time.
+
+111
+00:04:53,415 --> 00:04:54,852
+L starts at zero.
+
+112
+00:04:54,852 --> 00:04:57,726
+After one second, L is ten times one.
+
+113
+00:04:57,726 --> 00:04:58,626
+Ten.
+
+114
+00:04:58,773 --> 00:05:01,855
+Check: p is five, and
+the moment arm is two.
+
+115
+00:05:01,855 --> 00:05:03,420
+Five times two is ten.
+
+116
+00:05:04,020 --> 00:05:05,561
+Here is your recap.
+
+117
+00:05:05,561 --> 00:05:07,145
+Screenshot this card.
+
+118
+00:05:10,345 --> 00:05:12,284
+Can you answer these without help?
+
+119
+00:05:12,684 --> 00:05:13,584
+One.
+
+120
+00:05:13,141 --> 00:05:16,091
+Why does a longer push spin
+a merry-go-round faster?
+
+121
+00:05:16,991 --> 00:05:17,891
+Two.
+
+122
+00:05:17,439 --> 00:05:19,300
+Why is v cross p always zero?
+
+123
+00:05:20,200 --> 00:05:21,100
+Three.
+
+124
+00:05:20,684 --> 00:05:24,412
+Why does the ball on a string keep
+its L, though the string pulls it?
+
+125
+00:05:25,312 --> 00:05:28,242
+Next time: a heavy and a
+light friend on a see-saw.
+
+126
+00:05:28,242 --> 00:05:30,262
+Where must each sit so it balances?

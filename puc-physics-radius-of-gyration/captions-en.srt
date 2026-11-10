@@ -1,0 +1,562 @@
+1
+00:00:00,450 --> 00:00:03,609
+A bicycle wheel keeps most
+of its weight at the rim.
+
+2
+00:00:03,609 --> 00:00:06,066
+A machine flywheel is heavy at its edge.
+
+3
+00:00:06,066 --> 00:00:08,847
+A grinding stone is solid
+all the way through.
+
+4
+00:00:09,247 --> 00:00:13,518
+Same idea every time: where the
+mass sits changes how it spins.
+
+5
+00:00:13,968 --> 00:00:15,908
+Aarav has a ring and a disc.
+
+6
+00:00:15,908 --> 00:00:16,808
+Same mass.
+
+7
+00:00:16,723 --> 00:00:17,623
+Same size.
+
+8
+00:00:17,538 --> 00:00:19,421
+He gives each the same push.
+
+9
+00:00:19,771 --> 00:00:21,497
+The disc whirls faster.
+
+10
+00:00:21,497 --> 00:00:23,012
+The ring is lazier.
+
+11
+00:00:23,012 --> 00:00:24,581
+Same mass, so why?
+
+12
+00:00:25,081 --> 00:00:29,330
+To compare them in one number,
+we use the radius of gyration.
+
+13
+00:00:29,930 --> 00:00:33,384
+Squeeze all of a body's mass
+into a thin ring around the axis.
+
+14
+00:00:33,734 --> 00:00:37,428
+Choose the ring's radius so that its
+moment of inertia matches the body's.
+
+15
+00:00:37,828 --> 00:00:40,901
+That radius is the radius of gyration, k.
+
+16
+00:00:40,901 --> 00:00:42,831
+So I equals M k squared.
+
+17
+00:00:43,231 --> 00:00:47,314
+k tells you how far out the mass sits,
+on average, in the way that counts
+
+18
+00:00:47,314 --> 00:00:48,214
+for turning.
+
+19
+00:00:48,729 --> 00:00:50,157
+Our motion notebook.
+
+20
+00:00:50,157 --> 00:00:53,712
+A disc of mass two kilograms
+and radius half a metre.
+
+21
+00:00:53,712 --> 00:00:55,679
+Its I is half MR squared.
+
+22
+00:00:55,679 --> 00:00:56,857
+Point two five.
+
+23
+00:00:57,207 --> 00:01:01,727
+Now take a ring with the same two
+kilograms, at the full half metre.
+
+24
+00:01:01,727 --> 00:01:03,362
+Its I is MR squared.
+
+25
+00:01:03,362 --> 00:01:04,268
+Point five.
+
+26
+00:01:04,268 --> 00:01:05,168
+Too big.
+
+27
+00:01:05,426 --> 00:01:06,641
+Shrink the ring.
+
+28
+00:01:06,641 --> 00:01:09,388
+Its I falls fast, because r is squared.
+
+29
+00:01:09,388 --> 00:01:11,779
+Watch the dot slide down the curve.
+
+30
+00:01:12,179 --> 00:01:14,152
+Slow-mo replay, near the match.
+
+31
+00:01:14,502 --> 00:01:16,683
+Here the ring's I equals the disc's I.
+
+32
+00:01:16,683 --> 00:01:17,701
+Point two five.
+
+33
+00:01:17,701 --> 00:01:18,761
+The lines cross.
+
+34
+00:01:19,161 --> 00:01:21,923
+The radius is point
+three five four metres.
+
+35
+00:01:21,923 --> 00:01:24,340
+That is the disc's radius of gyration.
+
+36
+00:01:24,940 --> 00:01:29,400
+It is less than the full radius,
+because a disc has much of its mass near
+
+37
+00:01:29,400 --> 00:01:30,300
+the centre.
+
+38
+00:01:30,861 --> 00:01:33,706
+Let's find k for a disc, step by step.
+
+39
+00:01:34,056 --> 00:01:34,956
+Step one.
+
+40
+00:01:34,876 --> 00:01:37,556
+By its meaning, I equals M k squared.
+
+41
+00:01:38,306 --> 00:01:39,206
+Step two.
+
+42
+00:01:39,063 --> 00:01:41,694
+So k equals the square root of I over M.
+
+43
+00:01:42,444 --> 00:01:43,358
+Step three.
+
+44
+00:01:43,358 --> 00:01:46,955
+For a disc about its centre,
+I is half MR squared.
+
+45
+00:01:46,955 --> 00:01:50,294
+Put it in: M k squared
+equals half MR squared.
+
+46
+00:01:51,044 --> 00:01:51,984
+Step four.
+
+47
+00:01:51,984 --> 00:01:52,884
+Cancel M.
+
+48
+00:01:52,870 --> 00:01:55,322
+k squared is R squared over two.
+
+49
+00:01:55,322 --> 00:01:58,845
+So k is R over root two,
+about point seven R.
+
+50
+00:01:59,595 --> 00:02:02,454
+Half a metre times point seven zero seven.
+
+51
+00:02:02,454 --> 00:02:04,061
+Point three five four.
+
+52
+00:02:04,061 --> 00:02:05,627
+The same as the sim.
+
+53
+00:02:06,227 --> 00:02:07,246
+Remember this.
+
+54
+00:02:07,246 --> 00:02:11,579
+The radius of gyration is where all
+the mass could sit and give the same
+
+55
+00:02:11,579 --> 00:02:12,846
+moment of inertia.
+
+56
+00:02:13,546 --> 00:02:16,558
+Now, why the disc's k is
+smaller, link by link.
+
+57
+00:02:16,908 --> 00:02:20,199
+In a ring, every bit of mass
+sits at the full radius.
+
+58
+00:02:20,599 --> 00:02:23,442
+In a disc, many bits
+sit close to the centre.
+
+59
+00:02:23,842 --> 00:02:27,914
+Bits near the axis add very
+little, because r is squared.
+
+60
+00:02:28,314 --> 00:02:32,447
+So the disc has a smaller I,
+and its k sits inside the rim.
+
+61
+00:02:33,047 --> 00:02:36,245
+Here are the common bodies you
+must know, from the NCERT table.
+
+62
+00:02:36,595 --> 00:02:39,925
+A ring about its central axis: MR squared.
+
+63
+00:02:39,925 --> 00:02:42,072
+A disc: half MR squared.
+
+64
+00:02:42,472 --> 00:02:46,274
+A thin rod about its middle:
+ML squared over twelve.
+
+65
+00:02:46,674 --> 00:02:50,493
+A solid sphere about a
+diameter: two fifths MR squared.
+
+66
+00:02:51,093 --> 00:02:52,164
+Side by side.
+
+67
+00:02:52,164 --> 00:02:55,218
+Ring and disc, two
+kilograms, half a metre.
+
+68
+00:02:55,218 --> 00:02:57,310
+Give each one joule of energy.
+
+69
+00:02:57,710 --> 00:03:01,587
+The ring, with I point five,
+turns at two radians per second.
+
+70
+00:03:01,587 --> 00:03:05,326
+The disc, with half the I,
+turns at two point eight three.
+
+71
+00:03:05,926 --> 00:03:06,944
+Now you try.
+
+72
+00:03:06,944 --> 00:03:10,454
+A solid sphere and a disc,
+same mass, same radius.
+
+73
+00:03:10,454 --> 00:03:14,369
+Which has the smaller moment of
+inertia about a central axis?
+
+74
+00:03:14,369 --> 00:03:15,635
+Pause and decide.
+
+75
+00:03:18,835 --> 00:03:19,735
+The sphere!
+
+76
+00:03:19,576 --> 00:03:21,446
+Two fifths is less than one half.
+
+77
+00:03:21,446 --> 00:03:23,984
+More of a sphere's mass
+sits close to the axis.
+
+78
+00:03:24,634 --> 00:03:25,534
+One more.
+
+79
+00:03:25,435 --> 00:03:30,108
+A hollow cylinder and a ring, same
+mass, same radius, about their central
+
+80
+00:03:30,108 --> 00:03:31,008
+axis.
+
+81
+00:03:30,656 --> 00:03:32,318
+Which has the bigger I?
+
+82
+00:03:32,318 --> 00:03:33,569
+Pause and decide.
+
+83
+00:03:36,769 --> 00:03:37,669
+Neither!
+
+84
+00:03:37,443 --> 00:03:38,960
+Both are MR squared.
+
+85
+00:03:38,960 --> 00:03:42,241
+In both, every bit of mass
+is at the full radius.
+
+86
+00:03:42,241 --> 00:03:44,678
+Length along the axis does not matter.
+
+87
+00:03:45,328 --> 00:03:47,018
+Now, one worked example.
+
+88
+00:03:47,368 --> 00:03:52,487
+A uniform rod is one point two metres
+long, with a mass of two kilograms.
+
+89
+00:03:52,487 --> 00:03:56,999
+Find its moment of inertia and
+radius of gyration about its middle.
+
+90
+00:03:57,499 --> 00:03:59,915
+I equals ML squared over twelve.
+
+91
+00:03:59,915 --> 00:04:03,017
+Two times one point
+four four, over twelve.
+
+92
+00:04:03,017 --> 00:04:04,246
+Point two four.
+
+93
+00:04:04,996 --> 00:04:06,995
+k equals root of I over M.
+
+94
+00:04:06,995 --> 00:04:09,299
+Root of point two four over two.
+
+95
+00:04:09,299 --> 00:04:10,974
+Root of point one two.
+
+96
+00:04:11,724 --> 00:04:14,729
+So k is about point three four six metres.
+
+97
+00:04:15,379 --> 00:04:16,840
+Now, the exam trap.
+
+98
+00:04:17,190 --> 00:04:20,315
+Many students write k equals
+R over two for a disc.
+
+99
+00:04:20,715 --> 00:04:24,167
+About its central axis,
+k is R over root two.
+
+100
+00:04:24,167 --> 00:04:27,738
+R over two is only for
+an axis along a diameter.
+
+101
+00:04:27,738 --> 00:04:29,454
+Always check the axis.
+
+102
+00:04:30,104 --> 00:04:31,424
+Where is this asked?
+
+103
+00:04:31,424 --> 00:04:35,296
+In ratio questions between common
+bodies, and in finding k from I.
+
+104
+00:04:35,896 --> 00:04:37,047
+Exam level now.
+
+105
+00:04:37,047 --> 00:04:41,621
+A solid sphere about a diameter, and
+a ring about its central axis, have
+
+106
+00:04:41,621 --> 00:04:43,522
+the same radius of gyration.
+
+107
+00:04:43,522 --> 00:04:47,189
+Find the ratio of the sphere's
+radius to the ring's radius.
+
+108
+00:04:47,189 --> 00:04:48,389
+Pause and solve.
+
+109
+00:04:53,789 --> 00:04:55,166
+The answer is B.
+
+110
+00:04:55,166 --> 00:04:56,927
+Root of five over two.
+
+111
+00:04:57,427 --> 00:04:59,967
+For the ring, k equals its radius.
+
+112
+00:05:00,467 --> 00:05:04,160
+For the sphere, k squared is two
+fifths of its radius squared.
+
+113
+00:05:04,660 --> 00:05:05,662
+Set them equal.
+
+114
+00:05:05,662 --> 00:05:08,989
+The sphere's radius over the
+ring's is root of five over two.
+
+115
+00:05:08,989 --> 00:05:10,602
+About one point five eight.
+
+116
+00:05:11,202 --> 00:05:12,743
+Here is your recap.
+
+117
+00:05:12,743 --> 00:05:14,326
+Screenshot this card.
+
+118
+00:05:17,526 --> 00:05:19,465
+Can you answer these without help?
+
+119
+00:05:19,865 --> 00:05:20,765
+One.
+
+120
+00:05:20,304 --> 00:05:23,102
+What does the radius of
+gyration of a body mean?
+
+121
+00:05:24,002 --> 00:05:24,902
+Two.
+
+122
+00:05:24,444 --> 00:05:27,616
+Why is a disc's radius of
+gyration less than its radius?
+
+123
+00:05:28,516 --> 00:05:29,416
+Three.
+
+124
+00:05:29,099 --> 00:05:33,504
+Why do a ring and a hollow cylinder
+of the same mass and radius have the
+
+125
+00:05:33,504 --> 00:05:34,404
+same I?
+
+126
+00:05:35,092 --> 00:05:39,943
+Next time: spin a coin flat, then on
+its edge, then about a point on its
+
+127
+00:05:39,943 --> 00:05:40,843
+rim.
+
+128
+00:05:40,447 --> 00:05:42,927
+Three different answers from one coin.
+
+129
+00:05:42,927 --> 00:05:45,961
+The theorems of perpendicular
+and parallel axes.

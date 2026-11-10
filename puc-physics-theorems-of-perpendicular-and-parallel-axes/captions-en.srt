@@ -1,0 +1,539 @@
+1
+00:00:00,450 --> 00:00:02,449
+A gate swings about its hinge.
+
+2
+00:00:02,449 --> 00:00:04,258
+A wheel turns on its axle.
+
+3
+00:00:04,258 --> 00:00:06,598
+A pendulum swings from near its top.
+
+4
+00:00:06,998 --> 00:00:11,649
+Same kind of object, a different
+axis, a different moment of inertia.
+
+5
+00:00:12,099 --> 00:00:13,666
+Diya spins a coin flat.
+
+6
+00:00:13,666 --> 00:00:14,901
+Then on its edge.
+
+7
+00:00:14,901 --> 00:00:16,902
+Then on a pin through its rim.
+
+8
+00:00:17,252 --> 00:00:19,662
+One coin, three spins, three answers.
+
+9
+00:00:19,662 --> 00:00:21,990
+Must she start from scratch each time?
+
+10
+00:00:22,490 --> 00:00:23,390
+No.
+
+11
+00:00:22,927 --> 00:00:24,340
+Two shortcuts do it.
+
+12
+00:00:24,340 --> 00:00:27,252
+The theorems of perpendicular
+and parallel axes.
+
+13
+00:00:27,852 --> 00:00:30,764
+Note: these theorems are not
+in the current NCERT book.
+
+14
+00:00:30,764 --> 00:00:33,157
+They are in the ISC,
+JEE and NEET syllabus.
+
+15
+00:00:33,507 --> 00:00:37,755
+The perpendicular axes theorem works
+only for flat bodies, like a coin
+
+16
+00:00:37,755 --> 00:00:38,708
+or a plate.
+
+17
+00:00:39,108 --> 00:00:43,805
+The parallel axes theorem works for
+any body, as long as one axis passes
+
+18
+00:00:43,805 --> 00:00:45,749
+through the centre of mass.
+
+19
+00:00:46,349 --> 00:00:48,110
+First, perpendicular axes.
+
+20
+00:00:48,110 --> 00:00:49,447
+Lay the coin flat.
+
+21
+00:00:49,447 --> 00:00:53,670
+Draw x and y in its plane, and z
+straight up through its centre.
+
+22
+00:00:54,020 --> 00:00:56,654
+A bit of the coin sits at x and y.
+
+23
+00:00:56,654 --> 00:01:01,353
+Its distance from the z axis is r,
+and r squared equals x squared plus
+
+24
+00:01:01,353 --> 00:01:02,253
+y squared.
+
+25
+00:01:02,652 --> 00:01:05,081
+Multiply by m and add every bit.
+
+26
+00:01:05,081 --> 00:01:07,907
+The sum of m r squared splits in two.
+
+27
+00:01:08,307 --> 00:01:11,530
+Those are I about x, and I about y.
+
+28
+00:01:11,530 --> 00:01:14,143
+So I z equals I x plus I y.
+
+29
+00:01:14,743 --> 00:01:20,083
+For the coin, I z is half MR squared,
+and by symmetry I x equals I y.
+
+30
+00:01:20,083 --> 00:01:24,532
+So each is a quarter MR squared:
+the coin spun on its edge.
+
+31
+00:01:25,132 --> 00:01:26,151
+Now you try.
+
+32
+00:01:26,151 --> 00:01:29,992
+A ring has I equal to MR
+squared about its central axis.
+
+33
+00:01:29,992 --> 00:01:33,259
+About a diameter, is
+it MR squared, or half?
+
+34
+00:01:33,259 --> 00:01:34,526
+Pause and decide.
+
+35
+00:01:37,626 --> 00:01:38,816
+Half MR squared!
+
+36
+00:01:38,816 --> 00:01:41,274
+The two diameters share the total equally.
+
+37
+00:01:41,874 --> 00:01:44,813
+Now parallel axes, on our motion notebook.
+
+38
+00:01:44,813 --> 00:01:49,698
+A two kilogram disc, radius point two
+metres, spinning about its centre.
+
+39
+00:01:49,698 --> 00:01:51,336
+I is point zero four.
+
+40
+00:01:51,686 --> 00:01:54,950
+Move the axis point one
+metres away from the centre.
+
+41
+00:01:54,950 --> 00:01:58,423
+Now the centre of the disc
+goes round in a circle too.
+
+42
+00:01:58,823 --> 00:01:59,874
+Slow-mo replay.
+
+43
+00:01:59,874 --> 00:02:00,774
+Freeze.
+
+44
+00:02:00,873 --> 00:02:02,752
+The motion has two parts.
+
+45
+00:02:02,752 --> 00:02:07,062
+The centre goes round the axis,
+like a mass M at distance d.
+
+46
+00:02:07,062 --> 00:02:08,784
+That adds M d squared.
+
+47
+00:02:09,184 --> 00:02:13,071
+And it still turns about its
+own centre, keeping I c m.
+
+48
+00:02:13,071 --> 00:02:14,790
+Total: point zero six.
+
+49
+00:02:15,390 --> 00:02:17,341
+Slide the axis to the rim.
+
+50
+00:02:17,341 --> 00:02:22,520
+d is point two, M d squared is point
+zero eight, and I is point one two.
+
+51
+00:02:22,520 --> 00:02:24,042
+Three times as much.
+
+52
+00:02:24,442 --> 00:02:27,888
+On the graph, I against d
+squared is a straight line.
+
+53
+00:02:27,888 --> 00:02:31,062
+It starts at I c m, and
+its slope is the mass.
+
+54
+00:02:31,662 --> 00:02:33,116
+Why does this work?
+
+55
+00:02:33,116 --> 00:02:34,206
+Step by step.
+
+56
+00:02:34,556 --> 00:02:35,456
+Step one.
+
+57
+00:02:35,340 --> 00:02:38,448
+Measure each bit from the
+centre of mass with r.
+
+58
+00:02:38,448 --> 00:02:41,461
+From the new axis, its
+distance is r plus d.
+
+59
+00:02:42,211 --> 00:02:43,111
+Step two.
+
+60
+00:02:43,031 --> 00:02:44,420
+Square it and add.
+
+61
+00:02:44,420 --> 00:02:49,359
+You get the sum of m r squared, plus
+two d times the sum of m r, plus M
+
+62
+00:02:49,359 --> 00:02:50,259
+d squared.
+
+63
+00:02:50,979 --> 00:02:51,879
+Step three.
+
+64
+00:02:51,860 --> 00:02:55,672
+Measured from the centre of
+mass, the sum of m r is zero.
+
+65
+00:02:55,672 --> 00:02:57,539
+So the middle part vanishes.
+
+66
+00:02:58,289 --> 00:02:59,189
+Step four.
+
+67
+00:02:59,159 --> 00:03:02,020
+What is left is I c m plus M d squared.
+
+68
+00:03:02,770 --> 00:03:04,031
+Remember this.
+
+69
+00:03:04,031 --> 00:03:07,991
+Parallel axes: I equals
+I c m plus M d squared.
+
+70
+00:03:07,991 --> 00:03:13,400
+Perpendicular axes: I z equals I
+x plus I y, for flat bodies only.
+
+71
+00:03:14,100 --> 00:03:15,145
+Side by side.
+
+72
+00:03:15,145 --> 00:03:18,793
+A thin rod about its middle
+has ML squared over twelve.
+
+73
+00:03:19,193 --> 00:03:22,453
+Shift the axis to its
+end, half a length away.
+
+74
+00:03:22,453 --> 00:03:24,830
+Add M times L over two, squared.
+
+75
+00:03:24,830 --> 00:03:28,291
+That is ML squared over
+three, four times bigger.
+
+76
+00:03:28,291 --> 00:03:31,771
+That is why the ruler was
+hard to spin by its end.
+
+77
+00:03:32,371 --> 00:03:33,342
+Now you try.
+
+78
+00:03:33,342 --> 00:03:37,855
+Of all the parallel axes through a body,
+which one gives the smallest moment
+
+79
+00:03:37,855 --> 00:03:38,755
+of inertia?
+
+80
+00:03:38,722 --> 00:03:39,927
+Pause and decide.
+
+81
+00:03:43,127 --> 00:03:45,569
+The one through the centre of mass!
+
+82
+00:03:45,569 --> 00:03:48,333
+Any other axis adds M d squared on top.
+
+83
+00:03:48,983 --> 00:03:50,672
+Now, one worked example.
+
+84
+00:03:51,022 --> 00:03:54,218
+A two kilogram disc of
+radius point two metres.
+
+85
+00:03:54,218 --> 00:03:56,793
+Find I about a tangent in its plane.
+
+86
+00:03:57,293 --> 00:03:59,244
+First, perpendicular axes.
+
+87
+00:03:59,244 --> 00:04:02,761
+About a diameter, I is
+half of point zero four.
+
+88
+00:04:02,761 --> 00:04:04,018
+Point zero two.
+
+89
+00:04:04,768 --> 00:04:08,374
+The tangent is parallel
+to it, a distance R away.
+
+90
+00:04:08,374 --> 00:04:11,597
+Add MR squared: two times point zero four.
+
+91
+00:04:11,597 --> 00:04:12,954
+Point zero eight.
+
+92
+00:04:13,704 --> 00:04:16,791
+So I is point zero two
+plus point zero eight.
+
+93
+00:04:16,791 --> 00:04:18,981
+Point one kilogram metre squared.
+
+94
+00:04:19,631 --> 00:04:21,093
+Now, the exam trap.
+
+95
+00:04:21,443 --> 00:04:25,539
+Many students add M d squared
+between any two parallel axes.
+
+96
+00:04:25,939 --> 00:04:29,122
+But one axis must pass
+through the centre of mass.
+
+97
+00:04:29,122 --> 00:04:32,933
+Between two other axes, go
+through the centre of mass first.
+
+98
+00:04:33,583 --> 00:04:35,165
+Where is this asked?
+
+99
+00:04:35,165 --> 00:04:40,803
+In finding I about an edge, a corner or
+a tangent, using one or both theorems.
+
+100
+00:04:41,403 --> 00:04:42,682
+Exam level now.
+
+101
+00:04:42,682 --> 00:04:47,949
+A uniform square plate, mass M, side
+a, has I equal to M a squared over
+
+102
+00:04:47,949 --> 00:04:51,526
+six about its central axis
+at right angles to it.
+
+103
+00:04:51,526 --> 00:04:53,423
+Find I about a diagonal.
+
+104
+00:04:53,423 --> 00:04:54,756
+Pause and solve.
+
+105
+00:05:00,156 --> 00:05:01,532
+The answer is B.
+
+106
+00:05:01,532 --> 00:05:03,399
+M a squared over twelve.
+
+107
+00:05:03,899 --> 00:05:08,243
+The two diagonals cross at right angles
+in the plate, through its centre.
+
+108
+00:05:08,743 --> 00:05:13,790
+So by perpendicular axes, the two
+diagonal values add up to M a squared
+
+109
+00:05:13,790 --> 00:05:14,702
+over six.
+
+110
+00:05:15,202 --> 00:05:17,008
+By symmetry they are equal.
+
+111
+00:05:17,008 --> 00:05:19,364
+So each is M a squared over twelve.
+
+112
+00:05:19,964 --> 00:05:21,504
+Here is your recap.
+
+113
+00:05:21,504 --> 00:05:23,087
+Screenshot this card.
+
+114
+00:05:26,287 --> 00:05:28,226
+Can you answer these without help?
+
+115
+00:05:28,626 --> 00:05:29,526
+One.
+
+116
+00:05:29,052 --> 00:05:32,244
+Why must one of the axes pass
+through the centre of mass?
+
+117
+00:05:33,144 --> 00:05:34,044
+Two.
+
+118
+00:05:33,589 --> 00:05:37,259
+Why does the perpendicular axes
+theorem work only for flat bodies?
+
+119
+00:05:38,159 --> 00:05:39,059
+Three.
+
+120
+00:05:38,754 --> 00:05:42,963
+Which parallel axis gives the
+smallest moment of inertia, and why?
+
+121
+00:05:43,863 --> 00:05:47,781
+Next time: a potter keeps a heavy
+wheel turning with one foot.
+
+122
+00:05:47,781 --> 00:05:49,914
+How much work does each push do?
+
+123
+00:05:49,914 --> 00:05:52,601
+Torque, work and
+rotational kinetic energy.

@@ -1,0 +1,557 @@
+1
+00:00:00,450 --> 00:00:03,378
+A knife sharpener pedals
+to keep his stone spinning.
+
+2
+00:00:03,378 --> 00:00:05,657
+A child pulls a string to spin a top.
+
+3
+00:00:06,057 --> 00:00:09,492
+Each one gives a push, and
+the push turns into spin.
+
+4
+00:00:09,942 --> 00:00:11,377
+Aarav watches a potter.
+
+5
+00:00:11,377 --> 00:00:15,355
+She kicks the heavy wheel a few
+times, and it keeps turning for a long
+
+6
+00:00:15,355 --> 00:00:16,255
+time.
+
+7
+00:00:16,195 --> 00:00:18,140
+Each kick is a push at the rim.
+
+8
+00:00:18,140 --> 00:00:20,298
+Where does the work of that kick go?
+
+9
+00:00:20,298 --> 00:00:22,149
+And how much spin does it buy?
+
+10
+00:00:22,649 --> 00:00:25,737
+To answer that, we need
+the dynamics of rotation.
+
+11
+00:00:26,337 --> 00:00:30,656
+Push a cart, and three things
+matter: force, mass and acceleration.
+
+12
+00:00:31,006 --> 00:00:33,485
+A turning wheel has a partner for each.
+
+13
+00:00:33,485 --> 00:00:35,391
+Torque does the job of force.
+
+14
+00:00:35,791 --> 00:00:40,310
+Moment of inertia does the job of
+mass: how hard the body is to spin.
+
+15
+00:00:40,710 --> 00:00:46,033
+Angular acceleration does the job of
+acceleration: how fast the spin grows.
+
+16
+00:00:46,633 --> 00:00:48,015
+Our motion notebook.
+
+17
+00:00:48,015 --> 00:00:50,113
+A heavy wheel on a fixed axle.
+
+18
+00:00:50,113 --> 00:00:53,438
+Its moment of inertia is
+four kilogram metre squared.
+
+19
+00:00:53,788 --> 00:00:58,006
+The foot pushes the rim with twenty
+newtons, half a metre from the axle.
+
+20
+00:00:58,006 --> 00:01:00,754
+Torque: twenty times
+half, ten newton metres.
+
+21
+00:01:01,154 --> 00:01:02,515
+Watch it spin up.
+
+22
+00:01:02,515 --> 00:01:04,241
+Alpha is torque over I.
+
+23
+00:01:04,241 --> 00:01:05,388
+Ten over four.
+
+24
+00:01:05,388 --> 00:01:08,201
+Two point five radians per second squared.
+
+25
+00:01:08,601 --> 00:01:11,004
+After two seconds, the push stops.
+
+26
+00:01:11,004 --> 00:01:15,722
+The wheel has turned five radians,
+and spins at five radians per second.
+
+27
+00:01:16,222 --> 00:01:17,561
+The push is gone.
+
+28
+00:01:17,561 --> 00:01:20,598
+Will the wheel slow
+down, or keep its spin?
+
+29
+00:01:20,598 --> 00:01:21,767
+Ignore friction.
+
+30
+00:01:21,767 --> 00:01:23,045
+Pause and decide.
+
+31
+00:01:26,145 --> 00:01:27,585
+It keeps its spin!
+
+32
+00:01:27,585 --> 00:01:30,070
+No torque, no angular acceleration.
+
+33
+00:01:30,070 --> 00:01:32,627
+It stays at five radians per second.
+
+34
+00:01:33,127 --> 00:01:34,047
+Slow-mo replay.
+
+35
+00:01:34,047 --> 00:01:36,041
+Freeze in the middle of the push.
+
+36
+00:01:36,391 --> 00:01:41,714
+In a tiny turn, d theta, the rim
+moves a small arc, r times d theta.
+
+37
+00:01:42,114 --> 00:01:44,185
+The force acts along that arc.
+
+38
+00:01:44,185 --> 00:01:46,226
+So the work is F r d theta.
+
+39
+00:01:46,226 --> 00:01:48,247
+That is torque times d theta.
+
+40
+00:01:48,647 --> 00:01:52,340
+On the graph, energy grows in
+a straight line with angle.
+
+41
+00:01:52,340 --> 00:01:55,439
+The slope is the torque,
+ten joules per radian.
+
+42
+00:01:55,839 --> 00:01:57,956
+Fifty joules of work went in.
+
+43
+00:01:57,956 --> 00:02:01,705
+The wheel now holds exactly
+fifty joules of spin energy.
+
+44
+00:02:02,305 --> 00:02:05,477
+But why does a spinning
+wheel have kinetic energy?
+
+45
+00:02:05,477 --> 00:02:06,518
+Link by link.
+
+46
+00:02:06,868 --> 00:02:09,620
+Every bit of the wheel moves in a circle.
+
+47
+00:02:09,620 --> 00:02:12,178
+A bit at distance r moves at r omega.
+
+48
+00:02:12,578 --> 00:02:18,004
+Its energy is one half m v squared,
+so one half m r squared omega squared.
+
+49
+00:02:18,404 --> 00:02:19,765
+Add all the bits.
+
+50
+00:02:19,765 --> 00:02:21,929
+The sum of m r squared is I.
+
+51
+00:02:21,929 --> 00:02:25,179
+So the spin energy is
+one half I omega squared.
+
+52
+00:02:25,779 --> 00:02:28,225
+Now the rules, one step at a time.
+
+53
+00:02:28,575 --> 00:02:29,516
+Step one.
+
+54
+00:02:29,516 --> 00:02:31,294
+Work in a tiny turn.
+
+55
+00:02:31,294 --> 00:02:35,102
+d W equals F r d theta,
+which is tau d theta.
+
+56
+00:02:35,852 --> 00:02:36,752
+Step two.
+
+57
+00:02:36,714 --> 00:02:39,913
+For a steady torque,
+add up the tiny turns.
+
+58
+00:02:39,913 --> 00:02:41,428
+W equals tau theta.
+
+59
+00:02:42,178 --> 00:02:43,098
+Step three.
+
+60
+00:02:43,098 --> 00:02:44,900
+Work per second is power.
+
+61
+00:02:44,900 --> 00:02:46,341
+P equals tau omega.
+
+62
+00:02:47,091 --> 00:02:47,991
+Step four.
+
+63
+00:02:47,984 --> 00:02:50,305
+This power feeds the spin energy.
+
+64
+00:02:50,305 --> 00:02:52,524
+Tau omega equals I omega alpha.
+
+65
+00:02:53,274 --> 00:02:54,174
+Step five.
+
+66
+00:02:54,111 --> 00:02:55,093
+Cancel omega.
+
+67
+00:02:55,093 --> 00:02:56,479
+Tau equals I alpha.
+
+68
+00:02:56,479 --> 00:02:58,645
+Newton's second law, for turning.
+
+69
+00:02:59,395 --> 00:03:00,295
+Remember this.
+
+70
+00:03:00,281 --> 00:03:03,947
+A torque does work as it turns,
+and that work becomes spin energy.
+
+71
+00:03:04,647 --> 00:03:05,756
+Side by side.
+
+72
+00:03:05,756 --> 00:03:10,133
+The same torque, ten newton
+metres, over the same five radians.
+
+73
+00:03:10,533 --> 00:03:12,854
+A light wheel, with I equal to one.
+
+74
+00:03:12,854 --> 00:03:15,454
+And a heavy wheel, with I equal to four.
+
+75
+00:03:16,054 --> 00:03:17,021
+Now you try.
+
+76
+00:03:17,021 --> 00:03:19,678
+Which wheel ends up with more spin energy?
+
+77
+00:03:19,678 --> 00:03:20,880
+Pause and decide.
+
+78
+00:03:24,080 --> 00:03:24,980
+The same!
+
+79
+00:03:24,853 --> 00:03:28,633
+Both get fifty joules: the
+work, tau theta, is the same.
+
+80
+00:03:28,633 --> 00:03:30,810
+The light wheel just spins faster.
+
+81
+00:03:31,460 --> 00:03:33,150
+Now, one worked example.
+
+82
+00:03:33,500 --> 00:03:38,393
+A motor spins a grinding wheel, I
+equal to zero point five, from rest to
+
+83
+00:03:38,393 --> 00:03:41,247
+twenty radians per second in four seconds.
+
+84
+00:03:41,247 --> 00:03:43,832
+Find torque, work and average power.
+
+85
+00:03:44,332 --> 00:03:47,155
+Angular acceleration is twenty over four.
+
+86
+00:03:47,155 --> 00:03:49,436
+Five radians per second squared.
+
+87
+00:03:50,186 --> 00:03:51,671
+Torque is I alpha.
+
+88
+00:03:51,671 --> 00:03:53,701
+Zero point five times five.
+
+89
+00:03:53,701 --> 00:03:55,838
+Two point five newton metres.
+
+90
+00:03:56,588 --> 00:03:58,961
+Work equals the spin energy gained.
+
+91
+00:03:58,961 --> 00:04:02,671
+One half, times zero point
+five, times twenty squared.
+
+92
+00:04:02,671 --> 00:04:04,058
+One hundred joules.
+
+93
+00:04:04,808 --> 00:04:07,343
+Average power: one hundred over four.
+
+94
+00:04:07,343 --> 00:04:08,660
+Twenty five watts.
+
+95
+00:04:09,310 --> 00:04:10,772
+Now, the exam trap.
+
+96
+00:04:11,122 --> 00:04:15,912
+Many students put omega in r p m
+straight into one half I omega squared.
+
+97
+00:04:16,312 --> 00:04:19,422
+But omega must be in radians per second.
+
+98
+00:04:19,422 --> 00:04:24,673
+One hundred and twenty r p m is one
+hundred and twenty times two pi over
+
+99
+00:04:24,673 --> 00:04:26,131
+sixty: four pi.
+
+100
+00:04:26,781 --> 00:04:28,068
+Where is this asked?
+
+101
+00:04:28,068 --> 00:04:31,386
+In torque and work, power,
+and flywheel energy questions.
+
+102
+00:04:31,986 --> 00:04:33,281
+Exam level now.
+
+103
+00:04:33,281 --> 00:04:38,320
+A flywheel with I equal to two kilogram
+metre squared spins at six hundred
+
+104
+00:04:38,320 --> 00:04:39,220
+r p m.
+
+105
+00:04:39,122 --> 00:04:42,284
+A steady brake stops
+it in ten revolutions.
+
+106
+00:04:42,284 --> 00:04:44,139
+Find the braking torque.
+
+107
+00:04:44,139 --> 00:04:45,490
+Pause and solve.
+
+108
+00:04:50,890 --> 00:04:52,358
+The answer is B.
+
+109
+00:04:52,358 --> 00:04:54,281
+Twenty pi newton metres.
+
+110
+00:04:54,781 --> 00:04:57,898
+Omega: six hundred
+times two pi over sixty.
+
+111
+00:04:57,898 --> 00:04:59,989
+Twenty pi radians per second.
+
+112
+00:05:00,489 --> 00:05:04,373
+Spin energy: one half times
+two times twenty pi squared.
+
+113
+00:05:04,373 --> 00:05:06,549
+Four hundred pi squared joules.
+
+114
+00:05:07,049 --> 00:05:09,649
+Ten revolutions is twenty pi radians.
+
+115
+00:05:09,649 --> 00:05:13,338
+Torque times twenty pi equals
+four hundred pi squared.
+
+116
+00:05:13,338 --> 00:05:16,002
+So torque is twenty pi newton metres.
+
+117
+00:05:16,602 --> 00:05:18,143
+Here is your recap.
+
+118
+00:05:18,143 --> 00:05:19,726
+Screenshot this card.
+
+119
+00:05:22,926 --> 00:05:24,865
+Can you answer these without help?
+
+120
+00:05:25,265 --> 00:05:26,165
+One.
+
+121
+00:05:25,692 --> 00:05:28,665
+Why does the wheel keep
+spinning after the push stops?
+
+122
+00:05:29,565 --> 00:05:30,465
+Two.
+
+123
+00:05:29,994 --> 00:05:33,832
+Why do a light and a heavy wheel get
+the same spin energy from the same
+
+124
+00:05:33,832 --> 00:05:34,732
+push?
+
+125
+00:05:35,203 --> 00:05:36,103
+Three.
+
+126
+00:05:35,786 --> 00:05:40,072
+Why must omega be in radians per
+second in one half I omega squared?
+
+127
+00:05:40,972 --> 00:05:44,232
+Next time: spin on a chair
+and pull your arms in.
+
+128
+00:05:44,232 --> 00:05:46,654
+Nobody pushes you, yet you speed up.
+
+129
+00:05:46,654 --> 00:05:47,554
+How?
+
+130
+00:05:47,134 --> 00:05:49,151
+Conservation of angular momentum.
