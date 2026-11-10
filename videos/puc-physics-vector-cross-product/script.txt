@@ -1,0 +1,55 @@
+H1|0.4|Twist a bottle cap, and it rises. Turn a screw, and it sinks in.
+H2|0.45|Your twist goes round, flat. But the motion goes straight up or down.
+H3|0.35|Aarav fixes his cycle with a spanner. He pushes the handle sideways.
+H4|0.5|But the bolt does not move sideways. It goes straight in, at right angles to the spanner and to his push. Why that way?
+H5|0.6|One rule explains it: the cross product.
+P1|0.35|Multiply two vectors with a cross, and you get a new vector.
+P2|0.4|Its size is A times B times sine theta. Theta is the angle between them, tail to tail.
+P3|0.4|Its direction is at right angles to both A and B, straight out of their flat plane.
+P4|0.6|Up or down? Use the right-hand rule. Curl your fingers from A towards B. Your thumb points along A cross B.
+S1|0.35|To the motion notebook. A is three units along the floor. B is two units, lying on top of A.
+S2|0.4|Theta is zero. They make no area. So A cross B is zero.
+S3|0.4|Now turn B. At ninety degrees, the shaded area is biggest. A cross B is six, pointing straight up.
+S4|0.4|Keep turning. At one hundred and eighty degrees, they lie in one line again. Zero.
+S5|0.4|Past one eighty, B is on the other side. A cross B flips, and points down.
+S6|0.5|On the graph, A cross B follows a sine curve. And its size always equals the shaded area.
+S7|0.35|Slow-mo replay. Freeze at thirty degrees.
+S8|0.4|The base is three. The height is two times sine thirty, which is one. So the area is three, and A cross B is three.
+S9|0.6|Curl your right hand from A to B. The thumb points up.
+S10|3.1|Now swap the order: B cross A. Same direction, or opposite? Pause and decide.
+S11|0.6|Opposite! Curl from B to A, and the thumb points down. B cross A equals minus A cross B.
+D1|0.35|Now the unit vectors, one step at a time.
+D2|0.75|Step one. i cross i is zero. Any vector crossed with itself is zero, because sine zero is zero.
+D3|0.75|Step two. i cross j is k. j cross k is i. k cross i is j. Go round the circle, i, j, k, and you get plus.
+D4|0.75|Step three. Go the other way round, and you get minus. j cross i is minus k.
+D5|0.75|Step four. For any two vectors, multiply out the parts. It packs neatly into this determinant.
+T1|0.7|Remember this. A cross B is a vector at right angles to both. Its size is A B sine theta.
+R1|0.35|Back to Aarav's spanner, link by link.
+R2|0.4|r points from the bolt along the handle. F is his push, across the handle.
+R3|0.4|Both lie flat, in the plane of the spanner. So r cross F must point out of that plane, along the bolt.
+R4|0.6|Curl from r to F, and the thumb points into the wood. So the bolt goes in. This r cross F has a name, torque. We meet it soon.
+K1|0.4|Side by side. The dot product gives a plain number, with cos theta. It is biggest when the vectors line up.
+K2|0.6|The cross product gives a vector, with sine theta. It is biggest at ninety degrees, and zero when they line up.
+K3|3.2|Now you try. A cross B is zero, but neither vector is zero. What angle is between them? Pause and decide.
+K4|0.65|Zero, or one eighty degrees! Sine is zero at both. The vectors are parallel, or opposite.
+W1|0.35|Now, one worked example.
+W2|0.5|A is two i plus three j. B is four i plus j. Find A cross B, and the area they make.
+W3|0.75|Multiply out. i cross i and j cross j are zero, so only two terms are left.
+W4|0.75|Two i cross j is two k. Three j cross four i is twelve, j cross i. That is minus twelve k.
+W5|0.75|Add them. A cross B is minus ten k. It points down, into the page.
+W6|0.65|The area of the parallelogram is its size, ten square units.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students write i cross k equals plus j.
+X3|0.65|But i to k goes against the circle. So i cross k is minus j. Only k cross i is plus j.
+E1|0.6|Where is this asked? Cross products from parts, areas of parallelograms and triangles, and parallel vectors.
+Q1|5.4|Exam level now. A is two i minus three j plus k. B is four i plus lambda j plus mu k. A cross B is zero. Find lambda and mu. Pause and solve.
+A1|0.5|The answer is A. Lambda is minus six, and mu is two.
+A2|0.5|A cross B is zero, and neither is zero. So A and B are parallel.
+A3|0.5|So B is a number times A. Four is two times two, so B equals two A.
+A4|0.6|Lambda is two times minus three, minus six. Mu is two times one, two.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. Why is the cross product of two parallel vectors zero?
+Y3|0.9|Two. How do you find which way A cross B points?
+Y4|0.9|Three. Why does B cross A point the opposite way to A cross B?
+N1|0.3|Next time: on a merry-go-round, all the horses turn together, yet the outer horse travels faster. How? Angular velocity and linear velocity.
