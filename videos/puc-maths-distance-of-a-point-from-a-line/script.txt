@@ -1,0 +1,47 @@
+H1|0.4|A house stands some way from a long, straight road.
+H2|0.45|You could walk from the house to the road along many paths. Some long, some short.
+H3|0.35|Aarav wants the shortest one.
+H4|0.5|Which path is it, and how long is it, if all we know is the house's position and the road's equation?
+H5|0.65|One neat formula answers both. Let us find it.
+L1|0.4|Here is the road, the line three x plus four y minus twelve equals zero. The house is the point P, at five, four.
+L2|0.4|Let a point Q slide along the road, and watch the distance from P to Q.
+L3|0.4|Far away, it is big. As Q comes closer, it shrinks. Seven. Five. Four point four. Three point nine.
+L4|0.6|Then it starts growing again. The smallest distance, three point eight, comes exactly when P Q meets the road at a right angle.
+L5|0.65|So the distance of a point from a line means the length of the perpendicular, from the point to the line.
+F1|0.4|To find that length without drawing, write the line with everything on one side. A x plus B y plus C equals zero.
+F2|0.6|Here, A is three, B is four, and C is minus twelve.
+D1|0.75|Step one. From P, go straight down to the road. This vertical gap is the size of A x one plus B y one plus C, over B.
+D2|0.75|Step two. The perpendicular is shorter. Together with the vertical gap, it makes a small right triangle.
+D3|0.75|Step three. That small triangle has the same shape as the road's own slope triangle. Run four, rise three, long side five. So the perpendicular is four fifths of the gap. In general, B over the root of A squared plus B squared.
+D4|0.75|Step four. The B's cancel. d is the size of A x one plus B y one plus C, over the root of A squared plus B squared.
+D5|0.65|For our house, the top is fifteen plus sixteen minus twelve, which is nineteen. The bottom is five. Nineteen over five is three point eight. It matches.
+K1|0.4|Side by side. The distance of a point from a line needs one point and the line.
+K2|0.6|The distance between two parallel lines is the same everywhere. With A x plus B y plus C one, and A x plus B y plus C two, it is the size of C one minus C two, over the same root.
+K3|3.2|Your turn. A point lies on the line itself. What is its distance from the line? Pause and decide.
+K4|0.65|Zero! For a point on the line, A x one plus B y one plus C is zero. So the top is zero.
+T1|0.7|Remember this. The shortest path is the perpendicular. Its length is the size of A x one plus B y one plus C, over root A squared plus B squared.
+V1|0.4|One habit to keep. The line must equal zero before you use the formula.
+V2|0.6|Three x plus four y equals ten becomes three x plus four y minus ten equals zero. So C is minus ten, not ten.
+V3|3.2|Quick one. How far is the origin from the line three x plus four y equals ten? Pause and think.
+V4|0.65|Two! Put in zero, zero. The top is the size of minus ten, which is ten. Ten over five is two.
+W1|0.35|Now, one worked example.
+W2|0.5|Find the distance of the point three, one from the line twelve x minus five y plus eight equals zero.
+W3|0.75|Step one. Read off A, B and C. Twelve, minus five, and eight.
+W4|0.75|Step two. Top. Twelve times three, minus five times one, plus eight. That is thirty nine.
+W5|0.75|Step three. Bottom. The root of one hundred forty four plus twenty five. The root of one sixty nine is thirteen.
+W6|0.65|Step four. Thirty nine over thirteen is three. The point is three units from the line.
+X1|0.35|Now, the exam trap.
+X2|0.4|Find the distance between three x plus four y minus two equals zero, and six x plus eight y plus one equals zero. Many students get three fifths.
+X3|0.65|But the x and y parts must match first. Halve the second line. Three x plus four y plus one half equals zero. Minus two minus one half, over five. The answer is one half.
+J1|0.6|Where is this asked? In JEE Main, for example in April twenty nineteen: lines parallel to a given line, at a set distance from the origin.
+Q1|5.4|Exam level now. Two points on the x axis are at distance four from this line. Find the sum of their x coordinates. Pause and solve.
+A1|0.5|The answer is B. Six.
+A2|0.5|A point on the x axis is h, zero. Its distance is the size of four h minus twelve, over five.
+A3|0.5|Set that equal to four. So four h minus twelve is plus twenty, or minus twenty.
+A4|0.6|That gives h equals eight, or h equals minus two. Their sum is six.
+F9|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these three questions without help?
+Y2|0.9|One. How far is the origin from the line five x plus twelve y equals twenty six?
+Y3|0.9|Two. Why is the shortest path from a point to a line always perpendicular?
+Y4|1.1|Three. What is the distance between x plus y equals one, and x plus y equals three?
+N1|0.3|Next time, a new chapter: slice an ice cream cone four different ways, and four famous curves appear. Sections of a cone, and the circle.

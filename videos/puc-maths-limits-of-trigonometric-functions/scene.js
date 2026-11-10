@@ -47,7 +47,7 @@ $('#hRs').innerHTML = HR.map(([s, v, c], i) => `<div class="lr" id="hr${i}" styl
 const tHr = [T0('H2') + 0.2, wt('H2', 'zero'), wt('H4', 'one')];
 
 /* ---------- L: live circle ---------- */
-const ls = $('#lS'), O = [110, 500], R = 380, P = x => [O[0] + R * Math.cos(x), O[1] - R * Math.sin(x)];
+const ls = $('#lS'), O = [180, 500], R = 380, P = x => [O[0] + R * Math.cos(x), O[1] - R * Math.sin(x)];
 mk(ls, 'line', { x1: O[0], y1: O[1], x2: O[0] + R + 40, y2: O[1], stroke: C.ink, 'stroke-width': 3 });
 mk(ls, 'line', { x1: O[0], y1: O[1], x2: O[0], y2: O[1] - R - 30, stroke: C.ink, 'stroke-width': 3 });
 const lQ = mk(ls, 'path', { d: `M${O[0] + R},${O[1]} A${R},${R} 0 0 0 ${O[0]},${O[1] - R}`, fill: 'none', stroke: C.ink, 'stroke-width': 2.5, opacity: 0.55 });
@@ -67,11 +67,11 @@ const setL = x => { const [px, py] = P(x); attr(lOP, 'x1', O[0]); attr(lOP, 'y1'
   const r = 64, ax = O[0] + r * Math.cos(x), ay = O[1] - r * Math.sin(x); attr(lAng, 'd', `M${O[0] + r},${O[1]} A${r},${r} 0 0 0 ${ax.toFixed(1)},${ay.toFixed(1)}`);
   attr(lAx, 'x', (O[0] + 90 * Math.cos(x / 2)).toFixed(1)); attr(lAx, 'y', (O[1] - 90 * Math.sin(x / 2) + 8).toFixed(1));
   attr(lP, 'cx', px.toFixed(1)); attr(lP, 'cy', py.toFixed(1));
-  attr(lSl, 'x', (px - 14).toFixed(1)); attr(lSl, 'y', ((py + O[1]) / 2).toFixed(1)); attr(lSl, 'text-anchor', 'end'); lSl.style.opacity = x > 0.12 ? '1' : '0'; };
+  attr(lSl, 'x', (px - 14).toFixed(1)); attr(lSl, 'y', ((py + O[1]) / 2).toFixed(1)); attr(lSl, 'text-anchor', 'end'); lSl.style.opacity = x > 0.3 ? '1' : '0'; };
 const LR = [[X, x => x.toFixed(3), XV], [SX, x => Math.sin(x).toFixed(3), SN], [`${SX} \\,/\\, ${X}`, x => sinc(x).toFixed(3), LM]];
-$('#lRs').innerHTML = LR.map(([s, , c], i) => `<div class="lr" id="lr${i}" style="top:${140 + i * 84}px"><div class="sy">${K(s)}</div><div class="v" style="color:${c}"></div></div>`).join('');
+$('#lRs').innerHTML = LR.map(([s, , c], i) => `<div class="lr" id="lr${i}" style="top:${128 + i * 80}px"><div class="sy">${K(s)}</div><div class="v" style="color:${c}"></div></div>`).join('');
 const LT = [['x = 1', '0.841', '0.841'], ['x = 0.5', '0.479', '0.959'], ['x = 0.1', '0.0998', '0.998']];
-$('#lTb').innerHTML = LT.map(([a, b, c], i) => `<div class="tr3" id="lt${i}" style="top:${400 + i * 60}px;height:52px"><span style="left:20px;top:12px;color:${XV}">${a}</span><span style="left:220px;top:12px;color:${SN}">sin ${b}</span><span style="right:20px;top:12px;color:${LM}">ratio ${c}</span></div>`).join('');
+$('#lTb').innerHTML = LT.map(([a, b, c], i) => `<div class="tr3" id="lt${i}" style="top:${378 + i * 58}px;height:50px"><span style="left:20px;top:12px;color:${XV}">${a}</span><span style="left:220px;top:12px;color:${SN}">sin ${b}</span><span style="right:20px;top:12px;color:${LM}">ratio ${c}</span></div>`).join('');
 $('#lTb').querySelectorAll('.tr3 span').forEach(s => { s.style.fontSize = '24px'; });
 const tLt = [wt('L2', 'ratio'), wt('L3', 'ratio'), wt('L3', 'it')];
 const xLive = stepper(1, [[wt('L3', 'five') - 0.3, 0.5], [wt('L3', 'At', 1) - 0.2, 0.1], [T0('L4'), 0.02]]);
@@ -101,7 +101,7 @@ const dsol = PUC.solution($('#da'), [
   [K(`${CX} \\to 1 \\Rightarrow \\lim_{x \\to 0} ${RAT} = ${lm('1')}`)]], { label: '', y0: 96, dy: 92 });
 [...$('#da').querySelectorAll('.lbl')].slice(1).forEach(e => e.remove());
 const tD = [wt('D2', 'Compare'), wt('D3', 'areas'), wt('D3', 'So'), wt('D4', 'cos'), wt('D5', 'tends')];
-const ds = $('#dS'), DO = [100, 500], DR = 330, DX0 = 0.8;
+const ds = $('#dS'), DO = [80, 500], DR = 300, DX0 = 0.8;
 const dC = [DO[0] + DR * Math.cos(DX0), DO[1] - DR * Math.sin(DX0)], dA = [DO[0] + DR, DO[1]], dB = [DO[0] + DR, DO[1] - DR * Math.tan(DX0)];
 const pts = a => a.map(p => p.map(v => v.toFixed(1)).join(',')).join(' ');
 const dT2 = mk(ds, 'polygon', { points: pts([DO, dA, dB]), fill: TN, opacity: 0 });
@@ -115,8 +115,8 @@ mk(ds, 'line', { x1: dC[0], y1: dC[1], x2: dA[0], y2: dA[1], stroke: C.ink, 'str
 mk(ds, 'line', { x1: dC[0], y1: dC[1], x2: dC[0], y2: DO[1], stroke: SN, 'stroke-width': 4, 'stroke-dasharray': '6 6' });
 [[DO, 'O', -26, 26], [dA, 'A', 10, 28], [dC, 'C', -26, -8], [dB, 'B', 12, 0], [[dC[0], DO[1]], 'D', -8, 28]].forEach(([p, s, dx, dy]) => txt(ds, p[0] + dx, p[1] + dy, s, { 'font-family': 'Poppins', 'font-weight': 700, 'font-size': 22, fill: C.ink }));
 txt(ds, DO[0] + 70, DO[1] - 14, 'x', { 'font-family': 'Poppins', 'font-style': 'italic', 'font-weight': 700, 'font-size': 24, fill: XV });
-const DL = [['small triangle OAC', '½ sin x', SN], ['sector OAC', '½ x', XV], ['big triangle OAB', '½ tan x', TN]];
-$('#db').insertAdjacentHTML('beforeend', DL.map(([a, b, c], i) => `<div class="ch" id="dl${i}" style="left:470px;top:${200 + i * 64}px;border-left:6px solid ${c}">${a}<b style="margin-left:10px;color:${c};font-family:'IBM Plex Mono'" class="ar">${b}</b></div>`).join(''));
+const DL = [['small triangle', '½ sin x', SN], ['sector', '½ x', XV], ['big triangle', '½ tan x', TN]];
+$('#db').insertAdjacentHTML('beforeend', DL.map(([a, b, c], i) => `<div class="ch" id="dl${i}" style="left:430px;top:${200 + i * 64}px;border-left:6px solid ${c};font-size:20px">${a}<b style="margin-left:10px;color:${c};font-family:'IBM Plex Mono'" class="ar">${b}</b></div>`).join(''));
 const tShp = [wt('D2', 'small'), wt('D2', 'sector'), wt('D2', 'big')];
 
 /* ---------- R: radians vs degrees ---------- */
@@ -233,7 +233,7 @@ M.on(t => {
     const xs = 1.4 * (1 - M.io((t - wt('S2', 'trapped')) / 1.8)) + 0.001;
     sDots.forEach(d => { M.vis(d.c, t, wt('S2', 'trapped') - 0.2, 1e9, { dy: 0, fade: 0.1 }); attr(d.c, 'cx', sp.X(xs).toFixed(1)); attr(d.c, 'cy', sp.Y(d.fn(xs)).toFixed(1)); });
     M.vis($('#sb'), t, T0('S3') - 0.1, out, { dx: 60, dy: 0, ...o });
-    const q = M.io((t - tSq) / 1.4), yT = 100 + 150 * q, yB = 404 - 150 * q;
+    const q = M.io((t - tSq) / 1.4), yT = 100 + 96 * q, yB = 404 - 96 * q;
     attr(bT, 'y', yT.toFixed(1)); attr(bB, 'y', yB.toFixed(1));
     const room = (yB - yT - 56) / 2 - 14, wig = Math.max(0, room) * Math.sin(t * 3.1) * 0.9, cy = SY + wig;
     attr(cheese, 'd', `M190,${(cy - 12).toFixed(1)} L590,${(cy - 12).toFixed(1)} L590,${(cy + 12).toFixed(1)} L190,${(cy + 12).toFixed(1)} Z`);
