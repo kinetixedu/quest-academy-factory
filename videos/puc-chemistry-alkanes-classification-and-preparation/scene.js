@@ -83,7 +83,7 @@ const sC = [Cat(b, C1x, CY), Cat(b, C2x, CY)];
 const sSurf = Array.from({ length: 13 }, (_, i) => mk(b, 'circle', { cx: 128 + i * 44, cy: 492, r: 20, fill: '#B9C0CA' }));
 const sSl = lab(b, 392, 546, 'METAL CATALYST · Pt, Pd OR Ni', NA, { 'text-anchor': 'middle', 'font-size': 17 });
 const sHb = bond(b, 0, 0, 0, 0, 4); const sH = [Hat(b, 0, 0, NH), Hat(b, 0, 0, NH)];
-const RDS = [['C–C BOND', 'rd0', 96], ['HYDROGEN ATOMS', 'rd1', 180], ['MOLECULE', 'rd2', 264]];
+const RDS = [['C-C BOND', 'rd0', 96], ['HYDROGEN ATOMS', 'rd1', 180], ['MOLECULE', 'rd2', 264]];
 $('#rds').innerHTML = RDS.map(([k, id, top]) => `<div class="rd" id="${id}" style="top:${top}px"><span class="ck">${k}</span><span class="cv"></span></div>`).join('');
 $('#ebs').innerHTML = eqrow('eb0', 352, `\\mathrm{CH_2{=}CH_2} + ${tc(NH, '\\mathrm{H_2}')} \\xrightarrow{\\mathrm{Pt/Pd/Ni}} \\mathrm{CH_3{-}CH_3}`, 'ALKANE', NH)
   + `<div class="rowl" id="eb1" style="top:440px"><span>Pt, Pd</span><span class="tg" style="color:${OK}">ROOM TEMPERATURE</span></div><div class="rowl" id="eb2" style="top:512px;height:56px"><span>Ni</span><span class="tg" style="color:${GC}">MORE HEAT AND PRESSURE</span></div>`;
@@ -96,10 +96,10 @@ const rM = [Cat(rs, 170, RY, 'CH₃'), Cat(rs, 614, RY, 'CH₃')], rB = [atom(rs
 const rMB = [bond(rs, 170, RY, 280, RY), bond(rs, 504, RY, 614, RY)];
 const rNa = [atom(rs, 280, 420, 26, NA, 'Na', 17), atom(rs, 504, 420, 26, NA, 'Na', 17)];
 const rCC = bond(rs, 330, RY, 454, RY);
-const rL = [lab(rs, 392, 110, '2 CH₃–Br + 2 Na · DRY ETHER', HC, { 'text-anchor': 'middle', 'font-size': 18 }), lab(rs, 392, 270, '', OK, { 'text-anchor': 'middle', 'font-size': 20, 'font-weight': 700 })];
+const rL = [lab(rs, 392, 110, '2 CH₃-Br + 2 Na · DRY ETHER', HC, { 'text-anchor': 'middle', 'font-size': 18 }), lab(rs, 392, 270, '', OK, { 'text-anchor': 'middle', 'font-size': 20, 'font-weight': 700 })];
 const rZ = mk(rs, 'g', {}); bond(rZ, 300, 300, 450, 300); Cat(rZ, 300, 300, 'CH₃'); const rZx = atom(rZ, 450, 300, 30, BR, 'Cl', 18); const rZl = lab(rZ, 392, 400, 'CHLOROMETHANE', BR, { 'text-anchor': 'middle', 'font-size': 20, 'font-weight': 700 });
-const rNb = [lab(rs, 280, 548, 'NaBr', BR, { 'text-anchor': 'middle', 'font-size': 18, 'font-weight': 700 }), lab(rs, 504, 548, 'NaBr', BR, { 'text-anchor': 'middle', 'font-size': 18, 'font-weight': 700 })];
-$('#rrs').innerHTML = `<div class="rowl" id="rr0" style="top:84px"><span>Alkyl halide: one H swapped for X</span><span class="tg" style="color:${BR}">R–X</span></div>`
+const rNb = [lab(rs, 280, 456, 'NaBr', BR, { 'text-anchor': 'middle', 'font-size': 18, 'font-weight': 700 }), lab(rs, 504, 456, 'NaBr', BR, { 'text-anchor': 'middle', 'font-size': 18, 'font-weight': 700 })];
+$('#rrs').innerHTML = `<div class="rowl" id="rr0" style="top:84px"><span>Alkyl halide: one H swapped for X</span><span class="tg" style="color:${BR}">R-X</span></div>`
   + eqrow('rr1', 172, `\\mathrm{CH_3}${tc(BR, '\\mathrm{Cl}')} + \\mathrm{H_2} \\xrightarrow{\\mathrm{Zn,\\ H^+}} \\mathrm{CH_4} + \\mathrm{H}${tc(BR, '\\mathrm{Cl}')}`, 'NOT FOR F', RD)
   + eqrow('rr2', 268, `2\\mathrm{CH_3}${tc(BR, '\\mathrm{Br}')} + 2\\mathrm{Na} \\xrightarrow{\\text{dry ether}} \\mathrm{CH_3{-}CH_3} + 2\\mathrm{Na}${tc(BR, '\\mathrm{Br}')}`, 'WURTZ', NH)
   + `<div class="vt" id="rV" style="top:380px"><span>Carbons:</span><span style="color:${NH}">1 + 1 = 2</span></div><div class="pillp" id="rP" style="left:36px;top:490px">Wurtz doubles the carbon count</div>`;
@@ -109,8 +109,8 @@ const ds = $('#dS');
 const dMe = tile(ds, 230, 180, 120, 'CH₃', NH), dCo = tile(ds, 380, 180, 150, 'COONa', GC), dOh = tile(ds, 600, 180, 130, 'NaOH', HC);
 const dLink = bond(ds, 290, 180, 305, 180, 4);
 const dCao = lab(ds, 600, 240, 'CaO, HEAT', NA, { 'text-anchor': 'middle', 'font-size': 16 });
-const dP1 = tile(ds, 230, 330, 120, 'CH₄', NH), dP2 = tile(ds, 520, 330, 170, 'Na₂CO₃', GC);
-const dCnt = lab(ds, 392, 430, '2 C IN → 1 C OUT', NH, { 'text-anchor': 'middle', 'font-size': 22, 'font-weight': 700 });
+const dP1 = tile(ds, 230, 330, 120, 'CH₄', NH), dP2 = tile(ds, 520, 290, 170, 'Na₂CO₃', GC);
+const dCnt = lab(ds, 392, 390, '2 C IN → 1 C OUT', NH, { 'text-anchor': 'middle', 'font-size': 22, 'font-weight': 700 });
 $('#des').innerHTML = eqrow('de0', 478, `${tc(NH, '\\mathrm{CH_3}')}${tc(GC, '\\mathrm{COONa}')} + \\mathrm{NaOH} \\xrightarrow{\\mathrm{CaO},\\ \\Delta} ${tc(NH, '\\mathrm{CH_4}')} + \\mathrm{Na_2CO_3}`, 'ONE C LESS', NH);
 const ks = $('#kS');
 const kLiq = mk(ks, 'rect', { x: 164, y: 200, width: 456, height: 216, fill: '#EAF2F8' });
@@ -160,7 +160,7 @@ const mcq = PUC.mcq($('#mq'), { pat: 'NEET PATTERN · ORIGINAL QUESTION', q: 'An
 const so = PUC.solution($('#so'), [[K(`\\mathrm{CH_3CH_2}${tc(GC, '\\mathrm{COO^-}')} - ${tc(EC, '\\mathrm{e^-}')} - \\mathrm{CO_2}`)], [K(`\\rightarrow \\mathrm{C_2H_5}\\ (2\\ \\text{C})`)], [K(`\\mathrm{C_2H_5} + \\mathrm{C_2H_5} = ${tc(OK, '\\mathrm{C_4H_{10}}')}`)], ['C: soda lime · D: kept CO₂']], { y0: 100, dy: 112 });
 const tSo = [T0('A2'), wt('A2', 'ethyl'), T0('A3'), T0('A4')];
 const fc = PUC.fcard($('#sF'), { x: 360, y: 262, w: 1200, h: 470, title: 'Recap · Alkanes', y0: 96, dy: 74, txt: [1, 0, 1, 1, 1],
-  lines: ['<b>Hydrocarbons</b>: saturated (alkanes) · unsaturated (alkenes, alkynes) · aromatic', K(`\\text{Alkanes: } \\mathrm{C}_n\\mathrm{H}_{2n+2} \\qquad \\mathrm{CH_4},\\ \\mathrm{C_2H_6},\\ \\mathrm{C_3H_8}`), '<b>Add H₂</b> (Pt, Pd, Ni) to alkenes and alkynes · <b>R–X</b> + Zn, HCl → R–H', '<b>Wurtz</b>: 2 R–X + 2 Na → R–R, carbons double (not methane)', '<b>Soda lime</b>: RCOONa → R–H, one C less · <b>Kolbe</b>: R–R, never methane'] });
+  lines: ['<b>Hydrocarbons</b>: saturated (alkanes) · unsaturated (alkenes, alkynes) · aromatic', K(`\\text{Alkanes: } \\mathrm{C}_n\\mathrm{H}_{2n+2} \\qquad \\mathrm{CH_4},\\ \\mathrm{C_2H_6},\\ \\mathrm{C_3H_8}`), '<b>Add H₂</b> (Pt, Pd, Ni) to alkenes and alkynes · <b>R-X</b> + Zn, HCl → R-H', '<b>Wurtz</b>: 2 R-X + 2 Na → R-R, carbons double (not methane)', '<b>Soda lime</b>: RCOONa → R-H, one C less · <b>Kolbe</b>: R-R, never methane'] });
 const YQ = ['What is the general formula of alkanes?', 'Which method gives one carbon less than the acid?', "Why can Kolbe's method never make methane?"];
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="nn">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
@@ -251,7 +251,7 @@ M.on(t => {
     sH.forEach((g, i) => { place(g, pos[i][0], pos[i][1]); fade(g, t, tIn - 0.3); });
     attr(sHb, 'x1', pos[0][0]); attr(sHb, 'y1', pos[0][1]); attr(sHb, 'x2', pos[1][0]); attr(sHb, 'y2', pos[1][1]); fade(sHb, t, tIn - 0.3, tSplit + 0.1);
     sNewB.forEach(e => fade(e, t, tJoin + 0.5));
-    const TAG = [[tS1 + 0.3, 'ETHENE · C=C'], [tCat, 'H₂ MEETS THE METAL'], [tSplit, 'H–H SPLITS'], [tUp, 'C=C OPENS'], [T0('S5'), 'ETHANE · ALL SINGLE']];
+    const TAG = [[tS1 + 0.3, 'ETHENE · C=C'], [tCat, 'H₂ MEETS THE METAL'], [tSplit, 'H-H SPLITS'], [tUp, 'C=C OPENS'], [T0('S5'), 'ETHANE · ALL SINGLE']];
     let tg = null; for (const [tt, s] of TAG) if (t >= tt) tg = s; if (tg) M.setT(btag, tg); M.vis(btag, t, tS1 + 0.2, 1e9, POP);
     M.vis($('#eb'), t, T0('S2') - 0.3, z, { dx: 60, dy: 0, ...o });
     const done = t > tJoin + 0.5;
@@ -271,12 +271,12 @@ M.on(t => {
     [...rM, ...rB, ...rMB].forEach(e => fade(e, t, tW));
     const u = M.io((t - tPull) / 1.0), v = M.io((t - tJ + 0.3) / 0.8);
     rNa.forEach((g, i) => { fade(g, t, wt('R3', 'sodium') - 0.1); place(g, [280, 504][i], M.lerp(420, RY + 70, u) + v * 0); });
-    rB.forEach((g, i) => place(g, [280, 504][i], M.lerp(RY, RY, u) + (t > tPull + 0.8 ? M.io((t - tPull - 0.8) / 0.8) * 230 : 0)));
-    rNa.forEach((g, i) => { if (t > tPull + 0.8) place(g, [280, 504][i], RY + 70 + M.io((t - tPull - 0.8) / 0.8) * 230); });
+    rB.forEach((g, i) => place(g, [280, 504][i], M.lerp(RY, RY, u) + (t > tPull + 0.8 ? M.io((t - tPull - 0.8) / 0.8) * 140 : 0)));
+    rNa.forEach((g, i) => { if (t > tPull + 0.8) place(g, [280, 504][i], RY + 70 + M.io((t - tPull - 0.8) / 0.8) * 140); });
     rMB.forEach(e => fade(e, t, tW, tPull + 0.6));
     place(rM[0], M.lerp(170, 330, v), RY); place(rM[1], M.lerp(614, 454, v), RY); fade(rCC, t, tJ + 0.4);
     rNb.forEach(e => fade(e, t, tPull + 1.6));
-    M.setT(rL[1], 'ETHANE · CH₃–CH₃'); fade(rL[1], t, wt('R4', 'Ethane'));
+    M.setT(rL[1], 'ETHANE · CH₃-CH₃'); fade(rL[1], t, wt('R4', 'Ethane'));
     M.vis($('#rb'), t, tR1 + 0.05, z, { dx: 60, dy: 0, ...o });
     rowsOn(['#rr0', '#rr1', '#rr2'], [tR1 + 0.3, wt('R2', 'zinc'), tW], T1('R4') + 0.3, t);
     M.vis($('#rV'), t, wt('R4', 'count') - 0.1, 1e9, { dy: 16 }); M.vis($('#rP'), t, wt('R4', 'doubles') - 0.1, 1e9, POP);
@@ -288,11 +288,12 @@ M.on(t => {
   if (dOn) {
     const z = OUT('C1');
     M.vis($('#da'), t, tD1 + 0.05, z, { dy: 36, ...o });
+    { const sh = M.spring(t - T0('D3') + 0.3, M.HEAVY), w = sh >= 1 ? 784 : M.lerp(1600, 784, sh); snap($('#da'), 'width', w.toFixed(1) + 'px'); snap(ds, 'transform', `translateX(${((w - 784) / 2).toFixed(1)}px) scale(${(1 + 0.2 * (w - 784) / 816).toFixed(3)})`); snap($('#de0'), 'width', (w - 72).toFixed(1) + 'px'); }
     const tLv = wt('D2', 'leaves');
     fade(dMe, t, wt('D1', 'acetate')); fade(dCo, t, wt('D1', 'acetate')); fade(dLink, t, wt('D1', 'acetate'), tLv);
     fade(dOh, t, wt('D1', 'soda')); fade(dCao, t, wt('D1', 'calcium'), wt('D2', 'leaves'));
     const u = M.io((t - tLv) / 1.0);
-    place(dCo, M.lerp(380, 520, u), M.lerp(180, 330, u)); place(dOh, M.lerp(600, 520, u), M.lerp(180, 330, u)); place(dMe, 230, M.lerp(180, 330, u));
+    place(dCo, M.lerp(380, 520, u), M.lerp(180, 290, u)); place(dOh, M.lerp(600, 520, u), M.lerp(180, 290, u)); place(dMe, 230, M.lerp(180, 290, u));
     dCo.style.opacity = 1 - u; dOh.style.opacity = 1 - u; if (u >= 1) { M.hide(dCo, true); M.hide(dOh, true); }
     fade(dP2, t, tLv + 0.8); M.setT(dMe._t, t > wt('D2', 'Methane') ? 'CH₄' : 'CH₃'); fade(dP1, t, 1e9);
     fade(dCnt, t, wt('D2', 'less') - 0.2);
@@ -336,7 +337,7 @@ M.on(t => {
   if (wOn) {
     const out = OUT('X1');
     M.vis($('#wl'), t, tW1 + 0.05, out, { dx: -60, dy: 0, ...o });
-    const tq = [wt('W2', 'Propene'), wt('W2', 'Bromoethane'), wt('W2', 'Sodium')], ti = [T0('W3'), T0('W4'), T0('W5')];
+    const tq = [T0('W2') + 0.1, T0('W2') + 0.4, T0('W2') + 0.7], ti = [T0('W3'), T0('W4'), T0('W5')];
     [0, 1, 2].forEach(i => { M.vis($('#wq' + (i + 2)), t, tq[i] - 0.1, 1e9, { dy: 16 }); M.vis($('#wt' + i), t, T1('W' + (i + 3)) - 0.8, 1e9, POP); const on = M.io((t - ti[i]) / 0.25) * (1 - M.io((t - (i < 2 ? ti[i + 1] : T1('W5') + 0.3)) / 0.25)); setBg($('#wq' + (i + 2)), mix(C.soft, C.ac2, on)); });
     M.vis($('#wP'), t, T1('W5'), 1e9, POP);
     M.vis($('#wr'), t, T0('W3') - 0.2, out, { dx: 60, dy: 0, ...o });

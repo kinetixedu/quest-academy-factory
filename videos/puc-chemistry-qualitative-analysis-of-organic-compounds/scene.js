@@ -77,7 +77,7 @@ const bHid = lab(b, 392, 540, 'IN THE COMPOUND: SHARED ELECTRONS, HIDDEN', RD, {
 const bExt = lab(b, 392, 540, 'IONS DISSOLVE IN WATER → SODIUM FUSION EXTRACT', OK, { 'text-anchor': 'middle', 'font-size': 18, 'font-weight': 700 });
 const LQ = [['Held by shared electrons', 'HIDDEN', 'L1', 'shared', RD], ['Melt with sodium metal', 'SODIUM FUSION', 'L2', 'sodium', NA], ['Ions dissolve in water', 'EXTRACT', 'S4', 'dissolve', OK]];
 $('#lqs').innerHTML = LQ.map(([q, k, , , c], i) => `<div class="rowl" id="lq${i}" style="top:${84 + i * 76}px"><span>${q}</span><span class="tg" style="color:${c}">${k}</span></div>`).join('');
-const tLq = LQ.map(r => wt(r[2], r[3]));
+const tLq = LQ.map((r, i) => i ? wt(r[2], r[3]) : T0('L1') + 0.4);
 const e1 = tc(EC, '\\mathrm{e^-}');
 $('#ebs').innerHTML = eqrow('eb0', 320, `\\mathrm{Na} + \\mathrm{C} + ${tc(NC, '\\mathrm{N}')} \\rightarrow \\mathrm{Na}${tc(NC, '\\mathrm{CN}')}`, 'CYANIDE', NC) + eqrow('eb1', 404, `2\\mathrm{Na} + ${tc(SC, '\\mathrm{S}')} \\rightarrow \\mathrm{Na_2}${tc(SC, '\\mathrm{S}')}`, 'SULPHIDE', SC) + eqrow('eb2', 488, `\\mathrm{Na} + ${tc(XC2, '\\mathrm{X}')} \\rightarrow \\mathrm{Na}${tc(XC2, '\\mathrm{X}')}`, 'HALIDE', XC2);
 const btag = document.createElement('div'); btag.className = 'btag'; btag.style.cssText = 'right:36px;top:18px;background:var(--ink);color:#fff'; $('#bn').appendChild(btag);

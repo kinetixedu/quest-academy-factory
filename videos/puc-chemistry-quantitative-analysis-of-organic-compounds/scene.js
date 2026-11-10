@@ -101,7 +101,7 @@ $('#jes').innerHTML = eqrow('je0', 478, `${PC(tc(NN, '\\mathrm{N}'))} = \\dfrac{
 const JK = [['Heat with strong H₂SO₄', '(NH₄)₂SO₄', 'J4', 'sulphuric'], ['Add alkali', 'NH₃ GAS', 'J5', 'alkali'], ['Catch NH₃ in known acid', 'ACID USED UP', 'J5', 'caught']];
 $('#jks').innerHTML = JK.map(([s, tg], i) => `<div class="rowl" id="jk${i}" style="top:${84 + i * 76}px"><span>${s}</span><span class="tg" style="color:${NN}">${tg}</span></div>`).join('')
   + eqrow('jk3', 324, `${PC(tc(NN, '\\mathrm{N}'))} = \\dfrac{1.4 \\times M \\times 2(V - V_1/2)}{m}`, 'M OF H₂SO₄', NN)
-  + `<div class="pillp" id="jkP" style="left:36px;top:478px;background:${RD};color:#fff">Not for nitro, azo or ring N (pyridine)</div>`;
+  + `<div class="pillp" id="jkP" style="left:36px;top:420px;background:${RD};color:#fff">Not for nitro, azo or ring N (pyridine)</div>`;
 
 /* ---------- G: Carius ---------- */
 const gs = $('#gS');
@@ -153,7 +153,7 @@ const YQ = ["Which tubes trap water and carbon dioxide in Liebig's method?", "Wh
 $('#yrs').innerHTML = YQ.map((q, i) => `<div class="yr" id="yr${i}" style="top:${96 + i * 120}px"><div class="nn">${i + 1}</div><div class="q">${q}</div></div>`).join('');
 const tYq = [T0('Y2'), T0('Y3'), T0('Y4')];
 const nx = PUC.next($('#sF'), { label: 'NEXT · EP 89', topic: 'Cooking gas, petrol and candle wax? Alkanes', y: 764 });
-const avA = PUC.avatar($('#sJ'), { x: 976 + 300, y: 270 + 420, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'So that is how the protein is found!' });
+const avA = PUC.avatar($('#sJ'), { x: 976 + 300, y: 270 + 506, who: 'Diya', face: IMG + 'diya-face.jpg', text: 'So that is how the protein is found!' });
 
 /* ---------- helpers ---------- */
 const head = PUC.header({ tMorph, tOut: tQ - 0.05 });
@@ -250,13 +250,14 @@ M.on(t => {
   if (jOn) {
     const z = OUT('G1');
     M.vis($('#ja'), t, tJ1 + 0.05, z, { dy: 36, ...o });
+    { const sh = M.spring(t - T0('J4') + 0.3, M.HEAVY), w = sh >= 1 ? 784 : M.lerp(1600, 784, sh); snap($('#ja'), 'width', w.toFixed(1) + 'px'); snap(js, 'transform', `translateX(${((w - 784) / 2).toFixed(1)}px)`); snap($('#je0'), 'left', (36 + (w - 784) / 2).toFixed(1) + 'px'); }
     const tH = wt('J1', 'heated'), tGas = wt('J1', 'gas'), tGe = T1('J3');
     jFl.forEach((f, i) => fade(f, t, tH + i * 0.1)); fade(jL[2], t, tJ1 + 0.4); fade(jL[1], t, wt('J2', 'potassium')); fade(jL[0], t, wt('J2', 'volume')); fade(jL[3], t, wt('J3', 'twenty'));
     const g = M.clamp((t - tGas) / (tGe - tGas)); attr(jGas, 'height', (g * 150).toFixed(1));
     jBub.forEach((e, i) => { const ph = ((t - tGas) / 1.4 + i / 4) % 1; attr(e, 'cx', 570 + (i % 2 ? 7 : -7)); attr(e, 'cy', (390 - ph * (290 - g * 150)).toFixed(1)); M.hide(e, !(t > tGas && t < tGe)); });
     M.vis($('#je0'), t, wt('J3', 'standard') - 0.1, 1e9, { dy: 16 });
     M.vis($('#jb'), t, T0('J4') - 0.2, z, { dx: 60, dy: 0, ...o });
-    rowsOn(['#jk0', '#jk1', '#jk2'], JK.map(r => wt(r[2], r[3])), T1('J5') + 0.3, t);
+    rowsOn(['#jk0', '#jk1', '#jk2'], JK.map((r, i) => i ? wt(r[2], r[3]) : T0('J4') + 0.3), T1('J5') + 0.3, t);
     M.vis($('#jk3'), t, wt('J5', 'tells') - 0.1, 1e9, { dy: 16 });
     M.vis($('#jkP'), t, wt('J6', 'fails') - 0.1, 1e9, POP);
     avA(t, T1('J6') - 0.1, z);
