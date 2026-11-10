@@ -1,0 +1,59 @@
+H1|0.4|A drawer slides out. A fan spins. A wheel rolls down the road.
+H2|0.45|Three motions. But physics needs just two ideas to describe them all.
+H3|0.35|Aarav tries it in his room. He pushes a book, swings his door, and rolls his cycle wheel.
+H4|0.5|On the door, the handle edge travels farther than a point near the hinge. Yet both start and stop together. How?
+H5|0.6|To see why, meet the rigid body.
+P1|0.35|A rigid body keeps its shape. The distance between any two of its points never changes.
+P2|0.5|Real bodies bend a tiny bit, but a book or a door is close enough.
+P4|0.35|A rigid body moves in two basic ways. Translation, and rotation.
+P5|0.6|In translation, the whole body shifts. In rotation, it turns about a line, called the axis.
+S1|0.35|Let's mark three dots on Aarav's book: A, B and C.
+S2|0.4|He pushes it at a steady thirty centimetres per second.
+S3|0.4|All three dots have the same velocity, at every moment.
+S4|0.45|On the graph, their three lines sit on top of each other.
+S5|0.6|This is pure translation. Every point moves the same way, and every line stays parallel to itself.
+V1|0.35|Now the door, from above. The hinge is the axis, and it stays fixed.
+V2|0.4|Dot A is thirty centimetres from the hinge. B is sixty. C, at the handle edge, is ninety.
+V3|0.4|The door swings through ninety degrees in two seconds.
+V4|0.4|Every dot moves on a circle, with its centre on the axis.
+V5|0.5|Now the graph splits. C covers three times the distance of A.
+V6|0.35|Slow-mo replay. Freeze.
+V7|0.4|All three dots have turned through the same angle, theta.
+V8|0.6|But C is three times farther out, so its arc, and its arrow, are three times longer.
+V9|3.1|Quick check. Swing the door twice as fast. Will C still cover three times the distance of A? Pause and decide.
+V10|0.6|Yes! The dots always turn together, and C is always three times farther out.
+D1|0.35|Let's write this down, one step at a time.
+D2|0.75|Step one. In translation, every point has the same displacement in the same time. So, the same velocity.
+D3|0.75|Step two. In rotation about a fixed axis, every point turns through the same angle theta, in the same time t.
+D4|0.75|Step three. A point at distance r from the axis moves along an arc. s equals r theta, with theta in radians.
+D5|0.75|Step four. Its speed is s over t, or r theta over t. Double r, and the speed doubles.
+D6|0.6|A point on the axis has r equal to zero. It does not move.
+T1|0.7|Remember this. In translation, every point moves the same way. In rotation, every point turns through the same angle.
+R1|0.35|Now the rolling wheel, link by link.
+R2|0.4|The axle moves forward in a straight line. That part is translation.
+R3|0.4|And every rim point goes round the axle. That part is rotation.
+R4|0.6|So rolling is both together. The axle draws a line, while a rim dot draws arches.
+K1|0.4|Side by side. A sliding book: every point moves the same way.
+K2|0.6|A swinging door: every point turns the same angle, round the hinge.
+K3|3.2|Now you try. A giant wheel turns, and each cabin hangs upright. Is a cabin in translation or rotation? Pause and decide.
+K4|0.65|Translation! The cabin stays upright, and every point of it moves the same way. Translation does not need a straight line.
+W1|0.35|Now, one worked example.
+W2|0.5|A door eighty centimetres wide swings shut through ninety degrees in two seconds. How far, and how fast, does its edge move?
+W3|0.75|Ninety degrees is pi by two, about one point five seven radians.
+W4|0.75|Distance: s equals r theta. Zero point eight times one point five seven, about one point two six metres.
+W5|0.75|Speed: one point two six over two, about zero point six three metres per second.
+W6|0.65|A point twenty centimetres from the hinge is a quarter as far out. So it moves a quarter as fast.
+X1|0.35|Now, the exam trap.
+X2|0.4|Many students say a rolling wheel is in pure rotation, because it spins.
+X3|0.65|But its axle moves forward too. Rolling is translation plus rotation.
+E1|0.6|Where is this asked? In concept questions: translation, rotation or both, and the speed of each point.
+Q1|5.4|Exam level now. A door one point two metres wide turns on its hinge. In half a second, a point thirty centimetres from the hinge moves fifteen centimetres along its arc. How far does the edge move, and through what angle? Pause and solve.
+A1|0.5|The answer is A. Sixty centimetres, and half a radian.
+A2|0.5|Theta is s over r. Point one five over point three. Half a radian, for every point.
+A3|0.6|The edge is four times farther out. Four times fifteen is sixty centimetres.
+F1|3.2|Here is your recap. Screenshot this card.
+Y1|0.4|Can you answer these without help?
+Y2|0.9|One. Why is a giant wheel cabin in translation?
+Y3|0.9|Two. Why does a door's edge move faster than a point near the hinge?
+Y4|0.9|Three. Why is a rolling wheel not in pure rotation?
+N1|0.3|Next time: Diya balances a ruler on one finger. Add coins to one end, and the balance point moves. Centre of mass.
