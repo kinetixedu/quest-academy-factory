@@ -1,0 +1,567 @@
+1
+00:00:00,450 --> 00:00:02,915
+Here is a limit that looks scary.
+
+2
+00:00:02,915 --> 00:00:08,027
+As x tends to two, x squared plus
+three x, times x minus one, all over
+
+3
+00:00:08,027 --> 00:00:09,068
+x plus two.
+
+4
+00:00:09,468 --> 00:00:13,853
+Creeping up on two with a table,
+value by value, would take ages.
+
+5
+00:00:14,303 --> 00:00:17,724
+Aarav thought about this while
+cleaning his bicycle chain.
+
+6
+00:00:17,724 --> 00:00:20,301
+He takes the chain apart, link by link.
+
+7
+00:00:20,651 --> 00:00:22,353
+Each link is easy to clean.
+
+8
+00:00:22,353 --> 00:00:24,273
+Then he puts them back together.
+
+9
+00:00:24,273 --> 00:00:26,297
+Can we do the same with a limit?
+
+10
+00:00:26,797 --> 00:00:27,700
+Yes, we can.
+
+11
+00:00:27,700 --> 00:00:30,959
+The rules that let us do it are
+called the algebra of limits.
+
+12
+00:00:31,609 --> 00:00:33,011
+First, two tiny limits.
+
+13
+00:00:33,011 --> 00:00:34,623
+They are the building blocks.
+
+14
+00:00:34,973 --> 00:00:38,023
+The limit of x, as x
+tends to a, is just a.
+
+15
+00:00:38,023 --> 00:00:41,625
+If x creeps towards two, then
+x itself gets close to two.
+
+16
+00:00:42,025 --> 00:00:44,791
+The limit of a constant is that constant.
+
+17
+00:00:44,791 --> 00:00:49,189
+If a function always gives five,
+it stays five, near every point.
+
+18
+00:00:49,839 --> 00:00:51,751
+Now watch two pieces at work.
+
+19
+00:00:52,101 --> 00:00:55,038
+Let f of x be x squared plus three x.
+
+20
+00:00:55,038 --> 00:00:57,474
+And let g of x be x plus two.
+
+21
+00:00:57,874 --> 00:01:01,184
+As x creeps towards
+two, f closes in on ten.
+
+22
+00:01:01,184 --> 00:01:03,087
+And g closes in on four.
+
+23
+00:01:03,487 --> 00:01:04,387
+Add them.
+
+24
+00:01:04,341 --> 00:01:06,654
+f plus g closes in on fourteen.
+
+25
+00:01:06,654 --> 00:01:08,311
+Exactly ten plus four.
+
+26
+00:01:08,711 --> 00:01:09,881
+Multiply them.
+
+27
+00:01:09,881 --> 00:01:12,199
+f times g closes in on forty.
+
+28
+00:01:12,199 --> 00:01:13,992
+Exactly ten times four.
+
+29
+00:01:14,392 --> 00:01:15,428
+Divide them.
+
+30
+00:01:15,428 --> 00:01:18,247
+f over g closes in on two point five.
+
+31
+00:01:18,247 --> 00:01:19,945
+Exactly ten over four.
+
+32
+00:01:20,595 --> 00:01:21,760
+This always works.
+
+33
+00:01:21,760 --> 00:01:23,520
+NCERT gives it as a theorem.
+
+34
+00:01:23,520 --> 00:01:26,331
+Suppose the limits of f
+and g at a both exist.
+
+35
+00:01:26,731 --> 00:01:27,631
+Rule one.
+
+36
+00:01:27,322 --> 00:01:29,562
+The limit of a sum is
+the sum of the limits.
+
+37
+00:01:30,312 --> 00:01:31,212
+Rule two.
+
+38
+00:01:30,929 --> 00:01:33,795
+The limit of a difference is
+the difference of the limits.
+
+39
+00:01:34,545 --> 00:01:35,445
+Rule three.
+
+40
+00:01:35,243 --> 00:01:37,908
+The limit of a product is
+the product of the limits.
+
+41
+00:01:38,658 --> 00:01:39,558
+Rule four.
+
+42
+00:01:39,407 --> 00:01:42,513
+The limit of a quotient is
+the quotient of the limits.
+
+43
+00:01:42,513 --> 00:01:45,447
+But only when the limit
+of the bottom is not zero.
+
+44
+00:01:46,197 --> 00:01:48,911
+And a number in front just comes along.
+
+45
+00:01:48,911 --> 00:01:52,435
+The limit of k times f is
+k times the limit of f.
+
+46
+00:01:53,085 --> 00:01:53,985
+Quick one.
+
+47
+00:01:53,916 --> 00:01:57,717
+What is the limit of five x
+squared, as x tends to three?
+
+48
+00:01:57,717 --> 00:02:00,564
+Forty five, or two
+hundred and twenty five?
+
+49
+00:02:00,564 --> 00:02:01,739
+Pause and think.
+
+50
+00:02:04,939 --> 00:02:05,864
+Forty five!
+
+51
+00:02:05,864 --> 00:02:09,647
+x squared tends to nine, and
+the five just comes along.
+
+52
+00:02:09,647 --> 00:02:11,770
+Five times nine is forty five.
+
+53
+00:02:12,420 --> 00:02:13,499
+Side by side.
+
+54
+00:02:13,499 --> 00:02:17,257
+In our example the bottom,
+x plus two, tends to four.
+
+55
+00:02:17,257 --> 00:02:20,395
+Four is not zero, so
+the quotient rule works.
+
+56
+00:02:20,795 --> 00:02:25,650
+But look at x squared minus four,
+over x minus two, as x tends to two.
+
+57
+00:02:25,650 --> 00:02:27,430
+The bottom tends to zero.
+
+58
+00:02:27,430 --> 00:02:30,021
+Here the quotient rule is switched off.
+
+59
+00:02:30,621 --> 00:02:31,728
+Now you try.
+
+60
+00:02:31,728 --> 00:02:36,669
+For one over x, as x tends to
+zero, can we use the quotient rule?
+
+61
+00:02:36,669 --> 00:02:38,044
+Pause and decide.
+
+62
+00:02:41,244 --> 00:02:42,144
+No!
+
+63
+00:02:41,670 --> 00:02:45,106
+The bottom tends to zero,
+so the rule is switched off.
+
+64
+00:02:45,106 --> 00:02:47,348
+We must think about it another way.
+
+65
+00:02:47,998 --> 00:02:51,766
+Now let us crack the scary
+limit, one small step at a time.
+
+66
+00:02:52,116 --> 00:02:53,016
+Step one.
+
+67
+00:02:52,968 --> 00:02:54,797
+x squared is x times x.
+
+68
+00:02:54,797 --> 00:02:58,069
+So it tends to two times
+two, which is four.
+
+69
+00:02:58,819 --> 00:02:59,719
+Step two.
+
+70
+00:02:59,657 --> 00:03:04,088
+So x squared plus three x tends
+to four plus six, which is ten.
+
+71
+00:03:04,838 --> 00:03:05,752
+Step three.
+
+72
+00:03:05,752 --> 00:03:07,599
+x minus one tends to one.
+
+73
+00:03:07,599 --> 00:03:12,158
+By the product rule, the top tends
+to ten times one, which is ten.
+
+74
+00:03:12,908 --> 00:03:13,808
+Step four.
+
+75
+00:03:13,775 --> 00:03:16,594
+The bottom, x plus two, tends to four.
+
+76
+00:03:16,594 --> 00:03:19,165
+Four is not zero, so we may divide.
+
+77
+00:03:19,915 --> 00:03:20,815
+Step five.
+
+78
+00:03:20,786 --> 00:03:24,400
+The limit is ten over four,
+which is two point five.
+
+79
+00:03:24,400 --> 00:03:25,632
+No table needed.
+
+80
+00:03:26,282 --> 00:03:27,253
+Remember this.
+
+81
+00:03:27,253 --> 00:03:31,171
+Break it up, find each small
+limit, and put them back together.
+
+82
+00:03:31,871 --> 00:03:33,561
+Now, one worked example.
+
+83
+00:03:33,911 --> 00:03:39,147
+Find the limit, as x tends to one, of
+two x cubed minus three x plus four,
+
+84
+00:03:39,147 --> 00:03:41,223
+all over x squared plus one.
+
+85
+00:03:41,723 --> 00:03:42,623
+Step one.
+
+86
+00:03:42,609 --> 00:03:47,028
+x tends to one, so x cubed and
+x squared both tend to one.
+
+87
+00:03:47,778 --> 00:03:48,678
+Step two.
+
+88
+00:03:48,545 --> 00:03:52,304
+The top tends to two minus
+three plus four, which is three.
+
+89
+00:03:53,054 --> 00:03:53,954
+Step three.
+
+90
+00:03:53,934 --> 00:03:57,091
+The bottom tends to one
+plus one, which is two.
+
+91
+00:03:57,841 --> 00:03:58,741
+Step four.
+
+92
+00:03:58,686 --> 00:04:01,685
+Two is not zero, so the
+quotient rule works.
+
+93
+00:04:02,435 --> 00:04:03,335
+Step five.
+
+94
+00:04:03,285 --> 00:04:05,248
+The limit is three over two.
+
+95
+00:04:05,248 --> 00:04:06,400
+One point five.
+
+96
+00:04:07,050 --> 00:04:08,514
+Now, the exam trap.
+
+97
+00:04:08,864 --> 00:04:13,411
+Find the limit of x squared minus
+nine, over x minus three, as x tends
+
+98
+00:04:13,411 --> 00:04:14,311
+to three.
+
+99
+00:04:14,213 --> 00:04:18,584
+Many students split it, get zero
+over zero, and write: no limit.
+
+100
+00:04:18,984 --> 00:04:22,113
+But zero over zero only
+switches the rule off.
+
+101
+00:04:22,113 --> 00:04:24,098
+It does not kill the limit.
+
+102
+00:04:24,098 --> 00:04:28,848
+Factor the top, cancel x minus
+three, and x plus three tends to six.
+
+103
+00:04:29,498 --> 00:04:30,895
+Where is this asked?
+
+104
+00:04:30,895 --> 00:04:35,337
+We found no past paper question on
+just these rules, so no chip lights.
+
+105
+00:04:35,337 --> 00:04:38,327
+But they are a step inside
+most limit questions.
+
+106
+00:04:38,927 --> 00:04:40,079
+Exam level now.
+
+107
+00:04:40,079 --> 00:04:43,165
+Use the limits of f and
+g to find this limit.
+
+108
+00:04:43,165 --> 00:04:44,367
+Pause and solve.
+
+109
+00:04:49,767 --> 00:04:51,212
+The answer is A.
+
+110
+00:04:51,212 --> 00:04:52,814
+Seventeen over four.
+
+111
+00:04:53,314 --> 00:04:54,214
+The top.
+
+112
+00:04:54,074 --> 00:04:57,883
+Two f squared tends to two
+times nine, which is eighteen.
+
+113
+00:04:57,883 --> 00:05:00,271
+Plus g, which tends to minus one.
+
+114
+00:05:00,271 --> 00:05:02,353
+So the top tends to seventeen.
+
+115
+00:05:02,853 --> 00:05:03,786
+The bottom.
+
+116
+00:05:03,786 --> 00:05:07,708
+f minus g tends to three minus
+minus one, which is four.
+
+117
+00:05:08,208 --> 00:05:11,295
+Four is not zero, so
+the quotient rule works.
+
+118
+00:05:11,295 --> 00:05:13,566
+The answer is seventeen over four.
+
+119
+00:05:14,166 --> 00:05:15,706
+Here is your recap.
+
+120
+00:05:15,706 --> 00:05:17,288
+Screenshot this card.
+
+121
+00:05:20,488 --> 00:05:22,674
+Can you answer these three
+questions without help?
+
+122
+00:05:23,074 --> 00:05:23,974
+One.
+
+123
+00:05:23,586 --> 00:05:27,480
+What is the limit of x plus
+seven, as x tends to three?
+
+124
+00:05:28,380 --> 00:05:29,280
+Two.
+
+125
+00:05:28,801 --> 00:05:30,961
+When is the quotient rule switched off?
+
+126
+00:05:31,861 --> 00:05:32,761
+Three.
+
+127
+00:05:32,493 --> 00:05:37,687
+Why is the limit of four x squared,
+as x tends to two, equal to sixteen?
+
+128
+00:05:38,787 --> 00:05:40,596
+Next time: zero over zero.
+
+129
+00:05:40,596 --> 00:05:43,426
+Is the limit stuck, or is there a way out?
+
+130
+00:05:43,426 --> 00:05:47,044
+We find out with limits of
+polynomial and rational functions.

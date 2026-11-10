@@ -1,0 +1,492 @@
+1
+00:00:00,450 --> 00:00:04,477
+The weather report says: seventy
+percent chance of rain tomorrow.
+
+2
+00:00:04,877 --> 00:00:08,040
+But tomorrow it will either
+rain, or it will not.
+
+3
+00:00:08,040 --> 00:00:10,477
+So what does seventy percent even mean?
+
+4
+00:00:10,927 --> 00:00:14,847
+Diya heard this in the kitchen this
+morning, while packing her lunch.
+
+5
+00:00:15,197 --> 00:00:20,007
+And if rain is seventy percent, why
+is no rain exactly thirty percent?
+
+6
+00:00:20,507 --> 00:00:24,818
+To answer this, we need probability:
+events, and three simple rules called
+
+7
+00:00:24,818 --> 00:00:25,718
+axioms.
+
+8
+00:00:26,064 --> 00:00:28,773
+First, what does a
+probability number mean?
+
+9
+00:00:28,773 --> 00:00:33,271
+Throw a die again and again, and count
+how often you get an even number.
+
+10
+00:00:33,671 --> 00:00:36,671
+After ten throws, the
+fraction jumps around.
+
+11
+00:00:36,671 --> 00:00:39,691
+After a hundred, it is closer to one half.
+
+12
+00:00:39,691 --> 00:00:42,176
+After six hundred, it hardly moves.
+
+13
+00:00:42,576 --> 00:00:47,248
+So a probability tells us the share
+of times an event happens, if the same
+
+14
+00:00:47,248 --> 00:00:49,609
+situation repeats many, many times.
+
+15
+00:00:49,609 --> 00:00:54,418
+For tomorrow, it means: on days just
+like it, rain comes about seven times
+
+16
+00:00:54,418 --> 00:00:55,382
+out of ten.
+
+17
+00:00:56,032 --> 00:00:57,132
+Now some words.
+
+18
+00:00:57,132 --> 00:01:01,101
+All the possible results together
+are called the sample space, S.
+
+19
+00:01:01,101 --> 00:01:03,133
+For a die, S is one to six.
+
+20
+00:01:03,533 --> 00:01:06,390
+An event is any part of the sample space.
+
+21
+00:01:06,390 --> 00:01:10,434
+Getting an even number is the
+event E: two, four and six.
+
+22
+00:01:10,834 --> 00:01:15,039
+The event not E is everything
+else in S: one, three and five.
+
+23
+00:01:15,439 --> 00:01:17,851
+Let F be a number more than three.
+
+24
+00:01:17,851 --> 00:01:20,779
+E or F means at least one of them happens.
+
+25
+00:01:20,779 --> 00:01:23,181
+E and F means both happen together.
+
+26
+00:01:23,581 --> 00:01:28,200
+If two events can never happen together,
+they are called mutually exclusive.
+
+27
+00:01:28,200 --> 00:01:30,600
+Like even and odd on a single throw.
+
+28
+00:01:31,249 --> 00:01:32,767
+Now the three rules.
+
+29
+00:01:32,767 --> 00:01:35,639
+NCERT calls them the
+axioms of probability.
+
+30
+00:01:35,639 --> 00:01:39,999
+An axiom is a rule we agree on,
+and build everything else from.
+
+31
+00:01:40,399 --> 00:01:41,299
+Rule one.
+
+32
+00:01:41,254 --> 00:01:45,230
+For any event E, the probability
+of E is never negative.
+
+33
+00:01:45,980 --> 00:01:46,880
+Rule two.
+
+34
+00:01:46,749 --> 00:01:49,790
+The probability of the
+whole sample space is one.
+
+35
+00:01:49,790 --> 00:01:51,226
+Something must happen.
+
+36
+00:01:51,976 --> 00:01:52,956
+Rule three.
+
+37
+00:01:52,956 --> 00:01:58,343
+If E and F are mutually exclusive, the
+probability of E or F is the probability
+
+38
+00:01:58,343 --> 00:02:00,866
+of E, plus the probability of F.
+
+39
+00:02:01,616 --> 00:02:02,625
+Now the rain.
+
+40
+00:02:02,625 --> 00:02:06,902
+Rain and no rain are mutually exclusive,
+and together they make the whole
+
+41
+00:02:06,902 --> 00:02:07,855
+sample space.
+
+42
+00:02:08,605 --> 00:02:11,994
+So P of rain, plus P
+of no rain, equals one.
+
+43
+00:02:11,994 --> 00:02:14,400
+Seventy percent plus thirty percent.
+
+44
+00:02:14,400 --> 00:02:17,564
+That is why no rain is
+exactly thirty percent.
+
+45
+00:02:18,314 --> 00:02:22,892
+And when every outcome is equally
+likely, like the faces of a fair die,
+
+46
+00:02:22,892 --> 00:02:27,579
+the probability of E is the number of
+outcomes in E, divided by the number
+
+47
+00:02:27,579 --> 00:02:28,479
+in S.
+
+48
+00:02:28,841 --> 00:02:29,957
+Side by side.
+
+49
+00:02:29,957 --> 00:02:32,408
+Even and odd never share a number.
+
+50
+00:02:32,408 --> 00:02:36,803
+So P of even or odd is one half
+plus one half, which is one.
+
+51
+00:02:37,203 --> 00:02:40,767
+Even and more than three do
+share numbers: four and six.
+
+52
+00:02:40,767 --> 00:02:44,659
+Adding would count them twice,
+so we subtract the overlap once.
+
+53
+00:02:45,259 --> 00:02:46,159
+Your turn.
+
+54
+00:02:46,102 --> 00:02:51,034
+On one throw, are getting a two and
+getting an even number mutually exclusive?
+
+55
+00:02:51,034 --> 00:02:52,226
+Pause and think.
+
+56
+00:02:55,426 --> 00:02:56,326
+No!
+
+57
+00:02:55,853 --> 00:03:00,132
+A two is also an even number, so
+both can happen on the same throw.
+
+58
+00:03:00,782 --> 00:03:01,711
+Remember this.
+
+59
+00:03:01,711 --> 00:03:05,686
+Probabilities are never negative,
+they add up to one, and an overlap is
+
+60
+00:03:05,686 --> 00:03:06,586
+counted once.
+
+61
+00:03:07,271 --> 00:03:08,961
+Now, one worked example.
+
+62
+00:03:09,311 --> 00:03:10,637
+A die is thrown.
+
+63
+00:03:10,637 --> 00:03:12,231
+A is an even number.
+
+64
+00:03:12,231 --> 00:03:14,461
+B is a number more than three.
+
+65
+00:03:14,461 --> 00:03:16,744
+Find the probability of A or B.
+
+66
+00:03:17,244 --> 00:03:18,144
+Step one.
+
+67
+00:03:17,987 --> 00:03:21,239
+The sample space has six
+outcomes, all equally likely.
+
+68
+00:03:21,989 --> 00:03:22,889
+Step two.
+
+69
+00:03:22,853 --> 00:03:24,811
+A is two, four and six.
+
+70
+00:03:24,811 --> 00:03:26,823
+B is four, five and six.
+
+71
+00:03:27,573 --> 00:03:28,473
+Step three.
+
+72
+00:03:28,473 --> 00:03:30,489
+They overlap in four and six.
+
+73
+00:03:30,489 --> 00:03:33,220
+So A and B has probability two over six.
+
+74
+00:03:33,970 --> 00:03:34,870
+Step four.
+
+75
+00:03:34,774 --> 00:03:38,973
+P of A or B is three sixths, plus
+three sixths, minus two sixths.
+
+76
+00:03:39,723 --> 00:03:42,167
+That is four sixths, or two thirds.
+
+77
+00:03:42,167 --> 00:03:45,271
+Check: A or B is two, four, five and six.
+
+78
+00:03:45,271 --> 00:03:46,522
+Four out of six.
+
+79
+00:03:47,172 --> 00:03:48,634
+Now, the exam trap.
+
+80
+00:03:48,984 --> 00:03:50,524
+Many students just add.
+
+81
+00:03:50,524 --> 00:03:54,836
+Three sixths plus three sixths gives
+one, as if A or B were certain.
+
+82
+00:03:55,236 --> 00:03:59,690
+But a throw of one is in neither
+A nor B, so it cannot be certain.
+
+83
+00:03:59,690 --> 00:04:01,825
+Four and six were counted twice.
+
+84
+00:04:01,825 --> 00:04:05,447
+Subtract the overlap once,
+and the answer is two thirds.
+
+85
+00:04:06,097 --> 00:04:07,444
+Where is this asked?
+
+86
+00:04:07,444 --> 00:04:08,375
+In JEE Main.
+
+87
+00:04:08,375 --> 00:04:12,568
+In January twenty twenty, a paper gave
+the chance that exactly one of two
+
+88
+00:04:12,568 --> 00:04:16,707
+events happens, and the chance that
+at least one happens, and asked for
+
+89
+00:04:16,707 --> 00:04:18,008
+the chance of both.
+
+90
+00:04:18,608 --> 00:04:19,839
+Exam level now.
+
+91
+00:04:19,839 --> 00:04:23,542
+Find the probability that
+A happens, but B does not.
+
+92
+00:04:23,542 --> 00:04:24,826
+Pause and solve.
+
+93
+00:04:30,226 --> 00:04:31,655
+The answer is B.
+
+94
+00:04:31,655 --> 00:04:33,073
+Zero point three.
+
+95
+00:04:33,573 --> 00:04:35,306
+First, find the overlap.
+
+96
+00:04:35,306 --> 00:04:39,507
+P of A and B is P of A, plus
+P of B, minus P of A or B.
+
+97
+00:04:40,007 --> 00:04:45,103
+That is zero point six, plus zero point
+five, minus zero point eight, which
+
+98
+00:04:45,103 --> 00:04:46,640
+is zero point three.
+
+99
+00:04:47,140 --> 00:04:50,014
+A but not B is A, minus the overlap.
+
+100
+00:04:50,014 --> 00:04:54,083
+Zero point six minus zero point
+three is zero point three.
+
+101
+00:04:54,683 --> 00:04:56,223
+Here is your recap.
+
+102
+00:04:56,223 --> 00:04:57,806
+Screenshot this card.
+
+103
+00:05:01,006 --> 00:05:03,192
+Can you answer these three
+questions without help?
+
+104
+00:05:03,592 --> 00:05:04,492
+One.
+
+105
+00:05:04,044 --> 00:05:06,454
+What are the three axioms of probability?
+
+106
+00:05:07,354 --> 00:05:08,254
+Two.
+
+107
+00:05:07,850 --> 00:05:11,391
+If P of E is zero point
+four, what is P of not E?
+
+108
+00:05:12,291 --> 00:05:13,191
+Three.
+
+109
+00:05:12,778 --> 00:05:15,204
+Why can a probability
+never be more than one?
+
+110
+00:05:16,304 --> 00:05:18,492
+That completes Class eleven maths.
+
+111
+00:05:18,492 --> 00:05:22,042
+Every episode is in the PUC
+Maths Class eleven playlist.
+
+112
+00:05:22,042 --> 00:05:23,743
+See you in Class twelve.

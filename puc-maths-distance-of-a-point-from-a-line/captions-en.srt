@@ -1,0 +1,548 @@
+1
+00:00:00,450 --> 00:00:03,654
+A house stands some way
+from a long, straight road.
+
+2
+00:00:04,054 --> 00:00:07,475
+You could walk from the house
+to the road along many paths.
+
+3
+00:00:07,475 --> 00:00:08,950
+Some long, some short.
+
+4
+00:00:09,400 --> 00:00:10,680
+Aarav wants the shortest one.
+
+5
+00:00:11,030 --> 00:00:15,408
+Which path is it, and how long is it,
+if all we know is the house's position
+
+6
+00:00:15,408 --> 00:00:16,839
+and the road's equation?
+
+7
+00:00:17,339 --> 00:00:19,424
+One neat formula answers both.
+
+8
+00:00:19,424 --> 00:00:20,686
+Let us find it.
+
+9
+00:00:21,336 --> 00:00:26,254
+Here is the road, the line three x
+plus four y minus twelve equals zero.
+
+10
+00:00:26,254 --> 00:00:29,287
+The house is the point P, at five, four.
+
+11
+00:00:29,687 --> 00:00:34,504
+Let a point Q slide along the road,
+and watch the distance from P to Q.
+
+12
+00:00:34,904 --> 00:00:36,456
+Far away, it is big.
+
+13
+00:00:36,456 --> 00:00:38,535
+As Q comes closer, it shrinks.
+
+14
+00:00:38,535 --> 00:00:39,435
+Seven.
+
+15
+00:00:39,109 --> 00:00:40,009
+Five.
+
+16
+00:00:39,636 --> 00:00:40,793
+Four point four.
+
+17
+00:00:40,793 --> 00:00:41,997
+Three point nine.
+
+18
+00:00:42,397 --> 00:00:44,285
+Then it starts growing again.
+
+19
+00:00:44,285 --> 00:00:48,506
+The smallest distance, three point
+eight, comes exactly when PQ meets
+
+20
+00:00:48,506 --> 00:00:50,309
+the road at a right angle.
+
+21
+00:00:50,909 --> 00:00:55,491
+So the distance of a point from a line
+means the length of the perpendicular,
+
+22
+00:00:55,491 --> 00:00:57,324
+from the point to the line.
+
+23
+00:00:57,974 --> 00:01:02,276
+To find that length without drawing,
+write the line with everything on
+
+24
+00:01:02,276 --> 00:01:03,176
+one side.
+
+25
+00:01:03,084 --> 00:01:05,437
+A x plus B y plus C equals zero.
+
+26
+00:01:05,837 --> 00:01:09,540
+Here, A is three, B is
+four, and C is minus twelve.
+
+27
+00:01:10,140 --> 00:01:11,040
+Step one.
+
+28
+00:01:11,012 --> 00:01:13,862
+From P, go straight down to the road.
+
+29
+00:01:13,862 --> 00:01:19,051
+This vertical gap is the size of A
+x one plus B y one plus C, over B.
+
+30
+00:01:19,801 --> 00:01:20,701
+Step two.
+
+31
+00:01:20,564 --> 00:01:22,369
+The perpendicular is shorter.
+
+32
+00:01:22,369 --> 00:01:26,288
+Together with the vertical gap,
+it makes a small right triangle.
+
+33
+00:01:27,038 --> 00:01:27,938
+Step three.
+
+34
+00:01:27,886 --> 00:01:32,110
+That small triangle has the same shape
+as the road's own slope triangle.
+
+35
+00:01:32,110 --> 00:01:34,618
+Run four, rise three, long side five.
+
+36
+00:01:34,618 --> 00:01:37,514
+So the perpendicular is
+four fifths of the gap.
+
+37
+00:01:37,514 --> 00:01:41,083
+In general, B over the root
+of A squared plus B squared.
+
+38
+00:01:41,833 --> 00:01:42,733
+Step four.
+
+39
+00:01:42,713 --> 00:01:43,855
+The B's cancel.
+
+40
+00:01:43,855 --> 00:01:48,859
+d is the size of A x one plus B y one
+plus C, over the root of A squared
+
+41
+00:01:48,859 --> 00:01:50,052
+plus B squared.
+
+42
+00:01:50,802 --> 00:01:55,967
+For our house, the top is fifteen plus
+sixteen minus twelve, which is nineteen.
+
+43
+00:01:55,967 --> 00:01:57,387
+The bottom is five.
+
+44
+00:01:57,387 --> 00:02:00,019
+Nineteen over five is three point eight.
+
+45
+00:02:00,019 --> 00:02:00,926
+It matches.
+
+46
+00:02:01,576 --> 00:02:02,547
+Side by side.
+
+47
+00:02:02,547 --> 00:02:06,448
+The distance of a point from a
+line needs one point and the line.
+
+48
+00:02:06,848 --> 00:02:11,009
+The distance between two parallel
+lines is the same everywhere.
+
+49
+00:02:11,009 --> 00:02:16,440
+With A x plus B y plus C one, and A
+x plus B y plus C two, it is the size
+
+50
+00:02:16,440 --> 00:02:19,561
+of C one minus C two, over the same root.
+
+51
+00:02:20,161 --> 00:02:21,061
+Your turn.
+
+52
+00:02:20,938 --> 00:02:22,967
+A point lies on the line itself.
+
+53
+00:02:22,967 --> 00:02:25,131
+What is its distance from the line?
+
+54
+00:02:25,131 --> 00:02:26,275
+Pause and decide.
+
+55
+00:02:29,475 --> 00:02:30,375
+Zero!
+
+56
+00:02:30,036 --> 00:02:34,466
+For a point on the line, A x
+one plus B y one plus C is zero.
+
+57
+00:02:34,466 --> 00:02:35,969
+So the top is zero.
+
+58
+00:02:36,619 --> 00:02:37,669
+Remember this.
+
+59
+00:02:37,669 --> 00:02:40,180
+The shortest path is the perpendicular.
+
+60
+00:02:40,180 --> 00:02:45,076
+Its length is the size of A x one plus
+B y one plus C, over root A squared
+
+61
+00:02:45,076 --> 00:02:46,233
+plus B squared.
+
+62
+00:02:46,933 --> 00:02:48,332
+One habit to keep.
+
+63
+00:02:48,332 --> 00:02:51,802
+The line must equal zero
+before you use the formula.
+
+64
+00:02:52,202 --> 00:02:57,595
+Three x plus four y equals ten becomes
+three x plus four y minus ten equals
+
+65
+00:02:57,595 --> 00:02:58,495
+zero.
+
+66
+00:02:58,229 --> 00:03:00,631
+So C is minus ten, not ten.
+
+67
+00:03:01,231 --> 00:03:02,131
+Quick one.
+
+68
+00:03:02,065 --> 00:03:06,377
+How far is the origin from the line
+three x plus four y equals ten?
+
+69
+00:03:06,377 --> 00:03:07,556
+Pause and think.
+
+70
+00:03:10,756 --> 00:03:11,656
+Two!
+
+71
+00:03:11,260 --> 00:03:12,731
+Put in zero, zero.
+
+72
+00:03:12,731 --> 00:03:16,050
+The top is the size of
+minus ten, which is ten.
+
+73
+00:03:16,050 --> 00:03:17,630
+Ten over five is two.
+
+74
+00:03:18,280 --> 00:03:19,970
+Now, one worked example.
+
+75
+00:03:20,320 --> 00:03:24,830
+Find the distance of the point three,
+one from the line twelve x minus
+
+76
+00:03:24,830 --> 00:03:26,949
+five y plus eight equals zero.
+
+77
+00:03:27,449 --> 00:03:28,349
+Step one.
+
+78
+00:03:28,287 --> 00:03:30,033
+Read off A, B and C.
+
+79
+00:03:30,033 --> 00:03:32,331
+Twelve, minus five, and eight.
+
+80
+00:03:33,081 --> 00:03:33,981
+Step two.
+
+81
+00:03:33,833 --> 00:03:34,733
+Top.
+
+82
+00:03:34,300 --> 00:03:37,638
+Twelve times three, minus
+five times one, plus eight.
+
+83
+00:03:37,638 --> 00:03:39,004
+That is thirty nine.
+
+84
+00:03:39,754 --> 00:03:40,654
+Step three.
+
+85
+00:03:40,634 --> 00:03:41,534
+Bottom.
+
+86
+00:03:41,266 --> 00:03:44,568
+The root of one hundred
+forty four plus twenty five.
+
+87
+00:03:44,568 --> 00:03:47,133
+The root of one sixty nine is thirteen.
+
+88
+00:03:47,883 --> 00:03:48,783
+Step four.
+
+89
+00:03:48,617 --> 00:03:50,610
+Thirty nine over thirteen is three.
+
+90
+00:03:50,610 --> 00:03:52,872
+The point is three units from the line.
+
+91
+00:03:53,522 --> 00:03:54,984
+Now, the exam trap.
+
+92
+00:03:55,334 --> 00:04:00,013
+Find the distance between three x
+plus four y minus two equals zero, and
+
+93
+00:04:00,013 --> 00:04:02,857
+six x plus eight y plus one equals zero.
+
+94
+00:04:02,857 --> 00:04:04,998
+Many students get three fifths.
+
+95
+00:04:05,398 --> 00:04:08,226
+But the x and y parts must match first.
+
+96
+00:04:08,226 --> 00:04:09,867
+Halve the second line.
+
+97
+00:04:09,867 --> 00:04:13,119
+Three x plus four y plus
+one half equals zero.
+
+98
+00:04:13,119 --> 00:04:15,772
+Minus two minus one half, over five.
+
+99
+00:04:15,772 --> 00:04:17,527
+The answer is one half.
+
+100
+00:04:18,177 --> 00:04:19,581
+Where is this asked?
+
+101
+00:04:19,581 --> 00:04:23,851
+In JEE Main, for example in April
+twenty nineteen: lines parallel to a
+
+102
+00:04:23,851 --> 00:04:26,858
+given line, at a set
+distance from the origin.
+
+103
+00:04:27,458 --> 00:04:28,601
+Exam level now.
+
+104
+00:04:28,601 --> 00:04:32,553
+Two points on the x axis are at
+distance four from this line.
+
+105
+00:04:32,553 --> 00:04:34,946
+Find the sum of their x coordinates.
+
+106
+00:04:34,946 --> 00:04:36,137
+Pause and solve.
+
+107
+00:04:41,537 --> 00:04:43,158
+The answer is B.
+
+108
+00:04:43,158 --> 00:04:44,058
+Six.
+
+109
+00:04:44,298 --> 00:04:47,090
+A point on the x axis is h, zero.
+
+110
+00:04:47,090 --> 00:04:51,508
+Its distance is the size of
+four h minus twelve, over five.
+
+111
+00:04:52,008 --> 00:04:53,914
+Set that equal to four.
+
+112
+00:04:53,914 --> 00:04:58,129
+So four h minus twelve is
+plus twenty, or minus twenty.
+
+113
+00:04:58,629 --> 00:05:02,285
+That gives h equals eight,
+or h equals minus two.
+
+114
+00:05:02,285 --> 00:05:03,726
+Their sum is six.
+
+115
+00:05:04,326 --> 00:05:05,866
+Here is your recap.
+
+116
+00:05:05,866 --> 00:05:07,449
+Screenshot this card.
+
+117
+00:05:10,649 --> 00:05:12,835
+Can you answer these three
+questions without help?
+
+118
+00:05:13,235 --> 00:05:14,135
+One.
+
+119
+00:05:13,732 --> 00:05:18,066
+How far is the origin from the line
+five x plus twelve y equals twenty
+
+120
+00:05:18,066 --> 00:05:18,966
+six?
+
+121
+00:05:19,463 --> 00:05:20,363
+Two.
+
+122
+00:05:19,915 --> 00:05:23,889
+Why is the shortest path from a
+point to a line always perpendicular?
+
+123
+00:05:24,789 --> 00:05:25,689
+Three.
+
+124
+00:05:25,397 --> 00:05:30,492
+What is the distance between x plus y
+equals one, and x plus y equals three?
+
+125
+00:05:31,592 --> 00:05:36,123
+Next time, a new chapter: slice an
+ice cream cone four different ways,
+
+126
+00:05:36,123 --> 00:05:38,129
+and four famous curves appear.
+
+127
+00:05:38,129 --> 00:05:40,596
+Sections of a cone, and the circle.

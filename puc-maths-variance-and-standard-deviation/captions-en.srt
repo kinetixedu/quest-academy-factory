@@ -1,0 +1,481 @@
+1
+00:00:00,450 --> 00:00:02,790
+Two batsmen play ten matches each.
+
+2
+00:00:02,790 --> 00:00:05,494
+Both score five hundred and thirty runs.
+
+3
+00:00:05,494 --> 00:00:07,256
+Both average fifty three.
+
+4
+00:00:07,656 --> 00:00:11,617
+But batsman A swings from zero
+to one hundred and seventeen.
+
+5
+00:00:11,617 --> 00:00:14,585
+Batsman B stays between
+forty six and sixty.
+
+6
+00:00:15,035 --> 00:00:18,838
+Aarav found these scores in our NCERT
+book, and asked a simple question.
+
+7
+00:00:19,188 --> 00:00:21,193
+Which batsman is more consistent?
+
+8
+00:00:21,193 --> 00:00:23,025
+And can one number prove it?
+
+9
+00:00:23,525 --> 00:00:25,988
+That number is the standard deviation.
+
+10
+00:00:25,988 --> 00:00:28,715
+To find it, we first meet the variance.
+
+11
+00:00:29,365 --> 00:00:30,402
+Quick reminder.
+
+12
+00:00:30,402 --> 00:00:34,727
+Last time, we measured spread with
+distances from the mean, using absolute
+
+13
+00:00:34,727 --> 00:00:35,627
+values.
+
+14
+00:00:35,738 --> 00:00:39,986
+Today there is another way to stop
+the minus signs from cancelling.
+
+15
+00:00:39,986 --> 00:00:41,539
+Square every deviation.
+
+16
+00:00:41,539 --> 00:00:43,408
+A square is never negative.
+
+17
+00:00:44,058 --> 00:00:48,819
+Watch it on eight small numbers: two,
+four, four, four, five, five, seven
+
+18
+00:00:48,819 --> 00:00:49,719
+and nine.
+
+19
+00:00:49,573 --> 00:00:50,897
+Their mean is five.
+
+20
+00:00:51,297 --> 00:00:54,263
+Each gap from five becomes
+the side of a real square.
+
+21
+00:00:54,263 --> 00:00:56,504
+A gap of three makes a square of nine.
+
+22
+00:00:56,504 --> 00:00:58,829
+A gap of four makes a square of sixteen.
+
+23
+00:00:59,229 --> 00:01:01,231
+Now add all the square areas.
+
+24
+00:01:01,231 --> 00:01:05,013
+Nine, one, one, one, zero,
+zero, four and sixteen.
+
+25
+00:01:05,013 --> 00:01:06,715
+The total is thirty two.
+
+26
+00:01:07,115 --> 00:01:09,172
+Share it among the eight numbers.
+
+27
+00:01:09,172 --> 00:01:11,094
+Thirty two over eight is four.
+
+28
+00:01:11,094 --> 00:01:13,661
+That is the variance: the average square.
+
+29
+00:01:14,061 --> 00:01:16,603
+Now take the side of that average square.
+
+30
+00:01:16,603 --> 00:01:18,633
+The square root of four is two.
+
+31
+00:01:18,633 --> 00:01:20,553
+That is the standard deviation.
+
+32
+00:01:21,203 --> 00:01:23,002
+Now the rule, step by step.
+
+33
+00:01:23,402 --> 00:01:24,302
+Step one.
+
+34
+00:01:24,280 --> 00:01:26,101
+Find the mean, x bar.
+
+35
+00:01:26,851 --> 00:01:27,751
+Step two.
+
+36
+00:01:27,724 --> 00:01:31,507
+Find each deviation, x
+minus x bar, and square it.
+
+37
+00:01:32,257 --> 00:01:33,157
+Step three.
+
+38
+00:01:33,155 --> 00:01:35,517
+Add the squares, and divide by n.
+
+39
+00:01:35,517 --> 00:01:38,416
+This is the variance,
+written sigma squared.
+
+40
+00:01:39,166 --> 00:01:40,077
+Step four.
+
+41
+00:01:40,077 --> 00:01:42,224
+Take the positive square root.
+
+42
+00:01:42,224 --> 00:01:44,957
+This is the standard deviation, sigma.
+
+43
+00:01:45,707 --> 00:01:46,916
+A useful shortcut.
+
+44
+00:01:46,916 --> 00:01:51,459
+The variance is also the mean of the
+squares, minus the square of the mean.
+
+45
+00:01:52,109 --> 00:01:53,163
+Side by side.
+
+46
+00:01:53,163 --> 00:01:56,980
+The variance squares the gaps,
+so its unit is squared too.
+
+47
+00:01:56,980 --> 00:02:00,845
+For runs, that is runs squared,
+which is hard to picture.
+
+48
+00:02:01,245 --> 00:02:05,720
+The standard deviation takes the
+square root, so it is back in runs.
+
+49
+00:02:05,720 --> 00:02:07,853
+Batsman A has about thirty six.
+
+50
+00:02:07,853 --> 00:02:10,244
+Batsman B has about four point two.
+
+51
+00:02:10,844 --> 00:02:11,744
+Your turn.
+
+52
+00:02:11,661 --> 00:02:13,729
+Which batsman is more consistent?
+
+53
+00:02:13,729 --> 00:02:14,885
+Pause and think.
+
+54
+00:02:18,085 --> 00:02:18,985
+Batsman B!
+
+55
+00:02:18,954 --> 00:02:23,370
+A smaller standard deviation means
+the scores stay close to the mean.
+
+56
+00:02:23,370 --> 00:02:25,419
+Batsman A's scores jump around.
+
+57
+00:02:26,069 --> 00:02:27,037
+Remember this.
+
+58
+00:02:27,037 --> 00:02:30,566
+Square the gaps, average them,
+then take the square root.
+
+59
+00:02:31,266 --> 00:02:32,956
+Now, one worked example.
+
+60
+00:02:33,306 --> 00:02:37,826
+Find the variance and the standard
+deviation of six, eight, ten, and so
+
+61
+00:02:37,826 --> 00:02:39,517
+on, up to twenty four.
+
+62
+00:02:40,017 --> 00:02:40,917
+Step one.
+
+63
+00:02:40,796 --> 00:02:43,874
+There are ten numbers,
+and the mean is fifteen.
+
+64
+00:02:44,624 --> 00:02:45,524
+Step two.
+
+65
+00:02:45,339 --> 00:02:47,852
+The deviations run from
+minus nine to nine.
+
+66
+00:02:47,852 --> 00:02:52,154
+Their squares are eighty one, forty
+nine, twenty five, nine and one, twice
+
+67
+00:02:52,154 --> 00:02:53,054
+each.
+
+68
+00:02:53,393 --> 00:02:54,293
+Step three.
+
+69
+00:02:54,140 --> 00:02:56,688
+The squares add up to
+three hundred and thirty.
+
+70
+00:02:57,438 --> 00:02:58,338
+Step four.
+
+71
+00:02:58,294 --> 00:02:59,404
+Divide by ten.
+
+72
+00:02:59,404 --> 00:03:01,370
+The variance is thirty three.
+
+73
+00:03:02,120 --> 00:03:03,020
+Step five.
+
+74
+00:03:02,971 --> 00:03:07,545
+The standard deviation is the square
+root of thirty three, about five point
+
+75
+00:03:07,545 --> 00:03:08,445
+seven four.
+
+76
+00:03:09,095 --> 00:03:10,556
+Now, the exam trap.
+
+77
+00:03:10,906 --> 00:03:14,780
+Many students stop at the variance,
+and write the standard deviation as
+
+78
+00:03:14,780 --> 00:03:15,680
+thirty three.
+
+79
+00:03:16,075 --> 00:03:20,008
+But the standard deviation is
+the square root of the variance.
+
+80
+00:03:20,008 --> 00:03:23,794
+Here it is about five point
+seven four, not thirty three.
+
+81
+00:03:24,444 --> 00:03:25,734
+Where is this asked?
+
+82
+00:03:25,734 --> 00:03:26,634
+In JEE Main.
+
+83
+00:03:26,626 --> 00:03:30,461
+In February twenty twenty three, a
+paper gave the mean and variance of
+
+84
+00:03:30,461 --> 00:03:33,656
+five observations, and asked
+about the two missing ones.
+
+85
+00:03:34,256 --> 00:03:35,428
+Exam level now.
+
+86
+00:03:35,428 --> 00:03:38,019
+A sixth observation, four, is added.
+
+87
+00:03:38,019 --> 00:03:39,598
+Find the new variance.
+
+88
+00:03:39,598 --> 00:03:40,820
+Pause and solve.
+
+89
+00:03:46,220 --> 00:03:47,702
+The answer is B.
+
+90
+00:03:47,702 --> 00:03:49,115
+Five over three.
+
+91
+00:03:49,615 --> 00:03:51,448
+Use the shortcut backwards.
+
+92
+00:03:51,448 --> 00:03:54,527
+The sum is five times
+four, which is twenty.
+
+93
+00:03:54,527 --> 00:03:59,139
+The sum of squares is five times,
+two plus sixteen, which is ninety.
+
+94
+00:03:59,639 --> 00:04:00,644
+Add the four.
+
+95
+00:04:00,644 --> 00:04:04,969
+Now the sum is twenty four, the sum
+of squares is one hundred and six,
+
+96
+00:04:04,969 --> 00:04:06,689
+and there are six numbers.
+
+97
+00:04:06,689 --> 00:04:08,075
+The mean stays four.
+
+98
+00:04:08,575 --> 00:04:12,964
+The new variance is one hundred
+and six over six, minus sixteen.
+
+99
+00:04:12,964 --> 00:04:14,763
+That is five over three.
+
+100
+00:04:15,363 --> 00:04:16,904
+Here is your recap.
+
+101
+00:04:16,904 --> 00:04:18,488
+Screenshot this card.
+
+102
+00:04:21,688 --> 00:04:23,874
+Can you answer these three
+questions without help?
+
+103
+00:04:24,274 --> 00:04:25,174
+One.
+
+104
+00:04:24,563 --> 00:04:25,814
+Why do we square the deviations?
+
+105
+00:04:26,714 --> 00:04:27,614
+Two.
+
+106
+00:04:27,203 --> 00:04:31,192
+If the variance is twenty five,
+what is the standard deviation?
+
+107
+00:04:32,092 --> 00:04:32,992
+Three.
+
+108
+00:04:32,552 --> 00:04:34,326
+Heights are measured in centimetres.
+
+109
+00:04:34,326 --> 00:04:36,153
+What is the unit of their variance?
+
+110
+00:04:37,253 --> 00:04:41,714
+Next time: the weather report says
+seventy percent chance of rain tomorrow.
+
+111
+00:04:41,714 --> 00:04:43,852
+What does that number really mean?
+
+112
+00:04:43,852 --> 00:04:45,832
+Probability, events and axioms.

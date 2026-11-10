@@ -1,0 +1,467 @@
+1
+00:00:00,450 --> 00:00:04,893
+A speedometer reads forty kilometres per
+hour, right now, at this one instant.
+
+2
+00:00:05,293 --> 00:00:07,854
+But speed is distance divided by time.
+
+3
+00:00:07,854 --> 00:00:10,574
+In one instant, no time passes at all.
+
+4
+00:00:11,024 --> 00:00:14,163
+Diya noticed this on the speed
+meter of her bicycle this morning.
+
+5
+00:00:14,513 --> 00:00:16,524
+Zero distance over zero time.
+
+6
+00:00:16,524 --> 00:00:19,067
+So how can the meter show any speed?
+
+7
+00:00:19,567 --> 00:00:22,392
+The answer is one of the
+biggest ideas in maths.
+
+8
+00:00:22,392 --> 00:00:26,547
+It is called the derivative, and today
+we build it from first principles.
+
+9
+00:00:27,197 --> 00:00:31,139
+Let us test it on a falling ball,
+the example from our NCERT book.
+
+10
+00:00:31,539 --> 00:00:35,841
+A ball dropped from a cliff falls
+four point nine t squared metres in t
+
+11
+00:00:35,841 --> 00:00:36,741
+seconds.
+
+12
+00:00:36,919 --> 00:00:39,927
+How fast is it going
+at exactly two seconds?
+
+13
+00:00:39,927 --> 00:00:42,049
+We cannot divide by zero time.
+
+14
+00:00:42,049 --> 00:00:44,282
+So we take a small gap instead.
+
+15
+00:00:44,682 --> 00:00:49,121
+From two seconds to three seconds,
+the average speed is twenty four point
+
+16
+00:00:49,121 --> 00:00:50,711
+five metres per second.
+
+17
+00:00:51,111 --> 00:00:52,451
+Now shrink the gap.
+
+18
+00:00:52,451 --> 00:00:55,521
+A tenth of a second gives
+twenty point zero nine.
+
+19
+00:00:55,521 --> 00:00:58,387
+A hundredth gives nineteen
+point six four nine.
+
+20
+00:00:58,787 --> 00:01:00,400
+Watch the number settle.
+
+21
+00:01:00,400 --> 00:01:05,018
+As the gap shrinks towards zero, the
+speed gets closer and closer to nineteen
+
+22
+00:01:05,018 --> 00:01:05,918
+point six.
+
+23
+00:01:05,848 --> 00:01:08,062
+That is the speed at one instant.
+
+24
+00:01:08,712 --> 00:01:10,827
+Now let us do this for any curve.
+
+25
+00:01:10,827 --> 00:01:14,454
+Think of the curve as a hill,
+and you are walking along it.
+
+26
+00:01:14,854 --> 00:01:15,754
+Step one.
+
+27
+00:01:15,602 --> 00:01:16,969
+Stand at a point x.
+
+28
+00:01:16,969 --> 00:01:18,855
+Your height there is f of x.
+
+29
+00:01:19,605 --> 00:01:20,505
+Step two.
+
+30
+00:01:20,441 --> 00:01:23,175
+Take a small step forward, of size h.
+
+31
+00:01:23,175 --> 00:01:25,663
+Your new height is f of x plus h.
+
+32
+00:01:26,413 --> 00:01:27,485
+Step three.
+
+33
+00:01:27,485 --> 00:01:31,064
+The rise is f of x plus h, minus f of x.
+
+34
+00:01:31,064 --> 00:01:32,755
+The run is just h.
+
+35
+00:01:33,505 --> 00:01:34,405
+Step four.
+
+36
+00:01:34,343 --> 00:01:38,514
+Rise over run is the steepness of
+the line joining the two points.
+
+37
+00:01:38,514 --> 00:01:40,499
+This line is called a secant.
+
+38
+00:01:41,249 --> 00:01:42,149
+Step five.
+
+39
+00:01:42,080 --> 00:01:43,859
+Now let h shrink to zero.
+
+40
+00:01:43,859 --> 00:01:48,285
+The secant turns into the tangent,
+a line that just touches the curve.
+
+41
+00:01:49,035 --> 00:01:53,481
+The limit of rise over run is the
+derivative, written f dash of x.
+
+42
+00:01:53,481 --> 00:01:56,739
+Finding it this way is
+called the first principle.
+
+43
+00:01:57,389 --> 00:01:58,439
+Side by side.
+
+44
+00:01:58,439 --> 00:02:00,998
+Average speed uses a real gap of time.
+
+45
+00:02:00,998 --> 00:02:03,965
+On the graph, it is the slope of a secant.
+
+46
+00:02:04,365 --> 00:02:07,426
+Speed at one instant lets
+the gap shrink to zero.
+
+47
+00:02:07,426 --> 00:02:10,394
+On the graph, it is the
+slope of the tangent.
+
+48
+00:02:10,394 --> 00:02:11,915
+That is the derivative.
+
+49
+00:02:12,515 --> 00:02:13,415
+Your turn.
+
+50
+00:02:13,329 --> 00:02:17,192
+In the fraction, can we just
+put h equal to zero right away?
+
+51
+00:02:17,192 --> 00:02:18,343
+Pause and think.
+
+52
+00:02:21,543 --> 00:02:22,443
+No!
+
+53
+00:02:21,978 --> 00:02:25,046
+The top becomes zero and
+the bottom becomes zero.
+
+54
+00:02:25,046 --> 00:02:27,138
+Zero over zero tells us nothing.
+
+55
+00:02:27,138 --> 00:02:29,921
+We simplify first, then let h go to zero.
+
+56
+00:02:30,571 --> 00:02:31,587
+Remember this.
+
+57
+00:02:31,587 --> 00:02:36,242
+Take a tiny step, divide by the step,
+then let the step shrink to zero.
+
+58
+00:02:36,942 --> 00:02:38,632
+Now, one worked example.
+
+59
+00:02:38,982 --> 00:02:41,665
+Find the derivative of x
+squared from first principles.
+
+60
+00:02:42,165 --> 00:02:43,065
+Step one.
+
+61
+00:02:43,039 --> 00:02:46,194
+f of x plus h is x plus h, all squared.
+
+62
+00:02:46,194 --> 00:02:49,936
+That is x squared, plus
+two x h, plus h squared.
+
+63
+00:02:50,686 --> 00:02:51,586
+Step two.
+
+64
+00:02:51,550 --> 00:02:52,909
+Subtract f of x.
+
+65
+00:02:52,909 --> 00:02:57,913
+The x squared cancels, and we are
+left with two x h, plus h squared.
+
+66
+00:02:58,663 --> 00:02:59,598
+Step three.
+
+67
+00:02:59,598 --> 00:03:00,644
+Divide by h.
+
+68
+00:03:00,644 --> 00:03:02,432
+We get two x, plus h.
+
+69
+00:03:03,182 --> 00:03:04,082
+Step four.
+
+70
+00:03:04,038 --> 00:03:05,671
+Now let h go to zero.
+
+71
+00:03:05,671 --> 00:03:08,210
+The derivative of x squared is two x.
+
+72
+00:03:08,960 --> 00:03:10,537
+Check it on the curve.
+
+73
+00:03:10,537 --> 00:03:15,363
+At x equal to three, the tangent climbs
+six units for every one unit across.
+
+74
+00:03:16,013 --> 00:03:17,478
+Now, the exam trap.
+
+75
+00:03:17,828 --> 00:03:23,277
+For f of x equal to x squared, many
+students write f of x plus h as x squared
+
+76
+00:03:23,277 --> 00:03:24,177
+plus h.
+
+77
+00:03:24,440 --> 00:03:28,770
+But f of x plus h means we
+put x plus h in place of x.
+
+78
+00:03:28,770 --> 00:03:31,406
+So it is x plus h, all squared.
+
+79
+00:03:31,406 --> 00:03:36,611
+With x equal to three and h equal
+to one, that is sixteen, not ten.
+
+80
+00:03:37,261 --> 00:03:38,797
+Where is this asked?
+
+81
+00:03:38,797 --> 00:03:39,859
+In JEE Main.
+
+82
+00:03:39,859 --> 00:03:44,593
+In March twenty twenty one, a paper
+hid a derivative inside a limit, f
+
+83
+00:03:44,593 --> 00:03:48,212
+of h minus one, over h,
+and asked for its value.
+
+84
+00:03:48,812 --> 00:03:50,036
+Exam level now.
+
+85
+00:03:50,036 --> 00:03:53,417
+For f of x equal to x
+cubed, find this limit.
+
+86
+00:03:53,417 --> 00:03:54,692
+Pause and solve.
+
+87
+00:04:00,092 --> 00:04:01,485
+The answer is C.
+
+88
+00:04:01,485 --> 00:04:02,533
+Twenty four.
+
+89
+00:04:03,033 --> 00:04:04,558
+Expand both cubes.
+
+90
+00:04:04,558 --> 00:04:10,291
+Two plus h, cubed, minus two minus
+h, cubed, is twenty four h, plus two
+
+91
+00:04:10,291 --> 00:04:11,191
+h cubed.
+
+92
+00:04:11,673 --> 00:04:12,726
+Divide by h.
+
+93
+00:04:12,726 --> 00:04:15,568
+We get twenty four, plus two h squared.
+
+94
+00:04:16,068 --> 00:04:19,760
+Let h go to zero, and the
+answer is twenty four.
+
+95
+00:04:19,760 --> 00:04:24,859
+That is twice f dash of two, because
+the gap here is two h, not h.
+
+96
+00:04:25,459 --> 00:04:27,000
+Here is your recap.
+
+97
+00:04:27,000 --> 00:04:28,584
+Screenshot this card.
+
+98
+00:04:31,784 --> 00:04:33,970
+Can you answer these three
+questions without help?
+
+99
+00:04:34,370 --> 00:04:35,270
+One.
+
+100
+00:04:34,835 --> 00:04:37,900
+Why can we not put h equal
+to zero straight away?
+
+101
+00:04:38,800 --> 00:04:39,700
+Two.
+
+102
+00:04:39,177 --> 00:04:41,717
+Find the derivative of three
+x from first principles.
+
+103
+00:04:42,617 --> 00:04:43,517
+Three.
+
+104
+00:04:43,087 --> 00:04:45,353
+What does the slope of
+the tangent tell us?
+
+105
+00:04:46,453 --> 00:04:48,962
+Next time: the derivative
+of a sum is easy.
+
+106
+00:04:48,962 --> 00:04:52,741
+But is the derivative of a product
+just the product of the derivatives?
+
+107
+00:04:52,741 --> 00:04:55,077
+We find out in the algebra of derivatives.

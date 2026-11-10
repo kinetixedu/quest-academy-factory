@@ -1,0 +1,551 @@
+1
+00:00:00,450 --> 00:00:03,630
+Aarav draws a rectangle, four
+centimetres wide and three tall.
+
+2
+00:00:03,630 --> 00:00:05,923
+Its width grows two
+centimetres every second.
+
+3
+00:00:05,923 --> 00:00:08,334
+Its height grows three
+centimetres every second.
+
+4
+00:00:08,734 --> 00:00:12,594
+So does the area grow by two times
+three, six square centimetres every
+
+5
+00:00:12,594 --> 00:00:13,494
+second?
+
+6
+00:00:13,620 --> 00:00:16,078
+Aarav tested this at
+his study table tonight.
+
+7
+00:00:16,428 --> 00:00:19,901
+The real answer is much
+bigger, and it keeps changing.
+
+8
+00:00:19,901 --> 00:00:21,271
+So what went wrong?
+
+9
+00:00:21,771 --> 00:00:26,257
+Today we learn the algebra of derivatives:
+the derivative of a sum, a product
+
+10
+00:00:26,257 --> 00:00:27,329
+and a fraction.
+
+11
+00:00:27,979 --> 00:00:29,031
+Quick reminder.
+
+12
+00:00:29,031 --> 00:00:32,016
+A derivative tells us how
+fast something changes.
+
+13
+00:00:32,016 --> 00:00:34,589
+We write u dash for how fast u changes.
+
+14
+00:00:34,989 --> 00:00:35,889
+Start easy.
+
+15
+00:00:35,872 --> 00:00:38,693
+Two tanks fill with
+water at the same time.
+
+16
+00:00:38,693 --> 00:00:41,801
+One gains two litres a
+minute, the other three.
+
+17
+00:00:41,801 --> 00:00:43,912
+Together, five litres a minute.
+
+18
+00:00:44,312 --> 00:00:45,925
+That is the sum rule.
+
+19
+00:00:45,925 --> 00:00:49,374
+The derivative of u plus
+v is u dash plus v dash.
+
+20
+00:00:49,374 --> 00:00:51,602
+For a difference, use a minus.
+
+21
+00:00:52,352 --> 00:00:54,721
+One more tool from the NCERT book.
+
+22
+00:00:54,721 --> 00:00:59,698
+The derivative of x to the power n is
+n times x to the power n minus one.
+
+23
+00:00:59,698 --> 00:01:02,017
+So x cubed gives three x squared.
+
+24
+00:01:02,767 --> 00:01:04,020
+Now the product.
+
+25
+00:01:04,020 --> 00:01:07,065
+Let the rectangle have
+width u and height v.
+
+26
+00:01:07,065 --> 00:01:08,806
+Its area is u times v.
+
+27
+00:01:09,206 --> 00:01:13,072
+In a tiny moment, the width
+grows by a small bit, delta u.
+
+28
+00:01:13,072 --> 00:01:14,953
+The height grows by delta v.
+
+29
+00:01:15,353 --> 00:01:17,377
+Watch the new area appear.
+
+30
+00:01:17,377 --> 00:01:20,484
+A strip along the top, u times delta v.
+
+31
+00:01:20,484 --> 00:01:23,590
+A strip down the side, v times delta u.
+
+32
+00:01:23,990 --> 00:01:27,163
+And one tiny corner,
+delta u times delta v.
+
+33
+00:01:27,163 --> 00:01:32,464
+As the moment shrinks to zero, this
+corner shrinks much faster, and vanishes.
+
+34
+00:01:32,864 --> 00:01:37,535
+So the area grows at u times
+v dash, plus v times u dash.
+
+35
+00:01:37,535 --> 00:01:39,627
+Not u dash times v dash.
+
+36
+00:01:40,277 --> 00:01:43,777
+Let us turn the picture
+into a rule, step by step.
+
+37
+00:01:44,177 --> 00:01:45,077
+Step one.
+
+38
+00:01:45,027 --> 00:01:49,807
+The new area is u delta v, plus
+v delta u, plus delta u delta v.
+
+39
+00:01:50,557 --> 00:01:51,457
+Step two.
+
+40
+00:01:51,348 --> 00:01:53,729
+Divide by the small time, delta t.
+
+41
+00:01:53,729 --> 00:01:56,516
+Each piece now tells us how fast it grows.
+
+42
+00:01:57,266 --> 00:01:58,166
+Step three.
+
+43
+00:01:58,149 --> 00:01:59,838
+Let delta t go to zero.
+
+44
+00:01:59,838 --> 00:02:04,138
+The corner piece goes to zero too,
+because it is small times small.
+
+45
+00:02:04,888 --> 00:02:05,788
+Step four.
+
+46
+00:02:05,720 --> 00:02:09,144
+The derivative of u v is
+u dash v, plus u v dash.
+
+47
+00:02:09,144 --> 00:02:12,731
+NCERT calls this the Leibnitz
+rule, or the product rule.
+
+48
+00:02:13,481 --> 00:02:14,520
+Back to Aarav.
+
+49
+00:02:14,520 --> 00:02:16,211
+Width four, height three.
+
+50
+00:02:16,211 --> 00:02:19,512
+Four times three, plus three
+times two, is eighteen.
+
+51
+00:02:19,512 --> 00:02:20,412
+Not six.
+
+52
+00:02:20,870 --> 00:02:22,909
+Now the fraction, u over v.
+
+53
+00:02:22,909 --> 00:02:24,690
+Think of sharing a pizza.
+
+54
+00:02:24,690 --> 00:02:26,670
+More pizza helps each person.
+
+55
+00:02:26,670 --> 00:02:27,986
+More people hurts.
+
+56
+00:02:28,386 --> 00:02:33,107
+So the top's change counts as plus, and
+the bottom's change counts as minus.
+
+57
+00:02:33,107 --> 00:02:37,104
+The rule is u dash v, minus
+u v dash, all over v squared.
+
+58
+00:02:37,854 --> 00:02:42,875
+It works only when v is not zero,
+because we can never divide by zero.
+
+59
+00:02:43,625 --> 00:02:44,746
+A memory trick.
+
+60
+00:02:44,746 --> 00:02:48,964
+Low d high, minus high d low,
+over the square of what is below.
+
+61
+00:02:49,614 --> 00:02:50,707
+Side by side.
+
+62
+00:02:50,707 --> 00:02:53,308
+For a sum, the derivatives just add.
+
+63
+00:02:53,308 --> 00:02:55,828
+u plus v gives u dash plus v dash.
+
+64
+00:02:56,228 --> 00:02:58,635
+For a product, they do not multiply.
+
+65
+00:02:58,635 --> 00:03:02,540
+Each part takes a turn to change,
+while the other stays still.
+
+66
+00:03:03,140 --> 00:03:04,069
+Your turn.
+
+67
+00:03:04,069 --> 00:03:08,870
+Is the derivative of x squared times
+x cubed equal to two x times three
+
+68
+00:03:08,870 --> 00:03:09,798
+x squared?
+
+69
+00:03:09,798 --> 00:03:11,110
+Pause and think.
+
+70
+00:03:14,310 --> 00:03:15,210
+No!
+
+71
+00:03:14,775 --> 00:03:16,490
+That gives six x cubed.
+
+72
+00:03:16,490 --> 00:03:21,243
+But x squared times x cubed is x to
+the power five, so its derivative is
+
+73
+00:03:21,243 --> 00:03:23,120
+five x to the power four.
+
+74
+00:03:23,770 --> 00:03:24,670
+Remember this.
+
+75
+00:03:24,602 --> 00:03:27,200
+A product does not give
+the product of derivatives.
+
+76
+00:03:27,200 --> 00:03:28,522
+Each part takes a turn.
+
+77
+00:03:29,222 --> 00:03:30,912
+Now, one worked example.
+
+78
+00:03:31,262 --> 00:03:34,899
+Find the derivative of x
+squared, over x plus one.
+
+79
+00:03:34,899 --> 00:03:37,735
+Then find its value at x equal to one.
+
+80
+00:03:38,235 --> 00:03:39,161
+Step one.
+
+81
+00:03:39,161 --> 00:03:42,798
+The top u is x squared,
+so u dash is two x.
+
+82
+00:03:42,798 --> 00:03:46,549
+The bottom v is x plus
+one, so v dash is one.
+
+83
+00:03:47,299 --> 00:03:48,199
+Step two.
+
+84
+00:03:48,077 --> 00:03:51,941
+Use low d high, minus high d
+low, over the bottom squared.
+
+85
+00:03:52,691 --> 00:03:53,670
+Step three.
+
+86
+00:03:53,670 --> 00:03:59,489
+That is two x times x plus one, minus x
+squared, all over x plus one, squared.
+
+87
+00:04:00,239 --> 00:04:01,139
+Step four.
+
+88
+00:04:01,119 --> 00:04:02,212
+Tidy the top.
+
+89
+00:04:02,212 --> 00:04:06,129
+We get x squared plus two
+x, over x plus one, squared.
+
+90
+00:04:06,879 --> 00:04:07,779
+Step five.
+
+91
+00:04:07,724 --> 00:04:10,736
+At x equal to one, that
+is three over four.
+
+92
+00:04:10,736 --> 00:04:14,846
+A tiny step of one thousandth on
+the graph gives the same slope.
+
+93
+00:04:15,496 --> 00:04:16,960
+Now, the exam trap.
+
+94
+00:04:17,310 --> 00:04:20,618
+In the quotient rule, many
+students start with u v dash.
+
+95
+00:04:20,618 --> 00:04:22,180
+The order flips the sign.
+
+96
+00:04:22,580 --> 00:04:26,367
+For our example, the wrong order
+gives minus three over four.
+
+97
+00:04:26,367 --> 00:04:31,143
+But the graph is going up at x equal
+to one, so the slope must be positive.
+
+98
+00:04:31,793 --> 00:04:33,329
+Where is this asked?
+
+99
+00:04:33,329 --> 00:04:34,967
+These rules are tools.
+
+100
+00:04:34,967 --> 00:04:39,522
+Exam questions use them as one step
+inside a bigger calculus problem.
+
+101
+00:04:40,122 --> 00:04:41,346
+Exam level now.
+
+102
+00:04:41,346 --> 00:04:44,539
+Use the product rule,
+then the quotient rule.
+
+103
+00:04:44,539 --> 00:04:45,814
+Pause and solve.
+
+104
+00:04:51,214 --> 00:04:52,730
+The answer is C.
+
+105
+00:04:52,730 --> 00:04:53,630
+Two.
+
+106
+00:04:53,830 --> 00:04:57,995
+First, f of one is one times
+g of one, which is two.
+
+107
+00:04:58,495 --> 00:05:03,690
+By the product rule, f dash of one
+is g of one, plus one times g dash of
+
+108
+00:05:03,690 --> 00:05:04,590
+one.
+
+109
+00:05:04,228 --> 00:05:07,104
+That is two plus three, which is five.
+
+110
+00:05:07,604 --> 00:05:12,111
+By the quotient rule, h dash of one
+is five times two, minus two times
+
+111
+00:05:12,111 --> 00:05:13,749
+one, over two squared.
+
+112
+00:05:13,749 --> 00:05:15,397
+Eight over four is two.
+
+113
+00:05:15,997 --> 00:05:17,537
+Here is your recap.
+
+114
+00:05:17,537 --> 00:05:19,120
+Screenshot this card.
+
+115
+00:05:22,320 --> 00:05:24,506
+Can you answer these three
+questions without help?
+
+116
+00:05:24,906 --> 00:05:25,806
+One.
+
+117
+00:05:25,289 --> 00:05:28,692
+Why is the derivative of a product
+not the product of the derivatives?
+
+118
+00:05:29,592 --> 00:05:30,492
+Two.
+
+119
+00:05:30,119 --> 00:05:33,850
+Find the derivative of x
+plus one, times x plus two.
+
+120
+00:05:34,750 --> 00:05:35,650
+Three.
+
+121
+00:05:35,317 --> 00:05:38,619
+In the quotient rule, which
+term comes first on top?
+
+122
+00:05:39,719 --> 00:05:44,114
+Next time: two classes have the same
+average mark, but their marks look
+
+123
+00:05:44,114 --> 00:05:45,189
+very different.
+
+124
+00:05:45,189 --> 00:05:47,166
+How do we measure the spread?
+
+125
+00:05:47,166 --> 00:05:48,241
+Mean deviation.

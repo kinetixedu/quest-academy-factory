@@ -1,0 +1,546 @@
+1
+00:00:00,450 --> 00:00:02,351
+Aarav puts two dots on a map.
+
+2
+00:00:02,351 --> 00:00:03,507
+One is his home.
+
+3
+00:00:03,507 --> 00:00:05,121
+The other is his college.
+
+4
+00:00:05,521 --> 00:00:07,384
+A straight road joins them.
+
+5
+00:00:07,384 --> 00:00:12,304
+He wants one rule that says, for any
+spot on the map: is it on this road,
+
+6
+00:00:12,304 --> 00:00:13,204
+or not?
+
+7
+00:00:13,460 --> 00:00:15,658
+He has only the two dots to go on.
+
+8
+00:00:16,008 --> 00:00:19,712
+Can two dots really describe
+a road that goes on forever?
+
+9
+00:00:20,212 --> 00:00:21,112
+Yes.
+
+10
+00:00:20,653 --> 00:00:23,772
+Two dots, or even one dot
+and a slope, are enough.
+
+11
+00:00:23,772 --> 00:00:24,843
+Let us see how.
+
+12
+00:00:25,494 --> 00:00:28,092
+First, what is the equation of a line?
+
+13
+00:00:28,092 --> 00:00:30,366
+It is a rule that links x and y.
+
+14
+00:00:30,766 --> 00:00:33,069
+Every point on the line obeys the rule.
+
+15
+00:00:33,069 --> 00:00:35,149
+Every point off the line breaks it.
+
+16
+00:00:35,149 --> 00:00:36,919
+Like a password for the line.
+
+17
+00:00:37,519 --> 00:00:40,977
+Start with one fixed
+point, P zero, at one, two.
+
+18
+00:00:40,977 --> 00:00:42,740
+And a slope of one half.
+
+19
+00:00:43,140 --> 00:00:48,106
+Now let a point P, with coordinates
+x and y, slide along the line.
+
+20
+00:00:48,506 --> 00:00:51,088
+Watch the slope from P zero to P.
+
+21
+00:00:51,088 --> 00:00:52,314
+Rise over run.
+
+22
+00:00:52,314 --> 00:00:53,648
+Zero point five.
+
+23
+00:00:53,648 --> 00:00:55,373
+Still zero point five.
+
+24
+00:00:55,373 --> 00:00:56,762
+It never changes.
+
+25
+00:00:57,162 --> 00:00:58,865
+Now push P off the line.
+
+26
+00:00:58,865 --> 00:01:00,606
+The slope changes at once.
+
+27
+00:01:00,606 --> 00:01:01,810
+Zero point eight.
+
+28
+00:01:01,810 --> 00:01:02,827
+Not one half.
+
+29
+00:01:03,227 --> 00:01:07,922
+So a point is on the line exactly when
+the slope from P zero to it equals
+
+30
+00:01:07,922 --> 00:01:08,822
+m.
+
+31
+00:01:08,330 --> 00:01:09,663
+That is our rule.
+
+32
+00:01:10,313 --> 00:01:13,369
+Let us write that rule
+down, in small steps.
+
+33
+00:01:13,769 --> 00:01:14,718
+Step one.
+
+34
+00:01:14,718 --> 00:01:20,127
+The slope from P zero to P is y
+minus y zero, over x minus x zero.
+
+35
+00:01:20,877 --> 00:01:21,777
+Step two.
+
+36
+00:01:21,672 --> 00:01:25,081
+For P to be on the line,
+this slope must equal m.
+
+37
+00:01:25,831 --> 00:01:26,833
+Step three.
+
+38
+00:01:26,833 --> 00:01:29,697
+Multiply both sides by x minus x zero.
+
+39
+00:01:30,447 --> 00:01:31,412
+Step four.
+
+40
+00:01:31,412 --> 00:01:35,082
+y minus y zero equals m
+times, x minus x zero.
+
+41
+00:01:35,082 --> 00:01:37,367
+This is the point slope form.
+
+42
+00:01:38,117 --> 00:01:42,768
+For our line, y minus two equals
+one half times, x minus one.
+
+43
+00:01:43,418 --> 00:01:46,511
+Now, what if we know two
+points, and no slope?
+
+44
+00:01:46,911 --> 00:01:47,811
+Step one.
+
+45
+00:01:47,748 --> 00:01:50,216
+Find the slope from the two points.
+
+46
+00:01:50,216 --> 00:01:53,388
+y two minus y one, over x two minus x one.
+
+47
+00:01:54,138 --> 00:01:55,038
+Step two.
+
+48
+00:01:54,865 --> 00:01:58,520
+Put that slope into the point
+slope form, at the first point.
+
+49
+00:01:59,270 --> 00:02:01,005
+This is the two point form.
+
+50
+00:02:01,005 --> 00:02:03,192
+It needs nothing but the two points.
+
+51
+00:02:03,842 --> 00:02:04,829
+Side by side.
+
+52
+00:02:04,829 --> 00:02:07,698
+Point slope form needs
+one point and the slope.
+
+53
+00:02:08,098 --> 00:02:10,193
+Two point form needs two points.
+
+54
+00:02:10,193 --> 00:02:13,566
+It finds the slope for you,
+then does the same job.
+
+55
+00:02:14,166 --> 00:02:15,066
+Your turn.
+
+56
+00:02:15,029 --> 00:02:18,646
+A line passes through two,
+three with slope minus one.
+
+57
+00:02:18,646 --> 00:02:20,173
+Which form fits best?
+
+58
+00:02:20,173 --> 00:02:21,441
+Pause and decide.
+
+59
+00:02:24,641 --> 00:02:25,673
+Point slope!
+
+60
+00:02:25,673 --> 00:02:27,428
+One point and a slope.
+
+61
+00:02:27,428 --> 00:02:31,097
+y minus three equals minus
+one times, x minus two.
+
+62
+00:02:31,747 --> 00:02:32,950
+Remember this.
+
+63
+00:02:32,950 --> 00:02:35,625
+One point and a slope fix a line.
+
+64
+00:02:35,625 --> 00:02:39,345
+y minus y zero equals m
+times, x minus x zero.
+
+65
+00:02:40,045 --> 00:02:42,308
+One kind of line breaks this form.
+
+66
+00:02:42,308 --> 00:02:44,274
+A vertical line has no slope.
+
+67
+00:02:44,674 --> 00:02:49,806
+Every point on it has the same x, so
+its rule is just x equals a number.
+
+68
+00:02:49,806 --> 00:02:52,945
+A horizontal line has
+rule y equals a number.
+
+69
+00:02:53,545 --> 00:02:54,445
+Quick one.
+
+70
+00:02:54,376 --> 00:02:57,518
+A line passes through
+four, one and four, six.
+
+71
+00:02:57,518 --> 00:02:58,989
+What is its equation?
+
+72
+00:02:58,989 --> 00:03:00,164
+Pause and think.
+
+73
+00:03:03,364 --> 00:03:04,523
+x equals four!
+
+74
+00:03:04,523 --> 00:03:08,595
+Both points have x equal to
+four, so the line is vertical.
+
+75
+00:03:08,595 --> 00:03:11,282
+The slope formula would divide by zero.
+
+76
+00:03:11,932 --> 00:03:13,622
+Now, one worked example.
+
+77
+00:03:13,972 --> 00:03:18,189
+Find the equation of the line through
+one, minus one, and three, five.
+
+78
+00:03:18,689 --> 00:03:19,589
+Step one.
+
+79
+00:03:19,518 --> 00:03:23,371
+The slope is five minus minus
+one, over three minus one.
+
+80
+00:03:23,371 --> 00:03:24,463
+Six over two.
+
+81
+00:03:24,463 --> 00:03:25,363
+Three.
+
+82
+00:03:25,830 --> 00:03:26,730
+Step two.
+
+83
+00:03:26,719 --> 00:03:29,063
+Use the point one, minus one.
+
+84
+00:03:29,063 --> 00:03:32,807
+y minus minus one equals
+three times, x minus one.
+
+85
+00:03:33,557 --> 00:03:34,495
+Step three.
+
+86
+00:03:34,495 --> 00:03:37,391
+So y plus one equals three x minus three.
+
+87
+00:03:37,391 --> 00:03:39,971
+That is y equals three x minus four.
+
+88
+00:03:40,721 --> 00:03:41,621
+Step four.
+
+89
+00:03:41,566 --> 00:03:43,254
+Check with three, five.
+
+90
+00:03:43,254 --> 00:03:45,990
+Three times three, minus four, is five.
+
+91
+00:03:45,990 --> 00:03:46,890
+It works.
+
+92
+00:03:47,436 --> 00:03:48,897
+Now, the exam trap.
+
+93
+00:03:49,247 --> 00:03:52,579
+A line through minus two,
+five with slope four.
+
+94
+00:03:52,579 --> 00:03:56,970
+Many students write y minus five
+equals four times, x minus two.
+
+95
+00:03:57,370 --> 00:03:59,428
+But x zero is minus two.
+
+96
+00:03:59,428 --> 00:04:02,077
+x minus minus two is x plus two.
+
+97
+00:04:02,077 --> 00:04:06,829
+The right form is y minus five
+equals four times, x plus two.
+
+98
+00:04:07,479 --> 00:04:08,845
+Where is this asked?
+
+99
+00:04:08,845 --> 00:04:13,180
+In JEE Main, for example in January
+twenty nineteen: find a line's equation
+
+100
+00:04:13,180 --> 00:04:15,682
+from the points where it meets the axes.
+
+101
+00:04:16,282 --> 00:04:17,487
+Exam level now.
+
+102
+00:04:17,487 --> 00:04:22,396
+The line through A and B meets the y
+axis at zero, k, and passes through
+
+103
+00:04:22,396 --> 00:04:23,437
+a, fifteen.
+
+104
+00:04:23,437 --> 00:04:24,652
+Find k plus a.
+
+105
+00:04:24,652 --> 00:04:25,907
+Pause and solve.
+
+106
+00:04:31,307 --> 00:04:32,860
+The answer is B.
+
+107
+00:04:32,860 --> 00:04:33,760
+Seven.
+
+108
+00:04:34,094 --> 00:04:37,788
+The slope is eleven minus
+three, over six minus two.
+
+109
+00:04:37,788 --> 00:04:39,069
+Eight over four.
+
+110
+00:04:39,069 --> 00:04:39,969
+Two.
+
+111
+00:04:40,099 --> 00:04:41,563
+Point slope at A.
+
+112
+00:04:41,563 --> 00:04:44,937
+y minus three equals
+two times, x minus two.
+
+113
+00:04:44,937 --> 00:04:47,197
+So y equals two x minus one.
+
+114
+00:04:47,697 --> 00:04:52,042
+At x equals zero, y is minus
+one, so k is minus one.
+
+115
+00:04:52,042 --> 00:04:55,728
+Fifteen equals two a
+minus one, so a is eight.
+
+116
+00:04:55,728 --> 00:04:57,373
+k plus a is seven.
+
+117
+00:04:57,973 --> 00:04:59,513
+Here is your recap.
+
+118
+00:04:59,513 --> 00:05:01,096
+Screenshot this card.
+
+119
+00:05:04,296 --> 00:05:06,482
+Can you answer these three
+questions without help?
+
+120
+00:05:06,882 --> 00:05:07,782
+One.
+
+121
+00:05:07,298 --> 00:05:09,943
+Write the line through
+the origin with slope two.
+
+122
+00:05:10,843 --> 00:05:11,743
+Two.
+
+123
+00:05:11,332 --> 00:05:15,074
+Which line can the point slope
+form not describe, and why?
+
+124
+00:05:15,974 --> 00:05:16,874
+Three.
+
+125
+00:05:16,469 --> 00:05:19,979
+What is the slope of the line
+through one, one and two, three?
+
+126
+00:05:21,079 --> 00:05:24,655
+Next time: where does the road
+cross the two main streets?
+
+127
+00:05:24,655 --> 00:05:26,804
+Slope intercept and intercept forms.

@@ -1,0 +1,489 @@
+1
+00:00:00,450 --> 00:00:03,985
+Type a tiny angle into a
+calculator, in radians.
+
+2
+00:00:03,985 --> 00:00:05,866
+Say zero point zero one.
+
+3
+00:00:05,866 --> 00:00:07,134
+Now press sine.
+
+4
+00:00:07,534 --> 00:00:10,987
+You get zero point zero zero
+nine nine nine nine eight.
+
+5
+00:00:10,987 --> 00:00:13,459
+Almost exactly the number you typed in.
+
+6
+00:00:13,909 --> 00:00:17,039
+Aarav spotted this while checking
+his trigonometry homework.
+
+7
+00:00:17,389 --> 00:00:20,886
+For tiny angles, sine x
+and x are nearly equal.
+
+8
+00:00:20,886 --> 00:00:23,578
+So sine x over x gets close to one.
+
+9
+00:00:23,578 --> 00:00:24,478
+But why?
+
+10
+00:00:24,894 --> 00:00:28,112
+Today we find out, with limits
+of trigonometric functions.
+
+11
+00:00:28,762 --> 00:00:30,011
+First, a picture.
+
+12
+00:00:30,361 --> 00:00:32,576
+Draw a circle of radius one.
+
+13
+00:00:32,576 --> 00:00:36,433
+Mark an angle x at the
+centre, measured in radians.
+
+14
+00:00:36,833 --> 00:00:39,485
+The arc this angle cuts off has length x.
+
+15
+00:00:39,485 --> 00:00:41,362
+That is what a radian means.
+
+16
+00:00:41,362 --> 00:00:44,696
+And the height of the point
+on the circle is sine x.
+
+17
+00:00:45,346 --> 00:00:46,706
+Now shrink the angle.
+
+18
+00:00:46,706 --> 00:00:48,974
+Watch the arc and the height together.
+
+19
+00:00:49,374 --> 00:00:53,082
+At x equals one, sine x
+is zero point eight four.
+
+20
+00:00:53,082 --> 00:00:57,229
+So the ratio, sine x over
+x, is zero point eight four.
+
+21
+00:00:57,629 --> 00:01:01,984
+At x equals zero point five, the
+ratio is zero point nine six.
+
+22
+00:01:01,984 --> 00:01:05,700
+At zero point one, it is
+zero point nine nine eight.
+
+23
+00:01:06,100 --> 00:01:09,392
+The height and the arc
+almost become the same line.
+
+24
+00:01:09,392 --> 00:01:11,387
+Their ratio closes in on one.
+
+25
+00:01:12,037 --> 00:01:14,034
+But a picture is not a proof.
+
+26
+00:01:14,034 --> 00:01:16,060
+NCERT uses the sandwich theorem.
+
+27
+00:01:16,460 --> 00:01:21,439
+If g is always between f and h, and
+f and h close in on the same number,
+
+28
+00:01:21,439 --> 00:01:22,842
+then g is trapped.
+
+29
+00:01:22,842 --> 00:01:25,398
+It must close in on that number too.
+
+30
+00:01:25,798 --> 00:01:28,347
+Think of cheese between
+two slices of bread.
+
+31
+00:01:28,347 --> 00:01:31,609
+Squeeze the bread together,
+and the cheese goes with it.
+
+32
+00:01:32,259 --> 00:01:36,844
+Here is the proof in small steps,
+for x between zero and a right angle.
+
+33
+00:01:37,194 --> 00:01:38,094
+Step one.
+
+34
+00:01:38,009 --> 00:01:42,805
+Compare three shapes: a small triangle,
+the sector, and a big triangle.
+
+35
+00:01:42,805 --> 00:01:44,904
+Each one fits inside the next.
+
+36
+00:01:45,654 --> 00:01:46,554
+Step two.
+
+37
+00:01:46,516 --> 00:01:51,669
+With radius one, their areas are
+half sine x, half x, and half tan x.
+
+38
+00:01:51,669 --> 00:01:55,540
+So sine x is less than x,
+which is less than tan x.
+
+39
+00:01:56,290 --> 00:01:57,287
+Step three.
+
+40
+00:01:57,287 --> 00:02:01,030
+Divide by sine x, then
+flip each part upside down.
+
+41
+00:02:01,030 --> 00:02:02,592
+The signs flip too.
+
+42
+00:02:02,592 --> 00:02:06,800
+We get cos x, less than sine
+x over x, less than one.
+
+43
+00:02:07,550 --> 00:02:08,497
+Step four.
+
+44
+00:02:08,497 --> 00:02:11,653
+As x tends to zero, cos x tends to one.
+
+45
+00:02:11,653 --> 00:02:16,376
+So sine x over x is squeezed
+between two things that tend to one.
+
+46
+00:02:16,376 --> 00:02:17,834
+Its limit is one.
+
+47
+00:02:18,484 --> 00:02:19,668
+Side by side.
+
+48
+00:02:19,668 --> 00:02:23,294
+With x in radians, sine
+x over x tends to one.
+
+49
+00:02:23,694 --> 00:02:25,989
+With x in degrees, it does not.
+
+50
+00:02:25,989 --> 00:02:30,589
+Sine of one degree is about zero point
+zero one seven five, so the ratio
+
+51
+00:02:30,589 --> 00:02:33,032
+tends to pi over one eighty instead.
+
+52
+00:02:33,632 --> 00:02:34,603
+Now you try.
+
+53
+00:02:34,603 --> 00:02:38,027
+Does sine x over x tend to
+one when x is in degrees?
+
+54
+00:02:38,027 --> 00:02:39,235
+Pause and decide.
+
+55
+00:02:42,435 --> 00:02:43,335
+No!
+
+56
+00:02:42,848 --> 00:02:43,955
+Only in radians.
+
+57
+00:02:43,955 --> 00:02:46,689
+That is why NCERT measures
+x in radians here.
+
+58
+00:02:47,339 --> 00:02:49,564
+NCERT gives a second result.
+
+59
+00:02:49,564 --> 00:02:55,053
+The limit of one minus cos x, over
+x, as x tends to zero, is zero.
+
+60
+00:02:55,453 --> 00:02:56,353
+Why?
+
+61
+00:02:56,005 --> 00:02:59,981
+One minus cos x equals two
+sine squared of x over two.
+
+62
+00:02:59,981 --> 00:03:05,353
+That splits into sine of x over two,
+over x over two, which tends to one,
+
+63
+00:03:05,353 --> 00:03:08,874
+times sine of x over
+two, which tends to zero.
+
+64
+00:03:08,874 --> 00:03:10,715
+One times zero is zero.
+
+65
+00:03:11,365 --> 00:03:12,518
+Remember this.
+
+66
+00:03:12,518 --> 00:03:16,528
+In radians, for tiny x,
+sine x over x tends to one.
+
+67
+00:03:17,228 --> 00:03:18,918
+Now, one worked example.
+
+68
+00:03:19,268 --> 00:03:24,430
+Find the limit of sine five x, over
+sine two x, as x tends to zero.
+
+69
+00:03:24,930 --> 00:03:25,877
+Step one.
+
+70
+00:03:25,877 --> 00:03:27,957
+Build the pattern on top.
+
+71
+00:03:27,957 --> 00:03:32,498
+Sine five x is, sine five x
+over five x, times five x.
+
+72
+00:03:33,248 --> 00:03:34,148
+Step two.
+
+73
+00:03:34,111 --> 00:03:36,120
+Do the same at the bottom.
+
+74
+00:03:36,120 --> 00:03:40,044
+Sine two x is, sine two x
+over two x, times two x.
+
+75
+00:03:40,794 --> 00:03:41,694
+Step three.
+
+76
+00:03:41,685 --> 00:03:46,285
+Both patterns tend to one, because
+five x and two x both tend to zero.
+
+77
+00:03:47,035 --> 00:03:47,935
+Step four.
+
+78
+00:03:47,911 --> 00:03:52,034
+What is left is five x over
+two x, which is five over two.
+
+79
+00:03:52,684 --> 00:03:54,145
+Now, the exam trap.
+
+80
+00:03:54,495 --> 00:03:57,216
+Find the limit of sine three x, over x.
+
+81
+00:03:57,216 --> 00:04:00,225
+Many students see sine
+over x, and write one.
+
+82
+00:04:00,625 --> 00:04:03,328
+But the angle and the bottom must match.
+
+83
+00:04:03,328 --> 00:04:06,853
+Write it as three, times
+sine three x over three x.
+
+84
+00:04:06,853 --> 00:04:10,011
+That tends to three times
+one, which is three.
+
+85
+00:04:10,661 --> 00:04:12,161
+Where is this asked?
+
+86
+00:04:12,161 --> 00:04:17,002
+In JEE Main, as in March twenty
+twenty one: a tan over a sine, both of
+
+87
+00:04:17,002 --> 00:04:19,589
+tiny angles, as theta tends to zero.
+
+88
+00:04:20,189 --> 00:04:21,376
+Exam level now.
+
+89
+00:04:21,376 --> 00:04:22,613
+Find this limit.
+
+90
+00:04:22,613 --> 00:04:23,851
+Pause and solve.
+
+91
+00:04:29,251 --> 00:04:30,644
+The answer is A.
+
+92
+00:04:30,644 --> 00:04:31,638
+Two thirds.
+
+93
+00:04:32,138 --> 00:04:35,897
+Use one minus cos two x
+equals two sine squared x.
+
+94
+00:04:36,397 --> 00:04:38,122
+Rearrange into patterns.
+
+95
+00:04:38,122 --> 00:04:43,416
+Two, times sine x over x, squared,
+times three x over sine three x, times
+
+96
+00:04:43,416 --> 00:04:44,337
+one third.
+
+97
+00:04:44,837 --> 00:04:46,693
+Each pattern tends to one.
+
+98
+00:04:46,693 --> 00:04:50,625
+So the limit is two times one
+third, which is two thirds.
+
+99
+00:04:51,225 --> 00:04:52,765
+Here is your recap.
+
+100
+00:04:52,765 --> 00:04:54,348
+Screenshot this card.
+
+101
+00:04:57,548 --> 00:04:59,734
+Can you answer these three
+questions without help?
+
+102
+00:05:00,134 --> 00:05:01,034
+One.
+
+103
+00:05:00,638 --> 00:05:04,640
+Why must x be in radians for
+sine x over x to tend to one?
+
+104
+00:05:05,540 --> 00:05:06,440
+Two.
+
+105
+00:05:06,055 --> 00:05:10,552
+What is the limit of sine seven
+x, over x, as x tends to zero?
+
+106
+00:05:11,452 --> 00:05:12,352
+Three.
+
+107
+00:05:12,052 --> 00:05:15,764
+Which theorem traps sine x
+over x between cos x and one?
+
+108
+00:05:16,864 --> 00:05:20,050
+Next time: a speedometer shows
+your speed at one instant.
+
+109
+00:05:20,050 --> 00:05:22,608
+How can there be a speed
+at a single moment?
+
+110
+00:05:22,608 --> 00:05:25,534
+We find out with the derivative
+from first principles.
